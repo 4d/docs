@@ -239,7 +239,7 @@ Veja [**Notas de lançamento 4D 20.x LTS**](../../version-20/Notes/updates.md).
 | Biblioteca | Versão atual                            | Atualizado em 4D | Comentário                                                                                                                                |
 | ---------- | --------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | BoringSSL  | 9295969                                 | **20 R10**       | Usado para QUIC                                                                                                                           |
-| CEF        | 131                                     | 20 R8            | Chromium 6778                                                                                                                             |
+| CEF        | 6778                                    | 20 R8            | Chromium 131                                                                                                                              |
 | Hunspell   | 7.3.27  | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                       |
 | ICU        | 73.2                    | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.               |
 | libldap    | 2.6.7   | 20 R6            |                                                                                                                                           |

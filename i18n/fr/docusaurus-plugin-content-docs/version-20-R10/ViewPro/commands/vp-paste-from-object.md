@@ -21,34 +21,34 @@ title: VP PASTE FROM OBJECT
 | ---------- | ------- | -- | ------------------------------------ | ---------------- |
 | rangeObj   | Object  | -> | Objet plage de cellules              |                  |
 | dataObject | Object  | -> | Objet contenant les données à coller |                  |
-| options    | Integer | -> | Specifies what is pasted             | <!-- END REF --> |
+| options    | Integer | -> | Spécifie ce qui est collé            | <!-- END REF --> |
 
 ## Description
 
-The `VP PASTE FROM OBJECT` command <!-- REF #_method_.PASTE FROM OBJECT.Summary -->pastes the contents, style and formulas stored in *dataObject* to the *rangeObj* object<!-- END REF -->.
+La commande `VP PASTE FROM OBJECT` <!-- REF #_method_.PASTE FROM OBJECT. ummary -->colle les contenus, styles et formules stockés dans *dataObject* dans l'objet *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass the cell range object where the values, formatting, and/or formula cells will be pasted. If *rangeObj* refers to more than one cell, only the first one is used.
+Dans *rangeObj*, passez l'objet de plage de cellules dans lequel les valeurs, le formatage et/ou les cellules de formule seront collés. Si *rangeObj* fait référence à plusieurs cellules, seule la première est utilisée.
 
-In *dataObject*, pass the object that contains the cell data, formatting, and formulas to be pasted.
+Dans *dataObject*, passez l'objet qui contient les données de la cellule, la mise en forme et les formules à coller.
 
-In the optional *options* parameter, you can specify what to paste in the cell range. Valeurs possibles :
+Dans le paramètre facultatif *options*, vous pouvez spécifier ce qu'il faut coller dans la plage de cellules. Valeurs possibles :
 
-|Constant|Description|
-\|---|---|---|
-|`vk clipboard options all`|Pastes all data objects, including values, formatting, and formulas.|
-|`vk clipboard options formatting`|Pastes only the formatting.|
-|`vk clipboard options formulas`|Pastes only the formulas.|
-|`vk clipboard options formulas and formatting`|Pastes formulas and formatting.|
-|`vk clipboard options values`|Pastes only values.|
-|`vk clipboard options value and formatting`|Pastes values and formatting.|
+| Constante                                      | Description                                                                                                |
+| ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `vk clipboard options all`                     | Colle tous les objets de données, y compris les valeurs, la mise en forme et les formules. |
+| `vk clipboard options formatting`              | Ne colle que la mise en forme.                                                             |
+| `vk clipboard options formulas`                | Colle uniquement les formules.                                                             |
+| `vk clipboard options formulas and formatting` | Colle les formules et la mise en forme.                                                    |
+| `vk clipboard options values`                  | Ne colle que les valeurs.                                                                  |
+| `vk clipboard options value and formatting`    | Colle les valeurs et la mise en forme.                                                     |
 
 Les options de collage définies dans [workbook options](vp-set-workbook-options.md) sont prises en compte.
 
-If *options* refers to a paste option not present in the copied object (e.g. formulas), the command does nothing.
+Si *options* fait référence à une option de collage qui n'est pas présente dans l'objet copié (par exemple, les formules), la commande ne fait rien.
 
 ## Exemple
 
-See example the example from [VP Copy to object](vp-copy-to-object.md)
+Voir l'exemple de [VP Copy to object](vp-copy-to-object.md)
 
 ## Voir également
 

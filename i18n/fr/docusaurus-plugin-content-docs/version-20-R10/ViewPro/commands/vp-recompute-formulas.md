@@ -15,11 +15,11 @@ title: VP RECOMPUTE FORMULAS
 
 ## Description
 
-The `VP RECOMPUTE FORMULAS` command <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->immediately evaluates all formulas in *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` allows you to force the compute at any time (e.g, in case modifications are made to the formulas or if the formulas contain calls to the database). The command launches the execution of the [VP FLUSH COMMANDS](vp-flush-commands.md) command to execute any stored commands and clear the command buffer, then calculates all formulas in the workbook.
+La commande `VP RECOMPUTE FORMULAS` <!-- REF #_method_.VP RECOMPUTE FORMULAS.Summary -->évalue immédiatement toutes les formules dans *vpAreaName*<!-- END REF -->. Par défaut, 4D calcule automatiquement les formules lorsqu'elles sont insérées, importées ou exportées. `VP RECOMPUTE FORMULAS` vous permet de forcer le calcul à tout moment (par exemple, si des modifications sont apportées aux formules ou si les formules contiennent des appels à la base de données). La commande lance l'exécution de la commande [VP FLUSH COMMANDS](vp-flush-commands.md) pour exécuter toutes les commandes stockées et vider le buffer de commandes, puis calcule toutes les formules du classeur.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-> Be sure the [VP SUSPEND COMPUTING](vp-suspend-computing.md) command has not been executed before using `VP RECOMPUTE FORMULAS`, otherwise the command does nothing.
+> Assurez-vous que la commande [VP SUSPEND COMPUTING](vp-suspend-computing.md) n'a pas été exécutée avant d'utiliser `VP RECOMPUTE FORMULAS`, sinon la commande ne fait rien.
 
 ## Exemple
 

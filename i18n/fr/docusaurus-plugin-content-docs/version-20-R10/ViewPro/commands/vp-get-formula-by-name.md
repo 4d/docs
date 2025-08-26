@@ -18,13 +18,13 @@ title: VP Get formula by name
 
 ## Description
 
-The `VP Get formula by name` command <!-- REF #_method_.VP Get formula by name.Summary --> returns the formula and comment corresponding to the named range or named formula passed in the *name* parameter, or **null** if it does not exist in the defined scope<!-- END REF -->.
+La commande `VP Get formula by name` <!-- REF #_method_.VP Get formula by name.Summary --> retourne la formule et le commentaire correspondant à la plage nommée ou à la formule nommée passée dans le paramètre *name*, ou **null** si elle n'existe pas dans l'étendue définie<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-Pass the named range or named formula that you want to get in *name*. A noter que les plages nommées sont retournées sous forme de formules contenant des références absolues de cellules.
+Passez la plage nommée ou la formule nommée que vous voulez obtenir avec *name*. A noter que les plages nommées sont retournées sous forme de formules contenant des références absolues de cellules.
 
-You can define where to get the formula in *scope* using either the sheet index (counting begins at 0) or the following constants:
+Vous pouvez définir où obtenir la formule dans *scope* en utilisant soit l'index de la feuille ( la numération commence à 0), soit les constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`
@@ -48,7 +48,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
   //$formula.formula=Sheet1!$A$1
  
 $formula:=VP Get formula by name("ViewProArea";"Total")
-  //$formula=null (if not existing)
+  //$formula=null (si non existant)
 ```
 
 ## Voir également

@@ -4165,7 +4165,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 #### Exemple
 
-|
+Vous souhaitez définir une plage pour la ligne ci-dessous (dans la feuille courante) :
 
 ![](../assets/en/ViewPro/cmd_vpRow.PNG)
 

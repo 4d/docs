@@ -260,22 +260,22 @@ Veja [**Notas de lançamento para 4D 20.x LTS**](../../versioned_docs/version-20
 
 ## Tabela da biblioteca
 
-| Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                  |
-| ---------- | -------------------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL  | 0697c88                                | **21**           | Usado para QUIC                                                                                                             |
-| CEF        | 131                                    | 20 R8            | Chromium 6778                                                                                                               |
-| Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                         |
-| ICU        | 73.2                   | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos. |
-| libldap    | 2.6.7  | 20 R6            |                                                                                                                             |
-| libsasl    | 2.1.28 | 20               |                                                                                                                             |
-| Liblsquic  | 4.2.0  | 20 R10           | Usado para QUIC                                                                                                             |
-| Libuv      | 1.51.0 | **21**           | Usado para QUIC                                                                                                             |
-| libZip     | 19.5                   | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                        |
-| LZMA       | 5.4.1  | 20               |                                                                                                                             |
-| ngtcp2     | 1.14.0 | **21**           | Usado para QUIC                                                                                                             |
-| OpenSSL    | 3.5.2  | **21**           |                                                                                                                             |
-| PDFWriter  | 4.5.11 | 20 R3            |                                                                                                                             |
-| PHP        | 8.2.4  | 20               |                                                                                                                             |
-| SpreadJS   | 17.1.0 | 20 R7            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para uma visão geral dos novos recursos    |
-| webKit     | WKWebView                              | 19               |                                                                                                                             |
-| Zlib       | 14.1.6 | 20               |                                                                                                                             |
+| Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                                         |
+| ---------- | -------------------------------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| BoringSSL  | 0697c88                                | **21**           | Usado para QUIC                                                                                                                                    |
+| CEF        | 7258                                   | **21**           | Chromium 139                                                                                                                                       |
+| Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                                |
+| ICU        | 73.2                   | 20               | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.                        |
+| libldap    | 2.6.7  | 20 R6            |                                                                                                                                                    |
+| libsasl    | 2.1.28 | 20               |                                                                                                                                                    |
+| Liblsquic  | 4.2.0  | 20 R10           | Usado para QUIC                                                                                                                                    |
+| Libuv      | 1.51.0 | **21**           | Usado para QUIC                                                                                                                                    |
+| libZip     | 19.5                   | 20               | Utilizado pelos componentes zip class, 4D Write Pro, svg e serverNet                                                                               |
+| LZMA       | 5.4.1  | 20               |                                                                                                                                                    |
+| ngtcp2     | 1.14.0 | **21**           | Usado para QUIC                                                                                                                                    |
+| OpenSSL    | 3.5.2  | **21**           |                                                                                                                                                    |
+| PDFWriter  | 4.7.0  | **21**           | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
+| PHP        | 8.2.4  | 20               |                                                                                                                                                    |
+| SpreadJS   | 17.1.0 | 20 R7            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para uma visão geral dos novos recursos                           |
+| webKit     | WKWebView                              | 19               |                                                                                                                                                    |
+| Zlib       | 14.1.6 | 20               |                                                                                                                                                    |

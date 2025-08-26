@@ -46,7 +46,7 @@ Qodly Studio est alimenté par le [serveur WebAdmin](../Admin/webAdmin.md) et af
 
 Pour permettre l'accès à Qodly Studio, vous devez explicitement autoriser deux niveaux :
 
- - at 4D application level
+ - au niveau de l'application 4D
  - niveau projet
 
 Si l'un des deux niveaux (ou les deux) n'est pas activé, l'accès à Qodly Studio est refusé (une page 403 est renvoyée).
@@ -195,11 +195,11 @@ Gardez à l'esprit que Qodly Studio fonctionne à travers le serveur web 4D WebA
 
 However, page rendering happens outside Qodly Studio, and is served by the standard 4D web server. Dans cette situation, votre application web ne peut pas accéder aux ressources qui ne sont pas exposées en tant que ressources REST. Voir [Fonctions exposées et non exposées](../ORDA/ordaClasses.md#fonctions-exposees-et-non-exposees) et [Exposer des tables](../REST/configuration.md#exposer-des-tables) pour plus d'informations sur la façon d'exposer des ressources.
 
-### Accessing Qodly pages
+### Accès aux pages Qodly
 
 Pour le déploiement, le serveur WebAdmin n'est pas nécessaire. L'accès des utilisateurs finaux à votre application web créée avec Qodly Studio est basé sur le protocole REST 4D, et en tant que tel, il fonctionne comme une application distante 4D conventionnelle.
 
-Your Qodly pages are available through the following url:
+Vos pages Qodly sont disponibles via l'Url suivante :
 
 ```
 IP:port/$lib/renderer/?w=QodlyPageName
@@ -213,7 +213,7 @@ Par exemple :
 https://www.myWebSite.com/$lib/renderer/?w=welcome
 ```
 
-### Preview Qodly Application
+### Aperçu de l'application Qodly
 
 You can preview your Qodly application at any moment by selecting the **Preview Qodly Application...** command in the **Windows** menu (4D Server) or in the **Design** menu (4D single-user).
 
@@ -227,7 +227,7 @@ Note that in this case, the Qodly Studio debugger will display all the code exec
 
 To attach the Qodly Studio debugger to your running 4D Server application:
 
-1. [Open Qodly Studio](#opening-qodly-studio) from 4D Server.
+1. [Ouvrir Qodly Studio](#opening-qodly-studio) depuis le serveur 4D.
 
 :::note
 

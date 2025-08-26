@@ -22,24 +22,24 @@ title: VP INSERT TABLE ROWS
 | vpAreaName  | Text    | -> | Nom d'objet formulaire zone 4D View Pro                                     |                  |
 | tableName   | Text    | -> | Nom de table                                                                |                  |
 | row         | Integer | -> | Indice dans la table de la ligne de départ à insérer                        |                  |
-| count       | Integer | -> | Number of rows to add (must be >0)                       |                  |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*                   |                  |
+| count       | Integer | -> | Nombre de lignes à ajouter (doit être >0)                |                  |
+| insertAfter | Integer | -> | `vk table insert before` ou `vk table insert after` *row*                   |                  |
 | sheet       | Integer | -> | Numéro d'indice de la feuille (feuille courante si omis) | <!-- END REF --> |
 
 ## Description
 
-The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->.
+La commande `VP INSERT TABLE ROWS` <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->insère une ou *count* ligne(s) vide(s) dans la *tableName* spécifiée à l'index *row* spécifié<!-- END REF -->.
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the *row* index:
+Dans le paramètre *insertAfter*, vous pouvez passer l'une des constantes suivantes pour indiquer si la ou les lignes doivent être insérées avant ou après l'index *row* :
 
-| Constante                | Valeur | Description                                                                               |
-| ------------------------ | ------ | ----------------------------------------------------------------------------------------- |
-| `vk table insert before` | 0      | Insert row(s) before the *row* (default if omitted) |
-| `vk table insert after`  | 1      | Insert row(s) after the *row*                                          |
+| Constante                | Valeur | Description                                                                                                        |
+| ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| `vk table insert before` | 0      | Insérer la(les) ligne(s) avant *row* (par défaut si omis) |
+| `vk table insert after`  | 1      | Insérer la(les) ligne(s) après *row*                                         |
 
-This command inserts some rows in the *tableName* table, NOT in the sheet. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le bas en fonction du nombre de lignes ajoutées.
+Cette commande insère des lignes dans la table *tableName*, PAS dans la feuille. Le nombre total de lignes de la feuille n'est pas impacté par la commande. Les données présentes sous la table (le cas échéant) sont automatiquement déplacées vers le bas en fonction du nombre de lignes ajoutées.
 
-If the *tableName* table is bound to a [data context](vp-set-data-context.md), the command inserts new, empty element(s) in the collection.
+Si la table *tableName* est liée à un [contexte de données](vp-set-data-context.md), la commande insère de nouveaux élément(s) vides dans la collection.
 
 Si *tableName* n'existe pas ou s'il n'y a pas assez d'espace dans la feuille, rien ne se passe.
 

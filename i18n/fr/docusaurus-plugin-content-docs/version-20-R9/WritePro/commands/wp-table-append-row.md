@@ -48,7 +48,7 @@ The command returns the new row as a row range object.
 
 ## Exemple 1
 
-You want to create an empty table and append several rows of different sizes. Vous pouvez écrire :
+Vous voulez créer une table vide et ajouter plusieurs lignes de différentes tailles. Vous pouvez écrire :
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3 : Object
@@ -63,7 +63,7 @@ You want to create an empty table and append several rows of different sizes. Vo
 
 ## Exemple 2
 
-You want to create an empty table and append a row using a collection :
+Vous voulez créer une table vide et ajouter une ligne en utilisant une collection :
 
 ```4d
 $table:=WP Insert table(WParea; wk replace; wk include in range)

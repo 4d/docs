@@ -17,11 +17,11 @@ title: VP SET PRINT INFO
 
 ## Description
 
-The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->.
+La commande `VP SET PRINT INFO` <!-- REF #_method_.VP SET PRINT INFO.Summary -->définit les attributs à utiliser lors de l'impression du *vpAreaName*<!-- END REF -->.
 
-Pass the name of the 4D View Pro area to print in *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
+Passez le nom de la zone 4D View Pro pour l'imprimer dans *vpAreaName*. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can pass an object containing definitions for various printing attributes in the *printInfo* parameter. To view the full list of the available attributes, see [Print Attributes](../configuring.md#print-attributes).
+Vous pouvez passer un objet contenant des définitions pour divers attributs d'impression dans le paramètre *printInfo*. Pour afficher la liste complète des attributs disponibles, voir [Attributs d'impression](../configuring.md#print-attributes).
 
 Dans le paramètre optionnel *sheet*, vous pouvez définir une feuille (sheet) spécifique à imprimer (la numérotation démarre à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
@@ -34,10 +34,10 @@ Le code suivant imprimera une nouvelle zone 4D View Pro dans un document PDF :
 ```4d
 var $printInfo : Object
 
-//declare print attributes object
+//Déclarer l'objet attributs d'impression
 $printInfo:=New object
 
-//define print attributes
+//Définir attributs d'impression
 $printInfo.headerCenter:="&BS.H.I.E.L.D. &A Sales Per Region"
 $printInfo.firstPageNumber:=1
 $printInfo.footerRight:="page &P of &N"
@@ -50,7 +50,7 @@ $printInfo.rowEnd:=24
 
 $printInfo.showGridLine:=True
 
-//Add corporate logo
+//Ajouter le logo de l'entreprise
 $printInfo.headerLeftImage:=logo.png
 $printInfo.headerLeft:="&G"
 
@@ -59,10 +59,10 @@ $printInfo.showColumnHeader:=vk print visibility hide
 $printInfo.fitPagesWide:=1
 $printInfo.fitPagesTall:=1
 
-//print PDF document
+//Imprimer le document PDF
 VP SET PRINT INFO ("ViewProArea";$printInfo)
 
-//export the PDF
+//Exporter le PDF
 VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(ALERT("PDF ready!"))))
 ```
 
