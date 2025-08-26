@@ -1911,7 +1911,7 @@ module.exports =
                 "commands-legacy/choose",
                 "commands-legacy/generate-digest",
                 "commands-legacy/generate-password-hash",
-                "commands-legacy/generate-uuid",
+                "commands/generate-uuid",
                 "commands-legacy/get-macro-parameter",
                 "commands-legacy/launch-external-process",
                 "commands-legacy/load-4d-view-document",
