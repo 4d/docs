@@ -21,7 +21,7 @@ La commande `VP SET SHOW PRINT LINES` <!-- REF #_method_.VP SET SHOW PRINT LINES
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-In *visible*, pass `True` to display the print lines, and `False` to hide them. `True` is passed by default.
+Dans *visible*, passez `True` pour afficher les lignes d'impression, et `False` pour les cacher. `True` est passé par défaut.
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié, la commande s'applique à la feuille en cours.
 

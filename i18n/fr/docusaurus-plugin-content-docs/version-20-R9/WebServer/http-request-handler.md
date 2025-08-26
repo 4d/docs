@@ -82,9 +82,9 @@ URL patterns can be given as **prefixes** or using **regular expressions**.
 
 #### Pattern matching
 
-URL patterns are triggered in the given order:
+Les modèles d'URL sont déclenchés dans l'ordre indiqué :
 
- - the first matching pattern is executed
+ - le premier motif correspondant est exécuté
  - the following patterns are not executed even if they match the URL
 
 As a consequence, you need to apply a accurate strategy when writing your handlers: the most detailed patterns must be written before the more general patterns.

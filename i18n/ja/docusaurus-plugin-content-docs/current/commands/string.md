@@ -257,11 +257,11 @@ displayed_sidebar: docs
 
 ## 参照
 
-[Bool](../commands/bool)\
-[Date](../commands/date)\
-[Num](../commands/num)\
-[Time string](../commands/time-string)\
-[Timestamp](../commands/timestamp)
+[Bool](bool.md)\
+[Date](date.md)\
+[Num](num.md)\
+[Time string](time-string.md)\
+[Timestamp](timestamp.md)
 
 ## プロパティ
 

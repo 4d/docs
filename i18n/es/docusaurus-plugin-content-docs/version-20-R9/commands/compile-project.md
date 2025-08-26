@@ -178,7 +178,7 @@ Compilar un proyecto y declarar su componente:
  $status:=Compile project($options)
 ```
 
-Disable warnings 518.1 and 518.2 when compiling your project:
+Desactivar las advertencias 518.1 y 518.2 al compilar su proyecto:
 
 ```4d
 var $options:={}

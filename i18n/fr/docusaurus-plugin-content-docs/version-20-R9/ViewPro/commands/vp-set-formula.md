@@ -17,18 +17,18 @@ title: VP SET FORMULA
 
 ## Description
 
-The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->.
+La commande `VP SET FORMULA` <!-- REF #_method_.VP SET FORMULA.Summary -->assigne une formule spécifiée ou une méthode 4D à une plage de cellules désignées<!-- END REF -->.
 
-Dans *rangeObj*, passez une plage de cellule(s) (créée par exemple avec [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) dont vous voulez spécifier la valeur. If *rangeObj* includes multiple cells, the formula specified will be linked in each cell.
+Dans *rangeObj*, passez une plage de cellule(s) (créée par exemple avec [`VP Cell`](vp-cell.md) ou [`VP Column`](vp-column.md)) dont vous voulez spécifier la valeur. Si *rangeObj* comprend plusieurs cellules, la formule spécifiée sera liée à chaque cellule.
 
-The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
+Le paramètre *formula* spécifie une formule ou un nom de méthode 4D à affecter à la *rangeObj*.
 
-> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Si *formula* est une chaîne de caractères, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres.
+> Si une méthode 4D est utilisée, elle doit être autorisée par la commande [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-The optional *formatPattern* defines a [pattern](../configuring.md#cell-format) for the *formula*.
+Le *formatPattern* facultatif définit un [pattern](../configuring.md#cell-format) pour la *formula*.
 
-You remove the formula in *rangeObj* by replacing it with an empty string ("").
+Vous supprimez la formule dans *rangeObj* en la remplaçant par une chaîne vide ("").
 
 ## Exemple 1
 

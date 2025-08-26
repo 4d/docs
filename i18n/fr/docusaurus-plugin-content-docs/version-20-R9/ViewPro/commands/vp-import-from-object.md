@@ -61,7 +61,7 @@ The callback function specified in the `formula` attribute is triggered after al
 
 ## Exemple
 
-You want to import a spreadsheet that was previously saved in an object field, and trigger a callback function after all 4D custom functions have responded:
+Vous voulez importer une feuille de calcul qui a été précédemment enregistrée dans un champ d'objet, et déclencher une fonction de callback après que toutes les fonctions personnalisées 4D ont répondu:
 
 ```4d
 QUERY([VPWorkBooks];[VPWorkBooks]ID=10)
@@ -70,9 +70,9 @@ VP IMPORT FROM OBJECT("ViewProArea1"; [VPWorkBooks]SPBook; {formula: Formula(onI
 ```
 
 ```4d
-// Method 'onImportComplete'
-#DECLARE($name : Text; $path : Text; $paramObj : Object; $status : Object)
-   ALERT("The document has been imported, and all custom functions have finished processing.")
+// Méthode 'onImportComplete'
+#DECLARE($name : Text ; $path : Text ; $paramObj : Object ; $status : Object)
+   ALERT("Le document a été importé et toutes les fonctions personnalisées ont terminé leur traitement.")
 ```
 
 ## Voir également

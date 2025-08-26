@@ -19,7 +19,7 @@ title: VP Row
 
 ## Description
 
-The `VP Row` command <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+La commande `VP Row` <!-- REF #_method_.VP Row.Summary -->retourne un nouvel objet plage référençant une ou plusieurs lignes spécifiques<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
@@ -33,7 +33,7 @@ Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifi
 
 ## Exemple
 
-|
+Vous souhaitez définir une plage pour la ligne ci-dessous (dans la feuille courante) :
 
 ![](../../assets/en/ViewPro/cmd_vpRow.PNG)
 

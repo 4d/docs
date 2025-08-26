@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Params-->
 
-| Paramètres  | Type    |                             | Description                                              |
-| ----------- | ------- | --------------------------- | -------------------------------------------------------- |
-| targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                |
-| wpDoc       | Object  | &#8594; | Document 4D Write Pro                                    |
-| mode        | Integer | &#8594; | Mode d'insertion                                         |
-| rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                          |
-| Résultat    | Object  | &#8592; | Text range object referencing the inserted document body |
+| Paramètres  | Type    |                             | Description                                                     |
+| ----------- | ------- | --------------------------- | --------------------------------------------------------------- |
+| targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                       |
+| wpDoc       | Object  | &#8594; | Document 4D Write Pro                                           |
+| mode        | Integer | &#8594; | Mode d'insertion                                                |
+| rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                                 |
+| Résultat    | Object  | &#8592; | Objet de plage de texte référençant le corps du document inséré |
 
 <!-- END REF-->
 
@@ -85,7 +85,7 @@ You have defined a template document with different preformatted parts, each of 
 
 ## Exemple 3
 
-You want to set the font style and size for the inserted document body:
+Vous voulez définir le style et la taille de la police pour le corps du document inséré :
 
 ```4d
 WPdoc:=WP Import document("myFile.4wp")

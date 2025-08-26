@@ -42,13 +42,13 @@ Vous souhaitez autoriser deux méthodes dans vos zones 4D View Pro :
 
 ```4d
 C_OBJECT($allowed)
-$allowed:=New object //parameter for the command
+$allowed:=New object //paramètre pour la commande
  
-$allowed.Hello:=New object //create a first simple function named "Hello"
+$allowed.Hello:=New object //créer une première fonction simple nommée "Hello"
 $allowed.Hello.method:="My_Hello_Method" //sets the 4D method
 $allowed.Hello.summary:="Hello prints hello world"
  
-$allowed.Byebye:=New object //create a second function with parameters named "Byebye"
+$allowed.Byebye:=New object //créer une deuxième fonction avec des paramètres nommée "Byebye"
 $allowed.Byebye.method:="My_ByeBye_Method"
 $allowed.Byebye.parameters:=New collection
 $allowed.Byebye.parameters.push(New object("name";"Message";"type";Is text))

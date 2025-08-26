@@ -26,13 +26,13 @@ title: VP REMOVE TABLE
 
 ## Description
 
-The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](vp-create-table.md).
+La commande `VP REMOVE TABLE` <!-- REF #_method_.VP REMOVE TABLE.Summary -->supprime une table<!-- END REF --> que vous avez créée avec [VP CREATE TABLE](vp-create-table.md).
 
-In *vpAreaName*, pass the name of the area where the table to remove is located.
+Dans *vpAreaName*, passez le nom de la zone contenant la table à supprimer.
 
-In *tableName*, pass the name of the table to remove.
+Dans *tableName*, passez le nom de la table à supprimer.
 
-In *options*, you can specify additional behavior. Valeurs possibles :
+Dans les *options*, vous pouvez spécifier des comportements supplémentaires. Valeurs possibles :
 
 | Constante             | Valeur | Description                                      |
 | --------------------- | ------ | ------------------------------------------------ |
@@ -40,7 +40,7 @@ In *options*, you can specify additional behavior. Valeurs possibles :
 | vk table remove style | 1      | Supprimer le style mais conserver les données    |
 | vk table remove data  | 2      | Supprimer les données mais conserver le style    |
 
-Les noms des tables sont définis au niveau de la feuille. You can specify where the table is located using the optional *sheet* parameter (indexing starts at 0).
+Les noms des tables sont définis au niveau de la feuille. Vous pouvez spécifier où se trouve la table en utilisant le paramètre facultatif *sheet* (la numérotation commence à 0).
 
 ## Exemple
 

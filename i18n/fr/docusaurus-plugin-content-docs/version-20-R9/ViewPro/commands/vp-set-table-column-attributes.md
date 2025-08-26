@@ -27,26 +27,26 @@ title: VP SET TABLE COLUMN ATTRIBUTES
 
 ## Description
 
-The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
+La commande `VP SET TABLE COLUMN ATTRIBUTES` <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES. ummary -->applique les *attributs* définis à la *colonne* dans le *tableName*<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro.
 
-In the *attributes* parameter, pass an object that contains the properties to set:
+Dans le paramètre *attributes*, passez un objet qui contient les propriétés à définir :
 
 | Propriété           | Type    | Description                                                                                                                                                                                                                              |
 | ------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | dataField           | text    | Nom de la propriété de la colonne de la table dans le contexte de données.                                                                                                                                               |
 | name                | text    | Nom de la colonne de la table. Doit être unique dans la table. Si ce nom est déjà utilisé par une autre colonne, il n'est pas appliqué et un nom par défaut est automatiquement utilisé. |
-| formula             | text    | Définit la formule pour chaque cellule de la colonne. See [Structured Reference Formulas in the SpreadJS documentation](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)                         |
+| formula             | text    | Définit la formule pour chaque cellule de la colonne. Voir [Formules de référence structurées dans la documentation de SpreadJS](https://developer.mescius.com/spreadjs/docs/features/tablegen/structref)                |
 | footerText          | text    | Valeur du pied de colonne.                                                                                                                                                                                               |
 | footerFormula       | text    | Formule de pied de colonne.                                                                                                                                                                                              |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                                             |
+| filterButtonVisible | boolean | Définit si le bouton de filtre de la colonne de la table est affiché (par défaut `True` lors de la création de la table).                                                                             |
 
 Dans *sheet*, passez le numéro de la page cible. Si aucun numéro n'est spécifié ou si vous passez -1, la commande s'applique à la feuille courante.
 
 > La numérotation démarre à 0.
 
-If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
+Si *tableName* n'est pas trouvé ou si *colonne* est supérieure au nombre de colonnes, la commande ne fait rien.
 
 ## Exemple
 

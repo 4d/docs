@@ -18,13 +18,13 @@ title: VP Name
 
 ## Description
 
-The `VP Name` command <!-- REF #_method_.VP Name.Summary -->returns a new range object referencing a named range<!-- END REF -->.
+La commande `VP Name` <!-- REF #_method_.VP Name.Summary -->retourne un nouvel objet plage faisant référence à une plage nommée<!-- END REF -->.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-The *rangeName* parameter specifies an existing named cell range.
+Le paramètre *rangeName* spécifie une plage de cellules nommée existante.
 
-In the optional *sheet* parameter, you can designate a specific spreadsheet where *rangeName* is defined. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
+Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille de calcul spécifique où *rangeName* est défini. Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante ou l'intégralité du classeur (workbook) à l'aide des constantes suivantes :
 
 - `vk current sheet`
 - `vk workbook`

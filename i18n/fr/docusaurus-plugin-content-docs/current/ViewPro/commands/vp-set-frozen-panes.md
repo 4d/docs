@@ -19,14 +19,14 @@ title: VP SET FROZEN PANES
 
 ## Description
 
-The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->. . Un trait continu s'affiche pour indiquer que des lignes et colonnes sont figées. L'emplacement du trait dépend de l'emplacement de la ligne ou colonne figée dans la feuille :
+La commande `VP SET FROZEN PANES` <!-- REF #_method_.VP SET FROZEN PANES.Summary -->définit l'état gelé des colonnes et des lignes du *paneObj* afin qu'elles soient toujours affichées dans le *vpAreaName*<!-- END REF -->. . Un trait continu s'affiche pour indiquer que des lignes et colonnes sont figées. L'emplacement du trait dépend de l'emplacement de la ligne ou colonne figée dans la feuille :
 
-- **Columns on the left or right**: For columns on the left of the sheet, the line is displayed on the right side of the last frozen column. Pour les colonnes situées à droite de la feuille, le trait s'affiche sur le côté gauche de la prmeière colonne figée.
-- **Rows on the top or bottom**: For rows at the top of the sheet, the line is displayed below the last frozen row. Pour les lignes situées en bas de la feuille, le trait s'affiche au-dessus de la première ligne figée.
+- **Colonnes à gauche ou à droite** : Pour les colonnes situées à gauche de la feuille, la ligne est affichée sur le côté droit de la dernière colonne gelée. Pour les colonnes situées à droite de la feuille, le trait s'affiche sur le côté gauche de la prmeière colonne figée.
+- **Lignes en haut ou en bas**: Pour les lignes en haut de la feuille, la ligne est affichée en dessous de la dernière ligne gelée. Pour les lignes situées en bas de la feuille, le trait s'affiche au-dessus de la première ligne figée.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 
-You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Si vous fixez la valeur d'une propriété de colonne ou de ligne à zéro, cela réinitialise (ne fige plus) la propriété. Si une propriété est définie sur une valeur inférieure à zéro, la commande ne fait rien. Vous pouvez passer :
+Vous pouvez passer un objet définissant les colonnes et les lignes à geler dans le paramètre *paneObj*. Si vous fixez la valeur d'une propriété de colonne ou de ligne à zéro, cela réinitialise (ne fige plus) la propriété. Si une propriété est définie sur une valeur inférieure à zéro, la commande ne fait rien. Vous pouvez passer :
 
 | Propriété           | Type    | Description                                              |
 | ------------------- | ------- | -------------------------------------------------------- |
