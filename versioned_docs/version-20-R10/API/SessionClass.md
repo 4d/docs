@@ -337,7 +337,7 @@ End if
 
 #### See also
 
-[**Blog posts about this feature**](https://blog.4d.com/?s=hasPrivilege)
+[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 
