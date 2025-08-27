@@ -31,7 +31,7 @@ Si no se pasa ningún parámetro, `New shared collection` crea una colección co
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> Tenga en cuenta que la instrucción `var : Collection` declara una variable de tipo `Collection` pero no crea ninguna colección.
 
 Opcionalmente, puedes precargar la nueva colección compartida pasando uno o varios *valor(es)* como parámetro(s). De lo contrario, puede añadir o modificar elementos posteriormente por asignación notación objeto (ver ejemplo).
 

@@ -17,9 +17,23 @@ Esta opción permite configurar el funcionamiento de la aplicación al abrir un 
 
 A menos que se marque esta opción, no es posible abrir una base cuando su archivo de datos está bloqueado (funcionamiento por defecto para las bases 4D).
 
-#### Sobre el bloqueo de archivos
+:::info Sobre el bloqueo de archivos
 
 Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modificado. Por ejemplo, los archivos se bloquean cuando se almacenan en un soporte no regrabable (tipo DVD) o cuando se copian desde este tipo de soporte. 4D puede trabajar de forma transparente con archivos de datos bloqueados, lo que permite, en particular, la utilización de proyectos guardados en DVD. Sin embargo, con esta operación se corre el riesgo de utilizar inadvertidamente un fichero de datos bloqueado en el que no se guardarán las modificaciones. Esta es la razón por la que, por defecto, 4D no permite abrir bases de datos con un archivo de datos bloqueado.
+
+:::
+
+#### Auto UUID version
+
+[UUID version](https://en.wikipedia.org/wiki/Universally_unique_identifier) to use for 4D fields with [automatic UUID generation option](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Available values are **4** (default) and **7**.
+
+This setting only applies to UUIDs generated afterwards. Already saved auto UUIDs fields are not recomputed.
+
+:::note
+
+For more information on UUID version 7, please read [this blog post](https://blog.4d.com/sort-uuids-with-version-7).
+
+:::
 
 ### Ubicación de carpeta temporal
 

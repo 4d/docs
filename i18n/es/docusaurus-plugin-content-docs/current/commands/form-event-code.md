@@ -17,28 +17,28 @@ displayed_sidebar: docs
 
 ## Descripción
 
-**Form event code** returns a numeric value identifying the type of form event that has just occurred. Usually, you will use **Form event code** from within a form or object method.
+**Form event code** devuelve un valor numérico que identifica el tipo de evento formulario que acaba de ocurrir. Por lo general, utilizará **Form event code** en un método formulario u objeto.
 
-4D provides predefined constants (found in the *Form Events* theme) in order to compare the values returned by the **Form event code** command. Certain events are generic (generated for any type of object) and others are specific to a particular type of object.
+4D ofrece constantes predefinidas (que se encuentran en el tema *Form Events*) para comparar los valores devueltos por el comando **Form event code**. Algunos eventos son genéricos (se generan para cualquier tipo de objeto) y otros son específicos de un tipo de objeto particular.
 
-For a description of events, please refer to the [**Form Events**](../Events/overview.md) section.
+Para una descripción de los eventos, consulte la sección [**Form Events**](../Events/overview.md).
 
 ## Ejemplo 1
 
-This example shows the On Validate event being used to automatically assign (to a field) the date that the record is modified:
+Este ejemplo muestra cómo se utiliza el evento On Validate para asignar automáticamente (a un campo) la fecha de modificación del registro:
 
 ```4d
-  //Method of a form
- Case of
-  // ...
-    :(Form event code=On Validate)
-       [aTable]Last Modified On:=Current date
- End case
+  //Método formulario
+ Case of
+  // ...
+    :(Form event code=On Validate)
+       [aTable]Last Modified On:=Current date
+ End case
 ```
 
 ## Ejemplo 2
 
-In this example, the complete handling of a drop-down list (initialization, user clicks, and object release) is encapsulated in the method of the object:
+En este ejemplo, la gestión completa de una lista desplegable (inicialización, clics del usuario y liberación del objeto) se encapsula en el método del objeto:
 
 ```4d
   //Método Objeto lista desplegable asBurgerSize 
@@ -100,10 +100,10 @@ Este ejemplo es un método formulario genérico. Muestra cada uno de los posible
 
 ## Ejemplo 4
 
-Este ejemplo muestra la plantilla de un método de formulario que maneja los eventos que pueden ocurrir para un formulario mostrado usando los comandos [DISPLAY SELECTION](../commands-legacy/display-selection.md) o [MODIFY SELECTION](../commands-legacy/modify-selection.md). For didactic purposes, it displays the nature of the event in the title bar of the form window.
+Este ejemplo muestra la plantilla de un método de formulario que maneja los eventos que pueden ocurrir para un formulario mostrado usando los comandos [DISPLAY SELECTION](../commands-legacy/display-selection.md) o [MODIFY SELECTION](../commands-legacy/modify-selection.md). Con fines didácticos, muestra la naturaleza del evento en la barra de título de la ventana del formulario.
 
 ```4d
-  ////Método formulario
+//Un método formulario
  Case of
     :(Form event code=On Load)
        $vsTheEvent:="The form is about to be displayed"
@@ -139,11 +139,11 @@ Este ejemplo muestra la plantilla de un método de formulario que maneja los eve
 
 ## Ejemplo 5
 
-For examples on how to handle [`On Before Keystroke`](../Events/onBeforeKeystroke.md) and [`On After Keystroke`](../Events/onAfterKeystroke.md) events, see examples for the [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) and [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md) commands.
+Para ejemplos sobre cómo manejar los eventos [`On Before Keystroke`](../Events/onBeforeKeystroke.md) y [`On After Keystroke`](../Events/onAfterKeystroke.md), vea los ejemplos de los comandos [Get edited text](../commands-legacy/get-edited-text.md), [Keystroke](../commands-legacy/keystroke.md) y [FILTER KEYSTROKE](../commands-legacy/filter-keystroke.md).
 
 ## Ejemplo 6
 
-This example shows how to treat clicks and double clicks in the same way in a scrollable area:
+Este ejemplo muestra cómo tratar de la misma manera los clics y los dobles clics en un área desplazable:
 
 ```4d
   //Método objeto para el área de desplazamiento asChoices
@@ -163,7 +163,7 @@ This example shows how to treat clicks and double clicks in the same way in a sc
 
 ## Ejemplo 7
 
-This example shows how to treat clicks and double clicks using a different response. Note the use of the element zero for keeping track of the selected element:
+Este ejemplo muestra cómo tratar los clics y los dobles clics utilizando una respuesta diferente. Tenga en cuenta el uso del elemento cero para realizar un seguimiento del elemento seleccionado:
 
 ```4d
 //Método objeto área de desplazamiento asChoices
@@ -194,7 +194,7 @@ Sif(asChoices#0)
 
 ## Ejemplo 8
 
-This example shows how to maintain a status text information area from within a form method, using the [`On Getting Focus`](../Events/onGettingFocus.md) and [`On Losing Focus`](../Events/onLosingFocus.md) events:
+Este ejemplo muestra cómo mantener un área de información de texto de estado desde dentro de un método de formulario, utilizando los eventos [`On Getting Focus`](../Events/onGettingFocus.md) y [`On Losing Focus`](../Events/onLosingFocus.md):
 
 ```4d
 //Método formulario [Contacts];"Data Entry"
@@ -225,23 +225,23 @@ This example shows how to maintain a status text information area from within a 
 Este ejemplo muestra cómo responder a un evento de cierre de ventana con un formulario utilizado para la entrada de datos de registro:
 
 ```4d
-  //Method for an input form
- $vpFormTable:=Current form table
- Case of
-  //...
-    :(Form event code=On Close Box)
-       If(Modified record($vpFormTable->))
-          CONFIRM("This record has been modified. Save Changes?")
-          If(OK=1)
-             ACCEPT
-          Else
-             CANCEL
-          End if
-       Else
-          CANCEL
-       End if
-  //...
- End case
+//Método para un formulario de entrada
+ $vpFormTable:=Current form table
+ Case of
+  //...
+    :(Form event code=On Close Box)
+       If(Modified record($vpFormTable->))
+          CONFIRM("This record has been modified. Save Changes?")
+          If(OK=1)
+             ACCEPT
+          Else
+             CANCEL
+          End if
+       Else
+          CANCEL
+       End if
+  //...
+ End case
 ```
 
 ## Ejemplo 10

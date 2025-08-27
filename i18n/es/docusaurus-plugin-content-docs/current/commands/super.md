@@ -44,7 +44,7 @@ Super.doSomething(42) //llama a la función "doSomething"
 Este ejemplo ilustra el uso de `Super` en un class constructor. El comando es llamado para evitar duplicar las partes del constructor que son comunes entre las clases `Rectangle` y `Square`.
 
 ```4d
-// Class: Rectangle
+// Clase: Rectángulo
 Class constructor($width : Integer; $height : Integer)
  This.name:="Rectangle"
  This.height:=$height
@@ -54,7 +54,7 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
-// Function definition
+// Definición de la función
 Function getArea() : Integer
 
  return (This.height)*(This.width)

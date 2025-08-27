@@ -26,13 +26,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->El comando **Form** devuelve el objeto asociado al formulario actual (instanciado a partir del parámetro *formData* o de la clase de usuario asignada en el editor de formularios).<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
 
- - the current form has been loaded by one of the [`DIALOG`](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands,
+ - el formulario actual ha sido cargado por uno de los comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md),
  - el formulario actual es un subformulario,
  - un formulario de tabla se muestra actualmente en la pantalla.
 
-### Commands (DIALOG...)
+### Comandos (DIALOG...)
 
-If the current form is being displayed or loaded by a call to the [DIALOG](dialog.md), [`Print form`](print-form.md), or [`FORM LOAD`](form-load.md) commands, **Form** returns either:
+Si el formulario actual se está mostrando o cargando mediante una llamada a los comandos [DIALOG](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md), **Form** devuelve cualquiera de los dos:
 
  - el objeto *formData* pasado como parámetro a este comando, si existe,
  - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
@@ -40,26 +40,22 @@ If the current form is being displayed or loaded by a call to the [DIALOG](dialo
 
 ### Subformulario
 
-If the current form is a subform, the returned object depends on the parent container variable:
+Si el formulario actual es un subformulario, el objeto devuelto depende de la variable contenedor padre:
 
- - **Form** returns the object associated with the table form displayed on screen.\
-    **Form** returns the object associated with the table form displayed on screen.\
-    In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+ - Si la variable asociada al contenedor padre ha sido tipificada como objeto, **Form** devuelve el valor de esta variable.\
+    En este caso, el objeto devuelto por **Form** es el mismo que el devuelto por la siguiente expresión:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
 
- - If the variable associated to the parent container has not been typed as an object, **Form** returns an empty object, maintained by 4D in the subform context.
+ - Si la variable asociada al contenedor padre no ha sido tipificada como objeto, **Form** devuelve un objeto vacío, mantenido por 4D en el contexto del subformulario.
 
 Para más información, consulte la sección *Subformularios de página*.
 
 ### Formulario tabla
 
-**Form** returns the object associated with the table form displayed on screen.\
-**Form** returns the object associated with the table form displayed on screen.\
-In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property: **Form** returns the object associated with the table form displayed on screen.\
-In the context of an input form displayed from an output form (i.e. after a double-click on a record), the returned object contains the following property:
+**Form** devuelve el objeto asociado al formulario tabla que se muestra en pantalla. En el contexto de un formulario de entrada visualizado desde un formulario de salida (es decir, después de hacer doble clic en un registro), el objeto devuelto contiene la siguiente propiedad:
 
 | **Propiedad** | **Tipo** | **Description**                                |
 | ------------- | -------- | ---------------------------------------------- |
@@ -73,7 +69,7 @@ En un formulario que muestra el registro de una persona, un botón "Check childr
 
 **Nota:** el campo objeto "Children" se representa sólo para mostrar su estructura en este ejemplo.
 
-In the verification form, you have assigned some Form object properties to inputs:
+En el formulario de verificación, ha asignado algunas propiedades del objeto Formulario a las entradas:
 
 ![](../assets/en/commands/pict3541682.en.png)
 
