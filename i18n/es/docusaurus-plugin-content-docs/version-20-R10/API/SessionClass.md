@@ -388,6 +388,10 @@ Else
 End if
 ```
 
+#### Ver también
+
+[**Blog posts about this feature**](https://blog.4d.com/?s=hasPrivilege)
+
 <!-- END REF -->
 
 <!-- REF SessionClass.id.Desc -->
