@@ -286,7 +286,7 @@ $privileges := Session.getPrivileges()
 #### See also
 
 [.setPrivileges()](#setprivileges)<br/>
-[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+[*Permissions – Inspect the privileges in the session for an easy debugging* (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
 
 <!-- END REF -->
 
@@ -339,7 +339,7 @@ End if
 
 #### See also
 
-[**Blog posts about this feature**](https://blog.4d.com/?s=hasPrivilege)
+[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 
