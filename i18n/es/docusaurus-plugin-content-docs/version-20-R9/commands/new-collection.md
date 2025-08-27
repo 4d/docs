@@ -23,7 +23,7 @@ Si no se pasa ningún parámetro, `New collection` crea una colección vacía y 
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> Tenga en cuenta que la instrucción `var : Collection` declara una variable de tipo `Collection` pero no crea ninguna colección.
 
 Opcionalmente, puede prellenar la nueva colección pasando uno o varios *valores* como parámetro(s).
 

@@ -17,9 +17,23 @@ Cette option permet de paramétrer le fonctionnement de l’application en cas d
 
 Lorsque l’option n’est pas cochée, il n’est pas possible d’ouvrir la base avec un fichier de données verrouillé (fonctionnement par défaut pour les bases 4D).
 
-#### A propos du verrouillage des fichiers
+:::info A propos du verrouillage des fichiers
 
 Les fichiers verrouillés peuvent être lus mais leur contenu ne peut pas être modifié. Par exemple, les fichiers sont verrouillés lorsqu’ils sont stockés sur un support non réinscriptible (type DVD) ou lorsqu’ils sont recopiés depuis un tel support. 4D peut travailler de manière transparente avec des fichiers de données verrouillés, ce qui permet notamment d’exploiter des bases en lecture sur DVD. Toutefois, ce fonctionnement induit le risque d’utilisation involontaire d’un fichier de données verrouillé dans lequel les modifications ne seront pas sauvegardées. C’est la raison pour laquelle par défaut 4D n’autorise pas l’ouverture des bases avec un fichier de données verrouillé.
+
+:::
+
+#### Auto UUID version
+
+[UUID version](https://en.wikipedia.org/wiki/Universally_unique_identifier) to use for 4D fields with [automatic UUID generation option](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Available values are **4** (default) and **7**.
+
+This setting only applies to UUIDs generated afterwards. Already saved auto UUIDs fields are not recomputed.
+
+:::note
+
+For more information on UUID version 7, please read [this blog post](https://blog.4d.com/sort-uuids-with-version-7).
+
+:::
 
 ### Emplacement du dossier temporaire
 
