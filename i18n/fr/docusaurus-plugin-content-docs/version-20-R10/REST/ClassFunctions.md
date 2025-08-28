@@ -7,8 +7,8 @@ Vous pouvez appeler les [fonctions de classe du modèle de données](ORDA/ordaCl
 
 Les fonctions peuvent être appelées de deux manières :
 
- - en utilisant des requêtes **POST**, avec des paramètres de données transmis dans le body de la requête.
- - en utilisant des requêtes **GET**, avec des paramètres passés directement dans l'URL.
+- en utilisant des requêtes **POST**, avec des paramètres de données transmis dans le body de la requête.
+- en utilisant des requêtes **GET**, avec des paramètres passés directement dans l'URL.
 
 Les requêtes POST offrent un meilleur niveau de sécurité car elles évitent l'exécution de code sensible par une action aussi simple que de cliquer sur un lien. Cependant, les requêtes GET peuvent être plus conformes à l'expérience utilisateur, en permettant d'appeler des fonctions en saisissant un URL dans un navigateur (note : le développeur doit s'assurer qu'aucune action sensible n'est effectuée dans ces fonctions).
 
@@ -96,11 +96,11 @@ Vous pouvez envoyer des paramètres à des fonctions de classes utilisateur ou d
 
 Les règles suivantes s'appliquent :
 
- - Dans les fonctions appelées par des requêtes POST, les paramètres doivent être passés **dans le body de la requête POST**.
- - Dans les fonctions appelées par des requêtes GET, les paramètres doivent être passés **dans l'URL avec la syntaxe " ?$params="**.
- - Les paramètres doivent être inclus dans une collection (format JSON).
- - Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
- - L'entity selection et l'entité peuvent être passées en tant que paramètres. La liste des paramètres doit contenir les attributs spécifiques utilisés par le serveur REST pour assigner les données aux objets ORDA correspondants : `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
+- Dans les fonctions appelées par des requêtes POST, les paramètres doivent être passés **dans le body de la requête POST**.
+- Dans les fonctions appelées par des requêtes GET, les paramètres doivent être passés **dans l'URL avec la syntaxe " ?$params="**.
+- Les paramètres doivent être inclus dans une collection (format JSON).
+- Tous les types de données scalaires pris en charge dans les collections JSON peuvent être passés en tant que paramètres.
+- L'entity selection et l'entité peuvent être passées en tant que paramètres. La liste des paramètres doit contenir les attributs spécifiques utilisés par le serveur REST pour assigner les données aux objets ORDA correspondants : `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 Voir [cet exemple](#using-an-entity-to-be-created-on-the-server) et [cet exemple](#receiving-an-entity-selection-as-parameter).
 
@@ -134,8 +134,8 @@ Vous pouvez également transmettre des valeurs pour tous les attributs de l'enti
 | __ENTITY    | Boolean                                                              | Obligatoire - Vrai pour indiquer au serveur que le paramètre est une entité |
 | __KEY       | mixte (type identique à celui de la clé primaire) | Optionnel - clé primaire de l'entité                                        |
 
- - Si `__KEY` n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
- - Si `__KEY` est fourni, l'entité correspondant à `__KEY` est chargée sur le serveur avec les attributs donnés
+- Si `__KEY` n'est pas fourni, une nouvelle entité est créée sur le serveur avec les attributs donnés.
+- Si `__KEY` est fourni, l'entité correspondant à `__KEY` est chargée sur le serveur avec les attributs donnés
 
 Voir les exemples ci-dessous pour la création ou la mise à jour d'entités avec des requêtes POST.
 Voir un exemple de téléchargement de contenu à l'aide d'une entité avec une requête GET.

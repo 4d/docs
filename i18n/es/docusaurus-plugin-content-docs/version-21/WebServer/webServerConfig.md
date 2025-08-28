@@ -82,29 +82,29 @@ Lista de hosts y métodos permitidos para el servicio CORS.
 
 Nombre de dominio o dirección IP desde donde las páginas externas pueden enviar solicitudes de datos al Servidor a través de CORS. Se pueden añadir múltiples atributos de dominio para crear una lista blanca. Se soportan varias sintaxis:
 
- - 192.168.5.17:8081
- - 192.168.5.17
- - 192.168.\*
- - 192.168.\*:8081
- - http://192.168.5.17:8081
- - http://\*.myDomain.com
- - http://myProject.myDomain.com
- - \*.myDomain.com
- - myProject.myDomain.com
- - \*
+- 192.168.5.17:8081
+- 192.168.5.17
+- 192.168.\*
+- 192.168.\*:8081
+- http://192.168.5.17:8081
+- http://\*.myDomain.com
+- http://myProject.myDomain.com
+- \*.myDomain.com
+- myProject.myDomain.com
+- \*
 
 #### Métodos HTTP autorizados (propiedad methods)
 
 Métodos HTTP aceptados para el host CORS correspondiente. Se soportan los siguientes métodos HTTP:
 
- - GET
- - HEAD
- - POST
- - PUT
- - DELETE
- - OPTIONS
- - TRACE
- - PATCH
+- GET
+- HEAD
+- POST
+- PUT
+- DELETE
+- OPTIONS
+- TRACE
+- PATCH
 
 Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vacío, null o indefinido, todos los métodos están activos.
 
@@ -145,9 +145,9 @@ Por defecto, cuando el servidor web se lanza por primera vez, 4D crea una págin
 
 Puede designar otra página de inicio por defecto introduciendo su nombre de ruta.
 
- - La ruta es relativa a la [carpeta HTML raíz ](#root-folder),.
- - La ruta se expresa con la sintaxis POSIX (las carpetas se separan con una barra ("/"))
- - La ruta no debe comenzar ni terminar con una barra.
+- La ruta es relativa a la [carpeta HTML raíz ](#root-folder),.
+- La ruta se expresa con la sintaxis POSIX (las carpetas se separan con una barra ("/"))
+- La ruta no debe comenzar ni terminar con una barra.
 
 Por ejemplo, si quiere que la página de inicio por defecto sea "MyHome.htm", y se encuentra en la carpeta "Web" (situada a su vez en la carpeta raíz HTML por defecto), utilice "Web/MyHome.htm".
 
@@ -318,13 +318,13 @@ Valores posibles: cadena de direcciones IP. Los formatos IPv6 (por ejemplo "2001
 
 #### Acerca de la compatibilidad con IPv6
 
- - **No warning when TCP port is occupied**<br/> When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. De hecho, el servidor 4D no detecta ningún error en este caso porque el puerto permanece libre en la dirección IPv6. Sin embargo, no es posible acceder a ella utilizando la dirección IPv4 de la máquina, ni mediante la dirección local 127.0.0.1.
+- **No warning when TCP port is occupied**<br/> When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. De hecho, el servidor 4D no detecta ningún error en este caso porque el puerto permanece libre en la dirección IPv6. Sin embargo, no es posible acceder a ella utilizando la dirección IPv4 de la máquina, ni mediante la dirección local 127.0.0.1.
 
 Si su servidor 4D no parece responder en el puerto definido, puede probar la dirección [::1] en la máquina del servidor (equivalente a 127.0.0.1 para IPv6, añada [:portNum] para probar otro número de puerto). Si 4D responde, es probable que otra aplicación esté utilizando el puerto en IPv4.
 
- - **IPv4-mapped IPv6 addresses**<br/> To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. Estas direcciones se escriben con un prefijo de 96 bits en formato IPv6, seguido de 32 bits escritos en la notación decimal punto de IPv4. Por ejemplo, ::ffff:192.168.2.34 representa la dirección IPv4 192.168.2.34.
+- **IPv4-mapped IPv6 addresses**<br/> To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. Estas direcciones se escriben con un prefijo de 96 bits en formato IPv6, seguido de 32 bits escritos en la notación decimal punto de IPv4. Por ejemplo, ::ffff:192.168.2.34 representa la dirección IPv4 192.168.2.34.
 
- - **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
+- **Indication of port numbers**<br/> Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // Dirección IPv6
@@ -417,10 +417,10 @@ Versión mínima de TLS aceptada para las conexiones. Se rechazarán los intento
 
 Valores posibles:
 
- - 1 = TLSv1_0
- - 2 = TLSv1_1
- - 3 = TLSv1_2 (por defecto)
- - 4 = TLSv1_3
+- 1 = TLSv1_0
+- 2 = TLSv1_1
+- 3 = TLSv1_2 (por defecto)
+- 4 = TLSv1_3
 
 Valores posibles:
 
@@ -486,10 +486,10 @@ Por ejemplo:
    Disallow: /GIFS/
 ```
 
- - “User-Agent: \*” - todos los robots son afectados.
- - “Disallow: /4D” - Los robots no están autorizados a acceder a los URLs comenzando por/4D.
- - “Disallow: /%23%23” - Los robots no están autorizados a acceder a los URLs comenzando por/%23%23.
- - “Disallow: /GIFS/’ - Los robots no pueden acceder a la carpeta /GIFS/ ni a sus subcarpetas.
+- “User-Agent: \*” - todos los robots son afectados.
+- “Disallow: /4D” - Los robots no están autorizados a acceder a los URLs comenzando por/4D.
+- “Disallow: /%23%23” - Los robots no están autorizados a acceder a los URLs comenzando por/%23%23.
+- “Disallow: /GIFS/’ - Los robots no pueden acceder a la carpeta /GIFS/ ni a sus subcarpetas.
 
 Otro ejemplo:
 
@@ -514,15 +514,15 @@ Además, la carpeta raíz HTML define, en el disco duro del servidor web, el niv
 
 Por defecto, 4D define una carpeta raíz HTML llamada **WebFolder**. Si no existe, la carpeta raíz HTML se crea físicamente en el disco en el momento en que se lanza el servidor web por primera vez. Se crea la carpeta raíz:
 
- - con 4D (local) y 4D Server, en el mismo nivel de la [carpeta del proyecto](Project/architecture.md#project-folder).
- - con 4D en modo remoto, en la carpeta de recursos locales.
+- con 4D (local) y 4D Server, en el mismo nivel de la [carpeta del proyecto](Project/architecture.md#project-folder).
+- con 4D en modo remoto, en la carpeta de recursos locales.
 
 Puede designar otra página carpeta HTML raíz por defecto introduciendo su ruta de acceso.
 
- - La ruta es relativa a la [carpeta del proyecto](Project/architecture.md#project-folder) (4D local y 4D Server) o a la carpeta que contiene la aplicación 4D o el paquete de software (4D en modo remoto).
- - La ruta se expresa con la sintaxis POSIX (las carpetas se separan con una barra ("/"))
- - Para "subir" un nivel en la jerarquía de las carpetas, introduzca "." (dos puntos) antes del nombre de la carpeta
- - La ruta no debe comenzar con una barra (excepto si quiere que la carpeta raíz HTML sea la carpeta remota del proyecto o de 4D, pero que el acceso a las carpetas anteriores esté prohibido, en cuyo caso puede pasar "/" como carpeta raíz).
+- La ruta es relativa a la [carpeta del proyecto](Project/architecture.md#project-folder) (4D local y 4D Server) o a la carpeta que contiene la aplicación 4D o el paquete de software (4D en modo remoto).
+- La ruta se expresa con la sintaxis POSIX (las carpetas se separan con una barra ("/"))
+- Para "subir" un nivel en la jerarquía de las carpetas, introduzca "." (dos puntos) antes del nombre de la carpeta
+- La ruta no debe comenzar con una barra (excepto si quiere que la carpeta raíz HTML sea la carpeta remota del proyecto o de 4D, pero que el acceso a las carpetas anteriores esté prohibido, en cuyo caso puede pasar "/" como carpeta raíz).
 
 Por ejemplo, si quiere que la carpeta raíz HTML sea la subcarpeta "Web" de la carpeta "MyWebApp", introduzca "MyWebApp/Web".
 
@@ -577,9 +577,9 @@ Valor del atributo `SameSite` de la cookie de sesión. Este atributo le permite 
 
 Hay tres valores disponibles:
 
- - "Estricto" (valor predeterminado del atributo `SameSite` para las cookies de sesión de 4D): las cookies sólo se enviarán en el contexto de primera parte, es decir, el contexto correspondiente al dominio del sitio y nunca a sitios web de terceros.
- - "Lax": las cookies no se envían en las subpeticiones de sitios cruzados (por ejemplo, para cargar imágenes o marcos en un sitio de terceros), sino que se envían cuando un usuario está navegando hacia el sitio de origen (es decir, sigue un enlace).
- - "Ninguna": las cookies se envían en todos los contextos, es decir, en las respuestas a las solicitudes de primera parte y de origen cruzado. Cuando se utiliza el valor "None", el atributo cookie `Secure` también debe ser definido (o la cookie será bloqueada).
+- "Estricto" (valor predeterminado del atributo `SameSite` para las cookies de sesión de 4D): las cookies sólo se enviarán en el contexto de primera parte, es decir, el contexto correspondiente al dominio del sitio y nunca a sitios web de terceros.
+- "Lax": las cookies no se envían en las subpeticiones de sitios cruzados (por ejemplo, para cargar imágenes o marcos en un sitio de terceros), sino que se envían cuando un usuario está navegando hacia el sitio de origen (es decir, sigue un enlace).
+- "Ninguna": las cookies se envían en todos los contextos, es decir, en las respuestas a las solicitudes de primera parte y de origen cruzado. Cuando se utiliza el valor "None", el atributo cookie `Secure` también debe ser definido (o la cookie será bloqueada).
 
 El valor del atributo `Secure` de la cookie de sesión se define automáticamente en "True" si la conexión es HTTPS (sea cual sea el valor del atributo `SameSite`).
 

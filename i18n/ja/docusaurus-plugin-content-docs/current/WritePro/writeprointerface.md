@@ -12,8 +12,8 @@ slug: /WritePro/write-pro-interface
 
 You will find below:
 
- - the Table Wizard configuration documentation,
- - the integrated A.I. ドキュメント.
+- the Table Wizard configuration documentation,
+- the integrated A.I. ドキュメント.
 
 ## 表ウィザード
 
@@ -61,9 +61,9 @@ You will find below:
 
 テンプレートの設定には以下が含まれます:
 
- - [テンプレートファイル](#テンプレートファイル): テーブルとフィールドを定義し、アプリケーションに適合したフォーミュラを用意します。
- - [トランスレーションファイル](#トランスレーションファイル): テーブル、フィールド、フォーミュラの翻訳名を指定します。
- - [テーマファイル](#テーマファイル): グラフィックスタイルとテーマをデザインしカスタマイズします。
+- [テンプレートファイル](#テンプレートファイル): テーブルとフィールドを定義し、アプリケーションに適合したフォーミュラを用意します。
+- [トランスレーションファイル](#トランスレーションファイル): テーブル、フィールド、フォーミュラの翻訳名を指定します。
+- [テーマファイル](#テーマファイル): グラフィックスタイルとテーマをデザインしカスタマイズします。
 
 表ウィザードを設定するにあたって、これら 3種類のファイルにはそれぞれ明確な役割がありますが、いずれも必須ではありません。
 
@@ -71,10 +71,10 @@ You will find below:
 
 テンプレートファイルを使って、以下のことが定義できます:
 
- - 表のデータソースとして使用されるエンティティセレクションを返すフォーミュラ
- - ブレーク行のフォーミュラ (ブレーク行を挿入できる場合)
- - 表の列として使用できるデータクラス属性
- - ブレーク行、キャリーオーバー行、プレースホルダー行、追加の行において、コンテキストメニューから選択可能なフォーミュラ
+- 表のデータソースとして使用されるエンティティセレクションを返すフォーミュラ
+- ブレーク行のフォーミュラ (ブレーク行を挿入できる場合)
+- 表の列として使用できるデータクラス属性
+- ブレーク行、キャリーオーバー行、プレースホルダー行、追加の行において、コンテキストメニューから選択可能なフォーミュラ
 
 テンプレートファイルはプロジェクトの "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" フォルダーに保存する必要があります。
 
@@ -319,11 +319,11 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 In the current implementation, the feature has the following limitations:
 
- - use of a predefined AI provider and necessity to pass your OpenAI key
- - basic chatting features
- - no image handling
- - non-configurable predefined action commands
- - predefined translations English/French and French/English only
+- use of a predefined AI provider and necessity to pass your OpenAI key
+- basic chatting features
+- no image handling
+- non-configurable predefined action commands
+- predefined translations English/French and French/English only
 
 ### Enabling the AI feature
 
@@ -350,8 +350,8 @@ The **A.I.** button is then displayed:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
- - in the 4D Write Pro Toolbar, in the **Import Export** tab,
- - in the 4D Write Pro Widget, in the **Font Style** tab.
+- in the 4D Write Pro Toolbar, in the **Import Export** tab,
+- in the 4D Write Pro Widget, in the **Font Style** tab.
 
 Click on the button to display the AI dialog box.
 
@@ -389,8 +389,8 @@ These buttons propose basic interactions between the chat area, the underlying 4
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
- - **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
- - **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
+- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
 
 In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
 
