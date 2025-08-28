@@ -7,9 +7,9 @@ Un proyecto 4D puede iniciar y monitorear un servidor web para la aplicación pr
 
 Por ejemplo, si ha instalado dos componentes en su aplicación principal, puede iniciar y supervisar hasta tres servidores web independientes desde su aplicación:
 
- - un servidor web para la aplicación local,
- - un servidor web para el componente #1,
- - un servidor web para el componente #2.
+- un servidor web para la aplicación local,
+- un servidor web para el componente #1,
+- un servidor web para el componente #2.
 
 Aparte de la memoria, no hay límite en el número de componentes y por lo tanto, de servidores web, que se pueden adjuntar a un solo proyecto de aplicación 4D.
 
@@ -19,9 +19,9 @@ Cada servidor web 4D, incluido el servidor web de la aplicación principal, se e
 
 Cada servidor web (aplicación local o componente) puede ser utilizado en su propio contexto independiente, incluyendo:
 
- - las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
- - el procesamiento de las etiquetas 4D y las llamadas de métodos,
- - sesiones web y gestión del protocolo TLS.
+- las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
+- el procesamiento de las etiquetas 4D y las llamadas de métodos,
+- sesiones web y gestión del protocolo TLS.
 
 Esto le permite desarrollar componentes independientes y funcionalidades que vienen con sus propias interfaces web.
 
@@ -48,8 +48,8 @@ webServer:=WEB Server(Web server database)
 
 Si la aplicación utiliza componentes y quiere llamar a:
 
- - el servidor web de la aplicación local a partir de un componente o
- - el servidor que ha recibido la solicitud (sin importar el servidor),
+- el servidor web de la aplicación local a partir de un componente o
+- el servidor que ha recibido la solicitud (sin importar el servidor),
 
 también se puede utilizar:
 
@@ -94,8 +94,8 @@ Estas propiedades son definidas:
 2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
 3. si no se utiliza, en los parámetros de la aplicación local o del componente.
 
- - Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
- - Si se inicia el servidor web, las propiedades contienen los valores reales utilizados por el servidor web (la configuración predeterminada podría haber sido anulada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
+- Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
+- Si se inicia el servidor web, las propiedades contienen los valores reales utilizados por el servidor web (la configuración predeterminada podría haber sido anulada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
 
 > *isRunning*, *name*, *openSSLVersion*, y *perfectForwardSecrecy* son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
 

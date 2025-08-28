@@ -53,8 +53,8 @@ Essa sintaxe só é compatível com declarações de [variáveis locais e de pro
 
 `varType` pode ser:
 
- - um [tipo básico](Concepts/data-types.md), caso em que a variável contém um valor do tipo declarado,
- - uma [referência de classe](Concepts/classes.md) (classe 4D ou classe de usuário), caso em que a variável contém uma referência a um objeto da classe definida.
+- um [tipo básico](Concepts/data-types.md), caso em que a variável contém um valor do tipo declarado,
+- uma [referência de classe](Concepts/classes.md) (classe 4D ou classe de usuário), caso em que a variável contém uma referência a um objeto da classe definida.
 
 Se `varType` for omitido, será criada uma variável do tipo **variant**.
 
@@ -86,7 +86,7 @@ A sintaxe legada usando comandos `C_XXX` está obsoleta a partir de 4D 20 R7.
 
 ### Exemplos
 
- - Para declarar variáveis básicas locais e de processo:
+- Para declarar variáveis básicas locais e de processo:
 
 ```4d
 var $myText; myText; $vt : Text
@@ -98,14 +98,14 @@ var $o : 4D. Object
 //also equivalent to C_OBJECT($o)
 ```
 
- - Para declarar variáveis objeto da classe 4D:
+- Para declarar variáveis objeto da classe 4D:
 
 ```4d
 var $myFolder : 4D. Folder
 var $myFile : 4D. File
 ```
 
- - Para declarar as variáveis objeto da classe usuário:
+- Para declarar as variáveis objeto da classe usuário:
 
 ```4d
 var $myClass : cs. MyClass
@@ -193,9 +193,9 @@ Uma variável local é, como o seu nome indica, local para um método - apenas a
 
 Poderá querer utilizar uma variável local para:
 
- - Evitar conflitos com os nomes de outras variáveis
- - Utilizar dados temporariamente
- - Reduzir o número de variáveis do processo
+- Evitar conflitos com os nomes de outras variáveis
+- Utilizar dados temporariamente
+- Reduzir o número de variáveis do processo
 
 O nome de uma variável local começa sempre com um sinal de dólar ($) e pode conter até 31 caracteres adicionais. Se introduzir um nome mais longo, 4D trunca o nome com o comprimento apropriado.
 
@@ -224,9 +224,9 @@ No modo interpretado, as variáveis são mantidas dinamicamente; são criadas e 
 
 Um processo pode "espiar e cutucar" as variáveis de processo de outro processo usando os comandos `GET PROCESS VARIABLE` e `SET PROCESS VARIABLE`. É boa prática de programação restringir a utilização destes comandos à situação para a qual foram adicionados à 4D:
 
- - Comunicação interprocessada em locais específicos ou o seu código
- - Gestão de arrastar e soltar entre processos
- - Em Cliente/Servidor, comunicação entre os processos nas máquinas do cliente e os procedimentos armazenados a correr nas máquinas do servidor
+- Comunicação interprocessada em locais específicos ou o seu código
+- Gestão de arrastar e soltar entre processos
+- Em Cliente/Servidor, comunicação entre os processos nas máquinas do cliente e os procedimentos armazenados a correr nas máquinas do servidor
 
 Para obter mais informações, consulte o capítulo **Processos** e a descrição desses comandos.
 

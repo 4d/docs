@@ -13,8 +13,8 @@ Cuando corresponda, el icono desplegar/contraer se mostrará automáticamente a 
 
 El contenido de un objeto formulario lista jerárquica se puede inicializar de una de las siguientes maneras:
 
- - Asociar una [lista de opciones](properties_DataSource.md#choice-list) existente al objeto. La lista de elección debe haber sido definida en el editor de listas en modo Diseño.
- - Asigne directamente una referencia de lista jerárquica a la [variable o expresión](properties_Object.md#variable-or-expression) asociada al objeto formulario.
+- Asociar una [lista de opciones](properties_DataSource.md#choice-list) existente al objeto. La lista de elección debe haber sido definida en el editor de listas en modo Diseño.
+- Asigne directamente una referencia de lista jerárquica a la [variable o expresión](properties_Object.md#variable-or-expression) asociada al objeto formulario.
 
 En ambos casos, se gestiona una lista jerárquica en tiempo de ejecución a través de su referencia *ListRef*, utilizando los comandos [lista jerárquica](../commands/theme/Hierarchical_Lists.md) del lenguaje 4D.
 
@@ -34,9 +34,9 @@ mylist:=New list
 
 Cada representación de la lista tiene sus propias características específicas y comparte características comunes con todas las demás representaciones. Las siguientes características son específicas de cada representación de la lista:
 
- - La selección,
- - El estado desplegado/colapsado de sus elementos,
- - La posición del cursor de desplazamiento.
+- La selección,
+- El estado desplegado/colapsado de sus elementos,
+- La posición del cursor de desplazamiento.
 
 Las otras características (fuente, tamaño de fuente, estilo, control de entrada, color, contenido de la lista, iconos, etc.) son comunes a todas las representaciones y no se pueden modificar por separado.
 Por consiguiente, cuando se utilizan comandos basados en la configuración expandida/colapsada o en el elemento actual, por ejemplo `Count list items` (cuando no se pasa el parámetro final `*`), es importante poder especificar la representación que se utilizará sin ninguna ambigüedad.
@@ -82,14 +82,14 @@ Al igual que con otros comandos de gestión de propiedades de objetos, es posibl
 
 Es posible modificar la apariencia de una lista jerárquica en un formulario utilizando varios comandos 4D genéricos. Puede pasar a estos comandos el nombre del objeto de la lista jerárquica (utilizando el parámetro \*), o su nombre de variable (que contiene el valor ListRef):
 
- - `OBJECT SET FONT`
- - `OBJECT SET FONT STYLE`
- - `OBJECT SET FONT SIZE`
- - `OBJECT SET FILTER`
- - `OBJECT SET ENTERABLE`
- - `OBJECT SET SCROLLBAR`
- - `OBJECT SET SCROLL POSITION`
- - `OBJECT SET RGB COLORS`
+- `OBJECT SET FONT`
+- `OBJECT SET FONT STYLE`
+- `OBJECT SET FONT SIZE`
+- `OBJECT SET FILTER`
+- `OBJECT SET ENTERABLE`
+- `OBJECT SET SCROLLBAR`
+- `OBJECT SET SCROLL POSITION`
+- `OBJECT SET RGB COLORS`
 
 > Recordatorio: excepto `OBJECT SET SCROLL POSITION`, estos comandos modifican todas las representaciones de una misma lista, aunque sólo se especifique una lista a través de su nombre de objeto.
 
@@ -107,8 +107,8 @@ Este principio se aplica independientemente del orden de llamada de los comandos
 
 Normalmente se puede trabajar de dos maneras con el contenido de las listas jerárquicas: por posición o por referencia.
 
- - Cuando se trabaja por posición, 4D se basa en la posición con respecto a los elementos de la lista que aparecen en pantalla para identificarlos. El resultado será diferente según se expandan o colapsen determinados elementos jerárquicos. Tenga en cuenta que en el caso de las representaciones múltiples, cada objeto formulario tiene su propia configuración de elementos expandidos/colapsados.
- - Cuando se trabaja por referencia, 4D se basa en el número de identificación *itemRef* de los elementos de la lista. Así, cada elemento puede especificarse individualmente, independientemente de su posición o de su visualización en la lista jerárquica.
+- Cuando se trabaja por posición, 4D se basa en la posición con respecto a los elementos de la lista que aparecen en pantalla para identificarlos. El resultado será diferente según se expandan o colapsen determinados elementos jerárquicos. Tenga en cuenta que en el caso de las representaciones múltiples, cada objeto formulario tiene su propia configuración de elementos expandidos/colapsados.
+- Cuando se trabaja por referencia, 4D se basa en el número de identificación *itemRef* de los elementos de la lista. Así, cada elemento puede especificarse individualmente, independientemente de su posición o de su visualización en la lista jerárquica.
 
 ### Utilizar los números de referencia de los artículos (itemRef)
 
@@ -141,9 +141,9 @@ Básicamente, es necesario tratar con los números de referencia de los elemento
 
 Puede controlar si los elementos de la lista jerárquica pueden ser modificados por el usuario utilizando el atajo de teclado **Alt+clic**(Windows) / **Opción+clic** (macOS), o realizando una pulsación larga sobre el texto del elemento.
 
- - Sea cual sea la fuente de datos de la lista jerárquica, puede controlar todo el objeto con la propiedad [Editable](properties_Entry.md#enterable).
+- Sea cual sea la fuente de datos de la lista jerárquica, puede controlar todo el objeto con la propiedad [Editable](properties_Entry.md#enterable).
 
- - Además, si llena la lista jerárquica utilizando una lista creada en el editor de listas, puede controlar si un elemento de una lista jerárquica es modificable mediante la opción **Elemento modificable** del editor de listas. Para más información, consulte [Definir las propiedades de la lista](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
+- Además, si llena la lista jerárquica utilizando una lista creada en el editor de listas, puede controlar si un elemento de una lista jerárquica es modificable mediante la opción **Elemento modificable** del editor de listas. Para más información, consulte [Definir las propiedades de la lista](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## Propiedades soportadas
 

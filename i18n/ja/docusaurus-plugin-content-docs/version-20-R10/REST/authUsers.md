@@ -43,9 +43,9 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions
 
 記述的RESTリクエストは、ライセンスを必要としない Webユーザーセッション ("ゲスト" セッション) で処理することができます。 記述的RESTリクエストとは以下のものを指します:
 
- - [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
- - `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
- - `/rest/$getWebForm` - Qodlyページのレンダリング
+- [`/rest/$catalog`]($catalog.md) リクエスト (例: `/rest/$catalog/$all`) - 利用可能なデータクラスへのアクセス
+- `/rest/$catalog/authentify` - ユーザーログインに使用されるデータストア関数
+- `/rest/$getWebForm` - Qodlyページのレンダリング
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -73,8 +73,8 @@ exposed Function authentify({params : type}) {-> result : type}
 
 この関数は 2部構成で書かれる必要があります:
 
- - RESTリクエストの送信元を識別し、認証するためのコード
- - 認証が成功した場合、セッションに適切な権限を割り当てる [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) の呼び出し
+- RESTリクエストの送信元を識別し、認証するためのコード
+- 認証が成功した場合、セッションに適切な権限を割り当てる [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) の呼び出し
 
 関数が [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出さない場合、権限が割り当てられないため、ライセンスも消費されず、後続の記述的でない RESTリクエストは拒否されます。
 

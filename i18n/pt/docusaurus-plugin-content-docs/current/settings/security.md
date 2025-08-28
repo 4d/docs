@@ -11,7 +11,7 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
 
 > Essas configurações não se aplicam às bases de dados do projeto abertas no modo de usuário único.
 
- - **Acceso Diseño y al Explorador de ejecución**: da al grupo especificado la capacidad de entrar al modo Diseño de la base y mostrar el Explorador de ejecución.
+- **Acceso Diseño y al Explorador de ejecución**: da al grupo especificado la capacidad de entrar al modo Diseño de la base y mostrar el Explorador de ejecución.
 
   Note que:
 
@@ -25,11 +25,11 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
   - Se você associou uma senha ao usuário padrão, uma caixa de diálogo aparece quando o banco de dados está aberto e os usuários devem inserir uma senha.
   - If you haven't associated a password with the Default User, the User Identification dialog box will not appear.**Note:** You can "force" the display of the User Identification dialog box when the "Default User" mode is active, for instance in order to connect as Administrator or Designer. Para ello, presione la tecla **Mayús** mientras abre la base de datos o se conecta a ella.
 
- - **Mostrar lista de usuarios en la caja de diálogo Contraseña**: si se marca esta opción, los usuarios deben elegir su nombre en la lista de usuarios e introducir su contraseña en la caja de diálogo de identificación de usuario. Se essa opção não estiver marcada, os usuários deverão digitar o nome e a senha. Para obtener más información sobre las dos versiones de la caja de diálogo de contraseña, consulte la sección "Acceso a las bases protegidas" en [Presentación del control de acceso](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html
+- **Mostrar lista de usuarios en la caja de diálogo Contraseña**: si se marca esta opción, los usuarios deben elegir su nombre en la lista de usuarios e introducir su contraseña en la caja de diálogo de identificación de usuario. Se essa opção não estiver marcada, os usuários deverão digitar o nome e a senha. Para obtener más información sobre las dos versiones de la caja de diálogo de contraseña, consulte la sección "Acceso a las bases protegidas" en [Presentación del control de acceso](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html
 
   - **Ordenar la lista de los usuarios en orden alfabético** (sólo disponible si está marcada la opción anterior): cuando esta opción está seleccionada, la lista de los usuarios de la caja de diálogo de introducción de contraseña se ordena por orden alfabétic
 
- - **Los usuarios pueden cambiar su contraseña**: cuando esta opción está marcada, aparece un botón **Cambiar** en la caja de diálogo Identificación del usuario. This button lets the user access a dialog box that can be used to change their password (for more information about this dialog box, refer to the "Modification of password by user" in [Ensuring system maintenance](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). Si lo desea, puede ocultar el botón **Cambiar** para que los usuarios no puedan modificar sus contraseñas. Para o fazer, basta desmarcar esta opção.
+- **Los usuarios pueden cambiar su contraseña**: cuando esta opción está marcada, aparece un botón **Cambiar** en la caja de diálogo Identificación del usuario. This button lets the user access a dialog box that can be used to change their password (for more information about this dialog box, refer to the "Modification of password by user" in [Ensuring system maintenance](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). Si lo desea, puede ocultar el botón **Cambiar** para que los usuarios no puedan modificar sus contraseñas. Para o fazer, basta desmarcar esta opção.
 
 ## Opções
 
@@ -41,9 +41,9 @@ Esta página contém opções relacionadas ao acesso e à proteção de dados pa
   - **Desactivado para todos**: esta opción desactiva el control en las fórmulas. Quando esta opção estiver marcada, os usuários terão acesso a todos os comandos 4D e plug-ins, bem como a todos os métodos do projeto (exceto para os invisíveis).
     **Nota:** esta opção tem prioridade sobre o comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md). Quando está selecionado, este comando não faz nada.
 
- - **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. Para mais informações, consulte [Parâmetros do usuário](../Desktop/user-settings.md).
+- **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. Para mais informações, consulte [Parâmetros do usuário](../Desktop/user-settings.md).
 
- - **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. Por razões de segurança, você deve autorizar explicitamente a execução deste método em cada banco de dados de host. Para o efeito, é necessário marcar esta opção. Por padrão, não está marcada.
+- **Execute "On Host Database Event" method of the components**: The [On Host Database Event database method](../commands-legacy/on-host-database-event-database-method.md) facilitates the initialization and backup phases for 4D components. Por razões de segurança, você deve autorizar explicitamente a execução deste método em cada banco de dados de host. Para o efeito, é necessário marcar esta opção. Por padrão, não está marcada.
 
   Quando esta opção está seleccionada:
 

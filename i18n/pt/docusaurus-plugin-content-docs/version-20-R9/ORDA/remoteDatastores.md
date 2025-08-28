@@ -17,9 +17,9 @@ The web session created on the remote datastore is identified using a internal s
 
 El `localID` es local a la máquina que se conecta al datastore remoto, lo que significa:
 
- - Si otros procesos de la misma aplicación necesitan acceder al mismo datastore remoto, pueden utilizar el mismo `localID` y, de este modo, compartir la misma sesión.
- - Si otro proceso de la misma aplicación abre el mismo datastore remoto pero con otro `localID`, creará una nueva sesión en el datastore remoto.
- - Si otra máquina se conecta al mismo datastore remoto con el mismo `localID`, creará otra sesión con otra cookie.
+- Si otros procesos de la misma aplicación necesitan acceder al mismo datastore remoto, pueden utilizar el mismo `localID` y, de este modo, compartir la misma sesión.
+- Si otro proceso de la misma aplicación abre el mismo datastore remoto pero con otro `localID`, creará una nueva sesión en el datastore remoto.
+- Si otra máquina se conecta al mismo datastore remoto con el mismo `localID`, creará otra sesión con otra cookie.
 
 Estes princípios são ilustrados nos gráficos seguintes:
 
@@ -29,9 +29,9 @@ Estes princípios são ilustrados nos gráficos seguintes:
 
 Os processos que gerenciam sessões para acesso ao armazenamento de dados são mostrados na janela de administração do 4D Server:
 
- - nombre: "REST Handler: \<process name\>"
- - type: type Worker Server HTTP
- - sesión: el nombre de la sesión es el nombre de usuario que se pasa al comando `Open datastore`.
+- nombre: "REST Handler: \<process name\>"
+- type: type Worker Server HTTP
+- sesión: el nombre de la sesión es el nombre de usuario que se pasa al comando `Open datastore`.
 
 No exemplo a seguir, dois processos estão sendo executados na mesma sessão:
 

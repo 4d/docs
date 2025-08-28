@@ -23,8 +23,8 @@ Em *vpAreaName*, passe o nome da propriedade da área 4D View Pro. Se passar um 
 
 You can define where to get the style sheets in the optional *sheet* parameter using the sheet index (counting begins at 0) or with the following constants:
 
- - `vk current sheet`
- - `vk workbook`
+- `vk current sheet`
+- `vk workbook`
 
 ## Exemplo
 

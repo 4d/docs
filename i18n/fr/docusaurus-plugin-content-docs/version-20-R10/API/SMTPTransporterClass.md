@@ -100,8 +100,8 @@ La propriété `.keepAlive` contient <!-- REF #SMTPTransporterClass.keepAlive.Su
 
 La connexion SMTP est automatiquement fermée :
 
- - lorsque l'objet `transporter` est détruit si la propriété `.keepAlive` est mise à vrai,
- - après chaque fonction `.send( )` exécutée si la propriété `.keepAlive` est mise à faux.
+- lorsque l'objet `transporter` est détruit si la propriété `.keepAlive` est mise à vrai,
+- après chaque fonction `.send( )` exécutée si la propriété `.keepAlive` est mise à faux.
 
 <!-- INCLUDE transporter.logFile.Desc -->
 

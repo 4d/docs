@@ -7,9 +7,9 @@ Um projeto 4D pode iniciar e monitorar um servidor web para a aplicação (host)
 
 Por exemplo, se você instalou dois componentes em sua aplicação principal, você pode iniciar e monitorar até três servidores web independentes em sua aplicação:
 
- - um servidor web para a aplicação local,
- - um servidor Web para o componente #1,
- - um servidor Web para o componente #2.
+- um servidor web para a aplicação local,
+- um servidor Web para o componente #1,
+- um servidor Web para o componente #2.
 
 Além da memória, não há limite para o número de componentes e, assim, de servidores web, que podem ser anexados a um único projeto de aplicação 4D.
 
@@ -19,9 +19,9 @@ Cada servidor web 4D, incluido el servidor web de la aplicación principal, se e
 
 Cada servidor web (aplicação host ou componente) pode ser usado em seu próprio contexto separado, incluindo:
 
- - las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
- - o processamento das etiquetas 4D e das chamadas de métodos,
- - sessões Web e gestão do protocolo TLS.
+- las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
+- o processamento das etiquetas 4D e das chamadas de métodos,
+- sessões Web e gestão do protocolo TLS.
 
 Isso permite que você desenvolva componentes e recursos independentes que vêm com suas próprias interfaces web.
 
@@ -48,8 +48,8 @@ webServer:=WEB Server(Web server database)
 
 Se a aplicação utilizar componentes e o usuário pretender chamar:
 
- - o servidor Web da aplicação host a partir de um componente ou
- - o servidor que recebeu o pedido (qualquer que seja o servidor),
+- o servidor Web da aplicação host a partir de um componente ou
+- o servidor que recebeu o pedido (qualquer que seja o servidor),
 
 também pode ser utilizado:
 
@@ -94,8 +94,8 @@ Estas propriedades são definidas:
 2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
 3. se não for usado, nos parâmetros da aplicação host ou do componente.
 
- - Se o servidor web não for iniciado, as propriedades contêm os valores que serão usados na próxima inicialização do servidor web.
- - If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Se o servidor web não for iniciado, as propriedades contêm os valores que serão usados na próxima inicialização do servidor web.
+- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
 
 > *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
 
