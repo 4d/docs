@@ -9,12 +9,12 @@ Un sous-formulaire est un formulaire inclus dans un autre formulaire.
 
 Afin de bien définir les notions mises en oeuvre avec les sous-formulaires, voici quelques définitions relatives aux termes employés :
 
- - **Sous-formulaire** : formulaire destiné à être inclus dans un autre formulaire, lui-même nommé formulaire parent.
- - **Formulaire parent** : formulaire contenant un ou plusieurs sous-formulaire(s).
- - **Conteneur de sous-formulaire** : objet inclus dans le formulaire parent, contenant une instance du sous-formulaire.
- - **Instance de sous-formulaire** : la représentation d’un sous-formulaire dans un formulaire parent. Cette notion est importante car il est possible d’afficher plusieurs instances d’un même sous-formulaire dans un formulaire parent.
- - **Formulaire liste écran** : instance de sous-formulaire en liste.
- - **Formulaire détaillé** : formulaire de saisie en page associé au sous-formulaire en liste et accessible via un double-clic dans la liste.
+- **Sous-formulaire** : formulaire destiné à être inclus dans un autre formulaire, lui-même nommé formulaire parent.
+- **Formulaire parent** : formulaire contenant un ou plusieurs sous-formulaire(s).
+- **Conteneur de sous-formulaire** : objet inclus dans le formulaire parent, contenant une instance du sous-formulaire.
+- **Instance de sous-formulaire** : la représentation d’un sous-formulaire dans un formulaire parent. Cette notion est importante car il est possible d’afficher plusieurs instances d’un même sous-formulaire dans un formulaire parent.
+- **Formulaire liste écran** : instance de sous-formulaire en liste.
+- **Formulaire détaillé** : formulaire de saisie en page associé au sous-formulaire en liste et accessible via un double-clic dans la liste.
 
 ## Sous-formulaires en liste
 
@@ -43,8 +43,8 @@ You can bind [a variable or an expression](properties_Object.md#variable-or-expr
 
 By default, 4D creates a variable or expression of [object type](properties_Object.md#expression-type) for a subform container, which allows you to share values in the context of the subform using the `Form` command. However, you can use a variable or expression of any scalar type (time, integer, etc.) especially if you only need to share a single value:
 
- - Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. Cette solution est recommandée pour synchroniser une seule valeur.
- - Define a bound variable or expression of the **object** type and use the `Form` command to access its properties from the subform. Cette solution est recommandée pour synchroniser plusieurs valeurs.
+- Define a bound variable or expression of a scalar type and call the `OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands to exchange values when [On Bound Variable Change](../Events/onBoundVariableChange.md) or [On Data Change](../Events/onDataChange.md) form events occur. Cette solution est recommandée pour synchroniser une seule valeur.
+- Define a bound variable or expression of the **object** type and use the `Form` command to access its properties from the subform. Cette solution est recommandée pour synchroniser plusieurs valeurs.
 
 ### Synchronisation du formulaire parent et du sous-formulaire (valeur unique)
 
@@ -58,8 +58,8 @@ Dans le formulaire parent, les deux objets (zone de saisie et conteneur de sous-
 
 To display a static time, you must use the appropriate [data type](properties_DataSource.md#data-type-expression-type) for the [variable or expression](properties_Object.md#variable-or-expression):
 
- - If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
- - If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.
+- If you use a variable (e.g. `parisTime`), it must be of the `text` or `time` type.
+- If you use an expression (e.g. `Form.myValue`), it must contain a `text` value.
 
 La valeur texte doit être formatée "hh:mm:ss".
 
@@ -88,15 +88,15 @@ It updates the value of `Form.clockValue` in the subform:
 
 L’événement formulaire [Sur modif variable liée](../Events/onBoundVariableChange.md) est généré :
 
- - dès qu'une valeur est assignée à la variable/expression du formulaire parent, même si la même valeur est réassignée
- - si le sous-formulaire appartient à la page formulaire courante ou à la page 0.
+- dès qu'une valeur est assignée à la variable/expression du formulaire parent, même si la même valeur est réassignée
+- si le sous-formulaire appartient à la page formulaire courante ou à la page 0.
 
 Note that, as in the above example, it is preferable to use the `OBJECT Get subform container value` command which returns the value of the expression in the subform container rather than the expression itself because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks).
 
 La modification de la variable ou de l'expression liée déclenche des événements formulaire qui vous permettent de synchroniser les valeurs du formulaire parent et du sous-formulaire :
 
- - Use the [On Bound Variable Change](../Events/onBoundVariableChange.md) form event to indicate to the subform (form method of subform) that the variable or expression was modified in the parent form.
- - Use the [On Data Change](../Events/onDataChange.md) form event to indicate to the subform container that the variable or expression value was modified in the subform.
+- Use the [On Bound Variable Change](../Events/onBoundVariableChange.md) form event to indicate to the subform (form method of subform) that the variable or expression was modified in the parent form.
+- Use the [On Data Change](../Events/onDataChange.md) form event to indicate to the subform container that the variable or expression value was modified in the subform.
 
 #### Mise à jour du contenu d'un formulaire parent
 
@@ -170,8 +170,8 @@ La communication entre le formulaire parent et les instances du sous-formulaire 
 
 Pour répondre à ces besoins, 4D propose les mécanismes suivants :
 
- - Appel de l’objet conteneur depuis le sous-formulaire via la commande `CALL SUBFORM CONTAINER`
- - Exécution d’une méthode dans le contexte du sous-formulaire via la commande `EXECUTE METHOD IN SUBFORM`
+- Appel de l’objet conteneur depuis le sous-formulaire via la commande `CALL SUBFORM CONTAINER`
+- Exécution d’une méthode dans le contexte du sous-formulaire via la commande `EXECUTE METHOD IN SUBFORM`
 
 > La commande `GOTO OBJECT` peut rechercher l’objet de destination dans le formulaire parent même si elle exécutée depuis un sous-formulaire.
 

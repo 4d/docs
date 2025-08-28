@@ -32,10 +32,10 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 Dans *filePath*, passez le chemin et le nom du document à importer. Les formats suivants sont pris en charge :
 
- - Les documents 4D View Pro (extension ".4vp")
- - Microsoft Excel (extension ".xlsx")
- - documents texte (extension ".txt", ".csv", le document doit être en utf-8)
- - [Documents SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
+- Les documents 4D View Pro (extension ".4vp")
+- Microsoft Excel (extension ".xlsx")
+- documents texte (extension ".txt", ".csv", le document doit être en utf-8)
+- [Documents SpreadJS](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (extension ".sjs")
 
 Si l'extension du document n'est pas une extension reconnue, telle que `.4vp` ou `.xlsx`, le document est considéré comme un document texte. Vous devez passer un chemin d'accès complet, sauf si le document est situé au même niveau que le dossier Project, auquel cas vous pouvez simplement passer son nom.
 

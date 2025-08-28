@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->**String** コマンドは、*expression* に渡した数値、日付、時間、文字列、またはブールを文字列に変換します。<!-- END REF-->
 
-引数を何も渡さなかった場合、適切なデフォルトの形式の文字列で返されます。 *format* を指定すると、結果の文字列は指定した形式になります。
+If you do not pass any other parameter, the string is returned with the appropriate default format. *format* を指定すると、結果の文字列は指定した形式になります。
 
 オプションの*addTime* 引数は、日付に時間を複合フォーマットで追加します。 この引数は *expression* 引数が日付型の時にのみ使用できます (後述)。
 

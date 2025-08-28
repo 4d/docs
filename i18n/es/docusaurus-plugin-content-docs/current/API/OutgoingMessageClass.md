@@ -63,10 +63,10 @@ Un objeto 4D.OutgoingMessage es un objeto [no compartible](../Concepts/shared.md
 
 La propiedad `.body` contiene <!-- REF #OutgoingMessageClass.body.Summary -->el cuerpo del mensaje saliente<!-- END REF -->. Los siguientes tipos de datos están soportados en la propiedad `.body`:
 
- - text
- - blob
- - object
- - image
+- text
+- blob
+- object
+- image
 
 La propiedad `.body` es de lectura-escritura.
 
@@ -108,17 +108,17 @@ La función `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->def
 
 Los siguientes tipos de datos están soportados en el *body*:
 
- - Text
- - Blob
- - Object
- - Imagen
+- Text
+- Blob
+- Object
+- Imagen
 
 Cuando se utiliza esta función, el encabezado content-type se define automáticamente en función del tipo *body*:
 
- - Content-Type:text/plain si el cuerpo es un Texto
- - Content-Type:application/octet-stream si el body es un Blob
- - Content-Type:application/json si el body es un objeto
- - Content-Type:image/jpeg, image/gif... si el body es una imagen
+- Content-Type:text/plain si el cuerpo es un Texto
+- Content-Type:application/octet-stream si el body es un Blob
+- Content-Type:application/json si el body es un objeto
+- Content-Type:image/jpeg, image/gif... si el body es una imagen
 
 Si *body* no es de un tipo de valor soportado, se devuelve un error.
 

@@ -13,8 +13,8 @@ As páginas Cliente-servidor agrupam parâmetros relacionados ao uso do banco de
 
 Essa opção permite que você indique se o banco de dados do 4D Server aparecerá ou não na lista de bancos de dados publicados.
 
- - When this option is checked (default), the database is made public and appears in the list of published databases (**Available** tab).
- - Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. Para se conectar, os usuários devem inserir manualmente o endereço do banco de dados na guia **Personalizado** da caixa de diálogo de conexão.
+- When this option is checked (default), the database is made public and appears in the list of published databases (**Available** tab).
+- Quando a opção não estiver marcada, o banco de dados não será tornado público e não aparecerá na lista de bancos de dados publicados. Para se conectar, os usuários devem inserir manualmente o endereço do banco de dados na guia **Personalizado** da caixa de diálogo de conexão.
 
 :::note
 
@@ -68,9 +68,9 @@ Quando o Single Sign On (SSO) estiver ativado (veja acima), você deverá preenc
 
 This drop-down box contains 3 network layer options to choose between: **legacy**, **ServerNet** and **QUIC** (only in project mode), which are used to handle communications between 4D Server and remote 4D machines (clients).
 
- - **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. Essa camada de rede também pode ser ativada por programação usando o comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
- - **ServerNet** (por padrão): ativa a camada de rede ServerNet no servidor (disponível desde 4D v15).
- - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
+- **Legacy**: This former "legacy" network layer is still supported in order to ensure compatibility for databases created prior to v15. Essa camada de rede também pode ser ativada por programação usando o comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
+- **ServerNet** (por padrão): ativa a camada de rede ServerNet no servidor (disponível desde 4D v15).
+- **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
   **Notas**:
 

@@ -11,8 +11,8 @@ title: On Drag Over
 
 L'événement `On Drag Over` est envoyé à plusieurs reprises à l'objet de destination lorsque le pointeur de la souris est déplacé sur l'objet. Généralement, en réponse à cet événement :
 
- - Vous récupérez les données et les signatures présentes dans le conteneur (via la commande `GET PASTEBOARD DATA`).
- - En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
+- Vous récupérez les données et les signatures présentes dans le conteneur (via la commande `GET PASTEBOARD DATA`).
+- En fonction de la nature et du type de données dans le conteneur, vous acceptez ou refusez le glisser-déposer.
 
 Pour **rejeter** le glisser, la méthode de l'objet de destination doit retourner -1.
 Lors d'un événement `On Drag Over`, 4D traite la méthode objet comme une fonction.
