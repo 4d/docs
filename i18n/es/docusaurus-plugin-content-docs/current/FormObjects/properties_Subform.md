@@ -30,7 +30,7 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar�
 
 > Para ello, basta con hacer dos clics en el campo a modificar para que pase al modo edición (asegúrese de dejar suficiente tiempo entre los dos clics para no generar un doble clic).
 
- - el formulario detallado a asociar al [subformulario listado](#formulario-de-lista). El formulario detallado puede utilizarse para introducir o ver los subregistros. Generalmente contiene más información que el subformulario lista. Naturalmente, el formulario detallado debe pertenecer a la misma tabla que el subformulario. Normalmente se utiliza un formulario de salida como formulario lista y un formulario de entrada como formulario detallado. Si no especifica el formulario a utilizar para la entrada de la página completa, 4D utiliza automáticamente el formato de entrada por defecto de la tabla.
+- el formulario detallado a asociar al [subformulario listado](#formulario-de-lista). El formulario detallado puede utilizarse para introducir o ver los subregistros. Generalmente contiene más información que el subformulario lista. Naturalmente, el formulario detallado debe pertenecer a la misma tabla que el subformulario. Normalmente se utiliza un formulario de salida como formulario lista y un formulario de entrada como formulario detallado. Si no especifica el formulario a utilizar para la entrada de la página completa, 4D utiliza automáticamente el formato de entrada por defecto de la tabla.
 
 #### Gramática JSON
 
@@ -52,8 +52,8 @@ Esta propiedad se utiliza para declarar el formulario detallado que se utilizar�
 
 Acción a realizar en caso de doble clic en una línea vacía de un subformulario listado. Las siguientes opciones están disponibles:
 
- - <strong x-id="1">No hacer nada</strong> (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
- - Añadir registro: crea un nuevo registro en el subformulario y cambia al modo edición. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
+- <strong x-id="1">No hacer nada</strong> (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
+- Añadir registro: crea un nuevo registro en el subformulario y cambia al modo edición. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
 
 #### Gramática JSON
 
@@ -77,9 +77,9 @@ Acción a realizar en caso de doble clic en una línea vacía de un subformulari
 
 Define la acción a realizar cuando un usuario haga doble clic en una línea en un subformulario lista. Las opciones disponibles son:
 
- - **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
- - **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el [formulario detallado](#detail-form) definido para el subformulario lista. El registro se abre en modo de lectura-escritura para que pueda ser modificado.
- - **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
+- **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
+- **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el [formulario detallado](#detail-form) definido para el subformulario lista. El registro se abre en modo de lectura-escritura para que pueda ser modificado.
+- **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
 
 Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
 

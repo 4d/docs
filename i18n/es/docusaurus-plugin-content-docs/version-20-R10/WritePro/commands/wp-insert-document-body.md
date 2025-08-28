@@ -54,7 +54,7 @@ En el parámetro *rangeUpdate* (Opcional); si *targetObj* es un rango, puede pas
 
 Si no se pasa el parámetro *rangeUpdate*, por defecto el contenido insertado se incluye en el rango resultante.
 
- - Si *targetObj* no es un rango, *rangeUpdate* se ignora.
+- Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 

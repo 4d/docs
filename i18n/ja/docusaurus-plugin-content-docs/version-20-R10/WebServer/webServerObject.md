@@ -7,9 +7,9 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 たとえば、メインアプリケーションに 2つのコンポーネントをインストールしている場合、アプリケーションから最大 3つの独立した Webサーバーを起動して監視することができます:
 
- - ホストアプリケーションの Webサーバーを1つ
- - コンポーネント#1 の Webサーバーを1つ
- - コンポーネント#2 の Webサーバーを1つ
+- ホストアプリケーションの Webサーバーを1つ
+- コンポーネント#1 の Webサーバーを1つ
+- コンポーネント#2 の Webサーバーを1つ
 
 1つの 4Dアプリケーションプロジェクトに接続できるコンポーネントの数、つまり Webサーバーの数には、メモリ以外の制限はありません。
 
@@ -19,9 +19,9 @@ A 4D project can start and monitor a web server for the main (host) application 
 
 各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。これには、以下が含まれます:
 
- - `On Web Authentication` および `On Web Connection` データベースメソッドの呼び出し
- - 4Dタグの処理とメソッドの呼び出し
- - Webセッションや TLSプロトコルの管理
+- `On Web Authentication` および `On Web Connection` データベースメソッドの呼び出し
+- 4Dタグの処理とメソッドの呼び出し
+- Webセッションや TLSプロトコルの管理
 
 これにより、独自の Webインターフェースを備えた独立したコンポーネントや機能を開発することができます。
 
@@ -49,8 +49,8 @@ webServer:=WEB Server(Web server database)
 
 アプリケーションがコンポーネントを使用している場合に:
 
- - コンポーネントからホストアプリケーションの Webサーバーを呼び出す場合や
- - リクエストを受け取ったサーバー (どのサーバーでも) を呼び出す場合
+- コンポーネントからホストアプリケーションの Webサーバーを呼び出す場合や
+- リクエストを受け取ったサーバー (どのサーバーでも) を呼び出す場合
 
 次を使うこともできます:
 
@@ -97,8 +97,8 @@ A web server object contains [various properties](API/WebServerClass.md../comman
 2. 上を使用しない場合は、`WEB SET OPTION` コマンドを使用して定義します (ホストアプリケーションのみ)。
 3. 上を使用しない場合は、ホストアプリケーションまたはコンポーネントの設定で定義します。
 
- - Webサーバーを起動していない場合、プロパティには Webサーバーの次回起動時に使用される値が含まれています。
- - Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
+- Webサーバーを起動していない場合、プロパティには Webサーバーの次回起動時に使用される値が含まれています。
+- Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
 
 > *isRunning*、*name*、*openSSLVersion*、*perfectForwardSecrecy* は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
 

@@ -188,8 +188,8 @@ Dans les sections ci-dessus, nous obtenons un accès libre à l'application à p
 
 La façon la plus simple et sécurisée de connecter un utilisateur sur le serveur web 4D est basée sur le scénario suivant :
 
- - Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée *WebUsers* par exemple)
- - La table *WebUsers* pourrait être [chiffrée](MSC/encrypt.md) et stocke le nom d'utilisateur et un hachage de leur mot de passe.
+- Les utilisateurs sont stockés dans une table dédiée et non exposée (nommée *WebUsers* par exemple)
+- La table *WebUsers* pourrait être [chiffrée](MSC/encrypt.md) et stocke le nom d'utilisateur et un hachage de leur mot de passe.
 
 1. Créez une table avec certains champs, par exemple :
 

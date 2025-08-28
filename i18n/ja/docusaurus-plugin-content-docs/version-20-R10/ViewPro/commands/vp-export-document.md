@@ -34,11 +34,11 @@ title: VP EXPORT DOCUMENT
 
 ドキュメント名に拡張子を付けることで、書き出すドキュメントの形式を指定することができます:
 
- - 4D View Pro (".4vp")
- - Microsoft Excel (".xlsx")
- - PDF (".pdf")
- - CSV (".txt" または ".csv")
- - [SpreadJS ドキュメント](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
+- 4D View Pro (".4vp")
+- Microsoft Excel (".xlsx")
+- PDF (".pdf")
+- CSV (".txt" または ".csv")
+- [SpreadJS ドキュメント](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) (".sjs")
 
 ファイル名に拡張子が含まれていなくても、*paramObj* 引数によって形式が指定されている場合、書き出されたファイルには形式に対応する拡張子がつけられます。 ただし CSV形式の場合には拡張子がつきません。
 
@@ -88,25 +88,25 @@ title: VP EXPORT DOCUMENT
 
 **Excel 形式についての注意**:
 
- - 4D View Pro ドキュメントを Microsoft Excel 形式のファイルに書き出す場合、一部の設定が失われる可能性があります。 たとえば、4Dメソッドとフォーミュラは Excel ではサポートされません。 [SpreadJS にある一覧](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport) にて、その他の設定を確認することができます。
- - このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
- - ".xlsx" フォーマットで書き出す際には*excelOptions* オブジェクトの使用が推奨されています。 このオブジェクトを旧式の第一レベルプロパティ(*password*、*includeBindingSource*...)と混在させないように注意して下さい。 混在させた場合には問題が起きる可能性があります。
+- 4D View Pro ドキュメントを Microsoft Excel 形式のファイルに書き出す場合、一部の設定が失われる可能性があります。 たとえば、4Dメソッドとフォーミュラは Excel ではサポートされません。 [SpreadJS にある一覧](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport) にて、その他の設定を確認することができます。
+- このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
+- ".xlsx" フォーマットで書き出す際には*excelOptions* オブジェクトの使用が推奨されています。 このオブジェクトを旧式の第一レベルプロパティ(*password*、*includeBindingSource*...)と混在させないように注意して下さい。 混在させた場合には問題が起きる可能性があります。
 
 **PDF 形式についての注意**:
 
- - 4D View Pro ドキュメントを PDF 形式に書き出す場合、ドキュメントで使用されているフォントは自動的に PDF ファイルに埋め込まれます。 ただし、埋め込み可能なのは Unicode マップを持つ OpenType フォント (.OTF または .TTF ファイル) のみです。 フォントに対して有効なフォントファイルが見つからない場合、デフォルトのフォントが代用されます。
- - このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
+- 4D View Pro ドキュメントを PDF 形式に書き出す場合、ドキュメントで使用されているフォントは自動的に PDF ファイルに埋め込まれます。 ただし、埋め込み可能なのは Unicode マップを持つ OpenType フォント (.OTF または .TTF ファイル) のみです。 フォントに対して有効なフォントファイルが見つからない場合、デフォルトのフォントが代用されます。
+- このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
 
 **CSV 形式についての注意**:
 
- - 4D View Pro ドキュメントを CSV 形式に書き出す場合、テキストと値のみが保存されるため、一部の設定が失われる可能性があります。
- - すべての値は二重引用符で括られた形で保存されます。 ユーザー定義区切りの値 (DSV) に関する詳細については、こちらの [Wikipedia の記事](https://en.wikipedia.org/wiki/Delimiter-separated_values) (英文) を参照ください。
- - このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
+- 4D View Pro ドキュメントを CSV 形式に書き出す場合、テキストと値のみが保存されるため、一部の設定が失われる可能性があります。
+- すべての値は二重引用符で括られた形で保存されます。 ユーザー定義区切りの値 (DSV) に関する詳細については、こちらの [Wikipedia の記事](https://en.wikipedia.org/wiki/Delimiter-separated_values) (英文) を参照ください。
+- このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
 
 **SpreadJS ファイル形式についての注意**:
 
- - [SpreadJS ファイル](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) は zipファイルです。
- - このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
+- [SpreadJS ファイル](https://developer.mescius.com/spreadjs/docs/features/spreadjs-file-format) は zipファイルです。
+- このフォーマットへの書き出しは非同期に実行されるため、書き出し後にコードを実行するには、*paramObj* 引数の `formula` プロパティを使用します。
 
 書き出し操作が完了すると、`VP EXPORT DOCUMENT` は自動的に、*paramObj* オブジェクトの *formula* プロパティに設定されたメソッドをトリガーします (設定されていれば)。
 
