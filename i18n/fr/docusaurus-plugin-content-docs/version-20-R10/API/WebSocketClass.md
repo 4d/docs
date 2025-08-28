@@ -86,8 +86,8 @@ La fonction `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary -->crée e
 
 Dans *url*, indiquez l'URL à laquelle le serveur WebSocket répondra. Les modèles d'URL suivants peuvent être utilisés :
 
- - `ws://host[:port]path[?query]` pour les connexions standard
- - `wss://host[:port]path[?query]` pour les connexions TLS sécurisées
+- `ws://host[:port]path[?query]` pour les connexions standard
+- `wss://host[:port]path[?query]` pour les connexions TLS sécurisées
 
 Si la connexion n'est pas possible, un objet `null` est renvoyé et une erreur est générée (que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`).
 
@@ -95,8 +95,8 @@ Si la connexion n'est pas possible, un objet `null` est renvoyé et une erreur e
 
 Dans *connectionHandler*, vous pouvez transmettre un objet contenant des fonctions de callback à appeler selon les événements de connexion, ainsi que le type de données et les en-têtes à gérer.
 
- - Les callbacks sont automatiquement appelées dans le contexte du formulaire ou du worker qui initie la connexion.
- - La WebSocket reste valide tant que le formulaire ou le worker n'est pas fermé.
+- Les callbacks sont automatiquement appelées dans le contexte du formulaire ou du worker qui initie la connexion.
+- La WebSocket reste valide tant que le formulaire ou le worker n'est pas fermé.
 
 | Propriété   | Type                         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | ----------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -236,8 +236,8 @@ La fonction `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->refer
 
 Dans *code*, vous pouvez passer un code d'état expliquant pourquoi la connexion est fermée (voir aussi [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)) :
 
- - S'il n'est pas spécifié, le code de fermeture de la connexion est automatiquement fixé à 1000 pour une fermeture normale, ou à une autre valeur standard dans la plage 1001-1015 qui indique la raison réelle de la fermeture de la connexion.
- - Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. Si vous spécifiez la valeur du \*code \* , vous devez également spécifier une *reason*.
+- S'il n'est pas spécifié, le code de fermeture de la connexion est automatiquement fixé à 1000 pour une fermeture normale, ou à une autre valeur standard dans la plage 1001-1015 qui indique la raison réelle de la fermeture de la connexion.
+- Si elle est spécifiée, la valeur de ce paramètre de code remplace le réglage automatique. La valeur doit être un nombre entier. Soit 1000, soit un code personnalisé compris entre 3000 et 4999. Si vous spécifiez la valeur du \*code \* , vous devez également spécifier une *reason*.
 
 Dans *reason*, vous pouvez passer une chaîne de caractères décrivant la raison pour laquelle la connexion est fermée.
 

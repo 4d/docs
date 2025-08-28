@@ -188,8 +188,8 @@ Nas seções acima, nós temos acesso gratuito à aplicação através de solici
 
 A maneira mais simples e segura para registrar um usuário no servidor da Web 4D é baseada no seguinte cenário:
 
- - Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada *WebUsers* por ejemplo)
- - La tabla *WebUsers* podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
+- Los usuarios se almacenan en una tabla dedicada y no expuesta (llamada *WebUsers* por ejemplo)
+- La tabla *WebUsers* podría estar [encriptada](MSC/encrypt.md) y almacena el login del usuario y un hash de su contraseña.
 
 1. Criar uma tabela com alguns campos, por exemplo:
 

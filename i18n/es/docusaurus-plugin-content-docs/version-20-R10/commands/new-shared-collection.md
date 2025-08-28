@@ -39,14 +39,14 @@ Si el nuevo índice del elemento está más allá del último elemento existente
 
 Puede pasar cualquier número de valores de los siguientes tipos soportados:
 
- - number (real, longint...). Los valores numéricos se almacenan siempre como reales.
- - text
- - boolean
- - date
- - time (almacenado como número de milisegundos - real)
- - null
- - objeto compartido
- - colección compartida
+- number (real, longint...). Los valores numéricos se almacenan siempre como reales.
+- text
+- boolean
+- date
+- time (almacenado como número de milisegundos - real)
+- null
+- objeto compartido
+- colección compartida
 
 :::note
 

@@ -5,9 +5,9 @@ title: Parámetros de la copia de seguridad
 
 Los parámetros de copia de seguridad se definen a través de tres páginas en el [cuadro de diálogo de los parámetros](../settings/overview.md). Puede definir:
 
- - la periodicidad de las copias de seguridad automáticas
- - los archivos a incluir en cada copia de seguridad
- - las funcionalidades avanzadas permiten ejecutar tareas automáticas
+- la periodicidad de las copias de seguridad automáticas
+- los archivos a incluir en cada copia de seguridad
+- las funcionalidades avanzadas permiten ejecutar tareas automáticas
 
 > Las propiedades definidas en esta caja de diálogo se escriben en el archivo *Backup.4DSettings*, guardado en la carpeta [Settings](../Project/architecture.md#settings-user).
 
@@ -88,11 +88,11 @@ La modificación de las opciones de copia de seguridad y restauración es opcion
 
 > Este parámetro se refiere tanto a las copias de seguridad de la aplicación como de los archivos del historial.
 
- - **Copia de seguridad sólo si el archivo de datos ha sido modificado**: cuando se marca esta opción, 4D inicia las copias de seguridad programadas sólo si se han añadido, modificado o eliminado datos desde la última copia de seguridad. De lo contrario, la copia de seguridad programada se cancela y se pospone hasta la siguiente copia de seguridad programada. No se genera ningún error; sin embargo, el diario de copias de seguridad señala que la copia de seguridad se ha pospuesto. Esta opción también permite ahorrar tiempo de máquina para la copia de seguridad de las aplicaciones utilizadas principalmente para su visualización. Tenga en cuenta que al activar esta opción no se tienen en cuenta las modificaciones realizadas en los archivos de estructura o en los archivos adjuntos.
+- **Copia de seguridad sólo si el archivo de datos ha sido modificado**: cuando se marca esta opción, 4D inicia las copias de seguridad programadas sólo si se han añadido, modificado o eliminado datos desde la última copia de seguridad. De lo contrario, la copia de seguridad programada se cancela y se pospone hasta la siguiente copia de seguridad programada. No se genera ningún error; sin embargo, el diario de copias de seguridad señala que la copia de seguridad se ha pospuesto. Esta opción también permite ahorrar tiempo de máquina para la copia de seguridad de las aplicaciones utilizadas principalmente para su visualización. Tenga en cuenta que al activar esta opción no se tienen en cuenta las modificaciones realizadas en los archivos de estructura o en los archivos adjuntos.
 
 > Este parámetro se refiere tanto a las copias de seguridad de la aplicación como de los archivos del historial.
 
- - **Eliminar el archivo de copia de seguridad más antiguo antes/después de la copia de seguridad**: esta opción sólo se utiliza si la opción "Conservar sólo los últimos X archivos de copia de seguridad" está marcada. Especifica si 4D debe comenzar borrando el archivo más antiguo antes de iniciar la copia de seguridad (**antes** opción) o si el borrado debe tener lugar una vez finalizada la copia de seguridad (opción **después**). Para que este mecanismo funcione, el archivo más antiguo no debe haber sido renombrado o movido.
+- **Eliminar el archivo de copia de seguridad más antiguo antes/después de la copia de seguridad**: esta opción sólo se utiliza si la opción "Conservar sólo los últimos X archivos de copia de seguridad" está marcada. Especifica si 4D debe comenzar borrando el archivo más antiguo antes de iniciar la copia de seguridad (**antes** opción) o si el borrado debe tener lugar una vez finalizada la copia de seguridad (opción **después**). Para que este mecanismo funcione, el archivo más antiguo no debe haber sido renombrado o movido.
 
 - **Si falla la copia de seguridad**: esta opción permite configurar el mecanismo utilizado para gestionar las copias de seguridad fallidas (copia de seguridad imposible). Cuando no se puede realizar una copia de seguridad, 4D le permite realizar un nuevo intento.
   - **Reintentar en la siguiente fecha y hora programada**: esta opción sólo tiene sentido cuando se trabaja con copias de seguridad automáticas programadas. Equivale a anular la copia de seguridad fallida. Se genera un error.

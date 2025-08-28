@@ -63,10 +63,10 @@ Un objet 4D.OutgoingMessage est [non partageable](../Concepts/shared.md).
 
 La propriété `.body` contient <!-- REF #OutgoingMessageClass.body.Summary -->le body du message sortant<!-- END REF -->. Les types de données suivants sont pris en charge dans la propriété `.body` :
 
- - text
- - blob
- - object
- - image
+- text
+- blob
+- object
+- image
 
 La propriété `.body` est en lecture-écriture.
 
@@ -108,17 +108,17 @@ La fonction `.setBody()` <!-- REF #OutgoingMessageClass.setBody().Summary -->dé
 
 Les types de données suivants sont pris en charge dans la propriété *body* :
 
- - Text
- - Blob
- - Object
- - Image
+- Text
+- Blob
+- Object
+- Image
 
 Lorsque cette fonction est utilisée, le header content-type est automatiquement défini en fonction du type de *body* :
 
- - Content-Type:text/plain si le body est un texte
- - Content-Type:application/octet-stream si le body est un Blob
- - Content-Type:application/json si le body est un objet
- - Content-Type:image/jpeg, image/gif... si le body est une image
+- Content-Type:text/plain si le body est un texte
+- Content-Type:application/octet-stream si le body est un Blob
+- Content-Type:application/json si le body est un objet
+- Content-Type:image/jpeg, image/gif... si le body est une image
 
 Si *body* n'est pas un type de valeur pris en charge, une erreur est renvoyée.
 

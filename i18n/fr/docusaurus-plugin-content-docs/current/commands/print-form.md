@@ -25,15 +25,15 @@ displayed_sidebar: docs
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
- - le nom d'un formulaire,
- - le chemin d'accès (en syntaxe POSIX) d'un fichier .json valide contenant une description du formulaire à utiliser (voir *Chemin d'accès au fichier de formulaire*), ou
- - un objet contenant la description du formulaire à utiliser.
+- le nom d'un formulaire,
+- le chemin d'accès (en syntaxe POSIX) d'un fichier .json valide contenant une description du formulaire à utiliser (voir *Chemin d'accès au fichier de formulaire*), ou
+- un objet contenant la description du formulaire à utiliser.
 
 Comme **Print form** ne génère pas de saut de page après avoir imprimé un formulaire, elle vous permet de combiner facilement différents formulaires sur la même page. Ainsi, **Print form** est idéale pour effectuer des impressions complexes impliquant plusieurs tables et plusieurs formulaires. Pour forcer un saut de page entre les formulaires, utilisez la commande [PAGE BREAK](../commands-legacy/page-break.md). Pour reporter l'impression à la page suivante d'un formulaire dont la hauteur est supérieure à l'espace disponible, appelez la commande [CANCEL](../commands-legacy/cancel.md) avant la commande [PAGE BREAK](../commands-legacy/page-break.md).
 
 Trois syntaxes différentes peuvent être utilisées :
 
- - **Impression du corps d'un formulaire**
+- **Impression du corps d'un formulaire**
 
 Syntaxe :
 
@@ -43,7 +43,7 @@ Syntaxe :
 
 Dans ce cas, **Print form** n'imprime que la zone de corps du formulaire (la zone comprise entre les marqueur d'en-tête et de corps).
 
- - **Impression de zone de formulaire**
+- **Impression de zone de formulaire**
 
 Syntaxe :
 
@@ -79,7 +79,7 @@ Dans ce cas, la commande imprime la section désignée par *marker*. Passez dans
 | Form header8  | Integer | 208    |
 | Form header9  | Integer | 209    |
 
- - **Impression de section**
+- **Impression de section**
 
 Syntaxe :
 
@@ -101,8 +101,8 @@ La valeur retournée par **Print form** indique la hauteur de la zone d’impres
 
 Les boîtes de dialogue standard d'impression n'apparaissent pas lorsque vous utilisez la commande **Print form**. L'état généré ne tient pas compte des paramètres d'impression définis en mode Développement pour le formulaire. Il y a deux manières de définir les paramètres d'impression avant d'effectuer une série d'appels à **Print form** :
 
- - Appeler [PRINT SETTINGS](../commands-legacy/print-settings.md). Dans ce cas, vous laissez l'utilisateur définir ses paramètres dans les boîtes de dialogue d'impression.
- - Appeler [SET PRINT OPTION](../commands-legacy/set-print-option.md) et [GET PRINT OPTION](../commands-legacy/get-print-option.md). Dans ce cas, les paramètres sont définis par programmation.
+- Appeler [PRINT SETTINGS](../commands-legacy/print-settings.md). Dans ce cas, vous laissez l'utilisateur définir ses paramètres dans les boîtes de dialogue d'impression.
+- Appeler [SET PRINT OPTION](../commands-legacy/set-print-option.md) et [GET PRINT OPTION](../commands-legacy/get-print-option.md). Dans ce cas, les paramètres sont définis par programmation.
 
 **Print form** construit chaque page à imprimer en mémoire. Chaque page est imprimée lorsque la page en mémoire est remplie ou lorsque vous appelez [PAGE BREAK](../commands-legacy/page-break.md). Pour vous assurer que la dernière page d'une impression exécutée par l'intermédiaire de **Print form** est effectivement imprimée, il faut terminer par la commande [PAGE BREAK](../commands-legacy/page-break.md) (sauf dans le cadre d'un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), voir note). Sinon, la dernière page, si elle n'est pas remplie, reste en mémoire et n'est pas imprimée.
 
@@ -116,8 +116,8 @@ Cette commande permet d'imprimer des zones et des objets externes (par exemple, 
 
 **4D Server:** Cette commande peut être exécutée sur 4D Server dans le cadre d'une procédure stockée. Dans ce contexte :
 
- - Veillez à ce qu'aucune boîte de dialogue n'apparaisse sur la machine serveur (sauf exigence particulière).
- - Dans le cas d'un problème concernant l'imprimante (manque de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
+- Veillez à ce qu'aucune boîte de dialogue n'apparaisse sur la machine serveur (sauf exigence particulière).
+- Dans le cas d'un problème concernant l'imprimante (manque de papier, imprimante déconnectée, etc.), aucun message d'erreur n'est généré.
 
 ## Exemple 1
 
