@@ -39,14 +39,14 @@ Se o novo índice elemento for além do último elemento existente da coleção 
 
 Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 
- - número (real, longint....). Valores numéricos são sempre armazenados como reais.
- - text
- - boolean
- - date
- - hora (armazenada como número de milissegundos - real)
- - null
- - objeto compartido
- - coleção compartilhada
+- número (real, longint....). Valores numéricos são sempre armazenados como reais.
+- text
+- boolean
+- date
+- hora (armazenada como número de milissegundos - real)
+- null
+- objeto compartido
+- coleção compartilhada
 
 :::note
 

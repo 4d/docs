@@ -33,9 +33,9 @@ title: Text
 
 ![](../assets/en/FormObjects/staticText2.png)
 
- - オブジェクトが A 方向にリサイズされるとき、変更されるのは [幅](properties_CoordinatesAndSizing.md#幅) です。
- - オブジェクトが C 方向にリサイズされるとき、変更されるのは [高さ](properties_CoordinatesAndSizing.md#高さ) です。
- - オブジェクトが B 方向にリサイズされるとき、[幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) の両方が同時に変更されます。
+- オブジェクトが A 方向にリサイズされるとき、変更されるのは [幅](properties_CoordinatesAndSizing.md#幅) です。
+- オブジェクトが C 方向にリサイズされるとき、変更されるのは [高さ](properties_CoordinatesAndSizing.md#高さ) です。
+- オブジェクトが B 方向にリサイズされるとき、[幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) の両方が同時に変更されます。
 
 ## プロパティ一覧
 

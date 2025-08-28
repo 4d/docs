@@ -31,8 +31,8 @@ The object returned will contain the `value` property, and, in case of a js date
 
 Se o objetivo retornado incluir uma data ou hora, é tratado como uma datetime e completado como abaixo:
 
- - valor hora - a porção da data se completa como dezembro, 30, 1899 em formato dd/MM/yyyy
- - valor data - a parte da hora se completa como meia noite no formato HH:mm:ss (00:00:00)
+- valor hora - a porção da data se completa como dezembro, 30, 1899 em formato dd/MM/yyyy
+- valor data - a parte da hora se completa como meia noite no formato HH:mm:ss (00:00:00)
 
 Se *rangeObj* contiver várias células ou vários intervalos, o valor da primeira célula é retornado. O comando retorna um objeto null se a célula estiver vazia.
 

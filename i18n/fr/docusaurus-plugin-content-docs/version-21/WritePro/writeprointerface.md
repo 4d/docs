@@ -12,8 +12,8 @@ La documentation principale de l'[interface 4D Write Pro](https://doc.4d.com/4Dv
 
 Vous trouverez ci-dessous :
 
- - la documentation de configuration de l'assistant de table,
- - the integrated A.I. documentation.
+- la documentation de configuration de l'assistant de table,
+- the integrated A.I. documentation.
 
 ## Assistant de table
 
@@ -61,9 +61,9 @@ Une fois que la table a été intégrée dans le document, l'utilisateur peut pe
 
 La configuration des modèles inclut:
 
- - Définir des tables et des champs ainsi que préparer des formules adaptées à l'application à partir du [fichier de modèle](#template-files).
- - Traduction des noms de table, de champ et de formule à partir du [fichier de traduction](#translation-files).
- - Conception de styles graphiques et de thèmes personnalisés à partir du [fichier de thème](#theme-files).
+- Définir des tables et des champs ainsi que préparer des formules adaptées à l'application à partir du [fichier de modèle](#template-files).
+- Traduction des noms de table, de champ et de formule à partir du [fichier de traduction](#translation-files).
+- Conception de styles graphiques et de thèmes personnalisés à partir du [fichier de thème](#theme-files).
 
 Ces trois types de fichiers contribuent à la configuration de l'Assistant de table, et bien que chacun remplisse une fonction distincte, aucun d'entre eux n'est considéré comme un composant essentiel.
 
@@ -71,10 +71,10 @@ Ces trois types de fichiers contribuent à la configuration de l'Assistant de ta
 
 Le fichier de modèle vous permet de définir les éléments suivants :
 
- - la formule qui retourne une sélection d'entité utilisée comme source de données de la table,
- - the break formulas (if any break row can be inserted)
- - les attributs de dataclass qui peuvent être utilisés comme colonnes de table,
- - the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
+- la formule qui retourne une sélection d'entité utilisée comme source de données de la table,
+- the break formulas (if any break row can be inserted)
+- les attributs de dataclass qui peuvent être utilisés comme colonnes de table,
+- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
 Le fichier modèle doit être stocké dans un dossier "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dans votre projet.
 
@@ -316,11 +316,11 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 In the current implementation, the feature has the following limitations:
 
- - use of a predefined AI provider and necessity to pass your OpenAI key
- - basic chatting features
- - no image handling
- - non-configurable predefined action commands
- - predefined translations English/French and French/English only
+- use of a predefined AI provider and necessity to pass your OpenAI key
+- basic chatting features
+- no image handling
+- non-configurable predefined action commands
+- predefined translations English/French and French/English only
 
 ### Enabling the AI feature
 
@@ -347,8 +347,8 @@ The **A.I.** button is then displayed:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
- - in the 4D Write Pro Toolbar, in the **Import Export** tab,
- - in the 4D Write Pro Widget, in the **Font Style** tab.
+- in the 4D Write Pro Toolbar, in the **Import Export** tab,
+- in the 4D Write Pro Widget, in the **Font Style** tab.
 
 Click on the button to display the AI dialog box.
 
@@ -386,8 +386,8 @@ These buttons propose basic interactions between the chat area, the underlying 4
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
- - **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
- - **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
+- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
 
 In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
 

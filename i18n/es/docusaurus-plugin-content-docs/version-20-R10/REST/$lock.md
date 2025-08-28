@@ -27,13 +27,13 @@ Los bloqueos activados por la API REST se colocan al nivel de la [sesión](authU
 
 Una entidad bloqueada se ve como *bloqueada* (es decir, las acciones de bloqueo / desbloqueo / actualización / eliminación no son posibles) por:
 
- - otras sesiones REST
- - los procesos 4D (cliente/servidor, almacén de datos remoto, monopuesto) ejecutadas en el servidor REST.
+- otras sesiones REST
+- los procesos 4D (cliente/servidor, almacén de datos remoto, monopuesto) ejecutadas en el servidor REST.
 
 Una entidad bloqueada por la API REST sólo puede ser desbloqueada:
 
- - por su bloqueador, es decir un `/?$lock=false` en la sesión REST que define `/?$lock=true`
- - o si el [timeout de inactividad]($directory.md) de la sesión se alcanza (la sesión se cierra).
+- por su bloqueador, es decir un `/?$lock=false` en la sesión REST que define `/?$lock=true`
+- o si el [timeout de inactividad]($directory.md) de la sesión se alcanza (la sesión se cierra).
 
 ### Respuesta
 

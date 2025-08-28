@@ -26,17 +26,17 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->La commande **Form** renvoie l'objet associé au formulaire courant (instancié à partir du paramètre *formData* ou de la classe utilisateur attribuée dans l'éditeur de formulaire). 4D associe automatiquement un objet au formulaire courant dans les cas suivants :
 
- - le formulaire courant a été chargé par l'une des commandes [`DIALOG`](dialog.md), [`Print form`](print-form.md), ou [`FORM LOAD`](form-load.md),
- - le formulaire courant est un sous-formulaire,
- - un formulaire table est actuellement affiché à l'écran.
+- le formulaire courant a été chargé par l'une des commandes [`DIALOG`](dialog.md), [`Print form`](print-form.md), ou [`FORM LOAD`](form-load.md),
+- le formulaire courant est un sous-formulaire,
+- un formulaire table est actuellement affiché à l'écran.
 
 ### Commandes (DIALOG...)
 
 Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIALOG](dialog.md), [`Print form`](print-form.md) ou [`FORM LOAD`](form-load.md), **Form** renvoie soit :
 
- - l'objet *formData* passé en paramètre à cette commande, le cas échéant,
- - ou un objet instancié de la [classe utilisateur associée au formulaire](../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
- - ou un objet vide.
+- l'objet *formData* passé en paramètre à cette commande, le cas échéant,
+- ou un objet instancié de la [classe utilisateur associée au formulaire](../FormEditor/properties_FormProperties.md#form-class), le cas échéant,
+- ou un objet vide.
 
 ### Sous-formulaire
 
@@ -49,7 +49,7 @@ Si le formulaire courant est un sous-formulaire, l'objet renvoyé dépend de la 
  (OBJECT Get pointer(Object subform container))->  
 ```
 
- - Si la variable associée au conteneur parent n'a pas été typée en tant qu'objet, **Form** renvoie un objet vide, géré par 4D dans le contexte du sous-formulaire.
+- Si la variable associée au conteneur parent n'a pas été typée en tant qu'objet, **Form** renvoie un objet vide, géré par 4D dans le contexte du sous-formulaire.
 
 Pour plus d'informations, veuillez vous référer à la section *Sous-formulaires en page*.
 
