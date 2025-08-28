@@ -37,8 +37,8 @@ Par exemple, dans le cas d'un clic sur un bouton, l'objet contient les propriét
 
 L'objet événement peut contenir des propriétés supplémentaires, en fonction de l'objet pour lequel l'événement se produit. Pour les objets *eventObj* générés sur:
 
- - des objets de type list box ou colonne de list box, voir [cette section](../FormObjects/listbox_overview.md#additional-properties).
- - des zones 4D View Pro, voir événement formumaire [on VP Ready](../Events/onVpReady.md).
+- des objets de type list box ou colonne de list box, voir [cette section](../FormObjects/listbox_overview.md#additional-properties).
+- des zones 4D View Pro, voir événement formumaire [on VP Ready](../Events/onVpReady.md).
 
 **Note:** S'il n'y a pas d'événement courant, **FORM Event** renvoie un objet null.
 

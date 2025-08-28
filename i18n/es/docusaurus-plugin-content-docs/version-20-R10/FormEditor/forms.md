@@ -9,16 +9,16 @@ Los formularios ofrecen la interfaz a través de la cual se introduce, modifica 
 
 Los formularios también pueden contener otros formularios a través de las siguientes funcionalidades:
 
- - [objetos de subformulario](FormObjects/subform_overview.md)
- - [formularios heredados](./properties_FormProperties.md#inherited-form-name)
+- [objetos de subformulario](FormObjects/subform_overview.md)
+- [formularios heredados](./properties_FormProperties.md#inherited-form-name)
 
 ## Creación de formularios
 
 Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 
- - **La interfaz 4D Developer:** cree nuevos formularios desde el menú **Archivo** o la ventana del **Explorador**.
- - **El editor de formularios**: modifique sus formularios utilizando el **[editor de formularios](FormEditor/formEditor.md)**.
- - **El código JSON:** cree y diseñe sus formularios utilizando JSON y guarde los archivos de los formularios en la [ubicación adecuada](Project/architecture#sources). Ejemplo:
+- **La interfaz 4D Developer:** cree nuevos formularios desde el menú **Archivo** o la ventana del **Explorador**.
+- **El editor de formularios**: modifique sus formularios utilizando el **[editor de formularios](FormEditor/formEditor.md)**.
+- **El código JSON:** cree y diseñe sus formularios utilizando JSON y guarde los archivos de los formularios en la [ubicación adecuada](Project/architecture#sources). Ejemplo:
 
 ```
 {
@@ -70,9 +70,9 @@ Puede añadir o modificar formularios 4D utilizando los siguientes elementos:
 
 Hay dos categorías de formularios:
 
- - **Los formularios de proyecto** - Formularios independientes que no están unidos a ninguna tabla. Están pensados, sobre todo, para crear cajas de diálogo de interfaz, al igual que componentes. Los formularios proyecto pueden utilizarse para crear interfaces que cumplan fácilmente con los estándares del sistema operativo.
+- **Los formularios de proyecto** - Formularios independientes que no están unidos a ninguna tabla. Están pensados, sobre todo, para crear cajas de diálogo de interfaz, al igual que componentes. Los formularios proyecto pueden utilizarse para crear interfaces que cumplan fácilmente con los estándares del sistema operativo.
 
- - **Los formularios tablas** - Se adjuntan a tablas específicas y, por tanto, se benefician de funciones automáticas útiles para el desarrollo de aplicaciones basadas en bases de datos. Normalmente, una tabla tiene formularios de entrada y salida separados.
+- **Los formularios tablas** - Se adjuntan a tablas específicas y, por tanto, se benefician de funciones automáticas útiles para el desarrollo de aplicaciones basadas en bases de datos. Normalmente, una tabla tiene formularios de entrada y salida separados.
 
 Normalmente, se selecciona la categoría del formulario al crearlo, pero se puede cambiar después.
 
@@ -80,15 +80,15 @@ Normalmente, se selecciona la categoría del formulario al crearlo, pero se pued
 
 Cada formulario consta de al menos dos páginas:
 
- - una página 1: una página principal, mostrada por defecto
- - una página 0: una página de fondo, cuyo contenido se muestra en todas las demás páginas.
+- una página 1: una página principal, mostrada por defecto
+- una página 0: una página de fondo, cuyo contenido se muestra en todas las demás páginas.
 
 Puede crear varias páginas para un formulario de entrada. Si tiene más campos o variables de los que caben en una pantalla, puede crear páginas adicionales para mostrarlos. Las páginas múltiples le permiten hacer lo siguiente:
 
- - Coloque la información más importante en la primera página y la menos importante en otras.
- - Organice cada tema en su propia página.
- - Reducir o eliminar el desplazamiento durante la entrada de datos definiendo el [orden de entrada](formEditor.md#data-entry-order).
- - Deje espacio alrededor de los elementos del formulario para lograr un diseño de pantalla atractivo.
+- Coloque la información más importante en la primera página y la menos importante en otras.
+- Organice cada tema en su propia página.
+- Reducir o eliminar el desplazamiento durante la entrada de datos definiendo el [orden de entrada](formEditor.md#data-entry-order).
+- Deje espacio alrededor de los elementos del formulario para lograr un diseño de pantalla atractivo.
 
 Las páginas múltiples son útiles sólo para los formularios de entrada. No son para imprimir. Cuando se imprime un formulario de varias páginas, sólo se imprime la primera.
 

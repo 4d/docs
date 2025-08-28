@@ -86,8 +86,8 @@ A função `4D.WebSocket.new()` <!-- REF #4D.WebSocket.new().Summary --> cria e 
 
 Em *url*, passe o URL ao qual o servidor WebSocket responderá. Podem ser utilizados os seguintes padrões de URL:
 
- - `ws://host[:port]path[?query]` para ligações padrão
- - `wss://host[:port]path[?query]` para conexões TLS seguras
+- `ws://host[:port]path[?query]` para ligações padrão
+- `wss://host[:port]path[?query]` para conexões TLS seguras
 
 Se a ligação não for possível, é devolvido um objeto `null` sendo gerado um erro (que pode ser intersetado através de um método instalado com `ON ERR CALL`).
 
@@ -95,8 +95,8 @@ Se a ligação não for possível, é devolvido um objeto `null` sendo gerado um
 
 Em *connectionHandler*, você pode passar um objeto que contém funções de callback a serem chamadas de acordo com eventos de conexão, bem como o tipo de dados e os cabeçalhos a serem tratados.
 
- - As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
- - O WebSocket será válido enquanto o formulário ou o worker não for fechado.
+- As chamadas de retorno são chamadas automaticamente no contexto do formulário ou do worker que inicia a ligação.
+- O WebSocket será válido enquanto o formulário ou o worker não for fechado.
 
 | Propriedade | Tipo                         | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | ----------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -236,8 +236,8 @@ A função `.terminate()` <!-- REF #WebSocketClass.terminate().Summary -->fecha 
 
 Em *code*, você pode passar um código de estado explicando porque a conexão está sendo fechada (consulte também [WebSocket Connection Close Code in the RFC6455](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5)):
 
- - Se não for especificado, um código de fechamento da conexão será automaticamente definido como 1000 para um fechamento normal ou, caso contrário, como outro valor padrão no intervalo 1001-1015 que indique o motivo real pelo qual a conexão foi fechada.
- - Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. Se você especificar um valor *code*, também deverá especificar um valor *reason*.
+- Se não for especificado, um código de fechamento da conexão será automaticamente definido como 1000 para um fechamento normal ou, caso contrário, como outro valor padrão no intervalo 1001-1015 que indique o motivo real pelo qual a conexão foi fechada.
+- Se especificado, o valor desse parâmetro de código substitui a configuração automática. O valor deve ser um número inteiro. Ou 1000, ou um código personalizado no intervalo 3000-4999. Se você especificar um valor *code*, também deverá especificar um valor *reason*.
 
 Em *reason*, você pode passar uma frase descrevendo porque a conexão está sendo fechada.
 
