@@ -25,13 +25,13 @@ Especifica se o utilizador pode eliminar sub-registos num subformulário lista.
 
 Esta propriedade é utilizada para declarar o formulário detalhado a utilizar no subformulário. Pode ser:
 
- - um widget, ou seja, um subformulário de tipo página, dotado de funções específicas. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
+- um widget, ou seja, um subformulário de tipo página, dotado de funções específicas. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
     You can select a component form name when it is published in the component.\
     You can select a component form name when it is published in the component.
 
 > Para ello, basta con hacer dos clics en el campo a modificar para que pase al modo edición (asegúrese de dejar suficiente tiempo entre los dos clics para no generar un doble clic).
 
- - el formulario detallado a asociar al [subformulario listado](#formulario-de-lista). O formulário detalhado pode ser utilizado para introduzir ou visualizar sub-registos. Geralmente contém mais informações do que o subformulário lista. Naturalmente, o formulário detalhado deve pertencer à mesma tabela que o subformulário. Normalmente, utiliza-se um formulário de saída como formulário lista e um formulário de entrada como formulário detalhado. Se não especificar o formulário a ser usado para a entrada de página inteira, 4D automaticamente usa o formato de entrada padrão da tabela.
+- el formulario detallado a asociar al [subformulario listado](#formulario-de-lista). O formulário detalhado pode ser utilizado para introduzir ou visualizar sub-registos. Geralmente contém mais informações do que o subformulário lista. Naturalmente, o formulário detalhado deve pertencer à mesma tabela que o subformulário. Normalmente, utiliza-se um formulário de saída como formulário lista e um formulário de entrada como formulário detalhado. Se não especificar o formulário a ser usado para a entrada de página inteira, 4D automaticamente usa o formato de entrada padrão da tabela.
 
 #### Gramática JSON
 
@@ -53,8 +53,8 @@ Esta propriedade é utilizada para declarar o formulário detalhado a utilizar n
 
 Ação a ser executada no caso de um clique duplo em uma linha vazia de um subformulário lista. As opções abaixo estão disponíveis:
 
- - Não fazer nada: Ignora o duplo clique.
- - Adicionar registro: cria um registro no subformulário e muda para o modo edição. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
+- Não fazer nada: Ignora o duplo clique.
+- Adicionar registro: cria um registro no subformulário e muda para o modo edição. El registro se creará directamente en la lista si la propiedad [Editable en la lista](#enterable-in-list) está activada. En caso contrario, se creará en modo página, en el [formulario detallado](#detail-form) asociado al subformulario.
 
 #### Gramática JSON
 
@@ -78,9 +78,9 @@ Ação a ser executada no caso de um clique duplo em uma linha vazia de um subfo
 
 Define a ação a ser executada quando um usuário clica duas vezes em uma linha no subformulário lista. As opções disponíveis são:
 
- - **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
- - **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el [formulario detallado](#detail-form) definido para el subformulario lista. O registo é aberto em modo de leitura-escrita para poder ser modificado.
- - **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
+- **Não fazer nada** (padrão): clicar duas vezes em uma linha não aciona nenhuma ação automática.
+- **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el [formulario detallado](#detail-form) definido para el subformulario lista. O registo é aberto em modo de leitura-escrita para poder ser modificado.
+- **Exibir registro**: idêntico à ação anterior, exceto pelo fato de que o registro é aberto no modo somente leitura, de modo que não pode ser modificado.
 
 Independentemente da ação selecionada/escolhida, o evento de formulário `On Double clicked` é gerado.
 
@@ -162,10 +162,10 @@ Especifica a tabela a que pertence o subformulário Lista (se existir).
 
 Designa a opção que permite aos utilizadores selecionar linhas:
 
- - **Nenhum**: Linhas não podem ser selecionadas se esse modo for escolhido. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](#enterable-in-list) esté activada. As teclas de navegação só fazem a lista rolar, o evento de formulário `Ao selecionar mudança` não é gerado.
- - **Simples**: Uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
+- **Nenhum**: Linhas não podem ser selecionadas se esse modo for escolhido. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Editable en lista](#enterable-in-list) esté activada. As teclas de navegação só fazem a lista rolar, o evento de formulário `Ao selecionar mudança` não é gerado.
+- **Simples**: Uma linha de cada vez pode ser selecionada neste modo. Ao clicar em uma linha, ela será selecionada. Um **Ctrl+clique** (Windows) ou **Command+clique** (macOS) em uma linha alterna seu estado (entre selecionado ou não).\
     As teclas de seta para cima e para baixo selecionam a linha anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. O evento de formulário `On Selection Change` é gerado sempre que a linha atual é alterada.
- - **Multiplique**: Várias linhas podem ser selecionadas simultaneamente neste modo.
+- **Multiplique**: Várias linhas podem ser selecionadas simultaneamente neste modo.
      - Los subregistros seleccionados son devueltos por el comando `GET HIGHLIGHTED RECORDS`.
      - Clicar no registro o selecionará, mas não modificará o registro atual.
      - Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en un registro cambia su estado (entre seleccionado o no). As teclas de seta para cima e para baixo selecionam o registo anterior/seguinte na lista. As outras teclas de navegação percorrem a lista. El evento de formulario `On Selection Change` se genera cada vez que el registro seleccionado se modifica.

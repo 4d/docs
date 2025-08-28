@@ -26,30 +26,30 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Form.Summary-->El comando **Form** devuelve el objeto asociado al formulario actual (instanciado a partir del parámetro *formData* o de la clase de usuario asignada en el editor de formularios).<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
 
- - el formulario actual ha sido cargado por uno de los comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md),
- - el formulario actual es un subformulario,
- - un formulario de tabla se muestra actualmente en la pantalla.
+- el formulario actual ha sido cargado por uno de los comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md),
+- el formulario actual es un subformulario,
+- un formulario de tabla se muestra actualmente en la pantalla.
 
 ### Comandos (DIALOG...)
 
 Si el formulario actual se está mostrando o cargando mediante una llamada a los comandos [DIALOG](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md), **Form** devuelve cualquiera de los dos:
 
- - el objeto *formData* pasado como parámetro a este comando, si existe,
- - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
- - o, un objeto vacío.
+- el objeto *formData* pasado como parámetro a este comando, si existe,
+- o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
+- o, un objeto vacío.
 
 ### Subformulario
 
 Si el formulario actual es un subformulario, el objeto devuelto depende de la variable contenedor padre:
 
- - Si la variable asociada al contenedor padre ha sido tipificada como objeto, **Form** devuelve el valor de esta variable.\
+- Si la variable asociada al contenedor padre ha sido tipificada como objeto, **Form** devuelve el valor de esta variable.\
     En este caso, el objeto devuelto por **Form** es el mismo que el devuelto por la siguiente expresión:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  
 ```
 
- - Si la variable asociada al contenedor padre no ha sido tipificada como objeto, **Form** devuelve un objeto vacío, mantenido por 4D en el contexto del subformulario.
+- Si la variable asociada al contenedor padre no ha sido tipificada como objeto, **Form** devuelve un objeto vacío, mantenido por 4D en el contexto del subformulario.
 
 Para más información, consulte la sección *Subformularios de página*.
 
@@ -69,7 +69,7 @@ En un formulario que muestra el registro de una persona, un botón "Check childr
 
 **Nota:** el campo objeto "Children" se representa sólo para mostrar su estructura en este ejemplo.
 
-En el formulario de verificación, ha asignado algunas propiedades del objeto Formulario a las entradas:
+En el formulario de verificación, ha asignado algunas propiedades del objeto Form a las entradas:
 
 ![](../assets/en/commands/pict3541682.en.png)
 

@@ -149,18 +149,18 @@ Os objetos TCPConnection fornecem as seguintes propriedades e funções:
 
 <!-- REF #4D.TCPConnection.new().params -->
 
-| Parâmetro     | Tipo          |                             | Descrição                                                |
-| ------------- | ------------- | --------------------------- | -------------------------------------------------------- |
-| serverAddress | Text          | ->                          | Nome de domínio ou endereço IP do servidor               |
-| serverPort    | Integer       | ->                          | Número da porta do servidor                              |
-| options       | Object        | ->                          | Configuração [opções](#options-parameter) para a conexão |
-| Resultados    | TCPConnection | <- | Novo objeto TCPConnection                                |
+| Parâmetro     | Tipo                             |                             | Descrição                                                |
+| ------------- | -------------------------------- | --------------------------- | -------------------------------------------------------- |
+| serverAddress | Text                             | ->                          | Nome de domínio ou endereço IP do servidor               |
+| serverPort    | Integer                          | ->                          | Número da porta do servidor                              |
+| options       | Object                           | ->                          | Configuração [opções](#options-parameter) para a conexão |
+| Resultados    | 4D.TCPConnection | <- | Novo objeto TCPConnection                                |
 
 <!-- END REF -->
 
 #### Descrição
 
-A função `4D.TCPConnection.new()` <!-- REF #4D.TCPConnection.new().Summary -->cria uma nova conexão TCP com o *serverAddress* e a *serverPort* especificados, usando as *opções* definidas, e retorna um objeto `4D.HTTPRequest`<!-- END REF -->.
+The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
 
 #### `options` parameter
 

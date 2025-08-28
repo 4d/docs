@@ -3,9 +3,9 @@ id: IncomingMessageClass
 title: IncomingMessage
 ---
 
-La clase `4D.IncomingMessage` le permite manejar el objeto recibido por un [**HTTP request handler**](../WebServer/http-request-handler.md). HTTP requests and their properties are automatically received as an instance of the `4D.IncomingMessage` class. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
+La clase `4D.IncomingMessage` le permite manejar el objeto recibido por un [**HTTP request handler**](../WebServer/http-request-handler.md). Las peticiones HTTP y sus propiedades se reciben automáticamente como una instancia de la clase `4D.IncomingMessage`. Los parámetros dados directamente en la petición con el verbo GET son manejados por la propiedad [`.urlQuery`](#urlquery), mientras que los parámetros pasados en el cuerpo de la solicitud están disponibles a través de funciones como [`.getBlob()`](#getblob) o [`getText()`](#gettext).
 
-El gestor de peticiones HTTP puede devolver cualquier valor (o nada). It usually returns an instance of the [`4D.OutgoingMessage`](OutgoingMessageClass.md) class.
+El gestor de peticiones HTTP puede devolver cualquier valor (o nada). Normalmente devuelve una instancia de la clase [`4D.OutgoingMessage`](OutgoingMessageClass.md).
 
 Todas las propiedades de esta clase son de sólo lectura. Son automáticamente llenados por el gestor de peticiones.
 
@@ -19,7 +19,7 @@ Todas las propiedades de esta clase son de sólo lectura. Son automáticamente l
 
 ### Ejemplo
 
-The following [**HTTPHandlers.json** file](../WebServer/http-request-handler.md) has been defined:
+El siguiente [archivo **HTTPHandlers.json**](../WebServer/http-request-handler.md) ha sido definido:
 
 ```json
 [
@@ -32,7 +32,7 @@ The following [**HTTPHandlers.json** file](../WebServer/http-request-handler.md)
 ]
 ```
 
-The `http://127.0.0.1/start/example?param=demo&name=4D` request is run with a `GET` verb in a browser. It is handled by the *gettingStarted* function of the following *GeneralHandling* singleton class:
+La petición `http://127.0.0.1/start/example?param=demo&name=4D` se ejecuta con un verbo `GET` en un navegador. Se gestiona mediante la función *gettingStarted* de la siguiente clase singleton *GeneralHandling*:
 
 ```4d
 shared singleton Class constructor()
@@ -59,7 +59,7 @@ Function gettingStarted($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ```
 
-The request is received on the server as *$request*, an object instance of the `4D.IncomingMessage` class.
+La petición se recibe en el servidor como *$request*, una instancia de objeto de la clase `4D.IncomingMessage`.
 
 Esta es la respuesta:
 
@@ -76,7 +76,7 @@ There are 2 url parts - Url parts are: start - example
 
 ### Objeto IncomingMessage
 
-4D.IncomingMessage objects provide the following properties and functions:
+Los objetos 4D.IncomingMessage ofrecen las siguientes propiedades y funciones:
 
 |                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -115,7 +115,7 @@ Un objeto 4D.IncomingMessage es un objeto [no compartible](../Concepts/shared.md
 
 La función `.getBlob()` <!-- REF #IncomingMessageClass.getBlob().Summary -->devuelve el cuerpo de la petición como un Blob<!-- END REF -->.
 
-If the body has not been given as a binary content, the function tries to convert the value but it can give unexpected results.
+Si el cuerpo no se ha dado como contenido binario, la función intenta convertir el valor pero puede dar resultados inesperados.
 
 <!-- END REF -->
 
@@ -172,7 +172,7 @@ $value := $request.getHeader("content-type")
 
 La función `.getJSON()` <!-- REF #IncomingMessageClass.getJSON().Summary -->devuelve el cuerpo de la solicitud como una resolución JSON<!-- END REF -->.
 
-If the body has not been given as JSON valid content, an error is raised.
+Si el cuerpo no se ha dado como contenido JSON válido, se produce un error.
 
 <!-- END REF -->
 
@@ -194,7 +194,7 @@ If the body has not been given as JSON valid content, an error is raised.
 
 La función `.getPicture()` <!-- REF #IncomingMessageClass.getPicture().Summary -->devuelve el cuerpo de la petición como una imagen (en caso de que un cuerpo enviado como una imagen)<!-- END REF -->.
 
-The content-type must be given in the headers to indicate that the body is a picture.
+El tipo de contenido debe indicarse en los encabezados para indicar que el cuerpo es una imagen.
 
 :::note
 
@@ -202,7 +202,7 @@ Si la solicitud se crea utilizando la [clase `HTTPRequest`](HTTPRequestClass.md)
 
 :::
 
-If the body is not received as a valid picture, the function returns null.
+Si el cuerpo no se recibe como una imagen válida, la función devuelve null.
 
 <!-- END REF -->
 
@@ -224,7 +224,7 @@ If the body is not received as a valid picture, the function returns null.
 
 La función `.getText()` <!-- REF #IncomingMessageClass.getText().Summary -->devuelve el cuerpo de la solicitud como un valor de texto<!-- END REF -->.
 
-If the body has not been given as a string value, the function tries to convert the value but it can give unexpected results.
+Si el cuerpo no se ha dado como cadena, la función intenta convertir el valor pero puede dar resultados inesperados.
 
 <!-- END REF -->
 
@@ -254,7 +254,7 @@ Los nombres de los encabezados (llaves) se escriben en minúsculas. Tenga en cue
 
 La propiedad `.url` contiene <!-- REF #IncomingMessageClass.url.Summary -->la URL de la petición sin la parte *IP:port* y como cadena<!-- END REF -->.
 
-For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.url` property is "/docs/invoices/today".
+Por ejemplo, si la solicitud va dirigida a "http://127.0.0.1:80/docs/invoices/today", la propiedad `.url` es "/docs/invoices/today".
 
 La propiedad `.url` es de sólo lectura.
 
@@ -276,7 +276,7 @@ La parte "host" de la petición (*IP:port*) es suministrada por el [encabezado `
 
 La propiedad `.urlPath` contiene <!-- REF #IncomingMessageClass.urlPath.Summary -->la URL de la solicitud sin la parte *IP:port* y como una colección de cadenas<!-- END REF -->.
 
-For example, if the request is addressed to: "http://127.0.0.1:80/docs/invoices/today", the `.urlPath` property is ["docs", "invoices" ,"today"].
+Por ejemplo, si la solicitud va dirigida a "http://127.0.0.1:80/docs/invoices/today", la propiedad `.urlPath` es ["docs", "invoices" , "today"].
 
 La propiedad `.urlPath` es de sólo lectura.
 
@@ -294,19 +294,19 @@ La propiedad `.urlQuery` contiene <!-- REF #IncomingMessageClass.urlQuery.Summar
 
 La propiedad `.urlQuery` es de sólo lectura.
 
-Parameters can be passed in the URL of requests **directly** or **as JSON contents**.
+Los parámetros se pueden pasar en la URL de las peticiones **directamente** o **como contenido JSON**.
 
 #### Parámetros directos
 
-Example: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
+Ejemplo: `http://127.0.0.1:8044/myCall?firstname=Marie&id=2&isWoman=true`
 
-In this case, parameters are received as stringified values in the `urlQuery` property: `urlQuery = {"firstname":"Marie" ,"id":"2" ,"isWoman":"true"}`
+En este caso, los parámetros se reciben como valores stringificados en la propiedad `urlQuery`: `urlQuery = {"firstname": "Marie" , "id": "2" , "isWoman": "true"}`
 
 #### Parámetros contenido JSON
 
-Example: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie","isWoman": true,"id": 3}]'`.
+Ejemplo: `http://127.0.0.1:8044/myCall/?myparams='[{"firstname": "Marie", "isWoman": true, "id": 3}]'`.
 
-Parameters are passed in JSON format and enclosed within a collection.
+Los parámetros se pasan en formato JSON y dentro de una colección.
 
 En este caso, los parámetros se reciben como texto JSON en la propiedad `urlQuery` y se pueden analizar utilizando [`JSON Parse`](../commands-legacy/json-parse.md).
 
@@ -315,7 +315,7 @@ En este caso, los parámetros se reciben como texto JSON en la propiedad `urlQue
 $test:=Value type(JSON Parse($r.urlQuery.myparams))=Is collection) //true
 ```
 
-Special characters such as simple quotes or carriage returns must be escaped.
+Los caracteres especiales, como las comillas simples o los retornos de carro, deben escaparse.
 
 Ejemplo: `http://127.0.0.1:8044/syntax/?mdcode=%60%60%604d`
 
@@ -342,7 +342,7 @@ Los parámetros dados en el cuerpo de la petición utilizando los verbos POST o 
 
 La propiedad `.verb` contiene <!-- REF #IncomingMessageClass.verb.Summary -->el verbo usado por la petición<!-- END REF -->.
 
-HTTP and HTTPS request verbs include for example "get", "post", "put", etc.
+Los verbos de solicitud HTTP y HTTPS incluyen, por ejemplo, "get", "post", "put", etc.
 
 La propiedad `.verb` es de sólo lectura.
 

@@ -7,10 +7,10 @@ Dans les projets d'application, vous pouvez documenter vos méthodes ainsi que v
 
 Les éléments de projet suivants peuvent être documentés :
 
- - Méthodes (méthodes base, méthodes composants, méthodes projet, méthodes formulaire, méthodes 4D Mobile et triggers)
- - Classes
- - Formulaires
- - Tables et champs
+- Méthodes (méthodes base, méthodes composants, méthodes projet, méthodes formulaire, méthodes 4D Mobile et triggers)
+- Classes
+- Formulaires
+- Tables et champs
 
 Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. Ils sont stockés en tant que fichiers indépendants dans votre dossier Project.
 
@@ -34,7 +34,7 @@ Tous les fichiers de documentation sont stockés dans le dossier `Documentation`
 
 L'architecture du dossier `Documentation` est la suivante :
 
- - `Documentation`
+- `Documentation`
      - `Classes`
          - myClass.md
      - `DatabaseMethods`
@@ -55,9 +55,9 @@ L'architecture du dossier `Documentation` est la suivante :
          - table1.md
          - ...
 
- - Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
+- Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
 
- - Un formulaire table et sa méthode de formulaire table partagent le même fichier de documentation pour le formulaire et la méthode.
+- Un formulaire table et sa méthode de formulaire table partagent le même fichier de documentation pour le formulaire et la méthode.
 
 > Renommer ou supprimer un élément documenté dans votre projet renomme ou supprime également le fichier Markdown associé à l'élément.
 
@@ -73,9 +73,9 @@ Pour afficher la documentation dans la fenêtre de l'Explorateur :
 
 ![](../assets/en/Project/comments-explo2.png)
 
- - Si aucun fichier de documentation n'a été trouvé pour l'élément sélectionné, un bouton **Créer** s'affiche (voir ci-dessous).
+- Si aucun fichier de documentation n'a été trouvé pour l'élément sélectionné, un bouton **Créer** s'affiche (voir ci-dessous).
 
- - Sinon, s'il existe un fichier de documentation pour l'élément sélectionné, le contenu est affiché dans la zone. Le contenu n'est pas directement modifiable dans le volet.
+- Sinon, s'il existe un fichier de documentation pour l'élément sélectionné, le contenu est affiché dans la zone. Le contenu n'est pas directement modifiable dans le volet.
 
 ### Modifier le fichier documentation
 
@@ -83,8 +83,8 @@ Vous pouvez créer et/ou modifier un fichier de documentation Markdown à partir
 
 S'il n'y a pas de fichier de documentation pour l'élément sélectionné, vous pouvez :
 
- - cliquez sur le bouton **Créer** dans le volet `Documentation` ou,
- - choisissez l'option **Modifier la documentation...** dans le menu contextuel ou le menu d'options de l'Explorateur.
+- cliquez sur le bouton **Créer** dans le volet `Documentation` ou,
+- choisissez l'option **Modifier la documentation...** dans le menu contextuel ou le menu d'options de l'Explorateur.
 
 ![](../assets/en/Project/comments-explo3.png)
 
@@ -100,9 +100,9 @@ L'éditeur de code 4D affiche une partie de la documentation d'une méthode dans
 
 Si un fichier nommé`\<MethodName>.md` existe dans le dossier `\<package>/documentation` , l'éditeur de code affiche (par priorité) :
 
- - Tout texte saisi dans une balise de commentaire HTML (`<!-- documentation commande -->`) en haut du fichier markdown.
+- Tout texte saisi dans une balise de commentaire HTML (`<!-- documentation commande -->`) en haut du fichier markdown.
 
- - Ou, si aucune balise de commentaire html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.\
+- Ou, si aucune balise de commentaire html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.\
     Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par l'analyseur de code de 4D.\
     Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par l'analyseur de code de 4D.
 
@@ -131,7 +131,7 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 
 ### Prise en charge du markdown
 
- - La balise de titre est prise en charge :
+- La balise de titre est prise en charge :
 
 ```md
 # Title 1
@@ -139,7 +139,7 @@ De nouveaux fichiers de documentation sont créés avec les contenus par défaut
 ### Title 3
 ```
 
- - Les balises de style (italique, gras, barré) sont prises en charge :
+- Les balises de style (italique, gras, barré) sont prises en charge :
 
 ```md
 _italic_
@@ -148,7 +148,7 @@ _italic_
 ~~strikethrough~~
 ```
 
- - La balise de bloc de code (\`4d ... `) est prise en charge avec la surbrillance du code 4D :
+- La balise de bloc de code (\`4d ... `) est prise en charge avec la surbrillance du code 4D :
 
 ````md
 ```4d
@@ -157,7 +157,7 @@ _italic_
 ```
 ````
 
- - La balise de tableau est prise en charge :
+- La balise de tableau est prise en charge :
 
 ```md
 | Parameter | Type   | Description  |
@@ -166,7 +166,7 @@ _italic_
 | toolbar   | Text |Toolbar name  |
 ```
 
- - La balise de lien est prise en charge :
+- La balise de lien est prise en charge :
 
 ```md
 // Case 1
@@ -178,7 +178,7 @@ The [documentation](https://doc.4d.com) of the command ....
 [1]: https://blog.4d.com
 ```
 
- - Les balises d'image sont prises en charge :
+- Les balises d'image sont prises en charge :
 
 ```md
 ![image info](pictures/image.png)
@@ -225,10 +225,10 @@ $logo:=GetLogo(5)
 ```
 ````
 
- - Vue de l'explorateur :
+- Vue de l'explorateur :
 
 ![](../assets/en/Project/explorer_Doc.png)
 
- - Vue de l'éditeur de code :
+- Vue de l'éditeur de code :
 
 ![](../assets/en/Project/comments-explo5.png)

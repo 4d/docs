@@ -13,10 +13,10 @@ Se añade una línea para cada operación larga realizada en los datos. Esta lí
 
 La siguiente información se ofrece para cada línea:
 
- - **Hora de inicio**: hora de inicio de la operación en el formato "dd/mm/yyyy - hh:mm:ss"
- - **Duración** (ms): duración en milisegundos de la operación en curso
- - **Información**: título de la operación.
- - **Detalles**: esta área muestra información detallada que variará en función del tipo de operación seleccionada. En particular:
+- **Hora de inicio**: hora de inicio de la operación en el formato "dd/mm/yyyy - hh:mm:ss"
+- **Duración** (ms): duración en milisegundos de la operación en curso
+- **Información**: título de la operación.
+- **Detalles**: esta área muestra información detallada que variará en función del tipo de operación seleccionada. En particular:
      - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
      - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
      - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
@@ -26,9 +26,9 @@ La siguiente información se ofrece para cada línea:
 
 La página está activa y se actualiza permanentemente en cuanto se muestra. Cabe señalar que su funcionamiento puede ralentizar considerablemente la ejecución de la aplicación. Es posible suspender la actualización de esta página de una de las siguientes maneras:
 
- - haciendo clic en el botón **Pausa**,
- - haciendo clic en la lista,
- - presionando la barra espaciadora.
+- haciendo clic en el botón **Pausa**,
+- haciendo clic en la lista,
+- presionando la barra espaciadora.
 
 Al pausar la página, aparece el mensaje "PAUSED" y la etiqueta del botón cambia a **Reanudar**.
 Puede reanudar el seguimiento de las operaciones realizando la misma acción que para la pausa.

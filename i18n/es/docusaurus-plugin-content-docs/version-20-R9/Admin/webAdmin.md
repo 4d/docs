@@ -18,7 +18,7 @@ servidor web `WebAdmin` no se lanza. Es necesario configurar el lanzamiento al i
 
 Puede configurar el servidor web `WebAdmin` para que se lance al inicio de la aplicación 4D o 4D Server (antes de que se cargue cualquier proyecto).
 
- - Si utiliza una aplicación 4D con interfaz, seleccione la opción de menú **Archivo > Administración web > Parámetros....**.
+- Si utiliza una aplicación 4D con interfaz, seleccione la opción de menú **Archivo > Administración web > Parámetros....**.
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
@@ -26,7 +26,7 @@ Seleccione la opción **Iniciar servidor WebAdmin al inicio** en la caja de diá
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
- - Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento *Interfaz de línea de comandos*:
+- Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento *Interfaz de línea de comandos*:
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
@@ -72,8 +72,8 @@ Cuando esta opción está seleccionada, podrá conectarse al servidor web `WebAd
 
 **Notas:**
 
- - Nunca se aceptan conexiones con HTTP que no sean localhost.
- - Incluso si esta opción está activada, cuando [HTTPS aceptada](#accept-https) está activada y la configuración TLS es válida, las conexiones localhost utilizan HTTPS.
+- Nunca se aceptan conexiones con HTTP que no sean localhost.
+- Incluso si esta opción está activada, cuando [HTTPS aceptada](#accept-https) está activada y la configuración TLS es válida, las conexiones localhost utilizan HTTPS.
 
 #### Puerto HTTP
 
@@ -95,11 +95,11 @@ Ruta de la carpeta donde se encuentran los archivos del certificado TLS. Por def
 
 Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog_*nn*.txt, almacenado en la carpeta "Logs" de la aplicación -- *nn* es el número de archivo). Las siguientes opciones están disponibles:
 
- - **Desactivado** (por defecto)
- - **Con todas las partes del body** - activado con las partes del cuerpo en respuesta y petición
- - \*\*Sin las partes del body \*\* - activado sin partes del cuerpo (se indica el tamaño del cuerpo)
- - **Con los cuerpos de las peticiones** - activado con la partes del cuerpo únicamente en las peticiones
- - **Con la respuesta body** - activado con la partes del cuerpo únicamente en las respuestas
+- **Desactivado** (por defecto)
+- **Con todas las partes del body** - activado con las partes del cuerpo en respuesta y petición
+- \*\*Sin las partes del body \*\* - activado sin partes del cuerpo (se indica el tamaño del cuerpo)
+- **Con los cuerpos de las peticiones** - activado con la partes del cuerpo únicamente en las peticiones
+- **Con la respuesta body** - activado con la partes del cuerpo únicamente en las respuestas
 
 #### Llave de acceso
 
@@ -109,10 +109,10 @@ La configuración de una llave de acceso es obligatoria para desbloquear el acce
 
 Una llave de acceso es similar a una contraseña pero no está asociada a un inicio de sesión.
 
- - Para definir una nueva llave de acceso: haga clic en el botón **Definir**, introduzca la cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**. La etiqueta del
+- Para definir una nueva llave de acceso: haga clic en el botón **Definir**, introduzca la cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**. La etiqueta del
     botón se convierte en **Modificar**.
- - Para modificar la llave de acceso: haga clic en el botón **Modificar**, introduzca la nueva cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**.
- - Para eliminar la llave de acceso: haga clic en el botón **Modificar**, deje vacía el área de la llave de acceso y haga clic en **OK**.
+- Para modificar la llave de acceso: haga clic en el botón **Modificar**, introduzca la nueva cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**.
+- Para eliminar la llave de acceso: haga clic en el botón **Modificar**, deje vacía el área de la llave de acceso y haga clic en **OK**.
 
 #### Activar el acceso a Qodly Studio
 
@@ -148,9 +148,9 @@ Ejemplo:
 
 ## Autenticación y sesión
 
- - Cuando se accede a una página de gestión web introduciendo una URL y sin identificación previa, se requiere una autenticación. El usuario debe introducir la [llave-de-acceso](#access-key) en una ventana de autenticación. Si la llave de acceso no fue definida en la configuración de `WebAdmin`, no es posible el acceso vía URL.
+- Cuando se accede a una página de gestión web introduciendo una URL y sin identificación previa, se requiere una autenticación. El usuario debe introducir la [llave-de-acceso](#access-key) en una ventana de autenticación. Si la llave de acceso no fue definida en la configuración de `WebAdmin`, no es posible el acceso vía URL.
 
- - Cuando se accede a una página de gestión web directamente desde un elemento de menú de 4D o 4D Server (como **Registros > Explorador de datos** o **Ventana > Explorador de datos** (4D Server)), el acceso se concede sin autenticación, el usuario se autentifica automáticamente.
+- Cuando se accede a una página de gestión web directamente desde un elemento de menú de 4D o 4D Server (como **Registros > Explorador de datos** o **Ventana > Explorador de datos** (4D Server)), el acceso se concede sin autenticación, el usuario se autentifica automáticamente.
 
 Una vez concedido el acceso, se crea una [sesión web](WebServer/sessions.md) con el privilegio "WebAdmin" en la aplicación 4D. Mientras la sesión actual tenga el privilegio "WebAdmin", el componente `WebAdmin` entrega las páginas solicitadas.
 

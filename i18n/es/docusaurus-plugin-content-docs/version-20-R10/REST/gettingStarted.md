@@ -9,8 +9,8 @@ El servidor REST está incluido en 4D y 4D Server, está automáticamente dispon
 
 Esta sección pretende ayudar a familiarizarse con la funcionalidad de REST mediante un ejemplo sencillo. Vamos a:
 
- - crear y configurar un proyecto de aplicación 4D básico
- - acceder a los datos del proyecto 4D a través de REST utilizando un navegador estándar.
+- crear y configurar un proyecto de aplicación 4D básico
+- acceder a los datos del proyecto 4D a través de REST utilizando un navegador estándar.
 
 Para simplificar el ejemplo, vamos a utilizar 4D y un navegador que se ejecutan en la misma máquina. Por supuesto, también puede utilizar una arquitectura remota.
 

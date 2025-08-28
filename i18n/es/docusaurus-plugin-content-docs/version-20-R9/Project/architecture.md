@@ -5,7 +5,7 @@ title: Arquitectura de un proyecto
 
 Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una carpeta raíz del proyecto (carpeta paquete). Por ejemplo:
 
- - MyPackage (*carpeta raíz del proyecto*)
+- MyPackage (*carpeta raíz del proyecto*)
      - `Componentes`
      - `Data`
          - `Logs`
@@ -27,23 +27,23 @@ Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de u
 
 La carpeta Project suele contener la siguiente jerarquía:
 
- - archivo `<applicationName>.4DProject`
- - `Sources`
+- archivo `<applicationName>.4DProject`
+- `Sources`
      - `Clases`
      - `DatabaseMethods`
      - `Métodos`
      - `Formularios`
      - `TableForms`
      - `Triggers`
- - `DerivedData`
- - `Trash` (si hay)
+- `DerivedData`
+- `Trash` (si hay)
 
 ### archivo `<applicationName>.4DProject`
 
 El archivo de desarrollo de proyecto, utilizado para designar y lanzar el proyecto. Este archivo puede ser abierto por:
 
- - 4D
- - 4D Server (sólo lectura, ver [Abrir un proyecto remoto](Desktop/clientServer.md#opening-a-remote-project))
+- 4D
+- 4D Server (sólo lectura, ver [Abrir un proyecto remoto](Desktop/clientServer.md#opening-a-remote-project))
 
 > En los proyectos 4D, el desarrollo se realiza con 4D y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server puede abrir archivos .4DProject para realizar pruebas.
 
@@ -120,9 +120,9 @@ Este archivo de texto también puede contener llaves de configuración, en parti
 
 La carpeta Trash contiene los métodos y formularios que se han eliminado del proyecto (si los hay). Puede contener las siguientes carpetas:
 
- - `Métodos`
- - `Formularios`
- - `TableForms`
+- `Métodos`
+- `Formularios`
+- `TableForms`
 
 Dentro de estas carpetas, los nombres de los elementos eliminados van entre paréntesis, por ejemplo "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources).
 
@@ -175,11 +175,11 @@ Esta carpeta contiene [**parámetros usuario para datos**](../Desktop/user-setti
 
 La carpeta Logs contiene todos los archivos de registro utilizados por el proyecto. Los archivos de registro incluyen, en particular:
 
- - conversión de base de datos,
- - peticiones del servidor web,
- - registro de actividades de backup/restitución (*Backup Journal\[xxx].txt*, ver [Historial de backup](Backup/backup.md#backup-journal))
- - depuración de comandos,
- - Peticiones 4D Server (generadas en en los equipos cliente y en el servidor).
+- conversión de base de datos,
+- peticiones del servidor web,
+- registro de actividades de backup/restitución (*Backup Journal\[xxx].txt*, ver [Historial de backup](Backup/backup.md#backup-journal))
+- depuración de comandos,
+- Peticiones 4D Server (generadas en en los equipos cliente y en el servidor).
 
 > Una carpeta Logs adicional está disponible en la carpeta de preferencias del usuario del sistema (carpeta 4D activa, ver el comando [Get 4D folder](../commands-legacy/get-4d-folder.md)) para los archivos de registro de mantenimiento y e
 

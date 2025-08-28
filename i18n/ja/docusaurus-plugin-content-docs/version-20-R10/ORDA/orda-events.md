@@ -87,17 +87,17 @@ Event functions accept a single *event* object as parameter. When the function i
 
 This event is triggered each time a value is modified in the entity.
 
- - if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
- - if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
+- if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
+- if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
- - in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
+- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
     - the user sets a value on a 4D form,
     - the 4D code makes an assignment with the `:=` operator. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
- - in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
- - in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
- - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
+- in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
+- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
+- with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
 
 The function receives an [*event* object](#event-parameter) as parameter.
 
@@ -107,8 +107,8 @@ If this event [throws](../commands-legacy/throw.md) an error, it will not stop t
 
 This event is also triggered:
 
- - when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
- - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
+- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
+- when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
 
 :::
 
@@ -143,7 +143,7 @@ Function get sameDay() : Boolean
 
 Even though they are very similar, these functions cannot be associated with identical queries because they do not compare the same types of values. The first compares attributes to a given value, while the second compares attributes to each other.
 
- - For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
+- For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
 
 ```4d
 Function query onGoing($event : Object) : Object
@@ -169,7 +169,7 @@ Function query onGoing($event : Object) : Object
     return {query: $myQuery; parameters: $parameters}
 ```
 
- - For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
+- For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
 
 ```4d
 Function query sameDay($event : Object) : Text
@@ -191,7 +191,7 @@ Function query sameDay($event : Object) : Text
 
 ```
 
- - Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
 
 ```4d
     //BookingEntity class

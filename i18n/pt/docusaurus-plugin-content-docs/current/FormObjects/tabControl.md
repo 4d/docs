@@ -42,9 +42,9 @@ No macOS, além da posição padrão (superior), os controles de aba também pod
 
 Para fornecer as etiquetas para o controle de abas, você pode usar:
 
- - um objeto
- - uma lista de escolha
- - um array
+- um objeto
+- uma lista de escolha
+- um array
 
 ### Utilização de um objecto
 

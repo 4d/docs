@@ -5,6 +5,15 @@ title: Session
 
 Session オブジェクトは [`Session`](../commands/session.md) コマンドによって返されます。  このオブジェクトは、カレントユーザーセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理を可能にします。
 
+:::info To learn more
+
+Blog posts about this feature:
+
+- [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
+- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+
+:::
+
 ### セッションの種類
 
 このクラスは以下の種類のセッションをサポートしています:
@@ -307,6 +316,10 @@ Else
  // 認証ページを表示します
 End if
 ```
+
+#### 参照
+
+[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 

@@ -11,8 +11,8 @@ La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/
 
 Você encontrará abaixo:
 
- - the Table Wizard configuration documentation,
- - a I.A. integrada. documentation.
+- the Table Wizard configuration documentation,
+- a I.A. integrada. documentation.
 
 ## Assistente de tabelas
 
@@ -60,9 +60,9 @@ Once the table has been integrated into the document, the user can customize its
 
 A configuração dos modelos inclui:
 
- - Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
- - Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
- - Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
+- Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+- Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+- Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
 These three types of files contribute to the configuration of the Table Wizard, and while each serves a distinct purpose, none of them are considered essential components.
 
@@ -70,10 +70,10 @@ These three types of files contribute to the configuration of the Table Wizard, 
 
 O ficheiro modelo permite-lhe definir o seguinte:
 
- - a fórmula que retorna uma seleção de entidades usadas como fonte de dados para a tabela,
- - as fórmulas de interrupção (se for possível inserir uma linha de interrupção)
- - os atributos dataclass que podem ser usados como colunas da tabela,
- - the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
+- a fórmula que retorna uma seleção de entidades usadas como fonte de dados para a tabela,
+- as fórmulas de interrupção (se for possível inserir uma linha de interrupção)
+- os atributos dataclass que podem ser usados como colunas da tabela,
+- the formulas available as contextual menus inside break rows, carry-over row, placeholder row or extra rows.
 
 O arquivo modelo deve ser armazenado em uma pasta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" em seu projeto.
 
@@ -315,11 +315,11 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 In the current implementation, the feature has the following limitations:
 
- - use of a predefined AI provider and necessity to pass your OpenAI key
- - basic chatting features
- - no image handling
- - non-configurable predefined action commands
- - predefined translations English/French and French/English only
+- use of a predefined AI provider and necessity to pass your OpenAI key
+- basic chatting features
+- no image handling
+- non-configurable predefined action commands
+- predefined translations English/French and French/English only
 
 ### Enabling the AI feature
 
@@ -346,8 +346,8 @@ O botão **I.A.** é exibido:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
- - in the 4D Write Pro Toolbar, in the **Import Export** tab,
- - in the 4D Write Pro Widget, in the **Font Style** tab.
+- in the 4D Write Pro Toolbar, in the **Import Export** tab,
+- in the 4D Write Pro Widget, in the **Font Style** tab.
 
 Click on the button to display the AI dialog box.
 
@@ -385,8 +385,8 @@ These buttons propose basic interactions between the chat area, the underlying 4
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
- - **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
- - **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+- **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
+- **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
 
 In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
 

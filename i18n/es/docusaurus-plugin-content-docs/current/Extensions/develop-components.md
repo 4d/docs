@@ -179,14 +179,18 @@ Select **Edit...** item is available when you right-click on the component name 
 
 ![edit-component](../assets/en/Project/Edit-component.png)
 
-When you select it, a dedicated tab is added (or highlighted if already added) in the Explorer. In this tab, the component code is editable in the following pages:
+When you select it, a dedicated tab is added (or highlighted if already added) in the Explorer. In this tab, the following standard pages are available and give access to the component contents:
 
 ![tab-component](../assets/en/Project/tab-component.png)
 
+- Home, including folders, methods, classes and (preview only) forms
 - Métodos proyecto
 - Database Methods ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
 - Clases
 - Métodos formulario proyecto
+- Comandos y constantes
+- Plug-ins
+- Trash
 
 ![tab-component](../assets/en/Project/tab-component.gif)
 
@@ -194,7 +198,8 @@ Standard 4D IDE features are available for the component. Puede ejecutar las sig
 
 - añadir, duplicar, borrar, editar/guardar [métodos y clases](../Project/code-overview.md)
 - previsualizar código, mostrar/editar [documentación](../Project/documentation.md), mostrar/editar [propiedades de método](../Project/code-overview.md#project-method-properties),
-- ejecutar métodos.
+- ejecutar métodos,
+- restore from trash or empty trash.
 
 ## Completar el código de los componentes compilados
 
