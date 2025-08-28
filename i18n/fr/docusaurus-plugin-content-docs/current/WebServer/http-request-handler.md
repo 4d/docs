@@ -11,16 +11,16 @@ When a custom HTTP request handler intercepts a request, it is processed directl
 
 Custom HTTP request handlers meet various needs, including:
 
- - using a given URL as a resource provider or a file-uploading box (to download or upload various files),
- - redirecting on specific pages according to a context (user authenticated, privileges granted...),
- - handle an authentication via oAuth 2.0.
+- using a given URL as a resource provider or a file-uploading box (to download or upload various files),
+- redirecting on specific pages according to a context (user authenticated, privileges granted...),
+- handle an authentication via oAuth 2.0.
 
 ## Conditions requises
 
 Custom HTTP Request handlers are supported:
 
- - when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
- - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
+- when [scalable sessions](./sessions.md#enabling-web-sessions) are enabled,
+- with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
 :::warning
 
@@ -62,9 +62,9 @@ You must restart the Web server so that modifications made in this file are take
 
 A handler is defined by:
 
- - a listened URL pattern
- - a function and its class where the code is implemented to handle the listened URL pattern
- - the verbs with which the URL can be called to trigger the handler
+- a listened URL pattern
+- a function and its class where the code is implemented to handle the listened URL pattern
+- the verbs with which the URL can be called to trigger the handler
 
 The handler identifier is the couple [pattern + a verb among the verbs list].
 
@@ -72,10 +72,10 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
- - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
+- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
    Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
- - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
+- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
    Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
@@ -117,17 +117,17 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
 
- - `/4DACTION`
- - `/rest`
- - `/$lib/renderer`
- - `/$shared`
+- `/4DACTION`
+- `/rest`
+- `/$lib/renderer`
+- `/$shared`
 
 ### Class and method
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
- - "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. It must be a [**shared**](../Concepts/classes.md#shared-singleton) and [**singleton**](../Concepts/classes.md#singleton-classes) class.
- - "method": class function belonging to the class.
+- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. It must be a [**shared**](../Concepts/classes.md#shared-singleton) and [**singleton**](../Concepts/classes.md#singleton-classes) class.
+- "method": class function belonging to the class.
 
 [See below](#request-handler-code) for information about the request handler code.
 
@@ -208,11 +208,11 @@ Here is a detailed example of a HTTPHandlers.json file:
 
 In this example, you must implement the following functions:
 
- - *handle function* in the *GeneralHandling* class
- - *manageAccount* in the *UsersHandling* class
- - *handleInvoices* in the *FinancialHandling* class
- - *handleDocs* in the *DocsHandling* class
- - *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
+- *handle function* in the *GeneralHandling* class
+- *manageAccount* in the *UsersHandling* class
+- *handleInvoices* in the *FinancialHandling* class
+- *handleDocs* in the *DocsHandling* class
+- *handleTheInvoice* / *handleDetails* / *handleInvoices* in the *InvoicesHandling* class
 
 Examples of URLs triggering the handlers:
 

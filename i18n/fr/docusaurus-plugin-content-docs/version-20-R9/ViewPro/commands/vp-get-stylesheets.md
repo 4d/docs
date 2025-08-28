@@ -23,8 +23,8 @@ Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom i
 
 Vous pouvez définir où lire les feuilles de style via le paramètre *sheet* en passant le numéro d'indice de la feuille (la numérotation commence à partir de 0) ou à l'aide des constantes suivantes :
 
- - `vk current sheet`
- - `vk workbook`
+- `vk current sheet`
+- `vk workbook`
 
 ## Exemple
 

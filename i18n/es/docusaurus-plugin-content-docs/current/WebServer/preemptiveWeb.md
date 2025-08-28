@@ -42,15 +42,15 @@ Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere 
      - `On REST Authentication`
      - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
- - El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
+- El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
 
- - Básicamente cualquier código procesado por el comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) en el contexto web, por ejemplo a través de páginas .shtml
+- Básicamente cualquier código procesado por el comando [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) en el contexto web, por ejemplo a través de páginas .shtml
 
- - Todo método proyecto con el atributo "Disponible a través de etiquetas 4D y URLs (`4DACTION`, etc.)
+- Todo método proyecto con el atributo "Disponible a través de etiquetas 4D y URLs (`4DACTION`, etc.)
 
- - Triggers para tablas con el atributo "Exponer como recurso REST"
+- Triggers para tablas con el atributo "Exponer como recurso REST"
 
- - [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
+- [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
 
 For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
 
@@ -62,8 +62,8 @@ La mayoría de los comandos y funciones 4D relacionados con la web, los métodos
 
 Todos los comandos 4D relativos a la web son hilo seguro, *es decir*:
 
- - todos los comandos del tema *Servidor Web*,
- - todos los comandos del tema *Cliente HTTP*.
+- todos los comandos del tema *Servidor Web*,
+- todos los comandos del tema *Cliente HTTP*.
 
 Los métodos base relacionados con la web son hilo seguro y pueden utilizarse en modo apropiativo (ver arriba): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
@@ -73,15 +73,15 @@ Por supuesto, el código ejecutado por estos métodos también debe ser hilo seg
 
 Las siguientes URLs 4D Web Server son hilo seguro y pueden ser utilizadas en modo apropiativo:
 
- - *4daction/* (el método proyecto llamado también debe ser hilo seguro)
- - *4dwebtest/*
- - *4dblank/*
- - *4dstats/*
- - *4dhtmlstats/*
- - *4dcacheclear/*
- - *rest/*
- - *4dimgfield/* (generado por `PROCESS 4D TAGS` para peticiones web en campos imagen)
- - *4dimg/* (generado por `PROCESS 4D TAGS` para la petición web en las variables imagen)
+- *4daction/* (el método proyecto llamado también debe ser hilo seguro)
+- *4dwebtest/*
+- *4dblank/*
+- *4dstats/*
+- *4dhtmlstats/*
+- *4dcacheclear/*
+- *rest/*
+- *4dimgfield/* (generado por `PROCESS 4D TAGS` para peticiones web en campos imagen)
+- *4dimg/* (generado por `PROCESS 4D TAGS` para la petición web en las variables imagen)
 
 ### Icono de proceso web apropiativo
 

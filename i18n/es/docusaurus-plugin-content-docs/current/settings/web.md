@@ -78,9 +78,9 @@ Cuando se selecciona esta opción, el servidor web no ofrece ningún soporte esp
 
 En este modo, puede configurar los parámetros del servidor web adicionales:
 
- - [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
- - [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
- - [Usar procesos apropiativos](#use-preemptive-processes)
+- [Máximo de procesos web simultáneos](#maximum-concurrent-web-processes)
+- [Reutilización de contextos temporales (4D en modo remoto)](#reuse-temporary-contexts)
+- [Usar procesos apropiativos](#use-preemptive-processes)
 
 #### Sesiones antiguas (sesiones procesos únicos)
 
@@ -160,9 +160,9 @@ Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D 
 
 El menú de formato de registro ofrece las siguientes opciones:
 
- - **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
+- **Sin archivo de registro**: cuando se selecciona esta opción, 4D no generará un archivo de historial de peticiones.
 
- - **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
+- **CLF (Common Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato CLF. Con el formato CLF, cada línea del archivo representa una solicitud, como:\
     host rfc931 user [DD/MMM/AAAA:HH:MM:SS] "request" state length\
     Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF (character 13, character 10).
 
@@ -173,9 +173,9 @@ El menú de formato de registro ofrece las siguientes opciones:
 
 > La fecha y hora son locales al servidor.
 
- - petición: solicitud enviada por el cliente (por ejemplo, GET /index.htm HTTP/1.0)
- - estado: respuesta dada por el servidor.
- - longitud: tamaño de los datos devueltos (excepto el encabezado HTTP) o 0.
+- petición: solicitud enviada por el cliente (por ejemplo, GET /index.htm HTTP/1.0)
+- estado: respuesta dada por el servidor.
+- longitud: tamaño de los datos devueltos (excepto el encabezado HTTP) o 0.
 
 > **Nota:** por razones de rendimiento, las operaciones se guardan en una memoria búfer por paquetes de 1Kb antes de ser escritas en el disco. Las operaciones también se escriben en disco si no se ha enviado ninguna petición cada 5 segundos.
 > Los posibles valores de estado son los siguientes
@@ -189,16 +189,16 @@ El menú de formato de registro ofrece las siguientes opciones:
 > 500: Internal error
 > El formato CLF no puede personalizarse.
 
- - **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
+- **DLF (Combined Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato DLF. El formato DLF es similar al formato CLF y utiliza exactamente la misma estructura. Simplemente añade dos campos HTTP adicionales al final de cada petición: Referer y User-agent.
 
      - Referer: contiene la URL de la página que apunta al documento solicitado.
      - User-agent: contiene el nombre y la versión del navegador o del software cliente en el origen de la petición.
 
 > El formato DLF no se puede personalizar.
 
- - **ELF (Extended Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato ELF. El formato ELF está muy extendido en el mundo de los navegadores HTTP. Puede utilizarse para construir historiales sofisticados que respondan a necesidades específicas. Por esta razón, el formato ELF se puede personalizar: es posible elegir los campos que se van a registrar, así como su orden de inserción en el archivo.
+- **ELF (Extended Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato ELF. El formato ELF está muy extendido en el mundo de los navegadores HTTP. Puede utilizarse para construir historiales sofisticados que respondan a necesidades específicas. Por esta razón, el formato ELF se puede personalizar: es posible elegir los campos que se van a registrar, así como su orden de inserción en el archivo.
 
- - **WLF (WebStar Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato WLF. El formato WLF se desarrolló específicamente para el servidor 4D WebSTAR. Es similar al formato ELF, con sólo unos pocos campos adicionales. Al igual que el formato ELF, se puede personalizar.
+- **WLF (WebStar Log Format)**: cuando se selecciona esta opción, el historial de peticiones se genera en formato WLF. El formato WLF se desarrolló específicamente para el servidor 4D WebSTAR. Es similar al formato ELF, con sólo unos pocos campos adicionales. Al igual que el formato ELF, se puede personalizar.
 
 **Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. Deberá seleccionar cada campo para incluirlo en el registro. You will need to select each field to be included in the log.
 
@@ -237,8 +237,8 @@ La siguiente tabla enumera los campos disponibles para cada formato (en orden al
 
 Configure los parámetros de copia de seguridad automática para el registro de las peticiones. Primero debe elegir la frecuencia (días, semanas, etc.) o el criterio de límite de tamaño de archivo haciendo clic en el botón de opción correspondiente. A continuación, debe especificar el momento preciso de la copia de seguridad si es necesario.
 
- - **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
- - **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
+- **Sin copia de seguridad**: la función de copia de seguridad programada está desactivada.
+- **Cada X hora(s)**: esta opción se utiliza para programar las copias de seguridad con una base horaria. Puede introducir un valor entre 1 y 24 .
 
      - **a partir de**: permite definir la hora de activación de la primera copia de seguridad.
 - **Cada X día(s) a las X**: esta opción se utiliza para programar las copias de seguridad con una base diaria. Introduzca 1 si desea realizar una copia de seguridad diaria. Cuando esta opción está marcada, debe indicar la hora a la que debe comenzar la copia de seguridad.
@@ -258,9 +258,9 @@ Para más información sobre el soporte de los servicios web en 4D, consulte el 
 
 Esta área contiene varias opciones relativas con el uso de 4D como un "servidor" de Servicios Web, es decir la publicación de los métodos proyecto en forma de Servicios Web.
 
- - **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Cuando esta opción está marcada, 4D crea el archivo WSDL.
- - **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Este nombre se utiliza para diferenciar los servicios tanto a nivel de servidor SOAP (cuando el servidor publica varios Servicios Web diferentes), así como en los directorios de Servicios Web. Por defecto, 4D utiliza el nombre A_WebService.
- - **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada Servicio Web publicado en Internet debe ser único. La unicidad de los nombres de los Servicios Web se asegura mediante el uso de espacios de nombres XML. Un namespace es una cadena de caracteres arbitraria usada para identificar de manera única un conjunto de etiquetas XML. Por lo general, el espacio de nombres comienza por la URL de la empresa (http://mycompany.com/mynamespace). En este caso, no es indispensable tener nada en particular en la URL indicada; lo que importa es que la cadena de caracteres utilizada sea única. Por defecto, 4D utiliza el siguiente espacio de nombres: http://www.4d.com/namespace/default.
+- **Autorizar peticiones de servicios web**: esta opción le permite inicializar la publicación de servicios web. Si esta opción no ha sido seleccionada, 4D rechaza las peticiones SOAP y no genera una WSDL - incluso si los métodos tienen el atributo *Publicado en WSDL*. Cuando esta opción está marcada, 4D crea el archivo WSDL.
+- **Nombre del Servicio Web**: esta área le permite cambiar el "nombre genérico" del Servicio Web. Este nombre se utiliza para diferenciar los servicios tanto a nivel de servidor SOAP (cuando el servidor publica varios Servicios Web diferentes), así como en los directorios de Servicios Web. Por defecto, 4D utiliza el nombre A_WebService.
+- **Espacio de nombres de Servicios Web**: esta área se utiliza para cambiar el espacio de nombres (namespace) de los Servicios Web publicados por 4D. Cada Servicio Web publicado en Internet debe ser único. La unicidad de los nombres de los Servicios Web se asegura mediante el uso de espacios de nombres XML. Un namespace es una cadena de caracteres arbitraria usada para identificar de manera única un conjunto de etiquetas XML. Por lo general, el espacio de nombres comienza por la URL de la empresa (http://mycompany.com/mynamespace). En este caso, no es indispensable tener nada en particular en la URL indicada; lo que importa es que la cadena de caracteres utilizada sea única. Por defecto, 4D utiliza el siguiente espacio de nombres: http://www.4d.com/namespace/default.
 
 > Conforme al estándar XML para los nombres de etiquetas, las cadenas de caracteres utilizadas no deben contener espacios ni comenzar con un número. Además, para evitar cualquier riesgo de incompatibilidad, recomendamos que no utilice ningún caracter extendido (como los caracteres acentuados).
 
@@ -268,7 +268,7 @@ Esta área contiene varias opciones relativas con el uso de 4D como un "servidor
 
 Esta área contiene varias opciones relacionadas con el uso de 4D como un "cliente" de Servicios Web, es decir, suscribirse a los servicios publicados en la red.
 
- - **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web. Por defecto, 4D utiliza el prefijo "proxy_".
+- **Prefijo de los métodos creados por el asistente**: esta área le permite cambiar el prefijo que se añade automáticamente por 4D al nombre de los métodos proxy generados por el asistente de servicios web. Los métodos proyecto proxy forman un enlace entre la aplicación 4D y el servidor de Servicios Web. Por defecto, 4D utiliza el prefijo "proxy_".
 
 ## Funcionalidades Web
 
@@ -302,9 +302,9 @@ Este botón solo está disponible en los proyectos abiertos con la aplicación 4
 
 El botón activa la siguiente secuencia de actualización:
 
- - Se elimina el grupo de usuarios de la API REST definido en el menú **Leer/Escribir**.
- - Se elimina el método base `On REST Authentication` (se traslada a la papelera del sistema).
- - Se crea un archivo ["roles.json"](../ORDA/privileges.md#rolesjson-file) por defecto en la carpeta [Sources](../Project/architecture.md#sources) del proyecto si no existe, con su atributo `forceLogin` a `True`.
+- Se elimina el grupo de usuarios de la API REST definido en el menú **Leer/Escribir**.
+- Se elimina el método base `On REST Authentication` (se traslada a la papelera del sistema).
+- Se crea un archivo ["roles.json"](../ORDA/privileges.md#rolesjson-file) por defecto en la carpeta [Sources](../Project/architecture.md#sources) del proyecto si no existe, con su atributo `forceLogin` a `True`.
 
 Recuerde reiniciar su proyecto después de realizar esta actualización.
 

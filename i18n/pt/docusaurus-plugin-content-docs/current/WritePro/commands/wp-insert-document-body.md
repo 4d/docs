@@ -24,9 +24,9 @@ The **WP Insert document body** command<!--REF #_command_.WP Insert document bod
 
 Em *targetObj*, passe:
 
- - Um intervalo, ou
- - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
- - um documento 4D Write Pro.
+- Um intervalo, ou
+- An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
+- um documento 4D Write Pro.
 
 The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. Além disso, os elementos são copiados, de modo que *wpDoc* pode ser reutilizado várias vezes.
 
@@ -54,7 +54,7 @@ In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pa
 
 If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
 
- - Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
+- Se *targetObj* não for um intervalo, *rangeUpdate* será ignorado.
 
 ## Exemplo 1
 

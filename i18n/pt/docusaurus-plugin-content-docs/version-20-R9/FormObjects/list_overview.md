@@ -13,8 +13,8 @@ Quando apropriado, o ícone de expansão/colapso é automaticamente apresentado 
 
 O conteúdo de um objeto formulário lista hierárquica pode ser inicializado de uma das seguintes formas:
 
- - Associar uma [lista de opções](properties_DataSource.md#choice-list) existente ao objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
- - Atribuir diretamente uma referência de lista hierárquica à [variável ou expressão](properties_Object.md#variable-or-expression) associada ao objeto formulário.
+- Associar uma [lista de opções](properties_DataSource.md#choice-list) existente ao objeto. A lista de opções deve ter sido definida no editor de listas no modo Desenho.
+- Atribuir diretamente uma referência de lista hierárquica à [variável ou expressão](properties_Object.md#variable-or-expression) associada ao objeto formulário.
 
 Em ambos os casos, você gerencia uma lista hierárquica em tempo de execução através de sua referência *ListRef*, usando os comandos de [lista hierárquica](../commands/theme/Hierarchical_Lists.md) na linguagem 4D.
 
@@ -34,9 +34,9 @@ $mylist:=New list
 
 Cada representação da lista tem suas próprias características específicas e compartilha características comuns com todas as outras representações. As características a seguir são específicas de cada representação da lista:
 
- - A selecção,
- - O estado expandido/recolhido dos seus itens,
- - A posição do cursor de rolagem.
+- A selecção,
+- O estado expandido/recolhido dos seus itens,
+- A posição do cursor de rolagem.
 
 As outras características (fonte, tamanho da fonte, estilo, controle de entrada, cor, conteúdo da lista, ícones, etc.) são comuns a todas as representações e não podem ser modificados separadamente.
 Consequentemente, quando você usa comandos com base na configuração expandida/colapsada ou no item atual, por exemplo, `Count list items` (quando o parâmetro final `*` não é passado), é importante poder especificar a representação a ser usada sem nenhuma ambiguidade.
@@ -82,14 +82,14 @@ Assim como em outros comandos de gerenciamento de propriedades de objetos, é po
 
 É possível modificar a aparência de uma lista hierárquica de objetos usando vários comandos 4D genéricos. Você pode passar para esses comandos o nome do objeto da lista hierárquica (usando o parâmetro \*) ou o nome da variável (contendo o valor ListRef):
 
- - `OBJECT SET FONT`
- - `OBJECT SET FONT STYLE`
- - `OBJECT SET FONT SIZE`
- - `OBJECT SET FILTER`
- - `OBJECT SET ENTERABLE`
- - `OBJECT SET SCROLLBAR`
- - `OBJECT SET SCROLL POSITION`
- - `OBJECT SET RGB COLORS`
+- `OBJECT SET FONT`
+- `OBJECT SET FONT STYLE`
+- `OBJECT SET FONT SIZE`
+- `OBJECT SET FILTER`
+- `OBJECT SET ENTERABLE`
+- `OBJECT SET SCROLLBAR`
+- `OBJECT SET SCROLL POSITION`
+- `OBJECT SET RGB COLORS`
 
 > Lembrete: exceto `OBJECT SET SCROLL POSIÇÃO`, esses comandos modificam todas as representações da mesma lista, mesmo que você especifique apenas uma lista usando seu nome de objeto.
 
@@ -107,8 +107,8 @@ Esse princípio é aplicado independentemente da ordem em que os comandos são c
 
 Normalmente, você pode trabalhar de duas maneiras com o conteúdo das listas hierárquicas: por posição ou por referência.
 
- - Quando se trabalha por posição, 4D se baseia na posição em relação aos itens da lista exibida na tela para identificá-los. O resultado diferirá conforme o fato de determinados itens hierárquicos serem expandidos ou recolhidos. Observe que, no caso de várias representações, cada objeto de formulário tem sua própria configuração de itens expandidos/colapsados.
- - Quando você trabalha por referência, 4D se baseia no número de identificação *itemRef* dos itens da lista. Assim, cada item pode ser especificado individualmente, independentemente de sua posição ou de sua exibição na lista hierárquica.
+- Quando se trabalha por posição, 4D se baseia na posição em relação aos itens da lista exibida na tela para identificá-los. O resultado diferirá conforme o fato de determinados itens hierárquicos serem expandidos ou recolhidos. Observe que, no caso de várias representações, cada objeto de formulário tem sua própria configuração de itens expandidos/colapsados.
+- Quando você trabalha por referência, 4D se baseia no número de identificação *itemRef* dos itens da lista. Assim, cada item pode ser especificado individualmente, independentemente de sua posição ou de sua exibição na lista hierárquica.
 
 ### Utilização de números de referência dos items (itemRef)
 
@@ -141,9 +141,9 @@ Basicamente, você precisa lidar com números de referência de itens quando qui
 
 Pode controlar se os itens da lista hierárquica podem ser modificados pelo usuário, utilizando o atalho **Alt+click**(Windows) / **Option+click** (macOS), ou fazendo um clique longo no texto do item.
 
- - Independentemente da fonte de dados da lista hierárquica, você pode controlar todo o objeto com a propriedade [Entrável](properties_Entry.md#enterable).
+- Independentemente da fonte de dados da lista hierárquica, você pode controlar todo o objeto com a propriedade [Entrável](properties_Entry.md#enterable).
 
- - Além disso, se você preencher a lista hierárquica usando uma lista criada no editor de Listas, poderá controlar se um item em uma lista hierárquica é modificável usando a opção **Elemento modificável** no editor de Listas. Para obter mais informações, consulte [Definir as propriedades das listas](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
+- Além disso, se você preencher a lista hierárquica usando uma lista criada no editor de Listas, poderá controlar se um item em uma lista hierárquica é modificável usando a opção **Elemento modificável** no editor de Listas. Para obter mais informações, consulte [Definir as propriedades das listas](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## Propriedades compatíveis
 

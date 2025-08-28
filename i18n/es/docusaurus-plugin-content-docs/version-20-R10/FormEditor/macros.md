@@ -7,11 +7,11 @@ El editor de formularios 4D soporta macros. Una macro es un conjunto de instrucc
 
 Por ejemplo, si tiene un informe recurrente con un formato específico (por ejemplo, cierto texto debe aparecer en rojo y cierto texto debe aparecer en verde), puede crear una macro para definir automáticamente el color. Puede crear macros para el editor de formularios 4D que pueden:
 
- - Crear y ejecutar código 4D
- - Mostrar las cajas de diálogo
- - Seleccione los objetos de formulario
- - Añadir / eliminar / modificar los formularios, los objetos de formulario así como sus propiedades
- - Modificar los archivos del proyecto (actualizar, eliminar)
+- Crear y ejecutar código 4D
+- Mostrar las cajas de diálogo
+- Seleccione los objetos de formulario
+- Añadir / eliminar / modificar los formularios, los objetos de formulario así como sus propiedades
+- Modificar los archivos del proyecto (actualizar, eliminar)
 
 El código de las macros soporta [funciones de clase](Concepts/classes.md) y las [propiedades de objeto de formulario en JSON](FormObjects/properties_Reference.md) para permitir definir toda funcionalidad personalizada en el editor de formularios.
 
@@ -238,9 +238,9 @@ Por ejemplo, si los objetos de la página actual y de los grupos han sido modifi
 
 Cuando se maneja el atributo `method` de los objetos de formulario, se puede definir el valor del atributo de dos maneras en las macros:
 
- - Utilizando una [cadena que contiene el nombre/ruta del archivo del método](FormObjects/properties_Action.md#method).
+- Utilizando una [cadena que contiene el nombre/ruta del archivo del método](FormObjects/properties_Action.md#method).
 
- - Utilizando un objeto con la siguiente estructura:
+- Utilizando un objeto con la siguiente estructura:
 
 | Propiedad | Tipo | Descripción       |
 | --------- | ---- | ----------------- |
@@ -252,9 +252,9 @@ Cuando se maneja el atributo `method` de los objetos de formulario, se puede def
 
 La propiedad `$4dId` define un ID único para cada objeto de la página actual. Esta clave es utilizada por el procesador de macros para controlar los cambios en `$result.currentPage`:
 
- - si la llave `$4dId` falta tanto en el formulario y en un objeto en `$result`, el objeto se crea.
- - si la llave `$4dId` existe en el formulario pero falta en `$result`, el objeto se elimina.
- - si la llave `$4dId` existe tanto en el formulario y en un objeto en `$result`, el objeto se modifica.
+- si la llave `$4dId` falta tanto en el formulario y en un objeto en `$result`, el objeto se crea.
+- si la llave `$4dId` existe en el formulario pero falta en `$result`, el objeto se elimina.
+- si la llave `$4dId` existe tanto en el formulario y en un objeto en `$result`, el objeto se modifica.
 
 #### Ejemplo
 
@@ -297,8 +297,8 @@ La función `onError` se ejecuta cuando el procesador de macros encuentra un err
 
 Cuando se ejecuta una macro, si 4D encuentra un error que impide la cancelación de la macro, no la ejecuta. Es el caso, por ejemplo, de que la ejecución de una macro resulte en:
 
- - borrar o modificar un script cuyo archivo es de sólo lectura.
- - crear dos objetos con el mismo ID interno.
+- borrar o modificar un script cuyo archivo es de sólo lectura.
+- crear dos objetos con el mismo ID interno.
 
 #### Ejemplo
 

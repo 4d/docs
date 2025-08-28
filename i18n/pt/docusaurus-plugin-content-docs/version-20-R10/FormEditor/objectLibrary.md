@@ -7,8 +7,8 @@ Pode utilizar bibliotecas de objectos nos seus formulários. Uma biblioteca de o
 
 4D propõe dois tipos de bibliotecas de objetos:
 
- - uma biblioteca de objetos padrão, pré-configurada, disponível em todos os seus projetos.
- - as bibliotecas de objetos personalizados, que você pode usar para armazenar seus objetos formulários favoritos ou formulários projetos completos.
+- uma biblioteca de objetos padrão, pré-configurada, disponível em todos os seus projetos.
+- as bibliotecas de objetos personalizados, que você pode usar para armazenar seus objetos formulários favoritos ou formulários projetos completos.
 
 ## Criar e utilizar bibliotecas de objetos personalizadas
 
@@ -21,8 +21,8 @@ A biblioteca é apresentada numa janela separada:
 
 A janela tem as seguintes características principais:
 
- - Área de visualização com dicas: a área central exibe uma visualização de cada objeto. Você pode passar o mouse sobre um objeto para obter informações sobre ele em uma dica.
- - Você pode filtrar o conteúdo da janela usando o menu **Categorias**:
+- Área de visualização com dicas: a área central exibe uma visualização de cada objeto. Você pode passar o mouse sobre um objeto para obter informações sobre ele em uma dica.
+- Você pode filtrar o conteúdo da janela usando o menu **Categorias**:
     ![](../assets/en/FormEditor/library3.png)
 - Para utilizar um objeto da biblioteca no seu formulário, pode:
      - clicar com o botão direito do rato num objeto e selecionar **Copiar** no menu contextual
@@ -57,13 +57,13 @@ Uma determinada biblioteca de objetos só pode ser aberta por um m banco de dado
 
 Para abrir uma biblioteca de objetos personalizada, selecione o comando **Open>Object Library...** no menu 4D **File** ou na barra de ferramentas. Aparece uma caixa de diálogo padrão de ficheiro aberto, que lhe permite seleccionar a biblioteca de objectos a abrir. Pode seleccionar os seguintes tipos de ficheiros:
 
- - **.4dproject**
- - **.4dz**
+- **.4dproject**
+- **.4dz**
 
 Na realidade, as bibliotecas de objectos personalizados são projectos 4D clássicos. Apenas as seguintes partes de um projecto são expostas quando este é aberto como biblioteca:
 
- - formulários projecto
- - páginas formulário 1
+- formulários projecto
+- páginas formulário 1
 
 ### Construir uma biblioteca de objectos
 
@@ -75,10 +75,10 @@ As operações básicas estão disponíveis no menu de contexto ou no menu de op
 
 ![](../assets/en/FormEditor/library5.png)
 
- - **Cortar** ou **Copiar** para a área de transferência
- - **Colar** um objeto da área de transferência
- - **Clear** - exclui o objeto da biblioteca
- - **Renomear** - é exibida uma caixa de diálogo que permite renomear o item. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
+- **Cortar** ou **Copiar** para a área de transferência
+- **Colar** um objeto da área de transferência
+- **Clear** - exclui o objeto da biblioteca
+- **Renomear** - é exibida uma caixa de diálogo que permite renomear o item. Note-se que os nomes dos objectos devem ser únicos numa biblioteca.
 
 Pode colocar objectos individuais (incluindo subformulários) ou conjuntos de objectos numa biblioteca de objectos. Cada objecto ou conjunto é agrupado num único item:
 
@@ -94,9 +94,9 @@ A utilização de copiar-colar ou arrastar-e-soltar com determinados objetos de 
 
 Segue-se uma lista de objetos dependentes que serão colados na biblioteca enquanto o objeto principal que os utiliza (quando aplicável):
 
- - Listas
- - Formatos/Filtros
- - Imagens
- - Dicas de ajuda (ligadas a um campo)
- - Métodos objecto
+- Listas
+- Formatos/Filtros
+- Imagens
+- Dicas de ajuda (ligadas a um campo)
+- Métodos objecto
 

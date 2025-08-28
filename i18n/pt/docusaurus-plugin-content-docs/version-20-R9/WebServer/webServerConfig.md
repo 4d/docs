@@ -82,29 +82,29 @@ Lista de hosts e métodos permitidos para o serviço CORS.
 
 Nome de domínio ou endereço IP de onde as páginas externas têm permissão para enviar solicitações de dados ao servidor via CORS. Vários atributos de domínio podem ser adicionados para criar uma lista branca. Várias sintaxes são suportadas:
 
- - 192.168.5.17:8081
- - 192.168.5.17
- - 192.168.\*
- - 192.168.\*:8081
- - http://192.168.5.17:8081
- - http://\*.myDomain.com
- - http://myProject.myDomain.com
- - \*.myDomain.com
- - myProject.myDomain.com
- - \*
+- 192.168.5.17:8081
+- 192.168.5.17
+- 192.168.\*
+- 192.168.\*:8081
+- http://192.168.5.17:8081
+- http://\*.myDomain.com
+- http://myProject.myDomain.com
+- \*.myDomain.com
+- myProject.myDomain.com
+- \*
 
 #### Métodos HTTP autorizados (propriedade methods)
 
 Método(s) HTTP aceite(s) para o host CORS correspondente. São suportados os seguintes métodos HTTP:
 
- - GET
- - HEAD
- - POST
- - PUT
- - DELETE
- - OPTIONS
- - TRACE
- - PATCH
+- GET
+- HEAD
+- POST
+- PUT
+- DELETE
+- OPTIONS
+- TRACE
+- PATCH
 
 Separar cada método com um ";" (por exemplo: "post;get"). Se methods estiver vazio, null ou indefinido, todos os métodos serão ativados.
 
@@ -145,9 +145,9 @@ Por padrão, quando o servidor web é iniciado pela primeira vez, 4D cria uma p�
 
 Você pode designar outra página inicial padrão inserindo seu nome de caminho.
 
- - O caminho é relativo à [pasta raiz HTML padrão](#root-folder).
- - O caminho é expresso com a sintaxe POSIX (pastas são separadas por uma barra ("/"))
- - O caminho não deve começar nem terminar com uma barra.
+- O caminho é relativo à [pasta raiz HTML padrão](#root-folder).
+- O caminho é expresso com a sintaxe POSIX (pastas são separadas por uma barra ("/"))
+- O caminho não deve começar nem terminar com uma barra.
 
 Por exemplo, se você quiser que a página inicial padrão seja "MyHome. tm", e está localizado na pasta "Web" (ela própria localizada na pasta raiz padrão HTML), use "Web/MyHome.htm".
 
@@ -318,15 +318,15 @@ Valores possíveis: cadeia de endereços IP. Ambos os formatos de string IPv6 (p
 
 #### Acerca do suporte IPv6
 
- - **Sem aviso quando a porta TCP estiver ocupada**<br/>
+- **Sem aviso quando a porta TCP estiver ocupada**<br/>
    Quando o servidor estiver definido para responder em "Qualquer" endereços IP, se a porta TCP estiver sendo usada por outra aplicação, isso não é indicado quando o servidor é iniciado. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
 
 Se o seu servidor 4D não parecer responder na porta definida, pode testar o endereço [::1] na máquina do servidor (equivalente a 127.0.0.1 para IPv6, adicionar [:portNum] para testar outro número de porta). Se 4D responder, é provável que outro aplicativo esteja usando a porta em IPv4.
 
- - **Endereços IPv6 mapeados**<br/>
+- **Endereços IPv6 mapeados**<br/>
    Para padronizar o processamento, 4D fornece uma representação híbrida padrão de endereços IPv4 em IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
 
- - **Indicação dos números da porta**<br/>
+- **Indicação dos números da porta**<br/>
    Dado que a notação IPv6 usa dois-pontos (:), adicionar números de portas pode causar alguma confusão, por exemplo:
 
 ```code4d
@@ -420,10 +420,10 @@ Versão mínima de TLS aceita para ligações. As tentativas de ligação de cli
 
 Valores possíveis:
 
- - 1 = TLSv1_0
- - 2 = TLSv1_1
- - 3 = TLSv1_2 (padrão)
- - 4 = TLSv1_3
+- 1 = TLSv1_0
+- 2 = TLSv1_1
+- 3 = TLSv1_2 (padrão)
+- 4 = TLSv1_3
 
 Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
@@ -489,10 +489,10 @@ Por exemplo:
    Disallow: /GIFS/
 ```
 
- - "User-Agent: \*" - todos os robôs são afetados.
- - "Disallow: /4D" - os robôs não têm permissão para acessar URLs que começam com /4D.
- - "Disallow: /%23%23" - os robôs não têm permissão para acessar URLs que começam com /%23%23.
- - "Disallow: /GIFS/' - os robôs não têm permissão para acessar a pasta /GIFS/ ou suas subpastas.
+- "User-Agent: \*" - todos os robôs são afetados.
+- "Disallow: /4D" - os robôs não têm permissão para acessar URLs que começam com /4D.
+- "Disallow: /%23%23" - os robôs não têm permissão para acessar URLs que começam com /%23%23.
+- "Disallow: /GIFS/' - os robôs não têm permissão para acessar a pasta /GIFS/ ou suas subpastas.
 
 Outro exemplo
 
@@ -517,15 +517,15 @@ Além disso, a pasta raiz do HTML define, no disco rígido do servidor da Web, o
 
 Por padrão, 4D define uma pasta HTML Root chamada **WebFolder**. Se ela ainda não existir, a pasta raiz HTML será fisicamente criada no disco no momento em que o servidor Web for iniciado pela primeira vez. A pasta raiz é criada:
 
- - com 4D (local) e servidor 4D, no mesmo nível que a [pasta do projeto](Project/architecture.md#project-folder).
- - com 4D em modo remoto, na pasta de recursos locais.
+- com 4D (local) e servidor 4D, no mesmo nível que a [pasta do projeto](Project/architecture.md#project-folder).
+- com 4D em modo remoto, na pasta de recursos locais.
 
 Você pode designar outra pasta raiz HTML padrão inserindo seu caminho.
 
- - O caminho é relativo à [pasta do projeto](Project/architecture.md#project-folder) (servidor local e 4D) ou à pasta que contém o pacote de software ou aplicativo 4D (4D no modo remoto).
- - O caminho é expresso com a sintaxe POSIX (pastas são separadas por uma barra ("/"))
- - Para "subir" um nível na hierarquia de pastas, digite "..." (dois pontos) antes do nome da pasta
- - O caminho não deve começar com uma barra (exceto se você quiser que a pasta raiz HTML seja a pasta remota Project ou 4D, mas que o acesso às pastas acima seja proibido; nesse caso, você pode passar "/" como a pasta raiz).
+- O caminho é relativo à [pasta do projeto](Project/architecture.md#project-folder) (servidor local e 4D) ou à pasta que contém o pacote de software ou aplicativo 4D (4D no modo remoto).
+- O caminho é expresso com a sintaxe POSIX (pastas são separadas por uma barra ("/"))
+- Para "subir" um nível na hierarquia de pastas, digite "..." (dois pontos) antes do nome da pasta
+- O caminho não deve começar com uma barra (exceto se você quiser que a pasta raiz HTML seja a pasta remota Project ou 4D, mas que o acesso às pastas acima seja proibido; nesse caso, você pode passar "/" como a pasta raiz).
 
 Por exemplo, se você quiser que a pasta raiz HTML seja a subpasta "Web" na pasta "MyWebApp", digite "MyWebApp/Web".
 
@@ -580,9 +580,9 @@ Valor do atributo 'SameSite' do cookie de sessão. Esse atributo permite declara
 
 Há três valores disponíveis:
 
- - "Strict" (valor de atributo padrão `SameSite` para cookies de sessão 4D): os cookies só serão enviados no contexto de primeira, ou seja, no contexto correspondente ao domínio do site atual, e nunca a sites de terceiros.
- - "Lax": os cookies não são enviados em solicitações entre sites (por exemplo, para carregar imagens ou quadros em um site de terceiros), mas são enviados quando um usuário está navegando para o site de origem (ou seja, ele segue um link).
- - "None": cookies são enviados em todos os contextos, ou seja, nas respostas para solicitações de primeira e de cruzada de origem. Cuando se utiliza el valor "None", el atributo cookie `Secure` también debe ser definido (o la cookie será bloqueada).
+- "Strict" (valor de atributo padrão `SameSite` para cookies de sessão 4D): os cookies só serão enviados no contexto de primeira, ou seja, no contexto correspondente ao domínio do site atual, e nunca a sites de terceiros.
+- "Lax": os cookies não são enviados em solicitações entre sites (por exemplo, para carregar imagens ou quadros em um site de terceiros), mas são enviados quando um usuário está navegando para o site de origem (ou seja, ele segue um link).
+- "None": cookies são enviados em todos os contextos, ou seja, nas respostas para solicitações de primeira e de cruzada de origem. Cuando se utiliza el valor "None", el atributo cookie `Secure` también debe ser definido (o la cookie será bloqueada).
 
 O valor de atributo 'Secure' do cookie de sessão é definido automaticamente como "True" se a conexão for HTTPS (qualquer que seja o valor de atributo 'SameSite').
 
@@ -626,9 +626,9 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
- - **Número de solicitações por conexão**: permite definir o número máximo de solicitações e respostas que podem trafegar em uma conexão keep alive. Limitar o número de solicitações por conexão permite que você evite a inundação do servidor devido a um grande número de solicitações recebidas (uma técnica usada por hackers).<p>
+- **Número de solicitações por conexão**: permite definir o número máximo de solicitações e respostas que podem trafegar em uma conexão keep alive. Limitar o número de solicitações por conexão permite que você evite a inundação do servidor devido a um grande número de solicitações recebidas (uma técnica usada por hackers).<p>
    The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
- - **Timeout**: esse valor define o período máximo de espera (em segundos) durante o qual o servidor da Web mantém uma conexão TCP aberta sem receber nenhuma solicitação do navegador da Web. Quando este período acabar, o servidor fecha a conexão.<p>
+- **Timeout**: esse valor define o período máximo de espera (em segundos) durante o qual o servidor da Web mantém uma conexão TCP aberta sem receber nenhuma solicitação do navegador da Web. Quando este período acabar, o servidor fecha a conexão.<p>
    Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
 

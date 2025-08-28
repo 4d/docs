@@ -29,8 +29,8 @@ title: ステッパー
 
 ## 参照
 
- - [進捗インジケーター](progressIndicator.md)
- - [ルーラー](ruler.md)
+- [進捗インジケーター](progressIndicator.md)
+- [ルーラー](ruler.md)
 
 
 

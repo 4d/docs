@@ -7,9 +7,9 @@ Las formas son [objetos estáticos](formObjects_overview.md#active-and-static-ob
 
 Se ofrecen las siguientes formas básicas:
 
- - rectángulos
- - líneas
- - óvalos
+- rectángulos
+- líneas
+- óvalos
 
 ## Rectángulo
 

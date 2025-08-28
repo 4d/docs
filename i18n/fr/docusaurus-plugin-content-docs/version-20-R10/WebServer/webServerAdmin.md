@@ -17,9 +17,9 @@ Il y a plusieurs manières de démarrer le serveur Web principal :
      - 4D: **Exécution\>Démarrer le serveur Web**<br/>![](../assets/en/WebServer/start1.png)
      - 4D Server : Bouton **Démarrer le serveur HTTP** dans la page Serveur HTTP<br/>![](../assets/en/WebServer/start2.png)
 
- - automatiquement à l'ouverture de l'application 4D. Pour ce faire, affichez la page **Web\/Configuration** des Propriétés et cochez la case **Lancer le serveur Web au démarrage** :<br/>![](../assets/en/WebServer/config.png)
+- automatiquement à l'ouverture de l'application 4D. Pour ce faire, affichez la page **Web\/Configuration** des Propriétés et cochez la case **Lancer le serveur Web au démarrage** :<br/>![](../assets/en/WebServer/config.png)
 
- - Par programmation, en appelant la fonction [`webServer.start()`](API/WebServerClass.md#start) ou la commande `WEB START SERVER`.
+- Par programmation, en appelant la fonction [`webServer.start()`](API/WebServerClass.md#start) ou la commande `WEB START SERVER`.
 
 Le serveur Web de n'importe quel composant peut être lancé en appelant la fonction [`webServer.start()`](API/WebServerClass.md#start) sur l'objet serveur Web du composant.
 
@@ -29,9 +29,9 @@ Le serveur Web de n'importe quel composant peut être lancé en appelant la fonc
 
 Il y a plusieurs manières d'arrêter le serveur Web principal :
 
- - Via le menu 4D, **Exécution > Arrêter le serveur Web**, ou via le bouton **Arrêter le serveur HTTP** de 4D Server (les deux items affichent **Démarrer...** quand le serveur n'est pas encore démarré).
+- Via le menu 4D, **Exécution > Arrêter le serveur Web**, ou via le bouton **Arrêter le serveur HTTP** de 4D Server (les deux items affichent **Démarrer...** quand le serveur n'est pas encore démarré).
 
- - Par programmation, en appelant la fonction [`webServer.stop()`](API/WebServerClass.md#stop) ou la commande `WEB STOP SERVER`.
+- Par programmation, en appelant la fonction [`webServer.stop()`](API/WebServerClass.md#stop) ou la commande `WEB STOP SERVER`.
 
 Le serveur Web de n'importe quel composant peut être arrêté en appelant la fonction `webServer.stop()` sur l'objet serveur Web du composant.
 
@@ -53,8 +53,8 @@ Cette commande vous permet de vérifier que le serveur web, l'affichage de la pa
 
 Pour ce faire, vous pouvez :
 
- - 4D: cliquer sur le bouton **Vider le cache** dans la [page Web/Options (I)](../settings/web.md) de la boîte de dialogue des Propriétés.
- - 4D Server : cliquer sur le bouton **Vider le cache** dans la page HTTP de la fenêtre d'administration de 4D Server.
+- 4D: cliquer sur le bouton **Vider le cache** dans la [page Web/Options (I)](../settings/web.md) de la boîte de dialogue des Propriétés.
+- 4D Server : cliquer sur le bouton **Vider le cache** dans la page HTTP de la fenêtre d'administration de 4D Server.
 
 Le cache est alors immédiatement effacé.
 
@@ -64,11 +64,11 @@ Le cache est alors immédiatement effacé.
 
 La page **Watch** (rubrique **Web**) de l'Explorateur d'exécution affiche les informations du serveur Web, notamment :
 
- - **Occupation du cache Web** : indique le nombre de pages présentes dans le cache web ainsi que le pourcentage d'utilisation. Cette information n'est disponible que si le serveur web est actif et que la taille du cache est supérieure à 0.
+- **Occupation du cache Web** : indique le nombre de pages présentes dans le cache web ainsi que le pourcentage d'utilisation. Cette information n'est disponible que si le serveur web est actif et que la taille du cache est supérieure à 0.
 
- - **Temps d’activité du serveur Web** : indique la durée d'utilisation (au format heures:minutes:secondes) du serveur Web. Ces informations ne sont disponibles que si le serveur web est actif.
+- **Temps d’activité du serveur Web** : indique la durée d'utilisation (au format heures:minutes:secondes) du serveur Web. Ces informations ne sont disponibles que si le serveur web est actif.
 
- - **Nombre de requêtes http** : indique le nombre total de requêtes HTTP reçues depuis le démarrage du serveur web, ainsi qu'un nombre instantané de requêtes par seconde (mesure prise entre deux mises à jour de l'Explorateur d'exécution). Ces informations ne sont disponibles que si le serveur web est actif.
+- **Nombre de requêtes http** : indique le nombre total de requêtes HTTP reçues depuis le démarrage du serveur web, ainsi qu'un nombre instantané de requêtes par seconde (mesure prise entre deux mises à jour de l'Explorateur d'exécution). Ces informations ne sont disponibles que si le serveur web est actif.
 
 ## URLs d'administration
 
@@ -123,8 +123,8 @@ L'URL */4DWEBTEST* permet de vérifier l'état du serveur web. Lorsque cette URL
 
 4D vous permet de générer deux historiques de requêtes Web :
 
- - un historique de débogage, utile dans la phase de développement du serveur web (*HTTPDebugLog.txt*),
- - un journal standardisé des requêtes web, plutôt utilisé à des fins statistiques (*logweb.txt*).
+- un historique de débogage, utile dans la phase de développement du serveur web (*HTTPDebugLog.txt*),
+- un journal standardisé des requêtes web, plutôt utilisé à des fins statistiques (*logweb.txt*).
 
 Les deux fichiers journaux sont automatiquement créés dans le dossier **Logs** du projet d'application.
 
@@ -225,15 +225,15 @@ Les paramètres de sauvegarde automatique du logweb.txt sont définis sur la pag
 
 D'abord, vous devez choisir la fréquence (jours, semaines, etc.) ou le critère de limite de taille du fichier en cliquant sur le bouton radio correspondant. Vous devez ensuite spécifier le moment précis de la sauvegarde si nécessaire.
 
- - **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
+- **Pas de sauvegarde du journal** : La fonction de sauvegarde programmée est désactivée.
 
 - **Toutes les X heure(s)** : Cette option est utilisée pour programmer des sauvegardes sur une base horaire. Vous pouvez entrer une valeur entre 1 et 24.
      - **à partir de**: Permet de définir l'heure du déclenchement du premier backup.
 
- - **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez effectuer une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
+- **Tous les N jour(s) à N** : permet de programmer des backups sur une base journalière. Saisissez 1 si vous souhaitez effectuer une sauvegarde quotidienne. Lorsque vous cochez cette option, vous devez indiquer l’heure à laquelle la sauvegarde doit être déclenchée.
 
- - **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
+- **Tous les N jour(s) à N** : permet de programmer des backups sur une base hebdomadaire. Saisissez 1 si vous souhaitez une sauvegarde hebdomadaire. Lorsque vous cochez cette option, vous devez indiquer le ou les jours de la semaine et l’heure à laquelle chaque sauvegarde doit être déclenchée. Vous pouvez cocher un ou plusieurs jour(s) de la semaine. Par exemple, vous pouvez utiliser cette option pour définir deux sauvegardes hebdomadaires : une le mercredi et une le vendredi.
 
- - **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
+- **Tous les N mois, Ne jour à N** : permet de programmer des sauvegardes sur une base mensuelle. Saisissez 1 si vous souhaitez une sauvegarde mensuelle. Lorsque vous cochez cette option, vous devez indiquer le jour de chaque mois auquel la sauvegarde doit être déclenchée, ainsi que l’heure de déclenchement.
 
- - **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Une sauvegarde se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
+- **Tous les N Mo** : Cette option est utilisée pour programmer les sauvegardes en fonction de la taille du fichier journal courant. Une sauvegarde se déclenche automatiquement quand le fichier atteint la taille spécifiée. La taille limite du fichier peut être fixée à 1, 10, 100 ou 1000 Mo.
