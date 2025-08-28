@@ -30,8 +30,8 @@ Depuis macOS Sierra, les applications Mac bénéficient d'onglets automatiques f
 
 Vous pouvez bénéficier de cette fonctionnalité dans les environnements de 4D suivants (versions 64 bits uniquement) :
 
- - Fenêtres de l'éditeur de code
- - Fenêtres de l'éditeur de formulaires
+- Fenêtres de l'éditeur de code
+- Fenêtres de l'éditeur de formulaires
 
 Toutes les fenêtres de ces éditeurs peuvent être ouvertes sous forme d'onglets :
 
@@ -47,9 +47,9 @@ Dans la boîte de dialogue des Préférences de 4D, l'option **Fenêtre à ongle
 
 Trois options sont disponibles :
 
- - **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
- - **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
- - **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
+- **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
+- **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
+- **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
 
 ### Apparence (macOS uniquement)
 
@@ -59,9 +59,9 @@ Ce menu vous permet de sélectionner la palette de couleurs à utiliser pour l'e
 
 Trois options sont disponibles :
 
- - **Selon les préférences de la palette de couleurs du système** (par défaut) : Utilisez la palette de couleurs définie dans les préférences système de macOS.
- - **Clair** : Utiliser le thème clair
- - **Sombre** : utiliser le thème sombre
+- **Selon les préférences de la palette de couleurs du système** (par défaut) : Utilisez la palette de couleurs définie dans les préférences système de macOS.
+- **Clair** : Utiliser le thème clair
+- **Sombre** : utiliser le thème sombre
 
 > Cette préférence n'est prise en charge que sur macOS. Sous Windows, la palette "Light" est toujours utilisée.
 
@@ -73,8 +73,8 @@ Si cette option est cochée, lorsque l’utilisateur passe en mode Application v
 
 Si vous sélectionnez cette option, deux éléments s'ajoutent au menu **Fichier > Nouveau** et au bouton **Nouveau** de la barre d'outils :
 
- - **Database...**
- - **Base de données à partir d'une définition de structure...**
+- **Database...**
+- **Base de données à partir d'une définition de structure...**
 
 ![](../assets/en/Preferences/general5.png)
 
@@ -138,8 +138,8 @@ Lors de la création d’un nouveau fichier de données, 4D utilise la langue d�
 
 Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
- - When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
- - Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
+- When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
+- Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
 
 ### Langue de documentation
 
@@ -151,8 +151,8 @@ Langue de la documentation HTML à afficher. Vous pouvez sélectionner une docum
 
 Définit l'emplacement des pages de documentation recherchées par 4D.
 
- - Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
- - If it is not found, 4D displays an error message in the browser. Si elle n'est pas trouvée, 4D affiche un message d'erreur dans le navigateur.
+- Lorsque cette option est cochée (par défaut), 4D recherche d'abord la page dans le dossier local (voir ci-dessous). Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Si la page est trouvée à l'emplacement défini, elle est affichée dans le navigateur courant. Ce principe permet par exemple de travailler en mode déconnecté, en accédant à une version locale de la documentation.
+- If it is not found, 4D displays an error message in the browser. Si elle n'est pas trouvée, 4D affiche un message d'erreur dans le navigateur.
 
 ### Dossier local
 

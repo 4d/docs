@@ -33,9 +33,9 @@ Quando um texto é rodado, pode continuar a alterar o seu tamanho ou posição, 
 
 ![](../assets/en/FormObjects/staticText2.png)
 
- - Se o objeto for redimensionado na direção A, seu [largura](properties_CoordinatesAndSizing.md#width) será modificada;
- - Se o objeto for redimensionado em direção C, seu [altura](properties_CoordinatesAndSizing.md#height) será modificada;
- - Se o objeto for redimensionado na direção B, ambos seus [largura](properties_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) serão modificados.
+- Se o objeto for redimensionado na direção A, seu [largura](properties_CoordinatesAndSizing.md#width) será modificada;
+- Se o objeto for redimensionado em direção C, seu [altura](properties_CoordinatesAndSizing.md#height) será modificada;
+- Se o objeto for redimensionado na direção B, ambos seus [largura](properties_CoordinatesAndSizing.md#width) e [altura](properties_CoordinatesAndSizing.md#height) serão modificados.
 
 ## Propriedades compatíveis
 

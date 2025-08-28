@@ -26,9 +26,9 @@ Les informations suivantes sont fournies pour chaque ligne :
 
 La page est active et mise à jour en permanence dès qu’elle est affichée. Il est à noter que son fonctionnement peut ralentir sensiblement l’exécution de l’application. Il est possible de suspendre la mise à jour de la page d’une des manières suivantes :
 
- - en cliquant sur le bouton **Pause**,
- - en cliquant dans la liste,
- - en appuyant sur la barre d’espace.
+- en cliquant sur le bouton **Pause**,
+- en cliquant dans la liste,
+- en appuyant sur la barre d’espace.
 
 Lorsque la page est en pause, le message "SUSPENDU" est affiché et le libellé du bouton devient **Reprendre**.
 Il est possible de reprendre l’observation des opérations en effectuant la même action que pour la mise en pause.
