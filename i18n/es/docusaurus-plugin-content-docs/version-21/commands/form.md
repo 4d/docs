@@ -34,9 +34,9 @@ displayed_sidebar: docs
 
 Si el formulario actual se está mostrando o cargando mediante una llamada a los comandos [DIALOG](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md), **Form** devuelve cualquiera de los dos:
 
- - el objeto *formData* pasado como parámetro a este comando, si existe,
- - o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
- - o, un objeto vacío.
+- el objeto *formData* pasado como parámetro a este comando, si existe,
+- o, un objeto instanciado de la [clase de usuario asociada al formulario](../FormEditor/properties_FormProperties.md#form-class), si existe,
+- o, un objeto vacío.
 
 ### Subformulario
 

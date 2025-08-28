@@ -15,10 +15,10 @@ Este evento se puede utilizar para filtrar la entrada de datos en los objetos ed
 
 Cuando se utiliza, este evento se genera después de cada cambio realizado en el contenido de un objeto editable, independientemente de la acción que haya provocado la modificación, *es decir*:
 
- - Acciones de edición estándar que modifican el contenido como pegar, cortar, borrar o cancelar;
- - Soltar un valor (acción similar a pegar);
- - Toda entrada de teclado realizada por el usuario; en este caso, el evento `On After Edit` se genera después de los eventos [`On Before Keystroke`](onBeforeKeystroke. d) y [`On After Keystroke`](onAfterKeystroke.md), si se utilizan.
- - Cualquier modificación realizada mediante un comando del lenguaje que simule una acción del usuario (es decir, `POST KEY`).
+- Acciones de edición estándar que modifican el contenido como pegar, cortar, borrar o cancelar;
+- Soltar un valor (acción similar a pegar);
+- Toda entrada de teclado realizada por el usuario; en este caso, el evento `On After Edit` se genera después de los eventos [`On Before Keystroke`](onBeforeKeystroke. d) y [`On After Keystroke`](onAfterKeystroke.md), si se utilizan.
+- Cualquier modificación realizada mediante un comando del lenguaje que simule una acción del usuario (es decir, `POST KEY`).
 
 Dentro del evento `On After Edit`, los datos de texto que se ingresan son devueltos por el comando [`Get edited text`](../commands-legacy/get-edited-text.md).
 

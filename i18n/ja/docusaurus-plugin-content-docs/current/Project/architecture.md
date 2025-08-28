@@ -42,8 +42,8 @@ title: アーキテクチャー
 
 プロジェクトを定義し、起動するためのプロジェクト開発ファイルです。 このファイルを開くには次のいずれかが必要です:
 
- - 4D
- - 4D Server (読み取り専用；[リモートプロジェクトを開く](Desktop/clientServer.md#リモートプロジェクトを開く) 参照)
+- 4D
+- 4D Server (読み取り専用；[リモートプロジェクトを開く](Desktop/clientServer.md#リモートプロジェクトを開く) 参照)
 
 > 4D プロジェクトの開発は 4D によっておこない、マルチユーザー開発はソース管理ツールによって管理します。 4D Server は .4DProject ファイルを開くことができますが、クライアントからの開発はおこなえません。
 
@@ -122,9 +122,9 @@ title: アーキテクチャー
 
 プロジェクトから削除されたメソッドやフォームがあれば、Trash フォルダーにはそれらが格納されます。 たとえば、つぎのフォルダーが格納されている場合があります:
 
- - `Methods`
- - `Forms`
- - `TableForms`
+- `Methods`
+- `Forms`
+- `TableForms`
 
 削除された要素はファイル名に括弧が付いた形でフォルダー内に置かれます (例: "(myMethod).4dm")。 フォルダーの構成は [Sources](#sources) フォルダーと同じです。
 
@@ -177,11 +177,11 @@ This folder contains [**user settings for data**](../settings/overview.md#user-s
 
 Logs フォルダーには、プロジェクトが使用するすべてのログファイルが格納されます。 以下のログファイルが格納されます:
 
- - データベース変換
- - Webサーバーリクエスト
- - バックアップ/復元アクションのジャーナル (*Backup Journal\[xxx].txt*、[バックアップジャーナル](Backup/backup.md#backup-journal) 参照)
- - コマンドデバッグ
- - 4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)
+- データベース変換
+- Webサーバーリクエスト
+- バックアップ/復元アクションのジャーナル (*Backup Journal\[xxx].txt*、[バックアップジャーナル](Backup/backup.md#backup-journal) 参照)
+- コマンドデバッグ
+- 4D Serverリクエスト (クライアントマシンおよびサーバー上で生成)
 
 > An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](../commands-legacy/get-4d-folder.md) command) for maintenance log files and in cases where data folder is read-only.
 

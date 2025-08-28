@@ -150,8 +150,8 @@ If this function [throws](../commands/throw) an error, it will not stop the unde
 
 Este evento también se activa:
 
- - when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
- - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
+- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
+- when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
 
 :::
 
@@ -186,7 +186,7 @@ Function get sameDay() : Boolean
 
 Even though they are very similar, these functions cannot be associated with identical queries because they do not compare the same types of values. The first compares attributes to a given value, while the second compares attributes to each other.
 
- - For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
+- For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
 
 ```4d
 Function query onGoing($event : Object) : Object
@@ -212,7 +212,7 @@ Function query onGoing($event : Object) : Object
     return {query: $myQuery; parameters: $parameters}
 ```
 
- - For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
+- For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
 
 ```4d
 Function query sameDay($event : Object) : Text
@@ -234,7 +234,7 @@ Function query sameDay($event : Object) : Text
 
 ```
 
- - Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
 
 ```4d
     //BookingEntity class
