@@ -7,14 +7,6 @@ title: Session
 Session objects are returned by the [`Session`](../commands/session.md) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 
-:::info To learn more
-
-Blog posts about this feature:
-- [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
-
-:::
-
 
 
 ### Session types
@@ -335,9 +327,6 @@ Else
 End if
 ```
 
-#### See also
-
-[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 
