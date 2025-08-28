@@ -11,7 +11,7 @@ Esta página contiene opciones relacionadas con la protección del acceso y de l
 
 > Estos parámetros no se aplican a las bases proyecto abiertas en modo monopuesto.
 
- - **Acceso Diseño y al Explorador de ejecución**: da al grupo especificado la capacidad de entrar al modo Diseño de la base y mostrar el Explorador de ejecución.
+- **Acceso Diseño y al Explorador de ejecución**: da al grupo especificado la capacidad de entrar al modo Diseño de la base y mostrar el Explorador de ejecución.
 
   Note que:
 
@@ -25,11 +25,11 @@ Esta página contiene opciones relacionadas con la protección del acceso y de l
   - Si ha asociado una contraseña al usuario predeterminado, al abrir la base aparece una caja de diálogo en el que los usuarios deben introducir una contraseña.
   - Si no ha asociado una contraseña al Usuario Predeterminado, la caja de diálogo de Identificación de Usuario no aparecerá.**Nota:** puede "forzar" la visualización de la caja de diálogo Identificación de usuario cuando el modo "Usuario por defecto" está activo, por ejemplo para conectarse como Administrador o Diseñador. Para ello, presione la tecla **Mayús** mientras abre la base de datos o se conecta a ella.
 
- - **Mostrar lista de usuarios en la caja de diálogo Contraseña**: si se marca esta opción, los usuarios deben elegir su nombre en la lista de usuarios e introducir su contraseña en la caja de diálogo de identificación de usuario. Si no está marcada, los usuarios deben introducir tanto su nombre como su contraseña. Para obtener más información sobre las dos versiones de la caja de diálogo de contraseña, consulte la sección "Acceso a las bases protegidas" en [Presentación del control de acceso](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html
+- **Mostrar lista de usuarios en la caja de diálogo Contraseña**: si se marca esta opción, los usuarios deben elegir su nombre en la lista de usuarios e introducir su contraseña en la caja de diálogo de identificación de usuario. Si no está marcada, los usuarios deben introducir tanto su nombre como su contraseña. Para obtener más información sobre las dos versiones de la caja de diálogo de contraseña, consulte la sección "Acceso a las bases protegidas" en [Presentación del control de acceso](https://doc.4d.com/4Dv20/4D/20.2/Access-system-overview.300-6750353.en.html
 
   - **Ordenar la lista de los usuarios en orden alfabético** (sólo disponible si está marcada la opción anterior): cuando esta opción está seleccionada, la lista de los usuarios de la caja de diálogo de introducción de contraseña se ordena por orden alfabétic
 
- - **Los usuarios pueden cambiar su contraseña**: cuando esta opción está marcada, aparece un botón **Cambiar** en la caja de diálogo Identificación del usuario. Este botón permite al usuario acceder a una caja de diálogo que puede utilizar para modificar su contraseña (para más información sobre esta caja de diálogo, consulte "Modificación de la contraseña por el usuario" en [Garantizar el mantenimiento del sistema](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). Si lo desea, puede ocultar el botón **Cambiar** para que los usuarios no puedan modificar sus contraseñas. Para ello, desmarque esta opción.
+- **Los usuarios pueden cambiar su contraseña**: cuando esta opción está marcada, aparece un botón **Cambiar** en la caja de diálogo Identificación del usuario. Este botón permite al usuario acceder a una caja de diálogo que puede utilizar para modificar su contraseña (para más información sobre esta caja de diálogo, consulte "Modificación de la contraseña por el usuario" en [Garantizar el mantenimiento del sistema](https://doc.4d.com/4Dv20/4D/20.2/Ensuring-system-maintenance.300-6750352.en.html)). Si lo desea, puede ocultar el botón **Cambiar** para que los usuarios no puedan modificar sus contraseñas. Para ello, desmarque esta opción.
 
 ## Opciones
 
@@ -41,9 +41,9 @@ Esta página contiene opciones relacionadas con la protección del acceso y de l
   - **Desactivado para todos**: esta opción desactiva el control en las fórmulas. Cuando esta opción está marcada, los usuarios tienen acceso a todos los comandos 4D, plug-ins y métodos proyecto (excepto los invisibles).
     **Nota:** esta opción tiene prioridad sobre el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md). Cuando se selecciona, este comando no hace nada.
 
- - **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. Para más información, consulte [Parámetros usuario](../Desktop/user-settings.md).
+- **Autorizar las propiedades usuario**: debe marcar esta opción para poder mostrar cajas de diálogo separadas para las propiedades usuario. Cuando esta opción está marcada, hay disponibles hasta tres cuadros de diálogo: **Propiedades estructura**, **Propiedades usuario**, y **Propiedades usuario para archivo de datos**. Para más información, consulte [Parámetros usuario](../Desktop/user-settings.md).
 
- - **Ejecutar el método "On Host Database Event" de los componentes**: el [método base On Host Database Event](../commands-legacy/on-host-database-event-database-method.md) facilita las fases de inicialización y copia de seguridad de los componentes 4D. Por razones de seguridad, debe autorizar explícitamente la ejecución de este método en cada base de datos local. Para hacer esto, debe marcar esta opción. Por defecto, no está marcado.
+- **Ejecutar el método "On Host Database Event" de los componentes**: el [método base On Host Database Event](../commands-legacy/on-host-database-event-database-method.md) facilita las fases de inicialización y copia de seguridad de los componentes 4D. Por razones de seguridad, debe autorizar explícitamente la ejecución de este método en cada base de datos local. Para hacer esto, debe marcar esta opción. Por defecto, no está marcado.
 
   Cuando esta opción está seleccionada:
 

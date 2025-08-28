@@ -7,11 +7,11 @@ L'éditeur de formulaires 4D prend en charge les macros. Une macro est un ensemb
 
 Par exemple, si vous avez un rapport récurrent avec une mise en forme spécifique (par exemple, certains textes doivent apparaître en rouge et certains textes en vert), vous pouvez créer une macro pour définir automatiquement la couleur. Vous pouvez créer des macros pour l'éditeur de formulaires de 4D qui pourront :
 
- - Créer et exécuter du code 4D
- - Afficher les boîtes de dialogue
- - Sélectionnez des objets de formulaire
- - Ajouter / supprimer / modifier des formulaires, des objets de formulaire ainsi que leurs propriétés
- - Modifier les fichiers de projet (mettre à jour, supprimer)
+- Créer et exécuter du code 4D
+- Afficher les boîtes de dialogue
+- Sélectionnez des objets de formulaire
+- Ajouter / supprimer / modifier des formulaires, des objets de formulaire ainsi que leurs propriétés
+- Modifier les fichiers de projet (mettre à jour, supprimer)
 
 Le code des macros prend en charge les [class functions (fonctions de classe)](Concepts/classes.md) et les [propriétés d'objet de formulaire en JSON](FormObjects/properties_Reference.md) pour vous permettre de définir n'importe quelle fonctionnalité perso
 
@@ -238,9 +238,9 @@ Par exemple, si des objets de la page courante et des groupes ont été modifié
 
 Lors de la manipulation de l'attribut `method` des objets de formulaire, vous pouvez définir la valeur de l'attribut de deux manières différentes dans les macros :
 
- - En utilisant une [chaîne de caractères contenant le nom/chemin du fichier](FormObjects/properties_Action.md#method).
+- En utilisant une [chaîne de caractères contenant le nom/chemin du fichier](FormObjects/properties_Action.md#method).
 
- - En utilisant un objet avec la structure suivante :
+- En utilisant un objet avec la structure suivante :
 
 | Propriété | Type | Description        |
 | --------- | ---- | ------------------ |
@@ -252,9 +252,9 @@ Lors de la manipulation de l'attribut `method` des objets de formulaire, vous po
 
 La propriété `$4dId` définit un ID unique pour chaque objet de la page courante. Cette clé est utilisée par le processeur de macros pour gérer les modifications dans `$result.currentPage` :
 
- - si la clé `$4dId` est manquante à la fois dans le formulaire et dans un objet dans `$result`, l'objet est créé.
- - si la clé `$4dId` existe dans le formulaire mais est manquante dans `$result`, l'objet est supprimé.
- - si la clé `$4dId` existe à la fois dans le formulaire et dans un objet dans `$result` l'objet est modifié.
+- si la clé `$4dId` est manquante à la fois dans le formulaire et dans un objet dans `$result`, l'objet est créé.
+- si la clé `$4dId` existe dans le formulaire mais est manquante dans `$result`, l'objet est supprimé.
+- si la clé `$4dId` existe à la fois dans le formulaire et dans un objet dans `$result` l'objet est modifié.
 
 #### Exemple
 
@@ -297,8 +297,8 @@ La fonction `onError` est exécutée lorsque le processeur de macros rencontre u
 
 Lors de l'exécution d'une macro, si 4D rencontre une erreur qui empêche l'annulation de la macro, il n'exécute pas la macro. C'est le cas par exemple si l'exécution d'une macro se traduirait par :
 
- - supprimer ou modifier un script dont le fichier est en lecture seule.
- - créer deux objets avec le même ID interne.
+- supprimer ou modifier un script dont le fichier est en lecture seule.
+- créer deux objets avec le même ID interne.
 
 #### Exemple
 
