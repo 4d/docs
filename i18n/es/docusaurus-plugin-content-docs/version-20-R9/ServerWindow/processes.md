@@ -17,15 +17,15 @@ También hay tres botones de acceso directo que se pueden utilizar para filtrar 
 
 ![](../assets/en/Admin/server-process-buttons.png)
 
- - **Procesos usuarios**: procesos generados por y para las sesiones usuarios. Estos procesos van precedidos de un icono en forma de una persona.
- - **Procesos 4D**: procesos generados por el motor de 4D Server. Estos procesos van precedidos de un icono en forma de rueda dentada.
- - **Procesos de reserva**: procesos inactivos pero que se mantienen temporalmente y que pueden reutilizarse en cualquier momento. Este mecanismo optimiza la reactividad de 4D Server. Estos procesos van precedidos de un icono en forma de figura atenuada.
+- **Procesos usuarios**: procesos generados por y para las sesiones usuarios. Estos procesos van precedidos de un icono en forma de una persona.
+- **Procesos 4D**: procesos generados por el motor de 4D Server. Estos procesos van precedidos de un icono en forma de rueda dentada.
+- **Procesos de reserva**: procesos inactivos pero que se mantienen temporalmente y que pueden reutilizarse en cualquier momento. Este mecanismo optimiza la reactividad de 4D Server. Estos procesos van precedidos de un icono en forma de figura atenuada.
 
 La opción **Mostrar los procesos por grupos** le permite agrupar los procesos internos de 4D Server así como los procesos cliente, para una mejor legibilidad. Cuando seleccione esta opción:
 
- - los procesos cliente 4D "gemelos" (proceso cliente 4D principal y proceso base cliente 4D, véase [Tipo de proceso ](#process-type)) se agrupan como uno solo,
- - se crea un grupo "Gestores de tareas", que incluye los procesos internos dedicados al reparto de tareas (Shared balancer, Net session manager, Exclusive pool worker),
- - se crea un grupo "Gestores de clientes", que incluye varios procesos internos clientes.
+- los procesos cliente 4D "gemelos" (proceso cliente 4D principal y proceso base cliente 4D, véase [Tipo de proceso ](#process-type)) se agrupan como uno solo,
+- se crea un grupo "Gestores de tareas", que incluye los procesos internos dedicados al reparto de tareas (Shared balancer, Net session manager, Exclusive pool worker),
+- se crea un grupo "Gestores de clientes", que incluye varios procesos internos clientes.
 
 La área inferior de la ventana se utiliza para mostrar la representación gráfica de la actividad del proceso(s) seleccionados.
 
@@ -33,16 +33,16 @@ La área inferior de la ventana se utiliza para mostrar la representación gráf
 
 La actividad del proceso es el porcentaje de tiempo que 4D Server ha dedicado a este proceso (ratio). La ventana ofrece la siguiente información para cada proceso:
 
- - Tipo de proceso (ver abajo),
- - Sesión/Información:
+- Tipo de proceso (ver abajo),
+- Sesión/Información:
      - Proceso 4D - en blanco,
      - Proceso usuario - Nombre del usuario 4D,
      - Proceso web - ruta URL,
- - Nombre del proceso,
- - Número del proceso (devuelto por el comando [`New process`](../commands-legacy/new-process.md) por ejemplo). El número de proceso es el número asignado en el servidor. En el caso de un proceso global, este número puede ser diferente del asignado en la máquina cliente.
- - Estado actual del proceso,
- - Tiempo de ejecución (en segundos) del proceso desde su creación,
- - Porcentaje de tiempo que 4D Server ha dedicado a este proceso (ratio).
+- Nombre del proceso,
+- Número del proceso (devuelto por el comando [`New process`](../commands-legacy/new-process.md) por ejemplo). El número de proceso es el número asignado en el servidor. En el caso de un proceso global, este número puede ser diferente del asignado en la máquina cliente.
+- Estado actual del proceso,
+- Tiempo de ejecución (en segundos) del proceso desde su creación,
+- Porcentaje de tiempo que 4D Server ha dedicado a este proceso (ratio).
 
 ## Tipo del proceso
 
@@ -83,15 +83,15 @@ La página también tiene cinco botones de control que actúan sobre el proceso 
 
 ![](../assets/en/Admin/server-process-actions.png)
 
- - **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
+- **Abortar proceso**: permite abortar el proceso o los procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación.
 
 > También puede abortar directamente el proceso o procesos seleccionados sin que aparezca la caja de diálogo de confirmación, manteniendo pulsada la tecla **Alt** mientras hace clic en este botón, o utilizando el comando [`ABORT PROCESS BY ID`](../commands-legacy/abort-process-by-id.md).
 
- - **Pausar proceso**: permite pausar los procesos seleccionados.
- - **Activar proceso**: permite reactivar los procesos seleccionados. Los procesos deben haberse pausado previamente (utilizando el botón anterior o por programación); de lo contrario, este botón no tiene ningún efecto.
- - **Depurar proceso**: permite abrir en el equipo servidor una o varias ventanas de depuración para el proceso o procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación. Tenga en cuenta que la ventana del depurador sólo se muestra cuando el código 4D se ejecuta efectivamente en la máquina servidor (por ejemplo, en un trigger o en la ejecución de un método que tenga el atributo "Ejecutar en servidor").
+- **Pausar proceso**: permite pausar los procesos seleccionados.
+- **Activar proceso**: permite reactivar los procesos seleccionados. Los procesos deben haberse pausado previamente (utilizando el botón anterior o por programación); de lo contrario, este botón no tiene ningún efecto.
+- **Depurar proceso**: permite abrir en el equipo servidor una o varias ventanas de depuración para el proceso o procesos seleccionados. Al presionar este botón, aparece una caja de diálogo de alerta para que pueda confirmar o cancelar la operación. Tenga en cuenta que la ventana del depurador sólo se muestra cuando el código 4D se ejecuta efectivamente en la máquina servidor (por ejemplo, en un trigger o en la ejecución de un método que tenga el atributo "Ejecutar en servidor").
 
 > También puede depurar un proceso directamente sin mostrar la caja de diálogo de confirmación manteniendo presionada la tecla **Alt** mientras presiona este botón.
 
- - **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botón se activa cuando se selecciona al menos un proceso de usuario.
+- **Ver usuarios**: permite visualizar, en la [página Usuarios](users.md), todos los procesos del usuario o usuarios seleccionados. Este botón se activa cuando se selecciona al menos un proceso de usuario.
 

@@ -15,7 +15,7 @@ L'événement `On Header` est appelé lorsqu'un enregistrement est sur le point 
 
 Dans ce contexte, la séquence d'appels de méthodes et d'événements de formulaire suivante est déclenchée :
 
- - Pour chaque objet de la zone d'en-tête :
+- Pour chaque objet de la zone d'en-tête :
      - Méthode objet avec l'événement `On Header`
      - Méthode formulaire avec l'événement `On Header`
 

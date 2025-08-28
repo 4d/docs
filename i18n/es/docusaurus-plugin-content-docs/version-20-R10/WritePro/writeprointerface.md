@@ -11,8 +11,8 @@ La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/
 
 Encontrará a continuación:
 
- - la documentación de configuración del Asistente para tablas,
- - la I.A. integrada. documentation.
+- la documentación de configuración del Asistente para tablas,
+- la I.A. integrada. documentation.
 
 ## Asistente de tablas
 
@@ -60,9 +60,9 @@ Una vez integrada la tabla en el documento, el usuario puede personalizar su est
 
 La configuración de las plantillas incluye:
 
- - Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
- - Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
- - Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
+- Definición de tablas y campos, así como preparación de fórmulas adaptadas a la aplicación desde el [archivo de plantilla](#template-files).
+- Traducción de nombres de tablas, campos y fórmulas del [archivo de traducción](#translation-files).
+- Diseño de estilos gráficos y temas personalizados a partir del [ archivo de temas](#theme-files).
 
 Estos tres tipos de archivos contribuyen a la configuración del Asistente para tablas y, aunque cada uno de ellos tiene una finalidad distinta, ninguno de ellos se considera un componente esencial.
 
@@ -70,10 +70,10 @@ Estos tres tipos de archivos contribuyen a la configuración del Asistente para 
 
 El archivo de plantilla permite definir lo siguiente:
 
- - la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
- - las fórmulas de ruptura (si se puede insertar una línea de ruptura)
- - los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
- - las fórmulas disponibles como menús contextuales dentro de las filas de interrupción, fila de arrastre, fila de marcador de posición o filas adicionales.
+- la fórmula que devuelve una selección de entidades utilizada como fuente de datos de la tabla,
+- las fórmulas de ruptura (si se puede insertar una línea de ruptura)
+- los atributos de la clase de datos que pueden utilizarse como columnas de la tabla,
+- las fórmulas disponibles como menús contextuales dentro de las filas de interrupción, fila de arrastre, fila de marcador de posición o filas adicionales.
 
 El archivo de plantillas debe ser almacenado en una carpeta "[`Resources`](../Project/architecture.md#resources)/4DWP_Wizard/Templates" dentro de su proyecto.
 
@@ -301,29 +301,29 @@ Por cada atributo usado en su archivo JSON (encabezado, datos, arrastre, resumen
 
 ## IA Integrada
 
-You can use an integrated AI in the 4D Write Pro interface so that you can easily translate or enhance your documents without having to use an external AI application.
+Puede utilizar una IA integrada en la interfaz de 4D Write Pro para poder traducir o mejorar fácilmente sus documentos sin tener que utilizar una aplicación de IA externa.
 
-Once you have enabled the AI feature, you can display a chat box over your 4D Write Pro document and interact with *chatGPT* to modify the text of the selection or of the document itself.
+Una vez activada la función AI, puede mostrar un cuadro de chat sobre su documento 4D Write Pro e interactuar con *chatGPT* para modificar el texto de la selección o del propio documento.
 
 :::note
 
-The 4D Write Pro interface uses OpenAI, for which you need to provide your own key (see below).
+La interfaz de 4D Write Pro utiliza OpenAI, para lo cual necesita suministrar su propia clave (ver abajo).
 
 :::
 
 ### Limitaciones (Developer Preview)
 
-In the current implementation, the feature has the following limitations:
+En la aplicación actual, la función tiene las siguientes limitaciones:
 
- - use of a predefined AI provider and necessity to pass your OpenAI key
- - funcionalidades básicas de chat
- - sin gestión de imágenes
- - non-configurable predefined action commands
- - predefined translations English/French and French/English only
+- uso de un proveedor de IA predefinido y necesidad de pasar su clave OpenAI
+- funcionalidades básicas de chat
+- sin gestión de imágenes
+- comandos de acción predefinidos no configurables
+- traducciones predefinidas sólo inglés/francés y francés/inglés
 
 ### Activando la función de IA
 
-The AI dialog box is available by clicking on a button in the 4D Write Pro interface. Este botón está **oculto por defecto**, debe activarlo explícitamente.
+El cuadro de diálogo AI está disponible haciendo clic en un botón de la interfaz de 4D Write Pro. Este botón está **oculto por defecto**, debe activarlo explícitamente.
 
 Para mostrar el botón del diálogo AI, es necesario:
 
@@ -346,20 +346,20 @@ A continuación, aparece el botón **I.A**:
 
 ![ai button](../assets/en/WritePro/ai-button.png)
 
- - in the 4D Write Pro Toolbar, in the **Import Export** tab,
- - en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
+- en la barra de herramientas de 4D Write Pro, en la pestaña **Importar Exportar**,
+- en el widget 4D Write Pro, en la pestaña **Estilo de fuente**.
 
 Haga clic en el botón para mostrar el cuadro de diálogo IA.
 
 ### Diálogo IA
 
-The 4D Write Pro AI dialog box allows a straightforward interaction between the chat area and the 4D Write Pro document.
+El cuadro de diálogo 4D Write Pro AI permite una interacción directa entre el área de chat y el documento 4D Write Pro.
 
-#### Prompt area
+#### Área Prompt
 
-At the bottom of the window, the **prompt area** allows you to enter any question to send to the AI.
+En la parte inferior de la ventana, el **área de preguntas** le permite introducir cualquier pregunta para enviar a la IA.
 
-To send your question to the AI, click on the Send button:
+Para enviar su pregunta a la IA, pulse el botón Enviar:
 
 ![ai send](../assets/en/WritePro/ai-send.png)
 
@@ -367,15 +367,15 @@ El icono del botón cambia cuando se vuelve a enviar la misma petición:
 
 ![ai resend](../assets/en/WritePro/ai-resend.png)
 
-On the left side of this area, a pop up menu provides examples of common actions that can be usually delegated to the AI.
+En la parte izquierda de esta área, un menú emergente ofrece ejemplos de acciones comunes que pueden delegarse normalmente a la IA.
 
-Selecting an action writes a corresponding question to the prompt. If necessary, you can modify the question and then to click on the Send button to actually send it:
+Al seleccionar una acción, se escribe la pregunta correspondiente. Si es necesario, puede modificar la pregunta y, a continuación, hacer clic en el botón Enviar para enviarla realmente:
 
 ![ai menu](../assets/en/WritePro/ai-menu.png)
 
 :::note
 
-Default translation actions are based upon the current 4D default configuration and depend on available languages.
+Las acciones de traducción por defecto se basan en la configuración actual por defecto de 4D y dependen de los idiomas disponibles.
 
 :::
 
@@ -385,26 +385,26 @@ Estos botones proponen interacciones básicas entre el área de chat, el documen
 
 ![ai interaction](../assets/en/WritePro/ai-interaction.png)
 
- - **Return raw text**/**Return styled text**: Copy the latest response or the selected response from the AI to the 4D Write Pro document at the current insertion point, replacing the selected text if any.
- - **Copy raw text**/**Copy styled text**: Copy the latest response or the selected response from the AI in the clipboard.
+- **Devolver texto sin formato**/**Devolver texto con estilo**: copia la última respuesta o la respuesta seleccionada de la IA al documento 4D Write Pro en el punto de inserción actual, sustituyendo el texto seleccionado si lo hubiera.
+- **Copiar texto sin formato**/**Copiar texto con estilo**: copia la última respuesta o la respuesta seleccionada de la IA en el portapapeles.
 
-In both cases, if the response was provided with styles, you can decide to copy the text with or without styles.
+En ambos casos, si la respuesta se proporcionó con estilos, puede decidir copiar el texto con o sin estilos.
 
 :::note
 
-El cuadro de chat utiliza el lenguaje Markdown para dar formato al texto. Basic styles such as bold, italic, underline, titles are supported. When pasting styled text from the AI in the 4D Write Pro area, you may lose some formatting information.
+El cuadro de chat utiliza el lenguaje Markdown para dar formato al texto. Se admiten estilos básicos como negrita, cursiva, subrayado y títulos. Al pegar texto con estilo desde la IA en el área de 4D Write Pro, puede perder alguna información de formato.
 
 :::
 
 #### Área de chat
 
-The Chat area displays the whole interaction between you and the AI. Puede desplazarse y seleccionar la parte que desee.
+El área de chat muestra toda la interacción entre usted y la IA. Puede desplazarse y seleccionar la parte que desee.
 
-To empty this area, you can click on the Erase button of the History area (resets the window and all interactions).
+Para vaciar esta área, puede hacer clic en el botón Borrar del área Historial (reinicia la ventana y todas las interacciones).
 
 #### Histórico
 
-The History area lists all your prompts sent to the AI. You can hide/show this area using the button on the top right corner of the Chat area.
+El área Historial enumera todos los avisos enviados a la IA. Puede ocultar/mostrar esta área utilizando el botón situado en la esquina superior derecha del área de Chat.
 
-The Erase button allows you to reset the whole window and erase all interactions. Es equivalente a cerrar/reabrir el cuadro de diálogo de IA.
+El botón Borrar permite reiniciar toda la ventana y borrar todas las interacciones. Es equivalente a cerrar/reabrir el cuadro de diálogo de IA.
 

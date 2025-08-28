@@ -19,12 +19,24 @@ A `UDPEvent` object is immutable and non-streamable.
 
 As seguintes propriedades estão disponíveis:
 
-|                                                                                             |
-| ------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #UDPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #UDPEvent.data.Summary --> |
-| [<!-- INCLUDE #UDPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #UDPEvent.ip.Summary -->       |
-| [<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary --> |
-| [<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary --> |
+|                                                                                                      |
+| ---------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #UDPEvent.address.Syntax -->](#address)<br/><!-- INCLUDE #UDPEvent.address.Summary --> |
+| [<!-- INCLUDE #UDPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #UDPEvent.data.Summary -->          |
+| [<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary -->          |
+| [<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary -->          |
+
+<!-- REF UDPEvent.address.Desc -->
+
+## .address
+
+<!-- REF #UDPEvent.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Descrição
+
+The `.address` property contains <!-- REF #UDPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
 
 <!-- REF UDPEvent.data.Desc -->
 
@@ -35,18 +47,6 @@ As seguintes propriedades estão disponíveis:
 #### Descrição
 
 The `.data` property contains <!-- REF #UDPEvent.data.Summary -->the data associated with the event<!-- END REF -->. It is only valid for events of type "data".
-
-<!-- END REF -->
-
-<!-- REF UDPEvent.ip.Desc -->
-
-## .ip
-
-<!-- REF #UDPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
-
-#### Descrição
-
-The `.ip` property contains <!-- REF #UDPEvent.ip.Summary -->the IP address of the remote machine<!-- END REF -->.
 
 <!-- END REF -->
 

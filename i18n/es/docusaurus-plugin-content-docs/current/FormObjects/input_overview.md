@@ -15,7 +15,7 @@ Puede gestionar los datos con los [métodos](Concepts/methods.md) objeto o formu
 
 :::note
 
-Por razones de seguridad, en las áreas de entrada [multiestilo](./properties_Text.md#multi-style), cuando se pegan fórmulas desde una aplicación 4D diferente o un entorno externo, solo se pegan los *valores calculados* (texto o imágenes) disponibles en el momento de la copia. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+Por razones de seguridad, en las áreas de entrada [multiestilo](./properties_Text.md#multi-style), cuando se pegan fórmulas desde una aplicación 4D diferente o un entorno externo, solo se pegan los *valores calculados* (texto o imágenes) disponibles en el momento de la copia. Si no hay ningún valor disponible (por ejemplo, la fórmula nunca se calculó), 4D pega la fuente de la fórmula como texto sin formato.
 
 :::
 
@@ -50,6 +50,6 @@ Por razones de seguridad, en las áreas de entrada [multiestilo](./properties_Te
 
 También puede representar expresiones de campos y de variables en sus formularios utilizando objetos alternativos, más concretamente:
 
- - Puede mostrar e introducir datos de los campos de la base directamente en las columnas [de tipo List box](listbox_overview.md).
- - Puede representar un campo de lista o una variable directamente en un formulario utilizando los objetos [Menús desplegables/Listas desplegables](dropdownList_Overview.md) y [Combo Box](comboBox_overview.md).
- - Puede representar una expresión booleana como una [casilla de selección](checkbox_overview.md) o como un objeto [botón radio](radio_overview.md).
+- Puede mostrar e introducir datos de los campos de la base directamente en las columnas [de tipo List box](listbox_overview.md).
+- Puede representar un campo de lista o una variable directamente en un formulario utilizando los objetos [Menús desplegables/Listas desplegables](dropdownList_Overview.md) y [Combo Box](comboBox_overview.md).
+- Puede representar una expresión booleana como una [casilla de selección](checkbox_overview.md) o como un objeto [botón radio](radio_overview.md).

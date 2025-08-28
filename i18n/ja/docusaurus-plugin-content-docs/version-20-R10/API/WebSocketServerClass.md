@@ -29,13 +29,13 @@ WebSocketプロトコルは、WebSocketサーバーとクライアント (Webブ
 
 4D で WebSocketサーバーを作成し、扱うには、4Dビルトインクラスを 2つ使用する必要があります。
 
- - このクラス (`4D.WebSocketServer`) は、サーバー自体を管理するためのものです。
- - [`4D.WebSocketConnection`](WebSocketConnectionClass.md) クラスを使用して、接続とメッセージを管理します。
+- このクラス (`4D.WebSocketServer`) は、サーバー自体を管理するためのものです。
+- [`4D.WebSocketConnection`](WebSocketConnectionClass.md) クラスを使用して、接続とメッセージを管理します。
 
 さらに、2つのユーザークラスを作成し、コールバック関数を定義する必要があります:
 
- - サーバー接続を処理するためのユーザークラス
- - メッセージを処理するためのユーザークラス
+- サーバー接続を処理するためのユーザークラス
+- メッセージを処理するためのユーザークラス
 
 接続を維持するため、[WebSocketサーバーの作成](#4dwebsocketservernew) は [ワーカー](../Develop/processes.md#worker-プロセス) 内にて行う必要があります。
 
@@ -387,8 +387,8 @@ Function broadcast($ws : 4D.WebSocketConnection; $message:text)
 
 *timeout* 値が設定されている場合:
 
- - 待機時間に達したら強制的にソケットを破棄します。
- - *timeout* = 0 の場合、クローズフレームや、FINパケットの交換なしで、強制的かつ即座にソケットを破棄します。
+- 待機時間に達したら強制的にソケットを破棄します。
+- *timeout* = 0 の場合、クローズフレームや、FINパケットの交換なしで、強制的かつ即座にソケットを破棄します。
 
 <!-- END REF -->
 

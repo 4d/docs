@@ -15,7 +15,7 @@ El evento `On Header` se llama cuando un registro está a punto de ser visualiza
 
 En este contexto, se desencadena la siguiente secuencia de llamadas a métodos y eventos de formulario:
 
- - Para cada objeto en el área del encabezado:
+- Para cada objeto en el área del encabezado:
      - Método objeto con el evento `On Header`
      - Método formulario con el evento `On Header`
 

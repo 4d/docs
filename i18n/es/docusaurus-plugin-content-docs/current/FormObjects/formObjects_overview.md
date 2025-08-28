@@ -9,18 +9,18 @@ Usted crea y personaliza los formularios de su aplicación manipulando los objet
 
 Los formularios 4D soportan una gran cantidad de objetos **activos** y **estáticos** integrados:
 
- - **Los objetos activos** realizan una tarea o una función de la interfaz. Los campos son objetos activos. Los otros objetos activos -objetos editable (variables), combo box, listas desplegables, botones imagen, etc.- almacenan los datos temporalmente en la memoria o realizan alguna acción, como abrir una caja de diálogo, imprimir un informe o iniciar un proceso en segundo plano.
- - **Los objetos estáticos** se utilizan generalmente para definir la apariencia del formulario y sus etiquetas, así como para la interfaz gráfica. Los objetos estáticos no tienen variables asociadas como los objetos activos. Sin embargo, se pueden insertar objetos dinámicos en objetos estáticos.
+- **Los objetos activos** realizan una tarea o una función de la interfaz. Los campos son objetos activos. Los otros objetos activos -objetos editable (variables), combo box, listas desplegables, botones imagen, etc.- almacenan los datos temporalmente en la memoria o realizan alguna acción, como abrir una caja de diálogo, imprimir un informe o iniciar un proceso en segundo plano.
+- **Los objetos estáticos** se utilizan generalmente para definir la apariencia del formulario y sus etiquetas, así como para la interfaz gráfica. Los objetos estáticos no tienen variables asociadas como los objetos activos. Sin embargo, se pueden insertar objetos dinámicos en objetos estáticos.
 
 ## Gestión de objetos de formulario
 
 Puede añadir o modificar objetos formulario 4D de las siguientes maneras:
 
- - **[Editor de formularios](FormEditor/formEditor.md):** arrastre un objeto de la barra de herramientas del editor de formularios al formulario. A continuación, utilice la Lista de propiedades para especificar las propiedades del objeto.
+- **[Editor de formularios](FormEditor/formEditor.md):** arrastre un objeto de la barra de herramientas del editor de formularios al formulario. A continuación, utilice la Lista de propiedades para especificar las propiedades del objeto.
 
- - Lenguaje **4D**: los comandos del tema `Objects (Forms)` como [`OBJECT DUPLICATE`](../commands-legacy/object-duplicate.md) o [`OBJECT SET FONT STYLE`](../commands-legacy/object-set-font-style.md) permiten crear y definir objetos de formulario.
+- Lenguaje **4D**: los comandos del tema `Objects (Forms)` como [`OBJECT DUPLICATE`](../commands-legacy/object-duplicate.md) o [`OBJECT SET FONT STYLE`](../commands-legacy/object-set-font-style.md) permiten crear y definir objetos de formulario.
 
- - **Código JSON en formularios dinámicos:** define las propiedades utilizando JSON. Utilice la propiedad [type](properties_Object.md#type) para definir el tipo de objeto y, a continuación, defina sus [propiedades disponibles](properties_Reference.md).
+- **Código JSON en formularios dinámicos:** define las propiedades utilizando JSON. Utilice la propiedad [type](properties_Object.md#type) para definir el tipo de objeto y, a continuación, defina sus [propiedades disponibles](properties_Reference.md).
     Ejemplo para un objeto botón:
 
 ```json

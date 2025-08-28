@@ -30,65 +30,65 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Create deployment license.Summary-->El comando **Create deployment license** crea un archivo de licencia integrado en la carpeta Licenses de la aplicación generada *mergedApp*.<!-- END REF--> If the Licenses folder does not exist in the *mergedApp* folder, it is created by the command.
+<!--REF #_command_.Create deployment license.Summary-->El comando **Create deployment license** crea un archivo de licencia integrado en la carpeta Licenses de la aplicación generada *mergedApp*.<!-- END REF--> Si la carpeta Licenses no existe en la carpeta *mergedApp*, será creada por el comando.
 
-In *mergedApp*, pass a [4D.Folder](../API/FolderClass.md) object containing a reference to the folder containing the built application in which you want to embed a license.
+En *mergedApp*, pase un objeto [4D.Folder](../API/FolderClass.md) que contenga una referencia a la carpeta que contiene la aplicación generada en la que desea integrar una licencia.
 
-Depending on the second parameter, you [let 4D select automatically the license to use](#automatic-license-selection) for the target or [designate the license(s) to use](#designating-the-licenses-to-use).
+En función del segundo parámetro, usted [deja que 4D seleccione automáticamente la licencia a utilizar](#automatic-license-selection) para el objetivo o [designa la(s) licencia(s) a utilizar](#designating-the-licenses-to-use).
 
 ### Selección automática de licencia
 
-If you pass the *autoLicenseTarget* parameter, you let 4D find and use the most appropriate license for the specified target. For more information on the automatic license selection, please refer to the [Build application](../Desktop/building.md#application-automatically-embedding-available-licenses) section.
+Si pasa el parámetro *autoLicenseTarget*, deja que 4D encuentre y utilice la licencia más apropiada para el objetivo especificado. Para más información sobre la selección automática de licencias, consulte la sección [Crear aplicación](../Desktop/building.md#application-automatically-embedding-available-licenses).
 
-The following constants are supported in the *autoLicenseTarget* parameter:
+Se soportan las siguientes constantes en el parámetro *autoLicenseTarget*:
 
-| Constante         | Valor | Descripción                                                     |
-| ----------------- | ----- | --------------------------------------------------------------- |
-| 4D Volume Desktop | 1     | Create automatically a license for a 4D single-user application |
-| 4D Server         | 5     | Create automatically a license for a 4D Server application      |
+| Constante         | Valor | Descripción                                                            |
+| ----------------- | ----- | ---------------------------------------------------------------------- |
+| 4D Volume Desktop | 1     | Crear automáticamente una licencia para una aplicación 4D mono usuario |
+| 4D Server         | 5     | Crear automáticamente una licencia para una aplicación 4D Server       |
 
 Si no se encuentra una licencia válida, se genera un error.
 
 ### Designación de la(s) licencia(s) a utilizar
 
-In *license*, pass a [4D.File](../API/FileClass.md) object containing a reference to the license file used to generate the embedded license.
+En *license*, pase un objeto [4D.File](../API/FileClass.md) que contenga una referencia al archivo de licencia utilizado para generar la licencia integrada.
 
-In the non-automatic mode, if the build requires a specific OEM license (*4D OEM XML Keys*) and if no such license is already installed in the Licenses folder of the building machine, you need to pass it using the *oemLicense* parameter. This parameter is useful if you dedicate a machine to build your applications.
+En el modo no automático, si la compilación requiere una licencia OEM específica (*4D OEM XML Keys*) y si dicha licencia no está ya instalada en la carpeta Licenses de la máquina de compilación, deberá pasarla utilizando el parámetro *oemLicense*. Este parámetro es útil si dedica una máquina a la generación de sus aplicaciones.
 
 ### Resultado
 
-The command returns a *status* object containing the following properties:
+El comando devuelve un objeto *status* que contiene las siguientes propiedades:
 
-| **Propiedad**                                                                      | **Tipo**                                       | **Description**                                                                                                                   |
-| ---------------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| success                                                                            | Boolean                                        | True si se ha generado el archivo de licencia                                                                                     |
-| file                                                                               | [4D.File](../API/FileClass.md) | El archivo de licencia generado                                                                                                   |
-| statusText                                                                         | Text                                           | Descripción del error si lo hay                                                                                                   |
-| errors                                                                             | Collection                                     | Colección de objetos de error                                                                                                     |
-| \[\].message | Text                                           | Mensaje de error                                                                                                                  |
-| \[\].errCode | Number                                         | Número de error                                                                                                                   |
-| standalone                                                                         | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Volume Desktop` license |
-| oemServer                                                                          | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` OEM license     |
-| oemXMLKey                                                                          | Object                                         | (only in [automatic mode](#automatic-license-selection) Description attributes for `4D Server` XML Key license |
+| **Propiedad**                                                                      | **Tipo**                                       | **Description**                                                                                                                                   |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success                                                                            | Boolean                                        | True si se ha generado el archivo de licencia                                                                                                     |
+| file                                                                               | [4D.File](../API/FileClass.md) | El archivo de licencia generado                                                                                                                   |
+| statusText                                                                         | Text                                           | Descripción del error si lo hay                                                                                                                   |
+| errors                                                                             | Collection                                     | Colección de objetos de error                                                                                                                     |
+| \[\].message | Text                                           | Mensaje de error                                                                                                                                  |
+| \[\].errCode | Number                                         | Número de error                                                                                                                                   |
+| standalone                                                                         | Object                                         | (solo en [modo automático](#automatic-license-selection) Atributos de descripción para licencia `Volumen 4D Desktop`           |
+| oemServer                                                                          | Object                                         | (solo en [modo automático](#automatic-license-selection) Atributos de descripción para licencia OEM `4D Server`                |
+| oemXMLKey                                                                          | Object                                         | (solo en [modo automático](#automatic-license-selection) Atributos de descripción para la licencia de la llave XML `4D Server` |
 
 *Los atributos Description* son:
 
-| **Propiedad**        | **Tipo** | **Description**                            |
-| -------------------- | -------- | ------------------------------------------ |
-| absolutePlatformPath | Text     | Path to the original license file retained |
-| offerName            | Text     | Nombre comercial de la licencia retenida   |
-| productNumber        | Number   | Serial number of the license retained      |
+| **Propiedad**        | **Tipo** | **Description**                              |
+| -------------------- | -------- | -------------------------------------------- |
+| absolutePlatformPath | Text     | Ruta al archivo de licencia original elegido |
+| offerName            | Text     | Nombre comercial de la licencia retenida     |
+| productNumber        | Number   | Número de serie de la licencia elegida       |
 
 :::note Notas
 
-- The generated license must be used only with the application referenced by *mergedApp*.
-- It is necessary to regenerate the license each time the application is rebuilt.
+- La licencia generada debe utilizarse únicamente con la aplicación referenciada por *mergedApp*.
+- Es necesario regenerar la licencia cada vez que se regenera la aplicación.
 
 :::
 
 ## Ejemplo 1
 
-Use the automatic syntax to create a single-user 4D application:
+Usar la sintaxis automática para crear una aplicación 4D mono usuario:
 
 ```4d
  var $status : Object
@@ -112,7 +112,7 @@ Designar una licencia de uso:
 
 ## Ver también
 
-[Blog post - Finalize an application with 4D commands](https://blog.4d.com/finalize-an-application-with-4d-commands)
+[Post de blog - Finalizar una aplicación con los comandos 4D](https://blog.4d.com/finalize-an-application-with-4d-commands)
 
 ## Propiedades
 

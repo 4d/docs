@@ -5,7 +5,7 @@ title: Arquitetura de um projeto 4D
 
 Um projeto 4D é composto por várias pastas e arquivos, armazenados numa pasta raiz do projeto (pasta de pacotes). Por exemplo:
 
- - MyPackage (*carpeta raíz del proyecto*)
+- MyPackage (*carpeta raíz del proyecto*)
      - `Componentes`
      - `Data`
          - `Logs`
@@ -27,23 +27,23 @@ Um projeto 4D é composto por várias pastas e arquivos, armazenados numa pasta 
 
 A pasta Project contém normalmente a seguinte hierarquia:
 
- - archivo `<applicationName>.4DProject`
- - `Sources`
+- archivo `<applicationName>.4DProject`
+- `Sources`
      - `Classes`
      - `DatabaseMethods`
      - `Página Métodos`
      - `Formulários`
      - `TableForms`
      - `Triggers`
- - `DerivedData`
- - `Trash` (si hay)
+- `DerivedData`
+- `Trash` (si hay)
 
 ### archivo `<applicationName>.4DProject`
 
 Arquivo de desenvolvimento do projeto, utilizado para designar e lançar o projeto. Esse arquivo pode ser aberto por:
 
- - 4D
- - 4D Server (sólo lectura, ver [Abrir un proyecto remoto](Desktop/clientServer.md#opening-a-remote-project))
+- 4D
+- 4D Server (sólo lectura, ver [Abrir un proyecto remoto](Desktop/clientServer.md#opening-a-remote-project))
 
 > <strong x-id="1">Nota:</strong> nos projetos 4D, o desenvolvimento se realiza com 4D Developer e o desenvolvimento multiusuários se gerencia através das ferramentas de controle de versão. 4D Server pode abrir arquivos .4DProject para fins de teste.
 
@@ -120,9 +120,9 @@ Esse arquivo de texto também pode conter chaves de configuração, em particula
 
 A pasta Trash contém métodos e formulários eliminados do projeto (se existirem). Pode conter as seguintes pastas:
 
- - `Página Métodos`
- - `Formulários`
- - `TableForms`
+- `Página Métodos`
+- `Formulários`
+- `TableForms`
 
 Dentro destas pastas, os nomes dos elementos eliminados estão entre parênteses, por exemplo, "(myMethod).4dm". La organización de las carpetas es idéntica a la carpeta [Sources](#sources).
 
@@ -175,11 +175,11 @@ Essa pasta contém [**configurações de usuário para os dados**](../Desktop/us
 
 A pasta Logs contém todos os arquivos de registo utilizados pelo projeto. Os arquivos de registro incluem, em particular:
 
- - conversão da base de dados,
- - pedidos do servidor Web,
- - backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
- - depuração de comandos,
- - 4D Pedidos do servidor (gerados em máquinas clientes e no servidor).
+- conversão da base de dados,
+- pedidos do servidor Web,
+- backup/restore activities journal (*Backup Journal\[xxx].txt*, see [Backup journal](Backup/backup.md#backup-journal))
+- depuração de comandos,
+- 4D Pedidos do servidor (gerados em máquinas clientes e no servidor).
 
 > Uma pasta adicional de Logs está disponível na pasta de preferências sistema do usuário (pasta 4D ativa, consulte o comando [Get 4D folder](../commands-legacy/get-4d-folder.md)) para arquivos de log de manutenção e nos casos em que a pasta de dados é somente leitura.
 

@@ -7,10 +7,10 @@ A classe `TCPEvent` fornece informações sobre os eventos que ocorrem durante o
 
 <details><summary>História</summary>
 
-| Release | Mudanças                      |
-| ------- | ----------------------------- |
-| 20 R9   | Novos atributos `ip` e `port` |
-| 20 R8   | Classe adicionada             |
+| Release | Mudanças                            |
+| ------- | ----------------------------------- |
+| 20 R9   | New `address` and `port` attributes |
+| 20 R8   | Classe adicionada                   |
 
 </details>
 
@@ -20,12 +20,24 @@ Um objeto `TCPEvent` é imutável e não pode ser transmitido.
 
 As seguintes propriedades estão disponíveis:
 
-|                                                                                             |
-| ------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary --> |
-| [<!-- INCLUDE #TCPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #TCPEvent.ip.Summary -->       |
-| [<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary --> |
-| [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary --> |
+|                                                                                                      |
+| ---------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPEvent.address.Syntax -->](#address)<br/><!-- INCLUDE #TCPEvent.address.Summary --> |
+| [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary -->          |
+| [<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary -->          |
+| [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary -->          |
+
+<!-- REF TCPEvent.address.Desc -->
+
+## .address
+
+<!-- REF #TCPEvent.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Descrição
+
+The `.address` property contains <!-- REF #TCPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
 
 <!-- REF TCPEvent.data.Desc -->
 
@@ -42,18 +54,6 @@ A propriedade `.data` contém <!-- REF #TCPEvent.data.Summary -->os dados associ
 Ao trabalhar com conexões TCP/IP de baixo nível, lembre-se de que não há garantia de que todos os dados chegarão em um único pacote. Os dados chegam em ordem, mas podem estar fragmentados em vários pacotes.
 
 :::
-
-<!-- END REF -->
-
-<!-- REF TCPEvent.ip.Desc -->
-
-## .ip
-
-<!-- REF #TCPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
-
-#### Descrição
-
-A propriedade `.ip` contém <!-- REF #TCPEvent.ip.Summary -->o endereço IP da máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 

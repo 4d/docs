@@ -5,7 +5,7 @@ title: OpenAIEmbeddingsAPI
 
 # OpenAIEmbeddingsAPI
 
-The `OpenAIEmbeddingsAPI` provides functionalities to create embeddings using OpenAI's API.
+`OpenAIEmbeddingsAPI` はOpenAI のAPI を使用して埋め込みを作成する機能を提供します。
 
 https://platform.openai.com/docs/api-reference/embeddings
 
@@ -15,38 +15,38 @@ https://platform.openai.com/docs/api-reference/embeddings
 
 **create**(*input* : Text; *model*: Text; *parameters* : OpenAIEmbeddingsParameters) : OpenAIEmbeddingsResult
 
-Creates an embeddings for the provided input, model and parameters.
+提供された入力、モデル、パラメータに対する埋め込みを作成します。
 
-| 引数           | 型                                                           | 説明                                                                                      |
-| ------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| *input*      | Text or Collection of Text                                  | The input to vectorize.                                                 |
-| *model*      | Text                                                        | The [model to use](https://platform.openai.com/docs/guides/embeddings#embedding-models) |
-| *parameters* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | The parameters to customize the embeddings request.                     |
-| 戻り値          | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | The embeddings.                                                         |
+| 引数           | 型                                                           | 説明                                                                    |
+| ------------ | ----------------------------------------------------------- | --------------------------------------------------------------------- |
+| *input*      | テキストまたはテキストのコレクション                                          | ベクター化する入力。                                                            |
+| *model*      | Text                                                        | [使用するモデル](https://platform.openai.com/docs/guides/embeddings#埋め込みモデル) |
+| *parameters* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | 埋め込みリクエストをカスタマイズするための引数。                                              |
+| 戻り値          | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | 埋め込み。                                                                 |
 
-#### Example Usages
+#### 使用例
 
-##### Get vector for a single text entry
+##### 単一のテキスト入力に対するベクトルを取得
 
 ```4d
 var $result:=$client.embeddings.create("it rains cats and dogs"; "text-embedding-ada-002")
 var $vector: 4D.Vector:=$result.vector
-// or var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
+// あるいは var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
 ```
 
-##### Get vectors for a collection of text entries
+##### テキスト入力のコレクションに対するベクトルを取得
 
 ```4d
 var $inputs:=["it rains cats and dogs"; "il pleut à boire debout"]
 var $result:=$client.embeddings.create($inputs; "text-embedding-ada-002")
-var $vectors : Collection:=$result.vectors // collection of 4D.Vector
+var $vectors : Collection:=$result.vectors // 4D.Vector のコレクション
 ```
 
-##### Using another service
+##### 他のサービスを使用する
 
-> Before using embeddings with a specific service, please check its documentation to see if embeddings are supported, and select the appropriate embedding model.
+> 埋め込みを特定のサービスで使用する前に、そのドキュメンテーションをチェックして埋め込みがサポートされているかを確認し、適切な埋め込みモデルを選択するようにしてください。
 
-For example, for Mistral, use [mistral-embed or codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
+例えば、Mistral に対しては、[mistral-埋め込みあるいはcodestral-埋め込み](https://docs.mistral.ai/capabilities/embeddings/) を使用してください
 
 ```4d
 var $result:=$client.embeddings.create($inputs; "mistral-embed")

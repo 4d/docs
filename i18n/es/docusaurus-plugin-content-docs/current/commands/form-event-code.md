@@ -246,94 +246,94 @@ Este ejemplo muestra cómo responder a un evento de cierre de ventana con un for
 
 ## Ejemplo 10
 
-This example shows how to capitalize a text or alphanumeric field each time its data source value is modified:
+Este ejemplo muestra cómo poner en mayúsculas un campo de texto o alfanumérico cada vez que se modifica su valor:
 
 ```4d
-  //[Contacts]First Name Object method
- Case of
-  //...
-    :(Form event code=On Data Change)
-       [Contacts]First Name:=Uppercase(Substring([Contacts]First Name;1;1))+Lowercase(Substring([Contacts]First Name;2))
-  //...
- End case
+//Método objeto de [Contacts]First Name
+ Case of
+  //...
+    :(Form event code=On Data Change)
+       [Contacts]First Name:=Uppercase(Substring([Contacts]First Name;1;1))+Lowercase(Substring([Contacts]First Name;2))
+  //...
+ End case
 ```
 
 ## Ejemplo 11
 
-The following example illustrates how to manage a deletion action in a hierarchical list:
+El siguiente ejemplo ilustra cómo gestionar una acción de borrado en una lista jerárquica:
 
 ```4d
- ... //method of hierarchical list
+... //método de lista jerárquica
 :(Form event code=On Delete Action)
- ARRAY LONGINT($itemsArray;0)
- $Ref:=Selected list items(<>HL;$itemsArray;*)
- $n:=Size of array($itemsArray)
- 
- Case of
-    :($n=0)
-       ALERT("No item selected")
-       OK:=0
-    :($n=1)
-       CONFIRM("Do you want to delete this item?")
-    :($n>1)
-       CONFIRM("Do you want to delete these items?")
- End case
- 
- If(OK=1)
-    For($i;1;$n)
-       DELETE FROM LIST(<>HL;$itemsArray{$i};*)
-    End for
- End if
+ ARRAY LONGINT($itemsArray;0)
+ $Ref:=Selected list items(<>HL;$itemsArray;*)
+ $n:=Size of array($itemsArray)
+ 
+ Case of
+    :($n=0)
+       ALERT("No item selected")
+       OK:=0
+    :($n=1)
+       CONFIRM("Do you want to delete this item?")
+    :($n>1)
+       CONFIRM("Do you want to delete these items?")
+ End case
+ 
+ If(OK=1)
+    For($i;1;$n)
+       DELETE FROM LIST(<>HL;$itemsArray{$i};*)
+    End for
+ End if
 ```
 
 ## Ejemplo 12
 
-En este ejemplo, el evento formulario [`On Scroll`](../Events/onScroll.md) nos permite sincronizar la visualización de dos imágenes en un formulario. The following code is added in the "satellite" object method (picture field or variable):
+En este ejemplo, el evento formulario [`On Scroll`](../Events/onScroll.md) nos permite sincronizar la visualización de dos imágenes en un formulario. El siguiente código se añade en el método del objeto "satellite" (campo o variable imagen):
 
 ```4d
- Case of
-    :(Form event code=On Scroll)
-  // we take the position of the left picture
-       OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
-  // and we apply it to the right picture
-       OBJECT SET SCROLL POSITION(*;"plan";vPos;hPos;*)
- End case
+ Case of
+    :(Form event code=On Scroll)
+// tomamos la posición de la imagen izquierda
+       OBJECT GET SCROLL POSITION(*;"satellite";vPos;hPos)
+// y la aplicamos a la imagen derecha
+OBJECT SET SCROLL POSITION(*; "plan";vPos;hPos;*)
+End case
 ```
 
 Resultado: https://www.youtube.com/watch?v=YIRfsW1BmHE
 
 ## Ejemplo 13
 
-You want to draw a red rectangle around the selected cell of a list box, and you want the rectangle to move along with the list box if it is scrolled vertically by the user. En el método objeto del list box, puedes escribir:
+Desea dibujar un rectángulo rojo alrededor de la celda seleccionada de un list box, y desea que el rectángulo se mueva junto con el list box si el usuario lo desplaza verticalmente. En el método objeto del list box, puedes escribir:
 
 ```4d
- Case of
- 
-    :(Form event code=On Clicked)
-       LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
-       LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-       OBJECT SET VISIBLE(*;"RedRect";True) //initialize a red rectangle
-       OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
- 
-    :(Form event code=On Scroll)
-       LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
-       LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
-       OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
-       $toAdd:=LISTBOX Get headers height(*;"LB1") //height of the header so as not to overlap it
-       If($ylb1+$toAdd<$y1)&($ylb2>$y2) //if we are inside the list box
-  //to keep it simple, we only handle headers
-  //but we should handle horizontal clipping
-  //as well as scroll bars
-          OBJECT SET VISIBLE(*;"RedRect";True)
-          OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
-       Else
-          OBJECT SET VISIBLE(*;"RedRect";False)
-       End if
- 
- End case
+ Case of
+ 
+    :(Form event code=On Clicked)
+       LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
+       LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
+       OBJECT SET VISIBLE(*;"RedRect";True) //inicializar un rectángulo rojo
+       OBJECT SET COORDINATES(*;"RedRect";$x1;$y1;$x2;$y2)
+
+    :(Form event code=On Scroll)
+       LISTBOX GET CELL POSITION(*;"LB1";$col;$raw)
+       LISTBOX GET CELL COORDINATES(*;"LB1";$col;$raw;$x1;$y1;$x2;$y2)
+       OBJECT GET COORDINATES(*;"LB1";$xlb1;$ylb1;$xlb2;$ylb2)
+       $toAdd:=LISTBOX Get headers height(*;"LB1") //altura del encabezado para no solaparla
+If($ylb1+$toAdd<$y1)&($ylb2>$y2) //si estamos dentro del list box
+//para simplificar, sólo manejamos los encabezados
+//pero deberíamos manejar el recorte horizontal
+//así como las barras de desplazamiento
+OBJECT SET VISIBLE(*;"RedRect";True)
+OBJECT SET COORDINATES(*; "RedRect";$x1;$y1;$x2;$y2)
+Else
+OBJECT SET VISIBLE(*; "RedRect";False)
+End if
+
+End case
 ```
 
-As a result, the red rectangle follows the scrolling of the list box:
+Como resultado, el rectángulo rojo sigue el desplazamiento del list box:
 
 ![](../assets/en/commands/pict1900395.en.png)
 

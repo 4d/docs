@@ -13,10 +13,10 @@ Chaque opération longue sur les données entraîne l’ajout d’une ligne. La 
 
 Les informations suivantes sont fournies pour chaque ligne :
 
- - **Heure début** : heure de démarrage de l’opération au format "jj/mm/aaaa - hh:mm:ss"
- - **Durée** (ms) : durée en cours de l’opération en millisecondes
- - **Informations** : libellé de l’opération.
- - **Détails** : cette zone affiche un ensemble d'informations détaillées dont le contenu varie en fonction du type d'opération sélectionné. En particulier :
+- **Heure début** : heure de démarrage de l’opération au format "jj/mm/aaaa - hh:mm:ss"
+- **Durée** (ms) : durée en cours de l’opération en millisecondes
+- **Informations** : libellé de l’opération.
+- **Détails** : cette zone affiche un ensemble d'informations détaillées dont le contenu varie en fonction du type d'opération sélectionné. En particulier :
      - **Créée sur** : indique si l'opération résulte d'une action d'un client (Créée sur client) ou si elle a été démarrée explicitement sur le serveur via une procédure stockée ou l'option "Exécuter sur serveur" (Créée sur serveur).
      - **Détails de l'opération** : décrit le type d'opération ainsi que (pour les opérations de recherche) le plan de recherche.
      - **Sous-opérations** (le cas échéant) : affiche les opérations dépendantes de l'opération sélectionnée (par exemple, suppression des enregistrements liés avant suppression de l'enregistrement parent).
@@ -26,9 +26,9 @@ Les informations suivantes sont fournies pour chaque ligne :
 
 La page est active et mise à jour en permanence dès qu’elle est affichée. Il est à noter que son fonctionnement peut ralentir sensiblement l’exécution de l’application. Il est possible de suspendre la mise à jour de la page d’une des manières suivantes :
 
- - en cliquant sur le bouton **Pause**,
- - en cliquant dans la liste,
- - en appuyant sur la barre d’espace.
+- en cliquant sur le bouton **Pause**,
+- en cliquant dans la liste,
+- en appuyant sur la barre d’espace.
 
 Lorsque la page est en pause, le message "SUSPENDU" est affiché et le libellé du bouton devient **Reprendre**.
 Il est possible de reprendre l’observation des opérations en effectuant la même action que pour la mise en pause.

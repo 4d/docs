@@ -24,9 +24,9 @@ La commande **WP Insert break** <!--REF #_command_.WP Insert break.Summary-->ins
 
 Dans *targetObj*, passez :
 
- - une plage, ou
- - un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section), ou
- - un document 4D Write Pro
+- une plage, ou
+- un élément (tableau / ligne / paragraphe / corps / en-tête / pied de page / image en ligne / section / sous-section), ou
+- un document 4D Write Pro
 
 Dans *breakType*, passez l'une des constantes suivantes du thème *4D Write Pro Constants* pour définir le type de break à insérer :
 
@@ -62,7 +62,7 @@ Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertio
 | wk prepend | Integer | 1      | Insérer le contenu au début de la cible |
 | wk replace | Integer | 0      | Remplacer le contenu de la cible        |
 
- - Si *targetObj* est une plage, vous pouvez utiliser le paramètre facultatif *rangeUpdate* pour transmettre l'une des constantes suivantes afin de spécifier si le contenu inséré est inclus ou non dans la plage résultante :
+- Si *targetObj* est une plage, vous pouvez utiliser le paramètre facultatif *rangeUpdate* pour transmettre l'une des constantes suivantes afin de spécifier si le contenu inséré est inclus ou non dans la plage résultante :
 
 | Constante             | Type    | Valeur | Commentaire                                                                     |
 | --------------------- | ------- | ------ | ------------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ Dans le paramètre *mode*, passez une constante pour indiquer le mode d'insertio
 
 Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, le contenu inséré est inclus dans la plage résultante.
 
- - Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
+- Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
 
 ## Exemple 1
 

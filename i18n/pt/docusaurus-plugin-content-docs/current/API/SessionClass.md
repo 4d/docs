@@ -5,6 +5,15 @@ title: Session
 
 Os objetos de sessão são retornados pelo comando [`Session`](../commands/session.md). Esses objetos fornecem ao desenvolvedor uma interface que permite gerenciar a sessão atual do usuário e executar ações como armazenar dados contextuais, compartilhar informações entre processos de sessão, iniciar processos preemptivos relacionados à sessão ou (somente na Web) gerenciar [privilégios](../ORDA/privileges.md).
 
+:::info To learn more
+
+Blog posts about this feature:
+
+- [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+
+:::
+
 ### Tipos de sessão
 
 Os seguintes tipos de sessões são suportados por essa classe:
@@ -37,11 +46,6 @@ A disponibilidade de propriedades e funções no objeto `Session` depende do tip
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
-
-### To learn more
-
-[**Scalable sessions for advanced web applications**](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) (blog post)<br/>
-[**Permissions: Inspect Session Privileges for Easy Debugging**](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/) (blog post)
 
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
@@ -268,7 +272,7 @@ $privileges := Session.getPrivileges()
 #### Veja também
 
 [.setPrivileges()](#setprivileges)<br/>
-[Permissions – Inspect the privileges in the session for an easy debugging (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
+[*Permissions – Inspect the privileges in the session for an easy debugging* (blog post)](https://blog.4d.com/permissions-inspect-the-privileges-in-the-session-for-an-easy-debugging)
 
 <!-- END REF -->
 

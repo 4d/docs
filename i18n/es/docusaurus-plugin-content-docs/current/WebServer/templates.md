@@ -19,16 +19,16 @@ El valor de la variable 4D *vtSiteName* se insertará en la página HTML.
 
 Las siguientes etiquetas 4D están disponibles:
 
- - 4DTEXT, para insertar variables y expresiones 4D como texto,
- - 4DHTML, para insertar el código HTML,
- - 4DEVAL, para evaluar toda expresión 4D,
- - 4DSCRIPT, para ejecutar un método 4D,
- - 4DINCLUDE, para incluir una página dentro de otra,
- - 4DBASE, para modificar la carpeta por defecto utilizada por la etiqueta 4DINCLUDE,
- - 4DCODE, para insertar el código 4D,
- - 4DIF, 4DELSE, 4DELSEIF y 4DENDIF, para insertar condiciones en el código HTML,
- - 4DLOOP y 4DENDLOOP, para hacer bucles en el código HTML,
- - 4DEACH y 4DENDEACH, para hacer bucles en colecciones, selecciones de entidades o propiedades de objetos.
+- 4DTEXT, para insertar variables y expresiones 4D como texto,
+- 4DHTML, para insertar el código HTML,
+- 4DEVAL, para evaluar toda expresión 4D,
+- 4DSCRIPT, para ejecutar un método 4D,
+- 4DINCLUDE, para incluir una página dentro de otra,
+- 4DBASE, para modificar la carpeta por defecto utilizada por la etiqueta 4DINCLUDE,
+- 4DCODE, para insertar el código 4D,
+- 4DIF, 4DELSE, 4DELSEIF y 4DENDIF, para insertar condiciones en el código HTML,
+- 4DLOOP y 4DENDLOOP, para hacer bucles en el código HTML,
+- 4DEACH y 4DENDEACH, para hacer bucles en colecciones, selecciones de entidades o propiedades de objetos.
 
 Estas etiquetas se describen en la página [Etiquetas de transformación](../Tags/transformation-tags.md).
 

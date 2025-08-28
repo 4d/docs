@@ -149,18 +149,18 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 <!-- REF #4D.TCPConnection.new().params -->
 
-| 引数            | 型             |                             | 説明                        |
-| ------------- | ------------- | --------------------------- | ------------------------- |
-| serverAddress | Text          | ->                          | サーバーのドメイン名またはIP アドレス      |
-| serverPort    | Integer       | ->                          | サーバーのポート番号                |
-| options       | Object        | ->                          | 接続の設定[オプション](#options-引数) |
-| 戻り値           | TCPConnection | <- | 新しいTCPConnection オブジェクト   |
+| 引数            | 型                                |                             | 説明                        |
+| ------------- | -------------------------------- | --------------------------- | ------------------------- |
+| serverAddress | Text                             | ->                          | サーバーのドメイン名またはIP アドレス      |
+| serverPort    | Integer                          | ->                          | サーバーのポート番号                |
+| options       | Object                           | ->                          | 接続の設定[オプション](#options-引数) |
+| 戻り値           | 4D.TCPConnection | <- | 新しいTCPConnection オブジェクト   |
 
 <!-- END REF -->
 
 #### 説明
 
-`4D.TCPConnection.new()` 関数は、<!-- REF #4D.TCPConnection.new().Summary -->*serverAddress* および *serverPort* 引数で接続したサーバーへ、*options* 引数で定義されたオプションを使用して、新規のTCP 接続を作成し、`4D.HTTPRequest` オブジェクトを返します<!-- END REF -->。
+The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
 
 #### `options` 引数
 
