@@ -13,8 +13,8 @@ Las páginas Cliente-Servidor agrupan los parámetros relacionados con el uso de
 
 Esta opción le permite indicar si la base de datos 4D Server aparecerá o no en la lista de bases de datos publicadas.
 
- - Cuando esta opción está marcada (por defecto), la base de datos se hace pública y aparece en la lista de bases de datos publicadas (pestaña**Disponible**).
- - Cuando la opción no está marcada, la base de datos no se hace pública y no aparece en la lista de bases de datos publicadas. Para conectarse, los usuarios deben introducir manualmente la dirección de la base de datos en la pestaña **Personalizada** de la caja de diálogo de conexión.
+- Cuando esta opción está marcada (por defecto), la base de datos se hace pública y aparece en la lista de bases de datos publicadas (pestaña**Disponible**).
+- Cuando la opción no está marcada, la base de datos no se hace pública y no aparece en la lista de bases de datos publicadas. Para conectarse, los usuarios deben introducir manualmente la dirección de la base de datos en la pestaña **Personalizada** de la caja de diálogo de conexión.
 
 :::note
 
@@ -67,9 +67,9 @@ Cuando la autenticación única (SSO) está activa (ver arriba), debe llenar est
 
 Esta caja desplegable contiene 3 opciones de capa de red a elegir entre: **legacy**, **ServerNet** y **QUIC** (sólo en modo proyecto), que se utilizan para manejar las comunicaciones entre 4D Server y las máquinas 4D remotas (clientes).
 
- - **Legal**: esta antigua capa de red "Legal" sigue siendo soportada para garantizar la compatibilidad de las bases de datos creadas antes de la v15. Esta capa de red también puede habilitarse por programación utilizando el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
- - **ServerNet** (por defecto): activa la capa de red de ServerNet en el servidor (disponible desde 4D v15).
- - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
+- **Legal**: esta antigua capa de red "Legal" sigue siendo soportada para garantizar la compatibilidad de las bases de datos creadas antes de la v15. Esta capa de red también puede habilitarse por programación utilizando el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
+- **ServerNet** (por defecto): activa la capa de red de ServerNet en el servidor (disponible desde 4D v15).
+- **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
   **Notas**:
 

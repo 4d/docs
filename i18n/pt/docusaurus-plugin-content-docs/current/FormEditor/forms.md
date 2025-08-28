@@ -9,16 +9,16 @@ Os formulários constituem a interface através da qual a informação é introd
 
 Os formulários também podem conter outros formulários através das seguintes funcionalidades:
 
- - [objetos de subformulário](FormObjects/subform_overview.md)
- - [formulários herdados](./properties_FormProperties.md#inherited-form-name)
+- [objetos de subformulário](FormObjects/subform_overview.md)
+- [formulários herdados](./properties_FormProperties.md#inherited-form-name)
 
 ## Criar formulários
 
 É possível adicionar ou modificar formulários 4D usando os seguintes elementos:
 
- - **Interface de Desenvolvedor 4D:** Crie novos formulários a partir do menu **Arquivo** ou da janela **Explorador**.
- - **Form Editor**: Modifique seus formulários usando o **[Editor de formulários](FormEditor/formEditor.md)**.
- - **Código JSON:** crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado](Project/architecture#sources). Exemplo:
+- **Interface de Desenvolvedor 4D:** Crie novos formulários a partir do menu **Arquivo** ou da janela **Explorador**.
+- **Form Editor**: Modifique seus formulários usando o **[Editor de formulários](FormEditor/formEditor.md)**.
+- **Código JSON:** crie e projete seus formulários usando JSON e salve os arquivos de formulário no [local apropriado](Project/architecture#sources). Exemplo:
 
 ```
 {
@@ -70,9 +70,9 @@ Os formulários também podem conter outros formulários através das seguintes 
 
 Existem duas categorias de formulários:
 
- - **Formulários de projeto** - Formulários independentes que não estão anexados a nenhuma tabela. Eles são destinados principalmente para criar caixas de diálogo de interface, bem como componentes. Os formulários do projeto podem ser usados para criar interfaces que estejam em conformidade com os padrões do sistema operacional.
+- **Formulários de projeto** - Formulários independentes que não estão anexados a nenhuma tabela. Eles são destinados principalmente para criar caixas de diálogo de interface, bem como componentes. Os formulários do projeto podem ser usados para criar interfaces que estejam em conformidade com os padrões do sistema operacional.
 
- - **Formulários de tabela** - Vinculados a tabelas específicas e, portanto, beneficiam-se de funções automáticas úteis para o desenvolvimento de aplicativos baseados em bancos de dados. Normalmente, uma tabela tem formulários de entrada e saída separados.
+- **Formulários de tabela** - Vinculados a tabelas específicas e, portanto, beneficiam-se de funções automáticas úteis para o desenvolvimento de aplicativos baseados em bancos de dados. Normalmente, uma tabela tem formulários de entrada e saída separados.
 
 Normalmente, você seleciona a categoria do formulário quando o cria, mas pode alterá-la posteriormente.
 
@@ -80,15 +80,15 @@ Normalmente, você seleciona a categoria do formulário quando o cria, mas pode 
 
 Cada formulário é composto por, pelo menos, duas páginas:
 
- - uma página 1: uma página principal, exibida por defeito
- - uma página 0: uma página de fundo, cujo conteúdo é exibido em todas as outras páginas.
+- uma página 1: uma página principal, exibida por defeito
+- uma página 0: uma página de fundo, cujo conteúdo é exibido em todas as outras páginas.
 
 É possível criar várias páginas para um formulário de entrada. Se você tiver mais campos ou variáveis do que cabem em uma tela, você pode querer criar páginas adicionais para exibi-los. As páginas múltiplas permitem-lhe fazer o seguinte:
 
- - Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
- - Organize cada tópico na sua própria página.
- - Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](formEditor.md#data-entry-order).
- - Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
+- Coloque as informações mais importantes na primeira página e as informações menos importantes nas outras páginas.
+- Organize cada tópico na sua própria página.
+- Reduza ou elimine a rolagem durante a entrada de dados definindo a [ordem de entrada](formEditor.md#data-entry-order).
+- Fornece espaço em torno dos elementos de formulário para um design de tela atrativo.
 
 As páginas múltiplas são uma conveniência utilizada apenas para formulários de introdução. Não são para produção impressa. Quando um formulário de várias páginas é impresso, apenas a primeira página é impressa.
 

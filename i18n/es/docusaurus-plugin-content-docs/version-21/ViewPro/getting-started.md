@@ -48,20 +48,20 @@ Las hojas de cálculo se componen de líneas y columnas. A cada línea se le aso
 
 ### Selección de celdas, columnas y líneas
 
- - Para seleccionar una celda, basta con hacer clic en ella o utilizar las flechas de dirección del teclado. Su contenido (o fórmula) se muestra dentro de la celda.
+- Para seleccionar una celda, basta con hacer clic en ella o utilizar las flechas de dirección del teclado. Su contenido (o fórmula) se muestra dentro de la celda.
 
- - Para seleccionar varias celdas continuas, arrastre el ratón de un extremo a otro de la selección. También puede hacer clic en los dos extremos de la selección mientras mantiene presionada la tecla Mayús.
+- Para seleccionar varias celdas continuas, arrastre el ratón de un extremo a otro de la selección. También puede hacer clic en los dos extremos de la selección mientras mantiene presionada la tecla Mayús.
 
 - Para seleccionar todas las celdas de la hoja de cálculo, haga clic en la celda situada en la parte superior izquierda del área:
   ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
- - Para seleccionar una columna, haga clic en la letra (o conjunto de letras) correspondiente.
+- Para seleccionar una columna, haga clic en la letra (o conjunto de letras) correspondiente.
 
- - Para seleccionar una línea, haga clic en el número correspondiente.
+- Para seleccionar una línea, haga clic en el número correspondiente.
 
- - Para seleccionar un grupo de celdas que no sean continuas, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Comando** (Mac) y haga clic en cada celda que desee seleccionar.
+- Para seleccionar un grupo de celdas que no sean continuas, mantenga presionada la tecla **Ctrl** (Windows) o la tecla **Comando** (Mac) y haga clic en cada celda que desee seleccionar.
 
- - Para deseleccionar las celdas, basta con hacer clic en cualquier lugar de la hoja de cálculo.
+- Para deseleccionar las celdas, basta con hacer clic en cualquier lugar de la hoja de cálculo.
 
 ### Entrada de datos
 
@@ -139,8 +139,8 @@ Luego, puede pasar `$myRange` a otro método 4D View Pro para modificar estas ce
 
 Los objetos rango 4D View Pro se componen de varias propiedades:
 
- - area - El nombre del área 4D View Pro
- - rangos - Una colección de objeto(s) rango. Las propiedades disponibles en cada objeto de rango dependen del tipo de objeto rango. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
+- area - El nombre del área 4D View Pro
+- rangos - Una colección de objeto(s) rango. Las propiedades disponibles en cada objeto de rango dependen del tipo de objeto rango. Por ejemplo, un objeto rango de tipo columna sólo incluirá las propiedades *.column* y *.sheet*.
 
 | Propiedad |                                                                                       | Tipo       | Descripción                                                                                                               | Disponible para                                                |
 | --------- | ------------------------------------------------------------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
@@ -157,10 +157,10 @@ Los objetos rango 4D View Pro se componen de varias propiedades:
 
 4D View Pro soporta la importación y exportación de varios formatos de documentos:
 
- - .4vp
- - .xlsx
- - .txt y .csv
- - .sjs
- - .pdf (sólo para exportación)
+- .4vp
+- .xlsx
+- .txt y .csv
+- .sjs
+- .pdf (sólo para exportación)
 
 Para más detalles, consulte la descripción de [VP IMPORT DOCUMENT](commands/vp-import-document.md) y [VP EXPORT DOCUMENT](commands/vp-export-document.md).
