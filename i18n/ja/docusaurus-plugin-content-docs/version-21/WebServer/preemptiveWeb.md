@@ -42,15 +42,15 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
   - `On REST Authentication`
   - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
- - `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
+- `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 
- - Webコンテキストにおいて [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
+- Webコンテキストにおいて [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
 
- - "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
+- "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
 
- - "RESTリソースとして公開" 属性が有効なテーブルのトリガー
+- "RESTリソースとして公開" 属性が有効なテーブルのトリガー
 
- - REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
+- REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
 
 For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
 
@@ -62,8 +62,8 @@ Web関連のほとんどの 4Dコマンドや関数、データベースメソ�
 
 すべての Web関連コマンドはスレッドセーフです:
 
- - *Webサーバー* テーマの全コマンド
- - *HTTPクライアント* テーマの全コマンド
+- *Webサーバー* テーマの全コマンド
+- *HTTPクライアント* テーマの全コマンド
 
 Web関連のデータベースメソッドもスレッドセーフであり、プリエンプティモードで使用することが可能です (前述参照): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...)。
 

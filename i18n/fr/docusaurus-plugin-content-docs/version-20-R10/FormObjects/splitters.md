@@ -11,10 +11,10 @@ L’utilisation type du séparateur est le formulaire de sortie dans lequel les 
 
 Les caractéristiques générales des séparateurs sont les suivantes :
 
- - Vous pouvez placer autant de séparateurs que vous voulez dans tout type de formulaire. De même, il est possible de mêler des séparateurs horizontaux et verticaux dans un même formulaire.
- - Un séparateur peut traverser un objet. Celui-ci sera redimensionné lors du déplacement du séparateur.
- - Les butées des séparateurs sont calculées de manière à ce que les objets déplacés restent entièrement visibles dans le formulaire ou ne passent pas sous/à côté d’un autre séparateur. Lorsque la propriété [Pousseur](properties_ResizingOptions.md#pusher) est associée à un séparateur, son déplacement vers la droite ou vers le bas ne rencontre pas de butée.
- - Les redimensionnements effectués dans les formulaires à l’aide des séparateurs ne sont conservés que durant l’affichage du formulaire. Une fois le formulaire refermé, les dimensions initiales sont restaurées.
+- Vous pouvez placer autant de séparateurs que vous voulez dans tout type de formulaire. De même, il est possible de mêler des séparateurs horizontaux et verticaux dans un même formulaire.
+- Un séparateur peut traverser un objet. Celui-ci sera redimensionné lors du déplacement du séparateur.
+- Les butées des séparateurs sont calculées de manière à ce que les objets déplacés restent entièrement visibles dans le formulaire ou ne passent pas sous/à côté d’un autre séparateur. Lorsque la propriété [Pousseur](properties_ResizingOptions.md#pusher) est associée à un séparateur, son déplacement vers la droite ou vers le bas ne rencontre pas de butée.
+- Les redimensionnements effectués dans les formulaires à l’aide des séparateurs ne sont conservés que durant l’affichage du formulaire. Une fois le formulaire refermé, les dimensions initiales sont restaurées.
 
 Une fois inséré, un séparateur se présente sous la forme d’un trait. Vous pouvez modifier son [style de bordure](properties_BackgroundAndBorder.md#border-line-style) afin d’obtenir un trait plus ou moins épais, ou [modifier sa couleur](properties_BackgroundAndBorder.md#line-color).
 
@@ -55,8 +55,8 @@ Vous pouvez associer une méthode objet à un séparateur. Cette méthode sera a
 
 Une [variable](properties_Object.md#variable-or-expression) de type *Entier long* est associée à chaque objet séparateur. Cette variable peut être utilisée dans vos méthodes objet et/ou formulaire. Elle prend pour valeur le déplacement courant, en pixels, du séparateur.
 
- - Si elle est négative : le déplacement a été effectué vers le haut ou vers la gauche,
- - Si elle est positive : le déplacement a été effectué vers le bas ou vers la droite,
- - Si elle est égale à 0 : le séparateur a été relâché à son emplacement d’origine.
+- Si elle est négative : le déplacement a été effectué vers le haut ou vers la gauche,
+- Si elle est positive : le déplacement a été effectué vers le bas ou vers la droite,
+- Si elle est égale à 0 : le séparateur a été relâché à son emplacement d’origine.
 
 Vous pouvez également déplacer le séparateur par programmation : il suffit de modifier la valeur de la variable associée. Imaginons par exemple qu’un séparateur vertical soit associé à la variable `sépara1`. Si vous écrivez `sépara1:=-10`, le séparateur sera déplacé de 10 pixels vers la gauche — comme si l’utilisateur l’avait fait manuellement. Le déplacement s’effectue au terme de l’exécution de la méthode objet ou formulaire contenant l’instruction.

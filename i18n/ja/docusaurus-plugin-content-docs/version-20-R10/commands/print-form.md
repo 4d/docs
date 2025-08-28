@@ -25,15 +25,15 @@ displayed_sidebar: docs
 
 *form* 引数には、以下のいづれかを渡すことができます:
 
- - フォーム名
- - 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス、*Form file path* 参照)
- - フォームの詳細を格納しているオブジェクト
+- フォーム名
+- 使用するフォームの詳細を格納している有効な.josn ファイルへのパス(POSIX シンタックス、*Form file path* 参照)
+- フォームの詳細を格納しているオブジェクト
 
 **Print form** は、 フォームの印刷後に改ページを行わないため、同じページに異なるフォームを容易に配置することができます。 したがって、**Print form** は、異なるテーブルや異なるフォームを含む複雑な印刷処理に最適です。 フォーム間で改ページを強制的に行うには[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用してください。 印刷可能領域を超える高さのフォームの印刷を次のページに持ち越すには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを使用する前に[CANCEL](../commands-legacy/cancel.md) コマンドを呼び出してください。
 
 3つの異なるシンタックスを使用できます:
 
- - **詳細エリアの印刷**
+- **詳細エリアの印刷**
 
 シンタックス:
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 
 この場合、**Print form** はフォームの詳細エリア (ヘッダマーカと詳細マーカの間のエリア) だけを印刷します。
 
- - **フォームエリアの印刷**
+- **フォームエリアの印刷**
 
 シンタックス:
 
@@ -79,7 +79,7 @@ displayed_sidebar: docs
 | Form header8  | Integer | 208 |
 | Form header9  | Integer | 209 |
 
- - **セクション印刷**
+- **セクション印刷**
 
 シンタックス:
 
@@ -101,8 +101,8 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **Print form** を使用する場合、印刷ダイアログボックス は表示されません。 レポート はデザインモードでフォームに割り当てられた用紙設定を使用しません。 **Print form** を呼び出す前に用紙設定を指定する方法は2通りあります:
 
- - [PRINT SETTINGS](../commands-legacy/print-settings.md) コマンドを使用する。  この場合、ユーザが設定を行います。
- - [SET PRINT OPTION](../commands-legacy/set-print-option.md) と [GET PRINT OPTION](../commands-legacy/get-print-option.md) コマンドを使用する。  この場合、用紙設定はプログラムで指定します。
+- [PRINT SETTINGS](../commands-legacy/print-settings.md) コマンドを使用する。  この場合、ユーザが設定を行います。
+- [SET PRINT OPTION](../commands-legacy/set-print-option.md) と [GET PRINT OPTION](../commands-legacy/get-print-option.md) コマンドを使用する。  この場合、用紙設定はプログラムで指定します。
 
 **Print form** は、印刷するページをそれぞれメモリ 中に作成します。 各ページはメモリ中のページがいっぱいになるか、[PAGE BREAK](../commands-legacy/page-break.md) コマンドを実行すると印刷されます。 **Print form** の使用後、最後のページの印刷を確実に行うためには、[PAGE BREAK](../commands-legacy/page-break.md) コマンドで終了しなければなりません(ただし [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md) のコンテキスト内の場合を除く、注意参照)。 そうでないと、最後のページが一杯にならないと、それはメモリ中に残り印刷されません。
 
@@ -116,8 +116,8 @@ form data オブジェクトについての詳細な情報については、[`DI
 
 **4D Server:** このコマンドは、ストアドプロシージャのフレームワークにおいて4D Server 上で実行することができます。  この状況では、次の制約があります:
 
- - サーバマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。
- - プリンタ関連の問題が発生しても (用紙切れ、プリンタ接続切断等) 、エラーメッセージは生成されません。
+- サーバマシン上ではダイアログボックスを一切表示しないでください (特定の必要性がある場合を除く)。
+- プリンタ関連の問題が発生しても (用紙切れ、プリンタ接続切断等) 、エラーメッセージは生成されません。
 
 ## 例題 1
 

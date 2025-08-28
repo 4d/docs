@@ -11,8 +11,8 @@ La propriété **Titre** contient le libellé d'un menu ou d'une ligne de menu, 
 
 Dans l'éditeur de menus, vous pouvez saisir directement le libellé "en dur". Vous pouvez également saisir une référence pour une variable ou un élément XLIFF, ce qui facilitera la mise à jour et la traduction des applications. Vous pouvez utiliser types de références suivants :
 
- - Une référence à une ressource XLIFF, du type :xliff:MonLibellé. Pour plus d’informations sur les références XLIFF, reportez-vous à la section *Annexe B : Architecture XLIFF* du *Mode Développement 4D*.
- - Un nom de variable interprocess suivi d’un chiffre, par exemple :`:<>vlang,3`. Il suffit de changer le contenu de cette variable pour modifier le libellé du menu lors de son affichage. Dans ce cas, le libellé fera appel à une ressource XLIFF. La valeur contenue dans la variable `<>vlang` correspond à l’attribut *id* de l’élément *group*. La seconde valeur (3 dans cet exemple) désigne l’attribut *id* de l’élément *trans-unit*.
+- Une référence à une ressource XLIFF, du type :xliff:MonLibellé. Pour plus d’informations sur les références XLIFF, reportez-vous à la section *Annexe B : Architecture XLIFF* du *Mode Développement 4D*.
+- Un nom de variable interprocess suivi d’un chiffre, par exemple :`:<>vlang,3`. Il suffit de changer le contenu de cette variable pour modifier le libellé du menu lors de son affichage. Dans ce cas, le libellé fera appel à une ressource XLIFF. La valeur contenue dans la variable `<>vlang` correspond à l’attribut *id* de l’élément *group*. La seconde valeur (3 dans cet exemple) désigne l’attribut *id* de l’élément *trans-unit*.
 
 En utilisant le langage 4D, vous définissez la propriété Title à l'aide du paramètre *itemText* des commandes `APPEND MENU ITEM`, `INSERT MENU ITEM`, et `SET MENU ITEM`.
 

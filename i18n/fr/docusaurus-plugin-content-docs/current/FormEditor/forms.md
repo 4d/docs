@@ -9,16 +9,16 @@ Les formulaires fournissent l'interface par laquelle les informations sont saisi
 
 Les formulaires peuvent également contenir d'autres formulaires grâce aux fonctionnalités suivantes :
 
- - [objets de sous-formulaire](FormObjects/subform_overview.md)
- - [formulaires hérités](./properties_FormProperties.md#inherited-form-name)
+- [objets de sous-formulaire](FormObjects/subform_overview.md)
+- [formulaires hérités](./properties_FormProperties.md#inherited-form-name)
 
 ## Création de formulaires
 
 Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suivants :
 
- - **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l' **Explorateur**.
- - **L'éditeur de formulaires **: Modifiez vos formulaires à l'aide de l'**[éditeur de formulaires](FormEditor/formEditor.md)**.
- - **Le code JSON :** Créez et concevez vos formulaires à l'aide de JSON et enregistrez les fichiers de formulaire à [l'emplacement approprié](Project/architecture#sources). Voici un exemple :
+- **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l' **Explorateur**.
+- **L'éditeur de formulaires **: Modifiez vos formulaires à l'aide de l'**[éditeur de formulaires](FormEditor/formEditor.md)**.
+- **Le code JSON :** Créez et concevez vos formulaires à l'aide de JSON et enregistrez les fichiers de formulaire à [l'emplacement approprié](Project/architecture#sources). Voici un exemple :
 
 ```
 {
@@ -70,9 +70,9 @@ Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suiv
 
 Il existe deux catégories de formulaires :
 
- - **Les formulaires projet** - Formulaires indépendants qui ne sont rattachés à aucune table. Ils sont destinés plus particulièrement à la création de boîtes de dialogue d'interface et de composants. Les formulaires projet peuvent être utilisés pour créer des interfaces facilement conformes aux normes du système d'exploitation.
+- **Les formulaires projet** - Formulaires indépendants qui ne sont rattachés à aucune table. Ils sont destinés plus particulièrement à la création de boîtes de dialogue d'interface et de composants. Les formulaires projet peuvent être utilisés pour créer des interfaces facilement conformes aux normes du système d'exploitation.
 
- - **Les formulaires table** - Rattachés à des tables spécifiques et bénéficient ainsi de fonctions automatiques utiles pour développer des applications basées sur des bases de données. En règle générale, une table possède des formulaires d'entrée et de sortie séparés.
+- **Les formulaires table** - Rattachés à des tables spécifiques et bénéficient ainsi de fonctions automatiques utiles pour développer des applications basées sur des bases de données. En règle générale, une table possède des formulaires d'entrée et de sortie séparés.
 
 En règle générale, vous sélectionnez la catégorie de formulaire lorsque vous créez le formulaire, mais vous pouvez la modifier par la suite.
 
@@ -80,15 +80,15 @@ En règle générale, vous sélectionnez la catégorie de formulaire lorsque vou
 
 Chaque formulaire est composé d'au moins deux pages :
 
- - une page 1 : une page principale, affichée par défaut
- - une page 0 : une page de fond, dont le contenu est affiché sur une page sur deux.
+- une page 1 : une page principale, affichée par défaut
+- une page 0 : une page de fond, dont le contenu est affiché sur une page sur deux.
 
 Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de champs ou de variables est supérieur au nombre maximal supporté sur un écran, vous pouvez créer des pages supplémentaires pour les afficher. Plusieurs pages vous permettent d'effectuer les opérations suivantes :
 
- - Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
- - Organisez chaque sujet sur sa propre page.
- - Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
- - Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
+- Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
+- Organisez chaque sujet sur sa propre page.
+- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
+- Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
 

@@ -15,8 +15,8 @@ Esse evento é gerado quando ocorre um clique no cabeçalho de uma coluna de lis
 
 Se a propriedade [Sortable](FormObjects/properties_Action.md#sortable) tiver sido selecionada para o list box, você poderá decidir se autoriza ou não uma classificação padrão da coluna passando o valor 0, ou -1 na variável `$0`:
 
- - Se `$0` for igual a 0, é efetuada uma ordenação padrão.
- - Se `$0` for igual a -1, uma classificação padrão não será executada e o cabeçalho não exibirá a seta de classificação. O desenvolvedor ainda pode gerar uma classificação de coluna com base em critérios de classificação personalizados usando a linguagem 4D.
+- Se `$0` for igual a 0, é efetuada uma ordenação padrão.
+- Se `$0` for igual a -1, uma classificação padrão não será executada e o cabeçalho não exibirá a seta de classificação. O desenvolvedor ainda pode gerar uma classificação de coluna com base em critérios de classificação personalizados usando a linguagem 4D.
 
 Se a propriedade [Sortable](FormObjects/properties_Action.md#sortable) não estiver selecionada para o list box, a variável `$0` não será usada.
 
