@@ -35,12 +35,12 @@ Certains autres éléments ont une casse différente (par exemple : `this` vs `T
 
 Les noms des commandes et des constantes QodlyScript sont écrits en camel case sans espaces. De plus, les noms de constantes de QodlyScript commencent par la lettre `k`. Vous devrez peut-être adapter ces éléments QodlyScript au langage 4D.
 
- - Généralement, vous devrez simplement convertir les noms. Par exemple, `newCollection` dans QodlyScript est `New collection` dans le langage 4D.
- - Cependant, certaines commandes ont été renommées pour une meilleure conformité, par exemple `atan` et `sqrt` sont les noms en QodlyScript des commandes `Arctan` et `Square root` en langage 4D.
+- Généralement, vous devrez simplement convertir les noms. Par exemple, `newCollection` dans QodlyScript est `New collection` dans le langage 4D.
+- Cependant, certaines commandes ont été renommées pour une meilleure conformité, par exemple `atan` et `sqrt` sont les noms en QodlyScript des commandes `Arctan` et `Square root` en langage 4D.
 
 ### Exemple
 
- - Code QodlyScript :
+- Code QodlyScript :
 
 ```qs
  declare(entitySelection : 4D.EntitySelection)  
@@ -56,7 +56,7 @@ Les noms des commandes et des constantes QodlyScript sont écrits en camel case 
  end
 ```
 
- - Code équivalent en langage 4D :
+- Code équivalent en langage 4D :
 
 ```4d
  #DECLARE ( $entitySelection : 4D.EntitySelection )  

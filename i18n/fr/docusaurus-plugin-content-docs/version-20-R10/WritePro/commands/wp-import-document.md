@@ -11,9 +11,9 @@ displayed_sidebar: docs
 | Paramètres | Type                    |                             | Description                                                                                                                                                                                                                                                        |
 | ---------- | ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | filePath   | Text                    | &#8594; | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
-| fileObj    | 4D.File | &#8594; | File object to import                                                                                                                                                                                                                                              |
+| fileObj    | 4D.File | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                        |
 | option     | Integer, Object         | &#8594; | (Integer) Import option for HTML expressions, (object) Import options for .docx document                                                                                                                     |
-| Résultat   | Object                  | &#8592; | 4D Write Pro object                                                                                                                                                                                                                                                |
+| Résultat   | Object                  | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                 |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ Vous pouvez passer soit un *filePath* ou *fileObj* :
 
 - In the *fileObj* parameter, pass a 4D.File object representing the file to import.
 
-The following types of documents are supported:
+Les types de documents suivants sont pris en charge :
 
 - former 4D Write documents (.4w7 or .4wt). For a detailed list of 4D Write features that are currently supported in 4D Write Pro objects, please refer to the *Importing 4D Write documents* section.
 - 4D Write Pro (.4wp) format documents. For more information about the 4D Write Pro document format, refer to *.4wp document format*.
@@ -62,7 +62,7 @@ You can pass an object to define how the following attributes are handled during
 | htmlExpressions         | Text     | For 4D Write (.4w7) documents only. Specifies how HTML expressions are handled. Available values: <br/><br/> **rawText** \- HTML expressions are imported as raw text within ##htmlBegin## and ##htmlEnd## tags **ignore** (default) - HTML expressions are ignored.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | importDisplayMode       | Text     | For 4D Write (.4w7) documents only. Specifies how image display is handled. Available values: <br/><br/> **legacy -** 4W7 image display mode is converted using a background image if different than scaled to fit. **noLegacy** (default) - 4W7 image display mode is converted to the *imageDisplayMode* attribute if different than scaled to fit.                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 
-**Compatibility Notes**
+**Notes de compatibilité**
 
 - *Character style sheets in legacy 4D Write documents use a proprietary mechanism, which is not supported by 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Legacy character style sheets are not imported and are no longer referenced in the document.*
 - *Support for importing in .docx format is only certified for Microsoft Word 2010 and newer. Older versions, particularly Microsoft Word 2007, may not import correctly.*
@@ -85,7 +85,7 @@ You want to import a .docx document and would like that paragraph borders are co
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-You want to import original .docx fields as text (for fields not converted to 4D formulas):
+Vous voulez importer les champs .docx d'origine en tant que texte (pour les champs non convertis en formules 4D) :
 
 ```4d
  $options:=New object
@@ -94,7 +94,7 @@ You want to import original .docx fields as text (for fields not converted to 4D
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
 
-You want to import a .docx document whose text is mostly in Japanese:
+Vous voulez importer un document .docx dont le texte est principalement en japonais :
 
 ```4d
  $options:=New object
@@ -105,7 +105,7 @@ You want to import a .docx document whose text is mostly in Japanese:
 
 ## Exemple 3
 
-You want to import a document on disk using a File object:
+Vous voulez importer un document sur disque en utilisant un objet File :
 
 ```4d
 var $file : 4D.File

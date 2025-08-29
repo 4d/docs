@@ -29,8 +29,8 @@ La primera vez que se conecte a un proyecto 4D Server a través de un 4D remoto,
 Para conectarse remotamente a un proyecto 4D Server:
 
 1. Haga una de las siguientes cosas:
-  - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
-  - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
+   - Seleccione **Conectar a 4D Server** en la caja de diálogo del asistente de bienvenida
+   - Seleccione **Abrir/Proyecto remoto...** desde el menú **Archivo** o del botón**Abrir** de la barra de herramientas.
 
 Aparece el diálogo de conexión de 4D Server. Este diálogo tiene tres pestañas: **Reciente**, **Disponible** y **Personalizado**.
 
@@ -71,7 +71,7 @@ Cuando se ha producido una versión .4dz actualizada del proyecto en 4D Server, 
 
 Cuando 4D se conecta a un 4D Server en la misma máquina, la aplicación se comporta como 4D en modo monopuesto y el entorno de diseño le permite editar los archivos del proyecto. Esta funcionalidad le permite desarrollar una aplicación cliente/servidor en el mismo contexto de despliegue.
 
-> Cuando 4D se conecta a un 4D Server en la misma máquina, el **modo desarrollo** se activa automáticamente, sea cual sea el estado de la [opción de apertura](#opening-a-remote-project).
+> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Activate development mode](#opening-a-remote-project) option status.
 
 Cada vez que 4D realiza una acción **Guardar todo** desde el entorno de diseño (explícitamente desde el menú **Archivo** o implícitamente al cambiar al modo aplicación, por ejemplo), 4D Server recarga sincronizadamente los archivos del proyecto. 4D espera a que 4D Server termine de recargar los archivos del proyecto antes de continuar.
 

@@ -38,7 +38,7 @@ A noter que l'élément `Else` est optionnel, vous pouvez écrire :
  End if
 ```
 
-La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées.
+La structure `If...Else...End if` permet à votre méthode de choisir dans une alternative, en fonction du résultat, TRUE ou FALSE, d’un test (une expression booléenne). Si l’expression booléenne est TRUE, les instructions qui suivent immédiatement le test sont exécutées. Si l’expression booléenne est FALSE, les instructions suivant la ligne Else sont exécutées. Le `Else` est optionnel ; lorsqu’il est omis, c’est la première ligne d’instructions suivant le `End if` (s’il y en a une) qui est exécutée.
 
 A noter que l'expression booléenne est toujours évaluée en totalité. Examinons en particulier le test suivant :
 
@@ -324,7 +324,7 @@ End for
 La structure `For...End for` est une boucle contrôlée par un compteur :
 
 - La variable compteur *Counter_Variable* est une variable numérique (Réel ou Entier long) initialisée par `For...End for` à la valeur spécifiée par *Start_Expression*.
-- La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel *Increment_Expression* à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
+- Chaque fois que la boucle est exécutée, la variable compteur est incrémentée de la valeur spécifiée dans l'expression facultative *Increment_Expression*. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
 - Lorsque le compteur atteint la valeur définie par *End_Expression*, la boucle s'arrête.
 
 **Important :** Les expressions numériques *Start_Expression*, *End_Expression* et *Increment_Expression* sont évaluées une seule fois, au début de la boucle. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.

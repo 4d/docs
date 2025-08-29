@@ -96,11 +96,12 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
-### See also
+## See also
 
 [Session storage](session-storage.md)  
 [Session API](../API/SessionClass.md)  
-[Web server user sessions](../WebServer/sessions.md)  
+[Web server user sessions](../WebServer/sessions.md) 
+
 
 ## Properties
 

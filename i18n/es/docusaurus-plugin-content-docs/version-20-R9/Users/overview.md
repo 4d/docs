@@ -7,8 +7,8 @@ Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arqu
 
 La estrategia de control de acceso 4D depende de la configuración de su despliegue:
 
- - en las aplicaciones multiusuario, puede confiar en los usuarios y grupos 4D,
- - en aplicaciones monousuario, el acceso de los usuarios se controla a través de la sesión del sistema, utilizando comandos como [`Current system user`](../commands-legacy/current-system-user.md).
+- en las aplicaciones multiusuario, puede confiar en los usuarios y grupos 4D,
+- en aplicaciones monousuario, el acceso de los usuarios se controla a través de la sesión del sistema, utilizando comandos como [`Current system user`](../commands-legacy/current-system-user.md).
 
 > Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-security-guide/) para una visión de conjunto de las funciones de seguridad de 4D.
 
@@ -26,7 +26,7 @@ Para desactivar el sistema de acceso por contraseña, basta con eliminar la cont
 
 ## Control de acceso en las aplicaciones monopuesto
 
-Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume Desktop. En las aplicaciones monopuesto todos los usuarios que abren la aplicación son los [Diseñadores](handling_users_groups.md#designer-and-administrator), tienen todos los privilegios y su nombre es "Diseñador". El control de acceso no se basa en los usuarios y los grupos de 4D, sino en las **sesiones usuario**.
+Las aplicaciones monopuesto son aplicaciones de escritorio, desplegadas con 4D o fusionadas con 4D Volume Desktop. En las aplicaciones monopuesto todos los usuarios que abren la aplicación son los [Diseñadores](handling_users_groups.md#designer-and-administrator), tienen todos los privilegios y su nombre es "Diseñador". El control de acceso no se basa en los usuarios y los grupos de 4D, sino en las **sesiones usuario**.
 
 ### Identificación del usuario
 

@@ -158,27 +158,27 @@ $c:=a+b
 
 1. Se abre una ventana Depurador con el contador del programa fijado en la línea con `a:=1`. En este punto aparece el tema **Objetos Línea**:
 
-  | $a | Indefinido |
-  | -- | ---------- |
+   | $a | Indefinido |
+   | -- | ---------- |
 
-  La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, aparece el tema **Objetos Línea**:
 
-  | $a | 1          |
-  | -- | ---------- |
-  | $b | Indefinido |
+   | $a | 1          |
+   | -- | ---------- |
+   | $b | Indefinido |
 
-  El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con $c:=a+b. aparece el tema **Objetos en línea**:
 
-  | $c | Indefinido |
-  | -- | ---------- |
-  | $a | 1          |
-  | $b | 2          |
+   | $c | Indefinido |
+   | -- | ---------- |
+   | $a | 1          |
+   | $b | 2          |
 
-  El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
+   El valor de la variable `$b` es ahora 2. La variable `$c` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
 #### Variables
 
@@ -374,7 +374,7 @@ El menú del panel de vigilancia personalizado está disponible mediante un clic
 
 * **Insertar comando...**: muestra un menú que permite insertar un comando 4D como una nueva expresión.
 * **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions as custom expressions.
+* **Expresiones estándar**: copia la lista de expresiones de la ventana de evaluación como expresiones personalizadas.
 
 > Esta opción no está disponible en [modo de depuración remota](debugging-remote.md).
 
@@ -416,9 +416,9 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
-  - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
-  - Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
-  - Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
+   - Arrastre y suelte el texto seleccionado en el área Expresión del panel de expresión personalizado
+   - Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
+   - Haga clic con el botón derecho en el texto seleccionado **>** **Copiar al panel de expresiones**
 
 ### Contador del programa
 

@@ -201,12 +201,12 @@ Cette boîte de dialogue répertorie toutes les méthodes projet de la base, y c
 
 Pour exécuter une méthode de projet, il suffit de sélectionner son nom dans la liste et de cliquer sur **Exécuter**. Pour exécuter une méthode étape par étape en mode Debug, cliquez sur **Debug**. Pour plus d'informations sur le débogueur 4D, reportez-vous à la section [Debugging](../Debugging/basics.md) .
 
-Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectionnée s'exécute dans un autre process. Si la méthode effectue une tâche qui prend du temps, comme l'impression d'un grand nombre d'enregistrements, vous pouvez continuer à travailler avec votre base, en ajoutant des enregistrements à une table, en créant un graphe pour afficher les données, etc. For more information about processes, refer to [Processes](../Develop/processes.md).
+Si vous cochez la case **Nouveau Process** , la méthode que vous avez sélectionnée s'exécute dans un autre process. Si la méthode effectue une tâche qui prend du temps, comme l'impression d'un grand nombre d'enregistrements, vous pouvez continuer à travailler avec votre base, en ajoutant des enregistrements à une table, en créant un graphe pour afficher les données, etc. Pour plus d'informations sur les process, voir [Process](../Develop/processes.md).
 
 **Notes 4D Server**:
 
 - Si vous souhaitez que la méthode soit exécutée sur la machine serveur plutôt que sur la machine cliente, sélectionnez l'option **Sur 4D Server** dans le menu Exécuter : Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Dans ce cas, un nouveau process, appelé *procédure stockée*, est créé sur la machine serveur afin d'exécuter la méthode. Cette option peut être utilisée pour réduire le trafic réseau et optimiser le fonctionnement de 4D Server, en particulier pour les méthodes qui appellent des données stockées sur le disque. Tous les types de méthodes peuvent être exécutés sur la machine serveur ou sur une autre machine cliente, à l'exception de celles qui modifient l'interface utilisateur. Dans ce cas, les procédures stockées sont inefficaces.
-- Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](../commands-legacy/register-client.md).
+- Vous pouvez également choisir d'exécuter la méthode sur un autre poste client. Les autres postes clients n'apparaîtront pas dans le menu, sauf s'ils ont été préalablement "enregistrés" (pour plus d'informations, se référer à la description de [REGISTER CLIENT](../commands-legacy/register-client.md).
 
 Par défaut, l'option **En local** est sélectionnée. Avec la version mono-utilisateur de 4D, c'est la seule option disponible.
 

@@ -16,32 +16,32 @@ title: VP SET FORMULAS
 
 ## Description
 
-The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->.
+La commande `VP SET FORMULAS` <!-- REF #_method_.VP SET FORMULAS.Summary -->attribue une collection de formules à partir de la plage de cellules spécifiée<!-- END REF -->.
 
-In *rangeObj*, pass a range of the cell (created with [VP Cell](vp-cell.md)) whose formula you want to specify. Si *rangeObj* comprend plusieurs plages, seule la première plage est utilisée.
+Dans *rangeObj*, passez une plage de la cellule (créée avec [VP Cell](vp-cell.md)) dont la formule que vous voulez spécifier. Si *rangeObj* comprend plusieurs plages, seule la première plage est utilisée.
 
-The *formulasCol* is a two-dimensional collection:
+Le *formulesCol* est une collection à deux dimensions :
 
 - La collection de premier niveau contient des sous-collections de formules. Chaque sous-collection définit une ligne.
 - Chaque sous-collection définit les valeurs des cellules de la ligne. Les valeurs doivent être des éléments textuels contenant les formules à associer aux cellules.
 
-> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator.
-> If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md) command.
+> Si la formule est une chaîne de caractères, utilisez le point `.` comme séparateur numérique et la virgule `,` comme séparateur de paramètres.
+> Si une méthode 4D est utilisée, elle doit être autorisée par la commande [`VP SET ALLOWED METHODS`](vp-set-allowed-methods.md).
 
-You remove the formulas in *rangeObj* by replacing them with an empty string ("").
+Vous supprimez les formules dans *rangeObj* en les remplaçant par une chaîne vide ("").
 
 ## Exemple 1
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // First row
-$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Second row
+$formulas.push(New collection("MAX(B11,C11,D11)";"myMethod(G4)")) // Première ligne
+$formulas.push(New collection("SUM(B11:D11)";"AVERAGE(B11:D11)")) // Deuxième ligne
 
  
-VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Set the cells with the formulas
+VP SET FORMULAS(VP Cell("ViewProArea";6;3);$formulas) // Définissez les cellules avec les formules
 ```
 
-*myMethod*:
+*myMethod* :
 
 ```4d
 $0:=$1*3.33
@@ -55,10 +55,10 @@ Pour supprimer des formules :
 
 ```4d
 $formulas:=New collection
-$formulas.push(New collection("";"")) // first collection
-$formulas.push(New collection("";"")) // second collection
+$formulas.push(New collection("";"")) // première collection
+$formulas.push(New collection("";"")) // deuxième collection
  
-VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
+VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Attribuer aux cellules
 ```
 
 ## Voir également

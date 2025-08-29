@@ -11,16 +11,16 @@ Cuando un manejador de peticiones HTTP personalizado intercepta una solicitud, s
 
 Custom HTTP request handlers meet various needs, including:
 
- - using a given URL as a resource provider or a file-uploading box (to download or upload various files),
- - redirecting on specific pages according to a context (user authenticated, privileges granted...),
- - gestionar una autenticación a través de oAuth 2.0.
+- using a given URL as a resource provider or a file-uploading box (to download or upload various files),
+- redirecting on specific pages according to a context (user authenticated, privileges granted...),
+- gestionar una autenticación a través de oAuth 2.0.
 
 ## Requisitos
 
 Se soportan gestores de solicitudes HTTP personalizados:
 
- - cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
- - with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
+- cuando las [sesiones escalables](./sessions.md#enabling-web-sessions) están habilitadas,
+- with the main Web Server only (HTTP Request handlers that may have been defined in [Web Servers of components](../WebServer/webServerObject.md) are ignored).
 
 :::warning
 
@@ -62,9 +62,9 @@ You must restart the Web server so that modifications made in this file are take
 
 A handler is defined by:
 
- - a listened URL pattern
- - a function and its class where the code is implemented to handle the listened URL pattern
- - the verbs with which the URL can be called to trigger the handler
+- a listened URL pattern
+- a function and its class where the code is implemented to handle the listened URL pattern
+- the verbs with which the URL can be called to trigger the handler
 
 The handler identifier is the couple [pattern + a verb among the verbs list].
 
@@ -72,20 +72,20 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
- - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
+- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
    Ej: `"pattern": "docs"` o `"pattern": "docs/invoices"`
 
- - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Los modelos de expresiones regulares se manejan directamente.
+- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Los modelos de expresiones regulares se manejan directamente.
    Ej: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
 
 #### Concordancia de modelos
 
-URL patterns are triggered in the given order:
+Los modelos de URL se activan en el orden indicado:
 
- - se ejecuta el primer modelo coincidente
- - the following patterns are not executed even if they match the URL
+- se ejecuta el primer modelo coincidente
+- los siguientes patrones no se ejecutan aunque coincidan con la URL
 
 As a consequence, you need to apply a accurate strategy when writing your handlers: the most detailed patterns must be written before the more general patterns.
 
@@ -117,17 +117,17 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
 
- - `/4DACTION`
- - `/rest`
- - `/$lib/renderer`
- - `/$shared`
+- `/4DACTION`
+- `/rest`
+- `/$lib/renderer`
+- `/$shared`
 
 ### Clase y método
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
- - "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
- - "method": class function belonging to the class.
+- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
+- "method": class function belonging to the class.
 
 [Ver abajo](#request-handler-code) para obtener información sobre el código del gestor de peticiones.
 
@@ -208,11 +208,11 @@ He aquí un ejemplo detallado de un archivo HTTPHandlers.json:
 
 En este ejemplo, debe implementar las siguientes funciones:
 
- - *funciónhandle* en la clase \*GeneralHandling
- - *manageAccount* en la clase *UsersHandling*
- - *handleInvoices* en la clase *FinancialHandling*
- - *handleDocs* en la clase *DocsHandling*
- - *handleTheInvoice* / *handleDetails* / *handleInvoices* en la clase *InvoicesHandling*
+- *funciónhandle* en la clase \*GeneralHandling
+- *manageAccount* en la clase *UsersHandling*
+- *handleInvoices* en la clase *FinancialHandling*
+- *handleDocs* en la clase *DocsHandling*
+- *handleTheInvoice* / *handleDetails* / *handleInvoices* en la clase *InvoicesHandling*
 
 Examples of URLs triggering the handlers:
 
@@ -233,7 +233,7 @@ Examples of URLs triggering the handlers:
 
 ## Código del gestor de peticiones
 
-### Function configuration
+### Configuración de funciones
 
 The HTTP Request handler code must be implemented in a function of a [**Shared**](../Concepts/classes.md#shared-singleton) [**singleton class**](../Concepts/classes.md#singleton-classes).
 
@@ -278,7 +278,7 @@ El archivo **HTTPHandlers.json**:
 ]
 ```
 
-The called URL is: http://127.0.0.1:8044/putFile?fileName=testFile
+La URL llamada es: http://127.0.0.1:8044/putFile?fileName=testFile
 
 The binary content of the file is put in the body of the request and a POST verb is used. El nombre del archivo se da como parámetro (*fileName*) en la URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
 

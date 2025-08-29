@@ -7,10 +7,10 @@ title: TCPEvent
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                     |
-| ----- | ---------------------- |
-| 20 R9 | 新しい `ip` および `port` 属性 |
-| 20 R8 | クラスを追加                 |
+| リリース  | 内容                                  |
+| ----- | ----------------------------------- |
+| 20 R9 | New `address` and `port` attributes |
+| 20 R8 | クラスを追加                              |
 
 </details>
 
@@ -20,12 +20,24 @@ title: TCPEvent
 
 次のプロパティを利用することができます:
 
-|                                                                                             |
-| ------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary --> |
-| [<!-- INCLUDE #TCPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #TCPEvent.ip.Summary -->       |
-| [<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary --> |
-| [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary --> |
+|                                                                                                      |
+| ---------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #TCPEvent.address.Syntax -->](#address)<br/><!-- INCLUDE #TCPEvent.address.Summary --> |
+| [<!-- INCLUDE #TCPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #TCPEvent.data.Summary -->          |
+| [<!-- INCLUDE #TCPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #TCPEvent.port.Summary -->          |
+| [<!-- INCLUDE #TCPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #TCPEvent.type.Summary -->          |
+
+<!-- REF TCPEvent.address.Desc -->
+
+## .address
+
+<!-- REF #TCPEvent.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### 説明
+
+The `.address` property contains <!-- REF #TCPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
 
 <!-- REF TCPEvent.data.Desc -->
 
@@ -42,18 +54,6 @@ title: TCPEvent
 ローレベルな TCP/IP 接続を扱っている場合、全てのデータが単一のパケットで到着するという保証はない、という点に留意して下さい。 データは順番通りに届きますが、複数のパケットに断片化されて届く可能性があります。
 
 :::
-
-<!-- END REF -->
-
-<!-- REF TCPEvent.ip.Desc -->
-
-## .ip
-
-<!-- REF #TCPEvent.ip.Syntax -->**ip** : Text<!-- END REF -->
-
-#### 説明
-
-`.ip` プロパティには、<!-- REF #TCPEvent.ip.Summary -->リモートマシンのIP アドレス<!-- END REF -->が格納されています。
 
 <!-- END REF -->
 

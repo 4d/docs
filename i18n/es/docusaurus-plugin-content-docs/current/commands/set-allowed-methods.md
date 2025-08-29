@@ -19,32 +19,32 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
 
-4D includes a security mechanism that filters enterable project methods from the following contexts:
+4D incluye un mecanismo de seguridad que filtra los métodos proyecto que se pueden introducir desde los siguientes contextos:
 
-- The formula editor - allowed methods appear at the end of the list of default commands and can be used in formulas (see section *Description of formula editor*).
-- The label editor - the allowed methods are listed in the **Apply** menu if they are also shared with the component (see section *Description of label editor*).
-- Formulas inserted in styled text areas or 4D Write Pro documents through the [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) command - disallowed methods are automatically rejected.
+- El editor de fórmulas: los métodos autorizados aparecen al final de la lista de comandos por defecto y pueden utilizarse en las fórmulas (ver la sección *Descripción del editor de fórmulas*).
+- El editor de etiquetas: los métodos permitidos aparecen en el menú **Aplicar** si también se comparten con el componente (ver la sección *Descripción del editor de etiquetas*).
+- Fórmulas insertadas en áreas de texto con estilo o documentos 4D Write Pro a través del comando [ST INSERT EXPRESSION](../commands-legacy/st-insert-expression.md) - los métodos no permitidos se rechazan automáticamente.
 - Documentos 4D View Pro - por defecto, si el comando [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md) nunca ha sido llamado durante la sesión, las fórmulas de 4D View Pro sólo aceptan métodos definidos por **SET ALLOWED METHODS**. Sin embargo, se recomienda utilizar [`VP SET ALLOWED METHODS`](../ViewPro/commands/vp-set-allowed-methods.md). Ver [Declarando el método permitido](../ViewPro/formulas.md#declaring-allowed-methods).
 
-By default, if you do not use the **SET ALLOWED METHODS** command, no method is enterable (using an unauthorized method in an expression causes an error).
+Por defecto, si no se utiliza el comando **SET ALLOWED METHODS**, no se puede introducir ningún método (utilizar un método no autorizado en una expresión provoca un error).
 
-In the *methodsArray* parameter, pass the name of an array containing the list of methods to allow. El array debe haber sido configurado previamente.
+En el parámetro *methodsArray*, pase el nombre de un array que contenga la lista de métodos a permitir. El array debe haber sido configurado previamente.
 
-You can use the wildcard character (@) in method names to define one or more authorized method groups.
+Puede utilizar el caracter comodín (@) en los nombres de métodos para definir uno o varios grupos de métodos autorizados.
 
-If you would like the user to be able to call 4D commands that are unauthorized by default or plug-in commands, you must use specific methods that handle these commands.
+Si desea que el usuario pueda llamar a comandos 4D que no están autorizados por defecto o a comandos plug-in, debe utilizar métodos específicos que manejen estos comandos.
 
-**Nota:** el filtrado de fórmula puede ser deshabilitado para todos los usuarios o para el Diseñador y Administrador a través de [una opción en la página "Seguridad" de los Parámetros](../settings/security.md#options). If the "Disabled for all" option is checked, the **SET ALLOWED METHODS** command will have no effect.
+**Nota:** el filtrado de fórmula puede ser deshabilitado para todos los usuarios o para el Diseñador y Administrador a través de [una opción en la página "Seguridad" de los Parámetros](../settings/security.md#options). Si la opción "Deshabilitado para todos" está seleccionada, el comando **SET ALLOWED METHODS** no tendrá efecto.
 
 :::warning
 
-This command only filters the **input** of methods, not their **execution**. It does not control the execution of formulas created outside the application.
+Este comando sólo filtra la **entrada** de los métodos, no su **ejecución**. No controla la ejecución de las fórmulas creadas fuera de la aplicación.
 
 :::
 
 ## Ejemplo
 
-This example authorizes all methods starting with “formula” and the “Total\_general” method to be entered by the user in protected contexts:
+Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al método "Total_general" a ser introducidos por el usuario en contextos protegidos:
 
 ```4d
  ARRAY TEXT(methodsArray;2)

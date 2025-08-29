@@ -229,8 +229,8 @@ Le code placé entre les mots-clés `Try` et `Catch` est d'abord exécuté, puis
 
 - Si aucune erreur n'est levée, l'exécution du code se poursuit après le mot clé `End try` correspondant. Le code placé entre les mots-clés `Catch` et `End try` n'est pas exécuté.
 - Si l'exécution du bloc de code génère une *erreur non différée*, le flux d'exécution s'arrête et exécute le bloc de code `Catch` correspondant.
-- If the code block calls a method that throws a *deferred error*, the execution flow jumps directly to the corresponding `Catch` code block.
-- If a deferred error is directly thrown from the `Try` block, the execution flow continues until the end of the `Try` block and does not execute the corresponding `Catch` block.
+- Si le bloc de code appelle une méthode qui lance une *erreur différée*, le flux d'exécution passe directement au bloc de code `Catch` correspondant.
+- Si une erreur différée est directement lancée depuis le bloc `Try`, le flux d'exécution continue jusqu'à la fin du bloc `Try` et n'exécute pas le bloc `Catch` correspondant.
 
 :::note
 
@@ -240,7 +240,7 @@ Si une erreur *différée* est générée en dehors du bloc `Try`, l'exécution 
 
 :::info
 
-For more information on *deferred* and *non-deferred* errors, please refer to the [`throw`](../commands-legacy/throw.md) command description.
+Pour plus d'informations sur les erreurs *différées* et *non différées*, veuillez vous référer à la description de la commande [`throw`](../commands-legacy/throw.md).
 
 :::
 

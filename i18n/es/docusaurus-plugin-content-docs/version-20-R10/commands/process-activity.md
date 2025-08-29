@@ -28,15 +28,15 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Process activity.Summary-->El comando **Process activity** devuelve una instantánea de los procesos en ejecución y/o (sólo en 4D Server) de las sesiones de usuario conectadas en un momento dado.<!-- END REF--> Este comando devuelve todos los procesos, incluidos los procesos internos a los que no se puede acceder mediante el comando [Process info](process-info.md). 
 
-By default when used without any parameters, **Process activity** returns an object containing the following properties:
+Por defecto, cuando se utiliza sin ningún parámetro, **Process activity** devuelve un objeto que contiene las siguientes propiedades:
 
 - "processes", una colección de todos los procesos
 - "sessions" (sólo 4D Server), una colección de todas las sesiones
 
-On 4D Server, you can filter information to be returned using the optional *sessionID* and *options* parameters:
+En 4D Server, puede filtrar la información a devolver utilizando los parámetros opcionales *sessionID* y *options*:
 
-- If you pass a user session ID in the *sessionID* parameter, the command only returns information related to this session. By default if the *options* parameter is omitted, the returned object contains a collection with all processes related to the session and a collection with a single object describing the session. Si se pasa un ID de sesión inválido, se devuelve un objeto **null**.
-- You can select the collection(s) to return by passing one of the following constants in the *options* parameter:
+- Si pasa un ID de sesión usuario en el parámetro *sessionID*, el comando sólo devuelve información relacionada con esta sesión. Por defecto, si se omite el parámetro *options*, el objeto devuelto contiene una colección con todos los procesos relacionados con la sesión y una colección con un único objeto que describe la sesión. Si se pasa un ID de sesión inválido, se devuelve un objeto **null**.
+- Puede seleccionar la(s) colección(es) a devolver pasando una de las siguientes constantes en el parámetro *options*:
 
 | Constante              | Valor | Comentario                                                                          |
 | ---------------------- | ----- | ----------------------------------------------------------------------------------- |
@@ -52,7 +52,7 @@ Cuando se ejecuta en 4D en modo remoto o local, `Process activity` siempre devue
 
 **Sessions**
 
-The "sessions" property contains a collection of objects describing all running sessions on the server. Para una descripción de las propiedades del objeto de sesión, por favor consulte el comando [`Session info`](session-info.md).
+La propiedad "sessions" contiene una colección de objetos que describen todas las sesiones en ejecución en el servidor. Para una descripción de las propiedades del objeto de sesión, por favor consulte el comando [`Session info`](session-info.md).
 
 :::note Notas
 
@@ -63,40 +63,40 @@ The "sessions" property contains a collection of objects describing all running 
 
 **Processes**
 
-The "processes" property contains a collection of process objects describing all running processes. Para una descripción de las propiedades del objeto de proceso, por favor consulte el comando [`Process info`](process-info.md).
+La propiedad "processes" contiene una colección de objetos de proceso que describen todos los procesos en ejecución. Para una descripción de las propiedades del objeto de proceso, por favor consulte el comando [`Process info`](process-info.md).
 
-On the server, the `Process activity` command returns an additional "session" property:
+En el servidor, el comando `Process activity` devuelve una propiedad adicional "session":
 
-| Propiedad adicional | Tipo   | Descripción                                                                                                                                                                                      |   |
-| ------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - |
-| session             | Object | La propiedad [`.info`](../API/SessionClass.md#info) de la sesión en la que se está ejecutando el proceso. Undefined if the `Processes only` parameter is passed. |   |
+| Propiedad adicional | Tipo   | Descripción                                                                                                                                                                                   |   |
+| ------------------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| session             | Object | La propiedad [`.info`](../API/SessionClass.md#info) de la sesión en la que se está ejecutando el proceso. Undefined si se pasa el parámetro `Processes only`. |   |
 
 ## Ejemplo 1
 
 Desea obtener la colección de todas las sesiones usuario:
 
 ```4d
-  //To be executed on the server
+  //A ejecutar en el servidor
  
  var $o : Object
  var $i : Integer
  var $processName;$userName : Text
 
  
- $o:=Process activity //Get process & session info
- For($i;0;($o.processes.length)-1) //Iterate over the "processes" collection
+ $o:=Process activity //Obtener información de proceso y sesión
+ For($i;0;($o.processes.length)-1) //Iterar sobre la colección "processes"
     $processName:=$o.processes[$i].name
-    $userName:=String($o.processes[$i].session.userName) // Easy access to userName
-  //use String because session object might be undefined
+    $userName:=String($o.processes[$i].session.userName) // Acceso fácil a userName
+  //Utilizar String porque el objeto session puede estar indefinido
  End for
 ```
 
 ## Ejemplo 2
 
-You want to get all processes related to the current session:
+Desea obtener todos los procesos relacionados con la sesión actual:
 
 ```4d
-  // to be executed on the server
+  // a ejecutar en el servidor
  
  var $sessionID : Text:=Session.id
  var $o : Object

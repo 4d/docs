@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->El comando **String** devuelve en forma de cadena alfanumérica la expresión numérica, fecha, hora, cadena o booleana que se pasa en *expression*.<!-- END REF-->
 
-Si no pasa ningún parámetro, la cadena se devuelve con el formato apropiado por defecto. Si pasa *format*, puede forzar que la cadena resultante tenga un formato específico.
+If you do not pass any other parameter, the string is returned with the appropriate default format. Si pasa *format*, puede forzar que la cadena resultante tenga un formato específico.
 
 El parámetro opcional *addTime* añade una hora a una fecha en un formato combinado. Sólo puede utilizarse cuando el parámetro *expression* es una fecha (ver abajo).
 
@@ -90,7 +90,7 @@ Si pasa 0 en *base*, el comando determina la base dependiendo del valor de *expr
 :::info
 
 - Esta sintaxis sigue estrictamente la especificación [`toString` EcmaScript sobre el manejo del radix](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring).
-- Utilizar esta sintaxis con *base*=10 no dará exactamente los mismos resultados que utilizar la sintaxis sin el parámetro *base*. Por ejemplo, si el valor numérico especificado no es un número, se devuelve la cadena "Nan".
+- Utilizar esta sintaxis con *base*=10 no dará exactamente los mismos resultados que utilizar la sintaxis sin el parámetro *base*. For example, if the specified number value is not a number, the "NaN" string is returned.
 
 :::
 
@@ -257,11 +257,11 @@ Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto
 
 ## Ver también
 
-[Bool](bool.md)\
-[Date](date.md)\
+[Bool](../commands-legacy/bool.md)\
+[Date](../commands-legacy/date.md)\
 [Num](num.md)\
-[Time string](time-string.md)\
-[Timestamp](timestamp.md)
+[Time string](../commands-legacy/time-string.md)\
+[Timestamp](../commands-legacy/timestamp.md)
 
 ## Propiedades
 

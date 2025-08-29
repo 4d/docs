@@ -8,13 +8,13 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Insert document body.Params-->
 
-| Paramètres  | Type    |                             | Description                                              |
-| ----------- | ------- | --------------------------- | -------------------------------------------------------- |
-| targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                |
-| wpDoc       | Object  | &#8594; | Document 4D Write Pro                                    |
-| mode        | Integer | &#8594; | Mode d'insertion                                         |
-| rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                          |
-| Résultat    | Object  | &#8592; | Text range object referencing the inserted document body |
+| Paramètres  | Type    |                             | Description                                                     |
+| ----------- | ------- | --------------------------- | --------------------------------------------------------------- |
+| targetObj   | Object  | &#8594; | Plage ou élément ou document 4D Write Pro                       |
+| wpDoc       | Object  | &#8594; | Document 4D Write Pro                                           |
+| mode        | Integer | &#8594; | Mode d'insertion                                                |
+| rangeUpdate | Integer | &#8594; | Mode de mise à jour de la plage                                 |
+| Résultat    | Object  | &#8592; | Objet de plage de texte référençant le corps du document inséré |
 
 <!-- END REF-->
 
@@ -24,9 +24,9 @@ The **WP Insert document body** command<!--REF #_command_.WP Insert document bod
 
 Dans *targetObj*, passez :
 
- - A range, or
- - An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
- - a 4D Write Pro document.
+- A range, or
+- An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
+- a 4D Write Pro document.
 
 The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
 
@@ -54,7 +54,7 @@ In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pa
 
 Si vous ne passez pas un paramètre *rangeUpdate*, par défaut, le contenu inséré est inclus dans la plage résultante.
 
- - Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
+- Si *targetObj* n'est pas une plage, *rangeUpdate* est ignoré.
 
 ## Exemple 1
 
@@ -85,7 +85,7 @@ You have defined a template document with different preformatted parts, each of 
 
 ## Exemple 3
 
-You want to set the font style and size for the inserted document body:
+Vous voulez définir le style et la taille de la police pour le corps du document inséré :
 
 ```4d
 WPdoc:=WP Import document("myFile.4wp")

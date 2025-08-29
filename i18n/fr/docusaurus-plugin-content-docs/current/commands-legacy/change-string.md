@@ -35,7 +35,7 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
 
 ## Voir aussi 
 
-[Delete string](../commands/delete-string.md)  
+[Delete string](../commands/delete-string)  
 [Insert string](../commands/insert-string)  
 [Replace string](../commands/replace-string)  
 

@@ -12,7 +12,7 @@ slug: /commands/theme/Tools
 | [<!-- INCLUDE #_command_.Choose.Syntax -->](../../commands-legacy/choose.md)<br/>                                           |
 | [<!-- INCLUDE #_command_.Generate digest.Syntax -->](../../commands-legacy/generate-digest.md)<br/>                         |
 | [<!-- INCLUDE #_command_.Generate password hash.Syntax -->](../../commands-legacy/generate-password-hash.md)<br/>           |
-| [<!-- INCLUDE #_command_.Generate UUID.Syntax -->](../../commands-legacy/generate-uuid.md)<br/>                             |
+| [<!-- INCLUDE #_command_.Generate UUID.Syntax -->](../generate-uuid.md)<br/>                                                |
 | [<!-- INCLUDE #_command_.GET MACRO PARAMETER.Syntax -->](../../commands-legacy/get-macro-parameter.md)<br/>                 |
 | [<!-- INCLUDE #_command_.LAUNCH EXTERNAL PROCESS.Syntax -->](../../commands-legacy/launch-external-process.md)<br/>         |
 | [<!-- INCLUDE #_command_.Load 4D View document.Syntax -->](../../commands-legacy/load-4d-view-document.md)<br/>             |

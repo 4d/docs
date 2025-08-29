@@ -18,9 +18,23 @@ This option allows configuration of the application operation when opening a loc
 
 Unless this option is checked, it is not possible to open a database when its data file is locked (default operation for 4D databases).
 
-#### About locked files 
+:::info About locked files 
 
 Locked files can be read but their contents cannot be modified. For example, files are locked when they are stored on a non-rewritable support (DVD type) or when they are copied from this type of support. 4D can work in a transparent manner with locked data files, which allows, more particularly, the use of projects stored on DVD. However, this operation runs the risk of inadvertent use of a locked data file in which modifications will not be saved. This is why by default 4D does not allow databases with a locked data file to be opened.
+
+:::
+
+#### Auto UUID version
+
+[UUID version](https://en.wikipedia.org/wiki/Universally_unique_identifier) to use for 4D fields with [automatic UUID generation option](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Available values are **4** (default) and **7**. 
+
+This setting only applies to UUIDs generated afterwards. Already saved auto UUIDs fields are not recomputed. 
+
+:::note
+
+For more information on UUID version 7, please read [this blog post](https://blog.4d.com/sort-uuids-with-version-7).
+
+:::
 
 ### Temporary Folder Location  
 

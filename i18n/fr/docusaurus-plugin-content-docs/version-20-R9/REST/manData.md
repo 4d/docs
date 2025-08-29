@@ -19,7 +19,7 @@ Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($m
 
 Outre la récupération d'une entité unique dans une dataclass à l'aide de [\dataClass\}({key})](dataClass.md#dataclasskey), vous pouvez également écrire une [class function](ClassFunctions.md#function-calls) qui renvoie une entity selection (ou une collection).
 
-Avant de renvoyer une sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) sur un ou plusieurs attributs (même les attributs de relation).
+Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
 
 ## Parcourir les données
 
@@ -27,7 +27,7 @@ Ajoutez les mots-clés [`$skip`]($skip.md) (pour définir par quelle entité com
 
 ## Créer et gérer un entity set
 
-Un entity set (ou *ensemble d'entités*) est une collection d'entités obtenue via une requête REST stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
+An entity set is a collection of entities obtained through a REST request that is stored in 4D Server's cache. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
 Pour créer un ensemble d'entités, appelez [`$method=entityset`]($method.md#methodentityset) dans votre requête REST. Par mesure de sécurité, vous pouvez également utiliser [`$savedfilter`]($savedfilter.md) et/ou [`$savedorderby`]($savedorderby.md) lorsque vous appelez [`$filter`]($filter.md) et/ou [`$orderby`]($orderby.md) de sorte que si l'ensemble d'entités se périme ou est supprimé du serveur, il peut être rapidement récupéré avec le même identifiant qu'auparavant.
 

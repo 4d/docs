@@ -31,17 +31,17 @@ El comando `SET WINDOW DOCUMENT ICON` <!--REF #_command_.SET WINDOW DOCUMENT ICO
 En el caso de una aplicación MDI en Windows, puede pasar `-1` en *winRef* para definir el icono de la ventana principal. En otros contextos (macOS o [aplicación IDE](../Menus/sdi.md) en Windows), usar -1 no hace nada.
 
 - Si solo se pasa *file*, la ventana utiliza el icono correspondiente al tipo de archivo y la ruta del archivo se muestra en el menú de la ventana.
-- If only *image* is passed, 4D does not show the path and the passed image is used for the window icon.
-- If both *file* and *image* are passed, the file’s path is displayed in the window’s menu and the passed image is used for the window icon.
-- If only *winRef* is passed or *image* is empty, the icon is removed on macOS and the default icon is displayed on Windows (application icon).
+- Si sólo se pasa *image*, 4D no muestra la ruta y la imagen pasada se utiliza para el icono de la ventana.
+- Si se pasan tanto *file* como *image*, la ruta del archivo se muestra en el menú de la ventana y la imagen pasada se utiliza para el icono de la ventana.
+- Si sólo se pasa *winRef* o *image* está vacío, se elimina el icono en macOS y se muestra el icono por defecto en Windows (icono de la aplicación).
 
 ## Ejemplo
 
 En este ejemplo, queremos crear cuatro ventanas:
 
-1. Use the application icon on Windows and no icon on macOS (default state when no *image* or *file* is used).
+1. Utiliza el icono de la aplicación en Windows y ningún icono en macOS (estado por defecto cuando no se utiliza *image* o *file*).
 2. Utilice un icono "user".
-3. Associate a document with the window (this uses its file type icon).
+3. Asociar un documento a la ventana (para ello se utiliza su icono de tipo de archivo).
 4. Personalizar el icono asociado al documento.
 
 ```4d
@@ -49,24 +49,24 @@ En este ejemplo, queremos crear cuatro ventanas:
  var $userImage : Picture
  var $file : 4D.File
  
-  // 1- Open "Contact" form
+  // 1- Abrir formulario "Contact"
  $winRef:=Open form window("Contact";Plain form window+Form has no menu bar)
  SET WINDOW DOCUMENT ICON($winRef)
  DIALOG("Contact";*)
  
-  // 2- Open "Contact" form with "user" icon
+  // 2- Abrir formulario "Contact" con icono "user"
  $winRef:=Open form window("Contact";Plain form window+Form has no menu bar)
  BLOB TO PICTURE(File("/RESOURCES/icon/user.png").getContent();$userImage)
  SET WINDOW DOCUMENT ICON($winRef;$userImage)
  DIALOG("Contact";*)
  
-  // 3- Open "Contact" form associated with the document "user"
+  // 3- Abrir formulario "Contact" asociado al documento "user"
  $winRef:=Open form window("Contact";Plain form window+Form has no menu bar)
  $file:=File("/RESOURCES/files/user.txt")
  SET WINDOW DOCUMENT ICON($winRef;$file)
  DIALOG("Contact";*)
  
-  // 4- Open "Contact" form associated with the document "user" with "user" icon
+  // 4- Abrir formulario "Contact" asociado al documento "user" con icono "user"
  $winRef:=Open form window("Contact";Plain form window+Form has no menu bar)
  BLOB TO PICTURE(File("/RESOURCES/icon/user.png").getContent();$userImage)
  $file:=File("/RESOURCES/files/user.txt")

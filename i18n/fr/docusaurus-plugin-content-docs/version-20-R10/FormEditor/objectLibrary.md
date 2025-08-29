@@ -7,8 +7,8 @@ Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibli
 
 4D propose deux types de bibliothèques d'objets :
 
- - une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets.
- - des bibliothèques d’objets personnalisées, que vous pouvez utiliser pour stocker vos objets formulaires favoris ou des formulaires projets complets.
+- une bibliothèque d'objets standard préconfigurée, standard, disponible dans tous vos projets.
+- des bibliothèques d’objets personnalisées, que vous pouvez utiliser pour stocker vos objets formulaires favoris ou des formulaires projets complets.
 
 ## Utilisation de la bibliothèque d'objets standard
 
@@ -21,10 +21,10 @@ La bibliothèque est affichée dans une fenêtre séparée :
 
 La fenêtre présente les caractéristiques principales suivantes :
 
- - Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
- - You can filter the window contents by using the **Categories** menu:
+- Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
+- You can filter the window contents by using the **Categories** menu:
     ![](../assets/en/FormEditor/library3.png)
- - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
+- Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
      - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
      - or drag and drop the object from the library The object is then added to the form.
 
@@ -56,13 +56,13 @@ Une même bibliothèque d’objets ne peut être ouverte que par un seul projet 
 
 Pour ouvrir une bibliothèque d’objets personnalisée, sélectionnez la commande **Ouvrir>Bibliothèque d’objets...** dans le menu **Fichier** ou la barre d’outils de 4D. Une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de désigner la bibliothèque d’objets à ouvrir. Vous pouvez sélectionner les types de fichier suivants :
 
- - **.4dproject**
- - **.4dz**
+- **.4dproject**
+- **.4dz**
 
 Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Seules les parties suivantes d'un projet sont exposées lorsqu'il est ouvert en tant que bibliothèque :
 
- - formulaires projet
- - pages 1 des formulaires
+- formulaires projet
+- pages 1 des formulaires
 
 ### Construire une bibliothèque d’objets
 
@@ -74,10 +74,10 @@ Les principales opérations sont accessibles via le menu contextuel ou le menu d
 
 ![](../assets/en/FormEditor/library5.png)
 
- - **Couper** ou **Copier** vers le conteneur de données
- - **Coller** un objet à partir du conteneur de données
- - **Effacer** - supprime l'objet de la bibliothèque
- - **Renommer** - une boite de dialogue apparait pour vous permettre de renommer l'élément. A noter que les noms d'objets doivent être uniques dans une bibliothèque.
+- **Couper** ou **Copier** vers le conteneur de données
+- **Coller** un objet à partir du conteneur de données
+- **Effacer** - supprime l'objet de la bibliothèque
+- **Renommer** - une boite de dialogue apparait pour vous permettre de renommer l'élément. A noter que les noms d'objets doivent être uniques dans une bibliothèque.
 
 Vous pouvez placer dans la bibliothèque des objets individuels (y compris des sous-formulaires) ou des ensembles d’objets. Chaque objet ou ensemble d’objets est regroupé en un seul élément :
 
@@ -93,9 +93,9 @@ Le copier-coller ou le glisser-déposer de certains objets dans la bibliothèque
 
 Voici la liste des objets dépendants qui seront collés dans la bibliothèque en même temps que l’objet principal qui les utilise (le cas échéant) :
 
- - Enumérations
- - Formats/Filtres
- - Images
- - Messages d’aide (liés à un champ)
- - Méthodes objet
+- Enumérations
+- Formats/Filtres
+- Images
+- Messages d’aide (liés à un champ)
+- Méthodes objet
 

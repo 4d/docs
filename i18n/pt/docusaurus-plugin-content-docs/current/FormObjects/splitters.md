@@ -11,10 +11,10 @@ O divisor é usado, por exemplo, em formulários de saída para que as colunas p
 
 Algumas das características gerais do repartidor:
 
- - Você pode colocar quantos divisores quiser em qualquer formulário e usar uma mistura de divisores horizontais e verticais no mesmo formulário.
- - Um separador pode passar por um objeto. Este objeto será redimensionado quando o divisor for movido.
- - As paradas do divisor são calculadas de modo que os objetos movidos permaneçam totalmente visíveis no formulário ou não passem sob/próximo a outro divisor. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
- - Se você redimensionar um formulário usando um divisor, as novas dimensões do formulário serão salvas somente enquanto o formulário estiver sendo exibido. Quando um formulário é fechado, as dimensões iniciais são restauradas.
+- Você pode colocar quantos divisores quiser em qualquer formulário e usar uma mistura de divisores horizontais e verticais no mesmo formulário.
+- Um separador pode passar por um objeto. Este objeto será redimensionado quando o divisor for movido.
+- As paradas do divisor são calculadas de modo que os objetos movidos permaneçam totalmente visíveis no formulário ou não passem sob/próximo a outro divisor. Cuando la propiedad [Empujador](properties_ResizingOptions.md#pusher) está asociada a un separador, su movimiento hacia la derecha o hacia abajo no encuentra ningún tope.
+- Se você redimensionar um formulário usando um divisor, as novas dimensões do formulário serão salvas somente enquanto o formulário estiver sendo exibido. Quando um formulário é fechado, as dimensões iniciais são restauradas.
 
 Uma vez inserido, o separador aparece como uma linha. Puede modificar su [estilo de borde](properties_BackgroundAndBorder.md#border-line-style) para obtener una línea más fina o [cambiar su color](properties_BackgroundAndBorder.md#line-color).
 
@@ -55,8 +55,8 @@ Puede asociar un método objeto a un separador y será llamado con el evento `On
 
 A cada separador se le asocia una [variable](properties_Object.md#variable-or-expression) de tipo *Longint*. Esta variável pode ser utilizada nos seus métodos objeto e/ou formulário. Seu valor indica a posição atual do divisor, em píxeis, em relação à sua posição inicial.
 
- - Se o valor for negativo: o divisor foi movido para cima ou para a esquerda,
- - Se o valor for positivo: o divisor foi movido para a parte inferior ou para a direita,
- - Se o valor for 0: o divisor foi movido para a sua posição original.
+- Se o valor for negativo: o divisor foi movido para cima ou para a esquerda,
+- Se o valor for positivo: o divisor foi movido para a parte inferior ou para a direita,
+- Se o valor for 0: o divisor foi movido para a sua posição original.
 
 Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. Você também pode mover o divisor de forma programática: basta definir o valor da variável associada. A movimentação é de fato realizada no final da execução do formulário ou método objeto que contém a declaração.

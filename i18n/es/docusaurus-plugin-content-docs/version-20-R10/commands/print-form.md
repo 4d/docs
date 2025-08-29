@@ -25,15 +25,15 @@ displayed_sidebar: docs
 
 En el parámetro *form*, puede pasar:
 
- - el nombre de un formulario, o
- - la ruta (en sintaxis POSIX) de un archivo .json válido que contenga una descripción del formulario a utilizar (ver *Ruta de acceso al archivo de formulario*), o
- - un objeto que contiene la descripción del formulario.
+- el nombre de un formulario, o
+- la ruta (en sintaxis POSIX) de un archivo .json válido que contenga una descripción del formulario a utilizar (ver *Ruta de acceso al archivo de formulario*), o
+- un objeto que contiene la descripción del formulario.
 
 Como **Print form** no genera un salto de página después de imprimir el formulario, es fácil combinar diferentes formularios en la misma página. Así, **Print form** es perfecto para tareas de impresión complejas que implican diferentes tablas y diferentes formularios. Para forzar un salto de página entre formularios, utilice el comando [PAGE BREAK](../commands-legacy/page-break.md). Para transferir la impresión a la página siguiente de un formulario cuya altura es superior al espacio disponible, invoque el comando [CANCEL](../commands-legacy/cancel.md) antes del comando [PAGE BREAK](../commands-legacy/page-break.md).
 
 Se pueden utilizar tres sintaxis diferentes:
 
- - **Impresión de área de detalle**
+- **Impresión de área de detalle**
 
 Sintaxis:
 
@@ -43,7 +43,7 @@ Sintaxis:
 
 En este caso, **Print form** sólo imprime el área de detalle del formulario (el área entre la línea de encabezado y la línea de detalle).
 
- - **Impresión de área de formulario**
+- **Impresión de área de formulario**
 
 Sintaxis:
 
@@ -79,7 +79,7 @@ En este caso, el comando imprimirá la sección designada por el *marker*. Pase 
 | Form header8  | Integer | 208   |
 | Form header9  | Integer | 209   |
 
- - **Impresión de sección**
+- **Impresión de sección**
 
 Sintaxis:
 
@@ -101,8 +101,8 @@ El valor devuelto por **Print form** indica la altura del área de impresión. E
 
 Las cajas de diálogo de la impresora no aparecen cuando se utiliza **Print form**. El informe no utiliza la configuración de impresión definida en el modo Diseño para el formulario. Hay dos formas de especificar los parámetros de impresión antes de realizar una serie de llamadas a **Print form**:
 
- - Llamar a [PRINT SETTINGS](../commands-legacy/print-settings.md). En este caso, deja que el usuario elija la configuración.
- - Llame a [SET PRINT OPTION](../commands-legacy/set-print-option.md) y [GET PRINT OPTION](../commands-legacy/get-print-option.md). En este caso, los parámetros de impresión se especifican por programación.
+- Llamar a [PRINT SETTINGS](../commands-legacy/print-settings.md). En este caso, deja que el usuario elija la configuración.
+- Llame a [SET PRINT OPTION](../commands-legacy/set-print-option.md) y [GET PRINT OPTION](../commands-legacy/get-print-option.md). En este caso, los parámetros de impresión se especifican por programación.
 
 **Print form** crea cada página impresa en la memoria. Cada página se imprime cuando la página en memoria está llena o cuando se llama a [PAGE BREAK](../commands-legacy/page-break.md). Para asegurar la impresión de la última página después de cualquier uso de **Print form**, debe concluir con el comando [PAGE BREAK](../commands-legacy/page-break.md) (excepto en el contexto de un [OPEN PRINTING JOB](../commands-legacy/open-printing-job.md), ver nota). En caso contrario, si la última página no está llena, permanece en memoria y no se imprime.
 
@@ -116,8 +116,8 @@ Este comando imprime áreas y objetos externos (por ejemplo, áreas 4D Write o 4
 
 **4D Server:** este comando puede ejecutarse en 4D Server en el marco de un procedimiento almacenado. En este contexto:
 
- - Asegúrese de que no aparezca ningún cuadro de diálogo en el equipo servidor (salvo que se trate de un requisito específico).
- - En el caso de un problema relacionado con la impresora (falta de papel, impresora desconectada, etc.), no se genera ningún mensaje de error.
+- Asegúrese de que no aparezca ningún cuadro de diálogo en el equipo servidor (salvo que se trate de un requisito específico).
+- En el caso de un problema relacionado con la impresora (falta de papel, impresora desconectada, etc.), no se genera ningún mensaje de error.
 
 ## Ejemplo 1
 

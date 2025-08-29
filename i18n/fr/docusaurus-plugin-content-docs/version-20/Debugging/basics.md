@@ -90,7 +90,7 @@ Le débogueur vous permet d'avancer lentement dans les méthodes. Il affiche tou
 
 Une autre raison d'utiliser le débogueur est le développement du code. Il peut arriver que vous écriviez un algorithme plus complexe que d'habitude. Malgré tous les sentiments d'accomplissement, vous ne pouvez pas être totalement sûr que votre codage est 100% correct. Au lieu de l'exécuter "à l'aveugle", vous pouvez utiliser la commande `TRACE` au début de votre code, puis l'exécuter pas à pas pour garder un œil sur ce qui se passe.
 
-## Ruptures/sauts
+## Breaks
 
 Dans le processus de débogage, vous pouvez avoir besoin de sauter le traçage de certaines parties du code jusqu'à une certaine ligne. Ou bien, vous pouvez vouloir tracer le code lorsqu'une expression donnée a une certaine valeur (par exemple "$myVar > 1000"), ou chaque fois qu'une commande 4D spécifique est appelée.
 

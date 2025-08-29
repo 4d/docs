@@ -78,8 +78,8 @@ Para ignorar um erro que ocorre repetidamente (por exemplo, em loops), você pod
 
 - **Abortar**: Interrompe a execução do método e retorna ao estado antes do método começar a executar:
 
-    - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
-    - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
+     - Se um método formulário ou um método objeto estiver a ser executado em resposta a um evento, é interrompido e o usuário regressa ao formulário.
+     - Se o método estiver sendo executado a partir do ambiente Application, o usuário regressa a esse ambiente.
 
 - **Copiar**: copia as informações de depuração na área de transferência. A informação descreve o ambiente interno do erro (número, componente interno, etc.). Eles são formatados como texto tabulado.
 

@@ -22,7 +22,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 [\{dataClass\}(\{key\})](dataClass.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](ClassFunctions.md#関数の呼び出し) を用意することもできます。
 
-戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
+Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
 
 
 ## データのナビゲーション
@@ -33,7 +33,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 ## エンティティセットの作成と管理
 
-エンティティセットとは、*エンティティセレクション* と同等の意味で、RESTリクエストによって取得され、4D Server のキャッシュに保存されるエンティティのコレクションのことです。 エンティティセットを利用することで、同じ結果を得るためにアプリケーションを繰り返しクエリすることが避けられます。 エンティティセットへのアクセスはクエリするよりも速いため、アプリケーション速度の向上にもつながります。
+An entity set is a collection of entities obtained through a REST request that is stored in 4D Server's cache. エンティティセットを利用することで、同じ結果を得るためにアプリケーションを繰り返しクエリすることが避けられます。 エンティティセットへのアクセスはクエリするよりも速いため、アプリケーション速度の向上にもつながります。
 
 エンティティセットを作成するには、RESTリクエスト内で [`$method=entityset`]($method.md#methodentityset) を呼び出します。 エンティティセットがタイムアウトした場合やサーバーから削除されてしまった場合への安全対策として、[`$filter`]($filter.md) や [`$orderby`]($orderby.md) を呼び出す際に [`$savedfilter`]($savedfilter.md) および [`$savedorderby`]($savedorderby.md) を使用することで、以前と同じ ID で再取得することができます。
 

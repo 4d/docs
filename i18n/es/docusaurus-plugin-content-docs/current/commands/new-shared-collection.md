@@ -31,7 +31,7 @@ Si no se pasa ningún parámetro, `New shared collection` crea una colección co
 
 Debe asignar la referencia devuelta a una variable 4D del tipo Collection.
 
-> Keep in mind that `var : Collection` statement declares a variable of the `Collection` type but does not create any collection.
+> Tenga en cuenta que la instrucción `var : Collection` declara una variable de tipo `Collection` pero no crea ninguna colección.
 
 Opcionalmente, puedes precargar la nueva colección compartida pasando uno o varios *valor(es)* como parámetro(s). De lo contrario, puede añadir o modificar elementos posteriormente por asignación notación objeto (ver ejemplo).
 
@@ -39,14 +39,14 @@ Si el nuevo índice del elemento está más allá del último elemento existente
 
 Puede pasar cualquier número de valores de los siguientes tipos soportados:
 
- - number (real, longint...). Los valores numéricos se almacenan siempre como reales.
- - text
- - boolean
- - date
- - time (almacenado como número de milisegundos - real)
- - null
- - objeto compartido
- - colección compartida
+- number (real, longint...). Los valores numéricos se almacenan siempre como reales.
+- text
+- boolean
+- date
+- time (almacenado como número de milisegundos - real)
+- null
+- objeto compartido
+- colección compartida
 
 :::note
 

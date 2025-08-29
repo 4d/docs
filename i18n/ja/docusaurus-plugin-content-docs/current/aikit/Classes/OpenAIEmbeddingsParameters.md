@@ -5,7 +5,7 @@ title: OpenAIEmbeddingsParameters
 
 # OpenAIEmbeddingsParameters
 
-The `OpenAIEmbeddingsParameters` class is designed to configure and manage the parameters used for creating embeddings through the OpenAI API.
+`OpenAIEmbeddingsParameters` クラスは、OpenAI API を通して埋め込みを作成するのに使用する引数を設定して管理するために設計されています。
 
 ## 継承元
 
@@ -13,10 +13,10 @@ The `OpenAIEmbeddingsParameters` class is designed to configure and manage the p
 
 ## プロパティ
 
-| プロパティ名            | 型       | 説明                                                                                                                                                               |
-| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `encoding_format` | Text    | The format to return the embeddings in. Can be either `float` or `base64`. (default: `float`) |
-| `dimensions`      | Integer | The number of dimensions the resulting output embeddings should have. Only supported in text-embedding-3 and later models.       |
+| プロパティ名            | 型       | 説明                                                                                                     |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------ |
+| `encoding_format` | Text    | 埋め込みを返すフォーマット。 `float` あるいは `base64` のいずれかを指定できます。 (デフォルト: `float`) |
+| `dimensions`      | Integer | 出力結果の埋め込みが持つべき次元の数。 text-embedding-3 あるいはそれ以降のモデルでのみサポートされています。                                        |
 
 ## 参照
 

@@ -15,9 +15,9 @@ El evento de formulario `On Begin Drag Over` puede ser seleccionado para todos l
 
 El evento `On Begin Drag Over` es útil para preparar la acción de arrastrar. Puede utilizarse para:
 
- - Añadir los datos y las firmas al portapapeles (vía el comando `APPEND DATA TO PASTEBOARD`).
- - Utilizar un icono personalizado durante la acción de arrastre (vía el comando `SET DRAG ICON`).
- - Aceptar o rechazar el arrastre mediante el resultado del método del objeto arrastrado.
+- Añadir los datos y las firmas al portapapeles (vía el comando `APPEND DATA TO PASTEBOARD`).
+- Utilizar un icono personalizado durante la acción de arrastre (vía el comando `SET DRAG ICON`).
+- Aceptar o rechazar el arrastre mediante el resultado del método del objeto arrastrado.
      - Para indicar que las acciones de arrastre son aceptadas, el método del objeto fuente debe devolver 0 (cero).
      - Para indicar que se rechazan las acciones de arrastrar, el método del objeto fuente debe devolver -1 (menos uno).
      - Si no se devuelve ningún resultado, 4D considera que las acciones de arrastre son aceptadas.

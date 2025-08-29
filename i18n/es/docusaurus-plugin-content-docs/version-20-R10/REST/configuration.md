@@ -27,7 +27,7 @@ A partir de 4D 20 R6, los accesos REST se configuran activando el modo [**force 
 
 :::note Compatibilidad
 
-The **Access** area in the Settings dialog box is only available in converted projects for compatibility. Consulte [Acceso](../settings/web.md#access) para obtener más información.
+El área **Acceso** del diálogo Propiedades solo está disponible en proyectos convertidos por motivos de compatibilidad. Consulte [Acceso](../settings/web.md#access) para obtener más información.
 
 :::
 
@@ -72,7 +72,7 @@ Para eliminar la exposición REST de un campo:
 
 2. Desmarque la opción **Exponer como recurso REST** para el campo.
    ![alt-text](../assets/en/REST/field.png)
-   Repeat this for each field whose exposure needs to be modified.
+   Repita esta operación para cada campo cuya exposición deba modificarse.
 
 > Para que un campo sea accesible a través de REST, la tabla padre también debe serlo. Si la tabla padre no está expuesta, ninguno de sus campos lo estará, independientemente de su estado.
 
@@ -80,6 +80,6 @@ Para eliminar la exposición REST de un campo:
 
 En 4D Server, las peticiones REST se gestionan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que su código es [compatible con una ejecución apropiativa](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](../Debugging/debugging-remote.md) or [to a remote machine](../Debugging/debugging-remote.md). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
+> Para depurar código web interpretado en la máquina del servidor, asegúrese de que el depurador está [conectado al servidor](../Debugging/debugging-remote.md) o [a una máquina remota](../Debugging/debugging-remote.md). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
 
 Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.

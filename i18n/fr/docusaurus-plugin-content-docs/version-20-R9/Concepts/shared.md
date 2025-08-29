@@ -3,14 +3,14 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](./variables.md#interprocess-variables), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **process 4D préemptifs** : ils peuvent être passés par référence en tant que paramètres à des commandes telles que [`New process`](../commands-legacy/new-process.md) ou [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](./dt_object.md) et [`Collection`](./dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
 
-- to create a shared object, use the [`New shared object`](../commands-legacy/new-shared-object.md) command or call the [`new()`](../API/ClassClass.md#new) function of a [shared class](./classes.md#shared-classes),
+- pour créer un objet partagé, utilisez la commande [`New shared object`](../commands-legacy/new-shared-object.md) ou appelez la fonction [`new()`](../API/ClassClass.md#new) d'une [classe partagée](./classes.md#shared-classes),
 - pour créer une collection partagée, utilisez la commande [`New shared collection`](../commands/new-shared-collection.md).
 
-Shared objects and collections can only contain scalar values or other shared objects and collections. However, shared objects and collections can be set as properties of standard (not shared) objects or collections.
+Les objets et collections partagés ne peuvent contenir que des valeurs scalaires ou d'autres objets et collections partagés. Toutefois, les objets et collections partagés peuvent être définis comme des propriétés d'objets ou de collections standard (non partagés).
 
 Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**. La lecture d'une valeur d'objet/collection ne nécessite pas de structure **Use...End use**.
 
@@ -29,7 +29,7 @@ Les modifications suivantes peuvent être effectuées sur les objets partagés e
 
 :::note
 
-Keep in mind that objects or collections set as the content of a shared object or collection must themselves be shared.
+N'oubliez pas que les objets ou collections définis comme contenu d'un objet ou d'une collection partagé(e) doivent eux-mêmes être partagés.
 
 :::
 
@@ -61,7 +61,7 @@ End use
 
 Un objet/une collection partagé(e) ne peut être modifié(e) que par un seul process à la fois. `Use` verrouille l'objet/la collection partagé(e) pour les autres threads, tandis que `End use` déverrouille l'objet/la collection partagé(e) (si le compteur de verrouillage est à 0, voir ci-dessous). . Toute tentative de modification d'un objet/d'une collection partagé(e) sans au moins un appel à `Use...End use` génère une erreur. Lorsqu'un process appelle `Use...End use` avec un objet/une collection partagé(e) qui est déjà "utilisé(e)" par un autre process, il est simplement mis en attente jusqu'à ce qu'il soit déverrouillé par l'appel à `End use` (aucune erreur n'est générée). En conséquence, les instructions situées à l'intérieur des structures `Use...End use` doivent toujours s'exécuter rapidement et déverrouiller les éléments dès que possible. Il est donc fortement déconseillé de modifier un objet ou une collection partagé(e) directement depuis l'interface, par exemple depuis une boîte de dialogue.
 
-L'assignation d'objets/collections partagé(e) s à des propriétés ou éléments d'autres objets/collections partagé(e) s est autorisée et entraîne la création de **groupes partagés**. Un groupe partagé est automatiquement créé lorsqu'un objet ou une collection partagé(e) est assigné(e) en tant que valeur de propriété ou élément à un autre objet ou collection partagé(e). Les groupes partagés permettent d'imbriquer des objets et collections partagé(e)s mais nécessitent d'observer des règles supplémentaires :
+L'assignation d'objets/collections partagé(e)s à des propriétés ou éléments d'autres objets/collections partagé(e)s est autorisée et entraîne la création de **groupes partagés**. Un groupe partagé est automatiquement créé lorsqu'un objet ou une collection partagé(e) est assigné(e) en tant que valeur de propriété ou élément à un autre objet ou collection partagé(e). Les groupes partagés permettent d'imbriquer des objets et collections partagé(e)s mais nécessitent d'observer des règles supplémentaires :
 
 - L'appel de `Use` avec un(e) objet/collection partagé(e) appartenant à un groupe provoquera le verrouillage des propriétés/éléments de tous/toutes les objets/collections partagé(e) s du groupe et incrémente son compteur de verrouillage. L'appel à `End use` décrémente le compteur de verrouillage du groupe et lorsque le compteur est à 0, tous les objets ou collections partagés partagés sont déverrouillés.
 - Un objet ou une collection partagé(e) peut appartenir à un seul groupe partagé. Une erreur est générée si vous tentez d'assigner un objet ou une collection appartenant déjà à un groupe à un groupe différent.
@@ -81,11 +81,11 @@ Appeler `OB Copy` avec un objet partagé (ou avec un objet dont des propriétés
 
 ### Storage
 
-**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard. Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
+**Storage** est un objet partagé unique, disponible automatiquement pour chaque application et machine. Cet objet partagé est renvoyé par la commande [`Storage`](../commands-legacy/storage.md). Il est destiné à référencer les objets ou collections partagé(e)s défini(e)s durant la session que vous souhaitez rendre accessibles à tous les process, préemptifs ou standard.
 
 A noter que, à la différence de objets partagés standard, l'objet `Storage` ne crée par de groupe partagé lorsque des objets/collection lui sont assigné(e)s en tant que propriétés. Cette exception permet à l'objet **Storage** d'être utilisé sans verrouiller les objets/collections partagé(e)s connecté(e)s.
 
-For more information, refer to the [`Storage`](../commands-legacy/storage.md) command description.
+Pour plus d'informations, consultez la description de la commande [`Storage`](../commands-legacy/storage.md).
 
 ## Use...End use
 
@@ -108,13 +108,13 @@ Les objets partagés et les collections partagées permettent d'établir des com
 - La ligne **End use** déverrouille les propriétés de *Shared_object_or_Shared_collection* et tous les objets du même groupe.
 - Plusieurs structures **Use...End use** peuvent être imbriquées dans le code 4D. Toute modification d'un objet/d'une collection partagé(e) doit s'effectuer à l'intérieur d'une structure **Use...End use**.
 
-### Automatic Use...End use calls
+### Appels Use...End use automatiques
 
-The following features automatically trigger an internal **Use/End use**, making an explicit call to the structure unnecessary when it is executed:
+Les fonctions suivantes déclenchent automatiquement un **Use/End use** interne, rendant un appel explicite à la structure inutile lors de l'exécution de la fonction :
 
 - [fonctions de collection](../API/CollectionClass.md) qui modifient les collections partagées,
-- [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md) command,
-- [`OB REMOVE`](../commands-legacy/ob-remove.md) command,
+- commande [`ARRAY TO COLLECTION`](../commands-legacy/array-to-collection.md),
+- commande [`OB REMOVE`](../commands-legacy/ob-remove.md),
 - [fonctions partagées](classes.md#fonctions-partagees) (définies dans les [classes partagées](classes.md#classes-partagees)).
 
 ## Exemple 1

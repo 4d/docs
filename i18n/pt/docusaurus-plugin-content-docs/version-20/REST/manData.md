@@ -22,7 +22,7 @@ Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#
 
 Além de recuperar uma única entidade em um dataclass usando [\{dataClass\}({key})](dataClass.md#dataclasskey), você também pode escrever uma [função de classe](ClassFunctions.md#function-calls) que retorne uma seleção de entidade (ou uma coleção).
 
-Antes de devolver a coleção, também pode ordená-la utilizando [`$orderby`]($orderby.md) um ou vários atributos (mesmo os atributos de relação).
+Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
 
 
 ## Navegando dados
@@ -33,7 +33,7 @@ Adicione [`$skip`]($skip.md) (para definir qual entidade a iniciar) e [`$top/$li
 
 ## Criar e gerenciar conjuntos de entidades
 
-Um conjunto de entidades (ou então *seleções de entidades*) é uma coleção de entidades obtidas através de petições REST que é armazenada no cache de 4D Server. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
+An entity set is a collection of entities obtained through a REST request that is stored in 4D Server's cache. Usar um conjunto de entidades previne que pesquise continuamente sua aplicação pelos mesmos resultados. Acessar um conjunto de entidades é mais rápido e pode melhorar a velocidade de sua aplicação.
 
 Para criar um conjunto de entidades, chame [`$method=entityset`]($method.md#methodentityset) em sua petição REST. Como uma medida de segurança, também pode usar [`$savedfilter`]($savedfilter.md) ou [`$savedorderby`]($savedorderby.md) quando chamar [`$filter`]($filter.md) ou [`$orderby`]($orderby.md) assim se o conjunto de entidade alguma ver for removido ou der time out no servidor, pode ser facilmente recuperado com a mesma ID que antes.
 

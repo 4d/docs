@@ -44,9 +44,9 @@ Toutes les autres requêtes REST (manipulant des données ou exécutant une fonc
 
 Les requêtes REST descriptives peuvent être traitées dans des sessions d'utilisateurs web qui ne nécessitent pas de licences (sessions "guest"). Ces requêtes sont :
 
- - requêtes [`/rest/$catalog`]($catalog.md) (par exemple `/rest/$catalog/$all`) - accès aux dataclass disponibles
- - `/rest/$catalog/authentify` - la fonction datastore utilisée pour connecter l'utilisateur
- - `/rest/$getWebForm` - le rendu d'une page Qodly
+- requêtes [`/rest/$catalog`]($catalog.md) (par exemple `/rest/$catalog/$all`) - accès aux dataclass disponibles
+- `/rest/$catalog/authentify` - la fonction datastore utilisée pour connecter l'utilisateur
+- `/rest/$getWebForm` - le rendu d'une page Qodly
 
 ![alt-text](../assets/en/REST/force-login-1.jpeg)
 
@@ -73,8 +73,8 @@ La fonction peut recevoir toute information d'authentification ou contextuelle e
 
 Cette fonction doit contenir deux parties :
 
- - un code pour identifier et authentifier l'expéditeur de la demande REST,
- - si l'authentification réussit, un appel à [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) qui attribue les privilèges appropriés à la session.
+- un code pour identifier et authentifier l'expéditeur de la demande REST,
+- si l'authentification réussit, un appel à [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) qui attribue les privilèges appropriés à la session.
 
 Si la fonction ne fait pas appel à [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges), aucun privilège n'est attribué, aucune licence n'est consommée et les requêtes REST non descriptives ultérieures sont rejetées.
 

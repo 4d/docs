@@ -39,7 +39,7 @@ Cuando la propiedad [Acceso a los métodos 4D](properties_WebArea.md#access-4d-m
 
 ## Objeto $4d
 
-The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
+The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. Por defecto, `$4d` permite acceder a todos los métodos proyecto 4D utilizando la notación de puntos.
 
 Por ejemplo, llamando al método `HelloWorld` en 4D:
 
@@ -115,7 +115,7 @@ $4d.today(function(result)
 
 #### Ejemplo 2
 
-Instead of using a standalone method, we can also define a **class** to handle the calculation.
+En lugar de utilizar un método independiente, también podemos definir una **clase** que se encargue del cálculo.
 
 Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
 
@@ -133,7 +133,7 @@ Function calcSum(... : Real) -> $sum : Real
   End for
 ```
 
-In another method, we create an instance and assign it to $4d
+En otro método, creamos una instancia y la asignamos a $4d
 
 ```4d
 var $myCalculator := cs.SumCalculator.new()

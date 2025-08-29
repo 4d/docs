@@ -19,12 +19,24 @@ Un objeto `UDPEvent` es inmutable y no se puede transmitir.
 
 Las siguientes propiedades están disponibles:
 
-|                                                                                             |
-| ------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #UDPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #UDPEvent.data.Summary --> |
-| [<!-- INCLUDE #UDPEvent.ip.Syntax -->](#ip)<br/><!-- INCLUDE #UDPEvent.ip.Summary -->       |
-| [<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary --> |
-| [<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary --> |
+|                                                                                                      |
+| ---------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #UDPEvent.address.Syntax -->](#address)<br/><!-- INCLUDE #UDPEvent.address.Summary --> |
+| [<!-- INCLUDE #UDPEvent.data.Syntax -->](#data)<br/><!-- INCLUDE #UDPEvent.data.Summary -->          |
+| [<!-- INCLUDE #UDPEvent.port.Syntax -->](#port)<br/><!-- INCLUDE #UDPEvent.port.Summary -->          |
+| [<!-- INCLUDE #UDPEvent.type.Syntax -->](#type)<br/><!-- INCLUDE #UDPEvent.type.Summary -->          |
+
+<!-- REF UDPEvent.address.Desc -->
+
+## .address
+
+<!-- REF #UDPEvent.address.Syntax -->**address** : Text<!-- END REF -->
+
+#### Descripción
+
+The `.address` property contains <!-- REF #UDPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+
+<!-- END REF -->
 
 <!-- REF UDPEvent.data.Desc -->
 
@@ -35,18 +47,6 @@ Las siguientes propiedades están disponibles:
 #### Descripción
 
 La propiedad `.data` contiene <!-- REF #UDPEvent.data.Summary -->los datos asociados con el evento<!-- END REF -->. Sólo es válido para eventos de tipo "data".
-
-<!-- END REF -->
-
-<!-- REF UDPEvent.ip.Desc -->
-
-## .ip
-
-<!-- REF #UDPEvent.ip.Syntax -->**ip**: Text<!-- END REF -->
-
-#### Descripción
-
-La propiedad `.ip` contiene <!-- REF #UDPEvent.ip.Summary -->la dirección IP de la máquina remota<!-- END REF -->.
 
 <!-- END REF -->
 

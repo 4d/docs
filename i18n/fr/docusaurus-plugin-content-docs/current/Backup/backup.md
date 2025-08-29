@@ -15,9 +15,9 @@ Une sauvegarde peut être déclenchée de trois manières :
 ## Sauvegarde manuelle
 
 1. Choisissez la commande **Sauvegarde...** dans le menu **Fichier** de 4D.
-  La fenêtre de sauvegarde s'affiche:
-  ![](../assets/en/Backup/backup01.png)
-  Vous pouvez voir l'emplacement du dossier de sauvegarde en utilisant le menu déroulant à côté de la zone "Destination de la sauvegarde". Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
+   La fenêtre de sauvegarde s'affiche:
+   ![](../assets/en/Backup/backup01.png)
+   Vous pouvez voir l'emplacement du dossier de sauvegarde en utilisant le menu déroulant à côté de la zone "Destination de la sauvegarde". Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
 
 - Vous pouvez également sélectionner [Centre de sécurité et de maintenance](MSC/overview.md) de 4D et afficher la [Page Sauvegarde](MSC/backup.md).
 

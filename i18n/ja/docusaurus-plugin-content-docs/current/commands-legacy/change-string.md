@@ -35,7 +35,7 @@ Change stringの使用例を次に示します。結果を変数*vtResult*に代
 
 ## 参照 
 
-[Delete string](../commands/delete-string.md)  
+[Delete string](../commands/delete-string)  
 [Insert string](../commands/insert-string)  
 [Replace string](../commands/replace-string)  
 

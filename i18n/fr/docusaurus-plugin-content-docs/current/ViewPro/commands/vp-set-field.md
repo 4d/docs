@@ -17,13 +17,13 @@ title: VP SET FIELD
 
 ## Description
 
-The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
+La commande `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->attribue un champ virtuel de la base de données 4D à une plage de cellules désignée<!-- END REF -->.
 
 Dans *rangeObj*, passez une plage de cellule(s) dont vous voulez spécifier la valeur. Dans *rangeObj*, passez une plage de cellule(s) dont vous voulez spécifier la valeur.
 
-The *field* parameter specifies a 4D database [virtual field](../formulas.md#referencing-fields-using-the-virtual-structure) to be assigned to the *rangeObj*. The virtual structure name for *field* can be viewed in the formula bar. If any of the cells in *rangeObj* have existing content, it will be replaced by *field*.
+Le paramètre *field* spécifie un [champ virtuel](../formulas.md#referencing-fields-using-the-virtual-structure) de la base de données 4D à affecter à *rangeObj*. Le nom de la structure virtuelle pour *field* peut être visualisé dans la barre de formule. Si l'une des cellules de *rangeObj* a un contenu existant, elle sera remplacée par *field*.
 
-The optional *formatPattern* defines a pattern for the *field* parameter. You can pass any valid [custom format](../configuring.md#cell-format).
+L'option *formatPattern* définit un modèle pour le paramètre *field*. Vous pouvez passer n'importe quel [format personnalisé] valide (../configuring.md#cell-format).
 
 ## Exemple
 

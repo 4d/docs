@@ -6,6 +6,9 @@ title: Session
 
 Session objects are returned by the [`Session`](../commands/session.md) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
+
+
+
 ### Session types
 
 The following types of sessions are supported by this class:
@@ -41,8 +44,6 @@ The availability of properties and functions in the `Session` object depends on 
 |[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->|
 |[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->|
-
-
 
 
 
@@ -325,6 +326,7 @@ Else
 
 End if
 ```
+
 
 <!-- END REF -->
 

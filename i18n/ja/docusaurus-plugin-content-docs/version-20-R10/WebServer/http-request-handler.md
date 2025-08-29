@@ -11,16 +11,16 @@ title: HTTP Request handler
 
 カスタムのHTTP リクエストハンドラーを使用することで、以下のような用途に応えることができます:
 
- - 与えられたURL をリソースプロバイダやファイルアップロードボックスとして使用する(これにより様々なファイルのダウンロード/アップロードが可能になります)。
- - コンテキスト(認証されたユーザー、与えられた権限など)に応じて、特定のページへとリダイレクトする
- - oAuth 2.0 経由での認証を管理する
+- 与えられたURL をリソースプロバイダやファイルアップロードボックスとして使用する(これにより様々なファイルのダウンロード/アップロードが可能になります)。
+- コンテキスト(認証されたユーザー、与えられた権限など)に応じて、特定のページへとリダイレクトする
+- oAuth 2.0 経由での認証を管理する
 
 ## 要件
 
 カスタムのHTTP リクエストハンドラーは以下の条件の元にサポートされます:
 
- - [スケーラブルセッション](./sessions.md#enabling-web-sessions) が有効化されていること
- - メインのWeb サーバーでのみ利用可能です([コンポーネントのWeb サーバー](../WebServer/webServerObject.md) で定義されていたHTTP リクエストハンドラーがあったとしてもそれは無視されます)。
+- [スケーラブルセッション](./sessions.md#enabling-web-sessions) が有効化されていること
+- メインのWeb サーバーでのみ利用可能です([コンポーネントのWeb サーバー](../WebServer/webServerObject.md) で定義されていたHTTP リクエストハンドラーがあったとしてもそれは無視されます)。
 
 :::warning
 
@@ -62,9 +62,9 @@ title: HTTP Request handler
 
 ハンドラーは以下の3つの要素から定義されます:
 
- - 聞くべきURL パターン
- - 受信したURL パターンを処理するためのコードが実装されているクラスとその関数
- - そのURL とともに使用することでハンドラーをトリガーする動詞(メソッド)
+- 聞くべきURL パターン
+- 受信したURL パターンを処理するためのコードが実装されているクラスとその関数
+- そのURL とともに使用することでハンドラーをトリガーする動詞(メソッド)
 
 ハンドラーの識別子は、[パターン + 動詞のリストの中にある動詞]の組み合わせとなります。
 
@@ -72,10 +72,10 @@ title: HTTP Request handler
 
 URL パターンは**接頭辞** として、あるいは**正規表現** を使用して定義することできます。
 
- - 接頭辞パターンを宣言するためには、HTTPHandlers.json ファイル内の"pattern" プロパティ名を使用します。 接頭辞は `/` の開始と終了をすでに含んでいる正規表現とみなされます。\
+- 接頭辞パターンを宣言するためには、HTTPHandlers.json ファイル内の"pattern" プロパティ名を使用します。 接頭辞は `/` の開始と終了をすでに含んでいる正規表現とみなされます。\
    Ex: `"pattern" : "docs"` または `"pattern" : "docs/invoices"`
 
- - 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。 正規表現パターンは直接管理されます。
+- 正規表現パターンを宣言するためには、HTTPHandlers.json ファイル内において"regexPattern" プロパティ名を使用します。 正規表現パターンは直接管理されます。
    礼: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" と "regexPattern" プロパティは同じハンドラー定義内で同時に使用することはできません(使用した場合、"regexPattern" プロパティのみが有効となります)。
@@ -84,8 +84,8 @@ URL パターンは**接頭辞** として、あるいは**正規表現** を使
 
 URL パターンは以下の指定された順番に基づいてトリガーされます:
 
- - 最初に合致したパターンが実行されます。
- - それ以降のパターンは、URL に合致していたとしても実行されません。
+- 最初に合致したパターンが実行されます。
+- それ以降のパターンは、URL に合致していたとしても実行されません。
 
 結果として、ハンドラーを作成する際には正確な戦略を適用する必要があります。つまり、もっとも詳細なパターンを先に、そして最も一般的なパターンを後に書く必要があります。
 
@@ -117,17 +117,17 @@ URL パターンは以下の指定された順番に基づいてトリガーさ�
 
 カスタムの HTTP ハンドラーでは、4D ビルトインのHTTP 処理機能に合致するURL パターンは許可されていません。 例えば、以下のようなパターンは管理することができません:
 
- - `/4DACTION`
- - `/rest`
- - `/$lib/renderer`
- - `/$shared`
+- `/4DACTION`
+- `/rest`
+- `/$lib/renderer`
+- `/$shared`
 
 ### クラスとメソッド
 
 定義されたURL パターンを検知して割り込んだときに実行されるべきコードを宣言するためには、"class" および "method" プロパティを使用します。
 
- - "class": `cs.` を除いたクラス名。例: `cs.UsersHandling` ユーザークラスの場合は、"UsersHandling" 。 このクラスは[**共有**](../Concepts/classes.md#共有シングルトン) クラスかつ[**シングルトン**](../Concepts/classes.md#シングルトンクラス) クラスである必要があります。
- - "method": クラスに属性ているクラス関数
+- "class": `cs.` を除いたクラス名。例: `cs.UsersHandling` ユーザークラスの場合は、"UsersHandling" 。 このクラスは[**共有**](../Concepts/classes.md#共有シングルトン) クラスかつ[**シングルトン**](../Concepts/classes.md#シングルトンクラス) クラスである必要があります。
+- "method": クラスに属性ているクラス関数
 
 リクエストハンドラーコードについての情報に関しては、[後述の説明](#リクエストハンドラーコード) を参照してください。
 
@@ -208,11 +208,11 @@ HTTP 動詞はまた、[リクエストハンドラーコード内で`.verb` プ
 
 この例においては、以下の関数を実装する必要があります:
 
- - *GeneralHandling* クラス内の*handle 関数*
- - *UsersHandling* クラス内の *manageAccount*
- - *FinancialHandling* クラス内の *handleInvoices*
- - *DocsHandling* クラス内の *handleDocs*
- - *InvoicesHandling* クラス内の *handleTheInvoice* / *handleDetails* / *handleInvoices*
+- *GeneralHandling* クラス内の*handle 関数*
+- *UsersHandling* クラス内の *manageAccount*
+- *FinancialHandling* クラス内の *handleInvoices*
+- *DocsHandling* クラス内の *handleDocs*
+- *InvoicesHandling* クラス内の *handleTheInvoice* / *handleDetails* / *handleInvoices*
 
 以下はハンドラーをトリガーするURL の一例です:
 

@@ -7,8 +7,8 @@ Puede llamar a [funciones clase modelo de datos](ORDA/ordaClasses.md) definidas 
 
 Las funciones pueden llamarse de dos maneras:
 
- - utilizando peticiones **POST**, con parámetros de datos pasados en el cuerpo de la solicitud.
- - usando **GET requests**, con parámetros directamente pasados en la URL.
+- utilizando peticiones **POST**, con parámetros de datos pasados en el cuerpo de la solicitud.
+- usando **GET requests**, con parámetros directamente pasados en la URL.
 
 Las peticiones POST ofrecen un mejor nivel de seguridad porque evitan la ejecución de código sensible a través de una acción tan simple como hacer clic en un enlace. Sin embargo, las peticiones GET pueden ser más compatibles con la experiencia del usuario, permitiendo llamar a las funciones introduciendo una URL en un navegador (nota: el desarrollador debe asegurarse de que no se hace ninguna acción sensible en dichas funciones).
 
@@ -59,7 +59,7 @@ En el lenguaje 4D, esta llamada equivale a:
 $city:=ds.City.getCity("Aguada")
 ```
 
-## Function configuration
+## Configuración de funciones
 
 ### `exposed`
 
@@ -96,11 +96,11 @@ Puede enviar parámetros a funciones definidas en clases de usuario ORDA o singl
 
 Se aplican las siguientes reglas:
 
- - En funciones llamadas a través de peticiones POST, los parámetros deben pasarse **en el cuerpo de la petición POST**.
- - En las funciones llamadas a través de peticiones GET, los parámetros deben pasarse **en la URL con la sintaxis "?$params="**.
- - Los parámetros deben estar incluidos en una colección (formato JSON).
- - Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
- - La selección de entidades y la entidad se pueden pasar como parámetros. La lista de parámetros debe contener atributos específicos usados por el servidor REST para asignar datos a los objetos ORDA correspondientes: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
+- En funciones llamadas a través de peticiones POST, los parámetros deben pasarse **en el cuerpo de la petición POST**.
+- En las funciones llamadas a través de peticiones GET, los parámetros deben pasarse **en la URL con la sintaxis "?$params="**.
+- Los parámetros deben estar incluidos en una colección (formato JSON).
+- Todos los tipos de datos escalares soportados en las colecciones JSON pueden ser pasados como parámetros.
+- La selección de entidades y la entidad se pueden pasar como parámetros. La lista de parámetros debe contener atributos específicos usados por el servidor REST para asignar datos a los objetos ORDA correspondientes: `__DATACLASS`, `__ENTITY`, `__ENTITIES`, `__DATASET`.
 
 Ver [este ejemplo](#usando-una-entidad-que-se-creará-en-el-servidor) y [este ejemplo](#recibiendo-una-selección-de-entidades-como-parámetro).
 
@@ -134,8 +134,8 @@ También puede pasar valores para todos los atributos de la entidad. Estos valor
 | __ENTITY    | Boolean                                                     | Obligatorio - True para indicar al servidor que el parámetro es una entidad |
 | __KEY       | mixto (mismo tipo que la llave primaria) | Opcional - llave primaria de la entidad                                     |
 
- - Si no se proporciona `__KEY`, se crea una nueva entidad en el servidor con los atributos dados.
- - Si `__KEY` es suministrado, la entidad correspondiente a `__KEY` se carga en el servidor con los atributos dados
+- Si no se proporciona `__KEY`, se crea una nueva entidad en el servidor con los atributos dados.
+- Si `__KEY` es suministrado, la entidad correspondiente a `__KEY` se carga en el servidor con los atributos dados
 
 Vea ejemplos a continuación para crear o actualizar entidades con peticiones POST.
 Vea un ejemplo de descarga de contenidos utilizando una entidad con una petición GET.

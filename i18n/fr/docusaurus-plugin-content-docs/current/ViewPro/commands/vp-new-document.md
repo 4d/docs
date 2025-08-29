@@ -15,7 +15,7 @@ title: VP NEW DOCUMENT
 
 ## Description
 
-The `VP NEW DOCUMENT` command <!-- REF #_method_.VP NEW DOCUMENT.Summary -->loads and display a new, default document in the 4D View Pro form area object *vpAreaName*<!-- END REF -->. Le nouveau document vide remplace toutes les données auparavant insérées dans la zone.
+La commande `VP NEW DOCUMENT` <!-- REF #_method_.VP NEW DOCUMENT. ummary -->charge et affiche un nouveau document par défaut dans l'objet zone de formulaire 4D View Pro *vpAreaName*<!-- END REF -->. Le nouveau document vide remplace toutes les données auparavant insérées dans la zone.
 
 Dans *vpAreaName*, passez le nom de la zone 4D View Pro. Si vous passez un nom inexistant, une erreur est retournée.
 

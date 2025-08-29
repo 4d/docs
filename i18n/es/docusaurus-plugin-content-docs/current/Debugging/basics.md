@@ -78,8 +78,8 @@ Para ignorar un error que ocurre repetidamente (por ejemplo, en bucles), puede c
 
 - **Abandonar**: detiene la ejecución del método y devuelve al estado antes del inicio de la ejecución del método:
 
-    - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
-    - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
+     - Si un método formulario o método objeto se está ejecutando en respuesta a un evento, se detiene y se vuelve al formulario.
+     - Si el método se está ejecutando desde dentro del entorno de la aplicación, volverá a ese entorno.
 
 - **Copiar**: copia la información de depuración en el portapapeles. La información describe el entorno interno del error (número, componente interno, etc.). Está formateado como texto tabulado.
 
