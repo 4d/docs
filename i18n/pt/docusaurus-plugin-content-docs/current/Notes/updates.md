@@ -54,6 +54,7 @@ Leia [**O que há de novo no 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d
 - On Windows, current printer fonts intended only for printing (i.e. not usable on screen) are no longer loaded by 4D at startup.
 - The *MeCab* library has been removed. This change only affects the processing of Japanese text.
 - When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
+- The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will return **-01:02:03**. In previous releases, the negative sign was ignored.
 
 ## 4D 20 R9
 
