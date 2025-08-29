@@ -88,6 +88,12 @@ In binary databases, you need to select the required components in the 4D instal
 
 #### Behavior changes
 
+:::caution Index rebuild
+
+4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+
+:::
+
 - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe. 
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore. 
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
