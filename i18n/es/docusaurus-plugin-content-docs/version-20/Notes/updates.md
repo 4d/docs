@@ -23,7 +23,9 @@ Por razones internas, la versión de los clientes remotos que se conectan a 4D S
 
 :::
 
+#### Cambios de comportamiento
 
+- As of 4D **20.7 HF2**, the [`Time`](https://doc.4d.com/4dv20/help/command/en/page179.html) command returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will now return -01:02:03. In previous releases, the negative sign was ignored.
 
 
 ## 4D 20.6 LTS
