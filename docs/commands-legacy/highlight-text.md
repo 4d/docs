@@ -16,16 +16,23 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>History</summary>
+|Release|Changes|
+|---|---|
+|21|Support in subforms|
+
+</details>
+
 ## Description 
 
-<!--REF #_command_.HIGHLIGHT TEXT.Summary-->The HIGHLIGHT TEXT command highlights a section of the text in *object*.<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Summary-->The `HIGHLIGHT TEXT` command highlights a section of the text in *object*.<!-- END REF-->
 
 If you pass the optional *\** parameter, you indicate that the *object* parameter is an object name (string). If you do not pass the *\** parameter, you indicate that the *object* parameter is a field or variable. In this case, you pass the field or variable reference (form fields or variables only) instead of a string.
 
 If *object* is not the object currently being edited, it gets the focus.
 
-**Note:** This command cannot be used with fields in a subform.  
-  
+The `HIGHLIGHT TEXT` command can be used in the context of a subform. When it is called from a subform, it first looks for the object in the subform, then, if the search does not find anything there, it extends the search to objects of the parent form.
+
 *startSel* is the first character position to be highlighted, and *lastSel* is the last character plus one to be highlighted. If *startSel* and *lastSel* are equal, the insertion point is positioned before the character specified by *startSel*, and no characters are highlighted.
 
 If *lastSel* is greater than the number of characters in *object*, then all characters between *startSel* and the end of the text are highlighted.
