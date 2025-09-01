@@ -24,7 +24,7 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 
 Si *objet* n'est pas l'objet en cours de modification, il récupère le focus.
 
-**Note :** Cette commande ne peut pas être utilisée avec des champs situés dans un sous-formulaire.
+La commande HIGHLIGHT TEXT peut être utilisée dans le contexte d’un sous-formulaire. Lorsqu’elle est appelée depuis un sous-formulaire, elle recherche en premier lieu *objet* dans le sous-formulaire puis, si la recherche n’aboutit pas, elle étend la recherche aux objets du formulaire parent.
 
 Le paramètre *débutSél* représente la position du premier caractère à sélectionner, et le paramètre *finSél* représente la position du dernier caractère à sélectionner plus un. Si *débutSél* et *finSél* sont identiques, le point d'insertion est placé devant le caractère spécifié par *débutSél* et aucun caractère n'est sélectionné.
 
