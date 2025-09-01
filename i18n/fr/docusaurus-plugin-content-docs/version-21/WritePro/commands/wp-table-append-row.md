@@ -23,13 +23,13 @@ El comando **WP Table append row**<!--REF #_command_.WP Table append row.Summary
 
 The command supports two syntaxes:
 
-- **Using values as parameters:**
-  Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
+- **Usando valores como parámetros:**
+  Añade tantas celdas en la fila como valores proporcionados en el parámetro o parámetros *value*. Puede pasar cualquier número de valores de diferentes tipos.
 
-- **Using a collection of values (*valueColl)*:**
-  Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
+- **Usando una colección de valores (*valueColl)*:**
+  Llena la fila con valores de la colección *valueColl*. Cada elemento de la colección corresponde a una célula en la fila.
 
-  The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
+  En ambas sintaxis se admiten los siguientes tipos de valores: Texto, Número, Hora, Fecha, Imagen y Objeto (fórmulas o fórmulas con nombre que devuelven un elemento de fila).
 
 The default cell alignment will depend on the value type:
 
@@ -44,7 +44,7 @@ The default cell alignment will depend on the value type:
 
 :::
 
-The command returns the new row as a row range object.
+El comando devuelve la nueva fila como un objeto de rango de filas.
 
 ## Exemple 1
 
@@ -106,7 +106,7 @@ Dans une application de facturation, vous souhaitez créer un tableau automatiqu
  
   //formater le tableau
  $range:=WP Table get columns($wpTable;1;5)
- WP SET ATTRIBUTES($range;wk width;"80pt")
+ WP SET ATTRIBUTES($range;wk width; "80pt")
  WP SET ATTRIBUTES($wpTable;wk font size;10)
 ```
 

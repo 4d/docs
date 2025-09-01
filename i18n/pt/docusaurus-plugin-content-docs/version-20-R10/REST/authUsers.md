@@ -11,8 +11,8 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 Uma sessão é aberta depois que o usuário é autenticado com sucesso (veja abaixo).
 
->  - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
->  - Em 4D single-user, pode abrir até três sessões REST para fins de teste.
+> - On 4D Server, opening a REST session requires that a free 4D client license is available.<br/>
+> - Em 4D single-user, pode abrir até três sessões REST para fins de teste.
 
 ## Force login mode
 

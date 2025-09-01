@@ -141,11 +141,11 @@ O usuário não vê uma caixa de diálogo, a operação é automática. O objeti
 
 > No caso de uma restauração automática, somente os seguintes elementos são restaurados:
 >
->  - ficheiro .4DD
->  - ficheiro .4DIndx
->  - .4DSyncData file
->  - ficheiro .4DSyncHeader
->  - Pasta External Data
+> - ficheiro .4DD
+> - ficheiro .4DIndx
+> - .4DSyncData file
+> - ficheiro .4DSyncHeader
+> - Pasta External Data
 >
 > Se quiser obter os arquivos anexados ou os arquivos do projeto, você deve realizar uma [restauração manual](restore.md#manually-restoring-a-backup-standard-dialog).
 
