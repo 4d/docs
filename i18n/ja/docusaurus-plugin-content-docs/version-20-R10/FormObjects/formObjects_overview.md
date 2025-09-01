@@ -21,7 +21,7 @@ title: フォームオブジェクト
 - **4D ランゲージ**: [`OBJECT DUPLICATE`](../commands-legacy/object-duplicate.md) or [`OBJECT SET FONT STYLE`](../commands-legacy/object-set-font-style.md) などの、`Objects (Forms)` テーマのコマンドを使用することでフォームオブジェクトを作成し、定義することができます。
 
 - **ダイナミックフォーム内の JSON コード:** JSON を使ってプロパティを定義します。 [type](properties_Object.md#type) プロパティでオブジェクトタイプを定義し、提供されている他の [プロパティ](properties_Reference.md) のうち必要なものを設定します。
-    次はボタンオブジェクトの例です:
+  次はボタンオブジェクトの例です:
 
 ```json
 	{

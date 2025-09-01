@@ -35,9 +35,9 @@ La actividad del proceso es el porcentaje de tiempo que 4D Server ha dedicado a 
 
 - Tipo de proceso (ver abajo),
 - Sesión/Información:
-     - Proceso 4D - en blanco,
-     - Proceso usuario - Nombre del usuario 4D,
-     - Proceso web - ruta URL,
+  - Proceso 4D - en blanco,
+  - Proceso usuario - Nombre del usuario 4D,
+  - Proceso web - ruta URL,
 - Nombre del proceso,
 - Número del proceso (devuelto por el comando [`New process`](../commands-legacy/new-process.md) por ejemplo). El número de proceso es el número asignado en el servidor. En el caso de un proceso global, este número puede ser diferente del asignado en la máquina cliente.
 - Estado actual del proceso,

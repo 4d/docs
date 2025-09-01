@@ -152,7 +152,7 @@ Las siguientes opciones están disponibles:
 
 - **Ninguno**: sin señales
 - **Rectángulo** (por defecto): llaves rodeadas por una línea negra\
-    ![](../assets/en/Preferences/optionsRectangle.png)
+  ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.
 

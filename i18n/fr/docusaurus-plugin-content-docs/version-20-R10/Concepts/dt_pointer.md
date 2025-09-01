@@ -92,14 +92,14 @@ Avec :
 | Inégalité | Pointeur # Pointeur | Boolean  | vPtrA # vPtrC | True   |
 |           |                     |          | vPtrA # vPtrB | False  |
 
-:::warning Null Pointers
+:::warning Pointeurs null
 
 Tenter d'assigner ou de lire un pointeur null (alias "nil") produira une erreur à l'exécution. Par exemple :
 
 ```4d
-var $p : Pointer // non initialized pointer (Nil value)
-$v:=$p-> // error
-$p->:=$v // error
+var $p : Pointer // pointeur non initialisé (Nil)
+$v:=$p-> // erreur
+$p->:=$v // erreur
 ```
 
 Pour éviter de telles erreurs, vous pouvez écrire :
@@ -223,9 +223,9 @@ Si vous devez vous référer au quatrième élément du tableau à l’aide du p
 Vous pouvez passer un pointeur en tant que paramètre d’une méthode. A l’intérieur de la méthode, vous pouvez modifier l’objet référencé par le pointeur. Par exemple, la méthode suivante, `takeTwo`, reçoit deux paramètres qui sont des pointeurs. Elle passe l’objet référencé par le premier paramètre en caractères majuscules, et l’objet référencé par le second paramètre en caractères minuscules.
 
 ```4d
-  //takeTwo project method
-  //$changeUp – Pointer to a string field or variable. Change this to uppercase.
-  //$changeLow – Pointer to a string field or variable. Change this to lowercase.
+  //méthode projet takeTwo
+  //$changeUp – Pointeur vers un champ ou une variable chaine. A mettre en majuscules.
+  //$changeLow – Pointeur vers un champ ou une variable chaine. A mettre en minuscules.
  #DECLARE($changeUp : Pointer ; $changeLow : Pointer)
  $changeUp->:=Uppercase($changeUp->)
  $changeLow->:=Lowercase($changeLow->)
@@ -265,7 +265,7 @@ Voici la description de chaque ligne de l’exemple :
   \--> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui pointe à son tour vers $MyVar.
 - ($PointerTwo->)->:="Goodbye"
   \--> $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
-- ALERTE (($PointerTwo->)->)
+- ALERT (($PointerTwo->)->)
   \--> Même chose : $PointerTwo-> référence le contenu de $PointerOne, qui à son tour fait référence à $MyVar. Par conséquent, ($PointeurDeux->)-> référence le contenu de $MaVar. Donc, dans ce cas, la boîte d'alerte affiche le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :

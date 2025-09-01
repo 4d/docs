@@ -39,8 +39,8 @@ title: VP SET CUSTOM FUNCTIONS
 
 > **警告**
 
->  - `VP SET CUSTOM FUNCTIONS` が呼び出された場合、[VP SET ALLOWED METHODS](vp-set-allowed-methods.md) コマンドにより許可されたメソッド (あれば) は同 4D View Pro エリアにおいて無視されます。
->  - `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
+> - `VP SET CUSTOM FUNCTIONS` が呼び出された場合、[VP SET ALLOWED METHODS](vp-set-allowed-methods.md) コマンドにより許可されたメソッド (あれば) は同 4D View Pro エリアにおいて無視されます。
+> - `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
 ## 例題
 

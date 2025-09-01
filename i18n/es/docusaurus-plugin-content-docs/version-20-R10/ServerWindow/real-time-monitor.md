@@ -17,10 +17,10 @@ La siguiente información se ofrece para cada línea:
 - **Duración** (ms): duración en milisegundos de la operación en curso
 - **Información**: título de la operación.
 - **Detalles**: esta área muestra información detallada que variará en función del tipo de operación seleccionada. En particular:
-     - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
-     - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
-     - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
-     - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
+  - **Creada en**: indica si la operación es el resultado de una acción del cliente (Creada en cliente) o si se inició explícitamente en el servidor mediante un procedimiento almacenado o la opción "Ejecutar en el servidor" (Creada en servidor).
+  - **Detalles de la operación**: tipo de operación y (para las operaciones de consulta) plan de búsqueda.
+  - **Suboperaciones** (si las hay): operaciones dependientes de la operación seleccionada (por ejemplo, eliminar registros relacionados antes que un registro padre).
+  - **Detalles del proceso**: información adicional relativa a la tabla, campo, proceso o cliente, en función del tipo de operación
 
 > La página de monitoreo en tiempo real utiliza el comando [`ACTIVITY SNAPSHOT`](../commands-legacy/activity-snapshot.md) internamente. Puede encontrar más información en la descripción de este comando.
 

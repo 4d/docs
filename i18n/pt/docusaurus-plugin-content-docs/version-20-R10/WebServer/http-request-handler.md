@@ -73,10 +73,10 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 Os padrões de URL podem ser fornecidos como **prefixos** ou usando **expressões regulares**.
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.\
-   Ex: `"regexPattern" : "/docs/**/index.html"`
+  Ex: `"regexPattern" : "/docs/**/index.html"`
 
 - To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Regular expressions patterns are handled directly.
-   Ex: `"regexPattern" : "/docs/.+/index\.html"`
+  Ex: `"regexPattern" : "/docs/.+/index\.html"`
 
 "Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
 

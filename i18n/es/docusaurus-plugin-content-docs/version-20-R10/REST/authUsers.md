@@ -11,8 +11,8 @@ Cuando se abre una sesión de usuario web, puede manejarla a través del objeto 
 
 Una sesión se abre después de que el usuario haya iniciado sesión correctamente (ver más abajo).
 
->  - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
->  - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
+> - En 4D Server, para abrir una sesión REST es necesario disponer de una licencia gratuita cliente 4D.<br/>
+> - En 4D monopuesto, puede abrir hasta tres sesiones REST para realizar pruebas.
 
 ## Forzar el modo de inicio de sesión
 

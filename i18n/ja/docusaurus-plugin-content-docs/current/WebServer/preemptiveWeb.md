@@ -27,20 +27,20 @@ title: プリエンプティブWebプロセスの使用
 - Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
 - Web サービスサーバー: SOAPリクエストを処理します
 - ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
-     - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
-     - if scalable sessions are not enabled:
-         - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-         - for web service processes (server or client), preemptive mode is supported at method level.
+  - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+  - if scalable sessions are not enabled:
+    - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+    - for web service processes (server or client), preemptive mode is supported at method level.
 
 ## スレッドセーフなWebサーバーコードの書き方
 
 Webプロセスをプリエンプティモードで実行するには、Webサーバーで実行されるすべての 4Dコードがスレッドセーフでなければなりません。 [プリエンプティブモードが有効化](#webプロセスにおけるプリエンプティブモードの使用可能状況) されている場合、アプリケーションの以下の部分が 4Dコンパイラーによって自動的に評価されます:
 
 - すべての Web関連データベースメソッド:
-     - [`On Web Authentication`](authentication.md#on-web-authentication)
-     - [`On Web Connection`](httpRequests.md#on-web-connection)
-     - `On REST Authentication`
-     - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+  - [`On Web Authentication`](authentication.md#on-web-authentication)
+  - [`On Web Connection`](httpRequests.md#on-web-connection)
+  - `On REST Authentication`
+  - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 - `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 

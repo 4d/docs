@@ -95,20 +95,20 @@ La page Qodly Studio est disponible lorsque le [serveur WebAdmin est lancé](../
 Il y a deux façons d'accéder à Qodly Studio :
 
 - by selecting the **Qodly Studio...** menu command from the **Design** menu (4D single-user) or the **Window** menu (4D Server).
-    Si le serveur WebAdmin est déjà en cours d'exécution, selon sa configuration, votre navigateur par défaut s'ouvre à l'adresse `IPaddress:HTTPPort/studio` ou `IPaddress:HTTPSPort/studio`. Sinon, vous serez invité à démarrer d'abord le serveur web WebAdmin.
+  Si le serveur WebAdmin est déjà en cours d'exécution, selon sa configuration, votre navigateur par défaut s'ouvre à l'adresse `IPaddress:HTTPPort/studio` ou `IPaddress:HTTPSPort/studio`. Sinon, vous serez invité à démarrer d'abord le serveur web WebAdmin.
 
 - on a browser, with the WebAdmin web server running (launched from 4D or 4D Server), enter the following address:<br/>
-    `IPaddress:HTTPPort/studio`
+  `IPaddress:HTTPPort/studio`
 
-    ou :
+  ou :
 
-    `IPaddress:HTTPSPort/studio`
+  `IPaddress:HTTPSPort/studio`
 
-    Par exemple, après avoir lancé un serveur web local sur le port 7080, saisissez cette adresse dans votre navigateur :
+  Par exemple, après avoir lancé un serveur web local sur le port 7080, saisissez cette adresse dans votre navigateur :
 
-    `localhost:7080/studio`
+  `localhost:7080/studio`
 
-    Vous serez ensuite invité à saisir l'[access key](../Admin/webAdmin.md#access-key) pour accéder à Qodly Studio.
+  Vous serez ensuite invité à saisir l'[access key](../Admin/webAdmin.md#access-key) pour accéder à Qodly Studio.
 
 ## Developing with Qodly Studio
 

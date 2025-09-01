@@ -319,14 +319,14 @@ Valores possíveis: Cadeia de endereços IP. Ambos os formatos de string IPv6 (p
 #### Acerca do suporte IPv6
 
 - **No warning when TCP port is occupied**<br/>
-   When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
+  When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
 
 Se o seu servidor 4D não parecer responder na porta definida, pode testar o endereço [::1] na máquina do servidor (equivalente a 127.0.0.1 para IPv6, adicionar [:portNum] para testar outro número de porta). Se 4D responder, é provável que outro aplicativo esteja usando a porta em IPv4.
 
 - **IPv4-mapped IPv6 addresses**<br/> To standardize processing, 4D provides a standard hybrid representation of IPv4 addresses in IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
 
 - **Indication of port numbers**<br/>
-   Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
+  Since IPv6 notation uses colons (:), adding port numbers may lead to some confusion, for example:
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
@@ -626,8 +626,8 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
 - **Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limitar o número de solicitações por conexão permite que você evite a inundação do servidor devido a um grande número de solicitações recebidas (uma técnica usada por hackers).<p>
-   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
+  The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 - **Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Quando este período acabar, o servidor fecha a conexão.<p>
-   Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
+  Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
 
