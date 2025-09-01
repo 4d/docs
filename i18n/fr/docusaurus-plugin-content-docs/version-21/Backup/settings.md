@@ -138,11 +138,11 @@ Aucune boîte de dialogue n’est présentée à l’utilisateur, l’opération
 
 > En cas de restitution automatique, seuls les éléments suivants sont restitués :
 >
->  - Fichier .4DD
->  - Fichier .4DIndx
->  - Fichier .4DSyncData
->  - Fichier .4DSyncHeader
->  - Dossier External Data
+> - Fichier .4DD
+> - Fichier .4DIndx
+> - Fichier .4DSyncData
+> - Fichier .4DSyncHeader
+> - Dossier External Data
 >
 > Si vous souhaitez obtenir les fichiers joints ou les fichiers de projet, vous devez effectuer une [restauration manuelle](restore.md#manually-restoring-a-backup-standard-dialog).
 

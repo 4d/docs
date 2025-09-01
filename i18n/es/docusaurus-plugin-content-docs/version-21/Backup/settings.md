@@ -139,11 +139,11 @@ El usuario no ve ninguna caja de diálogo; la operación es completamente autom�
 
 > En el caso de una restauración automática, sólo se restauran los siguientes elementos:
 >
->  - archivo .4DD
->  - archivo .4DIndx
->  - archivo .4DSyncData
->  - archivo .4DSyncHeader
->  - Carpeta External Data
+> - archivo .4DD
+> - archivo .4DIndx
+> - archivo .4DSyncData
+> - archivo .4DSyncHeader
+> - Carpeta External Data
 >
 > Si desea obtener los archivos adjuntos o los archivos del proyecto, debe realizar una [restauración manual](restore.md#manually-restoring-a-backup-standard-dialog).
 
