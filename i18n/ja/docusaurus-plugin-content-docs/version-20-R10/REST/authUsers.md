@@ -11,8 +11,8 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions
 
 セッションは、ユーザーが正常にログインした後に開かれます (後述参照)。
 
->  - 4D Server 上では、開かれる RESTセッションにつき、4Dクライアントライセンスが 1 消費されます。<br/>
->  - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
+> - 4D Server 上では、開かれる RESTセッションにつき、4Dクライアントライセンスが 1 消費されます。<br/>
+> - シングルユーザーの 4D では、テスト目的で RESTセッションを 3つまで開くことができます。
 
 ## 強制ログインモード
 

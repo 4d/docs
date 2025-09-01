@@ -390,10 +390,6 @@ Else
 End if
 ```
 
-#### 参照
-
-[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
-
 <!-- END REF -->
 
 <!-- REF SessionClass.id.Desc -->
