@@ -440,7 +440,7 @@ This file is not mandatory but is required to build [notarizeable and stapleable
 
 Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
 
-The folling keys can be defined:
+The following keys can be defined:
 
 |key|description|
 |---|---|
