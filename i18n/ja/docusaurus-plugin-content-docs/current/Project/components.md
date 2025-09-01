@@ -22,8 +22,8 @@ title: コンポーネント
 
 - **インタープリタ版コンポーネント**の場合: 標準の[Project フォルダ](../Project/architecture.md)。 [プロジェクトの**Components** フォルダ](architecture.md#コンポーネント)にインストールする場合には、パッケージフォルダ名の末尾を **.4dbase** にする必要があります。
 - **コンパイル版コンポーネント**の場合:
-     - .4DZ ファイル、*Resources* フォルダ、*Info.plist* ファイルを格納している"Contents" フォルダ(推奨されるアーキテクチャ)
-     - *Resources* などの他のフォルダを格納している.4DZ ファイル。
+  - .4DZ ファイル、*Resources* フォルダ、*Info.plist* ファイルを格納している"Contents" フォルダ(推奨されるアーキテクチャ)
+  - *Resources* などの他のフォルダを格納している.4DZ ファイル。
 
 :::note
 
@@ -345,10 +345,10 @@ The Dependency manager reads each component's own `dependencies.json` file and r
 依存関係パネルを表示するには:
 
 - 4D では、**デザイン/プロジェクト依存関係** メニューアイテムを選択します (開発環境)。<br/>
-    ![dependency-menu](../assets/en/Project/dependency-menu.png)
+  ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
-    ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
+  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 依存関係パネルが表示されます。 依存関係は ABC順にソートされます。
 

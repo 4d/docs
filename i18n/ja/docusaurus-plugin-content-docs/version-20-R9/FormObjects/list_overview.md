@@ -57,26 +57,26 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 他のオブジェクトプロパティ管理コマンドのように、`ListName` 引数で “@” 文字を使用できます。 このシンタックスは、フォーム上の複数のオブジェクトを指定するために使用されます。 しかし階層リストコマンドのコンテキストにおいては、これはすべての場合に適用されるわけではありません。 コマンドのタイプにより、このシンタックスは 2つの異なる効果があります:
 
 - プロパティ設定用のコマンドにおいて、このシンタックスは該当する名前のオブジェクトを対象とします (標準の動作)。 たとえば、引数 "LH@" は、オブジェクト名が "LH" で始まる階層リストを指定します。
-     - `DELETE FROM LIST`
-     - `INSERT IN LIST`
-     - `SELECT LIST ITEMS BY POSITION`
-     - `SET LIST ITEM`
-     - `SET LIST ITEM FONT`
-     - `SET LIST ITEM ICON`
-     - `SET LIST ITEM PARAMETER`
-     - `SET LIST ITEM PROPERTIES`
+  - `DELETE FROM LIST`
+  - `INSERT IN LIST`
+  - `SELECT LIST ITEMS BY POSITION`
+  - `SET LIST ITEM`
+  - `SET LIST ITEM FONT`
+  - `SET LIST ITEM ICON`
+  - `SET LIST ITEM PARAMETER`
+  - `SET LIST ITEM PROPERTIES`
 
 - プロパティ取得用のコマンドにおいて、このシンタックスは該当する名前を持つ最初のオブジェクトを対象とします:
-     - `Count list items`
-     - `Find in list`
-     - `GET LIST ITEM`
-     - `Get list item font`
-     - `GET LIST ITEM ICON`
-     - `GET LIST ITEM PARAMETER`
-     - `GET LIST ITEM PROPERTIES`
-     - `List item parent`
-     - `List item position`
-     - `Selected list items`
+  - `Count list items`
+  - `Find in list`
+  - `GET LIST ITEM`
+  - `Get list item font`
+  - `GET LIST ITEM ICON`
+  - `GET LIST ITEM PARAMETER`
+  - `GET LIST ITEM PROPERTIES`
+  - `List item parent`
+  - `List item position`
+  - `Selected list items`
 
 ## 階層リストに対し利用できる汎用コマンド
 
@@ -120,8 +120,8 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 
 1. 項目をユニーク値で識別する必要がない場合 (初心者レベル)
 
-    - 最初の例として、アドレスブックで使用するタブシステムを構築するとします。 システムは選択されたタブの番号を返すので、それ以上の情報は必要ありません。 この場合、項目参照番号について心配する必要はありません。0以外の値を *itemRef* に渡します。 なお、アドレスブックシステムの場合、デザインモードで A-Z のリストを定義することもできる点に留意してください。 また、プログラムを使えば、レコードがない文字を除いたリストを作成することもできます。
-    - 2つ目の例は、データベースを利用すると同時に蓄積していくタイプのキーワードリストを考えます。 このリストはセッション終了時に `SAVE LIST` や `LIST TO BLOB` コマンドで保存され、セッション開始時に `Load list` や `BLOB to list` コマンドで再度読み込まれます。 このリストをフローティングパレットに表示し、ユーザーがキーワードをクリックすると、最前面のプロセスの選択されたエリアに項目テキストが挿入されます。 重要なのは、`Selected list items` コマンドは選択項目の位置を返すため、選択された項目のみを扱うということです。 この位置情報を `GET LIST ITEM` コマンドに渡せば、項目テキストが取得できます。 この例でも、個々の項目を識別する必要がないため、リスト構築の際は *itemRef* 引数に 0以外の任意の数値を渡すことができます。
+   - 最初の例として、アドレスブックで使用するタブシステムを構築するとします。 システムは選択されたタブの番号を返すので、それ以上の情報は必要ありません。 この場合、項目参照番号について心配する必要はありません。0以外の値を *itemRef* に渡します。 なお、アドレスブックシステムの場合、デザインモードで A-Z のリストを定義することもできる点に留意してください。 また、プログラムを使えば、レコードがない文字を除いたリストを作成することもできます。
+   - 2つ目の例は、データベースを利用すると同時に蓄積していくタイプのキーワードリストを考えます。 このリストはセッション終了時に `SAVE LIST` や `LIST TO BLOB` コマンドで保存され、セッション開始時に `Load list` や `BLOB to list` コマンドで再度読み込まれます。 このリストをフローティングパレットに表示し、ユーザーがキーワードをクリックすると、最前面のプロセスの選択されたエリアに項目テキストが挿入されます。 重要なのは、`Selected list items` コマンドは選択項目の位置を返すため、選択された項目のみを扱うということです。 この位置情報を `GET LIST ITEM` コマンドに渡せば、項目テキストが取得できます。 この例でも、個々の項目を識別する必要がないため、リスト構築の際は *itemRef* 引数に 0以外の任意の数値を渡すことができます。
 
 2. 部分的にリスト項目を識別する必要がある場合 (中級者レベル)\
    その項目を処理する際に必要となる情報をあらかじめ項目参照番号に格納することができます。この例は`APPEND TO LIST` コマンドの例題で説明しています。 この例題では、項目参照番号にレコード番号を格納しています。 また、[Department] レコード由来の項目と [Employees] レコード由来の項目を区別する必要があり、この点も例題にて説明されています。

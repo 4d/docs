@@ -27,20 +27,20 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
 - ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
-     - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
-     - if scalable sessions are not enabled:
-         - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-         - for web service processes (server or client), preemptive mode is supported at method level.
+  - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+  - if scalable sessions are not enabled:
+    - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+    - for web service processes (server or client), preemptive mode is supported at method level.
 
 ## Ecrire du code serveur Web thread-safe
 
 Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souhaitez que les process Web soient lancés en mode préemptif. Lorsque l'option [Utiliser des process préemptifs](#availability-of-preemptive-mode-for-web-processes) est cochée dans le dialogue des Propriétés, les parties de l'application listées ci-dessous sont automatiquement évaluées par 4D Compiler :
 
 - Toutes les méthodes base liées au web :
-     - [`On Web Authentication`](authentication.md#on-web-authentication)
-     - [`On Web Connection`](httpRequests.md#on-web-connection)
-     - `On REST Authentication`
-     - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+  - [`On Web Authentication`](authentication.md#on-web-authentication)
+  - [`On Web Connection`](httpRequests.md#on-web-connection)
+  - `On REST Authentication`
+  - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) et [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 - La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
 

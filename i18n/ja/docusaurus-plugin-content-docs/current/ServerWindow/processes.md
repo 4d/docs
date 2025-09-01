@@ -35,9 +35,9 @@ title: プロセスページ
 
 - プロセスタイプ (後述)
 - セッション/情報:
-     - 4Dプロセス - 空白
-     - ユーザープロセス - 4Dユーザー名
-     - Webプロセス - URLパス
+  - 4Dプロセス - 空白
+  - ユーザープロセス - 4Dユーザー名
+  - Webプロセス - URLパス
 - プロセス名
 - Number of the process (as returned by the [`New process`](../commands-legacy/new-process.md) command for example). プロセス番号はサーバー上で割り当てられる番号です。 グローバルプロセスの場合、この番号はクライアントマシン上で割り当てられた番号と異なる場合があります。
 - プロセスの現在の状況

@@ -43,7 +43,7 @@ Si el formulario actual se está mostrando o cargando mediante una llamada a los
 Si el formulario actual es un subformulario, el objeto devuelto depende de la variable contenedor padre:
 
 - Si la variable asociada al contenedor padre ha sido tipificada como objeto, **Form** devuelve el valor de esta variable.\
-    En este caso, el objeto devuelto por **Form** es el mismo que el devuelto por la siguiente expresión:
+  En este caso, el objeto devuelto por **Form** es el mismo que el devuelto por la siguiente expresión:
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  

@@ -152,7 +152,7 @@ As opções abaixo estão disponíveis:
 
 - **Ninguno**: sin señales
 - **Retângulo** (padrão): braces cercadas por uma linha preta\
-    ![](../assets/en/Preferences/optionsRectangle.png)
+  ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.
 

@@ -319,15 +319,15 @@ Valores possíveis: cadeia de endereços IP. Ambos os formatos de string IPv6 (p
 #### Acerca do suporte IPv6
 
 - **Sem aviso quando a porta TCP estiver ocupada**<br/>
-   Quando o servidor estiver definido para responder em "Qualquer" endereços IP, se a porta TCP estiver sendo usada por outra aplicação, isso não é indicado quando o servidor é iniciado. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
+  Quando o servidor estiver definido para responder em "Qualquer" endereços IP, se a porta TCP estiver sendo usada por outra aplicação, isso não é indicado quando o servidor é iniciado. Na verdade, o servidor 4D não detecta nenhum erro neste caso porque a porta permanece gratuita no endereço IPv6. No entanto, não é possível acessá-lo usando o endereço IPv4 da máquina, nem através do endereço local: 127.0.0.1.
 
 Se o seu servidor 4D não parecer responder na porta definida, pode testar o endereço [::1] na máquina do servidor (equivalente a 127.0.0.1 para IPv6, adicionar [:portNum] para testar outro número de porta). Se 4D responder, é provável que outro aplicativo esteja usando a porta em IPv4.
 
 - **Endereços IPv6 mapeados**<br/>
-   Para padronizar o processamento, 4D fornece uma representação híbrida padrão de endereços IPv4 em IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
+  Para padronizar o processamento, 4D fornece uma representação híbrida padrão de endereços IPv4 em IPv6. Esses endereços são escritos com um prefixo de 96 bits no formato IPv6, seguido de 32 bits escritos na notação ponto-decimal do IPv4. Por exemplo, ::ffff:192.168.2.34 representa o endereço IPv4 192.168.2.34.
 
 - **Indicação dos números da porta**<br/>
-   Dado que a notação IPv6 usa dois-pontos (:), adicionar números de portas pode causar alguma confusão, por exemplo:
+  Dado que a notação IPv6 usa dois-pontos (:), adicionar números de portas pode causar alguma confusão, por exemplo:
 
 ```code4d
 	2001:0DB8::85a3:0:ac1f:8001 // endereço IPv6
@@ -627,8 +627,8 @@ Em alguns casos, outras funções internas otimizadas podem ser invocadas. As li
 Duas opções permitem que você defina como funcionam as conexões persistentes:
 
 - **Número de solicitações por conexão**: permite definir o número máximo de solicitações e respostas que podem trafegar em uma conexão keep alive. Limitar o número de solicitações por conexão permite que você evite a inundação do servidor devido a um grande número de solicitações recebidas (uma técnica usada por hackers).<p>
-   The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
+  The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 - **Timeout**: esse valor define o período máximo de espera (em segundos) durante o qual o servidor da Web mantém uma conexão TCP aberta sem receber nenhuma solicitação do navegador da Web. Quando este período acabar, o servidor fecha a conexão.<p>
-   Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
+  Se o navegador da web enviar um pedido depois que a conexão for fechada, uma nova conexão TCP será criada automaticamente. Esta operação não é visível para o usuário.</p>
 

@@ -152,7 +152,7 @@ Les options suivantes sont disponibles :
 
 - **Aucun** : Aucun signal
 - **Rectangle** (default): Braces surrounded by a black line\
-    ![](../assets/en/Preferences/optionsRectangle.png)
+  ![](../assets/en/Preferences/optionsRectangle.png)
 - **Couleur de fond** : Caractères mis en surbrillance (la couleur est définie dans la page [Thème](thèmes)).
 - **Gras** : caractères affichés en gras.
 

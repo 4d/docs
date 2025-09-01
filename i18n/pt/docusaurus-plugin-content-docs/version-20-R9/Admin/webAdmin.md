@@ -110,7 +110,7 @@ A configuração de uma chave de acesso é obrigatória para desbloquear o acess
 Uma chave de acesso é parecida a uma senha, mas não está associada com um login.
 
 - Para definir uma nova chave de acesso: clique no botão **Definir**, introduza a string da chave de acesso na caixa de diálogo e clique em **OK**. La etiqueta del
-    botón se convierte en **Modificar**.
+  botón se convierte en **Modificar**.
 - Para modificar a chave de acesso: clique no botão **Modificar**, introduza a nova string da chave de acesso na caixa de diálogo e clique em **OK**.
 - Para eliminar a chave de acesso: clique no botão**Modificar**, deixe vazia a área daa chave de acesso e clique em **OK**.
 

@@ -5,15 +5,6 @@ title: Session
 
 Les objets de session sont retournés par la commande [`Session`](../commands/session.md). Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](../ORDA/privileges.md).
 
-:::info To learn more
-
-Blog posts about this feature:
-
-- [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
-
-:::
-
 ### Types de sessions
 
 Les types de sessions suivants sont pris en charge par cette classe :
@@ -317,10 +308,6 @@ Else
 
 End if
 ```
-
-#### Voir également
-
-[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 
