@@ -100,6 +100,7 @@ Dans les bases de données binaires, vous devez sélectionner les composants req
 - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+- The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
 
 #### Developer Preview
 
