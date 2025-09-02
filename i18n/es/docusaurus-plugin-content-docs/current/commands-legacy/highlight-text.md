@@ -18,13 +18,13 @@ displayed_sidebar: docs
 
 ## Descripción 
 
-<!--REF #_command_.HIGHLIGHT TEXT.Summary-->El comando HIGHLIGHT TEXT selecciona una parte de texto en *objeto*.<!-- END REF-->  
+<!--REF #_command_.HIGHLIGHT TEXT.Summary-->El comando `HIGHLIGHT TEXT` selecciona una parte de texto en *objeto*.<!-- END REF-->  
   
 Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nombre de un objeto (una cadena) Si no pasa el parámetro \*, indica que el parámetro *objeto* es un campo o una variable. En este caso, pase la referencia del campo o de la variable (campos o variables de formulario únicamente) en lugar de una cadena.  
 
 Si *objeto* no es el objeto que está siendo modificado, esta área recupera el foco.
 
-**Nota:** este comando no puede utilizarse con campos en un subformulario.  
+El comando `HIGHLIGHT TEXT` puede utilizarse en el contexto de un subformulario. Cuando se llama desde un subformulario, primero busca el objeto en el subformulario y, si no encuentra nada allí, amplía la búsqueda a los objetos del formulario principal. 
   
 El parámetro *inicioSel* representa la posición del primer carácter a seleccionar, y el parámetro *finSel* representa la posición del último carácter a seleccionar más uno. Si *inicioSel* y *finSel* son iguales, el punto de inserción está ubicado antes del carácter especificado por *inicioSel*, y ningún carácter está seleccionado.
 
