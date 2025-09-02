@@ -71,7 +71,7 @@ This example illustrates the use of wk inside and wk outside constants:
  WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
 ```
 
-Assuming all of the contents were selected, the result is:
+Suponiendo que se hayan seleccionado todos los contenidos, el resultado es:
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
