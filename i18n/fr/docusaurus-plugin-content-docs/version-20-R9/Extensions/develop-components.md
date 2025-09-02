@@ -27,13 +27,13 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 Hormis les [commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
-When commands are called from a component, they are executed in the context of the component, except for the [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) or [`EXECUTE METHOD`](../commands-legacy/execute-method.md) command that use the context of the method specified by the command. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
+Lorsque des commandes sont appelées à partir d'un composant, elles sont exécutées dans le contexte du composant, à l'exception de la commande [`EXECUTE FORMULA`](../commands-legacy/execute-formula.md) ou [`EXECUTE METHOD`](../commands-legacy/execute-method.md) qui utilisent le contexte de la méthode spécifiée par la commande. A noter également que les commandes de lecture du thème “Utilisateurs et groupes” sont utilisables depuis un composant mais lisent les utilisateurs et les groupes du projet hôte (un composant n’a pas d’utilisateurs et groupes propres).
 
-The [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) and [`Get database parameter`](../commands-legacy/get-database-parameter.md) commands are an exception: their scope is global to the application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
+Les commandes [`SET DATABASE PARAMETER`](../commands-legacy/set-database-parameter.md) et [`Get database parameter`](../commands-legacy/get-database-parameter.md) sont une exception : leur portée est globale à l'application. Lorsque ces commandes sont appelées depuis un composant, elles s’appliquent au projet d'application hôte.
 
 Par ailleurs, des dispositions spécifiques sont définies pour les commandes `Structure file` et `Get 4D folder` lorsqu’elles sont utilisées dans le cadre des composants.
 
-The [`COMPONENT LIST`](../commands-legacy/component-list.md) command can be used to obtain the list of components that are loaded by the host project.
+La commande [`COMPONENT LIST`](../commands-legacy/component-list.md) permet d'obtenir la liste des composants chargés par le projet hôte.
 
 ### Commandes non utilisables
 
@@ -141,9 +141,9 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 > Les fonctions non cachées à l'intérieur d'une classe cachée apparaissent comme des suggestions lorsque vous utilisez la complétion de code avec une classe qui en [hérite](../Concepts/classes.md#inheritance). Par exemple, si un composant possède une classe `Teacher` qui hérite d'une classe `_Person`, la complétion de code pour `Teacher` suggère des fonctions non cachées de `_Person`.
 
-## Editing components from the host
+## Modification des composants à partir de l'hôte
 
-To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. The component code is editable when the following conditions are met:
+To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component from an interpreted host project. Le code du composant est modifiable lorsque les conditions suivantes sont remplies :
 
 - the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components),
 - the component is not loaded from the [local cache of the Dependency manager](../Project/components.md#local-cache-for-dependencies), i.e. it is not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency).
@@ -372,28 +372,28 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
+Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#loading-components).
 
 :::note
 
-This file is not mandatory but is required to build [notarizeable and stapleable](../Desktop/building.md#about-notarization) components for macOS. It is thus automatically created at the [build step](../Desktop/building.md#build-component) if it does not already exist. Note that some keys can be set using a buildApp XML key (see [Build component](../Desktop/building.md#build-component)).
+Ce fichier n'est pas obligatoire mais il est nécessaire pour construire des composants [notarisables et stapleable](../Desktop/building.md#about-notarization) pour macOS. Il est donc automatiquement créé à l'[étape de construction](../Desktop/building.md#build-component) s'il n'existe pas déjà. Notez que certaines clés peuvent être définies à l'aide d'une clé XML buildApp (voir [Générer un composant](../Desktop/building.md#build-component)).
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#loading-components) sur toutes les plates-formes.
 
-The folling keys can be defined:
+Les clés suivantes peuvent être définies :
 
-| key                                                        | Description                                                                                                                                                         |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| CFBundleName                                               | Component name (internal)                                                                                                                        |
-| CFBundleDisplayName                                        | Component name to display                                                                                                                                           |
-| NSHumanReadableCopyright                                   | Copyright to display                                                                                                                                                |
-| CFBundleVersion                                            | Version of the component                                                                                                                                            |
-| CFBundleShortVersionString                                 | Version of the component to display                                                                                                                                 |
-| com.4d.minSupportedVersion | Minimum supported 4D version, used by the Dependency manager for [component versions following 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
+| key                                                        | Description                                                                                                                                                                                    |
+| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CFBundleName                                               | Nom du composant (interne)                                                                                                                                                  |
+| CFBundleDisplayName                                        | Nom du composant à afficher                                                                                                                                                                    |
+| NSHumanReadableCopyright                                   | Copyright à afficher                                                                                                                                                                           |
+| CFBundleVersion                                            | Version du composant                                                                                                                                                                           |
+| CFBundleShortVersionString                                 | Version du composant à afficher                                                                                                                                                                |
+| com.4d.minSupportedVersion | Version 4D minimale prise en charge, utilisée par le Gestionnaire de dépendances pour les [versions de composants suivant 4D](../Project/components.md#naming-conventions-for-4d-version-tags) |
 
-Here is an example of `Info.plist` file:
+Voici un exemple de fichier `Info.plist` :
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -415,7 +415,7 @@ Here is an example of `Info.plist` file:
 </plist>
 ```
 
-On macOS, information is available from the finder:
+Sous macOS, les informations sont disponibles dans le Finder :
 
 ![](../assets/en/Develop/infoplist-component.png)
 
@@ -432,6 +432,6 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 - Les méthodes projet, classes et fonctions partagées peuvent être appelées dans les méthodes du projet hôte et sont également visibles dans la page Méthodes de l'explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
-## Sharing your components on GitHub
+## Partager vos composants sur GitHub
 
 Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.

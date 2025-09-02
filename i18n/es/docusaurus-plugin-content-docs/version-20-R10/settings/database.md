@@ -25,7 +25,7 @@ Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modifi
 
 #### Auto UUID version
 
-[UUID version](https://en.wikipedia.org/wiki/Universally_unique_identifier) to use for 4D fields with [automatic UUID generation option](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Available values are **4** (default) and **7**.
+[UUID version](https://en.wikipedia.org/wiki/Universally_unique_identifier) to use for 4D fields with [automatic UUID generation option](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Los valores disponibles son **4** (por defecto) y **7**.
 
 This setting only applies to UUIDs generated afterwards. Already saved auto UUIDs fields are not recomputed.
 

@@ -69,7 +69,7 @@ Event functions accept a single *event* object as parameter. When the function i
 
 | Nombre de propiedad | Disponibilidad                               | Tipo   | Descripción                                                                 |
 | :------------------ | :------------------------------------------- | :----- | :-------------------------------------------------------------------------- |
-| `kind`              | siempre                                      | String | Event name ("touched")                                   |
+| `kind`              | siempre                                      | String | Nombre del evento ("touched")                            |
 | *attributeName*     | Sólo para eventos que involucran un atributo | String | Nombre del atributo (por ejemplo, "nombre")              |
 | *dataClassName*     | siempre                                      | String | Nombre de la Dataclass (*ej.* "Company") |
 

@@ -7,21 +7,21 @@ title: OBJECT SET DATA SOURCE FORMULA
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 
-| Parámetros | Tipo                       |                             | Descripción                                                                                                        |
-| ---------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| \*         | Operador                   | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable   |
-| object     | any                        | &#8594; | Object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                             |
+| Parámetros | Tipo                       |                             | Descripción                                                                                                                |
+| ---------- | -------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador                   | &#8594; | Si se especifica, object es un nombre de objeto (cadena)<br/>Si se omite, object es un campo o variable |
+| object     | any                        | &#8594; | Nombre del objeto (si se especifica \*) o<br/>Campo o variable (si se omite \*)      |
+| formula    | 4D.Formula | &#8594; | Fórmula a asignar como fuente de datos                                                                                     |
 
 <!-- END REF-->
 
 ## Descripción
 
-The **OBJECT SET DATA SOURCE FORMULA** command <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary-->  assigns a formula (expression) as the data source of the object(s) designated by the *object* and *\** parameters <!-- END REF-->. The formula must be provided as a [`4D.Formula`](../API/FunctionClass.md#formula-objects) object.
+El comando **OBJECT SET DATA SOURCE FORMULA** <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Summary--> asigna una fórmula (expresión) como fuente de datos del objeto u objetos designados por los parámetros *object* y *\** <!-- END REF-->. La fórmula debe proporcionarse como un objeto [`4D.Formula`](../API/FunctionClass.md#formula-objects).
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Pasar el parámetro opcional *\** indica que el parámetro *object* es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *object* es un campo o variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto de formulario).
 
-The *formula* acts as the source from which the object retrieves its value at runtime. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
+*fformula* actúa como la fuente de la que el objeto recupera su valor en ejecución. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
 
 If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to a [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).
 
@@ -36,7 +36,7 @@ If the command is applied to an object that does not exist or cannot support for
 
 ## Ejemplo
 
-Desea vincular dinámicamente una entrada a una expresión. For example, show the discounted price based on a base price and a discount value:
+Desea vincular dinámicamente una entrada a una expresión. Por ejemplo, muestre el precio con descuento basado en un precio base y un valor de descuento:
 
 ```4d
 
