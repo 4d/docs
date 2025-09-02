@@ -9,7 +9,7 @@ The `TCPEvent` class provides information about events occurring during the life
 
 | Lanzamiento | Modificaciones                      |
 | ----------- | ----------------------------------- |
-| 20 R9       | New `address` and `port` attributes |
+| 20 R9       | Nuevos atributos `address` y `port` |
 | 20 R8       | Clase añadida                       |
 
 </details>

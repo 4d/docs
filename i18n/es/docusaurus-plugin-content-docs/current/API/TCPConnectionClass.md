@@ -181,7 +181,7 @@ En el parámetro *options*, pase un objeto que puede contener las siguientes pro
 | onTerminate       | Formula | Retrollamada activada justo antes de que se libere la TCPConnection                                                                            | Indefinido                                 |
 | noDelay           | Boolean | **Sólo lectura** cesactiva el algoritmo de Nagle si `true`                                                                                     | False                                      |
 | connectionTimeout | Real    | Tiempo máximo (en segundos) para establecer la conexión. Si se supera, se interrumpe el intento de conexión | Definido por el sistema, generalmente ≥ 30 |
-| TLS               | Boolean | Enables TLS encryption for connections                                                                                                         | False                                      |
+| TLS               | Boolean | Activa el cifrado TLS para las conexiones                                                                                                      | False                                      |
 
 #### Función callback (retrollamada)
 
