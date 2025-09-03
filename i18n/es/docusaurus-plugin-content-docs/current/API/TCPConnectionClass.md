@@ -181,7 +181,7 @@ En el parámetro *options*, pase un objeto que puede contener las siguientes pro
 | onTerminate       | Formula | Retrollamada activada justo antes de que se libere la TCPConnection                                                                            | Indefinido                                 |
 | noDelay           | Boolean | **Sólo lectura** cesactiva el algoritmo de Nagle si `true`                                                                                     | False                                      |
 | connectionTimeout | Real    | Tiempo máximo (en segundos) para establecer la conexión. Si se supera, se interrumpe el intento de conexión | Definido por el sistema, generalmente ≥ 30 |
-| TLS               | Boolean | Enables TLS encryption for connections                                                                                                         | False                                      |
+| TLS               | Boolean | Activa el cifrado TLS para las conexiones                                                                                                      | False                                      |
 
 #### Función callback (retrollamada)
 
@@ -197,8 +197,8 @@ Todas las funciones de retrollamada reciben dos parámetros:
 1. `onConnection` se activa cuando se establece la conexión.
 2. `onData` se activa cada vez que se reciben datos.
 3. Se activa `onShutdown` o `onError`:
-    - `onShutdown` se activa cuando la conexión se cierra correctamente.
-    - `onError` se activa si se produce un error.
+   - `onShutdown` se activa cuando la conexión se cierra correctamente.
+   - `onError` se activa si se produce un error.
 4. `onTerminate` siempre se activa justo antes de que la TCPConnection se libere (la conexión se cierra o se produce un error).
 
 #### Objeto TCPEvent

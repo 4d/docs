@@ -189,8 +189,8 @@ The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -
 1. `onConnection` は接続が確立した時にトリガーされます。
 2. `onData` はデータが受信されるたびにトリガーされます。
 3. `onShutdown` または `onError` はそれぞれ以下の場合にトリガーされます:
-    - `onShutdown` は接続が適切に閉じられた時にトリガーされます。
-    - `onError` はエラーが発生した場合にトリガーされます。
+   - `onShutdown` は接続が適切に閉じられた時にトリガーされます。
+   - `onError` はエラーが発生した場合にトリガーされます。
 4. `onTerminate` は常にTCPConnection がリリースされる直前にトリガーされます(接続が閉じられたか、エラーが発生した場合です)。
 
 #### TCPEvent オブジェクト

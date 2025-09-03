@@ -71,7 +71,7 @@ This example illustrates the use of wk inside and wk outside constants:
  WP SET ATTRIBUTES($wpRange;wk border color+wk outside;"#00FA9A")
 ```
 
-Assuming all of the contents were selected, the result is:
+Suponiendo que se hayan seleccionado todos los contenidos, el resultado es:
 
 ![](../../assets/en/WritePro/commands/pict2821715.en.png)
 
@@ -114,13 +114,13 @@ El resultado es:
 
 :::note
 
-The paper box value is only applicable to documents and sections.
+El valor paper box sólo es aplicable a documentos y secciones.
 
 :::
 
 ## Ejemplo 4
 
-You want to set tabs at varying intervals and designate a character as the leading character for the last tab:
+Desea definir tabulaciones a intervalos variables y designar un caracter como caracter principal de la última tabulación:
 
 ```4d
  $tab1:=New object()

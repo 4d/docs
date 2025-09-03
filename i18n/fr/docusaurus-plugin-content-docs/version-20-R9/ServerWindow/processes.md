@@ -35,9 +35,9 @@ L’activité du process est le pourcentage du temps que 4D Server a consacré �
 
 - Type de process (cf. ci-dessous),
 - Session:
-     - Process 4D - vide,
-     - Process utilisateur - nom de l'utilisateur 4D,
-     - Process web - chemin URL,
+  - Process 4D - vide,
+  - Process utilisateur - nom de l'utilisateur 4D,
+  - Process web - chemin URL,
 - Nom du process,
 - Number of the process (as returned by the [`New process`](../commands-legacy/new-process.md) command for example). Le numéro du process est le numéro attribué sur le serveur. Dans le cas d’un process global, ce numéro peut être différent de celui attribué sur le poste client.
 - Etat courant du process,

@@ -110,7 +110,7 @@ La configuración de una llave de acceso es obligatoria para desbloquear el acce
 Una llave de acceso es similar a una contraseña pero no está asociada a un inicio de sesión.
 
 - Para definir una nueva llave de acceso: haga clic en el botón **Definir**, introduzca la cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**. La etiqueta del
-    botón se convierte en **Modificar**.
+  botón se convierte en **Modificar**.
 - Para modificar la llave de acceso: haga clic en el botón **Modificar**, introduzca la nueva cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**.
 - Para eliminar la llave de acceso: haga clic en el botón **Modificar**, deje vacía el área de la llave de acceso y haga clic en **OK**.
 

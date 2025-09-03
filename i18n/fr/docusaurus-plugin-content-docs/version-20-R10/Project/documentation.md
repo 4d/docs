@@ -35,25 +35,25 @@ Tous les fichiers de documentation sont stockés dans le dossier `Documentation`
 L'architecture du dossier `Documentation` est la suivante :
 
 - `Documentation`
-     - `Classes`
-         - myClass.md
-     - `DatabaseMethods`
-         - onStartup.md
-         - ...
-     - `Formulaires`
-         - loginDial.md
-         - ...
-     - `Methods`
-         - myMethod.md
-         - ...
-     - `TableForms`
-         - **1**
-             - input.md
-             - ...
-         - ...
-     - `Les Triggers`
-         - table1.md
-         - ...
+  - `Classes`
+    - myClass.md
+  - `DatabaseMethods`
+    - onStartup.md
+    - ...
+  - `Formulaires`
+    - loginDial.md
+    - ...
+  - `Methods`
+    - myMethod.md
+    - ...
+  - `TableForms`
+    - **1**
+      - input.md
+      - ...
+    - ...
+  - `Les Triggers`
+    - table1.md
+    - ...
 
 - Un formulaire projet et sa méthode de formulaire projet partagent le même fichier de documentation pour le formulaire et la méthode.
 
@@ -103,8 +103,8 @@ Si un fichier nommé`\<MethodName>.md` existe dans le dossier `\<package>/docume
 - Tout texte saisi dans une balise de commentaire HTML (`<!-- documentation commande -->`) en haut du fichier markdown.
 
 - Ou, si aucune balise de commentaire html n'est utilisée, la première phrase après une balise `# Description` du fichier markdown.\
-    Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par l'analyseur de code de 4D.\
-    Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par l'analyseur de code de 4D.
+  Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par l'analyseur de code de 4D.\
+  Dans ce cas, la première ligne contient le **prototype** de la méthode, généré automatiquement par l'analyseur de code de 4D.
 
 :::note
 

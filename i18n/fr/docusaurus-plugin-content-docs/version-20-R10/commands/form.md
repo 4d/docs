@@ -43,7 +43,7 @@ Si le formulaire courant est affiché ou chargé par un appel aux commandes [DIA
 Si le formulaire courant est un sous-formulaire, l'objet renvoyé dépend de la variable du conteneur parent :
 
 - **Form** retourne l'objet associé au formulaire table affiché à l'écran.\
-    Dans le contexte d'un formulaire de saisie affiché à partir d'un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
+  Dans le contexte d'un formulaire de saisie affiché à partir d'un formulaire de sortie (c'est-à-dire après un double-clic sur un enregistrement), l'objet retourné contient la propriété suivante :
 
 ```4d
  (OBJECT Get pointer(Object subform container))->  

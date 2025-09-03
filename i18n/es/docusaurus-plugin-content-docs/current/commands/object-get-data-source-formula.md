@@ -7,28 +7,28 @@ title: OBJECT Get data source formula
 
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 
-| Parámetros | Tipo                       |                             | Descripción                                                                                                        |
-| ---------- | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| \*         | Operador                   | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a field or variable   |
-| object     | any                        | &#8594; | Object name (if \* is specified) or<br/>Field or variable (if \* is omitted) |
-| formula    | 4D.Formula | &#8592; | Formula associated with the form object (`Null` if no formula is associated)                    |
+| Parámetros | Tipo                       |                             | Descripción                                                                                                                |
+| ---------- | -------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| \*         | Operador                   | &#8594; | Si se especifica, object es un nombre de objeto (cadena)<br/>Si se omite, object es un campo o variable |
+| object     | any                        | &#8594; | Nombre del objeto (si se especifica \*) o<br/>Campo o variable (si se omite \*)      |
+| formula    | 4D.Formula | &#8592; | Fórmula asociada al objeto formulario (`Null` si no hay fórmula asociada)                               |
 
 <!-- END REF-->
 
 ## Descripción
 
-The **OBJECT Get data source formula** command<!--REF #_command_.OBJECT Get data source formula.Summary--> returns the formula (if any) associated object(s) designated by the *object* and *\** parameters.<!-- END REF-->
+El comando **OBJECT Get data source formula**<!--REF #_command_.OBJECT Get data source formula.Summary--> devuelve la(s) fórmula(s) asociada(s) a los objetos designados por los parámetros *object* y *\**.<!-- END REF-->
 
-Passing the optional *\** parameter indicates that the *object* parameter is an object name (string). If you do not pass this parameter, it indicates that the *object* parameter is a field or variable. In this case, you pass a field or variable reference instead of a string (field or variable object only).
+Pasar el parámetro opcional *\** indica que el parámetro *object* es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *object* es un campo o variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto de formulario).
 
-When a formula is associated with a form object, it acts as the object's data source at runtime.
+Cuando una fórmula está asociada a un objeto de formulario, actúa como fuente de datos del objeto en tiempo de ejecución.
 
-If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).\
-If the object does not exist or does not support formulas, it returns `Null`.
+Si este comando se aplica a un objeto sin fórmula personalizada asignada, devuelve la [variable dinámica de formulario] asignada automáticamente(../FormObjects/properties_Object.md#dynamic-variables).\
+Si el objeto no existe o no admite fórmulas, devuelve `Null`.
 
 ## Ejemplo
 
-You want check what formula (if any) is bound to an object:
+Desea comprobar qué fórmula (si la hay) está vinculada a un objeto:
 
 ```4d
 $formula:=OBJECT Get data source formula(*; "myInput")

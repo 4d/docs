@@ -52,8 +52,8 @@ O 4D Server usa três portas TCP para comunicações entre servidores internos e
 - **SQL Server**: 19812 por defecto (puede modificarse a través de la página "SQL/Configuración" de las Preferencias).
 - **Application Server**: 19813 by default (can be modified via the "Client-Server/Configuration" page of the Preferences, see above).
 - **DB4D Server** (servidor de banco de dados): 19814 por padrão. This port number cannot be modified directly but it always consists of the application server port number + 1.\
-    When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
-    Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+  When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
+  Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 - [**Depurador remoto**](../Debugging/debugging-remote.md): 19815 por padrão. This port number cannot be modified directly but it always consists of the application server port number + 2.
 
 #### Autenticação do usuário com o servidor de domínio
@@ -72,17 +72,17 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
 - **ServerNet** (por padrão): ativa a camada de rede ServerNet no servidor (disponível desde 4D v15).
 - **QUIC** (disponible solo en modo proyecto): activa la capa de red QUIC en el servidor.
 
-    **Notas**:
+  **Notas**:
 
-     - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
-     - Você pode saber se uma aplicação 4D está sendo executado com uma camada de rede QUIC usando o comando [Application info](../commands-legacy/application-info.md).
-     - Como o QUIC usa o protocolo UDP, certifique-se de que o UDP seja permitido em suas configurações de segurança de rede.
-     - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
-     - Quando a opção de camada QUIC é selecionada:
-         - Uma mensagem beta e um ícone de alerta são exibidos perto do seletor.
-         - [As configurações de tempo limite das conexões cliente-servidor](#client-server-connections-timeout) estão ocultas
-         - A caixa de seleção [Criptografar a comunicação entre cliente e servidor](#encrypt-client-server-communications) está oculta (as comunicações QUIC são sempre em TLS, seja qual for o seu modo de segurança).
-     - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
+  - Al seleccionar esta opción, se anula la opción Utilizar capa de red heredada en caso de que se haya definido mediante el comando [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md).
+  - Você pode saber se uma aplicação 4D está sendo executado com uma camada de rede QUIC usando o comando [Application info](../commands-legacy/application-info.md).
+  - Como o QUIC usa o protocolo UDP, certifique-se de que o UDP seja permitido em suas configurações de segurança de rede.
+  - O QUIC liga-se automaticamente à porta 19813 tanto para o servidor de aplicações como para o servidor DB4D.
+  - Quando a opção de camada QUIC é selecionada:
+    - Uma mensagem beta e um ícone de alerta são exibidos perto do seletor.
+    - [As configurações de tempo limite das conexões cliente-servidor](#client-server-connections-timeout) estão ocultas
+    - A caixa de seleção [Criptografar a comunicação entre cliente e servidor](#encrypt-client-server-communications) está oculta (as comunicações QUIC são sempre em TLS, seja qual for o seu modo de segurança).
+  - **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
 
 :::note
 
@@ -113,7 +113,7 @@ This setting can be used to globally set the updating mode for the local instanc
 - **Nunca**: a pasta local **Resources** não é atualizada durante a sessão. A notificação enviada pelo servidor é ignorada. A pasta local **Resources** pode ser atualizada manualmente com o comando do menu de ação **Update Local Resources** (consulte [Usando o explorador de recursos](https://doc.4d.com/4Dv20/4D/20.2/Using-the-Resources-explorer.300-6750254.en.html)).
 - **Always**: The synchronization of the local **Resources** folder is automatically carried out during the session whenever notification is sent by the server.
 - **Ask**: When the notification is sent by the server, a dialog box is displayed on the client machines, indicating the modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\
-    The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Gerenciando da pasta Resources](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html).
+  The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Mecanismos automáticos ou manuais podem ser usados para notificar cada cliente quando o conteúdo dessa pasta tiver sido modificado. Para mais informações, por favor consulte a seção [Gerenciando da pasta Resources](https://doc.4d.com/4Dv20/4D/20/Managing-the-Resources-folder.300-6330534.en.html).
 
 ## Página Configuração IP
 
@@ -129,7 +129,7 @@ O comportamento da tabela de configuração é o seguinte:
 - A coluna "IP Address" (Endereço IP) permite definir o(s) endereço(s) IP afetado(s) pela regra. Para especificar um endereço, clique na coluna e digite o endereço da seguinte forma: 123.45.67.89 (formato IPv4) ou 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (formato IPv6). Você pode usar um caractere \* (asterisco) para especificar endereços do tipo "começa com". Por exemplo, 192.168.\* indica todos os endereços que começam com 192.168.
 - A aplicação das regras é baseada na ordem de exibição da tabela. Se duas regras forem contraditórias, a prioridade será dada à regra localizada na parte mais alta da tabela. Você pode reordenar as linhas modificando a classificação atual (clique no cabeçalho da coluna para alternar a direção da classificação). Você também pode mover as linhas usando o recurso de arrastar e soltar.
 - Por motivos de segurança, somente os endereços que realmente correspondem a uma regra terão permissão para se conectar. Em outras palavras, se a tabela contiver apenas uma ou mais regras Deny, todos os endereços serão recusados porque nenhum corresponderá a pelo menos uma regra. Se você quiser negar apenas determinados endereços (e permitir outros), adicione uma regra Allow \* no final da tabela. Por exemplo:
-     - Negar 192.168.\* (negar todos os endereços que comecem por 192.168)
-     - Autorizar \* (e autorizar outros)
+  - Negar 192.168.\* (negar todos os endereços que comecem por 192.168)
+  - Autorizar \* (e autorizar outros)
 
 Por padrão, nenhuma restrição de conexão é aplicada pelo 4D Server: a primeira linha da tabela contém o rótulo Allow e o caractere \* (todos os endereços).

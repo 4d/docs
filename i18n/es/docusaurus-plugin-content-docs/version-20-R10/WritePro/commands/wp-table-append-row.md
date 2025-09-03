@@ -23,13 +23,13 @@ El comando **WP Table append row**<!--REF #_command_.WP Table append row.Summary
 
 El comando soporta dos sintaxis:
 
-- **Using values as parameters:**
-  Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
+- **Usando valores como parámetros:**
+  Añade tantas celdas en la fila como valores proporcionados en el parámetro o parámetros *value*. Puede pasar cualquier número de valores de diferentes tipos.
 
-- **Using a collection of values (*valueColl)*:**
-  Fills the row with values from the *valueColl* collection. Each element of the collection corresponds to a cell in the row.
+- **Usando una colección de valores (*valueColl)*:**
+  Llena la fila con valores de la colección *valueColl*. Cada elemento de la colección corresponde a una célula en la fila.
 
-  The following value types are supported in both syntaxes: Text, Number, Time, Date, Picture and Object (formulas or named formulas returning a row element).
+  En ambas sintaxis se admiten los siguientes tipos de valores: Texto, Número, Hora, Fecha, Imagen y Objeto (fórmulas o fórmulas con nombre que devuelven un elemento de fila).
 
 La alineación predeterminada de las celdas dependerá del tipo de valor:
 
@@ -40,15 +40,15 @@ La alineación predeterminada de las celdas dependerá del tipo de valor:
 :::note Notas
 
 - No se admiten valores de tipo array.
-- Ensure the number of values or the size of the collection matches the number of cells in the table to avoid unexpected results.
+- Asegúrese de que el número de valores o el tamaño de la colección coincide con el número de celdas de la tabla para evitar resultados inesperados.
 
 :::
 
-The command returns the new row as a row range object.
+El comando devuelve la nueva fila como un objeto de rango de filas.
 
 ## Ejemplo 1
 
-You want to create an empty table and append several rows of different sizes. Puede escribir:
+Desea crear una tabla vacía y añadir varias líneas de diferentes tamaños. Puede escribir:
 
 ```4d
  var $wpTable;$wpRange;$wpRow1;$wpRow2;$wpRow3 : Object
@@ -63,7 +63,7 @@ You want to create an empty table and append several rows of different sizes. Pu
 
 ## Ejemplo 2
 
-You want to create an empty table and append a row using a collection :
+Desea crear una tabla vacía y añadir una línea utilizando una colección:
 
 ```4d
 $table:=WP Insert table(WParea; wk replace; wk include in range)
@@ -85,28 +85,28 @@ $row:=WP Table append row($table; $colItems)
 
 ## Ejemplo 3
 
-In a billing application, you want to create a table automatically filled with related invoice lines:
+En una aplicación de facturación, desea crear una tabla automáticamente llena con líneas de facturas relacionadas:
 
 ```4d
  var $wpTable;$wpRange : Object
  
  $wpRange:=WP Text range(4DWPArea;wk start text;wk end text)
  
- $wpTable:=WP Insert table($wpRange;wk append) //create the table
+ $wpTable:=WP Insert table($wpRange;wk append) //crea la tabla
  
-  // add the header row
+  // añade la línea de encabezado
  $row:=WP Table append row($wpTable;"Name";"Quantity";"Unit Price";"Discount Rate";"Total")
  WP SET ATTRIBUTES($row;wk font bold;wk true;wk text align;wk center)
- 
-  //simply apply to selection
+
+  //simplemente aplicar a la selección
  APPLY TO SELECTION([INVOICE_LINES];WP Table append row($wpTable;[INVOICE_LINES]ProductName;[INVOICE_LINES]Quantity;[INVOICE_LINES]ProductUnitPrice;[INVOICE_LINES]DiscountRate;[INVOICE_LINES]Total))
  
-  //add a footer row
- $row:=WP Table append row($wpTable;"Total:";Sum([INVOICE_LINES]Quantity);"";"";Sum([INVOICE_LINES]Total))
+  //añadir una fila a pie de página
+ $row:=WP Table append row($wpTable; "Total:";Sum([INVOICE_LINES]Quantity);"";"";Sum([INVOICE_LINES]Total))
  
-  //format the table
+  //formatear la tabla
  $range:=WP Table get columns($wpTable;1;5)
- WP SET ATTRIBUTES($range;wk width;"80pt")
+ WP SET ATTRIBUTES($range;wk width; "80pt")
  WP SET ATTRIBUTES($wpTable;wk font size;10)
 ```
 

@@ -31,8 +31,8 @@ Les règles suivantes s'appliquent :
 - Les en-têtes doivent rester dans la même ligne et la plage de table résultante doit chevaucher la plage de table originale.
 - Si le nombre de lignes de la table redimensionnée est inférieur au nombre de lignes initiales, les valeurs à l'intérieur des lignes ou colonnes recadrées sont conservées si elles n'étaient pas liées à un [contexte de données](vp-set-data-context.md), sinon elles sont supprimées.
 - Si la table se développe sur des cellules contenant des données :
-     - si des lignes sont ajoutées, les données sont supprimées,
-     - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
+  - si des lignes sont ajoutées, les données sont supprimées,
+  - si des colonnes sont ajoutées, les données sont conservées et affichées dans de nouvelles colonnes.
 
 Si *tableName* n'existe pas, rien ne se passe.
 

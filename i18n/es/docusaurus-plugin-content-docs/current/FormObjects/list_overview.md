@@ -57,26 +57,26 @@ SET LIST ITEM FONT(*;"mylist1";*;thefont)
 Al igual que con otros comandos de gestión de propiedades de objetos, es posible utilizar el carácter "@" en el parámetro `NomLista`. Por regla general, esta sintaxis se utiliza para designar un conjunto de objetos del formulario. Sin embargo, en el contexto de los comandos de listas jerárquicas, esto no se aplica en todos los casos. Esta sintaxis tendrá dos efectos diferentes según el tipo de comando:
 
 - Para los comandos que fijan propiedades, esta sintaxis designa todos los objetos cuyo nombre corresponde (comportamiento estándar). Por ejemplo, el parámetro "LH@" designa todos los objetos del tipo lista jerárquica cuyo nombre empieza por "LH."
-     - `DELETE FROM LIST`
-     - `INSERT IN LIST`
-     - `SELECT LIST ITEMS BY POSITION`
-     - `SET LIST ITEM`
-     - `SET LIST ITEM FONT`
-     - `SET LIST ITEM ICON`
-     - `SET LIST ITEM PARAMETER`
-     - `SET LIST ITEM PROPERTIES`
+  - `DELETE FROM LIST`
+  - `INSERT IN LIST`
+  - `SELECT LIST ITEMS BY POSITION`
+  - `SET LIST ITEM`
+  - `SET LIST ITEM FONT`
+  - `SET LIST ITEM ICON`
+  - `SET LIST ITEM PARAMETER`
+  - `SET LIST ITEM PROPERTIES`
 
 - Para los comandos que recuperan propiedades, esta sintaxis designa el primer objeto cuyo nombre corresponde:
-     - `Count list items`
-     - `Find in list`
-     - `GET LIST ITEM`
-     - `Get list item font`
-     - `GET LIST ITEM ICON`
-     - `GET LIST ITEM PARAMETER`
-     - `GET LIST ITEM PROPERTIES`
-     - `List item parent`
-     - `List item position`
-     - `Selected list items`
+  - `Count list items`
+  - `Find in list`
+  - `GET LIST ITEM`
+  - `Get list item font`
+  - `GET LIST ITEM ICON`
+  - `GET LIST ITEM PARAMETER`
+  - `GET LIST ITEM PROPERTIES`
+  - `List item parent`
+  - `List item position`
+  - `Selected list items`
 
 ## Comandos genéricos utilizables con listas jerárquicas
 
@@ -120,8 +120,8 @@ He aquí algunos consejos para utilizar los números de referencia:
 
 1. No es necesario identificar cada elemento con un número único (nivel principiante).
 
-    - Primer ejemplo: se construye por programación un sistema de pestañas, por ejemplo, una libreta de direcciones. Como el sistema devuelve el número de la pestaña seleccionada, probablemente no necesitará más información que ésta. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro *itemRef*. Tenga en cuenta que para un sistema de libreta de direcciones, puede predefinir una lista A, B, ..., Z en el modo Diseño. También se puede crear por programación para eliminar las letras para las que no hay registros.
-    - Segundo ejemplo: al trabajar con una base, se construye progresivamente una lista de palabras clave. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. Puede mostrar esta lista en una paleta flotante; cuando cada usuario hace clic en una palabra clave de la lista, el elemento elegido se inserta en el área introducible que está seleccionada en el proceso en primer plano. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro *itemRef*.
+   - Primer ejemplo: se construye por programación un sistema de pestañas, por ejemplo, una libreta de direcciones. Como el sistema devuelve el número de la pestaña seleccionada, probablemente no necesitará más información que ésta. En este caso, no se preocupe por los números de referencia de los elementos: pase un valor cualquiera (excepto 0) en el parámetro *itemRef*. Tenga en cuenta que para un sistema de libreta de direcciones, puede predefinir una lista A, B, ..., Z en el modo Diseño. También se puede crear por programación para eliminar las letras para las que no hay registros.
+   - Segundo ejemplo: al trabajar con una base, se construye progresivamente una lista de palabras clave. Puede guardar esta lista al final de cada sesión utilizando los comandos `SAVE LIST` o `LIST TO BLOB` y volver a cargarla al comienzo de cada nueva sesión utilizando el `Load list` o `BLOB to list`. Puede mostrar esta lista en una paleta flotante; cuando cada usuario hace clic en una palabra clave de la lista, el elemento elegido se inserta en el área introducible que está seleccionada en el proceso en primer plano. Lo importante es que sólo procese el elemento seleccionado, porque el comando `Select list items` devuelve la posición del elemento que debe procesar. Cuando se utiliza este valor de posición, se obtiene el título del elemento mediante el comando `GET LIST ITEM`. También en este caso, no es necesario identificar cada elemento individualmente; puede pasar cualquier valor (excepto 0) en el parámetro *itemRef*.
 
 2. Necesita identificar parcialmente los elementos de la lista (nivel intermediario).\
    Se utiliza el número de referencia del elemento para almacenar la información necesaria cuando debe trabajar con el elemento; este punto se detalla en el ejemplo del comando `APPEND TO LIST`. En este ejemplo, utilizamos los números de referencia de los artículos para almacenar los números de registro. Sin embargo, debemos ser capaces de establecer una distinción entre los elementos que corresponden a los registros [Department] y los que corresponden a los registros [Employees].

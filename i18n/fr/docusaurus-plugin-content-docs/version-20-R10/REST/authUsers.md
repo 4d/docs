@@ -11,8 +11,8 @@ Lorsqu'une session utilisateur web est ouverte, vous pouvez la gérer via l'obje
 
 Une session est ouverte après que l'utilisateur a été connecté avec succès (voir ci-dessous).
 
->  - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D disponible.<br/>
->  - Sur 4D mono-utilisateur, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test.
+> - Sur 4D Server, l'ouverture d'une session REST nécessite une licence client 4D disponible.<br/>
+> - Sur 4D mono-utilisateur, vous pouvez ouvrir jusqu'à trois sessions REST à des fins de test.
 
 ## Mode Force login
 
