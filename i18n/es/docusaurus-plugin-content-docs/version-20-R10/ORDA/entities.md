@@ -564,7 +564,7 @@ Este mecanismo automático se basa en el concepto de "bloqueo optimista", especi
 
 El siguiente diagrama ilustra el bloqueo optimista:
 
-1. Dos procesos cargan la misma entidad.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. El motor 4D compara automáticamente el valor del marcador interno de la entidad modificada con el de la entidad almacenada en los datos. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
