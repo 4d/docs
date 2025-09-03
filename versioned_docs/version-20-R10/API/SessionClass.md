@@ -33,6 +33,7 @@ The availability of properties and functions in the `Session` object depends on 
 |---|
 |[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.createOTP().Syntax -->](#createotp)<br/><!-- INCLUDE #SessionClass.createOTP().Summary -->|
+|[<!-- INCLUDE #SessionClass.demote().Syntax -->](#demote)<br/><!-- INCLUDE #SessionClass.demote().Summary -->|
 |[<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->|
 |[<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
@@ -40,6 +41,7 @@ The availability of properties and functions in the `Session` object depends on 
 |[<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
 |[<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->|
 |[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->|
+|[<!-- INCLUDE #SessionClass.promote().Syntax -->](#promote)<br/><!-- INCLUDE #SessionClass.promote().Summary -->|
 |[<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->|
 |[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->|
@@ -80,14 +82,15 @@ This function does nothing and always returns **True** with remote client, store
 
 :::
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session and returns **True** if the execution was successful<!-- END REF -->. Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the session automatically becomes a Guest session.
+The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session (excluding promoted privileges) and returns **True** if the execution was successful<!-- END REF -->. 
+
+Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the session automatically becomes a Guest session. In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
 
 :::note
 
-In "forceLogin" mode, `.clearPrivileges()` does not transform the session to a Guest session, it only clears the session's privileges.
+This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
 
 :::
-
 
 #### Example
 
@@ -152,6 +155,74 @@ $token := Session.createOTP( 60 ) //the token is valid for 1 mn
 <!-- END REF -->
 
 
+<!-- REF SessionClass.demote().Desc -->
+## .demote()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R10|Added|
+
+</details>
+
+<!-- REF #SessionClass.demote().Syntax -->**.demote**( *promoteId* : Integer )<!-- END REF -->
+
+
+<!-- REF #SessionClass.demote().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|promoteId|Integer|->|Id returned by the `promote()` function|
+<!-- END REF -->
+
+#### Description
+
+:::note
+
+This function does nothing in remote client, stored procedure, and standalone sessions.
+
+:::
+
+The `.demote()` function <!-- REF #SessionClass.demote().Summary -->removes the promoted privilege whose id you passed in *promoteId* from the web process, if it was previously added by the [`.promote()`](#promote) function<!-- END REF -->.
+
+If no privilege with *promoteId* was promoted using [`.promote()`](#promote) in the web process, the function does nothing. 
+
+If several privileges have been added to the web process, the `demote()` function must be called for each one with the appropriate *promoteId*. Privileges are stacked in the order they have been added to the process, it is recommended to unstack privileges in a LIFO (*Last In, First Out*) order.
+
+
+#### Example
+
+
+```4d
+exposed Function search($search : Text) : Collection
+	
+	var $employees : Collection
+	var $promoteId1; $promoteId2 : Integer
+	
+	$promoteId1:=Session.promote("admin")
+	$promoteId2:=Session.promote("superAdmin")
+	
+	$search:="@"+$search+"@"
+	
+	$employees:=This.query("type = :1 and lastname = :2"; "Intern"; $search).toCollection()
+	
+	Session.demote($promoteId2)
+	Session.demote($promoteId1)
+	
+	return $employees
+```
+
+
+#### See also
+
+[`.promote()`](#promote) 
+
+
+<!-- END REF -->
+
+
+
+
 <!-- REF SessionClass.expirationDate.Desc -->
 ## .expirationDate
 
@@ -211,15 +282,13 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 The `.getPrivileges()` function <!-- REF #SessionClass.getPrivileges().Summary -->returns a collection of all the privilege names associated to the session<!-- END REF -->.
 
-With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
+:::note
 
-
-:::info
-
-Privileges are assigned to a Session using the [`setPrivileges()`](#setprivileges) function.
+This function returns privileges assigned to a Session using the [`setPrivileges()`](#setprivileges) function only. Promoted privileges are NOT returned by the function, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function. 
 
 :::
 
+With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
 
 #### Example
 
@@ -295,6 +364,7 @@ $privileges := Session.getPrivileges()
 
 |Release|Changes|
 |---|---|
+|21|Returns True for promoted privileges|
 |18 R6|Added|
 
 </details>
@@ -314,6 +384,12 @@ $privileges := Session.getPrivileges()
 
 
 The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the *privilege* is associated to the session, and False otherwise<!-- END REF -->.
+
+:::note
+
+This function returns True for the *privilege* if called from a function that was promoted for this privilege (either through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function). 
+
+:::
 
 With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
 
@@ -509,6 +585,87 @@ If (Session.isGuest())
 	//Do something for Guest user
 End if
 ```
+
+
+<!-- END REF -->
+
+
+<!-- REF SessionClass.promote().Desc -->
+## .promote()
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R10|Added|
+
+</details>
+
+<!-- REF #SessionClass.promote().Syntax -->**.promote**( *privilege* : Text ) : Integer<!-- END REF -->
+
+
+<!-- REF #SessionClass.promote().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|privilege|Text|->|Privilege name|
+|Result|Integer|<-|id to use when calling the [`demote()`](#demote) function|
+<!-- END REF -->
+
+#### Description
+
+:::note
+
+This function does nothing in remote client, stored procedure, and standalone sessions.
+
+:::
+
+The `.promote()` function <!-- REF #SessionClass.promote().Summary -->adds the privilege defined in the *privilege* parameter to the current process during the execution of the calling function and returns the id of the promoted privilege<!-- END REF -->.
+
+Dynamically adding privileges is useful when access rights depend on the execution context, which cannot be fully defined in the "roles.json" file. This is particularly relevant when the same function can be executed by users with different access levels. The use of `.promote()` ensures that only the current process is granted the necessary privileges, without affecting others.
+
+The function does nothing and returns 0 if:
+- the *privilege* does not exist in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file,
+- the *privilege* is already assigned to the current process (using `.promote()` or through a static [promote action](../ORDA/privileges.md#permission-actions) declared for the calling function in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file). 
+
+You can call the `promote()` function several times in the same process to add different privileges.
+
+The returned id is incremented each time a privilege is dynamically added to the process.
+
+
+To remove a privilege dynamically, call the `demote()` function with the appropriate id. 
+ 
+
+#### Example
+
+Several users connect to a single endpoint that serves different applications. A user from application #1 does not need the "super_admin" privilege because they don't create "VerySensitiveInfo". A user from application #2 needs "super_admin" privilege.
+
+You can dynamically provide appropriate privileges in the *CreateInfo* function:
+
+```4d
+exposed Function createInfo($info1 : Text; $info2 : Text)
+	
+var $sensitive : cs.SensitiveInfoEntity
+var $verySensitiveInfo : cs.VerySensitiveInfoEntity
+var $status : Object
+var $promoteId : Integer
+	
+$sensitive:=ds.SensitiveInfo.new()
+$sensitive.info:=$info1
+$status:=$sensitive.save()
+	
+If (Session.storage.role.name="userApp2")
+	$promoteId:=Session.promote("super_admin")
+	$verySensitiveInfo:=ds.VerySensitiveInfo.new()
+	$verySensitiveInfo.info:=$info2
+	$status:=$verySensitiveInfo.save()
+	Session.demote($promoteId)
+End if 
+```
+
+
+#### See also
+
+[`.demote()`](#demote)<br/>[`hasPrivilege()`](#hasprivilege)
 
 
 <!-- END REF -->
