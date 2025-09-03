@@ -424,7 +424,7 @@ Ce fichier n'est pas obligatoire mais il est nécessaire pour construire des com
 
 Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#loading-components) sur toutes les plates-formes.
 
-Les clés suivantes peuvent être définies :
+The following keys can be defined:
 
 | key                                                        | Description                                                                                                                                                                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
