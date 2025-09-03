@@ -54,6 +54,7 @@ The availability of properties and functions in the `Session` object depends on 
 |[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->|
 
 
+
 <!-- REF SessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
 
