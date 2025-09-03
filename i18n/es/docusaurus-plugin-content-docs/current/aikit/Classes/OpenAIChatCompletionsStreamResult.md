@@ -24,7 +24,7 @@ title: OpenAIChatCompletionsStreamResult
 
 ### Propiedades reemplazadas
 
-| Propiedad    | Tipo                            | Descripción                                                                                                            |
-| ------------ | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `success`    | [OpenAIChoice](OpenAIChoice.md) | Returns `True` if the streaming data was successfully decoded as an object.                            |
-| `terminated` | Boolean                         | A Boolean indicating whether the HTTP request was terminated. ie `onTerminate` called. |
+| Propiedad    | Tipo                            | Descripción                                                                                                        |
+| ------------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `success`    | [OpenAIChoice](OpenAIChoice.md) | Returns `True` if the streaming data was successfully decoded as an object.                        |
+| `terminated` | Boolean                         | Un booleano que indica si la petición HTTP fue terminada. ie `onTerminate` called. |

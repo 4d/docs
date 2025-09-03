@@ -382,7 +382,7 @@ Esse arquivo não é obrigatório, mas é necessário para criar componentes [no
 
 Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. No entanto, eles são usados pelo [Gerenciador de dependências](../Project/components.md#loading-components) em todas as plataformas.
 
-The folling keys can be defined:
+The following keys can be defined:
 
 | \|                                                         | description                                                                                                                                                                         |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
