@@ -306,12 +306,12 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 |libsasl|2.1.28|20||
 |Liblsquic|4.2.0|20 R10|Used for QUIC|
 |Libuv |1.51.0|**21**|Used for QUIC|
-|libZip|1.9.2|20|Used by zip class, 4D Write Pro, svg and serverNet components|
-|LZMA|5.4.1|20||
+|libZip|1.11.4|**21**|Used by zip class, 4D Write Pro, svg and serverNet components|
+|LZMA|5.8.1|**21**||
 |ngtcp2|1.14.0|**21**|Used for QUIC|
 |OpenSSL|3.5.2|**21**||
 |PDFWriter|4.7.0|**21**|Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 |PHP|8.2.4|20||
 |SpreadJS|17.1.0|20 R7|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
 |webKit|WKWebView|19||
-|Zlib|1.2.13|20||
+|Zlib|1.3.1|**21**||
