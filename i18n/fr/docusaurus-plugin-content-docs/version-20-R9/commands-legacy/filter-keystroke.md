@@ -105,7 +105,7 @@ Comme décrit ci-dessus, lorsque vous éditez une zone de texte, la valeur du ch
  
   // An acceptable character has been entered
     :(Position($old;$filter)=0)
-       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$0)
+       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$old)
     Else
   // The character is not accepted
        FILTER KEYSTROKE("")
