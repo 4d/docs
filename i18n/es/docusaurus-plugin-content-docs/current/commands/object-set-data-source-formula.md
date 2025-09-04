@@ -21,16 +21,16 @@ El comando **OBJECT SET DATA SOURCE FORMULA** <!--REF #_command_.OBJECT SET DATA
 
 Pasar el parámetro opcional *\** indica que el parámetro *object* es un nombre de objeto (cadena). Si no pasa este parámetro, indica que el parámetro *object* es un campo o variable. En este caso, se pasa una referencia de campo o variable en lugar de una cadena (campo o variable objeto de formulario).
 
-*fformula* actúa como la fuente de la que el objeto recupera su valor en ejecución. This allows for dynamic behavior, such as calculated values, conditional display, or derived data.
+La *formula* actúa como la fuente de la cual el objeto recupera su valor en ejecución. Esto permite un comportamiento dinámico, como valores calculados, visualización condicional o datos derivados.
 
-If *Null* is passed as the *formula* parameter, 4D will reset the object’s data source to a [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).
+Si se pasa *Null* como parámetro *formula*, 4D restablecerá la fuente de datos del objeto a una [variable dinámica de formulario](../FormObjects/properties_Object.md#dynamic-variables).
 
-If the command is applied to an object that does not exist or cannot support formulas, it does nothing.
+Si el comando se aplica a un objeto que no existe o no admite fórmulas, no hace nada.
 
 :::note Notas
 
-- The formula is executed in the context of the form that owns the object. When working with nested forms (e.g., subforms), ensure that the formula is defined and assigned in the appropriate form context to avoid unexpected behavior.
-- If you assign a formula to an input object or any object with a modifiable value, make sure that the formula is [**assignable**](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+- La fórmula se ejecuta en el contexto del formulario propietario del objeto. Cuando trabaje con formularios anidados (por ejemplo, subformularios), asegúrese de que la fórmula está definida y asignada en el contexto de formulario apropiado para evitar comportamientos inesperados.
+- Si asigna una fórmula a un objeto de entrada o a cualquier objeto con un valor modificable, asegúrese de que la fórmula es [**asignable**](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
 :::
 

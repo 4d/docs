@@ -35,6 +35,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<br/><!-- INCLUDE #SessionClass.clearPrivileges().Summary --> |
 | [<!-- INCLUDE #SessionClass.createOTP().Syntax -->](#createotp)<br/><!-- INCLUDE #SessionClass.createOTP().Summary -->                   |
+| [<!-- INCLUDE #SessionClass.demote().Syntax -->](#demote)<br/><!-- INCLUDE #SessionClass.demote().Summary -->                            |
 | [<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<br/><!-- INCLUDE #SessionClass.expirationDate.Summary -->        |
 | [<!-- INCLUDE #SessionClass.getPrivileges().Syntax -->](#getprivileges)<br/><!-- INCLUDE #SessionClass.getPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<br/><!-- INCLUDE #SessionClass.hasPrivilege().Summary -->          |
@@ -42,10 +43,16 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 | [<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<br/><!-- INCLUDE #SessionClass.idleTimeout.Summary -->                 |
 | [<!-- INCLUDE #SessionClass.info.Syntax -->](#info)<br/><!-- INCLUDE #SessionClass.info.Summary -->                                      |
 | [<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<br/><!-- INCLUDE #SessionClass.isGuest().Summary -->                         |
+| [<!-- INCLUDE #SessionClass.promote().Syntax -->](#promote)<br/><!-- INCLUDE #SessionClass.promote().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.restore().Syntax -->](#restore)<br/><!-- INCLUDE #SessionClass.restore().Summary -->                         |
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
+
+### Para aprender más
+
+[**Scalable sessions for advanced web applications**](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) (blog post)<br/>
+[**Permissions: Inspect Session Privileges for Easy Debugging**](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/) (blog post)
 
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
@@ -77,11 +84,13 @@ Esta función no hace nada y siempre devuelve **True** con cliente remoto, proce
 
 :::
 
-La función `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->elimina todos los privilegios asociados a la sesión y devuelve **True** si la ejecución se ha realizado correctamente<!-- END REF -->. A menos que esté en modo ["forceLogin"](../REST/authUsers.md#force-login-mode), la sesión se convierte automáticamente en una sesión de Invitado.
+The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session (excluding promoted privileges) and returns **True** if the execution was successful<!-- END REF -->.
+
+A menos que esté en modo ["forceLogin"](../REST/authUsers.md#force-login-mode), la sesión se convierte automáticamente en una sesión de Invitado. En modo "forceLogin", `.clearPrivileges()` no transforma la sesión a una sesión de invitado, sólo elimina los privilegios de la sesión.
 
 :::note
 
-En modo "forceLogin", `.clearPrivileges()` no transforma la sesión a una sesión de invitado, sólo elimina los privilegios de la sesión.
+This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
 
 :::
 
@@ -146,6 +155,69 @@ $token := Session.createOTP( 60 ) //el token es válido durante 1 mn
 
 <!-- END REF -->
 
+<!-- REF SessionClass.demote().Desc -->
+
+## .demote()
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R10      | Añadidos       |
+
+</details>
+
+<!-- REF #SessionClass.demote().Syntax -->**.demote**( *promoteId* : Integer )<!-- END REF -->
+
+<!-- REF #SessionClass.demote().Params -->
+
+| Parámetros | Tipo    |     | Descripción                             |
+| ---------- | ------- | :-: | --------------------------------------- |
+| promoteId  | Integer |  -> | Id returned by the `promote()` function |
+
+<!-- END REF -->
+
+#### Descripción
+
+:::note
+
+This function does nothing in remote client, stored procedure, and standalone sessions.
+
+:::
+
+The `.demote()` function <!-- REF #SessionClass.demote().Summary -->removes the promoted privilege whose id you passed in *promoteId* from the web process, if it was previously added by the [`.promote()`](#promote) function<!-- END REF -->.
+
+If no privilege with *promoteId* was promoted using [`.promote()`](#promote) in the web process, the function does nothing.
+
+If several privileges have been added to the web process, the `demote()` function must be called for each one with the appropriate *promoteId*. Privileges are stacked in the order they have been added to the process, it is recommended to unstack privileges in a LIFO (*Last In, First Out*) order.
+
+#### Ejemplo
+
+```4d
+exposed Function search($search : Text) : Collection
+	
+	var $employees : Collection
+	var $promoteId1; $promoteId2 : Integer
+	
+	$promoteId1:=Session.promote("admin")
+	$promoteId2:=Session.promote("superAdmin")
+	
+	$search:="@"+$search+"@"
+	
+	$employees:=This.query("type = :1 and lastname = :2"; "Intern"; $search).toCollection()
+	
+	Session.demote($promoteId2)
+	Session.demote($promoteId1)
+	
+	return $employees
+```
+
+#### Ver también
+
+[`.promote()`](#promote)
+
+<!-- END REF -->
+
 <!-- REF SessionClass.expirationDate.Desc -->
 
 ## .expirationDate
@@ -207,13 +279,13 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 La función `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary -->devuelve una colección de todos los nombres de privilegios asociados a la sesión<!-- END REF -->.
 
-Con clientes remotos, procedimientos almacenados y sesiones independientes, esta función devuelve una colección que sólo contiene "WebAdmin".
+:::note
 
-:::info
-
-Los privilegios se asignan a una Sesión utilizando la función [`setPrivileges()`](#setprivileges).
+This function returns privileges assigned to a Session using the [`setPrivileges()`](#setprivileges) function only. Promoted privileges are NOT returned by the function, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
 
 :::
+
+Con clientes remotos, procedimientos almacenados y sesiones independientes, esta función devuelve una colección que sólo contiene "WebAdmin".
 
 #### Ejemplo
 
@@ -282,9 +354,10 @@ $privileges := Session.getPrivileges()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18 R6       | Añadidos       |
+| Lanzamiento | Modificaciones                       |
+| ----------- | ------------------------------------ |
+| 21          | Returns True for promoted privileges |
+| 18 R6       | Añadidos                             |
 
 </details>
 
@@ -302,6 +375,12 @@ $privileges := Session.getPrivileges()
 #### Descripción
 
 La función `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->devuelve True si *privilege* está asociado a la sesión, y False en caso contrario<!-- END REF -->.
+
+:::note
+
+This function returns True for the *privilege* if called from a function that was promoted for this privilege (either through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function).
+
+:::
 
 Con cliente remoto, procedimientos almacenados y sesiones independientes, esta función siempre devuelve True, sea cual sea el *privilege*.
 
@@ -493,6 +572,85 @@ If (Session.isGuest())
 	//Hacer algo para el usuario invitado
 End if
 ```
+
+<!-- END REF -->
+
+<!-- REF SessionClass.promote().Desc -->
+
+## .promote()
+
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones |
+| ----------- | -------------- |
+| 20 R10      | Añadidos       |
+
+</details>
+
+<!-- REF #SessionClass.promote().Syntax -->**.promote**( *privilege* : Text ) : Integer<!-- END REF -->
+
+<!-- REF #SessionClass.promote().Params -->
+
+| Parámetros | Tipo    |                             | Descripción                                               |
+| ---------- | ------- | :-------------------------: | --------------------------------------------------------- |
+| privilege  | Text    |              ->             | Nombre del privilegio                                     |
+| Resultado  | Integer | <- | id to use when calling the [`demote()`](#demote) function |
+
+<!-- END REF -->
+
+#### Descripción
+
+:::note
+
+This function does nothing in remote client, stored procedure, and standalone sessions.
+
+:::
+
+The `.promote()` function <!-- REF #SessionClass.promote().Summary -->adds the privilege defined in the *privilege* parameter to the current process during the execution of the calling function and returns the id of the promoted privilege<!-- END REF -->.
+
+Dynamically adding privileges is useful when access rights depend on the execution context, which cannot be fully defined in the "roles.json" file. This is particularly relevant when the same function can be executed by users with different access levels. The use of `.promote()` ensures that only the current process is granted the necessary privileges, without affecting others.
+
+The function does nothing and returns 0 if:
+
+- the *privilege* does not exist in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file,
+- the *privilege* is already assigned to the current process (using `.promote()` or through a static [promote action](../ORDA/privileges.md#permission-actions) declared for the calling function in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file).
+
+You can call the `promote()` function several times in the same process to add different privileges.
+
+The returned id is incremented each time a privilege is dynamically added to the process.
+
+To remove a privilege dynamically, call the `demote()` function with the appropriate id.
+
+#### Ejemplo
+
+Several users connect to a single endpoint that serves different applications. A user from application #1 does not need the "super_admin" privilege because they don't create "VerySensitiveInfo". A user from application #2 needs "super_admin" privilege.
+
+You can dynamically provide appropriate privileges in the *CreateInfo* function:
+
+```4d
+exposed Function createInfo($info1 : Text; $info2 : Text)
+	
+var $sensitive : cs.SensitiveInfoEntity
+var $verySensitiveInfo : cs.VerySensitiveInfoEntity
+var $status : Object
+var $promoteId : Integer
+	
+$sensitive:=ds.SensitiveInfo.new()
+$sensitive.info:=$info1
+$status:=$sensitive.save()
+	
+If (Session.storage.role.name="userApp2")
+	$promoteId:=Session.promote("super_admin")
+	$verySensitiveInfo:=ds.VerySensitiveInfo.new()
+	$verySensitiveInfo.info:=$info2
+	$status:=$verySensitiveInfo.save()
+	Session.demote($promoteId)
+End if 
+```
+
+#### Ver también
+
+[`.demote()`](#demote)<br/>[`hasPrivilege()`](#hasprivilege)
 
 <!-- END REF -->
 

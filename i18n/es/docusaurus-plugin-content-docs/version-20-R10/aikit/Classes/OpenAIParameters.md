@@ -37,7 +37,7 @@ Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
 ## Clases heredadas
 
-Several classes inherit from `OpenAIParameters` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIParameters`:
+Several classes inherit from `OpenAIParameters` to extend its functionality for specific use cases. A continuación se muestran algunas de las clases que extienden `OpenAIParameters`:
 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)
