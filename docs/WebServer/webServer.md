@@ -4,13 +4,19 @@ slug: overview
 title: Web Server
 ---
 
-4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+
+:::warning Deprecated feature
+
+Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no longer recommended to use this feature.   
+
+:::
 
 ## Easy Monitoring
 
 You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
 
-Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
+Monitoring the 4D web server is easy and can be done using the [4D Server administration window](../ServerWindow/http-server.md) or through [special URLs](webServerAdmin.md#administration-urls).
 
 ## Ready-to-use
 
@@ -41,13 +47,13 @@ The 4D web server includes complete automatic features for easily managing [web 
 
 ## Gateway to REST Requests
 
-The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
+The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any [ORDA](../ORDA/overview.md) operation such as adding, reading, editing, ordering, or searching data.
 
-REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
+REST requests are detailed in the [REST server](../REST/gettingStarted.md) section.
 
 ## Extended settings
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 
 ## Templates and URLs
 
