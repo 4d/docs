@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 ## 説明 
 
+:::警告
+
+このコマンドはプロジェクトモードでは使用できません。ピクチャライブラリはバイナリーデータベースでのみ利用可能だからです。
+
+:::
+
 <!--REF #_command_.SET PICTURE TO LIBRARY.Summary-->SET PICTURE TO LIBRARY コマンドは、新規ピクチャを作成、またはピクチャライブラリにあるピクチャを置き換えます。<!-- END REF-->
 
 このコマンドを呼び出す前に、下記の引数を渡してください:
