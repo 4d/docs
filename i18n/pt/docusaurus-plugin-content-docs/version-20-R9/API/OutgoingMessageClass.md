@@ -143,7 +143,7 @@ Se *body* não for de um tipo de valor suportado, um erro é retornado.
 
 A função `.setHeader()` <!-- REF #OutgoingMessageClass.setHeader().Summary -->define o cabeçalho de mensagem de saída *chave* com o *valor*<!-- END REF -->. Se ambos os parâmetros não são valores de texto, um erro é gerado.
 
-Ao retornar uma instância de objeto 4D.OutgoingMessage, 4D automaticamente define alguns cabeçalhos (por exemplo, `Set-Cookie` com `WASID4D=...` e `4DSID__ProjectName_=....`).
+When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `4DSID__ProjectName_=....`).
 
 :::note
 
