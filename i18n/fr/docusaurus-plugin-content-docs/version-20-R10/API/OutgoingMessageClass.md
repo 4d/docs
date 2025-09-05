@@ -143,7 +143,7 @@ Si *body* n'est pas un type de valeur pris en charge, une erreur est renvoyée.
 
 La fonction `.setHeader()` <!-- REF #OutgoingMessageClass.setHeader().Summary -->fixe la clé *key* du header du message sortant avec la *value* fournie<!-- END REF -->. Si les deux paramètres ne sont pas des valeurs texte, une erreur est générée.
 
-Lorsqu'il renvoie une instance d'objet 4D.OutgoingMessage, 4D définit automatiquement certains headers (par exemple `Set-Cookie` avec `WASID4D=...` et `4DSID__ProjectName_=....`).
+When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `4DSID__ProjectName_=....`).
 
 :::note
 

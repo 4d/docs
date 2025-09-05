@@ -11,13 +11,13 @@ title: OpenAIEmbeddingsResult
 
 ## 計算プロパティ
 
-| プロパティ        | 型                                     | 説明                                                                                                        |
-| ------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `model`      | Text                                  | 埋め込みを計算するのに使用されたモデルを返します                                                                                  |
-| `vector`     | `4D.Vector`                           | Returns the first `4D.Vector` from the `vectors` collection.                              |
-| `vectors`    | Collection                            | Returns a collection of `4D.Vector`.                                                      |
-| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Returns the first [OpenAIEmbedding](OpenAIEmbedding.md) from the `embeddings` collection. |
-| `embeddings` | Collection                            | Returns a collection of [OpenAIEmbedding](OpenAIEmbedding.md).                            |
+| プロパティ        | 型                                     | 説明                                                                    |
+| ------------ | ------------------------------------- | --------------------------------------------------------------------- |
+| `model`      | Text                                  | 埋め込みを計算するのに使用されたモデルを返します                                              |
+| `vector`     | `4D.Vector`                           | `vectors` コレクションから、最初の`4D.Vector` を返します。                              |
+| `vectors`    | Collection                            | `4D.Vector` のコレクションを返します。                                             |
+| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | `embeddings` コレクションから最初の [OpenAIEmbedding](OpenAIEmbedding.md) を返します。 |
+| `embeddings` | Collection                            | [OpenAIEmbedding](OpenAIEmbedding.md) のコレクションを返します。                   |
 
 ## 参照
 

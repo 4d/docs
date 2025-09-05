@@ -107,7 +107,7 @@ Como se explicó anteriormente, durante la edición del área de texto, el valor
  
   // Un carácter válido ha sido introducido
     :(Position($old;$filter)=0)
-       $vtNuevoValor:=Insertar texto($vtNuevoValor;$vlInicio;$vlFin;$0)
+       $vtNuevoValor:=Insertar texto($vtNuevoValor;$vlInicio;$vlFin;$old)
     Else
   // El carácter no es aceptado
        FILTER KEYSTROKE("")

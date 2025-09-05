@@ -16,6 +16,12 @@ displayed_sidebar: docs
 
 ## 説明 
 
+:::警告
+
+このコマンドはプロジェクトモードでは使用できません。ピクチャライブラリはバイナリーデータベースでのみ利用可能だからです。
+
+:::
+
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Summary-->GET PICTURE FROM LIBRARY コマンドは、*picRef*に渡された参照番号または*picName*に渡された名前を持つピクチャライブラリの画像を*picture*引数に返します。<!-- END REF-->
 
 参照番号または名前に対応するピクチャがない場合、GET PICTURE FROM LIBRARYコマンドは*picture*を変更しません。

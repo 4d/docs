@@ -4,13 +4,19 @@ slug: overview
 title: Serveur Web
 ---
 
-4D en mode local et distant ainsi que 4D Server disposent d'un moteur de serveur web intégré (aussi appelé serveur Http) qui vous permet de créer et publier des applications web afin de tirer le maximum de vos bases de données 4D.
+4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+
+:::warning Deprecated feature
+
+Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no longer recommended to use this feature.
+
+:::
 
 ## Administration simplifiée
 
 Vous pouvez démarrer ou arrêter la publication de l'application web à tout moment. Pour ce faire, il suffit de sélectionner une commande dans un menu ou d'exécuter une ligne de code.
 
-Vous pouvez aisément suivre l'activité du serveur web 4D dans la fenêtre d'administration de 4D, ou via des [URLs spéciales](webServerAdmin.md#administration-urls).
+Monitoring the 4D web server is easy and can be done using the [4D Server administration window](../ServerWindow/http-server.md) or through [special URLs](webServerAdmin.md#administration-urls).
 
 ## Prêt à l'emploi
 
@@ -41,13 +47,13 @@ Le serveur Web 4D inclut des fonctionnalités automatiques complètes pour une g
 
 ## Point d'accès pour requêtes REST
 
-Le serveur web 4D permet d'accéder aux données stockées dans vos applications 4D via des requêtes REST. Les requêtes REST offrent un accès direct à toutes les opérations de bases de données telles que l'ajout, la lecture, la modification, l'organisation ou la recherche.
+Le serveur web 4D permet d'accéder aux données stockées dans vos applications 4D via des requêtes REST. REST requests provide direct access to any [ORDA](../ORDA/overview.md) operation such as adding, reading, editing, ordering, or searching data.
 
-Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
+Les requêtes REST sont détaillées dans la section [serveur REST](../REST/gettingStarted.md).
 
 ## Extension des paramètres
 
-Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 
 ## Templates et URLs
 

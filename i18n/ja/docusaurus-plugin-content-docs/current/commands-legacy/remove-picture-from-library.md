@@ -15,6 +15,12 @@ displayed_sidebar: docs
 
 ## 説明 
 
+:::警告
+
+このコマンドはプロジェクトモードでは使用できません。ピクチャライブラリはバイナリーデータベースでのみ利用可能だからです。
+
+:::
+
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Summary-->REMOVE PICTURE FROM LIBRARY コマンドは、*picRef*引数に渡した参照番号または*picName*引数の名前を持つピクチャをピクチャライブラリから消去します。<!-- END REF-->
 
 参照番号または名前を持つピクチャがない場合は、このコマンドは何も行いません。

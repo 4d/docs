@@ -119,7 +119,7 @@ title: Entity
 
 #### 例題 2
 
-If you don't want the new entity to share object-type attribute references, you must copy them.
+新しいエンティティがオブジェクト型属性参照を共有して欲しくない場合には、それらをコピーする必要があります。
 
 ```4d
  var $emp; $empCloned : cs.EmployeeEntity

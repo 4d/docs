@@ -143,7 +143,7 @@ exposed onHTTPGet Function getFile() : 4D.OutgoingMessage
 
 `.setHeader()` 関数は、<!-- REF #OutgoingMessageClass.setHeader().Summary -->送信するメッセージのヘッダーの、*key* 引数で指定したキーを、*value* 引数で指定した値で設定します<!-- END REF -->。 両方の引数ともテキスト値でない場合、エラーが発生します。
 
-4D.OutgoingMessage オブジェクトのインスタンスを返すとき、4D は一部のヘッダーを自動的に設定します(例: `Set-Cookie` を `WASID4D=...` および `4DSID__ProjectName_=....` に設定)。
+When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `4DSID__ProjectName_=....`).
 
 :::note
 

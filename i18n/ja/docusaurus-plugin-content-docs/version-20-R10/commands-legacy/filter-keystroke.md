@@ -110,7 +110,7 @@ FILTER KEYSTROKE は以下の目的で使用できます:
  
   // 入力を許可する文字が入力された
     :(Position($old;$filter)=0)
-       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$0)
+       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$old)
     Else
   // 入力を許可しない
        FILTER KEYSTROKE("")

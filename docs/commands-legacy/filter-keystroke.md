@@ -107,7 +107,7 @@ As explained above, during the editing of the text area, the data source for thi
  
   // An acceptable character has been entered
     :(Position($old;$filter)=0)
-       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$0)
+       $vtNewValue:=Insert text($vtNewValue;$vlStart;$vlEnd;$old)
     Else
   // The character is not accepted
        FILTER KEYSTROKE("")

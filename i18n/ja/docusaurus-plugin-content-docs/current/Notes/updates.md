@@ -28,12 +28,6 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
 
-#### 動作の変更
-
- - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
- - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
- - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
-
 
 ## 4D 20 R10
 
@@ -46,6 +40,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 - New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
 - New options to generate UUIDs in **version 7** for [4D automatic fields](../settings/database.md#auto-uuid-version) and [`Generate UUID`](../commands/generate-uuid) command.
 - New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
+- New [`.promote()`](../API/SessionClass.md#promote) and [`.demote()`](../API/SessionClass.md#demote) functions in the [Session class](../API/SessionClass.md) to dynamically add/remove privileges in a web process.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
 - Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
 - 4D AIKit component: new [OpenAIEmbeddingsAPI class](../aikit/Classes/OpenAIEmbeddingsAPI.md) to create embeddings using OpenAI's API.
@@ -62,6 +57,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 - Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
 - The *MeCab* library has been removed. This change only affects the processing of Japanese text.
 - When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
+- [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) returns True for promoted privileges in the web process.
 - The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will return **-01:02:03**. In previous releases, the negative sign was ignored.
 
 ## 4D 20 R9
@@ -280,12 +276,12 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 | libsasl   | 2.1.28 | 20             |                                                                                                                                                    |
 | Liblsquic | 4.2.0  | 20 R10         | QUIC に使用                                                                                                                                           |
 | Libuv     | 1.51.0 | **21**         | QUIC に使用                                                                                                                                           |
-| libZip    | 1.9.2  | 20             | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                              |
-| LZMA      | 5.4.1  | 20             |                                                                                                                                                    |
+| libZip    | 1.11.4 | **21**         | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                              |
+| LZMA      | 5.8.1  | **21**         |                                                                                                                                                    |
 | ngtcp2    | 1.14.0 | **21**         | QUIC に使用                                                                                                                                           |
 | OpenSSL   | 3.5.2  | **21**         |                                                                                                                                                    |
 | PDFWriter | 4.7.0  | **21**         | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | PHP       | 8.2.4  | 20             |                                                                                                                                                    |
 | SpreadJS  | 17.1.0 | 20 R7          | 新機能の概要については、[このブログ記事](https://blog.4d.com/ja/4d-view-pro-whats-new-in-4d-20-r7/) を参照ください。                                                          |
 | webKit    | WKWebView                              | 19             |                                                                                                                                                    |
-| Zlib      | 1.2.13 | 20             |                                                                                                                                                    |
+| Zlib      | 1.3.1  | **21**         |                                                                                                                                                    |

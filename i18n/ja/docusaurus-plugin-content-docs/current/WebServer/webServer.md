@@ -4,13 +4,19 @@ slug: overview
 title: Web サーバー
 ---
 
-4D のローカルモード、リモートモード、および 4D Server には Webサーバーエンジン (HTTPサーバー) があります。この Webサーバーエンジンを使用して、4Dデータベースを最大限に活用できる強力な Webアプリケーションを設計・公開することができます。
+4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+
+:::warning Deprecated feature
+
+Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no longer recommended to use this feature.
+
+:::
 
 ## 簡単なモニタリング
 
 Webアプリケーションの公開は、いつでも開始または停止することができます。 メニューコマンドを選択、またはランゲージコマンドを実行するだけで、操作できます。
 
-4D Webサーバーの監視も簡単で、4D Server の管理ウィンドウや [専用URL](webServerAdmin.md#管理用-url) を使っておこなうことができます。
+Monitoring the 4D web server is easy and can be done using the [4D Server administration window](../ServerWindow/http-server.md) or through [special URLs](webServerAdmin.md#administration-urls).
 
 ## すぐに使えます
 
@@ -41,13 +47,13 @@ Webアプリケーションの公開は、いつでも開始または停止す�
 
 ## RESTリクエストへのゲートウェイ
 
-4D Webサーバーにより、4Dアプリケーションに保存されているデータに RESTリクエストを通じてアクセスすることが可能になります。 RESTリクエストによって、データの追加・読み取り・編集・並べ替え・検索など、あらゆるデータベース操作に直接アクセスできます。
+4D Webサーバーにより、4Dアプリケーションに保存されているデータに RESTリクエストを通じてアクセスすることが可能になります。 REST requests provide direct access to any [ORDA](../ORDA/overview.md) operation such as adding, reading, editing, ordering, or searching data.
 
-RESTリクエストの詳細については、[RESTサーバー](REST/gettingStarted.md) のセクションを参照ください。
+RESTリクエストの詳細については、[RESTサーバー](../REST/gettingStarted.md) のセクションを参照ください。
 
 ## 拡張設定
 
-4D Webサーバーの構成は、アプリケーションレベルの包括的な設定によって定義されます。この設定は、`webServer` オブジェクトのプロパティまたは `WEB SET OPTION` コマンドを使用して、セッション毎にカスタマイズすることもできます。
+The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command.
 
 ## テンプレートとURL
 
