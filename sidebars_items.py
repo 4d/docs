@@ -139,14 +139,17 @@ def update_sidebars_js(class_ids: List[str], base_dir: str, folders: List[str], 
         folder_groups = {}
         for class_id in class_ids:
             # For "aikit/Classes/openai" -> group by "aikit/Classes"
-            # For "API/BlobClass" -> group by "API"
+            # For "API/BlobClass" -> group by "API"  
             # For "aikit/overview" -> group by "aikit"
             parts = class_id.split('/')
             if len(parts) >= 3:
                 # Like "aikit/Classes/openai" -> group by "aikit/Classes"
                 folder_key = '/'.join(parts[:2])
-            else:
+            elif len(parts) == 2:
                 # Like "API/BlobClass" or "aikit/overview" -> group by first part
+                folder_key = parts[0]
+            else:
+                # Single part, shouldn't happen but handle gracefully
                 folder_key = parts[0]
             
             if folder_key not in folder_groups:
@@ -168,73 +171,6 @@ def update_sidebars_js(class_ids: List[str], base_dir: str, folders: List[str], 
             # Find existing items from the same folder structure
             existing_items = []
             
-            # When in recursive mode with both top-level and nested items,
-            # we need to be more careful about identifying replacement ranges
-            if recursive and folder_key in ['aikit'] and any(id.count('/') > 1 for id in ids):
-                # This is a mixed situation - we have both top-level and nested items
-                # We need to identify and update each section separately
-                
-                # Separate the items by their level
-                top_level_items = [id for id in ids if id.count('/') == 1]  # like "aikit/overview"
-                nested_items = [id for id in ids if id.count('/') > 1]       # like "aikit/Classes/openai"
-                
-                if verbose:
-                    print(f"  Recursive mode: {len(top_level_items)} top-level, {len(nested_items)} nested items")
-                
-                # Update top-level items first (find the range that excludes nested structure)
-                if top_level_items:
-                    existing_top_items = []
-                    for i, line in enumerate(lines):
-                        stripped_line = line.strip()
-                        if f'"{pattern_prefix}' in stripped_line and (stripped_line.endswith('",') or stripped_line.endswith('"')):
-                            match = re.search(r'"([^"]+)"', stripped_line)
-                            if match:
-                                full_id = match.group(1)
-                                if full_id.count('/') == 1 and full_id.startswith(pattern_prefix):
-                                    # This is a top-level item
-                                    existing_top_items.append({
-                                        'line_index': i,
-                                        'line_content': line,
-                                        'id': full_id
-                                    })
-                    
-                    if existing_top_items:
-                        if verbose:
-                            print(f"  Updating top-level {folder_key} items: {len(existing_top_items)} existing -> {len(top_level_items)} new")
-                        
-                        first_line = existing_top_items[0]['line_index']
-                        last_line = existing_top_items[-1]['line_index']
-                        
-                        # Create replacement lines for top-level items
-                        first_item_line = existing_top_items[0]['line_content']
-                        indentation = len(first_item_line) - len(first_item_line.lstrip())
-                        indent_str = ' ' * indentation
-                        
-                        new_lines = []
-                        for i, class_id in enumerate(sorted(top_level_items)):
-                            if i == len(top_level_items) - 1:
-                                # Last item - need to check what comes after
-                                next_line_index = last_line + 1
-                                if next_line_index < len(lines):
-                                    next_line = lines[next_line_index].strip()
-                                    if next_line.startswith('{'):
-                                        new_lines.append(f'{indent_str}"{class_id}",')
-                                    else:
-                                        new_lines.append(f'{indent_str}"{class_id}"')
-                                else:
-                                    new_lines.append(f'{indent_str}"{class_id}"')
-                            else:
-                                new_lines.append(f'{indent_str}"{class_id}",')
-                        
-                        # Replace the top-level lines
-                        updated_lines = lines[:first_line] + new_lines + lines[last_line + 1:]
-                        lines = updated_lines
-                        content = '\n'.join(updated_lines)
-                        updated = True
-                
-                # Skip further processing for this folder_key since we handled it specially
-                continue
-            
             # Generic pattern matching based on folder structure
             pattern_prefix = folder_key + "/"
             
@@ -253,37 +189,22 @@ def update_sidebars_js(class_ids: List[str], base_dir: str, folders: List[str], 
                         if any(keyword in line for keyword in ['type:', 'label:', 'link:', 'slug:', 'title:', 'keywords:', 'image:']):
                             continue
                         
-                        # Determine what level we're working with
-                        folder_parts = folder_key.split('/')
-                        id_parts = full_id.split('/')
-                        
-                        # Check if this ID matches our target level
-                        should_include = False
-                        
-                        if recursive:
-                            # In recursive mode, include anything that starts with our folder prefix
-                            if full_id.startswith(pattern_prefix):
-                                should_include = True
-                        else:
-                            # In non-recursive mode, be more selective
-                            if len(folder_parts) >= 2:
-                                # For multi-level folders like "aikit/Classes", match exactly
-                                if full_id.startswith(pattern_prefix):
-                                    should_include = True
-                            elif len(folder_parts) == 1:
-                                # For single-level folders like "API" or "aikit"
-                                if full_id.startswith(pattern_prefix):
-                                    # For top-level items, exclude deeper nested structures
-                                    remaining_path = full_id[len(pattern_prefix):]
-                                    if '/' not in remaining_path:
-                                        should_include = True
-                        
-                        if should_include:
-                            existing_items.append({
-                                'line_index': i,
-                                'line_content': line,
-                                'id': full_id
-                            })
+                        # Simple matching: if the ID starts with our pattern prefix, 
+                        # and the remaining part has the same nesting level as our group
+                        if full_id.startswith(pattern_prefix):
+                            remaining_path = full_id[len(pattern_prefix):]
+                            folder_nesting_level = folder_key.count('/')
+                            id_nesting_level = full_id.count('/')
+                            
+                            # For "aikit/Classes" group (nesting=1), we want "aikit/Classes/something" (nesting=2)
+                            # For "aikit" group (nesting=0), we want "aikit/something" (nesting=1)
+                            # The ID should have exactly one more level than the folder_key
+                            if id_nesting_level == folder_nesting_level + 1:
+                                existing_items.append({
+                                    'line_index': i,
+                                    'line_content': line,
+                                    'id': full_id
+                                })
             
             if existing_items:
                 if verbose:
