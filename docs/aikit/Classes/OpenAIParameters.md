@@ -9,18 +9,26 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ## Properties
 
-### Properties of Asynchronous Programming
+### Asynchronous Callback Properties
+
+Use this callback property to receive the result regardless of success or error:
 
 | Property          | Type    | Description  |
 |-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------|
-| `formula` or `onTerminate` | Function| A function to be called asynchronously when finished. Ensure that the current process does not terminate.              |
-| `onResponse`      | Function| A function to be called asynchronously when the request finishes successfully. Ensure that the current process does not terminate. |
-| `onError`         | Function| A function to be called asynchronously when the request finishes with errors. Ensure that the current process does not terminate. |
-| `throw`           | Boolean | If true, throws an error if one occurs. Only if no formula callback defined. |
+| `onTerminate`<br>(or `formula`) | 4D.Function| A function to be called asynchronously when finished. Ensure that the current process does not terminate.              |
 
-See [documentation about asynchronous code](../asynchronous-call.md)
+Use these callback properties for more granular control over success and error handling:
 
-### Network properties
+| Property          | Type    | Description  |
+|-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------|
+| `onResponse`      | 4D.Function| A function to be called synchronously when the request finishes **successfully**. Ensure that the current process does not terminate. |
+| `onError`         | 4D.Function| A function to be called asynchronously when the request finishes **with errors**. Ensure that the current process does not terminate. |
+
+> The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+
+See [documentation about asynchronous code for examples](../asynchronous-call.md)
+
+### Network Properties
 
 | Property          | Type    | Description                |
 |-------------------|---------|--------------------------------------------------------------------------------------|
@@ -29,11 +37,17 @@ See [documentation about asynchronous code](../asynchronous-call.md)
 | `maxRetries`      | Integer | The maximum number of retries for the request. (Only if code not asynchrone ie. no function provided)         |
 | `extraHeaders`    | Object  | Extra headers to send with the request.                                                |   
 
-### OpenAPI properties
+### OpenAPI Properties
 
 | Property          | Type    | Description     |
 |-------------------|---------|----------------------------------------------------------------------------------------------
 | `user`            | Text    | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse.  |
+
+### Others 
+
+| Property          | Type    | Description  |
+|-------------------|---------|---------------------------------------------------------------------------------------------------------------------------------|
+| `throw`           | Boolean | If true, throws an error if one occurs. Only if no formula callback defined. |
 
 ## Inherited Classes
 
