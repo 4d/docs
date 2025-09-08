@@ -15,7 +15,7 @@ TCPConnection オブジェクトはメモリ内にそれへの参照が存在し
 
 :::info 4DTCPUDPLog.txt ファイル
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to TCP connections. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
+TCP 接続に関連したイベントを記録する[4DTCPUDPLog.txt ログファイル](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用すると、 デバッグやモニタリングを行うことができます。 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
 
 :::
 
@@ -166,7 +166,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
+`4D.TCPConnection.new()` 関数は<!-- REF #4D.TCPConnection.new().Summary -->*serverAddress* と *serverPort* 引数で指定されたサーバーとポートに対して、 *options* 引数で指定されたオプションを使用して新しい TCP 接続を作成し、 `4D.TCPConnection` オブジェクトを返します<!-- END REF -->。
 
 #### `options` 引数
 

@@ -40,9 +40,9 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
 
-### To learn more
+### 詳細はこちら
 
-[**Scalable sessions for advanced web applications**](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) (blog post)<br/>
+[**高度な Webアプリケーションに対応したスケーラブルセッション**](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) (blog post)<br/>
 [**Permissions: Inspect Session Privileges for Easy Debugging**](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/) (blog post)
 
 <!-- REF SessionClass.clearPrivileges().Desc -->
@@ -75,13 +75,13 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session (excluding promoted privileges) and returns **True** if the execution was successful<!-- END REF -->.
+`.clearPrivileges()` 関数は、<!-- REF #SessionClass.clearPrivileges().Summary -->対象セッションに紐づいているアクセス権をすべて削除し(昇格した権限を除く)、実行が成功した場合に **true** を返します<!-- END REF -->。
 
 ["強制ログイン" モード](../REST/authUsers.md#force-login-mode) でない限り、セッションは自動的にゲストセッションとなります。 "強制ログイン" モードでは、`.clearPrivileges()` はセッションをゲストセッションへと変換するのではなく、セッションの権限を消去するだけです。
 
 :::note
 
-This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
+この関数は [roles.json](../ORDA/privileges.md#rolesjsonファイル) ファイルで追加されたものであれ [`promote()`](#promote) 関数で追加されたものであれ、Web プロセスから**昇格された権限** を削除しません。
 
 :::
 
@@ -162,9 +162,9 @@ $token := Session.createOTP( 60 ) // トークンは1分間有効
 
 <!-- REF #SessionClass.demote().Params -->
 
-| 引数        | 型       |     | 説明                                      |
-| --------- | ------- | :-: | --------------------------------------- |
-| promoteId | Integer |  -> | Id returned by the `promote()` function |
+| 引数        | 型       |     | 説明                     |
+| --------- | ------- | :-: | ---------------------- |
+| promoteId | Integer |  -> | `promote()` 関数から返されたID |
 
 <!-- END REF -->
 
@@ -172,15 +172,15 @@ $token := Session.createOTP( 60 ) // トークンは1分間有効
 
 :::note
 
-This function does nothing in remote client, stored procedure, and standalone sessions.
+この関数はリモートクライアント、ストアドプロシージャー、スタンドアロンのセッションにおいては何もしません。
 
 :::
 
-The `.demote()` function <!-- REF #SessionClass.demote().Summary -->removes the promoted privilege whose id you passed in *promoteId* from the web process, if it was previously added by the [`.promote()`](#promote) function<!-- END REF -->.
+`.demote()` 関数は<!-- REF #SessionClass.demote().Summary --> *promoteId* 引数に ID を渡した昇格した権限を、Web プロセスから削除します(その権限が [`.promote()`](#promote) 関数を使用して以前追加された場合)<!-- END REF -->。
 
-If no privilege with *promoteId* was promoted using [`.promote()`](#promote) in the web process, the function does nothing.
+Web プロセス内において *promoteId* で指定した権限が [`.promote()`](#promote) を使用して昇格したものではなかった場合、この関数は何もしません。
 
-If several privileges have been added to the web process, the `demote()` function must be called for each one with the appropriate *promoteId*. Privileges are stacked in the order they have been added to the process, it is recommended to unstack privileges in a LIFO (*Last In, First Out*) order.
+Web プロセスに複数の権限が追加されていた場合、 `demote()` 関数はそれぞれの権限に対して適切な *promoteId* を使用して呼び出す必要があります。 権限はプロセスに対して追加された順番でスタックされているため、スタックを解除する場合にはLIFO (*Last In, First Out*) 順で解除することが推奨されます。
 
 #### 例題
 
@@ -272,7 +272,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 :::note
 
-This function returns privileges assigned to a Session using the [`setPrivileges()`](#setprivileges) function only. Promoted privileges are NOT returned by the function, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
+この関数は、 [`setPrivileges()`](#setprivileges) 関数を使用してセッションに割り当てられた権限を返します。 昇格した権限は、[roles.json](../ORDA/privileges.md#rolesjson-file) ファイルで追加されたか [`promote()`](#promote) 関数で追加されたかに関わらず、この関数によっては返されません。
 
 :::
 
@@ -345,10 +345,10 @@ $privileges := Session.getPrivileges()
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                   |
-| ----- | ------------------------------------ |
-| 21    | Returns True for promoted privileges |
-| 18 R6 | 追加                                   |
+| リリース  | 内容                     |
+| ----- | ---------------------- |
+| 21    | 昇格した権限に対しては True を返します |
+| 18 R6 | 追加                     |
 
 </details>
 
@@ -369,7 +369,7 @@ $privileges := Session.getPrivileges()
 
 :::note
 
-This function returns True for the *privilege* if called from a function that was promoted for this privilege (either through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function).
+この関数は、 *privilege* 引数で指定した権限が、その権限にのために([roles.json](../ORDA/privileges.md#rolesjson-file) ファイルまたは [`promote()`](#promote) 関数を通して)昇格された関数から呼び出された場合には、True を返します。
 
 :::
 
@@ -577,10 +577,10 @@ End if
 
 <!-- REF #SessionClass.promote().Params -->
 
-| 引数        | 型       |                             | 説明                                                        |
-| --------- | ------- | :-------------------------: | --------------------------------------------------------- |
-| privilege | Text    |              ->             | アクセス権の名称                                                  |
-| 戻り値       | Integer | <- | id to use when calling the [`demote()`](#demote) function |
+| 引数        | 型       |                             | 説明                                             |
+| --------- | ------- | :-------------------------: | ---------------------------------------------- |
+| privilege | Text    |              ->             | アクセス権の名称                                       |
+| 戻り値       | Integer | <- | [`demote()`](#demote) function関数を呼び出す際に使用する ID |
 
 <!-- END REF -->
 
@@ -588,30 +588,30 @@ End if
 
 :::note
 
-This function does nothing in remote client, stored procedure, and standalone sessions.
+この関数はリモートクライアント、ストアドプロシージャー、スタンドアロンのセッションにおいては何もしません。
 
 :::
 
-The `.promote()` function <!-- REF #SessionClass.promote().Summary -->adds the privilege defined in the *privilege* parameter to the current process during the execution of the calling function and returns the id of the promoted privilege<!-- END REF -->.
+`.promote()` 関数は、<!-- REF #SessionClass.promote().Summary -->*privilege* 引数で定義された権限を、呼び出し関数の実行中にカレントプロセスに追加し、昇格した権限の ID を返します<!-- END REF -->。
 
-Dynamically adding privileges is useful when access rights depend on the execution context, which cannot be fully defined in the "roles.json" file. This is particularly relevant when the same function can be executed by users with different access levels. The use of `.promote()` ensures that only the current process is granted the necessary privileges, without affecting others.
+権限を動的に付与することは、アクセス権が実行コンテキストに依存する場合には有用です。この場合 "roles.json" ファイルだけでは完全に定義しきることはできないからです。 これは、異なるアクセスレベルのユーザーによって同じ関数が実行され得る場合に関連します。 `.promote()` を使用することで、他のプロセスに影響することなく、カレントプロセスにのみ必要な権限が与えられるようにすることができます。
 
-The function does nothing and returns 0 if:
+この関数は、以下の場合には何もせずに 0 を返します:
 
-- the *privilege* does not exist in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file,
-- the *privilege* is already assigned to the current process (using `.promote()` or through a static [promote action](../ORDA/privileges.md#permission-actions) declared for the calling function in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file).
+- [`roles.json`](../ORDA/privileges.md#rolesjson-file) ファイル内に *privilege* 引数で指定した権限が存在しない場合
+- *privilege* が既に(`.promote()` を使用するか、あるいは [`roles.json`](../ORDA/privileges.md#rolesjsonファイル) ファイル内で呼び出し関数に対して宣言されている静的な[昇格アクション](../ORDA/privileges.md#permission-actions) を通して)カレントプロセスに対して割り当てられている場合。
 
-You can call the `promote()` function several times in the same process to add different privileges.
+`promote()` 関数を同じプロセスに対して複数回呼び出すことで、異なる権限を追加することができます。
 
-The returned id is incremented each time a privilege is dynamically added to the process.
+権限がプロセスに対して動的に追加されるたびに、返されるID はインクリメントされます。
 
-To remove a privilege dynamically, call the `demote()` function with the appropriate id.
+権限を動的に削除するためには、適切なID で `demote()` 関数を呼び出してください。
 
 #### 例題
 
-Several users connect to a single endpoint that serves different applications. A user from application #1 does not need the "super_admin" privilege because they don't create "VerySensitiveInfo". A user from application #2 needs "super_admin" privilege.
+複数のユーザーが、異なるアプリケーションとして振る舞う単一のエンドポイントに接続する場合を考えます。 #1 のアプリケーションからのユーザーは、"VerySensitiveInfo" を作成しないため、 "super_admin" 権限を必要としません。 一方で#2 のアプリケーションからのユーザーは "super_admin" 権限を必要とします。
 
-You can dynamically provide appropriate privileges in the *CreateInfo* function:
+この場合、*CreateInfo* 関数内において、適切な権限を動的に適用することができます:
 
 ```4d
 exposed Function createInfo($info1 : Text; $info2 : Text)
