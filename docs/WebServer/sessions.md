@@ -12,6 +12,12 @@ Web sessions allow to:
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
 - associate privileges to the user running the session.
 
+:::tip Related blog post
+
+[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
 ## Usages
 
 Web sessions are used for:
