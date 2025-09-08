@@ -7,6 +7,13 @@ title: Session
 Session objects are returned by the [`Session`](../commands/session.md) command. These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web only) manage [privileges](../ORDA/privileges.md).
 
 
+:::tip Related blog posts
+
+- [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Generate, share and use web sessions One-Time Passcodes (OTP)](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
 
 
 ### Session types
@@ -47,11 +54,6 @@ The availability of properties and functions in the `Session` object depends on 
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->|
 |[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->|
 
-
-### To learn more
-
-[**Scalable sessions for advanced web applications**](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) (blog post)<br/>
-[**Permissions: Inspect Session Privileges for Easy Debugging**](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/) (blog post)
 
 <!-- REF SessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
