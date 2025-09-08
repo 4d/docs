@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
+<!--REF #_command_.DIALOG.Summary-->**DIALOG** コマンドはユーザーに対して*form* 引数で指定したフォームを、*formData* 引数(オプション)とともに表示します。<!-- END REF--> 
 
 このコマンドは、フォームを基にした、カスタマイズされた高度なユーザーインターフェースで動作するように設計されています。 これを使用してデータベースや他の場所からの情報を表示したり、あるいはデータ入力機能を提供することができます。 [ADD RECORD](../commands-legacy/add-record.md) や [MODIFY RECORD](../commands-legacy/modify-record.md) とは異なり、**DIALOG** コマンドは、フォームとそのコンテンツ、内容、評価ボタンなどに対して、完全にコントロールすることができます。
 

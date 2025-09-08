@@ -160,7 +160,7 @@ TCPConnection オブジェクトは以下のプロパティと関数を提供し
 
 #### 説明
 
-The `4D.TCPConnection.new()` function <!-- REF #4D.TCPConnection.new().Summary -->creates a new TCP connection to the specified *serverAddress* and *serverPort*, using the defined *options*, and returns a `4D.TCPConnection` object<!-- END REF -->.
+`4D.TCPConnection.new()` 関数は<!-- REF #4D.TCPConnection.new().Summary -->*serverAddress* と *serverPort* 引数で指定されたサーバーとポートに対して、 *options* 引数で指定されたオプションを使用して新しい TCP 接続を作成し、 `4D.TCPConnection` オブジェクトを返します<!-- END REF -->。
 
 #### `options` 引数
 

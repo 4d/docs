@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.FORM LOAD.Summary-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて *formData* 引数のデータ(オプション)とともにメモリーにロードします。 <!-- END REF--> There can only be one current form per process.
+<!--REF #_command_.FORM LOAD.Summary-->**FORM LOAD** コマンドを使用してデータ印刷・コンテンツ解析のために *form* 引数で指定したフォームをカレントプロセスにおいて *formData* 引数のデータ(オプション)とともにメモリーにロードします。 <!-- END REF-->1つのプロセスにつきカレントフォームは1つしか指定できません。
 
 *form* 引数には、以下のいづれかを渡すことができます:
 
