@@ -12,6 +12,12 @@ Les sessions Web permettent de :
 - stocker et partager des données entre les process d'un client web en utilisant le [.storage](../API/SessionClass.md#storage) de la session,
 - associer des privilèges à l'utilisateur qui exécute la session.
 
+:::tip Related blog post
+
+[Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
 ## Utilisations
 
 Les sessions Web sont utilisées par :

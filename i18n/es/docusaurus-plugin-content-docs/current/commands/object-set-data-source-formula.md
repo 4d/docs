@@ -23,7 +23,6 @@ Pasar el parámetro opcional *\** indica que el parámetro *object* es un nombre
 
 La *formula* actúa como la fuente de la cual el objeto recupera su valor en ejecución. Esto permite un comportamiento dinámico, como valores calculados, visualización condicional o datos derivados.
 
-
 Si se pasa *Null* como parámetro *formula*, 4D restablecerá la fuente de datos del objeto a una [variable dinámica de formulario](../FormObjects/properties_Object.md#dynamic-variables).
 
 Si el comando se aplica a un objeto que no existe o no admite fórmulas, no hace nada.

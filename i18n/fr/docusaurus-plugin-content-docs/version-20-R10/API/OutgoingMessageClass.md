@@ -5,7 +5,7 @@ title: OutgoingMessage
 
 La classe `4D.OutgoingMessage` vous permet de construire des messages qui seront renvoyés par les fonctions de votre application en réponse aux [requêtes REST](../REST/REST_requests.md). Lorsque la réponse est de type `4D.OutgoingMessage`, le serveur REST ne renvoie pas un objet mais une instance d'objet de la classe `OutgoingMessage`.
 
-Typiquement, cette classe peut être utilisée dans des [fonctions de gestion des requêtes HTTP] personnalisées (../WebServer/http-request-handler.md#function-configuration) ou dans des fonctions déclarées avec le mot-clé [`onHTTPGet`] (../ORDA/ordaClasses.md#onhttpget-keyword) et conçues pour gérer des requêtes HTTP GET. Ces requêtes sont utilisées, par exemple, pour implémenter des fonctionnalités telles que le téléchargement de fichier, la génération et le téléchargement d'images ainsi que la réception de tout content-type via un navigateur.
+Typiquement, cette classe peut être utilisée dans des [fonctions de gestion des requêtes HTTP](../WebServer/http-request-handler.md#function-configuration) personnalisées ou dans des fonctions déclarées avec le mot-clé [`onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) et conçues pour gérer des requêtes HTTP GET. Ces requêtes sont utilisées, par exemple, pour implémenter des fonctionnalités telles que le téléchargement de fichier, la génération et le téléchargement d'images ainsi que la réception de tout content-type via un navigateur.
 
 Une instance de cette classe est construite sur 4D Server et peut être envoyée au navigateur via le [serveur REST 4D](../REST/gettingStarted.md) uniquement. Cette classe permet d'utiliser d'autres technologies que HTTP (par exemple, mobile).
 
@@ -143,7 +143,7 @@ Si *body* n'est pas un type de valeur pris en charge, une erreur est renvoyée.
 
 La fonction `.setHeader()` <!-- REF #OutgoingMessageClass.setHeader().Summary -->fixe la clé *key* du header du message sortant avec la *value* fournie<!-- END REF -->. Si les deux paramètres ne sont pas des valeurs texte, une erreur est générée.
 
-When returning a 4D.OutgoingMessage object instance, 4D automatically sets some headers (e.g. `Set-Cookie` with `4DSID__ProjectName_=....`).
+Lorsqu'il renvoie une instance d'objet 4D.OutgoingMessage, 4D définit automatiquement certains en-têtes (par exemple `Set-Cookie` avec `4DSID__ProjectName_=....`).
 
 :::note
 

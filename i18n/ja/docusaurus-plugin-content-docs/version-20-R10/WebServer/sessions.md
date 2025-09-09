@@ -12,6 +12,12 @@ Webセッションでは、以下のことが可能です:
 - セッションの [.storage](../API/SessionClass.md#storage) を使用して、Webクライアントのプロセス間でデータを保存および共有。
 - セッションを実行しているユーザーに権限を関連付ける。
 
+:::tip Related blog post
+
+[高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
 ## 用途
 
 Webセッションは次のものに使用されます:

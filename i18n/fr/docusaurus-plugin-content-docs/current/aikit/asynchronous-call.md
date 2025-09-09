@@ -7,7 +7,11 @@ title: Appel asynchrone
 
 If you do not want to wait for the OpenAPI response when making a request to its API, you need to use asynchronous code.
 
-You must provide a `4D.Formula` to receive the result. See [OpenAIParameters](Classes/OpenAIParameters.md) for a list of them.
+To make asynchronous calls, you must provide a callback `4D.Function`(`Formula`) in the [OpenAIParameters](Classes/OpenAIParameters.md) object parameter to receive the result.
+
+The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code. Voir les exemples ci-dessous.
+
+## Process Considerations
 
 The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
 

@@ -27,8 +27,8 @@ title: Text
 
 このプロパティは[**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) コマンドを使用しても設定することができます。
 
-> This is normal text.<br/>
-> **This is bold text.**
+> これは通常のテキストです。<br/>
+> **これは太字のテキストです。**
 
 #### JSON 文法
 
@@ -60,8 +60,8 @@ title: Text
 
 このプロパティは[**OBJECT SET FONT STYLE**](../commands-legacy/object-set-font-style.md) コマンドを使用しても設定することができます。
 
-> This is normal text.<br/>
-> *This is text in italics.*
+> これは通常のテキストです。<br/>
+> *これはイタリックのテキストです。*
 
 #### JSON 文法
 
@@ -269,7 +269,7 @@ title: Text
 
 `セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
-リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 For more information about this, refer to the description of the [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) command in the 4D Language Reference manual.
+リストボックスの各行にカスタマイズしたフォントカラーを適用するために使用します。 RGBカラーを使用しなければなりません。 この詳細については、*4Dランゲージリファレンス* マニュアルの [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドの説明を参照ください。
 
 式または変数 (配列を除く) を入力します。 表示される行ごとに式や変数は評価されます。 [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) コマンドの章で説明されている定数を使用することができます。
 
@@ -369,7 +369,7 @@ Choose([Companies]ID;Bold;Plain;Italic;Underline)
 - ピクチャーを除き、すべて `下` です。
 - ピクチャーは `上` です。
 
-This property can also be handled by the [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) and [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) commands.
+このプロパティは、[OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) および [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) コマンドを使用しても管理することができます。
 
 #### JSON 文法
 

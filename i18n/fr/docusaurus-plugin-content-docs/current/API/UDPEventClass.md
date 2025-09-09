@@ -34,7 +34,7 @@ Les propriétés suivantes sont disponibles :
 
 #### Description
 
-The `.address` property contains <!-- REF #UDPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+La propriété `.address` contient <!-- REF #UDPEvent.address.Summary -->l'adresse IP de la machine distante<!-- END REF -->.
 
 <!-- END REF -->
 
