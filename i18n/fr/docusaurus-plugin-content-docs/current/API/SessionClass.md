@@ -21,12 +21,11 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 
 :::
 
-:::info To learn more
-
-Blog posts about this feature:
+:::tip Related blog posts
 
 - [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Generate, share and use web sessions One-Time Passcodes (OTP)](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 
 :::
 
@@ -64,11 +63,6 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 | [<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<br/><!-- INCLUDE #SessionClass.setPrivileges().Summary -->       |
 | [<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<br/><!-- INCLUDE #SessionClass.storage.Summary -->                             |
 | [<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<br/><!-- INCLUDE #SessionClass.userName.Summary -->                          |
-
-### To learn more
-
-[**Scalable sessions for advanced web applications**](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) (blog post)<br/>
-[**Permissions: Inspect Session Privileges for Easy Debugging**](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/) (blog post)
 
 <!-- REF SessionClass.clearPrivileges().Desc -->
 
