@@ -7,7 +7,7 @@ title: Images
 
 ## Formats natifs pris en charge
 
-4D intègre une gestion native des images. Cela signifie que les images sont affichées et stockées dans leur format d’origine, sans interprétation dans 4D. The specific features of the different formats (shading, transparent areas, etc.) will be retained when they are copied and pasted, and will be displayed without alteration. Ce support natif est valable pour toutes les images stockées dans les formulaires 4D : [images statiques](FormObjects/staticPicture.md) collées en mode Développement, images collées dans des [objets de saisie](FormObjects/input_overview.md) à l'exécution,
+4D intègre une gestion native des images. Cela signifie que les images sont affichées et stockées dans leur format d’origine, sans interprétation dans 4D. Les spécificités des différents formats (ombrage, zones transparentes, etc.) seront conservées lorsqu'elles seront copiées et collées, et seront affichées sans modification. Ce support natif est valable pour toutes les images stockées dans les formulaires 4D : [images statiques](FormObjects/staticPicture.md) collées en mode Développement, images collées dans des [objets de saisie](FormObjects/input_overview.md) à l'exécution,
 
 Les formats d'image les plus courants sont pris en charge par les deux plates-formes : jpeg, gif, png, tiff, bmp, etc. Sous macOS, le format pdf est également disponible pour l'encodage et le décodage.
 
@@ -42,12 +42,12 @@ Lorsque vous utilisez des images haute résolution, vous pouvez spécifier le fa
 
 Les images haute résolution avec la convention @nx peuvent être utilisées dans les objets suivants :
 
-- [Static pictures](FormObjects/staticPicture.md)
+- [Images statiques](FormObjects/staticPicture.md)
 - [Boutons](FormObjects/button_overview.md)/[radio](FormObjects/radio_overview.md)/[cases à cocher](FormObjects/checkbox_overview.md)
 - [Boutons image](FormObjects/pictureButton_overview.md)/[Pop-up image](FormObjects/picturePopupMenu_overview.md)
-- [Tab controls](FormObjects/tabControl.md)
-- [List box headers](FormObjects/listbox_overview.md#list-box-headers)
-- [Menu icons](Menus/properties.md#item-icon)
+- [Onglets](FormObjects/tabControl.md)
+- [En-têtes de listbox](FormObjects/listbox_overview.md#list-box-headers)
+- [Icônes de menu](Menus/properties.md#item-icon)
 
 4D priorise automatiquement les images avec la résolution la plus élevée. 4D priorise automatiquement les images avec la résolution la plus élevée. Même si une commande ou une propriété spécifie *circle.png*, *circle@3x.png* sera utilisé (le cas échéant).
 
@@ -57,12 +57,12 @@ Les images haute résolution avec la convention @nx peuvent être utilisées dan
 
 Si 4D donne automatiquement la priorité à la résolution la plus élevée, il existe cependant des différences de comportement en fonction de la résolution de l'écran et de l'image *(\*)* et du format de l'image :
 
-| Opération                                                                                                                                                                            | Comportement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Déposer ou Coller                                                                                                                                                                    | If the picture has:<ul><li>**72dpi or 96dpi** - The picture is "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" formatted and the object containing the picture has the same number of pixels.</li><li>**Other dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted and the object containing the picture is equal to (picture's number of pixels \* screen dpi) / (picture's dpi)</li> <li>**No dpi** - The picture is "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" formatted.</li></ul> |
-| [Taille automatique](https://doc.4d.com/4Dv20/4D/20.2/Setting-object-display-properties.300-6750143.en.html#148057) (menu contextuel de l'éditeur de formulaires) | If the picture's display format is:<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - The object containing the picture is resized according to (picture's number of pixels \* screen dpi) / (picture's dpi) </li> <li>**Not scaled** - The object containing the picture has the same number of pixels as the picture.</li></ul>                                                                                                                                                                                                                                                     |
+| Opération                                                                                                                                                                            | Comportement                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Déposer ou Coller                                                                                                                                                                    | Si l'image a :<ul><li>**72 dpi ou 96 dpi** - L'image est au format "[Center](FormObjects/properties_Picture.md#center--truncated-non-centered)" et l'objet contenant l'image a le même nombre de pixels.</li><li>**Autres dpi** - L'image est au format "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)" et l'objet contenant l'image a une taille égale à (nombre de pixels de l'image \* dpi de l'écran) / (dpi de l'image).</li> <li>**Pas de dpi** - L'image est au format "[Scaled to fit](FormObjects/properties_Picture.md#scaled-to-fit)".</li></ul> |
+| [Taille automatique](https://doc.4d.com/4Dv20/4D/20.2/Setting-object-display-properties.300-6750143.en.html#148057) (menu contextuel de l'éditeur de formulaires) | Si le format d'affichage de l'image est :<ul><li>**[Scaled](FormObjects/properties_Picture.md#scaled-to-fit)** - L'objet contenant l'image est redimensionné en fonction du (nombre de pixels de l'image \* dpi de l'écran) / (dpi de l'image).</li> <li>**Non redimensionné** - L'objet contenant l'image a le même nombre de pixels que l'image.</li></ul>                                                                                                                                                                                                                                   |
 
-*(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
+*(\*) Généralement, macOS = 72 dpi, Windows = 96 dpi*
 
 ## Images en mode sombre (macOS uniquement)
 
@@ -70,7 +70,7 @@ Vous pouvez définir des images et des icônes spécifiques qui seront utilisée
 
 Une image en mode sombre est définie comme suit :
 
-- l'image du mode sombre porte le même nom que la version standard (mode clair) avec le suffixe "`_sombre`"
+- l'image du mode sombre porte le même nom que la version standard (mode clair) avec le suffixe "`_dark`"
 - l'image en mode sombre est stockée à côté de la version standard.
 
 Au moment de l'exécution, 4D charge automatiquement l'image en mode clair ou sombre, en fonction du [mode de couleurs du formulaire courant](../FormEditor/properties_FormProperties.md#color-scheme).
@@ -79,8 +79,8 @@ Au moment de l'exécution, 4D charge automatiquement l'image en mode clair ou so
 
 ## Coordonnées de la souris dans une image
 
-4D lets you retrieve the local coordinates of the mouse in an [input object](FormObjects/input_overview.md) associated with a [picture expression](FormObjects/properties_Object.md#expression-type), in case of a click or a hovering, even if a scroll or zoom has been applied to the picture. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie.
+4D vous permet de récupérer les coordonnées locales de la souris dans un [objet input](FormObjects/input_overview.md) associé à une [expression image](FormObjects/properties_Object.md#expression-type), en cas de clic ou de survol, même si un défilement ou un zoom a été appliqué à l'image. Ce mécanisme, proche de celui d'une image map, peut être utilisé par exemple pour gérer les barres de bouton défilables ou bien l'interface de logiciels de cartographie.
 
-The coordinates are returned in the *MouseX* and *MouseY* [System Variables](../Concepts/variables.md#system-variables). Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*.
+Les coordonnées sont renvoyées dans les [Variables système](../Concepts/variables.md#system-variables) *MouseX* et *MouseY*. Les coordonnées sont exprimées en pixels par rapport à l'angle supérieur gauche de l'image (0,0). Lorsque la souris se trouve en dehors du système de coordonnées de l'image, la valeur -1 est retournée dans *MouseX* et *MouseY*.
 
-You can get the value of these variables as part of the [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), or [`On Mouse Move`](Events/onMouseMove.md) form events.
+Vous pouvez obtenir la valeur de ces variables dans le cadre des événements de formulaire [`On Clicked`](Events/onClicked.md), [`On Double Clicked`](Events/onDoubleClicked.md), [`On Mouse up`](Events/onMouseUp.md), [`On Mouse Enter`](Events/onMouseEnter.md), ou [`On Mouse Move`](Events/onMouseMove.md).

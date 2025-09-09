@@ -33,7 +33,6 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - Cuando una variable o parámetro objeto se declara con un tipo ["cs" class](../Concepts/classes.md#cs), asignarlo con una instancia de objeto de una clase diferente genera ahora un error de sintaxis.
 - The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. Por ejemplo, `Time("-01:02:03")` devolverá **-01:02:03**. In previous releases, the negative sign was ignored.
 
-
 ## 4D 20 R9
 
 Lea [**Novedades en 4D 20 R9**](https://blog.4d.com/en-whats-new-in-4d-20-R9/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 20 R9.

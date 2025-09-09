@@ -27,7 +27,7 @@ In *parameters* object, pass any of the following optional properties. These pro
 | autoQuit           | boolean                            | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](../../Events/onEndUrlLoading.md) or [`On URL Loading Error`](../../Events/onUrlLoadingError.md) events occur. If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | timeout            | number                             | Durée maximale (exprimée en secondes) avant la fermeture de la zone si aucun événement n'est généré. Si elle est fixée à 0, aucune limitation n'est appliquée. Valeur par défaut : 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 | Résultat           | mixte                              | Résultat du traitement (le cas échéant)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| `<customProperty>` | mixte                              | Any custom attribute to be available in the *onEvent* callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `<customProperty>` | mixte                              | Tout attribut personnalisé qui sera disponible dans la méthode callback *onEvent*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 La propriété suivante est automatiquement ajoutée par la commande, si nécessaire :
 
@@ -65,7 +65,7 @@ Function onEvent()
  End case
 ```
 
-The *OffscreenArea* callback method:
+La méthode callback *OffscreenArea* :
 
 ```4d
 $o:=cs.OffscreenArea.new()
@@ -119,7 +119,7 @@ Function onEvent()
  End case
 ```
 
-The *OffscreenArea* callback method:
+La méthode callback *OffscreenArea* :
 
 ```4d
 $o:=cs.OffscreenArea.new()

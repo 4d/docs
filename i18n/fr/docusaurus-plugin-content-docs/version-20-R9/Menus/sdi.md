@@ -17,11 +17,11 @@ Le mode SDI n'est disponible que dans les environnements d'exécution suivants :
 
 - Windows
 - Application 4D fusionnée [autonome](../Desktop/building.md#build-stand-alone-application) ou [cliente](../Desktop/building.md#build-client-application)
-- [**Test application** feature](bars.md#previewing-menu-bars) available from the **Run** menu.
+- [**Fonction de test d'application**](bars.md#previewing-menu-bars) disponible à partir du menu **Exécuter**.
 
 ## Activation du mode SDI
 
-Pour activer le mode SDI dans votre application, il suffit de cocher l'option **Use SDI mode on Windows** dans la page ["Interface"](../settings/interface.md#display-windows) de la boîte de dialogue des Settings.
+Pour activer le mode SDI dans votre application, il suffit de cocher l'option **Utiliser le mode SDI sous Windows** dans la page ["Interface"](../settings/interface.md#display-windows) de la boîte de dialogue des Propriétés.
 
 Une fois l'option activée, pour exécuter votre application en mode SDI, vous pouvez soit :
 
@@ -30,7 +30,7 @@ Une fois l'option activée, pour exécuter votre application en mode SDI, vous p
 
 :::info
 
-Because the development environment is executed in MDI, switching from design mode to runtime mode using the **Test Application in SDI Mode** menu item is equivalent to restarting your application.
+L'environnement de développement étant exécuté en mode MDI, le passage du mode développement au mode exécution à l'aide de la commande de menu **Tester l'application en mode SDI** équivaut à un redémarrage de l'application.
 
 :::
 
@@ -55,7 +55,7 @@ Les fenêtres peuvent donc être utilisées dans les modes MDI ou SDI sans avoir
 
 ### Débogueur
 
-When displayed in SDI mode, the [debugger window](../Debugging/debugger.md) does not contain [editing buttons](../Debugging/debugger.md#tool-bar-buttons), because switching to design environment requires to abort execution and restart the application in MDI mode.
+Lorsqu'elle est affichée en mode SDI, la [fenêtre du débogueur](../Debugging/debugger.md) ne contient pas de [boutons d'édition](../Debugging/debugger.md#tool-bar-buttons), car le passage à l'environnement de développement nécessite d'interrompre l'exécution et de redémarrer l'application en mode MDI.
 
 ### Arrêt automatique
 
@@ -92,6 +92,6 @@ Bien qu'il soit traité de manière transparente par 4D, le mode SDI introduit d
 
 :::info
 
-You can use the [**Application info**](../commands-legacy/application-info.md) command to know the current running mode on Windows.
+Vous pouvez utiliser la commande [**Application info**](../commands-legacy/application-info.md) pour connaître le mode d'exécution courant sous Windows.
 
 :::

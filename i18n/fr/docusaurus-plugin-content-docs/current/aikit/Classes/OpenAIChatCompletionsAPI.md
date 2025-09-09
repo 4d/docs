@@ -32,7 +32,7 @@ Provide the full messages list
 ```4d
 var $messages:=[]
 $messages.push({role: "system"; content: "You are a helpful assistant."})
-$messages.push({"role":"user"; "content": "Hello, how are you?"})
+$messages.push({role: "user"; content: "Hello, how are you?"})
 // ...
 
 var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini" })

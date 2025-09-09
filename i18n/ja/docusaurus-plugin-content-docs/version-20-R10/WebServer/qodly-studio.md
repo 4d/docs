@@ -131,15 +131,15 @@ Qodlyページを利用した Webアプリケーションを開発するには�
 |                                                                               | 4D の Qodly Studio                                                                                                                                                                                     | Qodly Cloud プラットフォームの Qodly Studio                                                              |
 | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
 | テーブル (データクラス)、フィールド (属性)、リレーションの表示および編集 | 4Dストラクチャーエディター(1)                                                                                                                                                                  | Qodly Studio Model Editor                                                                       |
-| Qodlyページ                                                                      | Qodly Studio Page Editor                                                                                                                                                                              | Qodly Studio Page Editor                                                                        |
+| Qodlyページ                                                                      | Qodly Studio ページエディター                                                                                                                                                                                 | Qodly Studio ページエディター                                                                           |
 | デスクトップフォーム                                                                    | 4D IDE                                                                                                                                                                                                | *サポートされていません*                                                                                   |
 | プログラミング言語                                                                     | 4Dランゲージ (ORDA を使用)                                                                                                                                                                 | [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript) (ORDA含) |
 | コーディング IDE                                                                    | 4D IDE コードエディター *または* VS Code と [4D-Analyzer 拡張機能](https://github.com/4d/4D-Analyzer-VSCode)<br/>*4D Server のみ*: Qodly Studio コードエディター ((2) 参照) | Qodly Studio コードエディター                                                                           |
 | デバッガー                                                                         | 4D IDE デバッガー<br/>*4D Serverのみ*: Qodly Studio デバッガー ([この段落](#4d-server-で-qodlyデバッガーを使用する) を参照ください)                                                                  | Qodly Studio デバッガー                                                                              |
 | REST/Web ロールとアクセス権                                                            | roles.json の直接編集 / Qodly Studio ロールとアクセス権エディター                                                                                                                                        | Qodly Studio ロールとアクセス権エディター                                                                     |
 
-(1) The **Model** item is disabled in Qodly Studio.<br/>
-(2) In 4D Server, opening 4D code with the Qodly Studio code editor is supported **for testing and debugging purposes** (see [this paragraph](#development-and-deployment)). 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
+(1) **Model** の項目はQodly Studio では無効化されています。<br/>
+(2) 4D Server では、Qodly Studio で4D コードを開くことは、**テストおよびデバッグ目的のため** にサポートされています([こちらの段落](#開発と運用) をご覧ください)。 4Dシングルユーザーの場合、Qodly Studio で 4Dコードを開くと、シンタックスの配色がサポートされておらず、"Lsp not loaded" という警告が表示されます。
 
 ### ランゲージ
 
@@ -235,7 +235,7 @@ Qodly Studio デバッガーを実行中の 4D Server アプリケーション�
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. Qoldy Studio ツールバー内において、**Debug** ボタンをクリックします。<br/>
    ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 デバッグセッションが正常に開始されると、ボタンラベルに緑色の丸が表示され ![qodly-debug](../assets/en/WebServer/debug2.png) 、Qodly Studio デバッガーを使用できるようになります。

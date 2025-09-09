@@ -347,7 +347,7 @@ The Dependency manager reads each component's own `dependencies.json` file and r
 - 4D では、**デザイン/プロジェクト依存関係** メニューアイテムを選択します (開発環境)。<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- with 4D Server, select the **Window/Project Dependencies** menu item.<br/>
+- 4D Server では、**ウィンドウ/プロジェクト依存関係** メニュー項目を選択します。<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 依存関係パネルが表示されます。 依存関係は ABC順にソートされます。

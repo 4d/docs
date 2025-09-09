@@ -9,18 +9,26 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ## Propiedades
 
-### Propiedades de la programación asíncrona
+### Asynchronous Callback Properties
 
-| Propiedad                 | Tipo     | Descripción                                                                                                                                                   |
-| ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `formula` u `onTerminate` | Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina.                  |
-| `onResponse`              | Function | A function to be called asynchronously when the request finishes successfully. Asegúrese de que el proceso actual no termina. |
-| `onError`                 | Function | A function to be called asynchronously when the request finishes with errors. Asegúrese de que el proceso actual no termina.  |
-| `throw`                   | Boolean  | Si es true, lanza un error si se produce uno. Sólo si no se ha definido ninguna retrollamada de fórmula.                      |
+Use this callback property to receive the result regardless of success or error:
 
-Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
+| Propiedad                                          | Tipo                        | Descripción                                                                                                                                  |
+| -------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onTerminate`<br>(or `formula`) | 4D.Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina. |
 
-### Propiedades de la red
+Use these callback properties for more granular control over success and error handling:
+
+| Propiedad    | Tipo                        | Descripción                                                                                                                                                      |
+| ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onResponse` | 4D.Function | A function to be called synchronously when the request finishes **successfully**. Asegúrese de que el proceso actual no termina. |
+| `onError`    | 4D.Function | A function to be called asynchronously when the request finishes **with errors**. Asegúrese de que el proceso actual no termina. |
+
+> The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+
+See [documentation about asynchronous code for examples](../asynchronous-call.md)
+
+### Network Properties
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -29,11 +37,17 @@ Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
-### Propiedades OpenAPI
+### OpenAPI Properties
 
 | Propiedad | Tipo | Descripción                                                                                                 |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
 | `user`    | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
+
+### Others
+
+| Propiedad | Tipo    | Descripción                                                                                                                              |
+| --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `throw`   | Boolean | Si es true, lanza un error si se produce uno. Sólo si no se ha definido ninguna retrollamada de fórmula. |
 
 ## Clases heredadas
 

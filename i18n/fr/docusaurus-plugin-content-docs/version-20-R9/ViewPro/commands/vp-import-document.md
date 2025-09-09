@@ -73,10 +73,10 @@ Le paramètre optionnel *paramObj* vous permet de définir les propriétés du d
 
 :::note Notes
 
-- Importing files in .xslx, .csv, and .sjs formats is **asynchronous**. With these formats, you must use the `formula` attribute if you want to start an action at the end of the document processing.
-- Lors de l'importation d'un fichier au format Microsoft Excel dans un document 4D View Pro, certains paramètres peuvent être perdus. You can verify your settings with [this list from SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
+- L'importation de fichiers aux formats .xslx, .csv et .sjs est **asynchrone**. Avec ces formats, vous devez utiliser l'attribut `formula` si vous voulez démarrer une action à la fin du traitement du document.
+- Lors de l'importation d'un fichier au format Microsoft Excel dans un document 4D View Pro, certains paramètres peuvent être perdus. Vous pouvez vérifier vos paramètres avec [cette liste de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Pour plus d'informations sur le format CSV et les valeurs séparées par des délimiteurs en général, voir [cet article sur Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
-- Using *excelOptions* object is recommended when importing ".xlsx" format. Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
+- L'utilisation de l'objet *excelOptions* est recommandée pour l'importation du format ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
 - The callback function specified in the `formula` attribute is triggered after all [4D custom functions](../formulas.md#4d-functions) within the imported content have completed their calculations. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::

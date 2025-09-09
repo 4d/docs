@@ -27,7 +27,7 @@ La fenêtre présente les caractéristiques principales suivantes :
 - Vous pouvez filtrer le contenu de la fenêtre en utilisant le menu **Catégories** : ![](../assets/en/FormEditor/library3.png)
 - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
     - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
-    - or drag and drop the object from the library The object is then added to the form.
+    - ou glisser-déposer l'objet de la bibliothèque. L'objet est ensuite ajouté au formulaire.
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
@@ -36,7 +36,7 @@ Tous les objets proposés dans la bibliothèque d'objets standard sont décrits 
 
 ## Créer et utiliser des bibliothèques d'objets personnalisées
 
-4D permet de créer et d’utiliser des bibliothèques d’objets personnalisées. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. Vous pouvez ensuite réutiliser ces objets sous différentes formes et dans différents projets.
+4D permet de créer et d’utiliser des bibliothèques d’objets personnalisées. Une bibliothèque d'objets personnalisés est un projet 4D dans lequel vous pouvez stocker vos objets favoris (boutons, textes, images, etc.). Vous pouvez ensuite réutiliser ces objets sous différentes formes et dans différents projets.
 
 Les objets sont stockés avec toutes leurs propriétés, y compris leurs méthodes objet. Les bibliothèques sont constituées et utilisées par simple glisser-déposer ou copier-coller.
 
