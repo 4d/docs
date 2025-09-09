@@ -50,7 +50,18 @@ Use these callback properties for more granular control over success and error h
 
 See [documentation about asynchronous code for examples](../asynchronous-call.md)
 
-### Propiedades de la red
+Use these callback properties for more granular control over success and error handling:
+
+| Propiedad    | Tipo                        | Descripción                                                                                                                                                      |
+| ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onResponse` | 4D.Function | A function to be called synchronously when the request finishes **successfully**. Asegúrese de que el proceso actual no termina. |
+| `onError`    | 4D.Function | A function to be called asynchronously when the request finishes **with errors**. Asegúrese de que el proceso actual no termina. |
+
+> The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+
+See [documentation about asynchronous code for examples](../asynchronous-call.md)
+
+### Network Properties
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,7 +70,7 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
-### Propiedades OpenAPI
+### OpenAPI Properties
 
 | Propiedad | Tipo | Descripción                                                                                                 |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------- |

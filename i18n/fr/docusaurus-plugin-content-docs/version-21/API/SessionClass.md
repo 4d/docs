@@ -41,12 +41,12 @@ Articles de blog sur cette fonctionnalité :
 
 :::
 
-:::info To learn more
+:::info Pour en savoir plus
 
-Blog posts about this feature:
+Articles de blog sur cette fonctionnalité :
 
 - [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 
 :::
 
