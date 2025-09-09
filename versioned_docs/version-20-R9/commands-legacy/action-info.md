@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Action info.Summary-->The **Action info** command returns several information, including availability and status, about the defined *action* in the *target*, according to the current application context.<!-- END REF-->
 
-In *action*, pass the standard action to to check. It can be a string or a constant from the *Standard Action* theme. It can be a string or a constant from the *Standard Action* theme. Some actions accept a target element and parameters. In this case, you must use the requested pattern, for example *"gotoPage?value=2"* or *paragraph/backgroundPositionV?value=top.* 
+In *action*, pass the standard action to check. It can be a string or a constant from the *Standard Action* theme.  Some actions accept a target element and parameters. In this case, you must use the requested pattern, for example *"gotoPage?value=2"* or *paragraph/backgroundPositionV?value=top.* 
 
 Available 4D actions are listed in the *Standard actions* section of the *4D Design Reference* manual.
 
