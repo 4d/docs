@@ -66,6 +66,7 @@ Some data is also collected at regular intervals.
 |indexesSize|Number|Index size in bytes|
 |isEngined|Boolean|True if the application is merged with 4D Volume Desktop|
 |isRosetta|Boolean|True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).|
+|LDAPLogin|Number|Number of calls to `LDAP LOGIN`|
 |license|Object|Commercial name and description of product licenses|
 |maximum4DClientConnections|Number|Maximum number of 4D Client connections to the server |
 |maximumNumberOfWebProcesses|Number|Maximum number of simultaneous web processes|
@@ -79,10 +80,15 @@ Some data is also collected at regular intervals.
 |numberOfRecordsMax|Number|Total number of records|
 |numberOfTables|Number|Number of tables|
 |numberOfWebServices|Number|Number of methods published as Web Services|
+|ODBCLogin|Number|Number of calls to `SQL LOGIN` using ODBC|
 |phpCall|Number|Number of calls to `PHP execute` |
 |projectMode|Boolean|True if the application is a project|
 |qodly.webforms|Number|Number of Qodly webforms|
+|QueryBySQL|Number|Number of calls to `QUERY BY SQL`|
 |restHits|Number|Number of hits on the REST server during the data collection|
+|SQLBeginEndStatement|Number|Number of uses of `Begin SQL` / `End SQL`|
+|SQLLoginInternal|Number|Number of calls to `SQL LOGIN` using SQL_INTERNAL|
+|SQLServer|Number|Number of SQL requests through the network|
 |system|Text|Operating system version and build number|
 |uniqueID|Text|Unique ID of the 4D Server|
 |uptime|Number|Time elapsed (in seconds) since local 4D database was opened|
