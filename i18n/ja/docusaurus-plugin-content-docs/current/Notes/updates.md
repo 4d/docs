@@ -284,4 +284,5 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 | PHP       | 8.2.4  | 20             |                                                                                                                                                    |
 | SpreadJS  | 17.1.0 | 20 R7          | 新機能の概要については、[このブログ記事](https://blog.4d.com/ja/4d-view-pro-whats-new-in-4d-20-r7/) を参照ください。                                                          |
 | webKit    | WKWebView                              | 19             |                                                                                                                                                    |
+| Xerces    | 3.3.0  | **21**         | Used for XML commands                                                                                                                              |
 | Zlib      | 1.3.1  | **21**         |                                                                                                                                                    |

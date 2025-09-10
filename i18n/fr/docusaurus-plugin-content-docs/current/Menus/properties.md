@@ -7,7 +7,7 @@ Vous pouvez définir plusieurs propriétés à partir des lignes de menu, telles
 
 ## Titre
 
-La propriété **Title** contient le libellé d'un menu ou d'une ligne de menu, tel qu'il sera affiché dans l'interface de l'application.
+La propriété **Titre** contient le libellé d'un menu ou d'une ligne de menu, tel qu'il sera affiché dans l'interface de l'application.
 
 Dans l'éditeur de menus, vous pouvez saisir directement le libellé "en dur". Vous pouvez également saisir une référence pour une variable ou un élément XLIFF, ce qui facilitera la mise à jour et la traduction des applications. Vous pouvez utiliser types de références suivants :
 
