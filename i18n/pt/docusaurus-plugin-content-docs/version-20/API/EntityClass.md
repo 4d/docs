@@ -1773,9 +1773,10 @@ Quando um registro for trancado, deve ser destrancado do processo de trancamento
 
 O objeto retornado por `.unlock()` contém a propriedade abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                                                                                                                                                                               |
-| ----------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success     | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| Propriedade  | Tipo       | Descrição                                                                                                                                                                                                                               |
+| ------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success      | Parâmetros | True se a ação de destrancar for bem-sucedida, False caso contrário. Se o desbloqueio for feito em uma entidade abandonada, em um registro não bloqueado ou em um registro bloqueado por outro processo ou entidade, o sucesso é False. |
+| wasNotLocked | Parâmetros | (only if "success" is False) True if the entity was not locked in the process.                                                                                                                                                          |
 
 #### Exemplo
 

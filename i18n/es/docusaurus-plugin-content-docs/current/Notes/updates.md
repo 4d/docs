@@ -302,4 +302,5 @@ Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/
 | PHP       | 8.2.4  | 20                |                                                                                                                                                    |
 | SpreadJS  | 17.1.0 | 20 R7             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para obtener una visión general de las nuevas funciones    |
 | webKit    | WKWebView                              | 19                |                                                                                                                                                    |
+| Xerces    | 3.3.0  | **21**            | Used for XML commands                                                                                                                              |
 | Zlib      | 1.3.1  | **21**            |                                                                                                                                                    |

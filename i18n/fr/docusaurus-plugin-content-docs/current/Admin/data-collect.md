@@ -24,114 +24,79 @@ Les données sont collectées lors des événements suivants :
 
 Certaines données sont également collectées à intervalles réguliers.
 
-### Collecté au démarrage de la base de données
-
-| Data                    | Type                                     | Notes                                                                                                                                |
-| ----------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| CPU                     | Text                                     | Nom, type et vitesse du processeur                                                                                                   |
-| numberOfCores           | Number                                   | Nombre total de cœurs                                                                                                                |
-| memory                  | Number                                   | Taille de la mémoire (en octets) disponible sur la machine                                                        |
-| system                  | Text                                     | Version du système d'exploitation et numéro de version                                                                               |
-| headless                | Boolean                                  | True si l'application fonctionne en mode headless                                                                                    |
-| version                 | Number                                   | Numéro de version de l'application 4D                                                                                                |
-| buildNumber             | Number                                   | Numéro de build de l'application 4D                                                                                                  |
-| license                 | Object                                   | Nom commercial et description des licences des produits                                                                              |
-| isRosetta               | Boolean                                  | True si 4D est émulé par Rosetta sous macOS, False sinon (non émulé ou sous Windows).             |
-| uniqueID                | Text                                     | ID unique du serveur 4D                                                                                                              |
-| id                      | Texte (chaîne hachée) | Identifiant unique associé à la base de données (*Hachage par roulement polynomial du nom de la base de données*) |
-| dataFileSize            | Number                                   | Taille du fichier de données en octets                                                                                               |
-| indexesSize             | Number                                   | Taille des index en octets                                                                                                           |
-| cacheSize               | Number                                   | Taille du cache en octets                                                                                                            |
-| usingLegacyNetworkLayer | Boolean                                  | True si l'ancienne couche réseau est utilisée pour le serveur d'application                                                          |
-| usingQUICNetworkLayer   | Boolean                                  | True si la base de données utilise la couche réseau QUIC                                                                             |
-| encryptedConnections    | Boolean                                  | True si les connexions client/serveur sont cryptées                                                                                  |
-| encrypted               | Boolean                                  | Vrai si le fichier de données est chiffré                                                                                            |
-| compiled                | Boolean                                  | True si l'application est compilée                                                                                                   |
-| isEngined               | Boolean                                  | True si l'application est fusionnée avec 4D Volume Desktop                                                                           |
-| projectMode             | Boolean                                  | True si l'application est un projet                                                                                                  |
-| mobile                  | Collection                               | Informations sur les sessions mobiles                                                                                                |
-
-### Collecté au démarrage du serveur web et lors de l'envoi de la collecte de données
-
-| Data      | Type   | Notes                                                                                 |
-| --------- | ------ | ------------------------------------------------------------------------------------- |
-| webServer | Object | "started":true si le serveur web est en cours de démarrage ou démarré |
-
-### Collecté lors de la création d'une nouvelle session web
-
-| Data                                                | Type   | Notes                                                                                       |
-| --------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------- |
-| databases.webMaxLicensedSessions    | Number | Nombre maximum de sessions web non-REST sur le serveur qui utilisent la licence serveur web |
-| databases.restMaxLicensedSessions   | Number | Nombre maximum de sessions web REST sur le serveur qui utilisent la licence REST            |
-| databases.webMaxUnlicensedSessions  | Number | Nombre maximum d'autres sessions web non-REST sur le serveur                                |
-| databases.restMaxUnlicensedSessions | Number | Nombre maximum d'autres sessions web REST sur le serveur                                    |
-
-### Collecté à l'ouverture du datastore
-
-| Data                                              | Type   | Notes                                                            |
-| ------------------------------------------------- | ------ | ---------------------------------------------------------------- |
-| databases.externalDatastoreOpened | Number | Nombre d'appels à `Open datastore`                               |
-| databases.internalDatastoreOpened | Number | Nombre de fois où le datastore est ouvert par un serveur externe |
-
-### Collectés à intervalles réguliers
-
-| Data                        | Type   | Notes                                        |
-| --------------------------- | ------ | -------------------------------------------- |
-| maximumNumberOfWebProcesses | Number | Nombre maximal de process web simultanés     |
-| maximumUsedPhysicalMemory   | Number | Utilisation maximale de la mémoire physique  |
-| maximumUsedVirtualMemory    | Number | Utilisation maximale de la mémoire virtuelle |
-
-### Collecté lors de l'envoi de la collecte de données
-
-| Data                                           | Type    | Notes                                                                                            |
-| ---------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------ |
-| uptime                                         | Number  | Temps écoulé (en secondes) depuis l'ouverture de la base de données 4D locale |
-| cacheReadBytes                                 | Object  | Nombre d'octets lus à partir de la mémoire cache                                                 |
-| cacheMissBytes                                 | Object  | Nombre d'octets manqués dans le cache                                                            |
-| cacheReadCount                                 | Object  | Nombre de lectures dans le cache                                                                 |
-| cacheMissCount                                 | Object  | Nombre de lectures manquées dans le cache                                                        |
-| dataSegment1.diskReadBytes     | Object  | Nombre d'octets lus dans le fichier de données                                                   |
-| dataSegment1.diskWriteBytes    | Object  | Nombre d'octets écrits dans le fichier de données                                                |
-| dataSegment1.diskReadCount     | Object  | Nombre de lectures dans le fichier de données                                                    |
-| dataSegment1.diskWriteCount    | Object  | Nombre d'écritures dans le fichier de données                                                    |
-| indexSegment.diskReadBytes     | Number  | Nombre d'octets lus dans le fichier d'index                                                      |
-| indexSegment.diskWriteBytes    | Number  | Nombre d'octets écrits dans le fichier d'index                                                   |
-| indexSegment.diskReadCount     | Number  | Nombre de lectures dans le fichier d'index                                                       |
-| indexSegment.diskWriteCount    | Number  | Nombre d'écritures dans le fichier d'index                                                       |
-| databases.webScalableSessions  | Boolean | Vrai si les sessions évolutives sont activées                                                    |
-| databases.webIPAddressesNumber | Number  | Nombre d'adresses IP différentes ayant adressé une requête à 4D Server                           |
-
-### Collecté lors de la fermeture de la base de données et de l'envoi de la collecte de données
-
-| Data                           | Type   | Notes                                                              |
-| ------------------------------ | ------ | ------------------------------------------------------------------ |
-| webserverHits                  | Number | Nombre de hits sur le serveur web pendant la collecte des données  |
-| restHits                       | Number | Nombre de hits sur le serveur REST pendant la collecte des données |
-| webserverBytesIn               | Number | Octets reçus par le serveur web pendant la collecte des données    |
-| webserverBytesOut              | Number | Octets envoyés par le serveur web pendant la collecte des données  |
-| qodly.webforms | Number | Nombre de webforms Qodly                                           |
-
-### Collecté à chaque nouvel appel au débogueur distant
-
-| Data                                                        | Type   | Notes                                                                 |
-| ----------------------------------------------------------- | ------ | --------------------------------------------------------------------- |
-| databases.remoteDebugger4DRemoteAttachments | Number | Nombre de rattachements au débogueur distant à partir d'un 4D distant |
-| databases.remoteDebuggerQodlyAttachments    | Number | Nombre de rattachements au débogueur distant à partir de Qodly        |
-| databases.remoteDebuggerVSCodeAttachments   | Number | Nombre de rattachements au débogueur distant à partir de VS Code      |
-
-### Collecté à chaque fois que PHP execute est appelé
-
-| Data        | Type    | Notes                                                                                   |
-| ----------- | ------- | --------------------------------------------------------------------------------------- |
-| phpCall     | Number  | Nombre d'appels à `PHP execute`                                                         |
-| externalPHP | Boolean | True si le client effectue un appel à `PHP execute` et utilise sa propre version de php |
-
-### Collecté à la connexion d'un client
-
-| Data                       | Type       | Notes                                                                                                                                |
-| -------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| maximum4DClientConnections | Number     | Nombre maximal de connexions de 4D Client au serveur                                                                                 |
-| connectionSystems          | Collection | Système d'exploitation du client sans le numéro de build (entre parenthèses) et nombre de clients qui l'utilisent |
+| Data                                                        | Type                                     | Notes                                                                                                                                |
+| ----------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| buildNumber                                                 | Number                                   | Numéro de build de l'application 4D                                                                                                  |
+| cacheMissBytes                                              | Object                                   | Nombre d'octets manqués dans le cache                                                                                                |
+| cacheMissCount                                              | Object                                   | Nombre de lectures manquées dans le cache                                                                                            |
+| cacheReadBytes                                              | Object                                   | Nombre d'octets lus à partir de la mémoire cache                                                                                     |
+| cacheReadCount                                              | Object                                   | Nombre de lectures dans le cache                                                                                                     |
+| cacheSize                                                   | Number                                   | Taille du cache en octets                                                                                                            |
+| compiled                                                    | Boolean                                  | True si l'application est compilée                                                                                                   |
+| connectionSystems                                           | Collection                               | Système d'exploitation du client sans le numéro de build (entre parenthèses) et nombre de clients qui l'utilisent |
+| CPU                                                         | Text                                     | Nom, type et vitesse du processeur                                                                                                   |
+| dataFileSize                                                | Number                                   | Taille du fichier de données en octets                                                                                               |
+| dataSegment1.diskReadBytes                  | Object                                   | Nombre d'octets lus dans le fichier de données                                                                                       |
+| dataSegment1.diskReadCount                  | Object                                   | Nombre de lectures dans le fichier de données                                                                                        |
+| dataSegment1.diskWriteBytes                 | Object                                   | Nombre d'octets écrits dans le fichier de données                                                                                    |
+| dataSegment1.diskWriteCount                 | Object                                   | Nombre d'écritures dans le fichier de données                                                                                        |
+| databases.externalDatastoreOpened           | Number                                   | Nombre d'appels à `Open datastore`                                                                                                   |
+| databases.internalDatastoreOpened           | Number                                   | Nombre de fois où le datastore est ouvert par un serveur externe                                                                     |
+| databases.remoteDebugger4DRemoteAttachments | Number                                   | Nombre de rattachements au débogueur distant à partir d'un 4D distant                                                                |
+| databases.remoteDebuggerQodlyAttachments    | Number                                   | Nombre de rattachements au débogueur distant à partir de Qodly                                                                       |
+| databases.remoteDebuggerVSCodeAttachments   | Number                                   | Nombre de rattachements au débogueur distant à partir de VS Code                                                                     |
+| databases.restMaxLicensedSessions           | Number                                   | Nombre maximum de sessions web REST sur le serveur qui utilisent la licence REST                                                     |
+| databases.restMaxUnlicensedSessions         | Number                                   | Nombre maximum d'autres sessions web REST sur le serveur                                                                             |
+| databases.webIPAddressesNumber              | Number                                   | Nombre d'adresses IP différentes ayant adressé une requête à 4D Server                                                               |
+| databases.webMaxLicensedSessions            | Number                                   | Nombre maximum de sessions web non-REST sur le serveur qui utilisent la licence serveur web                                          |
+| databases.webMaxUnlicensedSessions          | Number                                   | Nombre maximum d'autres sessions web non-REST sur le serveur                                                                         |
+| databases.webScalableSessions               | Boolean                                  | Vrai si les sessions évolutives sont activées                                                                                        |
+| encrypted                                                   | Boolean                                  | Vrai si le fichier de données est chiffré                                                                                            |
+| encryptedConnections                                        | Boolean                                  | True si les connexions client/serveur sont cryptées                                                                                  |
+| externalPHP                                                 | Boolean                                  | True si le client effectue un appel à `PHP execute` et utilise sa propre version de php                                              |
+| hasDataChangeTracking                                       | Boolean                                  | True if a "__DeletedRecords" table exists                                                  |
+| headless                                                    | Boolean                                  | True si l'application fonctionne en mode headless                                                                                    |
+| id                                                          | Texte (chaîne hachée) | Identifiant unique associé à la base de données (*Hachage par roulement polynomial du nom de la base de données*) |
+| indexSegment.diskReadBytes                  | Number                                   | Nombre d'octets lus dans le fichier d'index                                                                                          |
+| indexSegment.diskReadCount                  | Number                                   | Nombre de lectures dans le fichier d'index                                                                                           |
+| indexSegment.diskWriteBytes                 | Number                                   | Nombre d'octets écrits dans le fichier d'index                                                                                       |
+| indexSegment.diskWriteCount                 | Number                                   | Nombre d'écritures dans le fichier d'index                                                                                           |
+| indexesSize                                                 | Number                                   | Taille des index en octets                                                                                                           |
+| isEngined                                                   | Boolean                                  | True si l'application est fusionnée avec 4D Volume Desktop                                                                           |
+| isRosetta                                                   | Boolean                                  | True si 4D est émulé par Rosetta sous macOS, False sinon (non émulé ou sous Windows).             |
+| LDAPLogin                                                   | Number                                   | Number of calls to `LDAP LOGIN`                                                                                                      |
+| license                                                     | Object                                   | Nom commercial et description des licences des produits                                                                              |
+| maximum4DClientConnections                                  | Number                                   | Nombre maximal de connexions de 4D Client au serveur                                                                                 |
+| maximumNumberOfWebProcesses                                 | Number                                   | Nombre maximal de process web simultanés                                                                                             |
+| maximumUsedPhysicalMemory                                   | Number                                   | Utilisation maximale de la mémoire physique                                                                                          |
+| maximumUsedVirtualMemory                                    | Number                                   | Utilisation maximale de la mémoire virtuelle                                                                                         |
+| memory                                                      | Number                                   | Taille de la mémoire (en octets) disponible sur la machine                                                        |
+| mobile                                                      | Collection                               | Informations sur les sessions mobiles                                                                                                |
+| numberOfCores                                               | Number                                   | Nombre total de cœurs                                                                                                                |
+| numberOfFields                                              | Number                                   | Number of fields                                                                                                                     |
+| numberOfKeepRecordSyncInfo                                  | Number                                   | Number of tables with the "Enable Replication" option checked                                                                        |
+| numberOfRecordsMax                                          | Number                                   | Total number of records                                                                                                              |
+| numberOfTables                                              | Number                                   | Number of tables                                                                                                                     |
+| numberOfWebServices                                         | Number                                   | Number of methods published as Web Services                                                                                          |
+| ODBCLogin                                                   | Number                                   | Number of calls to `SQL LOGIN` using ODBC                                                                                            |
+| phpCall                                                     | Number                                   | Nombre d'appels à `PHP execute`                                                                                                      |
+| projectMode                                                 | Boolean                                  | True si l'application est un projet                                                                                                  |
+| qodly.webforms                              | Number                                   | Nombre de webforms Qodly                                                                                                             |
+| QueryBySQL                                                  | Number                                   | Number of calls to `QUERY BY SQL`                                                                                                    |
+| restHits                                                    | Number                                   | Nombre de hits sur le serveur REST pendant la collecte des données                                                                   |
+| SQLBeginEndStatement                                        | Number                                   | Number of uses of `Begin SQL` / `End SQL`                                                                                            |
+| SQLLoginInternal                                            | Number                                   | Number of calls to `SQL LOGIN` using SQL_INTERNAL                                                               |
+| SQLServer                                                   | Number                                   | Number of SQL requests through the network                                                                                           |
+| system                                                      | Text                                     | Version du système d'exploitation et numéro de version                                                                               |
+| uniqueID                                                    | Text                                     | ID unique du serveur 4D                                                                                                              |
+| uptime                                                      | Number                                   | Temps écoulé (en secondes) depuis l'ouverture de la base de données 4D locale                                     |
+| usingLegacyNetworkLayer                                     | Boolean                                  | True si l'ancienne couche réseau est utilisée pour le serveur d'application                                                          |
+| usingQUICNetworkLayer                                       | Boolean                                  | True si la base de données utilise la couche réseau QUIC                                                                             |
+| version                                                     | Number                                   | Numéro de version de l'application 4D                                                                                                |
+| webServer                                                   | Object                                   | "started":true si le serveur web est en cours de démarrage ou démarré                                                |
+| webserverBytesIn                                            | Number                                   | Octets reçus par le serveur web pendant la collecte des données                                                                      |
+| webserverBytesOut                                           | Number                                   | Octets envoyés par le serveur web pendant la collecte des données                                                                    |
+| webserverHits                                               | Number                                   | Nombre de hits sur le serveur web pendant la collecte des données                                                                    |
 
 ## Où sont-elles stockées et envoyées ?
 

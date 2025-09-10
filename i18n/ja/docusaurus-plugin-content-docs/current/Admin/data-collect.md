@@ -24,114 +24,79 @@ title: データ収集
 
 また、一部のデータは一定時間ごとに収集されます。
 
-### データベース起動時に収集される情報
-
-| データ                     | 型                                 | 注記                                                                                                          |
-| ----------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| CPU                     | Text                              | プロセッサーの名前、種類、および速度                                                                                          |
-| numberOfCores           | Number                            | コアの合計数                                                                                                      |
-| memory                  | Number                            | マシン上で利用可能なメモリ容量 (バイト単位)                                                                  |
-| system                  | Text                              | OS のバージョンとビルド番号                                                                                             |
-| headless                | Boolean                           | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
-| version                 | Number                            | 4Dアプリケーションのバージョン番号                                                                                          |
-| buildNumber             | Number                            | 4Dアプリケーションのビルド番号                                                                                            |
-| license                 | Object                            | 製品ライセンスの名称と説明                                                                                               |
-| isRosetta               | Boolean                           | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
-| uniqueID                | Text                              | 4D Server の固有ID                                                                                             |
-| id                      | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
-| dataFileSize            | Number                            | データファイルのサイズ (バイト単位)                                                                      |
-| indexesSize             | Number                            | インデックスのサイズ (バイト単位)                                                                       |
-| cacheSize               | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
-| usingLegacyNetworkLayer | Boolean                           | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                                   |
-| usingQUICNetworkLayer   | Boolean                           | データベースが QUICネットワークレイヤーを使用している場合は True                                                                       |
-| encryptedConnections    | Boolean                           | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
-| encrypted               | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
-| compiled                | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
-| isEngined               | Boolean                           | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
-| projectMode             | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
-| mobile                  | Collection                        | モバイルセッションに関する情報                                                                                             |
-
-### Webサーバー起動時、収集データの送信時に収集される情報
-
-| データ       | 型      | 注記                                                     |
-| --------- | ------ | ------------------------------------------------------ |
-| webServer | Object | Webサーバーが起動中、または起動済みの場合は "started":true |
-
-### 新規Web セッション作成時に収集される情報
-
-| データ                                                 | 型      | 注記                                      |
-| --------------------------------------------------- | ------ | --------------------------------------- |
-| databases.webMaxLicensedSessions    | Number | webServer ライセンスを使用する非REST Web セッションの最大数 |
-| databases.restMaxLicensedSessions   | Number | webServer ライセンスを使用するREST Web セッションの最大数  |
-| databases.webMaxUnlicensedSessions  | Number | サーバー上のその他の非REST Web セッションの最大数           |
-| databases.restMaxUnlicensedSessions | Number | サーバー上のその他のREST Web セッションの最大数            |
-
-### データストアが開かれる際に収集される情報
-
-| データ                                               | 型      | 注記                        |
-| ------------------------------------------------- | ------ | ------------------------- |
-| databases.externalDatastoreOpened | Number | `Open datastore` への呼び出し回数 |
-| databases.internalDatastoreOpened | Number | 外部サーバーによってデータストアが開かれた回数   |
-
-### 一定時間ごとに収集される情報
-
-| データ                         | 型      | 注記           |
-| --------------------------- | ------ | ------------ |
-| maximumNumberOfWebProcesses | Number | 最大同時Webプロセス数 |
-| maximumUsedPhysicalMemory   | Number | 最大使用した物理メモリ  |
-| maximumUsedVirtualMemory    | Number | 最大使用した仮想メモリ  |
-
-### 収集データの送信時に収集される情報
-
-| データ                                            | 型       | 注記                                                |
-| ---------------------------------------------- | ------- | ------------------------------------------------- |
-| uptime                                         | Number  | ローカル4Dデータベースが開かれてからの経過時間 (秒単位) |
-| cacheReadBytes                                 | Object  | キャッシュから読み出したバイト数                                  |
-| cacheMissBytes                                 | Object  | キャッシュミスバイト数                                       |
-| cacheReadCount                                 | Object  | キャッシュの読み出し回数                                      |
-| cacheMissCount                                 | Object  | キャッシュミス回数                                         |
-| dataSegment1.diskReadBytes     | Object  | データファイルから読み取ったバイト数                                |
-| dataSegment1.diskWriteBytes    | Object  | データファイルに書き込んだバイト数                                 |
-| dataSegment1.diskReadCount     | Object  | データファイルからの読み取り回数                                  |
-| dataSegment1.diskWriteCount    | Object  | データファイルへの書き込み回数                                   |
-| indexSegment.diskReadBytes     | Number  | インデックスファイルから読み取ったバイト数                             |
-| indexSegment.diskWriteBytes    | Number  | インデックスファイルに書き込んだバイト数                              |
-| indexSegment.diskReadCount     | Number  | インデックスファイルからの読み取り回数                               |
-| indexSegment.diskWriteCount    | Number  | インデックスファイルへの書き込み回数                                |
-| databases.webScalableSessions  | Boolean | スケーラブルセッションが有効化されている場合にはTrue                      |
-| databases.webIPAddressesNumber | Number  | 4D Server へのリクエストを行った異なるIP アドレスの数                 |
-
-### データベースの終了時、収集データの送信時に収集される情報
-
-| データ                            | 型      | 注記                       |
-| ------------------------------ | ------ | ------------------------ |
-| webserverHits                  | Number | データ収集中の Webサーバーのヒット数     |
-| restHits                       | Number | データ収集中の RESTサーバーのヒット数    |
-| webserverBytesIn               | Number | データ収集中に Webサーバーが受信したバイト数 |
-| webserverBytesOut              | Number | データ収集中に Webサーバーが送信したバイト数 |
-| qodly.webforms | Number | Qodly Webフォームの数          |
-
-### リモートデバッガへの新しい呼び出しごとに収集されるデータ
-
-| データ                                                         | 型      | 注記                           |
-| ----------------------------------------------------------- | ------ | ---------------------------- |
-| databases.remoteDebugger4DRemoteAttachments | Number | リモート4D から有効化されているリモートデバッガの数  |
-| databases.remoteDebuggerQodlyAttachments    | Number | Qodly から有効化されているリモートデバッガの数   |
-| databases.remoteDebuggerVSCodeAttachments   | Number | VS Code から有効化されているリモートデバッガの数 |
-
-### PHP execute の呼び出し毎に収集される情報
-
-| データ         | 型       | 注記                                                        |
-| ----------- | ------- | --------------------------------------------------------- |
-| phpCall     | Number  | `PHP execute` の呼び出し回数                                     |
-| externalPHP | Boolean | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。 |
-
-### クライアント接続時に収集される情報
-
-| データ                        | 型          | 注記                                                           |
-| -------------------------- | ---------- | ------------------------------------------------------------ |
-| maximum4DClientConnections | Number     | サーバーへのクライアントの最大接続数                                           |
-| connectionSystems          | Collection | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数 |
+| データ                                                         | 型                                 | 注記                                                                                                          |
+| ----------------------------------------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| buildNumber                                                 | Number                            | 4Dアプリケーションのビルド番号                                                                                            |
+| cacheMissBytes                                              | Object                            | キャッシュミスバイト数                                                                                                 |
+| cacheMissCount                                              | Object                            | キャッシュミス回数                                                                                                   |
+| cacheReadBytes                                              | Object                            | キャッシュから読み出したバイト数                                                                                            |
+| cacheReadCount                                              | Object                            | キャッシュの読み出し回数                                                                                                |
+| cacheSize                                                   | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
+| compiled                                                    | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
+| connectionSystems                                           | Collection                        | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数                                                |
+| CPU                                                         | Text                              | プロセッサーの名前、種類、および速度                                                                                          |
+| dataFileSize                                                | Number                            | データファイルのサイズ (バイト単位)                                                                      |
+| dataSegment1.diskReadBytes                  | Object                            | データファイルから読み取ったバイト数                                                                                          |
+| dataSegment1.diskReadCount                  | Object                            | データファイルからの読み取り回数                                                                                            |
+| dataSegment1.diskWriteBytes                 | Object                            | データファイルに書き込んだバイト数                                                                                           |
+| dataSegment1.diskWriteCount                 | Object                            | データファイルへの書き込み回数                                                                                             |
+| databases.externalDatastoreOpened           | Number                            | `Open datastore` への呼び出し回数                                                                                   |
+| databases.internalDatastoreOpened           | Number                            | 外部サーバーによってデータストアが開かれた回数                                                                                     |
+| databases.remoteDebugger4DRemoteAttachments | Number                            | リモート4D から有効化されているリモートデバッガの数                                                                                 |
+| databases.remoteDebuggerQodlyAttachments    | Number                            | Qodly から有効化されているリモートデバッガの数                                                                                  |
+| databases.remoteDebuggerVSCodeAttachments   | Number                            | VS Code から有効化されているリモートデバッガの数                                                                                |
+| databases.restMaxLicensedSessions           | Number                            | webServer ライセンスを使用するREST Web セッションの最大数                                                                      |
+| databases.restMaxUnlicensedSessions         | Number                            | サーバー上のその他のREST Web セッションの最大数                                                                                |
+| databases.webIPAddressesNumber              | Number                            | 4D Server へのリクエストを行った異なるIP アドレスの数                                                                           |
+| databases.webMaxLicensedSessions            | Number                            | webServer ライセンスを使用する非REST Web セッションの最大数                                                                     |
+| databases.webMaxUnlicensedSessions          | Number                            | サーバー上のその他の非REST Web セッションの最大数                                                                               |
+| databases.webScalableSessions               | Boolean                           | スケーラブルセッションが有効化されている場合にはTrue                                                                                |
+| encrypted                                                   | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
+| encryptedConnections                                        | Boolean                           | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
+| externalPHP                                                 | Boolean                           | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。                                                   |
+| hasDataChangeTracking                                       | Boolean                           | True if a "__DeletedRecords" table exists                         |
+| headless                                                    | Boolean                           | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
+| id                                                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
+| indexSegment.diskReadBytes                  | Number                            | インデックスファイルから読み取ったバイト数                                                                                       |
+| indexSegment.diskReadCount                  | Number                            | インデックスファイルからの読み取り回数                                                                                         |
+| indexSegment.diskWriteBytes                 | Number                            | インデックスファイルに書き込んだバイト数                                                                                        |
+| indexSegment.diskWriteCount                 | Number                            | インデックスファイルへの書き込み回数                                                                                          |
+| indexesSize                                                 | Number                            | インデックスのサイズ (バイト単位)                                                                       |
+| isEngined                                                   | Boolean                           | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
+| isRosetta                                                   | Boolean                           | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
+| LDAPLogin                                                   | Number                            | Number of calls to `LDAP LOGIN`                                                                             |
+| license                                                     | Object                            | 製品ライセンスの名称と説明                                                                                               |
+| maximum4DClientConnections                                  | Number                            | サーバーへのクライアントの最大接続数                                                                                          |
+| maximumNumberOfWebProcesses                                 | Number                            | 最大同時Webプロセス数                                                                                                |
+| maximumUsedPhysicalMemory                                   | Number                            | 最大使用した物理メモリ                                                                                                 |
+| maximumUsedVirtualMemory                                    | Number                            | 最大使用した仮想メモリ                                                                                                 |
+| memory                                                      | Number                            | マシン上で利用可能なメモリ容量 (バイト単位)                                                                  |
+| mobile                                                      | Collection                        | モバイルセッションに関する情報                                                                                             |
+| numberOfCores                                               | Number                            | コアの合計数                                                                                                      |
+| numberOfFields                                              | Number                            | Number of fields                                                                                            |
+| numberOfKeepRecordSyncInfo                                  | Number                            | Number of tables with the "Enable Replication" option checked                                               |
+| numberOfRecordsMax                                          | Number                            | Total number of records                                                                                     |
+| numberOfTables                                              | Number                            | Number of tables                                                                                            |
+| numberOfWebServices                                         | Number                            | Number of methods published as Web Services                                                                 |
+| ODBCLogin                                                   | Number                            | Number of calls to `SQL LOGIN` using ODBC                                                                   |
+| phpCall                                                     | Number                            | `PHP execute` の呼び出し回数                                                                                       |
+| projectMode                                                 | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
+| qodly.webforms                              | Number                            | Qodly Webフォームの数                                                                                             |
+| QueryBySQL                                                  | Number                            | Number of calls to `QUERY BY SQL`                                                                           |
+| restHits                                                    | Number                            | データ収集中の RESTサーバーのヒット数                                                                                       |
+| SQLBeginEndStatement                                        | Number                            | Number of uses of `Begin SQL` / `End SQL`                                                                   |
+| SQLLoginInternal                                            | Number                            | Number of calls to `SQL LOGIN` using SQL_INTERNAL                                      |
+| SQLServer                                                   | Number                            | Number of SQL requests through the network                                                                  |
+| system                                                      | Text                              | OS のバージョンとビルド番号                                                                                             |
+| uniqueID                                                    | Text                              | 4D Server の固有ID                                                                                             |
+| uptime                                                      | Number                            | ローカル4Dデータベースが開かれてからの経過時間 (秒単位)                                                           |
+| usingLegacyNetworkLayer                                     | Boolean                           | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true                                                                   |
+| usingQUICNetworkLayer                                       | Boolean                           | データベースが QUICネットワークレイヤーを使用している場合は True                                                                       |
+| version                                                     | Number                            | 4Dアプリケーションのバージョン番号                                                                                          |
+| webServer                                                   | Object                            | Webサーバーが起動中、または起動済みの場合は "started":true                                                      |
+| webserverBytesIn                                            | Number                            | データ収集中に Webサーバーが受信したバイト数                                                                                    |
+| webserverBytesOut                                           | Number                            | データ収集中に Webサーバーが送信したバイト数                                                                                    |
+| webserverHits                                               | Number                            | データ収集中の Webサーバーのヒット数                                                                                        |
 
 ## 保存先と送信先
 
