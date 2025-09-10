@@ -350,7 +350,7 @@ title: インデックス
 [`Generate digest`](../commands-legacy/generate-digest.md)<br/>
 [`GENERATE ENCRYPTION KEYPAIR`](../commands-legacy/generate-encryption-keypair.md)<br/>
 [`Generate password hash`](../commands-legacy/generate-password-hash.md)<br/>
-[`Generate UUID`](generate-uuid.md) **modified 4D 20 R10**<br/>
+[`Generate UUID`](generate-uuid.md) **4D 20 R10 で変更**<br/>
 [`Get 4D file`](../commands-legacy/get-4d-file.md)<br/>
 [`Get 4D folder`](../commands-legacy/get-4d-folder.md)<br/>
 [`Get adjusted blobs cache priority`](../commands-legacy/get-adjusted-blobs-cache-priority.md)<br/>
