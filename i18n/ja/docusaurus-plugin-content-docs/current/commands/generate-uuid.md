@@ -37,7 +37,7 @@ UUID は16 バイトの数字(128 bit)です。 32 文字の16 進数を格納�
 
 :::note
 
-For more information on UUID version 7, please read [this blog post](https://blog.4d.com/sort-uuids-with-version-7).
+UUID バージョン7の詳細な情報については、 [こちらのblog記事](https://blog.4d.com/sort-uuids-with-version-7) を参照してください。
 
 :::
 
