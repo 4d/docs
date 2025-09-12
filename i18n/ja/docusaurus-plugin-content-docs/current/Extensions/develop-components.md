@@ -462,7 +462,7 @@ SAVE RECORD($tablepointer->)
 
 コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#コンポーネントの読み込み) によって使用されます。
 
-The following keys can be defined:
+定義可能なキーは以下の通りです:
 
 | key                                                        | description                                                                                                 |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
