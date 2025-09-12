@@ -166,40 +166,40 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 コンポーネントの[公開されたコンポーネントクラス](#クラスの共有) および [共有されたメソッド](#プロジェクトメソッドの共有) はエクスプローラーの**コンポーネントメソッド** タブから編集することができます。
 
-A specific icon indicates that the component contains shared code):<br/>
+エクスプローラーでは、コンポーネントに共有されたコードが含まれていることを表す特定のアイコンが表示されます:<br/>
 ![](../assets/en/Develop/editable-component.png)
 
-Select **Edit...** to open your component code in the Code editor. You can edit and save it.
+**編集...** を選択するとコードエディターでコンポーネントのコードが開きます。 そこで編集し保存することができます。
 
-### Editing all component code
+### 全てのコンポーネントコードを編集する
 
-You can edit directly all the code of a loaded component from the host project in a dedicated component tab, including methods or classes that are not shared.
+共有されていないメソッドやクラスも含め、ロードされたコンポーネントの全てのコードを、ホストプロジェクトから専用のコンポーネントタブにおいて直接編集することができます。
 
-Select **Edit...** item is available when you right-click on the component name in the **Component Methods** tab of the Explorer.
+**編集...** の項目は、エクスプローラーの **コンポーネントメソッド** タブ内にてコンポーネント名を右クリックすると利用できます。
 
 ![edit-component](../assets/en/Project/Edit-component.png)
 
-When you select it, a dedicated tab is added (or highlighted if already added) in the Explorer. In this tab, the following standard pages are available and give access to the component contents:
+それを選択すると、エクスプローラーに専用のタブが追加されます(あるいは既に追加されていた場合にはそれがハイライトされます)。 このタブ内では、以下の標準のページが利用でき、コンポーネントの中身へとアクセスできます:
 
 ![tab-component](../assets/en/Project/tab-component.png)
 
-- Home, including folders, methods, classes and (preview only) forms
-- ⒋ プロジェクトメソッド
-- Database Methods ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- フォルダ、メソッド、クラスおよびフォーム(プレビューのみ)を含むホーム
+- プロジェクトメソッド
+- データベースメソッド([On Web Connection](../commands-legacy/on-web-connection-database-method.md)、[On Web Authentication](../commands-legacy/on-web-authentication-database-method.md)、[On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
 - クラス
-- Project Form Methods
-- Commands and Constants
+- プロジェクトフォームメソッド
+- コマンドと定数
 - プラグイン
-- Trash
+- ゴミ箱
 
 ![tab-component](../assets/en/Project/tab-component.gif)
 
-Standard 4D IDE features are available for the component. You can execute the following actions:
+標準の4D IDE 機能がコンポーネントに対して利用可能です。 以下のアクションを実行することができます:
 
-- add, duplicate, delete, edit/save [methods and classes](../Project/code-overview.md)
-- preview code, show/edit [documentation](../Project/documentation.md), display/edit [method properties](../Project/code-overview.md#project-method-properties),
-- run methods,
-- restore from trash or empty trash.
+- [メソッドおよびクラス](../Project/code-overview.md)の追加、複製、削除、編集/保存
+- コードのプレビュー、[ドキュメンテーション](../Project/documentation.md) の表示/編集、[メソッドプロパティ](../Project/code-overview.md#project-method-properties) の表示/編集
+- メソッドの実行
+- ゴミ箱からの復元、あるいはゴミ箱を空にする。
 
 ## コンパイル済みコンポーネントのコード補完
 
@@ -427,7 +427,7 @@ SAVE RECORD($tablepointer->)
 
 コンポーネントの`Info.plist` ファイル内でサポートされているキーは、大部分は[Apple bundle キー](https://developer.apple.com/documentation/bundleresources/information-property-list) であり、Windows 上では無視されます。 しかしながら、これらは全てのプラットフォームにおいて[依存関係マネージャ](../Project/components.md#コンポーネントの読み込み) によって使用されます。
 
-The following keys can be defined:
+定義可能なキーは以下の通りです:
 
 | key                                                        | description                                                                                                 |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
