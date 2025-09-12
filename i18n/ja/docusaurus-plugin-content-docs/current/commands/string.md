@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->**String** コマンドは、*expression* に渡した数値、日付、時間、文字列、またはブールを文字列に変換します。<!-- END REF-->
 
-If you do not pass any other parameter, the string is returned with the appropriate default format. *format* を指定すると、結果の文字列は指定した形式になります。
+引数を何も渡さなかった場合、適切なデフォルトの形式の文字列で返されます。 *format* を指定すると、結果の文字列は指定した形式になります。
 
 オプションの*addTime* 引数は、日付に時間を複合フォーマットで追加します。 この引数は *expression* 引数が日付型の時にのみ使用できます (後述)。
 
@@ -90,7 +90,7 @@ If you do not pass any other parameter, the string is returned with the appropri
 :::info
 
 - このシンタックスは[基数の取扱に関する`toString` EcmaScript 仕様](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring) に厳密に従います。
-- *base*=10 のシンタックスを使用した場合、 *base* 引数を使用しなかったシンタックスと全く同じ結果は返しません。 For example, if the specified number value is not a number, the "NaN" string is returned.
+- *base*=10 のシンタックスを使用した場合、 *base* 引数を使用しなかったシンタックスと全く同じ結果は返しません。 例えば、指定された数値が数字でなかった場合、 "NaN" の文字列が返されます。
 
 :::
 

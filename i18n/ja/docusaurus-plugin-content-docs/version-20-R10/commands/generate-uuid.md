@@ -41,11 +41,11 @@ UUID バージョン7の詳細な情報については、 [こちらのblog記�
 
 :::
 
-In 4D, UUID numbers can be stored in fields (see [UUID Format](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106190). A [4D settings option](../settings/database.md#auto-uuid-version) allows generating version 7 UUIDs in automatic fields.
+In 4D, UUID numbers can be stored in fields (see [UUID Format](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106190). [4D 設定オプション](../settings/database.md#自動uuidバージョン) を使用することで、自動フィールドでバージョン7 のUUID の生成ができるようになります。
 
 ## 例題
 
-Generation of a UUID in a variable:
+変数内にUUID を生成します:
 
 ```4d
  var MyUUID : Text
