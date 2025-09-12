@@ -5,7 +5,7 @@ slug: /commands/on-web-connection-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Web Connection database method.Syntax-->On Web Connection($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text) -> $result : Boolean<!-- END REF-->
+<!--REF #_command_.On Web Connection database method.Syntax-->On Web Connection($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ; $user : Text ; $pw : Text)<!-- END REF-->
 <!--REF #_command_.On Web Connection database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ You must declare these parameters as shown below:
 ```4d
   // On Web Connection Database Method
  
-#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text) -> $result : Boolean
+#DECLARE($url : Text ; $http : Text ; $ipBrowser : Text ; $ipServer : Text ;\ $user : Text ; $pw : Text)
  
   // Code for the method
 ```

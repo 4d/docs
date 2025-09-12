@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> anchors the picture passed as parameter at a fixed location within the specified *wpDoc* and returns its reference.<!-- END REF--> The returned reference can then be passed to the [WP SET ATTRIBUTES](wp-set-attributes.md) command to move the picture to any location in *wpDoc* (page, section, header, footer, etc.) レイヤーやサイズなども指定可能です。
+**WP Add picture** コマンドは、<!--REF #_command_.WP Add picture.Summary-->引数として渡されたピクチャーを、*wpDoc* 引数で指定されたドキュメント内の固定された位置にアンカーし、その参照を返します。<!-- END REF--> その返された参照は、[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドに渡すことによって *wpDoc* (ページ、セクション、ヘッダー、フッター、他)引数内の任意の位置にピクチャーを移動させることができます。 レイヤーやサイズなども指定可能です。
 
 *wpDoc* 引数には、4D Write Pro ドキュメントオブジェクトを渡します。
 
@@ -36,7 +36,7 @@ The **WP Add picture** command<!--REF #_command_.WP Add picture.Summary--> ancho
 
 :::
 
-- *picture* 引数が省略された場合でも、有効なピクチャー参照は返され、空の画像が追加されます。 *picture* 引数が省略された場合でも、有効なピクチャー参照は返され、空の画像が追加されます。 この場合、その後に[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドをwk image expression セレクターで呼び出すことでその画像に4D 式を入れることができます。 式が評価できない、あるいは有効なピクチャーが返されない場合、空の画像(デフォルトの黒枠の画像)が表示されます。 式が評価できない、あるいは有効なピクチャーが返されない場合、空の画像(デフォルトの黒枠の画像)が表示されます。
+- *picture* 引数が省略された場合でも、有効なピクチャー参照は返され、空の画像が追加されます。 この場合、その後に[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドをwk image expression セレクターで呼び出すことでその画像に4D 式を入れることができます。 式が評価できない、あるいは有効なピクチャーが返されない場合、空の画像(デフォルトの黒枠の画像)が表示されます。
 
 デフォルトでは、追加されたピクチャーは以下のように表示されます:
 

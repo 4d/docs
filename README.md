@@ -185,6 +185,12 @@ Sur github, faire une PR de docs4d/docs/main sur 4d/docs/main
 ### Algolia (4D only)
 Aller dans l'interface Algolia et lancer un reindex de la doc
 
+## Mise à jour prod
+1. Créer une nouvelle branche en local nommée par exemple Tempo
+2. faire git fetch upstream (met à jour la preprod avec la prod)
+3. faire git rebase upstream/main -X ours (remettre tout dans Tempo et en cas de conflit prendre la preprod)
+4. git push (fait une PR auto et pas de conflit)
+
 
 
 

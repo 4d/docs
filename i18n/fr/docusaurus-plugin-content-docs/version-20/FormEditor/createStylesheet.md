@@ -94,7 +94,7 @@ The object name corresponds to the JSON [object name](../FormObjects/properties_
 :::
 
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+Dans l'exemple suivant, le texte de l'objet portant le nom "okButton" sera affiché dans la police Helvetica Neue, avec une taille de 20 pixels :
 
 ```
 #okButton {

@@ -863,11 +863,12 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                  |
-| ----- | ------------------- |
-| 17 R6 | Formula パラメーターをサポート |
-| 17 R5 | 値のプレースホルダーをサポート     |
-| 17    | 追加                  |
+| リリース  | 内容                                        |
+| ----- | ----------------------------------------- |
+| 21    | Support 4D.Vector objects |
+| 17 R6 | Formula パラメーターをサポート                       |
+| 17 R5 | 値のプレースホルダーをサポート                           |
+| 17    | 追加                                        |
 
 </details>
 
@@ -891,7 +892,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
-#### queryString 引数
+### queryString 引数
 
 *queryString* 引数には、以下のシンタックスを使用します:
 
@@ -922,19 +923,19 @@ attributePath|formula 比較演算子 値
 
 - **比較演算子**: *attributePath* 引数と*value* 引数の比較に使用する記号。 以下の記号がサポートされます:
 
-| 比較            | 記号                          | 説明                                                                                                                                                                               |
-| ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 等しい           | =, ==                       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                                                                          |
-|               | ===, IS                     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                                                                                 |
-| 等しくない         | #, !=                       | ワイルドカード (@) をサポートします。 ワイルドカード (@) をサポートします。 "宣言に Not 条件を適用" と同じです ([後述参照](#コレクションにおける-等しくない)) |
-|               | !==, IS NOT                 | ワイルドカード (@) は標準の文字として認識されます                                                                                                                      |
-| 宣言に Not 条件を適用 | NOT                         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 "等しくない" と同じです ([後述参照](#コレクションにおける-等しくない))                                                                       |
-| 小さい           | <  |                                                                                                                                                                                  |
-| 大きい           | >                           |                                                                                                                                                                                  |
-| 以下            | <= |                                                                                                                                                                                  |
-| 以上            | > =                         |                                                                                                                                                                                  |
-| 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                                                                                    |
-| キーワードを含む      | %                           | キーワードは、文字列あるいはピクチャー型の属性内で使用されるものが対象です。                                                                                                                                           |
+| 比較            | 記号                          | 説明                                                                                                                                                                               | Supported in vector similarity |
+| ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| 等しい           | =, ==                       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                                                                          |                                |
+|               | ===, IS                     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                                                                                 |                                |
+| 等しくない         | #, !=                       | ワイルドカード (@) をサポートします。 ワイルドカード (@) をサポートします。 "宣言に Not 条件を適用" と同じです ([後述参照](#コレクションにおける-等しくない)) |                                |
+|               | !==, IS NOT                 | ワイルドカード (@) は標準の文字として認識されます                                                                                                                      |                                |
+| 宣言に Not 条件を適用 | NOT                         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 "等しくない" と同じです ([後述参照](#コレクションにおける-等しくない))                                                                       |                                |
+| 小さい           | <  |                                                                                                                                                                                  | &check;    |
+| 大きい           | >                           |                                                                                                                                                                                  | &check;    |
+| 以下            | <= |                                                                                                                                                                                  | &check;    |
+| 以上            | > =                         |                                                                                                                                                                                  | &check;    |
+| 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                                                                                    |                                |
+| キーワードを含む      | %                           | キーワードは、文字列あるいはピクチャー型の属性内で使用されるものが対象です。                                                                                                                                           |                                |
 
 - **値** (value): エンティティコレクションの各エンティティの属性のカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。 スカラー型(テキスト、日付、数値、など)で型が合致しない場合、4D は可能な限り**value** 引数の値を属性のデータ型へと変換しようとします。これはインターネット越しに受け取る値の管理を容易にするためです。 例えば、**value** 引数に"v20" という文字列が整数属性と比較するために与えられた場合、それは20 へと変換されます。
   定数値を使用する場合、以下の原則に従う必要があります:
@@ -944,6 +945,7 @@ attributePath|formula 比較演算子 値
   - **日付** 型の定数値: "YYYY-MM-DD" フォーマット。
   - **null** 定数値: "null" キーワードを使用した場合、**null** と **undefined** プロパティの両方が検索されます。
   - IN 記号を使用したクエリの場合、*値* はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、`"` の記号は `\` でエスケープする必要があります)。
+  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects).
 - **論理演算子**: 複数の条件をクエリ内で結合させるのに使用します(任意)。 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
 
 | 結合  | 記号                                                                                  |
@@ -955,7 +957,7 @@ attributePath|formula 比較演算子 値
 
 > このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](../ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
 
-#### 引用符を使用する
+### 引用符を使用する
 
 クエリ内で引用符を使用する場合、クエリ内においては単一引用符 ' ' を使用し、クエリ全体をくくるには二重引用符 " " を使用します。クオートを混同するとエラーが返されます。 例:
 
@@ -965,7 +967,7 @@ attributePath|formula 比較演算子 値
 
 > 単一引用符 (') は、クエリ文字列を分解してしまうため、検索値としてはサポートされていません。 たとえば、"comp.name = 'John's pizza' " はエラーを生成します。 単一引用符を含む値を検索するには、プレースホルダーを使用します (後述参照)。
 
-#### カッコを使用する
+### カッコを使用する
 
 クエリ内でカッコを使用すると、計算に優先順位をつけることができます。 たとえば、以下のようにクエリを整理することができます:
 
@@ -973,7 +975,7 @@ attributePath|formula 比較演算子 値
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
 
-#### プレースホルダーを使用する
+### プレースホルダーを使用する
 
 4D では、*queryString* 引数内の *attributePath*、 *formula* および *値* にプレースホルダーを使用することができます。 プレースホルダーとは、クエリ文字列に挿入するパラメーターで、クエリ文字列が評価される際に他の値で置き換えられるものです。 プレースホルダーの値はクエリ開始時に一度だけ評価されます。 各要素に対して毎回評価されるわけではありません。
 
@@ -984,7 +986,7 @@ attributePath|formula 比較演算子 値
 | 定義 | *queryString* に `:paramIndex` (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。 | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。 |
 | 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                                                                                        | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`               |
 
-*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*propertyPath* と *値* に以下のものを含めることができます: *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
+*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と*値* に以下のものを含めることができます:
 
 - 定数値 (プレースホルダーを使用しない)
 - インデックスプレースホルダーや命名プレースホルダー
@@ -998,7 +1000,7 @@ attributePath|formula 比較演算子 値
  $result:=$col.query($vquery)
 ```
 
-非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
+非公開のデータがフィルタリングされているため、このクエリは一見安全なように見えます。 しかしながら、もしユーザーが *myname* に *smith OR status='private'* のような入力をした場合、クエリ文字列は解釈時に変更され、非公開データも返してしまう可能性があります。
 
 プレースホルダーを使用した場合、セキュリティ条件を上書きすることは不可能です:
 
@@ -1017,7 +1019,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-#### null値を検索する
+### null値を検索する
 
 null値を検索する場合、プレースホルダーシンタックスは使用できません。 なぜならクエリエンジンは null を予期せぬ比較値としてみなすからです。 たとえば、以下のクエリを実行した場合:
 
@@ -1031,7 +1033,7 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
  $vSingles:=ds.Person.query("spouse = null") // 正しいシンタックス
 ```
 
-#### null または未定義の値と等しくない
+### null または未定義の値と等しくない
 
 "*value* と等しくない" 比較演算子は(`#` または `!=`) は値がnull または未定義である属性は返しません。 例えば、以下のクエリは"info.married" のステータスが `false` である人物のみを返し、"info.married" プロパティが"null" または欠けている人物は返しません:
 
@@ -1045,7 +1047,7 @@ $notMarried:=ds.Person.query("info.married#true") // 属性の値がfalseであ�
 $notMarried:=ds.Person.query("info.married#true | info.married=null") // 属性の値がfalse、null あるいは未定義であるものを探す
 ```
 
-#### コレクションにおける "等しくない"
+### コレクションにおける "等しくない"
 
 コレクションを含むデータクラス属性内を検索する場合、"*値* と等しくない" 比較演算子 (`#` または `!=`) は、すべてのプロパティが *値* と異なる要素を検索します (ほかの比較演算子とは異なり、少なくとも 1つのプロパティが*値* と異なる要素は検索しません)。 つまり、"Not(プロパティ値が *value* と等しいコレクション要素を検索する)" を検索することと同じです。 たとえば、以下のような エンティティがあるとき:
 
@@ -1147,7 +1149,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 ... クエリは、"kind=home" かつ "city=paris" である "locations" 要素を持つエンティティ "martin" のみを返します。 "home" と "paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。 "home" と "paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。
 
-#### N対Nリレーションのクエリ
+### N対Nリレーションのクエリ
 
 ORDA は、N対Nリレーションにおけるクエリを容易にするための特別な構文を提供します。 このような場合には `AND` 演算子を使って、同じ属性内に格納されている異なる値を検索する必要があるかもしれません。 たとえば、以下のようなストラクチャーの場合を考えます:
 
@@ -1179,7 +1181,46 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 // $es には映画が格納されます (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
 
-#### formula 引数
+### Query by vector similarity
+
+If *attributePath* designates an attribute storing [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to store 4D.Vector class objects](../Develop/field-properties.md#class)), you can build queries to find entities based on **embeddings** rather than keywords. This technology is designed for Artificial Intelligence (AI) workloads and allows you to query data based on semantics, rather than keywords.
+
+In this case, the *value* parameter must be a **comparison vector object** containing the following properties:
+
+| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 The vector to be compared                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| metric    | Text                                               | 任意。 [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine distance between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors. |
+| threshold | Real                                               | Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.                                                                                                                                                                                    |
+
+Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value:
+
+| 比較  | 記号                          | 説明                                     |
+| --- | --------------------------- | -------------------------------------- |
+| 小さい | <  | Lower than the threshold               |
+| 大きい | >                           | Greater than the threshold             |
+| 以下  | <= | Lower than or equal to the threshold   |
+| 以上  | > =                         | Greater than or equal to the threshold |
+
+For example, you want to return entities of MyClass where the similarity with a vector is greater than 1.2 threshold, using the euclidean metric:
+
+```4d
+var $myVector : 4D.Vector
+$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+```
+
+See [more examples below](#example-4-2) (examples 4 and 5).
+
+:::tip Related blog posts
+
+- [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
+
+:::
+
+### formula 引数
 
 *queryString* 引数にフォーミュラを挿入 (上記参照) する代わりに、formula オブジェクトをブール検索条件として直接渡すことができます。 トークナイズの利点を生かせる、コードが検索しやすく読みやすい、などといった面から、クエリにおけるフォーミュラオブジェクトの使用は **推奨されています**。
 
@@ -1187,11 +1228,11 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 - フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 - 処理中のエンティティはフォーミュラ内において `This` で参照されます。
-- `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。
+- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
 
 > セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 *querySettings* パラメーターの説明を参照ください。
 
-#### フォーミュラに引数を渡す
+### フォーミュラに引数を渡す
 
 `query()` クラス関数によって呼び出される *フォーミュラ* は、引数を受け取ることができます:
 
@@ -1209,7 +1250,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 **4D Server**: クライアント/サーバーにおいては、フォーミュラはサーバー上で実行されます。 このコンテキストにおいては、`querySettings.args` オブジェクトのみがフォーミュラに送信されます。
 
-#### querySettings 引数
+### querySettings 引数
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のプロパティがサポートされています: 以下のプロパティがサポートされています:
 
@@ -1223,7 +1264,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 | queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-#### queryPlan と queryPath について
+### queryPlan と queryPath について
 
 `queryPlan`/`queryPath` に格納される情報には、クエリの種類 (インデックスあるいはシーケンシャル)、必要なサブクエリおよびその連結演算子が含まれます。 クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 この情報は、アプリケーションの開発中に解析することで有効に活用できます。 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンス向上のために動的な最適化をクエリ実行時に実装することがあり、異なることもあります。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
 
@@ -1529,6 +1570,43 @@ softwares:{
  End if
 ```
 
+#### 例題 4
+
+This example illustrates the various syntaxes supported for vector similarity searches. It uses [4D-AIKit](../aikit/overview.md):
+
+```4d
+
+var $client:=cs.AIKit.OpenAI.new("my api key")
+var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
+var $vector:=$result.vector
+
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  //search with default metric (cosine)
+var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
+  //search with euclidean metric 
+var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
+  //search with explicit cosine metric and custom threshold
+var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+  //search with a formula
+var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
+
+```
+
+#### 例題 5
+
+We want to execute a query by vector similarity using vectors with different metrics and order the results by cosine similarity:
+
+```4d
+  //Create the comparison vectors 
+var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
+var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
+
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
+    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
+
+```
+
 #### 参照
 
 エンティティセレクションの [`.query()`](EntitySelectionClass.md#query)
@@ -1568,13 +1646,13 @@ softwares:{
 | timeout    | Integer | タイムアウト (秒単位) |
 | maxEntries | Integer | エンティティの最大数                      |
 
-`timeout` は、データクラスの ORDAキャッシュのタイムアウトを設定します (デフォルトは 30秒)。 タイムアウトを過ぎると、キャッシュ内のデータクラスのエンティティは期限切れとみなされます。 これは、次のことを意味します: タイムアウトを過ぎると、キャッシュ内のデータクラスのエンティティは期限切れとみなされます。 これは、次のことを意味します:
+`timeout` は、データクラスの ORDAキャッシュのタイムアウトを設定します (デフォルトは 30秒)。 タイムアウトを過ぎると、キャッシュ内のデータクラスのエンティティは期限切れとみなされます。 これは、次のことを意味します:
 
 - データはまだ存在します
 - 次にそのデータが必要になったときには、サーバーに要求します
 - エンティティの最大数に達すると、4D は期限切れのデータを自動的に削除します
 
-`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
+`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
 
 `maxEntries` は、ORDAキャッシュ内のエンティティの最大数を設定します。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。 デフォルトは 30,000 です。
 

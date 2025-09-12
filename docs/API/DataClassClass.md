@@ -855,6 +855,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 |Release|Changes|
 |---|---|
+|21|Support 4D.Vector objects|
 |17 R6|Support of Formula parameters|
 |17 R5|Support of placeholders for values|
 |17|Added|
@@ -880,7 +881,7 @@ The `.query()` function <!-- REF #DataClassClass.query().Summary -->searches for
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
-#### queryString parameter
+### queryString parameter
 
 The *queryString* parameter uses the following syntax:
 
@@ -911,19 +912,19 @@ where:
 
 * **comparator**: symbol that compares *attributePath* and *value*. The following symbols are supported:
 
- |Comparison| Symbol(s)| Comment|
- |---|---|---|
- |Equal to |=, == |Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.|
- ||===, IS| Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic|
- |Not equal to| #, != |Supports the wildcard (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).|
- ||!==, IS NOT| Considers the @ as a standard character|
- |Not condition applied on a statement| NOT| Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)).|
- |Less than| <| |
- |Greater than| > ||
- |Less than or equal to| <=||
- |Greater than or equal to| >= ||
- |Included in| IN |Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)|
- |Contains keyword| %| Keywords can be used in attributes of string or picture type|
+ |Comparison| Symbol(s)| Comment|Supported in vector similarity|
+ |---|---|---|---|
+ |Equal to |=, == |Gets matching data, supports the wildcard (@), neither case-sensitive nor diacritic.||
+ ||===, IS| Gets matching data, considers the @ as a standard character, neither case-sensitive nor diacritic||
+ |Not equal to| #, != |Supports the wildcard (@). Equivalent to "Not condition applied on a statement" ([see below](#not-equal-to-in-collections)).||
+ ||!==, IS NOT| Considers the @ as a standard character||
+ |Not condition applied on a statement| NOT| Parenthesis are mandatory when NOT is used before a statement containing several operators. Equivalent to "Not equal to" ([see below](#not-equal-to-in-collections)).||
+ |Less than| <| |&check;|
+ |Greater than| > ||&check;|
+ |Less than or equal to| <=||&check;|
+ |Greater than or equal to| >= ||&check;|
+ |Included in| IN |Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@)||
+ |Contains keyword| %| Keywords can be used in attributes of string or picture type||
 
 * **value**: the value to compare to the current value of the property of each entity in the entity selection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property. Note that, in case of type mismatch with scalar types (text, date, number...), 4D will try to convert the **value** type to the attribute data type whenever possible, for an easier handling of values coming from the Internet. For example, if the string "v20" is entered as **value** to compare with an integer attribute, it will be converted to 20.
 When using a constant value, the following rules must be respected:
@@ -933,6 +934,7 @@ When using a constant value, the following rules must be respected:
   * **date** type constants: "YYYY-MM-DD" format
   * **null** constant: using the "null" keyword will find **null** and **undefined** properties.  
   * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+  * **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects). 
 * **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
 
  |Conjunction|Symbol(s)|
@@ -943,7 +945,7 @@ When using a constant value, the following rules must be respected:
 * **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
  >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
-#### Using quotes
+### Using quotes
 
 When you use quotes within queries, you must use single quotes ' ' inside the query and double quotes " " to enclose the whole query, otherwise an error is returned. For example:
 
@@ -953,7 +955,7 @@ When you use quotes within queries, you must use single quotes ' ' inside the qu
 
 >Single quotes (') are not supported in searched values since they would break the query string. For example "comp.name = 'John's pizza' " will generate an error. If you need to search on values with single quotes, you may consider using placeholders (see below).
 
-#### Using parenthesis
+### Using parenthesis
 
 You can use parentheses in the query to give priority to the calculation. For example, you can organize a query as follows:
 
@@ -961,7 +963,7 @@ You can use parentheses in the query to give priority to the calculation. For ex
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
 
-#### Using placeholders
+### Using placeholders
 
 4D allows you to use placeholders for *attributePath*, *formula* and *value* arguments within the *queryString* parameter. A placeholder is a parameter that you insert in query strings and that is replaced by another value when the query string is evaluated. The value of placeholders is evaluated once at the beginning of the query; it is not evaluated for each element.
 
@@ -1005,7 +1007,7 @@ Using placeholders in queries **is recommended** for the following reasons:
  $result2:=$col.query("company.name = :1";"John's Pizzas")
  ```
 
-#### Looking for null values
+### Looking for null values
 
 When you look for null values, you cannot use the placeholder syntax because the query engine considers null as an unexpected comparison value. For example, if you execute the following query:
 
@@ -1019,7 +1021,7 @@ You will not get the expected result because the null value will be evaluated by
  $vSingles:=ds.Person.query("spouse = null") //correct syntax
 ```
 
-#### Not equal to null or undefined values
+### Not equal to null or undefined values
 
 The "not equal to *value*" comparator (`#` or `!=`) does not return attributes whose value is null or undefined. For example, the following query will only return persons whose "info.married" status is `false` and not persons whose "info.married" property is "null" or missing:
 
@@ -1035,7 +1037,7 @@ $notMarried:=ds.Person.query("info.married#true | info.married=null") //finds fa
 
 
 
-#### Not equal to in collections
+### Not equal to in collections
 
 When searching within dataclass object attributes containing collections, the "not equal to *value*" comparator (`#` or `!=`) will find elements where ALL properties are different from *value* (and not those where AT LEAST one property is different from *value*, which is how work other comparators). Basically, it is equivalent to search for "Not(find collection elements where property equals *value*"). For example, with the following entities:
 
@@ -1141,7 +1143,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 
 
-#### Queries in many-to-many relations
+### Queries in many-to-many relations
 
 ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. For example, take a look at the following structure:
 
@@ -1174,8 +1176,46 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 ```
 
 
+### Query by vector similarity
 
-#### formula parameter
+If *attributePath* designates an attribute storing [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to store 4D.Vector class objects](../Develop/field-properties.md#class)), you can build queries to find entities based on **embeddings** rather than keywords. This technology is designed for Artificial Intelligence (AI) workloads and allows you to query data based on semantics, rather than keywords.
+
+In this case, the *value* parameter must be a **comparison vector object** containing the following properties:
+
+|Property|Type|Description|
+|---|---|---|
+|vector|[4D.Vector](../API/VectorClass.md)|Mandatory. The vector to be compared|
+|metric|Text|Optional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine distance between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors.|
+|threshold|Real|Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.|
+
+Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value: 
+
+ |Comparison| Symbol(s)| Comment|
+ |---|---|---|
+ |Less than| <| Lower than the threshold|
+ |Greater than| > |Greater than the threshold|
+ |Less than or equal to| <=|Lower than or equal to the threshold|
+ |Greater than or equal to| >= |Greater than or equal to the threshold|
+
+For example, you want to return entities of MyClass where the similarity with a vector is greater than 1.2 threshold, using the euclidean metric:
+
+```4d
+var $myVector : 4D.Vector
+$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+```
+
+See [more examples below](#example-4-2) (examples 4 and 5). 
+
+:::tip Related blog posts
+
+- [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
+
+:::
+
+### formula parameter
 
 As an alternative to formula insertion within the *queryString* parameter (see above), you can pass directly a formula object as a boolean search criteria. Using a formula object for queries is **recommended** since you benefit from tokenization, and code is easier to search/read.  
 
@@ -1183,11 +1223,11 @@ The formula must have been created using the [`Formula`](../commands/formula.md)
 
 * the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
 * within the *formula*, the entity is available through the `This` object.  
-* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
+* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
 
  >For security reasons, formula calls within `query()` functions can be disallowed. See *querySettings* parameter description.
 
-#### Passing parameters to formulas
+### Passing parameters to formulas
 
 Any *formula* called by the `query()` class function can receive parameters:
 
@@ -1205,7 +1245,7 @@ Additional examples are provided in example 3.
 
 **4D Server**: In client/server, formulas are executed on the server. In this context, only the `querySettings.args` object is sent to the formulas.
 
-#### querySettings parameter
+### querySettings parameter
 
 In the *querySettings* parameter, you can pass an object containing additional options. The following properties are supported:
 
@@ -1219,7 +1259,7 @@ In the *querySettings* parameter, you can pass an object containing additional o
 |queryPlan| Boolean |In the resulting entity selection, returns or does not return the detailed description of the query just before it is executed, i.e. the planned query. The returned property is an object that includes each planned query and subquery (in the case of a complex query). This option is useful during the development phase of an application. It is usually used in conjunction with queryPath. Default if omitted: false.|
 |queryPath|Boolean| In the resulting entity selection, returns or does not return the detailed description of the query as it is actually performed. The returned property is an object that contains the actual path used for the query (usually identical to that of the queryPlan, but may differ if the engine manages to optimize the query), as well as the processing time and the number of records found. This option is useful during the development phase of an application. Default if omitted: false.|
 
-#### About queryPlan and queryPath
+### About queryPlan and queryPath
 
 The information recorded in `queryPlan`/`queryPath` include the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application(s). Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
 
@@ -1524,6 +1564,44 @@ We want to disallow formulas, for example when the user enters their query:
     $settings:=New object("allowFormulas";False)
     $es:=ds.Students.query($queryString;$settings) //An error is raised if $queryString contains a formula
  End if
+```
+
+#### Example 4
+
+This example illustrates the various syntaxes supported for vector similarity searches. It uses [4D-AIKit](../aikit/overview.md):
+
+```4d
+
+var $client:=cs.AIKit.OpenAI.new("my api key")
+var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
+var $vector:=$result.vector
+
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  //search with default metric (cosine)
+var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
+  //search with euclidean metric 
+var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
+  //search with explicit cosine metric and custom threshold
+var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+  //search with a formula
+var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
+
+```
+
+
+#### Example 5
+
+We want to execute a query by vector similarity using vectors with different metrics and order the results by cosine similarity:
+
+```4d
+  //Create the comparison vectors 
+var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
+var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
+
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
+    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
+
 ```
 
 #### See also

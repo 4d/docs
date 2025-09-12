@@ -860,11 +860,12 @@ Quando criada, a seleção de entidades não contém nenhuma entidade (`mySelect
 
 <details><summary>História</summary>
 
-| Release | Mudanças                               |
-| ------- | -------------------------------------- |
-| 17 R6   | Soporte dos Parâmetros Formula         |
-| 17 R5   | Suporte dos marcadores para os valores |
-| 17      | Adicionado                             |
+| Release | Mudanças                                  |
+| ------- | ----------------------------------------- |
+| 21      | Support 4D.Vector objects |
+| 17 R6   | Soporte dos Parâmetros Formula            |
+| 17 R5   | Suporte dos marcadores para os valores    |
+| 17      | Adicionado                                |
 
 </details>
 
@@ -888,7 +889,7 @@ A função `.query()` <!-- REF #DataClassClass.query().Summary -->busca entidade
 
 Se nenhuma entidade correspondente for encontrada, uma `EntitySelection` vazia é retornada.
 
-#### parâmetro queryString
+### parâmetro queryString
 
 O parâmetro *queryString* usa a seguinte sintaxe:
 
@@ -919,19 +920,19 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 
 - **comparator**: símbolo que compara *attributePath* e *value*. Os simbolos abaixo são compatíveis:
 
-| Comparação                               | Símbolos                    | Comentário                                                                                                                                                                                                                        |
-| ---------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |
-|                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |
-| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalente a "Condição não aplicada em uma declaração" ([ver abaixo](#not-equal-to-in-collections)).                   |
-|                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                                                                                |
-| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |
-| Menor que                                | <  |                                                                                                                                                                                                                                   |
-| Maior que                                | >                           |                                                                                                                                                                                                                                   |
-| Menor que ou igual a                     | <= |                                                                                                                                                                                                                                   |
-| Maior ou igual a                         | > =                         |                                                                                                                                                                                                                                   |
-| Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |
-| Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |
+| Comparação                               | Símbolos                    | Comentário                                                                                                                                                                                                                        | Supported in vector similarity |
+| ---------------------------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| Igual a                                  | =, ==                       | Retorna os dados coincidentes, admite o coringa (@), não diferencia entre maiúsculas e minúsculas nem diacríticas.                                                                |                                |
+|                                          | ===, IS                     | Retorna os dados coincidentes, considera @ como caractere padrão, não diferencia entre maiúsculas e minúsculas nem diacríticas                                                                                       |                                |
+| Diferente de                             | #, !=                       | Suporta o coringa (@). Equivalente a "Condição não aplicada em uma declaração" ([ver abaixo](#not-equal-to-in-collections)).                   |                                |
+|                                          | !==, IS NOT                 | Considera  @ como um caractere normal                                                                                                                                                                                |                                |
+| Não se aplica à condição de uma sentença | NOT                         | Parentesis são obrigatórios quando usar NOT antes de uma instrução que contenha vários operadores. Equivalente a "Not equal to" ([veja abaixo](#not-equal-to-in-collections)). |                                |
+| Menor que                                | <  |                                                                                                                                                                                                                                   | &check;    |
+| Maior que                                | >                           |                                                                                                                                                                                                                                   | &check;    |
+| Menor que ou igual a                     | <= |                                                                                                                                                                                                                                   | &check;    |
+| Maior ou igual a                         | > =                         |                                                                                                                                                                                                                                   | &check;    |
+| Incluído em                              | IN                          | Retorna dados iguais a ao menos um dos valores de uma coleção ou de um conjunto de valores, admite o coringa (@)                                                                                  |                                |
+| Contém palavra chave                     | %                           | As palavras chaves podem ser usadas em atributos de string ou imagem                                                                                                                                                              |                                |
 
 - Pode ser um **marcador** (ver **Uso de marcadores** abaixo) ou qualquer expressão que coincida com a propriedade de tipo de dados. **value**: o valor a comparar ao valor atual da propriedade de cada entidade na seleção de entidade. Observe que, em caso de incompatibilidade de tipo com tipos escalares (texto, data, número...), 4D tentará converter o tipo **value** para o tipo de atributo sempre que possível, para um tratamento mais fácil de valores vindos da Internet. Por exemplo, se a string "v20" for digitada como **value** para comparar com um atributo inteiro, ela será convertida em 20.
   Quando usar um valor constante, as regras abaixo devem ser respeitadas:
@@ -941,6 +942,7 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
   - constantes de tipo **date**: formato "YYYY-MM-DD"
   - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
   - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
+  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects).
 - **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
 | Conjunção | Símbolos                                                                            |
@@ -952,7 +954,7 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
 
 > Se você usar essa declaração, a seleção de entidade retornada será ordenada (para mais informações, por favor consulte [Seleções de entidades ordenadas vs não ordenadas](ORDA/dsMapping.md#seleção-de-entidades-ordenadas-ou-não-ordenadas)).
 
-#### Usar aspas
+### Usar aspas
 
 Ao usar aspas dentro das consultas, você deve usar aspas simples ' ' dentro da consulta e aspas duplas " " para envolver toda a consulta, caso contrário, será retornado um erro. Por exemplo:
 
@@ -962,7 +964,7 @@ Ao usar aspas dentro das consultas, você deve usar aspas simples ' ' dentro da 
 
 > Aspas siples (') não são permitidas nos valores pesquisados, já que quebrariam a string de pesquisa. Por exemplo, "comp.name = 'John's pizza' " gerará um erro. Se precisar pesquisar valores com aspas simples, pode considerar o uso de placeholders (ver abaixo).
 
-#### Usando parêntesis
+### Usando parêntesis
 
 Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exemplo, pode organizar uma pesquisa da seguinte maneira:
 
@@ -970,7 +972,7 @@ Você pode usar parênteses na consulta para dar prioridade ao cálculo. Por exe
 "(employee.age >= 30 OR employee.age <= 65) AND (employee.salary <= 10000 OR employee.status = 'Manager')"
 ```
 
-#### Uso de placeholders
+### Uso de placeholders
 
 4D lhe permite utilizar placeholders, marcadores de posição, para os argumentos attributePath, formula e value dentro do parâmetro queryString. Um placeholder é um parâmetro que você insere em cadeias de consulta e que é substituído por outro valor quando a cadeia de consulta é avaliada. O valor dos placeholders é avaliado uma vez no início da consulta; ele não é avaliado para cada elemento.
 
@@ -1014,7 +1016,7 @@ $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")
 $result2:=$col.query("company.name = :1";"John's Pizzas")
 ```
 
-#### Pesquisa de valores null
+### Pesquisa de valores null
 
 Quando pesquisar por valores null não pode usar a sintaxe do marcador de posição porque o motor de consulta considera o valor null como um valor de comparação inesperado. Por exemplo, se executar esta pesquisa:
 
@@ -1028,7 +1030,7 @@ Não obterá o resultado esperado porque o valor nulo será avaliado por 4D como
  $vSingles:=ds.Person.query("spouse = null") //sintaxe correta
 ```
 
-#### Não igual os valores null ou undefined
+### Não igual os valores null ou undefined
 
 O comparador "não igual a *value*" (`#` ou `!=`) não retorna atributos cujo valor é null ou indefinido. Por exemplo, a consulta a seguir só retornará pessoas cujo estado "info.married" é `false` e não as pessoas cuja propriedade "info.married" é "null" ou faltando:
 
@@ -1042,7 +1044,7 @@ Se você deseja encontrar pessoas cujo estado "info.married" seja `false`, null,
 $notMarried:=ds.Person.query("info.married#true | info.married=null") //encontra atributos false, null e undefined
 ```
 
-#### Não igual a em colecções
+### Não igual a em colecções
 
 Ao pesquisar nos atributos de objectos de classe de dados que contêm colecções, o comparador "não igual a valor" (`#` ou `!=`) encontrará elementos em que TODAS as propriedades são diferentes de valor (e não aqueles em que PELO MENOS uma propriedade é diferente de valor, que é como funcionam outros comparadores). Basicamente, é equivalente à pesquisa por "Not(encontrar elementos da coleção onde a propriedade é igual a *value*"). Por exemplo, com as seguintes entidades:
 
@@ -1142,7 +1144,7 @@ ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2"
 
 ... pesquisa só devolverá "martin" porque tem um elemento "locations" cujo "kind" é "home" e cujo "city" for "paris". A consulta não devolverá "smith" porque os valores "home" e "paris" não estão no mesmo elemento de coleção.
 
-#### Consultas em relações Muitos para Muitos
+### Consultas em relações Muitos para Muitos
 
 O ORDA oferece uma sintaxe especial para facilitar as consultas em relações muitos-para-muitos. Neste contexto, poderá ter de procurar valores diferentes com um operador E MAS no mesmo atributo. Por exemplo, veja a seguinte estrutura:
 
@@ -1174,7 +1176,46 @@ $es:=ds. Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2
 // $es contains movies (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
 
-#### Parâmetro formula
+### Query by vector similarity
+
+If *attributePath* designates an attribute storing [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to store 4D.Vector class objects](../Develop/field-properties.md#class)), you can build queries to find entities based on **embeddings** rather than keywords. This technology is designed for Artificial Intelligence (AI) workloads and allows you to query data based on semantics, rather than keywords.
+
+In this case, the *value* parameter must be a **comparison vector object** containing the following properties:
+
+| Propriedade | Tipo                                               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vector      | [4D.Vector](../API/VectorClass.md) | Obrigatório. The vector to be compared                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| metric      | Text                                               | Opcional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine distance between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors. |
+| threshold   | Real                                               | Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.                                                                                                                                                                                                          |
+
+Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value:
+
+| Comparação           | Símbolos                    | Comentário                             |
+| -------------------- | --------------------------- | -------------------------------------- |
+| Menor que            | <  | Lower than the threshold               |
+| Maior que            | >                           | Greater than the threshold             |
+| Menor que ou igual a | <= | Lower than or equal to the threshold   |
+| Maior ou igual a     | > =                         | Greater than or equal to the threshold |
+
+For example, you want to return entities of MyClass where the similarity with a vector is greater than 1.2 threshold, using the euclidean metric:
+
+```4d
+var $myVector : 4D.Vector
+$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
+var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+```
+
+See [more examples below](#example-4-2) (examples 4 and 5).
+
+:::tip Related blog posts
+
+- [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
+
+:::
+
+### Parâmetro formula
 
 Como alternativa à inserção de fórmulas dentro do parâmetro queryString (ver acima), pode passar diretamente um objeto fórmula como critério de pesquisa booleano. Usar um objeto fórmula para consultas é **recomendado** pois você se beneficia da tokenização, e o código é mais fácil de pesquisar/ler.
 
@@ -1182,11 +1223,11 @@ A fórmula deve ter sido criada usando o comando [`Formula`](../commands/formula
 
 - a *fórmula* é avaliada por cada entidade e deve retornar verdadeiro ou falso. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 - dentro da *fórmula*, a entidade está disponível através do objeto `This`.
-- se o objeto `Fórmula` for **null**, o erro 1626 ("Esperando um texto ou fórmula") é gerado, que você chama interceptação usando um método instalado com `NO ERR CALL`.
+- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
 
 > Por razões de segurança, chamadas de fórmula dentro de funções `query()` podem ser desabilitadas. Veja a descrição do parâmetro *querySettings*.
 
-#### Passar parâmetros a fórmulas
+### Passar parâmetros a fórmulas
 
 Qualquer *fórmula* chamada pela função de classe `query()` pode receber parâmetros:
 
@@ -1204,7 +1245,7 @@ No exemplo 3 são oferecidos mais exemplos.
 
 **4D Server**: em cliente/servidor, as fórmulas são executadas no servidor. Neste contexto, só se envia às fórmulas o objeto `querySettings.args`.
 
-#### Parâmetro querySettings
+### Parâmetro querySettings
 
 No parâmetro *querySettings* é possível passar um objeto que conteha opções adicionais. As propriedades abaixo são compatíveis:
 
@@ -1218,7 +1259,7 @@ No parâmetro *querySettings* é possível passar um objeto que conteha opções
 | queryPlan     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa logo antes de ser executada, ou seja, a pesquisa planificada. A propriedade devolvida é um objeto que inclui cada pesquisa e subpesquisa prevista (no caso de uma pesquisa complexa). Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Geralmente é usada em conjunto com queryPath. Como padrão é omitido: false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | queryPath     | Parâmetros | Na entity selection resultante, devolve ou não a descrição detalhada da pesquisa tal qual for realizada. A propriedade retornada é um objeto que contém a rota atual usada para a pesquisa (geralmente idêntica àquela do queryPlan, mas deve diferenciar se o motor consegue otimizar a pesquisa), assim como o tempo de processamento e o número de registros encontrado. Esta opção é útil durante a fase de desenvolvimento de uma aplicação. Como padrão é omitido: false.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
-#### Sobre queryPlan e queryPath
+### Sobre queryPlan e queryPath
 
 A informação registrada em `queryPlan`/`queryPath` inclui o tipo de pesquisa (indexada e sequencial) e cada subconsulta necessária com os operadores de conjunção. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. As rotas de acesso das petições também contém o número de entidades encontradas e o tempo necessário para executar cada critério de pesquisa. Geralmente a descrição do plano de pesquisa e sua rota são idênticas, mas podem diferir porque 4D pode implementar otimizações dinâmicas quando uma pesquisa for executada para melhorar desempenho. Por exemplo, o motor 4D pode converter dinamicamente uma consulta indexada em uma consulta sequencial se estimar que seja mais rápido. Esse caso particular pode acontecer quando o número de entidades sendo pesquisada é baixo.
 
@@ -1522,6 +1563,43 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuário introduz sua
     $settings:=New object("allowFormulas";False)
     $es:=ds.Students.query($queryString;$settings) // Um erro é gerado se $queryString contiver uma fórmula
  End if
+```
+
+#### Exemplo
+
+This example illustrates the various syntaxes supported for vector similarity searches. It uses [4D-AIKit](../aikit/overview.md):
+
+```4d
+
+var $client:=cs.AIKit.OpenAI.new("my api key")
+var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
+var $vector:=$result.vector
+
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  //search with default metric (cosine)
+var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
+  //search with euclidean metric 
+var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
+  //search with explicit cosine metric and custom threshold
+var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
+  //search with a formula
+var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
+
+```
+
+#### Exemplo 2
+
+We want to execute a query by vector similarity using vectors with different metrics and order the results by cosine similarity:
+
+```4d
+  //Create the comparison vectors 
+var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
+var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
+
+  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
+    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
+
 ```
 
 #### Veja também

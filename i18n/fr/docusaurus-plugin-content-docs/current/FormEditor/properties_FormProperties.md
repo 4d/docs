@@ -9,7 +9,7 @@ title: Propriétés des formulaires
 
 > La propriété de schéma de couleurs n'est appliquée que sur macOS.
 
-Cette propriété définit la palette de couleurs du formulaire. Cette propriété définit la palette de couleurs du formulaire. Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands-legacy/set-application-color-scheme.md)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
@@ -28,77 +28,77 @@ Cette propriété définit la palette de couleurs du formulaire. Cette propriét
 
 Cette propriété vous permet de charger le(s) fichier(s) CSS spécifiques pour le formulaire.
 
-Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de style par défaut. For more information, please refer to [Style sheets](createStylesheet.md) page.
+Un fichier CSS défini au niveau du formulaire remplacera la ou les feuilles de style par défaut. Pour plus d'informations, veuillez consulter la page [Feuilles de style](createStylesheet.md).
 
 #### Grammaire JSON
 
-| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                       |
-| --- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| css | string ou collection | CSS file path(s) provided as:<li>a string (a file for both platforms)</li><li>a collection of strings (a list of files for both platform)</li><li>a collection of {"path":string;"media":"mac" &#124; "win"} objects </li> |
+| Nom | Type de données      | Valeurs possibles                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| css | string ou collection | Chemin(s) de fichier(s) CSS fourni(s) sous la forme<li>d'une chaîne (un fichier pour les deux plates-formes)</li><li>d'une collection de chaînes (une liste de fichiers pour les deux plates-formes)</li><li>d'une collection d'objets {"path":chaîne ; "media" : "mac" &#124; "win"}. </li> |
 
 ---
 
 ## Form Class
 
-The user class can belong to the host project or to a [component](../Extensions/develop-components.md#sharing-of-classes), in which case the formal syntax is "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className". Name of an existing [user class](../Concepts/classes.md#class-definition) to associate to the form .
+Nom d'une [classe utilisateurs](../Concepts/classes.md#class-definition) existante à associer au formulaire. La classe utilisateur peut appartenir au projet hôte ou à un [composant](../Extensions/develop-components.md#sharing-of-classes), auquel cas la syntaxe formelle est "[*componentNameSpace*](../settings/general.md#component-namespace-in-the-class-store).className".
 
-Associating a class to the form provides the following benefits:
+L'association d'une classe au formulaire offre les avantages suivants :
 
-- When you work in the [Form editor](../FormEditor/formEditor.md), the associated class is used for accurate syntax checking of expressions such as `Form.myProperty` in all areas of the [Property list](../FormEditor/formEditor.md#property-list) that support [expressions](../Concepts/quick-tour.md#expressions) (e.g. **Variable or Expression**, **Font color expression**...). Errors are displayed in red and warnings are displayed in yellow in the left column of the Property list and you can hover it to get explanations:
+- Lorsque vous travaillez dans l'[Editeur de formulaires](../FormEditor/formEditor.md), la classe associée est utilisée pour une vérification syntaxique précise des expressions telles que `Form.myProperty` dans toutes les zones de la [Liste des propriétés](../FormEditor/formEditor.md#property-list) qui supportent les [expressions](../Concepts/quick-tour.md#expressions) (par exemple **Variable ou Expression**, **Expression de la couleur de la police**...). Les erreurs sont affichées en rouge et les warnings en jaune dans la colonne de gauche de la liste des propriétés et vous pouvez les survoler pour obtenir des explications :
 
 ![](../assets/en/FormObjects/warning-proplist.png)
 
-- The detection of errors in the code of form object expressions by the [compiler](../Project/compiler.md) is improved.
+- La détection des erreurs dans le code des expressions d'objets formulaires par le [compilateur](../Project/compiler.md) est améliorée.
 
-- You can also to benefit from [autocompletion features](../code-editor/write-class-method.md#autocomplete-functions) in the code editor.
+- Vous pouvez également bénéficier des [fonctions d'autocomplétion](../code-editor/write-class-method.md#autocomplete-functions) dans l'éditeur de code.
 
-- When the form is executed, 4D automatically instantiates a user class object for the form, which is returned by the [`Form`](../commands/form.md) object. Your code can directly access class functions defined in the user class through the `Form` command (e.g. `Form.message()`) without having to pass a *formData* object as parameter to the [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md), and [`PRINT SELECTION`](../commands-legacy/print-selection.md) commands.
+- Lorsque le formulaire est exécuté, 4D instancie automatiquement un objet de classe utilisateur pour le formulaire, qui est renvoyé par l'objet [`Form`](../commands/form.md). Votre code peut accéder directement aux fonctions définies dans la classe utilisateur par le biais de la commande `Form` (par exemple `Form.message()`) sans avoir à passer un objet *formData* comme paramètre aux commandes [`DIALOG`](../commands/dialog.md), [`Print form`](../commands/print-form.md), [`FORM LOAD`](../commands/form-load.md), et [`PRINT SELECTION`](../commands-legacy/print-selection.md).
 
 :::note
 
-See [this blog post](http://blog.4d.com/empower-your-development-process-with-your-forms) for an illustration of this feature.
+Voir [cet article de blog](http://blog.4d.com/empower-your-development-process-with-your-forms) pour une illustration de cette fonctionnalité.
 
 :::
 
 #### Grammaire JSON
 
-| Nom       | Type de données | Valeurs possibles                                                                                                       |
-| --------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| formClass | string          | name of an existing user class ("*className*" or "*componentNameSpace*.*className*") |
+| Nom       | Type de données | Valeurs possibles                                                                                                               |
+| --------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| formClass | string          | nom d'une classe utilisateur existante ("*className*" ou "*componentNameSpace*.*className*") |
 
 ---
 
 ## Nom du formulaire
 
-Cette propriété est le nom du formulaire lui-même et est utilisée pour faire référence au formulaire par son nom dans le langage 4D. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
+Cette propriété est le nom du formulaire lui-même et est utilisée pour faire référence au formulaire par son nom dans le langage 4D. Le nom du formulaire doit être conforme aux [règles spécifiées pour les identifiants](Concepts/identifiers.md) dans 4D.
 
 #### Grammaire JSON
 
-Le nom du formulaire est défini par le nom du dossier qui contient le fichier form.4Dform. See [project architecture](Project/architecture#sources) for more information.
+Le nom du formulaire est défini par le nom du dossier qui contient le fichier form.4Dform. Voir [architecture du projet](Project/architecture#sources) pour plus d'informations.
 
 ---
 
 ## Type de formulaire
 
-The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+Le type de formulaire, c'est-à-dire sa destination, définit les caractéristiques qui seront disponibles pour le formulaire. Par exemple, les [taquets](properties_Markers.md) ne peuvent être définis que pour les formulaires table liste (sortie).
 
 Chaque table dans une base de données a généralement au moins deux formulaires table. Un pour lister les enregistrements à l'écran et l'autre pour afficher un enregistrement à la fois (utilisé pour la saisie et les modifications) :
 
-- Output form - the *output form* or *list form* displays a list of records, with a single line per record. Les résultats des recherches sont affichés dans un formulaire de sortie et les utilisateurs peuvent double-cliquer sur une ligne pour afficher le formulaire d'entrée pour cet enregistrement.
+- Formulaire de sortie - le formulaire *sortie* ou *liste* affiche une liste d'enregistrements, avec une seule ligne par enregistrement. Les résultats des recherches sont affichés dans un formulaire de sortie et les utilisateurs peuvent double-cliquer sur une ligne pour afficher le formulaire d'entrée pour cet enregistrement.
   ![](../assets/en/FormObjects/formOutput.png)
 
-- Formulaire d'entrée ou formulaire détail - utilisé pour la saisie des données. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record).
+- Formulaire d'entrée ou formulaire détail - utilisé pour la saisie des données. Il affiche un seul enregistrement par écran et comporte généralement des boutons permettant de sauvegarder et d'annuler les modifications apportées à l'enregistrement et de naviguer d'un enregistrement à l'autre (c'est-à-dire premier enregistrement, dernier enregistrement, enregistrement précédent, enregistrement suivant).
   ![](../assets/en/FormObjects/formInput.png)
 
 Les types pris en charge dépendent de la catégorie de formulaire :
 
-| Type de formulaire                     | Grammaire JSON   | Description                                                             | Prise en charge avec                   |
-| -------------------------------------- | ---------------- | ----------------------------------------------------------------------- | -------------------------------------- |
-| Formulaire de détail                   | detailScreen     | Un formulaire d'affichage pour la saisie et la modification des données | Formulaires projet - Formulaires table |
-| Formulaire de détail pour l'impression | detailPrinter    | Un rapport imprimé avec une page par enregistrement, comme une facture  | Formulaires projet - Formulaires table |
-| Formulaire de liste                    | listScreen       | Un formulaire pour lister les enregistrements à l'écran                 | Formulaires table                      |
-| Formulaire de liste pour l'impression  | listPrinter      | Un rapport imprimé qui liste les enregistrements                        | Formulaires table                      |
-| Aucun                                  | *no destination* | Un formulaire sans fonction spécifique                                  | Formulaires projet - Formulaires table |
+| Type de formulaire                     | Grammaire JSON     | Description                                                             | Prise en charge avec                   |
+| -------------------------------------- | ------------------ | ----------------------------------------------------------------------- | -------------------------------------- |
+| Formulaire de détail                   | detailScreen       | Un formulaire d'affichage pour la saisie et la modification des données | Formulaires projet - Formulaires table |
+| Formulaire de détail pour l'impression | detailPrinter      | Un rapport imprimé avec une page par enregistrement, comme une facture  | Formulaires projet - Formulaires table |
+| Formulaire de liste                    | listScreen         | Un formulaire pour lister les enregistrements à l'écran                 | Formulaires table                      |
+| Formulaire de liste pour l'impression  | listPrinter        | Un rapport imprimé qui liste les enregistrements                        | Formulaires table                      |
+| Aucun                                  | *sans destination* | Un formulaire sans fonction spécifique                                  | Formulaires projet - Formulaires table |
 
 #### Grammaire JSON
 
@@ -110,11 +110,11 @@ Les types pris en charge dépendent de la catégorie de formulaire :
 
 ## Nom du formulaire hérité
 
-This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
+Cette propriété désigne le [formulaire à hériter](forms.md#inherited-forms) dans le formulaire actuel.
 
-To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
+Pour hériter d'un formulaire table, définissez la table dans la propriété [Table du formulaire hérité](#inherited-form-table).
 
-To remove inheritance, select `\<None>` in the Property List (or " " in JSON).
+Pour supprimer l'héritage, sélectionnez \<Aucun>\` dans la liste des propriétés (ou " " en JSON).
 
 #### Grammaire JSON
 
@@ -126,9 +126,9 @@ To remove inheritance, select `\<None>` in the Property List (or " " in JSON).
 
 ## Table du formulaire hérité
 
-This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
+Cette propriété spécifie la table de la base de données à partir de laquelle [hériter d'un formulaire](forms.md#inherited-forms) dans le formulaire courant.
 
-Set to `\<None>` in the Property List (or " " in JSON) to inherited from a project form.
+Fixé à \<Aucun>\` dans la liste des propriétés (ou " " en JSON) pour hériter d'un formulaire projet.
 
 #### Grammaire JSON
 
@@ -188,7 +188,7 @@ Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/pro
 
 #### Voir également
 
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+[**Enregistrer la valeur**](FormObjects/properties_Object.md#save-value)
 
 ---
 
@@ -200,7 +200,7 @@ Vous pouvez utiliser des références dynamiques pour définir les noms de fenê
 
 - Une référence XLIFF standard stockée dans le dossier Resources.
 - Un libellé de table ou de champ : La syntaxe à appliquer est la suivante : `<?[TableNum]FieldNum>` ou `<?[TableName]FieldName>`.
-- Une variable ou un champ : La syntaxe à appliquer est la suivante : `\N-<VariableName&#062 ;` ou `&#060 ;[TableName]FieldName&#062 ;`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
+- Une variable ou un champ : La syntaxe à appliquer est la suivante : `\<VariableName>` ou `<[TableName]FieldName>`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
 
 > Le nombre de caractères pour un nom de fenêtre est limité à 31.
 

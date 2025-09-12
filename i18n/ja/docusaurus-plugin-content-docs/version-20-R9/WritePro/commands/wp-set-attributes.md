@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-The **WP SET ATTRIBUTES** command <!--REF #_command_.WP SET ATTRIBUTES.Summary-->allows you to set the value of any attribute in a range, element, document.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
+**WP SET ATTRIBUTES** コマンドは、<!--REF #_command_.WP SET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、ドキュメント内の一つ以上の属性の値を設定することができます。<!-- END REF--> このコマンドを使用することで、4D Write Pro の次のようなあらゆる内部属性にアクセスすることができます: 文字、段落、ドキュメント、表、画像。
 
 *targetObj* 引数には、以下のいずれかを渡すことができます :
 

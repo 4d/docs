@@ -12,7 +12,7 @@ Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibli
 
 ## Utilisation de la bibliothèque d'objets standard
 
-The standard object library is available from the Form editor: click on the last button of the toolbar:\
+La bibliothèque d'objets standard est disponible à partir de l'éditeur de formulaires : cliquez sur le dernier bouton de la barre d'outils :\
 ![](../assets/en/FormEditor/library1.png)
 
 La bibliothèque est affichée dans une fenêtre séparée :
@@ -22,19 +22,20 @@ La bibliothèque est affichée dans une fenêtre séparée :
 La fenêtre présente les caractéristiques principales suivantes :
 
 - Zone d'aperçu avec des messages d'aide : la zone centrale affiche un aperçu de chaque objet. Vous pouvez survoler un objet pour obtenir des informations sur celui-ci dans un message d'aide.
-- You can filter the window contents by using the **Categories** menu:
+- Vous pouvez filtrer le contenu de la fenêtre en utilisant le menu **Catégories** :
   ![](../assets/en/FormEditor/library3.png)
 - Pour utiliser un objet de la bibliothèque dans votre formulaire, vous pouvez soit :
   - faire un clic droit sur un objet et sélectionnez **Copier** dans le menu contextuel
-  - or drag and drop the object from the library The object is then added to the form.
+  - ou glisser-déposer l'objet de la bibliothèque.
+    L'objet est ensuite ajouté au formulaire.
 
 Cette bibliothèque est en lecture seule. Si vous souhaitez modifier des objets par défaut ou créer votre propre bibliothèque d'objets préconfigurés ou vos formulaires projets, vous devez créer une bibliothèque d'objets personnalisée (voir ci-dessous).
 
-All objects proposed in the standard object library are described on [this section](../FormEditor/objectLibrary.md).
+Tous les objets proposés dans la bibliothèque d'objets standard sont décrits dans [cette section](../FormEditor/objectLibrary.md).
 
 ## Créer et utiliser des bibliothèques d'objets personnalisées
 
-4D permet de créer et d’utiliser des bibliothèques d’objets personnalisées. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. Vous pouvez ensuite réutiliser ces objets sous différentes formes et dans différents projets.
+4D permet de créer et d’utiliser des bibliothèques d’objets personnalisées. Une bibliothèque d'objets personnalisés est un projet 4D dans lequel vous pouvez stocker vos objets favoris (boutons, textes, images, etc.). Vous pouvez ensuite réutiliser ces objets sous différentes formes et dans différents projets.
 
 Les objets sont stockés avec toutes leurs propriétés, y compris leurs méthodes objet. Les bibliothèques sont constituées et utilisées par simple glisser-déposer ou copier-coller.
 
@@ -66,7 +67,7 @@ Les bibliothèques d’objets personnalisées sont des projets 4D classiques. Se
 
 ### Construire une bibliothèque d’objets
 
-Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Aucun lien n’est conservé avec l’objet d’origine : si celui-ci est modifié, la modification ne sera pas reportée dans l’objet copié.
+Les objets sont placés dans une bibliothèque d’objets par glisser-déposer ou couper/copier-coller. Ils peuvent provenir soit d’un formulaire soit d’une autre bibliothèque d’objets (y compris la [bibliothèque préconfigurée](#using-the-standard-object-library)). Aucun lien n’est conservé avec l’objet d’origine : si celui-ci est modifié, la modification ne sera pas reportée dans l’objet copié.
 
 > Pour que vous puissiez effectuer des glisser-déposer d’objets depuis les formulaires vers des bibliothèques, vous devez sélectionner l’option de déplacement **Commencer un glisser-déposer** dans les Préférences de 4D.
 

@@ -1765,6 +1765,7 @@ The object returned by `.unlock()` contains the following property:
 |Property| Type |Description|
 |---|---|---|
 |success| Boolean| True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False.|
+|wasNotLocked| Boolean|(only if "success" is False) True if the entity was not locked in the process.|
 
 #### Example  
 

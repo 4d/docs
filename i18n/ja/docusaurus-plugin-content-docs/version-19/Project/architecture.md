@@ -15,7 +15,7 @@ title: プロジェクトのアーキテクチャー
   - Project
     - DerivedData
     - Sources
-    - Trash
+    - ゴミ箱
   - Resources
   - Settings
   - userPreferences.username

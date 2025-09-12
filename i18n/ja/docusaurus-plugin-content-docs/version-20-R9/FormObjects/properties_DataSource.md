@@ -36,7 +36,7 @@ title: データソース
 
 選択リストをフォームオブジェクトに関連づけます。 指定できるのは選択リスト名 (リストの参照) またはデフォルト値のコレクションです。
 
-You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) or [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) commands.
+[OBJECT SET LIST BY NAME](../commands-legacy/object-set-list-by-name.md) または [OBJECT SET LIST BY REFERENCE](../commands-legacy/object-set-list-by-reference.md) コマンドを使用することで選択リストをオブジェクトに割り当てることができます。
 
 #### JSON 文法
 

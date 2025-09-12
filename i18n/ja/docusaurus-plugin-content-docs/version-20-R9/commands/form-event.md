@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** は、発生したフォームイベント に関する情報を格納しているオブジェクトを返します。<!-- END REF--> Usually, you will use **FORM Event** from within a form or object method.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** は、発生したフォームイベント に関する情報を格納しているオブジェクトを返します。<!-- END REF-->通常、**FORM Event** はフォームメソッドまたはオブジェクトメソッド内にて使用します。
 
 **返されるオブジェクト**
 

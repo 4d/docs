@@ -7,7 +7,11 @@ title: 非同期コード
 
 リクエストをAPI に送信する際にOpenAPI のレスポンスを待ちたくない場合には、非同期コードを使用する必要があります。
 
-結果を受け取るには `4D.Formula` を渡す必要があります。 それらの一覧については、[OpenAIParameters](Classes/OpenAIParameters.md) を参照して下さい。
+To make asynchronous calls, you must provide a callback `4D.Function`(`Formula`) in the [OpenAIParameters](Classes/OpenAIParameters.md) object parameter to receive the result.
+
+The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code. 以下の例を参照.
+
+## Process Considerations
 
 非同期メソッドは [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass) に基づいているもので、レスポンスはカレントプロセス内で受信されます。
 

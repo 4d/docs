@@ -31,7 +31,7 @@ This setting only applies to UUIDs generated afterwards. Already saved auto UUID
 
 :::note
 
-For more information on UUID version 7, please read [this blog post](https://blog.4d.com/sort-uuids-with-version-7).
+UUID バージョン7の詳細な情報については、 [こちらのblog記事](https://blog.4d.com/sort-uuids-with-version-7) を参照してください。
 
 :::
 

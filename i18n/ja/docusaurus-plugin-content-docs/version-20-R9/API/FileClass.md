@@ -590,7 +590,7 @@ $fhandle:=$f.open("read")
 
 `.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。
 
-この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 If used with another file type or with *.exe*\*/**.dll** files that do not already exist on disk, the function does nothing (no error is generated).
+この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
 
 **.plist ファイル用の*info* オブジェクト (全プラットフォーム)**
 

@@ -25,121 +25,80 @@ Data is collected during the following events:
 
 Some data is also collected at regular intervals.
 
-### Collected at database startup
 
 |Data|Type|Notes|
 |---|----|---|
-|CPU|Text|Name, type, and speed of the processor|
-|numberOfCores|Number|Total number of cores|
-|memory|Number|Volume of memory storage (in bytes) available on the machine|
-|system|Text|Operating system version and build number|
-|headless|Boolean|True if the application is running in headless mode|
-|version|Number|Version number of the 4D application|
 |buildNumber|Number|Build number of the 4D application|
-|license|Object|Commercial name and description of product licenses|
-|isRosetta|Boolean|True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).|
-|uniqueID|Text|Unique ID of the 4D Server|
-|id|Text (hashed string)|Unique id associated to the database (*Polynomial Rolling hash of the database name*)|
-|dataFileSize|Number|Data file size in bytes|
-|indexesSize|Number|Index size in bytes|
+|cacheMissBytes|Object|Number of bytes missed from cache |
+|cacheMissCount|Object|Number of reads missed in the cache |
+|cacheReadBytes|Object|Number of bytes read from cache|
+|cacheReadCount|Object|Number of reads in the cache |
 |cacheSize|Number|Cache size in bytes|
-|usingLegacyNetworkLayer|Boolean|True if legacy network layer used for the application server|
-|usingQUICNetworkLayer|Boolean|True if the database uses the QUIC network layer|
-|encryptedConnections|Boolean|True if client/server connections are encrypted|
-|encrypted|Boolean|True if the data file is encrypted|
 |compiled|Boolean|True if the application is compiled|
-|isEngined|Boolean|True if the application is merged with 4D Volume Desktop|
-|projectMode|Boolean|True if the application is a project|
-|mobile|Collection|Information on mobile sessions|
-
-### Collected at web server startup and data collection sending
-
-|Data|Type|Notes|
-|---|----|---|
-|webServer|Object|"started":true if the web server is starting or started|
-
-### Collected at new web session creation
-
-|Data|Type|Notes|
-|---|----|---|
-|databases.webMaxLicensedSessions|Number|Maximum number of non-REST web sessions on the server that use the webserver license|
-|databases.restMaxLicensedSessions|Number|Maximum number of REST web sessions on the server that use the REST license|
-|databases.webMaxUnlicensedSessions|Number|Maximum number of other non-REST web sessions on the server|
-|databases.restMaxUnlicensedSessions|Number|Maximum number of other REST web sessions on the server|
-
-### Collected at datastore opening
-
-|Data|Type|Notes|
-|---|----|---|
+|connectionSystems|Collection|Client OS without the build number (in parenthesis) and number of clients using it|
+|CPU|Text|Name, type, and speed of the processor|
+|dataFileSize|Number|Data file size in bytes|
+|dataSegment1.diskReadBytes|Object|Number of bytes read in the data file |
+|dataSegment1.diskReadCount|Object|Number of reads in the data file |
+|dataSegment1.diskWriteBytes|Object|Number of bytes written in the data file |
+|dataSegment1.diskWriteCount|Object|Number of writes in the data file |
 |databases.externalDatastoreOpened|Number|Number of calls to `Open datastore`|
 |databases.internalDatastoreOpened|Number|Number of times the datastore is opened by an external server|
-
-
-### Collected at regular intervals
-
-|Data|Type|Notes|
-|---|----|---|
-|maximumNumberOfWebProcesses|Number|Maximum number of simultaneous web processes|
-|maximumUsedPhysicalMemory|Number|Maximum use of physical memory|
-|maximumUsedVirtualMemory|Number|Maximum use of virtual memory|
-
-
-### Collected at data collection sending
-
-|Data|Type|Notes|
-|---|----|---|
-|uptime|Number|Time elapsed (in seconds) since local 4D database was opened|
-|cacheReadBytes|Object|Number of bytes read from cache|
-|cacheMissBytes|Object|Number of bytes missed from cache |
-|cacheReadCount|Object|Number of reads in the cache |
-|cacheMissCount|Object|Number of reads missed in the cache |
-|dataSegment1.diskReadBytes|Object|Number of bytes read in the data file |
-|dataSegment1.diskWriteBytes|Object|Number of bytes written in the data file |
-|dataSegment1.diskReadCount|Object|Number of reads in the data file |
-|dataSegment1.diskWriteCount|Object|Number of writes in the data file |
-|indexSegment.diskReadBytes|Number|Number of bytes read in the index file|
-|indexSegment.diskWriteBytes|Number|Number of bytes written in the index file |
-|indexSegment.diskReadCount|Number|Number of reads in the index file |
-|indexSegment.diskWriteCount|Number|Number of writes in the index file |
-|databases.webScalableSessions|Boolean|True if scalable sessions are activated |
-|databases.webIPAddressesNumber|Number|Number of different IP addresses that made a request to 4D Server |
-
-
-### Collected at database closure and data collection sending
-
-|Data|Type|Notes|
-|---|----|---|
-|webserverHits|Number|Number of hits on the web server during the data collection|
-|restHits|Number|Number of hits on the REST server during the data collection|
-|webserverBytesIn|Number|Bytes received by the web server during the data collection|
-|webserverBytesOut|Number|Bytes sent by the web server during the data collection|
-|qodly.webforms|Number|Number of Qodly webforms|
-
-
-### Collected at every new call to the remote debugger 
-
-|Data|Type|Notes|
-|---|----|---|
 |databases.remoteDebugger4DRemoteAttachments|Number|Number of attachments to the remote debugger from a remote 4D|
 |databases.remoteDebuggerQodlyAttachments|Number|Number of attachments to the remote debugger from Qodly|
 |databases.remoteDebuggerVSCodeAttachments|Number|Number of attachments to the remote debugger from VS Code|
-
-
-### Collected every time PHP execute is called
-
-|Data|Type|Notes|
-|---|----|---|
-|phpCall|Number|Number of calls to `PHP execute` |
+|databases.restMaxLicensedSessions|Number|Maximum number of REST web sessions on the server that use the REST license|
+|databases.restMaxUnlicensedSessions|Number|Maximum number of other REST web sessions on the server|
+|databases.webIPAddressesNumber|Number|Number of different IP addresses that made a request to 4D Server |
+|databases.webMaxLicensedSessions|Number|Maximum number of non-REST web sessions on the server that use the webserver license|
+|databases.webMaxUnlicensedSessions|Number|Maximum number of other non-REST web sessions on the server|
+|databases.webScalableSessions|Boolean|True if scalable sessions are activated |
+|encrypted|Boolean|True if the data file is encrypted|
+|encryptedConnections|Boolean|True if client/server connections are encrypted|
 |externalPHP|Boolean|True if the client performs a call to `PHP execute` and uses its own version of php |
-
-
-### Collected at client connection 
-
-|Data|Type|Notes|
-|---|----|---|
+|hasDataChangeTracking|Boolean|True if a "__DeletedRecords" table exists|
+|headless|Boolean|True if the application is running in headless mode|
+|id|Text (hashed string)|Unique id associated to the database (*Polynomial Rolling hash of the database name*)|
+|indexSegment.diskReadBytes|Number|Number of bytes read in the index file|
+|indexSegment.diskReadCount|Number|Number of reads in the index file |
+|indexSegment.diskWriteBytes|Number|Number of bytes written in the index file |
+|indexSegment.diskWriteCount|Number|Number of writes in the index file |
+|indexesSize|Number|Index size in bytes|
+|isEngined|Boolean|True if the application is merged with 4D Volume Desktop|
+|isRosetta|Boolean|True if 4D is emulated through Rosetta on macOS, False otherwise (not emulated or on Windows).|
+|LDAPLogin|Number|Number of calls to `LDAP LOGIN`|
+|license|Object|Commercial name and description of product licenses|
 |maximum4DClientConnections|Number|Maximum number of 4D Client connections to the server |
-|connectionSystems|Collection|Client OS without the build number (in parenthesis) and number of clients using it|
-
+|maximumNumberOfWebProcesses|Number|Maximum number of simultaneous web processes|
+|maximumUsedPhysicalMemory|Number|Maximum use of physical memory|
+|maximumUsedVirtualMemory|Number|Maximum use of virtual memory|
+|memory|Number|Volume of memory storage (in bytes) available on the machine|
+|mobile|Collection|Information on mobile sessions|
+|numberOfCores|Number|Total number of cores|
+|numberOfFields|Number|Number of fields|
+|numberOfKeepRecordSyncInfo|Number|Number of tables with the "Enable Replication" option checked|
+|numberOfRecordsMax|Number|Total number of records|
+|numberOfTables|Number|Number of tables|
+|numberOfWebServices|Number|Number of methods published as Web Services|
+|ODBCLogin|Number|Number of calls to `SQL LOGIN` using ODBC|
+|phpCall|Number|Number of calls to `PHP execute` |
+|projectMode|Boolean|True if the application is a project|
+|qodly.webforms|Number|Number of Qodly webforms|
+|QueryBySQL|Number|Number of calls to `QUERY BY SQL`|
+|restHits|Number|Number of hits on the REST server during the data collection|
+|SQLBeginEndStatement|Number|Number of uses of `Begin SQL` / `End SQL`|
+|SQLLoginInternal|Number|Number of calls to `SQL LOGIN` using SQL_INTERNAL|
+|SQLServer|Number|Number of SQL requests through the network|
+|system|Text|Operating system version and build number|
+|uniqueID|Text|Unique ID of the 4D Server|
+|uptime|Number|Time elapsed (in seconds) since local 4D database was opened|
+|usingLegacyNetworkLayer|Boolean|True if legacy network layer used for the application server|
+|usingQUICNetworkLayer|Boolean|True if the database uses the QUIC network layer|
+|version|Number|Version number of the 4D application|
+|webServer|Object|"started":true if the web server is starting or started|
+|webserverBytesIn|Number|Bytes received by the web server during the data collection|
+|webserverBytesOut|Number|Bytes sent by the web server during the data collection|
+|webserverHits|Number|Number of hits on the web server during the data collection|
 
 
 ## Where is it stored and sent?

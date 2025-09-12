@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.Process activity.Summary-->**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション (4D Server のみ) のスナップショットを返します。<!-- END REF--> This command returns all processes, including internal processes that are not reachable by the [Process info](process-info.md) command. 
+<!--REF #_command_.Process activity.Summary-->**Process activity** コマンドは特定の時刻での、実行中のプロセスや接続ユーザーセッション (4D Server のみ) のスナップショットを返します。<!-- END REF-->このコマンドは、全てのプロセスを返します。これには、[Process info](process-info.md) コマンドでもアクセスできない内部プロセスも含まれます。
 
 デフォルトで、引数を渡さずに使用した場合、**Process activity** は以下のプロパティを格納したオブジェクトを返します:
 
