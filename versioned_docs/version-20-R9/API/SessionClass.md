@@ -140,7 +140,7 @@ The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->create
 
 For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
 
-By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan* (the minimum value is 10 seconds, *lifespan* is reset to 10 if a smaller value is passed). If an expired token is used to restore a web user session, it is ignored. 
+By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan*. If an expired token is used to restore a web user session, it is ignored. 
 
 The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application. 
 

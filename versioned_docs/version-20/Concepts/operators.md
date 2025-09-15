@@ -93,7 +93,9 @@ The following compound assignment operators are supported:
 ||Time *= Number |Number |`$t1*=5 //$t1:=$t1*5`|
 ||Picture *= Number|Picture|`$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)`|
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
+These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+- pictures as object properties or collection elements,
+- array index variables.
 
 The operation "source `operator` value" is not strictly equivalent to "source := source `operator` value" because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as `getPointer()->+=1` the `getPointer` method is called only once.
 
