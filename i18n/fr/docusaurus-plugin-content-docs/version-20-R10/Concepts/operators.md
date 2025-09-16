@@ -90,7 +90,10 @@ Les opérateurs d'affectation composés suivants sont pris en charge :
 |                | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                                                           |
 |                | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionner $p1 de 5)`                                 |
 
-Ces opérateurs s'appliquent à toutes les [expressions assignables](quick-tour.md#assignable-vs-non-assignable-expressions) (à l'exception des images en tant que propriétés d'objet ou éléments de collection).
+These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+
+- pictures as object properties or collection elements,
+- array index variables.
 
 L'opération "source `operator` value" n'est pas strictement équivalente à "source := source `operator` valeur" car l'expression désignant la source (variable, champ, propriété d'objet, élément de collection) n'est évaluée qu'une seule fois. Par exemple, dans une expression telle que `getPointer()->+=1`, la méthode `getPointer` n'est appelée qu'une seule fois.
 

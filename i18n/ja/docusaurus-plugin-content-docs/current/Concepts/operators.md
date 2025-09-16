@@ -90,7 +90,10 @@ $a+=2 // $a=3
 |                             | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                          |
 |                             | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 ($p1 を 5倍にリサイズします)`       |
 
-これらの演算子は、あらゆる [代入可能な式](quick-tour.md#代入可-vs-代入不可の式) に適用できます (オブジェクトのプロパティやコレクション要素としてのピクチャーを除く)。
+These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+
+- pictures as object properties or collection elements,
+- array index variables.
 
 "代入先 複合代入演算子 値" と "代入先 := 代入先 演算子 値" は、厳密には等価ではありません。なぜなら、前者の場合、代入先 (変数・フィールド・オブジェクトプロパティ・コレクション要素) は一度しか評価されないからです。 たとえば、`getPointer()-+=1` のような式では、`getPointer` メソッドは一度だけ呼び出されます。
 

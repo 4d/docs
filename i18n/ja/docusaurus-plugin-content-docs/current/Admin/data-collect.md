@@ -54,7 +54,7 @@ title: データ収集
 | encrypted                                                   | Boolean                           | データファイルが暗号化されていれば true                                                                                      |
 | encryptedConnections                                        | Boolean                           | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
 | externalPHP                                                 | Boolean                           | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。                                                   |
-| hasDataChangeTracking                                       | Boolean                           | True if a "__DeletedRecords" table exists                         |
+| hasDataChangeTracking                                       | Boolean                           | "__DeletedRecords" テーブルが存在する場合にはTrue                              |
 | headless                                                    | Boolean                           | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
 | id                                                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | indexSegment.diskReadBytes                  | Number                            | インデックスファイルから読み取ったバイト数                                                                                       |
@@ -64,7 +64,7 @@ title: データ収集
 | indexesSize                                                 | Number                            | インデックスのサイズ (バイト単位)                                                                       |
 | isEngined                                                   | Boolean                           | アプリケーションに 4D Volume Desltop が組み込まれている場合は true                                                               |
 | isRosetta                                                   | Boolean                           | macOS の Rosetta で 4D がエミュレートされている場合は True、そうでない場合は False (エミュレートされていない、または Windows の場合)。 |
-| LDAPLogin                                                   | Number                            | Number of calls to `LDAP LOGIN`                                                                             |
+| LDAPLogin                                                   | Number                            | `LDAP LOGIN` の呼び出し回数                                                                                        |
 | license                                                     | Object                            | 製品ライセンスの名称と説明                                                                                               |
 | maximum4DClientConnections                                  | Number                            | サーバーへのクライアントの最大接続数                                                                                          |
 | maximumNumberOfWebProcesses                                 | Number                            | 最大同時Webプロセス数                                                                                                |

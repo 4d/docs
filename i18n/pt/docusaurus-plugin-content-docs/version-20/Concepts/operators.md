@@ -93,7 +93,9 @@ São suportados os seguintes operadores de atribuição compostos:
 |               | Time *= Number     | Number      | `$t1*=5 //$t1:=$t1*5`                                                      |
 |               | Picture *= Number  | Imagem      | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 por 5)`                            |
 
-Estes operadores aplicam-se a quaisquer [expressões atribuíveis](quick-tour.md#assignable-vs-non-assignable-expressions) (exceto imagens como propriedades de objecto ou elementos de colecções).
+These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+- pictures as object properties or collection elements,
+- array index variables.
 
 A operação "source `operator` value" não é estritamente equivalente a "source := source `operator` value" porque a expressão que designa a fonte (variável, campo, propriedade de objeto, elemento de coleção) só é avaliada uma vez. Por exemplo, numa expressão como `getPointer()->+=1` o método `getPointer` é chamado apenas uma vez.
 
