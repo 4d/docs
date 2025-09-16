@@ -2753,8 +2753,41 @@ module.exports =
             image: "/img/docusaurus.png"
           },
           items: [
+            "WritePro/user-legacy/presentation",
+            "WritePro/user-legacy/defining-a-4d-write-pro-area",
             "WritePro/writeprointerface",
-            "WritePro/managing-formulas",
+            "WritePro/user-legacy/4d-write-pro-documents",
+            {
+                  type: "category",
+                  label: "Document Elements",
+                  link: {
+                    type: "generated-index",
+                    title: "Document Elements",
+                  },
+                  items: [
+                    "WritePro/user-legacy/using-a-4d-write-pro-area",
+                    "WritePro/user-legacy/handling-pictures",
+                    "WritePro/user-legacy/handling-tables",
+                    "WritePro/user-legacy/text-boxes",
+                    "WritePro/user-legacy/ranges",
+                    "WritePro/user-legacy/stylesheets",
+                    "WritePro/managing-formulas"
+                  ]
+            },
+            {
+                  type: "category",
+                  label: "Import and Export",
+                  link: {
+                    type: "generated-index",
+                    title: "Import and Export",
+                  },
+                  items: [
+                    "WritePro/user-legacy/importing-4d-write-documents",
+                    "WritePro/user-legacy/importing-and-exporting-in-docx-format",
+                    "WritePro/user-legacy/exporting-to-html-and-mime-html-formats",
+                    "WritePro/user-legacy/exporting-to-svg-format"
+                  ]
+            },
             "WritePro/commands-legacy/4d-write-pro-attributes",
             {
               type: "category",
