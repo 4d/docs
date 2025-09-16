@@ -12,6 +12,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 - Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
 - The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer. 
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - 4D Language:
 	- New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).  
 	- [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
