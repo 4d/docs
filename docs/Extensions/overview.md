@@ -13,7 +13,7 @@ The 4D [project architecture](../Project/architecture.md) is modular. You can pr
 
 |Component|Description|Main Features| 
 |---|---|---|
-|[4D AiIKit](https://github.com/4d/4D-AIKit)|Set of classes to connect to third-party OpenAI APIs|`OpenAIChat`, `OpenAIImage`...|
+|[4D AIKit](https://github.com/4d/4D-AIKit)|Set of classes to connect to third-party OpenAI APIs|`OpenAIChat`, `OpenAIImage`...|
 |[4D Labels](https://github.com/4d/4D-Labels)|Internal component required to build label templates||
 |[4D NetKit](https://developer.4d.com/4D-NetKit)|Set of web service tools to connect to third-party APIs|`OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()` |
 |[4D Progress](https://github.com/4d/4D-Progress)|Open one or more progress bars in the same window|`Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ... |
