@@ -305,7 +305,7 @@ See [**Release Notes for 4D 20.x LTS**](../../versioned_docs/version-20/Notes/up
 |BoringSSL|0697c88|**21**|Used for QUIC|
 |CEF|7258|**21**|Chromium 139|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
-|ICU|77.1|**21**|This major upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
+|ICU|77.1|**21**|This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
 |libldap|2.6.7|20 R6||
 |libsasl|2.1.28|20||
 |Liblsquic|4.2.0|20 R10|Used for QUIC|
