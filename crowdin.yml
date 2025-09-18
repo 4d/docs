@@ -3,8 +3,8 @@ files:
     ignore:
       - /docs/preprocessing.conf
       - /docs/commands-legacy/*.*
-      - /docs/WritePro/commands-legacy/*.*
       - /docs/*-legacy/*.*
+      - /docs/WritePro/*-legacy/*.*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
   - source: /i18n/en/docusaurus-plugin-content-docs/*.json
     ignore:
@@ -14,7 +14,7 @@ files:
     ignore:
       - /versioned_docs/**/preprocessing.conf
       - /versioned_docs/**/commands-legacy/*.*
-      - /versioned_docs/**/WritePro/commands-legacy/*.*
+      - /versioned_docs/**/WritePro/*-legacy/*.*
       - /versioned_docs/version-18/
       - /versioned_docs/**/*-legacy/*.*
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/**/%original_file_name%
