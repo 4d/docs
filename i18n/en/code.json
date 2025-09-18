@@ -9,6 +9,9 @@
     "message": "Working with a project"
   },
   "homepage.sections.core-development.title": {
+    "message": "Project & IDE"
+  },
+  "homepage.sections.language.title": {
     "message": "Core Development"
   },
   "Project Management": {
@@ -33,7 +36,7 @@
     "message": "Preferences"
   },
   "homepage.administration.title": {
-    "message": "Administration"
+    "message": "Server & Admin"
   },
   "4D Server Administration Window": {
     "message": "4D Server Administration Window"
@@ -131,8 +134,8 @@
   "Build Application": {
     "message": "Build Application"
   },
-  "homepage.sections.mobile-applications.title": {
-    "message": "Mobile Applications"
+  "homepage.sections.more.title": {
+    "message": "More docs"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"

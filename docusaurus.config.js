@@ -268,5 +268,11 @@ module.exports = {
       maintainCase: false,
     },
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ['@docusaurus/theme-mermaid'],  
+  scripts: [
+    {
+      src: 'https://kit.fontawesome.com/daeacc3fc4.js',
+      crossorigin: 'anonymous',
+    },
+  ],
 }

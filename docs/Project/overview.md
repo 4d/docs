@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Overview
+title: 4D at a glance
 ---
 
 A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files. 
@@ -24,10 +24,6 @@ Multi-user development is managed via standard **source control** repository too
 
 ## Final application
 
-Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
-
-- [web](WebServer/webServer.md) applications,
-- [mobile](https://developer.4d.com/go-mobile/) applications, 
-- [desktop](Desktop/building.md) applications (client/server or single-user). 
+Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create several types of application from your projects, including [web](WebServer/webServer.md) applications, [desktop](Desktop/building.md) applications (client/server or single-user), or mobile applications.
 
 Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume Desktop](../Desktop/building.md).

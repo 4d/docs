@@ -136,11 +136,16 @@ Allows you to set the maximum timeout before closing for inactive Web processes 
 
 Set the authentication system that you want to apply to your Web server. Three options are proposed:
 
-Custom (default)
-Passwords with BASIC protocol
-Passwords with DIGEST protocol
+- Custom (default)
+- Passwords with BASIC protocol
+- Passwords with DIGEST protocol
 
-Using **Custom** authentication is recommended. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
+Using **Custom** authentication is recommended. See [**Authentication**](../WebServer/authentication.md) section.
+
+#### Generic Web User
+
+See [Deprecated Settings](../WebServer/webServerConfig.md#deprecated-settings).
+
 
 
 ## Options (II)

@@ -1,6 +1,6 @@
 ---
 id: building
-title: Build Application
+title: Application Builder
 ---
 
 4D includes an application builder to create a project package (final build). This builder simplifies the finalization and deployment process for 4D compiled applications. It automatically handles the specific features of different operating systems and facilitates the deployment of client-server applications.

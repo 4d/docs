@@ -15,40 +15,52 @@ module.exports =
       },
       items: [
         "GettingStarted/installation",
-        "GettingStarted/creating",
+        "Project/overview",
         "Notes/updates"
       ]
     },
     {
       type: "category",
-      label: "Core Development",
+      label: "Project & IDE",
       link: {
         type: "generated-index",
-        title: "Core Development",
-        slug: "/category/core-development",
+        title: "Project & IDE",
+        slug: "/category/project-ide",
         keywords: [
-          "core"
+          "ide"
         ],
         image: "/img/docusaurus.png"
       },
       items: [
+        "GettingStarted/creating",
+        "Project/architecture",
         {
           type: "category",
-          label: "Project Management",
+          label: "Dababase structure",
+          items: [
+            "Develop/field-properties"
+          ]
+        },
+        {
+          type: "category",
+          label: "Code & Methods",
+          items: [
+            "Project/code-overview",
+            "code-editor/write-class-method",
+            "Project/project-method-properties",
+            "Project/documentation"
+          ]
+        },
+          "Project/components",
+          "Project/compiler",
+        {
+          type: "category",
+          label: "Settings",
           link: {
-            type: "doc",
-            id: "Project/overview"
+             type: "doc",
+             id: "settings/overview"
           },
           items: [
-            "Project/architecture",
-            {
-              type: "category",
-              label: "Settings",
-              link: {
-                type: "doc",
-                id: "settings/overview"
-              },
-              items: [
                 "settings/general",
                 "settings/interface",
                 "settings/compiler",
@@ -61,88 +73,34 @@ module.exports =
                 "settings/security",
                 "settings/compatibility"
               ]
-            },
-            "Project/components",
-            "Project/date-time-formats",
-            "Project/documentation",
-            {
-               type: "category",
-               label: "Dababase structure",
-               items: [
-                 "Develop/field-properties",
-                      ]
-            }
-                 ]
-            },
-        {
-          type: "category",
-          label: "Development Environment",
-          items: [
-            "Project/code-overview",
-            "code-editor/write-class-method",
-            "Project/compiler",
-            {
-              type: "category",
-              label: "Debugging",
-              link: {
-                type: "doc",
-                id: "Debugging/basics"
-              },
-              items: [
+        },
+         "Desktop/building",
+          {
+           type: "category",
+           label: "Debugging",
+           link: {
+             type: "doc",
+             id: "Debugging/basics"
+          },
+           items: [
                 "Debugging/debugger",
                 "Debugging/breakpoints",
                 "Debugging/debugging-remote"
               ]
-            },
-            "Debugging/debugLogFiles",
-               {
-                  type: "category",
-                  label: "Preferences",
-                  link: {
-                    type: "doc",
-                    id: "Preferences/overview"
-                },
-                  items: [
-                    "Preferences/general",
-                    "Preferences/structure",
-                    "Preferences/forms",
-                    "Preferences/methods",
-                    "Preferences/shortcuts"
-            ]
-        }
-
-        ]
-        },
-        {
-          type: "category",
-          label: "ORDA",
-          link: {
-            type: "doc",
-            id: "ORDA/overview"
           },
-          items: [
-            "ORDA/dsmapping",
-            "ORDA/ordaClasses",
-            "ORDA/orda-events",
-            "ORDA/entities",
-            "ORDA/global-stamp",
-            "ORDA/datastores",
-            "ORDA/privileges",
-            "ORDA/client-server-optimization",
-            "ORDA/glossary"
-          ]
-        },
-        {
-          type: "category",
-          label: "Processes",
-          items: [
-            "Develop/processes",
-            "Develop/preemptive-processes"
-          ]
-        },
-        "Develop-legacy/transactions",
-        "Tags/transformation-tags"
-      ]
+                  {
+           type: "category",
+           label: "Application Preferences",
+             items: [
+                "Preferences/overview",
+                "Preferences/general",
+                "Preferences/structure",
+                "Preferences/forms",
+                "Preferences/methods",
+                "Preferences/shortcuts"
+              ]
+          }
+      ] 
     },
     {
       type: "category",
@@ -152,7 +110,7 @@ module.exports =
         title: "4D Language",
         slug: "/category/4d-language",
         keywords: [
-          "language"
+          "language","orda"
         ],
         image: "/img/docusaurus.png"
       },
@@ -201,12 +159,13 @@ module.exports =
             "Concepts/paths"
           ]
         },
+        "commands/command-index",
         {
           type: "category",
-          label: "Commands",
+          label: "Commands by theme",
           link: {
             type: "generated-index",
-            title: "Commands",
+            title: "Commands by theme",
             slug: "/category/commands",
             keywords: [
               "commands"
@@ -214,7 +173,6 @@ module.exports =
             image: "/img/docusaurus.png"
           },
           items: [
-            "commands/command-index",
             {
               type: "category",
               label: "4D Environment",
@@ -481,34 +439,6 @@ module.exports =
                 "commands-legacy/encrypt-data-file",
                 "commands-legacy/new-data-key",
                 "commands-legacy/register-data-key"
-              ]
-            },
-            {
-              type: "category",
-              label: "Database Methods",
-              link: {
-                type: "doc",
-                id: "commands/theme/Database_Methods_theme"
-              },
-              items: [
-                "commands-legacy/on-backup-shutdown-database-method",
-                "commands-legacy/on-backup-startup-database-method",
-                "commands-legacy/on-drop-database-method",
-                "commands-legacy/on-exit-database-method",
-                "commands-legacy/on-host-database-event-database-method",
-                "commands-legacy/on-mobile-app-action-database-method",
-                "commands-legacy/on-mobile-app-authentication-database-method",
-                "commands-legacy/on-rest-authentication-database-method",
-                "commands-legacy/on-server-close-connection-database-method",
-                "commands-legacy/on-server-open-connection-database-method",
-                "commands-legacy/on-server-shutdown-database-method",
-                "commands-legacy/on-server-startup-database-method",
-                "commands-legacy/on-sql-authentication-database-method",
-                "commands-legacy/on-startup-database-method",
-                "commands-legacy/on-system-event-database-method",
-                "commands-legacy/on-web-authentication-database-method",
-                "commands-legacy/on-web-connection-database-method",
-                "commands-legacy/on-web-legacy-close-session-database-method"
               ]
             },
             {
@@ -2278,7 +2208,6 @@ module.exports =
           type: "category",
           label: "Classes",
           items: [
-            "API/overview",
             "API/BlobClass",
             "API/ClassClass",
             "API/CollectionClass",
@@ -2321,7 +2250,7 @@ module.exports =
           ],
           link: {
             type: "generated-index",
-            title: "Class Functions",
+            title: "Classes",
             description: "List of built-in 4D classes",
             slug: "/category/class-API-reference",
             keywords: [
@@ -2329,6 +2258,465 @@ module.exports =
             ],
             image: "/img/docusaurus.png"
           }
+        }
+      ]
+    },
+    {
+          type: "category",
+          label: "Core Development",
+          link: {
+            type: "generated-index",
+            title: "Core Development",
+            slug: "/category/core",
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            {
+              type: "category",
+              label: "ORDA",
+              link: {
+                type: "doc",
+                id: "ORDA/overview"
+              },
+              items: [
+                "ORDA/dsmapping",
+                "ORDA/ordaClasses",
+                "ORDA/entities",
+                "ORDA/global-stamp",
+                "ORDA/datastores",
+                "ORDA/privileges",
+                "ORDA/client-server-optimization",
+              "ORDA/glossary"
+          ]
+        },
+        {
+          type: "category",
+          label: "Processes",
+          link: {
+            type: "generated-index",
+            title: "Processes",
+            slug: "/category/processes",
+            keywords: [
+              "feaprocessestures"
+            ],
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            "Develop/processes",
+            "Develop/preemptive-processes"
+          ]
+        },
+        {
+          type: "category",
+          label: "Database Methods",
+          link: {
+            type: "generated-index",
+            title: "Database Methods",
+            slug: "/category/database-methods",
+            image: "/img/docusaurus.png"
+          },
+          items: [
+           "commands-legacy/on-backup-shutdown-database-method",
+                "commands-legacy/on-backup-startup-database-method",
+                "commands-legacy/on-drop-database-method",
+                "commands-legacy/on-exit-database-method",
+                "commands-legacy/on-host-database-event-database-method",
+                "commands-legacy/on-mobile-app-action-database-method",
+                "commands-legacy/on-mobile-app-authentication-database-method",
+                "commands-legacy/on-rest-authentication-database-method",
+                "commands-legacy/on-server-close-connection-database-method",
+                "commands-legacy/on-server-open-connection-database-method",
+                "commands-legacy/on-server-shutdown-database-method",
+                "commands-legacy/on-server-startup-database-method",
+                "commands-legacy/on-sql-authentication-database-method",
+                "commands-legacy/on-startup-database-method",
+                "commands-legacy/on-system-event-database-method",
+                "commands-legacy/on-web-authentication-database-method",
+                "commands-legacy/on-web-connection-database-method",
+                "commands-legacy/on-web-legacy-close-session-database-method"
+          ]
+        },
+        "Develop-legacy/transactions",
+        "Tags/transformation-tags",
+        "Project/date-time-formats"
+      ]
+    },
+    {
+      type: "category",
+      label: "Web Applications",
+      link: {
+        type: "generated-index",
+        title: "Web Applications",
+        description: "Guides for developing Web applications with 4D",
+        keywords: [
+          "web applications"
+        ],
+        image: "/img/docusaurus.png"
+      },
+      items: [
+                {
+          type: "link",
+          label: "4D Qodly Pro",
+          href: "https://developer.qodly.com/docs"
+        },
+        {
+          type: "category",
+          label: "Web Server",
+          link: {
+            type: "doc",
+            id: "WebServer/webServer"
+          },
+          items: [
+            "WebServer/gettingStarted",
+            "WebServer/webServerConfig",
+            "WebServer/webServerAdmin",
+            "WebServer/webServerObject",
+            "WebServer/templates",
+            "WebServer/httpRequests",
+            "WebServer/http-request-handler",
+            "WebServer/allowProject",
+            "WebServer/errorPages",
+            "WebServer/authentication",
+            "WebServer/sessions",
+            "WebServer/preemptiveWeb"
+          ]
+        },
+        {
+          type: "category",
+          label: "REST API",
+          link: {
+            type: "generated-index",
+            title: "REST API",
+            description: "Exposing your datastore to REST and using the REST API.",
+            keywords: [
+              "REST server"
+            ],
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            {
+              type: "category",
+              label: "Exposing your datastore in REST",
+              link: {
+                type: "generated-index",
+                title: "Exposing your datastore in REST",
+                description: "Configure your datastore for REST access",
+                keywords: [
+                  "REST access"
+                ],
+                image: "/img/docusaurus.png"
+              },
+              items: [
+                "REST/gettingStarted",
+                "REST/configuration",
+                "REST/authUsers",
+                "REST/genInfo",
+                "REST/manData",
+                "REST/classFunctions",
+                "REST/REST_requests"
+              ]
+            },
+            {
+              type: "category",
+              label: "API (general)",
+              link: {
+                type: "generated-index",
+                title: "API (general)",
+                description: "REST API for global information",
+                keywords: [
+                  "REST API"
+                ],
+                image: "/img/docusaurus.png"
+              },
+              items: [
+                "REST/catalog",
+                "REST/info",
+                "REST/singleton",
+                "REST/upload"
+              ]
+            },
+            {
+              type: "category",
+              label: "API (dataClass)",
+              link: {
+                type: "generated-index",
+                title: "API (dataClass)",
+                description: "REST API for dataClass.",
+                keywords: [
+                  "REST API"
+                ],
+                image: "/img/docusaurus.png"
+              },
+              items: [
+                "REST/dataClass",
+                "REST/asArray",
+                "REST/atomic_$atonce",
+                "REST/attributes",
+                "REST/binary",
+                "REST/clean",
+                "REST/compute",
+                "REST/distinct",
+                "REST/entityset",
+                "REST/expand",
+                "REST/filter",
+                "REST/format",
+                "REST/imageformat",
+                "REST/lock",
+                "REST/method",
+                "REST/orderby",
+                "REST/querypath",
+                "REST/queryplan",
+                "REST/savedfilter",
+                "REST/savedorderby",
+                "REST/skip",
+                "REST/timeout",
+                "REST/top_$limit",
+                "REST/version"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      type: "category",
+      label: "Desktop Applications",
+      link: {
+        type: "generated-index",
+        title: "Desktop Applications",
+        description: "Guides for developing Desktop applications with 4D",
+        keywords: [
+          "desktop applications"
+        ],
+        image: "/img/docusaurus.png"
+      },
+      items: [
+        {
+          type: "doc",
+          label: "Client/Server",
+          id: "Desktop/clientServer"
+        },
+        {
+          type: "category",
+          label: "Forms",
+          link: {
+            type: "doc",
+            id: "FormEditor/forms"
+          },
+          items: [
+            "FormEditor/stylesheets",
+            "FormEditor/pictures",
+            {
+              type: "category",
+              label: "Form Editor",
+              link: {
+                type: "doc",
+                id: "FormEditor/formEditor"
+              },
+              items: [
+                "FormEditor/macros",
+                "FormEditor/objectLibrary"
+              ]
+            },
+            {
+              type: "category",
+              label: "Form Properties",
+              link: {
+                type: "doc",
+                id: "FormEditor/jsonReference"
+              },
+              items: [
+                "FormEditor/action",
+                "FormEditor/propertiesForm",
+                "FormEditor/formSize",
+                "FormEditor/markers",
+                "FormEditor/menu",
+                "FormEditor/print",
+                "FormEditor/windowSize"
+              ]
+            },
+            {
+              type: "category",
+              label: "Form Objects",
+              link: {
+                type: "doc",
+                id: "FormObjects/formObjectsOverview"
+              },
+              items: [
+                "FormObjects/buttonOverview",
+                "FormObjects/buttonGridOverview",
+                "FormObjects/checkboxOverview",
+                "FormObjects/comboBoxOverview",
+                "FormObjects/dropdownListOverview",
+                "FormObjects/groupBox",
+                "FormObjects/inputOverview",
+                "FormObjects/listOverview",
+                "FormObjects/listboxOverview",
+                "FormObjects/pictureButtonOverview",
+                "FormObjects/picturePopupMenuOverview",
+                "FormObjects/pluginAreaOverview",
+                "FormObjects/progressIndicator",
+                "FormObjects/radiobuttonOverview",
+                "FormObjects/ruler",
+                "FormObjects/shapesOverview",
+                "FormObjects/spinner",
+                "FormObjects/splitters",
+                "FormObjects/staticPicture",
+                "FormObjects/stepper",
+                "FormObjects/subformOverview",
+                "FormObjects/tabControl",
+                "FormObjects/text",
+                "FormObjects/webAreaOverview",
+                "FormObjects/viewProAreaOverview",
+                "FormObjects/writeProAreaOverview"
+              ]
+            },
+            {
+              type: "category",
+              label: "Form Object Properties",
+              link: {
+                type: "doc",
+                id: "FormObjects/propertiesReference"
+              },
+              items: [
+                "FormObjects/propertiesAction",
+                "FormObjects/propertiesAnimation",
+                "FormObjects/propertiesAppearance",
+                "FormObjects/propertiesBackgroundAndBorder",
+                "FormObjects/propertiesCoordinatesAndSizing",
+                "FormObjects/propertiesCrop",
+                "FormObjects/propertiesDataSource",
+                "FormObjects/propertiesDisplay",
+                "FormObjects/propertiesEntry",
+                "FormObjects/propertiesFooters",
+                "FormObjects/propertiesGridlines",
+                "FormObjects/propertiesHeaders",
+                "FormObjects/propertiesHelp",
+                "FormObjects/propertiesHierarchy",
+                "FormObjects/propertiesListBox",
+                "FormObjects/propertiesObject",
+                "FormObjects/propertiesPicture",
+                "FormObjects/propertiesPlugIns",
+                "FormObjects/propertiesPrint",
+                "FormObjects/propertiesRangeOfValues",
+                "FormObjects/propertiesResizingOptions",
+                "FormObjects/propertiesScale",
+                "FormObjects/propertiesSubform",
+                "FormObjects/propertiesText",
+                "FormObjects/propertiesTextAndPicture",
+                "FormObjects/propertiesWebArea"
+              ]
+            },
+            {
+              type: "category",
+              label: "Form Events",
+              link: {
+                type: "doc",
+                id: "Events/overview"
+              },
+              items: [
+                "Events/onActivate",
+                "Events/onAfterEdit",
+                "Events/onAfterKeystroke",
+                "Events/onAfterSort",
+                "Events/onAlternativeClick",
+                "Events/onBeforeDataEntry",
+                "Events/onBeforeKeystroke",
+                "Events/onBeginDragOver",
+                "Events/onBeginUrlLoading",
+                "Events/onBoundVariableChange",
+                "Events/onClicked",
+                "Events/onCloseBox",
+                "Events/onCloseDetail",
+                "Events/onCollapse",
+                "Events/onColumnMoved",
+                "Events/onColumnResize",
+                "Events/onDataChange",
+                "Events/onDeactivate",
+                "Events/onDeleteAction",
+                "Events/onDisplayDetail",
+                "Events/onDoubleClicked",
+                "Events/onDragOver",
+                "Events/onDrop",
+                "Events/onEndUrlLoading",
+                "Events/onExpand",
+                "Events/onFooterClick",
+                "Events/onGettingFocus",
+                "Events/onHeader",
+                "Events/onHeaderClick",
+                "Events/onLoad",
+                "Events/onLoadRecord",
+                "Events/onLongClick",
+                "Events/onLosingFocus",
+                "Events/onMenuSelected",
+                "Events/onMouseEnter",
+                "Events/onMouseLeave",
+                "Events/onMouseMove",
+                "Events/onMouseUp",
+                "Events/onOpenDetail",
+                "Events/onOpenExternalLink",
+                "Events/onOutsideCall",
+                "Events/onPageChange",
+                "Events/onPlugInArea",
+                "Events/onPrintingBreak",
+                "Events/onPrintingDetail",
+                "Events/onPrintingFooter",
+                "Events/onResize",
+                "Events/onRowMoved",
+                "Events/onRowResize",
+                "Events/onScroll",
+                "Events/onSelectionChange",
+                "Events/onTimer",
+                "Events/onUnload",
+                "Events/onUrlFiltering",
+                "Events/onUrlLoadingError",
+                "Events/onUrlResourceLoading",
+                "Events/onValidate",
+                "Events/onVpRangeChanged",
+                "Events/onVpReady",
+                "Events/onWindowOpeningDenied"
+              ]
+            }
+          ]
+        },
+         {
+          type: "doc",
+          label: "Labels",
+          id: "Desktop/labels"
+        },
+        {
+          type: "category",
+          label: "Menus",
+          link: {
+            type: "doc",
+            id: "Menus/overview"
+          },
+          items: [
+            "Menus/creating",
+            "Menus/properties",
+            "Menus/bars",
+            "Menus/sdi"
+          ]
+        },
+        {
+          type: "category",
+          label: "Access Rights",
+          link: {
+            type: "generated-index",
+            title: "Access Rights",
+            description: "Access control and user privileges for desktop applications.",
+            slug: "/category/access-rights",
+            keywords: [
+              "access rights",
+              "user settings",
+              "permissions"
+            ],
+            image: "/img/docusaurus.png"
+          },
+          items: [
+            "Users/overview",
+            "Users/editing"
+          ]
         }
       ]
     },
@@ -2398,6 +2786,11 @@ module.exports =
           id: "Admin/licenses"
         },
         {
+          type: "doc",
+          label: "Log Files",
+          id: "Debugging/debugLogFiles"
+        },
+        {
           type: "category",
           label: "MSC",
           link: {
@@ -2441,10 +2834,26 @@ module.exports =
       type: "category",
       label: "Extensions",
       link: {
-        type: "doc",
-        id: "Extensions/overview"
+        type: "generated-index",
+        title: "Extensions",
+        slug: "/category/extensions",
+        keywords: [
+          "component, extension, plug-in"],
+        image: "/img/docusaurus.png"
       },
       items: [
+        {
+            type: "category",
+            label: "Extending 4D applications",
+            link: {
+              type: "doc",
+              id: "Extensions/overview"
+            },
+            items: [
+             "Extensions/develop-components",
+              "Extensions/develop-plug-ins"
+                  ]
+        },
         {
           type: "category",
           label: "4D View Pro",
@@ -2962,434 +3371,23 @@ module.exports =
           label: "4D Widgets",
           href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Widgets.100-7614949.en.html"
         },
-        "Extensions/develop-components",
-        "Extensions/develop-plug-ins"
-      ]
-    },
-    {
-      type: "category",
-      label: "Web Applications",
-      link: {
-        type: "generated-index",
-        title: "Web Applications",
-        description: "Guides for developing Web applications with 4D",
-        keywords: [
-          "web applications"
-        ],
-        image: "/img/docusaurus.png"
-      },
-      items: [
-        {
-          type: "category",
-          label: "Web Server",
-          link: {
-            type: "doc",
-            id: "WebServer/webServer"
-          },
-          items: [
-            "WebServer/webServerConfig",
-            "WebServer/webServerAdmin",
-            "WebServer/webServerObject"
-          ]
-        },
-        {
-          type: "category",
-          label: "Web Development",
-          link: {
-            type: "doc",
-            id: "WebServer/gettingStarted"
-          },
-          items: [
-            "WebServer/templates",
-            "WebServer/httpRequests",
-            "WebServer/http-request-handler",
-            "WebServer/allowProject",
-            "WebServer/errorPages",
-            "WebServer/authentication",
-            "WebServer/sessions",
-            "WebServer/preemptiveWeb"
-          ]
-        },
-        {
-          type: "category",
-          label: "Qodly Studio",
-          link: {
-            type: "generated-index",
-            title: "Qodly Studio",
-            description: "Using Qodly Studio to build powerful web interfaces.",
-            slug: "/category/qodly-studio-in-4d",
-            keywords: [
-              "Qodly Studio"
-            ],
-            image: "/img/docusaurus.png"
-          },
-          items: [
-            "WebServer/qodly-studio",
-            "WebServer/from-qodlyscript-to-4d"
-          ]
-        },
-        {
-          type: "category",
-          label: "REST API",
-          link: {
-            type: "generated-index",
-            title: "REST API",
-            description: "Exposing your datastore to REST and using the REST API.",
-            keywords: [
-              "REST server"
-            ],
-            image: "/img/docusaurus.png"
-          },
-          items: [
-            {
-              type: "category",
-              label: "Exposing your datastore in REST",
-              link: {
-                type: "generated-index",
-                title: "Exposing your datastore in REST",
-                description: "Configure your datastore for REST access",
-                keywords: [
-                  "REST access"
-                ],
-                image: "/img/docusaurus.png"
-              },
-              items: [
-                "REST/gettingStarted",
-                "REST/configuration",
-                "REST/authUsers",
-                "REST/genInfo",
-                "REST/manData",
-                "REST/classFunctions",
-                "REST/REST_requests"
-              ]
-            },
-            {
-              type: "category",
-              label: "API (general)",
-              link: {
-                type: "generated-index",
-                title: "API (general)",
-                description: "REST API for global information",
-                keywords: [
-                  "REST API"
-                ],
-                image: "/img/docusaurus.png"
-              },
-              items: [
-                "REST/catalog",
-                "REST/info",
-                "REST/singleton",
-                "REST/upload"
-              ]
-            },
-            {
-              type: "category",
-              label: "API (dataClass)",
-              link: {
-                type: "generated-index",
-                title: "API (dataClass)",
-                description: "REST API for dataClass.",
-                keywords: [
-                  "REST API"
-                ],
-                image: "/img/docusaurus.png"
-              },
-              items: [
-                "REST/dataClass",
-                "REST/asArray",
-                "REST/atomic_$atonce",
-                "REST/attributes",
-                "REST/binary",
-                "REST/clean",
-                "REST/compute",
-                "REST/distinct",
-                "REST/entityset",
-                "REST/expand",
-                "REST/filter",
-                "REST/format",
-                "REST/imageformat",
-                "REST/lock",
-                "REST/method",
-                "REST/orderby",
-                "REST/querypath",
-                "REST/queryplan",
-                "REST/savedfilter",
-                "REST/savedorderby",
-                "REST/skip",
-                "REST/timeout",
-                "REST/top_$limit",
-                "REST/version"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      type: "category",
-      label: "Desktop Applications",
-      link: {
-        type: "generated-index",
-        title: "Desktop Applications",
-        description: "Guides for developing Desktop applications with 4D",
-        keywords: [
-          "desktop applications"
-        ],
-        image: "/img/docusaurus.png"
-      },
-      items: [
-        {
-          type: "doc",
-          label: "Client/Server",
-          id: "Desktop/clientServer"
-        },
-        {
-          type: "category",
-          label: "Access Rights",
-          link: {
-            type: "generated-index",
-            title: "Access Rights",
-            description: "Access control and user privileges for desktop applications.",
-            slug: "/category/access-rights",
-            keywords: [
-              "access rights"
-            ],
-            image: "/img/docusaurus.png"
-          },
-          items: [
-            "Users/overview",
-            "Users/editing"
-          ]
-        },
-        {
-          type: "category",
-          label: "Forms",
-          link: {
-            type: "doc",
-            id: "FormEditor/forms"
-          },
-          items: [
-            "FormEditor/stylesheets",
-            "FormEditor/pictures",
-            {
-              type: "category",
-              label: "Form Editor",
-              link: {
-                type: "doc",
-                id: "FormEditor/formEditor"
-              },
-              items: [
-                "FormEditor/macros",
-                "FormEditor/objectLibrary"
-              ]
-            },
-            {
-              type: "category",
-              label: "Form Properties",
-              link: {
-                type: "doc",
-                id: "FormEditor/jsonReference"
-              },
-              items: [
-                "FormEditor/action",
-                "FormEditor/propertiesForm",
-                "FormEditor/formSize",
-                "FormEditor/markers",
-                "FormEditor/menu",
-                "FormEditor/print",
-                "FormEditor/windowSize"
-              ]
-            },
-            {
-              type: "category",
-              label: "Form Objects",
-              link: {
-                type: "doc",
-                id: "FormObjects/formObjectsOverview"
-              },
-              items: [
-                "FormObjects/buttonOverview",
-                "FormObjects/buttonGridOverview",
-                "FormObjects/checkboxOverview",
-                "FormObjects/comboBoxOverview",
-                "FormObjects/dropdownListOverview",
-                "FormObjects/groupBox",
-                "FormObjects/inputOverview",
-                "FormObjects/listOverview",
-                "FormObjects/listboxOverview",
-                "FormObjects/pictureButtonOverview",
-                "FormObjects/picturePopupMenuOverview",
-                "FormObjects/pluginAreaOverview",
-                "FormObjects/progressIndicator",
-                "FormObjects/radiobuttonOverview",
-                "FormObjects/ruler",
-                "FormObjects/shapesOverview",
-                "FormObjects/spinner",
-                "FormObjects/splitters",
-                "FormObjects/staticPicture",
-                "FormObjects/stepper",
-                "FormObjects/subformOverview",
-                "FormObjects/tabControl",
-                "FormObjects/text",
-                "FormObjects/webAreaOverview",
-                "FormObjects/viewProAreaOverview",
-                "FormObjects/writeProAreaOverview"
-              ]
-            },
-            {
-              type: "category",
-              label: "Form Object Properties",
-              link: {
-                type: "doc",
-                id: "FormObjects/propertiesReference"
-              },
-              items: [
-                "FormObjects/propertiesAction",
-                "FormObjects/propertiesAnimation",
-                "FormObjects/propertiesAppearance",
-                "FormObjects/propertiesBackgroundAndBorder",
-                "FormObjects/propertiesCoordinatesAndSizing",
-                "FormObjects/propertiesCrop",
-                "FormObjects/propertiesDataSource",
-                "FormObjects/propertiesDisplay",
-                "FormObjects/propertiesEntry",
-                "FormObjects/propertiesFooters",
-                "FormObjects/propertiesGridlines",
-                "FormObjects/propertiesHeaders",
-                "FormObjects/propertiesHelp",
-                "FormObjects/propertiesHierarchy",
-                "FormObjects/propertiesListBox",
-                "FormObjects/propertiesObject",
-                "FormObjects/propertiesPicture",
-                "FormObjects/propertiesPlugIns",
-                "FormObjects/propertiesPrint",
-                "FormObjects/propertiesRangeOfValues",
-                "FormObjects/propertiesResizingOptions",
-                "FormObjects/propertiesScale",
-                "FormObjects/propertiesSubform",
-                "FormObjects/propertiesText",
-                "FormObjects/propertiesTextAndPicture",
-                "FormObjects/propertiesWebArea"
-              ]
-            },
-            {
-              type: "category",
-              label: "Form Events",
-              link: {
-                type: "doc",
-                id: "Events/overview"
-              },
-              items: [
-                "Events/onActivate",
-                "Events/onAfterEdit",
-                "Events/onAfterKeystroke",
-                "Events/onAfterSort",
-                "Events/onAlternativeClick",
-                "Events/onBeforeDataEntry",
-                "Events/onBeforeKeystroke",
-                "Events/onBeginDragOver",
-                "Events/onBeginUrlLoading",
-                "Events/onBoundVariableChange",
-                "Events/onClicked",
-                "Events/onCloseBox",
-                "Events/onCloseDetail",
-                "Events/onCollapse",
-                "Events/onColumnMoved",
-                "Events/onColumnResize",
-                "Events/onDataChange",
-                "Events/onDeactivate",
-                "Events/onDeleteAction",
-                "Events/onDisplayDetail",
-                "Events/onDoubleClicked",
-                "Events/onDragOver",
-                "Events/onDrop",
-                "Events/onEndUrlLoading",
-                "Events/onExpand",
-                "Events/onFooterClick",
-                "Events/onGettingFocus",
-                "Events/onHeader",
-                "Events/onHeaderClick",
-                "Events/onLoad",
-                "Events/onLoadRecord",
-                "Events/onLongClick",
-                "Events/onLosingFocus",
-                "Events/onMenuSelected",
-                "Events/onMouseEnter",
-                "Events/onMouseLeave",
-                "Events/onMouseMove",
-                "Events/onMouseUp",
-                "Events/onOpenDetail",
-                "Events/onOpenExternalLink",
-                "Events/onOutsideCall",
-                "Events/onPageChange",
-                "Events/onPlugInArea",
-                "Events/onPrintingBreak",
-                "Events/onPrintingDetail",
-                "Events/onPrintingFooter",
-                "Events/onResize",
-                "Events/onRowMoved",
-                "Events/onRowResize",
-                "Events/onScroll",
-                "Events/onSelectionChange",
-                "Events/onTimer",
-                "Events/onUnload",
-                "Events/onUrlFiltering",
-                "Events/onUrlLoadingError",
-                "Events/onUrlResourceLoading",
-                "Events/onValidate",
-                "Events/onVpRangeChanged",
-                "Events/onVpReady",
-                "Events/onWindowOpeningDenied"
-              ]
-            }
-          ]
-        },
-        {
-          type: "category",
-          label: "Menus",
-          link: {
-            type: "doc",
-            id: "Menus/overview"
-          },
-          items: [
-            "Menus/creating",
-            "Menus/properties",
-            "Menus/bars",
-            "Menus/sdi"
-          ]
-        },
-        {
-          type: "doc",
-          label: "User Settings",
-          id: "Desktop/user-settings"
-        },
-        {
-          type: "doc",
-          label: "Build Application",
-          id: "Desktop/building"
-        },
-        {
-          type: "doc",
-          label: "Labels",
-          id: "Desktop/labels"
-        }
-      ]
-    },
-    {
-      type: "category",
-      label: "Mobile Applications",
-      items: [
         {
           type: "link",
-          label: "Go Mobile",
+          label: "4D QPDF",
+          href: "https://github.com/4d/4D-QPDF?tab=readme-ov-file#readme"
+        },
+        {
+          type: "link",
+          label: "Go Mobile with 4D",
           href: "https://developer.4d.com/go-mobile/"
         },
-        {
+      {
           type: "link",
-          label: "4D for iOS (archive)",
-          href: "https://developer.4d.com/4d-for-ios"
-        }
-      ]
+          label: "Build4D",
+          href: "https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme"
+      }
+    ]
     }
   ]
 }
+
