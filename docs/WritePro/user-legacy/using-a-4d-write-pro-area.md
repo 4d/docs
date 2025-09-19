@@ -279,7 +279,7 @@ Columns can be set using:
 
 * the **Columns** submenu of the 4D Write Pro area context menu,
 * 4D Write Pro [attributes](../commands-legacy/4d-write-pro-attributes.md),
-* 4D Write Pro [standard actions](./using-4d-write-pro-standard-actions.md).
+* 4D Write Pro [standard actions](./defining-a-4d-write-pro-area.md#standard-actions).
 
 You can set or get the following properties and actions for columns:
 

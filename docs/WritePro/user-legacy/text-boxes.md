@@ -18,13 +18,13 @@ Text boxes are added with an absolute position, in front of/behind text, as well
 Adding a text box to a 4D Write Pro document can be accomplished in the following ways:
 
 * using the [`WP New text box`](../commands-legacy/wp-new-text-box.md) command,
-* using the *insertTextBox* [standard action](./using-4d-write-pro-standard-actions.md)
+* using the *insertTextBox* [standard action](./defining-a-4d-write-pro-area.md#standard-actions)
 
 To select a text box, the user has to click on it (**Ctrl/Cmd+click** if the text box is on the background layer). Once selected, the text box can be moved or resized using the mouse or arrow keys. 
 
 To remove a selected text box, you can hit the **Delete** or **Backspace** key, use the **textBox/remove** standard action, or execute the [`WP DELETE TEXT BOX`](../commands-legacy/wp-delete-text-box.md) command. 
 
-Text box attributes are handled with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or [standard actions](./using-4d-write-pro-standard-actions.md). The following attributes and actions are available:
+Text box attributes are handled with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). The following attributes and actions are available:
 
 | **Property (constant)** | **Standard action**       | **Comments**                                                                |
 | ----------------------- | ------------------------- | --------------------------------------------------------------------------- |
