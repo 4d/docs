@@ -57,7 +57,7 @@ title: (
     title: (
     <>
       <i class="fa-solid fa-hammer" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
-      <Translate id="homepage.sections.core-development.title">
+      <Translate id="homepage.sections.ide.title">
           Project & IDE
       </Translate>
     </>
@@ -100,7 +100,7 @@ title: (
     title: (
     <>
       <i class="fa-solid fa-code" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
-      <Translate id="homepage.sections.test.title">
+      <Translate id="homepage.sections.language.title">
           4D Language
       </Translate>
     </>

@@ -243,7 +243,7 @@
   },
   "theme.colorToggle.ariaLabel": {
     "message": "Switch between dark and light mode (currently {mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "dark mode",
@@ -663,5 +663,110 @@
   },
   "4D AIKit": {
     "message": "4D AIKit"
+  },
+  "4D at a glance": {
+    "message": "4D at a glance"
+  },
+  "homepage.sections.ide.title": {
+    "message": "Project & IDE"
+  },
+  "Creating or opening a project": {
+    "message": "Creating or opening a project"
+  },
+  "Architecture": {
+    "message": "Architecture"
+  },
+  "Project Settings": {
+    "message": "Project Settings"
+  },
+  "Database structure": {
+    "message": "Database structure"
+  },
+  "Code & Methods": {
+    "message": "Code & Methods"
+  },
+  "Dependencies": {
+    "message": "Dependencies"
+  },
+  "Compilation": {
+    "message": "Compilation"
+  },
+  "Application Builder": {
+    "message": "Application Builder"
+  },
+  "Application Preferences": {
+    "message": "Application Preferences"
+  },
+  "Concepts": {
+    "message": "Concepts"
+  },
+  "Commands by name": {
+    "message": "Commands by name"
+  },
+  "Commands by theme": {
+    "message": "Commands by theme"
+  },
+  "Classes": {
+    "message": "Classes"
+  },
+  "homepage.sections.core.title": {
+    "message": "Core Development"
+  },
+  "ORDA": {
+    "message": "ORDA"
+  },
+  "Database Methods": {
+    "message": "Database Methods"
+  },
+  "Transactions": {
+    "message": "Transactions"
+  },
+  "Transformation tags": {
+    "message": "Transformation tags"
+  },
+  "Date and Time Formats": {
+    "message": "Date and Time Formats"
+  },
+  "4D Qodly Pro": {
+    "message": "4D Qodly Pro"
+  },
+  "Labels": {
+    "message": "Labels"
+  },
+  "homepage.sections.administration.title": {
+    "message": "Server & Admin"
+  },
+  "4D Server Window": {
+    "message": "4D Server Window"
+  },
+  "WebAdmin & Data Explorer": {
+    "message": "WebAdmin & Data Explorer"
+  },
+  "TLS": {
+    "message": "TLS"
+  },
+  "Log Files": {
+    "message": "Log Files"
+  },
+  "Extending 4D applications": {
+    "message": "Extending 4D applications"
+  },
+  "4D QPDF": {
+    "message": "4D QPDF"
+  },
+  "Build4D": {
+    "message": "Build4D"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "system mode",
+    "description": "The name for the system color mode"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }
