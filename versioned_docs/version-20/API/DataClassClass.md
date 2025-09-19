@@ -1172,7 +1172,7 @@ The formula must have been created using the [`Formula`](FunctionClass.md#formul
 
 * the *formula* is evaluated for each entity and must return true or false. During the execution of the query, if the formula's result is not a boolean, it is considered as false.
 * within the *formula*, the entity is available through the `This` object.  
-* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
+* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with `ON ERR CALL`.
 
  >For security reasons, formula calls within `query()` functions can be disallowed. See *querySettings* parameter description.
 
