@@ -1,6 +1,6 @@
 ---
 id: defining-a-4d-write-pro-area
-title: Definir une zone 4D Write Pro
+title: Définir une zone 4D Write Pro
 displayed_sidebar: docs
 ---
 

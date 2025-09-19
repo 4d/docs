@@ -1,6 +1,6 @@
 ---
 id: presentation
-title: Presentation
+title: Présentation
 displayed_sidebar: docs
 ---
 
