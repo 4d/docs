@@ -276,7 +276,7 @@ Las columnas se pueden configurar utilizando:
 
 * el submenú **Columnas** del menú contextual del área 4D Write Pro,
 * [Atributos](../commands-legacy/4d-write-pro-attributes.md) 4D Write Pro,
-* [Acciones estándar](./using-4d-write-pro-standard-actions.md) 4D Write Pro.
+* [Acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions) 4D Write Pro.
 
 Puede definir u obtener las siguientes propiedades y acciones para las columnas:
 

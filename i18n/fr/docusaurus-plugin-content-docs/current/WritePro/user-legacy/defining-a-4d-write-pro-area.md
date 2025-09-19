@@ -87,12 +87,12 @@ L'interface utilisateur des zones 4D Write Pro peut être gérée grâce à un g
 * aux boutons, cases à cocher,
 * ou exécutées avec la commande [APPELER ACTION](../../commands/appeler-action).
 
-Lorsqu'elles sont assignées à des objets d'interface, les actions standard gèrent les activations/désactivations de l'objet en fonction du contexte. Pour plus d'informations, référez-vous à la section *Actions standard*.
+Lorsqu'elles sont assignées à des objets d'interface, les actions standard gèrent les activations/désactivations de l'objet en fonction du contexte. Pour plus d'informations, référez-vous à la section [Actions standard](#standard-actions).
 
 Deux catégories d'actions sont disponibles pour les zones 4D Write Pro :
 
 * des actions spécifiques à 4D Write Pro, qui ne peuvent être utilisées qu'avec les zones 4D Write Pro,
-* des *[Autres actions](#other-actions)* plus génériques de gestion des polices, expressions, du correcteur orthographique et des opérations d'édition, qui peuvent être utilisées avec les zones 4D Write Pro et les autres zones 4D. Ces actions sont détaillées dans la section *Actions standard*.
+* des *[Autres actions](#other-actions)* plus génériques de gestion des polices, expressions, du correcteur orthographique et des opérations d'édition, qui peuvent être utilisées avec les zones 4D Write Pro et les autres zones 4D. Ces actions sont détaillées dans la section [Actions standard](#standard-actions).
 
 ### Actions 4D Write Pro 
 

@@ -99,7 +99,7 @@ Quando são atribuidos aos objetos de interface, as ações padrão manejam a at
 Dois tipos de ações estão disponíveis para áreas 4D Write Pro:
 
 * As ações específicas 4D Write Pro, que só podem ser utilizadas com áreas 4D Write Pro,
-* *[Outras ações](#other-actions)*, incluido as fontes, expressões, corretor ortográfico e ações de edição, que podem ser utilizadas com as áreas 4D Write Pro e as outras áreas 4D (ver *Ações padrões*).
+* *[Outras ações](#other-actions)*, incluido as fontes, expressões, corretor ortográfico e ações de edição, que podem ser utilizadas com as áreas 4D Write Pro e as outras áreas 4D (ver [*Ações padrões*](#standard-actions)).
 
 ### Ações 4D Write Pro 
 

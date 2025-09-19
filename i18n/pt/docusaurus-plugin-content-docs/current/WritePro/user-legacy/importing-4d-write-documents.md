@@ -198,6 +198,7 @@ Os modos de visualização de imagens são importadas automaticamente a partir d
 
 * (\*) A partir de 4D v16 R4, URL links são convertidos a atributos editáveis. Para saber mais, veja *Manejar URLs*.
 * (\*\*) Precisa adaptar os parâmetros recebidos dentro dos métodos chamados:  
+
 | **Parâmetros** | **4D Write plug-in**                 | **4D Write Pro**                                                                                                                                                                                                                                                                                      |  
 | -------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
 | $1             | Longint - 4D Write area reference    | Text - nome área 4D Write Pro                                                                                                                                                                                                                                                                         |  

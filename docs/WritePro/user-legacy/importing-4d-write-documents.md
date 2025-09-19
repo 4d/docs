@@ -196,11 +196,12 @@ Note however that a few differences can be seen, which are not considered as bug
 
 * (\*) Starting with 4D v16 R4, URL links are converted to editable attributes. For more information, please refer to *Link commands*.
 * (\*\*) You need to adapt parameters received within the called methods:  
-| **Parameters** | **4D Write plug-in**                 | **4D Write Pro**                                                                                                                                                                                                                                                                         |  
-| -------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |  
-| $1             | Longint - 4D Write area reference    | Text - 4D Write Pro area name                                                                                                                                                                                                                                                            |  
-| $2             | Text - Link label                    | Object - Link description:.method - Link's method name. Must be be allowed with the [SET ALLOWED METHODS](../../commands/set-allowed-methods) command. .parameter - User parameter value passed to the method (if used).range - Range of the link's label. See *Range handling commands* |  
-| $3             | Longint - User parameter (methodRef) | \-                                                                                                                                                                                                                                                                                       |
+
+| **Parameters** | **4D Write plug-in**| **4D Write Pro**|                                                                                                                                                                                                                                                                           
+| -------------- | ------------------- | --------------- |
+| $1 | Longint - 4D Write area reference | Text - 4D Write Pro area name |                                                                                                                                                                                                                                                             
+| $2 | Text - Link label  | Object - Link description:.method - Link's method name. Must be be allowed with the [SET ALLOWED METHODS](../../commands/set-allowed-methods) command. .parameter - User parameter value passed to the method (if used).range - Range of the link's label. See *Range handling commands* | 
+| $3 | Longint - User parameter (methodRef) | \- |                                                                                                                                                                                                                                                                                       
 
 ### 4D expressions 
 
