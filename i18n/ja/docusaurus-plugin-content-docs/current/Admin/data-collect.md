@@ -55,6 +55,7 @@ title: データ収集
 | encryptedConnections                                        | Boolean                           | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
 | externalPHP                                                 | Boolean                           | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。                                                   |
 | hasDataChangeTracking                                       | Boolean                           | "__DeletedRecords" テーブルが存在する場合にはTrue                              |
+
 | headless                                                    | Boolean                           | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
 | id                                                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | indexSegment.diskReadBytes                  | Number                            | インデックスファイルから読み取ったバイト数                                                                                       |
