@@ -650,6 +650,10 @@ The following settings are still supported but rely on deprecated features or te
 IP address validation status for session cookies. For security reasons, by default the 4D web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between Wifi and 4G/5G networks, their IP address will change. In this case, you must pass 0 in this option to allow clients to be able to continue using their Web sessions even when the IP addresses change. Note that this setting lowers the security level of your application. When it is modified, this setting is effective immediately (you do not need to restart the HTTP server).
 
 
+### Generic Web User
+
+This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". In this case, each browser allowed to connect to the database gets access authorizations and restrictions associated with this user.
+
 
 
 #### Send Extended Characters Directly  

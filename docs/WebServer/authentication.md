@@ -12,7 +12,11 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Using a **custom** authentication is recommended.
+:::warning
+
+Using a **custom** authentication is recommended.
+
+:::
 
 ### Overview 
 
@@ -68,7 +72,6 @@ This mode provides a greater level of security since the authentication informat
 As in BASIC mode, users must enter their name and password when they connect. The [`On Web Authentication`](#on-web-authentication) database method is then called. When the DIGEST mode is activated, the $password parameter (password) is always returned empty. In fact, when using this mode, this information does not pass by the network as clear text (unencrypted). It is therefore imperative in this case to evaluate connection requests using the `WEB Validate digest` command.
 
 >You must restart the web server in order for the changes made to these parameters to be taken into account. 
-
 
 
 ## On Web Authentication 

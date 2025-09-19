@@ -50,6 +50,7 @@ function Tile({
   return (
     <div className={clsx('col', className)} >
       <div className="tile">
+      {tile.image && tile.image.src && (
         <img
           className={styles.tilesImage}
           alt={tile.title}
@@ -58,6 +59,7 @@ function Tile({
           src={withBaseUrl(tile.image.src)}
           loading="lazy"
         />
+              )}
         <h3 className={clsx(styles.tilesHeading)}>{tile.title}</h3>
         <p>{tile.links}</p>
       </div>

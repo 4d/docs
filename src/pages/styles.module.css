@@ -6,6 +6,7 @@
 
 .tilesHeading {
   font-size: var(--ifm-h3-font-size);
+  font-weight: 400;
   padding-top: 1rem;
 }
 
@@ -19,7 +20,6 @@
 }
 
 .hero {
-  background-color: #2b3137;
   padding: 48px;
   margin-bottom: 100px;
 }
@@ -31,7 +31,6 @@
 }
 
 .heroProjectTagline {
-  color: #fff;
   font-size: 60px;
   margin: 0;
 }

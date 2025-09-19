@@ -45,17 +45,17 @@ The command returns a *status* object containing the following properties:
 ## Example 
 
 ```4d
- var $status : Object
- var $application : 4D.File
- var $license : 4D.File
- $license:=Folder(fk licenses folder).file("4UUD200-xxx.license4D")
- $application:=Folder(fk desktop folder).folder("myApp.app")
- $status:=Create deployment license($application;$license)
+ var $status : Object
+ var $application : 4D.File
+ var $license : 4D.File
+ $license:=Folder(fk licenses folder).file("4UUD200-xxx.license4D")
+ $application:=Folder(fk desktop folder).folder("myApp.app")
+ $status:=Create deployment license($application;$license)
 ```
 
 ## See also 
 
-[Blog post - Finalize an application with 4D commands](https://blog.4d.com/finalize-an-application-with-4d-commands)  
+[Blog post - Build an application with 4D commands](https://blog.4d.com/build-an-application-with-4d-commands)
 
 ## Properties
 
