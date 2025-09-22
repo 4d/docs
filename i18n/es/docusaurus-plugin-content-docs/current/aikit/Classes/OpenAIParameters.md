@@ -5,35 +5,37 @@ title: OpenAIParameters
 
 # OpenAIParameters
 
-The `OpenAIParameters` class is designed to handle execution and request parameters for interacting with the OpenAI API.
+La clase `OpenAIParameters` está diseñada para gestionar los parámetros de ejecución y solicitud para interactuar con la API de OpenAI.
+
 
 ## Propiedades
 
-### Asynchronous Callback Properties
+### Propiedades de retrollamada asíncrona
 
-Use this callback property to receive the result regardless of success or error:
+Utilice esta propiedad de retrollamada para recibir el resultado, independientemente de si se ha producido un error o se ha completado con éxito:
 
 | Propiedad                                          | Tipo                        | Descripción                                                                                                                                  |
 | -------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onTerminate`<br>(or `formula`) | 4D.Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina. |
 
-Use these callback properties for more granular control over success and error handling:
+Utilice estas propiedades de retrollamada para obtener un control más detallado sobre el manejo de errores y éxitos:
 
 | Propiedad    | Tipo                        | Descripción                                                                                                                                                      |
 | ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onResponse` | 4D.Function | A function to be called synchronously when the request finishes **successfully**. Asegúrese de que el proceso actual no termina. |
-| `onError`    | 4D.Function | A function to be called asynchronously when the request finishes **with errors**. Asegúrese de que el proceso actual no termina. |
+| `onResponse` | 4D.Function | Una función que se invocará de forma asincrónica cuando finalice la petición **exitosamente**. Asegúrese de que el proceso actual no termine. |
+| `onError`    | 4D.Function | Una función que se invocará de forma asíncrona cuando finalice la petición.
+**with errors**. Asegúrese de que el proceso actual no termina. |
 
-> The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+> La función de retrollamada recibirá el mismo tipo de objeto de resultado (una de las clases hijas de [OpenAIResult](Classes/OpenAIResult.md) que devolvería la función en código sincrónico.
 
-See [documentation about asynchronous code for examples](../asynchronous-call.md)
+Ver la [documentación sobre código asincrono para ejemplos](../asynchronous-call.md)
 
 ### Network Properties
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Por defecto es 0.                                            |
-| `httpAgent`    | HTTPAgent | Overrides the client-level default HTTP agent for the request.                                                                                       |
+| `timeout`      | Real      | Anula el tiempo de espera predeterminado a nivel de cliente para la petición, en segundos. Por defecto es 0.                                            |
+| `httpAgent`    | HTTPAgent | Anula el agente HTTP predeterminado a nivel de cliente para la petición.                                                                                       |
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
@@ -41,7 +43,7 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 
 | Propiedad | Tipo | Descripción                                                                                                 |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
-| `user`    | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
+| `user`    | Text | Un identificador único que representa al usuario final, lo que ayuda a OpenAI a supervisar y detectar abusos. |
 
 ### Others
 
@@ -51,7 +53,7 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 
 ## Clases heredadas
 
-Several classes inherit from `OpenAIParameters` to extend its functionality for specific use cases. A continuación se muestran algunas de las clases que extienden `OpenAIParameters`:
+Varias clases heredan de `OpenAIParameters` para ampliar su funcionalidad para casos de uso específicos. A continuación se muestran algunas de las clases que extienden `OpenAIParameters`:
 
 - [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)
 - [OpenAIChatCompletionsMessagesParameters](OpenAIChatCompletionsMessagesParameters.md)
