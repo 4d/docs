@@ -260,7 +260,7 @@ title: (
         <Link to="Extensions/overview">
           <Translate>Extending 4D applications</Translate>
         </Link>
-        <Link to="https://https://developer.qodly.com/docs/">
+        <Link to="https://developer.qodly.com/docs/">
           <Translate>4D Qodly Pro</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
         <Link to="ViewPro/getting-started">
