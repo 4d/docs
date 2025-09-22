@@ -22,10 +22,10 @@ Los marcadores son referencias con nombres a rangos o elementos, que le permiten
 
 En *targetObj*, puede pasar:
 
-* un rango, o
+* un rango perteneciente al cuerpo (ver abajo), o
 * un elemento (cuerpo / array / línea / imagen en línea / párrafo)
 
-**Nota**: si pasó un elemento en *objRango* , el marcador contendrá solo el elemento especificado.
+**Nota**: si pasó un elemento en *objRango*, el marcador contendrá solo el elemento especificado.
 
 En *nombk*, pase el nombre para el nuevo marcador. Un nombre de marcador debe ser compatible con los nombres HTML/CSS, es decir, que sólo puede contener caracteres alfanuméricos (caracteres no válidos, tales como los caracteres de espacio, se eliminan de forma automática). Los nombres de los marcadores deben ser únicos dentro del documento. Si un marcador con el mismo nombre ya existe en el documento, se sobrescribe.
 
