@@ -23,11 +23,11 @@ Les fichiers verrouillés peuvent être lus mais leur contenu ne peut pas être 
 
 :::
 
-#### Auto UUID version
+#### Version des UUID automatiques
 
-[UUID version](https://en.wikipedia.org/wiki/Universally_unique_identifier) to use for 4D fields with [automatic UUID generation option](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Available values are **4** (default) and **7**.
+[Version de l'UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) à utiliser pour les champs 4D avec [option de génération automatique de l'UUID](https://doc.4d.com/4Dv20/4D/20.2/Field-properties.300-6750280.en.html#106195). Les valeurs disponibles sont **4** (défaut) et **7**.
 
-This setting only applies to UUIDs generated afterwards. Already saved auto UUIDs fields are not recomputed.
+Ce paramètre ne s'applique qu'aux UUIDs générés ultérieurement. Les champs UUID automatiques déjà enregistrés ne sont pas recalculés.
 
 :::note
 
@@ -45,25 +45,25 @@ L’emplacement courant de ce dossier est affiché dans la zone “Actuel :”. 
 
 Trois options d’emplacement sont proposées :
 
-- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. You can find out the current location defined by your system using the [`Temporary folder`](../commands-legacy/temporary-folder.md) 4D command. Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
+- \*\*Système \*\*: Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier situé à l’emplacement spécifié par Windows ou macOS. Vous pouvez connaître l'emplacement courant défini par votre système en utilisant la commande 4D [`Temporary folder`](../commands-legacy/temporary-folder.md). Les fichiers sont placés dans un sous-dossier dont le nom est construit à partir du nom de la base et d’un identifiant unique.
 - **Dossier du fichier de données** (option par défaut) : Lorsque cette option est sélectionnée, les fichiers temporaires 4D sont créés dans un dossier nommé “temporary files” situé au même niveau que le fichier de données de la base.
 - **Défini par l’utilisateur** : Cette option permet de définir un emplacement personnalisé. En cas de modification de cette option, sa prise en compte nécessitera le redémarrage de la base. 4D vérifie que le dossier sélectionné est accessible en écriture. Si ce n’est pas le cas, l’application essaiera les autres options jusqu’à ce qu’un dossier valide soit trouvé.
 
-> This option is stored in the "extra properties" of the structure that is available when the structure definition is exported in XML (see [Exporting and importing structure definitions](https://doc.4d.com/4Dv20/4D/20.2/Exporting-and-importing-structure-definitions.300-6750295.en.html)).
+> Cette option est stockée dans les "extra properties" de la structure qui sont disponibles lorsque la définition de la structure est exportée en XML (voir [Exporter et importer des définitions de structure](https://doc.4d.com/4Dv20/4D/20.2/Exporting-and-importing-structure-definitions.300-6750295.en.html)).
 
 ### Comparaison de texte
 
 > Si vous modifiez ces options, vous devez quitter et rouvrir la base afin que la modification soit prise en compte. A la réouverture, une réindexation automatique est effectuée sur tous les index de la base.
 
 - **Considérer @ comme joker uniquement au début et à la fin des chaînes de caractères** : Cette option vous permet de définir la manière dont le symbole "@" sera interprété lorsqu'il est utilisé dans une recherche ou une comparaison de chaînes de caractères, lorsqu'il se trouve au sein d'un mot.
-  When this option is not checked (default value), the at sign is used as the wildcard character, in other words, it replaces any character (see [Wildcard character (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
+  Lorsque cette option n'est pas cochée (valeur par défaut), le signe at est utilisé comme caractère générique, c'est-à-dire qu'il remplace n'importe quel caractère (voir [Caractère générique (@)](https://doc.4d.com/4Dv20/4D/20.2/Query-editor.300-6750279.en.html#463876)).
 
   Lorsque l’option est cochée, le caractère @ est considéré comme un simple caractère s’il se trouve au milieu d’un mot. Cette possibilité est particulièrement utile pour les bases de données stockant des adresses e-mail (qui se présentent sous la forme “nom@fournisseur.xx”). Cette option influe sur les recherches, les tris et les comparaisons de chaînes de caractères, pour les données stockées dans les tables ou en mémoire (tableaux). Sont concernés les champs alpha (indexés ou non) et texte ainsi que les variables alpha et texte.
 
   **Notes :**
 
   - En ce qui concerne les recherches, il est important de noter que si le critère de recherche commence ou se termine par @, le caractère @ est toujours considéré comme un joker. Seul le fait que ce caractère soit placé à l’intérieur d’un mot (exemple : bill@cgi.com) entraîne un traitement différent de la part de 4D.
-  - This option can also have an influence on the behavior of the commands in the [Objects (Forms)](../commands/theme/Objects_Forms.md) theme that accept the wildcard character ("@") in the object parameter.
+  - Cette option peut également avoir une influence sur le comportement des commandes du thème [Objets (Formulaires)](../commands/theme/Objects_Forms.md) qui acceptent le caractère générique ("@") dans le paramètre objet.
   - Pour des raisons de sécurité, seuls l’Administrateur et le Super_Utilisateur de la base peuvent modifier ce paramètre.
 
 - **Langue du fichier de données courant :** cette option permet de paramétrer la langue utilisée pour le traitement et la comparaison des chaînes de caractères pour la base de données ouverte. Le choix d’une langue de comparaison influe sur le tri et la recherche des textes ainsi que le passage en minuscules/majuscules mais n’a pas d’incidence sur la traduction des libellés ou sur les formats de dates, d’heure ou monétaires qui restent, eux, dans la langue du système. Par défaut, 4D utilise la langue du système.
@@ -117,7 +117,7 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
   La taille de mémoire cache que vous saisissez sera réservée pour la base 4D, quel que soit l’état des ressources de la machine. Ce paramétrage peut être utilisé dans certaines configurations spécifiques, ou lorsque la base est destinée à fonctionner sur des systèmes disparates en termes de mémoire. Dans la plupart des cas, le cache adaptatif est plus performant.
 
 - **Ecriture cache toutes les… Minutes/secondes** : spécifie la fréquence de sauvegarde automatique du cache de données, c’est-à-dire son écriture sur le disque.
-  4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. You can also call the [FLUSH CACHE](../commands-legacy/flush-cache.md) command to trigger the flush at any moment.
+  4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouvez également appeler la commande [FLUSH CACHE](../commands-legacy/flush-cache.md) pour déclencher l'écriture à tout moment.
 
   Quand vous prévoyez de saisir beaucoup de données, il est souhaitable de fixer un intervalle court. En effet, en cas de coupure de courant, vous ne perdriez que les données saisies depuis la dernière écriture (si la base fonctionne sans fichier d’historique).
 

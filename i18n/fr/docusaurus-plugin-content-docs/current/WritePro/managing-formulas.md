@@ -1,6 +1,6 @@
 ---
 id: managing-formulas
-title: Managing formulas
+title: Formules
 ---
 
 ## Vue d’ensemble

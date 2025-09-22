@@ -1182,7 +1182,7 @@ A fórmula deve ter sido criada usando o comando [`Formula`](../commands/formula
 
 - a *fórmula* é avaliada por cada entidade e deve retornar verdadeiro ou falso. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 - dentro da *fórmula*, a entidade está disponível através do objeto `This`.
-- se o objeto `Fórmula` for **null**, o erro 1626 ("Esperando um texto ou fórmula") é gerado, que você chama interceptação usando um método instalado com `NO ERR CALL`.
+- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with `ON ERR CALL`.
 
 > Por razões de segurança, chamadas de fórmula dentro de funções `query()` podem ser desabilitadas. Veja a descrição do parâmetro *querySettings*.
 

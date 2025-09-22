@@ -39,6 +39,14 @@ Dado que HTTPAgent es un objeto compartible, puede añadir uno a una clase singl
 
 <!-- REF #4D.HTTPAgent.new().Syntax -->**4D.HTTPAgent.new**( { *options* : Object } ) : 4D.HTTPAgent<!-- END REF -->
 
+<details><summary>Historia</summary>
+
+| Lanzamiento | Modificaciones                             |
+| ----------- | ------------------------------------------ |
+| 21          | Support of *storeCertificateName* property |
+
+</details>
+
 <!-- REF #4D.HTTPAgent.new().Params -->
 
 | Parámetros | Tipo                                              |                             | Descripción                            |
@@ -64,16 +72,17 @@ Las opciones de HTTPAgent se fusionarán con [opciones HTTPRequest](HTTPRequestC
 
 :::
 
-| Propiedad              | Tipo    | Por defecto                                                                                                                                           | Descripción                                                                                     |
-| ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| keepAlive              | Boolean | true                                                                                                                                                  | Activa keep alive para el agente                                                                |
-| maxSockets             | Integer | 65535                                                                                                                                                 | Número máximo de sockets por servidor                                                           |
-| maxTotalSockets        | Integer | 65535                                                                                                                                                 | Número máximo de sockets para el agente                                                         |
-| timeout                | Real    | indefinido                                                                                                                                            | Si se define, tiempo después del cual se cierra un socket no utilizado                          |
-| certificatesFolder     | Folder  | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente |
-| minTLSVersion          | Text    | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                   |
-| protocol               | Text    | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocolo usado para las peticiones utilizando el agente                                        |
-| validateTLSCertificate | Boolean | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Validar el certificado Tls para las solicitudes que utilizan el agente                          |
+| Propiedad              | Tipo    | Por defecto                                                                                                                                           | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| certificatesFolder     | Folder  | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la carpeta activa de certificados de cliente para las solicitudes que utilizan el agente. Can be overriden by "storeCertificateName" (see below)                                                                                                                                                                                                                                                                                                  |
+| keepAlive              | Boolean | true                                                                                                                                                  | Activa keep alive para el agente                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| maxSockets             | Integer | 65535                                                                                                                                                 | Número máximo de sockets por servidor                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| maxTotalSockets        | Integer | 65535                                                                                                                                                 | Número máximo de sockets para el agente                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| minTLSVersion          | Text    | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Define la versión mínima de TLS para las solicitudes que utilizan este agente                                                                                                                                                                                                                                                                                                                                                                                                               |
+| protocol               | Text    | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Protocolo usado para las peticiones utilizando el agente                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| storeCertificateName   | Text    | indefinido                                                                                                                                            | (Windows only) Name of the OS certificate store (e.g. "LocalMachine") from where to use certificates instead of those in the certificates folder for the requests using the agent. If the certificate store is not found, an error is returned. For more information, see [this blog post](https://blog.4d.com/https-requests-now-support-windows-certificate-store). |
+| timeout                | Real    | indefinido                                                                                                                                            | Si se define, tiempo después del cual se cierra un socket no utilizado                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| validateTLSCertificate | Boolean | undefined (ver valor por defecto en [HTTPRequest.new()](HTTPRequestClass.md#options-parameter)) | Validar el certificado Tls para las solicitudes que utilizan el agente                                                                                                                                                                                                                                                                                                                                                                                                                      |
 
 :::note
 
@@ -87,9 +96,9 @@ Creación del HTTPAgent:
 
 ```4d
 var $options:={}
-$options.maxSockets:=5 //5 es el número máximo de sockets por servidor
-$options.maxTotalSockets:=10 //10 es el número máximo de sockets para el agente
-$options.validateTLSCertificate:=True //Validar el certificado del servidor
+$options.maxSockets:=5 //5 is the maximum number of sockets per server
+$options.maxTotalSockets:=10 //10 is the maximum number of sockets for the agent
+$options.validateTLSCertificate:=True //To validate the server's certificate
 
 var $myAgent:=4D.HTTPAgent.new($options)
 

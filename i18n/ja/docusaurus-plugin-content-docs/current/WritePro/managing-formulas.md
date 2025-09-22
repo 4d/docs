@@ -1,6 +1,6 @@
 ---
 id: managing-formulas
-title: フォーミュラの管理
+title: フォーミュラ
 ---
 
 ## 概要

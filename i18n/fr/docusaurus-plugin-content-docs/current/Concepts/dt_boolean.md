@@ -7,7 +7,7 @@ Un champ, une variable ou une expression de type booléen peut être soit VRAI s
 
 ## Fonctions booléennes
 
-Les fonctions booléennes de 4D traitent des valeurs telles que `Vrai`, `Faux` et `Non` dans le thème **Booléens** consacré. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
+Les fonctions booléennes de 4D traitent des valeurs telles que `True`, `False` et `Not` dans le thème **Booléens** consacré. Pour plus d'informations, veuillez vous reporter à la description de ces commandes.
 
 ### Exemple
 

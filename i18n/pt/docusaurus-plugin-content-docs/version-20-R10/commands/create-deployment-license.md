@@ -91,10 +91,10 @@ The command returns a *status* object containing the following properties:
 Use the automatic syntax to create a single-user 4D application:
 
 ```4d
- var $status : Object
- var $application : 4D.File
- $application:=Folder(fk desktop folder).folder("myApp.app")
- $status:=Create deployment license($application;4D Volume Desktop)
+ var $status : Object
+ var $application : 4D.File
+ $application:=Folder(fk desktop folder).folder("myApp.app")
+ $status:=Create deployment license($application;4D Volume Desktop)
 ```
 
 ## Exemplo 2
@@ -102,17 +102,17 @@ Use the automatic syntax to create a single-user 4D application:
 Designate a license to use:
 
 ```4d
- var $status : Object
- var $application : 4D.File
- var $license : 4D.File
- $license:=Folder(fk licenses folder).file("4UUD200-xxx.license4D")
- $application:=Folder(fk desktop folder).folder("myApp.app")
- $status:=Create deployment license($application;$license)
+ var $status : Object
+ var $application : 4D.File
+ var $license : 4D.File
+ $license:=Folder(fk licenses folder).file("4UUD200-xxx.license4D")
+ $application:=Folder(fk desktop folder).folder("myApp.app")
+ $status:=Create deployment license($application;$license)
 ```
 
 ## Veja também
 
-[Blog post - Finalize an application with 4D commands](https://blog.4d.com/finalize-an-application-with-4d-commands)
+[Blog post - Build an application with 4D commands](https://blog.4d.com/build-an-application-with-4d-commands)
 
 ## Propriedades
 

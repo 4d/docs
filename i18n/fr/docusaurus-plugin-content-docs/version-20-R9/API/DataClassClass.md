@@ -932,11 +932,11 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 - Peut être un **placeholder** (voir **Utiliser des placeholders** ci-dessous) ou toute expression correspondant à la propriété du type de donnée. **value** : valeur à comparer à la valeur courante de la propriété pour chaque entité de l'entity selection. Notez que, en cas de non-concordance avec les types scalaires (texte, date, numérique...), 4D tentera si possible de convertir le type de **value** dans le type de données de l'attribut pour une gestion plus facile des valeurs provenant d'Internet. Par exemple, si la chaîne "v20" est entrée en tant que **value** pour la comparer avec un attribut Integer, elle sera convertie en nombre 20.
   Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
-  - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+  - Valeurs constantes de type **booléen**: **true** or **false** (sensible à la casse).
   - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
   - Constantes de type **date** : "YYYY-MM-DD" format
   - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
-  - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+  - dans le cas d'une recherche avec un comparateur IN, *value* doit être une collection ou des valeurs correspondant au type de l'attribut path entre \[ ] séparés par des virgules (pour les chaînes, les caractères `"` doivent être échappés avec `\`).
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
 | Conjonction | Symbole(s)                                                       |
@@ -944,7 +944,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
 | AND         | &, &&, and              |
 | OU          | &#124;,&#124;&#124;, or |
 
-- **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
+- **order by attributePath** : vous pouvez inclure une déclaration order by *attributePath* dans la recherche afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by *attributePath1* desc, *attributePath2* asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.
 
 > Si vous utilisez cette instruction, l'entity selection renvoyée est ordonnée (pour plus d'informations, veuillez vous référer à [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
@@ -1125,7 +1125,7 @@ Vous souhaitez trouver des personnes dont le lieu de résidence est situé dans 
 ds.People.query("places.locations[].kind= :1 and places.locations[].city= :2";"home";"paris")
 ```
 
-... la requête renverra "martin" **et** "smith" parce que "smith" a un élément "locations" dont le "kind" est "home" et un élément "locations" dont la "city" est "paris", même s'il s'agit d'éléments différents.
+... la recherche renverra "martin" **et** "smith" parce que "smith" a un élément "locations" dont le "kind" est "home" et un élément "locations" dont la "city" est "paris", même s'il s'agit d'éléments différents.
 
 Si vous souhaitez obtenir uniquement les entités dont les critères correspondants sont dans le même élément de collection, vous devez **lier les critères**. Pour lier des critères de recherche :
 
@@ -1180,7 +1180,7 @@ La formule doit avoir été créée à l'aide de la commande [`Formula`](../comm
 
 - *formula* est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
 - dans *formula*, l'entité est disponible via l'objet `This`.
-- si l'objet `Formula` est **null**, l'erreur 1626 ("Attente d'un texte ou d'une formule") est générée, que vous pouvez intercepter à l'aide d'une méthode installée avec `ON ERR CALL`.
+- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with `ON ERR CALL`.
 
 > Pour des raisons de sécurité, les appels de formule dans les fonctions `query()` peuvent être interdits. Voir la description du paramètre *querySettings*.
 

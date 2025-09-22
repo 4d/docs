@@ -1228,7 +1228,7 @@ La fórmula debe haber sido creada utilizando el comando [`Formula`](../commands
 
 - *formula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 - dentro de la *formula*, la entidad está disponible a través del objeto `This`.
-- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
+- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
 
 > Por razones de seguridad, las llamadas a fórmulas dentro de las funciones `query()` pueden ser desestimadas. Ver la descripción del parámetro *querySettings*.
 
@@ -1572,7 +1572,7 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 #### Ejemplo 4
 
-This example illustrates the various syntaxes supported for vector similarity searches. It uses [4D-AIKit](../aikit/overview.md):
+This example illustrates the various syntaxes supported for vector similarity searches. Utiliza [4D-AIKit](../aikit/overview.md):
 
 ```4d
 

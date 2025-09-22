@@ -1228,7 +1228,7 @@ See [more examples below](#example-4-2) (examples 4 and 5).
 
 - フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 - 処理中のエンティティはフォーミュラ内において `This` で参照されます。
-- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
+- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
 
 > セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 *querySettings* パラメーターの説明を参照ください。
 
