@@ -22,7 +22,7 @@ Los marcadores son referencias con nombres a rangos o elementos, que le permiten
 
 En *targetObj*, puede pasar:
 
-* un rango, o
+* un rango perteneciente al cuerpo (ver abajo), o
 * un elemento (cuerpo / array / línea / imagen en línea / párrafo)
 
 **Nota**: si pasó un elemento en *objRango* , el marcador contendrá solo el elemento especificado.
@@ -30,6 +30,12 @@ En *targetObj*, puede pasar:
 En *nombk*, pase el nombre para el nuevo marcador. Un nombre de marcador debe ser compatible con los nombres HTML/CSS, es decir, que sólo puede contener caracteres alfanuméricos (caracteres no válidos, tales como los caracteres de espacio, se eliminan de forma automática). Los nombres de los marcadores deben ser únicos dentro del documento. Si un marcador con el mismo nombre ya existe en el documento, se sobrescribe.
 
 Puede crear tantos marcadores como desee dentro del mismo documento. Varios marcadores pueden ser creados usando el mismo rango exacto. Una vez creado, un marcador se almacena automáticamente en el documento de nivel superior y se guarda con el documento en sí.
+
+:::warning
+
+Los marcadores solo se pueden crear a partir de rangos dentro del **cuerpo** del documento, es decir, no se pueden crear a partir de un rango en el encabezado, el pie de página o un cuadro de texto de un documento. Para asegurarse de que un rango pertenece al cuerpo, compruebe su [atributo `wk container`](../commands-legacy/4d-write-pro-attributes.md#ranges): es `null` o `undefined` para rangos de cuerpo.  
+
+:::
 
 ## Ejemplo 1 
 
