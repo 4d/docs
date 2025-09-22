@@ -227,7 +227,7 @@ Para crear una tabulación, simplemente haga clic directamente en la regla y eli
 
 **Eliminar tabulación** solo está disponible cuando hace clic con el botón derecho del ratón directamente en una tabulación existente; También puede eliminar tabulaciones arrastrándolas fuera del área de la regla horizontal.
 
-:::note Notas 
+:::note 
 
 * La tabulación también se pueden definir por programación con los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes), y [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) con los selectores wk tab default y wk tabs.
 * Para las tabulaciones decimales, 4D Write Pro considera el primer punto o coma de la derecha como el separador decimal; esta configuración predeterminada puede modificarse con el selector wk tab decimal separator.
@@ -303,7 +303,7 @@ Puede insertar un salto de sección continuo y cambiar el número de columnas a 
 
 ## Marcadores
 
-4D Write Pro le permite crear y trabajar con referencias dinámicas para intervalos, llamados **marcadores**. Un marcador es una referencia con nombre asociada a un [rango](./ranges.md) específico en un documento 4D Write Pro.
+4D Write Pro le permite crear y trabajar con referencias dinámicas a partes de sus documentos, llamados **marcadores**. Un marcador es una referencia con nombre asociada a un [rango](./ranges.md) específico en el cuerpo de un documento 4D Write Pro.
 
 Los marcadores son dinámicos, lo que significa que si el usuario mueve, añade o elimina del texto el marcador, el rango asociado se actualizará automáticamente y el marcador seguirá haciendo referencia al mismo contenido dentro del documento. Por ejemplo:
 
