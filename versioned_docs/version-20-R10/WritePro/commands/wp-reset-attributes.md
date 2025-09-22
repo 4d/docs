@@ -27,7 +27,7 @@ In the *targetObj* parameter, you can pass either:
 * an element (header / footer / body / table / paragraph / anchored or inline picture / section / subsection / style sheet), or
 * a 4D Write Pro document
 
-When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the *4D Write Pro Attributes* section. 
+When an attribute value is removed using the **WP RESET ATTRIBUTES** command, the default value is applied to *targetObj* or *sectionOrSubsection*. Default values are listed in the [4D Write Pro Attributes](../4d-write-pro-attributes) section. 
 
 :::note Notes
 
@@ -84,6 +84,6 @@ WP RESET ATTRIBUTES($subSection) // All attributes of the subSection are removed
 
 ## See also 
 
-*4D Write Pro Attributes*  
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
 [WP GET ATTRIBUTES](wp-get-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)  

@@ -128,7 +128,7 @@ Sections inherit attributes from the document. However, common document attribut
 ![](../../assets/en/WritePro/pict2994945.en.png)
 * **Columns** commands: allow to define the number and properties of columns for the section. These options are detailed below.
 * **Header** and **Footer** commands: these options allow you to define separate headers and footers. These options are detailed below.
-* **Margins** / **Paddings** / **Borders** / **Background**: these attributes can be defined separately for each section. For more information on these attributes, please refer the *4D Write Pro Attributes* article.
+* **Margins** / **Paddings** / **Borders** / **Background**: these attributes can be defined separately for each section. For more information on these attributes, please refer the [4D Write Pro Attributes](../4d-write-pro-attributes) article.
 
 ### Inserting headers and footers 
 
@@ -161,7 +161,7 @@ Once a header or a footer has been defined for a section, you can configure its 
 
 ![](../../assets/en/WritePro/pict2994965.en.png)
 
-For more information on **Margins**, **Paddings**, **Borders**, and **Background** attributes, please refer the *4D Write Pro Attributes* section. 
+For more information on **Margins**, **Paddings**, **Borders**, and **Background** attributes, please refer the [4D Write Pro Attributes](../4d-write-pro-attributes) section. 
 
 You can remove the entire definition of a header or a footer (contents and attributes) by selecting the **Remove header** or **Remove footer** command in the contextual menu. 
 

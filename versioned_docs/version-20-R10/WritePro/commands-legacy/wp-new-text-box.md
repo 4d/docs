@@ -39,7 +39,7 @@ The command creates a new text box element with the following default attributes
 * id = "textBoxN" where N is a number,
 * anchored in front of the body at the top left corner of the page rectangle (like an anchored picture, a text box can be anchored to embedded mode, or to a section, to all sections or to a subsection in page mode, and to the background or front layer.)
 
-See the *4D Write Pro Attributes* section for detailed description of these attributes. . 
+See the [4D Write Pro Attributes](../4d-write-pro-attributes) section for detailed description of these attributes. . 
 
 The new text box is rendered only on the page *pageNum,* so it may not be rendered if:
 

@@ -38,7 +38,7 @@ Users can also select columns, rows, or cells and apply available attributes reg
 
 (\*) Columns do not have equivalent in html. In 4D Write Pro, a column range is actually a range of cells, which means that columns have the same priority as cells.
 
-Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the *4D Write Pro Attributes* section).
+Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section).
 
 When different attributes are applied to concurrent elements of a table, a priority order is applied for the rendering:
 
@@ -165,7 +165,7 @@ Tables can split between rows, and rows can split too. The table pagination is d
 
 **Notes:** 
 
-* You can disable automatic splits in tables by using the wk page break inside row / wk page break inside table attributes (see *4D Write Pro Attributes*) or the *table/avoidPageBreakInside* and *row/avoidPageBreakInside* standard actions (see *Using 4D Write Pro standard actions*).
+* You can disable automatic splits in tables by using the wk page break inside row / wk page break inside table attributes (see [4D Write Pro Attributes](../4d-write-pro-attributes)) or the *table/avoidPageBreakInside* and *row/avoidPageBreakInside* standard actions (see *Using 4D Write Pro standard actions*).
 * When a table row and a paragraph have different page break options, the options applied to the row have precedence. For example, when a paragraph allows page breaks, but its parent row does not, the row will not split.
 
 Table pagination can also be controlled by programming or by the user. Available actions include:
