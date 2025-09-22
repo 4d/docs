@@ -91,10 +91,10 @@ Les *attributs de description* sont :
 Utilisation de la syntaxe automatique pour créer une application 4D mono-utilisateur :
 
 ```4d
- var $status : Object
- var $application : 4D.File
- $application:=Folder(fk desktop folder).folder("myApp.app")
- $status:=Create deployment license($application;4D Volume Desktop)
+ var $status : Object
+ var $application : 4D.File
+ $application:=Folder(fk desktop folder).folder("myApp.app")
+ $status:=Create deployment license($application;4D Volume Desktop)
 ```
 
 ## Exemple 2
@@ -102,17 +102,17 @@ Utilisation de la syntaxe automatique pour créer une application 4D mono-utilis
 Désignation d'une licence à utiliser:
 
 ```4d
- var $status : Object
- var $application : 4D.File
- var $license : 4D.File
- $license:=Folder(fk licenses folder).file("4UUD200-xxx.license4D")
- $application:=Folder(fk desktop folder).folder("myApp.app")
- $status:=Create deployment license($application;$license)
+ var $status : Object
+ var $application : 4D.File
+ var $license : 4D.File
+ $license:=Folder(fk licenses folder).file("4UUD200-xxx.license4D")
+ $application:=Folder(fk desktop folder).folder("myApp.app")
+ $status:=Create deployment license($application;$license)
 ```
 
 ## Voir également
 
-[Article de blog - Finaliser une application avec les commandes 4D](https://blog.4d.com/finalize-an-application-with-4d-commands)
+[Article de blog - Créer une application avec les commandes 4D](https://blog.4d.com/build-an-application-with-4d-commands)
 
 ## Propriétés
 

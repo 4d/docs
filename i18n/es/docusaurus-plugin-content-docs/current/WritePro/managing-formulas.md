@@ -1,6 +1,6 @@
 ---
 id: managing-formulas
-title: Gestión de fórmulas
+title: Fórmulas
 ---
 
 ## Generalidades

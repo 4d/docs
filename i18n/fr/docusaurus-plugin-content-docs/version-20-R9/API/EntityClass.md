@@ -1800,7 +1800,7 @@ L'objet retourné par `.unlock()` contient la propriété suivante :
 | Propriété    | Type    | Description                                                                                                                                                                                                                                                                                                 |
 | ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success      | Boolean | Vrai si l'action unlock a été exécutée avec succès, Faux sinon. Si le déverrouillage est effectué sur une entité qui a été supprimée, sur un enregistrement non verrouillé ou sur un enregistrement verrouillé par un autre process ou une autre entité, success vaut Faux. |
-| wasNotLocked | Boolean | (only if "success" is False) True if the entity was not locked in the process.                                                                                                                                                                                           |
+| wasNotLocked | Boolean | (uniquement si "success" est False) True si l'entité n'était pas verrouillée dans le process.                                                                                                                                                                            |
 
 #### Exemple
 

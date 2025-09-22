@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->La commande **String** renvoie sous forme de chaîne alphanumérique l'expression numérique, date, heure, chaîne ou booléenne que vous avez passée dans le paramètre *expression*.<!-- END REF-->
 
-If you do not pass any other parameter, the string is returned with the appropriate default format. Si vous passez le paramètre *format*, vous pouvez définir suivant vos besoins le formatage de la chaîne retournée.
+Si vous ne passez pas d'autre paramètre, la chaîne est renvoyée avec le format par défaut approprié. Si vous passez le paramètre *format*, vous pouvez définir suivant vos besoins le formatage de la chaîne retournée.
 
 Le paramètre optionnel *addTime* permet d'ajouter une heure à une date dans un format combiné. Il est utilisable uniquement lorsque le paramètre *expression* est une date (voir ci-dessous).
 
@@ -90,7 +90,7 @@ Si vous passez 0 dans *base*, la commande détermine la base en fonction de la v
 :::info
 
 - Cette syntaxe suit strictement la [spécification EcmaScript de `toString` concernant la gestion du radix](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring).
-- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. For example, if the specified number value is not a number, the "NaN" string is returned.
+- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. Par exemple, si la valeur numérique spécifiée n'est pas un nombre, la chaîne "NaN" est renvoyée.
 
 :::
 

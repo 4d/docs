@@ -12,6 +12,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 - Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
 - The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer.
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 - Lenguaje 4D:
   - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
   - Los comandos [`Num`](../commands/num.md) y [`String`](../commands/string.md) han sido actualizados para soportar conversiones en diferentes bases (radix).
@@ -69,7 +70,7 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - Gestión de [eventos ORDA en datos](../ORDA/orda-events.md).
 - Nueva opción `connectionTimeout` en el parámetro [`options`](../API/TCPConnectionClass.md#options-parameter) de la función [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - Nueva clase [`4D.Vector`](../API/VectorClass.md) para procesar y comparar vectores, normalmente calculados por IAs.
-- New options to generate UUIDs in **version 7** for [4D automatic fields](../settings/database.md#auto-uuid-version) and [`Generate UUID`](../commands/generate-uuid) command.
+- Nuevas opciones para generar UUIDs en **versión 7** para el comando [4D automatic fields](../settings/database.md#auto-uuid-version) y [`Generate UUID`](../commands/generate-uuid).
 - Nuevas clases [`UDPSocket`](../API/UDPSocketClass.md) y [`UDPEvent`](../API/UDPEventClass.md) para enviar datos utilizando sockets UDP. Soporte de registro detallado para eventos UDP en el archivo de registro [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) (renombrado de `4DTCPLog.txt`).
 - New [`.promote()`](../API/SessionClass.md#promote) and [`.demote()`](../API/SessionClass.md#demote) functions in the [Session class](../API/SessionClass.md) to dynamically add/remove privileges in a web process.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
@@ -88,7 +89,7 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - En Windows, las fuentes de impresora actuales destinadas únicamente a la impresión (es decir, no se pueden utilizar en pantalla) ya no son cargadas al inicio por 4D.
 - Se ha eliminado la biblioteca *MeCab*. Este cambio sólo afecta al tratamiento del texto en japonés.
 - Cuando una variable o parámetro objeto se declara con un tipo ["cs" class](../Concepts/classes.md#cs), asignarlo con una instancia de objeto de una clase diferente genera ahora un error de sintaxis.
-- [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) returns True for promoted privileges in the web process.
+- [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) devuelve True para privilegios promovidos en el proceso web.
 - The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. Por ejemplo, `Time("-01:02:03")` devolverá **-01:02:03**. In previous releases, the negative sign was ignored.
 
 ## 4D 20 R9
@@ -301,8 +302,8 @@ Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/
 | BoringSSL | 0697c88                                | **21**            | Utilizado para QUIC                                                                                                                                |
 | CEF       | 7258                                   | **21**            | Chromium 139                                                                                                                                       |
 | Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                          |
-| ICU       | 77.1                   | **21**            | Esta importante actualización obliga a reconstruir automáticamente los índices alfanuméricos, texto y objeto.                      |
-| libldap   | 2.6.7  | 20 R6             |                                                                                                                                                    |
+| ICU       | 77.1                   | **21**            | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
+| libldap   | 2.6.10 | **21**            |                                                                                                                                                    |
 | libsasl   | 2.1.28 | 20                |                                                                                                                                                    |
 | Liblsquic | 4.2.0  | 20 R10            | Utilizado para QUIC                                                                                                                                |
 | Libuv     | 1.51.0 | **21**            | Utilizado para QUIC                                                                                                                                |

@@ -12,6 +12,7 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/
 - Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
 - The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer.
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 - Línguagem 4D:
   - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
   - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
@@ -301,8 +302,8 @@ Veja [**Notas de lançamento para 4D 20.x LTS**](../../versioned_docs/version-20
 | BoringSSL  | 0697c88                                | **21**           | Usado para QUIC                                                                                                                                    |
 | CEF        | 7258                                   | **21**           | Chromium 139                                                                                                                                       |
 | Hunspell   | 7.3.27 | 20               | Usado para verificação ortográfica em formulários 4D e 4D Write Pro                                                                                |
-| ICU        | 77.1                   | **21**           | Essa grande atualização força uma reconstrução automática dos índices alfanuméricos, de texto e de objetos.                        |
-| libldap    | 2.6.7  | 20 R6            |                                                                                                                                                    |
+| ICU        | 77.1                   | **21**           | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
+| libldap    | 2.6.10 | **21**           |                                                                                                                                                    |
 | libsasl    | 2.1.28 | 20               |                                                                                                                                                    |
 | Liblsquic  | 4.2.0  | 20 R10           | Usado para QUIC                                                                                                                                    |
 | Libuv      | 1.51.0 | **21**           | Usado para QUIC                                                                                                                                    |

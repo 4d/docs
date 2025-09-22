@@ -2451,11 +2451,11 @@ où :
 - **valeur** : valeur à comparer à la valeur actuelle de la propriété de chaque élément de la collection. Il peut s'agir de n'importe quelle valeur d'expression constante correspondant au type de données de l'élément ou d'un [**placeholder**](#using-placeholders).
   Lorsque vous utilisez une valeur constante, les règles suivantes doivent être respectées :
   - Les valeurs constantes de type **texte** peuvent être passées avec ou sans guillemets (voir **Utilisation des guillemets** ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type "contient"), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : "@Smith@". Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.
-  - Valeurs constantes de type**booléen**: **true** or **false** (sensible à la casse).
+  - Valeurs constantes de type **booléen**: **true** or **false** (sensible à la casse).
   - Valeurs constantes de type **numérique** : les décimales doivent être séparées par un '.'
   - Constantes de type **date** : "YYYY-MM-DD" format
   - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
-  - Dans le cas d'une recherche avec un comparateur IN, *value*doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre \[ ] et séparées par des virgules (pour les chaînes, les caractères `"` doivent être écha
+  - dans le cas d'une recherche avec un comparateur IN, *value* doit être une collection ou des valeurs correspondant au type de l'attribut path entre \[ ] séparés par des virgules (pour les chaînes, les caractères `"` doivent être échappés avec `\`).
 
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
