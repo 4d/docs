@@ -22,7 +22,7 @@ Bookmarks are named references to ranges or elements, which allow you to access 
 
 In *targetObj*, you can pass:
 
-* a range, or
+* a range belonging to the body (see below), or
 * an element (body / table / row / inline picture / paragraph)
 
 **Note**: If you passed an element in *targetObj*, the bookmark will contain only the specified element.
@@ -30,6 +30,12 @@ In *targetObj*, you can pass:
 In *bkName*, pass the name for the new bookmark. A bookmark name must be compliant with HTML/CSS names, *i.e.* it must only contain alphanumeric characters (invalid characters, such as space characters, are automatically removed). Bookmark names must be unique within the document. If a bookmark with the same name already exists in the document, it is overwritten. 
 
 You can create as many bookmarks as you want within the same document. Multiple bookmarks can be created using the exact same range. Once created, a bookmark is automatically stored in the parent document and is saved with the document itself. 
+
+:::warning
+
+Bookmarks can only be created from ranges within the **body** of the document, i.e. they cannot be created from a range in the header, footer, or a text box of a document. To make sure a range belongs to the body, check its [`wk container` attribute](../commands-legacy/4d-write-pro-attributes.md#ranges): it is `null` or `undefined` for body ranges.  
+
+:::
 
 ## Example 1 
 

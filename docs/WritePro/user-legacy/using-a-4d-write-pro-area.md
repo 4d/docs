@@ -307,7 +307,7 @@ You can insert a continuous section break and change the number of columns to tw
 
 ## Bookmarks
 
-4D Write Pro allows you to create and work with dynamic references to parts of your documents, called **bookmarks**. A bookmark is a named reference attached to a specific [range](./ranges.md) in a 4D Write Pro document.
+4D Write Pro allows you to create and work with dynamic references to parts of your documents, called **bookmarks**. A bookmark is a named reference attached to a specific [range](./ranges.md) in the body of a 4D Write Pro document.
 
 Bookmarks are dynamic, which means that if the user moves, adds or removes text belonging to the bookmark, the associated range will be updated automatically and the bookmark will continue to reference the same content within the document. For example:
 
