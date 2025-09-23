@@ -744,11 +744,11 @@
     "description": "The label for the doc item Labels in sidebar docs, linking to the doc Desktop/labels"
   },
   "sidebar.docs.category.Project & IDE": {
-    "message": "Project & IDE",
+    "message": "Projet & IDE",
     "description": "The label for category Project & IDE in sidebar docs"
   },
   "sidebar.docs.category.Project & IDE.link.generated-index.title": {
-    "message": "Project & IDE",
+    "message": "Projet & IDE",
     "description": "The generated-index page title for category Project & IDE in sidebar docs"
   },
   "sidebar.docs.category.Code & Methods": {

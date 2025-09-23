@@ -356,7 +356,7 @@ vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont 
 
 La fonction `.drop()` <!-- REF #EntityClass.drop().Summary -->supprime les données contenues dans l'entité<!-- END REF -->de la table liée à sa dataclass. A noter que l'entité reste en mémoire.
 
-Dans une application multiprocess ou multi-utilisateurs, la fonction `.drop()` est exécutée en mode ["verrouillage optimiste"](ORDA/entities.md#verrouillage-d-une-entite) dans lequel un marqueur de verrouillage interne est automatiquement incrémenté à cha
+Dans une application multiprocess ou multi-utilisateurs, la fonction `.drop()` est exécutée en mode ["verrouillage optimiste"](ORDA/entities.md#verrouillage-d-une-entite) dans lequel un marqueur de verrouillage interne est automatiquement incrémenté chaque fois que l'enregistrement est sauvegardé.
 
 Par défaut, si le paramètre *mode* est omis, la fonction retournera systématiquement une erreur (voir ci-dessous) lorsque la même entité a été modifiée entre-temps par un autre process ou utilisateur, quel(s) que soi(en)t l(es) attribut(s) modifié(s).
 

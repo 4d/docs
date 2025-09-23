@@ -1,6 +1,7 @@
 ---
 id: overview
-title: 概要
+title: 4D at a glance
+slug: /GettingStarted/overview
 ---
 
 Web やモバイル、デスクトップの運用形態に関わらず、データベースストラクチャーからユーザーインターフェースまで (コード、フォーム、メニュー、ユーザー設定、その他必要なリソース含む) 、4D アプリケーションのすべてのソースコードが 4D プロジェクトには格納されています。 4D プロジェクトは主にテキストファイルによって構成されています。
@@ -21,10 +22,6 @@ Web やモバイル、デスクトップの運用形態に関わらず、デー�
 
 ## アプリケーションの仕上げ
 
-プロジェクトファイルは [コンパイル](compiler.md) し、簡単に運用することができます。 プロジェクトをもとに、次の 3種のアプリケーションを作成することができます:
-
-- [Web](WebServer/webServer.md) アプリケーション
-- [モバイル](https://developer.4d.com/go-mobile/) アプリケーション
-- [デスクトップ](Desktop/building.md) アプリケーション (クライアント/サーバーまたはシングルユーザー)
+プロジェクトファイルは [コンパイル](compiler.md) し、簡単に運用することができます。 4D allows you to create several types of application from your projects, including [web](WebServer/webServer.md) applications, [desktop](Desktop/building.md) applications (client/server or single-user), or mobile applications.
 
 バックエンドアプリケーションは、4D Server または 4D で運用するほか、[4D Volume Desktopライセンスと統合](../Desktop/building.md) することも可能です。

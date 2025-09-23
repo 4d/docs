@@ -19,10 +19,10 @@ Use this callback property to receive the result regardless of success or error:
 
 Use these callback properties for more granular control over success and error handling:
 
-| Propriedade  | Tipo                         | Descrição                                                                                                                                                             |
-| ------------ | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onResponse` | 4D. Function | A function to be called synchronously when the request finishes **successfully**. Ensure that the current process does not terminate. |
-| `onError`    | 4D. Function | A function to be called asynchronously when the request finishes **with errors**. Ensure that the current process does not terminate. |
+| Propriedade  | Tipo                         | Descrição                                                                                                                                                              |
+| ------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onResponse` | 4D. Function | A function to be called asynchronously when the request finishes **successfully**. Ensure that the current process does not terminate. |
+| `onError`    | 4D. Function | A function to be called asynchronously when the request finishes **with errors**. Ensure that the current process does not terminate.  |
 
 > The callback function will receive the same result object type (one of [OpenAIResult](./OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
 

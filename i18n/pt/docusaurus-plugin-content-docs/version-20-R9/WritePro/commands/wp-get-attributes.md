@@ -32,7 +32,7 @@ Em *attribName*, passe o nome do atributo que você deseja recuperar.
 
 Você também pode passar uma coleção de nomes de atributos em *attribColl*, nesse caso o comando retornará um objeto que contém os nomes de atributos passados em *attribColl* juntamente com seus valores correspondentes.
 
-Para uma lista completa de atributos a passar, bem como seu escopo e valores, consulte a seção *4D Write Pro Atributes*.
+For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 Se houver valores diferentes para o mesmo atributo no elemento passado como um parâmetro, o comando retorna:
 
@@ -65,5 +65,6 @@ Para obter o tamanho da fonte, cor de fundo e estilo da borda da área seleciona
 
 ## Veja também
 
+[4D Write Pro Attributes](../4d-write-pro-attributes)\
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)
