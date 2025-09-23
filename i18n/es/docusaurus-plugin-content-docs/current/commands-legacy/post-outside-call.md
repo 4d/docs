@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Compatibility Note 
+## Nota de compatibilidad  
 
 <!--REF #_command_.POST OUTSIDE CALL.Summary-->This command was named **CALL PROCESS** in previous 4D releases.<!-- END REF--> 
 
@@ -37,7 +37,7 @@ Para comunicarse entre procesos que no muestran formularios, utilice los comando
 
 ## Ejemplo 
 
-Ver el ejemplo de [On Exit Database Method](metodo-base-on-exit.md "On Exit Database Method").
+Ver el ejemplo de la sección [Semáforo](semaphore.md).
 
 ## Ver también 
 
