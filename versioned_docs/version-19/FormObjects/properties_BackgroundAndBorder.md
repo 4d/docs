@@ -42,7 +42,7 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 ---
 
-## Background Color Expression
+## Background Color Expression {#background-color-expression}
 
 `Selection and collection type list boxes`
 
@@ -159,7 +159,7 @@ Designates the thickness of a line.
 
 ---
 
-## Row Background Color Array
+## Row Background Color Array {#row-background-color-array}
 
 `Array type list boxes`
 

@@ -240,7 +240,7 @@ Foreground color;Dark shadow color)
 
 ---
 
-## Style Expression
+## Style Expression {#style-expression}
 
 `Selection and collection/entity selection type list boxes`
 
@@ -473,7 +473,7 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 
 ---
 
-## Row Font Color Array
+## Row Font Color Array {#row-font-color-array}
 
 `Array type list boxes`
 
@@ -498,7 +498,7 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 ---
 
-## Row Style Array
+## Row Style Array {#row-style-array)
 
 `Array type list boxes`
 

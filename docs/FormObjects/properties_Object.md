@@ -77,7 +77,7 @@ Here is the list of objects whose value can be saved:
 
 ---
 
-## Variable or Expression
+## Variable or Expression {#variable-or-expression}
 
 > See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
 
