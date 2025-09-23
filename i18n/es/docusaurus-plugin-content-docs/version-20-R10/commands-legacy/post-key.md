@@ -27,7 +27,7 @@ Si pasa el parámetro *proceso*, la tecla se envía al proceso cuyo número de r
 
 ## Ejemplo 
 
-Ver el ejemplo del comando [Process number](process-number.md "Process number").
+Ver el ejemplo del comando [Process number](../commands/process-number.md).
 
 ## Ver también 
 
