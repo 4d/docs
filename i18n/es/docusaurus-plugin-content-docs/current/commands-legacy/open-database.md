@@ -28,9 +28,9 @@ En el parámetro *rutaArchivo*, pase el nombre o la ruta de acceso completa de l
 
 Si pasa únicamente el nombre de archivo, debe ser colocado en el mismo nivel que el archivo de estructura de la base actual.
 
-Si la ruta de acceso define una base válida, 4D cierra la base en progreso y abre la base especificada. En el modo mono usuario, el [Método base On Exit](metodo-base-on-exit.md) de la base cerrada y el [Método base On Startup](metodo-base-on-startup.md) (o [Método base On Server Open Connection](metodo-base-on-server-open-connection.md)) de la base abierta se llaman sucesivamente.
+Si la ruta de acceso define una base válida, 4D cierra la base en progreso y abre la base especificada. En el modo mono usuario, el [Método base On Exit](on-exit-database-method.md) de la base cerrada y el [Método base On Startup](on-startup-database-method.md) (o [Método base On Server Open Connection](on-server-open-connection-database-method.md)) de la base abierta se llaman sucesivamente.
 
-**Atención:** dado que este comando hace que la aplicación se cierre antes de la reapertura con la base especificada, no se recomienda su uso en el [Método base On Startup](metodo-base-on-startup.md), o en un método llamado por este método base.
+**Atención:** dado que este comando hace que la aplicación se cierre antes de la reapertura con la base especificada, no se recomienda su uso en el [Método base On Startup](on-startup-database-method.md), o en un método llamado por este método base.
 
 El comando se ejecuta de forma asíncrona: después de su llamada, 4D continúa ejecutando el resto del método. Luego, la aplicación se comporta como si el comando **Salir** del menú **Archivo** estuviera seleccionado: las cajas de diálogo de apertura se cancelan, todos los procesos abiertos tienen 10 segundos para terminar antes de ser terminados, etc.
 
@@ -44,7 +44,7 @@ Si el archivo de la base objetivo no se encuentra o es inválido, se devuelve un
 
 ## Ejemplo 2 
 
-Desea seleccionar un servidor al inicio desde una aplicación mono usuario. Puede ejecutar este código desde un proceso lanzado por [Método base On Startup](metodo-base-on-startup.md):
+Desea seleccionar un servidor al inicio desde una aplicación mono usuario. Puede ejecutar este código desde un proceso lanzado por [Método base On Startup](on-startup-database-method.md):
 
 ```4d
  var $xml : Text
