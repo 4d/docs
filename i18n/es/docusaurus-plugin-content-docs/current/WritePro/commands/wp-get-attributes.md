@@ -32,7 +32,7 @@ En *attribName*, pase el nombre del atributo a recuperar.
 
 You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
 
-For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the *4D Write Pro Attributes* section.
+For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 If there are different values for the same attribute in the element passed as a parameter, the command returns:
 
@@ -65,5 +65,6 @@ You want to get the font size, background color and border style of the selected
 
 ## Ver también
 
+[4D Write Pro Attributes](../4d-write-pro-attributes)\
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)

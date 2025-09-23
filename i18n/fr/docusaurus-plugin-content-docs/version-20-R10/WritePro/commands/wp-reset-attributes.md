@@ -29,7 +29,7 @@ Dans le paramètre *targetObj*, vous pouvez passer soit :
 - un élément (en-tête / pied de page / corps / tableau / paragraphe / image ancrée ou en ligne / section / sous-section / feuille de style), ou
 - un document 4D Write Pro
 
-Lorsqu'une valeur d'attribut est supprimée à l'aide de la commande **WP RESET ATTRIBUTES**, la valeur par défaut est appliquée à *targetObj* ou *sectionOrSubsection*. Les valeurs par défaut sont listées dans la section *4D Write Pro Attributes*.
+Lorsqu'une valeur d'attribut est supprimée à l'aide de la commande **WP RESET ATTRIBUTES**, la valeur par défaut est appliquée à *targetObj* ou *sectionOrSubsection*. Default values are listed in the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 :::note Notes
 
@@ -84,6 +84,6 @@ WP RESET ATTRIBUTES($subSection) // Tous les attributs de la sous-section sont s
 
 ## Voir également
 
-*4D Write Pro Attributes*\
+[4D Write Pro Attributes](../4d-write-pro-attributes)\
 [WP GET ATTRIBUTES](wp-get-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)

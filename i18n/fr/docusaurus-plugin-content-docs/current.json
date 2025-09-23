@@ -1148,11 +1148,11 @@
     "description": "The label for the doc item Labels in sidebar docs, linking to the doc Desktop/labels"
   },
   "sidebar.docs.category.Project & IDE": {
-    "message": "Project & IDE",
+    "message": "Projet & IDE",
     "description": "The label for category Project & IDE in sidebar docs"
   },
   "sidebar.docs.category.Project & IDE.link.generated-index.title": {
-    "message": "Project & IDE",
+    "message": "Projet & IDE",
     "description": "The generated-index page title for category Project & IDE in sidebar docs"
   },
   "sidebar.docs.category.Code & Methods": {
@@ -1180,11 +1180,11 @@
     "description": "The label for category Extending 4D applications in sidebar docs"
   },
   "sidebar.docs.category.Document Elements": {
-    "message": "Document Elements",
+    "message": "Éléments du document",
     "description": "The label for category Document Elements in sidebar docs"
   },
   "sidebar.docs.category.Document Elements.link.generated-index.title": {
-    "message": "Document Elements",
+    "message": "Éléments du document",
     "description": "The generated-index page title for category Document Elements in sidebar docs"
   },
   "sidebar.docs.link.4D Qodly Pro": {

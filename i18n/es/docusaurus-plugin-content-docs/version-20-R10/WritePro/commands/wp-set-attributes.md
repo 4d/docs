@@ -33,7 +33,7 @@ Puede especificar atributos a definir para *targetObj* de una de dos maneras:
 
 - Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
 
-For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the *4D Write Pro Attributes* section.
+For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 ## Ejemplo 1
 
@@ -148,6 +148,6 @@ El resultado es:
 
 ## Ver también
 
-*4D Write Pro Attributes*\
+[4D Write Pro Attributes](../4d-write-pro-attributes)\
 [WP GET ATTRIBUTES](../commands/wp-get-attributes.md)\
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)

@@ -55,7 +55,6 @@ title: データ収集
 | encryptedConnections                                        | Boolean                           | クライアント/サーバー接続が暗号化されている場合は True                                                                              |
 | externalPHP                                                 | Boolean                           | クライアントが `PHP execute` を呼び出して、独自のバージョンの php を使用した場合は True。                                                   |
 | hasDataChangeTracking                                       | Boolean                           | "__DeletedRecords" テーブルが存在する場合にはTrue                              |
-
 | headless                                                    | Boolean                           | アプリケーションがヘッドレスモードで実行されている場合は true                                                                           |
 | id                                                          | Text (ハッシュ文字列) | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*)                                            |
 | indexSegment.diskReadBytes                  | Number                            | インデックスファイルから読み取ったバイト数                                                                                       |
@@ -74,20 +73,20 @@ title: データ収集
 | memory                                                      | Number                            | マシン上で利用可能なメモリ容量 (バイト単位)                                                                  |
 | mobile                                                      | Collection                        | モバイルセッションに関する情報                                                                                             |
 | numberOfCores                                               | Number                            | コアの合計数                                                                                                      |
-| numberOfFields                                              | Number                            | Number of fields                                                                                            |
-| numberOfKeepRecordSyncInfo                                  | Number                            | Number of tables with the "Enable Replication" option checked                                               |
-| numberOfRecordsMax                                          | Number                            | Total number of records                                                                                     |
-| numberOfTables                                              | Number                            | Number of tables                                                                                            |
-| numberOfWebServices                                         | Number                            | Number of methods published as Web Services                                                                 |
-| ODBCLogin                                                   | Number                            | Number of calls to `SQL LOGIN` using ODBC                                                                   |
+| numberOfFields                                              | Number                            | フィールドの数                                                                                                     |
+| numberOfKeepRecordSyncInfo                                  | Number                            | "複製を許可"オプションがチェックされているテーブルの数                                                                                |
+| numberOfRecordsMax                                          | Number                            | レコードの総数                                                                                                     |
+| numberOfTables                                              | Number                            | テーブルの総数                                                                                                     |
+| numberOfWebServices                                         | Number                            | Webサービスとして公開されているメソッドの数                                                                                     |
+| ODBCLogin                                                   | Number                            | ODBC を使用しての `SQL LOGIN`への呼出回数                                                                               |
 | phpCall                                                     | Number                            | `PHP execute` の呼び出し回数                                                                                       |
 | projectMode                                                 | Boolean                           | アプリケーションがプロジェクトの場合は true                                                                                    |
 | qodly.webforms                              | Number                            | Qodly Webフォームの数                                                                                             |
-| QueryBySQL                                                  | Number                            | Number of calls to `QUERY BY SQL`                                                                           |
+| QueryBySQL                                                  | Number                            | `QUERY BY SQL` への呼出回数                                                                                       |
 | restHits                                                    | Number                            | データ収集中の RESTサーバーのヒット数                                                                                       |
-| SQLBeginEndStatement                                        | Number                            | Number of uses of `Begin SQL` / `End SQL`                                                                   |
-| SQLLoginInternal                                            | Number                            | Number of calls to `SQL LOGIN` using SQL_INTERNAL                                      |
-| SQLServer                                                   | Number                            | Number of SQL requests through the network                                                                  |
+| SQLBeginEndStatement                                        | Number                            | `Begin SQL` / `End SQL` の使用回数                                                                               |
+| SQLLoginInternal                                            | Number                            | SQL_INTERNAL を使用しての `SQL LOGIN` の呼出回数                                                  |
+| SQLServer                                                   | Number                            | ネットワーク経由のSQL リクエスト数                                                                                         |
 | system                                                      | Text                              | OS のバージョンとビルド番号                                                                                             |
 | uniqueID                                                    | Text                              | 4D Server の固有ID                                                                                             |
 | uptime                                                      | Number                            | ローカル4Dデータベースが開かれてからの経過時間 (秒単位)                                                           |

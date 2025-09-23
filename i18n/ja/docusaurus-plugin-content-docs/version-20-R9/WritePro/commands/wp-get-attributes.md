@@ -22,7 +22,6 @@ displayed_sidebar: docs
 
 **WP Get attributes** コマンドは、<!--REF #_command_.WP Get attributes.Summary-->4D Write Pro レンジ、ヘッダー、本文、フッター、表、あるいはドキュメント内の、任意の属性の値を返します。<!-- END REF--> このコマンドを使用することで、4D Write Pro の次のようなあらゆる内部属性にアクセスすることができます: 文字、段落、ドキュメント、表、画像。
 
-
 *targetObj* 引数には、以下のいずれかを渡すことができます:
 
 - レンジ
@@ -33,7 +32,7 @@ displayed_sidebar: docs
 
 また、*attribColl* 引数には属性名のコレクションを渡すこともできます。この場合、コマンドは*attribColl* 引数に渡した属性とそれに対応する値を格納したオブジェクトを返します。
 
-渡すことのできる属性の包括的な一覧と、そのスコープおよび値については、*4D Write Pro属性* の章を参照してください。
+For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 引数として渡した要素内の同じ属性に対して異なる値があった場合、コマンドは以下のように対応します:
 
@@ -66,5 +65,6 @@ displayed_sidebar: docs
 
 ## 参照
 
+[4D Write Pro Attributes](../4d-write-pro-attributes)\
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)

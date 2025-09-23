@@ -29,7 +29,7 @@ displayed_sidebar: docs
 - 要素(ヘッダー / フッター / 本文 / 表 / 段落 / アンカーされた画像またはインラインの画像 / セクション / サブセクション / スタイルシート)
 - 4D Write Pro ドキュメント
 
-**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。
+**WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 **WP RESET ATTRIBUTES** コマンドを使用して属性の値が削除された場合、*targetObj* あるいは *sectionOrSubsection* にはデフォルトの値が適用されます。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 デフォルトの値については、*4D Write Pro Attributes* の章に記載されています。 Default values are listed in the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 :::note 注記
 
@@ -84,6 +84,6 @@ WP RESET ATTRIBUTES($subSection) // サブセクションの全ての属性が�
 
 ## 参照
 
-*4D Write Pro Attributes*\
+[4D Write Pro Attributes](../4d-write-pro-attributes)\
 [WP GET ATTRIBUTES](wp-get-attributes.md)\
 [WP SET ATTRIBUTES](wp-set-attributes.md)
