@@ -407,7 +407,7 @@ The following 4D commands from the [Objects (Forms)](../../commands/theme/Object
 | `OBJECT GET RGB COLORS` / `OBJECT SET RGB COLORS`           | Applied to current selection (if any) |
 | `OBJECT Get type`                                           |          |
 | `OBJECT Get vertical alignment` / `OBJECT SET VERTICAL ALIGNMENT` | Vertical alignment of paragraphs: only has an effect when paragraph height is greater than paragraph text height |
-| `OBJECT Get visible` / `OBJECT SET VISIBLE`                 |          |
+| `OBJECT Get visible` / [`OBJECT SET VISIBLE`](../commands/object-set-visible)                 |          |
 | `OBJECT Is styled text`                                     | Returns true |
 | `OBJECT MOVE`                                               |          |
 | `OBJECT GET SUBFORM CONTAINER SIZE`                         |          |
