@@ -59,7 +59,7 @@ Il existe différents types de list box avec leurs propres comportements et prop
 
 Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes `EDIT ITEM` et `Displayed line number` peuvent également être utilisées. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) page of the *4D Language reference* for more information.
+Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes `EDIT ITEM` et `Displayed line number` peuvent également être utilisées. Pour plus d'informations, reportez-vous à la page [List Box Commands Summary](https://doc.4d.com/4Dv20/4D/20.6/List-Box-Commands-Summary.300-7487600.en.html) du *Manuel de référence du langage 4D*.
 
 ## Objets List box
 
@@ -104,11 +104,11 @@ Lorsque la source de données est une entity selection, les modifications apport
 
 :::note
 
-When entities are deleted, their references remain in the entity selection with an *undefined* value, thus displaying blank rows in the list box. Dans ce cas, vous pouvez appeler la fonction [`.clean()`](API/EntitySelectionClass.md#clean) pour obtenir une nouvelle entity selection sans les références d'entités supprimées.
+Lorsque des entités sont supprimées, leurs références restent dans l'entity selection avec une valeur *undefined*, ce qui entraîne l'affichage de lignes vides dans la listbox. Dans ce cas, vous pouvez appeler la fonction [`.clean()`](API/EntitySelectionClass.md#clean) pour obtenir une nouvelle entity selection sans les références d'entités supprimées.
 
 :::
 
-Lorsque la source de données est une collection, toute modification apportée aux valeurs de la list box se reflète dans la collection. Lorsque la source de données est une collection, toute modification apportée aux valeurs de la list box se reflète dans la collection. Par exemple :
+Lorsque la source de données est une collection, toute modification apportée aux valeurs de la list box se reflète dans la collection. En revanche, si des modifications sont apportées à la collection en utilisant par exemple les diverses fonctions de la [classe Collection](../API/CollectionClass.md), vous devrez en informer explicitement 4D en réaffectant la variable collection à elle-même, de sorte que le contenu de la list box soit actualisé. Par exemple :
 
 ```4d
 myCol:=myCol.push("new value") //afficher new value dans la list box
@@ -255,7 +255,7 @@ Les événements formulaire sur les list box ou colonnes de list box peuvent ret
 
 > Si un événement se produit sur une "fake" colonne ou ligne qui n'existe pas, une chaîne vide est généralement renvoyée.
 
-## List box columns {#list-box-columns}
+## Colonnes de list box {#list-box-columns}
 
 Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
 
