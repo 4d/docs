@@ -32,7 +32,7 @@ Ver los ejemplos en *Record Locking*.
 
 ## Ejemplo 2 
 
-Ver el ejemplo del comando [Process Number](process-number.md "Process Number").
+Ver el ejemplo del comando [Process Number](../commands/process-number.md).
 
 ## Ver también 
 
