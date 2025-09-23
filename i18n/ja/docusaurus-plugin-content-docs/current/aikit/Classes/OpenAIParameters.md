@@ -50,18 +50,18 @@ title: OpenAIParameters
 
 詳細な情報については [非同期コードに関するドキュメンテーション](../asynchronous-call.md) を参照してください。
 
-Use these callback properties for more granular control over success and error handling:
+成功とエラー処理をより細やかに管理するためにはこれらのコールバックプロパティを使用します:
 
-| プロパティ        | 型                           | 説明                                                                                                                           |
-| ------------ | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `onResponse` | 4D.Function | A function to be called synchronously when the request finishes **successfully**. カレントプロセスが終了しないように注意してください。 |
-| `onError`    | 4D.Function | A function to be called asynchronously when the request finishes **with errors**. カレントプロセスが終了しないように注意してください。 |
+| プロパティ        | 型                           | 説明                                                                                                                            |
+| ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `onResponse` | 4D.Function | A function to be called asynchronously when the request finishes **successfully**. カレントプロセスが終了しないように注意してください。 |
+| `onError`    | 4D.Function | リクエストが**エラーで**終了した場合に非同期で呼び出される関数。 カレントプロセスが終了しないように注意してください。                                                                 |
 
-> The callback function will receive the same result object type (one of [OpenAIResult](./OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+> これらのコールバック関数は、同期コード内での関数によって返される結果のオブジェクト型([OpenAIResult](./OpenAIResult.md) 子クラスのうちのいずれか)と同じものを受け取ります。
 
-See [documentation about asynchronous code for examples](../asynchronous-call.md)
+詳細な情報については [非同期コードに関するドキュメンテーション](../asynchronous-call.md) を参照してください。
 
-### Network Properties
+### ネットワークプロパティ
 
 | プロパティ          | 型         | 説明                                                                          |
 | -------------- | --------- | --------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 | `maxRetries`   | Integer   | リクエストのリトライの最大回数。 (コードが非同期でない場合、つまり関数が提供されていない場合のみ)       |
 | `extraHeaders` | Object    | リクエストに付随して送信する追加のヘッダー。                                                      |
 
-### OpenAPI Properties
+### OpenAPIプロパティ
 
 | プロパティ  | 型    | 説明                                                 |
 | ------ | ---- | -------------------------------------------------- |
