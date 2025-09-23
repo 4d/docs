@@ -123,7 +123,7 @@ For more information, refer to the [Shared objects and collections](shared.md) s
 
 
 
-## Properties
+## Properties {#properties}
 
 You access object property values through a chain of tokens. Object properties can be accessed in two ways:
 
