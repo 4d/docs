@@ -1,6 +1,6 @@
 ---
 id: develop-components
-title: Componentes de desenvolvimento
+title: Developing Extensions
 ---
 
 ## Componentes
@@ -9,7 +9,7 @@ Um componente 4D é um conjunto de funções, métodos e formulários 4D que rep
 
 Você pode desenvolver componentes 4D para suas próprias necessidades e mantê-los privados. Você também pode [compartilhar seus componentes com a comunidade 4D](https://github.com/topics/4d-component).
 
-## Definições
+### Definições
 
 - **Projeto Matrix**: ´projeto 4D usado para desenvolver o componente. O projeto matriz é um projeto standard sem atributos específicos. Um projeto matricial forma um componente único.
 - **Projeto Host**: projeto aplicação onde um componente é instalado e usado.
@@ -153,7 +153,7 @@ Os comandos abaixo não são compatíveis para seu uso dentro de um componente p
 - O comando `Current form table` retorna `Nil` quando é chamado no contexto de um formulário de projeto. Por isso não pode ser usado em um componente.
 - Os comandos da linguagem de definição de dados SQL (`CREATE TABLE`, `DROP TABLE`, etc.) não pode ser usado no projeto do componente. No entanto, eles são compatíveis com bancos de dados externos (consulte o comando SQL `CREATE DATABASE`).
 
-## Partilhar os métodos projeto
+### Partilhar os métodos projeto
 
 Todos os métodos de projeto de um projeto de matriz são, por definição, incluídos no componente (o projeto é o componente), o que significa que eles podem ser chamados e executados dentro do componente.
 
@@ -183,11 +183,11 @@ EXECUTE METHOD($param)
 > Um banco de dados de host interpretado que contém componentes interpretados pode ser compilado ou verificado quanto à sintaxe se não chamar métodos do componente interpretado. Caso contrário, uma caixa de diálogo de aviso será exibida quando você tentar iniciar a compilação ou uma verificação de sintaxe, e não será possível executar a operação.  
 > Lembre-se de que um método interpretado pode chamar um método compilado, mas não o contrário, exceto pelo uso dos comandos `EXECUTE METHOD` e `EXECUTE FORMULA`.
 
-## Compartilhamento de classes
+### Compartilhamento de classes
 
 By default, component classes cannot be called from the 4D Code Editor of the host project. Se quiser que suas classes de componentes sejam expostas no projeto host e em seus componentes carregados, você precisará **declarar um namespace de componente**. Additionally, you can control how component classes are suggested in the host Code Editor.
 
-### Declaração do namespace
+#### Declaração do namespace
 
 Para permitir que as classes de seu componente sejam expostas nos projetos host e em seus componentes carregados, insira um valor na opção [**Namespace do componente na class store** na página General](../settings/general.md#component-namespace-in-the-class-store) das Configurações do projeto da matriz. Por padrão, a área está vazia: as classes de componentes não estão disponíveis fora do contexto do componente.
 
@@ -220,7 +220,7 @@ Obviamente, é recomendável usar um nome distinto para evitar qualquer conflito
 
 As classes ORDA de um componente não estão disponíveis no seu projeto host. Por exemplo, se houver uma classe de dados chamada Employees em seu componente, você não poderá usar uma classe "cs. Mycomponent. Employee" no projeto host.
 
-### Classes ocultas
+#### Classes ocultas
 
 Assim como em qualquer projeto, você pode criar classes e funções ocultas no componente prefixando os nomes com um sublinhado ("_"). Quando um [componente namespace for definido](#declaring-the-component-namespace), classes ocultas e funções do componente não aparecerão como sugestões ao usar a conclusão do código.
 
@@ -243,7 +243,7 @@ Um arquivo de sintaxe (formato JSON) é criado automaticamente durante a fase de
 
 Se você não inserir um [component namespace](#declaring-the-component-namespace), os recursos para as classes e os métodos expostos não serão gerados, mesmo que a opção de arquivo de sintaxe esteja marcada.
 
-## Passar variáveis
+### Passar variáveis
 
 As variáveis locais, de processo e interprocessos não são compartilhadas entre componentes e projetos de host. A única maneira de modificar variáveis de componentes do projeto host e vice-versa é usando ponteiros.
 
@@ -306,13 +306,13 @@ Neste caso é preciso usar a comparação de ponteiros:
      If(myptr1=myptr2) //Este teste retorna False
 ```
 
-## Gestão de erros
+### Gestão de erros
 
 An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
 
 However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
 
-## Acesso às tabelas do projeto local
+### Acesso às tabelas do projeto local
 
 Apesar de os componentes não poderem usar tabelas, ponteiros podem permitir que projetos locais e componentes se comuniquem entre si. Por exemplo, aqui está um método que pode ser chamado a partir de um componente:
 
@@ -338,7 +338,7 @@ SAVE RECORD($tablepointer->)
 
 > No contexto de um componente, 4D assume que uma referência a um formulário de tabela é uma referência ao formulário de tabela do host (já que os componentes não podem ter tabelas).
 
-## Uso de tabelas e campos
+### Uso de tabelas e campos
 
 Um componente não pode usar as tabelas e os campos definidos na estrutura 4D do projeto de matriz. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Pode criar e gerenciar bancos de dados externos usando SQL. Mas pode criar e usar bancos de dados externos e então usar suas tabelas e campos de acordo com suas necessidades. Usar um banco externo significa designar temporariamente esse banco de dados como o banco atual, em outras palavras, o banco alvo para as pesquisas SQL executadas por 4D. Você cria bancos de dados externos usando o comando SQL `CREATE DATABASE`.
 
@@ -418,7 +418,7 @@ Lendo de um banco externo:
  End SQL
 ```
 
-## Uso de formulários
+### Uso de formulários
 
 - Só os "formulários projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente. Só os "formulários de projeto" (formulários que não estejam associados a nenhuma tabela específica) podem ser utilizados em um componente.
 - Um componente pode chamar formulários tabela do projeto host. Note que nesse caso é necessário usar ponteiros ao invés de nomes de tabelas entre colchetes [] para especificar os formulários no código do componente.
@@ -429,7 +429,7 @@ Lendo de um banco externo:
 
 > No contexto de um componente, qualquer formulário projeto referenciado deve pertencer a esse componente. Por exemplo, dentro de um componente, a referência a um formulário do projeto host usando `DIALOG` ou `Open form window` gerará um erro.
 
-## Uso de recursos
+### Uso de recursos
 
 Os componentes podem usar recursos localizados na pasta Resources do componente.
 
@@ -437,7 +437,7 @@ Os mecanismos automáticos estão operacionais: os arquivos XLIFF encontrados na
 
 Em um projeto host contendo um ou mais componentes, cada componente, bem como os projetos de host tem sua própria "string de recursos." Os recursos são particionados entre os diferentes projetos: não é possível acessar os recursos do componente A do componente B ou do projeto de host.
 
-## Execução de código de inicialização
+### Execução de código de inicialização
 
 Um componente pode executar o código 4D automaticamente ao abrir ou fechar o banco de dados do host, por exemplo, para carregar e/ou salvar as preferências ou os estados do usuário relacionados à operação do banco de dados do host.
 
@@ -445,7 +445,7 @@ A execução do código de inicialização ou fechamento é feita por meio do m�
 
 > Por motivos de segurança, você deve autorizar explicitamente a execução do método de banco de dados `On Host Database Event` no banco de dados do host para poder chamá-lo. Para fazer isso, você deve marcar a opção [**Executar o método "On Host Database Event" dos componentes**](../settings/security.md#options) na página Segurança das Configurações.
 
-## Info.plist
+### Info.plist
 
 Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components).
 
@@ -494,7 +494,7 @@ On macOS, information is available from the finder:
 
 ![](../assets/en/Develop/infoplist-component.png)
 
-## Proteção dos componentes: compilação
+### Proteção dos componentes: compilação
 
 Por padrão, todo o código de um projeto de matriz instalado como um componente é potencialmente visível no projeto host. Em particular:
 
@@ -507,7 +507,7 @@ Para proteger o código de um componente de forma eficaz, basta [compilar e cons
 - Os métodos, as classes e as funções do projeto compartilhado podem ser chamados nos métodos do projeto host e também ficam visíveis na página Métodos do Explorer. No entanto, seu conteúdo não aparecerá na área de visualização e no depurador.
 - Os outros métodos projeto do projeto matriz nunca aparecerão.
 
-## Sharing your components on GitHub
+### Sharing your components on GitHub
 
 Nós encorajamos você a apoiar a comunidade de desenvolvedores 4D compartilhando seus componentes, de preferência na [plataforma GitHub](https://github.com/topics/4d-component). Recomendamos que você use o tópico **`4d-component`** para ser referenciado corretamente.
 
