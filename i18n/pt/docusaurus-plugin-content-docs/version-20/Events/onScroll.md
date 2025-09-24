@@ -14,7 +14,7 @@ Esse evento pode ser gerado no contexto de uma entrada imagem ou de um list box.
 
 Esse evento é acionado após qualquer outro evento do usuário relacionado à ação de rolagem ([On Clicked](onClicked.md), [On After Keystroke](onAfterKeystroke.md), etc.). O evento só é gerado no método objeto (não no método formulário).
 
-O evento é acionado quando a rolagem é o resultado de uma ação do usuário: usando as barras de rolagem e/ou cursores, usando a roda do mouse ou do [teclado](FormObjects/properties_Appearance.md#vertical-scroll-bar). Ele não é gerado quando o objeto é rolado devido à execução do comando `OBJECT SET SCROLL POSITION`.
+O evento é acionado quando a rolagem é o resultado de uma ação do usuário: usando as barras de rolagem e/ou cursores, usando a roda do mouse ou do [teclado](FormObjects/properties_Appearance.md#vertical-scroll-bar). It is not generated when the object is scrolled due to the execution of the [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command.
 
 
 ### Entrada de imagem

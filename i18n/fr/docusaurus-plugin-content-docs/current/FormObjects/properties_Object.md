@@ -76,7 +76,7 @@ Voici la liste des objets dont la valeur peut être mémorisée :
 
 ---
 
-## Variable ou expression
+## Variable or Expression {#variable-or-expression}
 
 > Voir également **[Expression](properties_DataSource.md#expression)** pour les colonnes de list box de type sélection et collection.
 

@@ -122,7 +122,7 @@ Puede crear dos tipos de objetos:
 
 
 
-## Propiedades
+## Propiedades {#properties}
 
 Se accede a los valores de las propiedades de los objetos a través de una cadena de tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 

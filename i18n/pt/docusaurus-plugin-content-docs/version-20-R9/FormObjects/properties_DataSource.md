@@ -67,7 +67,7 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 ---
 
-## Item atual
+## Current item {#current-item}
 
 `List box de tipo collection ou entity selection`
 
@@ -87,7 +87,7 @@ Especifica uma variável ou expressão a que será atribuído o elemento/entidad
 
 ---
 
-## Posição item atual
+## Current item position {#current-item-position}
 
 `List box de tipo collection ou entity selection`
 
@@ -287,7 +287,7 @@ A utilização deste bem exige o cumprimento dos seguintes princípios:
 
 ---
 
-## Itens selecionados
+## Selected Items {#selected-items}
 
 `List box de tipo collection ou entity selection`
 

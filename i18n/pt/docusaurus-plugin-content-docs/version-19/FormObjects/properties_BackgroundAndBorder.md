@@ -42,7 +42,7 @@ No caso de uma caixa de listagem, por padrão, *Automático* é selecionado: a c
 
 ---
 
-## Expressão cor de fundo
+## Expressão cor de fundo {#background-color-expression}
 
 `List box de tipo coleção e seleção de entidades`
 
@@ -157,7 +157,7 @@ Designa a espessura de uma linha.
 
 ---
 
-## Array controle linha
+## Array controle linha {#row-background-color-array}
 
 `List box de tipo array`
 

@@ -1,15 +1,17 @@
 ---
 id: components
-title: Componentes
+title: Dependencies
 ---
 
-Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. Por exemplo, o componente [4D SVG](https://github.com/4d/4D-SVG) adiciona comandos avançados e um mecanismo de renderização integrado que pode ser usado para exibir arquivos SVG.
+A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você pode fornecer funcionalidades adicionais aos seus projetos 4D instalando [**componentes**](Concepts/components.md) e [**plug-ins**](Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
 
 Você pode [desenvolver](../Extensions/develop-components.md) e [construir](../Desktop/building.md) seus próprios componentes 4D, ou baixar componentes públicos compartilhados pela comunidade 4D que [podem ser encontrados no GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
-Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma transparente no seu computador ou em um repositório do Github.
+Once installed in your 4D environment, extensions are handled as **dependencies** with specific properties.
 
 ## Componentes interpretados e compilados
+
+Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma transparente no seu computador ou em um repositório do Github.
 
 Componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
@@ -31,7 +33,22 @@ A arquitetura da pasta "Contents" é recomendada para componentes, se você dese
 
 :::
 
-## Carregando componentes
+## Components made by 4D
+
+4D proposes a set of components developed in-house. If you want to use one of them, you need to download and install it from the [4D github repository](https://github.com/4d) automatically using the [Dependency manager](#monitoring-project-dependencies).
+
+| Componente                                                           | Descrição                                                                                                                                                             | Principais funcionalidades                                                                                                              |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [4D AiIKit](https://github.com/4d/4D-AIKit)                          | Set of classes to connect to third-party OpenAI APIs                                                                                                                  | `OpenAIChat`, `OpenAIImage`...                                                          |
+| [4D Labels](https://github.com/4d/4D-Labels)                         | Componente interna necessária para construir modelos de etiquetas                                                                                                     |                                                                                                                                         |
+| [4D NetKit](https://developer.4d.com/4D-NetKit)                      | Set of web service tools to connect to third-party APIs                                                                                                               | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
+| [4D Progress](https://github.com/4d/4D-Progress)                     | Abrir uma ou mais barras de progresso na mesma janela                                                                                                                 | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
+| [4D SVG](https://github.com/4d/4D-SVG)                               | Criar e manipular objetos gráficos svg comuns                                                                                                                         | `SVGTool_Display_viewer`, métodos múltiples `SVG_`                                                                                      |
+| [4D ViewPro](ViewPro/getting-started.md)                             | Funcionalidades de folha de cálculo nos seus formulários                                                                                                              | Ver la [documentación 4D View Pro](ViewPro/getting-started.md)                                                                          |
+| [4D Widgets](https://github.com/4d/4D-Widgets)                       | Gerir os widgets DatePicker, TimePicker, SearchPicker 4D                                                                                                              | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
+| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro palettes](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) and [table wizard](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
+
+## Component Locations
 
 :::note
 
@@ -501,7 +518,7 @@ A versão atual da dependência do GitHub é exibida no lado direito do item de 
 
 #### Modificar o intervalo de versões de dependência do GitHub
 
-Você pode modificar a [configuração da versão](#defining-a-github-dependency-version-range) para uma dependência listada no GitHub: selecione a dependência para modificar e selecione **Modificar a dependência. .** do menu contextual. Na caixa de diálogo "Modificar a dependência", edite o menu da Regra de dependência e clique em **Aplicar**.
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
 
 Modificar o intervalo de versão é útil, por exemplo, se você usar o recurso de atualização automática e deseja bloquear a dependência de um número de versão específico.
 

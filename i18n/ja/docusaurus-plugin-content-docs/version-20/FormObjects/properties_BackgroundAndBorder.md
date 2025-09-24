@@ -46,7 +46,7 @@ title: 背景色と境界線
 
 ---
 
-## 背景色式
+## 背景色式 {#background-color-expression}
 
 `セレクションとコレクション型リストボックス`
 
@@ -161,7 +161,7 @@ title: 背景色と境界線
 
 ---
 
-## 行背景色配列
+## 行背景色配列 {#row-background-color-array}
 
 `配列型リストボックス`
 

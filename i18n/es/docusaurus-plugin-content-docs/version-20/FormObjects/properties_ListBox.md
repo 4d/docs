@@ -75,7 +75,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 
 ---
-## Conjunto resaltado
+## Conjunto resaltado {#highlight-set}
 
 `List box del tipo selección`
 
@@ -174,7 +174,7 @@ Define el número de columnas del list box.
 
 
 ---
-## Array de control de líneas
+## Array de control de líneas {#row-control-array}
 
 `List box de tipo array`
 

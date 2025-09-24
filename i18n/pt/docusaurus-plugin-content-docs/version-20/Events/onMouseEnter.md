@@ -14,7 +14,7 @@ Esse evento é gerado uma vez, quando o cursor do mouse entra na área gráfica 
 
 O evento `On Mouse Enter` atualiza as variáveis do sistema *MouseX* e *MouseY*.
 
-Objetos tornados invisíveis usando o comando `OBJECT SET VISIBLE` ou a propriedade [Visibility](FormObjects/properties_Display.md#visibility) não geram este evento.
+Objects that are made invisible using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
 
 
 ### Chamar a pilha

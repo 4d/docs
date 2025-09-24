@@ -45,7 +45,7 @@ Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB CO
 
 ---
 
-## Expressão cor de fundo
+## Background Color Expression {#background-color-expression}
 
 `List box de tipo coleção e seleção de entidades`
 
@@ -162,7 +162,7 @@ Designa a espessura de uma linha.
 
 ---
 
-## Array controle linha
+## Row Background Color Array {#row-background-color-array}
 
 `List boxes de tipo array`
 

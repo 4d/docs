@@ -240,7 +240,7 @@ Foreground color;Dark shadow color)
 
 ---
 
-## Expression style
+## Style Expression {#style-expression}
 
 `Selection and collection/entity selection type list boxes`
 
@@ -467,7 +467,7 @@ En plus des [zones de texte statiques](text.md), les objets de texte des [zones 
 
 ---
 
-## Tableau couleurs de police
+## Row Font Color Array {#row-font-color-array}
 
 `List box de type tableau`
 
@@ -491,7 +491,7 @@ Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tabl
 
 ---
 
-## Tableau de styles
+## Row Style Array {#row-style-array)
 
 `List box de type tableau`
 

@@ -42,7 +42,7 @@ En el caso de un list box, por defecto se selecciona *Automático*: la columna u
 
 ---
 
-## Expresión color de fondo
+## Expresión color de fondo {#background-color-expression}
 
 `List box de tipo colección y de tipo selección de entidades`
 
@@ -157,7 +157,7 @@ Designa el grosor de una línea.
 
 ---
 
-## Array colores de fondo
+## Array colores de fondo {#row-background-color-array}
 
 `List box de tipo array`
 

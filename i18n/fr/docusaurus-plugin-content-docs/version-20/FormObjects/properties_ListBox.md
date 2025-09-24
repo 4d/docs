@@ -75,7 +75,7 @@ Pour les deux dernières actions, l'événement formulaire " `On Open Detail` es
 
 
 ---
-## Ensemble surlignage
+## Ensemble surlignage {#highlight-set}
 
 `List box sélection`
 
@@ -174,7 +174,7 @@ Définit le nombre de colonnes de la list box.
 
 
 ---
-## Tableau de contrôle des lignes
+## Tableau de contrôle des lignes {#row-control-array}
 
 `List box tableau`
 
