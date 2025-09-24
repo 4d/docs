@@ -114,7 +114,7 @@ Pode criar dois tipos de objetos:
 - objetos compartilhados, usando o comando [`New shared object`](../commands-legacy/new-shared-object.md). Estes objetos podem ser compartidos entre processos, incluidos os threads preemptivos. O acesso a esses objetos é controlado pelas estruturas `Use...End use`.
   Para obter mais informações, consulte a seção [Objetos e coleções compartilhados](shared.md).
 
-## Propriedades
+## Properties {#properties}
 
 Você acessa os valores de propriedade do objeto por meio de uma cadeia de tokens. As propriedades do objeto podem ser acessadas de duas maneiras:
 

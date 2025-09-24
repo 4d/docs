@@ -203,7 +203,7 @@ Foreground color;Dark shadow color)
 
 ---
 
-## スタイル式
+## スタイル式 {#style-expression}
 
 `セレクションおよびコレクション/エンティティセレクション型のリストボックス`
 
@@ -407,7 +407,7 @@ End if
 
 ---
 
-## 行フォントカラー配列
+## 行フォントカラー配列 {#row-font-color-array}
 
 `配列型リストボックス`
 
@@ -427,7 +427,7 @@ End if
 
 ---
 
-## 行スタイル配列
+## Row Style Array {#row-style-array)
 
 `配列型リストボックス`
 

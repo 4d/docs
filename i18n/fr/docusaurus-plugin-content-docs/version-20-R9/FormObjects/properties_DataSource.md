@@ -67,7 +67,7 @@ Liste de valeurs statiques à utiliser comme étiquettes pour l'objet onglet.
 
 ---
 
-## Élément courant
+## Current item {#current-item}
 
 `Listbox de type collection ou entity selection`
 
@@ -87,7 +87,7 @@ Indique une variable ou une expression qui se verra attribuer l'élément/l'enti
 
 ---
 
-## Position élément courant
+## Current item position {#current-item-position}
 
 `Listbox de type collection ou entity selection`
 
@@ -291,7 +291,7 @@ L'utilisation de cette propriété nécessite le respect des principes suivants 
 
 ---
 
-## Eléments sélectionnés
+## Selected Items {#selected-items}
 
 `Listbox de type collection ou entity selection`
 

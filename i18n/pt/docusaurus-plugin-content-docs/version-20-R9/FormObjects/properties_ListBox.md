@@ -74,7 +74,7 @@ Para as duas últimas ações, o evento do formulário `On Open Detail` também 
 
 ---
 
-## Ressaltar conjunto
+## Highlight Set {#highlight-set}
 
 `List box do tipo selecção`
 
@@ -168,7 +168,7 @@ Define o número de colunas do list box.
 
 ---
 
-## Array controle linha
+## Row Control Array {#row-control-array}
 
 `List box do tipo array`
 

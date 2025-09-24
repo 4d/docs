@@ -42,7 +42,7 @@ Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la col
 
 ---
 
-## Expression couleur de fond
+## Expression couleur de fond {#background-color-expression}
 
 `List box de type collection et de type sélection d'entité`
 
@@ -157,7 +157,7 @@ Désigne l'épaisseur d'une ligne.
 
 ---
 
-## Tableau couleurs de fond
+## Tableau couleurs de fond {#row-background-color-array}
 
 `List box de type tableau`
 

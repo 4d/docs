@@ -114,7 +114,7 @@ Puede crear dos tipos de objetos:
 - objetos compartidos, utilizando el comando [`New shared object`](../commands-legacy/new-shared-object.md). Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos. Estos objetos pueden ser compartidos entre procesos, incluidos los hilos apropiativos.
   Para más información, consulte la sección [Objetos y colecciones compartidos](shared.md).
 
-## Propiedades
+## Properties {#properties}
 
 Se accede a los valores de las propiedades de los objetos a través de una cadena de tokens. Se puede acceder a las propiedades de los objetos de dos maneras:
 

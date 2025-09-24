@@ -3,7 +3,35 @@ id: creating
 title: Créer ou ouvrir un projet
 ---
 
+## Project overview
+
 Les projets 4D sont créés et développés à l'aide de l'application **4D**, qui constitue un environnement de développement intégré (IDE) complet. **4D Server** peut également créer des projets vides.
+
+Un projet 4D contient l'intégralité du code source d'une application 4D, quel que soit son type de déploiement (web, mobile ou desktop), de la structure de la base de données à l'interface utilisateur, en passant par le code, les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise. Un projet 4D est principalement constitué de fichiers texte.
+
+### Fichiers du projet
+
+Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D (4D ou 4D Server). Un projet 4D contient l'intégralité du code source d'une application 4D, quel que soit son type de déploiement (web, mobile ou desktop), de la structure de la base de données à l'interface utilisateur, en passant par le code, les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise.
+
+Les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.
+
+De plus, les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code. Les projets sont organisés en interne dans des [fichiers et dossiers](../Project/architecture.md).
+
+### Développement
+
+Les projets 4D sont développés à l'aide de l'application **4D**. Elle fournit un Environnement de Développement Intégré (IDE) pour les projets 4D ainsi qu'un serveur web, un générateur d'application mobile, et un environnement d'exécution d'application, permettant de développer, tester et déboguer le projet.
+
+Le développement multi-utilisateur est géré via des outils de **source control** standard (Perforce, Git, SVN, etc.), permettant aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
+
+### Déploiement
+
+Les fichiers du projet peuvent être [compilés](../Project/compiler.md) et facilement déployés. 4D vous permet de créer trois types d'applications à partir de vos projets :
+
+- des applications [web](WebServer/webServer.md),
+- [desktop](Desktop/building.md) applications (client/server or single-user),
+- [mobile](https://developer.4d.com/go-mobile/) applications.
+
+Les applications back end peuvent être déployées à l'aide de 4D Server, 4D ou [fusionnées avec 4D Volume Desktop](../Desktop/building.md).
 
 ## Créer un projet
 
@@ -14,8 +42,8 @@ Pour créer un nouveau projet :
 1. Lancez 4D ou 4D Server.
 
 2. Effectuez l'une des opérations suivantes :
-   - Sélectionnez **Nouveau > Projet...** dans le menu **Fichier** : ![](../assets/en/getStart/projectCreate1.png)
-   - (uniquement pour 4D) Sélectionnez **Projet...** dans le bouton de la barre d'outils **Nouveau** :<p>![](../assets/en/getStart/projectCreate2.png)</p>Une boîte de dialogue **Enregistrer** standard apparaît afin que vous puissiez choisir le nom et l'emplacement du dossier principal du projet 4D.
+   - Sélectionnez **Nouveau > Projet...** dans le menu **Fichier** : ![](../assets/en/getStart/projectCreate-1.png)
+   - (uniquement pour 4D) Sélectionnez **Projet...** dans le bouton de la barre d'outils **Nouveau** :<p>![](../assets/en/getStart/projectCreate-2.png)</p>Une boîte de dialogue **Enregistrer** standard apparaît afin que vous puissiez choisir le nom et l'emplacement du dossier principal du projet 4D.
 
 3. Saisissez le nom du dossier de projet et cliquez sur **Sauvegarder**. Ce nom sera utilisé :
 
