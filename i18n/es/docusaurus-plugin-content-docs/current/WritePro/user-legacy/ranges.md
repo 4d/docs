@@ -2,7 +2,7 @@
 id: ranges
 title: Rangos
 displayed_sidebar: docs
-slug: /WritePro/user/ranges
+slug: /WritePro/ranges
 ---
 
 

@@ -2,6 +2,7 @@
 id: defining-a-4d-write-pro-area
 title: Configuring 4D Write Pro areas
 displayed_sidebar: docs
+slug: /WritePro/configuring-4d-write-pro-areas
 ---
 
 

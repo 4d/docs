@@ -2,7 +2,7 @@
 id: text-boxes
 title: Text boxes
 displayed_sidebar: docs
-slug: /WritePro/user/text-boxes
+slug: /WritePro/text-boxes
 ---
 
 

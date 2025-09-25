@@ -2,7 +2,7 @@
 id: ranges
 title: Faixas
 displayed_sidebar: docs
-slug: /WritePro/user/ranges
+slug: /WritePro/ranges
 ---
 
 

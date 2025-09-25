@@ -1,6 +1,7 @@
 ---
 id: writeprointerface
 title: Interface 4D Write Pro
+slug: /WritePro/write-pro-interface
 ---
 
 4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.

@@ -2,23 +2,22 @@
 id: importing-and-exporting-in-docx-format
 title: Exporter au format docx
 displayed_sidebar: docs
+slug: /WritePro/importing-and-exporting-in-docx-format
 ---
-
-#### 
 
 4D Write Pro peut à la fois importer et exporter des documents au format .docx. Ce format est pris en charge par les applications de traitement de texte telles que Microsoft Word.
 
 **Note de compatibilité :** La prise en charge des documents 4D Write Pro exportés au format .docx est uniquement certifiée pour Microsoft Word 2010 et les versions plus récentes. Les anciennes versions, notamment Microsoft Word 2007, sont susceptibles de ne pas pouvoir ouvrir les documents.
 
-#### Comment importer au format .docx 
+## Comment importer au format .docx 
 
 Les documents au format .docx peuvent être importés dans 4D Write Pro avec la commande [WP Importer document](../commands/wp-importer-document). Pour plus d'informations, reportez-vous à la description de cette commande.
 
-##### Changements de comportement 
+### Changements de comportement 
 
 Si la majorité des paramètres .docx sont conservés, certains paramètres sont connus pour être non pris en charge ou pour se comporter différemment dans 4D Write Pro. Il s'agit des paramètres suivants :
 
-###### Alignement / Configuration 
+#### Alignement / Configuration 
 
 | **Paramètre**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -26,26 +25,26 @@ Si la majorité des paramètres .docx sont conservés, certains paramètres sont
 | Paragraph layout    | Seules les mises en page de texte occidental sont prises en charge. Les styles de paragraphe distribués, thaïlandais et asiatiques ne sont pas pris en charge.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Page Size           | Les différentes tailles de page par section ne sont pas prises en charge. Seule la taille de la page de la première section est importée.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-###### Arrière-plan 
+#### Arrière-plan 
 
 | **Paramètre** | **Description**    |
 | ------------- | ------------------ |
 | Watermark     | Non pris en charge |
 
-###### Expressions 
+#### Expressions 
 
 | **Paramètre**     | **Description**                                        |
 | ----------------- | ------------------------------------------------------ |
 | MS Word equations | Non pris en charge. Les données ne sont pas importées. |
 | MS Word charts    | Non pris en charge. Les données ne sont pas importées. |
 
-###### Listes 
+#### Listes 
 
 | **Paramètre**      | **Description**                                                                                                                                                                                     |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Hierarchical lists | Les listes à plusieurs niveaux ne sont pas prises en charge. Elles sont converties en listes à un seul niveau, de sorte que l'apparence et/ou la numérotation des listes puissent être différentes. |
 
-###### Images 
+#### Images 
 
 | **Paramètre**        | **Description**                                                                                                                                     |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,33 +53,33 @@ Si la majorité des paramètres .docx sont conservés, certains paramètres sont
 | 3D models            | Non pris en charge, mais la dernière image 2D rendue par le modèle 3D peut être importée si elle est présente dans le fichier .docx.                |
 | SmartArt             | Non pris en charge.                                                                                                                                 |
 
-###### Références 
+#### Références 
 
 | **Paramètre** | **Description**                          |
 | ------------- | ---------------------------------------- |
 | Comments      | Non pris en charge. Contenu non importé. |
 | Footnotes     | Non pris en charge. Contenu non importé. |
 
-###### Espacement 
+#### Espacement 
 
 | **Paramètre**           | **Description**                                                                                           |
 | ----------------------- | --------------------------------------------------------------------------------------------------------- |
 | "At least" line spacing | Non pris en charge. L'espacement "at least" entre les lignes est converti en un espacement fixe (simple). |
 | Fit text                | Non pris en charge. Le style 4D Write Pro normal est utilisé.                                             |
 
-###### Tableaux 
+#### Tableaux 
 
 | **Paramètre** | **Description**                                          |
 | ------------- | -------------------------------------------------------- |
 | Tables        | Les tableaux contigus ne fusionnent pas automatiquement. |
 
-###### Texte 
+#### Texte 
 
 | **Paramètre** | **Description**                                                                                                                                                                                                                                                              |
 | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Themes        | Les thèmes de texte ne sont pas importés. Si la définiton d'une couleur ou d'une police fait référence à une couleur ou à une police dans un thème, la dernière couleur ou police calculée sera utilisée. Sinon, la couleur ou la police définie dans le thème est utilisée. |
 
-##### Journal d'import 
+### Journal d'import 
 
 Lors de l'import au format .docx dans 4D Write Pro, un objet journal est créé et inclus dans l'objet document importé. Cet objet peut être récupéré via l'attribut personnalisé "importLog" (ou la constante wk import log) :
 
@@ -98,7 +97,7 @@ L'objet journal d'import contient les propriétés suivantes :
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | wk import log | Objet log contenant des informations sur l'opération d'import .docx. Les propriétés sont en lecture seule et ne peuvent pas être définies :  <table> <tbody> <tr> <td>**Propriété**</td> <td> </td> <td>**Type**</td> <td>**Description**</td> </tr> <tr> <td>status</td> <td> </td> <td>Texte</td> <td>Statut de l'import :<br/> successful - le document est importé dans 4D Write Pro failed - an empty 4D Write Pro document is returned  </td> </tr> <tr> <td>developer</td> <td> </td> <td>Collection</td> <td>Collection d'objet(s) message pour les développeurs 4D Write Pro.</td> </tr> <tr> <td> </td> <td>\[ \].type</td> <td>Texte</td> <td>Le type de message enregistré :<br/> info warning error  </td> </tr> <tr> <td> </td> <td>\[ \].message</td> <td>Texte</td> <td>Message concernant l'opération d'import.</td> </tr> <tr> <td>user</td> <td> </td> <td>Collection</td> <td>Collection d'objet(s) message pour les utilisateurs de 4D Write Pro.. </td> </tr> <tr> <td> </td> <td>\[ \].type</td> <td>Texte</td> <td>Le type de message enregistré :<br/> info warning  </td> </tr> <tr> <td> </td> <td>\[ \].messageShort</td> <td>Texte</td> <td>Court message sur l'opération d'import.</td> </tr> <tr> <td> </td> <td>\[ \].messageLong</td> <td>Texte</td> <td>Long message sur l'opération d'import.</td> </tr> </tbody> </table> **Attention :** *importLog* est un attribut personnalisé, la constante wk import log ne peut donc pas être utilisée par les commandes [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs), [WP LIRE ATTRIBUTS](../commands/wp-lire-attributs) ou [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs) (pour plus d'informations, voir *Utiliser des attributs personnalisés*). |
 
-#### Exporter au format .docx 
+## Exporter au format .docx 
 
 Les objets 4D Write Pro permettent d'exporter des documents 4D Write Pro au format .docx de deux manières :
 
@@ -107,11 +106,11 @@ Les objets 4D Write Pro permettent d'exporter des documents 4D Write Pro au form
 
 Pour plus d'informations, veuillez lire la description de ces commandes.
 
-##### Changements de comportement 
+### Changements de comportement 
 
 Si la majorité des paramètres 4D Write Pro sont maintenus, certains ne sont pas pris en charge ou fonctionnent différemment dans Microsoft Word. Il s'agit des paramètres suivants :
 
-###### Alignement / Configuration 
+#### Alignement / Configuration 
 
 | **Paramètre**                                                                                                             | **Paragraphes**                                                                                                                                                                                                                                                                              | **Sections**                                                                                        | **Images** |
 | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ---------- |
@@ -119,7 +118,7 @@ Si la majorité des paramètres 4D Write Pro sont maintenus, certains ne sont pa
 | Les zones de texte ancrées dans la zone intégrée ne sont pas exportées. Le rendu peut être différent dans Microsoft Word. |                                                                                                                                                                                                                                                                                              |                                                                                                     |            |
 | Alignement vertical                                                                                                       | Non pris en charge par Microsoft Word (tous les éléments seront alignés en haut)                                                                                                                                                                                                             | Non pris en charge pour les images en ligne (tous les éléments seront alignés sur la ligne de base) |            |
 
-###### Fond 
+#### Fond 
 
 | Paramètre                  | **Paragraphes**                                                                                                                   | **Sections**                                                                                                       | **Images**                                                                                                                                       |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -129,7 +128,7 @@ Si la majorité des paramètres 4D Write Pro sont maintenus, certains ne sont pa
 | Origine du fond            | La zone d'origine prend la même valeur que celle de la zone de clipping du fond.                                                  | Non prise en charge par Microsoft.                                                                                 |                                                                                                                                                  |
 
   
-###### Bordures 
+#### Bordures 
 
 | **Paramètre**                         | **Paragraphes**                                                                                                                                                                                                                | **Sections**                                                                                             | **Images** |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- | ---------- |
@@ -137,52 +136,52 @@ Si la majorité des paramètres 4D Write Pro sont maintenus, certains ne sont pa
 | Rayon de bordure (bordures arrondies) | Non pris en charge par Microsoft Word                                                                                                                                                                                          |                                                                                                          |            |
 | Largeur de bordure                    | La largeur maximale sous Microsoft Word est de 12pt; la taille des bordures dépassant 12 pt sera réduite.                                                                                                                      | La largeur maximale sous Microsoft Word est de 12pt, la taille des bordures dépassant 12pt sera réduite. |            |
 
-###### Expressions 
+#### Expressions 
 
 | **Paramètre** | **Paragraphes**                                                                                                                                                                                                                                                                                                 | **Sections** | **Images** |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------- |
 | Expressions   | Seules les expressions simples de 4D telles que "Date du jour" ou "Heure courante", ou les variables locales propres à 4D Write Pro ($wp\_title, $wp\_pageNumber, etc.) sont converties en champs Microsoft Word. Les autres expressions 4D sont calculées et converties en texte ou en images durant l'export. |              |            |
 
-###### Listes 
+#### Listes 
 
 | **Paramètre**        | **Paragraphes**                                                                                                                       | **Sections** | **Images** |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------- |
 | Indentation          | Indentation à zéro pour les éléments de liste (Microsoft Word convertit l'indentation pour les éléments de liste en retrait suspendu) |              |            |
 | Type liste numérotée | Greek, Armenian et Georgian sont convertis en décimaux et les hiragana sont convertis en katakana dans Microsoft Word.                |              |            |
 
-###### Images 
+#### Images 
 
 | **Paramètre** | **Paragraphes**                                                                                  | **Sections** | **Images** |
 | ------------- | ------------------------------------------------------------------------------------------------ | ------------ | ---------- |
 | SVG           | Non pris en charge par Microsoft Word (les images au format SVG seront converties au format PNG) |              |            |
 
-###### Tailles 
+#### Tailles 
 
 | Paramètre                  | **Paragraphes**                                                                             | **Sections** | **Images** |
 | -------------------------- | ------------------------------------------------------------------------------------------- | ------------ | ---------- |
 | Hauteur minimale           | Non prise en charge par Microsoft Word (la hauteur est gérée automatiquement)               |              |            |
 | Largeur / Largeur minimale | Non prise en charge par Microsoft Word (la largeur du paragraphe est gérée automatiquement) |              |            |
 
-###### Espacement 
+#### Espacement 
 
 | **Paramètre**      | **Paragraphes**                                                                                                                           | **Sections**                                                                                                                              | **Images** |
 | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | Marges intérieures | La taille maximale des marges intérieures dans Microsoft Word est de 31pt ; la taille des marges intérieures dépassant 31pt sera réduite. | La taille maximale des marges intérieures sous Microsoft Word est de 31pt ; la taille des marges intérieures dépassant 31pt sera réduite. |            |
 
-###### Tableaux 
+#### Tableaux 
 
 | **Fonctionnalité**                         | **Description** |
 | ------------------------------------------ | --------------- |
 | Carry-over rows (lignes à reporter en bas) | Non exporté.    |
 
-###### Tabulations 
+#### Tabulations 
 
 | **Paramètre**         | **Paragraphes**                                                                                                                                             | **Sections** | **Images** |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------- |
 | Tabulation par défaut | Non prise en charge par Microsoft Word (seront convertis en tabulations absolues)                                                                           |              |            |
 | Caractères de suite   | Microsoft Word prend en charge les caractères de suite "point" (...), "tiret" (---), et "tiret bas" (\_\_\_) ; tous les autres seront convertis en "aucun". |              |            |
 
-###### Texte 
+#### Texte 
 
 | Paramètre           | **Paragraphes**                                                                                                                                                    | **Sections**                                                                                                           | **Images** |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- | ---------- |

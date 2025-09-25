@@ -2,6 +2,7 @@
 id: handling-tables
 title: Tables
 displayed_sidebar: docs
+slug: /WritePro/tables
 ---
 
 

@@ -1,10 +1,9 @@
 ---
 id: handling-tables
-title: Gerenciar tabelas
+title: Tabelas
 displayed_sidebar: docs
+slug: /WritePro/tables
 ---
-
-#### Gerenciar tabelas 
 
 Os documentos 4D Write Pro podem conter tabelas. As tabelas 4D Write Pro sãoi criadas e definidas por programação, mas seu conteúdo pode ser modificado e manejado pelo usuário. Vários atributos de tabelas 4D Write Pro são editáveis incluindo a altura da fila, o alinhamento, as margens, o estilo de texto, a cor ou as bordas.
 
@@ -12,14 +11,14 @@ Os documentos 4D Write Pro podem conter tabelas. As tabelas 4D Write Pro sãoi c
 
 **Nota:** Desde o 4D Write pro, as tabelas podem ser preenchidas por programação. Elas podem conter um grande número de colunas e linhas. Lembre-se que tabelas muito grandes podem impactar o rendimento, especialmente se forem exibidas na tela. Veja este [artigo](https://blog.4d.com/4d-write-pro-tables-without-limit) para saber mais.
 
-#### Criar uma tabela 
+## Criar uma tabela 
 
 As tabelas 4D Write Pro são criadas mediante uma chamada ao comando [WP Table append row](../commands/wp-table-append-row). Depois pode adicionar filas utilizando o comando .
 
 **Nota:** um usuário pode criar uma tabela ao copiar e colar um seleção de células:  
 ![](../../assets/en/WritePro/pict3307941.EN.png)
 
-#### Editar tabelas 
+## Editar tabelas 
 
 Conteúdos de células podem ser adicionados por programação usando o comando [WP Table append row](../commands/wp-table-append-row).
 
@@ -47,7 +46,7 @@ Quando atributos diferentes são aplicados a elementos concorrentes de uma tabel
 2. Linhas são renderizadas (sobrepujando atributos de tabela)
 3. Células ou colunas são renderizadas (sobrepujando atributos de linha).
 
-##### Redimensionar colunas 
+### Redimensionar colunas 
 
 A largura de colunas tabelas podem ser modificadas arrastando o separador de colunas para a esquerda ou direita. O cursor muda para indicar que pode ser movido horizontalmente e uma linha vertical é mostrada na régua: 
 
@@ -65,7 +64,7 @@ Se apertar a tecla **Shift** enquanto redimensiona uma coluna, o tamanho da colu
   
 **Nota**: A propriedade Editável pode ser ativada para o documento 4D Write Pro para permitir o redimensionamento de coluna.
 
-##### Fundir e separar células 
+### Fundir e separar células 
 
 Com 4D Write Pro, pode dividir e combinar células em uma tabela. Fusionar células é combinar duas ou mais células adjacentes de uma tabela situadas na mesma linha ou coluna em uma única célula. Dividir células é tomar células já fusionadas e separá-las em múltiplas células adjacentes na mesma linha ou coluna. As células podem ser fusiconadas usando o comando [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) ou a ação paddrão **cell/merge**, e ser divididas utilizando o comando [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) ou a ação padrão **cell/split**.
 
@@ -156,7 +155,7 @@ e terá o mesmo resultado que utilizando $cell1 porque $cell1, $cell2, e $cell3 
 
 Entretanto, se forem combinadas um número x de línhas ou colunas completas, os índices das seguintes línhas ou colunas se reduzem em x.
 
-#### Paginação de Tabelas 
+## Paginação de Tabelas 
 
 Quando exibido em modos Page ou Draft (ou no contexto de impressão de documento), tabelas 4D Write Pro podem se dividir:
 
@@ -190,7 +189,7 @@ Só as tabelas no corpo de um documento podem ser divididas. Os cortes inseridos
 Tabelas não podem ser quebradas em diferentes seções. Inserir uma quebra de seção em uma tabela vai mover a tabela inteira para a nova seção  
 Os saltos dentro das linhas não estão permitidos quando estiver ativados as *Linhas Carry-over*
 
-#### Cabeçalho repetido 
+## Cabeçalho repetido 
 
 4D Write Pro lhe permite definir até cinco linhas de cabeçalho por tabela. As linhas de cabeçalho selecionadas se repetirão em cada coluna ou página quando ocorrer uma quebra de coluna ou de página.
 
@@ -203,7 +202,7 @@ Os cabeçalhos da tabela são as primeiras linhas da tabela. Para definir as lin
 
 Se designar mais de cinco linhas como cabeçalho (ou se resultar de uma inserção de linhas em um cabeçalho existente), 4D Write Pro só utiliza as cinco primeiras linhas como cabeçalho. Se eliminar as linhas definidas no cabeçalho, o número de linhas do cabeçalho diminui.
 
-#### Table datasource 
+## Table datasource 
 
 Pode atribuir um objeto fórmulaa como fonte de dados para uma tabela e acessar os valores resultantes desde a tabela usando *Expressões com This* (ver abaixo). a fórmula da fonte de dados é processada por 4D Write Pro quando se calculam as fórmulas (por exemplo, quando abrir o documento, quando chamar ao comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). Esta função aproveita os contextos de dados (ver [WP SET DATA CONTEXT](../commands/wp-set-data-context)).
 
@@ -224,7 +223,7 @@ Para eliminar uma fonte de dados de uma tabela, utilize o comando [WP RESET ATTR
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-##### Fazer uma tabela com um datasource 
+### Fazer uma tabela com um datasource 
 
 Um design da tabela baseado em uma fonte de dados que contém as linhas abaixo:
 
@@ -249,7 +248,7 @@ Em qualquer caso, a intrução abaixo devolve o número real de linhas:
  WP GET ATTRIBUTES($table;wk row count;$vcount) //24 para o exemplo anterior
 ```
 
-##### Linhas Carry-over 
+### Linhas Carry-over 
 
 As tabelas baseadas em fontes de dados são compatíveis com linhas de arraste inferiores (carry over) que são mostradas automaticamente na parte inferior de cada página ou coluna quando a tabela for dividida em mais de uma página ou coluna. Uma linha de arraste pode mostrar informação adicional baseada nos elementos mostrados ou impressos anteriormente, graças à expressão **This.previousItems** (ver *Expressões com This*). Esta função permite, por exemplo, adicionar linhas de subtotal.
 
@@ -272,7 +271,7 @@ Para criar líinhas de arraste:
 
 **Nota:** não se permitem quebras de página dentro das linhas quando a função de traspaso de línhas estiver ativada (ver *Paginação de Tabelas*). As opções correspondentes, se forem definidas, são ignoradas.
 
-##### Break rows 
+### Break rows 
 
 As tabelas baseadas em fontes de dados são compatíveis com uma ou várias Linahs de quebra de ordem que podem ser mostradas antes ou depois da linha repetida. As linhas de ruptura de ordem lhe ajudam a dividir visualmente os elementos da fonte de dados já ordenados na tabela em diferentes partes baseadas em um valor de fórmula calculado
 
@@ -297,7 +296,7 @@ Para criar líinhas de ruptura:
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-##### Expressões com This 
+### Expressões com This 
 
 | **Contexto**                                                                                                            | **Expressão**                            | **Tipo**                                                             | **Retorna**                                                                                                                                                                                                                                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -315,7 +314,7 @@ Em outros contextos, essas expresões retornam *undefined*.
 
 **Nota:** Para saber mais, veja inserção de fórmula [WP INSERT FORMULA](../commands/wp-insert-formula).
 
-##### Trabalhar com uma tabela de datasource 
+### Trabalhar com uma tabela de datasource 
 
 Quando preencher uma tabela desde uma fonte de dados, as filas são criadas automaticamente quando calcular as referências. As linhas podem ser inseridas ou eliminadas, editar o conteúdo das células, mudar o estilo, etc:
 

@@ -1,7 +1,8 @@
 ---
 id: using-a-4d-write-pro-area
-title: Utiliser une zone 4D Write Pro
+title: Propriétés et mise en page
 displayed_sidebar: docs
+slug: /WritePro/properties
 ---
 
 

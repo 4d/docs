@@ -2,6 +2,7 @@
 id: 4d-write-pro-documents
 title: 4D Write Pro documents
 displayed_sidebar: docs
+slug: /WritePro/4d-write-pro-documents
 ---
 
 
@@ -68,40 +69,40 @@ To set or get custom attributes, you just need to use object notation or the [OB
 For example, in the form method, you can write:
 
 ```4d
- If(Form event code=On Validate)
-    [MyDocuments]My4DWP["myatt_Last edition by"]:=Current user
-    [MyDocuments]My4DWP.myatt_Category:="Memo"
-    [MyDocuments]My4DWP:=[MyDocuments]My4DWP //to record the edit
- End if
+ If(Form event code=On Validate)
+    [MyDocuments]My4DWP["myatt_Last edition by"]:=Current user
+    [MyDocuments]My4DWP.myatt_Category:="Memo"
+    [MyDocuments]My4DWP:=[MyDocuments]My4DWP //to record the edit
+ End if
 ```
 
 or:
 
 ```4d
- If(Form event code=On Validate)
-    OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
-    OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
- End if
+ If(Form event code=On Validate)
+    OB SET([MyDocuments]My4DWP;"myatt_Last edition by";Current user)
+    OB SET([MyDocuments]My4DWP;"myatt_Category";"Memo")
+ End if
 ```
 
 You can also read custom attributes of the documents:
 
 ```4d
- vAttrib:=[MyDocuments]My4DWP.myatt_Category
+ vAttrib:=[MyDocuments]My4DWP.myatt_Category
 ```
 
 or:
 
 ```4d
- vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Category")
+ vAttrib:=OB Get([MyDocuments]My4DWP;"myatt_Category")
 ```
 
 If you have saved custom 4D Write Pro attributes in your data file, you can query these attributes to create a selection of records containing the appropriate attribute value. In the following example, you query the table containing the Object field to select records:
 
 ```4d
- QUERY BY ATTRIBUTE([MyDocuments];[MyDocuments]My4DWP;"myatt_Category";=;"Memo")
-  //selects all records in MyDocuments whose "myatt_Category" custom attribute has the value "Memo"
-  //in the My4DWP Object field (bound to a 4D Write Pro area)
+ QUERY BY ATTRIBUTE([MyDocuments];[MyDocuments]My4DWP;"myatt_Category";=;"Memo")
+  //selects all records in MyDocuments whose "myatt_Category" custom attribute has the value "Memo"
+  //in the My4DWP Object field (bound to a 4D Write Pro area)
 ```
 
 :::warning About custom attribute names

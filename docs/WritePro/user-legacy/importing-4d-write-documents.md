@@ -2,6 +2,7 @@
 id: importing-4d-write-documents
 title: Importing 4D Write documents
 displayed_sidebar: docs
+slug: /WritePro/importing-4d-write-documents
 ---
 
 One of the main features of the new 4D Write Pro object is the ability to import and convert existing 4D Write documents. This will allow you to migrate applications that currently rely on the 4D Write plug-in.

@@ -1,10 +1,23 @@
 ---
 id: handling-pictures
-title: Manipuler des images
+title: Images
 displayed_sidebar: docs
+slug: /WritePro/pictures
 ---
 
-#### Images en arrière-plan 
+## Ajouter des images 
+
+Ajouter des images dans un document 4D Write Pro peut se faire de multiples façons et dépend de vos besoins :
+
+* pour ajouter une **image d'arrière-plan**, utilisez l'attribut wk background image ou wk background image url avec la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs)
+* pour ajouter une **image en ligne**, *i.e.* insérée dans le texte comme un caractère, utilisez la commande [WP INSERER IMAGE](../commands/wp-inserer-image) ou la commande [ST INSERER EXPRESSION](../../commands/st-inserer-expression)
+* pour ajouter une **image ancrée** dans la page (derrière ou devant le texte), utilisez la commande [WP Ajouter image](../commands/wp-ajouter-image).
+
+La façon dont vous ajoutez une image détermine la couche où elle est positionnée, comme le montre le diagramme ci-dessous :
+
+![](../../assets/en/WritePro/pict3650607.fr.png)
+
+## Images en arrière-plan 
 
 Des images peuvent être mises en place en tant qu'arrière-plan de documents 4D Write Pro ou de partie du document (tableau, paragraphe, sections, en-têtes/pieds, etc.).
 
@@ -26,19 +39,7 @@ L'affichage de l'image d'arrière-plan peut également être défini par program
 | wk truncated             | Lorsqu'elle est utilisée comme valeur de wk image display mode, l'image est alignée en haut à gauche de la zone de contenu, non répliquée, et conserve sa taille d'origine. Lorsqu'elle est utilisée comme valeur de wk background display mode, elle prédéfinit les attributs suivants : wk background width \= "auto" wk background height \= "auto" wk background repeat \= wk no repeat wk background origin \= wk padding box wk background position horizontal \= wk left wk background position vertical \= wk top                                                                  |
 | wk truncated centered    | Lorsqu'elle est utilisée comme valeur de wk image display mode, l'image est centrée dans la zone de contenu, non répliquée, et conserve sa taille d'origine. Lorsqu'elle est utilisée comme valeur de wk background display mode, elle prédéfinit les attributs suivants : wk background width \= "auto" wk background height \= "auto" wk background repeat \= wk no repeat wk background origin \= wk padding box wk background position horizontal \= wk center wk background position vertical \= wk center                                                                            |
 
-#### Ajouter des images 
-
-Ajouter des images dans un document 4D Write Pro peut se faire de multiples façons et dépend de vos besoins :
-
-* pour ajouter une **image d'arrière-plan**, utilisez l'attribut wk background image ou wk background image url avec la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs)
-* pour ajouter une **image en ligne**, *i.e.* insérée dans le texte comme un caractère, utilisez la commande [WP INSERER IMAGE](../commands/wp-inserer-image) ou la commande [ST INSERER EXPRESSION](../../commands/st-inserer-expression)
-* pour ajouter une **image ancrée** dans la page (derrière ou devant le texte), utilisez la commande [WP Ajouter image](../commands/wp-ajouter-image).
-
-La façon dont vous ajoutez une image détermine la couche où elle est positionnée, comme le montre le diagramme ci-dessous :
-
-![](../../assets/en/WritePro/pict3650607.fr.png)
-
-#### Positionnement et affichage des images ancrées 
+## Positionnement et affichage des images ancrées 
 
 Les images ancrées sont ajoutées avec une position absolue, devant/derrière le texte, et ancrées à la page ou à des parties spécifiques d'un document (*i.e.*, en-tête, pied de page, section). La définition d'une position absolue pour une image se fait grâce aux commandes [WP Ajouter image](../commands/wp-ajouter-image) et [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs).
 
@@ -72,7 +73,7 @@ Les images ancrées sont affichées uniquement en mode Page. Elles ne sont pas a
 * elles sont centrées ou ancrées aux sections, et l'option **Afficher HTML WYSIWYG** est cochée ;
 * l'option "Afficher l'arrière-plan" n'est pas sélectionnée.
 
-#### Expressions image 
+## Expressions image 
 
 Vous pouvez insérer des expressions 4D qui retournent des images dans vos zones 4D Write Pro. Les expressions peuvent être des variables, champs, méthodes projet, attributs d'objets ou éléments de collections.
 
@@ -90,7 +91,7 @@ Si l'image résultant de l'expression ne peut pas être calculée ou chargée, 4
 
 **Note** : Comme les autres expressions, les expressions image sont aussi impactées par les commandes [WP CALCULER FORMULES](../commands/wp-calculer-formules) et [WP FIGER FORMULES](../commands/wp-figer-formules).
 
-##### Images ancrées 
+### Images ancrées 
 
 Les expression image ancrées sont ajoutées à l'aide la commande [WP Ajouter image](../commands/wp-ajouter-image) (sans le second paramètre), suivie par un appel à la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs) avec le sélecteur wk image formule.
 
@@ -107,7 +108,7 @@ Vous pouvez aussi insérer des expressions image en utilisant [WP FIXER ATTRIBUT
 
 L'appel de la commande [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs) avec wk image formule est similaire à l'appel de [WP FIGER FORMULES](../commands/wp-figer-formules) (sur le document entier) dans la mesure où l'expression est effacée de l'attribut image. Cependant, [WP FIGER FORMULES](../commands/wp-figer-formules) calcule l'expression avant de l'effacer, contrairement à [WP REINITIALISER ATTRIBUTS](../commands/wp-reinitialiser-attributs). Si une expression n'a jamais été calculée, le cadre d'image par défaut noir est affiché.
 
-##### Images en ligne 
+### Images en ligne 
 
 Les expressions image en ligne sont ajoutées dans vos zones 4D Write Pro à l'aide de la commande [WP INSERER FORMULE](../commands/wp-inserer-formule).
 
@@ -124,23 +125,24 @@ Exemples :
  ST INSERER FORMULE(wpRange;Formule(M_ComputeChart);wk prepend)
 ```
 
-#### Empty pictures 
+### Images vides 
 
-If an image is empty (e.g. it could not be loaded, or it results from an expression that could not be computed, or it uses an unsupported picture format), by default 4D Write Pro displays a black frame rectangle:
+Si une image est vide (par exemple, elle n'a pas pu être chargée, elle résulte d'une expression qui n'a pas pu être calculée ou elle utilise un format d'image non pris en charge), 4D Write Pro affiche par défaut un cadre rectangulaire noir :
 
 ![](../../assets/en/WritePro/pict3513505.en.png)
 
-You can remove these black rectangles from the current view using:
+Vous pouvez supprimer ces rectangles noirs de la vue actuelle à l'aide de :
 
-* the "Show empty or unsupported images" option of the Property list (see *Configuring View properties*), or
-* the [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) command with the wk visible empty images selector, or
-* the *visibleEmptyImage* standard action (see *Using 4D Write Pro standard actions*).
+*  l'option "Show empty or unsupported images" de la liste des propriétés (voir *Configuring View properties*), ou
+* la commande [WP SET VIEW PROPERTIES](../commands/wp-set-view-properties) avec le wk visible empty images selector,  ou
+* l'action standard *visibleEmptyImage* (voir  *Using 4D Write Pro standard actions*).
 
-You can also use the wk visible empty images selector with the [WP EXPORT DOCUMENT](../commands/wp-export-document) and [WP EXPORT VARIABLE](../commands/wp-export-variable) commands to remove the black rectangles from exported contents.
+Vous pouvez également utiliser le wk visible empty images selector avec les commandes [WP EXPORT DOCUMENT](../commands/wp-export-document) et [WP EXPORT VARIABLE](../commands/wp-export-variable) pour supprimer les rectangles noirs du contenu exporté.
 
-Note that when this option is set, missing image elements will not be displayed at all even if they have borders, width, height, or background; this may impact the page layout for inline images.
+Notez que lorsque cette option est activée, les éléments d'image manquants ne s'affichent pas, même s'ils ont des bordures, une largeur, une hauteur ou un arrière-plan. Cela peut avoir un impact sur la mise en page des images intégrées.
 
-#### Propriétés des images 
+
+## Propriétés des images 
 
 Toutes les images ont des propriétés (attributs) telles que la hauteur, la largeur, les bordures, le mode d'affichage, etc., qui peuvent être lues ou fixées via le langage 4D Write Pro ([WP LIRE ATTRIBUTS](../commands/wp-lire-attributs) et [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs)) ou les actions standard.
 
@@ -148,7 +150,7 @@ Toutes les images ont des propriétés (attributs) telles que la hauteur, la lar
 * La section *Image* contient les attributs spécifiques aux images seules.
 * La page *Utiliser les actions standard 4D Write Pro* liste aussi les propriétés image disponibles.
 
-##### Référence d'image ou URL d'image 
+### Référence d'image ou URL d'image 
 
 Vous pouvez travailler avec des références d'images (variable, champ ou expression image) ou des URLs d'images (texte contenant l'adresse locale ou réseau de l'image).
 
@@ -175,21 +177,21 @@ Lorsque vous lisez une image à l'aide d'un de ces attributs, vous recevez un te
  WP LIRE ATTRIBUTS($range;wk image url;vPictureURLGet) //vPictureURLGet=$url
 ```
 
-#### Récupérer des images 
+## Récupérer des images 
 
 Les commandes ci-dessous peuvent être utilisées pour récupérer des images :
 
 * [WP Plage images](../commands/wp-plage-images) \- s'applique uniquement aux images en ligne
 * [WP Plage selection](../commands/wp-plage-selection) \- s'applique uniquement aux images sélectionnées par l'utilisateur
 
-#### Supprimer des images 
+## Supprimer des images 
 
 Vous pouvez supprimer des images en ligne et ancrées à l'aide de : 
 
 * *Actions souris / clavier*
 * la commande [WP SUPPRIMER IMAGE](../commands/wp-supprimer-image)
 
-#### Actions souris / clavier 
+## Actions souris / clavier 
 
 Les images peuvent être manipulées via la souris ou le clavier. Les actions disponibles incluent :
 

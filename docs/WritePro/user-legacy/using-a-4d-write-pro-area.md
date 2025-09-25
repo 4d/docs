@@ -2,7 +2,7 @@
 id: using-a-4d-write-pro-area
 title: Properties & Layout
 displayed_sidebar: docs
-slug: /WritePro/user/properties
+slug: /WritePro/properties
 ---
 
 

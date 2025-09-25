@@ -2,6 +2,7 @@
 id: 4d-write-pro-documents
 title: 4D Write Pro documents
 displayed_sidebar: docs
+slug: /WritePro/4d-write-pro-documents
 ---
 
 ## .4wp ドキュメントフォーマット 

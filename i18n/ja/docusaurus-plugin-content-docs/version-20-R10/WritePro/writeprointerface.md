@@ -1,6 +1,7 @@
 ---
 id: writeprointerface
 title: 4D WritePro インターフェース
+slug: /WritePro/write-pro-interface
 ---
 
 4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。

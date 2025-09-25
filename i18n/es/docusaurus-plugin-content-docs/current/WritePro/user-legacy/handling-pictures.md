@@ -1,10 +1,23 @@
 ---
 id: handling-pictures
-title: Gestion de imagenes
+title: Imagenes
 displayed_sidebar: docs
+slug: /WritePro/pictures
 ---
 
-#### Imágenes de fondo 
+## Adición de imágenes 
+
+Agregar imágenes a un documento 4D Write Pro puede lograrse de múltiples maneras y depender de sus necesidades:
+
+* para agregar una imagen de fondo, use el atributo wk background image o wk background image url con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes)
+* para agregar una imagen en línea, es decir, insertada en el flujo de texto como un caracter, use el comando [WP INSERT PICTURE](../commands/wp-insert-picture) o el comando [ST INSERT EXPRESSION](../../commands/st-insert-expression)
+* para agregar una imagen anclada en la página (detrás o enfrente del texto), utilice el comando [WP Add picture](../commands/wp-add-picture).
+
+La forma en que agrega una imagen determina la capa en la que está colocada, como se ilustra en el siguiente diagrama:
+
+![](../../assets/en/WritePro/pict3626363.EN.png)
+
+## Imágenes de fondo 
 
 Las imágenes se pueden configurar como fondo de los documentos 4D Write Pro y los elementos del documento (tablas, párrafos, secciones, encabezados/pies de página, etc.).
 
@@ -26,19 +39,7 @@ La visualización de la imagen de fondo también puede establecerse por programa
 | wk truncated             | Cuando se utiliza como valor de wk image display mode, la imagen se alinea en la parte superior izquierda de la caja de contenido, no se replica, y mantiene su tamaño original. Cuando se utiliza como valor de wk background display mode, preestablece los siguientes atributos: wk background width \= "auto" wk background height \= "auto" wk background repeat \= wk no repeat wk background origin \= wk padding box wk background position horizontal \= wk left wk background position vertical \= wk top                                                        |
 | wk truncated centered    | Cuando se utiliza como valor de wk image display mode, la imagen se centra en la caja de contenido, no se replica, y mantiene su tamaño original. Cuando se utiliza como valor de wk background display mode, preestablece los siguientes atributos: wk background width \= "auto" wk background height \= "auto" wk background repeat \= wk no repeat wk background origin \= wk padding box wk background position horizontal \= wk center wk background position vertical \= wk center                                                                                  |
 
-#### Adición de imágenes 
-
-Agregar imágenes a un documento 4D Write Pro puede lograrse de múltiples maneras y depender de sus necesidades:
-
-* para agregar una imagen de fondo, use el atributo wk background image o wk background image url con el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes)
-* para agregar una imagen en línea, es decir, insertada en el flujo de texto como un caracter, use el comando [WP INSERT PICTURE](../commands/wp-insert-picture) o el comando [ST INSERT EXPRESSION](../../commands/st-insert-expression)
-* para agregar una imagen anclada en la página (detrás o enfrente del texto), utilice el comando [WP Add picture](../commands/wp-add-picture).
-
-La forma en que agrega una imagen determina la capa en la que está colocada, como se ilustra en el siguiente diagrama:
-
-![](../../assets/en/WritePro/pict3626363.EN.png)
-
-#### Posicionamiento y visualización de imágenes ancladas 
+## Posicionamiento y visualización de imágenes ancladas 
 
 Las imágenes ancladas se agregan con una posición absoluta, delante y detrás del texto, y también se anclan a la página o partes específicas de un documento (es decir, encabezado, pie de página, secciones). Establecer una posición absoluta para una imagen se logra con los comandos [WP Add picture](../commands/wp-add-picture) y [WP SET ATTRIBUTES](../commands/wp-set-attributes).
 
@@ -72,7 +73,7 @@ Todas las imágenes ancladas se muestran únicamente en el modo de visualizació
 * están centradas o ancladas en secciones y la opción **Mostrar HTML WYSIWYG** está marcada;
 * la opción "Mostrar fondo" no está seleccionada.
 
-#### Expresiones Imagen 
+## Expresiones Imagen 
 
 Puede insertar expresiones 4D que devuelvan imágenes en sus áreas 4D Write Pro. Las expresiones pueden ser variables, campos, métodos proyecto, atributos de objeto o elementos de colección.
 
@@ -86,7 +87,7 @@ Todos los atributos imagen se pueden aplicar a expresiones imagen (wk image y lo
 
 **Nota**: al igual que con otras expresiones, las expresiones imagen también se ven afectadas por los comandos [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) y [WP FREEZE FORMULAS](../commands/wp-freeze-formulas).
 
-##### Imágenes ancladas 
+### Imágenes ancladas 
 
 Las expresiones imagen ancladas se agregan con el comando [WP Add picture](../commands/wp-add-picture) (sin el segundo parámetro), seguido de una llamada al comando [WP SET ATTRIBUTES](../commands/wp-set-attributes) con el selector wk image formula.
 
@@ -103,7 +104,7 @@ También puede insertar expresiones de imagen usando [WP SET ATTRIBUTES](../comm
 
 Llamar al comando [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) con wk image formula es similar a llamar a [WP FREEZE FORMULAS](../commands/wp-freeze-formulas) (en todo el documento) en que la expresión es limpiada desde el atributo imagen. Sin embargo, [WP FREEZE FORMULAS](../commands/wp-freeze-formulas) calcula la expresión antes de borrar, mientras que [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) no lo hace. Si nunca se ha calculado una expresión, se mostrará la imagen de marco negro predeterminada.
 
-##### Expresiones imagen en línea 
+### Expresiones imagen en línea 
 
 Las expresiones imagen en línea se agregan con el comando [WP INSERT FORMULA](../commands/wp-insert-formula).
 
@@ -123,7 +124,7 @@ WP INSERT FORMULA(wpRange;Formula($vpict);wk prepend)
 
 ```
 
-#### Imágenes vacías 
+### Imágenes vacías 
 
 Si una imagen está vacía (por ejemplo, no se ha podido cargar, o es el resultado de una expresión que no se ha podido calcular, o utiliza un formato de imagen no soportado), por defecto 4D Write Pro muestra un rectángulo de marco negro:
 
@@ -139,7 +140,7 @@ También puede utilizar el selector wk visible empty images con los comandos [WP
   
 Tenga en cuenta que cuando esta opción está activada, los elementos de imagen que falten no se mostrarán en absoluto aunque tengan bordes, ancho, alto o fondo; esto puede afectar al diseño de página para imágenes en línea.
 
-#### Propiedades de la imagen 
+## Propiedades de la imagen 
 
 Todas las imágenes tienen propiedades (atributos) como altura, ancho, bordes, modo de visualización etc., que se pueden obtener o definir a través del lenguaje 4D Write Pro ([WP GET ATTRIBUTES](../commands/wp-get-attributes) y [WP SET ATTRIBUTES](../commands/wp-set-attributes)) o de acciones estándar.
 
@@ -147,7 +148,7 @@ Todas las imágenes tienen propiedades (atributos) como altura, ancho, bordes, m
 * La sección *Imagen* contiene atributos que son específicos de las imágenes solamente.
 * La página *Utilizar las acciones estándar 4D Write Pro* también lista las propiedades de imagen disponibles.
 
-##### Referencia de imagen o URL de imagen 
+### Referencia de imagen o URL de imagen 
 
 Puede trabajar con referencias de imágenes (variables de imagen, campos, expresiones) o URL de imágenes (texto que representa una dirección local o de red de la imagen).
 
@@ -174,21 +175,21 @@ Cuando obtiene una imagen utilizando uno de estos atributos, recibe un texto. Si
  WP GET ATTRIBUTES($range;wk image url;vPictureURLGet) //vPictureURLGet=$url
 ```
 
-#### Recuperar imágenes 
+## Recuperar imágenes 
 
 Los siguientes comandos se pueden usar para devolver imágenes:
 
 * [WP Picture range](../commands/wp-picture-range) \- aplica solo a imágenes en línea
 * [WP Selection range](../commands/wp-selection-range) \- solo aplica a las imágenes seleccionadas por el usuario
 
-#### Eliminar imágenes 
+## Eliminar imágenes 
 
 Puede eliminar imágenes en línea y ancladas con:
 
 * *Acciones ratón/teclado*
 * el comando [WP DELETE PICTURE ](../commands/wp-delete-picture)
 
-#### Acciones ratón/teclado 
+## Acciones ratón/teclado 
 
 Las imágenes se pueden manipular con el ratón o el teclado. Las acciones disponibles incluyen:
 

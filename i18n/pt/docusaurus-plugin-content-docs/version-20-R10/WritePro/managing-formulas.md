@@ -1,6 +1,7 @@
 ---
 id: managing-formulas
-title: Gerenciando fórmulas
+title: Formulas
+slug: /WritePro/formulas
 ---
 
 ## Visão Geral

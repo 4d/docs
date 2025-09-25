@@ -1,10 +1,23 @@
 ---
 id: handling-pictures
-title: Handling pictures
+title: Pictures
 displayed_sidebar: docs
+slug: /WritePro/pictures
 ---
 
-#### 背景画像 
+## ピクチャーの追加 
+
+4D Write Pro ドキュメントへのピクチャーの追加は、必要に応じて複数の方法で行うことができます:
+
+* **背景画像**を追加するためには、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドとwk background image 属性あるいは wk background image url 属性を使用します。
+* **インライン画像**(文字のようにテキストフローに挿入された画像)を追加するためには、[WP INSERT PICTURE](../commands/wp-insert-picture) あるいは [ST INSERT EXPRESSION](../../commands/st-insert-expression) コマンドを使用します。
+* **アンカー画像**をページ内(テキストの後ろあるいは前面)に追加するためには、[WP Add picture](../commands/wp-add-picture) コマンドを使用します。
+
+ピクチャーの追加方法によって画像が位置するレイヤーが決定されます。以下の図を参照してください:
+
+![](../../assets/en/WritePro/pict3626363.en.png)
+
+## 背景画像 
 
 ピクチャーは4D Write Pro ドキュメントあるいはドキュメント要素(テーブル、段落、セクション、ヘッダー/フッター等)の、背景画像として設定することが可能です。
 
@@ -26,19 +39,7 @@ displayed_sidebar: docs
 | wk truncated             | wk image display mode の値として使用された場合、画像はコンテンツボックスの左上に配置され、繰り返しはなく、オリジナルのサイズを保ちます。 wk background display mode の値として使用された場合、以下の属性をそれぞれ次のようにプリセットします: wk background width \= "auto" wk background height \= "auto" wk background repeat \= wk no repeat wk background origin \= wk padding box wk background position horizontal \= wk left wk background position vertical \= wk top                                 |
 | wk truncated centered    | wk image display mode の値として使用された場合、画像はコンテンツボックスの中央に配置され、繰り返しはされず、オリジナルのサイズを保ちます。 wk background display mode の値として使用された場合、以下の属性をそれぞれ次のようにプリセットします: wk background width \= "auto" wk background height \= "auto" wk background repeat \= wk no repeat wk background origin \= wk padding box wk background position horizontal \= wk center wk background position vertical \= wk center                           |
 
-#### ピクチャーの追加 
-
-4D Write Pro ドキュメントへのピクチャーの追加は、必要に応じて複数の方法で行うことができます:
-
-* **背景画像**を追加するためには、[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドとwk background image 属性あるいは wk background image url 属性を使用します。
-* **インライン画像**(文字のようにテキストフローに挿入された画像)を追加するためには、[WP INSERT PICTURE](../commands/wp-insert-picture) あるいは [ST INSERT EXPRESSION](../../commands/st-insert-expression) コマンドを使用します。
-* **アンカー画像**をページ内(テキストの後ろあるいは前面)に追加するためには、[WP Add picture](../commands/wp-add-picture) コマンドを使用します。
-
-ピクチャーの追加方法によって画像が位置するレイヤーが決定されます。以下の図を参照してください:
-
-![](../../assets/en/WritePro/pict3626363.en.png)
-
-#### アンカーされたピクチャーの位置と表示 
+## アンカーされたピクチャーの位置と表示 
 
 アンカーされたピクチャーは絶対位置で、テキストの前あるいは後ろに追加されます。また、ページあるいはドキュメントの特定のパーツ(ヘッダー、フッター、セクションなど)にアンカーすることもできます。ピクチャーに絶対位置を設定するためには、[WP Add picture](../commands/wp-add-picture) and [WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドを使用します。
 
@@ -72,7 +73,7 @@ displayed_sidebar: docs
 * 中央揃えになっているかセクションにアンカーされている状態で、**HTML WYSIWYGで表示**オプションがチェックされている
 * "背景を表示"オプションが選択されていない
 
-#### ピクチャー式 
+## ピクチャー式 
 
 4D Write Pro エリア内には、ピクチャーを返す4D 式を挿入することも可能です。式には変数、フィールド、プロジェクトメソッド(\*)、オブジェクト属性あるいはコレクション要素を使用することができます。
 
@@ -86,7 +87,7 @@ displayed_sidebar: docs
 
 **注**: 他の式同様、ピクチャー式は[WP INSERT FORMULA](../commands/wp-insert-formula) および [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) コマンドの影響を受けます。
 
-##### アンカーされた画像 
+### アンカーされた画像 
 
 アンカーされたピクチャー式は、[WP Add picture](../commands/wp-add-picture) コマンド(第2引数なし)によって追加され、その後に[WP SET ATTRIBUTES](../commands/wp-set-attributes) コマンドをwk image formula セレクターつきで呼び出します。
 
@@ -103,7 +104,7 @@ displayed_sidebar: docs
 
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドをwk image formula と呼び出すことは、式が画像属性から消去されるという点において、[WP FREEZE FORMULAS](../commands/wp-freeze-formulas) を(ドキュメント全体に)呼び出すことに似ています。しかしながら、[WP FREEZE FORMULAS](../commands/wp-freeze-formulas) コマンドは消去の前に式を計算するのに対し、[WP RESET ATTRIBUTES](../commands/wp-reset-attributes) コマンドは計算をしません。式が一度も計算されていない場合、デフォルトの黒いフレーム画像が表示されます。
 
-##### 画像式の挿入 
+### 画像式の挿入 
 
 [WP INSERT FORMULA](../commands/wp-insert-formula) コマンドを使用することでインラインピクチャー式を追加することができます。
 
@@ -120,7 +121,7 @@ displayed_sidebar: docs
  WP INSERT FORMULA(wpRange;Formula(M_ComputeChart);wk prepend)
 ```
 
-#### 空のピクチャー 
+### 空のピクチャー 
 
 画像が空の場合(例: 画像が読み込みできない、計算できない式の結果である、サポートされていないピクチャーフォーマットを使用している等)、デフォルトで4D Write Pro は黒枠の四角形を表示します。
 
@@ -136,7 +137,7 @@ displayed_sidebar: docs
 
 このオプションが設定されている場合、たとえ画像に境界線、幅、高さ、背景などが設定されてあっても空の画像要素は全く表示されないという点に注意して下さい。これはインライン画像のページレイアウトに影響する可能性があります。
 
-#### ピクチャープロパティ 
+## ピクチャープロパティ 
 
 全てのピクチャーには高さ、幅、境界線、表示モードなどといったプロパティ(属性)があります。これら4D Write Pro ランゲージ([WP GET ATTRIBUTES](../commands/wp-get-attributes) あるいは [WP SET ATTRIBUTES](../commands/wp-set-attributes))あるいは標準アクションを用いて取得あるいは設定することが可能です。
 
@@ -144,7 +145,7 @@ displayed_sidebar: docs
 * *画像* の章にはピクチャー専用の属性が含まれています。
 * *4D Write Pro標準アクションの使用* のページにも利用可能な画像プロパティの一覧があります。
 
-##### ピクチャー参照またピクチャーURL 
+### ピクチャー参照またピクチャーURL 
 
 ピクチャー参照(ピクチャー変数、フィールド、式)を使用する事もできますし、ピクチャーURL(ピクチャーのローカルあるいはネットワークアドレスを表すテキスト)を使用する事もできます。
 
@@ -171,21 +172,21 @@ displayed_sidebar: docs
  WP GET ATTRIBUTES($range;wk image url;vPictureURLGet) //vPictureURLGet=$url
 ```
 
-#### ピクチャーの取得 
+## ピクチャーの取得 
 
 以下のコマンドを使用するとピクチャーが返されます:
 
 * [WP Picture range](../commands/wp-picture-range) \- インライン画像に対してのみ適用可能
 * [WP Selection range](../commands/wp-selection-range) \- ユーザーが選択した画像に対してのみ適用可能
 
-#### ピクチャーの削除 
+## ピクチャーの削除 
 
 インライン画像とアンカー画像は、以下の方法で削除することができます:
 
 * *マウス/キーボードアクション* を使用する
 * [WP DELETE PICTURE](../commands/wp-delete-picture) コマンドを使用する
 
-#### マウス/キーボードアクション 
+## マウス/キーボードアクション 
 
 ピクチャーはマウスあるいはキーボードで編集することができます。利用可能なアクションは以下の通りです:
 

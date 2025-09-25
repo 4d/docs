@@ -1,7 +1,8 @@
 ---
 id: presentation
-title: Présentation
+title: Premiers pas
 displayed_sidebar: docs
+slug: /WritePro/getting-started
 ---
 
 4D Write Pro offre aux utilisateurs 4D un outil de traitement de texte avancé, entièrement intégré aux bases de données 4D. Avec 4D Write Pro, vous pouvez écrire des emails préformatés ou des lettres personnalisées ou tout autre document contenant des images, des tableaux, des marque-pages, du texte formaté et des références de variables. Vous pouvez également créer dynamiquement des factures ou des états contenant du texte formaté et des images.
