@@ -555,7 +555,7 @@ You can define the [tag or version](#tags-and-versions) option for a dependency:
 - **Up to Next Major Version**: Define a [semantic version range](#tags-and-versions) to restrict updates to the next major version.
 - **Up to Next Minor Version**: Similarly, restrict updates to the next minor version.
 - **Exact Version (Tag)**: Select or manually enter a [specific tag](#tags-and-versions) from the available list.
-- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags). 
+- **Follow 4D Version**: Download the latest component release that is compatible with the running 4D version. You can use this dependency rule only if the component release tags follow the appropriate [naming convention](#naming-conventions-for-4d-version-tags). This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
