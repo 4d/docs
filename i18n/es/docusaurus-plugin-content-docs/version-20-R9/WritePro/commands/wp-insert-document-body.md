@@ -25,12 +25,12 @@ El comando **WP Insert document body**<!--REF #_command_.WP Insert document body
 En *targetObj*, pase:
 
 - Un rango, o
-- An element (table / row / paragraph / body / header / footer / inline picture / section / subsection / text box), or
+- Un elemento (tabla / línea / párrafo / cuerpo / encabezado / pie de página / imagen en línea / sección / subsección / cuadro de texto), o
 - un documento 4D Write Pro.
 
-The inserted *wpDoc* document can be any 4D Write Pro document object created using the [WP New](../commands-legacy/wp-new.md) or [WP Import document](wp-import-document.md) command. Only the body children elements are inserted (i.e. headers, footers, text boxes and anchored pictures are not inserted). Sections and bookmarks in the destination range are preserved. In addition, the elements are copied, so *wpDoc* can be re-used several times.
+El documento *wpDoc* insertado puede ser cualquier objeto documento 4D Write Pro creado usando el comando [WP New](../commands-legacy/wp-new.md) o [WP Import document](wp-import-document.md). Sólo se insertan los elementos hijos del cuerpo (es decir, no se insertan encabezados, pies de página, cuadros de texto ni imágenes ancladas). Se conservan las secciones y los marcadores del área de destino. Además, los elementos se copian, por lo que *wpDoc* puede reutilizarse varias veces.
 
-In the *mode* parameter, pass one or a combination of the following constants from the *4D Write Pro Constants* theme to indicate the insertion mode to be used for the document in the destination *targetObj*:
+En el parámetro *mode*, pase una o una combinación de las siguientes constantes del tema *4D Write Pro Constants* para indicar el modo de inserción que se utilizará para el documento en el *targetObj* de destino:
 
 | Constante  | Tipo    | Valor | Comentario                                      |
 | ---------- | ------- | ----- | ----------------------------------------------- |
@@ -38,54 +38,54 @@ In the *mode* parameter, pass one or a combination of the following constants fr
 | wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
 | wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
-You can combine one of the previous constants with the following insertion options:
+Puede combinar una de las constantes anteriores con las siguientes opciones de inserción:
 
-| Constante                | Tipo    | Valor | Comentario                                                                                                                                              |
-| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk freeze expressions    | Integer | 64    | Congelar expresiones en el momento de la inserción                                                                                                      |
-| wk keep paragraph styles | Integer | 128   | Aplicar estilos de párrafo de destino. In case of wk append operation, insert contents without initial paragraph break. |
+| Constante                | Tipo    | Valor | Comentario                                                                                                                                                   |
+| ------------------------ | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| wk freeze expressions    | Integer | 64    | Congelar expresiones en el momento de la inserción                                                                                                           |
+| wk keep paragraph styles | Integer | 128   | Aplicar estilos de párrafo de destino. En caso de la operación wk append, inserte el contenido sin salto de párrafo inicial. |
 
-In the *rangeUpdate* parameter (Optional); if *targetObj* is a range, you can pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
+En el parámetro *rangeUpdate* (Opcional); si *targetObj* es un rango, puede pasar una de las siguientes constantes para especificar si el contenido insertado se incluye o no en el rango resultante:
 
 | Constante             | Tipo    | Valor | Comentario                                                                            |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
 | wk exclude from range | Integer | 1     | Contenido insertado no incluido en el rango actualizado                               |
 | wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
+Si no se pasa el parámetro *rangeUpdate*, por defecto el contenido insertado se incluye en el rango resultante.
 
 - Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 
-You want to replace the contents of a document by the text selected in another one:
+Quieres reemplazar el contenido de un documento por el texto seleccionado en otro:
 
 ```4d
- $tempRange:=WP Get selection(WPTemplate) //we retrieve the user selection in the WPTemplate document
- $doctoCopy:=WP New($tempRange) //create a new document based on WPTemplate
- WP Insert document body(WPDoc;$doctoCopy;wk replace) //replace contents of WPDoc by the contents of the new document
+ $tempRange:=WP Get selection(WPTemplate) //recuperamos la selección del usuario en el documento WPTemplate
+ $doctoCopy:=WP New($tempRange) //creamos un nuevo documento basado en WPTemplate
+ WP Insert document body(WPDoc;$doctoCopy;wk replace) //reemplazamos el contenido de WPDoc por el contenido del nuevo documento
 ```
 
 ## Ejemplo 2
 
-You have defined a template document with different preformatted parts, each of them being stored as a bookmark. When producing a final document from the template, you can extract any bookmark as a new document and insert it in the final document.
+Ha definido un documento plantilla con diferentes partes preformateadas, cada una de las cuales se almacena como un marcador. Al producir un documento final a partir de la plantilla, puede extraer cualquier marcador como un nuevo documento e insertarlo en el documento final.
 
 ```4d
  ARRAY TEXT($_BookmarkNames;0)
- WP GET BOOKMARKS([TEMPLATES]WP;$_BookmarkNames) //get the bookmarks from the template
- $targetRange:=WP New //create an empty document (will be the final document)
+ WP GET BOOKMARKS([TEMPLATES]WP;$_BookmarkNames) //obtener los marcadores de la plantilla
+ $targetRange:=WP New //crear un documento vacío (será el documento final)
  
- $p:=Find in array($_BookmarkNames;"Main_Header") //handle the main header part
+ $p:=Find in array($_BookmarkNames; "Main_Header") //manejar la parte del encabezado principal
  If($p>0)
-    $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //select the range
-    $RangeDoc:=WP New($Range) //create a new document from the range
-    WP Insert document body($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=after replacement, $targetRange is equal to end of replaced text
+    $Range:=WP Get bookmark range(WParea;$_BookmarkNames{$p}) //selecciona el rango
+    $RangeDoc:=WP New($Range) //crea un nuevo documento a partir del rango
+    WP Insert document body($targetRange;$RangeDoc;wk append+wk freeze expressions) //wk append=después del reemplazo, $targetRange es igual al final del texto reemplazado
  End if
 ```
 
 ## Ejemplo 3
 
-You want to set the font style and size for the inserted document body:
+Desea definir el estilo y el tamaño de la fuente para el cuerpo del documento insertado:
 
 ```4d
 WPdoc:=WP Import document("myFile.4wp")

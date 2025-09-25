@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| Parámetros  | Tipo                                            |                             | Descripción                                                             |
-| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | Rango o elemento o documento 4D Write Pro                               |
-| attribName  | Text                                            | &#8594; | Nombre del atributo a definir                                           |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                 |
-| attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
+| Parámetros  | Tipo                                            |                             | Descripción                                                                               |
+| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------- |
+| targetObj   | Object                                          | &#8594; | Rango o elemento o documento 4D Write Pro                                                 |
+| attribName  | Text                                            | &#8594; | Nombre del atributo a definir                                                             |
+| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                                   |
+| attribObj   | Object                                          | &#8594; | Objeto que contiene los nombres de los atributos y sus correspondientes valores a definir |
 
 <!-- END REF-->
 
@@ -21,19 +21,19 @@ displayed_sidebar: docs
 
 El comando **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->le permite definir el valor de cualquier atributo en un rango, elemento, documento.<!-- END REF--> This command gives you access to any kind of 4D Write Pro internal attribute: character, paragraph, document, table, or image.
 
-En *targetObj*, puede pasar :
+En *targetObj*, puede pasar:
 
 - un rango, o
-- an element (header / footer / body / table / row / paragraph / anchored or inline picture / section / subsection / style sheet), or
+- un elemento (encabezado / pie de página / cuerpo / tabla / línea / párrafo / imagen anclada / sección / subsección / hoja de estilo), o
 - un documento 4D Write Pro
 
 Puede especificar atributos a definir para *targetObj* de una de dos maneras:
 
-- Utilice los parámetros *attribName* y *attribValue*. In *attribName*, pass the name of the attribute to set for the target and in *attribValue*, pass the new value to set. You can pass as many *attribName*/*attribValue* pairs as you want in a single call.
+- Utilice los parámetros *attribName* y *attribValue*. En *attribName*, pase el nombre del atributo a definir para el objetivo y en *attribValue*, pase el nuevo valor a definir. Puede pasar tantos pares *attribName*/*attribValue* como desee en una sola llamada.
 
-- Use the *attribObj* parameter to pass a single object containing attribute names and their corresponding values as object properties.
+- Utilice el parámetro *attribObj* para pasar un único objeto que contenga nombres de atributos y sus valores correspondientes como propiedades del objeto.
 
-For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+Para obtener una lista completa de los atributos a pasar, así como su alcance y valores respectivos, consulte la sección [Atributos 4D Write Pro](../4d-write-pro-attributes).
 
 ## Ejemplo 1
 
@@ -62,7 +62,7 @@ Obtiene el siguiente resultado:
 
 ## Ejemplo 2
 
-This example illustrates the use of wk inside and wk outside constants:
+Este ejemplo ilustra el uso de las constantes wk inside y wk outside:
 
 ```4d
  $wpRange:=WP Get selection(writeProdoc)
@@ -77,7 +77,7 @@ Suponiendo que se hayan seleccionado todos los contenidos, el resultado es:
 
 ## Ejemplo 3
 
-You want to set a background image for the document:
+Desea definir una imagen de fondo para el documento:
 
 ```4d
  var WParea : Object
@@ -92,7 +92,7 @@ El resultado es:
 
 ![](../../assets/en/WritePro/commands/pict3514231.en.png)
 
-You want to set a background image that covers the whole printable area. Todos los atributos se pasan utilizando un único objeto:
+Desea definir una imagen de fondo que cubra toda el área imprimible. Todos los atributos se pasan utilizando un único objeto:
 
 ```4d
  var WParea : Object

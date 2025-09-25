@@ -1,6 +1,6 @@
 ---
 id: overview
-title: 4D at a glance
+title: 4D de un vistazo
 slug: /GettingStarted/overview
 ---
 

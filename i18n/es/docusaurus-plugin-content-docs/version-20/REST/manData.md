@@ -22,7 +22,7 @@ Para añadir y modificar entidades, puede llamar a [`$method=update`]($method.md
 
 Además la recuperación de una sola entidad en una clase de datos utilizando [\{dataClass\}({key})](dataClass.md#dataclasskey), también puede escribir una [función de clase](ClassFunctions.md#function-calls) que devuelva una entity selection (o una colección).
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
+Antes de devolver una selección, también puede ordenarla utilizando [`$orderby`]($orderby.md) en uno o varios atributos (incluso los atributos de relación).
 
 
 ## Navegación de datos

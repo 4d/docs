@@ -1180,11 +1180,11 @@
     "description": "The label for category Extending 4D applications in sidebar docs"
   },
   "sidebar.docs.category.Document Elements": {
-    "message": "Document Elements",
+    "message": "Elementos del documento",
     "description": "The label for category Document Elements in sidebar docs"
   },
   "sidebar.docs.category.Document Elements.link.generated-index.title": {
-    "message": "Document Elements",
+    "message": "Elementos del documento",
     "description": "The generated-index page title for category Document Elements in sidebar docs"
   },
   "sidebar.docs.link.4D Qodly Pro": {
