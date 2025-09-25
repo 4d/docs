@@ -2,6 +2,7 @@
 id: handling-pictures
 title: Pictures
 displayed_sidebar: docs
+slug: /WritePro/pictures
 ---
 
 

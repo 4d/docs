@@ -1,10 +1,9 @@
 ---
 id: handling-tables
-title: Manejo de tablas
+title: Tablas
 displayed_sidebar: docs
+slug: /WritePro/tables
 ---
-
-#### Manejo de tablas 
 
 Los documentos 4D Write Pro pueden contener tablas. Las tablas 4D Write Pro son creadas y definidas por programación, pero su contenido puede ser modificado y manejado por el usuario. Varios atributos de tablas 4D Write Pro son editables, incluyendo la altura de la la línea, la alineación, los márgenes, el estilo del texto, el color o los bordes.
 
@@ -12,14 +11,14 @@ Los documentos 4D Write Pro pueden contener tablas. Las tablas 4D Write Pro son 
 
 **Nota:** dado que las tablas 4D Write Pro pueden llenarse por programación, pueden contener un gran número de columnas y filas. Tenga en cuenta que las tablas muy grandes afectarán al rendimiento, especialmente si se muestran en pantalla. Ver también [esta entrada de blog](https://blog.4d.com/4d-write-pro-tables-without-limit) para más información.
 
-#### Crear una tabla 
+## Crear una tabla 
 
 Las tablas 4D Write Pro se crean mediante una llamada al comando [WP Insert table](../commands/wp-insert-table). Luego puede añadir líneas utilizando el comando [WP Table append row](../commands/wp-table-append-row).
 
 **Nota:** un usuario puede crear una tabla al copiar y pegar un rango de celdas:  
 ![](../../assets/en/WritePro/pict3307941.EN.png)
 
-#### Edición de tablas 
+## Edición de tablas 
 
 El contenido de las celdas se puede agregar por programación utilizando el comando [WP Table append row](../commands/wp-table-append-row).
 
@@ -47,7 +46,7 @@ Cuando se aplican atributos diferentes a elementos concurrentes de una tabla, se
 2. Se renderizan las líneas (sobreescribir atributos de tabla)
 3. Se renderizan las celdas/columnas (atributos de línea sobreescritos).
 
-##### Redimensionar columnas 
+### Redimensionar columnas 
 
 El ancho de las columnas de la tabla se puede modificar arrastrando el separador de columnas hacia la izquierda o hacia la derecha. El cursor cambia para indicar que se puede mover horizontalmente y la línea vertical se muestra en la regla:
 
@@ -65,7 +64,7 @@ Si presiona la tecla **Mayús** mientras cambia el tamaño de una columna, el ta
   
 **Nota**: la propiedad Editable debe estar habilitada para que el documento 4D Write Pro permita cambiar el tamaño de la columna.
 
-##### Fusión y división de celdas 
+### Fusión y división de celdas 
 
 Con 4D Write Pro, puede dividir y combinar celdas en una tabla. Fusionar celdas es combinar dos o más celdas adyacentes de una tabla situadas en la misma línea o columna en una única celda. Dividir celdas es tomar celdas ya fusionadas y separarlas en múltiples celdas adyacentes en la misma línea o columna. Las celdas pueden fusionarse utilizando el comando [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) o la acción estándar **cell/merge**, y dividirse utilizando el comando [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) o la acción estándar **cell/split**.
 
@@ -156,7 +155,7 @@ y tendrá el mismo resultado que utilizando $cell1 porque $cell1, $cell2, y $cel
 
 Sin embargo, si se combinan un número x de líneas o columnas completas, los índices de las siguientes líneas o columnas se reducen en x. 
 
-#### Paginación de tablas 
+## Paginación de tablas 
 
 Cuando se muestran en modo Página o Borrador (o en el contexto de la impresión de un documento), las tablas 4D Write Pro pueden dividirse:
 
@@ -191,7 +190,7 @@ Cuando se inserta un salto de página o un salto de columna mediante una acción
 * Las tablas no se pueden dividir en diferentes secciones. Insertar un salto de sección en una tabla moverá toda la tabla a la nueva sección.
 * Los saltos dentro de las líneas no están permitidos cuando las *Líneas de arrastre* están activadas.
 
-#### Encabezados repetidos 
+## Encabezados repetidos 
 
 4D Write Pro le permite definir hasta cinco líneas de encabezado por tabla. Las líneas de encabezado seleccionadas se repetirán en cada columna o página cuando se produzca un salto de columna o de página.
 
@@ -204,7 +203,7 @@ Los encabezados de la tabla son la(s) primera(s) línea(s) de la tabla. Para def
 
 Si designa más de cinco líneas como encabezado (o si resulta de una inserción de líneas en un encabezado existente), 4D Write Pro sólo utiliza las cinco primeras líneas como encabezado. Si elimina la(s) línea(s) definida(s) en el encabezado, el número de líneas del encabezado disminuye.
 
-#### Tabla fuentes de datos 
+## Tabla fuentes de datos 
 
 Puede asignar un objeto fórmula como fuente de datos para una tabla y acceder a los valores resultantes desde la tabla utilizando *Expresiones con This* (ver más abajo). La fórmula de la fuente de datos es procesada por 4D Write Pro cuando se calculan las fórmulas (por ejemplo, cuando se abre el documento, cuando se llama al comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). Esta función aprovecha los contextos de datos (ver [WP SET DATA CONTEXT](../commands/wp-set-data-context)).
 
@@ -225,7 +224,7 @@ Para eliminar una fuente de datos de una tabla, utilice el comando [WP RESET ATT
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-##### Crear una tabla con fuente de datos 
+### Crear una tabla con fuente de datos 
 
 Un diseño de tabla basado en una fuente de datos que contiene las siguientes líneas:
 
@@ -252,7 +251,7 @@ En todo caso, la siguiente instrucción devuelve el número real de líneas:
  WP GET ATTRIBUTES($table;wk row count;$vcount) //31 para el ejemplo arriba
 ```
 
-##### Líneas de arrastre 
+### Líneas de arrastre 
 
 Las tablas basadas en fuentes de datos soportan **líneas de arrastre inferiores** que se muestran automáticamente en la parte inferior de cada página/columna cuando la tabla se divide en más de una página/columna. Una línea de arrastre puede mostrar información adicional basada en los elementos mostrados/impresos anteriormente, gracias a la expresión **This.previousItems** (ver *Expresiones con This*). Esta función permite, por ejemplo, añadir líneas de subtotal.
 
@@ -275,7 +274,7 @@ Para crear líneas de arrastre:
 
 **Nota:** no se permiten saltos de página dentro de las líneas cuando la función de traspaso de líneas está activada (ver *Paginación de tablas*). Las opciones correspondientes, si se definen, se ignoran.
 
-##### Líneas de ruptura 
+### Líneas de ruptura 
 
 Las tablas basadas en fuentes de datos soportan una o varias **Líneas de ruptura de orden** que pueden mostrarse antes o después de la línea de datos. Las **Líneas de ruptura de orden** le ayudan a dividir visualmente los elementos de la fuente de datos ya ordenados en la tabla en diferentes partes basadas en un valor de fórmula calculado.
 
@@ -300,7 +299,7 @@ Para crear líneas de ruptura:
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-##### Expresiones con This 
+### Expresiones con This 
 
 Cuando se utiliza en una fórmula dentro de la tabla, la palabra clave **This** da acceso a diferentes datos según el contexto:
 
@@ -320,7 +319,7 @@ En cualquier otro contexto, estas expresiones devolverán *undefined*.
 
 **Nota:** para más información sobre la inserción de fórmulas, ver [WP INSERT FORMULA](../commands/wp-insert-formula).
 
-##### Trabajar con una tabla fuente de datos 
+### Trabajar con una tabla fuente de datos 
 
 Cuando se llena una tabla desde una fuente de datos, las filas se crean automáticamente cuando se calculan las referencias. Se pueden insertar o eliminar líneas, editar el contenido de las celdas, cambiar el estilo, etc:
 

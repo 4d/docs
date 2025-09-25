@@ -2,13 +2,12 @@
 id: exporting-to-svg-format
 title: Exportar para formato SVG
 displayed_sidebar: docs
+slug: /WritePro/exporting-to-svg-format
 ---
-
-#### 
 
 Pode exportar páginas de documentos 4D Write Pro a formato SVG utilizando os comandos [WP EXPORT DOCUMENT](../commands/wp-export-document) e [WP EXPORT VARIABLE](../commands/wp-export-variable). Esta página contém informação adicional e notas sobre a exportação SVG.
 
-#### Renderização SVG 
+### Renderização SVG 
 
 As imagens SVG e as caixas de texto são renderizadas de acordo com a configuração da página mostrada no modo vista Página. São levadas em consideração as propiedades abaixo:
 
@@ -48,7 +47,7 @@ Os elementos abaixo não são exportados a SVG:
    * Data de criação  
    * Data de modificação
 
-#### Gerenciamento de fontes 
+### Gerenciamento de fontes 
 
 As fontes não estão aninhadas no SVG exportado, por isso o texto será renderizado corretamente apeans se a família de fontes e o estilo forem compatíveis com a plataforma na que se renderiza a imagen SVG.
 
@@ -58,7 +57,7 @@ As fontes Google importadas sustituem às fontes nativas quando se renderizar o 
 
 **Nota:** só são conservados os estilos de negrito e cursiva. Não é garantida uma compatibilidade de 100% entre os estilos de fontes nativas e a definição de estilos de fontes em CSS (e por tanto, em SVG). A exportação a PDF é mais adequada para a distribuição a todas as plataformas ou para uma melhor compatibilidade WYSIWYG com as fontes, já que estão aninhadas no PDF.
 
-#### Exemplo 
+### Exemplo 
 
 Este exemplo exporta uma página de documento a formato SVG e cria uma vista prévia da imagem utilizando [SVG EXPORT TO PICTURE](../../commands/svg-export-to-picture).
 

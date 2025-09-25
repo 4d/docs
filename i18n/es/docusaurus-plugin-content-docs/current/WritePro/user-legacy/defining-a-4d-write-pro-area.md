@@ -1,7 +1,8 @@
 ---
 id: defining-a-4d-write-pro-area
-title: Definir un area 4D Write Pro
+title: Configuración de áreas de 4D Write Pro
 displayed_sidebar: docs
+slug: /WritePro/configuring-4d-write-pro-areas
 ---
 
 

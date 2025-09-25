@@ -2,23 +2,22 @@
 id: importing-and-exporting-in-docx-format
 title: Exportar em formato docx
 displayed_sidebar: docs
+slug: /WritePro/importing-and-exporting-in-docx-format
 ---
-
-#### 
 
 4D Write Pro pode importar e exportar documentos no formato .docx. Esse formato é compatível com aplicações de processamento de texto como Microsoft Word.  
   
 **Nota de compatibilidade:** a compatibilidade para documentos 4D Write Pro exportados em formato .docx só está certificado para Microsoft Word 2010 e versões posteriores. As versões anteriores, em particular Microsoft Word 2007, podem ter problemas para abrir os documentos.
 
-#### Como importar .docx 
+## Como importar .docx 
 
 Os documentos no formato .docx podem ser importados com 4D Write Pro com o comando [WP Import document](../commands/wp-import-document). Para mais informações veja a descrição do comando.
 
-##### Mudanças de comportamenot 
+### Mudanças de comportamenot 
 
 Se a maioria dos parâmetros .docx são conservados, certos parâmetros são conhecidos por não terem compatibilidade ou por se comportarem diferentemente que em 4D Write Pro. Estes são os seguintes parâmetros:
 
-###### Alinhamento / Layout 
+#### Alinhamento / Layout 
 
 | **Configuração**    | **Descrição**                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -26,26 +25,26 @@ Se a maioria dos parâmetros .docx são conservados, certos parâmetros são con
 | Paragraph layout    | Só layouts de texto ocidental são compatíveis. Estilo de parágrafos distribuidos, tailandês e asiático não são compatíveis.                                                                                                                                                                                                                                  |
 | Page Size           | Tamanhos de página diferentes não são compatíveis. Só o tamanho da página da primeira seção é importado.                                                                                                                                                                                                                                                     |
 
-###### Background/Fundo 
+#### Background/Fundo 
 
 | **Configurações** | **Descrição**  |
 | ----------------- | -------------- |
 | Watermark         | Não compatível |
 
-###### Expressões 
+#### Expressões 
 
 | **Configuração**  | **Descrição**                                |
 | ----------------- | -------------------------------------------- |
 | MS Word equations | Não compatível. Os datos não são importados. |
 | MS Word charts    | Não compatível. Os dados não são importados. |
 
-###### Listas 
+#### Listas 
 
 | **Configuração**    | **Descrição**                                                                                                                                                             |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Listas hierárquicas | As listas multiniveles não são suportadas. As listas multinível são convertidas em listas de um só nível, por isso o aspecto da lista ou a numeração podem ser diferentes |
 
-###### Pictures / Imagens 
+#### Pictures / Imagens 
 
 | **Configuração**     | **Descrição**                                                                                                                           |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -54,33 +53,33 @@ Se a maioria dos parâmetros .docx são conservados, certos parâmetros são con
 | 3D models            | Não compatível, entretando a última imagem 2D renderizada ou o último modelo 3D renderizado podem ser importados se presentes no .docx. |
 | SmartArt             | Não compatível.                                                                                                                         |
 
-###### Referências/ Review 
+#### Referências/ Review 
 
 | **Configuração** | **Descrição**                             |
 | ---------------- | ----------------------------------------- |
 | Comments         | Não compatível. Conteúdo não é importado. |
 | Footnotes        | Não compatível. Conteúdo não é importado. |
 
-###### Spacing 
+#### Spacing 
 
 | **Configuração**        | **Descrição**                                                                                          |
 | ----------------------- | ------------------------------------------------------------------------------------------------------ |
 | "At least" line spacing | Não compativel. Espaçamento de linha "At least" é converitdo para espaçamento de linha fixo (simples). |
 | Fit text                | Não compativel.. O estilo normal 4D Write Pro é usado.                                                 |
 
-###### Tabelas 
+#### Tabelas 
 
 | **Configurações** | **Descrição**                                         |
 | ----------------- | ----------------------------------------------------- |
 | Tables            | Tabelas contíguas não são fusionadas automaticamente. |
 
-###### Texto 
+#### Texto 
 
 | **Configuração** | **Descrição**                                                                                                                                                                                              |
 | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Themes           | Temas texto não são importados. Se uma definição de cor ou fonte referenciar uma cor ou fonte em um tema, a última cor ou fonte computada serão usadas. Senão, a cor ou fonte definida no tema será usada. |
 
-##### Importar histórico 
+### Importar histórico 
 
 Quando importar o formato .docx em um 4D Write Pro, um objeto log histórico é criado e incluido com o objeto documentos importados. Esse objeto pode ser encontrado com o atributo "importLog" (ou a constante wk import log)
 
@@ -98,7 +97,7 @@ O objeto import log contém as propriedades abaixo:
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | wk import log | Objeto Log contendo informação sobre a operação de importação .docx. Propriedades são de apenas leitura e não podem ser estabelecidas: <table> <tbody> <tr> <td>**Propriedade**</td> <td> </td> <td>**Tipo**</td> <td>**Descrição**</td> </tr> <tr> <td>status</td> <td> </td> <td>Text</td> <td>Estado da importação:<br/> successo - o documento é importado em 4D Write Pro erro - um documento 4D Write Pro é retornado  </td> </tr> <tr> <td>developer</td> <td> </td> <td>Collection</td> <td>Coleção de objetos mensagem para desenvolvedores 4D Write Pro.</td> </tr> <tr> <td> </td> <td>\[ \].type</td> <td>Text</td> <td>O tipo de mensagem arquivada:<br/> informação avisos erros  </td> </tr> <tr> <td> </td> <td>\[ \].message</td> <td>Text</td> <td>Mensagem sobre a operação de importação.</td> </tr> <tr> <td>user</td> <td> </td> <td>Collection</td> <td>Coleção de objetos mensagem para usuários 4D Write Pro.</td> </tr> <tr> <td> </td> <td>\[ \].type</td> <td>Text</td> <td>O tipo de mensagem arquivada:<br/> informação aviso  </td> </tr> <tr> <td> </td> <td>\[ \].messageShort</td> <td>Text</td> <td>Mensagem curta sobre a operação de importação.</td> </tr> <tr> <td> </td> <td>\[ \].messageLong</td> <td>Text</td> <td>Mensagem longa sobre a operação de importação.</td> </tr> </tbody> </table> **Aviso**:   *importLog* é um atributo personalizado, portanto a wk import log não pode ser usada por os comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes) ou [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) (para mais informações, veja *Usar atributos personalizáveis*). |
 
-#### Como exportar em formato .docx 
+## Como exportar em formato .docx 
 
 Os objetos 4D Write Pro oferecem duas formas de exportar documentos 4D Write Pro ao formato .docx:
 
@@ -106,11 +105,11 @@ Os objetos 4D Write Pro oferecem duas formas de exportar documentos 4D Write Pro
 * para exportar um arquivo .docx a uma variável BLOB; utilize o comando [WP EXPORT VARIABLE](../commands/wp-export-variable).
 Para saber mais, consulte a descrição destes comandos.
 
-##### Mudanças de comportamento 
+### Mudanças de comportamento 
 
 Mesmo que a maioria das configurações de 4D Write Pro são conservadas, algumas configurações não são compatíveis ou se comportam de maneira diferente em Microsoft Word. Estes são:
 
-###### Alinhamento / Layout 
+#### Alinhamento / Layout 
 
 | **Parâmetro**                                                                                                     | **Parágrafos**                                                                                                                                                                                                                                                                                         | **Seções**                                                                               | **Imagens** |
 | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ----------- |
@@ -118,7 +117,7 @@ Mesmo que a maioria das configurações de 4D Write Pro são conservadas, alguma
 | Caixas de texto ancoradas a áreas embebidas não são exportadas. Renderização ode ser diferente em Microsoft Word. |                                                                                                                                                                                                                                                                                                        |                                                                                          |             |
 | Alinhação vertical                                                                                                | Não é compatível com Microsoft Word (todos os elementos serão alinhados à parte superior)                                                                                                                                                                                                              | Não compatível para imagens online (todos os elementos serão alinhados com a linha base) |             |
 
-###### Fundo 
+#### Fundo 
 
 | **Configuração**              | **Parágrafos**                                                                                                | **Seções**                                                                                                     | **Imagens**                                                                                                                                 |
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -127,7 +126,7 @@ Mesmo que a maioria das configurações de 4D Write Pro são conservadas, alguma
 | Repetição de imagens de fundo | "ladrilhos" horizontais ou verticais são convertidos a ladrilhos completos em Microsoft Word                  | "ladrilhos" horizontais ou verticais são convertidos a ladrilhos completos em Microsoft Word                   |                                                                                                                                             |
 | Origem de fundo               | Caixa de origem é convertido ao mesmo valor como clipping box de fundo.                                       | Não compatível com Microsoft.                                                                                  |                                                                                                                                             |
 
-###### Bordas 
+#### Bordas 
 
 | **Parâmetro**                       | **Parágrafos**                                                                                                                                                                                                                                  | **Seções**                                                                           | **Imagens** |
 | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ | ----------- |
@@ -135,52 +134,52 @@ Mesmo que a maioria das configurações de 4D Write Pro são conservadas, alguma
 | Raio da borda (bordas arredondadas) | Não compatíveis com Microsoft Word                                                                                                                                                                                                              |                                                                                      |             |
 | Largura da borda                    | O máximo de Microsoft Word é 12pt, as bordas que excedem este tamanho são reduzidas.                                                                                                                                                            | O máximo de Microsoft Word é 12pt, as bordas que excedem este tamanho são reduzidas. |             |
 
-###### Expressões 
+#### Expressões 
 
 | **Configuração** | **Parágrafos**                                                                                                                                                                                                                                                                                           | **Seções** | **Imagens** |
 | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------- |
 | Expressions      | Apenas expressões simples 4D tais como "Current date" ou "Current time", ou 4D Write Pro variáveis locais reservados ($wp\_title, $wp\_pageNumber, etc.) são convertidos a campos Microsoft Word. Outras expressões 4D são computadas e convertidas a texto ou imagens durante o processo de exportação. |            |             |
 
-###### Listas 
+#### Listas 
 
 | **Configuração**  | **Parágrafos**                                                                                                             | **Seções** | **Imagens** |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------- |
 | Indent            | Convertido a 0 para itens de lista\] (indentação de itens de lista é convertido a alinhamento recolhido em Microsoft Word) |            |             |
 | Ordered list type | Grego, armênio e Geórgio são convertidos a decimais e Hiragana é convertido a Katakana em Microsoft Word.                  |            |             |
 
-###### Imagens 
+#### Imagens 
 
 | **Configuração** | **Parágrafos**                                                                              | **Seções** | **Imagens** |
 | ---------------- | ------------------------------------------------------------------------------------------- | ---------- | ----------- |
 | SVG              | Não compatível com Microsoft Word (imagens em formato SVG vai ser convertido a formato PNG) |            |             |
 
-###### Tamanho 
+#### Tamanho 
 
 | Configuração             | **Parágrafos**                                                                        | **Seções** | **Imagens** |
 | ------------------------ | ------------------------------------------------------------------------------------- | ---------- | ----------- |
 | Altura mínima            | Não é compatível com Microsoft Word (altura é gerenciada automaticamente)             |            |             |
 | Largura / Largura Mínima | Não é compatível com Microsoft Word (largura de parágrafo é manejada automaticamente) |            |             |
 
-###### Spacing 
+#### Spacing 
 
 | Configuração | **Parágrafos**                                                                            | **Seções**                                                                                | **Imagens** |
 | ------------ | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ----------- |
 | Padding      | Máximo de Microsoft Word é 31pts, se o preenchimento exceder esse tamanho, será reduzido. | Máximo de Microsoft Word é 31pts, se o preenchimento exceder esse tamanho, será reduzido. |             |
 
-###### Tabelas 
+#### Tabelas 
 
 | **Propriedade**       | **Descrição**    |
 | --------------------- | ---------------- |
 | Bottom carry-over row | Não é exportado. |
 
-###### Tabulações 
+#### Tabulações 
 
 | **Configurações**      | **Parágrafos**                                                                                                                                       | **Seções** | **Imagens** |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ----------- |
 | Default tab stop       | Não compatível com Microsoft Word (vai ser conviertido a paradas de tabulação absolutas)                                                             |            |             |
 | Tab leading characters | Microsoft Word é compatível com "pontos" (....), "hífens" (----), e "subscrito" (\_\_\_\_), todos os outros caracteres serão convertidos a "nenhum". |            |             |
 
-###### Text 
+#### Text 
 
 | **Configuração** | **Parágrafos**                                                                                                          | **Seções**                                                                             | **Imagens** |
 | ---------------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ----------- |

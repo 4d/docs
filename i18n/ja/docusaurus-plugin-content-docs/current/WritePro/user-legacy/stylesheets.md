@@ -2,7 +2,7 @@
 id: stylesheets
 title: スタイルシート
 displayed_sidebar: docs
-slug: /WritePro/user/stylesheets
+slug: /WritePro/stylesheets
 ---
 
 

@@ -2,9 +2,8 @@
 id: importing-4d-write-documents
 title: Importar documentos 4D Write
 displayed_sidebar: docs
+slug: /WritePro/importing-4d-write-documents
 ---
-
-#### 
 
 Una de las principales funcionalidades del nuevo 4D Write Pro es la capacidad de importar y convertir documentos 4D Write Pro existentes. Esto le permitirá migrar las aplicaciones que se basan en el plug-in 4D Write.  
   
@@ -19,7 +18,7 @@ Una de las principales funcionalidades del nuevo 4D Write Pro es la capacidad de
     
 Para más información, consulte *Gestión de fórmulas*.
 
-#### Cómo importar un documento 4D Write 
+## Cómo importar un documento 4D Write 
 
 Los objetos 4D Write Pro ofrecen dos maneras de importar documentos 4D Write:
 
@@ -28,7 +27,7 @@ Los objetos 4D Write Pro ofrecen dos maneras de importar documentos 4D Write:
 
 Para más información, consulte la descripción de estos comandos.
 
-#### ¿Qué propiedades se conservan de 4D Write? 
+## ¿Qué propiedades se conservan de 4D Write? 
 
 Para facilitar la migración desde el plug-in 4D Write a 4D Write Pro, queremos soportar tantas funcionalidades 4D Write como sea posible en objetos 4D Write Pro.
 
@@ -36,7 +35,7 @@ Este párrafo muestra las propiedades del plug-in 4D Write que se recuperan en u
 
 Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran como bugs. Esto se debe, por ejemplo, a la fuente predeterminada utilizada en 4D Write Pro para viñetas, o pequeñas conversiones en el tipo Subrayado.
 
-##### Información del documento 
+### Información del documento 
 
 | **Plug-in** **4D Write**  | **4D Write Pro**                                          |
 | ------------------------- | --------------------------------------------------------- |
@@ -49,7 +48,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Empresa                   | Disponible                                                |
 | Notas                     | Disponible                                                |
 
-##### Parámetros de visualización del documento 
+### Parámetros de visualización del documento 
 
 | **Plug-in** **4D Write**           | **4D Write Pro**                                                                |
 | ---------------------------------- | ------------------------------------------------------------------------------- |
@@ -71,7 +70,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Vista Wysiwyg                      | No disponible                                                                   |
 | Vista zoom                         | No importado (utilice Document/Zoom en el menú contextual)                      |
 
-##### Parámetros del documento 
+### Parámetros del documento 
 
 | **Plug-in** **4D Write** | **4D Write Pro**                                                         |
 | ------------------------ | ------------------------------------------------------------------------ |
@@ -87,7 +86,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 
 **Nota:** el separador del sistema (como devuelto por [GET SYSTEM FORMAT](../../commands/get-system-format)) se utiliza como separador décimal para las tabulaciones decimales. Puede cambiar este parámetro utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes). 
 
-##### Parámetros de paginación de documentos 
+### Parámetros de paginación de documentos 
 
 | **Plug-in** **4D Write**                                         | **4D Write Pro** |
 | ---------------------------------------------------------------- | ---------------- |
@@ -111,7 +110,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Pie de página primera página margen inferior                     | Disponible       |
 | Primera página es correcta                                       | Disponible       |
 
-##### Parámetros de impresión de documentos 
+### Parámetros de impresión de documentos 
 
 | **Plug-in 4D Write** | **4D Write Pro** |
 | -------------------- | ---------------- |
@@ -124,7 +123,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Resolución X         | No disponible    |
 | Resolución Y         | No disponible    |
 
-##### Imágenes 
+### Imágenes 
 
 **Notas de compatibilidad:** 
 
@@ -144,7 +143,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Es una expresión                               | Disponible para imágenes en el texto(a partir de 4D v16 R5) |
 | Conservar el tamaño                            | No importado (automático en 4D Write Pro)                   |
 
-##### Propiedades de caracteres 
+### Propiedades de caracteres 
 
 | **Plug-in** **4D Write**                      | **4D Write Pro (span)**         |
 | --------------------------------------------- | ------------------------------- |
@@ -167,7 +166,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Apariencia                                    | No disponible                   |
 | Hoja de estilo                                | Disponible (a partir de 4D v18) |
 
-##### Propiedades párrafos 
+### Propiedades párrafos 
 
 | **Plug-in** **4D Write**                 | **4D Write Pro** |
 | ---------------------------------------- | ---------------- |
@@ -188,7 +187,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | Hoja de estilo                           | Disponible       |
 | Tabulaciones                             | Disponible       |
 
-##### Hipervínculos 
+### Hipervínculos 
 
 | **Plug-in** **4** **D Write** | **4D Write Pro**                                  |
 | ----------------------------- | ------------------------------------------------- |
@@ -205,7 +204,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 | $2             | Texto - Etiqueta de enlace                      | Objeto - Descripción del enlace:.method - Nombre del método del enlace. Debe permitirse con el comando [SET ALLOWED METHODS](../../commands/set-allowed-methods). .parameter - valor del parámetro de usuario pasado al método (si se usa).range - Rango de la etiqueta del enlace. Ver *Comandos de gestión de rangos* |  
 | $3             | Entero largo - Parámetro de usuario (methodRef) | \-                                                                                                                                                                                                                                                                                                                      |
 
-##### Expresiones 4D 
+### Expresiones 4D 
 
 | **Plug-in** **4D Write** | **4D Write Pro**  |
 | ------------------------ | ----------------- |
@@ -218,7 +217,7 @@ Tenga en cuenta sin embargo, que hay algunas diferencias, que no se consideran c
 
 \*\*se puede importar como texto entre las etiquetas **##htmlBegin##** y **##htmlEnd##** si utiliza la constante wk import html expressions as text.
 
-##### Datos de texto 
+### Datos de texto 
 
 | **Plug-in** **4D Write**   | **4D Write Pro** |
 | -------------------------- | ---------------- |

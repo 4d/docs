@@ -2,6 +2,7 @@
 id: presentation
 title: Getting started
 displayed_sidebar: docs
+slug: /WritePro/getting-started
 ---
 
 4D Write Pro offers 4D users an advanced word-processing tool, fully integrated with your 4D database. Using 4D Write Pro, you can write pre-formatted emails and/or letters or any documents containing images, tables, bookmarks, a scanned signature, formatted text and placeholders for dynamic variables. You can also create invoices or reports dynamically, including formatted text and images.

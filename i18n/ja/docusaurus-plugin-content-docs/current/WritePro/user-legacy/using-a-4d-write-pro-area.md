@@ -1,7 +1,8 @@
 ---
 id: using-a-4d-write-pro-area
-title: Using a 4D Write Pro area
+title: Properties & Layout
 displayed_sidebar: docs
+slug: /WritePro/properties
 ---
 
 

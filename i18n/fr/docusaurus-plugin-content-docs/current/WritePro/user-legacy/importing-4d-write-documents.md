@@ -2,9 +2,8 @@
 id: importing-4d-write-documents
 title: Import de documents 4D Write
 displayed_sidebar: docs
+slug: /WritePro/importing-4d-write-documents
 ---
-
-#### 
 
 Une des principales fonctions du nouvel objet 4D Write Pro est sa capacité à importer et à convertir les documents 4D Write existants. Ce principe vous permet de migrer les applications qui s'appuient actuellement sur le plug-in 4D Write.
 
@@ -19,7 +18,7 @@ Une des principales fonctions du nouvel objet 4D Write Pro est sa capacité à i
     
 Pour plus d'informations, reportez-vous à *Gérer des formules*.
 
-#### Comment importer un document 4D Write ? 
+## Comment importer un document 4D Write ? 
 
 Les objets 4D Write Pro permettent d'importer des documents 4D Write de deux manières :
 
@@ -28,7 +27,7 @@ Les objets 4D Write Pro permettent d'importer des documents 4D Write de deux man
 
 Pour plus d'informations, veuillez vous reporter aux descriptions de ces commandes.
 
-#### Quelles propriétés 4D Write sont importées ? 
+## Quelles propriétés 4D Write sont importées ? 
 
 Afin de faciliter votre migration du plug-in 4D Write vers 4D Write Pro, nous voulons conserver autant de fonctions 4D Write que possible dans les objets 4D Write Pro.
 
@@ -36,7 +35,7 @@ Ce paragraphe liste les propriétés du plug-in 4D Write qui sont actuellement r
 
 Notez que quelques différences de rendu pourront apparaître, qui ne seront pas nécessairement considérées comme des bogues. Par exemple, des différences peuvent être liées à la police par défaut utilisée par 4D Write Pro pour les puces, ou aux conversions des caractères soulignés. 
 
-##### Document info 
+### Document info 
 
 | **4D Write plug-in**         | **4D Write Pro**                                             |
 | ---------------------------- | ------------------------------------------------------------ |
@@ -49,7 +48,7 @@ Notez que quelques différences de rendu pourront apparaître, qui ne seront pas
 | Société                      | Disponible                                                   |
 | Commentaire                  | Disponible                                                   |
 
-##### Paramètres de vue 
+### Paramètres de vue 
 
 | **4D Write plug-in**       | **4D Write Pro**                                                           |
 | -------------------------- | -------------------------------------------------------------------------- |
@@ -71,7 +70,7 @@ Notez que quelques différences de rendu pourront apparaître, qui ne seront pas
 | Wysiwyg                    | Non disponible                                                             |
 | Zoom                       | Non importé (utiliser Document/Zoom dans le menu contextuel)               |
 
-##### Paramètres de document 
+### Paramètres de document 
 
 | **4D Write plug-in** | **4D Write Pro**                                                       |
 | -------------------- | ---------------------------------------------------------------------- |
@@ -87,7 +86,7 @@ Notez que quelques différences de rendu pourront apparaître, qui ne seront pas
 
 Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](../../commands/lire-formatage-systeme)) est utilisé comme séparateur décimal pour les tabulations décimales. Vous pouvez modifier ce paramètre à l'aide de la commande [WP FIXER ATTRIBUTS](../commands/wp-fixer-attributs). 
 
-##### Paramètres pagination document 
+### Paramètres pagination document 
 
 | **4D Write plug-in**                            | **4D Write Pro** |
 | ----------------------------------------------- | ---------------- |
@@ -111,7 +110,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | Pied de page première page marge bas            | Disponible       |
 | Première page droite                            | Disponible       |
 
-##### Paramètre impression document 
+### Paramètre impression document 
 
 | **4D Write plug-in** | **4D Write Pro** |
 | -------------------- | ---------------- |
@@ -124,7 +123,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | Résolution X         | Non disponible   |
 | Résolution Y         | Non disponible   |
 
-##### Images 
+### Images 
 
 **Note de compatibilité** : 
 
@@ -144,7 +143,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | Est une expression              | Disponible pour images dans le texte (à partir de 4D v16 R5) |
 | Conserver la taille             | Non importé (automatique dans 4D Write Pro)                  |
 
-##### Propriétés de caractères 
+### Propriétés de caractères 
 
 | **4D Write plug-in**                             | **4D Write Pro (span)**             |
 | ------------------------------------------------ | ----------------------------------- |
@@ -167,7 +166,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | Aspect liens                                     | Non disponible                      |
 | Feuille de style                                 | Disponible (à compter de 4D v18)    |
 
-##### Propriétés paragraphes 
+### Propriétés paragraphes 
 
 | **4D Write plug-in**           | **4D Write Pro** |
 | ------------------------------ | ---------------- |
@@ -188,7 +187,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | Feuille de style               | Disponible       |
 | Tabulations                    | Disponible       |
 
-##### Liens hypertexte 
+### Liens hypertexte 
 
 | **4D Write plug-in** | **4D Write Pro**                              |
 | -------------------- | --------------------------------------------- |
@@ -205,7 +204,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 | $2             | Texte - Étiquette du lien                       | Objet - Description du lien :.method - Nom de la méthode du lien devant être autorisée par la commande [FIXER METHODES AUTORISEES](../../commands/fixer-methodes-autorisees). .parameter - Valeur du paramètre utilisateur passée à la méthode (le cas échéant).range - Plage de l'étiquette du lien. Voir *Gestion des plages* |  
 | $3             | Entier long - Paramètre utilisateur (methodRef) | \-                                                                                                                                                                                                                                                                                                                              |
 
-##### Expressions 4D 
+### Expressions 4D 
 
 | **4D Write plug-in** | **4D Write Pro**   |
 | -------------------- | ------------------ |
@@ -218,7 +217,7 @@ Note : Le séparateur du système (comme retourné par [LIRE FORMATAGE SYSTEME](
 
 \*\*peut être importée en tant que texte dans les balises ***##htmlBegin##*** et ***##htmlEnd##*** si vous utilisez la constante wk import html expressions as text.
 
-##### Données texte 
+### Données texte 
 
 | **4D Write plug-in**       | **4D Write Pro** |
 | -------------------------- | ---------------- |
