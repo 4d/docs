@@ -30,18 +30,18 @@ En *targetObj*, puede pasar:
 
 En *attribName*, pase el nombre del atributo a recuperar.
 
-You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
+También puede pasar una colección de nombres de atributos en *attribColl*, en cuyo caso el comando devolverá un objeto que contiene los nombres de atributos pasados en *attribColl* junto con sus valores correspondientes.
 
-For a comprehensive list of attributes to pass, as well as their scope and values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+Para obtener una lista completa de los atributos a pasar, así como su alcance y valores, consulte la sección [Atributos 4D Write Pro](../4d-write-pro-attributes).
 
-If there are different values for the same attribute in the element passed as a parameter, the command returns:
+Si hay diferentes valores para el mismo atributo en el elemento pasado como parámetro, el comando regresa:
 
 - para valores numéricos, wk mixed
-- for an array, an empty array (tab stops, color if *attribValue* is defined as array), with an exception for wk text shadow offset for which the array value will always contain 2 entries which may be set separately to wk mixed if either horizontal offset or vertical offset (or both) are mixed.
+- para los arrays, se devuelve un array vacío (tabulación, color si *attribValue* se definió como un array), con una excepción para wk text shadow offset para el que el valor del array siempre contendrá 2 entradas que pueden definirse por separado a wk mixed si se mezclan el desplazamiento horizontal o el desplazamiento vertical (o ambos).
 - para valores cadena, una cadena vacía
 - para valores imagen, una imagen vacía.
 
-**Note**: If *targetObj* contains a paragraph and a character style sheets, the paragraph style sheet name is returned.
+**Nota**: si *targetObj* contiene una hoja de estilo de párrafo y otra de caracter, se devuelve el nombre de la hoja de estilo de párrafo.
 
 ## Ejemplo 1
 
@@ -54,7 +54,7 @@ Desea obtener el color de fondo del área seleccionada:
 
 ## Ejemplo 2
 
-You want to get the font size, background color and border style of the selected area using a collection:
+Desea obtener el tamaño de la fuente, el color de fondo y el estilo del borde del área seleccionada utilizando una colección:
 
 ```4d
  $range:=WP Selection range(*;"WParea")

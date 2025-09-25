@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Table append row.Params-->
 
-| Parámetros | Tipo                                      |                             | Descripción                                       |
-| ---------- | ----------------------------------------- | --------------------------- | ------------------------------------------------- |
-| tableRef   | Object                                    | &#8594; | Referencia de tabla                               |
-| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valor(es) a definir en la fila |
-| valueColl  | Collection                                | &#8594; | Colección de valores a definir en la línea        |
-| Resultado  | Object                                    | &#8592; | Objeto de rango de filas                          |
+| Parámetros | Tipo                                      |                             | Descripción                                        |
+| ---------- | ----------------------------------------- | --------------------------- | -------------------------------------------------- |
+| tableRef   | Object                                    | &#8594; | Referencia de tabla                                |
+| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valor(es) a definir en la línea |
+| valueColl  | Collection                                | &#8594; | Colección de valores a definir en la línea         |
+| Resultado  | Object                                    | &#8592; | Objeto rango de línea                              |
 
 <!-- END REF-->
 
@@ -24,12 +24,12 @@ El comando **WP Table append row**<!--REF #_command_.WP Table append row.Summary
 El comando soporta dos sintaxis:
 
 - **Usando valores como parámetros:**
-  Añade tantas celdas en la fila como valores proporcionados en el parámetro o parámetros *value*. Puede pasar cualquier número de valores de diferentes tipos.
+  añade tantas celdas en la fila como valores proporcionados en el parámetro o parámetros *value*. Puede pasar cualquier número de valores de diferentes tipos.
 
 - **Usando una colección de valores (*valueColl)*:**
-  Llena la fila con valores de la colección *valueColl*. Cada elemento de la colección corresponde a una célula en la fila.
+  llena la línea con valores de la colección *valueColl*. Cada elemento de la colección corresponde a una célula en la fila.
 
-  En ambas sintaxis se admiten los siguientes tipos de valores: Texto, Número, Hora, Fecha, Imagen y Objeto (fórmulas o fórmulas con nombre que devuelven un elemento de fila).
+  En ambas sintaxis se admiten los siguientes tipos de valores: Texto, Número, Hora, Fecha, Imagen y Objeto (fórmulas o fórmulas con nombre que devuelven un elemento de línea).
 
 La alineación predeterminada de las celdas dependerá del tipo de valor:
 

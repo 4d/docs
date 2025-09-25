@@ -36,7 +36,7 @@
     "message": "Preferencias"
   },
   "homepage.administration.title": {
-    "message": "Server & Admin"
+    "message": "Servidor y administrador"
   },
   "4D Server Administration Window": {
     "message": "Ventana de administración de 4D Server"
@@ -135,7 +135,7 @@
     "message": "Generador de aplicaciones"
   },
   "homepage.sections.more.title": {
-    "message": "More docs"
+    "message": "Más documentos"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
@@ -665,7 +665,7 @@
     "message": "4D AIKit"
   },
   "4D at a glance": {
-    "message": "4D at a glance"
+    "message": "4D de un vistazo"
   },
   "homepage.sections.ide.title": {
     "message": "Project & IDE"
@@ -734,7 +734,7 @@
     "message": "Etiquetas"
   },
   "homepage.sections.administration.title": {
-    "message": "Server & Admin"
+    "message": "Servidor y administrador"
   },
   "4D Server Window": {
     "message": "4D Server Window"

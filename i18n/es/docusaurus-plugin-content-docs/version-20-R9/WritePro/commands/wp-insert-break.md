@@ -25,21 +25,21 @@ El comando **WP Insert break** <!--REF #_command_.WP Insert break.Summary-->inse
 En *targetObj*, pase:
 
 - un rango, o
-- an element (table / row / paragraph / body / header / footer / inline picture / section / subsection), or
+- un elemento (tabla / línea / párrafo / cuerpo / encabezado / pie de página / imagen en línea / sección / subsección), o
 - un documento 4D Write Pro
 
-In *breakType*, pass one of the following constants from the *4D Write Pro Constants* theme to define the type of break to insert:
+En *breakType*, pase una de las siguientes constantes del tema *4D Write Pro Constants* para definir el tipo de ruptura a insertar:
 
-| Constante                   | Tipo    | Valor | Comentario                                                                                                                                      |
-| --------------------------- | ------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| wk column break             | Integer | 3     | Salto de columna: inserta un salto de columna                                                                                   |
-| wk continuous section break | Integer | 5     | Defines a continuous section break (often used to change the number of columns without starting a new page). |
-| wk line break               | Integer | 0     | Salto de línea (en el mismo párrafo)                                                                                         |
-| wk page break               | Integer | 2     | Salto de página: define una nueva página                                                                                        |
-| wk paragraph break          | Integer | 4     | Salto de párrafo: define un nuevo párrafo                                                                                       |
-| wk section break            | Integer | 1     | Ruptura de sección: define una nueva sección                                                                                    |
+| Constante                   | Tipo    | Valor | Comentario                                                                                                                                                    |
+| --------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| wk column break             | Integer | 3     | Salto de columna: inserta un salto de columna                                                                                                 |
+| wk continuous section break | Integer | 5     | Define un salto de sección continuo (a menudo se utiliza para cambiar el número de columnas sin empezar una nueva página). |
+| wk line break               | Integer | 0     | Salto de línea (en el mismo párrafo)                                                                                                       |
+| wk page break               | Integer | 2     | Salto de página: define una nueva página                                                                                                      |
+| wk paragraph break          | Integer | 4     | Salto de párrafo: define un nuevo párrafo                                                                                                     |
+| wk section break            | Integer | 1     | Ruptura de sección: define una nueva sección                                                                                                  |
 
-In the *mode* parameter, pass a constant to indicate the insertion mode to be used for the break in the destination *targetObj*:
+En el parámetro *mode*, pase una constante para indicar el modo de inserción que se utilizará para la ruptura en el destino *targetObj*:
 
 | Constante  | Tipo    | Valor | Comentario                                      |
 | ---------- | ------- | ----- | ----------------------------------------------- |
@@ -47,20 +47,20 @@ In the *mode* parameter, pass a constant to indicate the insertion mode to be us
 | wk prepend | Integer | 1     | Insertar el contenido al principio del objetivo |
 | wk replace | Integer | 0     | Sustituir contenido de destino                  |
 
-- If *targetObj* is a range, you can use the optional *rangeUpdate* parameter to pass one of the following constants to specify whether or not the inserted contents are included in the resulting range:
+- Si *targetObj* es un rango, puede utilizar el parámetro opcional *rangeUpdate* para pasar una de las siguientes constantes para especificar si el contenido insertado se incluye o no en el rango resultante:
 
 | Constante             | Tipo    | Valor | Comentario                                                                            |
 | --------------------- | ------- | ----- | ------------------------------------------------------------------------------------- |
 | wk exclude from range | Integer | 1     | Contenido insertado no incluido en el rango actualizado                               |
 | wk include in range   | Integer | 0     | Contenido insertado incluido en el rango actualizado (por defecto) |
 
-If you do not pass a *rangeUpdate* parameter, by default the inserted contents are included in the resulting range.
+Si no se pasa el parámetro *rangeUpdate*, por defecto el contenido insertado se incluye en el rango resultante.
 
 - Si *targetObj* no es un rango, *rangeUpdate* se ignora.
 
 ## Ejemplo 1
 
-While building invoices, you want to insert page breaks except on the last page:
+Al crear facturas, desea insertar saltos de página excepto en la última página:
 
 ```4d
  $nbInvoices:=Records in selection([INVOICE])
@@ -74,9 +74,9 @@ While building invoices, you want to insert page breaks except on the last page:
 
 ## Ejemplo 2
 
-You want to insert a continuous section break to have a single column section and a two-column section on the same page.
+Desea insertar un salto de sección continuo para tener una sección de una columna y una sección de dos columnas en la misma página.
 
-1. Insert a continuous section break at the selection to create a new section:
+1. Inserte un salto de sección continuo en la selección para crear una nueva sección:
 
 ```4d
  $range:=WP Selection range(*;"WParea")  
