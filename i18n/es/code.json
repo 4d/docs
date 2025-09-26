@@ -677,13 +677,13 @@
     "message": "Arquitectura"
   },
   "Project Settings": {
-    "message": "Project Settings"
+    "message": "Parámetros del proyecto"
   },
   "Database structure": {
-    "message": "Database structure"
+    "message": "Estructura de la base de datos"
   },
   "Code & Methods": {
-    "message": "Code & Methods"
+    "message": "Código y métodos"
   },
   "Dependencies": {
     "message": "Dependencies"
@@ -701,10 +701,10 @@
     "message": "Conceptos"
   },
   "Commands by name": {
-    "message": "Commands by name"
+    "message": "Comandos por nombre"
   },
   "Commands by theme": {
-    "message": "Commands by theme"
+    "message": "Comandos por tema"
   },
   "Classes": {
     "message": "Clases"
@@ -737,7 +737,7 @@
     "message": "Servidor y administrador"
   },
   "4D Server Window": {
-    "message": "4D Server Window"
+    "message": "Ventana 4D Server"
   },
   "WebAdmin & Data Explorer": {
     "message": "WebAdmin & Data Explorer"

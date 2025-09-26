@@ -5,7 +5,7 @@ title: Session
 
 Los objetos de sesión son devueltos por el comando [`Session`](../commands/session.md). Estos objetos ofrecen al desarrollador una interfaz que permite gestionar la sesión de usuario actual y ejecutar acciones como almacenar datos contextuales, compartir información entre procesos de sesión, lanzar procesos preferentes relacionados con la sesión o (sólo web) gestionar [privilegios](../ORDA/privileges.md).
 
-:::tip Related blog posts
+:::tip Entradas de blog relacionadas
 
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
@@ -78,7 +78,7 @@ Esta función no hace nada y siempre devuelve **True** con cliente remoto, proce
 
 :::
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session (excluding promoted privileges) and returns **True** if the execution was successful<!-- END REF -->.
+La función `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->elimina todos los privilegios asociados a la sesión (excluyendo privilegios promocionados)y devuelve **True** si la ejecución se ha realizado correctamente<!-- END REF -->.
 
 A menos que esté en modo ["forceLogin"](../REST/authUsers.md#force-login-mode), la sesión se convierte automáticamente en una sesión de Invitado. En modo "forceLogin", `.clearPrivileges()` no transforma la sesión a una sesión de invitado, sólo elimina los privilegios de la sesión.
 
