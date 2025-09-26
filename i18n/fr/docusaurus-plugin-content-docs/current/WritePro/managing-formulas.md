@@ -1,6 +1,6 @@
 ---
 id: managing-formulas
-title: Formulas
+title: Formules
 slug: /WritePro/formulas
 ---
 

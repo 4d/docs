@@ -2,7 +2,6 @@
 id: managing-formulas
 title: Fórmulas
 slug: /WritePro/formulas
-
 ---
 
 ## Generalidades

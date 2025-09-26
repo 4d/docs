@@ -211,7 +211,7 @@ Sin embargo, las propiedades de la entidad son enumerables:
 
 Una selección de entidades es un objeto que contiene una o varias referencias a entidades pertenecientes a la misma dataclass. Suele crearse como resultado de una consulta o devolverse a partir de un atributo relacional. Una entity selection puede contener 0, 1 o X entidades de la dataclass -- donde X puede representar el número total de entidades contenidas en la dataclass.
 
-An entity selection object is handled through functions and properties of the [**EntitySelection**](../API/EntitySelectionClass.md) class.
+Un objeto de selección de entidades se maneja a través de funciones y propiedades del módulo [**EntitySelection**](../API/EntitySelectionClass.md).
 
 Ejemplo:
 

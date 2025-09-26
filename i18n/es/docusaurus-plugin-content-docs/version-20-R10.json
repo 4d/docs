@@ -752,7 +752,7 @@
     "description": "The generated-index page title for category Project & IDE in sidebar docs"
   },
   "sidebar.docs.category.Code & Methods": {
-    "message": "Code & Methods",
+    "message": "Código y métodos",
     "description": "The label for category Code & Methods in sidebar docs"
   },
   "sidebar.docs.category.Application Preferences": {
@@ -760,11 +760,11 @@
     "description": "The label for category Application Preferences in sidebar docs"
   },
   "sidebar.docs.category.Commands by theme": {
-    "message": "Commands by theme",
+    "message": "Comandos por tema",
     "description": "The label for category Commands by theme in sidebar docs"
   },
   "sidebar.docs.category.Commands by theme.link.generated-index.title": {
-    "message": "Commands by theme",
+    "message": "Comandos por tema",
     "description": "The generated-index page title for category Commands by theme in sidebar docs"
   },
   "sidebar.docs.category.Processes.link.generated-index.title": {
