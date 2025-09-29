@@ -1356,7 +1356,12 @@ module.exports =
           label: "Go Mobile with 4D",
           href: "https://developer.4d.com/go-mobile/"
         },
-      {
+        {
+          type: "link",
+          label: "4D Mobile App Server",
+          href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
+        },
+       {
           type: "link",
           label: "4D Mobile App Server",
           href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
