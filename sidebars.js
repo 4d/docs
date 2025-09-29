@@ -3288,6 +3288,11 @@ module.exports =
             }
           ]
         },
+       {
+          type: "link",
+          label: "4D NetKit",
+          href: "https://developer.4d.com/4D-NetKit"
+        },
         {
           type: "category",
           label: "4D AIKit",
@@ -3348,28 +3353,18 @@ module.exports =
         },
         {
           type: "link",
-          label: "4D Mobile App Server",
-          href: "https://github.com/4d-go-mobile/4D-Mobile-App-Server"
-        },
-        {
-          type: "link",
-          label: "4D NetKit",
-          href: "https://developer.4d.com/4D-NetKit"
-        },
-        {
-          type: "link",
           label: "4D Progress",
-          href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Progress.100-7614210.en.html"
+          href: "https://github.com/4d/4D-Progress/blob/main/README.md"
         },
         {
           type: "link",
           label: "4D SVG",
-          href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-SVG-Component.100-7614300.en.html"
+          href: "https://developer.4d.com/4D-SVG"
         },
         {
           type: "link",
           label: "4D Widgets",
-          href: "https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Widgets.100-7614949.en.html"
+          href: "https://github.com/4d/4D-Widgets/blob/main/Readme.md"
         },
         {
           type: "link",
@@ -3381,11 +3376,16 @@ module.exports =
           label: "Go Mobile with 4D",
           href: "https://developer.4d.com/go-mobile/"
         },
-      {
+        {
+          type: "link",
+          label: "4D Mobile App Server",
+          href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
+        },
+       {
           type: "link",
           label: "Build4D",
           href: "https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme"
-      }
+       }
     ]
     }
   ]
