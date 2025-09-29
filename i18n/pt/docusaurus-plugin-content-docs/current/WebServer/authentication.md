@@ -11,7 +11,11 @@ El servidor web 4D ofrece tres modos de autenticación, que puede seleccionar en
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Se recomienda utilizar una autenticación **personalizada**.
+:::warning
+
+Se recomienda utilizar una autenticación **personalizada**.
+
+:::
 
 ### Visão Geral
 

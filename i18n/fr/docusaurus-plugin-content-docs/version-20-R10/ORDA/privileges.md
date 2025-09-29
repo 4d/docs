@@ -1,6 +1,6 @@
 ---
 id: privileges
-title: Privilèges
+title: Roles and Privileges
 ---
 
 La protection des données tout en permettant un accès rapide et facile aux utilisateurs autorisés est un défi majeur pour les applications Web. L'architecture de sécurité ORDA est implémentée au cœur de votre datastore et vous permet de définir des privilèges spécifiques à toutes les sessions utilisateur web ou REST pour les différentes ressources de votre projet (datastore, dataclasses, fonctions, etc.).

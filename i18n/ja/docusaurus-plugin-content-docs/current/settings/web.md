@@ -120,11 +120,15 @@ Webプロセスの最大同時接続数の厳格な上限です。 [最大同時
 
 Webサーバーに対して適用する認証システムを設定します。 3つのオプションから選択できます:
 
-カスタムの認証 (デフォルト)<br/>
-BASIC認証のパスワード<br/>
-DIGEST認証のパスワード
+- カスタムの認証 (デフォルト)
+- Passwords with BASIC protocol
+- Passwords with DIGEST protocol
 
-**カスタムの認証** を使用することが推奨されています。 *Web 開発* ドキュメンテーションの[**認証**](../WebServer/authentication.md) の章を参照ください。
+**カスタムの認証** を使用することが推奨されています。 See [**Authentication**](../WebServer/authentication.md) section.
+
+#### Generic Web User
+
+[廃止予定の設定](../WebServer/webServerConfig.md#廃止予定の設定) 参照。
 
 ## オプション (II)
 

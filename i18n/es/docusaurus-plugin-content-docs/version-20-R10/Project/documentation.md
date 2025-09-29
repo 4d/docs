@@ -1,6 +1,6 @@
 ---
 id: documentation
-title: Documentar un proyecto
+title: Documentation
 ---
 
 En los proyectos aplicación, puede documentar sus métodos así como sus clases, formularios, tablas o campos. La creación de documentación es especialmente apropiada para proyectos desarrollados por varios programadores y, en general, es una buena práctica de programación. La documentación puede contener una descripción de un elemento, así como cualquier información necesaria para entender cómo funciona el elemento en la aplicación.

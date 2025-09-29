@@ -1,6 +1,6 @@
 ---
 id: overview
-title: ORDA
+title: Vue d’ensemble
 ---
 
 ORDA signifie **Object Relational Data Access** (Accès objet aux données relationnelles). C'est une technologie avancée permettant l'accès au modèle et aux données d'une base de données à l'aide d'objets.

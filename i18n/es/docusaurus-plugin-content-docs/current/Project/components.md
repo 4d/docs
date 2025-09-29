@@ -33,21 +33,6 @@ La arquitectura de carpetas "Contents" se recomienda para los componentes si des
 
 :::
 
-## Components made by 4D
-
-4D proposes a set of components developed in-house. If you want to use one of them, you need to download and install it from the [4D github repository](https://github.com/4d) automatically using the [Dependency manager](#monitoring-project-dependencies).
-
-| Componente                                                          | Descripción                                                                                                                                                           | Principales funcionalidades                                                                                                             |
-| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [4D AiIKit](https://github.com/4d/4D-AIKit)                         | Conjunto de clases a conectar con las APIs OpenAI de terceros                                                                                                         | `OpenAIChat`, `OpenAIImage`...                                                          |
-| [4D Labels](https://github.com/4d/4D-Labels)                        | Componente interno necesario para la creación de plantillas de etiquetas                                                                                              |                                                                                                                                         |
-| [4D NetKit](https://developer.4d.com/4D-NetKit)                     | Conjunto de herramientas de servicios web para conectarse a APIs de terceros                                                                                          | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
-| [4D Progress](https://github.com/4d/4D-Progress)                    | Abrir una o varias barras de progreso en la misma ventana                                                                                                             | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
-| [4D SVG](https://github.com/4d/4D-SVG)                              | Crear y manipular objetos gráficos svg comunes                                                                                                                        | `SVGTool_Display_viewer`, métodos múltiples `SVG_`                                                                                      |
-| [4D ViewPro](ViewPro/getting-started.md)                            | Funciones de hoja de cálculo en sus formularios                                                                                                                       | Ver la [documentación 4D View Pro](ViewPro/getting-started.md)                                                                          |
-| [4D Widgets](https://github.com/4d/4D-Widgets)                      | Gestione los widgets DatePicker, TimePicker, SearchPicker 4D                                                                                                          | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [Interfaz 4D WritePro](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro palettes](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) and [table wizard](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
-
 ## Component Locations
 
 :::note
@@ -482,6 +467,16 @@ Para añadir una [dependencia GitHub](#components-stored-on-github), haga clic e
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
+:::note
+
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the combo box, so that you can easily select and install these features in your environment:
+
+![dependency-default-git](../assets/en/Project/dependency-default.png)
+
+Components already installed are not listed.
+
+:::
+
 Introduzca la ruta del repositorio GitHub de la dependencia. Podría ser una **URL del repositorio** o una **cadena de nombres de repositorio github/account/repository**, por ejemplo:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
@@ -510,7 +505,7 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Siga la versión 4D**: descargue la última versión del componente compatible con la versión 4D en ejecución. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada.
+- **Siga la versión 4D**: descargue la última versión del componente compatible con la versión 4D en ejecución. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 

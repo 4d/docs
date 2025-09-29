@@ -13,9 +13,20 @@ La integración de áreas de 4D View Pro en sus formularios le permite importar 
 
 ## Instalación y activación
 
-Las funcionalidades de 4D View Pro se incluyen directamente en 4D, lo que facilita su despliegue y gestión. No se requiere ninguna instalación adicional.
+4D View Pro must be installed in your projects. The 4D View Pro component is available from the [**4D-ViewPro github repository**](https://github.com/4d/4D-ViewPro).
 
-Sin embargo, 4D View Pro requiere una licencia. Es necesario activar esta licencia en su aplicación para poder utilizar sus funcionalidades. Cuando se utiliza este componente sin licencia, el contenido de un objeto que requiere una función de 4D View Pro no se muestra en tiempo de ejecución, sino que se muestra un mensaje de error:
+The easiest way to install 4D View Pro in an opened project is to use the Dependency Manager:
+
+1. Open the [Dependency Manager](../Project/components.md) window.
+2. Click on the **+** button to add a component.
+3. Click on the **GitHub** tab.
+4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-github-dependency-version-range), then click **Add**.
+
+![](../assets/en/ViewPro/install.png)
+
+Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-dependency).
+
+4D View Pro requires a license. Es necesario activar esta licencia en su aplicación para poder utilizar sus funcionalidades. Cuando se utiliza este componente sin licencia, el contenido de un objeto que requiere una función de 4D View Pro no se muestra en tiempo de ejecución, sino que se muestra un mensaje de error:
 
 ![](../assets/en/ViewPro/licenseError.png)
 

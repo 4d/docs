@@ -33,21 +33,6 @@ Once installed in your 4D environment, extensions are handled as **dependencies*
 
 :::
 
-## Components made by 4D
-
-4D proposes a set of components developed in-house. If you want to use one of them, you need to download and install it from the [4D github repository](https://github.com/4d) automatically using the [Dependency manager](#monitoring-project-dependencies).
-
-| コンポーネント                                                              | 説明                                                                                                                                                                    | 主な機能                                                                                                                                    |
-| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [4D AiIKit](https://github.com/4d/4D-AIKit)                          | サードパーティのOpenAI API に接続するためのクラス群                                                                                                                                       | `OpenAIChat`, `OpenAIImage`...                                                          |
-| [4D Labels](https://github.com/4d/4D-Labels)                         | ラベルテンプレートを作成するための内部コンポーネント                                                                                                                                            |                                                                                                                                         |
-| [4D NetKit](https://developer.4d.com/4D-NetKit)                      | サードパーティAPI に接続するためのWeb サービスツール群                                                                                                                                       | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
-| [4D Progress](https://github.com/4d/4D-Progress)                     | 1つ以上の進捗バーを同じウィンドウで開く                                                                                                                                                  | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
-| [4D SVG](https://github.com/4d/4D-SVG)                               | 一般的な svgグラフィックオブジェクトの作成・操作                                                                                                                                            | `SVGTool_Display_viewer`, 複数の `SVG_` メソッド                                                                                               |
-| [4D ViewPro](ViewPro/getting-started.md)                             | フォームに追加できる表計算機能                                                                                                                                                       | [4D View Pro ドキュメンテーション](ViewPro/getting-started.md) 参照。                                                                                |
-| [4D Widgets](https://github.com/4d/4D-Widgets)                       | DatePicker, TimePicker, SearchPicker 4Dウィジェットの管理                                                                                                                      | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro palettes](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) and [table wizard](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
-
 ## Component Locations
 
 :::note
@@ -482,6 +467,16 @@ When you hover over a secondary dependency, a tooltip displays the parent depend
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
+:::note
+
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the combo box, so that you can easily select and install these features in your environment:
+
+![dependency-default-git](../assets/en/Project/dependency-default.png)
+
+Components already installed are not listed.
+
+:::
+
 依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
@@ -510,7 +505,7 @@ The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjs
 - **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
 - **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
 - **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **4Dのバージョンに追随する**: 実行中の4D バージョンと互換性のある最新のコンポーネントリリースをダウンロードします。 この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。
+- **4Dのバージョンに追随する**: 実行中の4D バージョンと互換性のある最新のコンポーネントリリースをダウンロードします。 この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。 This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 

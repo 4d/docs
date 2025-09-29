@@ -120,9 +120,15 @@ Le permite definir el tiempo de espera máximo antes de cerrar los procesos Web 
 
 Define el sistema de autenticación que desea aplicar a su servidor web. Se proponen tres opciones:
 
-Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
+- Personalizado (por defecto)
+- Passwords with BASIC protocol
+- Passwords with DIGEST protocol
 
-Se recomienda utilizar la autenticación **personalizada**. Ver el capítulo [**Autenticación**](../WebServer/authentication.md) en la documentación *Desarrollo Web*.
+Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) section.
+
+#### Generic Web User
+
+Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings).
 
 ## Options (II)
 
