@@ -3,13 +3,13 @@ id: components
 title: コンポーネント
 ---
 
-4D のコンポーネントとは、プロジェクトにインストール可能な、1つ以上の機能を持つ 4Dコードやフォームの一式です。 たとえば、[4D SVG コンポーネント](https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
+4D のコンポーネントとは、プロジェクトにインストール可能な、1つ以上の機能を持つ 4Dコードやフォームの一式です。 たとえば、[4D SVG コンポーネント](https://github.com/4d/4D-SVG) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
 ## コンポーネントのインストール
 
-いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが [GitHub 上に公開](https://github.com/search?q=4d-component&type=Repositories) されています。 また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。
+Installation and loading of components in your 4D projects are handled through the [4D Dependency manager](../Project/components.md).
 
-4Dプロジェクトのコンポーネントのインストールとロードは、[4D依存関係マネージャー](../Project/components.md) を介しておこなわれます。
+Several components are [developed by 4D](../Extensions/overview.md#components-developed-by-4d), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). また、[独自の 4Dコンポーネントを開発](../Extensions/develop-components.md) することもできます。
 
 ## コンポーネントの使い方
 

@@ -7,16 +7,19 @@ title: アクセスコントロールの概要
 
 運用環境によって、4D アクセスコントロールの方法は異なります:
 
-- マルチユーザーアプリケーションでは、4D のユーザー＆グループ機能を利用することができます。
+- in multi-user Web and REST applications, access control is based upon [ORDA's Roles and privileges](../ORDA/privileges.md) features.
+- in multi-user desktop applications, you can rely on 4D users and groups,
 - in single-user applications, user access is controlled through the system session, using commands such as [`Current system user`](../commands-legacy/current-system-user.md).
 
-> 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
+:::tip Related Blog post
+
+4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
+
+:::
 
 ## マルチユーザーアプリケーションのアクセスコントロール
 
-マルチユーザーアプリケーションは、4D Server を使って運用します。 これにはクライアントサーバー、Web、および RESTアプリケーションが含まれます。
-
-マルチユーザーアプリケーションでは、[4D ユーザー＆グループ](handling_users_groups.md) によってアクセスコントロールがおこなわれます。 ユーザーを作成してパスワードを割り当て、アプリケーションにおいて異なるレベルの権限を持つアクセスグループを作成します。
+Multi-user desktop applications are deployed with 4D Server. マルチユーザーアプリケーションでは、[4D ユーザー＆グループ](handling_users_groups.md) によってアクセスコントロールがおこなわれます。 ユーザーを作成してパスワードを割り当て、アプリケーションにおいて異なるレベルの権限を持つアクセスグループを作成します。
 
 4D Server のパスワードアクセスシステムを起動するには、[デザイナー (Designer) ユーザーにパスワードを割り当て](handling_users_groups.md#designer-and-administrator) ます。 [ユーザーとグループを作成](handling_users_groups.md) しても、デザイナーにパスワードが指定されるまでは、すべてのアプリケーションアクセスがデザイナーアクセス権でおこなわれます (アプリケーション開始時に ID を求められません)。 つまり、アプリケーションのあらゆる部分を開くことができます。
 

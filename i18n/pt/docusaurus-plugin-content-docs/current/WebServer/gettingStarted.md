@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: Desenvolvimento Web
+title: Getting started
 ---
 
 Esta seção "Começando" é orientada aos usuários da primeira vez que querem uma visão geral sobre como ir de zero a 4D site que lida com dados do banco de dados. Vamos começar!

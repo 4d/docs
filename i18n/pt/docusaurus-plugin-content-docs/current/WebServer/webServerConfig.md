@@ -605,6 +605,10 @@ As configurações a seguir ainda são compatíveis, mas dependem de recursos ou
 
 Estado de validação de endereço IP para cookies de sessão. Por motivos de segurança por padrão o servidor web 4D verifica o endereço IP de cada solicitação contendo um cookie de sessão e rejeita-o se este endereço não corresponde ao endereço IP usado para criar o cookie. Em algumas aplicações específicas, poderá querer desactivar esta validação e aceitar cookies de sessão, mesmo quando os seus endereços IP não correspondem. Por exemplo, quando os dispositivos móveis mudam entre redes Wi-Fi e 4G/5G, seu endereço IP será alterado. Neste caso, você deve passar 0 nesta opção para permitir que os clientes possam continuar usando suas sessões da Web, mesmo quando o endereço IP mudar. Observe que essa configuração reduz o nível de segurança de seu aplicativo. Quando é modificado, essa configuração é eficaz imediatamente (não é necessário reiniciar o servidor HTTP).
 
+### Generic Web User
+
+This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". In this case, each browser allowed to connect to the database gets access authorizations and restrictions associated with this user.
+
 #### Enviar diretamente caracteres expandidos
 
 Quando essa opção está marcada, o servidor da Web envia caracteres estendidos "como estão" em páginas semidinâmicas, sem convertê-los em entidades HTML. Essa opção mostrou um aumento de velocidade na maioria dos sistemas operacionais estrangeiros (especialmente o sistema japonês).

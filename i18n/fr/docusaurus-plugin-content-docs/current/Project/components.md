@@ -33,21 +33,6 @@ L'architecture de dossier "Contents" est recommandée pour les composants si vou
 
 :::
 
-## Components made by 4D
-
-4D proposes a set of components developed in-house. If you want to use one of them, you need to download and install it from the [4D github repository](https://github.com/4d) automatically using the [Dependency manager](#monitoring-project-dependencies).
-
-| Composant                                                             | Description                                                                                                                                                           | Principales fonctionnalités                                                                                                             |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [4D AiIKit](https://github.com/4d/4D-AIKit)                           | Set of classes to connect to third-party OpenAI APIs                                                                                                                  | `OpenAIChat`, `OpenAIImage`...                                                          |
-| [4D Labels](https://github.com/4d/4D-Labels)                          | Composant interne requis pour la création de modèles de labels                                                                                                        |                                                                                                                                         |
-| [4D NetKit](https://developer.4d.com/4D-NetKit)                       | Set of web service tools to connect to third-party APIs                                                                                                               | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
-| [4D Progress](https://github.com/4d/4D-Progress)                      | Ouverture d'une ou plusieurs barres de progression dans la même fenêtre                                                                                               | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
-| [4D SVG](https://github.com/4d/4D-SVG)                                | Création et manipulation d'objets graphiques svg courants                                                                                                             | `SVGTool_Display_viewer`, multiple `SVG_` methods                                                                                       |
-| [4D View Pro](ViewPro/getting-started.md)                             | Fonctions de tableur dans vos formulaires                                                                                                                             | Voir la [documentation de 4D View Pro](ViewPro/getting-started.md)                                                                      |
-| [4D Widgets](https://github.com/4d/4D-Widgets)                        | Gestion des widgets 4D DatePicker, TimePicker et SearchPicker                                                                                                         | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro palettes](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) and [table wizard](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
-
 ## Component Locations
 
 :::note
@@ -482,6 +467,16 @@ Pour ajouter une [dépendance GitHub](#components-stored-on-github), cliquez sur
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
+:::note
+
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the combo box, so that you can easily select and install these features in your environment:
+
+![dependency-default-git](../assets/en/Project/dependency-default.png)
+
+Components already installed are not listed.
+
+:::
+
 Entrez l'adresse du dépôt GitHub de la dépendance. Il peut s'agir d'une **URL de dépôt** ou d'une **chaîne de nom de compte/dépôt-Github**, par exemple :
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
@@ -510,7 +505,7 @@ Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour u
 - **Jusqu'à la version majeure suivante** : Définit une [plage sémantique de versions](#tags-and-versions) pour limiter les mises à jour à la version majeure suivante.
 - **Jusqu'à la prochaine version mineure** : De même, limite les mises à jour à la version mineure suivante.
 - **Version exacte (balise)** : Sélectionnez ou saisissez manuellement un [tag spécifique](#tags-and-versions) dans la liste disponible.
-- **Suivre la version 4D** : Téléchargez la dernière version du composant compatible avec la version 4D courante. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée.
+- **Suivre la version 4D** : Téléchargez la dernière version du composant compatible avec la version 4D courante. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 
 La version courante de la dépendance GitHub est affichée sur le côté droit de l'élément de la dépendance :
 

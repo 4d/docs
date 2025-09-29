@@ -1,6 +1,6 @@
 ---
 id: components
-title: Componentes
+title: Dependencies
 ---
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
@@ -30,6 +30,21 @@ La carpeta del paquete de un componente puede contener:
 La arquitectura de carpetas "Contents" se recomienda para los componentes si desea [notarizar](../Desktop/building.md#about-notarization) sus aplicaciones en macOS.
 
 :::
+
+## Components made by 4D
+
+4D includes a set of components developed in-house. They can also be found in the [4D github repository](https://github.com/4d).
+
+| Componente                                                          | Descripción                                                                                                                                                           | Principales funcionalidades                                                                                                             |
+| ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [4D AiIKit](https://github.com/4d/4D-AIKit)                         | Conjunto de clases a conectar con las APIs OpenAI de terceros                                                                                                         | `OpenAIChat`, `OpenAIImage`...                                                          |
+| [4D Labels](https://github.com/4d/4D-Labels)                        | Componente interno necesario para la creación de plantillas de etiquetas                                                                                              |                                                                                                                                         |
+| [4D NetKit](https://developer.4d.com/4D-NetKit)                     | Conjunto de herramientas de servicios web para conectarse a APIs de terceros                                                                                          | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
+| [4D Progress](https://github.com/4d/4D-Progress)                    | Abrir una o varias barras de progreso en la misma ventana                                                                                                             | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
+| [4D SVG](https://github.com/4d/4D-SVG)                              | Crear y manipular objetos gráficos svg comunes                                                                                                                        | `SVGTool_Display_viewer`, métodos múltiples `SVG_`                                                                                      |
+| [4D ViewPro](ViewPro/getting-started.md)                            | Funciones de hoja de cálculo en sus formularios                                                                                                                       | Ver la [documentación 4D View Pro](ViewPro/getting-started.md)                                                                          |
+| [4D Widgets](https://github.com/4d/4D-Widgets)                      | Gestione los widgets DatePicker, TimePicker, SearchPicker 4D                                                                                                          | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
+| [Interfaz 4D WritePro](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro palettes](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) and [table wizard](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
 
 ## Cargando componentes
 

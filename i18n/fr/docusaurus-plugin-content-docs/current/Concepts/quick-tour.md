@@ -423,3 +423,11 @@ Dans 4D, les séquences d'échappement suivantes peuvent être utilisées:
 Dans l'exemple suivant, le caractère **retour chariot** (séquence d'échappement `\r`) est inséré dans une instruction afin d'obtenir une boîte de dialogue :
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+
+## Conventions d'écriture
+
+The following conventions are used in the 4D language documentation:
+
+- les caractères `{ }` (accolades) indiquent des paramètres facultatifs. Par exemple, `.delete( { option : Integer } )` signifie que le paramètre *option* peut être omis lors de l'appel de la fonction.
+- la notation `{ ; ...param }` indique un nombre illimité de paramètres. Par exemple, `.concat( value : any { ;...valueN } ) : Collection` signifie qu'un nombre illimité de valeurs de n'importe quel type peut être passé à la fonction.
+- the `any` keyword is used for parameters that can be of any type (number, text, boolean, date, time, object, collection...).

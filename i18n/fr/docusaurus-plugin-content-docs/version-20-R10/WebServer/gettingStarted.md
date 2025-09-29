@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: Développement Web
+title: Prise en main
 ---
 
 Cette section d'initiation est destinée aux nouveaux utilisateurs qui souhaitent avoir une vue d'ensemble sur la façon de créer à partir de rien un site Web 4D qui gère des données provenant de la base. C'est parti !

@@ -11,7 +11,11 @@ El servidor web 4D ofrece tres modos de autenticación, que puede seleccionar en
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Se recomienda utilizar una autenticación **personalizada**.
+:::warning
+
+Se recomienda utilizar una autenticación **personalizada**.
+
+:::
 
 ### Generalidades
 
@@ -139,7 +143,7 @@ El segundo parámetro (`$content`) es el encabezado y el cuerpo de la petición 
 
 Si su aplicación utiliza esta información, deberá analizar el encabezado y el cuerpo. Puede utilizar los comandos `WEB GET HTTP HEADER` y `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
+> Por razones de rendimiento, el tamaño de los datos que pasan por el parámetro $content no debe superar los 32 KB. Más allá de este tamaño, son truncados por el servidor HTTP de 4D.
 
 #### $IPClient - Dirección IP del cliente web
 

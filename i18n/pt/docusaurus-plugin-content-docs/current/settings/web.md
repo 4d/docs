@@ -120,9 +120,15 @@ Permite que você defina o tempo limite máximo antes de fechar os processos ina
 
 Defina o sistema de autenticação que você deseja aplicar ao seu servidor Web. São propostas três opções:
 
-Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
+- Personalizado (padrão)
+- Passwords with BASIC protocol
+- Passwords with DIGEST protocol
 
-É recomendado usar a autenticação personalizada. Veja o capítulo [**Autenticação**](../WebServer/authentication.md) na documentação *Desenvolvimento Web*.
+É recomendado usar a autenticação personalizada. See [**Authentication**](../WebServer/authentication.md) section.
+
+#### Generic Web User
+
+Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings).
 
 ## Opções (II)
 

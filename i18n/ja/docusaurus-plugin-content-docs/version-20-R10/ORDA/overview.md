@@ -1,6 +1,6 @@
 ---
 id: overview
-title: ORDA
+title: 概要
 ---
 
 ORDA とは **オブジェクト・リレーショナル・データアクセス (Object Relational Data Access)** の意味です。 これは、オブジェクトを介してデータベースのモデルとデータにアクセスできるようにする革新的なテクノロジーです。
