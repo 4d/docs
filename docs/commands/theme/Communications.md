@@ -1,6 +1,7 @@
 ---
 id: Communications_theme
 title: Communications
+sidebar_label: Communications
 slug: /commands/theme/Communications
 ---
 

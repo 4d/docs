@@ -1,6 +1,7 @@
 ---
 id: SVG_theme
 title: SVG
+sidebar_label: SVG
 slug: /commands/theme/SVG
 ---
 

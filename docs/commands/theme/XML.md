@@ -1,6 +1,7 @@
 ---
 id: XML_theme
 title: XML
+sidebar_label: XML
 slug: /commands/theme/XML
 ---
 

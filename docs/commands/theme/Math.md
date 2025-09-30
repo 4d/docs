@@ -1,6 +1,7 @@
 ---
 id: Math_theme
 title: Math
+sidebar_label: Math
 slug: /commands/theme/Math
 ---
 

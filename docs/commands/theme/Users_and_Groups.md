@@ -1,6 +1,7 @@
 ---
 id: Users_and_Groups_theme
 title: Users and Groups
+sidebar_label: Users and Groups
 slug: /commands/theme/Users-and-Groups
 ---
 

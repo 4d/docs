@@ -1,6 +1,7 @@
 ---
 id: System_Documents_theme
 title: System Documents
+sidebar_label: System Documents
 slug: /commands/theme/System-Documents
 ---
 

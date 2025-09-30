@@ -1,6 +1,7 @@
 ---
 id: Mail_theme
 title: Mail
+sidebar_label: Mail
 slug: /commands/theme/Mail
 ---
 
