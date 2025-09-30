@@ -10,7 +10,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 Blog posts about this feature:
 
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Permissions: inspeccionar los privilegios de la sesión para facilitar la depuración](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
 
 :::
 
@@ -133,7 +133,7 @@ La función `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->crea un
 
 Para más información sobre los tokens OTP, por favor consulte [esta sección](../WebServer/sessions.md#session-token-otp).
 
-Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión. You can set a custom timeout by passing a value in seconds in *lifespan*. Si se utiliza un token caducado para restaurar una sesión de usuario web, se ignora.
+Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión. Puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. Si se utiliza un token caducado para restaurar una sesión de usuario web, se ignora.
 
 El token devuelto puede ser utilizado en intercambios con aplicaciones de terceros o sitios web para identificar la sesión de forma segura. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
 
@@ -320,7 +320,7 @@ End if
 
 #### Ver también
 
-[*Blog posts about this feature*](https://blog.4d.com/?s=hasPrivilege)
+[*Publicaciones de blog sobre esta funcionalidad*](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 

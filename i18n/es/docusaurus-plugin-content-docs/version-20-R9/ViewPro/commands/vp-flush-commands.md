@@ -17,10 +17,10 @@ title: VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
-| Parámetros   | Tipo                        |    | Descripción                                                                                                                 |
-| ------------ | --------------------------- | -- | --------------------------------------------------------------------------------------------------------------------------- |
-| vpAreaName   | Text                        | -> | Nombre de objeto formulario área 4D View Pro                                                                                |
-| retrollamada | 4D.Function | -> | (Optional) A callback function executed after all VP commands and 4D custom functions have been executed |
+| Parámetros   | Tipo                        |    | Descripción                                                                                                                                                           |
+| ------------ | --------------------------- | -- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vpAreaName   | Text                        | -> | Nombre de objeto formulario área 4D View Pro                                                                                                                          |
+| retrollamada | 4D.Function | -> | (Opcional) Una función de retrollamada que se ejecuta después de que se hayan ejecutado todos los comandos VP y las funciones personalizadas de 4D |
 
 <!-- END REF -->
 
@@ -32,9 +32,9 @@ En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no 
 
 Para aumentar el rendimiento y reducir el número de peticiones enviadas, los comandos 4D View Pro llamados por el desarrollador se almacenan en un buffer de comandos. Cuando se llama, `VP FLUSH COMMANDS` ejecuta los comandos como un lote al salir del método y vacía el contenido del buffer de comandos.
 
-If a *callback* function is provided, it is only executed after all stored commands and 4D custom functions have finished processing. This ensures that any follow-up actions, such as saving or printing the document, are only performed after all calculations have completed.
+Si se ofrece una función *callback*, sólo se ejecuta después de que todos los comandos almacenados y las funciones personalizadas 4D hayan terminado de procesarse. Esto garantiza que cualquier acción posterior, como guardar o imprimir el documento, sólo se realice una vez que se hayan completado todos los cálculos.
 
-The following parameters can be used in the callback function:
+Los siguientes parámetros se pueden utilizar en la función de retrollamada:
 
 | Parámetros |                               | Tipo    | Descripción                                                                       |
 | ---------- | ----------------------------- | ------- | --------------------------------------------------------------------------------- |

@@ -8,8 +8,8 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 :::tip Entradas de blog relacionadas
 
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
-- [Generate, share and use web sessions One-Time Passcodes (OTP)](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+- [Permissions: inspeccionar los privilegios de la sesión para facilitar la depuración](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Generar, compartir y utilizar contraseñas de un solo uso (OTP) para las sesiones web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 
 :::
 
@@ -84,7 +84,7 @@ A menos que esté en modo ["forceLogin"](../REST/authUsers.md#force-login-mode),
 
 :::note
 
-This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
+Esta función no elimina los **privilegios promovidos** del proceso web, tanto si se han añadido a través del archivo [roles.json](../ORDA/privileges.md#rolesjson-file) como de la función [`promote()`](#promote).
 
 :::
 
@@ -136,7 +136,7 @@ La función `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->crea un
 
 Para más información sobre los tokens OTP, por favor consulte [esta sección](../WebServer/sessions.md#session-token-otp).
 
-Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión. You can set a custom timeout by passing a value in seconds in *lifespan*. Si se utiliza un token caducado para restaurar una sesión de usuario web, se ignora.
+Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión. Puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. Si se utiliza un token caducado para restaurar una sesión de usuario web, se ignora.
 
 El token devuelto puede ser utilizado en intercambios con aplicaciones de terceros o sitios web para identificar la sesión de forma segura. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
 
@@ -165,9 +165,9 @@ $token := Session.createOTP( 60 ) //el token es válido durante 1 mn
 
 <!-- REF #SessionClass.demote().Params -->
 
-| Parámetros | Tipo    |     | Descripción                             |
-| ---------- | ------- | :-: | --------------------------------------- |
-| promoteId  | Integer |  -> | Id returned by the `promote()` function |
+| Parámetros | Tipo    |     | Descripción                            |
+| ---------- | ------- | :-: | -------------------------------------- |
+| promoteId  | Integer |  -> | Id devuelto por la función `promote()` |
 
 <!-- END REF -->
 
@@ -175,15 +175,15 @@ $token := Session.createOTP( 60 ) //el token es válido durante 1 mn
 
 :::note
 
-This function does nothing in remote client, stored procedure, and standalone sessions.
+Esta función no hace nada en las sesiones cliente remoto, procedimientos almacenados y autónomos.
 
 :::
 
-The `.demote()` function <!-- REF #SessionClass.demote().Summary -->removes the promoted privilege whose id you passed in *promoteId* from the web process, if it was previously added by the [`.promote()`](#promote) function<!-- END REF -->.
+La función `.demote()` <!-- REF #SessionClass.demote().Summary -->elimina del proceso web el privilegio promocionado cuyo id pasó en *promoteId*, si fue añadido previamente por la función [`.promote()`](#promote)<!-- END REF -->.
 
-If no privilege with *promoteId* was promoted using [`.promote()`](#promote) in the web process, the function does nothing.
+Si ningún privilegio con *promoteId* fue promovido usando [`.promote()`](#promote) en el proceso web, la función no hace nada.
 
-If several privileges have been added to the web process, the `demote()` function must be called for each one with the appropriate *promoteId*. Privileges are stacked in the order they have been added to the process, it is recommended to unstack privileges in a LIFO (*Last In, First Out*) order.
+Si se han añadido varios privilegios al proceso web, se debe llamar a la función `demote()` para cada uno de ellos con el *promoteId* apropiado. Los privilegios se apilan en el orden en que se han añadido al proceso, se recomienda desapilar los privilegios en un orden LIFO (*Last In, First Out*).
 
 #### Ejemplo
 
@@ -275,7 +275,7 @@ La función `.getPrivileges()` <!-- REF #SessionClass.getPrivileges().Summary --
 
 :::note
 
-This function returns privileges assigned to a Session using the [`setPrivileges()`](#setprivileges) function only. Promoted privileges are NOT returned by the function, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
+Esta función devuelve los privilegios asignados a una Sesión utilizando únicamente la función [`setPrivileges()`](#setprivileges). Los privilegios promocionados NO son devueltos por la función, ya sea a través del archivo [roles.json](../ORDA/privileges.md#rolesjson-file) o la función [`promote()`](#promote).
 
 :::
 
@@ -348,10 +348,10 @@ $privileges := Session.getPrivileges()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                       |
-| ----------- | ------------------------------------ |
-| 21          | Returns True for promoted privileges |
-| 18 R6       | Añadidos                             |
+| Lanzamiento | Modificaciones                                |
+| ----------- | --------------------------------------------- |
+| 21          | Devuelve True para los privilegios promovidos |
+| 18 R6       | Añadidos                                      |
 
 </details>
 
@@ -372,7 +372,7 @@ La función `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->d
 
 :::note
 
-This function returns True for the *privilege* if called from a function that was promoted for this privilege (either through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function).
+Esta función devuelve True para el *privilegio* si se llama desde una función que fue promovida para este privilegio (ya sea a través del archivo [roles.json](../ORDA/privileges.md#rolesjson-file) o la función [`promote()`](#promote)).
 
 :::
 
@@ -581,10 +581,10 @@ End if
 
 <!-- REF #SessionClass.promote().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                               |
-| ---------- | ------- | :-------------------------: | --------------------------------------------------------- |
-| privilege  | Text    |              ->             | Nombre del privilegio                                     |
-| Resultado  | Integer | <- | id to use when calling the [`demote()`](#demote) function |
+| Parámetros | Tipo    |                             | Descripción                                                |
+| ---------- | ------- | :-------------------------: | ---------------------------------------------------------- |
+| privilege  | Text    |              ->             | Nombre del privilegio                                      |
+| Resultado  | Integer | <- | id a utilizar al llamar a la función [`demote()`](#demote) |
 
 <!-- END REF -->
 
@@ -592,7 +592,7 @@ End if
 
 :::note
 
-This function does nothing in remote client, stored procedure, and standalone sessions.
+Esta función no hace nada en las sesiones cliente remoto, procedimientos almacenados y autónomos.
 
 :::
 

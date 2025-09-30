@@ -19,7 +19,7 @@ Consulte la documentación [Guía de seguridad de 4D](https://blog.4d.com/4d-sec
 
 ## Control de acceso en las aplicaciones multiusuario
 
-Multi-user desktop applications are deployed with 4D Server. En las aplicaciones multiusuario, el control de acceso se realiza a través de [usuarios y grupos 4D](handling_users_groups.md). Puede crear usuarios, asignar contraseñas, crear grupos de acceso con diferentes niveles de privilegios en la aplicación.
+Las aplicaciones de escritorio multiusuario se despliegan con 4D Server. En las aplicaciones multiusuario, el control de acceso se realiza a través de [usuarios y grupos 4D](handling_users_groups.md). Puede crear usuarios, asignar contraseñas, crear grupos de acceso con diferentes niveles de privilegios en la aplicación.
 
 Inicie el sistema de control de acceso por contraseña 4D con 4D Server, [ asignando una contraseña al usuario Diseñador](handling_users_groups.md#designer-and-administrator). Cuando se asigna una contraseña al Diseñador, todos los privilegios de acceso entran en vigor. Para conectarse a la aplicación o a un [servidor con acceso protegido](handling_users_groups.md#assigning-group-access), los usuarios remotos deben introducir un nombre de usuario/contraseña. Se puede abrir cualquier parte de la aplicación.
 
