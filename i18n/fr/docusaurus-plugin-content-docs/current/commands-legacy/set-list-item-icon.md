@@ -5,7 +5,7 @@ slug: /commands/set-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *liste* ; réfElément | * ; *icône* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *liste* ; *réfElément* ; *icône* )<br/>**SET LIST ITEM ICON** ( * ; *liste* ; * ; *icône* )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
