@@ -5,7 +5,7 @@ slug: /commands/get-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *liste* ; refElément | * ) : Text<!-- END REF-->
+<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *liste* ; *refElément* ) : Text<br/>**Get list item font** ( * ; *liste* ; * ) : Text<!-- END REF-->
 <!--REF #_command_.Get list item font.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
