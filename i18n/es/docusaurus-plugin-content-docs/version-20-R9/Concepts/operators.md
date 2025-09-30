@@ -90,7 +90,7 @@ Se admiten los siguientes operadores de asignación compuestos:
 |                | Time \*= Number    | Number  | `$t1*=5 //$t1:=$t1*5`                                                          |
 |                | Picture \*= Number | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+Estos operadores se aplican a cualquier [expresión asignable](quick-tour.md#assignable-vs-non-assignable-expressions) excepto:
 
 - pictures as object properties or collection elements,
 - array index variables.

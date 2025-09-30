@@ -1778,7 +1778,7 @@ El objeto devuelto por <`.unlock()<` contiene la siguiente propiedad:
 | Propiedad    | Tipo    | Descripción                                                                                                                                                                                                                         |
 | ------------ | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success      | Boolean | True si la acción de desbloquear tiene éxito, False en caso contrario. Si el desbloqueo se realiza en una entidad abandonada, en un registro no bloqueado o en un registro bloqueado por otro proceso o entidad, el éxito es False. |
-| wasNotLocked | Boolean | (only if "success" is False) True if the entity was not locked in the process.                                                                                                                                                      |
+| wasNotLocked | Boolean | (sólo si "success" es False) True si la entidad no fue bloqueada en el proceso.                                                                                                                                                     |
 
 #### Ejemplo
 

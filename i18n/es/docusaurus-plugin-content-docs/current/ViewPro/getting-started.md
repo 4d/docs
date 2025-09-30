@@ -13,7 +13,7 @@ La integración de áreas de 4D View Pro en sus formularios le permite importar 
 
 ## Instalación y activación
 
-4D View Pro must be installed in your projects. The 4D View Pro component is available from the [**4D-ViewPro github repository**](https://github.com/4d/4D-ViewPro).
+4D View Pro debe estar instalado en sus proyectos. The 4D View Pro component is available from the [**4D-ViewPro github repository**](https://github.com/4d/4D-ViewPro).
 
 The easiest way to install 4D View Pro in an opened project is to use the Dependency Manager:
 
@@ -91,7 +91,7 @@ Dependiendo del área seleccionada, también están disponibles las siguientes o
 - haga clic en una celda o en un rango de celdas:
   - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
   - **Ordenar**: ordena el contenido de la columna.
-  - **Insertar comentario**: permite al usuario introducir un comentario para un área. Cuando se ha introducido un comentario para un área, la celda superior izquierda del área muestra un pequeño triángulo rojo:\
+  - **Insertar comentario**: permite al usuario introducir un comentario para un área. Cuando se ha introducido un comentario para un área, la celda superior izquierda del área muestra un pequeño triángulo rojo:  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilizando los comandos de 4D View Pro

@@ -313,7 +313,7 @@ Además, tiene acceso a las propiedades específicas de los encabezados. En part
 
 Al momento de la ejecución, los eventos que se producen en un encabezado se generan en el método objeto de la columna de list box.
 
-When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used with a header, it is applied to all headers, regardless of the individual element set by the command. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
+Cuando el comando [`OBJECT SET VISIBLE`](../commands/object-set-visible) es usado con un encabezado, se aplica a todos los encabezados, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
 
 ### Propiedades específicas de los encabezados
 
@@ -333,7 +333,7 @@ Para cada pie de columna de list box, puede definir propiedades de texto estánd
 
 Al momento de la ejecución, los eventos que se producen en un pie de página se generan en el método objeto de la columna de list box.
 
-When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
+Cuando se utiliza el comando [`OBJECT SET VISIBLE`](../commands/object-set-visible) con un pie de página, se aplica a todos los pies de página, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
 
 ### Propiedades específicas de los pies
 
@@ -566,7 +566,7 @@ End if
 
 El valor de la [variable asociada al encabezado de una columna](properties_Object.md#variable-or-expression) permite gestionar una información adicional: la ordenación actual de la columna (lectura) y la visualización de la flecha de ordenación.
 
-- Si la variable se define en 0, la columna no se ordena y la flecha de ordenación no se muestra.\
+- Si la variable se define en 0, la columna no se ordena y la flecha de ordenación no se muestra.  
   ![](../assets/en/FormObjects/sorticon0.png)
 
 - Si la variable está en 1, la columna se ordena en orden ascendente y se muestra la flecha de ordenación.
