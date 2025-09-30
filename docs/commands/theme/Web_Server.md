@@ -1,6 +1,7 @@
 ---
 id: Web_Server_theme
 title: Web Server
+sidebar_label: Web Server
 slug: /commands/theme/Web-Server
 ---
 

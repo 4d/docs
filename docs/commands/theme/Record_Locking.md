@@ -1,6 +1,7 @@
 ---
 id: Record_Locking_theme
 title: Record Locking
+sidebar_label: Record Locking
 slug: /commands/theme/Record-Locking
 ---
 

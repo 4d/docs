@@ -1,6 +1,7 @@
 ---
 id: Backup_theme
 title: Backup
+sidebar_label: Backup
 slug: /commands/theme/Backup
 ---
 

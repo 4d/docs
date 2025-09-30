@@ -1,6 +1,7 @@
 ---
 id: Date_and_Time_theme
 title: Date and Time
+sidebar_label: Date and Time
 slug: /commands/theme/Date-and-Time
 ---
 

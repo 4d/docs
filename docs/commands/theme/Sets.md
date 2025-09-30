@@ -1,6 +1,7 @@
 ---
 id: Sets_theme
 title: Sets
+sidebar_label: Sets
 slug: /commands/theme/Sets
 ---
 
