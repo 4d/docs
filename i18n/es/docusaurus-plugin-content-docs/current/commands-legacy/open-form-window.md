@@ -121,7 +121,8 @@ Este código se debe llamar en macOS mientras se muestra una ventana documento, 
 El siguiente ejemplo usa la ruta a un formulario .json para mostrar los registros en una lista de empleados:
 
 ```4d
- Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
+var $myWin : Integer 
+$myWin :=Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
  ALL RECORDS([Personnel])
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```

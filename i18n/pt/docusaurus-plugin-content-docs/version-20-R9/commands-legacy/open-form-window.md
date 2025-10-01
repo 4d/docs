@@ -118,7 +118,8 @@ Este código deve ser chamado em MacOS enquanto uma janela de documento é exibi
 O exemplo abaixo usa a rota a um formulário json para exibir os registros em uma lista de empregados: 
 
 ```4d
- Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
+var $myWin : Integer 
+$myWin :=Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
  ALL RECORDS([Personnel])
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```

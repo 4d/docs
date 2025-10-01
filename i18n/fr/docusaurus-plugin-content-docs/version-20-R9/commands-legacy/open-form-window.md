@@ -117,9 +117,10 @@ Ce code doit être appelé alors qu'une fenêtre document est affichée, par exe
 L'exemple suivant utilise le chemin d'un fichier .json décrivant un formulaire permettant d'afficher les enregistrements d'une liste d'employés :
 
 ```4d
- Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
+var $myWin : Integer 
+$myWin :=Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
  ALL RECORDS([Personnel])
- Open form window("/RESOURCES/OutputPersonnel.json";*)
+ DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
 
 Résultat :
