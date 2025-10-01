@@ -1,6 +1,7 @@
 ---
 id: Web_Area_theme
 title: Zones Web
+sidebar_label: Zones Web
 slug: /commands/theme/Web-Area
 ---
 

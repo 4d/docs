@@ -1,6 +1,7 @@
 ---
 id: Process_User_Interface_theme
 title: Processo (Interface do Usuário)
+sidebar_label: Processo (Interface do Usuário)
 slug: /commands/theme/Process-User-Interface
 ---
 

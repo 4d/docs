@@ -1,6 +1,7 @@
 ---
 id: Quick_Report_theme
 title: Etats rapides
+sidebar_label: Etats rapides
 slug: /commands/theme/Quick-Report
 ---
 

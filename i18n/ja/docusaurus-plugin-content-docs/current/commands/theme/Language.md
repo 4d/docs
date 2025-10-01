@@ -1,6 +1,7 @@
 ---
 id: Language_theme
 title: ランゲージ
+sidebar_label: ランゲージ
 slug: /commands/theme/Language
 ---
 

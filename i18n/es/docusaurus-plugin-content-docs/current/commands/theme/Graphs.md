@@ -1,6 +1,7 @@
 ---
 id: Graphs_theme
 title: Gráficos
+sidebar_label: Gráficos
 slug: /commands/theme/Graphs
 ---
 

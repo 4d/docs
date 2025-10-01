@@ -1,6 +1,7 @@
 ---
 id: Web_Area_theme
 title: Área Web
+sidebar_label: Área Web
 slug: /commands/theme/Web-Area
 ---
 

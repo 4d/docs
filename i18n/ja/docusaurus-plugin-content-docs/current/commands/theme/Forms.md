@@ -1,6 +1,7 @@
 ---
 id: Forms_theme
 title: Forms
+sidebar_label: Forms
 slug: /commands/theme/Forms
 ---
 

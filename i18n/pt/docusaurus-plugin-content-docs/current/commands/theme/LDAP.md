@@ -1,6 +1,7 @@
 ---
 id: LDAP_theme
 title: LDAP
+sidebar_label: LDAP
 slug: /commands/theme/LDAP
 ---
 

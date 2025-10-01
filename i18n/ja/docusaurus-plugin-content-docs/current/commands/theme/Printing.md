@@ -1,6 +1,7 @@
 ---
 id: Printing_theme
 title: 印刷
+sidebar_label: 印刷
 slug: /commands/theme/Printing
 ---
 

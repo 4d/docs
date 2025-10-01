@@ -1,6 +1,7 @@
 ---
 id: Printing_theme
 title: Printing
+sidebar_label: Printing
 slug: /commands/theme/Printing
 ---
 

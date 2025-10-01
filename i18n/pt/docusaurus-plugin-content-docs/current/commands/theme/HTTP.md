@@ -1,6 +1,7 @@
 ---
 id: HTTP_theme
 title: HTTP
+sidebar_label: HTTP
 slug: /commands/theme/HTTP
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Collections_theme
 title: コレクション
+sidebar_label: コレクション
 slug: /commands/theme/Collections
 ---
 

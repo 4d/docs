@@ -1,6 +1,6 @@
 ---
 id: components
-title: Dependencies
+title: Dependencias
 ---
 
 Un componente 4D es un conjunto de código y/o de formularios 4D que representan una o varias funcionalidades que pueden añadirse y utilizarse en sus proyectos. Por ejemplo, el componente [4D SVG](https://github.com/4d/4D-SVG) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para visualizar archivos SVG.
@@ -626,5 +626,5 @@ Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-depen
 
 #### Advertencias sobre el uso de dependencias
 
-When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
+Cuando intente eliminar una dependencia primaria que es requerida por otras dependencias en su proyecto, se le advertirá de que la dependencia todavía está en uso. El sistema mostrará qué otras dependencias lo requieren y le pedirá que confirme la eliminación, ya que eliminarlo puede hacer que esos componentes dependientes dejen de funcionar correctamente.
 

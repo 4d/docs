@@ -1,6 +1,7 @@
 ---
 id: PHP_theme
 title: PHP
+sidebar_label: PHP
 slug: /commands/theme/PHP
 ---
 

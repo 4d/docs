@@ -1,6 +1,7 @@
 ---
 id: Pasteboard_theme
 title: Conteneur de données
+sidebar_label: Conteneur de données
 slug: /commands/theme/Pasteboard
 ---
 

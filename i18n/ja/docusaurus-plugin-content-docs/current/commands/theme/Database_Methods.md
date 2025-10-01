@@ -1,6 +1,7 @@
 ---
 id: Database_Methods_theme
 title: データベースメソッド
+sidebar_label: データベースメソッド
 slug: /commands/theme/Database-Methods
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Formulas_theme
 title: Fórmulas
+sidebar_label: Fórmulas
 slug: /commands/theme/Formulas
 ---
 

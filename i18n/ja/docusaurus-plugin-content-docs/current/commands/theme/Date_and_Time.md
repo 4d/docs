@@ -1,6 +1,7 @@
 ---
 id: Date_and_Time_theme
 title: 日付と時間
+sidebar_label: 日付と時間
 slug: /commands/theme/Date-and-Time
 ---
 

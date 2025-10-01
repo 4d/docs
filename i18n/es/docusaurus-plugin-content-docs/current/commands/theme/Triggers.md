@@ -1,6 +1,7 @@
 ---
 id: Triggers_theme
 title: Triggers
+sidebar_label: Triggers
 slug: /commands/theme/Triggers
 ---
 

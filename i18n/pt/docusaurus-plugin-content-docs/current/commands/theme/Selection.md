@@ -1,6 +1,7 @@
 ---
 id: Selection_theme
 title: Seleção
+sidebar_label: Seleção
 slug: /commands/theme/Selection
 ---
 

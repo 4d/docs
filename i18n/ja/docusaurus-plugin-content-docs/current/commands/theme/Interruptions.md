@@ -1,6 +1,7 @@
 ---
 id: Interruptions_theme
 title: 割り込み
+sidebar_label: 割り込み
 slug: /commands/theme/Interruptions
 ---
 

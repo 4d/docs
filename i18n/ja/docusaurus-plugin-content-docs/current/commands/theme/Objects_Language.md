@@ -1,6 +1,7 @@
 ---
 id: Objects_Language_theme
 title: オブジェクト (ランゲージ)
+sidebar_label: オブジェクト (ランゲージ)
 slug: /commands/theme/Objects-Language
 ---
 

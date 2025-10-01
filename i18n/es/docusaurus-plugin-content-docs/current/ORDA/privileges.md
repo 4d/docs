@@ -1,6 +1,6 @@
 ---
 id: privileges
-title: Roles and Privileges
+title: Roles y privilegios
 ---
 
 Proteger los datos a la vez que se permite un acceso rápido y sencillo a los usuarios autorizados es un reto importante para las aplicaciones web. La arquitectura de seguridad ORDA se implementa en el corazón de su almacén de datos y le permite definir privilegios específicos a todas las sesiones usuario REST o web para los distintos recursos de su proyecto (datastore, dataclasses, funciones, etc.).
@@ -60,10 +60,10 @@ Las acciones disponibles están relacionadas con el recurso de destino.
 
 :::note Notas
 
-- An [alias](./ordaClasses.md#alias-attributes-1) can be read as soon as the session privileges allow the access to the alias itself, even if the session privileges do no allow the access to the attributes resolving the alias.
-- A [computed attribute](./ordaClasses.md#computed-attributes-1) can be accessed even if there are no permissions on the attributes upon which it is built.
+- Una [alias](./ordaClasses.md#alias-attributes-1) puede leerse tan pronto como los privilegios de sesión permitan el acceso al alias en sí. incluso si los privilegios de sesión no permiten el acceso a los atributos resolviendo el alias.
+- Se puede acceder a un [atributo calculado](./ordaClasses.md#computed-attributes-1) incluso si no hay permisos en los atributos sobre los que se construye.
 - Puede asignar una acción de permiso a una clase singleton (tipo `singleton`), en cuyo caso se aplicará a todas sus funciones expuestas, o a una función singleton (tipo `singletonMethod`).
-- You can set/remove the **promote** action dynamically to a web process using the [`promote()`](../API/SessionClass.md#promote) and [`demote()`](../API/SessionClass.md#demote) functions.
+- Puede definir/eliminar la acción **promote** dinámicamente a un proceso web utilizando las funciones [`promote()`](../API/SessionClass.md#promote) y [`demote()`](../API/SessionClass.md#demote).
 - Valores por defecto: en la implementación actual, solo *Null* está disponible como valor por defecto.
 - En modo REST [force login](../REST/authUsers.md#force-login-mode), la función [`authentify()`](../REST/authUsers.md#function-authentify) es siempre ejecutable por usuarios invitados, cualquiera que sea la configuración de permisos.
 

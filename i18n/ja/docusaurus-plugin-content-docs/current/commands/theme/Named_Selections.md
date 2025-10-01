@@ -1,6 +1,7 @@
 ---
 id: Named_Selections_theme
 title: 命名セレクション
+sidebar_label: 命名セレクション
 slug: /commands/theme/Named-Selections
 ---
 

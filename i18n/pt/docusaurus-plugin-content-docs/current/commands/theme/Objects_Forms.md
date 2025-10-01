@@ -1,6 +1,7 @@
 ---
 id: Objects_Forms_theme
 title: Objects (Forms)
+sidebar_label: Objects (Forms)
 slug: /commands/theme/Objects-Forms
 ---
 

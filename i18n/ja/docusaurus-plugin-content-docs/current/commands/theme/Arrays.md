@@ -1,6 +1,7 @@
 ---
 id: Arrays_theme
 title: 配列
+sidebar_label: 配列
 slug: /commands/theme/Arrays
 ---
 

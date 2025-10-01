@@ -1,6 +1,7 @@
 ---
 id: SQL_theme
 title: SQL
+sidebar_label: SQL
 slug: /commands/theme/SQL
 ---
 

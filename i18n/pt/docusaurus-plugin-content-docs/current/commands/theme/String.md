@@ -1,6 +1,7 @@
 ---
 id: String_theme
 title: String
+sidebar_label: String
 slug: /commands/theme/String
 ---
 

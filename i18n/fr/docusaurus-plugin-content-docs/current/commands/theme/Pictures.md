@@ -1,6 +1,7 @@
 ---
 id: Pictures_theme
 title: Images
+sidebar_label: Images
 slug: /commands/theme/Pictures
 ---
 
