@@ -1,6 +1,7 @@
 ---
 id: Hierarchical_Lists_theme
 title: Listas jerárquicas
+sidebar_label: Listas jerárquicas
 slug: /commands/theme/Hierarchical-Lists
 ---
 

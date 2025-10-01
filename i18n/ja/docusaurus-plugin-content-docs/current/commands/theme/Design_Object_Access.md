@@ -1,6 +1,7 @@
 ---
 id: Design_Object_Access_theme
 title: デザインオブジェクトアクセス
+sidebar_label: デザインオブジェクトアクセス
 slug: /commands/theme/Design-Object-Access
 ---
 

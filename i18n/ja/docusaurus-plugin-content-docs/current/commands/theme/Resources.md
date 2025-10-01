@@ -1,6 +1,7 @@
 ---
 id: Resources_theme
 title: Resources
+sidebar_label: Resources
 slug: /commands/theme/Resources
 ---
 

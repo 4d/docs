@@ -1,6 +1,7 @@
 ---
 id: Record_Locking_theme
 title: レコードロック
+sidebar_label: レコードロック
 slug: /commands/theme/Record-Locking
 ---
 

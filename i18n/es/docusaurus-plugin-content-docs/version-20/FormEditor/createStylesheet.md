@@ -94,7 +94,7 @@ El nombre de objeto corresponde a la propiedad JSON [>nombre de objeto](../FormO
 :::
 
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+En el siguiente ejemplo, el texto del objeto con el nombre "okButton" se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 #okButton {

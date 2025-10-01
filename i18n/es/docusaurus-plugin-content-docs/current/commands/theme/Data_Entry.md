@@ -1,6 +1,7 @@
 ---
 id: Data_Entry_theme
 title: Entrada
+sidebar_label: Entrada
 slug: /commands/theme/Data-Entry
 ---
 

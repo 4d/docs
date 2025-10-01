@@ -1,6 +1,7 @@
 ---
 id: Web_Area_theme
 title: Webエリア
+sidebar_label: Webエリア
 slug: /commands/theme/Web-Area
 ---
 

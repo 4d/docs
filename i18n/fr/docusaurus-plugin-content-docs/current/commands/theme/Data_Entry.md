@@ -1,6 +1,7 @@
 ---
 id: Data_Entry_theme
 title: Saisie
+sidebar_label: Saisie
 slug: /commands/theme/Data-Entry
 ---
 

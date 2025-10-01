@@ -1,6 +1,7 @@
 ---
 id: Transactions_theme
 title: Transacciones
+sidebar_label: Transacciones
 slug: /commands/theme/Transactions
 ---
 

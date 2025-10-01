@@ -88,12 +88,11 @@ Designe el objeto con un carácter "#" antes del nombre del objeto y, a continua
 
 :::note
 
-The object name corresponds to the JSON [object name](../FormObjects/properties_Object.md#object-name) property of form objects.
+El nombre del objeto corresponde a la propiedad JSON [object name](../FormObjects/properties_Object.md#object-name) de los objetos de formulario.
 
 :::
 
-In the following example, the text of the object with the name "okButton" will be displayed
-in Helvetica Neue font, with a size of 20 pixels:
+En el siguiente ejemplo, el texto del objeto con el nombre "okButton" se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 #okButton {
@@ -127,7 +126,7 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the [CSS Class](../FormObjects/properties_Object.md#css-class) attribute. Este atributo contiene uno o varios nombres de clase, separados por un espacio:
+En la descripción del formulario 4D, se asocia un nombre de clase a un objeto mediante el atributo [CSS Class](../FormObjects/properties_Object.md#css-class). Este atributo contiene uno o varios nombres de clase, separados por un espacio:
 
 ```
 class: "okButtons important"       
@@ -320,7 +319,7 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 1. El formulario 4D cargará primero el archivo CSS por defecto `/SOURCES/styleSheets.css`.
 2. Luego cargará el archivo CSS para la plataforma actual `/SOURCES/styleSheets_mac.css` o `/SOURCES/styleSheets_windows.css`.
-3. If a [Form property "css" attribute](../FormEditor/properties_FormProperties.md#css) is defined in the 4D form, it will then load specific CSS file(s). Puede pasar:
+3. Si se define un [atributo "css"](../FormEditor/properties_FormProperties.md#css) en el formulario 4D, éste cargará archivos CSS específicos. Puede pasar:
 
 - un archivo para ambas plataformas:
 

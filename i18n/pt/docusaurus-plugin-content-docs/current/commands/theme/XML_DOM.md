@@ -1,6 +1,7 @@
 ---
 id: XML_DOM_theme
 title: XML DOM
+sidebar_label: XML DOM
 slug: /commands/theme/XML-DOM
 ---
 

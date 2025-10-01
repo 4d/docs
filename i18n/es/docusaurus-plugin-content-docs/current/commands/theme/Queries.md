@@ -1,6 +1,7 @@
 ---
 id: Queries_theme
 title: Búsquedas
+sidebar_label: Búsquedas
 slug: /commands/theme/Queries
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Variables_theme
 title: Variáveis.
+sidebar_label: Variáveis.
 slug: /commands/theme/Variables
 ---
 

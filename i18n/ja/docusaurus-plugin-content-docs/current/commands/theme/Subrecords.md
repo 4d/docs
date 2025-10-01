@@ -1,6 +1,7 @@
 ---
 id: Subrecords_theme
 title: サブレコード
+sidebar_label: サブレコード
 slug: /commands/theme/Subrecords
 ---
 

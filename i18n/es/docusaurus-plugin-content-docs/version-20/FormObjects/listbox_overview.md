@@ -240,7 +240,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | On Unload            |                                                                                                                                                             |                                                                                                   |
 
 
-#### Additional Properties {additional-properties}
+#### Propiedades adicionales {additional-properties}
 
 Los eventos formulario de los objetos list box o columnas de list box pueden devolver las siguientes propiedades adicionales:
 

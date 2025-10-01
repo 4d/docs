@@ -1,6 +1,7 @@
 ---
 id: 4D_Environment_theme
 title: Environnement 4D
+sidebar_label: Environnement 4D
 slug: /commands/theme/4D-Environment
 ---
 

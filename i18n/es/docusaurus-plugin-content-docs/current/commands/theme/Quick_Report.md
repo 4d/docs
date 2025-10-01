@@ -1,6 +1,7 @@
 ---
 id: Quick_Report_theme
 title: Informes rápidos
+sidebar_label: Informes rápidos
 slug: /commands/theme/Quick-Report
 ---
 

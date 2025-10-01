@@ -1,6 +1,7 @@
 ---
 id: Sets_theme
 title: Conjuntos
+sidebar_label: Conjuntos
 slug: /commands/theme/Sets
 ---
 

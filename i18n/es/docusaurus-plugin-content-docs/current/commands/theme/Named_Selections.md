@@ -1,6 +1,7 @@
 ---
 id: Named_Selections_theme
 title: Selecciones temporales
+sidebar_label: Selecciones temporales
 slug: /commands/theme/Named-Selections
 ---
 

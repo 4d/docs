@@ -1,6 +1,7 @@
 ---
 id: Compiler_theme
 title: コンパイラー
+sidebar_label: コンパイラー
 slug: /commands/theme/Compiler
 ---
 

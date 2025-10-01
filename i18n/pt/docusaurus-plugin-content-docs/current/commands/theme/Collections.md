@@ -1,6 +1,7 @@
 ---
 id: Collections_theme
 title: Coleções
+sidebar_label: Coleções
 slug: /commands/theme/Collections
 ---
 

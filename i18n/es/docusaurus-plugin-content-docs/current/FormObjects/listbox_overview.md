@@ -72,7 +72,7 @@ Por defecto, 4D asigna el nombre "ColumnX" a cada columna. Puede cambiarlo, así
 > Los list boxes de tipo array pueden mostrarse en [modo jerárquico](listbox_overview.md#hierarchical-list-boxes), con mecanismos específicos.
 
 Con los list box de tipo array, los valores introducidos o mostrados se gestionan utilizando el lenguaje 4D. También puede asociar una [lista de opciones](properties_DataSource.md#choice-list) con una columna para controlar la entrada de datos.
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or `LISTBOX DELETE ROWS`) as well as array manipulation commands. Por ejemplo, para inicializar el contenido de una columna, puede utilizar la siguiente instrucción:
+Los valores de las columnas se gestionan mediante comandos de alto nivel de List box (como [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) o `LISTBOX DELETE ROWS`), así como comandos de manipulación de arrays. Por ejemplo, para inicializar el contenido de una columna, puede utilizar la siguiente instrucción:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -195,7 +195,7 @@ Las propiedades soportadas dependen del tipo de list box.
 
 > Las columnas, los encabezados y los pies de list box soportan propiedades específicas.
 
-### Supported Form Events {#supported-form-events}
+### Eventos de formulario soportados {#supported-form-events}
 
 | Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](../commands/form-event.md) para las propiedades principales)                                                                     | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -232,7 +232,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | On Scroll            | <li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>                                                                                                           |                                                                                                                                                                       |
 | On Unload            |                                                                                                                                                                                                                |                                                                                                                                                                       |
 
-#### Additional Properties {additional-properties}
+#### Propiedades adicionales {additional-properties}
 
 Los eventos formulario de los objetos list box o columnas de list box pueden devolver las siguientes propiedades adicionales:
 
@@ -265,12 +265,12 @@ Puede definir propiedades estándar (texto, color de fondo, etc.) para cada colu
 
 > Puede definir el [tipo de expresión](properties_Object.md#expression-type) para las columnas de list box de tipo array (cadena, texto, número, fecha, hora, imagen, booleano u objeto).
 
-### Column Specific Properties {#column-specific-properties}
+### Propiedades específicas de columna {#column-specific-properties}
 
 [Formato Alfa](properties_Display.md#alpha-format) - [Color de fondo alternativo](properties_BackgroundAndBorder.md#alternate-background-color) - [Altura de línea automática](properties_CoordinatesAndSizing.md#automatic-row-height) - [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color) - [Expresión de color de fondo](properties_BackgroundAndBorder.md#background-color-expression) - [Negrita](properties_Text.md#bold) - [Lista de selección](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Tipo de datos (selección y columna de list box colección)](properties_DataSource.md#data-type-list) - [Formato Fecha](properties_Display.md#date-format) - [Valores por defecto](properties_DataSource.md#default-list-of-values) - [Tipo de visualización](properties_Display.md#display-type) - [Editable](properties_Entry.md#enterable) - [Filtro de entrada](properties_Entry.md#entry-filter) - [Lista excluída](properties_RangeOfValues.md#excluded-list) - [Expresión](properties_DataSource.md#expression) - [Tipo de expresión (column de list box array)](properties_Object.md#expression-type) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Alineación Horizontal](properties_Text.md#horizontal-alignment) - [Relleno Horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Itálica](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Ancho máximo](properties_CoordinatesAndSizing.md#maximum-width) - [Método](properties_Action.md#method) - [Ancho mínimo](properties_CoordinatesAndSizing.md#minimum-width) - [Multiestilo](properties_Text.md#multi-style) - [Formato número](properties_Display.md#number-format) - [Nombre de objeto](properties_Object.md#object-name) - [Formato Imagen](properties_Display.md#picture-format) - [Redimensionable](properties_ResizingOptions.md#resizable) - [Lista requerida](properties_RangeOfValues.md#required-list) - [Array de color de fondo de línea](properties_BackgroundAndBorder.md#row-background-color-array) - [Array de color de fuente de línea](properties_Text.md#row-font-color-) - [Array de estilo de línea](properties_Text.md#row-style-array) - [Guardar como](properties_DataSource.md#save-as) - [Expresión de estilo](properties_Text.md#style-expression) - [Texto cuando False/Texto cuando True](properties_Display.md#text-when-falsetext-when-true) - [Formato Hora](properties_Display.md#time-format) - [Truncar con elipsis](properties_Display.md#truncate-with-ellipsis) - [Subrayar](properties_Text.md#underline) - [Variable o Expresión](properties_Object.md#variable-or-expression) - Alineación
 Vertical - [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding) - [Ancho](properties_CoordinatesAndSizing.md#width) - [Ajuste de palabras](properties_Display.md#wordwrap)
 
-### Supported Form Events {#supported-form-events-1}
+### Eventos de formulario soportados {#supported-form-events-1}
 
 | Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](../commands/form-event.md) para las propiedades principales)                                                                     | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -422,7 +422,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
  End if
 ```
 
-> The [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command scrolls the list box rows so that the first selected row or a specified row is displayed.
+> El comando [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) desplaza las líneas del list box de modo que se muestre la primera línea seleccionada o una línea especificada.
 
 ### Personalizar la apariencia de las líneas seleccionadas
 

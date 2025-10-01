@@ -1,6 +1,7 @@
 ---
 id: Relations_theme
 title: Liens
+sidebar_label: Liens
 slug: /commands/theme/Relations
 ---
 

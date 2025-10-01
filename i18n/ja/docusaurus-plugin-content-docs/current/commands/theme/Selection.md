@@ -1,6 +1,7 @@
 ---
 id: Selection_theme
 title: セレクション
+sidebar_label: セレクション
 slug: /commands/theme/Selection
 ---
 

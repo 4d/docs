@@ -1,6 +1,7 @@
 ---
 id: Forms_theme
 title: Formulaires
+sidebar_label: Formulaires
 slug: /commands/theme/Forms
 ---
 

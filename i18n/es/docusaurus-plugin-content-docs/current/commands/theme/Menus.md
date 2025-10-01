@@ -1,6 +1,7 @@
 ---
 id: Menus_theme
 title: Menús
+sidebar_label: Menús
 slug: /commands/theme/Menus
 ---
 

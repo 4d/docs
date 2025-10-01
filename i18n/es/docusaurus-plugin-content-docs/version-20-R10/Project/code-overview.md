@@ -1,6 +1,6 @@
 ---
 id: code-overview
-title: Creating Methods and classes
+title: Creación de métodos y clases
 ---
 
 El código 4D utilizado en todo el proyecto está escrito en [métodos](../Concepts/methods.md) y [clases](../Concepts/classes.md).

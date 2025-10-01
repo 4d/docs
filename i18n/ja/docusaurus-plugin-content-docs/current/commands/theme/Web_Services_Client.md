@@ -1,6 +1,7 @@
 ---
 id: Web_Services_Client_theme
 title: Webサービス (クライアント)
+sidebar_label: Webサービス (クライアント)
 slug: /commands/theme/Web-Services-Client
 ---
 

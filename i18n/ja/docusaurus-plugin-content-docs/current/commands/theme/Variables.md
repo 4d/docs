@@ -1,6 +1,7 @@
 ---
 id: Variables_theme
 title: 変数
+sidebar_label: 変数
 slug: /commands/theme/Variables
 ---
 

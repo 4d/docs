@@ -1,6 +1,7 @@
 ---
 id: Quick_Report_theme
 title: クイックレポート
+sidebar_label: クイックレポート
 slug: /commands/theme/Quick-Report
 ---
 

@@ -1,6 +1,6 @@
 ---
 id: components
-title: Dependencies
+title: Dependencias
 ---
 
 [La arquitectura de los proyectos](../Project/architecture.md) 4D es modular. Puede ofrecer funcionalidades adicionales a sus proyectos 4D instalando [**componentes**](Concepts/components.md) y [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
@@ -473,7 +473,7 @@ By default, [components developed by 4D](../Extensions/overview.md#components-de
 
 ![dependency-default-git](../assets/en/Project/dependency-default.png)
 
-Components already installed are not listed.
+Los componentes ya instalados no están listados.
 
 :::
 
@@ -505,7 +505,7 @@ Puede definir la opción [etiqueta o versión](#tags-and-versions) para una depe
 - **Hasta la próxima versión mayor**: define un [rango de versiones semánticas](#tags-and-versions) para restringir las actualizaciones a la próxima versión principal.
 - **Hasta la siguiente versión menor**: del mismo modo, restringir las actualizaciones a la siguiente versión menor.
 - **Versión exacta (Etiqueta)**: selecciona o introduce manualmente una [etiqueta específica](#tags-and-versions) de la lista disponible.
-- **Siga la versión 4D**: descargue la última versión del componente compatible con la versión 4D en ejecución. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- **Siga la versión 4D**: descargue la última versión del componente compatible con la versión 4D en ejecución. Puede usar esta regla de dependencia sólo si las etiquetas de release de los componentes siguen la [convención de nombres](#naming-conventions-for-4d-version-tags) apropiada. Esta opción se recomienda para los [componentes desarrollados por 4D](../Extensions/overview.md#components-developed-by-4d).
 
 La versión actual de la dependencia de GitHub se muestra a la derecha del elemento de la dependencia:
 
@@ -513,7 +513,7 @@ La versión actual de la dependencia de GitHub se muestra a la derecha del eleme
 
 #### Modificación del intervalo de versiones de las dependencias GitHub
 
-You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+Puede modificar la [configuración de versión](#defining-a-github-dependency-version-range) para una dependencia de GitHub listada: selecciona la dependencia a modificar y selecciona **Editar la dependencia...** desde el menú contextual. En el cuadro de diálogo "Editar la dependencia", edite el menú Regla de dependencia y haga clic en **Aplicar**.
 
 Modificar el rango de versiones es útil, por ejemplo, si utiliza la función de actualización automática y desea bloquear una dependencia a un número de versión específico.
 
@@ -623,5 +623,5 @@ Si confirma la caja de diálogo, la dependencia eliminada [estado](#estado-depen
 
 #### Advertencias sobre el uso de dependencias
 
-When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
+Cuando intente eliminar una dependencia primaria que es requerida por otras dependencias en su proyecto, se le advertirá de que la dependencia todavía está en uso. El sistema mostrará qué otras dependencias lo requieren y le pedirá que confirme la eliminación, ya que eliminarlo puede hacer que esos componentes dependientes dejen de funcionar correctamente.
 

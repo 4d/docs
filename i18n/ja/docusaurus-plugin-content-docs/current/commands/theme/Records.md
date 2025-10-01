@@ -1,6 +1,7 @@
 ---
 id: Records_theme
 title: レコード
+sidebar_label: レコード
 slug: /commands/theme/Records
 ---
 

@@ -686,16 +686,16 @@
     "message": "Código y métodos"
   },
   "Dependencies": {
-    "message": "Dependencies"
+    "message": "Dependencias"
   },
   "Compilation": {
     "message": "Compilación"
   },
   "Application Builder": {
-    "message": "Application Builder"
+    "message": "Creador de aplicaciones"
   },
   "Application Preferences": {
-    "message": "Application Preferences"
+    "message": "Preferencias de la aplicación"
   },
   "Concepts": {
     "message": "Conceptos"
@@ -740,7 +740,7 @@
     "message": "Ventana 4D Server"
   },
   "WebAdmin & Data Explorer": {
-    "message": "WebAdmin & Data Explorer"
+    "message": "WebAdmin y Explorador de datos"
   },
   "TLS": {
     "message": "TLS"
@@ -758,15 +758,15 @@
     "message": "Build4D"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "modo sistema",
     "description": "The name for the system color mode"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "Expandir el menú desplegable",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "Colapsar el menú desplegable",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }

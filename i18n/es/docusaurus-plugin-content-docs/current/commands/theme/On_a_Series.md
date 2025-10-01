@@ -1,6 +1,7 @@
 ---
 id: On_a_Series_theme
 title: Funciones estadísticas
+sidebar_label: Funciones estadísticas
 slug: /commands/theme/On-a-Series
 ---
 

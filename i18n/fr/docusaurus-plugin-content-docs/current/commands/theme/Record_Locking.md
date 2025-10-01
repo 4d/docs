@@ -1,6 +1,7 @@
 ---
 id: Record_Locking_theme
 title: Enregistrements (verrouillage)
+sidebar_label: Enregistrements (verrouillage)
 slug: /commands/theme/Record-Locking
 ---
 

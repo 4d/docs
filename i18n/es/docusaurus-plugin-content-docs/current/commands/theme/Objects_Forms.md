@@ -1,6 +1,7 @@
 ---
 id: Objects_Forms_theme
 title: Objetos (formularios)
+sidebar_label: Objetos (formularios)
 slug: /commands/theme/Objects-Forms
 ---
 

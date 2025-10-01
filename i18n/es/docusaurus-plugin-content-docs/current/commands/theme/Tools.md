@@ -1,6 +1,7 @@
 ---
 id: Tools_theme
 title: Herramientas
+sidebar_label: Herramientas
 slug: /commands/theme/Tools
 ---
 

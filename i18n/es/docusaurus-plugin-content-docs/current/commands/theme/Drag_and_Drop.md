@@ -1,6 +1,7 @@
 ---
 id: Drag_and_Drop_theme
 title: Arrastrar y soltar
+sidebar_label: Arrastrar y soltar
 slug: /commands/theme/Drag-and-Drop
 ---
 

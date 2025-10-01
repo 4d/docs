@@ -1,6 +1,7 @@
 ---
 id: User_Interface_theme
 title: Interfaz de usuario
+sidebar_label: Interfaz de usuario
 slug: /commands/theme/User-Interface
 ---
 

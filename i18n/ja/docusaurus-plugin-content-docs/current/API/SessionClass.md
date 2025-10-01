@@ -9,7 +9,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 - [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: Inspect Session Privileges for Easy Debugging](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
-- [Generate, share and use web sessions One-Time Passcodes (OTP)](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+- [Webセッションのワンタイムパスワード (OTP) の使い方](https://blog.4d.com/ja/connect-your-web-apps-to-third-party-systems/)
 
 :::
 
@@ -136,7 +136,7 @@ $isGuest:=Session.isGuest() // $isGuest は true
 
 OTP トークンについてのより詳細な情報については、[こちらの章](../WebServer/sessions.md#セッショントークンotp)を参照して下さい。
 
-デフォルトで、*lifespan* 引数が省略された場合、トークンはセッションの[`.idleTimeOut`](#idletimeout) と同じ有効期限を持って作成されます。 You can set a custom timeout by passing a value in seconds in *lifespan*. Web ユーザーセッションを復元するために失効したトークンを使用した場合、それは無視されます。
+デフォルトで、*lifespan* 引数が省略された場合、トークンはセッションの[`.idleTimeOut`](#idletimeout) と同じ有効期限を持って作成されます。 *lifespan* に秒単位の値を渡すことで、カスタムのタイムアウト時間を設定することができます。 Web ユーザーセッションを復元するために失効したトークンを使用した場合、それは無視されます。
 
 返されたトークンは、サードパーティアプリケーションや他のWebサイトとのやり取りで使用することでセッションを安全に特定することができます。 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
 

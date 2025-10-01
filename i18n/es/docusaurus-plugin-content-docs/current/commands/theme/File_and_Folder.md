@@ -1,6 +1,7 @@
 ---
 id: File_and_Folder_theme
 title: Archivo y carpeta
+sidebar_label: Archivo y carpeta
 slug: /commands/theme/File-and-Folder
 ---
 
