@@ -5,7 +5,7 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( ptrTable | numTable ; *invisible* {; *trigSvgdeNouv* {; *trigSvgdeEnr* {; *trigSupprEnr* {; *trigChargEnr*}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *ptrTable* ; *invisible* {; *trigSvgdeNouv* {; *trigSvgdeEnr* {; *trigSupprEnr* {; *trigChargEnr*}}}} )<br/>**GET TABLE PROPERTIES** ( *numTable* ; *invisible* {; *trigSvgdeNouv* {; *trigSvgdeEnr* {; *trigSupprEnr* {; *trigChargEnr*}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

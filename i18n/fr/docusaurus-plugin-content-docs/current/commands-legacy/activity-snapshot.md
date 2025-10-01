@@ -5,7 +5,7 @@ slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( tabActivités | tabUUID ; *tabDébut* ; *tabDurée* ; *tabInfo* {; *tabDétails*}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** (* tabActivités* {; *} )<br/>**ACTIVITY SNAPSHOT** ( *tabUUID* ; *tabDébut* ; *tabDurée* ; *tabInfo* {; *tabDétails*} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
