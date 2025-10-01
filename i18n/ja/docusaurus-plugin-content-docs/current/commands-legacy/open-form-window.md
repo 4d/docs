@@ -123,7 +123,8 @@ Movable form dialog box 、Plain form window およびPalette form window タイ
 以下の例では、.json フォームへのパスを使用して従業員リスト内のレコードを表示する場合を考えます:
 
 ```4d
- Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
+var $myWin : Integer 
+$myWin :=Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
  ALL RECORDS([Personnel])
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```
