@@ -383,7 +383,7 @@ Este archivo no es obligatorio pero es necesario para construir componentes [not
 
 Las llaves soportadas en los archivos `Info.plist` de los componentes son en su mayoría [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) que se ignoran en Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
 
-The following keys can be defined:
+Se pueden definir las siguientes teclas:
 
 | key                                                        | description                                                                                                                                                                                      |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
