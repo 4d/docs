@@ -1350,7 +1350,7 @@ module.exports =
        {
           type: "link",
           label: "Build4D",
-          href: "https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme"
+          href: "https://github.com/4d/Build4D"
        }
     ]
     }

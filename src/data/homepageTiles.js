@@ -285,7 +285,7 @@ title: (
         <Link to="https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md">
           <Translate>4D Mobile App Server</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
-        <Link to="https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme">
+        <Link to="https://github.com/4d/Build4D">
           <Translate>Build4D</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
       </div>
