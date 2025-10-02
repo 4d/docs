@@ -122,7 +122,7 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 ```
 
->All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+>All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-modes).
 
 #### $1 - URL
 
