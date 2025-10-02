@@ -61,7 +61,7 @@ Use these callback properties for more granular control over success and error h
 
 See [documentation about asynchronous code for examples](../asynchronous-call.md)
 
-### Network Properties
+### Propiedades de la red
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +70,7 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
-### OpenAPI Properties
+### Propiedades OpenAPI
 
 | Propiedad | Tipo | Descripción                                                                                                 |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
