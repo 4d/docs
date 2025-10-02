@@ -5,13 +5,13 @@ title: Extensiones
 
 [La arquitectura de los proyectos](../Project/architecture.md) 4D es modular. Puede ofrecer funcionalidades adicionales a sus proyectos 4D instalando [**componentes**](Concepts/components.md) y [**plug-ins**](../Concepts/plug-ins.md). Los componentes están hechos de código 4D, mientras que los plug-ins pueden crearse utilizando cualquier lenguaje.
 
-## Components developed by 4D
+## Componentes desarrollados por 4D
 
 4D proposes various components to the 4D community, covering many development needs. All 4D components can be found on the [**4D github repository**](https://github.com/4d).
 
 A subset of these components is listed by default in the [Dependency Manager](../Project/components.md), including:
 
-| Componente           | Github repository                                                           | Descripción                                                                       | Principales funcionalidades                                                                                                             |
+| Componente           | Repositorio Github                                                          | Descripción                                                                       | Principales funcionalidades                                                                                                             |
 | -------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | 4D AIKit             | https://github.com/4d/4D-AIKit              | Conjunto de clases a conectar con las APIs OpenAI de terceros                     | `OpenAIChat`, `OpenAIImage`...                                                          |
 | 4D NetKit            | https://github.com/4d/4D-NetKit             | Conjunto de herramientas de servicios web para conectarse a APIs de terceros      | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |

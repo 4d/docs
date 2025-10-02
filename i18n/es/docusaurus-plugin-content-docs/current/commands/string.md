@@ -140,7 +140,7 @@ Ejemplos:
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
 
-- o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)\
+- o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)  
   Ejemplos:
 
 ```4d
@@ -173,7 +173,7 @@ Este parámetro puede utilizarse con formatos de fecha predefinidos o basados en
  $mydate:=String(Current date;ISO Date GMT;Current time) // devuelve, por ejemplo, 2010-09-13T16:11:53Z  
 ```
 
-Tenga en cuenta que el caracter "Z" al final indica el formato GMT.\
+Tenga en cuenta que el caracter "Z" al final indica el formato GMT.  
 Si no se pasa el parámetro *addTime*, el comando devuelve la fecha a medianoche (hora local) expresada en hora GMT, lo que puede hacer que la fecha se adelante o se retrase dependiendo de la zona horaria local:
 
 ```4d
@@ -229,7 +229,7 @@ Ejemplos:
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 horas 30 minutos 45 segundos"  
 ```
 
-- o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)\
+- o un [formato personalizado basado en un modelo](../Project/date-time-formats.md) (valor cadena)  
   Ejemplos:
 
 ```4d
@@ -239,12 +239,12 @@ Ejemplos:
 
 ### Expresiones de tipo cadena
 
-Si *expression* es de tipo Alfa o Texto, el comando devuelve el mismo valor que el pasado en el parámetro. Esto puede ser útil sobre todo en la programación genérica que utiliza punteros.\
+Si *expression* es de tipo Alfa o Texto, el comando devuelve el mismo valor que el pasado en el parámetro. Esto puede ser útil sobre todo en la programación genérica que utiliza punteros.  
 En este caso, el parámetro *format*, si se pasa, se ignora.
 
 ### Expresiones booleanas
 
-Si *expression* es de tipo booleano, el comando devuelve la cadena "True" o "False" en el idioma de la aplicación (por ejemplo, "Vrai" o "Faux" en una versión francesa de 4D).\
+Si *expression* es de tipo booleano, el comando devuelve la cadena "True" o "False" en el idioma de la aplicación (por ejemplo, "Vrai" o "Faux" en una versión francesa de 4D).  
 En este caso, el parámetro *format*, si se pasa, se ignora.
 
 ### Expresiones indefinidas
@@ -257,10 +257,10 @@ Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto
 
 ## Ver también
 
-[Bool](../commands-legacy/bool.md)\
-[Date](../commands-legacy/date.md)\
-[Num](num.md)\
-[Time string](../commands-legacy/time-string.md)\
+[Bool](../commands-legacy/bool.md)  
+[Date](../commands-legacy/date.md)  
+[Num](num.md)  
+[Time string](../commands-legacy/time-string.md)  
 [Timestamp](../commands-legacy/timestamp.md)
 
 ## Propiedades

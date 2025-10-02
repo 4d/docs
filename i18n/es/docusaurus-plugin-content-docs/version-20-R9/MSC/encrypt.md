@@ -33,8 +33,8 @@ Para cifrar los datos por primera vez con el CSM es necesario seguir los siguien
    ![](../assets/en/MSC/MSC_encrypt2.png)<p>
    Esto significa que el estado **Encriptable** de al menos una tabla ha sido modificado y el archivo de datos aún no ha sido encriptado.
    \*\*Nota: \*\*El mismo mensaje se muestra cuando el estado **Encriptable** se ha modificado en un archivo de datos ya encriptado o después de que el archivo de datos haya sido desencriptado (ver más abajo).</p>
-3. Haga clic en el botón imagen Cifrar.\
-   ![](../assets/en/MSC/MSC_encrypt3.png)\
+3. Haga clic en el botón imagen Cifrar.  
+   ![](../assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file:
    ![](../assets/en/MSC/MSC_encrypt4.png)
    The passphrase is used to generate the data encryption key. Una frase secreta es una versión más segura de una contraseña y puede contener un gran número de caracteres. Por ejemplo, puede introducir una frase de paso como "We all came out to Montreux" o "¡Mi primera gran frase de paso!".
@@ -70,7 +70,7 @@ En este paso, tiene dos opciones:
   O
 - conecte un dispositivo como una llave USB y haga clic en el botón **Escanear dispositivos**.
 
-(1) El llavero 4D almacena todas las llaves de cifrado de datos válidas introducidas durante la sesión de aplicación.\
+(1) El llavero 4D almacena todas las llaves de cifrado de datos válidas introducidas durante la sesión de aplicación.  
 (2) La frase de contraseña actual es la frase de contraseña utilizada para generar la clave de cifrado actual.
 
 En todos los casos, si se proporciona información válida, 4D se reinicia en modo de mantenimiento (si no es ya el caso) y ejecuta la operación.

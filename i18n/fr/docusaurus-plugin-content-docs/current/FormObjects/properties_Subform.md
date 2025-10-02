@@ -26,7 +26,7 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
 - un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
-  You can select a component form name when it is published in the component.\
+  You can select a component form name when it is published in the component.  
   In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
   You can select a component form name when it is published in the component.\
   You can select a component form name when it is published in the component.
@@ -169,7 +169,7 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
   The Up and Down arrow keys select the previous/next row in the list.\
   A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
   The Up and Down arrow keys select the previous/next row in the list.\
-  The Up and Down arrow keys select the previous/next row in the list.\
+  The Up and Down arrow keys select the previous/next row in the list.  
   A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
   The Up and Down arrow keys select the previous/next row in the list.\
   The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.

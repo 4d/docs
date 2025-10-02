@@ -47,7 +47,7 @@ Hay tres caracteres reservados que **Num** trata de forma especial: el separador
 
 - El separador decimal se interpreta como un decimal y debe aparecer incluido en una cadena numérica. Por defecto, el comando utiliza el separador decimal definido por el sistema operativo. Puede modificar este carácter utilizando el parámetro *separator* (ver abajo).
 - El guión hace que el número o exponente sea negativo. El guión debe aparecer antes de todo carácter numérico negativo o después de la "e" para un exponente. Excepto en el caso del carácter "e", si se introduce un guión en una cadena numérica, se ignora la parte de la cadena que va después del guión. Por ejemplo, `Num("123-456")` devuelve 123, pero `Num("-9")` devuelve -9.
-- La e o E hace que todo caracter numérico a su derecha se interprete como la potencia de un exponente. La "e" debe estar incluida en una cadena numérica. Entonces, `Num("123e-2")` devuelve 1.23.\
+- La e o E hace que todo caracter numérico a su derecha se interprete como la potencia de un exponente. La "e" debe estar incluida en una cadena numérica. Entonces, `Num("123e-2")` devuelve 1.23.  
   Tenga en cuenta que cuando la cadena incluye más de una "e", la conversión puede dar resultados diferentes en macOS y en Windows.
 
 #### Parámetro *separador*
@@ -142,8 +142,8 @@ $result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
 
 ## Ver también
 
-[Bool](../commands-legacy/bool.md)\
-[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)\
+[Bool](../commands-legacy/bool.md)  
+[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)  
 [String](./string.md)
 
 ## Propiedades

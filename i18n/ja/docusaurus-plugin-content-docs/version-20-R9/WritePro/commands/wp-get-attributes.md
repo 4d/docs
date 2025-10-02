@@ -65,6 +65,6 @@ For a comprehensive list of attributes to pass, as well as their scope and value
 
 ## 参照
 
-[4D Write Pro Attributes](../4d-write-pro-attributes)\
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

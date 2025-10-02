@@ -564,7 +564,7 @@ End if
 
 O valor da [variável de cabeçalho de coluna](properties_Object.md#variable-or-expression) permite que você gerencie informações adicionais: a classificação atual da coluna (leitura) e a exibição da seta de classificação.
 
-- Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;\
+- Se a variável for estabelecida como 0, a coluna não é ordenada e a flecha de ordenação não é exibida;  
   ![](../assets/en/FormObjects/sorticon0.png)
 
 - Se a variável for definida como 1, a coluna será classificada em ordem crescente e a seta de classificação será exibida.

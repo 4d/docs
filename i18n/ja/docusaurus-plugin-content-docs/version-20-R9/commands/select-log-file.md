@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 ## 参照
 
-[New log file](new-log-file.md)\
+[New log file](new-log-file.md)  
 [ON ERR CALL](../commands-legacy/on-err-call.md)
 
 ## プロパティ

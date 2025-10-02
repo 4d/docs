@@ -33,8 +33,8 @@ Para encriptar os seus dados pela primeira vez utilizando o CSM, são necessári
    ![](../assets/en/MSC/MSC_encrypt2.png)<p>
    This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
    \*\*Nota: \*\*A mesma mensagem é apresentada quando o estado **Cifrável** tiver sido modificado num ficheiro de dados já encriptado ou após o ficheiro de dados ter sido descifrado (ver abaixo).</p>
-3. Click on the Encrypt picture button.\
-   ![](../assets/en/MSC/MSC_encrypt3.png)\
+3. Click on the Encrypt picture button.  
+   ![](../assets/en/MSC/MSC_encrypt3.png)  
    You will be prompted to enter a passphrase for your data file:
    ![](../assets/en/MSC/MSC_encrypt4.png)
    The passphrase is used to generate the data encryption key. Uma frase-chave é uma versão mais segura de uma palavra-passe e pode conter um grande número de caracteres. Por exemplo, pode introduzir uma frase-chave como "Todos nós viemos para Montreux" ou "A minha primeira grande frase-chave!"
@@ -70,7 +70,7 @@ Nesta fase, tem duas opções:
   OU
 - conecte un dispositivo como una llave USB y haga clic en el botón **Escanear dispositivos**.
 
-(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.\
+(1) The 4D keychain stores all valid data encrpytion keys entered during the application session.  
 (2) The current passphrase is the passphrase used to generate the current encryption key.
 
 Em todos os casos, se uma informação válida for fornecida, 4D reinicia em modo de manutenção (se ainda não for o caso) e executa a operação.

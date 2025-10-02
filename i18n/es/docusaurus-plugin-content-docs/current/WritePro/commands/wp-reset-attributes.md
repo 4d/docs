@@ -84,6 +84,6 @@ WP RESET ATTRIBUTES($subSection) // Se eliminan todos los atributos de la subsec
 
 ## Ver también
 
-[4D Write Pro Attributes](../4d-write-pro-attributes)\
-[WP GET ATTRIBUTES](wp-get-attributes.md)\
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[WP GET ATTRIBUTES](wp-get-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

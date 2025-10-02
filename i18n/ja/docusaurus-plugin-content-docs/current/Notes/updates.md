@@ -280,7 +280,7 @@ In binary databases, you need to select the required components in the 4D instal
 
 | ライブラリ     | 現在のバージョン                               | 更新された 4D バージョン | 説明                                                                                                                                                 |
 | --------- | -------------------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 0697c88                                | **21**         | QUIC に使用                                                                                                                                           |
+| BoringSSL | fa47b1d                                | **21**         | QUIC に使用                                                                                                                                           |
 | CEF       | 7258                                   | **21**         | Chromium 139                                                                                                                                       |
 | Hunspell  | 1.7.2  | 20             | 4D フォームと 4D Write Pro でスペルチェックに使用されます。                                                                                                             |
 | ICU       | 77.1                   | **21**         | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
@@ -290,7 +290,7 @@ In binary databases, you need to select the required components in the 4D instal
 | Libuv     | 1.51.0 | **21**         | QUIC に使用                                                                                                                                           |
 | libZip    | 1.11.4 | **21**         | Zip クラス、4D Write Pro、svg および serverNet コンポーネントによって使用。                                                                                              |
 | LZMA      | 5.8.1  | **21**         |                                                                                                                                                    |
-| ngtcp2    | 1.14.0 | **21**         | QUIC に使用                                                                                                                                           |
+| ngtcp2    | 1.16.0 | **21**         | QUIC に使用                                                                                                                                           |
 | OpenSSL   | 3.5.2  | **21**         |                                                                                                                                                    |
 | PDFWriter | 4.7.0  | **21**         | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | PHP       | 8.2.4  | 20             |                                                                                                                                                    |

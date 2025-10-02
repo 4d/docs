@@ -126,12 +126,12 @@ Voici quelques astuces quant à l'utilisation du numéro de référence unique :
 2. Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command.\
+   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command.  
    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
    Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
    You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
 
-3. Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
+3. Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).  
    Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
    Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
    Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\

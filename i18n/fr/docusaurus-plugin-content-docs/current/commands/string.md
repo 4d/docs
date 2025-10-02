@@ -140,7 +140,7 @@ Exemples :
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
 
-- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)\
+- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)  
   Exemples :
 
 ```4d
@@ -173,7 +173,7 @@ Ce paramètre peut être utilisé avec des formats de date prédéfinis ou basé
  $mydate:=String(Current date;ISO Date GMT;Current time) // retourne par exemple 2010-09-13T16:11:53Z  
 ```
 
-A noter le caractère "Z" final qui indique le format GMT.\
+A noter le caractère "Z" final qui indique le format GMT.  
 Si vous ne passez pas le paramètre *addTime*, la commande renvoie la date à minuit (heure locale) exprimée en heure GMT, ce qui peut entraîner un décalage en fonction du fuseau horaire local :
 
 ```4d
@@ -229,7 +229,7 @@ Exemples :
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
 
-- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)\
+- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)  
   Exemples :
 
 ```4d
@@ -239,12 +239,12 @@ Exemples :
 
 ### Expressions de type Chaîne
 
-Si *expression* est de type Alpha ou Texte, la commande renvoie la même valeur que celle passée en paramètre. Ce fonctionnement est utile notamment dans le cadre d’une programmation générique utilisant des pointeurs.\
+Si *expression* est de type Alpha ou Texte, la commande renvoie la même valeur que celle passée en paramètre. Ce fonctionnement est utile notamment dans le cadre d’une programmation générique utilisant des pointeurs.  
 Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 
 ### Expressions de type Booléen
 
-Si *expression* est de type Booléen, la commande retourne la chaîne “Vrai” ou “Faux” dans la langue de l’application (“True” ou “False” dans une version anglaise de 4D).\
+Si *expression* est de type Booléen, la commande retourne la chaîne “Vrai” ou “Faux” dans la langue de l’application (“True” ou “False” dans une version anglaise de 4D).  
 Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 
 ### Expressions indéfinies
@@ -257,10 +257,10 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 
 ## Voir également
 
-[Bool](../commands-legacy/bool.md)\
-[Date](../commands-legacy/date.md)\
-[Num](num.md)\
-[Time string](../commands-legacy/time-string.md)\
+[Bool](../commands-legacy/bool.md)  
+[Date](../commands-legacy/date.md)  
+[Num](num.md)  
+[Time string](../commands-legacy/time-string.md)  
 [Timestamp](../commands-legacy/timestamp.md)
 
 ## Propriétés

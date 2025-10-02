@@ -148,6 +148,6 @@ O resultado é:
 
 ## Veja também
 
-[4D Write Pro Attributes](../4d-write-pro-attributes)\
-[WP GET ATTRIBUTES](../commands/wp-get-attributes.md)\
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[WP GET ATTRIBUTES](../commands/wp-get-attributes.md)  
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)

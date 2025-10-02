@@ -279,7 +279,7 @@ Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/
 
 | Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                         |
 | --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | 0697c88                                | **21**            | Utilizado para QUIC                                                                                                                                |
+| BoringSSL | fa47b1d                                | **21**            | Utilizado para QUIC                                                                                                                                |
 | CEF       | 7258                                   | **21**            | Chromium 139                                                                                                                                       |
 | Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                          |
 | ICU       | 77.1                   | **21**            | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
@@ -289,7 +289,7 @@ Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/
 | Libuv     | 1.51.0 | **21**            | Utilizado para QUIC                                                                                                                                |
 | libZip    | 1.11.4 | **21**            | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                             |
 | LZMA      | 5.8.1  | **21**            |                                                                                                                                                    |
-| ngtcp2    | 1.14.0 | **21**            | Utilizado para QUIC                                                                                                                                |
+| ngtcp2    | 1.16.0 | **21**            | Utilizado para QUIC                                                                                                                                |
 | OpenSSL   | 3.5.2  | **21**            |                                                                                                                                                    |
 | PDFWriter | 4.7.0  | **21**            | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | PHP       | 8.2.4  | 20                |                                                                                                                                                    |

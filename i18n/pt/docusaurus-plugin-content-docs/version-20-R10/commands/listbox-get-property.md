@@ -98,8 +98,8 @@ Given a list box "MyListbox", if you execute the following statement:
 
 ## Veja também
 
-[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)\
-[LISTBOX SET PROPERTY](listbox-set-property.md)\
+[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)  
+[LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 ## Propriedades

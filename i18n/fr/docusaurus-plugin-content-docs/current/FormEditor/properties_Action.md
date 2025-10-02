@@ -11,17 +11,17 @@ Vous n'appelez pas de méthode formulaire - 4D l'appelle automatiquement lorsqu'
 
 Plusieurs types de références de méthode sont pris en charge :
 
-- un chemin de fichier de méthode projet standard, c'est-à-dire qui utilise le modèle suivant :\
-  `method.4dm`\
+- un chemin de fichier de méthode projet standard, c'est-à-dire qui utilise le modèle suivant :  
+  `method.4dm`  
   Ce type de référence indique que le fichier de méthode se trouve à l'emplacement par défaut ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). Dans ce cas, 4D gère automatiquement la méthode formulaire lorsque des opérations sont exécutées sur le formulaire (renommage, duplication, copier/coller, etc.)
 
 - un nom de méthode projet : nom d'une méthode projet existante sans extension de fichier, par exemple :
   `myMethod`
   Dans ce cas, 4D ne fournit pas de support automatique pour les opérations de formulaire.
 
-- un chemin de fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :\
+- un chemin de fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :  
   `MyMethods/myFormMethod.4dm`
-  Vous pouvez également utiliser un filesystem :\
+  Vous pouvez également utiliser un filesystem :  
   `/RESOURCES/Forms/FormMethod.4dm`
   Dans ce cas, 4D ne fournit pas de support automatique pour les opérations sur les objets.
 

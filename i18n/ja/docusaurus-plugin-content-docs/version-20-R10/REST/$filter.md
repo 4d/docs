@@ -40,7 +40,7 @@ title: $filter
 > <li>単一引用符 ('): \u0027</li>
 > <li>二重引用符 ("): \u0022</li>
 >
-> たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:\
+> たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
 > 値を直接渡す場合は、次のように書けます: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`

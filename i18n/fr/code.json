@@ -361,7 +361,7 @@
     "description": "The ARIA label to toggle the collapsible sidebar category"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
+    "message": "Langues",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -665,7 +665,7 @@
     "message": "4D AIKit"
   },
   "4D at a glance": {
-    "message": "4D at a glance"
+    "message": "4D en un coup d'œil"
   },
   "homepage.sections.ide.title": {
     "message": "Projet & IDE"
@@ -677,10 +677,10 @@
     "message": "Architecture"
   },
   "Project Settings": {
-    "message": "Project Settings"
+    "message": "Propriétés du projet"
   },
   "Database structure": {
-    "message": "Database structure"
+    "message": "Structure de la base de données"
   },
   "Code & Methods": {
     "message": "Code & Methods"
@@ -701,10 +701,10 @@
     "message": "Concepts"
   },
   "Commands by name": {
-    "message": "Commands by name"
+    "message": "Commandes par nom"
   },
   "Commands by theme": {
-    "message": "Commands by theme"
+    "message": "Commandes par thème"
   },
   "Classes": {
     "message": "Classes"
@@ -737,7 +737,7 @@
     "message": "Serveur & Admin"
   },
   "4D Server Window": {
-    "message": "4D Server Window"
+    "message": "Fenêtre de 4D Server"
   },
   "WebAdmin & Data Explorer": {
     "message": "WebAdmin & Data Explorer"
@@ -746,10 +746,10 @@
     "message": "TLS"
   },
   "Log Files": {
-    "message": "Log Files"
+    "message": "Fichiers journaux"
   },
   "Extending 4D applications": {
-    "message": "Extending 4D applications"
+    "message": "Extension des applications 4D"
   },
   "4D QPDF": {
     "message": "4D QPDF"

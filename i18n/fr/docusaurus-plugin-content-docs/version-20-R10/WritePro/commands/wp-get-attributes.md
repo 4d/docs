@@ -65,6 +65,6 @@ Vous voulez obtenir la taille de la police, la couleurd 'arrière-plan et le sty
 
 ## Voir également
 
-[4D Write Pro Attributes](../4d-write-pro-attributes)\
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

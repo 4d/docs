@@ -93,7 +93,7 @@ O arquivo **backupHistory.json** foi criado na pasta de destino atual. Pode obte
 $backupHistory:=Get 4D file(Backup history file)
 ```
 
-> **AVISO**\
+> **AVISO**  
 > Apagar ou mover o arquivo **backupHistory.json** faz com que o próximo número de backup seja resetado.
 
 > O arquivo **backupHistory.json** é formatado para ser usado pela aplicação 4D. Se estiver procurando por um relatório que possa ser lido por olhos humanos, o diário de Backup journal é mais preciso.

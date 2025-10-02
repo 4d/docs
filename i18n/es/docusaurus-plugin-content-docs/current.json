@@ -1176,7 +1176,7 @@
     "description": "The generated-index page title for category Extensions in sidebar docs"
   },
   "sidebar.docs.category.Extending 4D applications": {
-    "message": "Extending 4D applications",
+    "message": "Extensión de las aplicaciones 4D",
     "description": "The label for category Extending 4D applications in sidebar docs"
   },
   "sidebar.docs.category.Document Elements": {
@@ -1204,7 +1204,7 @@
     "description": "The label for link Build4D in sidebar docs, linking to https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme"
   },
   "sidebar.docs.doc.Log Files": {
-    "message": "Log Files",
+    "message": "Archivos de registro",
     "description": "The label for the doc item Log Files in sidebar docs, linking to the doc Debugging/debugLogFiles"
   }
 }

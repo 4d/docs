@@ -34,7 +34,7 @@ title: UDPEvent
 
 #### 説明
 
-The `.address` property contains <!-- REF #UDPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+`.address` プロパティは<!-- REF #UDPEvent.address.Summary -->リモートマシンの IP アドレス<!-- END REF --> を格納します。
 
 <!-- END REF -->
 

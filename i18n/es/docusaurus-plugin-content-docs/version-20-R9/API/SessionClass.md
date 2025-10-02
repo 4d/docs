@@ -7,7 +7,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 
 :::info Para aprender más
 
-Blog posts about this feature:
+Articulos de blog sobre esta funcionalidad:
 
 - [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 - [Permissions: inspeccionar los privilegios de la sesión para facilitar la depuración](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)

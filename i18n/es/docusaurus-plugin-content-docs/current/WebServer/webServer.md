@@ -6,7 +6,7 @@ title: Servidor Web
 
 4D in local mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
 
-:::warning Deprecated feature
+:::warning Funcionalidad obsoleta
 
 Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no longer recommended to use this feature.
 

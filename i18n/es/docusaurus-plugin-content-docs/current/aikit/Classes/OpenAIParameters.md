@@ -9,13 +9,13 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ## Propiedades
 
-### Asynchronous Callback Properties
+### Propiedades de retrollamada asíncrona
 
 Use this callback property to receive the result regardless of success or error:
 
-| Propiedad                                          | Tipo                        | Descripción                                                                                                                                  |
-| -------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onTerminate`<br>(or `formula`) | 4D.Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina. |
+| Propiedad                                         | Tipo                        | Descripción                                                                                                                                  |
+| ------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onTerminate`<br>(o `formula`) | 4D.Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina. |
 
 Use these callback properties for more granular control over success and error handling:
 
@@ -28,7 +28,7 @@ Use these callback properties for more granular control over success and error h
 
 See [documentation about asynchronous code for examples](../asynchronous-call.md)
 
-### Network Properties
+### Propiedades de la red
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,13 +37,13 @@ See [documentation about asynchronous code for examples](../asynchronous-call.md
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
-### OpenAPI Properties
+### Propiedades OpenAPI
 
 | Propiedad | Tipo | Descripción                                                                                                 |
 | --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
 | `user`    | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
 
-### Others
+### Otras
 
 | Propiedad | Tipo    | Descripción                                                                                                                              |
 | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------- |

@@ -59,7 +59,7 @@ El diálogo es cerrado por el usuario ya sea con una acción "aceptar" (activada
 
 Tenga en cuenta que la validación no es igual al guardado: si el diálogo incluye campos, debe llamar explícitamente al comando [SAVE RECORD](../commands-legacy/save-record.md) para guardar cualquier dato que haya sido modificado.
 
-Si se pasa el parámetro opcional *\**, el formulario se carga y se muestra en la última ventana abierta del proceso actual y el comando finaliza su ejecución dejando el formulario activo en la pantalla.\
+Si se pasa el parámetro opcional *\**, el formulario se carga y se muestra en la última ventana abierta del proceso actual y el comando finaliza su ejecución dejando el formulario activo en la pantalla.  
 Este formulario reacciona entonces "normalmente" a las acciones del usuario y se cierra utilizando una acción estándar o cuando el código 4D relacionado con el formulario (método objeto o método formulario) llama al comando [CANCEL](../commands-legacy/cancel.md) o [ACCEPT](../commands-legacy/accept.md). Si el proceso actual termina, los formularios creados de este modo se cierran automáticamente del mismo modo que si se hubiera llamado a un comando [CANCEL](../commands-legacy/cancel.md). Este modo de apertura es especialmente útil para mostrar una paleta flotante con un documento, sin necesidad de otro proceso.
 
 **Notas:**

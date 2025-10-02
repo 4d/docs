@@ -98,8 +98,8 @@ title: LISTBOX Get property
 
 ## 参照
 
-[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)\
-[LISTBOX SET PROPERTY](listbox-set-property.md)\
+[LISTBOX SET GRID](../commands-legacy/listbox-set-grid.md)  
+[LISTBOX SET PROPERTY](listbox-set-property.md)  
 [OBJECT SET SCROLLBAR](../commands-legacy/object-set-scrollbar.md)
 
 ## プロパティ
