@@ -7,9 +7,9 @@ title: コンポーネント
 
 ## コンポーネントのインストール
 
-Installation and loading of components in your 4D projects are handled through the [4D Dependency manager](../Project/components.md).
+4D プロジェクト内へのコンポーネントのインストールとロードは、[4D 依存関係マネージャー](../Project/components.md) を通して管理されます。
 
-Several components are [developed by 4D](../Extensions/overview.md#components-developed-by-4d), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). また、[独自の 4Dコンポーネントを開発](../Extensions/develop-components.md) することもできます。
+いくつかのコンポーネントが[4D によって開発](../Extensions/overview.md#components-developed-by-4d)されていますが、それ以外にも4D コミュニティによるたくさんの4D コンポーネントが[GitHub 上で公開されています](https://github.com/search?q=4d-component&type=Repositories)。 また、[独自の 4Dコンポーネントを開発](../Extensions/develop-components.md) することもできます。
 
 ## コンポーネントの使い方
 
