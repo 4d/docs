@@ -19,7 +19,7 @@ The `_OpenAIAsyncOptions` internal class provides function to handle asynchronou
 | `body`     | Variant |
 | \`timeout  | Integer |
 
-### Class instances Properties
+### Propiedades de instancias de clase
 
 | Propiedad    | Tipo                                                                  |
 | ------------ | --------------------------------------------------------------------- |
