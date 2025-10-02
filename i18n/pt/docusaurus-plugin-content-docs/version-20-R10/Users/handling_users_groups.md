@@ -123,7 +123,7 @@ Para criar um gurpo:
 2. Clique no botão ![](../assets/en/Users/PlussNew.png) localizado abaixo da lista dos grupos.\
    Clique no botão ![](../assets/en/Users/PlussNew.png) localizado abaixo da lista dos grupos.\
    OR\
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.\
+   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.  
    Clique no botão ![](../assets/en/Users/PlussNew.png) localizado abaixo da lista dos grupos.\
    OR\
    Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.

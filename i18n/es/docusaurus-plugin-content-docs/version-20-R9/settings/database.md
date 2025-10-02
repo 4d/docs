@@ -88,7 +88,7 @@ Utilice los parámetros de esta pestaña para configurar la memoria caché de la
   - **Porcentaje de memoria disponible utilizada para la caché**: porcentaje de la memoria restante asignada por defecto a la caché.\
     Para obtener el tamaño asignado por defecto a la caché, basta con realizar el siguiente cálculo: (Memoria física -- Memoria física a reservar) X Porcentaje de la memoria utilizada para la caché. En el modo adaptativo, el tamaño de la memoria caché varía dinámicamente en función de las necesidades de la aplicación y del sistema. Puede definir los límites utilizando las siguientes dos opciones:
   - **Tamaño mínimo**: cantidad mínima de memoria que debe reservarse para la caché. Este valor no puede ser inferior a 100 MB.
-  - **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. Este valor es prácticamente ilimitado.\\
+  - **Tamaño máximo**: cantidad máxima de memoria que puede utilizar la caché. Este valor es prácticamente ilimitado.\  
     Definir límites es especialmente útil para bases distribuidas en máquinas de las que no se conoce a priori la configuración de memoria. En este caso, los límites definidos permiten garantizar un rendimiento mínimo en todos los casos. El siguiente diagrama ilustra este comportamiento:
 
   Ejemplo de cálculo de la memoria caché:

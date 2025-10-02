@@ -123,7 +123,7 @@ Pour créer un groupe :
 
 2. Cliquez sur le bouton ![](../assets/en/Users/PlussNew.png) situé au-dessous de la liste des groupes.\
    OU
-   Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.\
+   Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.  
    OU
    Cliquez avec le bouton droit de la souris dans la liste des groupes et choisissez la commande **Ajouter** ou **Dupliquer** dans le menu contextuel.
 

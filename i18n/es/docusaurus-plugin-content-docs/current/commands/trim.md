@@ -49,7 +49,7 @@ $output:=Trim($input) //"Hello World!"
 
 ## Ver también
 
-[Trim start](./trim-start.md)\
+[Trim start](./trim-start.md)  
 [Trim end](./trim-end.md)
 
 ## Propiedades

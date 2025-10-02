@@ -565,7 +565,7 @@ End if
 
 La valeur de la [variable associée à l’en-tête d’une colonne](properties_Object.md#variable-or-expression) permet de gérer une information supplémentaire : le tri courant de la colonne (lecture) et l’affichage de la flèche de tri.
 
-- Si la variable est définie sur 0, la colonne n'est pas triée et la flèche de tri n'est pas affichée.\
+- Si la variable est définie sur 0, la colonne n'est pas triée et la flèche de tri n'est pas affichée.  
   ![](../assets/en/FormObjects/sorticon0.png)
 
 - Si la variable est définie sur 1, la colonne est triée par ordre croissant et la flèche de tri s'affiche.

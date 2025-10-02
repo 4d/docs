@@ -310,7 +310,7 @@ Voir [**Release Notes pour 4D 20.x LTS**](../../version-20/Notes/updates.md).
 
 | Bibliothèque | Version courante                       | Mise à jour dans 4D | Commentaire                                                                                                                                        |
 | ------------ | -------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL    | 0697c88                                | **21**              | Utilisé pour QUIC                                                                                                                                  |
+| BoringSSL    | fa47b1d                                | **21**              | Utilisé pour QUIC                                                                                                                                  |
 | CEF          | 7258                                   | **21**              | Chromium 139                                                                                                                                       |
 | Hunspell     | 1.7.2  | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                |
 | ICU          | 77.1                   | **21**              | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
@@ -320,7 +320,7 @@ Voir [**Release Notes pour 4D 20.x LTS**](../../version-20/Notes/updates.md).
 | Libuv        | 1.51.0 | **21**              | Utilisé pour QUIC                                                                                                                                  |
 | libZip       | 1.11.4 | **21**              | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                         |
 | LZMA         | 5.8.1  | **21**              |                                                                                                                                                    |
-| ngtcp2       | 1.14.0 | **21**              | Utilisé pour QUIC                                                                                                                                  |
+| ngtcp2       | 1.16.0 | **21**              | Utilisé pour QUIC                                                                                                                                  |
 | OpenSSL      | 3.5.2  | **21**              |                                                                                                                                                    |
 | PDFWriter    | 4.7.0  | **21**              | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | PHP          | 8.2.4  | 20                  |                                                                                                                                                    |

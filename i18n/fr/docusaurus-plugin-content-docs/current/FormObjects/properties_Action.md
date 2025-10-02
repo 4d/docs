@@ -11,10 +11,10 @@ Contrôlez si l'utilisateur peut faire glisser l'objet et comment il peut le fai
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
-- Un mode **personnalisé**, dans lequel le glisser déclenche l'événement formulaire `Sur début glisser` dans le contexte de l'objet. <strong x-id="1">Custom</strong>: In this mode, any drag operation performed on the object triggers the <code>On Begin Drag</code> form event in the context of the object.\
+- Un mode **personnalisé**, dans lequel le glisser déclenche l'événement formulaire `Sur début glisser` dans le contexte de l'objet. <strong x-id="1">Custom</strong>: In this mode, any drag operation performed on the object triggers the <code>On Begin Drag</code> form event in the context of the object.  
   You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
-- Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Par exemple, le glisser-déposer automatique vous permet de copier une valeur entre deux champs sans utiliser de programmation :\
-  ![](../assets/en/FormObjects/property_automaticDragDrop.png)\
+- Un mode **automatique**, dans lequel 4D **copie** du texte ou des images directement à partir de l'objet formulaire. Il peut alors être utilisé dans la même zone 4D, entre deux zones 4D, ou entre 4D et une autre application. Par exemple, le glisser-déposer automatique vous permet de copier une valeur entre deux champs sans utiliser de programmation :  
+  ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png)
   Dans ce mode, l'événement de formulaire `On Begin Drag` n'est PAS généré. Si vous souhaitez "forcer" l'utilisation du glissement personnalisé alors que le glissement automatique est activé, maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée pendant l'action. Cette option n'est pas disponible pour les images.
 
@@ -46,7 +46,7 @@ Contrôlez si et comment l'objet peut être la destination d'une opération de g
 
 Deux modes de glisser-déposer sont proposés dans 4D :
 
-- Un mode **personnalisé**, dans lequel le déposer déclenche les événements formulaire `Sur glisser` et `Sur déposer` dans le contexte de l'objet. Un mode <strong x-id="1">personnalisé</strong>, dans lequel le déposer déclenche les événements formulaire <code>Sur glisser</code> et <code>Sur déposer</code> dans le contexte de l'objet.\
+- Un mode **personnalisé**, dans lequel le déposer déclenche les événements formulaire `Sur glisser` et `Sur déposer` dans le contexte de l'objet. Un mode <strong x-id="1">personnalisé</strong>, dans lequel le déposer déclenche les événements formulaire <code>Sur glisser</code> et <code>Sur déposer</code> dans le contexte de l'objet.  
   You then manage the drag action using a method. Ce mode vous permet de mettre en place des interfaces basées sur le glisser-déposer, y compris des interfaces qui ne déplacent pas nécessairement des données mais qui peuvent effectuer tout type d'action, telle que l'ouverture de fichiers ou le lancement d'un calcul. Ce mode est basé sur un ensemble de propriétés, d'événements et de commandes spécifiques à partir du thème `Conteneur de données`.
 - Un mode **automatique**, dans lequel 4D gère automatiquement — si possible — l’insertion des données glissées de type texte ou image et déposées sur l’objet (les données sont collées dans l’objet). Les événements `Sur glisser` et `Sur déposer` ne sont pas générés. En revanche, les événements `Sur après modification` (lors du déposer) et `Sur données modifiées` (lorsque l'objet perd le focus) sont générés.
 
@@ -94,17 +94,17 @@ Référence d'une méthode attachée à l'objet. Les méthodes d'objet "gèrent"
 
 Plusieurs types de références de méthode sont pris en charge :
 
-- un chemin de fichier de méthode objet standard, c'est-à-dire qui utilise le modèle suivant :\
-  `ObjectMethods/objectName.4dm`\
+- un chemin de fichier de méthode objet standard, c'est-à-dire qui utilise le modèle suivant :  
+  `ObjectMethods/objectName.4dm`  
   ... où `objectName` est le véritable [nom de l'objet](properties_Object.md#object-name). Ce type de référence indique que le fichier de méthode se trouve à l'emplacement par défaut ("sources/forms/*formName*/ObjectMethods/"). Dans ce cas, 4D gère automatiquement la méthode objet lorsque des opérations sont exécutées sur l'objet formulaire (renommage, duplication, copier/coller, etc.)
 
 - un nom de méthode projet : nom d'une méthode projet existante sans extension de fichier, par exemple :
   `myMethod`
   Dans ce cas, 4D ne fournit pas de support automatique pour les opérations sur les objets.
 
-- un chemin de fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :\
+- un chemin de fichier de méthode personnalisé comprenant l'extension .4dm, par exemple :  
   `../../CustomMethods/myMethod.4dm`
-  Vous pouvez également utiliser un filesystem :\
+  Vous pouvez également utiliser un filesystem :  
   `/RESOURCES/Buttons/bOK.4dm`
   Dans ce cas, 4D ne fournit pas de support automatique pour les opérations sur les objets.
 

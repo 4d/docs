@@ -49,7 +49,7 @@ $output:=Trim end($input) //"     Hello World!"
 
 ## 参照
 
-[Trim](./trim.md)\
+[Trim](./trim.md)  
 [Trim start](./trim-start.md)
 
 ## プロパティ

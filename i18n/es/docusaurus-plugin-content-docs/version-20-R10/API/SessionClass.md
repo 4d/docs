@@ -596,26 +596,26 @@ Esta función no hace nada en las sesiones cliente remoto, procedimientos almace
 
 :::
 
-The `.promote()` function <!-- REF #SessionClass.promote().Summary -->adds the privilege defined in the *privilege* parameter to the current process during the execution of the calling function and returns the id of the promoted privilege<!-- END REF -->.
+La función `.promote()` <!-- REF #SessionClass.promote().Summary -->añade el privilegio definido en el parámetro *privilege* al proceso actual durante la ejecución de la función de llamada y devuelve el id del privilegio promovido<!-- END REF -->.
 
-Dynamically adding privileges is useful when access rights depend on the execution context, which cannot be fully defined in the "roles.json" file. This is particularly relevant when the same function can be executed by users with different access levels. The use of `.promote()` ensures that only the current process is granted the necessary privileges, without affecting others.
+La adición dinámica de privilegios es útil cuando los derechos de acceso dependen del contexto de ejecución, que no puede definirse completamente en el archivo "roles.json". Esto es especialmente relevante cuando la misma función puede ser ejecutada por usuarios con diferentes niveles de acceso. El uso de `.promote()` asegura que sólo el proceso actual reciba los privilegios necesarios, sin afectar a otros.
 
-The function does nothing and returns 0 if:
+La función no hace nada y devuelve 0 si:
 
-- the *privilege* does not exist in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file,
-- the *privilege* is already assigned to the current process (using `.promote()` or through a static [promote action](../ORDA/privileges.md#permission-actions) declared for the calling function in the [`roles.json`](../ORDA/privileges.md#rolesjson-file) file).
+- el *privilegio* no existe en el archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file),
+- el *privilegio* ya está asignado al proceso actual (usando `.promote()` o a través de una [acción de promoción estática](../ORDA/privileges.md#permission-actions) declarada para la función de llamada en el archivo [`roles.json`](../ORDA/privileges.md#rolesjson-file)).
 
-You can call the `promote()` function several times in the same process to add different privileges.
+Puede llamar a la función `promote()` varias veces en el mismo proceso para añadir diferentes privilegios.
 
-The returned id is incremented each time a privilege is dynamically added to the process.
+El id devuelto se incrementa cada vez que un privilegio se añade dinámicamente al proceso.
 
-To remove a privilege dynamically, call the `demote()` function with the appropriate id.
+Para eliminar un privilegio dinámicamente, llame a la función `demote()` con el id apropiado.
 
 #### Ejemplo
 
-Several users connect to a single endpoint that serves different applications. A user from application #1 does not need the "super_admin" privilege because they don't create "VerySensitiveInfo". A user from application #2 needs "super_admin" privilege.
+Varios usuarios se conectan a un único punto final que sirve a distintas aplicaciones. Un usuario de la aplicación #1 no necesita el privilegio "super_admin" porque no crea "VerySensitiveInfo". Un usuario de la aplicación #2 necesita privilegios "super_admin".
 
-You can dynamically provide appropriate privileges in the *CreateInfo* function:
+Puede proporcionar dinámicamente los privilegios adecuados en la función *CreateInfo*:
 
 ```4d
 exposed Function createInfo($info1 : Text; $info2 : Text)

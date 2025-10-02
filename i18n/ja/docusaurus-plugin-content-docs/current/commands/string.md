@@ -140,7 +140,7 @@ displayed_sidebar: docs
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // フランス時間では "2023-11-26T23:00:00Z"
 ```
 
-- あるいは[パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)\
+- あるいは[パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)  
   例:
 
 ```4d
@@ -173,7 +173,7 @@ displayed_sidebar: docs
  $mydate:=String(Current date;ISO Date GMT;Current time) // 例えば、2010-09-13T16:11:53Z を返します
 ```
 
-上記の例の最後の"Z"はGMTフォーマットを表します。\
+上記の例の最後の"Z"はGMTフォーマットを表します。  
 *addTime* 引数を渡さなかった場合、このコマンドはローカルタイムの午前0時をGMT 標準時で表現したものを返します。そのためローカルの時間帯に応じて日付が前後することがあります:
 
 ```4d
@@ -229,7 +229,7 @@ displayed_sidebar: docs
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 時 30 分 45 秒 "
 ```
 
-- あるいは[パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)\
+- あるいは[パターンに基づいてビルドされたカスタマイズされたフォーマット](../Project/date-time-formats.md) (文字列値)  
   例:
 
 ```4d
@@ -239,12 +239,12 @@ displayed_sidebar: docs
 
 ### 文字列式
 
-*expression* が文字列またはテキスト型の場合、コマンドは引数として渡されたものと同じ値を返します。 これは特にポインタを使用している汎用プログラミングで有効です。\
+*expression* が文字列またはテキスト型の場合、コマンドは引数として渡されたものと同じ値を返します。 これは特にポインタを使用している汎用プログラミングで有効です。  
 この場合、*format* 引数は渡されても無視されます。
 
 ### ブール式
 
-*expression* がブール 型の場合、コマンドはアプリケーションのランゲージに即した文字列の "True" または"False"を返します(例えば、4Dのフランス語バージョンでは、“Vrai”または“Faux”)。\
+*expression* がブール 型の場合、コマンドはアプリケーションのランゲージに即した文字列の "True" または"False"を返します(例えば、4Dのフランス語バージョンでは、“Vrai”または“Faux”)。  
 この場合、*format* 引数は渡されても無視されます。
 
 ### 未定義式
@@ -257,10 +257,10 @@ displayed_sidebar: docs
 
 ## 参照
 
-[Bool](../commands-legacy/bool.md)\
-[Date](../commands-legacy/date.md)\
-[Num](num.md)\
-[Time string](../commands-legacy/time-string.md)\
+[Bool](../commands-legacy/bool.md)  
+[Date](../commands-legacy/date.md)  
+[Num](num.md)  
+[Time string](../commands-legacy/time-string.md)  
 [Timestamp](../commands-legacy/timestamp.md)
 
 ## プロパティ

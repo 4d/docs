@@ -33,7 +33,7 @@ La arquitectura de carpetas "Contents" se recomienda para los componentes si des
 
 :::
 
-## Component Locations
+## Ubicación de los componentes
 
 :::note
 
@@ -412,7 +412,7 @@ Las siguientes opciones de origen son posibles:
 | Etiqueta de origen             | Descripción                                                                                                                                  |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | Built in 4D                    | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D                                                           |
-| Declared in project            | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                  |
+| Declarado en proyecto          | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                  |
 | Declarado en el entorno        | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
 | Carpeta Components             | Componente ubicado en la carpeta [`Components`](architecture.md#components)                                                                  |
 | Dependencia de los componentes | Componente secundario ([requerido por otro componente](#automatic-dependency-resolution))                                 |

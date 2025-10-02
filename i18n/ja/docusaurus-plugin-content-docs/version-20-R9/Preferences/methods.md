@@ -142,7 +142,7 @@ The corresponding [clipboard shorcuts](../code-editor/write-class-method.md#clip
 
 - **閉じる }, ), ], "**: {, (, [, あるいは " などの開くカッコを入力した時に、対応する閉じるカッコが追加されます。 この機能により、カーソル位置に、あるいは選択されたテキストを囲むように、対応するカッコ記号を挿入できるようになります。 たとえば、文字列をハイライトして単一の " を入力すると、選択された文字列全体が "" で囲まれます:
 
-![](../assets/en/Preferences/optionsClosing.png)\
+![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
 
 #### 括弧のマッチング

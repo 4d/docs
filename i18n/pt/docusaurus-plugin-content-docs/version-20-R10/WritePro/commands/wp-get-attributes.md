@@ -65,6 +65,6 @@ You want to get the font size, background color and border style of the selected
 
 ## Veja também
 
-[4D Write Pro Attributes](../4d-write-pro-attributes)\
-[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)\
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)  
 [WP SET ATTRIBUTES](wp-set-attributes.md)

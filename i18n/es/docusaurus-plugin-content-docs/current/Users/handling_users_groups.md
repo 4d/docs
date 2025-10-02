@@ -120,8 +120,8 @@ Para crear un grupo:
 1. Seleccione **Caja de herramientas > Grupos** en el menú **Diseño** o haga clic en el botón **Caja de herramientas** de la barra de herramientas de 4D luego haga clic en el botón **Grupos**.
    4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos del proyecto de aplicación.
 
-2. Haga clic en el botón ![](../assets/en/Users/PlussNew.png) situado debajo de la lista de grupos.\
-   O\
+2. Haga clic en el botón ![](../assets/en/Users/PlussNew.png) situado debajo de la lista de grupos.  
+   O  
    Haga clic con el botón derecho del ratón en la lista de grupos y elija el comando **Añadir** o **Duplicar** en el menú contextual.
 
 > El comando Duplicar se puede utilizar para crear varios grupos que tengan las mismas características rápidamente.

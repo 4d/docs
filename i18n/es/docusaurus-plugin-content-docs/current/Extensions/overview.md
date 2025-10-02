@@ -14,13 +14,13 @@ La [arquitectura del proyecto] 4D (../Project/architecture.md) es abierta y pued
 - [**Componentes**](Concepts/components.md). Los componentes están hechos de código 4D. 4D le propone un conjunto de componentes utilitarios (ver más abajo) que puede instalar y utilizar en función de sus necesidades. También puedes [desarrollar sus propios componentes 4D](develop-components.md), o utilizar componentes de terceros. Muchos desarrolladores de la comunidad 4D han compartido componentes 4D (navegue por Github para tener una lista de componentes 4D públicos reunidos con el tema [`4d-component`](https://github.com/topics/4d-component)).
 - [**Plug-ins**](../Concepts/plug-ins.md). Los plug-ins pueden construirse utilizando cualquier lenguaje. Los plugins hacen cosas que 4D no hace de forma nativa (por ejemplo, una tecnología de plataforma específica), o que serían muy difíciles de escribir sólo con 4D. Como se describe en [esta página](develop-plug-ins.md), puede desarrollar sus propios plug-ins. Muchas funcionalidades están cubiertas por los plug-ins 4D existentes. Navegue por Github para tener una lista de plugins 4D públicos reunidos con el tema [`4d-plugin`](https://github.com/topics/4d-plugin).
 
-## Components developed by 4D
+## Componentes desarrollados por 4D
 
 4D proposes various components to the 4D community, covering many development needs. All 4D components can be found on the [**4D github repository**](https://github.com/4d).
 
 A subset of these components is listed by default in the [Dependency Manager](../Project/components.md), including:
 
-| Componente           | Github repository                                                           | Descripción                                                                       | Principales funcionalidades                                                                                                             |
+| Componente           | Repositorio Github                                                          | Descripción                                                                       | Principales funcionalidades                                                                                                             |
 | -------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | 4D AIKit             | https://github.com/4d/4D-AIKit              | Conjunto de clases a conectar con las APIs OpenAI de terceros                     | `OpenAIChat`, `OpenAIImage`...                                                          |
 | 4D NetKit            | https://github.com/4d/4D-NetKit             | Conjunto de herramientas de servicios web para conectarse a APIs de terceros      | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |

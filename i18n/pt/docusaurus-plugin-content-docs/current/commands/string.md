@@ -140,7 +140,7 @@ Exemplos:
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
 
-- or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)\
+- or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)  
   Examples:
 
 ```4d
@@ -173,7 +173,7 @@ This parameter can be used with both predefined or pattern-based date formats. E
  $mydate:=String(Current date;ISO Date GMT;Current time) // returns, for instance, 2010-09-13T16:11:53Z  
 ```
 
-Note that the "Z" character at the end indicates the GMT format.\
+Note that the "Z" character at the end indicates the GMT format.  
 If you do not pass the *addTime* parameter, the command returns the date at midnight (local time) expressed in GMT time, which may cause the date to be moved forward or back depending on the local time zone:
 
 ```4d
@@ -229,7 +229,7 @@ Exemplos:
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
 
-- or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)\
+- or a [customized format built upon a pattern](../Project/date-time-formats.md) (string value)  
   Examples:
 
 ```4d
@@ -239,12 +239,12 @@ Exemplos:
 
 ### String Expressions
 
-If *expression* is of the String or Text type, the command returns the same value as the one passed in the parameter. This can be useful more particularly in generic programming using pointers.\
+If *expression* is of the String or Text type, the command returns the same value as the one passed in the parameter. This can be useful more particularly in generic programming using pointers.  
 In this case, the *format* parameter, if passed, is ignored.
 
 ### Boolean Expressions
 
-If *expression* is of the Boolean type, the command returns the string “True” or “False” in the language of the application (for example, “Vrai” or “Faux” in a French version of 4D).\
+If *expression* is of the Boolean type, the command returns the string “True” or “False” in the language of the application (for example, “Vrai” or “Faux” in a French version of 4D).  
 In this case, the *format* parameter, if passed, is ignored.
 
 ### Undefined Expressions
@@ -257,10 +257,10 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 
 ## Veja também
 
-[Bool](../commands-legacy/bool.md)\
-[Date](../commands-legacy/date.md)\
-[Num](num.md)\
-[Time string](../commands-legacy/time-string.md)\
+[Bool](../commands-legacy/bool.md)  
+[Date](../commands-legacy/date.md)  
+[Num](num.md)  
+[Time string](../commands-legacy/time-string.md)  
 [Timestamp](../commands-legacy/timestamp.md)
 
 ## Propriedades

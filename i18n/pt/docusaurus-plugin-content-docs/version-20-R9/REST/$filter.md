@@ -40,7 +40,7 @@ Para más información sobre cómo consultar datos en 4D, consulte la documentac
 > <li>Aspas ('): \u0027</li>
 > <li>Quotes ('): \u0027 Double quotes ("): \u0022</li>
 >
-> For example, you can write the following when passing a value with a quote when using the *params* property:\
+> For example, you can write the following when passing a value with a quote when using the *params* property:  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 >
 > Se você passar o valor diretamente, poderá escrever o seguinte:

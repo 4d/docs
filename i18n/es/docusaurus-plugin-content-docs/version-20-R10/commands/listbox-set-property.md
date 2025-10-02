@@ -11,7 +11,7 @@ title: LISTBOX SET PROPERTY
 | ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | \*         | Operador      | &#8594; | Si se especifica, object es un nombre de objeto (cadena). Si se omite, object es una variable. |
 | object     | any           | &#8594; | Nombre del objeto (si se especifica \*) o Variable (si se omite \*)                                         |
-| property   | Integer       | &#8594; | List box or column property                                                                                                                       |
+| property   | Integer       | &#8594; | Propiedad de list box o de columna de list box                                                                                                    |
 | value      | Integer, Text | &#8594; | Valor de la propiedad                                                                                                                             |
 
 <!-- END REF-->
@@ -84,7 +84,7 @@ You want to set a maximum width for the column whose name is "ProductNumber":
 
 ## Ver también
 
-*List Box*\
+*List Box*  
 [LISTBOX Get property](listbox-get-property.md)
 
 ## Propiedades
