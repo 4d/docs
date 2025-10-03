@@ -42,7 +42,7 @@ ds.webUser.save()
 
 Ver también [este ejemplo](gettingStarted.md#authenticating-users) del capítulo "Cómo comenzar".
 
-Se nenhuma autenticação personalizada for fornecida, 4D chama o método banco de dados [`On Web Authentication`](#on-web-authentication) (se existir). In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
+Se nenhuma autenticação personalizada for fornecida, 4D chama o método banco de dados [`On Web Authentication`](#on-web-authentication) (se existir). In addition to $url and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. El método debe devolver **True** en $0 si el usuario se autentifica con éxito, entonces se sirve el recurso solicitado, o **False** en $0 si la autenticación falló.
 
 > **Atención**: si el método de base de datos `On Web Authentication` no existe, las conexiones se aceptan automáticamente (modo de prueba).
 
@@ -119,7 +119,7 @@ Estes parâmetros devem ser declarados da seguinte forma:
 
 :::note
 
-Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado).
+Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. The information received by the database method depends on the selected [authentication mode](#authentication-modes).
 
 :::
 
@@ -127,9 +127,9 @@ Todos los parámetros del método base `On Web Authentication` no están necesar
 
 O primeiro parâmetro (`$url`) é o URL recebido pelo servidor, do qual o endereço do host foi removido.
 
-Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. A tabela a seguir mostra os valores de $urll dependendo do URL inserida no navegador Web:
+Vejamos o exemplo de uma ligação Intranet. Suponha que o endereço IP do seu Web Server 4D é 123.45.67.89. A tabela a seguir mostra os valores de $url dependendo do URL inserida no navegador Web:
 
-| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $urll                                                              |
+| URL introduzido no navegador Web                                                                                                                  | Valor do parâmetro $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |

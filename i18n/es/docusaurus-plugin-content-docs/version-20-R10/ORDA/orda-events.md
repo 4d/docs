@@ -49,7 +49,7 @@ Con otras configuraciones remotas (p. ej. Qodly applications, [REST API requests
 
 ### Tabla resumen
 
-The following table lists ORDA events along with their rules.
+La siguiente tabla lista los eventos ORDA junto con sus reglas.
 
 | Evento                     | Nivel    | Nombre de la función                                    |                 (C/S) Ejecutado en                |
 | :------------------------- | :------- | :------------------------------------------------------ | :------------------------------------------------------------------: |

@@ -555,7 +555,7 @@ Una vez iniciada la compilación, si no se encuentra una licencia válida, se ge
 
 Una vez creada una aplicación licenciada, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
 
-#### Application embedding licenses from the following list
+#### Aplicación que integra las licencias de la siguiente lista
 
 Seleccione esta opción para crear una aplicación lista para usar (independiente o cliente-servidor), incrustando las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) necesarias que usted designe específicamente.
 
