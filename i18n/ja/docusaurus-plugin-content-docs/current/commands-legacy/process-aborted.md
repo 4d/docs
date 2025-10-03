@@ -13,6 +13,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>履歴</summary>
+
+|リリース|内容|
+|---|---|
+|20 R9|コマンドが廃止予定|
+
+</details>
+
 :::info 互換性
 
 **このコマンドは非推奨です**.

@@ -13,6 +13,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|20 R9|Command deprecated|
+
+</details>
+
 :::info Compatibility
 
 **This command is deprecated**.

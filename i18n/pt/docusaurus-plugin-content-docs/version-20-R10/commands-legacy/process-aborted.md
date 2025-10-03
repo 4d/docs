@@ -13,6 +13,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>História</summary>
+
+|Release|Mudanças|
+|---|---|
+|20 R9|Comando obsoleto|
+
+</details>
+
 :::info Compatibilidade
 
 **Este comando está obsoleto**.

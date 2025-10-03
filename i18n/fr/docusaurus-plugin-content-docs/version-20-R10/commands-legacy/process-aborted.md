@@ -13,6 +13,14 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>Historique</summary>
+
+|Release|Modifications|
+|---|---|
+|20 R9|Commande dépréciée|
+
+</details>
+
 :::info Compatibilité
 
 **Cette commande est dépréciée**.
