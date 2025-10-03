@@ -90,11 +90,11 @@ The $BrowserIP parameter receives the IP address of the browser’s machine. Cet
 
 The $ServerIP parameter receives the IP address requested by the 4D Web Server. 4D prend en charge le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
 
-### $user and $password - User Name and Password
+### $user et $password - Nom d'utilisateur et mot de passe
 
 The $user and $password parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
 
-> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
+> Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $password (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 
 ## /4DACTION
 

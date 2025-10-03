@@ -73,7 +73,7 @@ $result:=$helper.prompt("and could you decompose this number")
 
 ##### Asistente de visión
 
-This helper enables image analysis through the chat.
+Este ayudante permite el análisis de imágenes a través del chat.
 
 ```4d
 var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description of the image")

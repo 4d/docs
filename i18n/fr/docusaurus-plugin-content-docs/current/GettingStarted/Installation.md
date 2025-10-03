@@ -31,7 +31,9 @@ Apparaît ensuite l'assistant de bienvenue :
 
 - Si vous souhaitez découvrir et explorer 4D, cliquez sur le lien **essai gratuit**. Il vous sera demandé de vous connecter ou de créer un compte 4D.
 
-- Si vous possédez déjà un compte 4D, cliquez sur le lien **Se connecter** sur le côté supérieur droit de l'assistant d'installation et saisissez les informations relatives à votre compte. Toute licence 4D préalablement enregistrée est automatiquement mise à jour (ou les packs d'extension supplémentaires sont chargés) sur votre machine.
+- Si vous possédez déjà un compte 4D, cliquez sur le lien **Se connecter** sur le côté supérieur droit de l'assistant d'installation et saisissez les informations relatives à votre compte.
+  - Any already activated 4D products are automatically updated (or additional expansion packs loaded) on your machine.
+  - If no product is activated on the machine but there is a development license associated with the 4D account, a dialog box appears, prompting you to install it directly.
 
 Élargissez la zone **Ouvrir ou créer un projet d'application** et sélectionnez l'action que vous souhaitez exécuter :
 

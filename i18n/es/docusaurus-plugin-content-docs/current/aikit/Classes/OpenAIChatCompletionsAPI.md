@@ -44,7 +44,7 @@ Obtener la respuesta como texto
 var $text:=$result.choice.text
 ```
 
-Append assistant response for next completion request
+Anexar la respuesta del asistente para la siguiente solicitud de finalización
 
 ```
 $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" }

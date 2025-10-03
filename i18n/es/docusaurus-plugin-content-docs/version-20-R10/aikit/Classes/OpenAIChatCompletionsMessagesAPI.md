@@ -16,9 +16,9 @@ The `OpenAIChatCompletionsMessagesAPI` class is designed to interact with the Op
 | Parámetros     | Tipo                                      | Descripción                                                                 |
 | -------------- | ----------------------------------------- | --------------------------------------------------------------------------- |
 | *completionID* | Text                                      | The ID of the chat completion to retrieve messages for.     |
-| *parámetros*   | `OpenAIChatCompletionsMessagesParameters` | Parameters for filtering and customizing the response.      |
+| *parámetros*   | `OpenAIChatCompletionsMessagesParameters` | Parámetros para filtrar y personalizar la respuesta.        |
 | Resultado      | Variant                                   | The retrieved messages associated with the chat completion. |
 
-The `list()` function retrieves messages associated with a specific chat completion ID. It throws an error if the `completionID` is empty. If the *parameters* argument is not an instance of `OpenAIChatCompletionsMessagesParameters`, it will create a new instance using the provided parameters.
+The `list()` function retrieves messages associated with a specific chat completion ID. Lanza un error si `completionID` está vacío. If the *parameters* argument is not an instance of `OpenAIChatCompletionsMessagesParameters`, it will create a new instance using the provided parameters.
 
 https://platform.openai.com/docs/api-reference/chat/getMessages

@@ -31,7 +31,9 @@ A continuación, aparece el Asistente de bienvenida:
 
 - Si desea descubrir y explorar 4D, haga clic en el enlace **prueba gratuita**. Sólo se le pedirá que se registre o que cree una cuenta 4D.
 
-- Si ya tiene una cuenta en 4D, haga clic en el enlace **Iniciar sesión** en la parte superior derecha del diálogo del Asistente de Bienvenida e introduzca los datos de su cuenta. Toda licencia 4D ya registrada se actualiza automáticamente (o se cargan paquetes de expansión adicionales) en su máquina.
+- Si ya tiene una cuenta en 4D, haga clic en el enlace **Iniciar sesión** en la parte superior derecha del diálogo del Asistente de Bienvenida e introduzca los datos de su cuenta.
+  - Any already activated 4D products are automatically updated (or additional expansion packs loaded) on your machine.
+  - If no product is activated on the machine but there is a development license associated with the 4D account, a dialog box appears, prompting you to install it directly.
 
 Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la acción que desea realizar:
 

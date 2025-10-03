@@ -22,7 +22,7 @@ https://platform.openai.com/docs/api-reference/moderations
 | *parámetros* | [OpenAIParameters](OpenAIParameters.md)             | Parámetros adicionales para la petición.                                                                                         |
 | Resultado    | [OpenAIModerationResult](OpenAIModerationResult.md) | El resultado de la moderación, que indica el daño potencial.                                                                     |
 
-Classifies whether the input is potentially harmful.
+Clasifica si la entrada es potencialmente dañina.
 
 https://platform.openai.com/docs/api-reference/moderations/create
 
