@@ -13,6 +13,12 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+:::info Compatibilité
+
+**Cette commande est dépréciée**.
+
+:::
+
 ## Description 
 
 <!--REF #_command_.Process aborted.Summary-->La commande **Process aborted** retourne **Vrai** si le process dans lequel elle est appelée est sur le point d’être interrompu de manière inopinée — c’est-à-dire sans être parvenu au terme “normal” de son exécution.<!-- END REF-->
