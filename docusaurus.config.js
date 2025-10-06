@@ -89,7 +89,7 @@ module.exports = {
           },
           versions: {
               '20-R10': {
-              label: '20 R10 BETA',
+              label: '20 R10',
               banner: 'none',
             },
               '20-R9': {
