@@ -149,9 +149,9 @@ El siguiente ejemplo muestra el efecto de la opción **Impresión tamaño variab
 ```
 
 * Con la opción Imprimir tamaño variable no **seleccionada**, tendrá el siguiente resultado:  
-![](../../assets/en/WritePro/pict2646292.EN.png)
+![](../../assets/en/WritePro/pict2646292.en.png)
 * Con la opción de Imprimir tamaño variable **seleccionada**, tendrá el siguiente resultado:  
-![](../../assets/en/WritePro/pict2646294.EN.png)  
+![](../../assets/en/WritePro/pict2646294.en.png)  
 *(fuente del texto de ejemplo: Wikipedia)*
 
 ### Impresión de documentos independientes 

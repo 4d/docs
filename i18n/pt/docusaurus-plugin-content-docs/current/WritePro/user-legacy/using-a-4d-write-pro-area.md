@@ -64,7 +64,7 @@ Esses [atributos](../commands-legacy/4d-write-pro-attributes.md) podem ser defin
 Usuários podem modificar atributos de fundo via o menu contextual como mostrado abaixo:
 
 ![](../../assets/en/WritePro/pict3514201.pt.png)
-![](../../assets/en/WritePro/pict3541581.EN.png)
+![](../../assets/en/WritePro/pict3541581.en.png)
 
 Como exemplo de adicionar uma imagem de tamanho inteiro como fundo, veja *How Do I* (HDI) demo [aqui](http://download.4d.com/Demos/4D%5Fv16%5FR5/HDI%5F4DWP%5FBackImagePaperBox.zip).
 
@@ -305,11 +305,11 @@ Pode estabelecer ou obter as propriedades abaixo e ações para colunas:
 
 Por exemplo:
 
-![](../../assets/en/WritePro/pict5562054.EN.png)
+![](../../assets/en/WritePro/pict5562054.en.png)
 
 Pode inserir uma quebra de seção continua e mudar o número de colunas a duas para a primeira seção:
 
-![](../../assets/en/WritePro/pict5562058.EN.png)
+![](../../assets/en/WritePro/pict5562058.en.png)
 
 ## Bookmarks
 
