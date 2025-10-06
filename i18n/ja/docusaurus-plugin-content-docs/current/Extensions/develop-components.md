@@ -1,6 +1,6 @@
 ---
 id: develop-components
-title: Developing Extensions
+title: 拡張機能の開発
 ---
 
 ## コンポーネント
