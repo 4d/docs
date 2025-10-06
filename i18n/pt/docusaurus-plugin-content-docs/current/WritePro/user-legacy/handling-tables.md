@@ -181,7 +181,7 @@ Paginação de tabela pode ser controlada por programação ou pelo usuário. A�
 
 Quando for inserida uma quebra de página ou uma quebra de coluna através da ação padrão ou do menu contextual, ela é adicionada antes dos conteúdos selecionados: a primeira fila da seleção é movida ao início da próxima página ou coluna. Por exemplo:
 
-![](../../assets/en/WritePro/pict3893246.EN.png) \===> ![](../../assets/en/WritePro/pict3893248.en.png)
+![](../../assets/en/WritePro/pict3893246.en.png) \===> ![](../../assets/en/WritePro/pict3893248.en.png)
 
 **Nota:** 
 

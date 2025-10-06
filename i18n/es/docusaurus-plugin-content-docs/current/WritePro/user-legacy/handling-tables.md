@@ -182,7 +182,7 @@ La paginación de la tabla se puede controlar por programación o por el usuario
 
 Cuando se inserta un salto de página o un salto de columna mediante una acción estándar o el menú contextual, se agrega antes del contenido seleccionado: la primera fila de la selección se mueve al principio de la siguiente página o columna. Por ejemplo:
 
-![](../../assets/en/WritePro/pict3893246.EN.png) \===> ![](../../assets/en/WritePro/pict3893248.en.png)
+![](../../assets/en/WritePro/pict3893246.en.png) \===> ![](../../assets/en/WritePro/pict3893248.en.png)
 
 **Notas:** 
 
