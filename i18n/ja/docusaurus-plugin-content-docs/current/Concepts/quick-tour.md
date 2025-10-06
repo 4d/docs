@@ -426,8 +426,8 @@ End for
 
 ## 表記規則
 
-The following conventions are used in the 4D language documentation:
+4D ランゲージドキュメントでは、次の表記が使われています:
 
 - 中カッコ `{ }` は、任意のパラメーターを示します。 たとえば、`.delete( { option : Integer } )` という表記の場合、関数を呼び出す際に *option* パラメーターを省略することができます。
 - `{ ; ...param }` という表記は、パラメーターの数に制限がないことを示します。 たとえば、`.concat( value : any { ;...valueN } ) : Collection` という表記の場合、データ型および数に制限なく関数に引数を渡すことができます。
-- the `any` keyword is used for parameters that can be of any type (number, text, boolean, date, time, object, collection...).
+- `any` キーワードは、あらゆる型(数値、テキスト、ブール、日付、時間、オブジェクト、コレクション、など)が可能な引数に対して使用されます。

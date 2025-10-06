@@ -1,13 +1,13 @@
 ---
 id: overview
-title: Extending 4D Applications
+title: Extension des applications 4D
 ---
 
-The 4D architecture is open and can be extended in different ways. If you need a feature that is not available natively in 4D, you can always integrate it into your application in a variety of ways, i.e.:
+The 4D architecture is open and can be extended in different ways. Si vous avez besoin d'une fonctionnalité qui n'est pas disponible de manière native dans 4D, vous pouvez toujours l'intégrer dans votre application de différentes manières :
 
-- [**System workers**](../API/SystemWorkerClass.md) allow the 4D code to call any external process (a shell command, PHP, any script, etc.) and monitor its execution.
-- [**SQL commands**](../commands/theme/SQL) allow you to connect and use various SQL data sources.
-- The [**built-in HTTP client**](../API/HTTPRequestClass.md) can request any HTTP server and process data.
-- [**Web Areas**](../FormObjects/webArea_overview.md) can give access to web pages or various HTML contents within your forms.
-- [**Components**](Concepts/components.md). Components are made of 4D code. 4D includes by default [a set of built-in 4D components](../Project/components.md#preinstalled-4d-components). You can also [develop your own 4D components](develop-components.md), or use third-party components. Many developers from the 4D community have shared 4D components (browse Github to have a list of public 4D components gathered with the [`4d-component`](https://github.com/topics/4d-component) topic).
-- [**Plug-ins**](../Concepts/plug-ins.md). Plug-ins can be built using any language. Les plugins font des choses que 4D ne fait pas nativement (par exemple, une technologie de plateforme spécifique), ou qui seraient très difficiles à écrire en utilisant uniquement 4D. Comme décrit dans [cette page](develop-plug-ins.md), vous pouvez développer vos propres plugins. De nombreuses fonctionnalités sont couvertes par les plug-ins 4D existants. De nombreuses fonctionnalités sont couvertes par les plug-ins 4D existants.
+- les [**System workers**](../API/SystemWorkerClass.md) permettent au code 4D d'appeler n'importe quel process externe (une commande shell, PHP, un script, etc.) et d'en contrôler l'exécution.
+- les [**commandes SQL**](../commands/theme/SQL) vous permettent de vous connecter à diverses sources de données SQL et de les utiliser .
+- Le [**client HTTP intégré**](../API/HTTPRequestClass.md) peut envoyer des requêtes à n'importe quel serveur HTTP et traiter les données.
+- les [**zones web**](../FormObjects/webArea_overview.md) peuvent donner accès à des pages web ou à divers contenus HTML à l'intérieur de vos formulaires.
+- les [**Composants**](Concepts/components.md). Les composants sont faits de code 4D. 4D includes by default [a set of built-in 4D components](../Project/components.md#preinstalled-4d-components). Vous pouvez également [développer vos propres composants 4D](develop-components.md), ou utiliser des composants tiers. De nombreux développeurs de la communauté 4D ont partagé des composants 4D (consultez Github pour obtenir une liste des composants 4D publics rassemblés dans le topic [`4d-component`](https://github.com/topics/4d-component)).
+- les [**Plug-ins**](../Concepts/plug-ins.md). Les plug-ins peuvent être créés dans n'importe quel langage. Les plugins font des choses que 4D ne fait pas nativement (par exemple, une technologie de plateforme spécifique), ou qui seraient très difficiles à écrire en utilisant uniquement 4D. Comme décrit dans [cette page](develop-plug-ins.md), vous pouvez développer vos propres plugins. De nombreuses fonctionnalités sont couvertes par les plug-ins 4D existants. Parcourez GitHub pour obtenir la liste des plugins 4D publics rassemblés sous le topic [`4d-plugin`](https://github.com/topics/4d-plugin).
