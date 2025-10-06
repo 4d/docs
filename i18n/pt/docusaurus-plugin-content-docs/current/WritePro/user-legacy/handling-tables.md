@@ -236,7 +236,7 @@ Um design da tabela baseado em uma fonte de dados que contém as linhas abaixo:
 
 Exemplo (*Mostrar* *modo referências*):
 
-![](../../assets/en/WritePro/pict6021229.en.png)
+![](../../assets/en/WritePro/pict7148443.en.png)
 
 Quando se calculam as fórmulas, a linha do modelo se duplica automaticamente segundo seja necessário para que coincida com todas as entidades ou elementos da coleção devolvidos pela fórmula da fonte de dados:
 
