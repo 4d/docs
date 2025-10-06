@@ -30,7 +30,7 @@ As propriedades de vista do documento estão diretamennte disponíveis na lista 
 
 Configurações de vista de documento são gerenciadas através de itens específicos no tema **Aparência** da lista de propriedades de objetos de formulário 4D Write Pro.:
 
-![](../../assets/en/WritePro/pict5941073.EN.png)
+![](../../assets/en/WritePro/pict5941073.en.png)
 
 * **Resolução**: Estabelece a resolução de tela para os conteúdos de área 4D Write Pro. Como padrão, é estabelecido em **72 dpi (Mac OS)**, que é a resolução padrão para formulários 4D em todas as plataformas. Estabelecer esta propriedade para Automático faz com que oa geração do documento seja diferente entre as plataformas Mac Os e Windows. Estabelecer um valor de dpi específico faz com que a geração do documento seja a mesma nas plataformas Mac OS e Windows.
 * **Zoom**: Estabelece a porcentagem do zoom para exibir os conteúdos da área 4D Write Pro. O normal é 100%.
@@ -44,9 +44,9 @@ Configurações de vista de documento são gerenciadas através de itens especí
 * **Mostrar page frame**: Exibe ou esconde a borda da página quando o modo de vista for estabelecido como "Página". O normal é escondido.
 * **Mostrar referências**: Exibe todas as expressões 4D inseridas no documento como referências. Quando esta opção não estiver marcada (padrão) as expressões 4D são exibidas como valores. Quando inserir um campo ou expressão 4D, 4D Write Pro computa e exibe o valor atual. Se quiser saber que campos ou expressões estão sendo exibidas, marque esta opção. As referências do campo ou expressão vão aparecer em seu documento, com um fundo cinza.  
 Por exemplo, se inserir a data atual junto com o formato, a data é exibida:  
-![](../../assets/en/WritePro/pict3033006.EN.png)  
+![](../../assets/en/WritePro/pict3033006.en.png)  
 Se marcar a opção **Mostrar referências**, a referência é exibida:  
-![](../../assets/en/WritePro/pict3033008.EN.png)  
+![](../../assets/en/WritePro/pict3033008.en.png)  
 **Nota:** expressões 4D podem ser inseridas usando o comando [ST INSERT EXPRESSION](../../commands/st-insert-expression).
 * **Mostrar cabeçalhos e rodapés**: Exibe ou esconde os cabeçalhos e rodapés quando o modo de página estiver estabelecido como "Página" (exibido como padrão). Para saber mais, veja .
 * ****Mostrar fundo**: Exibe/esconde tanto as imagens de fundo quando a cor de fundo (padrão é exibido)

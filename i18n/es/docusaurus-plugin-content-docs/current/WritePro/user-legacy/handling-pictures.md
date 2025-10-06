@@ -15,7 +15,7 @@ Agregar imágenes a un documento 4D Write Pro puede lograrse de múltiples maner
 
 La forma en que agrega una imagen determina la capa en la que está colocada, como se ilustra en el siguiente diagrama:
 
-![](../../assets/en/WritePro/pict3626363.EN.png)
+![](../../assets/en/WritePro/pict3626363.en.png)
 
 ## Imágenes de fondo 
 
@@ -23,7 +23,7 @@ Las imágenes se pueden configurar como fondo de los documentos 4D Write Pro y l
 
 Aquí hay un ejemplo que muestra dos maneras diferentes en que se puede usar una imagen como fondo de un documento:
 
-> ![](../../assets/en/WritePro/pict3541581.EN.png) 
+> ![](../../assets/en/WritePro/pict3541581.en.png) 
 
 Las imágenes de fondo pueden definirse por programación o mediante el menú contextual. Para más información, consulte la sección *Fondo* en el artículo *Utilizar un área 4D Write Pro*.
 
@@ -79,7 +79,7 @@ Puede insertar expresiones 4D que devuelvan imágenes en sus áreas 4D Write Pro
 
 Puede ver la referencia de una expresión en la punta de la imagen (\*):
 
-![](../../assets/en/WritePro/pict3513503.EN.png)
+![](../../assets/en/WritePro/pict3513503.en.png)
 
 (\*)Como no hay texto asociado con una imagen anclada, su referencia de expresión no se puede mostrar.
 
@@ -128,7 +128,7 @@ WP INSERT FORMULA(wpRange;Formula($vpict);wk prepend)
 
 Si una imagen está vacía (por ejemplo, no se ha podido cargar, o es el resultado de una expresión que no se ha podido calcular, o utiliza un formato de imagen no soportado), por defecto 4D Write Pro muestra un rectángulo de marco negro:
 
-![](../../assets/en/WritePro/pict3513505.EN.png)
+![](../../assets/en/WritePro/pict3513505.en.png)
 
 Puede eliminar estos rectángulos negros de la vista actual utilizando:
 

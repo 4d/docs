@@ -64,7 +64,7 @@ Estos [atributos](../commands-legacy/4d-write-pro-attributes.md) se pueden defin
 Los usuarios pueden modificar atributos de fondo a través del menú contextual como se muestra a continuación:
 
 ![](../../assets/en/WritePro/pict3514201.es.png)  
-![](../../assets/en/WritePro/pict3541581.EN.png)
+![](../../assets/en/WritePro/pict3541581.en.png)
 
 Para ver un ejemplo de cómo añadir una imagen de tamaño completo como fondo, vea la demostración de cómo hacerlo [aquí](http://download.4d.com/Demos/4D%5Fv16%5FR5/HDI%5F4DWP%5FBackImagePaperBox.zip).
 
@@ -202,11 +202,11 @@ Puede cambiar el estado de visualización de las reglas por medio de acciones es
 
 Puede modificar márgenes izquierda y derecha, indentaciones y posiciones de tabulación haciendo clic y arrastrando los símbolos correspondientes en la regla horizontal:
 
-![](../../assets/en/WritePro/pict5761667.EN.png)
+![](../../assets/en/WritePro/pict5761667.en.png)
 
 Cuando coloca el ratón sobre uno de estos símbolos, el cursor cambia para indicar que puede moverse y aparece una línea de guía vertical mientras lo arrastra:  
   
-![](../../assets/en/WritePro/pict5761669.EN.png)
+![](../../assets/en/WritePro/pict5761669.en.png)
 
 Cuando se seleccionan varios párrafos, arrastrar márgenes o símbolos de indentación aplica estos márgenes o indentaciones a todos los párrafos seleccionados. Manteniendo presionada la tecla Mayús mientras arrastra estos símbolos mantiene los intervalos existentes entre indentaciones o márgenes en los párrafos seleccionados.
 
@@ -214,7 +214,7 @@ Cuando se seleccionan varios párrafos, arrastrar márgenes o símbolos de inden
 
 Puede modificar los márgenes superior e inferior con la regla vertical. Cuando mueve el ratón sobre el límite del margen, el cursor cambia para indicar que se puede mover, y aparece una línea de guía horizontal mientras lo arrastra:  
   
-![](../../assets/en/WritePro/pict5761671.EN.png) 
+![](../../assets/en/WritePro/pict5761671.en.png) 
 
 Esta acción se puede utilizar para modificar el espacio entre la parte superior e inferior de la página y el cuerpo y el encabezado y pie de página de un documento. 
 
@@ -222,7 +222,7 @@ Esta acción se puede utilizar para modificar el espacio entre la parte superior
 
 Puede utilizar el menú contextual de la regla para crear, modificar o eliminar tabulaciones:  
   
-![](../../assets/en/WritePro/pict5761677.EN.png)  
+![](../../assets/en/WritePro/pict5761677.en.png)  
 
 Para crear una tabulación, simplemente haga clic directamente en la regla y elija su tipo en el menú contextual. Un solo clic izquierdo crea automáticamente una tabulación izquierda predeterminada. También puede hacer clic con el botón derecho en las tabulaciones existentes para modificar su tipo utilizando el menú contextual.
 
@@ -247,7 +247,7 @@ Los caracteres que preceden a las tabulaciones (caracteres iniciales) se pueden 
 
 Los caracteres iniciales siempre aparecen antes de la tabulación y siguen la dirección del texto (de izquierda a derecha o de derecha a izquierda). Se pueden definir por programación con los comandos [WP SET ATTRIBUTES](../commands/wp-set-attributes), [WP GET ATTRIBUTES](../commands/wp-get-attributes) y [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) utilizando `wk leading` con los selectores `wk tab default` o `wk tabs`, o vía el menú contextual de regla horizontal (como se muestra a continuación).
 
-![](../../assets/en/WritePro/pict5761675.EN.png)
+![](../../assets/en/WritePro/pict5761675.en.png)
 
 Cuando se selecciona **Otro...**, se muestra un diálogo donde se puede definir un carácter principal personalizado.
 
@@ -255,7 +255,7 @@ Cuando se selecciona **Otro...**, se muestra un diálogo donde se puede definir 
 
 Cuando se definen dos o más columnas para el documento o la sección, la regla horizontal muestra un área específica para cada columna:
 
-![](../../assets/en/WritePro/pict5761673.EN.png)
+![](../../assets/en/WritePro/pict5761673.en.png)
 
 **Nota:** la funcionalidad de múltiples columnas no está disponible en el modo de vista **Embebido**.
 
@@ -267,7 +267,7 @@ Un evento de formulario [`On After Edit`](../../Events/onAfterEdit.md) se dispar
 
 4D Write Pro le permite administrar columnas en sus documentos. Las columnas están encadenadas desde la columna de la izquierda hasta la columna de la derecha. En otras palabras, al ingresar texto, el flujo de texto comenzará a llenar la columna izquierda y continuará con la columna directamente hacia la derecha hasta que llegue al final de la página. Una vez que se llega al final de la página, el flujo de texto pasa por la siguiente página. Para poder equilibrar la configuración de la página, 4D Write Pro le permite insertar saltos de columna.
 
-![](../../assets/en/WritePro/pict3752166.EN.png)
+![](../../assets/en/WritePro/pict3752166.en.png)
 
 Las columnas se pueden definir a nivel de documento (se muestran en el documento completo) y/o en el nivel de sección (cada sección puede tener su propia configuración de columna).
 
@@ -286,7 +286,7 @@ Puede definir u obtener las siguientes propiedades y acciones para las columnas:
 | Número de columnas                           | Puede definir hasta 20 columnas para el documento/sección                                                                                                                                                                                                                            | wk column count                                                             | *columnCount*                                           |
 | Espacio entre columnas                       | Espacio entre columnas en pts, pulgadas o cm. Tenga en cuenta que todas las columnas tendrán el mismo tamaño. Cada ancho de columna se calcula automáticamente con 4D Write Pro según el número de columnas, el ancho de página y el espaciado                                       | wk column spacing                                                           | *columnSpacing*                                         |
 | Ancho de columna                             | (atributo de solo lectura) Ancho actual para cada columna, es decir, ancho calculado                                                                                                                                                                                                 | wk column width                                                             | \-                                                      |
-| Estilo, color y ancho de la regla de columna | Puede agregar un separador vertical (una línea decorativa) entre columnas. Estas opciones le permiten diseñar el estilo, el color y el ancho del separador. ![](../../assets/en/WritePro/pict3752176.EN.png)Para eliminar el separador vertical, seleccione **Ninguno** como estilo. | wk column rule style, wk column rule color, wk column rule width            | *columnRuleStyle*, *columnRuleColor*, *columnRuleWidth* |
+| Estilo, color y ancho de la regla de columna | Puede agregar un separador vertical (una línea decorativa) entre columnas. Estas opciones le permiten diseñar el estilo, el color y el ancho del separador. ![](../../assets/en/WritePro/pict3752176.en.png)Para eliminar el separador vertical, seleccione **Ninguno** como estilo. | wk column rule style, wk column rule color, wk column rule width            | *columnRuleStyle*, *columnRuleColor*, *columnRuleWidth* |
 | Insertar salto                               | Insertar salto de columna                                                                                                                                                                                                                                                            | wk column break, ver también [WP INSERT BREAK](../commands/wp-insert-break) | *insertColumnBreak*                                     |
 | Menú Columnas                                | Crear un submenú Columna                                                                                                                                                                                                                                                             | \-                                                                          | *columns*                                               |
 
@@ -296,11 +296,11 @@ Puede definir u obtener las siguientes propiedades y acciones para las columnas:
 
 Por ejemplo:
 
-![](../../assets/en/WritePro/pict5562054.EN.png)
+![](../../assets/en/WritePro/pict5562054.en.png)
 
 Puede insertar un salto de sección continuo y cambiar el número de columnas a dos para la primera sección:
 
-![](../../assets/en/WritePro/pict5562058.EN.png)
+![](../../assets/en/WritePro/pict5562058.en.png)
 
 ## Marcadores
 

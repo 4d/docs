@@ -15,7 +15,7 @@ Agregar imagenes a um documento 4D Write Pro pode ser feita de múltiplas maneir
 
 A forma em que agrega uma imagem determina a capa na qual está colocada, como se ilustra no diagrama abaixo:
 
-![](../../assets/en/WritePro/pict3626363.EN.png)
+![](../../assets/en/WritePro/pict3626363.en.png)
 
 ## Imagens de fundo 
 
@@ -23,7 +23,7 @@ As imagens podem ser configuradas como fundo dos documentos 4D Write Pro e os el
 
 Aqui há um exemplo que mostra duas maneiras diferentes en que se pode usar uma imagem como fundo de um documento:
 
-> ![](../../assets/en/WritePro/pict3541581.EN.png) 
+> ![](../../assets/en/WritePro/pict3541581.en.png) 
 
 As imagens de fundo podem ser definidas por programação ou mediante o menu contextual. Para saber mais, consulte a seção *Fundo* no artigo *Utilizar uma área 4D Write Pro*.
 
@@ -79,7 +79,7 @@ Pode inserir expressões 4D que devolvam imagens em suas áreas 4D Write Pro. As
 
 Pode ver a referência de uma expressão na ponta da imagem (\*):
 
-![](../../assets/en/WritePro/pict3513503.EN.png)
+![](../../assets/en/WritePro/pict3513503.en.png)
 
 (\*)Como não há texto associado com uma imagem ancorada, sua referência de expressão não pode ser mostrada.
 

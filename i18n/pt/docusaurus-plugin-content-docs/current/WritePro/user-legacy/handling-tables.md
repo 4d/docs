@@ -7,7 +7,7 @@ slug: /WritePro/tables
 
 Os documentos 4D Write Pro podem conter tabelas. As tabelas 4D Write Pro sãoi criadas e definidas por programação, mas seu conteúdo pode ser modificado e manejado pelo usuário. Vários atributos de tabelas 4D Write Pro são editáveis incluindo a altura da fila, o alinhamento, as margens, o estilo de texto, a cor ou as bordas.
 
-![](../../assets/en/WritePro/pict3307937.EN.png)
+![](../../assets/en/WritePro/pict3307937.en.png)
 
 **Nota:** Desde o 4D Write pro, as tabelas podem ser preenchidas por programação. Elas podem conter um grande número de colunas e linhas. Lembre-se que tabelas muito grandes podem impactar o rendimento, especialmente se forem exibidas na tela. Veja este [artigo](https://blog.4d.com/4d-write-pro-tables-without-limit) para saber mais.
 
@@ -16,7 +16,7 @@ Os documentos 4D Write Pro podem conter tabelas. As tabelas 4D Write Pro sãoi c
 As tabelas 4D Write Pro são criadas mediante uma chamada ao comando [WP Table append row](../commands/wp-table-append-row). Depois pode adicionar filas utilizando o comando .
 
 **Nota:** um usuário pode criar uma tabela ao copiar e colar um seleção de células:  
-![](../../assets/en/WritePro/pict3307941.EN.png)
+![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## Editar tabelas 
 
@@ -68,11 +68,11 @@ Se apertar a tecla **Shift** enquanto redimensiona uma coluna, o tamanho da colu
 
 Com 4D Write Pro, pode dividir e combinar células em uma tabela. Fusionar células é combinar duas ou mais células adjacentes de uma tabela situadas na mesma linha ou coluna em uma única célula. Dividir células é tomar células já fusionadas e separá-las em múltiplas células adjacentes na mesma linha ou coluna. As células podem ser fusiconadas usando o comando [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) ou a ação paddrão **cell/merge**, e ser divididas utilizando o comando [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) ou a ação padrão **cell/split**.
 
-![](../../assets/en/WritePro/pict6421031.EN.png)
+![](../../assets/en/WritePro/pict6421031.en.png)
 
 As células da tabela podem ser fusionadas: 
 
-![](../../assets/en/WritePro/pict6441966.EN.png)
+![](../../assets/en/WritePro/pict6441966.en.png)
 
 **Exemplo de fusão de** células **utilizando a linguagem:**
 
@@ -89,10 +89,10 @@ As células da tabela podem ser fusionadas:
 Os dados existentes das células originais são concatenados na célula fusionada resultante.
 
 antes  
-![](../../assets/en/WritePro/pict6421340.EN.png)
+![](../../assets/en/WritePro/pict6421340.en.png)
 
 depois  
-![](../../assets/en/WritePro/pict6421342.EN.png)
+![](../../assets/en/WritePro/pict6421342.en.png)
 
 **Exemplo de divisão de** células **utilizando a linguagem:**
 
@@ -109,10 +109,10 @@ depois
 Os dados da célula já fusionada se mantém todos na primera células resultante (acima à esquerda) depois da división, as outras células resultantes da divisão permanecem vazías.
 
 antes  
-![](../../assets/en/WritePro/pict6421342.EN.png)
+![](../../assets/en/WritePro/pict6421342.en.png)
 
 depois  
-![](../../assets/en/WritePro/pict6421344.EN.png)
+![](../../assets/en/WritePro/pict6421344.en.png)
 
 **Importante**: 
 
@@ -136,10 +136,10 @@ Exemplo:
 ```
 
 antes  
-![](../../assets/en/WritePro/pict6421342.EN.png)
+![](../../assets/en/WritePro/pict6421342.en.png)
 
 depois  
-![](../../assets/en/WritePro/pict6421356.EN.png)
+![](../../assets/en/WritePro/pict6421356.en.png)
 
 neste exemplo também pode passar $cell2 ou $cell3 ao invés de $cell1 como:  
 
@@ -181,7 +181,7 @@ Paginação de tabela pode ser controlada por programação ou pelo usuário. A�
 
 Quando for inserida uma quebra de página ou uma quebra de coluna através da ação padrão ou do menu contextual, ela é adicionada antes dos conteúdos selecionados: a primeira fila da seleção é movida ao início da próxima página ou coluna. Por exemplo:
 
-![](../../assets/en/WritePro/pict3893246.EN.png) \===> ![](../../assets/en/WritePro/pict3893248.EN.png)
+![](../../assets/en/WritePro/pict3893246.EN.png) \===> ![](../../assets/en/WritePro/pict3893248.en.png)
 
 **Nota:** 
 
@@ -193,7 +193,7 @@ Os saltos dentro das linhas não estão permitidos quando estiver ativados as *L
 
 4D Write Pro lhe permite definir até cinco linhas de cabeçalho por tabela. As linhas de cabeçalho selecionadas se repetirão em cada coluna ou página quando ocorrer uma quebra de coluna ou de página.
 
-![](../../assets/en/WritePro/pict5859437.EN.png)
+![](../../assets/en/WritePro/pict5859437.en.png)
 
 Os cabeçalhos da tabela são as primeiras linhas da tabela. Para definir as linhas de cabeçalho pode
 
@@ -236,11 +236,11 @@ Um design da tabela baseado em uma fonte de dados que contém as linhas abaixo:
 
 Exemplo (*Mostrar* *modo referências*):
 
-![](../../assets/en/WritePro/pict6021229.EN.png)
+![](../../assets/en/WritePro/pict6021229.en.png)
 
 Quando se calculam as fórmulas, a linha do modelo se duplica automaticamente segundo seja necessário para que coincida com todas as entidades ou elementos da coleção devolvidos pela fórmula da fonte de dados:
 
-![](../../assets/en/WritePro/pict5907013.EN.png)
+![](../../assets/en/WritePro/pict5907013.en.png)
 
 Em qualquer caso, a intrução abaixo devolve o número real de linhas:
 
@@ -252,7 +252,7 @@ Em qualquer caso, a intrução abaixo devolve o número real de linhas:
 
 As tabelas baseadas em fontes de dados são compatíveis com linhas de arraste inferiores (carry over) que são mostradas automaticamente na parte inferior de cada página ou coluna quando a tabela for dividida em mais de uma página ou coluna. Uma linha de arraste pode mostrar informação adicional baseada nos elementos mostrados ou impressos anteriormente, graças à expressão **This.previousItems** (ver *Expressões com This*). Esta função permite, por exemplo, adicionar linhas de subtotal.
 
-![](../../assets/en/WritePro/pict6022144.EN.png)
+![](../../assets/en/WritePro/pict6022144.en.png)
 
 As linhas de arraste são mostradas:
 
@@ -318,21 +318,21 @@ Em outros contextos, essas expresões retornam *undefined*.
 
 Quando preencher uma tabela desde uma fonte de dados, as filas são criadas automaticamente quando calcular as referências. As linhas podem ser inseridas ou eliminadas, editar o conteúdo das células, mudar o estilo, etc:
 
-![](../../assets/en/WritePro/pict5907021.EN.png)  
+![](../../assets/en/WritePro/pict5907021.en.png)  
   
 Entretanto, lembre que se a fonte de dados da tabela voltar a ser calculada, qualquer modificação realizada nas linhas calculadas (exceto na primeira linha, ver a seguir) é perdida. Por outro lado, como a primeira linha é a linha da planilha, qualquer modificação realizada nesta linha se propagará a todas as linhas se voltar a calcular a fonte de dados da tabela. O mesmo é válido para quebra de linhas, qualquer modificação feita em quebras de linhas é perdida, exceto para quebras de linha template (que estao localizadas no final ou começo da tabela).
 
 Por exemplo
 
-![](../../assets/en/WritePro/pict5907023.EN.png)
+![](../../assets/en/WritePro/pict5907023.en.png)
 
 Depois de voltar a calcular as expressões:
 
-![](../../assets/en/WritePro/pict5907026.EN.png)
+![](../../assets/en/WritePro/pict5907026.en.png)
 
 Quando o cursor se inserir em uma célula de uma tabela preenchida com uma fonte de dados, aparece um ícone no canto esquerdo junto com um conselho que mostra a informação:
 
-![](../../assets/en/WritePro/pict5907030.EN.png)
+![](../../assets/en/WritePro/pict5907030.en.png)
 
 Quando as fórmulas são mostradas como referências ou quando se guarda o documento, só são mostradas/salvas a primeira fila como planilha (se as fórmulas não estiverem congeladas).
 
