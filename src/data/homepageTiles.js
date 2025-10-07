@@ -37,7 +37,7 @@ title: (
         <Link to="GettingStarted/installation" >
           <Translate>Installation</Translate>
         </Link>
-        <Link to="Project/overview" >
+        <Link to="GettingStarted/overview" >
           <Translate>4D at a glance</Translate>
         </Link>
         <Link to="Notes/updates" ><i class="fa-solid fa-pen-to-square" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
