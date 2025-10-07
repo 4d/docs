@@ -1187,7 +1187,7 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 
 - フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 - 処理中のエンティティはフォーミュラ内において `This` で参照されます。
-- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with `ON ERR CALL`.
+- `Formula` オブジェクトが**null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です")が生成されます。このエラーは`ON ERR CALL` で実装されたメソッドを使用して割り込みが可能です。
 
 > セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 *querySettings* パラメーターの説明を参照ください。
 
