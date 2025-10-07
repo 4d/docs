@@ -142,7 +142,7 @@ Activa la inserción automática de () y de llaves de cierre mientras se escribe
 
 - **cierre }, ), ], o "**: caracter que se añade al escribir respectivamente una apertura {, (, ], o ". Esta función permite insertar pares de símbolos coincidentes en el punto de inserción o alrededor de un texto seleccionado. Por ejemplo, si resalta una cadena de caracteres y escribe un simple caracter ", toda la cadena seleccionada quedará encerrada en "":
 
-![](../assets/en/Preferences/optionsClosing.png)\
+![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
 
 #### Correspondencia \[]\(){}
@@ -151,7 +151,7 @@ Define la señalización gráfica de las llaves correspondientes en el código. 
 Las siguientes opciones están disponibles:
 
 - **Ninguno**: sin señales
-- **Rectángulo** (por defecto): llaves rodeadas por una línea negra\
+- **Rectángulo** (por defecto): llaves rodeadas por una línea negra  
   ![](../assets/en/Preferences/optionsRectangle.png)
 - **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 - **Negrita**: las llaves aparecen en negrita.

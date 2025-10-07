@@ -1,6 +1,7 @@
 ---
 id: Data_Security_theme
 title: Data Security
+sidebar_label: Data Security
 slug: /commands/theme/Data-Security
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Web_Server_theme
 title: Web サーバー
+sidebar_label: Web サーバー
 slug: /commands/theme/Web-Server
 ---
 

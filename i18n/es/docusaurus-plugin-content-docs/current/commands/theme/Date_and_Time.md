@@ -1,6 +1,7 @@
 ---
 id: Date_and_Time_theme
 title: Fechas y horas
+sidebar_label: Fechas y horas
 slug: /commands/theme/Date-and-Time
 ---
 

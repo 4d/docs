@@ -1,6 +1,7 @@
 ---
 id: Printing_theme
 title: Impressions
+sidebar_label: Impressions
 slug: /commands/theme/Printing
 ---
 

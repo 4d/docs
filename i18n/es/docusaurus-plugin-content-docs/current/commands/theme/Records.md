@@ -1,6 +1,7 @@
 ---
 id: Records_theme
 title: Registros
+sidebar_label: Registros
 slug: /commands/theme/Records
 ---
 

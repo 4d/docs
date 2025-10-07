@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Préférences
+title: Application Preferences
 ---
 
 Les préférences utilisateur spécifient divers paramètres associés à votre environnement de travail, tels que les options par défaut, les thèmes d'affichage, les fonctionnalités de l'éditeur de code, les raccourcis, etc. Elles sont appliquées à tous les projets ouverts avec votre application 4D ou 4D Server.

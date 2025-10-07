@@ -1,6 +1,7 @@
 ---
 id: Backup_theme
 title: Copia de seguridad
+sidebar_label: Copia de seguridad
 slug: /commands/theme/Backup
 ---
 

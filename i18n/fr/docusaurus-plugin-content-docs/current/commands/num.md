@@ -47,7 +47,7 @@ Il existe trois caractères réservés que **Num** traite de manière particuli�
 
 - Le séparateur décimal est interprété en tant que tel et doit être inclus dans la chaîne de caractères numériques. Par défaut, la commande utilise le séparateur décimal défini dans le système d’exploitation. Vous pouvez modifier ce caractère à l'aide du paramètre *separator* (voir ci-dessous).
 - Le tiret définit un nombre ou un exposant négatif (signe moins). Le tiret doit être placé devant tout caractère numérique négatif ou derrière le "e" pour un exposant. Hormis le cas du caractère "e", si le tiret est inclus dans une chaîne numérique, la partie de la chaîne se trouvant après le tiret est ignorée. Par exemple, `Num("123-456")` renvoie 123, mais `Num("-9")` renvoie -9.
-- Le e ou E désigne tout caractère numérique se trouvant à sa droite comme étant la puissance d'un exposant. Le "e" doit être inclus dans une chaîne numérique. Ainsi, `Num("123e-2")` renvoie 1.23.\
+- Le e ou E désigne tout caractère numérique se trouvant à sa droite comme étant la puissance d'un exposant. Le "e" doit être inclus dans une chaîne numérique. Ainsi, `Num("123e-2")` renvoie 1.23.  
   A noter que dans le cas où la chaîne comporte plus d'un caractère "e", la conversion pourra donner des résultats différents sous macOS et sous Windows.
 
 #### Paramètre *séparator*
@@ -142,8 +142,8 @@ $result:=Num("123.20"; 10) // 123 (spécifier base 10 explicitement)
 
 ## Voir également
 
-[Bool](../commands-legacy/bool.md)\
-[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)\
+[Bool](../commands-legacy/bool.md)  
+[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)  
 [String](./string.md)
 
 ## Propriétés

@@ -78,7 +78,7 @@ displayed_sidebar: docs
 ## 参照
 
 [ON ERR CALL](../commands-legacy/on-err-call.md)
-[throw](../commands-legacy/throw.md)\
+[throw](../commands-legacy/throw.md)  
 [Error handling](../Concepts/error-handling.md)
 
 ## プロパティ

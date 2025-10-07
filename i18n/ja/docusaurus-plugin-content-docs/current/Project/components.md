@@ -1,15 +1,17 @@
 ---
 id: components
-title: コンポーネント
+title: Dependencies
 ---
 
-4D のコンポーネントとは、プロジェクトに追加可能な、1つ以上の機能を持つ 4Dコードや 4Dフォームの一式です。 たとえば、[4D SVG](https://github.com/4d/4D-SVG)コンポーネント は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
+4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
 
 独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\\\\&type=Repositories) ダウンロードすることもできます。
 
-4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
+Once installed in your 4D environment, extensions are handled as **dependencies** with specific properties.
 
 ## インタープリターとコンパイル済みコンポーネント
+
+4D で開発する際、コンポーネントファイルはコンピューター上または Githubリポジトリ上に、透過的に保存することができます。
 
 コンポーネントは、インタープリターまたは [コンパイル済み](../Desktop/building.md) のものが使えます。
 
@@ -31,7 +33,7 @@ title: コンポーネント
 
 :::
 
-## コンポーネントの読み込み
+## Component Locations
 
 :::note
 
@@ -465,6 +467,16 @@ When you hover over a secondary dependency, a tooltip displays the parent depend
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
+:::note
+
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the combo box, so that you can easily select and install these features in your environment:
+
+![dependency-default-git](../assets/en/Project/dependency-default.png)
+
+Components already installed are not listed.
+
+:::
+
 依存関係の GitHubリポジトリのパスを入力します。 **リポジトリURL** または **GitHubアカウント名/リポジトリ名 の文字列** が使えます。例:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
@@ -493,7 +505,7 @@ The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjs
 - **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
 - **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
 - **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **4Dのバージョンに追随する**: 実行中の4D バージョンと互換性のある最新のコンポーネントリリースをダウンロードします。 この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。
+- **4Dのバージョンに追随する**: 実行中の4D バージョンと互換性のある最新のコンポーネントリリースをダウンロードします。 この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。 This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 
 The current GitHub dependency version is displayed on the right side of the dependency item:
 
@@ -501,7 +513,7 @@ The current GitHub dependency version is displayed on the right side of the depe
 
 #### Modifying the GitHub dependency version range
 
-You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
 
 Modifying the version range is useful for example if you use the automatic update feature and want to lock a dependency to a specific version number.
 

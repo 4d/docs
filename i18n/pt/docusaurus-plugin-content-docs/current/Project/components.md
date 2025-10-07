@@ -1,15 +1,17 @@
 ---
 id: components
-title: Componentes
+title: Dependencies
 ---
 
-Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. Por exemplo, o componente [4D SVG](https://github.com/4d/4D-SVG) adiciona comandos avançados e um mecanismo de renderização integrado que pode ser usado para exibir arquivos SVG.
+A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você pode fornecer funcionalidades adicionais aos seus projetos 4D instalando [**componentes**](Concepts/components.md) e [**plug-ins**](Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
 
 Você pode [desenvolver](../Extensions/develop-components.md) e [construir](../Desktop/building.md) seus próprios componentes 4D, ou baixar componentes públicos compartilhados pela comunidade 4D que [podem ser encontrados no GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
-Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma transparente no seu computador ou em um repositório do Github.
+Once installed in your 4D environment, extensions are handled as **dependencies** with specific properties.
 
 ## Componentes interpretados e compilados
+
+Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma transparente no seu computador ou em um repositório do Github.
 
 Componentes podem ser interpretados ou [compilados](../Desktop/building.md).
 
@@ -31,7 +33,7 @@ A arquitetura da pasta "Contents" é recomendada para componentes, se você dese
 
 :::
 
-## Carregando componentes
+## Component Locations
 
 :::note
 
@@ -465,6 +467,16 @@ Para adicionar uma [dependência GitHub](#components-stored-on-github), clique n
 
 ![dependency-add-git](../assets/en/Project/dependency-add-git.png)
 
+:::note
+
+By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the combo box, so that you can easily select and install these features in your environment:
+
+![dependency-default-git](../assets/en/Project/dependency-default.png)
+
+Components already installed are not listed.
+
+:::
+
 Insira o caminho do repositório do GitHub da dependência. Pode ser uma **URL do repositório** ou uma **corda da conta do Github/nome do repositório**, por exemplo:
 
 ![dependency-add-git-2](../assets/en/Project/dependency-add-git-2.png)
@@ -493,7 +505,7 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 - **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
 - **Até a próxima versão minor**: da mesma forma, restringe as atualizações para a próxima versão minor.
 - **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
-- **Siga a versão 4D**: Faça o download da versão mais recente do componente que é compatível com a versão 4D em execução. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags).
+- **Siga a versão 4D**: Faça o download da versão mais recente do componente que é compatível com a versão 4D em execução. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags). This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 
 A versão atual da dependência do GitHub é exibida no lado direito do item de dependência:
 
@@ -501,7 +513,7 @@ A versão atual da dependência do GitHub é exibida no lado direito do item de 
 
 #### Modificar o intervalo de versões de dependência do GitHub
 
-Você pode modificar a [configuração da versão](#defining-a-github-dependency-version-range) para uma dependência listada no GitHub: selecione a dependência para modificar e selecione **Modificar a dependência. .** do menu contextual. Na caixa de diálogo "Modificar a dependência", edite o menu da Regra de dependência e clique em **Aplicar**.
+You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
 
 Modificar o intervalo de versão é útil, por exemplo, se você usar o recurso de atualização automática e deseja bloquear a dependência de um número de versão específico.
 

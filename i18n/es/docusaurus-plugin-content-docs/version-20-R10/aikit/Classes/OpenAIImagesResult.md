@@ -11,10 +11,10 @@ title: OpenAIImagesResult
 
 ## Propiedades calculadas
 
-| Propiedad | Tipo                                       | Descripción                                                        |
-| --------- | ------------------------------------------ | ------------------------------------------------------------------ |
-| `images`  | Colección de [OpenAIImage](OpenAIImage.md) | Devuelve una colección de objetos OpenAIImage.     |
-| `imagen`  | [OpenAIImage](OpenAIImage.md)              | Returns the first OpenAIImage from the collection. |
+| Propiedad | Tipo                                       | Descripción                                                      |
+| --------- | ------------------------------------------ | ---------------------------------------------------------------- |
+| `images`  | Colección de [OpenAIImage](OpenAIImage.md) | Devuelve una colección de objetos OpenAIImage.   |
+| `imagen`  | [OpenAIImage](OpenAIImage.md)              | Devuelve la primera OpenAIImage de la colección. |
 
 ## Funciones
 
@@ -26,7 +26,7 @@ title: OpenAIImagesResult
 | ---------- | ------------------------- | -------------------------------------------------------------------------------- |
 | *folder*   | 4D.Folder | La carpeta donde se guardarán las imágenes.                      |
 | *prefix*   | Text                      | El prefijo para los nombres de los archivos de imagen guardados. |
-| Resultado  | Boolean                   | Returns `True` if the images are successfully saved.             |
+| Resultado  | Boolean                   | Devuelve `True` si las imágenes se han guardado correctamente.   |
 
 Guarda las imágenes en la carpeta de disco especificada.
 

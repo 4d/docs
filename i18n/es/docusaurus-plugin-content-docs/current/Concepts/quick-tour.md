@@ -421,3 +421,11 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `\r`) se inserta en una sentencia para obtener un diálogo:
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
+
+## Convenciones de escritura
+
+The following conventions are used in the 4D language documentation:
+
+- los caracteres{ }`(llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\` significa que el parámetro *option* puede omitirse al llamar a la función.
+- la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
+- the `any` keyword is used for parameters that can be of any type (number, text, boolean, date, time, object, collection...).

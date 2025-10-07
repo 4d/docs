@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->La commande **String** renvoie sous forme de chaîne alphanumérique l'expression numérique, date, heure, chaîne ou booléenne que vous avez passée dans le paramètre *expression*.<!-- END REF-->
 
-If you do not pass any other parameter, the string is returned with the appropriate default format. Si vous passez le paramètre *format*, vous pouvez définir suivant vos besoins le formatage de la chaîne retournée.
+Si vous ne passez pas d'autre paramètre, la chaîne est renvoyée avec le format par défaut approprié. Si vous passez le paramètre *format*, vous pouvez définir suivant vos besoins le formatage de la chaîne retournée.
 
 Le paramètre optionnel *addTime* permet d'ajouter une heure à une date dans un format combiné. Il est utilisable uniquement lorsque le paramètre *expression* est une date (voir ci-dessous).
 
@@ -90,7 +90,7 @@ Si vous passez 0 dans *base*, la commande détermine la base en fonction de la v
 :::info
 
 - Cette syntaxe suit strictement la [spécification EcmaScript de `toString` concernant la gestion du radix](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring).
-- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. For example, if the specified number value is not a number, the "NaN" string is returned.
+- L'utilisation de cette syntaxe avec *base*=10 ne donnera pas exactement les mêmes résultats que l'utilisation de la syntaxe sans le paramètre *base*. Par exemple, si la valeur numérique spécifiée n'est pas un nombre, la chaîne "NaN" est renvoyée.
 
 :::
 
@@ -140,7 +140,7 @@ Exemples :
  $vsResult:=String(!2023-11-27!;ISO Date GMT) // "2023-11-26T23:00:00Z" in French timezone  
 ```
 
-- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)\
+- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)  
   Exemples :
 
 ```4d
@@ -173,7 +173,7 @@ Ce paramètre peut être utilisé avec des formats de date prédéfinis ou basé
  $mydate:=String(Current date;ISO Date GMT;Current time) // retourne par exemple 2010-09-13T16:11:53Z  
 ```
 
-A noter le caractère "Z" final qui indique le format GMT.\
+A noter le caractère "Z" final qui indique le format GMT.  
 Si vous ne passez pas le paramètre *addTime*, la commande renvoie la date à minuit (heure locale) exprimée en heure GMT, ce qui peut entraîner un décalage en fonction du fuseau horaire local :
 
 ```4d
@@ -229,7 +229,7 @@ Exemples :
  $vsResult:=String(?17:30:45?;Hour Min Sec) //"17 hours 30 minutes 45 seconds"  
 ```
 
-- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)\
+- soit un [format personnalisé construit à partir d'un modèle](../Project/date-time-formats.md) (valeur chaîne)  
   Exemples :
 
 ```4d
@@ -239,12 +239,12 @@ Exemples :
 
 ### Expressions de type Chaîne
 
-Si *expression* est de type Alpha ou Texte, la commande renvoie la même valeur que celle passée en paramètre. Ce fonctionnement est utile notamment dans le cadre d’une programmation générique utilisant des pointeurs.\
+Si *expression* est de type Alpha ou Texte, la commande renvoie la même valeur que celle passée en paramètre. Ce fonctionnement est utile notamment dans le cadre d’une programmation générique utilisant des pointeurs.  
 Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 
 ### Expressions de type Booléen
 
-Si *expression* est de type Booléen, la commande retourne la chaîne “Vrai” ou “Faux” dans la langue de l’application (“True” ou “False” dans une version anglaise de 4D).\
+Si *expression* est de type Booléen, la commande retourne la chaîne “Vrai” ou “Faux” dans la langue de l’application (“True” ou “False” dans une version anglaise de 4D).  
 Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 
 ### Expressions indéfinies
@@ -257,10 +257,10 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 
 ## Voir également
 
-[Bool](../commands-legacy/bool.md)\
-[Date](../commands-legacy/date.md)\
-[Num](num.md)\
-[Time string](../commands-legacy/time-string.md)\
+[Bool](../commands-legacy/bool.md)  
+[Date](../commands-legacy/date.md)  
+[Num](num.md)  
+[Time string](../commands-legacy/time-string.md)  
 [Timestamp](../commands-legacy/timestamp.md)
 
 ## Propriétés

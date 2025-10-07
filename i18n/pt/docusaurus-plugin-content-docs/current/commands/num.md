@@ -47,7 +47,7 @@ There are three reserved characters that **Num** treats specially: the decimal s
 
 - The decimal separator is interpreted as a decimal place and must appear embedded in a numeric string. By default, the command uses the decimal separator set by the operating system. You can modify this character using the *separator* parameter (see below).
 - The hyphen causes the number or exponent to be negative. The hyphen must appear before any negative numeric characters or after the “e” for an exponent. Except for the “e” character, if a hyphen is embedded in a numeric string, the portion of the string after the hyphen is ignored. For example, `Num("123-456")` returns 123, but `Num("-9")` returns -9.
-- The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.\
+- The e or E causes any numeric characters to its right to be interpreted as the power of an exponent. The “e” must be embedded in a numeric string. Thus, `Num("123e–2")` returns 1.23.  
   Note that when the string includes more than one "e", conversion might give different results under macOS and under Windows.
 
 #### *separator* parameter
@@ -142,8 +142,8 @@ $result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
 
 ## Veja também
 
-[Bool](../commands-legacy/bool.md)\
-[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)\
+[Bool](../commands-legacy/bool.md)  
+[GET SYSTEM FORMAT](../commands-legacy/get-system-format.md)  
 [String](./string.md)
 
 ## Propriedades

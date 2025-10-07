@@ -125,7 +125,7 @@ También puede utilizar la sintaxis de [parámetros temporales](Concepts/paramet
   -> $RequestAccepted : Boolean
 
 ```
-> Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado).
+> Todos los parámetros del método base `On Web Authentication` no están necesariamente rellenados. La información recibida por el método base depende del [modo de autenticación](#authentication-modes) seleccionado.
 
 
 #### $1 - URL

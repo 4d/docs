@@ -9,7 +9,10 @@
     "message": "Travailler avec des projets"
   },
   "homepage.sections.core-development.title": {
-    "message": "Développement"
+    "message": "Projet & IDE"
+  },
+  "homepage.sections.language.title": {
+    "message": "Langage 4D"
   },
   "Project Management": {
     "message": "Gestion des projets"
@@ -33,7 +36,7 @@
     "message": "Préférences"
   },
   "homepage.administration.title": {
-    "message": "Administration"
+    "message": "Serveur & Admin"
   },
   "4D Server Administration Window": {
     "message": "Fenêtre d'administration de 4D Server"
@@ -131,8 +134,8 @@
   "Build Application": {
     "message": "Générateur d'application"
   },
-  "homepage.sections.mobile-applications.title": {
-    "message": "Applications mobiles"
+  "homepage.sections.more.title": {
+    "message": "More docs"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
@@ -240,7 +243,7 @@
   },
   "theme.colorToggle.ariaLabel": {
     "message": "Basculer entre le mode sombre et clair (actuellement {mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "mode sombre",
@@ -275,7 +278,7 @@
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
+    "message": "Version : {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
     "message": "Ceci est la documentation de la prochaine version {versionLabel} de {siteTitle}.",
@@ -358,7 +361,7 @@
     "description": "The ARIA label to toggle the collapsible sidebar category"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
+    "message": "Langues",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
@@ -660,5 +663,110 @@
   },
   "4D AIKit": {
     "message": "4D AIKit"
+  },
+  "4D at a glance": {
+    "message": "4D en un coup d'œil"
+  },
+  "homepage.sections.ide.title": {
+    "message": "Projet & IDE"
+  },
+  "Creating or opening a project": {
+    "message": "Créer ou ouvrir un projet"
+  },
+  "Architecture": {
+    "message": "Architecture"
+  },
+  "Project Settings": {
+    "message": "Propriétés du projet"
+  },
+  "Database structure": {
+    "message": "Structure de la base de données"
+  },
+  "Code & Methods": {
+    "message": "Code & Methods"
+  },
+  "Dependencies": {
+    "message": "Dependencies"
+  },
+  "Compilation": {
+    "message": "Compilation"
+  },
+  "Application Builder": {
+    "message": "Application Builder"
+  },
+  "Application Preferences": {
+    "message": "Application Preferences"
+  },
+  "Concepts": {
+    "message": "Concepts"
+  },
+  "Commands by name": {
+    "message": "Commandes par nom"
+  },
+  "Commands by theme": {
+    "message": "Commandes par thème"
+  },
+  "Classes": {
+    "message": "Classes"
+  },
+  "homepage.sections.core.title": {
+    "message": "Développement"
+  },
+  "ORDA": {
+    "message": "ORDA"
+  },
+  "Database Methods": {
+    "message": "Méthodes base"
+  },
+  "Transactions": {
+    "message": "Transactions"
+  },
+  "Transformation tags": {
+    "message": "Balises de transformation"
+  },
+  "Date and Time Formats": {
+    "message": "Formats date et heure"
+  },
+  "4D Qodly Pro": {
+    "message": "4D Qodly Pro"
+  },
+  "Labels": {
+    "message": "Etiquettes"
+  },
+  "homepage.sections.administration.title": {
+    "message": "Serveur & Admin"
+  },
+  "4D Server Window": {
+    "message": "Fenêtre de 4D Server"
+  },
+  "WebAdmin & Data Explorer": {
+    "message": "WebAdmin & Data Explorer"
+  },
+  "TLS": {
+    "message": "TLS"
+  },
+  "Log Files": {
+    "message": "Fichiers journaux"
+  },
+  "Extending 4D applications": {
+    "message": "Extension des applications 4D"
+  },
+  "4D QPDF": {
+    "message": "4D QPDF"
+  },
+  "Build4D": {
+    "message": "Build4D"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "system mode",
+    "description": "The name for the system color mode"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }

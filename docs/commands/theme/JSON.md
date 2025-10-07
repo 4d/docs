@@ -1,6 +1,7 @@
 ---
 id: JSON_theme
 title: JSON
+sidebar_label: JSON
 slug: /commands/theme/JSON
 ---
 

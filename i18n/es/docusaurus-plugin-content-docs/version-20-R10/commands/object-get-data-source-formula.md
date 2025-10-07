@@ -23,7 +23,7 @@ Pasar el parámetro opcional *\** indica que el parámetro *object* es un nombre
 
 Cuando una fórmula está asociada a un objeto de formulario, actúa como fuente de datos del objeto en tiempo de ejecución.
 
-Si este comando se aplica a un objeto sin fórmula personalizada asignada, devuelve la [variable dinámica de formulario] asignada automáticamente(../FormObjects/properties_Object.md#dynamic-variables).\
+Si este comando se aplica a un objeto sin fórmula personalizada asignada, devuelve la [variable dinámica de formulario] asignada automáticamente(../FormObjects/properties_Object.md#dynamic-variables).  
 Si el objeto no existe o no admite fórmulas, devuelve `Null`.
 
 ## Ejemplo

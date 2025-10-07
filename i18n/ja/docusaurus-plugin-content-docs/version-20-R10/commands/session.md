@@ -98,8 +98,8 @@ IP:port/4DACTION/action_Session
 
 ## 参照
 
-[Session storage](session-storage.md)\
-[Session API](../API/SessionClass.md)\
+[Session storage](session-storage.md)  
+[Session API](../API/SessionClass.md)  
 [Web server user sessions](../WebServer/sessions.md)
 [*Scalable sessions for advanced web applications* (blog 記事)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 

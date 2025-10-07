@@ -5,7 +5,7 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; optionPage | *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; *optionPage* } )<br/>**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

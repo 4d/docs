@@ -1,6 +1,6 @@
 ---
 id: command-index
-title: Index
+title: Commandes par nom
 ---
 
 [4D](#4D) - [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
@@ -340,7 +340,7 @@ title: Index
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
 [`Formula`](formula.md)<br/>
-[`Formula from string`](./formula-from-string.md)<br/>
+[`Formula from string`](formula-from-string.md)<br/>
 [`Frontmost process`](../commands-legacy/frontmost-process.md)<br/>
 [`Frontmost window`](../commands-legacy/frontmost-window.md)<br/>
 

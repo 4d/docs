@@ -1,7 +1,8 @@
 ---
 id: presentation
-title: Presentacion
+title: Primeros pasos
 displayed_sidebar: docs
+slug: /WritePro/getting-started
 ---
 
 

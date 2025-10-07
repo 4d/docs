@@ -2,13 +2,12 @@
 id: exporting-to-html-and-mime-html-formats
 title: Exporter aux formats HTML et MIME HTML
 displayed_sidebar: docs
+slug: /WritePro/exporting-to-html-and-mime-html-formats
 ---
-
-#### 
 
 Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML à l'aide des commandes [WP EXPORTER DOCUMENT](../commands/wp-exporter-document) et [WP EXPORTER VARIABLE](../commands/wp-exporter-variable). Utilisez ces tableaux pour vérifier quels attributs et fonctionnalités de 4D Write Pro sont exportés vers HTML et HTML MIME. Les attributs/fonctionnalités sont triés par ordre alphabétique. Pour une liste détaillée des attributs, reportez-vous à la page *Attributs 4D Write Pro*.
 
-#### Common attributes 
+### Common attributes 
 
 | **Attribut/Fonctionnalités**                  | **Exporté(e)** | **Commentaire** |
 | --------------------------------------------- | -------------- | --------------- |
@@ -29,7 +28,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Protected                                     | non            |                 |
 | Style sheet                                   | oui            |                 |
 
-#### Caractères 
+### Caractères 
 
 | **Attribut/Fonctionnalité** | **Exporté(e)** | **Commentaire**                              |
 | --------------------------- | -------------- | -------------------------------------------- |
@@ -45,7 +44,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Underline color             | non            |                                              |
 | Underline styles            | partiellement  | Seul le gras est exporté                     |
 
-#### Colonnes 
+### Colonnes 
 
 | **Attribut/Fonctionnalité** | **Exporté(e)** | **Commentaire** |
 | --------------------------- | -------------- | --------------- |
@@ -55,7 +54,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Column rule width           | non            |                 |
 | Column spacing              | non            |                 |
 
-#### Document 
+### Document 
 
 | **Attribut/Fonctionnalité**  | **Exporté(e)** | **Commentaire**                          |
 | ---------------------------- | -------------- | ---------------------------------------- |
@@ -71,7 +70,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Tab decimal separator        | non            |                                          |
 | User unit                    | non            |                                          |
 
-#### Images 
+### Images 
 
 | **Attribut/Fonctionnalité**                  | **Exporté**   | **Commentaire**                                                                 |
 | -------------------------------------------- | ------------- | ------------------------------------------------------------------------------- |
@@ -88,7 +87,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Image URL                                    | oui           |                                                                                 |
 | Vertical align                               | oui           |                                                                                 |
 
-#### Zones de texte 
+### Zones de texte 
 
 | **Attribut/Fonctionnalité**      | **Exporté**   | **Commentaire**                                        |
 | -------------------------------- | ------------- | ------------------------------------------------------ |
@@ -101,7 +100,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Anchor to all sections of a page | non           |                                                        |
 | Vertical align                   | oui           |                                                        |
 
-#### Paragraphes 
+### Paragraphes 
 
 | **Attribute/Fonctionnalité**            | **Exporté**   | **Commentaire**                                                                                 |
 | --------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------- |
@@ -128,7 +127,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Widow and orphan control                | non           |                                                                                                 |
 | Width                                   | oui           |                                                                                                 |
 
-#### Elements de section et de page 
+### Elements de section et de page 
 
 | **Attribut/Fonctionnalité**      | **Exporté** | **Commentaire**                                                       |
 | -------------------------------- | ----------- | --------------------------------------------------------------------- |
@@ -139,7 +138,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Page margin                      | non         |                                                                       |
 | Page orientation                 | non         |                                                                       |
 
-#### Tableaux 
+### Tableaux 
 
 | **Attribut/Fonctionnalité**          | **Exporté** | **Commentaire**                                                        |
 | ------------------------------------ | ----------- | ---------------------------------------------------------------------- |
@@ -151,7 +150,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Section break after                  | non         |                                                                        |
 | Bottom carry-over rows               | non         |                                                                        |
 
-#### Cellules de tableau 
+### Cellules de tableau 
 
 | **Attribut/Fonctionnalité**              | **Exporté** | **Commentaire** |
 | ---------------------------------------- | ----------- | --------------- |
@@ -160,7 +159,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Vertical align                           | oui         |                 |
 | Width                                    | oui         |                 |
 
-#### Ligne de tableau 
+### Ligne de tableau 
 
 | **Attribut/Fonctionnalité**          | **Exporté** | **Commentaire**                                                                   |
 | ------------------------------------ | ----------- | --------------------------------------------------------------------------------- |
@@ -169,7 +168,7 @@ Les documents 4D Write Pro peuvent être exportés aux formats HTML et MIME HTML
 | Height                               | oui         |                                                                                   |
 | Page break after                     | oui         |                                                                                   |
 
-#### Autres fonctionnalités 
+### Autres fonctionnalités 
 
 | **Attribut/Fonctionnalité**  | **Exporté** | **Commentaire**                   |
 | ---------------------------- | ----------- | --------------------------------- |

@@ -11,7 +11,11 @@ Le serveur web 4D propose trois modes d'authentification que vous pouvez sélect
 
 ![](../assets/en/WebServer/authentication.png)
 
-> Il est recommandé d'utiliser une authentification **personnalisée**.
+:::warning
+
+Il est recommandé d'utiliser une authentification **personnalisée**.
+
+:::
 
 ### Vue d’ensemble
 
@@ -38,7 +42,7 @@ ds.webUser.save()
 
 Voir également [cet exemple](gettingStarted.md#authenticating-users) du chapitre "Prise en main".
 
-Si aucune authentification personnalisée n'est fournie, 4D appelle la méthode base [`On Web Authentication`](#on-web-authentication) (si elle existe). In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. La méthode doit retourner **True** dans $0 si l'utilisateur est authentifié avec succès. Ensuite, la ressource qui fait l'objet de la requête est fournie. Si l'authentification échoue, **False** est retourné dans $0.
+Si aucune authentification personnalisée n'est fournie, 4D appelle la méthode base [`On Web Authentication`](#on-web-authentication) (si elle existe). Outre $url et $content, seules les adresses IP du navigateur et du serveur ($IPClient et $IPServer) sont fournies, le nom d'utilisateur et le mot de passe ($user et $password) sont vides. La méthode doit retourner **True** dans $0 si l'utilisateur est authentifié avec succès. Ensuite, la ressource qui fait l'objet de la requête est fournie. Si l'authentification échoue, **False** est retourné dans $0.
 
 > **Attention :** Si la méthode de base `On Web Authentication` n'existe pas, les connexions sont automatiquement acceptées (mode test).
 
@@ -61,7 +65,7 @@ Les valeurs saisies sont ensuite évaluées :
 
 Ce mode offre un niveau de sécurité plus élevé car les informations d'authentification sont traitées par un processus à sens unique appelé "hashing" qui rend leur contenu impossible à déchiffrer.
 
-Comme en mode BASIC, l'utilisateur doit saisir son nom et mot de passe lors de la connexion. La méthode base [`On Web Authentication`](#on-web-authentication) est ensuite appelée. When the DIGEST mode is activated, the $password parameter (password) is always returned empty. En effet, lors de l'utilisation de ce mode, ces informations ne passent pas par le réseau en texte clair (non chiffré). Il est donc impératif dans ce cas d'évaluer les demandes de connexion à l'aide de la commande `WEB Validate digest`.
+Comme en mode BASIC, l'utilisateur doit saisir son nom et mot de passe lors de la connexion. La méthode base [`On Web Authentication`](#on-web-authentication) est ensuite appelée. Lorsque le mode DIGEST est activé, le paramètre $password (mot de passe) est toujours renvoyé vide. En effet, lors de l'utilisation de ce mode, ces informations ne passent pas par le réseau en texte clair (non chiffré). Il est donc impératif dans ce cas d'évaluer les demandes de connexion à l'aide de la commande `WEB Validate digest`.
 
 > Vous devez redémarrer le serveur web pour que les modifications apportées à ces paramètres soient prises en compte.
 
@@ -76,15 +80,15 @@ La méthode base `On Web Authentication` est automatiquement appelée lorsqu'une
 La méthode base `On Web Authentication` est donc appelée :
 
 - lorsque le serveur web reçoit une URL demandant une ressource qui n'existe pas
-- when the web server receives a URL beginning with `4DACTION/`
-- when the web server receives a root access URL and no home page has been set in the Settings or by means of the [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md) command
+- lorsque le serveur web reçoit une URL commençant par `4DACTION/`
+- lorsque le serveur web reçoit une URL d'accès à la racine et qu'aucune page d'accueil n'a été définie dans les Propriétés ou au moyen de la commande [`WEB SET HOME PAGE`](../commands-legacy/web-set-home-page.md)
 - lorsque le serveur web traite une balise exécutant du code (par exemple `4DSCRIPT`) dans une page semi-dynamique.
 
 La méthode base `On Web Authentication` n'est PAS appelée :
 
 - lorsque le serveur web reçoit une URL demandant une page statique valide.
-- when the web server receives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`ds.authentify` function](../REST/authUsers#force-login-mode) or (deprecated) the `On REST Authentication` database method or Structure settings.
-- when the web server receives a URL with a pattern triggering a [custom HTTP Request Handler](http-request-handler.md).
+- lorsque le serveur web reçoit une URL commençant par `rest/` et que le serveur REST est lancé (dans ce cas, l'authentification est gérée par la fonction [`ds.authentify`](../REST/authUsers#force-login-mode) ou (obsolète) la méthode base `On REST Authentication` ou les Propriétés de la structure.
+- lorsque le serveur web reçoit une URL avec un motif déclenchant un [*request handler* HTTP personnalisé](http-request-handler.md).
 
 ### Syntaxe
 
@@ -103,7 +107,7 @@ La méthode base `On Web Authentication` n'est PAS appelée :
 Vous devez déclarer ces paramètres de la manière suivante :
 
 ```4d
-// On Web Authentication database method
+// On Web Authentication
 #DECLARE ($url : Text; $content : Text; \
   $IPClient : Text; $IPServer : Text; \
   $user : Text; $password : Text) \
@@ -115,17 +119,17 @@ Vous devez déclarer ces paramètres de la manière suivante :
 
 :::note
 
-Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. The information received by the database method depends on the selected [authentication mode](#authentication-modes).
 
 :::
 
 #### $url - URL
 
-The first parameter (`$url`) is the URL received by the server, from which the host address has been removed.
+Le premier paramètre (`$url`) est l'URL reçue par le serveur, dont l'adresse de l'hôte a été supprimée.
 
-Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
+Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. The following table shows the values of $url depending on the URL entered in the Web browser:
 
-| URL entrée dans le navigateur web                                                                                                                 | Valeur du paramètre $urll                                                             |
+| URL entrée dans le navigateur web                                                                                                                 | Value of parameter $url                                                               |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |
@@ -133,43 +137,43 @@ Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre 
 | http://123.45.67.89/Customers/Add                                                 | /Customers/Add                                                                        |
 | 123.45.67.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-#### $content - Header and Body of the HTTP request
+#### $content - En-tête et corps de la requête HTTP
 
-The second parameter (`$content`) is the header and the body of the HTTP request sent by the web browser. Notez que ces informations sont transmises telles quelles à votre méthode base `On Web Authentication`. Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
+Le deuxième paramètre (`$content`) est l'en-tête et le corps de la requête HTTP envoyée par le navigateur web. Notez que ces informations sont transmises telles quelles à votre méthode base `On Web Authentication`. Son contenu variera en fonction de la nature du navigateur web qui tente la connexion.
 
 Si votre application utilise ces informations, il vous appartient d'analyser l'en-tête et le corps. Vous pouvez utiliser les commandes `WEB GET HTTP HEADER` et `WEB GET HTTP BODY`.
 
-> For performance reasons, the size of data passing through the $content parameter must not exceed 32 KB. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
+> Pour des raisons de performance, la taille des données passant par le paramètre $content ne doit pas dépasser 32 Ko. Au-delà de cette taille, ils sont tronqués par le serveur HTTP 4D.
 
-#### $IPClient - Web client IP address
+#### $IPClient - Adresse IP du client Web
 
-The `$IPClient` parameter receives the IP address of the browser’s machine. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
+Le paramètre `$IPClient` reçoit l'adresse IP de la machine du navigateur. Cette information peut vous permettre de distinguer entre les connexions intranet et internet.
 
 > 4D renvoie les adresses IPv4 dans un format hybride IPv6/IPv4 écrit avec un préfixe de 96 bits, par exemple ::ffff:192.168.2.34 pour l'adresse IPv4 192.168.2.34. Pour plus d'informations, consultez la section [Support IPv6](webServerConfig.md#about-ipv6-support).
 
-#### $IPServer - Server IP address
+#### $IPServer - Adresse IP du serveur
 
-The `$IPServer` parameter receives the IP address used to call the web server. 4D permet le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
+Le paramètre `$IPServer` reçoit l'adresse IP utilisée pour appeler le serveur web. 4D permet le multi-homing, ce qui vous permet d'exploiter des machines avec plus d'une adresse IP. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.md#ip-address-to-listen).
 
-#### $user and $password - User Name and Password
+#### $user et $password - Nom d'utilisateur et mot de passe
 
-The `$user` and `$password` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. Cette boîte de dialogue apparaît pour chaque connexion, si l'authentification [basique](#basic-protocol) ou [digest](#digest-protocol) est sélectionnée.
+Les paramètres `$user` et `$password` reçoivent le nom d'utilisateur et le mot de passe saisis par l'utilisateur dans la boîte de dialogue d'identification standard affichée par le navigateur. Cette boîte de dialogue apparaît pour chaque connexion, si l'authentification [basique](#basic-protocol) ou [digest](#digest-protocol) est sélectionnée.
 
-> If the user name sent by the browser exists in 4D, the $password parameter (the user’s password) is not returned for security reasons.
+> Si le nom d'utilisateur envoyé par le navigateur existe dans 4D, le paramètre $password (le mot de passe de l'utilisateur) n'est pas renvoyé pour des raisons de sécurité.
 
-#### $accept - Function return
+#### $accept - Fonction retour
 
-The `On Web Authentication` database method returns a boolean:
+La méthode base `On Web Authentication` renvoie un booléen :
 
-- If it is True, the connection is accepted.
+- S'il vaut True, la connexion est acceptée.
 
-- If it is False, the connection is refused.
+- S'il vaut False, la connexion est refusée.
 
 La méthode base `On Web Connection` est seulement exécutée si la connexion a été acceptée par `On Web Authentication`.
 
 :::warning
 
-- If no value is returned, the connection is considered as **accepted** and the `On Web Connection` database method is executed.
+- Si aucune valeur n'est renvoyée, la connexion est considérée comme **acceptée** et la méthode base `On Web Connection` est exécutée.
 - N'appelez pas d'éléments d'interface dans la méthode base `On Web Authentication` (`ALERT`, `DIALOG`, etc.) car sinon son exécution sera interrompue et la connexion refusée. La même chose se produira s'il y a une erreur lors de son traitement.
 
 :::

@@ -1,6 +1,7 @@
 ---
 id: Backup_theme
 title: Sauvegarde
+sidebar_label: Sauvegarde
 slug: /commands/theme/Backup
 ---
 

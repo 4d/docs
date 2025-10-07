@@ -12,7 +12,7 @@ Pode utilizar bibliotecas de objectos nos seus formulários. Uma biblioteca de o
 
 ## Criar e utilizar bibliotecas de objetos personalizadas
 
-A biblioteca de objetos padrão está disponível no editor de formulários: clique no último botão da barra de ferramentas:\
+A biblioteca de objetos padrão está disponível no editor de formulários: clique no último botão da barra de ferramentas:  
 ![](../assets/en/FormEditor/library1.png)
 
 A biblioteca é apresentada numa janela separada:

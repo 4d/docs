@@ -12,7 +12,7 @@ Puede utilizar librerías de objetos en sus formularios. Una librería de objeto
 
 ## Utilización de la librería de objetos estándar
 
-La librería de objetos estándar está disponible en el editor de formularios: haga clic en el último botón de la barra de herramientas:\
+La librería de objetos estándar está disponible en el editor de formularios: haga clic en el último botón de la barra de herramientas:  
 ![](../assets/en/FormEditor/library1.png)
 
 La librería se muestra en una ventana aparte:

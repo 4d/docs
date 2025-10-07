@@ -119,7 +119,7 @@ Alternativement, vous pouvez utiliser la syntaxe [paramètres nommés](Concepts/
   -> $RequestAccepted : Boolean
 
 ```
-> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du [mode d'authentification](#authentication-modes) sélectionné).
+> Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du [mode d'authentification](#authentication-modes) sélectionné.
 
 #### $1 - URL
 

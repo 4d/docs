@@ -14,7 +14,7 @@ Este evento puede generarse en el contexto de una entrada de imagen o de un list
 
 Este evento se desencadena después de cualquier otro evento usuario relacionado con la acción de desplazamiento ([On Clicked](onClicked.md), [On After Keystroke](onAfterKeystroke.md), etc.). El evento sólo se genera en el método objeto (no en el método formulario).
 
-El evento se dispara cuando el desplazamiento es el resultado de una acción del usuario: utilizando las barras de desplazamiento y/o los cursores, utilizando la rueda del ratón o [el teclado](FormObjects/properties_Appearance.md#vertical-scroll-bar). No se genera cuando el objeto se desplaza debido a la ejecución del comando `OBJECT SET SCROLL POSITION`.
+El evento se dispara cuando el desplazamiento es el resultado de una acción del usuario: utilizando las barras de desplazamiento y/o los cursores, utilizando la rueda del ratón o [el teclado](FormObjects/properties_Appearance.md#vertical-scroll-bar). No se genera cuando el objeto se desplaza debido a la ejecución del comando [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position).
 
 
 ### Entrada de imagen

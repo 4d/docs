@@ -1,6 +1,7 @@
 ---
 id: Relations_theme
 title: リレーション
+sidebar_label: リレーション
 slug: /commands/theme/Relations
 ---
 

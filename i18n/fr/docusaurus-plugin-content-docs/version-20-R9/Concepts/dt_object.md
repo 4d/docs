@@ -28,7 +28,7 @@ N'oubliez pas que les noms de propriétés font la différence entre les majuscu
 
 :::
 
-Vous gérez les variables, champs ou expressions de type Objet en utilisant la [notation Objet](#proprietes) ou les commandes disponibles dans le thème **Objets (Langage)**. A noter que des commandes spécifiques du thème **Recherches et tris** telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
+Vous gérez les variables, champs ou expressions de type Objet en utilisant la [notation Objet](#properties) ou les commandes disponibles dans le thème **Objets (Langage)**. A noter que des commandes spécifiques du thème **Recherches et tris** telles que `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE` ou `ORDER BY ATTRIBUTE` peuvent être utilisées pour traiter des champs objets.
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
@@ -114,7 +114,7 @@ Vous pouvez créer deux types d'objets :
 - des objets partagés, en utilisant la commande [`New shared object`](../commands-legacy/new-shared-object.md). Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`.
   Pour plus d'informations, consultez la section [Objets et collections partagés](shared.md).
 
-## Propriétés
+## Propriétés {#properties}
 
 Vous accédez aux valeurs des propriétés de l'objet à travers une chaîne de tokens. On peut accéder aux propriétés des objets de deux manières :
 

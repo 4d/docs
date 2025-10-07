@@ -863,12 +863,12 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                             |
-| ----------- | ------------------------------------------ |
-| 21          | Support 4D.Vector objects  |
-| 17 R6       | Soporte de los parámetros Formula          |
-| 17 R5       | Soporte de los marcadores para los valores |
-| 17          | Añadidos                                   |
+| Lanzamiento | Modificaciones                                   |
+| ----------- | ------------------------------------------------ |
+| 21          | Soporte de los objetos 4D.Vector |
+| 17 R6       | Soporte de los parámetros Formula                |
+| 17 R5       | Soporte de los marcadores para los valores       |
+| 17          | Añadidos                                         |
 
 </details>
 
@@ -923,19 +923,19 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
 
 - **comparator**: símbolo que compara *attributePath* y *value*. Se soportan los siguientes símbolos:
 
-| Comparación                           | Símbolo(s) | Comentario                                                                                                                                                                                                                                  | Supported in vector similarity |
-| ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.                                                                          |                                |
-|                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                                                                                 |                                |
-| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivale a "Condición no aplicada en una sentencia" ([ver más abajo](#not-equal-to-in-collections)).                             |                                |
-|                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                                                                                       |                                |
-| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalente a "Not equal to" ([ver abajo](#not-equal-to-in-collections)). |                                |
-| Menor que                             | <    |                                                                                                                                                                                                                                             | &check;    |
-| Mayor que                             | >                             |                                                                                                                                                                                                                                             | &check;    |
-| Menor o igual que                     | <=   |                                                                                                                                                                                                                                             | &check;    |
-| Mayor o igual que                     | > =                           |                                                                                                                                                                                                                                             | &check;    |
-| Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |                                |
-| Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |                                |
+| Comparación                           | Símbolo(s) | Comentario                                                                                                                                                                                                                                  | Soportado en similaridad vectorial |
+| ------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| Igual a                               | =, ==                         | Obtiene los datos coincidentes, admite el comodín (@), no distingue entre mayúsculas de minúsculas ni diacríticas.                                                                          |                                    |
+|                                       | ===, IS                       | Obtiene los datos coincidentes, considera @ como carácter estándar, no distingue entre mayúsculas de minúsculas ni diacríticas                                                                                                 |                                    |
+| Diferente de                          | #, !=                         | Soporta el comodín (@). Equivale a "Condición no aplicada en una sentencia" ([ver más abajo](#not-equal-to-in-collections)).                             |                                    |
+|                                       | !==, IS NOT                   | Considera la @ como un caracter estándar                                                                                                                                                                                       |                                    |
+| Condición No aplicada a una sentencia | NOT                           | Los paréntesis son obligatorios cuando se utiliza NOT antes de una instrucción que contiene varios operadores. Equivalente a "Not equal to" ([ver abajo](#not-equal-to-in-collections)). |                                    |
+| Menor que                             | <    |                                                                                                                                                                                                                                             | &check;        |
+| Mayor que                             | >                             |                                                                                                                                                                                                                                             | &check;        |
+| Menor o igual que                     | <=   |                                                                                                                                                                                                                                             | &check;        |
+| Mayor o igual que                     | > =                           |                                                                                                                                                                                                                                             | &check;        |
+| Incluído en                           | IN                            | Devuelve los datos iguales a al menos uno de los valores de una colección o de un conjunto de valores, admite el comodín (@)                                                                                |                                    |
+| Contiene palabra clave                | %                             | Las palabras claves pueden utilizarse en atributos de tipo texto o imagen                                                                                                                                                                   |                                    |
 
 - Puede ser un **marcador de posición** (ver **Uso de marcadores de posición** más adelante) o cualquier expresión que coincida con la propiedad de tipo de datos. **value**: el valor a comparar con el valor actual de la propiedad de cada entidad en la selección de entidades. Por ejemplo, si se introduce la cadena "v20" como **value** para comparar con un atributo entero, se convertirá a 20. For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
   For example, if the string "v20" is entered as <strong x-id="1">value</strong> to compare with an integer attribute, it will be converted to 20.
@@ -945,7 +945,7 @@ Las fórmulas en las consultas pueden recibir parámetros a través de $1. Este 
   - Constantes de tipo **date**: formato "YYYY-MM-DD"
   - Constantes **null**: utilizando la palabra clave "null" se encontrarán las propiedades **null** y **undefined**.
   - en el caso de una búsqueda con un comparador IN, *value* debe ser una colección, o los valores que coincidan con el tipo de la ruta del atributo entre \[ ] separados por comas (para las cadenas, los caracteres `"` deben escaparse con `\`).
-  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects).
+  - **objeto**: sólo se admiten los objetos [4D.Vector](../API/VectorClass.md), en el contexto de **consultas de similaridad vectorial** (*attributePath* también debe contener objetos 4D.Vector válidos).
 - **logicalOperator**: utilizado para unir condiciones múltiples en la búsqueda (opcional). Puede utilizar uno de los siguientes operadores lógicos (se puede utilizar el nombre o el símbolo):
 
 | Conjunción | Símbolo(s)                                                       |
@@ -1181,46 +1181,46 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 // $es contient des films (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
 
-### Query by vector similarity
+### Búsqueda por similaridad vectorial
 
-If *attributePath* designates an attribute storing [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to store 4D.Vector class objects](../Develop/field-properties.md#class)), you can build queries to find entities based on **embeddings** rather than keywords. This technology is designed for Artificial Intelligence (AI) workloads and allows you to query data based on semantics, rather than keywords.
+Si *attributePath* designa un atributo que almacena [**objetos vectores**](../API/VectorClass.md) (ver cómo [configurar un campo 4D para almacenar objetos de clase 4D.Vector](../Develop/field-properties.md#class)), puede construir consultas para encontrar entidades basadas en **embeddings** en lugar de palabras clave. Esta tecnología está diseñada para cargas de trabajo de Inteligencia Artificial (IA) y permite consultar datos basándose en la semántica, en lugar de en palabras clave.
 
-In this case, the *value* parameter must be a **comparison vector object** containing the following properties:
+En este caso, el parámetro *value* debe ser un **objeto vectorial de comparación** que contenga las siguientes propiedades:
 
-| Propiedad | Tipo                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| vector    | [4D.Vector](../API/VectorClass.md) | Obligatorio. The vector to be compared                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| metric    | Text                                               | Opcional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine distance between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors. |
-| threshold | Real                                               | Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.                                                                                                                                                                                                          |
+| Propiedad | Tipo                                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| vector    | [4D.Vector](../API/VectorClass.md) | Obligatorio. El vector a comparar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| metric    | Text                                               | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. Puede utilizar una de las siguientes constantes (Texto)<li>:`mk cosine` (por defecto si se omite): calcula la distancia coseno entre vectores.</li><li>`mk dot`: calcula la similitud punto de los vectores.</li><li>`mk euclidean`: calcula la distancia euclideana entre vectores. |
+| threshold | Real                                               | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                                                                                      |
 
-Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value:
+Sólo se admite un subconjunto de símbolos **comparadores**. Tenga en cuenta que comparan los resultados con el valor umbral:
 
-| Comparación       | Símbolo(s) | Comentario                             |
-| ----------------- | ----------------------------- | -------------------------------------- |
-| Menor que         | <    | Lower than the threshold               |
-| Mayor que         | >                             | Greater than the threshold             |
-| Menor o igual que | <=   | Lower than or equal to the threshold   |
-| Mayor o igual que | > =                           | Greater than or equal to the threshold |
+| Comparación       | Símbolo(s) | Comentario                  |
+| ----------------- | ----------------------------- | --------------------------- |
+| Menor que         | <    | Inferior al umbral          |
+| Mayor que         | >                             | Superior al umbral          |
+| Menor o igual que | <=   | Inferior o igual al umbral  |
+| Mayor o igual que | > =                           | Mayor o igual que el umbral |
 
-For example, you want to return entities of MyClass where the similarity with a vector is greater than 1.2 threshold, using the euclidean metric:
+Por ejemplo, se desea devolver entidades de MyClass donde la similaridad con un vector es mayor que 1.2 umbrales, utilizando la métrica euclideana:
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+$myVector := getVector ///método para obtener un vector, por ejemplo a partir de 4D.AIKit
 var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
-See [more examples below](#example-4-2) (examples 4 and 5).
+Ver [más ejemplos a continuación](#example-4-2) (ejemplos 4 y 5).
 
-:::tip Related blog posts
+:::tip Entradas de blog relacionadas
 
-- [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
-- [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
+- [4D AI: Búsqueda de entidades por similaridad vectorial en 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
+- [Por qué su Pila de búsqueda está rota y cómo lo soluciona la búsqueda vectorial](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
 
 :::
 
-### parámetro formula
+### Parámetro formula
 
 Como alternativa a la inserción de fórmulas dentro del parámetro *queryString* (ver arriba), puede pasar directamente un objeto fórmula como criterio de búsqueda booleano. La utilización de un objeto fórmula para las búsquedas es **recomendada** ya que se beneficia de la tokenización, y el código es más fácil de buscar/leer.
 
@@ -1228,7 +1228,7 @@ La fórmula debe haber sido creada utilizando el comando [`Formula`](../commands
 
 - *formula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 - dentro de la *formula*, la entidad está disponible a través del objeto `This`.
-- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
+- si el objeto `Formula` es **null**, se genera el error 1626 ("Expecting a text or formula"), que puede interceptar utilizando un método instalado con [`ON ERR CALL`](../commands-legacy/on-err-call.md).
 
 > Por razones de seguridad, las llamadas a fórmulas dentro de las funciones `query()` pueden ser desestimadas. Ver la descripción del parámetro *querySettings*.
 
@@ -1572,7 +1572,7 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 #### Ejemplo 4
 
-This example illustrates the various syntaxes supported for vector similarity searches. It uses [4D-AIKit](../aikit/overview.md):
+Este ejemplo ilustra las distintas sintaxis admitidas para las búsquedas de similaridades vectoriales. Utiliza [4D-AIKit](../aikit/overview.md):
 
 ```4d
 
@@ -1580,28 +1580,28 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
-  //search with default metric (cosine)
+  //el atributo embedding se basa en un campo 4D que almacena objetos de clase 4D.Vector
+  //buscar con la métrica por defecto (coseno)
 var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
-  //search with euclidean metric 
+  //buscar con la métrica euclídea 
 var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
-  //search with explicit cosine metric and custom threshold
+  //búsqueda con métrica coseno explícita y umbral personalizado
 var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
-  //search with a formula
+  //buscar con una fórmula
 var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### Ejemplo 5
 
-We want to execute a query by vector similarity using vectors with different metrics and order the results by cosine similarity:
+Queremos ejecutar una consulta por similitud vectorial utilizando vectores con diferentes métricas y ordenar los resultados por similaridades de coseno:
 
 ```4d
-  //Create the comparison vectors 
-var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
+  //Crear los vectores de comparación 
+var $vector1Comparison:={vector: $myvector; métrica: mk coseno; umbral: 0.4}
 var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
 
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  //el atributo embedding se basa en un campo 4D que almacena objetos de clase 4D.Vector
 ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
     .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
 

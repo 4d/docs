@@ -35,7 +35,7 @@ La propriété suivante est automatiquement ajoutée par la commande, si nécess
 | -------------- | ------- | ------------------------------------------------------ |
 | timeoutReached | boolean | Ajouté avec la valeur vrai si le timeout a été dépassé |
 
-> The offscreen area is only available during the execution of the `VP Run offscreen area` command. Elle sera automatiquement détruite à la fin de l'exécution.
+> La zone hors écran n'est disponible que lors de l'exécution de la commande `VP Run offscreen area`. Elle sera automatiquement détruite à la fin de l'exécution.
 
 Les commandes suivantes peuvent être utilisées dans la méthode callback (de rétro-appel) :
 

@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | tipoSalida | Integer | &#8594;  | Tipo de salida del mensaje |
 | mensaje | Text | &#8594;  | Contenido del mensaje |
-| importancia | Integer | &#8594;  | Nivel de importancia del mensaje (sólo para Windows) |
+| importancia | Integer | &#8594;  | Nivel de importancia del mensaje (solo para Windows) |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ El parámetro *importancia* sólo se utiliza con *tipoSalida* `Into Windows log 
 
 ## Ejemplo 
 
-Si quiere realizar un seguimiento de las aperturas de su base bajo Windows, puede escribir la siguiente línea de código en el [Método base On Startup](metodo-base-on-startup.md):
+Si quiere realizar un seguimiento de las aperturas de su base bajo Windows, puede escribir la siguiente línea de código en el [Método base On Startup](on-startup-database-method.md):
 
 ```4d
  LOG EVENT(Into Windows log events;"The Invoice database was opened.")

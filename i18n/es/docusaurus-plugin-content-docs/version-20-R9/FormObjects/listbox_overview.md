@@ -72,7 +72,7 @@ Por defecto, 4D asigna el nombre "ColumnX" a cada columna. Puede cambiarlo, así
 > Los list boxes de tipo array pueden mostrarse en [modo jerárquico](listbox_overview.md#hierarchical-list-boxes), con mecanismos específicos.
 
 Con los list box de tipo array, los valores introducidos o mostrados se gestionan utilizando el lenguaje 4D. También puede asociar una [lista de opciones](properties_DataSource.md#choice-list) con una columna para controlar la entrada de datos.
-Los valores de las columnas se gestionan mediante comandos de alto nivel del tema List box (como `LISTBOX INSERT ROWS` o `LISTBOX DELETE ROWS`), así como comandos de manipulación de arrays. Por ejemplo, para inicializar el contenido de una columna, puede utilizar la siguiente instrucción:
+Los valores de las columnas se gestionan mediante comandos de alto nivel de List box (como [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) o `LISTBOX DELETE ROWS`), así como comandos de manipulación de arrays. Por ejemplo, para inicializar el contenido de una columna, puede utilizar la siguiente instrucción:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -195,7 +195,7 @@ Las propiedades soportadas dependen del tipo de list box.
 
 > Las columnas, los encabezados y los pies de list box soportan propiedades específicas.
 
-### Eventos formulario soportados
+### Eventos de formulario soportados {#supported-form-events}
 
 | Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](../commands/form-event.md) para las propiedades principales)                                                                     | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -232,7 +232,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | On Scroll            | <li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>                                                                                                           |                                                                                                                                                                       |
 | On Unload            |                                                                                                                                                                                                                |                                                                                                                                                                       |
 
-#### Propiedades adicionales
+#### Propiedades adicionales {additional-properties}
 
 Los eventos formulario de los objetos list box o columnas de list box pueden devolver las siguientes propiedades adicionales:
 
@@ -265,12 +265,12 @@ Puede definir propiedades estándar (texto, color de fondo, etc.) para cada colu
 
 > Puede definir el [tipo de expresión](properties_Object.md#expression-type) para las columnas de list box de tipo array (cadena, texto, número, fecha, hora, imagen, booleano u objeto).
 
-### Propiedades específicas de la columna
+### Propiedades específicas de columna {#column-specific-properties}
 
 [Formato Alfa](properties_Display.md#alpha-format) - [Color de fondo alternativo](properties_BackgroundAndBorder.md#alternate-background-color) - [Altura de línea automática](properties_CoordinatesAndSizing.md#automatic-row-height) - [Color de fondo](properties_BackgroundAndBorder.md#background-color--fill-color) - [Expresión de color de fondo](properties_BackgroundAndBorder.md#background-color-expression) - [Negrita](properties_Text.md#bold) - [Lista de selección](properties_DataSource.md#choice-list) - [Clase](properties_Object.md#css-class) - [Tipo de datos (selección y columna de list box colección)](properties_DataSource.md#data-type-list) - [Formato Fecha](properties_Display.md#date-format) - [Valores por defecto](properties_DataSource.md#default-list-of-values) - [Tipo de visualización](properties_Display.md#display-type) - [Editable](properties_Entry.md#enterable) - [Filtro de entrada](properties_Entry.md#entry-filter) - [Lista excluída](properties_RangeOfValues.md#excluded-list) - [Expresión](properties_DataSource.md#expression) - [Tipo de expresión (column de list box array)](properties_Object.md#expression-type) - [Fuente](properties_Text.md#font) - [Color de fuente](properties_Text.md#font-color) - [Alineación Horizontal](properties_Text.md#horizontal-alignment) - [Relleno Horizontal](properties_CoordinatesAndSizing.md#horizontal-padding) - [Itálica](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Ancho máximo](properties_CoordinatesAndSizing.md#maximum-width) - [Método](properties_Action.md#method) - [Ancho mínimo](properties_CoordinatesAndSizing.md#minimum-width) - [Multiestilo](properties_Text.md#multi-style) - [Formato número](properties_Display.md#number-format) - [Nombre de objeto](properties_Object.md#object-name) - [Formato Imagen](properties_Display.md#picture-format) - [Redimensionable](properties_ResizingOptions.md#resizable) - [Lista requerida](properties_RangeOfValues.md#required-list) - [Array de color de fondo de línea](properties_BackgroundAndBorder.md#row-background-color-array) - [Array de color de fuente de línea](properties_Text.md#row-font-color-) - [Array de estilo de línea](properties_Text.md#row-style-array) - [Guardar como](properties_DataSource.md#save-as) - [Expresión de estilo](properties_Text.md#style-expression) - [Texto cuando False/Texto cuando True](properties_Display.md#text-when-falsetext-when-true) - [Formato Hora](properties_Display.md#time-format) - [Truncar con elipsis](properties_Display.md#truncate-with-ellipsis) - [Subrayar](properties_Text.md#underline) - [Variable o Expresión](properties_Object.md#variable-or-expression) - Alineación
 Vertical - [Relleno vertical](properties_CoordinatesAndSizing.md#vertical-padding) - [Ancho](properties_CoordinatesAndSizing.md#width) - [Ajuste de palabras](properties_Display.md#wordwrap)
 
-### Eventos formulario soportados
+### Eventos de formulario soportados {#supported-form-events-1}
 
 | Evento formulario    | Propiedades adicionales devueltas (ver [Evento formulario](../commands/form-event.md) para las propiedades principales)                                                                     | Comentarios                                                                                                                                                           |
 | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -313,7 +313,7 @@ Además, tiene acceso a las propiedades específicas de los encabezados. En part
 
 Al momento de la ejecución, los eventos que se producen en un encabezado se generan en el método objeto de la columna de list box.
 
-Cuando el comando `OBJECT SET VISIBLE` se utiliza con un encabezado, se aplica a todos los encabezados, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
+Cuando el comando [`OBJECT SET VISIBLE`](../commands/object-set-visible) es usado con un encabezado, se aplica a todos los encabezados, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "header3";False)` ocultará todos los encabezados del objeto list box al que pertenece *header3* y no simplemente este encabezado.
 
 ### Propiedades específicas de los encabezados
 
@@ -333,7 +333,7 @@ Para cada pie de columna de list box, puede definir propiedades de texto estánd
 
 Al momento de la ejecución, los eventos que se producen en un pie de página se generan en el método objeto de la columna de list box.
 
-Cuando el comando `OBJECT SET VISIBLE` se utiliza con un pie de página, se aplica a todos los pies, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
+Cuando se utiliza el comando [`OBJECT SET VISIBLE`](../commands/object-set-visible) con un pie de página, se aplica a todos los pies de página, independientemente del elemento individual definido por el comando. Por ejemplo, `OBJECT SET VISIBLE(*; "footer3";False)` ocultará todos los pies de página del objeto list box al que pertenece *footer3* y no simplemente este pie de página.
 
 ### Propiedades específicas de los pies
 
@@ -422,7 +422,7 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
  End if
 ```
 
-> El comando `OBJECT SET SCROLL POSITION` se desplaza por las líneas del list box para que se muestre la primera línea seleccionada o una línea especificada.
+> El comando [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) desplaza las líneas del list box de modo que se muestre la primera línea seleccionada o una línea especificada.
 
 ### Personalizar la apariencia de las líneas seleccionadas
 
@@ -566,7 +566,7 @@ End if
 
 El valor de la [variable asociada al encabezado de una columna](properties_Object.md#variable-or-expression) permite gestionar una información adicional: la ordenación actual de la columna (lectura) y la visualización de la flecha de ordenación.
 
-- Si la variable se define en 0, la columna no se ordena y la flecha de ordenación no se muestra.\
+- Si la variable se define en 0, la columna no se ordena y la flecha de ordenación no se muestra.  
   ![](../assets/en/FormObjects/sorticon0.png)
 
 - Si la variable está en 1, la columna se ordena en orden ascendente y se muestra la flecha de ordenación.
@@ -651,14 +651,14 @@ La impresión de un list box en modo vista previa consiste en imprimir directame
 
 ### Modo avanzado
 
-En este modo, la impresión de los list box se realiza por programación, a través del comando `Print object` (se soportan los formularios proyecto y los formularios tabla). El comando `LISTBOX GET PRINT INFORMATION` se utiliza para controlar la impresión del objeto.
+En este modo, la impresión de los list box se realiza por programación, a través del comando `Print object` (se soportan los formularios proyecto y los formularios tabla). The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command is used to control the printing of the object.
 
 En este modo:
 
-- La altura del objeto list box se reduce automáticamente cuando el número de líneas a imprimir es inferior a la altura original del objeto (no se imprimen líneas "vacías"). Por el contrario, la altura no aumenta automáticamente en función del contenido del objeto. El tamaño del objeto efectivamente impreso puede obtenerse vía el comando `LISTBOX GET PRINT INFORMATION`.
+- La altura del objeto list box se reduce automáticamente cuando el número de líneas a imprimir es inferior a la altura original del objeto (no se imprimen líneas "vacías"). Por el contrario, la altura no aumenta automáticamente en función del contenido del objeto. The size of the object actually printed can be obtained via the [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command.
 - El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc.
-  Estos parámetros también incluyen la primera línea a imprimir: si llama al comando `OBJECT SET SCROLL POSITION` antes de lanzar la impresión, la primera línea impresa en el list box será la designada por el comando.
-- Un mecanismo automático facilita la impresión de los list box que contienen más líneas de las que es posible mostrar: se pueden realizar llamadas sucesivas a `Print object` para imprimir cada vez un nuevo conjunto de líneas. El comando `LISTBOX GET PRINT INFORMATION` puede utilizarse para comprobar el estado de la impresión durante la operación.
+  These parameters also include the first row to be printed: if you call the [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command before launching the printing, the first row printed in the list box will be the one designated by the command.
+- Un mecanismo automático facilita la impresión de los list box que contienen más líneas de las que es posible mostrar: se pueden realizar llamadas sucesivas a `Print object` para imprimir cada vez un nuevo conjunto de líneas. The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command can be used to check the status of the printing while it is underway.
 
 ## List box jerárquicos
 
@@ -674,7 +674,7 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 - Configurar manualmente los elementos jerárquicos utilizando la lista de propiedades del editor de formularios (o editar el formulario JSON).
 - Generar visualmente la jerarquía utilizando el menú emergente de gestión de list box, en el editor de formularios.
-- Utilice los comandos [LISTBOX SET HIERARCHY](../commands-legacy/listbox-set-hierarchy.md) y [LISTBOX GET HIERARCHY](../commands-legacy/listbox-get-hierarchy.md), descritos en el manual de *Referencia del Lenguaje 4D*.
+- Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) commands.
 
 #### Propiedades del List Box jerárquico
 
@@ -797,7 +797,7 @@ Representación jerárquica:
 
 > Si una o más líneas están ocultas porque sus padres están contraídos, ya no se seleccionan. Sólo se pueden seleccionar las líneas visibles (directamente o por desplazamiento). En otras palabras, las líneas no pueden estar ocultas y seleccionadas a la vez.
 
-Al igual que con las selecciones, el comando `LISTBOX GET CELL POSITION` devolverá los mismos valores para un list box jerárquico y un list box no jerárquico. Esto significa que en los dos ejemplos siguientes, `LISTBOX GET CELL POSITION` devolverá la misma posición: (3;2).
+As with selections, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) will return the same position: (3;2).
 
 *Representación no jerárquica:*
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -809,11 +809,11 @@ Cuando se ocultan todas las líneas de una subjerarquía, la línea de ruptura s
 
 #### Líneas de quiebre
 
-Si el usuario selecciona una línea de ruptura, `LISTBOX GET CELL POSITION` devuelve la primera ocurrencia de la línea en el array correspondiente. En el caso siguiente:
+If the user selects a break row, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns the first occurrence of the row in the corresponding array. En el caso siguiente:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... `LISTBOX GET CELL POSITION` devuelve (2;4). Para seleccionar una línea de ruptura por programación, deberá utilizar el comando `LISTBOX SELECT BREAK`.
+... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns (2;4). To select a break row by programming, you will need to use the [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) command.
 
 Las líneas de rotura no se tienen en cuenta en los arrays internos utilizados para gestionar el aspecto gráfico de los list box (estilos y colores). No obstante, es posible modificar estas características para las líneas de ruptura mediante los comandos de gestión gráfica de los objetos. Basta con ejecutar los comandos adecuados en los arrays que constituyen la jerarquía.
 
@@ -842,19 +842,19 @@ Resultado:
 
 Puede optimizar la visualización y gestión de los list box jerárquicos utilizando los eventos formulario `On Expand` y `On Collapse`.
 
-Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria. Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria.
+Un list box jerárquico se construye a partir del contenido de sus arrays, por lo que sólo puede mostrarse cuando todos estos arrays están cargados en memoria. This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the [`SELECTION TO ARRAY`](../commands/selection-to-array) command), not only because of the display speed but also the memory used.
 
-El uso de los eventos de formulario `On Expand` y `On Collapse` puede superar estas limitaciones: por ejemplo, puede mostrar sólo una parte de la jerarquía y cargar/descargar los arrays sobre la marcha, basándose en las acciones del usuario. En el contexto de estos eventos, el comando `LISTBOX GET CELL POSITION` devuelve la celda en la que el usuario hizo clic para desplegar o contraer una línea.
+El uso de los eventos de formulario `On Expand` y `On Collapse` puede superar estas limitaciones: por ejemplo, puede mostrar sólo una parte de la jerarquía y cargar/descargar los arrays sobre la marcha, basándose en las acciones del usuario. In the context of these events, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell where the user clicked in order to expand or collapse a row.
 
 En este caso, debe llenar y vaciar los arrays por código. Los principios que deben aplicarse son:
 
 - Cuando se muestra el list box, sólo se debe llenar el primer array. Sin embargo, debe crear un segundo array con valores vacíos para que el list box muestre los botones desplegar/contraer:
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- Cuando un usuario hace clic en un botón de expandir, puede procesar el evento `On Expand`. El comando `LISTBOX GET CELL POSITION` devuelve la celda en cuestión y permite construir la jerarquía adecuada: se rellena el primer array con los valores repetidos y el segundo con los valores enviados desde el comando `SELECTION TO ARRAY` y se insertan tantas filas como sean necesarias en el list box utilizando el comando `LISTBOX INSERT ROWS`.
+- Cuando un usuario hace clic en un botón de expandir, puede procesar el evento `On Expand`. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the [`SELECTION TO ARRAY`](../commands/selection-to-array) command and you insert as many rows as needed in the list box using the [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) command.
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- Cuando un usuario hace clic en un botón de contracción, puede procesar el evento `On Collapse`. El comando `LISTBOX GET CELL POSITION` devuelve la celda en cuestión: con el comando `LISTBOX DELETE ROWS` se eliminan tantas líneas como sean necesarias del list box.
+- Cuando un usuario hace clic en un botón de contracción, puede procesar el evento `On Collapse`. The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned: you remove as many rows as needed from the list box using the [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) command.
 
 ## Arrays de objetos en columnas
 

@@ -67,7 +67,7 @@ Lista de valores estáticos a serem usados como etiquetas para o objeto de contr
 
 ---
 
-## Item atual
+## Current item {#current-item}
 
 `List box de tipo collection ou entity selection`
 
@@ -87,7 +87,7 @@ Especifica uma variável ou expressão a que será atribuído o elemento/entidad
 
 ---
 
-## Posição item atual
+## Current item position {#current-item-position}
 
 `List box de tipo collection ou entity selection`
 
@@ -215,7 +215,7 @@ Uma expressão 4D a associar a uma coluna. Você pode entrar:
   - Imagem
   - Parâmetros
 
-Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
+Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.  
 Nos list boxes coleção/entity selection, Null ou tipos sem suporte são exibidos como cadeias vazias.\
 Ao usar coleções ou seleções de entidades, você geralmente declara a propriedade do elemento ou o atributo da entidade associado a uma coluna em uma expressão contendo [This](../commands/this.md). `This` es un comando 4D dedicado que devuelve una referencia al elemento actualmente procesado. Por ejemplo, puede utilizar `This.\<propertyPath>` donde `\<propertyPath>` es la ruta de una propiedad en la colección o una ruta de atributo de entidad para acceder al valor actual de cada elemento/entidad.
 Se você usar uma coleção de valores escalares, o 4D criará um objeto para cada elemento da coleção com uma única propriedade (denominada "value"), preenchida com o valor do elemento. Nesse caso, você usará `This.value` como expressão.
@@ -287,7 +287,7 @@ A utilização deste bem exige o cumprimento dos seguintes princípios:
 
 ---
 
-## Itens selecionados
+## Selected Items {#selected-items}
 
 `List box de tipo collection ou entity selection`
 

@@ -40,7 +40,7 @@ ds.webUser.save()
 
 See also [this example](gettingStarted.md#authenticating-users) from the "Getting started" chapter. 
 
-If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $urll and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
+If no custom authentication is provided, 4D calls the [`On Web Authentication`](#on-web-authentication) database method (if it exists). In addition to $url and $content, only the IP addresses of the browser and the server ($IPClient and $IPServer) are provided, the user name and password ($user and $password) are empty. The method must return **True** in $0 if the user is successfully authenticated, then the resquested resource is served, or **False** in $0 if the authentication failed.  
 
 > **Warning:** If the `On Web Authentication` database method does not exist, connections are automatically accepted (test mode). 
 
@@ -122,7 +122,7 @@ You must declare these parameters as follows:
 
 :::note
 
-All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-modes)).
+All the `On Web Authentication` database method's parameters are not necessarily filled in. The information received by the database method depends on the selected [authentication mode](#authentication-modes).
 
 :::
 
@@ -130,9 +130,9 @@ All the `On Web Authentication` database method's parameters are not necessarily
 
 The first parameter (`$url`) is the URL received by the server, from which the host address has been removed.
 
-Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $urll depending on the URL entered in the Web browser:
+Let’s take the example of an Intranet connection. Suppose that the IP address of your 4D Web Server machine is 123.45.67.89. The following table shows the values of $url depending on the URL entered in the Web browser:
 
-|URL entered in web browser|Value of parameter $urll|
+|URL entered in web browser|Value of parameter $url|
 |---|---|
 |123.45.67.89|/ |
 |http://123.45.67.89|/ |

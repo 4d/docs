@@ -5,7 +5,7 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphImage* ; graphNum | graphParams ; *xCatégories* {; *zValeurs*} {; *zValeurs2* ; ... ; *zValeursN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphImage* ; *graphNum*  ; *xCatégories* {; *zValeurs*} {; *zValeurs2* ; ... ; *zValeursN*} )<br/>**GRAPH** ( *graphImage* ; *graphParams* ; *xCatégories* {; *zValeurs*} {; *zValeurs2* ; ... ; *zValeursN*} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

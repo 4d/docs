@@ -1,6 +1,7 @@
 ---
 id: Table_theme
 title: Table
+sidebar_label: Table
 slug: /commands/theme/Table
 ---
 

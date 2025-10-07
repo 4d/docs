@@ -18,7 +18,7 @@ title: On Mouse Move
 
 `On Mouse Move` イベントは、*MouseX* および *MouseY* システム変数を更新します。
 
-`OBJECT SET VISIBLE` コマンドの使用や、[表示状態](FormObjects/properties_Display.md#表示状態) プロパティの設定によって非表示にされたオブジェクトでは、このイベントは生成されません。
+[`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドの使用や、[表示状態](FormObjects/properties_Display.md#表示状態) プロパティの設定によって非表示にされたオブジェクトでは、このイベントは生成されません。
 
 ### コールスタック
 

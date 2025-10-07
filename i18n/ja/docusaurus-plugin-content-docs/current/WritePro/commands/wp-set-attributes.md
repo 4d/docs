@@ -33,7 +33,7 @@ displayed_sidebar: docs
 
 - *attribObj* 引数を使用して、属性の名前と対応する値をオブジェクトのプロパティとして格納した一つのオブジェクトを渡すことができます。
 
-渡すことのできる属性の包括的な一覧と、そのスコープおよび対応する値については、*4D Write Pro属性* の章を参照してください。
+For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
 
 ## 例題 1
 
@@ -148,6 +148,6 @@ paper box の値はドキュメントあるいはセクションに対しての�
 
 ## 参照
 
-*4D Write Pro Attributes*\
-[WP GET ATTRIBUTES](../commands/wp-get-attributes.md)\
+[4D Write Pro Attributes](../4d-write-pro-attributes)  
+[WP GET ATTRIBUTES](../commands/wp-get-attributes.md)  
 [WP RESET ATTRIBUTES](../commands/wp-reset-attributes.md)

@@ -847,3 +847,17 @@ Des règles syntaxiques strictes doivent être observées pour que les fichiers 
 - Les commentaires du type "// mon commentaire", autorisés à l'intérieur des éléments `<macro>` dans les versions précédentes de 4D, ne sont pas compatibles avec la syntaxe XML. Les lignes de commentaires doivent respecter la forme standard `"<!-- mon commentaire -->"`.
 - Les symboles `<>` utilisés plus particulièrement pour les noms d'objets interprocess doivent être encodés. Par exemple, la variable `<>params` doit être écrite `&lt;>params`.
 - La balise de déclaration initiale `<macros>` pouvait être omise dans les versions précédentes de 4D. Il est maintenant obligatoire ; sinon, le fichier ne sera pas chargé.
+
+## Importer et exporter le code
+
+Vous pouvez importer et exporter une méthode ou le code d'une classe sous la forme d'un fichier. Ces commandes se trouvent dans le menu **Méthode** de l'[éditeur de code](../code-editor/write-class-method.md).
+
+- Lorsque vous sélectionnez la commande **Exporter la méthode...** , une boîte de dialogue standard d'enregistrement de fichier apparaît, vous permettant de choisir le nom, l'emplacement et le format du fichier d'export (voir ci-dessous). Comme pour l'impression, l'export ne tient pas compte de l'état contracté des structures de code et le code entier est exporté.
+- Lorsque vous sélectionnez la commande **Importer la méthode...**, une boîte de dialogue standard d'ouverture de fichier standard apparaît, vous permettant de désigner le fichier à importer. L'importation remplace le texte sélectionné dans la méthode. Pour remplacer une méthode existante par une méthode importée, il suffit de sélectionner l’ensemble du contenu de la méthode avant d’effectuer l’importation.
+
+La fonction d’import/export est multi-plate-forme : une méthode exportée sous macOS peut être importée sous Windows et inversement, 4D se charge de la conversion des caractères si nécessaire.
+
+4D peut exporter et importer les méthodes dans deux formats :
+
+- Méthode 4D (extension *.c4d*) : Dans ce format, les méthodes sont exportées sous forme encodée. Les noms d’objets sont transformés en références (tokens). Ce format permet notamment d’échanger des méthodes entre des applications 4D et des plug-ins dans langues différentes. En revanche, il n’est pas possible de les visualiser dans un éditeur de texte.
+- Texte (extension *.txt*) : Dans ce format, les méthodes sont exportées sous forme de texte uniquement. Dans ce cas, les méthodes sont lisibles à l'aide d'un éditeur de texte standard ou d'un outil de contrôle de sources.

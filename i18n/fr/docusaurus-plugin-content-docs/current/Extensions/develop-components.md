@@ -1,23 +1,31 @@
 ---
 id: develop-components
-title: Développement de composants
+title: Developing Extensions
 ---
+
+## Composants
 
 Un composant 4D est un ensemble de fonctions, méthodes et de formulaires 4D représentant une ou plusieurs fonctionnalité(s) qu’il est possible [d’installer et d'utiliser dans des applications 4D](Concepts/components.md). Par exemple, vous pouvez développer un composant 4D de courrier électronique gérant tous les aspects de l’envoi, la réception et le stockage d’emails au sein des applications 4D.
 
 Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component).
 
-## Définitions
+### Définitions
 
 - **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
 - **Composant** : Projet de matrice qui peut être compilé et [construit](Desktop/building.md#build-component), [installé dans l'application hôte](../Project/components.md) et dont le contenu est utilisé dans l'application hôte.
 
-## Principes de base
+:::note
+
+You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project
+
+:::
+
+### Principes de base
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md).
+- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md). You can also create a new component directly from the host, in which case it is immediately usable.
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds.md)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base de données suivantes peuvent être utilisées : [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md).
 - Un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données en utilisant des mécanismes de bases de données externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -25,11 +33,88 @@ La création et l’installation des composants 4D s’effectuent directement de
 
 :::note
 
-Le code d'un composant interprété peut être [modifié directement à partir du projet hôte](#editing-components-from-the-host) si le contexte est pris en charge.
+Le code d'un composant interprété peut être [modifié directement à partir du projet hôte](#editing-components) si le contexte est pris en charge.
 
 :::
 
-## Portée des commandes du langage
+## Creating and editing components from the host
+
+In interpreted mode, the 4D IDE allows you to create and edit components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
+
+### Creating components
+
+You can create a new component directly from the host project:
+
+- by using the **File > New > Component...** option from the File menu,
+- or by clicking the **New > Component...** button in the toolbar.
+
+This action opens a folder selection dialog where you choose where [the component package](../Project/components.md#package-folder) will be stored.
+
+- Default location: The first time you create a component, 4D suggests the **Components** folder inside the [project package](../Project/architecture.md#components). After that, your used last folder will be automatically remembered and preselected.
+- If you decide to store the component **next to the project package**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file.
+- If you decide to store the component **elsewhere**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file and its path is added to the [`environment4d.json`](../Project/components.md#environment4djson) file, using either a [relative or an absolute path](../Project/components.md#relative-paths-vs-absolute-paths). A relative path is used if the component is located within no more than two levels above as the `environment4d.json` file, or in its subfolders. Otherwise, an absolute path is used.
+
+:::note
+
+You cannot store a component **in the project package** but **outside the Components folder**.
+
+:::
+
+Once created, the component is immediately added to the project, accessible in the [Project dependencies](../Project/components.md#monitoring-project-dependencies) window, and available for editing.
+
+### Editing components
+
+You can edit a component code as long as the following conditions are met:
+
+- le projet hôte est exécuté en interprété,
+- le composant a été [chargé en mode interprété](../Project/components.md#interpreted-and-compiled-components) et le code source est disponible,
+- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils ne sont pas [téléchargés depuis GitHub](../Project/components.md#adding-a-github-dependency)).
+
+Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos composants dans l'éditeur de code du projet hôte à partir de deux endroits :
+
+- dans la section Méthodes composants de l'Explorateur (code partagé uniquement)
+- dans un onglet dédié au composant (tout le code)
+
+#### Modification du code partagé des composants
+
+Les [classes exposées](#sharing-of-classes) et les [méthodes partagées](#sharing-of-project-methods) de vos composants peuvent être modifiées à partir de l'onglet **Méthodes composant** de l'Explorateur.
+
+Une icône spécifique indique que le composant contient du code partagé) :<br/>
+![](../assets/en/Develop/editable-component.png)
+
+Sélectionnez **Modifier...** pour ouvrir le code de votre composant dans l'éditeur de code. Vous pouvez le modifier et le sauvegarder.
+
+#### Modification de la totalité du code des composants
+
+Vous pouvez modifier directement tout le code d'un composant chargé depuis le projet hôte dans un onglet dédié au composant, y compris les méthodes ou les classes qui ne sont pas partagées.
+
+L'option **Modifier...** est disponible lorsque vous cliquez avec le bouton droit de la souris sur le nom du composant dans l'onglet **Méthodes composant** de l'Explorateur.
+
+![edit-component](../assets/en/Project/Edit-component.png)
+
+Lorsque vous la sélectionnez, un onglet dédié est ajouté (ou activé s'il est déjà ajouté) dans l'explorateur. Dans cet onglet, les pages standard suivantes sont disponibles et donnent accès au contenu des composants :
+
+![tab-component](../assets/en/Project/tab-component.png)
+
+- Démarrage, y compris les dossiers, les méthodes, les classes et (en prévisualisation uniquement) les formulaires
+- Méthodes projet
+- Méthodes base ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- Classes
+- Méthodes formulaire projet
+- Commandes et constantes
+- Plug-ins
+- Trash
+
+![tab-component](../assets/en/Project/tab-component.gif)
+
+Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vous pouvez exécuter les actions suivantes :
+
+- ajouter, dupliquer, supprimer, modifier/sauvegarder les [méthodes et classes](../Project/code-overview.md)
+- prévisualiser le code, afficher/modifier la [documentation](../Project/documentation.md), afficher/modifier les [propriétés des méthodes](../Project/code-overview.md#project-method-properties),
+- exécuter des méthodes,
+- restaurer à partir de la corbeille ou vider la corbeille.
+
+### Portée des commandes du langage
 
 Hormis les [commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.
 
@@ -68,7 +153,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 - La commande `Current form table` retourne `Nil` lorsqu’elle est appelée dans le contexte d’un formulaire projet. Par conséquent, elle ne peut pas être utilisée dans un composant.
 - Les commandes de langage de définition de données SQL (`CREATE TABLE`, `DROP TABLE`, etc.) ne peuvent pas être utilisées dans le projet de composant. Elles sont néanmoins prises en charge avec des bases de données externes (voir la commande SQL `CREATE DATABASE`).
 
-## Partage des méthodes projet
+### Partage des méthodes projet
 
 Toutes les méthodes projet d’un projet utilisé comme matrice sont par définition incluses dans le composant (le projet est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées dans le composant.
 
@@ -95,14 +180,14 @@ component_method("host_method_name")
 EXECUTE METHOD($param)
 ```
 
-> Vous pouvez compiler ou effectuer une vérification syntaxique dans une base hôte interprétée qui contient des composants interprétés si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il n'est pas possible d'effectuer l'opération.\
+> Vous pouvez compiler ou effectuer une vérification syntaxique dans une base hôte interprétée qui contient des composants interprétés si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il n'est pas possible d'effectuer l'opération.  
 > N'oubliez pas qu'une méthode interprétée peut appeler une méthode compilée, mais pas l'inverse, sauf via l'utilisation des commandes `EXECUTE METHOD` et `EXECUTE FORMULA`.
 
-## Partage des classes
+### Partage des classes
 
 Par défaut, les classes de composants ne peuvent pas être appelées à partir de l'éditeur de code 4D du projet hôte. Si vous voulez que vos classes de composants soient exposées dans le projet hôte et ses composants chargés, vous devez **déclarer un namespace de composant**. En outre, vous pouvez contrôler la manière dont les classes de composants sont suggérées dans l'éditeur de code de l'hôte.
 
-### Déclaration du namespace
+#### Déclaration du namespace
 
 Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
 
@@ -135,7 +220,7 @@ Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout 
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
 
-### Classes cachées
+#### Classes cachées
 
 Comme dans tout projet, vous pouvez créer des classes et des fonctions cachées dans le composant en préfixant les noms par un caractère de soulignement ou ("_"). Lorsqu'un [namespace est défini](#declaring-the-component-namespace), les classes et fonctions cachées du composant n'apparaîtront pas comme des suggestions lors de l'utilisation de la complétion de code.
 
@@ -146,60 +231,6 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > Les fonctions non cachées à l'intérieur d'une classe cachée apparaissent comme des suggestions lorsque vous utilisez la complétion de code avec une classe qui en [hérite](../Concepts/classes.md#inheritance). Par exemple, si un composant possède une classe `Teacher` qui hérite d'une classe `_Person`, la complétion de code pour `Teacher` suggère des fonctions non cachées de `_Person`.
-
-## Modification des composants à partir de l'hôte
-
-Pour faciliter la mise au point des composants dans le contexte réel des projets hôtes, vous pouvez modifier et sauvegarder directement le code d'un composant chargé à l'aide de l'IDE 4D depuis un projet hôte interprété. Les modifications peuvent être immédiatement testées dans le projet, sans avoir à le redémarrer.
-
-Le code du composant est modifiable lorsque les conditions suivantes sont remplies :
-
-- le projet hôte est exécuté en interprété,
-- le composant a été [chargé en mode interprété](../Project/components.md#interpreted-and-compiled-components) et le code source est disponible,
-- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils ne sont pas [téléchargés depuis GitHub](../Project/components.md#adding-a-github-dependency).
-
-Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos composants dans l'éditeur de code du projet hôte à partir de deux endroits :
-
-- dans la section Méthodes composants de l'Explorateur (code partagé uniquement)
-- dans un onglet dédié au composant (tout le code)
-
-### Modification du code partagé des composants
-
-Les [classes exposées](#sharing-of-classes) et les [méthodes partagées](#sharing-of-project-methods) de vos composants peuvent être modifiées à partir de l'onglet **Méthodes composant** de l'Explorateur.
-
-Une icône spécifique indique que le composant contient du code partagé) :<br/>
-![](../assets/en/Develop/editable-component.png)
-
-Sélectionnez **Modifier...** pour ouvrir le code de votre composant dans l'éditeur de code. Vous pouvez le modifier et le sauvegarder.
-
-### Modification de la totalité du code des composants
-
-Vous pouvez modifier directement tout le code d'un composant chargé depuis le projet hôte dans un onglet dédié au composant, y compris les méthodes ou les classes qui ne sont pas partagées.
-
-L'option **Modifier...** est disponible lorsque vous cliquez avec le bouton droit de la souris sur le nom du composant dans l'onglet **Méthodes composant** de l'Explorateur.
-
-![edit-component](../assets/en/Project/Edit-component.png)
-
-Lorsque vous la sélectionnez, un onglet dédié est ajouté (ou activé s'il est déjà ajouté) dans l'explorateur. Dans cet onglet, les pages standard suivantes sont disponibles et donnent accès au contenu des composants :
-
-![tab-component](../assets/en/Project/tab-component.png)
-
-- Démarrage, y compris les dossiers, les méthodes, les classes et (en prévisualisation uniquement) les formulaires
-- Méthodes projet
-- Méthodes base ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
-- Classes
-- Méthodes formulaire projet
-- Commandes et constantes
-- Plug-ins
-- Trash
-
-![tab-component](../assets/en/Project/tab-component.gif)
-
-Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vous pouvez exécuter les actions suivantes :
-
-- ajouter, dupliquer, supprimer, modifier/sauvegarder les [méthodes et classes](../Project/code-overview.md)
-- prévisualiser le code, afficher/modifier la [documentation](../Project/documentation.md), afficher/modifier les [propriétés des méthodes](../Project/code-overview.md#project-method-properties),
-- exécuter des méthodes,
-- restaurer à partir de la corbeille ou vider la corbeille.
 
 ## Complétion de code pour les composants compilés
 
@@ -212,7 +243,7 @@ Un fichier de syntaxe (format JSON) est alors automatiquement créé lors de la 
 
 Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les ressources des classes et des méthodes 'exposed' ne sont pas générées, même si l'option de fichier de syntaxe est cochée.
 
-## Passage de variables
+### Passage de variables
 
 Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
 
@@ -275,11 +306,11 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
      If(monptr1=monptr2) //Ce test retourne Faux
 ```
 
-## Gestion des erreurs
+### Gestion des erreurs
 
 Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à l'application en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
-## Accès aux tables du projet hôte
+### Accès aux tables du projet hôte
 
 Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent au projet hôte et au composant de communiquer. Par exemple, voici une méthode pouvant être appelée depuis un composant :
 
@@ -305,11 +336,11 @@ SAVE RECORD($tablepointer-
 
 > Dans le contexte d'un composant, 4D suppose qu'une référence à un formulaire table est une référence au formulaire table hôte (car les composants ne peuvent pas avoir de tables)
 
-## Utilisation de tables et de champs
+### Utilisation de tables et de champs
 
 Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D du projet utilisé comme matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
-### Exemple
+#### Exemple
 
 Le code suivant est inclus dans un composant et effectue trois actions élémentaires avec une base de données externe :
 
@@ -385,7 +416,7 @@ Lecture dans une base de données externe :
  End SQL
 ```
 
-## Utilisation de formulaires
+### Utilisation de formulaires
 
 - Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans le projet matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table du projet hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
@@ -396,7 +427,7 @@ Lecture dans une base de données externe :
 
 > Dans le contexte d'un composant, tout formulaire projet référencé doit appartenir au composant. Par exemple, à l'intérieur d'un composant, le fait de référencer un formulaire projet hôte à l'aide de `DIALOG` ou de `Open form window` déclenchera une erreur.
 
-## Utilisation de ressources
+### Utilisation de ressources
 
 Les composants peuvent utiliser des ressources situées dans le dossier Ressources du composant.
 
@@ -404,7 +435,7 @@ Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents 
 
 Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
 
-## Exécution du code d'initialisation
+### Exécution du code d'initialisation
 
 Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de la fermeture de la base hôte, par exemple pour charger et/ou sauvegarder les préférences ou les états utilisateur liés au fonctionnement de la base hôte.
 
@@ -412,7 +443,7 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 > Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'option [**Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés du projet.
 
-## Info.plist
+### Info.plist
 
 Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#loading-components).
 
@@ -461,7 +492,7 @@ Sous macOS, les informations sont disponibles dans le Finder :
 
 ![](../assets/en/Develop/infoplist-component.png)
 
-## Protection des composants : la compilation
+### Protection des composants : la compilation
 
 Par défaut, tout le code d’un projet utilisé comme matrice installé comme composant est virtuellement visible depuis le projet hôte. En particulier :
 
@@ -474,6 +505,47 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 - Les méthodes projet, classes et fonctions partagées peuvent être appelées dans les méthodes du projet hôte et sont également visibles dans la page Méthodes de l'explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
-## Partager vos composants sur GitHub
+### Partager vos composants sur GitHub
 
 Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.
+
+## Plug-ins
+
+### Pourquoi un plug-in ?
+
+Bien que 4D propose des centaines de méthodes intégrées permettant de manipuler des objets et des enregistrements, et d'implémenter une interface utilisateur, une utilisation ou des fonctionnalités spéciales (parfois dépendantes de la plate-forme) peuvent être nécessaires : l'une peut nécessiter ODBC sous Windows, une autre peut nécessiter des services Apple sous macOS, et un autre peut souhaiter implémenter des outils statistiques spécifiques, une connexion à un réseau social, une plateforme de paiement, un accès à un fichier sur le réseau, une interface utilisateur spéciale ou une structure d'image privée.
+
+Il est évident que couvrir tous les domaines des systèmes d'exploitation macOS et Windows au moyen de commandes 4D mènerait certainement à un produit contenant des milliers de commandes et, dans le même temps, la plupart des utilisateurs n'auraient pas besoin d'un si grand ensemble de fonctionnalités. De plus, la création d'un outil aussi complet rendrait l'environnement 4D incroyablement complexe et demanderait des mois d'étude à la plupart des utilisateurs avant de pouvoir obtenir des résultats utiles.
+
+La nature modulaire de l'environnement 4D permet la création d'applications de base, mais n'exclut pas le développement de systèmes extrêmement complexes. L'architecture du plug-in 4D ouvre l'environnement 4D à tout type d'application ou d'utilisateur. Les plug-ins 4D multiplient la puissance et la productivité de cette application ou de l'utilisateur.
+
+### Qu'est-ce qu'un plug-in et à quoi sert-il ?
+
+Un plug-in est un morceau de code que 4D lance au démarrage. Il ajoute des fonctionnalités à 4D et augmente ainsi sa capacité.
+
+Habituellement, un plug-in fait des choses :
+
+- Que 4D ne peut pas effectuer (c'est-à-dire une technologie de plate-forme spécifique),
+- Qui sera très difficile à écrire en utilisant uniquement 4D,
+- Qui sont uniquement disponibles en tant que point d'entrée de plug-in
+
+Un plug-in contient généralement un ensemble de routines données au développeur 4D. Il peut gérer une zone externe et exécuter un processus externe.
+
+- Une **routine de plug-in** est une routine écrite en langage natif (généralement C ou C ++) qui déclenche une action.
+- Une **zone externe** est une partie d'un formulaire pouvant presque tout afficher et interagir avec l'utilisateur si nécessaire.
+- Un **processus externe** est un processus qui s'exécute seul, généralement en boucle, et qui fait quasiment tout ce qu'il souhaite. Tout le code de process appartient au plug-in, 4D est simplement présent pour recevoir/envoyer des événements au process.
+
+### Note importante
+
+Un plug-in peut être très simple, avec une seule routine effectuant une très petite tâche, ou très complexe, impliquant une centaine de routines et de domaines. Cependant, chaque développeur de plug-in doit se rappeler qu'un plug-in est un "échantillon" de code. C'est le plug-in qui s'exécute dans 4D, et non l'inverse. En tant que morceau de code, c'est l'hôte de 4D; ce n'est pas une application autonome. Il partage le temps CPU et la mémoire avec 4D et d'autres plug-ins. Il doit donc s'agir d'un code poli, qui utilise exactement ce qui est nécessaire à son fonctionnement. Par exemple, dans les longues boucles, un plug-in doit appeler `PA_Yield ()` pour donner du temps au planificateur 4D, à moins que sa tâche ne soit critique aussi bien pour lui que pour l'application.
+
+### Comment créer un plug-in ?
+
+4D fournit sur GitHub un [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK) open-source, contenant l'API 4D Plugin et le 4D Plugin Wizard :
+
+- l'[**API 4D Plugin**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), écrite en C, propose plus de 400 fonctions qui vous aident à créer facilement vos propres plug-ins pour ajouter de nouvelles fonctionnalités à votre application 4D. Les fonctions de l'API 4D Plug-in gèrent toutes les interactions entre l'application 4D et votre plug-in.
+- L'assistant [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) est un outil essentiel qui simplifie la tâche de développer des plugins 4D. Il écrit le code dont 4D a besoin pour interagir correctement avec un plug-in et le charger, afin de vous concentrer sur votre propre code.
+
+### Partager des plug-ins
+
+Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos plug-ins, notamment sur la [plateforme GitHub](https://github.com/topics/4d-plugin). Afin d'être correctement référencé, nous vous recommandons d'utiliser la rubrique **`4d-plugin`**.

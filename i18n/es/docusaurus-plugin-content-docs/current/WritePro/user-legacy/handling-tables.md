@@ -1,25 +1,24 @@
 ---
 id: handling-tables
-title: Manejo de tablas
+title: Tablas
 displayed_sidebar: docs
+slug: /WritePro/tables
 ---
-
-#### Manejo de tablas 
 
 Los documentos 4D Write Pro pueden contener tablas. Las tablas 4D Write Pro son creadas y definidas por programación, pero su contenido puede ser modificado y manejado por el usuario. Varios atributos de tablas 4D Write Pro son editables, incluyendo la altura de la la línea, la alineación, los márgenes, el estilo del texto, el color o los bordes.
 
-![](../../assets/en/WritePro/pict3307937.EN.png)
+![](../../assets/en/WritePro/pict3307937.en.png)
 
 **Nota:** dado que las tablas 4D Write Pro pueden llenarse por programación, pueden contener un gran número de columnas y filas. Tenga en cuenta que las tablas muy grandes afectarán al rendimiento, especialmente si se muestran en pantalla. Ver también [esta entrada de blog](https://blog.4d.com/4d-write-pro-tables-without-limit) para más información.
 
-#### Crear una tabla 
+## Crear una tabla 
 
 Las tablas 4D Write Pro se crean mediante una llamada al comando [WP Insert table](../commands/wp-insert-table). Luego puede añadir líneas utilizando el comando [WP Table append row](../commands/wp-table-append-row).
 
 **Nota:** un usuario puede crear una tabla al copiar y pegar un rango de celdas:  
-![](../../assets/en/WritePro/pict3307941.EN.png)
+![](../../assets/en/WritePro/pict3307941.en.png)
 
-#### Edición de tablas 
+## Edición de tablas 
 
 El contenido de las celdas se puede agregar por programación utilizando el comando [WP Table append row](../commands/wp-table-append-row).
 
@@ -29,7 +28,7 @@ Usando la tecla **Retorno de carro** dentro de una celda crea un nuevo párrafo 
 
 Tenga en cuenta que el ancho de la celda es fijo: cuando un usuario escribe texto o pega una imagen, la altura de la fila se amplía automáticamente si es necesario y el texto se ajusta automáticamente:
 
-![](../../assets/en/WritePro/pict3308424.EN.png)
+![](../../assets/en/WritePro/pict3308424.en.png)
 
 Los usuarios también pueden seleccionar columnas, filas o celdas y aplicar los atributos disponibles con respecto al estilo del texto, colores, alineación, etc. utilizando el menú emergente integrado o cualquier interfaz personalizada. 4D Write Pro ofrece varios comandos para seleccionar cualquier parte de una tabla:
 
@@ -47,33 +46,33 @@ Cuando se aplican atributos diferentes a elementos concurrentes de una tabla, se
 2. Se renderizan las líneas (sobreescribir atributos de tabla)
 3. Se renderizan las celdas/columnas (atributos de línea sobreescritos).
 
-##### Redimensionar columnas 
+### Redimensionar columnas 
 
 El ancho de las columnas de la tabla se puede modificar arrastrando el separador de columnas hacia la izquierda o hacia la derecha. El cursor cambia para indicar que se puede mover horizontalmente y la línea vertical se muestra en la regla:
 
-![](../../assets/en/WritePro/pict4619596.EN.png)
+![](../../assets/en/WritePro/pict4619596.en.png)
 
 Cambiar el tamaño de las columnas genera un evento formulario On After Edit.
 
 Para cambiar el tamaño de una columna, haga clic en el separador de columna y arrástrelo hacia la izquierda o hacia la derecha. El tamaño mínimo de la columna es de 8 puntos. Si la columna adyacente a la derecha alcanza el tamaño mínimo, todas las columnas a la derecha se moverán. Si la primera columna o una columna adyacente a la izquierda alcanza el tamaño mínimo, no se puede cambiar el tamaño en esa dirección.  
   
-![](../../assets/en/WritePro/pict4619694.EN.png)
+![](../../assets/en/WritePro/pict4619694.en.png)
 
 Si presiona la tecla **Mayús** mientras cambia el tamaño de una columna, el tamaño de la columna adyacente a la derecha no se modificará.  
   
-![](../../assets/en/WritePro/pict4619865.EN.png)  
+![](../../assets/en/WritePro/pict4619865.en.png)  
   
 **Nota**: la propiedad Editable debe estar habilitada para que el documento 4D Write Pro permita cambiar el tamaño de la columna.
 
-##### Fusión y división de celdas 
+### Fusión y división de celdas 
 
 Con 4D Write Pro, puede dividir y combinar celdas en una tabla. Fusionar celdas es combinar dos o más celdas adyacentes de una tabla situadas en la misma línea o columna en una única celda. Dividir celdas es tomar celdas ya fusionadas y separarlas en múltiples celdas adyacentes en la misma línea o columna. Las celdas pueden fusionarse utilizando el comando [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) o la acción estándar **cell/merge**, y dividirse utilizando el comando [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) o la acción estándar **cell/split**.
 
-![](../../assets/en/WritePro/pict6421031.EN.png)
+![](../../assets/en/WritePro/pict6421031.en.png)
 
 Las celdas de la tabla se pueden fusionar: 
 
-![](../../assets/en/WritePro/pict6441966.EN.png)
+![](../../assets/en/WritePro/pict6441966.en.png)
 
 **Ejemplo de fusión de celdas utilizando el lenguaje:**
 
@@ -90,10 +89,10 @@ Las celdas de la tabla se pueden fusionar:
 Los datos existentes de las celdas originales se concatenan en la celda fusionada resultante.
 
 antes  
-![](../../assets/en/WritePro/pict6421340.EN.png)
+![](../../assets/en/WritePro/pict6421340.en.png)
 
 después   
-![](../../assets/en/WritePro/pict6421342.EN.png)
+![](../../assets/en/WritePro/pict6421342.en.png)
 
 **Ejemplo de división de celdas utilizando el lenguaje:**
 
@@ -110,10 +109,10 @@ después
 Los datos de la celda ya fusionada se mantienen todos en la primera celda resultante (arriba a la izquierda) después de la división, las otras celdas resultantes de la división permanecen vacías.
 
 antes  
-![](../../assets/en/WritePro/pict6421342.EN.png)
+![](../../assets/en/WritePro/pict6421342.en.png)
 
 después  
-![](../../assets/en/WritePro/pict6421344.EN.png)
+![](../../assets/en/WritePro/pict6421344.en.png)
 
 **Importante**: 
 
@@ -137,10 +136,10 @@ Ejemplo:
 ```
 
 antes  
-![](../../assets/en/WritePro/pict6421342.EN.png)
+![](../../assets/en/WritePro/pict6421342.en.png)
 
 después  
-![](../../assets/en/WritePro/pict6421356.EN.png)
+![](../../assets/en/WritePro/pict6421356.en.png)
 
 en este ejemplo también puede pasar $cell2 o $cell3 en lugar de $cell1 como:  
 
@@ -156,7 +155,7 @@ y tendrá el mismo resultado que utilizando $cell1 porque $cell1, $cell2, y $cel
 
 Sin embargo, si se combinan un número x de líneas o columnas completas, los índices de las siguientes líneas o columnas se reducen en x. 
 
-#### Paginación de tablas 
+## Paginación de tablas 
 
 Cuando se muestran en modo Página o Borrador (o en el contexto de la impresión de un documento), las tablas 4D Write Pro pueden dividirse:
 
@@ -183,7 +182,7 @@ La paginación de la tabla se puede controlar por programación o por el usuario
 
 Cuando se inserta un salto de página o un salto de columna mediante una acción estándar o el menú contextual, se agrega antes del contenido seleccionado: la primera fila de la selección se mueve al principio de la siguiente página o columna. Por ejemplo:
 
-![](../../assets/en/WritePro/pict3893246.EN.png) \===> ![](../../assets/en/WritePro/pict3893248.EN.png)
+![](../../assets/en/WritePro/pict3893246.en.png) \===> ![](../../assets/en/WritePro/pict3893248.en.png)
 
 **Notas:** 
 
@@ -191,11 +190,11 @@ Cuando se inserta un salto de página o un salto de columna mediante una acción
 * Las tablas no se pueden dividir en diferentes secciones. Insertar un salto de sección en una tabla moverá toda la tabla a la nueva sección.
 * Los saltos dentro de las líneas no están permitidos cuando las *Líneas de arrastre* están activadas.
 
-#### Encabezados repetidos 
+## Encabezados repetidos 
 
 4D Write Pro le permite definir hasta cinco líneas de encabezado por tabla. Las líneas de encabezado seleccionadas se repetirán en cada columna o página cuando se produzca un salto de columna o de página.
 
-![](../../assets/en/WritePro/pict5859437.EN.png)
+![](../../assets/en/WritePro/pict5859437.en.png)
 
 Los encabezados de la tabla son la(s) primera(s) línea(s) de la tabla. Para definir las líneas de encabezado, puede:
 
@@ -204,7 +203,7 @@ Los encabezados de la tabla son la(s) primera(s) línea(s) de la tabla. Para def
 
 Si designa más de cinco líneas como encabezado (o si resulta de una inserción de líneas en un encabezado existente), 4D Write Pro sólo utiliza las cinco primeras líneas como encabezado. Si elimina la(s) línea(s) definida(s) en el encabezado, el número de líneas del encabezado disminuye.
 
-#### Tabla fuentes de datos 
+## Tabla fuentes de datos 
 
 Puede asignar un objeto fórmula como fuente de datos para una tabla y acceder a los valores resultantes desde la tabla utilizando *Expresiones con This* (ver más abajo). La fórmula de la fuente de datos es procesada por 4D Write Pro cuando se calculan las fórmulas (por ejemplo, cuando se abre el documento, cuando se llama al comando [WP COMPUTE FORMULAS](../commands/wp-compute-formulas), etc.). Esta función aprovecha los contextos de datos (ver [WP SET DATA CONTEXT](../commands/wp-set-data-context)).
 
@@ -225,16 +224,16 @@ Para eliminar una fuente de datos de una tabla, utilice el comando [WP RESET ATT
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-##### Crear una tabla con fuente de datos 
+### Crear una tabla con fuente de datos 
 
 Un diseño de tabla basado en una fuente de datos que contiene las siguientes líneas:
 
 | **Icono**                                                     | **Líneas <br/>**      | **Número** | **Obligatorio** | **Condiciones**                                                    | **Descripción**                                                                                                                                                                                                                                                                                                                                                                                                    |
 | ------------------------------------------------------------- | ----------------------------- | ---------- | --------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../../assets/en/WritePro/pict6260026.EN.png)              | Líneas de encabezado          | hasta 5    | \-              | \-                                                                 | Encabezado de tabla estándar, ver *Encabezados repetidos*                                                                                                                                                                                                                                                                                                                                                          |
-| ![](../../assets/en/WritePro/pict6260030.EN.png)<br/> | Línea de datos                | 1          | sí              | La fórmula de la fuente de datos debe devolver elementos iterables | Si la tabla no tiene líneas de encabezado y/o líneeas de ruptura, la línea de datos es la primera línea de la tabla; en caso contrario, es la primera línea después del encabezado o las líneas de ruptura. Suele llenarse con expresiones que utilizan **This** (por ejemplo, *This.item.value*) que dan acceso a los datos procesados cuando el documento está modo *Mostrar valores* y la línea está duplicada. |
-| ![](../../assets/en/WritePro/pict6260033.EN.png)              | Líneas de ruptura ordenadas   | hasta 5    | \-              | La fórmula de la fuente de datos devuelve elementos iterables      | La línea o líneas que aparecen antes o después de la línea de datos. Ver *Líneas de ruptura*                                                                                                                                                                                                                                                                                                                       |
-| ![](../../assets/en/WritePro/pict6260036.EN.png)<br/> | Líneas de arrastre inferior   | 1          | \-              | La fórmula de la fuente de datos debe devolver elementos iterables | La primera línea que sigue a la línea de datos o las líneas de ruptura. Ver *Líneas de arrastre*                                                                                                                                                                                                                                                                                                                   |
+| ![](../../assets/en/WritePro/pict6260026.en.png)              | Líneas de encabezado          | hasta 5    | \-              | \-                                                                 | Encabezado de tabla estándar, ver *Encabezados repetidos*                                                                                                                                                                                                                                                                                                                                                          |
+| ![](../../assets/en/WritePro/pict7148495.en.png)<br/> | Línea de datos                | 1          | sí              | La fórmula de la fuente de datos debe devolver elementos iterables | Si la tabla no tiene líneas de encabezado y/o líneeas de ruptura, la línea de datos es la primera línea de la tabla; en caso contrario, es la primera línea después del encabezado o las líneas de ruptura. Suele llenarse con expresiones que utilizan **This** (por ejemplo, *This.item.value*) que dan acceso a los datos procesados cuando el documento está modo *Mostrar valores* y la línea está duplicada. |
+| ![](../../assets/en/WritePro/pict6260033.en.png)              | Líneas de ruptura ordenadas   | hasta 5    | \-              | La fórmula de la fuente de datos devuelve elementos iterables      | La línea o líneas que aparecen antes o después de la línea de datos. Ver *Líneas de ruptura*                                                                                                                                                                                                                                                                                                                       |
+| ![](../../assets/en/WritePro/pict6260036.en.png)<br/> | Líneas de arrastre inferior   | 1          | \-              | La fórmula de la fuente de datos debe devolver elementos iterables | La primera línea que sigue a la línea de datos o las líneas de ruptura. Ver *Líneas de arrastre*                                                                                                                                                                                                                                                                                                                   |
 | ![](../../assets/en/WritePro/pict7014959.en.png)              | Línea de marcador de posición | 1          | \-              | La fuente de datos debe estar definida                             | La fila de marcador de posición se mostrará en lugar de la fila de datos y las filas de interrupción (si las hay) cuando la fuente de datos esté vacía y el atributo "Mostrar fila de marcador de posición" esté activado en la tabla mediante la acción estándar *emptyDatasource* o la constante *wk empty datasource*. La fila del marcador de posición aparece inmediatamente antes de las demás filas.        |
 | |  Otras líneas                                               | ilimitada                     | \-         | \-              | Líneas estándar (no duplicadas)                                    |                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
@@ -252,11 +251,11 @@ En todo caso, la siguiente instrucción devuelve el número real de líneas:
  WP GET ATTRIBUTES($table;wk row count;$vcount) //31 para el ejemplo arriba
 ```
 
-##### Líneas de arrastre 
+### Líneas de arrastre 
 
 Las tablas basadas en fuentes de datos soportan **líneas de arrastre inferiores** que se muestran automáticamente en la parte inferior de cada página/columna cuando la tabla se divide en más de una página/columna. Una línea de arrastre puede mostrar información adicional basada en los elementos mostrados/impresos anteriormente, gracias a la expresión **This.previousItems** (ver *Expresiones con This*). Esta función permite, por ejemplo, añadir líneas de subtotal.
 
-![](../../assets/en/WritePro/pict6022144.EN.png)
+![](../../assets/en/WritePro/pict6022144.en.png)
 
 Se muestran las líneas de arrastre:
 
@@ -275,7 +274,7 @@ Para crear líneas de arrastre:
 
 **Nota:** no se permiten saltos de página dentro de las líneas cuando la función de traspaso de líneas está activada (ver *Paginación de tablas*). Las opciones correspondientes, si se definen, se ignoran.
 
-##### Líneas de ruptura 
+### Líneas de ruptura 
 
 Las tablas basadas en fuentes de datos soportan una o varias **Líneas de ruptura de orden** que pueden mostrarse antes o después de la línea de datos. Las **Líneas de ruptura de orden** le ayudan a dividir visualmente los elementos de la fuente de datos ya ordenados en la tabla en diferentes partes basadas en un valor de fórmula calculado.
 
@@ -300,7 +299,7 @@ Para crear líneas de ruptura:
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-##### Expresiones con This 
+### Expresiones con This 
 
 Cuando se utiliza en una fórmula dentro de la tabla, la palabra clave **This** da acceso a diferentes datos según el contexto:
 
@@ -320,25 +319,25 @@ En cualquier otro contexto, estas expresiones devolverán *undefined*.
 
 **Nota:** para más información sobre la inserción de fórmulas, ver [WP INSERT FORMULA](../commands/wp-insert-formula).
 
-##### Trabajar con una tabla fuente de datos 
+### Trabajar con una tabla fuente de datos 
 
 Cuando se llena una tabla desde una fuente de datos, las filas se crean automáticamente cuando se calculan las referencias. Se pueden insertar o eliminar líneas, editar el contenido de las celdas, cambiar el estilo, etc:
 
-![](../../assets/en/WritePro/pict5907021.EN.png)
+![](../../assets/en/WritePro/pict5907021.en.png)
 
 Sin embargo, tenga en cuenta que si la fuente de datos de la tabla se vuelve a calcular, toda modificación realizada en las líneas calculadas (excepto en la primera línea) se pierde. Por otro lado, como la primera línea es la línea de datos, cualquier modificación realizada en esta línea se propagará a todas las líneas si se vuelve a calcular la fuente de datos de la tabla. Lo mismo ocurre con las líneas de interrupción, todas las modificaciones realizadas en las líneas de ruptura calculadas se pierden, excepto en el caso de las líneas de ruptura de plantilla (que pueden estar situadas al final o al principio de la tabla).
 
 Por ejemplo:
 
-![](../../assets/en/WritePro/pict5907023.EN.png)
+![](../../assets/en/WritePro/pict5907023.en.png)
 
 Después de volver a calcular las expresiones:
 
-![](../../assets/en/WritePro/pict5907026.EN.png)
+![](../../assets/en/WritePro/pict5907026.en.png)
 
 Cuando el cursor se inserta en una celda de una tabla llenada con una fuente de datos, aparece un icono de advertencia a la izquierda junto con un consejo que muestra información:
 
-![](../../assets/en/WritePro/pict5907030.EN.png)
+![](../../assets/en/WritePro/pict5907030.en.png)
 
 Cuando las fórmulas se muestran como referencias o cuando se guarda el documento, sólo se muestra/guarda la primera fila como plantilla (si las fórmulas no están congeladas).
 

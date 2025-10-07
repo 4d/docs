@@ -1,37 +1,13 @@
 ---
 id: overview
-title: Extensiones
+title: Extendiendo aplicaciones 4D
 ---
 
-[La arquitectura de los proyectos](../Project/architecture.md) 4D es modular. Puede ofrecer funcionalidades adicionales a sus proyectos 4D instalando [**componentes**](Concepts/components.md) y [**plug-ins**](../Concepts/plug-ins.md). Los componentes están hechos de código 4D, mientras que los plug-ins pueden crearse utilizando cualquier lenguaje.
+The 4D architecture is open and can be extended in different ways. Si necesita una funcionalidad que no está disponible de forma nativa en 4D, siempre puede integrarla en su aplicación de diversas maneras, por ejemplo:
 
-## Componentes 4D preinstalados
-
-4D incluye por defecto un conjunto de componentes 4D integrados, que puede ver en el tema **Métodos componentes** de la página Métodos del Explorador. Todos estos componentes también se pueden encontrar en el [repositorio github 4D](https://github.com/4d).
-
-| Componente                                                          | Descripción                                                                                                                                                                   | Principales funcionalidades                                                                                                             |
-| ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [4D AiIKit](https://github.com/4d/4D-AIKit)                         | Conjunto de clases a conectar con las APIs OpenAI de terceros                                                                                                                 | `OpenAIChat`, `OpenAIImage`...                                                          |
-| [4D Labels](https://github.com/4d/4D-Labels)                        | Componente interno necesario para la creación de plantillas de etiquetas                                                                                                      |                                                                                                                                         |
-| [4D NetKit](https://developer.4d.com/4D-NetKit)                     | Conjunto de herramientas de servicios web para conectarse a APIs de terceros                                                                                                  | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
-| [4D Progress](https://github.com/4d/4D-Progress)                    | Abrir una o varias barras de progreso en la misma ventana                                                                                                                     | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
-| [4D SVG](https://github.com/4d/4D-SVG)                              | Crear y manipular objetos gráficos svg comunes                                                                                                                                | `SVGTool_Display_viewer`, métodos múltiples `SVG_`                                                                                      |
-| [4D ViewPro](ViewPro/getting-started.md)                            | Funciones de hoja de cálculo en sus formularios                                                                                                                               | Ver la [documentación 4D View Pro](ViewPro/getting-started.md)                                                                          |
-| [4D Widgets](https://github.com/4d/4D-Widgets)                      | Gestione los widgets DatePicker, TimePicker, SearchPicker 4D                                                                                                                  | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [Interfaz 4D WritePro](https://github.com/4d/4D-WritePro-Interface) | Administrar [paletas 4D Write Pro](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.es.html) y [asistente de tabla](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
-
-## Componentes de terceros
-
-Puede desarrollar e instalar sus propios componentes 4D. Ver [esta página](develop-components.md) para mayor información.
-
-Muchos desarrolladores de la comunidad 4D han compartido componentes 4D que puede instalar y utilizar en sus proyectos.
-
-Navegue por Github para tener una lista de componentes 4D públicos reunidos con el tema [`4d-component`](https://github.com/topics/4d-component).
-
-## Plugins
-
-Los plugins hacen cosas que 4D no hace de forma nativa (por ejemplo, una tecnología de plataforma específica), o que serían muy difíciles de escribir sólo con 4D. Como se describe en [esta página](develop-plug-ins.md), puede desarrollar sus propios plug-ins.
-
-Muchas funcionalidades están cubiertas por los plug-ins 4D existentes. Navegue por Github para tener una lista de plugins 4D públicos reunidos con el tema [`4d-plugin`](https://github.com/topics/4d-plugin).
-
-
+- Los [**workers del sistema**](../API/SystemWorkerClass.md) permiten al código 4D llamar a cualquier proceso externo (un comando shell, PHP, cualquier script, etc.) y supervisar su ejecución.
+- Los [**comandos SQL**](../commands/theme/SQL) permiten conectar y utilizar diversas fuentes de datos SQL.
+- El [**cliente HTTP integrado**](../API/HTTPRequestClass.md) puede solicitar cualquier servidor HTTP y procesar datos.
+- Las [**Áreas Web**](../FormObjects/webArea_overview.md) pueden dar acceso a páginas web o a diversos contenidos HTML dentro de sus formularios.
+- [**Componentes**](Concepts/components.md). Los componentes están hechos de código 4D. 4D includes by default [a set of built-in 4D components](../Project/components.md#preinstalled-4d-components). También puedes [desarrollar sus propios componentes 4D](develop-components.md), o utilizar componentes de terceros. Muchos desarrolladores de la comunidad 4D han compartido componentes 4D (navegue por Github para tener una lista de componentes 4D públicos reunidos con el tema [`4d-component`](https://github.com/topics/4d-component)).
+- [**Plug-ins**](../Concepts/plug-ins.md). Los plug-ins pueden construirse utilizando cualquier lenguaje. Los plugins hacen cosas que 4D no hace de forma nativa (por ejemplo, una tecnología de plataforma específica), o que serían muy difíciles de escribir sólo con 4D. Como se describe en [esta página](develop-plug-ins.md), puede desarrollar sus propios plug-ins. Muchas funcionalidades están cubiertas por los plug-ins 4D existentes. Navegue por Github para tener una lista de plugins 4D públicos reunidos con el tema [`4d-plugin`](https://github.com/topics/4d-plugin).

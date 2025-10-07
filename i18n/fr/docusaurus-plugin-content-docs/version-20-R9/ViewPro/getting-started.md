@@ -80,7 +80,7 @@ En fonction de la zone cliquée, les options suivantes sont également disponibl
 - cliquez sur une cellule ou une plage de cellules :
   - **Filtrer** : permet de masquer la ligne via des filtres (voir "Filtrer les lignes" dans la [documentation SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
   - **Trier** : permet de trier le contenu des colonnes.
-  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :\
+  - **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Utilisation des commandes 4D View Pro

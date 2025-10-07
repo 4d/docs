@@ -69,7 +69,7 @@ Liste de valeurs statiques à utiliser comme étiquettes pour l'objet onglet.
 
 ---
 
-## Élément courant
+## Current item {#current-item}
 
 `Listbox de type collection ou entity selection`
 
@@ -93,7 +93,7 @@ Indique une variable ou une expression qui se verra attribuer l'élément/l'enti
 
 ---
 
-## Position élément courant
+## Current item position {#current-item-position}
 
 `Listbox de type collection ou entity selection`
 
@@ -229,7 +229,7 @@ For collection/entity selection list boxes, Null or unsupported types are displa
 For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
 For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](../commands/this.md).\
+When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](../commands/this.md).  
 For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](../commands/this.md). `This` est une commande 4D dédiée qui renvoie une référence à l'élément en cours de traitement. Par exemple, vous pouvez utiliser `This.<propertyPath>` où `\<propertyPath>` est le chemin d'une propriété dans la collection ou un chemin d'attribut d'entité pour accéder à la valeur courante de chaque élément/entité.
 Si vous utilisez une collection de valeurs scalaires, 4D créera un objet pour chaque élément de la collection avec une seule propriété (nommée "value"), remplie avec la valeur de l'élément. Dans ce cas, vous utiliserez `This.value` comme expression.
@@ -305,7 +305,7 @@ L'utilisation de cette propriété nécessite le respect des principes suivants 
 
 ---
 
-## Eléments sélectionnés
+## Selected Items {#selected-items}
 
 `Listbox de type collection ou entity selection`
 

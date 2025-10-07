@@ -1,7 +1,8 @@
 ---
 id: presentation
-title: Apresentacao
+title: Getting started
 displayed_sidebar: docs
+slug: /WritePro/getting-started
 ---
 
 4D Write Pro oferece aos usuários 4D uma ferramenta avançada de processamento de texto, totalmente integrada a sua base de dados 4D. Utilizando 4D Write Pro, pode escrever mensagens de email pré formatados e/ou cartas com imagens, uma assinatura escaneada, texto com formato e marcadores de posição para variáveis dinâmicas. Também pode criar faturas ou relatórios de forma dinâmica, incluindo formatos de texto e imagens.
@@ -21,7 +22,7 @@ As funcionalidades principais do produto são as seguintes:
 - **4D Write Pro Interface**, an extension that offers a set of predefined palettes for end users.
 
 
-#### Instalação e ativação 
+## Instalação e ativação 
 
 O 4D Write Pro está totalmente integrado ao próprio 4D, pelo que é mais fácil de deslocar e administrar. Não se requer nenhuma instalação adicional, pode agregar áreas 4D Write Pro em seus formulários e manipular as variáveis 4D Write Pro em suas aplicações 4D diretamente.  
   

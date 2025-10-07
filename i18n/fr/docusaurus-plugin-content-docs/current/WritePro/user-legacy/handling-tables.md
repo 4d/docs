@@ -1,10 +1,9 @@
 ---
 id: handling-tables
-title: Manipuler des tableaux
+title: Tableaux
 displayed_sidebar: docs
+slug: /WritePro/tables
 ---
-
-#### 
 
 Les documents 4D Write Pro peuvent contenir des tableaux. Les tableaux 4D Write Pro sont créés et construits par programmation, mais leur contenu peut être modifié et géré par l'utilisateur. Plusieurs attributs de tableau 4D Write Pro peuvent être définis, notamment la hauteur de ligne, l'alignement, les marges, le style de texte, la couleur, ou encore les bordures.
 
@@ -12,14 +11,14 @@ Les documents 4D Write Pro peuvent contenir des tableaux. Les tableaux 4D Write 
 
 **Note :** Comme les tableaux de 4D Write Pro peuvent être remplis par programmation, ils peuvent contenir un grand nombre de colonnes et de lignes. Gardez à l'esprit que de très grands tableaux peuvent avoir un impact sur les performances, surtout s'ils sont affichés à l'écran. Voir aussi [cet article de blog](https://blog.4d.com/4d-write-pro-tables-without-limit) pour plus d'informations.
 
-#### Créer un tableau 
+## Créer un tableau 
 
 Pour créer un tableau 4D Write Pro, vous devez appeler la commande [WP Inserer tableau](../commands/wp-inserer-tableau). Vous pouvez ensuite ajouter des lignes à l'aide de la commande [WP Tableau ajouter ligne](../commands/wp-tableau-ajouter-ligne).
 
 **Note :** L'utilisateur peut créer un tableau par copier-coller d'une plage de cellules :   
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
-#### Modifier les tableaux 
+## Modifier les tableaux 
 
 Le contenu des cellules peut être ajouté par programmation à l'aide de la commande [WP Tableau ajouter ligne](../commands/wp-tableau-ajouter-ligne).
 
@@ -47,7 +46,7 @@ Lorsque des attributs différents sont appliqués à des éléments concurrents 
 2. Les lignes sont ensuite dessinées (écrasant les attributs du tableau)
 3. Les cellules/colonnes sont ensuite dessinées (écrasant les attributs des lignes).
 
-##### Redimensionner les colonnes 
+### Redimensionner les colonnes 
 
 La largeur des colonnes du tableau peut être modifiée en faisant glisser le séparateur de colonne vers la gauche ou la droite. Le curseur change pour indiquer qu'il peut être déplacé horizontalement et une ligne verticale apparait dans la règle : 
 
@@ -67,7 +66,7 @@ Si vous appuyez sur la touche **Shift** tout en redimensionnant une colonne, la 
 
 **Note** : La propriété Saisissable doit être activée pour que le document 4D Write Pro autorise le redimensionnement des colonnes.
 
-##### Fusionner et fractionner des cellules 
+### Fusionner et fractionner des cellules 
 
 Avec 4D Write Pro, vous pouvez fusionner et fractionner des cellules dans un tableau. La fusion de cellules consiste à combiner deux ou plusieurs cellules de tableau adjacentes situées sur la même ligne ou colonne en une seule cellule. La division de cellules consiste à prendre des cellules déjà fusionnées et à les fusionner en plusieurs cellules adjacentes sur la même ligne ou colonne. Les cellules peuvent être fusionnées à l'aide de la commande [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) ou de l'action standard **cell/merge**, et fractionnées à l'aide de la commande [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) ou de l'action standard **cell/split**.
 
@@ -159,7 +158,7 @@ et le résultat sera le même qu'en utilisant $cell1 car $cell1, $cell2 et $cell
 
 Toutefois, si un nombre x de lignes entières ou de colonnes entières sont fusionnées, les index des lignes ou des colonnes suivantes sont décrémentés de x.
 
-#### Pagination des tableaux 
+## Pagination des tableaux 
 
 Lorsqu'ils sont affichés en mode Page ou en mode Brouillon (ou dans le contexte de l'impression de document), les tableaux 4D Write Pro peuvent être coupés :
 
@@ -196,7 +195,7 @@ Lorsqu'un saut de page ou de colonne est inséré via une action standard ou le 
 * Les tableaux ne peuvent pas être séparés dans des sections différentes. Insérer un saut de section dans un tableau déplacera la totalité du tableau dans la nouvelle section.
 * Les saut de page à l'intérieur des lignes ne sont pas autorisés lorsque le *Carry-over rows (Lignes à reporter en bas)* est activé.
 
-#### Répétition des en-têtes 
+## Répétition des en-têtes 
 
 4D Write Pro vous permet de définir jusqu'à cinq lignes d'en-tête par tableau. Les lignes d'en-tête sélectionnées seront répétées sur chaque colonne ou sur chaque page lorsqu'un saut de colonne ou un saut de page se produit. 
 
@@ -209,7 +208,7 @@ Les en-têtes de tableau sont la ou les premières lignes du tableau. Pour défi
 
 Si vous désignez plus de cinq lignes comme en-tête (ou si cela résulte d'une insertion de lignes dans un en-tête existant), 4D Write Pro utilise uniquement les cinq premières lignes comme en-tête. Si vous supprimez la ou les lignes définies dans l'en-tête, le nombre de lignes d'en-tête est réduit. 
 
-#### Datasource de tableau 
+## Datasource de tableau 
 
 Vous pouvez assigner un objet formule comme source de données pour un tableau et accéder aux valeurs résultantes à travers le tableau en utilisant des *Expressions avec This* (voir ci-dessous). La formule de la source de données est évaluée par 4D Write Pro lors du calcul des formules (par exemple à l'ouverture du document, lors de l'appel de la commande [WP CALCULER FORMULES](../commands/wp-calculer-formules), etc.). Cette fonctionnalité bénéficie des contextes de données (voir [WP FIXER CONTEXTE DONNEES](../commands/wp-fixer-contexte-donnees)).
 
@@ -230,7 +229,7 @@ Pour supprimer une source de données d'un tableau, utilisez la commande [WP REI
  WP RESET ATTRIBUTES($table;wk datasource)
 ```
 
-##### Créer un tableau avec une datasource 
+### Créer un tableau avec une datasource 
 
 Un tableau fondé sur une datasource peut être composé des lignes suivantes:
 
@@ -257,7 +256,7 @@ Dans tous les cas, l'instruction suivante retourne le véritable nombre de ligne
  WP GET ATTRIBUTES($table;wk row count;$vcount) //31 pour l'exemple ci-dessus
 ```
 
-##### Carry-over rows (Lignes à reporter en bas) 
+### Carry-over rows (Lignes à reporter en bas) 
 
 Les tableaux basés sur des sources de données prennent en charge les **bottom carry-over rows (*lignes à reporter en bas*)** qui s'affichent automatiquement au bas de chaque page/colonne lorsque le tableau est réparti sur plusieurs pages/colonnes.
 
@@ -282,7 +281,7 @@ Pour créer des carry-over rows :
 
 **Remarque:** Les sauts de page à l'intérieur des lignes ne sont pas autorisés lorsque la fonctionnalité carry-over row est activée (voir *Pagination des tableaux*). Les options correspondantes, si elles sont définies, sont ignorées.
 
-##### Break rows (Lignes de rupture) 
+### Break rows (Lignes de rupture) 
 
 Les tableaux basés sur des sources de données acceptent une ou plusieurs **Sort Break Rows** (lignes de rupture) qui peuvent être affichées avant ou après la ligne de données. Les lignes de rupture vous permettent de diviser visuellement vos éléments de source de données préalablement triés en différentes parties dans votre tableau selon la valeur d'une formule calculée. 
 
@@ -309,7 +308,7 @@ Pour créer des lignes de rupture :
  WP SET ATTRIBUTES($row_2;wk break formula;Formula(This.item.country))
 ```
 
-##### Expressions avec This 
+### Expressions avec This 
 
 Lorsqu'il est utilisé dans une formule à l'intérieur du tableau, le mot-clé **This** donne accès à des données différentes selon le contexte :
 
@@ -329,7 +328,7 @@ Dans tout autre contexte, ces expressions retourneront *undefined*.
 
 **Note** : Pour plus d'informations sur l'insertion de formules, voir [WP INSERER FORMULE](../commands/wp-inserer-formule).
 
-##### Travailler avec un tableau basé sur une datasource 
+### Travailler avec un tableau basé sur une datasource 
 
 Lorsqu'un tableau est rempli à partir d'une datasource, les lignes sont automatiquement créées lorsque les références sont calculées. Vous pouvez insérer ou supprimer des lignes, modifier le contenu des cellules, changer le style, etc :
 

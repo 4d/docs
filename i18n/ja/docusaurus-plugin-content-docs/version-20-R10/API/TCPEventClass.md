@@ -7,10 +7,10 @@ title: TCPEvent
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                  |
-| ----- | ----------------------------------- |
-| 20 R9 | New `address` and `port` attributes |
-| 20 R8 | クラスを追加                              |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 20 R9 | 新しい `address` 属性および `port` 属性 |
+| 20 R8 | クラスを追加                        |
 
 </details>
 
@@ -35,7 +35,7 @@ title: TCPEvent
 
 #### 説明
 
-The `.address` property contains <!-- REF #TCPEvent.address.Summary -->the IP address of the remote machine<!-- END REF -->.
+`.address` プロパティは<!-- REF #TCPEvent.address.Summary -->リモートマシンの IP アドレス<!-- END REF --> を格納します。
 
 <!-- END REF -->
 

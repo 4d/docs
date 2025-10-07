@@ -1,6 +1,7 @@
 ---
 id: overview
-title: Generalidades
+title: 4D de un vistazo
+slug: /GettingStarted/overview
 ---
 
 Un proyecto 4D contiene todo el código fuente de una aplicación 4D, sin importar su tipo de despliegue (web, móvil o escritorio), de la estructura de la base de datos hasta la interfaz de usuario, incluyendo el código, los formularios, los menús, los parámetros usuario o cualquier recurso necesario. Un proyecto 4D se compone principalmente de archivos texto.
@@ -21,10 +22,6 @@ El desarrollo multiusuario se gestiona a través de herramientas estándar del r
 
 ## Aplicación final
 
-Los archivos del proyecto pueden ser [compilados](compiler.md) y fácilmente desplegados. 4D le permite crear tres tipos de aplicaciones a partir de sus proyectos:
-
-- las aplicaciones [web](WebServer/webServer.md),
-- las aplicaciones [móviles](https://developer.4d.com/go-mobile/),
-- las aplicaciones [de escritorio](Desktop/building.md) (cliente/servidor o monopuesto).
+Los archivos del proyecto pueden ser [compilados](compiler.md) y fácilmente desplegados. 4D allows you to create several types of application from your projects, including [web](WebServer/webServer.md) applications, [desktop](Desktop/building.md) applications (client/server or single-user), or mobile applications.
 
 Las aplicaciones de back-end pueden desplegarse utilizando 4D Server, 4D, o [fusionadas con 4D Volume Desktop](../Desktop/building.md).

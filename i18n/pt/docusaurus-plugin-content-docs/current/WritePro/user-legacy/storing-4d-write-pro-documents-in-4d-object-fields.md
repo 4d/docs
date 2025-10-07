@@ -2,6 +2,7 @@
 id: 4d-write-pro-documents
 title: Documentos 4D Write Pro
 displayed_sidebar: docs
+slug: /WritePro/4d-write-pro-documents
 ---
 
 ## Formato de documento .4wp 

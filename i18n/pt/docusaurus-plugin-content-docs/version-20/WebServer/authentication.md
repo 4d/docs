@@ -125,7 +125,7 @@ Como alternativa, você pode usar a sintaxe de [parâmetros temporais](Concepts/
   -> $RequestAccepted : Boolean
 
 ```
-> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. As informações recebidas pelo método de banco de dados dependem do [modo de autenticação](#authentication-modes) selecionado).
+> Todos os parâmetros do método de banco de dados `On Web Authentication` não são necessariamente preenchidos. As informações recebidas pelo método de banco de dados dependem do [modo de autenticação](#authentication-modes) selecionado.
 
 
 #### $1 - URL

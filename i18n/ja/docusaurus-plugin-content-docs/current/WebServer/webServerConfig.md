@@ -609,6 +609,10 @@ User-Agent: <name>
 
 セッションcookie の IP アドレス検証のステータス。 セキュリティ上の理由により、セッションcookie を持つ各リクエストに対して 4D Webサーバーはデフォルトで IPアドレスを検証します。 アプリケーションによっては、この検証機能を無効化し、IPアドレスが合致しなくてもセッションcookie を受け入れるようにしたいかもしれません。 たとえば、モバイルデバイスが WiFi と 4G/5G ネットワークを切り替えた場合、IPアドレスが変更されます。 このように IPアドレスが変更しても、クライアントによる Webセッションの継続を許可するには、このオプションに 0 を渡します。 この設定はアプリケーションのセキュリティレベルを下げることに留意が必要です。 この設定が変更された際には、その設定は直ちに反映されます (HTTPサーバーを再起動する必要はありません)。
 
+### Generic Web User
+
+This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". In this case, each browser allowed to connect to the database gets access authorizations and restrictions associated with this user.
+
 #### 拡張文字をそのまま送信
 
 このオプションを有効にすると、Webサーバーはセミダイナミックページの拡張文字を、HTML標準に基づいた変換をおこなわずに「そのまま」送信します。 このオプションにより、とくに Shift_JIS文字コード利用時の日本語のシステムで速度が向上します。

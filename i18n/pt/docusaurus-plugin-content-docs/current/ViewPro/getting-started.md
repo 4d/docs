@@ -13,9 +13,20 @@ A incorporação de áreas do 4D View Pro em seus formulários permite importar 
 
 ## Instalação e ativação
 
-Os recursos do 4D View Pro estão incluídos diretamente no 4D, o que facilita a implementação e o gerenciamento. Não é necessária qualquer instalação adicional.
+4D View Pro must be installed in your projects. The 4D View Pro component is available from the [**4D-ViewPro github repository**](https://github.com/4d/4D-ViewPro).
 
-No entanto, 4D View Pro requer uma licença. Você precisa ativar essa licença em seu aplicativo para usar seus recursos. Ao usar esse componente sem uma licença, o conteúdo de um objeto que requer um recurso do 4D View Pro não é exibido em tempo de execução; em vez disso, é exibida uma mensagem de erro:
+The easiest way to install 4D View Pro in an opened project is to use the Dependency Manager:
+
+1. Open the [Dependency Manager](../Project/components.md) window.
+2. Click on the **+** button to add a component.
+3. Click on the **GitHub** tab.
+4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-github-dependency-version-range), then click **Add**.
+
+![](../assets/en/ViewPro/install.png)
+
+Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-dependency).
+
+4D View Pro requires a license. Você precisa ativar essa licença em seu aplicativo para usar seus recursos. Ao usar esse componente sem uma licença, o conteúdo de um objeto que requer um recurso do 4D View Pro não é exibido em tempo de execução; em vez disso, é exibida uma mensagem de erro:
 
 ![](../assets/en/ViewPro/licenseError.png)
 
@@ -80,7 +91,7 @@ Dependendo da área clicada, as seguintes opções também estão disponíveis:
 - clique numa célula ou num intervalo de células:
   - **Filtrar**: permite ocultar la línea mediante filtros (ver "Filtrar las líneas" en la [documentación de SpreadJS](https://developer.mescius.com/spreadjs/docs/)).
   - **Ordenar**: ordena el contenido de la columna.
-  - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:\
+  - **Insertar comentario**: permite al usuario introducir un comentario para un área. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## Uso dos comandos 4D View Pro

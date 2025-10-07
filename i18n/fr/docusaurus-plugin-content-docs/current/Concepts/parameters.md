@@ -396,7 +396,7 @@ Avec les variables nommées, n'importe quel paramètre peut être optionnel. Dan
 
 ## Paramètres optionnels
 
-Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* doit être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
+Dans le manuel *Langage de 4D*, les caractères { } (accolades) indiquent des paramètres facultatifs. Par exemple, `ALERT (message{; okButtonTitle})` signifie que le paramètre *okButtonTitle* peut être omis lors de l'appel de la commande. Vous pouvez l'appeler comme suit :
 
 ```4d
 ALERT("Etes*vous sûr?";"Oui, je le suis") //2 paramètres

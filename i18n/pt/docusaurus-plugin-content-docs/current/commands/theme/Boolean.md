@@ -1,6 +1,7 @@
 ---
 id: Boolean_theme
 title: Parâmetros
+sidebar_label: Parâmetros
 slug: /commands/theme/Boolean
 ---
 

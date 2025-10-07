@@ -1806,7 +1806,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 | プロパティ        | 型       | 説明                                                                                                                                     |
 | ------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | success      | Boolean | ロック解除が成功した場合には true、それ以外は false ドロップされたエンティティや、ロックされてないレコード、あるいは他のプロセスや他のエンティティによってロックされたレコードに対してロック解除を実行した場合、success には false が返されます。 |
-| wasNotLocked | Boolean | (only if "success" is False) True if the entity was not locked in the process.                      |
+| wasNotLocked | Boolean | ("success" がFalse だったときのみ)エンティティがプロセス内でロックされていなかった場合にTrue。                                                          |
 
 #### 例題
 

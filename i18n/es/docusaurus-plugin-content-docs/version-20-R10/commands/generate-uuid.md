@@ -37,7 +37,7 @@ Puede utilizar el parámetro opcional *version* para definir la **versión de UI
 
 :::note
 
-For more information on UUID version 7, please read [this blog post](https://blog.4d.com/sort-uuids-with-version-7).
+Para más información sobre UUID versión 7, lea [esta entrada de blog](https://blog.4d.com/sort-uuids-with-version-7).
 
 :::
 

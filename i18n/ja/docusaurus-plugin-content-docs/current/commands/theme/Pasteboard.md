@@ -1,6 +1,7 @@
 ---
 id: Pasteboard_theme
 title: ペーストボード
+sidebar_label: ペーストボード
 slug: /commands/theme/Pasteboard
 ---
 

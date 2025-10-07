@@ -1,6 +1,7 @@
 ---
 id: Arrays_theme
 title: Tableaux
+sidebar_label: Tableaux
 slug: /commands/theme/Arrays
 ---
 

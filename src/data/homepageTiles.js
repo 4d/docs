@@ -3,25 +3,17 @@ import Translate, { translate } from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 
 const localizedLinks = {
-  "homepage.sections.textensions.4D-Write-Pro-Reference-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Write-Pro-Reference.100-7615112.en.html',
-    id: 'homepage.sections.textensions.4D-Write-Pro-Reference-url',
-  }),
   "homepage.sections.textensions.4D-Progress-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Progress.100-7614210.en.html',
+    message: 'https://github.com/4d/4D-Progress/blob/main/README.md',
     id: 'homepage.sections.textensions.4D-Progress-url',
   }),
   "homepage.sections.textensions.4D-SVG-Component-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R10/4D/20-R10/4D-SVG-Component.100-7614300.en.html',
+    message: 'https://developer.4d.com/4D-SVG',
     id: 'homepage.sections.textensions.4D-SVG-Component-url',
   }),
   "homepage.sections.textensions.4D-Widgets-url" : translate({
-    message: 'https://doc.4d.com/4Dv20R10/4D/20-R10/4D-Widgets.100-7614949.en.html',
+    message: 'https://github.com/4d/4D-Widgets/blob/main/Readme.md',
     id: 'homepage.sections.textensions.4D-Widgets-url',
-  }),
-  "homepage.sections.mobile-applications.4D-for-iOS-Archive-url" : translate({
-    message: 'https://developer.4d.com/4d-for-ios/docs/en/overview.html',
-    id: 'homepage.sections.mobile-applications.4D-for-iOS-Archive-url',
   }),
   "homepage.sections.mobile-applications.go-mobile-url" : translate({
     message: 'https://developer.4d.com/go-mobile',
@@ -57,7 +49,7 @@ title: (
     title: (
     <>
       <i class="fa-solid fa-hammer" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
-      <Translate id="homepage.sections.core-development.title">
+      <Translate id="homepage.sections.ide.title">
           Project & IDE
       </Translate>
     </>
@@ -100,7 +92,7 @@ title: (
     title: (
     <>
       <i class="fa-solid fa-code" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
-      <Translate id="homepage.sections.test.title">
+      <Translate id="homepage.sections.language.title">
           4D Language
       </Translate>
     </>
@@ -278,7 +270,7 @@ title: (
         <Link to={localizedLinks["homepage.sections.textensions.4D-Progress-url"]}>
           <Translate>4D Progress</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
-        <Link to={localizedLinks["homepage.sections.textensions.4D-SVG-Component-url"]}>
+        <Link to="https://developer.4d.com/4D-SVG">
           <Translate>4D SVG</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
         <Link to={localizedLinks["homepage.sections.textensions.4D-Widgets-url"]}>
@@ -290,7 +282,10 @@ title: (
         <Link to={localizedLinks["homepage.sections.mobile-applications.go-mobile-url"]}>
           <Translate>Go Mobile with 4D</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
-        <Link to="https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme">
+        <Link to="https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md">
+          <Translate>4D Mobile App Server</Translate> <i class="fa-solid fa-up-right-from-square"></i>
+        </Link>
+        <Link to="https://github.com/4d/Build4D">
           <Translate>Build4D</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
       </div>

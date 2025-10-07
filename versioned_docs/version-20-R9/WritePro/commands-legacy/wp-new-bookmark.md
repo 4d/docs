@@ -22,7 +22,7 @@ Bookmarks are named references to ranges or elements, which allow you to access 
 
 In *targetObj*, you can pass:
 
-* a range, or
+* a range belonging to the body (see below), or
 * an element (body / table / row / inline picture / paragraph)
 
 **Note**: If you passed an element in *targetObj*, the bookmark will contain only the specified element.

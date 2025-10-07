@@ -1,6 +1,7 @@
 ---
 id: Secured_Protocol_theme
 title: Protocolo seguro
+sidebar_label: Protocolo seguro
 slug: /commands/theme/Secured-Protocol
 ---
 

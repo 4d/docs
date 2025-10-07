@@ -1,6 +1,7 @@
 ---
 id: Math_theme
 title: 算術関数
+sidebar_label: 算術関数
 slug: /commands/theme/Math
 ---
 

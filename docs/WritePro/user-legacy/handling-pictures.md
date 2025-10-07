@@ -2,6 +2,7 @@
 id: handling-pictures
 title: Pictures
 displayed_sidebar: docs
+slug: /WritePro/pictures
 ---
 
 
@@ -143,7 +144,7 @@ Note that when this option is set, missing image elements will not be displayed 
 
 All pictures have properties (attributes) such as height, width, borders, display mode, etc., that can be get or set via the 4D Write Pro language ([WP GET ATTRIBUTES](../commands/wp-get-attributes) and [WP SET ATTRIBUTES](../commands/wp-set-attributes)) or standard actions.
 
-* The full list of properties available for pictures is provided on the *4D Write Pro Attributes* page.
+* The full list of properties available for pictures is provided on the [4D Write Pro Attributes](../4d-write-pro-attributes) page.
 * The *Image* section contains attributes that are specific to pictures only.
 * The *Using 4D Write Pro standard actions* page also lists available image properties.
 

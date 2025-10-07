@@ -5,7 +5,7 @@ slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *liste* ; refElément | * ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *liste* ; *refElément* ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *liste* ; * ; *saisissable* {; *style* {; *icône* {; *couleur*}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

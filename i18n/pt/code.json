@@ -9,7 +9,10 @@
     "message": "Trabalhar com um projecto"
   },
   "homepage.sections.core-development.title": {
-    "message": "Desenvolvimento"
+    "message": "Project & IDE"
+  },
+  "homepage.sections.language.title": {
+    "message": "Línguagem 4D"
   },
   "Project Management": {
     "message": "Gestão de projectos"
@@ -33,7 +36,7 @@
     "message": "Preferências"
   },
   "homepage.administration.title": {
-    "message": "Administração"
+    "message": "Server & Admin"
   },
   "4D Server Administration Window": {
     "message": "Janela de administração de 4D Server"
@@ -131,8 +134,8 @@
   "Build Application": {
     "message": "Build application overview"
   },
-  "homepage.sections.mobile-applications.title": {
-    "message": "Aplicações móveis"
+  "homepage.sections.more.title": {
+    "message": "More docs"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
@@ -240,7 +243,7 @@
   },
   "theme.colorToggle.ariaLabel": {
     "message": "Alternar entre os modos escuro e claro (atualmente {mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "modo escuro",
@@ -660,5 +663,110 @@
   },
   "4D AIKit": {
     "message": "4D AIKit"
+  },
+  "4D at a glance": {
+    "message": "4D at a glance"
+  },
+  "homepage.sections.ide.title": {
+    "message": "Project & IDE"
+  },
+  "Creating or opening a project": {
+    "message": "Criar ou abrir um projeto"
+  },
+  "Architecture": {
+    "message": "Arquitetura"
+  },
+  "Project Settings": {
+    "message": "Project Settings"
+  },
+  "Database structure": {
+    "message": "Database structure"
+  },
+  "Code & Methods": {
+    "message": "Code & Methods"
+  },
+  "Dependencies": {
+    "message": "Dependencies"
+  },
+  "Compilation": {
+    "message": "Compilação"
+  },
+  "Application Builder": {
+    "message": "Application Builder"
+  },
+  "Application Preferences": {
+    "message": "Application Preferences"
+  },
+  "Concepts": {
+    "message": "Conceitos"
+  },
+  "Commands by name": {
+    "message": "Commands by name"
+  },
+  "Commands by theme": {
+    "message": "Commands by theme"
+  },
+  "Classes": {
+    "message": "Classes"
+  },
+  "homepage.sections.core.title": {
+    "message": "Desenvolvimento"
+  },
+  "ORDA": {
+    "message": "ORDA"
+  },
+  "Database Methods": {
+    "message": "Database Methods"
+  },
+  "Transactions": {
+    "message": "Transactions"
+  },
+  "Transformation tags": {
+    "message": "Etiquetas de transformação"
+  },
+  "Date and Time Formats": {
+    "message": "Formatos data e hora"
+  },
+  "4D Qodly Pro": {
+    "message": "4D Qodly Pro"
+  },
+  "Labels": {
+    "message": "Etiquetas"
+  },
+  "homepage.sections.administration.title": {
+    "message": "Server & Admin"
+  },
+  "4D Server Window": {
+    "message": "4D Server Window"
+  },
+  "WebAdmin & Data Explorer": {
+    "message": "WebAdmin & Data Explorer"
+  },
+  "TLS": {
+    "message": "TLS"
+  },
+  "Log Files": {
+    "message": "Log Files"
+  },
+  "Extending 4D applications": {
+    "message": "Extending 4D applications"
+  },
+  "4D QPDF": {
+    "message": "4D QPDF"
+  },
+  "Build4D": {
+    "message": "Build4D"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "system mode",
+    "description": "The name for the system color mode"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }

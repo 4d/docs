@@ -12,7 +12,7 @@ Vous pouvez utiliser des bibliothèques d'objets dans vos formulaires. Une bibli
 
 ## Utilisation de la bibliothèque d'objets standard
 
-La bibliothèque d'objets standard est disponible à partir de l'éditeur de formulaires : cliquez sur le dernier bouton de la barre d'outils :\
+La bibliothèque d'objets standard est disponible à partir de l'éditeur de formulaires : cliquez sur le dernier bouton de la barre d'outils :  
 ![](../assets/en/FormEditor/library1.png)
 
 La bibliothèque est affichée dans une fenêtre séparée :

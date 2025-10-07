@@ -51,10 +51,10 @@ var $picture:=$image.asPicture()
 
 **saveToDisk**(*file* : 4D.File) : Boolean
 
-| Parámetros | Tipo                    | Descripción                                                        |
-| ---------- | ----------------------- | ------------------------------------------------------------------ |
-| *file*     | 4D.File | The file object where the image will be saved.     |
-| Resultado  | Boolean                 | Returns `True` if the image is successfully saved. |
+| Parámetros | Tipo                    | Descripción                                                                |
+| ---------- | ----------------------- | -------------------------------------------------------------------------- |
+| *file*     | 4D.File | The file object where the image will be saved.             |
+| Resultado  | Boolean                 | Devuelve `True` si la imagen se ha guardado correctamente. |
 
 Saves the image to disk, attempting to download it first if it is a URL. Devuelve `False` si no ha podido recuperar los datos de la imagen.
 

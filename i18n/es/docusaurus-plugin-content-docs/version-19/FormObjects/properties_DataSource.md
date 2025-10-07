@@ -67,7 +67,7 @@ Lista de valores estáticos a utilizar como etiquetas para el objeto de control 
 
 ---
 
-## Elemento actual
+## Elemento actual {#current-item}
 
 `List boxes colección o entity selection`
 
@@ -86,7 +86,7 @@ Especifica una variable o expresión a la que se asignará el elemento/entidad d
 
 ---
 
-## Posición elemento actual
+## Posición elemento actual {#current-item-position}
 
 `List boxes colección o entity selection`
 
@@ -281,7 +281,7 @@ El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 
 ---
 
-## Elementos seleccionados
+## Elementos seleccionados {#selected-items}
 
 `List boxes colección o entity selection`
 

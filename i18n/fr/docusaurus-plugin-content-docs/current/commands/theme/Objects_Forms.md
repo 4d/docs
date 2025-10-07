@@ -1,6 +1,7 @@
 ---
 id: Objects_Forms_theme
 title: Objets (Formulaires)
+sidebar_label: Objets (Formulaires)
 slug: /commands/theme/Objects-Forms
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Pasteboard_theme
 title: Portapapeles
+sidebar_label: Portapapeles
 slug: /commands/theme/Pasteboard
 ---
 

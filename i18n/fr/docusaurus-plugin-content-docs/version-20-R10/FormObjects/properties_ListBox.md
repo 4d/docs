@@ -74,7 +74,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 ---
 
-## Ensemble surlignage
+## Highlight Set {#highlight-set}
 
 `Liste box sélection`
 
@@ -168,7 +168,7 @@ Définit le nombre de colonnes de la list box.
 
 ---
 
-## Tableau de contrôle des lignes
+## Row Control Array {#row-control-array}
 
 `Array type list box`
 
@@ -230,7 +230,7 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
   The Up and Down arrow keys select the previous/next row in the list.\
   A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
   The Up and Down arrow keys select the previous/next row in the list.\
-  The Up and Down arrow keys select the previous/next row in the list.\
+  The Up and Down arrow keys select the previous/next row in the list.  
   A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).\
   The Up and Down arrow keys select the previous/next row in the list.\
   The Up and Down arrow keys select the previous/next row in the list. Les autres touches de navigation font défiler la liste. The `On Selection Change` form event is generated every time the current row is changed.

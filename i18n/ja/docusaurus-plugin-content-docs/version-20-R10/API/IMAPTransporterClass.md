@@ -793,16 +793,16 @@ $status:=$transporter.expunge()
 
 返されるコレクションの各オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ                                                                                | 型       | 説明                                                                                                                                                                                                                                                                                                                              |
-| ------------------------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \[].name        | Text    | メールボックスの名称。 withBoxProperties=true または withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                                               |
-| \[].selectable  | Boolean | アクセス権でメールボックスを選択できるかどうかを表します:<ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                                                                                |
-| \[].inferior    | Boolean | アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します:<ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                                                                       |
-| \[].interesting | Boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します:<ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 For example, it may contain new messages.</li><li>false - The mailbox has not been marked "interesting" by the server.</li></ul>	Returned if withBoxProperties=true |
-| [].mailCount     | Number  | 受信ボックス内のメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                                                                     |
-| [].mailRecent    | Number  | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                       |
-| [].mailUnseen    | Number  | "unseen" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                                                             |
-| [].id            | Text    | 一意のメールボックス識別子。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                                                                       |
+| プロパティ                                                                                | 型       | 説明                                                                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| \[].name        | Text    | メールボックスの名称。 withBoxProperties=true または withBoxInfo=true の場合に返されます                                                                                                                                                                                                        |
+| \[].selectable  | Boolean | アクセス権でメールボックスを選択できるかどうかを表します:<ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                         |
+| \[].inferior    | Boolean | アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します:<ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                |
+| \[].interesting | Boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します:<ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 例えば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから "interesting" のマーク付けをされていません。</li></ul>	withBoxProperties=true の場合に返されます |
+| [].mailCount     | Number  | 受信ボックス内のメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                              |
+| [].mailRecent    | Number  | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                |
+| [].mailUnseen    | Number  | "unseen" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                      |
+| [].id            | Text    | 一意のメールボックス識別子。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                                |
 
 アカウントにメールボックスが一つもない場合、空のコレクションが返されます。
 
@@ -1589,40 +1589,40 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 #### 利用可能な検索キー
 
-**ALL**: メールボックスの全メッセージ\
-**ANSWERED**: \Answered フラグが設定されたメッセージ\
-**UNANSWERED**: \Answered フラグが設定されていないメッセージ\
-**DELETED**: \Deleted フラグが設定されたメッセージ\
-**UNDELETED**: \Deleted フラグが設定されていないメッセージ\
-**DRAFT**: \Draft フラグが設定されているメッセージ\
-**UNDRAFT**: \Draft フラグが設定されていないメッセージ\
-**FLAGGED**: \Flagged フラグが設定されているメッセージ\
-**UNFLAGGED**: \Flagged フラグが設定されていないメッセージ\
-**RECENT**: \Recent フラグが設定されているメッセージ\
-**OLD**: \Recent フラグが設定されていないメッセージ\
-**SEEN**: \Seen フラグが設定されているメッセージ\
-**UNSEEN**: \Seen フラグが設定されていないメッセージ\
-**NEW**: \Recent フラグが設定されているが \Seen フラグが設定されていないメッセージ。 これは機能的には “(RECENT UNSEEN)” と同じです。\
-**KEYWORD* flag*\*\*: 指定されたキーワードが設定されているメッセージ\
-**UNKEYWORD* flag*\*\*: 指定されたキーワードが設定されていないメッセージ\
-**BEFORE* date*\*\*: 内部の日付が指定日より前のメッセージ\
-**ON* date*\*\*: 内部の日付が指定日に合致するメッセージ\
-**SINCE* date*\*\*: 内部の日付が指定日より後のメッセージ\
-**SENTBEFORE* date*\*\*: 日付ヘッダーが指定日より前のメッセージ\
-**SENTON* date*\*\*: 日付ヘッダーが指定日に合致するメッセージ\
-**SENTSINCE* date*\*\*: 日付ヘッダーが指定日以降のメッセージ\
-**TO* string*\*\*: TO ヘッダーに指定文字列が含まれているメッセージ\
-**FROM* string*\*\*: FROM ヘッダーに指定文字列が含まれているメッセージ\
-**CC* string*\*\*: CC ヘッダーに指定文字列が含まれているメッセージ\
-**BCC* string*\*\*: BCC ヘッダーに指定文字列が含まれているメッセージ\
-**SUBJECT* string*\*\*: 件名ヘッダーに指定文字列が含まれているメッセージ\
-**BODY* string*\*\*: メッセージ本文に指定文字列が含まれているメッセージ\
-**TEXT* string*\*\*: ヘッダーまたはメッセージ本文に指定文字列が含まれているメッセージ\
-**HEADER *field-name* *string***: 指定フィールド名のヘッダーを持ち、そのフィールド内に指定文字列が含まれているメッセージ\
-**UID *message-UID***: 指定された固有識別子に対応する固有識別子を持つメッセージ\
-**LARGER *n***: 指定バイト数以上のサイズを持つメッセージ\
-**SMALLER *n***: 指定バイト数以下のサイズを持つメッセージ\
-**NOT *search-key***: 指定検索キーに合致しないメッセージ\
+**ALL**: メールボックスの全メッセージ  
+**ANSWERED**: \Answered フラグが設定されたメッセージ  
+**UNANSWERED**: \Answered フラグが設定されていないメッセージ  
+**DELETED**: \Deleted フラグが設定されたメッセージ  
+**UNDELETED**: \Deleted フラグが設定されていないメッセージ  
+**DRAFT**: \Draft フラグが設定されているメッセージ  
+**UNDRAFT**: \Draft フラグが設定されていないメッセージ  
+**FLAGGED**: \Flagged フラグが設定されているメッセージ  
+**UNFLAGGED**: \Flagged フラグが設定されていないメッセージ  
+**RECENT**: \Recent フラグが設定されているメッセージ  
+**OLD**: \Recent フラグが設定されていないメッセージ  
+**SEEN**: \Seen フラグが設定されているメッセージ  
+**UNSEEN**: \Seen フラグが設定されていないメッセージ  
+**NEW**: \Recent フラグが設定されているが \Seen フラグが設定されていないメッセージ。 これは機能的には “(RECENT UNSEEN)” と同じです。  
+**KEYWORD* flag*\*\*: 指定されたキーワードが設定されているメッセージ  
+**UNKEYWORD* flag*\*\*: 指定されたキーワードが設定されていないメッセージ  
+**BEFORE* date*\*\*: 内部の日付が指定日より前のメッセージ  
+**ON* date*\*\*: 内部の日付が指定日に合致するメッセージ  
+**SINCE* date*\*\*: 内部の日付が指定日より後のメッセージ  
+**SENTBEFORE* date*\*\*: 日付ヘッダーが指定日より前のメッセージ  
+**SENTON* date*\*\*: 日付ヘッダーが指定日に合致するメッセージ  
+**SENTSINCE* date*\*\*: 日付ヘッダーが指定日以降のメッセージ  
+**TO* string*\*\*: TO ヘッダーに指定文字列が含まれているメッセージ  
+**FROM* string*\*\*: FROM ヘッダーに指定文字列が含まれているメッセージ  
+**CC* string*\*\*: CC ヘッダーに指定文字列が含まれているメッセージ  
+**BCC* string*\*\*: BCC ヘッダーに指定文字列が含まれているメッセージ  
+**SUBJECT* string*\*\*: 件名ヘッダーに指定文字列が含まれているメッセージ  
+**BODY* string*\*\*: メッセージ本文に指定文字列が含まれているメッセージ  
+**TEXT* string*\*\*: ヘッダーまたはメッセージ本文に指定文字列が含まれているメッセージ  
+**HEADER *field-name* *string***: 指定フィールド名のヘッダーを持ち、そのフィールド内に指定文字列が含まれているメッセージ  
+**UID *message-UID***: 指定された固有識別子に対応する固有識別子を持つメッセージ  
+**LARGER *n***: 指定バイト数以上のサイズを持つメッセージ  
+**SMALLER *n***: 指定バイト数以下のサイズを持つメッセージ  
+**NOT *search-key***: 指定検索キーに合致しないメッセージ  
 **OR *search-key1* *search-key2***: いずれかの検索キーに合致するメッセージ
 
 <!-- END REF -->

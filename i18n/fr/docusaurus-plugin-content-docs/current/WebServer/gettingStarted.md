@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: Développement Web
+title: Prise en main
 ---
 
 Cette section d'initiation est destinée aux nouveaux utilisateurs qui souhaitent avoir une vue d'ensemble sur la façon de créer à partir de rien un site Web 4D qui gère des données provenant de la base. C'est parti !
@@ -273,5 +273,5 @@ Les informations d'identification erronées seront rejetées :
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get current session ID` method. Voir la page [Sessions Web](sessions.md) .
+Une fois qu'un utilisateur est connecté, vous pouvez gérer la session associée en utilisant la méthode `WEB Get current session ID`. Voir la page [Sessions Web](sessions.md) .
 

@@ -14,9 +14,20 @@ title: はじめに
 
 ## インストールとアクティベーション
 
-4D View Pro 機能は 4D に直接含まれているため、配布と運用が容易です。 追加のインストールは必要ありません。
+4D View Pro must be installed in your projects. The 4D View Pro component is available from the [**4D-ViewPro github repository**](https://github.com/4d/4D-ViewPro).
 
-しかしながら、4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
+The easiest way to install 4D View Pro in an opened project is to use the Dependency Manager:
+
+1. Open the [Dependency Manager](../Project/components.md) window.
+2. Click on the **+** button to add a component.
+3. Click on the **GitHub** tab.
+4. Select **4d/4D-ViewPro** in the [default list of components](../Extensions/overview.md) and (recommended) **Follow 4D version** as [Dependency rule](../Project/components.md#defining-a-github-dependency-version-range), then click **Add**.
+
+![](../assets/en/ViewPro/install.png)
+
+Once you restart the project, the 4D View Pro component is installed as a [Github dependency](../Project/components.md#adding-a-github-dependency).
+
+4D View Pro requires a license. これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 
 ![](../assets/en/ViewPro/licenseError.png)
 
@@ -81,7 +92,7 @@ title: はじめに
 - セルあるいはセルレンジのクリック:
   - **フィルタリング**: フィルタリングを使用して行を非表示にします ([SpreadJS ドキュメント](https://developer.mescius.com/spreadjs/docs/) の "Filtering rows" を参照ください)
   - **ソート**: 列のコンテンツを並べ替えます。
-  - **コメントの挿入**: ユーザーコメントを入力できます。 コメントが入力されているセルには、小さな赤い三角形が表示されます:\
+  - **コメントの挿入**: ユーザーコメントを入力できます。 コメントが入力されているセルには、小さな赤い三角形が表示されます:  
     ![](../assets/en/ViewPro/vpContext2.PNG)
 
 ## 4D View Pro コマンドの使い方

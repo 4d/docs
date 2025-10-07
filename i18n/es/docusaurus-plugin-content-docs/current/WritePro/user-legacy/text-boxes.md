@@ -2,14 +2,14 @@
 id: text-boxes
 title: Text boxes
 displayed_sidebar: docs
-slug: /WritePro/user/text-boxes
+slug: /WritePro/text-boxes
 ---
 
 
 
 Las cajas de texto son áreas que se anclan a una página o sección y pueden llenarse con texto, imágenes en línea o tablas. Las cajas de texto pueden colocarse en cualquier lugar de la página y responder a necesidades específicas, por ejemplo, para insertar el nombre o el logotipo de una empresa o un área de direcciones.
 
-![](../../assets/en/WritePro/pict6131919.EN.png)
+![](../../assets/en/WritePro/pict6131919.en.png)
 
 **Nota:** una caja de texto no puede contener encabezados, pies de página, columnas, imágenes ancladas u otras cajas de texto.
 

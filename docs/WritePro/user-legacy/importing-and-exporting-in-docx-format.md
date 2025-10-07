@@ -2,6 +2,7 @@
 id: importing-and-exporting-in-docx-format
 title: Importing and Exporting in docx format
 displayed_sidebar: docs
+slug: /WritePro/importing-and-exporting-in-docx-format
 ---
 
 4D Write Pro can both import and export documents in the .docx format. This format is supported by word processing applications such as Microsoft Word.

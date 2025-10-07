@@ -19,7 +19,7 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 | `stream`                | Boolean | `False`           | Si se retransmite el progreso parcial. Si se define, los tokens se enviarán solo como datos. Fórmula de retrollamada necesaria.          |
 | `max_completion_tokens` | Integer | `0`               | The maximum number of tokens that can be generated in the completion.                                                                                                    |
 | `n`                     | Integer | `1`               | How many completions to generate for each prompt.                                                                                                                        |
-| `temperature`           | Real    | `-1`              | What sampling temperature to use, between 0 and 2. Higher values make the output more random, while lower values make it more focused and deterministic. |
+| `temperature`           | Real    | `-1`              | Qué temperatura de muestreo utilizar, entre 0 y 2. Higher values make the output more random, while lower values make it more focused and deterministic. |
 | `store`                 | Boolean | `False`           | Whether or not to store the output of this chat completion request.                                                                                                      |
 
 ## Ver también

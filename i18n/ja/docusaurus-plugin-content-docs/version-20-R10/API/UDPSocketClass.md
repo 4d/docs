@@ -11,7 +11,7 @@ title: UDPSocket
 
 :::info 4DTCPUDPLog.txt ファイル
 
-For debugging and monitoring, you can use the [4DTCPUDPLog.txt log file](../Debugging/debugLogFiles.md#4dtcpudplogtxt) that records events related to UDP sockets. 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
+UDP ソケットに関連したイベントを記録する[4DTCPUDPLog.txt ログファイル](../Debugging/debugLogFiles.md#4dtcpudplogtxt) を使用すると、デバッグやモニタリングを行うことができます。 記録されるイベントには、データ送信、エラー、接続ライフサイクル情報などが含まれます。
 
 :::
 
@@ -55,11 +55,11 @@ UDPSocket オブジェクトは以下のプロパティと関数を提供しま�
 
 #### 説明
 
-The `4D.UDPSocket.new()` function <!-- REF #4D.UDPSocket.new().Summary -->creates a new UDP socket using the defined *options* (if any) on the specified *port* (if any) or on a random unused port, and returns a `4D.UDPSocket` object<!-- END REF -->.
+`4D.UDPSocket.new()` 関数は、<!-- REF #4D.UDPSocket.new().Summary -->*options* 引数のオプションを(あれば)使用して、*port* 引数(あれば)で指定されたポートまたは未使用のランダムなポートを使用する、新しいUDP ソケットを作成し、`4D.UDPSocket` オブジェクトを返します<!-- END REF -->。
 
 #### `options` 引数
 
-In the *options* parameter, you can pass an object that contains the following properties:
+*options* 引数には、以下のプロパティを持つオブジェクトを渡すことができます:
 
 | プロパティ       | 型       | 説明                         | デフォルト |
 | ----------- | ------- | -------------------------- | ----- |
@@ -74,7 +74,7 @@ In the *options* parameter, you can pass an object that contains the following p
 | 引数      | 型                                       | 説明                      |
 | ------- | --------------------------------------- | ----------------------- |
 | $socket | [`UDPSocket` オブジェクト](#udpsocket-オブジェクト) | カレントのUDPSocket インスタンス。  |
-| $event  | [`UDPEvent` object](#udpevent-object)   | イベントに関する情報が含まれているオブジェクト |
+| $event  | [`UDPEvent` オブジェクト](#udpevent-オブジェクト)   | イベントに関する情報が含まれているオブジェクト |
 
 **コールバックの呼び出しの順番:**
 

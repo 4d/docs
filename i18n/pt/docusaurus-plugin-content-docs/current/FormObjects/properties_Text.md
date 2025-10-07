@@ -239,7 +239,7 @@ CompanyColor:=Choose([Companies]ID;Background color;Light shadow color; Foregrou
 
 ---
 
-## Expressão estilo
+## Style Expression {#style-expression}
 
 `List box do tipo coleção/seleção de entidade`
 
@@ -466,7 +466,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ---
 
-## Array cores de Fonte
+## Row Font Color Array {#row-font-color-array}
 
 `List boxes de tipo array`
 
@@ -490,7 +490,7 @@ O nome do array LongInt deve ser usado. Cada elemento deste array corresponde a 
 
 ---
 
-## Array estilo linha
+## Row Style Array {#row-style-array)
 
 `List boxes de tipo array`
 

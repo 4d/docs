@@ -1,6 +1,7 @@
 ---
 id: Transactions_theme
 title: トランザクション
+sidebar_label: トランザクション
 slug: /commands/theme/Transactions
 ---
 

@@ -1,6 +1,7 @@
 ---
 id: Form_Events_theme
 title: フォームイベント
+sidebar_label: フォームイベント
 slug: /commands/theme/Form-Events
 ---
 

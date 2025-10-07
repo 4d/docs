@@ -2,7 +2,7 @@
 id: using-a-4d-write-pro-area
 title: Properties & Layout
 displayed_sidebar: docs
-slug: /WritePro/user/properties
+slug: /WritePro/properties
 ---
 
 
@@ -128,7 +128,7 @@ Sections inherit attributes from the document. However, common document attribut
 ![](../../assets/en/WritePro/pict2994945.en.png)
 * **Columns** commands: allow to define the number and properties of columns for the section. These options are detailed below.
 * **Header** and **Footer** commands: these options allow you to define separate headers and footers. These options are detailed below.
-* **Margins** / **Paddings** / **Borders** / **Background**: these attributes can be defined separately for each section. For more information on these attributes, please refer the *4D Write Pro Attributes* article.
+* **Margins** / **Paddings** / **Borders** / **Background**: these attributes can be defined separately for each section. For more information on these attributes, please refer the [4D Write Pro Attributes](../4d-write-pro-attributes) article.
 
 ### Inserting headers and footers 
 
@@ -161,7 +161,7 @@ Once a header or a footer has been defined for a section, you can configure its 
 
 ![](../../assets/en/WritePro/pict2994965.en.png)
 
-For more information on **Margins**, **Paddings**, **Borders**, and **Background** attributes, please refer the *4D Write Pro Attributes* section. 
+For more information on **Margins**, **Paddings**, **Borders**, and **Background** attributes, please refer the [4D Write Pro Attributes](../4d-write-pro-attributes) section. 
 
 You can remove the entire definition of a header or a footer (contents and attributes) by selecting the **Remove header** or **Remove footer** command in the contextual menu. 
 
@@ -307,7 +307,7 @@ You can insert a continuous section break and change the number of columns to tw
 
 ## Bookmarks
 
-4D Write Pro allows you to create and work with dynamic references to parts of your documents, called **bookmarks**. A bookmark is a named reference attached to a specific [range](./ranges.md) in a 4D Write Pro document.
+4D Write Pro allows you to create and work with dynamic references to parts of your documents, called **bookmarks**. A bookmark is a named reference attached to a specific [range](./ranges.md) in the body of a 4D Write Pro document.
 
 Bookmarks are dynamic, which means that if the user moves, adds or removes text belonging to the bookmark, the associated range will be updated automatically and the bookmark will continue to reference the same content within the document. For example:
 
@@ -407,7 +407,7 @@ The following 4D commands from the [Objects (Forms)](../../commands/theme/Object
 | `OBJECT GET RGB COLORS` / `OBJECT SET RGB COLORS`           | Applied to current selection (if any) |
 | `OBJECT Get type`                                           |          |
 | `OBJECT Get vertical alignment` / `OBJECT SET VERTICAL ALIGNMENT` | Vertical alignment of paragraphs: only has an effect when paragraph height is greater than paragraph text height |
-| `OBJECT Get visible` / `OBJECT SET VISIBLE`                 |          |
+| `OBJECT Get visible` / [`OBJECT SET VISIBLE`](../commands/object-set-visible)                 |          |
 | `OBJECT Is styled text`                                     | Returns true |
 | `OBJECT MOVE`                                               |          |
 | `OBJECT GET SUBFORM CONTAINER SIZE`                         |          |

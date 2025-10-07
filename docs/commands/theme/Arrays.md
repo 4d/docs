@@ -1,6 +1,7 @@
 ---
 id: Arrays_theme
 title: Arrays
+sidebar_label: Arrays
 slug: /commands/theme/Arrays
 ---
 

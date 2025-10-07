@@ -1,35 +1,120 @@
 ---
 id: develop-components
-title: Componentes de desarrollo
+title: Desarrollo de extensiones
 ---
+
+## Componentes
 
 Un componente 4D es un conjunto de funciones, métodos y formularios 4D que representan una o varias funcionalidades que pueden ser [instaladas y utilizadas en aplicaciones 4D](Concepts/components.md). Por ejemplo, puede desarrollar un componente 4D de correo electrónico que gestione todos los aspectos del envío, la recepción y el almacenamiento de correos electrónicos en aplicaciones 4D.
 
 Puede desarrollar componentes 4D para sus propias necesidades y mantenerlos en privado. También puede [compartir sus componentes con la comunidad 4D](https://github.com/topics/4d-component).
 
-## Definiciones
+### Definiciones
 
 - **Base proyecto**: proyecto 4D utilizado para desarrollar el componente. El proyecto matriz es una base estándar sin atributos específicos. Un proyecto matricial forma un único componente.
 - **Proyecto local**: proyecto aplicación en la que se instala y utiliza un componente.
 - **Componente**: proyecto matriz que puede compilarse y [crearse](Desktop/building.md#build-component), [instalarse en la aplicación principal](../Project/components.md) y cuyo contenido se utiliza en la aplicación principal.
 
-## Básicos
+:::note
+
+Puede [crear un componente directamente desde el proyecto local](#creating-components) sin necesidad de pasar por un proyecto matriz independiente
+
+:::
+
+### Básicos
 
 La creación e instalación de los componentes 4D se realiza directamente desde 4D:
 
-- Para utilizar un componente, sólo tiene que [instalarlo en su aplicación](../Project/components.md).
+- Para utilizar un componente, sólo tiene que [instalarlo en su aplicación](../Project/components.md). También puede crear un nuevo componente directamente desde el host, en cuyo caso es inmediatamente utilizable.
 - Un proyecto puede ser a la vez matriz y local, es decir, que un proyecto matriz puede utilizar a su vez uno o varios componentes. Sin embargo, un componente no puede utilizar subcomponentes por sí mismo.
-- A component can call on most of the 4D elements: datastore ([`ds`](../commands/ds.md)), classes, functions, project methods, project forms, menu bars, choice lists, and so on. The following database methods can be used: [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md).
-- A component can create and/or use tables, fields and data files using mechanisms of external databases. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.
+- Un componente puede llamar a la mayoría de los elementos 4D: datastore ([`ds`](../commands/ds.md)), clases, funciones, métodos proyecto, formularios proyecto, barras de menú, listas de selección, etc. Pueden utilizarse los siguientes métodos base de datos: [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md).
+- Un componente puede crear y/o utilizar tablas, campos y archivos de datos utilizando mecanismos de bases externas. Se trata de bases 4D independientes con las que se trabaja utilizando comandos SQL.
 - Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
 :::note
 
-Interpreted component code can be [edited directly from the host project](#editing-components-from-the-host) if the context is supported.
+El código de un componente interpretado puede [editarse directamente desde el proyecto local](#editing-components) si el contexto es compatible.
 
 :::
 
-## Alcance de los comandos del lenguaje
+## Creación y edición de componentes desde el host
+
+En modo interpretado, el IDE 4D le permite crear y editar componentes directamente desde el proyecto local. Facilita el desarrollo y el ajuste de componentes en el contexto real de un proyecto local sin tener que abandonarlo o reiniciarlo.
+
+### Creación de componentes
+
+Puede crear un nuevo componente directamente desde el proyecto local:
+
+- utilizando la opción **Archivo > Nuevo > Componente...** del menú Archivo,
+- o haciendo clic en el botón **Nuevo > Componente...** de la barra de herramientas.
+
+Esta acción abre un cuadro de diálogo de selección de carpeta en el que se elige dónde se almacenará [el paquete de componentes](../Project/components.md#package-folder).
+
+- Ubicación por defecto: la primera vez que se crea un componente, 4D sugiere la carpeta **Components** en el [paquete del proyecto](../Project/architecture.md#components). A continuación, la última carpeta utilizada se recordará automáticamente y se preseleccionará.
+- Si decide almacenar el componente **junto al paquete del proyecto**, 4D lo añade al archivo [`dependencies.json`](../Project/components.md#dependenciesjson).
+- Si decide almacenar el componente **en otro lugar**, 4D lo añade al archivo [`dependencies.json`](../Project/components.md#dependenciesjson) y su ruta se añade al archivo [`environment4d.json`](../Project/components.md#environment4djson), utilizando una [ruta relativa o absoluta](../Project/components.md#relative-paths-vs-absolute-paths). Se utiliza una ruta relativa si el componente se encuentra a no más de dos niveles por encima como el archivo `environment4d.json`, o en sus subcarpetas. En caso contrario, se utiliza una ruta absoluta.
+
+:::note
+
+No se puede almacenar un componente **en el paquete del proyecto** pero **fuera de la carpeta Components**.
+
+:::
+
+Una vez creado, el componente se añade inmediatamente al proyecto, es accesible en la ventana [Dependencias del proyecto](../Project/components.md#monitoring-project-dependencies) y está disponible para su edición.
+
+### Edición de componentes
+
+Puede editar el código de un componente siempre que se cumplan las siguientes condiciones:
+
+- el proyecto host está ejecutando interpretaciones,
+- el componente ha sido [cargado en modo interpretado](../Project/components.md#interpreted-and-compiled-components) y el código fuente está disponible,
+- los archivos de los componentes se almacenan localmente (es decir, no se [descargan de GitHub](../Project/components.md#adding-a-github-dependency)).
+
+En este contexto, puede abrir, editar y guardar el código de su componente en el Editor de código del proyecto local desde dos lugares:
+
+- de la sección Métodos del componente del Explorador (sólo código compartido)
+- en una pestaña de componente dedicado (todo el código)
+
+#### Edición del código de componentes compartidos
+
+Las [clases expuestas del componente](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente pueden editarse desde la pestaña **Métodos del componente** del Explorador.
+
+Un icono específico indica que el componente contiene código compartido):<br/>
+![](../assets/en/Develop/editable-component.png)
+
+Seleccione **Editar...** para abrir el código de su componente en el editor de código. Puede editarlo y guardarlo.
+
+#### Edición de todo el código de los componentes
+
+Puede editar directamente todo el código de un componente cargado desde el proyecto local en una pestaña dedicada al componente, incluidos los métodos o clases que no estén compartidos.
+
+La opción **Editar...** está disponible al hacer clic con el botón derecho del ratón sobre el nombre del componente en la pestaña **Métodos componente** del Explorador.
+
+![edit-component](../assets/en/Project/Edit-component.png)
+
+Cuando lo selecciona, se añade una pestaña dedicada (o resaltada si ya se ha añadido) en el Explorador. En esta pestaña, las siguientes páginas estándar están disponibles y dan acceso a los contenidos del componente:
+
+![tab-component](../assets/en/Project/tab-component.png)
+
+- Inicio, incluidas carpetas, métodos, clases y formularios (sólo vista previa)
+- Métodos proyecto
+- Pueden utilizarse los siguientes métodos base: ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
+- Clases
+- Métodos formulario proyecto
+- Comandos y constantes
+- Plug-ins
+- Trash
+
+![tab-component](../assets/en/Project/tab-component.gif)
+
+Las funcionalidades estándar del IDE 4D están disponibles para el componente. Puede ejecutar las siguientes acciones:
+
+- añadir, duplicar, borrar, editar/guardar [métodos y clases](../Project/code-overview.md)
+- previsualizar código, mostrar/editar [documentación](../Project/documentation.md), mostrar/editar [propiedades de método](../Project/code-overview.md#project-method-properties),
+- ejecutar métodos,
+- restaurar desde la papelera o vaciar la papelera.
+
+### Alcance de los comandos del lenguaje
 
 A excepción de los [comandos no utilizables](#unusable-commands), un componente puede utilizar cualquier comando del lenguaje 4D.
 
@@ -68,7 +153,7 @@ Los siguientes comandos no son compatibles para su uso dentro de un componente p
 - El comando `Current form table` devuelve `Nil` cuando se llama en el contexto de un formulario proyecto. Por consiguiente, no puede utilizarse en un componente.
 - Comandos del lenguaje de definición de datos SQL (`CREATE TABLE`, `DROP TABLE`, etc.) no se puede utilizar en el proyecto del componente. Sin embargo, se soportan con bases de datos externas (ver el comando SQL `CREATE DATABASE`).
 
-## Compartir métodos proyecto
+### Compartir métodos proyecto
 
 Todos los métodos proyecto de un proyecto matricial son por definición incluidos en el componente (el proyecto es el componente), lo que significa que pueden ser llamados y ejecutados dentro del componente.
 
@@ -95,14 +180,14 @@ component_method("host_method_name")
 EXECUTE METHOD($param)
 ```
 
-> Una base local interpretada que contenga componentes interpretados puede ser compilada o verificada sintácticamente si no llama a métodos del componente interpretado. De lo contrario, aparecerá una caja de diálogo de advertencia cuando intente iniciar la compilación o una comprobación de sintaxis y no será posible realizar la operación.\
+> Una base local interpretada que contenga componentes interpretados puede ser compilada o verificada sintácticamente si no llama a métodos del componente interpretado. De lo contrario, aparecerá una caja de diálogo de advertencia cuando intente iniciar la compilación o una comprobación de sintaxis y no será posible realizar la operación.  
 > Tenga en cuenta que un método interpretado puede llamar a un método compilado, pero no a la inversa, excepto mediante el uso de los comandos `EXECUTE METHOD` y `EXECUTE FORMULA`.
 
-## Compartir clases
+### Compartir clases
 
 Por defecto, las clases de los componentes no pueden ser llamadas desde el editor de código 4D del proyecto local. Si desea exponer la clase del componente al proyecto principal y a los componentes que se están cargando, debe **declarar un espacio de nombres de componente**. Además, puede controlar cómo se sugieren las clases de los componentes en el Editor de código local.
 
-### Declaración del namespace
+#### Declaración del namespace
 
 Para permitir que las clases de su componente se expongan en los proyectos locales y sus componentes cargados, introduzca un valor en la opción [**namespace del componente en la class store** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto matriz. Por defecto, el área está vacía: las clases de componentes no están disponibles fuera del contexto de los componentes.
 
@@ -135,7 +220,7 @@ Por supuesto, se recomienda utilizar un nombre distintivo para evitar cualquier 
 
 Las clases ORDA de un componente no están disponibles en el proyecto local. Por ejemplo, si hay una dataclass llamada Employees en su componente, no podrá utilizar una clase "cs.Mycomponent.Employee" en el proyecto local.
 
-### Clases ocultas
+#### Clases ocultas
 
 Como en todo proyecto, puede crear clases y funciones ocultas en el componente anteponiendo a los nombres un guión bajo ("_"). Cuando se define un [namespace de componente](#declaring-the-component-namespace), las clases y funciones ocultas del componente no aparecerán como sugerencias al utilizar completar el código.
 
@@ -146,60 +231,6 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 ```
 
 > Las funciones no ocultas al interior de una clase oculta aparecen como sugerencias cuando se utiliza completar código con una clase que [hereda](../Concepts/classes.md#inheritance) de ella. Por ejemplo, si un componente tiene una clase `Teacher` que hereda una clase `_Person`, la finalización del código para `Teacher` sugiere funciones no ocultas de `_Person`.
-
-## Edición de componentes desde el host
-
-To facilitate component tuning in the actual context of host projects, you can directly modify and save the code of a loaded component using the 4D IDE from an interpreted host project. Modifications can be immediately tested in the project, without having to restart.
-
-El código del componente es editable cuando se cumplen las siguientes condiciones:
-
-- el proyecto host está ejecutando interpretaciones,
-- the component has been [loaded in interpreted mode](../Project/components.md#interpreted-and-compiled-components) and the source code is available,
-- los archivos de los componentes se almacenan localmente (es decir, no se [descargan de GitHub](../Project/components.md#adding-a-github-dependency).
-
-En este contexto, puede abrir, editar y guardar el código de su componente en el Editor de código del proyecto local desde dos lugares:
-
-- de la sección Métodos del componente del Explorador (sólo código compartido)
-- en una pestaña de componente dedicado (todo el código)
-
-### Edición del código de componentes compartidos
-
-Las [clases expuestas del componente](#sharing-of-classes) y los [métodos compartidos](#sharing-of-project-methods) de su componente pueden editarse desde la pestaña **Métodos del componente** del Explorador.
-
-A specific icon indicates that the component contains shared code):<br/>
-![](../assets/en/Develop/editable-component.png)
-
-Select **Edit...** to open your component code in the Code editor. Puede editarlo y guardarlo.
-
-### Edición de todo el código de los componentes
-
-You can edit directly all the code of a loaded component from the host project in a dedicated component tab, including methods or classes that are not shared.
-
-Select **Edit...** item is available when you right-click on the component name in the **Component Methods** tab of the Explorer.
-
-![edit-component](../assets/en/Project/Edit-component.png)
-
-When you select it, a dedicated tab is added (or highlighted if already added) in the Explorer. In this tab, the following standard pages are available and give access to the component contents:
-
-![tab-component](../assets/en/Project/tab-component.png)
-
-- Home, including folders, methods, classes and (preview only) forms
-- Métodos proyecto
-- Database Methods ([On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md))
-- Clases
-- Métodos formulario proyecto
-- Comandos y constantes
-- Plug-ins
-- Trash
-
-![tab-component](../assets/en/Project/tab-component.gif)
-
-Standard 4D IDE features are available for the component. Puede ejecutar las siguientes acciones:
-
-- añadir, duplicar, borrar, editar/guardar [métodos y clases](../Project/code-overview.md)
-- previsualizar código, mostrar/editar [documentación](../Project/documentation.md), mostrar/editar [propiedades de método](../Project/code-overview.md#project-method-properties),
-- ejecutar métodos,
-- restore from trash or empty trash.
 
 ## Completar el código de los componentes compilados
 
@@ -212,7 +243,7 @@ Un archivo de sintaxis (formato JSON) se crea automáticamente durante la fase d
 
 Si no ingresa un [namespace](#declaring-the-component-namespace), los recursos de las clases y de los métodos exposed no se generan incluso si la opción de archivo de sintaxis está marcada.
 
-## Paso de variables
+### Paso de variables
 
 Las variables locales, proceso e interproceso no se comparten entre los componentes y los proyectos locales. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.
 
@@ -274,11 +305,11 @@ En este caso, es necesario utilizar la comparación de punteros:
      If(myptr1=myptr2) //Esta prueba devuelve False
 ```
 
-## Gestión de errores
+### Gestión de errores
 
 Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando `ON ERR CALL` sólo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
 
-## Acceso a las tablas del proyecto local
+### Acceso a las tablas del proyecto local
 
 Aunque los componentes no pueden utilizar tablas, los punteros pueden permitir que los proyectos locales y los componentes se comuniquen entre sí. Por ejemplo, este es un método que podría ser llamado desde un componente:
 
@@ -304,11 +335,11 @@ SAVE RECORD($tablepointer-
 
 > En el contexto de un componente, 4D asume que una referencia a un formulario tabla es una referencia al formulario tabla local (ya que los componentes no pueden tener tablas.)
 
-## Uso de tablas y campos
+### Uso de tablas y campos
 
 Un componente no puede utilizar las tablas y campos definidos en la estructura 4D del proyecto matriz. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Puede crear y gestionar bases externas utilizando SQL. Sin embargo, puede crear y utilizar bases externas, y luego utilizar sus tablas y campos según sus necesidades. Utilizar una base externa significa designar temporalmente esta base como base actual, es decir, como la base de destino para las consultas SQL ejecutadas por 4D. Las bases externas se crean con el comando SQL `CREATE DATABASE`.
 
-### Ejemplo
+#### Ejemplo
 
 El siguiente código se incluye en un componente y realiza tres acciones básicas con una base de datos externa:
 
@@ -384,7 +415,7 @@ Lectura en una base de datos externa:
  End SQL
 ```
 
-## Utilización de formularios
+### Utilización de formularios
 
 - Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente. Sólo los "formularios de proyecto" (formularios que no están asociados a ninguna tabla específica) pueden utilizarse en un componente.
 - Un componente puede llamar a formularios tabla del proyecto local. Tenga en cuenta que en este caso es necesario utilizar punteros en lugar de nombres de tablas entre paréntesis [] para especificar los formularios en el código del componente.
@@ -395,7 +426,7 @@ Lectura en una base de datos externa:
 
 > En el contexto de un componente, cualquier formulario de proyecto referenciado debe pertenecer al componente. Por ejemplo, dentro de un componente, hacer referencia a un formulario proyecto local utilizando `DIALOG` u `Open form window` arrojará un error.
 
-## Utilización de recursos
+### Utilización de recursos
 
 Los componentes pueden utilizar recursos situados en la carpeta Resources del componente.
 
@@ -403,7 +434,7 @@ Los mecanismos automáticos son operacionales: los archivos XLIFF encontrados en
 
 En un proyecto local que contiene uno o más componentes, cada componente, así como los proyectos locales, tiene su propia "cadena de recursos." Los recursos están divididos entre las diferentes proyectos: no es posible acceder a los recursos del componente A desde el componente B o desde el proyecto local.
 
-## Ejecución del código de inicialización
+### Ejecución del código de inicialización
 
 Un componente puede ejecutar automáticamente código 4D al abrir o cerrar la base local, por ejemplo para cargar y/o guardar las preferencias o los estados usuario relacionados con el funcionamiento de la base local.
 
@@ -411,7 +442,7 @@ La ejecución del código de inicialización o cierre se realiza mediante el mé
 
 > Por razones de seguridad, debe autorizar explícitamente la ejecución del método base `On Host Database Event` en la base local para poder llamarlo. Para ello, debe marcar la opción [**Ejecutar el método "On Host Database Event" de los componentes**](../settings/security.md#options) en la página Seguridad de la Configuración.
 
-## Info.plist
+### Info.plist
 
 Los componentes pueden tener un archivo `Info.plist` en su [carpeta raíz](../Project/architecture.md) para ofrecer información extra legible por el sistema (sólo macOS) y el [Gestor de dependencias](../Project/components.md#loading-components).
 
@@ -423,9 +454,9 @@ Este archivo no es obligatorio pero es necesario para construir componentes [not
 
 Las llaves soportadas en los archivos `Info.plist` de los componentes son en su mayoría [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) que se ignoran en Windows. Sin embargo, son usados por el [Gestor de dependencias](../Project/components.md#loading-components) en todas las plataformas.
 
-The following keys can be defined:
+Se pueden definir las siguientes teclas:
 
-| key                                                        | description                                                                                                                                                                                      |
+| tecla                                                      | descripción                                                                                                                                                                                      |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | CFBundleName                                               | Nombre del componente (interno)                                                                                                                                               |
 | CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                                                  |
@@ -460,7 +491,7 @@ En macOS, la información está disponible en el Finder:
 
 ![](../assets/en/Develop/infoplist-component.png)
 
-## Protección de los componentes: compilación
+### Protección de los componentes: compilación
 
 Por defecto, todo el código de un proyecto matriz instalado como componente es potencialmente visible desde el proyecto local. En particular:
 
@@ -473,6 +504,47 @@ Para proteger eficazmente el código de un componente, basta con [compilar y gen
 - Los métodos, clases y funciones del proyecto compartido pueden ser llamados desde los métodos proyecto locales y también se muestran en la página de métodos del Explorador. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
-## Compartiendo sus componentes en GitHub
+### Compartiendo sus componentes en GitHub
 
 Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus componentes, preferiblemente en la plataforma [GitHub](https://github.com/topics/4d-component). Recomendamos que utilice el tema **`4d-component`** para ser referenciado correctamente.
+
+## Plug-ins
+
+### ¿Por qué es necesario un plug-in?
+
+Aunque 4D ofrece cientos de métodos integrados para manipular objetos, registros e implementar la interfaz de usuario, es posible que se necesite algún uso o característica especial (que a veces depende de la plataforma): uno puede necesitar ODBC en Windows, otro puede necesitar los servicios de Apple en macOS, mientras que otro puede querer implementar herramientas estadísticas específicas, inicio de sesión en redes sociales, plataforma de pago, acceso a archivos a través de la red, una interfaz de usuario especial o una estructura de imagen privada.
+
+Es evidente que cubrir todas las áreas de los sistemas operativos macOS y Windows por medio de los comandos de 4D sin duda conduciría a un producto con miles de comandos, y al mismo tiempo, la mayoría de los usuarios no tendrían necesidad de un conjunto tan grande de funcionalidades. Además, la creación de una herramienta tan completa haría que el entorno 4D fuera increíblemente complejo y llevaría a la mayoría de los usuarios meses de estudio antes de poder esperar resultados útiles.
+
+La naturaleza modular del entorno 4D permite la creación de aplicaciones básicas, pero no impide el desarrollo de sistemas muy complejos. La arquitectura del plug-in 4D abre el entorno 4D a todo tipo de aplicaciones o de usuario. Los plug-ins 4D multiplican la potencia y la productividad de la aplicación o del usuario.
+
+### ¿Qué es un plug-in y qué puede hacer?
+
+Un plug-in es una pieza de código que 4D lanza al inicio. Añade funcionalidad a 4D y aumenta así su capacidad.
+
+Normalmente, un plug-in hace cosas que:
+
+- 4D no puede efectuar (es decir, una tecnología de plataforma específica),
+- será muy difícil de escribir sólo con 4D,
+- sólo están disponibles como punto de entrada del plug-in
+
+Un plug-in suele contener un conjunto de rutinas entregadas al desarrollador 4D. Puede manejar un Área Externa y ejecutar un proceso externo.
+
+- Una **rutina de conexión** es una rutina escrita en lenguaje nativo (normalmente C o C++) que provoca una acción.
+- Un **área externa** es una parte de un formulario que puede mostrar casi todo e interactuar con el usuario cuando sea necesario.
+- Un **proceso externo** es un proceso que se ejecuta solo, normalmente en un bucle, haciendo casi todo lo que quiere. Todo el código del proceso pertenece al plug-in, 4D simplemente está presente para recibir/enviar eventos al proceso.
+
+### Nota importante
+
+Un plug-in puede ser muy sencillo, con una sola rutina que realice una tarea muy pequeña, o puede ser muy complejo, con cientos de rutinas y áreas. Prácticamente no hay límite para lo que puede hacer un plug-in, sin embargo todo desarrollador de plug-ins debe recordar que un plug-in es una parte de código "de muestra". Es el plug-in que se ejecuta dentro de 4D, no lo contrario. Como parte de código, es el anfitrión de 4D; no es una aplicación independiente. Comparte el tiempo de la CPU y la memoria con 4D y otros plug-ins, por lo tanto, debería ser un código conciso, utilizando sólo lo necesario para funcionar. Por ejemplo, en los bucles largos, un plug-in debe llamar a `PA_Yield()` para dar tiempo al planificador 4D a menos que su tarea sea crítica tanto para él como para la aplicación.
+
+### ¿Cómo crear un plug-in?
+
+4D ofrece en GitHub un código abierto [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), que contiene el plug-in API 4D y el asistente de plugins 4D:
+
+- el [**Plugin API 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), escrito en C, añade más de 400 funciones que le ayudan a crear fácilmente sus propios plug-ins para añadir nuevas funcionalidades a su aplicación 4D. Las funciones del plug-in de API de 4D gestionan todas las interacciones entre la aplicación 4D y su plug-in.
+- El [**asistente de plugins 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) es una herramienta esencial que simplifica la tarea de desarrollar plug-ins 4D. Escribe el código que 4D necesita para cargar e interactuar correctamente con un plug-in, permitiéndole concentrarse en su propio código.
+
+### Compartir los plug-ins
+
+Lo animamos a que apoye a la comunidad de desarrolladores 4D compartiendo sus plug-ins, preferiblemente en la [plataforma GitHub](https://github.com/topics/4d-plugin). Recomendamos que utilice el tema **`4d-plugin`** para ser referenciado correctamente.

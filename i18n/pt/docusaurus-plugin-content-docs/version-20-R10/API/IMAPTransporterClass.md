@@ -1582,40 +1582,40 @@ As chaves de pesquisa podem solicitar o valor a pesquisar:
 
 #### Chaves de pesquisa autorizadas
 
-**ALL**: Todas as mensagens na caixa de correio.\
-**ANSWERED**: mensagens com o indicador \Answered ativo.\
-**UNANSWERED**: mensagens que não têm o sinalizador indicador \Answered definido.\
-**DELETED**: mensagens com o sinalizador \Deleted ativado.\
-**UNDELETED**: Mensagens que não possuem o indicador \Deleted ativado.\
-**DRAFT**: mensagens com o indicador \Draft ativo.\
-**UNDRAFT**: mensagens que não têm o sinalizador \Draft ativado.\
-**FLAGGED**: mensagens com o indicador \Flagged ativo.\
-**UNFLAGGED**: mensagens que não têm o sinalizador \Flagged ativado.\
-**RECENT**: mensagens que possuem o indicador \Recent ativado.\
-**OLD**: mensagens que não possuem o indicador \Recent definido.\
-**SEEN**: mensagens que têm o sinalizador \Seen ativo.\
-**UNSEEN**: Mensagens que não possuem o indicador \Seen definido.\
-**NEW**: mensagens que tenham o indicador \Recent definido, mas não o indicador\Seen. Isso é funcionalmente equivalente a "(RECENT UNSEEN)".\
-**KEYWORD *flag***: mensagens com o conjunto de palavras-chave especificado.\
-**UNKEYWORD *flag***: mensagens que não têm a palavra-chave especificada.\
-**BEFORE *date***: mensagens cuja data interna é anterior à data especificada.\
-**ON *date***: mensagens cuja data interna está dentro da data especificada.\
-**SINCE *date***: mensagens cuja data interna está dentro da data especificada ou é posterior a ela.\
-**SENTBEFORE *data***: mensagens cujo cabeçalho de data é anterior à data especificada.\
-**SENTON *date***: mensagens cujo cabeçalho de Data está dentro da data especificada.\
-**SENTSINCE *data***: mensagens cujo cabeçalho de data está dentro ou posterior à data especificada.\
-**TO *string***: mensagens que contêm a string especificada no cabeçalho TO.\
-**FROM *string***: mensagens que contêm a string especificada no cabeçalho FROM.\
-**CC *string***: mensagens que contenham a seqüência de caracteres especificada no cabeçalho CC.\
-**BCC *string***: mensagens que contêm a string especificada no cabeçalho BCC.\
-**SUBJECT *string***: mensagens que contêm a string especificada no cabeçalho Subject.\
-**BODY *string***: mensagens que contêm a string especificada no corpo da mensagem.\
-**TEXT *string***: mensagens que contêm a string especificada no cabeçalho ou no corpo da mensagem.\
-**HEADER *nome-do-campo* *string***: mensagens que possuem um cabeçalho com o nome do campo especificado e que contêm a string especificada no corpo-campo.\
-**UID *message-UID***: mensagens com identificadores exclusivos correspondentes ao identificador exclusivo especificado.\
-**LARGER *n***: mensagens com tamanho maior do que o número de bytes especificado.\
-**SMALLER *n***: mensagens com tamanho menor do que o número de bytes especificado.\
-**NOT *chave de pesquisa***: mensagens que não correspondem à chave de pesquisa especificada.\
+**ALL**: Todas as mensagens na caixa de correio.  
+**ANSWERED**: mensagens com o indicador \Answered ativo.  
+**UNANSWERED**: mensagens que não têm o sinalizador indicador \Answered definido.  
+**DELETED**: mensagens com o sinalizador \Deleted ativado.  
+**UNDELETED**: Mensagens que não possuem o indicador \Deleted ativado.  
+**DRAFT**: mensagens com o indicador \Draft ativo.  
+**UNDRAFT**: mensagens que não têm o sinalizador \Draft ativado.  
+**FLAGGED**: mensagens com o indicador \Flagged ativo.  
+**UNFLAGGED**: mensagens que não têm o sinalizador \Flagged ativado.  
+**RECENT**: mensagens que possuem o indicador \Recent ativado.  
+**OLD**: mensagens que não possuem o indicador \Recent definido.  
+**SEEN**: mensagens que têm o sinalizador \Seen ativo.  
+**UNSEEN**: Mensagens que não possuem o indicador \Seen definido.  
+**NEW**: mensagens que tenham o indicador \Recent definido, mas não o indicador\Seen. Isso é funcionalmente equivalente a "(RECENT UNSEEN)".  
+**KEYWORD *flag***: mensagens com o conjunto de palavras-chave especificado.  
+**UNKEYWORD *flag***: mensagens que não têm a palavra-chave especificada.  
+**BEFORE *date***: mensagens cuja data interna é anterior à data especificada.  
+**ON *date***: mensagens cuja data interna está dentro da data especificada.  
+**SINCE *date***: mensagens cuja data interna está dentro da data especificada ou é posterior a ela.  
+**SENTBEFORE *data***: mensagens cujo cabeçalho de data é anterior à data especificada.  
+**SENTON *date***: mensagens cujo cabeçalho de Data está dentro da data especificada.  
+**SENTSINCE *data***: mensagens cujo cabeçalho de data está dentro ou posterior à data especificada.  
+**TO *string***: mensagens que contêm a string especificada no cabeçalho TO.  
+**FROM *string***: mensagens que contêm a string especificada no cabeçalho FROM.  
+**CC *string***: mensagens que contenham a seqüência de caracteres especificada no cabeçalho CC.  
+**BCC *string***: mensagens que contêm a string especificada no cabeçalho BCC.  
+**SUBJECT *string***: mensagens que contêm a string especificada no cabeçalho Subject.  
+**BODY *string***: mensagens que contêm a string especificada no corpo da mensagem.  
+**TEXT *string***: mensagens que contêm a string especificada no cabeçalho ou no corpo da mensagem.  
+**HEADER *nome-do-campo* *string***: mensagens que possuem um cabeçalho com o nome do campo especificado e que contêm a string especificada no corpo-campo.  
+**UID *message-UID***: mensagens com identificadores exclusivos correspondentes ao identificador exclusivo especificado.  
+**LARGER *n***: mensagens com tamanho maior do que o número de bytes especificado.  
+**SMALLER *n***: mensagens com tamanho menor do que o número de bytes especificado.  
+**NOT *chave de pesquisa***: mensagens que não correspondem à chave de pesquisa especificada.  
 **OR *search-key1* *search-key2***: mensagens que correspondem a uma das chaves de pesquisa.
 
 <!-- END REF -->

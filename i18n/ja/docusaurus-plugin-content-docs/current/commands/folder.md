@@ -72,8 +72,8 @@ displayed_sidebar: docs
 ## 参照
 
 [`4D.Folder` class](../API/FolderClass.md)
-[File](file.md)\
-[Object to path](../commands-legacy/object-to-path.md)\
+[File](file.md)  
+[Object to path](../commands-legacy/object-to-path.md)  
 [Path to object](../commands-legacy/path-to-object.md)
 
 ## プロパティ

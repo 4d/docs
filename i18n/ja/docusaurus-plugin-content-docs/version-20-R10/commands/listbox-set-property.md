@@ -84,7 +84,7 @@ title: LISTBOX SET PROPERTY
 
 ## 参照
 
-*List Box*\
+*List Box*  
 [LISTBOX Get property](listbox-get-property.md)
 
 ## プロパティ

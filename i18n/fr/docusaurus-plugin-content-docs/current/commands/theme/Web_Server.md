@@ -1,6 +1,7 @@
 ---
 id: Web_Server_theme
 title: Serveur Web
+sidebar_label: Serveur Web
 slug: /commands/theme/Web-Server
 ---
 

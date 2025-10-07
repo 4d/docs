@@ -1,6 +1,7 @@
 ---
 id: Language_theme
 title: Línguagem
+sidebar_label: Línguagem
 slug: /commands/theme/Language
 ---
 

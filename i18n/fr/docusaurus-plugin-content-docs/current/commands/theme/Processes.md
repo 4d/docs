@@ -1,6 +1,7 @@
 ---
 id: Processes_theme
 title: Process
+sidebar_label: Process
 slug: /commands/theme/Processes
 ---
 

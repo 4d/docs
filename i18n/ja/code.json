@@ -9,7 +9,10 @@
     "message": "プロジェクトを開発する"
   },
   "homepage.sections.core-development.title": {
-    "message": "コア開発"
+    "message": "Project & IDE"
+  },
+  "homepage.sections.language.title": {
+    "message": "4Dランゲージ"
   },
   "Project Management": {
     "message": "プロジェクト管理"
@@ -33,7 +36,7 @@
     "message": "環境設定"
   },
   "homepage.administration.title": {
-    "message": "管理"
+    "message": "Server & Admin"
   },
   "4D Server Administration Window": {
     "message": "4D Server 管理ウィンドウ"
@@ -131,8 +134,8 @@
   "Build Application": {
     "message": "アプリケーションビルド"
   },
-  "homepage.sections.mobile-applications.title": {
-    "message": "モバイルアプリ"
+  "homepage.sections.more.title": {
+    "message": "More docs"
   },
   "Go Mobile with 4D": {
     "message": "Go Mobile with 4D"
@@ -240,7 +243,7 @@
   },
   "theme.colorToggle.ariaLabel": {
     "message": "ダークモードとライトモードを切り替える (現在は {mode})",
-    "description": "The ARIA label for the navbar color mode toggle"
+    "description": "The ARIA label for the color mode toggle"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
     "message": "ダークモード",
@@ -660,5 +663,110 @@
   },
   "4D AIKit": {
     "message": "4D AIKit"
+  },
+  "4D at a glance": {
+    "message": "4D at a glance"
+  },
+  "homepage.sections.ide.title": {
+    "message": "Project & IDE"
+  },
+  "Creating or opening a project": {
+    "message": "プロジェクトの作成・開始"
+  },
+  "Architecture": {
+    "message": "アーキテクチャー"
+  },
+  "Project Settings": {
+    "message": "Project Settings"
+  },
+  "Database structure": {
+    "message": "Database structure"
+  },
+  "Code & Methods": {
+    "message": "Code & Methods"
+  },
+  "Dependencies": {
+    "message": "Dependencies"
+  },
+  "Compilation": {
+    "message": "コンパイル"
+  },
+  "Application Builder": {
+    "message": "Application Builder"
+  },
+  "Application Preferences": {
+    "message": "Application Preferences"
+  },
+  "Concepts": {
+    "message": "コンセプト"
+  },
+  "Commands by name": {
+    "message": "Commands by name"
+  },
+  "Commands by theme": {
+    "message": "Commands by theme"
+  },
+  "Classes": {
+    "message": "クラス"
+  },
+  "homepage.sections.core.title": {
+    "message": "コア開発"
+  },
+  "ORDA": {
+    "message": "ORDA"
+  },
+  "Database Methods": {
+    "message": "データベースメソッド"
+  },
+  "Transactions": {
+    "message": "トランザクション"
+  },
+  "Transformation tags": {
+    "message": "変換タグ"
+  },
+  "Date and Time Formats": {
+    "message": "日付と時間のフォーマット"
+  },
+  "4D Qodly Pro": {
+    "message": "4D Qodly Pro"
+  },
+  "Labels": {
+    "message": "ラベル"
+  },
+  "homepage.sections.administration.title": {
+    "message": "Server & Admin"
+  },
+  "4D Server Window": {
+    "message": "4D Server Window"
+  },
+  "WebAdmin & Data Explorer": {
+    "message": "WebAdmin & Data Explorer"
+  },
+  "TLS": {
+    "message": "TLS"
+  },
+  "Log Files": {
+    "message": "Log Files"
+  },
+  "Extending 4D applications": {
+    "message": "Extending 4D applications"
+  },
+  "4D QPDF": {
+    "message": "4D QPDF"
+  },
+  "Build4D": {
+    "message": "Build4D"
+  },
+  "theme.colorToggle.ariaLabel.mode.system": {
+    "message": "system mode",
+    "description": "The name for the system color mode"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
+    "message": "Expand the dropdown",
+    "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
+  },
+  "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
+    "message": "Collapse the dropdown",
+    "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   }
 }

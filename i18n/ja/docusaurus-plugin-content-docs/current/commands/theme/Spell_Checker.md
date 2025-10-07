@@ -1,6 +1,7 @@
 ---
 id: Spell_Checker_theme
 title: スペルチェッカー
+sidebar_label: スペルチェッカー
 slug: /commands/theme/Spell-Checker
 ---
 

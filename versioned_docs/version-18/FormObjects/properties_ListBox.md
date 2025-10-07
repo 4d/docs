@@ -74,7 +74,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 ---
 
-## Highlight Set
+## Highlight Set {#highlight-set}
 
 `Selection type list box`
 
@@ -168,7 +168,7 @@ Sets the number of columns of the list box.
 
 ---
 
-## Row Control Array
+## Row Control Array {#row-control-array}
 
 `Array type list box`
 

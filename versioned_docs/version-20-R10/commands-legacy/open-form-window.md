@@ -117,7 +117,8 @@ This code must be called on macOS while a document window is displayed, for exam
 The following example uses the path to a .json form to display the records in an employee list: 
 
 ```4d
- Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
+var $myWin : Integer 
+$myWin :=Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
  ALL RECORDS([Personnel])
  DIALOG("/RESOURCES/OutputPersonnel.json";*)
 ```

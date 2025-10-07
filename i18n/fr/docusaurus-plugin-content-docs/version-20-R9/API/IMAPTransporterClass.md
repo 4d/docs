@@ -1589,40 +1589,40 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 #### Mots-clés de recherche autorisés
 
-**ALL**: Tous les messages dans la boîte de réception.\
-**ANSWERED** : Messages avec l'indicateur \Answered activé.\
-**UNANSWERED** : Messages pour lesquels l'indicateur \Answered n'est pas activé.\
-**DELETED** : Messages dont l'indicateur \Deleted est activé.\
-**UNDELETED** : Messages pour lesquels l'indicateur \Deleted n'a pas été activé.\
-**DRAFT** : Messages dont l'indicateur \Draft est activé.\
-**UNDRAFT** : Messages pour lesquels l'indicateur \Draft n'est pas activé.\
-**FLAGGED** : Messages avec le drapeau \Flagged activé.\
-**UNFLAGGED** : Messages pour lesquels l'indicateur \Flagged n'est pas activé.\
-**RECENT** : Messages dont l'indicateur \Recent est activé.\
-**OLD** : Messages pour lesquels l'indicateur \Recent n'a pas été activé.\
-**SEEN** : Messages pour lesquels l'indicateur \Seen est activé.\
-**UNSEEN** : Messages pour lesquels l'indicateur \Seen n'est pas activé.\
-**NOUVEAU** : Messages pour lesquels l'indicateur \Recent est activé mais pas l'indicateur \Seen. Equivaut à “(RECENT UNSEEN)”.\
-**KEYWORD *flag*** : Messages avec le jeu de mots-clés spécifié.\
-**UNKEYWORD *flag*** : Messages ne contenant pas le mot-clé spécifié.\
-**BEFORE *date*** : Messages dont la date interne est antérieure à la date spécifiée.\
-**ON *date*** : Messages dont la date interne est comprise dans la date spécifiée.\
-**SINCE *date*** : Messages dont la date interne est antérieure ou postérieure à la date spécifiée.\
-**SENTBEFORE *date*** : Messages dont l'en-tête Date est antérieur à la date spécifiée.\
-**SENTON *date*** : Messages dont l'en-tête Date est compris dans la date spécifiée.\
-**SENTSINCE *date*** : Messages dont l'en-tête Date est inférieur ou supérieur à la date spécifiée.\
-**TO *string*** : Messages contenant la chaîne de caractères spécifiée dans l'en-tête TO.\
-**FROM *string***: Messages contenant la chaîne spécifiée dans l’en-tête Emetteur.\
-**CC *string*** : Messages contenant la chaîne spécifiée dans l'en-tête CC.\
-**BCC *string*** : Messages contenant la chaîne spécifiée dans l'en-tête BCC.\
-**SUBJECT *string*** : Messages qui contiennent la chaîne spécifiée dans l'en-tête Subject .\
-**BODY *string*** : Messages qui contiennent la chaîne spécifiée dans le body du message.\
-**TEXT *chaîne*** : Messages contenant la chaîne spécifiée dans l'en-tête ou dans le corps du message.\
-**HEADER *field-name* *string***: Messages qui ont un en-tête avec le nom de champ spécifié et qui contiennent la chaîne spécifiée dans le field-body.\
-**UID *message-UID*** : Messages avec des identifiants uniques correspondant au jeu d'identifiants uniques spécifié.\
-**LARGER *n*** : Messages dont la taille est supérieure au nombre d'octets spécifié.\
-**SMALLER *n*** : Messages dont la taille est inférieure au nombre d'octets spécifié.\
-**NOT *search-key*** : Messages ne correspondant pas à la clé de recherche spécifiée.\
+**ALL**: Tous les messages dans la boîte de réception.  
+**ANSWERED** : Messages avec l'indicateur \Answered activé.  
+**UNANSWERED** : Messages pour lesquels l'indicateur \Answered n'est pas activé.  
+**DELETED** : Messages dont l'indicateur \Deleted est activé.  
+**UNDELETED** : Messages pour lesquels l'indicateur \Deleted n'a pas été activé.  
+**DRAFT** : Messages dont l'indicateur \Draft est activé.  
+**UNDRAFT** : Messages pour lesquels l'indicateur \Draft n'est pas activé.  
+**FLAGGED** : Messages avec le drapeau \Flagged activé.  
+**UNFLAGGED** : Messages pour lesquels l'indicateur \Flagged n'est pas activé.  
+**RECENT** : Messages dont l'indicateur \Recent est activé.  
+**OLD** : Messages pour lesquels l'indicateur \Recent n'a pas été activé.  
+**SEEN** : Messages pour lesquels l'indicateur \Seen est activé.  
+**UNSEEN** : Messages pour lesquels l'indicateur \Seen n'est pas activé.  
+**NOUVEAU** : Messages pour lesquels l'indicateur \Recent est activé mais pas l'indicateur \Seen. Equivaut à “(RECENT UNSEEN)”.  
+**KEYWORD *flag*** : Messages avec le jeu de mots-clés spécifié.  
+**UNKEYWORD *flag*** : Messages ne contenant pas le mot-clé spécifié.  
+**BEFORE *date*** : Messages dont la date interne est antérieure à la date spécifiée.  
+**ON *date*** : Messages dont la date interne est comprise dans la date spécifiée.  
+**SINCE *date*** : Messages dont la date interne est antérieure ou postérieure à la date spécifiée.  
+**SENTBEFORE *date*** : Messages dont l'en-tête Date est antérieur à la date spécifiée.  
+**SENTON *date*** : Messages dont l'en-tête Date est compris dans la date spécifiée.  
+**SENTSINCE *date*** : Messages dont l'en-tête Date est inférieur ou supérieur à la date spécifiée.  
+**TO *string*** : Messages contenant la chaîne de caractères spécifiée dans l'en-tête TO.  
+**FROM *string***: Messages contenant la chaîne spécifiée dans l’en-tête Emetteur.  
+**CC *string*** : Messages contenant la chaîne spécifiée dans l'en-tête CC.  
+**BCC *string*** : Messages contenant la chaîne spécifiée dans l'en-tête BCC.  
+**SUBJECT *string*** : Messages qui contiennent la chaîne spécifiée dans l'en-tête Subject .  
+**BODY *string*** : Messages qui contiennent la chaîne spécifiée dans le body du message.  
+**TEXT *chaîne*** : Messages contenant la chaîne spécifiée dans l'en-tête ou dans le corps du message.  
+**HEADER *field-name* *string***: Messages qui ont un en-tête avec le nom de champ spécifié et qui contiennent la chaîne spécifiée dans le field-body.  
+**UID *message-UID*** : Messages avec des identifiants uniques correspondant au jeu d'identifiants uniques spécifié.  
+**LARGER *n*** : Messages dont la taille est supérieure au nombre d'octets spécifié.  
+**SMALLER *n*** : Messages dont la taille est inférieure au nombre d'octets spécifié.  
+**NOT *search-key*** : Messages ne correspondant pas à la clé de recherche spécifiée.  
 **OR *search-key1* *search-key2*** : Messages qui correspondent à l'un des deux mots clés de recherche.
 
 <!-- END REF -->

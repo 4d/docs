@@ -3,14 +3,13 @@ id: components
 title: Components
 ---
 
-A 4D component is a set of 4D code and forms representing one or more functionalities that you can install and use in your projects. For example, the [4D SVG component](https://doc.4d.com/4Dv20/4D/20/4D-SVG-Component.100-6342795.en.html) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+A 4D component is a set of 4D code and forms representing one or more functionalities that you can install and use in your projects. For example, the [4D SVG component](https://github.com/4d/4D-SVG) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
 ## Installing components
 
-Several components are [preinstalled in the 4D development environment](Extensions/overview.md), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). Additionnally, you can [develop your own 4D components](Extensions/develop-components.md).
+Installation and loading of components in your 4D projects are handled through the [4D Dependency manager](../Project/components.md). 
 
-Installation and loading of components in your 4D projects are handled through the [4D dependency manager](../Project/components.md). 
-
+Several components are [developed by 4D](../Extensions/overview.md#components-developed-by-4d), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). Additionnally, you can [develop your own 4D components](../Extensions/develop-components.md).
 
 ## Using components
 

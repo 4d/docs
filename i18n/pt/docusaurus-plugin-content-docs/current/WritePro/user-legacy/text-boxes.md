@@ -2,13 +2,13 @@
 id: text-boxes
 title: Text boxes
 displayed_sidebar: docs
-slug: /WritePro/user/text-boxes
+slug: /WritePro/text-boxes
 ---
 
 
 As caixas de texto são áreas que se ancoram a uma página ou seção e podem ser preenchidas com texto, imagens online ou tabelas. As caixas de texto podem ser colocadas em qualquer parte da página e responder à necessidades específicas, por exemplo, para inserir o nome ou logotipo de uma empresa ou uma área de endereços.
 
-![](../../assets/en/WritePro/pict6131919.EN.png)
+![](../../assets/en/WritePro/pict6131919.en.png)
 
 **Nota:** uma caixa de texto não pode conter cabeçalhos, rodapés, colunas, imagens ancoradas ou outras caixas de texto.
 

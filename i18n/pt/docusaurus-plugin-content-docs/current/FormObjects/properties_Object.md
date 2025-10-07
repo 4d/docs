@@ -76,7 +76,7 @@ Eis a lista de objetos cujo valor pode ser guardado:
 
 ---
 
-## Variável ou expressão
+## Variable or Expression {#variable-or-expression}
 
 > Consulte também **[Expression](properties_DataSource.md#expression)** para colunas do list box do tipo seleção e coleção.
 

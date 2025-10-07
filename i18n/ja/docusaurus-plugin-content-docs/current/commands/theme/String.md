@@ -1,6 +1,7 @@
 ---
 id: String_theme
 title: 文字列
+sidebar_label: 文字列
 slug: /commands/theme/String
 ---
 

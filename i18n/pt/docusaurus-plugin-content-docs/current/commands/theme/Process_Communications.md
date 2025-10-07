@@ -1,6 +1,7 @@
 ---
 id: Process_Communications_theme
 title: Processo (Comunicações)
+sidebar_label: Processo (Comunicações)
 slug: /commands/theme/Process-Communications
 ---
 

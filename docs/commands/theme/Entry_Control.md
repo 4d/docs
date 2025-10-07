@@ -1,6 +1,7 @@
 ---
 id: Entry_Control_theme
 title: Entry Control
+sidebar_label: Entry Control
 slug: /commands/theme/Entry-Control
 ---
 

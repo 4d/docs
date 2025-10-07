@@ -10,8 +10,11 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/
 #### Points forts
 
 - Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
-- The code of a loaded, interpreted component can now be [edited from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer.
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
+- You can now [create components directly from the host project](../Extensions/develop-components.md#creating-components) and [edit their code from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer without leaving or restarting the project.
+- The 4D product activation step has been simplified and automated during [sign-in](../GettingStarted/Installation.md#sign-in).
+- 4D AIKit component: new features to [invoke a specific tool automatically](../aikit/Classes/OpenAIChatHelper.md#registertool) and [specify a response format](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format).
 - Langage 4D:
   - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
   - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
@@ -28,6 +31,17 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
+- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview-old.md)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
+  ![alt-text](../assets/en/getStart/convert.png)<br/>
+  \- **Import**: import automatically 4D components as dependencies to the project<br/>
+  \- **Ignore**: do not import components and let you [manage components manually](../Project/components.md)<br/>
+  \- **Ask later**: do not import components and display the dialog at the next project opening.
+
+:::note
+
+In binary databases, you need to select the required components in the 4D installer or download them from the [4D Product Download portal](https://product-download.4d.com/?type=components).
+
+:::
 
 
 #### Changements de comportement
@@ -41,6 +55,24 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/
 - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+
+#### Changements de comportement
+
+:::caution Index rebuild
+
+4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
+
+:::
+
+- Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
+- Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
+- Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+
+#### Changements de comportement
+
+ - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
+ - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
+ - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 
 ## 4D 20 R10
 
@@ -280,17 +312,17 @@ Voir [**Release Notes pour 4D 20.x LTS**](../../version-20/Notes/updates.md).
 
 | Bibliothèque | Version courante                       | Mise à jour dans 4D | Commentaire                                                                                                                                        |
 | ------------ | -------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL    | 0697c88                                | **21**              | Utilisé pour QUIC                                                                                                                                  |
+| BoringSSL    | fa47b1d                                | **21**              | Utilisé pour QUIC                                                                                                                                  |
 | CEF          | 7258                                   | **21**              | Chromium 139                                                                                                                                       |
 | Hunspell     | 1.7.2  | 20                  | Utilisé pour la vérification orthographique dans les formulaires 4D et 4D Write Pro                                                                |
-| ICU          | 77.1                   | **21**              | Cette mise à jour majeure entraîne une reconstruction automatique des index alphanumériques, texte et objets.                      |
-| libldap      | 2.6.7  | 20 R6               |                                                                                                                                                    |
+| ICU          | 77.1                   | **21**              | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
+| libldap      | 2.6.10 | **21**              |                                                                                                                                                    |
 | libsasl      | 2.1.28 | 20                  |                                                                                                                                                    |
 | Liblsquic    | 4.2.0  | 20 R10              | Utilisé pour QUIC                                                                                                                                  |
 | Libuv        | 1.51.0 | **21**              | Utilisé pour QUIC                                                                                                                                  |
 | libZip       | 1.11.4 | **21**              | Utilisé par les classes zip, 4D Write Pro, les composants svg et serverNet                                                                         |
 | LZMA         | 5.8.1  | **21**              |                                                                                                                                                    |
-| ngtcp2       | 1.14.0 | **21**              | Utilisé pour QUIC                                                                                                                                  |
+| ngtcp2       | 1.16.0 | **21**              | Utilisé pour QUIC                                                                                                                                  |
 | OpenSSL      | 3.5.2  | **21**              |                                                                                                                                                    |
 | PDFWriter    | 4.7.0  | **21**              | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | PHP          | 8.2.4  | 20                  |                                                                                                                                                    |

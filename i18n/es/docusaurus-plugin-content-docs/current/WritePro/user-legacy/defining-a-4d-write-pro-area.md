@@ -1,7 +1,8 @@
 ---
 id: defining-a-4d-write-pro-area
-title: Definir un area 4D Write Pro
+title: Configuración de áreas de 4D Write Pro
 displayed_sidebar: docs
+slug: /WritePro/configuring-4d-write-pro-areas
 ---
 
 
@@ -29,7 +30,7 @@ Las propiedades de vista del documento están disponibles directamente en la lis
 
 La configuración de vista del documento se manejan a través de temas específicos en el tema **Apariencia** de la lista de propiedades para objetos de formulario 4D Write Pro:
 
-![](../../assets/en/WritePro/pict5941073.EN.png)
+![](../../assets/en/WritePro/pict5941073.en.png)
 
 * **Resolución**: define la resolución de pantalla para los contenidos del área 4D Write Pro. De forma predeterminada, se establece en **72 dpi (macOS)**, que es la resolución estándar para formularios 4D en todas las plataformas. Al establecer esta propiedad en **Automático** significa que el documento de renderización será diferente entre las plataformas macOS y Windows. El establecimiento de un valor específico dpi hará la misma renderización del documento en ambas plataformas macOS y Windows.
 * **Zoom**: establece el porcentaje de zoom para mostrar los contenidos del área 4D Write Pro.
@@ -56,7 +57,7 @@ La configuración de vista del documento se manejan a través de temas específi
 
 Si la propiedad **Menú contextual** está [seleccionada por un área 4D Write Pro](./defining-a-4d-write-pro-area.md#using-the-4d-write-pro-area-object), un menú contextual completo está disponible para los usuarios en modo Aplicación:  
   
-![](../../assets/en/WritePro/pict3071271.EN.png) 
+![](../../assets/en/WritePro/pict3071271.en.png) 
 
 Este menú ofrece acceso a todas las funcionalidades de 4D Write Pro.
 

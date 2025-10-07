@@ -945,7 +945,7 @@ La fórmula debe haber sido creada con el comando `Formula` o `Formula from stri
 
 * *fórmula* se evalúa para cada entidad y debe devolver true o false. Durante la ejecución de la búsqueda, si el resultado de la fórmula no es un booleano, se considera como false.
 * dentro de la *fórmula*, la entidad está disponible a través del objeto `This`.
-* si el objeto `Formula` es **null**, se genera el error 1626 ("Esperando un texto o una fórmula"), que llama a interceptar utilizando un método instalado con `ON ERR CALL`.
+* si el objeto `Formula` es **null**, se genera el error 1626 ("Esperando un texto o una fórmula"), que puede interceptar utilizando un método instalado con `ON ERR CALL`.
 > > > > > For security reasons, formula calls within `query(`) member methods can be disallowed. Ver la descripción del parámetro *querySettings*.
 
 **Pasar parámetros a fórmulas**

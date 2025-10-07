@@ -1,6 +1,6 @@
 ---
 id: documentation
-title: Documentar um projecto
+title: Documentation
 ---
 
 Nos projetos de aplicação, você pode documentar seus métodos e suas classes, formulários, tabelas ou campos. A criação de documentação é particularmente apropriada para projetos que estão sendo desenvolvidos por vários programadores e, em geral, é uma boa prática de programação. A documentação pode conter uma descrição de um elemento, bem como de qualquer informação necessária para entender como o elemento funciona na aplicação.
@@ -106,7 +106,7 @@ Si existe un archivo llamado `\<MethodName>.md` en la carpeta `\<package>/docume
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
-  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.\
+  Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.  
   Nesse caso, a primeira linha contém o **protótipo** do método, gerado automaticamente pelo analisador de código 4D.
 
 :::note

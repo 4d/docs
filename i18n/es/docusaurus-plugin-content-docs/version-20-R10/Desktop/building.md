@@ -555,7 +555,7 @@ Una vez iniciada la compilación, si no se encuentra una licencia válida, se ge
 
 Una vez creada una aplicación licenciada, se incluye automáticamente un nuevo archivo de licencia de despliegue en la carpeta Licencias junto a la aplicación ejecutable (Windows) o en el paquete (macOS).
 
-#### Application embedding licenses from the following list
+#### Aplicación que integra las licencias de la siguiente lista
 
 Seleccione esta opción para crear una aplicación lista para usar (independiente o cliente-servidor), incrustando las [licencias de despliegue](../Admin/licenses.md#deployment-licenses) necesarias que usted designe específicamente.
 
@@ -729,8 +729,8 @@ El procedimiento de conexión para las aplicaciones cliente fusionadas admite lo
    O\
    La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).\
    O\
-   La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).\
-   O\
+   La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).  
+   O  
    La aplicación cliente intenta conectarse al servidor utilizando el servicio de descubrimiento (basado en el nombre del servidor, transmitido en la misma subred).
 
 2. Si esto falla, la aplicación cliente intenta conectarse al servidor utilizando la información almacenada en la carpeta de preferencias del usuario de la aplicación (archivo "lastServer.xml", ver último paso).
@@ -763,7 +763,7 @@ Este mecanismo aborda el caso en el que el servidor objetivo primario esté disp
 
 Puede elegir si mostrar o no la caja de diálogo estándar de selección de servidor en las aplicaciones cliente fusionadas cuando no se puede acceder al servidor. La configuración depende del valor de la [ServerSelectionAllowed](https://doc.4d.com/4Dv20/4D/20/ServerSelectionAllowed.300-6335767.en.html) La llave XML en la máquina donde se generó la aplicación:
 
-- **Visualización de un mensaje de error sin poder acceder a la caja de diálogo de selección del servidor**. Funcionamiento por defecto. La aplicación solo puede cerrarse.\
+- **Visualización de un mensaje de error sin poder acceder a la caja de diálogo de selección del servidor**. Funcionamiento por defecto. La aplicación solo puede cerrarse.  
   `ServerSelectionAllowed`: **False** o llave omitida
   ![](../assets/en/Project/connect1.png)
 

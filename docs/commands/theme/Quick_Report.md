@@ -1,6 +1,7 @@
 ---
 id: Quick_Report_theme
 title: Quick Report
+sidebar_label: Quick Report
 slug: /commands/theme/Quick-Report
 ---
 

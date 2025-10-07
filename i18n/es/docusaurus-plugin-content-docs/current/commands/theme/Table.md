@@ -1,6 +1,7 @@
 ---
 id: Table_theme
 title: Tabla
+sidebar_label: Tabla
 slug: /commands/theme/Table
 ---
 

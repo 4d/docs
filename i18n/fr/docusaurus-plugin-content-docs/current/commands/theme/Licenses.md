@@ -1,6 +1,7 @@
 ---
 id: Licenses_theme
 title: Licences
+sidebar_label: Licences
 slug: /commands/theme/Licenses
 ---
 

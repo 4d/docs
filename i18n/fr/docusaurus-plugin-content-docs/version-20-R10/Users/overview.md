@@ -7,16 +7,19 @@ Si plusieurs personnes utilisent une application, ce qui est souvent le cas dans
 
 La stratégie de contrôle d'accès 4D dépend de la configuration de votre déploiement :
 
-- dans les applications multi-utilisateurs, vous pouvez vous appuyer sur les utilisateurs et les groupes 4D,
+- in multi-user Web and REST applications, access control is based upon [ORDA's Roles and privileges](../ORDA/privileges.md) features.
+- in multi-user desktop applications, you can rely on 4D users and groups,
 - dans les applications monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](../commands-legacy/current-system-user.md).
 
-> Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
+:::tip Related Blog post
+
+Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
+
+:::
 
 ## Contrôle des accès dans les applications multi-utilisateurs
 
-Les applications multi-utilisateurs sont déployées avec 4D Server. Il peut s'agir d'applications client-serveur, Web ou REST.
-
-Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
+Multi-user desktop applications are deployed with 4D Server. Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
 
 Initiez le système de contrôle des accès par mot de passe 4D avec 4D Server, [en attribuant un mot de passe au Super utilisateur](handling_users_groups.md#designer-and-administrator). Tant que vous n'attribuez pas de mot de passe au Super utilisateur, tous les accès à l'application se font avec les droits d'accès du Super utilisateur, même si vous avez [configuré des utilisateurs et des groupes](handling_users_groups.md) (à l'ouverture N'importe quelle partie de l'application peut être ouverte. N'importe quelle partie de l'application peut être ouverte.
 

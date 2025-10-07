@@ -23,7 +23,7 @@ Passing the optional *\** parameter indicates that the *object* parameter is an 
 
 When a formula is associated with a form object, it acts as the object's data source at runtime.
 
-If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).\
+If this command is applied to an object with no custom formula assigned, it returns the automatically assigned [dynamic form variable](../FormObjects/properties_Object.md#dynamic-variables).  
 Se o objeto não existe ou não suporta fórmulas, ele retorna `Null`.
 
 ## Exemplo

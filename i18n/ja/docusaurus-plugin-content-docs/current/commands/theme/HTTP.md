@@ -1,6 +1,7 @@
 ---
 id: HTTP_theme
 title: HTTPクライアント
+sidebar_label: HTTPクライアント
 slug: /commands/theme/HTTP
 ---
 

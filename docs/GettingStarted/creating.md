@@ -3,38 +3,6 @@ id: creating
 title: Creating or opening a project
 ---
 
-## Project overview
-
-4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
-
-A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files. 
-
-
-### Project files
-
-4D project files are open and edited using regular 4D platform applications (4D or 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a [Code Editor](../code-editor/write-class-method.md), a [form editor](../FormEditor/formEditor.md), a menu editor...
- 
-Since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor. 
-
-In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](../Project/architecture.md).
-
-
-### Development
-
-4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project. 
-
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications. 
-
-
-### Deployment
-
-Project files can be [compiled](../Project/compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
-
-- [web](WebServer/webServer.md) applications,
-- [desktop](Desktop/building.md) applications (client/server or single-user),
-- [mobile](https://developer.4d.com/go-mobile/) applications.
-
-Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume Desktop](../Desktop/building.md).
 
 ## Creating a project
 
@@ -44,8 +12,8 @@ To create a new project:
 
 1. Launch 4D or 4D Server.
 2. Do one of the following:
-    * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)
-    * (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+    * Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate-1.png)
+    * (4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate-2.png)</p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Enter the name of your project folder and click **Save**. This name will be used:
 

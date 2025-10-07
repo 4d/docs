@@ -103,7 +103,7 @@ Un menu peut être attaché à une barre de menus ou à un autre menu.
 - Pour attacher un menu à une barre de menus : cliquez avec le bouton droit de la souris sur la barre de menus et sélectionnez **Attacher un menu à la barre de menus "nom de la barre" >**, puis choisissez le menu à attacher à la barre de menus :
   ![](../assets/en/Menus/attach.png)
   Vous pouvez également sélectionner une barre de menus, puis cliquer sur le bouton d'options situé en dessous de la liste.
-- Pour attacher un menu à un autre menu : sélectionnez le menu dans la zone de gauche, puis faites un clic droit sur l'élément de menu et sélectionnez **Attacher un sous-menu à l'élément "nom de l'élément">**, puis choisissez le menu que vous souhaitez utiliser comme sous-menu :\
+- Pour attacher un menu à un autre menu : sélectionnez le menu dans la zone de gauche, puis faites un clic droit sur l'élément de menu et sélectionnez **Attacher un sous-menu à l'élément "nom de l'élément">**, puis choisissez le menu que vous souhaitez utiliser comme sous-menu :  
   ![](../assets/en/Menus/attach2.png)
   Vous pouvez également sélectionner un élément de menu puis cliquer sur le bouton d'options situé sous la liste.
   Le menu que vous êtes en train de rattacher deviendra un sous-menu. Le titre de la ligne est maintenu (le nom initial du sous-menu est ignoré), mais il peut être modifié.

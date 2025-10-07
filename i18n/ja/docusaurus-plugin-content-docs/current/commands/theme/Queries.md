@@ -1,6 +1,7 @@
 ---
 id: Queries_theme
 title: クエリ
+sidebar_label: クエリ
 slug: /commands/theme/Queries
 ---
 

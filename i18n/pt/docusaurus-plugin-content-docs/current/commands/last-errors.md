@@ -78,7 +78,7 @@ Each error object contains the following properties:
 ## Veja também
 
 [ON ERR CALL](../commands-legacy/on-err-call.md)
-[throw](../commands-legacy/throw.md)\
+[throw](../commands-legacy/throw.md)  
 [Error handling](../Concepts/error-handling.md)
 
 ## Propriedades

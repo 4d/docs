@@ -847,3 +847,17 @@ Devem ser observadas regras de sintaxe rigorosas para que os arquivos de macros 
 - Comentários do tipo "// meu comentário", permitido dentro de `<macro>` elementos nas versões anteriores de 4D, não são compatíveis com a sintaxe XML. As linhas de comentários devem respeitar a forma normalizada `"<!-- o meu comentário -->"`.
 - Os símbolos `<>` usados mais especialmente para nomes de objetos entre processos devem ser codificados. Por exemplo, a variável `<>params` deve ser escrita `&lt;>params`.
 - A etiqueta de declaração inicial `<macros>` podia ser omitida em versões anteriores de 4D. Agora é obrigatório; caso contrário, o ficheiro não será carregado.
+
+## Importação e exportação de código
+
+É possível importar e exportar um método ou o código de uma classe sob a forma de um ficheiro. Esses comandos podem ser encontrados no menu **Método** do [Editor de código](../code-editor/write-class-method.md).
+
+- Cuando se selecciona el comando **Exportar el método...**, aparece una caja de diálogo estándar para guardar archivos, que permite elegir el nombre, la ubicación y el formato del archivo de exportación (ver abajo). Tal como acontece com a impressão, a exportação não tem em conta o estado colapsado das estruturas de código e todo o código é exportado.
+- Cuando se selecciona el comando **Importar el método...**, aparece una caja de diálogo estándar de apertura de archivos que permite designar el archivo a importar. A importação substitui o texto selecionado no método. Para substituir um método existente por um método importado, selecionar todo o conteúdo do método antes de efetuar a importação.
+
+A função de importação/exportação é multiplataforma: um método exportado para Mac OS pode ser importado para Windows e vice-versa; 4D lida com a conversão de caracteres quando necessário.
+
+4D pode exportar e importar métodos em dois formatos:
+
+- Método 4D (extensión *.c4d*): en este formato, los métodos se exportan codificados. Os nomes dos objectos são tokenizados. Este formato é utilizado em particular para o intercâmbio de métodos entre aplicações 4D e plug-ins em diferentes línguas. Por outro lado, não é possível visualizá-los num editor de texto.
+- Texto (extensión *.txt*): en este formato, los métodos se exportan en forma de texto. Neste caso, os métodos podem ser lidos utilizando um editor de texto normal ou uma ferramenta de controlo da fonte.

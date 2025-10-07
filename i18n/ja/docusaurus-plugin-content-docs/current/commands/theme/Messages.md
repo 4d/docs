@@ -1,6 +1,7 @@
 ---
 id: Messages_theme
 title: メッセージ
+sidebar_label: メッセージ
 slug: /commands/theme/Messages
 ---
 

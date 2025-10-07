@@ -31,7 +31,9 @@ Aparece então o Assistente de Boas-vindas:
 
 - Si desea descubrir y explorar 4D, haga clic en el enlace **prueba gratuita**. Digite seu ID (email ou conta 4D) e sua senha.
 
-- Si ya tiene una cuenta en 4D, haga clic en el enlace **Iniciar sesión** en la parte superior derecha del diálogo del Asistente de Bienvenida e introduzca los datos de su cuenta. Qualquer licença 4D já registada é automaticamente atualizada (ou pacotes de expansão adicionais são carregados) na sua máquina.
+- Si ya tiene una cuenta en 4D, haga clic en el enlace **Iniciar sesión** en la parte superior derecha del diálogo del Asistente de Bienvenida e introduzca los datos de su cuenta.
+  - Any already activated 4D products are automatically updated (or additional expansion packs loaded) on your machine.
+  - If no product is activated on the machine but there is a development license associated with the 4D account, a dialog box appears, prompting you to install it directly.
 
 Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la acción que desea realizar:
 

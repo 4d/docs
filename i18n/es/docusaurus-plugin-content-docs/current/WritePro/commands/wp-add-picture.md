@@ -24,19 +24,19 @@ El comando **WP Add imagen** <!--REF #_command_.WP Add image.Summary--> ancla la
 
 En *wpDoc*, pase el nombre de un objeto documento de 4D Write Pro.
 
-For the optional second parameter, you can pass either:
+Para el segundo parámetro opcional, puede pasar:
 
 - En *imagen*:  una imagen 4D
-- In *picturePath*:  A string containing a path to a picture file stored on disk (system syntax). You can pass a full pathname, or a pathname relative to the database structure file. You can also pass a file name, in which case the file must be located next to the database structure file. If you pass a file name, you need to indicate the file extension.
+- En *picturePath*:  una cadena que contiene una ruta a un archivo imagen almacenado en disco (sintaxis sistema). Puede pasar una ruta completa o una ruta relativa al archivo de estructura de la base de datos. También puede pasar un nombre de archivo, en cuyo caso el archivo debe estar situado junto al archivo de estructura de la base de datos. Si pasa un nombre de archivo, debe indicar la extensión del archivo.
 - En *PictureFileObj*: un objeto `4D.File` que representa un archivo imagen.
 
 :::note
 
-Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
+Todo formato imagen [soportado por 4D](../../FormEditor/pictures.md#native-formats-supported) puede ser usado. Puede obtener la lista de formatos de imagen disponibles usando el comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Si la imagen encapsula varios formatos (codecs), 4D Write Pro solo mantiene un formato para la visualización y otro para la impresión (si son diferentes) en el documento; los "mejores" formatos se seleccionan automáticamente.
 
 :::
 
-- If *picture* is omitted, a valid picture reference is returned, and an empty image is added. Esto le permite llamar a [WP SET ATTRIBUTES](wp-set-attributes.md) con el selector wk image expression para llenar la imagen con una expresión 4D. If the expression can not be evaluated or does not return a valid picture, an empty image (default black frame image) is displayed.
+- Si se omite *imagen*, se devuelve una referencia de imagen válida y se añade una imagen vacía. Esto le permite llamar a [WP SET ATTRIBUTES](wp-set-attributes.md) con el selector wk image expression para llenar la imagen con una expresión 4D. Si la expresión no puede evaluarse o no devuelve una imagen válida, se muestra una imagen vacía (imagen de marco negro por defecto).
 
 Por defecto, la imagen añadida es:
 
@@ -44,16 +44,16 @@ Por defecto, la imagen añadida es:
 - Aparece en la esquina superior izquierda de la papelera
 - Mostrar en todas las páginas
 
-The location, layer (inline, in front/behind text), visibility, and any properties of picture can be modified using the [WP SET ATTRIBUTES](wp-set-attributes.md) command, or via standard actions (see *Using 4D Write Pro standard actions*).
+La ubicación, la capa (en línea, delante/detrás del texto), la visibilidad y cualquier otra propiedad de la imagen pueden modificarse mediante el comando [WP SET ATTRIBUTES](wp-set-attributes.md), o mediante acciones estándar (ver *Uso de las acciones estándar 4D Write Pro*).
 
-**Nota:** el comando [WP Selection range](../commands-legacy/wp-selection-range.md) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. You can determine if a selected object is a picture object by checking the `wk type` attribute:
+**Nota:** el comando [WP Selection range](../commands-legacy/wp-selection-range.md) devuelve un objeto *referencia a imagen* si se selecciona una imagen anclada y un objeto *rango* si se selecciona una imagen en línea. Puede determinar si un objeto seleccionado es un objeto imagen comprobando el atributo `wk type`:
 
 - **Value = 2**: el objeto seleccionado es un objeto imagen.
 - **Valor = 0**: el objeto seleccionado es un objeto de rango.
 
 ## Ejemplo 1
 
-You want to add a picture with default settings using a filepath.
+Desea añadir una imagen con la configuración predeterminada utilizando una ruta de acceso.
 
 ```4d
  var $obPict : Object
@@ -66,7 +66,7 @@ El resultado es:
 
 ## Ejemplo 2
 
-You want to add a resized picture, centered and anchored to the header:
+Quiere añadir una imagen redimensionada, centrada y anclada al encabezado:
 
 ```4d
  var $obImage : Object
@@ -86,7 +86,7 @@ El resultado es:
 
 ## Ejemplo 3
 
-You want to use a field expression to add an anchored image to a document displaying some text from the database:
+Desea utilizar una expresión de campo para añadir una imagen anclada a un documento que muestra algún texto de la base de datos:
 
 ```4d
  QUERY([Flowers];[Flowers]Common_Name="tulip")

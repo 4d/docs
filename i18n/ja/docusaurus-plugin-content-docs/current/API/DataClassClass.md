@@ -863,12 +863,12 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                        |
-| ----- | ----------------------------------------- |
-| 21    | Support 4D.Vector objects |
-| 17 R6 | Formula パラメーターをサポート                       |
-| 17 R5 | 値のプレースホルダーをサポート                           |
-| 17    | 追加                                        |
+| リリース  | 内容                                    |
+| ----- | ------------------------------------- |
+| 21    | 4D.Vector オブジェクトのサポート |
+| 17 R6 | Formula パラメーターをサポート                   |
+| 17 R5 | 値のプレースホルダーをサポート                       |
+| 17    | 追加                                    |
 
 </details>
 
@@ -923,19 +923,19 @@ attributePath|formula 比較演算子 値
 
 - **比較演算子**: *attributePath* 引数と*value* 引数の比較に使用する記号。 以下の記号がサポートされます:
 
-| 比較            | 記号                          | 説明                                                                                                                                                                               | Supported in vector similarity |
-| ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| 等しい           | =, ==                       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                                                                          |                                |
-|               | ===, IS                     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                                                                                 |                                |
-| 等しくない         | #, !=                       | ワイルドカード (@) をサポートします。 ワイルドカード (@) をサポートします。 "宣言に Not 条件を適用" と同じです ([後述参照](#コレクションにおける-等しくない)) |                                |
-|               | !==, IS NOT                 | ワイルドカード (@) は標準の文字として認識されます                                                                                                                      |                                |
-| 宣言に Not 条件を適用 | NOT                         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 "等しくない" と同じです ([後述参照](#コレクションにおける-等しくない))                                                                       |                                |
-| 小さい           | <  |                                                                                                                                                                                  | &check;    |
-| 大きい           | >                           |                                                                                                                                                                                  | &check;    |
-| 以下            | <= |                                                                                                                                                                                  | &check;    |
-| 以上            | > =                         |                                                                                                                                                                                  | &check;    |
-| 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                                                                                    |                                |
-| キーワードを含む      | %                           | キーワードは、文字列あるいはピクチャー型の属性内で使用されるものが対象です。                                                                                                                                           |                                |
+| 比較            | 記号                          | 説明                                                                                                                                                                               | ベクトル類似度内でのサポート              |
+| ------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| 等しい           | =, ==                       | 一致するデータを取得します。ワイルドカード (@) をサポートし、文字の大小/アクセントの有無は区別しません。                                                                                          |                             |
+|               | ===, IS                     | 一致するデータを取得します。ワイルドカード (@) は標準の文字として認識され、文字の大小/アクセント記号の有無は区別しません。                                                                                 |                             |
+| 等しくない         | #, !=                       | ワイルドカード (@) をサポートします。 ワイルドカード (@) をサポートします。 "宣言に Not 条件を適用" と同じです ([後述参照](#コレクションにおける-等しくない)) |                             |
+|               | !==, IS NOT                 | ワイルドカード (@) は標準の文字として認識されます                                                                                                                      |                             |
+| 宣言に Not 条件を適用 | NOT                         | 複数の演算子が含まれる宣言の前に NOT を使用する場合にはカッコをつける必要があります。 "等しくない" と同じです ([後述参照](#コレクションにおける-等しくない))                                                                       |                             |
+| 小さい           | <  |                                                                                                                                                                                  | &check; |
+| 大きい           | >                           |                                                                                                                                                                                  | &check; |
+| 以下            | <= |                                                                                                                                                                                  | &check; |
+| 以上            | > =                         |                                                                                                                                                                                  | &check; |
+| 含まれる          | IN                          | コレクション、あるいは複数の値のうち、どれか一つの値と等しいデータを取得します。ワイルドカード (@) をサポートします。                                                                                    |                             |
+| キーワードを含む      | %                           | キーワードは、文字列あるいはピクチャー型の属性内で使用されるものが対象です。                                                                                                                                           |                             |
 
 - **値** (value): エンティティコレクションの各エンティティの属性のカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。 スカラー型(テキスト、日付、数値、など)で型が合致しない場合、4D は可能な限り**value** 引数の値を属性のデータ型へと変換しようとします。これはインターネット越しに受け取る値の管理を容易にするためです。 例えば、**value** 引数に"v20" という文字列が整数属性と比較するために与えられた場合、それは20 へと変換されます。
   定数値を使用する場合、以下の原則に従う必要があります:
@@ -945,7 +945,7 @@ attributePath|formula 比較演算子 値
   - **日付** 型の定数値: "YYYY-MM-DD" フォーマット。
   - **null** 定数値: "null" キーワードを使用した場合、**null** と **undefined** プロパティの両方が検索されます。
   - IN 記号を使用したクエリの場合、*値* はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、`"` の記号は `\` でエスケープする必要があります)。
-  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects).
+  - **オブジェクト**: **ベクトル類似度クエリ** のコンテキストにおいて [4D.Vector](../API/VectorClass.md) オブジェクトのみがサポートされます。(*attributePath* に有効な4D.Vector オブジェクトが格納されている必要があります)
 - **論理演算子**: 複数の条件をクエリ内で結合させるのに使用します(任意)。 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
 
 | 結合  | 記号                                                                                  |
@@ -1181,39 +1181,39 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"
 // $es には映画が格納されます (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
 ```
 
-### Query by vector similarity
+### ベクトル類似度によるクエリ
 
-If *attributePath* designates an attribute storing [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to store 4D.Vector class objects](../Develop/field-properties.md#class)), you can build queries to find entities based on **embeddings** rather than keywords. This technology is designed for Artificial Intelligence (AI) workloads and allows you to query data based on semantics, rather than keywords.
+*attributePath* が[**ベクトルオブジェクト**](../API/VectorClass.md) を格納している属性を指定している場合([4D フィールドに4D.Vector クラスオブジェクトを保存するように設定する](../Develop/field-properties.md#class) 参照) 、キーワードではなく**埋め込み**に基づいてエンティティを探すクエリをビルドすることができます。 このテクノロジーは人工知能(AI)のワークロードように設計されており、これを使用することでデータをキーワードではなくセマンティクスに基づいてクエリできるようになります。
 
-In this case, the *value* parameter must be a **comparison vector object** containing the following properties:
+この場合、*value* 引数は、以下のプロパティを格納した**比較ベクトルオブジェクト** である必要があります:
 
-| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| --------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 The vector to be compared                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| metric    | Text                                               | 任意。 [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine distance between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors. |
-| threshold | Real                                               | Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.                                                                                                                                                                                    |
+| プロパティ     | 型                                                  | 説明                                                                                                                                                                                                                                                                                                                                      |
+| --------- | -------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| vector    | [4D.Vector](../API/VectorClass.md) | 必須設定です。 比較するベクトル                                                                                                                                                                                                                                                                                                                        |
+| metric    | Text                                               | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 以下の(テキストの)定数のいずれか一つを使用することができます:<li>`mk cosine` (省略時にデフォルト): ベクトル間のコサイン距離を計算します。</li><li>`mk dot`: ベクトル間のドット類似度を計算します。</li><li>`mk euclidean`: ベクトル間のユークリッド距離を計算します。 |
+| threshold | Real                                               | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                        |
 
-Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value:
+**comparator** 記号の、一部のみがサポートされます。 これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
-| 比較  | 記号                          | 説明                                     |
-| --- | --------------------------- | -------------------------------------- |
-| 小さい | <  | Lower than the threshold               |
-| 大きい | >                           | Greater than the threshold             |
-| 以下  | <= | Lower than or equal to the threshold   |
-| 以上  | > =                         | Greater than or equal to the threshold |
+| 比較  | 記号                          | 説明        |
+| --- | --------------------------- | --------- |
+| 小さい | <  | しきい値より小さい |
+| 大きい | >                           | しきい値より大きい |
+| 以下  | <= | しきい値以下である |
+| 以上  | > =                         | しきい値以上である |
 
-For example, you want to return entities of MyClass where the similarity with a vector is greater than 1.2 threshold, using the euclidean metric:
+例えば、ユークリッド計量を使用して、ベクトル類似度がしきい値1.2 より大きいMyClass のエンティティを返したい場合を考えます:
 
 ```4d
 var $myVector : 4D.Vector
-$myVector := getVector //method to get a vector, e.g. from 4D.AIKit
+$myVector := getVector //(例: 4D.AIKit などから)ベクトルを取得するメソッド
 var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
 ```
 
-See [more examples below](#example-4-2) (examples 4 and 5).
+詳細については[以下の例題](#例題-4-2)を参照してください (例題 4 と 5)。
 
-:::tip Related blog posts
+:::tip 関連したblog 記事
 
 - [4D AI: Searching Entities by Vector Similarity in 4D](https://blog.4d.com/4d-ai-searching-entities-by-vector-similarity-in-4d)
 - [Why Your Search Stack Feels Broken — and How Vector Search Fixes It](https://blog.4d.com/why-your-search-stack-feels-broken-and-how-vector-search-fixes-it)
@@ -1228,7 +1228,7 @@ See [more examples below](#example-4-2) (examples 4 and 5).
 
 - フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 - 処理中のエンティティはフォーミュラ内において `This` で参照されます。
-- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with [`ON ERR CALL`](../commands-legacy/on-err-call.md).
+- `Formula` オブジェクトが**null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です")が生成されます。このエラーは[`ON ERR CALL`](../commands-legacy/on-err-call.md) で実装されたメソッドを使用して割り込みが可能です。
 
 > セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。 *querySettings* パラメーターの説明を参照ください。
 
@@ -1572,7 +1572,7 @@ softwares:{
 
 #### 例題 4
 
-This example illustrates the various syntaxes supported for vector similarity searches. It uses [4D-AIKit](../aikit/overview.md):
+この例題では、ベクトル類似度検索でサポートされている様々なシンタックスを紹介します。 ここでは[4D-AIKit](../aikit/overview.md)を使用しています:
 
 ```4d
 
@@ -1580,31 +1580,38 @@ var $client:=cs.AIKit.OpenAI.new("my api key")
 var $result:=$client.embeddings.create("my long text to search"; "text-embedding-ada-002")
 var $vector:=$result.vector
 
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
-  //search with default metric (cosine)
+  // embedding 属性は4D.Vector クラスオブジェクトを格納した4D フィールドに基づいています
+  // デフォルトのmetric (コサイン)での検索
 var $employees:=ds.Employee.query("embedding > :1"; {vector : $vector})
-  //search with euclidean metric 
+  // ユークリッド計量での検索
 var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk euclidean})
-  //search with explicit cosine metric and custom threshold
+  // 明示的にコサイン計量を指定し、カスタムのしきい値を用いた検索
 var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
-  //search with a formula
+  // フォーミュラを使用した検索
 var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
 
 ```
 
 #### 例題 5
 
-We want to execute a query by vector similarity using vectors with different metrics and order the results by cosine similarity:
+異なるメトリックでのベクトルを使用したベクトル類似度によるクエリを実行し、コサイン類似度で結果を並べ替えたい場合を考えます:
 
 ```4d
-  //Create the comparison vectors 
+  // 比較ベクトルを作成
 var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
 var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
 
-  //embedding attribute is based upon a 4D field storing 4D.Vector class objects
+  // embedding 属性は、4D.Vector クラスオブジェクトを格納している4D フィールドに基づいています
 ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
     .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
 
+  // 比較ベクトルを作成
+var $vector1Comparison:={vector: $myvector; metric: mk cosine; threshold: 0.4}
+var $vector2Comparison:={vector: $myvector; metric: mk euclidean; threshold:1}
+
+  //embedding 属性は、4D.Vector クラスオブジェクトを格納している4D フィールドに基づいています
+ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2Comparison)\
+    .orderByFormula(Formula(This.embedding.cosineSimilarity($vector1Comparison)))
 ```
 
 #### 参照

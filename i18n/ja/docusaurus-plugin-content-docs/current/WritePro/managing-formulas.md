@@ -1,6 +1,7 @@
 ---
 id: managing-formulas
-title: フォーミュラの管理
+title: フォーミュラ
+slug: /WritePro/formulas
 ---
 
 ## 概要

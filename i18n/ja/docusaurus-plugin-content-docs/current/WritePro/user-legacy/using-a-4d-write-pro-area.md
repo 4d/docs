@@ -1,7 +1,8 @@
 ---
 id: using-a-4d-write-pro-area
-title: Using a 4D Write Pro area
+title: Properties & Layout
 displayed_sidebar: docs
+slug: /WritePro/properties
 ---
 
 
@@ -69,7 +70,7 @@ displayed_sidebar: docs
 
 背景画像にフルサイズの画像を追加する例については、*[How Do I (HDI) 例題 4DWrite Pro: フチなし全面の背景画像](https://github.com/4D-JP/HDI/releases/download/16r5/HDI%5F4DWP%5FBackImagePaperBox.zip)* にて紹介しています。
 
-## Headers, footers, and sections
+## ヘッダー、フッター、セクション
 
 4D Write Pro ドキュメントはヘッダーとフッターをサポートします。ヘッダーとフッターはセクションと関連しています。
 
@@ -177,7 +178,7 @@ displayed_sidebar: docs
 * 個別の最初のページ
 * 個別の左/右ページ
 
-## Rulers 
+## ルーラー 
 
 水平ルーラーは、4D Write Proの全てのビューモードで利用可能で、以下のような特徴を持ちます:
 
@@ -276,7 +277,7 @@ displayed_sidebar: docs
 
 どの種類のタブやマージンコントロールでも、それらが(ドラッグあるいはコンテキストメニューを使用して)移動、追加、削除されたときには、4D Write Proエリアフォームオブジェクトに対して[`On After Edit`](../../Events/onAfterEdit.md) フォームイベントがトリガーされます。
 
-## Columns
+## カラム
 
 4D Write Pro ではドキュメント内にカラムを管理することができます。カラムは最も左のカラムから最も右のカラムへと順番につながっています。言い換えると、テキストを入力していくとき、テキストは左にあるカラムを埋めていき、そのあとすぐ右にあるカラムへと続き、それがページの終わりに達するまで続いていきます。ページの終わりまで達すると、テキストは次のページへと続いていきます。ページ設定のバランスをとるために、4D Write Pro ではかカラムブレークを挿入することができます。
 
@@ -317,7 +318,7 @@ displayed_sidebar: docs
 
 ## ブックマーク
 
-4D Write Pro ではブックマークと呼ばれる、ドキュメントの一部において動的な参照を作成、使用することができます。ブックマークは、4D Write Pro ドキュメント内の特定の[範囲](./ranges.md)に名前付きで関連付けられる参照です。
+4D Write Pro ではブックマークと呼ばれる、ドキュメントの一部において動的な参照を作成、使用することができます。ブックマークは、4D Write Pro ドキュメント内の本文の特定の[レンジ](./ranges.md)に名前付きで関連付けられる参照です。
 
 ブックマークは動的なものであり、ユーザーにより範囲が移動、追加、または削除されると、ブックマークは自動的に更新され、ドキュメント内の同じ内容を継続して参照することができます。たとえば：
 
@@ -338,7 +339,7 @@ displayed_sidebar: docs
 - [WP Bookmark range](../commands-legacy/wp-bookmark-range.md) は既存のブックマークからレンジを取得します。
 - [WP DELETE BOOKMARK](../commands-legacy/wp-delete-bookmark.md) はブックマークを削除します。
 
-## Links
+## リンク
 
 4D Write Pro では、レンジ（テキスト、ピクチャーなど）や要素（表、本文、フッターなど）を含めるほぼすべてを含むドキュメント全体にハイパーリンクを割り当てることができます。たとえば、ドキュメントの画像に対してハイパーリンクを設定できます。4D Write Pro ドキュメントが HTML にエクスポートされた場合、ユーザーはその画像をクリックして、リンク先のページを開くことができます。
 

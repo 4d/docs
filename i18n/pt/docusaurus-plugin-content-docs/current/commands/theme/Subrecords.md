@@ -1,6 +1,7 @@
 ---
 id: Subrecords_theme
 title: Sub-registros
+sidebar_label: Sub-registros
 slug: /commands/theme/Subrecords
 ---
 

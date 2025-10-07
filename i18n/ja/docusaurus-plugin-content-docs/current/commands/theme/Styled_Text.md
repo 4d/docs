@@ -1,6 +1,7 @@
 ---
 id: Styled_Text_theme
 title: スタイル付きテキスト
+sidebar_label: スタイル付きテキスト
 slug: /commands/theme/Styled-Text
 ---
 

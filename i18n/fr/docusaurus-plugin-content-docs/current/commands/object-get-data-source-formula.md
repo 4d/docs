@@ -23,7 +23,7 @@ Si vous passez le paramètre facultatif *\**, vous indiquez que le paramètre *o
 
 Lorsqu'une formule est associée à un objet de formulaire, elle agit comme source de données de l'objet au moment de l'exécution.
 
-Si cette commande est appliquée à un objet auquel aucune formule personnalisée n'a été attribuée, elle renvoie la [variable dynamique de formulaire](../FormObjects/properties_Object.md#dynamic-variables) attribuée automatiquement.\
+Si cette commande est appliquée à un objet auquel aucune formule personnalisée n'a été attribuée, elle renvoie la [variable dynamique de formulaire](../FormObjects/properties_Object.md#dynamic-variables) attribuée automatiquement.  
 Si l'objet n'existe pas ou ne prend pas en charge les formules, il renvoie `Null`.
 
 ## Exemple

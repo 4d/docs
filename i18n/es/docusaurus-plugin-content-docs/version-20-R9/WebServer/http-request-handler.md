@@ -32,7 +32,7 @@ Se soportan gestores de solicitudes HTTP personalizados:
 
 Define sus manejadores de petición HTTP personalizados en un archivo de configuración llamado **HTTPHandlers.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources).
 
-This file contains all listened URL patterns, the handled verbs, and the code to be called. Handlers are provided as a collection in JSON format.
+This file contains all listened URL patterns, the handled verbs, and the code to be called. Los administradores se proporcionan en forma de colección en formato JSON.
 
 At runtime, the first pattern matching the URL is executed, the others are ignored.
 
@@ -72,7 +72,7 @@ The handler identifier is the couple [pattern + a verb among the verbs list].
 
 URL patterns can be given as **prefixes** or using **regular expressions**.
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.\
+- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Prefixes are considered as regular expressions already containing starting and ending `/`.  
   Ej: `"pattern": "docs"` o `"pattern": "docs/invoices"`
 
 - To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Los modelos de expresiones regulares se manejan directamente.
@@ -115,7 +115,7 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 #### Patrones prohibidos
 
-URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. For example, the following patterns cannot be handled:
+URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. Por ejemplo, los siguientes modelos no pueden ser manejados:
 
 - `/4DACTION`
 - `/rest`
@@ -127,7 +127,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
 - "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
-- "method": class function belonging to the class.
+- "method": función de clase perteneciente a la clase.
 
 [Ver abajo](#request-handler-code) para obtener información sobre el código del gestor de peticiones.
 

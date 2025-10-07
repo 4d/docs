@@ -1,6 +1,7 @@
 ---
 id: List_Box_theme
 title: リストボックス
+sidebar_label: リストボックス
 slug: /commands/theme/List-Box
 ---
 

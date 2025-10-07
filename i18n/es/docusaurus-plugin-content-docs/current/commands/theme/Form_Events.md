@@ -1,6 +1,7 @@
 ---
 id: Form_Events_theme
 title: Eventos formulario
+sidebar_label: Eventos formulario
 slug: /commands/theme/Form-Events
 ---
 
