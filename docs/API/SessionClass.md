@@ -66,6 +66,7 @@ The availability of properties and functions in the `Session` object depends on 
 
 |Release|Changes|
 |---|---|
+|21|Support of remote sessions|
 |18 R6|Added|
 
 </details>
@@ -84,7 +85,7 @@ The availability of properties and functions in the `Session` object depends on 
 
 :::note
 
-This function does nothing and always returns **True** with remote client, stored procedure, and standalone sessions.
+This function does nothing and always returns **True** with stored procedure sessions and standalone sessions.
 
 :::
 
@@ -97,6 +98,8 @@ Unless in ["forceLogin" mode](../REST/authUsers.md#force-login-mode), the sessio
 This function does not remove **promoted privileges** from the web process, whether they are added through the [roles.json](../ORDA/privileges.md#rolesjson-file) file or the [`promote()`](#promote) function.
 
 :::
+
+Regarding remote client sessions, the function only impacts [code accessing the web server](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code). 
 
 #### Example
 
@@ -119,6 +122,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 |Release|Changes|
 |---|---|
+|21|Support of remote sessions|
 |20 R9|Added|
 
 </details>
@@ -130,7 +134,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |lifespan|Integer|->|Session token lifespan in seconds|
-|Result|Text|<-|UUID of the OTP token|
+|Result|Text|<-|UUID of the token|
 <!-- END REF -->
 
 
@@ -138,7 +142,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 :::note
 
-This function is only available with web user sessions. It returns an empty string in other contexts.  
+This function is available with web user sessions and remote sessions. It returns an empty string in stored procedure and standalone sessions.  
 
 :::
 
@@ -146,9 +150,14 @@ The `.createOTP()` function <!-- REF #SessionClass.createOTP().Summary -->create
 
 For more information about the OTP tokens, please refer to [this section](../WebServer/sessions.md#session-token-otp).
 
-By default, if the *lifespan* parameter is omitted, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. You can set a custom timeout by passing a value in seconds in *lifespan*. If an expired token is used to restore a web user session, it is ignored. 
+You can set a custom timeout by passing a value in seconds in *lifespan*. If an expired token is used to restore a session, it is ignored. By default, if the *lifespan* parameter is omitted:
 
-The returned token can then be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application. 
+- with web user sessions, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session. 
+- with remote sessions, the token is created with a 10 seconds lifespan. 
+
+For **web user sessions**, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. For example, the session OTP token can be used with a payment application. 
+
+For **remote sessions**, the returned token can be used on 4D Server to identitfy requests coming from a [remote 4D running Qodly forms in a Web area](../Desktop/clientServer.md#remote-user-sessions). 
 
 
 #### Example
@@ -271,6 +280,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 |Release|Changes|
 |---|---|
+|21|Support of remote client sessions|
 |20 R6|Added|
 
 </details>
@@ -294,7 +304,9 @@ This function returns privileges assigned to a Session using the [`setPrivileges
 
 :::
 
-With remote client, stored procedure and standalone sessions, this function returns a collection only containing "WebAdmin".
+With remote client sessions, the privileges only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). 
+
+With stored procedure sessions and standalone sessions, this function returns a collection only containing "WebAdmin".
 
 #### Example
 
@@ -370,7 +382,7 @@ $privileges := Session.getPrivileges()
 
 |Release|Changes|
 |---|---|
-|21|Returns True for promoted privileges|
+|21|Returns True for promoted privileges, Support of remote client sessions|
 |18 R6|Added|
 
 </details>
@@ -397,7 +409,9 @@ This function returns True for the *privilege* if called from a function that wa
 
 :::
 
-With remote client, stored procedure and standalone sessions, this function always returns True, whatever the *privilege*.
+Regarding remote client sessions, the function only impacts [code accessing the web server](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code). 
+
+With stored procedure sessions and standalone sessions, this function always returns True, whatever the *privilege*.
 
 
 #### Example
@@ -753,6 +767,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 |Release|Changes|
 |---|---|
+|21|Support of remote client sessions|
 |19 R8|Support of "roles" Settings property|
 |18 R6|Added|
 
@@ -774,23 +789,21 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 :::note
 
-This function does nothing and always returns **False** with remote client, stored procedure, and standalone sessions.
+This function does nothing and always returns **False** with stored procedure sessions and standalone sessions.
 
 :::
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) and/or role(s) defined in the parameter to the session and returns **True** if the execution was successful<!-- END REF -->.
 
 - In the *privilege* parameter, pass a string containing a privilege name (or several comma-separated privilege names).
-
 - In the *privileges* parameter, pass a collection of strings containing privilege names.
-
 - In the *settings* parameter, pass an object containing the following properties:
 
 |Property|Type|Description|
 |---|---|---|
 |privileges|Text or Collection|<li>String containing a privilege name, or</li><li>Collection of strings containing privilege names</li>|
 |roles|Text or Collection|<li>String containing a role, or</li><li>Collection of strings containing roles</li>|
-|userName|Text|User name to associate to the session (optional)|
+|userName|Text|User name to associate to the session (optional, web sessions only). Not available in remote client sessions (ignored).|
 
 :::note
 
@@ -803,6 +816,9 @@ If the `privileges` or `roles` property contains a name that is not declared in 
 By default when no privilege or role is associated to the session, the session is a [Guest session](#isguest).
 
 The [`userName`](#username) property is available at session object level (read-only).
+
+Regarding remote client sessions, the function only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). 
+
 
 #### Example
 

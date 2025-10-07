@@ -20,10 +20,11 @@ If a user attempts to execute an action and does not have the appropriate access
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
-### See also
+:::tip Related Blog posts
 
-For a detailed overview of the whole permissions architecture, please read the [**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/) blog post.  
+[**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
 
+:::
 
 ## Resources
 
@@ -133,7 +134,7 @@ The default file has the following contents:
 {
     "privileges": [
         {
-            "privilege": "none",
+            "privilege": "all",
             "includes": []
         }
     ],
@@ -145,12 +146,12 @@ The default file has the following contents:
             {
                 "applyTo": "ds",
                 "type": "datastore",
-                "read": ["none"],
-                "create": ["none"],
-                "update": ["none"],
-                "drop": ["none"],
-                "execute": ["none"],
-                "promote": ["none"]                
+                "read": ["all"],
+                "create": ["all"],
+                "update": ["all"],
+                "drop": ["all"],
+                "execute": ["all"],
+                "promote": ["all"]                
             }
         ]
     },
@@ -161,7 +162,8 @@ The default file has the following contents:
 
 ```
 
-For a highest level of security, the "none" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
+For a highest level of security, the "all" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. The principle is as follows: assigning a permission is like putting a lock on a door. Only sessions with privilege having the corresponding key (i.e., a permission) will be able to open the lock. 
+It is recommended not to modified or use this locking privilege, but to add specific permissions to each resource you wish to make available from web or REST requests ([see example below](#example-of-privilege-configuration)).
 
 :::caution
 
@@ -278,14 +280,14 @@ End if
 
 ## Example of privilege configuration
 
-The good practice is to keep all data access locked by default thanks to the "none" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to guest sessions:
+The good practice is to keep all data access locked by default thanks to the "all" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to "guest" sessions:
 
 ```json title="/Project/Sources/roles.json"
 
 {
   "privileges": [
     {
-      "privilege": "none",
+      "privilege": "all",
       "includes": []
     }
   ],
@@ -296,22 +298,22 @@ The good practice is to keep all data access locked by default thanks to the "no
         "applyTo": "ds",
         "type": "datastore",
         "read": [
-          "none"
+          "all"
         ],
         "create": [
-          "none"
+          "all"
         ],
         "update": [
-          "none"
+          "all"
         ],
         "drop": [
-          "none"
+          "all"
         ],
         "execute": [
-          "none"
+          "all"
         ],
         "promote": [
-          "none"
+          "all"
         ]
       },
       {
