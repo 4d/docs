@@ -130,7 +130,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |lifespan|Integer|->|Session token lifespan in seconds|
-|Result|Text|<-|UUID of the session|
+|Result|Text|<-|UUID of the OTP token|
 <!-- END REF -->
 
 
