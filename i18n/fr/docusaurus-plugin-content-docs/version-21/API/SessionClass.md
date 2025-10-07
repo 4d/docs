@@ -60,15 +60,6 @@ Articles de blog sur cette fonctionnalité :
 
 :::
 
-:::info Pour en savoir plus
-
-Articles de blog sur cette fonctionnalité :
-
-- [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
-- [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
-
-:::
-
 ### Types de sessions
 
 Les types de sessions suivants sont pris en charge par cette classe :
