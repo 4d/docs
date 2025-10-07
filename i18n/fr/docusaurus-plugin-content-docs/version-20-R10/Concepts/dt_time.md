@@ -27,7 +27,7 @@ Voici quelques exemples de constantes littérales de type heure :
 
 Une heure nulle s’écrit ?00:00:00?
 
-**Astuce :** L'éditeur de code propose un raccourci pour saisir une date nulle. Pour cela, saisissez un point d'interrogation (?) et appuyez sur Entrée.
+**Astuce :** L'éditeur de code propose un raccourci pour saisir une heure nulle. Pour cela, saisissez un point d'interrogation (?) et appuyez sur Entrée.
 
 ## Opérateurs sur les heures
 

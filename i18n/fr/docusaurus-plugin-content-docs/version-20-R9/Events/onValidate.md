@@ -9,7 +9,7 @@ title: On Validate
 
 ## Description
 
-Cet événement est déclenché lorsque la saisie des données d'enregistrement a été validée, par exemple après un appel de la commande `SAVE RECORD` ou après une [action standard](FormObjects/properties_Action.md#standard-action) `accept`.
+This event is triggered when the record data entry has been validated, for example after an `accept` [standard action](FormObjects/properties_Action.md#standard-action).
 
 ### Sous-formulaire
 
