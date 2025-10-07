@@ -33,30 +33,30 @@ title: 拡張機能の開発
 
 :::note
 
-Interpreted component code can be [edited directly from the host project](#editing-components) if the context is supported.
+コンテキストがサポートされていれば、インタープリタ版のコンポーネントのコードは[ホストプロジェクトから直接編集可能です](#コンポーネントの編集)。
 
 :::
 
-## Creating and editing components from the host
+## ホストからのコンポーネント作成と編集
 
-In interpreted mode, the 4D IDE allows you to create and edit components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
+インタープリタモードでは、4D IDE を使用することでホストプロジェクトからコンポーネントを直接作成および編集することができます。 これにより、ホストプロジェクトを閉じたり再起動したりすることなく、実際のコンテキストにおけるコンポーネント開発とチューニングを容易にします。
 
-### Creating components
+### コンポーネントの作成
 
-You can create a new component directly from the host project:
+以下の方法でホストプロジェクトから新規コンポーネントを直接作成することができます:
 
-- by using the **File > New > Component...** option from the File menu,
-- or by clicking the **New > Component...** button in the toolbar.
+- ファイルメニューから**ファイル > 新規 > コンポーネント...** オプションを使用する
+- あるいはツールバーから**新規 > コンポーネント...** ボタンをクリックする
 
-This action opens a folder selection dialog where you choose where [the component package](../Project/components.md#package-folder) will be stored.
+この操作でフォルダ選択ダイアログが開き、ここから[コンポーネントパッケージ](../Project/components.md#packageフォルダ) を保存する場所を選択することができます。
 
-- Default location: The first time you create a component, 4D suggests the **Components** folder inside the [project package](../Project/architecture.md#components). After that, your used last folder will be automatically remembered and preselected.
-- If you decide to store the component **next to the project package**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file.
-- If you decide to store the component **elsewhere**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file and its path is added to the [`environment4d.json`](../Project/components.md#environment4djson) file, using either a [relative or an absolute path](../Project/components.md#relative-paths-vs-absolute-paths). A relative path is used if the component is located within no more than two levels above as the `environment4d.json` file, or in its subfolders. Otherwise, an absolute path is used.
+- デフォルトの場所: 最初にコンポーネントを作成しようとすると、4D は[プロジェクトパッケージ内の**Components** フォルダ](../Project/architecture.md#components)をサジェストします。 それ以降は最後に使用したフォルダが自動的に記憶されてあらかじめ選択されます。
+- コンポーネントを**プロジェクトパッケージの隣** に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加します。
+- コンポーネントを**それ以外** の場所に保存することを選択した場合、4D はそれを[`dependencies.json`](../Project/components.md#dependenciesjson) ファイルに追加し、そのパスが[相対または絶対パス](../Project/components.md#相対パスvs絶対パス)を使用して[`environment4d.json`](../Project/components.md#environment4djson) ファイルへと追加されます。 相対パスは、`environment4d.json` ファイルから見てコンポーネントが上に2階層以内、あるいはそのサブフォルダ内に保存されている場合に使用されます。 それ以外の場合には絶対パスが使用されます。
 
 :::note
 
-You cannot store a component **in the project package** but **outside the Components folder**.
+コンポーネントは、**プロジェクトパッケージ内** で **Components フォルダの外** に保存することはできません。
 
 :::
 

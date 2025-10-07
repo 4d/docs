@@ -9,7 +9,7 @@ title: On Validate
 
 ## 説明
 
-このイベントは、`SAVE RECORD` コマンドコールや `accept` [標準アクションの後](FormObjects/properties_Action.md#標準アクション) など、レコードデータの入力が受け入れられたときにトリガーされます。
+This event is triggered when the record data entry has been validated, for example after an `accept` [standard action](FormObjects/properties_Action.md#standard-action).
 
 ### サブフォーム
 
