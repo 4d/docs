@@ -420,7 +420,7 @@ This event is triggered by the following functions:
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-This event is triggered **while** the entity is actually saved. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. For example, you can use this event create a document on a Google Drive account. 
+This event is triggered **while** the entity is actually saved. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. For example, you can use this event to create a document on a Google Drive account. 
 
 :::note
 
