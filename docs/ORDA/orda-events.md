@@ -64,7 +64,7 @@ The following table lists ORDA events along with their rules.
 | :------- |:------- | :----- | :-----: |---|
 | Entity instantiation  | Entity      |   [`constructor()`](./ordaClasses.md#class-constructor-1) |   client | no|
 | Attribute touched  | Attribute    |    `event touched <attrName>()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no|
-|   | Entity   |   `event touched()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no|
+| | Entity   |   `event touched()`  | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no|
 |Before saving an entity|Attribute|`validateSave <attrName>()`|server|yes|
 ||Entity|`validateSave()`|server|yes|
 |When saving an entity|Attribute|`saving <attrName>()`|server|yes|
@@ -120,8 +120,8 @@ When an error occurs in an event, the other events are stopped at the first rais
 
 - The errors are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.
 - In case of an error triggered by a **validate** event, the `fatalError` property allows you to insert a specific `status` and its associated `statusText` in the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions:
-    - If false: `status`=`dk status mild validation error`, `statusText`="Mild Validation Error". Such errors do not require a [try catch](../Concepts/error-handling.md#trycatchend-try) and are not stacked in the errors returned by the [`Last errors`](../commands/last-errors.md) command.
-    - If true: `status`=`dk status serious validation error`, `statusText`="Serious Validation Error". Such errors require a [try catch](../Concepts/error-handling.md#trycatchend-try) and are not stacked in the errors returned by the [`Last errors`](../commands/last-errors.md) command. They are raised at the end of the event and reach the client requesting the save/drop action (REST client for example).
+    - If **false**: `status` gets `dk status mild validation error` and `statusText` gets "Mild Validation Error". Such errors do not require a [try catch](../Concepts/error-handling.md#trycatchend-try) and are not stacked in the errors returned by the [`Last errors`](../commands/last-errors.md) command.
+    - If **true**: `status` gets `dk status serious validation error` and `statusText` gets "Serious Validation Error". Such errors require a [try catch](../Concepts/error-handling.md#trycatchend-try) and are not stacked in the errors returned by the [`Last errors`](../commands/last-errors.md) command. They are raised at the end of the event and reach the client requesting the save/drop action (REST client for example).
 - In case of an error triggered by a **saving/dropping** event, when an error object is returned, the error is always raised as a serious error (`dk status serious error`) whatever the `fatalError` property value.
 
 
