@@ -11,6 +11,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 
 - Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API. 
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- New [ORDA events on data](../ORDA/orda-events.md): validateSave, saving, afterSave, validateDrop, dropping, afterDrop.  
 - New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - Client/server: 
 	- You can display Qodly pages in Web areas and [share the remote client session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). 
