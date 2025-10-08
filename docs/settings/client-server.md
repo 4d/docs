@@ -77,9 +77,8 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
 	- Since QUIC uses the UDP protocol, make sure UDP is allowed in your network security settings.
 	- QUIC automatically connects to the port 19813 for both application server and DB4D server.
 	- When the QUIC layer option is selected:
-		-	A beta message and an alert icon are displayed near the selector.
 		-	[Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
-		-	The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+		-	The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
 	- **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
 
 :::note
@@ -89,6 +88,12 @@ In case of a modification, you need to restart the application for the change to
 :::
 
 #### Client-Server Connections Timeout  
+
+::note
+
+This option is not available when the [QUIC](#network-layer) network layer is selected. 
+
+:::
 
 This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. The Unlimited option removes the timeout. When this option is selected, client activity control is eliminated.
 
@@ -101,6 +106,12 @@ When a timeout is selected, the server will close the connection of a client if 
 When this option is checked, all the 4D remote machines connecting to the database can execute methods remotely. This mechanism is detailed in the section [Stored procedures on client machines](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
 
 #### Encrypt Client-Server Communications  
+
+::note
+
+This option is not available when the [QUIC](#network-layer) network layer option is selected. 
+
+:::
 
 This option lets you activate the secured mode for communications between the server machine and the 4D remote machines. This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html) section.
 

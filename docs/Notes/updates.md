@@ -14,7 +14,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 - New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - Client/server: 
 	- use Qodly pages in Web areas and [share the remote client session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). 
-	- the [QUIC network layer](../settings/client-server.md#network-layer) has been enhanced to [handle network interface changes transparently](https://blog.4d.com/work-and-move-with-quic-and-network-switching), for example when you travel with your laptop.
+	- the [QUIC network layer](../settings/client-server.md#network-layer) has been enhanced to handle network interface changes transparently, for example when you travel with your laptop. See [this blog post](https://blog.4d.com/work-and-move-with-quic-and-network-switching).
 - You can now [create components directly from the host project](../Extensions/develop-components.md#creating-components) and [edit their code from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer without leaving or restarting the project.
 - The 4D product activation step has been simplified and automated during [sign-in](../GettingStarted/Installation.md#sign-in). 
 - 4D AIKit component: new features to [invoke a specific tool automatically](../aikit/Classes/OpenAIChatHelper.md#registertool) and [specify a response format](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format). 
