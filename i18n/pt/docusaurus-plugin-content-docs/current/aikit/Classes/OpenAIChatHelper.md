@@ -65,30 +65,42 @@ $chatHelper.reset()  // Clear all previous messages and tools
 
 ### registerTool()
 
-**registerTool**(*tool* : Object; *handler* : 4D.Function)
+**registerTool**(*tool* : Object; *handler* : Object)
 
-| Parâmetro | Tipo                         | Descrição                                                                                |
-| --------- | ---------------------------- | ---------------------------------------------------------------------------------------- |
-| *tool*    | Object                       | The tool definition object (or [OpenAITool](OpenAITool.md) instance)  |
-| *handler* | 4D. Function | The function to handle tool calls (optional if defined inside *tool*) |
+| Parâmetro | Tipo   | Descrição                                                                                                                                                                           |
+| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*    | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                                                             |
+| *handler* | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
 
 Registers a tool with its handler function for automatic tool call handling.
-If the handler is not provided, the tool's `handler` property will be used.
+
+The *handler* parameter can be:
+
+- A **4D.Function**: Direct handler function
+- An **Object**: An object containing a `formula` property matching the tool function name
 
 The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
 
 #### Register Tool Example
 
 ```4D
-// Define a simple tool
+// Example 1: Simple registration with direct handler
 var $tool:={type: "function"; function: {name: "get_weather"; description: "Get current weather"; parameters: {type: "object"; properties: {location: {type: "string"; description: "City name"}}}}}
-
-// Define a handler function that receives an argument { location: "a city" }
 var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
 $chatHelper.registerTool($tool; $handler)
-// or
+
+// Example 2: Tool with handler property (no second parameter needed)
+var $tool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
+$chatHelper.registerTool($tool)
+
+// Example 3: Using object notation
 $chatHelper.registerTool({tool: $tool; handler: $handler})
+
+// Example 4: Handler as object with formula matching tool name
+var $tool:={name: "getTime"; description: "Get current time"}
+var $handlerObj:=cs.MyTimeTool.new() // class with a getTime function
+$chatHelper.registerTool($tool; $handlerObj)
 ```
 
 ### registerTools()
@@ -99,32 +111,62 @@ $chatHelper.registerTool({tool: $tool; handler: $handler})
 | ------------------- | ------------ | -------------------------------------------------------- |
 | *toolsWithHandlers* | Diferente de | Object or Collection containing tools and their handlers |
 
-Registers multiple tools at once. The parameter can be either an object with function names as keys, or a collection of tool objects.
+Registers multiple tools at once. The parameter can be:
+
+- **Collection**: Array of tool objects (with handlers embedded or separate)
+- **Object**: Object with function names as keys mapping to tool definitions
+- **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
 
 #### Register Multiple Tools Example
 
+##### Example 1: Collection format with handlers in tools
+
 ```4D
-// Simple approach: handlers defined directly in tools
-var $weatherTool:={type: "function"; function: {name: "get_weather"; description: "Get current weather"; parameters: {type: "object"; properties: {location: {type: "string"; description: "City name"}}}}; \
-    handler: Formula(return "Sunny, 25°C in "+$1.location)}
-var $calculatorTool:={type: "function"; function: {name: "calculate"; description: "Perform calculations"; parameters: {type: "object"; properties: {expression: {type: "string"; description: "Math expression"}}}}; \
-    handler: Formula(return String(Num($1.expression)))}
+var $weatherTool:={name: "getWeather"; description: "Get current weather"; handler: Formula(return "Sunny, 25°C in "+$1.location)}
+var $calculatorTool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
 
-var $tools:={}
-$tools.get_weather:=$weatherTool
-$tools.calculate:=$calculatorTool
-
-$chatHelper.registerTools($tools)
-
-// Using collection format
 $chatHelper.registerTools([$weatherTool; $calculatorTool])
+```
 
-// Alternative: separate tool definitions from handlers (useful for better code organization)
+##### Example 2: Object format with separate tool and handler
+
+```4D
 var $toolsWithSeparateHandlers:={}
-$toolsWithSeparateHandlers.get_weather:={tool: $weatherToolDefinition; handler: $weatherHandler}
+$toolsWithSeparateHandlers.getWeather:={tool: $weatherToolDefinition; handler: $weatherHandler}
 $toolsWithSeparateHandlers.calculate:={tool: $calculatorToolDefinition; handler: $calculatorHandler}
 
 $chatHelper.registerTools($toolsWithSeparateHandlers)
+```
+
+##### Example 3: Object with tools collection attribute and formula properties
+
+MyTools class:
+
+```4D
+
+Class constructor
+    this.tools:=[{name: "getWeather"; description: "Get current weather"}; \
+                 {name: "getTime"; description: "Get current time"}]  // Collection of tool definitions
+
+Function getWeather($parameters: Object)
+    return "Sunny, 25°C"
+
+Function getTime($parameters: Object)
+    return String(Current time)
+```
+
+```4D
+$chatHelper.registerTools(cs.MyTools.new())
+```
+
+##### Example 4: Simple object format with tools as properties
+
+```4D
+var $tools:={}
+$tools.getWeather:=$weatherTool  // Tool with handler property
+$tools.calculate:=$calculatorTool  // Tool with handler property
+
+$chatHelper.registerTools($tools)
 ```
 
 ### unregisterTool()

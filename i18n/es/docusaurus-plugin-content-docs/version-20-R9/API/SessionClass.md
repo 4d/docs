@@ -117,7 +117,7 @@ $isGuest:=Session.isGuest() //$isGuest es True
 | Parámetros | Tipo    |                             | Descripción                                         |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------- |
 | lifespan   | Integer |              ->             | Duración de la vida del token de sesión en segundos |
-| Resultado  | Text    | <- | UUID de la sesión                                   |
+| Resultado  | Text    | <- | UUID of the OTP token                               |
 
 <!-- END REF -->
 

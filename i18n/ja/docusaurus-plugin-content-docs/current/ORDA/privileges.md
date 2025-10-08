@@ -17,9 +17,11 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
-### 参照
+:::tip Related Blog posts
 
-詳細なアクセス権限アーキテクチャーの概要については、[**完全な権限システムでデータアクセスをフィルタリングする**](https://blog.4d.com/ja/filter-access-to-your-data-with-a-complete-system-of-permissions/) ブログ記事を参照ください。
+[**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
+
+:::
 
 ## Resources
 
@@ -77,7 +79,7 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 権限は、複数の "リソース+アクション" の組み合わせと関連付けることができます。 また、一つのアクションに複数の権限を関連付けることができます。 権限は、他の権限を含むことができます。
 
-- 権限やロールの **作成** は `roles.json` ファイル内にておこないます (後述参照)。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。
+- 権限やロールの **作成** は `roles.json` ファイル内にておこないます (後述参照)。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。 アクセス権の範囲を **設定** するには、リソースに適用される許諾アクションに権限名を割り当てます。
 
 - 各ユーザーセッションに権限やロールを **許可** するには、`Session` クラスの [`.setPrivileges()`](../API/SessionClass.md#setprivileges) 関数を使用します。
 
@@ -123,7 +125,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 {
     "privileges": [
         {
-            "privilege": "none",
+            "privilege": "all",
             "includes": []
         }
     ],
@@ -135,12 +137,12 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
             {
                 "applyTo": "ds",
                 "type": "datastore",
-                "read": ["none"],
-                "create": ["none"],
-                "update": ["none"],
-                "drop": ["none"],
-                "execute": ["none"],
-                "promote": ["none"]                
+                "read": ["all"],
+                "create": ["all"],
+                "update": ["all"],
+                "drop": ["all"],
+                "execute": ["all"],
+                "promote": ["all"]                
             }
         ]
     },
@@ -151,7 +153,8 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ```
 
-最高レベルのセキュリティのため、データストア ("ds") のすべての許諾アクションに "none" の権限名が割り当てられています。したがって、デフォルトでは `ds` オブジェクト全体へのデータアクセスが無効になっています。 この "none" 権限はセキュリティのため、使用も変更もしないことが推奨されています。Web や RESTリクエストから利用可能にしたい各リソースには、それ専用の権限を新たに追加することが推奨されています ([以下の例を参照](#権限設定の例))。
+For a highest level of security, the "all" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. The principle is as follows: assigning a permission is like putting a lock on a door. Only sessions with privilege having the corresponding key (i.e., a permission) will be able to open the lock.
+この "none" 権限はセキュリティのため、使用も変更もしないことが推奨されています。Web や RESTリクエストから利用可能にしたい各リソースには、それ専用の権限を新たに追加することが推奨されています ([以下の例を参照](#権限設定の例))。
 
 :::caution
 
@@ -266,14 +269,14 @@ End if
 
 ## 権限設定の例
 
-グッドプラクティスは、"none" 権限によってすべてのデータアクセスをデフォルトでロックしておき、`roles.json` ファイルを設定して、許可されたセッションにのみ限定的に一部を開放することです。  たとえば、制限されたアクセスをゲストセッションに対して許可する場合:
+The good practice is to keep all data access locked by default thanks to the "all" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to "guest" sessions:
 
 ```json title="/Project/Sources/roles.json"
 
 {
   "privileges": [
     {
-      "privilege": "none",
+      "privilege": "all",
       "includes": []
     }
   ],
@@ -284,22 +287,22 @@ End if
         "applyTo": "ds",
         "type": "datastore",
         "read": [
-          "none"
+          "all"
         ],
         "create": [
-          "none"
+          "all"
         ],
         "update": [
-          "none"
+          "all"
         ],
         "drop": [
-          "none"
+          "all"
         ],
         "execute": [
-          "none"
+          "all"
         ],
         "promote": [
-          "none"
+          "all"
         ]
       },
       {

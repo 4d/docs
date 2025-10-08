@@ -54,9 +54,10 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 18 R6       | Añadidos       |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 21          | Support of remote sessions |
+| 18 R6       | Añadidos                   |
 
 </details>
 
@@ -74,7 +75,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 :::note
 
-Esta función no hace nada y siempre devuelve **True** con cliente remoto, procedimiento almacenado y sesiones independientes.
+This function does nothing and always returns **True** with stored procedure sessions and standalone sessions.
 
 :::
 
@@ -87,6 +88,8 @@ A menos que esté en modo ["forceLogin"](../REST/authUsers.md#force-login-mode),
 Esta función no elimina los **privilegios promovidos** del proceso web, tanto si se han añadido a través del archivo [roles.json](../ORDA/privileges.md#rolesjson-file) como de la función [`promote()`](#promote).
 
 :::
+
+Regarding remote client sessions, the function only impacts [code accessing the web server](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 #### Ejemplo
 
@@ -107,9 +110,10 @@ $isGuest:=Session.isGuest() //$isGuest es True
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R9       | Añadidos       |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 21          | Support of remote sessions |
+| 20 R9       | Añadidos                   |
 
 </details>
 
@@ -120,7 +124,7 @@ $isGuest:=Session.isGuest() //$isGuest es True
 | Parámetros | Tipo    |                             | Descripción                                         |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------- |
 | lifespan   | Integer |              ->             | Duración de la vida del token de sesión en segundos |
-| Resultado  | Text    | <- | UUID de la sesión                                   |
+| Resultado  | Text    | <- | UUID of the token                                   |
 
 <!-- END REF -->
 
@@ -128,7 +132,7 @@ $isGuest:=Session.isGuest() //$isGuest es True
 
 :::note
 
-Esta función solo está disponible con sesiones usuario web. Devuelve una cadena vacía en otros contextos.
+This function is available with web user sessions and remote sessions. It returns an empty string in stored procedure and standalone sessions.
 
 :::
 
@@ -136,9 +140,14 @@ La función `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->crea un
 
 Para más información sobre los tokens OTP, por favor consulte [esta sección](../WebServer/sessions.md#session-token-otp).
 
-Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión. Puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. Si se utiliza un token caducado para restaurar una sesión de usuario web, se ignora.
+Puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. If an expired token is used to restore a session, it is ignored. By default, if the *lifespan* parameter is omitted:
 
-El token devuelto puede ser utilizado en intercambios con aplicaciones de terceros o sitios web para identificar la sesión de forma segura. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
+- with web user sessions, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session.
+- with remote sessions, the token is created with a 10 seconds lifespan.
+
+For **web user sessions**, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
+
+For **remote sessions**, the returned token can be used on 4D Server to identitfy requests coming from a [remote 4D running Qodly forms in a Web area](../Desktop/clientServer.md#remote-user-sessions).
 
 #### Ejemplo
 
@@ -253,9 +262,10 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones |
-| ----------- | -------------- |
-| 20 R6       | Añadidos       |
+| Lanzamiento | Modificaciones                    |
+| ----------- | --------------------------------- |
+| 21          | Support of remote client sessions |
+| 20 R6       | Añadidos                          |
 
 </details>
 
@@ -279,7 +289,9 @@ Esta función devuelve los privilegios asignados a una Sesión utilizando única
 
 :::
 
-Con clientes remotos, procedimientos almacenados y sesiones independientes, esta función devuelve una colección que sólo contiene "WebAdmin".
+With remote client sessions, the privileges only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
+
+With stored procedure sessions and standalone sessions, this function returns a collection only containing "WebAdmin".
 
 #### Ejemplo
 
@@ -348,10 +360,10 @@ $privileges := Session.getPrivileges()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                |
-| ----------- | --------------------------------------------- |
-| 21          | Devuelve True para los privilegios promovidos |
-| 18 R6       | Añadidos                                      |
+| Lanzamiento | Modificaciones                                                          |
+| ----------- | ----------------------------------------------------------------------- |
+| 21          | Returns True for promoted privileges, Support of remote client sessions |
+| 18 R6       | Añadidos                                                                |
 
 </details>
 
@@ -376,7 +388,9 @@ Esta función devuelve True para el *privilegio* si se llama desde una función 
 
 :::
 
-Con cliente remoto, procedimientos almacenados y sesiones independientes, esta función siempre devuelve True, sea cual sea el *privilege*.
+Regarding remote client sessions, the function only impacts [code accessing the web server](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+
+With stored procedure sessions and standalone sessions, this function always returns True, whatever the *privilege*.
 
 #### Ejemplo
 
@@ -717,6 +731,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 | Lanzamiento | Modificaciones                                      |
 | ----------- | --------------------------------------------------- |
+| 21          | Support of remote client sessions                   |
 | 19 R8       | Compatibilidad con la propiedad "roles" en Settings |
 | 18 R6       | Añadidos                                            |
 
@@ -739,23 +754,21 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 :::note
 
-Esta función no hace nada y siempre devuelve **False** con cliente remoto, procedimiento almacenado y sesiones independientes.
+This function does nothing and always returns **False** with stored procedure sessions and standalone sessions.
 
 :::
 
 La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->asocia a la sesión los privilegios y/o roles definidos en el parámetro y devuelve **True** si la ejecución se ha realizado correctamente<!-- END REF -->.
 
 - En el parámetro *privilege*, pase una cadena que contenga un nombre de privilegio (o varios nombres de privilegio separados por comas).
-
 - En el parámetro *privileges*, pase una colección de cadenas que contengan nombres de privilegios.
-
 - En el parámetro *settings*, pase un objeto que contenga las siguientes propiedades:
 
-| Propiedad  | Tipo              | Descripción                                                                                                               |
-| ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li> |
-| roles      | Text o Collection | <li>Cadena que contiene un rol, o</li><li>Colección de cadenas que contienen roles</li>                                   |
-| userName   | Text              | Nombre de usuario para asociar a la sesión (opcional)                                                  |
+| Propiedad  | Tipo              | Descripción                                                                                                                                                                                   |
+| ---------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>                                                                     |
+| roles      | Text o Collection | <li>Cadena que contiene un rol, o</li><li>Colección de cadenas que contienen roles</li>                                                                                                       |
+| userName   | Text              | User name to associate to the session (optional, web sessions only). Not available in remote client sessions (ignored). |
 
 :::note
 
@@ -768,6 +781,8 @@ Si la propiedad `privileges` o `roles` contiene un nombre que no está declarado
 Por defecto, cuando no hay ningún privilegio o rol asociado a la sesión, la sesión es una [sesión de invitado](#isguest).
 
 La propiedad [`userName`](#username) está disponible a nivel de objeto de sesión (sólo lectura).
+
+Regarding remote client sessions, the function only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
 
 #### Ejemplo
 

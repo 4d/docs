@@ -89,11 +89,19 @@ Veillez cependant aux différences de comportement suivantes, comparées à [l'a
 
 Sur le serveur, la commande [`Session`](../commands/session.md) renvoie un objet `session` décrivant la session utilisateur courante. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
 
+:::tip Articles de blog sur le sujet
+
+[Objet session distante 4D avec connexion Client/Serveur et procédure stockée](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+
+:::
+
 ### Utilisation
 
-L'objet `session` vous permet d'obtenir des informations sur la session de l'utilisateur distant. Vous pouvez partager des données entre tous les processus de la session utilisateur en utilisant l'objet partagé [`session.storage`](../API/SessionClass.md#storage).
+The `session` object allows you to handle information and privileges for the remote user session.
 
-Par exemple, vous pouvez lancer une procédure d'authentification et de vérification de l'utilisateur lorsqu'un client se connecte au serveur, impliquant la saisie d'un code envoyé par e-mail ou SMS dans l'application. Ensuite, vous ajoutez les informations de l'utilisateur au storage de session, ce qui permet au serveur d'identifier l'utilisateur. De cette façon, le serveur 4D peut accéder aux informations de l'utilisateur pour tous les process clients, permettant l'écriture de code personnalisé en fonction du rôle de l'utilisateur.
+Vous pouvez partager des données entre tous les processus de la session utilisateur en utilisant l'objet partagé [`session.storage`](../API/SessionClass.md#storage). Par exemple, vous pouvez lancer une procédure d'authentification et de vérification de l'utilisateur lorsqu'un client se connecte au serveur, impliquant la saisie d'un code envoyé par e-mail ou SMS dans l'application. Ensuite, vous ajoutez les informations de l'utilisateur au storage de session, ce qui permet au serveur d'identifier l'utilisateur. De cette façon, le serveur 4D peut accéder aux informations de l'utilisateur pour tous les process clients, permettant l'écriture de code personnalisé en fonction du rôle de l'utilisateur.
+
+You can also assign privileges to a remote user session to control access when the session comes from Qodly pages running in web areas.
 
 ### Disponibilité
 
@@ -110,7 +118,60 @@ Toutes les procédures stockées sur le serveur partagent la même session utili
 
 :::
 
-### Voir aussi (blog post)
+### Sharing the session with Qodly pages in Web areas
 
-[Objet session distante 4D avec connexion Client/Serveur et procédure stockée](https://blog.4d.com/new-4D-remote-session-object-with-client-server-connection-and-stored-procedure).
+Remote client sessions can be used to handle Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
 
+To manage this configuration, you need to use remote client sessions. Actually, requests coming from both the remote 4D application and its Qodly pages loaded in Web areas need to work inside a single user session. You just have to share the same session between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, whatever the request origin.
+
+Note that [privileges](../ORDA/privileges.md) should be set in the session before executing a web request from a Web area, so that the user automatically gets their privileges for web access (see example). Keep in mind that privileges only apply to requests coming from the web, not to the 4D code executed in a standard remote session.
+
+Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#session-token-otp). After you created an OTP token on the server for the user session, you add the token (through the `$4DSID` parameter value) to web requests sent from web areas containing Qodly pages so that the user session on the server is identified and shared. On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used.
+
+:::tip Related blog post
+
+[Share your 4D remote client session with web accesses](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses)
+
+:::
+
+#### Exemple
+
+```4d
+var $otp : Text
+
+// Some privileges are put in the remote user session on the server for a further web access
+ds.resetPrivileges("basic")
+
+// An OTP is created on the server for this remote client session
+$otp:=ds.getOTP()
+
+
+// The user has already the required privileges for a web access
+// and the same session is shared between this remote user and the web Qodly app
+WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$otp)
+
+```
+
+*resetPrivileges()* function in the Datastore class:
+
+```4d
+// This function is run on the server
+// and puts some privileges in the session for a further web access
+
+exposed Function resetPrivileges($priv : Text) 
+	
+	Session.clearPrivileges()
+	Session.setPrivileges($priv)
+```
+
+*getOTP()* function in the Datastore class:
+
+```4d
+// This function is run on the server 
+// and generates an OTP able to retrieve this remote user session 
+
+exposed Function getOTP(): Text 
+	
+	return Session.createOTP()
+	
+```

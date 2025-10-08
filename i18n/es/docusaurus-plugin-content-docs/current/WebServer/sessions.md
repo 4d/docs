@@ -213,6 +213,12 @@ El servidor web 4D le permite generar, compartir y utilizar tokens de sesión OT
 
 In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Gracias a esta arquitectura, la [cookie de sesión](#session-implementation) no está expuesta en la red, lo que elimina el riesgo de un ataque de hombre en el medio.
 
+:::tips Entradas de blog relacionadas
+
+[Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
 ### Generalidades
 
 La secuencia básica de uso de un testigo de sesión OTP en una aplicación web 4D es la siguiente:
@@ -477,8 +483,4 @@ Un testigo de sesión tiene una vida útil, y la propia sesión tiene una vida �
 
 Una sesión solo se restaura mediante un token si tanto la vida útil del token de sesión como la vida útil de la sesión no han expirado. En otros casos (el testigo de sesión ha caducado y/o la propia sesión ha caducado), se crea una sesión de invitado cuando se recibe una petición web con un testigo de sesión.
 
-:::note
 
-Para obtener más información, consulte la entrada de blog [Conecte sus aplicaciones web a sistemas de terceros](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/).
-
-:::

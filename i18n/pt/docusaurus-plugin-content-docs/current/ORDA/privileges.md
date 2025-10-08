@@ -17,9 +17,11 @@ Se um usuário tentar executar uma ação e não tiver os direitos de acesso ade
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
-### Veja também
+:::tip Related Blog posts
 
-Para obter uma visão detalhada de toda a arquitetura de permissões, por favor leia o post do blog [**Filtre o acesso aos seus dados com um sistema completo de permissões**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/).
+[**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
+
+:::
 
 ## Resources
 
@@ -79,7 +81,7 @@ Um privilégio ou um papel pode ser associado a várias combinações de "ação
 
 - Você cria **privilégios** e/ou funções no arquivo `roles.json` (veja abaixo). Você **configurou** o escopo dele, atribuindo-lhes a ação de permissão aplicada aos recursos.
 
-- Você **permite** privilégios e/ou funções para cada sessão do usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
+- Você **permite** privilégios e/ou funções para cada sessão usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
 
 ### Exemplo
 
@@ -113,7 +115,7 @@ O arquivo `roles.json` descreve todas as configurações de segurança do projet
 
 ### Arquivo padrão
 
-Quando você cria um projeto, um arquivo `roles.json` padrão é criado no seguinte local: `<project folder>/Project/Sources/` (consulte a seção [Arquitetura](../Project/architecture.md#sources)).
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/` (see [Architecture](../Project/architecture.md#sources) section).
 
 O arquivo padrão tem o seguinte conteúdo:
 
@@ -122,7 +124,7 @@ O arquivo padrão tem o seguinte conteúdo:
 {
     "privileges": [
         {
-            "privilege": "none",
+            "privilege": "all",
             "includes": []
         }
     ],
@@ -134,12 +136,12 @@ O arquivo padrão tem o seguinte conteúdo:
             {
                 "applyTo": "ds",
                 "type": "datastore",
-                "read": ["none"],
-                "create": ["none"],
-                "update": ["none"],
-                "drop": ["none"],
-                "execute": ["none"],
-                "promote": ["none"]                
+                "read": ["all"],
+                "create": ["all"],
+                "update": ["all"],
+                "drop": ["all"],
+                "execute": ["all"],
+                "promote": ["all"]                
             }
         ]
     },
@@ -150,7 +152,8 @@ O arquivo padrão tem o seguinte conteúdo:
 
 ```
 
-Para um nível máximo de segurança, o privilégio "none" é atribuído a todas as permissões no datastore, assim o acesso aos dados no objeto `ds` inteiro é desabilitado por padrão. É recomendado não modificar ou usar esse privilégio de bloqueio, mas adicionar permissões específicas a cada recurso que você deseja disponibilizar para solicitações da web ou REST (veja o exemplo abaixo).
+For a highest level of security, the "all" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. The principle is as follows: assigning a permission is like putting a lock on a door. Only sessions with privilege having the corresponding key (i.e., a permission) will be able to open the lock.
+É recomendado não modificar ou usar esse privilégio de bloqueio, mas adicionar permissões específicas a cada recurso que você deseja disponibilizar para solicitações da web ou REST (veja o exemplo abaixo).
 
 :::caution
 
@@ -264,14 +267,14 @@ Finalizado, se
 
 ## Exemplo de configuração de privilégios
 
-A boa prática é manter todo o acesso aos dados bloqueado por padrão graças ao privilégio "none" e configurar o arquivo `roles.json` para abrir apenas partes controladas para sessões autorizadas. Por exemplo, para permitir alguns acessos às sessões de convidados:
+The good practice is to keep all data access locked by default thanks to the "all" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to "guest" sessions:
 
 ```json title="/Project/Sources/roles.json"
 
 {
   "privileges": [
     {
-      "privilege": "none",
+      "privilege": "all",
       "includes": []
     }
   ],
@@ -282,22 +285,22 @@ A boa prática é manter todo o acesso aos dados bloqueado por padrão graças a
         "applyTo": "ds",
         "type": "datastore",
         "read": [
-          "none"
+          "all"
         ],
         "create": [
-          "none"
+          "all"
         ],
         "update": [
-          "none"
+          "all"
         ],
         "drop": [
-          "none"
+          "all"
         ],
         "execute": [
-          "none"
+          "all"
         ],
         "promote": [
-          "none"
+          "all"
         ]
       },
       {

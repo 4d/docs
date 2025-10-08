@@ -8,12 +8,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.WP Import document.Params-->
 
-| Paramètres | Type                    |                             | Description                                                                                                                                                                                                                                                        |
-| ---------- | ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| filePath   | Text                    | &#8594; | Path to: a 4D Write document (.4w7 or .4wt) or a 4D Write Pro document (.4wp) or a .docx document (.docx) |
-| fileObj    | 4D.File | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                        |
-| option     | Integer, Object         | &#8594; | (Integer) Import option for HTML expressions, (object) Import options for .docx document                                                                                                                     |
-| Résultat   | Object                  | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                 |
+| Paramètres | Type                    |                             | Description                                                                                                                                                                                                                                                                   |
+| ---------- | ----------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| filePath   | Text                    | &#8594; | Chemin d'accès : un document 4D Write (.4w7 ou .4wt) ou un document 4D Write Pro (.4wp) ou un document .docx (.docx) |
+| fileObj    | 4D.File | &#8594; | Objet du fichier à importer                                                                                                                                                                                                                                                   |
+| option     | Integer, Object         | &#8594; | (Integer) Option d'importation pour les expressions HTML, (object) Options d'importation pour les documents .docx                                                                                                       |
+| Résultat   | Object                  | &#8592; | Objet 4D Write Pro                                                                                                                                                                                                                                                            |
 
 <!-- END REF-->
 
@@ -76,11 +76,11 @@ You can pass an object to define how the following attributes are handled during
 
 ## Exemple 2
 
-You want to import a .docx document and would like that paragraph borders are collapsed as they are in MS Word:
+Vous souhaitez importer un document .docx et aimeriez que les bordures des paragraphes soient réduites comme dans MS Word :
 
 ```4d
  $options:=New object
- $options.borderRules:="collapse" //collapse paragraph borders while converting
+ $options.borderRules:="collapse" //réduire les marges des paragraphes lors de la conversion
 
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
@@ -89,7 +89,7 @@ Vous voulez importer les champs .docx d'origine en tant que texte (pour les cham
 
 ```4d
  $options:=New object
- $options.fields:="label" //for unconverted fields, import field references as text between {{ and }}
+ $options.fields:="label" //pour les champs non convertis, importez les références de champ sous forme de texte entre {{ and }}
 
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
@@ -98,7 +98,7 @@ Vous voulez importer un document .docx dont le texte est principalement en japon
 
 ```4d
  $options:=New object
- $options.preferredFontScriptType:="eastAsia" //force conversion to prefer eastAsia font scripts
+ $options.preferredFontScriptType:="eastAsia" //Forcer la conversion pour privilégier les polices de caractères eastAsia
 
  wpDoc:=WP Import document(«mydoc.docx»;$options)
 ```
