@@ -10,6 +10,11 @@ It is possible to create several web areas in the same form. Note, however, that
 
 Several dedicated [standard actions](#standard-actions), numerous [language commands](../category/web-area) as well as generic and specific [form events](#form-events) allow the developer to control the functioning of web areas. Specific variables can be used to exchange information between the area and the 4D environment.
 
+:::info Displaying Qodly pages
+
+In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications. 
+
+:::
 
 ## Specific properties
 
