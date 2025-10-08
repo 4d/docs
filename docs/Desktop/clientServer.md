@@ -163,7 +163,7 @@ WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$ot
 // This function is run on the server
 // and puts some privileges in the session for a further web access
 
-exposed Function resetPrivileges($priv : Text) 
+Function resetPrivileges($priv : Text) 
 	
 	Session.clearPrivileges()
 	Session.setPrivileges($priv)
@@ -175,7 +175,7 @@ exposed Function resetPrivileges($priv : Text)
 // This function is run on the server 
 // and generates an OTP able to retrieve this remote user session 
 
-exposed Function getOTP(): Text 
+Function getOTP(): Text 
 	
 	return Session.createOTP()
 	
