@@ -3206,19 +3206,18 @@ Quer saber se pelo menos um valor de colecção é >0.
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *ascOrDesc* : Integer ) : Collection <br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->
 | Parâmetro  | Tipo         |    | Descrição                                                             |
 | ---------- | ------------ |:--:| --------------------------------------------------------------------- |
+| ascOrDesc  | Integer      | -> | `ck ascending` ou `ck descending` (valores escalares)                 |
 | formula    | 4D. Function | -> | Objecto fórmula                                                       |
 | methodName | Text         | -> | Nome da função a qual se chama para processar os elementos da coleção |
 | extraParam | any          | -> | Parâmetros para o método                                              |
-| Resultados | Collection   | <- | Colecção original ordenada|<!-- END REF -->
-
-
-|
+| Resultados | Collection   | <- | Colecção original ordenada                                            |
+<!-- END REF -->
 
 
 #### Descrição
@@ -3226,7 +3225,16 @@ Quer saber se pelo menos um valor de colecção é >0.
 A função `.shift()` <!-- REF #collection.sort().Summary -->remove o primeiro elemento da colecção e devolve-o como resultado da função<!-- END REF --> .
 > Essa função modifica a coleção original.
 
-Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. Se a coleção contiver valores escalares diferentes, eles serão primeiro agrupados por tipo e, em seguida, classificados. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo. You can also pass one of the following constants in the *ascOrDesc* parameter:
+
+    |Constant|  Type|Value|Comment|
+    |---|---|---|---|
+    |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+    |ck descending|Integer|1|Elements are ordered in descending order|
+    
+    This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+
+ Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se *attributePath* levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 
 1.  null
 2.  booleans

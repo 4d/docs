@@ -79,7 +79,7 @@ Um privilégio ou um papel pode ser associado a várias combinações de "ação
 
 - Você cria **privilégios** e/ou funções no arquivo `roles.json` (veja abaixo). Você **configurou** o escopo dele, atribuindo-lhes a ação de permissão aplicada aos recursos.
 
-- Você **permite** privilégios e/ou funções para cada sessão do usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
+- Você **permite** privilégios e/ou funções para cada sessão usuário usando a função [`.setPrivileges()`](../API/SessionClass.md#setprivileges) da classe `Session`.
 
 ### Exemplo
 
@@ -113,7 +113,7 @@ O arquivo `roles.json` descreve todas as configurações de segurança do projet
 
 ### Arquivo padrão
 
-Quando você cria um projeto, um arquivo `roles.json` padrão é criado no seguinte local: `<project folder>/Project/Sources/` (consulte a seção [Arquitetura](../Project/architecture.md#sources)).
+When you create a project, a default `roles.json` file is created at the following location: `<project folder>/Project/Sources/` (see [Architecture](../Project/architecture.md#sources) section).
 
 O arquivo padrão tem o seguinte conteúdo:
 

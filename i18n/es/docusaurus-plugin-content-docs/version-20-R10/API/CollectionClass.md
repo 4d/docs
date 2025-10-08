@@ -3148,12 +3148,13 @@ Soporte de fórmula
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *ascOrDesc* : Integer ) : Collection <br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.sort().Params -->
 
 | Parámetros | Tipo                        |                             | Descripción           |
 | ---------- | --------------------------- | :-------------------------: | --------------------- |
+| ascOrDesc  | Integer                     |              ->             | Ejemplo 1             |
 | formula    | 4D.Function |              ->             | Objeto fórmula        |
 | methodName | Text                        |              ->             | Nombre de un método   |
 | extraParam | any                         |              ->             | Parámetros del método |
@@ -3167,7 +3168,19 @@ La función `.sort()` <!-- REF #collection.sort().Summary -->ordena los elemento
 
 > Esta función modifica la colección original.
 
-Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
+You can also pass one of the following constants in the *ascOrDesc* parameter:
+
+ ```
+ |Constant|	Type|Value|Comment|
+ |---|---|---|---|
+ |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+ |ck descending|Integer|1|Elements are ordered in descending order|
+ 
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+ ```
+
+Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 
 1. null
 2. booleans

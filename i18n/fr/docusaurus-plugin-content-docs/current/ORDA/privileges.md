@@ -17,9 +17,11 @@ Si un utilisateur tente d'exécuter une action et ne dispose pas des droits d'ac
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
-### Voir également
+:::tip Related Blog posts
 
-Pour un aperçu détaillé de l'architecture des permissions, veuillez lire l'article de blog [**Filtrer l'accès à vos données avec un système complet de permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/).
+[**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
+
+:::
 
 ## Resources
 
@@ -122,7 +124,7 @@ Le fichier par défaut a le contenu suivant :
 {
     "privileges": [
         {
-            "privilege": "none",
+            "privilege": "all",
             "includes": []
         }
     ],
@@ -134,12 +136,12 @@ Le fichier par défaut a le contenu suivant :
             {
                 "applyTo": "ds",
                 "type": "datastore",
-                "read": ["none"],
-                "create": ["none"],
-                "update": ["none"],
-                "drop": ["none"],
-                "execute": ["none"],
-                "promote": ["none"]                
+                "read": ["all"],
+                "create": ["all"],
+                "update": ["all"],
+                "drop": ["all"],
+                "execute": ["all"],
+                "promote": ["all"]                
             }
         ]
     },
@@ -150,7 +152,8 @@ Le fichier par défaut a le contenu suivant :
 
 ```
 
-Pour un niveau de sécurité maximal, le privilège "none" est attribué à toutes les permissions du datastore, désactivant ainsi l'accès aux données pour tout l'objet `ds` par défaut. Il est recommandé de ne pas modifier ou utiliser ce privilège de verrouillage, mais d'ajouter des permissions spécifiques à chaque ressource que vous souhaitez rendre disponible à partir de requêtes web ou REST ([voir l'exemple ci-dessous](#example-of-privilege-configuration)).
+For a highest level of security, the "all" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. The principle is as follows: assigning a permission is like putting a lock on a door. Only sessions with privilege having the corresponding key (i.e., a permission) will be able to open the lock.
+Il est recommandé de ne pas modifier ou utiliser ce privilège de verrouillage, mais d'ajouter des permissions spécifiques à chaque ressource que vous souhaitez rendre disponible à partir de requêtes web ou REST ([voir l'exemple ci-dessous](#example-of-privilege-configuration)).
 
 :::caution
 
@@ -264,14 +267,14 @@ End if
 
 ## Exemple de configuration de privilèges
 
-La bonne pratique est de garder verrouillés tous les accès aux données par défaut grâce au privilège "none" et de configurer le fichier `roles.json` pour n'ouvrir que les parties contrôlées aux sessions autorisées. Par exemple, pour autoriser certains accès aux sessions guest :
+The good practice is to keep all data access locked by default thanks to the "all" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to "guest" sessions:
 
 ```json title="/Project/Sources/roles.json"
 
 {
   "privileges": [
     {
-      "privilege": "none",
+      "privilege": "all",
       "includes": []
     }
   ],
@@ -282,22 +285,22 @@ La bonne pratique est de garder verrouillés tous les accès aux données par d�
         "applyTo": "ds",
         "type": "datastore",
         "read": [
-          "none"
+          "all"
         ],
         "create": [
-          "none"
+          "all"
         ],
         "update": [
-          "none"
+          "all"
         ],
         "drop": [
-          "none"
+          "all"
         ],
         "execute": [
-          "none"
+          "all"
         ],
         "promote": [
-          "none"
+          "all"
         ]
       },
       {

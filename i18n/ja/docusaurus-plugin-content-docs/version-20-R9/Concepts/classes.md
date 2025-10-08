@@ -613,13 +613,13 @@ Class constructor ($side : Integer)
 
 ### `Super`
 
-[`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。 これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
+[`Super`](../commands/super.md) コマンドを使用すると、[`スーパークラス`](../API/ClassClass#superclass)、つまり関数の親クラスを呼び出すことができます。  これは[Class constructor](#class-constructor) またはクラス関数コード内で呼び出すことができます。
 
 詳細な情報については、[`Super`](../commands/super.md) コマンドの説明を参照してください。
 
 ### `This`
 
-[`This`](../commands/this.md) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。 多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
+[`This`](../commands/this.md) コマンドは現在処理されているオブジェクトへの参照を返します。  多くの場合、`This` の値はクラス関数がどのように呼ばれたかによって決まります。 通常、`This` は、まるでその関数がオブジェクト上にあるかのように、関数が呼ばれたオブジェクトを参照します。
 
 例:
 
@@ -714,7 +714,7 @@ shared Function Bar($value : Integer)
 
 ## シングルトンクラス
 
-**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。   **シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。  シングルトンのコンセプトに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
+**シングルトンクラス** とは、インスタンスを一つのみ作成するユーザークラスです。   シングルトンのコンセプトに関する詳細については、[シングルトンに関する Wikipedia のページ](https://ja.wikipedia.org/wiki/Singleton_%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3) を参照ください。
 
 ### シングルトンの種類
 
