@@ -80,7 +80,7 @@ This drop-down box contains 3 network layer options to choose between: **legacy*
 		-	A beta message and an alert icon are displayed near the selector.
 		-	[Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
 		-	The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
-	- **Compatibility**: You need to deploy your client/server applications with 4D v20 or higher before switching to the QUIC network layer.
+	- **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
 
 :::note
 
