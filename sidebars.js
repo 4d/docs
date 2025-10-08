@@ -248,6 +248,7 @@ module.exports =
                 "ORDA/dsmapping",
                 "ORDA/ordaClasses",
                 "ORDA/entities",
+                "ORDA/orda-events",
                 "ORDA/global-stamp",
                 "ORDA/datastores",
                 "ORDA/privileges",
