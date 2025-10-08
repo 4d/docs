@@ -3246,19 +3246,18 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *ascOrDesc* : Integer ) : Collection <br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->
 | Paramètres | Type        |    | Description                                           |
 | ---------- | ----------- |:--:| ----------------------------------------------------- |
+| ascOrDesc  | Integer     | -> | `ck ascending` ou `ck descending` (valeurs scalaires) |
 | formula    | 4D.Function | -> | Objet formule                                         |
 | methodName | Text        | -> | Nom de méthode                                        |
 | extraParam | any         | -> | Paramètre(s) à passer à la méthode                    |
-| Résultat   | Collection  | <- | Collection d'origine triée|<!-- END REF -->
-
-
-|
+| Résultat   | Collection  | <- | Collection d'origine triée                            |
+<!-- END REF -->
 
 
 #### Description
@@ -3266,7 +3265,16 @@ Vous voulez savoir si au moins une valeur de la collection est >0.
 La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments de la collection d'origine et retourne également une référence vers cette collection triée<!-- END REF --> .
 > Cette fonction modifie la collection d'origine.
 
-Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. Si la collection contient des valeurs scalaires de différents types, elles sont d'abord groupées par type et triées par la suite. Les types sont renvoyés dans l'ordre suivant :
+Si `.sort()` est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type. You can also pass one of the following constants in the *ascOrDesc* parameter:
+
+    |Constant|  Type|Value|Comment|
+    |---|---|---|---|
+    |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+    |ck descending|Integer|1|Elements are ordered in descending order|
+    
+    This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+
+ Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1.  Null
 2.  booléens

@@ -89,11 +89,19 @@ title: クライアント/サーバー管理
 
 サーバー上では、[`Session`](../commands/session.md) コマンドはカレントユーザーセッションの情報を格納する `Session` オブジェクトを返します。 このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
+:::tip 関連したblog 記事
+
+[クライアント/サーバー接続とストアドプロシージャーに対応した新しい 4Dリモートセッションオブジェクト](https://blog.4d.com/ja/new-4d-remote-session-object-with-client-server-connection-and-stored-procedure/)。
+
+:::
+
 ### 効果
 
-`Session`オブジェクトを使用すると、リモートユーザーセッションに関する情報を取得できます。 ユーザーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。
+The `session` object allows you to handle information and privileges for the remote user session.
 
-たとえば、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
+ユーザーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。 たとえば、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
+
+You can also assign privileges to a remote user session to control access when the session comes from Qodly pages running in web areas.
 
 ### 利用可能性
 
@@ -110,7 +118,60 @@ title: クライアント/サーバー管理
 
 :::
 
-### 関連項目 (ブログ記事)
+### Sharing the session with Qodly pages in Web areas
 
-[クライアント/サーバー接続とストアドプロシージャーに対応した新しい 4Dリモートセッションオブジェクト](https://blog.4d.com/ja/new-4d-remote-session-object-with-client-server-connection-and-stored-procedure/)。
+Remote client sessions can be used to handle Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
 
+To manage this configuration, you need to use remote client sessions. Actually, requests coming from both the remote 4D application and its Qodly pages loaded in Web areas need to work inside a single user session. You just have to share the same session between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, whatever the request origin.
+
+Note that [privileges](../ORDA/privileges.md) should be set in the session before executing a web request from a Web area, so that the user automatically gets their privileges for web access (see example). Keep in mind that privileges only apply to requests coming from the web, not to the 4D code executed in a standard remote session.
+
+Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#session-token-otp). After you created an OTP token on the server for the user session, you add the token (through the `$4DSID` parameter value) to web requests sent from web areas containing Qodly pages so that the user session on the server is identified and shared. On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used.
+
+:::tip Related blog post
+
+[Share your 4D remote client session with web accesses](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses)
+
+:::
+
+#### 例題
+
+```4d
+var $otp : Text
+
+// Some privileges are put in the remote user session on the server for a further web access
+ds.resetPrivileges("basic")
+
+// An OTP is created on the server for this remote client session
+$otp:=ds.getOTP()
+
+
+// The user has already the required privileges for a web access
+// and the same session is shared between this remote user and the web Qodly app
+WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$otp)
+
+```
+
+*resetPrivileges()* function in the Datastore class:
+
+```4d
+// This function is run on the server
+// and puts some privileges in the session for a further web access
+
+exposed Function resetPrivileges($priv : Text) 
+	
+	Session.clearPrivileges()
+	Session.setPrivileges($priv)
+```
+
+*getOTP()* function in the Datastore class:
+
+```4d
+// This function is run on the server 
+// and generates an OTP able to retrieve this remote user session 
+
+exposed Function getOTP(): Text 
+	
+	return Session.createOTP()
+	
+```

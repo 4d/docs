@@ -3199,16 +3199,17 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**() : Collection<br/>**.sort**( *ascOrDesc* : Integer ) : Collection <br/>**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.sort().Params -->
 
-| 引数         | 型                           |                             | 説明               |
-| ---------- | --------------------------- | :-------------------------: | ---------------- |
-| formula    | 4D.Function |              ->             | フォーミュラオブジェクト     |
-| methodName | Text                        |              ->             | メソッド名            |
-| extraParam | any                         |              ->             | methodName に渡す引数 |
-| 戻り値        | Collection                  | <- | 並べ替えられた元のコレクション  |
+| 引数         | 型                           |                             | 説明                                                            |
+| ---------- | --------------------------- | :-------------------------: | ------------------------------------------------------------- |
+| ascOrDesc  | Integer                     |              ->             | `ck ascending` または `ck descending` (スカラー値) |
+| formula    | 4D.Function |              ->             | フォーミュラオブジェクト                                                  |
+| methodName | Text                        |              ->             | メソッド名                                                         |
+| extraParam | any                         |              ->             | methodName に渡す引数                                              |
+| 戻り値        | Collection                  | <- | 並べ替えられた元のコレクション                                               |
 
 <!-- END REF -->
 
@@ -3218,7 +3219,19 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 
 > このコマンドは、元のコレクションを変更します。
 
-引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
+引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
+You can also pass one of the following constants in the *ascOrDesc* parameter:
+
+ ```
+ |Constant|	Type|Value|Comment|
+ |---|---|---|---|
+ |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+ |ck descending|Integer|1|Elements are ordered in descending order|
+ 
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+ ```
+
+コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
 1. null
 2. ブール
