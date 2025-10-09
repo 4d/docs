@@ -952,7 +952,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 **Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
 
-**Description:** Enables or disables the `4DTCPLog.txt` file for logging TCP  events.
+**Description:** Enables or disables the `4DTCPUDPLog.txt` file for logging TCP  events.
 
 
 

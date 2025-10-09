@@ -961,6 +961,28 @@ Para mais informação sobre os arquivos 4DPOP3Log\_X.txt, consulte a seção *D
 
 Esse seletor permite suspender/retomar todas as operações de histórico iniciadas na aplicação (exceto históricos ORDA). Essa funcionalidade pode ser útil para aliviar temporariamente a aplicação 4D ou agendar operações de histórico.
 
+### TCPUDP log recording (131)
+
+**Scope:** 4D application.
+
+**Kept between two sessions:** No.
+
+**Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
+
+**Description:** Enables or disables the `4DTCPUDPLog.txt` file for logging TCP  events.
+
+
+
+### RDP optimization (133)
+
+**Scope:** 4D application.
+
+**Kept between two sessions:** No.
+
+**Possible values:** `0`: Disabled (default), `1`: Enabled. 
+
+**Description:** Enables or disables optimizations for RDP (Remote Desktop Protocol). When enabled, optimizes in particular the use of shared clipboard in RDP connections, which can otherwise lead to freezing issues. Note that this selector disables the support in clipboard for images encoded as data uri in raw text (only concerns images dropped or explicitly copied as text from a browser). 
+
 
 
 

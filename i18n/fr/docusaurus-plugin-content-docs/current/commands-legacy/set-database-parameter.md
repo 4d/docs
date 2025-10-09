@@ -933,6 +933,28 @@ Pour plus d'informations sur les fichiers 4DIMAPLog\_N.txt, reportez-vous à la 
 Ce sélecteur permet de suspendre/reprendre toutes les opérations de journalisation lancées sur l'application (à l'exception des journaux ORDA). Cette fonction peut être utile pour alléger temporairement les tâches de l'application 4D ou pour planifier les opérations des journaux.
 
 
+### TCPUDP log recording (131)
+
+**Portée :** Application 4D
+
+**Conservé entre deux sessions :** Non
+
+**Valeurs possibles :** `0`: Enregistrement désactivé (défaut), `1`: Enregistrement activé. 
+
+**Description :** Active ou désactive le fichier `4DTCPUDPLog.txt` pour l'enregistrement des événements TCP et UDP.
+
+
+
+### RDP optimization (133)
+
+**Portée :** Application 4D
+
+**Conservé entre deux sessions :** Non
+
+**Valeurs possibles :** `0`: Désactivé (défaut), `1`: Activé. 
+
+**Description :** Active ou désactive les optimisations pour RDP (Remote Desktop Protocol). Lorsqu'il est activé, optimise en particulier l'utilisation du presse-papiers partagé dans les connexions RDP, qui peut sinon entraîner des problèmes de blocage. Notez que ce sélecteur désactive la prise en charge dans le presse-papiers des images encodées en tant que data uri dans du texte brut (concerne uniquement les images déposées ou copiées explicitement en tant que texte à partir d'un navigateur). 
+
 
 
 
