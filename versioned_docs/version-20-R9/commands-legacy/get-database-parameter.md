@@ -945,7 +945,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 
 
-### TCP log (131)
+### TCPUDP log recording (131)
 
 **Possible values:**
 
