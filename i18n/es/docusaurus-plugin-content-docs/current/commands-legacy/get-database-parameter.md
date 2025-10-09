@@ -977,6 +977,27 @@ Este selector permite suspender/reanudar todas las operaciones de registro inici
 
 
 
+### TCPUDP log recording (131)
+
+**Scope:** 4D application.
+
+**Kept between two sessions:** No.
+
+**Possible values:** `0`: Logging disabled (default), `1`: Logging enabled. 
+
+**Description:** Enables or disables the `4DTCPUDPLog.txt` file for logging TCP  events.
+
+
+
+### RDP optimization (133)
+
+**Scope:** 4D application.
+
+**Kept between two sessions:** No.
+
+**Possible values:** `0`: Disabled (default), `1`: Enabled. 
+
+**Description:** Enables or disables optimizations for RDP (Remote Desktop Protocol). When enabled, optimizes in particular the use of shared clipboard in RDP connections, which can otherwise lead to freezing issues. Note that this selector disables the support in clipboard for images encoded as data uri in raw text (only concerns images dropped or explicitly copied as text from a browser). 
 
 
 ## Selectores hilo seguro 
