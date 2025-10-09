@@ -9,6 +9,12 @@ As áreas da Web podem exibir vários conteúdo Web em seus formulários: págin
 
 Várias [ações padrão](#standard-actions) dedicadas, vários [comandos de linguagem](../category/web-area), bem como [eventos de formulário](#form-events) genéricos e específicos permitem que o desenvolvedor controle o funcionamento das áreas da Web. Variáveis específicas podem ser usadas para trocar informações entre a área e o ambiente 4D.
 
+:::info Displaying Qodly pages
+
+In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
+
+:::
+
 ## Propriedades específicas
 
 ### Variáveis associadas

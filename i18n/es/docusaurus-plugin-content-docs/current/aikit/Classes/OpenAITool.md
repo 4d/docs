@@ -15,10 +15,10 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 
 ### Root Properties
 
-| Propiedad | Tipo    | Por defecto  | Descripción                                                                                                              |
-| --------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `tipo`    | Text    | `"function"` | The type of tool. Currently supports `"function"`, `"custom"`, and other built-in types. |
-| `strict`  | Boolean | `False`      | Whether to enforce strict schema validation for function parameters.                                     |
+| Propiedad | Tipo    | Por defecto  | Descripción                                                                                                                    |
+| --------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `tipo`    | Text    | `"function"` | El tipo de herramienta. Currently supports `"function"`, `"custom"`, and other built-in types. |
+| `strict`  | Boolean | `False`      | Whether to enforce strict schema validation for function parameters.                                           |
 
 ### Common Properties
 
@@ -39,12 +39,12 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 
 **new**(*object* : Object) : OpenAITool
 
-| Parámetros | Tipo       | Descripción                       |
-| ---------- | ---------- | --------------------------------- |
-| *object*   | Object     | Configuration object for the tool |
-| Resultado  | OpenAITool | New instance of OpenAITool        |
+| Parámetros | Tipo       | Descripción                               |
+| ---------- | ---------- | ----------------------------------------- |
+| *object*   | Object     | Objeto de configuración de la herramienta |
+| Resultado  | OpenAITool | New instance of OpenAITool                |
 
-Creates a new OpenAITool instance. The constructor accepts both simplified format and OpenAI API format.
+Crea una nueva instancia de OpenAITool. The constructor accepts both simplified format and OpenAI API format.
 
 #### Supported formats
 

@@ -9,10 +9,10 @@ title: OpenAIChatAPI
 
 ## プロパティ
 
-| プロパティ         | 型                                                       | 説明                                                                      |
-| ------------- | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | チャット補完リクエストを管理するインスタンス。                                                 |
-| `vision`      | [OpenAIVision](OpenAIVision.md)                         | A helper instance that handles vision-related requests. |
+| プロパティ         | 型                                                       | 説明                           |
+| ------------- | ------------------------------------------------------- | ---------------------------- |
+| `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | チャット補完リクエストを管理するインスタンス。      |
+| `vision`      | [OpenAIVision](OpenAIVision.md)                         | ビジョン関連のリクエストを管理するヘルパーインスタンス。 |
 
 ## 関数
 

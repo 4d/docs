@@ -56,7 +56,7 @@ $result:=$chatHelper.prompt("Why 42?")
 
 Resets the chat context by clearing all messages and unregistering all tools. This effectively starts a fresh conversation while keeping the system prompt and parameters intact.
 
-#### Reset Example
+#### Ejemplo de reinicio
 
 ```4D
 $chatHelper.prompt("Hello!")

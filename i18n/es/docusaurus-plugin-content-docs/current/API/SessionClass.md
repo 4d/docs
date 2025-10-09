@@ -124,7 +124,7 @@ $isGuest:=Session.isGuest() //$isGuest es True
 | Parámetros | Tipo    |                             | Descripción                                         |
 | ---------- | ------- | :-------------------------: | --------------------------------------------------- |
 | lifespan   | Integer |              ->             | Duración de la vida del token de sesión en segundos |
-| Resultado  | Text    | <- | UUID of the token                                   |
+| Resultado  | Text    | <- | UUID del token                                      |
 
 <!-- END REF -->
 
@@ -262,10 +262,10 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                    |
-| ----------- | --------------------------------- |
-| 21          | Support of remote client sessions |
-| 20 R6       | Añadidos                          |
+| Lanzamiento | Modificaciones                      |
+| ----------- | ----------------------------------- |
+| 21          | Soporte de sesiones cliente remotas |
+| 20 R6       | Añadidos                            |
 
 </details>
 
@@ -731,7 +731,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 | Lanzamiento | Modificaciones                                      |
 | ----------- | --------------------------------------------------- |
-| 21          | Support of remote client sessions                   |
+| 21          | Soporte de sesiones cliente remotas                 |
 | 19 R8       | Compatibilidad con la propiedad "roles" en Settings |
 | 18 R6       | Añadidos                                            |
 
