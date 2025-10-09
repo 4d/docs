@@ -18,6 +18,13 @@ You cannot directly trigger event function execution. Events are called automati
 
 
 
+:::tip Related blog post
+
+[ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-data-persistence-actions)
+
+:::
+
+
 
 
 :::info Compatibility note
@@ -129,12 +136,6 @@ When an error occurs in an event, the other events are stopped at the first rais
 
 
 ## Event function description
-
-:::tip Related blog post
-
-[ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-data-persistence-actions)
-
-:::
 
 
 ### `Function event touched`
