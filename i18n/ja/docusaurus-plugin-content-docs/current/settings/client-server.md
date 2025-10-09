@@ -77,10 +77,9 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
   - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
   - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
   - QUICレイヤーオプションを選択すると:
-    - ドロップダウンメニューの隣に、ベータ版である旨のメッセージと警告アイコンが表示されます。
     - [Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
-    - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
-  - **互換性**: QUICネットワークレイヤーに切り替えるには、まずクライアント/サーバーアプリケーションを 4D v20以上で運用する必要があります。
+    - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
+  - **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
 
 :::note
 
@@ -89,6 +88,12 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 :::
 
 #### クライアント/サーバー接続タイムアウト
+
+::note
+
+This option is not available when the [QUIC](#network-layer) network layer is selected.
+
+:::
 
 このサーモメーターで、4D Server とクライアントマシン間の (一定時間活動がないときに接続を閉じる) タイムアウトを設定できます。 無制限オプションは、タイムアウトを設定しないことを意味します。 このオプションが選択されると、クライアントのアクティビティコントロールはおこなわれません。
 
@@ -101,6 +106,12 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 This mechanism is detailed in the section [Stored procedures on client machines](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
 
 #### クライアント-サーバー通信の暗号化
+
+::note
+
+This option is not available when the [QUIC](#network-layer) network layer option is selected.
+
+:::
 
 このオプションを使用して、サーバーマシンと 4Dリモートマシン間通信の保護モードを有効にできます。 This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html) section.
 

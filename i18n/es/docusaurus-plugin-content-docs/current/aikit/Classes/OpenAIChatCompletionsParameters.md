@@ -124,7 +124,7 @@ When using `json_schema` type, you can specify:
 - **`schema`**: The JSON schema definition
 - **`strict`**: Whether to enforce strict adherence to the schema
 
-### Important Notes
+### Notas Importantes
 
 - Not all models support structured outputs (json_object or json_schema), so check model capabilities before using them.
 - When using `json_object` format, you should include instructions in your system message to respond in JSON format

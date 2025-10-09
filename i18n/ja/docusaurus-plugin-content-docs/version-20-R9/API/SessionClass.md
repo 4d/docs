@@ -117,7 +117,7 @@ $isGuest:=Session.isGuest() // $isGuest は true
 | 引数       | 型       |                             | 説明                                   |
 | -------- | ------- | :-------------------------: | ------------------------------------ |
 | lifespan | Integer |              ->             | セッショントークンの有効期限(秒) |
-| 戻り値      | Text    | <- | UUID of the OTP token                |
+| 戻り値      | Text    | <- | OTP トークンのUUID                        |
 
 <!-- END REF -->
 

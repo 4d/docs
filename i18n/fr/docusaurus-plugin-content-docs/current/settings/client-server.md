@@ -78,10 +78,9 @@ Cette liste déroulante contient 3 options de couche réseau : **Historique**, *
   - Étant donné que QUIC utilise le protocole UDP, assurez-vous que l'UDP est autorisé dans les paramètres de sécurité de votre réseau.
   - QUIC se connecte automatiquement au port 19813 à la fois pour le serveur d'application et le serveur DB4D.
   - Lorsque l'option de couche QUIC est sélectionnée :
-    - Un message bêta et une icône d'alerte sont affichés près du sélecteur.
     - Les paramètres de [délai avant déconnexion client-serveur](#client-server-connections-timeout) sont masqués
-    - La case à cocher [Encrypt Client-Server communication](#encrypt-client-server-communications) est cachée (les communications QUIC sont toujours en TLS, quel que soit votre mode sécurisé).
-  - **Compatibilité** : Vous devez déployer vos applications client/serveur avec 4D 20 ou une version supérieure avant de passer à la couche réseau QUIC.
+    - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is).
+  - **Compatibility**: You need to deploy your client/server applications with 4D 20 or higher before switching to the QUIC network layer.
 
 :::note
 
@@ -90,6 +89,12 @@ En cas de modification, vous devez redémarrer l'application pour que le changem
 :::
 
 #### Délai avant déconnexion Client-Serveur
+
+::note
+
+This option is not available when the [QUIC](#network-layer) network layer is selected.
+
+:::
 
 Ce dispositif permet de définir le timeout (période d'inactivité au-delà de laquelle la connexion est fermée) entre 4D Server et les machines clientes qui s'y connectent. L'option "Illimité" supprime le timeout. Lorsque cette option est sélectionnée, le contrôle de l'activité du client est éliminé.
 
@@ -102,6 +107,12 @@ Lorsqu'un délai d'attente est sélectionné, le serveur ferme la connexion d'un
 Lorsque cette option est cochée, toutes les machines distantes 4D se connectant à la base de données peuvent exécuter des méthodes à distance. Ce mécanisme est détaillé dans la section [Procédures stockées sur les machines clientes](https://doc.4d.com/4Dv20/4D/20/Stored-procedures-on-client-machines.300-6330550.en.html).
 
 #### Crypter les communications Client-Serveur
+
+::note
+
+This option is not available when the [QUIC](#network-layer) network layer option is selected.
+
+:::
 
 Cette option permet d'activer le mode sécurisé pour les communications entre la machine serveur et les machines distantes 4D. Cette option est détaillée dans la section [Crypter les connexions Client-Serveur](https://doc.4d.com/4Dv20/4D/20/Encrypting-ClientServer-Connections.300-6330533.en.html).
 

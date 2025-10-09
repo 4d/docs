@@ -9,6 +9,12 @@ Il est possible de créer plusieurs zones web dans un même formulaire. Notez to
 
 Plusieurs [actions standard](#standard-actions), de nombreuses [commandes du langage](../category/web-area) ainsi que des [événements formulaire](#form-events) génériques et spécifiques permettent au développeur de contrôler le fonctionnement des zones web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
 
+:::info Displaying Qodly pages
+
+In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
+
+:::
+
 ## Propriétés spécifiques
 
 ### Variables associées
