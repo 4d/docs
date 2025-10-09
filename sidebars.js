@@ -341,6 +341,7 @@ module.exports =
             "WebServer/templates",
             "WebServer/httpRequests",
             "WebServer/http-request-handler",
+            "WebServer/http-rules",
             "WebServer/allowProject",
             "WebServer/errorPages",
             "WebServer/authentication",
