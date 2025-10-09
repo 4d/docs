@@ -9,8 +9,12 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 
 #### Highlights
 
-- Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API. 
+- Support of  AI Vector Searches in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API. 
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- Web Server: 
+	- new [HTTP rules](../WebServer/http-rules.md) to customize HTTP response headers,
+	- ability to set [HTTP request handlers](../WebServer/http-request-handler.md) using a `handlers` property in the *settings* parameter of the Web server [`start()`](../API/WebServerClass.md#start) function,
+	- the Web server object contains new [`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) properties. 
 - New [ORDA events on data](../ORDA/orda-events.md): validateSave, saving, afterSave, validateDrop, dropping, afterDrop.  
 - New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes. 
 - Client/server: 

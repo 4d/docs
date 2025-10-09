@@ -24,6 +24,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #WebServerClass.CORSSettings.Syntax -->](#corssettings)<br/><!-- INCLUDE #WebServerClass.CORSSettings.Summary --> |
 |[<!-- INCLUDE #WebServerClass.debugLog.Syntax -->](#debuglog)<br/><!-- INCLUDE #WebServerClass.debugLog.Summary -->|
 |[<!-- INCLUDE #WebServerClass.defaultHomepage.Syntax -->](#defaulthomepage)<br/><!-- INCLUDE #WebServerClass.defaultHomepage.Summary -->|
+|[<!-- INCLUDE #WebServerClass.handlers.Syntax -->](#handlers)<br/><!-- INCLUDE #WebServerClass.handlers.Summary -->|
 |[<!-- INCLUDE #WebServerClass.HSTSEnabled.Syntax -->](#hstsenabled)<br/><!-- INCLUDE #WebServerClass.HSTSEnabled.Summary --> |
 |[<!-- INCLUDE #WebServerClass.HSTSMaxAge.Syntax -->](#hstsmaxage)<br/><!-- INCLUDE #WebServerClass.HSTSMaxAge.Summary -->|
 |[<!-- INCLUDE #WebServerClass.HTTPCompressionLevel.Syntax -->](#httpcompressionlevel)<br/><!-- INCLUDE #WebServerClass.HTTPCompressionLevel.Summary -->|
@@ -47,6 +48,7 @@ They provide the following properties and functions:
 |[<!-- INCLUDE #WebServerClass.openSSLVersion.Syntax -->](#opensslversion)<br/><!-- INCLUDE #WebServerClass.openSSLVersion.Summary -->|
 |[<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Syntax -->](#perfectforwardsecrecy)<br/><!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Summary -->|
 |[<!-- INCLUDE #WebServerClass.rootFolder.Syntax -->](#rootfolder)<br/><!-- INCLUDE #WebServerClass.rootFolder.Summary -->|
+|[<!-- INCLUDE #WebServerClass.rules.Syntax -->](#rules)<br/><!-- INCLUDE #WebServerClass.rules.Summary -->|
 |[<!-- INCLUDE #WebServerClass.scalableSession.Syntax -->](#scalablesession)<br/><!-- INCLUDE #WebServerClass.scalableSession.Summary -->|
 |[<!-- INCLUDE #WebServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)<br/><!-- INCLUDE #WebServerClass.sessionCookieDomain.Summary -->|
 |[<!-- INCLUDE #WebServerClass.sessionCookieName.Syntax -->](#sessioncookiename)<br/><!-- INCLUDE #WebServerClass.sessionCookieName.Summary -->|
@@ -180,6 +182,27 @@ The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log 
 The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
 
 <!-- END REF -->
+
+<!-- REF WebServerClass.handlers.Desc -->
+## .handlers
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21|Added|
+
+</details>
+
+<!-- REF #WebServerClass.handlers.Syntax -->**.handlers** : Collection<!-- END REF -->
+
+*Read-only property*
+
+A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler objects<!-- END REF -->. An HTTP handler object contains a listened URL pattern, a handled verb, and the code to be called. HTTP handlers can be defined through a HTTPHandlers.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Request handler](../WebServer/http-request-handler.md) page. 
+
+<!-- END REF -->
+
+
 
 <!-- REF WebServerClass.HSTSEnabled.Desc -->
 
@@ -489,6 +512,28 @@ The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability o
 The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. The path is formatted in POSIX full path using filesystems. When using this property in the `settings` parameter, it can be a `Folder` object.
 
 <!-- END REF -->
+
+
+<!-- REF WebServerClass.rules.Desc -->
+## .rules
+
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21|Added|
+
+</details>
+
+<!-- REF #WebServerClass.rules.Syntax -->**.rules** : Collection<!-- END REF -->
+
+*Read-only property*
+
+A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently handled to customize HTTP headers<!-- END REF -->. A rule object contains a "regexPattern" property, as well as an action name with a value. HTTP rules can be defined through a HTTPRules.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Rules](../WebServer/http-rules.md) page. 
+
+<!-- END REF -->
+
+
 
 <!-- REF WebServerClass.scalableSession.Desc -->
 
