@@ -1,6 +1,6 @@
 ---
 id: develop-components
-title: Developing Extensions
+title: Développement de composants
 ---
 
 ## Composants
@@ -9,7 +9,7 @@ Un composant 4D est un ensemble de fonctions, méthodes et de formulaires 4D rep
 
 Vous pouvez développer des composants 4D pour vos propres besoins et les garder privés. Nous vous encourageons à soutenir la communauté des développeurs 4D en partageant vos composants, de préférence sur la [plateforme GitHub](https://github.com/topics/4d-component).
 
-### Définitions
+## Définitions
 
 - **Projet utilisé comme matrice** : Projet 4D utilisé pour le développement du composant. C'est un projet standard, sans attribut spécifique. Il constitue un seul composant.
 - **Projet hôte :** projet dans lequel un composant est installé et utilisé.
@@ -153,7 +153,7 @@ Les commandes suivantes ne sont pas compatibles avec une utilisation dans le cad
 - La commande `Current form table` retourne `Nil` lorsqu’elle est appelée dans le contexte d’un formulaire projet. Par conséquent, elle ne peut pas être utilisée dans un composant.
 - Les commandes de langage de définition de données SQL (`CREATE TABLE`, `DROP TABLE`, etc.) ne peuvent pas être utilisées dans le projet de composant. Elles sont néanmoins prises en charge avec des bases de données externes (voir la commande SQL `CREATE DATABASE`).
 
-### Partage des méthodes projet
+## Partage des méthodes projet
 
 Toutes les méthodes projet d’un projet utilisé comme matrice sont par définition incluses dans le composant (le projet est le composant), ce qui signifie qu’elles peuvent être appelées et exécutées dans le composant.
 
@@ -183,11 +183,11 @@ EXECUTE METHOD($param)
 > Vous pouvez compiler ou effectuer une vérification syntaxique dans une base hôte interprétée qui contient des composants interprétés si elle n'appelle pas de méthodes du composant interprété. Dans le cas contraire, une boîte de dialogue d'avertissement apparaît lorsque vous tentez de lancer la compilation ou un contrôle syntaxique et il n'est pas possible d'effectuer l'opération.  
 > N'oubliez pas qu'une méthode interprétée peut appeler une méthode compilée, mais pas l'inverse, sauf via l'utilisation des commandes `EXECUTE METHOD` et `EXECUTE FORMULA`.
 
-### Partage des classes
+## Partage des classes
 
 Par défaut, les classes de composants ne peuvent pas être appelées à partir de l'éditeur de code 4D du projet hôte. Si vous voulez que vos classes de composants soient exposées dans le projet hôte et ses composants chargés, vous devez **déclarer un namespace de composant**. En outre, vous pouvez contrôler la manière dont les classes de composants sont suggérées dans l'éditeur de code de l'hôte.
 
-#### Déclaration du namespace
+### Déclaration du namespace
 
 Pour permettre aux classes de votre composant d'être exposées dans les projets hôtes et leurs composants chargés, saisissez une valeur dans l'option [**namespace du composant dans le class store** de la page Général](../settings/general.md#component-namespace-in-the-class-store) des paramètres du projet matrice. Par défaut, l'espace est vide : les classes du composant ne sont pas disponibles en dehors du contexte du composant.
 
@@ -220,7 +220,7 @@ Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout 
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
 
-#### Classes cachées
+### Classes cachées
 
 Comme dans tout projet, vous pouvez créer des classes et des fonctions cachées dans le composant en préfixant les noms par un caractère de soulignement ou ("_"). Lorsqu'un [namespace est défini](#declaring-the-component-namespace), les classes et fonctions cachées du composant n'apparaîtront pas comme des suggestions lors de l'utilisation de la complétion de code.
 
@@ -243,7 +243,7 @@ Un fichier de syntaxe (format JSON) est alors automatiquement créé lors de la 
 
 Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les ressources des classes et des méthodes 'exposed' ne sont pas générées, même si l'option de fichier de syntaxe est cochée.
 
-### Passage de variables
+## Passage de variables
 
 Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
 
@@ -306,7 +306,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
      If(monptr1=monptr2) //Ce test retourne Faux
 ```
 
-### Gestion des erreurs
+## Gestion des erreurs
 
 An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
@@ -314,7 +314,9 @@ However, you can install a [component error handler in the host application](../
 
 However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
 
-### Accès aux tables du projet hôte
+However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+
+## Accès aux tables du projet hôte
 
 Bien que les composants ne puissent pas utiliser de tables, les pointeurs permettent au projet hôte et au composant de communiquer. Par exemple, voici une méthode pouvant être appelée depuis un composant :
 
@@ -340,7 +342,7 @@ SAVE RECORD($tablepointer-
 
 > Dans le contexte d'un composant, 4D suppose qu'une référence à un formulaire table est une référence au formulaire table hôte (car les composants ne peuvent pas avoir de tables)
 
-### Utilisation de tables et de champs
+## Utilisation de tables et de champs
 
 Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D du projet utilisé comme matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
@@ -420,7 +422,7 @@ Lecture dans une base de données externe :
  End SQL
 ```
 
-### Utilisation de formulaires
+## Utilisation de formulaires
 
 - Seuls les "formulaires projet" (formulaires non associés à une table en particulier) peuvent être exploités directement dans un composant. Tous les formulaires projet présents dans le projet matrice peuvent être utilisés par le composant.
 - Un composant peut faire appel à des formulaires table du projet hôte. A noter qu’il est nécessaire dans ce cas d’utiliser des pointeurs plutôt que des noms de table entre [] pour désigner les formulaires dans le code du composant.
@@ -431,7 +433,7 @@ Lecture dans une base de données externe :
 
 > Dans le contexte d'un composant, tout formulaire projet référencé doit appartenir au composant. Par exemple, à l'intérieur d'un composant, le fait de référencer un formulaire projet hôte à l'aide de `DIALOG` ou de `Open form window` déclenchera une erreur.
 
-### Utilisation de ressources
+## Utilisation de ressources
 
 Les composants peuvent utiliser des ressources situées dans le dossier Ressources du composant.
 
@@ -439,7 +441,7 @@ Les mécanismes automatiques sont opérationnels : les fichiers XLIFF présents 
 
 Dans un projet hôte contenant un ou plusieurs composants, chaque composant ainsi que les projets hôtes ont leur propre «chaîne de ressources» Les ressources sont réparties entre les différents projets : il n'est pas possible d'accéder aux ressources du composant A à partir du composant B ou du projet hôte.
 
-### Exécution du code d'initialisation
+## Exécution du code d'initialisation
 
 Un composant peut exécuter automatiquement du code 4D lors de l'ouverture ou de la fermeture de la base hôte, par exemple pour charger et/ou sauvegarder les préférences ou les états utilisateur liés au fonctionnement de la base hôte.
 
@@ -447,7 +449,7 @@ L'exécution du code d'initialisation ou de fermeture se fait au moyen de la mé
 
 > Pour des raisons de sécurité, vous devez autoriser explicitement l'exécution de la méthode base `On Host Database Event` dans la base hôte afin de pouvoir l'appeler. Pour ce faire, vous devez cocher l'option [**Exécuter la méthode "Sur événement base hôte" des composants**](../settings/security.md#options) dans la page Sécurité des Propriétés du projet.
 
-### Info.plist
+## Info.plist
 
 Les composants peuvent avoir un fichier `Info.plist` dans leur [dossier racine](../Project/architecture.md) pour fournir des informations supplémentaires lisibles par le système (macOS uniquement) et le [Gestionnaire de dépendances](../Project/components.md#loading-components).
 
@@ -496,7 +498,7 @@ Sous macOS, les informations sont disponibles dans le Finder :
 
 ![](../assets/en/Develop/infoplist-component.png)
 
-### Protection des composants : la compilation
+## Protection des composants : la compilation
 
 Par défaut, tout le code d’un projet utilisé comme matrice installé comme composant est virtuellement visible depuis le projet hôte. En particulier :
 
@@ -509,7 +511,7 @@ Pour assurer la protection du code d'un composant, [compilez et générerez](Des
 - Les méthodes projet, classes et fonctions partagées peuvent être appelées dans les méthodes du projet hôte et sont également visibles dans la page Méthodes de l'explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
-### Partager vos composants sur GitHub
+## Partager vos composants sur GitHub
 
 Vous pouvez également [partager vos composants avec la communauté 4D](https://github.com/topics/4d-component). Afin d'être correctement référencé, nous vous recommandons d'utiliser le "topic" **`4d-component`**.
 
