@@ -314,7 +314,7 @@ component_method($input_t)
 
 しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
-However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
 ## ホストプロジェクトのテーブルへのアクセス
 
