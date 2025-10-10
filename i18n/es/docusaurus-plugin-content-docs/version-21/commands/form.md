@@ -4,7 +4,7 @@ title: Formulario
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Form.Syntax-->**Form** : Object<!-- END REF-->
+<!--REF #_command_.Form.Syntax-->**Form**  : Object<!-- END REF-->
 
 <!--REF #_command_.Form.Params-->
 
@@ -24,7 +24,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Form.Summary-->El comando **Form** devuelve el objeto asociado al formulario actual (instanciado a partir del parámetro *formData* o de la clase de usuario asignada en el editor de formularios).<!-- END REF--> 4D automatically associates an object to the current form in the following cases:
+<!--REF #_command_.Form.Summary-->The **Form** command returns the object associated with the current form (instantiated from the *formData* parameter or the user class assigned in the Form editor).<!-- END REF-->El comando **Form** devuelve el objeto asociado al formulario actual (instanciado a partir del parámetro *formData* o de la clase de usuario asignada en el editor de formularios). 4D asocia automáticamente un objeto al formulario actual en los siguientes casos:
 
 - el formulario actual ha sido cargado por uno de los comandos [`DIALOG`](dialog.md), [`Print form`](print-form.md), o [`FORM LOAD`](form-load.md),
 - el formulario actual es un subformulario,
