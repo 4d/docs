@@ -101,6 +101,10 @@ In binary databases, you need to select the required components in the 4D instal
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 
+#### デベロッパー・プレビュー
+
+[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
+
 #### 動作の変更
 
 :::caution Index rebuild
