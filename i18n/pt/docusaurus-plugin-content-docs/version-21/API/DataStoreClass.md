@@ -170,7 +170,7 @@ O objeto retornado contém as propriedades abaixo:
 |             | *tableName* |               | Object     | Tabla encriptada ou cifrada                                                                                                         |
 |             |             | name          | Text       | Nombre da tabela                                                                                                                    |
 |             |             | num           | Number     | Número de tabela                                                                                                                    |
-|             |             | isEncryptable | Parâmetros | Verdadero se a tabela estiver declarada como encriptada no arquivo de estrutura                                                     |
+|             |             | isEncryptable | Parâmetros | True se a tabela estiver declarada como encriptada no arquivo de estrutura                                                          |
 |             |             | isEncrypted   | Parâmetros | True se os registros da tabela estiverem encriptados no arquivo de dados                                                            |
 
 (\*) a chave de criptografia pode ser fornecida:

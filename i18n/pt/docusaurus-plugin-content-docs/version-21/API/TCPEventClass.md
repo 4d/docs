@@ -43,7 +43,7 @@ The `.address` property contains <!-- REF #TCPEvent.address.Summary -->the IP ad
 
 ## .data
 
-<!-- REF #TCPEvent.data.Syntax -->**data**: Blob<!-- END REF -->
+<!-- REF #TCPEvent.data.Syntax -->**data** : Blob<!-- END REF -->
 
 #### Descrição
 
