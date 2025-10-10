@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Print form.Summary-->El comando **Print form** simplemente imprime *form* con los valores actuales de los campos y variables de la tabla *aTable*.<!-- END REF--> Suele utilizarse para imprimir informes muy complejos que requieren un control total del proceso de impresión. **Print form** no realiza ningún procesamiento de registros, ni las rupturas, ni de saltos de página. Estas operaciones son responsabilidad suya. **Print form*** imprime campos y variables solo en un marco de tamaño fijo.
+<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->El comando **Print form** simplemente imprime *form* con los valores actuales de los campos y variables de la tabla *aTable*. Suele utilizarse para imprimir informes muy complejos que requieren un control total del proceso de impresión. **Print form** no realiza ningún procesamiento de registros, ni las rupturas, ni de saltos de página. Estas operaciones son responsabilidad suya. **Print form*** imprime campos y variables solo en un marco de tamaño fijo.
 
 En el parámetro *form*, puede pasar:
 
@@ -91,7 +91,7 @@ En este caso, el comando imprimirá la sección incluida entre los parámetros *
 
 **formData**
 
-Opcionalmente, puede pasar parámetros al *form* usando el objeto *formData* o el objeto de clase form automáticamente instanciado por 4D si has [asociado una clase de usuario al formulario](../FormEditor/properties_FormProperties.md#form-class). Todas las propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md). Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
+Opcionalmente, puede pasar parámetros al *form* usando el objeto *formData* o el objeto de clase form automáticamente instanciado por 4D si has [asociado una clase de usuario al formulario](../FormEditor/properties_FormProperties.md#form-class). Todas la propiedades del objeto de datos del formulario estarán entonces disponibles desde el contexto del formulario a través del comando [Form](form.md). Optionally, you can pass parameters to the *form* using either the *formData* object or the form class object automatically instantiated by 4D if you have [associated a user class to the form](../FormEditor/properties_FormProperties.md#form-class).
 
 Para obtener información detallada sobre el objeto de datos del formulario, consulte el comando [`DIALOG`](dialog.md).
 

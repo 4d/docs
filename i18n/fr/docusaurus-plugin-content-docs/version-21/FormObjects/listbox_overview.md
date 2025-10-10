@@ -1004,9 +1004,9 @@ Ces attributs peuvent être utilisés pour contrôler la plage de valeurs d'entr
 
 L'attribut behavior propose des variations de la représentation standard des valeurs. Une seule variation est possible :
 
-| Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                             |
-| -------- | ------------------------------------------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates                                                   | integer                         | Représente une valeur numérique sous la forme d'une case à cocher à trois états.<br/> 2=semi-coché, 1=coché, 0=décoché, -1=invisible, -2=décoché désactivé, -3=coché désactivé, -4=semi-coché désactivé |
+| Attribut | Valeur(s) disponible(s) | valueType(s) | Description                                                                                                                                                                                                                        |
+| -------- | ------------------------------------------------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| behavior | threeStates                                                   | integer                         | Représente une valeur numérique sous forme de case à cocher à trois états. <br/>2=intermédiaire, 1=cochée, 0=non cochée, -1=invisible, -2=non cochée désactivée, -3=cochée désactivée, -4=intermédiaire désactivée |
 
 ```4d
  C_OBJECT($ob3)
@@ -1105,9 +1105,9 @@ Exemples :
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
- ```
- ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
- ```
+```
+![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+```
 
 #### choiceListName et choiceListReference
 

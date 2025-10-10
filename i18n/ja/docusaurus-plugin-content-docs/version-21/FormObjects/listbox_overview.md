@@ -577,7 +577,7 @@ JSON フォームにおいて、リストボックスに次のハイライトセ
 
 デベロッパーは、例えば[`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) コマンドを使用したり、あるいは[`On Header Click`](../Events/onHeaderClick) および [`On After Sort`](../Events/onAfterSort) フォームイベントと関連する4D コマンドを組み合わせることにより、カスタムのソートを設定することができます。
 
-カスタムソートを以下のことが可能です:
+カスタムソートは以下のことが可能です:
 
 - [`LISTBOX SORT COLUMNS`](../commands-legacy/listbox-sort-columns.md) コマンドを使うことで、複数のカラムに対してマルチレベルソートを実行する。
 - [`collection.orderByMethod()`](../API/CollectionClass.md#orderbymethod) や [`entitySelection.orderByFormula()`](../API/EntitySelectionClass.md#orderbyformula) などの関数を使って、複雑な条件のソートをおこなう
@@ -1049,9 +1049,9 @@ ARRAY OBJECT(obColumn;0) // カラム配列
 
 behavior 属性は、値の通常の表示とは異なる表示方法を提供します。 4D v15では、一つだけ他の表示方法が用意されています:
 
-| 属性       | 使用可能な値      | valueType | 説明                                                                                                                                           |
-| -------- | ----------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior | threeStates | integer   | 数値をスリーステートチェックボックスとして表します。<br/> 2=セミチェックボックス、1=チェックされている、0=チェックされていない、-1=非表示チェックボックス、-2=チェックされていない、入力不可、-3=チェックされている、入力不可、-4=セミチェックボックス、入力不可 |
+| 属性       | 使用可能な値      | valueType | 説明                                                                                                           |
+| -------- | ----------- | --------- | ------------------------------------------------------------------------------------------------------------ |
+| behavior | threeStates | integer   | スリーステートチェックボックスを数値として表現します。 <br/>2=セミチェック、1=チェック、0=チェックされていない、-1=非表示、-2=チェックなしが無効化、-3=チェックが無効化、-4=セミチェックが無効化 |
 
 ```4d
  C_OBJECT($ob3)
@@ -1150,9 +1150,9 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
- ```
- ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
- ```
+```
+![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+```
 
 #### choiceListName と choiceListReference
 

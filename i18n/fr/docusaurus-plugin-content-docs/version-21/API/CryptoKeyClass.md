@@ -311,7 +311,7 @@ La valeur retournée est la clé publique.
 
 <!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
 
-<!-- REF #CryptoKey.pem.Summary -->Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. <!-- END REF -->
+<!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
 
 <!-- END REF -->
 
