@@ -237,7 +237,7 @@ component_method($input_t)
 
 `ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のプロジェクトに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
 
-However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
 ## ホストプロジェクトのテーブルへのアクセス
 

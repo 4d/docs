@@ -9,9 +9,9 @@ Webエリアは、静的および動的な HTMLページ、ファイル、ピク
 
 いくつかの専用の[標準アクション](#標準アクション) 、多数の [ランゲージコマンド](../category/web-area)、そして汎用および専用の [フォームイベント](#フォームイベント) を使用することで、Webエリアの機能を管理することができます。 特別な変数を使用して、エリアと 4D環境間で情報を交換することも可能です。
 
-:::info Displaying Qodly pages
+:::info Qodly ページを表示する
 
-In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
+4D クライアント/サーバーアプリケーションでは、Web エリアを使用してQodly ページを表示し、[リモートユーザーセッションを共有する](../Desktop/clientServer.md#web-エリアのqodly-ページとセッションを共有する)ことができます。 この機能を使用することで、クライアント/サーバーアプリ用のWeb ベースのインターフェースをデザインすることができます。
 
 :::
 

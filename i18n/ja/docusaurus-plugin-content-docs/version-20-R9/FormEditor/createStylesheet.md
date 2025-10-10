@@ -88,12 +88,11 @@ text, input {
 
 :::note
 
-The object name corresponds to the JSON [object name](../FormObjects/properties_Object.md#object-name) property of form objects.
+オブジェクト名とはフォームオブジェクトの[オブジェクト名](../FormObjects/properties_Object.md#オブジェクト名) JSON プロパティを指します。
 
 :::
 
-In the following example, the text of the object with the name "okButton" will be displayed
-in Helvetica Neue font, with a size of 20 pixels:
+以下の例では、という"okButton" 名前のオブジェクトのテキストが、Helvetica Neue フォントで、20 ピクセルのサイズで表示されます:
 
 ```
 #okButton {
@@ -127,7 +126,7 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the [CSS Class](../FormObjects/properties_Object.md#css-class) attribute. この属性には一つ以上のクラス名を指定することができます。 複数の場合はクラス名を半角スペースで区切ります:
+4D フォームの詳細では、[CSSクラス](../FormObjects/properties_Object.md#cssクラス) 属性を使用してクラス名を割り当てます。 この属性には一つ以上のクラス名を指定することができます。 複数の場合はクラス名を半角スペースで区切ります:
 
 ```
 class: "okButtons important"       
@@ -320,7 +319,7 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 
 1. 4D フォームはまずデフォルトの CSS ファイル `/SOURCES/styleSheets.css` を読み込みます。
 2. 次に、カレントプラットフォーム専用の CSS ファイル `/SOURCES/styleSheets_mac.css` または `/SOURCES/styleSheets_windows.css` がロードされます。
-3. If a [Form property "css" attribute](../FormEditor/properties_FormProperties.md#css) is defined in the 4D form, it will then load specific CSS file(s). 以下のものを渡すことができます:
+3. [フォームプロパティの"css" 属性](../FormEditor/properties_FormProperties.md#css) が4D フォームで定義されている場合、その4D フォームは特定のCSS ファイルをロードします。 以下のものを渡すことができます:
 
 - 両プラットフォーム用のファイル:
 
