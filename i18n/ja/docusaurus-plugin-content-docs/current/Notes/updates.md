@@ -130,6 +130,10 @@ In binary databases, you need to select the required components in the 4D instal
 
 :::
 
+#### デベロッパー・プレビュー
+
+[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
+
 #### 動作の変更
 
 :::caution Index rebuild
