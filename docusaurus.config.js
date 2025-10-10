@@ -88,12 +88,12 @@ module.exports = {
             return sortAlphabetically(sidebarItems);
           },
           versions: {
-              '20-R10': {
-              label: '20 R10',
+              '21': {
+              label: '21 BETA',
               banner: 'none',
             },
-              '20-R9': {
-              label: '20 R9',
+              '20-R10': {
+              label: '20 R10',
               banner: 'none',
             },
             '20': {
