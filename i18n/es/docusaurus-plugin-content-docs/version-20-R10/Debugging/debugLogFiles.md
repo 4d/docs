@@ -465,7 +465,7 @@ Como iniciar este historial:
 - Utilice el comando `SET DATABASE PARAMETER`:
 
   ```4d
-  SET DATABASE PARAMETER(TCPUDP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log recording; 1)
   ```
 
 - Cómo activar el archivo

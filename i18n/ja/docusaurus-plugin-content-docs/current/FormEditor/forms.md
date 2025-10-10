@@ -96,6 +96,73 @@ title: Forms
 
 マルチページフォームには、1つの背景ページと複数の表示ページが存在します。 背景ページ上に置かれたオブジェクトはすべての表示ページに現れますが、それらのオブジェクトの選択や編集は背景ページでのみ可能です。 複数ページフォームでは、ボタンパレットを背景ページに置くべきです。 また、ページ移動ツールオブジェクトを背景ページに配置し、ユーザーに提供する必要があります。
 
+## Fluent UI rendering (Developer Preview)
+
+On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
+
+:::caution デベロッパー・プレビュー
+
+Fluent UI support is currently in the Developer Preview phase. 本番環境で使用すべきではありません。
+
+:::
+
+:::info macOS
+
+This feature can only be used on Windows. On macOS, it is ignored.
+
+:::
+
+### Fluent UI rendering availability
+
+The Fluent UI rendering is available in the following execution environments only:
+
+- Windows with [Windows App SDK](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) version 1.7.3 installed (you need to install this SDK on any Windows machine displaying your forms).
+- 組み込みの [スタンドアロン](../Desktop/building#スタンドアロンアプリケーションをビルド) または [クライアント](../Desktop/building#クライアントアプリケーションをビルド) 4Dアプリケーション
+- [**Test application** feature](../Menus/bars.md#previewing-menu-bars) available from the Run menu.
+
+:::note
+
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+
+:::
+
+### Enabling the Fluent UI rendering
+
+You can enable the Fluent UI rendering mode at the application level or at the form level. Form setting has priority over application setting.
+
+#### Application setting
+
+Check the **Use Fluent UI on Windows** option in the "Interface" page of the Settings dialog box.
+
+![](../assets/en/FormObjects/fluentui-setting.png)
+
+In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
+
+#### Form setting
+
+Each form can define its own rendering via the **Widget appearance** property. 次のオプションから選択することができます:
+
+- **Inherited**: inherits the global application setting (default),
+- **Classic**: uses the classic Windows style,
+- **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
+  ![](../assets/en/FormObjects/fluentui-form.png)
+
+The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
+
+### Features and limitations
+
+Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+
+When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
+
+- The `FORM Window theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
+- If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
+- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
+- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
+- [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
+- [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
+- The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
+
 ## 継承フォーム
 
 4D では "継承フォーム" を使用することができます。これはつまり、*フォームA* の全オブジェクトが *フォームB* で使用可能であるということです。 この場合、*フォームB* は *フォームA* からオブジェクトを "継承" します。

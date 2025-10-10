@@ -17,22 +17,33 @@ title: HTTP Request handler
 
 ## 要件
 
-カスタムのHTTP リクエストハンドラーは以下の条件の元にサポートされます:
+Custom HTTP Request handlers are supported in the following context:
 
-- [スケーラブルセッション](./sessions.md#enabling-web-sessions) が有効化されていること
-- メインのWeb サーバーでのみ利用可能です([コンポーネントのWeb サーバー](../WebServer/webServerObject.md) で定義されていたHTTP リクエストハンドラーがあったとしてもそれは無視されます)。
+- [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
+- a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
 
 :::warning
 
-セキュリティ上の理由から、[デフォルトで](../ORDA/privileges.md#デフォルトファイル)、4D ではデータストアへの外部からのアクセスは許可されていません。 HTTP リクエストを許可するには、[ORDA privileges](../ORDA/privileges.md) を設定する必要があります。
+For security reasons, external access to the datastore can be disallowed in 4D. HTTP リクエストを許可するには、[ORDA privileges](../ORDA/privileges.md) を設定する必要があります。
 
 :::
 
-## HTTPHandlers.json ファイル
+## How to set handlers
 
-カスタムHTTP リクエストハンドラーは、[`Project/Sources`](../Project/architecture.md#sources) にある**HTTPHandlers.json** という設定ファイル内で定義します。
+You can declare HTTP Request handlers:
 
-このファイルはサーバーが聞いている全てのURL パターン、管理される動詞(メソッド)、そして呼び出されるべきコードが格納されています。  ハンドラーはJSON フォーマットのコレクションとして提供されます。
+- in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder of the project. HTTP Request handlers are loaded and applied in the main Web server once it is started.
+- using a [`.handlers`](../API/WebServerClass.md#handlers) property set in the *settings* parameter of the [start()](../API/WebServerClass.md#start) function, for any web server object:
+
+```4d
+WEB Server.start($settings.handlers) //set rules at web server startup
+```
+
+If both a **HTTPHandlers.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.handlers` are used, the `WEB Server` command has priority.
+
+The json file (or the object in the *settings* parameter) contains all listened URL patterns, the handled verbs, and the code to be called.
+
+Handlers are provided as a collection.
 
 ランタイムでは、URLに合致する最初のパターンのみが実行され、他のパターンは無視されます。
 

@@ -466,7 +466,7 @@ Pour lancer ce journal :
 - Utilisez la commande `SET DATABASE PARAMETER` :
 
   ```4d
-  SET DATABASE PARAMETER(TCPUDP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log recording; 1)
   ```
 
 - Le fichier de configuration du journal est un fichier `.json` qui doit respecter le schéma json suivant :

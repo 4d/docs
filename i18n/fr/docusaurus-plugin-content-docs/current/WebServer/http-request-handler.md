@@ -17,22 +17,33 @@ Les gestionnaires de requêtes HTTP personnalisés répondent à divers besoins,
 
 ## Conditions requises
 
-Les gestionnaires de requêtes HTTP personnalisés sont pris en charge :
+Custom HTTP Request handlers are supported in the following context:
 
-- lorsque les [sessions évolutives](./sessions.md#enabling-web-sessions) sont activées,
-- avec le serveur Web principal uniquement (les gestionnaires de requêtes HTTP éventuellement définis dans les [serveurs Web des composants](../WebServer/webServerObject.md) sont ignorés).
+- [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
+- a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
 
 :::warning
 
-[Par défaut](../ORDA/privileges.md#default-file) pour des raisons de sécurité, l'accès externe au datastore n'est pas autorisé dans 4D. Vous devez configurer les [privilèges ORDA](../ORDA/privileges.md) pour autoriser les requêtes HTTP.
+For security reasons, external access to the datastore can be disallowed in 4D. Vous devez configurer les [privilèges ORDA](../ORDA/privileges.md) pour autoriser les requêtes HTTP.
 
 :::
 
-## Fichier HTTPHandlers.json
+## How to set handlers
 
-Vous définissez vos gestionnaires de requêtes HTTP personnalisés dans un fichier de configuration nommé **HTTPHandlers.json** stocké dans le dossier [`Project/Sources`](../Project/architecture.md#sources).
+You can declare HTTP Request handlers:
 
-Ce fichier contient tous les motifs d'URL à intercepter, les verbes manipulés et le code à appeler. Les gestionnaires sont fournis sous la forme d'une collection au format JSON.
+- in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder of the project. HTTP Request handlers are loaded and applied in the main Web server once it is started.
+- using a [`.handlers`](../API/WebServerClass.md#handlers) property set in the *settings* parameter of the [start()](../API/WebServerClass.md#start) function, for any web server object:
+
+```4d
+WEB Server.start($settings.handlers) //set rules at web server startup
+```
+
+If both a **HTTPHandlers.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.handlers` are used, the `WEB Server` command has priority.
+
+The json file (or the object in the *settings* parameter) contains all listened URL patterns, the handled verbs, and the code to be called.
+
+Handlers are provided as a collection.
 
 Au moment de l'exécution, le premier motif correspondant à l'URL est exécuté, les autres sont ignorés.
 
