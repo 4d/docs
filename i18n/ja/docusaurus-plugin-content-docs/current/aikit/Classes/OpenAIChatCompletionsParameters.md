@@ -40,13 +40,13 @@ title: OpenAIChatCompletionParameters
 
 ## レスポンスフォーマット
 
-The `response_format` parameter allows you to specify the format that the model must output. This is particularly useful when you need structured data or want to ensure the response follows a specific format.
+`response_format` 引数を使用すると、モデルが出力するフォーマットを指定することができます。 これは、構造化されたデータが必要な場合や、レスポンスが特定のフォーマットに従うようにしたい場合には特に有用です。
 
-### Supported Response Format Types
+### サポートされるレスポンスフォーマットタイプ
 
-#### 1. Text Format (Default)
+#### 1. テキストフォーマット(デフォルト)
 
-The default response format returns plain text:
+デフォルトのレスポンンスフォーマットは標準テキストを開きます:
 
 ```4d
 var $params := cs.OpenAIChatCompletionsParameters.new({ \
@@ -55,9 +55,9 @@ var $params := cs.OpenAIChatCompletionsParameters.new({ \
 })
 ```
 
-#### 3. JSON Object Format
+#### 2. JSON オブジェクトフォーマット
 
-Forces the model to respond with valid JSON:
+モデルが有効なJSON を返すように指定します:
 
 ```4d
 var $params := cs.OpenAIChatCompletionsParameters.new({ \
@@ -79,9 +79,9 @@ $messages.push({ \
 $result := $client.chat.completions.create($messages; $params)
 ```
 
-#### 3. JSON Schema Format (Structured Outputs)
+#### 3. JSON スキーマフォーマット(構造化された出力)
 
-For precise control over the JSON structure, you can define a schema:
+JSON 構造を正確に管理するために、スキーマを定義することができます:
 
 ```4d
 var $jsonSchema := { \
@@ -115,22 +115,22 @@ $messages.push({ role: "user"; content: "Generate information about a person nam
 $result := $client.chat.completions.create($messages; $params)
 ```
 
-### JSON Schema Properties
+### JSON スキーマプロパティ
 
-When using `json_schema` type, you can specify:
+`json_schema` タイプを使用する場合、以下のものを指定可能です:
 
-- **`name`**: A name for the schema
-- **`description`**: A description of what the schema represents
-- **`schema`**: The JSON schema definition
-- **`strict`**: Whether to enforce strict adherence to the schema
+- **`name`**: スキーマの名前
+- **`description`**: そのスキーマが何を表すのかの説明
+- **`schema`**: JSON スキーマ定義
+- **`strict`**: スキーマに厳密に従うかどうか
 
-### Important Notes
+### 重要な注意事項
 
-- Not all models support structured outputs (json_object or json_schema), so check model capabilities before using them.
-- When using `json_object` format, you should include instructions in your system message to respond in JSON format
-- The `json_schema` format provides the most control and ensures the response exactly matches your specified structure
-- Invalid JSON responses will result in an error when using JSON formats
-- JSON schema validation ensures type safety and required field presence
+- 全てのモデルが構造化された出力(json_object あるいは json_schema)をサポートするわけではないので、使用する前にモデルの機能を確認してください。
+- `json_object` フォーマットを使用する場合、JSON フォーマットで応答するためにはシステムメッセージに説明を含める必要があります。
+- `json_schema` フォーマットがもっともコントロールがしやすく、レスポンスが指定した構造に完全に合致することを保証します。
+- JSON フォーマットを使用している場合、無効なJSON レスポンスはエラーを起こします。
+- JSON スキーマ検証は、型の安全性と要求されたフィールドがきちんと存在することを保証します。
 
 ## 参照
 

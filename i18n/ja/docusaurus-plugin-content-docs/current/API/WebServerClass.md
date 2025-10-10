@@ -23,6 +23,7 @@ Webサーバーオブジェクトは [`WEB Server`](../commands/web-server.md) �
 | [<!-- INCLUDE #WebServerClass.CORSSettings.Syntax -->](#corssettings)<br/><!-- INCLUDE #WebServerClass.CORSSettings.Summary -->                                           |
 | [<!-- INCLUDE #WebServerClass.debugLog.Syntax -->](#debuglog)<br/><!-- INCLUDE #WebServerClass.debugLog.Summary -->                                                       |
 | [<!-- INCLUDE #WebServerClass.defaultHomepage.Syntax -->](#defaulthomepage)<br/><!-- INCLUDE #WebServerClass.defaultHomepage.Summary -->                                  |
+| [<!-- INCLUDE #WebServerClass.handlers.Syntax -->](#handlers)<br/><!-- INCLUDE #WebServerClass.handlers.Summary -->                                                       |
 | [<!-- INCLUDE #WebServerClass.HSTSEnabled.Syntax -->](#hstsenabled)<br/><!-- INCLUDE #WebServerClass.HSTSEnabled.Summary -->                                              |
 | [<!-- INCLUDE #WebServerClass.HSTSMaxAge.Syntax -->](#hstsmaxage)<br/><!-- INCLUDE #WebServerClass.HSTSMaxAge.Summary -->                                                 |
 | [<!-- INCLUDE #WebServerClass.HTTPCompressionLevel.Syntax -->](#httpcompressionlevel)<br/><!-- INCLUDE #WebServerClass.HTTPCompressionLevel.Summary -->                   |
@@ -46,6 +47,7 @@ Webサーバーオブジェクトは [`WEB Server`](../commands/web-server.md) �
 | [<!-- INCLUDE #WebServerClass.openSSLVersion.Syntax -->](#opensslversion)<br/><!-- INCLUDE #WebServerClass.openSSLVersion.Summary -->                                     |
 | [<!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Syntax -->](#perfectforwardsecrecy)<br/><!-- INCLUDE #WebServerClass.perfectForwardSecrecy.Summary -->                |
 | [<!-- INCLUDE #WebServerClass.rootFolder.Syntax -->](#rootfolder)<br/><!-- INCLUDE #WebServerClass.rootFolder.Summary -->                                                 |
+| [<!-- INCLUDE #WebServerClass.rules.Syntax -->](#rules)<br/><!-- INCLUDE #WebServerClass.rules.Summary -->                                                                |
 | [<!-- INCLUDE #WebServerClass.scalableSession.Syntax -->](#scalablesession)<br/><!-- INCLUDE #WebServerClass.scalableSession.Summary -->                                  |
 | [<!-- INCLUDE #WebServerClass.sessionCookieDomain.Syntax -->](#sessioncookiedomain)<br/><!-- INCLUDE #WebServerClass.sessionCookieDomain.Summary -->                      |
 | [<!-- INCLUDE #WebServerClass.sessionCookieName.Syntax -->](#sessioncookiename)<br/><!-- INCLUDE #WebServerClass.sessionCookieName.Summary -->                            |
@@ -166,6 +168,26 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 <!-- REF #WebServerClass.defaultHomepage.Syntax -->**.defaultHomepage** : Text<!-- END REF -->
 
 <!-- REF #WebServerClass.defaultHomepage.Summary -->デフォルトのホームページの名称<!-- END REF --> または、カスタムのホームページを送信しない場合は ""。
+
+<!-- END REF -->
+
+<!-- REF WebServerClass.handlers.Desc -->
+
+## .handlers
+
+<details><summary>履歴</summary>
+
+| リリース | 内容 |
+| ---- | -- |
+| 21   | 追加 |
+
+</details>
+
+<!-- REF #WebServerClass.handlers.Syntax -->**.handlers** : Collection<!-- END REF -->
+
+*内容*
+
+A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler objects<!-- END REF -->. An HTTP handler object contains a listened URL pattern, a handled verb, and the code to be called. HTTP handlers can be defined through a HTTPHandlers.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Request handler](../WebServer/http-request-handler.md) page.
 
 <!-- END REF -->
 
@@ -454,6 +476,26 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
 <!-- REF #WebServerClass.rootFolder.Summary -->Webサーバーのルートフォルダーのパス<!-- END REF -->。 パスは、ファイルシステムを使用した POSIXフルパスの形式です。 `settings` 引数内でこのプロパティを使用する場合、`Folder` オブジェクトも使用可能です。
+
+<!-- END REF -->
+
+<!-- REF WebServerClass.rules.Desc -->
+
+## .rules
+
+<details><summary>履歴</summary>
+
+| リリース | 内容 |
+| ---- | -- |
+| 21   | 追加 |
+
+</details>
+
+<!-- REF #WebServerClass.rules.Syntax -->**.rules** : Collection<!-- END REF -->
+
+*内容*
+
+A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently handled to customize HTTP headers<!-- END REF -->. A rule object contains a "regexPattern" property, as well as an action name with a value. HTTP rules can be defined through a HTTPRules.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Rules](../WebServer/http-rules.md) page.
 
 <!-- END REF -->
 

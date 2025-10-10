@@ -9,18 +9,27 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), th
 
 #### ハイライト
 
-- Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
+- Support of  AI Vector Searches in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
 - Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- Web サーバー:
+  - new [HTTP rules](../WebServer/http-rules.md) to customize HTTP response headers,
+  - ability to set [HTTP request handlers](../WebServer/http-request-handler.md) using a `handlers` property in the *settings* parameter of the Web server [`start()`](../API/WebServerClass.md#start) function,
+  - the Web server object contains new [`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) properties.
+- New [ORDA events on data](../ORDA/orda-events.md): validateSave, saving, afterSave, validateDrop, dropping, afterDrop.
 - New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
 - Client/server:
-  - use Qodly pages in Web areas and [share the remote client session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
-  - the [QUIC network layer](../settings/client-server.md#network-layer) has been enhanced to handle network interface changes transparently, for example when you travel with your laptop. See [this blog post](https://blog.4d.com/work-and-move-with-quic-and-network-switching).
+  - You can display Qodly pages in Web areas and [share the remote client session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
+  - The [QUIC network layer](../settings/client-server.md#network-layer) has been enhanced to handle network interface changes transparently, for example when you travel with your laptop. See [this blog post](https://blog.4d.com/work-and-move-with-quic-and-network-switching).
 - You can now [create components directly from the host project](../Extensions/develop-components.md#creating-components) and [edit their code from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer without leaving or restarting the project.
 - The 4D product activation step has been simplified and automated during [sign-in](../GettingStarted/Installation.md#sign-in).
 - 4D AIKit component: new features to [invoke a specific tool automatically](../aikit/Classes/OpenAIChatHelper.md#registertool) and [specify a response format](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format).
 - 4Dランゲージ:
   - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
   - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
+
+#### デベロッパー・プレビュー
+
+[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
 
 #### 動作の変更
 
