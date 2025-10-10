@@ -107,8 +107,8 @@ In binary databases, you need to select the required components in the 4D instal
 
 - [データ上のORDA イベント](../ORDA/orda-events.md) の管理。
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
-- New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
-- New options to generate UUIDs in **version 7** for [4D automatic fields](../settings/database.md#auto-uuid-version) and [`Generate UUID`](../commands/generate-uuid) command.
+- 新しい[`4D.Vector`](../API/VectorClass.md) クラス。これを使用して、一般的にAI で計算されたベクトルを処理して比較することができます。
+- [4D 自動フィールド](../settings/database.md#自動uuidバージョン) および [`Generate UUID`](../commands/generate-uuid) コマンドに対して、**バージョン 7**のUUID を生成するための新しいオプション。
 - New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
 - New [`.promote()`](../API/SessionClass.md#promote) and [`.demote()`](../API/SessionClass.md#demote) functions in the [Session class](../API/SessionClass.md) to dynamically add/remove privileges in a web process.
 - [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.

@@ -32,8 +32,8 @@ title: インストール
 - 4D を試用するには、"初めて 4D をお使いですか？" の下にある、**無料体験版を開始するにはここをクリック** から先に進みます (4D アカウントでログイン、またはアカウントを新規作成する必要があります)。
 
 - 4D アカウントをすでに持っている場合は、Welcome ウィザードの右上にある **ログイン** リンクをクリックし、アカウント情報を入力します。
-  - Any already activated 4D products are automatically updated (or additional expansion packs loaded) on your machine.
-  - If no product is activated on the machine but there is a development license associated with the 4D account, a dialog box appears, prompting you to install it directly.
+  - 既にマシン上でアクティベーションされている4D プロダクトは、自動的に更新(あるいは追加パックがあれば自動的にロード) されます。
+  - マシン上にアクティベートされたプロダクトはないものの、4D アカウントに紐づけられている開発ライセンスがある場合には、ダイアログボックスが表示され、直接インストールするように促します。
 
 **アプリケーションプロジェクトを開始または作成** 項目を展開すると、いくつかの選択肢が表示されます:
 

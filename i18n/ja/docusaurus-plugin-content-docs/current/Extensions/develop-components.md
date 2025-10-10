@@ -60,15 +60,15 @@ title: コンポーネントの開発
 
 :::
 
-Once created, the component is immediately added to the project, accessible in the [Project dependencies](../Project/components.md#monitoring-project-dependencies) window, and available for editing.
+コンポーネントが作成されると、そのコンポーネントは即座にプロジェクトに追加されて[プロジェクト依存関係](../Project/components.md#プロジェクトの依存関係をモニタリング) ウィンドウ内でアクセス可能になり、また編集も可能になります。
 
-### Editing components
+### コンポーネントの編集
 
-You can edit a component code as long as the following conditions are met:
+以下の条件を満たしている限り、コンポーネントのコードは編集可能です:
 
 - ホストプロジェクトがインタープリタモードで実行中である
 - コンポーネントが、[インタープリタモードでロードされてい](../Project/components.md#interpreted-and-compiled-components) 、ソースコードが編集可能である
-- the component files are stored locally (i.e. they are not [downloaded from GitHub](../Project/components.md#adding-a-github-dependency)).
+- コンポーネントのファイルはローカルに保存されます(つまり、それらは[downloaded from GitHub からダウンロードされるわけではありません](../Project/components.md#github-依存関係を追加))。
 
 このコンテキストでは、以下の2箇所において、コンポーネントのコードをコードエディターで開き、編集して、保存することができます:
 
@@ -308,9 +308,9 @@ component_method($input_t)
 
 ## エラー処理
 
-An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
+[`ON ERR CALL`](../commands-legacy/on-err-call.md) コマンドを使用して実装された[エラー処理メソッド](Concepts/error-handling.md) は実行中のアプリケーションに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
 
-However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
 ## ホストプロジェクトのテーブルへのアクセス
 
