@@ -170,7 +170,7 @@ Saisissez une expression qui renvoie une collection ou une entity selection. En 
 La collection ou l'entity selection doit être disponible pour le formulaire lors de son chargement. Chaque élément de la collection ou de chaque entité de l'entity selection sera associé(e) à une ligne de list box et sera disponible en tant qu'objet via le mot-clé [`This`](../Concepts/classes.md#this) :
 
 - si vous avez utilisé une collection d'objets, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur de propriété, par exemple `This.<propertyPath>`.
-- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression detasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
+- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
 
 > Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. Cependant, dans ce cas, vous ne pourrez pas modifier les valeurs ou accéder à l'objet courant (voir ci-dessous).
 

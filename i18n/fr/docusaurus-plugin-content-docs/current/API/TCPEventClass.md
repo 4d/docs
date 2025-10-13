@@ -29,7 +29,7 @@ Les propriétés suivantes sont disponibles :
 
 <!-- REF TCPEvent.address.Desc -->
 
-## .adresse
+## .address
 
 <!-- REF #TCPEvent.address.Syntax -->**address** : Text<!-- END REF -->
 

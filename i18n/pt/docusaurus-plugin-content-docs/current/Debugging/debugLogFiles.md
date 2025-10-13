@@ -461,7 +461,7 @@ Como iniciar esse log:
 - Use the `SET DATABASE PARAMETER` command:
 
   ```4d
-  SET DATABASE PARAMETER(TCPUDP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log recording; 1)
   ```
 
 - Configure o log através de um [arquivo de configuração JSON](#using-a-log-configuration-file):

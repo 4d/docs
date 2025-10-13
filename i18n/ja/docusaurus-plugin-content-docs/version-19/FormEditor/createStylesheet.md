@@ -80,7 +80,7 @@ text, input {
 :::
 
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+以下の例では、という"okButton" 名前のオブジェクトのテキストが、Helvetica Neue フォントで、20 ピクセルのサイズで表示されます:
 
 ```
 #okButton {

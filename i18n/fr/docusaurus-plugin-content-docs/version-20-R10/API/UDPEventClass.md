@@ -28,7 +28,7 @@ Les propriétés suivantes sont disponibles :
 
 <!-- REF UDPEvent.address.Desc -->
 
-## .adresse
+## .address
 
 <!-- REF #UDPEvent.address.Syntax -->**address** : Text<!-- END REF -->
 

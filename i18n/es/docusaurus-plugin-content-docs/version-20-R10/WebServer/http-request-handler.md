@@ -60,7 +60,7 @@ You must restart the Web server so that modifications made in this file are take
 
 ## Definición del gestor
 
-A handler is defined by:
+Un manejador está definido por:
 
 - a listened URL pattern
 - a function and its class where the code is implemented to handle the listened URL pattern
@@ -135,7 +135,7 @@ You declare the code to be executed when a defined URL pattern is intercepted us
 
 You can use the "verbs" property in the handler definition to declare HTTP verbs that are supported in incoming requests for this handler. A request that uses a verb that is not explicitely allowed is automatically rejected by the server.
 
-You can declare several verbs, separated by a comma. Verb names are not case sensitive.
+You can declare several verbs, separated by a comma. Los nombres de verbos no distinguen entre mayúsculas y minúsculas.
 
 Ej: `"verbs" : "PUT, POST"`
 

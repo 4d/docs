@@ -208,7 +208,7 @@ Un objet [`TCPEvent`](TCPEventClass.md) est renvoyé lorsqu'une [fonction de cal
 
 <!-- REF TCPConnection.address.Desc -->
 
-## .adresse
+## .address
 
 <!-- REF #TCPConnection.address.Syntax -->**address** : Text<!-- END REF -->
 

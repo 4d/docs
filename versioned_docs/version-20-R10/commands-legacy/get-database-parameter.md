@@ -945,7 +945,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
 
 
-### TCP log (131)
+### TCPUDP log recording (131)
 
 **Possible values:**
 
@@ -953,7 +953,7 @@ For more information on the 4DIMAPLog\_X.txt files, please refer to the *Descrip
 
  `1`: Logging is enabled.
 
-**Description:** Retrieves the status of the `4DTCPLog.txt` file for logging TCP events and returns whether the `4DTCPLog.txt` log file is currently active or not.
+**Description:** Retrieves the status of the `4DTCPUDPLog.txt` file for logging TCP events and returns whether the `4DTCPUDPLog.txt` log file is currently active or not.
 
 
 

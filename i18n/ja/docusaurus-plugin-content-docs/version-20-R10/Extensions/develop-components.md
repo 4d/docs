@@ -108,7 +108,7 @@ EXECUTE METHOD($param)
 
 :::
 
-When you enter a value, you declare that component classes will be available in the [user class store (**cs**)](../Concepts/classes.md#cs) of the host project as well as its loaded components, through the `cs.<value>` namespace. たとえば、`getArea()` 関数を持つ `Rectangle` クラスが存在する場合に、コンポーネント名前空間として "eGeometry" を入力すると、このプロジェクトがコンポーネントとしてインストールされると、ホストプロジェクトの開発者は次のように記述することができます:
+値を入力すると、ホストプロジェクトおよび読み込まれているコンポーネントのコードにおいて、[ユーザークラスストア (**cs**)](../Concepts/classes.md#cs) ユーザークラスストア (cs) 内の `cs.<value>` 名前空間を介して、コンポーネントのクラスが利用可能になることを宣言することになります。 たとえば、`getArea()` 関数を持つ `Rectangle` クラスが存在する場合に、コンポーネント名前空間として "eGeometry" を入力すると、このプロジェクトがコンポーネントとしてインストールされると、ホストプロジェクトの開発者は次のように記述することができます:
 
 ```4d
 // ホストプロジェクトまたは読み込まれているコンポーネントにて
@@ -236,6 +236,8 @@ component_method($input_t)
 ## エラー処理
 
 `ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のプロジェクトに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
+
+しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
 ## ホストプロジェクトのテーブルへのアクセス
 

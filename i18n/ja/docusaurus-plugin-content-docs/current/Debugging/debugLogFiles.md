@@ -465,7 +465,7 @@ SET DATABASE PARAMETER(4D Server log recording;0)
 - `SET DATABASE PARAMETER` コマンドを使用する:
 
   ```4d
-  SET DATABASE PARAMETER(TCPUDP log; 1)
+  SET DATABASE PARAMETER(TCPUDP log recording; 1)
   ```
 
 - [JSON 設定ファイル](#using-a-log-configuration-file) を使用してログを設定する:

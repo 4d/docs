@@ -248,6 +248,7 @@ module.exports =
                 "ORDA/dsmapping",
                 "ORDA/ordaClasses",
                 "ORDA/entities",
+                "ORDA/orda-events",
                 "ORDA/global-stamp",
                 "ORDA/datastores",
                 "ORDA/privileges",
@@ -340,6 +341,7 @@ module.exports =
             "WebServer/templates",
             "WebServer/httpRequests",
             "WebServer/http-request-handler",
+            "WebServer/http-rules",
             "WebServer/allowProject",
             "WebServer/errorPages",
             "WebServer/authentication",
@@ -820,6 +822,11 @@ module.exports =
               "Extensions/develop-plug-ins"
                   ]
         },
+        {
+          type: "link",
+          label: "4D Qodly Pro",
+          href: "https://developer.4d.com/qodly/"
+        },        
         {
           type: "category",
           label: "4D View Pro",
@@ -1343,6 +1350,11 @@ module.exports =
           href: "https://developer.4d.com/go-mobile/"
         },
         {
+          type: "link",
+          label: "4D Mobile App Server",
+          href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
+        },
+       {
           type: "link",
           label: "4D Mobile App Server",
           href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"

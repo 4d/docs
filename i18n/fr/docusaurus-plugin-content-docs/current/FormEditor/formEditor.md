@@ -347,7 +347,7 @@ Pour modifier le plan d'un objet, sélectionnez-le et choisissez :
 
 ![](../assets/en/FormEditor/level2.png)
 
-> Lorsque plusieurs objets sont superposés, le raccourci **Ctrl+clic** / **Commande+clic** permet de sélectionner successivement chaque objet en descendant d’un plan à chaque clic.
+> Lorsque plusieurs objets sont superposés, le raccourci **Ctrl+Maj+clic** / **Commande+Maj+clic** permet de sélectionner successivement chaque objet en descendant d'un plan à chaque clic.
 
 Pour ordonner les différents plans, 4D va toujours de l’arrière-plan vers l’avant-plan. Par conséquent, le plan précédent fait reculer la sélection d’objets d’un plan vers l’arrière-plan du formulaire. Le plan suivant fait avancer la sélection d’objets d’un plan vers l’avant-plan du formulaire.
 
@@ -456,7 +456,7 @@ sont affichées avec une icône CSS dans la liste des propriétés :
 
 ![](../assets/en/FormEditor/cssPpropList.png)
 
-Une valeur d'attribut définie dans une feuille de style peut être remplacée dans la description de formulaire JSON (sauf si la CSS inclut la déclaration `!important`, voir ci-dessous). Dans ce cas, la liste des propriétés affiche la valeur du formulaire JSON en **gras**. Vous pouvez réinitialiser la valeur à sa définition de feuille de style avec les raccourcis **Ctrl + clic** (Windows) ou **Command + clic** (macOs).
+Une valeur d'attribut définie dans une feuille de style peut être remplacée dans la description de formulaire JSON (sauf si la CSS inclut la déclaration `!important`, voir ci-dessous). Dans ce cas, la liste des propriétés affiche la valeur du formulaire JSON en **gras**. Vous pouvez réinitialiser la valeur à sa définition de feuille de style avec les raccourcis **Ctrl + clic** (Windows) ou **Commande + clic** (macOs).
 
 > Si un attribut a été défini avec la déclaration `!important` pour un groupe, un objet à l'intérieur d'un groupe ou n'importe quel objet dans une sélection de plusieurs objets, la valeur de cet attribut est verrouillée et ne peut pas être modifiée dans la liste des propriétés.
 

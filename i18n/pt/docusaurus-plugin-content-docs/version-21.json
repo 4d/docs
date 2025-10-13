@@ -1,0 +1,478 @@
+{
+  "version.label": {
+    "message": "21 BETA",
+    "description": "The label for version 21"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "Começando",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Getting Started.link.generated-index.title": {
+    "message": "Começando",
+    "description": "The generated-index page title for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Project & IDE": {
+    "message": "Project & IDE",
+    "description": "The label for category Project & IDE in sidebar docs"
+  },
+  "sidebar.docs.category.Project & IDE.link.generated-index.title": {
+    "message": "Project & IDE",
+    "description": "The generated-index page title for category Project & IDE in sidebar docs"
+  },
+  "sidebar.docs.category.Dababase structure": {
+    "message": "Dababase structure",
+    "description": "The label for category Dababase structure in sidebar docs"
+  },
+  "sidebar.docs.category.Code & Methods": {
+    "message": "Code & Methods",
+    "description": "The label for category Code & Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Settings": {
+    "message": "Settings",
+    "description": "The label for category Settings in sidebar docs"
+  },
+  "sidebar.docs.category.Debugging": {
+    "message": "Depuração",
+    "description": "The label for category Debugging in sidebar docs"
+  },
+  "sidebar.docs.category.Application Preferences": {
+    "message": "Application Preferences",
+    "description": "The label for category Application Preferences in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language": {
+    "message": "Línguagem 4D",
+    "description": "The label for category 4D Language in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language.link.generated-index.title": {
+    "message": "Línguagem 4D",
+    "description": "The generated-index page title for category 4D Language in sidebar docs"
+  },
+  "sidebar.docs.category.Concepts": {
+    "message": "Conceitos",
+    "description": "The label for category Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Data Types": {
+    "message": "Tipos de dados",
+    "description": "The label for category Data Types in sidebar docs"
+  },
+  "sidebar.docs.category.Commands by theme": {
+    "message": "Commands by theme",
+    "description": "The label for category Commands by theme in sidebar docs"
+  },
+  "sidebar.docs.category.Classes": {
+    "message": "Classes",
+    "description": "The label for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.title": {
+    "message": "Classes",
+    "description": "The generated-index page title for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Classes.link.generated-index.description": {
+    "message": "Lista de classes 4D integradas",
+    "description": "The generated-index page description for category Classes in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development": {
+    "message": "Desenvolvimento",
+    "description": "The label for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.Core Development.link.generated-index.title": {
+    "message": "Desenvolvimento",
+    "description": "The generated-index page title for category Core Development in sidebar docs"
+  },
+  "sidebar.docs.category.ORDA": {
+    "message": "ORDA",
+    "description": "The label for category ORDA in sidebar docs"
+  },
+  "sidebar.docs.category.Processes": {
+    "message": "Processos",
+    "description": "The label for category Processes in sidebar docs"
+  },
+  "sidebar.docs.category.Processes.link.generated-index.title": {
+    "message": "Processos",
+    "description": "The generated-index page title for category Processes in sidebar docs"
+  },
+  "sidebar.docs.category.Database Methods": {
+    "message": "Database Methods",
+    "description": "The label for category Database Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Database Methods.link.generated-index.title": {
+    "message": "Database Methods",
+    "description": "The generated-index page title for category Database Methods in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications": {
+    "message": "Aplicações Web",
+    "description": "The label for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.title": {
+    "message": "Aplicações Web",
+    "description": "The generated-index page title for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Applications.link.generated-index.description": {
+    "message": "Guias para desenvolver aplicações Web com 4D",
+    "description": "The generated-index page description for category Web Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Web Server": {
+    "message": "Servidor Web",
+    "description": "The label for category Web Server in sidebar docs"
+  },
+  "sidebar.docs.category.REST API": {
+    "message": "REST API",
+    "description": "The label for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.title": {
+    "message": "REST API",
+    "description": "The generated-index page title for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.REST API.link.generated-index.description": {
+    "message": "Exposing your datastore to REST and using the REST API.",
+    "description": "The generated-index page description for category REST API in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST": {
+    "message": "Expondo seu datastore em REST",
+    "description": "The label for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.title": {
+    "message": "Expondo seu datastore em REST",
+    "description": "The generated-index page title for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.Exposing your datastore in REST.link.generated-index.description": {
+    "message": "Configure seu datastore para acesso REST",
+    "description": "The generated-index page description for category Exposing your datastore in REST in sidebar docs"
+  },
+  "sidebar.docs.category.API (general)": {
+    "message": "API (geral)",
+    "description": "The label for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.title": {
+    "message": "API (geral)",
+    "description": "The generated-index page title for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (general).link.generated-index.description": {
+    "message": "API REST para informações globais",
+    "description": "The generated-index page description for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass)": {
+    "message": "API (dataClass)",
+    "description": "The label for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.title": {
+    "message": "API (dataClass)",
+    "description": "The generated-index page title for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass).link.generated-index.description": {
+    "message": "API REST para dataClass.",
+    "description": "The generated-index page description for category API (dataClass) in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications": {
+    "message": "Aplicações Desktop",
+    "description": "The label for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.title": {
+    "message": "Aplicações Desktop",
+    "description": "The generated-index page title for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Desktop Applications.link.generated-index.description": {
+    "message": "Guias para desenvolver aplicações Desktop com 4D",
+    "description": "The generated-index page description for category Desktop Applications in sidebar docs"
+  },
+  "sidebar.docs.category.Forms": {
+    "message": "Formulários",
+    "description": "The label for category Forms in sidebar docs"
+  },
+  "sidebar.docs.category.Form Editor": {
+    "message": "Editor de formulários",
+    "description": "The label for category Form Editor in sidebar docs"
+  },
+  "sidebar.docs.category.Form Properties": {
+    "message": "Propriedades do formulário",
+    "description": "The label for category Form Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Form Objects": {
+    "message": "Objectos formulário",
+    "description": "The label for category Form Objects in sidebar docs"
+  },
+  "sidebar.docs.category.Form Object Properties": {
+    "message": "Propriedades dos objectos formulário",
+    "description": "The label for category Form Object Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Form Events": {
+    "message": "Eventos formulário",
+    "description": "The label for category Form Events in sidebar docs"
+  },
+  "sidebar.docs.category.Menus": {
+    "message": "Menus",
+    "description": "The label for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights": {
+    "message": "Direitos de acesso",
+    "description": "The label for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.title": {
+    "message": "Direitos de acesso",
+    "description": "The generated-index page title for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Access Rights.link.generated-index.description": {
+    "message": "Controlo de acesso e privilégios de usuário para aplicações Desktop.",
+    "description": "The generated-index page description for category Access Rights in sidebar docs"
+  },
+  "sidebar.docs.category.Administration": {
+    "message": "Administração",
+    "description": "The label for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.title": {
+    "message": "Administração",
+    "description": "The generated-index page title for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Administration.link.generated-index.description": {
+    "message": "Como monitorizar as suas aplicações 4D",
+    "description": "The generated-index page description for category Administration in sidebar docs"
+  },
+  "sidebar.docs.category.4D Server Administration Window": {
+    "message": "Janela de administração de 4D Server",
+    "description": "The label for category 4D Server Administration Window in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration": {
+    "message": "Administração Web",
+    "description": "The label for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.title": {
+    "message": "Administração Web",
+    "description": "The generated-index page title for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.Web Administration.link.generated-index.description": {
+    "message": "Ferramentas web 4D para administrar e monitorar suas aplicações.",
+    "description": "The generated-index page description for category Web Administration in sidebar docs"
+  },
+  "sidebar.docs.category.MSC": {
+    "message": "CSM",
+    "description": "The label for category MSC in sidebar docs"
+  },
+  "sidebar.docs.category.Backup and Restore": {
+    "message": "Cópia de segurança e restauração",
+    "description": "The label for category Backup and Restore in sidebar docs"
+  },
+  "sidebar.docs.category.Extensions": {
+    "message": "Extensões",
+    "description": "The label for category Extensions in sidebar docs"
+  },
+  "sidebar.docs.category.Extensions.link.generated-index.title": {
+    "message": "Extensões",
+    "description": "The generated-index page title for category Extensions in sidebar docs"
+  },
+  "sidebar.docs.category.Extending 4D applications": {
+    "message": "Extending 4D applications",
+    "description": "The label for category Extending 4D applications in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro": {
+    "message": "4D View Pro",
+    "description": "The label for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.4D View Pro.link.generated-index.title": {
+    "message": "4D View Pro",
+    "description": "The generated-index page title for category 4D View Pro in sidebar docs"
+  },
+  "sidebar.docs.category.Commands": {
+    "message": "Comandos",
+    "description": "The label for category Commands in sidebar docs"
+  },
+  "sidebar.docs.category.A": {
+    "message": "A",
+    "description": "The label for category A in sidebar docs"
+  },
+  "sidebar.docs.category.A.link.generated-index.title": {
+    "message": "A",
+    "description": "The generated-index page title for category A in sidebar docs"
+  },
+  "sidebar.docs.category.C": {
+    "message": "C",
+    "description": "The label for category C in sidebar docs"
+  },
+  "sidebar.docs.category.C.link.generated-index.title": {
+    "message": "C",
+    "description": "The generated-index page title for category C in sidebar docs"
+  },
+  "sidebar.docs.category.D": {
+    "message": "D",
+    "description": "The label for category D in sidebar docs"
+  },
+  "sidebar.docs.category.D.link.generated-index.title": {
+    "message": "D",
+    "description": "The generated-index page title for category D in sidebar docs"
+  },
+  "sidebar.docs.category.E": {
+    "message": "E",
+    "description": "The label for category E in sidebar docs"
+  },
+  "sidebar.docs.category.E.link.generated-index.title": {
+    "message": "E",
+    "description": "The generated-index page title for category E in sidebar docs"
+  },
+  "sidebar.docs.category.F": {
+    "message": "F",
+    "description": "The label for category F in sidebar docs"
+  },
+  "sidebar.docs.category.F.link.generated-index.title": {
+    "message": "F",
+    "description": "The generated-index page title for category F in sidebar docs"
+  },
+  "sidebar.docs.category.G": {
+    "message": "G",
+    "description": "The label for category G in sidebar docs"
+  },
+  "sidebar.docs.category.G.link.generated-index.title": {
+    "message": "G",
+    "description": "The generated-index page title for category G in sidebar docs"
+  },
+  "sidebar.docs.category.I": {
+    "message": "I",
+    "description": "The label for category I in sidebar docs"
+  },
+  "sidebar.docs.category.I.link.generated-index.title": {
+    "message": "I",
+    "description": "The generated-index page title for category I in sidebar docs"
+  },
+  "sidebar.docs.category.M": {
+    "message": "M",
+    "description": "The label for category M in sidebar docs"
+  },
+  "sidebar.docs.category.M.link.generated-index.title": {
+    "message": "M",
+    "description": "The generated-index page title for category M in sidebar docs"
+  },
+  "sidebar.docs.category.N": {
+    "message": "N",
+    "description": "The label for category N in sidebar docs"
+  },
+  "sidebar.docs.category.N.link.generated-index.title": {
+    "message": "N",
+    "description": "The generated-index page title for category N in sidebar docs"
+  },
+  "sidebar.docs.category.O": {
+    "message": "O",
+    "description": "The label for category O in sidebar docs"
+  },
+  "sidebar.docs.category.O.link.generated-index.title": {
+    "message": "O",
+    "description": "The generated-index page title for category O in sidebar docs"
+  },
+  "sidebar.docs.category.P": {
+    "message": "P",
+    "description": "The label for category P in sidebar docs"
+  },
+  "sidebar.docs.category.P.link.generated-index.title": {
+    "message": "P",
+    "description": "The generated-index page title for category P in sidebar docs"
+  },
+  "sidebar.docs.category.R": {
+    "message": "R",
+    "description": "The label for category R in sidebar docs"
+  },
+  "sidebar.docs.category.R.link.generated-index.title": {
+    "message": "R",
+    "description": "The generated-index page title for category R in sidebar docs"
+  },
+  "sidebar.docs.category.S": {
+    "message": "S",
+    "description": "The label for category S in sidebar docs"
+  },
+  "sidebar.docs.category.S.link.generated-index.title": {
+    "message": "S",
+    "description": "The generated-index page title for category S in sidebar docs"
+  },
+  "sidebar.docs.category.4D Write Pro": {
+    "message": "4D Write Pro",
+    "description": "The label for category 4D Write Pro in sidebar docs"
+  },
+  "sidebar.docs.category.4D Write Pro.link.generated-index.title": {
+    "message": "4D Write Pro",
+    "description": "The generated-index page title for category 4D Write Pro in sidebar docs"
+  },
+  "sidebar.docs.category.Document Elements": {
+    "message": "Document Elements",
+    "description": "The label for category Document Elements in sidebar docs"
+  },
+  "sidebar.docs.category.Document Elements.link.generated-index.title": {
+    "message": "Document Elements",
+    "description": "The generated-index page title for category Document Elements in sidebar docs"
+  },
+  "sidebar.docs.category.Import and Export": {
+    "message": "Import and Export",
+    "description": "The label for category Import and Export in sidebar docs"
+  },
+  "sidebar.docs.category.Import and Export.link.generated-index.title": {
+    "message": "Import and Export",
+    "description": "The generated-index page title for category Import and Export in sidebar docs"
+  },
+  "sidebar.docs.category.4D AIKit": {
+    "message": "4D AIKit",
+    "description": "The label for category 4D AIKit in sidebar docs"
+  },
+  "sidebar.docs.category.4D AIKit.link.generated-index.title": {
+    "message": "4D AIKit",
+    "description": "The generated-index page title for category 4D AIKit in sidebar docs"
+  },
+  "sidebar.docs.link.4D Qodly Pro": {
+    "message": "4D Qodly Pro",
+    "description": "The label for link 4D Qodly Pro in sidebar docs, linking to https://developer.qodly.com/docs"
+  },
+  "sidebar.docs.link.4D NetKit": {
+    "message": "4D NetKit",
+    "description": "The label for link 4D NetKit in sidebar docs, linking to https://developer.4d.com/4D-NetKit"
+  },
+  "sidebar.docs.link.4D Progress": {
+    "message": "4D Progress",
+    "description": "The label for link 4D Progress in sidebar docs, linking to https://github.com/4d/4D-Progress/blob/main/README.md"
+  },
+  "sidebar.docs.link.4D SVG": {
+    "message": "4D SVG",
+    "description": "The label for link 4D SVG in sidebar docs, linking to https://developer.4d.com/4D-SVG"
+  },
+  "sidebar.docs.link.4D Widgets": {
+    "message": "4D Widgets",
+    "description": "The label for link 4D Widgets in sidebar docs, linking to https://github.com/4d/4D-Widgets/blob/main/Readme.md"
+  },
+  "sidebar.docs.link.4D QPDF": {
+    "message": "4D QPDF",
+    "description": "The label for link 4D QPDF in sidebar docs, linking to https://github.com/4d/4D-QPDF?tab=readme-ov-file#readme"
+  },
+  "sidebar.docs.link.Go Mobile with 4D": {
+    "message": "Go Mobile with 4D",
+    "description": "The label for link Go Mobile with 4D in sidebar docs, linking to https://developer.4d.com/go-mobile/"
+  },
+  "sidebar.docs.link.4D Mobile App Server": {
+    "message": "4D Mobile App Server",
+    "description": "The label for link 4D Mobile App Server in sidebar docs, linking to https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
+  },
+  "sidebar.docs.link.Build4D": {
+    "message": "Build4D",
+    "description": "The label for link Build4D in sidebar docs, linking to https://github.com/4d/Build4D"
+  },
+  "sidebar.docs.doc.Client/Server": {
+    "message": "Cliente/Servidor",
+    "description": "The label for the doc item Client/Server in sidebar docs, linking to the doc Desktop/clientServer"
+  },
+  "sidebar.docs.doc.Labels": {
+    "message": "Etiquetas",
+    "description": "The label for the doc item Labels in sidebar docs, linking to the doc Desktop/labels"
+  },
+  "sidebar.docs.doc.Command Line Interface": {
+    "message": "Interface de linha de comando",
+    "description": "The label for the doc item Command Line Interface in sidebar docs, linking to the doc Admin/cli"
+  },
+  "sidebar.docs.doc.TLS Protocol": {
+    "message": "Protocolo TLS",
+    "description": "The label for the doc item TLS Protocol in sidebar docs, linking to the doc Admin/tls"
+  },
+  "sidebar.docs.doc.Licenses": {
+    "message": "Licenças",
+    "description": "The label for the doc item Licenses in sidebar docs, linking to the doc Admin/licenses"
+  },
+  "sidebar.docs.doc.Log Files": {
+    "message": "Log Files",
+    "description": "The label for the doc item Log Files in sidebar docs, linking to the doc Debugging/debugLogFiles"
+  },
+  "sidebar.docs.doc.Data Collection": {
+    "message": "Recolha de dados",
+    "description": "The label for the doc item Data Collection in sidebar docs, linking to the doc Admin/data-collect"
+  }
+}

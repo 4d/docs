@@ -5,19 +5,32 @@ title: リリースノート
 
 ## 4D 21
 
-Read [**What’s new in 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), the blog post that lists all new features and enhancements in 4D 21.
+[**4D 21 での新機能**](https://blog.4d.com/en-whats-new-in-4d-21/): 4D 21 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
-- Support of **AI Vector Searches** in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
-- Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
-- New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
-- You can now [create components directly from the host project](../Extensions/develop-components.md#creating-components) and [edit their code from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer without leaving or restarting the project.
-- The 4D product activation step has been simplified and automated during [sign-in](../GettingStarted/Installation.md#sign-in).
-- 4D AIKit component: new features to [invoke a specific tool automatically](../aikit/Classes/OpenAIChatHelper.md#registertool) and [specify a response format](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format).
+- [`query()`](../API/DataClassClass.md#ベクトル類似度でのクエリ) 関数と、[`$filter`](../REST/$filter.md#vector-similarity) REST API 内でのAI ベクトル検索のサポート。
+- [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) クラスにおけるTLS 暗号化のサポート。
+- Web サーバー:
+  - 新しい [HTTP ルール](../WebServer/http-rules.md) を使用することでHTTP レスポンスヘッダーをカスタマイズすることができます。
+  - Web サーバーの[`start()`](../API/WebServerClass.md#start) 関数の*settings* 引数内の`handlers` プロパティを使用することで、[HTTP リクエストハンドラー](../WebServer/http-request-handler.md) を設定することができます。
+  - Web サーバーオブジェクトには新しい[`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) プロパティが含まれます。
+- 新しい[データに対するORDA イベント](../ORDA/orda-events.md): validateSave、saving、afterSave、validateDrop、dropping、afterDrop
+- [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
+- クライアント/サーバー:
+  - Web エリア内でQodly ページを表示し、[リモートクライアントセッションを共有](../Desktop/clientServer.md#web-エリア内のqodly-ページでセッションを共有する)することができるようになりました。
+  - [QUIC ネットワークレイヤー](../settings/client-server.md#ネットワークレイヤー) はネットワークインターフェースの変更(例えばラップトップを持って良好するような場合)を透過的に管理できるように改善されました。 [こちらの blog 記事](https://blog.4d.com/work-and-move-with-quic-and-network-switching) をご覧ください。
+- プロジェクトを閉じたり再起動したりすることなく、4D エクスプローラーから[ホストプロジェクトから直接コンポーネントを作成](../Extensions/develop-components.md#コンポーネントの作成)したり、あるいは[専用のタブからコンポーネントのコードを編集する](../Extensions/develop-components.md#全てのコンポーネントコードを編集) ことができるようになりました。
+- 4D プロダクトのアクティベーションステップが、簡略化されて[サインイン](../GettingStarted/Installation.md#sign-in) 中に自動化されました。
+- 4D AIKit コンポーネント: [特定のツールを自動的に呼び出す](../aikit/Classes/OpenAIChatHelper.md#registertool) ことと [レスポンスフォーマットを指定する](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format) 新機能。
 - 4Dランゲージ:
-  - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
-  - [`Num`](../commands/num.md) and [`String`](../commands/string.md) commands have been updated to support conversions in different bases (radix).
+  - 文字列から先頭と末尾のスペースを削除する新しい "trim" 系コマンド: [`Trim`](../commands/trim.md)、[`Trim start`](../commands/trim-start.md)、および[`Trim end`](../commands/trim-end.md)。
+  - [`Num`](../commands/num.md) および [`String`](../commands/string.md) コマンドは、異なる基数での変換をサポートするようにアップデートされました。
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21): list of all bugs that have been fixed in 4D 21.
+
+#### デベロッパー・プレビュー
+
+[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
 
 #### 動作の変更
 
@@ -75,6 +88,18 @@ In binary databases, you need to select the required components in the 4D instal
  - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
  - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 
+#### 動作の変更
+
+:::caution Index rebuild
+
+4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
+
+:::
+
+- Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
+- Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
+- Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+
 ## 4D 20 R10
 
 [**4D 20 R10の新機能**](https://blog.4d.com/en-whats-new-in-4d-20-R10/) 4D 20 R10 の新機能と拡張機能をすべてリストアップしたブログ記事です。
@@ -83,28 +108,28 @@ In binary databases, you need to select the required components in the 4D instal
 
 - [データ上のORDA イベント](../ORDA/orda-events.md) の管理。
 - [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew) 関数の[`options`](../API/TCPConnectionClass.md#options-parameter) 引数に新しい`connectionTimeout` オプションが追加されました。
-- New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
-- New options to generate UUIDs in **version 7** for [4D automatic fields](../settings/database.md#auto-uuid-version) and [`Generate UUID`](../commands/generate-uuid) command.
-- New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
-- New [`.promote()`](../API/SessionClass.md#promote) and [`.demote()`](../API/SessionClass.md#demote) functions in the [Session class](../API/SessionClass.md) to dynamically add/remove privileges in a web process.
-- [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
-- Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
-- 4D AIKit component: new [OpenAIEmbeddingsAPI class](../aikit/Classes/OpenAIEmbeddingsAPI.md) to create embeddings using OpenAI's API.
-- You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
-- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
+- 新しい[`4D.Vector`](../API/VectorClass.md) クラス。これを使用して、一般的にAI で計算されたベクトルを処理して比較することができます。
+- [4D 自動フィールド](../settings/database.md#自動uuidバージョン) および [`Generate UUID`](../commands/generate-uuid) コマンドに対して、**バージョン 7**のUUID を生成するための新しいオプション。
+- 新しい[`UDPSocket`](../API/UDPSocketClass.md) および [`UDPEvent`](../API/UDPEventClass.md) クラスを使用することでUDP ソケットを使用してデータを送信することができます。 [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) ログファイル(`4DTCPLog.txt` から改名)内でのUDP イベントの詳細なログのサポート。
+- [Session class](../API/SessionClass.md) 内の[`.promote()`](../API/SessionClass.md#promote) および[`.demote()`](../API/SessionClass.md#demote) 関数を使用することでWeb プロセスの権限を動的に追加/削除することができます。
+- ビルドアプリケーションのダイアログボックスで[埋め込むライセンスの自動選択](../Desktop/building.md#アプリケーションの利用可能なライセンスの自動埋め込み)、 更新された[`Create deployment license`](../commands/create-deployment-license.md) コマンド、新しい[`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.ja.html) ビルドアプリケーションXML キー。
+- [4D Write Pro](../WritePro/managing-formulas.md) および [スタイル付きテキストエリア](../FormObjects/input_overview.md)におけるフォーミュラのコピー/ペースト時のセキュリティの改善: カレントの4D アプリケーションの外部からコピーされたフォーミュラは、今後は常に値のみがペーストされます。
+- 4D AIKit コンポーネント: 新しい [OpenAIEmbeddingsAPI class](../aikit/Classes/OpenAIEmbeddingsAPI.md) を使用することで、OpenAI のAPI を使用して埋め込みを作成できます。
+- ストラクチャーエディターにおいて、オブジェクト型フィールドに対して[クラスを割り当てる](../Develop/field-properties.md) ことができます。
+- [再起的な依存関係](../Project/components.md#自動依存関係解決) の自動管理。
 - 4Dランゲージ:
   - 統一性のため、[`Create entity selection`](../commands/create-entity-selection.md) コマンドおよび [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) コマンドは、["4D 環境"](../commands/theme/4D_Environment.md) テーマから ["Selection"](../commands/theme/Selection.md) テーマへと移動しました。
   - 新しい [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) および [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) コマンドを使用して、フォームオブジェクトに対して`Formula` オブジェクトを割り当て、または読み出しができるようになります。
   - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) および [`LISTBOX Get property`](../commands/listbox-get-property.md) は3つの新しい定数をサポートするようになりました: `lk current item`、`lk current item position`、および `lk selected items expression` です。
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R10): list of all bugs that have been fixed in 4D 20 R10.
+- [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=20_R10): 4D 20 R10 で修正されたバグのリストです(日本語版は[こちら](https://4d-jp.github.io/2025/188/release-note-version-20r10/))。
 
 #### 動作の変更
 
 - Windows 上では、印刷しか想定していない(つまりスクリーン上で使用不可能な)カレントプリンターフォントは、4D の起動時にはロードされないようになりました。
-- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
-- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
-- [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) returns True for promoted privileges in the web process.
-- The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will return **-01:02:03**. In previous releases, the negative sign was ignored.
+- *MeCab* ライブラリーは削除されました。 この変更は、日本語テキストの処理のみに影響します。
+- ["cs" クラス](../Concepts/classes.md#cs) タイプを使用して宣言されたオブジェクト型変数またはオブジェクト型引数に、異なるクラスのオブジェクトインスタンスを代入した場合にはシンタックスエラーを生成するようになりました。
+- [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) 関数は、Web プロセス内において昇格された権限に対してはTrue を返すようになりました。
+- [`Time`](../commands/time) コマンドは、*timeValue* 引数が負の値の場合には、負の時間式を返すようになりました。 例えば、`Time("-01:02:03")` は **-01:02:03** を返します。 過去のリリースにおいては、負の符号は無視されていました。
 
 ## 4D 20 R9
 
@@ -115,7 +140,7 @@ In binary databases, you need to select the required components in the 4D instal
 - [*MeCab* ライブラリー](../settings/database.md#mecab日本語版のサポート) は今後廃止予定となり、次のリリースでは削除される予定です。
 - [`Session.createOTP()`](../API/SessionClass.md#createotp) および[`Session.restore()`](../API/SessionClass.md#restore) の新関数を使用して管理することで、[セッショントークン](../WebServer/sessions.md#session-token-otp) がサポートされるようになりました。
 - ラベルウィザードは、[ラベルデザインエリア](../Desktop/labels.md#ラベルプレビューエリア) においてフォーミュラを追加または編集する際にフォーミュラエディターを使用するようになりました。
-- New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`](../API/TCPConnectionClass.md) class, `address` and `port` in [`TCPEvent`](../API/TCPEventClass.md) class.
+- TCP サーバー接続を作成するための新しい[`TCPListener`](../API/TCPListenerClass.md) クラス。関連クラスに新しいプロパティが追加されました。[`TCPConnection`](../API/TCPConnectionClass.md) クラスに`address`、`listener` および `port`。[`TCPEvent`](../API/TCPEventClass.md) クラスに `address` および `port`。
 - [ライブチェッカーとコンパイラー](../code-editor/write-class-method.md#warnings-and-errors).において、廃止予定のコマンドと定数は、特定の警告を生成するようになりました。 [`Command name`](../commands/command-name.md) コマンドを使用することで、コマンドが廃止予定かどうかを知ることができます。
 - 新しいコマンド[WA SET CONTEXT](../commands/wa-set-context.md) および [WA Get context](../commands/wa-get-context.md) を使用して、Web エリア内の[$4d](../FormObjects/webArea_overview.md#4d-object) コンテンツを管理することができるようになります。
 - 新しい[`RDP optimization` データベースパラメーター](../commands-legacy/set-database-parameter.md#rdp-optimization-133) を使用して、例えば4D をリモートデスクトッププロトコルを使用している場合の共有クリップボードを最適化することができます。
