@@ -315,21 +315,21 @@ Esta ruta al historial es devuelta por el comando `Get 4D file`.
 
 Para iniciar este historial:
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### Contenido
 

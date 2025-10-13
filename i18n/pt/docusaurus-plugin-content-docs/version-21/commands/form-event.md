@@ -5,7 +5,7 @@ slug: /commands/form-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Event.Syntax-->**FORM Event** : Object<!-- END REF-->
+<!--REF #_command_.FORM Event.Syntax-->**FORM Event** : Objeto<!-- END REF-->
 
 <!--REF #_command_.FORM Event.Params-->
 
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->O **FORM Event** retorna um objeto que contém informações sobre o evento de formulário que acabou de ocorrer. Normalmente, você usará **FORM Event** em um método formulário ou objeto.
+<!--REF #_command_.FORM Event.Summary-->O **FORM Event** retorna um objeto que contém informações sobre o evento de formulário que acabou de ocorrer.<!-- END REF--> Normalmente, você usará **FORM Event** em um método formulário ou objeto.
 
 **Objeto devolvido**
 
