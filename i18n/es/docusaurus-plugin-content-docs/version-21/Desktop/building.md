@@ -202,7 +202,7 @@ Los elementos deben ser instalados:
 
 ## Página Cliente/Servidor
 
-En esta pestaña, puede generar aplicaciones cliente y servidor personalizadas que son homogéneas, multiplataforma y con una opción de actualización automática.
+En esta pestaña, usted puede construir aplicaciones cliente y servidor personalizadas que son homogénicas, multiplataforma y con una opción de actualización automática.
 
 ![](../assets/en/Desktop/client-server-buildapp.png)
 

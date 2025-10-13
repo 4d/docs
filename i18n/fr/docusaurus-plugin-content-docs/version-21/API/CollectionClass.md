@@ -3218,14 +3218,14 @@ La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments
 Si `.sort()` est appelé sans paramètres, seules les valeurs scalaires (nombres, textes, dates, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.
 You can also pass one of the following constants in the *ascOrDesc* parameter:
 
-```
-|Constant|	Type|Value|Comment|
-|---|---|---|---|
-|ck ascending|Integer|0|Elements are ordered in ascending order (default)|
-|ck descending|Integer|1|Elements are ordered in descending order|
-
-This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
-```
+ ```
+ |Constant|	Type|Value|Comment|
+ |---|---|---|---|
+ |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+ |ck descending|Integer|1|Elements are ordered in descending order|
+ 
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+ ```
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 

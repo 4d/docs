@@ -44,7 +44,7 @@ title: 依存関係
 | [4D SVG](https://github.com/4d/4D-SVG)                               | 一般的な svgグラフィックオブジェクトの作成・操作                                                                                                                      | `SVGTool_Display_viewer`, 複数の `SVG_` メソッド                                                                                               |
 | [4D ViewPro](ViewPro/getting-started.md)                             | フォームに追加できる表計算機能                                                                                                                                 | [4D View Pro ドキュメンテーション](ViewPro/getting-started.md) 参照。                                                                                |
 | [4D Widgets](https://github.com/4d/4D-Widgets)                       | DatePicker, TimePicker, SearchPicker 4Dウィジェットの管理                                                                                                | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | [4D Write Pro](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.ja.html) パレットと [表ウィザード](../WritePro/writeprointerface.md#表ウィザード) の管理 | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
+| [4D WritePro Interface](https://github.com/4d/4D-WritePro-Interface) | [4D Write Pro](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.ja.html) パレットと [表ウィザード](../WritePro/writeprointerface.md#表ウィザード) の管理 | `WP PictureSettings`、`WP ShowTabPages`、`WP SwitchToolbar`、`WP UpdateWidget`                                                             |
 
 ## コンポーネントの読み込み
 

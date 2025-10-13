@@ -20,7 +20,7 @@ El comando `This` <!--REF #_command_.This.Summary-->devuelve una referencia al o
 
 En la mayoría de los casos, el valor de `This` está determinado por cómo se llama una función. No se puede definir por asignación durante la ejecución, y puede ser diferente cada vez que se llame a la función.
 
-Este comando puede utilizarse en diferentes contextos, que se describen a continuación. Dentro de estos contextos, accederá a propiedades de elementos de objetos/colecciones o a atributos de entidades a través de **This.<*propertyPath*\>**. Por ejemplo, *This.name* o *This.employer.lastName* son rutas válidas a propiedades de objetos, elementos o entidades.
+Este comando puede utilizarse en diferentes contextos, que se describen a continuación. Within these contexts, you will access object/collection element properties or entity attributes through **This.<*propertyPath*\>**. Por ejemplo, *This.name* o *This.employer.lastName* son rutas válidas a propiedades de objetos, elementos o entidades.
 
 En cualquier otro contexto, el comando devuelve **Null**.
 
