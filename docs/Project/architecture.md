@@ -66,7 +66,7 @@ lists.json|Defined lists|JSON
 filters.json|Defined filters|JSON
 dependencies.json|Names of [components to load](components.md) in the project|JSON|
 HTTPHandlers.json|Custom [HTTP request handlers](../WebServer/http-request-handler.md) defined for the web server|JSON|
-HTTPRules.json|Custom [HTTP response headers](../WebServer/http-responses.md) defined for the web server|JSON|
+HTTPRules.json|Custom [HTTP rules](../WebServer/http-rules.md) defined for the web server|JSON|
 styleSheets.css|CSS style sheets|CSS
 styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS    
 styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS    

@@ -89,7 +89,7 @@ In case of a modification, you need to restart the application for the change to
 
 #### Client-Server Connections Timeout  
 
-::note
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer is selected. 
 
@@ -107,7 +107,7 @@ When this option is checked, all the 4D remote machines connecting to the databa
 
 #### Encrypt Client-Server Communications  
 
-::note
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer option is selected. 
 

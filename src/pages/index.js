@@ -115,11 +115,24 @@ function Lts() {
   );
 }
 
+/*
 export default function Home() {
   return (
     <Layout>
       <main>
     	<Lts />
+		<HeroBanner />
+        <TilesContainer />
+      </main>
+    </Layout>
+  );
+}
+*/
+
+export default function Home() {
+  return (
+    <Layout>
+      <main>
 		<HeroBanner />
         <TilesContainer />
       </main>
