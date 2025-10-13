@@ -71,9 +71,9 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 | bytes_in                                                                          | 受信したバイト数                                                                                                                                                                                                                                                                                                                                                                                      |
 | bytes_out                                                                         | 送信したバイト数                                                                                                                                                                                                                                                                                                                                                                                      |
 | server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>_server\*duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。  以下の画像の B から F までに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li> |
-| write\_duration                                                                  | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。  以下の画像の A から B までに相当します。</li><li>レスポンス (サーバー上で実行された場合)。 以下の画像の E から F までに相当します。</li>                                                                                                                                                                             |
+| write\_duration                                                                  | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。  以下の画像の A から B までに相当します。</li><li>レスポンス(サーバー上で実行された場合)。 以下の画像の E から F までに相当します。</li>                                                                                                                                                                              |
 | task_kind                                                                         | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                                                                                                                                                                                                                                                                   |
-| rtt                                                                                                    | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。 </li>                                                                                                                 |
+| rtt                                                                                                    | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。 旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。</li>                                                                                                                 |
 | extra                                                                                                  | コンテキストに関連する追加情報 (ORDAリクエストの場合、データクラス名や属性名など)                                                                                                                                                                                                                                                                                                                               |
 
 リクエストフロー:
@@ -315,21 +315,21 @@ SET DATABASE PARAMETER(SMTP Log;1) // SMTPログを開始
 
 このログを開始するには:
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### 内容
 

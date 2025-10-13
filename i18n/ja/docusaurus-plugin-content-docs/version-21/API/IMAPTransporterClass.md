@@ -652,7 +652,7 @@ End if
 
 #### 説明
 
-`.expunge()` 関数は、<!-- REF #IMAPTransporterClass.expunge().Summary -->"deleted" フラグがつけられたメッセージをすべて IMAP メールサーバーから削除します<!-- END REF -->。"deleted" フラグは、[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
+`.expunge()` 関数は <!-- REF #IMAPTransporterClass.expunge().Summary -->IMAPメールサーバーから "deleted "フラグのついたメッセー ジをすべて削除します。<!-- END REF --> "deleted" フラグは[`.delete()`](#delete) または [`.addFlags()`](#addflags) 関数によって設定可能です。
 
 **返されるオブジェクト**
 
@@ -798,7 +798,7 @@ $status:=$transporter.expunge()
 | \[].name        | Text    | メールボックスの名称。 withBoxProperties=true または withBoxInfo=true の場合に返されます                                                                                                                                                                                                        |
 | \[].selectable  | Boolean | アクセス権でメールボックスを選択できるかどうかを表します:<ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                         |
 | \[].inferior    | Boolean | アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します:<ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul>withBoxProperties=true の場合に返されます                                                                                                                |
-| \[].interesting | Boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します:<ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 たとえば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから "interesting" のマーク付けをされていません。</li></ul>withBoxProperties=true の場合に返されます |
+| \[].interesting | Boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します:<ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 例えば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから "interesting" のマーク付けをされていません。</li></ul>	withBoxProperties=true の場合に返されます |
 | [].mailCount     | Number  | 受信ボックス内のメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                              |
 | [].mailRecent    | Number  | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                |
 | [].mailUnseen    | Number  | "unseen" フラグがついたメッセージの数。 withBoxInfo=true の場合に返されます                                                                                                                                                                                                                      |

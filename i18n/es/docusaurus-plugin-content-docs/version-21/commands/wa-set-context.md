@@ -21,7 +21,7 @@ El comando `WA SET CONTEXT` <!--REF #_command_.WA SET CONTEXT.Summary--> define 
 
 :::note
 
-El comando solo es utilizable con un área web integrada en la que los parámetros [**Utilizar el motor de renderizado web integrado**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) y **Acceder a los métodos 4D** estén configurados como `true`.
+The command is only usable with an embedded web area where the [**Use embedded web rendering engine**](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) and **Access 4D methods** parameters are set to `true`.
 
 :::
 

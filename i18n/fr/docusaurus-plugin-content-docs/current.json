@@ -1201,7 +1201,7 @@
   },
   "sidebar.docs.link.Build4D": {
     "message": "Build4D",
-    "description": "The label for link Build4D in sidebar docs, linking to https://github.com/4d-depot/Build4D?tab=readme-ov-file#readme"
+    "description": "The label for link Build4D in sidebar docs, linking to https://github.com/4d/Build4D"
   },
   "sidebar.docs.doc.Log Files": {
     "message": "Fichiers journaux",

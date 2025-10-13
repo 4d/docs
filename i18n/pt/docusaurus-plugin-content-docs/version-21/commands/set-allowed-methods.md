@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Summary-->O comando **SET ALLOWED METHODS** designa os métodos projeto que podem ser inseridos por meio da aplicação.<!-- END REF-->
 
 4D includes a security mechanism that filters enterable project methods from the following contexts:
 
