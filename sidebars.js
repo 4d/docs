@@ -1318,6 +1318,7 @@ module.exports =
                 "aikit/Classes/openaimoderationsapi",
                 "aikit/Classes/openaiparameters",
                 "aikit/Classes/openairesult",
+                "aikit/Classes/openaitool",
                 "aikit/Classes/openaivision",
                 "aikit/Classes/openaivisionhelper"
               ]
