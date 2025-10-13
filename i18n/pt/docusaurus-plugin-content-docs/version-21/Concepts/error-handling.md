@@ -21,11 +21,11 @@ Basicamente, há duas maneiras de lidar com erros em 4D. Pode:
 
 :::
 
-## Erro ou status
+## Predictable vs unpredictable errors
 
-Muitas funções de classe 4D, tais como `entity.save()` ou `transporter.send()`, retornam um objeto de *status*. Este objecto é utilizado para armazenar erros "previsíveis" no contexto do tempo de execução, por exemplo, palavra-passe inválida, entidade bloqueada, etc., que não interrompem a execução do programa. Esta categoria de erros pode ser tratada por código normal.
+Many 4D class functions, such as [`entity.save()`](../API/EntityClass.md#save) or [`transporter.send()`](../API/SMTPTransporterClass.md#send), return a object containing *status* information. This object is used to store **predictable** errors in the runtime context, e.g. invalid password, locked entity, etc., that do not require to stop program execution. This category of errors, also named **silent errors** errors, can be handled by regular code. When such errors occur in an error handling context, i.e. a [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or an [error-handling method](#installing-an-error-handling-method), they do not interrupt the execution and do not trigger the error handling (e.g. the `Catch` part of the [`Try/Catch`](#trycatchend-try) is not executed). They are not listed in the [`Last errors`](../commands/last-errors.md) collection. The error is only returned in the `status` and `statusText` properties of the returned object. It can be processed according to your business logic.
 
-Outros erros "imprevisíveis" incluem erro de gravação em disco, falha de rede, ou em geral qualquer interrupção inesperada. Essa categoria de erros gera exceções definidas por [um *código*, uma *mensagem* e uma *assinatura*](#error-codes) e precisa ser tratada por um método de tratamento de erros ou de uma palavra-chave `Try()`.
+The other category of errors are **unpredictable** errors, also named **serious errors**. They include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes). They interrupt the execution and trigger the error processing of the [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or [error-handling method](#installing-an-error-handling-method) features. They are listed in the [`Last errors`](../commands/last-errors.md) collection. Note that serious errors can also return values in the `status` and `statusText` properties, e.g. `dk status serious error` - "Other error".
 
 ## Instalação de um método de gestão de erros
 
@@ -92,7 +92,7 @@ Within the custom error method, you have access to several pieces of information
 
 :::info
 
-4D mantém automaticamente um número de variáveis chamadas [**variáveis sistema**](variables.md#system-variables), indo ao encontro de necessidades diferentes.
+4D automatically maintains a number of variables called [**system variables**](variables.md#system-variables), meeting different needs.
 :::
 
 - o comando [`Last errors`](../commands/last-errors.md) que retorna uma coleção da pilha de erros atual que ocorreu na aplicação 4D.

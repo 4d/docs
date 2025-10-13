@@ -11,7 +11,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo          |                             | Descripción                                                                                                                              |
 | ---------- | ------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| expression | Expression    | &#8594; | Expresión a convertir en cadena (puede ser Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, o Null) |
+| expresión  | Expression    | &#8594; | Expresión a convertir en cadena (puede ser Real, Integer, Long Integer, Date, Time, Text, Boolean, Undefined, o Null) |
 | format     | Integer, Text | &#8594; | Formato de visualización                                                                                                                 |
 | addTime    | Time          | &#8594; | Hora a combinar si *expression* es una fecha                                                                                             |
 | base       | Integer       | &#8594; | Valor entre 2 y 36 que representa la base si *expression* es un número                                                                   |
@@ -56,7 +56,7 @@ Si no se pasa el parámetro opcional *format*, la cadena se devuelve con el form
 
 El formato se especifica del mismo modo que se haría para una [entrada numérica en un formulario](../FormObjects/properties_Display.md#number-format). También puede pasar el nombre de un estilo personalizado en *format*. El nombre del estilo personalizado debe ir precedido del caracter `|`. He aquí algunos ejemplos:
 
-| **Ejemplo**                                                                         | **Resultado**                     | **Comentarios**                                    |
+| **Ejemplo**                                                                         | **Resultado**                     | **Comments**                                       |
 | ----------------------------------------------------------------------------------- | --------------------------------- | -------------------------------------------------- |
 | String(2^15)                                                     | "32768"                           | Formato por defecto                                |
 | String(2^15;"###,##0 Inhabitants")                               | "32,768 Inhabitants"              |                                                    |
@@ -94,7 +94,7 @@ Si pasa 0 en *base*, el comando determina la base dependiendo del valor de *expr
 
 :::
 
-| **Ejemplo**                                               | **Resultado** | **Comentarios**                                  |
+| **Ejemplo**                                               | **Resultado** | **Comments**                                     |
 | --------------------------------------------------------- | ------------- | ------------------------------------------------ |
 | String(10;2)                           | "1010"        | cadena binaria                                   |
 | String(-10;2)                          | "-1010"       | cadena binaria (negativa)     |

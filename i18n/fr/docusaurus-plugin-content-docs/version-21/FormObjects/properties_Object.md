@@ -90,9 +90,9 @@ Les variables ou expressions peuvent être saisissables ou non saisissables et p
 
 #### Grammaire JSON
 
-| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                                                |
-| ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | texte, ou tableau de textes | <li>variable, nom de champ, ou toute expression 4D.</li><li>Chaîne vide pour [variables dynamiques](#dynamic-variables).</li><li>Tableau de chaînes (collection de noms de tableau) pour une [colonne de listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes)</li> |
+| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                         |
+| ---------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | texte, ou tableau de textes | <li>4D variable, field name, or any expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
 
 ### Expressions
 
@@ -178,7 +178,7 @@ Saisissez une expression qui renvoie une collection ou une entity selection. En 
 La collection ou l'entity selection doit être disponible pour le formulaire lors de son chargement. Chaque élément de la collection ou de chaque entité de l'entity selection sera associé(e) à une ligne de list box et sera disponible en tant qu'objet via le mot-clé [`This`](../Concepts/classes.md#this) :
 
 - si vous avez utilisé une collection d'objets, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur de propriété, par exemple `This.<propertyPath>`.
-- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression detasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
+- si vous avez utilisé une entity selection, vous pouvez appeler **This** dans l'expression datasource pour accéder à chaque valeur d'attribut, par exemple `This.<attributePath>`.
 
 > Si vous avez utilisé une collection de valeurs scalaires (et non des objets), 4D vous permet d'afficher chaque valeur en appelant **This.value** dans l'expression datasource. Cependant, dans ce cas, vous ne pourrez pas modifier les valeurs ou accéder à l'objet courant (voir ci-dessous).
 

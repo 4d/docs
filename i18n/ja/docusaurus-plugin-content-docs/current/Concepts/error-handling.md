@@ -21,11 +21,11 @@ title: エラー処理
 
 :::
 
-## エラー/ステータス
+## Predictable vs unpredictable errors
 
-`entity.save()` や `transporter.send()` など、おおくの 4D クラス関数は *status* オブジェクトを返します。 ランタイムにおいて "想定される"、プログラムの実行を停止させないエラー (無効なパスワード、ロックされたエンティティなど) がこのオブジェクトに格納されます。 これらのエラーへの対応は、通常のコードによっておこなうことができます。
+Many 4D class functions, such as [`entity.save()`](../API/EntityClass.md#save) or [`transporter.send()`](../API/SMTPTransporterClass.md#send), return a object containing *status* information. This object is used to store **predictable** errors in the runtime context, e.g. invalid password, locked entity, etc., that do not require to stop program execution. This category of errors, also named **silent errors** errors, can be handled by regular code. When such errors occur in an error handling context, i.e. a [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or an [error-handling method](#installing-an-error-handling-method), they do not interrupt the execution and do not trigger the error handling (e.g. the `Catch` part of the [`Try/Catch`](#trycatchend-try) is not executed). They are not listed in the [`Last errors`](../commands/last-errors.md) collection. The error is only returned in the `status` and `statusText` properties of the returned object. It can be processed according to your business logic.
 
-ディスク書き込みエラーやネットワークの問題などのイレギュラーな中断は "想定されない" エラーです。 このカテゴリーのエラーは[*コード*、*メッセージ* そして*署名*](#エラーコード) によって定義される例外を生成するため、エラー処理メソッドまたは `Try()` キーワードを通して管理する必要があります。
+The other category of errors are **unpredictable** errors, also named **serious errors**. They include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes). They interrupt the execution and trigger the error processing of the [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or [error-handling method](#installing-an-error-handling-method) features. They are listed in the [`Last errors`](../commands/last-errors.md) collection. Note that serious errors can also return values in the `status` and `statusText` properties, e.g. `dk status serious error` - "Other error".
 
 ## エラー処理メソッドの実装
 
