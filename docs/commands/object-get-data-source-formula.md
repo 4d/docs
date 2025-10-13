@@ -1,6 +1,7 @@
 ---
 id: object-get-data-source-formula
 title: OBJECT Get data source formula
+displayed_sidebar: docs
 ---
 
 <!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : 4D.Formula<!-- END REF-->
