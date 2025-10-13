@@ -458,7 +458,7 @@ Las llaves soportadas en los archivos `Info.plist` de los componentes son en su 
 
 Se pueden definir las siguientes teclas:
 
-| tecla                                                      | descripción                                                                                                                                                                                      |
+| key                                                        | description                                                                                                                                                                                      |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | CFBundleName                                               | Nombre del componente (interno)                                                                                                                                               |
 | CFBundleDisplayName                                        | Nombre del componente a mostrar                                                                                                                                                                  |

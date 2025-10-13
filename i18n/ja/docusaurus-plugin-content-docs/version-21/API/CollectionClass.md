@@ -3222,14 +3222,14 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
 You can also pass one of the following constants in the *ascOrDesc* parameter:
 
-```
-|Constant|	Type|Value|Comment|
-|---|---|---|---|
-|ck ascending|Integer|0|Elements are ordered in ascending order (default)|
-|ck descending|Integer|1|Elements are ordered in descending order|
-
-This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
-```
+ ```
+ |Constant|	Type|Value|Comment|
+ |---|---|---|---|
+ |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+ |ck descending|Integer|1|Elements are ordered in descending order|
+ 
+ This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+ ```
 
 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 

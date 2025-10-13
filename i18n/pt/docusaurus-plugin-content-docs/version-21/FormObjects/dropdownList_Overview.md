@@ -72,7 +72,7 @@ Uma [array](Concepts/arrays.md) é uma lista de valores na memória que é refer
 
 Para inicializar o array associado à lista pendente, pode:
 
-- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Fonte de dados](properties_DataSource.md) da Lista de Propriedades. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
+- Insira uma lista de valores padrão nas propriedades do objeto selecionando `\<Static List>` no tema [Fonte de dados](properties_DataSource.md) da Property List. Os valores padrão são carregados em um array automático. Pode fazer uma referência ao array usando o nome da variável associado com o objeto.
 
 - Antes que o objeto seja exibido, execute um código que atribua valores aos elementos do array. Por exemplo:
 

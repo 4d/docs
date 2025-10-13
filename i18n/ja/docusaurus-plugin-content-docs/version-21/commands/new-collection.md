@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-`New collection` コマンドは、<!--REF #_command_.New collection.Summary-->新しい空の、または値が既に入れられたコレクションを作成し、その参照を返します。<!-- END REF-->コレクションは、[Collection クラス API](../API/CollectionClass.md)のプロパティや関数を使用して操作することができます。
+`New collection` コマンドは、<!--REF #_command_.New collection.Summary-->空の、あるいは値の入った新規コレクションを作成し、その参照を返します。<!-- END REF--> コレクションは、[Collection クラス API](../API/CollectionClass.md) のプロパティや関数を使用して操作することができます。
 
 引数を渡さなかった場合、`New collection` は空のコレクションを作成し、その参照を返します。
 
