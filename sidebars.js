@@ -823,6 +823,11 @@ module.exports =
                   ]
         },
         {
+          type: "link",
+          label: "4D Qodly Pro",
+          href: "https://developer.4d.com/qodly/"
+        },        
+        {
           type: "category",
           label: "4D View Pro",
           link: {

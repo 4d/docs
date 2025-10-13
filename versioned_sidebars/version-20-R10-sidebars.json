@@ -2851,7 +2851,12 @@
             "items": [
                   "Extensions/develop-components",
                   "Extensions/develop-plug-ins"
-                     ]
+             ]
+        },
+        {
+          "type": "link",
+          "label": "4D Qodly Pro",
+          "href": "https://developer.4d.com/qodly/"
         },
         {
           "type": "category",
