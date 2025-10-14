@@ -683,19 +683,19 @@
     "message": "Structure de la base de données"
   },
   "Code & Methods": {
-    "message": "Code & Methods"
+    "message": "Code et méthodes"
   },
   "Dependencies": {
-    "message": "Dependencies"
+    "message": "Dépendances"
   },
   "Compilation": {
     "message": "Compilation"
   },
   "Application Builder": {
-    "message": "Application Builder"
+    "message": "Générateur d'applications"
   },
   "Application Preferences": {
-    "message": "Application Preferences"
+    "message": "Préférences de l'application"
   },
   "Concepts": {
     "message": "Concepts"
@@ -758,7 +758,7 @@
     "message": "Build4D"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "mode système",
     "description": "The name for the system color mode"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {

@@ -1,6 +1,7 @@
 ---
 id: listbox-get-property
 title: LISTBOX Get property
+displayed_sidebar: docs
 ---
 
 <!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->

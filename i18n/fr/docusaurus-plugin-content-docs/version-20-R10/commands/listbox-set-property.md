@@ -1,6 +1,7 @@
 ---
 id: listbox-set-property
 title: LISTBOX SET PROPERTY
+displayed_sidebar: docs
 ---
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( {* ;} *object* ; *property* ; *value* )<!-- END REF-->

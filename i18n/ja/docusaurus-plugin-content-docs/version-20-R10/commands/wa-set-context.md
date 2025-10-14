@@ -1,6 +1,7 @@
 ---
 id: wa-set-context
 title: WA SET CONTEXT
+displayed_sidebar: docs
 ---
 
 <!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( {* ;} *object* ; *contextObj* )<!-- END REF-->

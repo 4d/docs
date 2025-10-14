@@ -91,7 +91,7 @@ No caso de uma modificação, você precisa reiniciar o aplicativo para que a al
 
 #### Tempo para desconectar cliente-servidor
 
-::nota
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer is selected.
 
@@ -109,7 +109,7 @@ Quando essa opção estiver marcada, todas as máquinas remotas 4D conectando à
 
 #### Encriptar as comunicações cliente-servidor
 
-::nota
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer option is selected.
 
