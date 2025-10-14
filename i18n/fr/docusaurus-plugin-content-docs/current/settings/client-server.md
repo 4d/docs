@@ -90,7 +90,7 @@ En cas de modification, vous devez redémarrer l'application pour que le changem
 
 #### Délai avant déconnexion Client-Serveur
 
-::note
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer is selected.
 
@@ -108,7 +108,7 @@ Lorsque cette option est cochée, toutes les machines distantes 4D se connectant
 
 #### Crypter les communications Client-Serveur
 
-::note
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer option is selected.
 

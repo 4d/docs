@@ -1128,7 +1128,7 @@
     "description": "The generated-index page title for category XML in sidebar docs"
   },
   "sidebar.docs.category.Dababase structure": {
-    "message": "Dababase structure",
+    "message": "Structure de la base de données",
     "description": "The label for category Dababase structure in sidebar docs"
   },
   "sidebar.docs.category.4D AIKit": {
@@ -1156,11 +1156,11 @@
     "description": "The generated-index page title for category Project & IDE in sidebar docs"
   },
   "sidebar.docs.category.Code & Methods": {
-    "message": "Code & Methods",
+    "message": "Code et méthodes",
     "description": "The label for category Code & Methods in sidebar docs"
   },
   "sidebar.docs.category.Application Preferences": {
-    "message": "Application Preferences",
+    "message": "Préférences de l'application",
     "description": "The label for category Application Preferences in sidebar docs"
   },
   "sidebar.docs.category.Commands by theme": {
