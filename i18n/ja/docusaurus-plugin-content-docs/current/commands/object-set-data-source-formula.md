@@ -1,6 +1,7 @@
 ---
 id: object-set-data-source-formula
 title: OBJECT SET DATA SOURCE FORMULA
+displayed_sidebar: docs
 ---
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( {* ;} *object* ; *formula* )<!-- END REF-->

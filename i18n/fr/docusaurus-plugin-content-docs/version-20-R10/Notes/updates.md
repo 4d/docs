@@ -9,29 +9,29 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fe-whats-new-in-4d-
 
 #### Points forts
 
-- Handling of [ORDA events on data](../ORDA/orda-events.md).
+- Gestion des [événements ORDA sur les données](../ORDA/orda-events.md).
 - Nouvelle option `connectionTimeout` dans le paramètre [`options`](../API/TCPConnectionClass.md#options-parameter) de la fonction [`4D.TCPConnection.new()`](../API/TCPConnectionClass.md#4dtcpconnectionnew).
-- New [`4D.Vector`](../API/VectorClass.md) class to process and compare vectors, usually calculated by AIs.
-- New options to generate UUIDs in **version 7** for [4D automatic fields](../settings/database.md#auto-uuid-version) and [`Generate UUID`](../commands/generate-uuid) command.
-- New [`UDPSocket`](../API/UDPSocketClass.md) and [`UDPEvent`](../API/UDPEventClass.md) classes to send data using UDP sockets. Support of detailed logging for UDP events in the [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) log file (renamed from `4DTCPLog.txt`).
-- New [`.promote()`](../API/SessionClass.md#promote) and [`.demote()`](../API/SessionClass.md#demote) functions in the [Session class](../API/SessionClass.md) to dynamically add/remove privileges in a web process.
-- [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
-- Enhanced security for formula copy/paste in [4D Write Pro](../WritePro/managing-formulas.md) and [styled text areas](../FormObjects/input_overview.md): formulas copied from outside the current 4D application are now always pasted as values only.
-- 4D AIKit component: new [OpenAIEmbeddingsAPI class](../aikit/Classes/OpenAIEmbeddingsAPI.md) to create embeddings using OpenAI's API.
-- You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
-- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
-- Langage 4D:
+- Nouvelle classe [`4D.Vector`](../API/VectorClass.md) pour traiter et comparer des vecteurs, généralement calculés par des IA.
+- Nouvelles options pour générer des UUIDs en **version 7** pour les [champs 4D automatiques](../settings/database.md#auto-uuid-version) et la commande [`Generate UUID`](../commands/generate-uuid).
+- Nouvelles classes [`UDPSocket`](../API/UDPSocketClass.md) et [`UDPEvent`](../API/UDPEventClass.md) pour envoyer des données en utilisant des sockets UDP. Prise en charge de la journalisation détaillée des événements UDP dans le fichier journal [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) (anciennement nommé `4DTCPLog.txt`).
+- Nouvelles fonctions [`.promote()`](../API/SessionClass.md#promote) et [`.demote()`](../API/SessionClass.md#demote) dans la [classe Session](../API/SessionClass.md) pour ajouter/supprimer dynamiquement des privilèges dans un process web.
+- [Sélection automatique des licences à intégrer](../Desktop/building.md#application-automatically-embedding-available-licenses) dans la boîte de dialogue du Générateur d'application, modification de la commande [`Create deployment license`](../commands/create-deployment-license.md), nouvelle clé xml BuildApplication [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html).
+- Sécurité renforcée pour le copier/coller de formules dans [4D Write Pro](../WritePro/managing-formulas.md) et les [zones de texte stylées](../FormObjects/input_overview.md) : les formules copiées depuis l'extérieur de l'application 4D en cours sont désormais toujours collées en tant que valeurs uniquement.
+- Composant 4D AIKit : nouvelle classe [OpenAIEmbeddingsAPI](../aikit/Classes/OpenAIEmbeddingsAPI.md) pour créer des embeddings à l'aide de l'API OpenAI.
+- Vous pouvez [associer une classe](../Develop/field-properties.md) à un champ objet dans l'éditeur de structure.
+- Gestion automatique des [dépendances récursives](../Project/components.md#automatic-dependency-resolution).
+- Langage 4D :
   - Pour des raisons de cohérence, les commandes [`Create entity selection`](../commands/create-entity-selection.md) et [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) ont été déplacées du thème ["4D Environnement"](../commands/theme/4D_Environment.md) vers le thème ["Sélections"](../commands/theme/Selection.md).
   - Nouvelles commandes [`OBJET SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) et [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) pour assigner et lire les objets `Formula` comme sources de données pour les objets de formulaire.
   - [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) et [`LISTBOX Get property`](../commands/listbox-get-property.md) prennent en charge trois nouvelles constantes : `lk current item`, `lk current item position`, et `lk selected items expression`.
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=20_R10): list of all bugs that have been fixed in 4D 20 R10.
+- [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R10) : liste de tous les bugs qui ont été corrigés dans 4D 20 R10.
 
 #### Changements de comportement
 
 - Sous Windows, les polices d'imprimante courantes destinées uniquement à l'impression (c'est-à-dire non utilisables à l'écran) ne sont plus chargées par 4D au démarrage.
-- The *MeCab* library has been removed. This change only affects the processing of Japanese text.
-- When an object variable or parameter is declared with a ["cs" class](../Concepts/classes.md#cs) type, assigning it with an object instance of a different class now generates a syntax error.
-- The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will return **-01:02:03**. In previous releases, the negative sign was ignored.
+- La bibliothèque *MeCab* a été supprimée. Cette modification n'affecte que le traitement du texte japonais.
+- Lorsqu'une variable objet ou un paramètre objet est déclaré(e) avec un type ["cs" class](../Concepts/classes.md#cs), son affectation à une instance d'objet d'une classe différente génère désormais une erreur de syntaxe.
+- La commande [`Time`](../commands/time) renvoie désormais une expression temporelle négative lorsque le paramètre *timeValue* est négatif. Par exemple, `Time("-01:02:03")` renverra **-01:02:03**. Dans les versions précédentes, le signe moins était ignoré.
 
 ## 4D 20 R9
 
@@ -42,7 +42,7 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fe-whats-new-in-4d-2
 - La bibliothèque [*MeCab*](../settings/database.md#support-of-mecab-japanese-version) est désormais obsolète et sera supprimée dans la prochaine version.
 - Prise en charge des [tokens de session](../WebServer/sessions.md#session-token-otp) gérés avec les nouvelles fonctions [`Session.createOTP()`](../API/SessionClass.md#createotp) et [`Session.restore()`](../API/SessionClass.md#restore).
 - L'assistant d'étiquettes utilise maintenant l'éditeur de formules pour ajouter ou éditer des formules dans la [zone de construction du modèle](../Desktop/labels.md#label-preview).
-- New [`TCPListener`](../API/TCPListenerClass.md) class to create TCP server connections; new properties in related classes: `address`, `listener` and `port` in [`TCPConnection`](../API/TCPConnectionClass.md) class, `address` and `port` in [`TCPEvent`](../API/TCPEventClass.md) class.
+- Nouvelle classe [`TCPListener`](../API/TCPListenerClass.md) pour créer des connexions à un serveur TCP ; nouvelles propriétés dans les classes associées : `address`, `listener` et `port` dans la classe [`TCPConnection`](../API/TCPConnectionClass.md), `address` et `port` dans la classe [`TCPEvent`](../API/TCPEventClass.md).
 - Les commandes et constantes obsolètes génèrent maintenant des warnings spécifiques dans le [live checker et le compilateur](../code-editor/write-class-method.md#warnings-and-errors). Vous pouvez savoir si une commande est obsolète en utilisant la commande [`Command name`](../commands/command-name.md).
 - Nouvelles commandes [WA SET CONTEXT](../commands/wa-set-context.md) et [WA Get context](../commands/wa-get-context.md) pour contrôler le contenu de [$4d](../FormObjects/webArea_overview.md#4d-object) dans les zones web.
 - Nouveau paramètre de base de données [`RDP optimization`](../commands-legacy/set-database-parameter.md#rdp-optimization-133) pour optimiser par exemple le presse-papiers partagé lors de l'utilisation du protocole de bureau distant avec 4D.
@@ -74,7 +74,7 @@ Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fe-whats-new-in-4d-2
   - Les commandes suivantes acceptent maintenant des paramètres tels que des objets ou des collections : [WP SET ATTRIBUTES](../WritePro/commands/wp-set-attributes.md), [WP Get Attributes](../WritePro/commands/wp-get-attributes.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md), [WP Table append row](../WritePro/commands/wp-table-append-row.md), [WP Import document](../WritePro/commands/wp-import-document.md), [WP EXPORT DOCUMENT](../WritePro/commands/wp-export-document.md), [WP Add picture](../WritePro/commands/wp-add-picture.md), et [WP Insert picture] (../WritePro/commands/wp-insert-picture.md).
   - [WP Insert formula](../WritePro/commands/wp-insert-formula.md), [WP Insert document body](../WritePro/commands/wp-insert-document-body.md), et [WP Insert break](../WritePro/commands/wp-insert-break.md), sont maintenant des fonctions qui retournent des plages.
   - Nouvelles expressions liées aux attributs de documents : [This.sectionIndex](../WritePro/managing-formulas.md), [This.sectionName](../WritePro/managing-formulas.md) et [This.pageIndex](../WritePro/managing-formulas.md).
-- Langage 4D:
+- Langage 4D :
   - Commande modifiée : [`FORM EDIT`](../commands/form-edit.md)
   - Les fonctions [`.sign()`](../API/CryptoKeyClass.md#sign) et [`.verify()`](../API/CryptoKeyClass.md#verify) de la [classe 4D.CryptoKey](../API/CryptoKeyClass.md) prennent en charge des Blobs dans le paramètre *message*.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R8) : liste de tous les bugs qui ont été corrigés dans 4D 20 R8.
@@ -100,10 +100,10 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Qodly Studio : Vous pouvez maintenant [attacher le débogueur Qodly à 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
-- Langage 4D:
+- Langage 4D :
   - Nouvelles commandes : [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
   - Commandes modifiées : [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
-  - Deprecated commands (replacement): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md)), `GET SERIAL INFORMATION` ([License info](../commands/license-info.md)), `PROCESS PROPERTIES` ([Process info](../commands/process-info.md)), `SET SCREEN DEPTH`, `C_XXX` commands ([var](../Concepts/variables.md#declaring-variables) and [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters) declarations). Deprecated commands are prefixed with "\*O\*".
+  - Commandes obsolètes (remplacement) : `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md)), `GET SERIAL INFORMATION` ([License info](../commands/license-info.md)), `PROCESS PROPERTIES` ([Process info](../commands/process-info.md)), `SET SCREEN DEPTH`, `C_XXX` commands ([var](../Concepts/variables.md#declaring-variables) et [#DECLARE/déclarations Function](../Concepts/parameters.md#declaring-parameters) ). Les commandes obsolètes sont précédées du préfixe "\*O\*".
 - 4D Write Pro :
   - Nouvelle commande : [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - Commandes modifiées : [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md), [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
