@@ -15,7 +15,7 @@ Two drag modes are available:
 In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme. 
 - **Automatic**: In this mode, 4D **copies** text or pictures directly from the form object. It can then be used in the same 4D area, between two 4D areas, or between 4D and another application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:  
 ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
-![](../assets/en/FormObjects/property_automaticDragDrop2.png)
+![](../assets/en/FormObjects/property_automaticDragDrop2.png)<br/>
 In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. This option is not available for pictures.
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) in the *4D Language Reference* manual.
