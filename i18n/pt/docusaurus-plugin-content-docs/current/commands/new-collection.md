@@ -1,6 +1,6 @@
 ---
 id: new-collection
-title: Nova coleção
+title: New collection
 displayed_sidebar: docs
 ---
 
