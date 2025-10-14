@@ -244,7 +244,7 @@ The following standard actions are available with 4D Write Pro areas.
   
 ### Other actions 
 
-Several other standard actions are available in 4D forms and can be used in 4D Write Pro areas:
+[Several other standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) are available in 4D forms and can be used in 4D Write Pro areas:
 
 * *Edit actions*, such as copy/paste actions.
 * *Font* actions, such as fontBold or fontSize.
