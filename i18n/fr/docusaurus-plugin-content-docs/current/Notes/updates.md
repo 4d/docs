@@ -160,29 +160,29 @@ In binary databases, you need to select the required components in the 4D instal
 
 #### Developer Preview
 
-[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
+Le [rendu **Fluent UI** pour les formulaires 4D](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) est proposé en Developer Preview pendant le programme de bêta-test.
 
 #### Changements de comportement
 
-:::caution Index rebuild
+:::caution Reconstruction d'index
 
-4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
+4D 21 inclut une mise à jour de la bibliothèque ICU ([voir ci-dessous](#library-table)) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
 
 :::
 
-- Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
-- Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
-- Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
-- The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
-- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview-old.md)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
+- Services web (SOAP) : lorsque les [sessions évolutives](../WebServer/sessions.md#enabling-web-sessions) sont activées, les services web s'exécutent désormais dans des [**process préemptifs**](../Develop/preemptive.md) en mode compilé. Assurez-vous que votre code SOAP est thread-safe.
+- Serveur web : la prise en charge des URLs dépréciés `4DSYNC/` et `4DCGI/` est supprimée. Plus aucun traitement spécifique n'est effectué sur ces URLs.
+- Les sessions utilisateurs Web sont désormais renvoyées par [`Process activity`](../commands/process-activity.md).
+- La commande [`HIGHLIGHT TEXT`](../commands/highlight-text) est maintenant prise en charge dans le contexte des sous-formulaires.
+- **Les composants ne sont plus intégrés** : à partir de 4D 21, les composants développés par 4D (4D NetKit, 4D SVG..., voir [cette liste](../Extensions/overview-old.md)) ne sont plus intégrés dans l'application 4D. Lors de la mise à jour d'un projet vers 4D 21 ou supérieur, une boîte de dialogue s'affiche :<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
-  \- **Import**: import automatically 4D components as dependencies to the project<br/>
-  \- **Ignore**: do not import components and let you [manage components manually](../Project/components.md)<br/>
-  \- **Ask later**: do not import components and display the dialog at the next project opening.
+  \- **Import**/**Importer** : importer automatiquement les composants 4D comme dépendances du projet<br/>
+  \- **Ignore**/**Ignorer** : ne pas importer les composants et vous laisser [gérer les composants manuellement](../Project/components.md)<br/>
+  \- **Ask later**/**Redemander** : ne pas importer les composants et afficher la boîte de dialogue lors de la prochaine ouverture du projet.
 
 :::note
 
-In binary databases, you need to select the required components in the 4D installer or download them from the [4D Product Download portal](https://product-download.4d.com/?type=components).
+Dans les bases de données binaires, vous devez sélectionner les composants requis dans le programme d'installation de 4D ou les télécharger à partir du [portail de téléchargement des produits 4D](https://product-download.4d.com/?type=components).
 
 :::
 
