@@ -1,6 +1,7 @@
 ---
 id: wa-get-context
 title: WA Get context
+displayed_sidebar: docs
 ---
 
 <!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( {* ;} *object* ) -> *contextObj*<!-- END REF-->

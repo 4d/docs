@@ -37,6 +37,14 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 
 :::
 
+:::tip Related blog posts
+
+- [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+- [Permissions : Inspecter les privilèges de la session pour faciliter le débogage](https://blog.4d.com/permissions-inspect-session-privileges-for-easy-debugging/)
+- [Générer, partager et utiliser des passcodes à usage unique (OTP) pour les sessions web](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
 ### Types de sessions
 
 Les types de sessions suivants sont pris en charge par cette classe :

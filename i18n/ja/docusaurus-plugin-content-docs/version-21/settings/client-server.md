@@ -89,7 +89,7 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
 
 #### クライアント/サーバー接続タイムアウト
 
-::note
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer is selected.
 
@@ -107,7 +107,7 @@ This option is not available when the [QUIC](#network-layer) network layer is se
 
 #### クライアント-サーバー通信の暗号化
 
-::note
+:::note
 
 This option is not available when the [QUIC](#network-layer) network layer option is selected.
 

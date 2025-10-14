@@ -1373,6 +1373,11 @@ module.exports =
         },
        {
           type: "link",
+          label: "4D Mobile App Server",
+          href: "https://github.com/4d/4D-Mobile-App-Server/blob/main/README.md"
+        },
+       {
+          type: "link",
           label: "Build4D",
           href: "https://github.com/4d/Build4D"
        }

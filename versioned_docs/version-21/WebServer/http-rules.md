@@ -70,12 +70,18 @@ The following action keywords are supported:
 
 ### Non-modifiable headers
 
-The following headers could not be modified by the `removeHeaders`, `setHeaders`, or `addHeaders` actions: 
+Some headers could not be added, modified or removed: 
 
-- "Date", 
-- "Content-Length"
+|Header|Add|Set|Remove|
+|---|---|---|---|
+|Date|No|No|No|
+|Content-Length|No|No|No|
+|Content-Encoding|No|No|No|
+|Vary|Yes|No|No|
+|Set-Cookie|Yes|Add cookie|No|
 
-Modifying these headers do not generate errors, however modifications will be ignored.   
+Unauthorized changes on these headers do not generate errors, however modifications will be ignored. 
+
 
 ### Current rules
 
