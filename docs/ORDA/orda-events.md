@@ -122,7 +122,7 @@ When an error occurs in an event, the other events are stopped at the first rais
 |errCode|Integer|Same as for [`Last errors`](../commands/last-errors.md) command|Yes|
 |message|Text|Same as for [`Last errors`](../commands/last-errors.md) command|Yes|
 |extraDescription|Object|Free information to set up|Yes|
-|seriousError|Boolean|Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Adds the `dk status validation failed` status</li>|Yes (default is false)|
+|seriousError|Boolean|Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>`False`: creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Adds the `dk status validation failed` status</li>|Yes (default is false)|
 |componentSignature|Text|Always "DBEV"|No|
 
 - [Serious errors](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.

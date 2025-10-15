@@ -30,7 +30,7 @@ ORDA entity events in the datastore are equivalent to triggers in the 4D databas
 
 ### Event level
 
-A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
+A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
 
 It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. 
 
@@ -57,7 +57,7 @@ With other remote configurations (i.e. Qodly applications, [REST API requests](.
 
 ### Summary table
 
-The following table lists ORDA events along with their rules. 
+The following table lists ORDA entity events along with their rules. 
 
 | Event  | Level    | Function name   |  (C/S) Executed on |
 | :--------------- |:--------------- | :----- | :-----: |
