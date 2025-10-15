@@ -27,7 +27,7 @@ Por ejemplo: `$filter="firstName=john AND salary>20000"` donde `firstName` y `sa
 
 ### Utilizar la propiedad params
 
-You can also use 4D's `params` property which is a collection of values.
+También puede utilizar la propiedad `params` de 4D, que es una colección de valores.
 
 **\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]'**
 

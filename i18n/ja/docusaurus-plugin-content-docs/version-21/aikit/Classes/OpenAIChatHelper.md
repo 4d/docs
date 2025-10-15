@@ -9,26 +9,26 @@ title: OpenAIChatHelper
 
 ## プロパティ
 
-| プロパティ名                | 型                                                                     | デフォルト値                                                 | 説明                                                                                                      |
-| --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `chat`                | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | Open AI との通信で使用されるチャットAPI インスタンス。                                                                       |
-| `systemPrompt`        | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | チャットアシスタントのレスポンスをガイドするためのシステムプロンプトメッセージ。                                                                |
-| `numberOfMessages`    | Integer                                                               | 15                                                     | チャット履歴に保持するメッセージの最大数。                                                                                   |
-| `引数`                  | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | OpenAI チャット補完リクエスト用のパラメーター。                                                                             |
-| `messages`            | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | [] | そのチャットセッション内でやりとりされたメッセージのコレクション。                                                                       |
-| `ツール`                 | Collection of [OpenAITool](OpenAITool.md)                             | [] | List of registered OpenAI tools for function calling.                                   |
-| `autoHandleToolCalls` | Boolean                                                               | true                                                   | Boolean indicating whether tool calls are handled automatically using registered tools. |
-| `lastErrors`          | Collection                                                            | -                                                      | Collection containing the last errors encountered during chat operations.               |
+| プロパティ名                | 型                                                                     | デフォルト値                                                 | 説明                                          |
+| --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------- |
+| `chat`                | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | Open AI との通信で使用されるチャットAPI インスタンス。           |
+| `systemPrompt`        | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | チャットアシスタントのレスポンスをガイドするためのシステムプロンプトメッセージ。    |
+| `numberOfMessages`    | Integer                                                               | 15                                                     | チャット履歴に保持するメッセージの最大数。                       |
+| `parameters`          | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | OpenAI チャット補完リクエスト用のパラメーター。                 |
+| `messages`            | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | [] | そのチャットセッション内でやりとりされたメッセージのコレクション。           |
+| `ツール`                 | [OpenAITool](OpenAITool.md) のコレクション                                   | [] | 関数呼び出し用に登録されたOpenAI ツールの一覧。                 |
+| `autoHandleToolCalls` | Boolean                                                               | true                                                   | 登録されたツールを使用してツール呼び出しを自動的に管理するかどうかをあらわすブール値。 |
+| `lastErrors`          | Collection                                                            | -                                                      | チャット操作中に発生した最後のエラーを格納したコレクション。              |
 
 ## Constructor
 
-To create a new `OpenAIChatHelper` instance, it's best to use the `create()` method from the [OpenAI client's chat API](OpenAIChatAPI.md):
+新しい `OpenAIChatHelper` インスタンスを作成するためには、[OpenAI クライアントのチャットAPI](OpenAIChatAPI.md)の `create()` メソッドを使用するのが最適です:
 
 ```4D
 var $chatHelper:=$client.chat.create("You are a helpful assistant.")
 ```
 
-This method creates a new chat helper with the specified system prompt and initializes it with default parameters. The system prompt defines the assistant's role and behavior throughout the conversation.
+このメソッドは指定されたシステムプロンプトで新しいチャットヘルパーを作成し、デフォルトの引数で初期化します。 このシステムプロンプトが会話の間全体の、アシスタントの役割と振る舞いを定義します。
 
 ## 関数
 
@@ -54,52 +54,52 @@ $result:=$chatHelper.prompt("Why 42?")
 
 **reset**()
 
-Resets the chat context by clearing all messages and unregistering all tools. This effectively starts a fresh conversation while keeping the system prompt and parameters intact.
+全てのメッセージを消去し、全てのツールの登録を解除することで、チャットコンテキストをリセットします。 これにより、システムのプロンプトとパラメータをそのままにしながら、効果的に新しい会話を始めることができます。
 
-#### Reset Example
+#### リセットの例
 
 ```4D
 $chatHelper.prompt("Hello!")
-$chatHelper.reset()  // Clear all previous messages and tools
+$chatHelper.reset()  // 以前のメッセージとツールを全て消去
 ```
 
 ### registerTool()
 
 **registerTool**(*tool* : Object; *handler* : Object)
 
-| 引数        | 型      | 説明                                                                                                                                                                                  |
-| --------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*    | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                                                             |
-| *handler* | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
+| 引数        | 型      | 説明                                                                                                                                                 |
+| --------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*    | Object | ツール定義オブジェクト(あるいは[OpenAITool](OpenAITool.md) インスタンス)                                                                             |
+| *handler* | Object | ツール呼び出しを管理する関数([4D.Function](../../API/FunctionClass.md) またはオブジェクト)、*tool* 内の *handler* プロパティで定義されている場合にはオプション。 |
 
-Registers a tool with its handler function for automatic tool call handling.
+自動ツール呼び出し関数のために、ツールとそのハンドラ関数を登録します。
 
-The *handler* parameter can be:
+*handler* 引数には以下のものを渡すことができます:
 
-- A **4D.Function**: Direct handler function
-- An **Object**: An object containing a `formula` property matching the tool function name
+- **4D.Function**: 直接ハンドラ関数
+- **オブジェクト**: ツール関数名と一致する `formula` プロパティを格納しているオブジェクト
 
-The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
+ハンドラー関数はOpenAI ツール呼び出しから渡された引数を格納しているオブジェクトを受け取ります。 オブジェクトは、ツールのスキーマで定義されたパラメーター名とキーが一致するキーと、AI モデルから提供された実際の引数である値との、キーと値のペアを格納しています。
 
-#### Register Tool Example
+#### ツールを登録する例題
 
 ```4D
-// Example 1: Simple registration with direct handler
+// Example 1: 直接ハンドラを使用したシンプルな登録
 var $tool:={type: "function"; function: {name: "get_weather"; description: "Get current weather"; parameters: {type: "object"; properties: {location: {type: "string"; description: "City name"}}}}}
 var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
 $chatHelper.registerTool($tool; $handler)
 
-// Example 2: Tool with handler property (no second parameter needed)
+// Example 2: プロパティを持つtool オブジェクトを使用(この場合第2に引数は不要です)
 var $tool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
 $chatHelper.registerTool($tool)
 
-// Example 3: Using object notation
+// Example 3: オブジェクト記法を使用する
 $chatHelper.registerTool({tool: $tool; handler: $handler})
 
-// Example 4: Handler as object with formula matching tool name
+// Example 4: ツール名と合致するフォーミュラを持ったオブジェクトとしてのハンドラ
 var $tool:={name: "getTime"; description: "Get current time"}
-var $handlerObj:=cs.MyTimeTool.new() // class with a getTime function
+var $handlerObj:=cs.MyTimeTool.new() // getTime 関数を持つクラス
 $chatHelper.registerTool($tool; $handlerObj)
 ```
 
@@ -107,19 +107,19 @@ $chatHelper.registerTool($tool; $handlerObj)
 
 **registerTools**(*toolsWithHandlers* : Variant)
 
-| 引数                  | 型       | 説明                                                       |
-| ------------------- | ------- | -------------------------------------------------------- |
-| *toolsWithHandlers* | Variant | Object or Collection containing tools and their handlers |
+| 引数                  | 型       | 説明                              |
+| ------------------- | ------- | ------------------------------- |
+| *toolsWithHandlers* | Variant | ツールとのそのハンドラを格納したオブジェクトまたはコレクション |
 
-Registers multiple tools at once. The parameter can be:
+複数のツールを一度に登録します。 引数には以下のものを渡すことができます:
 
-- **Collection**: Array of tool objects (with handlers embedded or separate)
-- **Object**: Object with function names as keys mapping to tool definitions
-- **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
+- **コレクション**: (ハンドラが埋め込んである、あるいは分離してある)ツールオブジェクトのコレクション
+- **オブジェクト**: 関数名がツール定義にマッピングされているキーとするオブジェクト
+- **`tools` 属性を持つオブジェクト**: `tools` コレクションと、ツール名に合致するフォーミュラプロパティを格納しているオブジェクト
 
-#### Register Multiple Tools Example
+#### 複数のツールを登録する例題
 
-##### Example 1: Collection format with handlers in tools
+##### 例 1: ツール内のハンドルを使用したコレクションフォーマット
 
 ```4D
 var $weatherTool:={name: "getWeather"; description: "Get current weather"; handler: Formula(return "Sunny, 25°C in "+$1.location)}
@@ -128,7 +128,7 @@ var $calculatorTool:={name: "calculate"; description: "Perform calculations"; ha
 $chatHelper.registerTools([$weatherTool; $calculatorTool])
 ```
 
-##### Example 2: Object format with separate tool and handler
+##### 例 2: 別個のツールとハンドラを使用したオブジェクトフォーマット
 
 ```4D
 var $toolsWithSeparateHandlers:={}
@@ -138,15 +138,15 @@ $toolsWithSeparateHandlers.calculate:={tool: $calculatorToolDefinition; handler:
 $chatHelper.registerTools($toolsWithSeparateHandlers)
 ```
 
-##### Example 3: Object with tools collection attribute and formula properties
+##### 例 3: tools コレクション属性とformula プロパティを持ったオブジェクト
 
-MyTools class:
+MyTools クラス:
 
 ```4D
 
 Class constructor
     this.tools:=[{name: "getWeather"; description: "Get current weather"}; \
-                 {name: "getTime"; description: "Get current time"}]  // Collection of tool definitions
+                 {name: "getTime"; description: "Get current time"}]  // ツール定義のコレクション
 
 Function getWeather($parameters: Object)
     return "Sunny, 25°C"
@@ -159,12 +159,12 @@ Function getTime($parameters: Object)
 $chatHelper.registerTools(cs.MyTools.new())
 ```
 
-##### Example 4: Simple object format with tools as properties
+##### 例 4: ツールをプロパティにもつシンプルなオブジェクトフォーマット
 
 ```4D
 var $tools:={}
-$tools.getWeather:=$weatherTool  // Tool with handler property
-$tools.calculate:=$calculatorTool  // Tool with handler property
+$tools.getWeather:=$weatherTool  // handler プロパティを持つTool 
+$tools.calculate:=$calculatorTool  // handler プロパティを持つTool
 
 $chatHelper.registerTools($tools)
 ```
@@ -173,28 +173,28 @@ $chatHelper.registerTools($tools)
 
 **unregisterTool**(*functionName* : Text)
 
-| 引数             | 型    | 説明                                          |
-| -------------- | ---- | ------------------------------------------- |
-| *functionName* | Text | The name of the function tool to unregister |
+| 引数             | 型    | 説明              |
+| -------------- | ---- | --------------- |
+| *functionName* | Text | 登録を解除したいツールの関数名 |
 
-Unregisters a specific tool by its function name. This removes the tool from the registered tools collection, clears its handler, and removes it from the parameters.
+特定のツールをその関数名で指定して登録解除します。 これによってツールは登録されたツールのコレクションから削除され、ハンドラも消去され、引数からも削除されます。
 
-#### Unregister Tool Example
+#### ツールを登録解除する例
 
 ```4D
 $chatHelper.registerTool($weatherTool; $weatherHandler)
-$chatHelper.unregisterTool("get_weather")  // Remove the weather tool
+$chatHelper.unregisterTool("get_weather")  // weather ツールを削除
 ```
 
 ### unregisterTools()
 
 **unregisterTools**()
 
-Unregisters all tools at once. This clears all tool handlers, empties the tools collection, and removes all tools from the parameters.
+全てのツールを一度に登録解除します。 これはすべてのツールハンドラを消去し、tools コレクションをからにし、そして引数からも全てのツールを削除します。
 
-#### Unregister All Tools Example
+#### 全てのツールを登録解除する例
 
 ```4D
 $chatHelper.registerTools($multipleTools)
-$chatHelper.unregisterTools()  // Remove all tools
+$chatHelper.unregisterTools()  // 全てのツールを削除
 ```

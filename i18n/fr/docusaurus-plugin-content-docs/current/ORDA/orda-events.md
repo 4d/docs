@@ -16,7 +16,7 @@ ORDA events are functions that are automatically invoked by ORDA each time entit
 
 You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
-:::tip Related blog post
+:::tip Article(s) de blog sur le sujet
 
 [ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-data-persistence-actions)
 

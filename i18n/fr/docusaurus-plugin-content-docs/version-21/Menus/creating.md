@@ -33,7 +33,7 @@ Vous pouvez modifier cette barre de menus comme vous le souhaitez ou créer des 
 1. Sélectionnez l'élément que vous souhaitez créer et cliquez sur le bouton ajouter ![](../assets/en/Menus/PlussNew.png) sous la barre de menu.
    OU
    Choisissez la commande **Créer une nouvelle barre de menus** ou **Créer un nouveau menu** dans le menu contextuel de la liste ou dans le menu d’options situé sous la liste.
-   Si vous avez créé une barre de menus, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
+   Si vous avez créé une barre de menu, une nouvelle barre de menus apparaît dans la liste, contenant les menus par défaut (Fichier et Edition).
 2. (Facultatif) Effectuez un double-clic sur le nom du menu/de la barre de menus afin de le rendre éditable et saisissez un nom personnalisé.
    OU
    Saisissez le nom personnalisé dans la zone “Titre”.

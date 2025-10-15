@@ -155,7 +155,7 @@ Fluent UI rendering offers modern and attractive controls, support of dark/light
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 
-- The `FORM Window theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
+- El comando `FORM Window theme` devuelve el tema de visualización actual del formulario. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
 - If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
 - A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).

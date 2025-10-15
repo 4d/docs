@@ -338,10 +338,10 @@ vCompareResult1 (se devuelven todas las diferencias):
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones       |
-| ----------- | -------------------- |
-| 21          | Added status 7 and 8 |
-| 17          | Añadidos             |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 21          | Añadidos los estados 7 y 8 |
+| 17          | Añadidos                   |
 
 </details>
 
@@ -368,7 +368,7 @@ De lo contrario, puede pasar la opción `dk force drop if stamp changed` en el p
 
 **Resultado**
 
-The object returned by `.drop()` contains the following properties:
+El objeto devuelto por `.drop()` contiene las siguientes propiedades:
 
 | Propiedad                         |                                     | Tipo                  | Descripción                                                                                                                                                                                                      |
 | --------------------------------- | ----------------------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1019,7 +1019,6 @@ El objeto devuelto por `.lock()` contiene las siguientes propiedades:
 | ----------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `dk status entity does not exist anymore` | 5     | La entidad ya no existe en los datos. Este error puede ocurrir en los siguientes casos:<br/><li>la entidad ha sido eliminada (el marcador ha cambiado y ahora el espacio de memoria está libre)</li><li>la entidad ha sido eliminada y reemplazada por otra con otra clave primaria (el marcador ha cambiado y una nueva entidad ahora utiliza el espacio memoria). When using `.drop()`, this error can be returned when dk force drop if stamp changed option is used. Cuando se utiliza `.lock()`, este error puede ser devuelto cuando se utiliza la opción `dk reload if stamp changed`</li><br/>**statusText asociado**: "Entity does not exist anymore" |
 | `dk status locked`                        | 3     | La entidad está bloqueada por un bloqueo pesimista. **statusText asociado**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `dk status mild validation error`         | 7     | Can be returned by the developer only in validate events and do not require                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | `dk status serious error`                 | 4     | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc.<br/>**statusText asociado**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | `dk status stamp has changed`             | 2     | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<li>with `.save()`: error only if the `dk auto merge` option is not used</li><li>with `.drop()`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock()`: error only if the `dk reload if stamp changed` option is not used</li><br/>**Associated statusText**: "Stamp has changed"                                                                                                                                                                                                                                         |
 
@@ -1215,10 +1214,10 @@ El objeto devuelto por `.reload( )` contiene las siguientes propiedades:
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones       |
-| ----------- | -------------------- |
-| 21          | Added status 7 and 8 |
-| 17          | Añadidos             |
+| Lanzamiento | Modificaciones             |
+| ----------- | -------------------------- |
+| 21          | Añadidos los estados 7 y 8 |
+| 17          | Añadidos                   |
 
 </details>
 

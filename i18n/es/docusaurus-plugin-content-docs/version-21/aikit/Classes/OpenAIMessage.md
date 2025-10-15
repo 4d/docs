@@ -9,13 +9,13 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 ## Propiedades
 
-| Propiedad      | Tipo       | Descripción                                                                                                                                              |
-| -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rol`          | Text       | The role of the message (e.g., "user", "assistant", "system", "tool").                |
-| `contenido`    | Variant    | The content of the message, which can be a text or a collection of objects.                                                              |
-| `user`         | Text       | An optional property representing the user associated with the message.                                                                  |
-| `tool_calls`   | Collection | A collection of tool calls requested by the assistant. Each tool call contains an `id`, `type`, and a `function` object. |
-| `tool_call_id` | Text       | The ID of the tool call that this message is responding to (used when `role` is "tool").                              |
+| Propiedad      | Tipo       | Descripción                                                                                                                                                         |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `rol`          | Text       | The role of the message (e.g., "user", "assistant", "system", "tool").                           |
+| `contenido`    | Variant    | The content of the message, which can be a text or a collection of objects.                                                                         |
+| `user`         | Text       | An optional property representing the user associated with the message.                                                                             |
+| `tool_calls`   | Collection | A collection of tool calls requested by the assistant. Cada llamada a una herramienta contiene un objeto `id`, `type` y `function`. |
+| `tool_call_id` | Text       | The ID of the tool call that this message is responding to (used when `role` is "tool").                                         |
 
 ## Propiedades calculadas
 

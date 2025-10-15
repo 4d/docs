@@ -128,7 +128,7 @@ Note that [privileges](../ORDA/privileges.md) should be set in the session befor
 
 Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#session-token-otp). After you created an OTP token on the server for the user session, you add the token (through the `$4DSID` parameter value) to web requests sent from web areas containing Qodly pages so that the user session on the server is identified and shared. On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used.
 
-:::tip Related blog post
+:::tip Article(s) de blog sur le sujet
 
 [Share your 4D remote client session with web accesses](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses)
 
