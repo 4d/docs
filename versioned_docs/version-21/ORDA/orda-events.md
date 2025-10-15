@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Events
+title: Entity Events
 ---
 
 <details><summary>History</summary>
@@ -12,7 +12,7 @@ title: Events
 </details>
 
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
