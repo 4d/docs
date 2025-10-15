@@ -12,7 +12,7 @@ Les sessions Web permettent de :
 - stocker et partager des données entre les process d'un client web en utilisant le [.storage](../API/SessionClass.md#storage) de la session,
 - associer des privilèges à l'utilisateur qui exécute la session.
 
-:::tip Related blog post
+:::tip Article(s) de blog sur le sujet
 
 [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
@@ -22,7 +22,7 @@ Les sessions Web permettent de :
 
 Les sessions Web sont utilisées par :
 
-- [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
+- les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server.md) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
 - les appels à l'[API REST](../REST/authUsers.md), qui sont effectués par les [datastores distants](../ORDA/remoteDatastores.md) et les [pages Qodly](qodly-studio.md).
 
 ## Activation des sessions web
@@ -36,7 +36,7 @@ Cette option est sélectionnée par défaut dans les nouveaux projets. Elle peut
 
 - En utilisant la propriété [`.scalableSession`](API/WebServerClass.md#scalablession) de l'objet Web Server (à passer dans le paramètre *settings* de la fonction [`.start()`](API/WebServerClass.md#start) ). Dans ce cas, ce paramètre remplace l'option définie dans la boîte de dialogue Propriétés pour l'objet Web Server (il n'est pas stocké sur disque).
 
-> The [`WEB SET OPTION`](../commands-legacy/web-set-option.md) command can also set the session mode for the main Web server.
+> La commande [`WEB SET OPTION`](../commands-legacy/web-set-option.md) peut également définir le mode de session du serveur Web principal.
 
 Dans tous les cas, ce paramètre est local à la machine ; il peut donc être différent sur le serveur Web 4D Server et les serveurs Web des machines 4D distantes.
 
@@ -44,7 +44,7 @@ Dans tous les cas, ce paramètre est local à la machine ; il peut donc être di
 
 ## Implémentation des sessions
 
-When [sessions are enabled](#enabling-web-sessions), automatic mechanisms are implemented, based upon a private cookie set by 4D itself: "4DSID__AppName_", where *AppName* is the name of the application project. Ce cookie référence la session web courante pour l'application.
+Lorsque [les sessions sont activées](#enabling-web-sessions), des mécanismes automatiques sont mis en œuvre, sur la base d'un cookie privé défini par 4D lui-même : "4DSID_*AppName*", où *AppName* est le nom du projet d'application. Ce cookie référence la session web courante pour l'application.
 
 :::info
 
@@ -73,7 +73,7 @@ L'objet `Session` de la session en cours peut ensuite être manipulé via la com
 
 :::info
 
-Les process Web ne se terminent généralement pas, ils sont recyclés dans un pool pour des raisons d'optimisation. Lorsqu'un process termine l'exécution d'une requête, il est replacé dans le pool et rendu disponible pour la requête suivante. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). Ce nettoyage est nécessaire pour toute information liée au process, comme une référence à un fichier ouvert. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
+Les process Web ne se terminent généralement pas, ils sont recyclés dans un pool pour des raisons d'optimisation. Lorsqu'un process termine l'exécution d'une requête, il est replacé dans le pool et rendu disponible pour la requête suivante. Comme un process web peut être réutilisé par n'importe quelle session, les [variables process](Concepts/variables.md#process-variables) doivent être effacées par votre code à la fin de son exécution (en utilisant [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) par exemple). Ce nettoyage est nécessaire pour toute information liée au process, comme une référence à un fichier ouvert. C'est la raison pour laquelle **il est recommandé** d'utiliser l'objet [Session](API/SessionClass.md) lorsque vous souhaitez conserver les informations relatives à la session.
 
 :::
 
@@ -90,7 +90,7 @@ Une session web évolutive est fermée lorsque:
 
 La durée de vie d'un cookie inactif est de 60 minutes par défaut, ce qui signifie que le serveur Web fermera automatiquement les sessions inactives après 60 minutes.
 
-This timeout can be set using the [`.idleTimeout`](API/SessionClass.md#idletimeout) property of the `Session` object (the timeout cannot be less than 60 minutes) or the *connectionInfo* parameter of the [`Open datastore`](../commands/open-datastore.md) command.
+Ce délai peut être défini en utilisant la propriété [`.idleTimeout`](API/SessionClass.md#idletimeout) de l'objet `Session` (le délai ne peut être inférieur à 60 minutes) ou le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore.md).
 
 Lorsqu'une session web est fermée, si la commande [`Session`](commands/session.md) est appelée par la suite :
 
@@ -159,7 +159,7 @@ http://localhost:8044/authenticate.shtml
 
 ![alt-text](../assets/en/WebServer/authenticate.png)
 
-3. La méthode de projet d'authentification recherche la personne *userID* et valide le mot de passe par rapport à la valeur hachée déjà stockée dans la table *SalesPersons* :
+3. La méthode projet d'authentification recherche la personne *userID* et valide le mot de passe par rapport à la valeur hachée déjà stockée dans la table *SalesPersons* :
 
 ```4d
 var $indexUserId; $indexPassword; $userId : Integer
@@ -201,82 +201,82 @@ Else
 End if
 ```
 
-:::note
+:::tips Articles de blog sur le sujet
 
-For more examples, please refer to the [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) bog post.
+[Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
 :::
 
-## Session Token (OTP)
+## Token de session (OTP)
 
-The 4D web server allows you to generate, share, and use OTP (One-Time Passcode) session tokens. OTP session tokens are used to secure communications with third-party applications or websites. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
+Le serveur web 4D vous permet de générer, de partager et d'utiliser des tokens de session OTP (One-Time Passcode). Les tokens (ou *jetons*) de session OTP sont utilisés pour sécuriser les communications avec des applications ou des sites web tiers. Pour plus d'informations sur OTP, veuillez vous référer à la page [Mot de passe à usage unique](https://en.wikipedia.org/wiki/One-time_password) sur Wikipedia.
 
-In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
+Dans 4D, les tokens de session OTP sont utiles pour appeler des URL externes et être rappelé dans un autre navigateur ou appareil (mobile/ordinateur). Généralement, une application tierce envoie un courriel de confirmation contenant un lien de rappel sur lequel l'utilisateur doit cliquer. Le lien de rappel inclut le token OTP, de sorte que la session qui a déclenché le rappel est chargée avec ses données et ses privilèges. Ce principe vous permet de partager la même session sur plusieurs appareils. Grâce à cette architecture, le [cookie de session] (#session-implementation) n'est pas exposé sur le réseau, ce qui élimine le risque d'une attaque de type "man-in-the-middle".
 
 :::tips Articles de blog sur le sujet
 
-[Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+[Connectez vos applications Web à des systèmes tiers](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 
 :::
 
 ### Vue d’ensemble
 
-The basic sequence of an OTP session token use in a 4D web application is the following:
+La séquence de base de l'utilisaton d'un token de session OTP dans une application web 4D est la suivante :
 
-1. The web user initiates an action that requires a secured third-party connection, for example a validation, from within a specific session.
-2. In your 4D code, you create a new OTP for the session using the [`Session.createOTP()`](../API/SessionClass.md#createotp) function.
-3. You send a request to the third-party application with the session token included in the callback Uri. Note that the way to provide the callback Uri to a third-party application depends on its API (see below).
-4. The third-party application sends back a request to 4D with the pattern you provided in the callback Uri.
-5. The request callback is processed in your application.
+1. L'utilisateur web initie une action qui nécessite une connexion tierce sécurisée, par exemple une validation, à partir d'une session spécifique.
+2. Dans votre code 4D, vous créez un nouvel OTP pour la session à l'aide de la fonction [`Session.createOTP()`](../API/SessionClass.md#createotp).
+3. Vous envoyez une requête à l'application tierce avec le token de session inclus dans l'Uri de callback (rappel). Notez que la manière de fournir l'Uri de rappel à une application tierce dépend de son API (voir ci-dessous).
+4. L'application tierce renvoie une requête à 4D avec le modèle que vous avez fourni dans l'Uri de rappel.
+5. Le rappel de la requête est traité dans votre application.
 
-By definition, an OTP token can only be used once. In this scenario, if a web request is received with a session token as parameter that has already been used, the initial session is not restored.
+Par définition, un token OTP ne peut être utilisé qu'une seule fois. Dans ce scénario, si une requête web est reçue avec un token de session comme paramètre qui a déjà été utilisé, la session initiale n'est pas restaurée.
 
-### Processing the OTP in the callback
+### Traitement de l'OTP dans le callback
 
-Callbacks from third-party applications that include the OTP token can be processed in different ways in your 4D application, depending on your development and the third-party API. Basically, you have two possibilities to handle the token: through the **`$4DSID`** parameter for an automatic processing, or through a custom parameter that you need to process.
+Les callbacks d'applications tierces qui incluent le token OTP peuvent être traités de différentes manières dans votre application 4D, en fonction de votre développement et de l'API tierce. En principe, vous avez deux possibilités pour gérer le token : via le paramètre **`$4DSID`** pour un traitement automatique, ou via un paramètre personnalisé que vous devez traiter.
 
-#### Using `$4DSID` in the URL
+#### Utilisation de `$4DSID` dans l'URL
 
-Using the `$4DSID` parameter is the most simple way to process a callback from the third-party application:
+L'utilisation du paramètre `$4DSID` est la façon la plus simple de traiter un callback de l'application tierce :
 
-- The OTP token is provided as a parameter directly in the callback url using the standard `?$4DSID=XXXX123` syntax.
-- In 4D, you implement a dedicated [HTTP Request handler](http-request-handler.md) in your 4D application using [`IncomingMessage`](../API/IncomingMessageClass.md) and [`OutgoingMessage`](../API/OutgoingMessageClass.md) classes.
-- If the `$4DSID` token is valid, the related web user session is **automatically restored** in any web process with its storage and privileges.
+- Le token OTP est fourni en tant que paramètre directement dans l'url de callback en utilisant la syntaxe standard `?$4DSID=XXXX123`.
+- Dans votre application 4D, vous implémentez un [HTTP Request handler](http-request-handler.md) dédié en utilisant les classes [`IncomingMessage`](../API/IncomingMessageClass.md) et [`OutgoingMessage`](../API/OutgoingMessageClass.md).
+- Si le token `$4DSID` est valide, la session de l'utilisateur web concerné est **automatiquement restaurée** dans n'importe quel process web avec son *storage* et ses privilèges.
 
 :::note
 
-A [`4DACTION`](./httpRequests.md#4daction) url can also be used on the 4D side.
+Une url [`4DACTION`](./httpRequests.md#4daction) peut également être utilisée du côté 4D.
 
 :::
 
-#### Using a custom parameter
+#### Utilisation d'un paramètre personnalisé
 
-The OTP token can also be provided as a custom parameter that you need to process specifically to restore the session. You must use this solution if:
+Le token OTP peut également être fourni en tant que paramètre personnalisé que vous devez traiter spécifiquement pour restaurer la session. Vous devez utiliser cette solution si :
 
-- the third-party application does not allow to insert parameters such as a `$4DSID` directly in the redirect Uri, and provides a dedicated API (the implementation depends on the third-party application),
-- or, you want to call an ORDA function through REST to process the callback, in which case you need to pass the OTP with the [REST parameter syntax](../REST/ClassFunctions.md#parameters) (e.g. `?$params='["XXX123"]'`).
+- l'application tierce ne permet pas d'insérer des paramètres tels que `$4DSID` directement dans l'Uri de redirection, et fournit une API dédiée (l'implémentation dépend de l'application tierce),
+- ou bien vous souhaitez appeler une fonction ORDA via REST pour traiter le callback, auquel cas vous devez transmettre l'OTP avec la [syntaxe des paramètres REST](../REST/ClassFunctions.md#parameters) (par exemple `?$params='["XXX123"]'`).
 
-In both cases, you need to extract the token from the custom parameter and to call the [`Session.restore()`](../API/SessionClass.md#restore) function with the token as parameter.
+Dans les deux cas, vous devez extraire le token du paramètre personnalisé et appeler la fonction [`Session.restore()`](../API/SessionClass.md#restore) avec le token en paramètre.
 
-#### Processing a invalid OTP
+#### Traitement d'un OTP non valide
 
-The OTP token is considered invalid if:
+Le token OTP est considéré comme invalide si :
 
 - le token de session a déjà été utilisé,
 - le token de session a expiré,
 - le token de session n'existe pas,
 - la session d'origine elle-même a expiré.
 
-In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
+Dans ce cas, aucune session d'utilisateur Web n'est restaurée et la session courante (s'il y en a une) reste inchangée. En général, vous pouvez décider d'afficher une page de connexion ou d'ouvrir une session guest.
 
-Verifying if the received OTP token is valid depends on how it was handled:
+La vérification de la validité du token OTP reçu dépend de la manière dont il a été géré :
 
-- If you used a `$4DSID`, you can store a custom status property in the [session storage](../API/SessionClass.md#storage) at the moment of the token creation, and check this status once the OTP token was received to see if it is the same value (see example).
-- If you used the [`Session.restore()`](../API/SessionClass.md#restore) function, it returns true if the session correctly restored.
+- Si vous avez utilisé un `$4DSID`, vous pouvez stocker une propriété d'état personnalisée dans le [storage de la session](../API/SessionClass.md#storage) au moment de la création du token, et vérifier cet état une fois que le token OTP a été reçu pour voir s'il s'agit de la même valeur (voir l'exemple).
+- Si vous avez utilisé la fonction [`Session.restore()`](../API/SessionClass.md#restore), elle renvoie true si la session a été correctement restaurée.
 
-### Scenario with $4DSID
+### Scénario avec $4DSID
 
-The scenario using the `$4DSID` key is illustrated in the following diagram:
+Le scénario utilisant la clé `$4DSID` est illustré dans le diagramme suivant :
 
 ```mermaid
 sequenceDiagram
@@ -289,25 +289,25 @@ sequenceDiagram
   
   FrontEnd ->>+ 4DServer: ValidateOperation()
 
-    4DServer ->> 4DServer: Generate OTP with session.createOTP()
-Note over 4DServer: e.g. OTP is 2E5D0D5xxx
+    4DServer ->> 4DServer: Créer OTP avec session.createOTP()
+Note over 4DServer: e.g. OTP vaut 2E5D0D5xxx
 
-  4DServer ->>+ ExternalPlatform: Call the external platform, give a callback URL containing a $4DSID parameter (depends on the platform API)
+  4DServer ->>+ ExternalPlatform: Appel de la plate-forme tirece, envoi d'un URL de rappel contenant un paramètre $4DSID (dépend de l'API de la plate-forme)
 
   Note right of 4DServer: e.g. callback URL: "https://acme.com/my4DApp/completeOperation?$4DSID=2E5D0D5xxx"
 
- ExternalPlatform ->>+ ExternalPlatform: Process request
-ExternalPlatform ->>+ 4DServer: External platform calls back 4D Server if validation OK
+ ExternalPlatform ->>+ ExternalPlatform: Traitement de la requête
+ExternalPlatform ->>+ 4DServer: Rappel de 4D Server si validation OK
 Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?$4DSID=2E5D0D57751D471DB29FD110D2DCE253
-    4DServer ->> 4DServer: An HTTP request handler processes the URL pattern "/my4DApp/completeOperation"<br/>(e.g.  handleOperation() function of the OperationsHandler singleton, see code below)
+    4DServer ->> 4DServer: Un HTTP request handler traite le motif d'URL "/my4DApp/completeOperation"<br/>(e.g. fonction handleOperation() du singleton OperationsHandler, voir code ci-dessous)
 
-   Note over 4DServer: The original session is retrieved thanks to the OTP given in the $4DSID parameter.
-     Note over 4DServer: Session object refers to the session which generated the OTP
-  4DServer ->>+ FrontEnd: Restore session
+   Note over 4DServer: La session d'origine session est restaurée grâce à l'OTP fourni dans le paramètre $4DSID.
+     Note over 4DServer: L'objet Session référence la session qui a généré l'OTP
+  4DServer ->>+ FrontEnd: Restauration de la session
 
 ```
 
-The 4D HTTP request handler definition:
+La définition du gestionnaire de requêtes HTTP 4D :
 
 ```json
 [
@@ -320,7 +320,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+La classe du singleton :
 
 ```4d
 //Class OperationsHandler
@@ -329,9 +329,9 @@ shared singleton Class constructor()
     $session:=Session
 ```
 
-### Scenario with `restore` function
+### Scénario avec la fonction `restore`
 
-The scenario using a custom parameter is illustrated in the following diagram:
+Le scénario utilisant un paramètre personnalisé est illustré dans le diagramme suivant :
 
 ```mermaid
 sequenceDiagram
@@ -344,29 +344,29 @@ sequenceDiagram
   FrontEnd ->>+ 4DServer: Validate()
 
 
-    4DServer ->> 4DServer: Generate OTP with session.createOTP()
+    4DServer ->> 4DServer: Créer OTP avec session.createOTP()
     Note over 4DServer: e.g. OTP is 2E5D0D5xxx
 
-  4DServer ->> ExternalPlatform: Call the external platform giving the OTP, for example as a state parameter (depends on the platform)
+  4DServer ->> ExternalPlatform: Appel de la plate-forme externe en donnant l'OTP, par exemple sous forme de paramètre state (dépend de la plate-forme)
     Note right of 4DServer: e.g. https://thirdPartSystem.com/validate?state=2E5D0D5xxx&redirect_uri=https://acme.com/my4DApp/completeOperation
-      Note right of 4DServer: The callback URL will be like: https://acme.com/my4DApp/completeOperation?state=2E5D0D5xxx
- ExternalPlatform ->> ExternalPlatform: Process request
-  ExternalPlatform ->> 4DServer: The state parameter is sent back by the third party system in the callback
+      Note right of 4DServer: L'URLde rappel sera du type : https://acme.com/my4DApp/completeOperation?state=2E5D0D5xxx
+ ExternalPlatform ->> ExternalPlatform: Traitement de la requête
+  ExternalPlatform ->> 4DServer: Le paramètre state est renvoyé par le système tiers dans la callback
         Note right of 4DServer: e.g. https://acme.com/my4DApp/completeOperation?state=2E5D0D5xxx
- 4DServer ->> 4DServer: An HTTP request handler processes the URL pattern "/my4DApp/completeOperation"<br/> (e.g. handleOperation() function of the OperationHandler singleton, see code below)
+ 4DServer ->> 4DServer: Un HTTP request handler traite le motif d'URL "/my4DApp/completeOperation"<br/> (e.g. fonction handleOperation() du singleton OperationHandler, voir code ci-dessous)
 
 4DServer ->> 4DServer: Session.restore()
 
 
- Note over 4DServer:The state parameter is got from the received request ($req.urlQuery.state)
-   Note over 4DServer:The original session is retrieved by calling the restore() function
-  Note over 4DServer:Session object refers to the session which generated the OTP
-   4DServer ->>+ FrontEnd: Restore session
+ Note over 4DServer:Le paramètre state est extrait de la requête reçue ($req.urlQuery.state)
+   Note over 4DServer:La session originale est restaurée par l'appel à la fonction restore()
+  Note over 4DServer: L'objet Session référence la session qui a généré l'OTP
+   4DServer ->>+ FrontEnd: Restauration de la session
 
 
 ```
 
-The 4D HTTP request handler definition:
+La définition du gestionnaire de requêtes HTTP 4D :
 
 ```json
 [
@@ -379,7 +379,7 @@ The 4D HTTP request handler definition:
 ]
 ```
 
-The singleton class:
+La classe du singleton :
 
 ```4d
 //Class OperationsHandler
@@ -388,9 +388,9 @@ shared singleton Class constructor()
     Session.restore($req.urlQuery.state)
 ```
 
-### Example of email validation with $4DSID
+### Exemple de validation d'email avec $4DSID
 
-1. A user account is created in a *Users* dataclass. A *$info* object is received with the email and password. An OTP corresponding to the current session is generated. An URL is then returned with this OTP given in the $4DSID parameter.
+1. Un compte d'utilisateur est créé dans une dataclass *Users*. Un objet *$info* est reçu avec l'email et le mot de passe. Un OTP correspondant à la session courante est généré. Une URL est alors renvoyée avec l'OTP indiqué dans le paramètre $4DSID.
 
 ```4d
 //cs.Users class
@@ -401,26 +401,26 @@ var $user : cs.UsersEntity
 var $status : Object
 var $token : Text
 	
-$user:=This.new() //create a new user
+$user:=This.new() //créatoin d'un user
 $user.fromObject($info)
 $status:=$user.save()
 	
-//Store information in the session
-//including user creation status
+//Stockage d'information dans la session
+//y compris le statut de création de l'utilisateur
 Use (Session.storage)
 	Session.storage.status:=New shared object("step"; "Waiting for validation email"; /
     "email"; $user.email; "ID"; $user.ID)
 End use 
 	
-//Generate an OTP corresponding to the session
+//Génération d'un OTP correspondant à la session
 $token:=Session.createOTP()
 
-// Return an URL with a $4DSID parameter
+// Renvoi d'un URL avec un paramètre $4DSID
 return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 
 ```
 
-2. The user is sent this URL as a link in an email. The URL prefix `/validateEmail` is handled by a [custom HTTP request handler](./http-request-handler.md):
+2. L'utilisateur reçoit cette URL sous la forme d'un lien dans un courrier électronique. Le préfixe d'URL `/validateEmail` est traité par un [gestionnaire de requête HTTP personnalisé](./http-request-handler.md) :
 
 ```json
 [
@@ -433,7 +433,7 @@ return "https://my.server.com/tools/validateEmail?$4DSID="+$token`
 ]
 ```
 
-The *validateEmail()* function of the RequestHandler singleton:
+La fonction *validateEmail()* du singleton RequestHandler :
 
 ```4d
 //validateEmail class
@@ -443,12 +443,12 @@ shared singleton Class constructor()
 Function validateEmail() : 4D.OutgoingMessage
 	
  var $result:=4D.OutgoingMessage.new()
-    //The session which generated the OTP is retrieved 
-    //thanks to the $4DSID parameter given in the URL
+    //La session qui a généré l'OTP est restaurée 
+    //grâce au paramètre $4DSID fourni dans l'URL
  If (Session.storage.status.step="Waiting for validation email")
 	
   $user:=ds.Users.get(Session.storage.status.ID)
-  $user.emailValidated() //set to true
+  $user.emailValidated() //fixé à vrai
 		
   $result.setBody("Congratulations <br>"\
   +"Your email "+Session.storage.status.email+" has been validated")
@@ -466,21 +466,21 @@ Function validateEmail() : 4D.OutgoingMessage
 
 ```
 
-Since the `$4DSID` parameter contains a valid OTP corresponding to the original session, the `Session` object refers to the session that created the OTP.
+Comme le paramètre `$4DSID` contient un OTP valide correspondant à la session d'origine, l'objet `Session` référence la session qui a créé l'OTP.
 
-A new user is created, and some information is stored in the session, especially the current step of the user account creation process (Waiting for validation email) and the user ID.
+Un nouvel utilisateur est créé et des informations sont stockées dans la session, en particulier l'étape courante du processus de création du compte utilisateur (attente du courriel de validation) et l'identifiant de l'utilisateur.
 
-### Supported contexts
+### Contextes pris en charge
 
-- Both HTTP and HTTPS schemas are supported.
-- Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
-- Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
-- Tokens are not supported with client/server sessions or single-user sessions.
+- Les schémas HTTP et HTTPS sont tous deux pris en charge.
+- Seules des [sessions évolutives](#enabling-web-sessions) peuvent être réutilisées avec des tokens.
+- Seules les sessions de la base de données hôte peuvent être réutilisées (les sessions créées dans les serveurs web des composants ne peuvent pas être restaurées).
+- Les tokens ne sont pas pris en charge dans les sessions client/serveur ou les sessions mono-utilisateur.
 
-### Lifespan
+### Durée de vie
 
-A session token has a lifespan, and the session itself has a lifespan. The session token lifespan can be set [at the token creation](../API/SessionClass.md#createotp). By default, the token lifespan is the same value as the [`.idleTimeout`](../API/SessionClass.md#idletimeout) value.
+Un token de session a une durée de vie, et la session elle-même a une durée de vie. La durée de vie du token de session peut être définie [lors de sa création](../API/SessionClass.md#createotp). Par défaut, la durée de vie du token est la même que la valeur [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 
-A session is only restored by a token if both the session token lifespan and the session lifespan have not expired. In other cases (the session token has expired and/or the session itself has expired), a guest session is created when a web request with a session token is received.
+Une session n'est restaurée par un token que si ni la durée de vie du token de session ni celle de la session n'ont expiré. Dans les autres cas (le token de session a expiré et/ou la session elle-même a expiré), une session *guest* est créée lorsqu'une requête web avec un token de session est reçue.
 
 

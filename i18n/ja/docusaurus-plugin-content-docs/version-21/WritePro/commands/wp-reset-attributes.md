@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**WP RESET ATTRIBUTES** コマンドは<!--REF #_command_.WP RESET ATTRIBUTES.Summary-->引数として渡されたレンジ、要素、またはドキュメントの1つ以上の値をリセットすることができます。<!-- END REF-->このコマンドは任意の4D Write Pro 内部属性(文字、段落、ドキュメント、表または画像)を削除することができます。  リセットしたい属性の名前を*attribName* 引数に渡すか、あるいは*attribColl* 引数に属性名のコレクションを渡すことで、複数の属性を一度にリセットすることもできます。
+**WP RESET ATTRIBUTES** コマンドは、<!--REF #_command_.WP RESET ATTRIBUTES.Summary--> 引数として渡されたレンジ、要素、ドキュメント内の一つ以上の属性の値をリセットすることができます。<!-- END REF--> このコマンドを使用することで、4D Write Pro の次のようなあらゆる内部属性を削除することができます: 文字、段落、ドキュメント、表、画像。 リセットしたい属性の名前を*attribName* 引数に渡すか、あるいは*attribColl* 引数に属性名のコレクションを渡すことで、複数の属性を一度にリセットすることもできます。
 
 > セクションかサブセクションの場合、*sectionOrSubsection* 引数単体を渡すだけで、すべての属性は一度にリセットされます。
 

@@ -1181,7 +1181,7 @@ La formule doit avoir été créée à l'aide de la commande [`Formula`](../comm
 
 - *formula* est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.
 - dans *formula*, l'entité est disponible via l'objet `This`.
-- if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you can intercept using a method installed with `ON ERR CALL`.
+- si l'objet `Formula` est **null**, l'erreur 1626 ("Expecting a text or formula") est générée, que vous pouvez intercepter en utilisant une méthode installée avec `ON ERR CALL`.
 
 > Pour des raisons de sécurité, les appels de formule dans les fonctions `query()` peuvent être interdits. Voir la description du paramètre *querySettings*.
 

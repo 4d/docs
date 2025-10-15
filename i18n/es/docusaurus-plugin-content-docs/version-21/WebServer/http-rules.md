@@ -1,6 +1,6 @@
 ---
 id: http-rules
-title: HTTP Rules
+title: Reglas HTTP
 ---
 
 You can define HTTP rules to control HTTP response headers for any requests received by the 4D web server, including REST requests. You can add, modify, or remove HTTP headers, send redirections or set the HTTP status. This feature is useful to implement security policies based upon the handling of headers.
@@ -14,7 +14,7 @@ HTTP rules are supported in the following contexts:
 - [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
 - a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
 
-## How to set rules
+## Cómo definir reglas
 
 You can declare HTTP response rules:
 
@@ -29,7 +29,7 @@ If both a **HTTPRules.json** file and a call to the [`WEB Server`](../commands/w
 
 If the URI of the request does not match any of the RegEx patterns, the web server returns a default response.
 
-## Rules Definition
+## Definición de reglas
 
 The **HTTPRules.json** file or the [`.rules`](../API/WebServerClass.md#rules) property must contain a collection of **rule objects**.
 
@@ -60,16 +60,21 @@ The following action keywords are supported:
 | `setHeaders`    | Object                      | Name (text) and value (text) of header(s) to modify in the HTTP responses. If a header to modify does not exist in the response header, it is added. |
 | `denyAccess`    | Boolean                     | true to deny access to the resource, false to allow access. When the access to a resource is denied, the web server returns a 403 status by default                                                                           |
 | `redirect`      | Text                        | Redirection URL. When a redirection is triggered, the web server returns a 302 status by default                                                                                                                              |
-| `status`        | Number                      | HTTP status                                                                                                                                                                                                                                   |
+| `status`        | Number                      | Estado HTTP                                                                                                                                                                                                                                   |
 
 ### Non-modifiable headers
 
-The following headers could not be modified by the `removeHeaders`, `setHeaders`, or `addHeaders` actions:
+Some headers could not be added, modified or removed:
 
-- "Date",
-- "Content-Length"
+| Encabezado       | Acción de añadir | Set           | Remove |
+| ---------------- | ---------------- | ------------- | ------ |
+| Fecha            | No               | No            | No     |
+| Content-Length   | No               | No            | No     |
+| Content-Encoding | No               | No            | No     |
+| Vary             | Sí               | No            | No     |
+| Set-Cookie       | Sí               | Añadir cookie | No     |
 
-Modifying these headers do not generate errors, however modifications will be ignored.
+Unauthorized changes on these headers do not generate errors, however modifications will be ignored.
 
 ### Current rules
 

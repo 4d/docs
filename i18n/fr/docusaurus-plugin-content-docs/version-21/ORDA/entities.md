@@ -564,11 +564,11 @@ Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" q
 
 Le diagramme suivant illustre le verrouillage optimiste :
 
-1. Deux process chargent la même entité.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Étant donné qu'ils correspondent, l'entité est enregistrée et sa valeur de marqueur est incrémentée.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Comme la valeur du marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est renvoyée.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Cela peut également être illustré par le code suivant :
 

@@ -64,12 +64,17 @@ The following action keywords are supported:
 
 ### Non-modifiable headers
 
-The following headers could not be modified by the `removeHeaders`, `setHeaders`, or `addHeaders` actions:
+Some headers could not be added, modified or removed:
 
-- "日付",
-- "Content-Length"
+| Header           | 追加 | Set        | Reduce |
+| ---------------- | -- | ---------- | ------ |
+| Date             | ×  | ×          | ×      |
+| Content-Length   | ×  | ×          | ×      |
+| Content-Encoding | ×  | ×          | ×      |
+| Vary             | ◯  | ×          | ×      |
+| Set-Cookie       | ◯  | Add cookie | ×      |
 
-Modifying these headers do not generate errors, however modifications will be ignored.
+Unauthorized changes on these headers do not generate errors, however modifications will be ignored.
 
 ### Current rules
 

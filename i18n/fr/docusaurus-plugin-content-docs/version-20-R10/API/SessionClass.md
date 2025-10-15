@@ -120,7 +120,7 @@ $isGuest:=Session.isGuest() //$isGuest est True
 | Paramètres | Type    |                             | Description                                  |
 | ---------- | ------- | :-------------------------: | -------------------------------------------- |
 | lifespan   | Integer |              ->             | Durée de vie du token de session en secondes |
-| Résultat   | Text    | <- | UUID of the OTP token                        |
+| Résultat   | Text    | <- | UUID du token OTP                            |
 
 <!-- END REF -->
 
@@ -735,7 +735,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 :::note
 
-Cette fonction ne fait rien et retourne toujours **False** avec les sessions client distants, procédures stockées et autonomes.
+Cette fonction ne fait rien et retourne toujours **False** avec les sessions client distantes, procédures stockées et autonomes.
 
 :::
 

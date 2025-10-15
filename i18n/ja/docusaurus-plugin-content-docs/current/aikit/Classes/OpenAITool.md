@@ -29,9 +29,9 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 
 ### Function-specific Properties
 
-| プロパティ | 型      | 説明                                                                               |
-| ----- | ------ | -------------------------------------------------------------------------------- |
-| `引数`  | Object | Parameters definition for the function using JSON schema format. |
+| プロパティ        | 型      | 説明                                                                               |
+| ------------ | ------ | -------------------------------------------------------------------------------- |
+| `parameters` | Object | Parameters definition for the function using JSON schema format. |
 
 ## Constructor
 

@@ -28,7 +28,7 @@ For security reasons, external access to the datastore can be disallowed in 4D. 
 
 :::
 
-## How to set handlers
+## Cómo definir los manejadores
 
 You can declare HTTP Request handlers:
 

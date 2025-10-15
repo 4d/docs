@@ -14,7 +14,7 @@ title: OpenAIChatHelper
 | `chat`             | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | Open AI との通信で使用されるチャットAPI インスタンス。        |
 | `systemPrompt`     | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | チャットアシスタントのレスポンスをガイドするためのシステムプロンプトメッセージ。 |
 | `numberOfMessages` | Integer                                                               | 5                                                      | チャット履歴に保持するメッセージの最大数。                    |
-| `引数`               | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | OpenAI チャット補完リクエスト用のパラメーター。              |
+| `parameters`       | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | OpenAI チャット補完リクエスト用のパラメーター。              |
 | `messages`         | [OpenAIMessage](OpenAIMessage.md) のコレクション                             | [] | そのチャットセッション内でやりとりされたメッセージのコレクション。        |
 
 ## 関数

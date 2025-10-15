@@ -201,9 +201,9 @@ Else
 End if
 ```
 
-:::note
+:::tips Entradas de blog relacionadas
 
-Para más ejemplos, por favor consulte la publicación de blog [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/).
+[Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
 :::
 
@@ -471,7 +471,7 @@ Se crea un nuevo usuario y se almacena cierta información en la sesión, especi
 - Sólo se pueden reutilizar las sesiones de la base de datos local (las sesiones creadas en servidores web de componentes no se pueden restaurar).
 - Los tokens no son compatibles con las sesiones cliente/servidor ni con las sesiones monousuario.
 
-### Lifespan
+### Vida útil
 
 Un testigo de sesión tiene una vida útil, y la propia sesión tiene una vida útil. El tiempo de vida útil del token de sesión puede definirse [en la creación de tokens](../API/SessionClass.md#createotp). Por defecto, el tiempo de vida del token es el mismo valor que el valor de [`.idleTimeout`](../API/SessionClass.md#idletimeout).
 

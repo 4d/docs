@@ -20,7 +20,7 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 | `tipo`    | Text    | `"function"` | El tipo de herramienta. Currently supports `"function"`, `"custom"`, and other built-in types. |
 | `strict`  | Boolean | `False`      | Whether to enforce strict schema validation for function parameters.                                           |
 
-### Common Properties
+### Propiedades comunes
 
 | Propiedad     | Tipo | Descripción                                                                    |
 | ------------- | ---- | ------------------------------------------------------------------------------ |
@@ -46,7 +46,7 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 
 Crea una nueva instancia de OpenAITool. The constructor accepts both simplified format and OpenAI API format.
 
-#### Supported formats
+#### Formatos soportados
 
 **Simplified format:**
 

@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Events
+title: Eventos
 ---
 
 <details><summary>Historia</summary>
@@ -58,21 +58,21 @@ Con otras configuraciones remotas (p. ej. Qodly applications, [REST API requests
 
 La siguiente tabla lista los eventos ORDA junto con sus reglas.
 
-| Evento                     | Nivel    | Nombre de la función                                    |                 (C/S) Ejecutado en                | Can stop action by returning an error |
-| :------------------------- | :------- | :------------------------------------------------------ | :------------------------------------------------------------------: | ------------------------------------- |
-| Instanciación de entidades | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                | no                                    |
-| Atributo tocado            | Atributo | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no                                    |
-|                            | Entity   | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no                                    |
-| Before saving an entity    | Atributo | `validateSave <attrName>()`                             |                                server                                | sí                                    |
-|                            | Entity   | `validateSave()`                                        |                                server                                | sí                                    |
-| When saving an entity      | Atributo | `saving <attrName>()`                                   |                                server                                | sí                                    |
-|                            | Entity   | `saving()`                                              |                                server                                | sí                                    |
-| After saving an entity     | Entity   | `afterSave()`                                           |                                server                                | no                                    |
-| Before dropping an entity  | Atributo | `validateDrop <attrName>()`                             |                                server                                | sí                                    |
-|                            | Entity   | `validateDrop()`                                        |                                server                                | sí                                    |
-| When dropping an entity    | Atributo | `dropping <attrName>()`                                 |                                server                                | sí                                    |
-|                            | Entity   | `dropping()`                                            |                                server                                | sí                                    |
-| After dropping an entity   | Entity   | `afterDrop()`                                           |                                server                                | no                                    |
+| Evento                     | Nivel    | Nombre de la función                                    |                     (C/S) Ejecutado en                     | Can stop action by returning an error |
+| :------------------------- | :------- | :------------------------------------------------------ | :---------------------------------------------------------------------------: | ------------------------------------- |
+| Instanciación de entidades | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                     client                                    | no                                    |
+| Atributo tocado            | Atributo | `event touched <attrName>()`                            | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) | no                                    |
+|                            | Entity   | `event touched()`                                       | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) | no                                    |
+| Before saving an entity    | Atributo | `validateSave <attrName>()`                             |                                     server                                    | sí                                    |
+|                            | Entity   | `validateSave()`                                        |                                     server                                    | sí                                    |
+| When saving an entity      | Atributo | `saving <attrName>()`                                   |                                     server                                    | sí                                    |
+|                            | Entity   | `saving()`                                              |                                     server                                    | sí                                    |
+| After saving an entity     | Entity   | `afterSave()`                                           |                                     server                                    | no                                    |
+| Before dropping an entity  | Atributo | `validateDrop <attrName>()`                             |                                     server                                    | sí                                    |
+|                            | Entity   | `validateDrop()`                                        |                                     server                                    | sí                                    |
+| When dropping an entity    | Atributo | `dropping <attrName>()`                                 |                                     server                                    | sí                                    |
+|                            | Entity   | `dropping()`                                            |                                     server                                    | sí                                    |
+| After dropping an entity   | Entity   | `afterDrop()`                                           |                                     server                                    | no                                    |
 
 :::note
 
@@ -89,12 +89,12 @@ Event functions accept a single *event* object as parameter. When the function i
 | "kind"              | siempre                                                                                                                  | String               | Event name: "touched", "validateSave", "saving", "afterSave", "validateDrop", "dropping", "afterDrop" |   |
 | *attributeName*     | Only for events implemented at attribute level ("validateSave", "saving", "validateDrop", "dropping") | String               | Nombre del atributo (por ejemplo, "nombre")                                                        |   |
 | *dataClassName*     | siempre                                                                                                                  | String               | Nombre de la Dataclass (*ej.* "Company")                                           |   |
-| "savedAttributes"   | Only in [`afterSave()`](#function-event-aftersave)                                                                       | Collection of String | Names of attributes properly saved                                                                                    |   |
-| "droppedAttributes" | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | Collection of String | Names of attributes properly dropped                                                                                  |   |
+| "savedAttributes"   | Only in [`afterSave()`](#function-event-aftersave)                                                                       | Colección de cadenas | Names of attributes properly saved                                                                                    |   |
+| "droppedAttributes" | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | Colección de cadenas | Names of attributes properly dropped                                                                                  |   |
 | "saveStatus"        | Only in [`afterSave()`](#function-event-aftersave)                                                                       | String               | "success" if the save was successful, "failed" otherwise                                                              |   |
 | "dropStatus"        | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | String               | "success" if the drop was successful, "failed" otherwise                                                              |   |
 
-## Error object
+## Objeto de error
 
 [Some event functions](#summary-table) can return an **error object** to raise an error and stop the running action.
 
@@ -102,7 +102,7 @@ When an error occurs in an event, the other events are stopped at the first rais
 
 ### Error object properties
 
-| Propiedad          | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Set by the developer                      |
+| Propiedad          | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Definido por el desarrollador             |
 | ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
 | errCode            | Integer | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sí                                        |
 | message            | Text    | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sí                                        |

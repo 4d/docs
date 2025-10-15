@@ -34,7 +34,7 @@ Vous définissez vos gestionnaires de requêtes HTTP personnalisés dans un fich
 
 Ce fichier contient tous les motifs d'URL à intercepter, les verbes manipulés et le code à appeler. Les gestionnaires sont fournis sous la forme d'une collection au format JSON.
 
-Au moment de l'exécution, le premier motif correspondant à l'URL est exécuté, les autres sont ignorés.
+Au moment de l'exécution, le premier motif (*pattern*) correspondant à l'URL est exécuté, les autres sont ignorés.
 
 Voici un exemple du contenu d'un fichier *HTTPHandlers.json* :
 

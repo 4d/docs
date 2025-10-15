@@ -26,6 +26,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 - Lenguaje 4D:
   - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
   - Los comandos [`Num`](../commands/num.md) y [`String`](../commands/string.md) han sido actualizados para soportar conversiones en diferentes bases (radix).
+- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21): list of all bugs that have been fixed in 4D 21.
 
 #### Vista previa para desarrolladores
 
@@ -43,7 +44,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. Ya no se realiza ningún tratamiento específico en estas URL.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
-- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview-old.md)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
+- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview.md#components-developed-by-4d)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
   \- **Import**: import automatically 4D components as dependencies to the project<br/>
   \- **Ignore**: do not import components and let you [manage components manually](../Project/components.md)<br/>

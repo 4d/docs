@@ -1,6 +1,6 @@
 ---
 id: components
-title: Dependencies
+title: Dépendances
 ---
 
 [L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
@@ -350,7 +350,7 @@ Pour afficher la fenêtre Dépendances :
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
 - avec 4D Server, sélectionnez la ligne de menu **Fenêtre/Dépendances du projet**.<br/>
-  ![menu-dépendances-serveur](../assets/en/Project/dependency-menu-server.png)
+  ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 La fenêtre Dépendances s'affiche alors. Les dépendances sont classées par nom par ordre alphabétique :
 

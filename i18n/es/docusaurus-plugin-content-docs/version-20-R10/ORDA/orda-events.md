@@ -51,11 +51,11 @@ Con otras configuraciones remotas (p. ej. Qodly applications, [REST API requests
 
 La siguiente tabla lista los eventos ORDA junto con sus reglas.
 
-| Evento                     | Nivel    | Nombre de la función                                    |                 (C/S) Ejecutado en                |
-| :------------------------- | :------- | :------------------------------------------------------ | :------------------------------------------------------------------: |
-| Instanciación de entidades | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                |
-| Atributo tocado            | Atributo | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword |
-|                            | Entity   | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword |
+| Evento                     | Nivel    | Nombre de la función                                    |                     (C/S) Ejecutado en                     |
+| :------------------------- | :------- | :------------------------------------------------------ | :---------------------------------------------------------------------------: |
+| Instanciación de entidades | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                     client                                    |
+| Atributo tocado            | Atributo | `event touched <attrName>()`                            | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) |
+|                            | Entity   | `event touched()`                                       | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) |
 
 :::note
 

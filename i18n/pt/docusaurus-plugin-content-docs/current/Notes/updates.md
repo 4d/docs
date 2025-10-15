@@ -44,7 +44,7 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
-- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview-old.md)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
+- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview.md#components-developed-by-4d)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
   \- **Import**: import automatically 4D components as dependencies to the project<br/>
   \- **Ignore**: do not import components and let you [manage components manually](../Project/components.md)<br/>

@@ -26,10 +26,10 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 - Serveur REST : gère les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md)
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
-- ***web setting*** signifie que le mode préemptif dépend d'une valeur de réglage :
-  - when [**Scalable sessions**](sessions.md#enabling-web-sessions) option is selected, the preemptive mode is automatically used for web processes.
+- ***paramètres web*** signifie que le mode préemptif dépend d'une valeur de réglage :
+  - lorsque l'option [**Sessions évolutives**](sessions.md#enabling-web-sessions) est sélectionnée, le mode préemptif est automatiquement utilisé pour les process web.
   - sinon, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
-  - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv20/4D/20.2/Publishing-a-Web-Service-with-4D.300-6750334.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv20/4D/20.2/Subscribing-to-a-Web-Service-in-4D.300-6750336.en.html)) and make sure they are confirmed thread-safe by the compiler.
+  - en ce qui concerne les process de service Web (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode. Il suffit de sélectionner la propriété "Peut être exécutée dans un process préemptif" pour les méthodes de serveur SOAP publiées (voir [Publier un Service Web avec 4D](https://doc.4d.com/4Dv20/4D/20.2/Publier-un-Service-Web-avec-4D.300-6750334.fe.html)) ou les méthodes de client proxy (voir [Souscrire à un Service Web dans 4D](https://doc.4d.com/4Dv20/4D/20.2/Souscrire-a-un-Service-Web-dans-4D.300-6750336.fe.html)) et de s'assurer qu'elles sont confirmées thread-safe par le compilateur.
 
 ## Ecrire du code serveur Web thread-safe
 
@@ -43,7 +43,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - La méthode projet `compiler_web` (indépendamment de sa propriété "Mode d'exécution") ;
 
-- Basically any code processed by the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command in the web context, for example through .shtml pages
+- En principe, tout code traité par la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) dans le contexte du web, par exemple par le biais de pages .shtml
 
 - Toute méthode projet comportant l'attribut "Available through 4D tags and URLS (`4DACTION`, etc.)"
 
