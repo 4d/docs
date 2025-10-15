@@ -156,7 +156,7 @@ title: (
   ),
     links: (
       <div className="homepageLinks">
-         <Link to="https://developer.qodly.com/docs/">
+         <Link to="https://developer.4d.com/qodly/">
           <Translate>4D Qodly Pro</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
         <Link to="WebServer/overview">
@@ -252,7 +252,7 @@ title: (
         <Link to="Extensions/overview">
           <Translate>Extending 4D applications</Translate>
         </Link>
-        <Link to="https://developer.qodly.com/docs/">
+        <Link to="https://developer.4d.com/qodly/">
           <Translate>4D Qodly Pro</Translate> <i class="fa-solid fa-up-right-from-square"></i>
         </Link>
         <Link to="ViewPro/getting-started">
