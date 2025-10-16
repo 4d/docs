@@ -9,7 +9,7 @@ title: Glossaire
 
 ## Action
 
-Chaque action qui peut être effectuée sur une [ressource](#resource). Available actions are: create, read, update, drop, execute, and promote.
+Chaque action qui peut être effectuée sur une [ressource](#resource). Les actions disponibles sont : create, read, update, drop, execute, and promote.
 
 ## Attribut
 
@@ -18,11 +18,11 @@ Un attribut est la plus petite cellule de stockage dans une base de données rel
 - Dans un objet dataclass, chaque propriété est un attribut de dataclass qui correspond à un champ dans la table correspondante (même nom et même type).
 - Dans un objet entity, les attributs d'entités sont des propriétés qui contiennent les valeurs pour les attributs du datastore correspondants.
 
-> \> Attributes and properties are similar concepts. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
+> Les *attributs* et les *propriétés* sont des concepts similaires. "Attribut" est utilisé pour désigner les propriétés de la dataclass qui stockent les données, tandis que "propriété" est plus générique et définit une donnée stockée dans un objet.
 
 ## AttributePath
 
-Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. See also [PropertyPath](#propertypath).
+Un attributePath est le chemin d'un attribut à l'intérieur d'une dataclass ou d'une entité donnée. Voir aussi [PropertyPath](#propertypath).
 
 ## Class code
 
@@ -89,7 +89,7 @@ Une entité est un objet qui correspond à un modèle de dataclass. Une entité 
 
 Une entité peut être vue comme une instance de la dataclass, comme un enregistrement de la table correspondante à la dataclass dans son datastore associé. Cependant, une entité contient également des données connexes. Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer).
 
-For more information, see [entities](entities.md).
+Pour plus d'informations, voir [entities](entities.md).
 
 ## Entity selection
 

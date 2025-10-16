@@ -5,67 +5,67 @@ title: ORDA Events
 
 <details><summary>Historique</summary>
 
-| Release | Modifications       |
-| ------- | ------------------- |
-| 20 R10  | touched event added |
+| Release | Modifications           |
+| ------- | ----------------------- |
+| 20 R10  | ajout événement touched |
 
 </details>
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Les événements ORDA sont des fonctions qui sont automatiquement invoquées par ORDA chaque fois que des entités et des attributs d'entités sont manipulés (ajoutés, supprimés ou modifiés). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
 
-You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
+Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événement. Les événements sont appelés automatiquement par ORDA en fonction des actions de l'utilisateur ou des opérations effectuées par le code sur les entités et leurs attributs.
 
-:::info Compatibility note
+:::info Note de compatibilité
 
-ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+Les événements d'entité ORDA dans le datastore sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
 
 :::
 
 ## Vue d’ensemble
 
-### Event level
+### Niveau de l'événement
 
-A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
+Une fonction d'événement d'entité est toujours définie dans la [classe Entity](../ORDA/ordaClasses.md#entity-class).
 
-It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute.
+Un événement peut être défini au niveau de l'**entité** et/ou de l'**attribut** (y compris les [**attributs calculés**](../ORDA/ordaClasses.md#computed-attributes)). Dans le premier cas, il sera déclenché pour tous les attributs de l'entité ; dans l'autre cas, il ne sera déclenché que pour l'attribut ciblé.
 
-For the same event, you can define different functions for different attributes.
+Pour un même événement, vous pouvez définir différentes fonctions pour différents attributs.
 
-You can also define the same event at both attribute and entity levels. The attribute event is called first and then the entity event.
+Vous pouvez également définir le même événement au niveau de l'attribut et de l'entité. L'événement attribut est appelé en premier, puis l'événement entité.
 
-### Execution in remote configurations
+### Exécution en configuration distante
 
-Usually, ORDA events are executed on the server.
+En général, les événements ORDA sont exécutés sur le serveur.
 
-In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
-
-:::note
-
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed on the client.
-
-:::
-
-With other remote configurations (i.e. Qodly applications, [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below).
-
-### Summary table
-
-The following table lists ORDA events along with their rules.
-
-| Evénement            | Niveau   | Function name                                           |                 (C/S) Executed on                 |
-| :------------------- | :------- | :------------------------------------------------------ | :------------------------------------------------------------------: |
-| Entity instantiation | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                |
-| Attribute touched    | Attribut | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword |
-|                      | Entity   | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword |
+Cependant, dans une configuration client/serveur, la fonction d'événement `touched()` peut être exécutée sur **le serveur ou le client**, en fonction de l'utilisation du mot-clé [`local`](./ordaClasses.md#local-functions). Une implémentation spécifique côté client permet de déclencher l'événement sur le client.
 
 :::note
 
-The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actually an event function but is always called when a new entity is instantiated.
+Les fonctions ORDA [`constructor()`](./ordaClasses.md#class-constructor) sont toujours exécutées sur le client.
 
 :::
 
-## *event* parameter
+Avec d'autres configurations distantes (i.e. applications Qodly, [requêtes via l'API REST](../REST/REST_requests.md), ou requêtes via [`Open datastore`](../commands/open-datastore.md)), la fonction d'événement `touched()` est toujours exécutée **côté serveur**. Cela signifie que vous devez vous assurer que le serveur peut "voir" qu'un attribut a été touché pour déclencher l'événement (voir ci-dessous).
 
-Event functions accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
+### Tableau de synthèse
+
+Le tableau suivant liste les événements d'entité ORDA ainsi que leurs règles.
+
+| Evénement              | Niveau   | Nom de la fonction                                      |                 (C/S) Exécuté sur                |
+| :--------------------- | :------- | :------------------------------------------------------ | :-----------------------------------------------------------------: |
+| Instanciation d'entité | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                               |
+| Attribut touched       | Attribut | `event touched <attrName>()`                            | Dépend du mot-clé [`local`](../ORDA/ordaClasses.md#local-functions) |
+|                        | Entity   | `event touched()`                                       | Dépend du mot-clé [`local`](../ORDA/ordaClasses.md#local-functions) |
+
+:::note
+
+La fonction [`constructor()`](./ordaClasses.md#class-constructor-1) n'est pas en soi une fonction d'événement, mais elle est toujours appelée lorsqu'une nouvelle entité est instanciée.
+
+:::
+
+## Paramètre *event*
+
+Les fonctions d'événement acceptent un seul objet *event* comme paramètre. Lorsque la fonction est appelée, le paramètre est rempli avec diverses propriétés :
 
 | Nom de propriété | Disponibilité                          | Type   | Description                                                                  |
 | :--------------- | :------------------------------------- | :----- | :--------------------------------------------------------------------------- |
@@ -73,7 +73,7 @@ Event functions accept a single *event* object as parameter. When the function i
 | *attributeName*  | Only for events involving an attribute | String | Nom de l'attribut (*ex.* "firstname")     |
 | *dataClassName*  | Toujours                               | String | Nom du verre de données (*ex.* "Company") |
 
-## Event function description
+## Description des fonctions
 
 ### `Function event touched`
 
@@ -85,19 +85,19 @@ Event functions accept a single *event* object as parameter. When the function i
 // code
 ```
 
-This event is triggered each time a value is modified in the entity.
+Cet événement est déclenché chaque fois qu'une valeur est modifiée dans l'entité.
 
 - if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
 - if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
 
-This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
+Cet événement est déclenché dès que le moteur de 4D Server / 4D détecte une modification de la valeur de l'attribut qui peut être due aux actions suivantes :
 
-- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
-  - the user sets a value on a 4D form,
-  - the 4D code makes an assignment with the `:=` operator. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
-- in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
-- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
-- with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
+- en **client/serveur avec le [mot-clé `local`](../ORDA/ordaClasses.md#local-functions)** ou en **4D mono-utilisateur** :
+  - l'utilisateur saisit une valeur dans un formulaire 4D,
+  - le code 4D effectue une assignation avec l'opérateur `:=`. L'événement est également déclenché en cas d'auto-assignation (`$entity.attribute:=$entity.attribute`).
+- en **client/serveur sans le mot-clé `local`** : du code 4D effectue une assignation avec l'opérateur `:=` est [exécuté sur le serveur](../commands-legacy/execute-on-server.md).
+- en **client/serveur sans le mot-clé `local`**, une **[application Qodly](https://developer.qodly.com/docs)** ou **[datastore distant](../commands/open-datastore.md)** : l'entité est reçue sur le serveur 4D lors de l'appel d'une fonction ORDA (sur l'entité ou avec l'entité en tant que paramètre). Cela signifie que vous devrez peut-être mettre en place une fonction *refresh* ou *preview* sur l'application distante qui envoie une requête ORDA au serveur et déclenche l'événement.
+- avec le serveur REST : la valeur est reçue sur le serveur REST avec une [requête REST](../REST/$method.md#methodupdate) (`$method=update`)
 
 The function receives an [*event* object](#event-parameter) as parameter.
 

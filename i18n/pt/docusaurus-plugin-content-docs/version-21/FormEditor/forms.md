@@ -100,6 +100,10 @@ Um formulário de múltiplas páginas possui tanto uma página de fundo quanto v
 
 On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
 
+| Light theme                             | Dark theme                                   |
+| --------------------------------------- | -------------------------------------------- |
+| ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
+
 :::caution Prévia do desenvolvedor
 
 Fluent UI support is currently in the Developer Preview phase. Não deve ser usado na produção.

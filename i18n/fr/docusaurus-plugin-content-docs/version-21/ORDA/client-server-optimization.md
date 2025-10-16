@@ -3,7 +3,7 @@ id: client-server-optimization
 title: Optimisation client/serveur
 ---
 
-4D optimise automatiquement les requêtes ORDA qui utilisent des entity selections ou chargent des entités dans l'architecture client/serveur. Ces optimisations accélèrent l'exécution de votre application 4D en réduisant drastiquement le volume d'informations transmises sur le réseau. Elles incluent :
+En architecture client/serveur, 4D optimise automatiquement les requêtes ORDA qui utilisent des entity selections ou chargent des entités. Ces optimisations accélèrent l'exécution de votre application 4D en réduisant drastiquement le volume d'informations transmises sur le réseau. Elles incluent :
 
 - le **contexte d'optimisation**
 - le **Cache ORDA**
@@ -27,7 +27,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
   - [`dataClass.query()`](../API/DataClassClass.md#query)
   - [`entitySelection.query()`](../API/EntitySelectionClass.md#query)
 
-- Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. L'affichage des lignes suivantes est optimisé. Les fonctions suivantes associent automatiquement le contexte d'optimisation de l'entity selection d'origine à l'entity selection retournée :
+- Les requêtes ultérieures envoyées au serveur sur la même entity selection réutilisent automatiquement le contexte d'optimisation et lisent uniquement les attributs nécessaires depuis le serveur, ce qui accélère le traitement. Par exemple, dans une [list box de type entity selection](#entity-selection-based-list-box), la phase d'apprentissage a lieu pendant l'affichage de la première ligne. L'affichage des lignes suivantes est optimisé. Les fonctions suivantes associent automatiquement le contexte d'optimisation de l'entity selection d'origine à l'entity selection retournée :
   - [`entitySelection.and()`](../API/EntitySelectionClass.md#and)
   - [`entitySelection.minus()`](../API/EntitySelectionClass.md#minus)
   - [`entitySelection.or()`](../API/EntitySelectionClass.md#or)
@@ -35,7 +35,7 @@ Le contexte d'optimisation est fondé sur ce qui suit :
   - [`entitySelection.slice()`](../API/EntitySelectionClass.md#slice)
   - [`entitySelection.drop()`](../API/EntitySelectionClass.md#drop)
 
-- An existing optimization context can be passed as a property to another entity selection of the same dataclass, thus bypassing the learning phase and accelerating the application (see [Reusing the context property](#reusing-the-context-property) below).
+- Un contexte d'optimisation existant peut être passé en tant que propriété à une autre entity selection de la même dataclass, ce qui permet d'économiser la phase d'apprentissage et d'accélérer l'application (voir [Réutilisation de la propriété context](#reusing-the-context-property) ci-dessous).
 
 - Vous pouvez créer des contextes d'optimisation manuellement à l'aide de la fonction [`dataStore.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) (voir [Préconfiguration des contextes](#preconfiguring-contexts)).
 
@@ -66,7 +66,7 @@ Vous pouvez augmenter les avantages de l'optimisation en utilisant la propriét�
 
 > Vous pouvez également créer des contextes en utilisant la fonction [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo).
 
-Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
+Une même propriété de contexte d'optimisation peut être passée à un nombre illimité d"entity selections de la même dataclass. Toutes les fonctions ORDA qui gèrent les entity selections prennent en charge la propriété **context** (par exemple [`dataClass.query()`](../API/DataClassClass.md#query) ou [`dataClass.all()`](../API/DataClassClass.md#all)). Il est toutefois important de garder à l'esprit qu'un contexte est automatiquement mis à jour lorsque de nouveaux attributs sont utilisés dans d'autres parties du code. Si le même contexte est réutilisé dans différents codes, il risque d'être surchargé et de perdre en efficacité.
 
 > Un mécanisme similaire est implémenté pour les entités qui sont chargées, de sorte que seuls les attributs utilisés sont demandés (voir la fonction [`dataClass.get()`](../API/DataClassClass.md#get)).
 
@@ -77,22 +77,22 @@ Une même propriété de contexte d'optimisation peut être passée à un nombre
  var $data : Collection
  $querysettings:=New object("context";"shortList")
  $querysettings2:=New object("context";"longList")
-
+ 
  $sel1:=ds.Employee.query("lastname = S@";$querysettings)
- $data:=extractData($sel1) // In extractData method an optimization is triggered   
- // and associated to context "shortList"
-
+ $data:=extractData($sel1) // dans la méthode extractData un contexte d'optimisation    
+ // est généré et associé au contexte "shortList"
+ 
  $sel2:=ds.Employee.query("lastname = Sm@";$querysettings)
- $data:=extractData($sel2) // In extractData method the optimization associated   
- // to context "shortList" is applied
-
+ $data:=extractData($sel2) // dans la méthode extractData le contexte d'optimisation   
+ // associé au contexte "shortList" est appliqué
+ 
  $sel3:=ds.Employee.query("lastname = Smith";$querysettings2)
- $data:=extractDetailedData($sel3) // In extractDetailedData method an optimization  
- // is triggered and associated to context "longList"
-
+ $data:=extractDetailedData($sel3) // dans la méthode extractDetailedData un contexte d'optimisation  
+ // est généré et associé au contexte "longList"
+ 
  $sel4:=ds.Employee.query("lastname = Brown";$querysettings2)
- $data:=extractDetailedData($sel4) // In extractDetailedData method the optimization  
- // associated to context "longList" is applied
+ $data:=extractDetailedData($sel4) // dans extractDetailedData  le contexte d'optimisation  
+ // associé au contexte "longList" est appliqué
 ```
 
 ### List box de type entity selection
@@ -133,7 +133,7 @@ Pour des raisons d'optimisation, les données demandées au serveur via ORDA son
 
 Les données contenues dans le cache sont considérées comme expirées lorsque le délai d'attente est atteint. Tout accès à des données périmées provoquera l'envoi d'une requête au serveur. Les données périmées restent dans le cache jusqu'à ce que l'on ait besoin d'espace.
 
-You can force entity selection data in the ORDA cache to expire at any moment by using the [`refresh()`](../API/EntitySelectionClass.md#refresh) function.
+Vous pouvez forcer les données de sélection d'entité dans le cache ORDA à expirer à tout moment en utilisant la fonction [`refresh()`](../API/EntitySelectionClass.md#refresh).
 
 Par défaut, le cache ORDA est géré de manière transparente par 4D. Cependant, vous pouvez contrôler son contenu en utilisant les fonctions ORDA suivantes :
 
