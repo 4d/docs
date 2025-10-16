@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: ORDA Events
+title: ORDAイベント
 ---
 
 <details><summary>履歴</summary>
@@ -67,11 +67,11 @@ The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actu
 
 Event functions accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
 
-| プロパティ名          | 利用可能性                                  | 型   | 説明                                                                                     |
-| :-------------- | :------------------------------------- | :-- | :------------------------------------------------------------------------------------- |
-| `kind`          | Always                                 | 文字列 | Event name ("touched")                                              |
-| *attributeName* | Only for events involving an attribute | 文字列 | Attribute name (*e.g.* "firstname") |
-| *dataClassName* | Always                                 | 文字列 | Dataclass name (*e.g.* "Company")   |
+| プロパティ名          | 利用可能性        | 型   | 説明                                                                                     |
+| :-------------- | :----------- | :-- | :------------------------------------------------------------------------------------- |
+| `kind`          | Always       | 文字列 | イベント名("touched")                                                    |
+| *attributeName* | 属性に関するイベントのみ | 文字列 | Attribute name (*e.g.* "firstname") |
+| *dataClassName* | Always       | 文字列 | Dataclass name (*e.g.* "Company")   |
 
 ## Event function description
 
@@ -87,8 +87,8 @@ Event functions accept a single *event* object as parameter. When the function i
 
 This event is triggered each time a value is modified in the entity.
 
-- if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
-- if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性における変更に対してトリガーされます。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対する変更に対してのみトリガーされます。
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
@@ -101,7 +101,7 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 
 The function receives an [*event* object](#event-parameter) as parameter.
 
-If this event [throws](../commands-legacy/throw.md) an error, it will not stop the undergoing action.
+このイベントがエラーを[throw](../commands-legacy/throw.md) する場合でも、進行中のアクションは停止しません。
 
 :::note
 

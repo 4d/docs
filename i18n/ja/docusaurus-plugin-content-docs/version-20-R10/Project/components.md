@@ -516,7 +516,7 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 
 #### GitHub 依存関係バージョン範囲の変更
 
-You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Modify the dependency...** from the contextual menu. In the "Modify the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+一覧に表示されたGitHub 依存関係に対して[バージョン設定](#github-依存関係のバージョン範囲を定義) を編集することができます: 編集する依存関係を選択し、コンテキストメニューから**依存関係を編集...** を選択して下さい。 In the "依存関係を編集" ダイアログボックス内にて、依存関係のルールメニューを編集し、**適用** をクリックします。
 
 バージョン範囲の変更は、自動アップデート機能を使用しているときに依存関係を特定のバージョン番号にロックしておきたいときに有用です。
 

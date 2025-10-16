@@ -120,7 +120,7 @@ $entity.save() //sauvegarder les modifications
 
 :::note Notes
 
-- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- Les champs objet de la base de données peuvent être [associés à des classes](../Develop/field-properties.md), auquel cas seuls les objets de la classe définie peuvent être affectés à l'attribut de l'entité.
 - Les champs Blob des bases de données ([blobs scalaires](Concepts/dt_blob.md)) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
 
 :::
@@ -288,7 +288,7 @@ La nature **partageable** ou **modifiable** d'une entity selection est définie 
 
 Une nouvelle entity selection est **partageable** dans les cas suivants :
 
-- la nouvelle entity selection résulte d'une fonction de classe ORDA appliquée à une dataClass : [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#quer
+- la nouvelle entity selection résulte d'une fonction de classe ORDA appliquée à une dataClass : [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
 - la nouvelle entity selection est basée sur une relation [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié 1-vers-N mais que l'entité n'appartient pas à une entity selection.
 - la nouvelle entity selection est explicitement copiée comme partageable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire avec l'option `ck shared`).
 
@@ -449,7 +449,7 @@ Les filtres s'appliquent aux **entités**. Si vous souhaitez restreindre l'accè
 
 ### Comment définir un filtre de restriction
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. Le filtre est alors automatiquement activé.
+Vous créez un filtre pour une dataclass en définissant une fonction `event restrict` dans la [**classe**](dsMapping.md#dataclass) de la dataclasse. Le filtre est alors automatiquement activé.
 
 ### `Function event restrict`
 
@@ -466,7 +466,7 @@ Le filtre doit retourner une entity selection de la dataclass. Il peut s'agir d'
 
 :::note
 
-Pour des raisons de performances, nous recommandons d'utiliser les **attributs indexés** dans la définition du filtre.
+Pour des raisons de performances, nous recommandons d'utiliser des **attributs indexés** dans la définition du filtre.
 
 :::
 

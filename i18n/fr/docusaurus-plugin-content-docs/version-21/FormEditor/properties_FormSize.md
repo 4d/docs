@@ -11,15 +11,15 @@ Les options de taille dépendent de la valeur de l'option **Taille basée sur**.
 
 ## Taille basée sur
 
-- **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields.
+- **Taille automatique** : La taille du formulaire sera celle nécessaire à l'affichage de tous les objets, à laquelle s'ajouteront les valeurs de marge (en pixels) saisies dans les champs [**Marge hor.**](#hor-margin) et [**Marge vert.**](#vert-margin).
 
   Vous pouvez choisir cette option lorsque vous souhaitez utiliser des objets actifs placés dans une zone hors écran (c'est-à-dire en dehors du rectangle de délimitation de la fenêtre) avec une fenêtre de taille automatique. Grâce à cette option, la présence de ces objets ne modifiera pas la taille de la fenêtre.
 
-- **Set Size**: The size of the form will be based on what you enter (in pixels) in the [**Width**](#width) and [**Height**](#height) fields.
+- **Fixer taille** : La taille du formulaire sera basée sur ce que vous entrez (en pixels) dans les champs [**Largeur**](#width) and [**Hauteur**](#height).
 
-- `\<object name>`: The size of the form will be based on the position of the selected form object. Par exemple, si vous choisissez un objet qui est placé dans la partie inférieure droite de la zone à afficher, la taille du formulaire sera constituée d'un rectangle dont le coin supérieur gauche sera l'origine du formulaire et le coin inférieur droit correspondra à celle de l'objet sélectionné, plus les éventuelles valeurs de marge.
+- `<nom objet>` : La taille du formulaire sera basée sur la position de l'objet du formulaire sélectionné. Par exemple, si vous choisissez un objet qui est placé dans la partie inférieure droite de la zone à afficher, la taille du formulaire sera constituée d'un rectangle dont le coin supérieur gauche sera l'origine du formulaire et le coin inférieur droit correspondra à celle de l'objet sélectionné, plus les éventuelles valeurs de marge.
 
-> For output forms, only the [**Hor margin**](#hor-margin) or [**Width**](#width) fields are available.
+> Pour les formulaires de sortie, seuls les champs [**Marge hor.**](#hor-margin) ou [**Largeur**](#width) sont disponibles.
 
 #### Grammaire JSON
 
@@ -43,7 +43,7 @@ Hauteur du formulaire (en pixels) lorsque la [taille du formulaire](#size-based-
 
 ## Marge hor.
 
-Valeur à ajouter (en pixels) à la marge droite du formulaire lorsque la [taille du formulaire](#size-based-on) est définie sur **Taille automatique** ou `\<object name>`
+Valeur à ajouter (en pixels) à la marge droite du formulaire lorsque la [taille du formulaire](#size-based-on) est définie sur **Taille automatique** ou `\<nom objet>`
 
 Cette valeur détermine également les marges droites des formulaires utilisés dans l'éditeur d'étiquettes.
 
@@ -57,7 +57,7 @@ Cette valeur détermine également les marges droites des formulaires utilisés 
 
 ## Marge hor.
 
-Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\<object name>`.
+Valeur à ajouter (en pixels) à la marge inférieure du formulaire lorsque la [taille du formulaire](#size-based-on) est définie sur **Taille automatique** ou `\<nom objet>`.
 
 Cette valeur détermine également les marges supérieures des formulaires utilisés dans l'éditeur d'étiquettes.
 
