@@ -125,7 +125,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
   -> $RequestAccepted : Boolean
 
 ```
-> `On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 The information received by the database method depends on the selected [authentication mode](#authentication-modes).
+> `On Web Authentication` データベースメソッドのすべての引数が必ず値を受け取るわけではありません。 このデータベースメソッドが受け取る情報は、[認証モード](#authentication-modes)の設定により異なります。
 
 
 #### $1 - URL

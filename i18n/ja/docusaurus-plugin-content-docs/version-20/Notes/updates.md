@@ -25,7 +25,7 @@ title: リリースノート
 
 #### 動作の変更
 
-- As of 4D **20.7 HF2**, the [`Time`](https://doc.4d.com/4dv20/help/command/en/page179.html) command returns a negative time expression when the *timeValue* parameter is negative. For instance, `Time("-01:02:03")` will now return -01:02:03. 過去のリリースにおいては、負の符号は無視されていました。
+- 4D **20.7 HF2** 以降、[`Time`](https://doc.4d.com/4dv20/help/command/ja/page179.html) コマンドは、*timeValue* 引数が負の値の場合には負の時間式を返すようになりました。 例えば、`Time("-01:02:03")` は、 -01:02:03 を返すようになりました。 過去のリリースにおいては、負の符号は無視されていました。
 
 
 ## 4D 20.6 LTS
