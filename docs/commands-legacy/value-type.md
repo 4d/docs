@@ -37,7 +37,6 @@ The command returns a numeric value that can be compared with one of the followi
 | Is time       | Integer | 11    |
 | Is undefined  | Integer | 5     |
 | Is variant    | Integer | 12    |
-| Object array  | Integer | 39    |
 
 This command is designed to return the type of a scalar expression, *i.e.* the value stored in or returned by the *expression* parameter. In particular, it can be applied to the following 4D expressions:
 
