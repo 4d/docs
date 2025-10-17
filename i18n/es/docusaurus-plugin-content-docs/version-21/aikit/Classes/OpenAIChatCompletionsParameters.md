@@ -40,7 +40,7 @@ See [OpenAIParameters](./OpenAIParameters.md) for other callback properties.
 
 ## Response Format
 
-The `response_format` parameter allows you to specify the format that the model must output. This is particularly useful when you need structured data or want to ensure the response follows a specific format.
+El parámetro `response_format` le permite especificar el formato que el modelo debe salir. This is particularly useful when you need structured data or want to ensure the response follows a specific format.
 
 ### Supported Response Format Types
 

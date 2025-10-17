@@ -7,7 +7,7 @@ title: Fournisseurs (Providers)
 
 De nombreux fournisseurs d'IA proposent une API de type OpenAI, vous pouvez donc utiliser ce projet pour vous y connecter.
 
-To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+Pour ce faire, il suffit de remplacer le `baseURL` original par celui du fournisseur et d'utiliser leur clé d'api si nécessaire.
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
@@ -17,7 +17,7 @@ Some of them
 
 ## Distant
 
-| Fournisseur                                                                                                                                                                                              | Url de base                                                                                                                                           |
+| Fournisseur                                                                                                                                                                                              | baseURL                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/                                                                                                                                                      | https://api.mistral.ai/v1                                                                             |
 | https://www.deepseek.com/                                                                                                                                | https://api.deepseek.com                                                                              |

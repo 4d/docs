@@ -42,7 +42,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 
 - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. Ya no se realiza ningún tratamiento específico en estas URL.
-- Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+- Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
 - **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview.md#components-developed-by-4d)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>

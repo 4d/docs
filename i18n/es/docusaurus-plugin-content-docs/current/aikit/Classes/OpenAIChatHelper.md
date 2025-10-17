@@ -77,7 +77,7 @@ Registers a tool with its handler function for automatic tool call handling.
 The *handler* parameter can be:
 
 - A **4D.Function**: Direct handler function
-- An **Object**: An object containing a `formula` property matching the tool function name
+- Un **Objeto**: un objeto que contiene una propiedad `formula` que coincide con el nombre de la función de la herramienta
 
 The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
 

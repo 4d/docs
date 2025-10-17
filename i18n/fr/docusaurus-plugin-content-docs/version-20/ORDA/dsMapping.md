@@ -250,7 +250,7 @@ Les entity selections triées sont créées uniquement lorsque cela est nécessa
 *   résultat d'un `orderBy()` sur une sélection (de n'importe quel type) ou un `orderBy()` sur une dataclass,
 *   résultat de la méthode `newSelection()` avec l'option `dk keep ordered`
 
-Les sélections d'entités non-triées sont créées dans les cas suivants :
+Les entity selections non-triées sont créées dans les cas suivants :
 
 *   résultat d'un `query()` standard sur une sélection (de n'importe quel type) ou un `query()` sur une dataclass,
 *   résultat de la méthode `newSelection()` sans option,
