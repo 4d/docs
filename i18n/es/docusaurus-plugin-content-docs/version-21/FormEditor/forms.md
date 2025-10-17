@@ -100,6 +100,12 @@ Un formulario multipáginas tiene una página de fondo y varias páginas de visu
 
 On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
 
+Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+
+| Light theme                             | Dark theme                                   |
+| --------------------------------------- | -------------------------------------------- |
+| ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
+
 :::caution Vista previa para desarrolladores
 
 Fluent UI support is currently in the Developer Preview phase. No debe utilizarse en producción.
@@ -112,19 +118,17 @@ This feature can only be used on Windows. On macOS, it is ignored.
 
 :::
 
-### Fluent UI rendering availability
+:::tip Entrada de blog relacionada
 
-The Fluent UI rendering is available in the following execution environments only:
-
-- Windows with [Windows App SDK](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) version 1.7.3 installed (you need to install this SDK on any Windows machine displaying your forms).
-- Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
-- [**Test application** feature](../Menus/bars.md#previewing-menu-bars) available from the Run menu.
-
-:::note
-
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
 
 :::
+
+### Requisitos
+
+The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
 
 ### Enabling the Fluent UI rendering
 
@@ -149,19 +153,23 @@ Each form can define its own rendering via the **Widget appearance** property. L
 
 The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
 
-### Features and limitations
-
-Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+### Specific behaviors
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 
-- El comando `FORM Window theme` devuelve el tema de visualización actual del formulario. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
+- The new `FORM Windows theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
 - If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
-- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
 - [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
 - [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
 - The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
+- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
+
+:::info Limitations
+
+This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
+
+:::
 
 ## Formularios heredados
 

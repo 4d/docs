@@ -187,7 +187,7 @@ Le <!-- REF #WebServerClass.defaultHomepage.Summary -->nom de la page home par d
 
 *Propriété en lecture seulement.*
 
-A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler objects<!-- END REF -->. An HTTP handler object contains a listened URL pattern, a handled verb, and the code to be called. HTTP handlers can be defined through a HTTPHandlers.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Request handler](../WebServer/http-request-handler.md) page.
+Une <!-- REF #WebServerClass.handlers.Summary -->collection d'objets gestionnaires HTTP personnalisés<!-- END REF --> . Un objet HTTP handler contient un motif d'URL écouté, un verbe pris en charge et le code à appeler. Les gestionnaires HTTP peuvent être définis dans un fichier HTTPHandlers.json ou dans le paramètre *settings* de la fonction [`.start()`](#start). Pour plus d'informations, veuillez consulter la page [HTTP Request handler](../WebServer/http-request-handler.md).
 
 <!-- END REF -->
 
@@ -495,7 +495,7 @@ Le <!-- REF #WebServerClass.rootFolder.Summary -->chemin du dossier racine du se
 
 *Propriété en lecture seulement.*
 
-A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently handled to customize HTTP headers<!-- END REF -->. A rule object contains a "regexPattern" property, as well as an action name with a value. HTTP rules can be defined through a HTTPRules.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Rules](../WebServer/http-rules.md) page.
+La <!-- REF #WebServerClass.rules.Summary -->collection d'objets de règles HTTP mises en oeuvre pour personnaliser les en-têtes HTTP<!-- END REF -->. Un objet règle contient une propriété "regexPattern" ainsi qu'un nom d'action avec une valeur. Les règles HTTP peuvent être définies dans un fichier HTTPRules.json ou dans le paramètre *settings* de la fonction [`.start()`](#start). Pour plus d'informations, veuillez consulter la page [Règles HTTP](../WebServer/http-rules.md).
 
 <!-- END REF -->
 

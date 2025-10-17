@@ -93,7 +93,7 @@ $a+=2 // $a=3
 |          | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                          |
 |          | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 ($p1 を 5倍にリサイズします)`       |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) except:
+これらの演算子は、あらゆる[代入可能の式](quick-tour.md#代入可能vs代入不可) に対して適用されますが、以下は除きます:
 - オブジェクトプロパティあるいはコレクション要素としてのピクチャー
 - 配列のインデックス変数
 
