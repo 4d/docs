@@ -159,7 +159,7 @@ To select an object using the Property List:
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List. Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window.
 To deselect an object, click outside the object’s boundary or **Shift+click** the object.
 
->It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+>It is also possible to select objects by double-clicking them in the result window of "Find in design" operation.
 
 ### Selecting multiple objects  
 
