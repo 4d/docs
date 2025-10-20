@@ -7,7 +7,7 @@ title: Proveedores
 
 Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
 
-To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+Para ello sólo tiene que definir la `baseURL` a la del proveedor y utilizar su clave api si es necesario.
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
@@ -17,7 +17,7 @@ Algunos de ellos
 
 ## Remoto
 
-| Proveedor                                                                                                                                                                                                | Url base                                                                                                                                              |
+| Proveedor                                                                                                                                                                                                | baseURL                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/                                                                                                                                                      | https://api.mistral.ai/v1                                                                             |
 | https://www.deepseek.com/                                                                                                                                | https://api.deepseek.com                                                                              |
@@ -31,7 +31,7 @@ Algunos de ellos
 
 ## Local
 
-| Proveedor                                            | Url base por defecto                                                                                      | Doc                                                                           |
+| Proveedor                                            | Default baseURL                                                                                           | Doc                                                                           |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

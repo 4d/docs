@@ -9,12 +9,12 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 ## Configuration Properties
 
-| Nome da propriedade | Tipo | Descrição                                                                    | Opcional        |
-| ------------------- | ---- | ---------------------------------------------------------------------------- | --------------- |
-| `apiKey`            | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | Não para OpenAI |
-| `baseURL`           | Text | Base URL for OpenAI API requests.                            | Sim             |
-| `organization`      | Text | Your OpenAI Organization ID.                                 | Sim             |
-| `project`           | Text | Your OpenAI Project ID.                                      | Sim             |
+| Nome da propriedade | Tipo | Descrição                                                                    | Opcional                                                  |
+| ------------------- | ---- | ---------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `apiKey`            | Text | Your [OpenAI API Key](https://platform.openai.com/api-keys). | Can be required by the provider                           |
+| `baseURL`           | Text | Base URL for OpenAI API requests.                            | Yes (if omitted = use OpenAI Platform) |
+| `organization`      | Text | Your OpenAI Organization ID.                                 | Sim                                                       |
+| `project`           | Text | Your OpenAI Project ID.                                      | Sim                                                       |
 
 ### Propriedades HTTP adicionais
 

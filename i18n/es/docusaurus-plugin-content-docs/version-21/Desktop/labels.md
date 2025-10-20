@@ -166,7 +166,7 @@ You can use dedicated table forms and project methods to print labels with calcu
    Here, in a table form named "label", we added the *myVar* variable:
    ![](../assets/en/Desktop/label-example1.png)
 
-2. Create a `setMyVar` project method with the following code:
+2. Crea un método proyecto llamado `setMyVar` con el siguiente código:
 
 ```4d
  var myVar+=1

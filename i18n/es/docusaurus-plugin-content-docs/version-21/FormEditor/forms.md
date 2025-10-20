@@ -157,7 +157,7 @@ The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` wi
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 
-- The new `FORM Windows theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
+- El nuevo comando `FORM Windows theme` devuelve el tema de visualización actual del formulario. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
 - If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
 - [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).

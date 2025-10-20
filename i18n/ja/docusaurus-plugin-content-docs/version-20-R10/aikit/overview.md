@@ -21,7 +21,7 @@ title: 4D-AIKit
 var $client:=cs.AIKit.OpenAI.new("あなたの API キー")
 ```
 
-[互換性のあるプロバイダー](compatible-openai.md) API に対しては、 `baseURL` 引数を設定することでサーバーURL を設定することができます。
+For a [compatible provider](compatible-openai.md) API, you need to configure the server URL by setting the `baseURL` parameter.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "あなたの API キー"; baseURL: "https://your.server.ai"})
@@ -43,7 +43,7 @@ var $result:=$client.<resource>.<function>(<parameters...>)
 
 `$result` には`HTTPRequest` と、`success` ステータス、そして`errors` コレクションなどが含まれます。 詳細については [OpenAIResult](Classes/OpenAIResult.md) を参照して下さい。
 
-また以下の例題も参照して下さい。
+See some examples below.
 
 #### チャット
 

@@ -137,7 +137,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 
 You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
 
-- "class": class name without `cs.`, e.g. "UsersHandling" for the `cs.UsersHandling` user class. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
+- "class": nombre de la clase sin `cs.`, por ejemplo, "UsersHandling" para la clase usuario `cs.UsersHandling`. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
 - "method": función de clase perteneciente a la clase.
 
 [Ver abajo](#request-handler-code) para obtener información sobre el código del gestor de peticiones.

@@ -53,7 +53,7 @@ Por ejemplo, llamando al método `HelloWorld` en 4D:
 $4d.HelloWorld();
 ```
 
-> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+> **Nota:** JavaScript es **sensible a mayúsculas**, así que el objeto se llama **`$4d`** (con una minúscula "d").
 
 ### Controlar el acceso a $4d
 
@@ -123,7 +123,7 @@ $4d.today(function(result)
 
 En lugar de utilizar un método independiente, también podemos definir una **clase** que se encargue del cálculo.
 
-Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
+Defina la clase con el método proyecto 4D `calcSum` que recibe parámetros y devuelve su suma:
 
 ```4d
 // SumCalculator user class

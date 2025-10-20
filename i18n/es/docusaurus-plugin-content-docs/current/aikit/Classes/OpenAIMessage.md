@@ -15,7 +15,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | `contenido`    | Variant    | The content of the message, which can be a text or a collection of objects.                                                                         |
 | `user`         | Text       | An optional property representing the user associated with the message.                                                                             |
 | `tool_calls`   | Collection | A collection of tool calls requested by the assistant. Cada llamada a una herramienta contiene un objeto `id`, `type` y `function`. |
-| `tool_call_id` | Text       | The ID of the tool call that this message is responding to (used when `role` is "tool").                                         |
+| `tool_call_id` | Text       | El ID de la llamada a la herramienta a la que responde este mensaje (se utiliza cuando `role` es "tool").                        |
 
 ## Propiedades calculadas
 
@@ -77,7 +77,7 @@ When you receive a tool call message, you need to:
 1. **Extract the function information:**
    - `function.name`: The name of the function to call (must match a function defined in your [OpenAITool](OpenAITool.md) - you can select code to execute according to this name)
    - `function.arguments`: A JSON string containing the function parameters that must be parsed with `JSON Parse`
-   - `id`: The unique identifier for this specific tool call
+   - `id`: el identificador único para esta llamada específica a la herramienta
 
 2. **Execute the function:**
    Parse the arguments (which is a JSON string) and call the corresponding function that you defined in your OpenAITool configuration.

@@ -97,7 +97,7 @@ En el servidor, el comando [`Session`](../commands/session.md) devuelve un objet
 
 ### Utilización
 
-The `session` object allows you to handle information and privileges for the remote user session.
+El objeto `session` permite manejar la información y los privilegios de la sesión del usuario remoto.
 
 Puede compartir datos entre todos los procesos de la sesión del usuario utilizando el objeto compartido [`session.storage`](../API/SessionClass.md#storage). Por ejemplo, puede iniciar un procedimiento de autenticación y verificación de usuario cuando un cliente se conecta al servidor, que involucra ingresar un código enviado por correo electrónico o SMS en la aplicación. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
 

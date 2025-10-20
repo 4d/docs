@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsAPI
 
 # OpenAIChatCompletionsAPI
 
-The `OpenAIChatCompletionsAPI` class is designed for managing chat completions with OpenAI's API. It provides methods to create, retrieve, update, delete, and list chat completions.
+La clase `OpenAIChatCompletionsAPI` está diseñada para gestionar las finalizaciones de chat con la API OpenAI. It provides methods to create, retrieve, update, delete, and list chat completions.
 
 https://platform.openai.com/docs/api-reference/chat
 

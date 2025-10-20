@@ -7,7 +7,7 @@ title: プロバイダ
 
 多くのAI プロバイダがOpenAI に似たAPI を提供しているので、このプロジェクトを使用してそれらに接続することができます。
 
-そのためには元の `baseURL` をプロバイダーのものに変更し、必要であればそのサービスのAPI キーを使用するだけです。
+To do so you just have to set the `baseURL` to the provider one and use their api key if needed.
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
@@ -17,7 +17,7 @@ $client.baseURL:="https://api.mistral.ai/v1"
 
 ## リモート
 
-| プロバイダ                                                                                                                                                                                                    | ベースURL                                                                                                                                                |
+| プロバイダ                                                                                                                                                                                                    | baseURL                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/ja/                                                                                                                                                   | https://api.mistral.ai/v1/ja                                                                          |
 | https://www.deepseek.com/ja/                                                                                                                             | https://api.deepseek.com/ja                                                                           |
@@ -31,7 +31,7 @@ $client.baseURL:="https://api.mistral.ai/v1"
 
 ## ローカル
 
-| プロバイダ                                                   | デフォルトのベースURL                                                                                              | ドキュメント                                                                        |
+| プロバイダ                                                   | Default baseURL                                                                                           | ドキュメント                                                                        |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/ja/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ja/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

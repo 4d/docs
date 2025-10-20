@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Eventos ORDA
+title: Entity Events
 ---
 
 <details><summary>Historia</summary>
@@ -11,13 +11,13 @@ title: Eventos ORDA
 
 </details>
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 No se puede activar directamente la ejecución de la función de evento. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
 :::info Nota de compatibilidad
 
-ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
 
 :::
 
@@ -25,7 +25,7 @@ ORDA events in the datastore are equivalent to triggers in the 4D database. Howe
 
 ### Nivel del evento
 
-A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
+A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
 
 It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute.
 
@@ -49,7 +49,7 @@ Con otras configuraciones remotas (p. ej. Qodly applications, [REST API requests
 
 ### Tabla resumen
 
-La siguiente tabla lista los eventos ORDA junto con sus reglas.
+The following table lists ORDA entity events along with their rules.
 
 | Evento                     | Nivel    | Nombre de la función                                    |                     (C/S) Ejecutado en                     |
 | :------------------------- | :------- | :------------------------------------------------------ | :---------------------------------------------------------------------------: |
@@ -92,9 +92,9 @@ This event is triggered each time a value is modified in the entity.
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
-- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
+- en **cliente/servidor con la [palabra clave `local`](../ORDA/ordaClasses.md#local-functions)** o en **4D monousuario**:
   - el usuario define un valor en un formulario 4D,
-  - el código 4D realiza una asignación con el operador `:=`. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
+  - el código 4D realiza una asignación con el operador `:=`. El evento también se activa en caso de autoasignación (`$entity.attribute:=$entity.attribute`).
 - in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
 - in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
 - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
@@ -107,7 +107,7 @@ If this event [throws](../commands-legacy/throw.md) an error, it will not stop t
 
 Este evento también se activa:
 
-- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
+- cuando los atributos son asignados por el evento [`constructor()`](./ordaClasses.md#class-constructor-1),
 - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
 
 :::
@@ -226,7 +226,7 @@ Note over Client:$people.lastname is uppercased
 
 ```
 
-#### Example 4 (diagram): Client/server without the `local` keyword
+#### Ejemplo 4 (diagrama): cliente/servidor sin la palabra clave `local`
 
 ```mermaid
 

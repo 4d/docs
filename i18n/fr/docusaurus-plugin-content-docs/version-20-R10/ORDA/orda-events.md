@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: ORDA Events
+title: Entity Events
 ---
 
 <details><summary>Historique</summary>
@@ -11,13 +11,13 @@ title: ORDA Events
 
 </details>
 
-Les événements ORDA sont des fonctions qui sont automatiquement invoquées par ORDA chaque fois que des entités et des attributs d'entités sont manipulés (ajoutés, supprimés ou modifiés). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
 
 Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événement. Les événements sont appelés automatiquement par ORDA en fonction des actions de l'utilisateur ou des opérations effectuées par le code sur les entités et leurs attributs.
 
 :::info Note de compatibilité
 
-Les événements d'entité ORDA dans le datastore sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
+ORDA entity events in the datastore are equivalent to triggers in the 4D database. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
 
 :::
 
@@ -25,7 +25,7 @@ Les événements d'entité ORDA dans le datastore sont équivalents aux triggers
 
 ### Niveau de l'événement
 
-Une fonction d'événement d'entité est toujours définie dans la [classe Entity](../ORDA/ordaClasses.md#entity-class).
+A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
 
 Un événement peut être défini au niveau de l'**entité** et/ou de l'**attribut** (y compris les [**attributs calculés**](../ORDA/ordaClasses.md#computed-attributes)). Dans le premier cas, il sera déclenché pour tous les attributs de l'entité ; dans l'autre cas, il ne sera déclenché que pour l'attribut ciblé.
 
@@ -49,7 +49,7 @@ Avec d'autres configurations distantes (i.e. applications Qodly, [requêtes via 
 
 ### Tableau de synthèse
 
-Le tableau suivant liste les événements d'entité ORDA ainsi que leurs règles.
+The following table lists ORDA entity events along with their rules.
 
 | Evénement              | Niveau   | Nom de la fonction                                      |                 (C/S) Exécuté sur                |
 | :--------------------- | :------- | :------------------------------------------------------ | :-----------------------------------------------------------------: |
