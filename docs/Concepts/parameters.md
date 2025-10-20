@@ -313,12 +313,6 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecat
 :::
 
 
-## Triggers and On Drag Over
-
-Some contexts do not support declaration in a "Compiler_" method, thus they are handled specifically:
-
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
-
 
 
 

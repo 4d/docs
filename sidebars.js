@@ -38,7 +38,8 @@ module.exports =
           type: "category",
           label: "Dababase structure",
           items: [
-            "Develop/field-properties"
+            "Develop/field-properties",
+            "Develop-legacy/triggers"
           ]
         },
         {
@@ -310,6 +311,7 @@ module.exports =
           ]
         },
         "Develop-legacy/transactions",
+        "Develop-legacy/triggers",
         "Tags/transformation-tags",
         "Project/date-time-formats"
       ]
