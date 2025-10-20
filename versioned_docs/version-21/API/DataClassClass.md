@@ -1185,7 +1185,7 @@ In this case, the *value* parameter must be a **comparison vector object** conta
 |Property|Type|Description|
 |---|---|---|
 |vector|[4D.Vector](../API/VectorClass.md)|Mandatory. The vector to be compared|
-|metric|Text|Optional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine distance between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors.|
+|metric|Text|Optional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. You can use one of the following (Text) constants:<li>`mk cosine` (default if omitted): calculates the cosine similarity between vectors.</li><li>`mk dot`: calculates the dot similarity of vectors.</li><li>`mk euclidean`: calculates the Euclidean distance between vectors.|
 |threshold|Real|Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.|
 
 Only a subset of **comparator** symbols are supported. Note that they compare results to the threshold value: 
