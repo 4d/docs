@@ -34,7 +34,7 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 | ----------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `onData` (o `formula`) | 4D.Function | A function to be called asynchronously when receiving data chunk. Asegúrese de que el proceso actual no termina. |
 
-`onData` will receive as argument an [OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md).
+`onData` recibirá como argumento un [OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md).
 
 See [OpenAIParameters](./OpenAIParameters.md) for other callback properties.
 
@@ -117,18 +117,18 @@ $result := $client.chat.completions.create($messages; $params)
 
 ### JSON Schema Properties
 
-When using `json_schema` type, you can specify:
+Cuando se utiliza el tipo `json_schema`, puede especificar:
 
 - **`name`**: un nombre para el esquema
-- **`description`**: A description of what the schema represents
-- **`schema`**: The JSON schema definition
-- **`strict`**: Whether to enforce strict adherence to the schema
+- **`description`**: una descripción de lo que representa el esquema
+- **`schema`**: la definición de esquema JSON
+- **`strict`**: si se debe hacer cumplir estrictamente el esquema
 
 ### Notas Importantes
 
 - Not all models support structured outputs (json_object or json_schema), so check model capabilities before using them.
-- When using `json_object` format, you should include instructions in your system message to respond in JSON format
-- The `json_schema` format provides the most control and ensures the response exactly matches your specified structure
+- Cuando utilice el formato `json_object`, deberá incluir instrucciones en el mensaje del sistema para responder en formato JSON
+- El formato `json_schema` ofrece el mayor control y garantiza que la respuesta coincida exactamente con la estructura especificada
 - Invalid JSON responses will result in an error when using JSON formats
 - JSON schema validation ensures type safety and required field presence
 

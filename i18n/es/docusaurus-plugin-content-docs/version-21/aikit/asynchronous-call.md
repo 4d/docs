@@ -15,7 +15,7 @@ The callback function will receive the same result object type (one of [OpenAIRe
 
 The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
 
-> ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. In such cases, consider using `CALL WORKER` or `CALL FORM`.
+> ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. En estos casos, considere la posibilidad de utilizar `CALL WORKER` o `CALL FORM`.
 
 ## Ejemplos de uso
 

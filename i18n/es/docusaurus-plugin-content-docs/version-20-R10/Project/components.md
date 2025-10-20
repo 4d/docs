@@ -378,7 +378,7 @@ Por defecto, se listan todas las dependencias identificadas por el gestor de dep
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
 - **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
-- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
+- **Declarado**: dependencias primarias que se declaran explícitamente en el archivo `dependencies.json`. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
 - **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias *overloading*, las cuales son realmente cargadas. Las dependencias *Overloaded* se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
 - **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.

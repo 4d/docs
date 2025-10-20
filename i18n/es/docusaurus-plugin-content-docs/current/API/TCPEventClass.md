@@ -16,7 +16,7 @@ The `TCPEvent` class provides information about events occurring during the life
 
 ### Objeto TCPEvent
 
-A `TCPEvent` object is immutable and non-streamable.
+Un objeto `TCPEvent` es inmutable y no se puede transmitir.
 
 Las siguientes propiedades están disponibles:
 

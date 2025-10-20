@@ -115,7 +115,7 @@ Registers multiple tools at once. The parameter can be:
 
 - **Collection**: Array of tool objects (with handlers embedded or separate)
 - **Object**: Object with function names as keys mapping to tool definitions
-- **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
+- **Objeto con atributo `tools`**: objeto que contiene una colección `tools` y propiedades de fórmulas que coinciden con nombres de herramientas
 
 #### Register Multiple Tools Example
 

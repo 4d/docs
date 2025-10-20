@@ -86,7 +86,7 @@ var $tool := cs.OpenAITool.new({ \
 
 ## Integration with Chat Completions
 
-Tools are typically used with the `OpenAIChatCompletionsParameters.tools` property:
+Las herramientas se utilizan normalmente con la propiedad `OpenAIChatCompletionsParameters.tools`:
 
 ```4d
 var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
@@ -95,7 +95,7 @@ var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
 })
 ```
 
-> **Note:** You can pass plain objects directly - they will be automatically converted to `OpenAITool` instances. There's no need to explicitly create `OpenAITool` objects.
+> **Nota:** puede pasar objetos planos directamente, se convertirán automáticamente en instancias `OpenAITool`. No es necesario crear explícitamente objetos `OpenAITool`.
 
 ## Ver también
 

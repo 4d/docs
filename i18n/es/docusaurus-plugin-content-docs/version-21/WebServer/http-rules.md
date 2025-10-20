@@ -45,7 +45,7 @@ Other properties are ignored.
 
 URL patterns are given using **regular expressions**. To declare a regular expression pattern, use the "RegExPattern" property name.
 
-Ex: `"RegExPattern": "/Test/Authorized/(.*)"`
+Ej.: `"RegExPattern": "/Test/Authorized/(.*)"`
 
 When the web server receives a request, **all** URL patterns are triggered sequentially in the given order, and all matching patterns are executed. In case of several actions modifying similar resources, the last executed action is taken into account.
 
@@ -78,7 +78,7 @@ Unauthorized changes on these headers do not generate errors, however modificati
 
 ### Current rules
 
-You can know the current rules using the [`.rules` property of the Web Server object](../API/WebServerClass.md#rules):
+Puede conocer las reglas actuales utilizando la propiedad [`.rules` del objeto Web Server](../API/WebServerClass.md#rules):
 
 ```
 var $rules : Collection

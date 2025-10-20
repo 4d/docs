@@ -21,7 +21,7 @@ First of all, initialize the OpenAI client using your API key
 var $client:=cs.AIKit.OpenAI.new("your api key")
 ```
 
-For a [compatible provider](compatible-openai.md) API, you can configure the server URL by setting the `baseURL` parameter.
+For a [compatible provider](compatible-openai.md) API, you need to configure the server URL by setting the `baseURL` parameter.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your.server.ai"})
@@ -43,7 +43,7 @@ var $result:=$client.<resource>.<function>(<parameters...>)
 
 O `$result` contém o `HTTPRequest`, um status de `sucess`, uma coleção de `erros` e outros. Ver [OpenAIResult](Classes/OpenAIResult.md)
 
-Veja alguns exemplos abaixo.
+See some examples below.
 
 #### Chat
 

@@ -9,12 +9,12 @@ La classe OpenAI fournit un client permettant d'accéder à diverses ressources 
 
 ## Propriétés de configuration
 
-| Nom de propriété | Type | Description                                                                    | Optionnel       |
-| ---------------- | ---- | ------------------------------------------------------------------------------ | --------------- |
-| `apiKey`         | Text | Votre [clé API OpenAI ](https://platform.openai.com/api-keys). | Non pour OpenAI |
-| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                 | Oui             |
-| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                       | Oui             |
-| `project`        | Text | Votre identifiant de projet OpenAI.                            | Oui             |
+| Nom de propriété | Type | Description                                                                    | Optionnel                                                 |
+| ---------------- | ---- | ------------------------------------------------------------------------------ | --------------------------------------------------------- |
+| `apiKey`         | Text | Votre [clé API OpenAI ](https://platform.openai.com/api-keys). | Can be required by the provider                           |
+| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                 | Yes (if omitted = use OpenAI Platform) |
+| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                       | Oui                                                       |
+| `project`        | Text | Votre identifiant de projet OpenAI.                            | Oui                                                       |
 
 ### Propriétés HTTP supplémentaires
 

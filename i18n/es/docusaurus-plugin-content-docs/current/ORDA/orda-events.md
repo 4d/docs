@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Eventos
+title: Entity Events
 ---
 
 <details><summary>Historia</summary>
@@ -12,7 +12,7 @@ title: Eventos
 
 </details>
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 No se puede activar directamente la ejecución de la función de evento. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
@@ -24,7 +24,7 @@ No se puede activar directamente la ejecución de la función de evento. Events 
 
 :::info Nota de compatibilidad
 
-ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
 
 :::
 
@@ -89,10 +89,10 @@ Event functions accept a single *event* object as parameter. When the function i
 | "kind"              | siempre                                                                                                                  | String               | Event name: "touched", "validateSave", "saving", "afterSave", "validateDrop", "dropping", "afterDrop" |   |
 | *attributeName*     | Only for events implemented at attribute level ("validateSave", "saving", "validateDrop", "dropping") | String               | Nombre del atributo (por ejemplo, "nombre")                                                        |   |
 | *dataClassName*     | siempre                                                                                                                  | String               | Nombre de la Dataclass (*ej.* "Company")                                           |   |
-| "savedAttributes"   | Only in [`afterSave()`](#function-event-aftersave)                                                                       | Colección de cadenas | Names of attributes properly saved                                                                                    |   |
-| "droppedAttributes" | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | Colección de cadenas | Names of attributes properly dropped                                                                                  |   |
-| "saveStatus"        | Only in [`afterSave()`](#function-event-aftersave)                                                                       | String               | "success" if the save was successful, "failed" otherwise                                                              |   |
-| "dropStatus"        | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | String               | "success" if the drop was successful, "failed" otherwise                                                              |   |
+| "savedAttributes"   | Sólo en [`afterSave()`](#function-event-aftersave)                                                                       | Colección de cadenas | Names of attributes properly saved                                                                                    |   |
+| "droppedAttributes" | Sólo en [`afterDrop()`](#function-event-afterdrop)                                                                       | Colección de cadenas | Names of attributes properly dropped                                                                                  |   |
+| "saveStatus"        | Sólo en [`afterSave()`](#function-event-aftersave)                                                                       | String               | "success" if the save was successful, "failed" otherwise                                                              |   |
+| "dropStatus"        | Sólo en [`afterDrop()`](#function-event-afterdrop)                                                                       | String               | "success" if the drop was successful, "failed" otherwise                                                              |   |
 
 ## Objeto de error
 
@@ -102,13 +102,13 @@ When an error occurs in an event, the other events are stopped at the first rais
 
 ### Error object properties
 
-| Propiedad          | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Definido por el desarrollador             |
-| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| errCode            | Integer | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sí                                        |
-| message            | Text    | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sí                                        |
-| extraDescription   | Object  | Free information to set up                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Sí                                        |
-| seriousError       | Boolean | Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Adds the `dk status validation failed` status</li> | Yes (default is false) |
-| componentSignature | Text    | Always "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | No                                        |
+| Propiedad          | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Definido por el desarrollador             |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| errCode            | Integer | Igual al comando [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Sí                                        |
+| message            | Text    | Igual al comando [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Sí                                        |
+| extraDescription   | Object  | Free information to set up                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Sí                                        |
+| seriousError       | Boolean | Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>`False`: creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Añade el estado `dk status validation failed`.</li> | Yes (default is false) |
+| componentSignature | Text    | Always "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | No                                        |
 
 - [Serious errors](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.
 - In case of an error triggered by a **validate** event, the `seriousError` property allows you to choose the level of the error to generate:
@@ -135,9 +135,9 @@ This event is triggered each time a value is modified in the entity.
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
-- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
+- en **cliente/servidor con la [palabra clave `local`](../ORDA/ordaClasses.md#local-functions)** o en **4D monousuario**:
   - el usuario define un valor en un formulario 4D,
-  - el código 4D realiza una asignación con el operador `:=`. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
+  - el código 4D realiza una asignación con el operador `:=`. El evento también se activa en caso de autoasignación (`$entity.attribute:=$entity.attribute`).
 - in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
 - in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
 - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
@@ -150,7 +150,7 @@ If this function [throws](../commands/throw) an error, it will not stop the unde
 
 Este evento también se activa:
 
-- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
+- cuando los atributos son asignados por el evento [`constructor()`](./ordaClasses.md#class-constructor-1),
 - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
 
 :::
@@ -269,7 +269,7 @@ Note over Client:$people.lastname is uppercased
 
 ```
 
-#### Example 4 (diagram): Client/server without the `local` keyword
+#### Ejemplo 4 (diagrama): cliente/servidor sin la palabra clave `local`
 
 ```mermaid
 
