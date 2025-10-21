@@ -3,6 +3,8 @@ id: triggers-new
 title: Triggers
 ---
 
+to import
+
 <!-- REF triggers.vs-events.Desc -->
 
 ## Triggers vs ORDA entity events
