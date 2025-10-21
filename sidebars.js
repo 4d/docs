@@ -311,7 +311,6 @@ module.exports =
           ]
         },
         "Develop-legacy/transactions",
-        "Develop-legacy/triggers",
         "Tags/transformation-tags",
         "Project/date-time-formats"
       ]
