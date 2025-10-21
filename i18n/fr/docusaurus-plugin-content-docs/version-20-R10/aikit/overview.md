@@ -11,7 +11,7 @@ title: 4D-AIKit
 
 ## OpenAI
 
-La classe [`OpenAI`](Classes/OpenAI.md) vous permet de faire des demandes à l'[API OpenAI](https://platform.openai.com/docs/api-reference/).
+La classe [`OpenAI`](Classes/OpenAI.md) vous permet d'envoyer des requêtes à l'[API OpenAI](https://platform.openai.com/docs/api-reference/).
 
 ### Configuration
 
@@ -21,7 +21,7 @@ Tout d'abord, initialisez le client OpenAI en utilisant votre clé API
 var $client:=cs.AIKit.OpenAI.new("your api key")
 ```
 
-For a [compatible provider](compatible-openai.md) API, you need to configure the server URL by setting the `baseURL` parameter.
+Pour l'API d'un [founisseur compatible](compatible-openai.md), vous devez configurer l'URL du serveur en définissant le paramètre `baseURL`.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your.server.ai"})
@@ -33,7 +33,7 @@ ou
 $client.baseURL:="https://your.server.ai"
 ```
 
-### Formuler des demandes
+### Formuler des requêtes
 
 `OpenAI` fournit différents points de terminaison appelés ressources, chacun offrant diverses fonctions.
 
@@ -41,9 +41,9 @@ $client.baseURL:="https://your.server.ai"
 var $result:=$client.<resource>.<function>(<parameters...>)
 ```
 
-Le `$result` contient le `HTTPRequest`, un statut `success`, une collection de `errors` et plus encore. Voir [OpenAIResult](Classes/OpenAIResult.md)
+Le résultat `$result` contient la requête `HTTPRequest`, un statut `success`, une collection de `errors` et plus encore. Voir [OpenAIResult](Classes/OpenAIResult.md)
 
-See some examples below.
+Voir quelques exemples ci-dessous.
 
 #### Chat
 
@@ -60,9 +60,9 @@ var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
 // résultat dans $result.choice
 ```
 
-##### Assistant de chat
+##### Helper de discussion (chat)
 
-Cet assistant vous permet de maintenir une liste de messages d'utilisateurs et de réponses d'assistants.
+Cet assistant vous permet de maintenir une liste de messages d'utilisateurs et de réponses de l'assistant.
 
 ```4d
 var $helper:=$client.chat.create("You are a helpful assistant.")
@@ -71,9 +71,9 @@ $result:=$helper.prompt("and could you decompose this number")
 // conversation dans $helper.messages
 ```
 
-##### Assistant de vision
+##### Helper de vision
 
-Cet assistant permet l'analyse des images à travers le chat.
+Cet assistant permet l'analyse des images à travers la discussion.
 
 ```4d
 var $result:=$client.chat.vision.create($imageUrl).prompt("give me a description of the image")
@@ -113,13 +113,13 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 #### Code asynchrone
 
-Si vous ne souhaitez pas attendre la réponse de l'OpenAPI lorsque vous envoyez une requête à son API, vous devez utiliser un code asynchrone. L'objet résultat sera reçu dans une fonction de rappel.
+Si vous ne souhaitez pas attendre la réponse de l'OpenAPI lorsque vous envoyez une requête à son API, vous devez utiliser un code asynchrone. L'objet résultat sera reçu dans une fonction de callback.
 
 Voir [documentation détaillée pour les exemples](asynchronous-call.md)
 
 ## Droits d'auteur
 
-- This library is not affiliated with, endorsed by, or officially connected to OpenAI in any way.
-- "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.
-- This project simply provides an interface to OpenAI’s services and does not claim any ownership over their technology, branding, or intellectual property.
+- Cette bibliothèque n'est pas affiliée à OpenAI, ni approuvée par elle, ni officiellement liée à elle de quelque manière que ce soit.
+- "OpenAI" et toutes les marques associées sont des marques commerciales ou des marques déposées d'OpenAI, LLC. Tous les droits liés aux services, API et technologies de l'OpenAI restent la propriété de OpenAI.
+- Ce projet fournit simplement une interface aux services d'OpenAI et ne revendique aucune propriété sur leur technologie, leur marque ou leur propriété intellectuelle.
 

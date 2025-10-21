@@ -11,7 +11,7 @@ title: OpenAI
 
 | プロパティ名    | 型    | 説明                                                         | 任意                                                        |
 | --------- | ---- | ---------------------------------------------------------- | --------------------------------------------------------- |
-| `apiKey`  | Text | あなたの [OpenAI API キー](https://platform.openai.com/api-keys) | Can be required by the provider                           |
+| `apiKey`  | Text | あなたの [OpenAI API キー](https://platform.openai.com/api-keys) | プロバイダーによっては必須                                             |
 | `baseURL` | Text | OpenAI API リクエストのためのベースURL。                                | Yes (if omitted = use OpenAI provider) |
 | `組織`      | Text | あなたの OpenAI 組織 ID。                                         | ◯                                                         |
 | `project` | Text | あなたの OpenAI プロジェクト ID。                                     | ◯                                                         |

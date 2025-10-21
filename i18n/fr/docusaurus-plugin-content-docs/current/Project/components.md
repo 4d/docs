@@ -3,11 +3,11 @@ id: components
 title: Dépendances
 ---
 
-[L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
+[L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Les composants sont constitués de code 4D, tandis que les plug-ins peuvent être [construits à l'aide de n'importe quel langage](../Extensions/develop-plug-ins.md).
 
-Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D qui se trouvent sur GitHub.
+Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D [sur GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
-Once installed in your 4D environment, extensions are handled as **dependencies** with specific properties.
+Une fois installées dans votre environnement 4D, les extensions sont traitées comme des **dépendances** avec des propriétés spécifiques.
 
 ## Composants interprétés et compilés
 
@@ -33,7 +33,7 @@ L'architecture de dossier "Contents" est recommandée pour les composants si vou
 
 :::
 
-## Component Locations
+## Emplacements des composants
 
 :::note
 
@@ -317,20 +317,20 @@ Les composants GitHub référencés sont téléchargés dans un dossier de cache
 
 ...où `<app name>` peut être "4D", "4D Server" ou "tool4D".
 
-### Automatic dependency resolution
+### Résolution automatique des dépendances
 
-When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Cela inclut :
+Lorsque vous ajoutez ou mettez à jour un composant (qu'il soit [local](#local-components) ou [obtenu depuis GitHub](#components-stored-on-github)), 4D résout et installe automatiquement toutes les dépendances requises par ce composant. Cela inclut :
 
-- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
-- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+- les **dépendances primaires** : Composants que vous déclarez explicitement dans votre fichier `dependencies.json`.
+- les **dépendances secondaires** : Composants requis par des dépendances primaires ou d'autres dépendances secondaires, qui sont automatiquement résolues et installées.
 
-The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+Le gestionnaire de dépendances lit le fichier `dependencies.json` de chaque composant et installe récursivement toutes les dépendances nécessaires, en respectant les spécifications de version dans la mesure du possible. Il n'est donc pas nécessaire d'identifier et d'ajouter manuellement les dépendances imbriquées, une par une.
 
-- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+- **les résolutions de conflits** : Lorsque plusieurs dépendances nécessitent [différentes versions](#defining-a-github-dependency-version-range) du même composant, le gestionnaire de dépendances tente automatiquement de résoudre les conflits en trouvant une version qui satisfait toutes les plages de versions qui se chevauchent. Si une dépendance primaire entre en conflit avec des dépendances secondaires, la dépendance primaire est prioritaire.
 
 :::note
 
-`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components).
+Les fichiers `dependencies.json` sont ignorés dans les composants chargés depuis le dossier [**Components**](architecture.md#components).
 
 :::
 
@@ -364,19 +364,19 @@ Par défaut, toutes les dépendances identifiées par le Gestionnaire de dépend
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
-- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
-- **Actifs** : Dépendances chargées et utilisables dans le projet. Il comprend des dépendances *overloading*, qui sont effectivement chargées. Les dépendances *overloaded* sont listées dans l'onglet **Conflits**, ainsi que toutes les dépendances conflictuelles.
-- **Inactifs** : Dépendances qui ne sont pas chargées dans le projet et qui ne sont pas disponibles. Diverses raisons peuvent expliquer ce statut : fichiers manquants, incompatibilité de version...
-- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). Les dépendances surchargées sont également affichées afin que vous puissiez vérifier l'origine du conflit et prendre les mesures appropriées.
+- **Toutes** : Toutes les dépendances, y compris les dépendances primaires (déclarées) et secondaires (résolues automatiquement), sous forme de liste.
+- **Déclarées** : Les dépendances primaires qui sont explicitement déclarées dans le fichier `dependencies.json`. Cet onglet vous aide à distinguer les dépendances que vous avez directement ajoutées de celles qui ont été [automatiquement résolues](#automatic-dependency-resolution).
+- **Actives** : Dépendances chargées et utilisables dans le projet. Il comprend des dépendances *overloading*, qui sont effectivement chargées. Les dépendances *overloaded* sont listées dans l'onglet **Conflits**, ainsi que toutes les dépendances conflictuelles.
+- **Inactives** : Dépendances qui ne sont pas chargées dans le projet et qui ne sont pas disponibles. Diverses raisons peuvent expliquer ce statut : fichiers manquants, incompatibilité de version...
+- **Conflits** : Les dépendances qui sont chargées mais qui surchargent au moins une autre dépendance à un [niveau de priorité](#priority) inférieur. Les dépendances surchargées sont également affichées afin que vous puissiez vérifier l'origine du conflit et prendre les mesures appropriées.
 
-### Secondary dependencies
+### Dépendances secondaires
 
-The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
+Le panneau Dépendances indique les [**dépendances secondaires**](#automatic-dependency-resolution) en affichant comme [origin](#dependency-origin) `Dépendance de composant` :
 
 ![recursive-dependency](../assets/en/Project/recursive.png)
 
-When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. A secondary dependency cannot be [removed](#removing-a-dependency) directly, you must remove or edit the primary dependency that requires it.
+Lorsque vous survolez une dépendance secondaire, une infobulle affiche la dépendance parente qui la requiert. Une dépendance secondaire ne peut pas être [supprimée](#removing-a-dependency) directement, vous devez supprimer ou modifier la dépendance primaire qui la requiert.
 
 ### Statut des dépendances
 
@@ -403,19 +403,19 @@ Une infobulle s'affiche lorsque vous survolez la ligne de dépendance, fournissa
 
 ### Origine de la dépendance
 
-Le panneau Dépendances liste toutes les dépendances du projet, quelle que soit leur origine, c'est-à-dire d'où qu'elles viennent. L'origine de la dépendance est fournie par l'étiquette sous son nom :
+Le panneau Dépendances liste toutes les dépendances du projet, quelle que soit leur origine. L'origine de la dépendance est fournie par l'étiquette sous son nom :
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
 Les options suivantes sont disponibles :
 
-| Étiquette d'origine     | Description                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Built in 4D             | Composant 4D intégré, stocké dans le dossier `Components` de l'application 4D                                                                |
-| Declared in project     | Composant déclaré dans le fichier [`dependencies.json`](#dependenciesjson)                                                                   |
-| Declared in environment | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
-| Dossier Components      | Composant situé dans le dossier [`Components`](architecture.md#components)                                                                   |
-| Component dependency    | Secondary component ([required by a another component](#automatic-dependency-resolution))                                 |
+| Étiquette                    | Description                                                                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Intégré à 4D                 | Composant 4D intégré, stocké dans le dossier `Components` de l'application 4D                                                                      |
+| Déclaré dans le projet       | Composant déclaré dans le fichier [`dependencies.json`](#dependenciesjson)                                                                         |
+| Déclaré dans l'environnement | Composant déclaré dans le fichier [`dependencies.json`](#dependenciesjson) et surchargé dans le fichier [`environment4d.json`](#environment4djson) |
+| Dossier Components           | Composant situé dans le dossier [`Components`](architecture.md#components)                                                                         |
+| Dépendance de composant      | Composant secondaire ([requis par un autre composant](#automatic-dependency-resolution))                                        |
 
 **Cliquez avec le bouton droit de la souris** dans une ligne de dépendance et sélectionnez **Afficher sur le disque** pour révéler l'emplacement d'une dépendance :
 
@@ -469,11 +469,11 @@ Pour ajouter une [dépendance GitHub](#components-stored-on-github), cliquez sur
 
 :::note
 
-By default, [components developed by 4D](../Extensions/overview.md#components-developed-by-4d) are listed in the combo box, so that you can easily select and install these features in your environment:
+Par défaut, les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d) sont répertoriés dans la liste, ce qui vous permet de sélectionner et d'installer facilement ces fonctionnalités dans votre environnement :
 
 ![dependency-default-git](../assets/en/Project/dependency-default.png)
 
-Components already installed are not listed.
+Les composants déjà installés ne sont pas dans la liste.
 
 :::
 
@@ -493,7 +493,7 @@ Définissez la [plage de versions des dépendances](#tags-and-versions) à utili
 
 Cliquez sur le bouton **Ajouter** pour ajouter la dépendance au projet.
 
-The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Elle sera chargée une fois que l'application aura redémarré.
+La dépendance GitHub est déclarée dans le fichier [**dependencies.json**](#dependenciesjson) et ajoutée à la [liste des dépendances inactives](#dependency-status) avec le statut **Disponible après redémarrage**. Elle sera chargée une fois que l'application aura redémarré.
 
 #### Définir une plage de versions pour une dépendance GitHub
 
@@ -505,7 +505,7 @@ Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour u
 - **Jusqu'à la version majeure suivante** : Définit une [plage sémantique de versions](#tags-and-versions) pour limiter les mises à jour à la version majeure suivante.
 - **Jusqu'à la prochaine version mineure** : De même, limite les mises à jour à la version mineure suivante.
 - **Version exacte (balise)** : Sélectionnez ou saisissez manuellement un [tag spécifique](#tags-and-versions) dans la liste disponible.
-- **Suivre la version 4D** : Téléchargez la dernière version du composant compatible avec la version 4D courante. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. This option is recommended for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- **Suivre la version 4D** : Téléchargez la dernière version du composant compatible avec la version 4D courante. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. Cette option est recommandée pour les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d).
 
 La version courante de la dépendance GitHub est affichée sur le côté droit de l'élément de la dépendance :
 
@@ -513,7 +513,7 @@ La version courante de la dépendance GitHub est affichée sur le côté droit d
 
 #### Modifier la plage de versions des dépendances GitHub
 
-You can modify the [version setting](#defining-a-github-dependency-version-range) for a listed GitHub dependency: select the dependency to modify and select **Edit the dependency...** from the contextual menu. In the "Edit the dependency" dialog box, edit the Dependency Rule menu and click **Apply**.
+Vous pouvez modifier le [paramètre de version](#defining-a-github-dependency-version-range) pour une dépendance GitHub listée : sélectionnez la dépendance à modifier et sélectionnez **Editer la dépendance...** dans le menu contextuel. Dans la boîte de dialogue "Editer la dépendance", modifiez le menu Règle de dépendance et cliquez sur **Appliquer**.
 
 La modification de la plage de versions est utile par exemple si vous utilisez la fonction de mise à jour automatique et que vous souhaitez verrouiller une dépendance à un numéro de version spécifique.
 
@@ -611,7 +611,7 @@ Pour supprimer une dépendance de la fenêtre Dépendances, sélectionnez la dé
 
 :::note
 
-Only primary dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. Secondary dependencies cannot be removed directly - to remove a secondary dependency, you must remove the primary dependency that requires it. Si une dépendance sélectionnée ne peut pas être supprimée, le bouton **-** est désactivé et l'élément de menu **Supprimer la dépendance** est masqué.
+Seules les dépendances primaires déclarées dans le fichier [**dependencies.json**](#dependenciesjson) peuvent être supprimées dans la fenêtre Dépendances. Les dépendances secondaires ne peuvent pas être supprimées directement - pour supprimer une dépendance secondaire, vous devez supprimer la dépendance primaire qui la requiert. Si une dépendance sélectionnée ne peut pas être supprimée, le bouton **-** est désactivé et l'élément de menu **Supprimer la dépendance** est masqué.
 
 :::
 
@@ -621,7 +621,7 @@ Une boîte de dialogue de confirmation s'affiche. Si la dépendance a été déc
 
 Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera chargée une fois que l'application aura redémarré.
 
-#### Dependency usage warnings
+#### Avertissements relatifs à l'utilisation des dépendances
 
-When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
+Lorsque vous tentez de supprimer une dépendance primaire qui est requise par d'autres dépendances dans votre projet, vous serez averti que la dépendance est toujours en cours d'utilisation. Le système affichera les autres dépendances qui la requièrent et vous demandera de confirmer la suppression, car celle-ci peut entraîner l'arrêt du fonctionnement de ces composants dépendants.
 

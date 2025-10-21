@@ -17,7 +17,7 @@ Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso ade
 
 ![schema](../assets/en/ORDA/privileges-schema.png)
 
-:::tip Related Blog posts
+:::tip Entradas de blog relacionadas
 
 [**Filter access to your data with a complete system of permissions**](https://blog.4d.com/filter-access-to-your-data-with-a-complete-system-of-permissions/)
 

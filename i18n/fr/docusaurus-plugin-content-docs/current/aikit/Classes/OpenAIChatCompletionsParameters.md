@@ -30,9 +30,9 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 ### Asynchronous Callback Properties
 
-| Propriété                                  | Type                        | Description                                                                                                                                           |
-| ------------------------------------------ | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onData` (or `formula`) | 4D.Function | A function to be called asynchronously when receiving data chunk. Ensure that the current process does not terminate. |
+| Propriété                                  | Type                        | Description                                                                                                                                              |
+| ------------------------------------------ | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `onData` (or `formula`) | 4D.Function | A function to be called asynchronously when receiving data chunk. Assurez-vous que le process courant ne se termine pas. |
 
 `onData` will receive as argument an [OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md).
 

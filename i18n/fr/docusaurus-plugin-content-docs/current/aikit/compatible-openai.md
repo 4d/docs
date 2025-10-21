@@ -7,15 +7,15 @@ title: Fournisseurs (Providers)
 
 De nombreux fournisseurs d'IA proposent une API de type OpenAI, vous pouvez donc utiliser ce projet pour vous y connecter.
 
-To do so you just have to set the `baseURL` to the provider one and use their api key if needed.
+Pour ce faire, il suffit de passer l'adresse du fournisseur dans `baseURL` et d'utiliser sa clé d'api si nécessaire.
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
 ```
 
-Some of them
+Quelques-uns :
 
-## Distant
+## A distance
 
 | Fournisseur                                                                                                                                                                                              | baseURL                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ Some of them
 
 ## Local
 
-| Fournisseur                                          | Default baseURL                                                                                           | Doc                                                                           |
+| Fournisseur                                          | baseURL par défaut                                                                                        | Doc                                                                           |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

@@ -330,20 +330,20 @@ Los componentes GitHub a los que se hace referencia se descargan en una carpeta 
 
 ...donde `<app name>` puede ser "4D", "4D Server" o "tool4D".
 
-### Automatic dependency resolution
+### Resolución automática de las dependencias
 
-When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Esto incluye:
+Cuando añade o actualiza un componente (ya sea [local](#local-components) o [desde GitHub](#components-stored-on-github)), 4D resuelve e instala automáticamente todas las dependencias requeridas por ese componente. Esto incluye:
 
 - **Dependencias primarias**: componentes que declara explícitamente en su archivo `dependencies.json`
 - **Dependencias secundarias**: componentes requeridos por dependencias primarias u otras dependencias secundarias, que se resuelven e instalan automáticamente
 
-The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+El gestor de dependencias lee el archivo `dependencies.json` de cada componente e instala recursivamente todas las dependencias necesarias, respetando las especificaciones de versión siempre que sea posible. Esto elimina la necesidad de identificar y añadir manualmente las dependencias anidadas una por una.
 
-- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+- **Resolución de conflictos**: cuando varias dependencias requieren [versiones diferentes](#defining-a-github-dependency-version-range) del mismo componente, el gestor de dependencias intenta automáticamente resolver los conflictos encontrando una versión que satisfaga todos los rangos de versiones superpuestas. Si una dependencia primaria entra en conflicto con dependencias secundarias, la dependencia primaria tiene prioridad.
 
 :::note
 
-`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components).
+Los archivos `dependencies.json` se ignoran en los componentes cargados desde la carpeta [**Components**](architecture.md#components).
 
 :::
 
@@ -377,19 +377,19 @@ Por defecto, se listan todas las dependencias identificadas por el gestor de dep
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
-- **Declarado**: dependencias primarias que se declaran explícitamente en el archivo `dependencies.json`. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
+- **Todas**: todas las dependencias, incluidas las primarias (declaradas) y las secundarias (resueltas automáticamente) en forma de lista.
+- **Declarado**: dependencias primarias que se declaran explícitamente en el archivo `dependencies.json`. Esta pestaña le ayuda a distinguir entre las dependencias que ha añadido directamente y las que se han [resuelto automáticamente](#automatic-dependency-resolution).
 - **Activo**: dependencias que están cargadas y pueden ser utilizadas en el proyecto. Incluye dependencias *overloading*, las cuales son realmente cargadas. Las dependencias *Overloaded* se enumeran en el panel **Conflicts** junto con todas las dependencias en conflicto.
 - **Inactivo**: dependencias que no están cargadas en el proyecto y no están disponibles. Hay muchas razones posibles para este estado: archivos que faltan, incompatibilidad de versiones...
-- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
+- **Conflictos**: las dependencias que se cargan pero que sobrecargan al menos otra dependencia de un [nivel de prioridad](#priority) inferior. También se muestran las dependencias sobrecargadas para que pueda comprobar el origen del conflicto y tomar las medidas oportunas.
 
 ### Dependencias secundarias
 
-The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
+El panel Dependencias muestra [**dependencias secundarias**](#automatic-dependency-resolution) con la `dependencia del componente` [origen](#dependency-origin):
 
 ![recursive-dependency](../assets/en/Project/recursive.png)
 
-When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. A secondary dependency cannot be [removed](#removing-a-dependency) directly, you must remove or edit the primary dependency that requires it.
+Cuando pasa el cursor sobre una dependencia secundaria, una descripción muestra la dependencia padre que la requiere. Una dependencia secundaria no se puede [eliminar](#removing-a-dependency) directamente, hay que eliminar o editar la dependencia primaria que la requiere.
 
 ### Estado de dependencias
 
@@ -422,13 +422,13 @@ El panel Dependencias enumera todas las dependencias del proyecto, sea cual sea 
 
 Las siguientes opciones de origen son posibles:
 
-| Etiqueta de origen             | Descripción                                                                                                                                  |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Built in 4D                    | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D                                                           |
-| Declarado en proyecto          | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                  |
-| Declarado en el entorno        | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
-| Carpeta Components             | Componente ubicado en la carpeta [`Components`](architecture.md#components)                                                                  |
-| Dependencia de los componentes | Componente secundario ([requerido por otro componente](#automatic-dependency-resolution))                                 |
+| Etiqueta de origen             | Descripción                                                                                                                                    |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Integrado a 4D                 | Componente 4D integrado, almacenado en la carpeta `Components` de la aplicación 4D                                                             |
+| Declarado en proyecto          | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson)                                                                    |
+| Declarado en el entorno        | Componente declarado en el archivo [`dependencies.json`](#dependenciesjson) y anulado en el archivo [`environment4d.json`](#environment4djson) |
+| Carpeta Components             | Componente ubicado en la carpeta [`Components`](architecture.md#components)                                                                    |
+| Dependencia de los componentes | Componente secundario ([requerido por otro componente](#automatic-dependency-resolution))                                   |
 
 **Clic derecho** en una línea de dependencia y selecciona **Mostrar en el disco** para revelar la ubicación de una dependencia:
 

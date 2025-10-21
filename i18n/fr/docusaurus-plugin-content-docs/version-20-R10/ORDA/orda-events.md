@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Entity Events
+title: Évènements d'entité
 ---
 
 <details><summary>Historique</summary>
@@ -11,13 +11,13 @@ title: Entity Events
 
 </details>
 
-Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
+Les événements d'entité sont des fonctions qui sont automatiquement invoquées par ORDA chaque fois que des entités et des attributs d'entité sont touchés (ajoutés, supprimés ou modifiés). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
 
 Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événement. Les événements sont appelés automatiquement par ORDA en fonction des actions de l'utilisateur ou des opérations effectuées par le code sur les entités et leurs attributs.
 
 :::info Note de compatibilité
 
-ORDA entity events in the datastore are equivalent to triggers in the 4D database. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
+Les événements d'entité ORDA dans le magasin de données sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
 
 :::
 
@@ -25,7 +25,7 @@ ORDA entity events in the datastore are equivalent to triggers in the 4D databas
 
 ### Niveau de l'événement
 
-A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
+Une fonction d'événement d'entité est toujours définie dans la [classe Entity](../ORDA/ordaClasses.md#entity-class).
 
 Un événement peut être défini au niveau de l'**entité** et/ou de l'**attribut** (y compris les [**attributs calculés**](../ORDA/ordaClasses.md#computed-attributes)). Dans le premier cas, il sera déclenché pour tous les attributs de l'entité ; dans l'autre cas, il ne sera déclenché que pour l'attribut ciblé.
 
@@ -49,7 +49,7 @@ Avec d'autres configurations distantes (i.e. applications Qodly, [requêtes via 
 
 ### Tableau de synthèse
 
-The following table lists ORDA entity events along with their rules.
+Le tableau suivant liste les événements d'entité ORDA ainsi que leurs principes.
 
 | Evénement              | Niveau   | Nom de la fonction                                      |                 (C/S) Exécuté sur                |
 | :--------------------- | :------- | :------------------------------------------------------ | :-----------------------------------------------------------------: |
@@ -67,11 +67,11 @@ La fonction [`constructor()`](./ordaClasses.md#class-constructor-1) n'est pas en
 
 Les fonctions d'événement acceptent un seul objet *event* comme paramètre. Lorsque la fonction est appelée, le paramètre est rempli avec diverses propriétés :
 
-| Nom de propriété | Disponibilité                          | Type   | Description                                                                  |
-| :--------------- | :------------------------------------- | :----- | :--------------------------------------------------------------------------- |
-| `kind`           | Toujours                               | String | Nom de l'événement ("touched")                            |
-| *attributeName*  | Only for events involving an attribute | String | Nom de l'attribut (*ex.* "firstname")     |
-| *dataClassName*  | Toujours                               | String | Nom du verre de données (*ex.* "Company") |
+| Nom de propriété | Disponibilité                                         | Type   | Description                                                                  |
+| :--------------- | :---------------------------------------------------- | :----- | :--------------------------------------------------------------------------- |
+| `kind`           | Toujours                                              | String | Nom de l'événement ("touched")                            |
+| *attributeName*  | Uniquement pour les événements impliquant un attribut | String | Nom de l'attribut (*ex.* "firstname")     |
+| *dataClassName*  | Toujours                                              | String | Nom du verre de données (*ex.* "Company") |
 
 ## Description des fonctions
 
@@ -87,8 +87,8 @@ Les fonctions d'événement acceptent un seul objet *event* comme paramètre. Lo
 
 Cet événement est déclenché chaque fois qu'une valeur est modifiée dans l'entité.
 
-- if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
-- if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
+- si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est déclenchée pour des modifications sur n'importe quel attribut de l'entité.
+- si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est déclenchée que pour les modifications sur cet attribut.
 
 Cet événement est déclenché dès que le moteur de 4D Server / 4D détecte une modification de la valeur de l'attribut qui peut être due aux actions suivantes :
 
@@ -99,16 +99,16 @@ Cet événement est déclenché dès que le moteur de 4D Server / 4D détecte un
 - en **client/serveur sans le mot-clé `local`**, une **[application Qodly](https://developer.qodly.com/docs)** ou **[datastore distant](../commands/open-datastore.md)** : l'entité est reçue sur le serveur 4D lors de l'appel d'une fonction ORDA (sur l'entité ou avec l'entité en tant que paramètre). Cela signifie que vous devrez peut-être mettre en place une fonction *refresh* ou *preview* sur l'application distante qui envoie une requête ORDA au serveur et déclenche l'événement.
 - avec le serveur REST : la valeur est reçue sur le serveur REST avec une [requête REST](../REST/$method.md#methodupdate) (`$method=update`)
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-If this event [throws](../commands-legacy/throw.md) an error, it will not stop the undergoing action.
+Si cet événement [génère une erreur](../commands-legacy/throw.md), il n'arrêtera pas l'action en cours.
 
 :::note
 
-This event is also triggered:
+Cet événement est également déclenché :
 
-- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
-- when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
+- lorsque les attributs sont assignés par l'événement [`constructor()`](./ordaClasses.md#class-constructor-1),
+- lorsque les attributs sont modifiés via l'[Explorateur de données](../Admin/dataExplorer.md).
 
 :::
 

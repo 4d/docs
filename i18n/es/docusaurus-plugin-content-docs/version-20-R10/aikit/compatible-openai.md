@@ -31,7 +31,7 @@ Algunos de ellos
 
 ## Local
 
-| Proveedor                                            | Default baseURL                                                                                           | Doc                                                                           |
+| Proveedor                                            | Base URL por defecto                                                                                      | Doc                                                                           |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

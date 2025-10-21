@@ -7,7 +7,7 @@ Bienvenue dans 4D ! Cette page regroupe toutes les informations nécessaires sur
 
 ## Configuration requise
 
-La page [Téléchargements](https://us.4d.com/product-download) dut site de 4D fournit des informations sur les pré-requis macOS / Windows nécessaires à la gamme 4D.
+La page [Téléchargements](https://us.4d.com/product-download) du site de 4D fournit des informations sur les pré-requis macOS / Windows nécessaires à la gamme 4D.
 
 Des détails techniques supplémentaires sont disponibles sur la [page Ressources](https://us.4d.com/resources/feature-release) du site web de 4D.
 
@@ -32,8 +32,8 @@ Apparaît ensuite l'assistant de bienvenue :
 - Si vous souhaitez découvrir et explorer 4D, cliquez sur le lien **essai gratuit**. Il vous sera demandé de vous connecter ou de créer un compte 4D.
 
 - Si vous possédez déjà un compte 4D, cliquez sur le lien **Se connecter** sur le côté supérieur droit de l'assistant d'installation et saisissez les informations relatives à votre compte.
-  - Any already activated 4D products are automatically updated (or additional expansion packs loaded) on your machine.
-  - If no product is activated on the machine but there is a development license associated with the 4D account, a dialog box appears, prompting you to install it directly.
+  - Tous les produits 4D déjà activés sont automatiquement mis à jour (ou des packs d'extension supplémentaires sont chargés) sur votre machine.
+  - Si aucun produit n'est activé sur la machine mais qu'une licence de développement est associée au compte 4D, une boîte de dialogue apparaît, vous proposant de l'installer directement.
 
 Élargissez la zone **Ouvrir ou créer un projet d'application** et sélectionnez l'action que vous souhaitez exécuter :
 

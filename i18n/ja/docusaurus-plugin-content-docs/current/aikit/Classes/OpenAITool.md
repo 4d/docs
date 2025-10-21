@@ -5,50 +5,50 @@ title: OpenAITool
 
 # OpenAITool
 
-The `OpenAITool` class represents a tool that can be called by the OpenAI model during a conversation. Tools allow the AI to perform specific functions and interact with external systems or retrieve information.
+`OpenAITool` クラスは会話の途中でOpenAI モデルによって呼び出されうるツールを表します。 ツールを使用するとAI に特定の機能を実行させたり、外部システムとやりとりしたり、情報を取得したりといったことが可能になります。
 
-See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
+ツール呼び出しに応答する方法については、[OpenAIMessage](OpenAIMessage.md) を参照して下さい。
 
-> **Note:** The tool calls are handled automatically when using [OpenAIChatHelper](OpenAIChatHelper.md) with `autoHandleToolCalls` enabled.
+> **注意:** [OpenAIChatHelper](OpenAIChatHelper.md) を`autoHandleToolCalls` を有効化して使用した場合には、ツール呼び出しは自動的に管理されます。
 
 ## プロパティ
 
-### Root Properties
+### ルートプロパティ
 
-| プロパティ    | 型       | デフォルト        | 説明                                                                                                                       |
-| -------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `type`   | Text    | `"function"` | The type of tool. Currently supports `"function"`, `"custom"`, and other built-in types. |
-| `strict` | Boolean | `false`      | Whether to enforce strict schema validation for function parameters.                                     |
+| プロパティ    | 型       | デフォルト        | 説明                                                               |
+| -------- | ------- | ------------ | ---------------------------------------------------------------- |
+| `type`   | Text    | `"function"` | ツールのタイプ。 現在サポートされているのは`"function"`、`"custom"`、そしてその他のビルトインタイプです。 |
+| `strict` | Boolean | `false`      | 関数の引数に対して厳格なスキーマ検証を強制するかどうかを指定します。                               |
 
-### Common Properties
+### 共通プロパティ
 
-| プロパティ         | 型    | 説明                                                                             |
-| ------------- | ---- | ------------------------------------------------------------------------------ |
-| `名称`          | Text | The name of the tool, which works as an identifier.            |
-| `description` | Text | Description of the tool to help the LLM decide when to use it. |
+| プロパティ         | 型    | 説明                                |
+| ------------- | ---- | --------------------------------- |
+| `名称`          | Text | ツール名。識別子として機能します。                 |
+| `description` | Text | LLM がツールをいつ使うかを決定する手助けとなる、ツールの説明。 |
 
-### Function-specific Properties
+### 関数特有のプロパティ
 
-| プロパティ        | 型      | 説明                                                                               |
-| ------------ | ------ | -------------------------------------------------------------------------------- |
-| `parameters` | Object | Parameters definition for the function using JSON schema format. |
+| プロパティ        | 型      | 説明                           |
+| ------------ | ------ | ---------------------------- |
+| `parameters` | Object | JSON スキーマフォーマットを使用した関数の引数宣言。 |
 
-## Constructor
+## コンストラクター
 
 ### new()
 
 **new**(*object* : Object) : OpenAITool
 
-| 引数        | 型          | 説明                                |
-| --------- | ---------- | --------------------------------- |
-| *options* | Object     | Configuration object for the tool |
-| 戻り値       | OpenAITool | New instance of OpenAITool        |
+| 引数        | 型          | 説明                   |
+| --------- | ---------- | -------------------- |
+| *options* | Object     | ツールの設定オブジェクト         |
+| 戻り値       | OpenAITool | OpenAITool の新規インスタンス |
 
-Creates a new OpenAITool instance. The constructor accepts both simplified format and OpenAI API format.
+新しい OpenAITool インスタンスを作成します。 このコンストラクターは簡易フォーマットとOpenAI API フォーマットの両方を受け入れます。
 
-#### Supported formats
+#### サポートされるフォーマット
 
-**Simplified format:**
+**簡易フォーマット:**
 
 ```4d
 var $tool := cs.OpenAITool.new({ \
@@ -64,7 +64,7 @@ var $tool := cs.OpenAITool.new({ \
 })
 ```
 
-**OpenAI API format:**
+**OpenAI API フォーマット:**
 
 ```4d
 var $tool := cs.OpenAITool.new({ \
@@ -84,9 +84,9 @@ var $tool := cs.OpenAITool.new({ \
 })
 ```
 
-## Integration with Chat Completions
+## チャット補完との統合
 
-Tools are typically used with the `OpenAIChatCompletionsParameters.tools` property:
+ツールは通常`OpenAIChatCompletionsParameters.tools` プロパティで使用されます:
 
 ```4d
 var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
@@ -95,10 +95,10 @@ var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
 })
 ```
 
-> **Note:** You can pass plain objects directly - they will be automatically converted to `OpenAITool` instances. There's no need to explicitly create `OpenAITool` objects.
+> **注意:** プレーンなオブジェクトを直接渡すこともできます - 渡したオブジェクトは自動的に`OpenAITool` インスタンスに変換されます。 明示的に `OpenAITool` オブジェクトを作成する必要はありません。
 
 ## 参照
 
-- [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) - For tool configuration
-- [OpenAIChatHelper](OpenAIChatHelper.md) - For automatic tool call handling
-- [OpenAIMessage](OpenAIMessage.md) - For tool call responses
+- [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) - ツール設定用
+- [OpenAIChatHelper](OpenAIChatHelper.md) - 自動ツール呼び出し管理用
+- [OpenAIMessage](OpenAIMessage.md) - ツール呼び出しレスポンス用

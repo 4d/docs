@@ -33,13 +33,13 @@ If the URI of the request does not match any of the RegEx patterns, the web serv
 
 The **HTTPRules.json** file or the [`.rules`](../API/WebServerClass.md#rules) property must contain a collection of **rule objects**.
 
-A rule object is defined by:
+Un objeto regla se define por:
 
 - a RegEx describing a URL pattern, e.g. "^(.\*\\.(jpg|jpeg|png|gif))"
 - the name of the action to execute for the HTTP response, e.g. "removeHeaders"
 - the value of the action, e.g. "X-Unwanted-Header1"
 
-Other properties are ignored.
+Las demás propiedades se ignoran.
 
 ### Patrones de la URL
 
@@ -55,14 +55,14 @@ The following action keywords are supported:
 
 | Palabras clave  | Tipo de valor               | Descripción                                                                                                                                                                                                                                   |
 | --------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `removeHeaders` | Text or Collection of texts | Header(s) to remove from the HTTP responses. If a header to remove does not exist in the response header, it is ignored.                                                                   |
+| `removeHeaders` | Texto o colección de textos | Header(s) to remove from the HTTP responses. If a header to remove does not exist in the response header, it is ignored.                                                                   |
 | `addHeaders`    | Object                      | Name (text) and value (text) of header(s) to add to the HTTP responses.                                                                                              |
 | `setHeaders`    | Object                      | Name (text) and value (text) of header(s) to modify in the HTTP responses. If a header to modify does not exist in the response header, it is added. |
 | `denyAccess`    | Boolean                     | true to deny access to the resource, false to allow access. When the access to a resource is denied, the web server returns a 403 status by default                                                                           |
 | `redirect`      | Text                        | Redirection URL. When a redirection is triggered, the web server returns a 302 status by default                                                                                                                              |
 | `status`        | Number                      | Estado HTTP                                                                                                                                                                                                                                   |
 
-### Non-modifiable headers
+### Encabezados no modificables
 
 Some headers could not be added, modified or removed:
 
@@ -89,7 +89,7 @@ $rules:=WEB Server.rules //current rules
 
 Rules can be set using a `HTTPRules.json` file or the *settings* parameter of the [`.start()`](../API/WebServerClass.md#start) web server function.
 
-### Using a HTTPRules.json file
+### Utilización de un archivo HTTPRules.json
 
 ```json
 

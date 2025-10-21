@@ -53,24 +53,24 @@ title: フォームエディター
 
 ツールバーには以下の要素があります:
 
-| アイコン                                             | 名称                                    | 説明                                                                                                                                                        |
-| ------------------------------------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/execute.png)         | フォーム実行                                | フォームの実行をテストするために使用します。 このボタンをクリックすると、4D は新しいウィンドウを開き、そのコンテキストでフォームを表示します (リストフォームの場合レコードリスト、詳細フォームの場合カレントレコード)。 フォームはメインプロセスで実行されます。                      |
-| ![](../assets/en/FormEditor/selection.png)       | [選択ツール](#selecting-objects)           | フォームオブジェクトの選択・移動・リサイズをおこないます。<p>**注**: テキストやグループボックスタイプのオブジェクトを選択すると、**Enter**キーを押すことで編集モードになります。</p>                                                                                                    |
-| ![](../assets/en/FormEditor/zOrder.png)          | [入力順](#data-entry-order)              | "入力順" モードに切り替わり、フォームの現在の入力順を表示・変更できます。 入力順は、バッジを使用して確認することもできます。                                                                                          |
-| ![](../assets/en/FormEditor/moving.png)          | [移動](#moving-objects)                 | "移動" モードに移行し、ウィンドウ中をドラッグ＆ドロップすることで素早くフォームの表示部分を移動することができます。 このモードでカーソルは手の形になります。 このモードは、フォームを拡大表示している時に特に便利です。                                            |
-| ![](../assets/en/FormEditor/zoom.png)            | [拡大](#zoom)                           | フォーム表示の拡大/縮小率を変更できます (デフォルトで100%)。 "拡大/縮小" モードにするには虫眼鏡をクリックするか、拡大/縮小率バーをクリックします。 この機能は前節で説明しています。                                                         |
-| ![](../assets/en/FormEditor/alignment.png)       | [整列](#aligning-objects)               | このボタンには、フォーム中でオブジェクトを均等に配置するためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<br/>選択オブジェクトの位置が CSSプロパティによりロックされている場合は無効です。                      |
-| ![](../assets/en/FormEditor/distribution.png)    | [均等配置](#distributing-objects)         | このボタンには、フォーム中でオブジェクトの並びを揃えるためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<br/>選択オブジェクトの位置が CSSプロパティによりロックされている場合は無効です。                       |
-| ![](../assets/en/FormEditor/level.png)           | [レベル](#layering-objects)              | このボタンには、フォーム上のオブジェクトの階層を変更するためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                                        |
-| ![](../assets/en/FormEditor/group.png)           | [グループ化/グループ解除](#grouping-objects)     | このボタンには、フォーム上の選択オブジェクトのグループ化やグループ解除をおこなうためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                            |
-| ![](../assets/en/FormEditor/displyAndPage.png)   | [表示とページ管理](forms.html#form-pages)     | このエリアを使用して、フォームページ間の移動やページの追加ができます。 フォームページを移動するには矢印ボタンをクリックするか、または中央のエリアをクリックすると現われるメニューから表示したいページを選択します。 最終ページが表示されている状態で、右矢印ボタンをクリックすると、4D はページを追加します。 |
-| ![](../assets/en/FormEditor/cssPreviewicon.png)  | [CSSプレビュー](#css-preview)              | このボタンで、使用する CSSモードを選択します。                                                                                                                                 |
-| ![](../assets/en/FormEditor/views.png)           | [ビュー管理](#views)                       | このボタンは、ビューパレットの表示や非表示をおこないます。 この機能については "オブジェクトビューを使用する" で説明しています。                                                                                        |
-| ![](../assets/en/FormEditor/shields2.png)        | [バッジ表示](#shields)                     | このボタンをクリックするたびに、すべてのタイプのフォームバッジが順に表示されます。 また、このボタンには、表示するバッジタイプを直接選択できるメニューが関連付けられています。                                                                   |
-| ![](../assets/en/FormEditor/library.png)         | [定義済みオブジェクトライブラリ](objectLibrary.html) | このボタンは定義済みオブジェクトライブラリを表示します。 このライブラリは定義済みのプロパティを持つオブジェクトを多数提供します。                                                                                         |
-| ![](../assets/en/FormEditor/listBoxBuilder1.png) | [リストボックスビルダー](#list-box-builder)      | このボタンは、新しいエンティティセレクション型リストボックスを作成します。                                                                                                                     |
-| ![](../assets/en/FormEditor/insertFields.png)    | [フィールドを挿入](#insert-fields)            | このボタンは、テーブルフォームにおいて、親テーブルの全フィールド (オブジェクト型と BLOB型を除く) をインターフェース標準に従ってラベル付きで挿入します。                                                                          |
+| アイコン                                             | 名称                                    | 説明                                                                                                                                                                                            |
+| ------------------------------------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/execute.png)         | フォーム実行                                | フォームの実行をテストするために使用します。 このボタンをクリックすると、4D は新しいウィンドウを開き、そのコンテキストでフォームを表示します (リストフォームの場合レコードリスト、詳細フォームの場合カレントレコード)。 フォームはメインプロセスで実行されます。                                                          |
+| ![](../assets/en/FormEditor/selection.png)       | [選択ツール](#selecting-objects)           | Allows selecting, moving and resizing form objects.<br/>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode. |
+| ![](../assets/en/FormEditor/zOrder.png)          | [入力順](#data-entry-order)              | "入力順" モードに切り替わり、フォームの現在の入力順を表示・変更できます。 入力順は、バッジを使用して確認することもできます。                                                                                                                              |
+| ![](../assets/en/FormEditor/moving.png)          | [移動](#moving-objects)                 | "移動" モードに移行し、ウィンドウ中をドラッグ＆ドロップすることで素早くフォームの表示部分を移動することができます。 このモードでカーソルは手の形になります。 このモードは、フォームを拡大表示している時に特に便利です。                                                                                |
+| ![](../assets/en/FormEditor/zoom.png)            | [拡大](#zoom)                           | フォーム表示の拡大/縮小率を変更できます (デフォルトで100%)。 "拡大/縮小" モードにするには虫眼鏡をクリックするか、拡大/縮小率バーをクリックします。 この機能は前節で説明しています。                                                                                             |
+| ![](../assets/en/FormEditor/alignment.png)       | [整列](#aligning-objects)               | このボタンには、フォーム中でオブジェクトを均等に配置するためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<br/>選択オブジェクトの位置が CSSプロパティによりロックされている場合は無効です。                                                          |
+| ![](../assets/en/FormEditor/distribution.png)    | [均等配置](#distributing-objects)         | このボタンには、フォーム中でオブジェクトの並びを揃えるためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<br/>選択オブジェクトの位置が CSSプロパティによりロックされている場合は無効です。                                                           |
+| ![](../assets/en/FormEditor/level.png)           | [レベル](#layering-objects)              | このボタンには、フォーム上のオブジェクトの階層を変更するためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                                                                            |
+| ![](../assets/en/FormEditor/group.png)           | [グループ化/グループ解除](#grouping-objects)     | このボタンには、フォーム上の選択オブジェクトのグループ化やグループ解除をおこなうためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                                                                |
+| ![](../assets/en/FormEditor/displyAndPage.png)   | [表示とページ管理](forms.html#form-pages)     | このエリアを使用して、フォームページ間の移動やページの追加ができます。 フォームページを移動するには矢印ボタンをクリックするか、または中央のエリアをクリックすると現われるメニューから表示したいページを選択します。 最終ページが表示されている状態で、右矢印ボタンをクリックすると、4D はページを追加します。                                     |
+| ![](../assets/en/FormEditor/cssPreviewicon.png)  | [CSSプレビュー](#css-preview)              | このボタンで、使用する CSSモードを選択します。                                                                                                                                                                     |
+| ![](../assets/en/FormEditor/views.png)           | [ビュー管理](#views)                       | このボタンは、ビューパレットの表示や非表示をおこないます。 この機能については "オブジェクトビューを使用する" で説明しています。                                                                                                                            |
+| ![](../assets/en/FormEditor/shields2.png)        | [バッジ表示](#shields)                     | このボタンをクリックするたびに、すべてのタイプのフォームバッジが順に表示されます。 また、このボタンには、表示するバッジタイプを直接選択できるメニューが関連付けられています。                                                                                                       |
+| ![](../assets/en/FormEditor/library.png)         | [定義済みオブジェクトライブラリ](objectLibrary.html) | このボタンは定義済みオブジェクトライブラリを表示します。 このライブラリは定義済みのプロパティを持つオブジェクトを多数提供します。                                                                                                                             |
+| ![](../assets/en/FormEditor/listBoxBuilder1.png) | [リストボックスビルダー](#list-box-builder)      | このボタンは、新しいエンティティセレクション型リストボックスを作成します。                                                                                                                                                         |
+| ![](../assets/en/FormEditor/insertFields.png)    | [フィールドを挿入](#insert-fields)            | このボタンは、テーブルフォームにおいて、親テーブルの全フィールド (オブジェクト型と BLOB型を除く) をインターフェース標準に従ってラベル付きで挿入します。                                                                                                              |
 
 
 ### オブジェクトバー
@@ -146,11 +146,11 @@ title: フォームエディター
 
 ツールバーを使用してオブジェクトを選択するには:
 
-1. ツールバーの矢印ツールをクリックします。<p>![](../assets/en/FormEditor/selection.png)</p>
+1. ツールバーの矢印ツールをクリックします。<br/>![](../assets/en/FormEditor/selection.png)
 
-<p>マウスカーソルをフォームエリアに移動すると、カーソルは標準の矢印の形をしたポインターに変わります</p>。
+<br/>マウスカーソルをフォームエリアに移動すると、カーソルは標準の矢印の形をしたポインターに変わります。
 
-2. 選択したいオブジェクトをクリックします。 サイズ変更ハンドルが表示され、オブジェクトが選択されたことを表わします。<p>![](../assets/en/FormEditor/selectResize.png)</p>
+2. 選択したいオブジェクトをクリックします。 サイズ変更ハンドルが表示され、オブジェクトが選択されたことを表わします。<br/>![](../assets/en/FormEditor/selectResize.png)
 
 プロパティリストを使用してオブジェクトを選択するには:
 
@@ -235,13 +235,12 @@ title: フォームエディター
 オブジェクトをグループ化するには:
 
 1. グループ化したいオブジェクトを選択します。
-2. オブジェクトメニューから **グループ化** を選択します。 または フォームエディターのツールバーでグループ化ボタンをクリックします。<p>![](../assets/en/FormEditor/group.png)</p>
-4D は、新たにグループ化されたオブジェクトの境界をハンドルで表わします。 グループ内の各オブジェクトの境界にはハンドルが表示されません。 これ以降、グループ化されたオブジェクトを編集すると、グループを構成する全オブジェクトが変更されます。
+2. オブジェクトメニューから **グループ化** を選択します。 OR Click the Group button  in the toolbar of the Form editor:<br/>![](../assets/en/FormEditor/group.png) 4D marks the boundary of the newly grouped objects with handles. グループ内の各オブジェクトの境界にはハンドルが表示されません。 これ以降、グループ化されたオブジェクトを編集すると、グループを構成する全オブジェクトが変更されます。
 
 オブジェクトのグループ化を解除するには:
 
 1. グループ化を解除したいグループオブジェクトを選択します。
-2. **オブジェクト** メニューから **グループ化解除** を選択します。<p>OR</p><p>フォームエディターのツールバーで **グループ化解除** ボタン (**グループ化** ボタンのサブ項目) をクリックします。</p><p>**グループ化解除** が選択不可の場合、選択したオブジェクトはグループに属していないことを意味します。</p>4D は個々のオブジェクトの境界をハンドルで表わします。
+2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D は個々のオブジェクトの境界をハンドルで表わします。
 
 ### オブジェクトの整列
 
@@ -268,9 +267,10 @@ title: フォームエディター
 
 このダイアログボックスを表示するには、揃えたいオブジェクトを選択し、**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。
 
-- "左/右整列" や "上/下整列" エリアで、実行しようとする整列に対応する整列アイコンをクリックします。<p>見本エリアには、選択結果が表示されます。</p>
+- "左/右整列" や "上/下整列" エリアで、実行しようとする整列に対応する整列アイコンをクリックします。<br>見本エリアには、選択結果が表示されます。
 
-- 標準のアンカー方式による整列を実行するには、**プレビュー** または **適用** をクリックします。 この場合、整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。 たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。 または:<p>特定のオブジェクトを基準にオブジェクトを揃えるには、**整列** オプションを選択し、整列基準としたいオブジェクトを一覧から選択します。 この場合、基準オブジェクトの位置は変わりません。</p>
+- 標準のアンカー方式による整列を実行するには、**プレビュー** または **適用** をクリックします。 この場合、整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。 たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。 OR:<br/>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. この場合、基準オブジェクトの位置は変わりません。
+
 
 **プレビュー** ボタンをクリックすると、整列の結果をプレビューすることができます。 するとフォームエディター上のオブジェクトは見かけ上整列しますが、ダイアログボックスが表示されたままなので、この整列のキャンセルや適用をおこなうことができます。
 > このダイアログボックスでは、整列と均等配置を合わせて実行することができます。 整列に関する詳細は [オブジェクトの整列](#オブジェクトの整列) を参照ください。
@@ -304,7 +304,7 @@ title: フォームエディター
 
 1. 3つ以上のオブジェクトを選択し、希望する均等配置ツールをクリックします。
 
-2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<p>![](../assets/en/FormEditor/distributionTool.png)</p> OR<p>**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから均等揃えメニューコマンドを選択します。</p>4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
+2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor. 4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
 
 "整列と均等配置" ダイアログボックスを用いてオブジェクトを均等に配置するには:
 
@@ -312,9 +312,9 @@ title: フォームエディター
 
 2. **オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。 以下のダイアログボックスが表示されます:![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. "左/右整列" や "上/下整列" エリアで、標準の均等配置アイコンをクリックします: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(標準の横均等揃えアイコン)</p>見本エリアには、選択結果が表示されます。
+3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <br/>(Standard horizontal distribution icon)<br/>The example area displays the results of your selection.
 
-4. 標準の均等配置を実行するには、**プレビュー** または *適用* をクリックします。<p>この場合、4D は標準の均等配置を実行し、オブジェクトは等間隔で配置されます。</p>または:<p>特定の均等配置を実行するには、**均等配置** オプションを選択します (たとえば各オブジェクトの右辺までの距離をもとにしてオブジェクトを均等に配置したい場合)。 このオプションはスイッチのように機能します。 均等配置チェックボックスが選択されていると、このオプションの下にあるアイコンは異なる動作をおこないます:</p>
+4. To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<br/>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.<br/>OR:<br/>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). このオプションはスイッチのように機能します。 均等配置チェックボックスが選択されていると、このオプションの下にあるアイコンは異なる動作をおこないます:<br/>
 
 - 左/右整列の場合、各アイコンは次の均等配置に対応します: 選択オブジェクトの左辺、中央 (横)、右辺で均等に揃えます。
 - 上/下整列の場合、各アイコンは次の均等配置に対応します: 選択オブジェクトの上辺、中央 (縦)、下辺で均等に揃えます。
@@ -367,11 +367,11 @@ JSONフォームの入力順序の設定は、[`entryOrder`](properties_JSONref.
 
 入力順モードに切り替え、入力順を変更するには:
 
-1. **フォーム** メニューから **入力順** を選択するか、ツールバーの入力順ボタンをクリックします:<p>![](../assets/en/FormEditor/zOrder.png)</p>
+1. **フォーム** メニューから **入力順** を選択するか、ツールバーの入力順ボタンをクリックします:<br/>![](../assets/en/FormEditor/zOrder.png)<br/>
 
     ポインターが入力順ポインターに変わり、4D はフォーム上に線を引いて、データ入力時にオブジェクトが選択される順序を示します。 ツールパレット上の他のツールをクリックするまでは、入力順序の表示と変更操作しかおこなえません。
 
-2. データ入力順を変更するには、フォームオブジェクト上にポインターを置き、マウスボタンを押したまま、次の入力順に設定したいオブジェクトまでポインターをドラッグします。<p>![](../assets/en/FormEditor/entryOrder3.png)</p>これに応じて、4D はデータ入力順を調整します。
+2. To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<br/>![](../assets/en/FormEditor/entryOrder3.png)<br/>4D will adjust the entry order accordingly.
 
 3. 入力順を設定したいだけ、ステップ2 を繰り返します。
 

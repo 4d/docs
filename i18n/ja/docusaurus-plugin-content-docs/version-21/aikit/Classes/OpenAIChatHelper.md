@@ -20,7 +20,7 @@ title: OpenAIChatHelper
 | `autoHandleToolCalls` | Boolean                                                               | true                                                   | 登録されたツールを使用してツール呼び出しを自動的に管理するかどうかをあらわすブール値。 |
 | `lastErrors`          | Collection                                                            | -                                                      | チャット操作中に発生した最後のエラーを格納したコレクション。              |
 
-## Constructor
+## コンストラクター
 
 新しい `OpenAIChatHelper` インスタンスを作成するためには、[OpenAI クライアントのチャットAPI](OpenAIChatAPI.md)の `create()` メソッドを使用するのが最適です:
 

@@ -73,7 +73,7 @@ You must restart the Web server so that modifications made in this file are take
 
 Un manejador está definido por:
 
-- a listened URL pattern
+- un patrón de URL a interceptar
 - a function and its class where the code is implemented to handle the listened URL pattern
 - the verbs with which the URL can be called to trigger the handler
 
