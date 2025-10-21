@@ -1,6 +1,8 @@
 ---
 id: transactions
 title: Transactions
+slug: /Develop/transactions
+displayed_sidebar: docs
 ---
 
 ## Descripción
