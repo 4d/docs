@@ -102,10 +102,10 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 
 <details><summary>Historique</summary>
 
-| Release | Modifications              |
-| ------- | -------------------------- |
-| 21      | Support of remote sessions |
-| 18 R6   | Ajout                      |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 21      | Prise en charge des sessions distantes |
+| 18 R6   | Ajout                                  |
 
 </details>
 
@@ -123,13 +123,13 @@ La disponibilité des propriétés et des fonctions de l'objet `Session` dépend
 
 :::note
 
-This function does nothing and always returns **True** with stored procedure sessions and standalone sessions.
+Cette fonction ne fait rien et renvoie toujours **True** avec les sessions de procédures stockées et les sessions autonomes.
 
 :::
 
 La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session (à l'exception des privilèges promus) et renvoie **True** si l'exécution a réussi<!-- END REF -->.
 
-Hormis si vous êtes en mode ["forceLogin"](../REST/authUsers.md#force-login-mode), la session devient automatiquement une session Invité. En mode "forceLogin", `.clearPrivileges()` ne transforme pas la session en session Invité, elle efface seulement les privilèges de la session.
+Hormis si vous êtes en mode ["forceLogin"](../REST/authUsers.md#force-login-mode), la session devient automatiquement une session Guest. En mode "forceLogin", `.clearPrivileges()` ne transforme pas la session en session Invité, elle efface seulement les privilèges de la session.
 
 :::note
 
@@ -137,7 +137,7 @@ Cette fonction ne supprime pas les **privilèges promus** du process web, qu'ils
 
 :::
 
-Regarding remote client sessions, the function only impacts [code accessing the web server](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+En ce qui concerne les sessions de clients distants, la fonction n'a d'impact que sur [le code accédant au serveur web](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 #### Exemple
 
@@ -158,10 +158,10 @@ $isGuest:=Session.isGuest() //$isGuest est True
 
 <details><summary>Historique</summary>
 
-| Release | Modifications              |
-| ------- | -------------------------- |
-| 21      | Support of remote sessions |
-| 20 R9   | Ajout                      |
+| Release | Modifications                          |
+| ------- | -------------------------------------- |
+| 21      | Prise en charge des sessions distantes |
+| 20 R9   | Ajout                                  |
 
 </details>
 
@@ -436,7 +436,7 @@ Cette fonction renvoie True pour le *privilège* si elle est appelée depuis une
 
 :::
 
-Regarding remote client sessions, the function only impacts [code accessing the web server](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+En ce qui concerne les sessions de clients distants, la fonction n'a d'impact que sur [le code accédant au serveur web](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
 
 With stored procedure sessions and standalone sessions, this function always returns True, whatever the *privilege*.
 

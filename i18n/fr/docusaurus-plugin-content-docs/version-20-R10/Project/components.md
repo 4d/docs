@@ -5,7 +5,7 @@ title: Dépendances
 
 Un composant 4D est un ensemble de code 4D et de formulaires représentant une ou plusieurs fonctionnalité(s) que vous pouvez installer et utiliser dans vos projets. Par exemple, le composant [4D SVG](https://github.com/4d/4D-SVG) ajoute des commandes avancées et un moteur de rendu intégré qui peut être utilisé pour afficher des fichiers SVG.
 
-Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D qui se trouvent sur GitHub.
+Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D [sur GitHub](https://github.com/search?q=4d-component&type=Repositories).
 
 Lorsque vous développez dans 4D, les fichiers de composants peuvent être stockés de manière transparente sur votre ordinateur ou sur un dépôt Github.
 
@@ -31,20 +31,20 @@ L'architecture de dossier "Contents" est recommandée pour les composants si vou
 
 :::
 
-## Components made by 4D
+## Composants développés par 4D
 
-4D includes a set of components developed in-house. They can also be found in the [4D github repository](https://github.com/4d).
+4D comprend un ensemble de composants développés en interne. Ces composants sont également présents sur le [dépôt github de 4D](https://github.com/4d).
 
-| Composant                                                             | Description                                                                                                                                                           | Principales fonctionnalités                                                                                                             |
-| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [4D AiIKit](https://github.com/4d/4D-AIKit)                           | Ensemble de classes permettant de se connecter à des API OpenAI tierces                                                                                               | `OpenAIChat`, `OpenAIImage`...                                                          |
-| [4D Labels](https://github.com/4d/4D-Labels)                          | Composant interne requis pour la création de modèles de labels                                                                                                        |                                                                                                                                         |
-| [4D NetKit](https://developer.4d.com/4D-NetKit)                       | Ensemble d'outils de services web permettant de se connecter à des API tierces                                                                                        | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
-| [4D Progress](https://github.com/4d/4D-Progress)                      | Ouverture d'une ou plusieurs barres de progression dans la même fenêtre                                                                                               | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
-| [4D SVG](https://github.com/4d/4D-SVG)                                | Création et manipulation d'objets graphiques svg courants                                                                                                             | `SVGTool_Display_viewer`, multiple `SVG_` methods                                                                                       |
-| [4D View Pro](ViewPro/getting-started.md)                             | Fonctions de tableur dans vos formulaires                                                                                                                             | Voir la [documentation de 4D View Pro](ViewPro/getting-started.md)                                                                      |
-| [4D Widgets](https://github.com/4d/4D-Widgets)                        | Gestion des widgets 4D DatePicker, TimePicker et SearchPicker                                                                                                         | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
-| [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) | Manage [4D Write Pro palettes](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) and [table wizard](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
+| Composant                                                             | Description                                                                                                                                                                             | Principales fonctionnalités                                                                                                             |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| [4D AiIKit](https://github.com/4d/4D-AIKit)                           | Ensemble de classes permettant de se connecter à des API OpenAI tierces                                                                                                                 | `OpenAIChat`, `OpenAIImage`...                                                          |
+| [4D Labels](https://github.com/4d/4D-Labels)                          | Composant interne requis pour la création de modèles de labels                                                                                                                          |                                                                                                                                         |
+| [4D NetKit](https://developer.4d.com/4D-NetKit)                       | Ensemble d'outils de services web permettant de se connecter à des API tierces                                                                                                          | `OAuth2Provider` class, `New OAuth2 provider`, `OAuth2ProviderObject.getToken()`                                                        |
+| [4D Progress](https://github.com/4d/4D-Progress)                      | Ouverture d'une ou plusieurs barres de progression dans la même fenêtre                                                                                                                 | `Progress New`, `Progress SET ON STOP METHOD`, `Progress SET PROGRESS`, ...             |
+| [4D SVG](https://github.com/4d/4D-SVG)                                | Création et manipulation d'objets graphiques svg courants                                                                                                                               | `SVGTool_Display_viewer`, multiple `SVG_` methods                                                                                       |
+| [4D View Pro](ViewPro/getting-started.md)                             | Fonctions de tableur dans vos formulaires                                                                                                                                               | Voir la [documentation de 4D View Pro](ViewPro/getting-started.md)                                                                      |
+| [4D Widgets](https://github.com/4d/4D-Widgets)                        | Gestion des widgets 4D DatePicker, TimePicker et SearchPicker                                                                                                                           | `DatePicker calendar`, `DateEntry area`, `TimeEntry`, `SearchPicker SET HELP TEXT`, ... |
+| [4D Write Pro Interface](https://github.com/4d/4D-WritePro-Interface) | Gestion des [palettes de 4D Write Pro](https://doc.4d.com/4Dv20R9/4D/20-R9/Entry-areas.300-7543821.en.html) et de [l'assistant de table](../WritePro/writeprointerface.md#table-wizard) | `WP PictureSettings`, `WP ShowTabPages`, `WP SwitchToolbar`, `WP UpdateWidget`                                                          |
 
 ## Chargement des composants
 
@@ -330,20 +330,20 @@ Les composants GitHub référencés sont téléchargés dans un dossier de cache
 
 ...où `<app name>` peut être "4D", "4D Server" ou "tool4D".
 
-### Automatic dependency resolution
+### Résolution automatique des dépendances
 
-When you add or update a component (whether [local](#local-components) or [from GitHub](#components-stored-on-github)), 4D automatically resolves and installs all dependencies required by that component. Cela inclut :
+Lorsque vous ajoutez ou mettez à jour un composant (qu'il soit [local](#local-components) ou [obtenu depuis GitHub](#components-stored-on-github)), 4D résout et installe automatiquement toutes les dépendances requises par ce composant. Cela inclut :
 
-- **Primary dependencies**: Components you explicitly declare in your `dependencies.json` file
-- **Secondary dependencies**: Components required by primary dependencies or other secondary dependencies, which are automatically resolved and installed
+- les **dépendances primaires** : Composants que vous déclarez explicitement dans votre fichier `dependencies.json`.
+- les **dépendances secondaires** : Composants requis par des dépendances primaires ou d'autres dépendances secondaires, qui sont automatiquement résolues et installées.
 
-The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
+Le gestionnaire de dépendances lit le fichier `dependencies.json` de chaque composant et installe récursivement toutes les dépendances nécessaires, en respectant les spécifications de version dans la mesure du possible. Il n'est donc pas nécessaire d'identifier et d'ajouter manuellement les dépendances imbriquées, une par une.
 
-- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+- **les résolutions de conflits** : Lorsque plusieurs dépendances nécessitent [différentes versions](#defining-a-github-dependency-version-range) du même composant, le gestionnaire de dépendances tente automatiquement de résoudre les conflits en trouvant une version qui satisfait toutes les plages de versions qui se chevauchent. Si une dépendance primaire entre en conflit avec des dépendances secondaires, la dépendance primaire est prioritaire.
 
 :::note
 
-`dependencies.json` files are ignored in components loaded from the [**Components** folder](architecture.md#components).
+Les fichiers `dependencies.json` sont ignorés dans les composants chargés depuis le dossier [**Components**](architecture.md#components).
 
 :::
 
@@ -377,19 +377,19 @@ Par défaut, toutes les dépendances identifiées par le Gestionnaire de dépend
 
 ![dependency-tabs](../assets/en/Project/dependency-tabs.png)
 
-- **All**: All dependencies including both primary (declared) and secondary (automatically resolved) dependencies in a flat list view.
-- **Declared**: Primary dependencies that are explicitly declared in the `dependencies.json` file. This tab helps you distinguish between dependencies you've directly added and those that were [automatically resolved](#automatic-dependency-resolution).
-- **Actifs** : Dépendances chargées et utilisables dans le projet. Il comprend des dépendances *overloading*, qui sont effectivement chargées. Les dépendances *overloaded* sont listées dans l'onglet **Conflits**, ainsi que toutes les dépendances conflictuelles.
-- **Inactifs** : Dépendances qui ne sont pas chargées dans le projet et qui ne sont pas disponibles. Diverses raisons peuvent expliquer ce statut : fichiers manquants, incompatibilité de version...
-- **Conflicts**: Dependencies that are loaded but that overloads at least one other dependency at a lower [priority level](#priority). Les dépendances surchargées sont également affichées afin que vous puissiez vérifier l'origine du conflit et prendre les mesures appropriées.
+- **Toutes** : Toutes les dépendances, y compris les dépendances primaires (déclarées) et secondaires (résolues automatiquement), sous forme de liste.
+- **Déclarées** : Les dépendances primaires qui sont explicitement déclarées dans le fichier `dependencies.json`. Cet onglet vous aide à distinguer les dépendances que vous avez directement ajoutées de celles qui ont été [automatiquement résolues](#automatic-dependency-resolution).
+- **Actives** : Dépendances chargées et utilisables dans le projet. Il comprend des dépendances *overloading*, qui sont effectivement chargées. Les dépendances *overloaded* sont listées dans l'onglet **Conflits**, ainsi que toutes les dépendances conflictuelles.
+- **Inactives** : Dépendances qui ne sont pas chargées dans le projet et qui ne sont pas disponibles. Diverses raisons peuvent expliquer ce statut : fichiers manquants, incompatibilité de version...
+- **Conflits** : Les dépendances qui sont chargées mais qui surchargent au moins une autre dépendance à un [niveau de priorité](#priority) inférieur. Les dépendances surchargées sont également affichées afin que vous puissiez vérifier l'origine du conflit et prendre les mesures appropriées.
 
-### Secondary dependencies
+### Dépendances secondaires
 
-The Dependencies panel displays [**secondary dependencies**](#automatic-dependency-resolution) with the `Component dependency` [origin](#dependency-origin):
+Le panneau Dépendances indique les [**dépendances secondaires**](#automatic-dependency-resolution) en affichant comme [origin](#dependency-origin) `Dépendance de composant` :
 
 ![recursive-dependency](../assets/en/Project/recursive.png)
 
-When you hover over a secondary dependency, a tooltip displays the parent dependency that requires it. A secondary dependency cannot be [removed](#removing-a-dependency) directly, you must remove or edit the primary dependency that requires it.
+Lorsque vous survolez une dépendance secondaire, une infobulle affiche la dépendance parente qui la requiert. Une dépendance secondaire ne peut pas être [supprimée](#removing-a-dependency) directement, vous devez supprimer ou modifier la dépendance primaire qui la requiert.
 
 ### Statut des dépendances
 
@@ -416,19 +416,19 @@ Une infobulle s'affiche lorsque vous survolez la ligne de dépendance, fournissa
 
 ### Origine de la dépendance
 
-Le panneau Dépendances liste toutes les dépendances du projet, quelle que soit leur origine, c'est-à-dire d'où qu'elles viennent. L'origine de la dépendance est fournie par l'étiquette sous son nom :
+Le panneau Dépendances liste toutes les dépendances du projet, quelle que soit leur origine. L'origine de la dépendance est fournie par l'étiquette sous son nom :
 
 ![dependency-origin](../assets/en/Project/dependency-origin.png)
 
 Les options suivantes sont disponibles :
 
-| Étiquette d'origine     | Description                                                                                                                                  |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Built in 4D             | Composant 4D intégré, stocké dans le dossier `Components` de l'application 4D                                                                |
-| Declared in project     | Composant déclaré dans le fichier [`dependencies.json`](#dependenciesjson)                                                                   |
-| Declared in environment | Component declared in the [`dependencies.json`](#dependenciesjson) file and overriden in the [`environment4d.json`](#environment4djson) file |
-| Dossier Components      | Composant situé dans le dossier [`Components`](architecture.md#components)                                                                   |
-| Component dependency    | Secondary component ([required by a another component](#automatic-dependency-resolution))                                 |
+| Étiquette                    | Description                                                                                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Intégré à 4D                 | Composant 4D intégré, stocké dans le dossier `Components` de l'application 4D                                                                      |
+| Déclaré dans le projet       | Composant déclaré dans le fichier [`dependencies.json`](#dependenciesjson)                                                                         |
+| Déclaré dans l'environnement | Composant déclaré dans le fichier [`dependencies.json`](#dependenciesjson) et surchargé dans le fichier [`environment4d.json`](#environment4djson) |
+| Dossier Components           | Composant situé dans le dossier [`Components`](architecture.md#components)                                                                         |
+| Dépendance de composant      | Composant secondaire ([requis par un autre composant](#automatic-dependency-resolution))                                        |
 
 **Cliquez avec le bouton droit de la souris** dans une ligne de dépendance et sélectionnez **Afficher sur le disque** pour révéler l'emplacement d'une dépendance :
 
@@ -496,7 +496,7 @@ Définissez la [plage de versions des dépendances](#tags-and-versions) à utili
 
 Cliquez sur le bouton **Ajouter** pour ajouter la dépendance au projet.
 
-The GitHub dependency is declared in the [**dependencies.json**](#dependenciesjson) file and added to the [inactive dependency list](#dependency-status) with the **Available at restart** status. Elle sera chargée une fois que l'application aura redémarré.
+La dépendance GitHub est déclarée dans le fichier [**dependencies.json**](#dependenciesjson) et ajoutée à la [liste des dépendances inactives](#dependency-status) avec le statut **Disponible après redémarrage**. Elle sera chargée une fois que l'application aura redémarré.
 
 #### Définir une plage de versions pour une dépendance GitHub
 
@@ -614,7 +614,7 @@ Pour supprimer une dépendance de la fenêtre Dépendances, sélectionnez la dé
 
 :::note
 
-Only primary dependencies declared in the [**dependencies.json**](#dependenciesjson) file can be removed using the Dependencies panel. Secondary dependencies cannot be removed directly - to remove a secondary dependency, you must remove the primary dependency that requires it. Si une dépendance sélectionnée ne peut pas être supprimée, le bouton **-** est désactivé et l'élément de menu **Supprimer la dépendance** est masqué.
+Seules les dépendances primaires déclarées dans le fichier [**dependencies.json**](#dependenciesjson) peuvent être supprimées dans la fenêtre Dépendances. Les dépendances secondaires ne peuvent pas être supprimées directement - pour supprimer une dépendance secondaire, vous devez supprimer la dépendance primaire qui la requiert. Si une dépendance sélectionnée ne peut pas être supprimée, le bouton **-** est désactivé et l'élément de menu **Supprimer la dépendance** est masqué.
 
 :::
 
@@ -624,7 +624,7 @@ Une boîte de dialogue de confirmation s'affiche. Si la dépendance a été déc
 
 Si vous confirmez la boîte de dialogue, le [statut](#dependency-status) de la dépendance supprimée est automatiquement modifié en "Déchargé après redémarrage". Elle sera chargée une fois que l'application aura redémarré.
 
-#### Dependency usage warnings
+#### Avertissements relatifs à l'utilisation des dépendances
 
-When you attempt to remove a primary dependency that is required by other dependencies in your project, you will be warned that the dependency is still in use. The system will display which other dependencies require it and prompt you to confirm the removal, as removing it may cause those dependent components to stop working properly.
+Lorsque vous tentez de supprimer une dépendance primaire qui est requise par d'autres dépendances dans votre projet, vous serez averti que la dépendance est toujours en cours d'utilisation. Le système affichera les autres dépendances qui la requièrent et vous demandera de confirmer la suppression, car celle-ci peut entraîner l'arrêt du fonctionnement de ces composants dépendants.
 

@@ -306,52 +306,52 @@ Class constructor()
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction de constructeur de classe. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
 
 :::
 
-An ORDA class constructor function is triggered just after a new entity is created in memory, [whatever the way it is created](#commands-that-trigger-the-class-constructor-functions). It is useful to set initial values for entity instantiation, for example a custom ID.
+Une fonction de construction de classe ORDA est déclenchée juste après la création d'une nouvelle entité en mémoire, [quelle que soit la manière dont elle est créée](#commands-that-trigger-the-class-constructor-functions). Elle est utile pour définir des valeurs d'initialisation lors de l'instanciation de l'entité, par exemple un identifiant personnalisé.
 
-This function can only be set at the [entity level](#entity-class). There can only be one constructor function in an entity class (otherwise an error is returned).
+Cette fonction ne peut être définie qu'au [niveau de l'entité](#entity-class). Il ne peut y avoir qu'une seule fonction constructor dans une classe d'entité (sinon une erreur est renvoyée).
 
-This ORDA class constructor function does not receive or return parameters. However, you can use it to initialize attribute values using [`This`](../commands/this.md). Note that values initialized by the constructor are overriden if corresponding attributes are filled by the code.
+La fonction du constructeur de la classe ORDA ne reçoit ni ne renvoie de paramètres. Cependant, vous pouvez l'utiliser pour initialiser les valeurs des attributs en utilisant [`This`](../commands/this.md). Notez que les valeurs initialisées par le constructeur sont remplacées si les attributs correspondants sont remplis par le code.
 
 :::note
 
-An ORDA class constructor function is similar to a [user class constructor function](../Concepts/classes.md#class-constructor), with the following differences:
+Une fonction de construction de classe ORDA est similaire à une [fonction de construction de classe utilisateur](../Concepts/classes.md#class-constructor), avec les différences suivantes :
 
-- you cannot pass parameters to the constructor,
-- you cannot use `shared`, `session`, or `singleton` keywords,
-- you cannot call the [`Super`](../Concepts/classes.md#super) keyword within the function,
-- the class constructor cannot be called using the `new()` function on an entity (entities can only be created by specific functions, see below).
+- vous ne pouvez pas passer de paramètres au constructeur,
+- vous ne pouvez pas utiliser les mots-clés `shared`, `session`, ou `singleton`,
+- vous ne pouvez pas appeler le mot-clé [`Super`](../Concepts/classes.md#super) à l'intérieur de la fonction,
+- le constructeur de la classe ne peut pas être appelé en utilisant la fonction `new()` sur une entité (les entités ne peuvent être créées que par des fonctions spécifiques, voir ci-dessous).
 
 :::
 
-#### Commands that trigger the Class constructor functions
+#### Commandes qui déclenchent les fonctions du constructeur de classe
 
-The `Class constructor` function is triggered by the following commands and features:
+La fonction `Class constructor` est déclenchée par les commandes et fonctionnalités suivantes :
 
 - [`dataClass.new()`](../API/DataClassClass.md#new)
 - [`dataClass.fromCollection()`](../API/DataClassClass#fromcollection)
-- [REST API $method=update](../REST/$method.md#methodupdate) in a POST without the `__KEY` and `__STAMP` parameters
-- the [Data Explorer](../Admin/dataExplorer.md#editing-data).
+- [API REST $method=update](../REST/$method.md#methodupdate) dans un POST sans les paramètres `__KEY` et `__STAMP`.
+- l'[Explorateur de données](../Admin/dataExplorer.md#editing-data).
 
 :::note Notes
 
-- The [`entity.clone()`](../API/EntityClass.md#clone) function does not trigger the entity Class constructor.
-- Records created at the 4D database level using 4D classic language commands or standard actions do not trigger the entity Class constructor.
+- La fonction [`entity.clone()`](../API/EntityClass.md#clone) ne déclenche pas le constructeur de la classe de l'entité.
+- Les enregistrements créés au niveau de la base de données 4D à l'aide de commandes du langage classique 4D ou d'actions standard ne déclenchent pas le constructeur de la classe de l'entité.
 
 :::
 
-#### Remote configurations
+#### Configurations distantes
 
-When using a remote configurations, you need to pay attention to the following principles:
+Lorsque vous utilisez une configuration à distance, il convient de respecter les principes suivants :
 
-- In **client/server** the function can be called on the client or on the server, depending on the location of the calling code. When it is called on the client, it is not triggered again when the client attempts to save the new entity and sends an update request to the server to create in memory on the server.
+- En **client/serveur**, la fonction peut être appelée sur le client ou sur le serveur, en fonction de l'emplacement du code d'appel. Lorsqu'elle est appelée sur le client, elle n'est pas déclenchée à nouveau lorsque le client tente d'enregistrer la nouvelle entité et envoie une demande de mise à jour au serveur pour la créer en mémoire sur le serveur.
 
 :::warning
 
-Since functions such as [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) can create a large number of entities and thus trigger the entity Class constructor consequently, you need to make sure the constructor code does not execute excessive time-consuming processings, for performance reasons. In remote configurations (see below), the code should not trigger multiple requests to the server.
+Des fonctions telles que [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection) pouvant créer un grand nombre d'entités et donc déclencher le constructeur de la classe d'entités en conséquence, vous devez vous assurer que le code du constructeur n'exécute pas de traitements qui prennent du temps, pour des raisons de performance. Dans les configurations distantes (voir ci-dessous), le code ne doit pas déclencher de requêtes multiples au serveur.
 
 :::
 
@@ -367,7 +367,7 @@ Class constructor()
 
 ```
 
-#### Example 2 (diagram): Client/server
+#### Exemple 2 (diagramme) : Client/serveur
 
 ```mermaid
 
@@ -386,7 +386,7 @@ Server-->>-Client: Success
 
 ```
 
-#### Example 3 (diagram): Qodly - Standard action
+#### Exemple 3 (diagramme): Qodly - Action standard
 
 ```mermaid
 
@@ -404,7 +404,7 @@ sequenceDiagram
 
 ```
 
-#### Example 4 (diagram): Qodly - Standard action and update value on the newly created entity
+#### Exemple 4 (diagramme): Qodly - Action standard et mise à jour de valeur sur la nouvelle entité créée
 
 ```mermaid
 
@@ -426,7 +426,7 @@ Note over Qodly page: product.creationDate is "06/17/25" <br> and product.commen
 
 ```
 
-#### Example 5 (diagram): Qodly - Entity instanciated in a function
+#### Exemple 5 (diagramme) : Qodly - Entité instanciée dans une fonction
 
 ```mermaid
 
@@ -896,23 +896,23 @@ Exposed Alias studentName student.name //scalar value
 Vous pouvez alors exécuter les recherches suivantes :
 
 ```4d
-// Find course named "Archaeology"
+// Trouver le cours nommé "Archaeology"
 ds.Course.query("courseName = :1";"Archaeology")
 
-// Find courses given by the professor Smith
+// Trouver les cours du professeur Smith
 ds.Course.query("teacherName = :1";"Smith")
 
-// Find courses where Student "Martin" assists
+// Trouver les cours auxquels assiste l'étudiant "Martin"
 ds.Course.query("studentName = :1";"Martin")
 
-// Find students who have M. Smith as teacher
+// Trouver les étudiants qui ont le professeur Smith
 ds.Student.query("teachers.name = :1";"Smith")
 
-// Find teachers who have M. Martin as Student
+// Trouver les professeurs qui ont M. Martin comme étudiant
 ds.Teacher.query("students.name = :1";"Martin")
-// Note that this very simple query string processes a complex
-// query including a double join, as you can see in the queryPlan:   
-// "Join on Table : Course  :  Teacher.ID = Course.teacherID,    
+// Notez que cette chaîne très simple traite une requête complexe
+// incluant une double jointure, comme vous pouvez le voir dans le queryPlan :
+// "Join on Table : Course  :  Teacher.ID = Course.teacherID,
 //  subquery:[ Join on Table : Student  :  Course.studentID = Student.ID,
 //  subquery:[ Student.name === Martin]]"
 ```
@@ -986,59 +986,59 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Erreur "Unknown member method"
 ```
 
-## onHTTPGet keyword
+## onHTTPGet
 
-Use the `onHTTPGet` keyword to declare functions that can be called through HTTP requests using the `GET` verb. Such functions can return any web contents, for example using the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class.
+Utilisez le mot-clé `onHTTPGet` pour déclarer des fonctions qui peuvent être appelées par des requêtes HTTP utilisant le verbe `GET`. Ces fonctions peuvent renvoyer n'importe quel contenu web, par exemple en utilisant la classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md).
 
-The `onHTTPGet` keyword is available with:
+Le mot-clé `onHTTPGet` est disponible avec :
 
-- ORDA Data model class functions
-- [Singletons class functions](../Concepts/classes.md#singleton-classes)
+- les fonctions de classe du modèle de données ORDA
+- les [fonctions de classe de singletons](../Concepts/classes.md#singleton-classes)
 
 La syntaxe formelle est la suivante :
 
 ```4d
-// declare an onHTTPGet function
+// déclarer une fonction onHTTPGet
 exposed onHTTPGet Function <functionName>(params) : result
 ```
 
 :::info
 
-The `exposed` keyword must also be added in this case, otherwise an error will be generated.
+Le mot-clé `exposed` doit également être ajouté dans ce cas, sinon une erreur sera générée.
 
 :::
 
 :::caution
 
-As this type of call is an easy offered action, the developer must ensure no sensitive action is done in such functions.
+Comme ce type d'appel est une action facile d'accès, le développeur doit s'assurer qu'aucune action sensible n'est effectuée dans ces fonctions.
 
 :::
 
 ### params
 
-A function with `onHTTPGet` keyword accepts [parameters](../Concepts/parameters.md).
+Une fonction avec le mot-clé `onHTTPGet` accepte des [paramètres](../Concepts/parameters.md).
 
-In the HTTP GET request, parameters must be passed directly in the URL and declared using the `$params` keyword (they must be enclosed in a collection).
+Dans la requête HTTP GET, les paramètres doivent être passés directement dans l'URL et déclarés à l'aide du mot-clé `$params` (ils doivent être inclus dans une collection).
 
 ```
 IP:port/rest/<dataclass>/functionName?$params='[<params>]'
 ```
 
-See the [Parameters](../REST/classFunctions#parameters) section in the REST server documentation.
+Voir la section [Paramètres](../REST/classFunctions#parameters) dans la documentation du serveur REST.
 
 ### Résultat
 
-A function with `onHTTPGet` keyword can return any value of a supported type (same as for REST [parameters](../REST/classFunctions#parameters)).
+Une fonction avec le mot-clé `onHTTPGet` peut renvoyer n'importe quelle valeur d'un type supporté (comme pour les [paramètres REST](../REST/classFunctions#parameters)).
 
 :::info
 
-You can return a value of the [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) class type to benefit from properties and functions to set the header, the body, and the status of the answer.
+Vous pouvez renvoyer une valeur de type [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) pour bénéficier des propriétés et des fonctions permettant de définir l'en-tête, le corps et le statut de la réponse.
 
 :::
 
 ### Exemple
 
-You have defined the following function:
+Vous avez défini la fonction suivante :
 
 ```4d
 Class extends DataClass
@@ -1056,10 +1056,10 @@ exposed onHTTPGet Function getThumbnail($name : Text; $width : Integer; $height 
 	return $response
 ```
 
-It can be called by the following HTTP GET request:
+Elle peut être appelée par la requête HTTP GET suivante :
 
 ```
-IP:port/rest/Products/getThumbnail?$params='["Yellow Pack",200,200]'
+IP:port/rest/Products/getThumbnail ?$params='["Yellow Pack",200,200]'
 ```
 
 ## Fonctions locales

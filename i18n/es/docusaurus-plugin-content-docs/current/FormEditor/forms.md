@@ -96,64 +96,64 @@ No hay restricciones en el número de páginas que puede tener un formulario. El
 
 Un formulario multipáginas tiene una página de fondo y varias páginas de visualización. Los objetos que se colocan en la página de fondo pueden ser visibles en todas las páginas de visualización, pero sólo se pueden seleccionar y editar en la página de fondo. En los formularios multipágina, debe colocar su paleta de botones en la página de fondo. También es necesario incluir uno o más objetos en la página de fondo que ofrezcan las herramientas de navegación para el usuario.
 
-## Fluent UI rendering (Developer Preview)
+## Renderizado Fluent UI (Developer Preview)
 
-On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
+En Windows, 4D soporta el renderizado de formularios **Fluent UI**, el moderno diseño gráfico de la interfaz de usuario de Microsoft, basado en la tecnología **WinUI 3**. **WinUI 3** es la base del Windows App SDK y representa las próximas interfaces gráficas de Windows.
 
-Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+La renderización Fluent UI ofrece controles modernos y atractivos, compatibilidad con los temas sistema dark/light, renderización más fluida optimizada para pantallas de alta resolución y una experiencia de usuario coherente y alineada con las aplicaciones recientes de Microsoft.
 
-| Light theme                             | Dark theme                                   |
+| Tema claro                              | Tema oscuro                                  |
 | --------------------------------------- | -------------------------------------------- |
 | ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
 
 :::caution Vista previa para desarrolladores
 
-Fluent UI support is currently in the Developer Preview phase. No debe utilizarse en producción.
+La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Preview. No debe utilizarse en producción.
 
 :::
 
 :::info macOS
 
-This feature can only be used on Windows. On macOS, it is ignored.
+Esta funcionalidad sólo se puede utilizar en Windows. En macOS, se ignora.
 
 :::
 
 :::tip Entrada de blog relacionada
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
+[Modernice sus interfaces 4D con Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
 
 :::
 
 ### Requisitos
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+La renderización Fluent UI requiere que esté instalado [**Windows App SDK versión 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Debe instalar este SDK en cualquier máquina Windows que muestre sus formularios.
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+Si el Windows App SDK no está correctamente instalado, 4D renderizará todos sus formularios en modo clásico sin error.
 
-### Enabling the Fluent UI rendering
+### Activar el renderizado Fluent UI
 
-You can enable the Fluent UI rendering mode at the application level or at the form level. Form setting has priority over application setting.
+Puede activar el modo de renderizado Fluent UI a nivel de aplicación o a nivel de formulario. La configuración del formulario tiene prioridad sobre la configuración de la aplicación.
 
-#### Application setting
+#### Parámetros de la aplicación
 
-Check the **Use Fluent UI on Windows** option in the "Interface" page of the Settings dialog box.
+Seleccione la opción **Utilizar Fluent UI en Windows** en la página "Interfaz" de la caja de diálogo de las Propiedades.
 
 ![](../assets/en/FormObjects/fluentui-setting.png)
 
-In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
+En este caso, el modo de renderizado Fluent UI se utilizará por defecto en Windows para todos los formularios.
 
-#### Form setting
+#### Parámetros del formulario
 
-Each form can define its own rendering via the **Widget appearance** property. Las siguientes opciones están disponibles:
+Cada formulario puede definir su propio renderizado a través de la propiedad **Apariencia de los Widgets**. Las siguientes opciones están disponibles:
 
-- **Inherited**: inherits the global application setting (default),
+- **Heredado**: hereda las propiedades globales de la aplicación (por defecto),
 - **Classic**: uses the classic Windows style,
 - **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
   ![](../assets/en/FormObjects/fluentui-form.png)
 
 The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
 
-### Specific behaviors
+### Comportamientos específicos
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 

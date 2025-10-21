@@ -1588,7 +1588,7 @@ var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk
   // 明示的にコサイン計量を指定し、カスタムのしきい値を用いた検索
 var $employees:=ds.Employee.query("embedding > :1"; {vector: $vector; metric: mk cosine; threshold: 0.9})
   // フォーミュラを使用した検索
-var $employees:=ds.Employee.query(Formula(This.embdedding.cosineSimilarity($vector)>0.9))
+var $employees:=ds.Employee.query(Formula(This.embedding.cosineSimilarity($vector)>0.9))
 
 ```
 

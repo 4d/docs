@@ -42,9 +42,9 @@ See [OpenAIParameters](./OpenAIParameters.md) for other callback properties.
 
 El parámetro `response_format` le permite especificar el formato que el modelo debe salir. This is particularly useful when you need structured data or want to ensure the response follows a specific format.
 
-### Supported Response Format Types
+### Tipos de formato de respuesta soportados
 
-#### 1. Text Format (Default)
+#### 1. Formato de texto (por defecto)
 
 The default response format returns plain text:
 
@@ -55,7 +55,7 @@ var $params := cs.OpenAIChatCompletionsParameters.new({ \
 })
 ```
 
-#### 2. JSON Object Format
+#### 2. Formato de objetos JSON
 
 Forces the model to respond with valid JSON:
 
@@ -115,7 +115,7 @@ $messages.push({ role: "user"; content: "Generate information about a person nam
 $result := $client.chat.completions.create($messages; $params)
 ```
 
-### JSON Schema Properties
+### Propiedades del esquema JSON
 
 Cuando se utiliza el tipo `json_schema`, puede especificar:
 

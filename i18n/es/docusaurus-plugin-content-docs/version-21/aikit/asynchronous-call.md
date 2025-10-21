@@ -11,7 +11,7 @@ To make asynchronous calls, you must provide a callback `4D.Function`(`Formula`)
 
 The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code. Ver ejemplos más abajo.
 
-## Process Considerations
+## Consideraciones sobre el proceso
 
 The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
 

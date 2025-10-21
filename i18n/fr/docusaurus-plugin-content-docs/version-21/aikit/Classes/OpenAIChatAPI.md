@@ -5,14 +5,14 @@ title: OpenAIChatAPI
 
 # OpenAIChatAPI
 
-La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la fonctionnalité de chat de l'OpenAI, en tirant parti des capacités de complétion et de vision.
+La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la fonctionnalité de discussion (*chat*) de l'OpenAI, en tirant parti des capacités de complétion et de vision.
 
 ## Propriétés
 
-| Propriété     | Type                                                    | Description                                                             |
-| ------------- | ------------------------------------------------------- | ----------------------------------------------------------------------- |
-| `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | An instance that handles chat completions requests.     |
-| `vision`      | [OpenAIVision](OpenAIVision.md)                         | A helper instance that handles vision-related requests. |
+| Propriété     | Type                                                    | Description                                                                        |
+| ------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | Une instance qui gère les requêtes de complétion de la discussion. |
+| `vision`      | [OpenAIVision](OpenAIVision.md)                         | A helper instance that handles vision-related requests.            |
 
 ## Function
 
@@ -20,10 +20,10 @@ La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la f
 
 **create**(*systemPrompt* : Text) : OpenAIChatHelper
 
-| Paramètres     | Type                                    | Description                                                       |
-| -------------- | --------------------------------------- | ----------------------------------------------------------------- |
-| *systemPrompt* | Text                                    | The system prompt to initialize the chat.         |
-| Résultat       | [OpenAIChatHelper](OpenAIChatHelper.md) | A helper instance for managing chat interactions. |
+| Paramètres     | Type                                    | Description                                                                            |
+| -------------- | --------------------------------------- | -------------------------------------------------------------------------------------- |
+| *systemPrompt* | Text                                    | L'invite du système pour initialiser la discussion.                    |
+| Résultat       | [OpenAIChatHelper](OpenAIChatHelper.md) | Une instance du helper pour gérer les interactions dans la discussion. |
 
 #### Exemple d'utilisation
 

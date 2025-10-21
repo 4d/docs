@@ -11,7 +11,7 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 | Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional                                                  |
 | ---------------------- | ---- | ---------------------------------------------------------------------------- | --------------------------------------------------------- |
-| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | Can be required by the provider                           |
+| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | Puede ser requerido por el proveedor                      |
 | `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Yes (if omitted = use OpenAI Platform) |
 | `organization`         | Text | Su ID de organización OpenAI.                                | Sí                                                        |
 | `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí                                                        |

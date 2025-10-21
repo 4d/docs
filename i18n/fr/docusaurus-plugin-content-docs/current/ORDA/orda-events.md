@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Entity Events
+title: Évènements d'entité
 ---
 
 <details><summary>Historique</summary>
@@ -12,7 +12,7 @@ title: Entity Events
 
 </details>
 
-Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
+Les événements d'entité sont des fonctions qui sont automatiquement invoquées par ORDA chaque fois que des entités et des attributs d'entité sont touchés (ajoutés, supprimés ou modifiés). Vous pouvez écrire des événements très simples, puis les rendre plus sophistiqués.
 
 Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événement. Les événements sont appelés automatiquement par ORDA en fonction des actions de l'utilisateur ou des opérations effectuées par le code sur les entités et leurs attributs.
 
@@ -24,7 +24,7 @@ Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événe
 
 :::info Note de compatibilité
 
-ORDA entity events in the datastore are equivalent to triggers in the 4D database. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
+Les événements d'entité ORDA dans le magasin de données sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
 
 :::
 
@@ -102,13 +102,13 @@ Lorsqu'une erreur survient dans un événement, les autres événements sont sto
 
 ### Propriétés de l'objet error
 
-| Propriété          | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Fixé par le développeur                                     |
-| ------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| errCode            | Integer | Identique à la commande [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Oui                                                         |
-| message            | Text    | Identique à la commande [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Oui                                                         |
-| extraDescription   | Object  | Informations libres à définir                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Oui                                                         |
-| seriousError       | Boolean | Utilisé uniquement avec les événements de validation (voir ci-dessous). <li>`True` : crée une [erreur critique (imprévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) et déclenche une exception. Adds the `dk status serious validation error` status</li><li>`False`: creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Ajoute le statut `dk status validation failed`.</li> | Oui (par défaut : False) |
-| componentSignature | Text    | Toujours "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Non                                                         |
+| Propriété          | Type    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Fixé par le développeur                                     |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| errCode            | Integer | Identique à la commande [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Oui                                                         |
+| message            | Text    | Identique à la commande [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Oui                                                         |
+| extraDescription   | Object  | Informations libres à définir                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Oui                                                         |
+| seriousError       | Boolean | Utilisé uniquement avec les événements de validation (voir ci-dessous). <li>`True` : crée une [erreur critique (imprévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) et déclenche une exception. Ajoute le statut `dk status serious validation error`</li><li>`False` : crée seulement une [erreur silencieuse (prévisible)](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Ajoute le statut `dk status validation failed`.</li> | Oui (par défaut : False) |
+| componentSignature | Text    | Toujours "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Non                                                         |
 
 - Les [erreurs critiques](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) sont empilées dans la collection de la propriété `errors` de l'objet **Result** renvoyé par les fonctions [`save()`](../API/EntityClass.md#save) ou [`drop()`](../API/EntityClass.md#drop).
 - Dans le cas d'une erreur déclenchée par un événement **validate**, la propriété `seriousError` permet de choisir le niveau d'erreur à générer :
@@ -142,16 +142,16 @@ Cet événement est déclenché dès que le moteur de 4D Server / 4D détecte un
 - en **client/serveur sans le mot-clé `local`**, une **[application Qodly](https://developer.qodly.com/docs)** ou **[datastore distant](../commands/open-datastore.md)** : l'entité est reçue sur le serveur 4D lors de l'appel d'une fonction ORDA (sur l'entité ou avec l'entité en tant que paramètre). Cela signifie que vous devrez peut-être mettre en place une fonction *refresh* ou *preview* sur l'application distante qui envoie une requête ORDA au serveur et déclenche l'événement.
 - avec le serveur REST : la valeur est reçue sur le serveur REST avec une [requête REST](../REST/$method.md#methodupdate) (`$method=update`)
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-If this function [throws](../commands/throw) an error, it will not stop the undergoing action.
+Si cette fonction [génère](../commands/throw) une erreur, elle n'arrêtera pas l'action en cours.
 
 :::note
 
-This event is also triggered:
+Cet événement est également déclenché :
 
-- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
-- when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
+- lorsque les attributs sont assignés par l'événement [`constructor()`](./ordaClasses.md#class-constructor-1),
+- lorsque les attributs sont modifiés via l'[Explorateur de données](../Admin/dataExplorer.md).
 
 :::
 
@@ -329,7 +329,7 @@ This event is triggered each time an entity is about to be saved.
 - if you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
 - if you defined the function at the attribute level (second syntax), it is called only for this attribute. This function is **not** executed if the attribute has not been touched in the entity.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
 This event is triggered by the following functions:
 
@@ -387,7 +387,7 @@ This event is triggered each time an entity is being saved.
 - If you defined the function at the entity level (first syntax), it is called for any attribute of the entity. The function is executed even if no attribute has been touched in the entity (e.g. in case of sending data to an external app each time a save is done).
 - If you defined the function at the attribute level (second syntax), it is called only for this attribute. The function is **not** executed if the attribute has not been touched in the entity.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
 This event is triggered by the following functions:
 
@@ -449,7 +449,7 @@ This event is triggered just after an entity is saved in the data file, when at 
 
 This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. For example, it can be used to send a confirmation email after data have been saved. Or, in case of error while saving data, it can make a rollback to restore a consistent state of data.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
 - To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
 - Throwing an [error object](#error-object) is **not supported** by this function.
@@ -494,7 +494,7 @@ This event is triggered each time an entity is about to be dropped.
 - If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
 - If you defined the function at the attribute level (second syntax), it is called only for this attribute.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
 This event is triggered by the following features:
 
@@ -561,7 +561,7 @@ This event is triggered each time an entity is being dropped.
 - If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
 - If you defined the function at the attribute level (second syntax), it is called only for this attribute.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
 This event is triggered by the following features:
 
@@ -642,7 +642,7 @@ This event is triggered just after an entity is dropped.
 
 This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. For example, it can be used to send a cancellation email after data have been dropped. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
 - To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
 - Throwing an [error object](#error-object) is **not supported** by this function.

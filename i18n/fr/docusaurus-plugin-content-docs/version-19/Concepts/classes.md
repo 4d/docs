@@ -282,7 +282,7 @@ Class constructor({$parameterName : type; ...})
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction de constructeur de classe. Il n'y a pas de mot-clé de fin pour le code d'une fonction.
 
 :::
 

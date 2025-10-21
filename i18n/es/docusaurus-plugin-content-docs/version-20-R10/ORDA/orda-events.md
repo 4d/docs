@@ -5,9 +5,9 @@ title: Entity Events
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones      |
-| ----------- | ------------------- |
-| 20 R10      | touched event added |
+| Lanzamiento | Modificaciones                  |
+| ----------- | ------------------------------- |
+| 20 R10      | se ha añadido un evento touched |
 
 </details>
 

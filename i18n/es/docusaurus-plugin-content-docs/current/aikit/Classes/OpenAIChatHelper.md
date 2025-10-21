@@ -74,14 +74,14 @@ $chatHelper.reset()  // Clear all previous messages and tools
 
 Registers a tool with its handler function for automatic tool call handling.
 
-The *handler* parameter can be:
+El parámetro *handler* puede ser:
 
 - A **4D.Function**: Direct handler function
 - Un **Objeto**: un objeto que contiene una propiedad `formula` que coincide con el nombre de la función de la herramienta
 
 The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
 
-#### Register Tool Example
+#### Ejemplo de herramienta de registro
 
 ```4D
 // Example 1: Simple registration with direct handler
@@ -111,7 +111,7 @@ $chatHelper.registerTool($tool; $handlerObj)
 | ------------------- | ------- | -------------------------------------------------------- |
 | *toolsWithHandlers* | Variant | Object or Collection containing tools and their handlers |
 
-Registers multiple tools at once. The parameter can be:
+Registers multiple tools at once. El parámetro puede ser:
 
 - **Collection**: Array of tool objects (with handlers embedded or separate)
 - **Object**: Object with function names as keys mapping to tool definitions

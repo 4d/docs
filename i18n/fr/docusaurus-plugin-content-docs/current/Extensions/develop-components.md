@@ -310,7 +310,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
-However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+Cependant, vous pouvez installer un [gestionnaire d'erreurs de composants dans l'application hôte](../Concepts/error-handling.md#scope-and-components) pour gérer les erreurs non capturées des composants.
 
 However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
 
@@ -346,7 +346,7 @@ SAVE RECORD($tablepointer-
 
 ## Utilisation de tables et de champs
 
-Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D du projet utilisé comme matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
+Un composant ne peut pas utiliser les tables et les champs définis dans la structure 4D du projet utilisé comme matrice. En revanche, il peut créer et utiliser des bases externes, et donc utiliser des tables et des champs en fonction de ses besoins. Les bases externes sont créées et gérées via le langage SQL. Une base de données externe est un projet 4D indépendant du projet 4D principal, mais avec lequel vous pouvez travailler à partir du projet 4D principal. Utiliser une base externe signifie désigner temporairement cette base comme base courante, c’est-à-dire comme base cible des requêtes SQL exécutées par 4D. Les bases externes sont créées à l'aide de la commande SQL `CREATE DATABASE`.
 
 #### Exemple
 
@@ -463,7 +463,7 @@ Ce fichier n'est pas obligatoire mais il est nécessaire pour construire des com
 
 Les clés prises en charge dans les fichiers `Info.plist` des composants sont principalement des [clés bundle d'Apple](https://developer.apple.com/documentation/bundleresources/information-property-list) qui sont ignorées sous Windows. Cependant, elles sont utilisés par le [Gestionnaire de dépendances](../Project/components.md#loading-components) sur toutes les plates-formes.
 
-The following keys can be defined:
+Les clés suivantes peuvent être définies :
 
 | key                                                        | Description                                                                                                                                                                                    |
 | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -48,7 +48,7 @@ var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
 
-### Respond to a tool call message
+### Responder a un mensaje de llamada de herramienta
 
 When an assistant needs to use external functions, it generates a message with `tool_calls` to request function execution.
 

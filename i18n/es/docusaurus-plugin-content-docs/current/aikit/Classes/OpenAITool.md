@@ -27,7 +27,7 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 | `name`        | Text | The name of the tool, which works as an identifier.            |
 | `descripción` | Text | Description of the tool to help the LLM decide when to use it. |
 
-### Function-specific Properties
+### Propiedades específicas de la función
 
 | Propiedad    | Tipo   | Descripción                                                                      |
 | ------------ | ------ | -------------------------------------------------------------------------------- |
@@ -48,7 +48,7 @@ Crea una nueva instancia de OpenAITool. The constructor accepts both simplified 
 
 #### Formatos soportados
 
-**Simplified format:**
+**Formato simplificado:**
 
 ```4d
 var $tool := cs.OpenAITool.new({ \
@@ -64,7 +64,7 @@ var $tool := cs.OpenAITool.new({ \
 })
 ```
 
-**OpenAI API format:**
+**Formato de la API OpenAI**
 
 ```4d
 var $tool := cs.OpenAITool.new({ \
