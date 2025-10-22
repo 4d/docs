@@ -338,10 +338,10 @@ vCompareResult1 (すべての差異が返されています):
 
 <details><summary>履歴</summary>
 
-| リリース | 内容                   |
-| ---- | -------------------- |
-| 21   | Added status 7 and 8 |
-| 17   | 追加                   |
+| リリース | 内容          |
+| ---- | ----------- |
+| 21   | ステータス7と8を追加 |
+| 17   | 追加          |
 
 </details>
 
@@ -368,7 +368,7 @@ vCompareResult1 (すべての差異が返されています):
 
 **戻り値**
 
-The object returned by `.drop()` contains the following properties:
+`.drop()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
 | プロパティ                             |                                     | 型                   | 説明                                                                                                          |
 | --------------------------------- | ----------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -393,15 +393,15 @@ The object returned by `.drop()` contains the following properties:
 
 (\*) エラー時には *Result* オブジェクトの *status* あるいは *statusText* プロパティに以下のいずれかの値が返されます:
 
-| 定数                                        | 値 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ----------------------------------------- | - | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br/><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 When using entity.drop(), this error can be returned when dk force drop if stamp changed option is used. entity.lock() を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li> **割り当てられた statusText**: "エンティティはもう存在しません" |
-| `dk status locked`                        | 3 | エンティティはペシミスティックロックによってロックされています。<br/> **割り当てられた statusText**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `dk status validation failed`             | 7 | Non fatal error sent by the developer for a [validate event](../ORDA/orda-events.md). **Associated statusText**: "Mild Validation Error"                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br/>**割り当てられた statusText**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `dk status serious validation error`      | 8 | Fatal error sent by the developer for a [validate event](../ORDA/orda-events.md). **Associated statusText**: "Serious Validation Error"                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br/><li>`entity.save()` の場合: `dk auto merge` オプションが使用されていない場合に限りエラー</li><li>`entity.drop()` の場合: `dk force drop if stamp changed` オプションが使用されていない場合に限りエラー</li><li>`entity.lock()` の場合: `dk reload if stamp changed` オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "Stamp has changed"</li>                                                                                                                                                         |
-| `dk status wrong permission`              | 1 | 現在の権限では、エンティティを削除することはできません。 現在の権限では、エンティティを保存することはできません。 **割り当てられた statusText**: "Permission Error" (権限エラー)                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| 定数                                        | 値 | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ----------------------------------------- | - | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5 | エンティティはもうデータ内に存在していません。 このエラーは以下のような場合に起きえます:<br/><li>エンティティがドロップされている (スタンプが変更されていて、メモリ空間は解放されている)</li><li>エンティティがドロップされていて、他のプライマリーキー値を持つエンティティで置き換えられている (スタンプは変更されていて、新しいエンティティがメモリ空間を使用している)。 entity.drop() を使用するとき、このエラーは dk force drop if stamp changed オプションを使用した場合に返されることがあります。 entity.lock() を使用するとき、このエラーは dk reload drop if stamp changed オプションを使用した場合に返されることがあります。</li> **割り当てられた statusText**: "エンティティはもう存在しません" |
+| `dk status locked`                        | 3 | エンティティはペシミスティックロックによってロックされています。<br/> **割り当てられた statusText**: "Already locked"                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `dk status validation failed`             | 7 | Non fatal error sent by the developer for a [validate event](../ORDA/orda-events.md). **Associated statusText**: "Mild Validation Error"                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `dk status serious error`                 | 4 | 深刻なエラーとは、低レベルのデータベースエラー (例: 重複キー)、ハードウェアエラーなどです。<br/>**割り当てられた statusText**: "Other error"                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `dk status serious validation error`      | 8 | Fatal error sent by the developer for a [validate event](../ORDA/orda-events.md). **Associated statusText**: "Serious Validation Error"                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `dk status stamp has changed`             | 2 | エンティティの内部的なスタンプ値がデータ内に保存されているエンティティのものと合致しません (オプティミスティック・ロック)。<br/><li>`entity.save()` の場合: `dk auto merge` オプションが使用されていない場合に限りエラー</li><li>`entity.drop()` の場合: `dk force drop if stamp changed` オプションが使用されていない場合に限りエラー</li><li>`entity.lock()` の場合: `dk reload if stamp changed` オプションが使用されていない場合に限りエラー</li><li>**割り当てられた statusText**: "Stamp has changed"</li>                                                                                                                      |
+| `dk status wrong permission`              | 1 | 現在の権限では、エンティティを削除することはできません。 現在の権限では、エンティティを保存することはできません。 **割り当てられた statusText**: "Permission Error" (権限エラー)                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 #### 例題 1
 
@@ -1214,10 +1214,10 @@ $info:=$address.getRemoteContextAttributes()
 
 <details><summary>履歴</summary>
 
-| リリース | 内容                   |
-| ---- | -------------------- |
-| 21   | Added status 7 and 8 |
-| 17   | 追加                   |
+| リリース | 内容          |
+| ---- | ----------- |
+| 21   | ステータス7と8を追加 |
+| 17   | 追加          |
 
 </details>
 

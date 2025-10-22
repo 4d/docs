@@ -462,7 +462,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 Cette fonction est appelée chaque fois qu'une entity selection ou une entité de la dataclass est demandée. Le filtre est exécuté une seule fois, lors de la création de l'entity selection.
 
-Le filtre doit retourner une entity selection de la dataclass. Il peut s'agir d'une entity selection basée sur une recherche, stockée dans le [`Storage`], etc.
+Le filtre doit retourner une entity selection de la dataclass. It can be an entity selection built upon a query, stored in the [`Storage`](../API/SessionClass.md#storage), etc.
 
 :::note
 

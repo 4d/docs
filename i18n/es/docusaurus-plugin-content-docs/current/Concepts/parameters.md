@@ -295,12 +295,6 @@ La sintaxis heredada para declarar parámetros variadicos (`C_TEXT(${4})`) está
 
 :::
 
-## Triggers y On Drag Over
-
-Algunos contextos no soportan la declaración en un método "Compiler_", por lo que se tratan de forma específica:
-
-- Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio trigger.
-
 ## Tipo de parámetro equivocado
 
 Llamar a un parámetro con un tipo incorrecto o una clase incorrecta (para parámetros de objeto) es un [error](error-handling.md) que impide la correcta ejecución. Por ejemplo, si escribe los siguientes métodos:

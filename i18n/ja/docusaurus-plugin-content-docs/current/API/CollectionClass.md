@@ -3220,15 +3220,15 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 > このコマンドは、元のコレクションを変更します。
 
 引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
-You can also pass one of the following constants in the *ascOrDesc* parameter:
+*ascOrDesc* 引数には、以下の定数のいずれか一つを渡すことができます:
 
 ```
-|Constant|	Type|Value|Comment|
+|定数|  型|値|詳細|
 |---|---|---|---|
-|ck ascending|Integer|0|Elements are ordered in ascending order (default)|
-|ck descending|Integer|1|Elements are ordered in descending order|
+|ck ascending|Integer|0|要素は昇順に並んでいます(デフォルト)|
+|ck descending|Integer|1|要素は降順に並んでいます|
 
-This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+このシンタックスはコレクション内のスカラー値のみを並び替えます(オブジェクトやコレクションなどの他の型の要素は並べ替えされません)。
 ```
 
 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:

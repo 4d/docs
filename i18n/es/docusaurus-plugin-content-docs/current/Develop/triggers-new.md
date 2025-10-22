@@ -3,16 +3,19 @@ id: triggers-new
 title: Triggers
 ---
 
+para importar
+
 <!-- REF triggers.vs-events.Desc -->
 
-## Triggers vs ORDA entity events
+## Triggers vs eventos entidad ORDA
 
-**Triggers** (aka database events) and [**ORDA entity events**](../ORDA/orda-events.md) have similar purposes: they establish rules to control fundamental operations on the data (create, edit, or delete). However, they do not operate at the same level:
-- triggers are handled at the database level, which is the lowest level,
-- ORDA entity events are handled at the [datastore](../ORDA/dsMapping.md#datastore) level, which is related to your business logic.
+Los **triggers** (también conocidos como eventos base de datos) y los [**eventos entidad ORDA**](../ORDA/orda-events.md) tienen propósitos similares: establecen reglas para controlar las operaciones fundamentales sobre los datos (crear, editar o eliminar). Sin embargo, no funcionan al mismo nivel:
 
-Actions on data executed through the datastore, such as [`.save()`](../API/EntityClass.md#save) or [`.drop`](../API/EntityClass.md#drop), will call the triggers, if any.
+- los triggers se gestionan a nivel de base de datos, que es el nivel más bajo,
+- Los eventos de entidad ORDA se gestionan en el nivel [datastore](../ORDA/dsMapping.md#datastore), que está relacionado con su lógica de negocio.
 
-On the other hand, actions triggered at the 4D database level using the 4D classic language commands, such as [`SAVE RECORD`](../commands/save-record) or [standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html#3371159) will NOT trigger ORDA entity events. 
+Las acciones sobre los datos ejecutadas a través del almacén de datos, como [`.save()`](../API/EntityClass.md#save) o [`.drop`](../API/EntityClass.md#drop), llamarán a los triggers, si los hubiera.
+
+Por otra parte, las acciones se activaron a nivel de base de datos 4D usando los comandos de lenguaje clásico 4D, tal como [`SAVE RECORD`](../commands/save-record) o [acciones estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html#3371159) NO activará eventos de entidades ORDA.
 
 <!-- END REF -->
