@@ -3,34 +3,34 @@ id: field-properties
 title: Propriétés des champs
 ---
 
-For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv20R10/4D/20-R10/Field-properties.300-7543749.en.html#5523008).
+For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Field-properties.300-7676763.en.html).
 
 ## Class
 
 ![](../assets/en/Develop/inspector-class.png)
 
-This property is available for fields of type **Object** (in 4D projects only). It allows you to define a **class-typed object field**, enhancing code completion, syntax checking, and runtime validation when typing code that involves object fields.
+Cette propriété est disponible pour les champs de type **Objet** (dans les projets 4D uniquement). Elle vous permet de définir un **champ de type classe d'objet**, ce qui améliore la complétion de code, la vérification syntaxique et la validation d'exécution lors de la saisie de code impliquant des champs objet.
 
-You can enter any valid class name in this property, including:
+Vous pouvez saisir n'importe quel nom de classe valide dans cette propriété, y compris :
 
-- User classes (e.g. `cs.MyClass`)
-- Built-in 4D classes (e.g. `4D.File`, `4D.Folder`)
-- [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
+- des classes utilisateurs (par exemple `cs.MyClass`)
+- des classes 4D intégrées (par exemple `4D.File`, `4D.Folder`)
+- des classes [exposées](../Extensions/develop-components.md#sharing-of-classes) définies par les composants (par exemple `cs.MyComponent.MyClass`)
 
-If you enter an invalid class name, a warning is triggered and the input is rejected.
+Si vous saisissez un nom de classe non valide, la saisie est rejetée.
 
 :::note
 
-**Non-streamable classes** such as [ORDA Data Model classes](../ORDA/ordaClasses.md), [file handles](../API/FileHandleClass.md), [web server](../API/WebServerClass.md)... cannot be associated to object fields.
+Les **classes non *streamables*** telles que les [classes du modèle de données ORDA](../ORDA/ordaClasses.md), la classe [FileHandle](../API/FileHandleClass.md), [WebServer](../API/WebServerClass.md)... ne peuvent pas être associées à des champs objets.
 
 :::
 
-In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. If not or if the object has no class, an error is triggered. Accessing unknown attributes will also raise syntax errors.
+Dans votre code, lors de l'affectation d'une valeur à un champ de type classe d'objet, 4D vérifie qu'elle appartient à la classe déclarée. Si ce n'est pas le cas ou si l'objet n'a pas de classe, une erreur est déclenchée. L'accès à des attributs inconnus entraîne également des erreurs de syntaxe.
 
-To retrieve the associated class name at runtime, use the [`classID`](../API/DataClassClass.md#attributename) property, for example `ds.MyTable.MyField.classID`.
+Pour récupérer le nom de la classe associée lors de l'exécution, utilisez la propriété [`classID`](../API/DataClassClass.md#attributename), par exemple `ds.MyTable.MyField.classID`.
 
 ### Voir également
 
-- [Blog post: Stricter class-based typing for objects](https://blog.4d.com/stricter-class-based-typing-for-objects/)
+- [Article de blog : Un typage plus strict des objets basé sur les classes](https://blog.4d.com/stricter-class-based-typing-for-objects/)
 
 

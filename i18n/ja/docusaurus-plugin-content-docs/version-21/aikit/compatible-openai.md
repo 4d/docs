@@ -7,7 +7,7 @@ title: プロバイダ
 
 多くのAI プロバイダがOpenAI に似たAPI を提供しているので、このプロジェクトを使用してそれらに接続することができます。
 
-To do so you just have to set the `baseURL` to the provider one and use their api key if needed.
+そのためには元の `baseURL` をプロバイダーのものに設定し、必要であればそのサービスのAPI キーを使用するだけです。
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
@@ -31,7 +31,7 @@ $client.baseURL:="https://api.mistral.ai/v1"
 
 ## ローカル
 
-| プロバイダ                                                   | Default baseURL                                                                                           | ドキュメント                                                                        |
+| プロバイダ                                                   | デフォルトの baseURL                                                                                            | ドキュメント                                                                        |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/ja/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ja/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |
