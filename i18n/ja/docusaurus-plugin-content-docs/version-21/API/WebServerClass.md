@@ -185,9 +185,9 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.handlers.Syntax -->**.handlers** : Collection<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
-A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler objects<!-- END REF -->. An HTTP handler object contains a listened URL pattern, a handled verb, and the code to be called. HTTP handlers can be defined through a HTTPHandlers.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Request handler](../WebServer/http-request-handler.md) page.
+<!-- REF #WebServerClass.handlers.Summary -->カスタムHTTP ハンドラオブジェクトのコレクション<!-- END REF -->。 HTTP ハンドラオブジェクトには聞いているURL パターン、管理される動詞(メソッド)、そして呼び出されるべきコードが格納されています。 HTTP ハンドラはHTTPHandlers.json ファイルまたは[`.start()`](#start) 関数の*settings* 引数で定義することができます。 詳細については[HTTP リクエストハンドラ](../WebServer/http-request-handler.md) のページを参照してください。
 
 <!-- END REF -->
 
@@ -340,7 +340,7 @@ A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーで旧式セッションが有効されている場合に true、それ以外は false<!-- END REF -->。
 
@@ -439,7 +439,7 @@ A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
 
@@ -451,7 +451,7 @@ A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
@@ -463,7 +463,7 @@ A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
 
@@ -493,9 +493,9 @@ A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler
 
 <!-- REF #WebServerClass.rules.Syntax -->**.rules** : Collection<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
-A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently handled to customize HTTP headers<!-- END REF -->. A rule object contains a "regexPattern" property, as well as an action name with a value. HTTP rules can be defined through a HTTPRules.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Rules](../WebServer/http-rules.md) page.
+<!-- REF #WebServerClass.rules.Summary -->HTTP ヘッダーをカスタマイズするために現在管理されているルールオブジェクトのコレクション<!-- END REF -->。 ルールオブジェクトには"regexPattern" プロパティに加え、アクション名と値が格納されています。 HTTP ルールはHTTPRules.json ファイルまたは[`.start()`](#start) 関数の*settings* 引数で定義することができます。 詳細については[HTTP ルール](../WebServer/http-rules.md) のページを参照してください。
 
 <!-- END REF -->
 
@@ -531,7 +531,7 @@ A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently
 
 <!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- END REF -->
 

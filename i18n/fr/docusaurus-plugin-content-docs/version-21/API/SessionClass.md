@@ -89,7 +89,7 @@ Cette fonction ne supprime pas les **privilèges promus** du process web, qu'ils
 
 :::
 
-En ce qui concerne les sessions de clients distants, la fonction n'a d'impact que sur [le code accédant au serveur web](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+Regarding remote client sessions, the function only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
 
 #### Exemple
 
@@ -388,7 +388,7 @@ Cette fonction renvoie True pour le *privilège* si elle est appelée depuis une
 
 :::
 
-En ce qui concerne les sessions de clients distants, la fonction n'a d'impact que sur [le code accédant au serveur web](../WebServer/preemptiveWeb.md#writing-thread-safe-web-server-code).
+Regarding remote client sessions, the function only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
 
 With stored procedure sessions and standalone sessions, this function always returns True, whatever the *privilege*.
 
