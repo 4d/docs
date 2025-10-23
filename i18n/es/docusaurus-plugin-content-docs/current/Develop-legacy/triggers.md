@@ -1,6 +1,8 @@
 ---
 id: triggers
 title: Triggers
+slug: /Develop/triggers
+displayed_sidebar: docs
 ---
 
 
