@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 If there is already a list with this name, its contents are replaced.
 
-**Note:** This command cannot be used in a structure loaded in **read only**, such as a .4dz project or a component.
+**Note:** This command cannot be used in a structure loaded in **read only**, such as a .4dz project (which includes [remote projects](../Desktop/clientServer.md)) or a component.
 
 ## See also 
 
