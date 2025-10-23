@@ -1,6 +1,8 @@
 ---
 id: triggers
 title: トリガ
+slug: /Develop/triggers
+displayed_sidebar: docs
 ---
 
 
