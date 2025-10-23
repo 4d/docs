@@ -185,6 +185,11 @@ Sur github, faire une PR de docs4d/docs/main sur 4d/docs/main
 ### Algolia (4D only)
 Aller dans l'interface Algolia et lancer un reindex de la doc
 
+## Mise à jour 4D NetKit
+1. Synchro avec prod (4D/4DNetKit)
+2. Pull request vers prod : Main pour version en ligne
+3. Pull request vers prod : version qui shippe pour doc embedded
+
 ## Mise à jour prod
 1. Créer une nouvelle branche en local nommée par exemple Tempo
 2. faire git fetch upstream (met à jour la preprod avec la prod)
