@@ -128,7 +128,11 @@ displayed_sidebar: docs
   // On Server Open Connection データベースメソッド
  #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
  
- If((?02:00:00?<=Current time)&(Current time
+ If((?02:00:00?<=Current time)&(Current time<?04:00:00?))
+    $result:=22000
+ Else
+    $result:=0
+ End if
 ```
 
 

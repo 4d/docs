@@ -27,7 +27,7 @@ The optional *itemRefs* parameter, if specified, must be a numeric array synchro
 
 * This command only lets you set first-level items of the list.
 * When you use this command with a choice list, it modifies the structure of the application (lists are saved in the structure file), so any modifications made locally are lost when the structure file is updated in production.
-* This command cannot be used with a choice list in a structure loaded in **read only**, such as a .4dz project or a component.
+* This command cannot be used with a choice list in a structure loaded in **read only**, such as a .4dz project (which includes [remote projects](../Desktop/clientServer.md)) or a component.
 
 You can use ARRAY TO LIST to build a list based on the elements of an array. However, to free yourself from these restrictions and make full use of the lists of values, we recommend using the commands of the *Hierarchical Lists* theme.
 
