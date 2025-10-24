@@ -29,9 +29,9 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 Crear una instancia de la clase cliente OpenAI.
 
-| Nombre del argumento      | Tipo           | Descripción                                             |
-| ------------------------- | -------------- | ------------------------------------------------------- |
-| `apiKey or configuration` | Texto u objeto | apiKey if Text or configuration Object. |
+| Nombre del argumento      | Tipo           | Descripción                                               |
+| ------------------------- | -------------- | --------------------------------------------------------- |
+| `apiKey or configuration` | Texto u objeto | apiKey si Text u objeto de configuración. |
 
 #### Llave API
 

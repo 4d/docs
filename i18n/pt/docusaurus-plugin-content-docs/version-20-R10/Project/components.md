@@ -5,7 +5,7 @@ title: Dependencies
 
 Um componente 4D é um conjunto de código 4D e/ou formulários que representam uma ou mais funcionalidades que pode adicionar e usar nos seus projetos. Por exemplo, o componente [4D SVG](https://github.com/4d/4D-SVG) adiciona comandos avançados e um mecanismo de renderização integrado que pode ser usado para exibir arquivos SVG.
 
-Você pode [desenvolver](../Extensions/develop-components.md) e [construir](../Desktop/building.md) seus próprios componentes 4D, ou baixar componentes públicos compartilhados pela comunidade 4D que [podem ser encontrados no GitHub](https://github.com/search?q=4d-component&type=Repositories).
+Você pode [desenvolver](../Extensions/develop-components.md) e [construir](../Desktop/building.md) seus próprios componentes 4D, ou baixar componentes públicos compartilhados pela comunidade 4D que [podem ser encontrados no GitHub](https://github.com/topics/4d-component).
 
 Ao desenvolver em 4D, os arquivos de componentes podem ser armazenados de forma transparente no seu computador ou em um repositório do Github.
 

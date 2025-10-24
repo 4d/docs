@@ -5,7 +5,7 @@ title: Dépendances
 
 [L'architecture des projets](../Project/architecture.md) 4D est modulaire. Vous pouvez ajouter des fonctionnalités supplémentaires dans vos projets 4D en installant des [**composants**](Concepts/components.md) et des [**plug-ins**](../Concepts/plug-ins.md). Les composants sont constitués de code 4D, tandis que les plug-ins peuvent être [construits à l'aide de n'importe quel langage](../Extensions/develop-plug-ins.md).
 
-Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D [sur GitHub](https://github.com/search?q=4d-component&type=Repositories).
+Vous pouvez [développer](../Extensions/develop-components.md) et [construire](../Desktop/building.md) vos propres composants 4D, ou télécharger des composants publics partagés par la communauté 4D [sur GitHub](https://github.com/topics/4d-component).
 
 Une fois installées dans votre environnement 4D, les extensions sont traitées comme des **dépendances** avec des propriétés spécifiques.
 
