@@ -157,7 +157,7 @@ banner: 'none',
 ### Mettre à jour le lien vers les versions Notes précédentes dans notes
 
 Lien main :
-`See [**Release Notes for 4D 20.x LTS**](../../20/Notes/updates)`. 
+`See [**Release Notes for 4D 20.x LTS**](../../20/Notes/updates)`. <br/>
 à transformer en 
 `See [**Release Notes for 4D 20.x LTS**](../20/Notes/updates)`. 
 
