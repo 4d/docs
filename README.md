@@ -187,8 +187,7 @@ Forcer une synchro globale de main sur Crowdin
 Tester : Faire npm run build
 
 ### Builder
-Sur github, faire une PR de docs4d/docs/main sur 4d/docs/main
-** a revoir : passer par une branche tempo **
+voir ["mise à jour prod"](#mise-a-jour-prod) ci dessous
 
 ### Algolia (4D only)
 Aller dans l'interface Algolia et lancer un reindex de la doc
