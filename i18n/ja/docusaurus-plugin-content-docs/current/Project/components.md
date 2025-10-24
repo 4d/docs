@@ -5,7 +5,7 @@ title: 依存関係
 
 4D [プロジェクトアーキテクチャー](../Project/architecture.md) はモジュール式です。 [**コンポーネント**](../Concepts/components.md) や [**プラグイン**](../Concepts/plug-ins.md) をインストールすることで、4Dプロジェクトに追加機能を持たせることができます。 コンポーネントは4D コードで書かれていますが、プラグインは[あらゆる言語を使用してビルドすることができます](../Extensions/develop-plug-ins.md)。
 
-独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/search?q=4d-component\\\\\\&type=Repositories) ダウンロードすることもできます。
+独自の 4Dコンポーネントを [開発](../Extensions/develop-components.md) し、[ビルド](../Desktop/building.md) することもできますし、4Dコミュニティによって共有されているパブリックコンポーネントを [GitHubで見つけて](https://github.com/topics/4d-component) ダウンロードすることもできます。
 
 4D 環境にインストールされると、拡張機能は特別なプロパティを持つ**依存関係** として扱われます。
 

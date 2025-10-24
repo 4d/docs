@@ -5,47 +5,47 @@ title: HTTP Request handler
 
 Por defecto, las peticiones HTTP recibidas por el servidor web 4D se gestionan a través de [funciones de procesamiento integradas](httpRequests.md) o del [servidor REST](../REST/REST_requests.md).
 
-In addition, 4D supports the implementation of **custom HTTP Request handlers**, allowing you to intercept specific incoming HTTP requests and process them using your own code.
+Además, 4D soporta la implementación de **gestores de peticiones HTTP personalizadas**, permitiéndole interceptar peticiones HTTP entrantes específicas y procesarlas utilizando su propio código.
 
 Cuando un manejador de peticiones HTTP personalizado intercepta una solicitud, se procesa directamente y no hay otras funcionalidades de procesamiento (por ejemplo, son llamados métodos base [On Web authentication](./authentication.md#on-web-authentication) o [On Web connection](./httpRequests.md#on-web-connection).
 
-Custom HTTP request handlers meet various needs, including:
+Los gestores de peticiones HTTP personalizados satisfacen diversas necesidades, entre ellas:
 
-- using a given URL as a resource provider or a file-uploading box (to download or upload various files),
-- redirecting on specific pages according to a context (user authenticated, privileges granted...),
+- la utilización de una URL dedicada como proveedor de recursos o como cuadro de carga de archivos (para descargar o cargar varios archivos),
+- la redirección en páginas específicas en función de un contexto (usuario autentificado, privilegios otorgados...),
 - gestionar una autenticación a través de oAuth 2.0.
 
 ## Requisitos
 
-Custom HTTP Request handlers are supported in the following context:
+Los manejadores de peticiones HTTP personalizadas están soportados en el siguiente contexto:
 
 - [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
 - a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
 
 :::warning
 
-For security reasons, external access to the datastore can be disallowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.
+Por razones de seguridad, el acceso externo al datastore puede ser desautorizado en 4D. Necesita configurar los [privilegios ORDA](../ORDA/privileges.md) para permitir peticiones HTTP.
 
 :::
 
-## Cómo definir los manejadores
+## Cómo definir los gestores
 
-You can declare HTTP Request handlers:
+Puede declarar gestores de peticiones HTTP:
 
-- in a configuration file named **HTTPHandlers.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder of the project. HTTP Request handlers are loaded and applied in the main Web server once it is started.
-- using a [`.handlers`](../API/WebServerClass.md#handlers) property set in the *settings* parameter of the [start()](../API/WebServerClass.md#start) function, for any web server object:
+- en un archivo de configuración llamado **HTTPHandlers.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources) del proyecto. Los gestores de peticiones HTTP se cargan y aplican en el servidor Web principal una vez se inicia.
+- utilizando una propiedad [`.handlers`](../API/WebServerClass.md#handlers) definida en el parámetro *settings* de la función [start()](../API/WebServerClass.md#start), para todo objeto servidor web:
 
 ```4d
-WEB Server.start($settings.handlers) //set rules at web server startup
+WEB Server.start($settings.handlers) //definir reglas al inicio del servidor web
 ```
 
-If both a **HTTPHandlers.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.handlers` are used, the `WEB Server` command has priority.
+Si se utiliza tanto un archivo **HTTPHandlers.json** como una llamada al comando [`WEB Server`](../commands/web-server.md) con un `$settings.handlers` válido, el comando `WEB Server` tiene prioridad.
 
-The json file (or the object in the *settings* parameter) contains all listened URL patterns, the handled verbs, and the code to be called.
+El archivo json (o el objeto en el parámetro *settings*) contiene todos los modelos URL escuchados, los verbos manejados y el código a llamar.
 
-Handlers are provided as a collection.
+Los *handlers* se proporcionan como una colección.
 
-At runtime, the first pattern matching the URL is executed, the others are ignored.
+Al momento de la ejecución, se ejecuta el primer patrón que coincida con la URL, los demás se ignoran.
 
 Este es un ejemplo del contenido de un archivo *HTTPHandlers.json*:
 
@@ -61,11 +61,11 @@ Este es un ejemplo del contenido de un archivo *HTTPHandlers.json*:
 ]
 ```
 
-This handler declaration can be read as: when any request starting by `/start/` with a `GET` or `POST` verb is received by the server, the `gettingStarted` function of the `GeneralHandling` singleton is executed.
+Esta declaración de handler puede leerse como: cuando cualquier petición que comience por `/start/` con un verbo `GET` o `POST` es recibida por el servidor, se ejecuta la función `gettingStarted` del singleton `GeneralHandling`.
 
 :::note
 
-You must restart the Web server so that modifications made in this file are taken into account.
+Debe reiniciar el servidor Web para que se tengan en cuenta las modificaciones realizadas en este archivo.
 
 :::
 
@@ -74,31 +74,31 @@ You must restart the Web server so that modifications made in this file are take
 Un manejador está definido por:
 
 - un patrón de URL a interceptar
-- a function and its class where the code is implemented to handle the listened URL pattern
-- the verbs with which the URL can be called to trigger the handler
+- una función y su clase donde se implementa el código para manejar el patrón URL escuchado
+- los verbos con los que se puede llamar a la URL para activar el gestor
 
-The handler identifier is the couple [pattern + a verb among the verbs list].
+El identificador del gestor es la pareja [patrón + un verbo de la lista de verbos].
 
 ### Patrones de la URL
 
-URL patterns can be given as **prefixes** or using **regular expressions**.
+Los patrones de URL pueden indicarse como **prefijos** o utilizando **expresiones regulares**.
 
-- To declare a prefix pattern, use the "pattern" property name in the HTTPHandlers.json file. Los prefijos son considerados como expresiones regulares que ya contienen un `/` inicial y final.  
+- Para declarar un patrón de prefijo, utilice el nombre de propiedad "pattern" en el archivo HTTPHandlers.json. Los prefijos son considerados como expresiones regulares que ya contienen un `/` inicial y final.  
   Ej: `"pattern": "docs"` o `"pattern": "docs/invoices"`
 
-- To declare a regular expression pattern, use the "regexPattern" property name in the HTTPHandlers.json file. Los modelos de expresiones regulares se manejan directamente.
+- Para declarar un patrón de expresión regular, utilice el nombre de propiedad "regexPattern" en el archivo HTTPHandlers.json. Los modelos de expresiones regulares se manejan directamente.
   Ej: `"regexPattern" : "/docs/.+/index\.html"`
 
-"Pattern" and "regexPattern" properties cannot be used in the same handler definition (in this case, only the "regexPattern" property is taken into account).
+Las propiedades "Pattern" y "regexPattern" no pueden utilizarse en la misma definición de gestor (en este caso, sólo se tiene en cuenta la propiedad "regexPattern").
 
-#### Concordancia de modelos
+#### Correspondencia de modelos
 
 Los modelos de URL se activan en el orden indicado:
 
 - se ejecuta el primer modelo coincidente
 - los siguientes patrones no se ejecutan aunque coincidan con la URL
 
-As a consequence, you need to apply a accurate strategy when writing your handlers: the most detailed patterns must be written before the more general patterns.
+En consecuencia, debe aplicar una estrategia precisa al escribir sus gestores: los patrones más detallados deben escribirse antes que los patrones más generales.
 
 ```json
 [
@@ -126,7 +126,7 @@ As a consequence, you need to apply a accurate strategy when writing your handle
 
 #### Patrones prohibidos
 
-URL patterns matching 4D built-in HTTP processing features are not allowed in custom HTTP handlers. Por ejemplo, los siguientes modelos no pueden ser manejados:
+Los patrones URL que coincidan con las funciones de procesamiento HTTP integradas en 4D no están permitidos en los gestores HTTP personalizados. Por ejemplo, los siguientes modelos no pueden ser manejados:
 
 - `/4DACTION`
 - `/rest`
@@ -135,7 +135,7 @@ URL patterns matching 4D built-in HTTP processing features are not allowed in cu
 
 ### Clase y método
 
-You declare the code to be executed when a defined URL pattern is intercepted using the "class" and "method" properties.
+Declare el código a ejecutar cuando se intercepte un patrón de URL definido utilizando las propiedades "class" y "method".
 
 - "class": nombre de la clase sin `cs.`, por ejemplo, "UsersHandling" para la clase usuario `cs.UsersHandling`. Debe ser una clase [**compartida**](../Concepts/classes.md#shared-singleton) y [**singleton**](../Concepts/classes.md#singleton-classes).
 - "method": función de clase perteneciente a la clase.
@@ -144,19 +144,19 @@ You declare the code to be executed when a defined URL pattern is intercepted us
 
 ### Verbs
 
-You can use the "verbs" property in the handler definition to declare HTTP verbs that are supported in incoming requests for this handler. A request that uses a verb that is not explicitely allowed is automatically rejected by the server.
+Puede utilizar la propiedad "verbs" en la definición del manejador para declarar los verbos HTTP que se admiten en las peticiones entrantes para este manejador. Una solicitud que utiliza un verbo no permitido explícitamente es rechazada automáticamente por el servidor.
 
-You can declare several verbs, separated by a comma. Los nombres de verbos no distinguen entre mayúsculas y minúsculas.
+Puede declarar varios verbos, separados por una coma. Los nombres de verbos no distinguen entre mayúsculas y minúsculas.
 
 Ej: `"verbs" : "PUT, POST"`
 
 :::note
 
-No control is done on verb names. Se pueden utilizar todos los nombres.
+No se hace ningún control sobre los nombres de los verbos. Se pueden utilizar todos los nombres.
 
 :::
 
-By default, if the "verbs" property is not used for a handler, **all** HTTP verbs are supported in incoming requests for this handler (except those possibly used beforehand in a more detailed pattern, as shown in the example above).
+Por defecto, si la propiedad "verbs" no se utiliza para un manejador, **todos** los verbos HTTP son soportados en las peticiones entrantes para este manejador (excepto aquellos posiblemente utilizados de antemano en un patrón más detallado, como se muestra en el ejemplo anterior).
 
 :::note
 
@@ -225,7 +225,7 @@ En este ejemplo, debe implementar las siguientes funciones:
 - *handleDocs* en la clase *DocsHandling*
 - *handleTheInvoice* / *handleDetails* / *handleInvoices* en la clase *InvoicesHandling*
 
-Examples of URLs triggering the handlers:
+Ejemplos de URL que activan los gestores personalizados:
 
 `IP:port/info/` con un verbo GET
 `IP:port/info/general` con un verbo GET
@@ -246,11 +246,11 @@ Examples of URLs triggering the handlers:
 
 ### Configuración de funciones
 
-The HTTP Request handler code must be implemented in a function of a [**Shared**](../Concepts/classes.md#shared-singleton) [**singleton class**](../Concepts/classes.md#singleton-classes).
+El código del gestor de peticiones HTTP debe implementarse en una función de una clase [**Compartida**](../Concepts/classes.md#shared-singleton) [**clase singleton**](../Concepts/classes.md#singleton-classes).
 
-If the singleton is missing or not shared, an error "Cannot find singleton" is returned by the server. If the class or the function [defined as handler](#handler-definition) in the HTTPHandlers.json file is not found, an error "Cannot find singleton function" is returned by the server.
+Si el singleton no se encuentra o no está compartido, el servidor devuelve un error "No se puede encontrar singleton". Si la clase o la función [definida como manejador](#handler-definition) en el archivo HTTPHandlers.json no se encuentra, el servidor devuelve un error "No se puede encontrar la función singleton".
 
-Request handler functions are not necessarily shared, unless some request handler properties are updated by the functions. En este caso, necesita declarar sus funciones con la [palabra clave 'shared'](../Concepts/classes.md#shared-functions).
+Las funciones del gestor de peticiones no son necesariamente compartidas, a menos que algunas propiedades del gestor de peticiones sean actualizadas por las funciones. En este caso, necesita declarar sus funciones con la [palabra clave 'shared'](../Concepts/classes.md#shared-functions).
 
 :::note
 
@@ -262,13 +262,13 @@ Request handler functions are not necessarily shared, unless some request handle
 
 Cuando una solicitud ha sido interceptada por el manejador, se recibe en el servidor como una instancia de la [clase 4D.IncomingMessage](../API/IncomingMessageClass.md).
 
-All necessary information about the request are available in this object, including the request url, verb, headers, and, if any, parameters (put in the URL) and body.
+Toda la información necesaria sobre la petición está disponible en este objeto, incluyendo la url de la petición, el verbo, los encabezados y, si los hay, los parámetros (puestos en la URL) y el cuerpo de la petición.
 
-Then, the request handler can use this information to trigger appropriate business logic.
+A continuación, el gestor de solicitudes puede utilizar esta información para activar la lógica de negocio adecuada.
 
-### Output: an instance of the 4D.OutgoingMessage class
+### Salida: una instancia de la clase 4D.OutgoingMessage
 
-The request handler can return an object instance of the [4D.OutGoingMessage class](../API/OutgoingMessageClass.md), i.e. some full web content ready for a browser to handle, such as a file content.
+El gestor de peticiones puede devolver una instancia de objeto de la clase [4D.OutGoingMessage](../API/OutgoingMessageClass.md), es decir, algún contenido web completo listo para que un navegador lo maneje, como un contenido de archivo.
 
 ### Ejemplo
 
@@ -291,7 +291,7 @@ El archivo **HTTPHandlers.json**:
 
 La URL llamada es: http://127.0.0.1:8044/putFile?fileName=testFile
 
-The binary content of the file is put in the body of the request and a POST verb is used. El nombre del archivo se da como parámetro (*fileName*) en la URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
+El contenido binario del archivo se coloca en el cuerpo de la petición y se utiliza un verbo POST. El nombre del archivo se da como parámetro (*fileName*) en la URL. Se recibe en el objeto [`urlQuery`](../API/IncomingMessageClass.md#urlquery) en la petición.
 
 ```4d
     //UploadFile class
@@ -336,4 +336,4 @@ Function uploadFile($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 ## Ver también
 
-[Perfect mastery of your back end business logic thanks to HTTP requests handlers](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (blog post)
+[Maestría de las peticiones HTTP con los gestores de peticiones 4D](https://blog.4d.com/master-http-requests-with-4d-request-handlers/) (entrada del blog)

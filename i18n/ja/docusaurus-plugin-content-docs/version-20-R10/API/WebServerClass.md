@@ -318,7 +318,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.isRunning.Syntax -->**.isRunning** : Boolean<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.isRunning.Summary -->Webサーバーで旧式セッションが有効されている場合に true、それ以外は false<!-- END REF -->。
 
@@ -417,7 +417,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.name.Summary -->Webサーバーアプリケーションの名称<!-- END REF -->。
 
@@ -429,7 +429,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.openSSLVersion.Summary -->使用されている OpenSSLライブラリのバージョン<!-- END REF -->。
 
@@ -441,7 +441,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->サーバーの PFS利用可否状況<!-- END REF -->。
 
@@ -489,7 +489,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->HTTPリクエストログファ
 
 <!-- REF #WebServerClass.sessionCookieName.Summary -->セッションID の保存に使用されるセッションcookie の名称<!-- END REF -->。
 
-*内容*
+*読み取り専用プロパティ*
 
 <!-- END REF -->
 

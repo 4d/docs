@@ -3,7 +3,7 @@ id: http-rules
 title: Reglas HTTP
 ---
 
-You can define HTTP rules to control HTTP response headers for any requests received by the 4D web server, including REST requests. You can add, modify, or remove HTTP headers, send redirections or set the HTTP status. This feature is useful to implement security policies based upon the handling of headers.
+Puede definir reglas HTTP para controlar los encabezados de respuesta HTTP para toda petición recibida por el servidor web 4D, incluyendo las peticiones REST. Puede añadir, modificar o eliminar los encabezados HTTP, enviar redirecciones o establecer el estado HTTP. This feature is useful to implement security policies based upon the handling of headers.
 
 To define HTTP rules, you just need to write some RegEx to declare the URL patterns you want to control, as well as how to modify response headers. You can set these rules using a `HTTPRules.json` file stored in the project folder, or using the *settings* parameter [`start()`](../API/WebServerClass.md#start) function of the web server object.
 
@@ -82,7 +82,7 @@ Puede conocer las reglas actuales utilizando la propiedad [`.rules` del objeto W
 
 ```
 var $rules : Collection
-$rules:=WEB Server.rules //current rules
+$rules:=WEB Server.rules //reglas actuales
 ```
 
 ## Ejemplos

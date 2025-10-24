@@ -9,50 +9,50 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 
 #### Lo más destacado
 
-- Support of  AI Vector Searches in the [`query()`](../API/DataClassClass.md#query-by-vector-similarity) function and in the [`$filter`](../REST/$filter.md#vector-similarity) REST API.
-- Support of TLS encryption for the [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew) class.
+- Soporte de búsquedas vectoriales de IA en la función [`query()`](../API/DataClassClass.md#query-by-vector-similarity) y en la API REST [`$filter`](../REST/$filter.md#vector-similarity).
+- Soporte de encriptación TLS para la clase [4D.TCPConnection](../API/TCPConnectionClass.md#4dtcpconnectionnew).
 - Servidor Web:
-  - new [HTTP rules](../WebServer/http-rules.md) to customize HTTP response headers,
-  - ability to set [HTTP request handlers](../WebServer/http-request-handler.md) using a `handlers` property in the *settings* parameter of the Web server [`start()`](../API/WebServerClass.md#start) function,
-  - the Web server object contains new [`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) properties.
-- New [ORDA events on data](../ORDA/orda-events.md): validateSave, saving, afterSave, validateDrop, dropping, afterDrop.
-- New option allowing to use certificates from Windows Certificate Store instead of a local certificates folder in [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) and [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) classes.
+  - nuevas [reglas HTTP](../WebServer/http-rules.md) para personalizar los encabezados de respuesta HTTP,
+  - posibilidad para definir los [gestores de peticiones HTTP](../WebServer/http-request-handler.md) utilizando una propiedad `handlers` en el parámetro *settings* de la función [`start()`](../API/WebServerClass.md#start) del servidor Web,
+  - el objeto servidor Web contiene nuevas propiedades [`rules`](../API/WebServerClass.md#rules) y [`handlers`](../API/WebServerClass.md#handlers).
+- Nuevos [eventos ORDA sobre los datos](../ORDA/orda-events.md): validateSave, saving, afterSave, validateDrop, dropping, afterDrop.
+- Nueva opción que permite utilizar certificados de Windows Certificate Store en lugar de una carpeta local de certificados en las clases [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) y [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Cliente/servidor:
-  - You can display Qodly pages in Web areas and [share the remote client session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
-  - The [QUIC network layer](../settings/client-server.md#network-layer) has been enhanced to handle network interface changes transparently, for example when you travel with your laptop. See [this blog post](https://blog.4d.com/work-and-move-with-quic-and-network-switching).
-- You can now [create components directly from the host project](../Extensions/develop-components.md#creating-components) and [edit their code from a dedicated tab](../Extensions/develop-components.md#editing-all-component-code) in the 4D Explorer without leaving or restarting the project.
-- The 4D product activation step has been simplified and automated during [sign-in](../GettingStarted/Installation.md#sign-in).
-- 4D AIKit component: new features to [invoke a specific tool automatically](../aikit/Classes/OpenAIChatHelper.md#registertool) and [specify a response format](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format).
+  - Puede mostrar las páginas Qodly en las áreas Web y [compartir la sesión del cliente remoto](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
+  - La [capa red QUIC](../settings/client-server.md#network-layer) se ha mejorado para gestionar los cambios de interfaz de red de forma transparente, por ejemplo, cuando viajas co su ordenador portátil. Ver [esta entrada del blog](https://blog.4d.com/work-and-move-with-quic-and-network-switching).
+- Ahora puede [crear componentes directamente desde el proyecto local](../Extensions/develop-components.md#creating-components) y [editar su código desde una pestaña dedicada](../Extensions/develop-components.md#editing-all-component-code) en el Explorador 4D sin salir o reiniciar el proyecto.
+- La etapa de activación del producto 4D se ha simplificado y automatizado durante la [conexión](../GettingStarted/Installation.md#sign-in).
+- Componente 4D AIKit: nuevas funcionalidades para [invocar automáticamente una herramienta específica](../aikit/Classes/OpenAIChatHelper.md#registertool) y [especificar un formato de respuesta](../aikit/Classes/OpenAIChatCompletionsParameters.md#response-format).
 - Lenguaje 4D:
-  - New "trim" commands to remove leading and trailing spaces from a string: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md), and [`Trim end`](../commands/trim-end.md).
+  - Nuevos comandos "trim" para eliminar los espacios iniciales y finales de una cadena: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md) y [`Trim end`](../commands/trim-end.md).
   - Los comandos [`Num`](../commands/num.md) y [`String`](../commands/string.md) han sido actualizados para soportar conversiones en diferentes bases (radix).
-- [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21): list of all bugs that have been fixed in 4D 21.
+- [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21): lista de todos los bugs que se han corregido en 4D 21.
 
 #### Vista previa para desarrolladores
 
-[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
+El [renderizado **Fluent UI** para los formularios 4D](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) está disponible en Developer Preview durante el programa de pruebas beta.
 
 #### Cambios de comportamiento
 
-:::caution Index rebuild
+:::caution Reconstrucción del índice
 
-4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
+4D 21 incluye una actualización de la librería ICU ([ver abajo](#library-table)) que forzará una reconstrucción automática de los índices de tipo alfa, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
 :::
 
-- Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure your SOAP code is thread-safe.
-- Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. Ya no se realiza ningún tratamiento específico en estas URL.
+- Servicios web (SOAP): cuando las [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) están activadas, los servicios web se ejecutan ahora en [**procesos apropiativos**](../Develop/preemptive.md) en modo compilado. Asegúrese de que su código SOAP es hilo seguro.
+- Servidor web: se elimina la compatibilidad con las URL obsoletas `4DSYNC/` y `4DCGI/`. Ya no se realiza ningún tratamiento específico en estas URL.
 - Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
-- The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
-- **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview.md#components-developed-by-4d)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
+- El comando [`HIGHLIGHT TEXT`](../commands/highlight-text) es ahora compatible en el contexto de los subformularios.
+- **Componentes ya no integrados**: a partir de 4D 21, los componentes desarrollados por 4D (4D NetKit, 4D SVG..., ver [esta lista](../Extensions/overview.md#components-developed-by-4d)) ya no están integrados en la aplicación 4D. Cuando se actualiza un proyecto a 4D 21 o superior, se muestra un cuadro de diálogo:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
-  \- **Import**: import automatically 4D components as dependencies to the project<br/>
-  \- **Ignore**: do not import components and let you [manage components manually](../Project/components.md)<br/>
-  \- **Ask later**: do not import components and display the dialog at the next project opening.
+  \- **Importar**: importar automáticamente componentes 4D como dependencias del proyecto<br/>
+  \- **Ignorar**: no importar componentes y dejar que [gestione los componentes manualmente](../Project/components.md)<br/>
+  \- **Preguntar más tarde**: no importar componentes y mostrar el cuadro de diálogo en la próxima apertura del proyecto.
 
 :::note
 
-In binary databases, you need to select the required components in the 4D installer or download them from the [4D Product Download portal](https://product-download.4d.com/?type=components).
+En las bases de datos binarias, debe seleccionar los componentes necesarios en el programa de instalación de 4D o descargarlos del [portal de descarga de productos 4D](https://product-download.4d.com/?type=components).
 
 :::
 
@@ -67,12 +67,12 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - Nueva clase [`4D.Vector`](../API/VectorClass.md) para procesar y comparar vectores, normalmente calculados por IAs.
 - Nuevas opciones para generar UUIDs en **versión 7** para el comando [4D automatic fields](../settings/database.md#auto-uuid-version) y [`Generate UUID`](../commands/generate-uuid).
 - Nuevas clases [`UDPSocket`](../API/UDPSocketClass.md) y [`UDPEvent`](../API/UDPEventClass.md) para enviar datos utilizando sockets UDP. Soporte de registro detallado para eventos UDP en el archivo de registro [`4DTCPUDPLog.txt`](../Debugging/debugLogFiles.md#4dtcpudplogtxt) (renombrado de `4DTCPLog.txt`).
-- New [`.promote()`](../API/SessionClass.md#promote) and [`.demote()`](../API/SessionClass.md#demote) functions in the [Session class](../API/SessionClass.md) to dynamically add/remove privileges in a web process.
-- [Automatic selection of licenses to embed](../Desktop/building.md#application-automatically-embedding-available-licenses) in the Build application dialog box, modified [`Create deployment license`](../commands/create-deployment-license.md) command, new [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html) BuildApplication xml key.
+- Nuevas funciones [`.promote()`](../API/SessionClass.md#promote) y [`.demote()`](../API/SessionClass.md#demote) en la [clase Session](../API/SessionClass.md) para añadir/eliminar privilegios dinámicamente en un proceso web.
+- [Selección automática de licencias a integrar](../Desktop/building.md#application-automatically-embedding-available-licenses) en el cuadro de diálogo del Generador de aplicaciones, modificación del comando [`Create deployment license`](../commands/create-deployment-license.md), nueva llave xml BuildApplication [`AutomaticLicenseIntegration`](https://doc.4d.com/4Dv20R10/4D/20-R10/AutomaticLicenseIntegration.300-7611090.en.html).
 - Seguridad mejorada para copiar/pegar fórmulas en [4D Write Pro](../WritePro/managing-formulas.md) y [áreas de texto con estilo](../FormObjects/input_overview.md): las fórmulas copiadas desde fuera de la aplicación 4D actual se pegan ahora siempre sólo como valores.
-- 4D AIKit component: new [OpenAIEmbeddingsAPI class](../aikit/Classes/OpenAIEmbeddingsAPI.md) to create embeddings using OpenAI's API.
-- You can now [associate a class](../Develop/field-properties.md) to an object field in the structure editor.
-- Automatic handling of [recursive dependencies](../Project/components.md#automatic-dependency-resolution).
+- Componente 4D AIKit: nueva [clase OpenAIEmbeddingsAPI](../aikit/Classes/OpenAIEmbeddingsAPI.md) para crear embeddings utilizando la API OpenAI.
+- Ahora puede [asociar una clase](../Develop/field-properties.md) a un campo objeto en el editor de estructura.
+- Gestión automática de [dependencias recursivas](../Project/components.md#automatic-dependency-resolution).
 - Lenguaje 4D:
   - Por coherencia, los comandos [`Create entity selection`](../commands/create-entity-selection.md) y [`USE ENTITY SELECTION`](../commands/use-entity-selection.md) han sido movidos del tema ["4D Environment"](../commands/theme/4D_Environment.md) al ["Selection"](../commands/theme/Selection.md).
   - Nuevos comandos [`OBJECT SET DATA SOURCE FORMULA`](../commands/object-set-data-source-formula.md) y [`OBJECT Get data source formula`](../commands/object-get-data-source-formula.md) para asignar y leer los objetos `Formula` como fuentes de datos para los objetos de formulario.
@@ -85,7 +85,7 @@ Lea las [**Novedades en 4D 20 R10**](https://blog.4d.com/en-whats-new-in-4d-20-R
 - Se ha eliminado la biblioteca *MeCab*. Este cambio sólo afecta al tratamiento del texto en japonés.
 - Cuando una variable o parámetro objeto se declara con un tipo ["cs" class](../Concepts/classes.md#cs), asignarlo con una instancia de objeto de una clase diferente genera ahora un error de sintaxis.
 - [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) devuelve True para privilegios promovidos en el proceso web.
-- The [`Time`](../commands/time) command now returns a negative time expression when the *timeValue* parameter is negative. Por ejemplo, `Time("-01:02:03")` devolverá **-01:02:03**. In previous releases, the negative sign was ignored.
+- El comando [`Time`](../commands/time) devuelve ahora una expresión de tiempo negativa cuando el parámetro *timeValue* es negativo. Por ejemplo, `Time("-01:02:03")` devolverá **-01:02:03**. En versiones anteriores, se ignoraba el signo negativo.
 
 ## 4D 20 R9
 
@@ -157,7 +157,7 @@ Lea [**Novedades en 4D 20 R7**](https://blog.4d.com/en-whats-new-in-4d-20-R7/), 
 - Lenguaje 4D:
   - Nuevos comandos: [Process info](../commands/process-info.md), [Session info](../commands/session-info.md), [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
   - Comandos modificados: [Process activity](../commands/process-activity.md), [Process number](../commands/process-number.md)
-  - Deprecated commands (replacement): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md)), `GET SERIAL INFORMATION` ([License info](../commands/license-info.md)), `PROCESS PROPERTIES` ([Process info](../commands/process-info.md)), `SET SCREEN DEPTH`, `C_XXX` commands ([var](../Concepts/variables.md#declaring-variables) and [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters) declarations). Los comandos obsoletos llevan el prefijo "\*o\*".
+  - Comandos obsoletos (reemplazo): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md)), `GET SERIAL INFORMATION` ([License info](../commands/license-info.md)), `PROCESS PROPERTIES` ([Process info](../commands/process-info.md)), `SET SCREEN DEPTH`, `C_XXX` commands ([var](../Concepts/variables.md#declaring-variables) y [#DECLARE/declaraciones Function](../Concepts/parameters.md#declaring-parameters)). Los comandos obsoletos llevan el prefijo "\*o\*".
 - 4D Write Pro:
   - Nuevo comando: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - Comandos modificados: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) y [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)
@@ -292,23 +292,23 @@ Ver [**Notas de lanzamiento para LTS 4D 20.x**](../../versioned_docs/version-20/
 
 ## Tabla de la librería
 
-| Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                         |
-| --------- | -------------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| BoringSSL | fa47b1d                                | **21**            | Utilizado para QUIC                                                                                                                                |
-| CEF       | 7258                                   | **21**            | Chromium 139                                                                                                                                       |
-| Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                          |
-| ICU       | 77.1                   | **21**            | This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.                                                 |
-| libldap   | 2.6.10 | **21**            |                                                                                                                                                    |
-| libsasl   | 2.1.28 | 20                |                                                                                                                                                    |
-| Liblsquic | 4.2.0  | 20 R10            | Utilizado para QUIC                                                                                                                                |
-| Libuv     | 1.51.0 | **21**            | Utilizado para QUIC                                                                                                                                |
-| libZip    | 1.11.4 | **21**            | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                             |
-| LZMA      | 5.8.1  | **21**            |                                                                                                                                                    |
-| ngtcp2    | 1.16.0 | **21**            | Utilizado para QUIC                                                                                                                                |
-| OpenSSL   | 3.5.2  | **21**            |                                                                                                                                                    |
-| PDFWriter | 4.7.0  | **21**            | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| PHP       | 8.2.4  | 20                |                                                                                                                                                    |
-| SpreadJS  | 17.1.0 | 20 R7             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para obtener una visión general de las nuevas funciones    |
-| webKit    | WKWebView                              | 19                |                                                                                                                                                    |
-| Xerces    | 3.3.0  | **21**            | Utilizado para comandos XML                                                                                                                        |
-| Zlib      | 1.3.1  | **21**            |                                                                                                                                                    |
+| Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                             |
+| --------- | -------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BoringSSL | fa47b1d                                | **21**            | Utilizado para QUIC                                                                                                                                    |
+| CEF       | 7258                                   | **21**            | Chromium 139                                                                                                                                           |
+| Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                              |
+| ICU       | 77.1                   | **21**            | Esta actualización fuerza una reconstrucción automática de los índices alfanuméricos, textos y objetos.                                |
+| libldap   | 2.6.10 | **21**            |                                                                                                                                                        |
+| libsasl   | 2.1.28 | 20                |                                                                                                                                                        |
+| Liblsquic | 4.2.0  | 20 R10            | Utilizado para QUIC                                                                                                                                    |
+| Libuv     | 1.51.0 | **21**            | Utilizado para QUIC                                                                                                                                    |
+| libZip    | 1.11.4 | **21**            | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                 |
+| LZMA      | 5.8.1  | **21**            |                                                                                                                                                        |
+| ngtcp2    | 1.16.0 | **21**            | Utilizado para QUIC                                                                                                                                    |
+| OpenSSL   | 3.5.2  | **21**            |                                                                                                                                                        |
+| PDFWriter | 4.7.0  | **21**            | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
+| PHP       | 8.2.4  | 20                |                                                                                                                                                        |
+| SpreadJS  | 17.1.0 | 20 R7             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para obtener una visión general de las nuevas funciones        |
+| webKit    | WKWebView                              | 19                |                                                                                                                                                        |
+| Xerces    | 3.3.0  | **21**            | Utilizado para comandos XML                                                                                                                            |
+| Zlib      | 1.3.1  | **21**            |                                                                                                                                                        |
