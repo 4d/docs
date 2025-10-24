@@ -18,7 +18,7 @@ No se puede activar directamente la ejecución de la función de evento. Events 
 
 :::tip Entrada de blog relacionada
 
-[ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-data-persistence-actions)
+[ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-database-operations)
 
 :::
 
@@ -52,7 +52,7 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always 
 
 :::
 
-Con otras configuraciones remotas (p. ej. Qodly applications, [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below).
+With other remote configurations (i.e. [Qodly applications](https://developer.4d.com/qodly), [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below).
 
 ### Tabla resumen
 
@@ -348,26 +348,21 @@ It is not recommended to update the entity within this function (using `This`).
 
 #### Ejemplo
 
-In this example, the user is not allowed to save a product with a margin lower than the average. In case of an invalid price attribute, you return an error object and thus, stop the save action.
+In this example, it is not allowed to save a product with a margin lower than 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
 
 ```4d
 // ProductsEntity class
+//
+// validateSave event at attribute level
 Function event validateSave margin($event : Object) : Object
 	
 var $result : Object
-var $marginAverage : Real
 	
-$marginAverage:=ds.Products.query("category= :1"; This.category).average("margin")
-		
-If (This.margin<$marginAverage)
-	$result:={\
-    errCode: 1; \
-    message: "The margin of this product ("+String(This.margin)+") is under the average"; \
-	extraDescription: {\
-        info: "For the "+This.category+" category the margin average is: "+String($marginAverage)};\
-    fatalError: False}
+//The user can't create a product whose margin is < 50%
+If (This.margin<50)
+	$result:={errCode: 1; message: "The validation of this product failed"; \
+	extraDescription: {info: "The margin of this product ("+String(This.margin)+") is lower than 50%"}; seriousError: False}
 End if 
-	
 return $result
 
 ```
@@ -408,31 +403,34 @@ To stop the action, the code of the function must return an [error object](#erro
 
 #### Ejemplo
 
-When a product is saved, some information is logged to an external system which may be unavailable.
+When a file is saved on disk, catch errors related to disk space for example.
 
 ```4d
-Function event saving($event : Object) : Object
+// ProductsEntity class
+// saving event at attribute level
+Function event saving userManualPath($event : Object) : Object
 	
-var $result; $status : Object
-var $log : cs.Entity
-var $remote : 4D.DataStoreImplementation
-		
-Try	 
-	$remote:=Open datastore({hostname: "events@acme.com"}; "logs")	
-	$log:=$remote.Logs.new()
-	$log.productId:=This.ID
-	$log.stamp:=Timestamp
-	$log.event:="Created by "+Current user()
-	$status:=$log.save()
-Catch
-	$result:={\
-    errCode: Last errors.last().errCode;\
-    message: Last errors.last().message; \
-    extraDescription: {info: "The external Logs can't be reached"}}
-End try
+var $result : Object
+var $userManualFile : 4D.File
+var $fileCreated : Boolean
+	
+If (This.userManualPath#"")
+	$userManualFile:=File(This.userManualPath)
+				
+	// The user manual document file is created on the disk
+	// This may fail if no more space is available
+	Try
+		$fileCreated:=$userManualFile.create() 
+	Catch
+		// No more room on disk for example
+		$result:={/
+            errCode: 1; message: "Error during the save action for this product"; /
+            extraDescription: {info: "There is no available space on disk to store the user manual"}/
+        }
+	End try
+End if 
 	
 return $result
-
 
 ```
 
@@ -454,29 +452,25 @@ The function receives an [*event* object](#event-parameter) as parameter.
 - To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
 - Throwing an [error object](#error-object) is **not supported** by this function.
 
-#### Ejemplo 1
+#### Ejemplo
 
-If an error occurred in the above saving event, the product is recorded in the ProductsInFailure dataclass so an employee can review it later.
+If an error occurred in the above saving event, the attribute value is reset accordingly in the `afterSave` event:
 
 ```4d
 // ProductsEntity class
 Function event afterSave($event : Object)
 	
-var $failure : cs.ProductsInFailureEntity
-var $status : Object
-
-    // $event.status.errors is filled if the error comes from a validateSave event
 If (($event.status.success=False) && ($event.status.errors=Null))  
-	$failure:=ds.ProductsInFailure.new()
-	$failure.name:=This.name
-	$failure.category:=This.category
-	$failure.costPrice:=This.costPrice
-	$failure.retailPrice:=This.retailPrice
-	$failure.reason:="Error during the save action"
-	$failure.stamp:=Timestamp
-	$status:=$failure.save()
-End if
-
+    // $event.status.errors is filled if the error comes from the validateSave event
+		
+	// The userManualPath attribute has not been properly saved
+	// Its value is reset
+	If ($event.savedAttributes.indexOf("userManualPath")=-1)
+		This.userManualPath:=""
+		This.status:="KO"
+	End if 
+		
+End if 
 ```
 
 ### `Function event validateDrop`
@@ -506,44 +500,24 @@ This event is triggered **before** the entity is actually dropped, allowing you 
 
 To stop the action, the code of the function must return an [error object](#error-object).
 
-#### Ejemplo 1
+#### Ejemplo
 
-Products can be deleted only if they have been flagged TO DELETE.
+In this example, it is not allowed to drop a product that is not labelled "TO DELETE". In this case, you return an error object and thus, stop the drop action.
 
 ```4d
-    //ProductsEntity class
+// ProductsEntity class
+
 Function event validateDrop status($event : Object) : Object
 
-If (This.status != "TO DELETE")
-        
-    var $result:= New object()
-    $result.errCode:=1
-    $result.message:="The record can't be deleted"
-    $result.extraDescription:={attribute; $event.attributeName; info: "The status must be TO DELETE"}
-    $result.fatalError:=False
-    return $result
+var $result : Object
+
+// Products must be marked as TO DELETE to be dropped
+If (This.status#"TO DELETE")
+    $result:={errCode: 1; message: "You can't drop this product"; \
+    extraDescription: {info: "This product must be marked as To Delete"}; seriousError: False}
 End if 
-```
 
-#### Ejemplo 2
-
-The user can delete products if they are flagged as "TO DELETE" and if their creation year is < current year -3.
-
-```4d
-    //ProductsEntity class
-Function event validateDrop($event : Object) : Object
-
-var $yearOffSet : Integer
-$yearOffSet:=Year of(Current date)-3
-
-If ((This.status != "TO DELETE") || (Year of(This.creationDate) >=  $yearOffSet))
-    var $result:=New object()
-    $result.errCode:=1
-    $result.message:="The record can't be deleted"
-    $result.extraDescription:={info: "The status must be TO DELETE and the creation year must be lower than " + String($yearOffSet)}
-    $result.fatalError:=False
-    return $result
-End if 
+return $result
 ```
 
 ### `Function event dropping`
@@ -579,54 +553,31 @@ The business logic should raise errors which cannot be detected during the `vali
 
 To stop the action, the code of the function must return an [error object](#error-object).
 
-#### Ejemplo 1
+#### Ejemplo
 
-When dropping an order with *totalPrice >= 500*, a log file is updated.
-
-```4d
-    //OrderEntity class
-Function event dropping totalPrice ($event : Object)
-
-var $log : cs.LogEntity
-var $status: Object
-
-If (This.totalPrice >= 500)
-
-    $log:=ds.Log.new()
-    $log.orderID:=This.ID
-    $log.orderPrice:=This.totalPrice
-    $log.event:="Drop"
-    $log.creationDate:=Current date()
-    $status:=$log.save()
-
-    If($status.success=False)
-        throw ({errCode: 1; message: "Error while updating the log file"})
-    End if
-End if
-
-```
-
-#### Ejemplo 2
-
-When a product is dropped, a log file is updated.
+Here is an example of `dropping` event at entity level:
 
 ```4d
-    //ProductsEntity class
-Function event dropping ($event : Object) 
+// ProductsEntity class
+Function event dropping($event : Object) : Object
 
-var $log : cs.LogEntity
-var $status: Object
+var $result : Object
+var $userManualFile : 4D.File
 
-$log:=ds.Log.new()
-$log.productID:=This.ID
-$log.productPrice:=This.price
-$log.event:="Drop"
-$log.creationDate:=Current date()
-$status:=$log.save()
+$userManualFile:=File(This.userManualPath)
 
-If($status.success=False)
-    throw ({errCode: 1; message:"Error while updating the log file"})
-End if
+    // When dropping a product, its user manual is also deleted on the disk
+    // This action may fail
+Try
+    If ($userManualFile.exists)
+        $userManualFile.delete()
+    End if 
+Catch
+    // Dropping the user manual failed
+    $result:={errCode: 1; message: "Drop failed"; extraDescription: {info: "The user manual can't be dropped"}}
+End try
+
+return $result
 ```
 
 ### `Function event afterDrop`
@@ -653,50 +604,21 @@ The dropped entity is referenced by `This` and still exists in memory.
 
 :::
 
-#### Ejemplo 1
+#### Ejemplo
 
-Send a mail to the customer with the details of the dropped order.
-
-```4d
-    //OrderEntity class
-Function event afterDrop ($event : Object) 
-
-var $oAuth2 : cs.NetKit.OAuth2Provider
-var $google : cs.NetKit.Google
-
-    //$param contains clientId, secretId...
-$oAuth2:=cs.NetKit.OAuth2Provider.new($param)
-$google:=cs.NetKit.Google.new($oAuth2; {mailType: "JMAP"})
-
-    //Email creation
-$email:=New object
-$email.from:="youremail@gmail.com"
-$email.to:="destinationmail@mail.com"
-$email.subject:="Your order is cancelled"
-$email.textBody:="Products numbers: " + This.products.number.join("-")
-
-    //Email sending
-$status:=$google.mail.send($email)
-```
-
-#### Ejemplo 2
-
-Create an action to do because there were errors in the [`dropping()`](#function-event-dropping) event.
+If the drop action failed, then the product must be checked manually:
 
 ```4d
-    //ProductEntity class
-Function event afterDrop ($event : Object) 
+Function event afterDrop($event : Object)
 
-var $action: cs.ActionEntity
-var $status: Object
+var $status : Object
 
-    // The drop action failed   
-If($event.dropStatus = "failed")
-    $action:=ds.Action.new()
-    $action.label:=Last errors.first().message //message is "Error while dropping product XXX"
-    $action.status:="TO CHECK"
-    $status:=$action.save()
-End if
+If (($event.status.success=False) && ($event.status.errors=Null)) 
+        //$event.status.errors is filled 
+        //if the error comes from the validateDrop event
+    This.status:="Check this product - Drop action failed"
+    $status:=This.save()
+End if 
 
 ```
 

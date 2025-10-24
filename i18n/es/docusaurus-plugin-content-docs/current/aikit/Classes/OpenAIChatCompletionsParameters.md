@@ -79,7 +79,7 @@ $messages.push({ \
 $result := $client.chat.completions.create($messages; $params)
 ```
 
-#### 3. JSON Schema Format (Structured Outputs)
+#### 3. Formato de esquema JSON (salidas estructuradas)
 
 For precise control over the JSON structure, you can define a schema:
 

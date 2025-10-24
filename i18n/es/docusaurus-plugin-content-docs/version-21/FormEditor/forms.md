@@ -147,27 +147,27 @@ En este caso, el modo de renderizado Fluent UI se utilizará por defecto en Wind
 Cada formulario puede definir su propio renderizado a través de la propiedad **Apariencia de los Widgets**. Las siguientes opciones están disponibles:
 
 - **Heredado**: hereda las propiedades globales de la aplicación (por defecto),
-- **Classic**: uses the classic Windows style,
-- **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
+- **Classic**: utiliza el estilo clásico de Windows,
+- **Fluent UI**: permite el renderizado moderno basado en Fluent UI. <br/>
   ![](../assets/en/FormObjects/fluentui-form.png)
 
-The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
+La [propiedad de formulario JSON](./properties_JSONref.md) correspondiente es `fluentUI` con el valor undefined (es decir, heredado, valor por defecto), "true" o "false".
 
 ### Comportamientos específicos
 
-When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
+Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
-- El nuevo comando `FORM Windows theme` devuelve el tema de visualización actual del formulario. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
-- If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
-- [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
-- [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
-- The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
-- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
+- El nuevo comando `FORM Windows theme` devuelve el tema de visualización actual del formulario. Valores posibles: "Classic" o "FluentUI". Si no existe un formulario actual o el comando se ejecuta en macOS, se devuelve una cadena vacía.
+- Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
+- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
+- El objeto de formulario [Stepper](../FormObjects/stepper.md) no admite el [evento doble clic](../Events/onDoubleClicked.md).
+- Los [botones circulares](../FormObjects/button_overview.md#circle) son soportados (como en macOS).
+- Los comandos [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) no son compatibles en áreas Web con motor de renderizado sistema.
+- Se puede añadir rectángulo de foco a las [entradas](../FormObjects/input_overview.md) imagen y texto.
 
-:::info Limitations
+:::info Limitaciones
 
-This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
+Esta **Vista previa para desarrolladores** incluye algunas limitaciones, que se [enumeran en la entrada del blog relacionado](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
 
 :::
 
