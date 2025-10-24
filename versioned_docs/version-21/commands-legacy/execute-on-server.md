@@ -51,7 +51,7 @@ You can omit this parameter; if you do so, the name of the process will be the e
 
 ### Parameter to Process Method 
 
- You can pass parameters to the process method. You can pass parameters in the same way as you would pass them to a subroutine. However, there is a restriction—you cannot pass pointer expressions. Also, remember that arrays cannot be passed as parameters to a method. Upon starting execution in the context of the new process, the process method receives the parameters values in *$1*, *$2*, etc.
+ You can pass parameters to the process method. You can pass parameters in the same way as you would pass them to a subroutine. However, there is a restriction—you cannot pass pointer expressions. Also, remember that arrays cannot be passed as parameters to a method. Upon starting execution in the context of the new process, the process method receives the parameters values in its #DECLARE parameters.
 
 **Note:** If you pass parameters to the process method, you must pass the *name* parameter; it cannot be omitted in this case.
 

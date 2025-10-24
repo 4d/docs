@@ -94,7 +94,7 @@ This example writes the destination process instance of the variables *v1*, *v2*
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
 [POST OUTSIDE CALL](post-outside-call.md)  
-*Processes*  
+[Processes](../Develop/processes.md)  
 [VARIABLE TO VARIABLE](variable-to-variable.md)  
 
 ## Properties

@@ -40,7 +40,7 @@ You can also pass parameters to the *formula* using one or more optional *param*
 
 * Pointers to tables or fields are allowed.
 * Pointers to variables, particularly local and process variables, are not recommended since these variables may be undefined at the moment they are being accessed by the process method.
-* Standard object or collection type parameters are passed **by copy**, *i.e.* 4D will create a copy of the object or the collection in the destination process if the worker is in a process different from the one calling the **CALL WORKER** command. In this context, if you want to pass an object or collection parameter **by reference**, you must use a shared object or collection (see *Shared objects and shared collections*).
+* Standard object or collection type parameters are passed **by copy**, *i.e.* 4D will create a copy of the object or the collection in the destination process if the worker is in a process different from the one calling the **CALL WORKER** command. In this context, if you want to pass an object or collection parameter **by reference**, you must use a shared object or collection (see [Shared objects and shared collections](../Concepts/shared.md)).
 
 A worker process remains alive until the application is closed or the [KILL WORKER](kill-worker.md) command is explicitly called for it. To free up memory, do not forget to call this command once a worker process is no longer needed.
 

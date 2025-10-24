@@ -35,7 +35,7 @@ The *scope* of the command designates the execution context from where an error 
 Note also that a global error-handling method is useful on the server, where it can be handle errors in server-side functions.
 * if *scope* \= ek errors from components, only errors generated from the components installed in the application will call errorMethod. Note that, if an error-handling method is defined in a component, it is called in case of error in the component, and the ek errors from components error handler set in the host application is not called.
 
-**Note:** If **ON ERR CALL** is called from a process for which you requested preemptive execution (in compiled mode), the compiler checks whether *errorMethod* is thread-safe and returns errors if it is not compatible with the preemptive mode. For more information, refer to the *Preemptive 4D processes* section.
+**Note:** If **ON ERR CALL** is called from a process for which you requested preemptive execution (in compiled mode), the compiler checks whether *errorMethod* is thread-safe and returns errors if it is not compatible with the preemptive mode. For more information, refer to the [Preemptive processes](../Develop/preemptive.md) section.
 
 To stop the trapping of errors, call **ON ERR CALL** again with the desired *scope* parameter (if any) and pass an empty string in *errorMethod*. 
 

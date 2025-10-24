@@ -57,7 +57,7 @@ The following example reads a process array from the process indicated by *$vlPr
 ## See also 
 
 [GET PROCESS VARIABLE](get-process-variable.md)  
-*Processes*  
+[Processes](../Develop/processes.md)  
 [SET PROCESS VARIABLE](set-process-variable.md)  
 
 ## Properties
