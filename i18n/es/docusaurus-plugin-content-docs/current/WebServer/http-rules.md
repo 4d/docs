@@ -1,9 +1,9 @@
 ---
 id: http-rules
-title: HTTP Rules
+title: Reglas HTTP
 ---
 
-You can define HTTP rules to control HTTP response headers for any requests received by the 4D web server, including REST requests. You can add, modify, or remove HTTP headers, send redirections or set the HTTP status. This feature is useful to implement security policies based upon the handling of headers.
+Puede definir reglas HTTP para controlar los encabezados de respuesta HTTP para toda petición recibida por el servidor web 4D, incluyendo las peticiones REST. Puede añadir, modificar o eliminar los encabezados HTTP, enviar redirecciones o establecer el estado HTTP. This feature is useful to implement security policies based upon the handling of headers.
 
 To define HTTP rules, you just need to write some RegEx to declare the URL patterns you want to control, as well as how to modify response headers. You can set these rules using a `HTTPRules.json` file stored in the project folder, or using the *settings* parameter [`start()`](../API/WebServerClass.md#start) function of the web server object.
 
@@ -14,7 +14,7 @@ HTTP rules are supported in the following contexts:
 - [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
 - a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
 
-## How to set rules
+## Cómo definir reglas
 
 You can declare HTTP response rules:
 
@@ -29,23 +29,23 @@ If both a **HTTPRules.json** file and a call to the [`WEB Server`](../commands/w
 
 If the URI of the request does not match any of the RegEx patterns, the web server returns a default response.
 
-## Rules Definition
+## Definición de reglas
 
 The **HTTPRules.json** file or the [`.rules`](../API/WebServerClass.md#rules) property must contain a collection of **rule objects**.
 
-A rule object is defined by:
+Un objeto regla se define por:
 
 - a RegEx describing a URL pattern, e.g. "^(.\*\\.(jpg|jpeg|png|gif))"
 - the name of the action to execute for the HTTP response, e.g. "removeHeaders"
 - the value of the action, e.g. "X-Unwanted-Header1"
 
-Other properties are ignored.
+Las demás propiedades se ignoran.
 
 ### Patrones de la URL
 
 URL patterns are given using **regular expressions**. To declare a regular expression pattern, use the "RegExPattern" property name.
 
-Ex: `"RegExPattern": "/Test/Authorized/(.*)"`
+Ej.: `"RegExPattern": "/Test/Authorized/(.*)"`
 
 When the web server receives a request, **all** URL patterns are triggered sequentially in the given order, and all matching patterns are executed. In case of several actions modifying similar resources, the last executed action is taken into account.
 
@@ -55,36 +55,41 @@ The following action keywords are supported:
 
 | Palabras clave  | Tipo de valor               | Descripción                                                                                                                                                                                                                                   |
 | --------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `removeHeaders` | Text or Collection of texts | Header(s) to remove from the HTTP responses. If a header to remove does not exist in the response header, it is ignored.                                                                   |
+| `removeHeaders` | Texto o colección de textos | Header(s) to remove from the HTTP responses. If a header to remove does not exist in the response header, it is ignored.                                                                   |
 | `addHeaders`    | Object                      | Name (text) and value (text) of header(s) to add to the HTTP responses.                                                                                              |
 | `setHeaders`    | Object                      | Name (text) and value (text) of header(s) to modify in the HTTP responses. If a header to modify does not exist in the response header, it is added. |
 | `denyAccess`    | Boolean                     | true to deny access to the resource, false to allow access. When the access to a resource is denied, the web server returns a 403 status by default                                                                           |
 | `redirect`      | Text                        | Redirection URL. When a redirection is triggered, the web server returns a 302 status by default                                                                                                                              |
-| `status`        | Number                      | HTTP status                                                                                                                                                                                                                                   |
+| `status`        | Number                      | Estado HTTP                                                                                                                                                                                                                                   |
 
-### Non-modifiable headers
+### Encabezados no modificables
 
-The following headers could not be modified by the `removeHeaders`, `setHeaders`, or `addHeaders` actions:
+Some headers could not be added, modified or removed:
 
-- "Date",
-- "Content-Length"
+| Encabezado       | Acción de añadir | Set           | Remove |
+| ---------------- | ---------------- | ------------- | ------ |
+| Fecha            | No               | No            | No     |
+| Content-Length   | No               | No            | No     |
+| Content-Encoding | No               | No            | No     |
+| Vary             | Sí               | No            | No     |
+| Set-Cookie       | Sí               | Añadir cookie | No     |
 
-Modifying these headers do not generate errors, however modifications will be ignored.
+Unauthorized changes on these headers do not generate errors, however modifications will be ignored.
 
 ### Current rules
 
-You can know the current rules using the [`.rules` property of the Web Server object](../API/WebServerClass.md#rules):
+Puede conocer las reglas actuales utilizando la propiedad [`.rules` del objeto Web Server](../API/WebServerClass.md#rules):
 
 ```
 var $rules : Collection
-$rules:=WEB Server.rules //current rules
+$rules:=WEB Server.rules //reglas actuales
 ```
 
 ## Ejemplos
 
 Rules can be set using a `HTTPRules.json` file or the *settings* parameter of the [`.start()`](../API/WebServerClass.md#start) web server function.
 
-### Using a HTTPRules.json file
+### Utilización de un archivo HTTPRules.json
 
 ```json
 

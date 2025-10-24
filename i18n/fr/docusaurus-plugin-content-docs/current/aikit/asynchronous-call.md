@@ -5,27 +5,27 @@ title: Appel asynchrone
 
 # Appel asynchrone
 
-If you do not want to wait for the OpenAPI response when making a request to its API, you need to use asynchronous code.
+Si vous ne souhaitez pas attendre la réponse de l'OpenAPI lorsque vous envoyez une requête à son API, vous devez utiliser un code asynchrone.
 
-To make asynchronous calls, you must provide a callback `4D.Function`(`Formula`) in the [OpenAIParameters](Classes/OpenAIParameters.md) object parameter to receive the result.
+Pour effectuer des appels asynchrones, vous devez fournir une `4D.Function`(`Formula`) de rappel (*callback*) dans le paramètre objet [OpenAIParameters](Classes/OpenAIParameters.md) pour recevoir le résultat.
 
-The callback function will receive the same result object type (one of [OpenAIResult](Classes/OpenAIResult.md) child classes) that would be returned by the function in synchronous code. Voir les exemples ci-dessous.
+La fonction de callback recevra le même type d'objet de résultat (l'une des classes enfant de [OpenAIResult](Classes/OpenAIResult.md)) que celui qui serait renvoyé par la fonction dans un code synchrone. Voir les exemples ci-dessous.
 
-## Process Considerations
+## A propos des process
 
-The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), so the response will be received within the current process.
+La méthode asynchrone est basée sur [4D.HTTPRequest](https://developer.4d.com/docs/API/HTTPRequestClass), ainsi la réponse sera reçue dans le process courant.
 
-> ⚠️ If your process ends at the conclusion of the current method (e.g., using New process, or playing in the method editor), the callback formula might not be called asynchronously. In such cases, consider using `CALL WORKER` or `CALL FORM`.
+> ⚠️ Si votre process se termine à la fin de la méthode courante (par exemple, si vous utilisez New process ou l'éditeur de méthode), la formule de callback peut ne pas être appelée de manière asynchrone. Dans ce cas, il est nécessaire d'utiliser `CALL WORKER` ou `CALL FORM`.
 
 ## Exemples d’utilisation
 
-### liste de modèles
+### Liste de modèles
 
 ```4d
 $client.models.list({formula: Formula(MyReceiveMethod($1))})
 ```
 
-`$1` sera une instance de [OpenAIModelListResult] (Classes/OpenAIModelListResult.md), donc la méthode `MyReceiveMethod` pourrait être :
+`$1` sera une instance de [OpenAIModelListResult](Classes/OpenAIModelListResult.md), donc la méthode `MyReceiveMethod` pourrait être :
 
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIModelListResult)
@@ -41,7 +41,7 @@ Else
 End if
 ```
 
-### complétions de chat
+### Complétions de chat
 
 ```4d
 var $messages:=[{role: "system"; content: "You are a helpful assistant."}]

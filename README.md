@@ -154,6 +154,13 @@ banner: 'none',
 
 3. Aller dans i18n\en\code.json, à la fin du fichier : liens de la page Home (vers extensions) à mettre à jour
 
+### Mettre à jour le lien vers les versions Notes précédentes dans notes
+
+Lien main :
+`See [**Release Notes for 4D 20.x LTS**](../../20/Notes/updates)`. <br/>
+à transformer en 
+`See [**Release Notes for 4D 20.x LTS**](../20/Notes/updates)`. 
+
 ### Si problème de traduction avec cmfcmf:
 1. Faire
 `git restore --rebase --autostash` 
@@ -180,10 +187,15 @@ Forcer une synchro globale de main sur Crowdin
 Tester : Faire npm run build
 
 ### Builder
-Sur github, faire une PR de docs4d/docs/main sur 4d/docs/main
+voir ["mise à jour prod"](#mise-a-jour-prod) ci dessous
 
 ### Algolia (4D only)
 Aller dans l'interface Algolia et lancer un reindex de la doc
+
+## Mise à jour 4D NetKit
+1. Synchro avec prod (4D/4DNetKit)
+2. Pull request vers prod : Main pour version en ligne
+3. Pull request vers prod : version qui shippe pour doc embedded
 
 ## Mise à jour prod
 1. Créer une nouvelle branche en local nommée par exemple Tempo

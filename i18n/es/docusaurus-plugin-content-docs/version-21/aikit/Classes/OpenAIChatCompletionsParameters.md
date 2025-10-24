@@ -13,38 +13,38 @@ The `OpenAIChatCompletionParameters` class is designed to handle the parameters 
 
 ## Propiedades
 
-| Propiedad               | Tipo       | Valor por defecto | Descripción                                                                                                                                                                              |
-| ----------------------- | ---------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `model`                 | Text       | `"gpt-4o-mini"`   | ID del modelo a utilizar.                                                                                                                                                |
-| `stream`                | Boolean    | `False`           | Si se retransmite el progreso parcial. Si se define, los tokens se enviarán solo como datos. Fórmula de retrollamada necesaria.          |
-| `stream_options`        | Object     | `Null`            | Property for stream=True. For example: `{include_usage: True}`                                                                                           |
-| `max_completion_tokens` | Integer    | `0`               | The maximum number of tokens that can be generated in the completion.                                                                                                    |
-| `n`                     | Integer    | `1`               | How many completions to generate for each prompt.                                                                                                                        |
-| `temperature`           | Real       | `-1`              | Qué temperatura de muestreo utilizar, entre 0 y 2. Higher values make the output more random, while lower values make it more focused and deterministic. |
-| `store`                 | Boolean    | `False`           | Whether or not to store the output of this chat completion request.                                                                                                      |
-| `reasoning_effort`      | Text       | `Null`            | Constrains effort on reasoning for reasoning models. Currently supported values are `"low"`, `"medium"`, and `"high"`.                                   |
-| `response_format`       | Object     | `Null`            | An object specifying the format that the model must output. Compatible with structured outputs.                                                          |
-| `herramientas`          | Collection | `Null`            | A list of tools ([OpenAITool](OpenAITool.md)) the model may call. Only "function" type is supported.                                  |
-| `tool_choice`           | Variant    | `Null`            | Controls which (if any) tool is called by the model. Can be `"none"`, `"auto"`, `"required"`, or specify a particular tool.           |
-| `prediction`            | Object     | `Null`            | Static predicted output content, such as the content of a text file that is being regenerated.                                                                           |
+| Propiedad               | Tipo       | Valor por defecto | Descripción                                                                                                                                                                                 |
+| ----------------------- | ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `model`                 | Text       | `"gpt-4o-mini"`   | ID del modelo a utilizar.                                                                                                                                                   |
+| `stream`                | Boolean    | `False`           | Si se retransmite el progreso parcial. Si se define, los tokens se enviarán solo como datos. Fórmula de retrollamada necesaria.             |
+| `stream_options`        | Object     | `Null`            | Property for stream=True. Por ejemplo: `{include_usage: True}`                                                                                              |
+| `max_completion_tokens` | Integer    | `0`               | The maximum number of tokens that can be generated in the completion.                                                                                                       |
+| `n`                     | Integer    | `1`               | How many completions to generate for each prompt.                                                                                                                           |
+| `temperature`           | Real       | `-1`              | Qué temperatura de muestreo utilizar, entre 0 y 2. Higher values make the output more random, while lower values make it more focused and deterministic.    |
+| `store`                 | Boolean    | `False`           | Whether or not to store the output of this chat completion request.                                                                                                         |
+| `reasoning_effort`      | Text       | `Null`            | Constrains effort on reasoning for reasoning models. Los valores soportados actualmente son `"low"`, `"medium"` y `"high"`.                                 |
+| `response_format`       | Object     | `Null`            | An object specifying the format that the model must output. Compatible with structured outputs.                                                             |
+| `herramientas`          | Collection | `Null`            | A list of tools ([OpenAITool](OpenAITool.md)) the model may call. Only "function" type is supported.                                     |
+| `tool_choice`           | Variant    | `Null`            | Controls which (if any) tool is called by the model. Puede ser `"none"`, `"auto"`, `"required"`, o especificar una herramienta concreta. |
+| `prediction`            | Object     | `Null`            | Static predicted output content, such as the content of a text file that is being regenerated.                                                                              |
 
 ### Propiedades de retrollamada asíncrona
 
-| Propiedad                                  | Tipo                        | Descripción                                                                                                                                      |
-| ------------------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `onData` (or `formula`) | 4D.Function | A function to be called asynchronously when receiving data chunk. Asegúrese de que el proceso actual no termina. |
+| Propiedad                                 | Tipo                        | Descripción                                                                                                                                      |
+| ----------------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `onData` (o `formula`) | 4D.Function | A function to be called asynchronously when receiving data chunk. Asegúrese de que el proceso actual no termina. |
 
-`onData` will receive as argument an [OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md).
+`onData` recibirá como argumento un [OpenAIChatCompletionsStreamResult](./OpenAIChatCompletionsStreamResult.md).
 
 See [OpenAIParameters](./OpenAIParameters.md) for other callback properties.
 
 ## Response Format
 
-The `response_format` parameter allows you to specify the format that the model must output. This is particularly useful when you need structured data or want to ensure the response follows a specific format.
+El parámetro `response_format` le permite especificar el formato que el modelo debe salir. This is particularly useful when you need structured data or want to ensure the response follows a specific format.
 
-### Supported Response Format Types
+### Tipos de formato de respuesta soportados
 
-#### 1. Text Format (Default)
+#### 1. Formato de texto (por defecto)
 
 The default response format returns plain text:
 
@@ -55,7 +55,7 @@ var $params := cs.OpenAIChatCompletionsParameters.new({ \
 })
 ```
 
-#### 2. JSON Object Format
+#### 2. Formato de objetos JSON
 
 Forces the model to respond with valid JSON:
 
@@ -79,7 +79,7 @@ $messages.push({ \
 $result := $client.chat.completions.create($messages; $params)
 ```
 
-#### 3. JSON Schema Format (Structured Outputs)
+#### 3. Formato de esquema JSON (salidas estructuradas)
 
 For precise control over the JSON structure, you can define a schema:
 
@@ -115,20 +115,20 @@ $messages.push({ role: "user"; content: "Generate information about a person nam
 $result := $client.chat.completions.create($messages; $params)
 ```
 
-### JSON Schema Properties
+### Propiedades del esquema JSON
 
-When using `json_schema` type, you can specify:
+Cuando se utiliza el tipo `json_schema`, puede especificar:
 
-- **`name`**: A name for the schema
-- **`description`**: A description of what the schema represents
-- **`schema`**: The JSON schema definition
-- **`strict`**: Whether to enforce strict adherence to the schema
+- **`name`**: un nombre para el esquema
+- **`description`**: una descripción de lo que representa el esquema
+- **`schema`**: la definición de esquema JSON
+- **`strict`**: si se debe hacer cumplir estrictamente el esquema
 
 ### Notas Importantes
 
 - Not all models support structured outputs (json_object or json_schema), so check model capabilities before using them.
-- When using `json_object` format, you should include instructions in your system message to respond in JSON format
-- The `json_schema` format provides the most control and ensures the response exactly matches your specified structure
+- Cuando utilice el formato `json_object`, deberá incluir instrucciones en el mensaje del sistema para responder en formato JSON
+- El formato `json_schema` ofrece el mayor control y garantiza que la respuesta coincida exactamente con la estructura especificada
 - Invalid JSON responses will result in an error when using JSON formats
 - JSON schema validation ensures type safety and required field presence
 

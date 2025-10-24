@@ -67,7 +67,7 @@ A datastore object is handled through functions and properties of the [**DataSto
 
 Lorsqu'il est géré via le code, le datastore est un objet dont les propriétés sont toutes les [dataclasses](#dataclass) ayant été spécifiquement exposées.
 
-4d vous permet de gérer les datastores suivants :
+4D vous permet de gérer les datastores suivants :
 
 * le datastore local, fondé sur la base 4D courante, retourné par la commande `ds` (le datastore principal).
 * un ou plusieurs datastores distants, exposés en tant que ressources RESET dans des bases 4D distantes, retournés par la commande `Ouvrir datastore`.
@@ -154,12 +154,12 @@ Prenons l'exemple de la structure de base de données partielle suivante et les 
 
 ![](../assets/en/ORDA/relationProperties.png)
 
-Tous les attributs relationnels seront disponibles automatiquement :
+Tous les attributs de stockage seront disponibles automatiquement :
 
 * dans la dataclass Project : "ID", "name", et "companyID"
 * dans la dataclass Company : "ID", "name", et "discount"
 
-En outre, les attributs relationnels suivant seront également disponibles automatiquement :
+En outre, les attributs relationnels suivants seront également disponibles automatiquement :
 
 * dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
 * dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
@@ -235,7 +235,7 @@ Les entity selections triées sont créées uniquement lorsque cela est nécessa
 * résultat d'un `orderBy()` sur une sélection (de n'importe quel type) ou un `orderBy()` sur une dataclass,
 * résultat de la méthode `newSelection()` avec l'option `dk keep ordered`
 
-Les sélections d'entités non-triées sont créées dans les cas suivants :
+Les entity selections non-triées sont créées dans les cas suivants :
 
 * résultat d'un `query()` standard sur une sélection (de n'importe quel type) ou un `query()` sur une dataclass,
 * résultat de la méthode `newSelection()` sans option,

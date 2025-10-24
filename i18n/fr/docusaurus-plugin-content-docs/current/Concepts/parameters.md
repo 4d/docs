@@ -295,12 +295,6 @@ L'ancienne syntaxe de déclaration des paramètres variadiques (`C_TEXT(${4})`) 
 
 :::
 
-## Triggers et On Drag Over
-
-Certains contextes ne prennent pas en charge la déclaration dans une méthode "Compiler_", ils sont donc gérés de manière spécifique :
-
-- Triggers - Le paramètre $0 (Entier long), qui résulte d'un trigger, sera typé par le compilateur si le paramètre n'a pas été explicitement déclaré. Néanmoins, si vous souhaitez le déclarer, vous devez le faire dans le trigger lui-même.
-
 ## Type de paramètre erroné
 
 L'appel d'un paramètre d'un mauvais type ou d'une mauvaise classe (pour les paramètres objet) est une [erreur](error-handling.md) qui empêche une exécution correcte. Par exemple, si vous écrivez les méthodes suivantes :

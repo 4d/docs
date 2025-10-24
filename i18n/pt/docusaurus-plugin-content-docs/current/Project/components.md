@@ -5,7 +5,7 @@ title: Dependencies
 
 A [arquitetura dos projetos](../Project/architecture.md) 4D é modular. Você pode fornecer funcionalidades adicionais aos seus projetos 4D instalando [**componentes**](Concepts/components.md) e [**plug-ins**](Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be [built using any language](../Extensions/develop-plug-ins.md).
 
-Você pode [desenvolver](../Extensions/develop-components.md) e [construir](../Desktop/building.md) seus próprios componentes 4D, ou baixar componentes públicos compartilhados pela comunidade 4D que [podem ser encontrados no GitHub](https://github.com/search?q=4d-component&type=Repositories).
+Você pode [desenvolver](../Extensions/develop-components.md) e [construir](../Desktop/building.md) seus próprios componentes 4D, ou baixar componentes públicos compartilhados pela comunidade 4D que [podem ser encontrados no GitHub](https://github.com/topics/4d-component).
 
 Once installed in your 4D environment, extensions are handled as **dependencies** with specific properties.
 
@@ -326,7 +326,7 @@ When you add or update a component (whether [local](#local-components) or [from 
 
 The Dependency manager reads each component's own `dependencies.json` file and recursively installs all required dependencies, respecting version specifications whenever possible. This eliminates the need to manually identify and add nested dependencies one by one.
 
-- **Conflict resolution**: When multiple dependencies require [different versions](#) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
+- **Conflict resolution**: When multiple dependencies require [different versions](#defining-a-github-dependency-version-range) of the same component, the Dependency manager automatically attempts to resolve conflicts by finding a version that satisfies all overlapping version ranges. If a primary dependency conflicts with secondary dependencies, the primary dependency takes precedence.
 
 :::note
 

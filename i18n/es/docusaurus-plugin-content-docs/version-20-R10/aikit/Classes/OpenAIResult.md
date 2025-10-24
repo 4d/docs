@@ -50,7 +50,7 @@ Lanza el primer error de la colección `errors`. This function is useful for pro
 
 ## Clases heredadas
 
-Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
+Varias clases heredan de `OpenAIResult` para ampliar su funcionalidad en casos de uso específicos. A continuación se muestran algunas de las clases que extienden `OpenAIResult`:
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)

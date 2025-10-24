@@ -10,7 +10,7 @@ title: On Validate
 
 ## 説明
 
-This event is triggered when the record data entry has been validated, for example after an `accept` [standard action](FormObjects/properties_Action.md#standard-action).
+このイベントは、`accept` [標準アクション](FormObjects/properties_Action.md#標準アクション)の後など、レコードのデータ入力が確定されたときにトリガーされます。
 
 
 ### サブフォーム

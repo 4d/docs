@@ -79,7 +79,7 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
   - QUICレイヤーオプションを選択すると:
     - ドロップダウンメニューの隣に、ベータ版である旨のメッセージと警告アイコンが表示されます。
     - [Client-server Connections Timeout settings](#client-server-connections-timeout) are hidden
-    - The [Encrypt Client-Server communication checkbox](#encrypt-client-server-communications) is hidden (QUIC communications are always in TLS, whatever your secured mode is.).
+    - [クライアント-サーバー通信の暗号化](#クライアント-サーバー通信の暗号化) チェックボックスは非表示になります (セキュアモードに関わらず、QUIC 通信は常に TLS です)。
   - **互換性**: QUICネットワークレイヤーに切り替えるには、まずクライアント/サーバーアプリケーションを 4D v20以上で運用する必要があります。
 
 :::note

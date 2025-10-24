@@ -463,7 +463,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 Esta função é chamada sempre que uma seleção de entidade ou uma entidade da classe de dados é solicitada. O filtro é executado uma vez, quando a entity selection é criada.
 
-O filtro deve retornar uma seleção de entidade da dataclass. Puede ser una selección de entidades creada a partir de una consulta, almacenada en el [`Storage`], etc.
+O filtro deve retornar uma seleção de entidade da dataclass. It can be an entity selection built upon a query, stored in the [`Storage`](../API/SessionClass.md#storage), etc.
 
 :::note
 
@@ -565,7 +565,7 @@ Esse mecanismo automático baseia-se no conceito de "bloqueio otimista", sendo p
 
 O diagrama seguinte ilustra o bloqueio otimista:
 
-1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. O mecanismo 4D compara automaticamente o valor do carimbo interno da entidade modificada com o da entidade armazenada nos dados. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 

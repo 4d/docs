@@ -120,7 +120,7 @@ $entity.save() //sauvegarder les modifications
 
 :::note Notes
 
-- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- Les champs objet de la base de données peuvent être [associés à des classes](../Develop/field-properties.md), auquel cas seuls les objets de la classe définie peuvent être affectés à l'attribut de l'entité.
 - Les champs Blob des bases de données ([blobs scalaires](Concepts/dt_blob.md)) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
 
 :::
@@ -288,7 +288,7 @@ La nature **partageable** ou **modifiable** d'une entity selection est définie 
 
 Une nouvelle entity selection est **partageable** dans les cas suivants :
 
-- la nouvelle entity selection résulte d'une fonction de classe ORDA appliquée à une dataClass : [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#quer
+- la nouvelle entity selection résulte d'une fonction de classe ORDA appliquée à une dataClass : [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
 - la nouvelle entity selection est basée sur une relation [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié 1-vers-N mais que l'entité n'appartient pas à une entity selection.
 - la nouvelle entity selection est explicitement copiée comme partageable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire avec l'option `ck shared`).
 
@@ -449,7 +449,7 @@ Les filtres s'appliquent aux **entités**. Si vous souhaitez restreindre l'accè
 
 ### Comment définir un filtre de restriction
 
-You create a filter for a dataclass by defining an `event restrict` function in the [**dataclass class**](dsMapping.md#dataclass) of the dataclass. Le filtre est alors automatiquement activé.
+Vous créez un filtre pour une dataclass en définissant une fonction `event restrict` dans la [**classe**](dsMapping.md#dataclass) de la dataclasse. Le filtre est alors automatiquement activé.
 
 ### `Function event restrict`
 
@@ -462,11 +462,11 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 Cette fonction est appelée chaque fois qu'une entity selection ou une entité de la dataclass est demandée. Le filtre est exécuté une seule fois, lors de la création de l'entity selection.
 
-Le filtre doit retourner une entity selection de la dataclass. Il peut s'agir d'une entity selection basée sur une recherche, stockée dans le [`Storage`], etc.
+Le filtre doit retourner une entity selection de la dataclass. It can be an entity selection built upon a query, stored in the [`Storage`](../API/SessionClass.md#storage), etc.
 
 :::note
 
-Pour des raisons de performances, nous recommandons d'utiliser les **attributs indexés** dans la définition du filtre.
+Pour des raisons de performances, nous recommandons d'utiliser des **attributs indexés** dans la définition du filtre.
 
 :::
 
@@ -564,11 +564,11 @@ Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" q
 
 Le diagramme suivant illustre le verrouillage optimiste :
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Deux process chargent la même entité.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'elles correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Puisque la valeur du marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 Cela peut également être illustré par le code suivant :
 

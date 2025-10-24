@@ -7,17 +7,17 @@ title: Fournisseurs (Providers)
 
 De nombreux fournisseurs d'IA proposent une API de type OpenAI, vous pouvez donc utiliser ce projet pour vous y connecter.
 
-To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+Pour ce faire, il suffit de passer l'adresse du fournisseur dans `baseURL` et d'utiliser sa clé d'api si nécessaire.
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
 ```
 
-Some of them
+Quelques-uns :
 
-## Distant
+## A distance
 
-| Fournisseur                                                                                                                                                                                              | Url de base                                                                                                                                           |
+| Fournisseur                                                                                                                                                                                              | baseURL                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | https://mistral.ai/                                                                                                                                                      | https://api.mistral.ai/v1                                                                             |
 | https://www.deepseek.com/                                                                                                                                | https://api.deepseek.com                                                                              |
@@ -31,7 +31,7 @@ Some of them
 
 ## Local
 
-| Fournisseur                                          | Url de base par défaut                                                                                    | Doc                                                                           |
+| Fournisseur                                          | baseURL par défaut                                                                                        | Doc                                                                           |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | https://ollama.com/  | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 | https://lmstudio.ai/ | http://localhost:1234/v1                                                  | https://lmstudio.ai/docs/api/endpoints/openai |

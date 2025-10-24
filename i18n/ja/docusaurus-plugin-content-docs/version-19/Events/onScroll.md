@@ -14,7 +14,7 @@ title: On Scroll
 
 このイベントは、スクロールアクションに関連した他のすべてのユーザーイベント ([On Clicked](onClicked.md)、[On After Keystroke](onAfterKeystroke.md)、等) の後にトリガーされます。 このイベントは、オブジェクトメソッドの中でのみ生成されます (フォームメソッドでは生成されません)。
 
-このイベントは、ユーザーのアクションの結果としてスクロールが発生した場合にのみ生成されます: スクロールバー/カーソルの使用、マウスホイールまたは [キーボード](FormObjects/properties_Appearance.md#縦スクロールバー) の使用、等です。 It is not generated when the object is scrolled due to the execution of the [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command.
+このイベントは、ユーザーのアクションの結果としてスクロールが発生した場合にのみ生成されます: スクロールバー/カーソルの使用、マウスホイールまたは [キーボード](FormObjects/properties_Appearance.md#縦スクロールバー) の使用、等です。 [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) コマンド使用の結果スクロールした場合には生成されません。
 
 
 ### ピクチャー入力

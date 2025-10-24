@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: ORDA Events
+title: Entity Events
 ---
 
 <details><summary>History</summary>
@@ -11,7 +11,7 @@ title: ORDA Events
 </details>
 
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
@@ -21,7 +21,7 @@ You cannot directly trigger event function execution. Events are called automati
 
 :::info Compatibility note
 
-ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events. 
+ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events. 
 
 :::
 
@@ -30,7 +30,7 @@ ORDA events in the datastore are equivalent to triggers in the 4D database. Howe
 
 ### Event level
 
-A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
+A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class). 
 
 It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute. 
 
@@ -57,7 +57,7 @@ With other remote configurations (i.e. Qodly applications, [REST API requests](.
 
 ### Summary table
 
-The following table lists ORDA events along with their rules. 
+The following table lists ORDA entity events along with their rules. 
 
 | Event  | Level    | Function name   |  (C/S) Executed on |
 | :--------------- |:--------------- | :----- | :-----: |

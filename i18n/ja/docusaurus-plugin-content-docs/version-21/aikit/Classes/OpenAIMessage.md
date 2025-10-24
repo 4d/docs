@@ -9,13 +9,13 @@ title: OpenAIMessage
 
 ## プロパティ
 
-| プロパティ          | 型          | 説明                                                                                                                                                       |
-| -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `role`         | Text       | The role of the message (e.g., "user", "assistant", "system", "tool").                |
-| `内容`           | Variant    | メッセージのコンテンツ。テキスト、またはオブジェクトのコレクションのいずれかです。                                                                                                                |
-| `user`         | Text       | メッセージに割り当てられたユーザーを表すオプションのプロパティ。                                                                                                                         |
-| `tool_calls`   | Collection | A collection of tool calls requested by the assistant. Each tool call contains an `id`, `type`, and a `function` object. |
-| `tool_call_id` | Text       | The ID of the tool call that this message is responding to (used when `role` is "tool").                              |
+| プロパティ          | 型          | 説明                                                                                  |
+| -------------- | ---------- | ----------------------------------------------------------------------------------- |
+| `role`         | Text       | メッセージの役割(例: "user"、"assistant"、"system"、"tool")。 |
+| `内容`           | Variant    | メッセージのコンテンツ。テキスト、またはオブジェクトのコレクションのいずれかです。                                           |
+| `user`         | Text       | メッセージに割り当てられたユーザーを表すオプションのプロパティ。                                                    |
+| `tool_calls`   | Collection | アシスタントからリクエストされたツール呼び出しのコレクション。 各ツール呼び出しには `id`、`type`、`function` オブジェクトが含まれます。     |
+| `tool_call_id` | Text       | このメッセージが返答しているツール呼び出しのID (`role` が "tool"の場合に使用されます)。            |
 
 ## 計算プロパティ
 
@@ -38,7 +38,7 @@ title: OpenAIMessage
 
 ## 使用例
 
-### Create a simple message and attach an image
+### シンプルなメッセージを作成し画像を添付する
 
 ```4d
 // OpenAIMessage のインスタンスを作成
@@ -48,11 +48,11 @@ var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})
 $message.addImageURL("http://example.com/image.jpg"; "high")
 ```
 
-### Respond to a tool call message
+### ツール呼び出しメッセージに応答する
 
-When an assistant needs to use external functions, it generates a message with `tool_calls` to request function execution.
+アシスタントが外部関数を使用する必要がある場合、関数の実行をリクエストするための、`tool_calls` を持ったメッセージを生成します。
 
-**Assistant message requesting tool calls:**
+**ツール呼び出しをリクエストするアシスタントメッセージ:**
 
 ```json
 {
@@ -70,41 +70,41 @@ When an assistant needs to use external functions, it generates a message with `
 }
 ```
 
-**Handling the tool call:**
+**ツール呼び出しを管理する:**
 
-When you receive a tool call message, you need to:
+ツール呼び出しメッセージを受信した場合、以下のことを行う必要があります:
 
-1. **Extract the function information:**
-   - `function.name`: The name of the function to call (must match a function defined in your [OpenAITool](OpenAITool.md) - you can select code to execute according to this name)
-   - `function.arguments`: A JSON string containing the function parameters that must be parsed with `JSON Parse`
-   - `id`: The unique identifier for this specific tool call
+1. **関数の情報を抽出する:**
+   - `function.name`: 呼び出す関数の名前([OpenAITool](OpenAITool.md) 内で定義されている関数と合致する必要があります- この名前に応じて実行するコードを選択することができます)
+   - `function.arguments`: `JSON Parse` でパースされる必要のある、関数の引数を格納したJSON 文字列
+   - `id`: この特定のツール呼び出しのための固有の識別子
 
-2. **Execute the function:**
-   Parse the arguments (which is a JSON string) and call the corresponding function that you defined in your OpenAITool configuration.
+2. **関数を実行する:**
+   (JSON 文字列になっている)引数をパースし、OpenAITool 設定内で定義された対応する関数を呼び出します。
 
-3. **Respond with the tool result:**
-   Create a response message using the exact `tool_call_id` from the original request.
+3. **ツールの結果で応答する:**
+   オリジナルのリクエストの`tool_call_id` を使用してレスポンスメッセージを作成します。
 
-**Example tool response:**
+**ツールのレスポンスの一例:**
 
 ```4d
-// Parse the function arguments (if any)
+// 関数の引数をパースする(あれば)
 var $arguments : Object := JSON Parse($toolCall.function.arguments)
 
-// Execute your code corresponding to "get_database_tables" 
+// "get_database_tables" に対応するコードを実行する
 var $tableNames: Text := OB Keys(ds).join(", ")
 
-// Create the tool response message with the required tool_call_id
+// 必要な tool_call_id を持ったツールレスポンスメッセージを作成する
 var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
   role: "tool"; \
   tool_call_id: "call_12345"; \
   content: $tableNames \
 })
-// Add it to the conversation and continue
+// 会話にそれを追加して続行する
 ```
 
-**Important:** The `tool_call_id` in your response must exactly match the `id` from the original tool call. This allows the AI model to correctly associate your response with the specific function call that was made.
+**重要:** レスポンス内の`tool_call_id` は、元のツール呼び出しの`id` と完全に一致している必要があります。 これによってAI モデルはあなたのレスポンスと、呼び出しを行った特定の関数を正確に結びつけることができます。
 
 ## 参照
 
-- [OpenAITool](OpenAITool.md) - For tool definition
+- [OpenAITool](OpenAITool.md) - ツール定義に必要

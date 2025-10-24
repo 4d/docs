@@ -333,7 +333,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 :::note
 
-Il n'y a pas de mot-clé de fin pour le code d'une fonction class constructor. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
+Il n'y a pas de mot-clé de fin pour le code d'une fonction de constructeur de classe. Le langage 4D détecte automatiquement la fin du code d'une fonction par le mot clé `Function` suivant ou la fin du fichier de classe.
 
 :::
 

@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: Events
+title: Entity Events
 ---
 
 <details><summary>Historia</summary>
@@ -8,23 +8,23 @@ title: Events
 | Lanzamiento | Modificaciones                                                                                        |
 | ----------- | ----------------------------------------------------------------------------------------------------- |
 | 21          | Added events: validateSave / saving / afterSave / validateDrop / dropping / afterDrop |
-| 20 R10      | touched event added                                                                                   |
+| 20 R10      | se ha añadido un evento touched                                                                       |
 
 </details>
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 No se puede activar directamente la ejecución de la función de evento. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
 :::tip Entrada de blog relacionada
 
-[ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-data-persistence-actions)
+[ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-database-operations)
 
 :::
 
 :::info Nota de compatibilidad
 
-ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
 
 :::
 
@@ -52,27 +52,27 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always 
 
 :::
 
-Con otras configuraciones remotas (p. ej. Qodly applications, [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below).
+With other remote configurations (i.e. [Qodly applications](https://developer.4d.com/qodly), [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below).
 
 ### Tabla resumen
 
 La siguiente tabla lista los eventos ORDA junto con sus reglas.
 
-| Evento                     | Nivel    | Nombre de la función                                    |                 (C/S) Ejecutado en                | Can stop action by returning an error |
-| :------------------------- | :------- | :------------------------------------------------------ | :------------------------------------------------------------------: | ------------------------------------- |
-| Instanciación de entidades | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                | no                                    |
-| Atributo tocado            | Atributo | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no                                    |
-|                            | Entity   | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | no                                    |
-| Before saving an entity    | Atributo | `validateSave <attrName>()`                             |                                server                                | sí                                    |
-|                            | Entity   | `validateSave()`                                        |                                server                                | sí                                    |
-| When saving an entity      | Atributo | `saving <attrName>()`                                   |                                server                                | sí                                    |
-|                            | Entity   | `saving()`                                              |                                server                                | sí                                    |
-| After saving an entity     | Entity   | `afterSave()`                                           |                                server                                | no                                    |
-| Before dropping an entity  | Atributo | `validateDrop <attrName>()`                             |                                server                                | sí                                    |
-|                            | Entity   | `validateDrop()`                                        |                                server                                | sí                                    |
-| When dropping an entity    | Atributo | `dropping <attrName>()`                                 |                                server                                | sí                                    |
-|                            | Entity   | `dropping()`                                            |                                server                                | sí                                    |
-| After dropping an entity   | Entity   | `afterDrop()`                                           |                                server                                | no                                    |
+| Evento                         | Nivel    | Nombre de la función                                    |                     (C/S) Ejecutado en                     | Can stop action by returning an error |
+| :----------------------------- | :------- | :------------------------------------------------------ | :---------------------------------------------------------------------------: | ------------------------------------- |
+| Instanciación de entidades     | Entity   | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                     client                                    | no                                    |
+| Atributo tocado                | Atributo | `event touched <attrName>()`                            | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) | no                                    |
+|                                | Entity   | `event touched()`                                       | Depende de la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions) | no                                    |
+| Antes de guardar una entidad   | Atributo | `validateSave <attrName>()`                             |                                     server                                    | sí                                    |
+|                                | Entity   | `validateSave()`                                        |                                     server                                    | sí                                    |
+| Al guardar una entidad         | Atributo | `saving <attrName>()`                                   |                                     server                                    | sí                                    |
+|                                | Entity   | `saving()`                                              |                                     server                                    | sí                                    |
+| Después de guardar una entidad | Entity   | `afterSave()`                                           |                                     server                                    | no                                    |
+| Before dropping an entity      | Atributo | `validateDrop <attrName>()`                             |                                     server                                    | sí                                    |
+|                                | Entity   | `validateDrop()`                                        |                                     server                                    | sí                                    |
+| Al soltar una entidad          | Atributo | `dropping <attrName>()`                                 |                                     server                                    | sí                                    |
+|                                | Entity   | `dropping()`                                            |                                     server                                    | sí                                    |
+| After dropping an entity       | Entity   | `afterDrop()`                                           |                                     server                                    | no                                    |
 
 :::note
 
@@ -89,26 +89,26 @@ Event functions accept a single *event* object as parameter. When the function i
 | "kind"              | siempre                                                                                                                  | String               | Event name: "touched", "validateSave", "saving", "afterSave", "validateDrop", "dropping", "afterDrop" |   |
 | *attributeName*     | Only for events implemented at attribute level ("validateSave", "saving", "validateDrop", "dropping") | String               | Nombre del atributo (por ejemplo, "nombre")                                                        |   |
 | *dataClassName*     | siempre                                                                                                                  | String               | Nombre de la Dataclass (*ej.* "Company")                                           |   |
-| "savedAttributes"   | Only in [`afterSave()`](#function-event-aftersave)                                                                       | Collection of String | Names of attributes properly saved                                                                                    |   |
-| "droppedAttributes" | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | Collection of String | Names of attributes properly dropped                                                                                  |   |
-| "saveStatus"        | Only in [`afterSave()`](#function-event-aftersave)                                                                       | String               | "success" if the save was successful, "failed" otherwise                                                              |   |
-| "dropStatus"        | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | String               | "success" if the drop was successful, "failed" otherwise                                                              |   |
+| "savedAttributes"   | Sólo en [`afterSave()`](#function-event-aftersave)                                                                       | Colección de cadenas | Names of attributes properly saved                                                                                    |   |
+| "droppedAttributes" | Sólo en [`afterDrop()`](#function-event-afterdrop)                                                                       | Colección de cadenas | Names of attributes properly dropped                                                                                  |   |
+| "saveStatus"        | Sólo en [`afterSave()`](#function-event-aftersave)                                                                       | String               | "success" if the save was successful, "failed" otherwise                                                              |   |
+| "dropStatus"        | Sólo en [`afterDrop()`](#function-event-afterdrop)                                                                       | String               | "success" if the drop was successful, "failed" otherwise                                                              |   |
 
-## Error object
+## Objeto de error
 
 [Some event functions](#summary-table) can return an **error object** to raise an error and stop the running action.
 
 When an error occurs in an event, the other events are stopped at the first raised error and the action (save or drop) is also stopped. This error is sent before other potential errors like [stamp has changed, entity locked](../API/EntityClass.md#save), etc.
 
-### Error object properties
+### Propiedades del objeto error
 
-| Propiedad          | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Set by the developer                      |
-| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| errCode            | Integer | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sí                                        |
-| message            | Text    | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Sí                                        |
-| extraDescription   | Object  | Free information to set up                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Sí                                        |
-| seriousError       | Boolean | Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Adds the `dk status validation failed` status</li> | Yes (default is false) |
-| componentSignature | Text    | Always "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | No                                        |
+| Propiedad          | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Definido por el desarrollador                |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| errCode            | Integer | Igual al comando [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Sí                                           |
+| message            | Text    | Igual al comando [`Last errors`](../commands/last-errors.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Sí                                           |
+| extraDescription   | Object  | Free information to set up                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Sí                                           |
+| seriousError       | Boolean | Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>`False`: creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Añade el estado `dk status validation failed`.</li> | Sí (por defecto es false) |
+| componentSignature | Text    | Always "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | No                                           |
 
 - [Serious errors](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.
 - In case of an error triggered by a **validate** event, the `seriousError` property allows you to choose the level of the error to generate:
@@ -135,11 +135,11 @@ This event is triggered each time a value is modified in the entity.
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
-- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
+- en **cliente/servidor con la [palabra clave `local`](../ORDA/ordaClasses.md#local-functions)** o en **4D monousuario**:
   - el usuario define un valor en un formulario 4D,
-  - el código 4D realiza una asignación con el operador `:=`. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
+  - el código 4D realiza una asignación con el operador `:=`. El evento también se activa en caso de autoasignación (`$entity.attribute:=$entity.attribute`).
 - in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
-- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.qodly.com/docs)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
+- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.4d.com/qodly)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
 - with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
 
 The function receives an [*event* object](#event-parameter) as parameter.
@@ -150,7 +150,7 @@ If this function [throws](../commands/throw) an error, it will not stop the unde
 
 Este evento también se activa:
 
-- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
+- cuando los atributos son asignados por el evento [`constructor()`](./ordaClasses.md#class-constructor-1),
 - when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
 
 :::
@@ -269,7 +269,7 @@ Note over Client:$people.lastname is uppercased
 
 ```
 
-#### Example 4 (diagram): Client/server without the `local` keyword
+#### Ejemplo 4 (diagrama): cliente/servidor sin la palabra clave `local`
 
 ```mermaid
 
@@ -348,26 +348,21 @@ It is not recommended to update the entity within this function (using `This`).
 
 #### Ejemplo
 
-In this example, the user is not allowed to save a product with a margin lower than the average. In case of an invalid price attribute, you return an error object and thus, stop the save action.
+In this example, it is not allowed to save a product with a margin lower than 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
 
 ```4d
 // ProductsEntity class
+//
+// validateSave event at attribute level
 Function event validateSave margin($event : Object) : Object
 	
 var $result : Object
-var $marginAverage : Real
 	
-$marginAverage:=ds.Products.query("category= :1"; This.category).average("margin")
-		
-If (This.margin<$marginAverage)
-	$result:={\
-    errCode: 1; \
-    message: "The margin of this product ("+String(This.margin)+") is under the average"; \
-	extraDescription: {\
-        info: "For the "+This.category+" category the margin average is: "+String($marginAverage)};\
-    fatalError: False}
+//The user can't create a product whose margin is < 50%
+If (This.margin<50)
+	$result:={errCode: 1; message: "The validation of this product failed"; \
+	extraDescription: {info: "The margin of this product ("+String(This.margin)+") is lower than 50%"}; seriousError: False}
 End if 
-	
 return $result
 
 ```
@@ -408,31 +403,34 @@ To stop the action, the code of the function must return an [error object](#erro
 
 #### Ejemplo
 
-When a product is saved, some information is logged to an external system which may be unavailable.
+When a file is saved on disk, catch errors related to disk space for example.
 
 ```4d
-Function event saving($event : Object) : Object
+// ProductsEntity class
+// saving event at attribute level
+Function event saving userManualPath($event : Object) : Object
 	
-var $result; $status : Object
-var $log : cs.Entity
-var $remote : 4D.DataStoreImplementation
-		
-Try	 
-	$remote:=Open datastore({hostname: "events@acme.com"}; "logs")	
-	$log:=$remote.Logs.new()
-	$log.productId:=This.ID
-	$log.stamp:=Timestamp
-	$log.event:="Created by "+Current user()
-	$status:=$log.save()
-Catch
-	$result:={\
-    errCode: Last errors.last().errCode;\
-    message: Last errors.last().message; \
-    extraDescription: {info: "The external Logs can't be reached"}}
-End try
+var $result : Object
+var $userManualFile : 4D.File
+var $fileCreated : Boolean
+	
+If (This.userManualPath#"")
+	$userManualFile:=File(This.userManualPath)
+				
+	// The user manual document file is created on the disk
+	// This may fail if no more space is available
+	Try
+		$fileCreated:=$userManualFile.create() 
+	Catch
+		// No more room on disk for example
+		$result:={/
+            errCode: 1; message: "Error during the save action for this product"; /
+            extraDescription: {info: "There is no available space on disk to store the user manual"}/
+        }
+	End try
+End if 
 	
 return $result
-
 
 ```
 
@@ -451,32 +449,28 @@ This event is useful after saving data to propagate the save action outside the 
 
 The function receives an [*event* object](#event-parameter) as parameter.
 
-- To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
+- To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
 - Throwing an [error object](#error-object) is **not supported** by this function.
 
-#### Ejemplo 1
+#### Ejemplo
 
-If an error occurred in the above saving event, the product is recorded in the ProductsInFailure dataclass so an employee can review it later.
+If an error occurred in the above saving event, the attribute value is reset accordingly in the `afterSave` event:
 
 ```4d
 // ProductsEntity class
 Function event afterSave($event : Object)
 	
-var $failure : cs.ProductsInFailureEntity
-var $status : Object
-
-    // $event.status.errors is filled if the error comes from a validateSave event
 If (($event.status.success=False) && ($event.status.errors=Null))  
-	$failure:=ds.ProductsInFailure.new()
-	$failure.name:=This.name
-	$failure.category:=This.category
-	$failure.costPrice:=This.costPrice
-	$failure.retailPrice:=This.retailPrice
-	$failure.reason:="Error during the save action"
-	$failure.stamp:=Timestamp
-	$status:=$failure.save()
-End if
-
+    // $event.status.errors is filled if the error comes from the validateSave event
+		
+	// The userManualPath attribute has not been properly saved
+	// Its value is reset
+	If ($event.savedAttributes.indexOf("userManualPath")=-1)
+		This.userManualPath:=""
+		This.status:="KO"
+	End if 
+		
+End if 
 ```
 
 ### `Function event validateDrop`
@@ -506,44 +500,24 @@ This event is triggered **before** the entity is actually dropped, allowing you 
 
 To stop the action, the code of the function must return an [error object](#error-object).
 
-#### Ejemplo 1
+#### Ejemplo
 
-Products can be deleted only if they have been flagged TO DELETE.
+In this example, it is not allowed to drop a product that is not labelled "TO DELETE". In this case, you return an error object and thus, stop the drop action.
 
 ```4d
-    //ProductsEntity class
+// ProductsEntity class
+
 Function event validateDrop status($event : Object) : Object
 
-If (This.status != "TO DELETE")
-        
-    var $result:= New object()
-    $result.errCode:=1
-    $result.message:="The record can't be deleted"
-    $result.extraDescription:={attribute; $event.attributeName; info: "The status must be TO DELETE"}
-    $result.fatalError:=False
-    return $result
+var $result : Object
+
+// Products must be marked as TO DELETE to be dropped
+If (This.status#"TO DELETE")
+    $result:={errCode: 1; message: "You can't drop this product"; \
+    extraDescription: {info: "This product must be marked as To Delete"}; seriousError: False}
 End if 
-```
 
-#### Ejemplo 2
-
-The user can delete products if they are flagged as "TO DELETE" and if their creation year is < current year -3.
-
-```4d
-    //ProductsEntity class
-Function event validateDrop($event : Object) : Object
-
-var $yearOffSet : Integer
-$yearOffSet:=Year of(Current date)-3
-
-If ((This.status != "TO DELETE") || (Year of(This.creationDate) >=  $yearOffSet))
-    var $result:=New object()
-    $result.errCode:=1
-    $result.message:="The record can't be deleted"
-    $result.extraDescription:={info: "The status must be TO DELETE and the creation year must be lower than " + String($yearOffSet)}
-    $result.fatalError:=False
-    return $result
-End if 
+return $result
 ```
 
 ### `Function event dropping`
@@ -579,54 +553,31 @@ The business logic should raise errors which cannot be detected during the `vali
 
 To stop the action, the code of the function must return an [error object](#error-object).
 
-#### Ejemplo 1
+#### Ejemplo
 
-When dropping an order with *totalPrice >= 500*, a log file is updated.
-
-```4d
-    //OrderEntity class
-Function event dropping totalPrice ($event : Object)
-
-var $log : cs.LogEntity
-var $status: Object
-
-If (This.totalPrice >= 500)
-
-    $log:=ds.Log.new()
-    $log.orderID:=This.ID
-    $log.orderPrice:=This.totalPrice
-    $log.event:="Drop"
-    $log.creationDate:=Current date()
-    $status:=$log.save()
-
-    If($status.success=False)
-        throw ({errCode: 1; message: "Error while updating the log file"})
-    End if
-End if
-
-```
-
-#### Ejemplo 2
-
-When a product is dropped, a log file is updated.
+Here is an example of `dropping` event at entity level:
 
 ```4d
-    //ProductsEntity class
-Function event dropping ($event : Object) 
+// ProductsEntity class
+Function event dropping($event : Object) : Object
 
-var $log : cs.LogEntity
-var $status: Object
+var $result : Object
+var $userManualFile : 4D.File
 
-$log:=ds.Log.new()
-$log.productID:=This.ID
-$log.productPrice:=This.price
-$log.event:="Drop"
-$log.creationDate:=Current date()
-$status:=$log.save()
+$userManualFile:=File(This.userManualPath)
 
-If($status.success=False)
-    throw ({errCode: 1; message:"Error while updating the log file"})
-End if
+    // When dropping a product, its user manual is also deleted on the disk
+    // This action may fail
+Try
+    If ($userManualFile.exists)
+        $userManualFile.delete()
+    End if 
+Catch
+    // Dropping the user manual failed
+    $result:={errCode: 1; message: "Drop failed"; extraDescription: {info: "The user manual can't be dropped"}}
+End try
+
+return $result
 ```
 
 ### `Function event afterDrop`
@@ -644,7 +595,7 @@ This event is useful after dropping data to propagate the drop action outside th
 
 The function receives an [*event* object](#event-parameter) as parameter.
 
-- To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
+- To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
 - Throwing an [error object](#error-object) is **not supported** by this function.
 
 :::note
@@ -653,50 +604,21 @@ The dropped entity is referenced by `This` and still exists in memory.
 
 :::
 
-#### Ejemplo 1
+#### Ejemplo
 
-Send a mail to the customer with the details of the dropped order.
-
-```4d
-    //OrderEntity class
-Function event afterDrop ($event : Object) 
-
-var $oAuth2 : cs.NetKit.OAuth2Provider
-var $google : cs.NetKit.Google
-
-    //$param contains clientId, secretId...
-$oAuth2:=cs.NetKit.OAuth2Provider.new($param)
-$google:=cs.NetKit.Google.new($oAuth2; {mailType: "JMAP"})
-
-    //Email creation
-$email:=New object
-$email.from:="youremail@gmail.com"
-$email.to:="destinationmail@mail.com"
-$email.subject:="Your order is cancelled"
-$email.textBody:="Products numbers: " + This.products.number.join("-")
-
-    //Email sending
-$status:=$google.mail.send($email)
-```
-
-#### Ejemplo 2
-
-Create an action to do because there were errors in the [`dropping()`](#function-event-dropping) event.
+If the drop action failed, then the product must be checked manually:
 
 ```4d
-    //ProductEntity class
-Function event afterDrop ($event : Object) 
+Function event afterDrop($event : Object)
 
-var $action: cs.ActionEntity
-var $status: Object
+var $status : Object
 
-    // The drop action failed   
-If($event.dropStatus = "failed")
-    $action:=ds.Action.new()
-    $action.label:=Last errors.first().message //message is "Error while dropping product XXX"
-    $action.status:="TO CHECK"
-    $status:=$action.save()
-End if
+If (($event.status.success=False) && ($event.status.errors=Null)) 
+        //$event.status.errors is filled 
+        //if the error comes from the validateDrop event
+    This.status:="Check this product - Drop action failed"
+    $status:=This.save()
+End if 
 
 ```
 

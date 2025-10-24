@@ -774,7 +774,7 @@ Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) a
 
 :::
 
-El singleton de la clase se instanciará en la primera llamada del comando [`cs.<class>.me`](../API/ClassClass.md#me) property. El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
+El singleton de la clase se instanciará en la primera llamada de la propiedad [`cs.<class>[.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
 
 Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 

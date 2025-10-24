@@ -469,7 +469,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 この関数は、データクラスのエンティティセレクションまたはエンティティが要求されるたびに呼び出されます。 フィルターは、エンティティセレクションが作成されたときに一度だけ実行されます。
 
-フィルターは、データクラスのエンティティセレクションを返さなければなりません。 戻り値のエンティティセレクションには、クエリの結果や、[`Storage`] に格納されているものなどが使えます。
+フィルターは、データクラスのエンティティセレクションを返さなければなりません。 It can be an entity selection built upon a query, stored in the [`Storage`](../API/SessionClass.md#storage), etc.
 
 :::note
 

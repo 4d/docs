@@ -9,7 +9,7 @@ Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin 
 
 Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de lenguaje](../category/web-area) así como [eventos de formulario](#form-events) genéricos y específicos permiten al desarrollador controlar el funcionamiento de las áreas web. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
 
-:::info Displaying Qodly pages
+:::info Mostrar páginas Qodly
 
 In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
 
@@ -53,7 +53,7 @@ Por ejemplo, llamando al método `HelloWorld` en 4D:
 $4d.HelloWorld();
 ```
 
-> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+> **Nota:** JavaScript es **sensible a mayúsculas**, así que el objeto se llama **`$4d`** (con una minúscula "d").
 
 ### Controlar el acceso a $4d
 
@@ -123,7 +123,7 @@ $4d.today(function(result)
 
 En lugar de utilizar un método independiente, también podemos definir una **clase** que se encargue del cálculo.
 
-Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
+Defina la clase con el método proyecto 4D `calcSum` que recibe parámetros y devuelve su suma:
 
 ```4d
 // SumCalculator user class

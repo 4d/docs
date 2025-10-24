@@ -80,7 +80,7 @@ Cette fonction ne fait rien et retourne toujours **True** avec les sessions clie
 
 La fonction `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->supprime tous les privilèges associés à la session (à l'exception des privilèges promus) et renvoie **True** si l'exécution a réussi<!-- END REF -->.
 
-Hormis si vous êtes en mode ["forceLogin"](../REST/authUsers.md#force-login-mode), la session devient automatiquement une session Invité. En mode "forceLogin", `.clearPrivileges()` ne transforme pas la session en session Invité, elle efface seulement les privilèges de la session.
+Hormis si vous êtes en mode ["forceLogin"](../REST/authUsers.md#force-login-mode), la session devient automatiquement une session Guest. En mode "forceLogin", `.clearPrivileges()` ne transforme pas la session en session Invité, elle efface seulement les privilèges de la session.
 
 :::note
 
@@ -120,7 +120,7 @@ $isGuest:=Session.isGuest() //$isGuest est True
 | Paramètres | Type    |                             | Description                                  |
 | ---------- | ------- | :-------------------------: | -------------------------------------------- |
 | lifespan   | Integer |              ->             | Durée de vie du token de session en secondes |
-| Résultat   | Text    | <- | UUID of the OTP token                        |
+| Résultat   | Text    | <- | UUID du token OTP                            |
 
 <!-- END REF -->
 
@@ -735,7 +735,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 :::note
 
-Cette fonction ne fait rien et retourne toujours **False** avec les sessions client distants, procédures stockées et autonomes.
+Cette fonction ne fait rien et retourne toujours **False** avec les sessions client distantes, procédures stockées et autonomes.
 
 :::
 

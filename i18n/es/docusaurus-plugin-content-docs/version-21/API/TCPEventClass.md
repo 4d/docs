@@ -16,7 +16,7 @@ The `TCPEvent` class provides information about events occurring during the life
 
 ### Objeto TCPEvent
 
-A `TCPEvent` object is immutable and non-streamable.
+Un objeto `TCPEvent` es inmutable y no se puede transmitir.
 
 Las siguientes propiedades están disponibles:
 
@@ -81,9 +81,9 @@ La propiedad `.type` contiene <!-- REF #TCPEvent.type.Summary -->el tipo del eve
 
 - `"connection"`: Indicates that a TCPConnection was successfully established.
 - `"data"`: indica que los datos han sido recibidos.
-- `"error"`: Indicates that an error occurred during the TCPConnection.
-- `"close"`: Indicates that the TCPConnection has been properly closed.
-- `"terminate"`: Indicates that the TCPConnection is about to be released.
+- `"error"`: indica que se ha producido un error durante la TCPConnection.
+- `"close"`: indica que la TCPConnection ha sido correctamente cerrada.
+- `"terminate"`: indica que el TCPConnection está a punto de ser liberado.
 
 <!-- END REF -->
 

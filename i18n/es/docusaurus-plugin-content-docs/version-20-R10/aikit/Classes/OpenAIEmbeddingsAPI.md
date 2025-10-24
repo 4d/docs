@@ -5,7 +5,7 @@ title: OpenAIEmbeddingsAPI
 
 # OpenAIEmbeddingsAPI
 
-The `OpenAIEmbeddingsAPI` provides functionalities to create embeddings using OpenAI's API.
+`OpenAIEmbeddingsAPI` ofrece funcionalidades para crear integraciones utilizando la API de OpenAI.
 
 https://platform.openai.com/docs/api-reference/embeddings
 

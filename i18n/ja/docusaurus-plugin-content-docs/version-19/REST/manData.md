@@ -22,7 +22,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 [\{dataClass\}(\{key\})](dataClass.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](ClassFunctions.md#関数の呼び出し) を用意することもできます。
 
-Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) on one or more attributes (even relation attributes).
+戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
 
 
 ## データのナビゲーション

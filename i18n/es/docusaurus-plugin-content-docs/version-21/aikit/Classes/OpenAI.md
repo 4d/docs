@@ -9,12 +9,12 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 ## Propiedades de configuración
 
-| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional       |
-| ---------------------- | ---- | ---------------------------------------------------------------------------- | -------------- |
-| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | No para OpenAI |
-| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Sí             |
-| `organization`         | Text | Su ID de organización OpenAI.                                | Sí             |
-| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí             |
+| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional                                                  |
+| ---------------------- | ---- | ---------------------------------------------------------------------------- | --------------------------------------------------------- |
+| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | Puede ser requerido por el proveedor                      |
+| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Yes (if omitted = use OpenAI provider) |
+| `organization`         | Text | Su ID de organización OpenAI.                                | Sí                                                        |
+| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí                                                        |
 
 ### Propiedades HTTP adicionales
 
@@ -29,9 +29,9 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 Crear una instancia de la clase cliente OpenAI.
 
-| Nombre del argumento      | Tipo           | Descripción                                             |
-| ------------------------- | -------------- | ------------------------------------------------------- |
-| `apiKey or configuration` | Texto u objeto | apiKey if Text or configuration Object. |
+| Nombre del argumento      | Tipo           | Descripción                                               |
+| ------------------------- | -------------- | --------------------------------------------------------- |
+| `apiKey or configuration` | Texto u objeto | apiKey si Text u objeto de configuración. |
 
 #### Llave API
 

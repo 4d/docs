@@ -128,7 +128,11 @@ L’exemple suivant interdit toute nouvelle connexion entre 2 et 4 heures du mat
   // Méthode base Sur ouverture connexion serveur
  #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
  
- If((?02:00:00?<=Current time)&(Current time
+ If((?02:00:00?<=Current time)&(Current time<?04:00:00?))
+    $result:=22000
+ Else
+    $result:=0
+ End if
 ```
 
 

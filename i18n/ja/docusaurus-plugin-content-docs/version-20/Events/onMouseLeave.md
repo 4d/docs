@@ -14,7 +14,7 @@ title: On Mouse Leave
 
 `On Mouse Leave` イベントは、*MouseX* および *MouseY* システム変数を更新します。
 
-Objects that are made invisible using the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+[`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドの使用や、[表示状態](FormObjects/properties_Display.md#表示状態) プロパティの設定によって非表示にされたオブジェクトでは、このイベントは生成されません。
 
 
 ### コールスタック

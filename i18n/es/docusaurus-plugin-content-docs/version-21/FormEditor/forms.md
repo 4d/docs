@@ -96,72 +96,80 @@ No hay restricciones en el número de páginas que puede tener un formulario. El
 
 Un formulario multipáginas tiene una página de fondo y varias páginas de visualización. Los objetos que se colocan en la página de fondo pueden ser visibles en todas las páginas de visualización, pero sólo se pueden seleccionar y editar en la página de fondo. En los formularios multipágina, debe colocar su paleta de botones en la página de fondo. También es necesario incluir uno o más objetos en la página de fondo que ofrezcan las herramientas de navegación para el usuario.
 
-## Fluent UI rendering (Developer Preview)
+## Renderizado Fluent UI (Developer Preview)
 
-On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
+En Windows, 4D soporta el renderizado de formularios **Fluent UI**, el moderno diseño gráfico de la interfaz de usuario de Microsoft, basado en la tecnología **WinUI 3**. **WinUI 3** es la base del Windows App SDK y representa las próximas interfaces gráficas de Windows.
+
+La renderización Fluent UI ofrece controles modernos y atractivos, compatibilidad con los temas sistema dark/light, renderización más fluida optimizada para pantallas de alta resolución y una experiencia de usuario coherente y alineada con las aplicaciones recientes de Microsoft.
+
+| Light theme                             | Dark theme                                   |
+| --------------------------------------- | -------------------------------------------- |
+| ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
 
 :::caution Vista previa para desarrolladores
 
-Fluent UI support is currently in the Developer Preview phase. No debe utilizarse en producción.
+La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Preview. No debe utilizarse en producción.
 
 :::
 
 :::info macOS
 
-This feature can only be used on Windows. On macOS, it is ignored.
+Esta funcionalidad sólo se puede utilizar en Windows. En macOS, se ignora.
 
 :::
 
-### Fluent UI rendering availability
+:::tip Entrada de blog relacionada
 
-The Fluent UI rendering is available in the following execution environments only:
-
-- Windows with [Windows App SDK](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) version 1.7.3 installed (you need to install this SDK on any Windows machine displaying your forms).
-- Fusionado aplicación 4D [autónomo](../Desktop/building.md#build-stand-alone-application) o [cliente](../Desktop/building.md#build-client-application)
-- [**Test application** feature](../Menus/bars.md#previewing-menu-bars) available from the Run menu.
-
-:::note
-
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+[Modernice sus interfaces 4D con Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
 
 :::
 
-### Enabling the Fluent UI rendering
+### Requisitos
 
-You can enable the Fluent UI rendering mode at the application level or at the form level. Form setting has priority over application setting.
+La renderización Fluent UI requiere que esté instalado [**Windows App SDK versión 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Debe instalar este SDK en cualquier máquina Windows que muestre sus formularios.
 
-#### Application setting
+Si el Windows App SDK no está correctamente instalado, 4D renderizará todos sus formularios en modo clásico sin error.
 
-Check the **Use Fluent UI on Windows** option in the "Interface" page of the Settings dialog box.
+### Activar el renderizado Fluent UI
+
+Puede activar el modo de renderizado Fluent UI a nivel de aplicación o a nivel de formulario. La configuración del formulario tiene prioridad sobre la configuración de la aplicación.
+
+#### Parámetros de la aplicación
+
+Seleccione la opción **Utilizar Fluent UI en Windows** en la página "Interfaz" de la caja de diálogo de las Propiedades.
 
 ![](../assets/en/FormObjects/fluentui-setting.png)
 
-In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
+En este caso, el modo de renderizado Fluent UI se utilizará por defecto en Windows para todos los formularios.
 
-#### Form setting
+#### Parámetros del formulario
 
-Each form can define its own rendering via the **Widget appearance** property. Las siguientes opciones están disponibles:
+Cada formulario puede definir su propio renderizado a través de la propiedad **Apariencia de los Widgets**. Las siguientes opciones están disponibles:
 
-- **Inherited**: inherits the global application setting (default),
-- **Classic**: uses the classic Windows style,
-- **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
+- **Heredado**: hereda las propiedades globales de la aplicación (por defecto),
+- **Classic**: utiliza el estilo clásico de Windows,
+- **Fluent UI**: permite el renderizado moderno basado en Fluent UI. <br/>
   ![](../assets/en/FormObjects/fluentui-form.png)
 
-The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
+La [propiedad de formulario JSON](./properties_JSONref.md) correspondiente es `fluentUI` con el valor undefined (es decir, heredado, valor por defecto), "true" o "false".
 
-### Features and limitations
+### Comportamientos específicos
 
-Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
-When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
+- El nuevo comando `FORM Windows theme` devuelve el tema de visualización actual del formulario. Valores posibles: "Classic" o "FluentUI". Si no existe un formulario actual o el comando se ejecuta en macOS, se devuelve una cadena vacía.
+- Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
+- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
+- El objeto de formulario [Stepper](../FormObjects/stepper.md) no admite el [evento doble clic](../Events/onDoubleClicked.md).
+- Los [botones circulares](../FormObjects/button_overview.md#circle) son soportados (como en macOS).
+- Los comandos [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) no son compatibles en áreas Web con motor de renderizado sistema.
+- Se puede añadir rectángulo de foco a las [entradas](../FormObjects/input_overview.md) imagen y texto.
 
-- The `FORM Window theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
-- If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
-- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
-- [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
-- [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
-- The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
+:::info Limitaciones
+
+Esta **Vista previa para desarrolladores** incluye algunas limitaciones, que se [enumeran en la entrada del blog relacionado](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
+
+:::
 
 ## Formularios heredados
 

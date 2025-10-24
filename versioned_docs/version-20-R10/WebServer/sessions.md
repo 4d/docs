@@ -209,9 +209,9 @@ Else
 End if
 ```
 
-:::note
+:::tips Related blog posts
 
-For more examples, please refer to the [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) bog post. 
+[Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) 
 
 :::
 

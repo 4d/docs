@@ -295,12 +295,6 @@ The legacy syntax for declaring variadic parameters (`C_TEXT(${4})`) is deprecat
 
 :::
 
-## Triggers e On Drag Over
-
-Alguns contextos não suportam a declaração em um método "Compiler_", portanto, são tratados especificamente:
-
-- Triggers - O parâmetro $0 (Longint), o resultado de um trigger, será tipado pelo compilador se o parâmetro não tiver sido declarado explicitamente. Entretanto, se quiser declará-lo, deve fazer isso no próprio trigger.
-
 ## Tipo de parámetro equivocado
 
 Calling a parameter with an wrong type or a wrong class (for object parameters) is an [error](error-handling.md) that prevents correct execution. Por exemplo se executar os métodos

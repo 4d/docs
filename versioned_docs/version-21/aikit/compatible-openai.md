@@ -7,7 +7,7 @@ title: Providers
 
 Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
 
-To do so you just have to change the original `baseURL` by the provider one and use their api key if needed.
+To do so you just have to set the `baseURL` to the provider one and use their api key if needed.
 
 ```4d
 $client.baseURL:="https://api.mistral.ai/v1"
@@ -17,7 +17,7 @@ Some of them
 
 ## Remote
 
-|Provider|Base url|
+|Provider|baseURL|
 |-|-|
 |https://mistral.ai/|https://api.mistral.ai/v1|
 |https://www.deepseek.com/|https://api.deepseek.com| 
@@ -31,7 +31,7 @@ Some of them
 
 ## Local
 
-| Provider           | Default base url          | Doc                                           |
+| Provider           | Default baseURL          | Doc                                           |
 |------------------  |---------------------------|-----------------------------------------------|
 |https://ollama.com/ | http://127.0.0.1:11434/v1 | https://ollama.com/blog/openai-compatibility  |
 |https://lmstudio.ai/| http://localhost:1234/v1  | https://lmstudio.ai/docs/api/endpoints/openai |

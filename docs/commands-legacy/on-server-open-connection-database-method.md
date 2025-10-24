@@ -125,7 +125,11 @@ The following example prevents any new connection from 2 to 4 A.M.
   // On Server Open Connection Database Method
  #DECLARE($user: Integer; $id: Integer; $toIgnore : Integer) -> $result : Integer
  
- If((?02:00:00?<=Current time)&(Current time
+ If((?02:00:00?<=Current time)&(Current time<?04:00:00?))
+    $result:=22000
+ Else
+    $result:=0
+ End if
 ```
 
 

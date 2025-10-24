@@ -11,8 +11,8 @@ To define HTTP rules, you just need to write some RegEx to declare the URL patte
 
 HTTP rules are supported in the following contexts:
 
-- [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
-- a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
+- les [sessions extensibles](./sessions.md#enabling-web-sessions) ou [pas de sessions](../settings/web.md#no-sessions) sont activées,
+- un serveur web exécuté localement par 4D ou 4D Server, y compris ceux [exécutés par des composants](./webServerObject.md).
 
 ## How to set rules
 
@@ -64,12 +64,17 @@ The following action keywords are supported:
 
 ### Non-modifiable headers
 
-The following headers could not be modified by the `removeHeaders`, `setHeaders`, or `addHeaders` actions:
+Some headers could not be added, modified or removed:
 
-- "Date",
-- "Content-Length"
+| Header           | Ajouter | Set        | Remove |
+| ---------------- | ------- | ---------- | ------ |
+| Date             | Non     | Non        | Non    |
+| Content-Length   | Non     | Non        | Non    |
+| Content-Encoding | Non     | Non        | Non    |
+| Vary             | Oui     | Non        | Non    |
+| Set-Cookie       | Oui     | Add cookie | Non    |
 
-Modifying these headers do not generate errors, however modifications will be ignored.
+Unauthorized changes on these headers do not generate errors, however modifications will be ignored.
 
 ### Current rules
 
@@ -215,7 +220,7 @@ $return:=WEB Server.start($settings)
 
 ```
 
-:::tip Related blog post
+:::tip Article(s) de blog sur le sujet
 
 [New Way to Control Your HTTP Responses](https://blog.4d.com/new-way-to-control-your-http-responses/)
 

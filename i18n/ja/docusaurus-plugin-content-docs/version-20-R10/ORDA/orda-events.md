@@ -1,6 +1,6 @@
 ---
 id: orda-events
-title: ORDA Events
+title: Entity Events
 ---
 
 <details><summary>履歴</summary>
@@ -11,13 +11,13 @@ title: ORDA Events
 
 </details>
 
-ORDA events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
 
 You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
 
 :::info note Compatibility note
 
-ORDA events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
 
 :::
 
@@ -25,7 +25,7 @@ ORDA events in the datastore are equivalent to triggers in the 4D database. Howe
 
 ### Event level
 
-A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
+A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
 
 It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute.
 
@@ -49,7 +49,7 @@ With other remote configurations (i.e. Qodly applications, [REST API requests](.
 
 ### Summary table
 
-The following table lists ORDA events along with their rules.
+The following table lists ORDA entity events along with their rules.
 
 | イベント                 | レベル    | Function name                                           |                 (C/S) Executed on                 |
 | :------------------- | :----- | :------------------------------------------------------ | :------------------------------------------------------------------: |
@@ -67,11 +67,11 @@ The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actu
 
 Event functions accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
 
-| プロパティ名          | 利用可能性                                  | 型   | 説明                                                                                     |
-| :-------------- | :------------------------------------- | :-- | :------------------------------------------------------------------------------------- |
-| `kind`          | Always                                 | 文字列 | Event name ("touched")                                              |
-| *attributeName* | Only for events involving an attribute | 文字列 | Attribute name (*e.g.* "firstname") |
-| *dataClassName* | Always                                 | 文字列 | Dataclass name (*e.g.* "Company")   |
+| プロパティ名          | 利用可能性        | 型   | 説明                                                                                     |
+| :-------------- | :----------- | :-- | :------------------------------------------------------------------------------------- |
+| `kind`          | Always       | 文字列 | イベント名("touched")                                                    |
+| *attributeName* | 属性に関するイベントのみ | 文字列 | Attribute name (*e.g.* "firstname") |
+| *dataClassName* | Always       | 文字列 | Dataclass name (*e.g.* "Company")   |
 
 ## Event function description
 
@@ -87,8 +87,8 @@ Event functions accept a single *event* object as parameter. When the function i
 
 This event is triggered each time a value is modified in the entity.
 
-- if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
-- if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性における変更に対してトリガーされます。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対する変更に対してのみトリガーされます。
 
 This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
 
@@ -101,7 +101,7 @@ This event is triggered as soon as the 4D Server / 4D engine can detect a modifi
 
 The function receives an [*event* object](#event-parameter) as parameter.
 
-If this event [throws](../commands-legacy/throw.md) an error, it will not stop the undergoing action.
+このイベントがエラーを[throw](../commands-legacy/throw.md) する場合でも、進行中のアクションは停止しません。
 
 :::note
 

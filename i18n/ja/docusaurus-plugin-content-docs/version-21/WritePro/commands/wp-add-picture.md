@@ -20,7 +20,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-**WP Add picture** コマンドは、<!--REF #_command_.WP Add picture.Summary--> 引数として渡されたピクチャーを*wpDoc* 引数で指定したドキュメント内での固定された場所にアンカーし、その参照を返します。<!-- END REF--> 返された参照は、 [WP SET ATTRIBUTES](wp-set-attributes.md) コマンドへと渡すことで*wpDoc* 引数で指定したドキュメント内の(ページ、セクション、ヘッダー、フッター等の)任意の位置へと移動させることができます。 レイヤーやサイズなども指定可能です。
+**WP Add picture** コマンドは、<!--REF #_command_.WP Add picture.Summary-->引数として渡されたピクチャーを、*wpDoc* 引数で指定されたドキュメント内の固定された位置にアンカーし、その参照を返します。<!-- END REF--> その返された参照は、[WP SET ATTRIBUTES](wp-set-attributes.md) コマンドに渡すことによって *wpDoc* (ページ、セクション、ヘッダー、フッター、他)引数内の任意の位置にピクチャーを移動させることができます。 レイヤーやサイズなども指定可能です。
 
 *wpDoc* 引数には、4D Write Pro ドキュメントオブジェクトを渡します。
 

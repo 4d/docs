@@ -5,7 +5,7 @@ title: OpenAIImagesAPI
 
 # OpenAIImagesAPI
 
-The `OpenAIImagesAPI` provides functionalities to generate images using OpenAI's API.
+La `OpenAIImagesAPI` ofrece funcionalidades para generar imágenes utilizando la API de OpenAI.
 
 https://platform.openai.com/docs/api-reference/images
 

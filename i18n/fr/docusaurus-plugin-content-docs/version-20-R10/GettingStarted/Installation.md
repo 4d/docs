@@ -7,7 +7,7 @@ Bienvenue dans 4D ! Cette page regroupe toutes les informations nécessaires sur
 
 ## Configuration requise
 
-La page [Téléchargements](https://us.4d.com/product-download) dut site de 4D fournit des informations sur les pré-requis macOS / Windows nécessaires à la gamme 4D.
+La page [Téléchargements](https://us.4d.com/product-download) du site de 4D fournit des informations sur les pré-requis macOS / Windows nécessaires à la gamme 4D.
 
 Des détails techniques supplémentaires sont disponibles sur la [page Ressources](https://us.4d.com/resources/feature-release) du site web de 4D.
 

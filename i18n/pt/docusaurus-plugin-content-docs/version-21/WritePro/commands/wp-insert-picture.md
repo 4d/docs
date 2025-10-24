@@ -10,20 +10,20 @@ displayed_sidebar: docs
 
 | Parâmetro      | Tipo                     |                             | Descrição                                                                 |
 | -------------- | ------------------------ | --------------------------- | ------------------------------------------------------------------------- |
-| targetObj      | Object                   | &#8594; | Intervalo ou elemento ou documento 4D Write Pro                           |
+| targetObj      | Object                   | &#8594; | Range or element or 4D Write Pro document                                 |
 | picture        | Imagem                   | &#8594; | Campo de imagem ou variável, ou caminho para o arquivo de imagem no disco |
 | pictureFileObj | 4D. File | &#8594; | Um objeto de arquivo representando um arquivo de imagem.  |
 | mode           | Integer                  | &#8594; | Modo de inserção                                                          |
 | rangeUpdate    | Integer                  | &#8594; | Modo de atualização de intervalo                                          |
-| Resultado      | Object                   | &#8592; | Objeto referenciando a imagem                                             |
+| Resultado      | Object                   | &#8592; | Object referencing the picture                                            |
 
 <!-- END REF-->
 
 ## Descrição
 
-O comando **WP Insert picture** <!--REF #_command_.WP Insert picture.Summary--> insere uma *imagem* ou um *pictureFileObj* no *targetObj* especificado de acordo com os parâmetros *modo* de inserção passada e *rangeUpdate*, e retorna uma referência ao elemento imagem. <!-- END REF--> A imagem será inserida como um caractere no *targetObj*.
+O comando **WP Insert picture**<!--REF #_command_.WP Insert picture.Summary--> insere uma *picture* ou um *pictureFileObj* no *targetObj* de acordo com os parâmetros *mode* e *rangeUpdate* , e retorna uma referência ao elemento imagem.<!-- END REF--> A imagem será inserida como um caractere no *targetObj*.
 
-Em *targetObj*, pode-se passar:
+Em *targetObj*, você pode passar:
 
 - Um intervalo
 - Um elemento (tabela / linha / parágrafo / corpo / cabeçalho / rodapé / imagem em linha / seção / subseção)
@@ -34,18 +34,18 @@ Para o segundo parâmetro, você também pode passar:
 - Em *picture*:
   - Um campo de imagem ou variável
   - Uma string que contém um caminho para um arquivo de imagem armazenado no disco, na sintaxe do sistema.
-    Se você usar uma string, você poderá passar um nome completo ou um nome de caminho relativo ao arquivo de estrutura do banco de dados. Você também pode passar um nome de arquivo, neste caso o arquivo deve estar localizado ao lado do arquivo de estrutura de banco de dados. Se você passar um nome de arquivo, você deve indicar a extensão do arquivo.
+    Se você usar uma string, você poderá passar um nome completo ou um nome de caminho relativo ao arquivo de estrutura do banco de dados. You can also pass a file name, in which case the file must be located next to the database structure file. Se você passar um nome de arquivo, você deve indicar a extensão do arquivo.
 - Em *pictureFileObj*: um objeto `File` que representa um arquivo imagem.
 
-Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). Se a imagem encapsular vários formatos (codecs), 4D Write Pro apenas mantém um formato para exibição e um formato para impressão (se diferente) no documento; os "melhores" formatos são selecionados automaticamente.
+Qualquer formato imagem [suportado por 4D](../../FormEditor/pictures.md#native-formats-supported) pode ser usado. Você pode obter a lista de formatos de imagens disponíveis usando o comando [PICTURE CODEC LIST](../../commands-legacy/picture-codec-list.md). If the picture encapsulates several formats (codecs), 4D Write Pro only keeps one format for display and one format for printing (if different) in the document; the "best" formats are automatically selected.
 
 No parâmetro *modo*, passe uma das seguintes constantes para indicar o modo de inserção a ser usado na imagem no documento:
 
-| Parâmetros | Tipo    | Valor | Comentário                         |
-| ---------- | ------- | ----- | ---------------------------------- |
-| wk append  | Integer | 2     | Inserir conteúdo no final do alvo  |
-| wk prepend | Integer | 1     | Inserir conteúdo no início do alvo |
-| wk replace | Integer | 0     | Replace target contents            |
+| Parâmetros | Tipo    | Valor | Comentário                             |
+| ---------- | ------- | ----- | -------------------------------------- |
+| wk append  | Integer | 2     | Insert contents at end of target       |
+| wk prepend | Integer | 1     | Insert contents at beginning of target |
+| wk replace | Integer | 0     | Replace target contents                |
 
 Se *targetObj* for um intervalo, você poderá usar opcionalmente o parâmetro *rangeUpdate* para passar uma das seguintes constantes para especificar se a imagem inserida está ou não incluída no intervalo resultante:
 

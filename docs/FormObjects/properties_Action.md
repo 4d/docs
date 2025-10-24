@@ -15,7 +15,7 @@ Two drag modes are available:
 In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme. 
 - **Automatic**: In this mode, 4D **copies** text or pictures directly from the form object. It can then be used in the same 4D area, between two 4D areas, or between 4D and another application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:  
 ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
-![](../assets/en/FormObjects/property_automaticDragDrop2.png)
+![](../assets/en/FormObjects/property_automaticDragDrop2.png)<br/>
 In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. This option is not available for pictures.
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv20/4D/20.6/Drag-and-Drop.300-7487471.en.html) in the *4D Language Reference* manual.
@@ -205,7 +205,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 ---
 ## Standard action
 
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) section of the *Design Reference*.
+Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) section of the *Design Reference*. There are also [standard actions specific to 4D Write Pro areas](../WritePro/user-legacy/defining-a-4d-write-pro-area.md#standard-actions).
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
 
@@ -214,7 +214,7 @@ You can assign both a standard action and a project method to an object. In this
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|action|string |The name of a [valid standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html).|
+|action|string |The name of a valid [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) or [4D Write Pro standard action](../WritePro/user-legacy/defining-a-4d-write-pro-area.md#standard-actions). |
 
 #### Objects Supported
 
