@@ -5,6 +5,15 @@ slug: /commands/new-process
 displayed_sidebar: docs
 ---
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21|Removed specific local process handling|
+
+</details>
+
+
 <!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 | Parameter | Type |  | Description |
@@ -41,9 +50,7 @@ The *stack* parameter allows you to indicate the amount of memory allocated for 
 
 ### Process Name 
 
- You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be the empty string. You can make a process local in scope by prefixing its name with the dollar sign (*$*). 
-
-**Important:** Remember that local processes should not access data in Client/Server. For more information, please refer to the [Global and Local Processes](../Develop/processes.md#global-and-local-processes) section. 
+ You pass the name of the new process in *name*. This name will appear in the list of processes of the Runtime Explorer and will be returned by the [Process info](../commands/process-info.md) command when applied to this new process. You can omit this parameter; if you do so, the name of the process will be an empty string. 
 
 ### Parameters to Process Method 
 
