@@ -3,7 +3,7 @@ id: shared
 title: Objetos y colecciones compartidos
 ---
 
-**Los objetos compartidos** y **las colecciones compartidas** son [objetos](./dt_object.md) y [colecciones](./dt_collection.md) específicas cuyo contenido se comparte entre procesos. A diferencia de las [variables interproceso](./variables.md#interprocess-variables), los objetos compartidos y las colecciones compartidas tienen la ventaja de ser compatibles con los **procesos 4D apropiativos**: pueden pasarse por referencia como parámetros a comandos como [`New process`](../commands-legacy/new-process.md) o [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Los objetos compartidos** y **las colecciones compartidas** son [objetos](./dt_object.md) y [colecciones](./dt_collection.md) específicas cuyo contenido se comparte entre procesos. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Los objetos compartidos y las colecciones compartidas se almacenan en variables estándar [`Object`](./dt_object.md) y [`Collection`](./dt_collection.md), pero deben instanciarse utilizando comandos específicos:
 
@@ -99,7 +99,7 @@ La sintaxis de la estructura `Use...End use` es:
 
 La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
 
-Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Se pueden pasar por referencia como parámetros de un proceso a otro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
+Shared objects and shared collections are designed to allow communication between processes, in particular, *[Preemptive processes](../Develop/preemptive.md)*. Se pueden pasar por referencia como parámetros de un proceso a otro. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
 
 - Una vez que la línea **Use** se ejecuta con éxito, todas las propiedades/elementos de *Shared_object_or_Shared_collection* están bloqueados para todos los demás procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
 - La secuencia *statement(s)* puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.

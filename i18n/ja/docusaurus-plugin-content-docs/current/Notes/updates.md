@@ -289,7 +289,7 @@ In binary databases, you need to select the required components in the 4D instal
 
 ## 4D 20.x LTS
 
-[**4D 20.x LTS のリリースノート**](../../versioned_docs/version-20/Notes/updates.md) を参照して下さい。
+[**4D 20.x LTS のリリースノート**](../../20/Notes/updates) を参照して下さい。
 
 ## ライブラリの一覧
 

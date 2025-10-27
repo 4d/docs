@@ -3,7 +3,7 @@ id: shared
 title: Objets et collections partagés
 ---
 
-**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. Contrairement aux [variables interprocess](./variables.md#interprocess-variables), les objets partagés et les collections partagées ont l'avantage d'être compatibles avec les **process 4D préemptifs** : ils peuvent être passés par référence en tant que paramètres à des commandes telles que [`New process`](../commands-legacy/new-process.md) ou [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Les objets partagés** et **les collections partagées** sont des [objets](./dt_object.md) et des [collections](./dt_collection.md) spécifiques dont le contenu est partagé entre les process. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Les objets partagés et les collections partagées sont stockés dans des variables standard de type [`Object`](./dt_object.md) et [`Collection`](./dt_collection.md), mais doivent être instanciés à l'aide de commandes spécifiques :
 
@@ -99,7 +99,7 @@ La syntaxe de la structure `Use...End use` est la suivante :
 
 La structure `Use...End use` définit une séquence d'instructions qui exécutera des tâches sur le paramètre *Shared_object_or_Shared_collection* sous la protection d'un sémaphore interne. *Shared_object_or_Shared_collection* peut être tout objet partagé ou collection partagée valide.
 
-Les objets partagés et les collections partagées permettent d'établir des communications entre les process, en particulier les **process 4D préemptifs**. Ils peuvent être passés par référence en paramètre d'un process à un autre. Encadrer les modifications d'objets partagés et de collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
+Shared objects and shared collections are designed to allow communication between processes, in particular, *[Preemptive processes](../Develop/preemptive.md)*. Ils peuvent être passés par référence en paramètre d'un process à un autre. Encadrer les modifications d'objets partagés et de collections partagées à l'aide des mots-clés `Use...End use` est obligatoire pour empêcher les accès concurrents entre les process.
 
 - Une fois que la ligne **Use** est exécutée avec succès, toutes les propriétés/éléments de *Shared_object_or_Shared_collection* sont verrouillé(e)s en écriture pour tous les autres process jusqu'à ce que la ligne **End use** correspondante soit exécutée.
 - La séquence *statement(s)* peut exécuter n'importe quelle modification sur les propriétés/éléments de Shared_object_or_Shared_collection sans risque d'accès concurrents.
