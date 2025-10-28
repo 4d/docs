@@ -5,32 +5,36 @@ slug: /commands/register-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomClient* {; *période*}{; *} )<!-- END REF-->
+<details><summary>Historique</summary>
+
+|Release|Modifications|
+|---|---|
+|21|Paramètre \* ignoré|
+|11.3|Paramètre *période* ignoré |
+
+</details>
+
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomClient* )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomClient | Text | &#8594;  | Nom de la session cliente 4D |
-| période | Integer | &#8594;  | *** Ignoré depuis la version 11.3 *** |
-| * | Opérateur | &#8594;  | Process local |
 
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [EXECUTE ON CLIENT](execute-on-client.md).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.
+<!--REF #_command_.REGISTER CLIENT.Summary-->La commande **REGISTER CLIENT** “inscrit” un poste client 4D sous le nom *nomClient* auprès de 4D Server, afin de permettre que d’autres clients ou éventuellement 4D Server (par l’intermédiaire de procédures stockées) puissent y exécuter des méthodes à l’aide de la commande [`EXECUTE ON CLIENT`](execute-on-client.md).<!-- END REF--> Une fois inscrit, un client 4D peut donc exécuter une ou plusieurs méthodes pour le compte d’autres clients.
 
 **Notes :** 
 
-* Vous pouvez également inscrire automatiquement chaque poste client qui se connecte à 4D Server via l'option “Inscrire les clients au démarrage pour Exécuter sur client” dans la boîte de dialogue des Préférences (cf. manuel Mode Développement).
+* Vous pouvez également inscrire automatiquement chaque poste client qui se connecte à 4D Server via l'option “Inscrire les clients au démarrage pour Exécuter sur client” dans la boîte de dialogue des Propriétés.
 * Lorsqu’elle est utilisée avec 4D en mode local, cette commande ne fait rien.
 * Plusieurs postes clients 4D peuvent avoir le même nom d’inscription.
 
-A l’issue de l’exécution de la commande, un process, nommé *nomClient*, est créé sur le poste client. Ce process ne peut être détruit que par la commande [UNREGISTER CLIENT](unregister-client.md).   
-Si le paramètre optionnel *\** est passé, le process créé est local (4D ajoute automatiquement le signe $ au nom du process). Sinon, il est global. 
+A l’issue de l’exécution de la commande, un process, nommé *nomClient*, est créé sur le poste client. Ce process ne peut être détruit que par la commande [`UNREGISTER CLIENT`](unregister-client.md).   
 
-**Note de compatibilité :** Depuis la version 11.3 de 4D, les mécanismes de communication serveur/client ont été optimisés. Désormais, le serveur envoie directement aux clients inscrits les requêtes d'exécution lorsque c'est nécessaire (technologie "push"). Le principe précédent selon lequel les clients interrogeaient périodiquement le serveur n'est plus utilisé. Le paramètre *période* est ignoré lorsqu'il est passé.
-
-Une fois la commande exécutée, il n’est pas possible de modifier “à la volée” le nom du client 4D. Pour cela, il est nécessaire d’appeler la commande [UNREGISTER CLIENT](unregister-client.md) puis d’exécuter à nouveau **REGISTER CLIENT**.
+Une fois la commande exécutée, il n’est pas possible de modifier “à la volée” le nom du client 4D. Pour cela, il est nécessaire d’appeler la commande [`UNREGISTER CLIENT`](unregister-client.md) puis d’exécuter à nouveau **REGISTER CLIENT**.
 
 ## Exemple 
 
@@ -42,6 +46,7 @@ Les méthodes suivantes permettent de réaliser une petite messagerie entre les 
   //Méthode INSCRIPTION
   //Il faut se désinscrire avant de s’inscrire sous un autre nom
  UNREGISTER CLIENT
+ var vNomPseudo : Text
  Repeat
     vNomPseudo:=Request("Entrez votre nom :";"Utilisateur";"OK";"Annuler")
  Until((OK=0)|(vNomPseudo#""))
@@ -56,13 +61,17 @@ Les méthodes suivantes permettent de réaliser une petite messagerie entre les 
 
 ```4d
   // Méthode base Sur ouverture
- PrListeClient:=New process("Liste_4DClients";32000;"Liste d'inscrits")
+var PrListeClient : Integer
+PrListeClient:=New process("Liste_4DClients";32000;"Liste d'inscrits")
 ```
 
 3\. La méthode Liste\_4DClients permet de récupérer tous les clients 4D inscrits et les personnes acceptant de recevoir des messages :
 
 ```4d
   // Méthode Liste_4DClients
+var $Ref; $p : Integer
+ARRAY TEXT($ListeClient;0)
+ARRAY LONGINT($ListeCharge;0)
  If(Application type=4D mode distant)
   // Le code ci-dessous n’est valable qu’en mode client-serveur
     $Ref:=Open window(100;100;300;400;-(Palette window+Has window title);"Liste d'inscrits")
@@ -84,6 +93,7 @@ Les méthodes suivantes permettent de réaliser une petite messagerie entre les 
 
 ```4d
   // Méthode Envoyer_Message
+var $Destinataire; $Message : Text
  $Destinataire:=Request("Destinataire du message :";"")
   // Saisir le nom d'une des personnes visibles dans la fenêtre générée par la méthode base Sur ouverture
  If(OK#0)
