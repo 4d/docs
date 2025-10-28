@@ -44,6 +44,7 @@ El [renderizado **Fluent UI** para los formularios 4D](../FormEditor/forms.md#fl
 - Servidor web: se elimina la compatibilidad con las URL obsoletas `4DSYNC/` y `4DCGI/`. Ya no se realiza ningún tratamiento específico en estas URL.
 - Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
 - El comando [`HIGHLIGHT TEXT`](../commands/highlight-text) es ahora compatible en el contexto de los subformularios.
+- In client/server, the concept of local processes is removed. The "$" has no longer a specific meaning in process names and the \* parameter in [`REGISTER CLIENT`](../commands/register-client) is ignored.
 - **Componentes ya no integrados**: a partir de 4D 21, los componentes desarrollados por 4D (4D NetKit, 4D SVG..., ver [esta lista](../Extensions/overview.md#components-developed-by-4d)) ya no están integrados en la aplicación 4D. Cuando se actualiza un proyecto a 4D 21 o superior, se muestra un cuadro de diálogo:<br/>
   ![alt-text](../assets/en/getStart/convert.png)<br/>
   \- **Importar**: importar automáticamente componentes 4D como dependencias del proyecto<br/>

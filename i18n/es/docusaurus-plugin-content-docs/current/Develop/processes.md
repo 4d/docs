@@ -18,7 +18,7 @@ La aplicación 4D crea procesos para sus propias necesidades, por ejemplo el pro
 Hay varias formas de crear un nuevo proceso:
 
 - Ejecute un método en el entorno Diseño después de seleccionar la casilla \*\*Nuevo proceso \*\* en la caja de diálogo "Ejecutar Método". El método elegido en la caja de diálogo Ejecutar método es el método proceso.
-- Utilice el comando [`New process`](../commands-legacy/new-process.md). El método pasado como un parámetro al comando `New process` es el método proceso.
+- Utilice el comando [`New process`](../commands-legacy/new-process.md). The method passed as a parameter to the [`New process`](../commands/new-process) command is the process method.
 - Utilice el comando [`Execute on server`](../commands-legacy/execute-on-server.md) para crear un procedimiento almacenado en el servidor. El método pasado como parámetro del comando es el método proceso.
 - Utilice el comando [`CALL WORKER`](../commands-legacy/call-worker.md). Si el proceso del worker no existe, se crea.
 
@@ -70,25 +70,11 @@ Cada proceso tiene también una selección actual y un registro actual por tabla
 
 :::
 
-## Procesos globales y locales
+## Remote processes
 
-El alcance de los procesos puede ser local o global. Por defecto, todos los procesos son globales.
+When you create a process on a remote 4D, a "twin" process is created on the server to handle data access and database context as soon as it is necessary, i.e. the first time the process on the remote 4D needs to access data.
 
-Los procesos globales pueden realizar cualquier operación, incluido el acceso y la manipulación de datos. En la mayoría de los casos, querrá utilizar procesos globales. Los procesos locales sólo deben utilizarse para operaciones que no accedan a datos. Por ejemplo, puede utilizar un proceso local para ejecutar un método de gestión de eventos o para controlar elementos de la interfaz como ventanas flotantes.
-
-Especifica que un proceso es local en alcance a través de su nombre. El nombre del proceso local debe comenzar con un signo de dólar ($).
-
-:::warning
-
-Si intenta acceder a los datos desde un proceso local, accede a los datos por medio del proceso principal (proceso #1) y toma el riesgo de entrar en conflicto con las operaciones efectuadas en ese proceso.
-
-:::
-
-### 4D Server
-
-El uso de procesos locales del lado del Cliente para operaciones que no requieran acceso a datos, reserva más tiempo de procesamiento para tareas que requieren el servidor intensivamente. Cuando crea un proceso local para el cliente (utilizando por ejemplo New process), solo existe del lado del cliente.
-
-Cuando crea un proceso global, se crea un proceso "doble" en el servidor, que consume recursos del servidor, para manejar el acceso a los datos y el contexto de la base de datos. Sin embargo, por razones de optimización, el proceso doble se crea solo si es necesario, es decir, la primera vez que el proceso global necesita acceder a los datos.
+For optimization reason, while no server access is required, for example if the process on the remote 4D runs an event-handling method or controls floating windows, no twin process is created on the server.
 
 ## Procesos worker
 
@@ -109,7 +95,7 @@ Esta funcionalidad responde a las siguientes necesidades en materia de comunicac
 
 :::note
 
-Aunque se han diseñado principalmente para la comunicación entre procesos en el contexto de los procesos apropiativos, `CALL WORKER` y`CALL FORM` se pueden utilizar con los procesos cooperativos.
+Although they have been designed mainly for interprocess communication in the context of preemptive processes, [`CALL WORKER`](../commands/call-worker) and [`CALL FORM`](../commands/call-form) can be used with cooperative processes.
 
 :::
 
@@ -122,25 +108,25 @@ Un worker se utiliza para pedir a un proceso que ejecute métodos proyecto. Un w
 - un buzón de mensajes
 - un método de inicio (opcional)
 
-Se le pide a un worker ejecutar un método proyecto mediante una llamada al comando `CALL WORKER`. El worker y su buzón de mensajes se crean en el primer uso; su proceso asociado también se ejecuta automáticamente en el primer uso. Si el proceso worker muere luego, el buzón de mensajes permanece abierto y cualquier nuevo mensaje en el buzón iniciará un nuevo proceso worker.
+You ask a worker to execute a project method by calling the [`CALL WORKER`](../commands/call-worker) command. El worker y su buzón de mensajes se crean en el primer uso; su proceso asociado también se ejecuta automáticamente en el primer uso. Si el proceso worker muere luego, el buzón de mensajes permanece abierto y cualquier nuevo mensaje en el buzón iniciará un nuevo proceso worker.
 
 La siguiente animación ilustra esta secuencia:
 
 ![](../assets/en/Develop/WorkerAnimation.gif)
 
-A diferencia de un proceso creado con el comando `New process`, un proceso worker **permanece vivo después de que termine la ejecución del método proceso**. Esto significa que todas las ejecuciones del método para el mismo worker se llevarán a cabo en el mismo proceso, que mantiene toda la información de estado del proceso (variables de proceso, registro actual y selección actual...). En consecuencia, los métodos ejecutados sucesivamente tendrán acceso y de este modo compartirán la misma información, lo que permite las comunicaciones entre procesos. El buzón de mensajes del worker maneja las llamadas sucesivas de forma asíncrona.
+Unlike a process created with the [`New process`](../commands/new-process) command, a worker process **remains alive after the execution of the process method ends**. Esto significa que todas las ejecuciones del método para el mismo worker se llevarán a cabo en el mismo proceso, que mantiene toda la información de estado del proceso (variables de proceso, registro actual y selección actual...). En consecuencia, los métodos ejecutados sucesivamente tendrán acceso y de este modo compartirán la misma información, lo que permite las comunicaciones entre procesos. El buzón de mensajes del worker maneja las llamadas sucesivas de forma asíncrona.
 
-`CALL WORKER` encapsula tanto el nombre del método como los argumentos del comando en un mensaje que se publica en el buzón de mensajes del worker. El proceso worker se inicia a continuación, si no existe, y se pide ejecutar el mensaje. Esto significa que `CALL WORKER` normalmente volverá antes de que el método se ejecute realmente (el procesamiento es asíncrono). Por esta razón, `CALL WORKER` no devuelve ningún valor. Si necesita un worker para enviar información al proceso que lo llamó (retrollamada), es necesario utilizar `CALL WORKER` nuevamente para pasar al llamante la información necesaria. Por supuesto, en este caso, el propio llamante debe ser un worker.
+[`CALL WORKER`](../commands/call-worker) encapsulates both the method name and command arguments in a message that is posted in the worker's message box. El proceso worker se inicia a continuación, si no existe, y se pide ejecutar el mensaje. This means that [`CALL WORKER`](../commands/call-worker) will usually return before the method is actually executed (processing is asynchronous). For this reason, [`CALL WORKER`](../commands/call-worker) does not return any value. If you need a worker to send information back to the process which called it (callback), you need to use [`CALL WORKER`](../commands/call-worker) again to pass the information needed to the caller. Por supuesto, en este caso, el propio llamante debe ser un worker.
 
-No es posible utilizar `CALL WORKER` para ejecutar un método en un proceso creado por el comando `New process`. Sólo los procesos worker tienen un buzón de mensajes y, por tanto, pueden ser llamados por `CALL WORKER`. Tenga en cuenta que un proceso creado por `New process` puede llamar a un worker, pero no puede llamarse de nuevo.
+It is not possible to use [`CALL WORKER`](../commands/call-worker) to execute a method in a process created by the [`New process`](../commands/new-process) command. Sólo los procesos worker tienen un buzón de mensajes y, por tanto, pueden ser llamados por `CALL WORKER`. Note that a process created by [`New process`](../commands/new-process) can call a worker, but cannot be called back.
 
-Los procesos worker se pueden crear en 4D Server a través de procedimientos almacenados: por ejemplo, puede utilizar el comando `Execute on server` para ejecutar un método que llama al comando `CALL WORKER`.
+Worker processes can be created on 4D Server through stored procedures: for example, you can use the `Execute on server` command to execute a method that calls the [`CALL WORKER`](../commands/call-worker) command.
 
 Un proceso worker se cierra mediante una llamada al comando [`KILL WORKER`](../commands-legacy/kill-worker.md), que vacía el buzón de mensajes del worker y pide al proceso asociado que deje de procesar mensajes y termine su ejecución actual en cuanto termine la tarea actual.
 
-El método de inicio de un worker es el método utilizado para crear el worker (primer uso). Si `CALL WORKER` es llamado con un parámetro *method* vacío, entonces el método de inicio se reutiliza automáticamente como método para ejecutar.
+El método de inicio de un worker es el método utilizado para crear el worker (primer uso). If [`CALL WORKER`](../commands/call-worker) is called with an empty *method* parameter, then the startup method is automatically reused as method to execute.
 
-El proceso principal creado por 4D al abrir una base de datos para los modos usuario y aplicación es un proceso worker y puede ser llamado utilizando `CALL WORKER`. Tenga en cuenta que el nombre del proceso principal puede variar dependiendo del idioma de localización de 4D, pero siempre tiene el número de proceso 1; como resultado, es más conveniente designarlo por el número de proceso en lugar del nombre de proceso cuando se llama a `CALL WORKER`.
+The main process created by 4D when opening a database for user and application modes is a worker process and can be called using [`CALL WORKER`](../commands/call-worker). Note that the name of the main process may vary depending on the 4D localization language, but it always has the process number 1; as a result, it's more convenient to designate it by process number instead of process name when calling [`CALL WORKER`](../commands/call-worker).
 
 ### Identificación de los procesos workers
 
