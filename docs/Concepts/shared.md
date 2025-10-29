@@ -3,7 +3,7 @@ id: shared
 title: Shared objects and collections
 ---
 
-**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**Shared objects** and **shared collections** are specific [objects](./dt_object.md) and [collections](./dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 Shared objects and shared collections are stored in standard [`Object`](./dt_object.md) and [`Collection`](./dt_collection.md) type variables, but must be instantiated using specific commands:
 
