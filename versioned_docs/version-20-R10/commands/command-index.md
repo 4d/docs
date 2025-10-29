@@ -271,7 +271,6 @@ title: Commands by name
 [`ENABLE MENU ITEM`](../commands-legacy/enable-menu-item.md)<br/>
 [`ENCRYPT BLOB`](../commands-legacy/encrypt-blob.md)<br/>
 [`Encrypt data BLOB`](../commands-legacy/encrypt-data-blob.md)<br/>
-
 [`Encrypt data file`](../commands-legacy/encrypt-data-file.md)<br/>
 [`End selection`](../commands-legacy/end-selection.md)<br/>
 [`End SQL`](../commands-legacy/end-sql.md)<br/>
