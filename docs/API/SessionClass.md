@@ -470,7 +470,6 @@ You can use this property to get the [`.storage`](#storage) object of a session 
 
 |Release|Changes|
 |---|---|
-
 |18 R6|Added|
 
 </details>
