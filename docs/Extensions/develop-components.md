@@ -253,7 +253,7 @@ If you don't enter a [component namespace](#declaring-the-component-namespace), 
 
 ## Passing variables  
 
-The local, process and interprocess variables are not shared between components and host projects. The only way to modify component variables from the host project and vice versa is using pointers.
+Variables are not shared between components and host projects. The only way to modify component variables from the host project and vice versa is using pointers.
 
 Example using an array:
 
@@ -263,18 +263,19 @@ Example using an array:
      AMethod(->MyArray)
 
 //In the component, the AMethod project method contains:
-     APPEND TO ARRAY($1->;2)
+     #DECLARE($ptr : Pointer)
+     APPEND TO ARRAY($ptr->;2)
 ```
 
 Examples using variables:
 
 ```4d
-C_TEXT(myvariable)
+var myvariable : Text
 component_method1(->myvariable)
 ```
 
 ```4d
-C_POINTER($p)
+var $p : Pointer
 $p:=component_method2(...)
 ```
 
@@ -282,10 +283,10 @@ Without a pointer, a component can still access the value of a host database var
 
 ```4d
 //In the host database
-C_TEXT($input_t)
+var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method gets "DoSomething" in $1 (but not the $input_t variable)
+// component_method gets "DoSomething" in parameter (but not the $input_t variable)
 ```
 
 
@@ -298,7 +299,7 @@ Let’s illustrate this principle with the following example: given two componen
  - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
  - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
 
-- The comparison of pointers using the `RESOLVE POINTER` command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- The comparison of pointers using the [`RESOLVE POINTER`](../commands/resolve-pointer) command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -330,15 +331,11 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 Within the component, the code of the `methCreateRec` method:
 
 ```4d
-C_POINTER($1) //Pointer on a table in host project
-C_POINTER($2) //Pointer on a field in host project
-C_TEXT($3) // Value to insert
+#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Pointer on a table in host project
 
-$tablepointer:=$1
-$fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
+$fieldpointer->:=$value
 SAVE RECORD($tablepointer->)
 ```
 
