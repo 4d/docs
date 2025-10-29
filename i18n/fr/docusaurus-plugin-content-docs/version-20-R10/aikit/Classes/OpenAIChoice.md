@@ -9,9 +9,9 @@ La classe `OpenAIChoice` représente un choix fait par la réponse de l'API Open
 
 ## Propriétés
 
-| Propriété       | Type                              | Description                                                                                                                         |
-| --------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `message `      | [OpenAIMessage](OpenAIMessage.md) | The message associated with this choice.                                                                            |
-| `delta`         | [OpenAIMessage](OpenAIMessage)    | A partial message used for streaming responses.(stream: True.md) |
-| `finish_reason` | Text                              | The reason the choice finished (e.g., "stop").                   |
-| `index`         | Integer                           | The index of the choice in the response.                                                                            |
+| Propriété       | Type                              | Description                                                                                                |
+| --------------- | --------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `message `      | [OpenAIMessage](OpenAIMessage.md) | Le message associé à ce choix.                                                             |
+| `delta`         | [OpenAIMessage](OpenAIMessage)    | Un message partiel utilisé pour les réponses en continu (stream : True) |
+| `finish_reason` | Text                              | La raison pour laquelle le choix s'est terminé (par exemple, "stop").   |
+| `index`         | Integer                           | L'indice du choix dans la réponse.                                                         |

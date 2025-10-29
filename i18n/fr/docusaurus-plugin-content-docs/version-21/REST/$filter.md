@@ -27,7 +27,7 @@ Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `sa
 
 ### Utiliser la propriété params
 
-You can also use 4D's `params` property which is a collection of values.
+Vous pouvez également utiliser la propriété `params` de 4D qui est une collection de valeurs.
 
 **\{attribute\} {comparator} {placeholder} {AND/OR/EXCEPT} \{attribute\} {comparator} {placeholder}&$params='["{value1}","{value2}"]'**
 
@@ -78,25 +78,25 @@ Le comparateur doit être l'une des valeurs suivantes :
 | <= | inférieur ou égal à |
 | begin                       | commence avec       |
 
-## Vector similarity
+## Similitude vectorielle
 
-If the attribute stores [**vector objects**](../API/VectorClass.md) (see how to [configure a 4D field to only store 4D.Vector class objects](../Develop/field-properties.md#class)), you can filter the dataclass using **vectors**, aka **embeddings**.
+Si l'attribut stocke des [**objets vectoriels**](../API/VectorClass.md) (voir comment [configurer un champ 4D pour qu'il ne stocke que des objets de la classe 4D.Vector](../Develop/field-properties.md#class)), vous pouvez filtrer la classe de données à l'aide de **vecteurs**, également appelés **embeddings**.
 
-For more information about vector similarity searches, please refer to [Query by vector similarity](../API/DataClassClass.md#query-by-vector-similarity) section.
+Pour plus d'informations sur les recherches par similarité vectorielle, veuillez vous référer à la section [Requêtes par similarité vectorielle](../API/DataClassClass.md#query-by-vector-similarity).
 
-Use the `params` property to provide the filter with the vector comparison parameter, using a syntax like:
+Utilisez la propriété `params` pour fournir au filtre le paramètre de comparaison de vecteurs, en utilisant une syntaxe du type :
 
 **\{vectorAttribute\} \{comparator\} \{placeholder\}&$params=vectorComparison**
 
-The *vectorComparison* parameter is a collection of the following elements:
+Le paramètre *vectorComparison* est une collection des éléments suivants :
 
-| Propriété                                                                        | Type                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| -------------------------------------------------------------------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [].vector    | Collection of numbers | Obligatoire. A collection that represents the vector to compare                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| [].metric    | Text                  | Optionnel. [Calcul vectoriel](../API/VectorClass.md#understanding-the-different-vector-computations) à utiliser pour la recherche. Supported values:<li>"cosine" (default if omitted): calculates the cosine similarity between vectors.</li><li>"dot" : calcule la similarité de points des vecteurs.</li><li>"euclidean" : calcule la distance euclidienne entre les vecteurs. |
-| [].threshold | Real                  | Facultatif (valeur par défaut : 0,5). Valeur seuil utilisée pour filtrer les comparaisons de vecteurs sur la base de leur score de similarité cosinus, point ou euclidienne selon la "métrique" sélectionnée. Il est fortement recommandé de choisir une similitude qui corresponde le mieux à votre cas d'utilisation spécifique pour des résultats optimaux.                                                                                                   |
+| Propriété                                                                        | Type                  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [].vector    | Collection de nombres | Obligatoire. Une collection qui représente le vecteur à comparer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [].metric    | Text                  | Optionnel. [Calcul vectoriel](../API/VectorClass.md#understanding-the-different-vector-computations) à utiliser pour la recherche. Valeurs prises en charge :<li>"cosine" (valeur par défaut si omis) : calcule la similarité cosinus entre les vecteurs.</li><li>"dot" : calcule la similarité de points des vecteurs.</li><li>"euclidean" : calcule la distance euclidienne entre les vecteurs. |
+| [].threshold | Real                  | Facultatif (valeur par défaut : 0,5). Valeur seuil utilisée pour filtrer les comparaisons de vecteurs sur la base de leur score de similarité cosinus, point ou euclidienne selon la "métrique" sélectionnée. Il est fortement recommandé de choisir une similitude qui corresponde le mieux à votre cas d'utilisation spécifique pour des résultats optimaux.                                                                                                                    |
 
-Only a subset of **comparator** symbols are supported with vector comparisons. Notez qu'ils comparent les résultats à la valeur de seuil (threshold) :
+Seul un sous-ensemble de **comparateurs** est pris en charge pour les comparaisons vectorielles. Notez qu'ils comparent les résultats à la valeur de seuil (threshold) :
 
 | Comparateur         | Symbole(s) | Commentaire                |
 | ------------------- | ----------------------------- | -------------------------- |
@@ -126,7 +126,7 @@ Dans cet exemple, nous recherchons dans la dataclass "Person" toutes les personn
  GET  /rest/Person/?filter="anotherobj.mynum > 50"
 ```
 
-In this example, we do a vector search with basic values:
+Dans cet exemple, nous effectuons une recherche vectorielle avec des valeurs de base :
 
 ```
  GET  /rest/Person/?filter="VectorAtt>=:1"&$params='[{vector:[1,2,3],threshold:1}]'

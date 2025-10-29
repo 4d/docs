@@ -12,7 +12,7 @@ La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la f
 | Propriété     | Type                                                    | Description                                                                        |
 | ------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | Une instance qui gère les requêtes de complétion de la discussion. |
-| `vision`      | [OpenAIVision](OpenAIVision.md)                         | A helper instance that handles vision-related requests.            |
+| `vision`      | [OpenAIVision](OpenAIVision.md)                         | Un instance du helper qui traite les requêtes liées à la vision.   |
 
 ## Function
 
@@ -28,5 +28,5 @@ La classe `OpenAIChatAPI` fournit une interface permettant d'interagir avec la f
 #### Exemple d'utilisation
 
 ```4D
-var $chatHelper:=$client.chat.create("You are a helpful assistant.")
+var $chatHelper:=$client.chat.create("Vous êtes un assistant utile.")
 ```

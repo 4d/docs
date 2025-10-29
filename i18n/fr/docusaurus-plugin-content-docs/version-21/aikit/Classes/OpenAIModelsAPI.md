@@ -17,11 +17,11 @@ https://platform.openai.com/docs/api-reference/models
 
 **retrieve**(*model* : Text; *parameters* : OpenAIParameters) : OpenAIModelResult
 
-| Paramètres   | Type                                      | Description                                            |
-| ------------ | ----------------------------------------- | ------------------------------------------------------ |
-| *model*      | Text                                      | L'identifiant du modèle à récupérer.   |
-| *paramètres* | [OpenAIParameters](OpenAIParameters.md)   | Additional parameters for the request. |
-| Résultat     | [OpenAIModelResult](OpenAIModelResult.md) | Le résultat du modèle                                  |
+| Paramètres   | Type                                      | Description                                                 |
+| ------------ | ----------------------------------------- | ----------------------------------------------------------- |
+| *model*      | Text                                      | L'identifiant du modèle à récupérer.        |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)   | Paramètres supplémentaires pour la requête. |
+| Résultat     | [OpenAIModelResult](OpenAIModelResult.md) | Le résultat du modèle                                       |
 
 Récupère une instance de modèle pour fournir des informations de base.
 
@@ -34,14 +34,14 @@ var $result:=$client.model.retrieve("text-davinci-003")
 var $model:=$result.model
 ```
 
-### liste()
+### list()
 
 **list**(*parameters* : OpenAIParameters) : OpenAIModelListResult
 
-| Paramètres   | Type                                              | Description                                            |
-| ------------ | ------------------------------------------------- | ------------------------------------------------------ |
-| *paramètres* | [OpenAIParameters](OpenAIParameters.md)           | Additional parameters for the request. |
-| Résultat     | [OpenAIModelListResult](OpenAIModelListResult.md) | Résultat de la liste des modèles                       |
+| Paramètres   | Type                                              | Description                                                 |
+| ------------ | ------------------------------------------------- | ----------------------------------------------------------- |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)           | Paramètres supplémentaires pour la requête. |
+| Résultat     | [OpenAIModelListResult](OpenAIModelListResult.md) | Résultat de la liste des modèles                            |
 
 Liste les modèles actuellement disponibles.
 

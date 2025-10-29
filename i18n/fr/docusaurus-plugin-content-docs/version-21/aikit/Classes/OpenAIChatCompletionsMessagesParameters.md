@@ -11,11 +11,11 @@ title: OpenAIChatCompletionsMessagesParameters
 
 ## Propriétés
 
-| Propriété | Type    | Valeur par défaut | Description                                                                                                                                                           |
-| --------- | ------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `after`   | Text    | ""                | Identifier for the last message from the previous pagination request.                                                                                 |
-| `limit`   | Integer | 0                 | Number of messages to retrieve.                                                                                                                       |
-| `order`   | Text    | "asc"             | Sort order for messages by timestamp. Use `asc` for ascending order or `desc` for descending order. `asc` par défaut. |
+| Propriété | Type    | Valeur par défaut | Description                                                                                                                                                                           |
+| --------- | ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `after`   | Text    | ""                | Identifiant du dernier message de la requête de pagination précédente.                                                                                                |
+| `limit`   | Integer | 0                 | Nombre de messages à récupérer.                                                                                                                                       |
+| `order`   | Text    | "asc"             | Ordre de tri des messages par horodatage. Utilisez `asc` pour l'ordre croissant et `desc` pour l'ordre décroissant. `asc` par défaut. |
 
 ## Voir également
 

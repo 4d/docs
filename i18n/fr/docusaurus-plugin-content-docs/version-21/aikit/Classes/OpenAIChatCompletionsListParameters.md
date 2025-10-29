@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsListParameters
 
 # OpenAIChatCompletionsListParameters
 
-This class is used to define parameters for retrieving a list of chat completions from the OpenAI API. It allows customization of pagination, sorting, and filtering of chat messages.
+Cette classe est utilisée pour définir les paramètres de récupération d'une liste de réponses conversationnelle à partir de l'API OpenAI. Elle permet de personnaliser la pagination, le tri et le filtrage des messages de la conversation.
 
 ## Hérite de
 
@@ -13,13 +13,13 @@ This class is used to define parameters for retrieving a list of chat completion
 
 ## Propriétés
 
-| Propriété  | Type    | Valeur par défaut | Description                                                                                                                                       |
-| ---------- | ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `after`    | Text    | ""                | Identifier for the last message from the previous pagination request.                                                             |
-| `limit`    | Integer | 0                 | Number of messages to retrieve.                                                                                                   |
-| `order`    | Text    | "asc"             | Sort order for messages by timestamp. Use `asc` for ascending order or `desc` for descending order.               |
-| `metadata` | Text    | -                 | A list of metadata keys to filter the chat completions by. Example: `metadata[key1]=value1&metadata[key2]=value2` |
-| `model`    | Text    | ""                | The model used to generate the chat completions.                                                                                  |
+| Propriété  | Type    | Valeur par défaut | Description                                                                                                                                                              |
+| ---------- | ------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `after`    | Text    | ""                | Identifiant du dernier message de la requête de pagination précédente.                                                                                   |
+| `limit`    | Integer | 0                 | Nombre de messages à récupérer.                                                                                                                          |
+| `order`    | Text    | "asc"             | Ordre de tri des messages par horodatage. Utilisez `asc` pour l'ordre croissant et `desc` pour l'ordre décroissant.                      |
+| `metadata` | Text    | -                 | Une liste de clés de métadonnées pour filtrer les réponses conversationnelles. Exemple : `metadata[key1]=valeur1&metadata[key2]=valeur2` |
+| `model`    | Text    | ""                | Le modèle utilisé pour générer les réponses conversationnelles.                                                                                          |
 
 ## Voir également
 

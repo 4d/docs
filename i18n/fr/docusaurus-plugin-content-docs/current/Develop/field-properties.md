@@ -3,7 +3,7 @@ id: field-properties
 title: Propriétés des champs
 ---
 
-For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Field-properties.300-7676763.en.html).
+Pour les autres propriétés des champs, veuillez vous référer à [doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Field-properties.300-7676763.en.html).
 
 ## Class
 

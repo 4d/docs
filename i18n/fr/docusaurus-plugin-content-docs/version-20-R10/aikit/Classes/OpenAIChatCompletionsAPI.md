@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsAPI
 
 # OpenAIChatCompletionsAPI
 
-La classe `OpenAIChatCompletionsAPI` est conçue pour gérer les complétions de chat avec l'API OpenAI. Elle fournit des méthodes pour créer, récupérer, mettre à jour, supprimer et lister les compléments de chat.
+La classe `OpenAIChatCompletionsAPI` est conçue pour gérer les réponses conversationnelles (*chat completions*) avec l'API OpenAI. Elle fournit des méthodes pour créer, récupérer, mettre à jour, supprimer et lister les réponses conversationnelles.
 
 https://platform.openai.com/docs/api-reference/chat
 
@@ -15,19 +15,19 @@ https://platform.openai.com/docs/api-reference/chat
 
 **create**(*messages* : Collection of [OpenAIMessage](OpenAIMessage.md) ; *parameters* : [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md)) : Object
 
-| Paramètres   | Type                                                                  | Description                                                     |
-| ------------ | --------------------------------------------------------------------- | --------------------------------------------------------------- |
-| *messages*   | Collection of [OpenAIMessage](OpenAIMessage.md)                       | The chat messages to include in the request.    |
-| *paramètres* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | The parameters for the chat completion request. |
-| Résultat     | Object                                                                | The result of the chat completion request.      |
+| Paramètres   | Type                                                                  | Description                                                                                |
+| ------------ | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| *messages*   | Collection de [OpenAIMessage](OpenAIMessage.md)                       | Les messages de chat à inclure dans la requête.                            |
+| *parameters* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Les paramètres pour la requête de génération de réponse conversationnelle. |
+| Résultat     | Object                                                                | Le résultat de la requête de génération de réponse conversationnelle.      |
 
-Creates a model response for the given chat conversation.
+Crée un modèle de réponse pour la conversation donnée.
 
 https://platform.openai.com/docs/api-reference/chat/create
 
 #### Exemple d'utilisation
 
-Provide the full messages list
+Fournir la liste complète des messages
 
 ```4d
 var $messages:=[]
@@ -44,7 +44,7 @@ Obtenir la réponse sous forme de texte
 var $text:=$result.choice.text
 ```
 
-Ajouter la réponse de l'assistant pour la prochaine demande de complétion
+Ajouter la réponse de l'assistant pour la prochaine demande de génération de réponse conversationnelle :
 
 ```
 $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" }
@@ -54,13 +54,13 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 **retrieve**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| Paramètres     | Type                                    | Description                                                |
-| -------------- | --------------------------------------- | ---------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to retrieve. |
-| *paramètres*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.     |
-| Résultat       | Object                                  | The retrieved chat completion object.      |
+| Paramètres     | Type                                    | Description                                                       |
+| -------------- | --------------------------------------- | ----------------------------------------------------------------- |
+| *completionID* | Text                                    | L'ID de la réponse conversationnelle à récupérer. |
+| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.       |
+| Résultat       | Object                                  | L'objet réponse conversationnelle obtenu.         |
 
-Get a stored chat completion.
+Permet de récupérer une génération de réponse conversationnelle stockée.
 
 https://platform.openai.com/docs/api-reference/chat/get
 
@@ -68,14 +68,14 @@ https://platform.openai.com/docs/api-reference/chat/get
 
 **update**(*completionID* : Text; *metadata* : Object; *parameters* : OpenAIParameters) : Object
 
-| Paramètres     | Type                                    | Description                                              |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to update. |
-| *metadata*     | Object                                  | Metadata to update the completion with.  |
-| *paramètres*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| Résultat       | Object                                  | The updated chat completion object.      |
+| Paramètres     | Type                                    | Description                                                           |
+| -------------- | --------------------------------------- | --------------------------------------------------------------------- |
+| *completionID* | Text                                    | L'ID de la réponse conversationnelle à mettre à jour. |
+| *metadata*     | Object                                  | Métadonnées à utiliser pour mettre à jour la réponse. |
+| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.           |
+| Résultat       | Object                                  | L'objet réponse conversationnelle mis à jour.         |
 
-Modify a stored chat completion.
+Permet de modifier une génération de réponse conversationnelle stockée.
 
 https://platform.openai.com/docs/api-reference/chat/update
 
@@ -83,25 +83,25 @@ https://platform.openai.com/docs/api-reference/chat/update
 
 **delete**(*completionID* : Text; *parameters* : OpenAIParameters) : Object
 
-| Paramètres     | Type                                    | Description                                              |
-| -------------- | --------------------------------------- | -------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to delete. |
-| *paramètres*   | [OpenAIParameters](OpenAIParameters.md) | Additional parameters for the request.   |
-| Résultat       | Boolean                                 | Whether the deletion was successful.     |
+| Paramètres     | Type                                    | Description                                                            |
+| -------------- | --------------------------------------- | ---------------------------------------------------------------------- |
+| *completionID* | Text                                    | L'ID de la réponse conversationnelle à supprimer.      |
+| *parameters*   | [OpenAIParameters](OpenAIParameters.md) | Paramètres supplémentaires pour la requête.            |
+| Résultat       | Boolean                                 | Indique si la suppression a été effectuée avec succès. |
 
-Delete a stored chat compltions.
+Permet de supprimer une génération de réponse conversationnelle stockée.
 
 https://platform.openai.com/docs/api-reference/chat/delete
 
-### liste()
+### list()
 
 **list**(*parameters* : OpenAIChatCompletionsListParameters) : Collection
 
-| Paramètres   | Type                                                                          | Description                                              |
-| ------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------- |
-| *paramètres* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Parameters for listing chat completions. |
-| Résultat     | Collection                                                                    | A collection of stored chat completions. |
+| Paramètres   | Type                                                                          | Description                                                             |
+| ------------ | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| *parameters* | [OpenAIChatCompletionsListParameters](OpenAIChatCompletionsListParameters.md) | Paramètres pour lister les réponses conversationnelles. |
+| Résultat     | Collection                                                                    | Collection des réponses conversationnelle stockées.     |
 
-List stored chat completions.
+Retourne la liste des réponses conversationnelles stockées.
 
 https://platform.openai.com/docs/api-reference/chat/list

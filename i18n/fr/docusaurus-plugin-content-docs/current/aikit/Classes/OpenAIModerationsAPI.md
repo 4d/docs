@@ -19,7 +19,7 @@ https://platform.openai.com/docs/api-reference/moderations
 | ---------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
 | *zone de saisie* | Variant                                             | Input (or inputs) to classify. Can be a single text or a collection of OpenAIMessage. |
 | *model*          | Text                                                | The content moderation model you would like to use.                                                                      |
-| *paramètres*     | [OpenAIParameters](OpenAIParameters.md)             | Additional parameters for the request.                                                                                   |
+| *parameters*     | [OpenAIParameters](OpenAIParameters.md)             | Paramètres supplémentaires pour la requête.                                                                              |
 | Résultat         | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                 |
 
 Classifies whether the input is potentially harmful.

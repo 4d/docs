@@ -9,12 +9,12 @@ La classe OpenAI fournit un client permettant d'accéder à diverses ressources 
 
 ## Propriétés de configuration
 
-| Nom de propriété | Type | Description                                                                    | Optionnel                                                 |
-| ---------------- | ---- | ------------------------------------------------------------------------------ | --------------------------------------------------------- |
-| `apiKey`         | Text | Votre [clé API OpenAI ](https://platform.openai.com/api-keys). | Peut être requis par le fournisseur                       |
-| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                 | Yes (if omitted = use OpenAI Platform) |
-| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                       | Oui                                                       |
-| `project`        | Text | Votre identifiant de projet OpenAI.                            | Oui                                                       |
+| Nom de propriété | Type | Description                                                                    | Optionnel                                                        |
+| ---------------- | ---- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| `apiKey`         | Text | Votre [clé API OpenAI ](https://platform.openai.com/api-keys). | Peut être requis par le fournisseur                              |
+| `baseURL`        | Text | URL de base pour les requêtes de l'API OpenAI.                 | Oui (si omis = utiliser la plateforme OpenAI) |
+| `organisation`   | Text | Votre identifiant d'organisation OpenAI.                       | Oui                                                              |
+| `project`        | Text | Votre identifiant de projet OpenAI.                            | Oui                                                              |
 
 ### Propriétés HTTP supplémentaires
 

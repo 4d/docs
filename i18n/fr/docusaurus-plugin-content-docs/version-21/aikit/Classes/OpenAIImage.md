@@ -11,11 +11,11 @@ https://platform.openai.com/docs/api-reference/images/object
 
 ## Propriétés
 
-| Propriété        | Type    | Description                                                                                                 |
-| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
-| `url`            | Text    | The URL of the generated image, if `response_format` is `url` (default). |
-| `b64_json`       | Text    | The base64-encoded JSON of the generated image, if `response_format` is `b64_json`.         |
-| `revised_prompt` | Variant | The prompt that was used to generate the image, if there was any revision to the prompt.    |
+| Propriété        | Type    | Description                                                                                               |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------- |
+| `url`            | Text    | L'URL de l'image générée, si `response_format` est `url` (par défaut). |
+| `b64_json`       | Text    | Le JSON encodé en base64 de l'image générée, si `response_format` est `b64_json`.         |
+| `revised_prompt` | Variant | L'invite utilisée pour générer l'image, s'il y a eu une révision de l'invite.             |
 
 ## Fonctions
 
@@ -23,9 +23,9 @@ https://platform.openai.com/docs/api-reference/images/object
 
 **asBlob**() : 4D.Blob
 
-| Paramètres | Type                    | Description                                                                                                                                              |
-| ---------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Résultat   | 4D.Blob | \\| Function result\| 4D.Blob \| Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
+| Paramètres | Type                    | Description                                                                                                  |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Résultat   | 4D.Blob | Convertit l'image générée au format blob sur la base de son URL ou du JSON encodé en base64. |
 
 #### Exemple d'utilisation
 
@@ -37,9 +37,9 @@ var $blob:=$image.asBlob()
 
 **asPicture**() : Picture
 
-| Paramètres | Type    | Description                                                                                               |
-| ---------- | ------- | --------------------------------------------------------------------------------------------------------- |
-| Résultat   | Picture | \\| Function result\| Picture \| Creates a picture object from the blob converted image. |
+| Paramètres | Type    | Description                                                                |
+| ---------- | ------- | -------------------------------------------------------------------------- |
+| Résultat   | Picture | Crée un objet image à partir de l'image convertie en blob. |
 
 #### Exemple d'utilisation
 
@@ -51,12 +51,12 @@ var $picture:=$image.asPicture()
 
 **saveToDisk**(*file* : 4D.File) : Boolean
 
-| Paramètres | Type                    | Description                                                        |
-| ---------- | ----------------------- | ------------------------------------------------------------------ |
-| *file*     | 4D.File | The file object where the image will be saved.     |
-| Résultat   | Boolean                 | Returns `True` if the image is successfully saved. |
+| Paramètres | Type                    | Description                                                               |
+| ---------- | ----------------------- | ------------------------------------------------------------------------- |
+| *file*     | 4D.File | L'objet File dans lequel l'image sera enregistrée.        |
+| Résultat   | Boolean                 | Retourne `True` si l'image a été sauvegardée avec succès. |
 
-Saves the image to disk, attempting to download it first if it is a URL. Returns `False` if it could not retrieve the image data.
+Enregistre l'image sur le disque, en essayant d'abord de la télécharger s'il s'agit d'une URL. Renvoie `False` s'il n'a pas été possible de récupérer les données de l'image.
 
 #### Exemple d'utilisation
 

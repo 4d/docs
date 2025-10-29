@@ -5,7 +5,7 @@ title: OpenAIEmbeddingsParameters
 
 # OpenAIEmbeddingsParameters
 
-The `OpenAIEmbeddingsParameters` class is designed to configure and manage the parameters used for creating embeddings through the OpenAI API.
+La classe `OpenAIEmbeddingsParameters` permet de configurer et gérer les paramètres utilisés pour créer des représentations vectorielles via l'API OpenAI.
 
 ## Hérite de
 
@@ -13,10 +13,10 @@ The `OpenAIEmbeddingsParameters` class is designed to configure and manage the p
 
 ## Propriétés
 
-| Nom de propriété  | Type    | Description                                                                                                                                                      |
-| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `encoding_format` | Text    | The format to return the embeddings in. Can be either `float` or `base64`. (default: `float`) |
-| `dimensions`      | Integer | The number of dimensions the resulting output embeddings should have. Only supported in text-embedding-3 and later models.       |
+| Nom de propriété  | Type    | Description                                                                                                                                                                                             |
+| ----------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `encoding_format` | Text    | Le format dans lequel les représentations vectorielles doivent être renvoyées. Peut être `float` ou `base64`. (par défaut : `float`) |
+| `dimensions`      | Integer | Le nombre de dimensions que les représentations vectorielles résultantes doivent avoir. Uniquement pris en charge dans les modèles text-embedding-3 et ultérieurs.      |
 
 ## Voir également
 

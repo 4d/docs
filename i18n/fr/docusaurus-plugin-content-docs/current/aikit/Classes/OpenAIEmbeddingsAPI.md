@@ -5,7 +5,7 @@ title: OpenAIEmbeddingsAPI
 
 # OpenAIEmbeddingsAPI
 
-The `OpenAIEmbeddingsAPI` provides functionalities to create embeddings using OpenAI's API.
+L'interface `OpenAIEmbeddingsAPI` fournit des fonctionnalités pour créer des représentations vectorielles (*embeddings*) en utilisant l'API de l'OpenAI.
 
 https://platform.openai.com/docs/api-reference/embeddings
 
@@ -15,38 +15,38 @@ https://platform.openai.com/docs/api-reference/embeddings
 
 **create**(*input* : Text; *model*: Text; *parameters* : OpenAIEmbeddingsParameters) : OpenAIEmbeddingsResult
 
-Creates an embeddings for the provided input, model and parameters.
+Crée une représentation vectorielle pour l'entrée, le modèle et les paramètres fournis.
 
-| Argument         | Type                                                        | Description                                                                             |
-| ---------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| *zone de saisie* | Text or Collection of Text                                  | The input to vectorize.                                                 |
-| *model*          | Text                                                        | The [model to use](https://platform.openai.com/docs/guides/embeddings#embedding-models) |
-| *paramètres*     | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | The parameters to customize the embeddings request.                     |
-| Résultat         | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | The embeddings.                                                         |
+| Paramètre    | Type                                                        | Description                                                                                            |
+| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| *input*      | Text ou Collection de textes                                | L'entrée à vectoriser.                                                                 |
+| *model*      | Text                                                        | Le [modèle à utiliser](https://platform.openai.com/docs/guides/embeddings#embedding-models)            |
+| *parameters* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Les paramètres permettant de personnaliser la requête de représentations vectorielles. |
+| Résultat     | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Les représentations vectorielles                                                                       |
 
-#### Example Usages
+#### Exemples d'utilisation
 
-##### Get vector for a single text entry
+##### Obtenir un vecteur pour une entrée de texte unique
 
 ```4d
 var $result:=$client.embeddings.create("it rains cats and dogs"; "text-embedding-ada-002")
 var $vector: 4D.Vector:=$result.vector
-// or var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
+// ou var $embedding: cs.AIKit.OpenAIEmbedding:=$result.embedding
 ```
 
-##### Get vectors for a collection of text entries
+##### Obtenir des vecteurs pour une collection d'entrées de texte
 
 ```4d
-var $inputs:=["it rains cats and dogs"; "il pleut à boire debout"]
+var $inputs:=["it rains cats and dogs" ; "il pleut à boire debout"]
 var $result:=$client.embeddings.create($inputs; "text-embedding-ada-002")
-var $vectors : Collection:=$result.vectors // collection of 4D.Vector
+var $vectors : Collection:=$result.vectors // collection de 4D.Vector
 ```
 
-##### Using another service
+##### Utiliser un autre service
 
-> Before using embeddings with a specific service, please check its documentation to see if embeddings are supported, and select the appropriate embedding model.
+> Avant d'utiliser les représentations vectorielles avec un service spécifique, veuillez consulter sa documentation pour vérifier si les *embeddings* sont pris en charge et sélectionner le modèle de représentation vectorielle approprié.
 
-For example, for Mistral, use [mistral-embed or codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
+Par exemple, pour Mistral, utilisez [mistral-embed ou codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
 
 ```4d
 var $result:=$client.embeddings.create($inputs; "mistral-embed")

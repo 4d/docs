@@ -11,13 +11,13 @@ title: OpenAIEmbeddingsResult
 
 ## Propriétés calculées
 
-| Propriété    | Type                                  | Description                                                                                               |
-| ------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| `model`      | Text                                  | Returns the model used to compute the embedding                                                           |
-| `vector`     | `4D.Vector`                           | Returns the first `4D.Vector` from the `vectors` collection.                              |
-| `vectors`    | Collection                            | Returns a collection of `4D.Vector`.                                                      |
-| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Returns the first [OpenAIEmbedding](OpenAIEmbedding.md) from the `embeddings` collection. |
-| `embeddings` | Collection                            | Returns a collection of [OpenAIEmbedding](OpenAIEmbedding.md).                            |
+| Propriété    | Type                                  | Description                                                                                              |
+| ------------ | ------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `model`      | Text                                  | Retourne le modèle utilisé pour calculer la représentation vectorielle                                   |
+| `vector`     | `4D.Vector`                           | Retourne le premier `4D.Vector` de la collection `vectors`.                              |
+| `vectors`    | Collection                            | Retourne une collection de `4D.Vector`.                                                  |
+| `embedding`  | [OpenAIEmbedding](OpenAIEmbedding.md) | Retourne le premier [OpenAIEmbedding](OpenAIEmbedding.md) de la collection `embeddings`. |
+| `embeddings` | Collection                            | Retourne une collection de [OpenAIEmbedding](OpenAIEmbedding.md).                        |
 
 ## Voir également
 

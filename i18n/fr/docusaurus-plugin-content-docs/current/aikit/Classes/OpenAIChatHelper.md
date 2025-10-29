@@ -5,30 +5,30 @@ title: OpenAIChatHelper
 
 # OpenAIChatHelper
 
-L'assistant de chat permet de conserver une liste de messages en mémoire et d'effectuer des invites consécutives.
+L'assistant de conversation permet de conserver une liste de messages en mémoire et d'effectuer des invites consécutives.
 
 ## Propriétés
 
-| Nom de propriété      | Type                                                                  | Valeur par défaut                                      | Description                                                                                             |
-| --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `chat`                | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | L'instance API de chat utilisée pour la communication avec OpenAI.                      |
-| `systemPrompt`        | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | Le message d'invite du système qui guide les réponses de l'assistant de conversation.   |
-| `numberOfMessages`    | Integer                                                               | 15                                                     | Le nombre maximum de messages à conserver dans l'historique des chats.                  |
-| `paramètres`          | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Les paramètres pour la requête de complétion du chat OpenAI.                            |
-| `messages`            | Collection of [OpenAIMessage](OpenAIMessage.md)                       | [] | La collection de messages échangés dans la session de chat.                             |
-| `tools`               | Collection of [OpenAITool](OpenAITool.md)                             | [] | List of registered OpenAI tools for function calling.                                   |
-| `autoHandleToolCalls` | Boolean                                                               | True                                                   | Boolean indicating whether tool calls are handled automatically using registered tools. |
-| `lastErrors`          | Collection                                                            | -                                                      | Collection containing the last errors encountered during chat operations.               |
+| Nom de propriété      | Type                                                                  | Valeur par défaut                                      | Description                                                                                                          |
+| --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| `chat`                | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | L'instance de l'API de conversation utilisée pour la communication avec OpenAI.                      |
+| `systemPrompt`        | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | Le message d'invite du système qui guide les réponses de l'assistant de conversation.                |
+| `numberOfMessages`    | Integer                                                               | 15                                                     | Le nombre maximum de messages à conserver dans l'historique des conversations.                       |
+| `paramètres`          | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Les paramètres pour la requête OpenAI de génération de réponse conversationnelle.                    |
+| `messages`            | Collection de [OpenAIMessage](OpenAIMessage.md)                       | [] | La collection de messages échangés dans la session de conversation.                                  |
+| `tools`               | Collection de [OpenAIModel](OpenAITool.md)                            | [] | Liste des outils OpenAI enregistrés pour l'appel de fonctions.                                       |
+| `autoHandleToolCalls` | Boolean                                                               | True                                                   | Booléen indiquant si les appels d'outils sont gérés automatiquement à l'aide des outils enregistrés. |
+| `lastErrors`          | Collection                                                            | -                                                      | Collection contenant les dernières erreurs rencontrées lors des opérations de chat.                  |
 
-## Constructor
+## Constructeur
 
-To create a new `OpenAIChatHelper` instance, it's best to use the `create()` method from the [OpenAI client's chat API](OpenAIChatAPI.md):
+Pour créer une nouvelle instance de `OpenAIChatHelper`, il est préférable d'utiliser la méthode `create()` de l'[API de conversation du client OpenAI](OpenAIChatAPI.md) :
 
 ```4D
-var $chatHelper:=$client.chat.create("You are a helpful assistant.")
+var $chatHelper:=$client.chat.create("Vous êtes un assistant utile.")
 ```
 
-This method creates a new chat helper with the specified system prompt and initializes it with default parameters. The system prompt defines the assistant's role and behavior throughout the conversation.
+Cette méthode crée un nouvel assistant de conversation avec l'invite système spécifiée et l'initialise avec les paramètres par défaut. L'invite du système définit le rôle et le comportement de l'assistant tout au long de la conversation.
 
 ## Fonctions
 
@@ -36,12 +36,12 @@ This method creates a new chat helper with the specified system prompt and initi
 
 **prompt**(*prompt* : Text) : OpenAIChatCompletionsResult
 
-| Paramètres | Type                                                          | Description                                                        |
-| ---------- | ------------------------------------------------------------- | ------------------------------------------------------------------ |
-| *prompt*   | Text                                                          | Texte d'invite à envoyer au chat de l'OpenAI.      |
-| Résultat   | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | Le résultat de la complétion retourné par le chat. |
+| Paramètres | Type                                                          | Description                                                                |
+| ---------- | ------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| *prompt*   | Text                                                          | Texte d'invite à envoyer au modèle de conversation OpenAI. |
+| Résultat   | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md) | La réponse conversationnelle générée.                      |
 
-Envoie une invite utilisateur à la discussion et retourne le résultat de complétion correspondant.
+Envoie une invite utilisateur au modèle de conversation et retourne la réponse générée.
 
 #### Exemple d'utilisation
 
@@ -54,52 +54,52 @@ $result:=$chatHelper.prompt("Why 42?")
 
 **reset**()
 
-Resets the chat context by clearing all messages and unregistering all tools. This effectively starts a fresh conversation while keeping the system prompt and parameters intact.
+Réinitialise le contexte de la conversation en effaçant tous les messages et en désenregistrant tous les outils. Cela permet d'entamer une nouvelle conversation tout en conservant l'invite et les paramètres du système.
 
-#### Reset Example
+#### Exemple de réinitialisation
 
 ```4D
-$chatHelper.prompt("Hello!")
-$chatHelper.reset()  // Clear all previous messages and tools
+$chatHelper.prompt("Hello !")
+$chatHelper.reset() // Efface tous les messages et outils précédents
 ```
 
 ### registerTool()
 
 **registerTool**(*tool* : Object; *handler* : Object)
 
-| Paramètres | Type   | Description                                                                                                                                                                         |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*     | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                                                             |
-| *handler*  | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
+| Paramètres | Type   | Description                                                                                                                                                                                             |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*     | Object | Objet de définition d'outil (ou instance [OpenAITool](OpenAITool.md))                                                                                                                |
+| *handler*  | Object | Fonction pour gérer les appels d'outils ([4D.Function](../../API/FunctionClass.md) ou Object), facultative si elle est définie dans *tool* comme propriété *handler* |
 
-Registers a tool with its handler function for automatic tool call handling.
+Enregistre un outil avec sa fonction de gestion automatique des appels d'outils.
 
-The *handler* parameter can be:
+Le paramètre *handler* peut être :
 
-- A **4D.Function**: Direct handler function
-- An **Object**: An object containing a `formula` property matching the tool function name
+- Un objet **4D.Function** : Fonction de gestion directe
+- Un **Object** : Objet contenant une propriété `formula` correspondant au nom de la fonction de l'outil
 
-The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
+La fonction de gestion reçoit un objet contenant les paramètres transmis par l'appel à l'outil OpenAI. Cet objet contient des paires clé-valeur dont les clés correspondent aux noms des paramètres définis dans le schéma de l'outil et dont les valeurs sont les arguments réels fournis par le modèle d'IA.
 
-#### Register Tool Example
+#### Exemple de Register Tool
 
 ```4D
-// Example 1: Simple registration with direct handler
+// Exemple 1: Enregistrement simple avec gestionnaire direct
 var $tool:={type: "function"; function: {name: "get_weather"; description: "Get current weather"; parameters: {type: "object"; properties: {location: {type: "string"; description: "City name"}}}}}
 var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
 $chatHelper.registerTool($tool; $handler)
 
-// Example 2: Tool with handler property (no second parameter needed)
+// Exemple 2: Outil avec propriété handler (pas de deuxième paramètre)
 var $tool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
 $chatHelper.registerTool($tool)
 
-// Example 3: Using object notation
+// Exemple 3: Utilisation de notation objet
 $chatHelper.registerTool({tool: $tool; handler: $handler})
 
-// Example 4: Handler as object with formula matching tool name
+// Exemple 4: Objet avec fonction correspondant au nom d'outil
 var $tool:={name: "getTime"; description: "Get current time"}
-var $handlerObj:=cs.MyTimeTool.new() // class with a getTime function
+var $handlerObj:=cs.MyTimeTool.new() // classe avec fonction getTime
 $chatHelper.registerTool($tool; $handlerObj)
 ```
 
@@ -107,19 +107,19 @@ $chatHelper.registerTool($tool; $handlerObj)
 
 **registerTools**(*toolsWithHandlers* : Variant)
 
-| Paramètres          | Type    | Description                                              |
-| ------------------- | ------- | -------------------------------------------------------- |
-| *toolsWithHandlers* | Variant | Object or Collection containing tools and their handlers |
+| Paramètres          | Type    | Description                                                     |
+| ------------------- | ------- | --------------------------------------------------------------- |
+| *toolsWithHandlers* | Variant | Objet ou collection contenant les outils et leurs gestionnaires |
 
-Registers multiple tools at once. The parameter can be:
+Enregistre plusieurs outils à la fois. Le paramètre peut être :
 
-- **Collection**: Array of tool objects (with handlers embedded or separate)
-- **Object**: Object with function names as keys mapping to tool definitions
-- **Object with `tools` attribute**: Object containing a `tools` collection and formula properties matching tool names
+- **Collection** : Tableau d'objets outils (avec des gestionnaires intégrés ou séparés)
+- **Objet** : Objet dont les propriétés sont des noms de fonctions correspondant à des définitions d'outils
+- **Objet avec attribut `tools`** : Objet contenant une collection `tools` et des propriétés formula correspondant à des noms d'outils
 
-#### Register Multiple Tools Example
+#### Exemple de Register Multiple Tools
 
-##### Example 1: Collection format with handlers in tools
+##### Exemple 1 : Format collection avec des gestionnaires dans les outils
 
 ```4D
 var $weatherTool:={name: "getWeather"; description: "Get current weather"; handler: Formula(return "Sunny, 25°C in "+$1.location)}
@@ -128,19 +128,19 @@ var $calculatorTool:={name: "calculate"; description: "Perform calculations"; ha
 $chatHelper.registerTools([$weatherTool; $calculatorTool])
 ```
 
-##### Example 2: Object format with separate tool and handler
+##### Exemple 2 : Format objet avec outil et gestionnaire séparés
 
 ```4D
 var $toolsWithSeparateHandlers:={}
-$toolsWithSeparateHandlers.getWeather:={tool: $weatherToolDefinition; handler: $weatherHandler}
-$toolsWithSeparateHandlers.calculate:={tool: $calculatorToolDefinition; handler: $calculatorHandler}
+$toolsWithSeparateHandlers.getWeather:={tool : $weatherToolDefinition; handler : $weatherHandler}
+$toolsWithSeparateHandlers.calculate:={tool : $calculatorToolDefinition; handler : $calculatorHandler}
 
 $chatHelper.registerTools($toolsWithSeparateHandlers)
 ```
 
-##### Example 3: Object with tools collection attribute and formula properties
+##### Exemple 3 : Objet avec attribut collection d'outils et propriétés formules (fonctions)
 
-MyTools class:
+Classe MyTools :
 
 ```4D
 
@@ -159,12 +159,12 @@ Function getTime($parameters: Object)
 $chatHelper.registerTools(cs.MyTools.new())
 ```
 
-##### Example 4: Simple object format with tools as properties
+##### Exemple 4 : Format objet simple avec outils en tant que propriétés
 
 ```4D
 var $tools:={}
-$tools.getWeather:=$weatherTool  // Tool with handler property
-$tools.calculate:=$calculatorTool  // Tool with handler property
+$tools.getWeather:=$weatherTool  // Outil avec propriété handler
+$tools.calculate:=$calculatorTool  // Outil avec propriété handler
 
 $chatHelper.registerTools($tools)
 ```
@@ -173,28 +173,28 @@ $chatHelper.registerTools($tools)
 
 **unregisterTool**(*functionName* : Text)
 
-| Paramètres     | Type | Description                                 |
-| -------------- | ---- | ------------------------------------------- |
-| *functionName* | Text | The name of the function tool to unregister |
+| Paramètres     | Type | Description                              |
+| -------------- | ---- | ---------------------------------------- |
+| *functionName* | Text | Le nom de l'outil fonction à désinscrire |
 
-Unregisters a specific tool by its function name. This removes the tool from the registered tools collection, clears its handler, and removes it from the parameters.
+Désenregistre un outil spécifique via son nom de fonction. Cette opération supprime l'outil de la collection d'outils enregistrés, efface son gestionnaire et le supprime des paramètres.
 
-#### Unregister Tool Example
+#### Exemple de Unregister Tool
 
 ```4D
 $chatHelper.registerTool($weatherTool; $weatherHandler)
-$chatHelper.unregisterTool("get_weather")  // Remove the weather tool
+$chatHelper.unregisterTool("get_weather") // Supprime l'outil météo
 ```
 
 ### unregisterTools()
 
 **unregisterTools**()
 
-Unregisters all tools at once. This clears all tool handlers, empties the tools collection, and removes all tools from the parameters.
+Désenregistre tous les outils en même temps. Cette opération efface tous les gestionnaires d'outils, vide la collection d'outils et supprime tous les outils des paramètres.
 
-#### Unregister All Tools Example
+#### Exemple de Unregister All Tools
 
 ```4D
 $chatHelper.registerTools($multipleTools)
-$chatHelper.unregisterTools()  // Remove all tools
+$chatHelper.unregisterTools() // Supprimer tous les outils
 ```

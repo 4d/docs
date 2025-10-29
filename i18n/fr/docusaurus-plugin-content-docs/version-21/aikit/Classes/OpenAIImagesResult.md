@@ -11,10 +11,10 @@ title: OpenAIImagesResult
 
 ## Propriétés calculées
 
-| Propriété | Type                                        | Description                                                        |
-| --------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| `images`  | Collection de [OpenAIImage](OpenAIImage.md) | Returns a collection of OpenAIImage objects.       |
-| `image`   | [OpenAIImage](OpenAIImage.md)               | Returns the first OpenAIImage from the collection. |
+| Propriété | Type                                        | Description                                                             |
+| --------- | ------------------------------------------- | ----------------------------------------------------------------------- |
+| `images`  | Collection de [OpenAIImage](OpenAIImage.md) | Renvoie une collection d'objets OpenAIImage.            |
+| `image`   | [OpenAIImage](OpenAIImage.md)               | Renvoie la première image OpenAIImage de la collection. |
 
 ## Fonctions
 
@@ -22,13 +22,13 @@ title: OpenAIImagesResult
 
 **saveImagesToDisk**(*folder* : 4D.Folder; *prefix* : Text) : Boolean
 
-| Paramètres | Type                      | Description                                                          |
-| ---------- | ------------------------- | -------------------------------------------------------------------- |
-| *folder*   | 4D.Folder | The folder where images will be saved.               |
-| *prefix*   | Text                      | The prefix for the saved image file names.           |
-| Résultat   | Boolean                   | Returns `True` if the images are successfully saved. |
+| Paramètres | Type                      | Description                                                                     |
+| ---------- | ------------------------- | ------------------------------------------------------------------------------- |
+| *folder*   | 4D.Folder | Dossier dans lequel les images seront enregistrées.             |
+| *prefix*   | Text                      | Préfixe des noms des fichiers d'images enregistrés.             |
+| Résultat   | Boolean                   | Retourne `True` si les images ont été sauvegardées avec succès. |
 
-Saves images to the specified disk folder.
+Enregistre les images sur disque dans le dossier spécifié.
 
 ## Voir également
 
