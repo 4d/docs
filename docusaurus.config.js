@@ -63,30 +63,6 @@ module.exports = {
             const body = `Please enter your comment:`;
             return `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
           },
-          // Sidebars file relative to website dir.
-          sidebarPath: require.resolve('./sidebars.js'),
-          async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
-            const sidebarItems = await defaultSidebarItemsGenerator(args);
-
-            function sortAlphabetically(items) {
-              return items
-                .map(item => {
-                  if (item.type === 'category') {
-                    return {
-                      ...item,
-                      items: sortAlphabetically(item.items),
-                    };
-                  }
-                  return item;
-                })
-                .sort((a, b) => {
-                  const labelA = (a.label || a.id || '').toLowerCase();
-                  const labelB = (b.label || b.id || '').toLowerCase();
-                  return labelA.localeCompare(labelB);
-                });
-            }
-            return sortAlphabetically(sidebarItems);
-          },
           versions: {
               '21': {
               label: '21 BETA',
