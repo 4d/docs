@@ -69,9 +69,9 @@ Allows the user to hold down the mouse button to display the pictures continuous
 
 ---
 
-## Switch every x ticks
+## Switch every x seconds
 
-Enables cycling through the contents of the picture button at the specified speed (in ticks). In this mode, all other options are ignored.
+Enables cycling through the contents of the picture button at the specified speed (in seconds). In this mode, all other options are ignored.
 
 #### JSON Grammar
 

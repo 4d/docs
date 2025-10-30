@@ -86,7 +86,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[fontWeight](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[footer](listbox_overview.md#list-box-footers)|Defines the footer of a list box column|Object with properties|
 |[footerHeight](properties_Footers.md#height)|Used to set the row height |pattern (\\d+)(p&#124;em)?$ (positive decimal + px/em )|
-|[frameDelay](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a id="g"></a>|
+|[frameDelay](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in seconds).|minimum: 0<a id="g"></a>|
 |**g**|||
 |[graduationStep](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a id="h"></a>|
 |**h**|||

@@ -55,7 +55,7 @@ The following other modes are available:
 - [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-- [Switch every x ticks](./properties_Animation.md#switch-every-x-ticks)
+- [Switch every x seconds](./properties_Animation.md#switch-every-x-seconds)
 
 
 

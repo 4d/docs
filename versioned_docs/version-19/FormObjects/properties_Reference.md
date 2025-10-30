@@ -87,7 +87,7 @@ You will find in this page a comprehensive list of all object properties sorted 
 |[`fontTheme`](properties_Text.md#font-theme)|Sets the automatic style |"normal", "main", "additional"| 
 |[`fontWeight`](properties_Text.md#bold)|Sets the selected text to appear darker and heavier. | "normal", "bold"|
 |[`footerHeight`](properties_Footers.md#height)|Used to set the row height | positive decimal + px &#124; em |
-|[`frameDelay`](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in ticks).|minimum: 0<a id="g"></a>|
+|[`frameDelay`](properties_Animation.md#switch-every-x-ticks)|Enables cycling through the contents of the picture button at the specified speed (in seconds).|minimum: 0<a id="g"></a>|
 |**g**|||
 |[`graduationStep`](properties_Scale.md#graduation-step)| Scale display measurement.|minimum: 0<a id="h"></a>|
 |**h**|||
