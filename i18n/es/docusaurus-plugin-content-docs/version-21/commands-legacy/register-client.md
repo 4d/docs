@@ -5,35 +5,37 @@ slug: /commands/register-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomCliente* {; *periodo*}{; *} )<!-- END REF-->
+<details><summary>Historia</summary>
+
+|Versión|Cambios|
+|---|---|
+|21|\* parámetro ignorado|
+|11.3|*periodo* parámetro ignorado |
+
+</details>
+
+
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomCliente* )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomCliente | Text | &#8594;  | Nombre de la sesión 4D Client |
-| periodo | Integer | &#8594;  | **Ignorado desde la versión 11.3*** |
-| * | Operador | &#8594;  | Proceso local |
 
 <!-- END REF-->
 
 ## Descripción 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->El comando REGISTER CLIENT “registra” un equipo cliente 4D con el nombre especificado en *nomCliente* en 4D Server, con el fin de permitir a otros clientes o eventualmente 4D Server (utilizando procedimientos almacenados) ejecutar métodos utilizando el comando [EXECUTE ON CLIENT](execute-on-client.md "EXECUTE ON CLIENT").<!-- END REF--> Una vez registrado, un cliente 4D puede ejecutar uno o varios métodos para otros clientes.
+<!--REF #_command_.REGISTER CLIENT.Summary-->El comando REGISTER CLIENT “registra” un equipo cliente 4D con el nombre especificado en *nomCliente* en 4D Server, con el fin de permitir a otros clientes o posiblemente 4D Server (utilizando procedimientos almacenados) ejecutar métodos utilizando el comando [`EXECUTE ON CLIENT`](execute-on-client.md "EXECUTE ON CLIENT").<!-- END REF--> Una vez registrado, un cliente 4D puede ejecutar uno o varios métodos para otros clientes.
 
 **Notas**:
 
-* También puede registrar automáticamente cada puesto cliente que se conecte a 4D Server utilizando la opción “Registrar los clientes al inicio...” en la caja de diálogo de Preferencias.
+* También puede registrar automáticamente cada puesto cliente que se conecte a 4D Server utilizando la opción “Registrar los clientes al inicio...” en la caja de diálogo de Propiedades.
 * Si este comando se utiliza con 4D en modo local, no tiene efecto.
 * Más de una estación 4D client puede tener el mismo nombre registrado.
 
-  
-Cuando se ejecuta este comando, un proceso, llamado *nomCllient*, se crea en el equipo cliente. Este proceso sólo puede ser abortado por el comando [UNREGISTER CLIENT](unregister-client.md "UNREGISTER CLIENT").   
-Si pasa el parámetro opcional *\**, el proceso creado es local. 4D añade automáticamente el signo dólar ($) al comienzo del nombre del proceso. De lo contrario, el proceso es global. 
+Cuando se ejecuta este comando, un proceso, llamado *nomClient*, se crea en el equipo cliente. Este proceso sólo puede ser abortado por el comando [`UNREGISTER CLIENT`](unregister-client.md).   
 
-**Nota de compatibilidad:** a partir de la versión 11.3 de 4D, se han optimizado los mecanismos de comunicación servidor/cliente. Ahora el servidor envía las peticiones de ejecución directamente a los clientes registrados cuando es necesario (tecnología "push"). El principio anterior donde los clientes buscaban periodicamente el servidor, ya no se usa. El parámetro *periodo* se ignora si se pasa.
-
-Una vez ejecutado el comando, no es posible modificar rápidamente el nombre del cliente 4D o el periodo de interrogación al servidor. Para hacerlo, debe llamar al comando [UNREGISTER CLIENT](unregister-client.md "UNREGISTER CLIENT"), y luego ejecutar el comando REGISTER CLIENT.
-
-Si un cliente 4D está registrado correctamente, la variable sistema OK es igual a 1\. Si el cliente 4D ya fue registrado, el comando no hace nada y OK toma el valor 0.
+Una vez ejecutado el comando, no es posible modificar rápidamente el nombre del cliente 4D o el periodo de interrogación al servidor. Para hacerlo, debe llamar al comando [`UNREGISTER CLIENT`](unregister-client.md), y luego ejecutar el comando **REGISTER CLIENT**.
 
 ## Ejemplo 
 
@@ -43,16 +45,16 @@ En el siguiente ejemplo, vamos a crear un sistema de mensajería pequeño que pe
 
 ```4d
   //Debe salir del registro antes de registrarse con otro nombre
+ var vPseudoName : Text
  UNREGISTER CLIENT
  Repeat
-    vNomPseudo:=Request("Introduzca su nombre:";"Usuario";"OK";"Cancelar")
- Until((OK=0)|(vNomPseudo#""))
+    vPseudoName:=Request("Enter your name:";"User";"OK";"Cancel")
+ Until((OK=0)|(vPseudoName#""))
  If(OK=0)
     ... // No hacer nada
- Else
-    REGISTER CLIENT(vNomPseudo)
- End if
-```
+ Else
+    REGISTER CLIENT(vPseudoName)
+ End if
 
 2) La siguiente instrucción le permite obtener una lista de los 4D Clients registrados. Puede colocarse en el Método de base On Startup:
 
