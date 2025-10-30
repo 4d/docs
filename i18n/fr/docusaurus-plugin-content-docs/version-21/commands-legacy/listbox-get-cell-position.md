@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne)<br/> Si omis, objet est une variable |
 | objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | x | Real | &#8594;  | Coordonnée horizontale de la souris |
 | y | Real | &#8594;  | Coordonnée verticale de la souris |
@@ -21,16 +21,20 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->La commande **LISTBOX GET CELL POSITION** retourne les numéros de la *colonne* et de la *ligne* correspondant à l’emplacement du dernier clic ou de la dernière action de sélection effectuée dans la list box désignée par *\** et objet.<!-- END REF-->   
-La commande retourne les coordonnées du clic ou de l'action de sélection même lorsque la saisie n'est pas autorisée dans la list box. 
-
-**Note :** Le numéro retourné dans le paramètre *ligne* ne tient pas compte de l'éventuel statut masqué/affiché des lignes de la list box. 
+<!--REF #_command_.LISTBOX GET CELL POSITION.Summary-->La commande **LISTBOX GET CELL POSITION** retourne les numéros de la *colonne* et de la *ligne* correspondant à l’emplacement du dernier clic, de la dernière action de sélection effectuée ou des coordonnées horizontale et verticale de la souris dans la list box désignée par *\** et objet.<!-- END REF-->   
 
 Si vous passez le paramètre facultatif *\**, vous indiquez que le paramètre *objet* est un nom d’objet (une chaîne). Si vous ne passez pas ce paramètre, vous indiquez que le paramètre *objet* est une variable. 
 
+Si les paramètres *x* et *y* sont omis, la commande retourne les coordonnées du clic ou de l'action de sélection. Si les paramètres *x* et *y* sont passés, la commande retourne les numéros de colonne et de ligne correspondant aux coordonnées de la souris. Dans les deux cas, la commande retourne des valeurs valides même lorsque la saisie n'est pas autorisée dans la list box.
+
+**Notes :** 
+- Le numéro retourné dans le paramètre *ligne* ne tient pas compte de l'éventuel statut masqué/affiché des lignes de la list box. Il peut également valoir 0 si le clic ou la position y est situé(e) au-delà de la dernière ligne. 
+- Si le clic ou la position *x* correspond à une cellule d'une fausse colonne, le paramètre *ligne* contient "n+1", où *n* est le nombre de colonnes de la list box (une fausse colonne peut être automatiquement ajoutée lorsque l'option "Redimensionnement colonnes auto" est sélectionnée.
+- Dans une list box hiérarchique, la valeur de la *colonne* prend en compte la ou les colonnes fusionnées pour représenter la hiérarchie.
+
 Le paramètre facultatif *varCol* retourne un pointeur sur la variable (c’est-à-dire le tableau) associée à la colonne. 
 
-Cette commande peut être appelée uniquement dans le cadre d’une list box générant l’un des événements formulaire suivants :
+Lorsque les paramètres *x* et *y* ne sont pas utilisés, cette commande peut être appelée uniquement dans le cadre d’une list box générant l’un des événements formulaire suivants :
 
 * On Clicked et On Double Clicked
 * On Before Keystroke et On After Keystroke
@@ -44,9 +48,8 @@ Lorsqu’elle est appelée en dehors de ce contexte, **LISTBOX GET CELL POSITION
 
 Cette commande tient compte des actions de sélection ou de désélection effectuées via la souris, les touches du clavier et la commande [EDIT ITEM](edit-item.md) (qui génère l’événement On Getting Focus).
 
-Si la sélection est modifiée via les touches fléchées du clavier, *colonne* retourne 0\. Dans ce cas, s’il est passé, le paramètre *varCol* retourne [Is nil pointer](is-nil-pointer.md). 
+Si la sélection est modifiée via les touches fléchées du clavier, *colonne* retourne 0. Dans ce cas, s’il est passé, le paramètre *varCol* retourne [Is nil pointer](is-nil-pointer.md). 
 
-Les valeurs retournées par la commande ne sont pas mises à jour dans le cas d’un clic droit (ou Control+clic sous Mac OS) sur l’en-tête d’une colonne de la list box.
 
 ## Voir aussi 
 

@@ -150,7 +150,7 @@ Supported properties depend on the list box type.
 |[Display Headers](properties_Headers.md#display-headers)|X|X|X|
 |[Display Footers](properties_Footers.md#display-footers)|X|X|X|
 |[Double-click on row](properties_ListBox.md#double-click-on-row)||X||
-|[Draggable](properties_Action.md#droppable)|X|X|X|
+|[Draggable](properties_Action.md#draggable)|X|X|X|
 |[Droppable](properties_Action.md#droppable)|X|X|X|
 |[Focusable](properties_Entry.md#focusable)|X|X|X|
 |[Font](properties_Text.md#font)|X|X|X|

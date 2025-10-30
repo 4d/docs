@@ -61,7 +61,7 @@ Sets the action to be performed when a user double-clicks on a row in the list b
  
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated. 
  
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+For the last two actions, the `On Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
 
 #### JSON Grammar
 
