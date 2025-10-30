@@ -148,7 +148,7 @@ Pour sélectionner un objet à l’aide de la barre d’outils :
 
 1. Click the Arrow tool  in the toolbar.<br/>![](../assets/en/FormEditor/selection.png)
 
-<br/>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.
+<br/>Lorsque vous le faites glisser au-dessus du formulaire, le pointeur prend la forme du pointeur standard.
 
 2. Cliquez sur l’objet que vous souhaitez sélectionner. Resizing handles identify the selected object.<br/>![](../assets/en/FormEditor/selectResize.png)
 

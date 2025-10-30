@@ -53,7 +53,7 @@ var $picture:=$image.asPicture()
 
 | Parámetros | Tipo                    | Descripción                                                                |
 | ---------- | ----------------------- | -------------------------------------------------------------------------- |
-| *file*     | 4D.File | The file object where the image will be saved.             |
+| *file*     | 4D.File | El objeto File donde se guardará la imagen.                |
 | Resultado  | Boolean                 | Devuelve `True` si la imagen se ha guardado correctamente. |
 
 Saves the image to disk, attempting to download it first if it is a URL. Devuelve `False` si no ha podido recuperar los datos de la imagen.

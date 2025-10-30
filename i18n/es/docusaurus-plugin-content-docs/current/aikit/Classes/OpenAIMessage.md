@@ -107,4 +107,4 @@ var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
 
 ## Ver también
 
-- [OpenAITool](OpenAITool.md) - For tool definition
+- [OpenAITool](OpenAITool.md) - Para la definición de la herramienta

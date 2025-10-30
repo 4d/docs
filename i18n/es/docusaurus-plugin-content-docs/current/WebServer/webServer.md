@@ -8,7 +8,7 @@ title: Servidor Web
 
 :::warning Funcionalidad obsoleta
 
-Using the web server on a remote 4D is **deprecated** as of 4D 21. It is no longer recommended to use this feature.
+Using the web server on a remote 4D is **deprecated** as of 4D 21. Ya no se recomienda utilizar esta funcionalidad.
 
 :::
 

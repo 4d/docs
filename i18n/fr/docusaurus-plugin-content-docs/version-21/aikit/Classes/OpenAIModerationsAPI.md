@@ -15,26 +15,26 @@ https://platform.openai.com/docs/api-reference/moderations
 
 **create**(*input* : Variant; *model* : Text; *parameters* : OpenAIParameters) : OpenAIModerationResult
 
-| Paramètres       | Type                                                | Description                                                                                                                              |
-| ---------------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| *zone de saisie* | Variant                                             | Input (or inputs) to classify. Can be a single text or a collection of OpenAIMessage. |
-| *model*          | Text                                                | The content moderation model you would like to use.                                                                      |
-| *parameters*     | [OpenAIParameters](OpenAIParameters.md)             | Paramètres supplémentaires pour la requête.                                                                              |
-| Résultat         | [OpenAIModerationResult](OpenAIModerationResult.md) | The result of the moderation, indicating potential harm.                                                                 |
+| Paramètres   | Type                                                | Description                                                                                                                                                        |
+| ------------ | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *input*      | Variant                                             | Entrée (ou entrées) à évaluer et classer. Il peut s'agir d'un texte unique ou d'une collection d'OpenAIMessage. |
+| *model*      | Text                                                | Le modèle de modération de contenu que vous souhaitez utiliser.                                                                                    |
+| *parameters* | [OpenAIParameters](OpenAIParameters.md)             | Paramètres supplémentaires pour la requête.                                                                                                        |
+| Résultat     | [OpenAIModerationResult](OpenAIModerationResult.md) | Le résultat de la modération, indiquant un danger potentiel.                                                                                       |
 
-Classifies whether the input is potentially harmful.
+Détermine si l'entrée est potentiellement dangereuse.
 
 https://platform.openai.com/docs/api-reference/moderations/create
 
 ## Exemples
 
-### Moderate a text
+### Modérer un texte
 
 ```4d
 var $result:=$client.moderation.create("Some text to classify"; "omni-moderation-latest"; $parameters)
 ```
 
-### Moderate a text and an image
+### Modérer un texte et une image
 
 ```4d
 var $messages:=[{type: "text"; text: "...text to classify goes here..."}; \

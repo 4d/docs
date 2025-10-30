@@ -14,13 +14,13 @@ L'assistant de conversation permet de conserver une liste de messages en mémoir
 | `chat`                | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | L'instance de l'API de conversation utilisée pour la communication avec OpenAI.                      |
 | `systemPrompt`        | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | Le message d'invite du système qui guide les réponses de l'assistant de conversation.                |
 | `numberOfMessages`    | Integer                                                               | 15                                                     | Le nombre maximum de messages à conserver dans l'historique des conversations.                       |
-| `paramètres`          | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Les paramètres pour la requête OpenAI de génération de réponse conversationnelle.                    |
+| `parameters`          | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Les paramètres pour la requête OpenAI de génération de réponse conversationnelle.                    |
 | `messages`            | Collection de [OpenAIMessage](OpenAIMessage.md)                       | [] | La collection de messages échangés dans la session de conversation.                                  |
 | `tools`               | Collection de [OpenAIModel](OpenAITool.md)                            | [] | Liste des outils OpenAI enregistrés pour l'appel de fonctions.                                       |
 | `autoHandleToolCalls` | Boolean                                                               | True                                                   | Booléen indiquant si les appels d'outils sont gérés automatiquement à l'aide des outils enregistrés. |
 | `lastErrors`          | Collection                                                            | -                                                      | Collection contenant les dernières erreurs rencontrées lors des opérations de chat.                  |
 
-## Constructor
+## Constructeur
 
 Pour créer une nouvelle instance de `OpenAIChatHelper`, il est préférable d'utiliser la méthode `create()` de l'[API de conversation du client OpenAI](OpenAIChatAPI.md) :
 

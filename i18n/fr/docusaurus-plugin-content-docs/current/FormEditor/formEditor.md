@@ -148,7 +148,7 @@ Pour sélectionner un objet à l’aide de la barre d’outils :
 
 1. Cliquez sur l'outil Flèche dans la barre d'outils.<br/>![](../assets/en/FormEditor/selection.png)
 
-<br/>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.
+<br/>Lorsque vous le faites glisser au-dessus du formulaire, le pointeur prend la forme du pointeur standard.
 
 2. Cliquez sur l’objet que vous souhaitez sélectionner. Les poignées de redimensionnement identifient l'objet sélectionné.<br/>![](../assets/en/FormEditor/selectResize.png)
 
@@ -157,7 +157,7 @@ Pour sélectionner un objet à l’aide de la Liste des propriétés :
 1. Sélectionnez le nom de l’objet dans la liste de sélection située en haut de la palette. De cette manière, vous pouvez sélectionner un objet masqué par d’autres objets ou situé en-dehors des limites de la fenêtre.
    Pour désélectionner un objet, cliquez hors de ses limites ou cliquez dessus en maintenant la touche **Majuscule** enfoncée.
 
-> It is also possible to select objects by double-clicking them in the result window of "Find in design" operation.
+> Il est également possible de sélectionner des objets en double-cliquant dessus dans la fenêtre de résultat d'une "Recherche dans le développement".
 
 ### Sélection de plusieurs objets
 
@@ -247,7 +247,7 @@ Pour grouper les objets :
 Pour dégrouper un groupe d’objets :
 
 1. Sélectionnez le groupe que vous souhaitez dégrouper.
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
+2. Choisissez **Dégrouper** dans le menu **Objet**.<br/>OU<br/>Cliquez sur le bouton **Dégrouper** (variante du bouton **Groupe**) dans la barre d'outils de l'éditeur de formulaire.<br/>Si **Ungroup** est estompé, cela signifie que l'objet sélectionné est déjà séparé dans sa forme la plus simple. 4D rematérialise les bordures des objets qui constituaient le groupe avec des poignées.
 
 ### Aligner des objets
 
@@ -314,7 +314,7 @@ Pour répartir directement une sélection d’objets (verticalement ou horizonta
 
 1. Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+2. Dans la barre d'outils, cliquez sur l'outil de distribution qui correspond à la distribution que vous souhaitez appliquer.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/> OU<br/>Sélectionnez une commande de distribution dans le sous-menu **Aligner** du menu **Objet** ou dans le menu contextuel de l'éditeur.
    4D distribue les objets en conséquence. Les objets sont répartis en fonction de la distance entre leurs centres et la plus grande distance entre deux objets consécutifs est utilisée comme référence.
 
 Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :

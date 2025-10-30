@@ -17,7 +17,7 @@ Vous pouvez développer des composants 4D pour vos propres besoins et les garder
 
 :::note
 
-You can [create a component directly from the host](#creating-components) project without needing to go through a separate matrix project
+Vous pouvez [créer un composant directement à partir du projet hôte](#creating-components) sans devoir passer par un projet matrice distinct.
 
 :::
 
@@ -25,7 +25,7 @@ You can [create a component directly from the host](#creating-components) projec
 
 La création et l’installation des composants 4D s’effectuent directement depuis 4D :
 
-- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md). You can also create a new component directly from the host, in which case it is immediately usable.
+- Pour utiliser un composant, il suffit de [l'installer dans votre application](../Project/components.md). Vous pouvez également créer un nouveau composant directement à partir de l'hôte, auquel cas il est immédiatement utilisable.
 - Un projet peut être à la fois "matrice" et "hôte", c'est-à-dire qu'un projet utilisé comme matrice peut lui-même utiliser un ou plusieurs composants. En revanche, un composant ne peut pas lui-même utiliser de "sous-composants".
 - Un composant peut faire appel à la plupart des éléments 4D : datastore ([`ds`](../commands/ds.md)), classes, fonctions, méthodes projet, formulaires projet, barres de menu, énumérations, etc. Les méthodes base de données suivantes peuvent être utilisées : [On Web Connection](../commands-legacy/on-web-connection-database-method.md), [On Web Authentication](../commands-legacy/on-web-authentication-database-method.md), [On Host Database Event](../commands-legacy/on-host-database-event-database-method.md).
 - Un composant peut créer et/ou utiliser des tables, des champs et des fichiers de données en utilisant des mécanismes de bases de données externes. Les bases externes sont des bases 4D indépendantes manipulées via les commandes SQL.
@@ -37,38 +37,38 @@ Le code d'un composant interprété peut être [modifié directement à partir d
 
 :::
 
-## Creating and editing components from the host
+## Création et modification de composants à partir de l'hôte
 
-In interpreted mode, the 4D IDE allows you to create and edit components directly from the host project. It facilitates component development and tuning in the actual context of a host project without having to leave or restart it.
+En mode interprété, l'IDE 4D vous permet de créer et de modifier des composants directement à partir du projet hôte. Cela facilite le développement et la mise au point des composants dans le contexte réel d'un projet hôte, sans avoir à quitter ou à redémarrer.
 
-### Creating components
+### Création de composants
 
-You can create a new component directly from the host project:
+Vous pouvez créer un nouveau composant directement à partir du projet hôte :
 
-- by using the **File > New > Component...** option from the File menu,
-- or by clicking the **New > Component...** button in the toolbar.
+- en utilisant l'option **Fichier > Nouveau > Composant...** du menu Fichier,
+- ou en cliquant sur le bouton **Nouveau > Composant...** dans la barre d'outils.
 
-This action opens a folder selection dialog where you choose where [the component package](../Project/components.md#package-folder) will be stored.
+Cette action ouvre une boîte de dialogue de sélection de dossier dans laquelle vous choisissez l'endroit où [le dossier racine du composant](../Project/components.md#package-folder) sera stocké.
 
-- Default location: The first time you create a component, 4D suggests the **Components** folder inside the [project package](../Project/architecture.md#components). After that, your used last folder will be automatically remembered and preselected.
-- If you decide to store the component **next to the project package**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file.
-- If you decide to store the component **elsewhere**, 4D adds it to the [`dependencies.json`](../Project/components.md#dependenciesjson) file and its path is added to the [`environment4d.json`](../Project/components.md#environment4djson) file, using either a [relative or an absolute path](../Project/components.md#relative-paths-vs-absolute-paths). A relative path is used if the component is located within no more than two levels above as the `environment4d.json` file, or in its subfolders. Otherwise, an absolute path is used.
+- Emplacement par défaut : La première fois que vous créez un composant, 4D propose le dossier **Components** dans le [dossier racine du projet] (../Project/architecture.md#components). Ensuite, le dernier dossier utilisé sera automatiquement mémorisé et présélectionné.
+- Si vous décidez de stocker le composant **à côté du dossier racine du projet**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson).
+- Si vous décidez de stocker le composant **ailleurs**, 4D l'ajoute au fichier [`dependencies.json`](../Project/components.md#dependenciesjson) et son chemin est ajouté au fichier [`environment4d.json`](../Project/components.md#environment4djson), en utilisant un [chemin relatif ou absolu](../Project/components.md#relative-paths-vs-absolute-paths). Un chemin relatif est utilisé si le composant est situé au maximum deux niveaux au-dessus du fichier `environment4d.json`, ou dans ses sous-dossiers. Sinon, un chemin absolu est utilisé.
 
 :::note
 
-You cannot store a component **in the project package** but **outside the Components folder**.
+Vous ne pouvez pas stocker un composant **dans le dossier racine du projet**, **en-dehors du dossier Components**.
 
 :::
 
-Once created, the component is immediately added to the project, accessible in the [Project dependencies](../Project/components.md#monitoring-project-dependencies) window, and available for editing.
+Une fois créé, le composant est immédiatement ajouté au projet, accessible dans la fenêtre [Dépendances du projet](../Project/components.md#monitoring-project-dependencies), et disponible pour l'édition.
 
-### Editing components
+### Modification de composants
 
-You can edit a component code as long as the following conditions are met:
+Vous pouvez modifier le code du composant dans les conditions suivantes :
 
 - le projet hôte est exécuté en interprété,
 - le composant a été [chargé en mode interprété](../Project/components.md#interpreted-and-compiled-components) et le code source est disponible,
-- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils ne sont pas [téléchargés depuis GitHub](../Project/components.md#adding-a-github-dependency)).
+- les fichiers des composants sont stockés localement (c'est-à-dire qu'ils n'on,t pas été [téléchargés depuis GitHub](../Project/components.md#adding-a-github-dependency)).
 
 Dans ce contexte, vous pouvez ouvrir, modifier et sauvegarder le code de vos composants dans l'éditeur de code du projet hôte à partir de deux endroits :
 
@@ -245,28 +245,29 @@ Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les
 
 ## Passage de variables
 
-Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
+Les variables ne sont pas partagées entre les composants et les projets hôtes. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
 
 Exemple utilisant un tableau :
 
 ```4d
 //Dans le projet hôte :
-    ARRAY INTEGER(MyArray;10)
-    AMethod(->MyArray)
+     ARRAY INTEGER(MyArray;10)
+     AMethod(->MyArray)
 
-//Dans le composant, la méthode projet UneMéthode contient : 
-     APPEND TO ARRAY($1->;2)
+//Dans le composant, la méthode projet AMethod contient :
+     #DECLARE($ptr : Pointer)
+     APPEND TO ARRAY($ptr->;2)
 ```
 
 Exemples utilisant des variables :
 
 ```4d
-C_TEXT(myvariable)
+var myvariable : Text
 component_method1(->myvariable)
 ```
 
 ```4d
-C_POINTER($p)
+var $p : Pointer
 $p:=component_method2(...)
 ```
 
@@ -274,10 +275,10 @@ Sans pointeur, un composant peut toujours accéder à la valeur d'une variable d
 
 ```4d
 //Dans la base hôte
-C_TEXT($input_t)
+var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method obtient "DoSomething" in $1 (mais pas la variable $input_t)
+// component_method obtient "DoSomething" en paramètre (mais pas la variable $input_t)
 ```
 
 L’utilisation de pointeurs pour faire communiquer les composants et le projet hôte nécessite de prendre en compte les spécificités suivantes :
@@ -291,7 +292,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et le projet 
 
 - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution.
 
-- La comparaison des pointeurs en utilisant la commande `RESOLVE POINTER` n'est pas recommandée avec les composants, car le principe de partitionnement des variables permet la coexistence de variables ayant le même nom mais avec un contenu radicalement différent dans un composant et le projet hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
+- La comparaison des pointeurs en utilisant la commande [`RESOLVE POINTER`](../commands/resolve-pointer) n'est pas recommandée avec les composants, car le principe de partitionnement des variables permet la coexistence de variables ayant le même nom mais avec un contenu radicalement différent dans un composant et le projet hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
 ```4d
      RESOLVE POINTER(monptr1;vNomVar1;vnumtable1;vnumchamp1)
@@ -308,7 +309,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ## Gestion des erreurs
 
-An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande [`ON ERR CALL`](../commands-legacy/on-err-call.md) ne s'applique qu'à l'application en cours d'exécution. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
 Cependant, vous pouvez installer un [gestionnaire d'erreurs de composants dans l'application hôte](../Concepts/error-handling.md#scope-and-components) pour gérer les erreurs non capturées des composants.
 
@@ -324,16 +325,12 @@ methCreateRec(->[PERSONNES];->[PERSONNES]Nom;"Julie Andrews")
 Dans le composant, le code de la méthode `methCreateRec` :
 
 ```4d
-C_POINTER($1) //Pointeur vers une table du projet hôte
-C_POINTER($2) //Pointeur vers un champ du projet hôte
-C_TEXT($3) // Valeur à insérer
+#DECLARE($tablepointer : Pointer ; $fieldpointer : Pointer ; $value : Text) //Pointeur sur une table dans le projet hôte
 
-$tablepointer:=$1
-$fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
-SAVE RECORD($tablepointer-
+$fieldpointer->:=$value
+SAVE RECORD($tablepointer->)
 ```
 
 > Dans le contexte d'un composant, 4D suppose qu'une référence à un formulaire table est une référence au formulaire table hôte (car les composants ne peuvent pas avoir de tables)

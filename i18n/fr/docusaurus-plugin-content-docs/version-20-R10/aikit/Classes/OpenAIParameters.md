@@ -5,7 +5,7 @@ title: OpenAIParameters
 
 # OpenAIParameters
 
-La classe `OpenAIParameters` est conçue pour gérer les paramètres d'exécution et de requête pour interagir avec l'API OpenAI.
+La classe `OpenAIParameters` permet de gérer les paramètres d'exécution et de requête pour interagir avec l'API OpenAI.
 
 ## Propriétés
 
@@ -24,8 +24,8 @@ Voir [documentation sur le code asynchrone](../asynchronous-call.md)
 
 | Propriété      | Type      | Description                                                                                                                                                                    |
 | -------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `timeout`      | Real      | Remplace le délai d'attente par défaut au niveau du client pour la requête, en secondes. Par défaut, 0.                                        |
-| `httpAgent`    | HTTPAgent | Remplace l'agent HTTP par défaut au niveau du client pour la requête.                                                                                          |
+| `timeout`      | Real      | Remplace le délai d'attente par défaut défini au niveau du client pour la requête, en secondes. Par défaut, 0.                                 |
+| `httpAgent`    | HTTPAgent | Remplace l'agent HTTP par défaut défini au niveau du client pour la requête.                                                                                   |
 | `maxRetries`   | Integer   | Nombre maximal de tentatives pour la requêtes. (Seulement si le code n'est pas asynchrone, c'est-à-dire s'il n'y a pas de fonction fournie) |
 | `extraHeaders` | Object    | En-têtes supplémentaires à envoyer avec la requête.                                                                                                            |
 

@@ -9,26 +9,26 @@ El asistente de chat permite conservar una lista de mensajes en memoria y efectu
 
 ## Propiedades
 
-| Nombre de la propiedad | Tipo                                                                  | Valor por defecto                                      | Descripción                                                                                             |
-| ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | La instancia API de chat utilizada para la comunicación con OpenAI.                     |
-| `systemPrompt`         | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | El mensaje del sistema que guía las respuestas del asistente de chat.                   |
-| `numberOfMessages`     | Integer                                                               | 15                                                     | El número máximo de mensajes a conservar en el historial de chat.                       |
-| `parámetros`           | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Los parámetros para la solicitud de terminación del chat OpenAI.                        |
-| `messages`             | Colección de [OpenAIMessage](OpenAIMessage.md)                        | [] | La colección de mensajes intercambiados en la sesión de chat.                           |
-| `herramientas`         | Collection of [OpenAITool](OpenAITool.md)                             | [] | List of registered OpenAI tools for function calling.                                   |
-| `autoHandleToolCalls`  | Boolean                                                               | True                                                   | Boolean indicating whether tool calls are handled automatically using registered tools. |
-| `lastErrors`           | Collection                                                            | -                                                      | Collection containing the last errors encountered during chat operations.               |
+| Nombre de la propiedad | Tipo                                                                  | Valor por defecto                                      | Descripción                                                                                                                          |
+| ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `chat`                 | [OpenAIChatAPI](OpenAIChatAPI.md)                                     | -                                                      | La instancia API de chat utilizada para la comunicación con OpenAI.                                                  |
+| `systemPrompt`         | [OpenAIMessage](OpenAIMessage.md)                                     | -                                                      | El mensaje del sistema que guía las respuestas del asistente de chat.                                                |
+| `numberOfMessages`     | Integer                                                               | 15                                                     | El número máximo de mensajes a conservar en el historial de chat.                                                    |
+| `parámetros`           | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | -                                                      | Los parámetros para la solicitud de terminación del chat OpenAI.                                                     |
+| `messages`             | Colección de [OpenAIMessage](OpenAIMessage.md)                        | [] | La colección de mensajes intercambiados en la sesión de chat.                                                        |
+| `herramientas`         | Colección de [OpenAITool](OpenAITool.md)                              | [] | Lista de herramientas OpenAI registradas para la llamada de funciones.                                               |
+| `autoHandleToolCalls`  | Boolean                                                               | True                                                   | Booleano que indica si las llamadas a herramientas se gestionan automáticamente utilizando herramientas registradas. |
+| `lastErrors`           | Collection                                                            | -                                                      | Colección que contiene los últimos errores encontrados durante las operaciones de chat.                              |
 
 ## Constructor
 
-To create a new `OpenAIChatHelper` instance, it's best to use the `create()` method from the [OpenAI client's chat API](OpenAIChatAPI.md):
+Para crear una nueva instancia de `OpenAIChatHelper`, lo mejor es utilizar el método `create()` de la [API de chat del cliente OpenAI](OpenAIChatAPI.md):
 
 ```4D
 var $chatHelper:=$client.chat.create("You are a helpful assistant.")
 ```
 
-This method creates a new chat helper with the specified system prompt and initializes it with default parameters. The system prompt defines the assistant's role and behavior throughout the conversation.
+Este método crea un nuevo asistente de chat con el prompt sistema especificado y lo inicializa con los parámetros por defecto. El prompt del sistema define el rol y comportamiento del asistente a lo largo de la conversación.
 
 ## Funciones
 
@@ -54,32 +54,32 @@ $result:=$chatHelper.prompt("Why 42?")
 
 **reset**()
 
-Resets the chat context by clearing all messages and unregistering all tools. This effectively starts a fresh conversation while keeping the system prompt and parameters intact.
+Restablece el contexto del chat borrando todos los mensajes y anulando el registro de todas las herramientas. De este modo, se inicia una nueva conversación y se mantienen intactos el aviso y los parámetros del sistema.
 
 #### Ejemplo de reinicio
 
 ```4D
 $chatHelper.prompt("Hello!")
-$chatHelper.reset()  // Clear all previous messages and tools
+$chatHelper.reset() // Borra todos los mensajes y herramientas anteriores
 ```
 
 ### registerTool()
 
 **registerTool**(*tool* : Object; *handler* : Object)
 
-| Parámetros | Tipo   | Descripción                                                                                                                                                                         |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *tool*     | Object | The tool definition object (or [OpenAITool](OpenAITool.md) instance)                                                                                             |
-| *handler*  | Object | The function to handle tool calls ([4D.Function](../../API/FunctionClass.md) or Object), optional if defined inside *tool* as *handler* property |
+| Parámetros | Tipo   | Descripción                                                                                                                                                                                                   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *tool*     | Object | Objeto de definición de la herramienta (o instancia [OpenAITool](OpenAITool.md))                                                                                                           |
+| *handler*  | Object | La función para manejar las llamadas de herramientas ([4D.Function](../../API/FunctionClass.md) u Objeto), opcional si se define dentro de *tool* como propiedad *handler* |
 
-Registers a tool with its handler function for automatic tool call handling.
+Registra una herramienta con su función de gestión automática de llamadas a herramientas.
 
 El parámetro *handler* puede ser:
 
-- A **4D.Function**: Direct handler function
+- Un objeto **4D.Function**: función de gestión directa
 - Un **Objeto**: un objeto que contiene una propiedad `formula` que coincide con el nombre de la función de la herramienta
 
-The handler function receives an object containing the parameters passed from the OpenAI tool call. This object contains key-value pairs where the keys match the parameter names defined in the tool's schema, and the values are the actual arguments provided by the AI model.
+La función de gestión recibe un objeto que contiene los parámetros pasados por la llamada a la herramienta OpenAI. Este objeto contiene pares llave-valor en los que las llaves corresponden a los nombres de los parámetros definidos en el esquema de la herramienta, y los valores son los argumentos reales ofrecidos por el modelo de IA.
 
 #### Ejemplo de herramienta de registro
 
@@ -177,7 +177,7 @@ $chatHelper.registerTools($tools)
 | -------------- | ---- | ------------------------------------------- |
 | *functionName* | Text | The name of the function tool to unregister |
 
-Unregisters a specific tool by its function name. This removes the tool from the registered tools collection, clears its handler, and removes it from the parameters.
+Desregistra una herramienta específica por su nombre de función. This removes the tool from the registered tools collection, clears its handler, and removes it from the parameters.
 
 #### Unregister Tool Example
 

@@ -91,7 +91,7 @@ Sur le serveur, la commande [`Session`](../commands/session.md) renvoie un objet
 
 ### Utilisation
 
-L'objet `session` vous permet d'obtenir des informations sur la session de l'utilisateur distant. Vous pouvez partager des données entre tous les processus de la session utilisateur en utilisant l'objet partagé [`session.storage`](../API/SessionClass.md#storage).
+L'objet `session` vous permet d'obtenir des informations sur la session de l'utilisateur distant. Vous pouvez partager des données entre tous les process de la session utilisateur en utilisant l'objet partagé [`session.storage`](../API/SessionClass.md#storage).
 
 Par exemple, vous pouvez lancer une procédure d'authentification et de vérification de l'utilisateur lorsqu'un client se connecte au serveur, impliquant la saisie d'un code envoyé par e-mail ou SMS dans l'application. Ensuite, vous ajoutez les informations de l'utilisateur au storage de session, ce qui permet au serveur d'identifier l'utilisateur. De cette façon, le serveur 4D peut accéder aux informations de l'utilisateur pour tous les process clients, permettant l'écriture de code personnalisé en fonction du rôle de l'utilisateur.
 

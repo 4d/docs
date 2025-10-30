@@ -118,7 +118,7 @@ Todos los procedimientos almacenados en el servidor comparten la misma sesión d
 
 :::
 
-### Sharing the session with Qodly pages in Web areas
+### Compartiendo la sesión con páginas Qodly en áreas web
 
 Remote client sessions can be used to handle Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
 

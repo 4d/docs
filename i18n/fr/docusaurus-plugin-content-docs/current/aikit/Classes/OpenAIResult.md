@@ -5,7 +5,7 @@ title: OpenAIResult
 
 # OpenAIResult
 
-The `OpenAIResult` class is designed to handle the response from HTTP requests and provides functions to evaluate the success of the request, retrieve body content, and collect any errors that may have occurred during processing.
+La classe `OpenAIResult` permet de gérer la réponse des requêtes HTTP et fournit des fonctions pour évaluer le succès de la requête, récupérer le contenu du body et collecter toutes les erreurs qui ont pu se produire pendant le traitement.
 
 ## Propriétés
 
@@ -15,42 +15,42 @@ The `OpenAIResult` class is designed to handle the response from HTTP requests a
 
 ## Propriétés calculées
 
-| Propriété     | Type       | Description                                                                                                                 |
-| ------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
-| `success`     | Boolean    | A Boolean indicating whether the HTTP request was successful.                                               |
-| `errors`      | Collection | Returns a collection of errors. These could be network errors or errors returned by OpenAI. |
-| `terminated`  | Boolean    | Un booléen indiquant si la requête HTTP a été close,                                                                        |
-| `headers`     | Object     | Returns the response headers as an object.                                                                  |
-| `rateLimit`   | Object     | Returns rate limit information from the response headers.                                                   |
-| `utilisation` | Object     | Returns usage information from the response body if any.                                                    |
+| Propriété    | Type       | Description                                                                                                                          |
+| ------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `success`    | Boolean    | Un booléen indiquant si la requête HTTP a réussi.                                                                    |
+| `errors`     | Collection | Renvoie une collection d'erreurs. Il peut s'agir d'erreurs réseau ou d'erreurs renvoyées par OpenAI. |
+| `terminated` | Boolean    | Un booléen indiquant si la requête HTTP a été close,                                                                                 |
+| `headers`    | Object     | Renvoie les en-têtes de la réponse sous forme d'objet.                                                               |
+| `rateLimit`  | Object     | Renvoie les informations relatives à la limite de débit contenues dans les en-têtes de la réponse.                   |
+| `usage`      | Object     | Renvoie les informations d'utilisation depuis le body de la réponse, le cas échéant.                                 |
 
 ### rateLimit
 
-The `rateLimit` property returns an object containing rate limit information from the response headers.
-This information includes the limits, remaining requests, and reset times for both requests and tokens.
+La propriété `rateLimit` renvoie un objet contenant des informations sur la limite de débit à partir des en-têtes de réponse.
+Ces informations comprennent les limites, les requêtes restantes et les délais de réinitialisation des requêtes et des tokens.
 
-For more details on rate limits and the specific headers used, refer to [the OpenAI Rate Limits Documentation](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
+Pour plus de détails sur les limites de taux et les en-têtes spécifiques utilisés, se référer à [la documentation sur les limites de taux de l'OpenAI](https://platform.openai.com/docs/guides/rate-limits#rate-limits-in-headers).
 
-The structure of the `rateLimit` object is as follows:
+La structure de l'objet `rateLimit` est la suivante :
 
-| Champ               | Type    | Description                                      |
-| ------------------- | ------- | ------------------------------------------------ |
-| `limit.request`     | Integer | Number of allowed requests.      |
-| `limit.tokens`      | Integer | Number of allowed tokens.        |
-| `remaining.request` | Integer | Number of remaining requests.    |
-| `remaining.tokens`  | Integer | Number of remaining tokens.      |
-| `reset.request`     | String  | Time until request limit resets. |
-| `reset.tokens`      | String  | Time until token limit resets.   |
+| Champ               | Type    | Description                                                            |
+| ------------------- | ------- | ---------------------------------------------------------------------- |
+| `limit.request`     | Integer | Nombre de requêtes autorisées.                         |
+| `limit.tokens`      | Integer | Nombre de tokens autorisés.                            |
+| `remaining.request` | Integer | Nombre de requêtes restantes.                          |
+| `remaining.tokens`  | Integer | Nombre de tokens restants.                             |
+| `reset.request`     | String  | Délai avant réinitialisation de la limite de requêtes. |
+| `reset.tokens`      | String  | Délai avant réinitialisation de la limite de tokens.   |
 
 ## Fonctions
 
 ### `throw()`
 
-Throws the first error in the `errors` collection. This function is useful for propagating errors up the call stack.
+Génère la première erreur de la collection `errors`. Cette fonction est utile pour propager les erreurs vers le haut de la pile d'appels.
 
 ## Classes héritées
 
-Several classes inherit from `OpenAIResult` to extend its functionality for specific use cases. Below are some of the classes that extend `OpenAIResult`:
+Plusieurs classes héritent de `OpenAIResult` pour étendre ses fonctionnalités à des cas d'utilisation spécifiques. Voici quelques-unes des classes qui étendent `OpenAIResult` :
 
 - [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)
 - [OpenAIChatCompletionsStreamResult](OpenAIChatCompletionsStreamResult.md)

@@ -120,13 +120,13 @@ Cette fonctionnalité ne peut être utilisée que sous Windows. Sous macOS, elle
 
 :::tip Article(s) de blog sur le sujet
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
+[Modernisez vos interfaces 4D avec Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
 
 :::
 
 ### Conditions requises
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+Le rendu Fluent UI nécessite l'installation du [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Vous devez installer ce SDK sur toute machine Windows affichant vos formulaires.
 
 Si le Windows App SDK n'est pas correctement installé, 4D utilisera le rendu classique pour vos formulaires sans erreur.
 
@@ -153,11 +153,11 @@ Chaque formulaire peut définir son propre rendu via la propriété **Apparence 
 
 La [propriété de formulaire JSON](./properties_JSONref.md) correspondante est `fluentUI` avec la valeur undefined (i.e. hérité, valeur par défaut), "true" ou "false".
 
-### Specific behaviors
+### Comportements spécifiques
 
 Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez prêter attention aux points suivants :
 
-- The new `FORM Windows theme` command returns the actual display theme of the current form. Valeurs possibles : "Classic" ou "FluentUI". S'il n'y a pas de formulaire courant ou si la commande est appelée sous macOS, une chaîne vide est renvoyée.
+- La nouvelle commande `FORM Windows theme` renvoie le thème d'affichage actuel du formulaire courant. Valeurs possibles : "Classic" ou "FluentUI". S'il n'y a pas de formulaire courant ou si la commande est appelée sous macOS, une chaîne vide est renvoyée.
 - Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) est appelée dans le contexte d'un formulaire, les informations renvoyées concernent l'apparence courante du formulaire (Classic ou FluentUI). Si la commande est appelée en dehors du contexte d'un formulaire, les informations renvoyées concernent les [propriétés globales du projet](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) avec le paramètre *itemStyle* `Underline` n'est pas pris en charge (ignoré) pour les menus pop up.
 - L'objet de formulaire [Stepper](../FormObjects/stepper.md) ne prend pas en charge l'événement [double-clic](../Events/onDoubleClicked.md).
@@ -167,7 +167,7 @@ Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez pr�
 
 :::info Limitations
 
-This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
+Cette **Developer preview** comporte certaines limitations, [listées dans l'article de blog qui lui est consacré](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
 
 :::
 

@@ -270,7 +270,6 @@ title: Comandos por nombre
 [`ENABLE MENU ITEM`](../commands-legacy/enable-menu-item.md)<br/>
 [`ENCRYPT BLOB`](../commands-legacy/encrypt-blob.md)<br/>
 [`Encrypt data BLOB`](../commands-legacy/encrypt-data-blob.md)<br/>
-
 [`Encrypt data file`](../commands-legacy/encrypt-data-file.md)<br/>
 [`End selection`](../commands-legacy/end-selection.md)<br/>
 [`End SQL`](../commands-legacy/end-sql.md)<br/>
@@ -816,26 +815,8 @@ title: Comandos por nombre
 [`Old`](../commands-legacy/old.md)<br/>
 [`OLD RELATED MANY`](../commands-legacy/old-related-many.md)<br/>
 [`OLD RELATED ONE`](../commands-legacy/old-related-one.md)<br/>
-[`On Backup Shutdown database method`](../commands-legacy/on-backup-shutdown-database-method.md)<br/>
-[`On Backup Startup database method`](../commands-legacy/on-backup-startup-database-method.md)<br/>
-[`On Drop database method`](../commands-legacy/on-drop-database-method.md)<br/>
 [`ON ERR CALL`](../commands-legacy/on-err-call.md)<br/>
 [`ON EVENT CALL`](../commands-legacy/on-event-call.md)<br/>
-[`On Exit database method`](../commands-legacy/on-exit-database-method.md)<br/>
-[`On Host Database Event database method`](../commands-legacy/on-host-database-event-database-method.md)<br/>
-[`On Mobile App Action database method`](../commands-legacy/on-mobile-app-action-database-method.md)<br/>
-[`On Mobile App Authentication database method`](../commands-legacy/on-mobile-app-authentication-database-method.md)<br/>
-[`On REST Authentication database method`](../commands-legacy/on-rest-authentication-database-method.md)<br/>
-[`On Server Close Connection database method`](../commands-legacy/on-server-close-connection-database-method.md)<br/>
-[`On Server Open Connection database method`](../commands-legacy/on-server-open-connection-database-method.md)<br/>
-[`On Server Shutdown database method`](../commands-legacy/on-server-shutdown-database-method.md)<br/>
-[`On Server Startup database method`](../commands-legacy/on-server-startup-database-method.md)<br/>
-[`On SQL Authentication database method`](../commands-legacy/on-sql-authentication-database-method.md)<br/>
-[`On Startup database method`](../commands-legacy/on-startup-database-method.md)<br/>
-[`On System Event database method`](../commands-legacy/on-system-event-database-method.md)<br/>
-[`On Web Authentication database method`](../commands-legacy/on-web-authentication-database-method.md)<br/>
-[`On Web Connection database method`](../commands-legacy/on-web-connection-database-method.md)<br/>
-[`On Web Legacy Close Session database method`](../commands-legacy/on-web-legacy-close-session-database-method.md)<br/>
 [`ONE RECORD SELECT`](../commands-legacy/one-record-select.md)<br/>
 [`OPEN ADMINISTRATION WINDOW`](../commands-legacy/open-administration-window.md)<br/>
 [`OPEN COLOR PICKER`](../commands-legacy/open-color-picker.md)<br/>

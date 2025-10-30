@@ -172,28 +172,29 @@ Si vous ne saisissez pas de [namespace](#declaring-the-component-namespace), les
 
 ## Passage de variables
 
-Les composants et les projets hôtes ne partagent pas de variables locales, process ou interprocess. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
+Les variables ne sont pas partagées entre les composants et les projets hôtes. La seule façon de modifier les variables de composants du projet hôte et vice versa est d'utiliser des pointeurs.
 
 Exemple utilisant un tableau :
 
 ```4d
 //Dans le projet hôte :
-    ARRAY INTEGER(MyArray;10)
-    AMethod(->MyArray)
+     ARRAY INTEGER(MyArray;10)
+     AMethod(->MyArray)
 
-//Dans le composant, la méthode projet UneMéthode contient : 
-     APPEND TO ARRAY($1->;2)
+//Dans le composant, la méthode projet AMethod contient :
+     #DECLARE($ptr : Pointer)
+     APPEND TO ARRAY($ptr->;2)
 ```
 
 Exemples utilisant des variables :
 
 ```4d
-C_TEXT(myvariable)
+var myvariable : Text
 component_method1(->myvariable)
 ```
 
 ```4d
-C_POINTER($p)
+var $p : Pointer
 $p:=component_method2(...)
 ```
 
@@ -201,10 +202,10 @@ Sans pointeur, un composant peut toujours accéder à la valeur d'une variable d
 
 ```4d
 //Dans la base hôte
-C_TEXT($input_t)
+var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method obtient "DoSomething" in $1 (mais pas la variable $input_t)
+// component_method obtient "DoSomething" en paramètre (mais pas la variable $input_t)
 ```
 
 L’utilisation de pointeurs pour faire communiquer les composants et le projet hôte nécessite de prendre en compte les spécificités suivantes :
@@ -218,7 +219,7 @@ L’utilisation de pointeurs pour faire communiquer les composants et le projet 
 
 - Si le composant I définit la variable `mavarI`, le composant C ne peut pas accéder à cette variable en utilisant le pointeur `->mavarI`. Cette syntaxe provoque une erreur d’exécution.
 
-- La comparaison des pointeurs en utilisant la commande `RESOLVE POINTER` n'est pas recommandée avec les composants, car le principe de partitionnement des variables permet la coexistence de variables ayant le même nom mais avec un contenu radicalement différent dans un composant et le projet hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
+- La comparaison des pointeurs en utilisant la commande [`RESOLVE POINTER`](../commands/resolve-pointer) n'est pas recommandée avec les composants, car le principe de partitionnement des variables permet la coexistence de variables ayant le même nom mais avec un contenu radicalement différent dans un composant et le projet hôte (ou un autre composant). Le type de la variable peut même être différent dans les deux contextes. Si les pointeurs `monptr1` et `monptr2` pointent chacun sur une variable, la comparaison suivante produira un résultat erroné :
 
 ```4d
      RESOLVE POINTER(monptr1;vNomVar1;vnumtable1;vnumchamp1)
@@ -235,7 +236,7 @@ Dans ce cas, il est nécessaire d’utiliser la comparaison de pointeurs :
 
 ## Gestion des erreurs
 
-Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande `ON ERR CALL` s'applique à l'application en cours d'exécution uniquement. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
+Une [méthode de gestion d'erreurs](Concepts/error-handling.md) installée par la commande [`ON ERR CALL`](../commands-legacy/on-err-call.md) ne s'applique qu'à l'application en cours d'exécution. En cas d'erreur générée par un composant, la méthode d'appel sur erreur `ON ERR CALL` du projet hôte n'est pas appelée, et inversement.
 
 Cependant, vous pouvez installer un [gestionnaire d'erreurs de composants dans l'application hôte](../Concepts/error-handling.md#scope-and-components) pour gérer les erreurs non capturées des composants.
 
@@ -251,16 +252,12 @@ methCreateRec(->[PERSONNES];->[PERSONNES]Nom;"Julie Andrews")
 Dans le composant, le code de la méthode `methCreateRec` :
 
 ```4d
-C_POINTER($1) //Pointeur vers une table du projet hôte
-C_POINTER($2) //Pointeur vers un champ du projet hôte
-C_TEXT($3) // Valeur à insérer
+#DECLARE($tablepointer : Pointer ; $fieldpointer : Pointer ; $value : Text) //Pointeur sur une table dans le projet hôte
 
-$tablepointer:=$1
-$fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
-SAVE RECORD($tablepointer-
+$fieldpointer->:=$value
+SAVE RECORD($tablepointer->)
 ```
 
 > Dans le contexte d'un composant, 4D suppose qu'une référence à un formulaire table est une référence au formulaire table hôte (car les composants ne peuvent pas avoir de tables)

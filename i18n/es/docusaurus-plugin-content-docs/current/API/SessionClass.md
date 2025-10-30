@@ -445,8 +445,7 @@ Puede utilizar esta propiedad para obtener el objeto [`.storage`](#storage) de u
 
 | Lanzamiento | Modificaciones |
 | ----------- | -------------- |
-
-|18 R6|Añadido|
+| 18 R6       | Añadidos       |
 
 </details>
 

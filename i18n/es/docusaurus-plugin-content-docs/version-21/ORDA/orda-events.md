@@ -439,8 +439,8 @@ return $result
 #### Sintaxis
 
 ```4d
-Function event afterSave($event : Object)
-// code
+Función evento afterSave($event : Object)
+// código
 ```
 
 This event is triggered just after an entity is saved in the data file, when at least one attribute was modified. It is not executed if no attribute has been touched in the entity.

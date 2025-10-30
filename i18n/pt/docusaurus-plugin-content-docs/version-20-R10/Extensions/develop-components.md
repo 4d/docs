@@ -172,39 +172,40 @@ Se você não inserir um [component namespace](#declaring-the-component-namespac
 
 ## Passar variáveis
 
-As variáveis locais, de processo e interprocessos não são compartilhadas entre componentes e projetos de host. A única maneira de modificar variáveis de componentes do projeto host e vice-versa é usando ponteiros.
+Variables are not shared between components and host projects. A única maneira de modificar variáveis de componentes do projeto host e vice-versa é usando ponteiros.
 
 Exemplo usando um array:
 
 ```4d
-//No projeto host:
+//In the host project:
      ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
 
-//No componente, o método projeto AMethod contém:
-     APPEND TO ARRAY($1->;2)
+//In the component, the AMethod project method contains:
+     #DECLARE($ptr : Pointer)
+     APPEND TO ARRAY($ptr->;2)
 ```
 
 Exemplos usando variáveis:
 
 ```4d
-C_TEXT(myvariable)
+var myvariable : Text
 component_method1(->myvariable)
 ```
 
 ```4d
-C_POINTER($p)
+var $p : Pointer
 $p:=component_method2(...)
 ```
 
 Sem um ponteiro, um componente ainda pode acessar o valor de uma variável do banco de dados do host (mas não a própria variável) e vice-versa:
 
 ```4d
-//No banco de dados host
-C_TEXT($input_t)
+//In the host database
+var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method gets "DoSome" in $1 (mas não na variável $input_t)
+// component_method gets "DoSomething" in parameter (but not the $input_t variable)
 ```
 
 Quando você usa ponteiros para permitir que os componentes e o projeto host se comuniquem, é necessário levar em conta as seguintes especificidades:
@@ -218,7 +219,7 @@ Quando você usa ponteiros para permitir que os componentes e o projeto host se 
 
 - Se o componente I definir a variável `myIvar`, o componente C não poderá acessar essa variável usando o ponteiro `->myIvar`. Esta sintaxe causa um erro de execução.
 
-- A comparação de ponteiros usando o comando `RESOLVE POINTER` não é recomendada com componentes, uma vez que o princípio de partição de variáveis permite a coexistência de variáveis com o mesmo nome, mas com conteúdos radicalmente diferentes em um componente e o projeto host (ou outro componente). O tipo da variável pode mesmo ser diferente em ambos os contextos. Se os ponteiros `myptr1` e `myptr2` apontarem cada um para uma variável, a comparação a seguir produzirá um resultado incorreto:
+- The comparison of pointers using the [`RESOLVE POINTER`](../commands/resolve-pointer) command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). O tipo da variável pode mesmo ser diferente em ambos os contextos. Se os ponteiros `myptr1` e `myptr2` apontarem cada um para uma variável, a comparação a seguir produzirá um resultado incorreto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -235,7 +236,7 @@ Neste caso é preciso usar a comparação de ponteiros:
 
 ## Gestão de erros
 
-Um [método de tratamento de erros](Concepts/error-handling.md) instalado pelo comando `ON ERR CALL` aplica-se somente ao aplicativo em execução. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
+An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. No caso de um erro gerado por um componente, o método de tratamento de erros `ON ERR CALL` do projeto host não é chamado, e vice-versa.
 
 However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
 
@@ -251,15 +252,11 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name; "Julie Andrews")
 Dentro do componente, o código do método `methCreateRec`:
 
 ```4d
-C_POINTER($1) ///Pointer em uma tabela no projeto host
-C_POINTER($2) ///Pointer em um campo no projeto host
-C_TEXT($3) // Valor para inserir
+#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Pointer on a table in host project
 
-$tablepointer:=$1
-$fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
+$fieldpointer->:=$value
 SAVE RECORD($tablepointer->)
 ```
 

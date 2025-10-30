@@ -5,35 +5,35 @@ title: OpenAITool
 
 # OpenAITool
 
-The `OpenAITool` class represents a tool that can be called by the OpenAI model during a conversation. Tools allow the AI to perform specific functions and interact with external systems or retrieve information.
+La classe `OpenAITool` représente un outil qui peut être appelé par le modèle OpenAI au cours d'une conversation. Les outils permettent à l'IA d'exécuter des fonctions spécifiques et d'interagir avec des systèmes externes ou d'extraire des informations.
 
-See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
+Voir [OpenAIMessage](OpenAIMessage.md) pour savoir comment répondre à un appel d'outil.
 
-> **Note:** The tool calls are handled automatically when using [OpenAIChatHelper](OpenAIChatHelper.md) with `autoHandleToolCalls` enabled.
+> **Note :** Les appels d'outils sont gérés automatiquement lorsque vous utilisez [OpenAIChatHelper](OpenAIChatHelper.md) avec l'option `autoHandleToolCalls` activée.
 
 ## Propriétés
 
-### Root Properties
+### Propriétés root
 
-| Propriété | Type    | Par défaut   | Description                                                                                                              |
-| --------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `type`    | Text    | `"function"` | The type of tool. Currently supports `"function"`, `"custom"`, and other built-in types. |
-| `strict`  | Boolean | `False`      | Whether to enforce strict schema validation for function parameters.                                     |
+| Propriété | Type    | Par défaut   | Description                                                                                                                                   |
+| --------- | ------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `type`    | Text    | `"function"` | Le type d'outil. Prend en charge actuellement les types `"function"`, `"custom"`, et d'autres types intégrés. |
+| `strict`  | Boolean | `False`      | Appliquer ou non une validation stricte du schéma pour les paramètres de la fonction.                                         |
 
-### Common Properties
+### Propriétés communes
 
-| Propriété     | Type | Description                                                                    |
-| ------------- | ---- | ------------------------------------------------------------------------------ |
-| `name`        | Text | The name of the tool, which works as an identifier.            |
-| `description` | Text | Description of the tool to help the LLM decide when to use it. |
+| Propriété     | Type | Description                                                                          |
+| ------------- | ---- | ------------------------------------------------------------------------------------ |
+| `name`        | Text | Le nom de l'outil, qui sert d'identifiant.                           |
+| `description` | Text | Description de l'outil pour aider le LLM à décider quand l'utiliser. |
 
-### Function-specific Properties
+### Propriétés spécifiques des fonctions
 
-| Propriété    | Type   | Description                                                                      |
-| ------------ | ------ | -------------------------------------------------------------------------------- |
-| `paramètres` | Object | Parameters definition for the function using JSON schema format. |
+| Propriété    | Type   | Description                                                                        |
+| ------------ | ------ | ---------------------------------------------------------------------------------- |
+| `parameters` | Object | Définition des paramètres de la fonction au format du schéma JSON. |
 
-## Constructor
+## Constructeur
 
 ### new()
 
@@ -41,14 +41,14 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 
 | Paramètres | Type       | Description                       |
 | ---------- | ---------- | --------------------------------- |
-| *object*   | Object     | Configuration object for the tool |
-| Résultat   | OpenAITool | New instance of OpenAITool        |
+| *object*   | Object     | Objet de configuration de l'outil |
+| Résultat   | OpenAITool | Nouvelle instance d'OpenAITool    |
 
-Creates a new OpenAITool instance. The constructor accepts both simplified format and OpenAI API format.
+Crée une nouvelle instance d'OpenAITool. Le constructeur accepte à la fois le format simplifié et le format de l'API OpenAI.
 
-#### Supported formats
+#### Formats pris en charge
 
-**Simplified format:**
+**Format simplifié :**
 
 ```4d
 var $tool := cs.OpenAITool.new({ \
@@ -64,7 +64,7 @@ var $tool := cs.OpenAITool.new({ \
 })
 ```
 
-**OpenAI API format:**
+**Format de l'API OpenAI :**
 
 ```4d
 var $tool := cs.OpenAITool.new({ \
@@ -84,9 +84,9 @@ var $tool := cs.OpenAITool.new({ \
 })
 ```
 
-## Integration with Chat Completions
+## Intégration avec les générateurs de réponses conversationnelles
 
-Tools are typically used with the `OpenAIChatCompletionsParameters.tools` property:
+Les outils sont généralement utilisés avec la propriété `OpenAIChatCompletionsParameters.tools` :
 
 ```4d
 var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
@@ -95,10 +95,10 @@ var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
 })
 ```
 
-> **Note:** You can pass plain objects directly - they will be automatically converted to `OpenAITool` instances. There's no need to explicitly create `OpenAITool` objects.
+> **Note :** Vous pouvez passer des objets simples directement - ils seront automatiquement convertis en instances `OpenAITool`. Il n'est pas nécessaire de créer explicitement des objets `OpenAITool`.
 
 ## Voir aussi
 
-- [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) - For tool configuration
-- [OpenAIChatHelper](OpenAIChatHelper.md) - For automatic tool call handling
-- [OpenAIMessage](OpenAIMessage.md) - For tool call responses
+- [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) - Pour la configuration de l'outil
+- [OpenAIChatHelper](OpenAIChatHelper.md) - Pour la gestion automatique des appels d'outils
+- [OpenAIMessage](OpenAIMessage.md) - Pour les réponses aux appels d'outils

@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsListParameters
 
 # OpenAIChatCompletionsListParameters
 
-Cette classe est utilisée pour définir les paramètres de récupération d'une liste de réponses conversationnelle à partir de l'API OpenAI. Elle permet de personnaliser la pagination, le tri et le filtrage des messages de la conversation.
+Cette classe est utilisée pour définir les paramètres de récupération d'une liste de réponses conversationnelles à partir de l'API OpenAI. Elle permet de personnaliser la pagination, le tri et le filtrage des messages de la conversation.
 
 ## Hérite de
 

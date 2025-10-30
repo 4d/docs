@@ -24,8 +24,7 @@ L'ancien mode de connexion basé sur la méthode base `On REST Authentication` e
 
 La séquence de connexion d'un utilisateur est la suivante :
 
-1. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée. Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), aucune licence n'est consommée.\
-   Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte.  
+1. Lors de la première requête REST (pour un appel de page Qodly par exemple), une session utilisateur web "guest" est créée. Elle n'a aucun privilège, aucun droit d'exécuter des requêtes autres que des [requêtes REST descriptives](#descriptive-rest-requests), et aucune licence n'est consommée.  
    Les requêtes REST descriptives sont toujours traitées par le serveur, même si aucune session utilisateur web utilisant une licence n'est ouverte. Dans ce cas, elles sont traitées à travers des sessions "guest".
 
 2. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés.
@@ -61,7 +60,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 La fonction `authentify()` doit être implémentée dans la [classe DataStore](../ORDA/ordaClasses.md#datastore-class) du projet et doit être appelée par une requête REST.
 
-Cette fonction est le seul point d'entrée disponible à partir des sessions guest REST lorsque le mode "force login" est activé : tout autre appel de fonction ou d'accès aux données est rejeté jusqu'à ce que la session acquière les privilèges appropriés.
+This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called and the session acquires appropriate privileges.
 
 :::note
 

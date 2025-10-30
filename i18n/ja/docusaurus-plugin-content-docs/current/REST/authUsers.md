@@ -61,7 +61,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 `authentify()` 関数は、プロジェクトの [DataStore クラス](../ORDA/ordaClasses.md#datastore-クラス) に実装されている必要があり、RESTリクエストを介して呼び出される必要があります。
 
-"強制ログイン" モードが有効な場合、この関数は、RESTゲストセッションから唯一の利用可能なエントリーポイントです。セッションが適切な権限を取得するまで、他の関数の呼び出しやデータアクセスは拒否されます。
+This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called and the session acquires appropriate privileges.
 
 :::note
 

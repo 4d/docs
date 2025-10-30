@@ -3,7 +3,7 @@ id: shared
 title: 共有オブジェクトと共有コレクション
 ---
 
-**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](./dt_object.md) と [コレクション](./dt_collection.md) です。 In contrast to [interprocess variables](./variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](./dt_object.md) と [コレクション](./dt_collection.md) です。 In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
 
 共有オブジェクトと共有コレクションは、標準の [`Object`](./dt_object.md) および [`Collection`](./dt_collection.md) 型の変数に保存されますが、以下のように専用のコマンドを使用してインスタンス化されている必要があります:
 

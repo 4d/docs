@@ -28,7 +28,7 @@ La classe `OpenAIChatCompletionParameters` permet de gérer les paramètres requ
 | `tool_choice`           | Variant    | `Null`            | Contrôle l'outil (le cas échéant) qui est appelé par le modèle. Peut être `"none"`, `"auto"`, `"required"`, ou spécifier un outil particulier.                                                 |
 | `prediction`            | Object     | `Null`            | Contenu de sortie statique, tel que le contenu d'un fichier texte en cours de régénération.                                                                                                                                       |
 
-### Asynchronous Callback Properties
+### Propriétés du callback asynchrone
 
 | Propriété                                  | Type                        | Description                                                                                                                                                                    |
 | ------------------------------------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

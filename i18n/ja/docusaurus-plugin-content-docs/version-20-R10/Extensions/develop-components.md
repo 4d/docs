@@ -172,39 +172,40 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## 変数の渡し方
 
-ローカル、プロセス、インタープロセス変数は、コンポーネントとホストプロジェクト間で共有されません。 ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
+Variables are not shared between components and host projects. ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
 
 配列を使用した例:
 
 ```4d
-// ホストプロジェクト側:
+//In the host project:
      ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
 
-// コンポーネント側で AMethod プロジェクトメソッドは以下の通りです:
-     APPEND TO ARRAY($1->;2)
+//In the component, the AMethod project method contains:
+     #DECLARE($ptr : Pointer)
+     APPEND TO ARRAY($ptr->;2)
 ```
 
 変数を使用した例:
 
 ```4d
-C_TEXT(myvariable)
+var myvariable : Text
 component_method1(->myvariable)
 ```
 
 ```4d
-C_POINTER($p)
+var $p : Pointer
 $p:=component_method2(...)
 ```
 
 ポインターを使用しない場合でも、コンポーネント側からホストデータベースの (変数そのものではなく) 変数の値にアクセスすること自体は可能ですし、その逆も可能です:
 
 ```4d
-// ホストデータベース内
-C_TEXT($input_t)
+//In the host database
+var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method は $1 に "DoSomething" を受け取ります ($input_t 変数を受け取るわけではありません)
+// component_method gets "DoSomething" in parameter (but not the $input_t variable)
 ```
 
 ホストプロジェクトとコンポーネント間でポインターを使用して通信をおこなうには、以下の点を考慮する必要があります:
@@ -218,7 +219,7 @@ component_method($input_t)
 
 - コンポーネントI が定義する変数 `myIvar` があるとき、コンポーネントC はポインター `->myIvar` を使用しても変数の値にアクセスすることはできません。 このシンタックスは実行エラーを起こします。
 
-- `RESOLVE POINTER` を使用したポインターの比較はお勧めできません。変数の分離の原則により、ホストプロジェクトとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
+- The comparison of pointers using the [`RESOLVE POINTER`](../commands/resolve-pointer) command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -235,7 +236,7 @@ component_method($input_t)
 
 ## エラー処理
 
-`ON ERR CALL` コマンドによって実装された [エラー処理メソッド](Concepts/error-handling.md) は、実行中のプロジェクトに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
+[`ON ERR CALL`](../commands-legacy/on-err-call.md) コマンドを使用して実装された[エラー処理メソッド](Concepts/error-handling.md) は実行中のアプリケーションに対してのみ適用されます。 コンポーネントによって生成されたエラーの場合、ホストプロジェクトの `ON ERR CALL` エラー処理メソッドは呼び出されず、その逆もまた然りです。
 
 しかしながら、[ホストアプリケーションにコンポーネントエラーハンドラーを実装する](../Concepts/error-handling.md#scope-and-components) ことで、コンポーネントでキャッチされなかったエラーを管理することができます。
 
@@ -251,15 +252,11 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 コンポーネント内の `methCreateRec` メソッドのコード:
 
 ```4d
-C_POINTER($1) // ホストプロジェクトのテーブルへのポインター
-C_POINTER($2) // ホストプロジェクトのフィールドへのポインター
-C_TEXT($3) // 代入する値
+#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Pointer on a table in host project
 
-$tablepointer:=$1
-$fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
+$fieldpointer->:=$value
 SAVE RECORD($tablepointer->)
 ```
 

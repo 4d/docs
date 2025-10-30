@@ -443,10 +443,9 @@ Você pode usar essa propriedade para obter o objeto [`.storage`](#storage) de u
 
 <details><summary>História</summary>
 
-| Release | Mudanças |
-| ------- | -------- |
-
-|v18 R6|Adicionado|
+| Release | Mudanças   |
+| ------- | ---------- |
+| 18 R6   | Adicionado |
 
 </details>
 

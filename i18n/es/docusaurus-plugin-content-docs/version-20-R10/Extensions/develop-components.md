@@ -172,38 +172,40 @@ Si no ingresa un [namespace](#declaring-the-component-namespace), los recursos d
 
 ## Paso de variables
 
-Las variables locales, proceso e interproceso no se comparten entre los componentes y los proyectos locales. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.
+Variables are not shared between components and host projects. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.
 
 Ejemplo utilizando un array:
 
 ```4d
-//En el proyecto local: ARRAY INTEGER( MyArray;10)
-     AMethod(-> MyArray)
+//In the host project:
+     ARRAY INTEGER(MyArray;10)
+     AMethod(->MyArray)
 
-//En el componente, el método proyecto AMethod contiene:
-     APPEND TO ARRAY($1->;2)
+//In the component, the AMethod project method contains:
+     #DECLARE($ptr : Pointer)
+     APPEND TO ARRAY($ptr->;2)
 ```
 
 Ejemplos utilizando variables:
 
 ```4d
-C_TEXT(myvariable)
+var myvariable : Text
 component_method1(->myvariable)
 ```
 
 ```4d
-C_POINTER($p)
+var $p : Pointer
 $p:=component_method2(...)
 ```
 
 Sin un puntero, un componente puede seguir accediendo al valor de una variable de la base local (pero no a la propia variable) y viceversa:
 
 ```4d
-//En la base local
-C_TEXT($input_t)
+//In the host database
+var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method obtiene "DoSomething" en $1 (pero no la variable $input_t)
+// component_method gets "DoSomething" in parameter (but not the $input_t variable)
 ```
 
 Cuando se utilizan punteros para que los componentes y el proyecto local se comuniquen, hay que tener en cuenta las siguientes particularidades:
@@ -217,7 +219,7 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
 
 - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
-- La comparación de punteros utilizando el comando `RESOLVE POINTER` no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en el proyecto local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
+- The comparison of pointers using the [`RESOLVE POINTER`](../commands/resolve-pointer) command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -234,7 +236,7 @@ En este caso, es necesario utilizar la comparación de punteros:
 
 ## Gestión de errores
 
-Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando `ON ERR CALL` sólo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
+An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
 
 However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
 
@@ -250,16 +252,12 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 Dentro del componente, el código del método `methCreateRec`:
 
 ```4d
-C_POINTER($1) //Puntero a una tabla del proyecto local
-C_POINTER($2) //Puntero a un campo del proyecto local
-C_TEXT($3) // Valor a insertar
+#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Pointer on a table in host project
 
-$tablepointer:=$1
-$fieldpointer:=$2
 CREATE RECORD($tablepointer->)
 
-$fieldpointer->:=$3
-SAVE RECORD($tablepointer-
+$fieldpointer->:=$value
+SAVE RECORD($tablepointer->)
 ```
 
 > En el contexto de un componente, 4D asume que una referencia a un formulario tabla es una referencia al formulario tabla local (ya que los componentes no pueden tener tablas.)

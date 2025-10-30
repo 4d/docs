@@ -9,13 +9,13 @@ La classe `OpenAIMessage` représente un message structuré contenant un rôle, 
 
 ## Propriétés
 
-| Propriété      | Type       | Description                                                                                                                                              |
-| -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `rôle`         | Text       | The role of the message (e.g., "user", "assistant", "system", "tool").                |
-| `contenu`      | Variant    | Le contenu du message, qui peut être un texte ou une collection d'objets.                                                                |
-| `user`         | Text       | Une propriété facultative représentant l'utilisateur associé au message.                                                                 |
-| `tool_calls`   | Collection | A collection of tool calls requested by the assistant. Each tool call contains an `id`, `type`, and a `function` object. |
-| `tool_call_id` | Text       | The ID of the tool call that this message is responding to (used when `role` is "tool").                              |
+| Propriété      | Type       | Description                                                                                                                                                 |
+| -------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `role`         | Text       | Le rôle du message (par exemple, "user", "assistant", "system", "tool").                                                 |
+| `content`      | Variant    | Le contenu du message, qui peut être un texte ou une collection d'objets.                                                                   |
+| `user`         | Text       | Une propriété facultative représentant l'utilisateur associé au message.                                                                    |
+| `tool_calls`   | Collection | Une collection d'appels d'outils requis par l'assistant. Chaque appel d'outil contient un objet `id`, `type` et `function`. |
+| `tool_call_id` | Text       | L'ID de l'appel d'outil auquel ce message répond (utilisé lorsque `role` est "tool").                                    |
 
 ## Propriétés calculées
 
@@ -38,7 +38,7 @@ Ajoute une URL d'image au contenu du message.
 
 ## Exemple d'utilisation
 
-### Create a simple message and attach an image
+### Créer un message simple et joindre une image
 
 ```4d
 // Créer une instance d'OpenAIMessage
@@ -48,11 +48,11 @@ var $message:=cs.AIKit.OpenAIMessage({role : "user" ; content : "Hello !"})
 $message.addImageURL("http://example.com/image.jpg" ; "high")
 ```
 
-### Respond to a tool call message
+### Répondre à un message d'appel d'outil
 
-When an assistant needs to use external functions, it generates a message with `tool_calls` to request function execution.
+Lorsqu'un assistant doit utiliser des fonctions externes, il génère un message avec `tool_calls` pour demander l'exécution de la fonction.
 
-**Assistant message requesting tool calls:**
+**Message de l'assistant demandant des appels à l'outil :**
 
 ```json
 {
@@ -70,41 +70,41 @@ When an assistant needs to use external functions, it generates a message with `
 }
 ```
 
-**Handling the tool call:**
+**Gestion de l'appel d'outil :**
 
-When you receive a tool call message, you need to:
+Lorsque vous recevez un message d'appel d'outil, vous devez :
 
-1. **Extract the function information:**
-   - `function.name`: The name of the function to call (must match a function defined in your [OpenAITool](OpenAITool.md) - you can select code to execute according to this name)
-   - `function.arguments`: A JSON string containing the function parameters that must be parsed with `JSON Parse`
-   - `id`: The unique identifier for this specific tool call
+1. **Extraire les informations relatives à la fonction :**
+   - `function.name` : Le nom de la fonction à appeler (doit correspondre à une fonction définie dans votre [OpenAITool](OpenAITool.md) - vous pouvez sélectionner le code à exécuter en fonction de ce nom)
+   - `function.arguments` : Une chaîne JSON contenant les paramètres de la fonction qui doivent être analysés avec `JSON Parse`
+   - `id` : L'identifiant unique pour cet appel d'outil spécifique
 
-2. **Execute the function:**
-   Parse the arguments (which is a JSON string) and call the corresponding function that you defined in your OpenAITool configuration.
+2. **Exécuter la fonction :**
+   Analyser les arguments (qui sont une chaîne JSON) et appeler la fonction correspondante que vous avez définie dans votre configuration OpenAITool.
 
-3. **Respond with the tool result:**
-   Create a response message using the exact `tool_call_id` from the original request.
+3. **Répondre avec le résultat de l'outil :**
+   Créer un message de réponse en utilisant le `tool_call_id` exact de la requête originale.
 
-**Example tool response:**
+**Exemple de réponse d'outil :**
 
 ```4d
-// Parse the function arguments (if any)
+// Analyse des arguments de la fonction (le cas échéant)
 var $arguments : Object := JSON Parse($toolCall.function.arguments)
 
-// Execute your code corresponding to "get_database_tables" 
+// Exécution du code correspondant à "get_database_tables" 
 var $tableNames: Text := OB Keys(ds).join(", ")
 
-// Create the tool response message with the required tool_call_id
+// Création du message de réponse de l'outil avec le tool_call_id requis
 var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
-  role: "tool"; \
-  tool_call_id: "call_12345"; \
-  content: $tableNames \
+  role : "tool" ; \
+  tool_call_id : "call_12345" ; \
+  content : $tableNames \
 })
-// Add it to the conversation and continue
+// Ajoutez-le à la conversation et continuez
 ```
 
-**Important:** The `tool_call_id` in your response must exactly match the `id` from the original tool call. This allows the AI model to correctly associate your response with the specific function call that was made.
+**Important :** Le `tool_call_id` de votre réponse doit correspondre exactement à l'`id` de l'appel d'outil original. Cela permet au modèle d'IA d'associer correctement votre réponse à l'appel de fonction spécifique qui a été effectué.
 
 ## Voir aussi
 
-- [OpenAITool](OpenAITool.md) - For tool definition
+- [OpenAITool](OpenAITool.md) - Pour la définition de l'outil
