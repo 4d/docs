@@ -542,6 +542,7 @@
             {
               "type": "category",
               "label": "Form Events",
+              "key": "form-events-commands",
               "link": {
                 "type": "doc",
                 "id": "commands/theme/Form_Events_theme"
@@ -571,6 +572,7 @@
             {
               "type": "category",
               "label": "Forms",
+              "key": "form-commands",
               "link": {
                 "type": "doc",
                 "id": "commands/theme/Forms_theme"
@@ -693,6 +695,7 @@
             {
               "type": "category",
               "label": "Import and Export",
+              "key": "import-export-commands",
               "link": {
                 "type": "doc",
                 "id": "commands/theme/Import_and_Export_theme"
@@ -924,6 +927,7 @@
             {
               "type": "category",
               "label": "Menus",
+              "key": "menus-commands",
               "link": {
                 "type": "doc",
                 "id": "commands/theme/Menus_theme"
@@ -1295,6 +1299,7 @@
             {
               "type": "category",
               "label": "Processes",
+              "key": "processes-commands",
               "link": {
                 "type": "doc",
                 "id": "commands/theme/Processes_theme"
@@ -2010,6 +2015,7 @@
             {
               "type": "category",
               "label": "Web Server",
+              "key": "web-server-commands",
               "link": {
                 "type": "doc",
                 "id": "commands/theme/Web_Server_theme"
@@ -2207,6 +2213,7 @@
         {
           "type": "category",
           "label": "Classes",
+          "key": "4D-Classes",
           "items": [
             "API/BlobClass",
             "API/ClassClass",
@@ -2355,11 +2362,6 @@
         "image": "/img/docusaurus.png"
       },
       "items": [
-        {
-          "type": "link",
-          "label": "4D Qodly Pro",
-          "href": "https://developer.qodly.com/docs"
-        },
         {
           "type": "category",
           "label": "Web Server",
@@ -2883,6 +2885,7 @@
             {
               "type": "category",
               "label": "Commands",
+              "key": "ViewPro-commands",
               "link": {
                 "type": "doc",
                 "id": "ViewPro/commands"
@@ -3194,6 +3197,7 @@
             {
               "type": "category",
               "label": "Import and Export",
+              "key": "import-export-writepro",
               "link": {
                 "type": "generated-index",
                 "title": "Import and Export"
@@ -3209,6 +3213,7 @@
             {
               "type": "category",
               "label": "Commands",
+              "key": "WritePro-commands",
               "link": {
                 "type": "doc",
                 "id": "WritePro/commands/command-index"
@@ -3320,6 +3325,7 @@
             {
               "type": "category",
               "label": "Classes",
+              "key": "aikit-classes",
               "items": [
                 "aikit/Classes/openai",
                 "aikit/Classes/openaiapiresource",

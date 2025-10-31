@@ -269,9 +269,9 @@ module.exports = {
   },
   themes: ['@docusaurus/theme-mermaid'],  
   scripts: [
-    {
-      src: 'https://kit.fontawesome.com/daeacc3fc4.js',
-      crossorigin: 'anonymous',
-    },
-  ],
+     {
+      src: 'https://kit.fontawesome.com/daeacc3fc4.js',
+      crossorigin: 'anonymous',
+    },
+  ],
 }
