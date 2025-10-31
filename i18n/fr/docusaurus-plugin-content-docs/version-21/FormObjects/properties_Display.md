@@ -81,11 +81,11 @@ Le tableau ci-dessous montre les choix disponibles :
 
 *(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. This is by default but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
+*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Il s'agit d'une valeur par défaut, mais elle peut être modifiée à l'aide de la commande [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md).
 
 *(3)* Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
 
-> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md) command.
+> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). Il s'agit du réglage par défaut, mais il peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](../commands-legacy/set-default-century.md).
 
 ### Formats personnalisés
 
@@ -104,8 +104,8 @@ Des formats de date personnalisés peuvent être construits en utilisant plusieu
 
 :::note blankIfNull
 
-- By default, a [null date](../Concepts/dt_date.md#date-literals) is displayed with zeros, e.g. 00/00/00. Avec l'option "blankIfNull", une date nulle est affichée comme une zone vide. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée.
-- [List box columns](listbox_overview.md#list-box-columns) and [list box footers](listbox_overview.md#list-box-footers) of type date always use the "blank if null" behavior (it cannot be disengaged).
+- Par défaut, une [date nulle](../Concepts/dt_date.md#date-literals) est affichée avec des zéros, par exemple 00/00/00. Avec l'option "blankIfNull", une date nulle est affichée comme une zone vide. La chaîne "blankIfNull" (sensible à la casse) doit être combinée avec la valeur de format sélectionnée. Ex : "systemShort blankIfNull" ou "ee dd LL blankIfNull".
+- Les [colonnes de list box](listbox_overview.md#list-box-columns) et les [pieds de list box](listbox_overview.md#list-box-footers) de type date utilisent toujours le comportement "blank if null" (il ne peut pas être désactivé).
 
 :::
 
@@ -440,7 +440,7 @@ Utilisé pour associer un format d'affichage aux données de la colonne. Les for
 
 Les colonnes booléennes et numériques (réel ou entier) peuvent être affichées sous forme de cases à cocher. Dans ce cas, la propriété [Titre](#titre) peut être définie.
 
-Les colonnes booléennes peuvent également être affichées sous forme de pop up menus. In this case, the [Text when False and Text when True](#text-when-falsetext-when-true) properties must be defined.
+Les colonnes booléennes peuvent également être affichées sous forme de pop up menus. Dans ce cas, les propriétés [Texte si Faux et Texte si Vrai](#text-when-falsetext-when-true) doivent être définies.
 
 #### Grammaire JSON
 
@@ -476,7 +476,7 @@ En particulier, cette propriété permet de mettre en œuvre des boutons "invisi
 
 ---
 
-## Trois États
+## Trois états
 
 Permet à un objet case à cocher d'accepter un troisième état. La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci se trouve dans le troisième état.
 
@@ -576,7 +576,7 @@ La propriété Tronquer avec ellipse peut être appliquée aux colonnes de type 
 
 Cette propriété permet de masquer l'objet dans l'environnement Application.
 
-Vous pouvez gérer la propriété Visibilité pour la plupart des objets de formulaire. Cette propriété est principalement utilisée pour simplifier le développement d'interface dynamique. Dans ce contexte, il est souvent nécessaire de masquer les objets de manière programmée lors de l'événement `On load` du formulaire, puis d'afficher certains objets par la suite. La propriété Visibilité permet d'inverser cette logique en rendant certains objets invisibles par défaut. The developer can then program their display using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command when needed.
+Vous pouvez gérer la propriété Visibilité pour la plupart des objets de formulaire. Cette propriété est principalement utilisée pour simplifier le développement d'interface dynamique. Dans ce contexte, il est souvent nécessaire de masquer les objets de manière programmée lors de l'événement `On load` du formulaire, puis d'afficher certains objets par la suite. La propriété Visibilité permet d'inverser cette logique en rendant certains objets invisibles par défaut. Le développeur peut alors programmer leur affichage en utilisant la commande [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) lorsque cela est nécessaire.
 
 #### Visibilité automatique dans les formulaires liste
 
@@ -589,7 +589,7 @@ Cette propriété est utilisée uniquement lors du dessin d'objets situés dans 
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+4D ne prend pas en compte cette propriété si l'objet a été caché à l'aide de la commande [`OBJECT SET VISIBLE`](../commands-legacy/object-set-visible.md) ; dans ce cas, l'objet reste invisible, que l'enregistrement soit sélectionné ou non.
 
 #### Grammaire JSON
 

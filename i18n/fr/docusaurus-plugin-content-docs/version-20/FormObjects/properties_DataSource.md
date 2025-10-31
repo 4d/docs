@@ -293,9 +293,9 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles                          |
-| ------------------- | --------------- | ------------------------------------------ |
-| selectedItemsSource | string          | Assignable collection or object expression |
+| Nom                 | Type de données | Valeurs possibles                         |
+| ------------------- | --------------- | ----------------------------------------- |
+| selectedItemsSource | string          | Collection ou expression objet assignable |
 
 #### Objets pris en charge
 

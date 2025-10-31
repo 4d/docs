@@ -152,7 +152,7 @@ WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$ot
 
 ```
 
-*resetPrivileges()* function in the Datastore class:
+Función *resetPrivileges()* en la clase Datastore:
 
 ```4d
 // This function is run on the server

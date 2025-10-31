@@ -7,7 +7,7 @@ title: Fundo e margem
 
 Permite definir uma cor de fundo diferente para linhas/colunas ímpares em uma caixa de listagem. Por padrão, *Automático* está selecionado: a coluna usa a cor de fundo alternativa definida no nível da caixa de listagem.
 
-You can also set this property using the  command.
+Você também pode definir esta propriedade usando o comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 

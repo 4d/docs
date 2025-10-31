@@ -51,9 +51,9 @@ title: アニメーション
 
 ---
 
-## アニメーション間隔 (tick)
+## Switch every x seconds
 
-このモードを使用すると、一定のスピードで (tick 単位) ピクチャーボタンの内容が繰り返し表示されます。 このモードでは、他のすべてのオプションが無視されます。
+Enables cycling through the contents of the picture button at the specified speed (in seconds). このモードでは、他のすべてのオプションが無視されます。
 
 #### JSON 文法
 

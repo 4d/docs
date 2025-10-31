@@ -9,7 +9,7 @@ To define HTTP rules, you just need to write some RegEx to declare the URL patte
 
 ## Requisitos
 
-HTTP rules are supported in the following contexts:
+Las reglas HTTP se soportan en los siguientes contextos:
 
 - [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
 - a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).

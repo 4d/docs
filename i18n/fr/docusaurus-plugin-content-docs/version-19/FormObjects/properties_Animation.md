@@ -51,9 +51,9 @@ Permet à l'utilisateur de maintenir le bouton de la souris enfoncé pour affich
 
 ---
 
-## Défilement tous les n ticks
+## Switch every x seconds
 
-Permet de parcourir le contenu du bouton d'image à la vitesse spécifiée (en graduations). Dans ce mode, toutes les autres options sont ignorées.
+Enables cycling through the contents of the picture button at the specified speed (in seconds). Dans ce mode, toutes les autres options sont ignorées.
 
 #### Grammaire JSON
 

@@ -81,25 +81,25 @@ El parámetro *handler* puede ser:
 
 La función de gestión recibe un objeto que contiene los parámetros pasados por la llamada a la herramienta OpenAI. Este objeto contiene pares llave-valor en los que las llaves corresponden a los nombres de los parámetros definidos en el esquema de la herramienta, y los valores son los argumentos reales ofrecidos por el modelo de IA.
 
-#### Ejemplo de herramienta de registro
+#### Ejemplo de Register Tool
 
 ```4D
-// Example 1: Simple registration with direct handler
+// Ejemplo 1: Registro simple con gestor directo
 var $tool:={type: "function"; function: {name: "get_weather"; description: "Get current weather"; parameters: {type: "object"; properties: {location: {type: "string"; description: "City name"}}}}}
 var $handler:=Formula(return "Sunny, 25°C in "+$1.location)
 
 $chatHelper.registerTool($tool; $handler)
 
-// Example 2: Tool with handler property (no second parameter needed)
-var $tool:={name: "calculate"; description: "Perform calculations"; handler: Formula(return String(Num($1.expression)))}
+// Ejemplo 2: Herramienta con propiedad handler (no se necesita un segundo parámetro)
+var $tool:={name: "calculate"; description: "Realiza cálculos"; handler: Formula(return String(Num($1.expression)))}
 $chatHelper.registerTool($tool)
 
-// Example 3: Using object notation
+// Ejemplo 3: Uso de la notación objeto
 $chatHelper.registerTool({tool: $tool; handler: $handler})
 
-// Example 4: Handler as object with formula matching tool name
+// Ejemplo 4: objeto con función correspondiente al nombre de la herramienta
 var $tool:={name: "getTime"; description: "Get current time"}
-var $handlerObj:=cs.MyTimeTool.new() // class with a getTime function
+var $handlerObj:=cs.MyTimeTool.new() // clase con una función getTime
 $chatHelper.registerTool($tool; $handlerObj)
 ```
 
@@ -107,19 +107,19 @@ $chatHelper.registerTool($tool; $handlerObj)
 
 **registerTools**(*toolsWithHandlers* : Variant)
 
-| Parámetros          | Tipo    | Descripción                                              |
-| ------------------- | ------- | -------------------------------------------------------- |
-| *toolsWithHandlers* | Variant | Object or Collection containing tools and their handlers |
+| Parámetros          | Tipo    | Descripción                                                     |
+| ------------------- | ------- | --------------------------------------------------------------- |
+| *toolsWithHandlers* | Variant | Objeto o colección que contiene las herramientas y sus gestores |
 
-Registers multiple tools at once. El parámetro puede ser:
+Registra varias herramientas a la vez. El parámetro puede ser:
 
-- **Collection**: Array of tool objects (with handlers embedded or separate)
-- **Object**: Object with function names as keys mapping to tool definitions
+- **Collection**: array de objetos herramientas (con gestores integrados o separados)
+- **Objeto**: objeto cuyas propiedades son nombres de funciones que corresponden a definiciones de herramientas
 - **Objeto con atributo `tools`**: objeto que contiene una colección `tools` y propiedades de fórmulas que coinciden con nombres de herramientas
 
-#### Register Multiple Tools Example
+#### Ejemplo de registro de varias herramientas
 
-##### Example 1: Collection format with handlers in tools
+##### Ejemplo 1: formato colección con los gestores en las herramientas
 
 ```4D
 var $weatherTool:={name: "getWeather"; description: "Get current weather"; handler: Formula(return "Sunny, 25°C in "+$1.location)}
@@ -128,7 +128,7 @@ var $calculatorTool:={name: "calculate"; description: "Perform calculations"; ha
 $chatHelper.registerTools([$weatherTool; $calculatorTool])
 ```
 
-##### Example 2: Object format with separate tool and handler
+##### Ejemplo 2: formato objeto con herramienta y gestor separados
 
 ```4D
 var $toolsWithSeparateHandlers:={}
@@ -138,15 +138,15 @@ $toolsWithSeparateHandlers.calculate:={tool: $calculatorToolDefinition; handler:
 $chatHelper.registerTools($toolsWithSeparateHandlers)
 ```
 
-##### Example 3: Object with tools collection attribute and formula properties
+##### Ejemplo 3: objeto con atributo colección tools y propiedades formula
 
-MyTools class:
+Clase MyTools:
 
 ```4D
 
 Class constructor
     this.tools:=[{name: "getWeather"; description: "Get current weather"}; \
-                 {name: "getTime"; description: "Get current time"}]  // Collection of tool definitions
+                 {name: "getTime"; description: "Get current time"}]  // Colección de definiciones de herramientas
 
 Function getWeather($parameters: Object)
     return "Sunny, 25°C"
@@ -159,12 +159,12 @@ Function getTime($parameters: Object)
 $chatHelper.registerTools(cs.MyTools.new())
 ```
 
-##### Example 4: Simple object format with tools as properties
+##### Ejemplo 4: formato objeto simple con herramientas como propiedades
 
 ```4D
 var $tools:={}
-$tools.getWeather:=$weatherTool  // Tool with handler property
-$tools.calculate:=$calculatorTool  // Tool with handler property
+$tools.getWeather:=$weatherTool  // Tool con propiedad handler
+$tools.calculate:=$calculatorTool  // Tool con propiedad handler
 
 $chatHelper.registerTools($tools)
 ```
@@ -173,28 +173,28 @@ $chatHelper.registerTools($tools)
 
 **unregisterTool**(*functionName* : Text)
 
-| Parámetros     | Tipo | Descripción                                 |
-| -------------- | ---- | ------------------------------------------- |
-| *functionName* | Text | The name of the function tool to unregister |
+| Parámetros     | Tipo | Descripción                                        |
+| -------------- | ---- | -------------------------------------------------- |
+| *functionName* | Text | El nombre de la herramienta función a desregistrar |
 
-Desregistra una herramienta específica por su nombre de función. This removes the tool from the registered tools collection, clears its handler, and removes it from the parameters.
+Desregistra una herramienta específica por su nombre de función. Esto elimina la herramienta de la colección de herramientas registradas, borra su gestor y lo elimina de los parámetros.
 
-#### Unregister Tool Example
+#### Ejemplo de Unregister Tool
 
 ```4D
 $chatHelper.registerTool($weatherTool; $weatherHandler)
-$chatHelper.unregisterTool("get_weather")  // Remove the weather tool
+$chatHelper.unregisterTool("get_weather") // Eliminar la herramienta weather
 ```
 
 ### unregisterTools()
 
 **unregisterTools**()
 
-Unregisters all tools at once. This clears all tool handlers, empties the tools collection, and removes all tools from the parameters.
+Desregistra todas las herramientas a la vez. Esto borra todos los gestores de herramientas, vacía la colección de herramientas y elimina todas las herramientas de los parámetros.
 
-#### Unregister All Tools Example
+#### Ejemplo de Unregister All Tools
 
 ```4D
 $chatHelper.registerTools($multipleTools)
-$chatHelper.unregisterTools()  // Remove all tools
+$chatHelper.unregisterTools() // Eliminar todas las herramientas
 ```

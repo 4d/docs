@@ -3,7 +3,7 @@ id: inputOverview
 title: Zone de saisie
 ---
 
-Inputs allow you to add enterable or non-enterable expressions such as database fields and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
+Les zones de saisie vous permettent d'ajouter des expressions saisissables ou non saisissables telles que des champs de la base de données et des [variables](Concepts/variables.md) dans vos formulaires. Les zone de saisie peuvent gérer des données basées sur des caractères (texte, dates, numériques, etc.) ou des images :
 
 ![](../assets/en/FormObjects/input.png)
 
@@ -15,7 +15,7 @@ Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet 
 
 :::note
 
-For security reasons, in [multi-style](./properties_Text.md#multi-style) input areas, when formulas are pasted from a different 4D application or an external environment, only the *computed values* (text or images) available at the time of copying are pasted. If no value was available (e.g., the formula was never computed), 4D pastes the formula source as plain text.
+Pour des raisons de sécurité, dans les zones de saisie [multi-style](./properties_Text.md#multi-style), lorsque des formules sont collées à partir d'une autre application 4D ou d'un environnement externe, seules les *valeurs calculées* (texte ou images) disponibles au moment de la copie sont collées. Si aucune valeur n'est disponible (par exemple, la formule n'a jamais été calculée), 4D colle la source de la formule sous forme de texte brut.
 
 :::
 

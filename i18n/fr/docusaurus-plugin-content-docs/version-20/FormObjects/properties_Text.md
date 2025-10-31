@@ -21,7 +21,7 @@ Lorsque cette propriété est activée, les commandes [OPEN FONT PICKER](https:/
 
 ---
 
-## Souligné
+## Gras
 
 Le texte sélectionné est plus foncé et plus épais.
 
@@ -278,7 +278,7 @@ Cette propriété peut également être gérée par les commandes [OBJECT Get ve
 
 ---
 
-## Meta Info expression
+## Meta info expression
 
 `List box de type collection ou entity selection (sélection d'entité)`
 
@@ -427,7 +427,7 @@ Le nom d'un tableau Entier Long doit être utilisé. Chaque élément de ce tabl
 
 ---
 
-## Row Style Array {#row-style-array)
+## Tableau de styles {#row-style-array)
 
 `List box de type tableau`
 

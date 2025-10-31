@@ -348,7 +348,13 @@ Pour modifier le plan d'un objet, sélectionnez-le et choisissez :
 
 ![](../assets/en/FormEditor/level2.png)
 
-> Lorsque plusieurs objets sont superposés, le raccourci **Ctrl+Maj+clic** / **Commande+Maj+clic** permet de sélectionner successivement chaque objet en descendant d'un plan à chaque clic.
+Lorsque plusieurs objets sont superposés, le raccourci **Ctrl+Maj+clic** / **Commande+Maj+clic** permet de sélectionner successivement chaque objet en descendant d'un plan à chaque clic.
+
+:::note
+
+Dans les bases de données binaires, utilisez **Ctrl+Clic / Commande+Clic** pour effectuer cette action.
+
+:::
 
 Pour ordonner les différents plans, 4D va toujours de l’arrière-plan vers l’avant-plan. Par conséquent, le plan précédent fait reculer la sélection d’objets d’un plan vers l’arrière-plan du formulaire. Le plan suivant fait avancer la sélection d’objets d’un plan vers l’avant-plan du formulaire.
 

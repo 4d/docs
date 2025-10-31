@@ -38,8 +38,8 @@ Chaque représentation de liste dispose de caractéristiques propres et partage 
 - L’état déployé/contracté des éléments,
 - La position du curseur de défilement.
 
-The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately.
-Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
+Les autres caractéristiques (police, taille de la police, style, contrôle de saisie, couleur, contenu des listes, icônes, etc.) sont communes à toutes les représentations et ne peuvent pas être modifiées séparément.
+Par conséquent, lorsque vous utilisez des commandes basées sur la configuration déployé/contracté ou l'élément courant, par exemple `Count list items` (lorsque le paramètre `*` final n’est pas passé), il importe de pouvoir désigner sans ambiguïté la représentation à utiliser.
 
 Vous devez utiliser l'identifiant de type `RefListe` avec les commandes du langage lorsque vous souhaitez désigner la liste hiérarchique résidant en mémoire. Par ailleurs, si vous souhaitez désigner la représentation au niveau du formulaire d'un objet Liste hiérarchique, vous devez utiliser le nom de l'objet (type chaîne) dans la commande, via la syntaxe (\*;"NomListe"...).
 
@@ -50,7 +50,7 @@ Vous devez utiliser l'identifiant de type `RefListe` avec les commandes du langa
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
 
-> ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. La commande tiendra compte de l’élément courant de l’objet *mylist1* pour définir l’élément à modifier, mais cette modification sera reportée dans toutes les représentations de la liste dans tous les process.
+> ... vous indiquez que vous souhaitez modifier la police d’un élément de la liste hiérarchique associée à l’objet de formulaire *mylist1*. La commande tiendra compte de l’élément courant de l’objet *mylist1* pour définir l’élément à modifier, mais cette modification sera reportée dans toutes les représentations de la liste dans tous les process.
 
 ### Prise en compte du @
 
@@ -123,18 +123,10 @@ Voici quelques astuces quant à l'utilisation du numéro de référence unique :
    - Premier exemple : vous construisez par programmation un système d'onglets, par exemple, un carnet d'adresses. Comme le système vous retournera le numéro de l'onglet sélectionné, vous n'aurez probablement pas besoin de davantage d'informations. Dans ce cas, ne vous préoccupez pas des numéros de référence des éléments : passez n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*. Notez que pour un système de carnet d'adresses, vous pouvez prédéfinir une liste A, B,..., Z en mode Développement. Vous pouvez également la créer par programmation afin d'éliminer les lettres pour lesquelles il n'y a pas d'enregistrement.
    - Deuxième exemple : en travaillant avec une base, vous construisez progressivement une liste de mots-clés. Vous pouvez sauvegarder la liste à la fin de chaque session, en utilisant les commandes `SAVE LIST` ou `LIST TO BLOB`, et la recharger au début de chaque session, à l'aide des commandes `Load list` ou `BLOB to list`. Vous pouvez afficher cette liste dans une palette flottante ; lorsque l'utilisateur clique sur un mot-clé de la liste, l'élément choisi est inséré dans la zone saisissable sélectionnée du process de premier plan. En tout état de cause, l'important est que vous ne traitez que l'élément sélectionné (par clic ou glisser-déposer), car la commande `Selected list items`vous retourne la position de l'élément que vous devez traiter. En utilisant cette valeur de position, vous obtenez le libellé de l'élément grâce à la commande `GET LIST ITEM`. Ici aussi, vous n'avez pas besoin d'identifier de façon unique chaque élément ; vous pouvez passer n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*.
 
-2. Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command.  
-   Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).\
-   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
+2. Vous avez besoin d'identifier partiellement les éléments de la liste (niveau intermédiaire).  
+   Vous utilisez le numéro de référence de l'élément pour stocker l'information nécessaire lorsque vous devez agir sur un élément ; ce point est détaillé dans l'exemple de la commande `APPEND TO LIST`. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
 
 3. Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).  
-   Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
-   Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
-   Vous avez besoin d'identifier les éléments de la liste de façon unique (niveau avancé).\
    Vous programmez une gestion élaborée de listes hiérarchiques, dans laquelle vous devez absolument pouvoir identifier chaque élément de manière unique à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Supposons que vous créez une liste *hlList* à l'aide de la commande `APPEND TO LIST`. A ce stade, vous initialisez un compteur *vlhCounter* à 1. A chaque fois que vous appelez `APPEND TO LIST` ou `INSERT IN LIST`, vous incrémentez ce compteur `(vlhCounter:=vlhCounter+1)`, et vous passez le compteur comme numéro de référence de l'élément. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces numéros sont des valeurs de type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée... (si vous manipulez d'aussi grandes quantités d'éléments, cela signifie généralement que vous devriez utiliser une table plutôt qu'une liste.)
 
 > Si vous exploitez les Opérateurs sur les bits, vous pouvez également utiliser les numéros de référence des éléments pour stocker des informations qui peuvent être logées dans un Entier long, c'est-à-dire 2 Entiers, des valeurs de 4 octets ou encore 32 Booléens.
@@ -151,7 +143,7 @@ Vous pouvez choisir si les éléments de la liste hiérarchique peuvent être mo
 
 - Quelle que soit la source de données de la liste hiérarchique, vous pouvez contrôler l'ensemble de l'objet avec la propriété [Saisissable](properties_Entry.md#enterable).
 
-- En outre, si vous remplissez la liste hiérarchique à l'aide d'une liste créée dans l'éditeur de listes, vous contrôlez si un élément d'une liste hiérarchique est modifiable à l'aide de l'option **Élément modifiable** dans l'éditeur de listes. For more information, see [Setting list properties](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
+- En outre, si vous remplissez la liste hiérarchique à l'aide d'une liste créée dans l'éditeur de listes, vous contrôlez si un élément d'une liste hiérarchique est modifiable à l'aide de l'option **Élément modifiable** dans l'éditeur de listes. Pour plus d'informations, voir [Définition des propriétés de la liste](https://doc.4d.com/4Dv20/4D/20.2/Setting-list-properties.300-6750359.en.html#1350157).
 
 ## Propriétés prises en charge
 

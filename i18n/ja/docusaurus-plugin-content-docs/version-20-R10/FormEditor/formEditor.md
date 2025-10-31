@@ -349,7 +349,13 @@ title: フォームエディター
 
 ![](../assets/en/FormEditor/level2.png)
 
-> 複数のオブジェクトが重なっている場合、<strong x-id="1">Ctrl+Shift+クリック</strong> / <strong x-id="1">Command+Shift+クリック</strong> ショートカットを使用して、クリックするたびに下のレイヤーにあるオブジェクトを選択できます。
+複数のオブジェクトが重なっている場合、<strong x-id="1">Ctrl+Shift+クリック</strong> / <strong x-id="1">Command+Shift+クリック</strong> ショートカットを使用して、クリックするたびに下のレイヤーにあるオブジェクトを選択できます。
+
+:::note
+
+In binary databases, use **Ctrl+Click / Command+Click** to perform the same action.
+
+:::
 
 レベルの順序を考えるにあたって、4D は常に背面から全面へと進みます。 したがって、前・次で表現した場合、"前レベル" は 1つ背面のレベルのことになります。 "次レベルは" 1つ前面のレベルのことです。
 

@@ -5,33 +5,33 @@ title: OpenAITool
 
 # OpenAITool
 
-The `OpenAITool` class represents a tool that can be called by the OpenAI model during a conversation. Tools allow the AI to perform specific functions and interact with external systems or retrieve information.
+La clase `OpenAITool` representa una herramienta que puede ser llamada por el modelo OpenAI durante una conversación. Las herramientas permiten a la IA realizar funciones específicas e interactuar con sistemas externos o recuperar información.
 
-See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
+Ver [OpenAIMessage](OpenAIMessage.md) para ver cómo responder a una llamada de herramienta.
 
-> **Note:** The tool calls are handled automatically when using [OpenAIChatHelper](OpenAIChatHelper.md) with `autoHandleToolCalls` enabled.
+> **Nota:** las llamadas a herramientas se gestionan automáticamente cuando se utiliza [OpenAIChatHelper](OpenAIChatHelper.md) con `autoHandleToolCalls` activado.
 
 ## Propiedades
 
-### Root Properties
+### Propiedades root
 
-| Propiedad | Tipo    | Por defecto  | Descripción                                                                                                                    |
-| --------- | ------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `tipo`    | Text    | `"function"` | El tipo de herramienta. Currently supports `"function"`, `"custom"`, and other built-in types. |
-| `strict`  | Boolean | `False`      | Whether to enforce strict schema validation for function parameters.                                           |
+| Propiedad | Tipo    | Por defecto  | Descripción                                                                                                                               |
+| --------- | ------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `tipo`    | Text    | `"function"` | El tipo de herramienta. Actualmente soporta los tipos `"function"`, `"custom"`, y otros tipos integrados. |
+| `strict`  | Boolean | `False`      | Aplicar o no una validación estricta del esquema para los parámetros de función.                                          |
 
 ### Propiedades comunes
 
-| Propiedad     | Tipo | Descripción                                                                    |
-| ------------- | ---- | ------------------------------------------------------------------------------ |
-| `name`        | Text | The name of the tool, which works as an identifier.            |
-| `descripción` | Text | Description of the tool to help the LLM decide when to use it. |
+| Propiedad     | Tipo | Descripción                                                                                   |
+| ------------- | ---- | --------------------------------------------------------------------------------------------- |
+| `name`        | Text | El nombre de la herramienta, que funciona como identificador.                 |
+| `descripción` | Text | Descripción de la herramienta para ayudar al LLM a decidir cuándo utilizarla. |
 
-### Propiedades específicas de la función
+### Propiedades específicas de las funciones
 
-| Propiedad    | Tipo   | Descripción                                                                      |
-| ------------ | ------ | -------------------------------------------------------------------------------- |
-| `parámetros` | Object | Parameters definition for the function using JSON schema format. |
+| Propiedad    | Tipo   | Descripción                                                                             |
+| ------------ | ------ | --------------------------------------------------------------------------------------- |
+| `parámetros` | Object | Definición de los parámetros de la función en formato del esquema JSON. |
 
 ## Constructor
 
@@ -42,9 +42,9 @@ See [OpenAIMessage](OpenAIMessage.md) to see how to responds to a tool call.
 | Parámetros | Tipo       | Descripción                               |
 | ---------- | ---------- | ----------------------------------------- |
 | *object*   | Object     | Objeto de configuración de la herramienta |
-| Resultado  | OpenAITool | New instance of OpenAITool                |
+| Resultado  | OpenAITool | Nueva instancia de OpenAITool             |
 
-Crea una nueva instancia de OpenAITool. The constructor accepts both simplified format and OpenAI API format.
+Crea una nueva instancia de OpenAITool. El constructor acepta tanto el formato simplificado como el formato de la API OpenAI.
 
 #### Formatos soportados
 
@@ -84,7 +84,7 @@ var $tool := cs.OpenAITool.new({ \
 })
 ```
 
-## Integration with Chat Completions
+## Integración con los generadores de respuestas del chat
 
 Las herramientas se utilizan normalmente con la propiedad `OpenAIChatCompletionsParameters.tools`:
 
@@ -99,6 +99,6 @@ var $parameters := cs.AIKit.OpenAIChatCompletionsParameters.new({ \
 
 ## Ver también
 
-- [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) - For tool configuration
-- [OpenAIChatHelper](OpenAIChatHelper.md) - For automatic tool call handling
-- [OpenAIMessage](OpenAIMessage.md) - For tool call responses
+- [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) - Para la configuración de la herramienta
+- [OpenAIChatHelper](OpenAIChatHelper.md) - Para la gestión automática de llamadas a herramientas
+- [OpenAIMessage](OpenAIMessage.md) - Para respuestas de llamadas a herramientas

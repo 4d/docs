@@ -5,17 +5,17 @@ title: Options de redimensionnement
 
 ## Redimensionnement colonnes auto
 
-When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
+Lorsque cette propriété est activée (valeur `rightToLeft` dans JSON), les colonnes de la list box sont automatiquement redimensionnées en même temps que la list box, dans les limites des largeurs [minimum](properties_CoordinatesAndSizing.md#minimum-width) et [maximum](properties_CoordinatesAndSizing.md#maximum-width) définies.
 
 Lorsque cette propriété est désactivée (valeur `legacy` dans JSON), seule la colonne la plus à droite de la listbox est redimensionnée, même si sa largeur dépasse la valeur maximale définie.
 
 ### Le redimensionnement automatique des colonnes
 
-- À mesure que la largeur de la listbox augmente, ses colonnes sont agrandies une par une, en partant de la droite vers la gauche, jusqu'à ce que chacune atteigne sa [largeur maximale](properties_CoordinatesAndSizing.md#maximum-width). Seules les colonnes dont la propriété [Resizable](#resizable) est sélectionnée sont redimensionnées.
+- À mesure que la largeur de la listbox augmente, ses colonnes sont agrandies une par une, en partant de la droite vers la gauche, jusqu'à ce que chacune atteigne sa [largeur maximale](properties_CoordinatesAndSizing.md#maximum-width). Seules les colonnes dont la propriété [Redimensionnable](#resizable) est sélectionnée sont redimensionnées.
 
-- The same procedure applies when the list box width decreases, but in reverse order (*i.e.*, columns are resized starting from left to right). When each column has reached its [minimum width](properties_CoordinatesAndSizing.md#minimum-width), the horizontal scroll bar becomes active again.
+- Le même principe s'applique lorsque la largeur de la listbox diminue, mais dans l'ordre inverse (c'est-à-dire que les colonnes sont redimensionnées de gauche à droite). Lorsque chaque colonne a atteint sa [largeur minimale](properties_CoordinatesAndSizing.md#minimum-width), la barre de défilement horizontale redevient active.
 
-- Columns are resized only when the horizontal scroll bar is not "active"; *i.e.*, all columns are fully visible in the list box at its current size. **Note**: If the horizontal scroll bar is hidden, this does not alter its state: a scroll bar may still be active, even though it is not visible.
+- Les colonnes sont redimensionnées uniquement lorsque la barre de défilement horizontale n'est pas "active", c'est-à-dire lorsque toutes les colonnes sont entièrement visibles dans la listbox à sa taille courante. **Note** : Si la barre de défilement horizontale est masquée, cela ne modifie pas son état : une barre de défilement peut toujours être active, même si elle n'est pas visible.
 
 - Lorsque toutes les colonnes ont atteint leur taille maximale, elles ne sont plus agrandies et une colonne vide (fausse) est ajoutée à droite pour remplir l'espace supplémentaire. Si une fausse colonne (vide) est présente, lorsque la largeur de la listbox diminue, c'est la première zone à être réduite.
 
@@ -25,9 +25,9 @@ Lorsque cette propriété est désactivée (valeur `legacy` dans JSON), seule la
 
 L'apparence de la fausse colonne correspond à celle des colonnes existantes ; elle aura un faux en-tête et/ou un faux pied de page si ces éléments sont présents dans les colonnes de la listbox existante et elle aura la même couleur d'arrière-plan.
 
-The fake header and/or footer can be clicked but this does not have any effect on the other columns (e.g.: no sort is performed); nevertheless, the `On Clicked`, `On Header Click` and `On Footer Click` events are generated accordingly.
+Il est possible de cliquer sur le faux en-tête et/ou le faux pied de page, mais cela n'a aucun effet sur les autres colonnes (par exemple : aucun tri n'est effectué) ; néanmoins, les événements `On Clicked`, `On Header Click` et `On Footer Click` sont générés en conséquence.
 
-If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) command returns "X+1" for its column number (where X is the number of existing columns).
+Si un clic se produit dans une cellule de la fausse colonne, la commande [LISTBOX GET CELL POSITION](../commands-legacy/listbox-get-cell-position.md) renvoie "X+1" pour son numéro de colonne (où X est le nombre de colonnes existantes).
 
 #### Grammaire JSON
 
@@ -43,7 +43,7 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](../comm
 
 ## Dimensionnement horizontal
 
-This property specifies if an object should be horizontally moved or resized when a user resizes the form. Elle peut également être définie dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
+Cette propriété indique si un objet doit être déplacé ou redimensionné horizontalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande de langage `OBJECT SET RESIZING OPTIONS`.
 
 Trois options sont disponibles :
 
@@ -69,7 +69,7 @@ Trois options sont disponibles :
 
 ## Dimensionnement vertical
 
-This property specifies if an object should be vertically moved or resized when a user resizes the form.It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+Cette propriété indique si un objet doit être déplacé ou redimensionné verticalement lorsque l'utilisateur redimensionne le formulaire. Elle peut également être définie dynamiquement par la commande `OBJECT SET RESIZING OPTIONS`.
 
 Trois options sont disponibles :
 
@@ -97,7 +97,7 @@ Trois options sont disponibles :
 
 Lorsqu'un objet splitter a cette propriété, les autres objets à sa droite (splitter vertical) ou en dessous (splitter horizontal) sont poussés en même temps que le splitter, sans arrêt.
 
-Here is the result of a “pusher” splitter being moved:
+Voici le résultat du déplacement d'un splitter "pousseur" :
 ![](../assets/en/FormObjects/splitter_pusher1.png)
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)

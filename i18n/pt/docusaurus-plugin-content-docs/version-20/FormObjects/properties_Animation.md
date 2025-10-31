@@ -51,9 +51,9 @@ Permite ao usuário manter pressionado o botão do mouse para exibir as imagens 
 
 ---
 
-## Mudar a cada x ticks
+## Switch every x seconds
 
-Permite percorrer o conteúdo do botão de imagem na velocidade especificada (em ticks). Neste modo, todas as outras opções são ignoradas.
+Enables cycling through the contents of the picture button at the specified speed (in seconds). Neste modo, todas as outras opções são ignoradas.
 
 #### Gramática JSON
 

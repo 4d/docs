@@ -14,7 +14,7 @@ Cette propriété est prise en charge par :
 - les objets de formulaire [Combo box](comboBox_overview.md) et [colonnes de list box](listbox_overview.md#list-box-columns) associés à une énumération.
 - les objets de formulaire [Combo box](comboBox_overview.md) dont la liste associée est remplie par leur tableau ou leur objet datasource.
 
-For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+Par exemple, pour une énumération contenant "France, Allemagne, Italie" et associée à une liste déroulante "Pays" : si la propriété **insertion automatique** est activée et qu'un utilisateur saisit "Espagne", la valeur "Espagne" est automatiquement ajoutée à la liste en mémoire :
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
@@ -69,7 +69,7 @@ Liste de valeurs statiques à utiliser comme étiquettes pour l'objet onglet.
 
 ---
 
-## Current item {#current-item}
+## Elément courant {#current-item}
 
 `Listbox de type collection ou entity selection`
 
@@ -93,7 +93,7 @@ Indique une variable ou une expression qui se verra attribuer l'élément/l'enti
 
 ---
 
-## Current item position {#current-item-position}
+## Position élément courant {#current-item-position}
 
 `Listbox de type collection ou entity selection`
 
@@ -128,13 +128,13 @@ Définit le type de données pour l'expression affichée. Cette propriété est 
 - les [colonnes de list box](listbox_overview.md#list-box-columns) de type sélection et collection.
 - les [listes déroulantes](dropdownList_Overview.md) associées à des objets ou des tableaux.
 
-See also [**Expression Type**](properties_Object.md#expression-type) section.
+Voir aussi la section [**Type d'expression**](properties_Object.md#expression-type).
 
 #### Grammaire JSON
 
-| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                      |
-| ------------------ | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSourceTypeHint | string          | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| Nom                | Type de données | Valeurs possibles                                                                                                                                                                                                                                      |
+| ------------------ | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| dataSourceTypeHint | string          | <li>**colonnes de listbox** : "boolean", "number", "picture", "text", date", "time". *listbox tableau/sélection uniquement* : "integer", "object"</li><li>**listes déroulantes :** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objets pris en charge
 
@@ -153,7 +153,7 @@ Trois options sont disponibles :
 
 - **Référence de liste**: déclare que la liste déroulante est hiérarchique. Cela signifie que la liste déroulante peut afficher jusqu'à deux niveaux hiérarchiques et que son contenu peut être géré par les commandes du langage 4D du thème **Listes hiérarchiques**.
 - **Valeur de l'élément sélectionné** (par défaut) : la liste déroulante n'est pas hiérarchique et la valeur de l'élément choisi dans la liste par l'utilisateur est enregistrée directement. Par exemple, si l'utilisateur choisit la valeur "Bleu", cette valeur est enregistrée dans le champ.
-- **Référence de l'élément sélectionné**: la liste déroulante n'est pas hiérarchique et la référence de l'élément de la liste de choix est enregistrée dans l'objet. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](../commands-legacy/append-to-list.md) or [`SET LIST ITEM`](../commands-legacy/set-list-item.md) commands, or in the list editor. Cette option permet d'optimiser l'utilisation de la mémoire : le stockage de valeurs numériques dans les champs occupe moins d'espace que le stockage de chaînes de caractères. Il facilite également la traduction des applications : il suffit de créer plusieurs listes dans différentes langues mais avec les mêmes références d'éléments, puis de charger la liste en fonction de la langue de l'application.
+- **Référence de l'élément sélectionné**: la liste déroulante n'est pas hiérarchique et la référence de l'élément de la liste de choix est enregistrée dans l'objet. Cette référence est la valeur numérique associée à chaque élément, soit par l'intermédiaire du paramètre *itemRef* des commandes [`APPEND TO LIST`](../commands-legacy/append-to-list.md) ou [`SET LIST ITEM`](../commands-legacy/set-list-item.md), soit dans l'éditeur d'énumérations. Cette option permet d'optimiser l'utilisation de la mémoire : le stockage de valeurs numériques dans les champs occupe moins d'espace que le stockage de chaînes de caractères. Il facilite également la traduction des applications : il suffit de créer plusieurs listes dans différentes langues mais avec les mêmes références d'éléments, puis de charger la liste en fonction de la langue de l'application.
 
 L'utilisation de l'option de **Référence élément sélectionné** nécessite le respect des principes suivants :
 
@@ -207,17 +207,17 @@ Une expression 4D à associer à une colonne. Vous pouvez saisir :
 
 - Une **variable simple** (dans ce cas, elle doit être déclarée explicitement pour la compilation). Vous pouvez utiliser n'importe quel type de variable, à l'exception des BLOB et des tableaux. La valeur de la variable sera généralement calculée dans l'événement `On Display Detail`.
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes)
-  only), for example: `[Employees]LastName`. Les types de champs suivants peuvent être utilisés :
+- Un **champ** utilisant la syntaxe standard [Table]Field ([listbox de type sélection](listbox_overview.md#selection-list-boxes)
+  uniquement), par exemple : `[Employees]LastName`. Les types de champs suivants peuvent être utilisés :
   - String
   - Numérique
   - Date
   - Time
   - Picture
-  - Boolean\
-    You can use fields from the Master Table or from other tables.
+  - Booléen  
+    Vous pouvez utiliser des champs de la table principale ou d'autres tables.
 
-- Une **expression 4D** (expression simple, formule ou méthode 4D). L'expression doit retourner une valeur. L'expression doit retourner une valeur. Le résultat de l'expression sera affiché automatiquement lorsque vous passerez en mode Application. L'expression sera évaluée pour chaque enregistrement de la sélection (courante ou nommée) de la table principale (pour les list box de type sélection), chaque élément de la collection (pour les list box de type collection) ou chaque entity de la sélection (pour les list box de type entity selection). Si elle est vide, la colonne n'affichera aucun résultat.
+- Une **expression 4D** (expression simple, formule ou méthode 4D). L'expression doit retourner une valeur. La valeur sera évaluée dans les événements `On Display Detail` et `On Data Change`. Le résultat de l'expression sera affiché automatiquement lorsque vous passerez en mode Application. L'expression sera évaluée pour chaque enregistrement de la sélection (courante ou nommée) de la table principale (pour les list box de type sélection), chaque élément de la collection (pour les list box de type collection) ou chaque entity de la sélection (pour les list box de type entity selection). Si elle est vide, la colonne n'affichera aucun résultat.
   Les types d'expression suivants sont pris en charge :
   - String
   - Numérique
@@ -225,18 +225,13 @@ Une expression 4D à associer à une colonne. Vous pouvez saisir :
   - Picture
   - Boolean
 
-For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
-For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html).\
-For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](../commands/this.md).  
-For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.\
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](../commands/this.md). `This` est une commande 4D dédiée qui renvoie une référence à l'élément en cours de traitement. Par exemple, vous pouvez utiliser `This.<propertyPath>` où `\<propertyPath>` est le chemin d'une propriété dans la collection ou un chemin d'attribut d'entité pour accéder à la valeur courante de chaque élément/entité.
+Pour les listbox collection/entity selection, les types null ou non pris en charge sont affichés sous forme de chaînes vides.  
+Lorsque vous utilisez des collections ou des entity selections, vous déclarez généralement la propriété de l'élément ou l'attribut de l'entité associé(e) à une colonne dans une expression contenant [This](../commands/this.md). `This` est une commande 4D dédiée qui renvoie une référence à l'élément en cours de traitement. Par exemple, vous pouvez utiliser `This.<propertyPath>` où `\<propertyPath>` est le chemin d'une propriété dans la collection ou un chemin d'attribut d'entité pour accéder à la valeur courante de chaque élément/entité.
 Si vous utilisez une collection de valeurs scalaires, 4D créera un objet pour chaque élément de la collection avec une seule propriété (nommée "value"), remplie avec la valeur de l'élément. Dans ce cas, vous utiliserez `This.value` comme expression.
 
-Si une [expression non assignable](Concepts/quick-tour.md#expressions) est utilisée (par exemple `[Person]FirstName+" "+[Person]LastName`), la colonne n'est jamais saisissable, même si la propriété [Enterable](properties_Entry.md#enterable) est activée.
+Si une [expression non assignable](Concepts/quick-tour.md#expressions) est utilisée (par exemple `[Person]FirstName+" "+[Person]LastName`), la colonne n'est jamais saisissable, même si la propriété [Saisissable](properties_Entry.md#enterable) est activée.
 
-Si un champ, une variable ou une expression assignable\*(par exemple Person.lastName\*) est utilisé, la colonne peut être saisissable ou non en fonction de la propriété [Enterable](properties_Entry.md#enterable).
+Si un champ, une variable ou une expression assignable (*par exemple Person.lastName*) est utilisé, la colonne peut être saisissable ou non en fonction de la propriété [Saisissable](properties_Entry.md#enterable).
 
 #### Grammaire JSON
 
@@ -278,13 +273,13 @@ Toutes les tables de la base de données peuvent être utilisées, que le formul
 
 Cette propriété est disponible dans les conditions suivantes :
 
-- une [liste de choix](#choice-list) est associée à l'objet
-- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+- une [énumération](#choice-list) est associée à l'objet
+- pour les [zones de saisie](input_overview.md) et les [colonnes de listbox](listbox_overview.md#list-box-columns), une [énumération obligatoire](properties_RangeOfValues.md#required-list) est également définie pour l'objet (les deux options doivent généralement utiliser la même liste), de sorte que seules les valeurs de l'énumération peuvent être saisies par l'utilisateur.
 
 Cette propriété spécifie, dans le contexte d'un champ ou d'une variable associée à une liste de valeurs, le type de contenu à sauvegarder :
 
 - **Enregistrer comme valeur** (option par défaut) : la valeur de l'élément choisi dans la liste par l'utilisateur est enregistrée directement. Par exemple, si l'utilisateur choisit la valeur "Bleu", cette valeur est enregistrée dans le champ.
-- **Enregistrer comme référence** : la référence de l'élément de l'énumération est enregistrée dans l'objet. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](../commands-legacy/append-to-list.md) or [`SET LIST ITEM`](../commands-legacy/set-list-item.md) commands, or in the list editor.
+- **Enregistrer comme référence** : la référence de l'élément de l'énumération est enregistrée dans l'objet. Cette référence est la valeur numérique associée à chaque élément, soit par l'intermédiaire du paramètre *itemRef* des commandes [`APPEND TO LIST`](../commands-legacy/append-to-list.md) ou [`SET LIST ITEM`](../commands-legacy/set-list-item.md), soit dans l'éditeur d'énumérations.
 
 Cette option permet d'optimiser l'utilisation de la mémoire : le stockage de valeurs numériques dans les champs occupe moins d'espace que le stockage de chaînes de caractères. Il facilite également la traduction des applications : il suffit de créer plusieurs listes dans différentes langues mais avec les mêmes références d'éléments, puis de charger la liste en fonction de la langue de l'application.
 
@@ -305,7 +300,7 @@ L'utilisation de cette propriété nécessite le respect des principes suivants 
 
 ---
 
-## Selected Items {#selected-items}
+## Eléments sélectionnés {#selected-items}
 
 `Listbox de type collection ou entity selection`
 
@@ -318,9 +313,9 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 #### Grammaire JSON
 
-| Nom                 | Type de données | Valeurs possibles                          |
-| ------------------- | --------------- | ------------------------------------------ |
-| selectedItemsSource | string          | Assignable collection or object expression |
+| Nom                 | Type de données | Valeurs possibles                         |
+| ------------------- | --------------- | ----------------------------------------- |
+| selectedItemsSource | string          | Collection ou expression objet assignable |
 
 #### Objets pris en charge
 
@@ -334,11 +329,11 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 ## Sélection temporaire
 
-`Listbox de type sélection nommée`
+`Named selection list boxes`
 
 Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une sélection temporaire valide. Il peut s'agir d'une sélection temporaire process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection temporaire doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
 
-> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections nommées** du *manuel de référence du langage 4D*.
+> Les sélections temporaires sont des listes ordonnées d'enregistrements. Elles sont utilisées pour garder en mémoire l'ordre et l'enregistrement courant d'une sélection. Pour plus d'informations, reportez-vous à la section **Sélections temporaires** du langage 4D.
 
 #### Grammaire JSON
 

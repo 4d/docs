@@ -10,9 +10,9 @@ Collection de colonnes de la list box.
 
 #### Grammaire JSON
 
-| Nom      | Type de données             | Valeurs possibles                                |
-| -------- | --------------------------- | ------------------------------------------------ |
-| colonnes | collection d'objets colonne | Contient les propriétés des colonnes de list box |
+| Nom     | Type de données             | Valeurs possibles                                |
+| ------- | --------------------------- | ------------------------------------------------ |
+| columns | collection d'objets colonne | Contient les propriétés des colonnes de list box |
 
 Pour une liste des propriétés prises en charge par les objets colonnes, veuillez vous référer à la section [Propriétés spécifiques aux colonnes.](listbox_overview.md#column-specific-properties).
 

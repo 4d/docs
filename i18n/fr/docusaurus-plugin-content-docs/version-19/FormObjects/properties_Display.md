@@ -398,7 +398,7 @@ En particulier, cette propriété permet de mettre en œuvre des boutons "invisi
 
 ---
 
-## Trois États
+## Trois états
 
 Permet à un objet case à cocher d'accepter un troisième état. La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci se trouve dans le troisième état.
 

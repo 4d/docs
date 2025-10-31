@@ -77,7 +77,7 @@ Estão disponíveis três opções:
 
 ## Alinhamento vertical
 
-Esta propriedade específica se o tamanho vertical de um objeto deve ser movido ou redimensionado quando um usuário redimensiona o formulário. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+This property specifies if an object should be vertically moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) command.
 
 Estão disponíveis três opções:
 

@@ -5,7 +5,7 @@ title: Fond et bordure
 
 ## Couleur de fond alternée
 
-Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box.
+Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
 
 You can also set this property using the  command.
 
@@ -31,7 +31,7 @@ Définit la couleur de fond d'un objet.
 
 Dans le cas d'une list box, par défaut *Automatique* est sélectionné : la colonne utilise la couleur de fond définie au niveau de la list box.
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Grammaire JSON
 
@@ -150,7 +150,7 @@ La couleur peut être spécifiée par :
 - une valeur HEX - comme "# ff0000"
 - une valeur RVB - comme "rgb (255,0,0)"
 
-You can also set this property using the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command.
+Vous pouvez également définir cette propriété à l'aide de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Grammaire JSON
 
@@ -192,7 +192,7 @@ Désigne l'épaisseur d'une ligne.
 
 Le nom d'un tableau pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne ou colonne de la list box.
 
-Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. You can use the constants described in the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command. Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
+Le nom d'un tableau Entier long doit être saisi. Chaque élément de ce tableau correspond à une ligne de la zone de list box (si elle est appliquée à la liste box) ou à une cellule de la colonne (si elle est appliquée à une colonne), le tableau doit donc avoir la même taille que le tableau associé à la colonne. Vous pouvez utiliser les constantes décrites dans la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md). Si vous souhaitez que la cellule hérite de la couleur d'arrière-plan définie au niveau supérieur, passez la valeur -255 à l'élément de tableau correspondant.
 
 Par exemple, considérons une list box où les lignes ont une couleur alternée gris/gris clair, définie dans les propriétés de la list box. Un tableau de couleurs d'arrière-plan a également été défini pour la list box afin de changer en orange clair la couleur des lignes où au moins une valeur est négative :
 
@@ -252,4 +252,4 @@ Définit l'arrière-plan de la list box sur "Transparent". Lorsqu'elle est défi
 
 #### Voir également
 
-[Background Color / Fill Color](#background-color--fill-color)
+[Couleur de fond](#background-color--fill-color)

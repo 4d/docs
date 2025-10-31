@@ -51,9 +51,9 @@ Permite al usuario mantener pulsado el botón del ratón para mostrar las imáge
 
 ---
 
-## Cambiar cada x ticks
+## Switch every x seconds
 
-Permite recorrer el contenido del botón de imagen a la velocidad especificada (en ticks). En este modo, se ignoran todas las demás opciones.
+Enables cycling through the contents of the picture button at the specified speed (in seconds). En este modo, se ignoran todas las demás opciones.
 
 #### Gramática JSON
 

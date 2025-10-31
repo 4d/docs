@@ -60,7 +60,7 @@ Define la acción a realizar cuando un usuario haga doble clic en una línea en 
 
 Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
 
-Para las dos últimas acciones, también se genera el evento de formulario `On Open Detail`. `On Close Detail` se genera cuando un registro mostrado en el formulario detallado asociado al list box está a punto de cerrarse (independientemente de que el registro se haya modificado o no).
+For the last two actions, the `On Open Detail` form event is also generated. `On Close Detail` se genera cuando un registro mostrado en el formulario detallado asociado al list box está a punto de cerrarse (independientemente de que el registro se haya modificado o no).
 
 #### Gramática JSON
 

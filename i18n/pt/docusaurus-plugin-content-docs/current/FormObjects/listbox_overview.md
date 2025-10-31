@@ -136,7 +136,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | [Exibir cabeçalhos](properties_Headers.md#display-headers)                                   | X              | X                | X                                    |
 | [Exibir rodapés](properties_Footers.md#display-footers)                                      | X              | X                | X                                    |
 | [Clique duas vezes na linha](properties_ListBox.md#double-click-on-row)                      |                | X                |                                      |
-| [Draggable](properties_Action.md#droppable)                                                  | X              | X                | X                                    |
+| [Arrastável](properties_Action.md#draggable)                                                 | X              | X                | X                                    |
 | [Droppable](properties_Action.md#droppable)                                                  | X              | X                | X                                    |
 | [Focusable](properties_Entry.md#focusable)                                                   | X              | X                | X                                    |
 | [Fonte](properties_Text.md#font)                                                             | X              | X                | X                                    |
@@ -267,7 +267,7 @@ Você pode definir propriedades padrão (texto, cor de fundo, etc.) para cada co
 
 ### Column Specific Properties {#column-specific-properties}
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-list-of-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-list-of-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 ### Supported Form Events {#supported-form-events-1}
 
@@ -879,10 +879,10 @@ configurações adicionais (opcional): dependem do tipo de valor
 Para definir essas propriedades, você precisa definir os atributos apropriados no objeto (os atributos disponíveis estão listados abaixo). Por exemplo, pode escrever "Olá Mundo!" numa coluna de objectos usando este código simples:
 
 ```4d
-ARRAY OBJECT(obColumn;0) //array de colunas
- C_OBJECT($ob) //primeiro elemento
- OB SET($ob; "valueType"; "text") //define o tipo de valor (obrigatório)
- OB SET($ob; "value"; "Hello World!") //define o valor
+ARRAY OBJECT(obColumn;0) //column array
+ var $ob : Object //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -961,17 +961,17 @@ O único atributo obrigatório é "valueType" e os seus valores suportados são 
 Os valores das células são armazenados no atributo "value". Este atributo é utilizado tanto para a entrada como para a saída. Também pode ser utilizada para definir valores por defeito quando se utilizam listas (ver abaixo).
 
 ```4d
- ARRAY OBJECT(obColumn;0) //array de colunas
- C_OBJECT($ob1)
- $entry:="Hello world!"
- OB SET($ob1; "valueType"; "text")
- OB SET($ob1; "value";$entry) // se o usuário inserir um novo valor, $entry conterá o valor editado
- C_OBJECT($ob2)
- OB SET($ob2; "valueType"; "real")
+ ARRAY OBJECT(obColumn;0) //column array
+ var $ob1;$ob2;$ob3 : Object
+ var $entry:="Hello world!"
+ OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+
+ OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
- C_OBJECT($ob3)
- OB SET($ob3; "valueType"; "boolean")
- OB SET($ob3; "value";True)
+
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
 
  APPEND TO ARRAY(obColumn;$ob1)
  APPEND TO ARRAY(obColumn;$ob2)
@@ -989,8 +989,8 @@ Quando o "valueType" é "real" ou "integer", o objeto também aceita os atributo
 Esses atributos podem ser usados para controlar o intervalo de valores de entrada. Quando uma célula é validada (quando perde o foco), se o valor de entrada for menor que o valor mínimo ou maior que o valor máximo, ela será rejeitada. Nesse caso, o valor anterior é mantido e uma dica exibe uma explicação.
 
 ```4d
- C_OBJECT($ob3)
- $entry3:=2015
+ var $ob3 : Object
+ var $entry3:=2015
  OB SET($ob3;"valueType";"integer")
  OB SET($ob3;"value";$entry3)
  OB SET($ob3;"min";2000)
@@ -1008,13 +1008,9 @@ O atributo behavior fornece variações para a representação regular de valore
 | behavior | threeStates                                                     | integer                         | Representa um valor numérico como uma caixa de seleção de três estados.<br/> 2=semi-marcado, 1=marcado, 0=desmarcado, -1=invisível, -2=desmarcado desabilitado, -3=marcado desabilitado, -4=semi-marcado desabilitado |
 
 ```4d
- C_OBJECT($ob3)
+ var $ob3; $ob4 : Object
  OB SET($ob3;"valueType";"integer")
-
  OB SET($ob3;"value";-3)
- C_OBJECT($ob4)
-
-
  OB SET($ob4;"valueType";"integer")
  OB SET($ob4;"value";-3)
  OB SET($ob4;"behavior";"threeStates")
@@ -1041,7 +1037,7 @@ Exemplos:
 	ARRAY TEXT($RequiredList;0)
 	APPEND TO ARRAY($RequiredList;"Open")
 	APPEND TO ARRAY($RequiredList;"Closed")
-	C_OBJECT($ob)
+	var $ob Object
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"value";"Closed")
 	OB SET ARRAY($ob;"requiredList";$RequiredList)
@@ -1058,7 +1054,7 @@ Exemplos:
 	APPEND TO ARRAY($ChoiceList;20)
 	APPEND TO ARRAY($ChoiceList;50)
 	APPEND TO ARRAY($ChoiceList;100)
-	C_OBJECT($ob)
+	var $ob : Object
 	OB SET($ob;"valueType";"integer")
 	OB SET($ob;"value";10) //10 as default value
 	OB SET ARRAY($ob;"choiceList";$ChoiceList)
@@ -1082,7 +1078,7 @@ Exemplos:
 ![](../assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
-	C_OBJECT($ob)
+	var $ob : Object
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"saveAs";"value")
 	OB SET($ob;"value";"blue")
@@ -1099,7 +1095,7 @@ Exemplos:
 	APPEND TO LIST(<>List;"London";2)
 	APPEND TO LIST(<>List;"Berlin";3)
 	APPEND TO LIST(<>List;"Madrid";4)
-	C_OBJECT($ob)
+	var $ob : Object
 	OB SET($ob;"valueType";"integer")
 	OB SET($ob;"saveAs";"reference")
 	OB SET($ob;"value";2) //displays London by default
@@ -1126,7 +1122,7 @@ Você deseja exibir uma caixa de combinação com base em uma lista de "cores" d
 ![](../assets/en/FormObjects/listbox_column_objectArray_colors.png)
 
 ```4d
- C_OBJECT($ob)
+ var $ob : Object
  OB SET($ob;"valueType";"text")
 
  OB SET($ob;"value";"blue")
@@ -1157,9 +1153,11 @@ Queremos configurar uma entrada numérica seguida de duas unidades possíveis: "
 ARRAY TEXT($_units;0)
 APPEND TO ARRAY($_units;"lines")
 APPEND TO ARRAY($_units;"pixels")
-C_OBJECT($ob)
+var $ob : Object
 OB SET($ob;"valueType";"integer")
-OB SET($ob;"value";2) // 2 "units" OB SET($ob;"unitReference";1) //"lines" OB SET ARRAY($ob;"unitsList";$_units)
+OB SET($ob;"value";2) // 2 "units"
+OB SET($ob;"unitReference";1) //"lines"
+OB SET ARRAY($ob;"unitsList";$_units)
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_unitList.png)
@@ -1173,8 +1171,8 @@ Quando esse botão for clicado por um usuário, será gerado um evento `On Alter
 Exemplo:
 
 ```4d
-C_OBJECT($ob1)
-$entry:="Hello world!"
+var $ob1 : Object
+var $entry:="Hello world!"
 OB SET($ob;"valueType";"text")
 OB SET($ob;"alternateButton";True)
 OB SET($ob;"value";$entry)
@@ -1189,7 +1187,7 @@ O valueType "color" permite-lhe apresentar uma cor ou um texto.
 - Se o valor for um número, é desenhado um retângulo colorido no interior da célula. Exemplo:
 
   ```4d
-  C_OBJECT($ob4)
+  var $ob4 : Object
   OB SET($ob4;"valueType";"color")
   OB SET($ob4;"value";0x00FF0000)
   ```
@@ -1207,7 +1205,7 @@ Opcionalmente, pode passar um atributo "label".
 Exemplo:
 
 ```4d
-C_OBJECT($ob)
+var $ob : Object
 OB SET($ob;"valueType";"event")
 OB SET($ob;"label";"Edit...")
 ```

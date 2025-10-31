@@ -31,7 +31,7 @@ Permite ao usuário aceder a um menu de contexto padrão no objeto quando o form
 
 Para uma imagem do tipo [entrada](input_overview.md), além dos comandos de edição padrão (Recortar, Copiar, Colar e Limpar), o menu contém o comando **Importar...**, que pode ser usado para importar uma imagem armazenada em um arquivo, bem como o comando **Salvar como...**, que pode ser usado para salvar a imagem no disco. O menu também pode ser usado para modificar o formato de exibição da imagem: são oferecidas as opções **Truncado não centralizado**, **Escalonado para caber** e **Escalonado para caber na imagem centralizada**. A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro.
 
-Para uma [entrada](input_overview.md) tipo texto [multi-style](properties_Text.md#multi-style), além dos comandos de edição padrão, o menu de contexto fornece os seguintes comandos:
+For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox_overview.md#list-box-columns), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Fuentes recientes**: muestra los nombres de las fuentes recientes seleccionadas durante la sesión. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por defeito, esta lista está vazia e a opção não é apresentada. Puede gestionar esta lista utilizando los comandos `SET RECENT FONTS` y `FONT LIST`.
@@ -78,7 +78,7 @@ Quando essa propriedade está desativada, todos os menus pop-up associados a uma
 
 [`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
 
-#### See alos
+#### Veja também
 
 [`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
@@ -303,14 +303,14 @@ Para visualizar uma lista de todos os atalhos usados no ambiente Desenho 4D, con
 
 #### Gramática JSON
 
-| Nome            | Tipo de dados | Valores possíveis                                                                                                                                                                                                                                                   |
-| --------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                                       |
-| shortcutAlt     | boolean       | true, false                                                                                                                                                                                                                                                         |
-| shortcutControl | boolean       | true, false (macOS: Control)                                                                                                                                                                                                     |
-| shortcutShift   | boolean       | true, false                                                                                                                                                                                                                                                         |
-|                 |               |                                                                                                                                                                                                                                                                     |
-| shortcutKey     | string        | <li>qualquer tecla de caractere: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nome            | Tipo de dados | Valores possíveis                                                                                                                                                                                                                                          |
+| --------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean       | true, false (Windows: Ctrl/macOS: Command)                                                                                                                                                              |
+| shortcutAlt     | boolean       | true, false                                                                                                                                                                                                                                                |
+| shortcutControl | boolean       | true, false (macOS: Control)                                                                                                                                                                                            |
+| shortcutShift   | boolean       | true, false                                                                                                                                                                                                                                                |
+|                 |               |                                                                                                                                                                                                                                                            |
+| shortcutKey     | string        | <li>any character key: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objectos suportados
 

@@ -348,7 +348,13 @@ Para mover un objeto a otro plano, selecciónelo y elija:
 
 ![](../assets/en/FormEditor/level2.png)
 
-> Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
+Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+clic** / **Comando+Mayús+clic** para seleccionar cada objeto sucesivamente bajando un plano con cada clic.
+
+:::note
+
+In binary databases, use **Ctrl+Click / Command+Click** to perform the same action.
+
+:::
 
 Al ordenar los diferentes niveles, 4D siempre va del fondo al primer plano. Como resultado, el nivel anterior desplaza la selección de objetos de un plano hacia el fondo del formulario. El siguiente nivel mueve la selección un plano hacia el primer plano del formulario.
 

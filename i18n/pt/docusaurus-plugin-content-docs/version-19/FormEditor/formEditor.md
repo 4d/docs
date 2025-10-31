@@ -335,7 +335,14 @@ Para mover um objeto para outro nível, selecione-o e escolha:
 - Um dos comandos associados com o botão de gerenciamento de nível da barra de ferramentas.
 
 ![](../assets/en/FormEditor/level2.png)
-> Quando vários objetos são sobrepostos, o atalho **Ctrl+Shift+clique** / **Comando+Shift+clique**pode ser usado para selecionar cada objeto sucessivamente, descendo uma camada a cada clique.
+
+When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
+
+:::note
+
+In binary databases, use **Ctrl+Click / Command+Click** to perform the same action.
+
+:::
 
 Ao ordenar diferentes níveis, 4D sempre vai de segundo plano para o primeiro plano. Como resultado, o nível anterior move a seleção de objetos um nível para o plano de fundo. O próximo nível move a seleção um nível em direção ao primeiro plano do formulário.
 

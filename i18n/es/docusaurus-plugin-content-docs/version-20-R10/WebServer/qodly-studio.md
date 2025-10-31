@@ -11,7 +11,7 @@ Qodly Studio también puede utilizarse en la [**plataforma Qodly Cloud**](https:
 
 Qodly Studio propone una interfaz web completa, que le permite:
 
-- create Qodly pages by placing components on a canvas
+- crear páginas Qodly colocando componentes en un lienzo
 - mapear componentes a Qodly Sources
 - activar código 4D configurando eventos
 - y mucho más.

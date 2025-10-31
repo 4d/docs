@@ -19,9 +19,7 @@ Les boutons image peuvent être utilisés de deux manières :
   | Bascule sur passage du curseur | switchWhenRollover     | true   |
   | Dernière imagette si désactivé | useLastFrameAsDisabled | true   |
 
-- Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).\
-  Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image.\
-  Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image.  
+- Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Avec un [pop-up menu image](picturePopupMenu_overview.md), tous les choix sont affichés simultanément (comme les éléments du menu contextuel), tandis que le bouton image affiche les choix consécutivement (lorsque l'utilisateur clique sur le bouton).  
   Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
@@ -48,16 +46,16 @@ Vous pouvez organiser les images sous la forme de colonnes, de lignes ou de tabl
 
 Outre les paramètres de positionnement et d'apparence standard, vous pouvez définir certaines propriétés spécifiques pour les boutons image, en particulier la manière et le moment où les images sont affichées. Ces options de propriétés peuvent être combinées pour améliorer vos boutons d'image.
 
-- By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. La séquence d’images s’arrête lorsqu’on atteint la dernière image de la série. En d’autres termes, le bouton ne retourne pas à la première image de la série.
+- Par défaut (lorsqu'aucune [option d'animation](properties_Animation.md) n'est sélectionnée), un bouton image affiche l'image suivante de la série lorsque l'utilisateur clique ; il affiche l'image précédente de la série lorsque l'utilisateur maintient la touche **Maj** enfoncée et clique. La séquence d’images s’arrête lorsqu’on atteint la dernière image de la série. En d’autres termes, le bouton ne retourne pas à la première image de la série.
 
 Les autres modes disponibles sont les suivants :
 
-- [Loop back to first frame](properties_Animation.md#loop-back-to-first-frame)
-- [Switch back when Released](properties_Animation.md#switch-back-when-released)
-- [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
-- [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
-- [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-- [Switch every x ticks](./properties_Animation.md#switch-every-x-ticks)
+- [Recommencer la séquence](properties_Animation.md#loop-back-to-first-frame)
+- [Retour sur relâchement du clic](properties_Animation.md#switch-back-when-released)
+- [Bascule sur passage du curseur](properties_Animation.md#switch-when-roll-over)
+- [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
+- [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
+- [Switch every x seconds](./properties_Animation.md#switch-every-x-seconds)
 
 > La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
 

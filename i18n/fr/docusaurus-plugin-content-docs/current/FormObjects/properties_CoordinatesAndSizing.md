@@ -160,7 +160,7 @@ Avec les [zones de texte](text.md) et les [zones de saisie](input_overview.md) :
 
 :::
 
-You can also set this property using the [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) and [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md) commands.
+Vous pouvez également définir cette propriété à l'aide des commandes [OBJECT Get corner radius](../commands-legacy/object-get-corner-radius.md) et [OBJECT SET CORNER RADIUS](../commands-legacy/object-set-corner-radius.md).
 
 #### Grammaire JSON
 
@@ -288,7 +288,7 @@ Définit la hauteur des lignes de list box (hors en-têtes et pieds de page). Pa
 
 #### Voir également
 
-[Row Height Array](#row-height-array)
+[Tableau hauteurs de lignes](#row-height-array)
 
 ---
 
@@ -326,7 +326,7 @@ En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne 
 
 #### Voir également
 
-[Row Height](#row-height)
+[Hauteur des lignes](#row-height)
 
 ---
 
@@ -352,7 +352,7 @@ Définit une marge horizontale pour les cellules. La valeur est définie en pixe
 
 #### Voir également
 
-[Vertical Padding](#vertical-padding)
+[Marge verticale](#vertical-padding)
 
 ---
 
@@ -376,4 +376,4 @@ Définit une marge verticale pour les cellules. La valeur est définie en pixels
 
 #### Voir également
 
-[Horizontal Padding](#horizontal-padding)
+[Marge horizontale](#horizontal-padding)

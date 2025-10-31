@@ -7,7 +7,7 @@ title: Fondo y borde
 
 Permite definir un color de fondo diferente para las líneas o columnas impares de un list box. Permite definir un color de fondo diferente para las líneas o columnas impares de un list box.
 
-También puede definir esta propiedad utilizando el comando.
+También puede definir esta propiedad utilizando el comando [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
 #### Gramática JSON
 

@@ -5,9 +5,9 @@ title: Saisie
 
 ## Correction orthographique
 
-4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D inclut des fonctionnalités de correction orthographique intégrées et personnalisables. Les [zones de saisie](input_overview.md) de texte peuvent être vérifiées, ainsi que les documents [4D Write Pro](writeProArea_overview.md).
 
-La propriété Correction orthographique active la vérification orthographique pour chaque objet. Lorsqu'elle est activée, une vérification orthographique est effectuée automatiquement lors de la saisie des données. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+La propriété Correction orthographique active la vérification orthographique pour chaque objet. Lorsqu'elle est activée, une vérification orthographique est effectuée automatiquement lors de la saisie des données. Vous pouvez également exécuter la commande `SPELL CHECKING` pour chaque objet à vérifier.
 
 #### Grammaire JSON
 
@@ -29,16 +29,16 @@ La propriété Correction orthographique active la vérification orthographique 
 
 Permet à l'utilisateur d'accéder à un menu contextuel standard dans l'objet lorsque le formulaire est exécuté.
 
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display.md#picture-format) using this menu is temporary; it is not saved with the record.
+Pour une [zone de saisie](input_overview.md) de type image, en plus des commandes d'édition standard (Couper, Copier, Coller et Effacer), le menu contient la commande **Importer...**, qui peut être utilisée pour importer une image stockée dans un fichier, ainsi que la commande **Enregistrer sous...**, qui peut être utilisée pour enregistrer l'image sur le disque. Le menu peut également être utilisé pour modifier le format d'affichage de l'image : les options **Tronquée non centrée**, **Non tronquée** et **Proportionnelle centrée** sont proposées. La modification du [format d'affichage](properties_Display.md#picture-format) à l'aide de ce menu est temporaire ; elle n'est pas sauvegardée avec l'enregistrement.
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
+Pour une [zone de saisie](input_overview.md) ou une [colonne de list box](listbox_overview.md#list-box-columns) de texte [multi-style](properties_Text.md#multi-style), en plus des commandes d'édition standard, le menu contextuel fournit les commandes suivantes :
 
-- **Fonts...**: displays the font system dialog box
-- **Recent fonts**: displays the names of recent fonts selected during the session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
+- **Polices...** : affiche la boîte de dialogue système de police
+- **Polices récentes** : affiche les noms des polices récentes sélectionnées au cours de la session. La liste peut stocker jusqu'à 10 polices (au-delà, la dernière police utilisée remplace la plus ancienne). Par défaut, cette liste est vide et l'option n'est pas affichée. Vous pouvez gérer cette liste en utilisant les commandes `SET RECENT FONTS` et `FONT LIST`.
 - commandes pour les modifications de style prises en charge : police, taille, style, couleur et couleur d'arrière-plan.
-  When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
+  Lorsque l'utilisateur modifie un attribut de style via ce menu déroulant, 4D génère l'événement formulaire `On After Edit`.
 
-For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Pour une [zone Web](webArea_overview.md), le contenu du menu dépend du moteur de rendu de la plate-forme. Il est possible de contrôler l'accès au menu contextuel via la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 #### Grammaire JSON
 
@@ -48,7 +48,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### Objets pris en charge
 
-[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
 
 #### Commandes
 
@@ -60,7 +60,7 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 L'attribut Saisissable indique si les utilisateurs peuvent entrer des valeurs dans l'objet.
 
-Les objets sont saisissables par défaut. Si vous voulez rendre un champ ou un objet non-saisissable pour ce formulaire, vous pouvez désactiver la propriété Saisissable pour l'objet. Un objet non-saisissable ne fait qu'afficher des données. Vous contrôlez les données avec des méthodes qui utilisent le nom du champ ou de la variable. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. Cela facilite la gestion des menus contextuels personnalisés et vous permet de concevoir des interfaces où vous pouvez glisser-déposer et sélectionner des variables non-saisissables.
+Les objets sont saisissables par défaut. Si vous voulez rendre un champ ou un objet non-saisissable pour ce formulaire, vous pouvez désactiver la propriété Saisissable pour l'objet. Un objet non-saisissable ne fait qu'afficher des données. Vous contrôlez les données avec des méthodes qui utilisent le nom du champ ou de la variable. Vous pouvez toujours utiliser les événements formulaire `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` et `On Losing Focus` avec des objets non saisissables. Cela facilite la gestion des menus contextuels personnalisés et vous permet de concevoir des interfaces où vous pouvez glisser-déposer et sélectionner des variables non-saisissables.
 
 Lorsque cette propriété est désactivée, tous les pop-up menus associés à une colonne de listbox via une liste sont désactivés.
 
@@ -78,7 +78,7 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 
 [`OBJECT Get enterable`](../commands-legacy/object-get-enterable.md) - [`OBJECT SET ENTERABLE`](../commands-legacy/object-set-enterable.md)
 
-#### See alos
+#### Voir également
 
 [`FORM GET ENTRY ORDER`](../commands-legacy/form-get-entry-order.md) - [`FORM SET ENTRY ORDER`](../commands-legacy/form-set-entry-order.md)
 
@@ -86,7 +86,7 @@ Lorsque cette propriété est désactivée, tous les pop-up menus associés à u
 
 ## Filtres de saisie
 
-Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. Vous pouvez même contrôler les lettres et les chiffres particuliers.
+Un filtre de saisie contrôle exactement ce que l’utilisateur peut taper au clavier pendant la saisie. Contrairement aux [énumérations obligatoires](properties_RangeOfValues.md#required-list) par exemple, les filtres de saisie fonctionnent caractère par caractère. Par exemple, si un numéro de composant est toujours constitué de trois lettres suivies de trois chiffres, vous pouvez contraindre la saisie à respecter cette forme. Vous pouvez même contrôler les lettres et les chiffres particuliers.
 
 Un filtre de saisie n’est effectif que pendant la saisie. Il n’a aucun effet sur l’affichage des données une fois que l'objet est désélectionné. En général, les filtres de saisie sont utilisés conjointement avec les [formats d'affichage](properties_Display.md). Le filtre agit pendant la saisie et le format d’affichage assure un affichage approprié de la valeur après sa saisie.
 
@@ -128,9 +128,9 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 #### Grammaire JSON
 
-| Nom         | Type de données | Valeurs possibles                                                                              |
-| ----------- | --------------- | ---------------------------------------------------------------------------------------------- |
-| entryFilter | string          | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
+| Nom         | Type de données | Valeurs possibles                                                                                                       |
+| ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| entryFilter | string          | <li>Code du filtre de saisie</li> ou <li>nom du filtre de saisie (les noms des filtres commencent par &#124; )</li> |
 
 #### Objets pris en charge
 
@@ -144,15 +144,15 @@ Ce tableau explique chaque filtre présent dans la liste déroulante Filtre de s
 
 ## Focusable
 
-When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
+Lorsque la propriété **Focusable** est activée pour un objet, l'objet peut avoir le focus (et peut donc être activé par le clavier par exemple). Il est délimité par une ligne pointillée grise lorsqu'il est sélectionné, sauf si l'option [Cacher rectangle de focus](properties_Appearance.md#hide-focus-rectangle) a également été sélectionnée.
 
-> An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
+> Une [zone de saisie](input_overview.md) est toujours focusable s'il possède la propriété [Saisissable](#enterable).
 
 - ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
 
-- ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
+- ![](../assets/en/FormObjects/property_focusable2.png)<br/>La case à cocher est sélectionnée mais ne peut pas être afficher le focus|
 
-When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+Lorsque la propriété **Focusable** est sélectionnée pour un objet non saisissable, l'utilisateur peut sélectionner, copier ou même glisser-déposer le contenu de la zone.
 
 #### Grammaire JSON
 
@@ -172,11 +172,11 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 ## Configuration du clavier
 
-This property associates a specific keyboard layout to an [input object](input_overview.md). Par exemple, dans une application internationale, si un formulaire contient un champ dont le contenu doit être saisi en caractères grecs, vous pouvez associer la configuration de clavier "grec" à ce champ. De cette façon, lors de la saisie des données, la configuration du clavier est automatiquement modifiée lorsque ce champ a le focus.
+Cette propriété associe une disposition de clavier spécifique à une [zone de saisie](input_overview.md). Par exemple, dans une application internationale, si un formulaire contient un champ dont le contenu doit être saisi en caractères grecs, vous pouvez associer la configuration de clavier "grec" à ce champ. De cette façon, lors de la saisie des données, la configuration du clavier est automatiquement modifiée lorsque ce champ a le focus.
 
 Par défaut, la saisie utilise la configuration courante du clavier.
 
-> You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+> Vous pouvez également définir et obtenir le clavier de manière dynamique à l'aide des commandes `OBJECT SET KEYBOARD LAYOUT` et `OBJECT Get keyboard layout`.
 
 #### Grammaire JSON
 
@@ -201,13 +201,13 @@ Cette propriété est disponible pour les [objets de zone de saisie](input_overv
 #### Automatique
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- In multiline inputs, 4D carries out automatic line returns:\
+- Dans les zones de saisis multilignes, 4D effectue des retours à la ligne automatiques :  
   ![](../assets/en/FormObjects/multilineAuto.png)
 
 #### Non
 
 - Dans les zones mono-lignes, les mots situés en fin de ligne sont tronqués et il n’y a pas de retours à la ligne.
-- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:\
+- Il n’y a aucun retour à la ligne : le texte est toujours affiché sur une seule ligne. Si l'expression Alpha ou Texte contient des retours de chariot, le texte situé après le premier retour de chariot est supprimé dès que la zone est modifiée :  
   ![](../assets/en/FormObjects/multilineNo.png)
 
 #### Oui
@@ -243,7 +243,7 @@ Le texte d'exemple est affiché à nouveau si le contenu du champ est effacé.
 Un texte exemple peut être affiché pour les types de données suivants :
 
 - chaîne (texte ou alpha)
-- date and time when the **Blank if null** property is enabled.
+- date et heure lorsque la propriété **Vide si null** est sélectionnée.
 
 Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tant que texte exemple, par exemple :
 
@@ -251,7 +251,7 @@ Vous pouvez utiliser une référence XLIFF sous la forme ":xliff:resname" en tan
 
 Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pas possible de combiner une référence avec du texte statique.
 
-> You can also set and get the placeholder text by programming using the [`OBJECT SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) and [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md) commands.
+> Vous pouvez également écrire et lire le texte du placeholder en utilisant les commandes [`OBJET SET PLACEHOLDER`](../commands-legacy/object-set-placeholder.md) et [`OBJECT Get placeholder`](../commands-legacy/object-get-placeholder.md).
 
 #### Grammaire JSON
 
@@ -275,7 +275,7 @@ Vous passez seulement la référence dans le champ "Texte exemple" ; il n'est pa
 
 ## Sélection toujours visible
 
-Cette propriété conserve la sélection visible dans l'objet après qu'il ait perdu le focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
+Cette propriété conserve la sélection visible dans l'objet après qu'il ait perdu le focus. Cela facilite la mise en œuvre d'interfaces permettant de modifier le style du texte (voir [Multi-style](properties_Text.md#multi-style)).
 
 #### Grammaire JSON
 
@@ -291,26 +291,26 @@ Cette propriété conserve la sélection visible dans l'objet après qu'il ait p
 
 ## Equivalent clavier
 
-This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). Ils permettent à l'utilisateur d'actionner l'objet à l'aide du clavier au lieu d'avoir à utiliser la souris.
+Cette propriété permet de définir des touches avec signification spéciales (raccourcis clavier) pour les [boutons](button_overview.md), les [boutons radio](radio_overview.md) et les [cases à cocher](checkbox_overview.md). Ils permettent à l'utilisateur d'actionner l'objet à l'aide du clavier au lieu d'avoir à utiliser la souris.
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+Vous pouvez configurer cette option en cliquant sur le bouton [...] dans la propriété Raccourcis de la Liste des propriétés.
 
 ![](../assets/en/FormObjects/property_shortcut.png)
 
-> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. For more information about associating shortcuts with menus, refer to [Setting menu properties](../Menus/properties.md).
+> Vous pouvez également assigner un raccourci à une commande de menu personnalisée. S'il y a un conflit entre deux raccourcis, l'objet actif a la priorité. Pour plus d'informations sur l'association de raccourcis aux menus, reportez-vous à [Définition des propriétés des menus](../Menus/properties.md).
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](../Preferences/shortcuts.md) in the Preferences dialog box.
+Pour afficher une liste de tous les raccourcis utilisés dans l'IDE de 4D, voir la [Page des raccourcis](../Preferences/shortcuts.md) dans la boîte de dialogue Préférences.
 
 #### Grammaire JSON
 
-| Nom             | Type de données | Valeurs possibles                                                                                                                                                                                                                                         |
-| --------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                               |
-| shortcutAlt     | boolean         | true, false                                                                                                                                                                                                                                               |
-| shortcutControl | boolean         | true, false (macOS Control)                                                                                                                                                                                                            |
-| shortcutShift   | boolean         | true, false                                                                                                                                                                                                                                               |
-|                 |                 |                                                                                                                                                                                                                                                           |
-| shortcutKey     | string          | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nom             | Type de données | Valeurs possibles                                                                                                                                                                                                                                          |
+| --------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| shortcutAccel   | boolean         | true, false (Ctrl Windows/Command macOS)                                                                                                                                                                                                |
+| shortcutAlt     | boolean         | true, false                                                                                                                                                                                                                                                |
+| shortcutControl | boolean         | true, false (macOS Control)                                                                                                                                                                                                             |
+| shortcutShift   | boolean         | true, false                                                                                                                                                                                                                                                |
+|                 |                 |                                                                                                                                                                                                                                                            |
+| shortcutKey     | string          | <li>any character key: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objets pris en charge
 
@@ -326,7 +326,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 Active le passage direct en mode édition dans les list box.
 
-Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement. Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement.
+Lorsque cette option est activée, les cellules de list box basculent en mode édition après un simple clic utilisateur, indépendamment du fait que la zone de list box ait été sélectionnée préalablement. Notez que cette option permet de modifier les cellules même lorsque le [mode de sélection](properties_ListBox.md#selection-mode) de la list box est "Aucun".
 
 Lorsque cette option n'est pas activée, les utilisateurs doivent d'abord sélectionner la ligne de la cellule puis cliquer sur la cellule pour modifier son contenu.
 

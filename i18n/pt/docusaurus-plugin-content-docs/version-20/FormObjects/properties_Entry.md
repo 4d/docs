@@ -27,7 +27,7 @@ Permite ao usuário aceder a um menu de contexto padrão no objeto quando o form
 
 Para uma [entrada](input_overview.md) imagem, além dos comandos de edição padrão (Recortar, Copiar, Colar e Limpar), o menu contém o comando **Importar...**, que pode ser usado para importar uma imagem armazenada em um arquivo, bem como o comando **Salvar como...**, que pode ser usado para salvar a imagem no disco. O menu também pode ser usado para modificar o formato de exibição da imagem: são oferecidas as opções **Truncado não centralizado**, **Escalonado para caber** e **Escalonado para caber na imagem centralizada**. A modificação do [formato de exibição](properties_Display.md#picture-format) usando esse menu é temporária; ela não é salva com o registro.
 
-Para uma [entrada](input_overview.md) texto [multi-estilo](properties_Text.md#multi-style), além dos comandos de edição padrão, o menu de contexto fornece os seguintes comandos:
+For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox_overview.md#list-box-columns), in addition to standard editing commands, the context menu provides the following commands:
 
 - **Fontes...**: exibe a caixa de diálogo do sistema de fontes
 - **Fontes recentes**: exibe os nomes das fontes recentes selecionadas durante a sessão. A lista pode armazenar até 10 fontes (além disso, a última fonte usada substitui a mais antiga). Por defeito, esta lista está vazia e a opção não é apresentada. Você pode gerenciar essa lista usando os comandos `SET RECENT FONTS` e `FONT LIST`.
@@ -273,7 +273,7 @@ Para ver uma lista de todos os atalhos usados no ambiente 4D Design , consulte a
 | shortcutControl | boolean       | true, false (macOS: Control)                       |
 | shortcutShift   | boolean       | true, false                                        |
 |                 |               |                                                    |
-| shortcutKey     | string        | <li>qualquer tecla de carácter: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| shortcutKey     | string        | <li>qualquer tecla de carácter: "a", "b"...</li><li>"[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objectos suportados
 

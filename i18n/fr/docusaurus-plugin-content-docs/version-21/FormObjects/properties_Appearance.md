@@ -57,7 +57,7 @@ A l'exécution, un champ ou toute zone saisissable est délimité par un rectang
 
 Cette propriété est utilisée pour désactiver la mise en évidence de la sélection dans les list box.
 
-Lorsque cette option est activée, la surbrillance de la sélection n'est plus visible pour les sélections effectuées dans les list box. Selections themselves are still valid and work in exactly the same way as previously; however, they are no longer represented graphically onscreen, and you will need to [define their appearance programmatically](listbox_overview.md#customizing-appearance-of-selected-rows).
+Lorsque cette option est activée, la surbrillance de la sélection n'est plus visible pour les sélections effectuées dans les list box. Les sélections elles-mêmes sont toujours valides et fonctionnent exactement de la même manière que précédemment ; cependant, elles ne sont plus représentées graphiquement à l'écran, et vous devrez [définir leur apparence par programmation](listbox_overview.md#customizing-appearance-of-selected-rows).
 
 Par défaut, cette option n'est pas activée.
 
@@ -107,7 +107,7 @@ Valeurs disponibles :
 
 #### Voir également
 
-[Vertical scroll bar](#vertical-scroll-bar)
+[Barre de défilement verticale](#vertical-scroll-bar)
 
 ---
 

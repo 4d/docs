@@ -294,7 +294,7 @@ Les caractères spéciaux suivants permettent l'ajout ou la mise en forme automa
 | G         | Image                             | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S         | Barré                             | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
 | U         | Souligné                          | printInfo.headerLeft:="&UThis is text."                                | This is text. (Souligné)                             |
-| B         | Souligné                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
+| B         | Gras                              | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
 | I         | Italique                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
 | "         | Préfixe de police                 | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K         | Préfixe de couleur du texte       | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (en rouge).                             |
