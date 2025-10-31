@@ -3444,14 +3444,14 @@ The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements
 If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type. 
 You can also pass one of the following constants in the *ascOrDesc* parameter:
 
-	|Constant|	Type|Value|Comment|
-	|---|---|---|---|
-	|ck ascending|Integer|0|Elements are ordered in ascending order (default)|
-	|ck descending|Integer|1|Elements are ordered in descending order|
+|Constant|	Type|Value|Comment|
+|---|---|---|---|
+|ck ascending|Integer|0|Elements are ordered in ascending order (default)|
+|ck descending|Integer|1|Elements are ordered in descending order|
 
-	This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
 
- If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
 
 1. null
 2. booleans
