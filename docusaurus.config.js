@@ -63,6 +63,7 @@ module.exports = {
             const body = `Please enter your comment:`;
             return `https://github.com/4d/docs/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`
           },
+          sidebarPath: require.resolve('./sidebars.js'),
           versions: {
               '21': {
               label: '21 BETA',

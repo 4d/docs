@@ -8,8 +8,10 @@ slug: /commands/theme/Language
 
 ||
 |---|
+|[<!-- INCLUDE #_command_.4D.Syntax -->](../../commands/4d.md)<br/>|
 |[<!-- INCLUDE #_command_.Action info.Syntax -->](../../commands-legacy/action-info.md)<br/>|
 |[<!-- INCLUDE #_command_.Call chain.Syntax -->](../call-chain.md)<br/>|
+|[<!-- INCLUDE #_command_.cs.Syntax -->](../../commands/cs.md)<br/>|
 |[<!-- INCLUDE #_command_.Command name.Syntax -->](../../commands/command-name.md)<br/>|
 |[<!-- INCLUDE #_command_.Copy parameters.Syntax -->](../../commands-legacy/copy-parameters.md)<br/>|
 |[<!-- INCLUDE #_command_.Count parameters.Syntax -->](../../commands-legacy/count-parameters.md)<br/>|
