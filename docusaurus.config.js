@@ -16,6 +16,7 @@ const locales = isStatic ? [language] : ['en', 'fr', 'es', 'ja', 'pt']
 const localeConfigs = isStatic ? {} : {
   en: {
     label: "English",
+    baseUrl: "/docs/",
   },
   fr: {
     label: "Français",
