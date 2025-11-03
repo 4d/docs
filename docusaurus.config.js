@@ -12,7 +12,7 @@ const LANGUAGE_TO_BUILD = process.env.LANGUAGE_TO_BUILD ?? "en"
 const BASE_URL_LANGUAGE = LANGUAGE_TO_BUILD !== "en" ? `${LANGUAGE_TO_BUILD}/` : "";
 console.log("Language ", BASE_URL_LANGUAGE)
 
-const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
+const locales = isStatic ? [language] : ['en', 'fr', 'es', 'ja', 'pt']
 const localeConfigs = isStatic ? {} : {
   en: {
     label: "English",
