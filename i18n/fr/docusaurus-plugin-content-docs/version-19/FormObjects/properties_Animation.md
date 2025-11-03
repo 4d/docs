@@ -51,9 +51,9 @@ Permet à l'utilisateur de maintenir le bouton de la souris enfoncé pour affich
 
 ---
 
-## Switch every x seconds
+## Défilement toutes les n secondes
 
-Enables cycling through the contents of the picture button at the specified speed (in seconds). Dans ce mode, toutes les autres options sont ignorées.
+Permet de faire défiler le contenu du bouton image à la vitesse spécifiée (en secondes). Dans ce mode, toutes les autres options sont ignorées.
 
 #### Grammaire JSON
 

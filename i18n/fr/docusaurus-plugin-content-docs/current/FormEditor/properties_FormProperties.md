@@ -94,9 +94,9 @@ Les types pris en charge dépendent de la catégorie de formulaire :
 
 | Type de formulaire                     | Grammaire JSON     | Description                                                             | Prise en charge avec                   |
 | -------------------------------------- | ------------------ | ----------------------------------------------------------------------- | -------------------------------------- |
-| Formulaire de détail                   | detailScreen       | Un formulaire d'affichage pour la saisie et la modification des données | Formulaires projet - Formulaires table |
+| Formulaire détaillé                    | detailScreen       | Un formulaire d'affichage pour la saisie et la modification des données | Formulaires projet - Formulaires table |
 | Formulaire de détail pour l'impression | detailPrinter      | Un rapport imprimé avec une page par enregistrement, comme une facture  | Formulaires projet - Formulaires table |
-| Formulaire de liste                    | listScreen         | Un formulaire pour lister les enregistrements à l'écran                 | Formulaires table                      |
+| Formulaire liste écran                 | listScreen         | Un formulaire pour lister les enregistrements à l'écran                 | Formulaires table                      |
 | Formulaire de liste pour l'impression  | listPrinter        | Un rapport imprimé qui liste les enregistrements                        | Formulaires table                      |
 | Aucun                                  | *sans destination* | Un formulaire sans fonction spécifique                                  | Formulaires projet - Formulaires table |
 

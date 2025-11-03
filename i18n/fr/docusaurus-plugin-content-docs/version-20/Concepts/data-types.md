@@ -37,20 +37,20 @@ Lorsque les variables [](variables.md) ou les paramètres [](parameters.md) sont
 
 La valeur par défaut dépend du type de variable :
 
-| Type       | La valeur par défaut |
-| ---------- | -------------------- |
-| Booleen    | False                |
-| Date       | 00-00-00             |
-| Integer    | 0                    |
-| Time       | 00:00:00             |
-| Picture    | picture size=0       |
-| Real       | 0                    |
-| Pointer    | Nil=true             |
-| Text       | ""                   |
-| Blob       | Blob size=0          |
-| Object     | Null                 |
-| Collection | Null                 |
-| Variant    | undefined            |
+| Type       | Valeur par défaut |
+| ---------- | ----------------- |
+| Booleen    | False             |
+| Date       | 00-00-00          |
+| Integer    | 0                 |
+| Time       | 00:00:00          |
+| Picture    | picture size=0    |
+| Real       | 0                 |
+| Pointer    | Nil=true          |
+| Text       | ""                |
+| Blob       | Blob size=0       |
+| Object     | Null              |
+| Collection | Null              |
+| Variant    | undefined         |
 
 
 ### Null comme valeur par défaut

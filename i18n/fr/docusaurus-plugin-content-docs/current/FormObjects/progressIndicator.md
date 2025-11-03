@@ -62,5 +62,5 @@ A l’exécution du formulaire, l'objet n’est pas animé. Vous devez gérer l�
 
 ## Voir également
 
-- [rulers](ruler.md)
+- [règles](ruler.md)
 - [steppers](stepper.md)

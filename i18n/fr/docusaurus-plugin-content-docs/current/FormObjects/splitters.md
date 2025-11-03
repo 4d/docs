@@ -27,7 +27,7 @@ Une fois inséré, un séparateur se présente sous la forme d’un trait. Vous 
 	"top": 160,   
 	"width": 100,  
 	"height": 20,  
-	"splitterMode": "move"  //pusher
+	"splitterMode": "move"  //pousseur
 	}
 ```
 
@@ -45,7 +45,7 @@ Dans un formulaire, les séparateurs interagissent sur les objets qui les entour
 | Redimensionnement                                                  | Gardent leur position d’origine mais sont redimensionnés en fonction de la nouvelle position du séparateur               |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                |
 | Déplacement                                                        | Se déplacent avec le séparateur                                                                                          |                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                |
 
-*(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
+*(1) Vous ne pouvez pas faire glisser le séparateur au-delà du côté droit (horizontal) ou inférieur (vertical) d'un objet situé dans cette position.*
 
 > Un objet entièrement contenu dans le rectangle définissant le séparateur est déplacé en même temps que le séparateur lui-même.
 

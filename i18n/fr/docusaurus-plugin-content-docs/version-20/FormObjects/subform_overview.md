@@ -100,7 +100,7 @@ L’événement formulaire [Sur modif variable liée](../Events/onBoundVariableC
 
 A noter que, comme dans l'exemple ci-dessus, il est préférable d'utiliser la commande `OBJECT Get subform container value` qui renvoie la valeur de l'expression dans le conteneur du sous-formulaire plutôt que l'expression elle-même car il est possible d'insérer plusieurs sous-formulaires dans le même formulaire parent (par exemple, une fenêtre affichant différents fuseaux horaires contient plusieurs horloges).
 
-La modification de la variable ou de l'expression liée déclenche des événements formulaire qui vous permettent de synchroniser les valeurs du formulaire parent et du sous-formulaire :
+Modifier la variable ou l'expression liée déclenche des événements formulaire qui vous permettent de synchroniser les valeurs du formulaire parent et du sous-formulaire :
 
 - Utilisez l'événement formulaire [On Bound Variable Change](../Events/onBoundVariableChange.md) pour indiquer au sous-formulaire (méthode formulaire du sous-formulaire) que la variable ou l'expression a été modifiée dans le formulaire parent.
 - Utilisez l'événement formulaire [On Data Change](../Events/onDataChange.md) pour indiquer au conteneur du sous-formulaire que la valeur de la variable ou de l'expression a été modifiée dans le sous-formulaire.
@@ -134,7 +134,7 @@ Chaque fois que la valeur de `Form.clockValue` change dans le sous-formulaire, `
 
 Par défaut, 4D associe une variable ou une expression de [type objet](properties_Object.md#expression-type) à chaque sous-formulaire. Le contenu de cet objet peut être lu et/ou modifié à partir du formulaire parent et du sous-formulaire, ce qui permet de partager plusieurs valeurs dans un contexte local.
 
-Lorsqu'il est lié à un conteneur de sous-formulaire, cet objet est renvoyé par la commande `Form` directement dans le sous-formulaire. Comme les objets sont toujours passés par référence, si l'utilisateur modifie la valeur d'une propriété dans le sous-formulaire, cette valeur sera automatiquement enregistrée dans l'objet lui-même et donc disponible pour le formulaire parent. En revanche, si une propriété de l'objet est modifiée par l'utilisateur dans le formulaire parent ou par programmation, elle sera automatiquement mise à jour dans le sous-formulaire. Aucune gestion d'événement n'est nécessaire.
+Lorsqu'il est lié à un conteneur de sous-formulaire, cet objet est renvoyé par la commande `Form` directement dans le sous-formulaire. Comme les objets sont toujours passés par référence, si l'utilisateur modifie la valeur d'une propriété dans le sous-formulaire, cette valeur sera automatiquement enregistrée dans l'objet lui-même et donc disponible pour le formulaire parent. De même, si une propriété de l'objet est modifiée par l'utilisateur dans le formulaire parent ou par programmation, elle sera automatiquement mise à jour dans le sous-formulaire. Aucune gestion d'événement n'est nécessaire.
 
 Par exemple, dans un sous-formulaire, les inputs sont liés aux propriétés de l'objet `Form` (du sous-formulaire) :
 

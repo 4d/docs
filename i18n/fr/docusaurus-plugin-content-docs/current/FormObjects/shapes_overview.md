@@ -3,9 +3,9 @@ id: shapesOverview
 title: Formes
 ---
 
-Les formes sont des [objets statiques](formObjects_overview.md#active-and-static-objects) qui peuvent être ajoutées à des formes 4D.
+Les formes sont des [objets statiques](formObjects_overview.md#active-and-static-objects) qui peuvent être ajoutés dans les formulaires 4D.
 
-Les formes 4D prennent en charge les formes basiques suivantes :
+Les formulaires 4D prennent en charge les formes basiques suivantes :
 
 - rectangles
 - lignes
@@ -22,14 +22,14 @@ Les rectangles sont créés à l'aide de plusieurs propriétés (couleur, épais
 #### Exemple JSON :
 
 ```4d
-	"myRectangle": {
-		"type": "rectangle",	//define the type of object
-		"left": 60,				//left position on the form  
-		"top": 160,				//top position on the form 
-		"width": 100,			//width of the object
-		"height": 20,			//height of the object
-		"borderRadius": 20		//define the roundness of the corners
-                }
+	"myRectangle" : {
+		"type" : "rectangle", //définir le type d'objet
+		"left" : 60, //position gauche sur le formulaire  
+		"top" : 160, //position en haut du formulaire 
+		"width" : 100, //largeur de l'objet
+		"height" : 20, //hauteur de l'objet
+		"borderRadius" : 20 //définit l'arrondi des coins
+}
 ```
 
 #### Propriétés prises en charge
@@ -62,7 +62,7 @@ La propriété JSON `startPoint` définit à partir de quelle coordonnée la lig
 		}
 ```
 
-Result:
+Résultat :
 ![](../assets/en/FormObjects/shape_line1.png)
 
 ```
@@ -77,7 +77,7 @@ Result:
 		}
 ```
 
-Result:
+Résultat :
 ![](../assets/en/FormObjects/shape_line2.png)
 
 #### Propriétés prises en charge
@@ -94,13 +94,13 @@ Un ovale statique est un objet décoratif contenu dans les formulaires. Les obje
 
 ```4d
 	"myOval": {
-		"type": "oval",		//define the type of object
-		"left": 60,			//left position on the form  
-		"top": 160,			//top position on the form 
-		"width": 100,		//width of the object
-		"height": 20,		//height of the object
-		"fill": "blue"		//define the background color
-                }
+		"type": "oval",//definit le type d'objet
+		"left": 60, //position gauche sur le formulaire  
+		"top": 160,//position supérieure sur le formulaire 
+		"width": 100, //largeur de l'objet
+		"height": 20, //hauteur de l'objet
+		"fill": "blue"//définit la couleur d'arrière-plan
+}
 ```
 
 #### Propriétés prises en charge

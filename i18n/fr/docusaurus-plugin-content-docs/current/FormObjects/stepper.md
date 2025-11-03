@@ -29,8 +29,8 @@ Pour plus d'informations, veuillez vous reporter à la section [Utiliser des ind
 
 ## Voir également
 
-- [progress indicators](progressIndicator.md)
-- [rulers](ruler.md)
+- [Indicateurs de progression](progressIndicator.md)
+- [règles](ruler.md)
 
 
 

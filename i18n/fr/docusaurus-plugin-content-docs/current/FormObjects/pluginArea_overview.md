@@ -3,7 +3,7 @@ id: pluginAreaOverview
 title: Zones de plug-in
 ---
 
-A plug-in area is an area on the form that is completely controlled by a [plug-in](../Extensions/develop-plug-ins.md). La capacité d’intégrer des plug-ins dans les formulaires permet d’accéder à des possibilités illimitées lorsque vous créez des applications personnalisées.
+Une zone de plug-in est une zone du formulaire qui est entièrement contrôlée par un [plug-in](../Extensions/develop-plug-ins.md). La capacité d’intégrer des plug-ins dans les formulaires permet d’accéder à des possibilités illimitées lorsque vous créez des applications personnalisées.
 
 Lorsque vous ouvrez une application, 4D crée une liste interne des plug-ins [installés dans votre application](../Concepts/plug-ins.md#installing-plug-ins). Une fois que vous avez inséré une Zone de plug-in dans un formulaire, vous pouvez sélectionner le plug-in à lui affecter via la liste **Type** dans la fenêtre de propriétés de l’objet :
 
@@ -15,7 +15,7 @@ Si vous dessinez une zone de plug-in trop petite, 4D l’affiche sous forme de b
 
 ## Propriétés avancées
 
-If advanced options are provided by the author of the plug-in, a **Plug-in** theme containing an [**Advanced Properties**](properties_Plugins.md) button may be enabled in the Property list. Dans ce cas, vous pouvez cliquer sur ce bouton pour définir ces options, généralement via une boîte de dialogue personnalisée.
+Si des options avancées sont fournies par l'auteur du plug-in, un thème **Plug-in** contenant un bouton [**Propriétés avancées**](properties_Plugins.md) peut être activé dans la liste des propriétés. Dans ce cas, vous pouvez cliquer sur ce bouton pour définir ces options, généralement via une boîte de dialogue personnalisée.
 
 ## Propriétés prises en charge
 

@@ -3,7 +3,7 @@ id: propertiesRangeOfValues
 title: Plage de valeurs
 ---
 
-## La valeur par défaut
+## Valeur par défaut
 
 Vous pouvez attribuer une valeur par défaut à saisir dans un objet Zone de saisie. Cette propriété est utile par exemple lorsque la [source de données](properties_Object.md#variable-or-expression) de la zone de saisie est un champ : la valeur par défaut est saisie lors du premier affichage d'un nouvel enregistrement. Vous pouvez modifier la valeur, sauf si la zone de saisie a été définie comme [non saisissable](properties_Entry.md#enterable).
 

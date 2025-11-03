@@ -5,7 +5,7 @@ title: Formes
 
 Les formes sont des [objets statiques](formObjects_overview.md#active-and-static-objects) qui peuvent être ajoutées à des formes 4D.
 
-Les formes 4D prennent en charge les formes basiques suivantes :
+Les formulaires 4D prennent en charge les formes basiques suivantes :
 
 - rectangles
 - lignes

@@ -20,7 +20,7 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 
 
 ---
-## Formulaire de détail
+## Formulaire détaillé
 
 Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
@@ -112,11 +112,11 @@ Lorsque cette propriété est activée pour un sous-formulaire de liste, l'utili
 
 
 ---
-## Formulaire de liste
+## Formulaire liste écran
 
 Cette option permet de désigner un formulaire liste à utiliser dans un sous-formulaire. Un sous-formulaire en liste vous permet de saisir, visualiser et modifier des données dans d’autres tables.
 
-Les sous-formulaires de liste peuvent être utilisés pour la saisie de données de deux manières : l'utilisateur peut saisir des données directement dans le sous-formulaire ou les saisir dans un [formulaire de saisie](#detail-form). Dans cette configuration, le formulaire utilisé comme sous-formulaire est appelé formulaire Liste. Le formulaire de saisie est appelé le formulaire détaillé.
+Les sous-formulaires de liste peuvent être utilisés pour la saisie de données de deux manières : l'utilisateur peut saisir des données directement dans le sous-formulaire ou les saisir dans un [formulaire de saisie](#detail-form). Dans cette configuration, le formulaire utilisé comme sous-formulaire est appelé formulaire liste écran. Le formulaire de saisie est appelé le formulaire détaillé.
 
 #### Grammaire JSON
 

@@ -11,7 +11,7 @@ Le formulaire multi-pages suivant utilise un onglet :
 
 Pour passer d’un écran à l’autre, l’utilisateur clique simplement sur l’onglet correspondant.
 
-Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. If the tab control is used as a page navigation tool, then the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. Si l'onglet est utilisé comme outil de navigation de page, la commande [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) ou l'action standard `gotoPage` est utilisée lorsque l'utilisateur clique sur un onglet.
 
 Un onglet peut aussi être utilisé pour contrôler les données qui sont affichées dans un sous-formulaire. On peut, par exemple, implémenter un rolodex à l’aide d’un onglet. Chaque onglet afficherait alors une des lettres de l’alphabet et l’action de l’onglet serait de charger les informations correspondantes à la lettre sur lequel l’utilisateur a cliqué.
 
@@ -40,7 +40,7 @@ Sous macOS, les onglets peuvent être orientés, en plus de la position standard
 
 ## Ajouter les intitulés dans un onglet
 
-Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
+Pour fournir les intitulés d'un onglet, vous pouvez utiliser :
 
 - un objet
 - une liste déroulante
@@ -58,7 +58,7 @@ Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collecti
 
 Le code d'initialisation doit être exécuté avant que le formulaire ne soit présenté à l'utilisateur.
 
-Dans l'exemple suivant, `Form.tabControl` a été défini comme [expression](properties_Object.md#variable-or-expression) de l'onglet. You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
+Dans l'exemple suivant, `Form.tabControl` a été défini comme [expression](properties_Object.md#variable-or-expression) de l'onglet. Vous pouvez associer l'action standard [`gotoPage`](#goto-page-action) à l'objet de formulaire :
 
 ```4d
 Form.tabControl:=New object
@@ -87,13 +87,13 @@ Vous pouvez créer un tableau Texte qui contient les noms de chaque page du form
 
 ### Commande FORM GOTO PAGE
 
-You can use the [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) command in the tab control’s method:
+Vous pouvez utiliser la commande [`FORM GOTO PAGE`](../commands-legacy/form-goto-page.md) dans la méthode de l'onglet :
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
+La commande est exécutée lorsque l'événement [`On Clicked`](Events/onClicked.md) se produit. Vous devez ensuite effacer le tableau lorsque l'événement [`On Unload`](Events/onUnload.md) se produit.
 
 Vous pouvez, par exemple, écrire le code suivant :
 

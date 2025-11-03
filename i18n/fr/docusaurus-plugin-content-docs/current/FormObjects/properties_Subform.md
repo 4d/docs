@@ -17,23 +17,20 @@ Indique si l’utilisateur peut supprimer des sous-enregistrements dans un sous-
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 ---
 
-## Formulaire de détail
+## Formulaire détaillé
 
 Cette option permet de désigner un formulaire détaillé à utiliser dans un sous-formulaire. Il peut être :
 
-- un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
-  You can select a component form name when it is published in the component.  
-  In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.\
-  You can select a component form name when it is published in the component.\
-  You can select a component form name when it is published in the component.
+- un widget, c'est-à-dire un sous-formulaire de type page doté de fonctions spécifiques. Dans ce cas, les propriétés [Formulaire liste écran](#list-form) et [Source](#source) doivent être vides ou absentes.  
+  Vous pouvez sélectionner le nom d'un formulaire de composant lorsqu'il est publié dans le composant.
 
-> Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic).
+> Vous pouvez générer des [composants](Concepts/components.md) offrant des fonctionnalités supplémentaires par le biais de sous-formulaires.
 
-- le formulaire détaillé à associer au [sous-formulaire de liste](#list-form). Le formulaire détaillé peut être utilisé pour saisir ou afficher des sous-enregistrements. Il contient généralement plus d'informations que le sous-formulaire liste. Naturellement, le formulaire détaillé doit appartenir à la même table que le sous-formulaire. Vous utilisez normalement un formulaire de sortie comme formulaire liste et un formulaire d'entrée comme formulaire détaillé. Si vous n'indiquez pas le formulaire à utiliser pour la saisie pleine page, 4D utilise automatiquement le format d'entrée par défaut de la table.
+- le formulaire détaillé à associer au [sous-formulaire liste écran](#list-form). Le formulaire détaillé peut être utilisé pour saisir ou afficher des sous-enregistrements. Il contient généralement plus d'informations que le sous-formulaire liste. Naturellement, le formulaire détaillé doit appartenir à la même table que le sous-formulaire. Vous utilisez normalement un formulaire de sortie comme formulaire liste et un formulaire d'entrée comme formulaire détaillé. Si vous n'indiquez pas le formulaire à utiliser pour la saisie pleine page, 4D utilise automatiquement le format d'entrée par défaut de la table.
 
 #### Grammaire JSON
 
@@ -43,7 +40,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 #### Commandes
 
@@ -56,7 +53,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 Action à effectuer en cas de double-clic sur une ligne vide d'un sous-formulaire de liste. Les options suivantes sont disponibles :
 
 - Ne rien faire : ignore le double-clic.
-- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. Pour cela, il vous suffit de cliquer deux fois sur le champ à modifier afin de le passer en mode édition (veillez à laisser suffisamment de temps entre les deux clics pour ne pas générer de double-clic). Sinon, il sera créé en mode page, dans le [formulaire détaillé](#detail-form) associé au sous-formulaire.
+- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. L'enregistrement sera créé directement dans la liste si la propriété [Saisissable en liste](#enterable-in-list) est activée. Sinon, il sera créé en mode page, dans le [formulaire détaillé](#detail-form) associé au sous-formulaire.
 
 #### Grammaire JSON
 
@@ -66,11 +63,11 @@ Action à effectuer en cas de double-clic sur une ligne vide d'un sous-formulair
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 #### Voir également
 
-[Double click on row](#double-click-on-row)
+[Double clic sur ligne](#double-click-on-row)
 
 ---
 
@@ -96,11 +93,11 @@ Pour les deux dernières actions, l'événement formulaire `On Open Detail` est 
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 #### Voir également
 
-[Double click on empty row](#double-click-on-empty-row)
+[Double clic sur ligne vide](#double-click-on-empty-row)
 
 ---
 
@@ -118,15 +115,15 @@ Lorsque cette propriété est activée pour un sous-formulaire de liste, l'utili
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 ---
 
-## Formulaire de liste
+## Formulaire liste écran
 
 Cette option permet de désigner un formulaire liste à utiliser dans un sous-formulaire. Un sous-formulaire en liste vous permet de saisir, visualiser et modifier des données dans d’autres tables.
 
-Les sous-formulaires de liste peuvent être utilisés pour la saisie de données de deux manières : l'utilisateur peut saisir des données directement dans le sous-formulaire ou les saisir dans un [formulaire de saisie](#detail-form). Dans cette configuration, le formulaire utilisé comme sous-formulaire est appelé formulaire Liste. Le formulaire de saisie est appelé le formulaire détaillé.
+Les sous-formulaires de liste peuvent être utilisés pour la saisie de données de deux manières : l'utilisateur peut saisir des données directement dans le sous-formulaire ou les saisir dans un [formulaire de saisie](#detail-form). Dans cette configuration, le formulaire utilisé comme sous-formulaire est appelé formulaire liste écran. Le formulaire de saisie est appelé le formulaire détaillé.
 
 #### Grammaire JSON
 
@@ -136,7 +133,7 @@ Les sous-formulaires de liste peuvent être utilisés pour la saisie de données
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 #### Commandes
 
@@ -156,7 +153,7 @@ Spécifie la table à laquelle appartient le sous-formulaire Liste (le cas éch�
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
 
 ---
 
@@ -180,4 +177,4 @@ Désigne l'option permettant aux utilisateurs de sélectionner des lignes :
 
 #### Objets pris en charge
 
-[Subform](subform_overview.md)
+[Sous-formulaire](subform_overview.md)
