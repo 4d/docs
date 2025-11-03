@@ -13,9 +13,9 @@ The **Title** property contains the label of a menu or menu item as it will be d
 In the Menu editor, you can directly enter the label as "hard coded". Or, you can enter a reference for a variable or an XLIFF element, which will facilitate the maintenance and translation of applications. You can use the following types of references:
 
 - An XLIFF resource reference of the type :xliff:MyLabel. For more information about XLIFF references, refer to *XLIFF Architecture* section in *4D Design Reference*.
-- An interprocess variable name followed by a number, for example: `:<>vlang,3`. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the `<>vlang` variable corresponds to the *id* attribute of the *group* element. The second value (3 in this example) designates the *id* attribute of the *trans-unit* element.
+- (**Deprecated**) An interprocess variable name followed by a number, for example: `:<>vlang,3`. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the `<>vlang` variable corresponds to the *id* attribute of the *group* element. The second value (3 in this example) designates the *id* attribute of the *trans-unit* element.
 
-Using the 4D language, you set the title property through the *itemText* parameter of the `APPEND MENU ITEM`, `INSERT MENU ITEM`, and `SET MENU ITEM` commands.
+Using the 4D language, you set the title property through the *itemText* parameter of the [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), and [`SET MENU ITEM`](../commands/set-menu-item) commands.
 
 ### Using control characters 
 
@@ -36,9 +36,9 @@ Character|Description|Usage|
 
 ## Parameter
 
-You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
+You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter) command.
 
-Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
+Menu item parameters are useful with programmed management of menus, in particular when using the [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu), [`Get menu item parameter`](../commands/get-menu-item-parameter) and [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter) commands.
 
 ## Action
 
@@ -59,7 +59,7 @@ You can assign a project method and/or a standard action to a selected menu comm
 - **Associated Standard Action**: Choose or write the action you want to assign in the "Associated Standard Action" combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the **Standard actions** section in the *Design Reference*. 
 **Note for macOS:** Under macOS, the custom menu commands associated with the *Quit* action are automatically placed in the application menu, in compliance with the platform interface standards.
 
-Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
+Using the 4D language, you can associate a project method using the [`SET MENU ITEM METHOD`](../commands/set-menu-item-method.md) command, and a standard action using the [`SET MENU ITEM PROPERTY`](../commands/set-menu-item-property.md) command.
 
 ### Start a new process
 The **Start a New Process** option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the *property* parameter of the `SET MENU ITEM PROPERTY` command.
@@ -94,7 +94,7 @@ You add a separator line by creating a specific menu command.
 In the Menu editor, instead of entering the menu command’s text in the title area, you simply select the **Separator Line** option. Instead of text, a line appears in the current menu bar area. When this option is checked, the other properties have no effect.
 **Note:** Under macOS, if you use the dash “-” as the first character of a menu item, it will appear as a separator line.
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM` commands. 
+In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), or [`SET MENU ITEM`](../commands/set-menu-item) commands. 
 
 
 ### Keyboard shortcuts
@@ -157,13 +157,13 @@ Unless you specify otherwise, 4D automatically enables each menu item you add to
 
 ### Check mark
 
-This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (`SET MENU ITEM MARK` and `Get menu item mark`).
+This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) and [`Get menu item mark`](../commands/get-menu-item-mark)).
 
 Check marks are generally used for continuous action menu items and indicate that the action is currently underway.
 
 ### Font styles
 
-4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the `SET MENU ITEM STYLE` language command.
+4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
 
 As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.
 
@@ -182,4 +182,4 @@ To define the icon in the Menu editor, click on the "Item icon" area and select 
 
 To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
 
-To define item icons using the 4D language, call the `SET MENU ITEM ICON` command. 
+To define item icons using the 4D language, call the [`SET MENU ITEM ICON`](../commands/set-menu-item-icon) command. 
