@@ -19,15 +19,19 @@ const localeConfigs = isStatic ? {} : {
   },
   fr: {
     label: "Français",
+    baseUrl: "/docs/fr/",
   },
   es: {
     label: "Español",
+    baseUrl: "/docs/es/",
   },
   ja: {
     label: "日本語",
+    baseUrl: "/docs/ja/",
   },
   pt: {
     label: "Português",
+    baseUrl: "/docs/pt/",
   },
 }
 
