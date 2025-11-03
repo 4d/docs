@@ -16,23 +16,18 @@ const locales = isStatic ? [language] : ["en", "fr", "es", "ja", "pt"]
 const localeConfigs = isStatic ? {} : {
   en: {
     label: "English",
-    translate: true,
   },
   fr: {
     label: "Français",
-    translate: true,
   },
   es: {
     label: "Español",
-    translate: true,
   },
   ja: {
     label: "日本語",
-    translate: true,
   },
   pt: {
     label: "Português",
-    translate: true,
   },
 }
 
