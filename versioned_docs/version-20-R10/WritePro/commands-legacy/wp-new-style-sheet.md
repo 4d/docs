@@ -40,7 +40,7 @@ You can specify the attributes of the style sheet using the [WP SET ATTRIBUTES](
 **Notes**: 
 
 * A style sheet only modifies the display of a character or paragraph, not how it is stored in the document. If a style sheet is removed, the text will revert to the default style.
-* Any style attributes not defined in the new style sheet will automatically use the Normal style. For more information, see *Style sheet commands*.
+* Any style attributes not defined in the new style sheet will automatically use the Normal style. For more information, see the [*Style sheets* page](../user-legacy/stylesheets.md).
 
 ## Example 
 
