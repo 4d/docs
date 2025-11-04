@@ -137,7 +137,7 @@ To format picture buttons, in the *displayFormat* parameter, pass a character st
    Used to make the background picture transparent.  
    * *flags* \= 128 (Use Last Frame as Disabled)  
    This mode allows you to set the last thumbnail as the thumbnail to display when the button is disabled. When this mode is selected, 4D displays the last thumbnail when the button is disabled. When this mode is used in addition to the modes 0, 1 and 2, the last thumbnail is not taken into account in the sequence of the other modes. It will appear only when the button is disabled.
-* *ticks* \= activates the “Switch every n Ticks” mode and sets the time interval between the display of each picture. When this optional parameter is passed, it allows you to cycle through the contents of the picture button at the specified speed. For example, if you enter "2;3;?16807;0;10", the picture button will display a different picture every 10 ticks. When this mode is active, only the Transparent mode can be used (64).
+* *ticks* \= activates the “Switch every n Ticks” mode and sets the time interval between the display of each picture. When this optional parameter is passed, it allows you to cycle through the contents of the picture button at the specified speed. For example, if you enter "2;3;?16807;0;10", the picture button will display a different picture every 10 ticks. When this mode is active, only the Transparent mode can be used (64). **Warning:** In the Form editor, [this setting is expressed in *seconds*](../FormObjects/properties_Animation.md#switch-every-x-seconds). 
 
 ### Picture pop-up menus 
 

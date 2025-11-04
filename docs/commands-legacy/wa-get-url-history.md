@@ -38,7 +38,7 @@ If you omit the *direction* parameter, the value 0 is used.
 
 If it is passed, the *titlesArr* parameter contains the list of window names associated with the URLs. This array is synchronized with the *urlsArr* array.
 
-**Compatibility Note:* As of 4D v19 R5, this command only returns the current URL in urlsArr and titlesArr arrays for web areas using the Windows system rendering engine.* 
+**Compatibility Note:* As of 4D 19 R5, this command only returns the current URL in urlsArr and titlesArr arrays for web areas using the Windows system rendering engine.* 
 
 ## See also 
 

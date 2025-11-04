@@ -35,7 +35,7 @@ Once the menu has been generated, you can display it using the 4D [Dynamic pop u
 
 Call the [RELEASE MENU](release-menu.md) command to delete a URL history menu when it is no longer useful.
 
-**Compatibility Note:* As of 4D v19 R5, this command fills a menu with only the current URL for web areas using the Windows system rendering engine.* 
+**Compatibility Note:* As of 4D 19 R5, this command fills a menu with only the current URL for web areas using the Windows system rendering engine.* 
 
 ## Example 
 
