@@ -18,7 +18,7 @@ title: プロセスとワーカー
 新規プロセスを作成するにはいくつかの方法があります:
 
 - デザインモードにおいて、"メソッド実行" ダイアログボックスで **新規プロセス** チェックボックスをチェックした後、メソッドを実行する。 メソッド実行ダイアログボックスで選択したメソッドが (そのプロセスをコントロールする) プロセスメソッドとなります。
-- [`New process`](../commands-legacy/new-process.md) コマンドを使用する。 The method passed as a parameter to the [`New process`](../commands/new-process) command is the process method.
+- [`New process`](../commands-legacy/new-process.md) コマンドを使用する。 [`New process`](../commands/new-process) コマンドの引数として渡されたメソッドがプロセスメソッドです。
 - サーバー上ですトアドプロシージャーを作成するためには、[`Execute on server`](../commands-legacy/execute-on-server.md) コマンドを使用します。 コマンドの引数として渡されたメソッドがプロセスメソッドです。
 - [`CALL WORKER`](../commands-legacy/call-worker.md) コマンドを使用する。 ワーカープロセスが既に存在していない場合、新たに作成されます。
 
@@ -70,11 +70,11 @@ title: プロセスとワーカー
 
 :::
 
-## Remote processes
+## リモートプロセス
 
-When you create a process on a remote 4D, a "twin" process is created on the server to handle data access and database context as soon as it is necessary, i.e. the first time the process on the remote 4D needs to access data.
+リモート4D 上でプロセスを作成すると、データアクセスとデータベースコンテキストが必要になった時(例: リモート4D 上のプロセスが最初にデータにアクセスする必要があるとき)のために、サーバー側にそれを管理するための"ツイン"プロセスが作成されます。
 
-For optimization reason, while no server access is required, for example if the process on the remote 4D runs an event-handling method or controls floating windows, no twin process is created on the server.
+最適化のため、サーバーアクセスが何も必要ないような時間、例えばリモート4D がイベント管理メソッドを実行していたりフローティングウィンドウを管理しているような場合、サーバーではツインプロセスは作成されません。
 
 ## ワーカープロセス
 
@@ -95,7 +95,7 @@ For optimization reason, while no server access is required, for example if the 
 
 :::note
 
-Although they have been designed mainly for interprocess communication in the context of preemptive processes, [`CALL WORKER`](../commands/call-worker) and [`CALL FORM`](../commands/call-form) can be used with cooperative processes.
+[`CALL WORKER`](../commands/call-worker) および [`CALL FORM`](../commands/call-form) のコマンドは、主にプリエンプティブプロセスのコンテキストにおけるプロセス間通信のために開発されましたが、コオペラティブプロセスにおいても同様に使用することができます。
 
 :::
 
@@ -108,25 +108,25 @@ Although they have been designed mainly for interprocess communication in the co
 - メッセージボックス
 - 初期メソッド (任意)
 
-You ask a worker to execute a project method by calling the [`CALL WORKER`](../commands/call-worker) command. 初めてワーカーを使用するときに、ワーカーはメッセージボックスとともに生成され、依頼内容を関連プロセスにて実行します。 ワーカープロセスが終了してもメッセージボックスは開いたままで、次のメッセージを受け取るとワーカープロセスが再開します。
+[`CALL WORKER`](../commands/call-worker) コマンドを使って、プロジェクトメソッドの実行をワーカーに依頼します。 初めてワーカーを使用するときに、ワーカーはメッセージボックスとともに生成され、依頼内容を関連プロセスにて実行します。 ワーカープロセスが終了してもメッセージボックスは開いたままで、次のメッセージを受け取るとワーカープロセスが再開します。
 
 この一連の流れをアニメーションで表しました:
 
 ![](../assets/en/Develop/WorkerAnimation.gif)
 
-Unlike a process created with the [`New process`](../commands/new-process) command, a worker process **remains alive after the execution of the process method ends**. つまり、特定のワーカーにおけるメソッド実行はすべて同一プロセス内でおこなわれ、すべてのプロセス情報 (プロセス変数、カレントレコード、カレントセレクション、など) が保持されます。 続けて実行されるメソッドはこれらの情報を共有することになるため、プロセス間の通信が可能になります。 ワーカーのメッセージボックスは連続した呼び出しを非同期的に扱います。
+[`New process`](../commands/new-process) コマンドで作成されるプロセスとは異なり、ワーカープロセスは **プロセスメソッドの実行終了後も生きています**。 つまり、特定のワーカーにおけるメソッド実行はすべて同一プロセス内でおこなわれ、すべてのプロセス情報 (プロセス変数、カレントレコード、カレントセレクション、など) が保持されます。 続けて実行されるメソッドはこれらの情報を共有することになるため、プロセス間の通信が可能になります。 ワーカーのメッセージボックスは連続した呼び出しを非同期的に扱います。
 
-[`CALL WORKER`](../commands/call-worker) encapsulates both the method name and command arguments in a message that is posted in the worker's message box. ワーカープロセスは、存在していなければ生成され、メッセージボックスに格納されたメッセージを実行します。 This means that [`CALL WORKER`](../commands/call-worker) will usually return before the method is actually executed (processing is asynchronous). For this reason, [`CALL WORKER`](../commands/call-worker) does not return any value. If you need a worker to send information back to the process which called it (callback), you need to use [`CALL WORKER`](../commands/call-worker) again to pass the information needed to the caller. つまり、この場合には、呼び出し元のプロセスもワーカーである必要があります。
+[`CALL WORKER`](../commands/call-worker) はメソッド名と引数をカプセル化し、メッセージとしてワーカーのメッセージボックスに受け渡します。 ワーカープロセスは、存在していなければ生成され、メッセージボックスに格納されたメッセージを実行します。 したがって、大体の場合において [`CALL WORKER`](../commands/call-worker) は、受け取ったメソッドをワーカーが実行するより先に終了します (非同期的な処理)。 このため、[`CALL WORKER`](../commands/call-worker) は値を何も返しません。 実行後の情報をワーカーから返してもらうには、[`CALL WORKER`](../commands/call-worker) を利用してワーカーの呼び出し元に情報を返す必要があります (コールバック)。 つまり、この場合には、呼び出し元のプロセスもワーカーである必要があります。
 
-It is not possible to use [`CALL WORKER`](../commands/call-worker) to execute a method in a process created by the [`New process`](../commands/new-process) command. メッセージボックスを持つワーカープロセスのみが、`CALL WORKER` によって呼び出し可能です。 Note that a process created by [`New process`](../commands/new-process) can call a worker, but cannot be called back.
+[`CALL WORKER`](../commands/call-worker) を使用して、[`New process`](../commands/new-process) コマンドで作成されたプロセス内においてメソッドを実行させることはできません。 メッセージボックスを持つワーカープロセスのみが、`CALL WORKER` によって呼び出し可能です。 [`New process`](../commands/new-process) で作成されたプロセスがワーカーをコールすることは可能でも、ワーカーからのコールバックは受けられないことに留意が必要です。
 
-Worker processes can be created on 4D Server through stored procedures: for example, you can use the `Execute on server` command to execute a method that calls the [`CALL WORKER`](../commands/call-worker) command.
+ワーカープロセスは、ストアドプロシージャーを使って 4D Server 上に作成することもできます。たとえば、[`CALL WORKER`](../commands/call-worker) コマンドを実行するメソッドを `Execute on server` コマンドから実行できます。
 
 ワーカープロセスを閉じるには [`KILL WORKER`](../commands-legacy/kill-worker.md) コマンドをコールします。これによってワーカーのメッセージボックスが空にされ、関連プロセスはメッセージの処理を停止し、現在のタスク完了後に実行を終了します。
 
-ワーカープロセスを新規生成する際に指定したメソッドがワーカーの初期メソッドになります。 If [`CALL WORKER`](../commands/call-worker) is called with an empty *method* parameter, then the startup method is automatically reused as method to execute.
+ワーカープロセスを新規生成する際に指定したメソッドがワーカーの初期メソッドになります。 次回以降の呼び出しで *method* パラメーターに空の文字列を受け渡した場合、[`CALL WORKER`](../commands/call-worker) はこの初期メソッドの実行をワーカーに依頼します。
 
-The main process created by 4D when opening a database for user and application modes is a worker process and can be called using [`CALL WORKER`](../commands/call-worker). Note that the name of the main process may vary depending on the 4D localization language, but it always has the process number 1; as a result, it's more convenient to designate it by process number instead of process name when calling [`CALL WORKER`](../commands/call-worker).
+ユーザーおよびアプリケーションモードで 4Dデータベースを開く際に作成されるメインプロセスはワーカーです。したがって、[`CALL WORKER`](../commands/call-worker)で呼び出すことができます。 メインプロセスの名称は 4D の使用言語により異なりますが、プロセス番号は常に 1 です。[`CALL WORKER`](../commands/call-worker) でメインプロセスを呼び出す場合には、プロセス番号を使うのが便利でしょう。
 
 ### ワーカープロセスの識別
 

@@ -35,7 +35,7 @@ TLS (HTTPSプロトコル) を使用したセキュアな HTTP接続に対して
 
 #### "4DSYNC" URLを使用したデータベースアクセスを許可
 
-_Compatibility Note_: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). 今後、HTTP を介したデータベースアクセスには ORDA のリモートデータストア機能と RESTリクエストの使用が推奨されます。
+_互換性に関する注意_: このオプションは[廃止予定](../WebServer/webServerConfig.md#deprecated-settings) となっています。 今後、HTTP を介したデータベースアクセスには ORDA のリモートデータストア機能と RESTリクエストの使用が推奨されます。
 
 ### パス
 
@@ -125,7 +125,7 @@ Webサーバーに対して適用する認証システムを設定します。 3
 
 カスタムの認証 (デフォルト)<br/> BASIC認証のパスワード<br/> DIGEST認証のパスワード
 
-**カスタムの認証** を使用することが推奨されています。 See [**Authentication**](../WebServer/authentication.md) chapter in the _Web Development_ documentation.
+**カスタムの認証** を使用することが推奨されています。 詳細については_Web 開発_ ドキュメンテーション内の[**認証**](../WebServer/authentication.md) の章を参照してください。
 
 ## オプション (II)
 
@@ -165,12 +165,12 @@ CORSサービスで許可されたホストとメソッドの一覧。 [CORS設�
 
 - **ログファイルなし**: このオプションが選択されると、4D はリクエストのログファイルを作成しません。
 
-- **CLF (Common Log Format)**: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 With the CLF format, each line of the file represents a request, such as:\
+- **CLF (Common Log Format)**: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 CLFフォーマットでは、それぞれのリクエストが行単位でファイル内に表示されます:\
   host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
-  Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
+  各フィールドはスペースによって区切られ、各行は CR/LF シーケンス (character 13、character 10) で終わります。
   - host: クライアントの IPアドレス (例: 192.100.100.10)
   - rfc931: 4Dによって作成されない情報。 常に - (マイナス記号) です。
-  - use: 認証されているユーザー名、あるいは、- (マイナス記号) 。 If the user name contains spaces, they will be replaced by \_ (an underscore).
+  - use: 認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザーネームにスペースが含まれる場合、それは \_ (アンダースコア)で置き換えられます。
   - DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年、HH: 時間、MM: 分、SS: 秒。
 
 > 日付と時間はサーバーのローカルタイム。

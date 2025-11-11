@@ -245,7 +245,7 @@ Si no ingresa un [namespace](#declaring-the-component-namespace), los recursos d
 
 ## Paso de variables
 
-Variables are not shared between components and host projects. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.
+Las variables no se comparten entre los componentes y los proyectos locales. La única forma de modificar las variables del componente desde el proyecto local y viceversa es utilizando punteros.
 
 Ejemplo utilizando un array:
 

@@ -329,7 +329,7 @@ Spécifie une variable ou une expression qui sera assignée aux éléments ou en
 
 ## Sélection temporaire
 
-`Named selection list boxes`
+`Listbox de type sélection temporaire`
 
 Spécifie la sélection temporaire à utiliser. Vous devez entrer le nom d'une sélection temporaire valide. Il peut s'agir d'une sélection temporaire process ou interprocess. Le contenu de la list box sera basé sur cette sélection. La sélection temporaire doit exister et être valide au moment où la list box est affichée, sinon la list box sera affichée vide.
 

@@ -90,9 +90,9 @@ Les variables ou expressions peuvent être saisissables ou non saisissables et p
 
 #### Grammaire JSON
 
-| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                         |
-| ---------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataSource | texte, ou tableau de textes | <li>4D variable, field name, or any expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| Nom        | Type de données             | Valeurs possibles                                                                                                                                                                                                                                                                     |
+| ---------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataSource | texte, ou tableau de textes | <li>Variable, nom de champ, ou toute expression 4D.</li><li>Chaîne vide pour les [variables dynamiques](#dynamic-variables).</li><li>Tableau de textes (collection de noms de tableaux) pour une colonne de [listbox hiérarchique](listbox_overview.md#hierarchical-list-boxes)]</li> |
 
 ### Expressions
 

@@ -25,7 +25,7 @@ Active la variante «barber shop» pour le thermomètre.
 
 ## Afficher graduation
 
-Affiche/masque les graduations à côté des étiquettes.
+Affiche/masque les graduations à côté des libellés.
 
 #### Grammaire JSON
 

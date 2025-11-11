@@ -164,7 +164,7 @@ Function resetPrivileges($priv : Text)
 	Session.setPrivileges($priv)
 ```
 
-*getOTP()* function in the Datastore class:
+Función *getOTP()* en la clase Datastore:
 
 ```4d
 // This function is run on the server 

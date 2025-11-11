@@ -18,12 +18,12 @@ The `OpenAI` class provides a client for accessing various OpenAI API resources.
 
 ### Propiedades HTTP adicionales
 
-| Nombre de la propiedad | Tipo                                                                             | Descripción                                                                   |
-| ---------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| `timeout`              | Real                                                                             | Tiempo en segundos antes de que se agote el tiempo de espera. |
-| `maxRetries`           | Real                                                                             | Número máximo de reintentos en caso de fallo.                 |
-| `httpAgent`            | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | Agente HTTP utilizado para realizar peticiones.               |
-| `customHeaders`        | Real                                                                             | Custom headers to be included in the HTTP requests.           |
+| Nombre de la propiedad | Tipo                                                                             | Descripción                                                                         |
+| ---------------------- | -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `timeout`              | Real                                                                             | Tiempo en segundos antes de que se agote el tiempo de espera.       |
+| `maxRetries`           | Real                                                                             | Número máximo de reintentos en caso de fallo.                       |
+| `httpAgent`            | [4D.HTTPAgent](https://developer.4d.com/docs/API/HTTPAgentClass) | Agente HTTP utilizado para realizar peticiones.                     |
+| `customHeaders`        | Real                                                                             | Encabezados personalizados que se incluirán en las peticiones HTTP. |
 
 ### Class constructor
 

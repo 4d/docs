@@ -97,11 +97,11 @@ title: クライアント/サーバー管理
 
 ### 効果
 
-The `session` object allows you to handle information and privileges for the remote user session.
+`session` オブジェクトを使用すると、リモートユーザーセッションに関する情報や権限を管理できます。
 
 ユーザーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。 たとえば、クライアントがサーバーに接続する際にユーザー認証手続きを開始し、メールや SMS で送信されたコードをアプリケーションに入力させることができます。 次に、ユーザー情報をセッションの storage に追加し、サーバーがユーザーを識別できるようにします。 この方法により、4Dサーバーはすべてのクライアントプロセスのユーザー情報にアクセスできるため、ユーザーの役割に応じてカスタマイズされたコードを用意することができます。
 
-You can also assign privileges to a remote user session to control access when the session comes from Qodly pages running in web areas.
+また、リモートユーザーセッションに権限を割り当てることで、Webエリア内で実行されているQodly ページからセッションがきている場合にアクセスを管理することができます。
 
 ### 利用可能性
 
@@ -118,9 +118,9 @@ You can also assign privileges to a remote user session to control access when t
 
 :::
 
-### Sharing the session with Qodly pages in Web areas
+### Webエリア内のQodlyページとセッションを共有する
 
-Remote client sessions can be used to handle Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
+リモートクライアントセッションを使用して、リモートマシン上で実行中の、[Qodly ページ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) がインターフェースとして使用されているクライアント/サーバーアプリケーションを管理することができます。 With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
 
 To manage this configuration, you need to use remote client sessions. Actually, requests coming from both the remote 4D application and its Qodly pages loaded in Web areas need to work inside a single user session. You just have to share the same session between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, whatever the request origin.
 

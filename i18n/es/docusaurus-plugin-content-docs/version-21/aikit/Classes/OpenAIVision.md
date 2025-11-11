@@ -13,10 +13,10 @@ Asistente para Vision.
 
 **create**(*imageURL* : Text) : OpenAIVisionHelper
 
-| Parámetros | Tipo                                        | Descripción                                                |
-| ---------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageURL* | Text                                        | La URL de la imagen a analizar.            |
-| Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
+| Parámetros | Tipo                                        | Descripción                                                           |
+| ---------- | ------------------------------------------- | --------------------------------------------------------------------- |
+| *imageURL* | Text                                        | La URL de la imagen a analizar.                       |
+| Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Una instancia de ayuda para el análisis de la imagen. |
 
 #### Ejemplo de Uso
 
@@ -29,10 +29,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 **fromFile**(*imageFile* : 4D.File): OpenAIVisionHelper
 
-| Parámetros  | Tipo                                        | Descripción                                                |
-| ----------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imageFile* | 4D.File                     | El archivo de imagen que se va a analizar. |
-| Resultado   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
+| Parámetros  | Tipo                                        | Descripción                                                           |
+| ----------- | ------------------------------------------- | --------------------------------------------------------------------- |
+| *imageFile* | 4D.File                     | El archivo de imagen que se va a analizar.            |
+| Resultado   | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Una instancia de ayuda para el análisis de la imagen. |
 
 #### Ejemplo de Uso
 
@@ -45,10 +45,10 @@ var $result:=$helper.prompt("Could you describe it?")
 
 **fromPicture**(*image* : Picture) : OpenAIVisionHelper
 
-| Parámetros | Tipo                                        | Descripción                                                |
-| ---------- | ------------------------------------------- | ---------------------------------------------------------- |
-| *imagen*   | Picture                                     | La imagen a analizar.                      |
-| Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | A helper instance for analyzing the image. |
+| Parámetros | Tipo                                        | Descripción                                                           |
+| ---------- | ------------------------------------------- | --------------------------------------------------------------------- |
+| *imagen*   | Picture                                     | La imagen a analizar.                                 |
+| Resultado  | [OpenAIVisionHelper](OpenAIVisionHelper.md) | Una instancia de ayuda para el análisis de la imagen. |
 
 #### Ejemplo de Uso
 

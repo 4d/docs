@@ -19,8 +19,8 @@ Los gestores de peticiones HTTP personalizados satisfacen diversas necesidades, 
 
 Los manejadores de peticiones HTTP personalizadas están soportados en el siguiente contexto:
 
-- [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
-- a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md).
+- las [sesiones escalables](./sessions.md#enabling-web-sessions) o [sin sesiones](../settings/web.md#no-sessions) están activadas,
+- un servidor web ejecutado localmente por 4D o 4D Server, incluyendo aquellos [ejecutados por componentes](./webServerObject.md).
 
 :::warning
 

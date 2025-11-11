@@ -11,7 +11,7 @@ For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv2
 
 This property is available for fields of type **Object** (in 4D projects only). It allows you to define a **class-typed object field**, enhancing code completion, syntax checking, and runtime validation when typing code that involves object fields.
 
-You can enter any valid class name in this property, including:
+Puede introducir cualquier nombre de clase válido en esta propiedad, incluyendo:
 
 - Clases usuario (por ejemplo, `cs.MyClass`)
 - Clases 4D integradas (por ejemplo, `4D.File`, `4D.Folder`)

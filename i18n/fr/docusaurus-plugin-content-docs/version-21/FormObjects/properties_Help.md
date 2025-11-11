@@ -9,13 +9,13 @@ Cette propriété permet d'associer les messages d'aide aux objets actifs de vos
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - The display delay and maximum duration of help tips can be controlled using the `Tips delay` and `Tips duration` selectors of the **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)** command.
-> - Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter.md) command.
+> - Le délai d'affichage et la durée maximale des messages d'aide peuvent être contrôlés à l'aide des sélecteurs `Tips delay` et `Tips duration` de la commande **[SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md)**.
+> - Les info-bulles peuvent être globalement désactivées ou activées pour l'application en utilisant le sélecteur Tips enabled de la commande [**SET DATABASE PARAMETER**](../commands-legacy/set-database-parameter.md).
 
 Vous pouvez soit :
 
 - désigner une info-bulle existante, préalablement spécifiée dans l'éditeur de [messages d'aide](https://doc.4d.com/4Dv20/4D/20.2/Help-tips.200-6750100.en.html) de 4D.
-- ou saisir directement le message d'aide sous forme de chaîne. Cela vous permet de profiter de l'architecture XLIFF. You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html). Vous pouvez également utiliser des références 4D ([voir Utilisation de références en texte statique](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html)).
+- ou saisir directement le message d'aide sous forme de chaîne. Cela vous permet de profiter de l'architecture XLIFF. Vous pouvez saisir ici une référence XLIFF afin d'afficher un message dans la langue de l'application (pour plus d'informations sur XLIFF, voir [Annexe B : Architecture XLIFF](https://doc.4d.com/4Dv20/4D/20.2/Appendix-B-XLIFF-architecture.300-6750166.en.html). Vous pouvez également utiliser des références 4D ([voir Utilisation de références en texte statique](https://doc.4d.com/4Dv20/4D/20.2/Using-references-in-static-text.300-6750154.en.html)).
 
 > Sous macOS, l'affichage des messages d'aide n'est pas pris en charge dans les fenêtres de type pop-up.
 
@@ -48,4 +48,4 @@ Lorsque différentes astuces sont associées au même objet à plusieurs emplace
 
 #### Voir également
 
-[Placeholder](properties_Entry.md#placeholder)
+[Texte exemple](properties_Entry.md#placeholder)

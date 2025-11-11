@@ -7,7 +7,7 @@ title: Fond et bordure
 
 Permet de définir une couleur d'arrière-plan différente pour les lignes / colonnes impaires dans une list box. Par défaut, *Automatique* est sélectionné : la colonne utilise la couleur de fond alternative définie au niveau de la list box.
 
-You can also set this property using the  command.
+Vous pouvez également définir cette propriété à l'aide de la commande.
 
 #### Grammaire JSON
 
@@ -53,13 +53,13 @@ Vous pouvez également définir cette propriété à l'aide de la commande [`OBJ
 
 ---
 
-## Background Color Expression {#background-color-expression}
+## Expression couleur de fond {#background-color-expression}
 
-`List box de type collection et de type sélection d'entité`
+`List box de type collection et entity selection`
 
-Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. For more information, refer to the description of the [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) command in the *4D Language Reference manual*.
+Une expression ou une variable (les variables de tableau ne peuvent pas être utilisées) pour appliquer une couleur d'arrière-plan personnalisée à chaque ligne de la list box. L'expression ou la variable sera évaluée pour chaque ligne affichée et doit retourner une valeur de couleur RGB. Pour plus d'informations, reportez-vous à la description de la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md) dans le *manuel de référence du langage 4D*.
 
-You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) command with `lk background color expression` constant.
+Vous pouvez également définir cette propriété en utilisant la commande [`LISTBOX SET PROPERTY`](../commands/listbox-set-property.md) avec la constante `lk background color expression`.
 
 > Avec les list box de type collection ou sélection d'entité, cette propriété peut également être définie à l'aide d'une [Meta Info Expression](properties_Text.md#meta-info-expression).
 
@@ -79,7 +79,7 @@ You can also set this property using the [`LISTBOX SET PROPERTY`](../commands/li
 
 ---
 
-## Border Line Style {#border-line-style}
+## Style de la bordure {#border-line-style}
 
 Permet de définir un style standard pour la bordure de l'objet.
 
@@ -99,7 +99,7 @@ Permet de définir un style standard pour la bordure de l'objet.
 
 ---
 
-## Dotted Line Type {#dotted-line-type}
+## Type de pointillé {#dotted-line-type}
 
 Décrit le type de ligne en pointillé comme une séquence de points noirs et blancs.
 
@@ -186,7 +186,7 @@ Désigne l'épaisseur d'une ligne.
 
 ---
 
-## Row Background Color Array {#row-background-color-array}
+## Tableau couleurs de fond {#row-background-color-array}
 
 `List box de type tableau`
 
@@ -203,7 +203,7 @@ Par exemple, considérons une list box où les lignes ont une couleur alternée 
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
+Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orange foncé. Pour ce faire, vous définissez un tableau de couleurs d'arrière-plan pour chaque colonne, par exemple `<>_BgndColor_1`, `<>_BgndColor_2` et `<>_BgndColor_3`. Les valeurs de ces tableaux ont la priorité sur celles définies dans les propriétés de list box ainsi que sur celles du tableau de couleurs d'arrière-plan général :
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
@@ -214,7 +214,7 @@ Vous souhaitez ensuite colorer les cellules avec des valeurs négatives en orang
 
 ![](../assets/en/FormObjects/listbox_styles2.png)
 
-You can get the same result using the [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) and [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md) commands. Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
+Vous pouvez obtenir le même résultat en utilisant les commandes [`LISTBOX SET ROW FONT STYLE`](../commands-legacy/listbox-set-row-font-style.md) et [`LISTBOX SET ROW COLOR`](../commands-legacy/listbox-set-row-color.md). Elles ont l'avantage de vous permettre d'éviter d'avoir à prédéfinir des tableaux de style/couleur pour les colonnes : ils sont créés dynamiquement par les commandes.
 
 #### Grammaire JSON
 

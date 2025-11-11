@@ -3,7 +3,7 @@ id: shared
 title: 共有オブジェクトと共有コレクション
 ---
 
-**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](./dt_object.md) と [コレクション](./dt_collection.md) です。 In contrast to [interprocess variables](./variables.md#interprocess-variables) (now deprecated), shared objects and shared collections have the advantage of being compatible with *[Preemptive processes](../Develop/preemptive.md)*: they can be passed by reference as parameters to commands such as [`New process`](../commands-legacy/new-process.md) or [`CALL WORKER`](../commands-legacy/call-worker.md).
+**共有オブジェクト** および **共有コレクション** はプロセス間でコンテンツを共有することができる、特殊な [オブジェクト](./dt_object.md) と [コレクション](./dt_collection.md) です。 [インタープロセス変数](./variables.md#インタープロセス変数)(現在は廃止予定) に比べると、共有オブジェクトと共有コレクションは *[プリエンプティブプロセス](../Develop/preemptive.md)* と互換性があるという点で利点があります。つまり、[`New process`](../commands-legacy/new-process.md) や [`CALL WORKER`](../commands-legacy/call-worker.md) といったコマンドの引数として、参照の形で渡すことができるということです。
 
 共有オブジェクトと共有コレクションは、標準の [`Object`](./dt_object.md) および [`Collection`](./dt_collection.md) 型の変数に保存されますが、以下のように専用のコマンドを使用してインスタンス化されている必要があります:
 
@@ -100,7 +100,7 @@ End Use
 
 `Use...End use` 構文は、内部セマフォーの保護下において *Shared_object_or_Shared_collection* 引数に対して処理を実行するステートメントを定義します。 *Shared_object_or_Shared_collection* として任意の有効な共有オブジェクトあるいは共有コレクションを渡すことができます。
 
-Shared objects and shared collections are designed to allow communication between processes, in particular, *[Preemptive processes](../Develop/preemptive.md)*. これらはプロセスから他のプロセスへ、参照型の引数として渡すことができます。 共有オブジェクトおよび共有コレクションを扱う際には、複数プロセスによる同時アクセスを避けるために、必ずそれらを `Use...End use` キーワードでくくる必要があります。
+共有オブジェクトおよび共有コレクションは、プロセス間の (とくに \*[プリエンプティブプロセス](../Develop/preemptive.md)\*間の) 通信ができるように設計されています。 これらはプロセスから他のプロセスへ、参照型の引数として渡すことができます。 共有オブジェクトおよび共有コレクションを扱う際には、複数プロセスによる同時アクセスを避けるために、必ずそれらを `Use...End use` キーワードでくくる必要があります。
 
 - **Use** の実行が成功すると、対応する `End use` が実行されるまで、*Shared_object_or_Shared_collection* のプすべてのロパティ/要素は他のあらゆるプロセスに対し書き込みアクセスがロックされます。
 - *statement(s)* で実行されるステートメントは、Shared_object_or_Shared_collection のプロパティ/要素に対して、競合アクセスのリスクなしに変更も実行することができます。

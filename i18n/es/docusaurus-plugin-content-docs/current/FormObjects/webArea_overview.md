@@ -121,9 +121,9 @@ $4d.today(function(result)
 
 #### Ejemplo 2
 
-En lugar de utilizar un método independiente, también podemos definir una **clase** que se encargue del cálculo.
+Instead of using a standalone method, we can also use a class function to handle the calculation.
 
-Defina la clase con el método proyecto 4D `calcSum` que recibe parámetros y devuelve su suma:
+Define a "SumCalculator" 4D user class with a `calcSum` function which receives parameters and returns their sum:
 
 ```4d
 // SumCalculator user class

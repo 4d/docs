@@ -240,7 +240,7 @@ Foreground color;Dark shadow color)
 
 ---
 
-## Style Expression {#style-expression}
+## Expresión estilo {#style-expression}
 
 `List box de tipo colección/selección de entidades`
 
@@ -467,7 +467,7 @@ Además de [áreas de texto estáticas](text.md), los objetos de texto de las [�
 
 ---
 
-## Row Font Color Array {#row-font-color-array}
+## Array colores de fuente {#row-font-color-array}
 
 `List boxes de tipo array`
 
@@ -491,7 +491,7 @@ Se debe utilizar el nombre de un array Entero largo. Cada elemento de este array
 
 ---
 
-## Row Style Array {#row-style-array)
+## Array de estilos {#row-style-array)
 
 `List boxes de tipo array`
 

@@ -3,7 +3,7 @@ id: updates
 title: Release Notes
 ---
 
-## 4D 21
+## 4D 21 LTS
 
 Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21.
 
@@ -57,7 +57,7 @@ Dans les bases de données binaires, vous devez sélectionner les composants req
 
 :::
 
-## 4D 20 R10
+### 4D 20 R10
 
 Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fe-whats-new-in-4d-20-R10/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R10.
 
@@ -88,7 +88,7 @@ Lisez [**Les nouveautés de 4D 20 R10**](https://blog.4d.com/fe-whats-new-in-4d-
 - [`.hasPrivilege()`](../API/SessionClass.md#hasprivilege) renvoie True pour les privilèges promus dans le process web.
 - La commande [`Time`](../commands/time) renvoie désormais une expression temporelle négative lorsque le paramètre *timeValue* est négatif. Par exemple, `Time("-01:02:03")` renverra **-01:02:03**. Dans les versions précédentes, le signe moins était ignoré.
 
-## 4D 20 R9
+### 4D 20 R9
 
 Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fe-whats-new-in-4d-20-R9/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R9.
 
@@ -109,7 +109,7 @@ Lisez [**Les nouveautés de 4D 20 R9**](https://blog.4d.com/fe-whats-new-in-4d-2
 - 4D Write Pro Interface : nouvelle [IA intégrée](../WritePro/writeprointerface.md#integrated-ai) pour interagir avec **chatGTP** depuis vos documents 4D Write Pro.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R9) : liste de tous les bugs qui ont été corrigés dans 4D 20 R9.
 
-## 4D 20 R8
+### 4D 20 R8
 
 Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fe-whats-new-in-4d-20-R8/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R8.
 
@@ -139,7 +139,7 @@ Lisez [**Les nouveautés de 4D 20 R8**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Après une modification du fichier journal en utilisant [`SELECT LOG FILE`](../commands/select-log-file.md) ou les [paramètres de sauvegarde](../Backup/settings.md#log-management), la commande [`New log file`](../commands/new-log-file.md) valide maintenant le changement, sans attendre une sauvegarde. L'erreur -4447 (sauvegarde requise) n'est plus générée.
 - En raison de leur [nouvelle architecture](../Desktop/building.md#build-component), les composants construits avec 4D 20 R8 et suivantes ne peuvent pas être installés dans les versions 4D précédentes.
 
-## 4D 20 R7
+### 4D 20 R7
 
 Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-20-R7/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R7.
 
@@ -170,7 +170,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-2
 - La commande [`File`](../commands/file.md) (ainsi que [`4D.File.new()`](../API/FileClass.md#4dfilenew)) est plus stricte lorsqu'il s'agit de vérifier la syntaxe du *path* fourni en paramètre.
 - L'action de [permission](../ORDA/privileges.md#permission-actions) **describe** a été supprimée des actions disponibles. L'accès aux urls [`/rest/$catalog`](../REST/$catalog.md) n'est plus contrôlé. Session *describe* privileges are now ignored.
 
-## 4D 20 R6
+### 4D 20 R6
 
 Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fe-whats-new-in-4d-20-R6/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R6.
 
@@ -196,7 +196,7 @@ Lisez [**Les nouveautés de 4D 20 R6**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Prise en charge de l'enchaînement de défilement dans les formulaires : les parents des sous-formulaires défilent désormais automatiquement lorsque les objets intégrés défilables ([verticalement](../FormObjects/properties_Appearance.md#vertical-scroll-bar) ou [horizontalement](../FormObjects/properties_Appearance.md#horizontal-scroll-bar)) ont atteint leurs limites et que l'utilisateur continue de faire défiler à l'aide de la souris ou du trackpad (*overscrolling*).
 - L'API REST [`$catalog`](../REST/$catalog.md) retourne maintenant les singletons (le cas échéant).
 
-## 4D 20 R5
+### 4D 20 R5
 
 Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fe-whats-new-in-4d-20-R5/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R5.
 
@@ -218,7 +218,7 @@ Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Les plug-ins *4D Internet Commands* et *4D for OCI* ne sont plus inclus dans les installateurs 4D. Pour obtenir ces plug-ins, vous devez vous connecter au [**portail de téléchargement des produits 4D**](https://product-download.4d.com/).
 - Les modifications apportées à l'éditeur de structure concernant l'apparence graphique des tables et des champs (couleur, position, ordre...) sont maintenant sauvegardés dans un fichier séparé nommé `catalog_editor.json` stocké dans le dossier [`Sources`](../Project/architecture.md#sources).
 
-## 4D 20 R4
+### 4D 20 R4
 
 Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fe-whats-new-in-4d-v20-R4/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R4.
 
@@ -243,7 +243,7 @@ Lisez [**Les nouveautés de 4D 20 R4**](https://blog.4d.com/fe-whats-new-in-4d-v
 - Dans la mise à jour de la [bibliothèque OpenSSL](#library-table), le niveau de sécurité SSL/TLS par défaut a été modifié de 1 à 2. Les clés RSA, DSA et DH de 1024 bits et plus et de moins de 2048 bits ainsi que les clés ECC de 160 bits et plus et de moins de 224 bits ne sont plus autorisées. Par défaut, la compression TLS était déjà désactivée dans les versions précédentes d'OpenSSL. Au niveau de sécurité 2, il ne peut pas être activé.
 - Assurez-vous que votre méthode base "On REST authentication" peut gérer les mots de passe en clair (le troisième paramètre est alors **False**) et que `Open datastore` chiffre votre connexion en passant l'option "tls" à **True** dans *connectionInfo*. Afin de permettre la vérification du mot de passe lorsque [l'annuaire des utilisateurs 4D utilise l'algorithme bcrypt](https://blog.4d.com/bcrypt-support-for-passwords/), la valeur "password" dans le paramètre *connectionInfo* de la commande [`Open datastore`](../commands/open-datastore.md) est maintenant envoyée en clair par défaut. Dans certains cas spécifiques, l'option "passwordAlgorithm" peut également être utilisée pour la compatibilité (voir la commande [`Open datastore`](../commands/open-datastore.md)).
 
-## 4D 20 R3
+### 4D 20 R3
 
 Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fe-whats-new-in-4d-v20-R3/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R3.
 
@@ -265,7 +265,7 @@ Lisez [**Les nouveautés de 4D 20 R3**](https://blog.4d.com/fe-whats-new-in-4d-v
 - Certaines erreurs ne pouvaient être interceptées par votre [méthode de gestion des erreurs](../Concepts/error-handling.md) qu'en mode interprété. Une correction a été apportée, de sorte que les erreurs suivantes seront désormais également détectées en mode compilé : *Indice hors de l'intervalle*, *Type incompatible*, et *Déréférencement d'un pointeur Null*. Cependant, pour de telles erreurs sur les processeurs Intel, la procédure est toujours interrompue comme auparavant, alors que sur les processeurs Apple Silicon, la procédure n'est interrompue que si vous appelez la commande [`ABORT`](../commands-legacy/abort.md).
 - 4D n'inclut plus d'interpréteur PHP interne. Vous devez [configurer et exécuter votre propre interpréteur PHP](https://blog.4d.com/deprecation-of-php-commands-and-removal-of-4d-built-in-php-interpreter) pour utiliser les commandes PHP.
 
-## 4D 20 R2
+### 4D 20 R2
 
 Lisez [**Les nouveautés de 4D 20 R2**](https://blog.4d.com/fe-whats-new-in-4d-v20-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R2.
 

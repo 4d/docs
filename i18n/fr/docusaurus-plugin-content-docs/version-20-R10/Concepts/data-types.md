@@ -46,7 +46,7 @@ Lorsque les [variables](variables.md) ou les [paramètres](parameters.md) sont t
 
 La valeur par défaut dépend du type de variable :
 
-| Type       | La valeur par défaut                     |
+| Type       | Valeur par défaut                        |
 | ---------- | ---------------------------------------- |
 | Booleen    | False                                    |
 | Date       | 00-00-00                                 |

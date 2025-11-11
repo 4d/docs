@@ -98,7 +98,7 @@ Lorsque cette option est cochée, les [fichiers sources des méthodes](../Projec
 
 Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes avec vos nouveaux projets, il est préférable de décocher cette option pour une meilleure lisibilité du code avec ces outils.
 
-> Vous pouvez toujours obtenir le code avec les tokens en appelant la [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) avec 1 dans le paramètre *option*.
+> Cette option ne peut être appliquée qu'aux projets (les bases de données binaires incluent toujours les tokens).
 
 > Vous pouvez toujours obtenir le code avec les tokens en appelant la [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) avec 1 dans le paramètre *option*.
 

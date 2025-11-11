@@ -3,7 +3,7 @@ id: viewProAreaOverview
 title: Zone 4D View Pro
 ---
 
-4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images.
+4D View Pro vous permet d'insérer et d'afficher une zone de tableur dans vos formulaires 4D. Un tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images.
 
 ![](../assets/en/FormObjects/viewPro2.png)
 

@@ -13,9 +13,9 @@ A propriedade **Title** contém a etiqueta de um menu ou item de menu, uma vez q
 No editor do Menu, pode introduzir directamente a etiqueta como "hard coded". Ou, pode introduzir uma referência para uma variável ou um elemento XLIFF, o que facilitará a manutenção e tradução das aplicações. Pode utilizar os seguintes tipos de referências:
 
 - Uma referência de recurso XLIFF do tipo :xliff:MyLabel. Para mais informações sobre referências XLIFF, consulte *XLIFF Architecture* secção em *4D Design Reference*.
-- Um nome de variável interprocesso seguido de um número, por exemplo:`<>vlang,3`. A alteração do conteúdo desta variável modificará a etiqueta do menu quando esta for exibida. Neste caso, a etiqueta chamará um recurso XLIFF. O valor contido na variável `<>vlang` corresponde ao atributo *id* do elemento *do grupo* . O segundo valor (3 neste exemplo) designa o atributo *id* do elemento *trans-unit* .
+- (**Deprecated**) An interprocess variable name followed by a number, for example: `:<>vlang,3`. A alteração do conteúdo desta variável modificará a etiqueta do menu quando esta for exibida. Neste caso, a etiqueta chamará um recurso XLIFF. O valor contido na variável `<>vlang` corresponde ao atributo *id* do elemento *do grupo* . O segundo valor (3 neste exemplo) designa o atributo *id* do elemento *trans-unit* .
 
-Usando a linguagem 4D, define a propriedade título através do parâmetro *itemText* dos comandos `APPEND MENU ITEM`, `INSERT MENU ITEM`, e `SET MENU ITEM`.
+Using the 4D language, you set the title property through the *itemText* parameter of the [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), and [`SET MENU ITEM`](../commands/set-menu-item) commands.
 
 ### Utilização de caracteres de controle
 
@@ -36,9 +36,9 @@ Os caracteres de controle não aparecem nas etiquetas de comando do menu. Deve-s
 
 ## Parâmetro
 
-É possível associar um parâmetro personalizado a cada item do menu. Um parâmetro de item de menu é uma string de caracteres cujo conteúdo pode ser livremente escolhido. Pode ser definido no editor do Menu, ou através do comando `SET MENU ITEM PARAMETER` .
+É possível associar um parâmetro personalizado a cada item do menu. Um parâmetro de item de menu é uma string de caracteres cujo conteúdo pode ser livremente escolhido. It can be set in the Menu editor, or through the [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter) command.
 
-Os parâmetros do item de menu são úteis com a gestão programada de menus, em particular quando se utilizar os comandos `Dynamic pop up menu`, `Get menu item parameter` e `Get selected menu item parameter`.
+Menu item parameters are useful with programmed management of menus, in particular when using the [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu), [`Get menu item parameter`](../commands/get-menu-item-parameter) and [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter) commands.
 
 ## Ação
 
@@ -58,7 +58,7 @@ A escolha entre associar uma ação padrão ou um método de projecto a um coman
 - **Nome do método**: Seleccionar um nome de método de projecto existente na caixa de combinação. Se o método projecto não existir, introduzir o seu nome na caixa de combinação "Nome do método" e, em seguida, clicar no botão [...]. 4D exibe um diálogo de criação de métodos de projecto que é utilizado para aceder ao editor de métodos.
 - **Acção Padrão Associada**: Escolha ou escreva a acção que deseja atribuir na caixa combinada "Acção Padrão Associada". Pode introduzir qualquer acção apoiada e (opcionalmente) parâmetro que deseje na área. Para uma lista completa de acções padrão, consulte por favor a secção **Acções padrão** na *Design Reference*. **Nota para macOS:** Sob macOS, os comandos de menu personalizados associados à acção *Quit* são automaticamente colocados no menu de aplicação, em conformidade com as normas de interface da plataforma.
 
-Usando a linguagem 4D, pode associar um método de projecto usando o comando `SET MENU ITEM METHOD` , e uma acção padrão usando o comando `SET MENU ITEM PROPERTY` .
+Using the 4D language, you can associate a project method using the [`SET MENU ITEM METHOD`](../commands/set-menu-item-method) command, and a standard action using the [`SET MENU ITEM PROPERTY`](../commands/set-menu-item-property) command.
 
 ### Iniciar um novo processo
 A opção **Iniciar um Novo Processo** está disponível para comandos de menu associados a métodos. Pode ser definido através de uma caixa de verificação no editor do Menu, ou através *propriedade* parâmetro do comando `SET MENU ITEM PROPERTY` .
@@ -89,7 +89,8 @@ Adiciona-se uma linha separadora através da criação de um comando de menu esp
 
 No editor do Menu, em vez de introduzir o texto do comando do menu na área do título, basta seleccionar a opção **Linha Separadora** . Em vez de texto, aparece uma linha na área actual da barra de menu. Quando esta opção é verificada, as outras propriedades não têm qualquer efeito. **Nota:** Sob macOS, se usar o traço "-" como primeiro caracter de um item do menu, aparecerá como uma linha separadora.
 
-Na língua 4D, insere-se uma linha separadora introduzindo `-` ou `(-` como itemTexto para `APPEND MENU ITEM`, `INSERT MENU ITEM`, ou `SET MENU ITEM` comandos.
+In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), or [`SET MENU ITEM`](../commands/set-menu-item) commands.
+
 
 
 ### Atalhos do teclado
@@ -149,13 +150,13 @@ A menos que especifique o contrário, 4D activa automaticamente cada item de men
 
 ### Marca de verificação
 
-Esta opção de menu editor pode ser usada para associar uma marca de verificação do sistema com um item de menu. Pode então gerir a exibição da marca de verificação usando comandos de língua (`SET MENU ITEM MARK` e `Obter a marca do item do menu`).
+Esta opção de menu editor pode ser usada para associar uma marca de verificação do sistema com um item de menu. You can then manage the display of the check mark using language commands ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) and [`Get menu item mark`](../commands/get-menu-item-mark)).
 
 As marcas de verificação são geralmente utilizadas para itens do menu de acção contínua e indicam que a acção está actualmente em curso.
 
 ### Font-style
 
-4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. Pode personalizar os seus menus com os estilos Bold, Italic ou Underline através de opções no editor de menus, ou usando o comando de linguagem `SET MENU ITEM STYLE` .
+4D permite-lhe personalizar os menus aplicando diferentes estilos de fontes aos comandos do menu. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, [`SET MENU ITEM STYLE`](../commands/set-menu-item-style).
 
 Como regra geral, aplique estilos de fonte moderadamente aos seus menus - demasiados estilos distrairão o utilizador e darão um aspecto desorganizado à sua aplicação.
 > Também se pode aplicar estilos inserindo caracteres especiais no título do menu (ver [Utilizando caracteres de controlo](properties.md#using-control-characters) acima).
@@ -173,4 +174,4 @@ Para definir o ícone no editor de Menu, clicar na área "Ícone de item" e sele
 
 Para remover o ícone do item, escolher a opção **No Icon** da área "Item Icon".
 
-Para definir ícones de itens usando a linguagem 4D, chamar o comando `SET MENU ITEM ICON` . 
+To define item icons using the 4D language, call the [`SET MENU ITEM ICON`](../commands/set-menu-item-icon) command. 

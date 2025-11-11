@@ -15,12 +15,12 @@ Cette page permet de sélectionner, de créer ou de configurer les thèmes de l'
 
 Sélectionnez, dans cette liste, le thème à appliquer à l'éditeur de code. Tous les thèmes disponibles sont affichés, y compris les thèmes personnalisés (le cas échéant). 4D propose deux thèmes par défaut :
 
-- **Default Light Theme**
-- **Default Dark Theme**
+- **Thème clair (par défaut)**
+- **Thème sombre (par défaut)**
 
 > Les thèmes par défaut ne peuvent être ni modifiés ni supprimés.
 
-A **myTheme** theme is automatically added if you already customized Code Editor styles in previous 4D releases.
+Un thème **myTheme** est automatiquement ajouté si vous avez déjà personnalisé les styles de l'éditeur de code dans les versions précédentes de 4D.
 
 ### Création de thèmes personnalisés
 
@@ -30,7 +30,7 @@ Vous pouvez créer des thèmes à personnaliser entièrement. Pour créer un th�
 
 Chaque thème personnalisé est stocké dans un seul fichier JSON nommé *themeName.json*. Les fichiers JSON des thèmes personnalisés sont stockés dans le dossier `4D Editor Themes` situé au même niveau que le [fichier de préférences](overview.md#storage) de
 
-Si des valeurs clés ne sont pas définies dans un thème personnalisé, elles prennent par défaut les valeurs du thème *Default Light Theme*. Si un fichier de thème JSON est invalide, le thème *Default Light Theme* est chargé et une erreur est générée.
+Si des valeurs clés ne sont pas définies dans un thème personnalisé, elles prennent par défaut les valeurs du thème *Thème clair*. Si un fichier de thème JSON est invalide, le thème *Thème clair* est chargé et une erreur est générée.
 
 > Lorsqu'un fichier de thème est modifié par un éditeur externe, 4D doit être redémarré pour prendre en compte la ou les modifications.
 
@@ -45,7 +45,7 @@ La combinaison de couleurs et de styles différents est particulièrement utile 
 
 ### Police et taille de police
 
-The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
+Les menus **police** et **taille de police** vous permettent de sélectionner le nom et la taille de la police utilisée dans la zone de saisie de l'éditeur de code pour toutes les catégories.
 
 ### Langage 4D et langage SQL
 
@@ -104,7 +104,7 @@ Vous permet d'afficher les numéros de ligne par défaut dans chaque fenêtre de
 
 #### Afficher les listes
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. Vous pouvez également afficher ou masquer chaque liste directement à partir de l'éditeur de code.
+Permet de choisir d'afficher ou non les listes d'objets (Commandes, Tables et champs, etc.) par défaut lorsque la fenêtre de l'éditeur de code est ouverte. Vous pouvez également afficher ou masquer chaque liste directement à partir de l'éditeur de code.
 
 #### Afficher les presse-papiers
 
@@ -151,7 +151,7 @@ Permet de modifier la signalisation graphique des caractères d'encadrement corr
 Les options suivantes sont disponibles :
 
 - **Aucun** : Aucun signal
-- **Rectangle** (default): Braces surrounded by a black line\
+- **Rectangle** (par défaut) : Accolades entourées d'une ligne noire  
   ![](../assets/en/Preferences/optionsRectangle.png)
 - **Couleur de fond** : Caractères mis en surbrillance (la couleur est définie dans la page [Thème](thèmes)).
 - **Gras** : caractères affichés en gras.
@@ -180,8 +180,8 @@ Si vous désélectionnez cette option, seule la flèche jaune est affichée.
 
 Cette zone vous permet de configurer les mécanismes d'autocomplétion de l'éditeur de code afin de l'adapter à vos propres habitudes de travail.
 
-|                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Affichage automatique de la fenêtre | Triggers the automatic display of the suggestion window for:<ul><li>Constants</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> You can disable this functioning for certain elements of the language by deselecting their corresponding option.                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Validation d'une suggestion         | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. Par exemple, si vous entrez "ALE" et ensuite "(", 4D écrit automatiquement "ALERT(" dans l'éditeur. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul> |
+|                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Affichage automatique de la fenêtre | Déclenche l'affichage automatique de la fenêtre de suggestion pour les :<ul><li>constantes</li><li>variables (locales et interprocess) et attributs d'objets</li><li>tableaux</li><li>prototypes (c'est-à-dire les fonctions de classe).</li></ul><p>Par exemple, lorsque l'option "Variables (locales ou interprocess) et attributs d'objets" est cochée, une liste de suggestions apparaît lorsque vous tapez le caractère $:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> Vous pouvez désactiver ce fonctionnement pour certains éléments du langage en désélectionnant l'option correspondante.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| Validation d'une suggestion         | Définit le contexte d'entrée qui permet à l'éditeur de code de valider automatiquement la suggestion courante affichée dans la fenêtre d'autocomplétion.<ul><li>**Tabulations  et délimiteurs**<br/>Lorsque cette option est sélectionnée, vous pouvez valider la sélection courante à l'aide de la touche Tab ou de n'importe quel délimiteur pertinent pour le contexte. Par exemple, si vous entrez "ALE" et ensuite "(", 4D écrit automatiquement "ALERT(" dans l'éditeur. Voici la liste des délimiteurs pris en compte :<br/> ( ; : = < [ {</li><li>**Tab uniquement**<br/>Lorsque cette option est sélectionnée, vous ne pouvez utiliser que la touche Tab pour insérer la suggestion en cours. Ceci peut être utilisé plus particulièrement pour faciliter la saisie de caractères de délimitation dans les noms d'éléments, tels que ${1}.**Note** : Vous pouvez également double-cliquer dans la fenêtre ou appuyer sur la touche Retour chariot pour valider une suggestion.</li></ul> |
 

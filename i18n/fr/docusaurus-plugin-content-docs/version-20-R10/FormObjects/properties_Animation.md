@@ -15,7 +15,7 @@ Les images sont affichées en boucle continue. Lorsque l'utilisateur atteint la 
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md)
+[Bouton Image](pictureButton_overview.md)
 
 #### Commandes
 
@@ -35,7 +35,7 @@ Affiche la première image en permanence, sauf lorsque l'utilisateur clique sur 
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md)
+[Bouton Image](pictureButton_overview.md)
 
 #### Commandes
 
@@ -55,7 +55,7 @@ Permet à l'utilisateur de maintenir le bouton de la souris enfoncé pour affich
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md)
+[Bouton Image](pictureButton_overview.md)
 
 #### Commandes
 
@@ -63,9 +63,9 @@ Permet à l'utilisateur de maintenir le bouton de la souris enfoncé pour affich
 
 ---
 
-## Switch every x seconds
+## Défilement toutes les n secondes
 
-Enables cycling through the contents of the picture button at the specified speed (in seconds). Dans ce mode, toutes les autres options sont ignorées.
+Permet de faire défiler le contenu du bouton image à la vitesse spécifiée (en secondes). Dans ce mode, toutes les autres options sont ignorées.
 
 #### Grammaire JSON
 
@@ -75,7 +75,7 @@ Enables cycling through the contents of the picture button at the specified spee
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md)
+[Bouton Image](pictureButton_overview.md)
 
 #### Commandes
 
@@ -95,7 +95,7 @@ Modifie le contenu du bouton image lorsque le curseur de la souris passe dessus.
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md)
+[Bouton Image](pictureButton_overview.md)
 
 #### Commandes
 
@@ -115,7 +115,7 @@ Permet de définir la dernière vignette comme étant celle à afficher lorsque 
 
 #### Objets pris en charge
 
-[Picture Button](pictureButton_overview.md)
+[Bouton Image](pictureButton_overview.md)
 
 #### Commandes
 

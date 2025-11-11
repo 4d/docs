@@ -29,7 +29,7 @@ If you pass *\** in *logFile*, **SELECT LOG FILE** closes the current log file f
 
 ## Variables y conjuntos sistema
 
-OK is set to 1 if the log file is correctly created, or closed.
+OK toma el valor 1 si el archivo de historial está correctamente creado, o cerrado.
 
 ## Ver también
 

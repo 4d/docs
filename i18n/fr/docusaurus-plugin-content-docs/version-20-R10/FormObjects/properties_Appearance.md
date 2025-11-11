@@ -249,7 +249,7 @@ Affiche/masque la règle horizontale lorsque la vue du document est en mode [Pag
 
 ---
 
-## Show HTML WYSIWYG
+## Montrer HTML WYSIWYG
 
 Active/désactive la vue HTML WYSIWYG, dans laquelle tous les attributs avancés de 4D Write Pro qui ne sont pas compatibles avec tous les navigateurs sont supprimés.
 
@@ -373,7 +373,7 @@ Vous pouvez ajouter une interface aux zones 4D View Pro pour permettre aux utili
 
 #### Voir également
 
-[4D View Pro reference guide](../ViewPro/getting-started.md)
+[Guide de référence 4D View Pro](../ViewPro/getting-started.md)
 
 ---
 
@@ -409,7 +409,7 @@ Valeurs disponibles :
 
 #### Voir également
 
-[Horizontal scroll bar](#horizontal-scroll-bar)
+[Barre de défilement horizontale](#horizontal-scroll-bar)
 
 ---
 
@@ -419,7 +419,7 @@ Définit le mode d'affichage du document 4D Write Pro dans la zone de formulaire
 
 - **Page** : le mode d'affichage le plus complet, qui comprend les contours de page, l'orientation, les marges, les sauts de page, les en-têtes et pieds de page, etc.
 - **Brouillon** : mode brouillon avec propriétés de base du document
-- Afficher les pieds de page Afficher les pieds de page Afficher les pieds de page Ce mode peut également être utilisé pour produire un affichage de type Web (si vous sélectionnez également la [résolution de 96 dpi](#resolution) et les propriétés [Afficher HTML WYSIWYG](#show-html-wysiwyg)).
+- **Embedded** : mode d'affichage adapté aux zones intégrées; il n'affiche pas les marges, les pieds de page, les en-têtes, les cadres, etc. Ce mode peut également être utilisé pour produire un affichage de type Web (si vous sélectionnez également les propriétés [résolution 96 dpi](#resolution) et [Montrer HTML WYSIWYG](#show-html-wysiwyg)).
 
 > La propriété Mode d'affichage est utilisée uniquement pour le rendu à l'écran. Concernant les paramètres d'impression, des règles de rendu spécifiques sont automatiquement utilisées.
 

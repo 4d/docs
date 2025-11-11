@@ -115,9 +115,9 @@ $4d.today(function(result)
 
 #### 例題 2
 
-スタンドアロンのメソッドを使用する代わりに、この計算を管理する**クラス**を定義することもできます。
+Instead of using a standalone method, we can also use a class function to handle the calculation.
 
-引数を受け入れてその合計を返す、`calcSum` 4D プロジェクトメソッドとそのクラスを定義します:
+Define a "SumCalculator" 4D user class with a `calcSum` function which receives parameters and returns their sum:
 
 ```4d
 // SumCalculator ユーザークラス

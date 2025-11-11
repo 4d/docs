@@ -38,7 +38,7 @@ Añade una URL de imagen al contenido del mensaje.
 
 ## Ejemplo de Uso
 
-### Create a simple message and attach an image
+### Crear un mensaje simple y adjuntar una imagen
 
 ```4d
 // Create an instance of OpenAIMessage
@@ -52,7 +52,7 @@ $message.addImageURL("http://example.com/image.jpg"; "high")
 
 When an assistant needs to use external functions, it generates a message with `tool_calls` to request function execution.
 
-**Assistant message requesting tool calls:**
+**Mensaje del asistente solicitando las llamadas de la herramienta:**
 
 ```json
 {
@@ -70,11 +70,11 @@ When an assistant needs to use external functions, it generates a message with `
 }
 ```
 
-**Handling the tool call:**
+**Gestión de la llamada de la herramienta:**
 
-When you receive a tool call message, you need to:
+Cuando reciba un mensaje de llamada de herramienta, debe:
 
-1. **Extract the function information:**
+1. **Extraer la información relativa a la función:**
    - `function.name`: The name of the function to call (must match a function defined in your [OpenAITool](OpenAITool.md) - you can select code to execute according to this name)
    - `function.arguments`: A JSON string containing the function parameters that must be parsed with `JSON Parse`
    - `id`: el identificador único para esta llamada específica a la herramienta
@@ -85,7 +85,7 @@ When you receive a tool call message, you need to:
 3. **Respond with the tool result:**
    Create a response message using the exact `tool_call_id` from the original request.
 
-**Example tool response:**
+**Ejemplo de respuesta de la herramienta:**
 
 ```4d
 // Parse the function arguments (if any)

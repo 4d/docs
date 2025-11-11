@@ -7,11 +7,11 @@ title: Zones Web
 
 ## Accéder aux méthodes 4D
 
-You can call 4D methods and class functions from the JavaScript code executed in a Web area and get values in return. Pour pouvoir appeler des méthodes 4D depuis la zone Web, vous devez cocher l'option Accès méthodes 4D pour la zone dans la Liste des propriétés .
+Vous pouvez appeler des méthodes et des fonctions de classe 4D à partir du code JavaScript exécuté dans une zone Web et obtenir des valeurs en retour. Pour pouvoir appeler des méthodes 4D depuis la zone Web, vous devez cocher l'option Accès méthodes 4D pour la zone dans la Liste des propriétés .
 
 > Cette option n’apparaît que si l’option [Utiliser le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) est cochée.
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods and functions](webArea_overview.md#4d-object).
+Lorsque cette propriété est activée, un objet JavaScript spécial nommé `$4d` est instancié dans la zone Web, que vous pouvez [utiliser pour gérer les appels aux méthodes et fonctions du projet 4D](webArea_overview.md#4d-object).
 
 #### Grammaire JSON
 
@@ -29,7 +29,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 La variable "Progression" est de type Entier long. Elle contient une valeur entre 0 et 100, représentant le pourcentage du chargement complet de la page affichée dans la zone Web. La variable est mise à jour automatiquement par 4D. Il n’est pas possible de la modifier manuellement.
 
-> As of 4D v19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
+> Depuis 4D 19 R5, cette variable n'est mise à jour sous Windows que si la zone Web [utilise le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 #### Grammaire JSON
 
@@ -54,12 +54,12 @@ Schématiquement, cette variable fonctionne comme la zone d’adresse d’un nav
 
 ### Variable URL et commande WA OUVRIR URL
 
-The URL variable produces the same effects as the [WA OPEN URL](../commands-legacy/wa-open-url.md) command. Les différences suivantes sont toutefois à noter :
+La variable URL produit les mêmes effets que la commande [WA OPEN URL](../commands-legacy/wa-open-url.md). Les différences suivantes sont toutefois à noter :
 
-- Pour les accès aux documents, la variable accepte uniquement des URLs conformes aux RFC ("file://c:/Mon%20Doc") et non les chemins d’accès système ("c:\MonDoc"). The [WA OPEN URL](../commands-legacy/wa-open-url.md) command accepts both notations.
-- Si la variable URL contient une chaîne vide, la zone Web ne tente pas de charger l’URL. The [WA OPEN URL](../commands-legacy/wa-open-url.md) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](../commands-legacy/wa-open-url.md) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](../commands-legacy/wa-open-url.md) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+- Pour les accès aux documents, la variable accepte uniquement des URLs conformes aux RFC ("file://c:/Mon%20Doc") et non les chemins d’accès système ("c:\MonDoc"). La commande [WA OPEN URL](../commands-legacy/wa-open-url.md) accepte les deux notations.
+- Si la variable URL contient une chaîne vide, la zone Web ne tente pas de charger l’URL. La commande [WA OPEN URL](../commands-legacy/wa-open-url.md) génère une erreur dans ce cas.
+- Si la variable URL ne contient pas de protocole (http, mailto, file, etc.), la zone Web ajoute "http://", ce qui n'est pas le cas de la commande [WA OPEN URL](../commands-legacy/wa-open-url.md).
+- Lorsque la zone Web n'est pas affichée dans le formulaire (lorsqu'elle est située sur une autre page du formulaire), l'exécution de la commande [WA OPEN URL](../commands-legacy/wa-open-url.md) est sans effet, alors que l'attribution d'une valeur à la variable URL peut être utilisée pour mettre à jour l'URL courant.
 
 #### Grammaire JSON
 
@@ -81,16 +81,16 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 > Sur Windows, si Microsoft Edge WebView2 n'est pas installé, 4D utilise le moteur intégré en tant que moteur de rendu système. Pour savoir s'il est installé sur votre système, recherchez "Microsoft Edge WebView2 Runtime" dans votre panneau d'applications.
 
-- **coché** - `JSON value: embedded`: Dans ce cas, 4D utilise le Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées).
+- **coché** - `JSON value: embedded`: Dans ce cas, 4D utilise le Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). Lorsque cette option est choisie, vous ne bénéficiez plus des mises à jour automatiques du moteur Web effectuées par le système d'exploitation ; cependant, de nouvelles versions des moteurs sont régulièrement fournies par l'intermédiaire de 4D.
 
 Le moteur CEF a les limitations suivantes :
 
-- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](../commands-legacy/wa-open-url.md) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md) command, the first drop must be preceded by at least one call to [WA OPEN URL](../commands-legacy/wa-open-url.md) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](../commands-legacy/wa-set-page-content.md) : pour utiliser cette commande, il faut qu'au moins une page soit déjà chargée dans la zone (par un appel à [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou par une affectation à la variable URL associée à la zone).
+- Lorsque les dépôts d'URL sont activés par le sélecteur `WA enable URL drop` de la commande [WA SET PREFERENCE](../commands-legacy/wa-set-preference.md), le premier dépôt doit être précédé d'au moins un appel à [WA OPEN URL](../commands-legacy/wa-open-url.md) ou d'une assignation à la variable URL associée à la zone.
 
 :::note
 
-You can customize CEF area parameters by creating a local [4DCEFParameters.json configuration file](webArea_overview.md#4dcefparametersjson).
+Vous pouvez personnaliser les paramètres de la zone CEF en créant un fichier de configuration local [4DCEFParameters.json](webArea_overview.md#4dcefparametersjson).
 
 :::
 

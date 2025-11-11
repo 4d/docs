@@ -21,11 +21,11 @@ title: エラー処理
 
 :::
 
-## Predictable vs unpredictable errors
+## 予想可能なエラーvs予測不可能なエラー
 
-Many 4D class functions, such as [`entity.save()`](../API/EntityClass.md#save) or [`transporter.send()`](../API/SMTPTransporterClass.md#send), return a object containing *status* information. This object is used to store **predictable** errors in the runtime context, e.g. invalid password, locked entity, etc., that do not require to stop program execution. This category of errors, also named **silent errors** errors, can be handled by regular code. When such errors occur in an error handling context, i.e. a [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or an [error-handling method](#installing-an-error-handling-method), they do not interrupt the execution and do not trigger the error handling (e.g. the `Catch` part of the [`Try/Catch`](#trycatchend-try) is not executed). They are not listed in the [`Last errors`](../commands/last-errors.md) collection. The error is only returned in the `status` and `statusText` properties of the returned object. It can be processed according to your business logic.
+[`entity.save()`](../API/EntityClass.md#save) や [`transporter.send()`](../API/SMTPTransporterClass.md#send) などの多くの4D クラス関数は、*status* 情報を格納しているオブジェクトを返します。 このオブジェクトには、プログラムの実行を停止する必要のないエラー(無効なパスワード、ロックされたエンティティ)など、ランタイムコンテキストにおける**予測可能な**エラーを保存するのに使用されます。 このカテゴリのエラーは、**サイレントエラー**とも呼ばれ、通常のコードで管理することができます。 [`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは[エラー処理メソッド](#エラー処理メソッドを実装する) などのエラー処理コンテキストにおいてこのようなエラーが発生した場合、これらは実行を中断することはせず、エラー処理(例: [`Try/Catch`](#trycatchend-try) の`Catch` 部分)をトリガーすることはありません。 これらは[`Last errors`](../commands/last-errors.md) のコレクションには含まれません。 エラーは返されるオブジェクトの`status` および `statusText` プロパティ内にのみ返されます。 これはビジネスロジックに応じて処理することが可能です。
 
-The other category of errors are **unpredictable** errors, also named **serious errors**. They include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions defined by [a *code*, a *message* and a *signature*](#error-codes). They interrupt the execution and trigger the error processing of the [`Try`](#tryexpression), [`Try/Catch`](#trycatchend-try) or [error-handling method](#installing-an-error-handling-method) features. They are listed in the [`Last errors`](../commands/last-errors.md) collection. Note that serious errors can also return values in the `status` and `statusText` properties, e.g. `dk status serious error` - "Other error".
+もう一つのエラーのカテゴリーは**予測不可能な**エラーと呼ばれ、別名**深刻なエラー**とも呼ばれます。 これにはディスク書き込みエラー、ネットワーク失敗、あるいはそれ以外の予期せぬ中断が含まれます。 これらのカテゴリーのエラーは[*コード*、*メッセージ*および*署名*](#エラーコード)によって定義される例外を生成します。 これらは実行を中断し、[`Try`](#tryexpression)、[`Try/Catch`](#trycatchend-try) あるいは [エラー処理メソッド](#エラー処理メソッドの実装) 機能のエラー処理をトリガーします。 これらは[`Last errors`](../commands/last-errors.md) のコレクションに含まれます。 深刻なエラーは、プロパティに値(例: `dk status serious error` - "その他のエラー")も返すことがあり得るという点に注意してください。
 
 ## エラー処理メソッドの実装
 

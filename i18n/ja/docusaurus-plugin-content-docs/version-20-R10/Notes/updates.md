@@ -104,7 +104,7 @@ title: リリースノート
 - 4Dランゲージ:
   - 新コマンド: [Process info](../commands/process-info.md)、 [Session info](../commands/session-info.md)、 [SET WINDOW DOCUMENT ICON](../commands/set-window-document-icon.md)
   - 変更されたコマンド: [Process activity](../commands/process-activity.md)、 [Process number](../commands/process-number.md)
-  - Deprecated commands (replacement): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md)), `GET SERIAL INFORMATION` ([License info](../commands/license-info.md)), `PROCESS PROPERTIES` ([Process info](../commands/process-info.md)), `SET SCREEN DEPTH`, `C_XXX` commands ([var](../Concepts/variables.md#declaring-variables) and [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters) declarations). 廃止予定のコマンドには "\*O\*" の接頭辞がつけられます。
+  - 廃止予定コマンド(置き換え): `GET LAST ERROR STACK` ([Last errors](../commands/last-errors.md))、`GET SERIAL INFORMATION` ([License info](../commands/license-info.md))、`PROCESS PROPERTIES` ([Process info](../commands/process-info.md))、`SET SCREEN DEPTH`、`C_XXX` 系コマンド ([var](../Concepts/variables.md#declaring-variables) および [#DECLARE/Function](../Concepts/parameters.md#declaring-parameters) 宣言)。 廃止予定のコマンドには "\*O\*" の接頭辞がつけられます。
 - 4D Write Pro:
   - 新コマンド: [WP DELETE SECTION](../WritePro/commands/wp-delete-section.md)
   - 変更されたコマンド: [WP DELETE SUBSECTION](../WritePro/commands/wp-delete-subsection.md) および [WP RESET ATTRIBUTES](../WritePro/commands/wp-reset-attributes.md)

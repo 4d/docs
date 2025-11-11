@@ -12,9 +12,9 @@ title: メニュープロパティ
 メニューエディターを使って、テキストリテラルを直接、ラベルとして入力することができます。 または、変数参照、xliff参照を使用することもできます。これによりアプリケーションの翻訳が容易になります。 次のの参照タイプを使用できます:
 
 - :xliff:MyLabel という形の XLIFFリソース参照。 XLIFF参照についての詳細は、*4D デザインリファレンス* の [XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください。
-- `:<>vlang,3` という形のインタープロセス変数名と、それに続く数値。 この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
+- (**Deprecated**) An interprocess variable name followed by a number, for example: `:<>vlang,3`. この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
 
-4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、および `SET MENU ITEM` コマンドの *itemText* パラメーターでタイトルプロパティを設定します。
+Using the 4D language, you set the title property through the *itemText* parameter of the [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), and [`SET MENU ITEM`](../commands/set-menu-item) commands.
 
 ### 制御文字の使用
 
@@ -33,9 +33,9 @@ title: メニュープロパティ
 
 ## 引数
 
-各メニュー項目にカスタム引数を関連付けることができます。 メニュー項目の引数は、その内容を自由に設定できる文字列です。 メニュエディターで設定するほかに、`SET MENU ITEM PARAMETER` コマンドを使う方法もあります。
+各メニュー項目にカスタム引数を関連付けることができます。 メニュー項目の引数は、その内容を自由に設定できる文字列です。 It can be set in the Menu editor, or through the [`SET MENU ITEM PARAMETER`](../commands/set-menu-item-parameter) command.
 
-メニュー項目の引数は、とくに `Dynamic pop up menu`、`Get menu item parameter`、そして `Get selected menu item parameter` コマンドを使用する際など、メニューをプログラムで管理するのに便利です。
+Menu item parameters are useful with programmed management of menus, in particular when using the [`Dynamic pop up menu`](../commands/dynamic-pop-up-menu), [`Get menu item parameter`](../commands/get-menu-item-parameter) and [`Get selected menu item parameter`](../commands/get-selected-menu-item-parameter) commands.
 
 ## 動作
 
@@ -57,7 +57,7 @@ title: メニュープロパティ
 - **標準アクション**: 割り当てたいアクションを "標準アクション" コンボボックスから選択するか、記述します。 サポートされているアクションと引数 (任意) であれば、エリア内に入力することができます。 標準アクションの一覧については、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) を参照してください。
   **macOS に関する注記:** macOS の場合、プラットフォームインタフェース標準に合わせるために、*quit* (終了) アクションが割り当てられたカスタムメニューコマンドは自動でアプリケーションメニュー内に置かれます。
 
-4Dランゲージで割り当てをおこなう場合、プロジェクトメソッドには `SET MENU ITEM METHOD` コマンド、標準アクションには `SET MENU ITEM PROPERTY` コマンドを使います。
+Using the 4D language, you can associate a project method using the [`SET MENU ITEM METHOD`](../commands/set-menu-item-method) command, and a standard action using the [`SET MENU ITEM PROPERTY`](../commands/set-menu-item-property) command.
 
 ### 新規プロセスで開始
 
@@ -93,7 +93,7 @@ title: メニュープロパティ
 メニューエディターでは、メニューのタイトルエリアにテキストを入力する代わりに、**区切り線** オプションを選択します。 すると、カレントメニューバーのエリアに線が表示されます。 このオプションが選択されると、ほかのプロパティは無効になります。
 **注:** macOS ではメニュー項目タイトルの一文字目を "-" にすると、その行が区切り線になります。
 
-4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、または `SET MENU ITEM` コマンドの itemText パラメーターに `-` あるいは `(-` を受け渡します。
+In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), or [`SET MENU ITEM`](../commands/set-menu-item) commands.
 
 ### ショートカット
 
@@ -153,13 +153,13 @@ title: メニュープロパティ
 
 ### チェック
 
-このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 その後チェックマークの表示をランゲージコマンド (`SET MENU ITEM MARK` や `Get menu item mark`) で制御できます。
+このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 You can then manage the display of the check mark using language commands ([`SET MENU ITEM MARK`](../commands/set-menu-item-mark) and [`Get menu item mark`](../commands/get-menu-item-mark)).
 
 通常チェックマークは連続したアクションをおこなうメニュー項目に付けられ、そのアクションを現在実行中であることを示すために使用されます。
 
 ### フォントスタイル
 
-メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または `SET MENU ITEM STYLE` ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
+メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
 
 一般的なルールとして、フォントスタイルの適用は慎重におこなってください。 煩雑なスタイルの使用はユーザーの注意をそらし、アプリケーションの見た目を悪くします。
 
@@ -177,4 +177,4 @@ title: メニュープロパティ
 
 項目からアイコンを取り除くには、"項目アイコン" エリアのメニューから **アイコンなし** を選択します。
 
-4Dランゲージを使って項目アイコンを設定するには、`SET MENU ITEM ICON` コマンドを使います。
+To define item icons using the 4D language, call the [`SET MENU ITEM ICON`](../commands/set-menu-item-icon) command.

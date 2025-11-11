@@ -168,7 +168,7 @@ Define el número de columnas del list box.
 
 ---
 
-## Row Control Array {#row-control-array}
+## Array de control de líneas {#row-control-array}
 
 `List box de tipo array`
 

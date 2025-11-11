@@ -21,7 +21,7 @@ En primer lugar, inicialice el cliente OpenAI utilizando su llave API
 var $client:=cs.AIKit.OpenAI.new("your api key")
 ```
 
-For a [compatible provider](compatible-openai.md) API, you need to configure the server URL by setting the `baseURL` parameter.
+Para una API de [proveedor compatible](compatible-openai.md), puede configurar la URL del servidor definiendo el parámetro `baseURL`.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://your.server.ai"})
@@ -43,7 +43,7 @@ var $result:=$client.<resource>.<function>(<parameters...>)
 
 El `$result` contiene el `HTTPRequest`, un estado `success`, una colección de `errors` y más. Ver [OpenAIResult](Classes/OpenAIResult.md)
 
-See some examples below.
+Vea algunos ejemplos a continuación.
 
 #### Chat
 
@@ -62,13 +62,13 @@ var $result:=$client.chat.completions.create($messages; {model: "gpt-4o-mini"})
 
 ##### Ayudante del chat
 
-This helper allows you to maintain a list of user messages and assistant responses.
+Este ayudante le permite mantener una lista de mensajes de usuarios y de respuestas del asistente.
 
 ```4d
-var $helper:=$client.chat.create("You are a helpful assistant.")
-var $result:=$helper.prompt("Could you explain me why 42 is a special number")
-$result:=$helper.prompt("and could you decompose this number")
-// conversation in $helper.messages
+var $helper:=$client.chat.create("Eres un asistente útil.")
+var $result:=$helper.prompt("¿Podría explicarme por qué 42 es un número especial")
+$result:=$helper.prompt("y podría descomponer este número")
+// conversación en $helper.messages
 ```
 
 ##### Asistente de visión
@@ -113,13 +113,13 @@ var $moderation:=$client.moderations.create("This text contains inappropriate la
 
 #### Código asíncrono
 
-If you do not want to wait for the OpenAPI response when sending a request to its API, you need to use asynchronous code. The result object will be received in a callback function.
+Si no desea esperar la respuesta del OpenAPI al enviar una solicitud a su API, debe utilizar un código asíncrono. El objeto resultante será recibido en una función de retrollamada.
 
 Ver la [documentación detallada para ejemplos](asynchronous-call.md)
 
 ## Derechos de autor
 
-- This library is not affiliated with, endorsed by, or officially connected to OpenAI in any way.
-- "OpenAI" and any related marks are trademarks or registered trademarks of OpenAI, LLC. All rights related to OpenAI's services, APIs, and technologies remain the property of OpenAI.
-- This project simply provides an interface to OpenAI’s services and does not claim any ownership over their technology, branding, or intellectual property.
+- Esta biblioteca no está afiliada a OpenAI, ni aprobada por ella, ni oficialmente conectada a OpenAI de ninguna manera.
+- "OpenAI" y toda marca relacionada son marcas comerciales o marcas registradas de OpenAI, LLC. Todos los derechos relacionados con los servicios, API y tecnologías de OpenAI siguen siendo propiedad de OpenAI.
+- Este proyecto simplemente proporciona una interfaz a los servicios de OpenAI y no se responsabiliza de su tecnología, marca o propiedad intelectual.
 

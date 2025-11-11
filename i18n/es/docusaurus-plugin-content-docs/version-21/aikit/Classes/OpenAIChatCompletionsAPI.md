@@ -19,7 +19,7 @@ https://platform.openai.com/docs/api-reference/chat
 | ------------ | --------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | *messages*   | Colección de [OpenAIMessage](OpenAIMessage.md)                        | Los mensajes de chat que se incluirán en la solicitud.     |
 | *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Los parámetros para la solicitud de finalización del chat. |
-| Resultado    | Object                                                                | The result of the chat completion request.                 |
+| Resultado    | Object                                                                | El resultado de la solicitud de finalización del chat.     |
 
 Creates a model response for the given chat conversation.
 
@@ -54,11 +54,11 @@ $messages.push($result.choice.message) // {"role":"assistant"; "content": "xxx" 
 
 **retrieve**(*completionID* : Text; *parameters* : OpenAIParameters): Object
 
-| Parámetros     | Tipo                                    | Descripción                                                   |
-| -------------- | --------------------------------------- | ------------------------------------------------------------- |
-| *completionID* | Text                                    | The ID of the chat completion to retrieve.    |
-| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.      |
-| Resultado      | Object                                  | El objeto de finalización de chat recuperado. |
+| Parámetros     | Tipo                                    | Descripción                                                    |
+| -------------- | --------------------------------------- | -------------------------------------------------------------- |
+| *completionID* | Text                                    | El ID de la finalización del chat a recuperar. |
+| *parámetros*   | [OpenAIParameters](OpenAIParameters.md) | Parámetros adicionales para la petición.       |
+| Resultado      | Object                                  | El objeto de finalización de chat recuperado.  |
 
 Obtener una finalización de chat almacenada.
 

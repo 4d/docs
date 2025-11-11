@@ -63,7 +63,7 @@ Permite al usuario mantener pulsado el botón del ratón para mostrar las imáge
 
 ---
 
-## Switch every x seconds
+## Cambiar cada x segundos
 
 Enables cycling through the contents of the picture button at the specified speed (in seconds). En este modo, se ignoran todas las demás opciones.
 

@@ -14,11 +14,11 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 - **Ne rien faire** : seule la fenêtre de l’application apparaît, vide.
 - **Dialogue d’ouverture de base de données locale** : 4D affiche une boîte de dialogue standard d’ouverture de documents, permettant de désigner un projet local.
 - **Ouvrir le dernier projet utilisé** : 4D ouvre directement le dernier projet utilisé, aucune boîte de dialogue d’ouverture n’apparaît.
-  > To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
+  > Pour forcer l'affichage de la boîte de dialogue d'ouverture lorsque cette option est sélectionnée, maintenez la touche **Alt** (Windows) ou **Option** (macOS) enfoncée lors du lancement du projet.
 - **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
 - **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
 
-> > > **4D Server**: The 4D Server application ignores this option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
+> **4D Server** : L'application 4D Server ignore cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
 
 ### Création de formulaire automatique
 
@@ -48,7 +48,7 @@ Dans la boîte de dialogue des Préférences de 4D, l'option **Fenêtre à ongle
 Trois options sont disponibles :
 
 - **Selon les préférences système** (défaut) : les fenêtres de 4D se comporteront comme elles ont été définies dans les Préférences Système de macOS (En plein écran uniquement, Toujours ou Manuellement).
-- **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
+- **Jamais** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de code 4D entraîne toujours la création d'une nouvelle fenêtre (les onglets ne sont jamais créés).
 - **Toujours** : L'ouverture d'un nouveau document dans l'éditeur de formulaires ou l'éditeur de méthodes de 4D provoquera l'ajout d'un onglet.
 
 ### Apparence (macOS uniquement)
@@ -73,12 +73,12 @@ Si cette option est cochée, lorsque l’utilisateur passe en mode Application v
 
 Si vous sélectionnez cette option, deux éléments s'ajoutent au menu **Fichier > Nouveau** et au bouton **Nouveau** de la barre d'outils :
 
-- **Database...**
+- **Base de données...**
 - **Base de données à partir d'une définition de structure...**
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-new-database.300-6750129.en.html) section). Ils ne sont plus proposés par défaut car 4D recommande, pour les nouveaux développements, l'utilisation d'une architecture de bases projets.
+Ces éléments vous permettent de créer des bases de données binaires (voir la section [Création d'une nouvelle base de données](https://doc.4d.com/4Dv20/4D/20.2/Creating-a-new-database.300-6750129.en.html)). Ils ne sont plus proposés par défaut car 4D recommande, pour les nouveaux développements, l'utilisation d'une architecture de bases projets.
 
 ## Lors de la création d'un nouveau projet
 
@@ -94,17 +94,17 @@ Grâce à ce principe, sous macOS les dossiers des bases apparaissent sous forme
 
 ### Inclure les tokens dans les fichiers sources des projets
 
-Lorsque cette option est cochée, les [fichiers sources des méthodes](../Project/architecture.md#sources) enregistrées dans les nouveaux projets 4D contiendront des **tokens** pour les objets du langage classic et de la base (constantes, commandes, tables et champs). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
+Lorsque cette option est cochée, les [fichiers sources des méthodes](../Project/architecture.md#sources) enregistrées dans les nouveaux projets 4D contiendront des **tokens** pour les objets du langage classic et de la base (constantes, commandes, tables et champs). Les tokens sont des caractères supplémentaires tels que `:C10` ou `:5` insérés dans les fichiers de code source, qui permettent de renommer les tables et les champs et d'identifier les éléments quelle que soit la version 4D (voir [Using tokens in formulas](https://doc.4d.com/4Dv20/4D/20.6/Using-tokens-in-formulas.300-7487422.en.html)).
 
 Si vous avez l'intention d'utiliser des VCS ou des éditeurs de code externes avec vos nouveaux projets, il est préférable de décocher cette option pour une meilleure lisibilité du code avec ces outils.
 
-> Vous pouvez toujours obtenir le code avec les tokens en appelant la <a href="https://doc.4d.com/4dv19R/help/command/en/page1190.html"><code>METHOD GET CODE</code></a> avec 1 dans le paramètre <em x-id="3">option</em>.
+> Cette option ne peut être appliquée qu'aux projets (les bases de données binaires incluent toujours les tokens).
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](../commands-legacy/method-get-code.md) with 1 in the *option* parameter.
+> Vous pouvez toujours obtenir le code avec des tokens en appelant [`METHOD GET CODE`](../commands-legacy/method-get-code.md) avec 1 dans le paramètre *option*.
 
 #### Exclusion des tokens dans les projets existants
 
-You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+Vous pouvez configurer vos projets existants pour qu'ils sauvegardent le code **sans tokens** en insérant la clé suivante dans le fichier [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) à l'aide d'un éditeur de texte :
 
 ```
 "tokenizedText" : false
@@ -138,7 +138,7 @@ Lors de la création d’un nouveau fichier de données, 4D utilise la langue d�
 
 Cette zone permet de configurer l'accès à la documentation HTML de 4D qui s'affiche dans votre navigateur courant :
 
-- When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
+- Lorsque vous appuyez sur la touche **F1** alors que le curseur est inséré dans le nom d'une commande ou d'une fonction de classe 4D dans l'éditeur de code ;
 - Lorsque l'utilisateur double-clique sur une commande dans la **page des commandes** de l'Explorateur .
 
 ### Langue de documentation

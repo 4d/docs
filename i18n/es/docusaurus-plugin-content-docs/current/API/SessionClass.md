@@ -54,10 +54,10 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones             |
-| ----------- | -------------------------- |
-| 21          | Support of remote sessions |
-| 18 R6       | Añadidos                   |
+| Lanzamiento | Modificaciones              |
+| ----------- | --------------------------- |
+| 21          | Soporte de sesiones remotas |
+| 18 R6       | Añadidos                    |
 
 </details>
 
@@ -75,7 +75,7 @@ La disponibilidad de las propiedades y funciones del objeto `Session` depende de
 
 :::note
 
-This function does nothing and always returns **True** with stored procedure sessions and standalone sessions.
+Esta función no hace nada y siempre devuelve **True** con sesiones de procedimientos almacenadas y sesiones independientes.
 
 :::
 
@@ -89,7 +89,7 @@ Esta función no elimina los **privilegios promovidos** del proceso web, tanto s
 
 :::
 
-Regarding remote client sessions, the function only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
+En cuanto a las sesiones cliente remoto, la función sólo se refiere al código ejecutado en el contexto de una [solicitud web enviada a través de un área Web](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
 
 #### Ejemplo
 
@@ -110,10 +110,10 @@ $isGuest:=Session.isGuest() //$isGuest es True
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones             |
-| ----------- | -------------------------- |
-| 21          | Support of remote sessions |
-| 20 R9       | Añadidos                   |
+| Lanzamiento | Modificaciones              |
+| ----------- | --------------------------- |
+| 21          | Soporte de sesiones remotas |
+| 20 R9       | Añadidos                    |
 
 </details>
 
@@ -132,7 +132,7 @@ $isGuest:=Session.isGuest() //$isGuest es True
 
 :::note
 
-This function is available with web user sessions and remote sessions. It returns an empty string in stored procedure and standalone sessions.
+Esta función está disponible con sesiones usuario web y sesiones remotas. Devuelve una cadena vacía en procedimientos almacenados y sesiones independientes.
 
 :::
 
@@ -140,14 +140,14 @@ La función `.createOTP()` <!-- REF #SessionClass.createOTP().Summary -->crea un
 
 Para más información sobre los tokens OTP, por favor consulte [esta sección](../WebServer/sessions.md#session-token-otp).
 
-Puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. If an expired token is used to restore a session, it is ignored. By default, if the *lifespan* parameter is omitted:
+Puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. Si se utiliza un token caducado para restaurar la sesión, se ignora. Por defecto, si el parámetro *lifespan* se omite:
 
-- with web user sessions, the token is created with the same lifespan as the [`.idleTimeOut`](#idletimeout) of the session.
-- with remote sessions, the token is created with a 10 seconds lifespan.
+- con sesiones de usuario web, el token se crea con el mismo espacio de vida que el [`.idleTimeOut`](#idletimeout) de la sesión.
+- con sesiones remotas, el token se crea con una duración de 10 segundos.
 
-For **web user sessions**, the returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
+Para las **sesiones usuario web**, el token devuelto puede ser utilizado en intercambios con las aplicaciones de terceros o sitios web para identificar la sesión de forma segura. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
 
-For **remote sessions**, the returned token can be used on 4D Server to identitfy requests coming from a [remote 4D running Qodly forms in a Web area](../Desktop/clientServer.md#remote-user-sessions).
+Para las **sesiones remotas**, el token devuelto puede ser utilizado en 4D Server para identificar las solicitudes provenientes de un [4D remoto ejecutando formularios Qodly en un área Web](../Desktop/clientServer.md#remote-user-sessions).
 
 #### Ejemplo
 
@@ -289,9 +289,9 @@ Esta función devuelve los privilegios asignados a una Sesión utilizando única
 
 :::
 
-With remote client sessions, the privileges only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
+Con las sesiones de clientes remotos, los privilegios sólo se refieren al código ejecutado en el contexto de una [solicitud web enviada a través de un área Web](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
 
-With stored procedure sessions and standalone sessions, this function returns a collection only containing "WebAdmin".
+Con las sesiones de procedimiento almacenadas y sesiones independientes, esta función devuelve una colección que sólo contiene "WebAdmin".
 
 #### Ejemplo
 
@@ -360,10 +360,10 @@ $privileges := Session.getPrivileges()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                                          |
-| ----------- | ----------------------------------------------------------------------- |
-| 21          | Returns True for promoted privileges, Support of remote client sessions |
-| 18 R6       | Añadidos                                                                |
+| Lanzamiento | Modificaciones                                                                        |
+| ----------- | ------------------------------------------------------------------------------------- |
+| 21          | Devuelve True para privilegios promocionados, Soporte de sesiones de clientes remotas |
+| 18 R6       | Añadidos                                                                              |
 
 </details>
 
@@ -763,11 +763,11 @@ La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 - En el parámetro *privileges*, pase una colección de cadenas que contengan nombres de privilegios.
 - En el parámetro *settings*, pase un objeto que contenga las siguientes propiedades:
 
-| Propiedad  | Tipo              | Descripción                                                                                                                                                                                   |
-| ---------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>                                                                     |
-| roles      | Text o Collection | <li>Cadena que contiene un rol, o</li><li>Colección de cadenas que contienen roles</li>                                                                                                       |
-| userName   | Text              | User name to associate to the session (optional, web sessions only). Not available in remote client sessions (ignored). |
+| Propiedad  | Tipo              | Descripción                                                                                                                                                                                          |
+| ---------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>                                                                            |
+| roles      | Text o Collection | <li>Cadena que contiene un rol, o</li><li>Colección de cadenas que contienen roles</li>                                                                                                              |
+| userName   | Text              | User name to associate to the session (optional, web sessions only). No disponible en sesiones de clientes remotos (ignorada). |
 
 :::note
 

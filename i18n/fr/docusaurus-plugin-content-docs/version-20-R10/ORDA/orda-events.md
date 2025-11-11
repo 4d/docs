@@ -114,7 +114,7 @@ Cet événement est également déclenché :
 
 #### Exemple 1
 
-You want to uppercase all text attributes of an entity when it is updated.
+Vous souhaitez mettre en majuscules tous les attributs de texte d'une entité lorsqu'elle est mise à jour.
 
 ```4d
     //ProductsEntity class

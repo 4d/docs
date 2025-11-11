@@ -183,7 +183,7 @@ Vous pouvez également définir cette propriété à l'aide de la commande [**OB
 
 `List box de type collection/sélection/entity selection`
 
-Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. For more information about this, refer to the description of the [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) command in the 4D Language Reference manual.
+Utilisée pour appliquer une couleur de police personnalisée à chaque ligne de la list box. Vous devez utiliser des valeurs de couleur RVB. Pour plus d'informations, reportez-vous à la description de la commande [OBJECT SET RGB COLORS](../commands-legacy/object-set-rgb-colors.md) dans le manuel de référence du langage 4D.
 
 Vous devez saisir une expression ou une variable (les variables de type tableau ne peuvent pas être utilisées). L'expression ou la variable sera évaluée pour chaque ligne affichée. Vous pouvez utiliser les constantes décrites dans la commande [`OBJECT SET RGB COLORS`](../commands-legacy/object-set-rgb-colors.md).
 
@@ -272,7 +272,7 @@ L'option **Default** (valeur JSON `automatique`) définit l'alignement en foncti
 - `bas` pour toutes les données (sauf les images) et
 - `haut` pour les données de type image.
 
-This property can also be handled by the [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) and [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md) commands.
+Cette propriété peut également être gérée par les commandes [OBJECT Get vertical alignment](../commands-legacy/object-get-vertical-alignment.md) et [OBJECT SET VERTICAL ALIGNMENT](../commands-legacy/object-set-vertical-alignment.md).
 
 #### Grammaire JSON
 

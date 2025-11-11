@@ -29,20 +29,20 @@ The `OpenAIError` class is designed to handle errors returned by the OpenAI API.
 
 ### OpenAI específico
 
-| Propiedad | Tipo    | Descripción                                                         |
-| --------- | ------- | ------------------------------------------------------------------- |
-| `code`    | Variant | El código de error devuelto por la API.             |
-| `tipo`    | Text    | El tipo de error devuelto por la API.               |
-| `param`   | Text    | The parameter that caused the error, if applicable. |
+| Propiedad | Tipo    | Descripción                                                       |
+| --------- | ------- | ----------------------------------------------------------------- |
+| `code`    | Variant | El código de error devuelto por la API.           |
+| `tipo`    | Text    | El tipo de error devuelto por la API.             |
+| `param`   | Text    | El parámetro que causó el error, si es aplicable. |
 
 ### Información sobre el código de estado HTTP
 
-| Propiedad                    | Tipo    | Descripción                                                                      |
-| ---------------------------- | ------- | -------------------------------------------------------------------------------- |
-| `isBadRequestError`          | Boolean | Indica si se trata de un error 400 Bad Request.                  |
-| `isAuthenticationError`      | Boolean | Indica si se trata de un error de autenticación 401.             |
-| `isPermissionDeniedError`    | Boolean | Indicates ∏if the error is a 403 Permission Denied error.        |
-| `isNotFoundError`            | Boolean | Indica si el error es un error 404 Not Found.                    |
-| `isUnprocessableEntityError` | Boolean | Indicates if the error is a 422 Unprocessable Entity error.      |
-| `isRateLimitError`           | Boolean | Indica si el error es un error de límite de velocidad 429.       |
-| `isInternalServerError`      | Boolean | Indicates if the error is a 500 or higher Internal Server error. |
+| Propiedad                    | Tipo    | Descripción                                                                                       |
+| ---------------------------- | ------- | ------------------------------------------------------------------------------------------------- |
+| `isBadRequestError`          | Boolean | Indica si se trata de un error 400 Bad Request.                                   |
+| `isAuthenticationError`      | Boolean | Indica si se trata de un error de autenticación 401.                              |
+| `isPermissionDeniedError`    | Boolean | Indicates ∏if the error is a 403 Permission Denied error.                         |
+| `isNotFoundError`            | Boolean | Indica si el error es un error 404 Not Found.                                     |
+| `isUnprocessableEntityError` | Boolean | Indica si el error es un error de entidad no procesable (422). |
+| `isRateLimitError`           | Boolean | Indica si el error es un error de límite de velocidad 429.                        |
+| `isInternalServerError`      | Boolean | Indicates if the error is a 500 or higher Internal Server error.                  |

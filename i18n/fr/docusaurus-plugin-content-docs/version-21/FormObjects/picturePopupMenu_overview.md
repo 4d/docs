@@ -3,7 +3,7 @@ id: picturePopupMenuOverview
 title: Pop-up menu image
 ---
 
-Un pop-up menu image affiche un tableau d’images bidimensionnel. Un pop-up menu image affiche un tableau d’images bidimensionnel. Le mode de création d’une image destinée à être utilisée dans un pop-up menu image est identique à celui d’un bouton image. Un pop-up menu image peut être utilisé à la place d’un [bouton image](pictureButton_overview.md).
+Un pop-up menu image affiche un tableau d’images bidimensionnel. Un pop-up menu image peut être utilisé à la place d’un [bouton image](pictureButton_overview.md). Le mode de création d’une image destinée à être utilisée dans un pop-up menu image est identique à celui d’un bouton image. Le mode de fonctionnement de l’objet, quant à lui, s’apparente à la [Grille de boutons](buttonGrid_overview.md), à la différence près que l’image est utilisée comme un pop-up menu et non comme un objet du formulaire.
 
 ## Utiliser des pop-up menus images
 
@@ -13,11 +13,11 @@ Pour créer un pop-up menu image, vous devez [faire référence à une image](pr
 
 ### Programmation
 
-Vous pouvez gérer les pop-up menus image par l’intermédiaire de méthodes. Vous pouvez gérer les pop-up menus image par l’intermédiaire de méthodes. et zéro (0) si aucun élément n’est sélectionné. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
+Vous pouvez gérer les pop-up menus image par l’intermédiaire de méthodes. A l’instar des [grilles de boutons](buttonGrid_overview.md), les variables associées au pop-up menu image prennent comme valeur le numéro de l’élément sélectionné. Si aucun élément n'est sélectionné, la valeur est 0. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
 
 ### Aller à page
 
-You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) to a picture pop-up menu. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant à la position de l'image sélectionnée dans le tableau d'images. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
+Vous pouvez assigner l'[action standard `gotoPage`](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) à un pop up menu image. Lorsque cette action est activée, 4D affiche automatiquement la page du formulaire correspondant à la position de l'image sélectionnée dans le tableau d'images. Les éléments sont numérotés de gauche à droite et de haut en bas, à compter de l’élément situé en haut à gauche.
 
 Par exemple, si l’utilisateur clique sur le 3e élément, 4D affichera la page 3 du formulaire courant (si elle existe).
 Si vous souhaitez gérer vous-même l’effet du clic, conservez l’option par défaut `Pas d’action`.

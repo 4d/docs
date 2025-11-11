@@ -9,9 +9,9 @@ Il est possible de créer plusieurs zones web dans un même formulaire. Notez to
 
 Plusieurs [actions standard](#standard-actions), de nombreuses [commandes du langage](../category/web-area) ainsi que des [événements formulaire](#form-events) génériques et spécifiques permettent au développeur de contrôler le fonctionnement des zones web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
 
-:::info Displaying Qodly pages
+:::info Affichage des pages Qodly
 
-In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
+Dans les applications client/serveur 4D, les zones Web peuvent être utilisées pour afficher des pages Qodly et [partager la session distante](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). Cette fonctionnalité vous permet de concevoir des interfaces web pour vos applications desktop client/serveur.
 
 :::
 
@@ -24,7 +24,7 @@ Deux variables spécifiques sont automatiquement associées à chaque zone web :
 - [`URL`](properties_WebArea.md#url) --pour contrôler l'URL affichée par la zone web
 - [`Progression`](properties_WebArea.md#progression) -- pour contrôler le pourcentage de chargement de la page affichée dans la zone web.
 
-> Depuis 4D v19 R5, la variable Progression n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu système Windows](./webArea_overview.md#web-rendering-engine).
+> Depuis 4D 19 R5, la variable Progression n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu système Windows](./webArea_overview.md#web-rendering-engine).
 
 ### Moteur de rendu Web
 
@@ -43,27 +43,27 @@ Lorsque la propriété [Accès aux méthodes 4D](properties_WebArea.md#access-4d
 
 :::
 
-## $4d Object
+## Objet $4d
 
-The [`4D embedded web rendering engine`](properties_WebArea.md#use-embedded-web-rendering-engine) provides a **JavaScript object named `$4d`** in the web area. By default, `$4d` allows access to all 4D project methods using dot notation.
+Le [`moteur de rendu web intégré de 4D`](properties_WebArea.md#use-embedded-web-rendering-engine) fournit un **objet JavaScript nommé `$4d`** dans la zone web. Par défaut, `$4d` permet d'accéder à toutes les méthodes projet 4D en utilisant la notation à points.
 
-For example, calling the `HelloWorld` method in 4D:
+Par exemple, pour appeler la méthode `HelloWorld` dans 4D :
 
 ```js
 $4d.HelloWorld();
 ```
 
-> **Note:** JavaScript is **case-sensitive**, so the object is named **`$4d`** (with a lowercase "d").
+> **Note:** JavaScript est **sensible à la casse**, l'objet est donc écrit **`$4d`** (avec un "d" minuscule).
 
-### Controlling $4d Access
+### Contrôle de l'accès au $4d
 
-With [`WA SET CONTEXT`](../commands/wa-set-context.md), developers can control what can be available through `$4d` from a Web Area. Using this command you define a **context object** that declares for example 4D methods through formulas and class instances.
+Avec [`WA SET CONTEXT`](../commands/wa-set-context.md), les développeurs peuvent contrôler ce qui peut être disponible via `$4d` à partir d'une zone Web. Cette commande permet de définir un **objet contexte** qui déclare, par exemple, les méthodes 4D via des formules et des instances de classe.
 
-To check the currently defined context, use [`WA Get context`](../commands/wa-get-context.md).
+Pour connaître le contexte défini courant, utilisez [`WA Get context`](../commands/wa-get-context.md).
 
-For more information, please refer to [`WA SET CONTEXT`](../commands/wa-set-context.md).
+Pour plus d'informations, veuillez consulter la commande [`WA SET CONTEXT`](../commands/wa-set-context.md).
 
-### Calling 4D Methods from JavaScript
+### Appel des méthodes 4D depuis JavaScript
 
 La syntaxe des appels aux méthodes 4D est la suivante :
 
@@ -76,9 +76,9 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 - `function(result)` : Fonction à passer comme dernier argument. Cette fonction "callback" est appelée de manière synchrone une fois que la méthode 4D a fini de s'exécuter. Elle reçoit le paramètre `result`.
 
-- `result`: Execution result of the 4D method. Ce résultat peut être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
+- `result` : Résultat de l'exécution de la méthode 4D. Ce résultat peut être de n'importe quel type pris en charge par JavaScript (chaîne, numérique, tableau, objet).
 
-> Par défaut, 4D travaille en UTF-8. Lorsque vous retournez du texte contenant des caractères étendus, tels que des caractères avec des accents, assurez-vous que l'encodage de la page affiché dans la zone Web est déclaré en UTF-8, sinon les caractères risquent de ne pas être retournés correctement. Dans ce cas, ajoutez la ligne suivante dans la page HTML pour déclarer l'encodage :
+> Par défaut, 4D travaille en UTF-8. Lorsque vous retournez du texte contenant des caractères étendus, tels que des caractères avec des accents, assurez-vous que l'encodage de la page affichée dans la zone Web est déclaré en UTF-8, sinon les caractères risquent de ne pas être retournés correctement. Dans ce cas, ajoutez la ligne suivante dans la page HTML pour déclarer l'encodage :
 > `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
 #### Exemple 1
@@ -98,7 +98,7 @@ Dans la zone web, la méthode 4D peut être appelée avec la syntaxe suivante :
 $4d.today()
 ```
 
-The 4D method does not receive any parameters but it does return the result to the callback function called by 4D after the execution of the method. Nous souhaitons afficher la date dans la page HTML qui est chargée par la zone web.
+La méthode 4D ne reçoit aucun paramètre, mais elle renvoie le résultat à la fonction de callback (rappel) appelée par 4D après l'exécution de la méthode. Nous souhaitons afficher la date dans la page HTML qui est chargée par la zone web.
 
 Voici le code de la page HTML :
 
@@ -121,25 +121,25 @@ $4d.today(function(result)
 
 #### Exemple 2
 
-Instead of using a standalone method, we can also define a **class** to handle the calculation.
+Instead of using a standalone method, we can also use a class function to handle the calculation.
 
-Define the Class with 4D project method `calcSum` which receives parameters and returns their sum:
+Define a "SumCalculator" 4D user class with a `calcSum` function which receives parameters and returns their sum:
 
 ```4d
-// SumCalculator user class
+// class SumCalculator
 
 Function calcSum(... : Real) -> $sum : Real
-   // receives n Real type parameters
-   // and returns a Real
+   // reçoit n paramètres de type Real
+   // et retourne un Real
   var $i; $n : Integer
   $n := Count parameters
 
-  For ($i; 1; $n)
+  For ($i; 1 ; $n)
     $sum += ${$i}
   End for
 ```
 
-In another method, we create an instance and assign it to $4d
+Dans une autre méthode, nous créons une instance et l'assignons à $4d
 
 ```4d
 var $myCalculator := cs.SumCalculator.new()
@@ -151,13 +151,13 @@ Le code d'exécution JavaScript dans la zone web est le suivant :
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(theSum)
     {
-        var result = theSum // result is 262.5
+        var result = theSum // result vaut 262.5
     });
 ```
 
 ## Actions standard
 
-Quatre actions standard spécifiques sont disponibles pour gérer automatiquement les zones web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques.
+Quatre actions standard spécifiques sont disponibles pour gérer automatiquement les zones web : `Open Back URL`, `Open Forward URL`, `Refresh Current URL` et `Stop Loading URL`. Ces actions peuvent être associées à des boutons ou des commandes de menu et permettre une implémentation rapide d'interfaces Web basiques. Ces actions sont décrites dans [Actions standard](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html).
 
 ## Evénements formulaire
 
@@ -185,7 +185,7 @@ En outre, les zones web prennent en charge les événements formulaire génériq
 Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’interface standard des navigateurs dans la zone web, ce qui lui permet d’interagir avec les autres zones du formulaire :
 
 - **Commandes du menu Edition**: lorsque la zone web a le focus, les commandes du menu **Edition** peuvent être utilisées pour effectuer des actions telles que copier, coller, tout sélectionner, etc. selon la sélection.
-- **Menu contextuel** : Il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. Display of the context menu can be controlled using the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+- **Menu contextuel** : Il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. L'affichage du menu contextuel peut être contrôlé à l'aide de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 - **Glisser-déposer** : L'utilisateur peut glisser et déposer du texte, des images et des documents dans la zone web ou entre une zone web et les objets du formulaire 4D, en fonction des propriétés des objets 4D.
   Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône "interdit" ![](../assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(* ; "warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Dans cet événement, vous pouvez appeler la commande [`WA OPEN URL`](../commands-legacy/wa-open-url.md) ou définir la [variable URL](properties_WebArea.md#url) en réponse à un dépôt de l'utilisateur.
 
@@ -227,7 +227,7 @@ Pour afficher l'inspecteur Web, vous pouvez soit exécuter la commande `WA OPEN 
 
 > Avec le [moteur de rendu système de Windows](properties_WebArea.md#use-embedded-web-rendering-engine), une modification de cette préférence nécessite la prise en compte d'une action de navigation dans la zone (par exemple, un rafraîchissement de la page).
 
-For more information, refer to the description of the [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md) command.
+Pour plus d'informations, reportez-vous à la description de la commande [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md).
 
 Lorsque vous avez effectué les réglages décrits ci-dessus, vous disposez de nouvelles options telles que **Inspecter l'élément** dans le menu contextuel de la zone. Lorsque vous sélectionnez cette option, le débogueur de la zone web est alors affiché.
 

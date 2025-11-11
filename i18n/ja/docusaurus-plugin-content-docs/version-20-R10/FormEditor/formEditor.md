@@ -315,7 +315,7 @@ title: フォームエディター
 
 1. 3つ以上のオブジェクトを選択し、希望する均等配置ツールをクリックします。
 
-2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<br/>![](../assets/en/FormEditor/distributionTool.png)<br/> あるいは <br/>**オブジェクト**メニュー内の**整列** サブメニュー、またはエディターのコンテキストメニューから分配メニューコマンドを選択します。
    4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
 
 "整列と均等配置" ダイアログボックスを用いてオブジェクトを均等に配置するには:

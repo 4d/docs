@@ -55,7 +55,7 @@ Les autres modes disponibles sont les suivants :
 - [Bascule sur passage du curseur](properties_Animation.md#switch-when-roll-over)
 - [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
 - [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
-- [Switch every x seconds](./properties_Animation.md#switch-every-x-seconds)
+- [Défilement toutes les n secondes](./properties_Animation.md#switch-every-x-seconds)
 
 > La [variable associée](properties_Object.md#variable-or-expression) au bouton image renvoie le numéro d'index, dans la table des vignettes, de l'image courante affichée. La numérotation des images dans le tableau débute à 0.
 
