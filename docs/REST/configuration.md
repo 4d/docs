@@ -76,8 +76,8 @@ To remove the REST exposure for a field:
 
 1. Display the Field Inspector in the Structure editor and select the field you want to modify.
 
-2. Uncheck the **Expose as REST resource** for the field.
-	![alt-text](../assets/en/REST/field.png)
+2. Uncheck the **Expose as REST resource** for the field.<br/>
+	![alt-text](../assets/en/REST/field.png)<br/>
 Repeat this for each field whose exposure needs to be modified.
 
 > In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
