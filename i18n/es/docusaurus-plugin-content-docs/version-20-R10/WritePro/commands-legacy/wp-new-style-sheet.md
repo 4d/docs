@@ -35,12 +35,12 @@ Pase un nombre para la hoja de estilo en el parámetro *nomHojaEstilo*. El nombr
 * no debe empezar por "section", que está reservado
 * el carácter "\_" se sustituye por un espacio y se eliminan los espacios finales.
 
-Puede especificar los atributos de la hoja de estilo utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) o la notación de objetos (consulte *Atributos 4D Write Pro*). Para ver la lista de atributos disponibles, consulte la sección *Style sheet attributes*.
+Puede especificar los atributos de la hoja de estilo utilizando el comando [WP SET ATTRIBUTES](../commands/wp-set-attributes.md) o la notación de objetos (consulte *Atributos 4D Write Pro*). Para ver la lista de atributos disponibles, consulte la sección *Atributos de hojas de estilo*.
 
 **Notas**: 
 
 * Una hoja de estilo solo modifica la visualización de un caracter o párrafo, no cómo se almacena en el documento. Si se elimina una hoja de estilo, el texto volverá al estilo predeterminado.
-* Todo atributo de estilo no definido en la nueva hoja de estilo utilizará automáticamente el estilo Normal. Para más información, consulte *Comandos hoja de estilo*.
+* Todo atributo de estilo no definido en la nueva hoja de estilo utilizará automáticamente el estilo Normal. Para más información, consulte la página [*Hojas de estilo*](../user-legacy/stylesheets.md).
 
 ## Ejemplo 
 
