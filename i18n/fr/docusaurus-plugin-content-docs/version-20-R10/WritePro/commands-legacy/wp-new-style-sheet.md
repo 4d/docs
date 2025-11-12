@@ -40,29 +40,29 @@ Vous pouvez indiquer les attributs de la feuille de style à l'aide de la comman
 **Notes** : 
 
 * Une feuille de style modifie uniquement l'affichage d'un caractère ou d'un paragraphe, mais ne modifie pas la façon dont il est stocké dans le document. Si une feuille de style est supprimée, le texte reprendra le style par défaut.
-* Les attributs de style non définis dans la nouvelle feuille de style utiliseront automatiquement le style Normal. Pour plus d'informations, consultez *Commandes feuilles de style*.
+* Les attributs de style non définis dans la nouvelle feuille de style utiliseront automatiquement le style Normal. Pour plus d'informations, voir la [*page Feuilles de style*](../user-legacy/stylesheets.md).
 
 ## Exemple 
 
 Le code suivant crée et définit une feuille de style de paragraphe :
 
 ```4d
- var $styleSheet : Object
- $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Titre principal")
- 
-  //définit les paramètres de la feuille de style
- WP SET ATTRIBUTES($styleSheet;wk font family;"Papyrus")
- WP FIXER ATTRIBUTS($styleSheet;wk font size;"48pt")
- WP FIXER ATTRIBUTS($styleSheet;wk text color;"red")
- WP FIXER ATTRIBUTS($styleSheet;wk text align;wk left)
- 
- 
-  //Appliquer la feuille de style au premier paragraphe
- var $Paragraphs : Collection
- $Paragraphs:=WP Lireéléments(wpArea;wk type paragraph)
- If($Paragraphs.length>0)
-    WP SET ATTRIBUTES($Paragraphs[0];wk style sheet;$styleSheet)
- End if 
+ var $styleSheet : Object
+ $styleSheet:=WP New style sheet(wpArea;wk type paragraph;"Titre principal")
+ 
+  //définit les paramètres de la feuille de style
+ WP SET ATTRIBUTES($styleSheet;wk font family;"Papyrus")
+ WP FIXER ATTRIBUTS($styleSheet;wk font size;"48pt")
+ WP FIXER ATTRIBUTS($styleSheet;wk text color;"red")
+ WP FIXER ATTRIBUTS($styleSheet;wk text align;wk left)
+ 
+ 
+  //Appliquer la feuille de style au premier paragraphe
+ var $Paragraphs : Collection
+ $Paragraphs:=WP Lireéléments(wpArea;wk type paragraph)
+ If($Paragraphs.length>0)
+    WP SET ATTRIBUTES($Paragraphs[0];wk style sheet;$styleSheet)
+ End if 
 ```
 
 ## Voir aussi 
