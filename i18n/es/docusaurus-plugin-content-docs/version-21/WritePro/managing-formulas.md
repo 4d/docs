@@ -177,7 +177,7 @@ Las referencias a fórmulas pueden mostrarse como:
 - symbols
 - names
 
-### Referencias como textos fuente (por defecto)
+### References as source texts (default)
 
 Cuando las fórmulas se muestran como referencias, por defecto el texto fuente de la fórmula aparece en su documento, con un fondo gris por defecto (puede personalizarse usando el selector `wk formula highlight`).
 
@@ -217,7 +217,7 @@ Si asigna nombres a las fórmulas, se mostrarán en lugar de los textos:
 
 ![](../assets/en/WritePro/wp-formulas6.png)
 
-Para asignar un nombre a una fórmula, debe utilizar el comando [WP Insert formula](commands/wp-insert-formula.md) con un parámetro objeto. Por ejemplo:
+Pour attribuer un nom à une formule, vous devez utiliser la commande [WP Insert formula](commands/wp-insert-formula.md) avec un paramètre objet. Par exemple :
 
 ```4d
   //inserta el día anterior en el documento
@@ -254,7 +254,7 @@ En este contexto, puede visualizar el texto fuente de la fórmula pulsando **Ctr
 
   !&#x20;
 
-#### Ver también
+#### Voir également
 
 [Descargar base de datos HDI](http://download.4d.com/Demos/4D_v16/HDI_4DWP_Filter4DExpressions.zip)</br>
 *Usar comandos del tema Texto con estilo*
