@@ -158,3 +158,10 @@ summary {
 .table-of-contents__link{
   font-size: 12.2px;
 }
+
+[data-theme='light'] .DocSearch {
+ --docsearch-key-background: var(--ifm-color-secondary-darkest);
+ --docsearch-text-color: var(--ifm-font-color-base);
+ --docsearch-searchicon-color: var(--ifm-color-secondary-darkest);
+ --docsearch-searchbox-background: var(--ifm-color-primary);
+}
