@@ -101,7 +101,7 @@ You want to create a method that returns **True** if the command, whose number i
  End if
 ```
 
-Then, for the "SAVE RECORD" command (53) for example, you can write:
+Luego, para el comando "SAVE RECORD" (53) por ejemplo, puede escribir:
 
 ```4d
  $isSafe:=Is_Thread_Safe(53)

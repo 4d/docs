@@ -77,9 +77,9 @@ El formulario puede contener [áreas de encabezado adicionales](#additional-area
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos                                        | Valores posibles                                                                                                               |
-| ------------ | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Valor mínimo: 0 |
+| Nombre       | Tipos de datos                                        | Valores posibles                                                                                                                                          |
+| ------------ | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerHeader | integer &#x7c; integer collection | Posición del marcador del encabezado o colección de posiciones del marcador de encabezado en píxeles.<br/>Valor mínimo: 0 |
 
 ## Áreas adicionales
 

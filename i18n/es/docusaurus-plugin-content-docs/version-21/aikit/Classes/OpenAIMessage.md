@@ -12,7 +12,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | Propiedad      | Tipo       | Descripción                                                                                                                                                         |
 | -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `rol`          | Text       | The role of the message (e.g., "user", "assistant", "system", "tool").                           |
-| `contenido`    | Variant    | The content of the message, which can be a text or a collection of objects.                                                                         |
+| `contenido`    | Variant    | El contenido del mensaje, que puede ser un texto o una colección de objetos.                                                                        |
 | `user`         | Text       | An optional property representing the user associated with the message.                                                                             |
 | `tool_calls`   | Collection | A collection of tool calls requested by the assistant. Cada llamada a una herramienta contiene un objeto `id`, `type` y `function`. |
 | `tool_call_id` | Text       | El ID de la llamada a la herramienta a la que responde este mensaje (se utiliza cuando `role` es "tool").                        |

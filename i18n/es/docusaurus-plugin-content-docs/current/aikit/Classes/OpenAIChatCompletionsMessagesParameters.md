@@ -13,7 +13,7 @@ title: OpenAIChatCompletionsMessagesParameters
 
 | Propiedad | Tipo    | Valor por defecto | Descripción                                                                                                                                                                       |
 | --------- | ------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `after`   | Text    | ""                | Identifier for the last message from the previous pagination request.                                                                                             |
+| `after`   | Text    | ""                | Identificador para el último mensaje de la solicitud de paginación anterior.                                                                                      |
 | `limit`   | Integer | 0                 | Número de mensajes a recuperar.                                                                                                                                   |
 | `order`   | Text    | "asc"             | Ordenar los mensajes por fecha y hora. Utilice `asc` para el orden ascendente o `desc` para el descendente. Por defecto es `asc`. |
 

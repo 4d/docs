@@ -424,7 +424,7 @@ En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `
 
 ## Convenciones de escritura
 
-The following conventions are used in the 4D language documentation:
+Las siguientes convenciones se utilizan en la documentación del lenguaje 4D:
 
 - los caracteres{ }`(llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\` significa que el parámetro *option* puede omitirse al llamar a la función.
 - la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.

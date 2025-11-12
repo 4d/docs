@@ -33,7 +33,7 @@ La arquitectura de carpetas "Contents" se recomienda para los componentes si des
 
 ## Componentes hechos por 4D
 
-4D includes a set of components developed in-house. They can also be found in the [4D github repository](https://github.com/4d).
+4D incluye un conjunto de componentes desarrollados internamente. También se pueden encontrar en el [repositorio github 4D](https://github.com/4d).
 
 | Componente                                                          | Descripción                                                                                                                                                           | Principales funcionalidades                                                                                                             |
 | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |

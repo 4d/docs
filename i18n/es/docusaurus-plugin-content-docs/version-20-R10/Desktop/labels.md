@@ -138,7 +138,7 @@ The Layout page contains controls for printing labels based on the requirements 
   **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
 - **Unit**: Changes the units in which you specify your label and label page measurements. Puede utilizar puntos, milímetros, centímetros o pulgadas.
 - **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. Los parámetros Ancho y Alto ya no pueden ajustarse manualmente.
-- **Width** and **Height**: Sets the height and width of each label manually. They cannot be edited when the **Automatic resizing** option is checked.
+- **Ancho** y **Alto**: define la altura y el ancho de cada etiqueta manualmente. They cannot be edited when the **Automatic resizing** option is checked.
 - **Márgenes** (Superior, Derecho, Izquierdo, Inferior): define los márgenes de su hoja. Estos márgenes son simbolizados por líneas azules en el área de vista previa. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
 - **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
 - **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
@@ -154,7 +154,7 @@ The **For each: Record or Label** options are used to specify whether to run the
 
 :::
 
-- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. También puede utilizar esta zona para designar la primera etiqueta de la página que se va a imprimir (esta opción sólo afecta a la primera hoja en caso de impresión multipágina). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. You can also select the first label on the page to be printed by clicking on it:
+- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. También puede utilizar esta zona para designar la primera etiqueta de la página que se va a imprimir (esta opción sólo afecta a la primera hoja en caso de impresión multipágina). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. También puede seleccionar la primera etiqueta en la página a imprimir haciendo clic en ella:
 
 ![](../assets/en/Desktop/label-start.png)
 
@@ -185,10 +185,10 @@ You can use dedicated table forms and project methods to print labels with calcu
 5. Open the Label editor and use your form:
    ![](../assets/en/Desktop/label-example2.png)
 
-6. In the Layout page, select the method:
+6. En la página Diseño, seleccione el método:
    ![](../assets/en/Desktop/label-example3.png)
 
-Then you can print your labels:
+Luego puede imprimir sus etiquetas:
 ![](../assets/en/Desktop/label-example4.png)
 
 ## Control de los formularios y métodos disponibles

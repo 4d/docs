@@ -267,16 +267,16 @@ El token OTP se considera inválido si:
 - el token de sesión no existe,
 - la propia sesión original ha caducado.
 
-In this case, no web user session is restored and the current session (if any) is left unchanged. Usually, you can decide to display a login page or to open a guest session.
+In this case, no web user session is restored and the current session (if any) is left unchanged. Normalmente, puede decidir mostrar una página de conexión o abrir una sesión guest.
 
-Verifying if the received OTP token is valid depends on how it was handled:
+La verificación de la validez del token OTP recibido depende de cómo fue manejado:
 
 - Si utilizó un `$4DSID`, puede almacenar una propiedad de estado personalizada en el [almacenamiento de sesión](../API/SessionClass.md#storage) en el momento de la creación de tokens, y compruebe este estado una vez que el token OTP fue recibido para ver si es el mismo valor (ver ejemplo).
 - Si uso la función [`Session.restore()`](../API/SessionClass.md#restore), devuelve true si la sesión se restauró correctamente.
 
 ### Escenario con $4DSID
 
-The scenario using the `$4DSID` key is illustrated in the following diagram:
+El escenario utilizando la clave `$4DSID` se ilustra en el siguiente diagrama:
 
 ```mermaid
 sequenceDiagram

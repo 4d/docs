@@ -5,7 +5,7 @@ title: OpenAIError Class
 
 # OpenAIError Class
 
-The `OpenAIError` class is designed to handle errors returned by the OpenAI API. It extracts relevant information from the error response and provides methods to access this information.
+La clase `OpenAIError` está diseñada para manejar errores devueltos por la API OpenAI. It extracts relevant information from the error response and provides methods to access this information.
 
 ## Propiedades
 

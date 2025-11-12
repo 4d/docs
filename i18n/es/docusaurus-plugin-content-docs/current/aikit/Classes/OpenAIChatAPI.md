@@ -28,5 +28,5 @@ The `OpenAIChatAPI` class provides an interface to interact with OpenAI's chat b
 #### Ejemplo de Uso
 
 ```4D
-var $chatHelper:=$client.chat.create("You are a helpful assistant.")
+var $chatHelper:=$client.chat.create("Eres un asistente útil.")
 ```

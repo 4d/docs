@@ -11,7 +11,7 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ### Propiedades de retrollamada asíncrona
 
-Use this callback property to receive the result regardless of success or error:
+Utilice esta propiedad de retrollamada para recibir el resultado independientemente del éxito o error:
 
 | Propiedad                                         | Tipo                        | Descripción                                                                                                                                  |
 | ------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |

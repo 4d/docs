@@ -27,12 +27,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Call chain.Summary-->The **Call chain** command returns a collection of objects describing each step of the method call chain within the current process.<!-- END REF--> Ofrece la misma información que la ventana Depurador. It has the added benefit of being able to be executed from any 4D environment, including compiled mode.
 
-The command facilitates debugging by enabling the identification of the method or formula called, the component that called it, and the line number where the call was made. Each object in the returned collection contains the following properties:
+The command facilitates debugging by enabling the identification of the method or formula called, the component that called it, and the line number where the call was made. Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
 | **Propiedad** | **Tipo**                            | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | **Ejemplo**                              |
 | ------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
 | database      | Text                                | Name of the database calling the method (to distinguish host methods and component methods)                                                                                                                                                                                                                                                                                                                                                                                                                | "database":"contactInfo" |
-| formula       | Text (si lo hay) | Contents of the current line of code at the current level of the call chain (raw text). Corresponde al contenido de la línea referenciada por la propiedad `line` en el archivo fuente indicado por el método. If the source code is not available, `formula` property is omitted (Undefined).                                                                                                                                          | "var $stack:=Call chain" |
+| formula       | Text (si lo hay) | Contents of the current line of code at the current level of the call chain (raw text). Corresponde al contenido de la línea referenciada por la propiedad `line` en el archivo fuente indicado por el método. Si el código fuente no está disponible, la propiedad `formula` se omite (Undefined).                                                                                                                                     | "var $stack:=Call chain" |
 | línea         | Integer                             | Número de línea de llamada al método                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | "line":6                 |
 | name          | Text                                | Nombre del método llamado                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | "name":"On Load"         |
 | type          | Text                                | Type of the method: <li>"projectMethod"</li><li>"formObjectMethod"</li><li>"formmethod"</li><li>"databaseMethod"</li><li>"triggerMethod"</li><li>"executeOnServer" (when calling a project method with the *Execute on Server attribute*)</li><li> "executeFormula" (when executing a formula via [PROCESS 4D TAGS](../commands-legacy/process-4d-tags.md) or the evaluation of a formula in a 4D Write Pro document)</li><li>"classFunction"</li><li>"formMethod"</li> | "type":"formMethod"      |
@@ -52,7 +52,7 @@ var $currentCallChain : Collection
 $currentCallChain:=Call chain
 ```
 
-If a project method is executed, the call chain could contain (for example):
+Si se ejecuta un método proyecto, la cadena de llamadas podría contener (por ejemplo):
 
 ```json
 [
@@ -65,7 +65,7 @@ If a project method is executed, the call chain could contain (for example):
 ]
 ```
 
-If a form object method is executed, the call chain could contain (for example):
+Si un método objeto de formulario se ejecuta, la cadena de llamadas podría contener (por ejemplo):
 
 ```json
 [

@@ -763,11 +763,11 @@ La función `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary --
 - En el parámetro *privileges*, pase una colección de cadenas que contengan nombres de privilegios.
 - En el parámetro *settings*, pase un objeto que contenga las siguientes propiedades:
 
-| Propiedad  | Tipo              | Descripción                                                                                                                                                                                          |
-| ---------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>                                                                            |
-| roles      | Text o Collection | <li>Cadena que contiene un rol, o</li><li>Colección de cadenas que contienen roles</li>                                                                                                              |
-| userName   | Text              | User name to associate to the session (optional, web sessions only). No disponible en sesiones de clientes remotos (ignorada). |
+| Propiedad  | Tipo              | Descripción                                                                                                                                                                                                           |
+| ---------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| privileges | Text o Collection | <li>Cadena que contiene un nombre de privilegio, o</li><li>Colección de cadenas que contienen nombres de privilegios</li>                                                                                             |
+| roles      | Text o Collection | <li>Cadena que contiene un rol, o</li><li>Colección de cadenas que contienen roles</li>                                                                                                                               |
+| userName   | Text              | Nombre de usuario a asociar a la sesión (opcional, únicamente para las sesiones web). No disponible en sesiones de clientes remotos (ignorada). |
 
 :::note
 

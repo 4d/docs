@@ -5,16 +5,16 @@ title: OpenAI
 
 # OpenAI
 
-The `OpenAI` class provides a client for accessing various OpenAI API resources. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
+La clase `OpenAI` proporciona un cliente para acceder a varios recursos de la API OpenAI. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
 
 ## Propiedades de configuración
 
-| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional                                                  |
-| ---------------------- | ---- | ---------------------------------------------------------------------------- | --------------------------------------------------------- |
-| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | Puede ser requerido por el proveedor                      |
-| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Yes (if omitted = use OpenAI Platform) |
-| `organization`         | Text | Su ID de organización OpenAI.                                | Sí                                                        |
-| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí                                                        |
+| Nombre de la propiedad | Tipo | Descripción                                                                  | Opcional                                                            |
+| ---------------------- | ---- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `apiKey`               | Text | Su [llave OpenAI API](https://platform.openai.com/api-keys). | Puede ser requerido por el proveedor                                |
+| `baseURL`              | Text | URL base para las peticiones de la API OpenAI.               | Sí (si se omite = utilizar la plataforma OpenAI) |
+| `organization`         | Text | Su ID de organización OpenAI.                                | Sí                                                                  |
+| `project`              | Text | Su ID de proyecto OpenAI.                                    | Sí                                                                  |
 
 ### Propiedades HTTP adicionales
 

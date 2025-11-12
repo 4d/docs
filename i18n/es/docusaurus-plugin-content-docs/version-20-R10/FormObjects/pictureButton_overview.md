@@ -54,7 +54,7 @@ Hay otros modos disponibles:
 - [Alternar al pasar el ratón por encima](properties_Animation.md#switch-when-roll-over)
 - [Alternar continuamente al hacer clic](properties_Animation.md#switch-continuously-on-clicks)
 - [Usar último fotograma como desactivado](properties_Animation.md#use-last-frame-as-disabled)
-- [Switch every x seconds](./properties_Animation.md#switch-every-x-seconds)
+- [Cambiar cada x segundos](./properties_Animation.md#switch-every-x-seconds)
 
 > [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displa La numeración de las imágenes en la tabla empieza por 0. La numeración de las imágenes en la tabla empieza por 0.
 

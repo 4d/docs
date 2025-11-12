@@ -114,7 +114,7 @@ Aquí, *\[Client\]Debt* se compara con *1000$*. El comando Num aplicado a estas 
 
 ## Ejemplo 3
 
-This example compares the results obtained depending on the “current” separator:
+Este ejemplo compara los resultados obtenidos dependiendo del separador “actual”:
 
 ```4d
  $thestring:="33,333.33"
