@@ -453,7 +453,9 @@ If (This.userManualPath#"")
 	// The user manual document file is created on the disk
 	// This may fail if no more space is available
 	Try
-		$fileCreated:=$userManualFile.create() 
+        // The file content has been generated and stored in a map in Storage.docMap previously
+	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
+        $userManualFile.setContent($docInfo.content)
 	Catch
 		// No more room on disk for example
 		$result:={/
@@ -467,6 +469,11 @@ return $result
 
 ```
 
+:::note
+
+The content of the file is generated outside the `saving` event because it can be time consuming.
+
+:::
 
 
 ### `Function event afterSave`
