@@ -17,11 +17,11 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.SELECT LOG FILE.Summary-->The **SELECT LOG FILE** command creates, or closes the log file according to the value you pass in parameter<!-- END REF-->.
+<!--REF #_command_.SELECT LOG FILE.Summary-->El comando **SELECT LOG FILE** crea o cierra el archivo de historial de acuerdo al valor que pase en el parámetro<!-- END REF-->.
 
-In *logFile*, pass the name or the full pathname of the log file to be created. If you only pass a name, the file will be created in the "Logs" folder of the database located next to the database structure file.
+En *logFile*, pase el nombre o la ruta completa del archivo de registro a ser creado. If you only pass a name, the file will be created in the "Logs" folder of the database located next to the database structure file.
 
-If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save File dialog box, allowing the user to choose the name and location of the log file to be created. Si el archivo se crea correctamente, la variable OK toma el valor 1. Otherwise, if the user clicks Cancel or if the log file could not be created, OK is set to 0.
+If you pass an empty string in *logFile*, **SELECT LOG FILE** presents an Save File dialog box, allowing the user to choose the name and location of the log file to be created. Si el archivo se crea correctamente, la variable OK toma el valor 1. De lo contrario, si el usuario hace clic en Cancelar o si el archivo de registro no pudo ser creado, OK toma el valor 0.
 
 **Note:** The new log file is not generated immediately after execution of the command, but after the next backup (the parameter is kept in the data file and will be taken into account even if the database is closed in the meantime) or a call to the [New log file](new-log-file.md) command. Puede llamar al comando [BACKUP](../commands-legacy/backup.md) para activar la creación del archivo de registro.
 

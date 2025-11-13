@@ -327,11 +327,11 @@ Function event validateSave <attributeName>($event : Object)
 Este evento se activa cada vez que una entidad está a punto de ser guardada.
 
 - si define la función a nivel de entidad (primera sintaxis), se llama para cualquier atributo de la entidad.
-- si definió la función en el nivel de atributo (segunda sintaxis), sólo se llama para este atributo. This function is **not** executed if the attribute has not been touched in the entity.
+- si definió la función en el nivel de atributo (segunda sintaxis), sólo se llama para este atributo. Esta función **no** se ejecuta si el atributo no ha sido tocado en la entidad.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
-This event is triggered by the following functions:
+Este evento es activado por las siguientes funciones:
 
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
@@ -348,7 +348,7 @@ No se recomienda actualizar la entidad dentro de esta función (utilizando `This
 
 #### Ejemplo
 
-In this example, it is not allowed to save a product with a margin lower than 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
+En este ejemplo, no se permite guardar un producto con un margen inferior al 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
 
 ```4d
 // ProductsEntity class
@@ -374,22 +374,22 @@ return $result
 ```4d
 Function event saving($event : Object)
 Function event saving <attributeName>($event : Object)
-// code
+// código
 ```
 
 Este evento se activa cada vez que se guarda una entidad.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity. The function is executed even if no attribute has been touched in the entity (e.g. in case of sending data to an external app each time a save is done).
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute. The function is **not** executed if the attribute has not been touched in the entity.
+- Si define la función a nivel de entidad (primera Sintaxis), se llama para cualquier atributo de la entidad. The function is executed even if no attribute has been touched in the entity (e.g. in case of sending data to an external app each time a save is done).
+- If you defined the function at the attribute level (second syntax), it is called only for this attribute. La función **no** se ejecuta si el atributo no ha sido tocado en la entidad.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
-This event is triggered by the following functions:
+Este evento es activado por las siguientes funciones:
 
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-Este evento se activa **mientras** la entidad se guarda. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. For example, you can use this event to create a document on a Google Drive account.
+Este evento se activa **mientras** la entidad se guarda. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. Por ejemplo, puede utilizar este evento para crear un documento en una cuenta de Google Drive.
 
 :::note
 
@@ -397,13 +397,13 @@ The business logic should raise errors which can't be detected during the `valid
 
 :::
 
-During the save action, 4D engine errors can be raised (index, stamp has changed, not enough space on disk).
+Durante la acción de guardar, se pueden producir errores en el motor 4D (índice, sello ha cambiado, no hay suficiente espacio en el disco).
 
 To stop the action, the code of the function must return an [error object](#error-object).
 
 #### Ejemplo
 
-When a file is saved on disk, catch errors related to disk space for example.
+Cuando se guarda un archivo en el disco, por ejemplo, se capturan errores relacionados con el espacio de disco.
 
 ```4d
 // ProductsEntity class
@@ -443,14 +443,14 @@ Función evento afterSave($event : Object)
 // código
 ```
 
-This event is triggered just after an entity is saved in the data file, when at least one attribute was modified. It is not executed if no attribute has been touched in the entity.
+This event is triggered just after an entity is saved in the data file, when at least one attribute was modified. No se ejecuta si no se ha tocado ningún atributo en la entidad.
 
-This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. For example, it can be used to send a confirmation email after data have been saved. Or, in case of error while saving data, it can make a rollback to restore a consistent state of data.
+This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. Por ejemplo, se puede utilizar para enviar un correo electrónico de confirmación después de guardar los datos. O, en caso de error al guardar los datos, puede hacer una cancelación para restaurar un estado consistente de los datos.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
 - To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
-- Throwing an [error object](#error-object) is **not supported** by this function.
+- Arrojar un [objeto error](#error-object) **no es soportado** por esta función.
 
 #### Ejemplo
 
@@ -483,9 +483,9 @@ Function event validateDrop <attributeName>($event : Object)
 // código
 ```
 
-This event is triggered each time an entity is about to be dropped.
+Este evento se activa cada vez que una entidad está a punto de ser soltada.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
+- Si define la función a nivel de entidad (primera Sintaxis), se llama para cualquier atributo de la entidad.
 - If you defined the function at the attribute level (second syntax), it is called only for this attribute.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
@@ -532,7 +532,7 @@ Function event dropping <attributeName>($event : Object)
 
 Este evento se activa cada vez que se elimina una entidad.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
+- Si define la función a nivel de entidad (primera Sintaxis), se llama para cualquier atributo de la entidad.
 - If you defined the function at the attribute level (second syntax), it is called only for this attribute.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
@@ -555,7 +555,7 @@ To stop the action, the code of the function must return an [error object](#erro
 
 #### Ejemplo
 
-Here is an example of `dropping` event at entity level:
+Estes es un ejemplo del evento `dropping` a nivel de entidad:
 
 ```4d
 // ProductsEntity class
@@ -589,18 +589,18 @@ Function event afterDrop($event : Object)
 // código
 ```
 
-This event is triggered just after an entity is dropped.
+Este evento se activa justo después de que una entidad es soltada.
 
-This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. For example, it can be used to send a cancellation email after data have been dropped. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
+This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. Por ejemplo, se puede utilizar para enviar un correo electrónico de cancelación después de soltar los datos. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
 - To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. Se producirá un error.
-- Throwing an [error object](#error-object) is **not supported** by this function.
+- Arrojar un [objeto error](#error-object) **no es soportado** por esta función.
 
 :::note
 
-The dropped entity is referenced by `This` and still exists in memory.
+La entidad eliminada es referenciada por `This` y aún existe en memoria.
 
 :::
 

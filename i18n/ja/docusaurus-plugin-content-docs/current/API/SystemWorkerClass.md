@@ -161,7 +161,7 @@ var $sw : 4D.SystemWorker
 $sw:=4D.SystemWorker.new($mydoc)
 ```
 
-4. カレントディレクトリでコマンドを実行し、メッセージそ送信します:
+4. カレントディレクトリでコマンドを実行し、メッセージを送信します:
 
 ```4d
 var $param : Object

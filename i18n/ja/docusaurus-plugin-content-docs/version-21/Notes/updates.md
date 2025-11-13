@@ -16,6 +16,7 @@ title: リリースノート
   - Web サーバーの[`start()`](../API/WebServerClass.md#start) 関数の*settings* 引数内の`handlers` プロパティを使用することで、[HTTP リクエストハンドラー](../WebServer/http-request-handler.md) を設定することができます。
   - Web サーバーオブジェクトには新しい[`rules`](../API/WebServerClass.md#rules) and [`handlers`](../API/WebServerClass.md#handlers) プロパティが含まれます。
 - 新しい[データに対するORDA イベント](../ORDA/orda-events.md): validateSave、saving、afterSave、validateDrop、dropping、afterDrop
+- Support of the new [`restrictedByDefault` property](../ORDA/privileges.md#restriction-modes) in the `roles.json` file to block access by default to all resources without explicit permission.
 - [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) および [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew) クラスにおいて、ローカルの証明書フォルダの代わりにWindows 証明書ストアからの証明書を使用することを許可する新しいオプション。
 - クライアント/サーバー:
   - Web エリア内でQodly ページを表示し、[リモートクライアントセッションを共有](../Desktop/clientServer.md#web-エリア内のqodly-ページでセッションを共有する)することができるようになりました。

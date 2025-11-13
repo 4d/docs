@@ -201,7 +201,7 @@ Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプシ
 
 :::
 
-#### Assigning permissions to ORDA class functions
+#### ORDA クラス関数の権限の設定
 
 When configuring permissions, ORDA class functions are declared in the `applyTo` element using the following syntax:
 
@@ -218,7 +218,7 @@ Class extends Entity
    ...
 ```
 
-... you have to write:
+... 以下のように記述します:
 
 ```json
 "applyTo":"City.getPopulation"

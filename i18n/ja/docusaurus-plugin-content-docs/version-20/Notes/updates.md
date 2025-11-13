@@ -11,6 +11,14 @@ title: リリースノート
 :::
 
 
+## 4D 20.8 LTS
+
+#### ハイライト
+
+- [**修正リスト**](https://bugs.4d.com/fixes?version=20.8): 4D 20.8 LTS で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2024/276/release-note-version-20/))。
+
+
+
 ## 4D 20.7 LTS
 
 #### ハイライト

@@ -70,8 +70,8 @@ REST 経由でアクセス可能なデータストアオブジェクトを制限
 
 1. ストラクチャーエディターにて対象となるフィールドを選択し、右クリックでコンテキストメニューを開いてフィールドプロパティを選択します。
 
-2. フィールドの **RESTリソースとして公開** オプションの選択を解除します:
-   ![alt-text](../assets/en/REST/field.png)
+2. Uncheck the **Expose as REST resource** for the field.<br/>
+   ![alt-text](../assets/en/REST/field.png)<br/>
    Repeat this for each field whose exposure needs to be modified.
 
 > あるフィールドが REST を通してアクセス可能であるためには、その親テーブルも公開されている必要があります。 親テーブルが公開されていない場合、各フィールドの公開設定に関わらず、すべてのフィールドがアクセス不可になります。

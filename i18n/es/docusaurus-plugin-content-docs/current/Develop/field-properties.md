@@ -17,7 +17,7 @@ Puede introducir cualquier nombre de clase válido en esta propiedad, incluyendo
 - Clases 4D integradas (por ejemplo, `4D.File`, `4D.Folder`)
 - [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
 
-If you enter an invalid class name, a warning is triggered and the input is rejected.
+Si introduce un nombre de clase inválido, se activa una advertencia y se rechaza la entrada.
 
 :::note
 
@@ -25,7 +25,7 @@ If you enter an invalid class name, a warning is triggered and the input is reje
 
 :::
 
-In your code, when assigning a value to a class-typed object field, 4D verifies that it belongs to the declared class. Si no es así o si el objeto no tiene clase, se produce un error. El acceso a atributos desconocidos también provocará errores de sintaxis.
+En su código, al asignar un valor a un campo de tipo clase de objeto, 4D verifica que pertenece a la clase declarada. Si no es así o si el objeto no tiene clase, se produce un error. El acceso a atributos desconocidos también provocará errores de sintaxis.
 
 To retrieve the associated class name at runtime, use the [`classID`](../API/DataClassClass.md#attributename) property, for example `ds.MyTable.MyField.classID`.
 

@@ -127,22 +127,22 @@ El lado derecho de la barra de herramientas contiene comandos utilizados para mo
 
 ## Página Diseño
 
-The Layout page contains controls for printing labels based on the requirements of your current print settings.
+Esta página contiene los controles para imprimir etiquetas en función de los requisitos de sus parámetros de impresión actuales.
 
 ![](../assets/en/Desktop/label-layout.png)
 
-- **Labels Order**: Specifies whether labels should be printed in the direction of the rows or the columns.
-- **Rows** and **Columns**: Set the number of labels to be printed by "row" and by "column" on each sheet. These settings determine the label size when the "Automatic resizing" option is enabled.
-- **Labels per record**: Sets the number of copies to print for each label (copies are printed consecutively).
-- **Print Setup...**: Sets the format of the page on which the sheet of labels will be printed. When you click this button, the setup dialog box for the printer selected in your system appears. By default, the sheet of labels is generated based on an A4 page in portrait mode.
-  **Note:** The sheet created by the editor is based on the logical page of the printer, i.e. the physical page (for instance, an A4 page) less the margins that cannot be used on each side of the sheet. The physical margins of the page are shown by blue lines in the preview area.
-- **Unit**: Changes the units in which you specify your label and label page measurements. Puede utilizar puntos, milímetros, centímetros o pulgadas.
-- **Automatic resizing**: Means that 4D automatically calculates the size of the labels (i.e. the Width and Height parameters) according to the values set in all the other parameters. When this option is checked, the label size is adjusted each time you modify a page parameter. Los parámetros Ancho y Alto ya no pueden ajustarse manualmente.
-- **Ancho** y **Alto**: define la altura y el ancho de cada etiqueta manualmente. They cannot be edited when the **Automatic resizing** option is checked.
-- **Márgenes** (Superior, Derecho, Izquierdo, Inferior): define los márgenes de su hoja. Estos márgenes son simbolizados por líneas azules en el área de vista previa. Clicking on **Use printer margins** replicates, in the preview area, the margin information provided by the selected printer (these values can be modified).
-- **Gaps**: Set the amount of vertical and/or horizontal space between label rows and columns.
-- **Method**: Lets you trigger a specific method that will be run at print time. For example, you can execute a method that posts the date and time that each label was printed. This feature is also useful when you print labels using a dedicated table form, in which case you can fill variables from a method.
-  To be eligible for label processing, a project method must comply with the following settings:
+- **Orden de etiquetas**: indica si las etiquetas deben imprimirse en la dirección de las líneas o de las columnas.
+- **Líneas** y **Columnas**: defina el número de etiquetas a imprimir por "línea" y "columna" en cada hoja. Estos parámetros determinan las dimensiones de las etiquetas cuando la opción "Dimensiones automáticas" está activada.
+- **Etiquetas por registro**: define el número de copias a imprimir para cada etiqueta (las copias se imprimen consecutivamente).
+- **Formato de impresión...**: formato de la página en la que se imprimirá la hoja de etiquetas. Cuando hace clic en este botón, aparece el cuadro de diálogo de configuración de la impresora seleccionada en su sistema. Por defecto, la hoja de etiquetas se genera basándose en una página A4 en modo retrato.
+  **Nota:** la hoja creada por el editor se basa en la página lógica de la impresora, es decir, la página física (por ejemplo, una hoja A4) menos los márgenes que no se pueden utilizar a cada lado de la hoja. Los márgenes de la página física se representan por las líneas azules en el área de vista previa.
+- **Unidad**: modifica las unidades en las que especifica las medidas de la etiqueta y de la página de etiqueta. Puede utilizar puntos, milímetros, centímetros o pulgadas.
+- **Dimensiones automáticas**: indica que 4D calcula automáticamente el tamaño de las etiquetas (es decir, los parámetros Ancho y Alto) según los valores definidos en todos los demás parámetros. Cuando esta opción está marcada, el tamaño de las etiquetas se recalcula cada vez que se modifica un parámetro en la página. Los parámetros Ancho y Alto ya no pueden ajustarse manualmente.
+- **Ancho** y **Alto**: define la altura y el ancho de cada etiqueta manualmente. No se pueden editar cuando la opción **Dimensionamiento automático** está marcada.
+- **Márgenes** (Superior, Derecho, Izquierdo, Inferior): define los márgenes de su hoja. Estos márgenes son simbolizados por líneas azules en el área de vista previa. Al hacer clic en **Aplicar los márgenes de la impresora** con el fin de replicar, en el área de vista previa, la información de margen proporcionada por la impresora seleccionada (estos valores pueden ser modificados).
+- **Intervalos**: defina el espacio vertical y/o horizontal entre las líneas y columnas de las etiquetas.
+- **Método**: permite activar un método específico que se ejecutará al momento de la impresión. Por ejemplo, puede ejecutar un método que publique la fecha y la hora en que se imprimió cada etiqueta. Esta funcionalidad también es útil cuando se imprimen etiquetas usando un formulario tabla dedicado, en cuyo caso se pueden llenar variables a partir de un método.
+  Para ser elegible para el procesamiento de etiquetas, un método proyecto debe cumplir con las siguientes condiciones:
   - debe ser "permitido" para la base de datos (los métodos permitidos dependen de los [parámetros del proyecto](../settings/security.md#options) y el comando [`SET ALLOWED METHODS`](../commands/set-allowed-methods.md), de lo contrario no se mostrará en el menú **Aplicación**.
   - debe tener la opción [Compartido por componentes y base de datos local](../Project/code-overview.md#shared-by-components-and-host-database).
     Ver también [este ejemplo](#printing-labels-using-forms-and-methods-example) a continuación.
@@ -150,20 +150,20 @@ The Layout page contains controls for printing labels based on the requirements 
 :::note
 
 Para necesidades avanzadas, puede restringir la lista de métodos disponibles utilizando un [archivo json específico](#controlling-available-forms-and-methods).
-The **For each: Record or Label** options are used to specify whether to run the method once per label or once per record. This control has meaning only if you are printing more than one copy of each label and you are also executing a method at print time.
+Las opciones **Para cada: Registro o Etiqueta** permiten especificar si ejecutar el método una vez por etiqueta o una vez por registro. Este control sólo tiene sentido si está imprimiendo más de una copia de cada etiqueta y también está ejecutando un método al momento de la impresión.
 
 :::
 
-- **Layout preview**: Provides a reduced view of how an entire page of labels will look, based on the dimensions you enter in the Label editor. The page preview also reflects the paper size selected in the Print Setup dialog box. También puede utilizar esta zona para designar la primera etiqueta de la página que se va a imprimir (esta opción sólo afecta a la primera hoja en caso de impresión multipágina). This can be useful, for example, when you want to print on a sheet of adhesive labels, part of which has already been used. También puede seleccionar la primera etiqueta en la página a imprimir haciendo clic en ella:
+- **Vista previa del diseño**: permite visualizar en tiempo real las modificaciones que ingrese en el editor de etiquetas. La vista previa de la página también refleja el tamaño de papel seleccionado en el cuadro de diálogo Configuración de la impresión. También puede utilizar esta área para designar la primera etiqueta de la página a imprimir (esta opción solo afecta a la primera hoja en el caso de la impresión multipágina). Esto puede ser útil, por ejemplo, cuando se desea imprimir en una hoja de etiquetas adhesivas, parte de las cuales ya se ha utilizado. También puede seleccionar la primera etiqueta en la página a imprimir haciendo clic en ella:
 
 ![](../assets/en/Desktop/label-start.png)
 
 ## Impresión de etiquetas mediante formularios y métodos (ejemplo)
 
-You can use dedicated table forms and project methods to print labels with calculated variables. This simple example shows how to configure the different elements.
+Puede utilizar formularios de tabla dedicados y métodos proyecto para imprimir etiquetas con variables calculadas. Este ejemplo explica como configurar los diferentes elementos.
 
 1. En un formulario tabla dedicado, añada su(s) campo(s) de etiqueta y su(s) variable(s).
-   Here, in a table form named "label", we added the *myVar* variable:
+   Aquí, en una tabla llamada "etiqueta", sumamos la variable *myVar*:
    ![](../assets/en/Desktop/label-example1.png)
 
 2. Crea un método proyecto llamado `setMyVar` con el siguiente código:
@@ -174,7 +174,7 @@ You can use dedicated table forms and project methods to print labels with calcu
 
 3. Defina el método proyecto como ["Compartido por los componentes y la base de datos local"](../Project/code-overview.md#shared-by-components-and-host-database).
 
-4. Before displaying the Label editor, make sure the project method is allowed by executing this code:
+4. Antes de mostrar el editor de etiquetas, asegúrese de que el método proyecto está autorizado ejecutando este código:
 
 ```4d
  ARRAY TEXT($methods;1)
@@ -182,7 +182,7 @@ You can use dedicated table forms and project methods to print labels with calcu
  SET ALLOWED METHODS($methods)
 ```
 
-5. Open the Label editor and use your form:
+5. Abre el editor de etiquetas y use su formulario:
    ![](../assets/en/Desktop/label-example2.png)
 
 6. En la página Diseño, seleccione el método:
@@ -191,9 +191,9 @@ You can use dedicated table forms and project methods to print labels with calcu
 Luego puede imprimir sus etiquetas:
 ![](../assets/en/Desktop/label-example4.png)
 
-## Control de los formularios y métodos disponibles
+## Definición de los formularios y métodos disponibles
 
-The Label editor includes an advanced feature allowing you to restrict which project forms and methods (within "allowed" methods) can be selected in the dialog box:
+El editor de etiquetas incluye una función avanzada que le permite limitar los formularios y los métodos proyecto (dentro de los métodos "permitidos") pueden seleccionarse en el cuadro de diálogo:
 
 - en el menú **Formulario a utilizar** de la página "Etiqueta" y/o
 - en el menú **Aplicar (método)** de la página "Diseño".

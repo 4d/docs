@@ -15,14 +15,14 @@ https://platform.openai.com/docs/api-reference/embeddings
 
 **create**(*input* : Text; *model*: Text; *parameters* : OpenAIEmbeddingsParameters) : OpenAIEmbeddingsResult
 
-Creates an embeddings for the provided input, model and parameters.
+Crea una representación vectorial para la entrada, el modelo y los parámetros ofrecidos.
 
-| Argumento    | Tipo                                                        | Descripción                                                                                   |
-| ------------ | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                      |
-| *model*      | Text                                                        | The [model to use](https://platform.openai.com/docs/guides/embeddings#embedding-models)       |
-| *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Los parámetros para personalizar la petición de representaciones vectoriales. |
-| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                            |
+| Argumento    | Tipo                                                        | Descripción                                                                                                                                                                                                         |
+| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *entrada*    | Texto o colección de texto                                  | La entrada a vectorizar.                                                                                                                                                                            |
+| *model*      | Text                                                        | El [modelo a utilizar] (https://platform.openai.com/docs/guides/embeddings#embedding-models) |
+| *parámetros* | [OpenAIEmbeddingsParameters](OpenAIEmbeddingsParameters.md) | Los parámetros para personalizar la petición de representaciones vectoriales.                                                                                                                       |
+| Resultado    | [OpenAIEmbeddingsResult](OpenAIEmbeddingsResult.md)         | Las integraciones.                                                                                                                                                                                  |
 
 #### Ejemplos de uso
 

@@ -5,7 +5,7 @@ title: Proveedores
 
 # Proveedores
 
-Many AI providers propose an OpenAI-like API, so you can use this project to connect to them.
+Muchos proveedores de IA proponen una API similar a la de OpenAI, así que puede utilizar este proyecto para conectarse a ellos.
 
 Para ello sólo tiene que definir la `baseURL` a la del proveedor y utilizar su clave api si es necesario.
 

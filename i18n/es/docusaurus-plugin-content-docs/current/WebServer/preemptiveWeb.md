@@ -27,7 +27,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
 - Servidor de servicios web: gestiona las peticiones SOAP
 - ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
-  - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
+  - si las sesiones escalables están activadas, el modo apropiativo se utiliza automáticamente para los procesos web y servicios web.
   - si las sesiones escalables no están activadas:
     - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
     - for web service processes (server or client), preemptive mode is supported at method level.

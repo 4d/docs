@@ -25,7 +25,7 @@ Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la ba
 
 ### Nivel del evento
 
-A entity event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
+Una función de evento de entidad se define siempre en la [clase Entity](../ORDA/ordaClasses.md#entity-class).
 
 Un evento puede definirse al nivel de la **entidad** y/o a nivel del **atributo** (incluye los [**atributos calculados**](../ORDA/ordaClasses.md#computed-attributes)). En el primer caso, se activará para cualquier atributo de la entidad; en el otro caso, sólo se activará para el atributo objetivo.
 
@@ -101,7 +101,7 @@ Este evento se activa tan pronto como el motor de 4D Server / 4D detecta una mod
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
-If this event [throws](../commands-legacy/throw.md) an error, it will not stop the undergoing action.
+Si este evento [genera un error](../commands-legacy/throw.md), no detendrá la acción en curso.
 
 :::note
 

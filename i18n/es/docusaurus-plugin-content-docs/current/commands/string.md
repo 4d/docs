@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.String.Summary-->El comando **String** devuelve en forma de cadena alfanumérica la expresión numérica, fecha, hora, cadena o booleana que se pasa en *expression*.<!-- END REF-->
 
-If you do not pass any other parameter, the string is returned with the appropriate default format. Si pasa *format*, puede forzar que la cadena resultante tenga un formato específico.
+Si no pasa ningún otro parámetro, la cadena se devuelve con el formato apropiado por defecto. Si pasa *format*, puede forzar que la cadena resultante tenga un formato específico.
 
 El parámetro opcional *addTime* añade una hora a una fecha en un formato combinado. Sólo puede utilizarse cuando el parámetro *expression* es una fecha (ver abajo).
 

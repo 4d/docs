@@ -85,7 +85,7 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
  $Value:=LISTBOX Get property(*; "MyListbox";lk selection mode) // el valor devuelto indica el modo de selección
 ```
 
-In this case, the result returned indicates whether multiple rows can be selected.
+En este caso, el resultado devuelto indica si varios registros pueden ser seleccionados.
 
 ## Ejemplo 2
 

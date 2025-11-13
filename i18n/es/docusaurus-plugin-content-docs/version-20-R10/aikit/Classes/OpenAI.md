@@ -5,7 +5,7 @@ title: OpenAI
 
 # OpenAI
 
-La clase `OpenAI` proporciona un cliente para acceder a varios recursos de la API OpenAI. It includes properties for managing API configurations and methods for performing HTTP requests to the OpenAI endpoints.
+La clase `OpenAI` proporciona un cliente para acceder a varios recursos de la API OpenAI. Incluye propiedades de gestión de las configuraciones API y de los métodos para efectuar las peticiones HTTP a los puntos de terminación de OpenAI.
 
 ## Propiedades de configuración
 
@@ -58,7 +58,7 @@ $client.baseURL:="https://server.ai"
 
 ## Recursos API
 
-The API provides access to multiple resources that allow seamless interaction with OpenAI's services. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
+La API ofrece acceso a múltiples recursos que permiten una interacción perfecta con los servicios de OpenAI. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
 
 | Nombre de la propiedad | Tipo                                            | Descripción                                      |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------ |

@@ -124,7 +124,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 - Contraseñas con protocolo BASIC
 - Contraseñas con protocolo DIGEST
 
-Se recomienda utilizar la autenticación **personalizada**. See [**Authentication**](../WebServer/authentication.md) section.
+Se recomienda utilizar la autenticación **personalizada**. Ver la sección[**autenticación**](../WebServer/authentication.md).
 
 #### Generic Web User
 

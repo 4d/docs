@@ -27,27 +27,21 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 
 プロジェクト内の以下のリソースに対して、許諾アクションと権限名を割り当てることができます (この設定をパーミッションと呼びます):
 
-- データストア
-- データクラス
-- 属性 (計算属性およびエイリアス属性を含む)
-- データモデルクラス関数
-- [シングルトン](../REST/$singleton.md)関数
+- the [datastore](../ORDA/dsMapping.md#datastore)
+- the [dataclasses](../ORDA/dsMapping.md#dataclass)
+- [attributes](../ORDA/dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1))
+- functions of the [data model classes](../ORDA/ordaClasses.md)
+- [singleton](../REST/$singleton.md) functions
 
 セッションがリソースにアクセスするたびに (アクセス形式に関係なく)、4D はセッションの権限を確認し、許可されていない場合にはアクセスを拒否します。
 
-あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
+## 権限
 
-- データストアレベルで定義されたパーミッションは、自動的にすべてのデータクラスに割り当てられます。 データストアレベルで定義されたパーミッションは、自動的にすべてのデータクラスに割り当てられます。 データストアレベルで定義された*execute* 権限アクションは、[シングルトン](../REST/$singleton.md) 関数を含めてプロジェクトの全ての関数に対して適用されます。
-- データクラスレベルで定義されたパーミッションは、データストアの設定をオーバーライドします (あれば)。 デフォルトでは、データクラスのすべての属性が、データクラスのパーミッションを継承します。
-- データクラスとは異なり、属性レベルで定義されたパーミッションは、親のデータクラスの設定をオーバーライドするのではなく、それに追加されます。 たとえば、同じ許諾アクションに対し、データクラスのレベルでは "general" という権限名を、データクラスの属性のレベルでは "detail" という権限名を割り当てた場合、その属性にアクセスするには、セッションに "general" と "detail" の両方の権限が設定されている必要があります。
+A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Permissions are defined for the project in the [`roles.json`](#rolesjson-file) file. Each permission can be given to one or more [privileges](#privileges-and-roles).
 
-:::info
+When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
 
-パーミッションは、データストアオブジェクトや関数へのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
-
-:::
-
-## 許諾アクション
+### 許諾アクション
 
 利用可能なアクションは対象となるリソースによります。
 
@@ -72,6 +66,65 @@ Webユーザーまたは RESTユーザーがログインすると、そのセッ
 :::
 
 権限の設定には一貫性が必要です。特に、**update** および **drop** 権限は**read** 権限も必要とします(ただし**create** はそれを必要としません)。
+
+### Inherited permissions
+
+あるレベルにおいて定義されたパーミッションは基本的に下位レベルに継承されますが、パーミッションは複数のレベルで設定することもできます:
+
+- データストアレベルで定義されたパーミッションは、自動的にすべてのデータクラスに割り当てられます。 データストアレベルで定義されたパーミッションは、自動的にすべてのデータクラスに割り当てられます。 データストアレベルで定義された*execute* 権限アクションは、[シングルトン](../REST/$singleton.md) 関数を含めてプロジェクトの全ての関数に対して適用されます。
+- データクラスレベルで定義されたパーミッションは、データストアの設定をオーバーライドします (あれば)。 デフォルトでは、データクラスのすべての属性が、データクラスのパーミッションを継承します。
+- データクラスとは異なり、属性レベルで定義されたパーミッションは、親のデータクラスの設定をオーバーライドするのではなく、それに追加されます。 たとえば、同じ許諾アクションに対し、データクラスのレベルでは "general" という権限名を、データクラスの属性のレベルでは "detail" という権限名を割り当てた場合、その属性にアクセスするには、セッションに "general" と "detail" の両方の権限が設定されている必要があります。
+
+:::info
+
+パーミッションは、データストアオブジェクトや関数へのアクセスを制御します。 特定の条件に基づいて読み取りデータをフィルタリングしたい場合は、[制限付エンティティセレクション](entities.md#制限付エンティティセレクション) の利用がより適切かもしれません。
+
+:::
+
+### ORDA クラス関数の権限の設定
+
+When configuring permissions, ORDA class functions are declared in the `applyTo` element using the following syntax:
+
+```json
+<DataclassName>.<functionName>
+```
+
+For example, if you want to apply a permission to the following function:
+
+```4d
+// cs.CityEntity class
+Class extends Entity
+  Function getPopulation() : Integer
+   ...
+```
+
+... 以下のように記述します:
+
+```json
+"applyTo":"City.getPopulation"
+```
+
+It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. For example, if you have created a "drop" function in both `cs.CityEntity` and `cs.CitySelection` classes, you need to give them different names such as `dropEntity()` and `dropSelection()`. You can then write in the "roles.json" file:
+
+```json
+	"permissions": {
+		"allowed": [
+			{
+				"applyTo": "City.dropEntity",
+				"type": "method",
+				"promote": [
+					"name"
+				]
+			},
+			{
+				"applyTo": "City.dropSelection",
+				"type": "method",
+				"promote": [
+					"name"
+				]
+			}
+    ]
+```
 
 ## 権限とロール
 
@@ -112,142 +165,106 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ## `roles.json` ファイル
 
-`roles.json` ファイルは、プロジェクトのセキュリティ設定の全体を記述します。
+The `roles.json` file describes the whole web security settings for the project. `roles.json` ファイルの構文は次のとおりです:
 
-### デフォルトファイル
-
-プロジェクトを作成すると、デフォルトの `roles.json` ファイルが次の場所に作成されます: `<project folder>/Project/Sources/` ([アーキテクチャー](../Project/architecture.md#sources) 参照)。
-
-デフォルトのファイルには次の内容が含まれています:
-
-```json title="/Project/Sources/roles.json"
-
-{
-    "privileges": [
-        {
-            "privilege": "all",
-            "includes": []
-        }
-    ],
-
-    "roles": [],
-
-    "permissions": {
-        "allowed": [
-            {
-                "applyTo": "ds",
-                "type": "datastore",
-                "read": ["all"],
-                "create": ["all"],
-                "update": ["all"],
-                "drop": ["all"],
-                "execute": ["all"],
-                "promote": ["all"]                
-            }
-        ]
-    },
-
-    "forceLogin": true
-
-}
-
-```
-
-For a highest level of security, the "all" privilege is assigned to all permissions in the datastore, thus data access on the whole `ds` object is disabled by default. The principle is as follows: assigning a permission is like putting a lock on a door. Only sessions with privilege having the corresponding key (i.e., a permission) will be able to open the lock.
-この "none" 権限はセキュリティのため、使用も変更もしないことが推奨されています。Web や RESTリクエストから利用可能にしたい各リソースには、それ専用の権限を新たに追加することが推奨されています ([以下の例を参照](#権限設定の例))。
-
-:::caution
-
-`roles.json` ファイルに特定のパラメーターが定義されていない場合、アクセスは制限されません。 これにより、アクセスを気にすることなくアプリケーションを開発することができますが、本番環境では推奨されていません。
-
-:::
-
-:::note 互換性
-
-以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数を通しての REST認証を有効化** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
-:::
-
-:::note Qodly Studio
-
-Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
-
-:::
-
-### シンタックス
-
-`roles.json` ファイルの構文は次のとおりです:
-
-| プロパティ名      |                                                                                     |                                                                                  | 型                               | 必須 | 説明                                                                                                                 |
-| ----------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
-| privileges  |                                                                                     |                                                                                  | `privilege` オブジェクトの Collection  | X  | 定義された権限のリスト                                                                                                        |
-|             | \[].privilege  |                                                                                  | Text                            |    | アクセス権の名称                                                                                                           |
-|             | \[].includes   |                                                                                  | String の Collection             |    | 内包する権限名のリスト                                                                                                        |
-| roles       |                                                                                     |                                                                                  | `role` オブジェクトの Collection       |    | 定義されたロールのリスト                                                                                                       |
-|             | \[].role       |                                                                                  | Text                            |    | ロール名                                                                                                               |
-|             | \[].privileges |                                                                                  | String の Collection             |    | 内包する権限名のリスト                                                                                                        |
-| permissions |                                                                                     |                                                                                  | Object                          | X  | 設定されたパーミッションのリスト                                                                                                   |
-|             | allowed                                                                             |                                                                                  | `permission` オブジェクトの Collection |    | 許可されたパーミッションのリスト                                                                                                   |
-|             |                                                                                     | \[].applyTo | Text                            | X  | 対象の [リソース](#リソース) 名                                                                                                |
-|             |                                                                                     | \[].type    | Text                            | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton" |
-|             |                                                                                     | \[].read    | String の Collection             |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].create  | String の Collection             |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].update  | String の Collection             |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].drop    | String の Collection             |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].execute | String の Collection             |    | 権限名のリスト                                                                                                            |
-|             |                                                                                     | \[].promote | String の Collection             |    | 権限名のリスト                                                                                                            |
-| forceLogin  |                                                                                     |                                                                                  | Boolean                         |    | ["forceLogin" モード](../REST/authUsers.md#force-login-mode) を有効にする場合は true                                           |
+| プロパティ名              |                                                                                     |                                                                                  | 型                               | 必須 | 説明                                                                                                                 |
+| ------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------- | -- | ------------------------------------------------------------------------------------------------------------------ |
+| privileges          |                                                                                     |                                                                                  | `privilege` オブジェクトの Collection  | X  | 定義された権限のリスト                                                                                                        |
+|                     | \[].privilege  |                                                                                  | Text                            |    | アクセス権の名称                                                                                                           |
+|                     | \[].includes   |                                                                                  | String の Collection             |    | 内包する権限名のリスト                                                                                                        |
+| roles               |                                                                                     |                                                                                  | `role` オブジェクトの Collection       |    | 定義されたロールのリスト                                                                                                       |
+|                     | \[].role       |                                                                                  | Text                            |    | ロール名                                                                                                               |
+|                     | \[].privileges |                                                                                  | String の Collection             |    | 内包する権限名のリスト                                                                                                        |
+| permissions         |                                                                                     |                                                                                  | Object                          | X  | 設定されたパーミッションのリスト                                                                                                   |
+|                     | allowed                                                                             |                                                                                  | `permission` オブジェクトの Collection |    | 許可されたパーミッションのリスト                                                                                                   |
+|                     |                                                                                     | \[].applyTo | Text                            | X  | 対象の [リソース](#リソース) 名                                                                                                |
+|                     |                                                                                     | \[].type    | Text                            | X  | [リソース](#リソース) タイプ: "datastore", "dataclass", "attribute", "method", "singletonMethod", "singleton" |
+|                     |                                                                                     | \[].read    | String の Collection             |    | 権限名のリスト                                                                                                            |
+|                     |                                                                                     | \[].create  | String の Collection             |    | 権限名のリスト                                                                                                            |
+|                     |                                                                                     | \[].update  | String の Collection             |    | 権限名のリスト                                                                                                            |
+|                     |                                                                                     | \[].drop    | String の Collection             |    | 権限名のリスト                                                                                                            |
+|                     |                                                                                     | \[].execute | String の Collection             |    | 権限名のリスト                                                                                                            |
+|                     |                                                                                     | \[].promote | String の Collection             |    | 権限名のリスト                                                                                                            |
+| restrictedByDefault |                                                                                     |                                                                                  | Boolean                         |    | If true, access to resources without explicit permissions is denied                                                |
+| forceLogin          |                                                                                     |                                                                                  | Boolean                         |    | If true, enables ["forceLogin" mode](../REST/authUsers.md#force-login-mode)                                        |
 
 :::caution 注記
 
 - "WebAdmin" 権限名は、アプリケーションによって予約されています。 この名前をカスタムの権限名に使用することは推奨されません。
-- `privileges` および `roles` の名称においては文字の大小が区別されます。
+- `privileges` and `roles` names are case-insensitive.
 
 :::
 
-#### Assigning permissions to ORDA class functions
+### Default File Location and Content
 
-When configuring permissions, ORDA class functions are declared in the `applyTo` element using the following syntax:
+When a new project is created, a default `roles.json` file is generated at:
 
-```json
-<DataclassName>.<functionName>
+```
+<project folder>/Project/Sources/ 
 ```
 
-For example, if you want to apply a permission to the following function:
+[アーキテクチャー](../Project/architecture.md#sources) を参照ください。
 
-```4d
-// cs.CityEntity class
-Class extends Entity
-  Function getPopulation() : Integer
-   ...
-```
+Default content:
 
-... you have to write:
+```json title="/Project/Sources/roles.json"
 
-```json
-"applyTo":"City.getPopulation"
-```
-
-It means that you cannot use the same function names in the various ORDA classes (entity, entity selection, dataclass) if you want them to be assigned privileges. In this case, you need to use distinct function names. For example, if you have created a "drop" function in both `cs.CityEntity` and `cs.CitySelection` classes, you need to give them different names such as `dropEntity()` and `dropSelection()`. You can then write in the "roles.json" file:
-
-```json
-	"permissions": {
-		"allowed": [
-			{
-				"applyTo": "City.dropEntity",
-				"type": "method",
-				"promote": [
-					"name"
-				]
-			},
-			{
-				"applyTo": "City.dropSelection",
-				"type": "method",
-				"promote": [
-					"name"
-				]
-			}
+{
+  "privileges": [
+  ],
+  "roles": [
+  ],
+  "permissions": {
+    "allowed": [
+      {
+        "applyTo": "ds",
+        "type": "datastore",
+        "read": [],
+        "create": [],
+        "update": [],
+        "drop": [],
+        "execute": [],
+        "promote": []
+      }
     ]
+  },
+  "restrictedByDefault": false,
+  "forceLogin": false
+}
 ```
+
+:::note 互換性
+
+以前のリリースでは、`roles.json` ファイルはデフォルトで作成されませんでした。 4D 20 R6 以降、`roles.json`ファイルを含まない、または `"forceLogin": true` の設定が含まれていない既存のプロジェクトを開く場合、[設定ダイアログボックスの **Web機能** ページ](../settings/web.md#アクセス権) で **ds.authentify() 関数を通しての REST認証を有効化** ボタンが利用可能になります。 このボタンはセキュリティ設定を自動的にアップグレードします (コードを修正する必要があるかもしれません。[このブログ記事を参照ください](https://blog.4d.com/ja/force-login-becomes-default-for-all-rest-auth))。
+
+:::
+
+:::note Qodly Studio
+
+In Qodly Studio for 4D, the login mode can be set using the [**Force login** option](https://developer.4d.com/qodly/4DQodlyPro/force-login) in the Roles and Privileges panel.
+
+:::
+
+## Restriction Modes
+
+The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permission):
+
+- **Unrestricted mode** (`restrictedByDefault`: **false**): Resources without defined permissions are accessible to all requests. This mode is suitable for development environments where access can be gradually restricted.
+- **Restricted mode** (`restrictedByDefault`: **true**): Resources without defined permissions are blocked by default. This mode is recommended for production environments where access must be explicitly granted.
+
+:::note 互換性
+
+- When **creating a new project**, the `restrictedByDefault` property is set to **false** in the *roles.json* file (see below). Keep in mind that this configuration is tailored for quick start and smooth development. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#configuring-restrictedbydefault-and-forcelogin-properties).
+- In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
+
+:::
+
+### Recommended Configuration
+
+Depending on your environment, the recommended settings are:
+
+- **Production**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **true**. This ensures maximum security by requiring user authentication and explicitly defined permissions for resource access.
+- **Development**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **false**. This allows easier access during development and debugging, with the possibility to gradually apply restrictions.
 
 ### `Roles_Errors.json` ファイル
 
@@ -269,93 +286,28 @@ End if
 
 ## 権限設定の例
 
-The good practice is to keep all data access locked by default thanks to the "all" privilege and to configure the `roles.json` file to only open controlled parts to authorized sessions. For example, to allow some accesses to "guest" sessions:
-
 ```json title="/Project/Sources/roles.json"
 
 {
-  "privileges": [
-    {
-      "privilege": "all",
-      "includes": []
-    }
-  ],
-  "roles": [],
-  "permissions": {
-    "allowed": [
-      {
-        "applyTo": "ds",
-        "type": "datastore",
-        "read": [
-          "all"
-        ],
-        "create": [
-          "all"
-        ],
-        "update": [
-          "all"
-        ],
-        "drop": [
-          "all"
-        ],
-        "execute": [
-          "all"
-        ],
-        "promote": [
-          "all"
-        ]
-      },
-      {
-        "applyTo": "ds.loginAs",
-        "type": "method",
-        "execute": [
-          "guest"
-        ]
-      },
-      {
-        "applyTo": "ds.hasPrivilege",
-        "type": "method",
-        "execute": [
-          "guest"
-        ]
-      },
-      {
-        "applyTo": "ds.clearPrivileges",
-        "type": "method",
-        "execute": [
-          "guest"
-        ]
-      },
-      {
-        "applyTo": "ds.isGuest",
-        "type": "method",
-        "execute": [
-          "guest"
-        ]
-      },
-      {
-        "applyTo": "ds.getPrivileges",
-        "type": "method",
-        "execute": [
-          "guest"
-        ]
-      },
-      {
-        "applyTo": "ds.setAllPrivileges",
-        "type": "method",
-        "execute": [
-          "guest"
-        ]
-      },
-      {
-        "applyTo": "mySingletonClass.createID",
-        "type": "singletonMethod",
-        "execute": [
-          "guest"
-        ]
-      }
-    ]
-  },
-  "forceLogin": true
+	"forceLogin": true,
+	"restrictedByDefault": true,
+	"permissions": {
+		"allowed": [
+						{
+				"applyTo": "People",
+				"type": "dataclass",
+				"read": [
+					"viewPeople"
+				]
+			}
+		]
+	},
+	"privileges": [
+		{
+			"privilege": "viewPeople",
+			"includes": []
+		}
+	],
+	"roles": []
 }
 ```

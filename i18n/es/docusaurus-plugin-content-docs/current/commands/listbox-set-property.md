@@ -25,7 +25,7 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *object* es un nom
 
 **Note:** If the list box or list box column specified using the *object* and *\** parameters does not exist, the command does nothing and no error is triggered.
 
-In the *property* and *value* parameters, you indicate, respectively, the property to set and its new value. Puede utilizar las siguientes constantes encontradas en el tema “*List Box*:
+En los parámetros *property* y *value*, usted indica, respectivamente, la propiedad a definir y su nuevo valor. Puede utilizar las siguientes constantes encontradas en el tema “*List Box*:
 
 | Constante                      | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------ | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -69,7 +69,7 @@ In the *property* and *value* parameters, you indicate, respectively, the proper
 
 ## Ejemplo 1
 
-You want to make all columns of the "MyListbox" list box resizable:
+Quiere que todas las columnas del list box "MyListbox" sean redimensionables:
 
 ```4d
  LISTBOX SET PROPERTY(*;"MyListbox";lk column resizable;lk yes) //Todas las columnas del list box "MyListbox" se establecen como redimensionables

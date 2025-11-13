@@ -3169,7 +3169,7 @@ La función `.sort()` <!-- REF #collection.sort().Summary -->ordena los elemento
 > Esta función modifica la colección original.
 
 Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
-You can also pass one of the following constants in the *ascOrDesc* parameter:
+También puede pasar una de las siguientes constantes en el parámetro *ascOrDesc*:
 
  ```
  |Constant|	Type|Value|Comment|

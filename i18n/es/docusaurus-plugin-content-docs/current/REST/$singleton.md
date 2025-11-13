@@ -5,7 +5,7 @@ title: $singleton
 
 Puede llamar directamente a [funciones de sus singletons compartidos](../Concepts/classes.md#singleton-classes) a través de REST.
 
-Singleton functions are called in POST or GET requests with the `$singleton` command and without `()`. Por ejemplo, si ha definido una función `buildVehicle()` en la clase compartida singleton `VehicleFactory`, podría llamarla utilizando la siguiente petición:
+Las funciones Singleton se llaman en peticiones POST o GET con el comando `$singleton` y sin `()`. Por ejemplo, si ha definido una función `buildVehicle()` en la clase compartida singleton `VehicleFactory`, podría llamarla utilizando la siguiente petición:
 
 ```json
 /rest/$singleton/VehicleFactory/buildVehicle

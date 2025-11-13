@@ -16,6 +16,7 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/
   - possibilité de définir des [gestionnaires de requêtes HTTP](../WebServer/http-request-handler.md) en utilisant une propriété `handlers` dans le paramètre *settings* de la fonction [`start()`](../API/WebServerClass.md#start) du serveur Web,
   - l'objet serveur Web contient de nouvelles propriétés [`rules`](../API/WebServerClass.md#rules) et [`handlers`](../API/WebServerClass.md#handlers).
 - Nouveaux [événements ORDA sur les données](../ORDA/orda-events.md) : validateSave, saving, afterSave, validateDrop, dropping, afterDrop.
+- Support of the new [`restrictedByDefault` property](../ORDA/privileges.md#restriction-modes) in the `roles.json` file to block access by default to all resources without explicit permission.
 - Nouvelle option permettant d'utiliser les certificats du Windows Certificate Store au lieu d'un dossier de certificats locaux dans les classes [`HTTPRequest`](../API/HTTPRequestClass.md#4dhttprequestnew) et [`HTTPAgent`](../API/HTTPAgentClass.md#4dhttpagentnew).
 - Client/serveur :
   - Vous pouvez afficher des pages Qodly dans des zones Web et [partager la session du client distant](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).

@@ -148,7 +148,7 @@ El modo de escritura directa es opcional sólo en proyectos convertidos. Se util
 
 Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. Cuando se selecciona esta opción, las demás opciones de compatibilidad pierden su utilidad y dejan de mostrarse.
 
-Se recomienda utilizar esta opción, ya que proporciona flexibilidad y eficiencia. The direct typing concept assumes that all elements are directly declared where they are defined in your code. Solo tiene que asegurarse de que todas sus variables son declaradas utilizando la [sintaxis 'var'](../Concepts/variables.md#declaring-variables) y que sus parámetros de método y función son declarados [en sus prototipos](../Concepts/parameters.md) (la función [Verificar sintaxis](#check-syntax) puede ayudarle a detectar declaraciones faltantes o no válidas).
+Se recomienda utilizar esta opción, ya que proporciona flexibilidad y eficiencia. El concepto de escritura directa asume que todos los elementos se declaran directamente donde están definidos en su código. Solo tiene que asegurarse de que todas sus variables son declaradas utilizando la [sintaxis 'var'](../Concepts/variables.md#declaring-variables) y que sus parámetros de método y función son declarados [en sus prototipos](../Concepts/parameters.md) (la función [Verificar sintaxis](#check-syntax) puede ayudarle a detectar declaraciones faltantes o no válidas).
 
 ## Advertencias
 
