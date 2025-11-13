@@ -15,6 +15,8 @@ Read [**What’s new in 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), t
 
 #### Highlights
 
+- 4D 20.8 LTS is certified on Windows 11 25H2.
+- 4D 20.8 LTS is certified on macOS Tahoe (macOS 26).
 - [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
 
 
