@@ -5,7 +5,7 @@ title: OpenAIModerationResult
 
 # OpenAIModerationResult
 
-The `OpenAIModerationResult` provides functionality to handle moderation results from the OpenAI API.
+`OpenAIModerationResult` ofrece funcionalidades para manejar los resultados de moderación de la API OpenAI.
 
 ## Hereda
 

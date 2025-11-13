@@ -31,7 +31,7 @@ To return a new string with whitespace trimmed from just one end, use [`Trim sta
 
 En el parámetro *aString*, puede pasar cualquier expresión de tipo texto. Será dejado sin tocar por el comando.
 
-El comando devuelve la versión recortada de la cadena *aString*. If there is no whitespace at any end of *aString*, the returned string is identical as the one passed in parameter.
+El comando devuelve la versión recortada de la cadena *aString*. Si no hay espacios en blanco en ningún extremo de *aString*, la cadena devuelta es idéntica a la pasada como parámetro.
 
 :::note
 

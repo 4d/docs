@@ -2519,7 +2519,7 @@ Con el siguiente método *NumberGreaterThan0*:
 La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> y también devuelve la colección ordenada.
 > Esta función modifica la colección original.
 
-Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. You can also pass one of the following constants in the *ascOrDesc* parameter:
+Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. También puede pasar una de las siguientes constantes en el parámetro *ascOrDesc*:
 
     |Constant|  Type|Value|Comment|
     |---|---|---|---|

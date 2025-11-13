@@ -41,7 +41,7 @@ La clase `OpenAIError` está diseñada para manejar errores devueltos por la API
 | ---------------------------- | ------- | ------------------------------------------------------------------------------------------------- |
 | `isBadRequestError`          | Boolean | Indica si se trata de un error 400 Bad Request.                                   |
 | `isAuthenticationError`      | Boolean | Indica si se trata de un error de autenticación 401.                              |
-| `isPermissionDeniedError`    | Boolean | Indicates ∏if the error is a 403 Permission Denied error.                         |
+| `isPermissionDeniedError`    | Boolean | Indica si el error es un error 403 Permiso denegado.                              |
 | `isNotFoundError`            | Boolean | Indica si el error es un error 404 Not Found.                                     |
 | `isUnprocessableEntityError` | Boolean | Indica si el error es un error de entidad no procesable (422). |
 | `isRateLimitError`           | Boolean | Indica si el error es un error de límite de velocidad 429.                        |

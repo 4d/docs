@@ -11,7 +11,7 @@ Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de
 
 :::info Mostrar páginas Qodly
 
-In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
+In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). Esta funcionalidad le permite diseñar interfaces web para sus aplicaciones de escritorio cliente/servidor.
 
 :::
 

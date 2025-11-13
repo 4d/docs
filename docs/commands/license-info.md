@@ -18,6 +18,13 @@ displayed_sidebar: docs
 
 If the command is executed on a 4D application that does not use locally a license (e.g. 4D remote), the command returns a Null object.
 
+:::note
+
+This command reloads the license files from the disk and updates the associated rights if they have been modified. 
+
+:::
+
+
 The returned object contains the following properties:
 
 ```json

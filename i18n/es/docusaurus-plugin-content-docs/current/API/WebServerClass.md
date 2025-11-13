@@ -187,7 +187,7 @@ El <!-- REF #WebServerClass.defaultHomepage.Summary -->nombre de la página de i
 
 *Propiedad de sólo lectura*
 
-A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler objects<!-- END REF -->. An HTTP handler object contains a listened URL pattern, a handled verb, and the code to be called. HTTP handlers can be defined through a HTTPHandlers.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Request handler](../WebServer/http-request-handler.md) page.
+A <!-- REF #WebServerClass.handlers.Summary -->collection of custom HTTP handler objects<!-- END REF -->. An HTTP handler object contains a listened URL pattern, a handled verb, and the code to be called. HTTP handlers can be defined through a HTTPHandlers.json file or the *settings* parameter of the [`.start()`](#start) function. Para más información, consulte la página [HTTP Request handler](../WebServer/http-request-handler.md).
 
 <!-- END REF -->
 
@@ -495,7 +495,7 @@ La <!-- REF #WebServerClass.rootFolder.Summary -->ruta de la carpeta raíz del s
 
 *Propiedad de sólo lectura*
 
-A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently handled to customize HTTP headers<!-- END REF -->. A rule object contains a "regexPattern" property, as well as an action name with a value. HTTP rules can be defined through a HTTPRules.json file or the *settings* parameter of the [`.start()`](#start) function. For more information, please refer to the [HTTP Rules](../WebServer/http-rules.md) page.
+A <!-- REF #WebServerClass.rules.Summary -->collection of rule objects currently handled to customize HTTP headers<!-- END REF -->. A rule object contains a "regexPattern" property, as well as an action name with a value. HTTP rules can be defined through a HTTPRules.json file or the *settings* parameter of the [`.start()`](#start) function. Para obtener más información, consulte la página [Reglas HTTP](../WebServer/http-rules.md).
 
 <!-- END REF -->
 

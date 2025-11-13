@@ -21,9 +21,9 @@ Puede hacer que las áreas Ruptura sean más pequeñas o más grandes. Puede uti
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos                                        | Valores posibles                                                                                                             |
-| ----------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Valor mínimo: 0 |
+| Nombre      | Tipos de datos                                        | Valores posibles                                                                                                                                   |
+| ----------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | Posición del marcador de ruptura o colección de posiciones del marcador de ruptura en píxeles.<br/>Valor mínimo: 0 |
 
 ---
 

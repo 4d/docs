@@ -390,7 +390,7 @@ Esta función devuelve True para el *privilegio* si se llama desde una función 
 
 Regarding remote client sessions, the function only concerns the code executed in the context of a [web request sent through a Web area](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas).
 
-With stored procedure sessions and standalone sessions, this function always returns True, whatever the *privilege*.
+Con las sesiones de procedimiento almacenadas y las sesiones independientes, esta función siempre devuelve True, sea cual sea el *privilegio*.
 
 #### Ejemplo
 
@@ -753,7 +753,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 :::note
 
-This function does nothing and always returns **False** with stored procedure sessions and standalone sessions.
+Esta función no hace nada y siempre devuelve **False** con sesiones de procedimientos almacenadas y las sesiones independientes.
 
 :::
 

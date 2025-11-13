@@ -9,10 +9,10 @@ The `OpenAIChatAPI` class provides an interface to interact with OpenAI's chat b
 
 ## Propiedades
 
-| Propiedad     | Tipo                                                    | Descripción                                                                        |
-| ------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | Una instancia que maneja las solicitudes de finalización del chat. |
-| `vision`      | [OpenAIVision](OpenAIVision.md)                         | A helper instance that handles vision-related requests.            |
+| Propiedad     | Tipo                                                    | Descripción                                                                                    |
+| ------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `completions` | [OpenAIChatCompletionsAPI](OpenAIChatCompletionsAPI.md) | Una instancia que maneja las solicitudes de finalización del chat.             |
+| `vision`      | [OpenAIVision](OpenAIVision.md)                         | Una instancia de ayuda que gestiona las peticiones relacionadas con la visión. |
 
 ## Function
 

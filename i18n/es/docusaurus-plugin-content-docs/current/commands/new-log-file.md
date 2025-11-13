@@ -20,12 +20,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New log file.Summary-->The **New log file** command closes the current log file, renames it and creates a new one with the same name in the same location as the previous one<!-- END REF-->. This command is meant to be used for setting up a backup system using a logical mirror (see the section *Setting up a logical mirror* in the [4D Server Reference Manual](https://doc/4d.com)). 
 
-The command returns the full pathname (access path + name) of the log file being closed (called the “segment”). Este archivo se almacena en la misma ubicación que el archivo de registro actual (especificado en la [página de configuración](../Backup/settings.md#configuration) en el tema de copia de seguridad de la configuración). The command does not carry out any processing (compression, segmentation) on the saved file. No aparece ninguna
+El comando devuelve el nombre completo de la ruta (ruta de acceso + nombre) del archivo de registro que se está cerrando (llamado “segment”). Este archivo se almacena en la misma ubicación que el archivo de registro actual (especificado en la [página de configuración](../Backup/settings.md#configuration) en el tema de copia de seguridad de la configuración). El comando no realiza ningún procesamiento (compresión, segmentación) en el archivo guardado. No aparece ninguna
 caja de diálogo.
 
 The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Por ejemplo:
 
-- If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. The name of the first “segment” of the log file will therefore be MyDatabase\[0004-0001\].journal.
+- If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. El nombre del primer “segment” del archivo de registro será, por lo tanto, MyDatabase\[0004-0001\].journal.
 - If the MyDatabase.4DD database has been saved 3 times and the log file has been saved 5 times since, the name of the 6th backup of the log file will be MyDatabase\[0003-0006\].journal.
 
 :::warning

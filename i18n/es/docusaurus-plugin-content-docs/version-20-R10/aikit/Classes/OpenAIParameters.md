@@ -11,12 +11,12 @@ The `OpenAIParameters` class is designed to handle execution and request paramet
 
 ### Propiedades de la programación asíncrona
 
-| Propiedad                 | Tipo     | Descripción                                                                                                                                                   |
-| ------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `formula` u `onTerminate` | Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina.                  |
-| `onResponse`              | Function | A function to be called asynchronously when the request finishes successfully. Asegúrese de que el proceso actual no termina. |
-| `onError`                 | Function | A function to be called asynchronously when the request finishes with errors. Asegúrese de que el proceso actual no termina.  |
-| `throw`                   | Boolean  | Si es true, lanza un error si se produce uno. Sólo si no se ha definido ninguna retrollamada de fórmula.                      |
+| Propiedad                 | Tipo     | Descripción                                                                                                                                                           |
+| ------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `formula` u `onTerminate` | Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina.                          |
+| `onResponse`              | Function | Una función a llamar de forma asíncrona cuando la petición finalice con éxito. Asegúrese de que el proceso actual no termina.         |
+| `onError`                 | Function | Una función que se llamará de forma asíncrona cuando la petición finalice con errores. Asegúrese de que el proceso actual no termina. |
+| `throw`                   | Boolean  | Si es true, lanza un error si se produce uno. Sólo si no se ha definido ninguna retrollamada de fórmula.                              |
 
 Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 

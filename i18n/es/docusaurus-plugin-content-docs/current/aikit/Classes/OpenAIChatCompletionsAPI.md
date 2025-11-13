@@ -5,7 +5,7 @@ title: OpenAIChatCompletionsAPI
 
 # OpenAIChatCompletionsAPI
 
-La clase `OpenAIChatCompletionsAPI` está diseñada para gestionar las finalizaciones de chat con la API OpenAI. It provides methods to create, retrieve, update, delete, and list chat completions.
+La clase `OpenAIChatCompletionsAPI` está diseñada para gestionar las finalizaciones de chat con la API OpenAI. Ofrece métodos para crear, recuperar, actualizar, eliminar y listar respuestas de chat.
 
 https://platform.openai.com/docs/api-reference/chat
 
@@ -21,7 +21,7 @@ https://platform.openai.com/docs/api-reference/chat
 | *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Los parámetros para la solicitud de finalización del chat. |
 | Resultado    | Object                                                                | El resultado de la solicitud de finalización del chat.     |
 
-Creates a model response for the given chat conversation.
+Crea un modelo de respuesta para la conversación dada.
 
 https://platform.openai.com/docs/api-reference/chat/create
 

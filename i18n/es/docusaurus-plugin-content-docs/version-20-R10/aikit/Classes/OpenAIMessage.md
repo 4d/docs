@@ -13,7 +13,7 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 | ----------- | ------- | -------------------------------------------------------------------------------------------- |
 | `rol`       | Text    | El rol del mensaje (por ejemplo, "user", "assistant").    |
 | `contenido` | Variant | El contenido del mensaje, que puede ser un texto o una colección de objetos. |
-| `user`      | Text    | An optional property representing the user associated with the message.      |
+| `user`      | Text    | Una propiedad opcional que representa al usuario asociado al mensaje.        |
 
 ## Propiedades calculadas
 

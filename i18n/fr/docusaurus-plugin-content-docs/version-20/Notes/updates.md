@@ -11,6 +11,14 @@ Lisez [**Les nouveautés de 4D 20**](https://blog.4d.com/fr-whats-new-in-4d-v20/
 :::
 
 
+## 4D 20.8 LTS
+
+#### Points forts
+
+- [**Fixed bugs list**](https://bugs.4d.com/fixes?version=20.8): list of all bugs that have been fixed in 4D 20.8 LTS.
+
+
+
 ## 4D 20.7 LTS
 
 #### Points forts

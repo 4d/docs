@@ -1153,7 +1153,7 @@ Examples:
 	OB SET($ob;"value";2) //displays London by default
 	OB SET($ob;"requiredListReference";<>List)
 ```
-	![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
 
 #### choiceListName and choiceListReference  
 

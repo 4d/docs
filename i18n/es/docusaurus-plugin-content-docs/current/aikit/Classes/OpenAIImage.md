@@ -11,11 +11,11 @@ https://platform.openai.com/docs/api-reference/images/object
 
 ## Propiedades
 
-| Propiedad        | Tipo    | Descripción                                                                                                   |
-| ---------------- | ------- | ------------------------------------------------------------------------------------------------------------- |
-| `url`            | Text    | La URL de la imagen generada, si `response_format` es `url` (por defecto). |
-| `b64_json`       | Text    | The base64-encoded JSON of the generated image, if `response_format` is `b64_json`.           |
-| `revised_prompt` | Variant | The prompt that was used to generate the image, if there was any revision to the prompt.      |
+| Propiedad        | Tipo    | Descripción                                                                                                      |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| `url`            | Text    | La URL de la imagen generada, si `response_format` es `url` (por defecto).    |
+| `b64_json`       | Text    | El JSON codificado en base64 de la imagen generada, si `response_format` es `b64_json`.          |
+| `revised_prompt` | Variant | La instrucción que se utilizó para generar la imagen, si hubo alguna revisión de la instrucción. |
 
 ## Funciones
 
@@ -23,9 +23,9 @@ https://platform.openai.com/docs/api-reference/images/object
 
 **asBlob**() : 4D.Blob
 
-| Parámetros | Tipo                    | Descripción                                                                                            |
-| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------ |
-| Resultado  | 4D.Blob | Converts the generated image to a blob format based on its URL or base64-encoded JSON. |
+| Parámetros | Tipo                    | Descripción                                                                                                        |
+| ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Resultado  | 4D.Blob | Convierte la imagen generada a un formato blob basado en su URL o en un JSON codificado en base64. |
 
 #### Ejemplo de Uso
 

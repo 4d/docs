@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 ### Descripción
 
-El comando `WA Get context`<!--REF #_command_.WA Get context.Summary--> recupera el objeto de contexto definido para `$4d` en el área Web designada por los parámetros \* y *object* utilizando [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> If `WA SET CONTEXT` was not called for the web area the command returns `null`.
+El comando `WA Get context`<!--REF #_command_.WA Get context.Summary--> recupera el objeto de contexto definido para `$4d` en el área Web designada por los parámetros \* y *object* utilizando [`WA SET CONTEXT`](./wa-set-context.md).<!-- END REF--> Si `WA SET CONTEXT` no fue llamado para el área web, el comando devuelve `null`.
 
 :::note
 

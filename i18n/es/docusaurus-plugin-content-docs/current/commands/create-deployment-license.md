@@ -112,7 +112,7 @@ Designar una licencia de uso:
 
 ## Ver también
 
-[Blog post - Build an application with 4D commands](https://blog.4d.com/build-an-application-with-4d-commands)
+[Post de blog - Crear una aplicación con los comandos 4D](https://blog.4d.com/build-an-application-with-4d-commands)
 
 ## Propiedades
 

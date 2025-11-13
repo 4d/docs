@@ -32,7 +32,7 @@ Se soportan gestores de solicitudes HTTP personalizados:
 
 Define sus manejadores de petición HTTP personalizados en un archivo de configuración llamado **HTTPHandlers.json** almacenado en la carpeta [`Project/Sources`](../Project/architecture.md#sources).
 
-This file contains all listened URL patterns, the handled verbs, and the code to be called. Los administradores se proporcionan en forma de colección en formato JSON.
+Este archivo contiene todos los patrones de URL a interceptar, los verbos manipulados y el código a llamar. Los administradores se proporcionan en forma de colección en formato JSON.
 
 Al momento de la ejecución, se ejecuta el primer patrón que coincida con la URL, los demás se ignoran.
 
