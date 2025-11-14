@@ -16,16 +16,6 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/en-whats-new-in-4d-21-r2
 #### Behavior changes
 
 
-## 4D 21.x LTS
-
-See [**Release Notes for 4D 21.x LTS**](../../21/Notes/updates). 
-
-
-## 4D 20.x LTS
-
-
-See [**Release Notes for 4D 20.x LTS**](../../20/Notes/updates). 
-
 
 
 ## Library table

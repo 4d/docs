@@ -355,12 +355,6 @@ For detailed information, please refer to [this blog post](https://blog.4d.com/s
 - `no-bom` support and new default end-of-line characters in [`.setText()`](../API/FileClass.md#settext)
 
 
-## 4D 19.x LTS
-
-
-See [**Release Notes for 4D 19.x LTS**](../../version-19/Notes/updates.md). 
-
-
 
 ## Library table (4D 20 LTS)
 
