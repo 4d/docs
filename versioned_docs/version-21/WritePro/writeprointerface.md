@@ -4,13 +4,15 @@ title: 4D Write Pro Interface
 slug: /WritePro/write-pro-interface
 ---
 
-4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
+4D Write Pro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
 A 4D developer can easily implement these palettes in their application. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
-The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*.
+## Installation & documentation
 
-You will find below: 
+4D Write Pro Interface is a **4D component** that needs to be [installed in your project](../Project/components.md#overview). 4D Write Pro Interface source files are [provided on Github](https://github.com/4d/4D-WritePro-Interface).
+
+The main [4D Write Pro Interface documentation](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) can be found in the *4D Design Reference manual*. You will find below: 
 
 - the Table Wizard configuration documentation,
 - the integrated A.I. documentation.
