@@ -1081,7 +1081,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	ARRAY TEXT($RequiredList;0)
 	APPEND TO ARRAY($RequiredList;"Open")
 	APPEND TO ARRAY($RequiredList;"Closed")
-	var $ob Object
+	var $ob : Object
 	OB SET($ob;"valueType";"text")
 	OB SET($ob;"value";"Closed")
 	OB SET ARRAY($ob;"requiredList";$RequiredList)
@@ -1146,9 +1146,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	OB SET($ob;"requiredListReference";<>List)
 ```
 
-```
 ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
-```
 
 #### choiceListName と choiceListReference
 

@@ -443,7 +443,7 @@ Función evento afterSave($event : Object)
 // código
 ```
 
-This event is triggered just after an entity is saved in the data file, when at least one attribute was modified. No se ejecuta si no se ha tocado ningún atributo en la entidad.
+Este evento se activa justo después de guardar una entidad en el archivo de datos, cuando se ha modificado al menos un atributo. No se ejecuta si no se ha tocado ningún atributo en la entidad.
 
 This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. Por ejemplo, se puede utilizar para enviar un correo electrónico de confirmación después de guardar los datos. O, en caso de error al guardar los datos, puede hacer una cancelación para restaurar un estado consistente de los datos.
 
@@ -454,7 +454,7 @@ La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
 #### Ejemplo
 
-If an error occurred in the above saving event, the attribute value is reset accordingly in the `afterSave` event:
+Si se produce un error en el evento de guardado anterior, el valor del atributo se restablece en consecuencia en el evento `afterSave`:
 
 ```4d
 // ProductsEntity class

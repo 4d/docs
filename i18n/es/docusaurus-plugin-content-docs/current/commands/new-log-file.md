@@ -25,7 +25,7 @@ caja de diálogo.
 
 The file is renamed with the current backup numbers of the database and of the log file, as shown in the following example: DatabaseName\[BackupNum-LogBackupNum\].journal. Por ejemplo:
 
-- If the MyDatabase.4DD database has been saved 4 times, the last backup file will be named MyDatabase\[0004\].4BK. El nombre del primer “segment” del archivo de registro será, por lo tanto, MyDatabase\[0004-0001\].journal.
+- Si la base de datos MyDatabase.4DD ha sido guardada 4 veces, el último archivo de copia de seguridad se llamará MyDatabase\[0004\].4BK. El nombre del primer “segment” del archivo de registro será, por lo tanto, MyDatabase\[0004-0001\].journal.
 - If the MyDatabase.4DD database has been saved 3 times and the log file has been saved 5 times since, the name of the 6th backup of the log file will be MyDatabase\[0003-0006\].journal.
 
 :::warning

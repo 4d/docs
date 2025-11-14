@@ -20,7 +20,12 @@ displayed_sidebar: docs
 
 Si la commande est exécutée sur une application 4D qui n'utilise pas de licence localement (par exemple 4D remote), la commande renvoie un objet Null.
 
-L'objet retourné contient les propriétés suivantes :
+:::note
+
+This command reloads the license files from the disk and updates the associated rights if they have been modified.
+
+:::
+The returned object contains the following properties:
 
 ```json
 {

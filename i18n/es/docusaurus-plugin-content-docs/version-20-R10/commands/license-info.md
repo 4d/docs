@@ -20,7 +20,12 @@ displayed_sidebar: docs
 
 Si el comando se ejecuta en una aplicación 4D que no utiliza localmente una licencia (por ejemplo, 4D remote), el comando devuelve un objeto Null.
 
-El objeto devuelto contiene las siguientes propiedades:
+:::note
+
+Este comando recarga los archivos de licencia desde el disco y actualiza los derechos asociados si han sido modificados.
+
+:::
+The returned object contains the following properties:
 
 ```json
 {

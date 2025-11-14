@@ -312,7 +312,7 @@ La interfaz de 4D Write Pro utiliza OpenAI, para lo cual necesita suministrar su
 
 :::
 
-### Limitaciones (Developer Preview)
+### Limitaciones
 
 En la aplicación actual, la función tiene las siguientes limitaciones:
 

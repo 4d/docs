@@ -50,7 +50,7 @@ $message.addImageURL("http://example.com/image.jpg"; "high")
 
 ### Responder a un mensaje de llamada de herramienta
 
-When an assistant needs to use external functions, it generates a message with `tool_calls` to request function execution.
+Cuando un asistente necesita utilizar las funciones externas, genera un mensaje con `tool_calls` para solicitar la ejecución de la función.
 
 **Mensaje del asistente solicitando las llamadas de la herramienta:**
 

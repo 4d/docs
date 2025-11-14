@@ -338,7 +338,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 :::note Notas
 
-- The [`entity.clone()`](../API/EntityClass.md#clone) function does not trigger the entity Class constructor.
+- La función [`entity.clone()`](../API/EntityClass.md#clone) no activa el constructor de la clase de la entidad.
 - Los registros creados a nivel de la base de datos 4D utilizando comandos del lenguaje clásico 4D o acciones estándar no activan el Class constructor de la entidad.
 
 :::

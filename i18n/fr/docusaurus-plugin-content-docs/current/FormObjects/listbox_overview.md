@@ -1036,12 +1036,12 @@ Exemples :
 
 ```4d
 	ARRAY TEXT($RequiredList;0)
-	APPEND TO ARRAY($RequiredList; "Open")
-	APPEND TO ARRAY($RequiredList; "Closed")
+	APPEND TO ARRAY($RequiredList;"Open")
+	APPEND TO ARRAY($RequiredList;"Closed")
 	var $ob : Object
-	OB SET($ob; "valueType" ; "text")
-	OB SET($ob; "value" ; "Closed")
-	OB SET ARRAY($ob; "requiredList" ;$RequiredList)
+	OB SET($ob;"valueType";"text")
+	OB SET($ob;"value";"Closed")
+	OB SET ARRAY($ob;"requiredList";$RequiredList)
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_openClosed.png)
@@ -1103,9 +1103,7 @@ Exemples :
 	OB SET($ob; "requiredListReference";<>List)
 ```
 
-```
 ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
-```
 
 #### choiceListName et choiceListReference
 

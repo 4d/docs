@@ -1109,9 +1109,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
     OB SET($ob;"value";2) // デフォルトでLondonを表示
     OB SET($ob;"requiredListReference";<>List)
 ```
-
-
-    ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
 
 #### choiceListName と choiceListReference
 

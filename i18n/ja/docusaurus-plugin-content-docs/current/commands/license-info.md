@@ -20,6 +20,12 @@ displayed_sidebar: docs
 
 コマンドが、ローカルではライセンスを使用しない4D アプリケーション上で実行された場合(例: 4D リモートなど)、コマンドはNull オブジェクトを返します。
 
+:::note
+
+This command reloads the license files from the disk and updates the associated rights if they have been modified.
+
+:::
+
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
 ```json

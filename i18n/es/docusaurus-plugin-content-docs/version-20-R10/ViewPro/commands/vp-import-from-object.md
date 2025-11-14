@@ -37,9 +37,9 @@ Se devuelve un error si el objeto *viewPro* no es válido.
 
 En *paramObj*, puede pasar la siguiente propiedad:
 
-| Propiedad | Tipo                        | Descripción                                                                                                                                                                                                                                                                                       |
-| --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| formula   | 4D.Function | (Optional) Callback function to be executed when the object is loaded and all 4D custom functions have responded. Ver [Pasar un método de retrollamada (fórmula)](vp-export-document.md#passing-a-callback-method-formula). |
+| Propiedad | Tipo                        | Descripción                                                                                                                                                                                                                                                                                                              |
+| --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| formula   | 4D.Function | (Opcional) Función de retrollamada a ser ejecutada cuando el objeto está cargado y todas las funciones personalizadas 4D han respondido. Ver [Pasar un método de retrollamada (fórmula)](vp-export-document.md#passing-a-callback-method-formula). |
 
 Los siguientes parámetros se pueden utilizar en el método de retrollamada:
 

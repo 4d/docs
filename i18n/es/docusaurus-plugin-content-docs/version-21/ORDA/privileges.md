@@ -253,7 +253,7 @@ The `restrictedByDefault` property configures how every [resource](#resources) a
 
 :::note Compatibilidad
 
-- When **creating a new project**, the `restrictedByDefault` property is set to **false** in the *roles.json* file (see below). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#configuring-restrictedbydefault-and-forcelogin-properties).
+- Al **crear un nuevo proyecto**, la propiedad `restrictedByDefault` se establece en **false** en el archivo *roles.json* (ver abajo). Tenga en cuenta que esta configuración está hecha a medida para un inicio rápido y un desarrollo fluido. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#configuring-restrictedbydefault-and-forcelogin-properties).
 - In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
 
 :::
@@ -263,7 +263,7 @@ The `restrictedByDefault` property configures how every [resource](#resources) a
 Depending on your environment, the recommended settings are:
 
 - **Production**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **true**. Esto garantiza la máxima seguridad al requerir autenticación de usuario y permisos explícitamente definidos para el acceso a recursos.
-- **Development**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **false**. This allows easier access during development and debugging, with the possibility to gradually apply restrictions.
+- **Development**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **false**. Esto permite un acceso más fácil durante el desarrollo y la depuración, con la posibilidad de aplicar gradualmente restricciones.
 
 ### Archivo `Roles_Errors.json`
 
