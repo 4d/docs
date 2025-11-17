@@ -4,7 +4,7 @@ title: Interfaz 4D Write Pro
 slug: /WritePro/write-pro-interface
 ---
 
-4D WritePro Interface ofrece un conjunto de paletas, que permiten a los usuarios finales personalizar fácilmente un documento 4D Write Pro.
+The 4D Write Pro Interface component offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
 Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicación. Así, los usuarios finales pueden gestionar todas las propiedades de 4D Write Pro, como las fuentes, la alineación del texto, los marcadores, la disposición de las tablas y los marcos.
 

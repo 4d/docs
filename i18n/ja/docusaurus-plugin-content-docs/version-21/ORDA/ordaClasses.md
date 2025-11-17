@@ -936,18 +936,18 @@ $arch.save() //courseName と name は "Archaeology II" に変更されます
 
 ## 公開vs非公開関数
 
-セキュリティ上の理由により、データモデルクラス関数およびエイリアス属性はデフォルトですべて、リモートリクエストに対し **非公開** (つまりプライベート) に設定されています。
+For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
 
-リモートリクエストには次のものが含まれます:
+Remote requests are:
 
 - `Open datastore` によって接続されたリモートの 4Dアプリケーションが送信するリクエスト
-- RESTリクエスト
+- REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)
 
 > 通常の 4Dクライアント/サーバーリクエストは影響されません。 このアーキテクチャーにおいては、データモデルクラス関数は常に利用可能です。
 
 公開されていない関数はリモートアプリケーションで利用することができず、RESTリクエストによるオブジェクトインスタンスに対して呼び出すこともできません。 リモートアプリケーションが非公開関数をアクセスしようとすると、"-10729 (未知のメンバー機能です)" エラーが返されます。
 
-リモートリクエストによる呼び出しを許可するには、`exposed` キーワードを使ってデータモデルクラス関数を明示的に宣言する必要があります。 シンタックスは次の通りです:
+To allow a function or an attribute to be called by a remote request, you must explicitly declare it using the `exposed` keyword. シンタックスは次の通りです:
 
 ```4d
 // 公開関数の宣言
@@ -955,7 +955,27 @@ exposed Function <functionName>
 
 ```
 
-> `exposed` キーワードは、データモデルクラス関数に対してのみ利用可能です。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
+```4d
+// declare an exposed alias
+exposed Alias <attributeName> <targetPath>   
+```
+
+```4d
+// declare an exposed computed attribute
+exposed Function get <attributeName>   
+```
+
+```4d
+// declare a shared singleton function
+shared singleton Class constructor()
+exposed Function <functionName>
+```
+
+:::note
+
+The `exposed` keyword can only be used with the objects decribed above. [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
+
+:::
 
 ### 例題
 

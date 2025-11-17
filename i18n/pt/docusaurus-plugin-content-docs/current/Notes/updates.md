@@ -14,14 +14,6 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/en-whats-new-in-4d
 
 #### Mudanças de comportamento
 
-## 4D 21.x LTS
-
-Veja [**Notas de lançamento 4D 21.x LTS**](../../21/Notes/updates).
-
-## 4D 20.x LTS
-
-Veja [**Notas de lançamento 4D 20.x LTS**](../../20/Notes/updates).
-
 ## Tabela da biblioteca
 
 | Biblioteca | Versão atual                           | Atualizado em 4D | Comentário                                                                                                                                         |

@@ -5,22 +5,14 @@ title: リリースノート
 
 ## 4D 21 R2
 
-Read [**What’s new in 4D 21 R2**](https://blog.4d.com/en-whats-new-in-4d-21-r2/), the blog post that lists all new features and enhancements in 4D 21 R2.
+[**4D 21 R2 の新機能**](https://blog.4d.com/en-whats-new-in-4d-21-r2/): 4D 21 R2 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection.
+- [コードライブチェッカー](../code-editor/write-class-method.md#警告とエラー) はエラー検知の面における正確性が大幅に向上しました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/178/release-note-version-20r2/))。
 
 #### 動作の変更
-
-## 4D 21.x LTS
-
-[**4D 21.x LTS のリリースノート**](../../21/Notes/updates) を参照して下さい。
-
-## 4D 20.x LTS
-
-[**4D 20.x LTS のリリースノート**](../../20/Notes/updates) を参照して下さい。
 
 ## ライブラリの一覧
 

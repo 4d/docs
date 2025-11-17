@@ -736,13 +736,13 @@ shared Function Bar($value : Integer)
 
 ### シングルトンの種類
 
+アプリケーションやセッション、プロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
+
 4D は 3種類のシングルトンをサポートしています:
 
 - **プロセスシングルトン** は、自身がインスタンス化されたプロセス内において、インスタンスを一つのみ持つことができます。
 - **共有シングルトン** は、マシン上のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。
-- **セッションシングルトン** も共有シングルトンですが、特定の [セッション](../API/SessionClass.md) 内のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。  セッションシングルトンは、セッション内で全体的に共有されますが、セッションごとに異なります。 クライアントサーバーまたは Webアプリケーションのコンテキストで セッションシングルトンを使用すると、各セッションごと (つまり各ユーザーごと) に異なるインスタンスを作成して使用することができます。
-
-アプリケーションやセッション、プロセス内のどこからでも利用可能な値を定義するのにシングルトンは便利です。
+- **セッションシングルトン** も共有シングルトンですが、特定の [セッション](../API/SessionClass.md) 内のすべてのプロセスにおいて、共通のインスタンスを一つのみ持つことができます。  セッションシングルトンは、セッション内で全体的に共有されますが、セッションごとに異なります。 クライアントサーバーまたは Webアプリケーションのコンテキストで セッションシングルトンを使用すると、各セッションごと (つまり各ユーザーごと) に異なるインスタンスを作成して使用することができます。 Session singletons are particularly appropriate with [Qodly applications](https://developer.4d.com/qodly/).
 
 :::info
 
@@ -782,6 +782,10 @@ shared Function Bar($value : Integer)
 クラスがシングルトンクラスかどうかは、Classオブジェクトの .[`.isSingleton`](../API/ClassClass.md#issingleton)プロパティで確認できます。
 
 クラスがセッションシングルトンかどうかは、Classオブジェクトの .[`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) プロパティで確認できます。
+
+### Exposed singleton functions
+
+Shared and session singleton functions support the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). An exposed singleton function can be directly called by REST requests. This feature is useful to design [Qodly pages calling 4D functions](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions).
 
 ### 例題
 

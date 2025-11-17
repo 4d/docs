@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 The **WP Table append row** command<!--REF #_command_.WP Table append row.Summary--> appends one row to the *tableRef* table, fills it with *value*(s) or a *valueColl* collection, and returns the corresponding row range object.<!-- END REF-->
 
-The command supports two syntaxes:
+La commande supporte deux syntaxes :
 
 - **Using values as parameters:**
   Adds as many cells in the row as there are values provided in the *value* parameter(s). You can pass any number of values of different types.
@@ -33,9 +33,9 @@ The command supports two syntaxes:
 
 The default cell alignment will depend on the value type:
 
-- text: left aligned
-- pictures: centered
-- other types (numbers, date, and time): right aligned
+- texte : aligné à gauche
+- images : centrées
+- autres types (nombres, date et heure): alignés à droite
 
 :::note Notes
 

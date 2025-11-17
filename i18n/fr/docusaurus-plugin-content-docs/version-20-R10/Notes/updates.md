@@ -232,10 +232,6 @@ Si vos applications 4D utilisent des connexions TLS, il est recommandé de mettr
 
 - **Attention** : La valeur de départ [`offset`](../API/FileHandleClass.md#offset) des objets [4D.FileHandle](../API/FileHandleClass.md) était incorrectement fixée à 1 au lieu de 0. Une correction a été apportée dans 4D à partir des versions **20.1 HF1** et **20 R2** et la valeur est maintenant 0.
 
-## 4D 20.x LTS
-
-Voir [**Release Notes pour 4D 20.x LTS**](../../version-20/Notes/updates.md).
-
 ## Tableau des bibliothèques
 
 | Bibliothèque | Version courante                        | Mise à jour dans 4D | Commentaire                                                                                                                                        |

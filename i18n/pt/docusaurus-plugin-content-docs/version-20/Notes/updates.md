@@ -356,12 +356,6 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 - `Suporte a no-bom` e novos caracteres de fim de linha padrão em [`.setText()`](../API/FileClass.md#settext)
 
 
-## 4D 19.x LTS
-
-
-Veja [**Notas de lançamento para 4D 19.x LTS**](../../version-19/Notes/updates.md).
-
-
 
 ## Tabela das bibliotecas (4D 20 LTS)
 

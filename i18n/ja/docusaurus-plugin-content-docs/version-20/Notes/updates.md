@@ -356,12 +356,6 @@ ALERT($param1+" "+$param2)
 - [`.setText()`](../API/FileClass.md#settext) におけるデフォルトの改行コード (EOL) の指定と `no-bom` のサポート
 
 
-## 4D 19.x LTS
-
-
-[**4D 19.x LTS のリリースノート**](../../version-19/Notes/updates.md) 参照。
-
-
 
 ## ライブラリの一覧 (4D 20 LTS)
 
