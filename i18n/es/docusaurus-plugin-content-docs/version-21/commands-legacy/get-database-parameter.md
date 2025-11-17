@@ -24,7 +24,7 @@ El parámetro *selector* designa el parámetro a obtener. 4D ofrece las siguient
 
 ### 4D Remote mode timeout (14)
 
-**Alcance** (antigua capa de red únicamente): aplicación 4D si valor positivo
+**Alcance** (antigua capa de red únicamente): aplicación 4D si *valor* positivo
 
 **Se conserva entre dos sesiones**: sí si *valor* positivo
 
@@ -47,8 +47,7 @@ El selector Timeout 4D mode distant no se tiene en cuenta si utiliza la antigua 
 
 **Descripción**: inicia o detiene la grabación de las peticiones estándar recibidas por 4D Server (excluyendo las peticiones web). Por defecto, el valor es 0 (no se graban las peticiones).
 
-4D Server le permite grabar cada petición recibida por el equipo servidor en un archivo de historial. Cuando este mecanismo está activo, el archivo de historial se crea junto al archivo de estructura de la base. Su nombre es "4DRequestsLog\_X," donde X es el número secuencial del historial. Una vez el archivo alcanza un tamaño de 10 MB, se cierra y se genera un nuevo archivo, con un número secuencial incrementado. Si existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio de la secuencia utilizando el parámetro *valor*.
-
+4D Server le permite grabar cada petición recibida por el equipo servidor en un archivo de historial. Cuando este mecanismo está activo, el archivo de historial se crea junto al archivo de estructura de la base. Su nombre es "4DRequestsLog\_X," donde X es el número secuencial del historial. Una vez el archivo alcanza un tamaño de 10 MB, se cierra y se genera un nuevo archivo, con un número secuencial incrementado. Si existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio de la secuencia utilizando el parámetro *valor*. 
 Este archivo texto almacena en formato tabulado simple diferente información sobre cada petición: hora, número de proceso, usuario, tamaño de la petición, duración del proceso, etc. Esta información puede ser útil particularmente durante la fase de afinamiento de la aplicación o con fines estadísticos. Por ejemplo puede importarse, en un software de hoja de cálculo para procesarse.
 
 ### 4D Server timeout (13)
@@ -447,8 +446,6 @@ $mode:=Get database parameter(Direct2D get active status)
 **Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
 
 
-
-
 ### Idle connections timeout (54)
 
 **Alcance**: aplicación 4D a menos que valor sea negativo
@@ -574,6 +571,9 @@ SET DATABASE PARAMETER(Log command list;"-1666;-323")
 ```
 
 
+ SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
+ 
+ 
 
 ### Max concurrent Web processes (18)
 
