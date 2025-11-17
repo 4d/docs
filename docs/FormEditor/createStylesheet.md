@@ -218,7 +218,7 @@ Available media features and values:
 |Media features|Values|Description|
 |---|---|---|
 |`prefers-color-scheme`|<li>**light**</li><li>**dark**</li>|Color scheme to use|
-|`form-theme`|<li>**fluent-ui**</li><li>**win-classic**</li>|Platform theme to use (Windows). For more information on **fluent-ui** theme, refer to [this section]()|
+|`form-theme`|<li>**fluent-ui**</li><li>**win-classic**</li>|Platform theme to use (Windows). For more information on **fluent-ui** rendering, refer to [this section](./forms.md#fluent-ui-rendering)|
 
 
 :::note

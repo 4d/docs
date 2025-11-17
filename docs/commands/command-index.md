@@ -339,6 +339,7 @@ title: Commands by name
 [`FORM SET SIZE`](../commands-legacy/form-set-size.md)<br/>
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
+[`FORM Windows theme`](form-windows-theme.md) **new 4D 21 R2**<br/>
 [`Formula`](formula.md)<br/>
 [`Formula from string`](formula-from-string.md)<br/>
 [`Frontmost process`](../commands-legacy/frontmost-process.md)<br/>
