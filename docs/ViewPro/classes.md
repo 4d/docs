@@ -151,12 +151,12 @@ The `.useFooterDropDownList` property <!-- REF #TableOptions.useFooterDropDownLi
 The `.backColor` property is the <!-- REF #TableStyle.backColor.Summary -->[background color](configuring.md#background--foreground) of the table<!-- END REF -->. 
 
 
-### .forecolor
+### .foreColor
 
-<!-- REF #TableStyle.forecolor.Syntax -->
-**.forecolor** : Text<!-- END REF -->
+<!-- REF #TableStyle.foreColor.Syntax -->
+**.foreColor** : Text<!-- END REF -->
 
-The `.forecolor` property is the <!-- REF #TableStyle.forecolor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->. 
+The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[foreground color](configuring.md#background--foreground) of the table<!-- END REF -->. 
 
 
 
@@ -200,7 +200,12 @@ The `.borderRight` property is the <!-- REF #TableStyle.borderRight.Summary -->r
 
 The `.borderBottom` property is the <!-- REF #TableStyle.borderBottom.Summary -->bottom border line of the table <!-- END REF -->. 
 
+### .borderTop
 
+<!-- REF #TableStyle.borderTop.Syntax -->
+**.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
+
+The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->. 
 
 
 ### .borderHorizontal
