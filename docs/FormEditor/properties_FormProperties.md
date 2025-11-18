@@ -233,3 +233,31 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 |windowTitle |string |The name of the window as plain text or as a reference|
 
 
+---
+
+## Widget appearance  
+
+The widget appearance property allows you to set explicitely the platform interface to use when the form is executed on Windows. By default, forms inherit from the [global project interface settings](../settings/interface.md). 
+
+Available values are:
+
+- **Inherited** (default): inherits from the project interface  
+- **Classic**: use the Windows classic interface on Windows
+- **Fluent UI**: use 
+
+ is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+
+You can use dynamic references to set the window titles for forms, *i.e.*:
+
+*	A standard XLIFF reference stored in the Resources folder.
+*	A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
+*	A variable or a field: The syntax to apply is `\<VariableName>` or `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
+
+> The number of characters for a window title is limited to 31.
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|windowTitle |string |The name of the window as plain text or as a reference|
+

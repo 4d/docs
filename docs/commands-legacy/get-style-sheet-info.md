@@ -28,6 +28,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->The **GET STYLE SHEET INFO** command returns the current configuration of the style sheet designated in the *styleSheetName* parameter.<!-- END REF--> 
 
+
 On Windows, the style sheet configuration can be different depending if the **Fluent UI** or **Classic** interface is used:
 - if the command is executed in the context of a form, the returned configuration corresponds to the interface actually used for the form,
 - if the command is executed outside the context of a form, the returned configuration corresponds to the interface actually enabled for project (based on the **Fluent UI** setting value and the availability of the [required Windows library](../FormEditor/forms.md#requirements).
