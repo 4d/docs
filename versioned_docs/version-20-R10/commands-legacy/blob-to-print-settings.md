@@ -34,7 +34,6 @@ The command returns one of the following status codes:
 * 0: no current printer is selected (in this case the command does nothing),
 * 1: the BLOB has been correctly loaded,
 * 2: the BLOB has been correctly loaded but the current printer name has changed(\*).  
-**Note:** Code (2) is always returned if the BLOB was created by the  4D Pack command, even if the printer name did not actually change, since this information was not included in the 4D Pack BLOBs.
 
 (\*) Settings depend on the currently selected printer at the moment the BLOB was saved. Applying these settings to a another printer is supported if both printers are of the same model. If the printers are different, only common parameters will be restored.
 
