@@ -11,6 +11,8 @@ displayed_sidebar: docs
 | Function result | Text | &#8592; | Windows theme used by the current form: "Classic" or "FluentUI" |
 
 <!-- END REF-->
+
+
 <details><summary>History</summary>
 
 |Release|Changes|
