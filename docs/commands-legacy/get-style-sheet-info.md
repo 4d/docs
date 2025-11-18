@@ -16,9 +16,22 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
+<details><summary>History</summary>
+
+|Release|Changes|
+|---|---|
+|21 R2|Support for Fluent UI|
+
+</details>
+
 ## Description 
 
 <!--REF #_command_.GET STYLE SHEET INFO.Summary-->The **GET STYLE SHEET INFO** command returns the current configuration of the style sheet designated in the *styleSheetName* parameter.<!-- END REF--> 
+
+On Windows, the style sheet configuration can be different depending if the **Fluent UI** or **Classic** interface is used:
+- if the command is executed in the context of a form, the returned configuration corresponds to the interface actually used for the form,
+- if the command is executed outside the context of a form, the returned configuration corresponds to the interface actually enabled for project (based on the **Fluent UI** setting value and the availability of the [required Windows library](../FormEditor/forms.md#requirements).
+
 
 In *styleSheetName*, you pass the name of the style sheet as defined in the Design mode. To designate an automatic style sheet, you can use one of the following constants, found in the "*Font Styles*" theme: 
 
@@ -44,7 +57,7 @@ In *styles*, the command returns a value corresponding to the style(s) associate
 | Plain                | Integer | 0     |
 | Underline            | Integer | 4     |
 
-If the command is executed correctly, the *OK* system variable is set to 1\. Otherwise (for example, if the *styleSheetName* does not exist), it is set to 0.
+If the command is executed correctly, the *OK* system variable is set to 1. Otherwise (for example, if the *styleSheetName* does not exist), it is set to 0.
 
 ### Compatibility Note 
 

@@ -9,7 +9,9 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/en-whats-new-in-4d-21-r2
 
 #### Highlights
 
-- New [**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering) on Windows. 
+- Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows: 
+    - new [`FORM Windows theme`](../commands/form-windows-theme.md) command, 
+    - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries), 
 - [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) that apply [lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) now automatically adjust paragraph margins to keep markers positioned inside it.
 - Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
