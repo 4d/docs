@@ -15,6 +15,8 @@ Leia [**O que há de novo no 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20
 
 #### Destaques
 
+- 4D 20.8 LTS is certified on Windows 11 25H2.
+- 4D 20.8 LTS is certified on macOS Tahoe (macOS 26).
 - [**Lista de bugs corrigidos**](https://bugs.4d.com/fixes?version=20.8): lista de todos os erros corrigidos no 4D 20.8 LTS.
 
 
@@ -352,12 +354,6 @@ Para obter informações pormenorizadas, consulte [esta publicação do blogue](
 - Um [arquivo .gitignore padrão](../Preferences/general.md#create-gitignore-file) pode ser criado com novos projetos
 - Nova API de classe [Blob](../API/BlobClass.md) para lidar com novos objetos [`4D. Blob`](Concepts/dt_blob.md#blob-types)
 - `Suporte a no-bom` e novos caracteres de fim de linha padrão em [`.setText()`](../API/FileClass.md#settext)
-
-
-## 4D 19.x LTS
-
-
-Veja [**Notas de lançamento para 4D 19.x LTS**](../../version-19/Notes/updates.md).
 
 
 

@@ -393,7 +393,7 @@ Esta área también le permite añadir o eliminar [**puntos de ruptura**](breakp
 
 ### Prototipo
 
-The prototype of the currently executed method or function in the Call chain is displayed on the top of the pane:
+El prototipo del método o de la función en ejecución en la cadena de llamadas se muestra en la parte superior del panel:
 
 ![prototype](../assets/en/Debugging/prototype.png)
 

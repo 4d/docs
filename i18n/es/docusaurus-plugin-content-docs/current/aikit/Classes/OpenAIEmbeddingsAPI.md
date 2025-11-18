@@ -46,7 +46,7 @@ var $vectors : Collection:=$result.vectors // collection of 4D.Vector
 
 > Before using embeddings with a specific service, please check its documentation to see if embeddings are supported, and select the appropriate embedding model.
 
-For example, for Mistral, use [mistral-embed or codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
+Por ejemplo, para Mistral, utilice [mistral-embed o codestral-embed](https://docs.mistral.ai/capabilities/embeddings/)
 
 ```4d
 var $result:=$client.embeddings.create($inputs; "mistral-embed")

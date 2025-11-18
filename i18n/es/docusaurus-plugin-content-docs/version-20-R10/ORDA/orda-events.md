@@ -88,7 +88,7 @@ Las funciones de evento aceptan un único objeto *event* como parámetro. Cuando
 Este evento se activa cada vez que se modifica un valor en la entidad.
 
 - if you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
-- if you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
+- si ha definido la función en el nivel de atributo (segunda sintaxis), se activa sólo para modificaciones en este atributo.
 
 Este evento se activa tan pronto como el motor de 4D Server / 4D detecta una modificación del valor del atributo que puede deberse a las siguientes acciones:
 

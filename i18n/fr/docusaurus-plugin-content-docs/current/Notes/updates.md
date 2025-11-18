@@ -5,22 +5,14 @@ title: Release Notes
 
 ## 4D 21 R2
 
-Read [**What’s new in 4D 21 R2**](https://blog.4d.com/en-whats-new-in-4d-21-r2/), the blog post that lists all new features and enhancements in 4D 21 R2.
+Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-v21-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R2.
 
 #### Points forts
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection.
+- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21_R2) : liste de tous les bugs qui ont été corrigés dans 4D 21 R2.
 
 #### Changements de comportement
-
-## 4D 21.x LTS
-
-Voir [**Release Notes pour 4D 21.x LTS**](../../21/Notes/updates).
-
-## 4D 20.x LTS
-
-Voir [**Release Notes pour 4D 20.x LTS**](../../20/Notes/updates).
 
 ## Tableau des bibliothèques
 

@@ -5,7 +5,7 @@ title: OpenAIMessage
 
 # OpenAIMessage
 
-The `OpenAIMessage` class represents a structured message containing a role, content, and an optional user. This class provides methods to manipulate and retrieve the text and other content of the message.
+La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol, un contenido y un usuario opcional. This class provides methods to manipulate and retrieve the text and other content of the message.
 
 ## Propiedades
 
@@ -103,7 +103,7 @@ var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
 // Add it to the conversation and continue
 ```
 
-**Important:** The `tool_call_id` in your response must exactly match the `id` from the original tool call. Esto permite que el modelo de IA asocie correctamente su respuesta con la llamada de función específica que se realizó.
+**Importante:** el `tool_call_id` de su respuesta debe coincidir exactamente con el `id` de la llamada de la herramienta original. Esto permite que el modelo de IA asocie correctamente su respuesta con la llamada de función específica que se realizó.
 
 ## Ver también
 

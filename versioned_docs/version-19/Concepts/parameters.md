@@ -6,7 +6,7 @@ title: Parameters
 
 You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
 
-## Overview
+## Passing parameters
 
 **Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
 
@@ -118,6 +118,12 @@ All 4D method kinds support the `#DECLARE` keyword, including database methods. 
 $entitySelection:=ds.User.query("login=:1"; $user)
 // Check hash password...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors. 
+
+:::
 
 ### Returned value
 

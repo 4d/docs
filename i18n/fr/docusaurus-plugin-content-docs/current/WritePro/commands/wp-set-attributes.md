@@ -33,7 +33,7 @@ Vous pouvez spécifier les attributs à définir pour *targetObj* d'une des deux
 
 - Utilisez le paramètre *attribObj* pour passer un seul objet contenant les noms d'attributs et leurs valeurs correspondantes en tant que propriétés d'objet.
 
-For a comprehensive list of attributes to pass, as well as their scope and respective values, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section.
+Pour une liste complète des attributs à passer, ainsi que leur portée et leurs valeurs respectives, veuillez vous référer à la section [Attributs 4D Write Pro](../4d-write-pro-attributes) .
 
 ## Exemple 1
 

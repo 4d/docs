@@ -6,7 +6,7 @@ title: 引数
 
 メソッドや関数にデータを渡す必要がしばしば発生します。 これは引数によって容易にできます。
 
-## 概要
+## 引数の受け渡し
 
 **引数** (または **パラメーター**) とは、メソッドや関数が処理に必要とするデータのことです。 *引数* と *パラメーター* は厳密には違うものですが、このマニュアルでは同義語として使用されています。 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
 
@@ -117,6 +117,12 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 $entitySelection:=ds.User.query("login=:1"; $user)
 // ハッシュパスワードを確認...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+
+:::
 
 ### 戻り値
 

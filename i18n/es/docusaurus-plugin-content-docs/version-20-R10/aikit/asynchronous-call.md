@@ -21,7 +21,7 @@ The asynchronous method is based on [4D.HTTPRequest](https://developer.4d.com/do
 $client.models.list({formula: Formula(MyReceiveMethod($1))})
 ```
 
-`$1` will be an instance of [OpenAIModelListResult](Classes/OpenAIModelListResult.md), so `MyReceiveMethod` method could be:
+`$1` será una instancia de [OpenAIModelListResult](Classes/OpenAIModelListResult.md), por lo que el método `MyReceiveMethod` podría ser:
 
 ```4d
 #DECLARE($result: cs.AIKit.OpenAIModelListResult)

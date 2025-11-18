@@ -129,7 +129,7 @@ La propiedad `.tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->es u
 
 La propiedad `.theme` <!-- REF #TableOptions.theme.Summary -->define el tema de una tabla. También puede ser un texto (nombre de un tema nativo SpreadJS)<!-- END REF -->.
 
-Consulte los[ temas nativos de SpreadJS](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 ### .useFooterDropDownList
@@ -151,12 +151,12 @@ La propiedad `.useFooterDropDownList` <!-- REF #TableOptions.useFooterDropDownLi
 La propiedad `.backColor` es el <!-- REF #TableStyle.backColor.Summary -->[color de fondo](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 
-### .forecolor
+### .foreColor
 
-<!-- REF #TableStyle.forecolor.Syntax -->
-**.forecolor**: Text<!-- END REF -->
+<!-- REF #TableStyle.foreColor.Syntax -->
+**.foreColor** : Text<!-- END REF -->
 
-La propiedad `.forecolor` es el <!-- REF #TableStyle.forecolor.Summary -->[color de primer plano](configuring.md#background--foreground) de la tabla<!-- END REF -->.
+The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->[color de primer plano](configuring.md#background--foreground) de la tabla<!-- END REF -->.
 
 
 
@@ -201,6 +201,12 @@ La propiedad `.borderRight` es la <!-- REF #TableStyle.borderRight.Summary -->l�
 La propiedad `.borderBottom` es el <!-- REF #TableStyle.borderBottom.Summary -->límite inferior de la tabla <!-- END REF -->.
 
 
+### .borderTop
+
+<!-- REF #TableStyle.borderTop.Syntax -->
+**.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
+
+The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->.
 
 
 ### .borderHorizontal
@@ -260,7 +266,7 @@ La propiedad `.highlightFirstColumn` <!-- REF #TableTheme.highlightFirstColumn.S
 **.theme**: [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme**: Text<!-- END REF -->
 
 
-La propiedad `.theme` <!-- REF #TableTheme.theme.Summary -->define el tema de una tabla<!-- END REF -->. Si Text: nombre de un [tema nativo SpreadJS](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+La propiedad `.theme` <!-- REF #TableTheme.theme.Summary -->define el tema de una tabla<!-- END REF -->. If Text: name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 
@@ -356,7 +362,7 @@ La propiedad `.lastHeaderCellStyle` es la <!-- REF #TableThemeOptions.lastHeader
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->nombre de un [tema SpreadJS nativo ](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
+La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
 
 ### .secondColumnStripSize
 

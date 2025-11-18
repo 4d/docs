@@ -15,7 +15,7 @@ Puede introducir cualquier nombre de clase válido en esta propiedad, incluyendo
 
 - Clases usuario (por ejemplo, `cs.MyClass`)
 - Clases 4D integradas (por ejemplo, `4D.File`, `4D.Folder`)
-- [Exposed](../Extensions/develop-components.md#sharing-of-classes) component-defined classes (e.g. `cs.MyComponent.MyClass`)
+- las clases [exposed](../Extensions/develop-components.md#sharing-of-classes) definidas por componentes (por ejemplo, `cs.MyComponent.MyClass`)
 
 Si introduce un nombre de clase inválido, se activa una advertencia y se rechaza la entrada.
 
@@ -31,6 +31,6 @@ To retrieve the associated class name at runtime, use the [`classID`](../API/Dat
 
 ### Ver también
 
-- [Blog post: Stricter class-based typing for objects](https://blog.4d.com/stricter-class-based-typing-for-objects/)
+- [Articulo de blog: tipificación más estricta de objetos basada en clases](https://blog.4d.com/stricter-class-based-typing-for-objects/)
 
 

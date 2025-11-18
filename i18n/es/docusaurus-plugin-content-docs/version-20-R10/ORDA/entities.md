@@ -462,7 +462,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 Esta función se llama cada vez que se solicita una selección de entidades o una entidad de la dataclass. El filtro se ejecuta una vez, cuando se crea la selección de entidades.
 
-El filtro debe devolver una selección de entidades de la clase de datos. It can be an entity selection built upon a query, stored in the [`Storage`](../API/SessionClass.md#storage), etc.
+El filtro debe devolver una selección de entidades de la clase de datos. Puede ser una selección de entidades basada en una petición, almacenada en el [`Storage`](../API/SessionClass.md#storage), etc.
 
 :::note
 

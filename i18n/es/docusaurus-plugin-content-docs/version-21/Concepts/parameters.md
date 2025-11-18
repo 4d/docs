@@ -5,7 +5,7 @@ title: Parámetros
 
 A menudo encontrará que necesita pasar datos a sus métodos y funciones. Esto se hace fácilmente con parámetros.
 
-## Generalidades
+## Paso de parámetros
 
 **Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos *parámetros* y *argumentos* se utilizan indistintamente en este manual. Los parámetros también se pasan a los comandos integrados de 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
 
@@ -53,10 +53,16 @@ La sintaxis de declaración heredada, donde los parámetros se copian automátic
 
 ## Declaración de parámetros
 
-En los métodos llamados o en las funciones de clase, los valores de los parámetros se asignan a las variables locales. Se declararan los parámetros utilizando un **nombre de parámetro** con un **tipo de parámetro**, separados por dos puntos.
+Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
 - Para funciones de clase, los parámetros se declaran junto con el prototipo de función, por ejemplo, cuando se utilizan las palabras clave `Function` o `Class constructor`.
 - Para los métodos (métodos proyecto, métodos objeto formulario, métodos base y triggers), los parámetros se declaran utilizando la palabra clave **`#DECLARE`** al principio del código del método.
+
+:::info Compatibilidad
+
+La sintaxis de declaración heredada, donde los parámetros se copian automáticamente en variables locales numeradas secuencialmente $0, $1, etc. y declarado usando directivas de compilador como `C_TEXT($1;$2)`, es **obsoleto** a partir de 4D 20 R7.
+
+:::
 
 Ejemplos:
 
@@ -103,6 +109,12 @@ Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluido
 $entitySelection:=ds.User.query("login=:1"; $user)
 // Verificar la contraseña hash...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+
+:::
 
 ### Valor devuelto
 

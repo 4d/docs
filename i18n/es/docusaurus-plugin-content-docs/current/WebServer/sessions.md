@@ -211,11 +211,11 @@ End if
 
 El servidor web 4D le permite generar, compartir y utilizar tokens de sesión OTP (One-Time Passcode). Los tokens de sesión OTP se utilizan para asegurar comunicaciones con aplicaciones de terceros o sitios web. For information on OTP, please refer to the [One-time password page](https://en.wikipedia.org/wiki/One-time_password) on Wikipedia.
 
-In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. El enlace de retrollamada incluye el token OTP, para que la sesión que activó la retrollamada se cargue junto con sus datos y privilegios. This principle allows you to share the same session on multiple devices. Gracias a esta arquitectura, la [cookie de sesión](#session-implementation) no está expuesta en la red, lo que elimina el riesgo de un ataque de hombre en el medio.
+In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Normalmente, una aplicación de terceros envía un correo electrónico de confirmación que contiene un enlace de retrollamada en el que el usuario tiene que hacer clic. El enlace de retrollamada incluye el token OTP, para que la sesión que activó la retrollamada se cargue junto con sus datos y privilegios. This principle allows you to share the same session on multiple devices. Gracias a esta arquitectura, la [cookie de sesión](#session-implementation) no está expuesta en la red, lo que elimina el riesgo de un ataque de hombre en el medio.
 
 :::tips Entradas de blog relacionadas
 
-[Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+[Conecte sus aplicaciones web a sistemas de terceros](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 
 :::
 

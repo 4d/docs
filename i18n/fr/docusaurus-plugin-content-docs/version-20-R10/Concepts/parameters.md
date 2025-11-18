@@ -5,7 +5,7 @@ title: Paramètres
 
 Vous aurez souvent besoin de fournir des valeurs à vos méthodes et fonctions. Vous pouvez facilement effectuer cette opération grâce aux paramètres.
 
-## Vue d’ensemble
+## Passer des paramètres
 
 **Les paramètres** (ou **arguments**) sont des données dont une méthode ou une fonction de classe a besoin pour s’exécuter. Le terme *paramètres* ou *arguments* est utilisé indifféremment dans ce manuel. Des paramètres sont également passés aux commandes intégrées de 4D. Dans l’exemple ci-dessous, la chaîne “Bonjour” est un paramètre de la commande `ALERT` :
 
@@ -53,10 +53,16 @@ L'ancienne syntaxe de déclaration, où les paramètres sont automatiquement cop
 
 ## Déclaration des paramètres
 
-Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des paramètres sont assignées aux variables locales. Vous déclarez des paramètres en utilisant un **nom de paramètre** et un **type de paramètre**, séparés par deux points.
+Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
 - For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
 - Pour les méthodes (méthodes projet, méthodes d'objets de formulaire, méthodes de base de données et triggers), les paramètres sont déclarés à l'aide du mot-clé **`#DECLARE`** au début du code de la méthode.
+
+:::info Compatibilité
+
+L'ancienne syntaxe de déclaration, où les paramètres sont automatiquement copiés dans des variables locales numérotées séquentiellement $0, $1, etc. et déclarés en utilisant des directives du compilateur telles que `C_TEXT($1;$2)`, est **dépréciée** à partir de 4D 20 R7.
+
+:::
 
 Exemples :
 
@@ -103,6 +109,12 @@ Tous les types de méthodes 4D prennent en charge le mot-clé `#DECLARE`, y comp
 $entitySelection:=ds.User.query("login=:1"; $user)
 // Vérifier le hash du mot passe...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+
+:::
 
 ### Valeur retournée
 

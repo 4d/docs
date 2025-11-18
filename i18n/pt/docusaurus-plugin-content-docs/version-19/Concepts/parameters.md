@@ -6,7 +6,7 @@ title: Parâmetros
 
 Frequentemente será preciso passar dados para seus métodos. Isso é facilmente feito com parâmetros.
 
-## Visão Geral
+## Utilização de parâmetros
 
 **Os parâmetros** (ou **argumentos**) são peças de dados que um método necessita para realizar sua tarefa. Os termos *parámetros* e *argumentos* são utilizados indiferentemente neste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a stirng "Hello" é um argumento para o comando integrado `ALERT`:
 
@@ -117,6 +117,12 @@ Todos os métodos 4D são compatíveis com a palavra chave `#DECLARE` incluindo 
 $entitySelection:=ds. User.query("login=:1"; $user)
 // Check hash password...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+
+:::
 
 ### Valor retornado
 

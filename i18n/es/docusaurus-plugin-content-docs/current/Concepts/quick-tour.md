@@ -428,4 +428,4 @@ Las siguientes convenciones se utilizan en la documentación del lenguaje 4D:
 
 - los caracteres{ }`(llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\` significa que el parámetro *option* puede omitirse al llamar a la función.
 - la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
-- the `any` keyword is used for parameters that can be of any type (number, text, boolean, date, time, object, collection...).
+- la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo (número, texto, booleano, fecha, hora, objeto, colección...).

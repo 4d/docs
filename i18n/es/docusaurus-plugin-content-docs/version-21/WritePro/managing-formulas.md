@@ -201,7 +201,7 @@ En este caso, puede mostrar las referencias a fórmulas como símbolos ![](../as
 
 Para mostrar las referencias a fórmulas como símbolos, puede:
 
-- check the **Display formula source as symbol option** in the Property list (see *Configuring View properties*), or
+- active la opción **Mostrar origen de fórmula como símbolo** en la lista de propiedades (consulte *Configuración de las propiedades de la vista*), o
 - utilizar la acción estándar displayFormulaAsSymbol (ver *Uso de las acciones estándar de 4D Write Pro*), o bien
 - usa el comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) con el selector `wk display formula as symbol` en **True**.
 

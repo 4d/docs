@@ -4,7 +4,7 @@ title: 4D WritePro インターフェース
 slug: /WritePro/write-pro-interface
 ---
 
-4D WritePro インターフェースは、エンドユーザーが 4D Write Proドキュメントを簡単にカスタマイズできるパレットを提供します。
+The 4D Write Pro Interface component offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
 4D のデベロッパーは、これらのパレットをアプリケーションに簡単に実装することができます。 それにより、エンドユーザーは、フォントやテキストの揃え方向、ブックマーク、表レイアウト、フレームなど、4D Write Pro のプロパティをすべて管理することができます。
 
@@ -315,7 +315,7 @@ AI 機能を有効化すると、4D Write Pro ドキュメント上にチャッ�
 
 :::
 
-### 制約(デベロッパープレビュー)
+### Limitations
 
 現在の実装では、この機能では以下のような制約があります:
 

@@ -768,13 +768,14 @@ A **singleton class** is a user class that only produces a single instance. For 
 
 ### Singletons types
 
+Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
+
 4D supports three types of singletons:
 
 - a **process singleton** has a unique instance for the process in which it is instantiated, 
 - a **shared singleton** has a unique instance for all processes on the machine.
-- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user.
+- a **session singleton** is a shared singleton but with a unique instance for all processes in the [session](../API/SessionClass.md). Session singletons are shared within an entire session but vary between sessions. In the context of a client-server or a web application, session singletons make it possible to create and use a different instance for each session, and therefore for each user. Session singletons are particularly appropriate with [Qodly applications](https://developer.4d.com/qodly/). 
 
-Singletons are useful to define values that need to be available from anywhere in an application, a session, or a process.
 
 :::info
 
@@ -817,7 +818,9 @@ The [`.isSingleton`](../API/ClassClass.md#issingleton) property of Class objects
 The [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) property of Class objects allows to know if the class is a session singleton.
 
 
+### Exposed singleton functions
 
+Shared and session singleton functions support the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). An exposed singleton function can be directly called by REST requests. This feature is useful to design [Qodly pages calling 4D functions](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions). 
 
 ### Examples
 

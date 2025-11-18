@@ -4,13 +4,15 @@ title: Interfaz 4D Write Pro
 slug: /WritePro/write-pro-interface
 ---
 
-4D WritePro Interface ofrece un conjunto de paletas, que permiten a los usuarios finales personalizar fácilmente un documento 4D Write Pro.
+4D Write Pro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
 Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicación. Así, los usuarios finales pueden gestionar todas las propiedades de 4D Write Pro, como las fuentes, la alineación del texto, los marcadores, la disposición de las tablas y los marcos.
 
-La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*.
+## Installation & documentation
 
-Encontrará a continuación:
+4D Write Pro Interface is a **4D component** that needs to be [installed in your project](../Project/components.md#overview). 4D Write Pro Interface source files are [provided on Github](https://github.com/4d/4D-WritePro-Interface).
+
+La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*. Encontrará a continuación:
 
 - la documentación de configuración del Asistente para tablas,
 - la I.A. integrada. documentation.
@@ -312,7 +314,7 @@ La interfaz de 4D Write Pro utiliza OpenAI, para lo cual necesita suministrar su
 
 :::
 
-### Limitaciones (Developer Preview)
+### Limitaciones
 
 En la aplicación actual, la función tiene las siguientes limitaciones:
 

@@ -920,25 +920,45 @@ $arch.save() //courseName and name are "Archaeology II"
 
 ## Funções expostas vs não expostas
 
-Por razões de segurança, todas as funções de classe de modelo de dados e atributos de alias **não são** (por exemplo, privado) por padrão para solicitações remotas.
+For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
 
-Os pedidos remotos incluem:
+Remote requests are:
 
 - Pedidos enviados por aplicações 4D remotas ligadas através de `Open datastore`
-- Pedidos REST
+- REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)
 
 > Os pedidos regulares de cliente/servidor 4D não são afetados. As funções de classe do modelo de dados estão sempre disponíveis nesta arquitetura.
 
 Uma função que não esteja exposta não está disponível em aplicações remotas e não pode ser chamada em qualquer instância de objeto a partir de um pedido REST. Se uma aplicação remota tentar aceder a uma função não exposta, é devolvido o erro "-10729 - Método de membro desconhecido".
 
-Para permitir que uma função de classe de modelo de dados seja chamada por um pedido remoto, você deve declará-la explicitamente usando a palavra-chave `exposed`. A sintaxe formal é:
+To allow a function or an attribute to be called by a remote request, you must explicitly declare it using the `exposed` keyword. A sintaxe formal é:
 
 ```4d
 // declara uma função exposta
 exposed Function <functionName>   
 ```
 
-> A palavra-chave `exposed` só pode ser utilizada com funções de classe de modelo de dados. Se usado com uma [classe de usuário regular](Concepts/classes.md) função, ela é ignorada e um erro é retornado pelo compilador.
+```4d
+// declare an exposed alias
+exposed Alias <attributeName> <targetPath>   
+```
+
+```4d
+// declare an exposed computed attribute
+exposed Function get <attributeName>   
+```
+
+```4d
+// declare a shared singleton function
+shared singleton Class constructor()
+exposed Function <functionName>
+```
+
+:::note
+
+The `exposed` keyword can only be used with the objects decribed above. Se usado com uma [classe de usuário regular](Concepts/classes.md) função, ela é ignorada e um erro é retornado pelo compilador.
+
+:::
 
 ### Exemplo
 

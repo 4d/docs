@@ -733,13 +733,13 @@ Uma **classe singleton** é uma classe de usuário que produz apenas uma única 
 
 ### Tipos de singletons
 
+Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo, uma sessão ou um processo.
+
 4D suporta três tipos de singletons:
 
 - um **processo singleton** tem uma instância única para o processo no qual ele é instanciado,
 - um **singleton compartilhado** tem uma instância única para todos os processos na máquina.
-- uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Os singletons de sessão são compartilhados em uma sessão inteira, mas variam entre as sessões. No contexto de um cliente-servidor ou de um aplicativo Web, os singletons de sessão possibilitam a criação e o uso de uma instância diferente para cada sessão, portanto, para cada usuário.
-
-Singletons são úteis para definir valores que precisam estar disponíveis em qualquer lugar em um aplicativo, uma sessão ou um processo.
+- uma **sessão singleton** é um singleton compartilhado, mas com uma instância única para todos os processos na [sessão](../API/SessionClass.md). Os singletons de sessão são compartilhados em uma sessão inteira, mas variam entre as sessões. No contexto de um cliente-servidor ou de um aplicativo Web, os singletons de sessão possibilitam a criação e o uso de uma instância diferente para cada sessão, portanto, para cada usuário. Session singletons are particularly appropriate with [Qodly applications](https://developer.4d.com/qodly/).
 
 :::info
 
@@ -779,6 +779,10 @@ Se você precisar instanciar um singleton com parâmetros, você também pode ch
 O [`.isSingleton`](../API/ClassClass.md#issingleton) propriedade de objetos de classe permite saber se a classe é uma singleton.
 
 A propriedade [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) dos objetos Class permite saber se a classe é um singleton de sessão.
+
+### Exposed singleton functions
+
+Shared and session singleton functions support the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). An exposed singleton function can be directly called by REST requests. This feature is useful to design [Qodly pages calling 4D functions](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions).
 
 ### Exemplos
 

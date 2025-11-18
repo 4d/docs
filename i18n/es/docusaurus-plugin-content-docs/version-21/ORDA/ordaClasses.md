@@ -338,7 +338,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 :::note Notas
 
-- The [`entity.clone()`](../API/EntityClass.md#clone) function does not trigger the entity Class constructor.
+- La función [`entity.clone()`](../API/EntityClass.md#clone) no activa el constructor de la clase de la entidad.
 - Los registros creados a nivel de la base de datos 4D utilizando comandos del lenguaje clásico 4D o acciones estándar no activan el Class constructor de la entidad.
 
 :::
@@ -928,25 +928,45 @@ $arch.save() //courseName y name son "Archaeology II"
 
 ## Funciones expuestas y no expuestas
 
-Por razones de seguridad, todas sus funciones de clase de modelo de datos y atributos de alias son **no expuestas** (es decir, privadas) por defecto a peticiones remotas.
+For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
 
-Las peticiones remotas incluyen:
+Remote requests are:
 
 - Las peticiones enviadas por las aplicaciones 4D remotas conectadas a través de `Open datastore`
-- Peticiones REST
+- REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)
 
 > Las peticiones cliente/servidor 4D estándar no se ven afectadas. Las funciones de clase del modelo de datos están siempre disponibles en esta arquitectura.
 
 Una función que no está expuesta no está disponible en aplicaciones remotas y no se puede llamar a ninguna instancia de objeto desde una petición REST. Si una aplicación remota intenta acceder a una función no expuesta, se devuelve el error "-10729 - Método miembro desconocido".
 
-Para permitir que una función de clase de modelo de datos sea llamada por una petición remota, debe declararla explícitamente utilizando la palabra clave `exposed`. La sintaxis formal es:
+To allow a function or an attribute to be called by a remote request, you must explicitly declare it using the `exposed` keyword. La sintaxis formal es:
 
 ```4d
 // declarar una función expuesta
 exposed Function <functionName>   
 ```
 
-> La palabra clave `exposed` sólo puede utilizarse con las funciones de clase del modelo de datos. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
+```4d
+// declare an exposed alias
+exposed Alias <attributeName> <targetPath>   
+```
+
+```4d
+// declare an exposed computed attribute
+exposed Function get <attributeName>   
+```
+
+```4d
+// declare a shared singleton function
+shared singleton Class constructor()
+exposed Function <functionName>
+```
+
+:::note
+
+The `exposed` keyword can only be used with the objects decribed above. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
+
+:::
 
 ### Ejemplo
 

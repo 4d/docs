@@ -4,7 +4,7 @@ title: Interface 4D Write Pro
 slug: /WritePro/write-pro-interface
 ---
 
-4D WritePro Interface offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
+The 4D Write Pro Interface component offers a set of palettes, which allow end users to easily customize a 4D Write Pro document.
 
 Um desenvolvedor 4D pode facilmente implementar essas paletas em sua aplicação. Thus, end users can manage all 4D Write Pro properties, such as fonts, text alignment, bookmarks, table layout, and frames.
 
@@ -312,7 +312,7 @@ The 4D Write Pro interface uses OpenAI, for which you need to provide your own k
 
 :::
 
-### Limitações (Developer Preview)
+### Limitations
 
 In the current implementation, the feature has the following limitations:
 
