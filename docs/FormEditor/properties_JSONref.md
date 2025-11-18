@@ -52,3 +52,4 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`windowSizingX`](properties_WindowSize.md#fixed-width)|Form window's vertical sizing|"fixed", "variable"|
 |[`windowSizingY`](properties_WindowSize.md#fixed-height)|Form window's horizontal sizing|"fixed", "variable"|
 |[`windowTitle`](properties_FormProperties.md#window-title)|Designates a form window's title|A name for the form window|
+|[`winUI`](properties_FormProperties.md#winui)|Fluent UI selector for the form|A name for the form window|
