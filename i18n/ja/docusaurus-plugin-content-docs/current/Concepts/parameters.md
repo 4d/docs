@@ -5,7 +5,7 @@ title: 引数
 
 メソッドや関数にデータを渡す必要がしばしば発生します。 これは引数によって容易にできます。
 
-## 概要
+## 引数の受け渡し
 
 **引数** (または **パラメーター**) とは、メソッドや関数が処理に必要とするデータのことです。 *引数* と *パラメーター* は厳密には違うものですが、このマニュアルでは同義語として使用されています。 引数は、ビルトインの 4Dコマンドにも渡されます。 以下の例は、“Hello” という文字列を引数としてビルトインの `ALERT` コマンドへ渡します:
 
@@ -45,18 +45,18 @@ MyLength:=Length("How did I get here?")
 
 入力および出力値は呼び出し時に [評価](#引数の渡し方-値か参照か) され、その値はそれぞれ自動的にサブルーチン (呼び出されたメソッドまたはクラス関数) 内のローカル変数に格納されます。  パラメーターは、呼び出されるコード内で [宣言](#パラメーターの宣言) する必要があります。
 
+## パラメーターの宣言
+
+Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+
+- クラス関数の場合、引数は関数のプロトタイプとともに宣言されます。つまり、`Function` あるいは `Class constructor` キーワードを使用して宣言されます。
+- メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の **`#DECLARE`** キーワードを使って宣言されます。
+
 :::info 互換性
 
 引数が連番のローカル変数 ($0、$1 など) に自動的にコピーされ、`C_TEXT($1;$2)` のようなコンパイラー指示子を使って宣言される従来のシンタックスは、4D 20 R7 より **非推奨** となりました。
 
 :::
-
-## パラメーターの宣言
-
-呼び出されたメソッドやクラス関数において、引数の値はローカル変数に代入されます。 引数は **パラメーター名** とその **データ型** をコロン (:) で区切って宣言します。
-
-- クラス関数の場合、引数は関数のプロトタイプとともに宣言されます。つまり、`Function` あるいは `Class constructor` キーワードを使用して宣言されます。
-- メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の **`#DECLARE`** キーワードを使って宣言されます。
 
 例:
 
@@ -103,6 +103,12 @@ Function getArea($width : Integer; $height : Integer)-> $area : Integer
 $entitySelection:=ds.User.query("login=:1"; $user)
 // ハッシュパスワードを確認...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+
+:::
 
 ### 戻り値
 

@@ -28,7 +28,7 @@ In *targetObj*, you can pass:
 - un élément (en-tête / pied de page / corps / tableau / paragraphe / image ancrée ou en ligne / section / sous-section / feuille de style), ou
 - un document 4D Write Pro
 
-In *attribName*, pass the name of the attribute you want to retrieve.
+Dans *attribName*, passez le nom de l'attribut que vous souhaitez récupérer.
 
 You can also pass a collection of attribute names in *attribColl*, in which case the command will return an object containing the attribute names passed in *attribColl* along with their corresponding values.
 

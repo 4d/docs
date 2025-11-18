@@ -9,7 +9,7 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/en-whats-new-in-4d
 
 #### Destaques
 
-- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection.
+- [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R2): lista de todos os bugs corrigidos em 4D 21 R2.
 
 #### Mudanças de comportamento

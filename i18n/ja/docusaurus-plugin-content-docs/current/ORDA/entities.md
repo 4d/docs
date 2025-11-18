@@ -120,7 +120,7 @@ $myEntity.save() // エンティティを保存します
 
 :::note 注記
 
-- Database Object fields can be [associated with classes](../Develop/field-properties.md), in which case only objects of the defined class can be assigned to the entity attribute.
+- データベースのオブジェクト型フィールドは、[クラスを割り当てる](../Develop/field-properties.md) ことができます。この場合、定義されたクラスのオブジェクトのみをエンティティ属性に割り当てることができます。
 - データベースの BLOBフィールド ([スカラーBLOB](Concepts/dt_blob.md)) は、ORDAで扱われるにあたって、BLOBオブジェクト属性 ([`4D.Blob`](Concepts/dt_blob.md)) に自動変換されます。 BLOBオブジェクト属性を保存する際には、(利用可能なメモリによってのみサイズ制限される BLOBオブジェクトとは異なり) BLOBフィールドのサイズが 2GB に制限されることに注意してください。
 
 :::
@@ -469,7 +469,7 @@ Function event restrict() -> $result : cs.*DataClassName*Selection
 
 この関数は、データクラスのエンティティセレクションまたはエンティティが要求されるたびに呼び出されます。 フィルターは、エンティティセレクションが作成されたときに一度だけ実行されます。
 
-フィルターは、データクラスのエンティティセレクションを返さなければなりません。 It can be an entity selection built upon a query, stored in the [`Storage`](../API/SessionClass.md#storage), etc.
+フィルターは、データクラスのエンティティセレクションを返さなければなりません。 戻り値のエンティティセレクションには、クエリの結果や、[`Storage`](../API/SessionClass.md#storage) に格納されているものなどが使えます。
 
 :::note
 

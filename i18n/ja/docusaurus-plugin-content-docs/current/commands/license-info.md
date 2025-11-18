@@ -22,7 +22,7 @@ displayed_sidebar: docs
 
 :::note
 
-This command reloads the license files from the disk and updates the associated rights if they have been modified.
+このコマンドはライセンスファイルをディスクからリロードし、それらが変更されていた場合には、関連する権限を更新します。
 
 :::
 
