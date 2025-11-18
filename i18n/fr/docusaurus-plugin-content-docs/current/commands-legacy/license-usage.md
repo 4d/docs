@@ -15,7 +15,13 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.License usage.Summary-->La commande **License usage** retourne une collection d'objets contenant des informations sur les licences utilisées\[#/descv\].<!-- END REF-->
+<!--REF #_command_.License usage.Summary-->La commande **License usage** retourne une collection d'objets contenant des informations sur les licences utilisées<!-- END REF-->.
+
+:::note
+
+Cette commande est destinée à 4D Server. Elle retourne null si elle est exécutée depuis un autre contexte.
+
+:::
 
 Chaque objet de la collection retournée possède les attributs suivants :
 
