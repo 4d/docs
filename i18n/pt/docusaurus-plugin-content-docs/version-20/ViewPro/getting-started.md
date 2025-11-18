@@ -11,6 +11,12 @@ O 4D View Pro é um [componente 4D](Concepts/components.md) que inclui uma [áre
 
 Uma planilha é uma aplicação que contém uma grade de células onde você pode inserir informações, executar cálculos ou exibir imagens. 4D View Pro é alimentado pela solução de [folha de cálculo SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrada em 4D.
 
+:::note
+
+Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+
+:::
+
 A incorporação de áreas do 4D View Pro em seus formulários permite importar e exportar documentos de planilhas eletrônicas usando os comandos do 4D View Pro.
 
 

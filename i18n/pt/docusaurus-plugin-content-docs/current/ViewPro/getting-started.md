@@ -9,6 +9,12 @@ title: Começando
 
 Uma planilha é uma aplicação que contém uma grade de células onde você pode inserir informações, executar cálculos ou exibir imagens. 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://developer.mescius.com/spreadjs) integrada en 4D.
 
+:::note
+
+Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+
+:::
+
 A incorporação de áreas do 4D View Pro em seus formulários permite importar e exportar documentos de planilhas eletrônicas usando os comandos do 4D View Pro.
 
 ## Instalação e ativação

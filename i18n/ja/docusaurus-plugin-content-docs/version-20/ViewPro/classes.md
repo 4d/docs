@@ -129,7 +129,7 @@ title: クラス
 
 `.theme` プロパティは、 <!-- REF #TableOptions.theme.Summary -->表のテーマを定義します  (SpreadJS のネイティブテーマ名のテキスト値も可)<!-- END REF -->。
 
-[ネイティブSpreadJSテーマ](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) を参照ください。
+See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 ### .useFooterDropDownList
@@ -151,12 +151,12 @@ title: クラス
 `.backColor` プロパティは、 <!-- REF #TableStyle.backColor.Summary -->表の[背景色](configuring.md#background--foreground)を定義します。<!-- END REF -->。
 
 
-### .forecolor
+### .foreColor
 
-<!-- REF #TableStyle.forecolor.Syntax -->
-**.forecolor** : Text<!-- END REF -->
+<!-- REF #TableStyle.foreColor.Syntax -->
+**.foreColor** : Text<!-- END REF -->
 
-`.forecolor` プロパティは、 <!-- REF #TableStyle.forecolor.Summary -->表の[前景色](configuring.md#background--foreground)を定義します。<!-- END REF -->。
+The `.foreColor` property is the <!-- REF #TableStyle.foreColor.Summary -->表の[前景色](configuring.md#background--foreground)を定義します。<!-- END REF -->。
 
 
 
@@ -201,6 +201,12 @@ title: クラス
 `.borderBottom` プロパティは、 <!-- REF #TableStyle.borderBottom.Summary -->表の下の外枠線を定義します <!-- END REF -->。
 
 
+### .borderTop
+
+<!-- REF #TableStyle.borderTop.Syntax -->
+**.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
+
+The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->。
 
 
 ### .borderHorizontal
@@ -260,7 +266,7 @@ title: クラス
 **.theme** : [cs.ViewPro.TableThemeOptions](#tablethemeoptions)<br/>**.theme** : Text<!-- END REF -->
 
 
-`.theme` プロパティは、 <!-- REF #TableTheme.theme.Summary -->表のテーマを定義します<!-- END REF -->。 テキスト値の場合は、[ネイティブSpreadJSテーマ](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) の名前を使用します。
+`.theme` プロパティは、 <!-- REF #TableTheme.theme.Summary -->表のテーマを定義します<!-- END REF -->。 If Text: name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 
@@ -356,7 +362,7 @@ title: クラス
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-`.name` プロパティは、 <!-- REF #TableThemeOptions.name.Summary -->[ネイティブSpreadJSテーマの名前](https://www.grapecity.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes) を指定します<!-- END REF -->。
+`.name` プロパティは、 <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->。
 
 ### .secondColumnStripSize
 

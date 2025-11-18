@@ -5,7 +5,7 @@ title: Parâmetros
 
 Frequentemente será preciso passar dados para seus métodos. Isso é facilmente feito com parâmetros.
 
-## Visão Geral
+## Utilização de parâmetros
 
 Os **parâmetros** (ou **argumentos**) são partes de dados que um método ou uma função de classe precisa para executar sua tarefa. Os termos *parâmetro* e *argumento* são usados de forma intercambiável ao longo deste manual. Parâmetros também são passados para comandos integrados 4D. Neste exemplo, a cadeia de caracteres "Hello" é um argumento para o comando interno `ALERT`:
 
@@ -53,10 +53,16 @@ A sintaxe de declaração herdada, em que os parâmetros são automaticamente co
 
 ## Declaração de parâmetros
 
-Dentro de métodos ou funções de classe chamados, valores parâmetros são atribuidos à variáveis locais. You declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
 
 - For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class constructor` keywords.
 - For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the **`#DECLARE`** keyword at the beginning of the method code.
+
+:::info Compatibidade
+
+A sintaxe de declaração herdada, em que os parâmetros são automaticamente copiados em variáveis locais numeradas sequencialmente $0, $1, etc. e declarados usando diretivas do compilador, como `C_TEXT($1;$2)`, é **depreciada** a partir de 4D 20 R7.
+
+:::
 
 Exemplos:
 
@@ -103,6 +109,12 @@ Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluido
 $entitySelection:=ds.User.query("login=:1"; $user)
 // Verificar a senha hash...
 ```
+
+:::note
+
+Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+
+:::
 
 ### Valor retornado
 

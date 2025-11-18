@@ -11,6 +11,12 @@ title: Comencemos
 
 Una hoja de cálculo es una aplicación que contiene una cuadrícula de celdas en las que se puede introducir información, ejecutar cálculos o mostrar imágenes. 4D View Pro es alimentado por la [solución de hoja de cálculo SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrada en 4D.
 
+:::note
+
+Go to the [Library table](../Notes/updates.md#library-table) to know the SpreadJS version integrated in your 4D release.
+
+:::
+
 La integración de áreas de 4D View Pro en sus formularios le permite importar y exportar documentos de hojas de cálculo utilizando los comandos 4D View Pro.
 
 
