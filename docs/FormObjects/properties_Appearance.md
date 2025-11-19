@@ -35,6 +35,12 @@ defaultButton|boolean|true, false |
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
+:::note
+
+The focus rectangle is only available on macOS and on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI. 
+
+:::
+
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|

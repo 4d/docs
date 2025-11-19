@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Operator | &#8594;  | If specified, object is an object name (string)If omitted, object is a variable or field |
+| * | Operator | &#8594;  | If specified, object is an object name (string). If omitted, object is a variable or field |
 | object | any | &#8594;  | Object Name (if * is specified) or Variable or field (if * is omitted) |
 | Function result | Boolean | &#8592; | True = focus rectangle hidden, False = focus rectangle shown |
 
@@ -17,9 +17,9 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->The **OBJECT Get focus rectangle invisible** command returns the status of the visibility option for the focus rectangle of the object(s) designated by the *object* and *\** parameters for the current process .<!-- END REF--> This setting corresponds to the **Hide focus rectangle** option that is available for enterable objects in the Property List in the Design mode. This command returns the current status of the option, as it is defined in Design mode or using the [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md) command.
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Summary-->The **OBJECT Get focus rectangle invisible** command returns the status of the visibility option for the focus rectangle of the object(s) designated by the *object* and *\** parameters for the current process .<!-- END REF--> This setting corresponds to the [**Hide focus rectangle** option](../FormObjects/properties_Appearance.md#hide-focus-rectangle) that is available for enterable objects in the Property List in the Design mode. This command returns the current status of the option, as it is defined in Design mode or using the [OBJECT SET FOCUS RECTANGLE INVISIBLE](object-set-focus-rectangle-invisible.md) command.
 
-**Note:** You can only use this option under Mac OS. It has no effect under Windows. 
+**Note:** This option can only be used on macOS and on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It has no effect on Windows classic UI. 
 
 If you pass the optional *\** parameter, this indicates that the *object* parameter is an object name (a string). If you do not pass this parameter, this indicates that the *object* is a variable or a field. In this case, you pass a variable reference instead of a string.
 
