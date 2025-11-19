@@ -18,6 +18,7 @@ Read [**What’s new in 4D 21 R2**](https://blog.4d.com/en-whats-new-in-4d-21-r2
 
 #### Behavior changes
 
+- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not. 
 
 
 

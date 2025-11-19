@@ -23,7 +23,7 @@ displayed_sidebar: docs
 The actual color scheme is defined by:
 
 * a call to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) command;
-* if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) was not called or called with "inherited" parameter value, the Settings (host database Settings in case of a component);
+* if [SET APPLICATION COLOR SCHEME](set-application-color-scheme.md) was not called or called with "inherited" parameter value, the [color scheme Settings](../settings/interface.md#appearance) (host database Settings in case of a component);
 * if settings set to "inherited", the OS user preferences.
 
 The *\** parameter is useful when the command is called from a component: when it is passed, the command returns the color scheme of the host database. 

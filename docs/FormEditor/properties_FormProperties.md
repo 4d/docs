@@ -9,7 +9,7 @@ title: Form Properties
 
 >Color scheme property is only applied on macOS.
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). This can be changed for the form to one of the following two options:
 
 *	dark - light text on a dark background 
 *	light - dark text on a light background
@@ -237,27 +237,25 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 ## Widget appearance  
 
-The widget appearance property allows you to set explicitely the platform interface to use when the form is executed on Windows. By default, forms inherit from the [global project interface settings](../settings/interface.md). 
+The widget appearance property allows you to set explicitely the interface theme to use when the form is executed on Windows. By default, forms inherit from the [global project interface theme settings](../settings/interface.md). 
 
 Available values are:
 
-- **Inherited** (default): inherits from the project interface  
-- **Classic**: use the Windows classic interface on Windows
-- **Fluent UI**: use 
+- **Inherited** (default): inherits from the project theme  
+- **Classic**: use the Windows classic interface theme
+- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme
 
- is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+:::note
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+This property is only applied on Windows, it is ignored on macOS.
 
-*	A standard XLIFF reference stored in the Resources folder.
-*	A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*	A variable or a field: The syntax to apply is `\<VariableName>` or `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
+:::
 
-> The number of characters for a window title is limited to 31.
 
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|windowTitle |string |The name of the window as plain text or as a reference|
+|fluentUI |boolean |true, false|
 
+If the property is not defined, the "inherited" option is selected. 
