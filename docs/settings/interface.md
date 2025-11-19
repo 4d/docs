@@ -36,7 +36,7 @@ You can set the [frequency for cache flushing](database.md#memory-page) in **Set
 
 -   **Printing progress**: Lets you enable or disable the display of the printing progress dialog box when printing.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
+-   **Use SDI mode on Windows**: When this option is checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). When you select this option, on Windows the **Run** menu of the 4D menu bar allows you to select the mode in which you want to test the application:
 
 	![](../assets/en/settings/sdi-mdi.png)
 	
@@ -68,6 +68,19 @@ The main application scheme will be applied to forms by default. However, it can
 
 -   by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) command at the working session level;
 -   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
+
+
+### Use Fluent UI on Windows  
+
+When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows classic UI rendering theme will be used by default. 
+
+> This option is only used on Windows, it has no effect on macOS.
+
+This project setting can be overriden at form level by using the [Widget appearance](../FormEditor/propertiesForm.html#widget-appearance) form property (highest priority level).
+
+> Rendering themes can be handled using CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section. 
+
+
 
 ## Shortcuts  
 
