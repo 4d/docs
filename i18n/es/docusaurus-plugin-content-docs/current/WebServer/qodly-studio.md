@@ -116,7 +116,7 @@ Hay dos formas de acceder a Qodly Studio:
 
 The Qodly Studio documentation is available on the [Qodly documentation website](https://developer.qodly.com/docs/studio/overview).
 
-You can rely on this documentation and its associated resources for developing web applications powered by Qodly pages. Sin embargo, dependiendo de la etapa de implementación, los desarrolladores 4D utilizarán Qodly Studio o 4D IDE (ver [Comparación de funcionalidades](#comparación-de-funcionalidades)).
+Puede confiar en esta documentación y sus recursos asociados para desarrollar aplicaciones web basadas en páginas Qodly. Sin embargo, dependiendo de la etapa de implementación, los desarrolladores 4D utilizarán Qodly Studio o 4D IDE (ver [Comparación de funcionalidades](#comparación-de-funcionalidades)).
 
 Se ofrecen ejemplos de código en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), pero como QodlyScript hereda del Lenguaje 4D, no se sentirá perdido. Se ofrecen ejemplos de código en [QodlyScript](https://developer.qodly.com/docs/category/qodlyscript), pero como QodlyScript hereda del Lenguaje 4D, no se sentirá perdido.
 
@@ -235,7 +235,7 @@ El proyecto debe ejecutarse en modo interpretado para que el elemento de menú *
 
 :::
 
-2. In the Qodly Studio toolbar, click on the **Debug** button.<br/>
+2. En la barra de herramientas de Qodly Studio, haga clic en el botón **Debug**.<br/>
    ![qodly-debug](../assets/en/WebServer/qodly-debug.png)
 
 Si la sesión de depuración se inicia correctamente, aparecerá una viñeta verde en la etiqueta del botón ![qodly-debug](../assets/en/WebServer/debug2.png) y podrá utilizar el depurador de Qodly Studio.

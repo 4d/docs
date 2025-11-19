@@ -64,8 +64,8 @@ Puede pasar un objeto para definir cómo se gestionan los siguientes atributos d
 
 **Notas de compatibilidad**
 
-- *Character style sheets in legacy 4D Write documents use a proprietary mechanism, which is not supported by 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Las hojas de estilo de caracteres antiguos no son importadas y ya no están referenciadas en el documento.*
-- *Support for importing in .docx format is only certified for Microsoft Word 2010 and newer. Versiones antiguas, especialmente Microsoft Word 2007, pueden no importar correctamente.*
+- *Las hojas de estilo de caracteres de los documentos heredados de 4D Write utilizan un mecanismo propietario que no es compatible con 4D Write Pro. To get the best result for imported text, style sheet attributes are converted to "hard coded" style attributes. Las hojas de estilo de caracteres antiguos no son importadas y ya no están referenciadas en el documento.*
+- *El soporte para la importación en formato .docx solo está certificado para Microsoft Word 2010 y más recientes. Versiones antiguas, especialmente Microsoft Word 2007, pueden no importar correctamente.*
 
 ## Ejemplo 1
 

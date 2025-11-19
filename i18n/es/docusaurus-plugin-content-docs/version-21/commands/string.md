@@ -90,7 +90,7 @@ Si pasa 0 en *base*, el comando determina la base dependiendo del valor de *expr
 :::info
 
 - Esta sintaxis sigue estrictamente la especificación [`toString` EcmaScript sobre el manejo del radix](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.prototype.tostring).
-- Utilizar esta sintaxis con *base*=10 no dará exactamente los mismos resultados que utilizar la sintaxis sin el parámetro *base*. For example, if the specified number value is not a number, the "NaN" string is returned.
+- Utilizar esta sintaxis con *base*=10 no dará exactamente los mismos resultados que utilizar la sintaxis sin el parámetro *base*. Por ejemplo, si el valor numérico especificado no es un número, se devuelve la cadena "NaN".
 
 :::
 

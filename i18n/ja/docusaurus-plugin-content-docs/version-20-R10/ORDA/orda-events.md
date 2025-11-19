@@ -1,77 +1,77 @@
 ---
 id: orda-events
-title: Entity Events
+title: エンティティイベント
 ---
 
 <details><summary>履歴</summary>
 
-| リリース   | 内容                  |
-| ------ | ------------------- |
-| 20 R10 | touched event added |
+| リリース   | 内容             |
+| ------ | -------------- |
+| 20 R10 | touched イベント追加 |
 
 </details>
 
-Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+エンティティイベントとは、エンティティやエンティティ属性が操作(追加、削除、変更)されるたびに ORDA によって自動的に呼び出される関数です。 シンプルなイベントを書き、それをより洗練されたものに変えていくことができます。
 
-You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
+イベント関数の実行は直接トリガーすることはできません。 イベントは、ユーザーアクションや、エンティティまたはその属性に対するコードを通して実行された操作に基づいて、ORDA によって自動的に呼び出されます。
 
-:::info note Compatibility note
+:::info 互換性に関する注意
 
-ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+データストアにおける ORDA エンティティイベントは、4D データベースにおけるトリガに相当します。 しかしながら、4D クラシックランゲージコマンドを使用して 4D データベースレベルでトリガーされたアクション、あるいは標準アクションは、ORDA イベントをトリガーしません。 また、トリガとは異なり、ORDA エンティティイベントはエンティティを保存または削除する際に、データクラスの元となるテーブル全体をロックしないことに注意して下さい。 個別のエンティティ(つまりレコード)に起因している限りは、複数のイベントが同時に実行されることが可能です。
 
 :::
 
 ## 概要
 
-### Event level
+### イベントレベル
 
 エンティティイベント関数は必ず[Entity クラス](../ORDA/ordaClasses.md#entity-class) 内で定義されます。
 
-It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute.
+イベントは **エンティティ** レベルまたは **属性** レベルで設定することができます(属性には [**計算属性**](../ORDA/ordaClasses.md#計算属性) も含まれます)。 前者の場合、エンティティのあらゆる属性でイベントがトリガーされます。それ以外の場合、イベントは対象となる属性に対してのみトリガーされます。
 
-For the same event, you can define different functions for different attributes.
+同じイベントに対して、異なる属性に対して異なる関数を定義することができます。
 
-You can also define the same event at both attribute and entity levels. The attribute event is called first and then the entity event.
+また同じイベントを属性レベルとエンティティレベルの両方で定義することも可能です。 その場合、属性イベントが先に呼ばれ、その後にエンティティイベントが呼ばれます。
 
-### Execution in remote configurations
+### リモート構成における実行
 
-Usually, ORDA events are executed on the server.
+一般的に、ORDA イベントはサーバー上で実行されます。
 
-In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
+しかしながらクライアント/サーバー構成においては、[`local`](./ordaClasses.md#local-functions) キーワードの使用によっては、`touched()` イベント関数を**サーバーまたはクライアント**で実行することが可能です。 クライアント側で特定の実装をすることにより、イベントをクライアント上でトリガーすることができるようになります。
 
 :::note
 
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed on the client.
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクライアント上で実行されます。
 
 :::
 
 他のリモート設定(例:  Qodly アプリケーション、[REST API リクエスト](../REST/REST_requests.md)、あるいは[`Open datastore`](../commands/open-datastore.md) を通したリクエスト) では、`touched()` イベント関数は必ず**サーバー側**で実行されます。 これはつまり、イベントがトリガーされるためには、属性がタッチされたということを必ずサーバーが"見える"ようにしておかなければならないということを意味します(以下参照)。
 
-### Summary table
+### 概要表
 
 以下の表は、ORDA エンティティイベントの一覧とそのルールをまとめたものです。
 
-| イベント                 | レベル    | Function name                                           |                 (C/S) Executed on                 |
-| :------------------- | :----- | :------------------------------------------------------ | :------------------------------------------------------------------: |
-| Entity instantiation | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                |
-| Attribute touched    | 属性     | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword |
-|                      | Entity | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword |
+| イベント           | レベル    | 関数名                                                     |            (C/S の場合) 実行される場所            |
+| :------------- | :----- | :------------------------------------------------------ | :--------------------------------------------------------: |
+| エンティティのインスタンス化 | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                           client                           |
+| 属性がタッチされた      | 属性     | `event touched <attrName>()`                            | [`local`](../ORDA/ordaClasses.md#local-functions) キーワードによる |
+|                | Entity | `event touched()`                                       | [`local`](../ORDA/ordaClasses.md#local-functions) キーワードによる |
 
 :::note
 
-The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actually an event function but is always called when a new entity is instantiated.
+[`constructor()`](./ordaClasses.md#class-constructor-1) 関数は実際にはイベント関数ではありませんが、エンティティがインスタンス化される際に必ず呼び出されます。
 
 :::
 
-## *event* parameter
+## *event* 引数
 
-Event functions accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
+イベント関数は、単一の *event* オブジェクトを引数として受け取ります。 関数が呼び出されると、引数には複数のプロパティに値が入れられます:
 
-| プロパティ名          | 利用可能性        | 型   | 説明                                                                                     |
-| :-------------- | :----------- | :-- | :------------------------------------------------------------------------------------- |
-| `kind`          | Always       | 文字列 | イベント名("touched")                                                    |
-| *attributeName* | 属性に関するイベントのみ | 文字列 | Attribute name (*e.g.* "firstname") |
-| *dataClassName* | Always       | 文字列 | Dataclass name (*e.g.* "Company")   |
+| プロパティ名          | 利用可能性        | 型   | 説明                                         |
+| :-------------- | :----------- | :-- | :----------------------------------------- |
+| `kind`          | 常に           | 文字列 | イベント名("touched")        |
+| *attributeName* | 属性に関するイベントのみ | 文字列 | 属性名 (*例* "firstname")   |
+| *dataClassName* | 常に           | 文字列 | データクラス名 (*例* "Company") |
 
 ## Event function description
 

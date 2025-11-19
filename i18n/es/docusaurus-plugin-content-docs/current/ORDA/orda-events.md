@@ -24,7 +24,7 @@ No se puede activar directamente la ejecución de la función de evento. Los eve
 
 :::info Nota de compatibilidad
 
-Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA.
+Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA. Note also that, unlike triggers, ORDA entity events do not lock the entire underlying table of a dataclass while saving or dropping entities. Several events can run in parallel as long as they involve distinct entities (i.e. records).
 
 :::
 
@@ -338,7 +338,7 @@ Este evento es activado por las siguientes funciones:
 
 This event is triggered **before** the entity is actually saved and lets you check data consistency so that you can stop the action if needed. Por ejemplo, puede comprobar en este evento que "fecha de salida" < "fecha de llegada".
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Para detener la acción, el código de la función debe devolver un [objeto error](#error-object).
 
 :::note
 
@@ -380,7 +380,7 @@ Function event saving <attributeName>($event : Object)
 Este evento se activa cada vez que se guarda una entidad.
 
 - Si define la función a nivel de entidad (primera Sintaxis), se llama para cualquier atributo de la entidad. The function is executed even if no attribute has been touched in the entity (e.g. in case of sending data to an external app each time a save is done).
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute. La función **no** se ejecuta si el atributo no ha sido tocado en la entidad.
+- Si definió la función en el nivel de atributo (segunda Sintaxis), solo se llama para este atributo. La función **no** se ejecuta si el atributo no ha sido tocado en la entidad.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
@@ -393,13 +393,13 @@ Este evento se activa **mientras** la entidad se guarda. If a [`validateSave()`]
 
 :::note
 
-The business logic should raise errors which can't be detected during the `validateSave()` events, e.g. a network error
+La lógica de negocio debe generar errores que no puedan detectarse durante los eventos `validateSave()`, por ejemplo, un error de red
 
 :::
 
 Durante la acción de guardar, se pueden producir errores en el motor 4D (índice, sello ha cambiado, no hay suficiente espacio en el disco).
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Para detener la acción, el código de la función debe devolver un [objeto error](#error-object).
 
 #### Ejemplo
 
@@ -420,7 +420,9 @@ If (This.userManualPath#"")
 	// The user manual document file is created on the disk
 	// This may fail if no more space is available
 	Try
-		$fileCreated:=$userManualFile.create() 
+        // The file content has been generated and stored in a map in Storage.docMap previously
+	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
+        $userManualFile.setContent($docInfo.content)
 	Catch
 		// No more room on disk for example
 		$result:={/
@@ -433,6 +435,12 @@ End if
 return $result
 
 ```
+
+:::note
+
+The content of the file is generated outside the `saving` event because it can be time consuming.
+
+:::
 
 ### `Function event afterSave`
 
@@ -486,7 +494,7 @@ Function event validateDrop <attributeName>($event : Object)
 Este evento se activa cada vez que una entidad está a punto de ser soltada.
 
 - Si define la función a nivel de entidad (primera Sintaxis), se llama para cualquier atributo de la entidad.
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute.
+- Si definió la función en el nivel de atributo (segunda Sintaxis), solo se llama para este atributo.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
@@ -498,7 +506,7 @@ Este evento se activa con las siguientes funcionalidades:
 
 This event is triggered **before** the entity is actually dropped, allowing you to check data consistency and if necessary, to stop the drop action.
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Para detener la acción, el código de la función debe devolver un [objeto error](#error-object).
 
 #### Ejemplo
 
@@ -533,7 +541,7 @@ Function event dropping <attributeName>($event : Object)
 Este evento se activa cada vez que se elimina una entidad.
 
 - Si define la función a nivel de entidad (primera Sintaxis), se llama para cualquier atributo de la entidad.
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute.
+- Si definió la función en el nivel de atributo (segunda Sintaxis), solo se llama para este atributo.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 
@@ -547,11 +555,11 @@ This event is triggered **while** the entity is actually dropped. If a [`validat
 
 :::note
 
-The business logic should raise errors which cannot be detected during the `validateDrop()` events, e.g. a network error.
+La lógica de negocio debe generar errores que no puedan detectarse durante los eventos `validateDrop()`, por ejemplo, un error de red.
 
 :::
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Para detener la acción, el código de la función debe devolver un [objeto error](#error-object).
 
 #### Ejemplo
 

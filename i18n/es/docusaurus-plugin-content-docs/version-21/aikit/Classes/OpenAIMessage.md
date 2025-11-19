@@ -82,8 +82,8 @@ Cuando reciba un mensaje de llamada de herramienta, debe:
 2. **Execute the function:**
    Parse the arguments (which is a JSON string) and call the corresponding function that you defined in your OpenAITool configuration.
 
-3. **Respond with the tool result:**
-   Create a response message using the exact `tool_call_id` from the original request.
+3. **Responde con el resultado de la herramienta:**
+   Crea un mensaje de respuesta usando el `tool_call_id` exacto de la petición original.
 
 **Ejemplo de respuesta de la herramienta:**
 

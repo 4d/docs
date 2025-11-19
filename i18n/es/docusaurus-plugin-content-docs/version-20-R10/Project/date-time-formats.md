@@ -112,7 +112,7 @@ La siguiente tabla muestra todos los patrones soportados para formatos de fecha 
 
 ### `L` (monopuesto) vs `M`
 
-En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. In "January 10, 2010", "January" is not spelled the same as in "*rendez-vous* in January".
+En algunos idiomas (ruso, eslovaco), el mes utilizado por sí solo es diferente al mes en una fecha. En "10 de enero de 2010", "enero" no se escribe igual que en "*rendez-vous* en janvier".
 
 ### `e` vs `c`
 

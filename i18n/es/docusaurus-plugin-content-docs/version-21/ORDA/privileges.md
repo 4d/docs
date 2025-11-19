@@ -35,7 +35,7 @@ Puede asignar acciones de permiso específicas a los siguientes recursos en su p
 
 Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma en que se acceda), 4D verifica que la sesión tenga los permisos apropiados y rechaza el acceso si no está autorizado.
 
-## Permissions
+## Permisos
 
 A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Permissions are defined for the project in the [`roles.json`](#rolesjson-file) file. Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
 
@@ -262,8 +262,8 @@ The `restrictedByDefault` property configures how every [resource](#resources) a
 
 Depending on your environment, the recommended settings are:
 
-- **Production**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **true**. Esto garantiza la máxima seguridad al requerir autenticación de usuario y permisos explícitamente definidos para el acceso a recursos.
-- **Development**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **false**. Esto permite un acceso más fácil durante el desarrollo y la depuración, con la posibilidad de aplicar gradualmente restricciones.
+- **Producción**: defina tanto `restrictedByDefault` como [`forceLogin`](../REST/authUsers.md#force-login-mode) como **true**. Esto garantiza la máxima seguridad al requerir autenticación de usuario y permisos explícitamente definidos para el acceso a recursos.
+- **Desarrollo**: defina `restrictedByDefault` y [`forceLogin`](../REST/authUsers.md#force-login-mode) como **false**. Esto permite un acceso más fácil durante el desarrollo y la depuración, con la posibilidad de aplicar gradualmente restricciones.
 
 ### Archivo `Roles_Errors.json`
 

@@ -205,7 +205,7 @@ La propiedad `.borderBottom` es la <!-- REF #TableStyle.borderBottom.Summary -->
 
 **.borderTop** : [cs.ViewPro.LineBorder](#lineborder)<!-- END REF -->
 
-The `.borderTop` property is the <!-- REF #TableStyle.borderTop.Summary -->top border line of the table <!-- END REF -->.
+La propiedad `.borderTop` es la línea del borde superior de la tabla <!-- REF #TableStyle.borderTop.Summary --> <!-- END REF -->.
 
 ### .borderHorizontal
 

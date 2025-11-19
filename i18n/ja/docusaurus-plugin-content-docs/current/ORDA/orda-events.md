@@ -1,114 +1,114 @@
 ---
 id: orda-events
-title: Entity Events
+title: エンティティイベント
 ---
 
 <details><summary>履歴</summary>
 
-| リリース   | 内容                                                                                                    |
-| ------ | ----------------------------------------------------------------------------------------------------- |
-| 21     | Added events: validateSave / saving / afterSave / validateDrop / dropping / afterDrop |
-| 20 R10 | touched event added                                                                                   |
+| リリース   | 内容                                                                                                 |
+| ------ | -------------------------------------------------------------------------------------------------- |
+| 21     | 追加されたイベント: validateSave / saving / afterSave / validateDrop / dropping / afterDrop |
+| 20 R10 | touched イベント追加                                                                                     |
 
 </details>
 
-Entity events are functions that are automatically invoked by ORDA each time entities and entity attributes are manipulated (added, deleted, or modified). You can write very simple events, and then make them more sophisticated.
+エンティティイベントとは、エンティティやエンティティ属性が操作(追加、削除、変更)されるたびに ORDA によって自動的に呼び出される関数です。 シンプルなイベントを書き、それをより洗練されたものに変えていくことができます。
 
-You cannot directly trigger event function execution. Events are called automatically by ORDA based on user actions or operations performed through code on entities and their attributes.
+イベント関数の実行は直接トリガーすることはできません。 イベントは、ユーザーアクションや、エンティティまたはその属性に対するコードを通して実行された操作に基づいて、ORDA によって自動的に呼び出されます。
 
-:::tip Related blog post
+:::tip 関連したblog 記事
 
 [ORDA – Handle an event-driven logic during data persistence actions](https://blog.4d.com/orda-handle-an-event-driven-logic-during-database-operations)
 
 :::
 
-:::info note Compatibility note
+:::info 互換性に関する注意
 
-ORDA entity events in the datastore are equivalent to triggers in the 4D database. However, actions triggered at the 4D database level using the 4D classic language commands or standard actions do not trigger ORDA events.
+データストアにおける ORDA エンティティイベントは、4D データベースにおけるトリガに相当します。 しかしながら、4D クラシックランゲージコマンドを使用して 4D データベースレベルでトリガーされたアクション、あるいは標準アクションは、ORDA イベントをトリガーしません。 また、トリガとは異なり、ORDA エンティティイベントはエンティティを保存または削除する際に、データクラスの元となるテーブル全体をロックしないことに注意して下さい。 個別のエンティティ(つまりレコード)に起因している限りは、複数のイベントが同時に実行されることが可能です。
 
 :::
 
 ## 概要
 
-### Event level
+### イベントレベル
 
-A event function is always defined in the [Entity class](../ORDA/ordaClasses.md#entity-class).
+イベント関数は必ず[Entity クラス](../ORDA/ordaClasses.md#エンティティクラス) 内で定義されます。
 
-It can be set at the **entity** level and/or the **attribute** level (it includes [**computed attributes**](../ORDA/ordaClasses.md#computed-attributes)). In the first case, it will be triggered for any attributes of the entity; on the other case, it will only be triggered for the targeted attribute.
+イベントは **エンティティ** レベルまたは **属性** レベルで設定することができます(属性には [**計算属性**](../ORDA/ordaClasses.md#計算属性) も含まれます)。 前者の場合、エンティティのあらゆる属性でイベントがトリガーされます。それ以外の場合、イベントは対象となる属性に対してのみトリガーされます。
 
-For the same event, you can define different functions for different attributes.
+同じイベントに対して、異なる属性に対して異なる関数を定義することができます。
 
-You can also define the same event at both attribute and entity levels. The attribute event is called first and then the entity event.
+また同じイベントを属性レベルとエンティティレベルの両方で定義することも可能です。 その場合、属性イベントが先に呼ばれ、その後にエンティティイベントが呼ばれます。
 
-### Execution in remote configurations
+### リモート構成における実行
 
-Usually, ORDA events are executed on the server.
+一般的に、ORDA イベントはサーバー上で実行されます。
 
-In client/server configuration however, the `touched()` event function can be executed on the **server or the client**, depending on the use of [`local`](./ordaClasses.md#local-functions) keyword. A specific implementation on the client side allows the triggering of the event on the client.
-
-:::note
-
-ORDA [`constructor()`](./ordaClasses.md#class-constructor) functions are always executed on the client.
-
-:::
-
-With other remote configurations (i.e. [Qodly applications](https://developer.4d.com/qodly), [REST API requests](../REST/REST_requests.md), or requests through [`Open datastore`](../commands/open-datastore.md)), the `touched()` event function is always executed **server-side**. It means that you have to make sure the server can "see" that an attribute has been touched to trigger the event (see below).
-
-### Summary table
-
-The following table lists ORDA events along with their rules.
-
-| イベント                      | レベル    | Function name                                           |                 (C/S) Executed on                 | Can stop action by returning an error |
-| :------------------------ | :----- | :------------------------------------------------------ | :------------------------------------------------------------------: | ------------------------------------- |
-| Entity instantiation      | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                                client                                | ×                                     |
-| Attribute touched         | 属性     | `event touched <attrName>()`                            | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | ×                                     |
-|                           | Entity | `event touched()`                                       | Depends on [`local`](../ORDA/ordaClasses.md#local-functions) keyword | ×                                     |
-| Before saving an entity   | 属性     | `validateSave <attrName>()`                             |                                server                                | ◯                                     |
-|                           | Entity | `validateSave()`                                        |                                server                                | ◯                                     |
-| When saving an entity     | 属性     | `saving <attrName>()`                                   |                                server                                | ◯                                     |
-|                           | Entity | `saving()`                                              |                                server                                | ◯                                     |
-| After saving an entity    | Entity | `afterSave()`                                           |                                server                                | ×                                     |
-| Before dropping an entity | 属性     | `validateDrop <attrName>()`                             |                                server                                | ◯                                     |
-|                           | Entity | `validateDrop()`                                        |                                server                                | ◯                                     |
-| When dropping an entity   | 属性     | `dropping <attrName>()`                                 |                                server                                | ◯                                     |
-|                           | Entity | `dropping()`                                            |                                server                                | ◯                                     |
-| After dropping an entity  | Entity | `afterDrop()`                                           |                                server                                | ×                                     |
+しかしながらクライアント/サーバー構成においては、[`local`](./ordaClasses.md#local-functions) キーワードの使用によっては、`touched()` イベント関数を**サーバーまたはクライアント**で実行することが可能です。 クライアント側で特定の実装をすることにより、イベントをクライアント上でトリガーすることができるようになります。
 
 :::note
 
-The [`constructor()`](./ordaClasses.md#class-constructor-1) function is not actually an event function but is always called when a new entity is instantiated.
+ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクライアント上で実行されます。
 
 :::
 
-## *event* parameter
+他のリモート構成(例: [Qodly アプリケーション](https://developer.4d.com/qodly)、[REST API リクエスト](../REST/REST_requests.md)、あるいは[`Open datastore`](../commands/open-datastore.md) を通したリクエスト)においては、イベント関数は必ず**サーバー側**で実行されます。 これはつまりイベントをトリガーするためには、属性がタッチされたことがサーバーから"見える"ようにしておくようにしなければならいことを意味します(以下参照)。
 
-Event functions accept a single *event* object as parameter. When the function is called, the parameter is filled with several properties:
+### 概要表
 
-| プロパティ名              | 利用可能性                                                                                                                    | 型                    | 説明                                                                                                                    |   |
-| :------------------ | :----------------------------------------------------------------------------------------------------------------------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------- | - |
-| "kind"              | Always                                                                                                                   | 文字列                  | Event name: "touched", "validateSave", "saving", "afterSave", "validateDrop", "dropping", "afterDrop" |   |
-| *attributeName*     | Only for events implemented at attribute level ("validateSave", "saving", "validateDrop", "dropping") | 文字列                  | Attribute name (*e.g.* "firstname")                                |   |
-| *dataClassName*     | Always                                                                                                                   | 文字列                  | Dataclass name (*e.g.* "Company")                                  |   |
-| "savedAttributes"   | Only in [`afterSave()`](#function-event-aftersave)                                                                       | Collection of String | Names of attributes properly saved                                                                                    |   |
-| "droppedAttributes" | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | Collection of String | Names of attributes properly dropped                                                                                  |   |
-| "saveStatus"        | Only in [`afterSave()`](#function-event-aftersave)                                                                       | 文字列                  | "success" if the save was successful, "failed" otherwise                                                              |   |
-| "dropStatus"        | Only in [`afterDrop()`](#function-event-afterdrop)                                                                       | 文字列                  | "success" if the drop was successful, "failed" otherwise                                                              |   |
+以下の表は、ORDA イベントの一覧とそのルールをまとめたものです。
 
-## Error object
+| イベント                                  | レベル    | 関数名                                                     |            (C/S の場合) 実行される場所            | エラーを返すことでアクションを停止できる |
+| :------------------------------------ | :----- | :------------------------------------------------------ | :--------------------------------------------------------: | -------------------- |
+| エンティティのインスタンス化                        | Entity | [`constructor()`](./ordaClasses.md#class-constructor-1) |                           client                           | ×                    |
+| 属性がタッチされた                             | 属性     | `event touched <attrName>()`                            | [`local`](../ORDA/ordaClasses.md#local-functions) キーワードによる | ×                    |
+|                                       | Entity | `event touched()`                                       | [`local`](../ORDA/ordaClasses.md#local-functions) キーワードによる | ×                    |
+| エンティティを保存する前                          | 属性     | `validateSave <attrName>()`                             |                           server                           | ◯                    |
+|                                       | Entity | `validateSave()`                                        |                           server                           | ◯                    |
+| エンティティの保存時                            | 属性     | `saving <attrName>()`                                   |                           server                           | ◯                    |
+|                                       | Entity | `saving()`                                              |                           server                           | ◯                    |
+| エンティティを保存した後                          | Entity | `afterSave()`                                           |                           server                           | ×                    |
+| エンティティをドロップ(削除)する前 | 属性     | `validateDrop <attrName>()`                             |                           server                           | ◯                    |
+|                                       | Entity | `validateDrop()`                                        |                           server                           | ◯                    |
+| エンティティのドロップ(削除)時   | 属性     | `dropping <attrName>()`                                 |                           server                           | ◯                    |
+|                                       | Entity | `dropping()`                                            |                           server                           | ◯                    |
+| エンティティをドロップした後                        | Entity | `afterDrop()`                                           |                           server                           | ×                    |
 
-[Some event functions](#summary-table) can return an **error object** to raise an error and stop the running action.
+:::note
 
-When an error occurs in an event, the other events are stopped at the first raised error and the action (save or drop) is also stopped. This error is sent before other potential errors like [stamp has changed, entity locked](../API/EntityClass.md#save), etc.
+[`constructor()`](./ordaClasses.md#class-constructor-1) 関数は実際にはイベント関数ではありませんが、エンティティがインスタンス化される際に必ず呼び出されます。
 
-### Error object properties
+:::
 
-| プロパティ              | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Set by the developer                      |
-| ------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- |
-| errCode            | Integer | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ◯                                         |
-| message            | Text    | Same as for [`Last errors`](../commands/last-errors.md) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | ◯                                         |
-| extraDescription   | Object  | Free information to set up                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | ◯                                         |
-| seriousError       | Boolean | Used only with validate events (see below). <li>`True`: creates a [serious (unpredictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) and triggers an exception. Adds the `dk status serious validation error` status</li><li>`False`: creates only a [silent (predictable) error](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). Adds the `dk status validation failed` status</li> | Yes (default is false) |
-| componentSignature | Text    | Always "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | ×                                         |
+## *event* 引数
+
+イベント関数は、単一の *event* オブジェクトを引数として受け取ります。 関数が呼び出されると、引数には複数のプロパティに値が入れられます:
+
+| プロパティ名              | 利用可能性                                                                                         | 型          | 説明                                                                                                         |   |
+| :------------------ | :-------------------------------------------------------------------------------------------- | :--------- | :--------------------------------------------------------------------------------------------------------- | - |
+| "kind"              | 常に                                                                                            | 文字列        | イベント名: "touched"、"validateSave"、"saving"、"afterSave"、"validateDrop"、"dropping"、"afterDrop" |   |
+| *attributeName*     | 属性レベルで実装されているイベントに対してのみ("validateSave"、"saving"、"validateDrop"、"dropping") | 文字列        | 属性名 (*例* "firstname")                                                                   |   |
+| *dataClassName*     | 常に                                                                                            | 文字列        | データクラス名 (*例* "Company")                                                                 |   |
+| "savedAttributes"   | [`afterSave()`](#function-event-aftersave) でのみ                                                | 文字列のコレクション | 正常に保存された属性名                                                                                                |   |
+| "droppedAttributes" | [`afterDrop()`](#function-event-afterdrop) でのみ                                                | 文字列のコレクション | 正常にドロップ(削除)された属性名                                                                       |   |
+| "saveStatus"        | [`afterSave()`](#function-event-aftersave) でのみ                                                | 文字列        | 保存が正常であれば "success"、それ以外の場合には "failed"                                                                     |   |
+| "dropStatus"        | [`afterDrop()`](#function-event-afterdrop) でのみ                                                | 文字列        | ドロップ(削除)が正常であれば "success"、それ以外の場合には "failed"                                            |   |
+
+## エラーオブジェクト
+
+[一部のイベント関数](#概要表) は **エラーオブジェクト** を返すことでエラーを生成し実行中のアクションを停止することができます。
+
+イベント中にエラーが発生した場合、他のイベントも最初にエラーが生成された時点で停止し、アクション(保存やドロップ)も停止します。 このエラーは[スタンプが変更された、エンティティがロックされていた](../API/EntityClass.md#save) などの潜在的なエラーの前に送信されます。
+
+### エラーオブジェクトのプロパティ
+
+| プロパティ              | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                               | 開発者によって設定                          |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| errCode            | Integer | [`Last errors`](../commands/last-errors.md) コマンドと同じ                                                                                                                                                                                                                                                                                                                                                                              | ◯                                  |
+| message            | Text    | [`Last errors`](../commands/last-errors.md) コマンドと同じ                                                                                                                                                                                                                                                                                                                                                                              | ◯                                  |
+| extraDescription   | Object  | 自由に設定可能な情報                                                                                                                                                                                                                                                                                                                                                                                                                       | ◯                                  |
+| seriousError       | Boolean | validate イベントでのみ使用されます(以下参照)。 <li>`True`: [深刻(予測不能)なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不能なエラー) を作成し、例外をトリガーします。 `dk status serious validation error` ステータスを追加します</li><li>`False`: creates only a [静か(予測可能) なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) のみを作成します。 `dk status validation failed` ステータスを追加します</li> | 可能(デフォルトはfalse) |
+| componentSignature | Text    | 常に "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                        | ×                                  |
 
 - [Serious errors](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.
 - In case of an error triggered by a **validate** event, the `seriousError` property allows you to choose the level of the error to generate:
@@ -420,7 +420,9 @@ If (This.userManualPath#"")
 	// The user manual document file is created on the disk
 	// This may fail if no more space is available
 	Try
-		$fileCreated:=$userManualFile.create() 
+        // The file content has been generated and stored in a map in Storage.docMap previously
+	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
+        $userManualFile.setContent($docInfo.content)
 	Catch
 		// No more room on disk for example
 		$result:={/
@@ -433,6 +435,12 @@ End if
 return $result
 
 ```
+
+:::note
+
+The content of the file is generated outside the `saving` event because it can be time consuming.
+
+:::
 
 ### `Function event afterSave`
 

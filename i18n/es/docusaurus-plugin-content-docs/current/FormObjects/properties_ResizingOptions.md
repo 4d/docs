@@ -77,7 +77,7 @@ Hay tres opciones disponibles:
 
 ## Dimensionamiento vertical
 
-This property specifies if an object should be vertically moved or resized when a user resizes the form. It can also be set dynamically by the [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md) command.
+Esta propiedad especifica si un objeto debe moverse o redimensionarse verticalmente cuando un usuario redimensiona el formulario. También puede establecerse dinámicamente mediante el comando [`OBJECT SET RESIZING OPTIONS`](../commands-legacy/object-set-resizing-options.md).
 
 Hay tres opciones disponibles:
 

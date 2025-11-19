@@ -404,7 +404,7 @@ sequenceDiagram
 
 ```
 
-#### Example 4 (diagram): Qodly - Standard action and update value on the newly created entity
+#### Ejemplo 4 (diagrama): Qodly - Acción estándar y valor de actualización en la nueva entidad creada
 
 ```mermaid
 
