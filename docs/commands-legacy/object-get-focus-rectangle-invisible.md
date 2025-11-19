@@ -9,7 +9,7 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|21 R2|Support with Fluent UI on Windows|
+|21 R2|Supported with Fluent UI on Windows|
 
 </details>
 
