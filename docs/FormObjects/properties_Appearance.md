@@ -37,7 +37,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 :::note
 
-The focus rectangle is only available on macOS and on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI. 
+The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI. 
 
 :::
 
