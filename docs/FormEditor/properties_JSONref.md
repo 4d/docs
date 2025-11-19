@@ -22,6 +22,7 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`entryOrder`](formEditor.md#data-entry-order)|The order in which active objects are selected when the **Tab** or the **Carriage return** key is used in an input form |Collection of 4D Form object names |
 |[`events`](Events/overview.md)|List of all events selected for the object or form|Collection of event names, e.g. ["onClick","onDataChange"...].|
 |<a name="f">**f**</a>|||
+|[`fluentUI`](properties_FormProperties.md#fluentui)|Use fluent UI rendering for the form on Windows|true, false|
 |[`formSizeAnchor`](./properties_FormSize.md#size-based-on)|Name of the object whose position determines the size of the form. (minimum length: 1)|Name of a 4D object|
 |<a name="h">**h**</a>|||
 |[`height`](properties_FormSize.md#height)|Height of the form|minimum: 0|
@@ -52,4 +53,3 @@ This page provides a comprehensive list of all form properties, sorted by their 
 |[`windowSizingX`](properties_WindowSize.md#fixed-width)|Form window's vertical sizing|"fixed", "variable"|
 |[`windowSizingY`](properties_WindowSize.md#fixed-height)|Form window's horizontal sizing|"fixed", "variable"|
 |[`windowTitle`](properties_FormProperties.md#window-title)|Designates a form window's title|A name for the form window|
-|[`winUI`](properties_FormProperties.md#winui)|Fluent UI selector for the form|A name for the form window|
