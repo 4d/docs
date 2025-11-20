@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips 関連したblog 記事
+:::tip 関連したblog 記事
 
 [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
 
@@ -213,7 +213,7 @@ End if
 
 4D では、OTP セッショントークンは外部URL を呼び出して、それが他のブラウザや他のデバイス(モバイル/PC) でコールバックされる場合に特に有用です。 通常、こういったサードパーティアプリケーションはコールバックリンクが入った確認メールを送信してきて、ユーザーはこれをクリックする必要があります。 コールバックリンクにはOTP トークンが含まれており、そのコールバックをトリガーしたセッションは、そのデータと権限とともにロードされます。 この原理により、同じセッションを複数のデバイス間で共有することができます。 このアーキテクチャーのおかげで、[セッションクッキー](#session-implementation) はネットワークに公開されることはないため、中間者攻撃のリスクを排除することができます。
 
-:::tips 関連したblog 記事
+:::tip 関連したblog 記事
 
 [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 

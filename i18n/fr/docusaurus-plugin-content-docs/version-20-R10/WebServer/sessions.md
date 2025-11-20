@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips Articles de blog sur le sujet
+:::tip Articles de blog sur le sujet
 
 [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 

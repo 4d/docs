@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips 関連したblog 記事
+:::tip 関連したblog 記事
 
 [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
 

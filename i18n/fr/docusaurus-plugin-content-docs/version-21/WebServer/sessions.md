@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips Articles de blog sur le sujet
+:::tip Articles de blog sur le sujet
 
 [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
@@ -213,7 +213,7 @@ Le serveur web 4D vous permet de générer, de partager et d'utiliser des tokens
 
 Dans 4D, les tokens de session OTP sont utiles pour appeler des URL externes et être rappelé dans un autre navigateur ou appareil (mobile/ordinateur). Généralement, une application tierce envoie un courriel de confirmation contenant un lien de rappel sur lequel l'utilisateur doit cliquer. Le lien de rappel inclut le token OTP, de sorte que la session qui a déclenché le rappel est chargée avec ses données et ses privilèges. Ce principe vous permet de partager la même session sur plusieurs appareils. Grâce à cette architecture, le [cookie de session] (#session-implementation) n'est pas exposé sur le réseau, ce qui élimine le risque d'une attaque de type "man-in-the-middle".
 
-:::tips Articles de blog sur le sujet
+:::tip Articles de blog sur le sujet
 
 [Connectez vos applications Web à des systèmes tiers](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 

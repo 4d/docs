@@ -209,7 +209,7 @@ Else
 End if
 ```
 
-:::tips Related blog posts
+:::tip Related blog posts
 
 [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) 
 

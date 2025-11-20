@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips Related blog posts
+:::tip Related blog posts
 
 [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
@@ -213,7 +213,7 @@ The 4D web server allows you to generate, share, and use OTP (One-Time Passcode)
 
 In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Graças a esta arquitetura, o [cookie de sessão](#session-implementation) não está exposto na rede, o que elimina o risco de ataque do homem-meio.
 
-:::tips Related blog posts
+:::tip Related blog posts
 
 [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
 
