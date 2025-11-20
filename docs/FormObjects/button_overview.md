@@ -299,7 +299,9 @@ The Help button style can be used to display a standard system help button. By d
 
 ### Circle
 
-The Circle button style appears as a round system button. This button style is designed for macOS. 
+The Circle button style appears as a round system button (on Windows )
+
+This button style is designed for macOS. 
 
 ![](../assets/en/FormObjects/button_circleM.png)
 

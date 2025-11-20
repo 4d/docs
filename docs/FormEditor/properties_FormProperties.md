@@ -86,6 +86,33 @@ The form name is defined by the name of the folder that contains the form.4Dform
 
 ---
 
+## Form Theme on Windows  
+
+This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+
+Available values are:
+
+- **Inherited** (default): inherits from the project theme  
+- **Classic**: use the Windows classic interface theme
+- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+
+:::note
+
+This property is ignored on macOS.
+
+:::
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|fluentUI |boolean |true, false|
+
+If the property is not defined, the "inherited" option is selected. 
+
+---
+
 ## Form Type  
 
 The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
@@ -232,30 +259,3 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 |---|---|---|
 |windowTitle |string |The name of the window as plain text or as a reference|
 
-
----
-
-## Widget appearance  
-
-The widget appearance property allows you to set explicitely the interface theme to use when the form is executed on Windows. By default, forms inherit from the [global project interface theme settings](../settings/interface.md). 
-
-Available values are:
-
-- **Inherited** (default): inherits from the project theme  
-- **Classic**: use the Windows classic interface theme
-- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme
-
-:::note
-
-This property is only applied on Windows, it is ignored on macOS.
-
-:::
-
-
-#### JSON Grammar
-
-|Name|Data Type|Possible Values|
-|---|---|---|
-|fluentUI |boolean |true, false|
-
-If the property is not defined, the "inherited" option is selected. 
