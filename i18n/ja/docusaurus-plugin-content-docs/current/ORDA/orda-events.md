@@ -110,13 +110,13 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 | seriousError       | Boolean | validate イベントでのみ使用されます(以下参照)。 <li>`True`: [深刻(予測不能)なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不能なエラー) を作成し、例外をトリガーします。 `dk status serious validation error` ステータスを追加します</li><li>`False`: creates only a [静か(予測可能) なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) のみを作成します。 `dk status validation failed` ステータスを追加します</li> | 可能(デフォルトはfalse) |
 | componentSignature | Text    | 常に "DBEV"                                                                                                                                                                                                                                                                                                                                                                                                                        | ×                                  |
 
-- [Serious errors](../Concepts/error-handling.md#predictable-vs-unpredictable-errors) are stacked in the `errors` collection property of the **Result object** returned by the [`save()`](../API/EntityClass.md#save) or [`drop()`](../API/EntityClass.md#drop) functions.
-- In case of an error triggered by a **validate** event, the `seriousError` property allows you to choose the level of the error to generate:
-  - If **true**: a serious error is thrown and should be handled by the [error processing code](../Concepts/error-handling.md#predictable-vs-unpredictable-errors), such as a [try catch](../Concepts/error-handling.md#trycatchend-try). In the result object of the calling function, `status` gets `dk status serious validation error` and `statusText` gets "Serious Validation Error". The error is raised at the end of the event and reach the client requesting the save/drop action (REST client for example).
-  - If **false** (default): a [silent (predictable) error is generated](../Concepts/error-handling.md#predictable-vs-unpredictable-errors). It does not trigger any exception and is not stacked in the errors returned by the [`Last errors`](../commands/last-errors.md) command. In the result object of the calling function, `status` gets `dk status validation failed` and `statusText` gets "Mild Validation Error".
-- In case of an error triggered by a **saving/dropping** event, when an error object is returned, the error is always raised as a serious error whatever the `seriousError` property value.
+- [深刻なエラー](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) は[`save()`](../API/EntityClass.md#save) または [`drop()`](../API/EntityClass.md#drop) 関数から返される **Result オブジェクト** の `errors` コレクションプロパティにスタックされます。
+- **validate** イベントによってトリガーされたエラーの場合、 `seriousError` プロパティを使用することで生成するエラーのレベルを選択することができます:
+  - **true** の場合: 深刻なエラーが生成され、[try catch](../Concepts/error-handling.md#trycatchend-try)などの[エラー処理コード](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー) によって管理される必要があります。 呼び出した関数のresult オブジェクトでは、`status` には `dk status serious validation error` が入り、 `statusText` には "Serious Validation Error" が入ります。 エラーはイベントの終わりに生成され、保存/ドロップアクションをリクエストしているクライアント(例えばREST クライアントなど)に届きます。
+  - **false** (デフォルト)の場合: [静か(予測可能) なエラーが生成されます](../Concepts/error-handling.md#予測可能なエラーvs予測不可なエラー)。 これは例外はトリガーせず、また[`Last errors`](../commands/last-errors.md) コマンドから返されるエラーの中にはスタックされません。 呼び出した関数のresult オブジェクトでは、`status` には `dk status validation failed` が入り、 `statusText` には "Mild Validation Error" が入ります。
+- **保存時/ドロップ時** のイベントによってトリガーされたエラーの場合、エラーオブジェクトが返されると、 `seriousError` プロパティの値に関わらず、エラーは常に深刻なエラーとして生成されます。
 
-## Event function description
+## イベント関数の詳細
 
 ### `Function event touched`
 
@@ -125,39 +125,39 @@ ORDA [`constructor()`](./ordaClasses.md#class-constructor) 関数は必ずクラ
 ```4d
 {local} Function event touched($event : Object)
 {local} Function event touched <attributeName>($event : Object)
-// code
+// コード
 ```
 
-This event is triggered each time a value is modified in the entity.
+このイベントはエンティティ内の値が編集されるたびにトリガーされます。
 
-- If you defined the function at the entity level (first syntax), it is triggered for modifications on any attribute of the entity.
-- If you defined the function at the attribute level (second syntax), it is triggered only for modifications on this attribute.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性における変更に対してトリガーされます。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対する変更に対してのみトリガーされます。
 
-This event is triggered as soon as the 4D Server / 4D engine can detect a modification of attribute value which can be due to the following actions:
+このイベントは4D Server / 4Dエンジンが属性値の変更を検知するとすぐにトリガーされます。この変更は、以下のようなアクションによって引き起こされます:
 
-- in **client/server with the [`local` keyword](../ORDA/ordaClasses.md#local-functions)** or in **4D single-user**:
-  - the user sets a value on a 4D form,
-  - the 4D code makes an assignment with the `:=` operator. The event is also triggered in case of self-assignment (`$entity.attribute:=$entity.attribute`).
-- in **client/server without the `local` keyword**: some 4D code that makes an assignment with the `:=` operator is [executed on the server](../commands-legacy/execute-on-server.md).
-- **`local` キーワードを使用しないクライアント/サーバー**、**[Qodly アプリケーション](https://developer.4d.com/qodly)** および **[リモートデータストア](../commands/open-datastore.md)**: ORDA 関数(エンティティ上の関数あるいはエンティティを引数として使用する関数)を呼び出した場合にはエンティティは4D Server 受信されます。 It means that you might have to implement a *refresh* or *preview* function on the remote application that sends an ORDA request to the server and triggers the event.
-- with the REST server: the value is received on the REST server with a [REST request](../REST/$method.md#methodupdate) (`$method=update`)
+- **[`local` キーワード](../ORDA/ordaClasses.md#local関数) を使用したクライアント/サーバー** あるいは **シングルユーザーモードの4D**:
+  - ユーザーが4D フォーム上で値を設定した
+  - 4D コードが `:=` 演算子によって代入を行った。 このイベントは自己代入の場合にもトリガーされます(`$entity.attribute:=$entity.attribute`)。
+- **`local` キーワード を使用しないクライアント/サーバー**: `:=` 演算子によって代入を行う一部の4D コードは、[サーバー上で実行されます](../commands-legacy/execute-on-server.md)。
+- **`local` キーワードを使用しないクライアント/サーバー**、**[Qodly アプリケーション](https://developer.4d.com/qodly)** および **[リモートデータストア](../commands/open-datastore.md)**: ORDA 関数(エンティティ上の関数あるいはエンティティを引数として使用する関数)を呼び出した場合にはエンティティは4D Server 受信されます。 これはつまり、リモートアプリケーション側に*refresh* あるいは *preview* 関数を実装することでORDA リクエストをサーバーに送信し、イベントをトリガーするようにする必要があるかもしれない、ということです。
+- REST サーバー: 値は REST サーバーに、[REST リクエスト](../REST/$method.md#methodupdate) (`$method=update`) とともに受信されます。
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-If this function [throws](../commands/throw) an error, it will not stop the undergoing action.
+この関数がエラーを[throw](../commands/throw) する場合でも、進行中のアクションは停止しません。
 
 :::note
 
-This event is also triggered:
+このイベントは以下の場合にもトリガーされます:
 
-- when attributes are assigned by the [`constructor()`](./ordaClasses.md#class-constructor-1) event,
-- when attributes are edited through the [Data Explorer](../Admin/dataExplorer.md).
+- 属性の値が [`constructor()`](./ordaClasses.md#class-constructor-1) イベントによって代入された場合
+- 属性の値が [データエクスプローラー](../Admin/dataExplorer.md) を通して編集された場合。
 
 :::
 
 #### 例題 1
 
-You want to uppercase all text attributes of an entity when it is updated.
+エンティティが更新されたときに、エンティティ内のテキスト属性を全て大文字に変換したい場合を考えます。
 
 ```4d
     //ProductsEntity class
@@ -170,11 +170,11 @@ Function event touched($event : Object)
 
 #### 例題 2
 
-The "touched" event is useful when it is not possible to write indexed query code in [`Function query()`](./ordaClasses.md#function-query-attributename) for a [computed attribute](./ordaClasses.md#computed-attributes).
+"touched" イベントは、[計算属性](./ordaClasses.md#計算属性)に対して[`Function query()`](./ordaClasses.md#function-query-attributename) 内でインデックスクエリコードを書くことが不可能な場合にとても有用です。
 
-This is the case for example, when your [`query`](./ordaClasses.md#function-query-attributename) function has to compare the value of different attributes from the same entity with each other. You must use formulas in the returned ORDA query -- which triggers sequential queries.
+これは例えば、[`query`](./ordaClasses.md#function-query-attributename) 関数が同じエンティティの異なる属性の値どうしを比較したいような場合です。 これは返されたORDA クエリ内でフォーミュラを使う必要があり、結果としてシーケンシャルクエリをトリガーすることになります。
 
-To fully understand this case, let's examine the following two calculated attributes:
+このような場合を完全に理解するために、以下の2つの計算属性について調べてみましょう:
 
 ```4d
 Function get onGoing() : Boolean
@@ -184,9 +184,9 @@ Function get sameDay() : Boolean
         return (This.departureDate=This.arrivalDate)
 ```
 
-Even though they are very similar, these functions cannot be associated with identical queries because they do not compare the same types of values. The first compares attributes to a given value, while the second compares attributes to each other.
+たとえ非常に似ていたとしても、これらのクエリは同じ型の値を比較している訳ではないため、これらの関数を同一のクエリと関連づけることはできません。 前者は属性を与えられた値と比較する一方、後者は属性どうしを比較します。
 
-- For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
+- *onGoing* 属性に対しては、[`query`](./ordaClasses.md#function-query-attributename) 関数をシンプルに書くことができ、またインデックス付きの属性を使用します:
 
 ```4d
 Function query onGoing($event : Object) : Object
@@ -207,12 +207,12 @@ Function query onGoing($event : Object) : Object
     End case 
 
     $myQuery:=($onGoingValue) ? "departureDate <= :1 AND arrivalDate >= :1" : "departureDate > :1 OR arrivalDate < :1"
-        // the ORDA query string uses indexed attributes, it will be indexed
+        // ORDA クエリ文字列はインデックス付き属性を使用するので、インデックスがつけられます
     $parameters.push(Current date)
     return {query: $myQuery; parameters: $parameters}
 ```
 
-- For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
+- *sameDay* 属性に対しては、[`query`](./ordaClasses.md#function-query-attributename) 関数はフォーミュラに基づいたORDA クエリを必要とするため、検索はシーケンシャルに行われます:
 
 ```4d
 Function query sameDay($event : Object) : Text
@@ -230,11 +230,11 @@ Function query sameDay($event : Object) : Text
         End case 
 
     return ($sameDayValue) ? "eval(This.departureDate = This.arrivalDate)" : "eval(This.departureDate != This.arrivalDate)"
-        // the ORDA query string uses a formula, it will not be indexed
+        // ORDA クエリ文字列はフォーミュラを使用するため、インデックスはつけられません
 
 ```
 
-- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- しかし他の属性が"タッチ"されたときに更新される**スカラー値の** *sameDay* 属性を使用することで、時間を節約することができます:
 
 ```4d
     //BookingEntity class
@@ -250,7 +250,7 @@ Function event touched arrivalDate($event : Object)
 
 ```
 
-#### Example 3 (diagram): Client/server with the `local` keyword:
+#### 例題 3 (図): `local` キーワードを用いたクライアント/サーバー:
 
 ```mermaid
 
@@ -261,15 +261,15 @@ sequenceDiagram
     Client->>+Client: $people.lastname:="Brown"
    Note over Client: local Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
 
-Note over Client:$people.lastname is uppercased
+Note over Client:$people.lastname は大文字に変換されます
 
     Client->>+Server: $people.apply()
    
-   Note over Server: The $people entity is received with the lastname attribute uppercased
+   Note over Server: $people エンティティは lastname 属性が大文字に変換された状態で受信されます
 
 ```
 
-#### Example 4 (diagram): Client/server without the `local` keyword
+#### 例題 4 (図): `local` キーワードを用いないクライアント/サーバー
 
 ```mermaid
 
@@ -279,37 +279,36 @@ sequenceDiagram
 
     Client->>+Client: $people.lastname:="Brown"
 
-   Note over Client:$people.lastname is not uppercased
+   Note over Client:$people.lastname は大文字に変換されません
 
     Client->>+Server: $people.apply()
 
    Note over Server: Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
 
-    Server-->>-Client: The $people entity is updated
+    Server-->>-Client: $people エンティティが更新されます
 
-   Note over Client:$people.lastname is uppercased
-
+   Note over Client:$people.lastname は大文字に変換されます。
 
 ```
 
-#### Example 5 (diagram): Qodly application
+#### 例題 5 (図): Qodly アプリケーション
 
 ```mermaid
 
 sequenceDiagram
 
-Qodly page->>+ Server: Get an entity into the People Qodly source
+Qodly page->>+ Server: エンティティをPeople Qodlyソースへと受け取る
 
-Qodly page->>+Qodly page: The user updates People.lastname
+Qodly page->>+Qodly page: ユーザーが People.lastname を更新する
 
-Note over Qodly page: The People Qodly source lastname attribute is not uppercased
+Note over Qodly page: People Qodly ソースの lastname 属性は大文字に変換されていません
 
 Qodly page->>+ Server: Function call People.apply()
 
 Note over Server: Function event touched lastname($event : Object) <br> This.lastname:=Uppercase(This.lastname)
 
-Server-->>-Qodly page: The People Qodly source is updated
-Note over Qodly page: The People Qodly source lastname attribute is uppercased
+Server-->>-Qodly page: People Qodly ソースが更新されます
+Note over Qodly page: People Qodly ソースの lastname 属性が大文字に変換されます
 
 
 ```
@@ -321,47 +320,47 @@ Note over Qodly page: The People Qodly source lastname attribute is uppercased
 ```4d
 Function event validateSave($event : Object)
 Function event validateSave <attributeName>($event : Object)
-// code
+// コード
 ```
 
-This event is triggered each time an entity is about to be saved.
+このイベントは、エンティティが保存されようとするたびに毎回トリガーされます。
 
-- if you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
-- if you defined the function at the attribute level (second syntax), it is called only for this attribute. This function is **not** executed if the attribute has not been touched in the entity.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性に対して呼び出されます。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対してのみ呼び出されます。 この関数は、エンティティ内の指定した属性がタッチされていない場合には、実行**されません**。
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-This event is triggered by the following functions:
+このイベントは、以下の関数によってトリガーされます:
 
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-This event is triggered **before** the entity is actually saved and lets you check data consistency so that you can stop the action if needed. For example, you can check in this event that "departure date" < "arrival date".
+このイベントは、エンティティが実際に保存される **前に** トリガーされるため、データの一貫性をチェックし、必要であればアクションを停止することができます。 例えば、このイベントを使用して、 "出発日" < "到着日" であることをチェックすることができます。
 
-To stop the action, the code of the function must return an [error object](#error-object).
+アクションを停止するためには、関数のコードで[エラーオブジェクト](#エラーオブジェクト) を返す必要があります。
 
 :::note
 
-It is not recommended to update the entity within this function (using `This`).
+この関数内において(`This` を使用して)エンティティを更新することは推奨されません。
 
 :::
 
 #### 例題
 
-In this example, it is not allowed to save a product with a margin lower than 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
+この例では、マージンが50% 未満の製品を保存することは許可されていません。 無効な price 属性の場合、エラーオブジェクトを換えし、保存アクションを停止します。
 
 ```4d
 // ProductsEntity class
 //
-// validateSave event at attribute level
+// 属性レベルの validateSave イベント
 Function event validateSave margin($event : Object) : Object
 	
 var $result : Object
 	
-//The user can't create a product whose margin is < 50%
+// ユーザーは margin が50% 未満の製品を作成することはできません
 If (This.margin<50)
-	$result:={errCode: 1; message: "The validation of this product failed"; \
-	extraDescription: {info: "The margin of this product ("+String(This.margin)+") is lower than 50%"}; seriousError: False}
+	$result:={errCode: 1; message: "製品の検証に失敗しました"; \
+	extraDescription: {info: "この製品のマージンの ("+String(This.margin)+") が 50%" 未満になっています}; seriousError: False}
 End if 
 return $result
 
@@ -374,17 +373,17 @@ return $result
 ```4d
 Function event saving($event : Object)
 Function event saving <attributeName>($event : Object)
-// code
+// コード
 ```
 
-This event is triggered each time an entity is being saved.
+このイベントはエンティティが保存されるたびにトリガーされます。
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity. The function is executed even if no attribute has been touched in the entity (e.g. in case of sending data to an external app each time a save is done).
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute. The function is **not** executed if the attribute has not been touched in the entity.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性に対して呼び出されます。 この関数はエンティティ内でどの属性もタッチされていない場合でも実行されます(例: 保存されるたびに外部アプリへとデータを送信する場合など)。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対してのみ呼び出されます。 この関数は、エンティティ内の指定した属性がタッチされていない場合には、実行**されません**。
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-This event is triggered by the following functions:
+このイベントは、以下の関数によってトリガーされます:
 
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
@@ -399,7 +398,7 @@ The business logic should raise errors which can't be detected during the `valid
 
 During the save action, 4D engine errors can be raised (index, stamp has changed, not enough space on disk).
 
-To stop the action, the code of the function must return an [error object](#error-object).
+アクションを停止するためには、関数のコードで[エラーオブジェクト](#エラーオブジェクト) を返す必要があります。
 
 #### 例題
 
@@ -455,7 +454,7 @@ This event is triggered just after an entity is saved in the data file, when at 
 
 This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. For example, it can be used to send a confirmation email after data have been saved. Or, in case of error while saving data, it can make a rollback to restore a consistent state of data.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
 - To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
 - Throwing an [error object](#error-object) is **not supported** by this function.
@@ -493,10 +492,10 @@ Function event validateDrop <attributeName>($event : Object)
 
 This event is triggered each time an entity is about to be dropped.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性に対して呼び出されます。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対してのみ呼び出されます。
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
 This event is triggered by the following features:
 
@@ -506,7 +505,7 @@ This event is triggered by the following features:
 
 This event is triggered **before** the entity is actually dropped, allowing you to check data consistency and if necessary, to stop the drop action.
 
-To stop the action, the code of the function must return an [error object](#error-object).
+アクションを停止するためには、関数のコードで[エラーオブジェクト](#エラーオブジェクト) を返す必要があります。
 
 #### 例題
 
@@ -540,10 +539,10 @@ Function event dropping <attributeName>($event : Object)
 
 This event is triggered each time an entity is being dropped.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute.
+- 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性に対して呼び出されます。
+- 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対してのみ呼び出されます。
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
 This event is triggered by the following features:
 
@@ -559,7 +558,7 @@ The business logic should raise errors which cannot be detected during the `vali
 
 :::
 
-To stop the action, the code of the function must return an [error object](#error-object).
+アクションを停止するためには、関数のコードで[エラーオブジェクト](#エラーオブジェクト) を返す必要があります。
 
 #### 例題
 
@@ -601,7 +600,7 @@ This event is triggered just after an entity is dropped.
 
 This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. For example, it can be used to send a cancellation email after data have been dropped. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
 
-The function receives an [*event* object](#event-parameter) as parameter.
+関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
 - To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
 - Throwing an [error object](#error-object) is **not supported** by this function.

@@ -220,7 +220,7 @@ $return:=WEB Server.start($settings)
 
 ```
 
-:::tip Related blog post
+:::tip 関連したblog 記事
 
 [New Way to Control Your HTTP Responses](https://blog.4d.com/new-way-to-control-your-http-responses/)
 

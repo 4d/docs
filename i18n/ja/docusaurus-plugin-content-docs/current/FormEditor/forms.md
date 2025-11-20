@@ -118,7 +118,7 @@ This feature can only be used on Windows. On macOS, it is ignored.
 
 :::
 
-:::tip Related blog post
+:::tip 関連したblog 記事
 
 [Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
 
