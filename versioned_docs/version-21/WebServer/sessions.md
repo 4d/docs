@@ -26,7 +26,7 @@ Web sessions are used for:
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md). 
 
 
-## Enabling web sessions
+## Enabling web sessions {#enabling-web-sessions}
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
