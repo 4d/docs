@@ -38,7 +38,24 @@ Si vous passez -1 dans *droite* et *bas*, vous indiquez à 4D qu'il faut redimen
 
 **Important :** Ce dimensionnement automatique de la fenêtre n'aura lieu que si vous avez au préalable appelé la commande [FORM SET INPUT](form-set-input.md) pour le formulaire que vous allez afficher dans la fenêtre, et si vous lui avez passé le paramètre optionnel \*.
 
-* Le paramètre *type* est optionnel. Il définit le type de fenêtre que vous souhaitez afficher, et correspond aux différentes fenêtres présentées dans la section *Types de fenêtres (compatibilité)* (constantes du thème *Creer fenetre*). Si le type passé est négatif, la fenêtre sera flottante. Si le type n'est pas spécifié, le type 1 est utilisé par défaut.
+* Le paramètre *type* est optionnel. Il définit le type de fenêtre que vous souhaitez afficher. Si le type passé est négatif, la fenêtre sera flottante (si pris en charge). Si le type n'est pas spécifié, le type 1 est utilisé par défaut. Les constantes suivantes du thème "Open window" sont utilisables : 
+
+|Constante|Commentaire|
+|---|---|
+|Alternate dialog box|Utilisable en fenêtre flottante|
+|Has full screen mode Mac|Option à ajouter aux fenêtres de type document sur macOS uniquement (ex : `Plain form window+Form has full screen mode Mac`)|
+|Modal dialog box	||
+|Movable dialog box	|Utilisable en fenêtre flottante|
+|Palette window|Utilisable en fenêtre flottante<li>Non redimensionnable : `-(Palette window+2)` (Windows) ou `	-Palette window` (macOS)</li><li>Redimensionnable : `-(Palette window+6)`</li>|
+|Plain dialog box	|Utilisable en fenêtre flottante|
+|Plain fixed size window||
+|Plain no zoom box window||
+|Pop up window||
+|Plain window||
+|Resizable sheet window||
+|Round corner window	||
+|Sheet window||
+|Texture appearance|Option à ajouter à un type de fenêtre sur macOS uniquement. Types compatibles : `Plain window`, `Plain no zoom box window`, `Plain fixed size window`, `Movable dialog box`, `Round corner window`|
 * Le paramètre *titre* indique le titre (optionnel) de la fenêtre.  
 Si vous passez une chaîne de caractères vide ("") dans *titre*, vous indiquez à 4D d'utiliser les valeurs saisies dans la zone **Nom de la fenêtre** de la fenêtre des Propriétés du formulaire en mode Développement pour le titre du formulaire que vous allez afficher dans la fenêtre.
 
@@ -58,21 +75,19 @@ La méthode projet suivante ouvre une fenêtre centrée dans la fenêtre princip
 
 ```4d
   // Méthode projet OUVRIR FENETRE CENTREE
-  // $1 – Largeur de la fenêtre
-  // $2 – Hauteur de la fenêtre
-  // $3 – Type de la fenêtre (optionnel)
-  // $4 – Titre de la fenêtre (optionnel)
- $SW:=Screen width\2
+ #DECLARE($width : Integer; $height : Integer; $type : Integer; $title : Text)
+ var $SW; $SH; $WW; $WH : Integer
+ $SW:=Screen width\2
  $SH:=(Screen height\2)-10
- $WW:=$1\2
- $WH:=$2\2
+ $WW:=$width\2
+ $WH:=$height\2
  Case of
     :(Count parameters=2)
        Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH)
     :(Count parameters=3)
-       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3)
+       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$type)
     :(Count parameters=4)
-       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3;$4)
+       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$type;$title)
  End case
 ```
 
@@ -92,7 +107,8 @@ Une fois que cette méthode projet est écrite, vous pouvez l'utiliser de la man
 L'exemple suivant crée une fenêtre flottante comportant une case de menu système (sous Windows) ou une case de fermeture (sous Mac OS). La fenêtre est créée dans le coin supérieur droit de la fenêtre de l'application.
 
 ```4d
- $mafenetre:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"caseFermeture")
+var $mafenetre : Integer 
+$mafenetre:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"caseFermeture")
  DIALOG([Dialogues];"Palette de couleurs")
 ```
 
@@ -107,7 +123,8 @@ La méthode *caseFermeture* appelle la commande [CANCEL](cancel.md) :
 L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des propriétés du formulaire affiché dans la fenêtre : 
 
 ```4d
- FORM SET INPUT([Clients];"Ajout d'enregistrements";*)
+ var $mafenetre : Integer 
+ FORM SET INPUT([Clients];"Ajout d'enregistrements";*)
  $mafenetre:=Open window(10;80;-1;-1;Plain window;"")
  Repeat
     ADD RECORD([Clients])
@@ -123,7 +140,8 @@ L'exemple suivant ouvre une fenêtre dont le titre et la taille proviennent des 
 Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres feuille sous macOS :
 
 ```4d
- $maFenêtre:=Open window(10;10;400;400;Sheet window)
+  var $mafenetre : Integer 
+ $mafenetre:=Open window(10;10;400;400;Sheet window)
   //A cet instant la fenêtre est créée mais reste invisible
  DIALOG([Table];"formDial")
   //L’événement Sur chargement est généré puis la fenêtre feuille est affichée, elle "descend"
@@ -133,7 +151,6 @@ Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres f
 ## Voir aussi 
 
 [CLOSE WINDOW](close-window.md)  
-*Creer fenetre*  
 [Open form window](open-form-window.md)  
 
 ## Propriétés
