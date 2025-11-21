@@ -25,7 +25,7 @@ Les sessions Web sont utilisées par :
 - les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server.md) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
 - les appels à l'[API REST](../REST/authUsers.md), qui sont effectués par les [datastores distants](../ORDA/remoteDatastores.md) et les [pages Qodly](qodly-studio.md).
 
-## Activation des sessions web
+## Enabling web sessions {#enabling-web-sessions}
 
 La gestion de session peut être activée et désactivée sur votre serveur Web 4D. Il y a différentes façons d'activer la gestion de session :
 

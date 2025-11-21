@@ -103,6 +103,42 @@ IDを使用して一つのモデルの情報を取得する例
 var $model:=$client.models.retrieve("a model id").model
 ```
 
+#### Files
+
+https://platform.openai.com/docs/api-reference/files
+
+Upload a file for use with other endpoints
+
+```4d
+var $file:=File("/path/to/your/file.jsonl")
+var $result:=$client.files.create($file; "fine-tune")
+var $fileId:=$result.file.id
+```
+
+List all files
+
+```4d
+var $files:=$client.files.list().files
+```
+
+Retrieve file information
+
+```4d
+var $fileInfo:=$client.files.retrieve($fileId).file
+```
+
+Delete a file
+
+```4d
+var $deleteResult:=$client.files.delete($fileId)
+```
+
+:::tip 関連したblog 記事
+
+[Transform Static Documents into Actionable Knowledge with 4D AIKit](https://blog.4d.com/transform-static-documents-into-actionable-knowledge-with-4d-aikit).
+
+:::
+
 #### モデレーション
 
 https://platform.openai.com/docs/api-reference/moderations

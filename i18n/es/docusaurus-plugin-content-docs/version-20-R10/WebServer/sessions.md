@@ -25,7 +25,7 @@ Las sesiones web se utilizan para:
 - [Aplicaciones web](gettingStarted.md) que envían peticiones http,
 - llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [formularios Qodly](qodly-studio.md).
 
-## Habilitando sesiones web
+## Activando sesiones web {#enabling-web-sessions}
 
 La funcionalidad de gestión de sesiones puede ser activada y desactivada en su servidor web 4D. Hay diferentes maneras de habilitar la gestión de la sesión:
 

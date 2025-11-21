@@ -36,16 +36,50 @@ title: OpenAIMessage
 
 メッセージのコンテンツに画像URL を追加します。
 
+### addFileId()
+
+**addFileId**(*fileId* : Text)
+
+| 引数       | 型    | 説明                                                 |
+| -------- | ---- | -------------------------------------------------- |
+| *fileId* | Text | The file ID to add to the message. |
+
+Adds a file reference to the content of the message. If the content is currently text, it will be converted to a collection format.
+
 ## 使用例
 
-### シンプルなメッセージを作成し画像を添付する
+### Basic Text Message
 
 ```4d
-// OpenAIMessage のインスタンスを作成
-var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})
+// Create an instance of OpenAIMessage
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Hello!"})
+```
 
-// 画像 URL と詳細を追加
+### Adding Images
+
+```4d
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this image:"})
+
+// Add an image URL with details
 $message.addImageURL("http://example.com/image.jpg"; "high")
+```
+
+### Adding File
+
+```4d
+// Upload a file with user_data purpose
+var $file:=File("/RESOURCES/document.pdf")
+var $uploadResult:=$client.files.create($file; "user_data")
+
+If ($uploadResult.success)
+    var $uploadedFile:=$uploadResult.file
+    
+    // Create message and attach the file using its ID
+    var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this document:"})
+    $message.addFileId($uploadedFile.id)
+    
+    // $message.content -> [{type: "text"; text: "Please analyze this document:"}; {type: "file"; file_id: "file-abc123"}]
+End if
 ```
 
 ### ツール呼び出しメッセージに応答する

@@ -41,7 +41,7 @@ title: リリースノート
 
 :::
 
-- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 そのためSOAP コードは必ずスレッドセーフであるようにしてください。
+- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
 - Web サーバー: 廃止予定だった`4DSYNC/` および `4DCGI/` URL のサポートが削除されました。 これらのURL に関しては今後は何も特殊な処理は行われません。
 - Web ユーザーセッションは今後[`Process activity`](../commands/process-activity.md) コマンドで返されるようになります。
 - [`HIGHLIGHT TEXT`](../commands/highlight-text) コマンドは今後サブフォームのコンテキストでサポートされるようになりました。

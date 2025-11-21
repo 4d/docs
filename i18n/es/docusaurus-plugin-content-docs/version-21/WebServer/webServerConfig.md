@@ -603,7 +603,7 @@ Los parámetros siguientes siguen siendo compatibles, pero se basan en funcional
 
 Estado de validación de la dirección IP para las cookies de sesión. Por razones de seguridad, por defecto el servidor web 4D verifica la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. Por ejemplo, cuando los dispositivos móviles cambian entre las redes Wifi y 4G/5G, su dirección IP cambiará. En este caso, debe pasar 0 en esta opción para permitir que los clientes puedan seguir utilizando sus sesiones web aunque las direcciones IP cambien. Tenga en cuenta que este parámetro reduce el nivel de seguridad de su aplicación. Cuando se modifica, esta configuración es efectiva inmediatamente (no es necesario reiniciar el servidor HTTP).
 
-### Generic Web User
+### Usuario web genérico
 
 This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". In this case, each browser allowed to connect to the database gets access authorizations and restrictions associated with this user.
 

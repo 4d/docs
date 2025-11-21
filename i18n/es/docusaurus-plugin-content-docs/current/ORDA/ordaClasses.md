@@ -930,7 +930,7 @@ $arch.save() //courseName y name son "Archaeology II"
 
 For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
 
-Remote requests are:
+Las peticiones remotas son:
 
 - Las peticiones enviadas por las aplicaciones 4D remotas conectadas a través de `Open datastore`
 - REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)

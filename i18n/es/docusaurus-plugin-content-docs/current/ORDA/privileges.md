@@ -27,11 +27,11 @@ Si un usuario intenta ejecutar una acción y no tiene los derechos de acceso ade
 
 Puede asignar acciones de permiso específicas a los siguientes recursos en su proyecto:
 
-- the [datastore](../ORDA/dsMapping.md#datastore)
-- the [dataclasses](../ORDA/dsMapping.md#dataclass)
+- el [datastore](../ORDA/dsMapping.md#datastore)
+- las [clases de datos](../ORDA/dsMapping.md#dataclass)
 - [attributes](../ORDA/dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1))
 - functions of the [data model classes](../ORDA/ordaClasses.md)
-- [singleton](../REST/$singleton.md) functions
+- funciones [singleton](../REST/$singleton.md)
 
 Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma en que se acceda), 4D verifica que la sesión tenga los permisos apropiados y rechaza el acceso si no está autorizado.
 
@@ -190,7 +190,7 @@ El archivo `roles.json` describe todos los parámetros de seguridad web del proy
 :::caution Recordatorio
 
 - El nombre de privilegio "WebAdmin" está reservado a la aplicación. No se recomienda utilizar este nombre para los privilegios personalizados.
-- `privileges` and `roles` names are case-insensitive.
+- los nombres de `privileges` y `roles` no son sensibles a mayúsculas y minúsculas.
 
 :::
 

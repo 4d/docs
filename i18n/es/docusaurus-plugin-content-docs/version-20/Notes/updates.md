@@ -15,8 +15,8 @@ Lea las [**novedades de 4D 20**](https://blog.4d.com/en-whats-new-in-4d-v20/), l
 
 #### Lo más destacado
 
-- 4D 20.8 LTS is certified on Windows 11 25H2.
-- 4D 20.8 LTS is certified on macOS Tahoe (macOS 26).
+- 4D 20.8 LTS está certificado en Windows 11 25H2.
+- 4D 20.8 LTS está certificado en macOS Tahoe (macOS 26).
 - [**Lista de bugs corregidos**](https://bugs.4d.com/fixes?version=20.8): lista de todos los bugs corregidos en 4D 20.8 LTS.
 
 
@@ -35,7 +35,7 @@ Por razones internas, la versión de los clientes remotos que se conectan a 4D S
 
 #### Cambios de comportamiento
 
-- As of 4D **20.7 HF2**, the [`Time`](https://doc.4d.com/4dv20/help/command/en/page179.html) command returns a negative time expression when the *timeValue* parameter is negative. Por ejemplo, `Time("-01:02:03")` ahora devolverá -01:02:03. En versiones anteriores, se ignoraba el signo negativo.
+- A partir de 4D **20.7 HF2**, el comando [`Time`](https://doc.4d.com/4dv20/help/command/en/page179.html) devuelve una expresión negativa cuando el parámetro *timeValue* es negativo. Por ejemplo, `Time("-01:02:03")` ahora devolverá -01:02:03. En versiones anteriores, se ignoraba el signo negativo.
 
 
 ## 4D 20.6 LTS

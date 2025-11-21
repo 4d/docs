@@ -388,25 +388,25 @@ Function event saving <attributeName>($event : Object)
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-This event is triggered **while** the entity is actually saved. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. For example, you can use this event to create a document on a Google Drive account.
+このイベントはエンティティが実際に保存されている**最中に**トリガーされます。 [`validateSave()`](#function-event-validatesave) イベント関数が定義されていると場合、 `saving()` イベント関数は、 `validateSave()`がエラーを何もトリガーしなかった場合に呼び出されます。 例えば、このイベントを使用して、Google Drive アカウントにドキュメントを作成することができます。
 
 :::note
 
-The business logic should raise errors which can't be detected during the `validateSave()` events, e.g. a network error
+このビジネスロジックは `validateSave()` イベントで検知できないエラーを生成する必要があります(例: ネットワークエラー)
 
 :::
 
-During the save action, 4D engine errors can be raised (index, stamp has changed, not enough space on disk).
+保存アクション中、4D エンジンのエラー(インデックスやスタンプが変更された、ディスク上に十分なスペースがありません、など)が生成されることがあります。
 
 アクションを停止するためには、関数のコードで[エラーオブジェクト](#エラーオブジェクト) を返す必要があります。
 
 #### 例題
 
-When a file is saved on disk, catch errors related to disk space for example.
+ファイルがディスク上に保存されると、例えばディスクの要領に関連したエラーをキャッチします。
 
 ```4d
 // ProductsEntity class
-// saving event at attribute level
+// 属性レベルでの保存イベント
 Function event saving userManualPath($event : Object) : Object
 	
 var $result : Object
@@ -416,17 +416,17 @@ var $fileCreated : Boolean
 If (This.userManualPath#"")
 	$userManualFile:=File(This.userManualPath)
 				
-	// The user manual document file is created on the disk
-	// This may fail if no more space is available
+	// ユーザーマニュアルドキュメントファイルがディスク上に作成されます
+	// これはディスク上に空き容量がない場合には失敗する可能性があります
 	Try
-        // The file content has been generated and stored in a map in Storage.docMap previously
+        // ファイルのコンテンツは事前に生成され Storage.docMap に保存されています
 	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
         $userManualFile.setContent($docInfo.content)
 	Catch
-		// No more room on disk for example
+		// 例えばディスク上に要領が空いてない場合
 		$result:={/
-            errCode: 1; message: "Error during the save action for this product"; /
-            extraDescription: {info: "There is no available space on disk to store the user manual"}/
+            errCode: 1; message: "この製品の保存アクション中にエラー発生"; /
+            extraDescription: {info: "このディスク上にはユーザーマニュアルを保存するスペースがありません"}/
         }
 	End try
 End if 
@@ -437,7 +437,7 @@ return $result
 
 :::note
 
-The content of the file is generated outside the `saving` event because it can be time consuming.
+この例ではファイルの中身は `saving` イベントの外で生成されています。時間がかなりかかる可能性があるからです。
 
 :::
 
@@ -447,31 +447,31 @@ The content of the file is generated outside the `saving` event because it can b
 
 ```4d
 Function event afterSave($event : Object)
-// code
+// コード
 ```
 
-This event is triggered just after an entity is saved in the data file, when at least one attribute was modified. It is not executed if no attribute has been touched in the entity.
+このイベントは、少なくとも一つの属性が編集されていたエンティティがデータファイルに保存された直後にトリガーされます。 エンティティ内でどの属性もタッチされていない場合には、これは実行されません。
 
-This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. For example, it can be used to send a confirmation email after data have been saved. Or, in case of error while saving data, it can make a rollback to restore a consistent state of data.
+このイベントは、データを保存した後に、アプリケーション外に保存アクションを電波させたい場合や、管理タスクを実行したりするのに有用です。 例えばこれを使用して、データが保存された後に確認メールを送信することができます。 あるいは、データ保存中にエラーが発生した場合、これを使用してロールバックを行い、データの一貫性を復元することもできます。
 
 関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-- To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
-- Throwing an [error object](#error-object) is **not supported** by this function.
+- 無限ループに陥るのを避けるため、この関数内でカレントのエンティティ上で(`This` を通して) [`save()`](../API/EntityClass.md#save) を呼び出すのは**許可されていません**。 これはエラーを発生させます。
+- この関数では[エラーオブジェクト](#エラーオブジェクト) をスローすることは**サポートされていません**。
 
 #### 例題
 
-If an error occurred in the above saving event, the attribute value is reset accordingly in the `afterSave` event:
+上記の保存イベント中にエラーが発生した場合、属性値は `afterSave` イベントでリセットされます:
 
 ```4d
 // ProductsEntity class
 Function event afterSave($event : Object)
 	
 If (($event.status.success=False) && ($event.status.errors=Null))  
-    // $event.status.errors is filled if the error comes from the validateSave event
+    // エラーがvalidateSave イベントから来た場合には$event.status.errors に値が入れられます
 		
-	// The userManualPath attribute has not been properly saved
-	// Its value is reset
+	// userManualPath 属性は適切には保存されていません
+	// その値はリセットされます
 	If ($event.savedAttributes.indexOf("userManualPath")=-1)
 		This.userManualPath:=""
 		This.status:="KO"
@@ -487,29 +487,29 @@ End if
 ```4d
 Function event validateDrop($event : Object)
 Function event validateDrop <attributeName>($event : Object)
-// code
+// コード
 ```
 
-This event is triggered each time an entity is about to be dropped.
+このイベントはエンティティがドロップ(削除)されようとするたびに毎回トリガーされます。
 
 - 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性に対して呼び出されます。
 - 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対してのみ呼び出されます。
 
 関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-This event is triggered by the following features:
+このイベントは以下の機能によってトリガーされます:
 
 - [`entity.drop()`](../API/EntityClass.md#drop)
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
-- [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
+- データベースストラクチャーレベルで定義されている可能性のある[削除制御](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.ja.html#107320)。
 
-This event is triggered **before** the entity is actually dropped, allowing you to check data consistency and if necessary, to stop the drop action.
+このイベントはエンティティが実際にドロップされる**前に**トリガーされるため、データの一貫性をチェックし、必要であればドロップアクションを停止することができます。
 
 アクションを停止するためには、関数のコードで[エラーオブジェクト](#エラーオブジェクト) を返す必要があります。
 
 #### 例題
 
-In this example, it is not allowed to drop a product that is not labelled "TO DELETE". In this case, you return an error object and thus, stop the drop action.
+この例では、"TO DELETE" とラベルのついていない製品をドロップすることはできません。 この場合、エラーオブジェクトを返すことで、ドロップアクションを停止することができます。
 
 ```4d
 // ProductsEntity class
@@ -518,10 +518,10 @@ Function event validateDrop status($event : Object) : Object
 
 var $result : Object
 
-// Products must be marked as TO DELETE to be dropped
+// ドロップするためには、製品は TO DELETE と記録されている必要があります
 If (This.status#"TO DELETE")
-    $result:={errCode: 1; message: "You can't drop this product"; \
-    extraDescription: {info: "This product must be marked as To Delete"}; seriousError: False}
+    $result:={errCode: 1; message: "この製品は削除できません"; \
+    extraDescription: {info: "この製品はTo Delete と記録されていなければなりません"}; seriousError: False}
 End if 
 
 return $result
@@ -534,27 +534,27 @@ return $result
 ```4d
 Function event dropping($event : Object)
 Function event dropping <attributeName>($event : Object)
-// code
+// コード
 ```
 
-This event is triggered each time an entity is being dropped.
+このイベントはエンティティがドロップ(削除)されるたびにトリガーされます。
 
 - 関数をエンティティレベルで定義していた場合(第一シンタックス)、その関数はエンティティの任意の属性に対して呼び出されます。
 - 関数を属性レベルで定義していた場合(第二シンタックス)、関数はその属性に対してのみ呼び出されます。
 
 関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-This event is triggered by the following features:
+このイベントは以下の機能によってトリガーされます:
 
 - [`entity.drop()`](../API/EntityClass.md#drop)
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
-- [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
+- データベースストラクチャーレベルで定義されている可能性のある[削除制御](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.ja.html#107320)。
 
-This event is triggered **while** the entity is actually dropped. If a [`validateDrop()`](#function-event-validatedrop) event function was defined, the `dropping()` event function is called if no error was triggered by `validateDrop()`.
+このイベントはエンティティが実際にドロップされている**最中に**トリガーされます。 [`validateDrop()`](#function-event-validatedrop) イベント関数が定義されている場合、 `dropping()` イベント関数は、 `validateDrop()` がエラーを何もトリガーしなかった場合に呼び出されます。
 
 :::note
 
-The business logic should raise errors which cannot be detected during the `validateDrop()` events, e.g. a network error.
+このビジネスロジックは `validateDrop()` イベントで検知できないエラーを生成する必要があります(例: ネットワークエラー)。
 
 :::
 
@@ -562,7 +562,7 @@ The business logic should raise errors which cannot be detected during the `vali
 
 #### 例題
 
-Here is an example of `dropping` event at entity level:
+これはエンティティレベルでの `dropping` イベントの一例です:
 
 ```4d
 // ProductsEntity class
@@ -573,14 +573,14 @@ var $userManualFile : 4D.File
 
 $userManualFile:=File(This.userManualPath)
 
-    // When dropping a product, its user manual is also deleted on the disk
-    // This action may fail
+    // 製品をドロップする場合、そのユーザーマニュアルもディスク上から削除されます
+    // このアクションは失敗する可能性があります
 Try
     If ($userManualFile.exists)
         $userManualFile.delete()
     End if 
 Catch
-    // Dropping the user manual failed
+    // ユーザーマニュアルのドロップに失敗した場合
     $result:={errCode: 1; message: "Drop failed"; extraDescription: {info: "The user manual can't be dropped"}}
 End try
 
@@ -593,27 +593,27 @@ return $result
 
 ```4d
 Function event afterDrop($event : Object)
-// code
+// コード
 ```
 
-This event is triggered just after an entity is dropped.
+このイベントはエンティティがドロップ(削除)された直後にトリガーされます。
 
-This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. For example, it can be used to send a cancellation email after data have been dropped. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
+このイベントは、データをドロップした後に、アプリケーション外にドロップアクションを伝播させたい場合や、管理タスクを実行したりするのに有用です。 例えばこれを使用して、データがドロップされたあとにキャンセルメールを送信することができます。 あるいは、データのドロップ中にエラーが発生した場合、あとで管理者がデータの一貫性をチェックできるように情報を記録することができます。
 
 関数は [*event* オブジェクト](#event-引数) を引数として受け取ります。
 
-- To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
-- Throwing an [error object](#error-object) is **not supported** by this function.
+- 無限ループに陥るのを避けるため、この関数内でカレントのエンティティ上で(`This` を通して) [`drop()`](../API/EntityClass.md#drop) を呼び出すのは**許可されていません**。 これはエラーを発生させます。
+- この関数では[エラーオブジェクト](#エラーオブジェクト) をスローすることは**サポートされていません**。
 
 :::note
 
-The dropped entity is referenced by `This` and still exists in memory.
+ドロップされたエンティティは `This` を通して参照され、メモリー内に引き続き存在します。
 
 :::
 
 #### 例題
 
-If the drop action failed, then the product must be checked manually:
+ドロップアクションが失敗した場合、製品は手動でチェックされる必要があります:
 
 ```4d
 Function event afterDrop($event : Object)
@@ -621,8 +621,8 @@ Function event afterDrop($event : Object)
 var $status : Object
 
 If (($event.status.success=False) && ($event.status.errors=Null)) 
-        //$event.status.errors is filled 
-        //if the error comes from the validateDrop event
+        //$event.status.errors には、
+        //エラーが validateDrop イベントから来た場合には値が入れられます
     This.status:="Check this product - Drop action failed"
     $status:=This.save()
 End if 

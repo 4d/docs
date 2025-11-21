@@ -25,7 +25,7 @@ Webセッションは次のものに使用されます:
 - HTTPリクエストを送信する [Webアプリケーション](gettingStarted.md)
 - [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodlyフォーム](qodly-studio.md) が使用する [REST API](../REST/authUsers.md) への呼び出し
 
-## Webセッションの有効化
+## Enabling web sessions {#enabling-web-sessions}
 
 セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。 セッション管理を有効化する方法は複数あります:
 

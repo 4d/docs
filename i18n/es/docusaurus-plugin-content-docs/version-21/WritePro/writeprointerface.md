@@ -8,7 +8,7 @@ slug: /WritePro/write-pro-interface
 
 Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicación. Así, los usuarios finales pueden gestionar todas las propiedades de 4D Write Pro, como las fuentes, la alineación del texto, los marcadores, la disposición de las tablas y los marcos.
 
-## Installation & documentation
+## Instalación y documentación
 
 4D Write Pro Interface is a **4D component** that needs to be [installed in your project](../Project/components.md#overview). 4D Write Pro Interface source files are [provided on Github](https://github.com/4d/4D-WritePro-Interface).
 

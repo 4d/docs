@@ -74,7 +74,7 @@ Para las dos últimas acciones, también se genera el evento de formulario `On O
 
 ---
 
-## Highlight Set {#highlight-set}
+## Conjunto resaltado {#highlight-set}
 
 `List box del tipo selección`
 
