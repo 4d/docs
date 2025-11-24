@@ -37,7 +37,7 @@ Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma
 
 ## Permisos
 
-A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Permissions are defined for the project in the [`roles.json`](#rolesjson-file) file. Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
+A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Los permisos se definen para el proyecto en el archivo [`roles.json`](#rolesjson-file). Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
 
 When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
 
@@ -185,7 +185,7 @@ El archivo `roles.json` describe todos los parámetros de seguridad web del proy
 |                     |                                                                                     | \[].execute | Colección de cadenas              |             | Lista de privilegios                                                                                                           |
 |                     |                                                                                     | \[].promote | Colección de cadenas              |             | Lista de privilegios                                                                                                           |
 | restrictedByDefault |                                                                                     |                                                                                  | Boolean                           |             | Si es true, se niega el acceso a recursos sin permisos explícitos                                                              |
-| forceLogin          |                                                                                     |                                                                                  | Boolean                           |             | If true, enables ["forceLogin" mode](../REST/authUsers.md#force-login-mode)                                                    |
+| forceLogin          |                                                                                     |                                                                                  | Boolean                           |             | Si es true, activa el modo ["forceLogin"](../REST/authUsers.md#force-login-mode)                                               |
 
 :::caution Recordatorio
 
@@ -196,7 +196,7 @@ El archivo `roles.json` describe todos los parámetros de seguridad web del proy
 
 ### Default File Location and Content
 
-When a new project is created, a default `roles.json` file is generated at:
+Cuando se crea un nuevo proyecto, se genera un archivo `roles.json` por defecto en:
 
 ```
 <project folder>/Project/Sources/ 

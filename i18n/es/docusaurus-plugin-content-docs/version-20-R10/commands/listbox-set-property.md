@@ -77,7 +77,7 @@ Quiere que todas las columnas del list box "MyListbox" sean redimensionables:
 
 ## Ejemplo 2
 
-You want to set a maximum width for the column whose name is "ProductNumber":
+Desea definir un ancho máximo para la columna cuyo nombre es "ProductNumber":
 
 ```4d
  LISTBOX SET PROPERTY(*; "ProductNumber";lk column max width;200) //Esta columna tendrá un ancho máximo de 200

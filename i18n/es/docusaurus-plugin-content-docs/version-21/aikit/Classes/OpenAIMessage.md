@@ -5,7 +5,7 @@ title: OpenAIMessage
 
 # OpenAIMessage
 
-La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol, un contenido y un usuario opcional. This class provides methods to manipulate and retrieve the text and other content of the message.
+La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol, un contenido y un usuario opcional. Esta clase ofrece métodos para manipular y recuperar el texto y otros contenidos del mensaje.
 
 ## Propiedades
 

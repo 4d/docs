@@ -439,13 +439,13 @@ sequenceDiagram
 
 Qodly page->>+Server: product Qodly source := Function call Products.createNew()
 
-Note over Server: CreateNew() function on the Products class <br>return This.new()
+Note over Server: Products クラスのCreateNew() 関数は <br>This.new() を返す
 
 Note over Server: Class constructor <br> This.creationDate:=Current date() <br>This.comment:="Automatic comment"
 
-Server-->>-Qodly page: The product entity creationDate and comment attributes are filled
+Server-->>-Qodly page: product エンティティの creationDate と comment 属性には値が入れられる
 
-Note over Qodly page: product.creationDate is "06/17/25" <br>and product.comment is "Automatic comment"
+Note over Qodly page: product.creationDate は "25/06/17" <br>そして product.comment は "Automatic comment"
 
 ```
 
@@ -936,18 +936,18 @@ $arch.save() //courseName と name は "Archaeology II" に変更されます
 
 ## 公開vs非公開関数
 
-For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
+セキュリティ上の理由から、[計算属性](#計算属性-1) と [エイリアス属性](#エイリアス属性-1) と、[共有シングルトン関数](../Concepts/classes.md#共有シングルトン) を含めたデータモデルクラス関数は**リモートリクエスト**に対してはデフォルトでは**公開されていません** (つまり非公開です)。
 
-Remote requests are:
+リモートリクエストとは以下のものを指します:
 
 - `Open datastore` によって接続されたリモートの 4Dアプリケーションが送信するリクエスト
-- REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)
+- REST リクエスト、[Qodly ページ](https://developer.4d.com/qodly/) からのリクエストも含める
 
 > 通常の 4Dクライアント/サーバーリクエストは影響されません。 このアーキテクチャーにおいては、データモデルクラス関数は常に利用可能です。
 
 公開されていない関数はリモートアプリケーションで利用することができず、RESTリクエストによるオブジェクトインスタンスに対して呼び出すこともできません。 リモートアプリケーションが非公開関数をアクセスしようとすると、"-10729 (未知のメンバー機能です)" エラーが返されます。
 
-To allow a function or an attribute to be called by a remote request, you must explicitly declare it using the `exposed` keyword. シンタックスは次の通りです:
+関数あるいは属性がリモートリクエストから呼び出されるのを許可するためには、`exposed` キーワードを使って明示的に宣言する必要があります。 シンタックスは次の通りです:
 
 ```4d
 // 公開関数の宣言
@@ -956,24 +956,24 @@ exposed Function <functionName>
 ```
 
 ```4d
-// declare an exposed alias
+// 公開されたエイリアスの宣言
 exposed Alias <attributeName> <targetPath>   
 ```
 
 ```4d
-// declare an exposed computed attribute
+// 公開された計算属性の宣言
 exposed Function get <attributeName>   
 ```
 
 ```4d
-// declare a shared singleton function
+// 共有シングルトン関数の宣言
 shared singleton Class constructor()
 exposed Function <functionName>
 ```
 
 :::note
 
-The `exposed` keyword can only be used with the objects decribed above. [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
+`exposed` キーワードは上記で説明されているオブジェクトでのみ使用できます。 [通常のユーザークラス](Concepts/classes.md) 関数に対して使った場合、キーワードは無視され、コンパイラーはエラーを返します。
 
 :::
 

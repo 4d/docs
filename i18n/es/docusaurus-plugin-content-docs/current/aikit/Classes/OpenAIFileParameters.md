@@ -5,7 +5,7 @@ title: OpenAIFileParameters
 
 # OpenAIFileParameters
 
-The `OpenAIFileParameters` class handles parameters for file upload operations.
+La clase `OpenAIFileParameters` gestiona los parámetros de las operaciones de carga de archivos.
 
 ## Hereda
 

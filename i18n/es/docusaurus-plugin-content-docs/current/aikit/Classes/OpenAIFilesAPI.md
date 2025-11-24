@@ -48,7 +48,7 @@ Upload a file that can be used across various endpoints.
 
 - **Fine-tuning API:** Only supports `.jsonl` files with specific required formats
 - **Batch API:** Only supports `.jsonl` files up to 200 MB with specific required format
-- **Assistants API:** Supports specific file types (see Assistants Tools guide)
+- **API de Asistentes:** soporta tipos de archivo específicos (ver Guía de herramientas de asistentes)
 - **API de finalización de chat:** sólo se admiten archivos PDF
 
 #### Ejemplo

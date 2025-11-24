@@ -933,7 +933,7 @@ For security reasons, all of your data model class functions, including [compute
 Las peticiones remotas son:
 
 - Las peticiones enviadas por las aplicaciones 4D remotas conectadas a través de `Open datastore`
-- REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)
+- Peticiones REST, incluidas las solicitudes de [páginas Qodly](https://developer.4d.com/qodly/)
 
 > Las peticiones cliente/servidor 4D estándar no se ven afectadas. Las funciones de clase del modelo de datos están siempre disponibles en esta arquitectura.
 
@@ -947,12 +947,12 @@ exposed Function <functionName>
 ```
 
 ```4d
-// declare an exposed alias
+// declarar un alias expuesto
 exposed Alias <attributeName> <targetPath>   
 ```
 
 ```4d
-// declare an exposed computed attribute
+// declare un atributo calculado expuesto
 exposed Function get <attributeName>   
 ```
 

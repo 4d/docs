@@ -261,7 +261,7 @@ El token OTP se considera inválido si:
 - el token de sesión no existe,
 - la propia sesión original ha caducado.
 
-In this case, no web user session is restored and the current session (if any) is left unchanged. Normalmente, puede decidir mostrar una página de conexión o abrir una sesión guest.
+En este caso, no se restaura ninguna sesión de usuario web y la sesión actual (si existe) se deja sin cambios. Normalmente, puede decidir mostrar una página de conexión o abrir una sesión guest.
 
 La verificación de la validez del token OTP recibido depende de cómo fue manejado:
 

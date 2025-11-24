@@ -16,8 +16,8 @@ The `OpenAIFileListResult` class contains the result of listing files from the O
 | Propiedad  | Tipo       | Descripción                                                                                                                                      |
 | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `files`    | Collection | Returns a collection of [OpenAIFile](OpenAIFile.md) objects from the API response, or an empty collection if no files are found. |
-| `first_id` | Text       | Returns the ID of the first file in the list, or an empty string if not available.                                               |
-| `last_id`  | Text       | Returns the ID of the last file in the list, or an empty string if not available.                                                |
+| `first_id` | Text       | Devuelve el ID del primer archivo de la lista, o una cadena vacía si no está disponible.                                         |
+| `last_id`  | Text       | Devuelve el ID del último archivo de la lista, o una cadena vacía si no está disponible.                                         |
 | `has_more` | Boolean    | Indica si hay más archivos más allá de esta página. `True` if there are more files to fetch, `False` otherwise.  |
 
 ## Ejemplo de Uso

@@ -271,14 +271,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 
-| Paramètres | Type                                                           |                             | Description                                                                                                                                                                                              |
-| ---------- | -------------------------------------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valeur(s) à concaténer. Si *value* est une collection, tous ses éléments sont ajoutés comme de nouveaux éléments à la fin de la collection d'origine. |
-| Résultat   | Collection                                                     | <- | Nouvelle collection contenant les valeurs d'origine et les valeurs ajoutées                                                                                                                              |
+| Paramètres | Type       |                             | Description                                                                                                                                                                                              |
+| ---------- | ---------- | :-------------------------: | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value      | any        |              ->             | Valeur(s) à concaténer. Si *value* est une collection, tous ses éléments sont ajoutés comme de nouveaux éléments à la fin de la collection d'origine. |
+| Résultat   | Collection | <- | Nouvelle collection contenant les valeurs d'origine et les valeurs ajoutées                                                                                                                              |
 
 <!-- END REF -->
 
@@ -3218,14 +3218,12 @@ La fonction `.sort()` <!-- REF #collection.sort().Summary -->trie les éléments
 Si `.sort()` est appelé sans paramètres, seules les valeurs scalaires (nombres, textes, dates, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.
 Vous pouvez également passer une des constantes suivantes dans le paramètre *ascOrDesc* :
 
-```
-|Constante| Type|Valeur|Comment|
-|---|---|---|
-|ck ascending|Integer|0|Les éléments sont classés par ordre croissant (par défaut)|
-|ck descending|Integer|1|Les éléments sont classés par ordre décroissant|
+| Constante     | Type    | Valeur | Commentaire                                                             |
+| ------------- | ------- | ------ | ----------------------------------------------------------------------- |
+| ck ascending  | Integer | 0      | Les éléments sont triés par ordre croissant (défaut) |
+| ck descending | Integer | 1      | Les éléments sont triés par ordre décroissant                           |
 
-Cette syntaxe ordonne uniquement les valeurs scalaires dans la collection (les autres types d'éléments tels que les objets ou les collections sont renvoyés non ordonnés).
-```
+Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 

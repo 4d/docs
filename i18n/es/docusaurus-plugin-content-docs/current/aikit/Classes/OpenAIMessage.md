@@ -5,7 +5,7 @@ title: OpenAIMessage
 
 # OpenAIMessage
 
-La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol, un contenido y un usuario opcional. This class provides methods to manipulate and retrieve the text and other content of the message.
+La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol, un contenido y un usuario opcional. Esta clase ofrece métodos para manipular y recuperar el texto y otros contenidos del mensaje.
 
 ## Propiedades
 
@@ -44,7 +44,7 @@ Añade una URL de imagen al contenido del mensaje.
 | ---------- | ---- | ------------------------------------------------------------ |
 | *fileId*   | Text | El ID del archivo que se añadirá al mensaje. |
 
-Añade una referencia de archivo al contenido del mensaje. If the content is currently text, it will be converted to a collection format.
+Añade una referencia de archivo al contenido del mensaje. Si el contenido es actualmente texto, se convertirá a un formato colección.
 
 ## Ejemplo de Uso
 
