@@ -52,7 +52,8 @@ Generally, the VERIFY DATA FILE command creates a log file in XML format (please
   
 The *method* parameter is used to set a callback method that will be called regularly during the verification. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When called, the method receives up to 5 parameters depending on the objects being verified and on the event type originating the call (see calls table). It is imperative to declare these parameters in the method: 
 
-| \- $1 | Integer | Message type (see table) |
+
+| Parameter | Type | Description |
 | ----- | ------- | ------------------------ |
 | $messageType | Integer | Message type (see table) |
 | $objectType | Integer | Object type              |
@@ -79,15 +80,16 @@ The following table describes the contents of the parameters depending on the ev
 * 8 = index
 * 16 = structure object (preliminary check of data file).
 
-*Special case*: When $4 = 0 for $1=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
+*Special case*: When $table = 0 for $messageType=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
 
-The callback method must also return a value in $0 (Longint), which is used to check the execution of the operation:
+The callback method must also return a *$result* integer value, which is used to check the execution of the operation:
 
-* If $0 = 0, the operation continues normally
-* If $0 = -128, the operation is stopped without any error generated
-* If $0 = another value, the operation is stopped and the value passed in $0 is returned as the error number. This error can be intercepted by an error-handling method.
+* If $result = 0, the operation continues normally
+* If $result = -128, the operation is stopped without any error generated
+* If $result = another value, the operation is stopped and the value passed in $result is returned as the error number. This error can be intercepted by an error-handling method.
 
-**Note:** You cannot interrupt execution via $0 after the *End of execution* event ($4=1) has been generated.
+**Note:** You cannot interrupt execution via $result after the *End of execution* event ($1=4) has been generated.
+
 
 Two optional arrays can also be used by this command:
 
