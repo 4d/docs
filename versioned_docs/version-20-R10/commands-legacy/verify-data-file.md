@@ -52,44 +52,43 @@ Generally, the VERIFY DATA FILE command creates a log file in XML format (please
   
 The *method* parameter is used to set a callback method that will be called regularly during the verification. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When called, the method receives up to 5 parameters depending on the objects being verified and on the event type originating the call (see calls table). It is imperative to declare these parameters in the method: 
 
-| \- $1 | Integer | Message type (see table) |
+| Parameter | Type | Description |
 | ----- | ------- | ------------------------ |
-| \- $2 | Integer | Object type              |
-| \- $3 | Text    | Message                  |
-| \- $4 | Integer | Table number             |
-| \- $5 | Integer | Reserved                 |
+| $messageType | Integer | Message type (see table) |
+| $objectType | Integer | Object type              |
+| $messageText | Text    | Message                  |
+| $table | Integer | Table number             |
+| $reserved | Integer | Reserved                 |
 
 The following table describes the contents of the parameters depending on the event type:
 
-| **Event**                 | **$1 (Longint)** | **$2 (Longint)**   | **$3 (Text)**  | **$4 (Longint)** | **$5 (Longint)** |
-| ------------------------- | ---------------- | ------------------ | -------------- | ---------------- | ---------------- |
-| Message                   | 1                | 0                  | Progression    | Percentage       | Reserved         |
-| message                   | done (0-100)     |                    |                |                  |                  |
-| Verification finished(\*) | 2                | Object type (\*\*) | OK message     | Table or index   | Reserved         |
-| test                      | number           |                    |                |                  |                  |
-| Error                     | 3                | Object type (\*\*) | Text of error- | Table or index   | Reserved         |
-| message                   | number           |                    |                |                  |                  |
+| **Event**       | **$messageType** | **$objectType**   | **$messageText**  | **$table** | **$reserved** |
+| ------- | ---------------- | ------------------ | -------------- | ---------------- | ---------------- |
+| Message   | 1           | 0             | Progression message   | Percentage  done (0-100)     | Reserved         |
+| Verification finished(\*) | 2                | Object type (\*\*) | OK message test    | Table or index number  | Reserved         |
+| Error      | 3                | Object type (\*\*) | Text of error message | Table or index number  | Reserved         |
 | End of execution          | 4                | 0                  | DONE           | 0                | Reserved         |
 | Warning                   | 5                | Object type(\*\*)  | Text of error  | Table or index   | Reserved         |
-| message                   | number           |                    |                |                  |                  |
+|||| message                   | number      |
 
-(\*) The *Verification finished* ($1=2) event is never returned when the mode is Verify All. It is only used in Verify Records or Verify Indexes mode.  
-(\*\*) *Object type*: When an object is verified, a "finished" message ($1=2), error ($1=3) or warning ($1=5) can be sent. The object type returned in $2 can be one of the following:
+(\*) The *Verification finished* ($messageType=2) event is never returned when the mode is Verify All. It is only used in Verify Records or Verify Indexes mode.  
+(\*\*) *Object type*: When an object is verified, a "finished" message ($messageType=2), error ($messageType=3) or warning ($messageType=5) can be sent. The object type returned in $objectType can be one of the following:
 
 * 0 = undetermined
 * 4 = record
 * 8 = index
 * 16 = structure object (preliminary check of data file).
 
-*Special case*: When $4 = 0 for $1=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
+*Special case*: When $table = 0 for $messageType=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
 
-The callback method must also return a value in $0 (Longint), which is used to check the execution of the operation:
+The callback method must also return a *$result* integer value, which is used to check the execution of the operation:
 
-* If $0 = 0, the operation continues normally
-* If $0 = -128, the operation is stopped without any error generated
-* If $0 = another value, the operation is stopped and the value passed in $0 is returned as the error number. This error can be intercepted by an error-handling method.
+* If $result = 0, the operation continues normally
+* If $result = -128, the operation is stopped without any error generated
+* If $result = another value, the operation is stopped and the value passed in $result is returned as the error number. This error can be intercepted by an error-handling method.
 
-**Note:** You cannot interrupt execution via $0 after the *End of execution* event ($4=1) has been generated.
+**Note:** You cannot interrupt execution via $result after the *End of execution* event ($1=4) has been generated.
+
 
 Two optional arrays can also be used by this command:
 
