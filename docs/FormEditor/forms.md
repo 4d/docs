@@ -109,9 +109,16 @@ Fluent UI rendering offers modern and attractive controls, support of dark/light
 |![](../assets/en/FormEditor/fluent.png)|![](../assets/en/FormEditor/fluent-dark.png)|
 
 
-:::info macOS
 
-This feature can only be used on Windows. On macOS, it is ignored. 
+:::caution Developer Preview
+
+Fluent UI support is currently in the Developer Preview phase. It should not be used in production. 
+
+:::
+
+:::info Availability
+
+This feature can be used **in 4D projects on Windows**. It is not available on macOS or in binary 4D databases on Windows.
 
 :::
 

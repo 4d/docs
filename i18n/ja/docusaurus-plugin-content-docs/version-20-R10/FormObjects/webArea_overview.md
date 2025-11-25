@@ -18,7 +18,7 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 - [`URL`](properties_WebArea.md#url) --Web エリアが表示するURL をコントロールします。
 - [`Progression`](properties_WebArea.md#progression) -- Web エリア内に表示されているページのロード率をコントロールします。
 
-> 4D v19 R5 以降、Progression 変数は、[Windows のシステムレンダリングエンジン](./webArea_overview.md#Webレンダリングエンジン) を使用しているWeb エリアにおいては更新されなくなりました。
+> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Webレンダリングエンジン
 
@@ -332,9 +332,11 @@ Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コ�
 }
 ```
 
-### 参照
+:::info 関連したblog 記事
 
-[Specify your own parameters to initialize the embedded web area (blog 記事)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+
+:::
 
 
 

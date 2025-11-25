@@ -64,7 +64,7 @@ var PrClientList : Integer
  PrClientList:=New process("4D Client List";32000;"List of registered clients")
 ```
 
-3) The method 4D Client List allows you to recuperate all the registered 4D clients and those that can receive messages:
+3) The 4D Client List method allows you to get all the registered 4D clients and those that can receive messages:
 
 ```4d
 var $Ref; $p : Integer

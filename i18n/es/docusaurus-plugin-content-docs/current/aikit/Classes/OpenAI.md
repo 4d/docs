@@ -44,7 +44,7 @@ var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 
 #### URL del servidor
 
-For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
+Para una API [proveedor compatible](../compatible-openai.md), puede configurar la URL del servidor.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://server.ai"})
@@ -67,11 +67,13 @@ La API ofrece acceso a múltiples recursos que permiten una interacción perfect
 | `images`               | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Acceso a la API Images.          |
 | `moderations`          | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Acceso a la API de moderaciones. |
 | `embeddings`           | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Acceso a la API Embeddings.      |
+| `files`                | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Access to the Files API.         |
 
 ### Ejemplo de Uso
 
 ```4d
 $client.chat.completions.create(...)
 $client.images.generate(...)
+$client.files.create(...)
 $client.model.lists(...)
 ```

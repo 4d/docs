@@ -18,7 +18,7 @@ Deux variables spécifiques sont automatiquement associées à chaque zone web :
 - [`URL`](properties_WebArea.md#url) --pour contrôler l'URL affichée par la zone web
 - [`Progression`](properties_WebArea.md#progression) -- pour contrôler le pourcentage de chargement de la page affichée dans la zone web.
 
-> Depuis 4D 19 R5, la variable Progression n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu système Windows](./webArea_overview.md#web-rendering-engine).
+> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Moteur de rendu Web
 
@@ -332,9 +332,11 @@ Le fichier 4DCEFParameters.json par défaut contient les commutateurs suivants :
 }
 ```
 
-### Voir également
+:::info Article(s) de blog sur le sujet
 
-[Spécifiez vos propres paramètres pour initialiser la zone web intégrée (article de blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+
+:::
 
 
 

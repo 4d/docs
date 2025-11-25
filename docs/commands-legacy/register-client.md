@@ -25,7 +25,7 @@ displayed_sidebar: docs
 
 ## Description 
 
-<!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command “registers” a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or possibly 4D Server (by using stored methods) to execute methods on it by using the [`EXECUTE ON CLIENT`](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
+<!--REF #_command_.REGISTER CLIENT.Summary-->The **REGISTER CLIENT** command "registers" a 4D client station with the name specified in *clientName* on 4D Server, so as to allow other clients or possibly 4D Server (by using stored methods) to execute methods on it by using the [`EXECUTE ON CLIENT`](execute-on-client.md) command.<!-- END REF--> Once it is registered, a 4D client can then execute one or more methods for other clients.
 
 **Notes:**
 
@@ -64,7 +64,7 @@ var PrClientList : Integer
  PrClientList:=New process("4D Client List";32000;"List of registered clients")
 ```
 
-3) The method 4D Client List allows you to recuperate all the registered 4D clients and those that can receive messages:
+3) The 4D Client List method allows you to get all the registered 4D clients and those that can receive messages:
 
 ```4d
 var $Ref; $p : Integer

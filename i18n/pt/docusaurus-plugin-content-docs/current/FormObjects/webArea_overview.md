@@ -24,7 +24,7 @@ Duas variáveis específicas podem ser associadas a cada área web:
 - [`URL`](properties_WebArea.md#url) -- para controlar a URL exibida pela área Web
 - [`Progression`](properties_WebArea.md#progression) -- para controlar a porcentagem de carregamento da página exibida na área Web.
 
-> A partir do 4D v19 R5, a variável Progression não é mais atualizada em Web Areas usando o [mecanismo de renderização do sistema Windows](./webArea_overview.md#web-rendering-engine).
+> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderização Web
 
@@ -338,9 +338,11 @@ O arquivo 4DCEFParameters.json padrão contém os seguintes botões:
 }
 ```
 
-### Veja também
+:::info Related blog post
 
-[Especifique seus próprios parâmetros para inicializar a área Web incorporada (postagem no blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+
+:::
 
 
 

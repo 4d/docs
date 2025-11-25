@@ -84,7 +84,7 @@ If the attribute stores [**vector objects**](../API/VectorClass.md) (see how to 
 
 For more information about vector similarity searches, please refer to [Query by vector similarity](../API/DataClassClass.md#query-by-vector-similarity) section.
 
-Use the `params` property to provide the filter with the vector comparison parameter, using a syntax like:
+Utilice la propiedad `params` para ofrecer al filtro el parámetro de comparación de vectores, utilizando una sintaxis como:
 
 **\{vectorAttribute\} \{comparator\} \{placeholder\}&$params=vectorComparison**
 

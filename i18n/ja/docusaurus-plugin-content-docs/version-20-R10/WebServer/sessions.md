@@ -12,7 +12,7 @@ Webセッションでは、以下のことが可能です:
 - セッションの [.storage](../API/SessionClass.md#storage) を使用して、Webクライアントのプロセス間でデータを保存および共有。
 - セッションを実行しているユーザーに権限を関連付ける。
 
-:::tip Related blog post
+:::tip 関連したblog 記事
 
 [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
 
@@ -25,7 +25,7 @@ Webセッションは次のものに使用されます:
 - HTTPリクエストを送信する [Webアプリケーション](gettingStarted.md)
 - [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodlyフォーム](qodly-studio.md) が使用する [REST API](../REST/authUsers.md) への呼び出し
 
-## Webセッションの有効化
+## Enabling web sessions {#enabling-web-sessions}
 
 セッション管理機能は、4D Webサーバー上で有効または無効にすることができます。 セッション管理を有効化する方法は複数あります:
 
@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips 関連したblog 記事
+:::tip 関連したblog 記事
 
 [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
 

@@ -38,7 +38,30 @@ If you pass -1 in both *right* and *bottom,* you instruct 4D to automatically si
 
 **Important:** This automatic sizing of the window will occur only if you made a prior call to [FORM SET INPUT](form-set-input.md) for the form to be displayed, and if you passed the \* optional parameter to [FORM SET INPUT](form-set-input.md).
 
-* The *type* parameter is optional. It represents the type of window you want to display, and corresponds to the different windows shown in the section *Window Types (compatibility)* (constants of the *Open Window* theme). If the window type is negative, the window created is a floating window. If the type is not specified, type 1 is used by default.
+* The *type* parameter is optional. It represents the type of window you want to display. If the window type is negative, the window created is a floating window (if supported). If the type is not specified, type 1 is used by default. The following constants of the *Open Window* theme are supported:
+
+|Constant|Comment|
+|---|---|
+|Alternate dialog box|Can be a floating window|
+|Has full screen mode Mac|Option to add to a document type window on macOS only (ex: `Plain form window+Form has full screen mode Mac`)|
+|Modal dialog box	||
+|Movable dialog box	|Can be a floating window|
+|Palette window|Can be a floating window<li>Not resizable: `-(Palette window+2)` (Windows) or `	-Palette window` (macOS)</li><li>Resizable: `-(Palette window+6)`</li>|
+|Plain dialog box	|Can be a floating window|
+|Plain fixed size window||
+|Plain no zoom box window||
+|Pop up window||
+|Plain window||
+|Resizable sheet window||
+|Round corner window	||
+|Sheet window||
+|Texture appearance|Option to be added to a window type on macOS only. Supported types: `Plain window`, `Plain no zoom box window`, `Plain fixed size window`, `Movable dialog box`, `Round corner window`|
+
+
+
+
+
+
 * The *title* parameter is the optional title for the window
 
 If you pass an empty string ("") in *title,* you instruct 4D to use the Window Title set in the Design environment Form Properties window for the form to be displayed.
@@ -47,7 +70,7 @@ If you pass an empty string ("") in *title,* you instruct 4D to use the Window T
 
 * The *controlMenuBox* parameter is the optional Control-menu box method for the window. If this parameter is specified, a Control-menu box (Windows) or a Close Box (Macintosh) is added to the window. When the user double-clicks the Control-menu box (Windows) or clicks on the Close Box (Macintosh), the method passed in *controlMenuBox* is called.
 
-**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an On Close Box event occurs. For more information, see the command [Form event code](../commands/form-event-code.md).
+**Note:** You can also manage the closing of the window from within the form method of the form displayed in the window when an `On Close Box` event occurs. For more information, see the command [Form event code](../commands/form-event-code.md).
 
 If more than one window is open for a process, the last window opened is the active (frontmost) window for that process. Only information within the active window can be modified. Any other windows can be viewed. When the user types, the active window will always come to the front, if it is not already there.
 
@@ -61,21 +84,19 @@ The following project method opens a window centered in the main window (Windows
 
 ```4d
   // OPEN CENTERED WINDOW project method
-  // $1 – Window width
-  // $2 – Window height
-  // $3 – Window type (optional)
-  // $4 – Window title (optional)
+ #DECLARE($width : Integer; $height : Integer; $type : Integer; $title : Text)
+ var $SW; $SH; $WW; $WH : Integer
  $SW:=Screen width\2
  $SH:=(Screen height\2)
- $WW:=$1\2
- $WH:=$2\2
+ $WW:=$width\2
+ $WH:=$height\2
  Case of
     :(Count parameters=2)
        Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH)
     :(Count parameters=3)
-       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3)
+       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$type)
     :(Count parameters=4)
-       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3;$4)
+       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$type;$title)
  End case
 ```
 
@@ -95,7 +116,8 @@ After the project method is written, you can use it this way:
 The following example opens a floating window that has a Control-menu box (Windows) or Close Box (Macintosh) method. The window is opened in the upper right hand corner of the application window.
 
 ```4d
- $myWindow:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"CloseColorPalette")
+ var $myWindow : Integer
+ $myWindow:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"CloseColorPalette")
  DIALOG([Dialogs];"Color Palette")
 ```
 
@@ -110,7 +132,8 @@ The CloseColorPalette method calls the [CANCEL](cancel.md) command:
 The following example opens a window whose size and title come from the properties of the form displayed in the window: 
 
 ```4d
- FORM SET INPUT([Customers];"Add Records";*)
+  var $myWindow : Integer
+ FORM SET INPUT([Customers];"Add Records";*)
  $myWindow:=Open window(10;80;-1;-1;Plain window;"")
  Repeat
     ADD RECORD([Customers])
@@ -124,7 +147,8 @@ The following example opens a window whose size and title come from the properti
 This example illustrates the “delay” mechanism for displaying sheet windows under macOS:
 
 ```4d
- $myWindow:=Open window(10;10;400;400;Sheet window)
+  var $myWindow : Integer
+ $myWindow:=Open window(10;10;400;400;Sheet window)
   //For the moment, the window is created but remains hidden
  DIALOG([Table];"dialForm")
   //The On Load event is generated then the sheet window is displayed; it "drops down" from the bottom
@@ -135,7 +159,7 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 
 [CLOSE WINDOW](close-window.md)  
 [Open form window](open-form-window.md)  
-*Open Window*  
+
 
 ## Properties
 

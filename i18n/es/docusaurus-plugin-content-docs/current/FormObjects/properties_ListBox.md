@@ -78,7 +78,7 @@ Para las dos últimas acciones, el evento formulario `On Open Detail` también s
 
 ---
 
-## Highlight Set {#highlight-set}
+## Conjunto resaltado {#highlight-set}
 
 `List box del tipo selección`
 

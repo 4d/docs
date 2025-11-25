@@ -67,11 +67,13 @@ The API provides access to multiple resources that allow seamless interaction wi
 | `images`            | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Acesso à API Images.           |
 | `moderations`       | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Access to the Moderations API. |
 | `embeddings`        | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Access to the Embeddings API.  |
+| `files`             | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Access to the Files API.       |
 
 ### Exemplo de uso
 
 ```4d
 $client.chat.completions.create(...)
 $client.images.generate(...)
+$client.files.create(...)
 $client.model.lists(...)
 ```

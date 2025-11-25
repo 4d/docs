@@ -38,7 +38,30 @@ Si pasa -1 en *derecha* e *inferior,* le indica a 4D que redimensione automátic
 
 **Importante:** este dimensionamiento automático de la ventana ocurrirá únicamente si realiza una llamada previa a [FORM SET INPUT](form-set-input.md) para el formulario a mostrar en la ventana y si le pasa el parámetro opcional \* a [FORM SET INPUT](form-set-input.md).
 
-* El parámetro *tipo* es opcional y define el tipo de ventana que quiere mostrar, y corresponde a las diferentes ventanas presentadas en la sección . Si el tipo pasado es negativo, la ventana será flotante. Si el tipo no se especifica, el tipo 1 se utiliza por defecto.
+El parámetro *tipo* es opcional. Representa el tipo de ventana que desea mostrar. Si el tipo de ventana es negativo, la ventana creada es una ventana flotante (si es compatible). Si no se especifica el tipo, se utiliza el tipo 1 de forma predeterminada. Se admiten las siguientes constantes del tema *Abrir ventana*:
+
+|Constante|Comentario|
+|---|---|
+|Alternate dialog box|Puede utilizarse en ventana flotante|
+|Has full screen mode Mac|Opción para añadir a una ventana de tipo documento solo en macOS (por ejemplo: `Plain form window+Form has full screen mode Mac`)|
+|Modal dialog box	||
+|Movable dialog box	|Puede utilizarse en ventana flotante|
+|Palette window|Can be a floating window<li>No redimensionable: `-(Palette window+2)` (Windows) o `	-Palette window` (macOS)</li><li>Redimensionable: `-(Palette window+6)`</li>|
+|Plain dialog box	|Puede utilizarse en ventana flotante|
+|Plain fixed size window||
+|Plain no zoom box window||
+|Pop up window||
+|Plain window||
+|Resizable sheet window||
+|Round corner window	||
+|Sheet window||
+|Texture appearance|Opción que se añadirá a un tipo de ventana solo en macOS. Tipos soportados: `Plain window`, `Plain no zoom box window`, `Plain fixed size window`, `Movable dialog box`, `Round corner window`|
+
+
+
+
+
+
 * El parámetro *titulo* indica el título opcional de la ventana
 
 Si pasa una cadena vacía ("") en *titulo,* le indica a 4D que utilice los valores de introducidos en el área Nombre de la ventana de la ventana de Propiedades del formulario en el entorno Diseño para el título del formulario a mostrar en la ventana. 
@@ -47,7 +70,7 @@ Si pasa una cadena vacía ("") en *titulo,* le indica a 4D que utilice los valor
 
 * El parámetro *casillaCerrar* es opcional y designa el método para cerrar la ventana. Si se especifica este parámetro, la casilla del menú Control (Windows) o la casilla Cerrar (Macintosh) se añade a la ventana. Cuando el usuario hace doble clic en la casilla de menú Control (Windows) o clic en la Casilla cerrar (Macintosh), se llama al método pasado en *casillaCerrar*.
 
-**Nota:** también puede administrar el cierre de la ventana desde el método del formulario mostrado en la ventana cuando ocurre un evento On Close Box. Para mayor información, consulte el comando [Form event code](../commands/form-event-code.md).
+**Nota:** también puede administrar el cierre de la ventana desde el método del formulario mostrado en la ventana cuando ocurre un evento `On Close Box`. Para mayor información, consulte el comando [Form event code](../commands/form-event-code.md).
 
 Si se abre más de una ventana para un proceso, la última ventana abierta es la ventana activa (del primer plano) para ese proceso. Sólo puede modificarse la información dentro de la ventana activa. Todas las demás ventanas pueden ser visualizadas. Cuando el usuario digita, la ventana activa siempre pasará al primer plano, si aún no está ahí.
 
@@ -60,22 +83,20 @@ Los formularios se muestran al interior de una ventana abierta. El texto pasado 
 El siguiente método de proyecto abre una ventana centrada en la ventana en la ventana principal (Windows) o en la pantalla principal (Macintosh). Note que puede aceptar dos, tres, o cuatro parámetros:
 
 ```4d
-  // Método de proyecto OPEN CENTERED WINDOW
-  // $1 – Ancho de la ventana
-  // $2 – Alto de la ventana
-  // $3 – Tipo de la ventana (opcional)
-  // $4 – Título de la ventana (opcional)
+  // Método proyecto OPEN CENTERED WINDOW
+  #DECLARE($width : Integer; $height : Integer; $type : Integer; $title : Text)
+ var $SW; $SH; $WW; $WH : Integer
  $SW:=Screen width\2
  $SH:=(Screen height\2)
- $WW:=$1\2
- $WH:=$2\2
+ $WW:=$width\2
+ $WH:=$height\2
  Case of
     :(Count parameters=2)
        Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH)
     :(Count parameters=3)
-       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3)
+       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$type)
     :(Count parameters=4)
-       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$3;$4)
+       Open window($SW-$WW;$SH-$WH;$SW+$WW;$SH+$WH;$type;$title)
  End case
 ```
 
@@ -95,7 +116,8 @@ Una vez escrito el método de proyecto, puede utilizarlo de esta forma:
 El siguiente ejemplo abre una ventana flotante que tiene un casilla de menú Control (Windows) o una casilla de cerrar (Macintosh). La ventana se abre en la esquina superior derecha de la ventana de la aplicación.  
   
 ```4d
- $myWindow:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"CloseColorPalette")
+var $myWindow : Integer
+ $myWindow:=Open window(Screen width-149;33;Screen width-4;178;-Palette window;"";"CloseColorPalette")
  DIALOG([Dialogs];"Color Palette")
 ```
 
@@ -105,19 +127,18 @@ El método CloseColorPalette llama al comando [CANCEL](cancel.md):
  CANCEL
 ```
 
-  
 ## Ejemplo 3 
 
 El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las propiedades del formulario mostrado en la ventana:   
   
 ```4d
- ORM SET INPUT([Customers];"Add Records";*)
- $myWindow:=Open window(10;80;-1;-1;Plain window;"")
+  var $myWindow : Integer
+ FORM SET INPUT([Customers];"Add Records";*)
+ $myWindow:=Open window(10;80;-1;-1;Plain window;"")
  Repeat
     ADD RECORD([Customers])
  Until(OK=0)
 ```
-  
   
 **Recuerde**: para que la función **Open window** utilice automáticamente las propiedades del formulario, debe llamar a [FORM SET INPUT](form-set-input.md) con el parámetro opcional *\** y las propiedades del formulario deben haber sido definidas en función de esta utilización en el entorno Diseño.
 
@@ -126,17 +147,19 @@ El siguiente ejemplo abre una ventana cuyo tamaño y título provienen de las pr
 Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macOS:
 
 ```4d
- $miVentana:=Open window(10;10;400;400;Sheet window)
+  var $myWindow : Integer
+ $myWindow:=Open window(10;10;400;400;Sheet window)
   //Por el momento, se crea la ventana pero permanece oculta
- DIALOG([Tabla];"formDial")
-  //El evento On Load se genera luego se muestra la ventana; "desciende" de debajo de la barra de título
+ DIALOG([Table];"dialForm")
+  //El evento On Load se genera luego se muestra la ventana; "desciende" de debajo de
+  //la barra de título
 ```
 
 ## Ver también 
 
 [CLOSE WINDOW](close-window.md)  
-*Crear ventana*  
 [Open form window](open-form-window.md)  
+
 
 ## Propiedades
 
@@ -144,5 +167,3 @@ Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macO
 | --- | --- |
 | Número de comando | 153 |
 | Hilo seguro | &cross; |
-
-

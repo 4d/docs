@@ -24,7 +24,7 @@ Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événe
 
 :::info Note de compatibilité
 
-Les événements d'entité ORDA dans le magasin de données sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA.
+Les événements d'entité ORDA dans le magasin de données sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Note also that, unlike triggers, ORDA entity events do not lock the entire underlying table of a dataclass while saving or dropping entities. Several events can run in parallel as long as they involve distinct entities (i.e. records).
 
 :::
 
@@ -420,7 +420,9 @@ If (This.userManualPath#"")
 	// The user manual document file is created on the disk
 	// This may fail if no more space is available
 	Try
-		$fileCreated:=$userManualFile.create() 
+        // The file content has been generated and stored in a map in Storage.docMap previously
+	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
+        $userManualFile.setContent($docInfo.content)
 	Catch
 		// No more room on disk for example
 		$result:={/
@@ -433,6 +435,12 @@ End if
 return $result
 
 ```
+
+:::note
+
+The content of the file is generated outside the `saving` event because it can be time consuming.
+
+:::
 
 ### `Function event afterSave`
 

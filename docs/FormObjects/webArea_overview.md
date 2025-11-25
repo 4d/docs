@@ -346,9 +346,11 @@ The default 4DCEFParameters.json file contains the following switches:
 }
 ```
 
-### See also
+:::info Related blog post
 
-[Specify your own parameters to initialize the embedded web area (blog post)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area) 
+[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/) 
+
+:::
 
 
 

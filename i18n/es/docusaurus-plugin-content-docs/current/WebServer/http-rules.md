@@ -53,14 +53,14 @@ Cuando el servidor web recibe una solicitud, **todos** los patrones de URL se ac
 
 Se soportan las siguientes palabras clave de acción:
 
-| Palabras clave  | Tipo de valor               | Descripción                                                                                                                                                                                                                                         |
-| --------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `removeHeaders` | Texto o colección de textos | Encabezado(s) para eliminar de las respuestas HTTP. Si un encabezado a eliminar no existe en el encabezado de respuesta, se ignora.                                                              |
-| `addHeaders`    | Object                      | Name (text) and value (text) of header(s) to add to the HTTP responses.                                                                                                    |
-| `setHeaders`    | Object                      | Name (text) and value (text) of header(s) to modify in the HTTP responses. Si un encabezado a modificar no existe en el encabezado de respuesta, se añade. |
-| `denyAccess`    | Boolean                     | true para negar el acceso al recurso, false para permitir el acceso. Cuando el acceso a un recurso es denegado, el servidor web devuelve un estado 403 por defecto                                                                  |
-| `redirect`      | Text                        | Redirigir URL. Cuando se activa una redirección, el servidor web devuelve un estado 302 por defecto                                                                                                                                 |
-| `status`        | Number                      | Estado HTTP                                                                                                                                                                                                                                         |
+| Palabras clave  | Tipo de valor               | Descripción                                                                                                                                                                                                                                 |
+| --------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `removeHeaders` | Texto o colección de textos | Encabezado(s) para eliminar de las respuestas HTTP. Si un encabezado a eliminar no existe en el encabezado de respuesta, se ignora.                                                      |
+| `addHeaders`    | Object                      | Name (text) and value (text) of header(s) to add to the HTTP responses.                                                                                            |
+| `setHeaders`    | Object                      | Nombre (texto) y valor (texto) de los encabezados a modificar en las respuestas HTTP. Si un encabezado a modificar no existe en el encabezado de respuesta, se añade. |
+| `denyAccess`    | Boolean                     | true para negar el acceso al recurso, false para permitir el acceso. Cuando el acceso a un recurso es denegado, el servidor web devuelve un estado 403 por defecto                                                          |
+| `redirect`      | Text                        | Redirigir URL. Cuando se activa una redirección, el servidor web devuelve un estado 302 por defecto                                                                                                                         |
+| `status`        | Number                      | Estado HTTP                                                                                                                                                                                                                                 |
 
 ### Encabezados no modificables
 

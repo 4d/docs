@@ -165,7 +165,7 @@ En versiones anteriores, el archivo `roles.json` no fue creado por defecto. A pa
 
 :::note Qodly Studio
 
-En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
+En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](https://developer.4d.com/qodly/4DQodlyPro/force-login) en el panel de Privilegios.
 
 :::
 
