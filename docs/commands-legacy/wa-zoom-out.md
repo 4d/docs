@@ -24,7 +24,7 @@ Under Windows, the scope of this command is global: the configuration is retaine
 
 :::note Compatibility
 
-This command does nothing on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. 
+This command does nothing on Windows with the [Web system rendering engine](../FormObjects/webArea_overview.md#web-rendering-engine) when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. 
 
 :::
 
