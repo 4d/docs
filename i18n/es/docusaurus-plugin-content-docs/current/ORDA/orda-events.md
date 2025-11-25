@@ -234,7 +234,7 @@ Function query sameDay($event : Object) : Text
 
 ```
 
-- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- Usar un atributo *sameDay* **escalar** actualizado cuando otros atributos son "tocados" ahorrará tiempo:
 
 ```4d
     //BookingEntity class
@@ -348,7 +348,7 @@ No se recomienda actualizar la entidad dentro de esta función (utilizando `This
 
 #### Ejemplo
 
-En este ejemplo, no se permite guardar un producto con un margen inferior al 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
+En este ejemplo, no se permite guardar un producto con un margen inferior al 50%. En caso de que el atributo precio no sea válido, devuelve un objeto error y, por tanto, detiene la acción de guardar.
 
 ```4d
 // ProductsEntity class
@@ -438,7 +438,7 @@ return $result
 
 :::note
 
-The content of the file is generated outside the `saving` event because it can be time consuming.
+El contenido del archivo se genera fuera del evento `saving` porque puede llevar mucho tiempo.
 
 :::
 

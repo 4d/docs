@@ -18,7 +18,7 @@ The `OpenAIFile` class represents a file object in the OpenAI API. Files can be 
 | `filename`             | Text    | El nombre del archivo.                                                                                                                                                                                       |
 | `object`               | Text    | The object type, which is always "file".                                                                                                                                                                     |
 | `purpose`              | Text    | The intended purpose of the file. Supported values: `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results`, `vision`, and `user_data`. |
-| `status`               | Text    | **Deprecated.** The current status of the file, which can be either `uploaded`, `processed`, or `error`.                                                                                     |
+| `status`               | Text    | **Obsoleto.** el estado actual del archivo, que puede ser `uploaded`, `processed`, o `error`.                                                                                                |
 | `status_details`       | Text    | **Deprecated.** For details on why a fine-tuning training file failed validation, see the error field on `fine_tuning.job`.                                                                  |
 
 ## Ver también

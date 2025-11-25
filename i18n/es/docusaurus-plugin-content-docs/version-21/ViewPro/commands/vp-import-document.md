@@ -76,7 +76,7 @@ El parámetro opcional *paramObj* permite definir las propiedades del documento 
 - La importación de archivos en formatos .xslx, .csv y .sjs es **asíncrona**. Con estos formatos, debe utilizar el atributo `formula` si desea iniciar una acción al final del procesamiento del documento.
 - Al importar un archivo con formato Microsoft Excel a un documento 4D View Pro, algunos parámetros pueden perderse. Puede verificar su configuración con [esta lista de SpreadJS](https://developer.mescius.com/spreadjs/docs/excelimpexp/excelexport).
 - Para más información sobre el formato CSV y los valores separados por delimitadores en general, ver [este artículo en Wikipedia](https://en.wikipedia.org/wiki/Delimiter-separated_values)
-- Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Make sure to not mix this object with legacy first level property *password* to avoid potiental issues.
+- Se recomienda utilizar el objeto *excelOptions* al importar en formato ".xlsx". Asegúrese de no mezclar este objeto con la propiedad heredada de primer nivel *password* para evitar problemas potenciales.
 - La función callback especificada en el atributo `formula` se activa después de que todas las [funciones personalizadas 4D](../formulas.md#4d-functions) dentro del contenido importado hayan completado sus cálculos. This ensures that any dependent processes, such as document modifications or exports, are performed only after all formula-based computations are fully resolved.
 
 :::

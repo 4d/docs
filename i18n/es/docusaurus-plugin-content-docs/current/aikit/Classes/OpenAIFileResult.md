@@ -5,7 +5,7 @@ title: OpenAIFileResult
 
 # OpenAIFileResult
 
-The `OpenAIFileResult` class contains the result of a single file operation (upload or retrieve).
+La clase `OpenAIFileResult` contiene el resultado de una única operación de archivo (carga o recuperación).
 
 ## Hereda
 

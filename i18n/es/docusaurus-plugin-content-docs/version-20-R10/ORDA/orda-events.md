@@ -191,7 +191,7 @@ Function query sameDay($event : Object) : Text
 
 ```
 
-- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- Usar un atributo *sameDay* **escalar** actualizado cuando otros atributos son "tocados" ahorrará tiempo:
 
 ```4d
     //BookingEntity class

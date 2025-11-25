@@ -166,7 +166,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 :::note Qodly Studio
 
-Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](../WebServer/qodly-studio.md#force-login) を使用してログインモードを設定することができます。
+Qodly Studio for 4D では、権限パネルの [**強制ログイン**オプション](https://developer.4d.com/qodly/4DQodlyPro/force-login) を使用してログインモードを設定することができます。
 
 :::
 

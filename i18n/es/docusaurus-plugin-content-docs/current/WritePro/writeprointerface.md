@@ -10,7 +10,7 @@ Un desarrollador 4D puede implementar fácilmente estas paletas en su aplicació
 
 ## Instalación y documentación
 
-4D Write Pro Interface is a **4D component** that needs to be [installed in your project](../Project/components.md#overview). 4D Write Pro Interface source files are [provided on Github](https://github.com/4d/4D-WritePro-Interface).
+4D Write Pro Interface is a **4D component** that needs to be [installed in your project](../Project/components.md#overview). Los archivos fuente de 4D Write Pro Interface están [disponibles en Github](https://github.com/4d/4D-WritePro-Interface).
 
 La documentación principal de [la interfaz de 4D Write Pro](https://doc.4d.com/4Dv20/4D/20/Entry-areas.300-6263967.en.html) se encuentra en el manual *Diseño 4D*. Encontrará a continuación:
 

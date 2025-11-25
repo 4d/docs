@@ -957,7 +957,7 @@ exposed Function get <attributeName>
 ```
 
 ```4d
-// declare a shared singleton function
+// declara una función singleton compartida
 shared singleton Class constructor()
 exposed Function <functionName>
 ```

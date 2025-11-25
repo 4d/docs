@@ -340,7 +340,7 @@ Cuando se superponen varios objetos, se puede utilizar el atajo **Ctrl+Mayús+cl
 
 :::note
 
-In binary databases, use **Ctrl+Click / Command+Click** to perform the same action.
+En bases de datos binarias, utilice **Ctrl+Clic / Comando+Clic** para efectuar la misma acción.
 
 :::
 

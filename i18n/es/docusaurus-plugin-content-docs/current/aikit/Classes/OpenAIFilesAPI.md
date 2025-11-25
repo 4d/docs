@@ -51,7 +51,7 @@ Upload a file that can be used across various endpoints.
 - **API de Asistentes:** soporta tipos de archivo específicos (ver Guía de herramientas de asistentes)
 - **API de finalización de chat:** sólo se admiten archivos PDF
 
-#### Ejemplo
+#### Sychronous example
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -68,6 +68,37 @@ If ($result.success)
     // $uploadedFile.id -> "file-abc123"
     // $uploadedFile.filename -> "training-data.jsonl"
     // $uploadedFile.bytes -> 120000
+End if
+```
+
+#### Ejemplo asincrónico
+
+Since file uploads can be long operations (especially for large files up to 512 MB), it's recommended to use asynchronous calls to avoid blocking your application. See [Asynchronous Call](../asynchronous-call.md) for more details.
+
+```4d
+var $file:=File("/RESOURCES/large-training-data.jsonl")
+
+var $params:=cs.AIKit.OpenAIFileParameters.new()
+$params.onTerminate:=Formula(MyFileUploadCallback($1))
+
+// This call returns immediately without blocking
+$client.files.create($file; "fine-tune"; $params)
+```
+
+The callback function receives an [OpenAIFileResult](OpenAIFileResult.md):
+
+```4d
+// MyFileUploadCallback
+#DECLARE($result: cs.AIKit.OpenAIFileResult)
+
+If ($result.success)
+    var $uploadedFile:=$result.file
+    
+    ALERT("File uploaded successfully: "+$uploadedFile.filename)
+    // Store the file ID for later use
+    Form.uploadedFileId:=$uploadedFile.id
+Else
+    ALERT("Upload failed: "+Formula(JSON Stringify($result.errors)))
 End if
 ```
 
