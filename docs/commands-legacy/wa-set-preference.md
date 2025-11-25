@@ -25,10 +25,17 @@ Pass the preference to be modified in the *selector* parameter and the value to 
 | Constant                  | Value | Comment                                                                                                                                 |
 | ------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | WA enable contextual menu | 4     | Allow the display of a standard contextual menu in the Web area. Default (any engine) = False                                           |
-| WA enable URL drop        | 101   | Change drop icon and call *On Window Opening Denied* event when URLs or files are dropped in the Web area. Default (any engine) = False |
+| WA enable URL drop        | 101   | Change drop icon and call *On Window Opening Denied* event when URLs or files are dropped in the Web area. Default (any engine) = False. |
 | WA enable Web inspector   | 100   | Allow the display of the Web inspector in the area. Default (any engine) = False                                                        |
 
 For each preference, pass **True** in *value* to activate it and **False** to deactivate it.
+
+
+:::note Compatibility
+
+Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. Passing **true** to the `WA enable URL drop` selector is ignored in this context. 
+
+:::
 
 ## Example 
 

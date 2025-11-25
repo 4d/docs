@@ -30,6 +30,14 @@ Pass the preference whose value you want to get in the *selector* parameter. You
 
 In the *value* parameter, pass a variable that will receive the current value of the preference. The *value* variable is always a Boolean: it contains **True** if the preference is active and **False** otherwise.
 
+
+:::note Compatibility
+
+Drag and drop is not supported with Web areas on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. The `WA enable URL drop` selector value is always **False** in this context. 
+
+:::
+
+
 ## See also 
 
 [WA SET PREFERENCE](wa-set-preference.md)  
