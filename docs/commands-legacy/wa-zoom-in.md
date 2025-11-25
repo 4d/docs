@@ -22,6 +22,12 @@ Under macOS, the scope of this command is the 4D session: the configuration carr
 
 Under Windows, the scope of this command is global: the configuration is retained after the 4D application is closed.
 
+:::note Compatibility
+
+This command does nothing on Windows when the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) is used. 
+
+:::
+
 ## See also 
 
 [WA ZOOM OUT](wa-zoom-out.md)  
