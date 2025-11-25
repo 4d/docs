@@ -7,7 +7,8 @@ title: Form Properties
 
 ## Color Scheme
 
->Color scheme property is only applied on macOS.
+>Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+).
 
 This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). This can be changed for the form to one of the following two options:
 

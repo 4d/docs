@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Summary-->The **SET APPLICATION COLOR SCHEME** command defines the color scheme to use at the application level for the current session.<!-- END REF--> This scheme will be applied to forms that do not already declare a specific scheme (a color scheme defined at the form level takes priority over the application level).
 
-**Note:** This command only works on macOS. On Windows, the only available scheme is "light".
+**Note:** This command does nothing on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows). In this context, the only available scheme is "light".
 
 In the *colorScheme* parameter, pass a color scheme to apply:
 
