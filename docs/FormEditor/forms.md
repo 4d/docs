@@ -130,7 +130,7 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 ### Requirements
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+The Fluent UI rendering requires that the ***Windows App SDK** be installed on your machine ([download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)). You need to install this SDK on any Windows machine displaying your forms.
 
 If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error. 
 
