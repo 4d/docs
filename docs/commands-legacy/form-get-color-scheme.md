@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.FORM Get color scheme.Summary-->The **FORM Get color scheme** command returns the name of the actual color scheme of the currently displayed form.<!-- END REF--> If there is no current form, the command returns an empty string.
 
-**Note**: On Windows, this command always returns "light".
+**Note**: On Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows), this command always returns "light".
 
 The actual color scheme of a form is defined by:
 

@@ -251,36 +251,36 @@ This CSS defines a color combination for text and text background in the light s
 
 ##### Example 2
 
-Media queries can also be combined:
-
 ```css
-.textColor  {
-    stroke: green;
-    fill: green;	
+/* Default style (all themes and modes) */
+.textLabel {
+    fontFamily: "Segoe UI";
 }
-
+ 
+/* Fluent UI theme*/
+@media (form-theme: fluent-ui) {
+    .textLabel {
+        stroke: #2A2A2A;
+        fontSize: 14px;
+    }
+ 
+    /* dark mode */
+    @media (prefers-color-scheme: dark) {
+        .textLabel {
+            stroke: #E0E0E0;
+        }
+    }
+}
+ 
+/* Windows classic theme */
 @media (form-theme: win-classic) {
-    .textColor  {
-        stroke: blue;
-	fill: blue;
+    .textLabel {
+        stroke: #000000;
+        fontSize: 12px;
     }
 }
 
-@media (form-theme: fluent-ui) and (prefers-color-scheme: light) {
-    .textColor {
-        stroke: red;
-	fill: red;
-    }
-}
-
-@media (form-theme: fluent-ui) and (prefers-color-scheme: dark) {
-    .textColor {
-        stroke: yellow;
-	fill: yellow;
-    }
-}
 ```
-
 
 
 ### Object Attributes

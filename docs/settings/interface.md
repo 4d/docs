@@ -52,7 +52,7 @@ This option can be selected on macOS but will be ignored when the application is
 
 This menu lets you select the color scheme to use at the main application level. A color scheme defines a global set of interface colors for texts, backgrounds, windows, etc., used in your forms.
 
-> This option only works on macOS. On Windows, the "Light" scheme is always used.
+> This option is ignored on Windows with [Classic theme](#use-fluent-ui-on-windows). In this context, the "Light" scheme is always used.
 
 The following schemes are available:
 
@@ -72,7 +72,7 @@ The main application scheme will be applied to forms by default. However, it can
 
 ### Use Fluent UI on Windows  
 
-When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows classic UI rendering theme will be used by default. 
+When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows Classic UI rendering theme will be used by default. 
 
 > This option is only used on Windows, it has no effect on macOS.
 
