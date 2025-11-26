@@ -11,7 +11,7 @@ Sorts the data returned by the attribute and sorting order defined (*e.g.*, `$or
 `$orderby` orders the entities returned by the REST request. For each attribute, you specify the order as `ASC` (or `asc`) for ascending order and `DESC` (`desc`) for descending order. By default, the data is sorted in ascending order. If you want to specify multiple attributes, you can delimit them with a comma, *e.g.*, `$orderby="lastName desc, firstName asc"`.
 
 
-## Example  
+## Example 1
 
 In this example, we retrieve entities and sort them at the same time:
 
@@ -49,3 +49,10 @@ The example below sorts the entity set by lastName attribute in ascending order:
 }
 ```
 
+## Example 2
+
+`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):  
+
+```
+GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"
+```

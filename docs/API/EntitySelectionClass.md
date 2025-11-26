@@ -1800,6 +1800,8 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 |Release|Changes|
 |---|---|
+|21 R2|Support of order by with 4D.Vector searches|
+|21|Support 4D.Vector objects|
 |17 R6|Support of Formula parameters|
 |17 R5|Support of placeholders for values|
 |17|Added|
