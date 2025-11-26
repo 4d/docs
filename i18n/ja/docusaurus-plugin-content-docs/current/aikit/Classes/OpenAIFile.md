@@ -5,7 +5,7 @@ title: OpenAIFile
 
 # OpenAIFile
 
-The `OpenAIFile` class represents a file object in the OpenAI API. Files can be uploaded and used across various endpoints including Assistants, Fine-tuning, Batch, and Vision APIs.
+`OpenAIFile` クラスはOpen AI API 内でのファイルオブジェクトを表します。 Files can be uploaded and used across various endpoints including Assistants, Fine-tuning, Batch, and Vision APIs.
 
 ## プロパティ
 

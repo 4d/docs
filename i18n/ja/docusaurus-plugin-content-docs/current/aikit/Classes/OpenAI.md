@@ -60,14 +60,14 @@ $client.baseURL:="https://server.ai"
 
 API はOpenAI のサービスとシームレスにやりとりすることを可能にする複数のリソースへのアクセスを提供します。 それぞれのリソースは専用のAPI クラスにカプセル化されており、様々な機能と対話するための構造化された、直感的な方法を提供しています。
 
-| プロパティ名        | 型                                               | 説明                                       |
-| ------------- | ----------------------------------------------- | ---------------------------------------- |
-| `models`      | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Models API へのアクセス。                       |
-| `chat`        | [OpenAIChatAPI](OpenAIChatAPI.md)               | Chat API へのアクセス。                         |
-| `images`      | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | 画像 API へのアクセス。                           |
-| `moderations` | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | モデレーションAPI へのアクセス。                       |
-| `embeddings`  | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | 埋め込みAPI へのアクセス。                          |
-| `files`       | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Access to the Files API. |
+| プロパティ名        | 型                                               | 説明                 |
+| ------------- | ----------------------------------------------- | ------------------ |
+| `models`      | [OpenAIModelsAPI](OpenAIModelsAPI.md)           | Models API へのアクセス。 |
+| `chat`        | [OpenAIChatAPI](OpenAIChatAPI.md)               | Chat API へのアクセス。   |
+| `images`      | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | 画像 API へのアクセス。     |
+| `moderations` | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | モデレーションAPI へのアクセス。 |
+| `embeddings`  | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | 埋め込みAPI へのアクセス。    |
+| `files`       | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Files API へのアクセス。  |
 
 ### 使用例
 
