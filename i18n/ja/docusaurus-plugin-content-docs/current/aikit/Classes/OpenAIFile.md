@@ -5,21 +5,21 @@ title: OpenAIFile
 
 # OpenAIFile
 
-`OpenAIFile` クラスはOpen AI API 内でのファイルオブジェクトを表します。 Files can be uploaded and used across various endpoints including Assistants, Fine-tuning, Batch, and Vision APIs.
+`OpenAIFile` クラスはOpen AI API 内でのファイルオブジェクトを表します。 ファイルはアップロード可能で、Assistants、Fine-tuning、Batch、および Vision API を含めた様々なエンドポイントにおいて使用することができます。
 
 ## プロパティ
 
-| プロパティ名           | 型       | 説明                                                                                                                                                                                                                           |
-| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`             | Text    | The file identifier, which can be referenced in the API endpoints.                                                                                                                                           |
-| `bytes`          | Integer | The size of the file, in bytes.                                                                                                                                                                              |
-| `created_at`     | Integer | The Unix timestamp (in seconds) for when the file was created.                                                                                                                            |
-| `expires_at`     | Integer | The Unix timestamp (in seconds) for when the file will expire.                                                                                                                            |
-| `filename`       | Text    | The name of the file.                                                                                                                                                                                        |
-| `object`         | Text    | The object type, which is always "file".                                                                                                                                                                     |
-| `purpose`        | Text    | The intended purpose of the file. Supported values: `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results`, `vision`, and `user_data`. |
-| `status`         | Text    | **Deprecated.** The current status of the file, which can be either `uploaded`, `processed`, or `error`.                                                                                     |
-| `status_details` | Text    | **Deprecated.** For details on why a fine-tuning training file failed validation, see the error field on `fine_tuning.job`.                                                                  |
+| プロパティ名           | 型       | 説明                                                                                                                                                         |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`             | Text    | ファイルの識別子。API エンドポイント内で参照可能です。                                                                                                                              |
+| `bytes`          | Integer | ファイルのサイズ(バイト単位)。                                                                                                                        |
+| `created_at`     | Integer | ファイルが作成されたUnix タイムスタンプ(秒)。                                                                                                              |
+| `expires_at`     | Integer | ファイルが失効するUnix タイムスタンプ(秒)。                                                                                                               |
+| `filename`       | Text    | ファイル名。                                                                                                                                                     |
+| `object`         | Text    | オブジェクトタイプ。常に"file"。                                                                                                                                        |
+| `purpose`        | Text    | ファイルの目的。 サポートされる値: `assistants`、 `assistants_output`、 `batch`、 `batch_output`、 `fine-tune`、 `fine-tune-results`、 `vision`、および `user_data`。 |
+| `status`         | Text    | **廃止予定。** ファイルのカレントのステータス。`uploaded`、 `processed`、 あるいは `error` のいずれか。                                                                                     |
+| `status_details` | Text    | **廃止予定。** ファイルの微調整トレーニングファイルが検証になぜ失敗したかの詳細については、`fine_tuning.job` のerror フィールドを参照してください。                                                                   |
 
 ## 参照
 

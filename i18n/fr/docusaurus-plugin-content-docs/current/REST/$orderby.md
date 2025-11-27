@@ -9,7 +9,7 @@ Trie les données retournées par l'attribut et l'ordre de tri définis (par exe
 
 `$orderby` ordonne les entités retournées par la requête REST. Pour chaque attribut, définissez l'ordre sur `ASC` (ou `asc`) pour l'ordre croissant et sur `DESC` (`desc`) pour l'ordre décroissant. Par défaut, les données sont triées par ordre croissant. Si vous souhaitez spécifier plusieurs attributs, vous pouvez les délimiter avec une virgule, *par exemple*, `$orderby="lastName desc, firstName asc"`.
 
-## Exemple
+## Exemple 1
 
 Dans cet exemple, nous récupérons les entités et les trions en même temps :
 
@@ -47,3 +47,10 @@ L'exemple ci-dessous trie l'entité définie par l'attribut lastName dans l'ordr
 }
 ```
 
+## Exemple 2
+
+`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):
+
+```
+GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"
+```

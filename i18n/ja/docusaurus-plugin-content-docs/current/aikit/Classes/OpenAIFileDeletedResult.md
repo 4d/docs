@@ -5,7 +5,7 @@ title: OpenAIFileDeletedResult
 
 # OpenAIFileDeletedResult
 
-The `OpenAIFileDeletedResult` class contains the result of a file deletion operation.
+`OpenAIFileDeletedResult` クラスは、ファイル削除操作の結果を格納します。
 
 ## 継承元
 
@@ -13,22 +13,22 @@ The `OpenAIFileDeletedResult` class contains the result of a file deletion opera
 
 ## 計算プロパティ
 
-| プロパティ     | 型                                         | 説明                                                                                                                                                     |
-| --------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Returns the file deletion result from the API response. Returns `Null` if the response doesn't contain a valid result. |
+| プロパティ     | 型                                         | 説明                                                                 |
+| --------- | ----------------------------------------- | ------------------------------------------------------------------ |
+| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | API レスポンスからのファイル削除の結果を返します。 レスポンスに有効な結果が格納されていない場合には `Null` を返します。 |
 
 ## 使用例
 
 ```4d
-// Delete a file
+// ファイルを削除する
 var $fileId:="file-abc123"
 var $result:=$client.files.delete($fileId; Null)
 var $deletionStatus:=$result.deleted
 
 If ($deletionStatus.deleted)
-    ALERT("File "+$deletionStatus.id+" was successfully deleted")
+    ALERT("ファイルID "+$deletionStatus.id+" は正常に削除されました")
 Else 
-    ALERT("Failed to delete file")
+    ALERT("ファイルの削除に失敗しました")
 End if
 ```
 

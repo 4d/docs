@@ -939,7 +939,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
   - Constantes de type **date** : "YYYY-MM-DD" format
   - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
   - dans le cas d'une recherche avec un comparateur IN, *value* doit être une collection ou des valeurs correspondant au type de l'attribut path entre \[ ] séparés par des virgules (pour les chaînes, les caractères `"` doivent être échappés avec `\`).
-  - **objet** : seuls les objets [4D.Vector](../API/VectorClass.md) sont pris en charge, dans le contexte des **recherches de similarité vectorielle** (*attributePath* doit également contenir des objets 4D.Vector valides).
+  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of [**vector similarity queries**](#query-by-vector-similarity) (*attributePath* must also contain valid 4D.Vector objects).
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
 | Conjonction | Symbole(s)                                                       |
@@ -1203,6 +1203,20 @@ var $myVector : 4D.Vector
 $myVector := getVector //méthode pour obtenir un vecteur, par exemple à partir de 4D.AIKit
 var $comparisonVector := {vector : $myVector; metric : mk euclidean ; threshold : 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1" ; $comparisonVector)
+```
+
+The **order by** statement is supported in the query string so that entities in the resulting entity selection are sorted by similarity. Par exemple :
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
+  //default order, the first entity is the most similar
+```
+
+If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 
 Voir [plus d'exemples ci-dessous](#example-4-2) (exemples 4 et 5).

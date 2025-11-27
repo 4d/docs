@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-データクラスまたはメソッドが返すデータをフィルターします *(例*: `$filter="firstName!='' AND salary>30000"`)
+Allows to query the data in a dataclass or method (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## 説明
 
@@ -95,7 +95,7 @@ The *vectorComparison* parameter is a collection of the following elements:
 | [].metric    | Text                  | 任意。 クエリに使用する[ベクトル計算](../API/VectorClass.md#ことなるベクトル計算を理解する)。 Supported values:<li>"cosine" (default if omitted): calculates the cosine similarity between vectors.</li><li>"dot": calculates the dot similarity of vectors.</li><li>"euclidean": calculates the Euclidean distance between vectors. |
 | [].threshold | Real                  | 任意(デフォルト: 0.5)。 選択された"metric"に従って、コサイン、ドット、またはユークリッド類似度に基づいたベクトル比較をフィルタリングするために使用されるしきい値。 最適な結果を得るためには、特定の用途に最適な類似度のしきい値をきちんと選択することが強く推奨されます。                                                                                                                                                                                                                                       |
 
-Only a subset of **comparator** symbols are supported with vector comparisons. これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
+Only a subset of **comparator** symbols is supported with vector comparisons. これらの比較記号は、結果としきい値を比較するのに使用されるという点に注意してください:
 
 | 比較演算子 | 記号                          | 説明        |
 | ----- | --------------------------- | --------- |

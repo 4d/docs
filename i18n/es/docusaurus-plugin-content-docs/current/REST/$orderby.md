@@ -9,7 +9,7 @@ Ordena los datos devueltos por el atributo y el orden de clasificación definido
 
 `$orderby` ordena las entidades devueltas por la petición REST. Para cada atributo, se especifica el orden como `ASC` (o `asc`) para el orden ascendente y `DESC` (`desc`) para el orden descendente. Por defecto, los datos se clasifican en orden ascendente. By default, the data is sorted in ascending order.
 
-## Ejemplo
+## Ejemplo 1
 
 En este ejemplo, recuperamos las entidades y las ordenamos al mismo tiempo:
 
@@ -47,3 +47,10 @@ El ejemplo siguiente ordena el conjunto de entidades por el atributo lastName en
 }
 ```
 
+## Ejemplo 2
+
+`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):
+
+```
+GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"
+```

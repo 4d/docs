@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Permite consultar los datos de una clase de datos o de un método *(p. ej.*, `$filter="firstName!='' AND salary>30000"`)
+Allows to query the data in a dataclass or method (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descrição
 
@@ -96,7 +96,7 @@ The *vectorComparison* parameter is a collection of the following elements:
 | [].metric    | Text                  | Opcional. [Vector computation](../API/VectorClass.md#understanding-the-different-vector-computations) to use for the query. Supported values:<li>"cosine" (default if omitted): calculates the cosine similarity between vectors.</li><li>"dot": calculates the dot similarity of vectors.</li><li>"euclidean": calculates the Euclidean distance between vectors. |
 | [].threshold | Real                  | Optional (default: 0.5). A threshold value used to filter vector comparisons based on their cosine, dot or euclidean similarity score according to the selected "metric". It is highly recommended to choose a similarity that best fits your specific use case for optimal results.                                                                                                                                               |
 
-Only a subset of **comparator** symbols are supported with vector comparisons. Note that they compare results to the threshold value:
+Only a subset of **comparator** symbols is supported with vector comparisons. Note that they compare results to the threshold value:
 
 | Comparador           | Símbolos                    | Comentário                             |
 | -------------------- | --------------------------- | -------------------------------------- |

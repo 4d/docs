@@ -13,9 +13,9 @@ The `OpenAIFileParameters` class handles parameters for file upload operations.
 
 ## プロパティ
 
-| プロパティ名          | 型      | Required | 説明                                                                                                                                                                                               |
-| --------------- | ------ | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `expires_after` | Object | 任意       | The expiration policy for a file. By default, files with `purpose=batch` expire after 30 days and all other files are persisted until they are manually deleted. |
+| プロパティ名          | 型      | 必須 | 説明                                                                                                                                                                                               |
+| --------------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `expires_after` | Object | 任意 | The expiration policy for a file. By default, files with `purpose=batch` expire after 30 days and all other files are persisted until they are manually deleted. |
 
 ### `expires_after` Object Structure
 

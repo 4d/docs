@@ -9,7 +9,7 @@ title: $orderby
 
 `$orderby` は RESTリクエストによって返されるエンティティを並べ替えます。 並べ替えの基準とする各属性について、並べ替え順を指定します。`ASC` ( `asc`) が昇順、`DESC` (`desc`) が降順です。 デフォルトでは、データは昇順に並べ替えられます。 属性を複数指定するには、カンマ区切りにします。*例*: `$orderby="lastName desc, firstName asc"`。
 
-## 例題
+## 例題 1
 
 取得と同時にエンティティを並べ替えます:
 
@@ -47,3 +47,10 @@ title: $orderby
 }
 ```
 
+## 例題 2
+
+`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):
+
+```
+GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"
+```

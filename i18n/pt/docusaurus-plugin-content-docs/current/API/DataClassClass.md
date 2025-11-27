@@ -942,7 +942,7 @@ Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto est
   - constantes de tipo **date**: formato "YYYY-MM-DD"
   - **null** constante: usando a palavra-chave "null" irá encontrar as propriedades **null** e **undefined**.
   - no caso de uma pesquisa com um comparador IN, *valor* deve ser uma coleção, ou valores que coincidam com o tipo da rota do atributo entre \[ ] separados por vírgulas (para as strings, os caracteres `"` devem ser escapados com `\`).
-  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects).
+  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of [**vector similarity queries**](#query-by-vector-similarity) (*attributePath* must also contain valid 4D.Vector objects).
 - **logicalOperator**: usado para participar de múltiplas condições na consulta (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
 | Conjunção | Símbolos                                                                            |
@@ -1204,6 +1204,20 @@ var $myVector : 4D.Vector
 $myVector := getVector //method to get a vector, e.g. from 4D.AIKit
 var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+```
+
+The **order by** statement is supported in the query string so that entities in the resulting entity selection are sorted by similarity. Por exemplo:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
+  //default order, the first entity is the most similar
+```
+
+If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 
 See [more examples below](#example-4-2) (examples 4 and 5).

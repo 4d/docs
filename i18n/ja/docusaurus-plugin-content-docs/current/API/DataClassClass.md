@@ -945,7 +945,7 @@ attributePath|formula 比較演算子 値
   - **日付** 型の定数値: "YYYY-MM-DD" フォーマット。
   - **null** 定数値: "null" キーワードを使用した場合、**null** と **undefined** プロパティの両方が検索されます。
   - IN 記号を使用したクエリの場合、*値* はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、`"` の記号は `\` でエスケープする必要があります)。
-  - **オブジェクト**: **ベクトル類似度クエリ** のコンテキストにおいて [4D.Vector](../API/VectorClass.md) オブジェクトのみがサポートされます。(*attributePath* に有効な4D.Vector オブジェクトが格納されている必要があります)
+  - **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of [**vector similarity queries**](#query-by-vector-similarity) (*attributePath* must also contain valid 4D.Vector objects).
 - **論理演算子**: 複数の条件をクエリ内で結合させるのに使用します(任意)。 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
 
 | 結合  | 記号                                                                                  |
@@ -1209,6 +1209,20 @@ var $myVector : 4D.Vector
 $myVector := getVector //(例: 4D.AIKit などから)ベクトルを取得するメソッド
 var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+```
+
+The **order by** statement is supported in the query string so that entities in the resulting entity selection are sorted by similarity. 例:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
+  //default order, the first entity is the most similar
+```
+
+If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 
 詳細については[以下の例題](#例題-4-2)を参照してください (例題 4 と 5)。
