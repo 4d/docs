@@ -5,7 +5,7 @@ title: OpenAIFileResult
 
 # OpenAIFileResult
 
-The `OpenAIFileResult` class contains the result of a single file operation (upload or retrieve).
+`OpenAIFileResult` クラスには単一のファイル操作(アップロードあるいは取得)の結果が格納されます。
 
 ## 継承元
 
@@ -13,20 +13,20 @@ The `OpenAIFileResult` class contains the result of a single file operation (upl
 
 ## 計算プロパティ
 
-| プロパティ  | 型                           | 説明                                                                                                                                          |
-| ------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ファイル` | [OpenAIFile](OpenAIFile.md) | Returns the file object from the API response. Returns `Null` if the response doesn't contain a valid file. |
+| プロパティ  | 型                           | 説明                                                               |
+| ------ | --------------------------- | ---------------------------------------------------------------- |
+| `ファイル` | [OpenAIFile](OpenAIFile.md) | API レスポンスからのファイルオブジェクトを返します。 レスポンスに有効なファイルが格納されていない場合には `Null` 。 |
 
 ## 使用例
 
 ```4d
-// Upload a file
+// ファイルをアップロードする
 var $file:=File("/RESOURCES/training-data.jsonl")
 
 var $result:=$client.files.create($file; "user_data")
 var $uploadedFile:=$result.file
 
-// Retrieve file information
+// ファイル情報を取得
 var $retrieveResult:=$client.files.retrieve($uploadedFile.id)
 ```
 

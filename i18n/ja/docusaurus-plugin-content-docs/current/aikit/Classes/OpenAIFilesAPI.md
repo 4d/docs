@@ -5,16 +5,16 @@ title: OpenAIFilesAPI
 
 # OpenAIFilesAPI
 
-The `OpenAIFilesAPI` class provides functionalities to manage files using OpenAI's API. Files can be uploaded and used across various endpoints including [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning), [Batch](https://platform.openai.com/docs/api-reference/batch) processing, and Vision.
+`OpenAIFilesAPI` クラスはOpenAI のAPI を使用してファイルを管理する機能を提供します。 ファイルをアップロードして、 [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)、 [Batch](https://platform.openai.com/docs/api-reference/batch) 処理、そしてVision を含む様々なエンドポイントで使用することができます。
 
-> **Note:** This API is only compatible with OpenAI. Other providers listed in the [compatible providers](../compatible-openai.md) documentation do not support file management operations.
+> **注意:** この API はOpenAI としか互換性がありません。 [互換性のあるプロバイダー](../compatible-openai.md) ドキュメンテーションに記載されている他のプロバイダーでは、ファイル管理操作をサポートしていません。
 
-API Reference: <https://platform.openai.com/docs/api-reference/files>
+API 参照: <https://platform.openai.com/docs/api-reference/files>
 
-## File Size Limits
+## ファイルサイズ上限
 
-- **Individual files:** up to 512 MB per file
-- **Organization total:** up to 1 TB (cumulative size of all files uploaded by your [organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization))
+- **個別のファイル:** 1ファイルあたり 512 MB まで
+- **組織全体:** 1 TB まで([組織](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization) によってアップロードされたすべてのファイルの累計サイズ)
 
 ## 関数
 
@@ -22,18 +22,18 @@ API Reference: <https://platform.openai.com/docs/api-reference/files>
 
 **create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.OpenAIFileParameters) : cs.OpenAIFileResult
 
-Upload a file that can be used across various endpoints.
+様々なエンドポイントで使用できるファイルをアップロードします。
 
-**Endpoint:** `POST https://api.openai.com/v1/files`
+**エンドポイント:** `POST https://api.openai.com/v1/files`
 
-| 引数           | 型                                                                                                                                                | 説明                                                                                         |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `ファイル`       | [4D.File](https://developer.4d.com/docs/API/FileClass) or [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | The File or Blob object (not file name) to be uploaded. |
-| `purpose`    | Text                                                                                                                                             | **Required.** The intended purpose of the uploaded file.   |
-| `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                  | Optional parameters including expiration policy.                           |
-| 戻り値          | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | The file result                                                                            |
+| 引数           | 型                                                                                                                                                  | 説明                                                         |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| `ファイル`       | [4D.File](https://developer.4d.com/docs/API/FileClass) あるいは [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | アップロードするファイルあるいはBlob オブジェクト(ファイル名ではない)。 |
+| `purpose`    | Text                                                                                                                                               | **必須。** アップロードされたファイルの目的。                                  |
+| `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                    | 失効期限のポリシーを含めた、オブションの引数。                                    |
+| 戻り値          | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                            | ファイルの結果                                                    |
 
-**Throws:** An error if `file` is not a 4D.File or 4D.Blob, or if `purpose` is empty.
+**エラーのスロー:** `file` が4D.File あるいは 4D.Blob ではない場合、あるいは`purpose` がからの場合にはエラーがスローされます。
 
 #### Supported Purposes
 
@@ -114,7 +114,7 @@ Returns information about a specific file.
 | ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
 | `fileId`     | Text                                    | **Required.** The ID of the file to retrieve. |
 | `parameters` | [OpenAIParameters](OpenAIParameters.md) | Optional parameters for the request.                          |
-| 戻り値          | [OpenAIFileResult](OpenAIFileResult.md) | The file result                                                               |
+| 戻り値          | [OpenAIFileResult](OpenAIFileResult.md) | ファイルの結果                                                                       |
 
 **Throws:** An error if `fileId` is empty.
 

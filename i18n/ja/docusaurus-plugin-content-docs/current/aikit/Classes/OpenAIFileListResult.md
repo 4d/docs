@@ -5,7 +5,7 @@ title: OpenAIFileListResult
 
 # OpenAIFileListResult
 
-The `OpenAIFileListResult` class contains the result of listing files from the OpenAI API.
+`OpenAIFileListResult` クラスには、OpenAI API からのファイルをリストアップした結果が格納されています。
 
 ## 継承元
 
@@ -13,16 +13,16 @@ The `OpenAIFileListResult` class contains the result of listing files from the O
 
 ## 計算プロパティ
 
-| プロパティ      | 型          | 説明                                                                                                                                               |
-| ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `files`    | Collection | Returns a collection of [OpenAIFile](OpenAIFile.md) objects from the API response, or an empty collection if no files are found. |
-| `first_id` | Text       | Returns the ID of the first file in the list, or an empty string if not available.                                               |
-| `last_id`  | Text       | Returns the ID of the last file in the list, or an empty string if not available.                                                |
-| `has_more` | Boolean    | Indicates if there are more files beyond this page. `True` if there are more files to fetch, `False` otherwise.  |
+| プロパティ      | 型          | 説明                                                                                          |
+| ---------- | ---------- | ------------------------------------------------------------------------------------------- |
+| `files`    | Collection | API レスポンスからの[OpenAIFile](OpenAIFile.md) オブジェクトのコレクションを返します。ファイルが何も見つからない場合には空のコレクションが返されます。 |
+| `first_id` | Text       | リストの最初のファイルのID を返します。利用できない場合は空の文字列を返します。                                                   |
+| `last_id`  | Text       | リストの最後のファイルのID を返します。利用できない場合は空の文字列を返します。                                                   |
+| `has_more` | Boolean    | このページの後にまだファイルがあるかどうかを示します。 まだ取得するファイルがある場合には `True`、それ以外の場合には `False`。                     |
 
 ## 使用例
 
-### Basic Usage
+### 基本的な使用法
 
 ```4d
 var $params:=cs.AIKit.OpenAIFileListParameters.new()
@@ -33,14 +33,14 @@ var $result:=$client.files.list($params)
 var $files:=$result.files
 
 For each ($file; $files)
-    // Process each OpenAIFile object
+    // それぞれの OpenAIFile オブジェクトを処理
     // $file.filename -> "salesOverview.pdf"
     // $file.bytes -> 175
     // $file.purpose -> "assistants"
 End for each
 ```
 
-### Pagination Example
+### ページ分けの例
 
 ```4d
 var $params:=cs.AIKit.OpenAIFileListParameters.new()
@@ -49,14 +49,14 @@ $params.limit:=100
 var $result:=$client.files.list($params)
 var $allFiles:=$allFiles.combine($result.files)
 
-// Continue fetching if there are more files
+// まだファイルがある場合には取得を継続
 While ($result.has_more)
     $params.after:=$result.last_id
     $result:=$client.files.list($params)
     $allFiles:=$allFiles.combine($result.files)
 End while 
 
-// $allFiles now contains all files from the organization
+// $allFiles には組織からの全てのファイルが格納されています
 ```
 
 ## 参照

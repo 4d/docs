@@ -5,7 +5,7 @@ title: OpenAIFileParameters
 
 # OpenAIFileParameters
 
-The `OpenAIFileParameters` class handles parameters for file upload operations.
+`OpenAIFileParameters` クラスはファイルアップロード操作のための引数を管理します。
 
 ## 継承元
 
@@ -13,28 +13,28 @@ The `OpenAIFileParameters` class handles parameters for file upload operations.
 
 ## プロパティ
 
-| プロパティ名          | 型      | 必須 | 説明                                                                                                                                                                                               |
-| --------------- | ------ | -- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `expires_after` | Object | 任意 | The expiration policy for a file. By default, files with `purpose=batch` expire after 30 days and all other files are persisted until they are manually deleted. |
+| プロパティ名          | 型      | 必須 | 説明                                                                                   |
+| --------------- | ------ | -- | ------------------------------------------------------------------------------------ |
+| `expires_after` | Object | 任意 | ファイルの失効ポリシー。 デフォルトでは、 `purpose=batch` のファイルは30 日で失効し、それ以外の全てのファイルは手動で削除されるまでは維持されます。 |
 
-### `expires_after` Object Structure
+### `expires_after` オブジェクト構造
 
-The `expires_after` object contains the following properties:
+`expires_after` オブジェクトには以下のプロパティが格納されています:
 
-| プロパティ名    | 型       | 説明                                                                                                                                                                                                |
-| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `anchor`  | Text    | Anchor timestamp after which the expiration policy applies. Supported anchors: `created_at`.                                                      |
-| `seconds` | Integer | The number of seconds after the anchor time that the file will expire. Must be between 3600 (1 hour) and 2592000 (30 days). |
+| プロパティ名    | 型       | 説明                                                                                                            |
+| --------- | ------- | ------------------------------------------------------------------------------------------------------------- |
+| `anchor`  | Text    | 失効ポリシーが適用されるアンカータイムスタンプ。 サポートされるアンカー: `created_at` 。                                          |
+| `seconds` | Integer | アンカー時間からファイルが有効期限が切れるまでの秒数。 3600 (1 時間) から 2592000 (30 日) の間でなければなりません。 |
 
 ## 使用例
 
 ```4d
 var $params:=cs.AIKit.OpenAIFileParameters.new()
 
-// Set expiration after 7 days
+// 7 日後に執行するように設定する
 $params.expires_after:={}
 $params.expires_after.anchor:="created_at"
-$params.expires_after.seconds:=604800  // 7 days
+$params.expires_after.seconds:=604800  // 7 日相当
 ```
 
 ## 参照
