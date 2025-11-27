@@ -4,7 +4,7 @@ title: Collection
 ---
 
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type variables.
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 A collection is initialized with the [`New collection`](../commands/new-collection.md) or [`New shared collection`](../commands/new-shared-collection.md) commands.
 
