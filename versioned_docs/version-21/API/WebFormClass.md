@@ -76,7 +76,7 @@ This function does nothing if:
 
 If you [enable](#enablestate) or disable several states in the same user function, all modifications are sent at the same time to the client once the function ends.
 
-For more information on web pages states, please refer to [States section on developer.qodly.com](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+For more information on web pages states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 
 
@@ -101,7 +101,7 @@ This function does nothing if:
 
 If you enable or [disable](#disablestate) several states within the same user function, all modifications are sent at the same time to the client once the function ends.
 
-For more information on web page states, please refer to [States section on developer.qodly.com](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+For more information on web page states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 #### Example
 
