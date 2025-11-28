@@ -2022,6 +2022,8 @@ module.exports =
                 "id": "commands/theme/Web_Server_theme"
               },
               "items": [
+                "commands/web-event",
+                "commands/web-form",
                 "commands-legacy/web-get-body-part",
                 "commands-legacy/web-get-body-part-count",
                 "commands-legacy/web-get-current-session-id",
