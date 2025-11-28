@@ -4,7 +4,7 @@ title: Collection
 ---
 
 
-Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変数を扱います。
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 コレクションは次のように初期化します:
 

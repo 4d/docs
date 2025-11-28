@@ -35,16 +35,16 @@ API 参照: <https://platform.openai.com/docs/api-reference/files>
 
 **エラーのスロー:** `file` が4D.File あるいは 4D.Blob ではない場合、あるいは`purpose` がからの場合にはエラーがスローされます。
 
-#### Supported Purposes
+#### サポートされている目的
 
-- `assistants`: Used in the Assistants API (⚠️ [deprecated by OpenAI](https://platform.openai.com/docs/assistants/whats-new))
-- `batch`: Used in the [Batch API](https://platform.openai.com/docs/api-reference/batch) (expires after 30 days by default)
-- `fine-tune`: Used for [fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)
-- `vision`: Images used for vision fine-tuning
-- `user_data`: Flexible file type for any purpose
-- `evals`: Used for eval data sets
+- `assistants`: Assistants API で使用されます (⚠️ [OpenAI では非推奨](https://platform.openai.com/docs/assistants/whats-new))
+- `batch`: [Batch API](https://platform.openai.com/docs/api-reference/batch) で使用されます (デフォルトでは 30 日後に失効します)
+- `fine-tune`: [微調整](https://platform.openai.com/docs/api-reference/fine-tuning) で使用されます
+- `vision`: ビジョンの微調整に使用される画像
+- `user_data`: 任意の目的のための柔軟なファイルタイプ
+- `evals`: eval データセットに使用する
 
-#### File Format Requirements
+#### ファイルフォーマットの要件
 
 - **Fine-tuning API:** Only supports `.jsonl` files with specific required formats
 - **Batch API:** Only supports `.jsonl` files up to 200 MB with specific required format

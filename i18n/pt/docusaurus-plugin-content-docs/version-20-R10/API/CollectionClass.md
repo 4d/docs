@@ -3,7 +3,7 @@ id: CollectionClass
 title: Collection
 ---
 
-A classe Collection gerencia variáveis do tipo [Collection](Concepts/dt_collection.md).
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 Uma coleção é inicializada com os comandos [`New collection`](../commands/new-collection.md) ou [`New shared collection`](../commands/new-shared-collection.md).
 

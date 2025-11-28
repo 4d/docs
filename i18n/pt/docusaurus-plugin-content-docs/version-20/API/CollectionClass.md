@@ -4,7 +4,7 @@ title: Collection
 ---
 
 
-A classe Collection gerencia variáveis de tipo [Collection](Concepts/dt_collection.md).
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 Uma coleção se inicializa com:
 

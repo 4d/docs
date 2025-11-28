@@ -453,7 +453,7 @@ Función evento afterSave($event : Object)
 
 Este evento se activa justo después de guardar una entidad en el archivo de datos, cuando se ha modificado al menos un atributo. No se ejecuta si no se ha tocado ningún atributo en la entidad.
 
-This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. Por ejemplo, se puede utilizar para enviar un correo electrónico de confirmación después de guardar los datos. O, en caso de error al guardar los datos, puede hacer una cancelación para restaurar un estado consistente de los datos.
+Este evento es útil después de guardar datos para propagar la acción de guardar fuera de la aplicación o para ejecutar tareas de administración. Por ejemplo, se puede utilizar para enviar un correo electrónico de confirmación después de guardar los datos. O, en caso de error al guardar los datos, puede hacer una cancelación para restaurar un estado consistente de los datos.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 

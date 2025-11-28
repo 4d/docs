@@ -28,6 +28,7 @@ title: リリースノート
   - 文字列から先頭と末尾のスペースを削除する新しい "trim" 系コマンド: [`Trim`](../commands/trim.md)、[`Trim start`](../commands/trim-start.md)、および[`Trim end`](../commands/trim-end.md)。
   - [`Num`](../commands/num.md) および [`String`](../commands/string.md) コマンドは、異なる基数での変換をサポートするようにアップデートされました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21): 4D 21 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
+- [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): what's new in Qodly Studio.
 
 #### デベロッパー・プレビュー
 

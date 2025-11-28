@@ -28,6 +28,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
   - Nuevos comandos "trim" para eliminar los espacios iniciales y finales de una cadena: [`Trim`](../commands/trim.md), [`Trim start`](../commands/trim-start.md) y [`Trim end`](../commands/trim-end.md).
   - Los comandos [`Num`](../commands/num.md) y [`String`](../commands/string.md) han sido actualizados para soportar conversiones en diferentes bases (radix).
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21): lista de todos los bugs que se han corregido en 4D 21.
+- [Notas de la versión de Qodly Pro 4D\*\*](https://developer.4d.com/qodly/4DQodlyPro/release-notes): novedades de Qodly Studio.
 
 #### Vista previa para desarrolladores
 
