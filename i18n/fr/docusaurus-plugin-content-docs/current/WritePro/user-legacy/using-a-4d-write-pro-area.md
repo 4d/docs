@@ -48,6 +48,8 @@ Vous pouvez contrôler les sauts de paragraphe automatiques à l'aide des foncti
 
 Ces options peuvent être définies à l'aide du menu contextuel, ou des [attributs](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, ou des [actions standard](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled* et *avoidPageBreakInsidev*).
 
+<!-- INCLUDE lists-WP.Desc -->
+
 ## Fond 
 
 L'arrière-plan (le fond) des documents et des éléments de documents de 4D Write Pro (tableaux, paragraphes, sections, en-têtes/pieds de pages, etc.) peut être défini à l'aide des attributs suivants :

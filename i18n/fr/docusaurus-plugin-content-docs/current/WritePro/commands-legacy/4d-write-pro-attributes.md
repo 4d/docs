@@ -252,7 +252,7 @@ Les attributs des liens sont utilisés pour définir ou lire des URLs dans les p
 
 ### Listes 
 
-4D Write Pro prend en charge deux principaux types de listes :
+4D Write Pro prend en charge deux principaux [types de listes](../user-legacy/using-a-4d-write-pro-area.md#lists) :
 
 * les listes non ordonnées : listes aussi appelées "listes à puces"
 * les listes ordonnées : listes dont les "marqueurs" d'éléments sont des chiffres ou des lettres et sont incrémentés
