@@ -315,7 +315,7 @@ You refer to an expression by the data type it returns. There are several expres
 |Col[5]|Collection element|A collection element is an expression that can be of any supported type|  
 |$entitySel[0]|Entity|A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**|  
 
-### Assignable vs non-assignable expressions
+### Assignable vs non-assignable expressions {#assignable-vs-non-assignable-expressions}
 
 An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them.
 In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the left side of an assignation. For example:
