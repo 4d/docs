@@ -8,7 +8,8 @@ displayed_sidebar: docs
 
 |Release|Changes|
 |---|---|
-|20 R6|Support access to Qodly instances|
+|21|Qodly cloud discontinued|
+|20 R6|Support access to Qodly cloud instances|
 |20 R4|New *passwordAlgorithm* property|
 |18|Added|
 
@@ -30,12 +31,11 @@ displayed_sidebar: docs
 
 The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the remote datastore identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `4D.DataStoreImplementation` object associated with the *localID* local alias.
 
-The following remote datastores are supported by the command:
+Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
 
-|datastore kind|Description|
-|---|---|
-|Remote 4D application|A 4D application available as a remote datastore, i.e.:<li>its web server is launched with http and/or https enabled,</li><li>its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked).</li>A license can be required (see note)|
-|[Qodly application](https://developer.qodly.com/docs/cloud/getStarted)|A Qodly Server application that provided you with an **api endpoint** and a valid **api key** associated with a defined role. You must pass the api key in the `api-key` property of the *connectionInfo* object. You can then work with the returned datastore object, with all privileges granted to the associated role.|
+- its Web Server must be launched with http and/or https enabled,
+- its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
+- a client license must be available if required (see note).
 
 :::note
 
@@ -46,15 +46,14 @@ The following remote datastores are supported by the command:
 
 Pass in *connectionInfo* an object describing the remote datastore you want to connect to. It can contain the following properties (all properties are optional except *hostname*):
 
-|Property| Type|Remote 4D application |Qodly application|
-|---|---|---|---|
+|Property| Type|Remote 4D application |
+|---|---|---|
 |hostname|Text|Name or IP address of the remote database + ":" + port number (port number is mandatory)|API Endpoint of the Qodly cloud instance|
-|user|Text|User name|- (ignored)|
-|password|Text|User password|- (ignored)|
-|idleTimeout|Integer|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|- (ignored)|
-|tls|Boolean|True to use secured connection(1). If omitted, false by default. Using a secured connection is recommended whenever possible.|True to use secured connection. If omitted, false by default|
-|type |Text |must be "4D Server"|- (ignored)|
-|api-key|Text|- (ignored)|Api key of the Qodly cloud instance|
+|user|Text|User name|
+|password|Text|User password|
+|idleTimeout|Integer|Inactivity session timeout (in minutes), after which the session is automatically closed by 4D. If omitted, default value is 60 (1h). The value cannot be < 60 (if a lower value is passed, the timeout is set to 60). For more information, see **Closing sessions**.|
+|tls|Boolean|True to use secured connection(1). If omitted, false by default. Using a secured connection is recommended whenever possible.|
+|type |Text |must be "4D Server"|
 
 (1) If `tls` is true, the HTTPS protocol is used if:
 
@@ -117,27 +116,6 @@ Working with several remote datastores:
  $foreignStudents:=Open datastore($connectTo;"foreign")
  ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
-```
-
-## Example 4
-
-Connection to a Qodly application:
-
-```4d
-var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
-
-var $remoteDS : 4D.DataStoreImplementation
-var $data : 4D.EntitySelection
-
-$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //only for example purpose  
-  //it is recommended to store the API key in a secured place (e.g. a file)
-  //and to load it in the code
-
-$remoteDS:=Open datastore($connectTo; "remoteId")
-$data:=$remoteDS.item.all()
-
-ALERT(String($data.length)+" items have been read")
-
 ```
 
 
