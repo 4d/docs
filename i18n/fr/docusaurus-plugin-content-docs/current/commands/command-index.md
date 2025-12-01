@@ -1264,7 +1264,7 @@ title: Commandes par nom
 [`WA Evaluate JavaScript`](../commands-legacy/wa-evaluate-javascript.md)<br/>
 [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md)<br/>
 [`WA Forward URL available`](../commands-legacy/wa-forward-url-available.md)<br/>
-[`WA Get context`](../commands/wa-get-context.md) **nouveau 4D 20 R9**<br/>
+[`WA Get context`](../commands/wa-get-context.md) **new 4D 20 R9**<br/>
 [`WA Get current URL`](../commands-legacy/wa-get-current-url.md)<br/>
 [`WA GET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-get-external-links-filters.md)<br/>
 [`WA Get last filtered URL`](../commands-legacy/wa-get-last-filtered-url.md)<br/>
@@ -1280,7 +1280,7 @@ title: Commandes par nom
 [`WA OPEN WEB INSPECTOR`](../commands-legacy/wa-open-web-inspector.md)<br/>
 [`WA REFRESH CURRENT URL`](../commands-legacy/wa-refresh-current-url.md)<br/>
 [`WA Run offscreen area`](../commands-legacy/wa-run-offscreen-area.md)<br/>
-[`WA SET CONTEXT`](../commands/wa-set-context.md)  **nouveau 4D 20 R9**<br/>
+[`WA SET CONTEXT`](../commands/wa-set-context.md)  **new 4D 20 R9**<br/>
 [`WA SET EXTERNAL LINKS FILTERS`](../commands-legacy/wa-set-external-links-filters.md)<br/>
 [`WA SET PAGE CONTENT`](../commands-legacy/wa-set-page-content.md)<br/>
 [`WA SET PREFERENCE`](../commands-legacy/wa-set-preference.md)<br/>
@@ -1288,6 +1288,8 @@ title: Commandes par nom
 [`WA STOP LOADING URL`](../commands-legacy/wa-stop-loading-url.md)<br/>
 [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md)<br/>
 [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md)<br/>
+[`Web Event`](web-event.md)<br/>
+[`Web Form`](web-form.md)<br/>
 [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md)<br/>
 [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md)<br/>
 [`WEB Get current session ID`](../commands-legacy/web-get-current-session-id.md)<br/>
