@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-`WebForm` クラスには、Qodly の Webフォームコンポーネント (Webフォームの構成要素) を処理するための関数とプロパティが含まれています。 このクラスについては、[Qodly ドキュメンテーション](https://developer.qodly.com/docs/language/WebFormClass) (英語) で詳しく説明されています。
+The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. `4D.WebForm` objects are instantiated with the [`webForm`](../commands/web-form.md) command.
 
 <details><summary>履歴</summary>
 
@@ -18,14 +18,12 @@ title: WebForm
 
 |                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->  |
+| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->   |
 | [<!-- INCLUDE #WebFormClass.disableState().Syntax -->](#disablestate)<br/><!-- INCLUDE #WebFormClass.disableState().Summary --> |
 | [<!-- INCLUDE #WebFormClass.enableState().Syntax -->](#enablestate)<br/><!-- INCLUDE #WebFormClass.enableState().Summary -->    |
 | [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)<br/><!-- INCLUDE #WebFormClass.setError().Summary -->             |
 | [<!-- INCLUDE #WebFormClass.setMessage().Syntax -->](#setmessage)<br/><!-- INCLUDE #WebFormClass.setMessage().Summary -->       |
 | [<!-- INCLUDE #WebFormClass.setWarning().Syntax -->](#setwarning)<br/><!-- INCLUDE #WebFormClass.setWarning().Summary -->       |
-| [<!-- INCLUDE #_command_.Web Form.Syntax -->](#web-form)<br/><!-- INCLUDE #_command_.Web Form.Summary -->                       |
-| [<!-- INCLUDE #_command_.Web Event.Syntax -->](#web-event)<br/><!-- INCLUDE #_command_.Web Event.Summary -->                    |
 
 ### *.componentName*
 
@@ -33,9 +31,28 @@ title: WebForm
 
 #### 説明
 
-Webフォームのコンポーネント (構成要素) とは、これらの Webフォームの<!-- REF #WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
+The components of web pages are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
 
-詳細については、[Qodly ドキュメンテーションの `.componentName` の説明](https://developer.qodly.com/docs/language/WebFormClass#componentname) を参照ください。
+The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. These objects have functions that you can use to manage your components dynamically.
+
+#### 例題
+
+```4d
+shared singleton Class constructor()
+	
+	var myForm : 4D.WebForm
+	var component : 4D.WebFormItem
+	
+	myForm:=webForm  //returns the web page as an object, each property is a component
+	component:=myForm.myImage  //returns the myImage component of the web page
+
+```
+
+:::info
+
+While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. You can interact with the underlying `webForm` object's properties and functions through `myForm`. For example, you can dynamically manipulate page components or transmit messages to web pages using specialized functions like `myForm.setMessage()`.
+
+:::
 
 ### .disableState()
 
@@ -43,25 +60,24 @@ Webフォームのコンポーネント (構成要素) とは、これらの Web
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| 引数    | 型      |     | 説明                       |
-| ----- | ------ | :-: | ------------------------ |
-| state | string |  -> | Webフォーム上で無効化する state の名称 |
+| 引数    | 型      |     | 説明                                         |
+| ----- | ------ | :-: | ------------------------------------------ |
+| state | string |  -> | Name of state to disable from the web page |
 
 <!-- END REF -->
 
 #### 説明
 
-`.disableState()` 関数は、<!-- REF #WebFormClass.disableState().Summary -->カレントWeb
-フォーム上の *state* のレンダリングを無効化します<!-- END REF -->。
+The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web page<!-- END REF -->.
 
 この関数は、以下の場合には何もしません:
 
-- Webフォーム上で *state* が現在有効ではない。
-- Webフォーム上で *state* が存在しない。
+- the *state* is currently not enabled in the web page,
+- the *state* does not exist for the web page.
 
 同じユーザー関数内で複数の state を [有効化](#enablestate) または無効化した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states) を参照ください。
+For more information on web pages states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 ### .enableState()
 
@@ -69,25 +85,24 @@ Webフォームの state に関する詳細については、[developer.qodly.co
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| 引数    | 型      |     | 説明                       |
-| ----- | ------ | :-: | ------------------------ |
-| state | string |  -> | Webフォーム上で有効化する state の名称 |
+| 引数    | 型      |     | 説明                                       |
+| ----- | ------ | :-: | ---------------------------------------- |
+| state | string |  -> | Name of state to enable on the web pages |
 
 <!-- END REF -->
 
 #### 説明
 
-`.enableState()` 関数は、<!-- REF #WebFormClass.enableState().Summary -->カレントWeb
-フォーム上の *state* のレンダリングを有効化します<!-- END REF -->。
+The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web page<!-- END REF -->.
 
 この関数は、以下の場合には何もしません:
 
-- Webフォーム上で *state* がすでに有効である。
-- Webフォーム上で *state* が存在しない。
+- the *state* has already been enabled on the web page,
+- the *state* does not exist for the web page.
 
 同じユーザー関数内で複数の state を有効化または [無効化](#disablestate)した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-Webフォームの state に関する詳細については、[developer.qodly.com](https://developer.qodly.com/docs/studio/pageLoaders/states) を参照ください。
+For more information on web page states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 #### 例題
 
@@ -106,17 +121,34 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| 引数  | 型      |     | 説明                   |
-| --- | ------ | :-: | -------------------- |
-| msg | string |  -> | Webフォームに表示するエラーメッセージ |
+| 引数  | 型      |     | 説明                                       |
+| --- | ------ | :-: | ---------------------------------------- |
+| msg | string |  -> | Error message to display in the web page |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setError()` 関数は、<!-- REF #WebFormClass.setError().Summary -->*msg* をエラーメッセージとして Webフォームに送信します<!-- END REF -->。
+The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web page<!-- END REF -->.
 
-詳細については、[Qodly ドキュメンテーションの `.setError()` の説明](https://developer.qodly.com/docs/language/WebFormClass#seterror) を参照ください。
+The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "error".
+
+#### 例題
+
+```4d
+shared singleton Class constructor()
+exposed function myError()
+
+var myForm : 4D.WebForm
+myForm:=web Form
+
+myForm.setError("My error message")
+
+```
+
+If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a red *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+
+![](../assets/en/API/webformClass-pic1.png)
 
 ### .setMessage()
 
@@ -124,17 +156,34 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| 引数  | 型      |     | 説明                  |
-| --- | ------ | :-: | ------------------- |
-| msg | string |  -> | Webフォームに表示する情報メッセージ |
+| 引数  | 型      |     | 説明                                             |
+| --- | ------ | :-: | ---------------------------------------------- |
+| msg | string |  -> | Information message to display in the web page |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setMessage()` 関数は、<!-- REF #WebFormClass.setMessage().Summary -->*msg* を情報メッセージとして Webフォームに送信します<!-- END REF -->。
+The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web page<!-- END REF -->.
 
-詳細については、[Qodly ドキュメンテーションの `.setMessage()` の説明](https://developer.qodly.com/docs/language/WebFormClass#setmessage) を参照ください。
+The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "message".
+
+#### 例題
+
+```4d
+shared singleton Class constructor()
+exposed function myMessage()
+
+var myForm : 4D.WebForm
+myForm:=web Form
+
+myForm.setMessage("My information message")
+
+```
+
+If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a green *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+
+![](../assets/en/API/webformClass-pic2.png)
 
 ### .setWarning()
 
@@ -142,50 +191,37 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| 引数  | 型      |     | 説明                  |
-| --- | ------ | :-: | ------------------- |
-| msg | string |  -> | Webフォームに表示する警告メッセージ |
+| 引数  | 型      |     | 説明                                         |
+| --- | ------ | :-: | ------------------------------------------ |
+| msg | string |  -> | Warning message to display in the web page |
 
 <!-- END REF -->
 
 #### 説明
 
-`.setWarning()` 関数は、<!-- REF #WebFormClass.setWarning().Summary -->*msg* を警告メッセージとして Webフォームに送信します<!-- END REF -->。
+The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web page<!-- END REF -->.
 
-詳細については、[Qodly ドキュメンテーションの `.setWarning()` の説明](https://developer.qodly.com/docs/language/WebFormClass#setwarning) を参照ください。
+The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "warning".
 
-## Web Form
+#### 例題
 
-<!-- REF #_command_.Web Form.Syntax -->**Web Form** : 4D.WebForm<!-- END REF -->
+```4d
+shared singleton Class constructor()
+exposed function myWarning()
 
-<!-- REF #_command_.Web Form.Params -->
+var myForm : 4D.WebForm
+myForm:=web Form
 
-| 引数  | 型                          |                             | 説明                       |
-| --- | -------------------------- | :-------------------------: | ------------------------ |
-| 戻り値 | 4D.WebForm | <- | 新しい `WebForm` プロキシオブジェクト |
+myForm.setWarning("My warning message")
 
-<!-- END REF -->
+```
 
-#### 説明
+If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a yellow *toast* at the bottom of the web page and disappears automatically after 5 seconds:
 
-`Web Form` コマンドは、<!-- REF #_command_.Web Form.Summary -->Webフォームとの対話を可能にする `4D.WebForm` プロキシオブジェクトを返します<!-- END REF -->。
+![](../assets/en/API/webformClass-pic3.png)
 
-詳細については、[Qodly ドキュメンテーションの `webForm` コマンドの説明](https://developer.qodly.com/docs/language/WebFormClass#webform) を参照ください。
+## 参照
 
-## Web Event
-
-<!-- REF #_command_.Web Event.Syntax -->**Web Event** : Object<!-- END REF -->
-
-<!-- REF #_command_.Web Event.Params -->
-
-| 引数  | 型      |                             | 説明     |
-| --- | ------ | :-------------------------: | ------ |
-| 戻り値 | object | <- | object |
-
-<!-- END REF -->
-
-#### 説明
-
-`Web Event` コマンドは、<!-- REF #_command_.Web Event.Summary -->Webフォームコンポーネントにリンクして発生したイベントの情報を持つオブジェクトを返します<!-- END REF -->。
-
-詳細については、[Qodly ドキュメンテーションの `webEvent` コマンドの説明](https://developer.qodly.com/docs/language/WebFormClass#webevent) を参照ください。
+[Web Form](../commands/web-form.md)</br>
+[Web Event](../commands/web-event.md)</br>
+[WebFormItem class](../API/WebFormItemClass.md)

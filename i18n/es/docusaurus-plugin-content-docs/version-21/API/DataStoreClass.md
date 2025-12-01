@@ -1018,7 +1018,7 @@ Para crear un registro de peticiones ORDA del lado del cliente, llame a esta fun
 
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
-- Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+- Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>Si `.startRequestLog()` es llamado con un *reqNum* mientras un registro fue iniciado previamente en un archivo, el registro de archivos es detenido.
 
 - Si no ha pasado ningún parámetro, el registro se inicia en la memoria. Si `.startRequestLog()` fue llamado previamente con un *reqNum* (antes de una `.stopRequestLog()`), los datos del registro se apilan en memoria hasta la próxima vez que se vacíe el registro o se llame a `.stopRequestLog()`.
 

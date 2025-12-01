@@ -3,9 +3,13 @@ id: WebFormItemClass
 title: WebFormItem
 ---
 
-Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormItemClass.md) devuelto por el comando [`Web Form`](WebFormClass.md#web-form).
+The `4D.WebFormItem` class allows you to handle the behavior of your Qodly webform components.
 
-La clase `WebFormItem` se detalla en la [documentación Qodly](https://developer.qodly.com/docs/language/WebFormItemClass).
+Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormClass.md) devuelto por el comando [`Web Form`](../commands/web-form.md).
+
+When you call the [`Web Form`](../commands/web-form.md) command, the returned `4D.WebForm` proxy object holds as many `4D.WebFormItems` as there are components with [**server-side references**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) in your webform.
+
+For example, `WebFormObject.myImage` refers to the image component with `myImage` as server reference.
 
 <details><summary>Historia</summary>
 
@@ -24,42 +28,6 @@ La clase `WebFormItem` se detalla en la [documentación Qodly](https://developer
 | [<!-- INCLUDE #WebFormItemClass.removeCSSClass().Syntax -->](#removecssclass)<br/><!-- INCLUDE #WebFormItemClass.removeCSSClass().Summary --> |
 | [<!-- INCLUDE #WebFormItemClass.show().Syntax -->](#show)<br/><!-- INCLUDE #WebFormItemClass.show().Summary -->                               |
 
-### .hide()
-
-<!-- REF #WebFormItemClass.hide().Syntax -->**.hide**()<!-- END REF -->
-
-<!-- REF #WebFormItemClass.hide().Params -->
-
-| Parámetros | Tipo |     | Descripción                  |
-| ---------- | ---- | :-: | ---------------------------- |
-|            |      |     | No requiere ningún parámetro |
-
-<!-- END REF -->
-
-#### Descripción
-
-La función `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->oculta el componente<!-- END REF -->.
-
-Para más información, consulte la [descripción de `.hide()` en la documentación Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#hide).
-
-### .show()
-
-<!-- REF #WebFormItemClass.show().Syntax -->**.show**()<!-- END REF -->
-
-<!-- REF #WebFormItemClass.show().Params -->
-
-| Parámetros | Tipo |     | Descripción                  |
-| ---------- | ---- | :-: | ---------------------------- |
-|            |      |     | No requiere ningún parámetro |
-
-<!-- END REF -->
-
-#### Descripción
-
-La función `.show()` <!-- REF #WebFormItemClass.show().Summary -->hace visible el componente<!-- END REF -->.
-
-Para más información, consulte la [descripción de `.show()` en la documentación Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#show).
-
 ### .addCSSClass()
 
 <!-- REF #WebFormItemClass.addCSSClass().Syntax -->**.addCSSClass**(*className* : string)<!-- END REF -->
@@ -76,7 +44,41 @@ Para más información, consulte la [descripción de `.show()` en la documentaci
 
 La función `.addCSSClass` <!-- REF #WebFormItemClass.addCSSClass().Summary -->añade la clase especificada en *className* al componente<!-- END REF -->.
 
-Para más información, consulte la [descripción de `.addCSSClass` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#addcssclass).
+### .hide()
+
+<!-- REF #WebFormItemClass.hide().Syntax -->**.hide**()<!-- END REF -->
+
+<!-- REF #WebFormItemClass.hide().Params -->
+
+| Parámetros | Tipo |     | Descripción                  |
+| ---------- | ---- | :-: | ---------------------------- |
+|            |      |     | No requiere ningún parámetro |
+
+<!-- END REF -->
+
+#### Descripción
+
+La función `.hide()` <!-- REF #WebFormItemClass.hide().Summary -->oculta el componente<!-- END REF -->.
+
+#### Ejemplo
+
+To call a function that hides an image when the user clicks a button:
+
+1. Create an [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function inside a shared singleton class named `isHidden` that contains the following code:
+
+```4d
+
+shared singleton Class constructor()
+exposed Function isHidden()
+	var myComponent : 4D.WebFormItem
+	
+	myComponent:=Web Form.myImage
+	myComponent.hide()  // Hide the component that has "myImage" as server reference 
+```
+
+2. In Qodly Studio: Select the image component on the canvas, and enter a server-side reference in the Properties Panel > Server Side, for example "myImage".
+3. Select the Button component and add an `onclick` event to it.
+4. Attach the `isHidden` function to the event.
 
 ### .removeCSSClass()
 
@@ -94,7 +96,27 @@ Para más información, consulte la [descripción de `.addCSSClass` en la docume
 
 La función `.removeCSSClass()` <!-- REF #WebFormItemClass.removeCSSClass().Summary -->elimina la clase especificada en *className* del componente<!-- END REF -->.
 
-Para más información, consulte la [descripción de `.removeCSSClass()` en la documentación de Qodly](https://developer.qodly.com/docs/language/WebFormItemClass#removecssclass).
+### .show()
+
+<!-- REF #WebFormItemClass.show().Syntax -->**.show**()<!-- END REF -->
+
+<!-- REF #WebFormItemClass.show().Params -->
+
+| Parámetros | Tipo |     | Descripción                  |
+| ---------- | ---- | :-: | ---------------------------- |
+|            |      |     | No requiere ningún parámetro |
+
+<!-- END REF -->
+
+#### Descripción
+
+The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.If the component was already visible, the function does nothing.
+
+## Ver también
+
+[Web Form](../commands/web-form.md)</br>
+[Web Event](../commands/web-event.md)</br>
+[WebForm class](WebFormClass.md)
 
 
 
