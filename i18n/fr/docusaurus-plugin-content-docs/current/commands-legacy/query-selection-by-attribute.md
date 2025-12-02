@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | * | &#8594;  | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| opConj | Operator | &#8594;  | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
 | champObjet | Field | &#8594;  | Champ objet dont les attributs sont à utiliser pour la recherche |
 | cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut |
-| opRecherche | *, Text | &#8594;  | Opérateur de recherche (comparateur) |
+| opRecherche | Text, Operator | &#8594;  | Opérateur de recherche (comparateur) |
 | valeur | Text, Number, Date, Time | &#8594;  | Valeur à comparer |
 | * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
 
@@ -37,9 +37,9 @@ La commande **QUERY SELECTION BY ATTRIBUTE** est utile lorsqu'une recherche ne p
 Vous souhaitez trouver les personnes âgées entre 20 et 30 ans parmi les enregistrements sélectionnés par l'utilisateur :
 
 ```4d
- USE SET("UserSet") // crée une nouvelle sélection courante
- QUERY SELECTION BY ATTRIBUTE([People];[People]OB_Info;"age";>;20;*)
- QUERY SELECTION BY ATTRIBUTE([People];&;[People]OB_Info;"age";<;30) //déclenche la recherche
+ USE SET("UserSet") // crée une nouvelle sélection courante
+ QUERY SELECTION BY ATTRIBUTE([People];[People]OB_Info;"age";>;20;*)
+ QUERY SELECTION BY ATTRIBUTE([People];&;[People]OB_Info;"age";<;30) //déclenche la recherche
 ```
 
 ## Voir aussi 
