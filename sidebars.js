@@ -3353,6 +3353,7 @@ module.exports =
                 "aikit/Classes/openaiembeddingsresult",
                 "aikit/Classes/openaierror",
                 "aikit/Classes/openaifile",
+                "aikit/Classes/openaifiledeleted",
                 "aikit/Classes/openaifiledeletedresult",
                 "aikit/Classes/openaifilelistparameters",
                 "aikit/Classes/openaifilelistresult",

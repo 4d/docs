@@ -79,9 +79,9 @@ The modulo operator % returns significant values with numbers that are in the Lo
 
 :::
 
-### Longint division 
+### Integer division 
 
-The longint division operator \ returns significant values with integer numbers only.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
 
 ### Real comparison
 
