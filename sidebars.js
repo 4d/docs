@@ -49,6 +49,7 @@ module.exports =
             "Project/code-overview",
             "code-editor/write-class-method",
             "Project/project-method-properties",
+            "Project/search-replace",
             "Project/documentation"
           ]
         },
