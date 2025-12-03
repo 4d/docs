@@ -264,7 +264,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Colección<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 

@@ -13,9 +13,9 @@ La clase `OpenAIFileResult` contiene el resultado de una única operación de ar
 
 ## Propiedades calculadas
 
-| Propiedad | Tipo                        | Descripción                                                                                                                                           |
-| --------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `file`    | [OpenAIFile](OpenAIFile.md) | Devuelve el objeto de archivo de la respuesta de la API. Returns `Null` if the response doesn't contain a valid file. |
+| Propiedad | Tipo                        | Descripción                                                                                                                                             |
+| --------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `file`    | [OpenAIFile](OpenAIFile.md) | Devuelve el objeto de archivo de la respuesta de la API. Devuelve `Null` si la respuesta no contiene un archivo válido. |
 
 ## Ejemplo de Uso
 

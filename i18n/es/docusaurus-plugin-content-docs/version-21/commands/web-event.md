@@ -8,9 +8,9 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Event.Params -->
 
-| Parámetros | Tipo   |                             | Descripción                        |
-| ---------- | ------ | :-------------------------: | ---------------------------------- |
-| Resultado  | Object | &#8592; | Information on the triggered event |
+| Parámetros | Tipo   |                             | Descripción                          |
+| ---------- | ------ | :-------------------------: | ------------------------------------ |
+| Resultado  | Object | &#8592; | Información sobre el evento activado |
 
 <!-- END REF -->
 
@@ -28,9 +28,9 @@ El objeto devuelto contiene las siguientes propiedades:
 | --------- | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | caller    |       | string | [Server-side reference](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) of the component triggering the event                                                                                                  |
 | eventType |       | string | Type of event:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - triggered when the `Page` loads</li> |
-| data      |       | object | Additional information depending on the involved component                                                                                                                                                                                                    |
+| data      |       | object | Información adicional en función del componente implicado                                                                                                                                                                                                     |
 |           | index | number | <li>Tabs component: index of the tab (indexing starts at 0)</li><li>Data Table component: column number</li>                                                                                                                                                  |
-|           | row   | number | Data Table component: row number                                                                                                                                                                                                              |
+|           | row   | number | Componente de la tabla de datos: número de línea                                                                                                                                                                                              |
 |           | name  | string | Data Table component: qodlysource name of the column (e.g. "firstname", "address.city")                                                                                    |
 
 #### Ejemplo
@@ -43,11 +43,11 @@ This is done by attaching `onmouseenter` and `onmouseleave` events to a **Text i
 
 ![](../assets/en/commands/web-event2.png)
 
-In this scenario:
+En este escenario:
 
 - The Text input component has `orderNumber` as Server side reference.
   ![](../assets/en/commands/web-event3.png)
-- The Text component has `helpOn_orderNumber` as Server side reference.
+- El componente Texto tiene `helpOn_orderNumber` como referencia del lado Servidor.
   ![](../assets/en/commands/web-event4.png)
 - The [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function `help()` is attached to both the `onmouseenter` and `onmouseleave` events and contains the following code:
 

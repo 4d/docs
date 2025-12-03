@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. `4D.WebForm` objects are instantiated with the [`webForm`](../commands/web-form.md) command.
+The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. Los objetos `4D.WebForm` se instancian con el comando [`webForm`](../commands/web-form.md).
 
 <details><summary>Historia</summary>
 
@@ -33,7 +33,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 The components of web pages are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
 
-The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. These objects have functions that you can use to manage your components dynamically.
+The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. Estos objetos tienen funciones que puede utilizar para gestionar sus componentes de forma dinámica.
 
 #### Ejemplo
 
@@ -60,9 +60,9 @@ While `myForm` may not display typical object properties when examined in the de
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                |
-| ---------- | ------ | :-: | ------------------------------------------ |
-| state      | string |  -> | Name of state to disable from the web page |
+| Parámetros | Tipo   |     | Descripción                                     |
+| ---------- | ------ | :-: | ----------------------------------------------- |
+| state      | string |  -> | Nombre del estado a desactivar de la página web |
 
 <!-- END REF -->
 
@@ -73,7 +73,7 @@ The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->
 Esta función no hace nada si:
 
 - the *state* is currently not enabled in the web page,
-- the *state* does not exist for the web page.
+- el *estado* no existe para la página web.
 
 Si [activa](#enablestate) o desactiva varios estados en la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez finalizada la función.
 
@@ -98,7 +98,7 @@ The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->en
 Esta función no hace nada si:
 
 - the *state* has already been enabled on the web page,
-- the *state* does not exist for the web page.
+- el *estado* no existe para la página web.
 
 Si activa o [desactiva](#disablestate) varios estados dentro de la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez que la función termina.
 
@@ -156,9 +156,9 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                    |
-| ---------- | ------ | :-: | ---------------------------------------------- |
-| msg        | string |  -> | Information message to display in the web page |
+| Parámetros | Tipo   |     | Descripción                                       |
+| ---------- | ------ | :-: | ------------------------------------------------- |
+| msg        | string |  -> | Mensaje de información a mostrar en la página web |
 
 <!-- END REF -->
 
@@ -191,9 +191,9 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                |
-| ---------- | ------ | :-: | ------------------------------------------ |
-| msg        | string |  -> | Warning message to display in the web page |
+| Parámetros | Tipo   |     | Descripción                                          |
+| ---------- | ------ | :-: | ---------------------------------------------------- |
+| msg        | string |  -> | Mensaje de advertencia para mostrar en la página web |
 
 <!-- END REF -->
 

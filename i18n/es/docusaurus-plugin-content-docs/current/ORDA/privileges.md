@@ -30,14 +30,14 @@ Puede asignar acciones de permiso específicas a los siguientes recursos en su p
 - el [datastore](../ORDA/dsMapping.md#datastore)
 - las [clases de datos](../ORDA/dsMapping.md#dataclass)
 - [attributes](../ORDA/dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1))
-- functions of the [data model classes](../ORDA/ordaClasses.md)
+- funciones de las [clases del modelo de datos](../ORDA/ordaClasses.md)
 - funciones [singleton](../REST/$singleton.md)
 
 Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma en que se acceda), 4D verifica que la sesión tenga los permisos apropiados y rechaza el acceso si no está autorizado.
 
 ## Permisos
 
-A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Los permisos se definen para el proyecto en el archivo [`roles.json`](#rolesjson-file). Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
+Un permiso es la capacidad de realizar una acción sobre un recurso. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Los permisos se definen para el proyecto en el archivo [`roles.json`](#rolesjson-file). Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
 
 When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
 
@@ -194,7 +194,7 @@ El archivo `roles.json` describe todos los parámetros de seguridad web del proy
 
 :::
 
-### Default File Location and Content
+### Ubicación y contenido del archivo por defecto
 
 Cuando se crea un nuevo proyecto, se genera un archivo `roles.json` por defecto en:
 
@@ -244,7 +244,7 @@ In Qodly Studio for 4D, the login mode can be set using the [**Force login** opt
 
 :::
 
-## Restriction Modes
+## Modos de restricción
 
 The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permission):
 
@@ -260,7 +260,7 @@ The `restrictedByDefault` property configures how every [resource](#resources) a
 
 ### Configuración recomendada
 
-Depending on your environment, the recommended settings are:
+Dependiendo de su entorno, los parámetros recomendados son:
 
 - **Producción**: defina tanto `restrictedByDefault` como [`forceLogin`](../REST/authUsers.md#force-login-mode) como **true**. Esto garantiza la máxima seguridad al requerir autenticación de usuario y permisos explícitamente definidos para el acceso a recursos.
 - **Desarrollo**: defina `restrictedByDefault` y [`forceLogin`](../REST/authUsers.md#force-login-mode) como **false**. Esto permite un acceso más fácil durante el desarrollo y la depuración, con la posibilidad de aplicar gradualmente restricciones.

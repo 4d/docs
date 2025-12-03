@@ -1741,13 +1741,13 @@ En este ejemplo, el campo objeto "marks" de la dataClass **Students** contiene l
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                              |
-| ----------- | ----------------------------------------------------------- |
-| 21 R2       | Support of order by with 4D.Vector searches |
-| 21          | Soporte de los objetos 4D.Vector            |
-| 17 R6       | Soporte de los parámetros Formula                           |
-| 17 R5       | Soporte de los marcadores para los valores                  |
-| 17          | Añadidos                                                    |
+| Lanzamiento | Modificaciones                                                       |
+| ----------- | -------------------------------------------------------------------- |
+| 21 R2       | Gestión de ordenación en las búsquedas con 4D.Vector |
+| 21          | Soporte de los objetos 4D.Vector                     |
+| 17 R6       | Soporte de los parámetros Formula                                    |
+| 17 R5       | Soporte de los marcadores para los valores                           |
+| 17          | Añadidos                                                             |
 
 </details>
 

@@ -45,4 +45,4 @@ La clase `OpenAIError` está diseñada para manejar errores devueltos por la API
 | `isNotFoundError`            | Boolean | Indica si el error es un error 404 Not Found.                                     |
 | `isUnprocessableEntityError` | Boolean | Indica si el error es un error de entidad no procesable (422). |
 | `isRateLimitError`           | Boolean | Indica si el error es un error de límite de velocidad 429.                        |
-| `isInternalServerError`      | Boolean | Indicates if the error is a 500 or higher Internal Server error.                  |
+| `isInternalServerError`      | Boolean | Indica si el error es un error de servidor interno de tipo 500 o superior.        |

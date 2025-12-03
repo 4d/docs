@@ -5,21 +5,21 @@ title: OpenAIFile
 
 # OpenAIFile
 
-The `OpenAIFile` class represents a file object in the OpenAI API. Files can be uploaded and used across various endpoints including Assistants, Fine-tuning, Batch, and Vision APIs.
+La classe `OpenAIFile` représente un objet fichier dans l'API OpenAI. Les fichiers peuvent être téléversés et utilisés à partir de différents points de terminaison, notamment les APIs Assistants, Fine-tuning, Batch et Vision.
 
 ## Propriétés
 
-| Nom de propriété | Type    | Description                                                                                                                                                                                                                  |
-| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`             | Text    | The file identifier, which can be referenced in the API endpoints.                                                                                                                                           |
-| `bytes`          | Integer | The size of the file, in bytes.                                                                                                                                                                              |
-| `created_at`     | Integer | The Unix timestamp (in seconds) for when the file was created.                                                                                                                            |
-| `expires_at`     | Integer | The Unix timestamp (in seconds) for when the file will expire.                                                                                                                            |
-| `filename`       | Text    | The name of the file.                                                                                                                                                                                        |
-| `object`         | Text    | The object type, which is always "file".                                                                                                                                                                     |
-| `purpose`        | Text    | The intended purpose of the file. Supported values: `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results`, `vision`, and `user_data`. |
-| `status`         | Text    | **Deprecated.** The current status of the file, which can be either `uploaded`, `processed`, or `error`.                                                                                     |
-| `status_details` | Text    | **Deprecated.** For details on why a fine-tuning training file failed validation, see the error field on `fine_tuning.job`.                                                                  |
+| Nom de propriété | Type    | Description                                                                                                                                                                                                                        |
+| ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`             | Text    | L'identifiant du fichier, qui peut être référencé dans les points de terminaison de l'API.                                                                                                                         |
+| `bytes`          | Integer | La taille du fichier en octets.                                                                                                                                                                                    |
+| `created_at`     | Integer | L'horodatage Unix (en secondes) de la création du fichier.                                                                                                                                      |
+| `expires_at`     | Integer | L'horodatage Unix (en secondes) de la date d'expiration du fichier.                                                                                                                             |
+| `filename`       | Text    | Le nom du fichier.                                                                                                                                                                                                 |
+| `object`         | Text    | Le type d'objet, qui est toujours "file".                                                                                                                                                                          |
+| `purpose`        | Text    | L'objectif visé par le fichier. Valeurs prises en charge : `assistants`, `assistants_output`, `batch`, `batch_output`, `fine-tune`, `fine-tune-results`, `vision`, et `user_data`. |
+| `status`         | Text    | **Obsolète.** Le statut actuel du fichier, qui peut être `uploaded`, `processed`, ou `error`.                                                                                                      |
+| `status_details` | Text    | **Obsolète.** Pour des détails sur la raison de l'échec de la validation d'un fichier d'entraînement fine-tuning, voir le champ d'erreur sur `fine_tuning.job`.                                    |
 
 ## Voir également
 

@@ -5,7 +5,7 @@ title: OpenAIFileDeletedResult
 
 # OpenAIFileDeletedResult
 
-The `OpenAIFileDeletedResult` class contains the result of a file deletion operation.
+La classe `OpenAIFileDeletedResult` contient le résultat d'une opération de suppression de fichier.
 
 ## Hérite de
 
@@ -13,15 +13,15 @@ The `OpenAIFileDeletedResult` class contains the result of a file deletion opera
 
 ## Propriétés calculées
 
-| Propriété | Type                                      | Description                                                                                                                                            |
-| --------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Returns the file deletion result from the API response. Returns `Null` if the response doesn't contain a valid result. |
+| Propriété | Type                                      | Description                                                                                                                                                                        |
+| --------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Renvoie le résultat de la suppression du fichier à partir de la réponse de l'API. Renvoie `Null` si la réponse ne contient pas de résultat valide. |
 
 ## Exemple d'utilisation
 
 ```4d
-// Delete a file
-var $fileId:="file-abc123"
+// Supprimer un fichier
+var $fileId:= "file-abc123"
 var $result:=$client.files.delete($fileId; Null)
 var $deletionStatus:=$result.deleted
 

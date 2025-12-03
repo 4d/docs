@@ -46,7 +46,7 @@ La estructura del objeto `rateLimit` es la siguiente:
 
 ### `throw()`
 
-Lanza el primer error de la colección `errors`. This function is useful for propagating errors up the call stack.
+Lanza el primer error de la colección `errors`. Esta función es útil para propagar los errores por la pila de llamadas.
 
 ## Clases heredadas
 

@@ -964,7 +964,7 @@ exposed Function <functionName>
 
 :::note
 
-The `exposed` keyword can only be used with the objects decribed above. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
+La palabra clave `exposed` solo puede utilizarse con los objetos descritos anteriormente. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
 
 :::
 

@@ -36,9 +36,9 @@ Crear una instancia de la clase cliente OpenAI.
 #### Llave API
 
 ```4d
-// as text
+// como texto
 var $client:=cs.AIKit.OpenAI.new("your api key")
-// as object
+// como objeto
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 ```
 
@@ -58,7 +58,7 @@ $client.baseURL:="https://server.ai"
 
 ## Recursos API
 
-La API ofrece acceso a múltiples recursos que permiten una interacción perfecta con los servicios de OpenAI. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
+La API ofrece acceso a múltiples recursos que permiten una interacción perfecta con los servicios de OpenAI. Cada recurso está encapsulado en una clase API específica, que ofrece una forma estructurada e intuitiva de interactuar con las distintas funcionalidades.
 
 | Nombre de la propiedad | Tipo                                            | Descripción                                      |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------ |

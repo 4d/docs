@@ -9,9 +9,9 @@ The `OpenAIFilesAPI` class provides functionalities to manage files using OpenAI
 
 > **Nota:** esta API sólo es compatible con OpenAI. Other providers listed in the [compatible providers](../compatible-openai.md) documentation do not support file management operations.
 
-API Reference: <https://platform.openai.com/docs/api-reference/files>
+Referencia API: <https://platform.openai.com/docs/api-reference/files>
 
-## File Size Limits
+## Límites de tamaño de los archivos
 
 - **Archivos individuales:** hasta 512 MB por archivo
 - **Organization total:** up to 1 TB (cumulative size of all files uploaded by your [organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization))
@@ -29,20 +29,20 @@ Upload a file that can be used across various endpoints.
 | Parámetros   | Tipo                                                                                                                                             | Descripción                                                                                |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
 | `file`       | [4D.File](https://developer.4d.com/docs/API/FileClass) or [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | The File or Blob object (not file name) to be uploaded. |
-| `purpose`    | Text                                                                                                                                             | **Required.** The intended purpose of the uploaded file.   |
+| `purpose`    | Text                                                                                                                                             | **Requerido.** el propósito previsto del archivo subido.   |
 | `parámetros` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                  | Parámetros opcionales, incluida la política de expiración.                 |
-| Resultado    | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | The file result                                                                            |
+| Resultado    | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | El resultado del archivo                                                                   |
 
 **Throws:** An error if `file` is not a 4D.File or 4D.Blob, or if `purpose` is empty.
 
-#### Supported Purposes
+#### Propósitos soportados
 
 - `assistants`: Used in the Assistants API (⚠️ [deprecated by OpenAI](https://platform.openai.com/docs/assistants/whats-new))
 - `batch`: Used in the [Batch API](https://platform.openai.com/docs/api-reference/batch) (expires after 30 days by default)
-- `fine-tune`: Used for [fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)
+- `fine-tune`: utilizado para [ajuste fino](https://platform.openai.com/docs/api-reference/fine-tuning)
 - `vision`: imágenes utilizadas para afinar la visión
 - `user_data`: tipo de archivo flexible para cualquier propósito
-- `evals`: Used for eval data sets
+- `evals`: se utiliza para evaluar conjuntos de datos
 
 #### File Format Requirements
 
@@ -51,7 +51,7 @@ Upload a file that can be used across various endpoints.
 - **API de Asistentes:** soporta tipos de archivo específicos (ver Guía de herramientas de asistentes)
 - **API de finalización de chat:** sólo se admiten archivos PDF
 
-#### Sychronous example
+#### Ejemplo sincrónico
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -73,7 +73,7 @@ End if
 
 #### Ejemplo asincrónico
 
-Since file uploads can be long operations (especially for large files up to 512 MB), it's recommended to use asynchronous calls to avoid blocking your application. See [Asynchronous Call](../asynchronous-call.md) for more details.
+Since file uploads can be long operations (especially for large files up to 512 MB), it's recommended to use asynchronous calls to avoid blocking your application. Ver [llamada asincrónica](../asynchronous-call.md) para más detalles.
 
 ```4d
 var $file:=File("/RESOURCES/large-training-data.jsonl")
@@ -114,7 +114,7 @@ Devuelve información sobre un archivo específico.
 | ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
 | `fileId`     | Text                                    | **Requerido.** El ID del archivo a recuperar. |
 | `parámetros` | [OpenAIParameters](OpenAIParameters.md) | Parámetros opcionales para la solicitud.                      |
-| Resultado    | [OpenAIFileResult](OpenAIFileResult.md) | The file result                                                               |
+| Resultado    | [OpenAIFileResult](OpenAIFileResult.md) | El resultado del archivo                                                      |
 
 **Throws:** An error if `fileId` is empty.
 
@@ -135,7 +135,7 @@ End if
 
 **list**(*parameters* : cs.OpenAIFileListParameters) : cs.OpenAIFileListResult
 
-Returns a list of files that belong to the user's organization.
+Devuelve una lista de archivos que pertenecen a la organización del usuario.
 
 **Endpoint:** `GET https://api.openai.com/v1/files`
 

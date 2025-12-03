@@ -48,7 +48,7 @@ Añade una referencia de archivo al contenido del mensaje. Si el contenido es ac
 
 ## Ejemplo de Uso
 
-### Basic Text Message
+### Mensaje de texto básico
 
 ```4d
 // Create an instance of OpenAIMessage

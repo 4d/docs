@@ -46,12 +46,12 @@ API 参照: <https://platform.openai.com/docs/api-reference/files>
 
 #### ファイルフォーマットの要件
 
-- **Fine-tuning API:** Only supports `.jsonl` files with specific required formats
-- **Batch API:** Only supports `.jsonl` files up to 200 MB with specific required format
-- **Assistants API:** Supports specific file types (see Assistants Tools guide)
-- **Chat Completions API:** PDFs are only supported
+- **微調整API:** 特定のフォーマットを持つ `.jsonl` ファイルのみがサポートされます
+- **Batch API:** 特定のフォーマットを持つ `.jsonl` ファイルで 200 MB までのものがサポートされます
+- **Assistants API:** 特定のファイルタイプをサポートします(Assistants ツールガイドを参照してください)
+- **チャット補完 API:** PDF のみがサポートされます
 
-#### Sychronous example
+#### 同期の例
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -59,7 +59,7 @@ var $file:=File("/RESOURCES/training-data.jsonl")
 var $params:=cs.AIKit.OpenAIFileParameters.new()
 $params.expires_after:={}
 $params.expires_after.anchor:="created_at"
-$params.expires_after.seconds:=2592000  // 30 days
+$params.expires_after.seconds:=2592000  // 30 日
 
 var $result:=$client.files.create($file; "fine-tune"; $params)
 
@@ -73,7 +73,7 @@ End if
 
 #### 非同期の例
 
-Since file uploads can be long operations (especially for large files up to 512 MB), it's recommended to use asynchronous calls to avoid blocking your application. See [Asynchronous Call](../asynchronous-call.md) for more details.
+ファイルアップロードは(特に512 MBまでの大きなファイルの場合)長時間のオペレーションとなり得るため、アプリケーションをブロックするのを避けるために非同期の呼び出しを使用することが推奨されます。 詳細については[非同期呼び出し](../非同期呼び出し.md) を参照してください。
 
 ```4d
 var $file:=File("/RESOURCES/large-training-data.jsonl")
@@ -81,11 +81,11 @@ var $file:=File("/RESOURCES/large-training-data.jsonl")
 var $params:=cs.AIKit.OpenAIFileParameters.new()
 $params.onTerminate:=Formula(MyFileUploadCallback($1))
 
-// This call returns immediately without blocking
+// このコードであればブロックすることなく即座に結果を返す
 $client.files.create($file; "fine-tune"; $params)
 ```
 
-The callback function receives an [OpenAIFileResult](OpenAIFileResult.md):
+コールバック関数は[OpenAIFileResult](OpenAIFileResult.md) を受け取ります:
 
 ```4d
 // MyFileUploadCallback
@@ -95,7 +95,7 @@ If ($result.success)
     var $uploadedFile:=$result.file
     
     ALERT("File uploaded successfully: "+$uploadedFile.filename)
-    // Store the file ID for later use
+    // ファイル ID を後で使うために保存しておく
     Form.uploadedFileId:=$uploadedFile.id
 Else
     ALERT("Upload failed: "+Formula(JSON Stringify($result.errors)))
@@ -106,17 +106,17 @@ End if
 
 **retrieve**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileResult
 
-Returns information about a specific file.
+特定のファイルに関する情報を返します。
 
-**Endpoint:** `GET https://api.openai.com/v1/files/{file_id}`
+**エンドポイント:** `GET https://api.openai.com/v1/files/{file_id}`
 
-| 引数           | 型                                       | 説明                                                                            |
-| ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
-| `fileId`     | Text                                    | **Required.** The ID of the file to retrieve. |
-| `parameters` | [OpenAIParameters](OpenAIParameters.md) | Optional parameters for the request.                          |
-| 戻り値          | [OpenAIFileResult](OpenAIFileResult.md) | ファイルの結果                                                                       |
+| 引数           | 型                                       | 説明                     |
+| ------------ | --------------------------------------- | ---------------------- |
+| `fileId`     | Text                                    | **必須。** 取得するファイルの ID 。 |
+| `parameters` | [OpenAIParameters](OpenAIParameters.md) | リクエスト用のオプションの引数。       |
+| 戻り値          | [OpenAIFileResult](OpenAIFileResult.md) | ファイルの結果                |
 
-**Throws:** An error if `fileId` is empty.
+**スロー:** `fileId` が空の場合にはエラーをスローします。
 
 #### 例題
 
@@ -135,14 +135,14 @@ End if
 
 **list**(*parameters* : cs.OpenAIFileListParameters) : cs.OpenAIFileListResult
 
-Returns a list of files that belong to the user's organization.
+ユーザーの組織に属するファイルの一覧を返します。
 
-**Endpoint:** `GET https://api.openai.com/v1/files`
+**エンドポイント:** `GET https://api.openai.com/v1/files`
 
-| 引数           | 型                                                       | 説明                                                                |
-| ------------ | ------------------------------------------------------- | ----------------------------------------------------------------- |
-| `parameters` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Optional parameters for filtering and pagination. |
-| 戻り値          | [OpenAIFileListResult](OpenAIFileListResult.md)         | The file list result                                              |
+| 引数           | 型                                                       | 説明                            |
+| ------------ | ------------------------------------------------------- | ----------------------------- |
+| `parameters` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | フィルタリングとページネーションに関するオプションの引数。 |
+| 戻り値          | [OpenAIFileListResult](OpenAIFileListResult.md)         | ファイルリストの結果                    |
 
 #### 例題
 
@@ -168,17 +168,17 @@ End if
 
 **delete**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileDeletedResult
 
-Delete a file.
+ファイルを削除します。
 
-**Endpoint:** `DELETE https://api.openai.com/v1/files/{file_id}`
+**エンドポイント:** `DELETE https://api.openai.com/v1/files/{file_id}`
 
-| 引数           | 型                                                     | 説明                                                                          |
-| ------------ | ----------------------------------------------------- | --------------------------------------------------------------------------- |
-| `fileId`     | Text                                                  | **Required.** The ID of the file to delete. |
-| `parameters` | [OpenAIParameters](OpenAIParameters.md)               | Optional parameters for the request.                        |
-| 戻り値          | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | The file deletion result                                                    |
+| 引数           | 型                                                     | 説明                     |
+| ------------ | ----------------------------------------------------- | ---------------------- |
+| `fileId`     | Text                                                  | **必須。** 削除するファイルの ID 。 |
+| `parameters` | [OpenAIParameters](OpenAIParameters.md)               | リクエスト用のオプションの引数。       |
+| 戻り値          | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | ファイル削除の結果              |
 
-**Throws:** An error if `fileId` is empty.
+**スロー:** `fileId` が空の場合にはエラーをスローします。
 
 #### 例題
 

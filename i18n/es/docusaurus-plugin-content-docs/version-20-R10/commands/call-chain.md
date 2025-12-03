@@ -9,9 +9,9 @@ displayed_sidebar: docs
 
 <!--REF #_command_.Call chain.Params-->
 
-| Parámetros | Tipo       |                             | Descripción                                                      |
-| ---------- | ---------- | --------------------------- | ---------------------------------------------------------------- |
-| Resultado  | Collection | &#8592; | Collection of objects describing the call chain within a process |
+| Parámetros | Tipo       |                             | Descripción                                                                   |
+| ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------------- |
+| Resultado  | Collection | &#8592; | Colección de objetos que describen la cadena de llamadas dentro de un proceso |
 
 <!-- END REF-->
 

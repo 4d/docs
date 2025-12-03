@@ -5,7 +5,7 @@ title: OpenAIFileListResult
 
 # OpenAIFileListResult
 
-The `OpenAIFileListResult` class contains the result of listing files from the OpenAI API.
+La clase `OpenAIFileListResult` contiene el resultado de la lista de los archivos de la API OpenAI.
 
 ## Hereda
 
@@ -13,12 +13,12 @@ The `OpenAIFileListResult` class contains the result of listing files from the O
 
 ## Propiedades calculadas
 
-| Propiedad  | Tipo       | Descripción                                                                                                                                      |
-| ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `files`    | Collection | Returns a collection of [OpenAIFile](OpenAIFile.md) objects from the API response, or an empty collection if no files are found. |
-| `first_id` | Text       | Devuelve el ID del primer archivo de la lista, o una cadena vacía si no está disponible.                                         |
-| `last_id`  | Text       | Devuelve el ID del último archivo de la lista, o una cadena vacía si no está disponible.                                         |
-| `has_more` | Boolean    | Indica si hay más archivos más allá de esta página. `True` if there are more files to fetch, `False` otherwise.  |
+| Propiedad  | Tipo       | Descripción                                                                                                                                              |
+| ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `files`    | Collection | Returns a collection of [OpenAIFile](OpenAIFile.md) objects from the API response, or an empty collection if no files are found.         |
+| `first_id` | Text       | Devuelve el ID del primer archivo de la lista, o una cadena vacía si no está disponible.                                                 |
+| `last_id`  | Text       | Devuelve el ID del último archivo de la lista, o una cadena vacía si no está disponible.                                                 |
+| `has_more` | Boolean    | Indica si hay más archivos más allá de esta página. `True` si hay más archivos que recuperar, `False` en caso contrario. |
 
 ## Ejemplo de Uso
 
@@ -40,7 +40,7 @@ For each ($file; $files)
 End for each
 ```
 
-### Pagination Example
+### Ejemplo de paginación
 
 ```4d
 var $params:=cs.AIKit.OpenAIFileListParameters.new()

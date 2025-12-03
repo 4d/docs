@@ -5,7 +5,7 @@ title: OpenAIFileDeletedResult
 
 # OpenAIFileDeletedResult
 
-The `OpenAIFileDeletedResult` class contains the result of a file deletion operation.
+La clase `OpenAIFileDeletedResult` contiene el resultado de una operación de borrado de archivos.
 
 ## Hereda
 
@@ -13,9 +13,9 @@ The `OpenAIFileDeletedResult` class contains the result of a file deletion opera
 
 ## Propiedades calculadas
 
-| Propiedad | Tipo                                      | Descripción                                                                                                                                            |
-| --------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Returns the file deletion result from the API response. Returns `Null` if the response doesn't contain a valid result. |
+| Propiedad | Tipo                                      | Descripción                                                                                                                                              |
+| --------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Returns the file deletion result from the API response. Devuelve `Null` si la respuesta no contiene un resultado válido. |
 
 ## Ejemplo de Uso
 
