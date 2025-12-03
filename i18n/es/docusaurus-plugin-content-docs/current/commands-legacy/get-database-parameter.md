@@ -24,13 +24,19 @@ El parámetro *selector* designa el parámetro a obtener. 4D ofrece las siguient
 
 ### 4D Remote mode timeout (14)
 
-**Alcance** (antigua capa de red únicamente): aplicación 4D si *valor* positivo
+**Alcance**:equipo 4D remoto
 
-**Se conserva entre dos sesiones**: sí si *valor* positivo
+ **Se conserva entre dos sesiones**: no
 
-**Descripción**: a utilizar en casos muy específicos. Valor del timeout otorgado por el equipo 4D remoto a la máquina 4D Server. Por defecto, este valor se define en la página "Cliente-Servidor/Configuración" de la caja de diálogo de Preferencias en el equipo remoto.
+ **Valores posibles**: 0 (sin sincronización), 1 (auto sincronización) ó 2 (preguntar).
 
-El selector Timeout 4D mode distant no se tiene en cuenta si utiliza la antigua capa de red. Con la capa 4D *ServerNet* activada, se ignora: esta configuración es administrada por el selector Timeout 4D Server (13).
+**Descripción**: modo de sincronización dinámico de la carpeta *Resources* del equipo cliente 4D que ejecuta el comando con el servidor. 
+
+Cuando el contenido de la carpeta *Resources* en el servidor se ha modificado o un usuario ha solicitado la sincronización (por ejemplo vía el explorador de recursos o siguiendo la ejecución del comando [NOTIFY RESOURCES FOLDER MODIFICATION](notify-resources-folder-modification.md "NOTIFY RESOURCES FOLDER MODIFICATION")), el servidor notifica a los equipos cliente conectados. 
+
+Tres modos de sincronización son posibles del lado del cliente. El selector Auto Synchro Resources Folder se utiliza para especificar el modo a utilizar por el equipo cliente para la sesión actual:
+
+0 (valor por defecto): sin sincronización dinámica (la petición de sincronización se ignora) 1: sincronización dinámica automática2: visualización de una caja de diálogo en los equipos clientes, con la posibilidad de efectuar o rechazar la sincronización.El modo de sincronización también puede definirse globalmente en las Preferencias de la aplicación.
 
 
 
@@ -480,6 +486,7 @@ Este parámetro puede definirse del lado del cliente. Por lo general, no necesit
 Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección *Descripción de archivos de historial*.
 
 
+### Current process debug log recording (111)
 
 
 ### Is current database a project (112)
@@ -832,7 +839,7 @@ Para que sea tenido en cuenta, este parámetro debe ejecutarse en el equipo serv
 
 **Alcance**: 4D local, 4D Server*
 
-**Se conserva entre dos sesiones**: no
+ **Se conserva entre dos sesiones**: no
 
  **Valores posibles**: 0 o de 1 a X (0 = no grabar, 1 a X = número secuencial, agregado al nombre del archivo). De forma predeterminada, el valor es 0 (intercambios SMTP no registrados).
 
