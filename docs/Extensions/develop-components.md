@@ -116,6 +116,16 @@ Standard 4D IDE features are available for the component. You can execute the fo
 - run methods,
 - restore from trash or empty trash.
 
+
+### Search and replace
+
+You can use the [**Search and replace** features](../Project/search-replace.md) of the host project to search elements within the code or the forms of your editable components. The **Search in project** menu allows you to select one or all components as search target:
+
+![](../assets/en/Project/find-components.png)
+
+
+
+
 ## Scope of language commands
 
 Except for [Unusable commands](#unusable-commands), a component can use any command of the 4D language.
