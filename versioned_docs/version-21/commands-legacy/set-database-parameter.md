@@ -350,7 +350,8 @@ For any type of interpreted or compiled 4D application (4D all modes, 4D Server,
 **Possible values:** One of the following constants (Log info by default): 
 - Log trace: activates ERROR, WARN, INFO, DEBUG, TRACE (most detailed level)
 - Log debug: activates ERROR, WARN, INFO, DEBUG 
-- Log info: activates ERROR, WARN, INFO (default) Log warn: activates ERROR, WARN 
+- Log info: activates ERROR, WARN, INFO (default)
+- Log warn: activates ERROR, WARN 
 - Log error: activates ERROR (least detailed level)
 
 
