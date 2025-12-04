@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. `4D.WebForm` objects are instantiated with the [`webForm`](../commands/web-form.md) command.
+`WebForm` クラスには、Qodly の Web ページコンポーネントを処理するための関数とプロパティが含まれています。 `4D.WebForm` オブジェクトは [`webForm`](../commands/web-form.md) コマンドによってインスタンス化されます。
 
 <details><summary>履歴</summary>
 
@@ -31,9 +31,9 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### 説明
 
-The components of web pages are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+Web ページのコンポーネント (構成要素) とは、これらの Web ページの<!-- REF #WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
 
-The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. These objects have functions that you can use to manage your components dynamically.
+返されるオブジェクトは、[`4D.WebFormItem`](WebFormItemClass.md) クラスのものです。 これらのオブジェクトは、コンポーネントを動的に管理するために使用できる関数を持っています。
 
 #### 例題
 
@@ -43,14 +43,14 @@ shared singleton Class constructor()
 	var myForm : 4D.WebForm
 	var component : 4D.WebFormItem
 	
-	myForm:=webForm  //returns the web page as an object, each property is a component
-	component:=myForm.myImage  //returns the myImage component of the web page
+	myForm:=webForm  // Web ページをオブジェクト返し、各プロパティがコンポーネントを表す
+	component:=myForm.myImage  // Web ページの myImage コンポーネントを返す
 
 ```
 
 :::info
 
-While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. You can interact with the underlying `webForm` object's properties and functions through `myForm`. For example, you can dynamically manipulate page components or transmit messages to web pages using specialized functions like `myForm.setMessage()`.
+`myForm` はデバッガの中で調べる場合には一般的なオブジェクトのプロパティを表示しないかもしれませんが、実際の`webForm` オブジェクトであるかのように振る舞います。 `myForm` を通して、下地となる`webForm` オブジェクトのプロパティと関数を操作することができます。 例えば、ページのコンテンツを動的に操作したり、あるいは `myForm.setMessage()` のような特殊な関数を使用してWebページにメッセージを送信したりすることができます。
 
 :::
 
@@ -60,24 +60,24 @@ While `myForm` may not display typical object properties when examined in the de
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| 引数    | 型      |     | 説明                                         |
-| ----- | ------ | :-: | ------------------------------------------ |
-| state | string |  -> | Name of state to disable from the web page |
+| 引数    | 型      |     | 説明                      |
+| ----- | ------ | :-: | ----------------------- |
+| state | string |  -> | Web ページ上で無効化するstate の名前 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web page<!-- END REF -->.
+`.disableState()` 関数は、<!-- REF #WebFormClass.disableState().Summary -->カレントのWeb ページ内の *state* の状態のレンダリングを無効化します<!-- END REF -->。
 
 この関数は、以下の場合には何もしません:
 
-- the *state* is currently not enabled in the web page,
-- the *state* does not exist for the web page.
+- *state* 引数のステートが現在Web ページ内で有効化されていない
+- Web ページに対して *state* 引数のステートが存在しない。
 
 同じユーザー関数内で複数の state を [有効化](#enablestate) または無効化した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-For more information on web pages states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Web ページのステートについての詳細な情報については、[Qodly ドキュメンテーションのStates の章](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview) を参照してください。
 
 ### .enableState()
 
@@ -85,24 +85,24 @@ For more information on web pages states, please refer to the [States section in
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| 引数    | 型      |     | 説明                                       |
-| ----- | ------ | :-: | ---------------------------------------- |
-| state | string |  -> | Name of state to enable on the web pages |
+| 引数    | 型      |     | 説明                       |
+| ----- | ------ | :-: | ------------------------ |
+| state | string |  -> | Web ページ上で有効化する state の名前 |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web page<!-- END REF -->.
+`.enableState()` 関数は、<!-- REF #WebFormClass.enableState().Summary -->カレントのWeb ページ内の *state* の状態のレンダリングを有効化します<!-- END REF -->。
 
 この関数は、以下の場合には何もしません:
 
-- the *state* has already been enabled on the web page,
-- the *state* does not exist for the web page.
+- *state* 引数のステートが現在Web ページ内で有効化されている
+- Web ページに対して *state* 引数のステートが存在しない。
 
 同じユーザー関数内で複数の state を有効化または [無効化](#disablestate)した場合、すべての変更は関数の終了時に一括してクライアントに送信されます。
 
-For more information on web page states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Web ページのステートについての詳細な情報については、[Qodly ドキュメンテーションのStates の章](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview) を参照してください。
 
 #### 例題
 
@@ -121,17 +121,17 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| 引数  | 型      |     | 説明                                       |
-| --- | ------ | :-: | ---------------------------------------- |
-| msg | string |  -> | Error message to display in the web page |
+| 引数  | 型      |     | 説明                   |
+| --- | ------ | :-: | -------------------- |
+| msg | string |  -> | Web ページに表示するエラーメッセージ |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web page<!-- END REF -->.
+`.setError()` 関数は、<!-- REF #WebFormClass.setError().Summary -->*msg* 引数のメッセージを、エラーメッセージとしてWeb ページに送信します<!-- END REF -->。
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "error".
+この関数は、`__NOTIFICATION.message` プロパティが *msg* に、そして `__NOTIFICATION.type` が "error" に設定されている `__WEBFORM` オブジェクトと、 `200 OK` ステータスが本文に含まれているレスポンスを返します。
 
 #### 例題
 
@@ -146,7 +146,7 @@ myForm.setError("My error message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a red *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+イベントに対して [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) 機能が有効化されていた場合、 *message* 引数のメッセージは自動的に赤い *toast* としてページ下部に表示され、5秒後に自動的に消滅します:
 
 ![](../assets/en/API/webformClass-pic1.png)
 
@@ -156,17 +156,17 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| 引数  | 型      |     | 説明                                             |
-| --- | ------ | :-: | ---------------------------------------------- |
-| msg | string |  -> | Information message to display in the web page |
+| 引数  | 型      |     | 説明                  |
+| --- | ------ | :-: | ------------------- |
+| msg | string |  -> | Web ページに表示する情報メッセージ |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web page<!-- END REF -->.
+`.setMessage()` 関数は、<!-- REF #WebFormClass.setMessage().Summary -->*msg* を情報メッセージとしてWeb ページに送信します<!-- END REF -->。
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "message".
+この関数は、`__NOTIFICATION.message` プロパティが *msg* に、そして `__NOTIFICATION.type` が "message" に設定されている `__WEBFORM` オブジェクトと、 `200 OK` ステータスが本文に含まれているレスポンスを返します。
 
 #### 例題
 
@@ -181,7 +181,7 @@ myForm.setMessage("My information message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a green *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+イベントに対して [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) 機能が有効化されていた場合、 *message* 引数のメッセージは自動的に緑の *toast* としてページ下部に表示され、5秒後に自動的に消滅します:
 
 ![](../assets/en/API/webformClass-pic2.png)
 
@@ -191,17 +191,17 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| 引数  | 型      |     | 説明                                         |
-| --- | ------ | :-: | ------------------------------------------ |
-| msg | string |  -> | Warning message to display in the web page |
+| 引数  | 型      |     | 説明                  |
+| --- | ------ | :-: | ------------------- |
+| msg | string |  -> | Web ページに表示する警告メッセージ |
 
 <!-- END REF -->
 
 #### 説明
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web page<!-- END REF -->.
+`.setWarning()` 関数は、<!-- REF #WebFormClass.setWarning().Summary -->*msg* 引数のメッセージを警告メッセージとしてWeb ページに送信します<!-- END REF -->。
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "warning".
+この関数は、`__NOTIFICATION.message` プロパティが *msg* に、そして `__NOTIFICATION.type` が "warning" に設定されている `__WEBFORM` オブジェクトと、 `200 OK` ステータスが本文に含まれているレスポンスを返します。
 
 #### 例題
 
@@ -216,7 +216,7 @@ myForm.setWarning("My warning message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a yellow *toast* at the bottom of the web page and disappears automatically after 5 seconds:
+イベントに対して [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) 機能が有効化されていた場合、 *message* 引数のメッセージは自動的に黄色の *toast* としてページ下部に表示され、5秒後に自動的に消滅します:
 
 ![](../assets/en/API/webformClass-pic3.png)
 

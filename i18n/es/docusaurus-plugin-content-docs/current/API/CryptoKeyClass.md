@@ -63,7 +63,7 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un
 
 #### *CryptoKey*
 
-El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. It is a shared object and can therefore be used by multiple 4D processes simultaneously.
+El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un objeto compartido y, por tanto, puede ser utilizado por varios procesos 4D simultáneamente.
 
 #### Ejemplo 1
 

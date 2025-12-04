@@ -73,9 +73,9 @@ O operador do módulo % devolve valores significativos com números que se encon
 
 :::
 
-### Divisão inteira
+### Integer division
 
-O operador da divisão de longint retorna valores significativos apenas com números inteiros.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
 
 ### Comparação real
 

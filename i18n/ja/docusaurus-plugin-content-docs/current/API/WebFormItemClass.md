@@ -3,13 +3,13 @@ id: WebFormItemClass
 title: WebFormItem
 ---
 
-The `4D.WebFormItem` class allows you to handle the behavior of your Qodly webform components.
+`4D.WebFormItem` クラスを使用すると、Qodly webform コンポーネントの振る舞いを管理できるようになります。
 
 `4D.WebFormItem` オブジェクトは、[`Web Form`](../commands/web-form.md) コマンドによって返される [`4D.WebForm`](WebFormClass.md) オブジェクトのプロパティです。
 
-When you call the [`Web Form`](../commands/web-form.md) command, the returned `4D.WebForm` proxy object holds as many `4D.WebFormItems` as there are components with [**server-side references**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) in your webform.
+[`Web Form`](../commands/web-form.md) コマンドを呼び出すと、返された`4D.WebForm` プロキシオブジェクトには[**サーバー側参照**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) を持った、Webフォーム内のコンポーネントと同数の `4D.WebFormItems` が格納されます。
 
-For example, `WebFormObject.myImage` refers to the image component with `myImage` as server reference.
+例えば、 `WebFormObject.myImage` は `myImage` をサーバー側参照として持っている画像コンポーネントを参照します。
 
 <details><summary>履歴</summary>
 
@@ -62,9 +62,9 @@ For example, `WebFormObject.myImage` refers to the image component with `myImage
 
 #### 例題
 
-To call a function that hides an image when the user clicks a button:
+ユーザーがボタンをクリックした時に画像を非表示にする関数を呼び出すには以下のようにします:
 
-1. Create an [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function inside a shared singleton class named `isHidden` that contains the following code:
+1. `isHidden` という名前の共有シングルトンクラス内に、以下のコードをもった、[exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) 関数を作成します:
 
 ```4d
 
@@ -73,12 +73,12 @@ exposed Function isHidden()
 	var myComponent : 4D.WebFormItem
 	
 	myComponent:=Web Form.myImage
-	myComponent.hide()  // Hide the component that has "myImage" as server reference 
+	myComponent.hide()  // "myImage" をサーバー側参照として持つコンポーネントを非表示にします
 ```
 
-2. In Qodly Studio: Select the image component on the canvas, and enter a server-side reference in the Properties Panel > Server Side, for example "myImage".
-3. Select the Button component and add an `onclick` event to it.
-4. Attach the `isHidden` function to the event.
+2. Qodly Studioにて: キャンバス上で画像コンポーネントを選択し、プロパティパネル > Server Side 内に、例えば "myImage" というサーバー側参照を入力します。
+3. ボタンコンポーネントを選択し、そこに `onclick` イベントを追加します。
+4. そのイベントに `isHidden` 関数を追加します。
 
 ### .removeCSSClass()
 
@@ -110,7 +110,7 @@ exposed Function isHidden()
 
 #### 説明
 
-The `.show()` function <!-- REF #WebFormItemClass.show().Summary -->makes the component visible<!-- END REF -->.If the component was already visible, the function does nothing.
+`.show()` 関数は、<!-- REF #WebFormItemClass.show().Summary -->コンポーネントを表示状態にします<!-- END REF -->。コンポーネントがすでに表示状態だった場合、この関数は何もしません。
 
 ## 参照
 

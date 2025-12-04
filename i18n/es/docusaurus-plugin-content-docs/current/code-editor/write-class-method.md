@@ -680,6 +680,10 @@ El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. 
 
 Este comando muestra sus resultados en una nueva ventana.
 
+## Rename
+
+A global renaming feature can be used with **variables** and **project methods**, allowing you to rename them safely throughout the whole project. To do this, highlight the variable or project method name in the editor and select **Rename...** from the **Method** menu or the context menu. A dialog box is then displayed, allowing you to write the new name. For more information, refer to [Renaming project methods and variables](../Project/search-replace.md#renaming-project-methods-and-variables) section.
+
 ## Macros
 
 Puede utilizar macrocomandos en sus métodos. El uso de macrocomandos permite ahorrar mucho tiempo durante la entrada de código.

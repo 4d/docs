@@ -3,7 +3,7 @@ id: CollectionClass
 title: Collection
 ---
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
+Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の式を扱います。
 
 コレクションは [`New collection`](../commands/new-collection.md) または [`New shared collection`](../commands/new-shared-collection.md) コマンドで初期化されます。
 

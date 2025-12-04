@@ -114,6 +114,12 @@ Les fonctionnalités standard de l'IDE 4D sont disponibles pour le composant. Vo
 - exécuter des méthodes,
 - restaurer à partir de la corbeille ou vider la corbeille.
 
+### Search and replace
+
+You can use the [**Search and replace** features](../Project/search-replace.md) of the host project to search elements within the code or the forms of your editable components. The **Search in project** menu allows you to select one or all components as search target:
+
+![](../assets/en/Project/find-components.png)
+
 ## Portée des commandes du langage
 
 Hormis les [commandes non utilisables](#unusable-commands), un composant peut utiliser toute commande du langage 4D.

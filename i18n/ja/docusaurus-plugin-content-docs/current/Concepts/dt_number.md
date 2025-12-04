@@ -49,7 +49,7 @@ title: 数値(実数、整数)
 | 減算 (引き算) | Number - Number                           | Number  | 3 – 2                             | 1                   |
 | 乗算 (かけ算) | Number \* Number                          | Number  | 5 \* 2                            | 10                  |
 | 除算 (割り算) | Number / Number                           | Number  | 5 / 2                             | 2.5 |
-| 倍長整数を返す除算                   | Number \ Number                           | Number  | 5 \ 2                             | 2                   |
+| Integer division            | Number \ Number                           | Number  | 5 \ 2                             | 2                   |
 | モジューロ                       | Number % Number                           | Number  | 5 % 2                             | 1                   |
 | 指数                          | Number ^ Number                           | Number  | 2 ^ 3                             | 8                   |
 | 等しい                         | Number = Number                           | Boolean | 10 = 10                           | true                |
@@ -79,9 +79,9 @@ title: 数値(実数、整数)
 
 :::
 
-### 倍長整数を返す除算
+### Integer division
 
-倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
 
 ### 実数の比較
 
@@ -125,16 +125,16 @@ title: 数値(実数、整数)
 
 ビットワイズ演算子を使用する式は倍長整数値を返します。 Bit Test 演算子の場合、式は例外的にブール値を返します。 次の表にビットワイズ演算子とそのシンタックスを示します: 次の表にビットワイズ演算子とそのシンタックスを示します: 次の表にビットワイズ演算子とそのシンタックスを示します:
 
-| 演算                                        | 演算子                                                  | シンタックス                                                          | 戻り値                                 |
-| ----------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------- |
-| Bitwise AND                               | &                                | Long & Long                                 | Long                                |
-| Bitwise OR (inclusive) | &#124                            | Long &#124; Long                            | Long                                |
-| Bitwise OR (exclusive) | ^ &#124                          | Long &#094; &#124; Long | Long                                |
-| Left Bit Shift                            | << | Long << Long  | Long (注記1 参照)    |
-| Right Bit Shift                           | > >                                                  | Long >> Long                                                    | Long (注記1 参照)    |
-| Bit Set                                   | ?+                                                   | Long ?+ Long                                                    | Long (注記2 参照)    |
-| Bit Clear                                 | ?-                                                   | Long ?- Long                                                    | Long (注記2 参照)    |
-| Bit Test                                  | ??                                                   | Long ?? Long                                                    | Boolean (注記2 参照) |
+| 演算                                        | 演算子                                                   | シンタックス                                                          | 戻り値                                 |
+| ----------------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------- |
+| Bitwise AND                               | &                                 | Long & Long                                 | Long                                |
+| Bitwise OR (inclusive) | &#124;                            | Long &#124; Long                            | Long                                |
+| Bitwise OR (exclusive) | &#094; &#124; | Long &#094; &#124; Long | Long                                |
+| Left Bit Shift                            | <<  | Long << Long  | Long (注記1 参照)    |
+| Right Bit Shift                           | > >                                                   | Long >> Long                                                    | Long (注記1 参照)    |
+| Bit Set                                   | ?+                                                    | Long ?+ Long                                                    | Long (注記2 参照)    |
+| Bit Clear                                 | ?-                                                    | Long ?- Long                                                    | Long (注記2 参照)    |
+| Bit Test                                  | ??                                                    | Long ?? Long                                                    | Boolean (注記2 参照) |
 
 #### 注記
 

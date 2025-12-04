@@ -79,9 +79,9 @@ title: 数値(実数、整数)
 
 :::
 
-### 倍長整数を返す除算
+### Integer division
 
-倍長整数を返す除算演算子 \ は、整数値の有効値を返します。
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
 
 ### 実数の比較
 

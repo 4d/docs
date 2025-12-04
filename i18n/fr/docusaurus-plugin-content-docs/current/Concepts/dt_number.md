@@ -49,7 +49,7 @@ Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple 
 | Soustraction        | Nombre - Nombre                           | Number   | 3 – 2                             | 1                   |
 | Multiplication      | Number \* Number                          | Number   | 5 \* 2                            | 10                  |
 | Division            | Number / Number                           | Number   | 5 / 2                             | 2.5 |
-| Division entière    | Nombre \ Nombre                           | Number   | 5 \ 2                             | 2                   |
+| Integer division    | Nombre \ Nombre                           | Number   | 5 \ 2                             | 2                   |
 | Modulo              | Nombre % Nombre                           | Number   | 5 % 2                             | 1                   |
 | Exponentiation      | Nombre ^ Nombre                           | Number   | 2 ^ 3                             | 8                   |
 | Egalité             | Nombre = Nombre                           | Boolean  | 10 = 10                           | True                |
@@ -79,9 +79,9 @@ L'opérateur modulo % retourne des valeurs significatives avec des nombres appar
 
 :::
 
-### Division entière
+### Integer division
 
-L'opérateur division entière \ retourne des valeurs significatives avec des nombres entiers uniquement.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
 
 ### Comparaison des réels
 
@@ -125,16 +125,16 @@ Comme un bit peut valoir 0 (zéro) ou 1, vous pouvez également considérer une 
 
 Une expression qui utilise un opérateur bit à bit renvoie une valeur de type Long, à l'exception de l'opérateur Bit Test, pour lequel l'expression renvoie une valeur booléenne. Le tableau suivant fournit la liste des opérateurs sur les bits et leur syntaxe :
 
-| Opération                        | Opérateur                                            | Syntaxe                                                                           | Retourne                                   |
-| -------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------ |
-| ET                               | &                                | Long & Long                                                   | E. long                    |
-| OU (inclusif) | &#124                            | long &#124; E. long                           | E. long                    |
-| OU (exclusif) | &#094; &#124 | Long &#094; &#124; Long                   | E. long                    |
-| Décaler bits à gauche            | << | long << E. long | long (voir note n°1)    |
-| Décaler bits à droite            | > >                                                  | long >> E. long                                                   | long (voir note n°1)    |
-| Mettre bit à 1                   | ?+                                                   | long ?+ E. E. long                                | long (voir note n°2)    |
-| Mettre bit à 0                   | ?-                                                   | long ??                                                                           | long (voir note n°2)    |
-| Tester bit                       | ??                                                   | long \^&#124; E. E. long     | Booléen (voir note n°2) |
+| Opération                        | Opérateur                                             | Syntaxe                                                                           | Retourne                                   |
+| -------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------ |
+| ET                               | &                                 | Long & Long                                                   | E. long                    |
+| OU (inclusif) | &#124;                            | long &#124; E. long                           | E. long                    |
+| OU (exclusif) | &#094; &#124; | Long &#094; &#124; Long                   | E. long                    |
+| Décaler bits à gauche            | <<  | long << E. long | long (voir note n°1)    |
+| Décaler bits à droite            | > >                                                   | long >> E. long                                                   | long (voir note n°1)    |
+| Mettre bit à 1                   | ?+                                                    | long ?+ E. E. long                                | long (voir note n°2)    |
+| Mettre bit à 0                   | ?-                                                    | long ??                                                                           | long (voir note n°2)    |
+| Tester bit                       | ??                                                    | long \^&#124; E. E. long     | Booléen (voir note n°2) |
 
 #### Notes
 
