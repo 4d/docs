@@ -49,7 +49,7 @@ Los números negativos se especifican con el signo menos (-). Por ejemplo:
 | Resta             | Número - Número                           | Number   | 3 – 2                             | 1                   |
 | Multiplicación    | Número \* Número                          | Number   | 5 \* 2                            | 10                  |
 | División          | Número / Número                           | Number   | 5 / 2                             | 2.5 |
-| División entera   | Número \ Número                           | Number   | 5 \ 2                             | 2                   |
+| Integer division  | Número \ Número                           | Number   | 5 \ 2                             | 2                   |
 | Módulo            | Número % Número                           | Number   | 5 % 2                             | 1                   |
 | Exponenciación    | Número ^ Número                           | Number   | 2 ^ 3                             | 8                   |
 | Igual             | Número = Número                           | Boolean  | 10 = 10                           | True                |
@@ -79,7 +79,7 @@ El operador modulo % devuelve valores significativos con números que están en 
 
 :::
 
-### División entera
+### Integer division
 
 The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` es equivalente a `Int(a/b)`. Este operador devuelve valores significativos sólo con números enteros.
 
