@@ -236,7 +236,7 @@ Replacing operations work as follows:
 - Elements are never renamed themselves by the **Replace in content** feature, except for form objects. Hence it is possible that certain items in the list may not be affected by the replacing operation. This can occur when only the item name corresponds to the initial search criteria. In this case, the list items do not necessarily all appear in italics and the final replacement count may be less than the number of occurrences found by the initial search.
 
 
-## Renaming project methods and variables
+## Renaming project methods and variables {#renaming-project-methods-and-variables}
 
 4D provides a dedicated renaming function with distribution throughout the entire project for project methods and variables. 
 
