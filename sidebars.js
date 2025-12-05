@@ -1158,20 +1158,6 @@ module.exports =
             },
             {
               "type": "category",
-              "label": "PHP",
-              "link": {
-                "type": "doc",
-                "id": "commands/theme/PHP_theme"
-              },
-              "items": [
-                "commands-legacy/php-execute",
-                "commands-legacy/php-get-full-response",
-                "commands-legacy/php-get-option",
-                "commands-legacy/php-set-option"
-              ]
-            },
-            {
-              "type": "category",
               "label": "Pasteboard",
               "link": {
                 "type": "doc",
