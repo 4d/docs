@@ -1075,7 +1075,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 You can use any letter from the alphabet as the `[a]` notation.
 
 
-#### Linking collection attribute query arguments
+### Linking collection attribute query arguments
 
 :::info
 
@@ -1127,7 +1127,14 @@ With the above entities, if you write:
 ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
 
-... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
+... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element. 
+
+:::note 
+
+This feature cannot be used with query arguments joined by the OR operator.
+
+:::
+
 
 
 #### Queries in many-to-many relations
