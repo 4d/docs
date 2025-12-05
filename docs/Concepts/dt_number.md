@@ -49,7 +49,7 @@ Negative numbers are specified with the minus sign (-). For example:
 |Subtraction |Number - Number |Number |3 – 2 |1|
 |Multiplication |Number * Number |Number |5 * 2 |10|
 |Division |Number / Number |Number |5 / 2 |2.5|
-|Longint division |Number \ Number |Number |5 \ 2 |2|
+|Integer division |Number \ Number |Number |5 \ 2 |2|
 |Modulo |Number % Number |Number |5 % 2 |1|
 |Exponentiation |Number ^ Number |Number |2 ^ 3| 8|
 |Equality |Number = Number |Boolean |10 = 10 |True|
@@ -79,9 +79,9 @@ The modulo operator % returns significant values with numbers that are in the Lo
 
 :::
 
-### Longint division 
+### Integer division 
 
-The longint division operator \ returns significant values with integer numbers only.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is equivalent to `Int(a/b)`. This operator returns significant values with integer numbers only.
 
 ### Real comparison
 

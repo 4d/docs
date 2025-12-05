@@ -26,7 +26,7 @@ Web sessions are used for:
 - calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md). 
 
 
-## Enabling web sessions
+## Enabling web sessions {#enabling-web-sessions}
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
 
@@ -209,7 +209,7 @@ Else
 End if
 ```
 
-:::tips Related blog posts
+:::tip Related blog posts
 
 [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/) 
 
@@ -221,7 +221,7 @@ The 4D web server allows you to generate, share, and use OTP (One-Time Passcode)
 
 In 4D, OTP session tokens are useful when calling external URLs and being called back in another browser or device (mobile/computer). Typically, a third-party application sends a confirmation email containing a callback link on which the user has to click. The callback link includes the OTP token, so that the session which triggered the callback is loaded along with its data and privileges. This principle allows you to share the same session on multiple devices. Thanks to this architecture, the [session cookie](#session-implementation) is not exposed on the network, which eliminates the risk of man-in-the-middle attack.
 
-:::tips Related blog posts
+:::tip Related blog posts
 
 [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/) 
 

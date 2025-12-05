@@ -143,7 +143,7 @@ Por defecto, las fórmulas 4D se muestran como valores. Al insertar una fórmula
 
 Para mostrar fórmulas como referencias, puede:
 
-- check the **Show references** option in the Property list (see *Configuring View properties*), or
+- marque la opción **Mostrar referencias** en la lista de propiedades (consulte *Configuración de las propiedades Vista*), o bien
 - utilizar la acción estándar visibleReferences (ver *Expresiones dinámicas*), o bien
 - usa el comando [**WP SET VIEW PROPERTIES**](commands-legacy/wp-set-view-properties.md) con el selector `wk visible references` en **True**.
 

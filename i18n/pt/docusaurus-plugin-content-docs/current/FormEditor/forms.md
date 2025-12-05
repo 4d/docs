@@ -112,9 +112,9 @@ Fluent UI support is currently in the Developer Preview phase. Não deve ser usa
 
 :::
 
-:::info macOS
+:::info Disponibilidade
 
-This feature can only be used on Windows. On macOS, it is ignored.
+This feature can be used **in 4D projects on Windows**. It is not available on macOS or in binary 4D databases on Windows.
 
 :::
 

@@ -5,7 +5,7 @@ title: OpenAIMessage
 
 # OpenAIMessage
 
-The `OpenAIMessage` class represents a structured message containing a role, content, and an optional user. This class provides methods to manipulate and retrieve the text and other content of the message.
+La clase `OpenAIMessage` representa un mensaje estructurado que contiene un rol, un contenido y un usuario opcional. Esta clase ofrece métodos para manipular y recuperar el texto y otros contenidos del mensaje.
 
 ## Propiedades
 
@@ -36,16 +36,50 @@ The `OpenAIMessage` class represents a structured message containing a role, con
 
 Añade una URL de imagen al contenido del mensaje.
 
+### addFileId()
+
+**addFileId**(*fileId* : Text)
+
+| Parámetros | Tipo | Descripción                                                  |
+| ---------- | ---- | ------------------------------------------------------------ |
+| *fileId*   | Text | El ID del archivo que se añadirá al mensaje. |
+
+Añade una referencia de archivo al contenido del mensaje. Si el contenido es actualmente texto, se convertirá a un formato colección.
+
 ## Ejemplo de Uso
 
-### Crear un mensaje simple y adjuntar una imagen
+### Mensaje de texto básico
 
 ```4d
 // Create an instance of OpenAIMessage
-var $message:=cs.AIKit.OpenAIMessage({role: "user"; content: "Hello!"})
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Hello!"})
+```
+
+### Añadir imágenes
+
+```4d
+var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this image:"})
 
 // Add an image URL with details
 $message.addImageURL("http://example.com/image.jpg"; "high")
+```
+
+### Añadir archivo
+
+```4d
+// Upload a file with user_data purpose
+var $file:=File("/RESOURCES/document.pdf")
+var $uploadResult:=$client.files.create($file; "user_data")
+
+If ($uploadResult.success)
+    var $uploadedFile:=$uploadResult.file
+    
+    // Create message and attach the file using its ID
+    var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Please analyze this document:"})
+    $message.addFileId($uploadedFile.id)
+    
+    // $message.content -> [{type: "text"; text: "Please analyze this document:"}; {type: "file"; file_id: "file-abc123"}]
+End if
 ```
 
 ### Responder a un mensaje de llamada de herramienta
@@ -82,8 +116,8 @@ Cuando reciba un mensaje de llamada de herramienta, debe:
 2. **Execute the function:**
    Parse the arguments (which is a JSON string) and call the corresponding function that you defined in your OpenAITool configuration.
 
-3. **Respond with the tool result:**
-   Create a response message using the exact `tool_call_id` from the original request.
+3. **Responde con el resultado de la herramienta:**
+   Crea un mensaje de respuesta usando el `tool_call_id` exacto de la petición original.
 
 **Ejemplo de respuesta de la herramienta:**
 
@@ -103,7 +137,7 @@ var $toolResponse:=cs.AIKit.OpenAIMessage.new({ \
 // Add it to the conversation and continue
 ```
 
-**Important:** The `tool_call_id` in your response must exactly match the `id` from the original tool call. Esto permite que el modelo de IA asocie correctamente su respuesta con la llamada de función específica que se realizó.
+**Importante:** el `tool_call_id` de su respuesta debe coincidir exactamente con el `id` de la llamada de la herramienta original. Esto permite que el modelo de IA asocie correctamente su respuesta con la llamada de función específica que se realizó.
 
 ## Ver también
 

@@ -67,11 +67,13 @@ API はOpenAI のサービスとシームレスにやりとりすることを可
 | `images`      | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | 画像 API へのアクセス。     |
 | `moderations` | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | モデレーションAPI へのアクセス。 |
 | `embeddings`  | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | 埋め込みAPI へのアクセス。    |
+| `files`       | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Files API へのアクセス。  |
 
 ### 使用例
 
 ```4d
 $client.chat.completions.create(...)
 $client.images.generate(...)
+$client.files.create(...)
 $client.model.lists(...)
 ```

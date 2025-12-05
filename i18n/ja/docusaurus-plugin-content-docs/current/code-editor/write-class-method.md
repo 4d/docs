@@ -681,6 +681,10 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 このコマンドの結果は新規ウィンドウに表示されます。
 
+## Rename
+
+A global renaming feature can be used with **variables** and **project methods**, allowing you to rename them safely throughout the whole project. To do this, highlight the variable or project method name in the editor and select **Rename...** from the **Method** menu or the context menu. A dialog box is then displayed, allowing you to write the new name. For more information, refer to [Renaming project methods and variables](../Project/search-replace.md#renaming-project-methods-and-variables) section.
+
 ## マクロ
 
 メソッド内でマクロコマンドを利用することができます。 マクロを利用すれば、コードの入力にかかる時間を大幅に短縮することができます。

@@ -48,6 +48,8 @@ Puede controlar los saltos automáticos en los párrafos mediante las siguientes
 
 Estas opciones pueden definirse mediante el menú contextual, o los [atributos](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, o las [acciones estándar](./defining-a-4d-write-pro-area.md#standard-actions) *widowAndOrphanControlEnabled*, *avoidPageBreakInside*).
 
+<!-- INCLUDE lists-WP.Desc -->
+
 ## Fondo 
 
 El fondo de los documentos 4D Write Pro y los elementos del documento (tablas, párrafos, secciones, encabezados/pies, etc.) se pueden configurar con los siguientes efectos:

@@ -17,12 +17,12 @@ También puede manejar los atributos de área 4D Write Pro a través de la notac
 
 * notación de objeto: por ejemplo, las siguientes afirmaciones son similares:  
 ```4d  
- $bcol:=$range[wk background color]  
- $bcol:=$range.backgroundColor //mismos resultados  
+ $bcol:=$range[wk background color]  
+ $bcol:=$range.backgroundColor //mismos resultados  
 ```
 * los comandos [OB SET](../../commands-legacy/ob-set.md) y [OB Get](../../commands-legacy/ob-get.md) por ejemplo:  
 ```4d  
- $bcol:=OB Get($range;wk background color)  
+ $bcol:=OB Get($range;wk background color)  
 ```  
 :::
 
@@ -251,7 +251,7 @@ Los atributos de enlace se utilizan para definir o agregar URLs a los rangos. Pu
 
 ### Listas 
 
-4D Write Pro soporta dos tipos principales de listas:
+4D Write Pro soporta dos tipos principales de [listas](../user-legacy/using-a-4d-write-pro-area.md#lists):
 
 * listas no ordenadas: donde los elementos de la lista están marcados con viñetas
 * listas ordenadas:donde los elementos de la lista están marcados con números o letras

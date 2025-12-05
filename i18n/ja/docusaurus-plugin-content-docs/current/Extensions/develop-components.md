@@ -114,6 +114,12 @@ title: コンポーネントの開発
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
 
+### Search and replace
+
+You can use the [**Search and replace** features](../Project/search-replace.md) of the host project to search elements within the code or the forms of your editable components. The **Search in project** menu allows you to select one or all components as search target:
+
+![](../assets/en/Project/find-components.png)
+
 ## ランゲージコマンドのスコープ
 
 [使用できないコマンド](#使用できないコマンド) を除き、コンポーネントではすべての 4D ランゲージコマンドが使用できます。

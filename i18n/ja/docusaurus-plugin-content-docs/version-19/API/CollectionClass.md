@@ -4,7 +4,7 @@ title: Collection
 ---
 
 
-Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変数を扱います。
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 コレクションは次のように初期化します:
 
@@ -349,14 +349,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.concat().Params -->
-| 引数    | 型                                                              |    | 説明                                                    |
-| ----- | -------------------------------------------------------------- |:--:| ----------------------------------------------------- |
-| value | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
-| 戻り値   | Collection                                                     | <- | 元のコレクションに値が追加された新規コレクション|<!-- END REF -->
+| 引数    | 型          |    | 説明                                                    |
+| ----- | ---------- |:--:| ----------------------------------------------------- |
+| value | any        | -> | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
+| 戻り値   | Collection | <- | 元のコレクションに値が追加された新規コレクション|<!-- END REF -->
 
 |
 

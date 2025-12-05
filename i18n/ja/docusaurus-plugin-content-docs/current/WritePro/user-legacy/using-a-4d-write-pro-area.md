@@ -50,6 +50,8 @@ slug: /WritePro/properties
 
 これらのオプションはコンテキストメニューを使用するか、あるいは[属性](../commands-legacy/4d-write-pro-attributes.md)(`wk avoid widows and orphans`、`wk page break inside paragraph`、または[標準アクション](./defining-a-4d-write-pro-area.md#standard-actions)(*widowAndOrphanControlEnabled*、 *avoidPageBreakInside*。
 
+<!-- INCLUDE lists-WP.Desc -->
+
 ## 背景 
 
 4D Write Pro ドキュメントの背景とドキュメント要素(表、段落、セクション、ヘッダー/フッター等)には、以下のエフェクトを設定することができます:

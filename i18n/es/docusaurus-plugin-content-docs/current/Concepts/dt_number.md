@@ -49,7 +49,7 @@ Los números negativos se especifican con el signo menos (-). Por ejemplo:
 | Resta             | Número - Número                           | Number   | 3 – 2                             | 1                   |
 | Multiplicación    | Número \* Número                          | Number   | 5 \* 2                            | 10                  |
 | División          | Número / Número                           | Number   | 5 / 2                             | 2.5 |
-| División entera   | Número \ Número                           | Number   | 5 \ 2                             | 2                   |
+| Integer division  | Número \ Número                           | Number   | 5 \ 2                             | 2                   |
 | Módulo            | Número % Número                           | Number   | 5 % 2                             | 1                   |
 | Exponenciación    | Número ^ Número                           | Number   | 2 ^ 3                             | 8                   |
 | Igual             | Número = Número                           | Boolean  | 10 = 10                           | True                |
@@ -79,9 +79,9 @@ El operador modulo % devuelve valores significativos con números que están en 
 
 :::
 
-### División entera
+### Integer division
 
-El operador de división entero largo \ devuelve valores significativos sólo con números enteros.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is equivalent to `Int(a/b)`. This operator returns significant values with integer numbers only.
 
 ### Comparación real
 
@@ -125,16 +125,16 @@ Dado que cada bit puede ser igual a 0 o 1, también se puede pensar en un valor 
 
 Una expresión que utiliza un operador de bits devuelve un valor de tipo Long, excepto para el operador Bit Test, donde la expresión devuelve un valor booleano. La siguiente tabla lista los operadores a nivel de bits y su sintaxis:
 
-| Operación                        | Operador                                             | Sintaxis                                                        | Devuelve                                |
-| -------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------- |
-| Y                                | &                                | Long & Long                                 | Long                                    |
-| O (inclusive) | &#124                            | Long &#124; Long                            | Long                                    |
-| O (exclusivo) | ^ &#124                          | Long &#094; &#124; Long | Long                                    |
-| Left Bit Shift                   | << | Long << Long  | Long (ver nota 1)    |
-| Right Bit Shift                  | > >                                                  | Long >> Long                                                    | Long (ver nota 1)    |
-| Bit Set                          | ?+                                                   | Long ?+ Long                                                    | Long (ver nota 2)    |
-| Poner el bit en 0                | ?-                                                   | Long ?- Long                                                    | Long (ver nota 2)    |
-| Probar bit                       | ??                                                   | Long ?? Long Long                                               | Boolean (ver nota 2) |
+| Operación                        | Operador                                              | Sintaxis                                                        | Devuelve                                |
+| -------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------- |
+| Y                                | &                                 | Long & Long                                 | Long                                    |
+| O (inclusive) | &#124;                            | Long &#124; Long                            | Long                                    |
+| O (exclusivo) | &#094; &#124; | Long &#094; &#124; Long | Long                                    |
+| Left Bit Shift                   | <<  | Long << Long  | Long (ver nota 1)    |
+| Right Bit Shift                  | > >                                                   | Long >> Long                                                    | Long (ver nota 1)    |
+| Bit Set                          | ?+                                                    | Long ?+ Long                                                    | Long (ver nota 2)    |
+| Poner el bit en 0                | ?-                                                    | Long ?- Long                                                    | Long (ver nota 2)    |
+| Probar bit                       | ??                                                    | Long ?? Long Long                                               | Boolean (ver nota 2) |
 
 #### Notas
 

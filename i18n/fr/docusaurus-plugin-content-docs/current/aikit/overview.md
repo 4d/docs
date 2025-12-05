@@ -103,6 +103,42 @@ Obtenir une information de modèle par id
 var $model:=$client.models.retrieve("a model id").model
 ```
 
+#### Fichiers
+
+https://platform.openai.com/docs/api-reference/files
+
+Téléverser un fichier pour l'utiliser avec d'autres points de terminaison (*endpoints*)
+
+```4d
+var $file:=File("/path/to/your/file.jsonl")
+var $result:=$client.files.create($file; "fine-tune")
+var $fileId:=$result.file.id
+```
+
+Lister tous les fichiers
+
+```4d
+var $files:=$client.files.list().files
+```
+
+Récupérer les informations du fichier
+
+```4d
+var $fileInfo:=$client.files.retrieve($fileId).file
+```
+
+Supprimer un fichier
+
+```4d
+var $deleteResult:=$client.files.delete($fileId)
+```
+
+:::tip Article(s) de blog sur le sujet
+
+[Transformer des documents statiques en connaissances exploitables avec 4D AIKit](https://blog.4d.com/transform-static-documents-into-actionable-knowledge-with-4d-aikit).
+
+:::
+
 #### Modérations
 
 https://platform.openai.com/docs/api-reference/moderations

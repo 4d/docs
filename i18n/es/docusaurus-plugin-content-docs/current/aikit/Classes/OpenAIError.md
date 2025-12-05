@@ -5,7 +5,7 @@ title: OpenAIError Class
 
 # OpenAIError Class
 
-La clase `OpenAIError` está diseñada para manejar errores devueltos por la API OpenAI. It extracts relevant information from the error response and provides methods to access this information.
+La clase `OpenAIError` está diseñada para manejar errores devueltos por la API OpenAI. Extrae información relevante de la respuesta de error y ofrece los métodos para acceder a esta información.
 
 ## Propiedades
 
@@ -45,4 +45,4 @@ La clase `OpenAIError` está diseñada para manejar errores devueltos por la API
 | `isNotFoundError`            | Boolean | Indica si el error es un error 404 Not Found.                                     |
 | `isUnprocessableEntityError` | Boolean | Indica si el error es un error de entidad no procesable (422). |
 | `isRateLimitError`           | Boolean | Indica si el error es un error de límite de velocidad 429.                        |
-| `isInternalServerError`      | Boolean | Indicates if the error is a 500 or higher Internal Server error.                  |
+| `isInternalServerError`      | Boolean | Indica si el error es un error de servidor interno de tipo 500 o superior.        |

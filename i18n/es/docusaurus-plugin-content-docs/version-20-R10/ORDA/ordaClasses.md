@@ -338,7 +338,7 @@ La función `Class constructor` es activada por los siguientes comandos y funcio
 
 :::note Notas
 
-- The [`entity.clone()`](../API/EntityClass.md#clone) function does not trigger the entity Class constructor.
+- La función [`entity.clone()`](../API/EntityClass.md#clone) no activa el constructor de la clase de la entidad.
 - Los registros creados a nivel de la base de datos 4D utilizando comandos del lenguaje clásico 4D o acciones estándar no activan el Class constructor de la entidad.
 
 :::
@@ -404,7 +404,7 @@ sequenceDiagram
 
 ```
 
-#### Example 4 (diagram): Qodly - Standard action and update value on the newly created entity
+#### Ejemplo 4 (diagrama): Qodly - Acción estándar y valor de actualización en la nueva entidad creada
 
 ```mermaid
 
@@ -930,10 +930,10 @@ $arch.save() //courseName y name son "Archaeology II"
 
 For security reasons, all of your data model class functions, including [computed attributes](#computed-attributes-1) and [alias attributes](#alias-attributes-1), as well as [shared singleton functions](../Concepts/classes.md#shared-singleton) are **not exposed** (i.e., private) by default to **remote requests**.
 
-Remote requests are:
+Las peticiones remotas son:
 
 - Las peticiones enviadas por las aplicaciones 4D remotas conectadas a través de `Open datastore`
-- REST requests, including requests from [Qodly pages](https://developer.4d.com/qodly/)
+- Peticiones REST, incluidas las solicitudes de [páginas Qodly](https://developer.4d.com/qodly/)
 
 > Las peticiones cliente/servidor 4D estándar no se ven afectadas. Las funciones de clase del modelo de datos están siempre disponibles en esta arquitectura.
 
@@ -947,24 +947,24 @@ exposed Function <functionName>
 ```
 
 ```4d
-// declare an exposed alias
+// declarar un alias expuesto
 exposed Alias <attributeName> <targetPath>   
 ```
 
 ```4d
-// declare an exposed computed attribute
+// declare un atributo calculado expuesto
 exposed Function get <attributeName>   
 ```
 
 ```4d
-// declare a shared singleton function
+// declara una función singleton compartida
 shared singleton Class constructor()
 exposed Function <functionName>
 ```
 
 :::note
 
-The `exposed` keyword can only be used with the objects decribed above. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
+La palabra clave `exposed` solo puede utilizarse con los objetos descritos anteriormente. Si se utiliza con una función de [ clase usuario estándar](Concepts/classes.md), se ignora y el compilador devuelve un error.
 
 :::
 

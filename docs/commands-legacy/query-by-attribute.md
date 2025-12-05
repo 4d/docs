@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to return a selection of records, or Default table if omitted |
-| conjOp | * | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
+| conjOp | Operator | &#8594;  | Conjunction operator to use to join multiple queries (if any) |
 | objectField | Field | &#8594;  | Object field to query attributes |
 | attributePath | Text | &#8594;  | Name or path of attribute |
-| queryOp | Text, * | &#8594;  | Query operator (comparator) |
+| queryOp | Text, Operator  | &#8594;  | Query operator (comparator) |
 | value | Text, Number, Date, Time | &#8594;  | Value to compare |
 | * | Operator | &#8594;  | Continue query flag |
 

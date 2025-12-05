@@ -17,12 +17,12 @@ Os atributos 4D Write Pro permitem controlar todos os aspectos gráficos de text
 
 * notação de objeto - por exemplo, o statement abaixo é similar:  
 ```4d  
- $bcol:=$range[wk background color]  
- $bcol:=$range.backgroundColor //same results  
+ $bcol:=$range[wk background color]  
+ $bcol:=$range.backgroundColor //same results  
 ```
 * Comandos [OB SET](../../commands-legacy/ob-set.md) e [OB Get](../../commands-legacy/ob-get.md) por exemplo:  
 ```4d  
- $bcol:=OB Get($range;wk background color)  
+ $bcol:=OB Get($range;wk background color)  
 ```  
     
 :::
@@ -252,7 +252,7 @@ Atributos de Link são usados para estabelecer ou obter URLs adicionados a faixa
 
 ### Listas 
 
-4D Write Pro respalda dois tipos principais de listas:
+4D Write Pro respalda dois tipos principais de [listas](../user-legacy/using-a-4d-write-pro-area.md#lists):
 
 * listas não ordenadas: donde os elementos da lista estão marcados com vinhetas
 * listas ordenadas:onde os elementos da lista estão marcados com números ou letras

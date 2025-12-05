@@ -105,8 +105,6 @@ If you pass 0 in *base*, the command determines the radix depending on the *expr
 | String(254;16) | "fe" |     hexadecimal string  |
 | String(-16523461; 16)| "-fc20c5"   |  hexadecimal string (negative)  |
 | String(Log(-1); 10)| "NaN"   |  Not a number  |
-| String(1/0; 10)                        | "NaN"               | Not a number        |
-| String(-1/0; 10)                       | "NaN"               | Not a number        |
 
 
 :::note

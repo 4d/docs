@@ -5,7 +5,7 @@ title: Asynchronous Call
 
 # Asynchronous Call
 
-If you do not want to wait for the OpenAPI response when making a request to its API, you need to use asynchronous code.
+Si no desea esperar la respuesta del OpenAPI al hacer una petición a su API, debe utilizar un código asíncrono.
 
 Debe proporcionar un `4D.Formula` para recibir el resultado. Ver [OpenAIParameters](Classes/OpenAIParameters.md) para una lista de ellos.
 

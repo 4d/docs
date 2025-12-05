@@ -22,9 +22,9 @@ Le nouveau nom doit respecter les règles de nommage 4D (voir [Identifiants](../
 
 :::caution
 
-Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Changer le nom d'une méthode déjà utilisée dans la base de données peut invalider toutes les méthodes ou formules qui utilisent l'ancien nom de méthode et risque de perturber le fonctionnement de l'application. Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
+Changing the name of a method already used in the project can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. It is strongly recommended to use the [renaming function for project methods](../Project/search-replace.md#renaming-project-methods-and-variables). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
 
-Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. Vous pouvez désigner un propriétaire de la méthode pour que seuls certains utilisateurs puissent changer son nom.
+Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. You may want to specify a method owner so that only certain users can change the method's name.
 
 :::
 
@@ -103,7 +103,7 @@ Pour plus d’informations, reportez-vous à la section [Implémentations du mot
 
 _Cette option est obsolète. L'appel de code par le biais d'appels REST n'est possible qu'avec les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md).\*
 
-### Modifier attributs globalement
+## Modifier attributs globalement
 
 La boîte de dialogue "Attributs des méthodes" permet de modifier un attribut (Invisible, Disponible via Web Services etc.) pour tout ou partie des méthodes projet de la base de données en une seule opération. Cette fonction est très utile pour modifier les attributs d’un grand nombre de méthodes projet. Elle peut également être utilisée en cours de développement pour appliquer rapidement des attributs communs à des groupes homogènes de méthodes.
 

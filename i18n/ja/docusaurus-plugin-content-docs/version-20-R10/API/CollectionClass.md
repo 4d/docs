@@ -3,7 +3,7 @@ id: CollectionClass
 title: Collection
 ---
 
-Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変数を扱います。
+Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の式を扱います。
 
 コレクションは [`New collection`](../commands/new-collection.md) または [`New shared collection`](../commands/new-shared-collection.md) コマンドで初期化されます。
 
@@ -271,14 +271,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 
-| 引数    | 型                                                              |                             | 説明                                                    |
-| ----- | -------------------------------------------------------------- | :-------------------------: | ----------------------------------------------------- |
-| value | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
-| 戻り値   | Collection                                                     | <- | 元のコレクションに値が追加された新規コレクション                              |
+| 引数    | 型          |                             | 説明                                                    |
+| ----- | ---------- | :-------------------------: | ----------------------------------------------------- |
+| value | any        |              ->             | 連結する値。 *value* がコレクションの場合、コレクションの全要素が元のコレクションに追加されます。 |
+| 戻り値   | Collection | <- | 元のコレクションに値が追加された新規コレクション                              |
 
 <!-- END REF -->
 
@@ -3222,14 +3222,12 @@ $r:=$c.reduceRight(Formula($1.accumulator*=$1.value); 1)  // 戻り値は 86400 
 引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
 *ascOrDesc* 引数には、以下の定数のいずれか一つを渡すことができます:
 
- ```
- |定数|  型|値|詳細|
- |---|---|---|---|
- |ck ascending|Integer|0|要素は昇順に並んでいます(デフォルト)|
- |ck descending|Integer|1|要素は降順に並んでいます|
- 
- このシンタックスはコレクション内のスカラー値のみを並び替えます(オブジェクトやコレクションなどの他の型の要素は並べ替えされません)。
- ```
+| 定数            | 型       | 値 | 説明                                      |
+| ------------- | ------- | - | --------------------------------------- |
+| ck ascending  | Integer | 0 | 要素は昇順に並べられます (デフォルト) |
+| ck descending | Integer | 1 | 要素は降順に並べられます                            |
+
+このシンタックスは、コレクション内のスカラー値のみを並べ替えます (オブジェクトやコレクションなどの他の型は並べ替えされないまま返されます)。
 
 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 

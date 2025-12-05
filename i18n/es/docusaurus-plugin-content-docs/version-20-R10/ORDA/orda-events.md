@@ -17,7 +17,7 @@ No se puede activar directamente la ejecución de la función de evento. Los eve
 
 :::info Nota de compatibilidad
 
-Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA.
+Los eventos de entidad ORDA en el almacen de datos equivalen a triggers en la base de datos 4D. Sin embargo, las acciones desencadenadas a nivel de la base de datos 4D utilizando los comandos del lenguaje clásico 4D o las acciones estándar no desencadenan eventos ORDA. Note also that, unlike triggers, ORDA entity events do not lock the entire underlying table of a dataclass while saving or dropping entities. Varios eventos pueden ejecutarse en paralelo siempre que afecten a entidades distintas (es decir, registros).
 
 :::
 
@@ -191,7 +191,7 @@ Function query sameDay($event : Object) : Text
 
 ```
 
-- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- Usar un atributo *sameDay* **escalar** actualizado cuando otros atributos son "tocados" ahorrará tiempo:
 
 ```4d
     //BookingEntity class

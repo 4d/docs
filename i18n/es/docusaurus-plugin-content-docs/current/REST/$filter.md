@@ -3,7 +3,7 @@ id: filter
 title: $filter
 ---
 
-Permite consultar los datos de una clase de datos o de un método *(p. ej.*, `$filter="firstName!='' AND salary>30000"`)
+Allows to query the data in a dataclass or method (*e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 ## Descripción
 
@@ -84,7 +84,7 @@ If the attribute stores [**vector objects**](../API/VectorClass.md) (see how to 
 
 For more information about vector similarity searches, please refer to [Query by vector similarity](../API/DataClassClass.md#query-by-vector-similarity) section.
 
-Use the `params` property to provide the filter with the vector comparison parameter, using a syntax like:
+Utilice la propiedad `params` para ofrecer al filtro el parámetro de comparación de vectores, utilizando una sintaxis como:
 
 **\{vectorAttribute\} \{comparator\} \{placeholder\}&$params=vectorComparison**
 
@@ -96,7 +96,7 @@ El parámetro *vectorComparison* es una colección de los siguientes elementos:
 | [].metric    | Text                 | Opcional. [Cálculo vectorial](../API/VectorClass.md#understanding-the-different-vector-computations) a utilizar para la consulta. Supported values:<li>"cosine" (default if omitted): calculates the cosine similarity between vectors.</li><li>"dot": calculates the dot similarity of vectors.</li><li>"euclidean": calculates the Euclidean distance between vectors. |
 | [].threshold | Real                 | Opcional (por defecto: 0,5). Un valor umbral utilizado para filtrar las comparaciones de vectores en función de su puntuación de similitud coseno, punto o euclídea según la "métrica" seleccionada. Es altamente recomendable elegir una similitud que se adapte mejor a su caso de uso específico para obtener resultados óptimos.                                                                                                                     |
 
-Solo un subconjunto de símbolos **comparadores** son soportados con comparaciones vectoriales. Tenga en cuenta que comparan los resultados con el valor umbral:
+Only a subset of **comparator** symbols is supported with vector comparisons. Tenga en cuenta que comparan los resultados con el valor umbral:
 
 | Comparador        | Símbolo(s) | Comentario                  |
 | ----------------- | ----------------------------- | --------------------------- |

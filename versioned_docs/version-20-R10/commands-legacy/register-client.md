@@ -57,7 +57,7 @@ In the following example, we are going to create a small messaging system that a
  PrClientList:=New process("4D Client List";32000;"List of registered clients")
 ```
 
-3) The method 4D Client List allows you to recuperate all the registered 4D clients and those that can receive messages:
+3) The 4D Client List method allows you to get all the registered 4D clients and those that can receive messages:
 
 ```4d
  If(Application type=4D Remote Mode)

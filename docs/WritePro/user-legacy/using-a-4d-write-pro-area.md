@@ -25,6 +25,7 @@ You can also use additional commands such as **Document.../Page size** or **Docu
 * Avoid page break inside property
 * Widow and orphan control.
 
+
 ## Paragraph breaks 
 
 When displayed in Page or Draft mode (or in the context of a document printing), 4D Write Pro paragraphs can break:
@@ -44,9 +45,12 @@ You can control automatic breaks in paragraphs using the following features:
 
 * **Widow and orphan control**: When this option is set for a paragraph, 4D Write Pro does not allow widows (last line of a paragraph isolated at the top of a page) or orphans (first line of a paragraph isolated at the bottom of a page) in the document. In the first case, the previous line of the paragraph is added to the top of the page so that two lines are displayed there. In the second case, the single first line is moved onto the next page.
 * **Avoid page break inside**: When this option is set for a paragraph, 4D Write Pro prevents this paragraph from being broken into parts on two or more pages.
-* **Keep with next:** When this option is set for a paragraph, that paragraph cannot be separated from the one that follows it by an automatic break. See `wk keep with next` and the corresponding *keepWithNext* [standard action](./defining-a-4d-write-pro-area.md#standard-actions).
+* **Keep with next:** When this option is set for a paragraph, that paragraph cannot be separated from the one that follows it by an automatic break. See `wk keep with next` and the corresponding *keepWithNext* [standard action](./user-legacy/standard-actions.md).
 
-These options can be set using the context menu, or [attributes](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). 
+These options can be set using the context menu, or [attributes](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./standard-actions). 
+
+
+<!-- INCLUDE lists-WP.Desc -->
 
 ## Background 
 
@@ -59,7 +63,7 @@ The background of 4D Write Pro documents and document elements (tables, paragrap
 * painting area
 * repeat
 
-These [attributes](../commands-legacy/4d-write-pro-attributes.md) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or by [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). 
+These [attributes](../commands-legacy/4d-write-pro-attributes.md) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or by [standard actions](./standard-actions). 
 
 Users can modify background attributes via the contextual menu as shown below:
 
@@ -279,8 +283,8 @@ Columns can be set using:
 
 * the **Columns** submenu of the 4D Write Pro area context menu,
 * 4D Write Pro [attributes](../commands-legacy/4d-write-pro-attributes.md),
-* 4D Write Pro [standard actions](./defining-a-4d-write-pro-area.md#standard-actions).
-
+* 4D Write Pro [standard actions](./standard-actions).
+(./user-legacy/standard-actions.md)
 You can set or get the following properties and actions for columns:
 
 | **Property**      | **Description**  | **Document attributes**| **Standard actions**  |

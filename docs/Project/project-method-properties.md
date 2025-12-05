@@ -24,9 +24,9 @@ The new name must comply with 4D naming rules (see [Identifiers](../Concepts/ide
 
 :::caution
 
-Changing the name of a method already used in the database can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. You can rename the method manually but it is strongly recommended to use the renaming function for project methods, described in [Renaming](https://doc.4d.com/4Dv20/4D/20.2/Renaming.300-6750165.en.html). With this function, you can automatically update the name wherever the method is called throughout the Design environment. 
+Changing the name of a method already used in the project can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. It is strongly recommended to use the [renaming function for project methods](../Project/search-replace.md#renaming-project-methods-and-variables). With this function, you can automatically update the name wherever the method is called throughout the Design environment. 
 
-With 4D Server, the method name is changed on the server when you finish editing it. If more than one user is modifying the method name at the same time, the final method name will be the name specified by the last user to finish editing it. You may want to specify a method owner so that only certain users can change the method's name
+With 4D Server, the method name is changed on the server when you finish editing it. If more than one user is modifying the method name at the same time, the final method name will be the name specified by the last user to finish editing it. You may want to specify a method owner so that only certain users can change the method's name.
 
 :::
 
@@ -105,7 +105,7 @@ For more information, refer to [4D SQL engine implementation](https://doc.4d.com
 
 *This option is deprecated. Calling code through REST calls is only supported with [ORDA data model class functions](../REST/ClassFunctions.md).*
 
-### Batch setting for method attributes  
+## Batch setting for method attributes  
 
 Using the "Attributes for methods" dialog box, you can modify an attribute (Invisible, Offered as a Web Service, etc.) for all or part of the database project methods in a single operation. This feature is especially useful for modifying the attributes of a large number of project methods. It can also be used during development to apply common attributes to groups of similar methods quickly.
 

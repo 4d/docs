@@ -4,7 +4,7 @@ title: Collection
 ---
 
 
-A classe Collection gerencia variáveis de tipo [Collection](Concepts/dt_collection.md).
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 Uma coleção se inicializa com:
 
@@ -453,14 +453,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.concat().Params -->
-| Parâmetro  | Tipo                                                           |    | Descrição                                                                                                               |
-| ---------- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------------- |
-| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Valores a concatenar. Se *value* for uma coleção, todos os elementos da coleção são adicionados para a coleção original |
-| Resultados | Collection                                                     | <- | Nova coleção com valores adicionados à coleção original|<!-- END REF -->
+| Parâmetro  | Tipo       |    | Descrição                                                                                                               |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------------------- |
+| value      | any        | -> | Valores a concatenar. Se *value* for uma coleção, todos os elementos da coleção são adicionados para a coleção original |
+| Resultados | Collection | <- | Nova coleção com valores adicionados à coleção original|<!-- END REF -->
 
 
 |

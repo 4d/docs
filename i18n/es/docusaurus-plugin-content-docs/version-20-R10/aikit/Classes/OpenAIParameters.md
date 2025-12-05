@@ -5,7 +5,7 @@ title: OpenAIParameters
 
 # OpenAIParameters
 
-The `OpenAIParameters` class is designed to handle execution and request parameters for interacting with the OpenAI API.
+La clase `OpenAIParameters` está diseñada para manejar los parámetros de ejecución y de petición para interactuar con la API OpenAI.
 
 ## Propiedades
 
@@ -24,16 +24,16 @@ Ver la [documentación sobre código asíncrono](../asynchronous-call.md)
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Por defecto es 0.                                            |
+| `timeout`      | Real      | Reemplaza el tiempo de espera predeterminado del nivel de cliente para la petición, en segundos. Por defecto es 0.                   |
 | `httpAgent`    | HTTPAgent | Anula el agente HTTP predeterminado a nivel de cliente para la petición.                                                                             |
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
 ### Propiedades OpenAPI
 
-| Propiedad | Tipo | Descripción                                                                                                 |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
-| `user`    | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
+| Propiedad | Tipo | Descripción                                                                                                                 |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------- |
+| `user`    | Text | Un identificador único que representa al usuario final y que ayuda a OpenAI a supervisar y detectar abusos. |
 
 ## Clases heredadas
 

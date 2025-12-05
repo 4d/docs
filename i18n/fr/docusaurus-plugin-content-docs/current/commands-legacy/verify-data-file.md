@@ -52,45 +52,43 @@ Pour créer l’historique, passez 0 dans *options*.
   
 Le paramètre *méthode* permet de définir une méthode de rétro-appel qui sera régulièrement appelée durant la vérification. Si vous passez une chaîne vide ou un nom de méthode non valide, ce paramètre est ignoré (aucune méthode n’est appelée). Lorsqu’elle est appelée, la méthode reçoit jusqu’à 5 paramètres en fonction des objets vérifiés et du type d’événement à l’origine de l’appel (cf. tableau des appels). Vous devez impérativement déclarer ces paramètres dans la méthode : 
 
-| $1 | Entier long | Type de message (cf. tableau) |
-| -- | ----------- | ----------------------------- |
-| $2 | Entier long | Type d’objet                  |
-| $3 | Texte       | Message                       |
-| $4 | Entier long | Numéro de table               |
-| $5 | Entier long | Réservé                       |
+| Paramètre | Type | Description |
+| ------------ | ----------- | ----------------------------- | 
+| $messageType | Entier long | Type de message (cf. tableau) |
+| $objectType  | Entier long | Type d’objet                  |
+| $messageText | Texte       | Message                       |
+| $table       | Entier long | Numéro de table               |
+| $reserved    | Entier long | Réservé                       |
 
 Le tableau suivant décrit le contenu des paramètres en fonction du type d’événement :
 
-| **Evénement**             | **$1 (Entier long)** | **$2 (** **Entier**   **long)** | **$3 (Texte)** | **$4 (** **Entier**   **long)** | **$5 (** **Entier**   **long)** |
-| ------------------------- | -------------------- | ------------------------------- | -------------- | ------------------------------- | ------------------------------- |
-| Message                   | 1                    | 0                               | Progression    | Pourcentage                     | Réservé                         |
-| message                   | réalisé (0-100)      |                                 |                |                                 |                                 |
-| Vérification terminée(\*) | 2                    | Type d’objet(\*\*)              | Message OK     | Table ou index                  | Réservé                         |
-| test                      | numéro               |                                 |                |                                 |                                 |
-| Erreur                    | 3                    | Type d’objet(\*\*)              | Texte d’erreur | Table ou index                  | Réservé                         |
-| message                   | numéro               |                                 |                |                                 |                                 |
-| Fin d’exécution           | 4                    | 0                               | DONE           | 0                               | Réservé                         |
-| Warning                   | 5                    | Type d'objet(\*\*)              | Texte d'erreur | Table ou index                  | Réservé                         |
-| message                   | numéro               |                                 |                |                                 |                                 |
+| **Evénement**             | **$messageType** | **$objectType**   | **$messageText**      | **$table** | **$reserved** |
+| ------------------------- | ---------------- | ----------------- | --------------------- | ------------------------------- | ------------------------------- |
+| Message                   | 1                | 0                 | Progression message   | Pourcentage  réalisé (0-100)    | Réservé                         |
+| Vérification terminée(\*) | 2                | Type d’objet(\*\*)| Message OK  test      | Table ou index   numéro         | Réservé                         |
+| Erreur                    | 3                | Type d’objet(\*\*)| Texte d’erreur message| Table ou index   numéro         | Réservé                         |
+| Fin d’exécution           | 4                | 0                 | DONE                  | 0                               | Réservé                         |
+| Warning                   | 5                | Type d'objet(\*\*)| Texte d'erreur        | Table ou index                  | Réservé                         |
+| | | | | message                         | numéro                          |
 
-(\*) L'événement *Vérification terminée* ($1=2) n'est jamais renvoyé lorsque le mode de vérification est Verify all. Il n'est utilisé qu'en mode Verify records ou Verify indexes.
+(\*) L'événement *Vérification terminée* ($messageType=2) n'est jamais renvoyé lorsque le mode de vérification est Verify all. Il n'est utilisé qu'en mode Verify records ou Verify indexes.
 
-(\*\*) *Type d’objet* : Lorsqu’un objet est vérifié, un message "terminé" ($1=2), erreur ($1=3) ou warning ($1=5) peut être envoyé. Le type d’objet retourné dans $2 peut être l’un des suivants :
+(\*\*) *Type d’objet* : Lorsqu’un objet est vérifié, un message "terminé" ($messageType=2), erreur ($messageType=3) ou warning ($messageType=5) peut être envoyé. Le type d’objet retourné dans $objectType peut être l’un des suivants :
 
 * 0 = indéterminé
 * 4 = enregistrement
 * 8 = index
 * 16 = objet structure (contrôle préliminaire du fichier de données).
 
-*Cas particulier* : lorsque $4 = 0 pour $1 = 2, 3 ou 5, le message ne concerne pas une table mais le fichier de données dans son ensemble.
+*Cas particulier* : lorsque $table = 0 pour $messageType = 2, 3 ou 5, le message ne concerne pas une table mais le fichier de données dans son ensemble.
 
-La méthode de rétro-appel doit également retourner une valeur dans $0 (Entier long), permettant de contrôler l’exécution de l’opération :
+La méthode de rétro-appel doit également retourner une valeur entière *$result*, permettant de contrôler l’exécution de l’opération :
 
-* si $0 = 0, l’opération continue normalement
-* si $0 = -128, l’opération est stoppée sans erreur générée
-* si $0 = autre valeur, l’opération est stoppée et la valeur passée dans $0 est retournée en tant que numéro d’erreur. Cette erreur peut être interceptée par une méthode d’appel sur erreur.
+* si $result = 0, l’opération continue normalement
+* si $result = -128, l’opération est stoppée sans erreur générée
+* si $result = autre valeur, l’opération est stoppée et la valeur passée dans $result est retournée en tant que numéro d’erreur. Cette erreur peut être interceptée par une méthode d’appel sur erreur.
 
-**Note :** Il n'est pas possible d'interrompre l'exécution via $0 après que l'événement *Fin d'exécution* ($4=1) a été généré.
+**Note :** Il n'est pas possible d'interrompre l'exécution via $result après que l'événement *Fin d'exécution* ($1=4) a été généré.
 
 Deux tableaux facultatifs peuvent également être utilisés par la commande :
 
@@ -109,7 +107,7 @@ Quelle que soit l'option sélectionnée, dès lors qu'un fichier d'historique es
 Vérification simple des données et des index :
 
 ```4d
- VERIFY DATA FILE($NomStruct;$NomData;Verify indexes+Verify records;Ne pas créer d’historique;"")
+ VERIFY DATA FILE($NomStruct;$NomData;Verify indexes+Verify records;Ne pas créer d’historique;"")
 ```
 
 ## Exemple 2 
@@ -117,7 +115,7 @@ Vérification simple des données et des index :
 Vérification complète avec historique :
 
 ```4d
- VERIFY DATA FILE($NomStruct;$NomData;Verify all;0;"")
+ VERIFY DATA FILE($NomStruct;$NomData;Verify all;0;"")
 ```
 
 ## Exemple 3 
@@ -125,7 +123,7 @@ Vérification complète avec historique :
 Vérification des enregistrements uniquement :
 
 ```4d
- VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"")
+ VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"")
 ```
 
 ## Exemple 4 
@@ -133,10 +131,10 @@ Vérification des enregistrements uniquement :
 Vérification des enregistrements des tables 3 et 7 uniquement :
 
 ```4d
- ARRAY LONGINT($tnumTables;2)
- $tnumTables{1}:=3
- $tnumTables{2}:=7
- VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"FollowScan";$tnumTables)
+ ARRAY LONGINT($tnumTables;2)
+ $tnumTables{1}:=3
+ $tnumTables{2}:=7
+ VERIFY DATA FILE($NomStruct;$NomData;Verify records;0;"FollowScan";$tnumTables)
 ```
 
 ## Exemple 5 
@@ -144,14 +142,14 @@ Vérification des enregistrements des tables 3 et 7 uniquement :
 Vérification d’index spécifiques (index du champ 1 de la table 4 et index des champs 2 et 3 de la table 5) :
 
 ```4d
- ARRAY LONGINT($tnumTables;0) //non utilisé mais obligatoire
- ARRAY LONGINT($tindex;2;0) //2 lignes (colonnes ajoutées ensuite)
- $tindex{1}{0}:=4 // numéro de table dans l’élément 0
- APPEND TO ARRAY($tindex{1};1) // numéro du 1er champ à vérifier
- $tindex{2}{0}:=5 // numéro de table dans l’élément 0
- APPEND TO ARRAY($tindex{2};2) // numéro du 1er champ à vérifier
- APPEND TO ARRAY($tindex{2};3) // numéro du 2e champ à vérifier
- VERIFY DATA FILE($NomStruct;$NomData;Verify indexes;0;"FollowScan";$tnumTables;$tindex)
+ ARRAY LONGINT($tnumTables;0) //non utilisé mais obligatoire
+ ARRAY LONGINT($tindex;2;0) //2 lignes (colonnes ajoutées ensuite)
+ $tindex{1}{0}:=4 // numéro de table dans l’élément 0
+ APPEND TO ARRAY($tindex{1};1) // numéro du 1er champ à vérifier
+ $tindex{2}{0}:=5 // numéro de table dans l’élément 0
+ APPEND TO ARRAY($tindex{2};2) // numéro du 1er champ à vérifier
+ APPEND TO ARRAY($tindex{2};3) // numéro du 2e champ à vérifier
+ VERIFY DATA FILE($NomStruct;$NomData;Verify indexes;0;"FollowScan";$tnumTables;$tindex)
 ```
 
 ## Exemple 6 
@@ -159,8 +157,8 @@ Vérification d’index spécifiques (index du champ 1 de la table 4 et index de
 Vérification du fichier de données, création et affichage du fichier d'historique :
 
 ```4d
- VERIFY DATA FILE(Structure file;Data file;Tout vérifier;0;"")
- SHOW ON DISK(File(Fichier log vérification).platformPath)
+ VERIFY DATA FILE(Structure file;Data file;Tout vérifier;0;"")
+ SHOW ON DISK(File(Fichier log vérification).platformPath)
 ```
 
 ## Variables et ensembles système 

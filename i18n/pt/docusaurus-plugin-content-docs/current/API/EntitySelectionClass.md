@@ -1735,11 +1735,13 @@ Neste exemplo, o campo de objeto "marks" na classe de dados **Students** contém
 
 <details><summary>História</summary>
 
-| Release | Mudanças                               |
-| ------- | -------------------------------------- |
-| 17 R6   | Soporte dos Parâmetros Formula         |
-| 17 R5   | Suporte dos marcadores para os valores |
-| 17      | Adicionado                             |
+| Release | Mudanças                                                    |
+| ------- | ----------------------------------------------------------- |
+| 21 R2   | Support of order by with 4D.Vector searches |
+| 21      | Support 4D.Vector objects                   |
+| 17 R6   | Soporte dos Parâmetros Formula                              |
+| 17 R5   | Suporte dos marcadores para os valores                      |
+| 17      | Adicionado                                                  |
 
 </details>
 

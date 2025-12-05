@@ -741,7 +741,7 @@ Los singletons son útiles para definir los valores que necesitan estar disponib
 
 - un **singleton proceso** tiene una instancia única para el proceso en el que se instancia,
 - un **singleton compartido** tiene una instancia única para todos los procesos en la máquina.
-- un **singleton de sesión** es un singleton compartido pero con una instancia única para todos los procesos en la [sesión](../API/SessionClass.md). Los singletons de sesión son compartidos dentro de una sesión completa, pero varían entre sesiones. En el contexto de un cliente-servidor o una aplicación web, los singletons de sesión hacen posible crear y utilizar una instancia diferente para cada sesión, y por lo tanto para cada usuario. Session singletons are particularly appropriate with [Qodly applications](https://developer.4d.com/qodly/).
+- un **singleton de sesión** es un singleton compartido pero con una instancia única para todos los procesos en la [sesión](../API/SessionClass.md). Los singletons de sesión son compartidos dentro de una sesión completa, pero varían entre sesiones. En el contexto de un cliente-servidor o una aplicación web, los singletons de sesión hacen posible crear y utilizar una instancia diferente para cada sesión, y por lo tanto para cada usuario. Los singletons de sesión son particularmente apropiados con [aplicaciones Qodly](https://developer.4d.com/qodly/).
 
 :::info
 
@@ -782,9 +782,9 @@ La propiedad [`isSingleton`](../API/ClassClass.md#issingleton) de los objetos Cl
 
 La propiedad [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton) de los objetos Class permite saber si la clase es un singleton de sesión.
 
-### Exposed singleton functions
+### Funciones singleton expuestas
 
-Shared and session singleton functions support the [`exposed` keyword](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). An exposed singleton function can be directly called by REST requests. This feature is useful to design [Qodly pages calling 4D functions](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions).
+Las funciones singleton compartidas y de sesión soportan la [palabra clave `exposed`](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions). Una función singleton expuesta puede ser llamada directamente por peticiones REST. Esta función es útil para diseñar [páginas Qodly que llamen a las funciones 4D](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#class-functions).
 
 ### Ejemplos
 

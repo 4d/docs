@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 <!-- END REF-->
 
-## Descripción 
+## Descripción
 
 <!--REF #_command_.VERIFY DATA FILE.Summary-->El comando VERIFY DATA FILE efectúa una verificación estructural de los objetos contenidos en el archivo de datos 4D designado por *rutaEstructura* y *rutaDatos*.<!-- END REF-->para mayor información sobre el proceso de verificación de datos, consulte el Manual de Diseño. *rutaEstructura* designa el archivo de estructura (compilado o no) asociado con el archivo de datos a verificar. Puede tratarse del archivo de estructura abierto o de cualquier otro archivo de estructura. Usted debe pasar un nombre de ruta completo, expresado con la sintaxis del sistema operativo. También puede pasar una cadena vacía, en este caso aparece una caja de diálogo estándar de apertura de archivos que permite al usuario designar el archivo de estructura a utilizar.
 
@@ -37,6 +37,7 @@ El parámetro *objetos* se utiliza para designar los tipos de objetos a verifica
 | Verify indexes | Entero largo | 8     | Esta opción verifica la consistencia física de los índices, sin enlace a los datos. Señala llaves inválidas pero no le permite detectar llaves duplicadas (dos índices que apuntan al mismo registro). Este tipo de error sólo puede detectarse con la opción Verificar todos. |
 | Verify records | Entero largo | 4     |                                                                                                                                                                                                                                                                                |
 
+
 Para verificar los registros y los índices, pase el total de Verify Records+Verify Indexes. El valor 0 (cero) también puede ser utilizado para obtener el mismo resultado. La opción Verify All realiza una verificación interna completa. Esta verificación es compatible con la creación de un historial.
 
 El parámetro *opciones* se utiliza para definir las opciones de verificación. Las siguientes opciones están disponibles, accesibles vía las constantes del tema “*Mantenimiento archivo de datos*”:
@@ -51,44 +52,44 @@ Generalmente, el comando VERIFY DATA FILE crea un archivo de historial en format
 
 El parámetro *metodo* permite definir un método de retrollamada que será llamado regularmente durante la verificación. Si pasa una cadena vacía o un nombre de método invalido, este parámetro se ignora (no se llama el método). Cuando se llama, este método recibe hasta 5 parámetros en función de los objetos verificados y del tipo de evento que origina la llamada (ver la tabla de llamadas). Es imperativo declarar estos parámetros en el método:
 
-| \- $1 | Entero largo | Tipo de mensaje (ver tabla) |
+
+| Parámetro | Tipo | Descripción |
 | ----- | ------------ | --------------------------- |
-| \- $2 | Entero largo | Tipo de objeto              |
-| \- $3 | Text         | Mensaje                     |
-| \- $4 | Entero largo | Número de tabla             |
-| \- $5 | Entero largo | Reservado                   |
+| $messageType | Integer | Tipo de mensaje (ver tabla) |
+| $objectType | Integer | Tipo de objeto            |
+| $messageText | Text    | Mensaje                  |
+| $table | Integer | Número de tabla              |
+| $reserved | Integer | Reservado                 |
 
 La siguiente tabla describe el contenido de los parámetros en función del tipo de evento:
 
-| **Evento**                  | **$1 (Entero largo)** | **$2 (Entero largo)** | **$3 (Texto)** | **$4 (Entero largo)** | **$5 (Entero largo)** |
-| --------------------------- | --------------------- | --------------------- | -------------- | --------------------- | --------------------- |
-| Mensaje                     | 1                     | 0                     | Progresión     | Porcentaje            | Reservado             |
-| mensaje                     | hecho (0-100)         |                       |                |                       |                       |
-| Fin de la verificación (\*) | 2                     | Tipo de objeto (\*\*) | Mensaje OK     | Tabla o índice        | Reservado             |
-| prueba                      | número                |                       |                |                       |                       |
-| Error                       | 3                     | Tipo de objeto (\*\*) | Texto de error | Tabla o índice        | Reservado             |
-| mensaje                     | número                |                       |                |                       |                       |
-| Fin de ejecución            | 4                     | 0                     | DONE           | 0                     | Reservado             |
-| Advertencia                 | 5                     | Tipo de objeto (\*\*) | Texto de error | Tabla o índice        | Reservado             |
-| mensaje                     | número                |                       |                |                       |                       |
+| **Event**       | **$messageType** | **$objectType**   | **$messageText**  | **$table** | **$reserved** |
+| ------- | ---------------- | ------------------ | -------------- | ---------------- | ---------------- |
+| Mensaje   | 1           | 0             | Mensaje de progresión   | Porcentaje (0-100)     | Reservado         |
+| Fin de la verificación (\*) | 2                | Tipo de objeto (\*\*) | Mensaje de prueba OK    | Tabla o número de índice  | Reservado         |
+| Error      | 3                | Tipo de objeto (\*\*) | Texto de mensaje de error | Tabla o número de índice  | Reservado         |
+| Fin de la ejecución           | 4                | 0                  | DONE           | 0                | Reservado         |
+| Advertencia                   | 5                | Tipo de objeto (\*\*)  | Texto de error  | Tabla o índice   | Reservado         |
+|||| mensaje                   | número      |
 
-(\*) El evento *Fin de la verificación* ($1=2) no se devuelve nunca cuando el modo de verificación es Verify All. Sólo se utiliza en modo Verify Records o Verify Indexes.  
-(\*\*) *Tipo de objeto*: cuando un objeto se verifica, puede enviarse un mensaje "terminado" ($1=2), error ($1=3) o terminado ($1=5). El tipo de objeto devuelto en $2 puede ser uno de los siguientes:
+(\*) El evento *Fin de la verificación* ($messageType=2) no se devuelve nunca cuando el modo de verificación es Verify All. Sólo se utiliza en modo Verify Records o Verify Indexes.  
+(\*\*) *Tipo de objeto*: cuando un objeto se verifica, puede enviarse un mensaje "terminado" ($messageType=2), error ($messageType=3) o terminado ($messageType=5). El tipo de objeto devuelto en $2 puede ser uno de los siguientes:
 
 * 0 = indeterminado
 * 4 = registro
 * 8 = índice
 * 16 = objeto estructura (control preliminar del archivo de datos).
 
-*Caso especial*: cuando $4 = 0 para $1=2, 3 ó 5, el mensaje no concierne a una tabla sino a un archivo de datos en su conjunto.
+*Caso especial*: cuando $table  = 0 para $messageType=2, 3 ó 5, el mensaje no concierne a una tabla sino a un archivo de datos en su conjunto.
 
-El método de retrollamada también debe retornar un valor en $0 (Entero largo), permitiendo controlar la ejecución de la operación:
+El método de retrollamada también debe retornar un valor entero *$result*, permitiendo controlar la ejecución de la operación:
 
-* Si $0 = 0, la operación continúa normalmente
-* Si $0 = -128, la operación se detiene sin que se genere error
-* Si $0 = otro valor, la operación se detiene y el valor pasado en $0 se devuelve como número de error. Este error puede ser interceptado por un método de gestión de errores.
+* Si $result  = 0, la operación continúa normalmente
+* Si $result  = -128, la operación se detiene sin que se genere error
+* Si $result  = otro valor, la operación se detiene y el valor pasado en $result se devuelve como número de error. Este error puede ser interceptado por un método de gestión de errores.
 
-**Nota**: no es posible interrumpir la ejecución vía $0 luego de que el evento se haya generado *Fin de ejecución* ($4=1).
+**Nota**: no es posible interrumpir la ejecución vía $result luego de que el evento se haya generado *Fin de ejecución* ($1=4).
+
 
 Dos arrays opcionales también pueden ser utilizados por este comando:
 
@@ -176,5 +177,3 @@ Si el método de retrollamada no existe, la verificación no se efectúa, se gen
 | Número de comando | 939 |
 | Hilo seguro | &check; |
 | Modifica variables | OK, Document, error |
-
-

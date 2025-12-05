@@ -1,6 +1,6 @@
 ---
 id: command-index
-title: Commands by name
+title: コマンド(名前順)
 ---
 
 [4D](#4D) - [A](#A) - [B](#B) - [C](#C) - [D](#D) - [E](#E) - [F](#F) - [G](#G) - [H](#H) - [I](#I) - [J](#J) - [K](#K) - [L](#L) - [M](#M) - [N](#N) - [O](#O) - [P](#P) - [Q](#Q) - [R](#R) - [S](#S) - [T](#T) - [U](#U) - [V](#V) - [W](#W) - [X](#X) - [Y](#Y) - [Z](#Z)
@@ -1288,6 +1288,8 @@ title: Commands by name
 [`WA STOP LOADING URL`](../commands-legacy/wa-stop-loading-url.md)<br/>
 [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md)<br/>
 [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md)<br/>
+[`Web Event`](web-event.md)<br/>
+[`Web Form`](web-form.md)<br/>
 [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md)<br/>
 [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md)<br/>
 [`WEB Get current session ID`](../commands-legacy/web-get-current-session-id.md)<br/>

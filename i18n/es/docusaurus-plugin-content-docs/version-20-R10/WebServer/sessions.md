@@ -25,7 +25,7 @@ Las sesiones web se utilizan para:
 - [Aplicaciones web](gettingStarted.md) que envían peticiones http,
 - llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [formularios Qodly](qodly-studio.md).
 
-## Habilitando sesiones web
+## Activando sesiones web {#enabling-web-sessions}
 
 La funcionalidad de gestión de sesiones puede ser activada y desactivada en su servidor web 4D. Hay diferentes maneras de habilitar la gestión de la sesión:
 
@@ -201,7 +201,7 @@ Else
 End if
 ```
 
-:::tips Entradas de blog relacionadas
+:::tip Entradas de blog relacionadas
 
 [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
@@ -261,7 +261,7 @@ El token OTP se considera inválido si:
 - el token de sesión no existe,
 - la propia sesión original ha caducado.
 
-In this case, no web user session is restored and the current session (if any) is left unchanged. Normalmente, puede decidir mostrar una página de conexión o abrir una sesión guest.
+En este caso, no se restaura ninguna sesión de usuario web y la sesión actual (si existe) se deja sin cambios. Normalmente, puede decidir mostrar una página de conexión o abrir una sesión guest.
 
 La verificación de la validez del token OTP recibido depende de cómo fue manejado:
 

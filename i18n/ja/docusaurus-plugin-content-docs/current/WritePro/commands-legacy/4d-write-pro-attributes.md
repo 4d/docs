@@ -18,12 +18,12 @@ slug: /WritePro/4d-write-pro-attributes
 
 * オブジェクト記法(\*) - 例えば、以下の二つの宣言は非常に似ています:  
 ```4d  
- $bcol:=$range[wk background color]  
- $bcol:=$range.backgroundColor //同じ結果を得る  
+ $bcol:=$range[wk background color]  
+ $bcol:=$range.backgroundColor //同じ結果を得る  
 ```
 * [OB SET](../../commands-legacy/ob-set.md) および [OB Get](../../commands-legacy/ob-get.md) コマンドを使用します。例:  
 ```4d  
- $bcol:=OB Get($range;wk background color)  
+ $bcol:=OB Get($range;wk background color)  
 ```  
     
 :::
@@ -253,7 +253,7 @@ slug: /WritePro/4d-write-pro-attributes
 
 ### リスト 
 
-4D Write Proは主に二つのタイプのリストをサポートしています:
+4D Write Proは主に二つのタイプの[リスト](../user-legacy/using-a-4d-write-pro-area.md#lists)をサポートしています:
 
 * 順番付けのないリスト: リスト項目が中点と記されているリスト
 * 順番付けされているリスト: リスト項目が番号あるいは文字で記されているリスト

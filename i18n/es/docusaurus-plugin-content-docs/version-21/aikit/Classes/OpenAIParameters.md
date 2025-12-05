@@ -5,7 +5,7 @@ title: OpenAIParameters
 
 # OpenAIParameters
 
-The `OpenAIParameters` class is designed to handle execution and request parameters for interacting with the OpenAI API.
+La clase `OpenAIParameters` está diseñada para manejar los parámetros de ejecución y de petición para interactuar con la API OpenAI.
 
 ## Propiedades
 
@@ -17,14 +17,14 @@ Utilice esta propiedad de retrollamada para recibir el resultado independienteme
 | ------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onTerminate`<br>(o `formula`) | 4D.Function | Una función que se llamará de forma asíncrona cuando termine. Asegúrese de que el proceso actual no termina. |
 
-Use these callback properties for more granular control over success and error handling:
+Utilice estas propiedades de retrollamada para un control más granular de la gestión de éxito y de errores:
 
 | Propiedad    | Tipo                        | Descripción                                                                                                                                                               |
 | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `onResponse` | 4D.Function | Una función a llamar de forma asíncrona cuando la petición finalice **con éxito**. Asegúrese de que el proceso actual no termina.         |
 | `onError`    | 4D.Function | Una función que se llamará de forma asíncrona cuando la petición finalice **con errores**. Asegúrese de que el proceso actual no termina. |
 
-> The callback function will receive the same result object type (one of [OpenAIResult](./OpenAIResult.md) child classes) that would be returned by the function in synchronous code.
+> La función de retrollamada recibirá el mismo tipo de objeto de resultado (una de las clases hijas de [OpenAIResult](./OpenAIResult.md)) que devolvería la función en un código síncrono.
 
 Ver la [documentación sobre código asíncrono para ejemplos](../asynchronous-call.md)
 
@@ -32,16 +32,16 @@ Ver la [documentación sobre código asíncrono para ejemplos](../asynchronous-c
 
 | Propiedad      | Tipo      | Descripción                                                                                                                                                          |
 | -------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `timeout`      | Real      | Overrides the client-level default timeout for the request, in seconds. Por defecto es 0.                                            |
+| `timeout`      | Real      | Reemplaza el tiempo de espera predeterminado del nivel de cliente para la petición, en segundos. Por defecto es 0.                   |
 | `httpAgent`    | HTTPAgent | Anula el agente HTTP predeterminado a nivel de cliente para la petición.                                                                             |
 | `maxRetries`   | Integer   | El número máximo de reintentos para la petición. (Sólo si el código no es asíncrono, es decir, no se proporciona ninguna función) |
 | `extraHeaders` | Object    | Encabezados adicionales para enviar con la petición.                                                                                                 |
 
 ### Propiedades OpenAPI
 
-| Propiedad | Tipo | Descripción                                                                                                 |
-| --------- | ---- | ----------------------------------------------------------------------------------------------------------- |
-| `user`    | Text | A unique identifier representing the end-user, which helps OpenAI monitor and detect abuse. |
+| Propiedad | Tipo | Descripción                                                                                                                 |
+| --------- | ---- | --------------------------------------------------------------------------------------------------------------------------- |
+| `user`    | Text | Un identificador único que representa al usuario final y que ayuda a OpenAI a supervisar y detectar abusos. |
 
 ### Otras
 

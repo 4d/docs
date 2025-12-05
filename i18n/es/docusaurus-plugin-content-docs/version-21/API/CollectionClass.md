@@ -3,7 +3,7 @@ id: CollectionClass
 title: Collection
 ---
 
-La clase Collection gestiona variables de tipo [Collection](Concepts/dt_collection.md).
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 Una colección es inicializada con los comandos [`New collection`](../commands/new-collection.md) o [`New shared collection`](../commands/new-shared-collection.md).
 
@@ -264,14 +264,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Colección<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 
-| Parámetros | Tipo                                                           |                             | Descripción                                                                                                                                         |
-| ---------- | -------------------------------------------------------------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valores a concatenar. Si *value* es una colección, todos sus elementos se añaden al final de la colección original. |
-| Resultado  | Collection                                                     | <- | Colección original con valores rellenados                                                                                                           |
+| Parámetros | Tipo       |                             | Descripción                                                                                                                                         |
+| ---------- | ---------- | :-------------------------: | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| value      | any        |              ->             | Valores a concatenar. Si *value* es una colección, todos sus elementos se añaden al final de la colección original. |
+| Resultado  | Collection | <- | Colección original con valores rellenados                                                                                                           |
 
 <!-- END REF -->
 
@@ -3171,14 +3171,12 @@ La función `.sort()` <!-- REF #collection.sort().Summary -->ordena los elemento
 Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
 También puede pasar una de las siguientes constantes en el parámetro *ascOrDesc*:
 
- ```
- |Constant|	Type|Value|Comment|
- |---|---|---|---|
- |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
- |ck descending|Integer|1|Elements are ordered in descending order|
- 
- This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
- ```
+| Constante     | Tipo    | Valor | Comentario                                                                    |
+| ------------- | ------- | ----- | ----------------------------------------------------------------------------- |
+| ck ascending  | Integer | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
+| ck descending | Integer | 1     | Los elementos se ordenan de forma descendente                                 |
+
+Esta sintaxis sólo ordena los valores escalares de la colección (otros tipos de elementos, como objetos o colecciones, se devuelven desordenados).
 
 Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si <em x-id="3">attributePath</em> lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 

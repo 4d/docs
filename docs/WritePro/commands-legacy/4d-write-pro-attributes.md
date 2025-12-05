@@ -251,7 +251,7 @@ Link attributes are used to set or get URLs added to ranges. They can be applied
 
 ### Lists 
 
-4D Write Pro supports two main types of lists:
+4D Write Pro supports two main [types of lists](../user-legacy/using-a-4d-write-pro-area.md#lists):
 
 * unordered lists: where list items are marked with bullets
 * ordered lists: where list items are marked with numbers or letters

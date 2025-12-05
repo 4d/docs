@@ -3,7 +3,7 @@ id: CollectionClass
 title: Collection
 ---
 
-A classe Collection gerencia variáveis do tipo [Collection](Concepts/dt_collection.md).
+The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
 
 Uma coleção é inicializada com os comandos [`New collection`](../commands/new-collection.md) ou [`New shared collection`](../commands/new-shared-collection.md).
 
@@ -271,14 +271,14 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { ; *...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 
-| Parâmetro  | Tipo                                                           |                             | Descrição                                                                                                                                                                      |
-| ---------- | -------------------------------------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| value      | Number, Text, Object, Collection, Date, Time, Boolean, Picture |              ->             | Valores a concatenar. Se *valor* for uma coleção, todos os seus elementos serão adicionados como novos elementos no final da coleção original. |
-| Resultados | Collection                                                     | <- | Nova coleção com valores adicionados à coleção original                                                                                                                        |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                                                                                      |
+| ---------- | ---------- | :-------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| value      | any        |              ->             | Valores a concatenar. Se *valor* for uma coleção, todos os seus elementos serão adicionados como novos elementos no final da coleção original. |
+| Resultados | Collection | <- | Nova coleção com valores adicionados à coleção original                                                                                                                        |
 
 <!-- END REF -->
 
@@ -3195,14 +3195,12 @@ A função `.sort()` <!-- REF #collection.sort().Summary -->classifica os elemen
 Se `.sort()` for chamado sem parâmetros, somente os valores escalares (número, texto, data, booleanos) serão classificados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
 You can also pass one of the following constants in the *ascOrDesc* parameter:
 
- ```
- |Constant|	Type|Value|Comment|
- |---|---|---|---|
- |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
- |ck descending|Integer|1|Elements are ordered in descending order|
- 
- This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
- ```
+| Parâmetros    | Tipo    | Valor | Comentário                                                                     |
+| ------------- | ------- | ----- | ------------------------------------------------------------------------------ |
+| ck ascending  | Integer | 0     | Os elementos são ordenados de forma ascendente (por padrão) |
+| ck descending | Integer | 1     | Os elementos são ordenados de forma descendente                                |
+
+Essa sintaxe ordena apenas os valores escalares da coleção (outros tipos de elementos como objetos ou coleções são retornados sem ordenar).
 
 Se a coleção conter elementos de tipos diferentes, são primeiro agrupados por tipo e ordenados depois. Se <em x-id="3">attributePath</em> levar a uma propriedade de objeto que conter valores de diferentes tipos, primeiro se agrupam por tipo e se ordenam depois.
 

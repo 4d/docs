@@ -25,7 +25,7 @@ Si el comando se ejecuta en una aplicación 4D que no utiliza localmente una lic
 Este comando recarga los archivos de licencia desde el disco y actualiza los derechos asociados si han sido modificados.
 
 :::
-The returned object contains the following properties:
+El objeto devuelto contiene las siguientes propiedades:
 
 ```json
 {

@@ -10,12 +10,12 @@ displayed_sidebar: docs
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | tabla | Table | &#8594;  | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
-| opConj | * | &#8594;  | Operador de conjunción ausar para combinar varias búsquedas (si las hay) |
+| opConj | Operator | &#8594;  | Operador de conjunción a usar para combinar varias búsquedas (si las hay) |
 | campoObjeto | Field | &#8594;  | Campo objeto cuyos atributos utilizar para la búsqueda |
 | rutaAtributo | Text | &#8594;  | Nombre o ruta de atributo |
-| opBusq | Text, * | &#8594;  | Operador de búsqueda (comparador) |
+| opBusq | Text, Operator | &#8594;  | Operador de búsqueda (comparador) |
 | valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
-| * | Operador | &#8594;  | Espera de ejecución de la búsqueda |
+| * | Operator | &#8594;  | Espera de ejecución de la búsqueda |
 
 <!-- END REF-->
 

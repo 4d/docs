@@ -1738,11 +1738,13 @@ Dans cet exemple, le champ objet "marks" de la dataclass **Students** contient l
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                                     |
-| ------- | ------------------------------------------------- |
-| 17 R6   | Prise en charge des paramètres Formula            |
-| 17 R5   | Prise en charge des placeholders pour les valeurs |
-| 17      | Ajout                                             |
+| Release | Modifications                                                             |
+| ------- | ------------------------------------------------------------------------- |
+| 21 R2   | Prise en charge du tri dans les recherches avec 4D.Vector |
+| 21      | Prise en charge des objets 4D.Vector                      |
+| 17 R6   | Prise en charge des paramètres Formula                                    |
+| 17 R5   | Prise en charge des placeholders pour les valeurs                         |
+| 17      | Ajout                                                                     |
 
 </details>
 

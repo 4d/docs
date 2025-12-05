@@ -126,7 +126,7 @@ Define el sistema de autenticación que desea aplicar a su servidor web. Se prop
 
 Se recomienda utilizar la autenticación **personalizada**. Ver la sección[**autenticación**](../WebServer/authentication.md).
 
-#### Generic Web User
+#### Usuario web genérico
 
 Ver [Propiedades obsoletas](../WebServer/webServerConfig.md#deprecated-settings).
 

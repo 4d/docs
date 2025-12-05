@@ -939,7 +939,7 @@ Les formules contenues dans les requêtes peuvent recevoir des paramètres via $
   - Constantes de type **date** : "YYYY-MM-DD" format
   - Constantes **null** : en utilisant le mot-clé "null", la recherche trouvera les propriétés ayant la valeur **null** et **undefined**.
   - dans le cas d'une recherche avec un comparateur IN, *value* doit être une collection ou des valeurs correspondant au type de l'attribut path entre \[ ] séparés par des virgules (pour les chaînes, les caractères `"` doivent être échappés avec `\`).
-  - **objet** : seuls les objets [4D.Vector](../API/VectorClass.md) sont pris en charge, dans le contexte des **recherches de similarité vectorielle** (*attributePath* doit également contenir des objets 4D.Vector valides).
+  - **object** : seuls les objets [4D.Vector](../API/VectorClass.md) sont pris en charge dans le contexte des [**requêtes de similarité vectorielle**](#query-by-vector-similarity) (*attributePath* doit également contenir des objets 4D.Vector valides).
 - **logicalOperator** : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :
 
 | Conjonction | Symbole(s)                                                       |
@@ -1203,6 +1203,20 @@ var $myVector : 4D.Vector
 $myVector := getVector //méthode pour obtenir un vecteur, par exemple à partir de 4D.AIKit
 var $comparisonVector := {vector : $myVector; metric : mk euclidean ; threshold : 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1" ; $comparisonVector)
+```
+
+L'instruction **order by** est prise en charge dans la chaîne de requête afin que les entités de l'entity selection résultante soient triées par similarité. Par exemple :
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField" ; $comparisonVector)  
+  //ordre par défaut, la première entité est la plus similaire
+```
+
+Si le même vecteur apparaît plusieurs fois dans la chaîne de requête, l'ordre par sera appliqué aux résultats du premier, par exemple :
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc ; /
+    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 est utilisé pour le tri
 ```
 
 Voir [plus d'exemples ci-dessous](#example-4-2) (exemples 4 et 5).

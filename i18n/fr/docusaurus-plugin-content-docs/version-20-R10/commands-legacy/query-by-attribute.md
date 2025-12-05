@@ -10,10 +10,10 @@ displayed_sidebar: docs
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | laTable | Table | &#8594;  | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| opConj | * | &#8594;  | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
+| opConj | Operator | &#8594;  | Opérateur à utiliser pour combiner plusieurs requêtes (le cas échéant) |
 | champObjet | Field | &#8594;  | Champ objet dont les attributs sont à utiliser pour la recherche |
 | cheminAttribut | Text | &#8594;  | Nom ou chemin d'attribut |
-| opRech | Text, * | &#8594;  | Opérateur de recherche (comparateur) |
+| opRech | Text, Operator | &#8594;  | Opérateur de recherche (comparateur) |
 | valeur | Text, Number, Date, Time | &#8594;  | Valeur à comparer |
 | * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
 
@@ -65,7 +65,7 @@ La *valeur* représente ce qui va être comparé au contenu de *cheminAttribut*.
 Voici la structure type d'une recherche par attribut :
 
 ```4d
- QUERY BY ATTRIBUTE([Table] ;[Table]ChampObjet ;"attribut1.attribut2";=;valeur)
+ QUERY BY ATTRIBUTE([Table] ;[Table]ChampObjet ;"attribut1.attribut2";=;valeur)
 ```
 
 **Note :** La présence de l'attribut dans le champ objet est un critère implicite pour tous les opérateurs (hormis #). En revanche, pour l'opérateur #, il peut être indéfini (cf. ci-dessous). 
@@ -75,7 +75,7 @@ Voici la structure type d'une recherche par attribut :
 Lorsque vous effectuez une recherche par attribut à l'aide de l'opérateur #, vous devez prendre en considération les cas où un attribut n'est pas présent dans un enregistrement. Considérons par exemple ce qui suit :   
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]Animaux;"chien.nom";#;"Médor")
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]Animaux;"chien.nom";#;"Médor")
 ```
 
 Cette recherche retournera les enregistrements des personnes ayant un chien dont le nom n'est pas "Médor", mais ne retournera PAS les les enregistrements des personnes n'ayant pas de chien, ou ayant un chien sans nom, c'est-à-dire les enregistrements pour lesquels la valeur de la proprité "chien.nom" est **null**. Le concept est le suivant : le moteur de recherche ne peut pas comparer l'incomparable, à savoir les données manquantes ou inexistantes. Ainsi, les enregistrements qui ne peuvent pas être comparés aux critères de recherche sont exclus de la recherche.
@@ -83,7 +83,7 @@ Cette recherche retournera les enregistrements des personnes ayant un chien dont
 Voici un exemple plus générique :   
 
 ```4d
- QUERY BY ATTRIBUTE([Table];[Table]ChampObjet;"attribut1.attribut2";#;valeur)
+ QUERY BY ATTRIBUTE([Table];[Table]ChampObjet;"attribut1.attribut2";#;valeur)
 ```
   
   
@@ -95,7 +95,7 @@ Cette recherche retournera tous les enregistrements pour lesquels *\[Table\]Cham
 Ce principe s'applique également aux attributs tableaux. Par exemple, la recherche retournera les enregistrements des personnes ayant une ou plusieurs adresses, mais n'ayant aucune adresse à Paris.  
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";#;"paris")
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";#;"paris")
 ```
 
   
@@ -129,20 +129,20 @@ Les dates sont stockées dans les objets en fonction des paramètres de la base 
 Ce paramétrage est également respecté durant les recherches, donc vous n'avez pas à vous en préoccuper si vous utilisez toujours votre base dans la même zone et si les paramètres sont identiques sur chaque machine qui accède aux données. Dans ce contexte, la recherche suivante retournera bien les enregistrements dont l'attribut Anniversaire est égal à !1973-05-22! (stocké "1973-05-21T23:00:00.00Z") :
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;!1973-05-22!)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;!1973-05-22!)
 ```
 
 Si vous ne souhaitez pas utiliser le paramétrage GMT, vous pouvez exécuter l'instruction suivante :
 
 ```4d
- SET DATABASE PARAMETER(JSON use local time;0)
+ SET DATABASE PARAMETER(JSON use local time;0)
 ```
 
 Attention, la portée de ce paramètre est limitée au process. Si vous exécutez cette instruction, le 1er Octobre 1965 sera stocké "1965-10-01T00:00:00.000Z" mais vous devrez fixer le même paramètre avant de lancer vos recherches :
 
 ```4d
- SET DATABASE PARAMETER(JSON use local time;0)
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;1976-11-27!)
+ SET DATABASE PARAMETER(JSON use local time;0)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"Anniversaire";=;1976-11-27!)
 ```
 
 ### Utilisation de la propriété virtuelle length 
@@ -177,8 +177,8 @@ Par exemple, avec les deux enregistrements suivants :
 Vous souhaitez trouver les personnes qui ont un type d'adresse "home" dans la ville "Paris". Si vous écrivez : 
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";=;"Paris";*)
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].kind";=;"home")
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";=;"Paris";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].kind";=;"home")
 ```
 
 ... la recherche retournera "Martin" et "Smith" car "Smith" a un élément "locations" dont le "kind" est "home" et un (autre) élément "locations" dont la "city" est "Paris".
@@ -191,8 +191,8 @@ Vous souhaitez trouver les personnes qui ont un type d'adresse "home" dans la vi
 Avec les mêmes enregistrements que précédemment, si vous écrivez :
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[a].city";=;"Paris";*)
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[a].kind";=;"home")
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[a].city";=;"Paris";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[a].kind";=;"home")
 ```
 
 ... la recherche retournera uniquement "Martin" car il a un élément "locations" dont le "kind" est "home" et dont la "city" est "Paris". La recherche ne retournera pas "Smith" car les valeurs "Paris" et "home" ne se trouvent pas dans le même élément de tableau. Reportez-vous ci-dessous pour plus d'exemples d'utilisations de cette fonctionnalité. 
@@ -204,10 +204,10 @@ Avec les mêmes enregistrements que précédemment, si vous écrivez :
 Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous souhaitons trouver les personnes dont l'âge est situé entre 20 et 29\. Les deux premières lignes interrogent l'attribut en tant qu'entier (>=20 et < 30) et les suivantes interrogent l'attribut en tant que chaîne (débute par "2" mais est différent de "2").
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"age";>=;20;*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";<;30;*)
- QUERY BY ATTRIBUTE([Personnes];|;[Personnes]OB_Info;"age";=;"2@";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";#;"2") //pas de * final pour lancer l'exécution
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Info;"age";>=;20;*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";<;30;*)
+ QUERY BY ATTRIBUTE([Personnes];|;[Personnes]OB_Info;"age";=;"2@";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Info;"age";#;"2") //pas de * final pour lancer l'exécution
 ```
 
 ## Exemple 2 
@@ -215,15 +215,15 @@ Dans cet exemple, l'attribut "age" est soit une chaîne soit un entier et nous s
 La commande **QUERY BY ATTRIBUTE** peut être utilisée pour rechercher des enregistrements dans lesquels certains attributs sont définis (ou non définis). Pour cela, vous devez utiliser un objet vide : 
 
 ```4d
-  //Trouver les enregistrements où l'email est défini dans le champ objet
- var $undefined : Object
- QUERY BY ATTRIBUTE([Personnes];[Personnes]Info;"email";#;$undefined)
+  //Trouver les enregistrements où l'email est défini dans le champ objet
+ var $undefined : Object
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]Info;"email";#;$undefined)
 ```
 
 ```4d
-  //Trouver les enregistrements où le zip code n'est PAS défini dans le champ objet
- var $undefined : Object
- QUERY BY ATTRIBUTE([Personnes];[Personnes]Info;"zip code";=;$undefined)
+  //Trouver les enregistrements où le zip code n'est PAS défini dans le champ objet
+ var $undefined : Object
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]Info;"zip code";=;$undefined)
 ```
 
 **Note :** Cette syntaxe spécifique n'est pas prise en charge avec les attributs de type tableau. La recherche de valeurs NULL dans les attributs de tableau donne des résultats invalides. 
@@ -254,17 +254,17 @@ Vous voulez chercher un champ contenant des attributs tableaux. Avec les deux en
 ... **QUERY BY ATTRIBUTE** trouvera les personnes ayant une localisation à "paris" par cette recherche :
 
 ```4d
-  //on indique l'attribut tableau avec la syntaxe "[]"
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";=;"paris")
-  //trouve "martin" et "smith"
+  //on indique l'attribut tableau avec la syntaxe "[]"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].city";=;"paris")
+  //trouve "martin" et "smith"
 ```
 
 **Note :** Si vous avez défini plusieurs critères sur le même attribut tableau, les critères correspondants ne s'appliqueront pas nécessairement au même élément de tableau. Dans l'exemple ci-dessous, la recherche retournera "smith" car l'attribut a un élément "locations" dont le "kind" est "home" et un élément "locations" dont le "city" est "paris", même s'il ne s'agit pas du même élément :
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].kind";=;"home";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Field;"locations[].city";=;"paris")
-  //trouve "smith"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OB_Field;"locations[].kind";=;"home";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OB_Field;"locations[].city";=;"paris")
+  //trouve "smith"
 ```
 
 ## Exemple 4 
@@ -276,7 +276,7 @@ Cet exemple illustre l'utilisation de la propriété virtuelle "length". Votre b
 Vous souhaitez obtenir les enregistrements des clients qui ont deux enfants ou plus. Vous pouvez écrire :
 
 ```4d
- QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
+ QUERY BY ATTRIBUTE([Customer];[Customer]full_Data;"Children.length";>=;2)
 ```
 
 ## Exemple 5 
@@ -355,45 +355,45 @@ Ces exemples illustrent les différentes combinaisons de liaisons de critères d
 Recherche des personnes qui ont un enfant de 15 ans nommé "Betty" :
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Betty";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15")
-  //retourne "Victor"
- 
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Betty";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15")
-  //retourne "Sam", "Louis" et "Victor"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15")
+  //retourne "Victor"
+ 
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15")
+  //retourne "Sam", "Louis" et "Victor"
 ```
 
 Recherche des personnes qui ont un enfant de 15 ans nommé "Betty" et un enfant de 9 ans nommé "Harry" :
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Betty";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[b].Nom";=;"Harry";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[b].Age";=;"9")
-  //retourne "Victor"
- 
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Betty";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Harry";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"9")
-  //retourne "Sam" et "Victor"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[b].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[b].Age";=;"9")
+  //retourne "Victor"
+ 
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Betty";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"9")
+  //retourne "Sam" et "Victor"
 ```
 
 Recherche des personnes qui ont un enfant de 15 ans nommé "Harry" qui a une voiture bleue en jouet (recherche dans un tableau de tableaux):
 
 ```4d
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Harry";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Jouets[b].Nom";=;"Voiture";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Jouets[b].Coul";=;"Bleu")
-  //retourne "Sam"
- 
- QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Harry";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Jouets[].Nom";=;"Voiture";*)
- QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Jouets[].Coul";=;"Bleu")
-  //retourne "Sam" et "Louis"
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[a].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Jouets[b].Nom";=;"Voiture";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[a].Jouets[b].Coul";=;"Bleu")
+  //retourne "Sam"
+ 
+ QUERY BY ATTRIBUTE([Personnes];[Personnes]OBField;"Enfants[].Nom";=;"Harry";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Age";=;"15";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Jouets[].Nom";=;"Voiture";*)
+ QUERY BY ATTRIBUTE([Personnes];&;[Personnes]OBField;"Enfants[].Jouets[].Coul";=;"Bleu")
+  //retourne "Sam" et "Louis"
 ```
 
 ## Variables et ensembles système 

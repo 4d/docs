@@ -5,17 +5,17 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*tabla*}{;}{*conjOp* ;} *campoObjeto* ; *rutaAtributo* ; *opBusq* ; *valor* {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*tabla*}{;}{*opConj* ;} *campoObjeto* ; *rutaAtributo* ; *opBusq* ; *valor* {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual devolver una selección de registros o tabla por defecto si se omite |
-| conjOp | * | &#8594;  | Operador de conjunción a utilizar ara unir múltiples búsquedas (si las hay) |
-| campoObjeto | Field | &#8594;  | Campo objeto para buscar atributos |
+| tabla | Table | &#8594;  | Tabla para la cual devolver una selección de registros o Tabla por defecto si se omite |
+| opConj | Operator | &#8594;  | Operador de conjunción a usar para combinar varias búsquedas (si las hay) |
+| campoObjeto | Field | &#8594;  | Campo objeto cuyos atributos utilizar para la búsqueda |
 | rutaAtributo | Text | &#8594;  | Nombre o ruta de atributo |
-| opBusq | *, Text | &#8594;  | Operador de búsqueda (comparador) |
+| opBusq | Text, Operator | &#8594;  | Operador de búsqueda (comparador) |
 | valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
-| * | Operador | &#8594;  | Continuar bandera de búsqueda |
+| * | Operator | &#8594;  | Espera de ejecución de la búsqueda |
 
 <!-- END REF-->
 

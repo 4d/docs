@@ -18,7 +18,7 @@ Una sesión se abre después de que el usuario haya iniciado sesión correctamen
 
 :::note Compatibilidad
 
-El modo de inicio de sesión heredado basado en el método base `On REST Authentication` está **obsoleto** a partir de 4D 20 R6. Ahora se recomienda [utilizar el **modo Force login**](../ORDA/privileges.md#rolesjson-file) (activado automáticamente en nuevos proyectos) e implementar la función [`ds.authentify()`](#function-authentify). En proyectos convertidos, [un botón en la caja de diálogo de Parámetros](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) le ayudará a actualizar su configuración. En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](../WebServer/qodly-studio.md#force-login) en el panel de Privilegios.
+El modo de inicio de sesión heredado basado en el método base `On REST Authentication` está **obsoleto** a partir de 4D 20 R6. Ahora se recomienda [utilizar el **modo Force login**](../ORDA/privileges.md#rolesjson-file) (activado automáticamente en nuevos proyectos) e implementar la función [`ds.authentify()`](#function-authentify). En proyectos convertidos, [un botón en la caja de diálogo de Parámetros](../settings/web.md#activate-rest-authentication-through-dsauthentify-function) le ayudará a actualizar su configuración. En Qodly Studio for 4D, el modo se puede definir utilizando la opción [**Forzar inicio de sesión**](https://developer.4d.com/qodly/4DQodlyPro/force-login) en el panel de Privilegios.
 
 :::
 

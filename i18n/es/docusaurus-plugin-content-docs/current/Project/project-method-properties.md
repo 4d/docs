@@ -22,9 +22,9 @@ El nuevo nombre debe cumplir con las reglas de denominación de 4D (ver [Identif
 
 :::caution
 
-Cambiar el nombre de un método ya utilizado en la base de datos puede invalidar cualquier método o fórmula que utilice el antiguo nombre de método y corre el riesgo de interrumpir el funcionamiento de la aplicación. Puede cambiar el nombre del método manualmente, pero se recomienda utilizar la función de cambio de nombre de los métodos proyecto, descrita en [Renombrar](https://doc.4d.com/4Dv20/4D/20.2/Renaming.300-6750165.en.html). Con esta función, puede actualizar automáticamente el nombre siempre que se llame al método en todo el entorno Diseño.
+Changing the name of a method already used in the project can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. It is strongly recommended to use the [renaming function for project methods](../Project/search-replace.md#renaming-project-methods-and-variables). Con esta función, puede actualizar automáticamente el nombre siempre que se llame al método en todo el entorno Diseño.
 
-Con 4D Server, el nombre del método se cambia en el servidor cuando se termina de editar. Si más de un usuario está modificando el nombre del método al mismo tiempo, el nombre final del método será el especificado por el último usuario en terminar de editarlo. Es posible que desee designar un propietario del método para que sólo ciertos usuarios puedan cambiar su nombre
+Con 4D Server, el nombre del método se cambia en el servidor cuando se termina de editar. Si más de un usuario está modificando el nombre del método al mismo tiempo, el nombre final del método será el especificado por el último usuario en terminar de editarlo. Es posible que desee designar un propietario del método para que sólo ciertos usuarios puedan cambiar su nombre.
 
 :::
 
@@ -103,7 +103,7 @@ Para más información, consulte [Implementación del motor SQL de 4D](https://d
 
 *Esta opción es obsoleta. La llamada a código a través de llamadas REST sólo es compatible con las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md).*
 
-### Modificar de atributos globalmente
+## Modificar de atributos globalmente
 
 Mediante el cuadro de diálogo "Atributos de los métodos", puede modificar un atributo (Invisible, Ofrecido como servicio web, etc.) para todos o parte de los métodos proyecto base en una sola operación. Esta funcionalidad es especialmente útil para modificar los atributos de un gran número de métodos proyecto. También puede utilizarse durante el desarrollo para aplicar rápidamente los atributos comunes a grupos de métodos similares.
 

@@ -191,15 +191,15 @@ Em outros casos (list box baseados em seleções nomeadas, colunas associadas co
 
 ## Ação padrão
 
-Atividades típicas a serem executadas por objetos ativos (\*e.g., permitindo que o usuário aceite, cancele ou exclua registros, mova entre registros ou de página para página em um formulário multi-páginas, etc.) foi predefinido por 4D como ações padrão. Eles são descritos em detalhes na seção [Ações padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) do *manual de Desenho*. There are also [standard actions specific to 4D Write Pro areas](../WritePro/user-legacy/defining-a-4d-write-pro-area.md#standard-actions).
+Atividades típicas a serem executadas por objetos ativos (\*e.g., permitindo que o usuário aceite, cancele ou exclua registros, mova entre registros ou de página para página em um formulário multi-páginas, etc.) foi predefinido por 4D como ações padrão. Eles são descritos em detalhes na seção [Ações padrão](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) do *manual de Desenho*. There are also standard actions specific to 4D Write Pro areas.
 
 Você pode atribuir uma ação padrão e um método projeto de um objeto. Neste caso, a ação padrão é geralmente executada depois que o método e o 4D usa esta ação para ativar/desativar o objeto conforme o contexto atual. Quando um objeto é desativado, o método projeto associado não pode ser executado.
 
 #### Gramática JSON
 
-| Nome   | Tipo de dados | Valores possíveis                                                                                                                                                                                                                         |
-| ------ | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| action | string        | The name of a valid [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) or [4D Write Pro standard action](../WritePro/user-legacy/defining-a-4d-write-pro-area.md#standard-actions). |
+| Nome   | Tipo de dados | Valores possíveis                                                                                                                                                                        |
+| ------ | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| action | string        | The name of a valid [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) or 4D Write Pro standard action]. |
 
 #### Objectos suportados
 

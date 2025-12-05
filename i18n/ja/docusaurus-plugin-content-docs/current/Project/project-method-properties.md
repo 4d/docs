@@ -22,9 +22,9 @@ title: Project Method Properties
 
 :::caution
 
-プロジェクトメソッドの名前を変更すると、そのメソッドを旧名称で呼び出している他のメソッドやフォーミュラなど、アプリケーションの機能が無効になるリスクがあります。 You can rename the method manually but it is strongly recommended to use the renaming function for project methods, described in [Renaming](https://doc.4d.com/4Dv20/4D/20.2/Renaming.300-6750165.en.html). この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
+Changing the name of a method already used in the project can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. It is strongly recommended to use the [renaming function for project methods](../Project/search-replace.md#renaming-project-methods-and-variables). この機能を使用すれば、デザイン環境における当該メソッドの呼び出し箇所がすべて自動的に更新されます (ただし EXECUTE METHOD など、文字列としてメソッド名が参照されている個所を除きます)。
 
-4D Server の場合、名称変更は変更終了後にサーバーに反映されます。 複数のユーザーが同時に名称を変更しようとすると、最後におこなわれた名称変更が適用されます。 メソッドのオーナーを指定すれば特定のユーザー以外はメソッド名を変更できないようにできます。
+4D Server の場合、名称変更は変更終了後にサーバーに反映されます。 複数のユーザーが同時に名称を変更しようとすると、最後におこなわれた名称変更が適用されます。 You may want to specify a method owner so that only certain users can change the method's name.
 
 :::
 
@@ -103,7 +103,7 @@ For more information, refer to [4D SQL engine implementation](https://doc.4d.com
 
 *このオプションは廃止されます。 RESTコールによるコードの呼び出しは、[ORDAデータモデルクラス関数](../REST/ClassFunctions.md) でのみサポートされます。*
 
-### 属性の一括設定
+## 属性の一括設定
 
 "メソッド属性" ダイアログボックスを使用して、一回の操作で複数のプロジェクトメソッドに対して属性 (非表示、Webサービスで公開、等)  を設定することができます。 この機能は、多数のプロジェクトメソッドの属性を一括して変更する場合に便利です。 また、開発の段階で、類似のメソッド群に共通の属性を素早く適用するのに使用することもできます。
 

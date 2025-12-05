@@ -680,6 +680,10 @@ L'élément courant est soit celui sélectionné, soit celui où se trouve le cu
 
 Cette commande affiche ses résultats dans une nouvelle fenêtre.
 
+## Rename
+
+Une fonction de renommage global peut être utilisée avec les **variables** et les **méthodes projet**, ce qui vous permet de les renommer en toute sécurité dans l'ensemble du projet. Pour cela, surlignez le nom de la variable ou de la méthode du projet dans l'éditeur et sélectionnez **Renommer...** dans le menu **Méthode** ou dans le menu contextuel. Une boîte de dialogue s'affiche alors, vous permettant de saisir le nouveau nom. Pour plus d'informations, reportez-vous à la section [Renommer les méthodes projet et les variables](../Project/search-replace.md#renaming-project-methods-and-variables).
+
 ## Liste des macros
 
 Vous pouvez utiliser des macro-commandes dans vos méthodes. Les macro-commandes permettent de gagner beaucoup de temps lors de la saisie de code.

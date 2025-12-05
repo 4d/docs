@@ -8,7 +8,7 @@ Si diferentes personas utilizan una aplicación, lo que suele ocurrir en la arqu
 La estrategia de control de acceso 4D depende de la configuración de su despliegue:
 
 - in multi-user Web and REST applications, access control is based upon [ORDA's Roles and privileges](../ORDA/privileges.md) features.
-- in multi-user desktop applications, you can rely on 4D users and groups,
+- en aplicaciones de escritorio multiusuario, puede confiar en los usuarios y grupos de 4D,
 - en aplicaciones monousuario, el acceso de los usuarios se controla a través de la sesión del sistema, utilizando comandos como [`Current system user`](../commands-legacy/current-system-user.md).
 
 :::tip Entradas de blog relacionadas

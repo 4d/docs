@@ -8,6 +8,8 @@ slug: /commands/theme/Web-Server
 
 ||
 |---|
+|[<!-- INCLUDE #_command_.Wew Event.Syntax -->](../../commands/web-event.md)<br/>|
+|[<!-- INCLUDE #_command_.Wew Form.Syntax -->](../../commands/web-form.md)<br/>|
 |[<!-- INCLUDE #_command_.WEB GET BODY PART.Syntax -->](../../commands-legacy/web-get-body-part.md)<br/>|
 |[<!-- INCLUDE #_command_.WEB Get body part count.Syntax -->](../../commands-legacy/web-get-body-part-count.md)<br/>|
 |[<!-- INCLUDE #_command_.WEB Get current session ID.Syntax -->](../../commands-legacy/web-get-current-session-id.md)<br/>|

@@ -102,7 +102,7 @@ En Windows, 4D soporta el renderizado de formularios **Fluent UI**, el moderno d
 
 La renderización Fluent UI ofrece controles modernos y atractivos, compatibilidad con los temas sistema dark/light, renderización más fluida optimizada para pantallas de alta resolución y una experiencia de usuario coherente y alineada con las aplicaciones recientes de Microsoft.
 
-| Light theme                             | Dark theme                                   |
+| Tema claro                              | Tema oscuro                                  |
 | --------------------------------------- | -------------------------------------------- |
 | ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
 
@@ -112,9 +112,9 @@ La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Previ
 
 :::
 
-:::info macOS
+:::info Disponibilidad
 
-Esta funcionalidad sólo se puede utilizar en Windows. En macOS, se ignora.
+This feature can be used **in 4D projects on Windows**. No está disponible en macOS ni en bases de datos binarias 4D en Windows.
 
 :::
 

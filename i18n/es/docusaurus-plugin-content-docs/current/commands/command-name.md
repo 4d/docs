@@ -34,8 +34,8 @@ El comando **Command name** <!--REF #_command_.Command name.Summary-->devuelve e
 
 Hay dos parámetros opcionales:
 
-- *info*: propiedades del comando. The returned value is a *bit field*, where the following bits are meaningful:
-  - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Only thread-safe commands can be used in [preemptive processes](../Develop/preemptive.md).
+- *info*: propiedades del comando. El valor devuelto es un *campo de bits*, donde los siguientes bits son significativos:
+  - Primer bit (bit 0): definido en 1 si el comando es [**hilo-seguro**](../Develop/preemptive.md#thread-safe-vs-thread-unsafe-code) (es decir, compatible con la ejecución en un proceso apropiativo) y 0 si es **hilo-inseguro**. Solo se pueden usar comandos hilo seguro en [procesos preventivos](../Develop/preemptive.md).
   - Segundo bit (bit 1): se define en 1 si el comando es **obsoleto**, y en 0 si no lo es. A deprecated command will continue to work normally as long as it is supported, but should be replaced whenever possible and must no longer be used in new code. Los comandos obsoletos en su código generan advertencias en el [Live Checker y el compilador](../code-editor/write-class-method.md#warnings-and-errors).
 
 *theme*: nombre del tema del lenguaje 4D para el comando.
@@ -80,7 +80,7 @@ En un formulario, quiere una lista desplegable con los comandos básicos de info
  End case
 ```
 
-En la versión inglesa de 4D, la lista desplegable leerá: Sum, Average, Min y Max. In the French version\*, the drop-down list will read: Somme, Moyenne, Min, and Max.
+En la versión inglesa de 4D, la lista desplegable leerá: Sum, Average, Min y Max. En la versión francésa \*, la lista desplegable dirá: Somme, Moyenne, Min, y Max.
 
 \*con una aplicación 4D configurada para usar el lenguaje de programación en francés (ver nota de compatibilidad)
 

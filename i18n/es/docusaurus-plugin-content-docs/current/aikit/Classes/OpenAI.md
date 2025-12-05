@@ -36,15 +36,15 @@ Crear una instancia de la clase cliente OpenAI.
 #### Llave API
 
 ```4d
-// as text
+// como texto
 var $client:=cs.AIKit.OpenAI.new("your api key")
-// as object
+// como objeto
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"})
 ```
 
 #### URL del servidor
 
-For a [compatible provider](../compatible-openai.md) API, you can configure the server URL.
+Para una API [proveedor compatible](../compatible-openai.md), puede configurar la URL del servidor.
 
 ```4d
 var $client:=cs.AIKit.OpenAI.new({apiKey: "your api key"; baseURL: "https://server.ai"})
@@ -58,7 +58,7 @@ $client.baseURL:="https://server.ai"
 
 ## Recursos API
 
-La API ofrece acceso a múltiples recursos que permiten una interacción perfecta con los servicios de OpenAI. Each resource is encapsulated within a dedicated API class, offering a structured and intuitive way to interact with different functionalities.
+La API ofrece acceso a múltiples recursos que permiten una interacción perfecta con los servicios de OpenAI. Cada recurso está encapsulado en una clase API específica, que ofrece una forma estructurada e intuitiva de interactuar con las distintas funcionalidades.
 
 | Nombre de la propiedad | Tipo                                            | Descripción                                      |
 | ---------------------- | ----------------------------------------------- | ------------------------------------------------ |
@@ -67,11 +67,13 @@ La API ofrece acceso a múltiples recursos que permiten una interacción perfect
 | `images`               | [OpenAIImagesAPI](OpenAIImagesAPI.md)           | Acceso a la API Images.          |
 | `moderations`          | [OpenAIModerationsAPI](OpenAIModerationsAPI.md) | Acceso a la API de moderaciones. |
 | `embeddings`           | [OpenAIEmbeddingsAPI](OpenAIEmbeddingsAPI.md)   | Acceso a la API Embeddings.      |
+| `files`                | [OpenAIFilesAPI](OpenAIFilesAPI.md)             | Acceso a la API Files.           |
 
 ### Ejemplo de Uso
 
 ```4d
 $client.chat.completions.create(...)
 $client.images.generate(...)
+$client.files.create(...)
 $client.model.lists(...)
 ```

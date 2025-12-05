@@ -36,16 +36,50 @@ La classe `OpenAIMessage` représente un message structuré contenant un rôle, 
 
 Ajoute une URL d'image au contenu du message.
 
+### addFileId()
+
+**addFileId**(*fileId* : Text)
+
+| Paramètres | Type | Description                                           |
+| ---------- | ---- | ----------------------------------------------------- |
+| *fileId*   | Text | L'ID du fichier à ajouter au message. |
+
+Ajoute une référence de fichier au contenu du message. Si le contenu est actuellement du texte, il sera converti en un format de collection.
+
 ## Exemple d'utilisation
 
-### Créer un message simple et joindre une image
+### Message texte de base
 
 ```4d
 // Créer une instance d'OpenAIMessage
-var $message:=cs.AIKit.OpenAIMessage({role : "user" ; content : "Hello !"})
+var $message:=cs.AIKit.OpenAIMessage.new({role : "user" ; content : "Hello !"})
+```
 
-// Ajouter une image URL avec des détails
+### Ajout d'images
+
+```4d
+var $message:=cs.AIKit.OpenAIMessage.new({role : "user" ; content : "Please analyze this image :"})
+
+// Ajouter une URL d'image avec des détails
 $message.addImageURL("http://example.com/image.jpg" ; "high")
+```
+
+### Ajout de fichier
+
+```4d
+// Téléverser un fichier avec l'objectif user_data
+var $file:=File("/RESOURCES/document.pdf")
+var $uploadResult:=$client.files.create($file; "user_data")
+
+If ($uploadResult.success)
+    var $uploadedFile:=$uploadResult.file
+    
+    // Créer un message et joindre le fichier en utilisant son ID
+    var $message:=cs.AIKit.OpenAIMessage.new({role : "user" ; content : "Please analyze this document :"})
+    $message.addFileId($uploadedFile.id)
+    
+    // $message.content -> [{type : "text" ; text : "Please analyze this document :"} ; {type : "file" ; file_id : "file-abc123"}]
+End if
 ```
 
 ### Répondre à un message d'appel d'outil

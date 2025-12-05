@@ -165,7 +165,7 @@ Dans les versions précédentes, le fichier `roles.json` n'était pas créé par
 
 :::note Qodly Studio
 
-Dans Qodly Studio for 4D, le mode peut être défini en utilisant l'option [**Force login**](../WebServer/qodly-studio.md#force-login) dans l'onglet Privileges.
+Dans Qodly Studio for 4D, le mode peut être défini en utilisant l'option [**Force login**](https://developer.4d.com/qodly/4DQodlyPro/force-login) dans l'onglet Privileges.
 
 :::
 

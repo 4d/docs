@@ -24,7 +24,7 @@ Se pueden asociar dos variables específicas a cada área web:
 - [`URL`](properties_WebArea.md#url) --para controlar la URL mostrada por el área web
 - [`Progression`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
-> A partir de 4D v19 R5, la variable Progression ya no se actualiza en las Áreas Web que utilizan el [motor de renderizado del sistema Windows](./webArea_overview.md#web-rendering-engine).
+> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderización web
 
@@ -121,7 +121,7 @@ $4d.today(function(result)
 
 #### Ejemplo 2
 
-Instead of using a standalone method, we can also use a class function to handle the calculation.
+En lugar de utilizar un método independiente, también podemos utilizar una función de clase para realizar el cálculo.
 
 Define a "SumCalculator" 4D user class with a `calcSum` function which receives parameters and returns their sum:
 
@@ -338,9 +338,11 @@ El archivo 4DCEFParameters.json por defecto contiene los siguientes cambios:
 }
 ```
 
-### Ver también
+:::info Entrada de blog relacionada
 
-[Especifique sus propios parámetros para inicializar el área web integrada (entrada de blog)](https://blog.4d.com/specify-your-own-parameters-to-initialize-the-embedded-web-area)
+[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+
+:::
 
 
 

@@ -112,9 +112,9 @@ La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Previ
 
 :::
 
-:::info macOS
+:::info Disponibilidad
 
-Esta funcionalidad sólo se puede utilizar en Windows. En macOS, se ignora.
+This feature can be used **in 4D projects on Windows**. No está disponible en macOS ni en bases de datos binarias 4D en Windows.
 
 :::
 

@@ -17,6 +17,12 @@ displayed_sidebar: docs
 
 <!--REF #_command_.License usage.Summary-->El comando **License usage** devuelve una colección de objetos que contienen información sobre las licencias retenidas.<!-- END REF-->
 
+:::note
+
+Este comando solo se puede ejecutar en 4D Server. Devuelve `null` cuando se llama desde otro contexto. 
+
+:::
+
 Cada objeto de la colección devuelta tiene los siguientes atributos:
 
 | **Nombre de la propiedad** | **Tipo** | **Descripción**                                                                                             |

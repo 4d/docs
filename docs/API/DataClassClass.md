@@ -934,7 +934,7 @@ When using a constant value, the following rules must be respected:
   * **date** type constants: "YYYY-MM-DD" format
   * **null** constant: using the "null" keyword will find **null** and **undefined** properties.  
   * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
-  * **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of **vector similarity queries** (*attributePath* must also contain valid 4D.Vector objects). 
+  * **object**: only [4D.Vector](../API/VectorClass.md) objects are supported, in the context of [**vector similarity queries**](#query-by-vector-similarity) (*attributePath* must also contain valid 4D.Vector objects). 
 * **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
 
  |Conjunction|Symbol(s)|
@@ -1204,6 +1204,20 @@ var $myVector : 4D.Vector
 $myVector := getVector //method to get a vector, e.g. from 4D.AIKit
 var $comparisonVector := {vector: $myVector; metric: mk euclidean; threshold: 1.2}
 var $results := ds.MyClass.query("myVectorField <= :1"; $comparisonVector)
+```
+
+The **order by** statement is supported in the query string so that entities in the resulting entity selection are sorted by similarity. For example:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 order by myVectorField"; $comparisonVector)  
+  //default order, the first entity is the most similar
+```
+
+If the same vector appears multiple times in the query string, the order by will be applied to the results of the first one, for example:
+
+```4d
+var $results := ds.MyClass.query("myVectorField > :1 and myVectorField > :2 order by myVectorField" desc; /
+    {vector : $myVector1 };{vector : $myVector2 })  //myVectorField > :1 is used for the order by
 ```
 
 See [more examples below](#example-4-2) (examples 4 and 5). 

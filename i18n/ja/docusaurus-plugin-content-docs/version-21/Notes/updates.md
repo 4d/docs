@@ -28,6 +28,7 @@ title: リリースノート
   - 文字列から先頭と末尾のスペースを削除する新しい "trim" 系コマンド: [`Trim`](../commands/trim.md)、[`Trim start`](../commands/trim-start.md)、および[`Trim end`](../commands/trim-end.md)。
   - [`Num`](../commands/num.md) および [`String`](../commands/string.md) コマンドは、異なる基数での変換をサポートするようにアップデートされました。
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21): 4D 21 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
+- [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): what's new in Qodly Studio.
 
 #### デベロッパー・プレビュー
 
@@ -41,7 +42,7 @@ title: リリースノート
 
 :::
 
-- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 そのためSOAP コードは必ずスレッドセーフであるようにしてください。
+- Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
 - Web サーバー: 廃止予定だった`4DSYNC/` および `4DCGI/` URL のサポートが削除されました。 これらのURL に関しては今後は何も特殊な処理は行われません。
 - Web ユーザーセッションは今後[`Process activity`](../commands/process-activity.md) コマンドで返されるようになります。
 - [`HIGHLIGHT TEXT`](../commands/highlight-text) コマンドは今後サブフォームのコンテキストでサポートされるようになりました。

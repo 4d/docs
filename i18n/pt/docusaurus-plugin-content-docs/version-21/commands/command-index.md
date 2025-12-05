@@ -1288,6 +1288,8 @@ title: Commands by name
 [`WA STOP LOADING URL`](../commands-legacy/wa-stop-loading-url.md)<br/>
 [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md)<br/>
 [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md)<br/>
+[`Web Event`](web-event.md)<br/>
+[`Web Form`](web-form.md)<br/>
 [`WEB GET BODY PART`](../commands-legacy/web-get-body-part.md)<br/>
 [`WEB Get body part count`](../commands-legacy/web-get-body-part-count.md)<br/>
 [`WEB Get current session ID`](../commands-legacy/web-get-current-session-id.md)<br/>

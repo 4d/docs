@@ -34,7 +34,6 @@ El comando devuelve uno de los siguientes códigos de estado:
 * 0: ninguna impresora actual está seleccionada (en este caso, el comando no hace nada),
 * 1: el BLOB se ha cargado correctamente,
 * 2: el BLOB se ha cargado correctamente, pero el nombre de la impresora actual ha cambiado(\*)  
-**Nota:** Code (2) siempre se devuelve si el BLOB fue creado por el comando 4D Pack , incluso si el nombre de la impresora no cambió, ya que esta información no se incluyó en los BLOBs 4D Pack.
 
 (\*) Los parámetros dependen de la impresora actual seleccionada en el momento en que el BLOB se guardó. La aplicación de estos valores en otra impresora es soportada si ambas impresoras son del mismo modelo. Si las impresoras son diferentes, se restaurarán sólo los parámetros comunes.
 

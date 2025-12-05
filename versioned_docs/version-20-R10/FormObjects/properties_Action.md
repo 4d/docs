@@ -205,7 +205,7 @@ In other cases (list boxes based on named selections, columns associated with ex
 ---
 ## Standard action
 
-Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) section of the *Design Reference*. There are also [standard actions specific to 4D Write Pro areas](../WritePro/user-legacy/defining-a-4d-write-pro-area.md#standard-actions).
+Typical activities to be performed by active objects (*e.g.*, letting the user accept, cancel, or delete records, move between records or from page to page in a multi-page form, etc.) have been predefined by 4D as standard actions. They are described in detail in the [Standard actions](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) section of the *Design Reference*. There are also standard actions specific to 4D Write Pro areas.
 
 You can assign both a standard action and a project method to an object. In this case, the standard action is usually executed after the method and 4D uses this action to enable/disable the object according to the current context. When an object is deactivated, the associated project method cannot be executed. 
 
@@ -214,7 +214,7 @@ You can assign both a standard action and a project method to an object. In this
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|action|string |The name of a valid [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) or [4D Write Pro standard action](../WritePro/user-legacy/defining-a-4d-write-pro-area.md#standard-actions). |
+|action|string |The name of a valid [standard action](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) or 4D Write Pro standard action]. |
 
 #### Objects Supported
 
