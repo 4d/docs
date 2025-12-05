@@ -8,30 +8,30 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Event.Params -->
 
-| 引数  | 型      |                             | 説明                                 |
-| --- | ------ | :-------------------------: | ---------------------------------- |
-| 戻り値 | Object | &#8592; | Information on the triggered event |
+| 引数  | 型      |                             | 説明                |
+| --- | ------ | :-------------------------: | ----------------- |
+| 戻り値 | Object | &#8592; | トリガーされたイベントに関する情報 |
 
 <!-- END REF -->
 
 ## 説明
 
-`Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a web page component<!-- END REF -->.
+`Web Event` は、<!-- REF #_command_.Web Event.Summary -->Web ページコンポーネントにリンクされた、トリガーされたイベントに関する情報を格納したオブジェクトを返します<!-- END REF -->。
 
-The command must be called in the context of a web page handled by the 4D web server.
+このコマンドは、4D Web サーバーによって管理されるWeb ページのコンテキスト内から呼び出さなければなりません。
 
 **戻り値**
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ     |       | 型      | 説明                                                                                                                                                                                                                                                            |
-| --------- | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| caller    |       | string | [Server-side reference](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) of the component triggering the event                                                                                                  |
-| eventType |       | string | Type of event:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - triggered when the `Page` loads</li> |
-| data      |       | object | Additional information depending on the involved component                                                                                                                                                                                                    |
-|           | index | number | <li>Tabs component: index of the tab (indexing starts at 0)</li><li>Data Table component: column number</li>                                                                                                                                                  |
-|           | row   | number | Data Table component: row number                                                                                                                                                                                                              |
-|           | name  | string | Data Table component: qodlysource name of the column (e.g. "firstname", "address.city")                                                                                    |
+| プロパティ     |       | 型      | 説明                                                                                                                                                                                                                                                |
+| --------- | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| caller    |       | string | イベントをトリガーしたコンポーネントの[サーバー側参照](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category)                                                                                                                       |
+| eventType |       | string | イベントの種類:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - `Page` がロードされたときにトリガーされます</li> |
+| data      |       | object | 関連するコンポーネントに応じた追加の情報                                                                                                                                                                                                                              |
+|           | index | number | <li>タブコンポーネント: タブのインデックス(インデックスは 0 から始まります)</li><li>データテーブルコンポーネント: カラムの番号</li>                                                                                                                                                                   |
+|           | row   | number | データテーブルコンポーネント: 行番号                                                                                                                                                                                                               |
+|           | name  | string | データテーブルコンポーネント: カラムの qodlyソース名(例: "firstname"、 "address.city")                                                                                                                 |
 
 #### 例題
 
