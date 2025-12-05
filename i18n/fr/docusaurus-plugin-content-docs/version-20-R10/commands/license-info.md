@@ -22,7 +22,7 @@ Si la commande est exécutée sur une application 4D qui n'utilise pas de licenc
 
 :::note
 
-This command reloads the license files from the disk and updates the associated rights if they have been modified.
+Cette commande recharge les fichiers de licence à partir du disque et met à jour les droits associés s'ils ont été modifiés.
 
 :::
 The returned object contains the following properties:

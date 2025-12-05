@@ -81,7 +81,7 @@ El operador modulo % devuelve valores significativos con números que están en 
 
 ### Integer division
 
-The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is equivalent to `Int(a/b)`. This operator returns significant values with integer numbers only.
 
 ### Comparación real
 

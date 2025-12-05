@@ -81,7 +81,7 @@ title: 数値(実数、整数)
 
 ### Integer division
 
-The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is the equivalent to `Int(a/b)`. It returns significant values with integer numbers only.
+The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is equivalent to `Int(a/b)`. This operator returns significant values with integer numbers only.
 
 ### 実数の比較
 

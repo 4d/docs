@@ -5,16 +5,16 @@ title: OpenAIFilesAPI
 
 # OpenAIFilesAPI
 
-The `OpenAIFilesAPI` class provides functionalities to manage files using OpenAI's API. Files can be uploaded and used across various endpoints including [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning), [Batch](https://platform.openai.com/docs/api-reference/batch) processing, and Vision.
+La classe `OpenAIFilesAPI` fournit des fonctionnalités pour gérer les fichiers en utilisant l'API d'OpenAI. Les fichiers peuvent être téléversés et utilisés à partir de différents points de terminaison, y compris [Fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning), traitement [Batch](https://platform.openai.com/docs/api-reference/batch) et Vision.
 
-> **Note:** This API is only compatible with OpenAI. Other providers listed in the [compatible providers](../compatible-openai.md) documentation do not support file management operations.
+> **Note:** Cette API est uniquement compatible avec OpenAI. Les autres fournisseurs listés dans la page [fournisseurs compatibles](../compatible-openai.md) ne prennent pas en charge les opérations de gestion de fichiers.
 
-API Reference: <https://platform.openai.com/docs/api-reference/files>
+Référence API : <https://platform.openai.com/docs/api-reference/files>
 
-## File Size Limits
+## Limites de taille des fichiers
 
-- **Individual files:** up to 512 MB per file
-- **Organization total:** up to 1 TB (cumulative size of all files uploaded by your [organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization))
+- **Fichiers individuels :** jusqu'à 512 Mo par fichier
+- **Total de l'organisation :** jusqu'à 1 To (taille cumulée de tous les fichiers téléversés par votre [organization](https://platform.openai.com/docs/guides/production-best-practices/setting-up-your-organization))
 
 ## Fonctions
 
@@ -22,36 +22,36 @@ API Reference: <https://platform.openai.com/docs/api-reference/files>
 
 **create**(*file* : 4D.File | 4D.Blob; *purpose* : Text; *parameters* : cs.OpenAIFileParameters) : cs.OpenAIFileResult
 
-Upload a file that can be used across various endpoints.
+Téléverser un fichier qui peut être utilisé par différents points de terminaison (*endpoints*).
 
 **Endpoint:** `POST https://api.openai.com/v1/files`
 
-| Paramètres   | Type                                                                                                                                             | Description                                                                                |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| `file`       | [4D.File](https://developer.4d.com/docs/API/FileClass) or [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | The File or Blob object (not file name) to be uploaded. |
-| `purpose`    | Text                                                                                                                                             | **Required.** The intended purpose of the uploaded file.   |
-| `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                  | Optional parameters including expiration policy.                           |
-| Résultat     | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | The file result                                                                            |
+| Paramètres   | Type                                                                                                                                             | Description                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `file`       | [4D.File](https://developer.4d.com/docs/API/FileClass) ou [4D.Blob](https://developer.4d.com/docs/API/BlobClass) | L'objet Fichier ou Blob (et non nom du fichier) à téléverser. |
+| `purpose`    | Text                                                                                                                                             | **Obligatoire.** L'objectif visé du fichier téléversé.           |
+| `parameters` | [OpenAIFileParameters](OpenAIFileParameters.md)                                                                                                  | Paramètres optionnels incluant la politique d'expiration.                        |
+| Résultat     | [OpenAIFileResult](OpenAIFileResult.md)                                                                                                          | Le résultat du fichier                                                                           |
 
-**Throws:** An error if `file` is not a 4D.File or 4D.Blob, or if `purpose` is empty.
+**Erreur:** Génère une erreur si `file` n'est pas un 4D.File ou un 4D.Blob, ou si `purpose` est vide.
 
-#### Supported Purposes
+#### Objectifs pris en charge
 
-- `assistants`: Used in the Assistants API (⚠️ [deprecated by OpenAI](https://platform.openai.com/docs/assistants/whats-new))
-- `batch`: Used in the [Batch API](https://platform.openai.com/docs/api-reference/batch) (expires after 30 days by default)
-- `fine-tune`: Used for [fine-tuning](https://platform.openai.com/docs/api-reference/fine-tuning)
-- `vision`: Images used for vision fine-tuning
-- `user_data`: Flexible file type for any purpose
-- `evals`: Used for eval data sets
+- `assistants` : Utilisé dans l'API Assistants (⚠️ [déprécié by OpenAI](https://platform.openai.com/docs/assistants/whats-new))
+- `batch` : Utilisé dans l'[API Batch](https://platform.openai.com/docs/api-reference/batch) (expire après 30 jours par défaut)
+- `fine-tune` : Utilisé pour le [réglage fin](https://platform.openai.com/docs/api-reference/fine-tuning)
+- `vision` : Images utilisées pour le réglage fin de vision
+- `user_data` : Type de fichier flexible pour n'importe quel usage
+- `evals` : Utilisé pour les ensembles de données d'évaluation
 
-#### File Format Requirements
+#### Formats de fichiers requis
 
-- **Fine-tuning API:** Only supports `.jsonl` files with specific required formats
-- **Batch API:** Only supports `.jsonl` files up to 200 MB with specific required format
-- **Assistants API:** Supports specific file types (see Assistants Tools guide)
-- **Chat Completions API:** PDFs are only supported
+- **API Fine-tuning API :** Ne prend en charge que les fichiers `.jsonl` avec des formats spécifiques requis
+- **API Batch :** Ne prend en charge que les fichiers `.jsonl` jusqu'à 200 Mo avec un format spécifique requis
+- **API Assistants :** Prend en charge des types de fichiers spécifiques (voir le guide Assistants Tools)
+- **API de complétions de Chat :** Seuls les PDF sont pris en charge
 
-#### Sychronous example
+#### Exemple synchrone
 
 ```4d
 var $file:=File("/RESOURCES/training-data.jsonl")
@@ -59,7 +59,7 @@ var $file:=File("/RESOURCES/training-data.jsonl")
 var $params:=cs.AIKit.OpenAIFileParameters.new()
 $params.expires_after:={}
 $params.expires_after.anchor:="created_at"
-$params.expires_after.seconds:=2592000  // 30 days
+$params.expires_after.seconds:=2592000  // 30 jours
 
 var $result:=$client.files.create($file; "fine-tune"; $params)
 
@@ -73,7 +73,7 @@ End if
 
 #### Exemple asynchrone
 
-Since file uploads can be long operations (especially for large files up to 512 MB), it's recommended to use asynchronous calls to avoid blocking your application. See [Asynchronous Call](../asynchronous-call.md) for more details.
+Étant donné que les téléversements de fichiers peuvent être des opérations longues (en particulier pour les fichiers volumineux jusqu'à 512 Mo), il est recommandé d'utiliser des appels asynchrones pour éviter de bloquer votre application. Voir [Appels asynchrones](../asynchronous-call.md) pour plus de détails.
 
 ```4d
 var $file:=File("/RESOURCES/large-training-data.jsonl")
@@ -81,11 +81,11 @@ var $file:=File("/RESOURCES/large-training-data.jsonl")
 var $params:=cs.AIKit.OpenAIFileParameters.new()
 $params.onTerminate:=Formula(MyFileUploadCallback($1))
 
-// This call returns immediately without blocking
-$client.files.create($file; "fine-tune"; $params)
+// Cet appel retourne immédiatement sans blocage
+$client.files.create($file; "fine-tune" ; $params)
 ```
 
-The callback function receives an [OpenAIFileResult](OpenAIFileResult.md):
+La fonction de rappel reçoit un [OpenAIFileResult](OpenAIFileResult.md) :
 
 ```4d
 // MyFileUploadCallback
@@ -94,11 +94,11 @@ The callback function receives an [OpenAIFileResult](OpenAIFileResult.md):
 If ($result.success)
     var $uploadedFile:=$result.file
     
-    ALERT("File uploaded successfully: "+$uploadedFile.filename)
-    // Store the file ID for later use
+    ALERT("File uploaded successfully : "+$uploadedFile.filename)
+    // Stocker l'ID du fichier pour une utilisation ultérieure
     Form.uploadedFileId:=$uploadedFile.id
 Else
-    ALERT("Upload failed: "+Formula(JSON Stringify($result.errors)))
+    ALERT("Upload failed : "+Formula(JSON Stringify($result.errors)))
 End if
 ```
 
@@ -106,17 +106,17 @@ End if
 
 **retrieve**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileResult
 
-Returns information about a specific file.
+Retourne des informations sur un fichier spécifique.
 
 **Endpoint:** `GET https://api.openai.com/v1/files/{file_id}`
 
 | Paramètres   | Type                                    | Description                                                                   |
 | ------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
-| `fileId`     | Text                                    | **Required.** The ID of the file to retrieve. |
-| `parameters` | [OpenAIParameters](OpenAIParameters.md) | Optional parameters for the request.                          |
-| Résultat     | [OpenAIFileResult](OpenAIFileResult.md) | The file result                                                               |
+| `fileId`     | Text                                    | **Obligatoire.** L'ID du fichier à récupérer. |
+| `parameters` | [OpenAIParameters](OpenAIParameters.md) | Paramètres optionnels pour la requête.                        |
+| Résultat     | [OpenAIFileResult](OpenAIFileResult.md) | Le résultat du fichier                                                        |
 
-**Throws:** An error if `fileId` is empty.
+**Erreur:** Génère une erreur si `fileId` est vide.
 
 #### Exemple
 
@@ -135,14 +135,14 @@ End if
 
 **list**(*parameters* : cs.OpenAIFileListParameters) : cs.OpenAIFileListResult
 
-Returns a list of files that belong to the user's organization.
+Renvoie une liste de fichiers appartenant à l'organisation de l'utilisateur.
 
 **Endpoint:** `GET https://api.openai.com/v1/files`
 
-| Paramètres   | Type                                                    | Description                                                       |
-| ------------ | ------------------------------------------------------- | ----------------------------------------------------------------- |
-| `parameters` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Optional parameters for filtering and pagination. |
-| Résultat     | [OpenAIFileListResult](OpenAIFileListResult.md)         | The file list result                                              |
+| Paramètres   | Type                                                    | Description                                                              |
+| ------------ | ------------------------------------------------------- | ------------------------------------------------------------------------ |
+| `parameters` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Paramètres optionnels pour le filtrage et la pagination. |
+| Résultat     | [OpenAIFileListResult](OpenAIFileListResult.md)         | Liste des fichiers                                                       |
 
 #### Exemple
 
@@ -168,17 +168,17 @@ End if
 
 **delete**(*fileId* : Text; *parameters* : cs.OpenAIParameters) : cs.OpenAIFileDeletedResult
 
-Delete a file.
+Supprime un fichier.
 
 **Endpoint:** `DELETE https://api.openai.com/v1/files/{file_id}`
 
-| Paramètres   | Type                                                  | Description                                                                 |
-| ------------ | ----------------------------------------------------- | --------------------------------------------------------------------------- |
-| `fileId`     | Text                                                  | **Required.** The ID of the file to delete. |
-| `parameters` | [OpenAIParameters](OpenAIParameters.md)               | Optional parameters for the request.                        |
-| Résultat     | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | The file deletion result                                                    |
+| Paramètres   | Type                                                  | Description                                                                   |
+| ------------ | ----------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `fileId`     | Text                                                  | **Obligatoire.** L'ID du fichier à supprimer. |
+| `parameters` | [OpenAIParameters](OpenAIParameters.md)               | Paramètres optionnels pour la requête.                        |
+| Résultat     | [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md) | Le résultat de la suppression du fichier                                      |
 
-**Throws:** An error if `fileId` is empty.
+**Erreur:** Génère une erreur si `fileId` est vide.
 
 #### Exemple
 

@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. `4D.WebForm` objects are instantiated with the [`webForm`](../commands/web-form.md) command.
+La classe `WebForm` contient des fonctions et des propriétés permettant de gérer vos composants de pages Qodly. Les objets `4D.WebForm` sont instanciés avec la commande [`webForm`](../commands/web-form.md).
 
 <details><summary>Historique</summary>
 
@@ -31,9 +31,9 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 #### Description
 
-The components of web pages are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+Les composants des pages web sont des objets <!-- REF #WebFormClass.componentName.Summary -->qui sont disponibles directement en tant que propriétés<!-- END REF --> de ces pages web.
 
-The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. These objects have functions that you can use to manage your components dynamically.
+Les objets retournés sont de la classe [`4D.WebFormItem`](WebFormItemClass.md). Ces objets possèdent des fonctions que vous pouvez utiliser pour gérer vos composants de manière dynamique.
 
 #### Exemple
 
@@ -43,14 +43,14 @@ shared singleton Class constructor()
 	var myForm : 4D.WebForm
 	var component : 4D.WebFormItem
 	
-	myForm:=webForm  //returns the web page as an object, each property is a component
-	component:=myForm.myImage  //returns the myImage component of the web page
+	myForm:=webForm //renvoie la page web en tant qu'objet, chaque propriété est un composant
+	component:=myForm.myImage //renvoie le composant myImage de la page web
 
 ```
 
 :::info
 
-While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. You can interact with the underlying `webForm` object's properties and functions through `myForm`. For example, you can dynamically manipulate page components or transmit messages to web pages using specialized functions like `myForm.setMessage()`.
+Bien que `myForm` n'affiche pas les propriétés typiques de l'objet lorsqu'il est examiné dans le débogueur, il se comporte comme s'il s'agissait de l'objet `webForm` réel. Vous pouvez interagir avec les propriétés et les fonctions de l'objet sous-jacent `webForm` à travers `myForm`. Par exemple, vous pouvez manipuler dynamiquement des composants de page ou transmettre des messages à des pages web en utilisant des fonctions spécialisées comme `myForm.setMessage()`.
 
 :::
 
@@ -60,24 +60,24 @@ While `myForm` may not display typical object properties when examined in the de
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Paramètres | Type   |     | Description                                |
-| ---------- | ------ | :-: | ------------------------------------------ |
-| state      | string |  -> | Name of state to disable from the web page |
+| Paramètres | Type   |     | Description                                 |
+| ---------- | ------ | :-: | ------------------------------------------- |
+| state      | string |  -> | Nom de l'état à désactiver dans la page web |
 
 <!-- END REF -->
 
 #### Description
 
-The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->disables the rendering of the *state* in the current web page<!-- END REF -->.
+La fonction `.disableState()` <!-- REF #WebFormClass.disableState().Summary -->désactive le rendu de l'état *state* dans la page web courante<!-- END REF -->.
 
 Cette fonction ne fait rien si :
 
-- the *state* is currently not enabled in the web page,
-- the *state* does not exist for the web page.
+- le *state* n'est actuellement pas activé dans la page web,
+- le *state* n'existe pas pour la page web.
 
 Si vous [activez](#enablestate) ou désactivez plusieurs états dans la même fonction utilisateur, toutes les modifications sont envoyées en même temps au client une fois que la fonction se termine.
 
-For more information on web pages states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Pour plus d'informations sur les états des pages web, veuillez vous référer à la [section States dans la documentation de Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 ### .enableState()
 
@@ -85,24 +85,24 @@ For more information on web pages states, please refer to the [States section in
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Paramètres | Type   |     | Description                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| state      | string |  -> | Name of state to enable on the web pages |
+| Paramètres | Type   |     | Description                               |
+| ---------- | ------ | :-: | ----------------------------------------- |
+| state      | string |  -> | Nom de l'état à activer sur les pages web |
 
 <!-- END REF -->
 
 #### Description
 
-The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->enables the rendering of the *state* in the current web page<!-- END REF -->.
+La fonction `.enableState()` <!-- REF #WebFormClass.enableState().Summary -->active le rendu de l'état *state* dans la page web courante<!-- END REF -->.
 
 Cette fonction ne fait rien si :
 
-- the *state* has already been enabled on the web page,
-- the *state* does not exist for the web page.
+- le *state* a déjà été activé sur la page web,
+- le *state* n'existe pas pour la page web.
 
 Si vous activez ou [désactivez](#disablestate) plusieurs états dans la même fonction utilisateur, toutes les modifications sont envoyées en même temps au client une fois que la fonction se termine.
 
-For more information on web page states, please refer to the [States section in the Qodly documentation](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
+Pour plus d'informations sur les états des pages web, veuillez vous référer à la [section States dans la documentation de Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/states/stateOverview).
 
 #### Exemple
 
@@ -121,17 +121,17 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| Paramètres | Type   |     | Description                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| msg        | string |  -> | Error message to display in the web page |
+| Paramètres | Type   |     | Description                                  |
+| ---------- | ------ | :-: | -------------------------------------------- |
+| msg        | string |  -> | Message d'erreur à afficher dans la page web |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setError()` function <!-- REF #WebFormClass.setError().Summary -->sends *msg* as an error message to the web page<!-- END REF -->.
+La fonction `.setError()` <!-- REF #WebFormClass.setError().Summary -->envoie *msg* comme message d'erreur à la page web<!-- END REF -->.
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "error".
+La fonction renvoie une réponse avec un statut `200 OK` et un objet `__WEBFORM` dans le corps avec une propriété `__NOTIFICATION.message` fixée à *msg* et un `__NOTIFICATION.type` fixé à "error".
 
 #### Exemple
 
@@ -146,7 +146,7 @@ myForm.setError("My error message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a red *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) est activée pour l'événement, le message *msg* s'affiche en *toast* rouge au bas de la page web et disparaît automatiquement après 5 secondes :
 
 ![](../assets/en/API/webformClass-pic1.png)
 
@@ -156,17 +156,17 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| Paramètres | Type   |     | Description                                    |
-| ---------- | ------ | :-: | ---------------------------------------------- |
-| msg        | string |  -> | Information message to display in the web page |
+| Paramètres | Type   |     | Description                                       |
+| ---------- | ------ | :-: | ------------------------------------------------- |
+| msg        | string |  -> | Message d'information à afficher dans la page web |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setMessage()` function <!-- REF #WebFormClass.setMessage().Summary -->sends *msg* as an information message to the web page<!-- END REF -->.
+La fonction `.setMessage()` <!-- REF #WebFormClass.setMessage().Summary -->envoie *msg* comme message d'information à la page web<!-- END REF -->.
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "message".
+La fonction renvoie une réponse avec un statut `200 OK` et un objet `__WEBFORM` dans le corps avec une propriété `__NOTIFICATION.message` fixée à *msg* et un `__NOTIFICATION.type` fixé à "message".
 
 #### Exemple
 
@@ -181,7 +181,7 @@ myForm.setMessage("My information message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a green *toast* at the bottom of the Page and disappears automatically after 5 seconds:
+Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) est activée pour l'événement, le message *msg* s'affiche en *toast* vert au bas de la page web et disparaît automatiquement après 5 secondes :
 
 ![](../assets/en/API/webformClass-pic2.png)
 
@@ -191,17 +191,17 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| Paramètres | Type   |     | Description                                |
-| ---------- | ------ | :-: | ------------------------------------------ |
-| msg        | string |  -> | Warning message to display in the web page |
+| Paramètres | Type   |     | Description                                         |
+| ---------- | ------ | :-: | --------------------------------------------------- |
+| msg        | string |  -> | Message d'avertissement à afficher dans la page web |
 
 <!-- END REF -->
 
 #### Description
 
-The `.setWarning()` function  <!-- REF #WebFormClass.setWarning().Summary -->sends *msg* as a warning message to the web page<!-- END REF -->.
+La fonction `.setWarning()` <!-- REF #WebFormClass.setWarning().Summary -->envoie *msg* comme message d'avertissement à la page web<!-- END REF -->.
 
-The function returns a response with a `200 OK` status and a `__WEBFORM` object in the body with a `__NOTIFICATION.message` property set to *msg* and a `__NOTIFICATION.type` set to "warning".
+La fonction renvoie une réponse avec un statut `200 OK` et un objet `__WEBFORM` dans le corps avec une propriété `__NOTIFICATION.message` fixée à *msg* et un `__NOTIFICATION.type` fixé à "warning".
 
 #### Exemple
 
@@ -216,7 +216,7 @@ myForm.setWarning("My warning message")
 
 ```
 
-If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) feature is enabled for the event, the *message* is automatically displayed as a yellow *toast* at the bottom of the web page and disappears automatically after 5 seconds:
+Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#providing-feedback) est activée pour l'événement, le message *msg* s'affiche en *toast* jaune au bas de la page web et disparaît automatiquement après 5 secondes :
 
 ![](../assets/en/API/webformClass-pic3.png)
 

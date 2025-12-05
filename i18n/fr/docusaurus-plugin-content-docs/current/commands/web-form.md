@@ -8,25 +8,25 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Form.Params -->
 
-| Paramètres | Type                       |                             | Description                 |
-| ---------- | -------------------------- | :-------------------------: | --------------------------- |
-| Résultat   | 4D.WebForm | &#8592; | New `Web Form` proxy object |
+| Paramètres | Type                       |                             | Description                  |
+| ---------- | -------------------------- | :-------------------------: | ---------------------------- |
+| Résultat   | 4D.WebForm | &#8592; | Nouvel objet proxy `WebForm` |
 
 <!-- END REF -->
 
 ## Description
 
-The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object, providing a means to work with and effectively emulates the Page's properties and functions<!-- END REF -->.
+La commande `Web Form` <!-- REF #_command_.Web Form.Summary --> renvoie un objet proxy `4D.WebForm`, qui permet de travailler avec les propriétés et les fonctions de la page et de les émuler efficacement<!-- END REF -->.
 
 :::info
 
-Keep in mind that a `4D.WebForm` object  is a **proxy object**, and not a direct reference to the web form object itself. As a consequence for example, the `4D.WebForm` object does not expose all Page properties in the Debugger.
+Gardez à l'esprit qu'un objet `4D.WebForm` est un **objet proxy**, et non une référence directe à l'objet page web lui-même. En conséquence, par exemple, l'objet `4D.WebForm` n'expose pas toutes les propriétés de la page dans le débogueur.
 
 :::
 
-Each property of the returned object is an object of the [4D.WebFormItem](../API/WebFormItemClass.md) class.
+Chaque propriété de l'objet renvoyé est un objet de la classe [4D.WebFormItem](../API/WebFormItemClass.md).
 
-The command returns `null` if it is called in a request that does not originate from Qodly Studio.
+La commande renvoie `null` si elle est appelée dans une requête qui ne provient pas de Qodly Studio.
 
 ## Voir également
 

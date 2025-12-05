@@ -8,48 +8,48 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Event.Params -->
 
-| Paramètres | Type   |                             | Description                        |
-| ---------- | ------ | :-------------------------: | ---------------------------------- |
-| Résultat   | Object | &#8592; | Information on the triggered event |
+| Paramètres | Type   |                             | Description                            |
+| ---------- | ------ | :-------------------------: | -------------------------------------- |
+| Résultat   | Object | &#8592; | Informations sur l'événement déclenché |
 
 <!-- END REF -->
 
 ## Description
 
-`Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a web page component<!-- END REF -->.
+La commande `Web Event` <!-- REF #_command_.Web Event.Summary -->renvoie un objet contenant des informations sur un événement déclenché lié à un composant de formulaire web Qodly<!-- END REF -->.
 
-The command must be called in the context of a web page handled by the 4D web server.
+La commande doit être appelée dans le contexte d'une page web gérée par le serveur web 4D.
 
 **Résultat**
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété |       | Type   | Description                                                                                                                                                                                                                                                   |
-| --------- | ----- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| caller    |       | string | [Server-side reference](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) of the component triggering the event                                                                                                  |
-| eventType |       | string | Type of event:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - triggered when the `Page` loads</li> |
-| data      |       | object | Additional information depending on the involved component                                                                                                                                                                                                    |
-|           | index | number | <li>Tabs component: index of the tab (indexing starts at 0)</li><li>Data Table component: column number</li>                                                                                                                                                  |
-|           | row   | number | Data Table component: row number                                                                                                                                                                                                              |
-|           | name  | string | Data Table component: qodlysource name of the column (e.g. "firstname", "address.city")                                                                                    |
+| Propriété |       | Type   | Description                                                                                                                                                                                                                                                            |
+| --------- | ----- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| caller    |       | string | [Référence serveur](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) du composant qui déclenche l'événement                                                                                                              |
+| eventType |       | string | Type d'événement :<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - déclenché au chargement de la `Page`</li> |
+| data      |       | object | Informations supplémentaires dépendantes du composant concerné                                                                                                                                                                                                         |
+|           | index | number | <li>Composant Tabs : indice de l'onglet (les indices commencent à 0)</li><li>Composant Data Table : numéro de colonne</li>                                                                                                                                             |
+|           | row   | number | Composant Data Table : numéro de ligne                                                                                                                                                                                                                 |
+|           | name  | string | Composant Data Table : nom qodlysource de la colonne (par exemple "firstname", "address.city")                                                                                                                      |
 
 #### Exemple
 
-The objective is to display/hide a help text when the user hovers over the component:
+L'objectif est d'afficher/masquer un texte d'aide lorsque l'utilisateur survole le composant :
 
 ![](../assets/en/commands/web-event1.png)
 
-This is done by attaching `onmouseenter` and `onmouseleave` events to a **Text input** component that displays the information stored in a **Text** component (displaying "This is the help text").
+Pour ce faire, les événements `onmouseenter` et `onmouseleave` sont attachés à un composant **Text input** qui affiche les informations stockées dans un composant **Text** (en affichant "This is the help text").
 
 ![](../assets/en/commands/web-event2.png)
 
-In this scenario:
+Pour ce scénario :
 
-- The Text input component has `orderNumber` as Server side reference.
+- Le composant Text input a pour référence serveur `orderNumber`.
   ![](../assets/en/commands/web-event3.png)
-- The Text component has `helpOn_orderNumber` as Server side reference.
+- Le composant Text a pour référence serveur `helpOn_orderNumber`.
   ![](../assets/en/commands/web-event4.png)
-- The [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function `help()` is attached to both the `onmouseenter` and `onmouseleave` events and contains the following code:
+- La fonction [exposée](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` est attachée aux événements `onmouseenter` et `onmouseleave` et contient le code suivant :
 
 ```4d
 shared singleton Class constructor()
@@ -63,18 +63,18 @@ exposed Function help()
 	event:=web Event
 	componentRef:=event.caller
 
-	Case of 
-		: (event.eventType="onmouseenter")  // event is onmouseenter 
-			myForm["helpOn_"+componentRef].show()  // show the help on "orderNumber" by showing  
-			// the text component with reference "helpOn_orderNumber" 
-		: (event.eventType="onmouseleave")  // event is onmouseleave 
-			myForm["helpOn_"+componentRef].hide()  // hide the help on orderNumber
+	Au cas ou 
+		: (event.eventType="onmouseenter") // l'événement est onmouseenter 
+			myForm["helpOn_"+componentRef].show() // montre l'aide sur "orderNumber" en affichant  
+			// le composant texte avec la référence "helpOn_orderNumber" 
+		: (event.eventType="onmouseleave") // l'événement est onmouseleave 
+			myForm["helpOn_"+componentRef].hide() // masquel'aide sur orderNumber
 			
 	End case 
 
 ```
 
-To open the web page with the help on `orderNumber` hidden, you can associate this function to the `onload` event of the web page:
+Pour ouvrir la page web avec l'aide de `orderNumber` masqué, vous pouvez associer cette fonction à l'événement `onload` de la page web :
 
 ```4d
 exposed function hideOnLoad()
