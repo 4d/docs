@@ -35,7 +35,6 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-v
 | ngtcp2       | 1.16.0 | **21**              | Utilisé pour QUIC                                                                                                                                     |
 | OpenSSL      | 3.5.2  | **21**              |                                                                                                                                                       |
 | PDFWriter    | 4.7.0  | **21**              | Utilisé pour [`WP Export document`](../WritePro/commands/wp-export-document.md) et [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| PHP          | 8.2.4  | 20                  |                                                                                                                                                       |
 | SpreadJS     | 17.1.0 | 20 R7               | Voir [ce blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) pour un aperçu des nouvelles fonctionnalités.             |
 | webKit       | WKWebView                              | 19                  |                                                                                                                                                       |
 | Xerces       | 3.3.0  | **21**              | Utilisé pour les commandes XML                                                                                                                        |

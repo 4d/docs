@@ -937,6 +937,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 ... クエリは、"kind=home" かつ "city=paris" である "locations" 要素を持つエンティティ "martin" のみを返します。 "home" と "paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。
 
+
 **formula 引数**
 
 *queryString* 引数にフォーミュラを挿入 (上記参照) する代わりに、formula オブジェクトをブール検索条件として直接渡すことができます。 トークナイズの利点を生かせる、コードが検索しやすく読みやすい、などといった面から、クエリにおけるフォーミュラオブジェクトの使用は **推奨されています**。
@@ -1010,6 +1011,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### 例題
 
 #### 例題 1
 

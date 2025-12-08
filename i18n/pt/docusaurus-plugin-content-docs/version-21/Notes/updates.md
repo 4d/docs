@@ -45,6 +45,7 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/
 - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
 - Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
+- PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.
 - In client/server, the concept of local processes is removed. The "$" has no longer a specific meaning in process names and the \* parameter in [`REGISTER CLIENT`](../commands/register-client) is ignored.
 - **Components no longer embedded**: starting with 4D 21, components developed by 4D (4D NetKit, 4D SVG..., see [this list](../Extensions/overview.md#components-developed-by-4d)) are no longer embedded in the 4D application. When upgrading a project to 4D 21 or higher, a dialog box is displayed:<br/>
@@ -306,7 +307,6 @@ Se suas aplicações 4D utilizam conexões TLS, é recomendado que você faça a
 | ngtcp2     | 1.16.0 | **21**           | Usado para QUIC                                                                                                                                    |
 | OpenSSL    | 3.5.2  | **21**           |                                                                                                                                                    |
 | PDFWriter  | 4.7.0  | **21**           | Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| PHP        | 8.2.4  | 20               |                                                                                                                                                    |
 | SpreadJS   | 17.1.0 | 20 R7            | Veja [este post de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para uma visão geral dos novos recursos                           |
 | webKit     | WKWebView                              | 19               |                                                                                                                                                    |
 | Xerces     | 3.3.0  | **21**           | Used for XML commands                                                                                                                              |

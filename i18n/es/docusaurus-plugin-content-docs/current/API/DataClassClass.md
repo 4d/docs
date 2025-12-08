@@ -1101,7 +1101,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 
 Puede utilizar cualquier letra del alfabeto como notación `[a]`.
 
-#### Vinculación de los argumentos de búsqueda y los atributos de colección
+### Vinculación de los argumentos de búsqueda y los atributos de colección
 
 Para ello, es necesario vincular los argumentos de la búsqueda a los elementos de colección, de modo que sólo se encuentren los elementos únicos que contengan argumentos vinculados. Al buscar dentro de los atributos de objetos de clases de datos que contengan colecciones utilizando varios argumentos de consulta unidos por el operador AND, es posible que desee asegurarse de que sólo se devuelvan entidades que contengan elementos que coincidan con todos los argumentos, y no entidades en las que los argumentos puedan encontrarse en elementos diferentes.
 
@@ -1308,6 +1308,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### Ejemplos
 
 #### Ejemplo 1
 

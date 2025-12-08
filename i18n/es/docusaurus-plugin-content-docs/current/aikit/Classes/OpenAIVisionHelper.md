@@ -17,7 +17,7 @@ title: OpenAIVisionHelper
 | *parámetros* | [OpenAIChatCompletionsParameters](OpenAIChatCompletionsParameters.md) | Parámetros opcionales para la solicitud de finalización del chat. |
 | Resultado    | [OpenAIChatCompletionsResult](OpenAIChatCompletionsResult.md)         | El resultado de la visión.                                        |
 
-Sends a prompt to the OpenAI chat API along with an associated image URL, and optionally accepts parameters for the chat completion.
+Envía un mensaje a la API de chat OpenAI con una URL de imagen asociada, y opcionalmente acepta los parámetros para la finalización del chat.
 
 #### Ejemplo de Uso
 

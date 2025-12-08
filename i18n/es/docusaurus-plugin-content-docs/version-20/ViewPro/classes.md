@@ -129,7 +129,7 @@ La propiedad `.tableColumns` <!-- REF #TableOptions.tableColumns.Summary -->es u
 
 La propiedad `.theme` <!-- REF #TableOptions.theme.Summary -->define el tema de una tabla. También puede ser un texto (nombre de un tema nativo SpreadJS)<!-- END REF -->.
 
-See the [native SpreadJS themes](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
+Consulte los [temas nativos de SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes).
 
 
 ### .useFooterDropDownList
@@ -362,7 +362,7 @@ La propiedad `.lastHeaderCellStyle` es la <!-- REF #TableThemeOptions.lastHeader
 <!-- REF #TableThemeOptions.name.Syntax -->
 **.name** : Text<!-- END REF -->
 
-La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->name of a [native SpreadJS theme](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
+La propiedad `.name` es el <!-- REF #TableThemeOptions.name.Summary -->nombre de un [tema nativo de SpreadJS](https://developer.mescius.com/spreadjs/api/classes/GC.Spread.Sheets.Tables.TableThemes)<!-- END REF -->.
 
 ### .secondColumnStripSize
 

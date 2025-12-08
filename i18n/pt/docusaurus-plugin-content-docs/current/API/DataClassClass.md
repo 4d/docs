@@ -1098,7 +1098,7 @@ ds.Class.query("info.coll[a].val := :1";0)
 
 Você pode usar qualquer letra do alfabeto como a notação `[a]`.
 
-#### Linkar os argumentos de pesquisa com os atributos de coleção
+### Linkar os argumentos de pesquisa com os atributos de coleção
 
 Ao pesquisar nos atributos de objetos de classe de dados que contêm coleções usando vários argumentos de consulta unidos pelo operador AND, você pode querer garantir que somente as entidades que contêm elementos que correspondem a todos os argumentos sejam retornadas, e não as entidades em que os argumentos podem ser encontrados em elementos diferentes. Para tal, é necessário ligar argumentos de consulta a elementos de coleção, de modo a que apenas sejam encontrados elementos individuais que contenham argumentos ligados.
 
@@ -1303,6 +1303,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### Exemplos
 
 #### Exemplo 1
 
@@ -1642,7 +1644,7 @@ ds.VectorTable.query("embedding>:1 and embedding<:2";$vector1Comparison;$vector2
 
 <!-- END REF -->
 
-> **Modo avançado:** essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Essa função é destinada a desenvolvedores que precisam personalizar os recursos padrão do ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 

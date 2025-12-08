@@ -45,6 +45,7 @@ El [renderizado **Fluent UI** para los formularios 4D](../FormEditor/forms.md#fl
 - Servicios web (SOAP): cuando las [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) están activadas, los servicios web se ejecutan ahora en [**procesos apropiativos**](../Develop/preemptive.md) en modo compilado. Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
 - Servidor web: se elimina la compatibilidad con las URL obsoletas `4DSYNC/` y `4DCGI/`. Ya no se realiza ningún tratamiento específico en estas URL.
 - Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
+- PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
 - El comando [`HIGHLIGHT TEXT`](../commands/highlight-text) es ahora compatible en el contexto de los subformularios.
 - En cliente/servidor, se elimina la noción de procesos locales. The "$" has no longer a specific meaning in process names and the \* parameter in [`REGISTER CLIENT`](../commands/register-client) is ignored.
 - **Componentes ya no integrados**: a partir de 4D 21, los componentes desarrollados por 4D (4D NetKit, 4D SVG..., ver [esta lista](../Extensions/overview.md#components-developed-by-4d)) ya no están integrados en la aplicación 4D. Cuando se actualiza un proyecto a 4D 21 o superior, se muestra un cuadro de diálogo:<br/>
@@ -306,7 +307,6 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 | ngtcp2    | 1.16.0 | **21**            | Utilizado para QUIC                                                                                                                                    |
 | OpenSSL   | 3.5.2  | **21**            |                                                                                                                                                        |
 | PDFWriter | 4.7.0  | **21**            | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
-| PHP       | 8.2.4  | 20                |                                                                                                                                                        |
 | SpreadJS  | 17.1.0 | 20 R7             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para obtener una visión general de las nuevas funciones        |
 | webKit    | WKWebView                              | 19                |                                                                                                                                                        |
 | Xerces    | 3.3.0  | **21**            | Utilizado para comandos XML                                                                                                                            |

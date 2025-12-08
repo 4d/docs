@@ -874,9 +874,9 @@ title: Commandes par nom
 [`Printing page`](../commands-legacy/printing-page.md)<br/>
 [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)<br/>
 [`Process aborted`](../commands-legacy/process-aborted.md)<br/>
-[`Process activity`](process-activity.md) - **modifié 4D 20 R7**<br/>
-[`Process info`](process-info.md) - **nouveau 4D 20 R7**<br/>
-[`Process number`](process-number.md) - **modifié 4D 20 R7**<br/>
+[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
+[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
+[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 

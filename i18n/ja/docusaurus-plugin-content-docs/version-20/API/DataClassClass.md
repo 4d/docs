@@ -1087,7 +1087,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 `[a]` 表記には、どのローマ字でも使用可能です。
 
 
-#### コレクション要素とクエリ条件をリンクする
+### コレクション要素とクエリ条件をリンクする
 
 :::info
 
@@ -1140,6 +1140,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 ```
 
 ... クエリは、"kind=home" かつ "city=paris" である "locations" 要素を持つエンティティ "martin" のみを返します。 "home" と "paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。
+
 
 
 #### N対Nリレーションのクエリ
@@ -1249,6 +1250,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### 例題
 
 #### 例題 1
 

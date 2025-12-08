@@ -1087,7 +1087,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 Vous pouvez utiliser n'importe quelle lettre de l'alphabet comme notation `[a]` .
 
 
-#### Lier les critères de recherche pour les attributs de collections
+### Lier les critères de recherche pour les attributs de collections
 
 :::info
 
@@ -1140,6 +1140,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 ```
 
 ... la recherche retournera uniquement "martin" car il possède un élément "locations" dont "kind" est "home" et dont "city" est "paris". La recherche ne retournera pas "smith" car les valeurs "home" et "paris" ne sont pas contenues dans le même élément de collection.
+
 
 
 #### Recherches dans les relations N vers N
@@ -1249,6 +1250,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### Exemples
 
 #### Exemple 1
 
