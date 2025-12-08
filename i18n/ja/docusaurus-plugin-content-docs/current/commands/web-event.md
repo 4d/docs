@@ -35,21 +35,21 @@ displayed_sidebar: docs
 
 #### 例題
 
-The objective is to display/hide a help text when the user hovers over the component:
+ここでの目的は、ユーザーがコンポーネント上をホバーした際にヘルプテキストを表示/非表示することです:
 
 ![](../assets/en/commands/web-event1.png)
 
-This is done by attaching `onmouseenter` and `onmouseleave` events to a **Text input** component that displays the information stored in a **Text** component (displaying "This is the help text").
+これは、("これはヘルプテキストです"というテキストを表示する)**Text** コンポーネントに保存された情報を表示する **Text input** コンポーネントに `onmouseenter` および `onmouseleave` イベントを割り当てることで可能になります。
 
 ![](../assets/en/commands/web-event2.png)
 
-In this scenario:
+このシナリオでは以下のような前提があります:
 
-- The Text input component has `orderNumber` as Server side reference.
+- Text input コンポーネントは、 `orderNumber` というサーバー側参照を持ちます。
   ![](../assets/en/commands/web-event3.png)
-- The Text component has `helpOn_orderNumber` as Server side reference.
+- Text コンポーネントは `helpOn_orderNumber` というサーバー側参照を持ちます。
   ![](../assets/en/commands/web-event4.png)
-- The [exposed](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) function `help()` is attached to both the `onmouseenter` and `onmouseleave` events and contains the following code:
+- `onmouseenter` および `onmouseleave` イベントの両方には[公開された](../ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) `help()` 関数が割り当てられており、そこには以下のようなコードが書かれています:
 
 ```4d
 shared singleton Class constructor()
