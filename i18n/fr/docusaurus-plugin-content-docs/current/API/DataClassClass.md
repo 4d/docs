@@ -1095,7 +1095,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 
 Vous pouvez utiliser n'importe quelle lettre de l'alphabet comme notation `[a]` .
 
-#### Lier les critères de recherche pour les attributs de collections
+### Lier les critères de recherche pour les attributs de collections
 
 Lorsque vous effectuez une recherche parmi des attributs objet de dataclass contenant des collections à l'aide de plusieurs critères de recherche reliés par l'opérateur AND, vous pouvez vouloir vous assurer que seules les entités contenant des éléments correspondant à tous les critères sont renvoyées, et non les entités où les critères peuvent être trouvés dans différents éléments. Pour ce faire, vous devez lier les critères de la recherche aux éléments de la collection, de sorte que seuls les éléments individuels contenant les critères liés soient trouvés.
 
@@ -1302,6 +1302,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### Exemples
 
 #### Exemple 1
 

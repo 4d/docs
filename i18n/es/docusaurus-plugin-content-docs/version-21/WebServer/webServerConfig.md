@@ -605,7 +605,7 @@ Estado de validación de la dirección IP para las cookies de sesión. Por razon
 
 ### Usuario web genérico
 
-This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". In this case, each browser allowed to connect to the database gets access authorizations and restrictions associated with this user.
+This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". En este caso, cada navegador autorizado a conectarse a la base de datos obtiene las autorizaciones y restricciones de acceso asociadas a este usuario.
 
 #### Enviar directamente los caracteres extendidos
 

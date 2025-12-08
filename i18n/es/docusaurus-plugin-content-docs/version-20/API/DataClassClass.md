@@ -1087,7 +1087,7 @@ ds.Class.query("info.coll[a].val != :1";0)
 Puede utilizar cualquier letra del alfabeto como notación `[a]`.
 
 
-#### Vinculación de los argumentos de búsqueda y los atributos de colección
+### Vinculación de los argumentos de búsqueda y los atributos de colección
 
 :::info
 
@@ -1140,6 +1140,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 ```
 
 ... la búsqueda sólo devolverá "martin" porque tiene un elemento "locations" cuyo "kind" es "home" y cuyo "city" es "paris". La búsqueda no devolverá "smith" porque los valores "home" y "paris" no están en el mismo elemento de colección.
+
 
 
 #### Búsquedas en las relaciones Muchos a Muchos
@@ -1249,6 +1250,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company. ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### Ejemplos
 
 #### Ejemplo 1
 

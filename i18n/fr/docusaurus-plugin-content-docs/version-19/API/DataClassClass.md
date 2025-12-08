@@ -937,6 +937,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 ... la recherche retournera uniquement "martin" car il possède un élément "locations" dont "kind" est "home" et dont "city" est "paris". La recherche ne retournera pas "smith" car les valeurs "home" et "paris" ne sont pas contenues dans le même élément de collection.
 
+
 **Paramètre formula**
 
 Au lieu d'insérer une formule dans le paramètre *queryString* (voir ci-dessus), vous pouvez directement passer un objet formule en tant que critère de recherche booléen. L'utilisation d'un objet formule pour les recherches est **recommandée** car vous bénéficiez de la tokenisation et le code est plus facile à rechercher/lire.
@@ -1010,6 +1011,8 @@ queryPath:
  steps:[{steps:[{description:[index : Company.name ] = Lima West Kilo,time:0,recordsfounds:1}]}]}]},{description:Join on Table : Company  :  Employee.employerID = Company.ID,time:31,recordsfounds:1388132,  
  steps:[{steps:[{description:[index : Company.revenues ] > 10000000,time:0,recordsfounds:933}]}]}]}]}
 ```
+
+### Exemples
 
 #### Exemple 1
 

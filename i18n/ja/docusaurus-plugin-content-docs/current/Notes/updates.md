@@ -35,7 +35,6 @@ title: リリースノート
 | ngtcp2    | 1.16.0 | **21**         | QUIC に使用                                                                                                                                             |
 | OpenSSL   | 3.5.2  | **21**         |                                                                                                                                                      |
 | PDFWriter | 4.7.0  | **21**         | [`WP Export document`](../WritePro/commands/wp-export-document.md) および [`WP Export variable`](../WritePro/commands/wp-export-variable.md) において使用されます |
-| PHP       | 8.2.4  | 20             |                                                                                                                                                      |
 | SpreadJS  | 17.1.0 | 20 R7          | 新機能の概要については、[このブログ記事](https://blog.4d.com/ja/4d-view-pro-whats-new-in-4d-20-r7/) を参照ください。                                                            |
 | webKit    | WKWebView                              | 19             |                                                                                                                                                      |
 | Xerces    | 3.3.0  | **21**         | XML コマンドにおいて使用されます                                                                                                                                   |

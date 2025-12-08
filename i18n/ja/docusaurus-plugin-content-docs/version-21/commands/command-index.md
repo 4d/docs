@@ -846,10 +846,6 @@ title: Commands by name
 [`Path to object`](../commands-legacy/path-to-object.md)<br/>
 [`PAUSE INDEXES`](../commands-legacy/pause-indexes.md)<br/>
 [`PAUSE PROCESS`](../commands-legacy/pause-process.md)<br/>
-[`PHP Execute`](../commands-legacy/php-execute.md)<br/>
-[`PHP GET FULL RESPONSE`](../commands-legacy/php-get-full-response.md)<br/>
-[`PHP GET OPTION`](../commands-legacy/php-get-option.md)<br/>
-[`PHP SET OPTION`](../commands-legacy/php-set-option.md)<br/>
 [`PICTURE CODEC LIST`](../commands-legacy/picture-codec-list.md)<br/>
 [`PICTURE LIBRARY LIST`](../commands-legacy/picture-library-list.md)<br/>
 [`PICTURE PROPERTIES`](../commands-legacy/picture-properties.md)<br/>

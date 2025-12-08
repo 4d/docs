@@ -846,10 +846,6 @@ title: Commandes par nom
 [`Path to object`](../commands-legacy/path-to-object.md)<br/>
 [`PAUSE INDEXES`](../commands-legacy/pause-indexes.md)<br/>
 [`PAUSE PROCESS`](../commands-legacy/pause-process.md)<br/>
-[`PHP Execute`](../commands-legacy/php-execute.md)<br/>
-[`PHP GET FULL RESPONSE`](../commands-legacy/php-get-full-response.md)<br/>
-[`PHP GET OPTION`](../commands-legacy/php-get-option.md)<br/>
-[`PHP SET OPTION`](../commands-legacy/php-set-option.md)<br/>
 [`PICTURE CODEC LIST`](../commands-legacy/picture-codec-list.md)<br/>
 [`PICTURE LIBRARY LIST`](../commands-legacy/picture-library-list.md)<br/>
 [`PICTURE PROPERTIES`](../commands-legacy/picture-properties.md)<br/>
@@ -878,9 +874,9 @@ title: Commandes par nom
 [`Printing page`](../commands-legacy/printing-page.md)<br/>
 [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)<br/>
 [`Process aborted`](../commands-legacy/process-aborted.md)<br/>
-[`Process activity`](process-activity.md) - **modifié 4D 20 R7**<br/>
-[`Process info`](process-info.md) - **nouveau 4D 20 R7**<br/>
-[`Process number`](process-number.md) - **modifié 4D 20 R7**<br/>
+[`Process activity`](process-activity.md) - **modified 4D 20 R7**<br/>
+[`Process info`](process-info.md) - **new 4D 20 R7**<br/>
+[`Process number`](process-number.md) - **modified 4D 20 R7**<br/>
 [`Process state`](../commands-legacy/process-state.md)<br/>
 [`PUSH RECORD`](../commands-legacy/push-record.md)<br/>
 
