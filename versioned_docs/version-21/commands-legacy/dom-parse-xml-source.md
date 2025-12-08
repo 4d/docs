@@ -25,9 +25,11 @@ The document can be located on the disk or on the Internet/Intranet.
 
 In the *document* parameter, you can pass:
 
-* either a standard complete pathname (of the type C:\\\\Folder\\\\File\\\\... under Windows and MacintoshHD:Folder:File under Mac OS),
-* or a Unix path under Mac OS (which must start with /).
+* either a standard complete pathname (of the type C:\\\\Folder\\\\File\\\\... under Windows and MacintoshHD:Folder:File under macOS),
+* or a Unix path under macOS (which must start with /).
 * or a network path of the type http://www.site.com/File or ftp://public.ftp.com...
+* or an empty string to display an Open File dialog box.
+
 
 The Boolean parameter *validation* indicates whether or not to validate the structure.
 
