@@ -158,7 +158,7 @@ Lorsqu'une classe est [définie](#class-definition) dans le projet, elle est cha
 - fonction [`new()`](API/ClassClass.md#new), permettant d'instancier les objets de la classe
 - propriété [`isShared`](API/ClassClass.md#isshared), true si la classe est [partagée](#shared-classes)
 - propriété [`isSingleton`](API/ClassClass.md#issingleton), true si la classe définit une [classe singleton](#singleton-classes).
-- propriété [`isSectionSingleton`](API/ClassClass.md#issectionsingleton), true si la classe définit une [session singleton](#singleton-classes).
+- propriété [`isSessionSingleton`](API/ClassClass.md#issessionsingleton) true si la classe définit une [session singleton](#singleton-classes).
 - propriété [`me`](API/ClassClass.md#me), permettant d'instancier et d'accéder aux [singletons](#singleton-classes).
 
 De plus, un objet classe peut référencer un objet [`constructor`](#class-constructor) (facultatif).

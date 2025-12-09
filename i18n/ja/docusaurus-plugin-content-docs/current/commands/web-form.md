@@ -8,25 +8,25 @@ displayed_sidebar: docs
 
 <!-- REF #_command_.Web Form.Params -->
 
-| 引数  | 型                          |                             | 説明                          |
-| --- | -------------------------- | :-------------------------: | --------------------------- |
-| 戻り値 | 4D.WebForm | &#8592; | New `Web Form` proxy object |
+| 引数  | 型                          |                             | 説明                        |
+| --- | -------------------------- | :-------------------------: | ------------------------- |
+| 戻り値 | 4D.WebForm | &#8592; | 新しい `Web Form` プロキシオブジェクト |
 
 <!-- END REF -->
 
 ## 説明
 
-The `Web Form` command <!-- REF #_command_.Web Form.Summary --> returns a `4D.WebForm` proxy object, providing a means to work with and effectively emulates the Page's properties and functions<!-- END REF -->.
+`Web Form` コマンドは、<!-- REF #_command_.Web Form.Summary -->ページのプロパティと関数を効率的にエミュレートするための手段を提供する `4D.WebForm` プロキシオブジェクトを返します<!-- END REF -->。
 
 :::info
 
-Keep in mind that a `4D.WebForm` object  is a **proxy object**, and not a direct reference to the web form object itself. As a consequence for example, the `4D.WebForm` object does not expose all Page properties in the Debugger.
+`4D.WebForm` オブジェクトは、 **プロキシオブジェクト** であり、Web フォームオブジェクト自身への直接的な参照ではないことに留意してください。 その結果として例えば、`4D.WebForm` オブジェクトはすべてのページプロパティをデバッガ上に表示するわけではありません。
 
 :::
 
-Each property of the returned object is an object of the [4D.WebFormItem](../API/WebFormItemClass.md) class.
+返されたオブジェクトの各プロパティは、[4D.WebFormItem](../API/WebFormItemClass.md) クラスのオブジェクトです。
 
-The command returns `null` if it is called in a request that does not originate from Qodly Studio.
+このコマンドは、Qodly Studio 以外のリクエストから呼び出された場合には、`null` を返します。
 
 ## 参照
 
