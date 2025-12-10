@@ -114,7 +114,7 @@ Las funcionalidades estándar del IDE 4D están disponibles para el componente. 
 - ejecutar métodos,
 - restaurar desde la papelera o vaciar la papelera.
 
-### Search and replace
+### Buscar y reemplazar
 
 You can use the [**Search and replace** features](../Project/search-replace.md) of the host project to search elements within the code or the forms of your editable components. The **Search in project** menu allows you to select one or all components as search target:
 

@@ -142,7 +142,7 @@ Devuelve una lista de archivos que pertenecen a la organización del usuario.
 | Parámetros   | Tipo                                                    | Descripción                                                             |
 | ------------ | ------------------------------------------------------- | ----------------------------------------------------------------------- |
 | `parámetros` | [OpenAIFileListParameters](OpenAIFileListParameters.md) | Parámetros opcionales para el filtrado y la paginación. |
-| Resultado    | [OpenAIFileListResult](OpenAIFileListResult.md)         | The file list result                                                    |
+| Resultado    | [OpenAIFileListResult](OpenAIFileListResult.md)         | Lista de los archivos                                                   |
 
 #### Ejemplo
 

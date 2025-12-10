@@ -1,6 +1,6 @@
 ---
 id: search-replace
-title: Search and Replace
+title: Buscar y reemplazar
 ---
 
 4D provides several search and replace functions for elements in all of the Design environment.
@@ -16,14 +16,14 @@ There are also functions for searching among the methods of your project in the 
 
 :::
 
-## Search Location
+## Buscar ubicación
 
 When you search the Design environment, the following elements are searched:
 
 - Names of project methods and classes
-- Contents of all methods and classes
+- Contenido de todos los métodos y clases
 - Names of tables, fields and forms
-- Contents of forms:
+- Contenido de los formularios:
   - object names and titles
   - names of help tips, pictures, variables, style sheets,
   - formatting strings
@@ -34,9 +34,9 @@ When you search the Design environment, the following elements are searched:
 - Formats / filters (names and content)
 - Comments in the Explorer and in the code
 
-## Find in Design
+## Buscar en Diseño
 
-### Starting a search
+### Iniciar una búsqueda
 
 Specify your search criteria in the "Find in design" window:
 
@@ -96,7 +96,7 @@ The end result of both types of searches depends on the [search mode](#search-mo
   - **Properties**: An object property name (includes ORDA attribute names). For example "lastname" will find "$o.lastname" and "ds.Employee.lastname".
 - **Any object**: This option searches among all the elements in the Design environment. Only the modification date filter is available. Use this option, for example, to search for "anything modified today".
 
-### Search mode
+### Modo de búsqueda
 
 The search mode menu (i.e. "which", "that is" or "whose name") specifies how to search for the value that is entered. The contents of this menu vary according to the type of element to search for as selected in the **Find** dropdown list.
 
@@ -145,7 +145,7 @@ This menu restricts the search with respect to the creation/modification date of
 - **is this week**: Period beginning on Monday of the current week.
 - **is this month**: Period beginning on the 1st day of the current month.
 
-### Searching options
+### Opciones de búsqueda
 
 You can select options that can help speed up your searches:
 
@@ -157,7 +157,7 @@ You can select options that can help speed up your searches:
 
 The Results window lists all elements found that match the search criteria set using different types of searches:
 
-- [standard search](#starting-a-search)
+- [búsqueda estándar](#starting-a-search)
 - [search for unused elements](#find-unused-methods-and-global-variables)
 - [search for callers](../code-editor/write-class-method.md#search-callers)
 - search for dependencies
@@ -212,7 +212,7 @@ When you select this command, a dialog box appears where you enter the character
 
 ![](../assets/en/Project/replace-content.png)
 
-Replacing operations work as follows:
+Las operaciones de sustitución funcionan del siguiente modo:
 
 - Replacing is always carried out among all items found in the list and not just for a selection. However, it is possible to narrow the replacing operation by first reducing the contents of the list using the **Remove from list** or **Remove all items from list except selection** commands in the [options menu](#options-menu) or the contextual menu.
 - If the Results window includes elements from components, the replacing will be done in the component(s) also.
@@ -262,7 +262,7 @@ A process or interprocess variable is considered to be unused when:
 
 - it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
 - it is not used anywhere else in the 4D code,
-- it is not used in any form object.
+- no se utiliza en ningún objeto de formulario.
 
 Note that certain uses cannot be detected by the function - i.e. an element considered unused may in fact be used. This is the case in the following code:
 

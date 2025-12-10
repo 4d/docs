@@ -115,7 +115,7 @@ var $result:=$client.files.create($file; "fine-tune")
 var $fileId:=$result.file.id
 ```
 
-List all files
+Listar todos los archivos
 
 ```4d
 var $files:=$client.files.list().files

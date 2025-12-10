@@ -101,8 +101,6 @@ displayed_sidebar: docs
 | String(254;16)                         | "fe"      | 16進数の文字列                         |
 | String(-16523461; 16)                  | "-fc20c5" | 16進数の文字列(負の数) |
 | String(Log(-1); 10) | "NaN"     | 数値ではありません                        |
-| String(1/0; 10)                        | "NaN"     | 数値ではありません                        |
-| String(-1/0; 10)                       | "NaN"     | 数値ではありません                        |
 
 :::note
 

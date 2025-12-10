@@ -306,7 +306,7 @@ Refere-se a uma expressão pelo tipo de dados que devolve. Existem vários tipos
 | Col[5]                                | Elemento de colecção | Um elemento de coleção é uma expressão que pode ser de qualquer tipo suportado                                                                                                                                                               |
 | $entitySel[0]                         | Entity               | Um elemento de uma seleção de entidade ORDA é uma expressão do tipo entidade. Este tipo de expresión es **no asignable**                                                                                                     |
 
-### Assignable vs non-assignable expressions {#assignable-vs-non-assignable-expressions} {#assignable-vs-non-assignable-expressions}
+### Assignable vs non-assignable expressions {#assignable-vs-non-assignable-expressions}
 
 Uma expressão pode ser simplesmente uma constante literal, como o número 4 ou a string "Hello", ou uma variável como `$myButton`. Também pode utilizar operadores. Por exemplo, 4 + 2 é uma expressão que utiliza o operador de adição para somar dois números e devolver o resultado 6. Em qualquer dos casos, estas expressões são **não atribuíveis**, o que significa que não lhes pode ser atribuído um valor.
 Em 4D, as expressões podem ser **atribuíveis**. Uma expressão é atribuível quando pode ser utilizada no lado esquerdo de uma atribuição. Por exemplo:

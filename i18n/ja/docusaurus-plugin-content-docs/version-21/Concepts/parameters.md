@@ -53,7 +53,7 @@ MyLength:=Length("How did I get here?")
 
 ## パラメーターの宣言
 
-Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+呼ばれたメソッドやクラス関数内では、引数を **引数名** とその **引数のデータ型** をコロン(:) で区切って宣言します。
 
 - クラス関数の場合、引数は関数のプロトタイプとともに宣言されます。つまり、`Function` あるいは `Class constructor` キーワードを使用して宣言されます。
 - メソッドの場合 (プロジェクトメソッド、フォームオブジェクトメソッド、データベースメソッド、トリガー)、引数はメソッドコード先頭の **`#DECLARE`** キーワードを使って宣言されます。
@@ -112,7 +112,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 
 :::note
 
-Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+**引数の宣言** と [**変数の宣言**](variables.md#変数の宣言) を混同しないでください。 引数に対して `var` キーワードを使用した場合はエラーが生成されます。
 
 :::
 

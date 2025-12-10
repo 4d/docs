@@ -6,11 +6,12 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                                 |
-| ----------- | ---------------------------------------------- |
-| 20 R6       | Soporte para acceder a las instancias de Qodly |
-| 20 R4       | Nueva propiedad *passwordAlgorithm*            |
-| 18          | Añadidos                                       |
+| Lanzamiento | Modificaciones                          |
+| ----------- | --------------------------------------- |
+| 21          | Qodly cloud discontinued                |
+| 20 R6       | Support access to Qodly cloud instances |
+| 20 R4       | Nueva propiedad *passwordAlgorithm*     |
+| 18          | Añadidos                                |
 
 </details>
 
@@ -30,12 +31,11 @@ displayed_sidebar: docs
 
 El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación al datastore remoto identificado por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `4D.DataStoreImplementation` asociado con el alias local *localID*.
 
-El comando admite los siguientes almacenes de datos remotos:
+Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
 
-| Tipo de almacén de datos                                              | Descripción                                                                                                                                                                                                                                                                                                                                                                               |
-| --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Aplicación 4D remota                                                  | Una aplicación 4D disponible como datastore remoto, es decir:<li> su servidor web se ejecuta con http y/o https activados,</li><li>su datastore está expuesto a REST (opción [**Exponer como servidor REST**](REST/configuration.md#starting-the-rest-server) activada).</li>Puede exigirse una licencia (ver nota) |
-| [Aplicación Qodly](https://developer.qodly.com/docs/cloud/getStarted) | Una aplicación Qodly Server que le proporcionó un **api endpoint** y una **api key** válida asociada a un rol definido. Debe pasar la llave api en la propiedad `api-key` del objeto *connectionInfo*. A continuación, podrá trabajar con el objeto datastore devuelto, con todos los privilegios concedidos al rol asociado.             |
+- its Web Server must be launched with http and/or https enabled,
+- its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
+- a client license must be available if required (see note).
 
 :::note
 
@@ -45,15 +45,14 @@ Las peticiones `Open datastore` dependen de la API REST 4D y pueden requerir una
 
 Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al que desea conectarse. Puede contener las siguientes propiedades (todas las propiedades son opcionales excepto *hostname*):
 
-| Propiedad   | Tipo    | Aplicación 4D remota                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Aplicación Qodly                                                                  |
-| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                                                                  | API Endpoint de la instancia Qodly cloud                                          |
-| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | - (ignorado)                                                   |
-| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                             | - (ignorado)                                                   |
-| idleTimeout | Integer | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. | - (ignorado)                                                   |
-| tls         | Boolean | True para utilizar una conexión segura(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                                                               | True para usar conexión segura. Si se omite, es false por defecto |
-| type        | Text    | debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                               | - (ignorado)                                                   |
-| api-key     | Text    | - (ignorado)                                                                                                                                                                                                                                                                                                                                                                                                                                                    | API key de la instancia Qodly cloud                                               |
+| Propiedad   | Tipo    | Aplicación 4D remota                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                          |
+| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                                                                                                                                  | API Endpoint de la instancia Qodly cloud |
+| user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                          |
+| contraseña  | Text    | Contraseña del usuario                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                          |
+| idleTimeout | Integer | Tiempo de espera de la sesión de inactividad (en minutos), después del cual la sesión es cerrada automáticamente por 4D. Si se omite, el valor por defecto es 60 (1h). El valor no puede ser < 60 (si se pasa un valor inferior, el tiempo de espera se establece en 60). Para más información, consulte **Cierre de sesiones**. |                                          |
+| tls         | Boolean | True para utilizar una conexión segura(1). Si se omite, es false por defecto. Se recomienda utilizar una conexión segura siempre que sea posible.                                                                                                                                                                                                                                                               |                                          |
+| type        | Text    | debe ser "4D Server"                                                                                                                                                                                                                                                                                                                                                                                                                                                               |                                          |
 
 (1) Si `tls` es true, se utiliza el protocolo HTTPS si:
 
@@ -113,27 +112,6 @@ Trabajar con varios almacenes de datos remotos:
  $foreignStudents:=Open datastore($connectTo;"foreign")
  ALERT("They are "+String($frenchStudents.Students.all().length)+" French students")
  ALERT("They are "+String($foreignStudents.Students.all().length)+" foreign students")
-```
-
-## Ejemplo 4
-
-Conexión a una aplicación Qodly:
-
-```4d
-var $connectTo : Object:={hostname: "https://xxx-x54xxx-xx-xxxxx-8xx5-xxxxxx.xx-api.cloud.com"; tls: True}
-
-var $remoteDS : 4D.DataStoreImplementation
-var $data : 4D.EntitySelection
-
-$connectTo["api-key"]:="fxxxx-xxxx-4xxx-txxx-xxxxxxxx0" //solo con fines de ejemplo
-  //se recomienda almacenar la clave de API en un lugar seguro (por ejemplo, un archivo)
-  //y cargarla en el código
-
-$remoteDS:=Open datastore($connectTo; "remoteId")
-$data:=$remoteDS.item.all()
-
-ALERT(String($data.length)+" items have been read")
-
 ```
 
 ## Gestión de errores

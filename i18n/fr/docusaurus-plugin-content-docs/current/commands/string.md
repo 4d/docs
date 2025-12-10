@@ -101,8 +101,6 @@ Si vous passez 0 dans *base*, la commande détermine la base en fonction de la v
 | String(254;16)                         | "fe"         | chaîne hexadécimale                               |
 | String(-16523461; 16)                  | "-fc20c5"    | chaîne hexadécimale (négative) |
 | String(Log(-1); 10) | "NaN"        | "Not a number"                                    |
-| String(1/0; 10)                        | "NaN"        | "Not a number"                                    |
-| String(-1/0; 10)                       | "NaN"        | "Not a number"                                    |
 
 :::note
 

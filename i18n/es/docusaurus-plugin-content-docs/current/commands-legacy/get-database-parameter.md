@@ -34,6 +34,7 @@ El selector Timeout 4D mode distant no se tiene en cuenta si utiliza la antigua 
 
 
 
+
 ### 4D Server log recording (28)
 
 **Hilo seguro**: sí
@@ -49,6 +50,7 @@ El selector Timeout 4D mode distant no se tiene en cuenta si utiliza la antigua 
 4D Server le permite grabar cada petición recibida por el equipo servidor en un archivo de historial. Cuando este mecanismo está activo, el archivo de historial se crea junto al archivo de estructura de la base. Su nombre es "4DRequestsLog\_X," donde X es el número secuencial del historial. Una vez el archivo alcanza un tamaño de 10 MB, se cierra y se genera un nuevo archivo, con un número secuencial incrementado. Si existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio de la secuencia utilizando el parámetro *valor*.
 
 Este archivo texto almacena en formato tabulado simple diferente información sobre cada petición: hora, número de proceso, usuario, tamaño de la petición, duración del proceso, etc. Esta información puede ser útil particularmente durante la fase de afinamiento de la aplicación o con fines estadísticos. Por ejemplo puede importarse, en un software de hoja de cálculo para procesarse.
+
 
 ### 4D Server timeout (13)
 
@@ -68,6 +70,7 @@ Si pasa un valor **positivo** en el parámetro *valor*, define un timeout global
 
 
 
+
 ### Auto synchro resources folder (48)
 
 **Alcance**:equipo 4D remoto
@@ -82,7 +85,10 @@ Cuando el contenido de la carpeta *Resources* en el servidor se ha modificado o 
 
 Tres modos de sincronización son posibles del lado del cliente. El selector Auto Synchro Resources Folder se utiliza para especificar el modo a utilizar por el equipo cliente para la sesión actual:
 
-0 (valor por defecto): sin sincronización dinámica (la petición de sincronización se ignora) 1: sincronización dinámica automática2: visualización de una caja de diálogo en los equipos clientes, con la posibilidad de efectuar o rechazar la sincronización.El modo de sincronización también puede definirse globalmente en las Preferencias de la aplicación.
+- 0 (valor por defecto): sin sincronización dinámica (la petición de sincronización se ignora)
+- 1: sincronización dinámica automática
+- 2: visualización de una caja de diálogo en los equipos clientes, con la posibilidad de efectuar o rechazar la sincronización.El modo de sincronización también puede definirse globalmente en las Preferencias de la aplicación.
+
 
 
 
@@ -98,6 +104,7 @@ Tres modos de sincronización son posibles del lado del cliente. El selector Aut
 **Valores posibles:** entero largo > 1 (segundos)
 
 **Descripción**: obtiene o establece la periodicidad del vaciado de la caché, expresado en segundos. La modificación de este valor prevalece sobre la opción **Vaciar caché cada X segundos** en [XML DECODE](xml-decode.md) de la configuración de la base para la sesión (que no se almacena en las Propiedades de la base).
+
 
 
 
@@ -117,6 +124,7 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
 
 
 
+
 ### Character set (17)
 
 **Alcance:** 4D local, 4D Server
@@ -124,6 +132,7 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
 **Se conserva entre dos sesiones**: sí
 
 **Descripción:** constante obsoleta (se conserva por compatibilidad únicamente). Ahora recomendamos utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+
 
 
 
@@ -141,6 +150,7 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
 
 
 
+
 ### Client character set (24)
 
 **Alcance**: todos los equipos 4D remotos
@@ -150,6 +160,7 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
  **Valores posibles**: ver selector 17
 
 **Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir los valores sólo para algunos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
 
 
 
@@ -169,6 +180,7 @@ Este selector funciona exactamente igual que el selector 39; sin embargo, aplica
 
 
 
+
 ### Client log recording (45)
 
 **Alcance**:equipo 4D remoto 
@@ -181,7 +193,8 @@ Este selector funciona exactamente igual que el selector 39; sin embargo, aplica
 
 4D le permite registrar el historial de peticiones realizadas por el equipo cliente. Cuando este mecanismo se activa, se crean dos archivos en el equipo cliente, en la subcarpeta Logs de la carpeta local de la base. Son llamados 4DRequestsLog\_X y 4DRequestsLog\_ProcessInfo\_X, donde X es el número secuencial del historial. Una vez el archivo 4DRequestsLog alcanza un tamaño de 10 MB, se cierra y se genera uno nuevo, con un número secuencial incrementado. Si ya existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio para la secuencia utilizando el parámetro *valor*.
 
-Estos archivos texto almacenan en formato tabulado simple diferente información relacionada con cada petición: hora, número de proceso, tamaño de la petición, duración del proceso, etc. Esta información es particularmente útil durante la fase de desarrollo de la aplicación o con fines estadísticos.
+Estos archivos texto almacenan en formato tabulado simple diferente información relacionada con cada petición: hora, número de proceso, tamaño de la petición, duración del proceso, etc. Para obtener más información sobre los archivos 4DRequestsLog, consulte [*Descripción de archivos de historial*](../Debugging/debugLogFiles.md).
+
 
 
 
@@ -197,6 +210,7 @@ Estos archivos texto almacenan en formato tabulado simple diferente información
 
 
 
+
 ### Client port ID (22)
 
 **Alcance**: todos los equipos 4D remotos
@@ -206,6 +220,7 @@ Estos archivos texto almacenan en formato tabulado simple diferente información
  **Valores posibles**: ver selector 15
 
 **Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
 
 
 
@@ -227,6 +242,7 @@ Cuando modifica este valor, es necesario reiniciar el equipo servidor para que e
 
 
 
+
 ### Client Web log recording (30)
 
 **Alcance**: todos los equipos 4D remotos
@@ -241,17 +257,19 @@ El funcionamiento de este selector es idéntico al del selector 29; sin embargo,
 
 
 
+
 ### Current process debug log recording (111)
 
-**Alcance:** Aplicación 4D
+**Alcance:** aplicación 4D
 
 **Se conserva entre dos sesiones:** no
 
 **Descripción**: inicia o detiene el registro secuencial de eventos de programación **del proceso actual** en un archivo de historial separado. Este historial es similar al Debug log recording (selector 34) pero se enfoca solo en el proceso actual. El nombre del archivo de historial incluye la letra "p" y el número del proceso: 4DDebugLog\[\_p*N*_*n*].txt, donde N es el ID único del proceso. 
 
-Para más información sobre este formato y sobre el uso del archivo *4DDebugLog*, consulte *Descripción de archivos de historial* en el Modo Diseño. 
+Para más información sobre este formato y sobre el uso del archivo *4DDebugLog*, consulte [*Descripción de archivos de historial*](../Debugging/debugLogFiles.md). 
 
-**Notas:** Este selector se proporciona únicamente con el fin de depurar y debe utilizarse con cuidado. En particular, no debe ponerse en producción, ya que puede tener un impacto en el rendimiento de la aplicación. Puede utilizarar ambos selectores Debug log recording y Current process debug log recording simultáneamente, en cuyo caso las acciones del proceso actual no se registrarán en el archivo de historial principal.
+**Notas:** este selector se proporciona únicamente con el fin de depurar y debe utilizarse con cuidado. En particular, no debe ponerse en producción, ya que puede tener un impacto en el rendimiento de la aplicación. Puede utilizarar ambos selectores Debug log recording y Current process debug log recording simultáneamente, en cuyo caso las acciones del proceso actual no se registrarán en el archivo de historial principal.
+
 
 
 
@@ -268,6 +286,7 @@ Para más información sobre este formato y sobre el uso del archivo *4DDebugLog
 Cuando el valor del selector es Date type (valor predeterminado para las bases creadas con 4D v17 y superior), las fechas 4D se almacenan con el tipo de fecha dentro de los objetos, con respecto a la configuración de fecha local. Cuando se convierte a formato JSON, los atributos de fecha se convertirán en cadenas que no incluyen un tiempo. (**Nota:** esta configuración se puede definir mediante la opción "Utilizar tipo de fecha en lugar del formato de fecha ISO en objetos" que se encuentra en *Página Compatibilidad* de la configuración de la base).
 
 Si pasa String type with time zone en este selector, convertirá las fechas 4D en cadenas ISO y tendrá en cuenta la zona horaria local. Por ejemplo, la conversión de la fecha 23/08/2013 le da "2013-08-22T22: 00: 000Z" en formato JSON cuando la operación se realiza en Francia durante el horario de verano (GMT+ 2). Este principio se ajusta al funcionamiento estándar de JavaScript. Esto puede ser una fuente de errores cuando desea enviar valores de fecha JSON a alguien en un huso horario diferente. Por ejemplo, cuando exporta una tabla usando [Selection to JSON](selection-to-json.md) en Francia que se debe reimportar en los EE. UU. utilizando [JSON TO SELECTION](json-to-selection.md). Dado que las fechas se vuelven a interpretar en cada zona horaria, los valores almacenados en la base de datos serán diferentes. En este caso, puede modificar el modo de conversión de las fechas para que no tengan en cuenta la zona horaria pasando String type without time zone en este selector. La conversión de la fecha 23/08/2013 le dará "2013-08-23T00: 00: 00Z" en todos los casos.
+
 
 
 
@@ -328,7 +347,12 @@ Este selector se ofrece únicamente con fines de depuración y debe utilizarse c
 
 **Descripción**: nivel(es) de los mensajes que se incluirán en el registro de diagnóstico cuando esté habilitado (ver selector Diagnostic log recording). Cada nivel designa una categoría de mensajes de diagnóstico e incluye automáticamente las categorías más importantes. Para una descripción de las categorías, consulte la sección *Niveles de registro de diagnóstico* en *developer.4d.com*. 
 
-**Valores posibles**: una de las siguientes constantes (Log info por defecto): Log trace: activa ERROR, WARN, INFO, DEBUG, TRACE (nivel más detallado) Log debug: activa ERROR, WARN, INFO, DEBUG Log info: activa ERROR, WARN, INFO (por defecto) Log warn: activa ERROR, WARN Log error: activa ERROR (nivel menos detallado)
+**Valores posibles**: una de las siguientes constantes (Log info por defecto): 
+- Log trace: activa ERROR, WARN, INFO, DEBUG, TRACE (nivel más detallado)
+- Log debug: activa ERROR, WARN, INFO, DEBUG
+- Log info: activa ERROR, WARN, INFO (por defecto) Log warn: activates ERROR, WARN
+- Log error: activa ERROR (nivel menos detallado)
+
 
 
 
@@ -347,6 +371,7 @@ Este selector se ofrece únicamente con fines de depuración y debe utilizarse c
 4D permite guardar de manera continua en un archivo de diagnóstico un conjunto de eventos relativos al funcionamiento interno de la aplicación. La información contenida en este archivo está destinada a la actualización de las aplicaciones 4D y puede ser analizada con ayuda de los servicios técnicos de 4D. Cuando pasa 1 en este selector, el archivo de diagnóstico, llamado *NomBase.txt*, se crea automáticamente (o abre) en la carpeta **Logs** de la base. Una vez el archivo alcance un tamaño de 10 MB, se cierra y se genera un nuevo archivo *NomBase\_N.txt*, con un número secuencial N incrementado.
 
 Note que es posible incluir la información personalizada en este archivo con ayuda del comando [LOG EVENT](log-event.md).
+
 
 
 
@@ -371,6 +396,7 @@ $mode:=Get database parameter(Direct2D get active status)
 
 
 
+
 ### Direct2D status (69)
 
 **Alcance**: aplicación 4D
@@ -389,6 +415,7 @@ $mode:=Get database parameter(Direct2D get active status)
 
 
 
+
 ### HTTP compression level (50)
 
 **Alcance**: aplicación 4D 
@@ -396,6 +423,7 @@ $mode:=Get database parameter(Direct2D get active status)
 **Se conserva entre dos sesiones**: no
 
 **Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+
 
 
 
@@ -409,6 +437,7 @@ $mode:=Get database parameter(Direct2D get active status)
 
 
 
+
 ### HTTPS Port ID (39)
 
 **Alcance**: 4D local, 4D Server
@@ -416,6 +445,7 @@ $mode:=Get database parameter(Direct2D get active status)
 **Se conserva entre dos sesiones**: sí
 
 **Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+
 
 
 
@@ -437,6 +467,7 @@ Este parámetro puede definirse del lado del cliente. Por lo general, no necesit
 
 
 
+
 ### IMAP Log (119)
 
 **Hilo seguro**: sí
@@ -453,6 +484,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 
 
+
 ### Is current database a project (112)
 
 **Nota:** solo puede utilizar este selector con el comando [Get database parameter](get-database-parameter.md) y su valor no se puede definir.
@@ -460,6 +492,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 **Alcance**: aplicación 4D
 
 **Descripción**: devuelve 1 si la arquitectura de la base actual es un proyecto y 0 en caso contrario. Para más información, consulte la sección *Base proyecto vs base binaria*.
+
 
 
 
@@ -473,6 +506,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 
 
+
 ### Is host database writable (117)
 
 **Nota**: solo puede utilizar este selector con el comando [Get database parameter](get-database-parameter.md) y su valor no se puede definir.
@@ -480,6 +514,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 **Alcance**: aplicación 4D
 
 **Descripción**: devuelve 1 si el archivo estructura/archivo proyecto local es editable y 0 si es de solo lectura.
+
 
 
 
@@ -493,6 +528,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 
 
+
 ### Libsasl version (115)
 
 **Alcance**: máquina 4D actual 
@@ -503,6 +539,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 
 
 
+
 ### Libzip version (120)
 
 **Alcance**: máquina 4D actual
@@ -510,6 +547,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 **Se conserva entre dos sesiones**: n/a
 
 **Descripción**: devuelve el número de versión de la librería libzip en la aplicación 4D en la máquina actual. (Sólo lectura)
+
 
 
 
@@ -526,9 +564,15 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 Este selector restringe la cantidad de información guardada en el archivo de depuración limitando los comandos 4D cuya ejecución desea registrar o excluir del registro. Por ejemplo, puede escribir:
 
 ```4d
- SET DATABASE PARAMETER(Log command list;"277;341") //Graba solo los comandos QUERY y QUERY SELECTION 
- SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+//Graba solo los comandos QUERY y QUERY SELECTION 
+SET DATABASE PARAMETER(Log command list;"277;341") 
 ```
+OR
+```4d
+//Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+SET DATABASE PARAMETER(Log command list;"-1666;-323") 
+```
+
 
 
 ### Max concurrent Web processes (18)
@@ -541,6 +585,7 @@ Este selector restringe la cantidad de información guardada en el archivo de de
 
 
 
+
 ### Maximum Web requests size (27)
 
 **Alcance**: 4D local, 4D Server
@@ -548,6 +593,7 @@ Este selector restringe la cantidad de información guardada en el archivo de de
 **Se conserva entre dos sesiones**: sí
 
 **Descripción**: Constante obsoleta (se conserva por compatibilidad únicamente). Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
+
 
 
 
@@ -586,6 +632,7 @@ Este selector restringe la cantidad de información guardada en el archivo de de
 
 
 
+
 ### OpenSSL version (94)
 
 **Alcance**: todas las máquinas 4D
@@ -593,6 +640,7 @@ Este selector restringe la cantidad de información guardada en el archivo de de
 **Se conserva entre dos sesiones**: no
 
 **Descripción**: devuelve el número de versión de la librería OpenSSL que se utiliza en la máquina. (Solo lectura)
+
 
 
 
@@ -612,6 +660,7 @@ Al utilizar una base en modo cliente-servidor, el comando [ORDER BY FORMULA](ord
 
 
 
+
 ### Pause logging (121)
 
 **Hilo seguro**: sí
@@ -623,6 +672,7 @@ Al utilizar una base en modo cliente-servidor, el comando [ORDER BY FORMULA](ord
 **Valores posibles**: 0 (reanudar historial), 1 (pausar historial)
 
 Este selector permite suspender/reanudar todas las operaciones de registro iniciadas en la aplicación (excepto los registros ORDA). Esta función puede ser útil para aligerar temporalmente las tareas de la aplicación 4D o programar las operaciones de registro.
+
 
 
 
@@ -640,6 +690,7 @@ Para mayor información sobre el intérprete PHP, por favor consulte el manual d
 
 
 
+
 ### PHP interpreter port (56)
 
 **Alcance**: aplicación 4D
@@ -649,6 +700,7 @@ Para mayor información sobre el intérprete PHP, por favor consulte el manual d
 **Valores**: valor de tipo entero largo positivo. Por defecto, el valor es 8002\. 
 
 **Descripción**: número de puerto TCP utilizado o por el intérprete PHP de 4D. Este parámetro también puede modificarse globalmente para todos los equipos vía las Propiedades de la base. Para mayor información sobre el intérprete PHP, consulte el manual de *Diseño*.
+
 
 
 
@@ -668,6 +720,7 @@ Para más información sobre los archivos 4DPOP3Log\_X.txt, consulte la sección
 
 
 
+
 ### Port ID (15)
 
 **Alcance**: 4D local, 4D Server
@@ -677,6 +730,7 @@ Para más información sobre los archivos 4DPOP3Log\_X.txt, consulte la sección
 **Descripción**: Command SET DATABASE Número de puerto TCP utilizado por el servidor web 4D con 4D en modo local y 4D Server.  El valor por defecto, que puede ser definido en la página "Web/Configuración" de la caja de diálogo Preferencias, es 80. Puede utilizar las constantes del tema *Números de puerto TCP* para el parámetro *valor*.
 
 El selector Port ID se utiliza en el marco de servidores web 4D compilados y fusionados con 4D Desktop (sin acceso al modo Diseño). Para mayor información sobre el número de puerto TCP, consulte la sección *Parámetros del servidor web*
+
 
 
 
@@ -700,6 +754,9 @@ El selector QUERY BY FORMULA Joins permite definir el modo de funcionamiento de 
 
 
 
+
+
+
 ### Query by formula on server (46)
 
 **Alcance**: tabla y procesos actuales
@@ -719,6 +776,7 @@ Si pasa 0 en el parámetro *valor*, la ubicación de ejecución de los comandos 
 Consulte el ejemplo 2. 
 
 **Nota:** si quiere activar las uniones "tipo SQL" (consulte el selector QUERY BY FORMULA Joins selector), siempre debe ejecutar las fórmulas en el servidor de manera que tengan acceso a los registros. Atención, en este contexto, la fórmula no debe contener llamadas a un método, de lo contrario pasará automáticamente al equipo remoto.
+
 
 
 
@@ -748,6 +806,7 @@ El tiempo de espera de la conexión remota se aplica después de que una máquin
 
 
 
+
 ### Server base process stack size (53)
 
 **Alcance**: 4D Server
@@ -766,19 +825,21 @@ Para que sea tenido en cuenta, este parámetro debe ejecutarse en el equipo serv
 
 
 
+
 ### SMTP Log (110)
 
 **Hilo seguro**: sí
 
 **Alcance**: 4D local, 4D Server*
 
-* **Se conserva entre dos sesiones**: no
+**Se conserva entre dos sesiones**: no
 
  **Valores posibles**: 0 o de 1 a X (0 = no grabar, 1 a X = número secuencial, agregado al nombre del archivo). De forma predeterminada, el valor es 0 (intercambios SMTP no registrados).
 
 **Descripción**: inicia o detiene la grabación de intercambios entre 4D y el servidor SMTP, cuando un objeto *transportador* se procesa a través de *transporter.send( )* o *SMTP\_transporter.checkConnection( )*. Por defecto, el valor es 0 (intercambios no registrados). Cuando este mecanismo está habilitado, se crea un archivo de registro en la carpeta Logs de la base. Se llama 4DSMTPLog\_X.txt, donde X es el número secuencial del registro. Una vez que el archivo 4DSMTPLog ha alcanzado un tamaño de 10 MB, se cierra y se genera uno nuevo, con un número secuencial incrementado. Si ya existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio de la secuencia utilizando el parámetro *valor*. De forma predeterminada, todos los archivos se conservan, pero puede controlar la cantidad de archivos a seguir utilizando el parámetro Circular log limitation. 
 
 Para obtener más información sobre los archivos 4DSMTPLog\_X.txt, consulte la sección *Descripción de archivos de historial*.
+
 
 
 
@@ -791,6 +852,7 @@ Para obtener más información sobre los archivos 4DSMTPLog\_X.txt, consulte la 
  **Valores posibles**: 0 (por defecto) = corrector macOS nativo (Hunspell desactivado), 1 = corrector Hunspell activo. 
 
 **Descripción**: permite activar el corrector ortográfico Hunspell bajo macOS. Por defecto, en esta plataforma el corrector nativo está activo. Puede preferir utilizar el corrector Hunspell, por ejemplo, para unificar la interfaz de sus aplicaciones multiplataformas (bajo Windows, sólo el corrector Hunspell está disponible). Para mayor información, consulte *Corrección ortográfica*.
+
 
 
 
@@ -808,13 +870,14 @@ Para obtener más información sobre los archivos 4DSMTPLog\_X.txt, consulte la 
 
 
 
+
 ### SQL Engine case sensitivity (44)
 
 **Alcance**: base de datos
 
- **Se conserva entre dos sesiones**: sí
+**Se conserva entre dos sesiones**: sí
 
- **Valores posibles**: 0 (no se tienen en cuenta las mayúsculas y minúsculas) ó 1 (sensible a las mayúsculas y minúsculas)
+**Valores posibles**: 0 (no se tienen en cuenta las mayúsculas y minúsculas) ó 1 (sensible a las mayúsculas y minúsculas)
 
 **Descripción**: activación o desactivación de la sensibilidad a mayúsculas y minúsculas para comparaciones de cadenas efectuadas por el motor SQL. 
 
@@ -824,11 +887,12 @@ Esta opción también puede definirse en la [CALL SUBFORM CONTAINER](call-subfor
 
 
 
+
 ### SQL Server Port ID (88)
 
 **Alcance**: 4D modo local y 4D Server.
 
-: Sí
+**Se conserva entre dos sesiones**:
 
 **Descripción**: permite leer o definir el número del puerto TCP utilizado por el servidor SQL integrado de 4D en modo local o 4D Server. Por defecto, el valor es 19812\. Cuando se define este selector, la configuración de la base se actualiza. También puede definir el número del puerto TCP en la página "SQL" de la caja de diálogo de Propiedades de la base.
 
@@ -838,11 +902,12 @@ Esta opción también puede definirse en la [CALL SUBFORM CONTAINER](call-subfor
 
 
 
+
 ### SSL cipher list (64)
 
 **Alcance**: Aplicación 4D
 
-Se conserva entre dos sesiones: No
+**Se conserva entre dos sesiones**: no
 
 **Valores posibles**: secuencia de cadenas separadas por dos puntos.
 
@@ -858,13 +923,14 @@ Para reinicializar la lista de cifrado a su valor por defecto (guardado permanen
 
 **Nota:** con el comando [Get database parameter](get-database-parameter.md), la lista de cifrado se devuelve en el parámetro opcional *valorAlfa* y el parámetro de retorno es siempre 0.
 
+
 ### Table sequence number (31)
 
 **Alcance**: aplicación 4D
 
- **Se conserva entre dos sesiones**: sí
+**Se conserva entre dos sesiones**: sí
 
- **Valores posibles**: todo valor de tipo entero largo.
+**Valores posibles**: todo valor de tipo entero largo.
 
 **Descripción**: este selector se utiliza para modificar o modificar u obtener el número único actual de los registros de la tabla pasada en parámetro. "Número actual" significa "último número utilizado": si modifica este valor utilizando SET DATABASE PARAMETER, el siguiente registro será el valor pasado + 1\. Este nuevo número es el número devuelto por el comando Sequence number [](http://doc.tmp.4d.fr/Database-Parameters/4Dv11.4/ConstantTheme/4870/CMU00244.HTM) como también en todo campo de la tabla a la cual se asigna la propiedad "Autoincrementar" en el editor de estructura o vía SQL.
 
@@ -884,19 +950,22 @@ Por defecto, este número único es definido por 4D y corresponde al orden de cr
 
 
 
+
+
 ### Times inside objects (109)
 
 **Alcance**: 4D local, 4D Server (todos los procesos)
 
- **Se conserva entre dos sesiones**: no
+**Se conserva entre dos sesiones**: no
 
- **Valores posibles**: Times in seconds (0) (predeterminado), Times in milliseconds (1) 
+**Valores posibles**: Times in seconds (0) (predeterminado), Times in milliseconds (1) 
 
 **Descripción**: define la forma en que los valores de tipo hora se convierten y almacenan dentro de las propiedades de los objetos y los elementos de la colección, así como la forma en que se importan/exportan en JSON y en las áreas web. Por defecto, a partir de 4D v17, las horas se convierten y almacenan en número de segundos en los objetos. 
 
 En versiones anteriores, los valores de tiempo se convertían y almacenaban como cantidad de milisegundos en esos contextos. Usar este selector puede ayudarlo a migrar sus aplicaciones volviendo a la configuración anterior si es necesario.
 
 **Nota**: los métodos ORDA y el motor SQL ignoran esta configuración, siempre suponen que los valores de tiempo son números de segundos.
+
 
 
 
@@ -912,15 +981,17 @@ En versiones anteriores, los valores de tiempo se convertían y almacenaban como
 
 
 
+
 ### Tips duration (103)
 
 **Alcance**: aplicación 4D
 
-**Se conserva entre dos sesiones**: No
+**Se conserva entre dos sesiones**: no
 
 **Valores posibles**: entero largo >= 60 (tics)
 
 **Descripción**: duración máxima de visualización de una sugerencia. El valor se expresa en tics (1/60 de segundo). El valor predeterminado es 720 tics (12 segundos).
+
 
 
 
@@ -935,6 +1006,7 @@ En versiones anteriores, los valores de tiempo se convertían y almacenaban como
 **Descripción**: define u obtiene el estado de visualización actual de los consejos para la aplicación 4D. De forma predeterminada, las sugerencias están activadas.
 
 Tenga en cuenta que este parámetro define todos los consejos 4D, es decir, los mensajes de ayuda de formulario y las sugerencias del editor de modo Diseño.
+
 
 
 
@@ -954,6 +1026,7 @@ Esta propiedad también se puede definir mediante la opción "Usar capa de red a
 
 
 
+
 ### User param value (108)
 
 **Alcance**: 4D local, 4D Server
@@ -965,6 +1038,10 @@ Esta propiedad también se puede definir mediante la opción "Usar capa de red a
 **Descripción:** cadena personalizada pasada de una sesión a la siguiente cuando se reinicia la aplicación 4D. Este selector es útil en el contexto de pruebas unitarias automatizadas que requieren que las aplicaciones se reinicien con diferentes parámetros.
 
 Cuando se utiliza con [SET DATABASE PARAMETER](set-database-parameter.md), define un nuevo valor que estará disponible en la próxima base de datos abierta después de que 4D se reinicie manualmente o utilizando los comandos [OPEN DATABASE](open-database.md)(\*), [OPEN DATA FILE](open-data-file.md), o [RESTART 4D](restart-4d.md). Cuando se utiliza con [Get database parameter](get-database-parameter.md), obtiene el valor del parámetro de usuario actualmente disponible, definido mediante una línea de comando (ver *Interfaz de línea de comando*), el archivo .4DLink (ver *Usar un archivo 4DLink*), o una llamada a [SET DATABASE PARAMETER](set-database-parameter.md) durante la sesión anterior. (\*) Si [SET DATABASE PARAMETER](set-database-parameter.md) define un User param value antes de una llamada a [OPEN DATABASE](open-database.md) con un archivo .4DLink que también contiene un atributo xml user-param, 4D 4D tiene en cuenta solo el parámetro ofrecido por [SET DATABASE PARAMETER](set-database-parameter.md).
+
+
+
+
 
 
 

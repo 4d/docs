@@ -73,9 +73,9 @@ title: 数値 (実数、倍長整数、整数)
 
 :::
 
-### Integer division
+### 整数除算
 
-The integer division operator divides one number by another and returns the whole number part of the result, discarding any remainder. `a\b` is equivalent to `Int(a/b)`. This operator returns significant values with integer numbers only.
+整数除算演算子は、ある数値を別の数値で割り算をし、その結果の整数部分を返し余りについては無視します。 `a\b` is equivalent to `Int(a/b)`. この演算子は、整数値のみの有効値を返します。
 
 ### 実数の比較
 
