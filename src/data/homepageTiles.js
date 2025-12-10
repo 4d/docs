@@ -2,6 +2,18 @@ import React from 'react';
 import Translate, { translate } from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 
+import RocketIcon from '@site/src/assets/icons/rocket.svg';
+import ComputerIcon from '@site/src/assets/icons/computer.svg';
+import CodeIcon from '@site/src/assets/icons/code.svg';
+import GearsIcon from '@site/src/assets/icons/gears.svg';
+import GlobeIcon from '@site/src/assets/icons/globe.svg';
+import HammerIcon from '@site/src/assets/icons/hammer.svg';
+import PuzzlepieceIcon from '@site/src/assets/icons/puzzle-piece.svg';
+import UsertieIcon from '@site/src/assets/icons/user-tie.svg';
+import PentosquareIcon from '@site/src/assets/icons/pen-to-square.svg';
+
+
+
 const localizedLinks = {
   "homepage.sections.textensions.4D-Progress-url" : translate({
     message: 'https://github.com/4d/4D-Progress/blob/main/README.md',
@@ -26,7 +38,11 @@ const Sections = [
     
 title: (
     <>
-      <i class="fa-solid fa-rocket" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+       <RocketIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+        />
       <Translate id="homepage.sections.getting-started.title">
         Getting Started
       </Translate>
@@ -40,15 +56,24 @@ title: (
         <Link to="GettingStarted/overview" >
           <Translate>4D at a glance</Translate>
         </Link>
-        <Link to="Notes/updates" ><i class="fa-solid fa-pen-to-square" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
-          <i><Translate>Release Notes</Translate></i>
+        <Link to="Notes/updates" >
+          <PentosquareIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+        />
+        <i><Translate>Release Notes</Translate></i>
         </Link>
       </div>
     ),
   }, {
     title: (
     <>
-      <i class="fa-solid fa-hammer" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+      <HammerIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+        />
       <Translate id="homepage.sections.ide.title">
           Project & IDE
       </Translate>
@@ -91,7 +116,12 @@ title: (
   },{
     title: (
     <>
-      <i class="fa-solid fa-code" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+        <CodeIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+        />
+
       <Translate id="homepage.sections.language.title">
           4D Language
       </Translate>
@@ -116,7 +146,11 @@ title: (
   },{
     title: (
     <>
-      <i class="fa-solid fa-gears" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+      <GearsIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+      />
       <Translate id="homepage.sections.core.title">
           Core Development
       </Translate>
@@ -148,7 +182,11 @@ title: (
   {
     title: (
     <>
-      <i class="fa-solid fa-globe" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+      <GlobeIcon 
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+      />
       <Translate id="homepage.sections.web-applications.title">
           Web applications
       </Translate>
@@ -171,7 +209,11 @@ title: (
   {
     title: (
     <>
-      <i class="fa-solid fa-computer" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+      <ComputerIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+      />
       <Translate id="homepage.sections.desktop-applications.title">
           Desktop Applications
       </Translate>
@@ -203,7 +245,11 @@ title: (
   {
     title:(
     <>
-      <i class="fa-solid fa-user-tie" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+      <UsertieIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+      />
       <Translate id="homepage.sections.administration.title">
           Server & Admin
       </Translate>
@@ -241,7 +287,11 @@ title: (
     {
     title: (
     <>
-      <i class="fa-solid fa-puzzle-piece" style={{ marginRight: '0.6rem', color: '#6c63ff' }}></i>
+      <PuzzlepieceIcon
+          aria-hidden="true"
+          focusable="false"
+          style={{ marginRight: '0.6rem', color: '#6c63ff', width: 18, height: 18, verticalAlign: 'middle' }}
+      />
       <Translate id="homepage.sections.textensions.title">
           Extensions
       </Translate>
