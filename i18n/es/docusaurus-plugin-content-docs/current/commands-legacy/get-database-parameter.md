@@ -41,6 +41,7 @@ Tres modos de sincronización son posibles del lado del cliente. El selector Aut
 
 
 
+
 ### 4D Server log recording (28)
 
 **Hilo seguro**: sí
@@ -489,6 +490,7 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 ### Current process debug log recording (111)
 
 
+
 ### Is current database a project (112)
 
 **Nota:** solo puede utilizar este selector con el comando [Get database parameter](get-database-parameter.md) y su valor no se puede definir.
@@ -576,6 +578,12 @@ OR
 //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
 SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 ```
+OR
+```4d
+//Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+SET DATABASE PARAMETER(Log command list;"-1666;-323") 
+```
+
 
 
  SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
