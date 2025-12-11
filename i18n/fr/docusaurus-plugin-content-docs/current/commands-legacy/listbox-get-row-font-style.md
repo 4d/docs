@@ -55,6 +55,6 @@ Soit la list box suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1269 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -26,6 +26,6 @@ Les numéros des énumérations correspondent à leur ordre de création. Dans l
 |  |  |
 | --- | --- |
 | Numéro de commande | 957 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

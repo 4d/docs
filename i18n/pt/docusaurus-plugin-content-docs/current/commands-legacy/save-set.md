@@ -48,7 +48,7 @@ Se o usuário clicar no botão Cancelar na caixa de diálogo de salvar arquivos,
 |  |  |
 | --- | --- |
 | Número do comando | 184 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

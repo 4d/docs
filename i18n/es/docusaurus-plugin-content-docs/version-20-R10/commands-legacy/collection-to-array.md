@@ -71,6 +71,6 @@ Desea copiar diferentes valores de propiedad de una colección de objetos en dif
 |  |  |
 | --- | --- |
 | Número de comando | 1562 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

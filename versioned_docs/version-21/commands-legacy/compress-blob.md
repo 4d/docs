@@ -98,7 +98,7 @@ The OK variable is set to 1 if the BLOB has been successfully compressed; otherw
 |  |  |
 | --- | --- |
 | Command number | 534 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

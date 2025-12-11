@@ -41,6 +41,6 @@ O tipo e o conteúdo dos parâmetros *info1* e *info2* dependem do valor do *sel
 |  |  |
 | --- | --- |
 | Número do comando | 889 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

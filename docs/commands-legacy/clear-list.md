@@ -58,6 +58,6 @@ See example for the [BLOB to list](blob-to-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 377 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

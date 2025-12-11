@@ -72,6 +72,6 @@ The following example simply displays the connection dialog box:
 |  |  |
 | --- | --- |
 | Command number | 289 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

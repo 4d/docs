@@ -101,7 +101,7 @@ NSName2="http://www.4D.com/Mkt/namespace"/>
 |  |  |
 | --- | --- |
 | コマンド番号 | 861 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

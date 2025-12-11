@@ -152,6 +152,6 @@ retourne un objet contenant les informations suivantes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1571 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

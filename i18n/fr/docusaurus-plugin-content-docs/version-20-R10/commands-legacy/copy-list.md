@@ -31,6 +31,6 @@ Le contenu de la liste copiée est entièrement dupliqué. Une fois que vous en 
 |  |  |
 | --- | --- |
 | Numéro de commande | 626 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

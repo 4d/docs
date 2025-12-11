@@ -31,7 +31,7 @@ Si *process* a été suspendu, référez-vous aux commandes [PAUSE PROCESS](paus
 |  |  |
 | --- | --- |
 | Numéro de commande | 320 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Interdite sur le serveur ||
 
 

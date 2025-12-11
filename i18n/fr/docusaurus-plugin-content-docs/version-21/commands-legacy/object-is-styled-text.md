@@ -48,6 +48,6 @@ Un formulaire comporte un champ représenté par deux objets différents, l’un
 |  |  |
 | --- | --- |
 | Numéro de commande | 1261 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

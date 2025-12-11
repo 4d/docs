@@ -30,7 +30,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 225 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

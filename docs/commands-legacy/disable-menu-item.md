@@ -36,7 +36,7 @@ If the *menuItem* parameter designates a hierarchical submenu, all the items of 
 |  |  |
 | --- | --- |
 | Command number | 150 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -68,6 +68,6 @@ Si no tiene privilegios de acceso para llamar al comando Set user properties o s
 |  |  |
 | --- | --- |
 | Número de comando | 612 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

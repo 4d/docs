@@ -34,7 +34,7 @@ For more information, please refer to the description of the [QUERY WITH ARRAY](
 |  |  |
 | --- | --- |
 | Command number | 1050 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

@@ -26,6 +26,6 @@ Os números das listas correspondem a sua ordem de criação. No editor de lista
 |  |  |
 | --- | --- |
 | Número do comando | 957 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

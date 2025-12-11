@@ -54,6 +54,6 @@ Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la
 |  |  |
 | --- | --- |
 | Numéro de commande | 1638 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

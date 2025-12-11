@@ -78,6 +78,6 @@ Este es un ejemplo de corte de una imagen (la imagen se muestra en el formulario
 |  |  |
 | --- | --- |
 | Número de comando | 988 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

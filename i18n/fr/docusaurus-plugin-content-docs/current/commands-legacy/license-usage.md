@@ -84,6 +84,6 @@ Ce tableau détaille le contenu de l'objet session des sessions REST :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1782 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

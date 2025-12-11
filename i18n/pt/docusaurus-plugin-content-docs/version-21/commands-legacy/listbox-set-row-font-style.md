@@ -84,6 +84,6 @@ Depois da segunda declaração, todas as células da terceira fila mudam de fila
 |  |  |
 | --- | --- |
 | Número do comando | 1268 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -44,6 +44,6 @@ O seguinte exemplo testa o estado da tabela \[Faturas\]. Se o estado da tabela \
 |  |  |
 | --- | --- |
 | Número do comando | 362 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

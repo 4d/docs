@@ -47,6 +47,6 @@ O parâmetro *tipoDados* designa o tipo de dados resultantes da execução da f�
 |  |  |
 | --- | --- |
 | Número do comando | 1203 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

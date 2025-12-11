@@ -109,7 +109,7 @@ No caso de erro, não modifica a variável. Quando ocorre um erro em uma variáv
 |  |  |
 | --- | --- |
 | Número do comando | 1093 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

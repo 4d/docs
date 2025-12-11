@@ -49,6 +49,6 @@ You want to associate the "Cancel" action with all the objects in the form that 
 |  |  |
 | --- | --- |
 | Command number | 1457 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

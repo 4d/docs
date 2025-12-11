@@ -49,6 +49,6 @@ Ce test permet d’exécuter du code différent selon que la version est une app
 |  |  |
 | --- | --- |
 | Numéro de commande | 495 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

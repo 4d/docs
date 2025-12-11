@@ -69,6 +69,6 @@ Les formats personnalisés sont retournés inchangés :
 |  |  |
 | --- | --- |
 | Numéro de commande | 894 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

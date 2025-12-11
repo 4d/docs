@@ -63,6 +63,6 @@ A noter que vous pouvez modifier la position du curseur par rapport à l’image
 |  |  |
 | --- | --- |
 | Numéro de commande | 1272 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

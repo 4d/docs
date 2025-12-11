@@ -98,6 +98,6 @@ O código a seguir ilustra as diferentes possibilidades oferecidas pelos comando
 |  |  |
 | --- | --- |
 | Número do comando | 920 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

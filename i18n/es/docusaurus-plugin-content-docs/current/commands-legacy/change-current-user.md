@@ -77,6 +77,6 @@ El siguiente ejemplo muestra la caja de diálogo de conexión:
 |  |  |
 | --- | --- |
 | Número de comando | 289 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

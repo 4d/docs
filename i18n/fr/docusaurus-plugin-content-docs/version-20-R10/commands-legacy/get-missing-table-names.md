@@ -39,6 +39,6 @@ Une fois que vous avez identifié les tables manquantes de la base, vous pouvez 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1125 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

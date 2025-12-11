@@ -67,6 +67,6 @@ Exemple sous Windows
 |  |  |
 | --- | --- |
 | Numéro de commande | 1106 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

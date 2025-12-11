@@ -47,6 +47,6 @@ Este código oferece um menu que inclui os nomes das janelas abertas e permite r
 |  |  |
 | --- | --- |
 | Número do comando | 1004 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

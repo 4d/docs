@@ -77,6 +77,6 @@ You want to find the number of occurrences of strings starting with "test" and c
 |  |  |
 | --- | --- |
 | Command number | 1333 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

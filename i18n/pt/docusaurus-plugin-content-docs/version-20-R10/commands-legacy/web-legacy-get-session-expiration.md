@@ -44,6 +44,6 @@ O parâmetro *dataVenc* recebe a data de vencimento e o parâmetro *horaVenc* re
 |  |  |
 | --- | --- |
 | Número do comando | 1207 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

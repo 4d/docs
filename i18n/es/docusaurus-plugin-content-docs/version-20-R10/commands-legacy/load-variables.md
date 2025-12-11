@@ -51,7 +51,7 @@ Si las variables se cargan correctamente, la variable sistema OK toma el valor 1
 |  |  |
 | --- | --- |
 | Número de comando | 74 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

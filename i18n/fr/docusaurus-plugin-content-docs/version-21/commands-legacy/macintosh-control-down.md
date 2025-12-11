@@ -35,6 +35,6 @@ Reportez-vous à l'exemple de la commande [Shift down](shift-down.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 544 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

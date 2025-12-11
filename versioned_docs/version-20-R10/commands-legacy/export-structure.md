@@ -62,6 +62,6 @@ You want to export the current database structure in html format:
 |  |  |
 | --- | --- |
 | Command number | 1311 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

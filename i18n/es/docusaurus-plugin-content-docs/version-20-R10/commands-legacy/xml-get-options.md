@@ -43,6 +43,6 @@ En *selector*, pase una de las constantes del tema *XML* indicando la opción a 
 |  |  |
 | --- | --- |
 | Número de comando | 1096 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

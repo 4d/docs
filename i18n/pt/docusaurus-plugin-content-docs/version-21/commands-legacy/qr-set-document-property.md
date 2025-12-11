@@ -41,7 +41,7 @@ Se passa um valor incorreto do parâmetro propriedade, se gera o erro -9852 ou -
 |  |  |
 | --- | --- |
 | Número do comando | 772 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

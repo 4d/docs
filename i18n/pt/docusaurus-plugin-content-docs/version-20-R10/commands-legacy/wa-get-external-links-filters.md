@@ -32,6 +32,6 @@ Os filtros são instalados pelo comando [WA SET EXTERNAL LINKS FILTERS](wa-set-e
 |  |  |
 | --- | --- |
 | Número do comando | 1033 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

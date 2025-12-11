@@ -100,7 +100,7 @@ Modification du contenu d’un élément de type texte :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1055 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

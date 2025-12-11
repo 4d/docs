@@ -54,6 +54,6 @@ O exemplo a seguir pesquisa os clientes que são atendidos por dois representant
 |  |  |
 | --- | --- |
 | Número do comando | 121 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

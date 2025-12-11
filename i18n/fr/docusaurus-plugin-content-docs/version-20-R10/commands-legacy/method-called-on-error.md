@@ -51,6 +51,6 @@ Cette commande est particulièrement utile dans le cadre des composants, car ell
 |  |  |
 | --- | --- |
 | Numéro de commande | 704 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -57,6 +57,6 @@ Resultado:
 |  |  |
 | --- | --- |
 | Número de comando | 987 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

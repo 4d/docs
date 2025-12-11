@@ -78,7 +78,7 @@ Si el parámetro *ancho* es incorrecto, se genera el error -9855.
 |  |  |
 | --- | --- |
 | Número de comando | 797 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

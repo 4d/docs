@@ -37,6 +37,6 @@ Le paramétrage courant peut être défini soit :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1052 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

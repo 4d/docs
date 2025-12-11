@@ -44,6 +44,6 @@ O comando devolve um valor que corresponde ao estilo da linha fronteira. Pode co
 |  |  |
 | --- | --- |
 | Número do comando | 1263 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

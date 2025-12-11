@@ -39,6 +39,6 @@ Si aucune icône n’est associée à la ligne, la commande retourne une valeur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 983 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -47,6 +47,6 @@ You want to drop a specific remote user:
 |  |  |
 | --- | --- |
 | Command number | 1633 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

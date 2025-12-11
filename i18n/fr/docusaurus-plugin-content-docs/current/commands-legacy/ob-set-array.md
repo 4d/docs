@@ -126,6 +126,6 @@ Utilisation d'un champ objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1227 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

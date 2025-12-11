@@ -60,7 +60,7 @@ IANA名に関する説明は[CONVERT FROM TEXT](convert-from-text.md)コマン�
 |  |  |
 | --- | --- |
 | コマンド番号 | 205 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

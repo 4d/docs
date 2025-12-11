@@ -126,6 +126,6 @@ Usted desea utilizar el valor de la versión corta de la aplicación devuelto po
 |  |  |
 | --- | --- |
 | Número de comando | 493 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

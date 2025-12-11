@@ -29,6 +29,6 @@ Quando tiver executado este comando, a impressora novamente está disponível pa
 |  |  |
 | --- | --- |
 | Número do comando | 996 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

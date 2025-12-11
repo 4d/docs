@@ -191,6 +191,6 @@ You want to remove all defined custom field and table names:
 |  |  |
 | --- | --- |
 | Command number | 601 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

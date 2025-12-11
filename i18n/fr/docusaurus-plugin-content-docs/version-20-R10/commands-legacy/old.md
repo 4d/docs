@@ -48,6 +48,6 @@ Pour restaurer la valeur originale d'un champ, assignez-lui la valeur retournée
 |  |  |
 | --- | --- |
 | Numéro de commande | 35 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -29,6 +29,6 @@ Este comando debe utilizarse únicamente en el contexto del evento de formulario
 |  |  |
 | --- | --- |
 | Número de comando | 712 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

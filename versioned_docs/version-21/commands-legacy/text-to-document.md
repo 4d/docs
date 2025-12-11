@@ -88,6 +88,6 @@ Example allowing the user to indicate the location of the file to create:
 |  |  |
 | --- | --- |
 | Command number | 1237 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

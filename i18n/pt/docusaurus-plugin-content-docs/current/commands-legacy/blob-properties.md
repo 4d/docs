@@ -81,6 +81,6 @@ Depois que este método tenha sido adicionado à sua aplicação, você pode us�
 |  |  |
 | --- | --- |
 | Número do comando | 536 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

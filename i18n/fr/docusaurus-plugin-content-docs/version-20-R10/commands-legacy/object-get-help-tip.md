@@ -42,6 +42,6 @@ Le libellé d’un bouton image est stocké sous forme de message d’aide. Ce l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1182 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -65,6 +65,6 @@ Depois da execução, $att contém, por exemplo:
 |  |  |
 | --- | --- |
 | Número do comando | 1334 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

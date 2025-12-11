@@ -56,6 +56,6 @@ The current language of the database determines the .lproj folder where the prog
 |  |  |
 | --- | --- |
 | Command number | 1009 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -76,6 +76,6 @@ The item reference numbers are set as follows:
 |  |  |
 | --- | --- |
 | Command number | 633 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

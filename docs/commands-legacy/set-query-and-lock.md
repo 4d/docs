@@ -75,7 +75,7 @@ If the command is not called in the context of a transaction, an error is genera
 |  |  |
 | --- | --- |
 | Command number | 661 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

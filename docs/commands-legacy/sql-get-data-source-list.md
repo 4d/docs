@@ -59,7 +59,7 @@ If the command is executed correctly, the OK system variable is set to 1\. Other
 |  |  |
 | --- | --- |
 | Command number | 989 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

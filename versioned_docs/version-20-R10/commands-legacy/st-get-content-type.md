@@ -107,7 +107,7 @@ You want to display context-menu commands based on the type of contents selected
 |  |  |
 | --- | --- |
 | Command number | 1286 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

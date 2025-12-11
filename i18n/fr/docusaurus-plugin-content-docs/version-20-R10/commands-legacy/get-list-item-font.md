@@ -36,6 +36,6 @@ Vous pouvez enfin passer *\** dans *réfElément* : dans ce cas, la commande s�
 |  |  |
 | --- | --- |
 | Numéro de commande | 954 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

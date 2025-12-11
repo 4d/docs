@@ -75,6 +75,6 @@ You want to apply print settings previously saved to disk to the current 4D prin
 |  |  |
 | --- | --- |
 | Command number | 1434 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

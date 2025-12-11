@@ -107,7 +107,7 @@ Também pode utilizar outros comandos, tais como [PRINT SELECTION](print-selecti
 |  |  |
 | --- | --- |
 | Número do comando | 59 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

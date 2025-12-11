@@ -118,6 +118,6 @@ Los registros están en el siguiente orden:
 |  |  |
 | --- | --- |
 | Número de comando | 1407 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

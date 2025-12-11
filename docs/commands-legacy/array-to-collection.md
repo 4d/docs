@@ -88,6 +88,6 @@ You want to copy a text array in a shared collection:
 |  |  |
 | --- | --- |
 | Command number | 1563 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

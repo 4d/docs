@@ -138,7 +138,7 @@ Until(OK=0) //end of existing commands
 |  |  |
 | --- | --- |
 | Command number | 538 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

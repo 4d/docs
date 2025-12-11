@@ -48,6 +48,6 @@ En el parámetro *formato*, pase el tipo del parámetro del que quiere conocer e
 |  |  |
 | --- | --- |
 | Número de comando | 994 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

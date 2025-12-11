@@ -30,6 +30,6 @@ Este comando devuelve una cadena vacía si el contenido de la página actual no 
 |  |  |
 | --- | --- |
 | Número de comando | 1038 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

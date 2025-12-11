@@ -48,7 +48,7 @@ Este es el código del botón **Compare**:
 |  |  |
 | --- | --- |
 | Número de comando | 1196 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

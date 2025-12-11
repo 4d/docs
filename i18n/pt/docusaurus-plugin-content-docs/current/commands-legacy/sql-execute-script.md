@@ -65,7 +65,7 @@ Se o script for executado corretamente (nenhum erro ocorre), a variável Sistema
 |  |  |
 | --- | --- |
 | Número do comando | 1089 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

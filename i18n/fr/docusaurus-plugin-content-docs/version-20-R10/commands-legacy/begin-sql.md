@@ -49,6 +49,6 @@ A noter que le *Débogueur* de 4D évaluera le code SQL ligne par ligne. Dans ce
 |  |  |
 | --- | --- |
 | Numéro de commande | 948 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

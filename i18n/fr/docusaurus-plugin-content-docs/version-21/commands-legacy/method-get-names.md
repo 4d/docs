@@ -46,6 +46,6 @@ Exemples d’utilisations types :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1166 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -56,7 +56,7 @@ En todos los casos, puede interceptar el error utilizando un método de interrup
 |  |  |
 | --- | --- |
 | Número de comando | 525 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

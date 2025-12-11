@@ -61,6 +61,6 @@ Desea exportar la estructura actual de la base de datos en formato html:
 |  |  |
 | --- | --- |
 | Número de comando | 1311 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

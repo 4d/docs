@@ -204,6 +204,6 @@ Se quiser armazenar uma imagem em um campo objeto. Pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 1220 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -62,6 +62,6 @@ Soit la list box suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1271 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

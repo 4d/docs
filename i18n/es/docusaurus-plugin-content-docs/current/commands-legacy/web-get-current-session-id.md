@@ -29,6 +29,6 @@ Si este comando se llama fuera del contexto de una sesión web, devuelve una cad
 |  |  |
 | --- | --- |
 | Número de comando | 1162 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

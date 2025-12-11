@@ -39,6 +39,6 @@ Caso a imagem não contém palavras-chaves ou metadados IPTC/Keywords, o comando
 |  |  |
 | --- | --- |
 | Número do comando | 1142 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

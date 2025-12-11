@@ -29,6 +29,6 @@ Note que el usuario puede modificar esta opción antes de validar la caja de di�
 |  |  |
 | --- | --- |
 | Número de comando | 1197 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

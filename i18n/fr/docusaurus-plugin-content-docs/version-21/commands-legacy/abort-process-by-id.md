@@ -48,6 +48,6 @@ Vous souhaitez stopper le process sélectionné parmi la collection de process a
 |  |  |
 | --- | --- |
 | Numéro de commande | 1634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

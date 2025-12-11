@@ -49,6 +49,6 @@ Regresando al ejemplo del servicio Web “Raiz\_cuadrada” de la descripción d
 |  |  |
 | --- | --- |
 | Número de comando | 781 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

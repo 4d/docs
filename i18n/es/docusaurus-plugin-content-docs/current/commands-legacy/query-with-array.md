@@ -45,7 +45,7 @@ El siguiente ejemplo le permite recuperar los registros de clientes franceses y 
 |  |  |
 | --- | --- |
 | Número de comando | 644 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

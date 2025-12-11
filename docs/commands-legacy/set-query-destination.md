@@ -258,6 +258,6 @@ After this project method is implemented in your application, you can write:
 |  |  |
 | --- | --- |
 | Command number | 396 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

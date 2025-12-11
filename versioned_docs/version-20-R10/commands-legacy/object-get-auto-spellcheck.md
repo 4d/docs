@@ -37,6 +37,6 @@ The command returns **True** when automatic spell-checking is enabled for the *o
 |  |  |
 | --- | --- |
 | Command number | 1174 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

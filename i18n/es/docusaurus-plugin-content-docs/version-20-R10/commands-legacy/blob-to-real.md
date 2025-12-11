@@ -65,6 +65,6 @@ El siguiente ejemplo lee 20 valores reales de un BLOB, a partir del offset 0x200
 |  |  |
 | --- | --- |
 | Número de comando | 553 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

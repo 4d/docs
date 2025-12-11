@@ -54,7 +54,7 @@ Se não houver memória suficiente para carregar a imagem, um erro é gerado. Po
 |  |  |
 | --- | --- |
 | Número do comando | 508 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

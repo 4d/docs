@@ -32,6 +32,6 @@ Refer to the example of the [HIDE WINDOW](hide-window.md) command.
 |  |  |
 | --- | --- |
 | Command number | 435 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

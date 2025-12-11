@@ -71,6 +71,6 @@ Este es un ejemplo de cómo procesar inmediatamente los caracteres introducidos 
 |  |  |
 | --- | --- |
 | Número de comando | 655 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

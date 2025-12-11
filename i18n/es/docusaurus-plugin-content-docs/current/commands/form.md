@@ -116,6 +116,6 @@ Si se editan los valores y se presiona el botón OK, se actualiza el campo (desp
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1466                        |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | no |
 
 

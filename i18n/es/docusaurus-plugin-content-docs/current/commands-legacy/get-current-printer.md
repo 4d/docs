@@ -37,6 +37,6 @@ Si no hay ninguna impresora instalada, se genera un error.
 |  |  |
 | --- | --- |
 | Número de comando | 788 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -44,6 +44,6 @@ Por defecto, si se omite el parámetro *\**, el comando utiliza una codificació
 |  |  |
 | --- | --- |
 | Número de comando | 895 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

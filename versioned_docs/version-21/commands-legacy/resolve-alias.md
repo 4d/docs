@@ -37,7 +37,7 @@ If *aliasPath* does specify an alias/shortcut, the OK system variable is set to 
 |  |  |
 | --- | --- |
 | Command number | 695 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

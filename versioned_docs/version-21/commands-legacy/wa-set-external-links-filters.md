@@ -80,6 +80,6 @@ This example combines the filtering of both sites and external links:
 |  |  |
 | --- | --- |
 | Command number | 1032 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

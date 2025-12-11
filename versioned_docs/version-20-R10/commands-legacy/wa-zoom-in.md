@@ -31,6 +31,6 @@ Under Windows, the scope of this command is global: the configuration is retaine
 |  |  |
 | --- | --- |
 | Command number | 1039 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

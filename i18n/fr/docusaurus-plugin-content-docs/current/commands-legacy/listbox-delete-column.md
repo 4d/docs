@@ -39,6 +39,6 @@ Si le paramètre *positionCol* est supérieur au nombre de colonnes de la list b
 |  |  |
 | --- | --- |
 | Numéro de commande | 830 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

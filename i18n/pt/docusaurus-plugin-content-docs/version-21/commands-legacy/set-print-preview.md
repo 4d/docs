@@ -42,6 +42,6 @@ O exemplo a seguir seleciona a opção Pré-visualização em tela para mostrar 
 |  |  |
 | --- | --- |
 | Número do comando | 364 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

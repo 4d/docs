@@ -54,6 +54,6 @@ Dans la , vous souhaitez fixer une priorité très haute pour les "blobs" de la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1425 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -35,6 +35,6 @@ The command toggles the window state:
 |  |  |
 | --- | --- |
 | Command number | 1829 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

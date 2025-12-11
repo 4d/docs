@@ -58,6 +58,6 @@ We want to get the type of standard values:
 |  |  |
 | --- | --- |
 | Command number | 1230 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

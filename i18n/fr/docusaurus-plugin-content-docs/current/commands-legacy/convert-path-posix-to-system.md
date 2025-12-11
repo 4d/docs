@@ -55,6 +55,6 @@ Exemples sous Windows :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1107 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

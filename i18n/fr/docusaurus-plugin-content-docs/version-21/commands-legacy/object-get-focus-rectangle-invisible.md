@@ -34,6 +34,6 @@ La commande retourne **Vrai** si le rectangle de focus est masqué et **Faux** s
 |  |  |
 | --- | --- |
 | Numéro de commande | 1178 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

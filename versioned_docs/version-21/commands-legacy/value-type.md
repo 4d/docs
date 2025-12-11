@@ -118,6 +118,6 @@ You want to sum up all numeric values in a collection:
 |  |  |
 | --- | --- |
 | Command number | 1509 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

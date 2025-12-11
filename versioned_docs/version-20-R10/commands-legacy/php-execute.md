@@ -286,6 +286,6 @@ For more information concerning the trim function, please refer to the PHP docum
 |  |  |
 | --- | --- |
 | Command number | 1058 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

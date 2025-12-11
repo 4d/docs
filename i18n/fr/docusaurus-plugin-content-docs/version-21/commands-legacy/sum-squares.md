@@ -64,6 +64,6 @@ Cet exemple vous permet d’obtenir la somme des carrés des valeurs placées da
 |  |  |
 | --- | --- |
 | Numéro de commande | 28 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

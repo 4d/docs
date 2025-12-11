@@ -70,6 +70,6 @@ The vNAME variable contains ROBERT and the vCITY variable contains DALLAS.
 |  |  |
 | --- | --- |
 | Command number | 683 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

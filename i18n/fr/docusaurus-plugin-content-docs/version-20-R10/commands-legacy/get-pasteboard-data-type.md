@@ -39,6 +39,6 @@ Pour plus d’informations sur les types de données pris en charge, reportez-vo
 |  |  |
 | --- | --- |
 | Numéro de commande | 958 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

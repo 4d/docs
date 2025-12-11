@@ -48,6 +48,6 @@ O exemplo a seguir lhe permite conhecer o estado de um processo (em nosso caso, 
 |  |  |
 | --- | --- |
 | Número do comando | 652 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

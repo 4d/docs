@@ -49,7 +49,7 @@ L'instruction suivante affiche l'état stocké dans le champ ChampBlob dans la z
 |  |  |
 | --- | --- |
 | Numéro de commande | 771 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

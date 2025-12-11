@@ -48,6 +48,6 @@ Resultado:
 |  |  |
 | --- | --- |
 | Número de comando | 1445 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

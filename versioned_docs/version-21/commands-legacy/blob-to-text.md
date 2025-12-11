@@ -66,6 +66,6 @@ After the call, the variable is incremented by the number of bytes read. Therefo
 |  |  |
 | --- | --- |
 | Command number | 555 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

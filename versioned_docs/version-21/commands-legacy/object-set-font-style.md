@@ -60,6 +60,6 @@ This example sets the font style to Plain for all form objects with names starti
 |  |  |
 | --- | --- |
 | Command number | 166 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

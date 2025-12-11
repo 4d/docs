@@ -72,6 +72,6 @@ Cet exemple vous permet d’obtenir la variance des valeurs placées dans un tab
 |  |  |
 | --- | --- |
 | Numéro de commande | 27 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

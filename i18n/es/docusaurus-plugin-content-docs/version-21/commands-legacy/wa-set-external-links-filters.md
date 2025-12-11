@@ -80,6 +80,6 @@ Este ejemplo combina los filtros de sitios y de enlaces externos:
 |  |  |
 | --- | --- |
 | Número de comando | 1032 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

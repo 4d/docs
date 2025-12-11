@@ -31,6 +31,6 @@ Este comando está destinado a ser utilizado em um processo de atualização aut
 |  |  |
 | --- | --- |
 | Número do comando | 1301 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

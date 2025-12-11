@@ -54,6 +54,6 @@ In the first parameter, pass the *curPassPhrase* or *curDataKey* that defines th
 |  |  |
 | --- | --- |
 | Command number | 1638 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

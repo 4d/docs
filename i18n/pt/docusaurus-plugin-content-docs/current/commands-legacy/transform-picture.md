@@ -78,6 +78,6 @@ Este é um exemplo de corte de uma imagem (a imagem se mostra no formulário com
 |  |  |
 | --- | --- |
 | Número do comando | 988 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

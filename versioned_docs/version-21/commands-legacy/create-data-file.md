@@ -32,6 +32,6 @@ Before launching the operation, the command verifies that the specified access p
 |  |  |
 | --- | --- |
 | Command number | 313 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

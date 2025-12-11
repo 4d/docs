@@ -195,6 +195,6 @@ Dans le cas contraire, pour des raisons de sécurité, le mode synchrone est uti
 |  |  |
 | --- | --- |
 | Numéro de commande | 689 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

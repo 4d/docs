@@ -32,6 +32,6 @@ Utilice READ ONLY cuando no necesite modificar los registros.
 |  |  |
 | --- | --- |
 | Número de comando | 145 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

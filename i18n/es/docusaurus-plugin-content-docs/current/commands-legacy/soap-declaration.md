@@ -192,6 +192,6 @@ Este ejemplo illustra los resultados de los diferentes tipos de declaraciones:
 |  |  |
 | --- | --- |
 | Número de comando | 782 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

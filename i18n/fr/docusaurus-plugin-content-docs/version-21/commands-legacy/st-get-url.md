@@ -76,6 +76,6 @@ Sur un événement double-clic, vous vérifiez que vous êtes bien en présence 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1288 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

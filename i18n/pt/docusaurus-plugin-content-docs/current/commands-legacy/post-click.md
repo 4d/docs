@@ -34,6 +34,6 @@ Se especificar o parâmetro processo *processo*, o clique é enviado ao processo
 |  |  |
 | --- | --- |
 | Número do comando | 466 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

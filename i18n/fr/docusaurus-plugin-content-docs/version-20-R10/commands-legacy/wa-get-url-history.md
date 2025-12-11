@@ -49,6 +49,6 @@ S’il est passé, le paramètre *tabTitres* contient la liste des noms de fenê
 |  |  |
 | --- | --- |
 | Numéro de commande | 1048 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -36,6 +36,6 @@ Passez **Vrai** dans le paramètre *troisEtat* pour activer le mode "trois état
 |  |  |
 | --- | --- |
 | Numéro de commande | 1249 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

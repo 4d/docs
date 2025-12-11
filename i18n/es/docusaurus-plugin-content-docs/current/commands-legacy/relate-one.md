@@ -92,7 +92,7 @@ Si el comando se ejecuta correctamente y si los registros relacionados se han ca
 |  |  |
 | --- | --- |
 | Número de comando | 42 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

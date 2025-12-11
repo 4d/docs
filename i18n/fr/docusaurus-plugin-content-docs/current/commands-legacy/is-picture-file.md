@@ -34,6 +34,6 @@ Si vous ne passez pas le paramètre *\**, la commande teste le fichier en recher
 |  |  |
 | --- | --- |
 | Numéro de commande | 1113 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -73,6 +73,6 @@ The following example turns off the progress meter before doing a sort, and then
 |  |  |
 | --- | --- |
 | Command number | 175 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

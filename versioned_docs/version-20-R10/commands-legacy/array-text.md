@@ -59,6 +59,6 @@ This example creates an interprocess array of 50 [Text](# "A character string th
 |  |  |
 | --- | --- |
 | Command number | 222 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

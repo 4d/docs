@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 481 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

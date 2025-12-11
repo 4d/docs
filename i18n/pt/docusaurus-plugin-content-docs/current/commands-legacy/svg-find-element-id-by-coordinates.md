@@ -57,7 +57,7 @@ Se *objetoImagem* não contiver uma imagem SVG válida, o comando retorna uma ca
 |  |  |
 | --- | --- |
 | Número do comando | 1054 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

@@ -96,6 +96,6 @@ ou :
 |  |  |
 | --- | --- |
 | Numéro de commande | 259 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

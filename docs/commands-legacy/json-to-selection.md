@@ -74,6 +74,6 @@ Using the **JSON TO SELECTION** command to add records to the \[Company\] table:
 |  |  |
 | --- | --- |
 | Command number | 1235 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

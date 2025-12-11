@@ -213,7 +213,7 @@ Si le paramètre *dossier* est invalide ou si le chemin d'accès retourné est v
 |  |  |
 | --- | --- |
 | Numéro de commande | 485 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

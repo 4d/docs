@@ -85,4 +85,4 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1824                        |
-| Thread safe       | &cross; |
+| Thread safe       | no |

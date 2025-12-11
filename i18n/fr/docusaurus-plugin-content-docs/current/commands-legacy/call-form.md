@@ -107,6 +107,6 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 |  |  |
 | --- | --- |
 | Numéro de commande | 1391 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

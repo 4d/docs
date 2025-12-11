@@ -32,6 +32,6 @@ Use READ ONLY when you do not need to modify the record or records.
 |  |  |
 | --- | --- |
 | Command number | 145 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

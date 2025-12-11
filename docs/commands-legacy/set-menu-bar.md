@@ -124,6 +124,6 @@ In this comprehensive example, we will create, by programming, a menu bar includ
 |  |  |
 | --- | --- |
 | Command number | 67 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

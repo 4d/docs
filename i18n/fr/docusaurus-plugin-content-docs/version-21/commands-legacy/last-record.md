@@ -38,7 +38,7 @@ L'exemple suivant désigne le dernier enregistrement de la table \[Contacts\] co
 |  |  |
 | --- | --- |
 | Numéro de commande | 200 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

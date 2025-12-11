@@ -61,6 +61,6 @@ Votre application affiche de nombreux graphiques en couleurs. Vous pouvez écrir
 |  |  |
 | --- | --- |
 | Numéro de commande | 439 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

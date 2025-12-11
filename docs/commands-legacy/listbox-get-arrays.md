@@ -55,6 +55,6 @@ For record selection, collection or entity selection type list boxes, *arrStyles
 |  |  |
 | --- | --- |
 | Command number | 832 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

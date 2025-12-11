@@ -98,7 +98,7 @@ A noter qu’en cas d’erreur, la variable n’est pas modifiée. Lorsqu’une 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1136 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

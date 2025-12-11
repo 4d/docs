@@ -97,6 +97,6 @@ La méthode objet de la list box de gauche (destination) contient le code suivan
 |  |  |
 | --- | --- |
 | Numéro de commande | 608 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

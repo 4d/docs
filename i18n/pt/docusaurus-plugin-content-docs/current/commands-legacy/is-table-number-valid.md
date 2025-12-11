@@ -30,6 +30,6 @@ Este comando permite detectar as eventuais eliminações de tabelas, que criam q
 |  |  |
 | --- | --- |
 | Número do comando | 999 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

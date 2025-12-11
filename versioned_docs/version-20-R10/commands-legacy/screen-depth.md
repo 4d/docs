@@ -65,6 +65,6 @@ Your application displays many color graphics. Somewhere in your database, you c
 |  |  |
 | --- | --- |
 | Command number | 439 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

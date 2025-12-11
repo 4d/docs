@@ -51,6 +51,6 @@ You want to update your license and receive a message when it's completed:
 |  |  |
 | --- | --- |
 | Command number | 1336 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

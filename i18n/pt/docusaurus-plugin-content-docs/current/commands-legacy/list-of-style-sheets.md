@@ -55,6 +55,6 @@ Se executa o seguinte código:
 |  |  |
 | --- | --- |
 | Número do comando | 1255 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

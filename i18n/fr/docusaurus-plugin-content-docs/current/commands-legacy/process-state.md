@@ -65,6 +65,6 @@ L'exemple suivant retourne le nom et le numéro de référence de chaque process
 |  |  |
 | --- | --- |
 | Numéro de commande | 330 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

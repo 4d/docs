@@ -165,7 +165,7 @@ Si el formato de la condición de búsqueda es correcto, la variable sistema OK 
 |  |  |
 | --- | --- |
 | Número de comando | 942 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

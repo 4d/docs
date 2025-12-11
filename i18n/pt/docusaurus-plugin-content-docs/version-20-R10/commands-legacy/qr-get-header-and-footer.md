@@ -72,7 +72,7 @@ O código a seguir recupera o conteúdo e a altura do título do cabeçalho e os
 |  |  |
 | --- | --- |
 | Número do comando | 775 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

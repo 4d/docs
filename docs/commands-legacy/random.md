@@ -39,6 +39,6 @@ The following example assigns a random integer between 10 and 30 to the *vlResul
 |  |  |
 | --- | --- |
 | Command number | 100 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

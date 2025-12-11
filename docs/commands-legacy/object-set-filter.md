@@ -61,6 +61,6 @@ The following example allows only the letters “a,” “b,” “c,” or “g
 |  |  |
 | --- | --- |
 | Command number | 235 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

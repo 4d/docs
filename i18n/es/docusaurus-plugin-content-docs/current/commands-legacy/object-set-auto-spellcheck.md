@@ -37,6 +37,6 @@ Pase **True** en *correccionAuto* para activar esta función para objeto y **Fal
 |  |  |
 | --- | --- |
 | Número de comando | 1173 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -50,6 +50,6 @@ Cet exemple permet d’appliquer une couleur alternée à un formulaire liste af
 |  |  |
 | --- | --- |
 | Numéro de commande | 897 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

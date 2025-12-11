@@ -72,6 +72,6 @@ Usted quiere insertar la hora actual al inicio del texto y luego congelarla ante
 |  |  |
 | --- | --- |
 | Número de comando | 1282 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -42,6 +42,6 @@ Caso deseje conhecer o nome da variável apontada ou o número do campo, pode ut
 |  |  |
 | --- | --- |
 | Número do comando | 315 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

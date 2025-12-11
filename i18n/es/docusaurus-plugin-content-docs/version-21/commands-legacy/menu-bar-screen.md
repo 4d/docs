@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 441 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

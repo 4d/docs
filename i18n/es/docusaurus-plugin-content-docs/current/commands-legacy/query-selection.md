@@ -49,7 +49,7 @@ Va a encontrar todas las empresas ubicadas en la ciudad de Nueva York, con una a
 |  |  |
 | --- | --- |
 | Número de comando | 341 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

@@ -66,6 +66,6 @@ Este exemplo cria um array interprocesso de 50 elementos do tipo Booleano e dete
 |  |  |
 | --- | --- |
 | Número do comando | 223 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

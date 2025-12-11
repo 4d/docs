@@ -35,6 +35,6 @@ Ver o exemplo para [Process state](process-state.md "Process state") e [On Exit 
 |  |  |
 | --- | --- |
 | Número do comando | 335 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

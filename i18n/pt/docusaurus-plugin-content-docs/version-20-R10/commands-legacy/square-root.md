@@ -48,6 +48,6 @@ Por exemplo, Hipotenusa (4;3) devolve 5.
 |  |  |
 | --- | --- |
 | Número do comando | 539 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

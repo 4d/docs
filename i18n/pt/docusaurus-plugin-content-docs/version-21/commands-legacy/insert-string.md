@@ -47,6 +47,6 @@ O seguinte exemplo ilustra o uso de Insert string. Os resultados são atribuído
 |  |  |
 | --- | --- |
 | Número do comando | 231 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

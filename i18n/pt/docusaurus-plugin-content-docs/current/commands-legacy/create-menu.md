@@ -48,6 +48,6 @@ Consulte o exemplo do comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 |  |  |
 | --- | --- |
 | Número do comando | 408 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

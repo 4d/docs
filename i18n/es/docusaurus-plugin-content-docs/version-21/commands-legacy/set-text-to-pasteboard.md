@@ -43,7 +43,7 @@ Si el texto se coloca correctamente en el portapapeles, la variable OK toma el v
 |  |  |
 | --- | --- |
 | Número de comando | 523 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

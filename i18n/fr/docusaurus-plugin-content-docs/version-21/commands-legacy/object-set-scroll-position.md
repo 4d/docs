@@ -96,6 +96,6 @@ Attention dans ce cas, si vous omettez le second paramètre \*, l'image ne défi
 |  |  |
 | --- | --- |
 | Numéro de commande | 906 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

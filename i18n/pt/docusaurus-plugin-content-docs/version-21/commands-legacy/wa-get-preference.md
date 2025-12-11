@@ -40,6 +40,6 @@ Passe no parâmetro *valor* uma variável que receberá o valor atual da prefer�
 |  |  |
 | --- | --- |
 | Número do comando | 1042 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

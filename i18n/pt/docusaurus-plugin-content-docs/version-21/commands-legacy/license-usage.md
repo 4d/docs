@@ -78,6 +78,6 @@ Essa tabela detalha os conteúdos do objeto sessão para sessões REST:
 |  |  |
 | --- | --- |
 | Número do comando | 1782 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

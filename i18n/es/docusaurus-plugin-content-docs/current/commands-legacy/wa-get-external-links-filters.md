@@ -32,6 +32,6 @@ Los filtros son instalados por el comando [WA SET EXTERNAL LINKS FILTERS](wa-set
 |  |  |
 | --- | --- |
 | Número de comando | 1033 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -51,6 +51,6 @@ Não importa a ordem das opções de chamada. Se a mesma opção é definida mai
 |  |  |
 | --- | --- |
 | Número do comando | 1160 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

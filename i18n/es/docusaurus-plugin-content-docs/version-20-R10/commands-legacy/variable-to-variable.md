@@ -64,6 +64,6 @@ El siguiente ejemplo lee un array proceso desde el proceso indicado por *$vlProc
 |  |  |
 | --- | --- |
 | Número de comando | 635 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

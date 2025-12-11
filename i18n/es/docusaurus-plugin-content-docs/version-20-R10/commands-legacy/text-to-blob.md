@@ -112,6 +112,6 @@ Después de la ejecución este código:
 |  |  |
 | --- | --- |
 | Número de comando | 554 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

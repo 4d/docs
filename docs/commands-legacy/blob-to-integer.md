@@ -64,6 +64,6 @@ The following example reads 20 Integer values from a BLOB, starting at the offse
 |  |  |
 | --- | --- |
 | Command number | 549 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

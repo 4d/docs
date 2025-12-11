@@ -75,6 +75,6 @@ Os exemplos abaixo usam a rota a um formulário json para imprimir os registros 
 |  |  |
 | --- | --- |
 | Número do comando | 54 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -42,6 +42,6 @@ The title of a picture button is stored as a help message. This title is stored 
 |  |  |
 | --- | --- |
 | Command number | 1182 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

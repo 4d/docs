@@ -51,7 +51,7 @@ La variable système OK prend la valeur 1 si les variables ont été correctemen
 |  |  |
 | --- | --- |
 | Numéro de commande | 74 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

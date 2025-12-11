@@ -56,7 +56,7 @@ In each case, you can trap the error using an [ON ERR CALL](on-err-call.md) inte
 |  |  |
 | --- | --- |
 | Command number | 525 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -34,6 +34,6 @@ Pase **True** en el parámetro *menuContext* para activar el menú contextual, y
 |  |  |
 | --- | --- |
 | Número de comando | 1251 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

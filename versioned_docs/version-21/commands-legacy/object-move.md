@@ -73,6 +73,6 @@ The following statement moves “button\_1” to the following coordinates (10;2
 |  |  |
 | --- | --- |
 | Command number | 664 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -35,7 +35,7 @@ En Macintosh, si no pasa el parámetro opcional *\**, se devuelve el tamaño del
 |  |  |
 | --- | --- |
 | Número de comando | 479 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

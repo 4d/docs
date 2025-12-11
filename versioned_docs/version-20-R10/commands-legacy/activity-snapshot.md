@@ -112,6 +112,6 @@ You get arrays such as:
 |  |  |
 | --- | --- |
 | Command number | 1277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

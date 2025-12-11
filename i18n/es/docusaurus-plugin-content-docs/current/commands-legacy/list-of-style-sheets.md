@@ -55,6 +55,6 @@ Si ejecuta el siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 1255 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

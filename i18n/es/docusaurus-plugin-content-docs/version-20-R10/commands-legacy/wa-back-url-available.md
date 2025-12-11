@@ -31,6 +31,6 @@ El comando devuelve [True](true.md "True") si existe un URL y de lo contrario [F
 |  |  |
 | --- | --- |
 | Número de comando | 1026 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

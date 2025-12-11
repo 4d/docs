@@ -222,7 +222,7 @@ Se os dados no BLOB são adicionados corretamente á área de transferência, a 
 |  |  |
 | --- | --- |
 | Número do comando | 403 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

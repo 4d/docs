@@ -48,6 +48,6 @@ Aplicar la fuente Times al elemento actual de la lista:
 |  |  |
 | --- | --- |
 | Número de comando | 953 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

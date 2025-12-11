@@ -37,6 +37,6 @@ Quando se suspende a execução de um processo, as janelas que pertencem a este 
 |  |  |
 | --- | --- |
 | Número do comando | 319 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

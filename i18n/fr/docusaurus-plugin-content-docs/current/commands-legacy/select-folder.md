@@ -89,7 +89,7 @@ L’exemple suivant permet de sélectionner le dossier dans lequel toutes les im
 |  |  |
 | --- | --- |
 | Numéro de commande | 670 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

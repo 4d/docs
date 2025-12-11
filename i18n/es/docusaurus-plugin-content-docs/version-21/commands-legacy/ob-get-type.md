@@ -58,6 +58,6 @@ Queremos obtener el tipo de valores estándar:
 |  |  |
 | --- | --- |
 | Número de comando | 1230 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

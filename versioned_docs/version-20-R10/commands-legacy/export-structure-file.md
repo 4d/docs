@@ -120,6 +120,6 @@ You want to export only project and database methods, and a log file:
 |  |  |
 | --- | --- |
 | Command number | 1565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

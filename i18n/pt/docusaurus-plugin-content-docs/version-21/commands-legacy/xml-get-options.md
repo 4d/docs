@@ -43,6 +43,6 @@ Em seletor, passe uma das constantes do tema "*XML*" indicando a opção a obter
 |  |  |
 | --- | --- |
 | Número do comando | 1096 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

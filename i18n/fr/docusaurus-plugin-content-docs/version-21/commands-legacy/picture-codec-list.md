@@ -41,6 +41,6 @@ Par défaut, si vous ne passez pas le paramètre *\**, la commande retourne uniq
 |  |  |
 | --- | --- |
 | Numéro de commande | 992 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

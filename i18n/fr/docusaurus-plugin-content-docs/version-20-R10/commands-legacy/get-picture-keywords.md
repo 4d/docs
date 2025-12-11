@@ -39,6 +39,6 @@ Si l’image ne contient pas de mots-clés ou de métadonnées IPTC/Keywords, la
 |  |  |
 | --- | --- |
 | Numéro de commande | 1142 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

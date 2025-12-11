@@ -36,6 +36,6 @@ Se omite o parâmetro opcional *ancora*, a posição é relativa ao início do d
 |  |  |
 | --- | --- |
 | Número do comando | 482 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

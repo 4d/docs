@@ -246,6 +246,6 @@ The Get highlighted text method is listed here:
 |  |  |
 | --- | --- |
 | Command number | 389 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

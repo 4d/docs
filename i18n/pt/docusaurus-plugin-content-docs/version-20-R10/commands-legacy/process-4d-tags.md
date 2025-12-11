@@ -87,6 +87,6 @@ PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
 |  |  |
 | --- | --- |
 | Número do comando | 816 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

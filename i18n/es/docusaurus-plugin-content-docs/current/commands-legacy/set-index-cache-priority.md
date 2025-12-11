@@ -54,6 +54,6 @@ En el , usted desea definir una alta prioridad para los índices campo \[Cliente
 |  |  |
 | --- | --- |
 | Número de comando | 1401 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

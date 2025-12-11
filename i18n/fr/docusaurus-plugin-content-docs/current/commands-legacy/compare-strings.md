@@ -111,6 +111,6 @@ Les exemples suivants illustrent l'incidence des options dans le **contexte de l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1756 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

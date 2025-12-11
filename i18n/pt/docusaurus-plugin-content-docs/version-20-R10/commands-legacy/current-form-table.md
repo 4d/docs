@@ -67,6 +67,6 @@ Para isso, utilize o método de objeto para criar a variável *vstRegistroAtual*
 |  |  |
 | --- | --- |
 | Número do comando | 627 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

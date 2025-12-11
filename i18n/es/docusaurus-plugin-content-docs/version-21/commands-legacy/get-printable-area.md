@@ -44,6 +44,6 @@ Para saber el tamaño total de la página, puede:
 |  |  |
 | --- | --- |
 | Número de comando | 703 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

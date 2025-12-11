@@ -27,6 +27,6 @@ Una secuencia de instrucciones SQL debe estar rodeada por las palabras claves [B
 |  |  |
 | --- | --- |
 | Número de comando | 949 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

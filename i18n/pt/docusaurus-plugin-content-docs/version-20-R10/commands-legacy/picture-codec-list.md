@@ -41,6 +41,6 @@ Por padrão, se não passa o parâmetro *\**, o comando devolve unicamente os co
 |  |  |
 | --- | --- |
 | Número do comando | 992 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

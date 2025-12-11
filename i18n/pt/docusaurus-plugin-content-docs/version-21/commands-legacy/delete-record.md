@@ -48,7 +48,7 @@ O exemplo apaga um registro de um empregado. O código pergunta ao usuário o n�
 |  |  |
 | --- | --- |
 | Número do comando | 58 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

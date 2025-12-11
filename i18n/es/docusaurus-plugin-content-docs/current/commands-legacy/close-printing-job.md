@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 996 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

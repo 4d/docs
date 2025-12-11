@@ -190,6 +190,6 @@ El siguiente método de gestión de errores ignora las interrupciones del usuari
 |  |  |
 | --- | --- |
 | Número de comando | 155 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

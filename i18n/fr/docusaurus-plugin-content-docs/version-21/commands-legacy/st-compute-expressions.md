@@ -73,7 +73,7 @@ Vous souhaitez mettre à jour les références incluses dans la sélection de te
 |  |  |
 | --- | --- |
 | Numéro de commande | 1285 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

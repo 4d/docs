@@ -37,7 +37,7 @@ Se *rotaAlias* especifica um alias/atalho, a variável sistema OK assume o valor
 |  |  |
 | --- | --- |
 | Número do comando | 695 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

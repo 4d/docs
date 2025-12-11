@@ -56,6 +56,6 @@ You want to temporarily change the cache priority for the \[Docs\] scalar fields
 |  |  |
 | --- | --- |
 | Command number | 1429 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

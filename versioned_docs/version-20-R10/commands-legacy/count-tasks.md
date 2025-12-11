@@ -35,6 +35,6 @@ See the example for [Process state](process-state.md) and for the [Semaphore](se
 |  |  |
 | --- | --- |
 | Command number | 335 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

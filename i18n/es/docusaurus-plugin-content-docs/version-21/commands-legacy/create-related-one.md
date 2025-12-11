@@ -30,6 +30,6 @@ Si ya existe un registro relacionado, CREATE RELATED ONE actúa como [RELATE ONE
 |  |  |
 | --- | --- |
 | Número de comando | 65 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -85,7 +85,7 @@ Then, in any form or project method, you can write:
 |  |  |
 | --- | --- |
 | Command number | 411 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

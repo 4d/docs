@@ -62,6 +62,6 @@ Queremos modificar temporalmente el destino de búsqueda y restablecer los pará
 |  |  |
 | --- | --- |
 | Número de comando | 1155 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -59,6 +59,6 @@ Se quiser obter informação da cache do banco de dados e todos os componentes a
 |  |  |
 | --- | --- |
 | Número do comando | 1402 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -48,6 +48,6 @@ Ver el ejemplo del comando [RESOLVE POINTER](resolve-pointer.md "RESOLVE POINTER
 |  |  |
 | --- | --- |
 | Número de comando | 308 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -68,6 +68,6 @@ After executing these instructions:
 |  |  |
 | --- | --- |
 | Command number | 1081 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

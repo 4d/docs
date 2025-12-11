@@ -47,7 +47,7 @@ Si la ejecución del comando es correcta, la variable sistema Document contiene 
 |  |  |
 | --- | --- |
 | Número de comando | 678 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

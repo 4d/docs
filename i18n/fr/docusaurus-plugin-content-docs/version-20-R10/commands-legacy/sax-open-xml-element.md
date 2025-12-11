@@ -58,7 +58,7 @@ Si un caractère invalide est passé dans *balise*, une erreur est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 853 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

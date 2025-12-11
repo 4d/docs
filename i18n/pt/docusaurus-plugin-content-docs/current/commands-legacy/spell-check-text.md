@@ -58,7 +58,7 @@ Queremos contar o número possível de erros em um texto:
 |  |  |
 | --- | --- |
 | Número do comando | 1215 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

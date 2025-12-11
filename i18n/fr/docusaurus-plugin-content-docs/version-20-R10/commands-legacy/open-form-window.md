@@ -139,6 +139,6 @@ Résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 675 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

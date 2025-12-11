@@ -29,6 +29,6 @@ Note that the user can modify this option before validating the dialog box. To g
 |  |  |
 | --- | --- |
 | Command number | 1197 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

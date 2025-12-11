@@ -124,6 +124,6 @@ The column is added to the list box:
 |  |  |
 | --- | --- |
 | Command number | 970 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

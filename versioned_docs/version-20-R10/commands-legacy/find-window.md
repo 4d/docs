@@ -34,6 +34,6 @@ The *windowPart* parameter returns 3 if the window is touched, and 0 otherwise. 
 |  |  |
 | --- | --- |
 | Command number | 449 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

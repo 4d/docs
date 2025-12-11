@@ -55,6 +55,6 @@ The following example extracts the hours, minutes, and seconds from the current 
 |  |  |
 | --- | --- |
 | Command number | 178 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

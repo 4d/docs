@@ -32,7 +32,7 @@ If you pass an invalid *table* value, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 757 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

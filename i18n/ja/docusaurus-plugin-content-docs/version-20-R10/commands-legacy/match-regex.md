@@ -115,7 +115,7 @@ vfound:=Match regex( pattern;mytext; start; pos\_found\_array; length\_found\_ar
 |  |  |
 | --- | --- |
 | コマンド番号 | 1019 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

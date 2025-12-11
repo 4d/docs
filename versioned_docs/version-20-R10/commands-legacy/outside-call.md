@@ -31,6 +31,6 @@ In order for the **Outside call** execution cycle to be generated, make sure tha
 |  |  |
 | --- | --- |
 | Command number | 328 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

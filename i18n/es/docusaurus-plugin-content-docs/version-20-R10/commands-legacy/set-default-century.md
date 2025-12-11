@@ -71,6 +71,6 @@ Este comando afecta sólo la entrada de datos. No tiene ningún efecto en el alm
 |  |  |
 | --- | --- |
 | Número de comando | 392 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

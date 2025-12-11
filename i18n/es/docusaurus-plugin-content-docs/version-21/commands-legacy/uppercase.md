@@ -43,6 +43,6 @@ Ver el ejemplo para [Lowercase](lowercase.md "Lowercase").
 |  |  |
 | --- | --- |
 | Número de comando | 13 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

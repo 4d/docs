@@ -141,6 +141,6 @@ L’exemple suivant interdit toute nouvelle connexion entre 2 et 4 heures du mat
 |  |  |
 | --- | --- |
 | Numéro de commande | 16001 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

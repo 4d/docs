@@ -201,6 +201,6 @@ Vous obtenez le résultat suivant (objet stringifié) :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1528 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -34,6 +34,6 @@ N'oubliez pas d'appeler finalement **CLOSE RESOURCE FILE** pour un fichier de re
 |  |  |
 | --- | --- |
 | Numéro de commande | 498 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

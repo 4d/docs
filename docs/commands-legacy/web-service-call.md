@@ -163,7 +163,7 @@ If the request has been correctly routed and the Web Service has accepted it, th
 |  |  |
 | --- | --- |
 | Command number | 778 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -36,7 +36,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 204 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

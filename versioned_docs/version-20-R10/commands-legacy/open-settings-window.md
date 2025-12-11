@@ -145,7 +145,7 @@ If the Preferences/Settings dialog box is validated, the system variable OK retu
 |  |  |
 | --- | --- |
 | Command number | 903 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

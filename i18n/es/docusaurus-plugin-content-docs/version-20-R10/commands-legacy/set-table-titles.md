@@ -185,6 +185,6 @@ Desea eliminar todos los nombres de tablas y campos personalizados definidos:
 |  |  |
 | --- | --- |
 | Número de comando | 601 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -51,6 +51,6 @@ Usted desea restablecer todas las sesiones actuales para todas las aplicaciones 
 |  |  |
 | --- | --- |
 | Número de comando | 1596 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

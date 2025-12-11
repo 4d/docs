@@ -35,6 +35,6 @@ An empty string is returned when no information is available, more particularly 
 |  |  |
 | --- | --- |
 | Command number | 780 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

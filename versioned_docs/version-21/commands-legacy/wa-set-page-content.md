@@ -47,6 +47,6 @@ WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"f
 |  |  |
 | --- | --- |
 | Command number | 1037 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

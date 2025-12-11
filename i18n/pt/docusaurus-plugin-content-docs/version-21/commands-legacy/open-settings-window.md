@@ -171,7 +171,7 @@ Se a caixa de diálogo Preferências/Propriedades é validada, a variável siste
 |  |  |
 | --- | --- |
 | Número do comando | 903 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

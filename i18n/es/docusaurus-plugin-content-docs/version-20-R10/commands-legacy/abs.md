@@ -32,6 +32,6 @@ El siguiente ejemplo devuelve el valor absoluto de –10.3, que es 10.3:
 |  |  |
 | --- | --- |
 | Número de comando | 99 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

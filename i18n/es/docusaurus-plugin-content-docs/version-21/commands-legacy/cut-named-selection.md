@@ -42,7 +42,7 @@ El método siguiente vacía la selección actual de una tabla *\[Clientes\]*:
 |  |  |
 | --- | --- |
 | Número de comando | 334 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

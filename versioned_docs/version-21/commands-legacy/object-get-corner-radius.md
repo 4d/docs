@@ -52,6 +52,6 @@ The following code could be added to a button method:
 |  |  |
 | --- | --- |
 | Command number | 1324 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

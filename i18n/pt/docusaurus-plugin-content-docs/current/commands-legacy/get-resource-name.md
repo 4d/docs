@@ -30,6 +30,6 @@ Se o recurso não existir, Get resource name retorna uma cadeia vazia.
 |  |  |
 | --- | --- |
 | Número do comando | 513 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

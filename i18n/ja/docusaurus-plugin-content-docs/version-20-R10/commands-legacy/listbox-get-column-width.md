@@ -35,6 +35,6 @@ LISTBOX Get column width は列サイズ変更の制限値を *minWidth* と *ma
 |  |  |
 | --- | --- |
 | コマンド番号 | 834 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

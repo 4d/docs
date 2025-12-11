@@ -45,6 +45,6 @@ O resultado será:
 |  |  |
 | --- | --- |
 | Número do comando | 1325 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

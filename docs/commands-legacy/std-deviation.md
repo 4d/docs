@@ -64,6 +64,6 @@ This example gets the standard deviation of a series of values placed in an arra
 |  |  |
 | --- | --- |
 | Command number | 26 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -119,6 +119,6 @@ Designar una licencia de uso:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1811                        |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | no |
 
 

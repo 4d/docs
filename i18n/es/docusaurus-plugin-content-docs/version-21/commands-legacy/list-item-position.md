@@ -44,6 +44,6 @@ Si el elemento no existe, List item position devuelve 0.
 |  |  |
 | --- | --- |
 | Número de comando | 629 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -52,6 +52,6 @@ Le code suivant peut être associé à la méthode d'un bouton :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1324 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

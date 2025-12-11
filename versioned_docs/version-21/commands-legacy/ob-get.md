@@ -226,6 +226,6 @@ You want to know the size of a picture stored in an object attribute:
 |  |  |
 | --- | --- |
 | Command number | 1224 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

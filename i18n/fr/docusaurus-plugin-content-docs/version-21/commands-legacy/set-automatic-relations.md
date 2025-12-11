@@ -50,6 +50,6 @@ L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manu
 |  |  |
 | --- | --- |
 | Numéro de commande | 310 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

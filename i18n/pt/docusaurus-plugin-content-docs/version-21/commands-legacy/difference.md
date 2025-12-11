@@ -60,6 +60,6 @@ Ao final da lista de registros há um botão com um método de objeto. O método
 |  |  |
 | --- | --- |
 | Número do comando | 122 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

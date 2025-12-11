@@ -111,6 +111,6 @@ Desativação de um só evento do formulário sem modificar os outros:
 |  |  |
 | --- | --- |
 | Número do comando | 1239 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -45,7 +45,7 @@ If you pass an invalid *row* value, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 769 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

@@ -31,7 +31,7 @@ Si le serveur SQL a été correctement lancé, la variable système OK prend la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 962 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

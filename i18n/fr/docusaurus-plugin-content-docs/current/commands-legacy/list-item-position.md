@@ -44,6 +44,6 @@ Si l'élément n'existe pas, **List item position** retourne *0*.
 |  |  |
 | --- | --- |
 | Numéro de commande | 629 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

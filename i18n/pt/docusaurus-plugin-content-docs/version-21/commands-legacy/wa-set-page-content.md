@@ -51,6 +51,6 @@ Mostrar a frase "Olá mundo!" e definição de uma URL de banco "file:///" banco
 |  |  |
 | --- | --- |
 | Número do comando | 1037 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

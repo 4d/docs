@@ -42,7 +42,7 @@ Si el parámetro *comando* es incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 792 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -32,6 +32,6 @@ Passez dans le paramètre *codeLangue* une chaîne indiquant le code de langue �
 |  |  |
 | --- | --- |
 | Numéro de commande | 1179 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

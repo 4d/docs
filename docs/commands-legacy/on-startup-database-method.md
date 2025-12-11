@@ -51,6 +51,6 @@ See the example in the [Semaphore](semaphore.md) section.
 |  |  |
 | --- | --- |
 | Command number | 905263 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

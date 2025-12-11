@@ -90,7 +90,7 @@ Este método define vários atributos para o título da primeira coluna:
 |  |  |
 | --- | --- |
 | Número do comando | 759 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

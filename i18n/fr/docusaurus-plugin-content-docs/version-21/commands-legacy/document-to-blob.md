@@ -56,7 +56,7 @@ Dans tous les cas, vous pouvez gérer les erreurs en utilisant la commande [ON E
 |  |  |
 | --- | --- |
 | Numéro de commande | 525 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -83,6 +83,6 @@ Lorsque cette méthode est placée dans votre application, vous pouvez écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 536 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

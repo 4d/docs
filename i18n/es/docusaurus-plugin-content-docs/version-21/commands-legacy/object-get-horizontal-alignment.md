@@ -64,6 +64,6 @@ Los objetos de formulario a los cuales se puede aplicar alineación son los sigu
 |  |  |
 | --- | --- |
 | Número de comando | 707 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

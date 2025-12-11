@@ -75,4 +75,4 @@ Usted desea aplicar la configuración de impresión guardada en el disco para el
 |  |  |
 | --- | --- |
 | Número de comando | 1434 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |

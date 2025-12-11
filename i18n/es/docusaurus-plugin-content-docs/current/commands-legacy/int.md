@@ -36,6 +36,6 @@ El siguiente ejemplo ilustra el funcionamiento de Int para números positivos y 
 |  |  |
 | --- | --- |
 | Número de comando | 8 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

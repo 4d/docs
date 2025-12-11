@@ -49,6 +49,6 @@ You want to load a picture depending on the form current scheme:
 |  |  |
 | --- | --- |
 | Command number | 1761 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

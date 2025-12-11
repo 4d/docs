@@ -30,6 +30,6 @@ By default, if no limit is set, the command returns 0.
 |  |  |
 | --- | --- |
 | Command number | 1156 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

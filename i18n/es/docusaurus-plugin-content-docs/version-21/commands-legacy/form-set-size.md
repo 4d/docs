@@ -127,6 +127,6 @@ El método de objeto asociado con este botón es el siguiente:
 |  |  |
 | --- | --- |
 | Número de comando | 891 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

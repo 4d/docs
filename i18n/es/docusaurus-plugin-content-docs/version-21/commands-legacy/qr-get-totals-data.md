@@ -77,7 +77,7 @@ Si el parámetro *numRuptura* es incorrecto, se genera el error -9853.
 |  |  |
 | --- | --- |
 | Número de comando | 768 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -74,6 +74,6 @@ Creation and filling of a local object array:
 |  |  |
 | --- | --- |
 | Command number | 1221 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

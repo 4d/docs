@@ -49,6 +49,6 @@ You want to prohibit multiple lines in an entry area:
 |  |  |
 | --- | --- |
 | Command number | 1253 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

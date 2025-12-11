@@ -113,6 +113,6 @@ Si vous souhaitez que le tableau des noms soit utilisé comme troisième critèr
 |  |  |
 | --- | --- |
 | Numéro de commande | 718 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

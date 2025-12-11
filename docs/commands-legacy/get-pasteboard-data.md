@@ -59,7 +59,7 @@ If the data is correctly extracted, OK is set to 1; otherwise OK is set to 0 and
 |  |  |
 | --- | --- |
 | Command number | 401 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -56,7 +56,7 @@ Se a execução do comando for correta, a variável sistema Document contém a r
 |  |  |
 | --- | --- |
 | Número do comando | 680 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

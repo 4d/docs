@@ -63,7 +63,7 @@ The following example deletes from the Picture Library any pictures whose names 
 |  |  |
 | --- | --- |
 | Command number | 567 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

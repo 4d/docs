@@ -54,6 +54,6 @@ Você cria um banco para o mercado internacional e necessita mudar aos diferente
 |  |  |
 | --- | --- |
 | Número do comando | 383 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

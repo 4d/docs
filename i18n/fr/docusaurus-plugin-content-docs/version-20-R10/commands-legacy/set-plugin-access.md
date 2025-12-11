@@ -49,6 +49,6 @@ Passez dans le paramètre *groupe* le nom du groupe dont les utilisateurs seront
 |  |  |
 | --- | --- |
 | Numéro de commande | 845 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

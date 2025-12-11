@@ -60,6 +60,6 @@ The following statement places the "button\_1" object at the (10,20) (30,40) coo
 |  |  |
 | --- | --- |
 | Command number | 1248 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

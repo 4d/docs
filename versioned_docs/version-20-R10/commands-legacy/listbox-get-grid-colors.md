@@ -36,6 +36,6 @@ In *hColor* and *vColor*, the command returns the values of the RGB colors. The 
 |  |  |
 | --- | --- |
 | Command number | 1200 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

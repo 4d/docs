@@ -44,7 +44,7 @@ Si especifica una ruta de acceso invalida, se generará un error del administrad
 |  |  |
 | --- | --- |
 | Número de comando | 634 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

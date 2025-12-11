@@ -102,6 +102,6 @@ Vous souhaitez insérer dynamiquement une colonne dans une list box de type tabl
 |  |  |
 | --- | --- |
 | Numéro de commande | 829 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

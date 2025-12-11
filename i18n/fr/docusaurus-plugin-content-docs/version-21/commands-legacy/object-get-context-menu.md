@@ -34,6 +34,6 @@ La commande retourne **Vrai** si le menu contextuel est activé pour l’objet e
 |  |  |
 | --- | --- |
 | Numéro de commande | 1252 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

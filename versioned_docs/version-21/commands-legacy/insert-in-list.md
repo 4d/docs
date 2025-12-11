@@ -56,6 +56,6 @@ The following code inserts an item (with no attached sublist) just before the cu
 |  |  |
 | --- | --- |
 | Command number | 625 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

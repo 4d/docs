@@ -44,6 +44,6 @@ Ver el ejemplo para el comando [OBJECT SET VALUE](object-set-value.md).
 |  |  |
 | --- | --- |
 | Número de comando | 1743 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

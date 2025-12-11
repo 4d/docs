@@ -34,6 +34,6 @@ The command returns **True** when the focus rectangle is hidden and **False** wh
 |  |  |
 | --- | --- |
 | Command number | 1178 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

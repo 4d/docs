@@ -51,6 +51,6 @@ Vous souhaitez que, lorsqu’un formulaire est affiché à l’écran, un bip so
 |  |  |
 | --- | --- |
 | Numéro de commande | 645 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

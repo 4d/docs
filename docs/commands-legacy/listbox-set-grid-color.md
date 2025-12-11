@@ -41,6 +41,6 @@ The *horizontal* and *vertical* parameters allow you to set the grid lines to wh
 |  |  |
 | --- | --- |
 | Command number | 842 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -88,6 +88,6 @@ Para calcular las estadísticas, usted desea ordenar el número de valores disti
 |  |  |
 | --- | --- |
 | Número de comando | 339 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

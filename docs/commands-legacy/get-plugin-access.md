@@ -39,6 +39,6 @@ Pass the number of the plug-in for which you want to find out the associated gro
 |  |  |
 | --- | --- |
 | Command number | 846 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

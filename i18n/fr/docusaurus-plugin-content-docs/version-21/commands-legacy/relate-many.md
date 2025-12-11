@@ -66,7 +66,7 @@ Par exemple, la méthode suivante effectue une boucle sur chaque enregistrement 
 |  |  |
 | --- | --- |
 | Numéro de commande | 262 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

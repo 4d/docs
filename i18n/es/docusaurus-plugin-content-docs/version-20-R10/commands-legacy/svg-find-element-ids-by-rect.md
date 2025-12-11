@@ -47,6 +47,6 @@ Todos los elementos cuyo rectángulo circundante está en intersección con el r
 |  |  |
 | --- | --- |
 | Número de comando | 1109 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

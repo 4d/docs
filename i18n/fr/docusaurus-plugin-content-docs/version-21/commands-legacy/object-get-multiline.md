@@ -42,6 +42,6 @@ La valeur retournée correspond à l’une des constantes suivantes du thème "*
 |  |  |
 | --- | --- |
 | Numéro de commande | 1254 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

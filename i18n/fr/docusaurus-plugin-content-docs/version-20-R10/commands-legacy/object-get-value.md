@@ -44,6 +44,6 @@ Voir l'exemple de la commande [OBJECT SET VALUE](object-set-value.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 1743 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

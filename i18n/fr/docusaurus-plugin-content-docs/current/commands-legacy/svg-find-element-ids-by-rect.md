@@ -46,6 +46,6 @@ Tous les ID d’éléments dont le rectangle englobant est en intersection avec 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1109 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

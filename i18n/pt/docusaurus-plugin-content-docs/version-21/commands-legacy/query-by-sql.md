@@ -169,7 +169,7 @@ Se o formato da condição de pesquisa for correto, a variável Sistema OK assum
 |  |  |
 | --- | --- |
 | Número do comando | 942 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

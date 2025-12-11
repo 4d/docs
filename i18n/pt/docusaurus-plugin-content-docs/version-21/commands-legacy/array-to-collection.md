@@ -88,6 +88,6 @@ Se quiser copiar um array de texto em uma coleção compartilhada:
 |  |  |
 | --- | --- |
 | Número do comando | 1563 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

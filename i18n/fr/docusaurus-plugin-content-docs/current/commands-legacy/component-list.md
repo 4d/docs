@@ -39,6 +39,6 @@ Pour plus d'informations sur les composants 4D, reportez-vous au manuel *Mode D√
 |  |  |
 | --- | --- |
 | Num√©ro de commande | 1001 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

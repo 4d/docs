@@ -78,7 +78,7 @@ Si el documento se crea correctamente, la variable sistema OK toma el valor 1 y 
 |  |  |
 | --- | --- |
 | Número de comando | 266 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

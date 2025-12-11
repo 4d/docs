@@ -46,6 +46,6 @@ Para obtener más información acerca de los atributos SVG, consulte la descripc
 |  |  |
 | --- | --- |
 | Número de comando | 1056 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

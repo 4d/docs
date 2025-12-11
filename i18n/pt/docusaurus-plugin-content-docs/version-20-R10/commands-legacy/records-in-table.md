@@ -35,6 +35,6 @@ O exemplo a seguir mostra um alerta que indica o número de registros na tabela:
 |  |  |
 | --- | --- |
 | Número do comando | 83 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

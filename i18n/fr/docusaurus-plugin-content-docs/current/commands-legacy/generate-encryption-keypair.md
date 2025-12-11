@@ -54,6 +54,6 @@ Reportez-vous à l’exemple de la commande [ENCRYPT BLOB](encrypt-blob.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 688 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

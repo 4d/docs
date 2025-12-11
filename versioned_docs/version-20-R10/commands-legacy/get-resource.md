@@ -54,7 +54,7 @@ If there is not enough memory to load the resource, an error is generated. You c
 |  |  |
 | --- | --- |
 | Command number | 508 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

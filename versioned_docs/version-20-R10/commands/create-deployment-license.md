@@ -121,6 +121,6 @@ Designate a license to use:
 |  |  |
 | --- | --- |
 | Command number | 1811 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -68,6 +68,6 @@ L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]S
 |  |  |
 | --- | --- |
 | Numéro de commande | 38 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -32,6 +32,6 @@ O comando devolve uma cadeia indicando o código da linguagem utilizada, baseado
 |  |  |
 | --- | --- |
 | Número do comando | 1180 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

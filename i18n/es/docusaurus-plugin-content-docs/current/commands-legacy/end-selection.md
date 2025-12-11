@@ -67,6 +67,6 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 |  |  |
 | --- | --- |
 | Número de comando | 36 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

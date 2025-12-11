@@ -75,7 +75,7 @@ Si el parámetro *area* es incorrecto, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 798 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -86,6 +86,6 @@ A log entry looks like this:
 |  |  |
 | --- | --- |
 | Command number | 5 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

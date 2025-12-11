@@ -50,6 +50,6 @@ Aplicar a fonte Times ao elemento atual da lista:
 |  |  |
 | --- | --- |
 | Número do comando | 953 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

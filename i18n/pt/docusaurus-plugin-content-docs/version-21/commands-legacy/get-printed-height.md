@@ -36,6 +36,6 @@ As margens de impressão direita e esquerda não influem no valor devolvido, dif
 |  |  |
 | --- | --- |
 | Número do comando | 702 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

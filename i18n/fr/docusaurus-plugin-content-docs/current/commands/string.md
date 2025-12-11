@@ -266,6 +266,6 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 10                          |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

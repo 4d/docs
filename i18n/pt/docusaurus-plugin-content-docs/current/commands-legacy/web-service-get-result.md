@@ -57,6 +57,6 @@ Imagine um serviço web que devolve a hora atual em qualquer cidade do mundo. Os
 |  |  |
 | --- | --- |
 | Número do comando | 779 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

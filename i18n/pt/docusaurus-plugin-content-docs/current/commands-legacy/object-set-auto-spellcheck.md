@@ -37,6 +37,6 @@ Passe **True** em *correAuto* para ativar esta função para objeto e **False** 
 |  |  |
 | --- | --- |
 | Número do comando | 1173 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

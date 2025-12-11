@@ -166,4 +166,4 @@ Este ejemplo ilustra el mecanismo de “retraso” de mostrar ventanas bajo macO
 |  |  |
 | --- | --- |
 | Número de comando | 153 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |

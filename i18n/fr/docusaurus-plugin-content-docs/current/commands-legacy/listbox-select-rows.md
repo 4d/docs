@@ -90,6 +90,6 @@ Exemple avec une collection d'objets :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1715 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

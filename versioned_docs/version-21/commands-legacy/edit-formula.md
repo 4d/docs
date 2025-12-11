@@ -60,7 +60,7 @@ If the user validates the dialog box, the system variable OK is set to 1\. If th
 |  |  |
 | --- | --- |
 | Command number | 806 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

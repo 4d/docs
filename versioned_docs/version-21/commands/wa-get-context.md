@@ -47,4 +47,4 @@ Checking if a context exists:
 |  |  |
 | --- | --- |
 | Command number | 1849 |
-| Thread safe | &cross; |
+| Thread safe | no |

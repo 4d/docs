@@ -49,6 +49,6 @@ Es posible basar la impresión de los formularios efectuados utilizando los coma
 |  |  |
 | --- | --- |
 | Número de comando | 711 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

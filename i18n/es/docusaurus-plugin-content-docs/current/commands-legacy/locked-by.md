@@ -46,6 +46,6 @@ Si el registro ha sido bloqueado por una *petición $lock REST*:
 |  |  |
 | --- | --- |
 | Número de comando | 353 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

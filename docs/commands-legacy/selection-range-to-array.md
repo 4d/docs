@@ -114,6 +114,6 @@ Use the first 50 current records of the \[Invoices\] table to load various array
 |  |  |
 | --- | --- |
 | Command number | 368 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

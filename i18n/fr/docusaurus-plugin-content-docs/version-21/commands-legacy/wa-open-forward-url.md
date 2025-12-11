@@ -30,6 +30,6 @@ S’il n’y a pas d’URL suivant (c’est-à-dire si l’utilisateur n’a jam
 |  |  |
 | --- | --- |
 | Numéro de commande | 1022 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -32,6 +32,6 @@ La commande retourne une chaîne indiquant le code de langue utilisé, basé sur
 |  |  |
 | --- | --- |
 | Numéro de commande | 1180 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

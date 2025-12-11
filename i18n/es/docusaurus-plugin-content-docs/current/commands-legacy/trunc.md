@@ -41,6 +41,6 @@ El siguiente ejemplo ilustra la manera cómo Trunc funciona con diferentes argum
 |  |  |
 | --- | --- |
 | Número de comando | 95 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

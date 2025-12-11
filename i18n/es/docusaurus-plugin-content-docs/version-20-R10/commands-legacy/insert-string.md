@@ -47,6 +47,6 @@ El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan 
 |  |  |
 | --- | --- |
 | Número de comando | 231 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

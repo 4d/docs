@@ -57,6 +57,6 @@ Conversión de una imagen con calidad del 60%:
 |  |  |
 | --- | --- |
 | Número de comando | 1002 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -81,6 +81,6 @@ Usted quiere obtener una lista de fuentes recientes:
 |  |  |
 | --- | --- |
 | Número de comando | 460 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -46,6 +46,6 @@ WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"f
 |  |  |
 | --- | --- |
 | コマンド番号 | 1037 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

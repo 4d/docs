@@ -34,6 +34,6 @@ En fonction de l'*ancre* définie, vous pouvez passer des valeurs positives ou n
 |  |  |
 | --- | --- |
 | Numéro de commande | 482 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

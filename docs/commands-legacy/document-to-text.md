@@ -83,6 +83,6 @@ When you execute this code:
 |  |  |
 | --- | --- |
 | Command number | 1236 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

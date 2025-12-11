@@ -35,6 +35,6 @@ Vous pouvez exécuter cette commande depuis un composant, mais dans ce cas vous 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1213 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

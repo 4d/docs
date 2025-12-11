@@ -75,6 +75,6 @@ See example for the [FILTER KEYSTROKE](filter-keystroke.md) command.
 |  |  |
 | --- | --- |
 | Command number | 210 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

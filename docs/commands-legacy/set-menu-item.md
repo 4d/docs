@@ -38,7 +38,7 @@ If you omit the *process* parameter, SET MENU ITEM applies to the menu bar for t
 |  |  |
 | --- | --- |
 | Command number | 348 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

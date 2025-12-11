@@ -62,7 +62,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **Set group
 |  |  |
 | --- | --- |
 | Numéro de commande | 614 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

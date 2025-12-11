@@ -52,7 +52,7 @@ Consulte o exemplo do comando [REGISTER CLIENT](register-client.md).
 |  |  |
 | --- | --- |
 | Número do comando | 650 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

@@ -43,6 +43,6 @@ Usted quiere verificar que el servidor web se está ejecutando:
 |  |  |
 | --- | --- |
 | Número de comando | 1313 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

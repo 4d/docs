@@ -35,7 +35,7 @@ Veja o exemplo para Record Number.
 |  |  |
 | --- | --- |
 | Número do comando | 242 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 | Modificar a seleção atual ||
 

@@ -46,6 +46,6 @@ Este método, combinado con un área desplegable, le permite cambiar el valor de
 |  |  |
 | --- | --- |
 | Número de comando | 713 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

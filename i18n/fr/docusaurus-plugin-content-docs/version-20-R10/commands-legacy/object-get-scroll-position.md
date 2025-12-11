@@ -37,6 +37,6 @@ Si *objet* désigne une image (variable ou champ), *positionLigne* retourne le d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1114 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

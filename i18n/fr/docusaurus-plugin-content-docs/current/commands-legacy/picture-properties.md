@@ -35,6 +35,6 @@ Les paramètres *hOffset*, *vOffset* et *mode* reçoivent la position et le mode
 |  |  |
 | --- | --- |
 | Numéro de commande | 457 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

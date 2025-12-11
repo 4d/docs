@@ -45,6 +45,6 @@ Pour cela, dans l'événement On Resize du formulaire de la fenêtre standard, i
 |  |  |
 | --- | --- |
 | Numéro de commande | 434 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

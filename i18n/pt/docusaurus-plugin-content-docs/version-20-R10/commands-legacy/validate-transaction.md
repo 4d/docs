@@ -36,7 +36,7 @@ Note que quando OK for estabelecido como 0, a transação é automaticamente can
 |  |  |
 | --- | --- |
 | Número do comando | 240 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

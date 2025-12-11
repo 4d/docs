@@ -62,6 +62,6 @@ Queremos modificar temporariamente o destino de pesquisa e restabelecer os parâ
 |  |  |
 | --- | --- |
 | Número do comando | 1155 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

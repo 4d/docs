@@ -55,6 +55,6 @@ Si omite el parámetro *tipo*, la función devolverá la ruta a la carpeta siste
 |  |  |
 | --- | --- |
 | Número de comando | 487 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

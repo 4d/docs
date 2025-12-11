@@ -45,6 +45,6 @@ Queremos colocar o valor nulo na propriedade "idade" para Lea:
 |  |  |
 | --- | --- |
 | Número do comando | 1233 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

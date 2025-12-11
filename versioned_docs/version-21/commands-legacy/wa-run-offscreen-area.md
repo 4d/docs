@@ -102,7 +102,7 @@ The OK system variable is set to 0 if the timeout has been reached or the [CANCE
 |  |  |
 | --- | --- |
 | Command number | 1727 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

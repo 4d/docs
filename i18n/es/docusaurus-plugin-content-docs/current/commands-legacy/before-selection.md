@@ -68,6 +68,6 @@ Este método de formulario se utiliza durante la impresión de un informe. Defin
 |  |  |
 | --- | --- |
 | Número de comando | 198 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

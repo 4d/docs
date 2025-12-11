@@ -43,6 +43,6 @@ O exemplo abaixo permite ao usuário criar um novo documento, escreva a string "
 |  |  |
 | --- | --- |
 | Número do comando | 267 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

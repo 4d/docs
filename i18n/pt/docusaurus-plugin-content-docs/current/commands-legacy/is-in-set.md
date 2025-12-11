@@ -42,6 +42,6 @@ O seguinte exemplo é um método de objeto de um botão que testa se o registro 
 |  |  |
 | --- | --- |
 | Número do comando | 273 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

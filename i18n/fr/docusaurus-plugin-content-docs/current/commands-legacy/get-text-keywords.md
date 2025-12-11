@@ -89,6 +89,6 @@ Pour compter les mots d’un texte :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1141 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

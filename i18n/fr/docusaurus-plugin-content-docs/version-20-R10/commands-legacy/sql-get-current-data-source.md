@@ -32,6 +32,6 @@ Cette commande vous permet de contrôler la source de données courante, génér
 |  |  |
 | --- | --- |
 | Numéro de commande | 990 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

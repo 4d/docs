@@ -36,7 +36,7 @@ Note that when OK is set to 0, the transaction is automatically cancelled intern
 |  |  |
 | --- | --- |
 | Command number | 240 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

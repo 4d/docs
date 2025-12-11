@@ -38,6 +38,6 @@ Si, par exemple, vous travaillez avec la base MesCDs qui se trouve dans le dossi
 |  |  |
 | --- | --- |
 | Numéro de commande | 490 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

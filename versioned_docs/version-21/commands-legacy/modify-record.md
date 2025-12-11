@@ -54,7 +54,7 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 |  |  |
 | --- | --- |
 | Command number | 57 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Forbidden on the server ||
 

@@ -35,6 +35,6 @@ El siguiente ejemplo asigna la variable *vbOpciones* a Falso:
 |  |  |
 | --- | --- |
 | Número de comando | 215 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -38,7 +38,7 @@ Si vous omettez le paramètre *process*, **SET MENU ITEM** s'applique à la barr
 |  |  |
 | --- | --- |
 | Numéro de commande | 348 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

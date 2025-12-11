@@ -84,6 +84,6 @@ Pode abrir um arquivo texto com diferentes aplicações:
 |  |  |
 | --- | --- |
 | Número do comando | 673 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

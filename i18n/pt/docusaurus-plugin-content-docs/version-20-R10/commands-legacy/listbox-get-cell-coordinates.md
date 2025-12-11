@@ -58,6 +58,6 @@ Você quer desenhar um retângulo vermelho arredor da célula selecionada de um 
 |  |  |
 | --- | --- |
 | Número do comando | 1330 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

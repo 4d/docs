@@ -112,6 +112,6 @@ With this command, you can easily handle objects in loops:
 |  |  |
 | --- | --- |
 | Command number | 1471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -58,7 +58,7 @@ Si *objetImage* ne contient pas une image SVG valide, la commande retourne une c
 |  |  |
 | --- | --- |
 | Numéro de commande | 1054 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

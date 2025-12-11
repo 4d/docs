@@ -49,7 +49,7 @@ El siguiente método muestra un registro en toda la pantalla (Macintosh) hasta q
 |  |  |
 | --- | --- |
 | Número de comando | 432 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

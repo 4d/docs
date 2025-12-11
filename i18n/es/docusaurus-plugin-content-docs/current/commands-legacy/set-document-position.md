@@ -36,6 +36,6 @@ Dependiendo del ancla puede pasar valores positivos o negativos en *offset*.
 |  |  |
 | --- | --- |
 | Número de comando | 482 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

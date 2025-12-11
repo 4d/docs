@@ -58,6 +58,6 @@ Generation of a UUID in a variable:
 |  |  |
 | --- | --- |
 | Command number | 1066 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

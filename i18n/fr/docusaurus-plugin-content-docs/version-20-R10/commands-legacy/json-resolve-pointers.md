@@ -237,6 +237,6 @@ Si vous exécutez :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1478 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

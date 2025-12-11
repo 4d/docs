@@ -68,6 +68,6 @@ Utilização da versão 1.2 do protocolo SOAP:
 |  |  |
 | --- | --- |
 | Número do comando | 901 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

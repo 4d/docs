@@ -57,7 +57,7 @@ OK is set to 1 if the import is successfully complete; otherwise, it is set to 0
 |  |  |
 | --- | --- |
 | Command number | 87 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

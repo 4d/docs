@@ -60,7 +60,7 @@ The following example creates a menu consisting of two commands to which it assi
 |  |  |
 | --- | --- |
 | Command number | 412 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

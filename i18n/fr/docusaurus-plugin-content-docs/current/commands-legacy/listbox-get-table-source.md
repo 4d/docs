@@ -37,6 +37,6 @@ Si la list box est associée à des tableaux, *numTable* retourne -1 et *nom*, s
 |  |  |
 | --- | --- |
 | Numéro de commande | 1014 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

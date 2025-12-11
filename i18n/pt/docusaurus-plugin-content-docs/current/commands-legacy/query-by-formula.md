@@ -86,7 +86,7 @@ Este exemplo utiliza uma união para buscar todas as linhas de faturas de client
 |  |  |
 | --- | --- |
 | Número do comando | 48 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

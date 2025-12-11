@@ -62,6 +62,6 @@ Dado un formulario "SF" utilizado dos veces como subformulario en el mismo formu
 |  |  |
 | --- | --- |
 | Número de comando | 1124 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

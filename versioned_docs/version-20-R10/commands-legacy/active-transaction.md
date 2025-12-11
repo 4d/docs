@@ -49,6 +49,6 @@ You want to know the current transaction status:
 |  |  |
 | --- | --- |
 | Command number | 1387 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -114,6 +114,6 @@ Si quiere que el array de nombres se utilice como tercer criterio de ordenación
 |  |  |
 | --- | --- |
 | Número de comando | 718 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

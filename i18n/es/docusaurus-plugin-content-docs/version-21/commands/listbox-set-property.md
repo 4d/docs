@@ -91,6 +91,6 @@ Desea definir un ancho máximo para la columna cuyo nombre es "ProductNumber":
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1440                        |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | no |
 
 

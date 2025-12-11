@@ -65,6 +65,6 @@ Cette méthode regénère toutes les tables manquantes éventuellement présente
 |  |  |
 | --- | --- |
 | Numéro de commande | 1126 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

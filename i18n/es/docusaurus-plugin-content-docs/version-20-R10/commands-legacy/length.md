@@ -35,6 +35,6 @@ Este ejemplo ilustra el uso de Length. Los resultados, descritos en los comentar
 |  |  |
 | --- | --- |
 | Número de comando | 16 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -107,6 +107,6 @@ Depois pode adicionar outras mensagens executando o comando **CALL FORM** novame
 |  |  |
 | --- | --- |
 | Número do comando | 1391 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

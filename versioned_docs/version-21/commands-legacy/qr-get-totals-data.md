@@ -78,7 +78,7 @@ If you pass an invalid *breakNum* number, the error -9853 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 768 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

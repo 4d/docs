@@ -67,6 +67,6 @@ This form method is used during the printing of a report. It sets the variable *
 |  |  |
 | --- | --- |
 | Command number | 36 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

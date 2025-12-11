@@ -123,6 +123,6 @@ Ver o exemplo do comando DRAG AND DROP PROPERTIES.
 |  |  |
 | --- | --- |
 | Número do comando | 371 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

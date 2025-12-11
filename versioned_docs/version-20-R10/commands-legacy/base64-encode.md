@@ -44,6 +44,6 @@ By default if the *\** parameter is omitted, the command uses a Base64 encoding.
 |  |  |
 | --- | --- |
 | Command number | 895 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -35,6 +35,6 @@ Passe **True** no parâmetro *invisível* para ocultar o retângulo de foco e **
 |  |  |
 | --- | --- |
 | Número do comando | 1177 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

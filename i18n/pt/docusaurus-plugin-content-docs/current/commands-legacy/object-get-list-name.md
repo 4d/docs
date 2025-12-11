@@ -43,6 +43,6 @@ Se nenhuma lista do tipo definido está associada ao *objeto*, o comando devolve
 |  |  |
 | --- | --- |
 | Número do comando | 1072 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

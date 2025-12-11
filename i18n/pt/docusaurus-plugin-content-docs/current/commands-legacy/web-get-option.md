@@ -69,6 +69,6 @@ Quando usar o seletor web debug log, pode receber uma das constantes abaixo no p
 |  |  |
 | --- | --- |
 | Número do comando | 1209 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -60,6 +60,6 @@ Examples under Windows:
 |  |  |
 | --- | --- |
 | Command number | 1107 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

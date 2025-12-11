@@ -119,6 +119,6 @@ Desea obtener la suma de todos los valores numéricos en una colección:
 |  |  |
 | --- | --- |
 | Número de comando | 1509 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

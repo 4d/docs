@@ -42,6 +42,6 @@ The value returned corresponds to one of the following constants, found in the "
 |  |  |
 | --- | --- |
 | Command number | 1254 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

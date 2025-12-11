@@ -69,6 +69,6 @@ You want to execute a **Goto page** standard action (page 3) in the main form:
 |  |  |
 | --- | --- |
 | Command number | 1439 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

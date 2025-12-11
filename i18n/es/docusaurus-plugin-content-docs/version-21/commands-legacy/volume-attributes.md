@@ -101,7 +101,7 @@ Una vez se añade este método de proyecto a su aplicación, puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 472 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

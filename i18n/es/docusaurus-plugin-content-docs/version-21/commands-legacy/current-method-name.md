@@ -44,6 +44,6 @@ Este comando no puede llamarse desde una fórmula 4D.
 |  |  |
 | --- | --- |
 | Número de comando | 684 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

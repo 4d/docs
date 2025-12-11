@@ -88,6 +88,6 @@ Resolución de una ruta de objeto de método formulario tabla:
 |  |  |
 | --- | --- |
 | Número de comando | 1165 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -42,6 +42,6 @@ O título de um botão imagem é guardado em forma de mensagem de ajuda. Este t�
 |  |  |
 | --- | --- |
 | Número do comando | 1182 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

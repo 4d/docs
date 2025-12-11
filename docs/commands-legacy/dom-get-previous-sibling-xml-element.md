@@ -39,7 +39,7 @@ If the command has been executed correctly and if the referenced element is not 
 |  |  |
 | --- | --- |
 | Command number | 924 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -52,6 +52,6 @@ Luego puede arrastrar la ventana haciendo clic en cualquiera de los bordes.
 |  |  |
 | --- | --- |
 | Número de comando | 452 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

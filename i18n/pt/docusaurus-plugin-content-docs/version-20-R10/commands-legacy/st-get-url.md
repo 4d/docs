@@ -75,6 +75,6 @@ Quando há um evento de duplo clique, se comprova que não existe em realidade u
 |  |  |
 | --- | --- |
 | Número do comando | 1288 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

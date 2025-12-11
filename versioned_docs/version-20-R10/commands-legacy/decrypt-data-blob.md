@@ -64,6 +64,6 @@ The *passPhrase* and *salt* used for decryption are identical to the *passPhrase
 |  |  |
 | --- | --- |
 | Command number | 1774 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

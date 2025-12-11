@@ -40,7 +40,7 @@ A variável sistema OK toma o valor 0 se o recurso não existir, do contrário a
 |  |  |
 | --- | --- |
 | Número do comando | 515 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

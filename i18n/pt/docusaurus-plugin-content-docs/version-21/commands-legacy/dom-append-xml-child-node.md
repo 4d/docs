@@ -152,6 +152,6 @@ Se o conteúdo de *valorFilho* não é válido, se devolve um erro.
 |  |  |
 | --- | --- |
 | Número do comando | 1080 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

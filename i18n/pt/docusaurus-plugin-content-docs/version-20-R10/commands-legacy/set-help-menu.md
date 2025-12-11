@@ -65,6 +65,6 @@ Se quiser personalizar o menu **Ajuda** de sua aplicação:
 |  |  |
 | --- | --- |
 | Número do comando | 1801 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

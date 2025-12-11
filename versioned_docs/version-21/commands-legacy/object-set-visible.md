@@ -64,6 +64,6 @@ or:
 |  |  |
 | --- | --- |
 | Command number | 603 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

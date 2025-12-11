@@ -86,7 +86,7 @@ Se o valor passado por uma *opção* é incorreto ou se não estiver disponível
 |  |  |
 | --- | --- |
 | Número do comando | 733 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

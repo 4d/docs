@@ -49,6 +49,6 @@ Este ejemplo autoriza un conjunto de métodos específicos para crear un informe
 |  |  |
 | --- | --- |
 | Número de comando | 908 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

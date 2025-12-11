@@ -46,6 +46,6 @@ L’instruction suivante retournera “PI” dans *vNom* et “TextProcess” da
 |  |  |
 | --- | --- |
 | Numéro de commande | 875 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

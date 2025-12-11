@@ -28,6 +28,6 @@ No contexto dos list boxes em modo seleção,quando a instrução REDRAW for apl
 |  |  |
 | --- | --- |
 | Número do comando | 174 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

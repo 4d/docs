@@ -57,6 +57,6 @@ with:
 |  |  |
 | --- | --- |
 | Command number | 311 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

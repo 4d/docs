@@ -38,6 +38,6 @@ Si no pasa el parámetro *conjunto*, el comando utilizará UserSet en el proceso
 |  |  |
 | --- | --- |
 | Número de comando | 646 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

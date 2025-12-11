@@ -34,6 +34,6 @@ Consulte el ejemplo de la sección *Conjuntos*.
 |  |  |
 | --- | --- |
 | Número de comando | 140 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

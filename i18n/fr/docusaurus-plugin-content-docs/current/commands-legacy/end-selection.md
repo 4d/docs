@@ -67,6 +67,6 @@ La méthode formulaire de l'exemple suivant est utilisée lors de l'impression d
 |  |  |
 | --- | --- |
 | Numéro de commande | 36 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

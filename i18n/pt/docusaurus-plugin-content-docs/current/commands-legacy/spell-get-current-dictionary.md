@@ -39,6 +39,6 @@ Queremos mostrar a linguagem do dicionário atual:
 |  |  |
 | --- | --- |
 | Número do comando | 1205 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

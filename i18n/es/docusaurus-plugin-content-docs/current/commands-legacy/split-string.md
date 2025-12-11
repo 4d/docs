@@ -63,6 +63,6 @@ El parámetro *separador* puede ser una cadena de múltiples caracteres:
 |  |  |
 | --- | --- |
 | Número de comando | 1554 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

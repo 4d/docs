@@ -34,6 +34,6 @@ O comando devolve **True** se o retângulo de foco está oculto e **False** quan
 |  |  |
 | --- | --- |
 | Número do comando | 1178 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

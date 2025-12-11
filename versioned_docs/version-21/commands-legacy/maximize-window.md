@@ -88,6 +88,6 @@ In this context, when the user clicks on the button:
 |  |  |
 | --- | --- |
 | Command number | 453 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -32,7 +32,7 @@ Si PREVIOUS RECORD mueve el puntero del registro actual antes de la selección a
 |  |  |
 | --- | --- |
 | Número de comando | 110 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

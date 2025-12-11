@@ -66,6 +66,6 @@ El siguiente ejemplo utiliza la opción especial *%password*, diseñada para la 
 |  |  |
 | --- | --- |
 | Número de comando | 164 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

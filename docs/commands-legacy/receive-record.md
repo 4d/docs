@@ -157,7 +157,7 @@ The OK system variable is set to 1 if the record is received. Otherwise, the OK 
 |  |  |
 | --- | --- |
 | Command number | 79 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

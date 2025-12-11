@@ -87,6 +87,6 @@ En este contexto, si el usuario hace clic en el botón:
 |  |  |
 | --- | --- |
 | Número de comando | 453 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

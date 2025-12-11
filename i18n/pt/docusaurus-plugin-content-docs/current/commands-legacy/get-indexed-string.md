@@ -44,7 +44,7 @@ Se o recurso for encontrado, OK toma o valor 1, do contrário assume o valor 0 (
 |  |  |
 | --- | --- |
 | Número do comando | 510 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

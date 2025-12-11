@@ -119,6 +119,6 @@ Designate a license to use:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1811                        |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

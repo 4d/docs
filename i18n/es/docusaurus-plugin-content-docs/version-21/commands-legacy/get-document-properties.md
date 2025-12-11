@@ -208,7 +208,7 @@ Una vez implementado en la base, tenemos todo lo que necesitamos para escribir e
 |  |  |
 | --- | --- |
 | Número de comando | 477 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

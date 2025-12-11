@@ -43,7 +43,7 @@ Reportez-vous à l'exemple de la commande [Get menu item mark](get-menu-item-mar
 |  |  |
 | --- | --- |
 | Numéro de commande | 208 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

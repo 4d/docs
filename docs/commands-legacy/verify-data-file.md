@@ -175,7 +175,7 @@ If the callback method does not exist, the verification is not carried out, an e
 |  |  |
 | --- | --- |
 | Command number | 939 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

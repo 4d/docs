@@ -175,6 +175,6 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 |  |  |
 | --- | --- |
 | Número de comando | 1217 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

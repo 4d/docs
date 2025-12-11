@@ -62,6 +62,6 @@ Les objets de formulaire auxquels vous pouvez appliquer cette commande sont les 
 |  |  |
 | --- | --- |
 | Numéro de commande | 706 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

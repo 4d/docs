@@ -68,7 +68,7 @@ An error is generated when:
 |  |  |
 | --- | --- |
 | Command number | 862 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

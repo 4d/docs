@@ -61,6 +61,6 @@ This example lets you transfer a picture via a BLOB:
 |  |  |
 | --- | --- |
 | Command number | 896 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

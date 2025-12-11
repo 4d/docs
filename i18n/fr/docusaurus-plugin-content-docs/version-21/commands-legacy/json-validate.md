@@ -110,6 +110,6 @@ Vous souhaitez valider un objet JSON avec un schéma et obtenir la liste des err
 |  |  |
 | --- | --- |
 | Numéro de commande | 1456 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

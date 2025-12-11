@@ -55,6 +55,6 @@ En supposant que *hList* est une liste dont les éléments ont des numéros de r
 |  |  |
 | --- | --- |
 | Numéro de commande | 630 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

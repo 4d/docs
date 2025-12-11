@@ -51,6 +51,6 @@ Cet exemple est la méthode d'un bouton placé dans un formulaire entrée. Ce bo
 |  |  |
 | --- | --- |
 | Numéro de commande | 436 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

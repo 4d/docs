@@ -27,6 +27,6 @@ Calling this command is necessary when you use the [FORM LOAD](../commands/form-
 |  |  |
 | --- | --- |
 | Command number | 1299 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -110,7 +110,7 @@ Retrieval of a video:
 |  |  |
 | --- | --- |
 | Command number | 1157 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

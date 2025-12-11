@@ -40,6 +40,6 @@ The following example is a button object method. It tests to see whether or not 
 |  |  |
 | --- | --- |
 | Command number | 273 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

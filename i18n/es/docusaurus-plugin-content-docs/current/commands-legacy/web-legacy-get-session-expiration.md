@@ -44,6 +44,6 @@ El parámetro *fechaVenc* recibe la fecha de vencimiento y el parámetro *horaVe
 |  |  |
 | --- | --- |
 | Número de comando | 1207 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -39,6 +39,6 @@ On souhaite afficher la langue du dictionnaire courant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1205 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -64,6 +64,6 @@ See example for the [SET TABLE TITLES](set-table-titles.md) command.
 |  |  |
 | --- | --- |
 | Command number | 602 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

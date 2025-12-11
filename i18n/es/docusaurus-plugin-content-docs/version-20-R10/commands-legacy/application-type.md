@@ -48,6 +48,6 @@ En alguna parte de su código, diferente del *Método base On Server Startup*, d
 |  |  |
 | --- | --- |
 | Número de comando | 494 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

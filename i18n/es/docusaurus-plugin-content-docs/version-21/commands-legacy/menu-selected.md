@@ -65,7 +65,7 @@ El siguiente método de formulario utiliza Menu selected para proporcionar los a
 |  |  |
 | --- | --- |
 | Número de comando | 152 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

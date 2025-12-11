@@ -40,6 +40,6 @@ Cuando se llama al comando desde:
 |  |  |
 | --- | --- |
 | Número de comando | 1739 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

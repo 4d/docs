@@ -71,6 +71,6 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1601                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

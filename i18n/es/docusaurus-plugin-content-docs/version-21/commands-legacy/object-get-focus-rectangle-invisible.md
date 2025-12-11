@@ -34,6 +34,6 @@ El comando devuelve **True** si el rectángulo de foco está oculto y **False** 
 |  |  |
 | --- | --- |
 | Número de comando | 1178 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

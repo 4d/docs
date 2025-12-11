@@ -38,6 +38,6 @@ Se quiser chamar a um processo worker e passar o nome de processo de chamada com
 |  |  |
 | --- | --- |
 | Número do comando | 1392 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -61,6 +61,6 @@ Si la sélection est modifiée via les touches fléchées du clavier, *colonne* 
 |  |  |
 | --- | --- |
 | Numéro de commande | 971 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

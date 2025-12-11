@@ -45,7 +45,7 @@ Cet exemple permet de récupérer les enregistrements des clients français et a
 |  |  |
 | --- | --- |
 | Numéro de commande | 644 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

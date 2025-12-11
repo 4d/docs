@@ -73,7 +73,7 @@ La variable système OK prend la valeur 1 si la commande a été correctement ex
 |  |  |
 | --- | --- |
 | Numéro de commande | 694 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

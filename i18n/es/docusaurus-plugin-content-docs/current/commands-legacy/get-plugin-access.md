@@ -39,6 +39,6 @@ Pase en el parámetro *plugIn* el número del plug-in del que quiere conocer el 
 |  |  |
 | --- | --- |
 | Número de comando | 846 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

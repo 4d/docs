@@ -71,7 +71,7 @@ Usted desea actualizar las referencias incluidas en la selección de texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1285 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

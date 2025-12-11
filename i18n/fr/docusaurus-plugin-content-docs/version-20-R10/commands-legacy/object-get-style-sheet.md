@@ -51,6 +51,6 @@ Dans **l'architecture Projet**, seules les trois feuilles de style automatiques 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1258 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

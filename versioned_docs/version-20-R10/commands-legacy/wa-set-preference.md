@@ -55,6 +55,6 @@ To enable URL drops in the 'myarea' Web area:
 |  |  |
 | --- | --- |
 | Command number | 1041 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

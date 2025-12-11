@@ -46,7 +46,7 @@ Si la imagen se extrae correctamente, OK toma el valor 1; de lo contrario OK tom
 |  |  |
 | --- | --- |
 | Número de comando | 522 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

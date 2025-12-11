@@ -48,6 +48,6 @@ O código a seguir apaga o elemento selecionado da lista *hList*. Se o elemento 
 |  |  |
 | --- | --- |
 | Número do comando | 624 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

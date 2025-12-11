@@ -36,6 +36,6 @@ O exemplo a seguir utiliza um valor monetário expresso como um número real, e 
 |  |  |
 | --- | --- |
 | Número do comando | 9 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

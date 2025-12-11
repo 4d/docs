@@ -111,6 +111,6 @@ Voici un exemple de pointeur vers un tableau 2D :
 |  |  |
 | --- | --- |
 | Numéro de commande | 394 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

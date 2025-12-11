@@ -58,6 +58,6 @@ L'exemple suivant permet de vérifier s'il y a des factures impayées dans la ta
 |  |  |
 | --- | --- |
 | Numéro de commande | 331 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

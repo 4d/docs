@@ -37,6 +37,6 @@ Para eliminar o bloqueio de colunas, passe 0 em *numColunas*.
 |  |  |
 | --- | --- |
 | Número do comando | 1151 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

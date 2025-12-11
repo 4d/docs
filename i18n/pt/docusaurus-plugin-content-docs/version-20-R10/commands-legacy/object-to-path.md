@@ -61,6 +61,6 @@ Se quisermos duplicar e mudar o nome de um arquivo em sua própria pasta
 |  |  |
 | --- | --- |
 | Número do comando | 1548 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

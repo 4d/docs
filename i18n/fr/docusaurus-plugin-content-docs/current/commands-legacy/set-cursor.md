@@ -66,6 +66,6 @@ Vous souhaitez que le curseur se transforme en ![](../assets/en/commands/pict247
 |  |  |
 | --- | --- |
 | Numéro de commande | 469 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

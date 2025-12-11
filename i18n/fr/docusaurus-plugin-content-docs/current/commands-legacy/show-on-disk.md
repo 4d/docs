@@ -53,7 +53,7 @@ La variable système OK prend la valeur 1 si la commande est correctement exécu
 |  |  |
 | --- | --- |
 | Numéro de commande | 922 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

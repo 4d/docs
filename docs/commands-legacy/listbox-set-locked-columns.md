@@ -37,6 +37,6 @@ To remove the column locking, pass 0 or a negative value in *numColumns*.
 |  |  |
 | --- | --- |
 | Command number | 1151 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

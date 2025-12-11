@@ -44,6 +44,6 @@ Désactivation globale des assertions :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1131 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

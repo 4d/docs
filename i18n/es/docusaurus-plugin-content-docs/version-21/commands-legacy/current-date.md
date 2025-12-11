@@ -103,6 +103,6 @@ El siguiente método de proyecto permite hacerlo:
 |  |  |
 | --- | --- |
 | Número de comando | 33 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

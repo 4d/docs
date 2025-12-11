@@ -101,7 +101,7 @@ La variable système OK est définie sur 0 si le timeout a été atteint ou si l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1727 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

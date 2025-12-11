@@ -58,7 +58,7 @@ Une assertion peut permettre de tester les paramètres passés à une méthode p
 |  |  |
 | --- | --- |
 | Numéro de commande | 1129 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

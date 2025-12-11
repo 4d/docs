@@ -30,6 +30,6 @@ Si *nom* a été créée par la commande [CUT NAMED SELECTION](cut-named-selecti
 |  |  |
 | --- | --- |
 | Numéro de commande | 333 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

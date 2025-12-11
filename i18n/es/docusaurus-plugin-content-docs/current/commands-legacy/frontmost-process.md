@@ -39,6 +39,6 @@ Ver el ejemplo para [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").
 |  |  |
 | --- | --- |
 | Número de comando | 327 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

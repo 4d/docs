@@ -31,6 +31,6 @@ Para que se genere el ciclo de ejecución **Outside call**, asegúrese de que la
 |  |  |
 | --- | --- |
 | Número de comando | 328 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

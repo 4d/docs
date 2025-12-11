@@ -31,7 +31,7 @@ If the SQL server has been launched correctly, the OK system variable is set to 
 |  |  |
 | --- | --- |
 | Command number | 962 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

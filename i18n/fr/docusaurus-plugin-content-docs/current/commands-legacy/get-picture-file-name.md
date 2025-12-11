@@ -31,6 +31,6 @@ Si l’image n’a pas de nom par défaut, la commande retourne une chaîne vide
 |  |  |
 | --- | --- |
 | Numéro de commande | 1171 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

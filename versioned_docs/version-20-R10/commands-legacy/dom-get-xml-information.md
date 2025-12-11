@@ -39,6 +39,6 @@ In *xmlInfo*, pass a code indicating the type of information to be retrieved. Yo
 |  |  |
 | --- | --- |
 | Command number | 721 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

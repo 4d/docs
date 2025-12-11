@@ -51,6 +51,6 @@ After execution of this line:
 |  |  |
 | --- | --- |
 | Command number | 890 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

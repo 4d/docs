@@ -42,6 +42,6 @@ En entornos multiusuario y multiprocesos, cuando necesite modificar un registro 
 |  |  |
 | --- | --- |
 | Número de comando | 52 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

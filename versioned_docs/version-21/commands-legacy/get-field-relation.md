@@ -89,6 +89,6 @@ The following code illustrates the various possibilities offered by the **GET FI
 |  |  |
 | --- | --- |
 | Command number | 920 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

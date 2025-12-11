@@ -44,6 +44,6 @@ Depois da execução deste método objeto, a variável *$btnName* contém o valo
 |  |  |
 | --- | --- |
 | Número do comando | 1087 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

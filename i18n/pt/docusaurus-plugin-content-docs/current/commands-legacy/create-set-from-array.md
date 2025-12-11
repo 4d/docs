@@ -45,7 +45,7 @@ Em um array de inteiros longos, se um número de registro não for válido (regi
 |  |  |
 | --- | --- |
 | Número do comando | 641 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

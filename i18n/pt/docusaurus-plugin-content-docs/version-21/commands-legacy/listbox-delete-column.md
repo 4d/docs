@@ -39,6 +39,6 @@ Se o parâmetro *posicionCol* é maior que o número de colunas no list box, o c
 |  |  |
 | --- | --- |
 | Número do comando | 830 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

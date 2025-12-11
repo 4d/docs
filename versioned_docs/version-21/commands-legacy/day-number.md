@@ -65,6 +65,6 @@ The following example is a function that returns the current day as a string:
 |  |  |
 | --- | --- |
 | Command number | 114 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

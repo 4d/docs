@@ -29,6 +29,6 @@ Si vous omettez le paramètre *fenêtre*, **Window process** retourne le numéro
 |  |  |
 | --- | --- |
 | Numéro de commande | 446 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

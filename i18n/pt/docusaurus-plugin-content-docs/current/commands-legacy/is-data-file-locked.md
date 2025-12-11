@@ -36,6 +36,6 @@ Este método vai impedir a abertura do banco de dados se o arquivo de dados esti
 |  |  |
 | --- | --- |
 | Número do comando | 716 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

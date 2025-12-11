@@ -89,6 +89,6 @@ O código de *workerMethod é*:
 |  |  |
 | --- | --- |
 | Número do comando | 1389 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

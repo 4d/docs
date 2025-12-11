@@ -37,7 +37,7 @@ Les seules différences entre ces deux commandes sont les suivantes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 204 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

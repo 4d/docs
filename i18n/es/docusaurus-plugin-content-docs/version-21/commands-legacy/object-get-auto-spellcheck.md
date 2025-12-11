@@ -37,6 +37,6 @@ El comando devuelve **True** cuando la corrección ortográfica automática est�
 |  |  |
 | --- | --- |
 | Número de comando | 1174 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

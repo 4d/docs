@@ -64,6 +64,6 @@ Usted desea seleccionar estilos de la familia de fuentes "Verdana" (si está dis
 |  |  |
 | --- | --- |
 | Número de comando | 1362 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

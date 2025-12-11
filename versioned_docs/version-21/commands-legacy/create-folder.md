@@ -77,7 +77,7 @@ Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder
 |  |  |
 | --- | --- |
 | Command number | 475 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

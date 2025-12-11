@@ -59,6 +59,6 @@ Este ejemplo verifica un hash de contraseña creado previamente por [Generate pa
 |  |  |
 | --- | --- |
 | Número de comando | 1534 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

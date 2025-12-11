@@ -47,6 +47,6 @@ Estes são os diferentes resultados deste comando como também do comando [OB Is
 |  |  |
 | --- | --- |
 | Número do comando | 1297 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

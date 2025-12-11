@@ -55,7 +55,7 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
 |  |  |
 | --- | --- |
 | Número do comando | 904 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

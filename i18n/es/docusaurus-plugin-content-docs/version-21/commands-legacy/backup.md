@@ -43,7 +43,7 @@ En caso de que se presenten incidentes durante el backup, la información relati
 |  |  |
 | --- | --- |
 | Número de comando | 887 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -33,6 +33,6 @@ O comando admite o asterisco *\** como parâmetro opcional. Automaticamente, qua
 |  |  |
 | --- | --- |
 | Número do comando | 975 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

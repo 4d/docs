@@ -53,6 +53,6 @@ Quando o usuário clicar no botão, aparece a caixa de diálogo padrão procurar
 |  |  |
 | --- | --- |
 | Número do comando | 656 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

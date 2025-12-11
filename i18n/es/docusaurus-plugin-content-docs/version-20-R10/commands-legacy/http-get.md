@@ -111,7 +111,7 @@ Recuperación de un vídeo:
 |  |  |
 | --- | --- |
 | Número de comando | 1157 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

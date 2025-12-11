@@ -44,6 +44,6 @@ The table number and record number for the record involved by the database event
 |  |  |
 | --- | --- |
 | Command number | 399 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -78,6 +78,6 @@ Este ejemplo define dos parámetros:
 |  |  |
 | --- | --- |
 | Número de comando | 777 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -60,7 +60,7 @@ Se não tiver privilégios de acesso para chamar ao comando GET USER PROPERTIES 
 |  |  |
 | --- | --- |
 | Número do comando | 611 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

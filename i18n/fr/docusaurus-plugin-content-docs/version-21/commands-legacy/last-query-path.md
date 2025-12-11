@@ -39,6 +39,6 @@ La description du chemin de la dernière recherche peut être comparée à la de
 |  |  |
 | --- | --- |
 | Numéro de commande | 1045 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

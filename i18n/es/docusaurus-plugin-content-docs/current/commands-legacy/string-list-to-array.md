@@ -48,7 +48,7 @@ Si se encuentra el recurso, la variable sistema OK toma el valor 1, de lo contra
 |  |  |
 | --- | --- |
 | Número de comando | 511 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

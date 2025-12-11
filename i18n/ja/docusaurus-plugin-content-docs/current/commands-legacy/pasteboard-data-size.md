@@ -98,7 +98,7 @@ You want to drag some private data from different objects in your form. You can 
 |  |  |
 | --- | --- |
 | コマンド番号 | 400 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

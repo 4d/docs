@@ -65,6 +65,6 @@ L'exemple suivant récupère un tableau process depuis le process désigné par 
 |  |  |
 | --- | --- |
 | Numéro de commande | 635 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

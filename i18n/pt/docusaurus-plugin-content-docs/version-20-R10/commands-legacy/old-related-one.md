@@ -37,7 +37,7 @@ Se o comando for executado corretamente e se os registros relacionados forem car
 |  |  |
 | --- | --- |
 | Número do comando | 44 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

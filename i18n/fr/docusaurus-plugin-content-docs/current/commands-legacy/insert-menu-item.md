@@ -60,7 +60,7 @@ L’exemple suivant crée un menu constitué de deux commandes auxquelles il aff
 |  |  |
 | --- | --- |
 | Numéro de commande | 412 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

@@ -48,6 +48,6 @@ Par exemple, Hypoténuse (4;3) retourne 5.
 |  |  |
 | --- | --- |
 | Numéro de commande | 539 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -90,7 +90,7 @@ The following example allows you to select the folder in which the pictures in t
 |  |  |
 | --- | --- |
 | Command number | 670 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

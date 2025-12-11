@@ -44,7 +44,7 @@ The following statement inserts (or creates) a first column in a Quick Report ar
 |  |  |
 | --- | --- |
 | Command number | 748 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

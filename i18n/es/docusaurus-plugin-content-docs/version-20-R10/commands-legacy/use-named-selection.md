@@ -35,7 +35,7 @@ Recuerde que una selección temporal es una representación de una selección de
 |  |  |
 | --- | --- |
 | Número de comando | 332 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

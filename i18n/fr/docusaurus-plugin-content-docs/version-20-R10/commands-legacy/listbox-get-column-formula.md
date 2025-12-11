@@ -30,6 +30,6 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 |  |  |
 | --- | --- |
 | Numéro de commande | 1202 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

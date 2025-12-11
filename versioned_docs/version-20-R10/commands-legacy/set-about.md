@@ -49,6 +49,6 @@ The following example resets the About 4D menu command:
 |  |  |
 | --- | --- |
 | Command number | 316 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

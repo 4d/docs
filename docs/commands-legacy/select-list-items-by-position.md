@@ -78,6 +78,6 @@ After execution of the following lines of code:
 |  |  |
 | --- | --- |
 | Command number | 381 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -52,6 +52,6 @@ Is license available returns [False](false.md "False") if the plug-in is operati
 |  |  |
 | --- | --- |
 | Command number | 714 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

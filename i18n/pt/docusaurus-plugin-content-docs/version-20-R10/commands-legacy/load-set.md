@@ -48,7 +48,7 @@ Se o usuário clicar em Cancelar na caixa de diálogo de abrir arquivos, ou se f
 |  |  |
 | --- | --- |
 | Número do comando | 185 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

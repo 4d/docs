@@ -30,6 +30,6 @@ A propriedade "Três estados" se pode definir seja usando a lista de propriedade
 |  |  |
 | --- | --- |
 | Número do comando | 1250 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -28,6 +28,6 @@ En el contexto de los list boxes en modo selección, la instrucción REDRAW apli
 |  |  |
 | --- | --- |
 | Número de comando | 174 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

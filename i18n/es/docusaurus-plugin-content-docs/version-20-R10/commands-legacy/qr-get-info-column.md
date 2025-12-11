@@ -121,7 +121,7 @@ Puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 766 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

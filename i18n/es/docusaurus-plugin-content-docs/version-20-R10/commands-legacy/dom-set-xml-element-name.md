@@ -64,7 +64,7 @@ Se genera un error cuando:
 |  |  |
 | --- | --- |
 | Número de comando | 867 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

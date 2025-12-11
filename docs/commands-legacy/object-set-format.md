@@ -366,6 +366,6 @@ Switching a thermometer to "Barber shop" mode:
 |  |  |
 | --- | --- |
 | Command number | 236 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

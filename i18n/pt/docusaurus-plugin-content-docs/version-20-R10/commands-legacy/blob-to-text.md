@@ -66,6 +66,6 @@ Após a chamada, a variável é incrementada pelo número de bytes lidos. Portan
 |  |  |
 | --- | --- |
 | Número do comando | 555 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

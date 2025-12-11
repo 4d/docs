@@ -41,6 +41,6 @@ Vous voulez récupérer les numéros des enregistrements de la sélection couran
 |  |  |
 | --- | --- |
 | Numéro de commande | 647 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

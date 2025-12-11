@@ -162,6 +162,6 @@ When the form is executed, the list will look like this:
 |  |  |
 | --- | --- |
 | Command number | 376 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

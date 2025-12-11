@@ -72,6 +72,6 @@ Este exemplo permite obter a variância de valores localizados num array:
 |  |  |
 | --- | --- |
 | Número do comando | 27 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

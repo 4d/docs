@@ -102,7 +102,7 @@ El comando **LOG FILE TO JSON** modifica el valor de las variables sistema OK y 
 |  |  |
 | --- | --- |
 | Número de comando | 1352 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

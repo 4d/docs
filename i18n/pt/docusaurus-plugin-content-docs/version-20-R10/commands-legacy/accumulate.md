@@ -41,6 +41,6 @@ Ver o exemplo do comando [BREAK LEVEL](break-level.md) .
 |  |  |
 | --- | --- |
 | Número do comando | 303 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

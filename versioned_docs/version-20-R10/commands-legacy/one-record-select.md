@@ -35,7 +35,7 @@ This command was useful to “return” a record that had been pushed and popped
 |  |  |
 | --- | --- |
 | Command number | 189 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

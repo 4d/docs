@@ -54,6 +54,6 @@ The following example is an object method for a button. It displays a specific p
 |  |  |
 | --- | --- |
 | Command number | 247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

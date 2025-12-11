@@ -97,7 +97,7 @@ See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md
 |  |  |
 | --- | --- |
 | Command number | 400 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

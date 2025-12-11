@@ -47,6 +47,6 @@ O comando retorna **True** se for selecionado um atributo e **False** se for des
 |  |  |
 | --- | --- |
 | Número do comando | 1169 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

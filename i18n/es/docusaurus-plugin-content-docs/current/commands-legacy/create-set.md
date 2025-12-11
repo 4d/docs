@@ -38,6 +38,6 @@ El siguiente ejemplo crea un conjunto después de efectuar una búsqueda, de man
 |  |  |
 | --- | --- |
 | Número de comando | 116 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

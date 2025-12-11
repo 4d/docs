@@ -44,6 +44,6 @@ See the example for the [RESOLVE POINTER](resolve-pointer.md) command.
 |  |  |
 | --- | --- |
 | Command number | 308 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

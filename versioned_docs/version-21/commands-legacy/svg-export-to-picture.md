@@ -57,6 +57,6 @@ The following example can be used to display “Hello World” in a 4D picture:
 |  |  |
 | --- | --- |
 | Command number | 1017 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

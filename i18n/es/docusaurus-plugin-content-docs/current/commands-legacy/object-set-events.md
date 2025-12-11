@@ -171,6 +171,6 @@ Desactivación de un solo evento del formulario sin modificar los otros:
 |  |  |
 | --- | --- |
 | Número de comando | 1239 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -63,6 +63,6 @@ Usted quiere obtener el formulario actual si éste es un formulario proyecto:
 |  |  |
 | --- | --- |
 | Número de comando | 1298 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -44,7 +44,7 @@ Se o parâmetro *subtotal*, é incorreto, se gera o erro -9852.
 |  |  |
 | --- | --- |
 | Número do comando | 761 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

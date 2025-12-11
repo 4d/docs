@@ -63,6 +63,6 @@ La fonction JavaScript "getCustomerInfos" reçoit un identifiant numérique en p
 |  |  |
 | --- | --- |
 | Numéro de commande | 1043 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

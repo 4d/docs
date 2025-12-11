@@ -49,6 +49,6 @@ Veja a descrição do comando [SET APPLICATION COLOR SCHEME](set-application-col
 |  |  |
 | --- | --- |
 | Número do comando | 1763 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

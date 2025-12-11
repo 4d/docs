@@ -55,6 +55,6 @@ Os archivos chave (arquivos de extensão ".4DKeyChain") devem ser armazenados no
 |  |  |
 | --- | --- |
 | Número do comando | 1639 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

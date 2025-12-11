@@ -35,6 +35,6 @@ Se um registro tiver uma quantidade importante de dados, de campos de imagem, ou
 |  |  |
 | --- | --- |
 | Número do comando | 212 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

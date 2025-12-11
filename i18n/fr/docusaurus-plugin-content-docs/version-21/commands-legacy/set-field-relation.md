@@ -60,7 +60,7 @@ Le code suivant vous permet uniquement de configurer ls liens utiles comme autom
 |  |  |
 | --- | --- |
 | Numéro de commande | 919 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

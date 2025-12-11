@@ -39,6 +39,6 @@ Vous voulez savoir si le système d'exploitation courant est Windows :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1573 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

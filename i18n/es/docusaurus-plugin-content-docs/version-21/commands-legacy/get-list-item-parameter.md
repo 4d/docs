@@ -41,6 +41,6 @@ En *selector*, puede pasar la constante Additional text o Standard action (en el
 |  |  |
 | --- | --- |
 | Número de comando | 985 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

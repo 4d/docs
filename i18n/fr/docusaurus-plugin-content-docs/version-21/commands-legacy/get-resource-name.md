@@ -30,6 +30,6 @@ Si la ressource n'existe pas, **Get resource name** retourne une chaîne vide.
 |  |  |
 | --- | --- |
 | Numéro de commande | 513 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -32,6 +32,6 @@ Ver o exemplo do comando [USE SET](use-set.md "USE SET").
 |  |  |
 | --- | --- |
 | Número do comando | 117 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -41,7 +41,7 @@ O seguinte exemplo utiliza [LOAD SET](load-set.md) para carregar um conjunto de 
 |  |  |
 | --- | --- |
 | Número do comando | 118 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

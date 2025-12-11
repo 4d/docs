@@ -57,6 +57,6 @@ Este exemplo adiciona registros ao conjunto de melhores clientes. Os registros s
 |  |  |
 | --- | --- |
 | Número do comando | 120 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

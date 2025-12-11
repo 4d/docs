@@ -50,6 +50,6 @@ The following code:
 |  |  |
 | --- | --- |
 | Command number | 911 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -50,6 +50,6 @@ En un formulario, utilice una lista desplegable llamada *asMiListaDesplegable* c
 |  |  |
 | --- | --- |
 | Número de comando | 89 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

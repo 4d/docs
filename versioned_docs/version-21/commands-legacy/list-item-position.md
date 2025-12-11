@@ -44,6 +44,6 @@ If the item does not exist, **List item position** returns 0.
 |  |  |
 | --- | --- |
 | Command number | 629 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

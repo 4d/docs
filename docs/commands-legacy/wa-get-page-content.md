@@ -30,6 +30,6 @@ This command returns an empty string if the contents of the current page is not 
 |  |  |
 | --- | --- |
 | Command number | 1038 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

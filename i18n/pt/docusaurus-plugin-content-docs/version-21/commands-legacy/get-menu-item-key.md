@@ -53,7 +53,7 @@ Para obter um atalho associado com um comando de menu, é útil implementar uma 
 |  |  |
 | --- | --- |
 | Número do comando | 424 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

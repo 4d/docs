@@ -66,6 +66,6 @@ Si vous exécutez le code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1570 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

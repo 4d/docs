@@ -61,6 +61,6 @@ Nous voulons dupliquer et renommer un fichier dans son dossier actuel :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

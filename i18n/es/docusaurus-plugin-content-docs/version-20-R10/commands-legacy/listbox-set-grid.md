@@ -35,6 +35,6 @@ Pase en los parámetros *horizontal* y *vertical* los valores booleanos que indi
 |  |  |
 | --- | --- |
 | Número de comando | 841 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

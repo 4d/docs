@@ -90,6 +90,6 @@ Esta es una lista llamada *hList,* mostrada en el entorno Aplicación:
 |  |  |
 | --- | --- |
 | Número de comando | 379 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

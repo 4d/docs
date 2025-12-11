@@ -84,7 +84,7 @@ Mostrará la siguiente caja de diálogo (en Windows):
 |  |  |
 | --- | --- |
 | Número de comando | 163 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

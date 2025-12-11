@@ -40,6 +40,6 @@ You can compare the value returned by the command with the following constants, 
 |  |  |
 | --- | --- |
 | Command number | 1247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

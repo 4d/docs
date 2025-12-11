@@ -42,6 +42,6 @@ If there is no hierarchical list associated with the object for the *listType* d
 |  |  |
 | --- | --- |
 | Command number | 1267 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

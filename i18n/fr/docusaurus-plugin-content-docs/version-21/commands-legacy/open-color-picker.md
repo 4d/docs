@@ -34,6 +34,6 @@ Si la couleur a été modifiée, l’événement formulaire On After Edit est g�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1304 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

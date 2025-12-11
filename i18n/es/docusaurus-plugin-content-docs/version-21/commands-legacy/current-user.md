@@ -44,6 +44,6 @@ Ver el ejemplo del comando [User in group](user-in-group.md "User in group").
 |  |  |
 | --- | --- |
 | Número de comando | 182 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -57,6 +57,6 @@ Consulte el ejemplo del comando [Get menu item key](get-menu-item-key.md "Get me
 |  |  |
 | --- | --- |
 | Número de comando | 980 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

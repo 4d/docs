@@ -29,6 +29,6 @@ This command should be used only in the context of the On Clicked form event. It
 |  |  |
 | --- | --- |
 | Command number | 712 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

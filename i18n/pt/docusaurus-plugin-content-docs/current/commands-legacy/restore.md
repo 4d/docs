@@ -39,7 +39,7 @@ Nota: em um aplicativo 4D compilado e fusionado com 4D Volume Desktop, o comando
 |  |  |
 | --- | --- |
 | Número do comando | 918 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, Document, error |
 
 

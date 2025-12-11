@@ -90,7 +90,7 @@ Cette méthode définit plusieurs attributs pour l'intitulé de la première col
 |  |  |
 | --- | --- |
 | Numéro de commande | 759 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

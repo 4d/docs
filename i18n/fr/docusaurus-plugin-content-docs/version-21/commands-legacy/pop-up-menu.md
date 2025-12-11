@@ -105,6 +105,6 @@ Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS
 |  |  |
 | --- | --- |
 | Numéro de commande | 542 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

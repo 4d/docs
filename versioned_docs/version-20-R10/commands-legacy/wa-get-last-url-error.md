@@ -41,6 +41,6 @@ It is recommended to call this command within the framework of the On URL Loadin
 |  |  |
 | --- | --- |
 | Command number | 1034 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

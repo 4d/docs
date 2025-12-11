@@ -74,7 +74,7 @@ Si l’opération de compactage s’est déroulée correctement, la variable sys
 |  |  |
 | --- | --- |
 | Numéro de commande | 937 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

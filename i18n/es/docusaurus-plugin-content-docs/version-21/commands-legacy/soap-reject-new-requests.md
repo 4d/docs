@@ -44,6 +44,6 @@ Desea rechazar cualquier solicitud nueva a su servidor de servicios web:
 |  |  |
 | --- | --- |
 | Número de comando | 1636 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

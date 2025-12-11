@@ -87,6 +87,6 @@ Puede abrir un mismo archivo texto con diferentes aplicaciones utilizando el par
 |  |  |
 | --- | --- |
 | Número de comando | 673 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

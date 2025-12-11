@@ -45,6 +45,6 @@ La commande retourne **Vrai** si un attribut est sélectionné et **Faux** s’i
 |  |  |
 | --- | --- |
 | Numéro de commande | 1169 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

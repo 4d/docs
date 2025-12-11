@@ -66,6 +66,6 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 |  |  |
 | --- | --- |
 | Número do comando | 36 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

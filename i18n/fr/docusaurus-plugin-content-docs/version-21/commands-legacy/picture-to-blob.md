@@ -55,7 +55,7 @@ Vous voulez convertir une image depuis un format propriétaire vers le format GI
 |  |  |
 | --- | --- |
 | Numéro de commande | 692 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

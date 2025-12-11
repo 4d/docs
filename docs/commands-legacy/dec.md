@@ -36,6 +36,6 @@ The following example takes a monetary value expressed as a real number, and ext
 |  |  |
 | --- | --- |
 | Command number | 9 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

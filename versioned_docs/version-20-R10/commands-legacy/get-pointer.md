@@ -56,6 +56,6 @@ Using pointers to elements of two-dimensional arrays:
 |  |  |
 | --- | --- |
 | Command number | 304 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

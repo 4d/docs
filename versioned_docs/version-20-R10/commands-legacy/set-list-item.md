@@ -83,6 +83,6 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 385 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

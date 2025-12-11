@@ -56,6 +56,6 @@ Le code suivant peut être utilisé pour gérer le suivi de la souris dans un ob
 |  |  |
 | --- | --- |
 | Numéro de commande | 1422 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

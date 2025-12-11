@@ -65,7 +65,7 @@ A variável OK recebe o valor 1 se a lista for criada corretamente, caso contrá
 |  |  |
 | --- | --- |
 | Número do comando | 557 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

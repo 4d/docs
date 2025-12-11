@@ -54,6 +54,6 @@ El siguiente ejemplo es parte de un método que lee registros de un documento. E
 |  |  |
 | --- | --- |
 | Número de comando | 53 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

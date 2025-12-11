@@ -32,7 +32,7 @@ Le paramètre optionnel *taille* vous permet d’indiquer les dimensions de l’
 |  |  |
 | --- | --- |
 | Numéro de commande | 700 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | Document, error |
 
 

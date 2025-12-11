@@ -55,7 +55,7 @@ Si la commande échoue, une erreur est générée, que vous pouvez intercepter �
 |  |  |
 | --- | --- |
 | Numéro de commande | 871 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, Document, error |
 | Interdite sur le serveur ||
 

@@ -74,7 +74,7 @@ If the compacting operation is carried out correctly, the OK system variable is 
 |  |  |
 | --- | --- |
 | Command number | 937 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

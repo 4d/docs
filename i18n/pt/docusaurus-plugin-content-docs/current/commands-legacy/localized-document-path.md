@@ -71,6 +71,6 @@ Se a linguagem atuarl for, por exemplo, francês canadense (fr-ca), o comando de
 |  |  |
 | --- | --- |
 | Número do comando | 1105 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

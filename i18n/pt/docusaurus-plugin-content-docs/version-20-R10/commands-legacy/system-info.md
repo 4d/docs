@@ -150,6 +150,6 @@ devolve um objeto que contém a informação abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 1571 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

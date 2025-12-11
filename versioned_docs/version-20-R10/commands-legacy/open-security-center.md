@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1018 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

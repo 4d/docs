@@ -50,7 +50,7 @@ If the operation was successful, the OK system variable is equal to 1.
 |  |  |
 | --- | --- |
 | Command number | 650 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

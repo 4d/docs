@@ -85,6 +85,6 @@ Here are some examples of conversions that can be done with this command:
 |  |  |
 | --- | --- |
 | Command number | 676 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

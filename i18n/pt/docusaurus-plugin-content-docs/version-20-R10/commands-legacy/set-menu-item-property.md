@@ -68,6 +68,6 @@ Proprierdade personalizada - Nesta propriedade pode passar qualquer texto person
 |  |  |
 | --- | --- |
 | Número do comando | 973 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

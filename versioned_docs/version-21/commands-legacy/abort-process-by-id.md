@@ -48,6 +48,6 @@ You want to stop the selected process of the processes collection displayed in a
 |  |  |
 | --- | --- |
 | Command number | 1634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

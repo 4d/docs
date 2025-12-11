@@ -55,6 +55,6 @@ Vous effectuez une saisie dans un formulaire et vous cliquez sur un bouton qui d
 |  |  |
 | --- | --- |
 | Numéro de commande | 213 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

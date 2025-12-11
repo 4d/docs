@@ -90,6 +90,6 @@ Por outro lado, se o código abaixo for executado posteriormente...
 |  |  |
 | --- | --- |
 | Número do comando | 1409 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

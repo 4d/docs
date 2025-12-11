@@ -51,6 +51,6 @@ Depois da execução desta linha:
 |  |  |
 | --- | --- |
 | Número do comando | 890 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

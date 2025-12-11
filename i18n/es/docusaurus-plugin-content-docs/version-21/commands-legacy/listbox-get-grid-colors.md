@@ -36,6 +36,6 @@ En *colorH* y *colorV*, el comando devuelve los valores de los colores RGB. El f
 |  |  |
 | --- | --- |
 | Número de comando | 1200 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

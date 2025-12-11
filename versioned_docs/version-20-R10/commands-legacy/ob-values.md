@@ -50,6 +50,6 @@ You want a collection with all property values of an object:
 |  |  |
 | --- | --- |
 | Command number | 1718 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

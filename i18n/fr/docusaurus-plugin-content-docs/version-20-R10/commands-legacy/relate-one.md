@@ -90,7 +90,7 @@ Si la commande a été correctement exécutée et si les enregistrements liés o
 |  |  |
 | --- | --- |
 | Numéro de commande | 42 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

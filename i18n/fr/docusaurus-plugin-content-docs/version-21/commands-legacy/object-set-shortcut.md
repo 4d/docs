@@ -95,6 +95,6 @@ Vous voulez associer un équivalent clavier différent en fonction de la langue 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1185 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

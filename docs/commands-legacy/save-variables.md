@@ -54,7 +54,7 @@ If the variables are saved properly, the **OK** system variable is set to 1; oth
 |  |  |
 | --- | --- |
 | Command number | 75 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

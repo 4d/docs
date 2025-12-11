@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 735 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -45,7 +45,7 @@ The following example allows you to retrieve the records of both French and Amer
 |  |  |
 | --- | --- |
 | Command number | 644 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

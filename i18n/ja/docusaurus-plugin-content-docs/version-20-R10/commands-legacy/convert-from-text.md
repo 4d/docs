@@ -196,7 +196,7 @@ CONVERT FROM TEXTと[Convert to text](convert-to-text.md "Convert to text")コ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1011 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

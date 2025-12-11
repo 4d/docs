@@ -29,7 +29,7 @@ Si vous omettez le paramètre *process*, **Count menus** s'applique à la barre 
 |  |  |
 | --- | --- |
 | Numéro de commande | 404 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

@@ -42,6 +42,6 @@ El siguiente ejemplo selecciona la opción Previsualización en pantalla para mo
 |  |  |
 | --- | --- |
 | Número de comando | 364 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

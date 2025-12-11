@@ -170,6 +170,6 @@ We want to copy *$sharedObj* in *$sharedColl* but since they belong to different
 |  |  |
 | --- | --- |
 | Command number | 1225 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

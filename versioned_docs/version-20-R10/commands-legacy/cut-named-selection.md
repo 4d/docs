@@ -42,7 +42,7 @@ The following method empties the current selection of a table *\[Customers\]*:
 |  |  |
 | --- | --- |
 | Command number | 334 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

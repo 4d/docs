@@ -47,7 +47,7 @@ Si l'utilisateur clique sur le bouton Valider ou appuie sur la touche Entrée, l
 |  |  |
 | --- | --- |
 | Numéro de commande | 292 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

@@ -31,7 +31,7 @@ Si *proceso* ha sido retrasado anteriormente, consulte los comandos [PAUSE PROCE
 |  |  |
 | --- | --- |
 | Número de comando | 320 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Prohibido en el servidor ||
 
 

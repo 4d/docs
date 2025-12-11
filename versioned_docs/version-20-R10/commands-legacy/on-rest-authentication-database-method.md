@@ -29,6 +29,6 @@ The [Force login authentication](../REST/authUsers.md) is now highly recommended
 |  |  |
 | --- | --- |
 | Command number | 3367 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

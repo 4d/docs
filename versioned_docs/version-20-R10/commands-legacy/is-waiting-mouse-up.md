@@ -56,6 +56,6 @@ The following code can be used to manage a mouse tracking feature in a picture o
 |  |  |
 | --- | --- |
 | Command number | 1422 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

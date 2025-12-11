@@ -136,7 +136,7 @@ After these methods have been added to your application, you can write:
 |  |  |
 | --- | --- |
 | Command number | 532 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

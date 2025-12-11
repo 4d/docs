@@ -40,6 +40,6 @@ Consulte os exemplos dados para o comando .
 |  |  |
 | --- | --- |
 | Número do comando | 690 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

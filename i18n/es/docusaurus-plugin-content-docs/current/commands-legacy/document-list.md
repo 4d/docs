@@ -117,7 +117,7 @@ Lista de todos los documentos en modo recursivo Posix (relativo):
 |  |  |
 | --- | --- |
 | Número de comando | 474 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

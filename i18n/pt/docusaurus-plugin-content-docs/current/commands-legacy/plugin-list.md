@@ -34,6 +34,6 @@ PLUGIN LIST leva todos os plug-ins em consideração, incluindo aqueles que est�
 |  |  |
 | --- | --- |
 | Número do comando | 847 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

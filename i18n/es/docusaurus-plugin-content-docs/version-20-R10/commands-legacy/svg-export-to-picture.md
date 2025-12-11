@@ -57,6 +57,6 @@ El siguiente ejemplo puede utilizarse para mostrar “Hello World” en una imag
 |  |  |
 | --- | --- |
 | Número de comando | 1017 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

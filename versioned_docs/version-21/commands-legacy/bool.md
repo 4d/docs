@@ -53,6 +53,6 @@ You select a value depending on the contents of an object field attribute, antic
 |  |  |
 | --- | --- |
 | Command number | 1537 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

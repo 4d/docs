@@ -33,7 +33,7 @@ Un error se genera cuando la referencia del elemento no es válida.
 |  |  |
 | --- | --- |
 | Número de comando | 869 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

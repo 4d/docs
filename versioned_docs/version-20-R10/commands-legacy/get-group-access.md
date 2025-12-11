@@ -41,6 +41,6 @@ You want to check if the current user belongs to the "plugins" group:
 |  |  |
 | --- | --- |
 | Command number | 1738 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

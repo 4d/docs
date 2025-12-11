@@ -58,6 +58,6 @@ Usted quiere dibujar un rectángulo rojo alrededor de la celda seleccionada de u
 |  |  |
 | --- | --- |
 | Número de comando | 1330 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

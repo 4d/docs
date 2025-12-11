@@ -55,6 +55,6 @@ Enquanto realiza uma entrada de dados em um formulário, você clica em um botã
 |  |  |
 | --- | --- |
 | Número do comando | 213 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

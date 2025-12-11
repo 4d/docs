@@ -101,6 +101,6 @@ Cet exemple tente de se connecter à une application :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1326 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -77,7 +77,7 @@ Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous re
 |  |  |
 | --- | --- |
 | Numéro de commande | 3 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

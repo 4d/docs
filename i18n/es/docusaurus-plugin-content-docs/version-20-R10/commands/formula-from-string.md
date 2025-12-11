@@ -71,6 +71,6 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1601                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

@@ -69,6 +69,6 @@ Modification of highlighted text style:
 |  |  |
 | --- | --- |
 | Command number | 209 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -34,6 +34,6 @@ Se a cor mudou, o evento formulário On After Edit é gerado para o objeto.
 |  |  |
 | --- | --- |
 | Número do comando | 1304 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

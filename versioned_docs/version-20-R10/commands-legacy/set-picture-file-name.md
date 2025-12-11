@@ -32,6 +32,6 @@ The default name is used as the file name when the picture is exported in a disk
 |  |  |
 | --- | --- |
 | Command number | 1172 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

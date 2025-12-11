@@ -39,7 +39,7 @@ This example selects all invoices made to the customers whose credit is greater 
 |  |  |
 | --- | --- |
 | Command number | 340 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

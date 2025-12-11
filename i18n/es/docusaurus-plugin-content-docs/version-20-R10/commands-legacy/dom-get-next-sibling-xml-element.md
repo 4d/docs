@@ -67,7 +67,7 @@ Si el comando se ha ejecutado correctamente y si el elemento analizado no es el 
 |  |  |
 | --- | --- |
 | Número de comando | 724 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

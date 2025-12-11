@@ -57,6 +57,6 @@ Vous pouvez exprimer toute valeur numérique sous forme d’heure :
 |  |  |
 | --- | --- |
 | Numéro de commande | 179 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

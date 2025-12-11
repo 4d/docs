@@ -39,6 +39,6 @@ La verificación ortográfica comienza con la primera palabra del campo o variab
 |  |  |
 | --- | --- |
 | Número de comando | 900 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

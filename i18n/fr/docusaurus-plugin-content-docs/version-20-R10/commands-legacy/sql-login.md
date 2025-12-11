@@ -209,7 +209,7 @@ Si la connexion est correctement établie, la variable système OK prend la vale
 |  |  |
 | --- | --- |
 | Numéro de commande | 817 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

@@ -75,7 +75,7 @@ Se o comando não é chamado no contexto de uma transação, um erro é gerado.
 |  |  |
 | --- | --- |
 | Número do comando | 661 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

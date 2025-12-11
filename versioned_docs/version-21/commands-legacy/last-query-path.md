@@ -39,6 +39,6 @@ The description of the last query path can be compared to the description of the
 |  |  |
 | --- | --- |
 | Command number | 1045 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -80,6 +80,6 @@ The following code will create a dialog accepting a formula in text format:
 |  |  |
 | --- | --- |
 | Command number | 1601 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -34,6 +34,6 @@ The value returned by this command is only meaningful if the "*Map NULL values t
 |  |  |
 | --- | --- |
 | Command number | 964 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

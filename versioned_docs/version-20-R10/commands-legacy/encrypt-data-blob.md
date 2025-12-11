@@ -65,6 +65,6 @@ Encrypt a text file located in the RESOURCES folder of the database:
 |  |  |
 | --- | --- |
 | Command number | 1773 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

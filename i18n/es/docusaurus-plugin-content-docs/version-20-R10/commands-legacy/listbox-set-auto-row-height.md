@@ -63,6 +63,6 @@ Usted desea definir las alturas mínimas y máximas para un list box con una alt
 |  |  |
 | --- | --- |
 | Número de comando | 1501 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

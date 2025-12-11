@@ -46,7 +46,7 @@ Si el usuario hace clic en el botón Aceptar o presionan la tecla Enter, la vari
 |  |  |
 | --- | --- |
 | Número de comando | 292 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

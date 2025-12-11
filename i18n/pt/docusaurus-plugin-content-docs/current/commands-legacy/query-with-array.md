@@ -45,7 +45,7 @@ O exemplo a seguir lhe permite recuperar os registros de clientes franceses e am
 |  |  |
 | --- | --- |
 | Número do comando | 644 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar a seleção atual ||
 
 

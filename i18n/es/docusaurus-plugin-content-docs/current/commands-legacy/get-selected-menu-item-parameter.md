@@ -29,6 +29,6 @@ Si ninguna línea de menú ha sido seleccionada, el comando devuelve una cadena 
 |  |  |
 | --- | --- |
 | Número de comando | 1005 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

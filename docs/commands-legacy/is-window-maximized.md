@@ -40,6 +40,6 @@ You want to switch between the maximized and previous states:
 |  |  |
 | --- | --- |
 | Command number | 1830 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

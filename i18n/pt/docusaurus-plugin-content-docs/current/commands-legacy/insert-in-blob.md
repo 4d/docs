@@ -37,6 +37,6 @@ Antes da chamada, você passa no parâmetro *offset* a posição de inserção e
 |  |  |
 | --- | --- |
 | Número do comando | 559 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

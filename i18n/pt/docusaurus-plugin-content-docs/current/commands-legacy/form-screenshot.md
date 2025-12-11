@@ -42,6 +42,6 @@ Automaticamente, o comando retorna uma captura de tela da página 1 do formulár
 |  |  |
 | --- | --- |
 | Número do comando | 940 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

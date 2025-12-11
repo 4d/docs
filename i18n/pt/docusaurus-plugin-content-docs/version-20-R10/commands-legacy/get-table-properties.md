@@ -40,6 +40,6 @@ Una vez executado o comando:
 |  |  |
 | --- | --- |
 | Número do comando | 687 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

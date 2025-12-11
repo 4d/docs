@@ -44,6 +44,6 @@ El número de tabla y de registro para el registro relacionado por el evento de 
 |  |  |
 | --- | --- |
 | Número de comando | 399 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

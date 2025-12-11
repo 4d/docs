@@ -37,7 +37,7 @@ The following statement assigns the Quick Report stored in MyArea into a BLOB Fi
 |  |  |
 | --- | --- |
 | Command number | 770 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

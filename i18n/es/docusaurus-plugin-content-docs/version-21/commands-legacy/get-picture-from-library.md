@@ -65,7 +65,7 @@ Si no hay suficiente memoria para devolver la imagen, se genera el error -108\. 
 |  |  |
 | --- | --- |
 | Número de comando | 565 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

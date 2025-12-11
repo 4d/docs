@@ -57,7 +57,7 @@ Se passar em tag um caractere inválido, se gera um erro.
 |  |  |
 | --- | --- |
 | Número do comando | 853 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

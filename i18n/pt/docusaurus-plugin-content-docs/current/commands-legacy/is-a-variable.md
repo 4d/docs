@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 294 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

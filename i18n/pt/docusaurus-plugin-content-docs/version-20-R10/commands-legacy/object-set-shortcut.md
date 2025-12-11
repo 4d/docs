@@ -94,6 +94,6 @@ Você quer associar um atalho de teclado diferente em função da linguagem atua
 |  |  |
 | --- | --- |
 | Número do comando | 1185 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

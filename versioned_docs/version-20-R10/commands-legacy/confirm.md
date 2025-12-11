@@ -98,7 +98,7 @@ will display the confirm dialog box (on Windows) shown here:
 |  |  |
 | --- | --- |
 | Command number | 162 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -202,6 +202,6 @@ You want to store a picture in an object field. You can write:
 |  |  |
 | --- | --- |
 | Command number | 1220 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

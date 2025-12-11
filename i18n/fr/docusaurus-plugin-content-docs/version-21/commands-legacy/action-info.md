@@ -71,6 +71,6 @@ Vous voulez savoir si l'action standard **Copier** est disponible (c'est-à-dire
 |  |  |
 | --- | --- |
 | Numéro de commande | 1442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -63,6 +63,6 @@ Se quiser definir as alturas mínimas e máximas para um list box com uma altura
 |  |  |
 | --- | --- |
 | Número do comando | 1501 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

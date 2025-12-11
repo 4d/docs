@@ -52,7 +52,7 @@ In the event of an error, the the command returns an error which can be intercep
 |  |  |
 | --- | --- |
 | Command number | 851 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

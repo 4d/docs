@@ -73,6 +73,6 @@ Définition de plusieurs paires attribut/valeur :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1192 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

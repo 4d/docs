@@ -39,7 +39,7 @@ El siguiente ejemplo recupera el registro de un cliente en la pila:
 |  |  |
 | --- | --- |
 | Número de comando | 177 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

@@ -50,7 +50,7 @@ Ver el ejemplo de la sección [Semáforo](semaphore.md).
 |  |  |
 | --- | --- |
 | Número de comando | 329 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

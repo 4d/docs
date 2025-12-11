@@ -86,6 +86,6 @@ Puisque la commande retourne une collection, elle peut être utilisée avec **.j
 |  |  |
 | --- | --- |
 | Numéro de commande | 1790 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

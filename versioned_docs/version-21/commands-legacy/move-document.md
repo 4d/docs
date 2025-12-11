@@ -57,7 +57,7 @@ The following example moves the document DocName:
 |  |  |
 | --- | --- |
 | Command number | 540 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

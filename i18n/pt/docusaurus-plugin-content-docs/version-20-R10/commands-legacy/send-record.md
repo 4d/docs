@@ -40,6 +40,6 @@ O registro completo é enviado. Isso significa que imagens e BLOBs armazenados o
 |  |  |
 | --- | --- |
 | Número do comando | 78 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

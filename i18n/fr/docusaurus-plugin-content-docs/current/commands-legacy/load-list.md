@@ -54,6 +54,6 @@ Imaginons que vous créez une base pour le marché international. Vous voulez po
 |  |  |
 | --- | --- |
 | Numéro de commande | 383 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

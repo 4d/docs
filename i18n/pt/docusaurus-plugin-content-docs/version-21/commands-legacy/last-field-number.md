@@ -48,6 +48,6 @@ Os campos estão numerados na ordem na qual foram criados. Se nenhum campo foi a
 |  |  |
 | --- | --- |
 | Número do comando | 255 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

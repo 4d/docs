@@ -39,6 +39,6 @@ The following example pushes the record for the customer onto the record stack:
 |  |  |
 | --- | --- |
 | Command number | 176 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

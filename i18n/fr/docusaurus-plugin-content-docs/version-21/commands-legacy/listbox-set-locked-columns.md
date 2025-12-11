@@ -37,6 +37,6 @@ Si vous passez 0 ou une valeur négative dans *nbColonnes*, le verrouillage des 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1151 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -112,6 +112,6 @@ which displays:
 |  |  |
 | --- | --- |
 | Command number | 55 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

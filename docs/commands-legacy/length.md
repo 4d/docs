@@ -35,6 +35,6 @@ This example illustrates the use of **Length**. The results, described in the co
 |  |  |
 | --- | --- |
 | Command number | 16 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

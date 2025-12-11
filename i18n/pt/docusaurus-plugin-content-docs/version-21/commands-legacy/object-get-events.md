@@ -52,6 +52,6 @@ Você quer ativar dois eventos e obter a lista de eventos para um objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1238 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

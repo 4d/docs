@@ -119,7 +119,7 @@ After a call to **RECEIVE PACKET**, the OK system variable is set to 1 if the pa
 |  |  |
 | --- | --- |
 | Command number | 104 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -69,6 +69,6 @@ Since time arrays accept numeric values, the following code is valid:
 |  |  |
 | --- | --- |
 | Command number | 1223 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -50,6 +50,6 @@ The following example prints a report with two break levels. The selection is so
 |  |  |
 | --- | --- |
 | Command number | 302 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

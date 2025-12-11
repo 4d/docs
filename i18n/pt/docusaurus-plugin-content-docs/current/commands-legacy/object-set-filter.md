@@ -61,6 +61,6 @@ O exemplo a seguir permite unicamente a entrada das letras “a,” “b,” “
 |  |  |
 | --- | --- |
 | Número do comando | 235 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

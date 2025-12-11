@@ -98,6 +98,6 @@ Se quiser iniciar/parar o monitoramento e revisão de dados 4D e atividades de d
 |  |  |
 | --- | --- |
 | Número do comando | 1712 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

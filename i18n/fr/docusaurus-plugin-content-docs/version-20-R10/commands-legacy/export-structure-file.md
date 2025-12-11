@@ -120,6 +120,6 @@ Vous souhaitez exporter uniquement les méthodes projet et les méthodes base, a
 |  |  |
 | --- | --- |
 | Numéro de commande | 1565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

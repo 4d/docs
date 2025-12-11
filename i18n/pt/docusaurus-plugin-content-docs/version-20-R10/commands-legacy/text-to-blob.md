@@ -112,6 +112,6 @@ Depois de executar este código:
 |  |  |
 | --- | --- |
 | Número do comando | 554 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

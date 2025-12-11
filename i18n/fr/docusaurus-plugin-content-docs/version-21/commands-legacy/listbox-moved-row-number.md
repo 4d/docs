@@ -38,6 +38,6 @@ Cette commande doit être utilisée en combinaison avec l’événement formulai
 |  |  |
 | --- | --- |
 | Numéro de commande | 837 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

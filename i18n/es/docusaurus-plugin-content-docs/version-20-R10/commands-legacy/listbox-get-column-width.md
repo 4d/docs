@@ -35,6 +35,6 @@ Si no se ha definido ningún valor de ancho mínimo y/o máximo para la columna,
 |  |  |
 | --- | --- |
 | Número de comando | 834 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

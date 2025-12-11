@@ -49,6 +49,6 @@ Uso de una imagen ubicada en la carpeta Resources de la base:
 |  |  |
 | --- | --- |
 | Número de comando | 984 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

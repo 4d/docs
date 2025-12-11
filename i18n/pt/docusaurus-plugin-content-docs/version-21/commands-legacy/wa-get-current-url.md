@@ -41,6 +41,6 @@ A página mostrada na URL "www.apple.com" e a página "www.4dhispano.com" está 
 |  |  |
 | --- | --- |
 | Número do comando | 1025 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

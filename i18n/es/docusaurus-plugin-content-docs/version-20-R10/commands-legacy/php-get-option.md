@@ -43,6 +43,6 @@ Pase en el parámetro *opcion* una constante del tema "*PHP*" para designar la o
 |  |  |
 | --- | --- |
 | Número de comando | 1060 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

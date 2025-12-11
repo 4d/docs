@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 560 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

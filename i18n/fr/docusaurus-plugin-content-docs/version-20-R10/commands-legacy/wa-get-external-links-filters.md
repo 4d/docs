@@ -32,6 +32,6 @@ Les filtres sont installés par la commande [WA SET EXTERNAL LINKS FILTERS](wa-s
 |  |  |
 | --- | --- |
 | Numéro de commande | 1033 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -68,6 +68,6 @@ Le code suivant pourrait être associé à un bouton 3D avec pop up menu libell�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1049 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

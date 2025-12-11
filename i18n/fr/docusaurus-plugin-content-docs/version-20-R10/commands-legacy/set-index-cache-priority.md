@@ -54,6 +54,6 @@ Dans la , vous souhaitez définir une priorité très haute pour les index du ch
 |  |  |
 | --- | --- |
 | Numéro de commande | 1401 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

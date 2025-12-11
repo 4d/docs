@@ -46,7 +46,7 @@ Sus usuarios se administran a través de una tabla personalizada y utilizan la m
 |  |  |
 | --- | --- |
 | Número de comando | 1666 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Prohibido en el servidor ||
 
 

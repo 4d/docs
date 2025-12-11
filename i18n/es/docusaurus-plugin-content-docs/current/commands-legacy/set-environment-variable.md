@@ -48,6 +48,6 @@ Consulte los ejemplos del comando [LAUNCH EXTERNAL PROCESS](launch-external-proc
 |  |  |
 | --- | --- |
 | Número de comando | 812 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

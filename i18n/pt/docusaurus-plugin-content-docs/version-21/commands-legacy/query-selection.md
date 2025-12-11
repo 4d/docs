@@ -49,7 +49,7 @@ Isso faz com que encontre todas as empresas localizadas em Nova Iorque, com ativ
 |  |  |
 | --- | --- |
 | Número do comando | 341 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

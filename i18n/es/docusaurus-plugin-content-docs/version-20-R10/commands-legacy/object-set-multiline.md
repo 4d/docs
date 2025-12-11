@@ -48,6 +48,6 @@ Usted quiere prohibir varias líneas en un área de entrada:
 |  |  |
 | --- | --- |
 | Número de comando | 1253 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

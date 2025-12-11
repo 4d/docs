@@ -31,6 +31,6 @@ See example for the command [Milliseconds](milliseconds.md).
 |  |  |
 | --- | --- |
 | Command number | 458 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

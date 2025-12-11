@@ -71,7 +71,7 @@ La variable OK prend la valeur 1 si le BLOB a été correctement décompressé, 
 |  |  |
 | --- | --- |
 | Numéro de commande | 535 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

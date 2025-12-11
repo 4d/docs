@@ -42,7 +42,7 @@ Ver exemplo para o comando [Get menu item mark](get-menu-item-mark.md "Get menu 
 |  |  |
 | --- | --- |
 | Número do comando | 208 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

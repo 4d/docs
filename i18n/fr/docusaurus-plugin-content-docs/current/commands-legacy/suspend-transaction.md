@@ -30,6 +30,6 @@ Pour plus d'informations, veuillez vous référer à la section [Suspendre des t
 |  |  |
 | --- | --- |
 | Numéro de commande | 1385 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

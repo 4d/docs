@@ -38,6 +38,6 @@ In the *property* parameter, pass the property for which you want to get the val
 |  |  |
 | --- | --- |
 | Command number | 972 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

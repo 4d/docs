@@ -34,6 +34,6 @@ PLUGIN LIST takes all plug-ins into account, including those that are integrated
 |  |  |
 | --- | --- |
 | Command number | 847 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

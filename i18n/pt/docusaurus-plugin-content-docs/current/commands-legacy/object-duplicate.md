@@ -106,7 +106,7 @@ Criação de um novo botão opção "bRadio6" baseado no botão opção existent
 |  |  |
 | --- | --- |
 | Número do comando | 1111 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

@@ -64,7 +64,7 @@ Um erro é gerado quando:
 |  |  |
 | --- | --- |
 | Número do comando | 867 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

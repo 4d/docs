@@ -94,6 +94,6 @@ Usted quiere asociar un atajo de teclado diferente en función del lenguaje actu
 |  |  |
 | --- | --- |
 | Número de comando | 1185 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

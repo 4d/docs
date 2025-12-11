@@ -52,6 +52,6 @@ Queremos asignar la misma imagen a dos elementos diferentes. El siguiente códig
 |  |  |
 | --- | --- |
 | Número de comando | 950 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

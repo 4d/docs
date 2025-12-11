@@ -56,6 +56,6 @@ The following example allows you to check if there are other overdue invoices in
 |  |  |
 | --- | --- |
 | Command number | 331 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

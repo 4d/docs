@@ -33,6 +33,6 @@ La commande admet l’étoile *\** en paramètre optionnel. Par défaut, lorsque
 |  |  |
 | --- | --- |
 | Numéro de commande | 975 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

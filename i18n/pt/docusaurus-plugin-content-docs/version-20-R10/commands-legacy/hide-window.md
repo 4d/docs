@@ -51,6 +51,6 @@ Este exemplo corresponde a um método de um botão localizado em um formulário 
 |  |  |
 | --- | --- |
 | Número do comando | 436 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

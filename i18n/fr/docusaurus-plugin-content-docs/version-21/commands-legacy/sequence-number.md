@@ -62,6 +62,6 @@ L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code test
 |  |  |
 | --- | --- |
 | Numéro de commande | 244 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

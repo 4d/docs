@@ -43,6 +43,6 @@ Se o list box já conter as colunas, seus conteúdos são atualizados depois da 
 |  |  |
 | --- | --- |
 | Número do comando | 1013 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

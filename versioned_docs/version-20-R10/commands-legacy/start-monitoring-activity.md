@@ -98,6 +98,6 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
 |  |  |
 | --- | --- |
 | Command number | 1712 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

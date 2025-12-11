@@ -48,6 +48,6 @@ No parâmetro *vertical*, passe um valor que indique a opção de redimensioname
 |  |  |
 | --- | --- |
 | Número do comando | 1175 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

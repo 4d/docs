@@ -191,6 +191,6 @@ A empresa quer usar a Internet para trocar informações. Cada filial recebe inf
 |  |  |
 | --- | --- |
 | Número do comando | 689 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

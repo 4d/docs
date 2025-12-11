@@ -29,6 +29,6 @@ Ver el ejemplo del comando [CLEAR LIST](clear-list.md "CLEAR LIST").
 |  |  |
 | --- | --- |
 | Número de comando | 621 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

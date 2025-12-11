@@ -27,6 +27,6 @@ Si el servidor web no se ha iniciado, el comando no hace nada.
 |  |  |
 | --- | --- |
 | Número de comando | 618 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

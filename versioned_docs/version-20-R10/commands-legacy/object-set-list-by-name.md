@@ -95,6 +95,6 @@ You want to remove the list associations:
 |  |  |
 | --- | --- |
 | Command number | 237 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

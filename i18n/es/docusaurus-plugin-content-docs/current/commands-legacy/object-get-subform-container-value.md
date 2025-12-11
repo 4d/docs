@@ -61,6 +61,6 @@ As a result, at runtime, updating the value of the main form's Input object also
 |  |  |
 | --- | --- |
 | Número de comando | 1785 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

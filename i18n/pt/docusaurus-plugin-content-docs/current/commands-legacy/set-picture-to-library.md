@@ -98,7 +98,7 @@ Se não houver suficiente memória para adicionar a imagem à biblioteca de imag
 |  |  |
 | --- | --- |
 | Número do comando | 566 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 | Proibido no servidor ||
 

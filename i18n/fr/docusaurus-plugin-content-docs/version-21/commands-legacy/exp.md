@@ -37,6 +37,6 @@ L'exemple suivant assigne l'exponentielle de 1 à *vrE* (le logarithme de *vrE* 
 |  |  |
 | --- | --- |
 | Numéro de commande | 21 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -113,6 +113,6 @@ If you want the array of names be used as a third sort criterion, you need to as
 |  |  |
 | --- | --- |
 | Command number | 718 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -111,6 +111,6 @@ The following examples illustrate the specific impact of options in **Japanese d
 |  |  |
 | --- | --- |
 | Command number | 1756 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

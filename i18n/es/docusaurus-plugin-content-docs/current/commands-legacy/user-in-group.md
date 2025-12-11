@@ -46,6 +46,6 @@ El siguiente ejemplo busca facturas específicas. Si el usuario actual está en 
 |  |  |
 | --- | --- |
 | Número de comando | 338 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

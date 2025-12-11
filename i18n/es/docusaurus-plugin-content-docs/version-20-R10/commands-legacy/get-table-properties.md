@@ -40,6 +40,6 @@ Una vez ejecutado el comando:
 |  |  |
 | --- | --- |
 | Número de comando | 687 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

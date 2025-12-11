@@ -48,7 +48,7 @@ Si el usuario hace clic en Cancelar en la caja de diálogo de abrir archivos, o 
 |  |  |
 | --- | --- |
 | Número de comando | 185 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

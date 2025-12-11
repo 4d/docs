@@ -26,6 +26,6 @@ The numbers of choice lists correspond to their order of creation. In the list e
 |  |  |
 | --- | --- |
 | Command number | 957 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

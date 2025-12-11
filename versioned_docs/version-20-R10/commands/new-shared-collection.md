@@ -76,6 +76,6 @@ Unlike standard (not shared) collections, shared collections do not support pict
 |  |  |
 | --- | --- |
 | Command number | 1527 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -102,7 +102,7 @@ Si aucun fichier n’a été sélectionné (par exemple si l’utilisateur a cli
 |  |  |
 | --- | --- |
 | Numéro de commande | 905 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

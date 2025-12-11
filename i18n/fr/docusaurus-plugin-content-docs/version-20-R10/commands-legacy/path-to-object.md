@@ -182,6 +182,6 @@ Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1547 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

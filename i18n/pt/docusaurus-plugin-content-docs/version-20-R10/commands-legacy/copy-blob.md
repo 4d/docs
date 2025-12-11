@@ -35,6 +35,6 @@ A cópia começa na posição (expressa em relação ao início do BLOB fonte) e
 |  |  |
 | --- | --- |
 | Número do comando | 558 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

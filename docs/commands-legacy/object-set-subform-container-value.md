@@ -37,6 +37,6 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 |  |  |
 | --- | --- |
 | Command number | 1784 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

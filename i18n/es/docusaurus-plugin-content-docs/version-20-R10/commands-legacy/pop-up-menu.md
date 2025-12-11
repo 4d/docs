@@ -108,6 +108,6 @@ El siguiente es el menú pop-up tal como aparece en Windows (izquierda) y Macint
 |  |  |
 | --- | --- |
 | Número de comando | 542 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

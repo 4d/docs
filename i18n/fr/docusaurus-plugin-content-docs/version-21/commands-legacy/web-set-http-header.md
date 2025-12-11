@@ -70,6 +70,6 @@ Si vous ne spécifiez pas de statut, celui-ci est automatiquement HTTP/1.0 200 O
 |  |  |
 | --- | --- |
 | Numéro de commande | 660 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

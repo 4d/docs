@@ -48,6 +48,6 @@ Depois, em um método, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 1730 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

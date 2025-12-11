@@ -68,6 +68,6 @@ L'exemple suivant lit 20 valeurs réelles dans un BLOB à partir de l'offset 0x2
 |  |  |
 | --- | --- |
 | Numéro de commande | 553 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

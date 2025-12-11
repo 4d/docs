@@ -110,7 +110,7 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 |  |  |
 | --- | --- |
 | Command number | 1111 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

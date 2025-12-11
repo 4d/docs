@@ -41,6 +41,6 @@ Les paramètres *horizontal* et *vertical* vous permettent de spécifier les tra
 |  |  |
 | --- | --- |
 | Numéro de commande | 842 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

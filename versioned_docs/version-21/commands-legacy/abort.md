@@ -41,6 +41,6 @@ Although the **ABORT** command is intended to be used only from within a error-h
 |  |  |
 | --- | --- |
 | Command number | 156 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

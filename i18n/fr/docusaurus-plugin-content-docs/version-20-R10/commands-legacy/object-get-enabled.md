@@ -40,6 +40,6 @@ Cette commande peut être appliquée aux types d'objets suivants :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1079 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

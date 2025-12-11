@@ -42,7 +42,7 @@ CUT NAMED SELECTIONは[COPY NAMED SELECTION](copy-named-selection.md "COPY NAMED
 |  |  |
 | --- | --- |
 | コマンド番号 | 334 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントセレクションを変更する ||
 
 

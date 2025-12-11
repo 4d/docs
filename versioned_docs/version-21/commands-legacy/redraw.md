@@ -28,6 +28,6 @@ In the context of list boxes in selection mode, when the REDRAW statement is app
 |  |  |
 | --- | --- |
 | Command number | 174 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

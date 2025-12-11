@@ -63,6 +63,6 @@ Cet exemple autorise la saisie de toutes les méthodes commençant par "formula"
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 805                         |
-| Thread safe        | &cross; |
+| Thread safe        | no |
 
 

@@ -36,6 +36,6 @@ Este comando debe utilizarse con el evento de formulario On column moved (ver el
 |  |  |
 | --- | --- |
 | Número de comando | 844 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

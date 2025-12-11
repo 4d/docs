@@ -56,6 +56,6 @@ O código a seguir insere um elemento (sem sub-lista associada) justo antes do e
 |  |  |
 | --- | --- |
 | Número do comando | 625 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

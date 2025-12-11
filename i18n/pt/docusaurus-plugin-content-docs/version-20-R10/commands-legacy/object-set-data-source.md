@@ -55,6 +55,6 @@ Mudança da fonte de dados para uma área de entrada:
 |  |  |
 | --- | --- |
 | Número do comando | 1264 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

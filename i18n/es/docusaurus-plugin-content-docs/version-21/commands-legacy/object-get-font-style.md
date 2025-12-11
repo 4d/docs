@@ -39,6 +39,6 @@ Puede comparar el valor devuelto por el comando con el valor de uno o más de la
 |  |  |
 | --- | --- |
 | Número de comando | 1071 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -33,6 +33,6 @@ The **RESUME INDEXES** command can only be called from 4D Server or a local 4D. 
 |  |  |
 | --- | --- |
 | Command number | 1294 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

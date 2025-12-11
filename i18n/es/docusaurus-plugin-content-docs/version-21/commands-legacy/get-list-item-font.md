@@ -37,6 +37,6 @@ Finalmente, puede pasar \* en *refElem*: en este caso, el comando se aplicará a
 |  |  |
 | --- | --- |
 | Número de comando | 954 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -41,7 +41,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER 
 |  |  |
 | --- | --- |
 | Numéro de commande | 609 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

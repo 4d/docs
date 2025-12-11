@@ -34,7 +34,7 @@ Pour plus d’informations, reportez-vous à la description de la commande [QUER
 |  |  |
 | --- | --- |
 | Numéro de commande | 1050 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

@@ -75,6 +75,6 @@ Pode executar o comando de uma componente, mas neste caso você deve passar o pa
 |  |  |
 | --- | --- |
 | Número do comando | 1193 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

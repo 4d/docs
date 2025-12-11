@@ -59,6 +59,6 @@ Queremos obter o tipo de valores padrão:
 |  |  |
 | --- | --- |
 | Número do comando | 1230 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

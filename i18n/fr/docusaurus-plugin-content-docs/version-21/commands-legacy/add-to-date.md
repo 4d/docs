@@ -42,6 +42,6 @@ Alors que les [Self](self.md) vous permettent d'ajouter des jours à une date, *
 |  |  |
 | --- | --- |
 | Numéro de commande | 393 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

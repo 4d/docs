@@ -86,6 +86,6 @@ Usted visualiza los nombres de una tabla *\[Personas\]* en una ventana flotante.
 |  |  |
 | --- | --- |
 | Número de comando | 229 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

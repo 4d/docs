@@ -50,6 +50,6 @@ Affichage de la phrase "Hello world !" et définition d’un URL de base "file:/
 |  |  |
 | --- | --- |
 | Numéro de commande | 1037 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

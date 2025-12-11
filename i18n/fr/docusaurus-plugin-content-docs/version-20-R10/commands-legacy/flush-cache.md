@@ -36,6 +36,6 @@ En temps normal, vous n'avez pas à appeler cette commande, car 4D sauvegarde r�
 |  |  |
 | --- | --- |
 | Numéro de commande | 297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

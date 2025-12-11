@@ -40,7 +40,7 @@ El siguiente ejemplo se asegura de que el informe sea listado y borra la tercera
 |  |  |
 | --- | --- |
 | Número de comando | 749 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

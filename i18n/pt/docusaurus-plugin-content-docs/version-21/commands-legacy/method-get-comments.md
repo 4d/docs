@@ -62,6 +62,6 @@ Se o comando é executado desde um componente, se aplica por defeito aos método
 |  |  |
 | --- | --- |
 | Número do comando | 1189 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

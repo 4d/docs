@@ -52,7 +52,7 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 |  |  |
 | --- | --- |
 | Command number | 1513 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

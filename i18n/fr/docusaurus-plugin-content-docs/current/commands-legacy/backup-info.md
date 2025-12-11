@@ -37,6 +37,6 @@ Passez dans le paramètre *sélecteur* le type d’information à récupérer. L
 |  |  |
 | --- | --- |
 | Numéro de commande | 888 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -78,6 +78,6 @@ Vous souhaitez obtenir la liste des polices récentes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 460 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

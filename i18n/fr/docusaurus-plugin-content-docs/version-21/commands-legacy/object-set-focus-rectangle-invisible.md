@@ -34,6 +34,6 @@ Passez **Vrai** dans le paramètre *invisible* pour cacher le rectangle de focus
 |  |  |
 | --- | --- |
 | Numéro de commande | 1177 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

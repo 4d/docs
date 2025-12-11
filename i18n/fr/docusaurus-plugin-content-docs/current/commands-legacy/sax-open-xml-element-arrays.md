@@ -59,6 +59,6 @@ La méthode suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 921 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

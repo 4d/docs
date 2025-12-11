@@ -37,6 +37,6 @@ El siguiente ejemplo asigna el exponencial de 1 a *vrE* (el log de *vrE* es 1):
 |  |  |
 | --- | --- |
 | Número de comando | 21 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

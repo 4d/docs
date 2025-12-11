@@ -102,6 +102,6 @@ Using an object array element:
 |  |  |
 | --- | --- |
 | Command number | 1232 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -48,6 +48,6 @@ Em alguma parte do seu código, diferente do método de banco de dados *Método 
 |  |  |
 | --- | --- |
 | Número do comando | 494 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

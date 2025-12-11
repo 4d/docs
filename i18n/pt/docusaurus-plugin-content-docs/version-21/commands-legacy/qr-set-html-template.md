@@ -79,7 +79,7 @@ Se passa um número de área inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 750 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

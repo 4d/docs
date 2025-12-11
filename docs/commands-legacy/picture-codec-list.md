@@ -41,6 +41,6 @@ By default, if you do not pass the *\** parameter, the command returns only the 
 |  |  |
 | --- | --- |
 | Command number | 992 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

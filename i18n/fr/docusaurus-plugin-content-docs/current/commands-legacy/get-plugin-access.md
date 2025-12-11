@@ -39,6 +39,6 @@ Passez dans le paramètre *plugIn* le numéro du plug-in duquel vous souhaitez c
 |  |  |
 | --- | --- |
 | Numéro de commande | 846 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

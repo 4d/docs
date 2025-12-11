@@ -63,6 +63,6 @@ Dans l'exemple suivant, la variable *numTable* est égale au numéro de la table
 |  |  |
 | --- | --- |
 | Numéro de commande | 252 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

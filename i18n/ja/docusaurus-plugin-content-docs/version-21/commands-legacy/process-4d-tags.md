@@ -78,6 +78,6 @@ PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
 |  |  |
 | --- | --- |
 | コマンド番号 | 816 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

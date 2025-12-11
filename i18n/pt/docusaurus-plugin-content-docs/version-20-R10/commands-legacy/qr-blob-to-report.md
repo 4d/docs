@@ -49,7 +49,7 @@ A instrução a seguir recupera o relatório rápido armazenado em Campo4 e o mo
 |  |  |
 | --- | --- |
 | Número do comando | 771 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

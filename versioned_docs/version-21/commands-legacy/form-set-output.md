@@ -75,6 +75,6 @@ The following example uses the path to a .json form to print the records in an e
 |  |  |
 | --- | --- |
 | Command number | 54 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

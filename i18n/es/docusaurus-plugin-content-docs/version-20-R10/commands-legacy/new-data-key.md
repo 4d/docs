@@ -61,6 +61,6 @@ Desea guardar una llave de cifrado en un archivo .4DKeyChain:
 |  |  |
 | --- | --- |
 | Número de comando | 1611 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

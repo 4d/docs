@@ -66,6 +66,6 @@ Cet exemple crée un tableau local de 100 lignes contenant chacune 50 éléments
 |  |  |
 | --- | --- |
 | Numéro de commande | 1222 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

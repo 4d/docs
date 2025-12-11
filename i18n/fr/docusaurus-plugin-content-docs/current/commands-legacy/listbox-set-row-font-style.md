@@ -83,6 +83,6 @@ Après la deuxième instruction, toutes les cellules de la troisième ligne pass
 |  |  |
 | --- | --- |
 | Numéro de commande | 1268 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

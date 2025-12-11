@@ -40,6 +40,6 @@ Puede comparar el valor devuelto por el comando con las siguientes constantes, q
 |  |  |
 | --- | --- |
 | Número de comando | 1247 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

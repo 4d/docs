@@ -46,7 +46,7 @@ Si l'utilisateur clique sur le bouton OK dans chaque boîte de dialogue, la vari
 |  |  |
 | --- | --- |
 | Numéro de commande | 106 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

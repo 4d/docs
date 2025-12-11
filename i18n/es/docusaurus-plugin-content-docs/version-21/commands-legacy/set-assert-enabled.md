@@ -44,6 +44,6 @@ Desactivación de aserciones:
 |  |  |
 | --- | --- |
 | Número de comando | 1131 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -32,6 +32,6 @@ Em *codigoLing*, passe uma cadeia indicando o código de linguagem a utilizar, b
 |  |  |
 | --- | --- |
 | Número do comando | 1179 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

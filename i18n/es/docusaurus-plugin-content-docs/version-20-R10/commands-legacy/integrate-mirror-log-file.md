@@ -109,7 +109,7 @@ Si la integración se efectúa correctamente, la variable sistema OK toma el val
 |  |  |
 | --- | --- |
 | Número de comando | 1312 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

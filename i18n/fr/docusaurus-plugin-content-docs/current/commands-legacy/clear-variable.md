@@ -50,6 +50,6 @@ Dans un formulaire, vous utilisez une liste déroulante appelée *asMalListeD* n
 |  |  |
 | --- | --- |
 | Numéro de commande | 89 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

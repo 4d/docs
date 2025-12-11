@@ -47,7 +47,7 @@ Si l'utilisateur clique sur le bouton Annuler dans la boîte de dialogue standar
 |  |  |
 | --- | --- |
 | Numéro de commande | 184 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

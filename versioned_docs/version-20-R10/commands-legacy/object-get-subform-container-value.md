@@ -61,6 +61,6 @@ As a result, at runtime, updating the value of the main form's Input object also
 |  |  |
 | --- | --- |
 | Command number | 1785 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

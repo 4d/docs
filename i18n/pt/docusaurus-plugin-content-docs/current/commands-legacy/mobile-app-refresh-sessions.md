@@ -51,6 +51,6 @@ Se quiser resetar todas as sessões atuais para todas as aplicações móveis:
 |  |  |
 | --- | --- |
 | Número do comando | 1596 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

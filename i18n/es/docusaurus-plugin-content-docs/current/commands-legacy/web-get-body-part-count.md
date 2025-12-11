@@ -30,6 +30,6 @@ Consulte el ejemplo del comando [WEB GET BODY PART](web-get-body-part.md).
 |  |  |
 | --- | --- |
 | Número de comando | 1211 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

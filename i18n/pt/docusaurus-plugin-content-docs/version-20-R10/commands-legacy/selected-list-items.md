@@ -90,6 +90,6 @@ Esta é uma lista chamada *hList,* mostrada no ambiente Aplicação:
 |  |  |
 | --- | --- |
 | Número do comando | 379 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

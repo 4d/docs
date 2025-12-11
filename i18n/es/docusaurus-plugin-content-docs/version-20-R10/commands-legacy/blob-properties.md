@@ -83,6 +83,6 @@ Después de añadir este método a su aplicación, lo puede utilizar de esta man
 |  |  |
 | --- | --- |
 | Número de comando | 536 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

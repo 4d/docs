@@ -41,6 +41,6 @@ Passe no parâmetro *altura* a altura a definir. Por defeito, é omitido o parâ
 |  |  |
 | --- | --- |
 | Número do comando | 1145 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

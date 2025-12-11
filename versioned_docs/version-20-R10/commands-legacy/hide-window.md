@@ -51,6 +51,6 @@ This example corresponds to a method of a button located in an input form. This 
 |  |  |
 | --- | --- |
 | Command number | 436 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

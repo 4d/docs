@@ -37,7 +37,7 @@ A noter que lorsque OK vaut 0, la transaction est automatiquement annulée en in
 |  |  |
 | --- | --- |
 | Numéro de commande | 240 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

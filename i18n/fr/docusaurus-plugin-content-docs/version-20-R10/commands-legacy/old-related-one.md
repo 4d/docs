@@ -37,7 +37,7 @@ Si la commande a été correctement exécutée et si les enregistrements liés o
 |  |  |
 | --- | --- |
 | Numéro de commande | 44 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

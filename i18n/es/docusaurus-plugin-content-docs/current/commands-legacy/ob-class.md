@@ -48,6 +48,6 @@ Luego, en un método, puedes escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 1730 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

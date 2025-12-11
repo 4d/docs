@@ -34,7 +34,7 @@ Si la commande est exécutée en-dehors du contexte d'un formulaire ou si un *ob
 |  |  |
 | --- | --- |
 | Numéro de commande | 1108 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

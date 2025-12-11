@@ -81,6 +81,6 @@ Si también quiere obtener los valores de los parámetros, escriba:
 |  |  |
 | --- | --- |
 | Número de comando | 1195 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

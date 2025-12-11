@@ -63,6 +63,6 @@ ou ainsi :
 |  |  |
 | --- | --- |
 | Numéro de commande | 603 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -89,6 +89,6 @@ Por otro lado, si el código siguiente se ejecuta posteriormente...
 |  |  |
 | --- | --- |
 | Número de comando | 1409 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

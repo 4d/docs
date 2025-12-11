@@ -122,6 +122,6 @@ La colonne est ajoutée à la list box :
 |  |  |
 | --- | --- |
 | Numéro de commande | 970 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

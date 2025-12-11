@@ -121,6 +121,6 @@ Estos ejemplos ilustran el uso del parámetro *atributosEnArray*:
 |  |  |
 | --- | --- |
 | Número de comando | 1329 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

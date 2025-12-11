@@ -49,6 +49,6 @@ Usted desea asociar la acción "Cancelar" con todos los objetos en el formulario
 |  |  |
 | --- | --- |
 | Número de comando | 1457 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

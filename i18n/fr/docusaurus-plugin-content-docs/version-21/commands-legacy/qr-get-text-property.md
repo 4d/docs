@@ -71,7 +71,7 @@ Si le paramètre *propriété* est incorrect, l’erreur -9854 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 760 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

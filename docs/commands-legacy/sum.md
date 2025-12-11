@@ -78,7 +78,7 @@ For an example of computing an object field attribute, please refer to the examp
 |  |  |
 | --- | --- |
 | Command number | 1 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

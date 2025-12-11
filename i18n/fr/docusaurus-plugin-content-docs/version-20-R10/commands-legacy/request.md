@@ -84,7 +84,7 @@ La ligne de code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 163 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

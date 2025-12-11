@@ -65,6 +65,6 @@ No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-dat
 |  |  |
 | --- | --- |
 | Número do comando | 638 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

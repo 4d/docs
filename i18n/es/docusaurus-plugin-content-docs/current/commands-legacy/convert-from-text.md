@@ -195,7 +195,7 @@ Si el comando ha sido ejecutado correctamente, la variable OK toma el valor 1\. 
 |  |  |
 | --- | --- |
 | Número de comando | 1011 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

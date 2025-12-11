@@ -354,6 +354,6 @@ Como resultado, el rectángulo rojo sigue el desplazamiento del list box:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 388                         |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | no |
 
 

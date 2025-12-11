@@ -51,6 +51,6 @@ Se quiser atualizar sua licença e receber uma mensagem quando se completar:
 |  |  |
 | --- | --- |
 | Número do comando | 1336 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

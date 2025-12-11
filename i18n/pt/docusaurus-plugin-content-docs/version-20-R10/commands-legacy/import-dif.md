@@ -57,7 +57,7 @@ OK toma o valor 1 se la importação termina com sucesso; do contrário, toma o 
 |  |  |
 | --- | --- |
 | Número do comando | 86 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

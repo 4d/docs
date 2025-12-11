@@ -52,6 +52,6 @@ Then you can drag the window by clicking anywhere on the borders.
 |  |  |
 | --- | --- |
 | Command number | 452 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

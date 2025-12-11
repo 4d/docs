@@ -48,6 +48,6 @@ Você quer proibir várias linhas em uma área de entrada:
 |  |  |
 | --- | --- |
 | Número do comando | 1253 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

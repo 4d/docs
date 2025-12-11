@@ -64,6 +64,6 @@ Se quiser selecionar estilos da familia de fontes "Verdana" (se estiver disponí
 |  |  |
 | --- | --- |
 | Número do comando | 1362 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

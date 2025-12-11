@@ -50,6 +50,6 @@ Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 375 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -46,6 +46,6 @@ To restore the original value of a field, assign it the value returned by **Old*
 |  |  |
 | --- | --- |
 | Command number | 35 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

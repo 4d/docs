@@ -149,7 +149,7 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac√
 |                        |                             |
 | ---------------------- | --------------------------- |
 | N√∫mero de comando      | 1452                        |
-| Hilo seguro            | &check; |
+| Hilo seguro            | yes |
 | Modifica las variables | error                       |
 
 

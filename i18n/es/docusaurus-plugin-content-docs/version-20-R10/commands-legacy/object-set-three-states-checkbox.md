@@ -36,6 +36,6 @@ En el parámetro *tresEst*, pase **True** para activar el modo "tres estados", o
 |  |  |
 | --- | --- |
 | Número de comando | 1249 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

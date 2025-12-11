@@ -50,6 +50,6 @@ El siguiente ejemplo borra el último elemento de un array, si existe:
 |  |  |
 | --- | --- |
 | Número de comando | 228 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

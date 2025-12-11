@@ -42,6 +42,6 @@ If there is no list of the type defined associated with the *object*, the comman
 |  |  |
 | --- | --- |
 | Command number | 1072 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

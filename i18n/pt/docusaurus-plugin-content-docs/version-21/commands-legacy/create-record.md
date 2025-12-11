@@ -52,7 +52,7 @@ O seguinte exemplo arquiva os registros que tem mais de 30 dias. Esta operação
 |  |  |
 | --- | --- |
 | Número do comando | 68 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

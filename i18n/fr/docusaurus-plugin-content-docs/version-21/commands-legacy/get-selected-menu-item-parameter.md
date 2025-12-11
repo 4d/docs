@@ -29,6 +29,6 @@ Si aucune ligne de menu n’a été sélectionnée, la commande retourne une cha
 |  |  |
 | --- | --- |
 | Numéro de commande | 1005 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -46,6 +46,6 @@ Usted desea asociar la acción estándar **Validate** con un botón:
 |  |  |
 | --- | --- |
 | Número de comando | 1259 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

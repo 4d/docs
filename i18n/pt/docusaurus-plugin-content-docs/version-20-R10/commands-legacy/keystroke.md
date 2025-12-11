@@ -182,6 +182,6 @@ Utilizando as habilidades da comunicação interprocesso de 4D, pode construir i
 |  |  |
 | --- | --- |
 | Número do comando | 390 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

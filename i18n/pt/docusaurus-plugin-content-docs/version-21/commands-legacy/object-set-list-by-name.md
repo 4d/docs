@@ -99,6 +99,6 @@ Você quer eliminar a lista de associações:
 |  |  |
 | --- | --- |
 | Número do comando | 237 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

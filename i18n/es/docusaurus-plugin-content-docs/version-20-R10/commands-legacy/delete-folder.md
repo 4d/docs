@@ -48,7 +48,7 @@ Puede interceptar estos errores utilizando un método instalado por el comando [
 |  |  |
 | --- | --- |
 | Número de comando | 693 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

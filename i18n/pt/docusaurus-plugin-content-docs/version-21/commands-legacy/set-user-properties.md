@@ -70,6 +70,6 @@ Se você não tiver os acessos de privilégio para chamar Set user properties ou
 |  |  |
 | --- | --- |
 | Número do comando | 612 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

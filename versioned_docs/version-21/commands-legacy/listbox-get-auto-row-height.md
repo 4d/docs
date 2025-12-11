@@ -61,6 +61,6 @@ You want to get the maximum number of lines for a list box row:
 |  |  |
 | --- | --- |
 | Command number | 1502 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

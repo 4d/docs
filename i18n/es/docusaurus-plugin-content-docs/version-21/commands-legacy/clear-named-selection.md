@@ -30,6 +30,6 @@ Si *temp* fue creado por el comando [CUT NAMED SELECTION](cut-named-selection.md
 |  |  |
 | --- | --- |
 | Número de comando | 333 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

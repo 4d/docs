@@ -51,6 +51,6 @@ Note que el *Depurador* 4D evaluará el código SQL línea por línea. En alguno
 |  |  |
 | --- | --- |
 | Número de comando | 948 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

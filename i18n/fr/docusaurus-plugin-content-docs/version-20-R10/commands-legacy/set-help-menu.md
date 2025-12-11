@@ -65,6 +65,6 @@ Vous souhaitez personnaliser le menu **Aide** de votre application :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1801 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

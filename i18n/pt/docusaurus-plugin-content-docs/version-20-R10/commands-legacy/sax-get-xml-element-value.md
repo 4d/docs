@@ -50,7 +50,7 @@ Se o comando se executa corretamente, a variável sistema OK toma o valor 1\. Ca
 |  |  |
 | --- | --- |
 | Número do comando | 877 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

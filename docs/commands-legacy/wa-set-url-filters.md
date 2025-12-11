@@ -143,6 +143,6 @@ You want to deny access to specific IP addresses:
 |  |  |
 | --- | --- |
 | Command number | 1030 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

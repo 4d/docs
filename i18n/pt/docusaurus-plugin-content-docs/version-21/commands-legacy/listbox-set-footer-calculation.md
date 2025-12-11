@@ -56,6 +56,6 @@ Se o tipo de dados da coluna ou de pelo menos uma coluna do list box (se objeto 
 |  |  |
 | --- | --- |
 | Número do comando | 1140 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

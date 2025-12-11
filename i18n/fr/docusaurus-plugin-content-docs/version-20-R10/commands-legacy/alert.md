@@ -73,6 +73,6 @@ Ce code affiche la boîte de dialogue d'alerte suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 41 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

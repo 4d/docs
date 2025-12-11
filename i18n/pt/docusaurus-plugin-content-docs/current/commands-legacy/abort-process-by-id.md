@@ -48,6 +48,6 @@ Se quiser deter o processo selecionado da coleção de processos que são mostra
 |  |  |
 | --- | --- |
 | Número do comando | 1634 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

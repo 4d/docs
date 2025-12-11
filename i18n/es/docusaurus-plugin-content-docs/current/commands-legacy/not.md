@@ -38,6 +38,6 @@ Este ejemplo asigna primero Verdadero a una variable, luego cambia el valor de l
 |  |  |
 | --- | --- |
 | Número de comando | 34 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -73,6 +73,6 @@ Se quiser criar e modificar um objeto compartido. A estrutura deve ser chamada p
 |  |  |
 | --- | --- |
 | Número do comando | 1526 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -39,7 +39,7 @@ Se o comando for executado corretamente e se o elemento referenciado não for o 
 |  |  |
 | --- | --- |
 | Número do comando | 924 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

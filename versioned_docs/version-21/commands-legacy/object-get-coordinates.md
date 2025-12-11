@@ -90,6 +90,6 @@ The method returns theoretical coordinates. In cases where the list box has been
 |  |  |
 | --- | --- |
 | Command number | 663 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -137,6 +137,6 @@ Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo
 |  |  |
 | --- | --- |
 | Número de comando | 1610 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

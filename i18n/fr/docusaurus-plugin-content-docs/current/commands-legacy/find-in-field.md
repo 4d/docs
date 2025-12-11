@@ -69,6 +69,6 @@ Remarquez le >= qui permet de couvrir tous les cas. En effet, la fonction retour
 |  |  |
 | --- | --- |
 | Numéro de commande | 653 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

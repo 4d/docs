@@ -55,6 +55,6 @@ L'exemple suivant définit la taille de police de tous les objets de formulaire 
 |  |  |
 | --- | --- |
 | Numéro de commande | 165 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

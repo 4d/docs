@@ -56,6 +56,6 @@ Cet exemple contracte le premier niveau de lignes de rupture de la sélection de
 |  |  |
 | --- | --- |
 | Numéro de commande | 1101 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

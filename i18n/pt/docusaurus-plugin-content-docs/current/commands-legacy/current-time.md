@@ -55,6 +55,6 @@ O exemplo a seguir extrai as horas, minutos e segundos da hora atual:
 |  |  |
 | --- | --- |
 | Número do comando | 178 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

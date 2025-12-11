@@ -29,7 +29,7 @@ Si la connexion a été correctement refermée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 872 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

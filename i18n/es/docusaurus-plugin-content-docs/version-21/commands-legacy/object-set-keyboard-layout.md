@@ -32,6 +32,6 @@ En *codigoLeng*, pase una cadena indicando el código del lenguaje a utilizar, b
 |  |  |
 | --- | --- |
 | Número de comando | 1179 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

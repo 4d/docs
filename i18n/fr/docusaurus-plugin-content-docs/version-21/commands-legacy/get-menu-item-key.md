@@ -54,7 +54,7 @@ Pour obtenir le raccourci clavier associé à une ligne de menu, il est utile de
 |  |  |
 | --- | --- |
 | Numéro de commande | 424 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

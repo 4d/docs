@@ -65,6 +65,6 @@ The following example reads 20 Real values from a BLOB, starting at the offset 0
 |  |  |
 | --- | --- |
 | Command number | 553 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

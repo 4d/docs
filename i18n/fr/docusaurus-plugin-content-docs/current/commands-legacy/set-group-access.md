@@ -49,7 +49,7 @@ Vous souhaitez ajouter l'utilisateur courant aux groupes "admin" et "plugins" da
 |  |  |
 | --- | --- |
 | Numéro de commande | 1737 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Interdite sur le serveur ||
 
 

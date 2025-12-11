@@ -35,7 +35,7 @@ Sous Mac OS, si vous ne passez pas le paramètre optionnel *\**, la taille de la
 |  |  |
 | --- | --- |
 | Numéro de commande | 479 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

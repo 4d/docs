@@ -43,7 +43,7 @@ Se o texto se coloca corretamente na área de transferência, a variável OK tom
 |  |  |
 | --- | --- |
 | Número do comando | 523 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

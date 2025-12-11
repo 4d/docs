@@ -45,6 +45,6 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 |  |  |
 | --- | --- |
 | Command number | 402 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

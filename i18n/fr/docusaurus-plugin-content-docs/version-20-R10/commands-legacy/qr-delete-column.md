@@ -40,7 +40,7 @@ Cet exemple supprime la troisième colonne de l'état :
 |  |  |
 | --- | --- |
 | Numéro de commande | 749 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

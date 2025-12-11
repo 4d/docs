@@ -75,6 +75,6 @@ Criação e cheio de um array local de objetos:
 |  |  |
 | --- | --- |
 | Número do comando | 1221 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

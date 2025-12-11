@@ -88,6 +88,6 @@ Este exemplo mostra uma forma padrão de estabelecer valores de **Armazenamento*
 |  |  |
 | --- | --- |
 | Número do comando | 1525 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -64,6 +64,6 @@ Mostra a janela a seguir (em Macintosh) por 30 segundos:
 |  |  |
 | --- | --- |
 | Número do comando | 161 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

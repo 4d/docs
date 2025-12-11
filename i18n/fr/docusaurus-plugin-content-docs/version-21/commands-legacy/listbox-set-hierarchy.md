@@ -59,6 +59,6 @@ Définition des tableaux tPays, tRegion et tVille comme hiérarchie d’une list
 |  |  |
 | --- | --- |
 | Numéro de commande | 1098 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

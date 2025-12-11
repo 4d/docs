@@ -122,6 +122,6 @@ Reportez-vous à l'exemple de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 |  |  |
 | --- | --- |
 | Numéro de commande | 371 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

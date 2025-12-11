@@ -37,6 +37,6 @@ La siguiente línea muestra 1:
 |  |  |
 | --- | --- |
 | Número de comando | 22 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

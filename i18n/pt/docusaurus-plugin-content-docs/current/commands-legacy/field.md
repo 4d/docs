@@ -67,6 +67,6 @@ No seguinte exemplo, a variável *numCampo* for igual ao número do campo de \[T
 |  |  |
 | --- | --- |
 | Número do comando | 253 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

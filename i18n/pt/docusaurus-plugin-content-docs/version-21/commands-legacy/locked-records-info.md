@@ -96,6 +96,6 @@ Se o código é executado em um 4D Server e o bloqueio é causado por uma máqui
 |  |  |
 | --- | --- |
 | Número do comando | 1316 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

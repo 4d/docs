@@ -73,6 +73,6 @@ Este exemplo gera um hash de senha utilizando bcrypt com um fator de custo 4.
 |  |  |
 | --- | --- |
 | Número do comando | 1533 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

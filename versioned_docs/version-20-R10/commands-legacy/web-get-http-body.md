@@ -54,6 +54,6 @@ When the form is submitted to the Web server, the $requestText variable receives
 |  |  |
 | --- | --- |
 | Command number | 814 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

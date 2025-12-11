@@ -44,6 +44,6 @@ Le numéro de table et d'enregistrement pour l'enregistrement concerné par l'é
 |  |  |
 | --- | --- |
 | Numéro de commande | 399 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

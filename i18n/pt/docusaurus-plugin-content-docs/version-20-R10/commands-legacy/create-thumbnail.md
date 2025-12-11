@@ -65,6 +65,6 @@ O parâmetro opcional *profundidade* define o número de cores em Mac OS (ou sej
 |  |  |
 | --- | --- |
 | Número do comando | 679 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

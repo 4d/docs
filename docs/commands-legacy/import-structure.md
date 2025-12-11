@@ -53,6 +53,6 @@ You want to import a saved structure definition into the current database:
 |  |  |
 | --- | --- |
 | Command number | 1310 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

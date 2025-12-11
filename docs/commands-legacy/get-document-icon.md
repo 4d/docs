@@ -32,7 +32,7 @@ The optional *size* parameter sets the dimensions in pixels of the returned icon
 |  |  |
 | --- | --- |
 | Command number | 700 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | Document, error |
 
 

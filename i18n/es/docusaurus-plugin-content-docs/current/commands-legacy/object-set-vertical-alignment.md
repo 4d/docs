@@ -47,6 +47,6 @@ La alineación vertical puede aplicarse a los siguientes tipos de objetos de for
 |  |  |
 | --- | --- |
 | Número de comando | 1187 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -86,6 +86,6 @@ Como o comando devolve uma coleção, pode ser utilizada com **.join()** para cr
 |  |  |
 | --- | --- |
 | Número do comando | 1790 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

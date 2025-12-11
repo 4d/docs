@@ -94,7 +94,7 @@ Deseja substituir o texto selecionado com o resultado de um método projeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1281 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

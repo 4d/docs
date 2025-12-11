@@ -43,6 +43,6 @@ Si el último elemento abierto es *<Book>*, la siguiente instrucción:
 |  |  |
 | --- | --- |
 | Número de comando | 854 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

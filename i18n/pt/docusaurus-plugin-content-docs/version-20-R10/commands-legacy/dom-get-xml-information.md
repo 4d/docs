@@ -39,6 +39,6 @@ Em *xmlInfo*, passe um código indicando o tipo de informação a ser recuperado
 |  |  |
 | --- | --- |
 | Número do comando | 721 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

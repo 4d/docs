@@ -85,6 +85,6 @@ Estes são alguns exemplos de conversões que podem ser realizadas com este coma
 |  |  |
 | --- | --- |
 | Número do comando | 676 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

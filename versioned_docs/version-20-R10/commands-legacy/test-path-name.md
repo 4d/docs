@@ -55,6 +55,6 @@ The following tests if the document “Journal” is present in the folder of th
 |  |  |
 | --- | --- |
 | Command number | 476 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

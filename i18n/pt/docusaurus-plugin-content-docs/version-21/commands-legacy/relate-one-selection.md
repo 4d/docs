@@ -64,7 +64,7 @@ A seguinte técnica utiliza **RELATE ONE SELECTION** para obter o mesmo resultad
 |  |  |
 | --- | --- |
 | Número do comando | 349 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

@@ -106,7 +106,7 @@ Usted desea mostrar los comandos de un menú contextual basado en el tipo de con
 |  |  |
 | --- | --- |
 | Número de comando | 1286 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

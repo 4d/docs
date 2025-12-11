@@ -42,6 +42,6 @@ El siguiente muestra una caja de alerta con el mensaje, “46 800 segundos repre
 |  |  |
 | --- | --- |
 | Número de comando | 180 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

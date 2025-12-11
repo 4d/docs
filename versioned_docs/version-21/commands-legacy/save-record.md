@@ -56,6 +56,6 @@ The following example is part of a method that reads records from a document. Th
 |  |  |
 | --- | --- |
 | Command number | 53 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

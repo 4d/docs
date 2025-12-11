@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 119 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

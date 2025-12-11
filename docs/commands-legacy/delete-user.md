@@ -39,7 +39,7 @@ If you do not have the proper access privileges for calling DELETE USER or if th
 |  |  |
 | --- | --- |
 | Command number | 615 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

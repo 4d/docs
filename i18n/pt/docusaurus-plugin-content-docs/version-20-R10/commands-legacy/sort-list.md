@@ -62,6 +62,6 @@ A lista se verá assim:
 |  |  |
 | --- | --- |
 | Número do comando | 391 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -63,6 +63,6 @@ This example authorizes all methods starting with “formula” and the “Total
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 805                         |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

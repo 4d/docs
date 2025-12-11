@@ -124,7 +124,7 @@ Os seguintes exemplos criam diferentes arquivos e pastas na pasta da base (exemp
 |  |  |
 | --- | --- |
 | Número do comando | 541 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

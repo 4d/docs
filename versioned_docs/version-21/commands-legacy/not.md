@@ -38,6 +38,6 @@ This example first assigns True to a variable, then changes the variable value t
 |  |  |
 | --- | --- |
 | Command number | 34 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

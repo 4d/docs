@@ -48,6 +48,6 @@ La méthode projet suivante crée le tableau *taChamps* avec les noms des champs
 |  |  |
 | --- | --- |
 | Numéro de commande | 255 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

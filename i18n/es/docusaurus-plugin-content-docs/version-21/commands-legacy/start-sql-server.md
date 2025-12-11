@@ -31,7 +31,7 @@ Si el servidor SQL ha sido lanzado correctamente, la variable sistema OK toma el
 |  |  |
 | --- | --- |
 | Número de comando | 962 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -158,7 +158,7 @@ La variable système OK prend la valeur 1 si l'enregistrement est correctement r
 |  |  |
 | --- | --- |
 | Numéro de commande | 79 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

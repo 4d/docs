@@ -37,6 +37,6 @@ Cuando se suspende la ejecución de un proceso, las ventanas que pertenecen a es
 |  |  |
 | --- | --- |
 | Número de comando | 319 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

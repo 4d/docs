@@ -44,6 +44,6 @@ La méthode suivante est un exemple de méthode générique qui affiche les enre
 |  |  |
 | --- | --- |
 | Numéro de commande | 256 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

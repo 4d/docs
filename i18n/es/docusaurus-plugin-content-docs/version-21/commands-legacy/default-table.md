@@ -82,6 +82,6 @@ En este código se especifica el resultado de la tabla por defecto:
 |  |  |
 | --- | --- |
 | Número de comando | 46 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

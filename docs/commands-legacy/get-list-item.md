@@ -71,6 +71,6 @@ Refer to the example of the [APPEND TO LIST](append-to-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 378 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

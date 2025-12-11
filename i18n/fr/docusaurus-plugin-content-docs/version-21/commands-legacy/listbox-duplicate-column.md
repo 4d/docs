@@ -98,6 +98,6 @@ Vous souhaitez dupliquer dynamiquement une colonne booléenne et modifier son ti
 |  |  |
 | --- | --- |
 | Numéro de commande | 1273 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -36,7 +36,7 @@ Différents événements peuvent rendre une sélection temporaire obsolète : la
 |  |  |
 | --- | --- |
 | Numéro de commande | 332 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

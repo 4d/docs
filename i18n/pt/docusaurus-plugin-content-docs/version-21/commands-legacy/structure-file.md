@@ -79,6 +79,6 @@ O exemplo a seguir pode ser usado para descobrir se o método é chamado de um c
 |  |  |
 | --- | --- |
 | Número do comando | 489 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

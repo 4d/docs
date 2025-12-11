@@ -36,6 +36,6 @@ Si une colonne a été insérée ou supprimée par programmation à l’intérie
 |  |  |
 | --- | --- |
 | Numéro de commande | 1154 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

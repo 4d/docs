@@ -102,7 +102,7 @@ Ocomando **LOG FILE TO JSON** modifica o valor das variáveis OK e Document: se 
 |  |  |
 | --- | --- |
 | Número do comando | 1352 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

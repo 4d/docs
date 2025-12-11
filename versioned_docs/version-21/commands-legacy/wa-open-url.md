@@ -53,6 +53,6 @@ is the same as:
 |  |  |
 | --- | --- |
 | Command number | 1020 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -123,6 +123,6 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
 |  |  |
 | --- | --- |
 | Número do comando | 697 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -93,6 +93,6 @@ You want to associate a different shortcut depending on the current language of 
 |  |  |
 | --- | --- |
 | Command number | 1185 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

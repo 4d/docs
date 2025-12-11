@@ -32,7 +32,7 @@ Une erreur est générée lorsque la référence de l’élément n’est pas va
 |  |  |
 | --- | --- |
 | Numéro de commande | 869 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

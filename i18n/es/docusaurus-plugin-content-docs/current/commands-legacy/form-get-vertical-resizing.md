@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1078 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

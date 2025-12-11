@@ -38,6 +38,6 @@ Os parâmetros opcionais *larguraMin e* *larguraMax* permitem definir os limites
 |  |  |
 | --- | --- |
 | Número do comando | 833 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

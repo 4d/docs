@@ -95,7 +95,7 @@ Consulte el ejemplo del comando [ST SET PLAIN TEXT](st-set-plain-text.md).
 |  |  |
 | --- | --- |
 | Número de comando | 1115 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

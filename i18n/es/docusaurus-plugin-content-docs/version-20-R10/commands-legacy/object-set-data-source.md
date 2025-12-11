@@ -55,6 +55,6 @@ Cambio de la fuente de datos para un área de entrada:
 |  |  |
 | --- | --- |
 | Número de comando | 1264 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

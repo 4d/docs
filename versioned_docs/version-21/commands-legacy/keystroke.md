@@ -174,6 +174,6 @@ Using the interprocess communication capabilities of 4D, you can similarily buil
 |  |  |
 | --- | --- |
 | Command number | 390 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -40,6 +40,6 @@ Durante uma transação, [LOAD RECORD](load-record.md) e Locked se utilizam com 
 |  |  |
 | --- | --- |
 | Número do comando | 147 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

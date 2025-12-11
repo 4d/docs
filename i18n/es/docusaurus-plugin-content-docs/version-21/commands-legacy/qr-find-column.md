@@ -48,7 +48,7 @@ $NumColumn:=QR Find column (MiArea; "\[G.NQR Tests\]Trimestre")
 |  |  |
 | --- | --- |
 | Número de comando | 776 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

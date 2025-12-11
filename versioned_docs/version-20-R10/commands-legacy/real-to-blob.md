@@ -138,6 +138,6 @@ After executing this code:
 |  |  |
 | --- | --- |
 | Command number | 552 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

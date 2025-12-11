@@ -53,6 +53,6 @@ Le code suivant attend jusqu'à 5 secondes qu'un enregistrement soit déverrouil
 |  |  |
 | --- | --- |
 | Numéro de commande | 459 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

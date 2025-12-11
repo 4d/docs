@@ -79,6 +79,6 @@ Dadas duas colunas em una list box onde os nomes das variáveis são “Array1�
 |  |  |
 | --- | --- |
 | Número do comando | 870 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

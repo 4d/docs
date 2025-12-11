@@ -33,6 +33,6 @@ El comando devuelve en los parámetros *horizontal* y *vertical*, el valor **Tru
 |  |  |
 | --- | --- |
 | Número de comando | 1199 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

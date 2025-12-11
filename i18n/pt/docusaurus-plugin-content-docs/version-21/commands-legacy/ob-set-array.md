@@ -136,6 +136,6 @@ Usar um array de imagem:
 |  |  |
 | --- | --- |
 | Número do comando | 1227 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

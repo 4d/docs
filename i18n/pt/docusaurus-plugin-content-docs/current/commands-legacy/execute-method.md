@@ -38,7 +38,7 @@ Se este comando é executado corretamente, a variável sistema OK toma o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 1007 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

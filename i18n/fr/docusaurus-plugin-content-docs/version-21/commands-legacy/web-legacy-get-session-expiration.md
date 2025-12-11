@@ -44,6 +44,6 @@ Le paramètre *dateExp* reçoit la date d’expiration et le paramètre *heureEx
 |  |  |
 | --- | --- |
 | Numéro de commande | 1207 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

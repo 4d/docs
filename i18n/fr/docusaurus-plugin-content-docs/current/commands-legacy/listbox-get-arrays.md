@@ -55,6 +55,6 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 |  |  |
 | --- | --- |
 | Numéro de commande | 832 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

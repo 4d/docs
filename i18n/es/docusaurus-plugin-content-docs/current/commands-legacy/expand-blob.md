@@ -70,7 +70,7 @@ La variable OK toma el valor 1 si el BLOB ha sido descomprimido con éxito, de l
 |  |  |
 | --- | --- |
 | Número de comando | 535 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

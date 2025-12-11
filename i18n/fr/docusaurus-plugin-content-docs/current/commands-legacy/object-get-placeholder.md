@@ -42,6 +42,6 @@ Vous souhaitez lire le texte exemple d’un champ :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1296 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

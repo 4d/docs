@@ -51,6 +51,6 @@ Puis, dans une méthode, vous pouvez saisir :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1731 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 241 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

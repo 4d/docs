@@ -50,6 +50,6 @@ L’ordre d’appel des options n’a pas d’importance. Si une même option es
 |  |  |
 | --- | --- |
 | Numéro de commande | 1160 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

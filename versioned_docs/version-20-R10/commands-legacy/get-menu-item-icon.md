@@ -39,6 +39,6 @@ If no icon is associated with the menu item, the command returns a blank value.
 |  |  |
 | --- | --- |
 | Command number | 983 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -42,6 +42,6 @@ You want to get the field placeholder text:
 |  |  |
 | --- | --- |
 | Command number | 1296 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

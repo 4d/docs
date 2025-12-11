@@ -54,7 +54,7 @@ A eliminação de um documento faz que a variável sistema assuma o valor 1\. Se
 |  |  |
 | --- | --- |
 | Número do comando | 159 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

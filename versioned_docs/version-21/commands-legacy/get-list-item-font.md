@@ -37,6 +37,6 @@ Lastly, you can pass \* in *itemRef*: in this case, the command will get the fon
 |  |  |
 | --- | --- |
 | Command number | 954 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

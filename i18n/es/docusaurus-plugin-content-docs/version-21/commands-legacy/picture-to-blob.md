@@ -57,7 +57,7 @@ Desea convertir una imagen de un formato propietario a formato GIF y mostrarlo e
 |  |  |
 | --- | --- |
 | Número de comando | 692 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

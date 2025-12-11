@@ -48,6 +48,6 @@ O exemplo a seguir mostra uma utilização típica de Modified record:
 |  |  |
 | --- | --- |
 | Número do comando | 314 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

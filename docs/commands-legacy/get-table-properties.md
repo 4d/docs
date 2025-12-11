@@ -40,6 +40,6 @@ Once the command has been executed:
 |  |  |
 | --- | --- |
 | Command number | 687 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

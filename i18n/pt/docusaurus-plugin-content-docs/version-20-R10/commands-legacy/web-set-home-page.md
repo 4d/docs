@@ -33,6 +33,6 @@ Para não enviar *pagInicio* como página de inicio para o processo web atual, e
 |  |  |
 | --- | --- |
 | Número do comando | 639 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -43,6 +43,6 @@ Consulte o exemplo da rotina [PICTURE TO BLOB](picture-to-blob.md).
 |  |  |
 | --- | --- |
 | Número do comando | 654 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

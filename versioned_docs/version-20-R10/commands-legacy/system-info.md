@@ -151,6 +151,6 @@ returns an object that contains, for example, the following information:
 |  |  |
 | --- | --- |
 | Command number | 1571 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

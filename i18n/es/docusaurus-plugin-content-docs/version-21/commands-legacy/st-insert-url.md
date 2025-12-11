@@ -69,7 +69,7 @@ Usted desea insertar un enlace al sitio web de 4D para reemplazar el texto selec
 |  |  |
 | --- | --- |
 | Número de comando | 1280 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

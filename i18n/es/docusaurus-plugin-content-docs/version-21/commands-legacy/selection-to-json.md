@@ -97,6 +97,6 @@ Puede utilizar la sintaxis *template* para exportar campos de tablas diferentes:
 |  |  |
 | --- | --- |
 | Número de comando | 1234 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -36,6 +36,6 @@ No parâmetro *tresEsta*, passe **True** para ativar o modo "três estados", ou 
 |  |  |
 | --- | --- |
 | Número do comando | 1249 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

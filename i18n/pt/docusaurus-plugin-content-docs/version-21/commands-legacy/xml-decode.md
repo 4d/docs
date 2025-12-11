@@ -82,6 +82,6 @@ Exemplo do documento XML:
 |  |  |
 | --- | --- |
 | Número do comando | 1091 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

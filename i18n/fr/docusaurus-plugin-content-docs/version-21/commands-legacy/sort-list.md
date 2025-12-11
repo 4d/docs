@@ -61,6 +61,6 @@ Après l'exécution du code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 391 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

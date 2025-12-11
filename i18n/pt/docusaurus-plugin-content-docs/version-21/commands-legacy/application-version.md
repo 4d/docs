@@ -125,6 +125,6 @@ Você quer usar o número pequeno de versão da aplicação retornado pelo coman
 |  |  |
 | --- | --- |
 | Número do comando | 493 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

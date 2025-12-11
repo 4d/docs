@@ -47,7 +47,7 @@ If there is not enough memory to load the picture, an error is generated. You ca
 |  |  |
 | --- | --- |
 | Command number | 502 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

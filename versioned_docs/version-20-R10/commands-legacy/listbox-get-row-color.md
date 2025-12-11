@@ -63,6 +63,6 @@ Given the following list box:
 |  |  |
 | --- | --- |
 | Command number | 1658 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

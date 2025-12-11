@@ -97,7 +97,7 @@ Vous souhaitez exécuter une méthode 4D en réponse à un clic sur un lien util
 |  |  |
 | --- | --- |
 | Numéro de commande | 1287 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

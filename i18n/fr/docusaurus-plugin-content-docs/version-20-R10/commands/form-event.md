@@ -106,6 +106,6 @@ La zone de liste résultante lorsque des lignes sont sélectionnées :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1606                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

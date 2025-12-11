@@ -44,6 +44,6 @@ Es recomendable llamar este comando dentro del marco del evento de formulario On
 |  |  |
 | --- | --- |
 | Número de comando | 1034 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

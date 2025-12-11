@@ -35,7 +35,7 @@ Se não tiver os privilégios de acesso adequados para chamar Is user deleted ou
 |  |  |
 | --- | --- |
 | Número do comando | 616 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

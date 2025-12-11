@@ -77,6 +77,6 @@ Vous souhaitez trouver le nombre d'occurrences de chaînes débutant par "test" 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1333 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

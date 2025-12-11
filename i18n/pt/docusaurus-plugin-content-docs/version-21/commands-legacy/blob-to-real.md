@@ -65,6 +65,6 @@ O exemplo a seguir lê 20 valores Reais de um BLOB, iniciando no offset 0x200:
 |  |  |
 | --- | --- |
 | Número do comando | 553 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

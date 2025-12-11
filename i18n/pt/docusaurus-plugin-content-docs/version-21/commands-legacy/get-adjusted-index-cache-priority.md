@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 1427 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -118,6 +118,6 @@ Les enregistrements sont dans l'ordre suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1407 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -47,6 +47,6 @@ Si aucune énumération n’est associée au champ, ou si son type n’admet pas
 |  |  |
 | --- | --- |
 | Numéro de commande | 685 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

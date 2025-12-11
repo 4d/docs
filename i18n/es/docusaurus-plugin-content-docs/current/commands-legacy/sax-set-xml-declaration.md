@@ -51,6 +51,6 @@ El siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 858 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -70,7 +70,7 @@ Lorsqu'un **DELETE SELECTION** rencontre un enregistrement verrouillé, celui-ci
 |  |  |
 | --- | --- |
 | Numéro de commande | 66 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

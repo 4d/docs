@@ -42,6 +42,6 @@ Por defecto, si omite el parámetro *unidad*, la altura se expresa en píxeles. 
 |  |  |
 | --- | --- |
 | Número de comando | 835 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -42,6 +42,6 @@ The following example is a method that can be executed from a menu. It checks to
 |  |  |
 | --- | --- |
 | Command number | 326 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

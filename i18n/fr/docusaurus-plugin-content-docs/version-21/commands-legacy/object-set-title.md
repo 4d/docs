@@ -77,6 +77,6 @@ Vous souhaitez insérer des libellés sur deux lignes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 194 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

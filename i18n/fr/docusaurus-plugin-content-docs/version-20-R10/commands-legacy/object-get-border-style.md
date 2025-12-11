@@ -44,6 +44,6 @@ La commande retourne une valeur correspondant au style de la bordure. Vous pouve
 |  |  |
 | --- | --- |
 | Numéro de commande | 1263 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

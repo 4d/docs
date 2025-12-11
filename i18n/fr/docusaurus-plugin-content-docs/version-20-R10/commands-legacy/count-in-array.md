@@ -63,6 +63,6 @@ Vous voulez compter les références d'objets dans un tableau d'objets :
 |  |  |
 | --- | --- |
 | Numéro de commande | 907 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

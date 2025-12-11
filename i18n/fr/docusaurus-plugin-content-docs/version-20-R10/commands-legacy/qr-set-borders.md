@@ -81,7 +81,7 @@ Si le paramètre *épaisseur* est incorrect, l’erreur -9855 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 797 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

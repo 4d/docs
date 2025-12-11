@@ -145,6 +145,6 @@ Imagine que deseja negar o acesso a endereços IP específicos:
 |  |  |
 | --- | --- |
 | Número do comando | 1030 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

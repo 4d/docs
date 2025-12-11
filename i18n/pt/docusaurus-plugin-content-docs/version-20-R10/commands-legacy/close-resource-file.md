@@ -34,6 +34,6 @@ Lembre chamar finalmente **CLOSE RESOURCE FILE** para um arquivo de recursos que
 |  |  |
 | --- | --- |
 | Número do comando | 498 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

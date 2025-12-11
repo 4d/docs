@@ -33,6 +33,6 @@ Los tipos de campos de datos escalares incluyen campos de tipo fecha/hora, numé
 |  |  |
 | --- | --- |
 | Número de comando | 1426 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

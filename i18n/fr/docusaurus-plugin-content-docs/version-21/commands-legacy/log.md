@@ -37,6 +37,6 @@ L'exemple suivant affiche 1 :
 |  |  |
 | --- | --- |
 | Numéro de commande | 22 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

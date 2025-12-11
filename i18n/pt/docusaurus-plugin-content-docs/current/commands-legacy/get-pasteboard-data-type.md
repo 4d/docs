@@ -43,6 +43,6 @@ Para maior informação sobre os tipos de dados suportados, consulte a seção *
 |  |  |
 | --- | --- |
 | Número do comando | 958 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -50,7 +50,7 @@ Ver el ejemplo de [On Exit Database Method](metodo-base-on-exit.md "On Exit Data
 |  |  |
 | --- | --- |
 | Número de comando | 329 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

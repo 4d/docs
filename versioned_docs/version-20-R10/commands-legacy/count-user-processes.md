@@ -31,6 +31,6 @@ The Count user processes function returns the number of processes opened directl
 |  |  |
 | --- | --- |
 | Command number | 343 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -56,6 +56,6 @@ Usando ponteiros para elementos de arrays bi-dimensionais:
 |  |  |
 | --- | --- |
 | Número do comando | 304 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -45,6 +45,6 @@ Par défaut, **PHP SET OPTION** définit l’option pour tous les appels à [PHP
 |  |  |
 | --- | --- |
 | Numéro de commande | 1059 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

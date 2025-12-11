@@ -42,7 +42,7 @@ Si l’export s’est déroulé correctement, la variable *OK* prend la valeur 1
 |  |  |
 | --- | --- |
 | Numéro de commande | 1064 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

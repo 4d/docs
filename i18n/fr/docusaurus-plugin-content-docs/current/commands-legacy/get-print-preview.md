@@ -29,6 +29,6 @@ A noter que l’utilisateur peut modifier cette option avant de valider la boît
 |  |  |
 | --- | --- |
 | Numéro de commande | 1197 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

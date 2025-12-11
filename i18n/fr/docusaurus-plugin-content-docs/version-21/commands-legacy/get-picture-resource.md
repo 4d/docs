@@ -47,7 +47,7 @@ S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est
 |  |  |
 | --- | --- |
 | Numéro de commande | 502 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

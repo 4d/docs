@@ -37,6 +37,6 @@ Se *objeto* designa uma imagem (variável ou campo), *vPosição* retorna o movi
 |  |  |
 | --- | --- |
 | Número do comando | 1114 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

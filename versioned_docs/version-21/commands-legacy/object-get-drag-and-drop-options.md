@@ -42,6 +42,6 @@ Each parameter returns True or False according to whether the corresponding opti
 |  |  |
 | --- | --- |
 | Command number | 1184 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

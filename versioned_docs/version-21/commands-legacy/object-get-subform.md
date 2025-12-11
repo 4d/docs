@@ -45,6 +45,6 @@ If there is no list form, an empty string is returned in the *listSubform* param
 |  |  |
 | --- | --- |
 | Command number | 1139 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

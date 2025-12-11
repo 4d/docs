@@ -42,6 +42,6 @@ En el parámetro *esquemaColor*, pase un esquema de color a aplicar:
 |  |  |
 | --- | --- |
 | Número de comando | 1762 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -31,6 +31,6 @@ This command can be used to detect any field deletions, which create gaps in the
 |  |  |
 | --- | --- |
 | Command number | 1000 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

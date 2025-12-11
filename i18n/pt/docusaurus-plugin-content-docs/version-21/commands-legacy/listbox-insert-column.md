@@ -103,6 +103,6 @@ Você deseja inserir uma coluna de forma dinâmica em um array de tipo list box 
 |  |  |
 | --- | --- |
 | Número do comando | 829 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

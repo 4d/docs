@@ -77,6 +77,6 @@ Here is an example of cropping a picture (the picture is displayed in the form w
 |  |  |
 | --- | --- |
 | Command number | 988 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

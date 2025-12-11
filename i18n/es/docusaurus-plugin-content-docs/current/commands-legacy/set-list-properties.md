@@ -71,6 +71,6 @@ Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escri
 |  |  |
 | --- | --- |
 | Número de comando | 387 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

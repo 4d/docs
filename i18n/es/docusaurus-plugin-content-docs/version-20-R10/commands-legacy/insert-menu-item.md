@@ -60,7 +60,7 @@ El siguiente ejemplo crea un menú que consiste en dos comandos los cuales asign
 |  |  |
 | --- | --- |
 | Número de comando | 412 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

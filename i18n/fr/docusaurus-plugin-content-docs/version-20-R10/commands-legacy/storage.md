@@ -88,6 +88,6 @@ Cet exemple montre la manière standard de définir les valeurs de **Storage** :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1525 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

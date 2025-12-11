@@ -84,6 +84,6 @@ Quando este método de projeto for implementado em um banco, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 499 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

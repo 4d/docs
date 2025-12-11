@@ -173,7 +173,7 @@ Se a petição for corretamente encaminhada, e o Web Service a aceitar, a variá
 |  |  |
 | --- | --- |
 | Número do comando | 778 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

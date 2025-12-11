@@ -74,6 +74,6 @@ Desea conocer el estado de cifrado de un archivo de datos que corresponde al arc
 |  |  |
 | --- | --- |
 | Número de comando | 1609 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

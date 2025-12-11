@@ -49,7 +49,7 @@ La siguiente instrucción recupera el informe rápido almacenado en Campo4 y lo 
 |  |  |
 | --- | --- |
 | Número de comando | 771 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

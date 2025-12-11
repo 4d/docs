@@ -74,6 +74,6 @@ Se quiser obter as datas de modificação dos métodos de um módulo com o prefi
 |  |  |
 | --- | --- |
 | Número do comando | 1170 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

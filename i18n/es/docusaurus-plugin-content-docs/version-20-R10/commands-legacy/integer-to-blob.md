@@ -120,6 +120,6 @@ Después de la ejecución de este código:
 |  |  |
 | --- | --- |
 | Número de comando | 548 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

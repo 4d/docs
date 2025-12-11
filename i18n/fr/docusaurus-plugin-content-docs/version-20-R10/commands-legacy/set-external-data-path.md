@@ -64,6 +64,6 @@ Vous souhaitez enregistrer dans le champ image un fichier existant, stocké à l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1134 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

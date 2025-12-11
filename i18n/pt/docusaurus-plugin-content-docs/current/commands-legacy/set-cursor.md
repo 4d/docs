@@ -42,6 +42,6 @@ Se quiser que o cursor seja exibido ![](../assets/en/commands/pict2478692.en.png
 |  |  |
 | --- | --- |
 | Número do comando | 469 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

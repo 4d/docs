@@ -65,7 +65,7 @@ O seguinte método de objeto para *atNomes* seleciona o registro correto na sele
 |  |  |
 | --- | --- |
 | Número do comando | 245 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

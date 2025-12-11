@@ -59,6 +59,6 @@ All the information returned by these commands is supplied by the operating syst
 |  |  |
 | --- | --- |
 | Command number | 785 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

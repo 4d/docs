@@ -34,6 +34,6 @@ Voir l’exemple de la commande [DOM Insert XML element](dom-insert-xml-element.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1082 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

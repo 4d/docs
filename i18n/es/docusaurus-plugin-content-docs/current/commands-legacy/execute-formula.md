@@ -72,6 +72,6 @@ Usted desea ejecutar una fórmula incluida las llamadas a los comandos y tablas 
 |  |  |
 | --- | --- |
 | Número de comando | 63 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -42,6 +42,6 @@ Ajout de noms propres au dictionnaire utilisateur :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1214 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

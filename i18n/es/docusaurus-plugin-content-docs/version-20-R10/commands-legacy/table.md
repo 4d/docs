@@ -67,6 +67,6 @@ Este ejemplo, la variable *numTabla* es igual al número de la tabla a la cual p
 |  |  |
 | --- | --- |
 | Número de comando | 252 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

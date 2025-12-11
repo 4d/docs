@@ -30,6 +30,6 @@ Si el recurso no existe, Get resource name devuelve una cadena vacía.
 |  |  |
 | --- | --- |
 | Número de comando | 513 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

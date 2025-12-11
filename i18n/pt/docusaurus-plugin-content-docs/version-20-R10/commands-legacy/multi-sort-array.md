@@ -119,6 +119,6 @@ Se quiser que o array de nomes seja usado como um terceiro critério de ordenaç
 |  |  |
 | --- | --- |
 | Número do comando | 718 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -71,6 +71,6 @@ Se quiser copiar diferentes valores de propriedade de uma coleção de objetos e
 |  |  |
 | --- | --- |
 | Número do comando | 1562 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

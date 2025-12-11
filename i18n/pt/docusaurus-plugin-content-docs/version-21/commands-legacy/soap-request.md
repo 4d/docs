@@ -28,6 +28,6 @@ Este comando pode ser utilizado por razões de segurança no *On Web Authenticat
 |  |  |
 | --- | --- |
 | Número do comando | 783 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

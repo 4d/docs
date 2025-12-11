@@ -101,6 +101,6 @@ Le tableau *aLChildNum* reçoit les éléments suivants :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1397 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

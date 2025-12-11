@@ -103,6 +103,6 @@ La méthode projet suivante vous permet de traiter cette question :
 |  |  |
 | --- | --- |
 | Numéro de commande | 33 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -97,6 +97,6 @@ o:
 |  |  |
 | --- | --- |
 | Número de comando | 259 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -44,7 +44,7 @@ L'exemple suivant ouvre un document existant qui s'appelle “Note”, ajoute à
 |  |  |
 | --- | --- |
 | Numéro de commande | 265 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

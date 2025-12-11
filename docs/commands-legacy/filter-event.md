@@ -46,7 +46,7 @@ See example for the [ON EVENT CALL](on-event-call.md) command.
 |  |  |
 | --- | --- |
 | Command number | 321 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

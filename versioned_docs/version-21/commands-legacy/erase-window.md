@@ -33,6 +33,6 @@ Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CL
 |  |  |
 | --- | --- |
 | Command number | 160 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -39,6 +39,6 @@ If the picture does not contain keywords or IPTC/Keywords metadata, the command 
 |  |  |
 | --- | --- |
 | Command number | 1142 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

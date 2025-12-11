@@ -50,6 +50,6 @@ You want to display "Search" as placeholder text in a combo box:
 |  |  |
 | --- | --- |
 | Command number | 1295 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -74,7 +74,7 @@ If you pass an invalid *property* number, the error -9854 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 760 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

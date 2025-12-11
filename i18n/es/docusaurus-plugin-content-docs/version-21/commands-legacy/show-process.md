@@ -37,6 +37,6 @@ El siguiente ejemplo muestra un proceso llamado Clientes, que se ha ocultado pre
 |  |  |
 | --- | --- |
 | Número de comando | 325 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

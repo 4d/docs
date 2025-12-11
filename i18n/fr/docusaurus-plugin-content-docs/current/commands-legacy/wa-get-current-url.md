@@ -41,6 +41,6 @@ La page affichée est l’URL "www.apple.com" et la page "www.4d.com" est en cou
 |  |  |
 | --- | --- |
 | Numéro de commande | 1025 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

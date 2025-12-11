@@ -77,6 +77,6 @@ Se passa o parâmetro *processo,* o evento é enviado através do processo cujo 
 |  |  |
 | --- | --- |
 | Número do comando | 467 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

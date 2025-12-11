@@ -86,7 +86,7 @@ Então, em todo método de formulário ou de projeto, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 411 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

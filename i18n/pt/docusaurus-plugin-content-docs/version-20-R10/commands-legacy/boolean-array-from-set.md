@@ -38,6 +38,6 @@ Se você não passar o parâmetro *conjunto*, o comando utilizará UserSet no pr
 |  |  |
 | --- | --- |
 | Número do comando | 646 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

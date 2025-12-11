@@ -88,6 +88,6 @@ Desea copiar una array texto en una colección compartida:
 |  |  |
 | --- | --- |
 | Número de comando | 1563 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

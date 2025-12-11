@@ -42,6 +42,6 @@ In the *colorScheme* parameter, pass a color scheme to apply:
 |  |  |
 | --- | --- |
 | Command number | 1762 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

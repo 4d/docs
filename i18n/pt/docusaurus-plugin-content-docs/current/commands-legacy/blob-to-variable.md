@@ -47,7 +47,7 @@ A variável OK é definida como 1 se a variável foi reescrita com sucesso, caso
 |  |  |
 | --- | --- |
 | Número do comando | 533 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

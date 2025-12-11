@@ -183,6 +183,6 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1470                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

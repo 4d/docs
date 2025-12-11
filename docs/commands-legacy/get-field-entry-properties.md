@@ -47,6 +47,6 @@ If there is no choice list associated to the field or if the field type is not s
 |  |  |
 | --- | --- |
 | Command number | 685 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

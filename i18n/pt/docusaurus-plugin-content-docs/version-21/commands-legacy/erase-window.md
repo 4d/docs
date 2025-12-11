@@ -33,6 +33,6 @@ No confunda ERASE WINDOW , que apaga o conteúdo de uma janela, com [CLOSE WINDO
 |  |  |
 | --- | --- |
 | Número do comando | 160 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -72,6 +72,6 @@ Vous voulez associer un tableau de hauteurs de ligne à une list box :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1279 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

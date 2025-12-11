@@ -64,6 +64,6 @@ El siguiente ejemplo lee 20 valores de tipo entero largo de un BLOB, a partir de
 |  |  |
 | --- | --- |
 | Número de comando | 551 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -62,7 +62,7 @@ L'exemple suivant parvient au même résultat que le précédent :
 |  |  |
 | --- | --- |
 | Numéro de commande | 349 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

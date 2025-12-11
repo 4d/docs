@@ -44,6 +44,6 @@ Ver o exemplo do comando [Process number](../commands/process-number.md).
 |  |  |
 | --- | --- |
 | Número do comando | 323 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -59,6 +59,6 @@ If you work with item reference numbers, be sure to build a list in which the it
 |  |  |
 | --- | --- |
 | Command number | 630 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

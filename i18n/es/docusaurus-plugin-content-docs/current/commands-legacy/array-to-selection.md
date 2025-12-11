@@ -86,7 +86,7 @@ Usted desea copiar una selección de registros a una tabla archivo seleccionando
 |  |  |
 | --- | --- |
 | Número de comando | 261 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

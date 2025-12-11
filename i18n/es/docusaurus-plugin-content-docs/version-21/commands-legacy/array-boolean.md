@@ -66,6 +66,6 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo [Booleano](# "Ca
 |  |  |
 | --- | --- |
 | Número de comando | 223 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

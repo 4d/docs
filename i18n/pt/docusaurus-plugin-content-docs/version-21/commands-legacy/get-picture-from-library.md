@@ -59,7 +59,7 @@ Se não houver suficiente memória para devolver a imagem, se gera o erro -108\.
 |  |  |
 | --- | --- |
 | Número do comando | 565 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

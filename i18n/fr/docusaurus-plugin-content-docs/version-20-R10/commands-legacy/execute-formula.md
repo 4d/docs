@@ -68,6 +68,6 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 |  |  |
 | --- | --- |
 | Numéro de commande | 63 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

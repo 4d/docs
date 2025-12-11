@@ -73,6 +73,6 @@ Selecciona un registro para la tabla *\[unaTabla\]*, luego llama múltiples subr
 |  |  |
 | --- | --- |
 | Número de comando | 32 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

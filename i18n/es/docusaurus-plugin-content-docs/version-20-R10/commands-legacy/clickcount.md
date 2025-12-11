@@ -65,6 +65,6 @@ Las etiquetas no son editables pero lo son después de un triple-clic. Si desea 
 |  |  |
 | --- | --- |
 | Número de comando | 1332 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

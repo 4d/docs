@@ -40,6 +40,6 @@ Por defeito, se omitido o parâmetro *unidade*, a altura de linha devolvida se e
 |  |  |
 | --- | --- |
 | Número do comando | 1144 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

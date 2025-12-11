@@ -33,6 +33,6 @@ Os tipos de campos de dados escalares incluem campos de tipo data/hora, numéric
 |  |  |
 | --- | --- |
 | Número do comando | 1426 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

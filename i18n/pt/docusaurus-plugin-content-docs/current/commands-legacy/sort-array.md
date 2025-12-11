@@ -87,6 +87,6 @@ Você exibe os nomes da tabela *\[Pessoas\]* em uma janela flutuante. Quando voc
 |  |  |
 | --- | --- |
 | Número do comando | 229 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

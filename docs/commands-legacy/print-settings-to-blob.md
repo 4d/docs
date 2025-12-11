@@ -59,6 +59,6 @@ You want to store the current print settings to disk:
 |  |  |
 | --- | --- |
 | Command number | 1433 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

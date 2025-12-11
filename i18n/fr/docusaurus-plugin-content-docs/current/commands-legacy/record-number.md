@@ -50,6 +50,6 @@ L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche da
 |  |  |
 | --- | --- |
 | Numéro de commande | 243 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

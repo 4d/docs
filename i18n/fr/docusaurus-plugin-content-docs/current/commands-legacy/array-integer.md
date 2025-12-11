@@ -63,6 +63,6 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Entier](# "N
 |  |  |
 | --- | --- |
 | Numéro de commande | 220 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

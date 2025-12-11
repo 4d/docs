@@ -33,6 +33,6 @@ This command allows, for example, denying connections made in a non-secured mode
 |  |  |
 | --- | --- |
 | Command number | 698 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

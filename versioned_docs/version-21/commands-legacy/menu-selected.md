@@ -65,7 +65,7 @@ The following form method uses **Menu selected** to supply the menu and menu ite
 |  |  |
 | --- | --- |
 | Command number | 152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

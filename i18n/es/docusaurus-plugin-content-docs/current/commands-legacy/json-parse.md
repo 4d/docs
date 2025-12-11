@@ -196,6 +196,6 @@ beta[1].golf:{line:10,offset:12}}}
 |  |  |
 | --- | --- |
 | Número de comando | 1218 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -47,6 +47,6 @@ El parámetro *tipoDatos* designa el tipo de datos resultantes de la ejecución 
 |  |  |
 | --- | --- |
 | Número de comando | 1203 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -41,6 +41,6 @@ Para obter mais informação sobre do formato dos parâmetros *corPrimeiroPlano*
 |  |  |
 | --- | --- |
 | Número do comando | 1074 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -36,7 +36,7 @@ Para maior informação, consulte a descrição do comando [QUERY BY FORMULA](qu
 |  |  |
 | --- | --- |
 | Número do comando | 207 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

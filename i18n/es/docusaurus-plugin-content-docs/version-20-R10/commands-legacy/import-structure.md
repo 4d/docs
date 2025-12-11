@@ -53,6 +53,6 @@ Usted desea importar una definición de estructura guardada en la base actual:
 |  |  |
 | --- | --- |
 | Número de comando | 1310 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

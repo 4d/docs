@@ -50,6 +50,6 @@ The following table indicates the values you can pass in the *horizontal* and *v
 |  |  |
 | --- | --- |
 | Command number | 843 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

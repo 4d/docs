@@ -114,6 +114,6 @@ Conversion of a 4D selection in an object array:
 |  |  |
 | --- | --- |
 | Command number | 1228 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -44,7 +44,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 793 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

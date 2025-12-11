@@ -55,6 +55,6 @@ Este método de projeto pode ser usado para tratar a mesma porta serial (sem pro
 |  |  |
 | --- | --- |
 | Número do comando | 909 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

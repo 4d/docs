@@ -44,6 +44,6 @@ Las dos siguientes instrucciones siguientes son idénticas. La segunda se recomi
 |  |  |
 | --- | --- |
 | Número de comando | 668 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

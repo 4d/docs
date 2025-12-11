@@ -36,6 +36,6 @@ Los márgenes de impresión derecha e izquierda no influyen en el valor devuelto
 |  |  |
 | --- | --- |
 | Número de comando | 702 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

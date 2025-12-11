@@ -41,7 +41,7 @@ L'heure et la date de création et de dernière modification sont gérées par l
 |  |  |
 | --- | --- |
 | Numéro de commande | 478 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

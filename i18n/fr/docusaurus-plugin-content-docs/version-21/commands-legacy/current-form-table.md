@@ -65,6 +65,6 @@ Dans votre application, vous utilisez la convention suivante : au moment de l'af
 |  |  |
 | --- | --- |
 | Numéro de commande | 627 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

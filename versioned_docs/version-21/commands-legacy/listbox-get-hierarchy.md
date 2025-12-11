@@ -40,6 +40,6 @@ If the list box is in hierarchical mode, the command fills the *hierarchy* array
 |  |  |
 | --- | --- |
 | Command number | 1099 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

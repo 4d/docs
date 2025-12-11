@@ -40,6 +40,6 @@ Refer to the example of the [SET MACRO PARAMETER](set-macro-parameter.md) comman
 |  |  |
 | --- | --- |
 | Command number | 997 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

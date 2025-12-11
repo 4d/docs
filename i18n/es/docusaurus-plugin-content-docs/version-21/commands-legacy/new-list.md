@@ -50,6 +50,6 @@ Ver el ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 |  |  |
 | --- | --- |
 | Número de comando | 375 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

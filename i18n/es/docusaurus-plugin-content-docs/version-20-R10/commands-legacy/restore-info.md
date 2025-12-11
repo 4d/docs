@@ -41,6 +41,6 @@ El tipo y el contenido de los parámetros *info1* e *info2* dependen del valor d
 |  |  |
 | --- | --- |
 | Número de comando | 889 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

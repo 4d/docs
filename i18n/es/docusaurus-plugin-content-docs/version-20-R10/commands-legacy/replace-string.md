@@ -78,6 +78,6 @@ El siguiente ejemplo ilustra el uso del parámetro \* en el caso de una evaluaci
 |  |  |
 | --- | --- |
 | Número de comando | 233 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

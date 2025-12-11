@@ -111,6 +111,6 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 |  |  |
 | --- | --- |
 | Número do comando | 1805 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

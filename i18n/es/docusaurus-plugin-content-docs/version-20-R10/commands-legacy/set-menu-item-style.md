@@ -44,7 +44,7 @@ En el parámetro *itemEstilo* puede definir el estilo del elemento. Pase una com
 |  |  |
 | --- | --- |
 | Número de comando | 425 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

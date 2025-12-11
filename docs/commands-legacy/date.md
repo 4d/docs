@@ -98,6 +98,6 @@ You want to get a date from an object attribute, whatever the current attribute 
 |  |  |
 | --- | --- |
 | Command number | 102 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

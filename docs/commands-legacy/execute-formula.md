@@ -68,6 +68,6 @@ You want to execute a formula including calls to 4D commands and tables. Since t
 |  |  |
 | --- | --- |
 | Command number | 63 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

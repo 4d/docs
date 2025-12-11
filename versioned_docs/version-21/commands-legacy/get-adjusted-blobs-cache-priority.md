@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1428 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

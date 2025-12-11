@@ -31,6 +31,6 @@ Para que seja gerado o ciclo de execução **Outside call,** tenha certeza de qu
 |  |  |
 | --- | --- |
 | Número do comando | 328 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

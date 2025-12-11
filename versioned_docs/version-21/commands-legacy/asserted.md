@@ -47,7 +47,7 @@ Insertion of an assertion in the evaluation of an expression:
 |  |  |
 | --- | --- |
 | Command number | 1132 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -47,6 +47,6 @@ The *dataType* parameter designates the type of data resulting from the executio
 |  |  |
 | --- | --- |
 | Command number | 1203 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

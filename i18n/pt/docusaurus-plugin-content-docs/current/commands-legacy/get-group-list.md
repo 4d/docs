@@ -38,7 +38,7 @@ Se não tiver privilégios de acesso para chamar ao comando GET GROUP LIST ou se
 |  |  |
 | --- | --- |
 | Número do comando | 610 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

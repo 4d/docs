@@ -48,6 +48,6 @@ Setting a text area to automatic drag and drop:
 |  |  |
 | --- | --- |
 | Command number | 1183 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

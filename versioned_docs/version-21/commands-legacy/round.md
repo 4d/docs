@@ -43,6 +43,6 @@ The following example illustrates how Round works with different arguments. Each
 |  |  |
 | --- | --- |
 | Command number | 94 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

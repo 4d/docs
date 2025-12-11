@@ -38,7 +38,7 @@ Si le texte est correctement extrait, la variable système OK prend la valeur 1,
 |  |  |
 | --- | --- |
 | Numéro de commande | 524 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

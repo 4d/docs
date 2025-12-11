@@ -50,6 +50,6 @@ O exemplo a seguir torna automáticas todas as relações Muitos a Um e restabel
 |  |  |
 | --- | --- |
 | Número do comando | 310 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

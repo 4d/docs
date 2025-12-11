@@ -34,6 +34,6 @@ Consulte o exemplo da seção *Conjuntos*.
 |  |  |
 | --- | --- |
 | Número do comando | 140 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

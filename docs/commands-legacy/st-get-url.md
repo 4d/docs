@@ -76,6 +76,6 @@ When there is a double-click event, you check that there is in fact an URL, and 
 |  |  |
 | --- | --- |
 | Command number | 1288 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

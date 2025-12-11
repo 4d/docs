@@ -33,6 +33,6 @@ Em Macintosh, é modificado o tamanho do data fork do documento
 |  |  |
 | --- | --- |
 | Número do comando | 480 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -46,6 +46,6 @@ You want to change certificates folder temporarily:
 |  |  |
 | --- | --- |
 | Command number | 1307 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

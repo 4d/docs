@@ -72,6 +72,6 @@ Você quer inserir a hora atual ao início do texto e logo congelar ela antes de
 |  |  |
 | --- | --- |
 | Número do comando | 1282 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

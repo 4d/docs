@@ -87,6 +87,6 @@ You create a new collection and then add a new element:
 |  |  |
 | --- | --- |
 | Command number | 1472 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

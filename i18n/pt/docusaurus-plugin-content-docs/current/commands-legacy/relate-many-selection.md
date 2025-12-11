@@ -41,7 +41,7 @@ Este exemplo seleciona todas as faturas de clientes com crédito superior ou igu
 |  |  |
 | --- | --- |
 | Número do comando | 340 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

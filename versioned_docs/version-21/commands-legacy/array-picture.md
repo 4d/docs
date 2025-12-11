@@ -65,6 +65,6 @@ This example creates an interprocess array of [Picture](# "Can be any Windows or
 |  |  |
 | --- | --- |
 | Command number | 279 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -69,6 +69,6 @@ Dans une list box tableau, on souhaite définir des paramétrages de couleur pou
 |  |  |
 | --- | --- |
 | Numéro de commande | 1270 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

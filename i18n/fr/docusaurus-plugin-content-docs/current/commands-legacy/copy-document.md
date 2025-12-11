@@ -127,7 +127,7 @@ Les exemples suivants créent différents fichiers et dossiers dans le dossier d
 |  |  |
 | --- | --- |
 | Numéro de commande | 541 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

@@ -38,7 +38,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET GROUP
 |  |  |
 | --- | --- |
 | Numéro de commande | 610 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -44,6 +44,6 @@ Disabling assertions:
 |  |  |
 | --- | --- |
 | Command number | 1131 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

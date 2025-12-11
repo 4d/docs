@@ -37,6 +37,6 @@ The following line displays 1:
 |  |  |
 | --- | --- |
 | Command number | 22 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

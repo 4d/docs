@@ -59,6 +59,6 @@ See example for the [Current date](current-date.md) command.
 |  |  |
 | --- | --- |
 | Command number | 24 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

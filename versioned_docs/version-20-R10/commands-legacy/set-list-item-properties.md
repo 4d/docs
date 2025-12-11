@@ -83,6 +83,6 @@ The following example changes the text of the current item of *list* to bold and
 |  |  |
 | --- | --- |
 | Command number | 386 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -90,6 +90,6 @@ Si vous exécutez l’instruction :
 |  |  |
 | --- | --- |
 | Numéro de commande | 288 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

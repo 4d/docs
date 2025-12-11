@@ -47,6 +47,6 @@ Este código ofrece un menú que incluye los nombres de las ventanas abiertas y 
 |  |  |
 | --- | --- |
 | Número de comando | 1004 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

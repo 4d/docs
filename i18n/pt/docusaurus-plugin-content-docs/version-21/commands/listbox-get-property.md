@@ -107,6 +107,6 @@ Given a list box "MyListbox", if you execute the following statement:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 917                         |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

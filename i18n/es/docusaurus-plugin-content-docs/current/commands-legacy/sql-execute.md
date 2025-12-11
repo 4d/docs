@@ -163,7 +163,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1, de lo
 |  |  |
 | --- | --- |
 | Número de comando | 820 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

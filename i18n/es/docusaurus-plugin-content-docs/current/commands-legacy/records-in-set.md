@@ -39,6 +39,6 @@ El siguiente ejemplo muestra una alerta indicando el porcentaje de clientes que 
 |  |  |
 | --- | --- |
 | Número de comando | 195 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

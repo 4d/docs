@@ -46,6 +46,6 @@ Sous Windows, la fenêtre du message reste affichée tant qu'aucune activité n'
 |  |  |
 | --- | --- |
 | Numéro de commande | 910 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

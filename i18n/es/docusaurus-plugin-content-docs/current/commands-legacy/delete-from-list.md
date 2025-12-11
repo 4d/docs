@@ -48,6 +48,6 @@ El siguiente código borra el elemento seleccionado de la lista *hList*. Si el e
 |  |  |
 | --- | --- |
 | Número de comando | 624 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

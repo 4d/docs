@@ -42,6 +42,6 @@ Adición de nombres propios al diccionario de usuario:
 |  |  |
 | --- | --- |
 | Número de comando | 1214 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

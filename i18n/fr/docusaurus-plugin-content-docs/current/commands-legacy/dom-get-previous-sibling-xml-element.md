@@ -39,7 +39,7 @@ Si la commande a été correctement exécutée et si l’élément référencé 
 |  |  |
 | --- | --- |
 | Numéro de commande | 924 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

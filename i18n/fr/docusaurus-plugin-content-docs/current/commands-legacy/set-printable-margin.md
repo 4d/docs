@@ -63,6 +63,6 @@ L’exemple suivant permet d’obtenir la taille du papier :
 |  |  |
 | --- | --- |
 | Numéro de commande | 710 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

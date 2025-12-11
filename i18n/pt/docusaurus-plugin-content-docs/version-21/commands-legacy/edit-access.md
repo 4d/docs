@@ -40,7 +40,7 @@ O exemplo abaixo mostra ao usuário a janela de gestão de usuários e grupos:
 |  |  |
 | --- | --- |
 | Número do comando | 281 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

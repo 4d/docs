@@ -31,6 +31,6 @@ Su contenido se reemplazará si ya hay una lista con el mismo nombre.
 |  |  |
 | --- | --- |
 | Número de comando | 384 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

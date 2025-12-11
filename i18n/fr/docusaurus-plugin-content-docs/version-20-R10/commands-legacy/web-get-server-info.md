@@ -132,6 +132,6 @@ $webServerInfo:=WEB Get server info(True)
 |  |  |
 | --- | --- |
 | Numéro de commande | 1531 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

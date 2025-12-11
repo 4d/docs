@@ -31,6 +31,6 @@ Cette commande est destinée à être utilisée dans un processus de mise à jou
 |  |  |
 | --- | --- |
 | Numéro de commande | 1301 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

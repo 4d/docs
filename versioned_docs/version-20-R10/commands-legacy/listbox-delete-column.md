@@ -40,6 +40,6 @@ If the *colPosition* parameter is greater than the number of columns in the list
 |  |  |
 | --- | --- |
 | Command number | 830 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

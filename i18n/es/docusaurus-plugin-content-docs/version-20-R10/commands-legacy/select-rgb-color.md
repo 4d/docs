@@ -45,7 +45,7 @@ El efecto de la validación de esta caja de diálogo difiere dependiendo de la p
 |  |  |
 | --- | --- |
 | Número de comando | 956 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Prohibido en el servidor ||
 

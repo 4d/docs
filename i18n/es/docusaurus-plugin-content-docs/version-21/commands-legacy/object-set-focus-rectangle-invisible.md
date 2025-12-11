@@ -34,6 +34,6 @@ Pase **True** en el parámetro *invisible* para ocultar el rectángulo de foco y
 |  |  |
 | --- | --- |
 | Número de comando | 1177 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

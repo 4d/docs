@@ -132,6 +132,6 @@ Request to add a record in JSON to a remote database::
 |  |  |
 | --- | --- |
 | Command number | 1158 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

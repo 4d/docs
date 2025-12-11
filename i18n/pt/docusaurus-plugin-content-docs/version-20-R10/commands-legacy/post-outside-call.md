@@ -46,7 +46,7 @@ Ver o exemplo de [On Exit Database Method](metodo-banco-de-dados-on-exit.md "On 
 |  |  |
 | --- | --- |
 | Número do comando | 329 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

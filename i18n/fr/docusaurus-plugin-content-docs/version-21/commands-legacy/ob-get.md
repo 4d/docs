@@ -217,6 +217,6 @@ Vous voulez connaître la taille d'une image stockée dans un objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1224 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

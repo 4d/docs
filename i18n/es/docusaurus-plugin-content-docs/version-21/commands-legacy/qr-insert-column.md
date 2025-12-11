@@ -44,7 +44,7 @@ La siguiente instrucción inserta (o crea) una primera columna en el área MiAre
 |  |  |
 | --- | --- |
 | Número de comando | 748 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

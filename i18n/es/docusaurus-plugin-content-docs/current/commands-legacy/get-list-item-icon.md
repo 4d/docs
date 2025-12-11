@@ -44,6 +44,6 @@ Si ningún icono está asociado al elemento, la variable icono se devuelve vací
 |  |  |
 | --- | --- |
 | Número de comando | 951 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

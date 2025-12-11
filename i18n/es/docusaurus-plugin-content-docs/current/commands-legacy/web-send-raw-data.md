@@ -87,6 +87,6 @@ Este ejemplo ilustra el uso de la opción chunked con el comando **WEB SEND RAW 
 |  |  |
 | --- | --- |
 | Número de comando | 815 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

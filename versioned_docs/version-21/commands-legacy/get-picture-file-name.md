@@ -31,6 +31,6 @@ If the picture does not have a default name, the command returns an empty string
 |  |  |
 | --- | --- |
 | Command number | 1171 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

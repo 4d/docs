@@ -133,6 +133,6 @@ In order to update the list associated with the pop-up managed by array, you nee
 |  |  |
 | --- | --- |
 | Command number | 1266 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

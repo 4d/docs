@@ -50,6 +50,6 @@ O exemplo a seguir imprime um relatório com dois níveis de quebra. A seleção
 |  |  |
 | --- | --- |
 | Número do comando | 302 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

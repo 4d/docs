@@ -31,6 +31,6 @@ Bajo Windows, el alcance de este comando es global: la configuración se conserv
 |  |  |
 | --- | --- |
 | Número de comando | 1040 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

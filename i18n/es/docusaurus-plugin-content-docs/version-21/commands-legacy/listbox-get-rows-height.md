@@ -42,6 +42,6 @@ Por defecto, si omite el parámetro *unidad*, la altura de línea devuelta se ex
 |  |  |
 | --- | --- |
 | Número de comando | 836 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

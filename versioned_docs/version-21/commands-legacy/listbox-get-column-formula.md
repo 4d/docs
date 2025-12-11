@@ -30,6 +30,6 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 |  |  |
 | --- | --- |
 | Command number | 1202 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

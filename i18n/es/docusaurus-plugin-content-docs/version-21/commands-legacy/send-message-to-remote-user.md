@@ -58,6 +58,6 @@ Desea enviar un mensaje a todos los usuarios y luego enviar un mensaje a un usua
 |  |  |
 | --- | --- |
 | Número de comando | 1632 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

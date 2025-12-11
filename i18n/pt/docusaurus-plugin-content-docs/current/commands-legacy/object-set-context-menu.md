@@ -34,6 +34,6 @@ Passe **True** no parâmetro *menuContext* para ativar o menu contextual, e **Fa
 |  |  |
 | --- | --- |
 | Número do comando | 1251 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

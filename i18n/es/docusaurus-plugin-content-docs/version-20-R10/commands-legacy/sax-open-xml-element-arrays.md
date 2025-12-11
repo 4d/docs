@@ -60,6 +60,6 @@ El siguiente método:
 |  |  |
 | --- | --- |
 | Número de comando | 921 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

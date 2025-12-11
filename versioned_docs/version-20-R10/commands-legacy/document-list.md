@@ -119,7 +119,7 @@ List of all documents in recursive Posix (relative) mode:
 |  |  |
 | --- | --- |
 | Command number | 474 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -70,7 +70,7 @@ You want to find out the current configuration of the "Automatic" style sheet:
 |  |  |
 | --- | --- |
 | Command number | 1256 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

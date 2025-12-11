@@ -37,6 +37,6 @@ While process execution is suspended, the windows belonging to this process are 
 |  |  |
 | --- | --- |
 | Command number | 319 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

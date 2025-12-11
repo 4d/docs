@@ -52,6 +52,6 @@ Ejemplo de método de importación masivo de datos:
 |  |  |
 | --- | --- |
 | Número de comando | 1293 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

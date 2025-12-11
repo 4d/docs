@@ -35,6 +35,6 @@ Puede ejecutar este comando desde un componente, pero en este caso, debe pasar e
 |  |  |
 | --- | --- |
 | Número de comando | 1213 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -73,6 +73,6 @@ You select a record for the table *\[anyTable\]*, then you call multiple subrout
 |  |  |
 | --- | --- |
 | Command number | 32 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

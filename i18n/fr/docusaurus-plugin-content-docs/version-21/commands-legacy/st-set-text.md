@@ -95,7 +95,7 @@ Reportez-vous à l'exemple de la commande [ST SET PLAIN TEXT](st-set-plain-text.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1115 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

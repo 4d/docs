@@ -58,6 +58,6 @@ Authentication with a Web Service located behind a proxy:
 |  |  |
 | --- | --- |
 | Command number | 786 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

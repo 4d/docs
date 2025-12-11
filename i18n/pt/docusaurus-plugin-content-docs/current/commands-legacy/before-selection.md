@@ -67,6 +67,6 @@ Este formulário é utilizado durante a impressão de um relatório. Define uma 
 |  |  |
 | --- | --- |
 | Número do comando | 198 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -106,6 +106,6 @@ The following example exports the Picture Library to a document on disk:
 |  |  |
 | --- | --- |
 | Command number | 564 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

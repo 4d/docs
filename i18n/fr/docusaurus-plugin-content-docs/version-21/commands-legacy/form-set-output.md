@@ -91,6 +91,6 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
 |  |  |
 | --- | --- |
 | Numéro de commande | 54 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

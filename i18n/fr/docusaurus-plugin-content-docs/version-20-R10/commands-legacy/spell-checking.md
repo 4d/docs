@@ -39,6 +39,6 @@ La vérification débute par le premier mot du champ ou de la variable. Si un mo
 |  |  |
 | --- | --- |
 | Numéro de commande | 900 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

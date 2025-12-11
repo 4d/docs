@@ -355,6 +355,6 @@ En résultat, le rectangle rouge suit bien le défilement de la list box :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 388                         |
-| Thread safe        | &cross; |
+| Thread safe        | no |
 
 

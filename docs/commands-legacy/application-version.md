@@ -125,6 +125,6 @@ You want to use the application's short version value returned by the command to
 |  |  |
 | --- | --- |
 | Command number | 493 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

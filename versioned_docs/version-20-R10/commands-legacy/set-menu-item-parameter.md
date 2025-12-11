@@ -47,6 +47,6 @@ This code provides a menu including the names of the open windows and lets you g
 |  |  |
 | --- | --- |
 | Command number | 1004 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

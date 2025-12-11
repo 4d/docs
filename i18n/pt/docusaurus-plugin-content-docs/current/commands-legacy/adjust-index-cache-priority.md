@@ -58,6 +58,6 @@ Se quiser mudar temporariamente a prioridade de cache para o índice de campo \[
 |  |  |
 | --- | --- |
 | Número do comando | 1430 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -83,6 +83,6 @@ After the second statement, all the cells of the third row change to underlined 
 |  |  |
 | --- | --- |
 | Command number | 1268 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

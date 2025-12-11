@@ -39,6 +39,6 @@ Pass **True** in *autoSpellcheck* to enable this function for the object, and **
 |  |  |
 | --- | --- |
 | Command number | 1173 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

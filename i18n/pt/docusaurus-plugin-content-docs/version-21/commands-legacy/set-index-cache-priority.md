@@ -54,6 +54,6 @@ Em , se quiser estabelecer uma alta prioridade para os índices campo \[Customer
 |  |  |
 | --- | --- |
 | Número do comando | 1401 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

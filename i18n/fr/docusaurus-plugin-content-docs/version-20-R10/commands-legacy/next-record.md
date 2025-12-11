@@ -36,7 +36,7 @@ Reportez-vous à l'exemple de la commande [DISPLAY RECORD](display-record.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 51 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

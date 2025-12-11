@@ -79,6 +79,6 @@ You want to get a list of recent fonts:
 |  |  |
 | --- | --- |
 | Command number | 460 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -70,7 +70,7 @@ Vous souhaitez connaître la configuration actuelle de la feuille de style "Auto
 |  |  |
 | --- | --- |
 | Numéro de commande | 1256 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

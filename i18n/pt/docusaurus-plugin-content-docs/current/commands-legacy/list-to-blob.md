@@ -51,7 +51,7 @@ Veja o exemplo para o comando [BLOB to list](blob-to-list.md "BLOB to list").
 |  |  |
 | --- | --- |
 | Número do comando | 556 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

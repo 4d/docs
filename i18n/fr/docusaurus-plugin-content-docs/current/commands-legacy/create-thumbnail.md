@@ -60,6 +60,6 @@ Le paramètre *profondeur* est ignoré et doit être omis. La commande utilise t
 |  |  |
 | --- | --- |
 | Numéro de commande | 679 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -373,6 +373,6 @@ Passe um termômetro ao modo "Barber shop"
 |  |  |
 | --- | --- |
 | Número do comando | 236 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

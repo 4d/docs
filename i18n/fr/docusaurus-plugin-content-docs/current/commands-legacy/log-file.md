@@ -37,7 +37,7 @@ Si la base fonctionne avec un fichier d’historique, la variable système OK pr
 |  |  |
 | --- | --- |
 | Numéro de commande | 928 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -52,6 +52,6 @@ You want to enable two events and get the list of events for an object:
 |  |  |
 | --- | --- |
 | Command number | 1238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -55,6 +55,6 @@ L'exemple suivant teste la présence du document “Journal” dans le dossier d
 |  |  |
 | --- | --- |
 | Numéro de commande | 476 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

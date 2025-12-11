@@ -121,6 +121,6 @@ Voici différents types de conversion pouvant être obtenus à l’aide de cette
 |  |  |
 | --- | --- |
 | Numéro de commande | 676 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

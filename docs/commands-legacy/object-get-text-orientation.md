@@ -61,6 +61,6 @@ When the form is executed, if you call the following statement:
 |  |  |
 | --- | --- |
 | Command number | 1283 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

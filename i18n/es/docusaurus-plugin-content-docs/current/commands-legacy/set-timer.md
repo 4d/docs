@@ -51,6 +51,6 @@ Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el or
 |  |  |
 | --- | --- |
 | Número de comando | 645 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

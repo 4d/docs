@@ -45,6 +45,6 @@ Utilizando un área de desplazamiento llamada *atVolumenes,* usted quiere mostra
 |  |  |
 | --- | --- |
 | Número de comando | 471 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

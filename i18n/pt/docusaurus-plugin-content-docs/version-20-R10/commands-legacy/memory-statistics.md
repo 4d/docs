@@ -33,6 +33,6 @@ Depois que o comando for executado, as estatísticas são fornecidas nos arrays 
 |  |  |
 | --- | --- |
 | Número do comando | 1118 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

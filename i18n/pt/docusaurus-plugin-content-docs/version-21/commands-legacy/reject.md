@@ -67,6 +67,6 @@ O seguinte exemplo é parte de um método de objeto para um campo *\[Empregados\
 |  |  |
 | --- | --- |
 | Número do comando | 38 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

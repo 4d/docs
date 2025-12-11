@@ -183,6 +183,6 @@ Una vez ejecutado el formulario, el list box se llena automáticamente con la se
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1470                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

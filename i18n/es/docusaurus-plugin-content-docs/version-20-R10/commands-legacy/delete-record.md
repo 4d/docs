@@ -48,7 +48,7 @@ El siguiente ejemplo borra un registro de un empleado. El código pregunta al us
 |  |  |
 | --- | --- |
 | Número de comando | 58 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

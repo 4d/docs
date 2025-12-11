@@ -30,6 +30,6 @@ By default, assertions are enabled but they may have been disabled using the [SE
 |  |  |
 | --- | --- |
 | Command number | 1130 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

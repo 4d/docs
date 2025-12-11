@@ -41,6 +41,6 @@ Utilizando **SET REAL COMPARISON LEVEL** , pode aumentar ou reduzir o valor epsi
 |  |  |
 | --- | --- |
 | Número do comando | 623 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

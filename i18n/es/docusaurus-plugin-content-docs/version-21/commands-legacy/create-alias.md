@@ -73,7 +73,7 @@ La variable sistema OK toma el valor 1 si el comando se ejecuta correctamente, s
 |  |  |
 | --- | --- |
 | Número de comando | 694 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

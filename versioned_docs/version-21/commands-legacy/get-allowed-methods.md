@@ -49,6 +49,6 @@ This example authorizes a set of specific methods to create a report:
 |  |  |
 | --- | --- |
 | Command number | 908 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

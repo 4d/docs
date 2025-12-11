@@ -37,7 +37,7 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Do co
 |  |  |
 | --- | --- |
 | Número do comando | 1012 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

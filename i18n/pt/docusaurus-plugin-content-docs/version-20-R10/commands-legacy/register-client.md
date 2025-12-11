@@ -118,7 +118,7 @@ Se um cliente 4D está registrado corretamente, a variável do sistema OK é igu
 |  |  |
 | --- | --- |
 | Número do comando | 648 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

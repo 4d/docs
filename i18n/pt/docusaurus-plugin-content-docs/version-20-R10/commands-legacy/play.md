@@ -63,6 +63,6 @@ O código de exemplo abaixo reproduz um som do sistema em macOS:
 |  |  |
 | --- | --- |
 | Número do comando | 290 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

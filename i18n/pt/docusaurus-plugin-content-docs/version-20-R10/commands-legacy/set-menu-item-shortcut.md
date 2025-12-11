@@ -82,7 +82,7 @@ Definição do atalho\\shortcut para o item de menu "Close:
 |  |  |
 | --- | --- |
 | Número do comando | 423 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

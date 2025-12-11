@@ -86,6 +86,6 @@ Vous pouvez ouvrir un même fichier texte avec différentes applications en util
 |  |  |
 | --- | --- |
 | Numéro de commande | 673 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

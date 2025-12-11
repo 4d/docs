@@ -101,7 +101,7 @@ Modificación del contenido de un elemento de tipo texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1055 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

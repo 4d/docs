@@ -34,7 +34,7 @@ The command returns the XML reference of the element found as a result.
 |  |  |
 | --- | --- |
 | Command number | 1010 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

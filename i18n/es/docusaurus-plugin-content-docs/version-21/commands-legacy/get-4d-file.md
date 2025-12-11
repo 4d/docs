@@ -75,6 +75,6 @@ Usted quiere obtener la ruta del último archivo de backup:
 |  |  |
 | --- | --- |
 | Número de comando | 1418 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

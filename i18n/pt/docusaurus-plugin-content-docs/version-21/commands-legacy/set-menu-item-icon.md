@@ -49,6 +49,6 @@ Uso de uma imagem localizada na pasta Recursos do banco de dados:
 |  |  |
 | --- | --- |
 | Número do comando | 984 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

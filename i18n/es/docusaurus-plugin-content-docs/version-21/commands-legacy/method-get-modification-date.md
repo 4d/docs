@@ -74,6 +74,6 @@ Quiere obtener las fechas de modificación de los métodos de un módulo con el 
 |  |  |
 | --- | --- |
 | Número de comando | 1170 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

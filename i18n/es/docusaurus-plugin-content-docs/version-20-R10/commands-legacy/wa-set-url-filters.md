@@ -161,6 +161,6 @@ Usted quiere negar el acceso a direcciones IP específicas:
 |  |  |
 | --- | --- |
 | Número de comando | 1030 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -45,6 +45,6 @@ Para evitar isto, no evento formulário On Resize da janela estandarte, é neces
 |  |  |
 | --- | --- |
 | Número do comando | 434 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

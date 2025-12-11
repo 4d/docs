@@ -55,6 +55,6 @@ Reportez-vous à l'exemple de la commande [REJECT](reject.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 206 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -70,6 +70,6 @@ La méthode projet suivante est associée à la commande **Quitter** du menu **F
 |  |  |
 | --- | --- |
 | Numéro de commande | 291 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

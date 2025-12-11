@@ -51,6 +51,6 @@ Note que o *Depurador* 4D avaliará o código SQL linha por linha. Em alguns cas
 |  |  |
 | --- | --- |
 | Número do comando | 948 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

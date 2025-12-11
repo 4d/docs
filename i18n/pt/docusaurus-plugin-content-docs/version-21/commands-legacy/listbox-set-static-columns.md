@@ -33,6 +33,6 @@ As colunas estáticas não podem mover-se no list box.
 |  |  |
 | --- | --- |
 | Número do comando | 1153 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

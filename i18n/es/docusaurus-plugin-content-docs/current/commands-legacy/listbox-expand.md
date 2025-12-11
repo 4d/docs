@@ -86,6 +86,6 @@ Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguient
 |  |  |
 | --- | --- |
 | Número de comando | 1100 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -120,6 +120,6 @@ Voici le résultat (sous Windows) :
 |  |  |
 | --- | --- |
 | Numéro de commande | 88 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

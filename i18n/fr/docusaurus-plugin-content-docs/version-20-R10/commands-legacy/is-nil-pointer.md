@@ -42,6 +42,6 @@ Si vous souhaitez connaître le nom de la variable pointée ou le numéro du cha
 |  |  |
 | --- | --- |
 | Numéro de commande | 315 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

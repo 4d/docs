@@ -48,6 +48,6 @@ In the *format* parameter, pass the type of parameter whose value you want to kn
 |  |  |
 | --- | --- |
 | Command number | 994 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -68,7 +68,7 @@ Si el usuario hace clic en el botón Detener en el termómetro de progresión, l
 |  |  |
 | --- | --- |
 | Número de comando | 70 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

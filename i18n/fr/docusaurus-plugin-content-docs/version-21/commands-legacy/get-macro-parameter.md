@@ -40,6 +40,6 @@ Reportez-vous à l'exemple de [SET MACRO PARAMETER](set-macro-parameter.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 997 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -42,7 +42,7 @@ Ver ejemplo para el comando [Get menu item mark](get-menu-item-mark.md "Get menu
 |  |  |
 | --- | --- |
 | Número de comando | 208 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

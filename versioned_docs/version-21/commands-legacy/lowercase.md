@@ -54,6 +54,6 @@ This example compares the results obtained according to whether or not the *\** 
 |  |  |
 | --- | --- |
 | Command number | 14 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

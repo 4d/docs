@@ -49,6 +49,6 @@ The following example saves the current record number and then searches for any 
 |  |  |
 | --- | --- |
 | Command number | 243 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

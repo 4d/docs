@@ -34,6 +34,6 @@ La valeur NULL est exploitée par le moteur SQL de 4D. Pour plus d’information
 |  |  |
 | --- | --- |
 | Numéro de commande | 965 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

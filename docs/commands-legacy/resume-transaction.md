@@ -29,6 +29,6 @@ For more information, please refer to the [Suspending transactions](../Develop-l
 |  |  |
 | --- | --- |
 | Command number | 1386 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

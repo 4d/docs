@@ -57,6 +57,6 @@ Consulte o exemplo no comando [SET PRINT MARKER](set-print-marker.md "SET PRINT 
 |  |  |
 | --- | --- |
 | Número do comando | 717 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

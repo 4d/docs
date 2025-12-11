@@ -63,6 +63,6 @@ The following example sets the *FieldNum* variable to the field number of \[Tabl
 |  |  |
 | --- | --- |
 | Command number | 253 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -32,6 +32,6 @@ A continuación debe recargar los datos utilizando el comando **RELOAD EXTERNAL 
 |  |  |
 | --- | --- |
 | Número de comando | 1135 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

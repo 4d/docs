@@ -38,6 +38,6 @@ Este comando debe utilizarse con el evento de formulario On row moved (ver el co
 |  |  |
 | --- | --- |
 | Número de comando | 837 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

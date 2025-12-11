@@ -44,7 +44,7 @@ No parâmetro *itemEstilo* pode definir o estilo do elemento. Passe uma combina�
 |  |  |
 | --- | --- |
 | Número do comando | 425 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

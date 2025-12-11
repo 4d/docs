@@ -34,6 +34,6 @@ El parámetro *parteVentana* devuelve 3 si se toca la ventana, de lo contrario 0
 |  |  |
 | --- | --- |
 | Número de comando | 449 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

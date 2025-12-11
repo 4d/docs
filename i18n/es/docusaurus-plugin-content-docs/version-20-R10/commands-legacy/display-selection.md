@@ -108,7 +108,7 @@ También puede utilizar otros comandos, tales como [PRINT SELECTION](print-selec
 |  |  |
 | --- | --- |
 | Número de comando | 59 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

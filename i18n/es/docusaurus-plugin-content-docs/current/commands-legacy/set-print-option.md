@@ -85,7 +85,7 @@ Si el valor pasado por una *opción* es incorrecto o si no está disponible en l
 |  |  |
 | --- | --- |
 | Número de comando | 733 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

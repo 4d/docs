@@ -78,6 +78,6 @@ PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
 |  |  |
 | --- | --- |
 | Número de comando | 816 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

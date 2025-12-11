@@ -40,6 +40,6 @@ El valor de la altura de la línea se expresa:
 |  |  |
 | --- | --- |
 | Número de comando | 1408 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

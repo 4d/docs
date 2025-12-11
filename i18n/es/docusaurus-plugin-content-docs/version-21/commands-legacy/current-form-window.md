@@ -30,6 +30,6 @@ La ventana del formulario actual puede ser generada automáticamente por un coma
 |  |  |
 | --- | --- |
 | Número de comando | 827 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

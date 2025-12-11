@@ -48,6 +48,6 @@ A form contains a field represented by two different objects; one of the objects
 |  |  |
 | --- | --- |
 | Command number | 1261 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

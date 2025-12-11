@@ -68,7 +68,7 @@ Se for encontrado um registro bloqueado durante a execução de DELETE SELECTION
 |  |  |
 | --- | --- |
 | Número do comando | 66 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar a seleção atual ||
 
 

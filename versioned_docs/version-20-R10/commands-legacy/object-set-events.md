@@ -171,6 +171,6 @@ Disables a single event of the form without modifying the others:
 |  |  |
 | --- | --- |
 | Command number | 1239 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

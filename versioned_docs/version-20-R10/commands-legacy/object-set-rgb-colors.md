@@ -109,6 +109,6 @@ Changing to transparent background with a light font color:
 |  |  |
 | --- | --- |
 | Command number | 628 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -73,6 +73,6 @@ Se quiser saber se a ação copiar está disponível (ou seja, se foram selecion
 |  |  |
 | --- | --- |
 | Número do comando | 1442 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

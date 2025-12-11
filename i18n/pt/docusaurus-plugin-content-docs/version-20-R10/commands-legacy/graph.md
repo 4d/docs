@@ -286,6 +286,6 @@ Neste exemplo, personalizamos alguns parâmetros:
 |  |  |
 | --- | --- |
 | Número do comando | 169 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

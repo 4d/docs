@@ -34,7 +34,7 @@ Si omite el parámetro *proceso*, ENABLE MENU ITEM se aplica a la barra de menú
 |  |  |
 | --- | --- |
 | Número de comando | 149 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

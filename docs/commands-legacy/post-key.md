@@ -66,6 +66,6 @@ See example for the [Process number](../commands/process-number.md) command.
 |  |  |
 | --- | --- |
 | Command number | 465 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

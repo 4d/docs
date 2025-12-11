@@ -90,6 +90,6 @@ Esses exemplos ilustram como recuperar a chave digest de um texto:
 |  |  |
 | --- | --- |
 | Número do comando | 1147 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

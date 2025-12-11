@@ -68,6 +68,6 @@ El siguiente ejemplo suprime los termómetros de progreso antes de efectuar una 
 |  |  |
 | --- | --- |
 | Número de comando | 175 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

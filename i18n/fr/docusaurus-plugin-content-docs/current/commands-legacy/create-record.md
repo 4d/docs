@@ -52,7 +52,7 @@ L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette 
 |  |  |
 | --- | --- |
 | Numéro de commande | 68 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

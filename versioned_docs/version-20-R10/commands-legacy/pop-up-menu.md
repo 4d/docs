@@ -108,6 +108,6 @@ The following is the pop-up menu as it appears on Windows (left) and Macintosh (
 |  |  |
 | --- | --- |
 | Command number | 542 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

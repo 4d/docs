@@ -143,6 +143,6 @@ que devuelve:
 |  |  |
 | --- | --- |
 | Número de comando | 675 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

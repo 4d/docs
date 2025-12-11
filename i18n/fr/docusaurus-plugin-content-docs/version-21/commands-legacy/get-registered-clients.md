@@ -50,7 +50,7 @@ Si l’opération se déroule correctement, la variable système OK prend la val
 |  |  |
 | --- | --- |
 | Numéro de commande | 650 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

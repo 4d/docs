@@ -54,6 +54,6 @@ In the , you want to set a high priority for the \[Customer\]LastName field inde
 |  |  |
 | --- | --- |
 | Command number | 1401 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

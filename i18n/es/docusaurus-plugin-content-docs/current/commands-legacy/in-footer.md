@@ -31,6 +31,6 @@ Para que se genere el ciclo de ejecución **In footer** asegúrese de que la pro
 |  |  |
 | --- | --- |
 | Número de comando | 191 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

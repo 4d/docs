@@ -62,6 +62,6 @@ We want to modify the query destination temporarily and then restore the previou
 |  |  |
 | --- | --- |
 | Command number | 1155 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

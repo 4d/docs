@@ -112,6 +112,6 @@ In the Menu Bar editor, you replace the method ADD CUSTOMERS with the method STA
 |  |  |
 | --- | --- |
 | Command number | 317 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

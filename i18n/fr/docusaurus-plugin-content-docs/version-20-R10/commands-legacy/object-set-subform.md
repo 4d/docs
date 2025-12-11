@@ -49,6 +49,6 @@ Lorsque vous modifiez un sous-formulaire en page, la commande peut être exécut
 |  |  |
 | --- | --- |
 | Numéro de commande | 1138 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

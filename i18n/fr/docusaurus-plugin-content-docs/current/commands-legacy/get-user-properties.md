@@ -58,7 +58,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER 
 |  |  |
 | --- | --- |
 | Numéro de commande | 611 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

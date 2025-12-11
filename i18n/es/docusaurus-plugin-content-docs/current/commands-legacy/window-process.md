@@ -29,6 +29,6 @@ Si omite el parámetro *ventana*, Window process devuelve el número del proceso
 |  |  |
 | --- | --- |
 | Número de comando | 446 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -31,6 +31,6 @@ Em *modo*, passe uma das seguintes constantes do tema *Design Object Access*:
 |  |  |
 | --- | --- |
 | Número do comando | 1191 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

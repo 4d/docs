@@ -59,6 +59,6 @@ If the command is executed from a component, it applies by default to the compon
 |  |  |
 | --- | --- |
 | Command number | 1189 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

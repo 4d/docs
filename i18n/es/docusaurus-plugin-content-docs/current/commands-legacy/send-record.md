@@ -40,6 +40,6 @@ Ver el ejemplo del comando [RECEIVE RECORD](receive-record.md "RECEIVE RECORD").
 |  |  |
 | --- | --- |
 | Número de comando | 78 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

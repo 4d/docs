@@ -66,7 +66,7 @@ La commande **ARRAY TO LIST** génère l'erreur *\-9957* lorsqu'elle est appliqu
 |  |  |
 | --- | --- |
 | Numéro de commande | 287 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

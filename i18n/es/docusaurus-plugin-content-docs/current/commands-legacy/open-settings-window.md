@@ -145,7 +145,7 @@ Si la caja de diálogo Preferencias/Propiedades se valida, la variable sistema O
 |  |  |
 | --- | --- |
 | Número de comando | 903 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

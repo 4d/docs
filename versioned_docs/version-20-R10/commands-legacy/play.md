@@ -62,6 +62,6 @@ The following example code plays a system sound on macOS:
 |  |  |
 | --- | --- |
 | Command number | 290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

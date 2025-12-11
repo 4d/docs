@@ -55,6 +55,6 @@ En el , usted desea definir una prioridad alta para el dato escalar \[Customer\]
 |  |  |
 | --- | --- |
 | Número de comando | 1400 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

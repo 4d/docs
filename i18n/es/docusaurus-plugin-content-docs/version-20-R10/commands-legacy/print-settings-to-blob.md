@@ -59,6 +59,6 @@ Usted desea almacenar la configuración de impresión actual en el disco:
 |  |  |
 | --- | --- |
 | Número de comando | 1433 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

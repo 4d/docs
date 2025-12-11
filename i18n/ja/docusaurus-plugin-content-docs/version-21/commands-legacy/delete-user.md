@@ -39,7 +39,7 @@ DesignerとAdministratorのみがユーザを削除できます。Administrator�
 |  |  |
 | --- | --- |
 | コマンド番号 | 615 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

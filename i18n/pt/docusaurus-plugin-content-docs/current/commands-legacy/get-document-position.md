@@ -31,6 +31,6 @@ Get document position devolve a posição, a partir do início do documento, ond
 |  |  |
 | --- | --- |
 | Número do comando | 481 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

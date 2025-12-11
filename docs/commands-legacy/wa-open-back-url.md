@@ -30,6 +30,6 @@ If there is no previous URL, the command does nothing. You can test whether a pr
 |  |  |
 | --- | --- |
 | Command number | 1021 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

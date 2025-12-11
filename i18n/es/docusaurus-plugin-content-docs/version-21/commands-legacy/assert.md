@@ -63,7 +63,7 @@ Una aserción permite probar los parámetros pasados a un método de proyecto pa
 |  |  |
 | --- | --- |
 | Número de comando | 1129 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

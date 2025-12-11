@@ -116,6 +116,6 @@ You want to find an object reference:
 |  |  |
 | --- | --- |
 | Command number | 230 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

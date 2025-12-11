@@ -57,6 +57,6 @@ Consulte el ejemplo en el comando [SET PRINT MARKER](set-print-marker.md "SET PR
 |  |  |
 | --- | --- |
 | Número de comando | 717 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

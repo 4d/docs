@@ -62,6 +62,6 @@ Esta macro cria um novo texto que será devolvido ao método que faz a chamada:
 |  |  |
 | --- | --- |
 | Número do comando | 998 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

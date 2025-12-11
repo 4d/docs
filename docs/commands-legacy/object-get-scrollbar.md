@@ -51,6 +51,6 @@ For more information, refer to the description of the [OBJECT SET SCROLLBAR](obj
 |  |  |
 | --- | --- |
 | Command number | 1076 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

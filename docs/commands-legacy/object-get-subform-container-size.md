@@ -37,6 +37,6 @@ The On Resize event is generated in the subform form method if the subform objec
 |  |  |
 | --- | --- |
 | Command number | 1148 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

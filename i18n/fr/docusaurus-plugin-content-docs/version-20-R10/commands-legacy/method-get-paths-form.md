@@ -74,6 +74,6 @@ Liste de tous les objets des formulaires "input" de la table \[Emp\] à partir d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1168 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

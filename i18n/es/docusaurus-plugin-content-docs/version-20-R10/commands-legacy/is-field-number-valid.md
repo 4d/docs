@@ -31,6 +31,6 @@ Este comando permite detectar las eventuales eliminaciones de campos, que crean 
 |  |  |
 | --- | --- |
 | Número de comando | 1000 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

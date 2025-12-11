@@ -30,6 +30,6 @@ Cette commande retourne une chaîne vide si le contenu de la page courante n’e
 |  |  |
 | --- | --- |
 | Numéro de commande | 1038 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

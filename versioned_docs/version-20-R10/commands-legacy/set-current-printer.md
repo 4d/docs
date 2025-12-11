@@ -58,7 +58,7 @@ Creation of a PDF document under Windows:
 |  |  |
 | --- | --- |
 | Command number | 787 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

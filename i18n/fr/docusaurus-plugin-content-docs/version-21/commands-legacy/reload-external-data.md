@@ -32,6 +32,6 @@ Il est alors nécessaire de demander le rechargement des données à l'aide de l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1135 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

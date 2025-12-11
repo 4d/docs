@@ -90,6 +90,6 @@ Usted quiere abrir una ventana emergente en la posición del cursor del ratón. 
 |  |  |
 | --- | --- |
 | Número de comando | 1365 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

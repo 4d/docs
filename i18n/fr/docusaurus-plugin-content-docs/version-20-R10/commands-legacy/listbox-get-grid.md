@@ -33,6 +33,6 @@ La commande retourne dans les paramètres *horizontal* et *vertical* la valeur *
 |  |  |
 | --- | --- |
 | Numéro de commande | 1199 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

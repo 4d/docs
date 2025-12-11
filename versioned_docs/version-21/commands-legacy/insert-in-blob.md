@@ -37,6 +37,6 @@ Before the call, you pass in the *offset* parameter the position of the insertio
 |  |  |
 | --- | --- |
 | Command number | 559 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

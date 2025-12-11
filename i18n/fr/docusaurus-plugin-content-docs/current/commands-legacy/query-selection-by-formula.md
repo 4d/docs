@@ -36,7 +36,7 @@ Pour plus d'informations, reportez-vous à la description de la commande [QUERY 
 |  |  |
 | --- | --- |
 | Numéro de commande | 207 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

@@ -35,6 +35,6 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos que indicam
 |  |  |
 | --- | --- |
 | Número do comando | 841 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

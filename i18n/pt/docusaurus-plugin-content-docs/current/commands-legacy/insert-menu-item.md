@@ -60,7 +60,7 @@ O exemplo a seguir cria um menu que consiste em dois comandos os quais atribuem 
 |  |  |
 | --- | --- |
 | Número do comando | 412 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

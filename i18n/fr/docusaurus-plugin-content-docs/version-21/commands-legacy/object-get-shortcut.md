@@ -46,6 +46,6 @@ Si aucune touche de modification n’a été définie dans l’équivalent clavi
 |  |  |
 | --- | --- |
 | Numéro de commande | 1186 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

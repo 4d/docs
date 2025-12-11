@@ -137,7 +137,7 @@ The myCallbackMeth method converts the report when it is generated:
 |  |  |
 | --- | --- |
 | Command number | 197 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

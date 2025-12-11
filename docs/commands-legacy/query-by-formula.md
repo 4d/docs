@@ -84,7 +84,7 @@ This example uses a join to query all the lines of "ACME" client invoices even t
 |  |  |
 | --- | --- |
 | Command number | 48 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

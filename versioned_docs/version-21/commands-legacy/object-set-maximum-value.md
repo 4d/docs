@@ -35,6 +35,6 @@ In *maxValue*, pass the new maximum value you want to assign to the object for t
 |  |  |
 | --- | --- |
 | Command number | 1244 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

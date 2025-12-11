@@ -106,6 +106,6 @@ O list box resultante quando as linhas são selecionadas:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1606                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |
 
 

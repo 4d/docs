@@ -61,7 +61,7 @@ A seguiete instrução coloca o título “Título do centro” no cabeçalho do
 |  |  |
 | --- | --- |
 | Número do comando | 774 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

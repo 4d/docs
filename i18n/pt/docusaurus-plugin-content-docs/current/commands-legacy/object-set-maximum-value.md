@@ -35,6 +35,6 @@ Em *valorMax*, passe o novo valor máximo que deseja atribuir ao objeto para o p
 |  |  |
 | --- | --- |
 | Número do comando | 1244 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

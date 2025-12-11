@@ -120,6 +120,6 @@ After executing this code:
 |  |  |
 | --- | --- |
 | Command number | 550 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

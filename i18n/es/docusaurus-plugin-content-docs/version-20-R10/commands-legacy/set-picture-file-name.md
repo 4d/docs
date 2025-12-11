@@ -32,6 +32,6 @@ El nombre por defecto se utiliza como nombre de archivo cuando la imagen se expo
 |  |  |
 | --- | --- |
 | Número de comando | 1172 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

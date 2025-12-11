@@ -102,6 +102,6 @@ Exemple d’impression d’une list box complète :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1095 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -105,7 +105,7 @@ Se o arquivo de recursos não puder ser aberto por um problema do recurso ou de 
 |  |  |
 | --- | --- |
 | Número do comando | 497 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, Document, error |
 
 

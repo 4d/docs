@@ -40,6 +40,6 @@ A descrição do plano da última pesquisa pode ser comparada com a descrição 
 |  |  |
 | --- | --- |
 | Número do comando | 1046 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -73,6 +73,6 @@ Definición de varios pares de atributos/valores:
 |  |  |
 | --- | --- |
 | Número de comando | 1192 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

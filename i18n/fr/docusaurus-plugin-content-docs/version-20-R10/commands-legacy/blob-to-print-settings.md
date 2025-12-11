@@ -77,6 +77,6 @@ Vous voulez appliquer des paramètres d'impression précédemment stockés sur d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1434 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

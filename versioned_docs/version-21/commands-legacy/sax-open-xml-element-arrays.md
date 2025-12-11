@@ -60,6 +60,6 @@ The following method:
 |  |  |
 | --- | --- |
 | Command number | 921 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -30,6 +30,6 @@ Por defecto, las aserciones están activas pero pueden haber sido desactivadas u
 |  |  |
 | --- | --- |
 | Número de comando | 1130 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -44,7 +44,7 @@ Em caso de que ocorram incidentes durante o backup, a informação relativa ao i
 |  |  |
 | --- | --- |
 | Número do comando | 887 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

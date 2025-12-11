@@ -213,7 +213,7 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 |  |  |
 | --- | --- |
 | Command number | 485 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

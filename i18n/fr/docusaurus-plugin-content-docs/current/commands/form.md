@@ -116,6 +116,6 @@ Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le 
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1466                        |
-| Thread safe        | &cross; |
+| Thread safe        | no |
 
 

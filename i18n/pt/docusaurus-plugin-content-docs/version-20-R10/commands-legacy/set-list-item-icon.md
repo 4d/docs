@@ -52,6 +52,6 @@ Queremos atribuir a mesma imagem a dois elementos diferentes. O seguinte código
 |  |  |
 | --- | --- |
 | Número do comando | 950 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

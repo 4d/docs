@@ -57,7 +57,7 @@ If the command has been correctly executed, the system variable OK returns 1\. O
 |  |  |
 | --- | --- |
 | Command number | 824 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

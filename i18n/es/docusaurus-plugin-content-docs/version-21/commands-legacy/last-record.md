@@ -38,7 +38,7 @@ El siguiente ejemplo designa el último registro de la tabla \[Personas\] como r
 |  |  |
 | --- | --- |
 | Número de comando | 200 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

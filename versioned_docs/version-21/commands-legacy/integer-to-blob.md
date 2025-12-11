@@ -121,6 +121,6 @@ After executing this code:
 |  |  |
 | --- | --- |
 | Command number | 548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

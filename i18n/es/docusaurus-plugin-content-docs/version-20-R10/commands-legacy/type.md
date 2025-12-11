@@ -146,6 +146,6 @@ Ver ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md
 |  |  |
 | --- | --- |
 | Número de comando | 295 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

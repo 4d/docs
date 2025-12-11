@@ -45,6 +45,6 @@ O número de tabela e de registro para o registro relacionado pelo evento de ban
 |  |  |
 | --- | --- |
 | Número do comando | 399 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

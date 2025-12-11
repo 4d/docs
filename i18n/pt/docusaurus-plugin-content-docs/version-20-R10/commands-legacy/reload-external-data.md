@@ -32,6 +32,6 @@ A continuação deve recarregar os dados utilizando o comando **RELOAD EXTERNAL 
 |  |  |
 | --- | --- |
 | Número do comando | 1135 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

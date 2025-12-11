@@ -43,6 +43,6 @@ Se o último elemento aberto for *<Book>*, a instrução abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 854 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

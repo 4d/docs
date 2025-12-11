@@ -41,7 +41,7 @@ Si el cliente es dado de baja correctamente, la variable sistema OK toma el valo
 |  |  |
 | --- | --- |
 | Número de comando | 649 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

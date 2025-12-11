@@ -54,6 +54,6 @@ Em **arquitetura de projeto**, só as três folhas de estilo automáticas são c
 |  |  |
 | --- | --- |
 | Número do comando | 1257 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

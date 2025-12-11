@@ -49,6 +49,6 @@ Cet exemple permet d’autoriser ponctuellement un ensemble de méthodes spécif
 |  |  |
 | --- | --- |
 | Numéro de commande | 908 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

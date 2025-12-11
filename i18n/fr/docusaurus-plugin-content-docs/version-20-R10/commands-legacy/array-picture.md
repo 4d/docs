@@ -66,6 +66,6 @@ Cet exemple crée un tableau interprocess d'éléments de type [Image](# "Can be
 |  |  |
 | --- | --- |
 | Numéro de commande | 279 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

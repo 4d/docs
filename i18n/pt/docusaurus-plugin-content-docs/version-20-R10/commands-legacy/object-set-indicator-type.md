@@ -40,6 +40,6 @@ No parâmetro *indicador*, passe o tipo de indicador a mostrar. Pode utilizar um
 |  |  |
 | --- | --- |
 | Número do comando | 1246 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

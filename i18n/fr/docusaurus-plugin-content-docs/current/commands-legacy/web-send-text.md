@@ -49,6 +49,6 @@ La méthode suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 677 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

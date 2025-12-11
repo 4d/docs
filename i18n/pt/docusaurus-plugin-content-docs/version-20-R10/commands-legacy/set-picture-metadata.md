@@ -93,7 +93,7 @@ Quanto todos os metadados são manipulados via uma referência de elementos DOM,
 |  |  |
 | --- | --- |
 | Número do comando | 1121 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

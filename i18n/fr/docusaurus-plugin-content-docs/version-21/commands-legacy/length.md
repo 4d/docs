@@ -35,6 +35,6 @@ L'exemple suivant illustre l'utilisation de **Length**. Les valeurs retournées 
 |  |  |
 | --- | --- |
 | Numéro de commande | 16 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -46,6 +46,6 @@ L’exemple suivant initialise les éléments du tableau tabTables. Ce tableau p
 |  |  |
 | --- | --- |
 | Numéro de commande | 254 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

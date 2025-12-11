@@ -83,6 +83,6 @@ Le même exemple peut être écrit :
 |  |  |
 | --- | --- |
 | Numéro de commande | 260 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -66,6 +66,6 @@ Consulte o exemplo do comando [SET PRINT MARKER](set-print-marker.md).
 |  |  |
 | --- | --- |
 | Número do comando | 708 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -69,6 +69,6 @@ Modificación del estilo del texto resaltado:
 |  |  |
 | --- | --- |
 | Número de comando | 209 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

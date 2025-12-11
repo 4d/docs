@@ -60,6 +60,6 @@ Este ejemplo muestra las diferentes formas de utilizar este comando:
 |  |  |
 | --- | --- |
 | Número de comando | 978 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

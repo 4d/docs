@@ -52,7 +52,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1\. De l
 |  |  |
 | --- | --- |
 | Número de comando | 818 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

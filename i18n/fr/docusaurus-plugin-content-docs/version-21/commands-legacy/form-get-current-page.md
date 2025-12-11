@@ -73,6 +73,6 @@ Alors que vous êtes en train d'utiliser un formulaire, si vous choisissez une c
 |  |  |
 | --- | --- |
 | Numéro de commande | 276 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -68,6 +68,6 @@ If you do not have the proper access privileges for calling Set user properties 
 |  |  |
 | --- | --- |
 | Command number | 612 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -73,7 +73,7 @@ The OK system variable is set to 1 if the command execution was successful; othe
 |  |  |
 | --- | --- |
 | Command number | 694 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

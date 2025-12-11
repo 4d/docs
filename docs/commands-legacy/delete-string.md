@@ -51,6 +51,6 @@ The following example illustrates the use of Delete string. The results are assi
 |  |  |
 | --- | --- |
 | Command number | 232 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

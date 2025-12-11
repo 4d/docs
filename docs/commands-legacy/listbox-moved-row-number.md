@@ -38,6 +38,6 @@ This command must be used with the form event On Row Moved (see the [Form event 
 |  |  |
 | --- | --- |
 | Command number | 837 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

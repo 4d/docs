@@ -118,6 +118,6 @@ Records are in the following order:
 |  |  |
 | --- | --- |
 | Command number | 1407 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

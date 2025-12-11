@@ -68,6 +68,6 @@ Given the following hierarchical list:
 |  |  |
 | --- | --- |
 | Command number | 952 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -42,6 +42,6 @@ This command can be applied to the following types of objects:
 |  |  |
 | --- | --- |
 | Command number | 1123 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

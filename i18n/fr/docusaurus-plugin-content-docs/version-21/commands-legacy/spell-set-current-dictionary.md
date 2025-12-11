@@ -56,7 +56,7 @@ Chargement du dictionnaire "fr-classique" présent dans le dossier Hunspell :
 |  |  |
 | --- | --- |
 | Numéro de commande | 904 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

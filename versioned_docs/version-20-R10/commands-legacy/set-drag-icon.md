@@ -63,6 +63,6 @@ Note that you can modify the position of the cursor with respect to the picture:
 |  |  |
 | --- | --- |
 | Command number | 1272 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

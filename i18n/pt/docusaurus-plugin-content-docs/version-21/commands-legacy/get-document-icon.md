@@ -33,7 +33,7 @@ O parâmetro opcional *tamanho* permite indicar as dimensões em píxels do íco
 |  |  |
 | --- | --- |
 | Número do comando | 700 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | Document, error |
 
 

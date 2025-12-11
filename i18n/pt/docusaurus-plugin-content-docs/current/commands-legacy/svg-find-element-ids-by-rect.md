@@ -47,6 +47,6 @@ Todos os elementos cujo retângulo circundante está em intersecção com o ret�
 |  |  |
 | --- | --- |
 | Número do comando | 1109 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

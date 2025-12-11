@@ -64,7 +64,7 @@ Si el script se ejecuta correctamente (no se encuentra ningún error), la variab
 |  |  |
 | --- | --- |
 | Número de comando | 1089 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

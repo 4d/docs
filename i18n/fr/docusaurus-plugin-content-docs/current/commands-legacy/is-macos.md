@@ -39,6 +39,6 @@ Vous voulez déterminer si le système d'exploitation courant est macOS :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1572 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

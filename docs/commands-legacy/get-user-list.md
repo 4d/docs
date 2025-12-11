@@ -41,7 +41,7 @@ If you do not have the proper access privileges for calling GET USER LIST or if 
 |  |  |
 | --- | --- |
 | Command number | 609 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

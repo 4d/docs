@@ -67,6 +67,6 @@ Consulte el ejemplo del comando [SET PRINT MARKER](set-print-marker.md "SET PRIN
 |  |  |
 | --- | --- |
 | Número de comando | 708 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

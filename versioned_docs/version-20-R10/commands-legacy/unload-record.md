@@ -35,6 +35,6 @@ If a record has a large amount of data, picture fields, or external documents (s
 |  |  |
 | --- | --- |
 | Command number | 212 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

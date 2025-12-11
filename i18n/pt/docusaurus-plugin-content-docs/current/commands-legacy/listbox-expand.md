@@ -86,6 +86,6 @@ Este ejemplo ilustra diferentes modos de utilizar el comando. Dados los siguient
 |  |  |
 | --- | --- |
 | Número do comando | 1100 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -39,6 +39,6 @@ Se quiser determinar se o sistema operativo atual é Windows:
 |  |  |
 | --- | --- |
 | Número do comando | 1573 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -46,6 +46,6 @@ This method, combined with a scrollable area, enables you to change the value of
 |  |  |
 | --- | --- |
 | Command number | 713 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

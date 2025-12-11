@@ -55,7 +55,7 @@ OK toma el valor 1 si la exportación termina con éxito; de lo contrario, toma 
 |  |  |
 | --- | --- |
 | Número de comando | 85 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

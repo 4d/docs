@@ -31,6 +31,6 @@ Si la imagen no tienen un nombre por defecto, el comando devuelve una cadena vac
 |  |  |
 | --- | --- |
 | Número de comando | 1171 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

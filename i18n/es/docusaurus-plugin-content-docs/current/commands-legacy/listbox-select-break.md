@@ -67,6 +67,6 @@ Este es el resultado:
 |  |  |
 | --- | --- |
 | Número de comando | 1117 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

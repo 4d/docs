@@ -34,6 +34,6 @@ If the color was changed, the On After Edit form event is generated for the obje
 |  |  |
 | --- | --- |
 | Command number | 1304 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

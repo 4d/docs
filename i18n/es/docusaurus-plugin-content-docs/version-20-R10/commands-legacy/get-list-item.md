@@ -71,6 +71,6 @@ Consulte el ejemplo del comando [APPEND TO LIST](append-to-list.md "APPEND TO LI
 |  |  |
 | --- | --- |
 | Número de comando | 378 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

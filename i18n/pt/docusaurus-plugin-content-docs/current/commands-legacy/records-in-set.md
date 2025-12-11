@@ -39,6 +39,6 @@ O seguinte exemplo mostra um alerta indicando a porcentagem de clientes classifi
 |  |  |
 | --- | --- |
 | Número do comando | 195 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

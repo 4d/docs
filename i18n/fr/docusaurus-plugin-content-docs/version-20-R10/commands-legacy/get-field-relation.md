@@ -90,6 +90,6 @@ Le code ci-dessous illustre les différentes possibilités offertes par les comm
 |  |  |
 | --- | --- |
 | Numéro de commande | 920 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

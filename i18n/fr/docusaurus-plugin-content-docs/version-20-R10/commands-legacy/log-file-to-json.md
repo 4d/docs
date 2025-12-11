@@ -101,7 +101,7 @@ La commande **LOG FILE TO JSON** modifie la valeur des variables système OK et 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1352 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

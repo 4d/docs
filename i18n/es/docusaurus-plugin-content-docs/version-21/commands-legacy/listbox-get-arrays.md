@@ -55,6 +55,6 @@ Para un list box de tipo selección, colección o selección de entidades, *arrE
 |  |  |
 | --- | --- |
 | Número de comando | 832 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

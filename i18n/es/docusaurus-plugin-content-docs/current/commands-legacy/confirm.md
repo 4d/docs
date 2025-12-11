@@ -98,7 +98,7 @@ Mostrará la siguiente caja de diálogo de confirmación (en Windows):
 |  |  |
 | --- | --- |
 | Número de comando | 162 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

@@ -44,6 +44,6 @@ To know the total size of the page, you can:
 |  |  |
 | --- | --- |
 | Command number | 703 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

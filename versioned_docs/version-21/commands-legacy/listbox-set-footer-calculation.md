@@ -55,6 +55,6 @@ If the data type of a column or of even one column of the list box (when object 
 |  |  |
 | --- | --- |
 | Command number | 1140 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

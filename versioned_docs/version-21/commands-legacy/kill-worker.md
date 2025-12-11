@@ -59,6 +59,6 @@ In the worker method (*theWorker*), you add some code to handle this situation:
 |  |  |
 | --- | --- |
 | Command number | 1390 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

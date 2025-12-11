@@ -49,6 +49,6 @@ Pour plus de détails sur les noms des schémas de couleur, veuillez vous report
 |  |  |
 | --- | --- |
 | Numéro de commande | 1763 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

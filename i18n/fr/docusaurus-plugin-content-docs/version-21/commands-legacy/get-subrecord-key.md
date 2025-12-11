@@ -85,6 +85,6 @@ Ce code fonctionnera indifféremment avec un lien spécial ou standard.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1137 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

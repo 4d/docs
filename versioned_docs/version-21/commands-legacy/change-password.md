@@ -48,6 +48,6 @@ The following example allows the user to change his or her password.
 |  |  |
 | --- | --- |
 | Command number | 186 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

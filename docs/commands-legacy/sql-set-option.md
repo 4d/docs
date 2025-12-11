@@ -51,7 +51,7 @@ If the command was properly executed, the system variable OK returns 1\. Otherwi
 |  |  |
 | --- | --- |
 | Command number | 818 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -73,6 +73,6 @@ User settings file for data および User settings file の両ファイルに�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1418 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

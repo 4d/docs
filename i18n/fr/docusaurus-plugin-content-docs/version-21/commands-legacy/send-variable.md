@@ -38,6 +38,6 @@ Reportez-vous à l'exemple de la commande [RECEIVE RECORD](receive-record.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 80 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

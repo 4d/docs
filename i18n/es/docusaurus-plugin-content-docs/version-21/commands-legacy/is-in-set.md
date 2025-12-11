@@ -40,6 +40,6 @@ El siguiente ejemplo es un método de objeto de un botón que prueba si el regis
 |  |  |
 | --- | --- |
 | Número de comando | 273 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

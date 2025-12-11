@@ -39,6 +39,6 @@ Passe no parâmetro *plugIn* o número do plug-in do que deseja conhecer o grupo
 |  |  |
 | --- | --- |
 | Número do comando | 846 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

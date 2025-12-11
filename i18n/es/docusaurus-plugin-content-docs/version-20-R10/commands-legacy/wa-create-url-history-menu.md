@@ -73,6 +73,6 @@ El siguiente código puede estar asociado con un botón 3D con menú pop up llam
 |  |  |
 | --- | --- |
 | Número de comando | 1049 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

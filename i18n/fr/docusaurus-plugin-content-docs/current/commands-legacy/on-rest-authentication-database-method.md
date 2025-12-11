@@ -29,6 +29,6 @@ L'[authentification Force login](../REST/authUsers.md) est désormais fortement 
 |  |  |
 | --- | --- |
 | Numéro de commande | 3367 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

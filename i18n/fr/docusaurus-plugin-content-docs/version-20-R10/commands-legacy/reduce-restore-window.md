@@ -35,6 +35,6 @@ La commande permet de basculer l'état de la fenêtre :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1829 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

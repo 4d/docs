@@ -35,6 +35,6 @@ Pode executar este comando desde um componente, mas neste caso, deve passar o pa
 |  |  |
 | --- | --- |
 | Número do comando | 1213 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

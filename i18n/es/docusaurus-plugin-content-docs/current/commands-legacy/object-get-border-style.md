@@ -44,6 +44,6 @@ El comando devuelve un valor que corresponde al estilo de la línea fronteriza. 
 |  |  |
 | --- | --- |
 | Número de comando | 1263 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

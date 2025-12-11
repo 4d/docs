@@ -46,6 +46,6 @@ WEB SEND HTTP REDIRECT($targetURL)
 |  |  |
 | --- | --- |
 | Command number | 659 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

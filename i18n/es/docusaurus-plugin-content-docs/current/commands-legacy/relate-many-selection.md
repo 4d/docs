@@ -39,7 +39,7 @@ Este ejemplo selecciona todas las facturas de clientes con crédito superior o i
 |  |  |
 | --- | --- |
 | Número de comando | 340 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

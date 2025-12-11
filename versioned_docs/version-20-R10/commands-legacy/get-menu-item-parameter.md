@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1003 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

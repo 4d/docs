@@ -120,6 +120,6 @@ Après l'exécution de ce code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -80,7 +80,7 @@ If you pass an invalid line parameter, the error -9855 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 797 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

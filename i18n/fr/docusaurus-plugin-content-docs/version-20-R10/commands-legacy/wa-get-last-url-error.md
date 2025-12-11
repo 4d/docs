@@ -39,6 +39,6 @@ Il est judicieux d’appeler cette commande dans le cadre de l’événement for
 |  |  |
 | --- | --- |
 | Numéro de commande | 1034 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

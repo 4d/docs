@@ -50,6 +50,6 @@ Este exemplo permite ter em conta todos os tipos de impressões:
 |  |  |
 | --- | --- |
 | Número do comando | 1198 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -65,6 +65,6 @@ O seguinte exemplo coloca o nome e número de referencia para cada processo nos 
 |  |  |
 | --- | --- |
 | Número do comando | 330 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

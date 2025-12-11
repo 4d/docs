@@ -65,6 +65,6 @@ O exemplo abaixo mostra como decriptogrofar um arquivo criptografado localizado 
 |  |  |
 | --- | --- |
 | Número do comando | 1774 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

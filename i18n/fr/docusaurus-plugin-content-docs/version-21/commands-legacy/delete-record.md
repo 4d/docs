@@ -48,7 +48,7 @@ L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthod
 |  |  |
 | --- | --- |
 | Numéro de commande | 58 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

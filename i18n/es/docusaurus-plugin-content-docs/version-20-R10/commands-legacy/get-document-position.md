@@ -31,6 +31,6 @@ Get document position devuelve la posición, a partir del inicio del documento, 
 |  |  |
 | --- | --- |
 | Número de comando | 481 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

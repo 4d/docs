@@ -32,6 +32,6 @@ O nome por defeito se utiliza como nome de arquivo quando a imagem se exporta em
 |  |  |
 | --- | --- |
 | Número do comando | 1172 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

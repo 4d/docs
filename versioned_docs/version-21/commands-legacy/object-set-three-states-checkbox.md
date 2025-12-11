@@ -36,6 +36,6 @@ In the *threeStates* parameter, pass **True** to enable the "three states" mode,
 |  |  |
 | --- | --- |
 | Command number | 1249 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

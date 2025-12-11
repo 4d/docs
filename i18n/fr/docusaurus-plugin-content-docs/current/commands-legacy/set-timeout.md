@@ -55,7 +55,7 @@ L'exemple suivant fixe le port série devant recevoir des données et le timeout
 |  |  |
 | --- | --- |
 | Numéro de commande | 268 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

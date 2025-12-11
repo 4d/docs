@@ -54,6 +54,6 @@ Desea asegurarse de que la fuente utilizada en un área de texto esté disponibl
 |  |  |
 | --- | --- |
 | Número de comando | 1700 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

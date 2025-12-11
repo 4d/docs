@@ -49,7 +49,7 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 |  |  |
 | --- | --- |
 | Command number | 6 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

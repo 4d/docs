@@ -52,6 +52,6 @@ Este ejemplo ilustra las dos sintaxis del comando:
 |  |  |
 | --- | --- |
 | Número de comando | 967 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

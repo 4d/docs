@@ -37,6 +37,6 @@ Antes de llamar el comando, pase en la variable del parámetro *offset* la posic
 |  |  |
 | --- | --- |
 | Número de comando | 559 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -40,6 +40,6 @@ Reportez-vous aux exemple de la commande [SET MENU BAR](set-menu-bar.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 982 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

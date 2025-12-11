@@ -68,7 +68,7 @@ Você deseja inserir um link ao web site de 4D para substituir o texto seleciona
 |  |  |
 | --- | --- |
 | Número do comando | 1280 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

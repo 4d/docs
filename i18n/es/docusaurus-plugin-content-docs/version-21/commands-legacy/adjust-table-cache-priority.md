@@ -57,6 +57,6 @@ Usted desea cambiar temporalmente la prioridad de la caché de los campos escala
 |  |  |
 | --- | --- |
 | Número de comando | 1429 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

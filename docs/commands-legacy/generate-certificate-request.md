@@ -92,6 +92,6 @@ Here is the **Generate** button method:
 |  |  |
 | --- | --- |
 | Command number | 691 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

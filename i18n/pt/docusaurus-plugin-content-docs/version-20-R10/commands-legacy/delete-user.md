@@ -39,7 +39,7 @@ Se não tiver os privilégios de acesso para chamar DELETE USER ou se outro proc
 |  |  |
 | --- | --- |
 | Número do comando | 615 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

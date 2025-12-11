@@ -86,7 +86,7 @@ Lorsque toutes les métadonnées sont manipulées via une référence d’élém
 |  |  |
 | --- | --- |
 | Numéro de commande | 1121 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

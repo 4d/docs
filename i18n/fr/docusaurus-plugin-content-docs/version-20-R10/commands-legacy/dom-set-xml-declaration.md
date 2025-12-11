@@ -44,6 +44,6 @@ Cet exemple définit l’encodage et l’option standalone de l’élément *ref
 |  |  |
 | --- | --- |
 | Numéro de commande | 859 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

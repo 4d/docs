@@ -85,6 +85,6 @@ Une fois que cette méthode est implémentée dans votre base, vous pouvez écri
 |  |  |
 | --- | --- |
 | Numéro de commande | 499 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -41,7 +41,7 @@ Não é possível concatenar vários ACCEPT. A execução consecutiva de dois co
 |  |  |
 | --- | --- |
 | Número do comando | 269 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

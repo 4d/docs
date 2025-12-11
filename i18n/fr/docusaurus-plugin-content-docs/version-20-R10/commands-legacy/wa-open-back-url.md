@@ -30,6 +30,6 @@ S’il n’y a pas d’URL précédent, la commande ne fait rien. Vous pouvez te
 |  |  |
 | --- | --- |
 | Numéro de commande | 1021 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

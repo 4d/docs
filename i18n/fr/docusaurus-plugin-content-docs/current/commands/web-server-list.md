@@ -60,6 +60,6 @@ Nous voulons savoir combien de serveurs web en fonctionnement sont disponibles :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1716                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

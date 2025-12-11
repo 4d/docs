@@ -123,6 +123,6 @@ Ver el ejemplo del comando DRAG AND DROP PROPERTIES.
 |  |  |
 | --- | --- |
 | Número de comando | 371 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

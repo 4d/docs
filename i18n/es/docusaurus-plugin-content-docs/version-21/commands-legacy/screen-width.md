@@ -30,6 +30,6 @@ En Macintosh, Screen width devuelve el largo de la pantalla principal, es decir 
 |  |  |
 | --- | --- |
 | Número de comando | 187 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

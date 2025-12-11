@@ -73,6 +73,6 @@ Printing at least 500 rows of the list box, knowing that certain rows are hidden
 |  |  |
 | --- | --- |
 | Command number | 1110 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

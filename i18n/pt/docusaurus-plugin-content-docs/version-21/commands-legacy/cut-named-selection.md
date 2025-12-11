@@ -42,7 +42,7 @@ O método seguinte vazia a seleção atual de uma tabela *\[Clientes\]*:
 |  |  |
 | --- | --- |
 | Número do comando | 334 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar a seleção atual ||
 
 

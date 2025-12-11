@@ -54,7 +54,7 @@ Si le fichier à envoyer existe et si le timeout n’est pas dépassé, la varia
 |  |  |
 | --- | --- |
 | Numéro de commande | 619 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

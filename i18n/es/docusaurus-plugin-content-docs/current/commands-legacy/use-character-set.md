@@ -57,7 +57,7 @@ La variable sistema OK toma el valor 1 si el mapa se carga correctamente, de lo 
 |  |  |
 | --- | --- |
 | Número de comando | 205 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

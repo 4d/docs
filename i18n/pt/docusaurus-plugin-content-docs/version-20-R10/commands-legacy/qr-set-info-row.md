@@ -55,7 +55,7 @@ A instrução a seguir oculta o conteúdo da linha detalhe:
 |  |  |
 | --- | --- |
 | Número do comando | 763 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

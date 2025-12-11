@@ -61,6 +61,6 @@ Os objetos de formulário aos quais se pode aplicar alinhamento são os seguinte
 |  |  |
 | --- | --- |
 | Número do comando | 707 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

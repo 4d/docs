@@ -56,7 +56,7 @@ The OK system variable is set to 1 if the map is loaded correctly. Otherwise, it
 |  |  |
 | --- | --- |
 | Command number | 205 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

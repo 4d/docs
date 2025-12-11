@@ -31,6 +31,6 @@ SAVE RELATED ONE no guardará un registro bloqueado. Cuando utilice este comando
 |  |  |
 | --- | --- |
 | Número de comando | 43 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -44,6 +44,6 @@ Este código devolverá na variável 4D *vNome* os nomes (ename) armazenados na 
 |  |  |
 | --- | --- |
 | Número do comando | 821 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

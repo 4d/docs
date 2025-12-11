@@ -42,7 +42,7 @@ The OK system variable is set to 1 if the print job has been successfully open. 
 |  |  |
 | --- | --- |
 | Command number | 995 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

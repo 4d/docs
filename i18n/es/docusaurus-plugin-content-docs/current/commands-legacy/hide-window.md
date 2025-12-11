@@ -51,6 +51,6 @@ Este ejemplo corresponde a un método de un botón ubicado en un formulario de e
 |  |  |
 | --- | --- |
 | Número de comando | 436 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

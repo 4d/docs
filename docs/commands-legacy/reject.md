@@ -68,6 +68,6 @@ The following example is part of an object method for an *\[Employees\]Salary* f
 |  |  |
 | --- | --- |
 | Command number | 38 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

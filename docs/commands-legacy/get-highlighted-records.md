@@ -48,7 +48,7 @@ If the command was executed properly, the system variable OK is set to 1\. Other
 |  |  |
 | --- | --- |
 | Command number | 902 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -55,6 +55,6 @@ Este exemplo mostra um alerta. Este método passa um ponteiro a um campo:
 |  |  |
 | --- | --- |
 | Número do comando | 257 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -64,6 +64,6 @@ Dans cet exemple, les données des champs des enregistrements d’une table sont
 |  |  |
 | --- | --- |
 | Numéro de commande | 1219 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

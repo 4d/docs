@@ -41,7 +41,7 @@ Se não tiver privilégios de acesso para chamar ao comando GET USER LIST ou se 
 |  |  |
 | --- | --- |
 | Número do comando | 609 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

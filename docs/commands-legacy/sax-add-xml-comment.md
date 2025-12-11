@@ -52,7 +52,7 @@ In the event of an error, the command returns an error which can be intercepted 
 |  |  |
 | --- | --- |
 | Command number | 852 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

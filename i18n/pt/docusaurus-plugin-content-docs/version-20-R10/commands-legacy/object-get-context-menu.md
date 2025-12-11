@@ -34,6 +34,6 @@ O comando devolve **True** se o menu contextual está ativo para o objeto e **Fa
 |  |  |
 | --- | --- |
 | Número do comando | 1252 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

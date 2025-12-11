@@ -101,7 +101,7 @@ If the user clicks **Cancel** in the standard open file dialog box or in the exp
 |  |  |
 | --- | --- |
 | Command number | 666 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document |
 
 

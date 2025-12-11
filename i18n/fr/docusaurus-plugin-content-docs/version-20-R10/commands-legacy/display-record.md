@@ -44,6 +44,6 @@ L'exemple suivant affiche une série d'enregistrements sous forme de slide show 
 |  |  |
 | --- | --- |
 | Numéro de commande | 105 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

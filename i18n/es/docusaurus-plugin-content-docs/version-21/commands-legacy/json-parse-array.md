@@ -64,6 +64,6 @@ En este ejemplo, los datos de los campos de los registros de una tabla se extrae
 |  |  |
 | --- | --- |
 | Número de comando | 1219 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

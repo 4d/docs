@@ -35,6 +35,6 @@ En ambos casos, el comando no devuelve campos invisibles.
 |  |  |
 | --- | --- |
 | Número de comando | 804 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -126,7 +126,7 @@ The following examples create different files and folders in the database folder
 |  |  |
 | --- | --- |
 | Command number | 541 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

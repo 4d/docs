@@ -38,7 +38,7 @@ O exemplo a seguir designa o último registro da tabela \[Pessoas\] como registr
 |  |  |
 | --- | --- |
 | Número do comando | 200 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

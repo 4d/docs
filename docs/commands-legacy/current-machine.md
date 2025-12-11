@@ -36,6 +36,6 @@ Even if you are not running with the Client/Server version of the 4D environment
 |  |  |
 | --- | --- |
 | Command number | 483 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

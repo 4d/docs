@@ -53,6 +53,6 @@ Après l'exécution de cette ligne :
 |  |  |
 | --- | --- |
 | Numéro de commande | 890 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

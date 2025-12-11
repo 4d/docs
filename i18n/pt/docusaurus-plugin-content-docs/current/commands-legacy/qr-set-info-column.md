@@ -113,7 +113,7 @@ Se o parâmetro *numColuna* for incorreto, se gera o erro -9852.
 |  |  |
 | --- | --- |
 | Número do comando | 765 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

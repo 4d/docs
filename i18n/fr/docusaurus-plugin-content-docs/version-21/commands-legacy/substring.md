@@ -69,6 +69,6 @@ La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le po
 |  |  |
 | --- | --- |
 | Numéro de commande | 12 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

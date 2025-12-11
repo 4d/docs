@@ -202,6 +202,6 @@ Vous souhaitez stocker une image dans un champ objet. Vous pouvez écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1220 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -52,7 +52,7 @@ Si un numéro d'enregistrement est invalide (enregistrement non créé), l’err
 |  |  |
 | --- | --- |
 | Numéro de commande | 640 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 | Change la sélection courante ||
 

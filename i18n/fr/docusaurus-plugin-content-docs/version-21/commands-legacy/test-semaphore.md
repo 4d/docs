@@ -51,6 +51,6 @@ Cet exemple permet de connaître l’état d’un traitement (en l’occurrence,
 |  |  |
 | --- | --- |
 | Numéro de commande | 652 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

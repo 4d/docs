@@ -103,7 +103,7 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
 |  |  |
 | --- | --- |
 | Numéro de commande | 472 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

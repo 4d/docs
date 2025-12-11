@@ -29,6 +29,6 @@ El comando Next window devuelve el número de referencia de la ventana ubicada �
 |  |  |
 | --- | --- |
 | Número de comando | 448 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

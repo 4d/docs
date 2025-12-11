@@ -33,6 +33,6 @@ Static columns cannot be moved within the list box.
 |  |  |
 | --- | --- |
 | Command number | 1153 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

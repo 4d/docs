@@ -47,6 +47,6 @@ Appliquer la police Times à l’élément courant de la liste :
 |  |  |
 | --- | --- |
 | Numéro de commande | 953 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

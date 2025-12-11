@@ -45,6 +45,6 @@ Se quiser o valor da data source de um objeto formulário, obtenha seu nome e es
 |  |  |
 | --- | --- |
 | Número do comando | 1742 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

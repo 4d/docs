@@ -35,6 +35,6 @@ Vous pouvez passer dans *événement* tout événement formulaire prédéfini de
 |  |  |
 | --- | --- |
 | Numéro de commande | 1086 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

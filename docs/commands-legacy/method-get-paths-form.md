@@ -75,6 +75,6 @@ List of all objects of the "input" form for the \[Employees\] table from a compo
 |  |  |
 | --- | --- |
 | Command number | 1168 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

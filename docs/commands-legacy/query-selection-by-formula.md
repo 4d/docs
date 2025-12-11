@@ -36,7 +36,7 @@ For more information, see the description of the [QUERY BY FORMULA](query-by-for
 |  |  |
 | --- | --- |
 | Command number | 207 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

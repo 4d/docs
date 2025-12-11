@@ -63,6 +63,6 @@ You want to set the minimum and maximum heights for a list box with an automatic
 |  |  |
 | --- | --- |
 | Command number | 1501 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

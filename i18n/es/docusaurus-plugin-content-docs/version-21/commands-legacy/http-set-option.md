@@ -51,6 +51,6 @@ El orden de llamada de las opciones no tiene importancia. Si la misma opción se
 |  |  |
 | --- | --- |
 | Número de comando | 1160 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

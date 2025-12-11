@@ -55,6 +55,6 @@ Les fichiers de clés (fichiers d'extension ".4DKeyChain") doivent être stocké
 |  |  |
 | --- | --- |
 | Numéro de commande | 1639 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

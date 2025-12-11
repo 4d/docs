@@ -112,6 +112,6 @@ If values are edited and the OK button is clicked, the field is updated (the par
 |  |  |
 | --- | --- |
 | Command number | 1466 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

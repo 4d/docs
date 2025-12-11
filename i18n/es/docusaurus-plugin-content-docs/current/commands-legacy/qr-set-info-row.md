@@ -55,7 +55,7 @@ La siguiente instrucción oculta el contenido de la línea detalle:
 |  |  |
 | --- | --- |
 | Número de comando | 763 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

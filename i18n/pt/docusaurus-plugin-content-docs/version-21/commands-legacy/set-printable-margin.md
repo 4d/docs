@@ -63,6 +63,6 @@ O exemplo a seguir lhe permite obter o tamanho do papel:
 |  |  |
 | --- | --- |
 | Número do comando | 710 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

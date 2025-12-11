@@ -83,6 +83,6 @@ Quando executa este código:
 |  |  |
 | --- | --- |
 | Número do comando | 1236 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

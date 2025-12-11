@@ -44,6 +44,6 @@ Pour connaître la taille totale de la page, vous pouvez :
 |  |  |
 | --- | --- |
 | Numéro de commande | 703 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

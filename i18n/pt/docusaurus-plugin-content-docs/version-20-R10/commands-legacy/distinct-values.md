@@ -89,6 +89,6 @@ Para calcular as estatísticas, se quiser ordenar o número de valores distintos
 |  |  |
 | --- | --- |
 | Número do comando | 339 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

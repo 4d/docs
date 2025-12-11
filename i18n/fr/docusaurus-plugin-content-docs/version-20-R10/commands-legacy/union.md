@@ -56,6 +56,6 @@ L'exemple suivant ajoute des enregistrements à l'ensemble des meilleurs clients
 |  |  |
 | --- | --- |
 | Numéro de commande | 120 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

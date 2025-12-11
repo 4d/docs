@@ -43,7 +43,7 @@ Si pasa un número de *comando* incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 791 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

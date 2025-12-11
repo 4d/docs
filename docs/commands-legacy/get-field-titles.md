@@ -35,6 +35,6 @@ In both cases, the command does not return invisible fields.
 |  |  |
 | --- | --- |
 | Command number | 804 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

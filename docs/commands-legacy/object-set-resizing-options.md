@@ -47,6 +47,6 @@ In the *vertical* parameter, you pass a value indicating the vertical resizing o
 |  |  |
 | --- | --- |
 | Command number | 1175 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

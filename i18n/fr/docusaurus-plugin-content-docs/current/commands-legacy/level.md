@@ -72,6 +72,6 @@ Cet exemple est une maquette de méthode formulaire. Il traite chaque événemen
 |  |  |
 | --- | --- |
 | Numéro de commande | 101 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

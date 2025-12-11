@@ -63,7 +63,7 @@ The following technique uses **RELATE ONE SELECTION** to accomplish the same res
 |  |  |
 | --- | --- |
 | Command number | 349 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

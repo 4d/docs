@@ -50,7 +50,7 @@ This example orders the records of the \[People\] table in descending order, bas
 |  |  |
 | --- | --- |
 | Command number | 300 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 

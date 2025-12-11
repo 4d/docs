@@ -44,6 +44,6 @@ Desativação de asserções
 |  |  |
 | --- | --- |
 | Número do comando | 1131 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

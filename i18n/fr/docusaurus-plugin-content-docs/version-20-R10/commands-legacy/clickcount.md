@@ -65,6 +65,6 @@ Les libellés ne sont pas saisissables mais ils peuvent le devenir après un tri
 |  |  |
 | --- | --- |
 | Numéro de commande | 1332 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

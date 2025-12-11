@@ -31,6 +31,6 @@ O comando retorna *True* se existir um URL e do contrário *False*. Particularme
 |  |  |
 | --- | --- |
 | Número do comando | 1027 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

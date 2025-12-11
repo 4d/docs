@@ -58,7 +58,7 @@ Queremos contar el número posible de errores en un texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1215 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

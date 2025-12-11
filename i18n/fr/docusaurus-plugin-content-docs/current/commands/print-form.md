@@ -188,6 +188,6 @@ Le code qui appelle la boîte de dialogue imprime ensuite le corps :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 5                           |
-| Thread safe        | &cross; |
+| Thread safe        | no |
 
 

@@ -40,6 +40,6 @@ Vous pouvez comparer la valeur retournée par la commande aux constantes suivant
 |  |  |
 | --- | --- |
 | Numéro de commande | 1247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

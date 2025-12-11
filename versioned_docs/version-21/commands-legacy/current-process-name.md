@@ -38,6 +38,6 @@ You want to call a worker and pass the calling process name as parameter:
 |  |  |
 | --- | --- |
 | Command number | 1392 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

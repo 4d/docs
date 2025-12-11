@@ -69,6 +69,6 @@ Ver el segundo ejemplo del comando [SET QUERY DESTINATION](set-query-destination
 |  |  |
 | --- | --- |
 | Número de comando | 395 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

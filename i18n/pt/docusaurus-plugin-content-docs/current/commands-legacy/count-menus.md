@@ -29,7 +29,7 @@ Se omitir o parâmetro *processo*, Count menus é aplicada a barra de menus do p
 |  |  |
 | --- | --- |
 | Número do comando | 404 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

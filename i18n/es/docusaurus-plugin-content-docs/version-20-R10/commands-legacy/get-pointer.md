@@ -56,6 +56,6 @@ Utilizar punteros a elementos de arrays de dos dimensiones:
 |  |  |
 | --- | --- |
 | Número de comando | 304 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

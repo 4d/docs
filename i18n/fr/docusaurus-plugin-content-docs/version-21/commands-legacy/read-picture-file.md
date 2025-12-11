@@ -46,7 +46,7 @@ Si l’exécution de la commande est correcte, la variable système Document con
 |  |  |
 | --- | --- |
 | Numéro de commande | 678 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

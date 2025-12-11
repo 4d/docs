@@ -30,6 +30,6 @@ This command can be used to detect any table deletions, which create gaps in the
 |  |  |
 | --- | --- |
 | Command number | 999 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

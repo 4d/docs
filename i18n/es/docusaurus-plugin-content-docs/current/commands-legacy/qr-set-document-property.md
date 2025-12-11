@@ -51,7 +51,7 @@ Si pasa un valor incorrecto en *propiedad* o *valor*, se genera el error corresp
 |  |  |
 | --- | --- |
 | Número de comando | 772 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

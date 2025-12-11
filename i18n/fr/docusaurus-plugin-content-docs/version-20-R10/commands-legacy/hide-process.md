@@ -43,6 +43,6 @@ L'exemple suivant cachera toutes les fenêtres appartenant au process courant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 324 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

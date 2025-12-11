@@ -47,6 +47,6 @@ The *title* parameter returns the title of the form's window as it was defined i
 |  |  |
 | --- | --- |
 | Command number | 674 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

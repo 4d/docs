@@ -40,7 +40,7 @@ La variable sistema OK toma el valor 0 si el recurso no existe, de lo contrario 
 |  |  |
 | --- | --- |
 | Número de comando | 515 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

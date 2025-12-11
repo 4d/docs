@@ -30,6 +30,6 @@ The current form window can be generated automatically using a command such as [
 |  |  |
 | --- | --- |
 | Command number | 827 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

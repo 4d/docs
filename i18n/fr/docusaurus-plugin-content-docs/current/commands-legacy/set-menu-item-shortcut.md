@@ -85,7 +85,7 @@ Définition du raccourci F4 pour l'élément de menu "Fermer" :
 |  |  |
 | --- | --- |
 | Numéro de commande | 423 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

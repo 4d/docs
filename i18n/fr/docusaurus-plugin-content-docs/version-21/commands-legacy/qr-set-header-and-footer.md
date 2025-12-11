@@ -60,7 +60,7 @@ L'instruction suivante place le libellé “Titre du centre” dans l'en-tête d
 |  |  |
 | --- | --- |
 | Numéro de commande | 774 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

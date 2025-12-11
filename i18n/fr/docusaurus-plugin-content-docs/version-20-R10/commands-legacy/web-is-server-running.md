@@ -43,6 +43,6 @@ Vous souhaitez tester si le serveur Web de 4D est lancé :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1313 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

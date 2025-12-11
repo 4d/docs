@@ -39,6 +39,6 @@ Se nenhum ícone está associado a linha de menu, o comando devolve uma imagem v
 |  |  |
 | --- | --- |
 | Número do comando | 983 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

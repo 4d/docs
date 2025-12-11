@@ -47,6 +47,6 @@ Em uma de suas rotinas, você inclui a depuração do código apenas quando voc�
 |  |  |
 | --- | --- |
 | Número do comando | 492 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

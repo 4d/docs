@@ -38,7 +38,7 @@ The following example makes the last record of the \[People\] table the current 
 |  |  |
 | --- | --- |
 | Command number | 200 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

@@ -112,6 +112,6 @@ No editor de barras de menus, pode substituir ADICIONAR CLIENTES pelo método IN
 |  |  |
 | --- | --- |
 | Número do comando | 317 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -44,6 +44,6 @@ The command returns a value corresponding to the border line style. You can comp
 |  |  |
 | --- | --- |
 | Command number | 1263 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

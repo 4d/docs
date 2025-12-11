@@ -64,6 +64,6 @@ You want to select styles of the "Verdana" font family (if available):
 |  |  |
 | --- | --- |
 | Command number | 1362 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

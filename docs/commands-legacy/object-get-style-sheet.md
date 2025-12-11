@@ -51,6 +51,6 @@ In **project architecture**, only the three automatic style sheets are supported
 |  |  |
 | --- | --- |
 | Command number | 1258 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

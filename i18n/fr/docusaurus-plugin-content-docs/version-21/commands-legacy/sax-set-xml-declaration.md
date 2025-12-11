@@ -50,6 +50,6 @@ Le code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 858 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

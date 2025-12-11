@@ -49,6 +49,6 @@ Consulte os exemplos do comando [LAUNCH EXTERNAL PROCESS](launch-external-proces
 |  |  |
 | --- | --- |
 | Número do comando | 812 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

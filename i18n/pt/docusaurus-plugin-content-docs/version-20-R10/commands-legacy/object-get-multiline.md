@@ -43,6 +43,6 @@ O valor devolvido corresponde a uma das seguintes constantes do tema "*Proprieda
 |  |  |
 | --- | --- |
 | Número do comando | 1254 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -31,7 +31,7 @@ OLD RELATED MANY muda a seleção da tabela relacionada e seleciona o primeiro r
 |  |  |
 | --- | --- |
 | Número do comando | 263 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

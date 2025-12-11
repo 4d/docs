@@ -43,6 +43,6 @@ Você quer eliminar a propriedade "idade" de um objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1226 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

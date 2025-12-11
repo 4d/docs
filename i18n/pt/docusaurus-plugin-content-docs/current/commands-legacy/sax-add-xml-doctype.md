@@ -52,7 +52,7 @@ Em caso de erro, o comando retorna um erro que possa ser interceptado usando um 
 |  |  |
 | --- | --- |
 | Número do comando | 851 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

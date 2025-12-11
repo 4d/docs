@@ -48,7 +48,7 @@ Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par 
 |  |  |
 | --- | --- |
 | Numéro de commande | 693 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

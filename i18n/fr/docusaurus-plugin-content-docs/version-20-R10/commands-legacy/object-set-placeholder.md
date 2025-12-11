@@ -50,6 +50,6 @@ Vous souhaitez afficher le texte exemple "Recherche" dans une combo box :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1295 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

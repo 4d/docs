@@ -36,7 +36,7 @@ Tenga en cuenta que cuando OK toma el valor 0, la transacción automáticamente 
 |  |  |
 | --- | --- |
 | Número de comando | 240 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

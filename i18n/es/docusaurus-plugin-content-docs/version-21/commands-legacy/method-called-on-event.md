@@ -28,6 +28,6 @@ Si no se ha instalado un ningún método, se devuelve una cadena vacía ("").
 |  |  |
 | --- | --- |
 | Número de comando | 705 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -45,6 +45,6 @@ To prevent this, in the On Resize form event of the standard window, you need to
 |  |  |
 | --- | --- |
 | Command number | 434 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

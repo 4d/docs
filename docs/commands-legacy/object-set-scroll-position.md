@@ -96,6 +96,6 @@ Make sure that you do not omit the second *\** parameter in this case, otherwise
 |  |  |
 | --- | --- |
 | Command number | 906 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

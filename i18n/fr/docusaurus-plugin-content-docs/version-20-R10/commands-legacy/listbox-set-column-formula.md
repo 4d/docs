@@ -47,6 +47,6 @@ Le paramètre *typeDonnées* permet de désigner le type des données issues de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1203 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

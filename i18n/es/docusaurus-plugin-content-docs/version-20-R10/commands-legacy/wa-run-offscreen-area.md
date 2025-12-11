@@ -102,7 +102,7 @@ La variable del sistema OK se define en 0 si se ha alcanzado el tiempo de espera
 |  |  |
 | --- | --- |
 | Número de comando | 1727 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

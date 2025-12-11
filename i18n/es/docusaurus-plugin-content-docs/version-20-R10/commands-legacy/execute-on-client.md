@@ -65,7 +65,7 @@ Consulte el ejemplo del comando [REGISTER CLIENT](register-client.md "REGISTER C
 |  |  |
 | --- | --- |
 | Número de comando | 651 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

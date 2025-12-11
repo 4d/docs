@@ -57,6 +57,6 @@ Queremos mudar um valor no primeiro elemento do array:
 |  |  |
 | --- | --- |
 | Número do comando | 1229 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

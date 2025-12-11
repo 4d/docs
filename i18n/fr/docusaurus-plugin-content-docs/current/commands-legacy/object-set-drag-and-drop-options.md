@@ -48,6 +48,6 @@ Définition d’une zone de texte en glisser-déposer auto :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1183 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

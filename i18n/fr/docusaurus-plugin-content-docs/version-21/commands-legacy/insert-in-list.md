@@ -56,6 +56,6 @@ L'exemple suivant insère un élément (associé à aucune sous-liste) juste dev
 |  |  |
 | --- | --- |
 | Numéro de commande | 625 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

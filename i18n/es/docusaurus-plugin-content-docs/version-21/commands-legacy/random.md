@@ -39,6 +39,6 @@ El siguiente ejemplo asigna un valor aleatorio entre 10 y 30 a la variable *vlRe
 |  |  |
 | --- | --- |
 | Número de comando | 100 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

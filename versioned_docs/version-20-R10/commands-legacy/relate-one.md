@@ -94,7 +94,7 @@ If the command has been executed correctly and if the related records have been 
 |  |  |
 | --- | --- |
 | Command number | 42 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

@@ -67,7 +67,7 @@ O método a seguir de formulário utiliza Menu selected para proporcionar os arg
 |  |  |
 | --- | --- |
 | Número do comando | 152 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

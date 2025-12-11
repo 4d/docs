@@ -31,6 +31,6 @@ Référez-vous à l'exemple de la fonction [Milliseconds](milliseconds.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 458 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

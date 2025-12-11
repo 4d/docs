@@ -64,6 +64,6 @@ O exemplo a seguir lê 20 valores Inteiro longo de um BLOB, iniciando no offset 
 |  |  |
 | --- | --- |
 | Número do comando | 551 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

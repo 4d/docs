@@ -53,6 +53,6 @@ Mac OS
 |  |  |
 | --- | --- |
 | Numéro de commande | 454 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

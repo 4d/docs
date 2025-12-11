@@ -34,6 +34,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 847 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -202,6 +202,6 @@ Usted desea almacenar una imagen en un campo objeto. Puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 1220 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

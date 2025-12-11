@@ -52,6 +52,6 @@ Is license available devuelve [False](false.md "False") si el plug-in está func
 |  |  |
 | --- | --- |
 | Número de comando | 714 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

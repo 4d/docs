@@ -44,7 +44,7 @@ Se especificar uma rota de acesso inválida, será gerado um erro do administrad
 |  |  |
 | --- | --- |
 | Número do comando | 634 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

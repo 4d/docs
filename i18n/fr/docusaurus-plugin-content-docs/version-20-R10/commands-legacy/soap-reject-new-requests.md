@@ -42,6 +42,6 @@ Vous souhaitez rejeter les nouvelles requêtes reçues par votre serveur Web Ser
 |  |  |
 | --- | --- |
 | Numéro de commande | 1636 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

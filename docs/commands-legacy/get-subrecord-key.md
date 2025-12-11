@@ -85,6 +85,6 @@ This code will work with either a special relation or a standard one.
 |  |  |
 | --- | --- |
 | Command number | 1137 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

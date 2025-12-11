@@ -90,6 +90,6 @@ Ejemplo con una colección de objetos:
 |  |  |
 | --- | --- |
 | Número de comando | 1715 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

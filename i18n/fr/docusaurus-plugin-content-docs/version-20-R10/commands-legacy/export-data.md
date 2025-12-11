@@ -103,7 +103,7 @@ Si l'utilisateur clique sur **Annuler** dans une des boîtes de dialogue (d'enre
 |  |  |
 | --- | --- |
 | Numéro de commande | 666 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, Document |
 
 

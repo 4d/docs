@@ -29,6 +29,6 @@ Dans le cas d'une version monoposte de 4D, **Count users** retourne 1.
 |  |  |
 | --- | --- |
 | Numéro de commande | 342 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

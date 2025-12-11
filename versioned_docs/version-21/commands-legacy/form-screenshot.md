@@ -42,6 +42,6 @@ By default, the command returns a screenshot of page 1 of the form. If you only 
 |  |  |
 | --- | --- |
 | Command number | 940 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

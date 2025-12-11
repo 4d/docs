@@ -39,6 +39,6 @@ A verificação ortográfica começa com a primeira palavra de campo ou variáve
 |  |  |
 | --- | --- |
 | Número do comando | 900 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

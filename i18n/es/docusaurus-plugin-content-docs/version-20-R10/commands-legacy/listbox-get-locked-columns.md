@@ -35,6 +35,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1152 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

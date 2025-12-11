@@ -85,6 +85,6 @@ Neste contexto, se o usuário fizer clique no botão:
 |  |  |
 | --- | --- |
 | Número do comando | 453 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

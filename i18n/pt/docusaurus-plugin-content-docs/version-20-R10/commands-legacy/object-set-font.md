@@ -66,6 +66,6 @@ O seguinte exemplo utiliza a opção especial *%password*, desenhada para a entr
 |  |  |
 | --- | --- |
 | Número do comando | 164 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

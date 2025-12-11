@@ -66,7 +66,7 @@ Se o comando tiver sido executado corretamente e se o elemento analisado não fo
 |  |  |
 | --- | --- |
 | Número do comando | 724 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

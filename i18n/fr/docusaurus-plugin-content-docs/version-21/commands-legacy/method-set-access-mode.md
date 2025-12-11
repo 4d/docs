@@ -31,6 +31,6 @@ Passez dans *mode* une des constantes suivantes du thème *Accès objets dévelo
 |  |  |
 | --- | --- |
 | Numéro de commande | 1191 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

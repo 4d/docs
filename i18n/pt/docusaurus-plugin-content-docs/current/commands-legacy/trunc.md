@@ -41,6 +41,6 @@ O exemplo a seguir ilustra a maneira como **Trunc** funciona com diferentes argu
 |  |  |
 | --- | --- |
 | Número do comando | 95 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

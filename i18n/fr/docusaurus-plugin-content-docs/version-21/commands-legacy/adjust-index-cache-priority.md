@@ -58,6 +58,6 @@ Vous souhaitez modifier temporairement la priorité des index du champ \[Docs\]C
 |  |  |
 | --- | --- |
 | Numéro de commande | 1430 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

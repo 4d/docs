@@ -184,6 +184,6 @@ Cet exemple illustre l'effet des différents types de déclarations :
 |  |  |
 | --- | --- |
 | Numéro de commande | 782 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

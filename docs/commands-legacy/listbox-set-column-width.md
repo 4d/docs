@@ -40,6 +40,6 @@ The optional *minWidth* and *maxWidth* parameters can be used to set limits for 
 |  |  |
 | --- | --- |
 | Command number | 833 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

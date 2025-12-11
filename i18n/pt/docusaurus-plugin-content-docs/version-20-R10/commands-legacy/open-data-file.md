@@ -60,6 +60,6 @@ No contexto de implementação de uma aplicação fusionada, se quiser abrir ou 
 |  |  |
 | --- | --- |
 | Número do comando | 312 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

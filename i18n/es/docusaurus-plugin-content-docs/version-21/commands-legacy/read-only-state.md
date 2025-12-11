@@ -42,6 +42,6 @@ El siguiente ejemplo prueba el estado de la tabla \[Facturas\]. Si el estado de 
 |  |  |
 | --- | --- |
 | Número de comando | 362 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

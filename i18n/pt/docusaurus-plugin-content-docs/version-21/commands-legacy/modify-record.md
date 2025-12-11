@@ -54,7 +54,7 @@ A variável sistema OK toma o valor 1 se aceitar o registro e 0 se o cancelar. A
 |  |  |
 | --- | --- |
 | Número do comando | 57 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Proibido no servidor ||
 

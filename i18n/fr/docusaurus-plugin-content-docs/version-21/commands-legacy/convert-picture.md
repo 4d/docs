@@ -55,6 +55,6 @@ Conversion d’une image avec une qualité de 60 % :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1002 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

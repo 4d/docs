@@ -54,7 +54,7 @@ Se não houver suficiente memória para colocar uma cópia da imagem na área de
 |  |  |
 | --- | --- |
 | Número do comando | 521 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

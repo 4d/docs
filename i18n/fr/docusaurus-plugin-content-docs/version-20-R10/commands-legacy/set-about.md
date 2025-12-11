@@ -49,6 +49,6 @@ L'exemple suivant réinitialise la commande de menu d'A propos de 4D :
 |  |  |
 | --- | --- |
 | Numéro de commande | 316 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

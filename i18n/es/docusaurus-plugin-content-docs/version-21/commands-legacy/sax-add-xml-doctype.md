@@ -52,7 +52,7 @@ En caso de error, el comando devuelve un error que puede interceptarse utilizand
 |  |  |
 | --- | --- |
 | Número de comando | 851 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

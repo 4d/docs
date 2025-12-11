@@ -45,6 +45,6 @@ You want to reject or accept new client connections:
 |  |  |
 | --- | --- |
 | Command number | 1635 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

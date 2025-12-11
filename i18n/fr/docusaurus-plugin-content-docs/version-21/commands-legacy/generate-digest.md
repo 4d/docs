@@ -88,6 +88,6 @@ Ces exemples illustrent comment récupérer la clé digest d’un texte :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

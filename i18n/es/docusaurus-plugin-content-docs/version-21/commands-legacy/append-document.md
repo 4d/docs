@@ -44,7 +44,7 @@ El siguiente ejemplo abre un documento existente llamado Nota, añade la cadena 
 |  |  |
 | --- | --- |
 | Número de comando | 265 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

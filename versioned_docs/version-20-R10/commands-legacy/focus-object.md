@@ -50,6 +50,6 @@ The following example is an object method for a button. The object method change
 |  |  |
 | --- | --- |
 | Command number | 278 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -50,6 +50,6 @@ The following example deletes the last element from an array, if it exists:
 |  |  |
 | --- | --- |
 | Command number | 228 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

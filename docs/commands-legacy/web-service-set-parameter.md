@@ -78,6 +78,6 @@ This example defines two parameters:
 |  |  |
 | --- | --- |
 | Command number | 777 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

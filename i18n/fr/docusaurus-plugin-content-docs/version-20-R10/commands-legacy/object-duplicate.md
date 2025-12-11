@@ -108,7 +108,7 @@ Création d’un nouveau bouton radio "bRadio6" basé sur le bouton radio exista
 |  |  |
 | --- | --- |
 | Numéro de commande | 1111 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

@@ -59,7 +59,7 @@ OK prend la valeur 1 si l'import s'est correctement déroulé, sinon elle prend 
 |  |  |
 | --- | --- |
 | Numéro de commande | 168 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

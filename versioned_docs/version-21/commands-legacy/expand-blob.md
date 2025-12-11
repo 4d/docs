@@ -70,7 +70,7 @@ The OK variable is set to 1 if the BLOB has been successfully expanded, otherwis
 |  |  |
 | --- | --- |
 | Command number | 535 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

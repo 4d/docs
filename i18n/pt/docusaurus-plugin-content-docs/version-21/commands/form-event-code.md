@@ -354,6 +354,6 @@ As a result, the red rectangle follows the scrolling of the list box:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 388                         |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

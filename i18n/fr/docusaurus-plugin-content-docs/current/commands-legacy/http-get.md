@@ -110,7 +110,7 @@ Récupération d’une vidéo :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1157 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

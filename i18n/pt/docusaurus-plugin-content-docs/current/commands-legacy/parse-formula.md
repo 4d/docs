@@ -112,6 +112,6 @@ O parâmetro opcional *mensagemE* *rro* receberá uma mensagem de erro se houver
 |  |  |
 | --- | --- |
 | Número do comando | 1576 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

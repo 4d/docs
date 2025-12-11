@@ -51,7 +51,7 @@ Este exemplo ordena os registros da tabela \[Pessoas\] em ordem descendente, bas
 |  |  |
 | --- | --- |
 | Número do comando | 300 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 

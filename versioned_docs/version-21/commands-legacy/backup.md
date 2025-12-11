@@ -43,7 +43,7 @@ If an incident occurs during backup, information about the incident is written i
 |  |  |
 | --- | --- |
 | Command number | 887 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

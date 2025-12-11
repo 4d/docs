@@ -115,6 +115,6 @@ Este es un ejemplo de puntero a un array 2D:
 |  |  |
 | --- | --- |
 | Número de comando | 394 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

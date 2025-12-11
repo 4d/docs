@@ -37,6 +37,6 @@ Este comando devolve uma cadeia vazia nos seguintes casos:
 |  |  |
 | --- | --- |
 | Número do comando | 1133 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

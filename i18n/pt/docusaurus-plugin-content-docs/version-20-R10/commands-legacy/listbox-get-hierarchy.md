@@ -40,6 +40,6 @@ Se o list box está em modo hierárquico, o comando preenche o array *hierarquia
 |  |  |
 | --- | --- |
 | Número do comando | 1099 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -34,6 +34,6 @@ Si especifica el parámetro proceso *proceso*, el clic se envía al proceso cuyo
 |  |  |
 | --- | --- |
 | Número de comando | 466 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

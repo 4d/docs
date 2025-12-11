@@ -66,6 +66,6 @@ Después de la ejecución del comando, la variable se incrementa en el número d
 |  |  |
 | --- | --- |
 | Número de comando | 555 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

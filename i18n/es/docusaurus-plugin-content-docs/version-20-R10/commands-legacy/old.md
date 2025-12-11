@@ -45,6 +45,6 @@ Para restaurar el valor original de un campo, asígnele el valor devuelto por Ol
 |  |  |
 | --- | --- |
 | Número de comando | 35 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

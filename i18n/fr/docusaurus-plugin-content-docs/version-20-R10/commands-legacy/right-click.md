@@ -29,6 +29,6 @@ Cette commande doit être appelée uniquement dans le cadre de l’événement f
 |  |  |
 | --- | --- |
 | Numéro de commande | 712 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

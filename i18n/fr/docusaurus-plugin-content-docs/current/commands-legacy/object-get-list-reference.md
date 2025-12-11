@@ -42,6 +42,6 @@ Si aucune liste hiérarchique n’est associée à l’objet pour le *typeListe*
 |  |  |
 | --- | --- |
 | Numéro de commande | 1267 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

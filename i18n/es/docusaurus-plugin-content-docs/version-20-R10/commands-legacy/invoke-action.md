@@ -69,6 +69,6 @@ Usted desea ejecutar una acción estándar **Goto page** (página 3) en el formu
 |  |  |
 | --- | --- |
 | Número de comando | 1439 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

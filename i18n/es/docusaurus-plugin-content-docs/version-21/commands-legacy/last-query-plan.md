@@ -40,6 +40,6 @@ La descripción del plan de la última búsqueda puede compararse con la descrip
 |  |  |
 | --- | --- |
 | Número de comando | 1046 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

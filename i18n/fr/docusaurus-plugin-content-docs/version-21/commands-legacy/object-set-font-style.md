@@ -61,6 +61,6 @@ L'exemple suivant définit le style de police Normal pour tous les objets de for
 |  |  |
 | --- | --- |
 | Numéro de commande | 166 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -48,6 +48,6 @@ En lugar de utilizar las acciones automáticas “Siguiente registro” o “Reg
 |  |  |
 | --- | --- |
 | Número de comando | 669 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -33,6 +33,6 @@ Pour ne plus envoyer *homePage* comme page d’accueil pour le process Web coura
 |  |  |
 | --- | --- |
 | Numéro de commande | 639 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

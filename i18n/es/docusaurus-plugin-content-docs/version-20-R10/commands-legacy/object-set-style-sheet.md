@@ -54,6 +54,6 @@ En la **arquitectura proyecto**, este comando sólo soporta las tres hojas de es
 |  |  |
 | --- | --- |
 | Número de comando | 1257 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

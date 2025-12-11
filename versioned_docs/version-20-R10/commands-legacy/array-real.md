@@ -65,6 +65,6 @@ This example creates an interprocess array of 50 Real elements and sets each ele
 |  |  |
 | --- | --- |
 | Command number | 219 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

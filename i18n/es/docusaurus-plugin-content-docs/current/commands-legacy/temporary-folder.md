@@ -30,6 +30,6 @@ Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard
 |  |  |
 | --- | --- |
 | Número de comando | 486 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -35,6 +35,6 @@ Pass the Boolean values in *horizontal* and *vertical* that indicate if the corr
 |  |  |
 | --- | --- |
 | Command number | 841 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -38,6 +38,6 @@ Este comando deve ser utilizado com o evento de formulário On row moved (ver o 
 |  |  |
 | --- | --- |
 | Número do comando | 837 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

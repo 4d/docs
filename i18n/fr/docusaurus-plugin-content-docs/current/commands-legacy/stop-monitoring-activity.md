@@ -32,6 +32,6 @@ Voir l'exemple de **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1721 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

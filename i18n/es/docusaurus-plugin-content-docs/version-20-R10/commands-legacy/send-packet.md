@@ -88,6 +88,6 @@ Este ejemplo ilustra el envío y recuperación de caracteres extendidos vía un 
 |  |  |
 | --- | --- |
 | Número de comando | 103 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

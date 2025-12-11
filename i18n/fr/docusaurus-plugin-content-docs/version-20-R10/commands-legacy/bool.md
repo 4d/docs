@@ -53,6 +53,6 @@ Vous sélectionnez une valeur en fonction d'un attribut de champ objet, en antic
 |  |  |
 | --- | --- |
 | Numéro de commande | 1537 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

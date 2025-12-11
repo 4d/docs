@@ -113,6 +113,6 @@ You need to print in a 400-pixel wide area, a text with a maximum of 80 lines an
 |  |  |
 | --- | --- |
 | Command number | 1149 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

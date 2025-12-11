@@ -60,7 +60,7 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Se *r
 |  |  |
 | --- | --- |
 | Número do comando | 991 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

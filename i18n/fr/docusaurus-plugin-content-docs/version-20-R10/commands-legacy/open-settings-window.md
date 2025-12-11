@@ -144,7 +144,7 @@ Si la boîte de dialogue des préférences/propriétés est validée, la variabl
 |  |  |
 | --- | --- |
 | Numéro de commande | 903 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

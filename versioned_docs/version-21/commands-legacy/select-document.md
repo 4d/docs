@@ -102,7 +102,7 @@ If no file was selected (for example, if the user clicked on the **Cancel** butt
 |  |  |
 | --- | --- |
 | Command number | 905 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

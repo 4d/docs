@@ -45,6 +45,6 @@ Utilizando uma área de rolagem chamada *atVolumes*,se quiser mostrar a lista de
 |  |  |
 | --- | --- |
 | Número do comando | 471 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

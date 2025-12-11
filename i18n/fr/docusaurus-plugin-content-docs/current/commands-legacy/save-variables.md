@@ -54,7 +54,7 @@ Si l'opération s'est correctement déroulée, la variable OK prend la valeur 1,
 |  |  |
 | --- | --- |
 | Numéro de commande | 75 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

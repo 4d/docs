@@ -70,6 +70,6 @@ O seguinte método de projeto adiciona os parágrafos que são encontrados no te
 |  |  |
 | --- | --- |
 | Número do comando | 12 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

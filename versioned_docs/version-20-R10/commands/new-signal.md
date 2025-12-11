@@ -79,6 +79,6 @@ The ***doSomething*** method could be like:
 |  |  |
 | --- | --- |
 | Command number | 1641 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

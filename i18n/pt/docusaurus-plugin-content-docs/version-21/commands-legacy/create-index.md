@@ -93,6 +93,6 @@ Criação de um índice composto nos campos “Cidade” e “CódigoPostal” d
 |  |  |
 | --- | --- |
 | Número do comando | 966 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

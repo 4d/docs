@@ -135,6 +135,6 @@ O resultado é...
 |  |  |
 | --- | --- |
 | Número do comando | 1181 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -55,7 +55,7 @@ El siguiente ejemplo fija el puerto serial para recibir datos y el timeout. Los 
 |  |  |
 | --- | --- |
 | Número de comando | 268 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

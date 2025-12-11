@@ -95,7 +95,7 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 |  |  |
 | --- | --- |
 | Command number | 56 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

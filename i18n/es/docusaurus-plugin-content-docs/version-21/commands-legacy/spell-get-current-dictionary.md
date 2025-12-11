@@ -39,6 +39,6 @@ Queremos mostrar el lenguaje del diccionario actual:
 |  |  |
 | --- | --- |
 | Número de comando | 1205 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

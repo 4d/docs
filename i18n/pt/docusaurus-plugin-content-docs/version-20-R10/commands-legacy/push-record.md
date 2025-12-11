@@ -39,6 +39,6 @@ O seguinte exemplo empilha o registro de um cliente:
 |  |  |
 | --- | --- |
 | Número do comando | 176 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

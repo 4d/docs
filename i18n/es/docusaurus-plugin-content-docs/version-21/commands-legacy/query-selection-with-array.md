@@ -34,7 +34,7 @@ Para mayor información, consulte la descripción del comando [QUERY WITH ARRAY]
 |  |  |
 | --- | --- |
 | Número de comando | 1050 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

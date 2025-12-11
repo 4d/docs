@@ -51,6 +51,6 @@ Este comando tem o mesmo efeito que a modificação do valor da variável "URL" 
 |  |  |
 | --- | --- |
 | Número do comando | 1020 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -88,6 +88,6 @@ Este exemplo ilustra o envio e recuperação de caracteres estendidos através d
 |  |  |
 | --- | --- |
 | Número do comando | 103 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

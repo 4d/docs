@@ -120,6 +120,6 @@ Se os valores forem editados e o botão OK for clicado, o campo será atualizado
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1466                        |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

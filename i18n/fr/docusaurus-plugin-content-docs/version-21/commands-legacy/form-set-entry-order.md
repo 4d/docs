@@ -58,6 +58,6 @@ Vous souhaitez fixer l'ordre de saisie des objets du formulaire en vous basant s
 |  |  |
 | --- | --- |
 | Numéro de commande | 1468 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

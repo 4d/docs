@@ -75,6 +75,6 @@ L'exemple suivant illustre le rôle du paramètre \* dans le cadre d'une évalua
 |  |  |
 | --- | --- |
 | Numéro de commande | 233 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

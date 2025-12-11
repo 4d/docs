@@ -45,7 +45,7 @@ O exemplo a seguir exemplo inverte a marca de uma linha de menu:
 |  |  |
 | --- | --- |
 | Número do comando | 428 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

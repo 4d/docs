@@ -44,7 +44,7 @@ You specify the font style of the item in the *itemStyle* parameter. You pass a 
 |  |  |
 | --- | --- |
 | Command number | 425 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

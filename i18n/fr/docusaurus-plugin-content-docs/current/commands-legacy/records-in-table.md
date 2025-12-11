@@ -35,6 +35,6 @@ L'exemple suivant affiche une alerte indiquant le nombre d'enregistrements de la
 |  |  |
 | --- | --- |
 | Numéro de commande | 83 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

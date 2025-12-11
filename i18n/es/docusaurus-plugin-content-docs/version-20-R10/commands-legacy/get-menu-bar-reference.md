@@ -45,6 +45,6 @@ Consulte el ejemplo del comando [GET MENU ITEMS](get-menu-items.md "GET MENU ITE
 |  |  |
 | --- | --- |
 | Número de comando | 979 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

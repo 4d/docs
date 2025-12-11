@@ -47,6 +47,6 @@ Ce code permet de proposer un menu comportant le libellé des fenêtres ouvertes
 |  |  |
 | --- | --- |
 | Numéro de commande | 1004 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

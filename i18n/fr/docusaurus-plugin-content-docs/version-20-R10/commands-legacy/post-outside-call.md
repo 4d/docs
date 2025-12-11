@@ -50,7 +50,7 @@ Reportez-vous à l'exemple de la section [Semaphore](semaphore.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 329 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

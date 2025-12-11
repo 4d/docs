@@ -50,7 +50,7 @@ If the command was executed correctly, the system variable OK is set to 1\. Othe
 |  |  |
 | --- | --- |
 | Command number | 877 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

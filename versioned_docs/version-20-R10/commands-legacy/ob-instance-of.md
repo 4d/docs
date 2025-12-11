@@ -58,6 +58,6 @@ Then, in a method, you can write:
 |  |  |
 | --- | --- |
 | Command number | 1731 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

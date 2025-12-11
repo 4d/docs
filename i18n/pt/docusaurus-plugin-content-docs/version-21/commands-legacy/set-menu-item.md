@@ -38,7 +38,7 @@ Se omitir o parâmetro *processo*, SET MENU ITEM é aplicada à barra de menus d
 |  |  |
 | --- | --- |
 | Número do comando | 348 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

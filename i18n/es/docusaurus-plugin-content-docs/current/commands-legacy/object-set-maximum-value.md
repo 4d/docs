@@ -35,6 +35,6 @@ En *valorMax*, pase el nuevo valor máximo que desea asignar al objeto para el p
 |  |  |
 | --- | --- |
 | Número de comando | 1244 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

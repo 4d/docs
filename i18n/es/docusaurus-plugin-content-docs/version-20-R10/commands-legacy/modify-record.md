@@ -54,7 +54,7 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 |  |  |
 | --- | --- |
 | Número de comando | 57 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Prohibido en el servidor ||
 

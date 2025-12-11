@@ -57,6 +57,6 @@ You can express any numerical value as a time:
 |  |  |
 | --- | --- |
 | Command number | 179 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

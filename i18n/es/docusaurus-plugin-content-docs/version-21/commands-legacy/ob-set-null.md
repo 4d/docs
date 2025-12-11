@@ -45,6 +45,6 @@ Queremos poner el valor nulo en la propiedad "edad" para Lea:
 |  |  |
 | --- | --- |
 | Número de comando | 1233 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

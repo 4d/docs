@@ -31,7 +31,7 @@ Se o servidor SQL tiver sido lançado corretamente, a variável Sistema OK assum
 |  |  |
 | --- | --- |
 | Número do comando | 962 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

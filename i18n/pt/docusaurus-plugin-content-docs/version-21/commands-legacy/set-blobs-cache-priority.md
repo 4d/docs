@@ -54,6 +54,6 @@ Em , se quiser definir uma prioridade alta para a tabela \[Customer\]:
 |  |  |
 | --- | --- |
 | Número do comando | 1425 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -42,6 +42,6 @@ O exemplo a seguir mostra uma caixa de alerta com a mensagem, “46 800 segundos
 |  |  |
 | --- | --- |
 | Número do comando | 180 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

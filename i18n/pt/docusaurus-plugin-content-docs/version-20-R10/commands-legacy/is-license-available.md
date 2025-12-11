@@ -54,6 +54,6 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 |  |  |
 | --- | --- |
 | Número do comando | 714 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

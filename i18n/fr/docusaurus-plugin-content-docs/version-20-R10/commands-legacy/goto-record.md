@@ -34,7 +34,7 @@ Référez-vous à l'exemple de la commande [Record number](record-number.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 242 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 | Change la sélection courante ||
 

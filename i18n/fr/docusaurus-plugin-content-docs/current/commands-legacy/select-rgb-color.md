@@ -45,7 +45,7 @@ La prise en compte de la validation de la boîte de dialogue diffère selon la p
 |  |  |
 | --- | --- |
 | Numéro de commande | 956 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 | Interdite sur le serveur ||
 

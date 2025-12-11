@@ -44,6 +44,6 @@ Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 |  |  |
 | --- | --- |
 | Número de comando | 445 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

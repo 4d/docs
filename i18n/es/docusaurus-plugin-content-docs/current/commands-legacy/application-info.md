@@ -137,6 +137,6 @@ Si el código se ejecuta en 4D Server, el objeto contiene (por ejemplo):
 |  |  |
 | --- | --- |
 | Número de comando | 1599 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

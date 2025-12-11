@@ -60,7 +60,7 @@ Si la commande a été exécutée correctement, la variable OK prend la valeur 1
 |  |  |
 | --- | --- |
 | Numéro de commande | 991 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

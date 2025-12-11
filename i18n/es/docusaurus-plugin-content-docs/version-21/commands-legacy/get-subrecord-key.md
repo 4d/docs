@@ -85,6 +85,6 @@ Este código funcionará tanto con una relación especial como con una estándar
 |  |  |
 | --- | --- |
 | Número de comando | 1137 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

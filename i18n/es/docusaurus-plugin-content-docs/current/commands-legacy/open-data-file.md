@@ -60,6 +60,6 @@ En el contexto del despliegue de una aplicación fusionada, usted desea abrir o 
 |  |  |
 | --- | --- |
 | Número de comando | 312 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

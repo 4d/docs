@@ -48,6 +48,6 @@ For a complete description of the appearance, node icons, minimal line height an
 |  |  |
 | --- | --- |
 | Command number | 632 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

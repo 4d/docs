@@ -40,6 +40,6 @@ La hauteur de ligne retournée est exprimée:
 |  |  |
 | --- | --- |
 | Numéro de commande | 1408 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

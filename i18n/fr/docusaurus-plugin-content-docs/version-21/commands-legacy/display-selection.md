@@ -98,7 +98,7 @@ Vous pouvez aussi utiliser d'autres commandes telles que [PRINT SELECTION](print
 |  |  |
 | --- | --- |
 | Numéro de commande | 59 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

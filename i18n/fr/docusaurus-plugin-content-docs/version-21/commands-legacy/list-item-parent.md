@@ -75,6 +75,6 @@ Voici les numéros de référence des éléments de cette liste :
 |  |  |
 | --- | --- |
 | Numéro de commande | 633 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

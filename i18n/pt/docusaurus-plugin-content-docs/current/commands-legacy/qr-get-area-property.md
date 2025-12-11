@@ -39,7 +39,7 @@ Se o parâmetro *propriedade* for incorreto, se gera o erro -9852.
 |  |  |
 | --- | --- |
 | Número do comando | 795 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

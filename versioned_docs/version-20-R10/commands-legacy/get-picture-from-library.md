@@ -67,7 +67,7 @@ If there is not enough memory to return the picture, an error -108 is generated.
 |  |  |
 | --- | --- |
 | Command number | 565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

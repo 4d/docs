@@ -33,6 +33,6 @@ Si pasa el parámetro opcional *\** indica que el parámetro *objeto* es un nomb
 |  |  |
 | --- | --- |
 | Número de comando | 1243 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

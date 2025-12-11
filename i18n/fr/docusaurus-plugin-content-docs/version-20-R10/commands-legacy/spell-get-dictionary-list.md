@@ -57,6 +57,6 @@ Vous avez placé "fr-classique+reforme1990.aff" et "fr-classique+reforme1990.dic
 |  |  |
 | --- | --- |
 | Numéro de commande | 1204 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -51,7 +51,7 @@ Se ou comando tiver sido executado corretamente, a variável sistema Ok assume o
 |  |  |
 | --- | --- |
 | Número do comando | 857 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

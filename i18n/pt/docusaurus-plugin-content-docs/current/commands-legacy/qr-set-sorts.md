@@ -53,7 +53,7 @@ Se passa um número de área *inválido*, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 752 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

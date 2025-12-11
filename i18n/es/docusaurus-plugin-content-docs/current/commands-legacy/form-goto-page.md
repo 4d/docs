@@ -54,6 +54,6 @@ El siguiente ejemplo es un método de objeto para un botón que muestra una pág
 |  |  |
 | --- | --- |
 | Número de comando | 247 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

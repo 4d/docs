@@ -66,6 +66,6 @@ O exemplo a seguir lê um array processo desde o processo indicado por *$vlProce
 |  |  |
 | --- | --- |
 | Número do comando | 635 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

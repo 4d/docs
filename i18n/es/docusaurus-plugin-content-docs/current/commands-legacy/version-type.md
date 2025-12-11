@@ -49,6 +49,6 @@ Esta prueba permite ejecutar código diferente dependiendo de que versión es un
 |  |  |
 | --- | --- |
 | Número de comando | 495 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

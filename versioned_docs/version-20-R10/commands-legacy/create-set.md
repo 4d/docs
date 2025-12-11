@@ -38,6 +38,6 @@ The following example creates a set after doing a search, in order to save the s
 |  |  |
 | --- | --- |
 | Command number | 116 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -57,6 +57,6 @@ Pode expressar todo valor numérico como uma hora:
 |  |  |
 | --- | --- |
 | Número do comando | 179 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

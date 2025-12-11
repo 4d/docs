@@ -49,6 +49,6 @@ Usted quiere conocer el estado de la transacción actual:
 |  |  |
 | --- | --- |
 | Número de comando | 1387 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

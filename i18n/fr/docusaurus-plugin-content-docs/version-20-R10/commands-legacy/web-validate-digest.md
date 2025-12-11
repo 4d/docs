@@ -63,6 +63,6 @@ Exemple de *Méthode base Sur authentification Web* en mode Digest
 |  |  |
 | --- | --- |
 | Numéro de commande | 946 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

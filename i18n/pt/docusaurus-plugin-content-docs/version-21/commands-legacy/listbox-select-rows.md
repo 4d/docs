@@ -89,6 +89,6 @@ Exemplo com a coleção de objetos:
 |  |  |
 | --- | --- |
 | Número do comando | 1715 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

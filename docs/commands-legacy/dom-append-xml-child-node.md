@@ -151,6 +151,6 @@ If the contents of *childValue* are not valid, an error is returned.
 |  |  |
 | --- | --- |
 | Command number | 1080 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

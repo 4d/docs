@@ -63,7 +63,7 @@ You created a "MyUpdates" folder on your disk, where you placed a new version of
 |  |  |
 | --- | --- |
 | Command number | 1291 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

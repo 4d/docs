@@ -48,7 +48,7 @@ Se o método de callback não existir, a verificação não é efetuada, é gera
 |  |  |
 | --- | --- |
 | Número do comando | 1008 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document, error |
 
 

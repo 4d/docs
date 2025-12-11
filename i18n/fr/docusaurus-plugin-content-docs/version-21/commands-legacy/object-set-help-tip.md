@@ -129,6 +129,6 @@ Résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1181 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -69,6 +69,6 @@ En un array de tipo list box, queremos establecer los colores de una fila y para
 |  |  |
 | --- | --- |
 | Número de comando | 1270 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

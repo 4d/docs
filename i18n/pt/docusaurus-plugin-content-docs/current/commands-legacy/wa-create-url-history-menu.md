@@ -73,6 +73,6 @@ O código abaixo pode estar associado a um botão 3D com menu pop up chamado "An
 |  |  |
 | --- | --- |
 | Número do comando | 1049 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

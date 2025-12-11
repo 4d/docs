@@ -119,6 +119,6 @@ Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une colle
 |  |  |
 | --- | --- |
 | Numéro de commande | 1509 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -30,6 +30,6 @@ Reportez-vous à l'exemple de la commande [WEB GET BODY PART](web-get-body-part.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1211 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

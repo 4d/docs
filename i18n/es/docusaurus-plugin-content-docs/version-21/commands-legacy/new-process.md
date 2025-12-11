@@ -121,6 +121,6 @@ En el editor de barras de menús, puede reemplazar ADD CUSTOMERS por el método 
 |  |  |
 | --- | --- |
 | Número de comando | 317 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

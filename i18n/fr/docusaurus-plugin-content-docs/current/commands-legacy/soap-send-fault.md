@@ -49,6 +49,6 @@ Pour reprendre l’exemple du Web Service “Racine\_carree” fourni dans la de
 |  |  |
 | --- | --- |
 | Numéro de commande | 781 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

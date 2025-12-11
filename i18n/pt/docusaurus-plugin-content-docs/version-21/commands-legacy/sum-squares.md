@@ -64,6 +64,6 @@ Este exemplo permite obter a soma de quadrados dos valores localizados num array
 |  |  |
 | --- | --- |
 | Número do comando | 28 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

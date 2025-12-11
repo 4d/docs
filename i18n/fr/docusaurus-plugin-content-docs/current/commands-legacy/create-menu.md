@@ -46,6 +46,6 @@ Reportez-vous à l'exemple de la commande [SET MENU BAR](set-menu-bar.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 408 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

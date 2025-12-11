@@ -45,6 +45,6 @@ Using a scrollable area named *atVolumes* you want to display the list of the vo
 |  |  |
 | --- | --- |
 | Command number | 471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

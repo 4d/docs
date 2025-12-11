@@ -49,6 +49,6 @@ Pase en el parámetro *grupo* el nombre del grupo cuyos usuarios están autoriza
 |  |  |
 | --- | --- |
 | Número de comando | 845 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -39,6 +39,6 @@ We want to display the language of the current dictionary:
 |  |  |
 | --- | --- |
 | Command number | 1205 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

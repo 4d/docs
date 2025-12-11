@@ -59,6 +59,6 @@ Usted desea cambiar temporalmente la prioridad de la caché de los campos de tex
 |  |  |
 | --- | --- |
 | Número de comando | 1431 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

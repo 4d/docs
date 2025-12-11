@@ -35,6 +35,6 @@ Passez dans les paramètres *horizontal* et *vertical* des valeurs booléennes i
 |  |  |
 | --- | --- |
 | Numéro de commande | 841 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

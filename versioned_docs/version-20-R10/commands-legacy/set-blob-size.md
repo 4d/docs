@@ -56,6 +56,6 @@ The following example creates a BLOB of 16K filled of 0xFF:
 |  |  |
 | --- | --- |
 | Command number | 606 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

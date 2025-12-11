@@ -35,6 +35,6 @@ In *event*, you can pass any predefined form event of 4D (you can use the consta
 |  |  |
 | --- | --- |
 | Command number | 1086 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

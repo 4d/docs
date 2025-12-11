@@ -41,6 +41,6 @@ You want to retrieve the numbers of the records in the current selection:
 |  |  |
 | --- | --- |
 | Command number | 647 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -102,6 +102,6 @@ Este exemplo escreve a instância das variáveis *v1*, *v2* e *v3* utilizando a 
 |  |  |
 | --- | --- |
 | Número do comando | 370 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

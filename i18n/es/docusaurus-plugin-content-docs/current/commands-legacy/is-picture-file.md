@@ -34,6 +34,6 @@ Si no pasa el parámetro *\**, el comando prueba el archivo buscando su extensi�
 |  |  |
 | --- | --- |
 | Número de comando | 1113 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

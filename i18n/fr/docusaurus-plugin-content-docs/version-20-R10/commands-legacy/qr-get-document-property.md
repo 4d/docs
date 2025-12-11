@@ -40,6 +40,6 @@ Si la valeur du paramètre *propriété* est incorrecte, l’erreur -9852 est g�
 |  |  |
 | --- | --- |
 | Numéro de commande | 773 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

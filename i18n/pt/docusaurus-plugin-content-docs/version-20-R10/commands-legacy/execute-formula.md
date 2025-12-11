@@ -69,6 +69,6 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 |  |  |
 | --- | --- |
 | Número do comando | 63 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

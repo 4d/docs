@@ -52,6 +52,6 @@ Vous souhaitez activer deux événements et obtenir la liste des événements po
 |  |  |
 | --- | --- |
 | Numéro de commande | 1238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

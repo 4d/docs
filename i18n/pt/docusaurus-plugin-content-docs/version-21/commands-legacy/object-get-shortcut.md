@@ -47,6 +47,6 @@ Se nenhuma tecla de modificação foi definida para o atalho, modificadores devo
 |  |  |
 | --- | --- |
 | Número do comando | 1186 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

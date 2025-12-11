@@ -46,6 +46,6 @@ Exemplos de uso:
 |  |  |
 | --- | --- |
 | Número do comando | 1166 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

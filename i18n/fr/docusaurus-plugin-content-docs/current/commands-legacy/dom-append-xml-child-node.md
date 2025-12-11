@@ -151,6 +151,6 @@ Si le contenu de *valeurEnfant* est invalide, une erreur est retournée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1080 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

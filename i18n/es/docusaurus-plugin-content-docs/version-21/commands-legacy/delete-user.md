@@ -39,7 +39,7 @@ Si no tiene los privilegios de acceso para llamar DELETE USER o si otro proceso 
 |  |  |
 | --- | --- |
 | Número de comando | 615 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -47,7 +47,7 @@ The OK variable is set to 1 if the variable has been successfully rewritten, oth
 |  |  |
 | --- | --- |
 | Command number | 533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

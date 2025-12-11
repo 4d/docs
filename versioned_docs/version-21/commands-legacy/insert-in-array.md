@@ -51,6 +51,6 @@ The following example appends an element to an array:
 |  |  |
 | --- | --- |
 | Command number | 227 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

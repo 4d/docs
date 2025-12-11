@@ -54,6 +54,6 @@ This example displays an alert. This method passes a pointer to a field:
 |  |  |
 | --- | --- |
 | Command number | 257 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

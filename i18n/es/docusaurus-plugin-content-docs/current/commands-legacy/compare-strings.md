@@ -112,6 +112,6 @@ Los siguientes ejemplos ilustran el impacto específico de las opciones en el **
 |  |  |
 | --- | --- |
 | Número de comando | 1756 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

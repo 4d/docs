@@ -61,7 +61,7 @@ Si la exportación se realiza correctamente, la variable OK toma el valor 1\. De
 |  |  |
 | --- | --- |
 | Número de comando | 1065 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

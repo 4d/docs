@@ -56,6 +56,6 @@ Conversão de uma imagem com qualidade de 60%:
 |  |  |
 | --- | --- |
 | Número do comando | 1002 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

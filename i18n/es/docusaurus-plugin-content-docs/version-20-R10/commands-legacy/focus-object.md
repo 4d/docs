@@ -54,6 +54,6 @@ El siguiente ejemplo es un método de objeto para un botón. El método de objet
 |  |  |
 | --- | --- |
 | Número de comando | 278 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

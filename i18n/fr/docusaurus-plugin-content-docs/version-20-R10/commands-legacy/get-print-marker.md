@@ -65,6 +65,6 @@ Reportez-vous à l’exemple de la commande [SET PRINT MARKER](set-print-marker.
 |  |  |
 | --- | --- |
 | Numéro de commande | 708 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

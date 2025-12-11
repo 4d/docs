@@ -30,6 +30,6 @@ Ver exemplo de comando [SET CACHE SIZE](set-cache-size.md).
 |  |  |
 | --- | --- |
 | Número do comando | 1432 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -49,6 +49,6 @@ En una base que contiene un formulario de proyecto llamado “ElFormulario” y 
 |  |  |
 | --- | --- |
 | Número de comando | 993 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

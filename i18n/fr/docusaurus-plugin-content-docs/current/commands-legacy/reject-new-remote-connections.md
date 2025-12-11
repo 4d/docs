@@ -45,6 +45,6 @@ Vous souhaitez rejeter puis accepter les nouvelles connexions distantes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1635 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

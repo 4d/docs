@@ -64,6 +64,6 @@ You want to allow the user to select a row beginning with the typed letter or nu
 |  |  |
 | --- | --- |
 | Command number | 1744 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

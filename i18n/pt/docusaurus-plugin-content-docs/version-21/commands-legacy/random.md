@@ -39,6 +39,6 @@ O exemplo a seguir atribui um valor aleatório entre 10 e 30 à variável *vlRes
 |  |  |
 | --- | --- |
 | Número do comando | 100 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

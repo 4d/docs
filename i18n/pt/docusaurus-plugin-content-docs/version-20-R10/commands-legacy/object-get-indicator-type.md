@@ -40,6 +40,6 @@ Pode comparar o valor devolvido pelo comando com as seguintes constantes, que se
 |  |  |
 | --- | --- |
 | Número do comando | 1247 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

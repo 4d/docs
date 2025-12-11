@@ -29,6 +29,6 @@ Se o servidor SQL foi lançado, todas as conexões SQL são interrompidas e o se
 |  |  |
 | --- | --- |
 | Número do comando | 963 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

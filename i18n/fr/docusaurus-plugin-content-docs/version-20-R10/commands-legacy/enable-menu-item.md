@@ -36,7 +36,7 @@ Si vous omettez le paramètre *process*, **ENABLE MENU ITEM** s'applique à la b
 |  |  |
 | --- | --- |
 | Numéro de commande | 149 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

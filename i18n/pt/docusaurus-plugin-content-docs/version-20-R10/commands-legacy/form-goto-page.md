@@ -54,6 +54,6 @@ O exemplo a seguir é um método de objeto para um botão que mostra uma página
 |  |  |
 | --- | --- |
 | Número do comando | 247 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

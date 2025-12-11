@@ -88,6 +88,6 @@ This example shows a standard way to set **Storage** values:
 |  |  |
 | --- | --- |
 | Command number | 1525 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

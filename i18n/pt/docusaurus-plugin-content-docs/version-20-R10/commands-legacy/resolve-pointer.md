@@ -114,6 +114,6 @@ Este é um exemplo de ponteiro a um array 2D:
 |  |  |
 | --- | --- |
 | Número do comando | 394 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

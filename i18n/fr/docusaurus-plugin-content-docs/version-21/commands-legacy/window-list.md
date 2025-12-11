@@ -56,6 +56,6 @@ La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (
 |  |  |
 | --- | --- |
 | Numéro de commande | 442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

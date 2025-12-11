@@ -43,7 +43,7 @@ If you specify an invalid pathname, an OS File manager error is generated. You c
 |  |  |
 | --- | --- |
 | Command number | 634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

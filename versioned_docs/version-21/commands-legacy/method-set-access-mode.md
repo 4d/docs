@@ -31,6 +31,6 @@ In *mode*, you pass one of the following constants of the *Design Object Access*
 |  |  |
 | --- | --- |
 | Command number | 1191 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

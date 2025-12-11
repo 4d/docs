@@ -77,6 +77,6 @@ Given two columns in a list box whose variable names are “Array1” and “Arr
 |  |  |
 | --- | --- |
 | Command number | 870 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

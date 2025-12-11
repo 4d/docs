@@ -40,7 +40,7 @@ La variable OK prend la valeur 0 si la ressource n'existe pas, sinon elle prend 
 |  |  |
 | --- | --- |
 | Numéro de commande | 515 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

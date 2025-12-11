@@ -82,7 +82,7 @@ Definition of the F4 shortcut for the "Close" menu item:
 |  |  |
 | --- | --- |
 | Command number | 423 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

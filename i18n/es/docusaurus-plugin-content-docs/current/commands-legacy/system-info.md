@@ -151,6 +151,6 @@ devuelve un objeto que contiene la siguiente información:
 |  |  |
 | --- | --- |
 | Número de comando | 1571 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -52,6 +52,6 @@ Dans ce cas, la commande retourne Vrai si le plug-in correspondant dispose d’u
 |  |  |
 | --- | --- |
 | Numéro de commande | 714 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

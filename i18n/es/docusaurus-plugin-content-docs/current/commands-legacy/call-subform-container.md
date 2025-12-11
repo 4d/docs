@@ -35,6 +35,6 @@ En *evento*, puede pasar todo evento de formulario predefinido de 4D (puede util
 |  |  |
 | --- | --- |
 | Número de comando | 1086 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -97,6 +97,6 @@ A partir de 4D v14 R3, pode duplicar dinamicamente as colunas de list box e 4D s
 |  |  |
 | --- | --- |
 | Número do comando | 1273 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

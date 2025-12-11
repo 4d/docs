@@ -72,7 +72,7 @@ Note que é necessário o comando RELATE MANY, mesmo que as relações sejam aut
 |  |  |
 | --- | --- |
 | Número do comando | 262 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar a seleção atual ||
 
 

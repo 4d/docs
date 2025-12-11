@@ -36,7 +36,7 @@ Si vous omettez le paramètre *process*, **DISABLE MENU ITEM** s'applique à la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 150 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

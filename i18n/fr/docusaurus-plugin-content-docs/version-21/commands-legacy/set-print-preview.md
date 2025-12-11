@@ -42,6 +42,6 @@ L'exemple suivant sélectionne l'option **A l'écran** pour afficher le résulta
 |  |  |
 | --- | --- |
 | Numéro de commande | 364 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

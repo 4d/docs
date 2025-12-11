@@ -36,6 +36,6 @@ However, the command does not take into account the visible/invisible status of 
 |  |  |
 | --- | --- |
 | Command number | 1152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -40,7 +40,7 @@ O exemplo a seguir garante de que o relatório seja listado e apaga a terceira c
 |  |  |
 | --- | --- |
 | Número do comando | 749 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

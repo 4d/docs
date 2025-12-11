@@ -74,6 +74,6 @@ You want to know the encryption status of a data file that corresponds to the cu
 |  |  |
 | --- | --- |
 | Command number | 1609 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

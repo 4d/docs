@@ -28,6 +28,6 @@ Si aucune méthode d’appel sur événement n’a été installée, une chaîne
 |  |  |
 | --- | --- |
 | Numéro de commande | 705 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

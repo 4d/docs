@@ -65,6 +65,6 @@ Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
 |  |  |
 | --- | --- |
 | Número do comando | 1773 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

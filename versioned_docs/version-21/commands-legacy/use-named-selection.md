@@ -35,7 +35,7 @@ Remember that a named selection is a representation of a selection of records at
 |  |  |
 | --- | --- |
 | Command number | 332 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

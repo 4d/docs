@@ -38,7 +38,7 @@ Si *cheminAlias* désigne bien un alias/raccourci, la variable système OK prend
 |  |  |
 | --- | --- |
 | Numéro de commande | 695 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

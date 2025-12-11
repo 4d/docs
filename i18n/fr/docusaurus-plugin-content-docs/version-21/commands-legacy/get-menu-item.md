@@ -34,7 +34,7 @@ Si vous ne passez pas le paramètre *process*, **Get menu item** est appliquée 
 |  |  |
 | --- | --- |
 | Numéro de commande | 422 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

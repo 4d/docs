@@ -35,6 +35,6 @@ Los parámetros *hDesp*, *vDesp*, y *modo* devuelven las posiciones horizontal y
 |  |  |
 | --- | --- |
 | Número de comando | 457 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -48,6 +48,6 @@ Here is the button code:
 |  |  |
 | --- | --- |
 | Command number | 1303 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

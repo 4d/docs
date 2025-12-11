@@ -76,7 +76,7 @@ Se um arquivo de histórico for gerado, seu nome de caminho completo é retornad
 |  |  |
 | --- | --- |
 | Número do comando | 937 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

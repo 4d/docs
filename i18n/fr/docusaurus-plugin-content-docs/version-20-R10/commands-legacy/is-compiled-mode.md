@@ -47,6 +47,6 @@ Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsq
 |  |  |
 | --- | --- |
 | Numéro de commande | 492 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

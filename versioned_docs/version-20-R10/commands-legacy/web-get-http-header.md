@@ -123,6 +123,6 @@ The following method allows getting any HTTP request header field content:
 |  |  |
 | --- | --- |
 | Command number | 697 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

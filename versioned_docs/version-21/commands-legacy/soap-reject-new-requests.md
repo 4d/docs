@@ -42,6 +42,6 @@ You want to deny any new requests to your Web Services server:
 |  |  |
 | --- | --- |
 | Command number | 1636 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

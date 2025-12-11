@@ -53,6 +53,6 @@ Vous souhaitez importer une définiton de structure stockée sur disque dans la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1310 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

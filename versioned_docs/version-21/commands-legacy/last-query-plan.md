@@ -40,6 +40,6 @@ The description of the last query plan can be compared to the description of the
 |  |  |
 | --- | --- |
 | Command number | 1046 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

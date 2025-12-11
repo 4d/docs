@@ -43,6 +43,6 @@ Para mayor información sobre los tipos de datos soportados, consulte la secció
 |  |  |
 | --- | --- |
 | Número de comando | 958 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -41,6 +41,6 @@ Depois da execução deste comando, se um cliente web envia um pedido com uma co
 |  |  |
 | --- | --- |
 | Número do comando | 1208 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

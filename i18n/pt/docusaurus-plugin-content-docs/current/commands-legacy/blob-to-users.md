@@ -52,7 +52,7 @@ este comando causa a substituição de quaisquer contas e grupos existentes cria
 |  |  |
 | --- | --- |
 | Número do comando | 850 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

@@ -34,6 +34,6 @@ Ver el ejemplo del comando [DOM Insert XML element](dom-insert-xml-element.md "D
 |  |  |
 | --- | --- |
 | Número de comando | 1082 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

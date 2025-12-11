@@ -37,6 +37,6 @@ Vous pouvez comparer la valeur retournée aux constantes du thème *List box pie
 |  |  |
 | --- | --- |
 | Numéro de commande | 1150 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -41,6 +41,6 @@ Consulte o exemplo do comando [SET MACRO PARAMETER](set-macro-parameter.md "SET 
 |  |  |
 | --- | --- |
 | Número do comando | 997 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

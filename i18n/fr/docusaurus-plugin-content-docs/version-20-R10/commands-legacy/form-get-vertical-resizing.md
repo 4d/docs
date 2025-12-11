@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 1078 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

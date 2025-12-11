@@ -47,6 +47,6 @@ Quando o comando tiver sido executado:
 |  |  |
 | --- | --- |
 | Número do comando | 686 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

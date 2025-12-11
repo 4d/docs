@@ -58,7 +58,7 @@ If you do not have the proper access privileges for calling GET USER PROPERTIES 
 |  |  |
 | --- | --- |
 | Command number | 611 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

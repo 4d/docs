@@ -36,6 +36,6 @@ If you perform the operation from within a trigger or from a subroutine (that ca
 |  |  |
 | --- | --- |
 | Command number | 397 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

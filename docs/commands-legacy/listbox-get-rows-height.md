@@ -42,6 +42,6 @@ By default, if you omit the *unit* parameter, the row height returned is express
 |  |  |
 | --- | --- |
 | Command number | 836 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

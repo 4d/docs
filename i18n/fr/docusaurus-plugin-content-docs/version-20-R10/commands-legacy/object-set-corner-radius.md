@@ -72,6 +72,6 @@ Notez que pour les zones de texte (ainsi que pour les zones de saisie), contrair
 |  |  |
 | --- | --- |
 | Numéro de commande | 1323 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

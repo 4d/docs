@@ -39,7 +39,7 @@ Si el valor de *posicionL* es mayor que el número total de filas en el list box
 |  |  |
 | --- | --- |
 | Número de comando | 913 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

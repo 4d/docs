@@ -56,7 +56,7 @@ L'exemple suivant envoie des lettres aux 50 plus mauvais clients puis aux 50 mei
 |  |  |
 | --- | --- |
 | Numéro de commande | 350 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

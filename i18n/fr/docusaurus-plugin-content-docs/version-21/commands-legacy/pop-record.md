@@ -38,7 +38,7 @@ L'exemple suivant récupère l'enregistrement d'un client dans la pile :
 |  |  |
 | --- | --- |
 | Numéro de commande | 177 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

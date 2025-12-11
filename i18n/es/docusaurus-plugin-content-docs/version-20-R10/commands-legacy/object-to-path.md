@@ -61,6 +61,6 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 |  |  |
 | --- | --- |
 | Número de comando | 1548 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

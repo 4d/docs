@@ -88,6 +88,6 @@ To compute statistics, you want to sort the number of distinct values in a field
 |  |  |
 | --- | --- |
 | Command number | 339 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

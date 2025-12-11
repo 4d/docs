@@ -61,7 +61,7 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
 |  |  |
 | --- | --- |
 | Numéro de commande | 1291 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

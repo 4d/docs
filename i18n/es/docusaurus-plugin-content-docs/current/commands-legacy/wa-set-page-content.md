@@ -51,6 +51,6 @@ Mostrar la frase "¡Hola mundo!" y definición de un URL de base "file:///" base
 |  |  |
 | --- | --- |
 | Número de comando | 1037 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

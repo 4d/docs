@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 241 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

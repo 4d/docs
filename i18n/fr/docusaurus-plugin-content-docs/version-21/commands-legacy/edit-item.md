@@ -78,6 +78,6 @@ Soient deux colonnes d’une list box dont les noms de variables associées sont
 |  |  |
 | --- | --- |
 | Numéro de commande | 870 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

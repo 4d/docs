@@ -56,7 +56,7 @@ Em cada caso, você pode interceptar o erro usando um método de interrupção [
 |  |  |
 | --- | --- |
 | Número do comando | 525 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

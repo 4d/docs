@@ -44,6 +44,6 @@ You want to add 100 MB to the current database cache size. You can write:
 |  |  |
 | --- | --- |
 | Command number | 1399 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

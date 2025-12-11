@@ -97,7 +97,7 @@ You want to execute a 4D method when a user link is clicked:
 |  |  |
 | --- | --- |
 | Command number | 1287 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

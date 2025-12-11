@@ -66,6 +66,6 @@ Este ejemplo crea un array interpcoceso de elementos de tipo [Imagen](# "Can be 
 |  |  |
 | --- | --- |
 | Número de comando | 279 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

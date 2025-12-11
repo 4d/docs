@@ -90,6 +90,6 @@ Each error object contains the following properties:
 |  |  |
 | --- | --- |
 | Command number | 1799 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

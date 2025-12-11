@@ -32,7 +32,7 @@ Se omite o parâmetro *processo*, Get menu title é aplicado à barra de menus d
 |  |  |
 | --- | --- |
 | Número do comando | 430 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

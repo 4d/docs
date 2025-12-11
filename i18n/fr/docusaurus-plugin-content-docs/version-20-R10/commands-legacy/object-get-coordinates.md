@@ -90,6 +90,6 @@ La méthode retourne les coordonnées théoriques. Si la list box est redimensio
 |  |  |
 | --- | --- |
 | Numéro de commande | 663 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

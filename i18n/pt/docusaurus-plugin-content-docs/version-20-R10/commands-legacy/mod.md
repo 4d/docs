@@ -41,6 +41,6 @@ O exemplo a seguir ilustra o funcionamento de Mod com diferentes argumentos. Cad
 |  |  |
 | --- | --- |
 | Número do comando | 98 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

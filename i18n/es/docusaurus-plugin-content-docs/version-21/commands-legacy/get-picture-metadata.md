@@ -106,7 +106,7 @@ La variable sistema *OK* devuelve 1 si la recuperación de los metadatos es corr
 |  |  |
 | --- | --- |
 | Número de comando | 1122 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

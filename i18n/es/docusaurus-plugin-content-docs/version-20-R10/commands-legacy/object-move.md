@@ -72,6 +72,6 @@ La siguiente instrucción mueve el botón “boton\_1” a las siguientes coorde
 |  |  |
 | --- | --- |
 | Número de comando | 664 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

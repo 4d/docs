@@ -38,7 +38,7 @@ Si vous omettez le paramètre *process*, **DELETE MENU ITEM** s'applique à la b
 |  |  |
 | --- | --- |
 | Numéro de commande | 413 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

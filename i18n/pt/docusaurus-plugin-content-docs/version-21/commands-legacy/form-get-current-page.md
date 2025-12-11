@@ -73,6 +73,6 @@ Em um formulário, se seleciona um comando de menu da barra de menu ou quando o 
 |  |  |
 | --- | --- |
 | Número do comando | 276 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

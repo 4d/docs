@@ -46,6 +46,6 @@ El siguiente ejemplo muestra una serie de registros como una presentación de di
 |  |  |
 | --- | --- |
 | Número de comando | 105 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

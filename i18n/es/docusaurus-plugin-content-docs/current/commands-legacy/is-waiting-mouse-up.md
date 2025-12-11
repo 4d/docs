@@ -67,6 +67,6 @@ End case
 |  |  |
 | --- | --- |
 | Número de comando | 1422 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

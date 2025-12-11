@@ -31,6 +31,6 @@ SAVE RELATED ONE não guardará um registro bloqueado. Quando utilize este coman
 |  |  |
 | --- | --- |
 | Número do comando | 43 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

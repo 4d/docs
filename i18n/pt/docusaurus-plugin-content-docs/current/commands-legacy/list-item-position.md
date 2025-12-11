@@ -44,6 +44,6 @@ Se o elemento não existir, List item position retorna 0.
 |  |  |
 | --- | --- |
 | Número do comando | 629 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

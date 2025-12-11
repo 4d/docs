@@ -49,6 +49,6 @@ O parâmetro *vertical* devolve um valor indicando a opção de redimensionament
 |  |  |
 | --- | --- |
 | Número do comando | 1176 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

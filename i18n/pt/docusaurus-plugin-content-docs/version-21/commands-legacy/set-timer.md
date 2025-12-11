@@ -51,6 +51,6 @@ Imaginemos que você queira, quando um formulário aparece em tela, que o comput
 |  |  |
 | --- | --- |
 | Número do comando | 645 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

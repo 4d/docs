@@ -39,7 +39,7 @@ If the *rowPosition* value is higher than the total number of rows in the list b
 |  |  |
 | --- | --- |
 | Command number | 913 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -63,6 +63,6 @@ The "getCustomerInfo" JavaScript function receive a number ID as parameter and r
 |  |  |
 | --- | --- |
 | Command number | 1043 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

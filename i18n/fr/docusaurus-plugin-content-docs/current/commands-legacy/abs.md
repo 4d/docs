@@ -32,6 +32,6 @@ L'exemple suivant retourne la valeur absolue de -10,3, qui est 10,3 :
 |  |  |
 | --- | --- |
 | Numéro de commande | 99 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

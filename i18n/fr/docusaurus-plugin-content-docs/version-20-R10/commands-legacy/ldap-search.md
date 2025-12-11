@@ -89,6 +89,6 @@ Vous voulez obtenir un tableau de toutes les entrées trouvées pour l'attribut 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1328 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

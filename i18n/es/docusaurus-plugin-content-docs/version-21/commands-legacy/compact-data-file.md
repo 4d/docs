@@ -76,7 +76,7 @@ Si la operación de compactación se lleva a cabo correctamente, la variable sis
 |  |  |
 | --- | --- |
 | Número de comando | 937 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

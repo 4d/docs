@@ -55,6 +55,6 @@ This project method can be used to address the same serial port (without protoco
 |  |  |
 | --- | --- |
 | Command number | 909 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

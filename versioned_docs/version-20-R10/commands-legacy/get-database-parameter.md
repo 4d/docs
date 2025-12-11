@@ -1022,6 +1022,6 @@ In the [On Startup database method](on-startup-database-method.md), you write:
 |  |  |
 | --- | --- |
 | Command number | 643 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

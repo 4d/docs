@@ -97,6 +97,6 @@ Este código permite criar um menu emergente dinâmico hierárquico baseado em a
 |  |  |
 | --- | --- |
 | Número do comando | 1006 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

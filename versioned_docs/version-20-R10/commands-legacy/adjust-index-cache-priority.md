@@ -58,6 +58,6 @@ You want to temporarily change the cache priority for the \[Docs\]Comments field
 |  |  |
 | --- | --- |
 | Command number | 1430 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

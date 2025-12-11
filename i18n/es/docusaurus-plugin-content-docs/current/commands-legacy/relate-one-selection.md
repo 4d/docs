@@ -63,7 +63,7 @@ La siguiente técnica utiliza **RELATE ONE SELECTION** para obtener el mismo res
 |  |  |
 | --- | --- |
 | Número de comando | 349 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

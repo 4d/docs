@@ -44,7 +44,7 @@ Si pasa un valor incorrecto del parámetro *propiedad*, se genera el error -9852
 |  |  |
 | --- | --- |
 | Número de comando | 738 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

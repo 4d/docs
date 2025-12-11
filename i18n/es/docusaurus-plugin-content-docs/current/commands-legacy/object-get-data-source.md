@@ -47,6 +47,6 @@ Ejecuta el siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 1265 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

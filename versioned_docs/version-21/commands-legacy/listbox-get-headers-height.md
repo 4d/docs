@@ -40,6 +40,6 @@ By default, if you omit the *unit* parameter, the height of the row returned is 
 |  |  |
 | --- | --- |
 | Command number | 1144 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

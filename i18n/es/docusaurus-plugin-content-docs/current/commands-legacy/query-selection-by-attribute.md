@@ -53,7 +53,7 @@ Usted quiere encontrar personas con una edad entre 20 y 30, entre los registros 
 |  |  |
 | --- | --- |
 | Número de comando | 1424 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

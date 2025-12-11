@@ -44,6 +44,6 @@ No parâmetro *estiloBorde*, passe o valor do estilo da linha fronteira que dese
 |  |  |
 | --- | --- |
 | Número do comando | 1262 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

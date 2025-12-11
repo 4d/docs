@@ -47,6 +47,6 @@ El siguiente ejemplo puede utilizarse para recuperar en un array todas las rutas
 |  |  |
 | --- | --- |
 | Número de comando | 976 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

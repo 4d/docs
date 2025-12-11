@@ -69,6 +69,6 @@ See the second example for the [SET QUERY DESTINATION](set-query-destination.md)
 |  |  |
 | --- | --- |
 | Command number | 395 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

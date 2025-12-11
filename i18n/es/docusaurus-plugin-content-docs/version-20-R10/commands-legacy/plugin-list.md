@@ -34,6 +34,6 @@ PLUGIN LIST tiene en cuenta todos los plug-ins, incluyendo aquellos que están i
 |  |  |
 | --- | --- |
 | Número de comando | 847 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

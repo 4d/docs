@@ -48,6 +48,6 @@ O alinhamento vertical pode ser aplicado aos seguintes tipos de objetos de formu
 |  |  |
 | --- | --- |
 | Número do comando | 1188 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -55,6 +55,6 @@ Si le type de données de la colonne ou d’au moins une colonne de la list box 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1140 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

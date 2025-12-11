@@ -86,7 +86,7 @@ Dans cet exemple, on utilise une jointure pour rechercher toutes les lignes de f
 |  |  |
 | --- | --- |
 | Numéro de commande | 48 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

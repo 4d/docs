@@ -67,6 +67,6 @@ Using version 1.2 of the SOAP protocol:
 |  |  |
 | --- | --- |
 | Command number | 901 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

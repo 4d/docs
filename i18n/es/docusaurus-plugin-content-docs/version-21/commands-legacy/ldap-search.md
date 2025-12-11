@@ -89,6 +89,6 @@ Queremos obtener una array de todas las entradas que se encuentran en el atribut
 |  |  |
 | --- | --- |
 | Número de comando | 1328 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

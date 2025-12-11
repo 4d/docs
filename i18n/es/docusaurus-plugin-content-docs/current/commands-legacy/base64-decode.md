@@ -61,6 +61,6 @@ Este ejemplo le permite transferir una imagen vía un BLOB:
 |  |  |
 | --- | --- |
 | Número de comando | 896 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

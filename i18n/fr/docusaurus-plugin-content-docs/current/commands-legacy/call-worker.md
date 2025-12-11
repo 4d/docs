@@ -82,6 +82,6 @@ Voici le code de *méthodeWorker* :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1389 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

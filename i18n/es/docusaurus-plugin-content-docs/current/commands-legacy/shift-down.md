@@ -57,6 +57,6 @@ El siguiente método de objeto para el botón *bUnBoton* efectúa diferentes acc
 |  |  |
 | --- | --- |
 | Número de comando | 543 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

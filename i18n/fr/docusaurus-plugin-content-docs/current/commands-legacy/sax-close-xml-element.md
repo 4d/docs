@@ -43,6 +43,6 @@ Si le dernier élément ouvert est *<Book>*, l’instruction suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 854 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

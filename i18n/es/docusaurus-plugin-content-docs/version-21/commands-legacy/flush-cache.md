@@ -36,6 +36,6 @@ Normalmente, no es necesario llamar a este comando, ya que 4D guarda las modific
 |  |  |
 | --- | --- |
 | Número de comando | 297 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

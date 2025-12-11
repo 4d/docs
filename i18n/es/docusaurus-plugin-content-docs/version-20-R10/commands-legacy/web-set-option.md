@@ -86,6 +86,6 @@ Una entrada registrada se ve así:
 |  |  |
 | --- | --- |
 | Número de comando | 5 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

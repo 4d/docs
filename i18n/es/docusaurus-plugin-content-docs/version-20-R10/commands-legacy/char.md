@@ -41,6 +41,6 @@ El siguiente ejemplo utiliza Char para insertar un retorno de carro en el texto 
 |  |  |
 | --- | --- |
 | Número de comando | 90 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

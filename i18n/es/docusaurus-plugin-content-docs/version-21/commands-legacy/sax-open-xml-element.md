@@ -58,7 +58,7 @@ Si se pasa en tag un carácter inválido, se genera un error.
 |  |  |
 | --- | --- |
 | Número de comando | 853 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

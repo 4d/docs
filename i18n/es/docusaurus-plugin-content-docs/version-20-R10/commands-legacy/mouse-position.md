@@ -46,6 +46,6 @@ Ver el ejemplo del comando [Pop up menu](pop-up-menu.md "Pop up menu").
 |  |  |
 | --- | --- |
 | Número de comando | 468 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

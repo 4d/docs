@@ -122,6 +122,6 @@ var $sum : Real
 |  |  |
 | --- | --- |
 | Número do comando | 1509 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

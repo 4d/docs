@@ -54,6 +54,6 @@ Vous passez dans *type* un code représentant le type de dossier. 4D fournit les
 |  |  |
 | --- | --- |
 | Numéro de commande | 487 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

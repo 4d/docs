@@ -46,6 +46,6 @@ O parâmetro opcional *subformFixo* lhe permite configurar uma opção adicional
 |  |  |
 | --- | --- |
 | Número do comando | 1240 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -32,6 +32,6 @@ In *languageCode*, you pass a string indicating the code of the language to use,
 |  |  |
 | --- | --- |
 | Command number | 1179 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

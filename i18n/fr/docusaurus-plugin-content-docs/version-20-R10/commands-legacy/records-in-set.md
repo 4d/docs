@@ -39,6 +39,6 @@ L'exemple suivant affiche une boîte de dialogue d'alerte qui indique le pourcen
 |  |  |
 | --- | --- |
 | Numéro de commande | 195 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

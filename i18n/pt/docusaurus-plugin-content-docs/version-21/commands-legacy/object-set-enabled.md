@@ -44,6 +44,6 @@ Este comando pode ser aplicado aos seguintes tipos de objetos:
 |  |  |
 | --- | --- |
 | Número do comando | 1123 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

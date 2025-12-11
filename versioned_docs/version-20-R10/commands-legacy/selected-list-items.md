@@ -89,6 +89,6 @@ Here a list named *hList,* shown in the Application environment:
 |  |  |
 | --- | --- |
 | Command number | 379 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

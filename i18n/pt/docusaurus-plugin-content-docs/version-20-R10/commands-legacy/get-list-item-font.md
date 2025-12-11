@@ -37,6 +37,6 @@ Finalmente, pode passar \* em *refElem*: neste caso, o comando se aplicará ao e
 |  |  |
 | --- | --- |
 | Número do comando | 954 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

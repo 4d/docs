@@ -151,6 +151,6 @@ Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-da
 |  |  |
 | --- | --- |
 | Numéro de commande | 295 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -55,7 +55,7 @@ The following code sets the destination as being the text file "Mydoc.txt" and e
 |  |  |
 | --- | --- |
 | Command number | 745 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

@@ -50,6 +50,6 @@ No parâmetro *valor*, passe uma variável para receber o valor atual da *opçã
 |  |  |
 | --- | --- |
 | Número do comando | 1159 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

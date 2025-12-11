@@ -40,6 +40,6 @@ Refer to the examples given for the [ENCRYPT BLOB](encrypt-blob.md) command.
 |  |  |
 | --- | --- |
 | Command number | 690 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

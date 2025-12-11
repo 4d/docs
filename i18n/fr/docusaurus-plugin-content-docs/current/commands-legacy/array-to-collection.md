@@ -88,6 +88,6 @@ Vous souhaiter copier un tableau texte dans une collection partagée :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1563 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

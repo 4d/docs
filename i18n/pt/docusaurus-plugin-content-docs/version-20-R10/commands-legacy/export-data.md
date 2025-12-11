@@ -102,7 +102,7 @@ Se o usuário clicar em **Cancelar** na caixa de diálogo padrão de abrir arqui
 |  |  |
 | --- | --- |
 | Número do comando | 666 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, Document |
 
 

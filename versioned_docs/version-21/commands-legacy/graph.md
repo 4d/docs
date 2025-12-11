@@ -283,6 +283,6 @@ In this example, we customize a few settings:
 |  |  |
 | --- | --- |
 | Command number | 169 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

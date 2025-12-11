@@ -32,6 +32,6 @@ Ver el ejemplo del comando [USE SET](use-set.md "USE SET").
 |  |  |
 | --- | --- |
 | Número de comando | 117 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

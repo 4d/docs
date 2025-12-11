@@ -44,7 +44,7 @@ La ligne suivante insère (ou crée) une première colonne dans la zone MaZone e
 |  |  |
 | --- | --- |
 | Numéro de commande | 748 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

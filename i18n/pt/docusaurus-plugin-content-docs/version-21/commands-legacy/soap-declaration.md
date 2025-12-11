@@ -187,6 +187,6 @@ Este exemplo illustra os resultados dos diferentes tipos de declarações:
 |  |  |
 | --- | --- |
 | Número do comando | 782 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

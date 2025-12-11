@@ -89,6 +89,6 @@ Queremos obter um array de todas as entradas que se encontram no atributo "membe
 |  |  |
 | --- | --- |
 | Número do comando | 1328 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

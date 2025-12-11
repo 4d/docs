@@ -30,6 +30,6 @@ Para que el ciclo de ejecución **Before** se genere, asegúrese de que la propi
 |  |  |
 | --- | --- |
 | Número de comando | 29 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

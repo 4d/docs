@@ -30,6 +30,6 @@ This command returns an empty string if there is no title available for the curr
 |  |  |
 | --- | --- |
 | Command number | 1036 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

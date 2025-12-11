@@ -50,6 +50,6 @@ L'exemple suivant imprime un état avec deux niveaux de rupture. La sélection e
 |  |  |
 | --- | --- |
 | Numéro de commande | 302 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

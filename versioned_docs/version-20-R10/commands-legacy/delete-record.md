@@ -48,7 +48,7 @@ The following example deletes an employee record. The code asks the user what em
 |  |  |
 | --- | --- |
 | Command number | 58 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

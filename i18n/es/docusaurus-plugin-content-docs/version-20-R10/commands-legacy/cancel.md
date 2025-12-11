@@ -56,7 +56,7 @@ Cuando el comando CANCEL se ejecuta (anulación de formulario o de impresión), 
 |  |  |
 | --- | --- |
 | Número de comando | 270 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

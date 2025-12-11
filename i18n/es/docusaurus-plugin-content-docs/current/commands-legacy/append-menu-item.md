@@ -86,7 +86,7 @@ Entonces, en todo método de formulario o de proyecto, puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 411 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

@@ -28,6 +28,6 @@ Se nenhum método do tipo for instalado, uma cadeia vazia ("") é retornada.
 |  |  |
 | --- | --- |
 | Número do comando | 705 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

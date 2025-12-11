@@ -121,7 +121,7 @@ If you print a report using [PRINT SELECTION](print-selection.md), you do NOT ne
 |  |  |
 | --- | --- |
 | Command number | 190 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -95,7 +95,7 @@ You can perform the following computations:
 |  |  |
 | --- | --- |
 | Command number | 2 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

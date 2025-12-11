@@ -56,6 +56,6 @@ Este exemplo colapsa o primeiro nível de linhas de quebra da seleção no list 
 |  |  |
 | --- | --- |
 | Número do comando | 1101 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

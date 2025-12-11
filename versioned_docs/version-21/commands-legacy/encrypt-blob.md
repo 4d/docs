@@ -187,6 +187,6 @@ A company wants to use the Internet to exchange information. Each subsidiary rec
 |  |  |
 | --- | --- |
 | Command number | 689 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

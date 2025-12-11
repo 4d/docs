@@ -226,6 +226,6 @@ Se quiser conhecer o tamanho de uma imagem armazenada em um atributo objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1224 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

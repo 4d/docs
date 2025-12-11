@@ -62,6 +62,6 @@ La commande **Subtotal** permet d'afficher des calculs de sous-totaux dans des f
 |  |  |
 | --- | --- |
 | Numéro de commande | 97 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

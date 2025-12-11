@@ -62,6 +62,6 @@ Les objets de formulaire auxquels un alignement peut être appliqué sont les su
 |  |  |
 | --- | --- |
 | Numéro de commande | 707 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

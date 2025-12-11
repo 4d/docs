@@ -44,7 +44,7 @@ In a Longint array, if a record number is invalid (record not created), the erro
 |  |  |
 | --- | --- |
 | Command number | 641 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -63,6 +63,6 @@ La función JavaScript "getCustomerInfo" recibe un número ID como parámetro y 
 |  |  |
 | --- | --- |
 | Número de comando | 1043 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -67,6 +67,6 @@ La ventana aparece de esta forma:
 |  |  |
 | --- | --- |
 | Número de comando | 444 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

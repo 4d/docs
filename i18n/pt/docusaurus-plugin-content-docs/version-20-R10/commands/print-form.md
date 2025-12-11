@@ -188,6 +188,6 @@ O código que chama a caixa de diálogo imprime seu corpo:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 5                           |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

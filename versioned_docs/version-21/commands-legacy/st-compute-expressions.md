@@ -73,7 +73,7 @@ You want to update the references included in the selection of text:
 |  |  |
 | --- | --- |
 | Command number | 1285 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

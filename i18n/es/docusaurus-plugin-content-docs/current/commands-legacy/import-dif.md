@@ -57,7 +57,7 @@ OK toma el valor 1 si la importación termina con éxito; de lo contrario, toma 
 |  |  |
 | --- | --- |
 | Número de comando | 86 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

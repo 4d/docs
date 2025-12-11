@@ -35,6 +35,6 @@ O exemplo atribui a variável *vbOpcoes* Falso:
 |  |  |
 | --- | --- |
 | Número do comando | 215 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

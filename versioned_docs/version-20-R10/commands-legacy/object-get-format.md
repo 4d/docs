@@ -69,6 +69,6 @@ Customized formats are returned untouched:
 |  |  |
 | --- | --- |
 | Command number | 894 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

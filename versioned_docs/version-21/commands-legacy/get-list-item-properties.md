@@ -58,6 +58,6 @@ For details about these properties, see the description of the command [SET LIST
 |  |  |
 | --- | --- |
 | Command number | 631 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

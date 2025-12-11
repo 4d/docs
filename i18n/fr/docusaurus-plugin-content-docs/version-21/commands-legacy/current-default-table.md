@@ -36,6 +36,6 @@ La ligne de code suivante inscrit le nom de la table courante par défaut dans l
 |  |  |
 | --- | --- |
 | Numéro de commande | 363 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

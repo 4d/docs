@@ -49,7 +49,7 @@ Si l'utilisateur clique sur Annuler dans la boîte de dialogue d'ouverture de fi
 |  |  |
 | --- | --- |
 | Numéro de commande | 185 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -104,7 +104,7 @@ If there is not enough memory to add the picture to the Picture Library, an erro
 |  |  |
 | --- | --- |
 | Command number | 566 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 | Forbidden on the server ||
 

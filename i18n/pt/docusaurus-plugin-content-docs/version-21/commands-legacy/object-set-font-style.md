@@ -59,6 +59,6 @@ Este exemplo define o estilo de fonte Plain para todos os objetos de formulário
 |  |  |
 | --- | --- |
 | Número do comando | 166 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

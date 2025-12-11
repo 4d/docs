@@ -30,6 +30,6 @@ Reportez-vous à la description des *Triggers en cascade*.
 |  |  |
 | --- | --- |
 | Numéro de commande | 398 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

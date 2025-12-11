@@ -63,6 +63,6 @@ Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al méto
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 805                         |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | no |
 
 

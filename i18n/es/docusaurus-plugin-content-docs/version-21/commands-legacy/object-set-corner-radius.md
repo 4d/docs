@@ -71,6 +71,6 @@ Tenga en cuenta que para las áreas de texto (así como las entradas), a diferen
 |  |  |
 | --- | --- |
 | Número de comando | 1323 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

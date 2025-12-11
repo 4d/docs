@@ -45,6 +45,6 @@ You want to get the data source value for a form object, get its name, and set a
 |  |  |
 | --- | --- |
 | Command number | 1742 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

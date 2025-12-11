@@ -87,6 +87,6 @@ El segundo código se ejecuta más rápido por dos razones: sólo referencia un 
 |  |  |
 | --- | --- |
 | Número de comando | 91 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

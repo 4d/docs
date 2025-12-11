@@ -54,6 +54,6 @@ No primeiro parâmetro, passe *curPassPhrase* ou *curDataKey* que define a chave
 |  |  |
 | --- | --- |
 | Número do comando | 1638 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

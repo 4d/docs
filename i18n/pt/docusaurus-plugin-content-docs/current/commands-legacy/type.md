@@ -147,6 +147,6 @@ Ver exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md 
 |  |  |
 | --- | --- |
 | Número do comando | 295 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

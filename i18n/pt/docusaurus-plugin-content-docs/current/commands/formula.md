@@ -145,6 +145,6 @@ Chamar uma fórmula usando notação de objeto:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1597                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |
 
 

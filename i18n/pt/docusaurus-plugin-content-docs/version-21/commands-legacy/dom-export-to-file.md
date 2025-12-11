@@ -68,7 +68,7 @@ Se gera um erro quando:
 |  |  |
 | --- | --- |
 | Número do comando | 862 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

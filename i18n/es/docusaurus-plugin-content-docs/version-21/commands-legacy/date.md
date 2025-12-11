@@ -100,6 +100,6 @@ Usted desea obtener una fecha de un atributo objeto, sea cual sea la opción de 
 |  |  |
 | --- | --- |
 | Número de comando | 102 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

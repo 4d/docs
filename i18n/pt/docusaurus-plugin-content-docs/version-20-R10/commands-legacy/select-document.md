@@ -103,7 +103,7 @@ Se não for selecionado nenhum arquivo (por exemplo, se o usuário clicar no bot
 |  |  |
 | --- | --- |
 | Número do comando | 905 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document, error |
 
 

@@ -64,6 +64,6 @@ o:
 |  |  |
 | --- | --- |
 | Número de comando | 603 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

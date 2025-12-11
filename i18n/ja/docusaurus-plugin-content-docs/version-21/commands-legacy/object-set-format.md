@@ -335,6 +335,6 @@ This example formats a date variable and a time variable using [customized forma
 |  |  |
 | --- | --- |
 | コマンド番号 | 236 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

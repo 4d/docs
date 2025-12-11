@@ -75,6 +75,6 @@ L'exemple suivant copie dans la bibliothèque d'images de la base les ressources
 |  |  |
 | --- | --- |
 | Numéro de commande | 500 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

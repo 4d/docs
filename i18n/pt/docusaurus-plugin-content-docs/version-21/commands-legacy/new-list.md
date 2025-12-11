@@ -50,6 +50,6 @@ Ver o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST").
 |  |  |
 | --- | --- |
 | Número do comando | 375 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -71,6 +71,6 @@ Vous sélectionnez un enregistrement de la table *\[uneTable\]*, puis vous appel
 |  |  |
 | --- | --- |
 | Numéro de commande | 32 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

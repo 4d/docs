@@ -59,6 +59,6 @@ Usted desea definir el orden de entrada de los objetos en el formulario basado e
 |  |  |
 | --- | --- |
 | Número de comando | 1468 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

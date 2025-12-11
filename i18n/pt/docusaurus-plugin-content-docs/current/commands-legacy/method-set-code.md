@@ -102,6 +102,6 @@ Este exemplo exporta e importa a totalidade dos métodos projeto de uma aplicaç
 |  |  |
 | --- | --- |
 | Número do comando | 1194 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -93,6 +93,6 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
 |  |  |
 | --- | --- |
 | Command number | 966 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -31,7 +31,7 @@ If *process* has been delayed before, see the [PAUSE PROCESS](pause-process.md) 
 |  |  |
 | --- | --- |
 | Command number | 320 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Forbidden on the server ||
 
 

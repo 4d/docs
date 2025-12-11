@@ -29,7 +29,7 @@ If you omit the *process* parameter, **Count menus** applies to the menu bar for
 |  |  |
 | --- | --- |
 | Command number | 404 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

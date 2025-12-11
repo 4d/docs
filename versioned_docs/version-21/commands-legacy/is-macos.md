@@ -39,6 +39,6 @@ You want to determine if the current operating system is macOS:
 |  |  |
 | --- | --- |
 | Command number | 1572 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

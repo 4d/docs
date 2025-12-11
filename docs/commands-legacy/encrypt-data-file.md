@@ -138,6 +138,6 @@ Re-encrypt an encrypted data file with the current key (for example, when the en
 |  |  |
 | --- | --- |
 | Command number | 1610 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -64,7 +64,7 @@ An error is generated when:
 |  |  |
 | --- | --- |
 | Command number | 867 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

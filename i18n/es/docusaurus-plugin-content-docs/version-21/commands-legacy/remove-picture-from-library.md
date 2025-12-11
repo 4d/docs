@@ -61,7 +61,7 @@ El siguiente ejemplo borra de la librería de imágenes toda imagen cuyo nombre 
 |  |  |
 | --- | --- |
 | Número de comando | 567 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

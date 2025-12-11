@@ -33,6 +33,6 @@ Les colonnes statiques (ou colonnes fixes) ne peuvent pas être déplacées dans
 |  |  |
 | --- | --- |
 | Numéro de commande | 1153 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

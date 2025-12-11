@@ -86,6 +86,6 @@ You display the names from a *\[People\]* table in a floating window. When you c
 |  |  |
 | --- | --- |
 | Command number | 229 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

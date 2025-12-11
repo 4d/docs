@@ -152,6 +152,6 @@ Calling a formula using object notation:
 |  |  |
 | --- | --- |
 | Command number | 1597 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

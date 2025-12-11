@@ -114,7 +114,7 @@ In the event of an error, the command generates an error that you can intercept 
 |  |  |
 | --- | --- |
 | Command number | 1019 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -56,7 +56,7 @@ When the [CANCEL](cancel.md) command is executed (form or printing cancelled), t
 |  |  |
 | --- | --- |
 | Command number | 270 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

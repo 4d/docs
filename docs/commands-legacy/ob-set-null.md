@@ -45,6 +45,6 @@ We want to put the null value in the "age" property for Lea:
 |  |  |
 | --- | --- |
 | Command number | 1233 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

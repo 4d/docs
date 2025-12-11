@@ -35,6 +35,6 @@ El comando devuelve 0:
 |  |  |
 | --- | --- |
 | Número de comando | 440 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

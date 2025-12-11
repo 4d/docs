@@ -75,6 +75,6 @@ The following example copies the picture resources present in all currently open
 |  |  |
 | --- | --- |
 | Command number | 500 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

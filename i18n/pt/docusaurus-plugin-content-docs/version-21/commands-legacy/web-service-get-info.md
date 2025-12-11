@@ -35,6 +35,6 @@ Uma string vazia é retornada quando não há informação disponível, particul
 |  |  |
 | --- | --- |
 | Número do comando | 780 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

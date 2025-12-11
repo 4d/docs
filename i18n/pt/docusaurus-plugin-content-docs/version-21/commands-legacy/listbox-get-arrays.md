@@ -55,6 +55,6 @@ Para seleção de registro, list boxes do tipo coleção ou seleção de entidad
 |  |  |
 | --- | --- |
 | Número do comando | 832 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

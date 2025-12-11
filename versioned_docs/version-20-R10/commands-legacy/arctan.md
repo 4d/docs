@@ -37,6 +37,6 @@ The following example shows the value of Pi:
 |  |  |
 | --- | --- |
 | Command number | 20 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

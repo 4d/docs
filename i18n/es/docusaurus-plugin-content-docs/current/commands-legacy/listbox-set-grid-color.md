@@ -41,6 +41,6 @@ Los parámetros *horizontal* y *vertical* le permiten especificar las líneas a 
 |  |  |
 | --- | --- |
 | Número de comando | 842 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

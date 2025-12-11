@@ -50,6 +50,6 @@ In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is
 |  |  |
 | --- | --- |
 | Command number | 89 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

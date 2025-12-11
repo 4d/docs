@@ -65,6 +65,6 @@ Labels are not enterable but they become so after a triple-click. If you want to
 |  |  |
 | --- | --- |
 | Command number | 1332 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -36,6 +36,6 @@ Cette commande doit être utilisée en combinaison avec l’événement formulai
 |  |  |
 | --- | --- |
 | Numéro de commande | 844 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

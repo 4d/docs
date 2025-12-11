@@ -32,7 +32,7 @@ Si vous omettez le paramètre *process*, **Get menu title** s'applique à la bar
 |  |  |
 | --- | --- |
 | Numéro de commande | 430 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

@@ -51,6 +51,6 @@ The following images demonstrate the differences between the screen size and the
 |  |  |
 | --- | --- |
 | Command number | 438 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

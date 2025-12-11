@@ -118,6 +118,6 @@ El resultado es el siguiente (en Windows):
 |  |  |
 | --- | --- |
 | Número de comando | 88 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

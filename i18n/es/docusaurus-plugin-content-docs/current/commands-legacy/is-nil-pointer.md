@@ -42,6 +42,6 @@ Si quiere conocer el nombre de la variable apuntada o el número del campo, pued
 |  |  |
 | --- | --- |
 | Número de comando | 315 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

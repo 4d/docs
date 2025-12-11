@@ -40,6 +40,6 @@ O valor da altura da linha se expressa:
 |  |  |
 | --- | --- |
 | Número do comando | 1408 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

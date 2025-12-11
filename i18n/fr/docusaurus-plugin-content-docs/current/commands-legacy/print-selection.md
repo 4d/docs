@@ -70,7 +70,7 @@ L'exemple suivant sélectionne la totalité des enregistrements de la table \[Pe
 |  |  |
 | --- | --- |
 | Numéro de commande | 60 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

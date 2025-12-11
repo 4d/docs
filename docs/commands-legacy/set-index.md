@@ -94,6 +94,6 @@ Creation of a keywords index:
 |  |  |
 | --- | --- |
 | Command number | 344 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

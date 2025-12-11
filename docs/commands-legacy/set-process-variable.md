@@ -102,6 +102,6 @@ This example writes the destination process instance of the variables *v1*, *v2*
 |  |  |
 | --- | --- |
 | Command number | 370 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

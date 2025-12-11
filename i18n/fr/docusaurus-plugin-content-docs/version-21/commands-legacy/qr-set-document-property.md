@@ -40,7 +40,7 @@ Si la valeur du paramètre *propriété* ou *valeur* est incorrecte, l’erreur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 772 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

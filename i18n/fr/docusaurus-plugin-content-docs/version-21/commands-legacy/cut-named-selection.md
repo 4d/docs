@@ -42,7 +42,7 @@ La méthode suivante vide la sélection courante de la table *\[Clients\]* :
 |  |  |
 | --- | --- |
 | Numéro de commande | 334 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

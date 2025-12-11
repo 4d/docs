@@ -39,6 +39,6 @@ Es recomendable llamar este comando en el contexto de los eventos de formulario 
 |  |  |
 | --- | --- |
 | Número de comando | 1035 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

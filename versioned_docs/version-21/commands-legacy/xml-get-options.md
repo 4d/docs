@@ -43,6 +43,6 @@ In selector, pass a constant of the "*XML*" theme indicating the option to get. 
 |  |  |
 | --- | --- |
 | Command number | 1096 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

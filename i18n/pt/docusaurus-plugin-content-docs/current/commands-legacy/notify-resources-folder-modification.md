@@ -39,6 +39,6 @@ O parâmetro atual pode estar definido:
 |  |  |
 | --- | --- |
 | Número do comando | 1052 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -174,7 +174,7 @@ Si la méthode de rétro-appel passée n’existe pas, la vérification n’est 
 |  |  |
 | --- | --- |
 | Numéro de commande | 939 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

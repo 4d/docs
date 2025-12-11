@@ -196,6 +196,6 @@ var $result:=Compile project($options)
 |  |  |
 | --- | --- |
 | Command number | 1760 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

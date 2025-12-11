@@ -102,6 +102,6 @@ Este ejemplo escribe la instancia de las variables *v1*, *v2* y *v3* utilizando 
 |  |  |
 | --- | --- |
 | Número de comando | 370 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

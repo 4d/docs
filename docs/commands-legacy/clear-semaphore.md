@@ -34,6 +34,6 @@ See the example for [Semaphore](semaphore.md).
 |  |  |
 | --- | --- |
 | Command number | 144 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

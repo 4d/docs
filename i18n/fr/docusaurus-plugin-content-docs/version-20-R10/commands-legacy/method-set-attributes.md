@@ -68,6 +68,6 @@ Vous souhaiter modifier un seul attribut :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1335 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

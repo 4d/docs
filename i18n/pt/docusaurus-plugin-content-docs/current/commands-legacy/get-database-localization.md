@@ -58,6 +58,6 @@ O idioma atual do banco de dados pode ser usada para determinar a pasta. lproj o
 |  |  |
 | --- | --- |
 | Número do comando | 1009 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

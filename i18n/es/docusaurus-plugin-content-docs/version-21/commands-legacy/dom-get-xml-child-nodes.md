@@ -68,6 +68,6 @@ Después de la ejecución de estas instrucciones:
 |  |  |
 | --- | --- |
 | Número de comando | 1081 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

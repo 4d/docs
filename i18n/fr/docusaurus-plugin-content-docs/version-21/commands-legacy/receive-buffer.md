@@ -70,7 +70,7 @@ Notez que l'accès à la variable interprocess *◊vtBuffer* doit être protég�
 |  |  |
 | --- | --- |
 | Numéro de commande | 172 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

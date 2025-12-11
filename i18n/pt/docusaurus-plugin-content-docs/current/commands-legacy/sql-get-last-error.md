@@ -38,6 +38,6 @@ Os dos últimos parâmetros apenas são preenchidos quando o erro vem da fonte O
 |  |  |
 | --- | --- |
 | Número do comando | 825 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

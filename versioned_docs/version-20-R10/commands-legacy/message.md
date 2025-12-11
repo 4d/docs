@@ -118,6 +118,6 @@ This provides the following result (shown here on Windows):
 |  |  |
 | --- | --- |
 | Command number | 88 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

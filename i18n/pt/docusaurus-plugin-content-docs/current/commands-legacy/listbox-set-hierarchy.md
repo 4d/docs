@@ -59,6 +59,6 @@ Definição dos arrays aPais, aRegião e aCidade como hierarquia de um list box:
 |  |  |
 | --- | --- |
 | Número do comando | 1098 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

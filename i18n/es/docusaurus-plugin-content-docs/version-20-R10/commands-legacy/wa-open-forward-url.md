@@ -30,6 +30,6 @@ Si no hay un URL siguiente (es decir, si el usuario no ha regresado al URL anter
 |  |  |
 | --- | --- |
 | Número de comando | 1022 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

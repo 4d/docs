@@ -46,6 +46,6 @@ Pour plus d’informations sur les attributs SVG, reportez-vous à la descriptio
 |  |  |
 | --- | --- |
 | Numéro de commande | 1056 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

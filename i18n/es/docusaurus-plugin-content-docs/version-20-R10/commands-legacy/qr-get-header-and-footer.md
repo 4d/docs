@@ -72,7 +72,7 @@ El siguiente código recupera el contenido y la altura del título del encabezad
 |  |  |
 | --- | --- |
 | Número de comando | 775 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

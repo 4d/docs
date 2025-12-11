@@ -42,7 +42,7 @@ If you pass an invalid *command* number, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 792 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

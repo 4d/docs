@@ -54,6 +54,6 @@ Usted quiere saber los formatos de imagen almacenados en un campo para el regist
 |  |  |
 | --- | --- |
 | Número de comando | 1406 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

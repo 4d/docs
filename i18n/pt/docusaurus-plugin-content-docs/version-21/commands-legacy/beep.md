@@ -39,6 +39,6 @@ No exemplo abaixo, se uma pesquisa não encontrar nenhum registro, um bip é emi
 |  |  |
 | --- | --- |
 | Número do comando | 151 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

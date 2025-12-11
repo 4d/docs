@@ -67,6 +67,6 @@ This example sets the *tableNum* variable to the table number of the table to wh
 |  |  |
 | --- | --- |
 | Command number | 252 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

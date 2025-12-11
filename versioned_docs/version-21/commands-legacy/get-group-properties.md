@@ -45,7 +45,7 @@ If you do not have the proper access privileges for calling GET GROUP PROPERTIES
 |  |  |
 | --- | --- |
 | Command number | 613 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

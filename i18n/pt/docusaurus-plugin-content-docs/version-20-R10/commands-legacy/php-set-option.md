@@ -46,6 +46,6 @@ Como padrão, PHP SET OPTION define a opção para todas as chamadas a [PHP Exec
 |  |  |
 | --- | --- |
 | Número do comando | 1059 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -285,6 +285,6 @@ Para obtener más información acerca de la función trim, por favor, consulte l
 |  |  |
 | --- | --- |
 | Número de comando | 1058 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

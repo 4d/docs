@@ -35,6 +35,6 @@ The following example sets the variable *vbOptions* to True:
 |  |  |
 | --- | --- |
 | Command number | 214 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

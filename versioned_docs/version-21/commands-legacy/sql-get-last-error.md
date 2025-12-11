@@ -40,6 +40,6 @@ The last two parameters are only filled when the error comes from the ODBC sourc
 |  |  |
 | --- | --- |
 | Command number | 825 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -40,6 +40,6 @@ Vous souhaitez connaître le contenu de la barre de menus du process courant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 977 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

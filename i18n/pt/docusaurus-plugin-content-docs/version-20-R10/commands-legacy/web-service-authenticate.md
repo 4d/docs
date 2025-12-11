@@ -57,6 +57,6 @@ Autenticação com um serviço web localizado atrás de um proxy:
 |  |  |
 | --- | --- |
 | Número do comando | 786 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

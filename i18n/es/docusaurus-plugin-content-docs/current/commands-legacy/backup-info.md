@@ -37,6 +37,6 @@ Pase el tipo de información a obtener en *selector*. El tipo y el contenido de 
 |  |  |
 | --- | --- |
 | Número de comando | 888 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

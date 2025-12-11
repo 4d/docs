@@ -44,6 +44,6 @@ Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous so
 |  |  |
 | --- | --- |
 | Numéro de commande | 1262 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

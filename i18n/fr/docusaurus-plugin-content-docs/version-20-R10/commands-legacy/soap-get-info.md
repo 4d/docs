@@ -39,6 +39,6 @@ Passez dans le paramètre *numInfo* le numéro du type d’information SOAP à c
 |  |  |
 | --- | --- |
 | Numéro de commande | 784 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

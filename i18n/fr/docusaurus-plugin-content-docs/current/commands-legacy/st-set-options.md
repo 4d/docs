@@ -67,6 +67,6 @@ Le code suivant vous permet de basculer le mode d’affichage de la zone :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1289 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

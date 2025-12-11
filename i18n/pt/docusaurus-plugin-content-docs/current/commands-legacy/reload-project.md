@@ -40,6 +40,6 @@ Quando o comando for chamado de:
 |  |  |
 | --- | --- |
 | Número do comando | 1739 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

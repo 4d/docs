@@ -50,6 +50,6 @@ Pase en los parámetros *horizontal* y *vertical* los valores indicando si las b
 |  |  |
 | --- | --- |
 | Número de comando | 843 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

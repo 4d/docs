@@ -40,6 +40,6 @@ A descrição da rota da última pesquisa pode ser comparada com a descrição d
 |  |  |
 | --- | --- |
 | Número do comando | 1045 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

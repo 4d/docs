@@ -37,7 +37,7 @@ Este concepto permite conservar un backup de usuarios en la base e implementar u
 |  |  |
 | --- | --- |
 | Número de comando | 849 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

@@ -46,7 +46,7 @@ Seus usuários se administran através de uma tabela personalizada e utilizam a 
 |  |  |
 | --- | --- |
 | Número do comando | 1666 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Proibido no servidor ||
 
 

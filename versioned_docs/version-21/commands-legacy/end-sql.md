@@ -27,6 +27,6 @@ A sequence of SQL statements must be enclosed with the [Begin SQL](begin-sql.md)
 |  |  |
 | --- | --- |
 | Command number | 949 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

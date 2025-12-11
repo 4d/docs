@@ -64,7 +64,7 @@ L'exemple suivant établit des statistiques pour une compétition mondiale parmi
 |  |  |
 | --- | --- |
 | Numéro de commande | 351 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

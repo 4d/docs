@@ -51,6 +51,6 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 |  |  |
 | --- | --- |
 | Command number | 645 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

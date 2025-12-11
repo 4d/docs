@@ -74,6 +74,6 @@ You want to get modification dates for methods in a module that are prefixed wit
 |  |  |
 | --- | --- |
 | Command number | 1170 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

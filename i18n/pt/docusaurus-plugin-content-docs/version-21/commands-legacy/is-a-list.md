@@ -32,6 +32,6 @@ Ver os exemplos do comando DRAG AND DROP PROPERTIES.
 |  |  |
 | --- | --- |
 | Número do comando | 621 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -33,6 +33,6 @@ Este comando permite, por ejemplo, rechazar los intentos de conexión en modo no
 |  |  |
 | --- | --- |
 | Número de comando | 698 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

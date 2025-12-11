@@ -92,6 +92,6 @@ Este es o método do botão **Gerar**
 |  |  |
 | --- | --- |
 | Número do comando | 691 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -75,7 +75,7 @@ L’interface de votre application utilise la chaîne statique ":xliff:shopping"
 |  |  |
 | --- | --- |
 | Numéro de commande | 1104 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

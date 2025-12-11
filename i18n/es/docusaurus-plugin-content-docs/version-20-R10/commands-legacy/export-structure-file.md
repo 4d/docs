@@ -119,6 +119,6 @@ Desea exportar solo los métodos proyecto y base, y un archivo de registro:
 |  |  |
 | --- | --- |
 | Número de comando | 1565 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

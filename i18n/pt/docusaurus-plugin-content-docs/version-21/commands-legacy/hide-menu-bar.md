@@ -49,7 +49,7 @@ O método abaixo mostra um registro em toda a tela (Macintosh) até que dê um c
 |  |  |
 | --- | --- |
 | Número do comando | 432 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

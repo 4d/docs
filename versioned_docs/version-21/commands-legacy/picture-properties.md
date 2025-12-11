@@ -35,6 +35,6 @@ The *hOffset*, *vOffset*, and *mode* parameters return the horizontal and vertic
 |  |  |
 | --- | --- |
 | Command number | 457 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

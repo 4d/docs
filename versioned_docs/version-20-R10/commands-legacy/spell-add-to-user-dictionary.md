@@ -42,6 +42,6 @@ Adding proper nouns to the user dictionary:
 |  |  |
 | --- | --- |
 | Command number | 1214 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

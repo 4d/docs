@@ -49,6 +49,6 @@ O exemplo a seguir salva o número do registro atual e depois procura na tabela 
 |  |  |
 | --- | --- |
 | Número do comando | 243 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

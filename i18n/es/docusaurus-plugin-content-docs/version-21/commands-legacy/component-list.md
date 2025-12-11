@@ -39,6 +39,6 @@ Para mayor información sobre componentes 4D, por favor consulte el *Manual de D
 |  |  |
 | --- | --- |
 | Número de comando | 1001 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

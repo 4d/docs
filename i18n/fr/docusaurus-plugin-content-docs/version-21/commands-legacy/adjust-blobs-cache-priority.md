@@ -58,6 +58,6 @@ Vous souhaitez modifier temporairement la priorité des champs Texte de la table
 |  |  |
 | --- | --- |
 | Numéro de commande | 1431 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

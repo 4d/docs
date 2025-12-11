@@ -99,7 +99,7 @@ La variable OK prend la valeur 1 si le BLOB a été correctement compressé, sin
 |  |  |
 | --- | --- |
 | Numéro de commande | 534 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

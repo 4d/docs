@@ -94,6 +94,6 @@ If the code is executed on a 4D Server and the locking is caused by a remote cli
 |  |  |
 | --- | --- |
 | Command number | 1316 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

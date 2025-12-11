@@ -37,7 +37,7 @@ Si el comando se ejecuta correctamente y si los registros relacionados se han ca
 |  |  |
 | --- | --- |
 | Número de comando | 44 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

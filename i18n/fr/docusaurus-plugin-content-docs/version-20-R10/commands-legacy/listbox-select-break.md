@@ -67,6 +67,6 @@ Voici le résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1117 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

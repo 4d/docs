@@ -75,7 +75,7 @@ Si el comando no se llama en el contexto de una transacción, se genera un error
 |  |  |
 | --- | --- |
 | Número de comando | 661 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

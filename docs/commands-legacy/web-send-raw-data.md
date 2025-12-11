@@ -89,6 +89,6 @@ This example illustrates the use of the chunked option with the **WEB SEND RAW D
 |  |  |
 | --- | --- |
 | Command number | 815 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -63,6 +63,6 @@ Ejemplo de método de base On Web Authentication en modo Digest:
 |  |  |
 | --- | --- |
 | Número de comando | 946 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

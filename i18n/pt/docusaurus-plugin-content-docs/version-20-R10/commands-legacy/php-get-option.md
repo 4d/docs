@@ -43,6 +43,6 @@ Passe no parâmetro *opção* uma constante do tema "*PHP*" para designar a opç
 |  |  |
 | --- | --- |
 | Número do comando | 1060 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

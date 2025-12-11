@@ -67,7 +67,7 @@ La méthode objet de la zone de défilement *taNoms* suivante sélectionne le bo
 |  |  |
 | --- | --- |
 | Numéro de commande | 245 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

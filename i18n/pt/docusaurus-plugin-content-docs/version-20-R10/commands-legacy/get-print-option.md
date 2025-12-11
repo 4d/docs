@@ -55,7 +55,7 @@ A variável sistema OK toma o valor 1 se o comando tiver sido executado corretam
 |  |  |
 | --- | --- |
 | Número do comando | 734 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

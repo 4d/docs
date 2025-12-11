@@ -64,6 +64,6 @@ El parámetro opcional *profundidad* define el número de colores bajo Mac OS (e
 |  |  |
 | --- | --- |
 | Número de comando | 679 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

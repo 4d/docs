@@ -41,7 +41,7 @@ The dates and times of creation and last modification are managed by the file ma
 |  |  |
 | --- | --- |
 | Command number | 478 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -36,7 +36,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 204 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -30,6 +30,6 @@ Para que el ciclo de ejecución **After** se genere, asegúrese de que la propie
 |  |  |
 | --- | --- |
 | Número de comando | 31 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

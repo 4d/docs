@@ -56,6 +56,6 @@ El siguiente ejemplo prueba la presencia del documento “Diario” en la carpet
 |  |  |
 | --- | --- |
 | Número de comando | 476 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

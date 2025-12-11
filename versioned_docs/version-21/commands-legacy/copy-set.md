@@ -45,6 +45,6 @@ The following example, in Client/Server, copies the process set "*SetA*", mainta
 |  |  |
 | --- | --- |
 | Command number | 600 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

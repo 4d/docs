@@ -59,6 +59,6 @@ Vous souhaitez afficher un rectangle rouge autour de la cellule sélectionnée d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1330 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

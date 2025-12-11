@@ -54,7 +54,7 @@ Se as variáveis são guardadas corretamente, a variável sistema OK assume o va
 |  |  |
 | --- | --- |
 | Número do comando | 75 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

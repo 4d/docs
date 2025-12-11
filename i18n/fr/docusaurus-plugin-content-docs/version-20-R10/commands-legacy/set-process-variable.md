@@ -103,6 +103,6 @@ L'exemple suivant écrit l'instance des variables *v1*, *v2*, *v3* dans le proce
 |  |  |
 | --- | --- |
 | Numéro de commande | 370 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

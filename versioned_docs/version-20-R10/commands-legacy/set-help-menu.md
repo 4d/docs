@@ -65,6 +65,6 @@ You want to customize the **Help** menu for your application:
 |  |  |
 | --- | --- |
 | Command number | 1801 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

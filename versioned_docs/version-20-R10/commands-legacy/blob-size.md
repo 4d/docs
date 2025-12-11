@@ -35,6 +35,6 @@ The line of code adds 100 bytes to the BLOB *myBlob*:
 |  |  |
 | --- | --- |
 | Command number | 605 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

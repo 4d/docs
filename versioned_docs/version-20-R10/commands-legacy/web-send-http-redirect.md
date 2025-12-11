@@ -62,6 +62,6 @@ In the [On Web Connection](./on-web-connection-database-method.md), you insert t
 |  |  |
 | --- | --- |
 | Command number | 659 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

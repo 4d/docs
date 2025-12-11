@@ -47,6 +47,6 @@ Here are the different results of this command as well as the [OB Is defined](ob
 |  |  |
 | --- | --- |
 | Command number | 1297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -110,7 +110,7 @@ It is now   Go to the 4D site or Open a window
 |  |  |
 | --- | --- |
 | コマンド番号 | 1092 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

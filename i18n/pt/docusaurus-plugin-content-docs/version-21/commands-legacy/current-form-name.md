@@ -63,6 +63,6 @@ Se quiser obter o formulário atual se este for um formulário projeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1298 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

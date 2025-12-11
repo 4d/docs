@@ -42,6 +42,6 @@ El siguiente ejemplo es un método que puede ser ejecutado desde un menú. Él v
 |  |  |
 | --- | --- |
 | Número de comando | 326 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -50,6 +50,6 @@ Usted quiere mostrar el texto "Buscar" un combo box:
 |  |  |
 | --- | --- |
 | Número de comando | 1295 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

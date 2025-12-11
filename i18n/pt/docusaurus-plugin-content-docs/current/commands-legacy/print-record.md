@@ -70,6 +70,6 @@ O exemplo a seguir imprime o mesmo registro atual em dois formulários diferente
 |  |  |
 | --- | --- |
 | Número do comando | 71 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

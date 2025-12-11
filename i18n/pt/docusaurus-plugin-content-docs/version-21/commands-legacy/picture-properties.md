@@ -35,6 +35,6 @@ Os parâmetros *hDesp*, *vDesp*, e *modo* devolvem as posições horizontal e ve
 |  |  |
 | --- | --- |
 | Número do comando | 457 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

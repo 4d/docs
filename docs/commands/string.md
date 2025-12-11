@@ -266,6 +266,6 @@ If *expression* is evaluated to Null, the command returns the "null" string. Thi
 |  |  |
 | --- | --- |
 | Command number | 10 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

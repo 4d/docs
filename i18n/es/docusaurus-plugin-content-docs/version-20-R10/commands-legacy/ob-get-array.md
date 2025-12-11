@@ -57,6 +57,6 @@ Queremos cambiar un valor en el primer elemento del array:
 |  |  |
 | --- | --- |
 | Número de comando | 1229 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

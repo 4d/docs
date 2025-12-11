@@ -46,6 +46,6 @@ Ejemplos de uso:
 |  |  |
 | --- | --- |
 | Número de comando | 1166 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

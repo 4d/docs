@@ -39,6 +39,6 @@ L'exemple suivant propose une technique de boucle couramment utilisée pour se d
 |  |  |
 | --- | --- |
 | Numéro de commande | 76 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

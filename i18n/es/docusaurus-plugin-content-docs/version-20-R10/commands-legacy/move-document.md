@@ -57,7 +57,7 @@ El siguiente ejemplo mueve el documento DocName:
 |  |  |
 | --- | --- |
 | Número de comando | 540 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

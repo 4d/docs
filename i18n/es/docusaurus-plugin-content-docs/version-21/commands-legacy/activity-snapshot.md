@@ -111,6 +111,6 @@ Obtiene arrays del tipo:
 |  |  |
 | --- | --- |
 | Número de comando | 1277 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

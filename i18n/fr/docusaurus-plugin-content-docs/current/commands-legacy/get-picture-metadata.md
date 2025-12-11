@@ -104,7 +104,7 @@ La variable système OK retourne 1 si la récupération des métadonnées s’es
 |  |  |
 | --- | --- |
 | Numéro de commande | 1122 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

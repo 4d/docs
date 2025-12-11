@@ -43,6 +43,6 @@ If no icon is associated with the item, the icon variable is returned empty.
 |  |  |
 | --- | --- |
 | Command number | 951 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

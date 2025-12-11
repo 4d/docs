@@ -32,6 +32,6 @@ Os filtros são instalados pelo comando WA GET URL FILTERS. Se os arrays se rein
 |  |  |
 | --- | --- |
 | Número do comando | 1031 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

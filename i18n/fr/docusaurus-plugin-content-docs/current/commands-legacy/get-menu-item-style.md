@@ -52,7 +52,7 @@ Si, par exemple, vous voulez tester si une ligne de menu est affichée en gras, 
 |  |  |
 | --- | --- |
 | Numéro de commande | 426 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

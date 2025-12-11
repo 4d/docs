@@ -57,6 +57,6 @@ Puede expresar todo valor numérico como una hora:
 |  |  |
 | --- | --- |
 | Número de comando | 179 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

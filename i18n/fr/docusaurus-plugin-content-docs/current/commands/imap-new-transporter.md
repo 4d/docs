@@ -74,6 +74,6 @@ End if
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1723                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

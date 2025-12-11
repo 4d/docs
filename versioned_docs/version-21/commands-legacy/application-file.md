@@ -45,6 +45,6 @@ At startup on Windows, you need to check if a DLL Library is correctly located a
 |  |  |
 | --- | --- |
 | Command number | 491 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

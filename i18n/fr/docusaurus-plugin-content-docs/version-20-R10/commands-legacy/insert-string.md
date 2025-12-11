@@ -47,6 +47,6 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
 |  |  |
 | --- | --- |
 | Numéro de commande | 231 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

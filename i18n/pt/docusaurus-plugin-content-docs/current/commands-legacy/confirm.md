@@ -98,7 +98,7 @@ Mostrará a seguinte caixa de diálogo de confirmação (em Macintosh):
 |  |  |
 | --- | --- |
 | Número do comando | 162 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

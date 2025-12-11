@@ -65,6 +65,6 @@ This method regenerates all the missing tables that may be present in the databa
 |  |  |
 | --- | --- |
 | Command number | 1126 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

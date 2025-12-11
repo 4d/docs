@@ -54,7 +54,7 @@ Si no hay suficiente memoria para colocar una copia de la imagen en el portapape
 |  |  |
 | --- | --- |
 | Número de comando | 521 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

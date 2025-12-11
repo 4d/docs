@@ -34,6 +34,6 @@ In both cases, the command does not return invisible tables.
 |  |  |
 | --- | --- |
 | Command number | 803 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

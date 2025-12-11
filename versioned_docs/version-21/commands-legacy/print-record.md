@@ -68,6 +68,6 @@ The following example prints the same current record in two different forms. The
 |  |  |
 | --- | --- |
 | Command number | 71 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

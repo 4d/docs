@@ -58,7 +58,7 @@ If an invalid character is passed in *tag*, an error is generated.
 |  |  |
 | --- | --- |
 | Command number | 853 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

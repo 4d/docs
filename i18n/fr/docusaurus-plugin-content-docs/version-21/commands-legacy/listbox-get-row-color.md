@@ -63,6 +63,6 @@ Considérons la list box suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1658 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

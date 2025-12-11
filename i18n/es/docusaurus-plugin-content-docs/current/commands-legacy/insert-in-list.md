@@ -54,6 +54,6 @@ El siguiente código inserta un elemento (sin sublista asociada) justo antes del
 |  |  |
 | --- | --- |
 | Número de comando | 625 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

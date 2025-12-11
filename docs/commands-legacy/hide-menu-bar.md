@@ -49,7 +49,7 @@ The following method displays a record in full-screen display (Macintosh) until 
 |  |  |
 | --- | --- |
 | Command number | 432 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

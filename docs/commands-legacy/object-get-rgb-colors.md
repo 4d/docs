@@ -41,6 +41,6 @@ For more information about the format of the *foregroundColor*, *backgroundColor
 |  |  |
 | --- | --- |
 | Command number | 1074 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

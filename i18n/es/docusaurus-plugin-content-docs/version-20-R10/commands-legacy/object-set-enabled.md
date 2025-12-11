@@ -44,6 +44,6 @@ Este comando se puede aplicar a los siguientes tipos de objetos:
 |  |  |
 | --- | --- |
 | Número de comando | 1123 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

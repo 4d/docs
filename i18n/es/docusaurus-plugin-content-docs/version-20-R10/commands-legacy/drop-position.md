@@ -99,6 +99,6 @@ El método de objeto list box de la izquierda (destino) contiene el siguiente c�
 |  |  |
 | --- | --- |
 | Número de comando | 608 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

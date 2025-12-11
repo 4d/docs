@@ -27,6 +27,6 @@ Se o servidor web não for iniciado, o comando não faz nada.
 |  |  |
 | --- | --- |
 | Número do comando | 618 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

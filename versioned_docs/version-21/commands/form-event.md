@@ -104,6 +104,6 @@ The resulting list box when rows are selected:
 |  |  |
 | --- | --- |
 | Command number | 1606 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

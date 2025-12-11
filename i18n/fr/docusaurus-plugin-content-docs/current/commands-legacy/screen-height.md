@@ -30,6 +30,6 @@ Sous Mac OS, **Screen height** retourne la hauteur de l'écran principal, c'est-
 |  |  |
 | --- | --- |
 | Numéro de commande | 188 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

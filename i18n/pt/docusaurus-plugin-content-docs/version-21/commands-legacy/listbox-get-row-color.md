@@ -63,6 +63,6 @@ Dado a list box abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 1658 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

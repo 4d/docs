@@ -136,7 +136,7 @@ Lorsque ces méthodes ont été ajoutées à votre application, vous pouvez écr
 |  |  |
 | --- | --- |
 | Numéro de commande | 532 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

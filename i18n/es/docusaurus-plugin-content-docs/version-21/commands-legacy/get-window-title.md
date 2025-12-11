@@ -33,6 +33,6 @@ Ver ejemplo del comando [SET WINDOW TITLE](set-window-title.md "SET WINDOW TITLE
 |  |  |
 | --- | --- |
 | Número de comando | 450 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

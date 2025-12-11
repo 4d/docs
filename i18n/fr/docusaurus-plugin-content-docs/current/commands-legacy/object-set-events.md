@@ -169,6 +169,6 @@ Désactivation d’un seul événement du formulaire sans modifier les autres :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1239 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

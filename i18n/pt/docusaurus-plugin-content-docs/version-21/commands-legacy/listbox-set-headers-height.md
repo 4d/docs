@@ -45,6 +45,6 @@ Cabeçalhos devem respeitar a altura mínima estabelecida pelo sistema. Esta alt
 |  |  |
 | --- | --- |
 | Número do comando | 1143 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

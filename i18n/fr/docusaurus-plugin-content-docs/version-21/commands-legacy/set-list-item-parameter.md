@@ -66,6 +66,6 @@ Vous souhaitez définir comme énumération d'un pop up menu hiérarchique une l
 |  |  |
 | --- | --- |
 | Numéro de commande | 986 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

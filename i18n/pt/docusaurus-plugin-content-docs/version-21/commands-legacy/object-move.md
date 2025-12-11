@@ -72,6 +72,6 @@ A seguinte instrução move o botão “botão\_1” as seguintes coordenadas (1
 |  |  |
 | --- | --- |
 | Número do comando | 664 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

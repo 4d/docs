@@ -40,7 +40,7 @@ The following example displays the Users and User groups management window to th
 |  |  |
 | --- | --- |
 | Command number | 281 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

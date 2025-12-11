@@ -186,6 +186,6 @@ The following error-handling method ignores the user interruptions and displays 
 |  |  |
 | --- | --- |
 | Command number | 155 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -69,6 +69,6 @@ When you use the Web debug log *selector*, you can receive one of the following 
 |  |  |
 | --- | --- |
 | Command number | 1209 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

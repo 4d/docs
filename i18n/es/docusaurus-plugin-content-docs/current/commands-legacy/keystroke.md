@@ -174,6 +174,6 @@ Utilizando las habilidades de la comunicación interproceso de 4D, puede constru
 |  |  |
 | --- | --- |
 | Número de comando | 390 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -34,7 +34,7 @@ Ver el ejemplo para Record Number.
 |  |  |
 | --- | --- |
 | Número de comando | 242 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 | Modifica la selección actual ||
 

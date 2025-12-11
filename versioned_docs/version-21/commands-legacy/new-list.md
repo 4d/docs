@@ -50,6 +50,6 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 375 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

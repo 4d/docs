@@ -37,6 +37,6 @@ You can execute this command from a component, but in this case, you must pass t
 |  |  |
 | --- | --- |
 | Command number | 1213 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

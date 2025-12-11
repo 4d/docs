@@ -54,6 +54,6 @@ En el primer parámetro, pase *curPassPhrase* o *curDataKey* que define la llave
 |  |  |
 | --- | --- |
 | Número de comando | 1638 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

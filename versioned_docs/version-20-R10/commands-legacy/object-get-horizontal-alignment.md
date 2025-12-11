@@ -63,6 +63,6 @@ The form objects to which alignment can be applied are as follows:
 |  |  |
 | --- | --- |
 | Command number | 707 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

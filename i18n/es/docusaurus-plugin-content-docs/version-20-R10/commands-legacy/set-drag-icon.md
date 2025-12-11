@@ -63,6 +63,6 @@ Note que puede modificar la posición del cursor con respecto a la imagen:
 |  |  |
 | --- | --- |
 | Número de comando | 1272 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -58,7 +58,7 @@ Creación de un documento PDF bajo Windows:
 |  |  |
 | --- | --- |
 | Número de comando | 787 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

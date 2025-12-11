@@ -172,7 +172,7 @@ See examples for the [RECEIVE BUFFER](receive-buffer.md), [SET TIMEOUT](set-time
 |  |  |
 | --- | --- |
 | Command number | 77 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

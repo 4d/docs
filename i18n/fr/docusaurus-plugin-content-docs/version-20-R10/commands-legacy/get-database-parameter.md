@@ -989,6 +989,6 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
 |  |  |
 | --- | --- |
 | Numéro de commande | 643 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

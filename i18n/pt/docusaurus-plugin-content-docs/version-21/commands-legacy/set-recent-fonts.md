@@ -47,6 +47,6 @@ Then the menu contains:
 |  |  |
 | --- | --- |
 | Número do comando | 1305 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -46,7 +46,7 @@ Se o usuário clicar em OK em ambas caixas de diálogo, a variável sistema OK t
 |  |  |
 | --- | --- |
 | Número do comando | 106 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

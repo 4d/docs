@@ -56,6 +56,6 @@ O seguinte exemplo permite verificar se há outras faturas vencidas na tabela *\
 |  |  |
 | --- | --- |
 | Número do comando | 331 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -80,6 +80,6 @@ Pour cela, il suffit d’exécuter le code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1083 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

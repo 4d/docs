@@ -55,6 +55,6 @@ Este ejemplo muestra una alerta. Este método pasa un puntero a un campo:
 |  |  |
 | --- | --- |
 | Número de comando | 257 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

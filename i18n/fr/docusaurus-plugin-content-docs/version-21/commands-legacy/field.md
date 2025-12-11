@@ -62,6 +62,6 @@ Dans l'exemple, la variable *champNum* est égale au numéro de champ de \[Table
 |  |  |
 | --- | --- |
 | Numéro de commande | 253 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

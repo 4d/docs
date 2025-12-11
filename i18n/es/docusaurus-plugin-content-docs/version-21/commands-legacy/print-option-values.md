@@ -59,6 +59,6 @@ Toda la información devuelta por estos comandos es suministrada por el sistema 
 |  |  |
 | --- | --- |
 | Número de comando | 785 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

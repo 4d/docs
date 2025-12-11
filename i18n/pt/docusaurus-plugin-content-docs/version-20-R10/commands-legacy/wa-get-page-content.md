@@ -30,6 +30,6 @@ Este comando retorna uma string vazia se o conteúdo da página atual não estiv
 |  |  |
 | --- | --- |
 | Número do comando | 1038 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

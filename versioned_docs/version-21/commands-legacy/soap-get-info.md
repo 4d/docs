@@ -39,6 +39,6 @@ Pass the number of the type of SOAP information you want to get in the *infoNum*
 |  |  |
 | --- | --- |
 | Command number | 784 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

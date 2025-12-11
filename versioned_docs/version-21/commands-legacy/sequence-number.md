@@ -64,6 +64,6 @@ The following example is part of a form method. It tests to see if this is a new
 |  |  |
 | --- | --- |
 | Command number | 244 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

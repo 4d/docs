@@ -60,6 +60,6 @@ $output:=Trim start($input) //"Hello World!    "
 |  |  |
 | --- | --- |
 | Command number | 1854 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

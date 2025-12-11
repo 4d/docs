@@ -58,6 +58,6 @@ Para mayor información sobre estas propiedades, consulte la descripción del co
 |  |  |
 | --- | --- |
 | Número de comando | 631 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

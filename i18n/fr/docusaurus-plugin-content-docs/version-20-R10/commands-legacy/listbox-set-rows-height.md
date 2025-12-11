@@ -42,6 +42,6 @@ Par défaut, si vous omettez le paramètre *unité*, la hauteur est exprimée en
 |  |  |
 | --- | --- |
 | Numéro de commande | 835 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -59,7 +59,7 @@ Si los datos se extraen correctamente, la variable OK toma el valor 1; de lo con
 |  |  |
 | --- | --- |
 | Número de comando | 401 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

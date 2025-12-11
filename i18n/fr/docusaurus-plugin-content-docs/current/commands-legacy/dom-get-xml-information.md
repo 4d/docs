@@ -39,6 +39,6 @@ Passez dans *infoXML* un code indiquant le type d’information à récupérer. 
 |  |  |
 | --- | --- |
 | Numéro de commande | 721 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -117,7 +117,7 @@ Pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 766 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

@@ -287,6 +287,6 @@ Para obter mais informação sobre a função trim, por favor, consulte a docume
 |  |  |
 | --- | --- |
 | Número do comando | 1058 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

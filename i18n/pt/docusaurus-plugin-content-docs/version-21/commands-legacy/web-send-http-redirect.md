@@ -62,6 +62,6 @@ End case
 |  |  |
 | --- | --- |
 | Número do comando | 659 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

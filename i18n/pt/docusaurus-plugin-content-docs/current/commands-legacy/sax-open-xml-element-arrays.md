@@ -60,6 +60,6 @@ O método abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 921 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

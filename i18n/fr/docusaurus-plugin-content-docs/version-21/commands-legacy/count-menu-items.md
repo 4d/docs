@@ -32,7 +32,7 @@ Si vous omettez le paramètre *process*, **Count menu items** s'applique à la b
 |  |  |
 | --- | --- |
 | Numéro de commande | 405 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

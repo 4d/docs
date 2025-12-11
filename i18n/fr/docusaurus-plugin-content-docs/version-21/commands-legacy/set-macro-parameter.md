@@ -62,6 +62,6 @@ Cette macro construit un nouveau texte qui sera retourné à la méthode appelan
 |  |  |
 | --- | --- |
 | Numéro de commande | 998 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

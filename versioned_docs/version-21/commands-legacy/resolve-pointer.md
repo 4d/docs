@@ -114,6 +114,6 @@ Here is an example of a 2D array pointer:
 |  |  |
 | --- | --- |
 | Command number | 394 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

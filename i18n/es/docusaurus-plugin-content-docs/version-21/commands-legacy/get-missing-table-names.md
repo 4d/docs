@@ -39,6 +39,6 @@ Una vez haya identificado las tablas faltantes de la base, puede reactivarlas v√
 |  |  |
 | --- | --- |
 | N√∫mero de comando | 1125 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

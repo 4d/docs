@@ -52,6 +52,6 @@ El siguiente ejemplo devuelve el número de columnas de una fila en un array bid
 |  |  |
 | --- | --- |
 | Número de comando | 274 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

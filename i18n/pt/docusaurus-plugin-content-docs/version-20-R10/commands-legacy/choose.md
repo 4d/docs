@@ -87,6 +87,6 @@ Este código é estritamente equivalente a:
 |  |  |
 | --- | --- |
 | Número do comando | 955 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

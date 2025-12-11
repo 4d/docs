@@ -70,6 +70,6 @@ L’exemple suivant permet de savoir si la méthode est appelée depuis un compo
 |  |  |
 | --- | --- |
 | Numéro de commande | 489 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

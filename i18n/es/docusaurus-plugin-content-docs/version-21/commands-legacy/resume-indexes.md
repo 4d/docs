@@ -33,6 +33,6 @@ El comando **RESUME INDEXES** sólo se puede llamar desde 4D Server o un 4D loca
 |  |  |
 | --- | --- |
 | Número de comando | 1294 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

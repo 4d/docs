@@ -33,6 +33,6 @@ Este comando permite, por exemplo, recusar as tentativas de conexão em modo nã
 |  |  |
 | --- | --- |
 | Número do comando | 698 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -67,6 +67,6 @@ The following code lets you switch the display mode of the area:
 |  |  |
 | --- | --- |
 | Command number | 1289 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

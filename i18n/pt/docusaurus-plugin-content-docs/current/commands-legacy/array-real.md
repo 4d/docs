@@ -63,6 +63,6 @@ Este exemplo cria um array de interprocesso de 50 elementos do tipo Real e deter
 |  |  |
 | --- | --- |
 | Número do comando | 219 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

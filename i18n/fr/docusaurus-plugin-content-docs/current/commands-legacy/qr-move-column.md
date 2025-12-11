@@ -45,6 +45,6 @@ Vous obtenez :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

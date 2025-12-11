@@ -70,7 +70,7 @@ Note que o acesso à variável interprocesso *vtBuffer* deve ser protegida por u
 |  |  |
 | --- | --- |
 | Número do comando | 172 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

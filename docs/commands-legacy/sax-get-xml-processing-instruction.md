@@ -46,6 +46,6 @@ The following instruction will return “PI” in *vName* and “TextProcess” 
 |  |  |
 | --- | --- |
 | Command number | 875 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

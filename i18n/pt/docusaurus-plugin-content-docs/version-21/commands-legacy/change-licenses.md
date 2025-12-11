@@ -46,7 +46,7 @@ Desta forma um usuário pode ativar licenças sem ter que modificar a base.
 |  |  |
 | --- | --- |
 | Número do comando | 637 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

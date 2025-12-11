@@ -49,6 +49,6 @@ Una se haya ejecutado el comando:
 |  |  |
 | --- | --- |
 | Número de comando | 686 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

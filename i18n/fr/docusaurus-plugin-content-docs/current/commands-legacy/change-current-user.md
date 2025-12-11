@@ -72,6 +72,6 @@ L'exemple suivant affiche simplement la boîte de dialogue de connexion :
 |  |  |
 | --- | --- |
 | Numéro de commande | 289 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

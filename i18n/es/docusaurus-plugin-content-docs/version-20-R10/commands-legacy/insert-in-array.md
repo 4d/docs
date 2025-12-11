@@ -51,6 +51,6 @@ El siguiente ejemplo añade un elemento a un array:
 |  |  |
 | --- | --- |
 | Número de comando | 227 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

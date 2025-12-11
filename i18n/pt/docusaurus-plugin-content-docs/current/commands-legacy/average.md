@@ -96,7 +96,7 @@ Pode fazer os seguintes cálculos:
 |  |  |
 | --- | --- |
 | Número do comando | 2 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

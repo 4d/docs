@@ -103,6 +103,6 @@ Este ejemplo exporta e importa la totalidad de los métodos proyecto de una apli
 |  |  |
 | --- | --- |
 | Número de comando | 1194 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

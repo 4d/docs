@@ -39,6 +39,6 @@ Para maiores informações sobre componentes 4D, por favor consulte o Manual de 
 |  |  |
 | --- | --- |
 | Número do comando | 1001 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

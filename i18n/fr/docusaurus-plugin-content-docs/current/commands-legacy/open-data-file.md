@@ -60,6 +60,6 @@ Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ou
 |  |  |
 | --- | --- |
 | Numéro de commande | 312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -83,6 +83,6 @@ El siguiente ejemplo cambia el texto del elemento actual de *lista* a negrita y 
 |  |  |
 | --- | --- |
 | Número de comando | 386 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

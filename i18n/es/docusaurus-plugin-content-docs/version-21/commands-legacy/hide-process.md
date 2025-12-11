@@ -41,6 +41,6 @@ El siguiente ejemplo oculta todas las ventanas que pertenecen al proceso actual:
 |  |  |
 | --- | --- |
 | Número de comando | 324 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

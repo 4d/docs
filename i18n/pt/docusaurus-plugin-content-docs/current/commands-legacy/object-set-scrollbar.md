@@ -49,6 +49,6 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos indicando s
 |  |  |
 | --- | --- |
 | Número do comando | 843 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

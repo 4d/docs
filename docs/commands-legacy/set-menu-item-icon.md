@@ -49,6 +49,6 @@ Use of a picture located in the Resources folder of the database:
 |  |  |
 | --- | --- |
 | Command number | 984 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

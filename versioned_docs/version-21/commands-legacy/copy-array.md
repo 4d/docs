@@ -41,6 +41,6 @@ The following example fills the array named C. It then creates a new array, name
 |  |  |
 | --- | --- |
 | Command number | 226 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

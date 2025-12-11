@@ -57,6 +57,6 @@ On souhaite obtenir le type de valeurs standard :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1230 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -103,6 +103,6 @@ O seguinte método de projeto permite fazer isso:
 |  |  |
 | --- | --- |
 | Número do comando | 33 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

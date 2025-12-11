@@ -53,6 +53,6 @@ L'exemple suivant est la méthode objet d'un bouton affichant la page 3 du formu
 |  |  |
 | --- | --- |
 | Numéro de commande | 247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

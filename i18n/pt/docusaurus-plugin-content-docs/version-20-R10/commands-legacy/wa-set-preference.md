@@ -58,6 +58,6 @@ WA SET PREFERENCE( *;"myarea"; WA enable URL drop ; True)
 |  |  |
 | --- | --- |
 | Número do comando | 1041 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

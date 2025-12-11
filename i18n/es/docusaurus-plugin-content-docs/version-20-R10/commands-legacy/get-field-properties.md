@@ -81,6 +81,6 @@ Este ejemplo recupera en las variables *vTipo*, *vLong*, *vIndex*, *vUnico* y *v
 |  |  |
 | --- | --- |
 | Número de comando | 258 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

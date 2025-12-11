@@ -67,6 +67,6 @@ Add a modification date to an existing trigger documentation:
 |  |  |
 | --- | --- |
 | Command number | 1193 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -68,6 +68,6 @@ Soit la liste hiérarchique suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 952 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

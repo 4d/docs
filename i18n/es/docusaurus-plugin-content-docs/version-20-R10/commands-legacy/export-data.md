@@ -103,7 +103,7 @@ Si el usuario hace clic en **Cancelar** en la caja de diálogo estándar de abri
 |  |  |
 | --- | --- |
 | Número de comando | 666 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document |
 
 

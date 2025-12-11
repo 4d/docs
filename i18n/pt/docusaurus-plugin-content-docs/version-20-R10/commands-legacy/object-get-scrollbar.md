@@ -49,6 +49,6 @@ Para obter mais informação, consulte a descrição do comando [OBJECT SET SCRO
 |  |  |
 | --- | --- |
 | Número do comando | 1076 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

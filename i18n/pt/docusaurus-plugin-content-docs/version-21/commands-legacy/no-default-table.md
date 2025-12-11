@@ -48,6 +48,6 @@ Em um banco que contenha um formulário de projeto chamado "oFormulário" e um f
 |  |  |
 | --- | --- |
 | Número do comando | 993 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

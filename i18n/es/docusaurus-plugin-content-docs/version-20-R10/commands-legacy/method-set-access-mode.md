@@ -31,6 +31,6 @@ En *modo*, pase una de las siguientes constantes del tema *Acceso objetos diseñ
 |  |  |
 | --- | --- |
 | Número de comando | 1191 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

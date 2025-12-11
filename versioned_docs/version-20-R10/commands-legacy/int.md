@@ -36,6 +36,6 @@ The following example illustrates how Int works for both positive and negative n
 |  |  |
 | --- | --- |
 | Command number | 8 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

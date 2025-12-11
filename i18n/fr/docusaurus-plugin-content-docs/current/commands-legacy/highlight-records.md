@@ -53,6 +53,6 @@ Lorsque l’utilisateur clique sur le bouton, la boîte de dialogue standard de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 656 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

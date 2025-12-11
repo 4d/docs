@@ -66,6 +66,6 @@ Encriptar un archivo de texto ubicado en la carpeta RESOURCES de la base de dato
 |  |  |
 | --- | --- |
 | Número de comando | 1773 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

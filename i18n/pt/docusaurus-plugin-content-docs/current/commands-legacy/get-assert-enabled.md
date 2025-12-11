@@ -30,6 +30,6 @@ Automaticamente, as asserções estão ativas mas é possível desativá-las uti
 |  |  |
 | --- | --- |
 | Número do comando | 1130 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

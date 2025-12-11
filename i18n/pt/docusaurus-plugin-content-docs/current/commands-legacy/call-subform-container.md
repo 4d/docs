@@ -35,6 +35,6 @@ Em *evento*, pode passar todo evento de formulário pré-definido de 4D (pode ut
 |  |  |
 | --- | --- |
 | Número do comando | 1086 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

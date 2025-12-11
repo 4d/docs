@@ -63,6 +63,6 @@ Vous souhaitez obtenir le formulaire courant si c’est un formulaire projet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1298 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

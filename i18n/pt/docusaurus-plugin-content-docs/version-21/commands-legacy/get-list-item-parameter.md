@@ -41,6 +41,6 @@ Em *seletor*, pode passar a constante Additional text ou a constante de ação p
 |  |  |
 | --- | --- |
 | Número do comando | 985 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

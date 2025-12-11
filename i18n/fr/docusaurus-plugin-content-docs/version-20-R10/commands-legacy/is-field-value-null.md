@@ -34,6 +34,6 @@ La valeur retournée par cette commande n'a de sens que si l'option "*Traduire l
 |  |  |
 | --- | --- |
 | Numéro de commande | 964 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

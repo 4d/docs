@@ -76,6 +76,6 @@ Vous souhaitez sélectionner un serveur au démarrage, à partir d'une applicati
 |  |  |
 | --- | --- |
 | Numéro de commande | 1321 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

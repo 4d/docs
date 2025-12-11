@@ -40,6 +40,6 @@ Pase el código de la opción a leer en el parámetro *opcion*. El comando devue
 |  |  |
 | --- | --- |
 | Número de comando | 1290 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

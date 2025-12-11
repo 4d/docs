@@ -48,6 +48,6 @@ Apply the Times font to the current item of the list:
 |  |  |
 | --- | --- |
 | Command number | 953 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

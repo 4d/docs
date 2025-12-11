@@ -62,6 +62,6 @@ Nous souhaitons modifier temporairement la destination de recherche, et rétabli
 |  |  |
 | --- | --- |
 | Numéro de commande | 1155 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

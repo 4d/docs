@@ -64,6 +64,6 @@ Pour permettre à l'utilisateur de sélectionner une ligne commençant par la le
 |  |  |
 | --- | --- |
 | Numéro de commande | 1744 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

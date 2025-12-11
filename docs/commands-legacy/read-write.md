@@ -36,6 +36,6 @@ Use READ WRITE when you must modify a record and save the changes. Also use READ
 |  |  |
 | --- | --- |
 | Command number | 146 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

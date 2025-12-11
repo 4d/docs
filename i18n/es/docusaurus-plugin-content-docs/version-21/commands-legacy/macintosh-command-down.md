@@ -35,6 +35,6 @@ Ver el ejemplo del comando [Shift down](shift-down.md "Shift down").
 |  |  |
 | --- | --- |
 | Número de comando | 546 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

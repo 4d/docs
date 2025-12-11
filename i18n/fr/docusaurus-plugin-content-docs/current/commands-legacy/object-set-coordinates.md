@@ -60,6 +60,6 @@ L’instruction suivante place l’objet "bouton\_1" aux coordonnées (10,20) (3
 |  |  |
 | --- | --- |
 | Numéro de commande | 1248 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

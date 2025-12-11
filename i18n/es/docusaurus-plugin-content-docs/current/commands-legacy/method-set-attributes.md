@@ -61,6 +61,6 @@ Usted desea modificar un solo atributo:
 |  |  |
 | --- | --- |
 | Número de comando | 1335 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

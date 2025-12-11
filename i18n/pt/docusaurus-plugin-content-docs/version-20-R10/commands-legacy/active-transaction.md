@@ -49,6 +49,6 @@ Se quiser conhecer o estado da transação atual:
 |  |  |
 | --- | --- |
 | Número do comando | 1387 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

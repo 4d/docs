@@ -59,6 +59,6 @@ This example creates an interprocess array of 50 Date elements, and sets each el
 |  |  |
 | --- | --- |
 | Command number | 224 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

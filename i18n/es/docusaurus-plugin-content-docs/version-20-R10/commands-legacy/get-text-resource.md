@@ -48,7 +48,7 @@ Si se encuentra el recurso, OK toma el valor 1\. De lo contrario, toma el valor 
 |  |  |
 | --- | --- |
 | Número de comando | 504 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

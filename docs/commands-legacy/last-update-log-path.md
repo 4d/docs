@@ -31,6 +31,6 @@ This command is intended to be used in an automatic update process for a merged 
 |  |  |
 | --- | --- |
 | Command number | 1301 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

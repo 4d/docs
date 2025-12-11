@@ -64,6 +64,6 @@ In this example, data from fields of the records in a table are extracted and th
 |  |  |
 | --- | --- |
 | Command number | 1219 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

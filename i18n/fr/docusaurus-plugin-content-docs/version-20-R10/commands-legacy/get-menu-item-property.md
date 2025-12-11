@@ -37,6 +37,6 @@ Passez dans le paramètre *propriété* la propriété dont vous souhaitez obten
 |  |  |
 | --- | --- |
 | Numéro de commande | 972 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

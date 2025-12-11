@@ -68,6 +68,6 @@ This command only affects data entry. It has no effect on date storage, computat
 |  |  |
 | --- | --- |
 | Command number | 392 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

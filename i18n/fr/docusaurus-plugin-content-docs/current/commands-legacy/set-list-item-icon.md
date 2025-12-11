@@ -51,6 +51,6 @@ Affectation d'une même image à deux éléments différents. Ce code est optimi
 |  |  |
 | --- | --- |
 | Numéro de commande | 950 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

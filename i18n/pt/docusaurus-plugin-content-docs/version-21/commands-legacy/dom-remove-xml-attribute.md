@@ -50,7 +50,7 @@ O código abaixo permite remover o primeiro atributo "N=1":
 |  |  |
 | --- | --- |
 | Número do comando | 1084 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

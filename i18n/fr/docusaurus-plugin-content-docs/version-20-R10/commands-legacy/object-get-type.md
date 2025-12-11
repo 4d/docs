@@ -101,6 +101,6 @@ Vous souhaitez charger un formulaire et obtenir la liste de tous les objets des 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1300 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

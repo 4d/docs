@@ -56,7 +56,7 @@ Si el archivo a enviar existe y si el timeout no ha pasado, OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 619 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

@@ -39,6 +39,6 @@ Pase en el parámetro *numInfo* el número del tipo de información SOAP que qui
 |  |  |
 | --- | --- |
 | Número de comando | 784 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

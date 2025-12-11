@@ -65,6 +65,6 @@ As etiquetas não são editáveis mas o são depois de um triplo-clique. Se dese
 |  |  |
 | --- | --- |
 | Número do comando | 1332 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

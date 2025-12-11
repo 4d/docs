@@ -25,6 +25,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 181 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

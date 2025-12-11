@@ -48,6 +48,6 @@ The following project method builds the array *asFields*, consisting of the fiel
 |  |  |
 | --- | --- |
 | Command number | 255 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

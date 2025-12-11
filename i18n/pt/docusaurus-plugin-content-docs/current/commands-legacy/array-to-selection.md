@@ -86,7 +86,7 @@ Se quiser copiar uma seleção de registroar para uma tablela arquivo selecionan
 |  |  |
 | --- | --- |
 | Número do comando | 261 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar a seleção atual ||
 
 

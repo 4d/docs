@@ -41,6 +41,6 @@ El siguiente ejemplo ilustra el funcionamiento de Mod con diferentes argumentos.
 |  |  |
 | --- | --- |
 | Número de comando | 98 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

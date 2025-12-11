@@ -39,6 +39,6 @@ La descripción de la ruta de la última búsqueda puede compararse con la descr
 |  |  |
 | --- | --- |
 | Número de comando | 1045 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

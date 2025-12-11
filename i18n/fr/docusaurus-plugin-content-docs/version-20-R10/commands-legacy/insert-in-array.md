@@ -51,6 +51,6 @@ L'exemple suivant ajoute un élément à un tableau :
 |  |  |
 | --- | --- |
 | Numéro de commande | 227 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -70,7 +70,7 @@ Si quiere conocer la configuración actual de la hoja de estilo "Automatic"
 |  |  |
 | --- | --- |
 | Número de comando | 1256 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

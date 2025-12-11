@@ -47,6 +47,6 @@ All elements whose bounding rectangle intersects with the selection rectangle ar
 |  |  |
 | --- | --- |
 | Command number | 1109 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

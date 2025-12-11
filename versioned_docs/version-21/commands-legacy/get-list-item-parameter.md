@@ -41,6 +41,6 @@ In *selector*, you can pass the Additional text or Associated standard action co
 |  |  |
 | --- | --- |
 | Command number | 985 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

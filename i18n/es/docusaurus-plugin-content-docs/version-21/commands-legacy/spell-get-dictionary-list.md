@@ -57,6 +57,6 @@ Usted pone "fr-classic+reform1990.aff" y "fr-classic+reform1990.dic" como tambi√
 |  |  |
 | --- | --- |
 | N√∫mero de comando | 1204 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

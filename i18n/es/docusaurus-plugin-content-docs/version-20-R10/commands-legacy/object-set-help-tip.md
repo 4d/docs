@@ -141,6 +141,6 @@ El resultado es...
 |  |  |
 | --- | --- |
 | Número de comando | 1181 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

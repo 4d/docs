@@ -45,7 +45,7 @@ This way a user can activate licenses without having to modify the database.
 |  |  |
 | --- | --- |
 | Command number | 637 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

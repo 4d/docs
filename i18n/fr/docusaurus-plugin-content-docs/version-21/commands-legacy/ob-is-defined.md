@@ -66,6 +66,6 @@ Ce test équivaut à :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1231 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

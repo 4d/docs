@@ -42,6 +42,6 @@ Cada parámetro devuelve True o False dependiendo de si la opción correspondien
 |  |  |
 | --- | --- |
 | Número de comando | 1184 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

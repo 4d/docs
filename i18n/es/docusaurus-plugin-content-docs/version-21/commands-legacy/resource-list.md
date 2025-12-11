@@ -75,6 +75,6 @@ El siguiente ejemplo copia los recursos imagen presentes en todos los archivos d
 |  |  |
 | --- | --- |
 | Número de comando | 500 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

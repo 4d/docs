@@ -67,6 +67,6 @@ In the case of the Associated standard action property, you can pass in the *val
 |  |  |
 | --- | --- |
 | Command number | 973 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -138,6 +138,6 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
 |  |  |
 | --- | --- |
 | Numéro de commande | 1517 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

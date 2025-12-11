@@ -55,6 +55,6 @@ Imaginons un Web Service retournant l’heure courante dans n’importe quelle v
 |  |  |
 | --- | --- |
 | Numéro de commande | 779 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

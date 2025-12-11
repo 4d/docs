@@ -44,7 +44,7 @@ Si el recurso se encuentra, OK toma el valor 1, de lo contrario toma el valor 0 
 |  |  |
 | --- | --- |
 | Número de comando | 510 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

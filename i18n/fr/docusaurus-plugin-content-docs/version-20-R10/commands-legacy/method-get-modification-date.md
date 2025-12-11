@@ -74,6 +74,6 @@ Vous souhaitez obtenir les dates de modification des méthodes d'un module, pré
 |  |  |
 | --- | --- |
 | Numéro de commande | 1170 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

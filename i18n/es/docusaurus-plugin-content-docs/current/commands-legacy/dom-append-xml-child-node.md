@@ -152,6 +152,6 @@ Si el contenido de *valorHijo* no es valido, se devuelve un error.
 |  |  |
 | --- | --- |
 | Número de comando | 1080 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

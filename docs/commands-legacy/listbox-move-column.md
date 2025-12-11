@@ -46,6 +46,6 @@ You want to swap the 2nd and 3rd columns of the list box:
 |  |  |
 | --- | --- |
 | Command number | 1274 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -45,6 +45,6 @@ Par défaut, si le paramètre *\** est omis, la commande utilise un encodage Bas
 |  |  |
 | --- | --- |
 | Numéro de commande | 895 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

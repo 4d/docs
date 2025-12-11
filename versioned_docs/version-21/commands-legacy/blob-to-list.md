@@ -65,7 +65,7 @@ The OK variable is set to 1 if the list has been successfully created, otherwise
 |  |  |
 | --- | --- |
 | Command number | 557 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

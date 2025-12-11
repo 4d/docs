@@ -50,6 +50,6 @@ Este exemplo lhe permite aplicar uma cor alternativa em um formulário listado m
 |  |  |
 | --- | --- |
 | Número do comando | 897 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

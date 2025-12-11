@@ -72,6 +72,6 @@ O método de projeto listado aqui está associado com o item Quit ou Exit do men
 |  |  |
 | --- | --- |
 | Número do comando | 291 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

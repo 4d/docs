@@ -124,6 +124,6 @@ A coluna é anexada à list box :
 |  |  |
 | --- | --- |
 | Número do comando | 970 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

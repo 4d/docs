@@ -73,7 +73,7 @@ Criação da subpasta "\\Fevereiro\\" na atual pasta "C:\\Arquivos\\":
 |  |  |
 | --- | --- |
 | Número do comando | 475 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

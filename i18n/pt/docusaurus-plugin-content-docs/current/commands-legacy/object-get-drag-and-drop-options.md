@@ -42,6 +42,6 @@ Cada parâmetro devolve True ou False dependendo se a opção correspondente est
 |  |  |
 | --- | --- |
 | Número do comando | 1184 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

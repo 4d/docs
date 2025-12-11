@@ -39,7 +39,7 @@ O código a seguir permite adicionar uma coluna adicional à direita da última 
 |  |  |
 | --- | --- |
 | Número do comando | 764 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

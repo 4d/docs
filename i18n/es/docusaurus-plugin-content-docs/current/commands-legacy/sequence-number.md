@@ -65,6 +65,6 @@ El siguiente ejemplo es parte de un método de formulario. Estas líneas de cód
 |  |  |
 | --- | --- |
 | Número de comando | 244 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

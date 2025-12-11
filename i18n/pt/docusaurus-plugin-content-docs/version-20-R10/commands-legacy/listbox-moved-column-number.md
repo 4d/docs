@@ -36,6 +36,6 @@ Este comando deve ser utilizado com o evento de formulário On column moved (ver
 |  |  |
 | --- | --- |
 | Número do comando | 844 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

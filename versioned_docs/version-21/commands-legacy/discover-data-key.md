@@ -55,6 +55,6 @@ Key files (".4DKeyChain" extension files) must be stored at the top level of con
 |  |  |
 | --- | --- |
 | Command number | 1639 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

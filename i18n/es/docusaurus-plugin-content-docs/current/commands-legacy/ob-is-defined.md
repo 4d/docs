@@ -66,6 +66,6 @@ Esta prueba es equivalente a:
 |  |  |
 | --- | --- |
 | Número de comando | 1231 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 19 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

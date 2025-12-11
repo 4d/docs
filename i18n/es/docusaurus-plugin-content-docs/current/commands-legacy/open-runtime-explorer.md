@@ -22,6 +22,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1781 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

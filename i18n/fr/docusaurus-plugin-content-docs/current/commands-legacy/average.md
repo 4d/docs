@@ -95,7 +95,7 @@ Vous pouvez effectuer les calculs suivants :
 |  |  |
 | --- | --- |
 | Numéro de commande | 2 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -85,6 +85,6 @@ Este código funcionará tanto con una relación especial como con una estándar
 |  |  |
 | --- | --- |
 | Número do comando | 1137 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

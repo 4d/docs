@@ -30,6 +30,6 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 |  |  |
 | --- | --- |
 | Command number | 486 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

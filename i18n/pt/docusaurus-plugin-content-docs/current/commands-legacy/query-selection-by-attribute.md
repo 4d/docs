@@ -51,7 +51,7 @@ Se quiser encontrar pessoas com uma idade entre 20 e 30 nos registros que foram 
 |  |  |
 | --- | --- |
 | Número do comando | 1424 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

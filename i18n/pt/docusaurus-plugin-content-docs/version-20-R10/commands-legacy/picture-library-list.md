@@ -98,6 +98,6 @@ O exemplo a seguir exporta a biblioteca de imagens a um documento armazenado no 
 |  |  |
 | --- | --- |
 | Número do comando | 564 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

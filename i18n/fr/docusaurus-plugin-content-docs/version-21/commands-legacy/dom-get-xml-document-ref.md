@@ -59,6 +59,6 @@ Dans cet exemple nous cherchons à retrouver la déclaration de DTD du document 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1088 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

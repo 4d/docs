@@ -59,7 +59,7 @@ Se o comando falhar, é gerado um erro que pode ser interceptado com a ajuda do 
 |  |  |
 | --- | --- |
 | Número do comando | 871 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, Document, error |
 | Proibido no servidor ||
 

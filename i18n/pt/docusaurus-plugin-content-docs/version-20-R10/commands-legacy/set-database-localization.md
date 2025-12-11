@@ -75,7 +75,7 @@ A interface do seu aplicativo usa a string estática ":xliff:shopping". Os arqui
 |  |  |
 | --- | --- |
 | Número do comando | 1104 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

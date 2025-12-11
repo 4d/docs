@@ -115,7 +115,7 @@ En caso de error, no cambia la variable. Cuando ocurre un error en una variable 
 |  |  |
 | --- | --- |
 | Número de comando | 1092 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

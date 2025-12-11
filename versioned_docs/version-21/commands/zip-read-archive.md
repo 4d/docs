@@ -88,6 +88,6 @@ To extract from the root folder:
 |  |  |
 | --- | --- |
 | Command number | 1637 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

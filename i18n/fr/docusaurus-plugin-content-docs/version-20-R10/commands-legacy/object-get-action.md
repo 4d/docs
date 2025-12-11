@@ -49,6 +49,6 @@ Vous souhaitez associer l'action "Annuler" à tous les objets du formulaire qui 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1457 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

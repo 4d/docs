@@ -62,6 +62,6 @@ This macro builds a new text that will be returned to the calling method:
 |  |  |
 | --- | --- |
 | Command number | 998 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

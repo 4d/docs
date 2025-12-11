@@ -210,7 +210,7 @@ Once this is implemented in the database, we have all we need to write the proje
 |  |  |
 | --- | --- |
 | Command number | 477 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

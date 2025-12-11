@@ -61,6 +61,6 @@ Se quiser salvar uma chave de criptografia em um arquivo .4DKeyChain:
 |  |  |
 | --- | --- |
 | Número do comando | 1611 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

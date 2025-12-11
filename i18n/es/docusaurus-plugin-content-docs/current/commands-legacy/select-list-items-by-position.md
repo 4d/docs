@@ -78,6 +78,6 @@ Se seleccionan los elementos segundo, tercero y quinto de la lista jerárquica
 |  |  |
 | --- | --- |
 | Número de comando | 381 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

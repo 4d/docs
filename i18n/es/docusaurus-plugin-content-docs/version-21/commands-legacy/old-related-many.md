@@ -29,7 +29,7 @@ OLD RELATED MANY cambia la selección de la tabla relacionada y selecciona el pr
 |  |  |
 | --- | --- |
 | Número de comando | 263 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

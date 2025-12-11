@@ -98,6 +98,6 @@ Here is the code for GetFile:
 |  |  |
 | --- | --- |
 | Command number | 1212 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

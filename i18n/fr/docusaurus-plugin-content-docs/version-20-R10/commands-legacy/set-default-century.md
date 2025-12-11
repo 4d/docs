@@ -68,6 +68,6 @@ Cette commande affecte uniquement la saisie des données. Elle n'influe pas sur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 392 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

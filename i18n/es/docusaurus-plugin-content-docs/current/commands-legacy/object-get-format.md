@@ -69,6 +69,6 @@ Customized formats are returned untouched:
 |  |  |
 | --- | --- |
 | Número de comando | 894 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

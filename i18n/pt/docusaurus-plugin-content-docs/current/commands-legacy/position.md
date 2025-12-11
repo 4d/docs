@@ -123,6 +123,6 @@ No exemplo abaixo, se quiser encontrar todas as instâncias de uma string e subs
 |  |  |
 | --- | --- |
 | Número do comando | 15 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

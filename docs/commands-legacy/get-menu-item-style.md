@@ -53,7 +53,7 @@ To test if a menu item is displayed in bold, you write:
 |  |  |
 | --- | --- |
 | Command number | 426 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

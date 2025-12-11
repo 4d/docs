@@ -64,6 +64,6 @@ La fenêtre apparaît ainsi :
 |  |  |
 | --- | --- |
 | Numéro de commande | 444 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

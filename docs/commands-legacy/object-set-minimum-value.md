@@ -35,6 +35,6 @@ In *minValue*, pass the new minimum value you want to assign to the object for t
 |  |  |
 | --- | --- |
 | Command number | 1242 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

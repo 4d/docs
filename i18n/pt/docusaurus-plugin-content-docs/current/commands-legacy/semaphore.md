@@ -160,6 +160,6 @@ Sintaxe:
 |  |  |
 | --- | --- |
 | Número do comando | 143 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

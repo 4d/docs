@@ -90,7 +90,7 @@ Vous souhaitez remplacer le texte sélectionné par la valeur d'un champ :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1281 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

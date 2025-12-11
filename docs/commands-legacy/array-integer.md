@@ -63,6 +63,6 @@ This example creates an interprocess array of 50 2-byte [Integer](# "Number betw
 |  |  |
 | --- | --- |
 | Command number | 220 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

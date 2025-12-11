@@ -124,6 +124,6 @@ En este ejemplo, crearemos por programación, una barra de menús incluyendo los
 |  |  |
 | --- | --- |
 | Número de comando | 67 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

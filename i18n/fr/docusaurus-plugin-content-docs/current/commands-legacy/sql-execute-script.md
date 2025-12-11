@@ -63,7 +63,7 @@ Si le script est correctement exécuté (aucune erreur rencontrée), la variable
 |  |  |
 | --- | --- |
 | Numéro de commande | 1089 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

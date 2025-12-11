@@ -44,6 +44,6 @@ Ver el ejemplo del comando [Current date](current-date.md "Current date").
 |  |  |
 | --- | --- |
 | Número de comando | 25 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

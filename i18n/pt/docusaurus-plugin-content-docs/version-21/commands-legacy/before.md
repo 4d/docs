@@ -30,6 +30,6 @@ Para que se gere o ciclo de execução **Before** tenha certeza de que a proprie
 |  |  |
 | --- | --- |
 | Número do comando | 29 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

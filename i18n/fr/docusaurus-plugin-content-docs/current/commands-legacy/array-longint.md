@@ -63,6 +63,6 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Entier long]
 |  |  |
 | --- | --- |
 | Numéro de commande | 221 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

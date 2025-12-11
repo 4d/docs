@@ -34,6 +34,6 @@ Pass **True** in the *invisible* parameter to hide the focus rectangle and **Fal
 |  |  |
 | --- | --- |
 | Command number | 1177 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

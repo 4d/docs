@@ -48,6 +48,6 @@ Resultado:
 |  |  |
 | --- | --- |
 | Número do comando | 1445 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

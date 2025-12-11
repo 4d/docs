@@ -92,6 +92,6 @@ $status:=$transporter.send($email)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1681                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |
 
 

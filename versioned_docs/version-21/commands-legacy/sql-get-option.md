@@ -33,7 +33,7 @@ If the command was properly executed, the system variable OK is set to 1\. Other
 |  |  |
 | --- | --- |
 | Command number | 819 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

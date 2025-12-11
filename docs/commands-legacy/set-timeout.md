@@ -55,7 +55,7 @@ The following example sets the serial port to receive data. It then sets a time-
 |  |  |
 | --- | --- |
 | Command number | 268 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

@@ -69,6 +69,6 @@ Cuando utiliza el *selector* Web debug log, puede recibir una de las siguientes 
 |  |  |
 | --- | --- |
 | Número de comando | 1209 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

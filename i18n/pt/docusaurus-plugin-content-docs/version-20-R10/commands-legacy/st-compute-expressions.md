@@ -72,7 +72,7 @@ Você deseja atualizar as referências incluídas na seleção de texto:
 |  |  |
 | --- | --- |
 | Número do comando | 1285 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

@@ -33,6 +33,6 @@ Las columnas estáticas no pueden moverse en el list box.
 |  |  |
 | --- | --- |
 | Número de comando | 1153 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

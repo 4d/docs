@@ -26,6 +26,6 @@ This command returns **True** if you pass a shareable entity selection in *toChe
 |  |  |
 | --- | --- |
 | Command number | 1759 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

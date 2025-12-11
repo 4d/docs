@@ -44,6 +44,6 @@ Les en-têtes doivent respecter une hauteur minimale, définie par le système d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1143 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

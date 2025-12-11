@@ -88,6 +88,6 @@ Un formulaire “Demande de certificat” comporte les six champs nécessaires �
 |  |  |
 | --- | --- |
 | Numéro de commande | 691 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

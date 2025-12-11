@@ -74,6 +74,6 @@ Uso do comando **JSON TO SELECTION** para adicionar os registros a tabela \[Comp
 |  |  |
 | --- | --- |
 | Número do comando | 1235 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

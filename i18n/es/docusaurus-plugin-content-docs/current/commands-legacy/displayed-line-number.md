@@ -50,6 +50,6 @@ Este ejemplo le permite aplicar un color alterno en un formulario listado mostra
 |  |  |
 | --- | --- |
 | Número de comando | 897 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

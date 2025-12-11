@@ -66,6 +66,6 @@ In the [On REST Authentication database method](on-rest-authentication-database-
 |  |  |
 | --- | --- |
 | Command number | 638 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

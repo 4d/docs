@@ -37,6 +37,6 @@ El siguiente ejemplo muestra el valor de Pi:
 |  |  |
 | --- | --- |
 | Número de comando | 20 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

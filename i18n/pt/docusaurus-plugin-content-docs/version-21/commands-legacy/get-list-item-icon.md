@@ -44,6 +44,6 @@ Se nenhum ícone está associado ao elemento, a variável ícone seja retornada 
 |  |  |
 | --- | --- |
 | Número do comando | 951 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

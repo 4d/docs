@@ -42,6 +42,6 @@ Mesmo que você possa utilizar os [Self](self.md) para adicionar dias a uma data
 |  |  |
 | --- | --- |
 | Número do comando | 393 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

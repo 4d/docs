@@ -221,7 +221,7 @@ Si los datos en el BLOB se añaden correctamente al portapapeles, la variable si
 |  |  |
 | --- | --- |
 | Número de comando | 403 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

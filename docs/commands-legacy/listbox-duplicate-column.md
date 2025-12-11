@@ -99,6 +99,6 @@ You want to duplicate a Boolean column and change its title:
 |  |  |
 | --- | --- |
 | Command number | 1273 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

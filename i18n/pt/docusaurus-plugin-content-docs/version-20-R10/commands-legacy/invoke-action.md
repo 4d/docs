@@ -69,6 +69,6 @@ Se quiser executar uma ação padrão **Goto page** (página 3) no formulário p
 |  |  |
 | --- | --- |
 | Número do comando | 1439 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

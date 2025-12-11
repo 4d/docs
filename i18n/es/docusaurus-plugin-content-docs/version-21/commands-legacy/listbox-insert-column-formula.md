@@ -123,6 +123,6 @@ La columna se añade al list box:
 |  |  |
 | --- | --- |
 | Número de comando | 970 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

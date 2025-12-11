@@ -34,6 +34,6 @@ Em ambos os casos, o comando não retorna as tabelas invisíveis.
 |  |  |
 | --- | --- |
 | Número do comando | 803 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

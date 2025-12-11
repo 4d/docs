@@ -65,6 +65,6 @@ Puede enviar la página "stats.shtm" utilizando un enlace URL o utilizando el co
 |  |  |
 | --- | --- |
 | Número de comando | 658 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

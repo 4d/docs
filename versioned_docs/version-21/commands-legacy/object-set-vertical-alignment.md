@@ -47,6 +47,6 @@ Vertical alignment can be applied to the following form objects:
 |  |  |
 | --- | --- |
 | Command number | 1187 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

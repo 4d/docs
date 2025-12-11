@@ -52,6 +52,6 @@ The following example returns the number of columns for a row in a two-dimension
 |  |  |
 | --- | --- |
 | Command number | 274 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

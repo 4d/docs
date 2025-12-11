@@ -64,6 +64,6 @@ vhMax:=LISTBOX Get auto row height(*;"LB";lk row max height;lk lines)
 |  |  |
 | --- | --- |
 | Número do comando | 1502 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

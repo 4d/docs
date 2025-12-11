@@ -43,7 +43,7 @@ Si la copie du texte est correctement placée dans le conteneur de données, la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 523 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

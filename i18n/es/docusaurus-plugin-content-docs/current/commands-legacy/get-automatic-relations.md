@@ -41,6 +41,6 @@ Consulte el ejemplo del comando [GET FIELD RELATION](get-field-relation.md "GET 
 |  |  |
 | --- | --- |
 | Número de comando | 899 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

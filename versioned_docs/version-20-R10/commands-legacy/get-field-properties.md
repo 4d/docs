@@ -80,6 +80,6 @@ This example sets the variables *vType*, *vLength*, *vIndex*, *vUnique* and *vIn
 |  |  |
 | --- | --- |
 | Command number | 258 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

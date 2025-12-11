@@ -76,6 +76,6 @@ You want to select a server at startup from a single-user application. You could
 |  |  |
 | --- | --- |
 | Command number | 1321 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

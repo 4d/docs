@@ -51,6 +51,6 @@ It is possible to base the form printing carried out using the [Print form](../c
 |  |  |
 | --- | --- |
 | Command number | 711 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

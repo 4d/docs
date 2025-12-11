@@ -38,6 +38,6 @@ L'exemple suivant affiche le process "Clients", s'il était caché auparavant. L
 |  |  |
 | --- | --- |
 | Numéro de commande | 325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

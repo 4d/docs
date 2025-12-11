@@ -34,6 +34,6 @@ Les marges d’impression gauche et droite n’influent pas sur la valeur retour
 |  |  |
 | --- | --- |
 | Numéro de commande | 702 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

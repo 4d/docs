@@ -260,6 +260,6 @@ Depois de implementar este método de projeto em sua aplicação, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 396 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

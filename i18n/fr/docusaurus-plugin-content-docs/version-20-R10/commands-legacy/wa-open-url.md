@@ -53,6 +53,6 @@ Cette commande a le même effet que la modification de la valeur de la variable 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1020 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

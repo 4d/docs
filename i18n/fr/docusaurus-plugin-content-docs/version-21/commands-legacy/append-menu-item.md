@@ -82,7 +82,7 @@ Ensuite, dans toute méthode formulaire ou projet, vous pouvez écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 411 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

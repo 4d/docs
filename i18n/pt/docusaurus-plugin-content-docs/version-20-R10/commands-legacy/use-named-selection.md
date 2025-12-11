@@ -35,7 +35,7 @@ Lembre que uma seleção temporária é uma representação de uma seleção de 
 |  |  |
 | --- | --- |
 | Número do comando | 332 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

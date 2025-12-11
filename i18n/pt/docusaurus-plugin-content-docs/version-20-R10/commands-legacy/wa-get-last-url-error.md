@@ -40,6 +40,6 @@ Esta informação se retorna em três variáveis:
 |  |  |
 | --- | --- |
 | Número do comando | 1034 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

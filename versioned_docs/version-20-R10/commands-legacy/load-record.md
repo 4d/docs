@@ -41,6 +41,6 @@ In multi-user and multi-process environments, when you need to modify an existin
 |  |  |
 | --- | --- |
 | Command number | 52 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

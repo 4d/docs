@@ -99,7 +99,7 @@ You can also use other commands, such as [PRINT SELECTION](print-selection.md), 
 |  |  |
 | --- | --- |
 | Command number | 59 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

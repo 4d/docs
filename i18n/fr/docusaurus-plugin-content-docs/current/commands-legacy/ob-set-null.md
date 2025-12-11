@@ -44,6 +44,6 @@ On souhaite mettre la valeur null dans la propriété "âge" de Léa :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1233 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

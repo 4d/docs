@@ -36,6 +36,6 @@ L'exemple suivant utilise une valeur monétaire exprimée sous forme numérique 
 |  |  |
 | --- | --- |
 | Numéro de commande | 9 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

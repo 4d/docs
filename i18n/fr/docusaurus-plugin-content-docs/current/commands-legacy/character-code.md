@@ -90,6 +90,6 @@ Le code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 91 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

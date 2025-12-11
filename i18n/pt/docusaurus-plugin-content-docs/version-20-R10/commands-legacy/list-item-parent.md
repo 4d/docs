@@ -77,6 +77,6 @@ Os números de referência dos elementos são os seguintes:
 |  |  |
 | --- | --- |
 | Número do comando | 633 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

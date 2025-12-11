@@ -48,6 +48,6 @@ El siguiente método de proyecto crea el array *asCampos*, con los nombres de lo
 |  |  |
 | --- | --- |
 | Número de comando | 255 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

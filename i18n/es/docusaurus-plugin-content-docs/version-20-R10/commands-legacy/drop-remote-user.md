@@ -49,6 +49,6 @@ Desea eliminar un usuario remoto específico:
 |  |  |
 | --- | --- |
 | Número de comando | 1633 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

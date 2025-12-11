@@ -335,6 +335,6 @@ Queremos obter as medidas de bytes de cachê nos últimos dois minutos:
 |  |  |
 | --- | --- |
 | Número do comando | 1314 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

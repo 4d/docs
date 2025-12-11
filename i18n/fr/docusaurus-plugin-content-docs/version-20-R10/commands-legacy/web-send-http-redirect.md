@@ -61,6 +61,6 @@ Dans la [On Web Connection](./on-web-connection-database-method.md), placez les 
 |  |  |
 | --- | --- |
 | Numéro de commande | 659 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -49,6 +49,6 @@ El siguiente ejemplo guarda el número del registro actual y luego busca en la t
 |  |  |
 | --- | --- |
 | Número de comando | 243 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

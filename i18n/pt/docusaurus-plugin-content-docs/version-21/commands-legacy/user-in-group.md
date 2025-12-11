@@ -48,6 +48,6 @@ O exemplo abaixo procura faturas específicas. Se o usuário atual estiver no gr
 |  |  |
 | --- | --- |
 | Número do comando | 338 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

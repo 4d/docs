@@ -98,6 +98,6 @@ Desea iniciar/detener la supervisión y revisión de los datos 4D y las activida
 |  |  |
 | --- | --- |
 | Número de comando | 1712 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

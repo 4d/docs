@@ -52,6 +52,6 @@ Exemple de méthode d’import massif de données :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1293 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

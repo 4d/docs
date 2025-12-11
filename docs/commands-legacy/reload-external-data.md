@@ -32,6 +32,6 @@ You then need to reload the data using the **RELOAD EXTERNAL DATA** command to u
 |  |  |
 | --- | --- |
 | Command number | 1135 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -30,6 +30,6 @@ La propiedad "Tres estados" se puede definir ya sea usando la lista de propiedad
 |  |  |
 | --- | --- |
 | Número de comando | 1250 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

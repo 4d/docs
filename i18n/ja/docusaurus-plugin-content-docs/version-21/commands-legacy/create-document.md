@@ -75,7 +75,7 @@ Windowsでは、Windowsのファイル拡張子を渡すか、*\_o\_MAP FILE TYP
 |  |  |
 | --- | --- |
 | コマンド番号 | 266 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document、error |
 
 

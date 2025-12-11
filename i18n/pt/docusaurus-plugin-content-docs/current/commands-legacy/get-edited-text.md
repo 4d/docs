@@ -72,6 +72,6 @@ End if
 |  |  |
 | --- | --- |
 | Número do comando | 655 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

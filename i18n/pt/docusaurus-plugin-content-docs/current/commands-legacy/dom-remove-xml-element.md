@@ -33,7 +33,7 @@ Um erro é gerado quando o elemento de referência for inválido
 |  |  |
 | --- | --- |
 | Número do comando | 869 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

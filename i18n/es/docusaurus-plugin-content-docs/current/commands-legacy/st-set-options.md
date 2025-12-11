@@ -67,6 +67,6 @@ El siguiente código permite cambiar el modo de visualización del área:
 |  |  |
 | --- | --- |
 | Número de comando | 1289 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -42,6 +42,6 @@ Consulte o exemplo do comando [FORM SET SIZE](form-set-size.md "FORM SET SIZE").
 |  |  |
 | --- | --- |
 | Número do comando | 893 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

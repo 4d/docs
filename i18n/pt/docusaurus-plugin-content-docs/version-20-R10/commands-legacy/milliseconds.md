@@ -53,6 +53,6 @@ O código abaixo espera até 5 segundos para que um registro bloqueado seja desb
 |  |  |
 | --- | --- |
 | Número do comando | 459 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

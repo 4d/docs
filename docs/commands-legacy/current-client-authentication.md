@@ -79,6 +79,6 @@ With this setting, no password dialog will be displayed for a remote 4D that con
 |  |  |
 | --- | --- |
 | Command number | 1355 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

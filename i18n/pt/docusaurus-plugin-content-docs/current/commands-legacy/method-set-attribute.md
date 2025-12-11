@@ -73,6 +73,6 @@ Definição de vários pares de atributos/valores:
 |  |  |
 | --- | --- |
 | Número do comando | 1192 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

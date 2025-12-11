@@ -53,7 +53,7 @@ suivi de :
 |  |  |
 | --- | --- |
 | Numéro de commande | 776 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

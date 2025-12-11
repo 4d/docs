@@ -38,6 +38,6 @@ Se o list box está associado com arrays, *numTabela* devolve -1 e *tempo*, se �
 |  |  |
 | --- | --- |
 | Número do comando | 1014 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

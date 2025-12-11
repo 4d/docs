@@ -31,6 +31,6 @@ Quando tiver terminado de utilizar a nova lista, chame a [CLEAR LIST](clear-list
 |  |  |
 | --- | --- |
 | Número do comando | 626 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

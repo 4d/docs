@@ -49,6 +49,6 @@ The *vertical* parameter returns a value indicating the vertical resizing option
 |  |  |
 | --- | --- |
 | Command number | 1176 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

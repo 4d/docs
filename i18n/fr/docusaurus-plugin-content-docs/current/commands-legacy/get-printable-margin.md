@@ -48,6 +48,6 @@ Il est possible de baser l’impression des formulaires effectuée à l’aide d
 |  |  |
 | --- | --- |
 | Numéro de commande | 711 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

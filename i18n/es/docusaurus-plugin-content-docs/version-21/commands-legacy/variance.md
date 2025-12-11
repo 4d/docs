@@ -72,6 +72,6 @@ Este ejemplo permite obtener la varianza de valores ubicados en un array:
 |  |  |
 | --- | --- |
 | Número de comando | 27 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

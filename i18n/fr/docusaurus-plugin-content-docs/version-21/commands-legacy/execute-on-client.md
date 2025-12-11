@@ -66,7 +66,7 @@ La variable système OK prend la valeur 1 si 4D Server a correctement reçu la r
 |  |  |
 | --- | --- |
 | Numéro de commande | 651 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

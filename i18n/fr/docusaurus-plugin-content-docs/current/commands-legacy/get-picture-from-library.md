@@ -67,7 +67,7 @@ S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est g
 |  |  |
 | --- | --- |
 | Numéro de commande | 565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

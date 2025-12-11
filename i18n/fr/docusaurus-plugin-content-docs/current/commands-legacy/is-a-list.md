@@ -35,6 +35,6 @@ Reportez-vous aux exemples de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 |  |  |
 | --- | --- |
 | Numéro de commande | 621 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

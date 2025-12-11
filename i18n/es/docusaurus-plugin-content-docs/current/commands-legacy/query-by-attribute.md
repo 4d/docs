@@ -410,7 +410,7 @@ La variable OK toma el valor 0 si: - el usuario hace clic en Cancelar en la caja
 |  |  |
 | --- | --- |
 | Número de comando | 1331 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

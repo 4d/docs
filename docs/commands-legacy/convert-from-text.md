@@ -193,7 +193,7 @@ If the command has been correctly executed, the OK variable is set to 1\. Otherw
 |  |  |
 | --- | --- |
 | Command number | 1011 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

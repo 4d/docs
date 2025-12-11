@@ -40,7 +40,7 @@ L'exemple suivant affiche tous les enregistrements de la table \[Personnes\] :
 |  |  |
 | --- | --- |
 | Numéro de commande | 47 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

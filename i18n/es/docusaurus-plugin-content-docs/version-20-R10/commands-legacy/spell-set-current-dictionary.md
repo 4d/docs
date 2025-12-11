@@ -56,7 +56,7 @@ Carga del diccionario "fr-classic" presente en la carpeta Hunspell:
 |  |  |
 | --- | --- |
 | Número de comando | 904 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

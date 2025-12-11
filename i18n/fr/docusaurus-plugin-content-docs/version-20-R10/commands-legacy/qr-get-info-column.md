@@ -110,7 +110,7 @@ Vous pouvez écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 766 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

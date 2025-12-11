@@ -114,6 +114,6 @@ Conversão de uma seleção 4D em um array objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1228 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

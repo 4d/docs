@@ -43,6 +43,6 @@ L'exemple suivant illustre la manière dont Arrondi fonctionne dans différents 
 |  |  |
 | --- | --- |
 | Numéro de commande | 94 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

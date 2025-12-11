@@ -210,7 +210,7 @@ Sem importar como se defina a ordenação, se a operação de ordenação vai a 
 |  |  |
 | --- | --- |
 | Número do comando | 49 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 

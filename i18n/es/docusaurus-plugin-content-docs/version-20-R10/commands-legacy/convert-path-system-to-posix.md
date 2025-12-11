@@ -67,6 +67,6 @@ Ejemplo bajo Windows
 |  |  |
 | --- | --- |
 | Número de comando | 1106 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

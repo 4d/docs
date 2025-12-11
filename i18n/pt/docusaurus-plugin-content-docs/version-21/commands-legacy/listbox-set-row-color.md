@@ -69,6 +69,6 @@ Em um array de tipo list box, queremos estabelecer as cores de uma fila e para u
 |  |  |
 | --- | --- |
 | Número do comando | 1270 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -45,6 +45,6 @@ The following example builds an array, named asTables*,* with the names of table
 |  |  |
 | --- | --- |
 | Command number | 254 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

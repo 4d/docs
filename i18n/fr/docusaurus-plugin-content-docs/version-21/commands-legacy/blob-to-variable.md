@@ -47,7 +47,7 @@ La variable OK prend la valeur 1 si la variable a été correctement réécrite,
 |  |  |
 | --- | --- |
 | Numéro de commande | 533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

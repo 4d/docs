@@ -32,6 +32,6 @@ Dependiendo de los privilegios de acceso del usuario actual, ciertas funciones d
 |  |  |
 | --- | --- |
 | Número de comando | 1018 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

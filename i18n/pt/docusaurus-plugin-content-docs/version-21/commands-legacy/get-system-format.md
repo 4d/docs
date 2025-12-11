@@ -48,6 +48,6 @@ No parâmetro *formato*, passe o tipo do parâmetro do qual queira conhecer o va
 |  |  |
 | --- | --- |
 | Número do comando | 994 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

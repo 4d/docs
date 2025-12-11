@@ -36,6 +36,6 @@ El siguiente ejemplo utiliza un valor monetario expresado como un número real, 
 |  |  |
 | --- | --- |
 | Número de comando | 9 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

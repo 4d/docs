@@ -49,7 +49,7 @@ The following statement retrieves the Quick Report stored in Field4 and displays
 |  |  |
 | --- | --- |
 | Command number | 771 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

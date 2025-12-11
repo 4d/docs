@@ -28,6 +28,6 @@ This status will happen very rarely. Processes are usually stopped before the co
 |  |  |
 | --- | --- |
 | Command number | 672 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

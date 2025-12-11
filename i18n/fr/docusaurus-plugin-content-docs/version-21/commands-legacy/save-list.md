@@ -31,6 +31,6 @@ Si une énumération de même nom existe déjà, son contenu est remplacé.
 |  |  |
 | --- | --- |
 | Numéro de commande | 384 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

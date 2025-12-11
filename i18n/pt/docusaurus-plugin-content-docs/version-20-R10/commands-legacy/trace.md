@@ -66,6 +66,6 @@ O método de projeto DEBUG é listado aqui:
 |  |  |
 | --- | --- |
 | Número do comando | 157 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

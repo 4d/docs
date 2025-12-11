@@ -69,6 +69,6 @@ Lorsque vous utilisez le *sélecteur* Web debug log, vous pouvez récupérer une
 |  |  |
 | --- | --- |
 | Numéro de commande | 1209 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

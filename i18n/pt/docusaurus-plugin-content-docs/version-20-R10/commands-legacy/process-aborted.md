@@ -28,6 +28,6 @@ Este status acontece muito raramente. Processos são geralmente parados antes do
 |  |  |
 | --- | --- |
 | Número do comando | 672 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

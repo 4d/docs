@@ -66,7 +66,7 @@ O exemplo a seguir seleciona todos os registros na tabela \[Pessoas\]. O comando
 |  |  |
 | --- | --- |
 | Número do comando | 60 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

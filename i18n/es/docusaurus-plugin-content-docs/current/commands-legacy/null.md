@@ -138,6 +138,6 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
 |  |  |
 | --- | --- |
 | Número de comando | 1517 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

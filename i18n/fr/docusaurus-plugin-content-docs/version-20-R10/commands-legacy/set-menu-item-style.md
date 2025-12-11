@@ -42,7 +42,7 @@ Vous pouvez définir le style de l'élément dans le paramètre *styleLigne*. Vo
 |  |  |
 | --- | --- |
 | Numéro de commande | 425 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

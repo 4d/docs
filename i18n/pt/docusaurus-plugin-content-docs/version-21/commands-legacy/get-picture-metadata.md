@@ -106,7 +106,7 @@ La variable sistema *OK* devolve 1 se a recuperación dos metadados es correta e
 |  |  |
 | --- | --- |
 | Número do comando | 1122 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -46,7 +46,7 @@ If the command is executed successfully, the system variable Document contains t
 |  |  |
 | --- | --- |
 | Command number | 678 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

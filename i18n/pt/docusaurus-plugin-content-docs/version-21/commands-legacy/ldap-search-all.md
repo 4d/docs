@@ -121,6 +121,6 @@ Estes exemplos ilustram o uso do parâmetro *atributosEmArray*:
 |  |  |
 | --- | --- |
 | Número do comando | 1329 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

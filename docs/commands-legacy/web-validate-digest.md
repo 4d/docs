@@ -60,6 +60,6 @@ Example using *On Web Authentication Database Method* in Digest mode:
 |  |  |
 | --- | --- |
 | Command number | 946 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

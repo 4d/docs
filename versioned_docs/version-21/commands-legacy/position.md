@@ -125,6 +125,6 @@ In the following example, you want to find all instances of a string and replace
 |  |  |
 | --- | --- |
 | Command number | 15 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

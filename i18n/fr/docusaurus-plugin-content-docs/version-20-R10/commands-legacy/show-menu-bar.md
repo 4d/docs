@@ -33,7 +33,7 @@ Reportez-vous à l'exemple de la commande [HIDE MENU BAR](hide-menu-bar.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 431 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

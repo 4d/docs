@@ -58,6 +58,6 @@ We want to know how many running web servers are available:
 |  |  |
 | --- | --- |
 | Command number | 1716 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

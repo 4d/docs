@@ -38,6 +38,6 @@ Conformément au principe de fonctionnement des list box, les colonnes sont sync
 |  |  |
 | --- | --- |
 | Numéro de commande | 916 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

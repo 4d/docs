@@ -50,6 +50,6 @@ El siguiente método:
 |  |  |
 | --- | --- |
 | Número de comando | 677 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

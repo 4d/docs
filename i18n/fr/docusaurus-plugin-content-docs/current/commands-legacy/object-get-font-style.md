@@ -39,6 +39,6 @@ Vous pouvez comparer la valeur retournée par la commande à la valeur d’une o
 |  |  |
 | --- | --- |
 | Numéro de commande | 1071 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

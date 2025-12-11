@@ -127,6 +127,6 @@ El documento resultante contendrá:
 |  |  |
 | --- | --- |
 | Número de comando | 1190 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

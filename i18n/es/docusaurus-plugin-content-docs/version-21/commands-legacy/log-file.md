@@ -38,5 +38,5 @@ Si la base funciona con un archivo historial, la variable sistema OK toma el val
 |  |  |
 | --- | --- |
 | Número de comando | 928 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |

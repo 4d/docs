@@ -35,7 +35,7 @@ Em Macintosh, se não passa o parâmetro opcional *\**, se retorna o tamanho do 
 |  |  |
 | --- | --- |
 | Número do comando | 479 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

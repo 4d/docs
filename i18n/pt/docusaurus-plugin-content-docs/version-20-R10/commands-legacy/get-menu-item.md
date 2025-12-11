@@ -34,7 +34,7 @@ Se omite o parâmetro *processo*, Get menu item é aplicado a barra de menus do 
 |  |  |
 | --- | --- |
 | Número do comando | 422 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

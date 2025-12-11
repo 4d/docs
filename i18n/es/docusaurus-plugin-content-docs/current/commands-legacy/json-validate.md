@@ -110,6 +110,6 @@ Usted desea validar un objeto JSON con un esquema y obtener la lista de errores 
 |  |  |
 | --- | --- |
 | Número de comando | 1456 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

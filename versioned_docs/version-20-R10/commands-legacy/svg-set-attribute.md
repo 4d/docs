@@ -100,7 +100,7 @@ Modification of the contents of a Text type element:
 |  |  |
 | --- | --- |
 | Command number | 1055 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -50,7 +50,7 @@ El siguiente código permite remover el primer atributo "N=1":
 |  |  |
 | --- | --- |
 | Número de comando | 1084 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

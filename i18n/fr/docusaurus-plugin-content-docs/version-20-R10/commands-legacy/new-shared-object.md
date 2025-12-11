@@ -73,6 +73,6 @@ Vous souhaitez créer et modifier un objet partagé. La structure *Utiliser...Fi
 |  |  |
 | --- | --- |
 | Numéro de commande | 1526 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

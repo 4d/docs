@@ -49,6 +49,6 @@ Vous souhaitez charger une image en fonction du schéma courant du formulaire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1761 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

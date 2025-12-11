@@ -75,6 +75,6 @@ Création et remplissage d’un tableau local d’objets :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1221 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

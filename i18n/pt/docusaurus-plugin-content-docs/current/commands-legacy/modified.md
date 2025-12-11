@@ -73,6 +73,6 @@ Seleciona um registro para a tabela *\[umaTabela\]*, depois chama múltiplas sub
 |  |  |
 | --- | --- |
 | Número do comando | 32 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

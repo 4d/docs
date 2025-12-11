@@ -52,6 +52,6 @@ Reportez-vous à l'exemple de la commande [Get menu item key](get-menu-item-key.
 |  |  |
 | --- | --- |
 | Numéro de commande | 980 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

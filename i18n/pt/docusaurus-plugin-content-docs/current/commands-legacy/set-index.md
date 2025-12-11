@@ -96,6 +96,6 @@ O exemplo abaixo indexa o campo *\[Clientes\]Num*:
 |  |  |
 | --- | --- |
 | Número do comando | 344 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

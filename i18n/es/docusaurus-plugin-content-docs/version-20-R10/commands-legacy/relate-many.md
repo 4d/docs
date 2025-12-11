@@ -71,7 +71,7 @@ Note que es necesario el comando RELATE MANY, aunque las relaciones sean automá
 |  |  |
 | --- | --- |
 | Número de comando | 262 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

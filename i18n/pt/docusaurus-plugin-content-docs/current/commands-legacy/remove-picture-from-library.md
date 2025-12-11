@@ -55,7 +55,7 @@ O exemplo a seguir apaga da biblioteca de imagens toda imagem cujo nome comece p
 |  |  |
 | --- | --- |
 | Número do comando | 567 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

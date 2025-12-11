@@ -47,6 +47,6 @@ The following example can be used to retrieve in an array all the pathnames of t
 |  |  |
 | --- | --- |
 | Command number | 976 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

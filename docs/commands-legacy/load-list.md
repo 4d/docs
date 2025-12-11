@@ -56,6 +56,6 @@ You create a database for the international market and you need to switch to dif
 |  |  |
 | --- | --- |
 | Command number | 383 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -62,7 +62,7 @@ If you do not have the proper access privileges for calling Set group properties
 |  |  |
 | --- | --- |
 | Command number | 614 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

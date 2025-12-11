@@ -40,7 +40,7 @@ The following example makes the first record of the \[Customers\] table the firs
 |  |  |
 | --- | --- |
 | Command number | 50 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

@@ -69,6 +69,6 @@ APPEND TO LIST($myList;ak standard action title;1)
 |  |  |
 | --- | --- |
 | Número do comando | 986 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

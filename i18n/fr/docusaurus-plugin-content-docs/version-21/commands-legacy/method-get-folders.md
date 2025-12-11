@@ -36,6 +36,6 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 |  |  |
 | --- | --- |
 | Numéro de commande | 1206 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -72,6 +72,6 @@ El método de proyecto siguiente está asociado al elemento de menú Salir en el
 |  |  |
 | --- | --- |
 | Número de comando | 291 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

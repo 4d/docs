@@ -30,6 +30,6 @@ Sous Mac OS, **Screen width** retourne la largeur de l'écran principal, c'est-�
 |  |  |
 | --- | --- |
 | Numéro de commande | 187 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

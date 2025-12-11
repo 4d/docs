@@ -79,7 +79,7 @@ If this command is executed correctly, the system variable OK is set to 1; other
 |  |  |
 | --- | --- |
 | Command number | 1085 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

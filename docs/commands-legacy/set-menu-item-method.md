@@ -41,6 +41,6 @@ Refer to the example of the [SET MENU BAR](set-menu-bar.md) command.
 |  |  |
 | --- | --- |
 | Command number | 982 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

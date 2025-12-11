@@ -59,6 +59,6 @@ Se quiser mudar temporariamente a prioridade da cache dos campos de texto da tab
 |  |  |
 | --- | --- |
 | Número do comando | 1431 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

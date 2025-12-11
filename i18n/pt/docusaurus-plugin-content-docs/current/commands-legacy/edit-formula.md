@@ -59,7 +59,7 @@ Se o usuário valida a caixa de diálogo, a variável de sistema OK toma o valor
 |  |  |
 | --- | --- |
 | Número do comando | 806 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

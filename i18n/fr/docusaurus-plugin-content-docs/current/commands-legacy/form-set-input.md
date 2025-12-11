@@ -108,6 +108,6 @@ Résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 55 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

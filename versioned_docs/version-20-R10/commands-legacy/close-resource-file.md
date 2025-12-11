@@ -34,6 +34,6 @@ Remember to eventually call **CLOSE RESOURCE FILE** for a resource file that you
 |  |  |
 | --- | --- |
 | Command number | 498 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

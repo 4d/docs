@@ -60,7 +60,7 @@ Criação de um documento PDF em Windows:
 |  |  |
 | --- | --- |
 | Número do comando | 787 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

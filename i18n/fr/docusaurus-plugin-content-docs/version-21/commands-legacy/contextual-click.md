@@ -46,6 +46,6 @@ Cette méthode, associée à une zone de défilement, permet de changer la valeu
 |  |  |
 | --- | --- |
 | Numéro de commande | 713 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

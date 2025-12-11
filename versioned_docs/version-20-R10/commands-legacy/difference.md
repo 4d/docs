@@ -61,6 +61,6 @@ At the bottom of the list of records is a button with an object method. The obje
 |  |  |
 | --- | --- |
 | Command number | 122 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

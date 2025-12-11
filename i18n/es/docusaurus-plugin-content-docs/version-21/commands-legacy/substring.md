@@ -69,6 +69,6 @@ El siguiente método de proyecto añade los párrafos que se encuentran en el te
 |  |  |
 | --- | --- |
 | Número de comando | 12 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

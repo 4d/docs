@@ -53,6 +53,6 @@ Exemplo de método de importação massivo de dados:
 |  |  |
 | --- | --- |
 | Número do comando | 1293 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

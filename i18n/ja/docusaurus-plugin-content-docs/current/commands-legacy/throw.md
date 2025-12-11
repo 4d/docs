@@ -110,6 +110,6 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 |  |  |
 | --- | --- |
 | コマンド番号 | 1805 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

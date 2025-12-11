@@ -121,7 +121,7 @@ Depois de um chamado a RECEIVE PACKET, a variável sistema OK recebe o valor 1 s
 |  |  |
 | --- | --- |
 | Número do comando | 104 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

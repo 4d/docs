@@ -40,6 +40,6 @@ Se quiser mudar entre o estado maximizado e o anterior:
 |  |  |
 | --- | --- |
 | Número do comando | 1830 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

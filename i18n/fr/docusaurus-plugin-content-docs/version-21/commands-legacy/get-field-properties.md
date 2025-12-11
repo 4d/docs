@@ -80,6 +80,6 @@ L'exemple suivant récupère dans les variables *vType*, *vLong*, *vIndex*, *vUn
 |  |  |
 | --- | --- |
 | Numéro de commande | 258 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

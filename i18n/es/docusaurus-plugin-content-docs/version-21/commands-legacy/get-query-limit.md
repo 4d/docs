@@ -30,6 +30,6 @@ Por defecto, si ningún límite se ha definido, el comando devuelve 0.
 |  |  |
 | --- | --- |
 | Número de comando | 1156 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

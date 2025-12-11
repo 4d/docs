@@ -75,6 +75,6 @@ Inserir uma imagem SVG:
 |  |  |
 | --- | --- |
 | Número do comando | 1090 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

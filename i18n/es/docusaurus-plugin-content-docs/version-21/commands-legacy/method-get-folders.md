@@ -35,6 +35,6 @@ Si se ejecuta este comando desde un componente, devuelve por defecto las rutas d
 |  |  |
 | --- | --- |
 | Número de comando | 1206 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

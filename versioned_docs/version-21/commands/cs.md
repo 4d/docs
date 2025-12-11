@@ -17,6 +17,6 @@ The **cs** keyword is described in the [**Concept page for Classes**](../Concept
 |  |  |
 | --- | --- |
 | Command number | 1710 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

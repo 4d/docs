@@ -34,7 +34,7 @@ QUERY SELECTION WITH ARRAYは[QUERY WITH ARRAY](query-with-array.md "QUERY WITH 
 |  |  |
 | --- | --- |
 | コマンド番号 | 1050 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントセレクションを変更する ||
 
 

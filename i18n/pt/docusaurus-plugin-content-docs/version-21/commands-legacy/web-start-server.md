@@ -31,7 +31,7 @@ Se o servidor Web é iniciado corretamente, Ok assume o valor 1; do contrário O
 |  |  |
 | --- | --- |
 | Número do comando | 617 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

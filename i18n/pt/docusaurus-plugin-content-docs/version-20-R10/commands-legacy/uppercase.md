@@ -43,6 +43,6 @@ Ver o exemplo para [Lowercase](lowercase.md "Lowercase").
 |  |  |
 | --- | --- |
 | Número do comando | 13 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

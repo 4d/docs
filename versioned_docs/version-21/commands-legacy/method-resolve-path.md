@@ -88,6 +88,6 @@ Resolution of a path for an object of a table form method:
 |  |  |
 | --- | --- |
 | Command number | 1165 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

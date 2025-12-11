@@ -52,7 +52,7 @@ Si el usuario hace clic en **Cancelar** en la caja de diálogo estándar de guar
 |  |  |
 | --- | --- |
 | Número de comando | 665 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

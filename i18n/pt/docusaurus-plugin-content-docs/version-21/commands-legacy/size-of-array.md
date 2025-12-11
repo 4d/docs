@@ -52,6 +52,6 @@ O exemplo a seguir retorna o número de colunas em um array bidimensional:
 |  |  |
 | --- | --- |
 | Número do comando | 274 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

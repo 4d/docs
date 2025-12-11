@@ -47,6 +47,6 @@ Estos son los diferentes resultados de este comando como también del comando [O
 |  |  |
 | --- | --- |
 | Número de comando | 1297 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

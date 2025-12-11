@@ -47,6 +47,6 @@ Executa o seguinte código:
 |  |  |
 | --- | --- |
 | Número do comando | 1265 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

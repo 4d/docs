@@ -57,6 +57,6 @@ El lenguaje actual de la base permite definir la carpeta .lproj en la que el pro
 |  |  |
 | --- | --- |
 | Número de comando | 1009 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

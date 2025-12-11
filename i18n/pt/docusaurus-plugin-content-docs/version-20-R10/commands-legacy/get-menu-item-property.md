@@ -38,6 +38,6 @@ Nota de compatibilidade: Como padrão, se o valor da variável não for digitado
 |  |  |
 | --- | --- |
 | Número do comando | 972 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -44,6 +44,6 @@ L'exemple suivant stocke le numéro de l'enregistrement courant de la sélection
 |  |  |
 | --- | --- |
 | Numéro de commande | 246 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

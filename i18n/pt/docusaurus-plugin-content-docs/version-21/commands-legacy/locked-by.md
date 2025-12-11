@@ -45,6 +45,6 @@ nomeProcesso devolve o endereço IP do locker, p. ex. "127.0.0.1"
 |  |  |
 | --- | --- |
 | Número do comando | 353 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -77,6 +77,6 @@ Voici un exemple de recadrage (l’image est affichée dans le formulaire avec l
 |  |  |
 | --- | --- |
 | Numéro de commande | 988 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

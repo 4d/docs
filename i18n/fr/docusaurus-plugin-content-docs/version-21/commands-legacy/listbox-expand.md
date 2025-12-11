@@ -85,6 +85,6 @@ Cet exemple illustre différents modes d’utilisation de la commande. Soient le
 |  |  |
 | --- | --- |
 | Numéro de commande | 1100 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -52,7 +52,7 @@ Si une copie de l'image est correctement collée dans le conteneur, la variable 
 |  |  |
 | --- | --- |
 | Numéro de commande | 521 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

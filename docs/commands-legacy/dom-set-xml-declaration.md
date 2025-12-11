@@ -43,6 +43,6 @@ The following example sets the encoding to use and the standalone option in the 
 |  |  |
 | --- | --- |
 | Command number | 859 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -46,6 +46,6 @@ The following example displays a series of records as a slide show:
 |  |  |
 | --- | --- |
 | Command number | 105 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

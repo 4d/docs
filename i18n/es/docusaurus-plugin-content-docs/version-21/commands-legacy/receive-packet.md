@@ -121,7 +121,7 @@ Después de un llamado a RECEIVE PACKET, la variable sistema OK toma el valor 1 
 |  |  |
 | --- | --- |
 | Número de comando | 104 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

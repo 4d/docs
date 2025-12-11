@@ -44,6 +44,6 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
 |  |  |
 | --- | --- |
 | Numéro de commande | 234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

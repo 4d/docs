@@ -47,7 +47,7 @@ Si el usuario hace clic en el botón Cancelar en la caja de diálogo de guardar 
 |  |  |
 | --- | --- |
 | Número de comando | 184 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

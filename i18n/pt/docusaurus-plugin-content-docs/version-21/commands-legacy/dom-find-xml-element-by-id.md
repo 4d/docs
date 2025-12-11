@@ -34,7 +34,7 @@ O comando retorna como resultado a referência XML do elemento encontrado.
 |  |  |
 | --- | --- |
 | Número do comando | 1010 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

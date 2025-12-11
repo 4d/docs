@@ -30,6 +30,6 @@ Si quiere conocer el nombre de la variable que está siendo apuntada o el númer
 |  |  |
 | --- | --- |
 | Número de comando | 294 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

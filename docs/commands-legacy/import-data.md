@@ -53,7 +53,7 @@ If the user clicks **Cancel** in the standard save file dialog box or in the imp
 |  |  |
 | --- | --- |
 | Command number | 665 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

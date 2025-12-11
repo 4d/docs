@@ -31,6 +31,6 @@ Si vous souhaitez que le cycle d'exécution **In break** soit généré, assurez
 |  |  |
 | --- | --- |
 | Numéro de commande | 113 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

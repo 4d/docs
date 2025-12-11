@@ -65,6 +65,6 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
 |  |  |
 | --- | --- |
 | Numéro de commande | 1773 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

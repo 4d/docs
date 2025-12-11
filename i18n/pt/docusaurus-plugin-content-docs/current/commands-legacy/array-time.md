@@ -69,6 +69,6 @@ Como os arrays de horas aceitam valores numéricos, o seguinte código é válid
 |  |  |
 | --- | --- |
 | Número do comando | 1223 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

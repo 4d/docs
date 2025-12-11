@@ -138,7 +138,7 @@ Until(OK=0) //end of existing commands
 |                        |                             |
 | ---------------------- | --------------------------- |
 | Número de comando      | 538                         |
-| Hilo seguro            | &check; |
+| Hilo seguro            | yes |
 | Modifica las variables | OK                          |
 
 

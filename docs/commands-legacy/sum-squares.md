@@ -64,6 +64,6 @@ This example gets the sum of the squares of the values placed in an array:
 |  |  |
 | --- | --- |
 | Command number | 28 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

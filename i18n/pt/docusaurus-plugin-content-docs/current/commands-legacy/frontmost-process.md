@@ -39,6 +39,6 @@ Ver o exemplo para [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").
 |  |  |
 | --- | --- |
 | Número do comando | 327 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

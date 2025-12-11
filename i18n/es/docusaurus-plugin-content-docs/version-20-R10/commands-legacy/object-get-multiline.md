@@ -43,6 +43,6 @@ El valor devuelto corresponde a una de las siguientes constantes del tema "*Prop
 |  |  |
 | --- | --- |
 | Número de comando | 1254 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

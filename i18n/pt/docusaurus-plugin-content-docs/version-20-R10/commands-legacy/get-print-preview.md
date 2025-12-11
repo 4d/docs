@@ -29,6 +29,6 @@ Note que o usuário pode modificar esta opção antes de validar a caixa de diá
 |  |  |
 | --- | --- |
 | Número do comando | 1197 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -32,6 +32,6 @@ Reportez-vous à l'exemple de la commande [USE SET](use-set.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 117 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

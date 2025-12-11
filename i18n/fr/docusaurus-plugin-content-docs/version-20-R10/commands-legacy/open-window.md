@@ -158,6 +158,6 @@ Cet exemple illustre le mécanisme de “retard” d’affichage des fenêtres f
 |  |  |
 | --- | --- |
 | Numéro de commande | 153 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

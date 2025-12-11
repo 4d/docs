@@ -108,6 +108,6 @@ Si une erreur de syntaxe est détectée dans la *formule*, un message d'erreur e
 |  |  |
 | --- | --- |
 | Numéro de commande | 1576 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

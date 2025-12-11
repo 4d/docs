@@ -77,6 +77,6 @@ Reportez-vous à l'exemple de la commande [APPEND TO LIST](append-to-list.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 378 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

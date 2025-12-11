@@ -247,6 +247,6 @@ O método ObterTextoSelecionado é o seguinte:
 |  |  |
 | --- | --- |
 | Número do comando | 389 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -51,6 +51,6 @@ Reportez-vous à l'exemple de la section [On Exit database method](on-exit-datab
 |  |  |
 | --- | --- |
 | Numéro de commande | 905263 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -39,6 +39,6 @@ In the following example, if no records are found by the query, a beep is emitte
 |  |  |
 | --- | --- |
 | Command number | 151 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

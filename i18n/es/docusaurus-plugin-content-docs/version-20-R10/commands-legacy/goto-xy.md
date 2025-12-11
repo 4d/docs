@@ -64,6 +64,6 @@ Muestra la siguiente ventana (en Macintosh) por 30 segundos:
 |  |  |
 | --- | --- |
 | Número de comando | 161 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -74,7 +74,7 @@ Si le document est correctement créé, la variable système OK prend la valeur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 266 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

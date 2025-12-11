@@ -66,7 +66,7 @@ El comando ARRAY TO LIST genera el error *\-9957* cuando se aplica a una lista q
 |  |  |
 | --- | --- |
 | Número de comando | 287 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

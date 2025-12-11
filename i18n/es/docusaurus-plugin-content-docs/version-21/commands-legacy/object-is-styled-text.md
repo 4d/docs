@@ -48,6 +48,6 @@ Un formulario contiene un campo representado por dos objetos diferentes, uno de 
 |  |  |
 | --- | --- |
 | Número de comando | 1261 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

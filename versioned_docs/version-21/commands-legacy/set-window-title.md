@@ -55,6 +55,6 @@ While performing data entry in a form, you click on a button that executes a len
 |  |  |
 | --- | --- |
 | Command number | 213 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

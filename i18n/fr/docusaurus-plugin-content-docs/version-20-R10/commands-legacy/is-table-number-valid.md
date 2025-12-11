@@ -30,6 +30,6 @@ Cette commande permet de détecter d’éventuelles suppressions de tables, ce q
 |  |  |
 | --- | --- |
 | Numéro de commande | 999 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

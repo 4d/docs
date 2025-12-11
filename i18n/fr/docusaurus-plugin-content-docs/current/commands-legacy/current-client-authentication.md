@@ -79,6 +79,6 @@ Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée
 |  |  |
 | --- | --- |
 | Numéro de commande | 1355 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

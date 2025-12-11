@@ -80,6 +80,6 @@ Si on souhaite récupérer également les valeurs des paramètres, on peut écri
 |  |  |
 | --- | --- |
 | Numéro de commande | 1195 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

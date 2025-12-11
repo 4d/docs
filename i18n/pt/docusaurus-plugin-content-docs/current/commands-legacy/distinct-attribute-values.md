@@ -70,6 +70,6 @@ O array *aLAges* obtém os seguintes 9 elementos:
 |  |  |
 | --- | --- |
 | Número do comando | 1397 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

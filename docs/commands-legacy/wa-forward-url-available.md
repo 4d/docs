@@ -31,6 +31,6 @@ The command returns **True** if a URL exists and **False** otherwise. More parti
 |  |  |
 | --- | --- |
 | Command number | 1027 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

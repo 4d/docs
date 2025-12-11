@@ -51,6 +51,6 @@ Este comando es particularmente útil en el contexto de componentes porque le pe
 |  |  |
 | --- | --- |
 | Número de comando | 704 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

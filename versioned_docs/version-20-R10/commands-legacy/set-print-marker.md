@@ -185,6 +185,6 @@ The Print\_List3 form method is as follows:
 |  |  |
 | --- | --- |
 | Command number | 709 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

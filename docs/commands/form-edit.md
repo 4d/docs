@@ -69,6 +69,6 @@ To open the *ContactPage* project form with "name-input" object selected:
 |  |  |
 | --- | --- |
 | Command number | 1749 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

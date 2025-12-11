@@ -35,7 +35,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler **Is user deleted** ou 
 |  |  |
 | --- | --- |
 | Numéro de commande | 616 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

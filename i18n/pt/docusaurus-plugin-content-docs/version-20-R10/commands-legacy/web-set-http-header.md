@@ -73,6 +73,6 @@ Os campos **Date** e **Content-Length** sempre são definidos por padrão por 4D
 |  |  |
 | --- | --- |
 | Número do comando | 660 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

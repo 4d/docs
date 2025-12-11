@@ -124,6 +124,6 @@ On Web Connection):
 |  |  |
 | --- | --- |
 | Número de comando | 697 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

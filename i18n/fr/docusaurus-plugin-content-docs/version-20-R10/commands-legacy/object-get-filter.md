@@ -30,6 +30,6 @@ Si vous passez le paramètre optionnel \*, vous indiquez que le paramètre *obje
 |  |  |
 | --- | --- |
 | Numéro de commande | 1073 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

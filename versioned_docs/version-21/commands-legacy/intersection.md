@@ -55,6 +55,6 @@ The following example finds the customers who are served by two sales representa
 |  |  |
 | --- | --- |
 | Command number | 121 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

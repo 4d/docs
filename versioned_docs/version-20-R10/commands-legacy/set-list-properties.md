@@ -66,6 +66,6 @@ You want to disallow the expand/collapse sublist on double-click. You can write 
 |  |  |
 | --- | --- |
 | Command number | 387 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -43,6 +43,6 @@ The following example lets the user create a new document, writes the string “
 |  |  |
 | --- | --- |
 | Command number | 267 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

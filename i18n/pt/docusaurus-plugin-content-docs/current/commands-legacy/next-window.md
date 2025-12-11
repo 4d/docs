@@ -29,6 +29,6 @@ O comando Next window devolve o número de referência da janela localizada “a
 |  |  |
 | --- | --- |
 | Número do comando | 448 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

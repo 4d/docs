@@ -79,6 +79,6 @@ Você quer encontrar o número de ocorrências das cadeias que começam por "tes
 |  |  |
 | --- | --- |
 | Número do comando | 1333 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

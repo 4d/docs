@@ -38,7 +38,7 @@ Si cette commande est exécutée correctement, la variable système OK prend la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1007 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

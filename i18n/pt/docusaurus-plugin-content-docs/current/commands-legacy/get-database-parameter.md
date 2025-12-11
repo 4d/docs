@@ -1039,6 +1039,6 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 |  |  |
 | --- | --- |
 | Número do comando | 643 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -44,6 +44,6 @@ In the *borderStyle* parameter, pass the value of the border line style that you
 |  |  |
 | --- | --- |
 | Command number | 1262 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -35,6 +35,6 @@ The copy starts at the position (expressed relative to the beginning of the sour
 |  |  |
 | --- | --- |
 | Command number | 558 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

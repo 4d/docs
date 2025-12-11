@@ -41,7 +41,7 @@ Se o parâmetro *posição* é superior ao número de linhas do array do list bo
 |  |  |
 | --- | --- |
 | Número do comando | 914 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

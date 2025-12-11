@@ -103,6 +103,6 @@ The following project method allows you to do so:
 |  |  |
 | --- | --- |
 | Command number | 33 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

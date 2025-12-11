@@ -85,6 +85,6 @@ Este código es estrictamente equivalente a:
 |  |  |
 | --- | --- |
 | Número de comando | 955 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -55,7 +55,7 @@ La variable système OK prend la valeur 1 lorsque l'enregistrement est validé e
 |  |  |
 | --- | --- |
 | Numéro de commande | 57 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 | Interdite sur le serveur ||
 

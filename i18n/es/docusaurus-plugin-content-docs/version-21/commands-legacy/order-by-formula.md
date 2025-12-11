@@ -52,7 +52,7 @@ Este ejemplo ordena los registros de la tabla \[Personas\] en orden descendente,
 |  |  |
 | --- | --- |
 | Número de comando | 300 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 

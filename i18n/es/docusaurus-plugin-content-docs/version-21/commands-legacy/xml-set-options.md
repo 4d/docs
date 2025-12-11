@@ -75,6 +75,6 @@ Inserción de una imagen SVG:
 |  |  |
 | --- | --- |
 | Número de comando | 1090 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -95,6 +95,6 @@ Si une méthode objet de formulaire est exécutée, la chaîne d'appels peut con
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1662                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

@@ -43,6 +43,6 @@ Se não há uma lista hierárquica associada ao objeto para o *tipoLista* defini
 |  |  |
 | --- | --- |
 | Número do comando | 1267 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

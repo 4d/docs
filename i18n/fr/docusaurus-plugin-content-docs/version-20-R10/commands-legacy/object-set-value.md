@@ -45,6 +45,6 @@ Vous souhaitez lire la valeur des sources de données d'un objet formulaire, lir
 |  |  |
 | --- | --- |
 | Numéro de commande | 1742 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -55,6 +55,6 @@ Modification de la source de données d’une zone de saisie :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1264 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

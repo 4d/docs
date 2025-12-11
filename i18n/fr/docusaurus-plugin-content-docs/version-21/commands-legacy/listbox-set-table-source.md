@@ -42,6 +42,6 @@ Si la list box contenait déjà des colonnes, leur contenu est mis à jour à l�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1013 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

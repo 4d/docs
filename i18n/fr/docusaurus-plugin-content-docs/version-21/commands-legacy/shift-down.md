@@ -57,6 +57,6 @@ La méthode objet du bouton *bUnBouton* effectue des actions différentes en fon
 |  |  |
 | --- | --- |
 | Numéro de commande | 543 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

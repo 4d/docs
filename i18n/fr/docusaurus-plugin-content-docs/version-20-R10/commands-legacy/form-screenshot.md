@@ -42,6 +42,6 @@ Par défaut, la commande capture la page 1 du formulaire. Si vous souhaitez capt
 |  |  |
 | --- | --- |
 | Numéro de commande | 940 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

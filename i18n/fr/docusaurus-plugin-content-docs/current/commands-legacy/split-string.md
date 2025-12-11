@@ -63,6 +63,6 @@ Le paramètre *séparateur* peut être une chaîne de plusieurs caractères :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1554 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

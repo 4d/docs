@@ -48,6 +48,6 @@ Definição de uma área de texto em arrastar e soltar auto:
 |  |  |
 | --- | --- |
 | Número do comando | 1183 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -90,6 +90,6 @@ El método devuelve las coordenadas teóricas. Si el listbox es redimensionado, 
 |  |  |
 | --- | --- |
 | Número de comando | 663 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -56,6 +56,6 @@ Modification of the data source for an entry area:
 |  |  |
 | --- | --- |
 | Command number | 1264 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

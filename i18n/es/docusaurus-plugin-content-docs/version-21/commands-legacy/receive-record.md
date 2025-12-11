@@ -157,7 +157,7 @@ La variable sistema OK toma el valor 1 si se recibe el registro. De lo contrario
 |  |  |
 | --- | --- |
 | Número de comando | 79 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

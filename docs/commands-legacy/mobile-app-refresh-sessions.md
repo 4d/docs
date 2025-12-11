@@ -51,6 +51,6 @@ You want to reset all current sessions for all mobile applications:
 |  |  |
 | --- | --- |
 | Command number | 1596 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

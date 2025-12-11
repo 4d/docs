@@ -63,6 +63,6 @@ O parâmetro *separador* pode ser uma string de múltiplos caracteres:
 |  |  |
 | --- | --- |
 | Número do comando | 1554 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

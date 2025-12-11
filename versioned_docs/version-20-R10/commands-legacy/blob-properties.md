@@ -84,6 +84,6 @@ After this method has been added to your application, you can use it this way:
 |  |  |
 | --- | --- |
 | Command number | 536 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

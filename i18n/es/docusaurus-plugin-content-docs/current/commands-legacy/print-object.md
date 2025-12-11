@@ -101,6 +101,6 @@ Ejemplo de impresión de un list box completo:
 |  |  |
 | --- | --- |
 | Número de comando | 1095 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

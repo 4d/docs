@@ -69,6 +69,6 @@ Customized formats are returned untouched:
 |  |  |
 | --- | --- |
 | Número do comando | 894 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

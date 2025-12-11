@@ -48,7 +48,7 @@ A variável sistema OK toma o valor 1 se for encontrado o recurso, do contrário
 |  |  |
 | --- | --- |
 | Número do comando | 506 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

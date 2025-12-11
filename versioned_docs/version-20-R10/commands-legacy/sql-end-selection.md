@@ -44,6 +44,6 @@ This code will return in the 4D *vName* variable the emp names (ename) stored in
 |  |  |
 | --- | --- |
 | Command number | 821 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

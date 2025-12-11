@@ -59,6 +59,6 @@ En el método (*theWorker*), se añade código para manejar esta situación:
 |  |  |
 | --- | --- |
 | Número de comando | 1390 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

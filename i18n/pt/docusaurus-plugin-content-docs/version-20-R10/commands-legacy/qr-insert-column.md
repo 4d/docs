@@ -44,7 +44,7 @@ A seguinte instrução insere (ou cria) uma primeira coluna na área MinhaArea, 
 |  |  |
 | --- | --- |
 | Número do comando | 748 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

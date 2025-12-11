@@ -31,6 +31,6 @@ Una vez hay terminado de utilizar la nueva lista, llame a [CLEAR LIST](clear-lis
 |  |  |
 | --- | --- |
 | Número de comando | 626 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

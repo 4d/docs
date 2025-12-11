@@ -102,7 +102,7 @@ The **LOG FILE TO JSON** command modifies the value of the OK and Document varia
 |  |  |
 | --- | --- |
 | Command number | 1352 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

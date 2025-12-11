@@ -39,7 +39,7 @@ Se o registro de um cliente é cancelado corretamente, a variável do sistema OK
 |  |  |
 | --- | --- |
 | Número do comando | 649 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

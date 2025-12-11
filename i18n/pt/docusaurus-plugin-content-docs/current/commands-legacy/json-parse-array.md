@@ -64,6 +64,6 @@ Neste exemplo, os dados dos campos dos registros de uma tabela se extraem e loca
 |  |  |
 | --- | --- |
 | Número do comando | 1219 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

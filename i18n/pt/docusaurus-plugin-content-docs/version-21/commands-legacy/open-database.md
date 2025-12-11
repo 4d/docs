@@ -77,6 +77,6 @@ Se quiser selecionar um servidor no início desde uma aplicação monousuário. 
 |  |  |
 | --- | --- |
 | Número do comando | 1321 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

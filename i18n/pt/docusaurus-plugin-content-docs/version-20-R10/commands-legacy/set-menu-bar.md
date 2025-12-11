@@ -124,6 +124,6 @@ Neste exemplo, criaremos por programação, uma barra de menus incluindo os segu
 |  |  |
 | --- | --- |
 | Número do comando | 67 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

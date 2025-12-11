@@ -44,6 +44,6 @@ Cet exemple retournera dans la variable 4D *vName* les noms (ename) stockés dan
 |  |  |
 | --- | --- |
 | Numéro de commande | 821 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

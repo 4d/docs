@@ -37,6 +37,6 @@ More particularly, this command lets you recopy the external file.
 |  |  |
 | --- | --- |
 | Command number | 1133 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

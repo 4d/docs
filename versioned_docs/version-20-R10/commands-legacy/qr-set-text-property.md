@@ -90,7 +90,7 @@ This method defines several attributes of the first column’s title:
 |  |  |
 | --- | --- |
 | Command number | 759 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

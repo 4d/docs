@@ -57,6 +57,6 @@ You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "
 |  |  |
 | --- | --- |
 | Command number | 1204 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -79,6 +79,6 @@ Este exemplo combina os filtros de sites e de links externos:
 |  |  |
 | --- | --- |
 | Número do comando | 1032 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

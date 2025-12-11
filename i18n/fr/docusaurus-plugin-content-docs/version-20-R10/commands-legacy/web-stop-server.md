@@ -27,6 +27,6 @@ Si le serveur Web n'était pas lancé, la commande ne fait rien.
 |  |  |
 | --- | --- |
 | Numéro de commande | 618 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

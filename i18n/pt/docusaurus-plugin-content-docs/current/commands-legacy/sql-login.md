@@ -208,7 +208,7 @@ Se a conexão for exitosa, a variável sistema OK assume o valor 1, do contrári
 |  |  |
 | --- | --- |
 | Número do comando | 817 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 
