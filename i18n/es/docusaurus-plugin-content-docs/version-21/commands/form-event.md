@@ -106,6 +106,6 @@ El list box resultante cuando se seleccionan líneas:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1606                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

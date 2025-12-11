@@ -75,6 +75,6 @@ La méthode ***doSomething*** est par exemple :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1641                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |
 
 

@@ -74,6 +74,6 @@ Esta función modifica la colección original.
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1527                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

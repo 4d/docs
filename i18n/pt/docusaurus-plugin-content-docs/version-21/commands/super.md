@@ -115,6 +115,6 @@ Parâmetros
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1706                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |
 
 

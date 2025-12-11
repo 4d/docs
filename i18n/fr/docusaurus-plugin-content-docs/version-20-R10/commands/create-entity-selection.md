@@ -49,4 +49,4 @@ $employees:=Create entity selection([Employee])
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1512                        |
-| Thread safe        | &check; |
+| Thread safe        | yes |

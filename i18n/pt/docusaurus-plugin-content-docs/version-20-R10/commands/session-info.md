@@ -90,4 +90,4 @@ Aqui está um exemplo de objeto de saída:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1844                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |

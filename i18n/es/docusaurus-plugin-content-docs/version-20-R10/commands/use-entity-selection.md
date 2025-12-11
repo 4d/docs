@@ -51,7 +51,7 @@ USE ENTITY SELECTION($entitySel) //Se actualiza la selección actual de la tabla
 |                            |                             |
 | -------------------------- | --------------------------- |
 | Número de comando          | 1513                        |
-| Hilo seguro                | &check; |
+| Hilo seguro                | yes |
 | Cambia el registro actual  |                             |
 | Cambia la selección actual |                             |
 

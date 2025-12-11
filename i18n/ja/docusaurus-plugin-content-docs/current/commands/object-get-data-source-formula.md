@@ -48,6 +48,6 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 1852                        |
-| スレッドセーフ | &cross; |
+| スレッドセーフ | no |
 
 

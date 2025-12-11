@@ -49,4 +49,4 @@ $employees:=Create entity selection([Employee])
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1512                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |

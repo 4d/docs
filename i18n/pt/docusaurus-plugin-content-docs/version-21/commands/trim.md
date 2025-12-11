@@ -57,6 +57,6 @@ $output:=Trim($input) //"Hello World!"
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1853                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |
 
 

@@ -169,6 +169,6 @@ $err:=ZIP Create archive($zip; $destination)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1640                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

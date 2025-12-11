@@ -61,6 +61,6 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1674                        |
-| Thread safe       | &cross; |
+| Thread safe       | no |
 
 

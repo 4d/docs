@@ -49,4 +49,4 @@ Verificación de la existencia de un contexto:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1849                        |
-| Hilo seguro       | &cross; |
+| Hilo seguro       | no |

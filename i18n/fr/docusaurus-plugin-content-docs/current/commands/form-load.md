@@ -167,6 +167,6 @@ Vous voulez imprimer un formulaire contenant une list box. Lors de l'événement
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1103                        |
-| Thread safe        | &cross; |
+| Thread safe        | no |
 
 

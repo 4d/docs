@@ -95,6 +95,6 @@ Si un método objeto de formulario se ejecuta, la cadena de llamadas podría con
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1662                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

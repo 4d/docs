@@ -75,6 +75,6 @@ El método ***doSomething*** puede ser como:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1641                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 

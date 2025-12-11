@@ -72,6 +72,6 @@ A função retorna um [**objeto POP3 transporter**](../API/POP3TransporterClass.
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1697                        |
-| Thread safe       | &check; |
+| Thread safe       | yes |
 
 

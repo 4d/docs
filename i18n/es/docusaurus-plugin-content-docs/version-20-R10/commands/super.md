@@ -118,6 +118,6 @@ $message:=$square.description() //tengo 4 lados iguales
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1706                        |
-| Hilo seguro       | &check; |
+| Hilo seguro       | yes |
 
 
