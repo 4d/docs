@@ -327,7 +327,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 
 |Library|Current version|Updated in 4D|Comment|
 |---|---|---|----|
-|BoringSSL|fa47b1d|**21**|Used for QUIC|
+|BoringSSL|9b86817|**21**|Used for QUIC|
 |CEF|7258|**21**|Chromium 139|
 |Hunspell|1.7.2|20|Used for spell checking in 4D forms and 4D Write Pro|
 |ICU|77.1|**21**|This upgrade forces an automatic rebuild of alphanumeric, text and object indexes.|
@@ -337,7 +337,7 @@ If your 4D applications use TLS connections, it is recommended that you upgrade 
 |Libuv |1.51.0|**21**|Used for QUIC|
 |libZip|1.11.4|**21**|Used by zip class, 4D Write Pro, svg and serverNet components|
 |LZMA|5.8.1|**21**||
-|ngtcp2|1.16.0|**21**|Used for QUIC|
+|ngtcp2|1.18.0|**21**|Used for QUIC|
 |OpenSSL|3.5.2|**21**||
 |PDFWriter|4.7.0|**21**|Used for [`WP Export document`](../WritePro/commands/wp-export-document.md) and [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 |SpreadJS|17.1.0|20 R7|See [this blog post](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) for an overview of the new features|
