@@ -248,7 +248,7 @@ In Qodly Studio for 4D, the login mode can be set using the [**Force login** opt
 
 The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permission):
 
-- **Unrestricted mode** (`restrictedByDefault`: **false**): Resources without defined permissions are accessible to all requests. Este modo es adecuado para entornos de desarrollo donde el acceso se puede restringir gradualmente.
+- **Modo sin restricciones** (`restrictedByDefault`: **false**): los recursos sin permisos definidos son accesibles a todas las peticiones. Este modo es adecuado para entornos de desarrollo donde el acceso se puede restringir gradualmente.
 - **Restricted mode** (`restrictedByDefault`: **true**): Resources without defined permissions are blocked by default. Este modo se recomienda para entornos de producción donde el acceso debe ser otorgado explícitamente.
 
 :::note Compatibilidad

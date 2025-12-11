@@ -51,7 +51,7 @@ Añade una referencia de archivo al contenido del mensaje. Si el contenido es ac
 ### Mensaje de texto básico
 
 ```4d
-// Create an instance of OpenAIMessage
+// Crear una instancia de OpenAIMessage
 var $message:=cs.AIKit.OpenAIMessage.new({role: "user"; content: "Hello!"})
 ```
 

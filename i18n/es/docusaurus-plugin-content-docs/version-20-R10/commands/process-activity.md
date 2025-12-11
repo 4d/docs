@@ -57,7 +57,7 @@ La propiedad "sessions" contiene una colección de objetos que describen todas l
 :::note Notas
 
 - Puede obtener el objeto de una sesión utilizando el comando [Session](session.md).
-- `Process activity` returns remote client sessions, stored procedure session and rest sessions but not Web sessions (limitation).
+- `Process activity` devuelve sesiones de clientes remotos, sesiones de procedimientos almacenados y sesiones restantes pero no sesiones Web (limitación).
 
 :::
 

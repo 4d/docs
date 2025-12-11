@@ -3,7 +3,7 @@ id: WebFormClass
 title: WebForm
 ---
 
-The `WebForm` class contains functions and properties allowing to handle your Qodly web page components. Los objetos `4D.WebForm` se instancian con el comando [`webForm`](../commands/web-form.md).
+La clase `WebForm` contiene funciones y propiedades que permiten manejar sus componentes de páginas Qodly. Los objetos `4D.WebForm` se instancian con el comando [`webForm`](../commands/web-form.md).
 
 <details><summary>Historia</summary>
 

@@ -120,13 +120,13 @@ title: クライアント/サーバー管理
 
 ### Webエリア内のQodlyページとセッションを共有する
 
-リモートクライアントセッションを使用して、リモートマシン上で実行中の、[Qodly ページ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) がインターフェースとして使用されているクライアント/サーバーアプリケーションを管理することができます。 With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
+リモートクライアントセッションを使用して、リモートマシン上で実行中の、[Qodly ページ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) がインターフェースとして使用されているクライアント/サーバーアプリケーションを管理することができます。 この構成では、アプリケーションは現代的なCSS ベースのWeb インターフェースを持ちながらも、統合されたクライアント/サーバーのパワーと単純さの恩恵に預かることができます。 このようなアプリケーションでは、Qodly ページは標準の4D [Web エリア](../FormObjects/webArea_overview.md)内で実行されます。
 
-To manage this configuration, you need to use remote client sessions. Actually, requests coming from both the remote 4D application and its Qodly pages loaded in Web areas need to work inside a single user session. You just have to share the same session between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, whatever the request origin.
+このような構成を管理するためには、リモートクライアントセッションを使用する必要があります。 実は、リモート4D アプリケーションとWeb エリアにロードされたQodly ページの両方からリクエストが来る場合には、これらは単一のユーザーセッション内で動作する必要があります。 リクエストのオリジンに関わらず、リモートクライアントとWeb ページが同じ[セッション storage](../API/SessionClass.md#storage) とクライアントライセンスを持つように、リモートクライアントとWeb ページ間で同じセッションを共有するようにするだけです。
 
-Note that [privileges](../ORDA/privileges.md) should be set in the session before executing a web request from a Web area, so that the user automatically gets their privileges for web access (see example). Keep in mind that privileges only apply to requests coming from the web, not to the 4D code executed in a standard remote session.
+この場合、ユーザーがWeb アクセスに対して持っている権限を自動的に取得できるように、Web リクエストを実行する前にセッション内に[権限](../ORDA/privileges.md) を設定するべきであるという点に注意してください(例題参照)。 このとき、権限はWeb から来るリクエストに対してのみ適用され、標準のリモートセッション内で実行される4D コードに対しては適用されないという点に注意してください。
 
-Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#session-token-otp). After you created an OTP token on the server for the user session, you add the token (through the `$4DSID` parameter value) to web requests sent from web areas containing Qodly pages so that the user session on the server is identified and shared. On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used.
+共有セッションは [OTPトークン](../WebServer/sessions.md#session-token-otp) を通して管理されます。 ユーザーセッションに対してのOTP トークンをサーバー上で作成したあと、Qodly ページを格納しているWeb エリアから送られたWeb リクエストに(`$4DSID` パラメーター値を通して)トークンを追加することで、サーバー上のユーザーセッションを識別して、共有できるようにします。 Web サーバー側では、Web リクエストが $4DSID パラメーター内に *OTP id* を格納していた場合、そのOTP トークンに対応したセッションが使用されます。
 
 :::tip 関連したblog 記事
 
@@ -139,24 +139,24 @@ Shared sessions are handled through [OTP tokens](../WebServer/sessions.md#sessio
 ```4d
 var $otp : Text
 
-// Some privileges are put in the remote user session on the server for a further web access
+// 今後のWeb アクセスのために特定の権限がリモートユーザーセッションに対して付与される
 ds.resetPrivileges("basic")
 
-// An OTP is created on the server for this remote client session
+// このリモートクライアントセッションに対してOTP(ワンタイムパスワード)が作成される
 $otp:=ds.getOTP()
 
 
-// The user has already the required privileges for a web access
-// and the same session is shared between this remote user and the web Qodly app
+// ユーザーはWeb アクセスに必要な権限を持っており
+// このリモートユーザーとQodly のWeb アプリ間で同じセッションが共有される
 WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$otp)
 
 ```
 
-*resetPrivileges()* function in the Datastore class:
+Datastore クラス内の *resetPrivileges()* 関数の詳細:
 
 ```4d
-// This function is run on the server
-// and puts some privileges in the session for a further web access
+// この関数はサーバーで実行され
+// セッションに対して将来のWeb アクセスのために特定の権限を付与する
 
 Function resetPrivileges($priv : Text) 
 	
@@ -164,11 +164,11 @@ Function resetPrivileges($priv : Text)
 	Session.setPrivileges($priv)
 ```
 
-*getOTP()* function in the Datastore class:
+Datastore クラス内の *getOTP()* 関数:
 
 ```4d
-// This function is run on the server 
-// and generates an OTP able to retrieve this remote user session 
+// この関数はサーバーで実行され
+// このリモートユーザーセッションを復元することを可能にするOTP (ワンタイムパスワード) を生成する
 
 Function getOTP(): Text 
 	

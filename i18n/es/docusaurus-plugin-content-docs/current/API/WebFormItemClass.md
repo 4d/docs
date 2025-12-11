@@ -9,7 +9,7 @@ Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormCl
 
 When you call the [`Web Form`](../commands/web-form.md) command, the returned `4D.WebForm` proxy object holds as many `4D.WebFormItems` as there are components with [**server-side references**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) in your webform.
 
-For example, `WebFormObject.myImage` refers to the image component with `myImage` as server reference.
+Por ejemplo, `WebFormObject.myImage` hace referencia al componente de imagen con `myImage` como referencia del servidor.
 
 <details><summary>Historia</summary>
 

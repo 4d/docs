@@ -117,7 +117,7 @@ $4d.today(function(result)
 
 En lugar de utilizar un método independiente, también podemos utilizar una función de clase para realizar el cálculo.
 
-Define a "SumCalculator" 4D user class with a `calcSum` function which receives parameters and returns their sum:
+Define una clase usuario 4D "SumCalculator" con una función `calcSum` que recibe parámetros y devuelve su suma:
 
 ```4d
 // SumCalculator user class
@@ -334,7 +334,7 @@ El archivo 4DCEFParameters.json por defecto contiene los siguientes cambios:
 
 :::info Entrada de blog relacionada
 
-[Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
+[Parámetros personalizados para inicializar el área web integrada](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
 
 :::
 

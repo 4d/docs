@@ -939,7 +939,7 @@ Las peticiones remotas son:
 
 Una función que no está expuesta no está disponible en aplicaciones remotas y no se puede llamar a ninguna instancia de objeto desde una petición REST. Si una aplicación remota intenta acceder a una función no expuesta, se devuelve el error "-10729 - Método miembro desconocido".
 
-To allow a function or an attribute to be called by a remote request, you must explicitly declare it using the `exposed` keyword. La sintaxis formal es:
+Para permitir que una función o un atributo sea llamado por una petición remota, debe declararlo explícitamente utilizando la palabra clave `exposed`. La sintaxis formal es:
 
 ```4d
 // declarar una función expuesta
