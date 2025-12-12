@@ -91,6 +91,6 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1566                        |
-| Thread safe        | yes |
+| Thread safe        | &check; |
 
 

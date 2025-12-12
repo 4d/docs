@@ -91,6 +91,6 @@ If the command is called from a component, pass the optional `*` parameter to ge
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1566                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

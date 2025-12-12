@@ -93,5 +93,5 @@ exposed function hideOnLoad()
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1734                        |
-| Thread safe       | no |
+| Thread safe       | &cross; |
 

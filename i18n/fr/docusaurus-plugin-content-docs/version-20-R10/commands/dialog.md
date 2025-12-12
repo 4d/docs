@@ -178,6 +178,6 @@ Après un appel à **DIALOG**, si le dialogue est accepté, OK est mis à 1 ; s'
 |                       |                             |
 | --------------------- | --------------------------- |
 | Numéro de commande    | 40                          |
-| Thread safe           | no |
+| Thread safe           | &cross; |
 | Modifie les variables | OK, error                   |
 

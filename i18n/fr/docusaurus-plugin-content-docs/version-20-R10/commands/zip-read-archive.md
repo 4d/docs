@@ -90,6 +90,6 @@ Pour extraire à partir du dossier root :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1637                        |
-| Thread safe        | yes |
+| Thread safe        | &check; |
 
 

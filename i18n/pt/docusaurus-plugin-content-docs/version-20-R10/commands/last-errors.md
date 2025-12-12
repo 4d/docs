@@ -86,6 +86,6 @@ Each error object contains the following properties:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1799                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

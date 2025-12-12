@@ -86,6 +86,6 @@ Chaque objet erreur contient les propriétés suivantes :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1799                        |
-| Thread safe        | yes |
+| Thread safe        | &check; |
 
 

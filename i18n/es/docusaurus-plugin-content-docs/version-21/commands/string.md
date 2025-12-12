@@ -268,6 +268,6 @@ Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 10                          |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

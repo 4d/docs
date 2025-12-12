@@ -49,4 +49,4 @@ Vérification de l'existence d'un contexte :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1849                        |
-| Thread safe        | no |
+| Thread safe        | &cross; |

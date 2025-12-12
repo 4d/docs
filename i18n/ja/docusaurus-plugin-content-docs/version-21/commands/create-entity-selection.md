@@ -49,4 +49,4 @@ $employees:=Create entity selection([Employee])
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 1512                        |
-| スレッドセーフ | yes |
+| スレッドセーフ | &check; |

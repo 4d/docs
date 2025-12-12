@@ -39,7 +39,7 @@ La commande renvoie `null` si elle est appelée dans une requête qui ne provien
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1735                        |
-| Thread safe        | no |
+| Thread safe        | &cross; |
 
 
 

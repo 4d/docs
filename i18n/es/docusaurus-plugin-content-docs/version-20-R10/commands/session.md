@@ -108,6 +108,6 @@ IP:port/4DACTION/action_Session
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1714                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

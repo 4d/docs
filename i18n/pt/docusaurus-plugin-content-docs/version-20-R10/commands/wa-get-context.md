@@ -49,4 +49,4 @@ Checking if a context exists:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1849                        |
-| Thread safe       | no |
+| Thread safe       | &cross; |

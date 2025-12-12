@@ -77,4 +77,4 @@ $4d._myPrivateFunction(); // Não fará nada porque a função é privada
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1848                        |
-| Thread safe       | no |
+| Thread safe       | &cross; |

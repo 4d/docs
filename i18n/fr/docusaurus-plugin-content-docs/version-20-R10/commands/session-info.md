@@ -90,4 +90,4 @@ Voici un exemple d'objet retourné :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1844                        |
-| Thread safe        | yes |
+| Thread safe        | &check; |

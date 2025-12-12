@@ -45,6 +45,6 @@ Si la commande est exécutée avec le paramètre \* à partir d'un process sur l
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 372                         |
-| Thread safe        | yes |
+| Thread safe        | &check; |
 
 

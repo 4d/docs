@@ -60,6 +60,6 @@ Queremos saber quantos servidores rodando estão disponíveis:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1716                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 
