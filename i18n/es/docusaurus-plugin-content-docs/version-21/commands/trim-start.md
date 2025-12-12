@@ -57,6 +57,6 @@ $output:=Trim start($input) //"Hello World!    "
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1854                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

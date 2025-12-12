@@ -177,6 +177,6 @@ Tras una llamada a **DIALOG**, si se acepta el diálogo, OK se pone en 1; si se 
 |                        |                             |
 | ---------------------- | --------------------------- |
 | Número de comando      | 40                          |
-| Hilo seguro            | no |
+| Hilo seguro            | &cross; |
 | Modifica las variables | OK, error                   |
 

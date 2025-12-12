@@ -294,7 +294,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 
 | Librería  | Versión actual                         | Actualizado en 4D | Comentario                                                                                                                                             |
 | --------- | -------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| BoringSSL | fa47b1d                                | **21**            | Utilizado para QUIC                                                                                                                                    |
+| BoringSSL | 9b86817                                | **21**            | Utilizado para QUIC                                                                                                                                    |
 | CEF       | 7258                                   | **21**            | Chromium 139                                                                                                                                           |
 | Hunspell  | 1.7.2  | 20                | Utilizado para la corrección ortográfica en formularios 4D y 4D Write Pro                                                                              |
 | ICU       | 77.1                   | **21**            | Esta actualización fuerza una reconstrucción automática de los índices alfanuméricos, textos y objetos.                                |
@@ -304,7 +304,7 @@ Si sus aplicaciones 4D utilizan conexiones TLS, se recomienda actualizar a 4D 20
 | Libuv     | 1.51.0 | **21**            | Utilizado para QUIC                                                                                                                                    |
 | libZip    | 1.11.4 | **21**            | Utilizado por los componentes zip class, 4D Write Pro, svg y serverNet                                                                                 |
 | LZMA      | 5.8.1  | **21**            |                                                                                                                                                        |
-| ngtcp2    | 1.16.0 | **21**            | Utilizado para QUIC                                                                                                                                    |
+| ngtcp2    | 1.18.0 | **21**            | Utilizado para QUIC                                                                                                                                    |
 | OpenSSL   | 3.5.2  | **21**            |                                                                                                                                                        |
 | PDFWriter | 4.7.0  | **21**            | Utilizado para [`WP Export document`](../WritePro/commands/wp-export-document.md) y [`WP Export variable`](../WritePro/commands/wp-export-variable.md) |
 | SpreadJS  | 17.1.0 | 20 R7             | Consulte [esta entrada de blog](https://blog.4d.com/4d-view-pro-whats-new-in-4d-20-r7/) para obtener una visión general de las nuevas funciones        |

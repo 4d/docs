@@ -182,6 +182,6 @@ Depois de uma chamada para **DIALOG**, se a caixa de diálogo for aceita, OK est
 |                       |                             |
 | --------------------- | --------------------------- |
 | Número de comando     | 40                          |
-| Thread safe           | no |
+| Thread safe           | &cross; |
 | Modifica as variáveis | OK, error                   |
 

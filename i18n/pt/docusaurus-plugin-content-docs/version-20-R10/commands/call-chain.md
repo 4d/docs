@@ -95,6 +95,6 @@ If a form object method is executed, the call chain could contain (for example):
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1662                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

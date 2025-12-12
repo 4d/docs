@@ -90,6 +90,6 @@ Para ler todos os conteúdos de um arquivo sem extraí-lo da pasta root:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1637                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

@@ -49,7 +49,7 @@ displayed_sidebar: docs
 | lk font style expression       | 24 | セレクション型、コレクションまたはエンティティセレクション型リストボックスの **[スタイル式](../FormObjects/properties_Text.md#スタイル式)** プロパティ<br/>適用対象: リストボックスあるいはカラム                                                                                                                                                                                                                                                              |
 | lk hide selection highlight    | 16 | **[セレクションハイライトを非表示](../FormObjects/properties_Appearance.md#セレクションハイライトを非表示)** プロパティ <br/> 適用対象: リストボックス <br/> 取り得る値: <br/> lk no (0) <br/> lk yes (1)                                                                                                                                                                            |
 | lk highlight set               | 27 | セレクション型リストボックスの **[セットをハイライト](../FormObjects/properties_ListBox.md#ハイライトセット)** プロパティ<br/>適用対象: リストボックス                                                                                                                                                                                                                                                                                  |
-| lk hor scrollbar height        | 3  | Height in pixels (can only be read)<br/>Applies to: List box                                                                                                                                                                                                                                                                                                         |
+| lk hor scrollbar height        | 3  | ピクセル単位の高さ(読み出しのみ可能)<br/>適用対象: リストボックス                                                                                                                                                                                                                                                                                                                                |
 | lk meta expression             | 34 | コレクションまたはエンティティセレクション型リストボックスの **[メタ情報式](../FormObjects/properties_Text.md#メタ情報式)** プロパティ<br/>適用対象: リストボックス                                                                                                                                                                                                                                                                             |
 | lk movable rows                | 35 | 配列型リストボックスの **[行の移動可](../FormObjects/properties_Action.md#行の移動可)** プロパティ<br/>適用対象: リストボックス(ただし階層モードを除く)<br/>取り得る値:<br/> lk no (0): 行はランタイムに移動させられない<br/> lk yes (1): 行はランタイムに移動させられる(デフォルト)                                                                 |
 | lk multi style                 | 30 | **[マルチスタイル](../FormObjects/properties_Text.md#マルチスタイル)** のプロパティ <br/>適用対象: カラム\* <br/>取り得る値:<br/>lk no (0) <br/>lk yes (1)                                                                                                                                                                                                        |
@@ -107,6 +107,6 @@ displayed_sidebar: docs
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 917                         |
-| スレッドセーフ | no |
+| スレッドセーフ | &cross; |
 
 

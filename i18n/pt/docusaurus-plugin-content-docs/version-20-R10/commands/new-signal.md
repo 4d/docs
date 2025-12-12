@@ -75,6 +75,6 @@ O método ***doSomething*** poderia ser como:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1641                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

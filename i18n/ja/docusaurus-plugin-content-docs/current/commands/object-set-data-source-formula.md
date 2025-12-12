@@ -62,6 +62,6 @@ OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 1851                        |
-| スレッドセーフ | no |
+| スレッドセーフ | &cross; |
 
 

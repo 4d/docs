@@ -86,6 +86,6 @@ Cada objeto error contiene las siguientes propiedades:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1799                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

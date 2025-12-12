@@ -51,7 +51,7 @@ USE ENTITY SELECTION($entitySel) //La sélection courante de la table Employee e
 |                                  |                             |
 | -------------------------------- | --------------------------- |
 | Numéro de commande               | 1513                        |
-| Thread safe                      | yes |
+| Thread safe                      | &check; |
 | Modifie l'enregistrement courant |                             |
 | Modifie la sélection courante    |                             |
 

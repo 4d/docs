@@ -93,6 +93,6 @@ $status:=$transporter.send($email)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1681                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

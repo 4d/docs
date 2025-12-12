@@ -152,6 +152,6 @@ $transporter.send($email)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1644                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

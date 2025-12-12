@@ -149,7 +149,7 @@ Em caso de erro, o comando retorna **Null**. Se não for possível acessar o arm
 |                       |                             |
 | --------------------- | --------------------------- |
 | Número de comando     | 1452                        |
-| Thread safe           | yes |
+| Thread safe           | &check; |
 | Modifica as variáveis | error                       |
 
 

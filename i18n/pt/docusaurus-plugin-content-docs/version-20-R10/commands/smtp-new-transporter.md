@@ -91,6 +91,6 @@ A função retorna um [**objeto SMTP transporter**](../API/SMTPTransporterClass.
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1608                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

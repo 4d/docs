@@ -107,6 +107,6 @@ Soit une list box "MyListbox", si vous exécutez l'instruction suivante :
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 917                         |
-| Thread safe        | no |
+| Thread safe        | &cross; |
 
 

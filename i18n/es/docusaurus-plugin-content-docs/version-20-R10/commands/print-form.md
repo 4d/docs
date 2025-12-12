@@ -188,6 +188,6 @@ El código que llama al diálogo imprime su cuerpo:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 5                           |
-| Hilo seguro       | no |
+| Hilo seguro       | &cross; |
 
 

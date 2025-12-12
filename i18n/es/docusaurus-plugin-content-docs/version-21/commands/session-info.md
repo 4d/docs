@@ -90,4 +90,4 @@ He aquí un ejemplo de objeto de salida:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1844                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |

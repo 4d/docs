@@ -169,6 +169,6 @@ $err:=ZIP Create archive($zip; $destination)
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1640                        |
-| Thread safe        | yes |
+| Thread safe        | &check; |
 
 

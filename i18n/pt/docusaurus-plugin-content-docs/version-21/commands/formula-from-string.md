@@ -71,6 +71,6 @@ O código abaixo cria um diálogo aceitando uma fórmula em formato texto:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1601                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

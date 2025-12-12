@@ -145,6 +145,6 @@ The returned object contains the following properties:
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 1489                        |
-| スレッドセーフ | yes |
+| スレッドセーフ | &check; |
 
 

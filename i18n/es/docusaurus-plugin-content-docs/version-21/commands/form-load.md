@@ -167,6 +167,6 @@ Desea imprimir un formulario que contiene un list box. Durante el evento *on loa
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1103                        |
-| Hilo seguro       | no |
+| Hilo seguro       | &cross; |
 
 

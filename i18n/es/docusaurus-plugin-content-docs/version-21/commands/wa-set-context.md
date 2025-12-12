@@ -77,4 +77,4 @@ $4d._myPrivateFunction(); // No hará nada porque la función es privada
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1848                        |
-| Hilo seguro       | no |
+| Hilo seguro       | &cross; |

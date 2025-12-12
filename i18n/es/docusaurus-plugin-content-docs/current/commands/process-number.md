@@ -45,6 +45,6 @@ Si el comando se ejecuta con el parámetro \* desde un proceso en la máquina se
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 372                         |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

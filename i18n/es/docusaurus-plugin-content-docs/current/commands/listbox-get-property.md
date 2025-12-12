@@ -107,6 +107,6 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 917                         |
-| Hilo seguro       | no |
+| Hilo seguro       | &cross; |
 
 

@@ -86,6 +86,6 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1472                        |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

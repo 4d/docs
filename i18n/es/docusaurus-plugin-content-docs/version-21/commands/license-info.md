@@ -145,6 +145,6 @@ Desea obtener información sobre su licencia actual de 4D Server:
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1489                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

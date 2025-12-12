@@ -90,6 +90,6 @@ La función devuelve un [**objeto SMTP transporter**](../API/SMTPTransporterClas
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1608                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

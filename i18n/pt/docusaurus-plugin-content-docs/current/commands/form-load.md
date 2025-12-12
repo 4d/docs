@@ -167,6 +167,6 @@ End case
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1103                        |
-| Thread safe       | no |
+| Thread safe       | &cross; |
 
 

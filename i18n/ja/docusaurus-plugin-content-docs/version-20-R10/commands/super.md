@@ -118,6 +118,6 @@ $message:=$square.description() // "I have 4 sides which are all equal"
 |         |                             |
 | ------- | --------------------------- |
 | コマンド番号  | 1706                        |
-| スレッドセーフ | yes |
+| スレッドセーフ | &check; |
 
 

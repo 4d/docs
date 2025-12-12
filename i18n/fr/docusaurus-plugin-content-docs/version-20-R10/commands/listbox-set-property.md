@@ -91,6 +91,6 @@ Vous souhaitez modifier la largeur maximale de la colonne nommée "ProductNumber
 |                    |                             |
 | ------------------ | --------------------------- |
 | Numéro de commande | 1440                        |
-| Thread safe        | no |
+| Thread safe        | &cross; |
 
 

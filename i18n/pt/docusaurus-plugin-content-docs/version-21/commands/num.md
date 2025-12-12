@@ -151,6 +151,6 @@ $result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 11                          |
-| Thread safe       | yes |
+| Thread safe       | &check; |
 
 

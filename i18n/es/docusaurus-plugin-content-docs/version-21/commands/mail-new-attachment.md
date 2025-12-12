@@ -152,6 +152,6 @@ $transporter.send($email)
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1644                        |
-| Hilo seguro       | yes |
+| Hilo seguro       | &check; |
 
 

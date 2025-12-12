@@ -39,7 +39,7 @@ The command returns `null` if it is called in a request that does not originate 
 |                   |                             |
 | ----------------- | --------------------------- |
 | Número de comando | 1735                        |
-| Hilo seguro       | no |
+| Hilo seguro       | &cross; |
 
 
 

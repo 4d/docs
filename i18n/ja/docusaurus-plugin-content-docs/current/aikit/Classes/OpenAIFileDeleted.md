@@ -5,17 +5,17 @@ title: OpenAIFileDeleted
 
 # OpenAIFileDeleted
 
-The `OpenAIFileDeleted` class represents the deletion status of a file in the OpenAI API.
+`OpenAIFileDeleted` クラスは、OpenAI API 内のファイルの削除ステータスを表します。
 
 ## プロパティ
 
-| プロパティ名    | 型       | 説明                                                                                                                   |
-| --------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
-| `id`      | Text    | The ID of the deleted file (e.g., "file-abc123"). |
-| `deleted` | Boolean | Whether the file was successfully deleted. `True` if deletion succeeded.             |
-| `object`  | Text    | オブジェクトタイプ。常に"file"。                                                                                                  |
+| プロパティ名    | 型       | 説明                                                                  |
+| --------- | ------- | ------------------------------------------------------------------- |
+| `id`      | Text    | 削除されたファイルのID (例: "file-abc123")。 |
+| `deleted` | Boolean | ファイルが正常に削除されたかどうか。 削除が成功した場合には `True`。                              |
+| `object`  | Text    | オブジェクトタイプ。常に"file"。                                                 |
 
-## Example Response
+## レスポンスの例
 
 ```json
 {
@@ -25,7 +25,7 @@ The `OpenAIFileDeleted` class represents the deletion status of a file in the Op
 }
 ```
 
-## Used by
+## 使用されるクラス
 
 - [OpenAIFileDeletedResult](OpenAIFileDeletedResult.md)
 
