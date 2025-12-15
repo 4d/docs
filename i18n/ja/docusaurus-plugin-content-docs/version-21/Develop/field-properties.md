@@ -3,7 +3,7 @@ id: field-properties
 title: フィールドプロパティ
 ---
 
-For other field properties, please refer to [doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Field-properties.300-7676763.en.html).
+他のフィールドプロパティについては、 [doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Field-properties.300-7676763.ja.html) を参照してください。
 
 ## Class
 

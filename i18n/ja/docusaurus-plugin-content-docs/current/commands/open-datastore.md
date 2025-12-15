@@ -6,12 +6,12 @@ displayed_sidebar: docs
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                      |
-| ----- | --------------------------------------- |
-| 21    | Qodly cloud discontinued                |
-| 20 R6 | Support access to Qodly cloud instances |
-| 20 R4 | 新しい *passwordAlgorithm* プロパティ           |
-| 18    | 追加                                      |
+| リリース  | 内容                            |
+| ----- | ----------------------------- |
+| 21    | Qodly cloud へのアクセス終了          |
+| 20 R6 | Qodly cloud インスタンスへのアクセスをサポート |
+| 20 R4 | 新しい *passwordAlgorithm* プロパティ |
+| 18    | 追加                            |
 
 </details>
 
@@ -32,11 +32,11 @@ displayed_sidebar: docs
 `Open datastore` コマンドは、<!-- REF #_command_.Open datastore.Summary -->
 *connectionInfo* 引数が指定するリモートデータストアにアプリケーションを接続します<!-- END REF -->。戻り値は、*localID* ローカルエイリアスに紐づけられた `4D.DataStoreImplementation` オブジェクトです。
 
-Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
+リモートデータストアとのやりとりは、REST リクエストを経由して自動的に管理されます。 *connectionInfo* で指定する 4D データストアは、リモートデータストアとして利用可能でなければなりません。つまり、以下の条件を満たしている必要があります:
 
-- its Web Server must be launched with http and/or https enabled,
-- its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
-- a client license must be available if required (see note).
+- その Web サーバーは、http または https が有効化された状態で開始されていること
+- データストアはREST に公開されている([**REST サーバーとして公開**](REST/configuration.md#restサーバーを開始) オプションがチェックされている)こと
+- 必要であれば、クライアントライセンスが利用可能であること(注記参照)。
 
 :::note
 
