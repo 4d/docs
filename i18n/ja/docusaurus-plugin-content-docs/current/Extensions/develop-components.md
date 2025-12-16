@@ -114,9 +114,9 @@ title: コンポーネントの開発
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
 
-### Search and replace
+### 検索と置換
 
-You can use the [**Search and replace** features](../Project/search-replace.md) of the host project to search elements within the code or the forms of your editable components. The **Search in project** menu allows you to select one or all components as search target:
+ホストプロジェクトの[**検索と置換** 機能](../Project/search-replace.md) を使用して、編集可能なコンポーネントのコードやフォーム内の要素を検索することができます。 **プロジェクト内を検索** メニューを使用することで、ひとつまたは全てのコンポーネントを検索ターゲットとして選択することができます:
 
 ![](../assets/en/Project/find-components.png)
 
@@ -251,7 +251,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## 変数の渡し方
 
-Variables are not shared between components and host projects. ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
+変数はコンポーネントとホストプロジェクト間では共有されません。 ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
 
 配列を使用した例:
 
