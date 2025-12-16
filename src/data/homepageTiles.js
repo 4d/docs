@@ -236,9 +236,6 @@ title: (
        <Link to="Desktop/labels" >
           <Translate>Labels</Translate>
         </Link>
-        <Link to="Desktop/user-settings" >
-          <Translate>User Settings</Translate>
-        </Link>
         <Link to="Users/overview">
           <Translate>Access Rights</Translate>
         </Link>
