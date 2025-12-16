@@ -1,24 +1,30 @@
 ---
 id: webAdmin
-title: WebAdmin
+title: Web Administration Server
 ---
 
 
-An embedded web server component, named `WebAdmin`, is used by 4D and 4D Server to provide a secured web access to specific management features such as the [Data Explorer](dataExplorer.md). You can connect locally or remotely to this web server from a browser or any web application and access the associated 4D application. 
+An embedded web server component, named `WebAdmin`, is used by 4D and 4D Server to provide a secured web access to specific features:
 
-The WebAdmin handles the authentication of users with "WebAdmin" privileges, so that they can open administration sessions and access dedicated interfaces. 
+- REST accesses to the project 
+- the [Data Explorer](dataExplorer.md)
+- the [Qodly Studio preview rendering](https://developer.4d.com/qodly/4DQodlyPro/rendering#preview-in-qodly-studio)
+
+You can connect locally or remotely to this web server from a browser or any web application and access the associated 4D application. 
+
+The Web Administration Server handles the authentication of users with `WebAdmin` privileges, so that they can open administration sessions and access dedicated interfaces. 
 
 This feature can be used in 4D applications running headless as well as 4D applications running with interfaces.
 
 
-## Starting the WebAdmin web server
+## Starting the Web Administration Server
 
-By default, the `WebAdmin` web server is not launched. You need to configure the launch at startup, or (in versions with interface) launch it manually using a menu item. 
+By default, the Web Administration Server web server is not launched. You need to configure the launch at startup, or (in versions with interface) launch it manually using a menu item. 
 
 
 ### Launch at startup
 
-You can configure the `WebAdmin` web server to be launched at 4D or 4D Server application startup (before any project is loaded).  
+You can configure the Web Administration Server to be launched at 4D or 4D Server application startup (before any project is loaded).  
 
 - If you use a 4D application with interface, select the **File > Web Administration > Settings...** menu item. 
 
@@ -35,26 +41,26 @@ Check the **Launch WebAdmin server at startup** option in the settings dialog bo
 open ~/Desktop/4D.app --webadmin-auto-start true
 ```
 
-> If the TCP port used by the `WebAdmin` web server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console. 
+> If the TCP port used by the Web Administration Server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console. 
 
 
 ### Start and stop
 
-If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
+If you use a 4D application with interface, you can start or stop the Web Administration Server for your project at any moment:
 
 Select the **File > Web Administration > Start Server** menu item.
 
 ![alt-text](../assets/en/Admin/waMenu2.png)
 
-The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the `WebAdmin` web server.
+The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the Web Administration Server.
 
 
 
-## WebAdmin Settings 
+## Settings {#settings}
 
-Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via a URL is not allowed. 
+Configuring the Web Administration Server is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via a URL is not allowed. 
 
-You can configure the `WebAdmin` component using the [Web Administration settings dialog box](#settings-dialog-box) (see below). 
+You can configure the Web Administration Server using the [Web Administration settings dialog box](#settings-dialog-box) (see below). 
 
 > If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters. 
 
@@ -71,29 +77,32 @@ The following dialog box is displayed:
 
 #### Launch WebAdmin server at startup
 
-Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launch-at-startup)). By default, this option is not checked.
+Check this option if you want the Web Administration Server to be automatically launched when the 4D or 4D Server application starts ([see above](#launch-at-startup)). By default, this option is not checked.
 
 #### Accept HTTP connections on localhost
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTP on the same machine as the 4D application. By default, this option is checked.
+When this option is checked, you will be able to connect to the Web Administration Server through HTTP on the same machine as the 4D application. By default, this option is checked.
 
-**Notes:**
+:::note Notes
+
 - Connections with HTTP other than localhost are never accepted.
 - Even if this option is checked, when [Accept HTTPS](#accept-https) is checked and the TLS configuration is valid, localhost connections use HTTPS.
+
+:::
 
 
 #### HTTP Port 
 
-Port number to use for connections through HTTP to the `WebAdmin` web server when the **Accept HTTP connections on localhost** option is checked. Default value is 7080. 
+Port number to use for connections through HTTP to the Web Administration Server when the **Accept HTTP connections on localhost** option is checked. Default value is 7080. 
 
 
 #### Accept HTTPS
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. By default, this option is checked. 
+When this option is checked, you will be able to connect to the Web Administration Server through HTTPS. By default, this option is checked. 
 
 #### HTTPS Port 
 
-Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. Default value is 7443.
+Port number to use for connections through HTTPS to the Web Administration Server when the **Accept HTTPS** option is checked. Default value is 7443.
 
 
 #### Certificate folder path
@@ -112,7 +121,7 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 #### Access Key
 
-Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request: 
+Defining an access key is mandatory to unlock access to the Web Administration Server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request: 
 
 ![alt-text](../assets/en/Admin/accessKey.png)
 
@@ -132,10 +141,16 @@ This option only appears if the Qodly Studio license is activated.
 
 This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) at the 4D application level. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
 
+:::note
 
-## WebAdmin Headless Configuration
+This option is automatically checked if you used the [One-click configuration dialog box](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration). 
 
-All [WebAdmin settings](#webadmin-settings) are stored in the `WebAdmin.4DSettings` file. There is one default `WebAdmin.4DSettings` file per 4D and 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
+:::
+
+
+## Headless Configuration
+
+All [Web Administration Server settings](#settings) are stored in the `WebAdmin.4DSettings` file. There is one default `WebAdmin.4DSettings` file per 4D and 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
 
 When running a 4D or 4D Server application headless, you can set and use the default `WebAdmin.4DSettings` file, or designate a custom `.4DSettings` file. 
 
@@ -155,12 +170,19 @@ Example:
 ```
 
 
-## Authentication and Session
+## Authentication
 
-- When a web management page is accessed by entering a URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible. 
+When a web page controlled by the Web Administration Server is accessed by entering a URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box:
 
-- When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated. 
+![alt-text](../assets/en/Admin/accessKeyEnter.png)
 
-Once the access is granted, a web [session](WebServer/sessions.md) with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the `WebAdmin` component delivers requested pages.
+If the access key was not defined in the Web Administration Server settings, no access via URL is possible (a specific message is displayed). 
 
+When a web page controlled by the Web Administration Server page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated. 
+
+:::note
+
+Once the access is granted, a [web session](WebServer/sessions.md) with a specific "WebAdmin" privilege is created by the Web Administration Server. This privilege provides an open access to all data through web processes, as soon as no [specific permissions are applied to resources](../ORDA/privileges.md). 
+
+:::
 

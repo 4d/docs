@@ -224,6 +224,9 @@ title: (
         <Link to="Desktop/clientServer" >
           <Translate>Client/Server</Translate>
         </Link>
+         <Link to="Desktop/desktop-sessions" >
+          <Translate>Sessions</Translate>
+        </Link>
         <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>
         </Link>

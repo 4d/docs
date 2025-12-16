@@ -32,7 +32,7 @@ By default, if the *option* parameter is omitted, the command returns a referenc
 
 |Constant|Value|Comment|
 |---|---|---|
-|`Web server database`|1|Current database Web server (default if omitted)|
+|`Web server database`|1|Web server of the project from which the command is called (default if omitted)|
 |`Web server host database`|2|Web server of the host database of a component|
 |`Web server receiving request`|3|Web server that received the request (target Web server)|
 

@@ -2492,6 +2492,11 @@ module.exports =
           label: "Client/Server",
           id: "Desktop/clientServer"
         },
+       {
+          type: "doc",
+          label: "Sessions",
+          id: "Desktop/desktop-sessions"
+        },
         {
           type: "category",
           label: "Forms",
