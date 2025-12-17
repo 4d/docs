@@ -28,7 +28,7 @@ When the list is created using [the WP SET ATTRIBUTE command](../commands-legacy
 
 :::info Entrada de blog relacionada
 
-4D Write Pro – Adding a margin automatically when bullets are set using standard actions
+4D Write Pro - Añadir un margen automáticamente cuando se establecen viñetas utilizando acciones estándar
 
 :::
 

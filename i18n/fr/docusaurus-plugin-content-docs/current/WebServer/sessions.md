@@ -10,11 +10,17 @@ Les sessions Web permettent de :
 - gérer simultanément plusieurs requêtes depuis le même client web via un nombre illimité de process préemptifs (les sessions web sont **évolutives**),
 - gérer la session à travers un objet `Session` et une [API de session](API/SessionClass.md),
 - stocker et partager des données entre les process d'un client web en utilisant le [.storage](../API/SessionClass.md#storage) de la session,
-- associer des privilèges à l'utilisateur qui exécute la session.
+- associate [privileges](../ORDA/privileges.md) to the user running the session.
 
 :::tip Article(s) de blog sur le sujet
 
 [Sessions évolutives pour applications web avancées](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
+:::note
+
+Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
 
 :::
 
@@ -216,6 +222,12 @@ Dans 4D, les tokens de session OTP sont utiles pour appeler des URL externes et 
 :::tip Articles de blog sur le sujet
 
 [Connectez vos applications Web à des systèmes tiers](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
+:::note
+
+Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
 
 :::
 
@@ -475,7 +487,7 @@ Un nouvel utilisateur est créé et des informations sont stockées dans la sess
 - Les schémas HTTP et HTTPS sont tous deux pris en charge.
 - Seules des [sessions évolutives](#enabling-web-sessions) peuvent être réutilisées avec des tokens.
 - Seules les sessions de la base de données hôte peuvent être réutilisées (les sessions créées dans les serveurs web des composants ne peuvent pas être restaurées).
-- Les tokens ne sont pas pris en charge dans les sessions client/serveur ou les sessions mono-utilisateur.
+- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Durée de vie
 

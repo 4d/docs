@@ -30,11 +30,11 @@ El comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->devuelve el ob
 
 Por defecto, si se omite el parámetro *option*, el comando devuelve una referencia al servidor web de la base de datos, es decir, al servidor web por defecto. Para designar el servidor web a devolver, puede pasar una de las siguientes constantes en el parámetro *option*:
 
-| Constante                      | Valor | Comentario                                                                           |
-| ------------------------------ | ----- | ------------------------------------------------------------------------------------ |
-| `Web server database`          | 1     | Servidor web de la base actual (por defecto si se omite)          |
-| `Web server host database`     | 2     | Servidor web de la base local de un componente                                       |
-| `Web server receiving request` | 3     | Servidor web que ha recibido la solicitud (servidor web objetivo) |
+| Constante                      | Valor | Comentario                                                                                         |
+| ------------------------------ | ----- | -------------------------------------------------------------------------------------------------- |
+| `Web server database`          | 1     | Web server of the project from which the command is called (default if omitted) |
+| `Web server host database`     | 2     | Servidor web de la base local de un componente                                                     |
+| `Web server receiving request` | 3     | Servidor web que ha recibido la solicitud (servidor web objetivo)               |
 
 El **objeto servidor web devuelto** contiene los valores actuales de las [propiedades del servidor web](../API/WebServerClass.md).
 
@@ -58,9 +58,9 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1674                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1674 |
+| Hilo seguro       | no   |
 
 

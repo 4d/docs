@@ -153,7 +153,7 @@ Rules can be set using a `HTTPRules.json` file or the *settings* parameter of th
 
 ```
 
-### Using a *settings* parameter
+### Utilizar un parámetro *settings*
 
 ```4d
 var $rule:={}

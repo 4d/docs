@@ -85,9 +85,9 @@ For more information on web pages states, please refer to the [States section in
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Parámetros | Tipo   |     | Descripción                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| state      | string |  -> | Name of state to enable on the web pages |
+| Parámetros | Tipo   |     | Descripción                                    |
+| ---------- | ------ | :-: | ---------------------------------------------- |
+| state      | string |  -> | Nombre del estado a activar en las páginas web |
 
 <!-- END REF -->
 
@@ -121,9 +121,9 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| Parámetros | Tipo   |     | Descripción                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| msg        | string |  -> | Error message to display in the web page |
+| Parámetros | Tipo   |     | Descripción                                 |
+| ---------- | ------ | :-: | ------------------------------------------- |
+| msg        | string |  -> | Mensaje de error a mostrar en la página web |
 
 <!-- END REF -->
 

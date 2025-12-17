@@ -10,11 +10,17 @@ Webセッションでは、以下のことが可能です:
 - 同一のWebクライアントからの複数のリクエストを、無制限のプリエンプティブプロセスで同時に処理 (Webセッションは **スケーラブル**です)。
 - `Session` オブジェクトと [Session API](API/SessionClass.md) を介したセッションの管理。
 - セッションの [.storage](../API/SessionClass.md#storage) を使用して、Webクライアントのプロセス間でデータを保存および共有。
-- セッションを実行しているユーザーに権限を関連付ける。
+- associate [privileges](../ORDA/privileges.md) to the user running the session.
 
 :::tip 関連したblog 記事
 
 [高度な Webアプリケーションに対応したスケーラブルセッション](https://blog.4d.com/ja/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
+:::note
+
+Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
 
 :::
 
@@ -216,6 +222,12 @@ End if
 :::tip 関連したblog 記事
 
 [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
+:::note
+
+Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
 
 :::
 
@@ -475,7 +487,7 @@ Function validateEmail() : 4D.OutgoingMessage
 - HTTP とHTTPS スキーマの両方がサポートされます。
 - トークンで再使用ができるのは[スケーラブルセッション](#Webセッションの有効化) のみです。
 - 再使用ができるのはホストデータベースのセッションのみです(コンポーネントのWeb サーバーで作成されたセッションは復元することができません)。
-- トークンはクライアント/サーバーセッション、あるいはシングルユーザーセッションにおいてはサポートされていません。
+- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### ライフスパン
 

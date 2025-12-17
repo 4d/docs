@@ -96,11 +96,11 @@ title: Forms
 
 マルチページフォームには、1つの背景ページと複数の表示ページが存在します。 背景ページ上に置かれたオブジェクトはすべての表示ページに現れますが、それらのオブジェクトの選択や編集は背景ページでのみ可能です。 複数ページフォームでは、ボタンパレットを背景ページに置くべきです。 また、ページ移動ツールオブジェクトを背景ページに配置し、ユーザーに提供する必要があります。
 
-## Fluent UI rendering (Developer Preview)
+## Fluent UIレンダリング(デベロッパープレビュー)
 
-On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
+Windows では、4D は **Fluent UI** フォームレンダリングをサポートしています。これは **WinUI 3** テクノロジーに基づいた、Microsoft のモダンなグラフィカルユーザーインターフェースデザインです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。
 
-Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+Fluent UI レンダリングは現代的かつ魅力的なコントロールを提供するだけでなく、ダーク/ライトシステムテーマのサポート、高解像度ディスプレイのために最適化されたよりスムーズなレンダリング、そして最近のMicrosoft アプリケーションに沿った、一貫したユーザーエクスペリエンスを提供します。
 
 | ライトテーマ                                  | ダークテーマ                                       |
 | --------------------------------------- | -------------------------------------------- |
@@ -108,13 +108,13 @@ Fluent UI rendering offers modern and attractive controls, support of dark/light
 
 :::caution デベロッパー・プレビュー
 
-Fluent UI support is currently in the Developer Preview phase. 本番環境で使用すべきではありません。
+Fluent UI のサポートは現在デベロッパープレビューのフェーズです。 本番環境で使用すべきではありません。
 
 :::
 
 :::info 利用可能性
 
-This feature can be used **in 4D projects on Windows**. It is not available on macOS or in binary 4D databases on Windows.
+この機能は、**Windows の4D プロジェクト内** で使用可能です。 macOS や、Windows のバイナリー4D データベースなどではご利用いただけません。
 
 :::
 
@@ -126,27 +126,27 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 ### 要件
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+Fluent UI レンダリングには、[**Windows App SDK version 1.7.3**](https://learn.microsoft.com/ja-jp/windows/apps/windows-app-sdk/downloads) がインストールされている必要があります。 フォームを表示するためには、この SDK をWindows マシンにインストールする必要があります。
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+Windows App SDK が適切にインストールされていない場合、4D はフォームを全てクラシックモードで、エラーなしに表示します。
 
-### Enabling the Fluent UI rendering
+### Fluent UI レンダリングを有効化する
 
-You can enable the Fluent UI rendering mode at the application level or at the form level. Form setting has priority over application setting.
+Fluent UI レンダリングモードは、アプリケーションレベルまたはフォームレベルで有効化することができます。 フォームでの設定の方がアプリケーションの設定より優先されます。
 
-#### Application setting
+#### アプリケーション設定
 
-Check the **Use Fluent UI on Windows** option in the "Interface" page of the Settings dialog box.
+ストラクチャー設定ダイアログボックスの"インターフェース" ページ内にある **Windows で Fluent UI を使用する** オプションをチェックします。
 
 ![](../assets/en/FormObjects/fluentui-setting.png)
 
-In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
+この場合、Windows 上ではデフォルトで全てのフォームにおいてFluent UI レンダリングモードが使用されます。
 
-#### Form setting
+#### フォーム設定
 
-Each form can define its own rendering via the **Widget appearance** property. 次のオプションから選択することができます:
+それぞれのフォームは、 **Widget appearance** プロパティによって独自のレンダリング設定を定義することができます。 次のオプションから選択することができます:
 
-- **Inherited**: inherits the global application setting (default),
+- **継承**: グローバルなアプリケーション設定を継承します(デフォルト)
 - **Classic**: uses the classic Windows style,
 - **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
   ![](../assets/en/FormObjects/fluentui-form.png)

@@ -30,11 +30,11 @@ La commande `WEB Server` <!-- REF #_command_.WEB Server.Summary -->retourne l'ob
 
 Par défaut, si le paramètre *option* est omis, la commande renvoie une référence au serveur Web de la base de données, c'est-à-dire le serveur Web par défaut. Pour désigner le serveur Web à renvoyer, vous pouvez passer l'une des constantes suivantes dans le paramètre *option* :
 
-| Constante                      | Valeur | Commentaire                                                                 |
-| ------------------------------ | ------ | --------------------------------------------------------------------------- |
-| `Web server database`          | 1      | Le serveur Web de la base courante (par défaut si omis)  |
-| `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                 |
-| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible) |
+| Constante                      | Valeur | Commentaire                                                                                        |
+| ------------------------------ | ------ | -------------------------------------------------------------------------------------------------- |
+| `Web server database`          | 1      | Web server of the project from which the command is called (default if omitted) |
+| `Web server host database`     | 2      | Le serveur Web de la base hôte du composant                                                        |
+| `Web server receiving request` | 3      | Le serveur Web ayant reçu la requête (serveur Web cible)                        |
 
 L'objet **Web server retourné** contient les valeurs courantes des [propriétés du serveur Web](../API/WebServerClass.md).
 
@@ -58,9 +58,9 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1674                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1674 |
+| Thread safe        | non  |
 
 

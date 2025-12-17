@@ -10,11 +10,17 @@ Las sesiones web permiten:
 - manejar múltiples peticiones simultáneamente desde el mismo cliente web a través de un número ilimitado de procesos apropiativos (las sesiones web son **escalables**),
 - gestionar la sesión a través de un objeto `Session` y la [Session API](API/SessionClass.md),
 - almacenar y compartir datos entre procesos de un cliente web utilizando el [.storage](../API/SessionClass.md#storage) de la sesión,
-- asociar privilegios al usuario que ejecuta la sesión.
+- associate [privileges](../ORDA/privileges.md) to the user running the session.
 
 :::tip Entrada de blog relacionada
 
 [Sesiones escalables para aplicaciones web avanzadas](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
+:::note
+
+Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
 
 :::
 
@@ -216,6 +222,12 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 :::tip Entradas de blog relacionadas
 
 [Conecte sus aplicaciones web a sistemas de terceros](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
+:::note
+
+Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
 
 :::
 
@@ -475,7 +487,7 @@ Se crea un nuevo usuario y se almacena cierta información en la sesión, especi
 - Se admiten esquemas HTTP y HTTPS.
 - Sólo [sesiones escalables](#enabling-web-sessions) pueden ser reutilizados con tokens.
 - Sólo se pueden reutilizar las sesiones de la base de datos local (las sesiones creadas en servidores web de componentes no se pueden restaurar).
-- Los tokens no son compatibles con las sesiones cliente/servidor ni con las sesiones monousuario.
+- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Vida útil
 

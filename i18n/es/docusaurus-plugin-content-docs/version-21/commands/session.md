@@ -26,20 +26,23 @@ displayed_sidebar: docs
 
 ## Descripción
 
-El comando `Session` <!-- REF #_command_.Session.Summary -->devuelve el objeto `Session` correspondiente a la sesión usuario actual<!-- END REF -->.
+The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current session<!-- END REF -->.
 
-Dependiendo del proceso desde el que se llame al comando, la sesión de usuario actual puede ser:
+Depending on the process from which the command is called, the current session can be:
 
 - una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-web-sessions)),
-- una sesión de cliente remoto,
-- la sesión de procedimientos almacenados,
-- la sesión del ***Print form*** en una aplicación independiente.
+- una sesión de cliente remoto (en el servidor),
+- una sesión de procedimientos almacenados,
+- a standalone session.
 
 Para obtener más información, consulte el párrafo [Tipos de sesion](../API/SessionClass.md#session-types).
 
-Si el comando se llama desde un contexto no soportado (por ejemplo, sesiones escalables desactivadas), devuelve *Null*.
+El comando devuelve *Null* si:
 
-## Sesiones web
+- se llama en un proceso web y se desactivan las sesiones escalables en el servidor web,
+- se llama en un 4D remoto.
+
+### Sesiones web
 
 El objeto `Session` de las sesiones web está disponible desde cualquier proceso web:
 
@@ -51,7 +54,7 @@ El objeto `Session` de las sesiones web está disponible desde cualquier proceso
 
 Para más información sobre las sesiones usuario web, consulte la sección [Sesiones web](../WebServer/sessions.md).
 
-## Sesiones de cliente remoto
+### Sesiones de cliente remoto
 
 El objeto `Session` de las sesiones cliente remotas está disponible desde:
 
@@ -60,20 +63,47 @@ El objeto `Session` de las sesiones cliente remotas está disponible desde:
 - ORDA [funciones del modelo de datos](../ORDA/ordaClasses.md) (excepto las declaradas con la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions),
 - Los métodos base `On Server Open Connection` y `On Server Shutdown Connection` de la base de datos.
 
-Para más información sobre las sesiones usuario remoto, por favor consulte el párrafo [**Sesiones usuario cliente remoto**](../Desktop/clientServer.md#remote-user-sessions).
+For more information on remote user sessions, please refer to the [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions) paragraph.
 
-## Sesión de procedimientos almacenados
+### Sesión de procedimientos almacenados
 
 Todos los procesos de procedimientos almacenados comparten la misma sesión virtual de usuario. El objeto `Session` de los procedimientos almacenados está disponible desde:
 
 - métodos llamados con el comando [`Execute on server`](../commands-legacy/execute-on-server.md),
 - Los métodos base `On Server Startup`, `On Server Shutdown`, `On Backup Startup`, `On Backup Shutdown` y `On System event`
 
-Para obtener información sobre la sesión de usuario virtual de los procedimientos almacenados, consulte la página [4D Server y lenguaje 4D](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html).
+For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.
 
-## Sesión independiente
+### Sesión independiente
 
 El objeto `Session` está disponible desde cualquier proceso en aplicaciones independientes (monousuario) para que pueda escribir y probar su código cliente/servidor utilizando el objeto `Session` en su entorno de desarrollo 4D.
+
+For more information on standalone sessions, please refer to the [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions) paragraph.
+
+### `Session` and components
+
+When `Session` is called from the code of different [components loaded in the project](../Concepts/components.md), the command returns an object depending on the calling request and the context:
+
+- in case of a web request, `Session` always returns the session attached to the target web server of the request (and not a session of the component's web server),
+- in case of a remote request executed on the server, `Session` always returns the session attached to the remote user,
+- in case of a stored procedure session or a standalone session, `Session` always returns the single current session (the same object is used during all the work session).
+
+```mermaid
+flowchart TD
+    A[Need a session] --> B{Is it a web request?}
+    B -->|Yes| C[Use the session attached to the web server of the web request]
+    B -->|No| D{Is it a remote request?}
+    D -->|Yes| E[Use the object of the remote user session]
+    D -->|No| F[Use the unique object of the stored procedure/standalone session]
+
+    classDef decision fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef process fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef start fill:#bfb,stroke:#333,stroke-width:2px;
+
+    class B,D decision
+    class A start
+    class C,E,F process
+```
 
 ## Ejemplo
 
@@ -84,13 +114,13 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //método action_Session
+  //action_Session method
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("WebAdmin")) //llamando a la función hasPrivilege
-          WEB SEND TEXT("4DACTION --> Session is WebAdmin")
+       If(Session.hasPrivilege("CreateInvoices")) //calling the hasPrivilege function
+          WEB SEND TEXT("4DACTION --> Session is CreateInvoices")
        Else
-          WEB SEND TEXT("4DACTION --> Session is not WebAdmin")
+          WEB SEND TEXT("4DACTION --> Session is not CreateInvoices")
        End if
     Else
        WEB SEND TEXT("4DACTION --> Session is null")
@@ -100,15 +130,16 @@ IP:port/4DACTION/action_Session
 ## Ver también
 
 [Session storage](session-storage.md)  
-[Session API](../API/SessionClass.md)  
+[Session API](../API/SessionClass.md)
+[Desktop sessions](../Desktop/sessions.md)
 [Web server user sessions](../WebServer/sessions.md)  
 [*Scalable sessions for advanced web applications* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1714                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1714 |
+| Hilo seguro       | sí   |
 
 

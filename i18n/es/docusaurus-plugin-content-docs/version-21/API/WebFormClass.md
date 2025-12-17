@@ -121,9 +121,9 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| Parámetros | Tipo   |     | Descripción                              |
-| ---------- | ------ | :-: | ---------------------------------------- |
-| msg        | string |  -> | Error message to display in the web page |
+| Parámetros | Tipo   |     | Descripción                                 |
+| ---------- | ------ | :-: | ------------------------------------------- |
+| msg        | string |  -> | Mensaje de error a mostrar en la página web |
 
 <!-- END REF -->
 

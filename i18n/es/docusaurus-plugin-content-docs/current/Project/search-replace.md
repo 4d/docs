@@ -18,27 +18,27 @@ There are also functions for searching among the methods of your project in the 
 
 ## Buscar ubicación
 
-When you search the Design environment, the following elements are searched:
+Cuando se busca en el entorno Diseño, se buscan los siguientes elementos:
 
 - Names of project methods and classes
 - Contenido de todos los métodos y clases
-- Names of tables, fields and forms
+- Nombres de tablas, campos y formularios
 - Contenido de los formularios:
   - object names and titles
   - names of help tips, pictures, variables, style sheets,
   - formatting strings
   - expresiones
-- Menus (names and items) and commands associated with menu items
-- Choice lists (names and items)
-- Help tips (names and content)
-- Formats / filters (names and content)
-- Comments in the Explorer and in the code
+- Menús (nombres y elementos) y comandos asociados a los elementos de menú
+- Listas de selección (nombres y elementos)
+- Consejos de ayuda (nombres y contenido)
+- Formatos / filtros (nombres y contenido)
+- Comentarios en el Explorador y en el código
 
 ## Buscar en Diseño
 
 ### Iniciar una búsqueda
 
-Specify your search criteria in the "Find in design" window:
+Especifique sus criterios de búsqueda en la ventana "Buscar en el diseño":
 
 1. Click on the Search button (![](../assets/en/Project/search-icon.png)) in the 4D toolbar.
    OR
@@ -48,15 +48,15 @@ The "Find in design" window appears:
 
 ![](../assets/en/Project/find-in-design.png)
 
-The areas of the "Find in design" vary dynamically depending on the selections made in the menus. You can expand this window so that all options are visible:
+The areas of the "Find in design" vary dynamically depending on the selections made in the menus. Puedes expandir esta ventana para que todas las opciones sean visibles:
 
 ![](../assets/en/Project/find-in-design-expanded.png)
 
 2. Build your search using the different menus and entry areas of the dialog box and if necessary enter the character string to be searched for. Estos elementos se describen en las secciones siguientes.
 
-3. Set the [search options](#search-options) (if necessary).
+3. Define las [opciones de búsqueda](#search-options) (si es necesario).
 
-4. Click **OK** or press the **Enter** key.
+4. Haga clic en **OK** o presione la tecla **Entrada**.
    Cuando la búsqueda ha terminado, aparece la [ventana de resultados](#results-window) indicando los elementos encontrados.
 
 :::note
@@ -76,17 +76,17 @@ You specify the type of element to look for using the **Find** menu. Las siguien
 
 :::note
 
-The end result of both types of searches depends on the [search mode](#search-mode) selected.
+El resultado final de ambos tipos de búsqueda depende del [modo de búsqueda](#search-mode) seleccionado.
 
 :::
 
 - **Language expression**: Used to search for any valid 4D expression; the search is performed in the "contains" search mode. La validez es importante porque 4D debe ser capaz de evaluar una expresión para poder buscarla. For example, a search for "[clients" (invalid expression) will not return any result whereas "[clients]" is correct. This option is particularly suitable for searches for value assignments and comparisons. Por ejemplo:
-  - Search for "myvar:=" (assignment)
-  - Search for "myvar=" (comparison)
+  - Buscar "myvar:=" (asignación)
+  - Buscar "myvar=" (comparación)
 - **Language element**: Used to search for a specific language element by its name. 4D can distinguish between the following elements:
-  - **Any language element**: Any element from the list below.
+  - **Cualquier elemento del lenguaje**: todo elemento de la lista de abajo.
   - **Método proyecto o clase**: nombre de un método proyecto o clase, por ejemplo "M_Add" o "EmployeeEntity".
-  - **Form:** Form name, for example "Input". The command searches among project forms and table forms.
+  - **Form:** Form name, for example "Input". El comando busca entre formularios proyecto y formularios tabla.
   - **Field or Table**: Name of a table or field, for example "Customers".
   - **Variable**: Any variable name, such as "$myvar".
     **4D constant**: Any constant, such as "Is Picture".
@@ -100,10 +100,10 @@ The end result of both types of searches depends on the [search mode](#search-mo
 
 The search mode menu (i.e. "which", "that is" or "whose name") specifies how to search for the value that is entered. The contents of this menu vary according to the type of element to search for as selected in the **Find** dropdown list.
 
-- Search options for Text or Comment:
+- Opciones de búsqueda de Texto o Comentario:
   - **contains**: Searches all text in the Design environment for the specified string. Search results for "var" can include "myvar", "variable1" or "aVariable".
-  - **contiene la palabra completa**: busca en todo el texto del entorno Diseño la cadena como palabra entera. Search results for "var" only include exact occurrences. They will not include "myvar" but will include, for example, "var:=10" or "ID+var" because the symbols : or + are word separators.
-  - **begins with / ends with**: Searches for the string at the beginning or end of the word (text search) or at the beginning or end of the comment line (comment search). In "Text ends with" mode, searching for "var" will find "myvar".
+  - **contiene la palabra completa**: busca en todo el texto del entorno Diseño la cadena como palabra entera. Los resultados de la búsqueda de "var" sólo incluyen apariciones exactas. They will not include "myvar" but will include, for example, "var:=10" or "ID+var" because the symbols : or + are word separators.
+  - **begins with / ends with**: Searches for the string at the beginning or end of the word (text search) or at the beginning or end of the comment line (comment search). En modo "El texto termina en", si busca "var" encontrará "myvar".
 - Search options for Language element: The menu offers standard options (matches, contains, begins with, ends with). Note that you can use the search wildcard (@) with the matches option (returns all objects of the type specified).
 
 ### Search in components
@@ -120,7 +120,7 @@ Puede seleccionar como objetivo:
 
 :::note
 
-When no searchable component is found, no menu is available.
+Si no se encuentra ningún componente de búsqueda, no hay menú disponible.
 
 :::
 
@@ -136,7 +136,7 @@ Folders are defined on the Home Page of the Explorer.
 
 :::
 
-### Modification date of the parent
+### Fecha de modificación del padre
 
 This menu restricts the search with respect to the creation/modification date of its parent (for example, the method containing the string being searched for). In addition to standard date criteria (is, is before, is after, is not), this menu also contains several options to let you quickly specify a standard search period:
 
@@ -147,7 +147,7 @@ This menu restricts the search with respect to the creation/modification date of
 
 ### Opciones de búsqueda
 
-You can select options that can help speed up your searches:
+Puede seleccionar opciones que le ayuden a agilizar sus búsquedas:
 
 - **Búsqueda en formularios**: cuando se deselecciona esta opción, la búsqueda se realiza en todo el proyecto, excepto en formularios.
 - **Search in methods**: When this option is deselected, the search is done throughout the project, except in methods.
@@ -181,7 +181,7 @@ Once a search is completed, you can use the ![](../assets/en/Project/result-wind
 
 ### Options menu
 
-You can perform various actions using the options menu:
+Puede realizar varias acciones utilizando el menú opciones:
 
 ![](../assets/en/Project/result-window-menu.png)
 
@@ -190,13 +190,13 @@ You can perform various actions using the options menu:
 - [**Reemplazar en contenido**](#replace-in-contents): reemplaza una cadena de caracteres dentro del elemento o elementos seleccionados.
 - **Select >**: selects one type of item (project methods, object names, and so on) from among all the items found in the Results window. The hierarchical sub-menu also provides commands to select (All) or deselect (None) all the items at once.
 - **Contraer todo/Expandir todo**: expande o contrae todos los elementos jerárquicos de la lista de resultados.
-- **Exportar resultados**: exporta información sobre los criterios de búsqueda y los elementos que aparecen en la ventana Resultados. This text file can then be imported into a spreadsheet such as Excel, for example. For each item, the following information is exported as tab-separated values in a text file:
-  - Host project or component name
+- **Exportar resultados**: exporta información sobre los criterios de búsqueda y los elementos que aparecen en la ventana Resultados. Este archivo de texto puede importarse a una hoja de cálculo como Excel, por ejemplo. For each item, the following information is exported as tab-separated values in a text file:
+  - Proyecto anfitrión o nombre del componente
   - Type (method, Class, formObject, trigger...)
   - Path
   - Property (if accurate): provides the property of the object that matches the criteria. For example, a string could be found in a variable name (variable property) and an object name (name property) within in the same form. This field is empty when the matching element is the object itself.
   - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
-  - Line number (for code) or page number (for form objects)
+  - Número de línea (para código) o número de página (para objetos de formulario)
 
 ## Replace in content
 
@@ -221,9 +221,9 @@ Las operaciones de sustitución funcionan del siguiente modo:
 - Para cada objeto modificado, 4D comprueba si ya está cargado por otra máquina o en otra ventana. In the case of conflict, a standard dialog box appears indicating that the object is locked. You can close the object and then try again or cancel its replacement. The replacing operation will then continue with the other objects in the list.
 - If a method or form concerned by a "replace in content" operation is currently being edited by the same 4D application, it will be modified directly in the open editor (no warning appears). Forms and methods modified in this way are not saved automatically: you will need to use the **Save** or **Save All** command explicitly to validate the changes.
 - After a replacement is made in a list item, it will appear in italics. A count of replacements made in real time appears at the bottom of the window.
-- Los elementos nunca son renombrados por la función **Reemplazar en contenido**, excepto los objetos formulario. Por lo tanto, es posible que ciertos elementos de la lista no se vean afectados por la operación de reemplazo. This can occur when only the item name corresponds to the initial search criteria. In this case, the list items do not necessarily all appear in italics and the final replacement count may be less than the number of occurrences found by the initial search.
+- Los elementos nunca son renombrados por la función **Reemplazar en contenido**, excepto los objetos formulario. Por lo tanto, es posible que ciertos elementos de la lista no se vean afectados por la operación de reemplazo. Esto puede ocurrir cuando sólo el nombre del artículo corresponde a los criterios de búsqueda iniciales. In this case, the list items do not necessarily all appear in italics and the final replacement count may be less than the number of occurrences found by the initial search.
 
-## Renaming project methods and variables
+## Renombrar métodos y variables del proyecto
 
 4D provides a dedicated renaming function with distribution throughout the entire project for project methods and variables.
 
@@ -243,19 +243,19 @@ Depending on the type of object you are renaming (project method or variable), t
 - Process variable: The **Rename variable in whole database** option renames the variable in all the project code that references it. If you uncheck this option, the variable is only renamed in the current method.
 - Local variable: No distribution option for this object; the variable is only renamed in the current method or class.
 
-## Searching for unused elements
+## Búsqueda de elementos no utilizados
 
 Two specific search commands allow you to detect variables and methods that are not used in the code of your host project. You can then remove them to free up memory. These commands are found in the **Edit** menu of the Design environment.
 
 ### Find Unused Methods and Global Variables
 
-This command looks for project methods as well as "global" variables (process and interprocess variables) that are declared but not used. The search results appear in a standard [Results window](#results-window).
+This command looks for project methods as well as "global" variables (process and interprocess variables) that are declared but not used. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
 
 A project method is considered to be unused when:
 
 - it is not in the Trash,
 - it is not called anywhere in the 4D code,
-- it is not called by a menu command,
+- no es llamado por un comando de menú,
 - it is not called as a string constant in the 4D code (4D detects a method name in a string even when it is followed by parameters in parentheses).
 
 A process or interprocess variable is considered to be unused when:
@@ -264,18 +264,18 @@ A process or interprocess variable is considered to be unused when:
 - it is not used anywhere else in the 4D code,
 - no se utiliza en ningún objeto de formulario.
 
-Note that certain uses cannot be detected by the function - i.e. an element considered unused may in fact be used. This is the case in the following code:
+Note that certain uses cannot be detected by the function - i.e. an element considered unused may in fact be used. Este es el caso del siguiente código:
 
 ```4d
 var v : Text :="method"
 EXECUTE FORMULA("my"+v+String(42))
 ```
 
-This code builds a method name. The *mymethod42* project method is considered unused when in fact it is called. Therefore, it is advisable to check that the elements declared as unused are in fact unnecessary before you remove them.
+Este código construye un nombre de método. The *mymethod42* project method is considered unused when in fact it is called. Therefore, it is advisable to check that the elements declared as unused are in fact unnecessary before you remove them.
 
 ### Buscar variables locales no utilizadas
 
-This command looks for local variables that are declared but not used. The search results appear in a standard [Results window](#results-window).
+This command looks for local variables that are declared but not used. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
 
 A local variable is considered to be unused when:
 
