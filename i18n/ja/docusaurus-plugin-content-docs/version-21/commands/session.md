@@ -114,7 +114,7 @@ IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session メソッド
+  //action_Session method
  Case of
     :(Session#Null)
        If(Session.hasPrivilege("CreateInvoices")) //hasPrivilege 関数を呼び出す
