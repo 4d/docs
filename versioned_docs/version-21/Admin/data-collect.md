@@ -34,6 +34,7 @@ Some data is also collected at regular intervals.
 |cacheReadBytes|Object|Number of bytes read from cache|
 |cacheReadCount|Object|Number of reads in the cache |
 |cacheSize|Number|Cache size in bytes|
+|classUsage|Object|Number of instances of certain language classes|
 |compiled|Boolean|True if the application is compiled|
 |connectionSystems|Collection|Client OS without the build number (in parenthesis) and number of clients using it|
 |CPU|Text|Name, type, and speed of the processor|
