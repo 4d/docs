@@ -221,7 +221,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | On Scroll            | <li>[horizontalScroll](#追加プロパティ)</li><li>[verticalScroll](#追加プロパティ)</li>                                                                               |                                                                 |
 | On Unload            |                                                                                                                                    |                                                                 |
 
-#### Additional Properties {additional-properties}
+#### 追加プロパティ {additional-properties}
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 

@@ -147,27 +147,27 @@ Fluent UI レンダリングモードは、アプリケーションレベルま�
 それぞれのフォームは、 **Widget appearance** プロパティによって独自のレンダリング設定を定義することができます。 次のオプションから選択することができます:
 
 - **継承**: グローバルなアプリケーション設定を継承します(デフォルト)
-- **Classic**: uses the classic Windows style,
-- **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
+- **クラシック**: クラシック Windows スタイルを使用します
+- **Fluent UI**: Fluent UI に基づいたモダンなレンダリングを有効化します。 <br/>
   ![](../assets/en/FormObjects/fluentui-form.png)
 
-The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
+対応する[JSON フォームプロパティ](./properties_JSONref.md) は `fluentUI` で、値は未定義(つまり継承、デフォルト値)、 "true" または "false"です。
 
-### Specific behaviors
+### 特定の振る舞い
 
-When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
+Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- The new `FORM Windows theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
-- If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
-- [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
-- [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
-- The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
-- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
+- 新しい `FORM Windows theme` コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
+- [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
+- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
+- [ステッパー](../FormObjects/stepper.md) フォームオブジェクトは[ダブルクリックイベント](../Events/onDoubleClicked.md) サポートしません。
+- [サークルボタン](../FormObjects/button_overview.md#サークル) はサポートされています(macOS と同様)。
+- [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) コマンドは、システムレンダリングエンジンを使用したWeb エリアではサポートされません。
+- フォーカスの四角はピクチャーおよびテキストの[入力](../FormObjects/input_overview.md) に追加することができます。
 
-:::info Limitations
+:::info 制約
 
-This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
+この **デベロッパープレビュー** にはいくつかの制約があり、それらは[こちらのblog 記事にまとめられています](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)。
 
 :::
 

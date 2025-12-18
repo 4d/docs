@@ -240,7 +240,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | On Unload            |                                                                                                                                    |                                                                 |
 
 
-#### Additional Properties {additional-properties}
+#### 追加プロパティ {additional-properties}
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 
