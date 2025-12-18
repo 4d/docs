@@ -5,12 +5,12 @@ slug: /commands/web-send-http-redirect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | Nova URL |
-| * | Operador | &#8594;  | Se especificado = URL não for traduzido, se omitido = URL é traduzido |
+| url | Text | &#8594; | Nova URL |
+| * | Operador | &#8594; | Se especificado = URL não for traduzido, se omitido = URL é traduzido |
 
 <!-- END REF-->
 

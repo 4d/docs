@@ -5,11 +5,11 @@ slug: /commands/month-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Month of.Syntax-->**Month of** ( *laDate* ) : Integer<!-- END REF-->
+<!--REF #_command_.Month of.Syntax-->**Month of** ( *laDate* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laDate | Date | &#8594;  | Date dont vous voulez extraire le mois |
+| laDate | Date | &#8594; | Date dont vous voulez extraire le mois |
 | Résultat | Integer | &#8592; | Nombre indiquant le mois de date |
 
 <!-- END REF-->

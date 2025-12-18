@@ -5,16 +5,16 @@ slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* ; *dest* {; *width* {; *height* {; *mode* {; *depth*}}}} )<!-- END REF-->
+<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* : Picture ; *dest* : Picture {; *width* : Integer {; *height* : Integer {; *mode* : Integer {; *depth* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Picture | &#8594;  | サムネイルに変換する4Dピクチャフィールド または変数 |
+| source | Picture | &#8594; | サムネイルに変換する4Dピクチャフィールド または変数 |
 | dest | Picture | &#8592; | 結果のサムネイル |
-| width | Integer | &#8594;  | サムネイル幅 (ピクセル), デフォルト値 = 48 |
-| height | Integer | &#8594;  | サムネイル高 (ピクセル), デフォルト値 = 48 |
-| mode | Integer | &#8594;  | サムネイル作成モード デフォルト値 = Scaled to fit prop centered (6) |
-| depth | Integer | &#8594;  | 廃止。使用しないでください |
+| width | Integer | &#8594; | サムネイル幅 (ピクセル), デフォルト値 = 48 |
+| height | Integer | &#8594; | サムネイル高 (ピクセル), デフォルト値 = 48 |
+| mode | Integer | &#8594; | サムネイル作成モード デフォルト値 = Scaled to fit prop centered (6) |
+| depth | Integer | &#8594; | 廃止。使用しないでください |
 
 <!-- END REF-->
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | text | Text | &#8594;  | Text to write into the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the text |
+| Blob | Blob | &#8594;  | BLOB to receive the text |
 | textFormat | Integer | &#8594;  | Format and character set of text |
 | offset &#124; * | Variable, Operator |&#8596;  | Offset within the BLOB (expressed in bytes) or * to append the value |
 | ||| New offset after writing if not * |

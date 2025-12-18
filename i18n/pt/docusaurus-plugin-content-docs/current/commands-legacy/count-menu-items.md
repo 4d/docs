@@ -5,12 +5,12 @@ slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *processo*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* : Integer, Text {; *processo* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menu items.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| processo | Integer | &#8594;  | Número de referência do processo |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| processo | Integer | &#8594; | Número de referência do processo |
 | Resultado | Integer | &#8592; | Número de itens de menu no menu |
 
 <!-- END REF-->

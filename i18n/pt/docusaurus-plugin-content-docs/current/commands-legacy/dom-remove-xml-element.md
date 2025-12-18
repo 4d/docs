@@ -5,11 +5,11 @@ slug: /commands/dom-remove-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *refElemento* )<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *refElemento* : Text )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
+| refElemento | Text | &#8594; | Referência de elemento XML |
 
 <!-- END REF-->
 

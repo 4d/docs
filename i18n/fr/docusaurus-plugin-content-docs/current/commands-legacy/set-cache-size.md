@@ -5,12 +5,12 @@ slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *taille* {; *libereMini*} )<!-- END REF-->
+<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *taille* : Real {; *libereMini* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| taille | Real | &#8594;  | Taille du cache du la base de données en octets |
-| libereMini | Real | &#8594;  | Nombre minimum d'octets à libérer lorsque le cache est plein |
+| taille | Real | &#8594; | Taille du cache du la base de données en octets |
+| libereMini | Real | &#8594; | Nombre minimum d'octets à libérer lorsque le cache est plein |
 
 <!-- END REF-->
 

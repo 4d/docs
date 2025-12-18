@@ -5,12 +5,12 @@ slug: /commands/append-data-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *tipoDatos* ; *datos* )<!-- END REF-->
+<!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *tipoDatos* : Text ; *datos* : Blob )<!-- END REF-->
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoDatos | Text | &#8594;  | Tipo de datos (4 caracteres) |
-| datos | Blob | &#8594;  | Datos a añadir al portapapeles |
+| tipoDatos | Text | &#8594; | Tipo de datos (4 caracteres) |
+| datos | Blob | &#8594; | Datos a añadir al portapapeles |
 
 <!-- END REF-->
 

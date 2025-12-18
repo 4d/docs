@@ -5,14 +5,14 @@ slug: /commands/sql-export-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *rutaCarpeta* {; *numArchivos* {; *tamLimiteArchivos* {; *tamLimiteCampos*}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *rutaCarpeta* : Text {; *numArchivos* : Integer {; *tamLimiteArchivos* : Integer {; *tamLimiteCampos* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &#8594;  | Ruta de acceso de la carpeta de exportación o "" para mostrar una caja de diálogo de selección de carpeta |
-| numArchivos | Integer | &#8594;  | Número máximo de archivos por carpeta |
-| tamLimiteArchivos | Integer | &#8594;  | Valor límite de tamaño de los archivos de exportación (en KB) |
-| tamLimiteCampos | Integer | &#8594;  | Limite de tamaño (en bytes) debajo del cual el contenido de un campo Texto, BLOB o Imagen se integrará al archivo principal |
+| rutaCarpeta | Text | &#8594; | Ruta de acceso de la carpeta de exportación o "" para mostrar una caja de diálogo de selección de carpeta |
+| numArchivos | Integer | &#8594; | Número máximo de archivos por carpeta |
+| tamLimiteArchivos | Integer | &#8594; | Valor límite de tamaño de los archivos de exportación (en KB) |
+| tamLimiteCampos | Integer | &#8594; | Limite de tamaño (en bytes) debajo del cual el contenido de un campo Texto, BLOB o Imagen se integrará al archivo principal |
 
 <!-- END REF-->
 

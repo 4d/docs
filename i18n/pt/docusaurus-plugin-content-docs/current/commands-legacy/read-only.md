@@ -5,11 +5,11 @@ slug: /commands/read-only
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** {( aTabela | * )}<!-- END REF-->
+<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ( aTabela | * )}<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTabela &#124; * | Tabela, Operador | &#8594;  | Tabela para qual estabelecer o estado apenas leitura, ou * para todas as tabelas, ou tabela padrão, se for omitido |
+| aTabela &#124; * | Tabela, Operador | &#8594; | Tabela para qual estabelecer o estado apenas leitura, ou * para todas as tabelas, ou tabela padrão, se for omitido |
 
 <!-- END REF-->
 

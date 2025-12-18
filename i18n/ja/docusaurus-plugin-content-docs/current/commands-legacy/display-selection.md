@@ -5,15 +5,16 @@ slug: /commands/display-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable*}{; *selectMode*}{; *enterList*}{; *}{; *} )<!-- END REF-->
+<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}{; *})<br/>**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean} ; * {; *} )
+<!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | 表示するテーブル, または 省略時、デフォルトテーブル |
-| selectMode | Integer | &#8594;  | 選択モード |
-| enterList | Boolean | &#8594;  | リスト入力を許可するオプション |
-| * | Operator |  &#8594;  | 1レコードセレクションの場合にも出力フォームを使用し、 入力フォームのスクロールバーを隠す |
-| * | Operator |  &#8594;  | 入力フォームでスクロールバーを表示する (最初の*の2番目のオプションを上書きする) |
+| aTable | Table | &#8594; | 表示するテーブル, または 省略時、デフォルトテーブル |
+| selectMode | Integer | &#8594; | 選択モード |
+| enterList | Boolean | &#8594; | リスト入力を許可するオプション |
+| * | Operator | &#8594; | 1レコードセレクションの場合にも出力フォームを使用し、 入力フォームのスクロールバーを隠す |
+| * | Operator | &#8594; | 入力フォームでスクロールバーを表示する (最初の*の2番目のオプションを上書きする) |
 
 <!-- END REF-->
 

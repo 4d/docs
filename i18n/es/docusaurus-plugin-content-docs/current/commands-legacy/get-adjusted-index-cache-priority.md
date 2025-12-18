@@ -5,11 +5,11 @@ slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *campo* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *campo* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo para el cual se debe recuperar la prioridad del índice |
+| campo | Field | &#8594; | Campo para el cual se debe recuperar la prioridad del índice |
 | Resultado | Integer | &#8592; | Valor de la prioridad actual para los índices |
 
 <!-- END REF-->

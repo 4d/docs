@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new-subsection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New subsection.Syntax-->**WP New subsection** ( *wpSeção* ; *subSeçãoTipo* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP New subsection.Syntax-->**WP New subsection** ( *wpSeção* : Object ; *subSeçãoTipo* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP New subsection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

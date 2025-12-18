@@ -5,7 +5,7 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *document* ; *locked* ; *invisible* ; created on ; created at ; modified on ; modified at )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; created on ; created at ; modified on ; modified at )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

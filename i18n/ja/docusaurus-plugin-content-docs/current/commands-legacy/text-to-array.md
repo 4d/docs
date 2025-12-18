@@ -5,17 +5,17 @@ slug: /commands/text-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* ; *arrText* ; *width* ; *fontName* ; *fontSize* {; *fontStyle* {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* : Text ; *arrText* : Text array ; *width* : Integer ; *fontName* : Text ; *fontSize* : Integer {; *fontStyle* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| varText | Text | &#8594;  | 分割する元のテキスト |
+| varText | Text | &#8594; | 分割する元のテキスト |
 | arrText | Text array | &#8592; | 単語または行に分割されたテキストを受け取る配列 |
-| width | Integer | &#8594;  | 文字列の最大幅 (ピクセル) |
-| fontName | Text | &#8594;  | フォント名 |
-| fontSize | Integer | &#8594;  | フォントサイズ |
-| fontStyle | Integer | &#8594;  | フォントスタイル |
-| * | 演算子 | &#8594;  | 指定時、テキストをマルチスタイルとして解釈する |
+| width | Integer | &#8594; | 文字列の最大幅 (ピクセル) |
+| fontName | Text | &#8594; | フォント名 |
+| fontSize | Integer | &#8594; | フォントサイズ |
+| fontStyle | Integer | &#8594; | フォントスタイル |
+| * | 演算子 | &#8594; | 指定時、テキストをマルチスタイルとして解釈する |
 
 <!-- END REF-->
 

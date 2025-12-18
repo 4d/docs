@@ -5,13 +5,13 @@ slug: /commands/object-get-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET MAXIMUM VALUE.Syntax-->**OBJECT GET MAXIMUM VALUE** ( {* ;} *objet* ; *valeurMaxi* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET MAXIMUM VALUE.Syntax-->**OBJECT GET MAXIMUM VALUE** ( * ; *objet* : Text ; *valeurMaxi* : Date, Time, Real )<br/>**OBJECT GET MAXIMUM VALUE** ( *objet* : Field, Variable ; *valeurMaxi* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT GET MAXIMUM VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| valeurMaxi | Date, Time, Number | &#8592; | Valeur maximale actuelle de l’objet |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| valeurMaxi | Date, Time, Real | &#8592; | Valeur maximale actuelle de l’objet |
 
 <!-- END REF-->
 

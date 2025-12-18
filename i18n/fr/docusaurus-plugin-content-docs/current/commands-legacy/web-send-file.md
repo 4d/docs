@@ -5,11 +5,11 @@ slug: /commands/web-send-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *fichierWeb* )<!-- END REF-->
+<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *fichierWeb* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fichierWeb | Text | &#8594;  | Chemin d'accès au fichier Web à envoyer |
+| fichierWeb | Text | &#8594; | Chemin d'accès au fichier Web à envoyer |
 
 <!-- END REF-->
 

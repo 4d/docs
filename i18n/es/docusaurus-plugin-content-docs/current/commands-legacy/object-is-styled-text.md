@@ -5,12 +5,12 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
 | Resultado | Boolean | &#8592; | True si el objeto es un texto multi estilo, False en caso contrario |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*aTable* ;} *formName* ; *width* ; *height* {; *numPages* {; *fixedWidth* {; *fixedHeight* {; *title*}}}} )<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*aTable* : Table ;} *formName* : Text ; *width* : Integer ; *height* : Integer {; *numPages* : Integer {; *fixedWidth* : Boolean {; *fixedHeight* : Boolean {; *title* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | フォームが属するテーブル、省略時はデフォルトテーブル |
-| formName | Text | &#8594;  | フォーム名 |
+| aTable | Table | &#8594; | フォームが属するテーブル、省略時はデフォルトテーブル |
+| formName | Text | &#8594; | フォーム名 |
 | width | Integer | &#8592; | フォームの幅 (ピクセル) |
 | height | Integer | &#8592; | フォームの高さ (ピクセル) |
 | numPages | Integer | &#8592; | フォームのページ数 |

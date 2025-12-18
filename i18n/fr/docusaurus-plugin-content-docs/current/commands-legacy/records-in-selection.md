@@ -5,11 +5,11 @@ slug: /commands/records-in-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in selection.Syntax-->**Records in selection** {( *laTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Records in selection.Syntax-->**Records in selection** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in selection.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dont vous souhaitez connaître le nombre d'enregistrements de la sélection courante ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table dont vous souhaitez connaître le nombre d'enregistrements de la sélection courante ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &#8592; | Nombre d'enregistrements dans la sélection courante de table |
 
 <!-- END REF-->

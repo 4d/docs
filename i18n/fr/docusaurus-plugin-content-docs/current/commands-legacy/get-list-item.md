@@ -5,13 +5,13 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *liste* ; positionElém ; *réfElément* ; *libelléElément* {; sous_Liste ; *déployée*} )<br/>**GET LIST ITEM** ( {* ;} *liste* ; * ; *réfElément* ; *libelléElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *liste* : Integer, Text ; positionElém ; *réfElément* : Integer ; *libelléElément* : Text {; sous_Liste ; *déployée* : Boolean} )<br/>**GET LIST ITEM** ( {* ;} *liste* : Integer, Text ; * ; *réfElément* : Integer ; *libelléElément* : Text {; sous_Liste ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| positionElém &#124; * | Opérateur, Entier long | &#8594;  | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
+| * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| positionElém &#124; * | Opérateur, Entier long | &#8594; | Position de l'élément dans la ou les liste(s) déployée(s)/contractée(s) ou * pour l‘élément courant de la liste |
 | réfElément | Integer | &#8592; | Numéro de référence de l'élément |
 | libelléElément | Text | &#8592; | Libellé de l'élément |
 | sous_Liste | Integer | &#8592; | Numéro de référence de sous-liste (s'il y en a) |

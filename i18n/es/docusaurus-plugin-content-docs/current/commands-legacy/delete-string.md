@@ -5,13 +5,13 @@ slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *fuente* ; *posicion* ; *numCaracteres* ) : Text<!-- END REF-->
+<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *fuente* : Text ; *posicion* : Integer ; *numCaracteres* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Text | &#8594;  | Cadena de la cual borrar caracteres |
-| posicion | Integer | &#8594;  | Primer caracter a borrar |
-| numCaracteres | Integer | &#8594;  | Número de caracteres a borrar |
+| fuente | Text | &#8594; | Cadena de la cual borrar caracteres |
+| posicion | Integer | &#8594; | Primer caracter a borrar |
+| numCaracteres | Integer | &#8594; | Número de caracteres a borrar |
 | Resultado | Text | &#8592; | Cadena resultante |
 
 <!-- END REF-->

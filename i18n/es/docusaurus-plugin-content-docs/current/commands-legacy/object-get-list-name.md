@@ -5,13 +5,13 @@ slug: /commands/object-get-list-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *objeto* {; *tipoLista*} ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( * ; *objeto* : Text {; *tipoLista* : Integer} ) : Text<br/>**OBJECT Get list name** ( *objeto* : Field, Variable {; *tipoLista* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| tipoLista | Integer | &#8594;  | Tipo de lista: lista de selección, lista de obligatorios o lista de excluidos |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| tipoLista | Integer | &#8594; | Tipo de lista: lista de selección, lista de obligatorios o lista de excluidos |
 | Resultado | Text | &#8592; | Nombre de la lista (definida en modo Diseño) |
 
 <!-- END REF-->

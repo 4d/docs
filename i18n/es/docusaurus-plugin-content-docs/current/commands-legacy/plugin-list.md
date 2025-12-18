@@ -5,7 +5,7 @@ slug: /commands/plugin-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *arrayNumeros* ; *arrayNoms* )<!-- END REF-->
+<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *arrayNumeros* : Integer array ; *arrayNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.PLUGIN LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

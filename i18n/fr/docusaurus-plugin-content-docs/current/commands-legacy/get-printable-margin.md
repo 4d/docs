@@ -5,7 +5,7 @@ slug: /commands/get-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *gauche* ; *haut* ; *droite* ; *bas* )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE MARGIN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

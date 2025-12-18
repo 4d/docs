@@ -5,14 +5,14 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* )<br/>**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *value* )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : 倍長整数, 文字 )<br/>**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *value* : 倍長整数, 文字 )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNum | Integer | &#8594;  | カラム番号 |
-| breakNum | Integer | &#8594;  | ブレーク番号 |
-| operator &#124; value | 倍長整数, 文字 | &#8594;  | セルの演算子の値またはセルの内容 |
+| area | Integer | &#8594; | エリア参照 |
+| colNum | Integer | &#8594; | カラム番号 |
+| breakNum | Integer | &#8594; | ブレーク番号 |
+| operator &#124; value | 倍長整数, 文字 | &#8594; | セルの演算子の値またはセルの内容 |
 
 <!-- END REF-->
 

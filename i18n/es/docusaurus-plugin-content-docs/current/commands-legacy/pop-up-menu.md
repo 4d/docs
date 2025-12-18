@@ -5,14 +5,14 @@ slug: /commands/pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contenido* {; *porDefecto* {; *CoordX* ; *CoordY*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contenido* : Text {; *porDefecto* : Integer {; *CoordX* : Integer ; *CoordY* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Pop up menu.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| contenido | Text | &#8594;  | Definición del texto del menú |
-| porDefecto | Integer | &#8594;  | Número del elemento seleccionado por defecto |
-| CoordX | Integer | &#8594;  | Coordenada X de la esquina superior izquierda |
-| CoordY | Integer | &#8594;  | Coordenada Y de la esquina superior izquierda |
+| contenido | Text | &#8594; | Definición del texto del menú |
+| porDefecto | Integer | &#8594; | Número del elemento seleccionado por defecto |
+| CoordX | Integer | &#8594; | Coordenada X de la esquina superior izquierda |
+| CoordY | Integer | &#8594; | Coordenada Y de la esquina superior izquierda |
 | Resultado | Integer | &#8592; | Número de elemento de menú seleccionado |
 
 <!-- END REF-->

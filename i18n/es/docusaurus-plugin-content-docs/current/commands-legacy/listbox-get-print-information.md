@@ -5,13 +5,13 @@ slug: /commands/listbox-get-print-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( {* ;} *objeto* ; *selector* ; *info* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *objeto* : Text ; *selector* : Integer ; *info* : Integer )<br/>**LISTBOX GET PRINT INFORMATION** ( *objeto* : Field, Variable ; *selector* : Integer ; *info* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| selector | Integer | &#8594;  | Información a obtener |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| selector | Integer | &#8594; | Información a obtener |
 | info | Integer | &#8592; | Valor actual |
 
 <!-- END REF-->

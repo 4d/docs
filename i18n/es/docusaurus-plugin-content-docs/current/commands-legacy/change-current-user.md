@@ -5,12 +5,12 @@ slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** {( *usuario* ; *contraseña* )}<!-- END REF-->
+<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ( *usuario* : Text, Integer ; *contraseña* : Text )}<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| usuario | Text, Integer | &#8594;  | Nombre o número de referencia único |
-| contraseña | Text | &#8594;  | Contraseña (no encriptada) |
+| usuario | Text, Integer | &#8594; | Nombre o número de referencia único |
+| contraseña | Text | &#8594; | Contraseña (no encriptada) |
 
 <!-- END REF-->
 

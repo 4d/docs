@@ -5,11 +5,11 @@ slug: /commands/trigger-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *triggerLevel* ; *dbEvent* ; *tableNum* ; *recordNum* )<!-- END REF-->
+<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *triggerLevel* : Integer ; *dbEvent* : Integer ; *tableNum* : Integer ; *recordNum* : Integer )<!-- END REF-->
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| triggerLevel | Integer | &#8594;  | トリガ実行サイクルレベル |
+| triggerLevel | Integer | &#8594; | トリガ実行サイクルレベル |
 | dbEvent | Integer | &#8592; | データベースイベント |
 | tableNum | Integer | &#8592; | 影響を受けるテーブル番号 |
 | recordNum | Integer | &#8592; | 影響を受けるレコード番号 |

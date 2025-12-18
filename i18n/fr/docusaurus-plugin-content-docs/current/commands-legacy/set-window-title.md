@@ -5,12 +5,12 @@ slug: /commands/set-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *titre* {; *fenêtre*} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *titre* : Text {; *fenêtre* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| titre | Text | &#8594;  | Titre de la fenêtre |
-| fenêtre | Integer | &#8594;  | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
+| titre | Text | &#8594; | Titre de la fenêtre |
+| fenêtre | Integer | &#8594; | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
 
 <!-- END REF-->
 

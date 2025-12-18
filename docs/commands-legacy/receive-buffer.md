@@ -5,7 +5,7 @@ slug: /commands/receive-buffer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *receiveVar* )<!-- END REF-->
+<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *receiveVar* : Text )<!-- END REF-->
 <!--REF #_command_.RECEIVE BUFFER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

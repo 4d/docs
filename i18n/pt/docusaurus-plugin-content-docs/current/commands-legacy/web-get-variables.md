@@ -5,7 +5,7 @@ slug: /commands/web-get-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nomeArray* ; *valorArray* )<!-- END REF-->
+<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nomeArray* : Text array ; *valorArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

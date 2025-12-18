@@ -5,13 +5,13 @@ slug: /commands/method-set-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *ruta* ; *comentarios* {; *Operador*} )<!-- END REF-->
+<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *ruta* : Text, Text array ; *comentarios* : Text, Text array {; *Operador*} )<!-- END REF-->
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &#8594;  | Texto o array texto que contiene una o varias rutas de métodos |
-| comentarios | Text, Text array | &#8594;  | Comentarios de los métodos designados |
-| * | * | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text, Text array | &#8594; | Texto o array texto que contiene una o varias rutas de métodos |
+| comentarios | Text, Text array | &#8594; | Comentarios de los métodos designados |
+| * | * | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

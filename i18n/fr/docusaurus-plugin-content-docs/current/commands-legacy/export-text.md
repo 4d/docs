@@ -5,12 +5,12 @@ slug: /commands/export-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
+<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*laTable* : Table ;} *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table depuis laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
-| nomFichier | Text | &#8594;  | Document texte à exporter |
+| laTable | Table | &#8594; | Table depuis laquelle effectuer l'export ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &#8594; | Document texte à exporter |
 
 <!-- END REF-->
 

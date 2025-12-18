@@ -5,11 +5,11 @@ slug: /commands/list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *liste* ; *tableau* {; *réfEléments*} )<!-- END REF-->
+<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *liste* : Text, Integer ; *tableau* : Array {; *réfEléments* : Array} )<!-- END REF-->
 <!--REF #_command_.LIST TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Text, Integer | &#8594;  | Nom ou référence de la liste de laquelle copier les éléments du premier niveau |
+| liste | Text, Integer | &#8594; | Nom ou référence de la liste de laquelle copier les éléments du premier niveau |
 | tableau | Array | &#8592; | Tableau dans lequel copier les éléments de la liste |
 | réfEléments | Array | &#8592; | Numéros de référence des éléments de la liste |
 

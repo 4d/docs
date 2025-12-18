@@ -5,11 +5,11 @@ slug: /commands/get-system-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* : Integer ; *valeur* : Text )<!-- END REF-->
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| format | Integer | &#8594;  | Formatage système à lire |
+| format | Integer | &#8594; | Formatage système à lire |
 | valeur | Text | &#8592; | Valeur de formatage définie dans le système |
 
 <!-- END REF-->

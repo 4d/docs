@@ -5,12 +5,12 @@ slug: /commands/get-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*aTable* ;} *selector* {; *stringValue*} ) : Real<!-- END REF-->
+<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*aTable* : Table ;} *selector* : Integer {; *stringValue* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | パラメタを取得するテーブル、または 引数が省略された場合デフォルトテーブル |
-| selector | Integer | &#8594;  | データベースパラメタコード |
+| aTable | Table | &#8594; | パラメタを取得するテーブル、または 引数が省略された場合デフォルトテーブル |
+| selector | Integer | &#8594; | データベースパラメタコード |
 | stringValue | Text | &#8592; | パラメタの文字列値 |
 | 戻り値 | Real | &#8592; | パラメタの現在の値 |
 

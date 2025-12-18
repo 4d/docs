@@ -5,14 +5,14 @@ slug: /commands/post-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *ratonX* ; *ratonY* {; *proceso*} {; *} )<!-- END REF-->
+<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *ratonX* : Integer ; *ratonY* : Integer {; *proceso* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ratonX | Integer | &#8594;  | Coordenada horizontal |
-| ratonY | Integer | &#8594;  | Coordenada vertical |
-| proceso | Integer | &#8594;  | Número de referencia del proceso de destino o fila de atención de eventos de la aplicación, si se omite o si se pasa 0 |
-| * | Operator |  &#8594;  | Si se especifica, utilizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
+| ratonX | Integer | &#8594; | Coordenada horizontal |
+| ratonY | Integer | &#8594; | Coordenada vertical |
+| proceso | Integer | &#8594; | Número de referencia del proceso de destino o fila de atención de eventos de la aplicación, si se omite o si se pasa 0 |
+| * | Operator | &#8594; | Si se especifica, utilizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/max
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Max.Syntax-->**Max** ( *series* {; *rutaAtributo*} ) : any<!-- END REF-->
+<!--REF #_command_.Max.Syntax-->**Max** ( *series* : Field, Array {; *rutaAtributo* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Datos para los cuales se devuelve el valor  máximo |
-| rutaAtributo | Text | &#8594;  | Ruta de atributo para el cual calcular el valor máximo |
-| Resultado | Date, Number | &#8592; | Máximo valor en series |
+| series | Field, Array | &#8594; | Datos para los cuales se devuelve el valor  máximo |
+| rutaAtributo | Text | &#8594; | Ruta de atributo para el cual calcular el valor máximo |
+| Resultado | Date, Real | &#8592; | Máximo valor en series |
 
 <!-- END REF-->
 

@@ -531,7 +531,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 <!-- REF #collection.countValues().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|value|Text, Number, Boolean, Date, Object, Collection|->|Value to count|
+|value|any|->|Value to count|
 |propertyPath|Text|->|Object property path to be used for calculation|
 |Result|Real|<-|Number of occurrences of the value	|
 <!-- END REF -->
@@ -922,10 +922,10 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 <!-- REF #collection.fill().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|value|number, Text, Collection, Object, Date, Boolean|->|Filling value|
+|value|any|->|Filling value|
 |startFrom|Integer|->|Start index (included)|
 |end|Integer|->|End index (not included)|
-|Result|collection|<-|Original collection with filled values|
+|Result|Collection|<-|Original collection with filled values|
 <!-- END REF -->
 
 
@@ -1438,7 +1438,7 @@ $c2:=$c.flatMap($f; $c.sum())
 <!-- REF #collection.includes().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|toSearch|expression|->|Expression to search in the collection|
+|toSearch| Expression |->|Expression to search in the collection|
 |startFrom|Integer|->|Index to start the search at|
 |Result|Boolean |<-|True if *toSearch* is found in the collection|
 <!-- END REF -->
@@ -1508,7 +1508,7 @@ Optionally, you can pass the index of collection from which to start the search 
 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|toSearch|expression|->|Expression to search in the collection|
+|toSearch| Expression |->|Expression to search in the collection|
 |startFrom|Integer|->|Index to start the search at|
 |Result|Integer |<-|Index of the first occurrence of toSearch in the collection, -1 if not found|
 <!-- END REF -->
@@ -1780,7 +1780,7 @@ $last:=$emptyCol.last() // returns Undefined
 <!-- REF #collection.lastIndexOf().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|toSearch|expression|->|The element that is to be searched for within the collection|
+|toSearch| Expression |->|The element that is to be searched for within the collection|
 |startFrom|Integer|->|Index to start the search at|
 |Result|Integer |<-|Index of last occurrence of toSearch in the collection, -1 if not found|
 <!-- END REF -->
@@ -1947,7 +1947,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for evaluation|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|Maximum value in the collection|
+|Result|any |<-|Maximum value in the collection|
 <!-- END REF -->
 
 
@@ -2001,7 +2001,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for evaluation|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|Minimum value in the collection|
+|Result|any |<-|Minimum value in the collection|
 <!-- END REF -->
 
 
@@ -2882,9 +2882,9 @@ More examples of queries can be found in the `dataClass.query()` page. Note howe
 |---------|--- |:---:|------|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
-|param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|initValue |any|->|Value to use as the first argument to the first call of *formula* or *methodName*|
+|param | Expression |->|Parameter(s) to pass|
+|Result|any |<-|Result of the accumulator value|
 <!-- END REF -->
 
 
@@ -2975,9 +2975,9 @@ With the following ***Flatten*** method:
 |---------|--- |:---:|------|
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
-|initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
-|param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
+|initValue |any|->|Value to use as the first argument to the first call of *formula* or *methodName*|
+|param | Expression |->|Parameter(s) to pass|
+|Result|any |<-|Result of the accumulator value|
 <!-- END REF -->
 
 
@@ -3134,7 +3134,7 @@ If you try to remove an element from an empty collection, the method does nothin
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |size |Integer|->|New size of the collection|
-|defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Default value to fill new elements|
+|defaultValue |any|->|Default value to fill new elements|
 |Result|Collection|<-|Resized original collection|
 <!-- END REF -->
 
@@ -3588,7 +3588,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- REF #collection.unshift().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|value |Text, Number, Object, Collection, Date |->|Value(s) to insert at the beginning of the collection|
+|value |any |->|Value(s) to insert at the beginning of the collection|
 |Result|Collection|<-|Collection containing added element(s)
 |
 <!-- END REF -->

@@ -5,13 +5,13 @@ slug: /commands/object-set-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( {* ;} *object* ; *visible* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( * ; *object* : Text ; *visible* : Boolean )<br/>**OBJECT SET VISIBLE** ( *object* : Field, Variable ; *visible* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VISIBLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| visible | Boolean | &#8594;  | True: 表示, False: 非表示 |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| visible | Boolean | &#8594; | True: 表示, False: 非表示 |
 
 <!-- END REF-->
 

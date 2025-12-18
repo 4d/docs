@@ -5,14 +5,14 @@ slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *object* ; *column* ; *row* ; *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *object* : Text ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *object* : Field, Variable ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| column | Integer | &#8594;  | カラム番号 |
-| row | Integer | &#8594;  | 行番号 |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| column | Integer | &#8594; | カラム番号 |
+| row | Integer | &#8594; | 行番号 |
 | left | Integer | &#8592; | オブジェクトの左座標 |
 | top | Integer | &#8592; | オブジェクトの上の座標 |
 | right | Integer | &#8592; | オブジェクトの右座標 |

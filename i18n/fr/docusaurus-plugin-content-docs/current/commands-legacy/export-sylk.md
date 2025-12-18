@@ -5,12 +5,12 @@ slug: /commands/export-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
+<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*laTable* : Table ;} *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT SYLK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle effectuer l'export ou Table par défaut si ce paramètres est omis |
-| nomFichier | Text | &#8594;  | Document SYLK à exporter |
+| laTable | Table | &#8594; | Table de laquelle effectuer l'export ou Table par défaut si ce paramètres est omis |
+| nomFichier | Text | &#8594; | Document SYLK à exporter |
 
 <!-- END REF-->
 

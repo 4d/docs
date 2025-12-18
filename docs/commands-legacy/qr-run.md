@@ -5,7 +5,7 @@ slug: /commands/qr-run
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* )<!-- END REF-->
+<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

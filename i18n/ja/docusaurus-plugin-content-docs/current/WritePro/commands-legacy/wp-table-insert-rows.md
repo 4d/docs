@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( targetObj | {*tableRef* ; *rowNumber*} {; *numRows*} )  -> 戻り値<!-- END REF-->
+<!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( targetObj | {*tableRef* : Object ; *rowNumber* : Integer} {; *numRows* : Integer} )  -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table insert rows.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

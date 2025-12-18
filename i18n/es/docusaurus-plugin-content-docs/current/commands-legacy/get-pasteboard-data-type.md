@@ -5,7 +5,7 @@ slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *firmas4D* ; *tiposNativos* {; *nombresFormatos*} )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *firmas4D* : Text array ; *tiposNativos* : Text array {; *nombresFormatos* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

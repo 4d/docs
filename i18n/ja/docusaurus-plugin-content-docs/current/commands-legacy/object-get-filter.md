@@ -5,12 +5,12 @@ slug: /commands/object-get-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *object* : Text ) : Text<br/>**OBJECT Get filter** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get filter.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | フィルター名 |
 
 <!-- END REF-->

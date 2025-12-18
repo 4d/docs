@@ -5,13 +5,13 @@ slug: /commands/get-4d-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *pasta* {; *options*} {; *})} : Text<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ( *pasta* : Integer {; *options* : Object} {; *}) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pasta | Integer | &#8594;  | Tipo de pasta (se omitido = pasta 4D ativa) |
-| options | Object | &#8594;  | 4D Client database folder path configuration |
-| * | Operador | &#8594;  | Retorna a pasta do banco local |
+| pasta | Integer | &#8594; | Tipo de pasta (se omitido = pasta 4D ativa) |
+| options | Object | &#8594; | 4D Client database folder path configuration |
+| * | Operador | &#8594; | Retorna a pasta do banco local |
 | Resultado | Text | &#8592; | Endereço para a pasta 4D |
 
 <!-- END REF-->

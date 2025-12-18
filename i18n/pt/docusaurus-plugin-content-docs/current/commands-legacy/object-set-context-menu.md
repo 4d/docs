@@ -5,13 +5,13 @@ slug: /commands/object-set-context-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET CONTEXT MENU.Syntax-->**OBJECT SET CONTEXT MENU** ( {* ;} *objeto* ; *menuContext* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET CONTEXT MENU.Syntax-->**OBJECT SET CONTEXT MENU** ( * ; *objeto* : Text ; *menuContext* : Boolean )<br/>**OBJECT SET CONTEXT MENU** ( *objeto* : Field, Variable ; *menuContext* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CONTEXT MENU.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou<br/>Campo ou variável (se omitido *) |
-| menuContext | Boolean | &#8594;  | True = ativar o menu contextual, False = desativar o menu contextual |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou<br/>Campo ou variável (se omitido *) |
+| menuContext | Boolean | &#8594; | True = ativar o menu contextual, False = desativar o menu contextual |
 
 <!-- END REF-->
 

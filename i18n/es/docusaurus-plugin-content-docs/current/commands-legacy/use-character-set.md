@@ -5,12 +5,12 @@ slug: /commands/use-character-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *mapa* {; *mapaImpExp*} )<!-- END REF-->
+<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *mapa* : Text, Operator {; *mapaImpExp* : Integer} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mapa | Text, * | &#8594;  | Nombre del conjunto de caracteres a a utilizar (Modo Unicode) o nombre del documento del mapa ASCII a utilizar (Modo ASCII) o * para restaurar el mapa ASCII/conjunto de caracteres por defecto |
-| mapaImpExp | Integer | &#8594;  | 0 = Mapa de exportación 1 = Mapa de importación Si se omite, mapa de exportación |
+| mapa | Text, Operator | &#8594; | Nombre del conjunto de caracteres a a utilizar (Modo Unicode) o nombre del documento del mapa ASCII a utilizar (Modo ASCII) o * para restaurar el mapa ASCII/conjunto de caracteres por defecto |
+| mapaImpExp | Integer | &#8594; | 0 = Mapa de exportación 1 = Mapa de importación Si se omite, mapa de exportación |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* ; *dest* {; *width* {; *height* {; *mode* {; *depth*}}}} )<!-- END REF-->
+<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* : Picture ; *dest* : Picture {; *width* : Integer {; *height* : Integer {; *mode* : Integer {; *depth* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

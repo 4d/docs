@@ -5,7 +5,7 @@ slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ( *window* : Integer )}<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

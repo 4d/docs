@@ -5,12 +5,12 @@ slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *tabela* ; *formula* )<!-- END REF-->
+<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *tabela* : Table ; *formula* : Expression )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual vai aplicar a fórmula ou Tabela por padrão, se omitida |
-| formula | Expression | &#8594;  | Uma linha de código ou um método |
+| tabela | Table | &#8594; | Tabela na qual vai aplicar a fórmula ou Tabela por padrão, se omitida |
+| formula | Expression | &#8594; | Uma linha de código ou um método |
 
 <!-- END REF-->
 

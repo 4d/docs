@@ -5,17 +5,17 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *type* : Integer {; *title* : Text {; *controlMenuBox* : Text}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| left | Integer | &#8594;  | ウィンドウ内容領域のグローバル左座標 |
-| top | Integer | &#8594;  | ウィンドウ内容領域のグローバル上座標 |
-| right | Integer | &#8594;  | ウィンドウ内容領域のグローバル右座標, または-1でフォームのデフォルトサイズを使用 |
-| bottom | Integer | &#8594;  | ウィンドウ内容領域のグローバル下座標, または-1でフォームのデフォルトサイズを使用 |
-| type | Integer | &#8594;  | ウィンドウタイプ |
-| title | Text | &#8594;  | ウィンドウのタイトル または "" でデフォルトのフォームタイトルを使用 |
-| controlMenuBox | Text | &#8594;  | コントロールメニューボックスがダブルクリック またはクローズボックスがクリックされたときに 呼び出すメソッド |
+| left | Integer | &#8594; | ウィンドウ内容領域のグローバル左座標 |
+| top | Integer | &#8594; | ウィンドウ内容領域のグローバル上座標 |
+| right | Integer | &#8594; | ウィンドウ内容領域のグローバル右座標, または-1でフォームのデフォルトサイズを使用 |
+| bottom | Integer | &#8594; | ウィンドウ内容領域のグローバル下座標, または-1でフォームのデフォルトサイズを使用 |
+| type | Integer | &#8594; | ウィンドウタイプ |
+| title | Text | &#8594; | ウィンドウのタイトル または "" でデフォルトのフォームタイトルを使用 |
+| controlMenuBox | Text | &#8594; | コントロールメニューボックスがダブルクリック またはクローズボックスがクリックされたときに 呼び出すメソッド |
 | 戻り値 | Integer | &#8592; | ウィンドウ参照番号 |
 
 <!-- END REF-->

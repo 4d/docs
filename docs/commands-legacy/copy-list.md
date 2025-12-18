@@ -5,7 +5,7 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* ) : Integer<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

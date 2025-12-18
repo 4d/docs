@@ -5,12 +5,12 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *objeto* : Text ) : Text<br/>**WA Get page title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | Resultado | Text | &#8592; | Título da página atual |
 
 <!-- END REF-->

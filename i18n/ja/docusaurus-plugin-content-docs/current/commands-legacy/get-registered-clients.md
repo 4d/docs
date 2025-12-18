@@ -5,7 +5,7 @@ slug: /commands/get-registered-clients
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* ; *methods* )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* : Text array ; *methods* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

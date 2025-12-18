@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | &#8592; | Unique ID number of added group (if any) |
 | name | Text | &#8594;  | New group name |
 | owner | Integer | &#8594;  | User ID number of new group owner (Binary databases only) |
-| members | Array integer | &#8594;  | New group members |
+| members | Integer array | &#8594;  | New group members |
 | Function result | Integer | &#8592; | Unique ID number of new group |
 
 <!-- END REF-->

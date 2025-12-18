@@ -5,13 +5,13 @@ slug: /commands/listbox-set-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( {* ;} *objet* ; *calcul* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( * ; *objet* : Text ; *calcul* : Integer )<br/>**LISTBOX SET FOOTER CALCULATION** ( *objet* : Field, Variable ; *calcul* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| calcul | Integer | &#8594;  | Calcul pour la zone de pied |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| calcul | Integer | &#8594; | Calcul pour la zone de pied |
 
 <!-- END REF-->
 

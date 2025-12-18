@@ -5,11 +5,11 @@ slug: /commands/last-query-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *formatDesc* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *formatDesc* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| formatDesc | Integer | &#8594;  | Formato de descripción (Texto o XML) |
+| formatDesc | Integer | &#8594; | Formato de descripción (Texto o XML) |
 | Resultado | Text | &#8592; | Descripción de la ruta de la última búsqueda ejecutada |
 
 <!-- END REF-->

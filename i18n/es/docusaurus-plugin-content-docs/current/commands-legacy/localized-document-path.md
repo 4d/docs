@@ -5,11 +5,11 @@ slug: /commands/localized-document-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rutaRelativa* ) : Text<!-- END REF-->
+<!--REF #_command_.Localized document path.Syntax-->**Localized document path** ( *rutaRelativa* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized document path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaRelativa | Text | &#8594;  | Ruta de acceso relativa del documento del cual obtener la versión localizada |
+| rutaRelativa | Text | &#8594; | Ruta de acceso relativa del documento del cual obtener la versión localizada |
 | Resultado | Text | &#8592; | Ruta de acceso absoluta del documento localizado |
 
 <!-- END REF-->

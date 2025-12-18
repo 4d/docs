@@ -5,14 +5,14 @@ slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* ; *mouseY* ; *botaoMouse* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* : Real ; *mouseY* : Real ; *botaoMouse* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.MOUSE POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | mouseX | Real | &#8592; | Coordenadas horizontais do mouse |
 | mouseY | Real | &#8592; | Coordenadas verticais do mouse |
 | botaoMouse | Integer | &#8592; | Estado do botão do mouse: 0=botão sem pressionar; 1=botão pressionado; 2= botão direito pressionado; 3=dois botões pressionados |
-| * | Operador | &#8594;  | Se especificado, sistema global de coordenadas é usado, se omitido, sistema de coordenadas locais é usado |
+| * | Operador | &#8594; | Se especificado, sistema global de coordenadas é usado, se omitido, sistema de coordenadas locais é usado |
 
 <!-- END REF-->
 

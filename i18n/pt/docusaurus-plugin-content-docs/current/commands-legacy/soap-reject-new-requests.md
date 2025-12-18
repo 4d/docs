@@ -5,11 +5,11 @@ slug: /commands/soap-reject-new-requests
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *rejeitarEstado* )<!-- END REF-->
+<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *rejeitarEstado* : Boolean )<!-- END REF-->
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rejeitarEstado | Boolean | &#8594;  | True se novas petições forem rejeitadas, senão false |
+| rejeitarEstado | Boolean | &#8594; | True se novas petições forem rejeitadas, senão false |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *leChamp* ) : Text<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *leChamp* : Text, Blob, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Text, Blob, Picture | &#8594;  | Champ dont vous souhaitez obtenir le lieu de stockage |
+| leChamp | Text, Blob, Picture | &#8594; | Champ dont vous souhaitez obtenir le lieu de stockage |
 | Résultat | Text | &#8592; | Chemin d’accès complet du fichier de stockage externe |
 
 <!-- END REF-->

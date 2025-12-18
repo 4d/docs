@@ -5,11 +5,11 @@ slug: /commands/open-color-picker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *textOrBackground* )}<!-- END REF-->
+<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** ( *textOrBackground* : Integer )}<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| textOrBackground | Integer | &#8594;  | 0 ou se omite = cor do texto, 1 = cor do fundo do texto |
+| textOrBackground | Integer | &#8594; | 0 ou se omite = cor do texto, 1 = cor do fundo do texto |
 
 <!-- END REF-->
 

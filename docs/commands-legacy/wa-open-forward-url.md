@@ -5,7 +5,7 @@ slug: /commands/wa-open-forward-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.WA OPEN FORWARD URL.Syntax-->**WA OPEN FORWARD URL** ( * ; *object* : Text )<br/>**WA OPEN FORWARD URL** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA OPEN FORWARD URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

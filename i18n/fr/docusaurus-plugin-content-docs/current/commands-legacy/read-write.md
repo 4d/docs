@@ -5,11 +5,11 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** {( laTable )}<br/>**READ WRITE** {( * )}<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ( laTable )}<br/>**READ WRITE** ( * )}<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable &#124; * | Table, Opérateur | &#8594;  | Table à définir en mode lecture/écriture ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
+| laTable &#124; * | Table, Opérateur | &#8594; | Table à définir en mode lecture/écriture ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

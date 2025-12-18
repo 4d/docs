@@ -5,12 +5,12 @@ slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *metodoError* {; *alcance*} )<!-- END REF-->
+<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *metodoError* : Text {; *alcance* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| metodoError | Text | &#8594;  | Método de gestión de errores a llamar o cadena vacía para desinstalar el método |
-| alcance | Integer | &#8594;  | Alcance del método de gestión de errores |
+| metodoError | Text | &#8594; | Método de gestión de errores a llamar o cadena vacía para desinstalar el método |
+| alcance | Integer | &#8594; | Alcance del método de gestión de errores |
 
 <!-- END REF-->
 

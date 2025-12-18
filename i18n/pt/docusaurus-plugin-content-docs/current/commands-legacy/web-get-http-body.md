@@ -5,7 +5,7 @@ slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corpo* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corpo* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

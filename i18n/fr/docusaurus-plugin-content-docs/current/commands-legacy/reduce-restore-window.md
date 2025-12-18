@@ -5,11 +5,11 @@ slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* )<!-- END REF-->
+<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Numéro de référence de la fenêtre |
+| window | Integer | &#8594; | Numéro de référence de la fenêtre |
 
 <!-- END REF-->
 

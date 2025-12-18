@@ -5,12 +5,12 @@ slug: /commands/get-text-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* {; *resArchivo*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resNum* : Integer {; *resArchivo* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get text resource.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Número de recurso |
-| resArchivo | Time | &#8594;  | Número de referencia del archivo de recursos o todos los archivos de recursos abiertos, si se omite |
+| resNum | Integer | &#8594; | Número de recurso |
+| resArchivo | Time | &#8594; | Número de referencia del archivo de recursos o todos los archivos de recursos abiertos, si se omite |
 | Resultado | Text | &#8592; | Contenido del recurso TEXT |
 
 <!-- END REF-->

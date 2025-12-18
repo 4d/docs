@@ -5,12 +5,12 @@ slug: /commands/listbox-get-grid-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( {* ;} *objeto* ; *corH* ; *corV* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( * ; *objeto* : Text ; *corH* : Text, Integer ; *corV* : Text, Integer )<br/>**LISTBOX GET GRID COLORS** ( *objeto* : Field, Variable ; *corH* : Text, Integer ; *corV* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | corH | Text, Integer | &#8592; | Valor de cor RGB para as linhas horizontais |
 | corV | Text, Integer | &#8592; | Valor de cor RGB para as linhas verticais |
 

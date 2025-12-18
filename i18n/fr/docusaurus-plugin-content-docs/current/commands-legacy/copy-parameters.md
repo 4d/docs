@@ -5,11 +5,11 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} : Collection<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ( *startFrom* : Integer ) : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| startFrom | Integer | &#8594;  | Starting index (included) |
+| startFrom | Integer | &#8594; | Starting index (included) |
 | Résultat | Collection | &#8592; | New collection containing parameters actually passed |
 
 <!-- END REF-->

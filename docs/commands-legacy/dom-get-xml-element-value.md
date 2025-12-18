@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *elementRef* ; *elementValue* {; *cDATA*} )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *elementRef* : Text ; *elementValue* : Variable {; *cDATA* : Variable} )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

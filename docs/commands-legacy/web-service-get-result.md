@@ -5,7 +5,7 @@ slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* {; *returnName* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* : Variable {; *returnName* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,13 +5,13 @@ slug: /commands/set-menu-bar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* {; *process*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* : Integer, Text, Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menuBar | Integer, Text, Text | &#8594;  | メニューバー番号または名前 または メニュー参照 |
-| process | Integer | &#8594;  | プロセス参照番号 |
-| * | 演算子 | &#8594;  | メニューバーの状態を保存 |
+| menuBar | Integer, Text, Text | &#8594; | メニューバー番号または名前 または メニュー参照 |
+| process | Integer | &#8594; | プロセス参照番号 |
+| * | 演算子 | &#8594; | メニューバーの状態を保存 |
 
 <!-- END REF-->
 

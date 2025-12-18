@@ -5,12 +5,12 @@ slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *tam* {; *libMin*} )<!-- END REF-->
+<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *tam* : Real {; *libMin* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tam | Real | &#8594;  | Tamaño de la caché de base de datos en bytes |
-| libMin | Real | &#8594;  | Número mínimo de bytes a liberar cuando la caché está llena |
+| tam | Real | &#8594; | Tamaño de la caché de base de datos en bytes |
+| libMin | Real | &#8594; | Número mínimo de bytes a liberar cuando la caché está llena |
 
 <!-- END REF-->
 

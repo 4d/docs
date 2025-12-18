@@ -5,11 +5,11 @@ slug: /commands/new-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* ) : Object<!-- END REF-->
+<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| passPhrase | Text | &#8594;  | Frase contraseña a utilizar para generar la llave de cifrado de datos AES |
+| passPhrase | Text | &#8594; | Frase contraseña a utilizar para generar la llave de cifrado de datos AES |
 | Resultado | Object | &#8592; | Objeto que contiene la llave (propiedad encodedKey) |
 
 <!-- END REF-->

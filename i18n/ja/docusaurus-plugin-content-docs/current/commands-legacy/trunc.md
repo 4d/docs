@@ -5,12 +5,12 @@ slug: /commands/trunc
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* ; *places* ) : Real<!-- END REF-->
+<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* : Real ; *places* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | 切り捨てる数値 |
-| places | Integer | &#8594;  | 切り捨てを行う位置 |
+| number | Real | &#8594; | 切り捨てる数値 |
+| places | Integer | &#8594; | 切り捨てを行う位置 |
 | 戻り値 | Real | &#8592; | 切り捨てられた数値 |
 
 <!-- END REF-->

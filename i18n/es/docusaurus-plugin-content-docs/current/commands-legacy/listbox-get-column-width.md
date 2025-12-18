@@ -5,12 +5,12 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *objeto* {; *anchoMin* {; *anchoMax*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *objeto* : Text {; *anchoMin* : Integer {; *anchoMax* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *objeto* : Field, Variable {; *anchoMin* : Integer {; *anchoMax* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | anchoMin | Integer | &#8592; | Ancho mínimo de la columna (en píxeles) |
 | anchoMax | Integer | &#8592; | Ancho máximo de la columna (en píxeles) |
 | Resultado | Integer | &#8592; | Ancho de la columna (en píxeles) |

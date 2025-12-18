@@ -5,7 +5,7 @@ slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* {; *} )<!-- END REF-->
+<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

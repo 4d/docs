@@ -5,12 +5,12 @@ slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* ; *blob* {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* ; *blob* {; *} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; offset } )<br/>**VARIABLE TO BLOB** ( *variable* : Variable ; *blob* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable to store in the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the variable |
+| Blob | Blob | &#8594;  | BLOB to receive the variable |
 | offset &#124; * | Variable, Operator | &#8596; | Offset within the BLOB (expressed in bytes) or * to append the value |
 | ||| New offset after writing if not * |
 

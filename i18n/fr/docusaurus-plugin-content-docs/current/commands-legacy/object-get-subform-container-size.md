@@ -5,7 +5,7 @@ slug: /commands/object-get-subform-container-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *largeur* ; *hauteur* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *largeur* : Integer ; *hauteur* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

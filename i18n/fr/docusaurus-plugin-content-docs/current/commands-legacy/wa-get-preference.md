@@ -5,13 +5,13 @@ slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *objet* ; *sélecteur* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *objet* : Text ; *sélecteur* : Integer ; *valeur* : Variable )<br/>**WA GET PREFERENCE** ( *objet* : Field, Variable ; *sélecteur* : Integer ; *valeur* : Variable )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| sélecteur | Integer | &#8594;  | Préférence à lire |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &#8594; | Préférence à lire |
 | valeur | Variable | &#8592; | Valeur courante de la préférence |
 
 <!-- END REF-->

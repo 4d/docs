@@ -5,12 +5,12 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** {( *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )} : Object<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** ( *property* : Text ; *value* : any {; ...(*property* : Text, *value* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| property | Text | &#8594;  | 作成するプロパティ名 |
-| value | any | &#8594;  | プロパティの値 |
+| property | Text | &#8594; | 作成するプロパティ名 |
+| value | any | &#8594; | プロパティの値 |
 | 戻り値 | Object | &#8592; | 新しいランゲージオブジェクト |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/qr-set-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *zone* ; *tabColonnes* {; *tabTris*} )<!-- END REF-->
+<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *zone* : Integer ; *tabColonnes* : Real array {; *tabTris* : Real array} )<!-- END REF-->
 <!--REF #_command_.QR SET SORTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| tabColonnes | Real array | &#8594;  | Colonnes |
-| tabTris | Real array | &#8594;  | Ordres de tris |
+| zone | Integer | &#8594; | Référence de la zone |
+| tabColonnes | Real array | &#8594; | Colonnes |
+| tabTris | Real array | &#8594; | Ordres de tris |
 
 <!-- END REF-->
 

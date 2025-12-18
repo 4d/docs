@@ -5,13 +5,13 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *privKey* ; *certifRequest* ; *codeArray* ; *nameArray* )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *privKey* : Blob ; *certifRequest* : Blob ; *codeArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | privKey | Blob | &#8594;  | BLOB containing the private key |
 | certifRequest | Blob | &#8592; | BLOB receiving the certificate request |
-| codeArray | Array integer | &#8594;  | Information code list |
+| codeArray | Integer array | &#8594;  | Information code list |
 | nameArray | Text array | &#8594;  | Name list |
 
 <!-- END REF-->

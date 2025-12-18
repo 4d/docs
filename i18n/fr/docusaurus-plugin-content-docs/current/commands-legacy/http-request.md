@@ -5,19 +5,17 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* ; *url* ; *contenu* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *méthodeHTTP* : Text ; *url* : Text ; *contenu* : Text, Blob, Picture, Object ; *réponse* : Text, Blob, Picture, Object {; *nomsEnTêtes* : Text array ; *valeursEnTêtes* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthodeHTTP | Text | &#8594;  | Méthode HTTP pour la requête |
-| url | Text | &#8594;  | URL auquel envoyer la requête |
-| contenu | Text, Blob, Picture, Object | &#8594;  | Contenu du corps (body) de la requête |
+| méthodeHTTP | Text | &#8594; | Méthode HTTP pour la requête |
+| url | Text | &#8594; | URL auquel envoyer la requête |
+| contenu | Text, Blob, Picture, Object | &#8594; | Contenu du corps (body) de la requête |
 | réponse | Text, Blob, Picture, Object | &#8592; | Résultat de la requête |
-| nomsEnTêtes | Text array | &#8594;  | Noms des en-têtes de la requête |
-| &#8592; | Noms d’en-têtes retournés |
-| valeursEnTêtes | Text array | &#8594;  | Valeurs d’en-têtes de la requête |
-| &#8592; | Valeurs d’en-têtes retournées |
-| * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| nomsEnTêtes | Text array | &#8596; | *in:* Header names of the request<br/>*out:* Returned header names |
+| valeursEnTêtes | Text array | &#8596; | *in:* Header values of the request<br/>*out:* Returned header values |
+| * | Opérateur | &#8594; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &#8592; | Code de statut HTTP |
 
 <!-- END REF-->

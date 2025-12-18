@@ -5,13 +5,13 @@ slug: /commands/delete-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *tableau* ; *positionDépart* {; *combien*} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *tableau* : Array ; *positionDépart* : Integer {; *combien* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#8594;  | Tableau dans lequel supprimer des lignes |
-| positionDépart | Integer | &#8594;  | Elément de départ de la suppression |
-| combien | Integer | &#8594;  | Nombre d'éléments à supprimer ou 1 élément si ce paramètre est omis |
+| tableau | Array | &#8594; | Tableau dans lequel supprimer des lignes |
+| positionDépart | Integer | &#8594; | Elément de départ de la suppression |
+| combien | Integer | &#8594; | Nombre d'éléments à supprimer ou 1 élément si ce paramètre est omis |
 
 <!-- END REF-->
 

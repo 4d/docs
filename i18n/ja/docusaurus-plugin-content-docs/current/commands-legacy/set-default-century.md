@@ -5,12 +5,12 @@ slug: /commands/set-default-century
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *century* {; *pivotYear*} )<!-- END REF-->
+<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *century* : Integer {; *pivotYear* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| century | Integer | &#8594;  | 2桁の年数が入力された場合の デフォルト世紀 (マイナス1) |
-| pivotYear | Integer | &#8594;  | 2桁の年で日付が入力された時の区切り年 |
+| century | Integer | &#8594; | 2桁の年数が入力された場合の デフォルト世紀 (マイナス1) |
+| pivotYear | Integer | &#8594; | 2桁の年で日付が入力された時の区切り年 |
 
 <!-- END REF-->
 

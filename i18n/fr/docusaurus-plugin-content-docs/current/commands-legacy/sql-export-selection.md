@@ -5,15 +5,15 @@ slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *laTable* ; *cheminDossier* {; *nbFichiers* {; *tailleLimiteFichiers* {; *tailleLimiteChamps*}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *laTable* : Table ; *cheminDossier* : Text {; *nbFichiers* : Integer {; *tailleLimiteFichiers* : Integer {; *tailleLimiteChamps* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle exporter la sélection |
-| cheminDossier | Text | &#8594;  | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
-| nbFichiers | Integer | &#8594;  | Nombre maximum de fichiers par dossier |
-| tailleLimiteFichiers | Integer | &#8594;  | Valeur de limite de taille des fichiers d’export (en Ko) |
-| tailleLimiteChamps | Integer | &#8594;  | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
+| laTable | Table | &#8594; | Table de laquelle exporter la sélection |
+| cheminDossier | Text | &#8594; | Chemin d'accès du dossier d'export ou "" pour afficher une boîte de dialogue de sélection de dossier |
+| nbFichiers | Integer | &#8594; | Nombre maximum de fichiers par dossier |
+| tailleLimiteFichiers | Integer | &#8594; | Valeur de limite de taille des fichiers d’export (en Ko) |
+| tailleLimiteChamps | Integer | &#8594; | Limite de taille au-dessous de laquelle le contenu d'un champ Texte, BLOB ou Image sera intégré au fichier principal (en octets) |
 
 <!-- END REF-->
 

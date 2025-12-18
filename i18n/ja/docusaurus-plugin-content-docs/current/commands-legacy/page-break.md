@@ -5,11 +5,12 @@ slug: /commands/page-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
+<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** ( * )}<br/>**PAGE BREAK** ( > )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * &#124; > |Operator| &#8594;  | *: Print formで開始されたプリントジョブをキャンセル, または >: 1つのプリントジョブを強制 |
+| * | Operator | &#8594; | Cancel printing job started with Print form |
+| > | Operator | &#8594; | Force one printing job |
 
 <!-- END REF-->
 

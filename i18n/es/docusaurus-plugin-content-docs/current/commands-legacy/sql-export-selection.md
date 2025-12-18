@@ -5,15 +5,15 @@ slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *tabla* ; *rutaCarpeta* {; *numArchivos* {; *tamLimiteArchivos* {; *tamLimiteCampos*}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *tabla* : Table ; *rutaCarpeta* : Text {; *numArchivos* : Integer {; *tamLimiteArchivos* : Integer {; *tamLimiteCampos* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual exportar la selección |
-| rutaCarpeta | Text | &#8594;  | Ruta de acceso de la carpeta de exportación o "" para mostrar una caja de diálogo de selección de carpeta |
-| numArchivos | Integer | &#8594;  | Número máximo de archivos por carpeta |
-| tamLimiteArchivos | Integer | &#8594;  | Tamaño máximo del archivo Export.sql (en KB) |
-| tamLimiteCampos | Integer | &#8594;  | Límite de tamaño debajo del cual el contenido de un campo Texto, BLOB o imagen se integrará al archivo principal (en bytes) |
+| tabla | Table | &#8594; | Tabla de la cual exportar la selección |
+| rutaCarpeta | Text | &#8594; | Ruta de acceso de la carpeta de exportación o "" para mostrar una caja de diálogo de selección de carpeta |
+| numArchivos | Integer | &#8594; | Número máximo de archivos por carpeta |
+| tamLimiteArchivos | Integer | &#8594; | Tamaño máximo del archivo Export.sql (en KB) |
+| tamLimiteCampos | Integer | &#8594; | Límite de tamaño debajo del cual el contenido de un campo Texto, BLOB o imagen se integrará al archivo principal (en bytes) |
 
 <!-- END REF-->
 

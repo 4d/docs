@@ -5,13 +5,13 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* ; *keyObject* ; *salt* ; *decryptedBLOB* ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* ; *passPhrase* ; *salt* ; *decryptedBLOB* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *keyObject* : Objet, Texte ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *passPhrase* : Objet, Texte ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToDecrypt | Blob | &#8594;  | BLOB à décrypter |
-| keyObject &#124; passPhrase | Objet, Texte | &#8594;  | Objet JSON contenant la clé de chiffrement ou le mot de passe pour générer directement une clé de chiffrement (texte) |
-| salt | Integer | &#8594;  | Additional salt for algorithm |
+| blobToDecrypt | Blob | &#8594; | BLOB à décrypter |
+| keyObject &#124; passPhrase | Objet, Texte | &#8594; | Objet JSON contenant la clé de chiffrement ou le mot de passe pour générer directement une clé de chiffrement (texte) |
+| salt | Integer | &#8594; | Additional salt for algorithm |
 | decryptedBlob | Blob | &#8592; | BLOB décrypté |
 | Résultat | Boolean | &#8592; | True si le déchiffrement a été effectué correctement. Sinon False |
 

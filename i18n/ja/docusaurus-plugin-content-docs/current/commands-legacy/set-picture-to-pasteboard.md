@@ -5,11 +5,11 @@ slug: /commands/set-picture-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *picture* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *picture* : Picture )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | ペーストボードに置くピクチャ |
+| picture | Picture | &#8594; | ペーストボードに置くピクチャ |
 
 <!-- END REF-->
 

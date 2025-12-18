@@ -5,13 +5,13 @@ slug: /commands/set-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *markNum* ; *posiçao* {; *} )<!-- END REF-->
+<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *markNum* : Integer ; *posiçao* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| markNum | Integer | &#8594;  | Número do marcador |
-| posiçao | Integer | &#8594;  | Nova posição do marcador |
-| * | Operador | &#8594;  | Se passado = mover marcadores seguintes; se omitido = não move os marcadores seguintes |
+| markNum | Integer | &#8594; | Número do marcador |
+| posiçao | Integer | &#8594; | Nova posição do marcador |
+| * | Operador | &#8594; | Se passado = mover marcadores seguintes; se omitido = não move os marcadores seguintes |
 
 <!-- END REF-->
 

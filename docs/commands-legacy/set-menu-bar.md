@@ -5,7 +5,7 @@ slug: /commands/set-menu-bar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* {; *process*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* : Integer, Text, Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

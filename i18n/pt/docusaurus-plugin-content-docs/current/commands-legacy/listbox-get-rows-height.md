@@ -5,13 +5,13 @@ slug: /commands/listbox-get-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( {* ;} *objeto* {; *unidade*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( * ; *objeto* : Text {; *unidade* : Integer} ) : Integer<br/>**LISTBOX Get rows height** ( *objeto* : Field, Variable {; *unidade* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get rows height.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| unidade | Integer | &#8594;  | Unidade do valor da altura: 0 ou omitido = pixels, 1 = linhas |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| unidade | Integer | &#8594; | Unidade do valor da altura: 0 ou omitido = pixels, 1 = linhas |
 | Resultado | Integer | &#8592; | altura da fila (em pixels) |
 
 <!-- END REF-->

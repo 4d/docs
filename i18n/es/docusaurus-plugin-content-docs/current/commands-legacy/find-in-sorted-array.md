@@ -5,13 +5,13 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* ; *valor* ; > or < {; *posPrim* {; *posUlt*}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *valor* : Expression ; > or < {; *posPrim* : Integer {; *posUlt* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array a buscar |
-| valor | Expression | &#8594;  | Valor del mismo tipo a buscar en el array |
-| > or < | Operador | &#8594;  | > si el array está en orden ascendente, < si el está en orden descendente |
+| array | Array | &#8594; | Array a buscar |
+| valor | Expression | &#8594; | Valor del mismo tipo a buscar en el array |
+| > or < | Operador | &#8594; | > si el array está en orden ascendente, < si el está en orden descendente |
 | posPrim | Integer | &#8592; | Posición de su primera aparición si se encuentra el valor; de lo contrario la posición donde debe insertarse el valor |
 | posUlt | Integer | &#8592; | Posición de su última ocurrencia si se encuentra el valor; de lo contrario lo mismo que posPrim |
 | Resultado | Boolean | &#8592; | True si al menos un elemento en el array corresponde al valor, de lo contrario False |

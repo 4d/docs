@@ -5,11 +5,11 @@ slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ( *laTable* : Table )}<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle vous voulez supprimer tous les enregistrements ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de laquelle vous voulez supprimer tous les enregistrements ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

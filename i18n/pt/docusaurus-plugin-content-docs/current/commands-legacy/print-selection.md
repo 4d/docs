@@ -5,12 +5,12 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*tabela*}{;}{* | > } )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*tabela* : Table}{;}{* | > } )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual imprimir a seleção, ou Tabela por padrão, se for omitido |
-| * &#124; > | Operador | &#8594;  | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar as preferências de impressão |
+| tabela | Table | &#8594; | Tabela para a qual imprimir a seleção, ou Tabela por padrão, se for omitido |
+| * &#124; > | Operador | &#8594; | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar as preferências de impressão |
 
 <!-- END REF-->
 

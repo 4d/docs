@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New footer.Syntax-->**WP New footer** ( *wpSection* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP New footer.Syntax-->**WP New footer** ( *wpSection* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP New footer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

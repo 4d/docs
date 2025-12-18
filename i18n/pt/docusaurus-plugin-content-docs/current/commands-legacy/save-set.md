@@ -5,12 +5,12 @@ slug: /commands/save-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *conjunto* ; *documento* )<!-- END REF-->
+<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *conjunto* : Text ; *documento* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nome do conjunto a salvar |
-| documento | Text | &#8594;  | Nome do arquivo de disco para o qual vai salvar o conjunto |
+| conjunto | Text | &#8594; | Nome do conjunto a salvar |
+| documento | Text | &#8594; | Nome do arquivo de disco para o qual vai salvar o conjunto |
 
 <!-- END REF-->
 

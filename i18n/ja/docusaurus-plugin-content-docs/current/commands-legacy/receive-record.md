@@ -5,11 +5,11 @@ slug: /commands/receive-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードを受信するテーブル, または 省略した場合デフォルトテーブル |
+| aTable | Table | &#8594; | レコードを受信するテーブル, または 省略した場合デフォルトテーブル |
 
 <!-- END REF-->
 

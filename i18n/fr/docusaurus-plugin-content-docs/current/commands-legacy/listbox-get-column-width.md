@@ -5,12 +5,12 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *objet* {; *largeurMini* {; *largeurMaxi*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *objet* : Text {; *largeurMini* : Integer {; *largeurMaxi* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *objet* : Field, Variable {; *largeurMini* : Integer {; *largeurMaxi* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | largeurMini | Integer | &#8592; | Largeur minimale de la colonne (en pixels) |
 | largeurMaxi | Integer | &#8592; | Largeur maximale de la colonne (en pixels) |
 | Résultat | Integer | &#8592; | Largeur de colonne en pixels |

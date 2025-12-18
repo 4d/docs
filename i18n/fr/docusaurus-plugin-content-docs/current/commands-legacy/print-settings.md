@@ -5,11 +5,11 @@ slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** {( *typeDial* )}<!-- END REF-->
+<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ( *typeDial* : Integer )}<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeDial | Integer | &#8594;  | Boîte(s) de dialogue à afficher |
+| typeDial | Integer | &#8594; | Boîte(s) de dialogue à afficher |
 
 <!-- END REF-->
 

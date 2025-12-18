@@ -5,12 +5,12 @@ slug: /commands/on-event-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *metodoEvento* {; *nomeProcesso*} )<!-- END REF-->
+<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *metodoEvento* : Text {; *nomeProcesso* : Text} )<!-- END REF-->
 <!--REF #_command_.ON EVENT CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoEvento | Text | &#8594;  | Método evento a ser invocado, ou cadeia vazia para parar eventos interceptados |
-| nomeProcesso | Text | &#8594;  | Nome do processo |
+| metodoEvento | Text | &#8594; | Método evento a ser invocado, ou cadeia vazia para parar eventos interceptados |
+| nomeProcesso | Text | &#8594; | Nome do processo |
 
 <!-- END REF-->
 

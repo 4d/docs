@@ -5,16 +5,16 @@ slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *objet* ; *gauche* ; *haut* {; *droite* ; *bas*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *objet* : Integer ; *gauche* : Integer ; *haut* : Integer {; *droite* : Integer ; *bas* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | Integer | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| gauche | Integer | &#8594;  | Coordonnée gauche de l’objet en pixels |
-| haut | Integer | &#8594;  | Coordonnée supérieure de l’objet en pixels |
-| droite | Integer | &#8594;  | Coordonnée droite de l’objet en pixels |
-| bas | Integer | &#8594;  | Coordonnée inférieure de l’objet en pixels |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | Integer | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| gauche | Integer | &#8594; | Coordonnée gauche de l’objet en pixels |
+| haut | Integer | &#8594; | Coordonnée supérieure de l’objet en pixels |
+| droite | Integer | &#8594; | Coordonnée droite de l’objet en pixels |
+| bas | Integer | &#8594; | Coordonnée inférieure de l’objet en pixels |
 
 <!-- END REF-->
 

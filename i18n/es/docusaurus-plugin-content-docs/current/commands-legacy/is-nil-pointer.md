@@ -5,11 +5,11 @@ slug: /commands/is-nil-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *puntero* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *puntero* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is nil pointer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| puntero | Pointer | &#8594;  | Puntero a probar |
+| puntero | Pointer | &#8594; | Puntero a probar |
 | Resultado | Boolean | &#8592; | TRUE = Puntero Nil (->[]) FALSE = Puntero válido hacia un objeto existente |
 
 <!-- END REF-->

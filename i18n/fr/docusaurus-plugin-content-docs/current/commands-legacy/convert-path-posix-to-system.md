@@ -5,12 +5,12 @@ slug: /commands/convert-path-posix-to-system
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *cheminPosix* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *cheminPosix* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminPosix | Text | &#8594;  | Chemin d’accès POSIX |
-| * | Opérateur | &#8594;  | Option d’encodage |
+| cheminPosix | Text | &#8594; | Chemin d’accès POSIX |
+| * | Opérateur | &#8594; | Option d’encodage |
 | Résultat | Text | &#8592; | Chemin d’accès exprimé en syntaxe système |
 
 <!-- END REF-->

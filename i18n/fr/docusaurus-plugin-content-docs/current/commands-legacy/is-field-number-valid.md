@@ -5,12 +5,12 @@ slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *ptrTable* ; *numChamp* ) : Boolean<br/>**Is field number valid** ( *numTable* ; *numChamp* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *ptrTable* : Entier long, Pointeur ; *numChamp* : Integer ) : Boolean<br/>**Is field number valid** ( *numTable* : Entier long, Pointeur ; *numChamp* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field number valid.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable &#124; ptrTable | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur vers une table |
-| numChamp | Integer | &#8594;  | Numéro de champ |
+| numTable &#124; ptrTable | Entier long, Pointeur | &#8594; | Numéro de table ou Pointeur vers une table |
+| numChamp | Integer | &#8594; | Numéro de champ |
 | Résultat | Boolean | &#8592; | Vrai = le champ existe dans la table, Faux = le champ n’existe pas dans la table |
 
 <!-- END REF-->

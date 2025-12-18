@@ -5,11 +5,11 @@ slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| descFormat | Integer | &#8594;  | 説明フォーマット (テキストまたはXML) |
+| descFormat | Integer | &#8594; | 説明フォーマット (テキストまたはXML) |
 | 戻り値 | Text | &#8592; | 最後に実行されたクエリプランの説明 |
 
 <!-- END REF-->

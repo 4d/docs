@@ -5,11 +5,11 @@ slug: /commands/clear-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *conjunto* )<!-- END REF-->
+<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nombre del conjunto a borrar de la memoria |
+| conjunto | Text | &#8594; | Nombre del conjunto a borrar de la memoria |
 
 <!-- END REF-->
 

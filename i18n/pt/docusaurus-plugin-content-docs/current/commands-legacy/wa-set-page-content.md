@@ -5,14 +5,14 @@ slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( {* ;} *objeto* ; *conteúdo* ; *bancoURL* )<!-- END REF-->
+<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *objeto* : Text ; *conteúdo* : Text ; *bancoURL* : Text )<br/>**WA SET PAGE CONTENT** ( *objeto* : Field, Variable ; *conteúdo* : Text ; *bancoURL* : Text )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| conteúdo | Text | &#8594;  | código de fonte HTML |
-| bancoURL | Text | &#8594;  | URL para referências relativas (macOS) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| conteúdo | Text | &#8594; | código de fonte HTML |
+| bancoURL | Text | &#8594; | URL para referências relativas (macOS) |
 
 <!-- END REF-->
 

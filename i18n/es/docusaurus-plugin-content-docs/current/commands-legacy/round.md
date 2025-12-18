@@ -5,12 +5,12 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *redond* ; *decimales* ) : Real<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *redond* : Real ; *decimales* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| redond | Real | &#8594;  | Número a redondear |
-| decimales | Integer | &#8594;  | Número de lugares decimales a redondear |
+| redond | Real | &#8594; | Número a redondear |
+| decimales | Integer | &#8594; | Número de lugares decimales a redondear |
 | Resultado | Real | &#8592; | Número redondeado para el número de lugares decimales especificado por decimales |
 
 <!-- END REF-->

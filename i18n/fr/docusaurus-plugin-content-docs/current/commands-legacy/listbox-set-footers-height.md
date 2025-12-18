@@ -5,14 +5,14 @@ slug: /commands/listbox-set-footers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Syntax-->**LISTBOX SET FOOTERS HEIGHT** ( {* ;} *objet* ; *hauteur* {; *unité*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Syntax-->**LISTBOX SET FOOTERS HEIGHT** ( * ; *objet* : Text ; *hauteur* : Integer {; *unité* : Integer} )<br/>**LISTBOX SET FOOTERS HEIGHT** ( *objet* : Field, Variable ; *hauteur* : Integer {; *unité* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| hauteur | Integer | &#8594;  | Hauteur de la ligne |
-| unité | Integer | &#8594;  | Unité de la valeur de hauteur : 0 ou omis = pixels, 1 = lignes |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| hauteur | Integer | &#8594; | Hauteur de la ligne |
+| unité | Integer | &#8594; | Unité de la valeur de hauteur : 0 ou omis = pixels, 1 = lignes |
 
 <!-- END REF-->
 

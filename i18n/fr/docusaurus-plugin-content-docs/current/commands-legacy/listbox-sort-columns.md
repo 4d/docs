@@ -5,14 +5,14 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( {* ;} *objet* ; *numColonne* ; *sensDuTri* {; *numColonne2* ; *sensDuTri2* ; ... ; *numColonneN* ; *sensDuTriN*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *objet* : Text ; *numColonne* : Integer ; *sensDuTri* : Operator {; ...(*numColonne* : Integer, *sensDuTri* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *objet* : Field, Variable ; *numColonne* : Integer ; *sensDuTri* : Operator {; ...(*numColonne* : Integer, *sensDuTri* : Operator)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| numColonne | Integer | &#8594;  | Numéro(s) de colonne(s) à trier |
-| sensDuTri | * | &#8594;  | ">"pour effectuer un tri croissant ou "<" pour effectuer un tri décroissant |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numColonne | Integer | &#8594; | Numéro(s) de colonne(s) à trier |
+| sensDuTri | Operator | &#8594; | `>` to sort in ascending order or `<` to sort in descending order |
 
 <!-- END REF-->
 

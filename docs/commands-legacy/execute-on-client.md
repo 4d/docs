@@ -5,13 +5,13 @@ slug: /commands/execute-on-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* ; *methodName* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* : Text ; *methodName* : Text {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | clientName | Text | &#8594;  | 4D Client’s registered name |
 | methodName | Text | &#8594;  | Name of the method to execute |
-| param | &#8594;  | Method’s parameter(s) |
+| param | any| &#8594;  | Method’s parameter(s) |
 
 <!-- END REF-->
 

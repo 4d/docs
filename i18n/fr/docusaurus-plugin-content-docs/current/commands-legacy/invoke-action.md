@@ -5,12 +5,12 @@ slug: /commands/invoke-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* {; *cible*} )<!-- END REF-->
+<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* : Text {; *cible* : Integer} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| action | Text | &#8594;  | Nom de l'action standard ou syntaxe avec paramètre si celui-ci est requis |
-| cible | Integer | &#8594;  | Définit le lieu d'exécution de l'action : le formulaire courant (par défaut) ou le formulaire principal |
+| action | Text | &#8594; | Nom de l'action standard ou syntaxe avec paramètre si celui-ci est requis |
+| cible | Integer | &#8594; | Définit le lieu d'exécution de l'action : le formulaire courant (par défaut) ou le formulaire principal |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/http-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *option* : Integer ; *value* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP GET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | 取得するオプションのコード |
+| option | Integer | &#8594; | 取得するオプションのコード |
 | value | Integer | &#8592; | オプションの現在の値 |
 
 <!-- END REF-->

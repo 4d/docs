@@ -5,13 +5,13 @@ slug: /commands/qr-set-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *zone* ; *type* {; *spécificités*} )<!-- END REF-->
+<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *zone* : Integer ; *type* : Integer {; *spécificités* : Text, Variable} )<!-- END REF-->
 <!--REF #_command_.QR SET DESTINATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| type | Integer | &#8594;  | Type d'état |
-| spécificités | Text, Variable | &#8594;  | Spécificités du type de destination |
+| zone | Integer | &#8594; | Référence de la zone |
+| type | Integer | &#8594; | Type d'état |
+| spécificités | Text, Variable | &#8594; | Spécificités du type de destination |
 
 <!-- END REF-->
 

@@ -5,17 +5,17 @@ slug: /commands/post-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *quoi* ; *message* ; *quand* ; *sourisX* ; *sourisY* ; *modifiers* {; *process*} )<!-- END REF-->
+<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *quoi* : Integer ; *message* : Integer ; *quand* : Integer ; *sourisX* : Integer ; *sourisY* : Integer ; *modifiers* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| quoi | Integer | &#8594;  | Type d'événement |
-| message | Integer | &#8594;  | Message de l'événement |
-| quand | Integer | &#8594;  | Moment de l'événement exprimé en ticks |
-| sourisX | Integer | &#8594;  | Coordonnée horizontale de la souris |
-| sourisY | Integer | &#8594;  | Coordonnée verticale de la souris |
-| modifiers | Integer | &#8594;  | Etat des touches Modifier |
-| process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
+| quoi | Integer | &#8594; | Type d'événement |
+| message | Integer | &#8594; | Message de l'événement |
+| quand | Integer | &#8594; | Moment de l'événement exprimé en ticks |
+| sourisX | Integer | &#8594; | Coordonnée horizontale de la souris |
+| sourisY | Integer | &#8594; | Coordonnée verticale de la souris |
+| modifiers | Integer | &#8594; | Etat des touches Modifier |
+| process | Integer | &#8594; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
 
 <!-- END REF-->
 

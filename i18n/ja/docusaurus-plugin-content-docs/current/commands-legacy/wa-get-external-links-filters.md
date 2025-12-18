@@ -5,12 +5,12 @@ slug: /commands/wa-get-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( {* ;} *object* ; *filtersArr* ; *allowDenyArr* )<!-- END REF-->
+<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA GET EXTERNAL LINKS FILTERS** ( *object* : Field, Variable ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | filtersArr | Text array | &#8592; | フィルタ配列 |
 | allowDenyArr | Boolean array | &#8592; | 許可-拒否配列 |
 

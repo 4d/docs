@@ -5,7 +5,7 @@ slug: /commands/set-user-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* )<!-- END REF-->
+<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
 <!--REF #_command_.SET USER ALIAS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

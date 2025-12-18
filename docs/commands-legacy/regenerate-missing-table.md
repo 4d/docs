@@ -5,7 +5,7 @@ slug: /commands/regenerate-missing-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *tableName* )<!-- END REF-->
+<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *tableName* : Text )<!-- END REF-->
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

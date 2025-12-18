@@ -5,11 +5,11 @@ slug: /commands/dom-get-last-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *refElemento* {; *nomElemFilho* {; *valorElemFilho*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *refElemento* : Text {; *nomElemFilho* : Text {; *valorElemFilho* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get last child XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
+| refElemento | Text | &#8594; | Referência de elemento XML |
 | nomElemFilho | Text | &#8592; | Nome do elemento filho |
 | valorElemFilho | Text | &#8592; | Valor do elemento filho |
 | Resultado | Text | &#8592; | Referência do elemento XML |

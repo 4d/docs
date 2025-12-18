@@ -5,11 +5,11 @@ slug: /commands/qr-new-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* )<!-- END REF-->
+<!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* : Pointer )<!-- END REF-->
 <!--REF #_command_.QR NEW AREA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ptr | Pointer | &#8594;  | Ponteiro para uma variável |
+| ptr | Pointer | &#8594; | Ponteiro para uma variável |
 
 <!-- END REF-->
 

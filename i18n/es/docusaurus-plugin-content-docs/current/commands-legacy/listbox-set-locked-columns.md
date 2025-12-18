@@ -5,13 +5,13 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( {* ;} *objeto* ;  *numColumnas* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *objeto* : Text ;  *numColumnas* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *objeto* : Field, Variable ;  *numColumnas* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| numColumnas | Integer | &#8594;  | Número de columnas a bloquear |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| numColumnas | Integer | &#8594; | Número de columnas a bloquear |
 
 <!-- END REF-->
 

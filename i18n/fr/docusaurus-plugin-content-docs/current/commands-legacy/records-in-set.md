@@ -5,11 +5,11 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *ensemble* ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *ensemble* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Text | &#8594;  | Nom de l'ensemble à tester |
+| ensemble | Text | &#8594; | Nom de l'ensemble à tester |
 | Résultat | Integer | &#8592; | Nombre d'enregistrements dans l'ensemble |
 
 <!-- END REF-->

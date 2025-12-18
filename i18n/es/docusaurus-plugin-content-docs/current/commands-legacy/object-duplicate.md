@@ -5,20 +5,20 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( {* ;} *objeto* {; *nuevoNom* {; *nuevaVAr* {; *relacionadoA* {; *movH* {; *moveV* {; *redimH* {; *redimV*}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *objeto* : Text {; *nuevoNom* : Text {; *nuevaVAr* : Pointer {; *relacionadoA* : Text {; *movH* : Integer {; *moveV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *objeto* : Field, Variable {; *nuevoNom* : Text {; *nuevaVAr* : Pointer {; *relacionadoA* : Text {; *movH* : Integer {; *moveV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| nuevoNom | Text | &#8594;  | Nombre del nuevo objeto |
-| nuevaVAr | Pointer | &#8594;  | Puntero a la variable del nuevo objeto |
-| relacionadoA | Text | &#8594;  | Nombre del objeto editable (o del botón de radio) anterior |
-| movH | Integer | &#8594;  | Desplazamiento horizontal del nuevo objeto (>0 = a la derecha, <0 =a la izquierda) |
-| moveV | Integer | &#8594;  | Desplazamiento vertical del nuevo objeto (>0 = hacia abajo, <0= hacia arriba) |
-| redimH | Integer | &#8594;  | Valor de redimensionamiento horizontal del nuevo objeto |
-| redimV | Integer | &#8594;  | Valor de redimensionamiento vertical del nuevo objeto |
-| * | Operador | &#8594;  | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| nuevoNom | Text | &#8594; | Nombre del nuevo objeto |
+| nuevaVAr | Pointer | &#8594; | Puntero a la variable del nuevo objeto |
+| relacionadoA | Text | &#8594; | Nombre del objeto editable (o del botón de radio) anterior |
+| movH | Integer | &#8594; | Desplazamiento horizontal del nuevo objeto (>0 = a la derecha, <0 =a la izquierda) |
+| moveV | Integer | &#8594; | Desplazamiento vertical del nuevo objeto (>0 = hacia abajo, <0= hacia arriba) |
+| redimH | Integer | &#8594; | Valor de redimensionamiento horizontal del nuevo objeto |
+| redimV | Integer | &#8594; | Valor de redimensionamiento vertical del nuevo objeto |
+| * | Operador | &#8594; | Si se especifica = coordenadas absolutas Si se omite = coordenadas relativas |
 
 <!-- END REF-->
 

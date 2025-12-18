@@ -5,16 +5,16 @@ slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* ; *dest* {; *largeur* {; *hauteur* {; *mode* {; *profondeur*}}}} )<!-- END REF-->
+<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* : Picture ; *dest* : Picture {; *largeur* : Integer {; *hauteur* : Integer {; *mode* : Integer {; *profondeur* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Picture | &#8594;  | Champ ou variable image 4D à passer en imagette |
+| source | Picture | &#8594; | Champ ou variable image 4D à passer en imagette |
 | dest | Picture | &#8592; | Imagette résultante |
-| largeur | Integer | &#8594;  | Largeur de l’imagette en pixels, Par défaut = 48 |
-| hauteur | Integer | &#8594;  | Hauteur de l’imagette en pixels, Par défaut = 48 |
-| mode | Integer | &#8594;  | Mode de création de l’imagette Par défaut = proportionnelle centrée (6) |
-| profondeur | Integer | &#8594;  | Obsolète, ne pas utiliser |
+| largeur | Integer | &#8594; | Largeur de l’imagette en pixels, Par défaut = 48 |
+| hauteur | Integer | &#8594; | Hauteur de l’imagette en pixels, Par défaut = 48 |
+| mode | Integer | &#8594; | Mode de création de l’imagette Par défaut = proportionnelle centrée (6) |
+| profondeur | Integer | &#8594; | Obsolète, ne pas utiliser |
 
 <!-- END REF-->
 

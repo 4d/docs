@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE FOOTER.Syntax-->**WP DELETE FOOTER** ( *wpSeção* )<!-- END REF-->
+<!--REF #_command_.WP DELETE FOOTER.Syntax-->**WP DELETE FOOTER** ( *wpSeção* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE FOOTER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

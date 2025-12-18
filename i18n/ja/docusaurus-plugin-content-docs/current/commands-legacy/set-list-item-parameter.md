@@ -5,15 +5,15 @@ slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *list* ; *itemRef* ; *selector* ; *value* )<br/>**SET LIST ITEM PARAMETER** ( * ; *list* ; * ; *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**SET LIST ITEM PARAMETER** ( * ; *list* : Integer, Text ; * ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 演算子, 倍長整数 | &#8594;  | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
-| selector | Text | &#8594;  | パラメタ定数 |
-| value | Text, Boolean, Real | &#8594;  | パラメタ値 |
+| * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
+| selector | Text | &#8594; | パラメタ定数 |
+| value | Text, Boolean, Real | &#8594; | パラメタ値 |
 
 <!-- END REF-->
 

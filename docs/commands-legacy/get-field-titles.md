@@ -5,13 +5,13 @@ slug: /commands/get-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *aTable* ; *fieldTitles* ; *fieldNums* )<!-- END REF-->
+<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *aTable* : Table ; *fieldTitles* : Text array ; *fieldNums* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET FIELD TITLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which you want to find out the field names |
 | fieldTitles | Text array | &#8592; | Current field names |
-| fieldNums | Array integer | &#8592; | Field numbers |
+| fieldNums | Integer array | &#8592; | Field numbers |
 
 <!-- END REF-->
 

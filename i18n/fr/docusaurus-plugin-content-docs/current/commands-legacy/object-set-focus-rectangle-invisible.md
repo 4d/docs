@@ -5,13 +5,13 @@ slug: /commands/object-set-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Syntax-->**OBJECT SET FOCUS RECTANGLE INVISIBLE** ( {* ;} *objet* ; *invisible* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Syntax-->**OBJECT SET FOCUS RECTANGLE INVISIBLE** ( * ; *objet* : Text ; *invisible* : Boolean )<br/>**OBJECT SET FOCUS RECTANGLE INVISIBLE** ( *objet* : Field, Variable ; *invisible* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| invisible | Boolean | &#8594;  | Vrai = rectangle focus caché, Faux = rectangle focus visible |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| invisible | Boolean | &#8594; | Vrai = rectangle focus caché, Faux = rectangle focus visible |
 
 <!-- END REF-->
 

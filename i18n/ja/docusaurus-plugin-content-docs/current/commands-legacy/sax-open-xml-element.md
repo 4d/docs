@@ -5,14 +5,14 @@ slug: /commands/sax-open-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* ; *tag* {; *attribName* ; *attribValue*} {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* : Time ; *tag* : Text {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text, *attribValue* : Text)} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
-| tag | Text | &#8594;  | 開く要素の名前 |
-| attribName | Text | &#8594;  | 属性名 |
-| attribValue | Text | &#8594;  | 属性値 |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
+| tag | Text | &#8594; | 開く要素の名前 |
+| attribName | Text | &#8594; | 属性名 |
+| attribValue | Text | &#8594; | 属性値 |
 
 <!-- END REF-->
 

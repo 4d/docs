@@ -5,7 +5,7 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* ; *value* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* : Text ; *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

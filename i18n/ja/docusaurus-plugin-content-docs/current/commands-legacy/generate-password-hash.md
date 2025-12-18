@@ -5,12 +5,12 @@ slug: /commands/generate-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *password* {; *options*} ) : Text<!-- END REF-->
+<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *password* : Text {; *options* : Object} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate password hash.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| password | Text | &#8594;  | ユーザーのパスワード。最初の72文字のみ使用。 |
-| options | Object | &#8594;  | オプションを格納したオブジェクト |
+| password | Text | &#8594; | ユーザーのパスワード。最初の72文字のみ使用。 |
+| options | Object | &#8594; | オプションを格納したオブジェクト |
 | 戻り値 | Text | &#8592; | ハッシュされたパスワードを返します。 |
 
 <!-- END REF-->

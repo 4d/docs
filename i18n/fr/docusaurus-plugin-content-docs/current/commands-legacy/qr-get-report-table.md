@@ -5,11 +5,11 @@ slug: /commands/qr-get-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *zone* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *zone* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | Résultat | Integer | &#8592; | Numéro de table |
 
 <!-- END REF-->

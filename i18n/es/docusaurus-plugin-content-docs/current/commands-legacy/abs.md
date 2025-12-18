@@ -5,11 +5,11 @@ slug: /commands/abs
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Abs.Syntax-->**Abs** ( *Numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Abs.Syntax-->**Abs** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &#8594;  | Número del cual quiere obtener el valor absoluto |
+| Numero | Real | &#8594; | Número del cual quiere obtener el valor absoluto |
 | Resultado | Real | &#8592; | Valor absoluto de número |
 
 <!-- END REF-->

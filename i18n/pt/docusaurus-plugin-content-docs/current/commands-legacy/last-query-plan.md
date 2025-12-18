@@ -5,11 +5,11 @@ slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *formatDescr* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *formatDescr* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| formatDescr | Integer | &#8594;  | Formato de descrição (texto ou XML) |
+| formatDescr | Integer | &#8594; | Formato de descrição (texto ou XML) |
 | Resultado | Text | &#8592; | Descrição do último plano de pesquisa executado |
 
 <!-- END REF-->

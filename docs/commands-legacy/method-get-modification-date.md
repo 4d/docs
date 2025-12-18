@@ -5,13 +5,13 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* ; *modDate* ; *modTime* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* : Text, Text array ; *modDate* : Date, Date array ; *modTime* : Time, Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text, Text array | &#8594;  | Text or Text array containing one or more method path(s) |
 | modDate | Date, Date array | &#8592; | Method modification date(s) |
-| modTime | Time, Array integer | &#8592; | Method modification time(s) |
+| modTime | Time, Integer array | &#8592; | Method modification time(s) |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *rotaDoc* ; *icone* {; *tamanho*} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *rotaDoc* : Text ; *icone* : Picture, Picture {; *tamanho* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaDoc | Text | &#8594;  | Nome ou rota de acesso do documento para recuperar ícone, ou string vazia para caixa de diálogo Abrir Arquivo |
+| rotaDoc | Text | &#8594; | Nome ou rota de acesso do documento para recuperar ícone, ou string vazia para caixa de diálogo Abrir Arquivo |
 | icone | Picture, Picture | &#8592; | Variavel imagem ou campo |
-| tamanho | Integer | &#8594;  | Tamanho da imagem retornada (em pixels) |
+| tamanho | Integer | &#8594; | Tamanho da imagem retornada (em pixels) |
 
 <!-- END REF-->
 

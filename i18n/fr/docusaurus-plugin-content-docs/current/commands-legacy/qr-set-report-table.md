@@ -5,12 +5,12 @@ slug: /commands/qr-set-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *zone* ; *numTable* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *zone* : Integer ; *numTable* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numTable | Integer | &#8594;  | Numéro de table |
+| zone | Integer | &#8594; | Référence de la zone |
+| numTable | Integer | &#8594; | Numéro de table |
 
 <!-- END REF-->
 

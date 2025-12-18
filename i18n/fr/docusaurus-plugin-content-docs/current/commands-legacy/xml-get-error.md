@@ -5,11 +5,11 @@ slug: /commands/xml-get-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *refElément* ; *texteErreur* {; *ligne* {; *colonne*}} )<!-- END REF-->
+<!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *refElément* : Text ; *texteErreur* : Variable {; *ligne* : Variable {; *colonne* : Variable}} )<!-- END REF-->
 <!--REF #_command_.XML GET ERROR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
+| refElément | Text | &#8594; | Référence d’élément XML |
 | texteErreur | Variable | &#8592; | Texte de l’erreur |
 | ligne | Variable | &#8592; | Numéro de ligne |
 | colonne | Variable | &#8592; | Numéro de colonne |

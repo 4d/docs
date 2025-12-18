@@ -5,11 +5,11 @@ slug: /commands/picture-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *picture* ; *width* ; *height* {; *hOffset* {; *vOffset* {; *mode*}}} )<!-- END REF-->
+<!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *picture* : Picture ; *width* : Real ; *height* : Real {; *hOffset* : Integer {; *vOffset* : Integer {; *mode* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | 情報を取得するピクチャ |
+| picture | Picture | &#8594; | 情報を取得するピクチャ |
 | width | Real | &#8592; | ピクチャの幅 (ピクセル) |
 | height | Real | &#8592; | ピクチャの高さ (ピクセル) |
 | hOffset | Integer | &#8592; | バックグランド表示の時の水平方向のオフセット |

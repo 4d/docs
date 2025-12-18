@@ -5,12 +5,12 @@ slug: /commands/set-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *codigoLeng* {; *} )<!-- END REF-->
+<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *codigoLeng* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| codigoLeng | Text | &#8594;  | Selector del lenguaje |
-| * | Operador | &#8594;  | Alcance del comando |
+| codigoLeng | Text | &#8594; | Selector del lenguaje |
+| * | Operador | &#8594; | Alcance del comando |
 
 <!-- END REF-->
 

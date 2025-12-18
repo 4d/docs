@@ -5,11 +5,11 @@ slug: /commands/web-legacy-close-session
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *idSesion* )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *idSesion* : Text )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| idSesion | Text | &#8594;  | UUID de sesión |
+| idSesion | Text | &#8594; | UUID de sesión |
 
 <!-- END REF-->
 

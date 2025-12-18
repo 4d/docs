@@ -5,16 +5,15 @@ slug: /commands/method-get-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomCarpeta* ;} *tipoMetodo* ; *arrRutas* {; *marcador*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomCarpeta* : Text ;} *tipoMetodo* : Integer ; *arrRutas* : Text array {; *marcador* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomCarpeta | Text | &#8594;  | Nombre de carpeta de la página Inicio |
-| tipoMetodo | Integer | &#8594;  | Selector de tipo de método a recuperar |
+| nomCarpeta | Text | &#8594; | Nombre de carpeta de la página Inicio |
+| tipoMetodo | Integer | &#8594; | Selector de tipo de método a recuperar |
 | arrRutas | Text array | &#8592; | Array de rutas y nombres de los métodos |
-| marcador | Real | &#8594;  | Valor mínimo de marcador |
-| &#8592; | Nuevo valor actual |
-| * | Operador | &#8594;  | Si se pasa = comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| marcador | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
+| * | Operador | &#8594; | Si se pasa = comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

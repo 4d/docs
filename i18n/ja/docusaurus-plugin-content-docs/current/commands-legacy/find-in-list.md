@@ -5,16 +5,16 @@ slug: /commands/find-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *list* ; *value* ; *scope* {; *itemsArray* {; *}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *list* : Integer, Text ; *value* : Text ; *scope* : Integer {; *itemsArray* : Integer array {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定した場合, listはオブジェクト名 (文字列) 省略した場合, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時) リストオブジェクト名 (* 指定時) |
-| value | Text | &#8594;  | 検索する値 |
-| scope | Integer | &#8594;  | 0=メインリスト, 1=サブリスト |
+| * | 演算子 | &#8594; | 指定した場合, listはオブジェクト名 (文字列) 省略した場合, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時) リストオブジェクト名 (* 指定時) |
+| value | Text | &#8594; | 検索する値 |
+| scope | Integer | &#8594; | 0=メインリスト, 1=サブリスト |
 | itemsArray | Integer array | &#8592; | 2番目の * 省略時: 見つけた項目の位置配列 - 2番目の * 指定時: 見つけた項目の項目参照番号配列 |
-| * | 演算子 | &#8594;  | - 省略時: 項目位置を使用 - 指定時: 項目参照番号使用 |
+| * | 演算子 | &#8594; | - 省略時: 項目位置を使用 - 指定時: 項目参照番号使用 |
 | 戻り値 | Integer | &#8592; | - 2番目の * 省略時: 見つけた項目の位置 - 2番目の * 指定時: 見つけた項目の項目参照番号 |
 
 <!-- END REF-->

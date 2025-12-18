@@ -5,11 +5,11 @@ slug: /commands/sax-close-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *documento* )<!-- END REF-->
+<!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *documento* : Time )<!-- END REF-->
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
+| documento | Time | &#8594; | Referência do documento aberto |
 
 <!-- END REF-->
 

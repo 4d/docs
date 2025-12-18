@@ -5,11 +5,11 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *campo* ) : any<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *campo* : Field ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo ao qual devolver o valor anterior |
+| campo | Field | &#8594; | Campo ao qual devolver o valor anterior |
 | Resultado | any | &#8592; | Valor original do campo |
 
 <!-- END REF-->

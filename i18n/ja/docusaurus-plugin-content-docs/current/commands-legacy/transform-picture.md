@@ -5,17 +5,16 @@ slug: /commands/transform-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *picture* ; *operator* {; *param1* {; *param2* {; *param3* {; *param4*}}}} )<!-- END REF-->
+<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *picture* : Picture ; *operator* : Integer {; *param1* : Real {; *param2* : Real {; *param3* : Real {; *param4* : Real}}}} )<!-- END REF-->
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | 変換するソースピクチャ |
-| &#8592; | 変換した結果のピクチャ |
-| operator | Integer | &#8594;  | 行う変換のタイプ |
-| param1 | Real | &#8594;  | 変換パラメタ |
-| param2 | Real | &#8594;  | 変換パラメタ |
-| param3 | Real | &#8594;  | 変換パラメタ |
-| param4 | Real | &#8594;  | 変換パラメタ |
+| picture | Picture | &#8596; | *in:* Source picture to be transformed<br/> *out:* Resulting picture after transformation |
+| operator | Integer | &#8594; | 行う変換のタイプ |
+| param1 | Real | &#8594; | 変換パラメタ |
+| param2 | Real | &#8594; | 変換パラメタ |
+| param3 | Real | &#8594; | 変換パラメタ |
+| param4 | Real | &#8594; | 変換パラメタ |
 
 <!-- END REF-->
 

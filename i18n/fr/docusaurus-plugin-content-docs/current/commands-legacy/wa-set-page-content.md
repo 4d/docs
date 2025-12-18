@@ -5,14 +5,14 @@ slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( {* ;} *objet* ; *contenu* ; *baseURL* )<!-- END REF-->
+<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *objet* : Text ; *contenu* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *objet* : Field, Variable ; *contenu* : Text ; *baseURL* : Text )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| contenu | Text | &#8594;  | Code HTML source |
-| baseURL | Text | &#8594;  | URL pour les références relatives (macOS) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| contenu | Text | &#8594; | Code HTML source |
+| baseURL | Text | &#8594; | URL pour les références relatives (macOS) |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/svg-export-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *refElemento* ; *varImagem* {; *tipoExport*} )<!-- END REF-->
+<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *refElemento* : Text ; *varImagem* {; *tipoExport* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência do elemento Root XMLK |
-| varPicture | Picture | &#8594;  | Variável de imagem que recebe a árvore XML (Imagem SVG) |
-| tipoExport | Integer | &#8594;  | 0= Não armazenar fonte de dados, 1 = Copiar fonte de dados (padrão), 2 = Fonte de dados própria |
+| refElemento | Text | &#8594; | Referência do elemento Root XMLK |
+| varPicture | Picture | &#8594; | Variável de imagem que recebe a árvore XML (Imagem SVG) |
+| tipoExport | Integer | &#8594; | 0= Não armazenar fonte de dados, 1 = Copiar fonte de dados (padrão), 2 = Fonte de dados própria |
 
 <!-- END REF-->
 

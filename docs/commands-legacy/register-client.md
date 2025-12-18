@@ -15,7 +15,7 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* : Text )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

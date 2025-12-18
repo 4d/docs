@@ -5,7 +5,7 @@ slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* ; *statement* )<!-- END REF-->
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* : Time ; *statement* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

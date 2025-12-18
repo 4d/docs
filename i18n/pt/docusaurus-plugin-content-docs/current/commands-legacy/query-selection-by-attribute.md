@@ -5,17 +5,17 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*umaTabela*}{;}{*operadorConj* ;} *campoObj* ; *rotaAtributo* ; *operadorPesq* ; *valor* {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*umaTabela*}{;}{*operadorConj* : Operator ;} *campoObj* : Field ; *rotaAtributo* : Text ; *operadorPesq* : Text, Operator ; *valor* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umaTable | Table | &#8594;  | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
-| operadorConj | * | &#8594;  | Operador Conjunção para usar para unir múltiplas pesquisas (se alguma) |
-| campoObj | Field | &#8594;  | Campo objeto para atributos de pesquisa |
-| rotaAtributo | Text | &#8594;  | Nome ou rota do atributo |
-| operadorPesq | *, Text | &#8594;  | Operador Pesquisa (comparador) |
-| valor | Text, Number, Date, Time | &#8594;  | Valor a comparar |
-| * | Operador | &#8594;  | Continua flag de pesquisa |
+| umaTable | Table | &#8594; | Tabela para a quel vai retornar uma seleção de registros, ou tabela Padrão se omitido |
+| operadorConj | Operator | &#8594; | Operador Conjunção para usar para unir múltiplas pesquisas (se alguma) |
+| campoObj | Field | &#8594; | Campo objeto para atributos de pesquisa |
+| rotaAtributo | Text | &#8594; | Nome ou rota do atributo |
+| operadorPesq | Text, Operator | &#8594; | Operador Pesquisa (comparador) |
+| valor | Text, Real, Date, Time | &#8594; | Valor a comparar |
+| * | Operador | &#8594; | Continua flag de pesquisa |
 
 <!-- END REF-->
 

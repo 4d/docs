@@ -5,13 +5,13 @@ slug: /commands/set-menu-bar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *barre* {; *process*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *barre* : Integer, Text, Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| barre | Integer, Text, Text | &#8594;  | Numéro ou nom de la barre de menus ou Référence de menu |
-| process | Integer | &#8594;  | Numéro de référence du process |
-| * | Opérateur | &#8594;  | Conserver l'état de la barre de menus |
+| barre | Integer, Text, Text | &#8594; | Numéro ou nom de la barre de menus ou Référence de menu |
+| process | Integer | &#8594; | Numéro de référence du process |
+| * | Opérateur | &#8594; | Conserver l'état de la barre de menus |
 
 <!-- END REF-->
 

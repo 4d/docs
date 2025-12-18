@@ -5,15 +5,15 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *objeto* {; *aTabela*}; *subFormDet* {; *subFormList*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *objeto* : Text {; *aTabela*}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *objeto* : Field, Variable {; *aTabela*}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| aTable | Table | &#8594;  | Tabela de formulário (se tabela de formulário) |
-| subFormDet | Text, Object | &#8594;  | Nome do formulário detalhado de sub-formulário |
-| subFormList | Text, Object | &#8594;  | Nome do formulário listado de sub-formulário (formulário tabela) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| aTable | Table | &#8594; | Tabela de formulário (se tabela de formulário) |
+| subFormDet | Text, Object | &#8594; | Nome do formulário detalhado de sub-formulário |
+| subFormList | Text, Object | &#8594; | Nome do formulário listado de sub-formulário (formulário tabela) |
 
 <!-- END REF-->
 

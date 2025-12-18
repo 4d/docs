@@ -5,13 +5,13 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( {* ;} *object* ; *alignment* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *object* : Field, Variable ; *alignment* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| alignment | Integer | &#8594;  | 行揃えコード |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| alignment | Integer | &#8594; | 行揃えコード |
 
 <!-- END REF-->
 

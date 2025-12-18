@@ -5,7 +5,7 @@ slug: /commands/sql-get-last-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* ; *errText* ; *errODBC* ; *errSQLServer* )<!-- END REF-->
+<!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* : Integer ; *errText* : Text ; *errODBC* : Text ; *errSQLServer* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL GET LAST ERROR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

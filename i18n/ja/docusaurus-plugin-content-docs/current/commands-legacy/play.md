@@ -5,12 +5,12 @@ slug: /commands/play
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *objectName* {; *channel*} )<!-- END REF-->
+<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *objectName* : Text {; *channel* : Integer} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | &#8594;  | サウンドファイル名、またはMac OSの"snd "リソース、またはシステムサウンド非同期再生を中断する場合、空の文字列 |
-| channel | Integer | &#8594;  | 指定した場合、シンセサイザーチャネルと非同期実行、省略した場合同期実行 |
+| objectName | Text | &#8594; | サウンドファイル名、またはMac OSの"snd "リソース、またはシステムサウンド非同期再生を中断する場合、空の文字列 |
+| channel | Integer | &#8594; | 指定した場合、シンセサイザーチャネルと非同期実行、省略した場合同期実行 |
 
 <!-- END REF-->
 

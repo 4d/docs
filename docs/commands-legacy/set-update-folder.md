@@ -5,7 +5,7 @@ slug: /commands/set-update-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *folderPath* {; *silentErrors*} )<!-- END REF-->
+<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *folderPath* : Text {; *silentErrors* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

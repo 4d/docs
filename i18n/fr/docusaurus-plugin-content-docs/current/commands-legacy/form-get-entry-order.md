@@ -5,12 +5,12 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomsObjets* {; *numPage* }<br/>*FORM GET ENTRY ORDER** ( *nomsObjets* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomsObjets* : Text array {; *numPage* : Entier long, Opérateur }<br/>*FORM GET ENTRY ORDER** ( *nomsObjets* {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | nomsObjets | Text array | &#8592; | Noms des objets triés par ordre de saisie |
-| numPage &#124; * | Entier long, Opérateur | &#8594;  | Numéro de la page dont vous voulez lire l'ordre de saisie défini (page courante si omis), ou * pour obtenir l'ordre de saisie actuel de la page courante |
+| numPage &#124; * | Entier long, Opérateur | &#8594; | Numéro de la page dont vous voulez lire l'ordre de saisie défini (page courante si omis), ou * pour obtenir l'ordre de saisie actuel de la page courante |
 
 <!-- END REF-->
 

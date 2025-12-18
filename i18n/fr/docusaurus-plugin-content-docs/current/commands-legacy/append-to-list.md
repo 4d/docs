@@ -5,15 +5,15 @@ slug: /commands/append-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *liste* ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
+<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *liste* : Integer ; *libelléElément* : Text ; *réfElément* : Integer {; sous_Liste ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &#8594;  | Numéro de référence de liste |
-| libelléElément | Text | &#8594;  | Libellé du nouvel élément |
-| réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
-| sous_Liste | Integer | &#8594;  | Sous-liste optionnelle à rattacher au nouvel élément |
-| déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée ou non |
+| liste | Integer | &#8594; | Numéro de référence de liste |
+| libelléElément | Text | &#8594; | Libellé du nouvel élément |
+| réfElément | Integer | &#8594; | Numéro de référence unique du nouvel élément |
+| sous_Liste | Integer | &#8594; | Sous-liste optionnelle à rattacher au nouvel élément |
+| déployée | Boolean | &#8594; | Indique si la sous-liste doit être déployée ou non |
 
 <!-- END REF-->
 

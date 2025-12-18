@@ -5,13 +5,13 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *zone* ; *numColonne* ; *objet* )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *zone* : Integer ; *numColonne* : Integer ; *objet* : Field, Variable, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numColonne | Integer | &#8594;  | Numéro de colonne |
-| objet | Field, Variable, Pointer | &#8594;  | Objet à insérer dans la colonne |
+| zone | Integer | &#8594; | Référence de la zone |
+| numColonne | Integer | &#8594; | Numéro de colonne |
+| objet | Field, Variable, Pointer | &#8594; | Objet à insérer dans la colonne |
 
 <!-- END REF-->
 

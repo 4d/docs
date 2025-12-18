@@ -5,13 +5,13 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *lista* ; refElem | * ; *icono* )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *lista* : Integer, Text ; refElem | * ; *icono* : Picture )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo de lista (si pasa *) |
-| refElem &#124; * | Operador, Entero largo | &#8594;  | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &#8594; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo de lista (si pasa *) |
+| refElem &#124; * | Operador, Entero largo | &#8594; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
 | icono | Picture | &#8592; | Icono asociado al elemento |
 
 <!-- END REF-->

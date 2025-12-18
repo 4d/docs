@@ -5,15 +5,15 @@ slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *inteiro* ; *BLOB* ; *byteOrdem* {; offset | *} )<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *inteiro* : Integer ; *BLOB* : Blob ; *byteOrdem* : Integer {; offset | *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| inteiro | Integer | &#8594;  | Valor inteiro a escrever no BLOB |
-| Blob | Blob | &#8594;  | BLOB a receber o valor inteiro |
-| byteOrdem | Integer | &#8594;  | 0 Ordem de bytes em modo nativo 1 Ordem dos bytes Macintosh 2 Ordem dos bytes PC |
+| inteiro | Integer | &#8594; | Valor inteiro a escrever no BLOB |
+| Blob | Blob | &#8594; | BLOB a receber o valor inteiro |
+| byteOrdem | Integer | &#8594; | 0 Ordem de bytes em modo nativo 1 Ordem dos bytes Macintosh 2 Ordem dos bytes PC |
 | offset &#124; * | Variável, Operador | &#8596; | Offset expressado em bytes no BLOB ou * para adicionar o valor |
-|||| Novo offset depois de escrita se * for omitido |
+|  |  |  | Novo offset depois de escrita se * for omitido |
 
 <!-- END REF-->
 

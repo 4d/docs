@@ -5,11 +5,11 @@ slug: /commands/window-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window process.Syntax-->**Window process** {( *ventana* )} : Integer<!-- END REF-->
+<!--REF #_command_.Window process.Syntax-->**Window process** ( *ventana* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Window process.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana |
+| ventana | Integer | &#8594; | Número de referencia de la ventana |
 | Resultado | Integer | &#8592; | Número de referencia del proceso |
 
 <!-- END REF-->

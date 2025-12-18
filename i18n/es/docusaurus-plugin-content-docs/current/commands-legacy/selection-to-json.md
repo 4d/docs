@@ -5,13 +5,13 @@ slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTabla* {; *elCampo*}{; *elCampo2* ; ... ; *elCampoN*}{; *template*})  : Text<!-- END REF-->
+<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTabla* {; *...elCampo*}{; *template* : Object})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Tabla a serializar |
-| elField | Field | &#8594;  | Campo(s) cuyo(s) contenidos deben ser serializados |
-| template | Object | &#8594;  | Objeto para la selección de etiquetas y de campos |
+| laTable | Table | &#8594; | Tabla a serializar |
+| elField | Field | &#8594; | Campo(s) cuyo(s) contenidos deben ser serializados |
+| template | Object | &#8594; | Objeto para la selección de etiquetas y de campos |
 | Resultado | Text | &#8592; | Cadena que contiene el array JSON serializado |
 
 <!-- END REF-->

@@ -5,11 +5,11 @@ slug: /commands/get-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) : Text<!-- END REF-->
+<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get plugin access.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#8594;  | プラグイン番号 |
+| plugIn | Integer | &#8594; | プラグイン番号 |
 | 戻り値 | Text | &#8592; | プラグインに割り当てられたグループ名 |
 
 <!-- END REF-->

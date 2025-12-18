@@ -5,14 +5,14 @@ slug: /WritePro/commands/wp-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *targetObj* ; *newText* ; *textPosition* {; *rangeUpdate*} )<!-- END REF-->
+<!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *targetObj* : Object ; *newText* : Text ; *textPosition* : Real {; *rangeUpdate* : Real} )<!-- END REF-->
 <!--REF #_command_.WP SET TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | newText | Text | &#8594;  | Text to insert |
-| textPosition | Number | &#8594;  | Insertion position (replace, before, after) |
-| rangeUpdate | Number | &#8594;  | Includes or excludes the inserted content within the range |
+| textPosition | Real | &#8594;  | Insertion position (replace, before, after) |
+| rangeUpdate | Real | &#8594;  | Includes or excludes the inserted content within the range |
 
 <!-- END REF-->
 

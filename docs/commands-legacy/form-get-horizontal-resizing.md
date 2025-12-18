@@ -5,7 +5,7 @@ slug: /commands/form-get-horizontal-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Syntax-->**FORM GET HORIZONTAL RESIZING** ( *resize* {; *minWidth* {; *maxWidth*}} )<!-- END REF-->
+<!--REF #_command_.FORM GET HORIZONTAL RESIZING.Syntax-->**FORM GET HORIZONTAL RESIZING** ( *resize* : Boolean {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM GET HORIZONTAL RESIZING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

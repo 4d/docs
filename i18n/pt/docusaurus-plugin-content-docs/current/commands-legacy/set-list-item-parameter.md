@@ -5,15 +5,15 @@ slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *lista* ; refElem | * ; *seletor* ; *valor* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *lista* : Integer, Text ; refElem | * ; *seletor* : Text ; *valor* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| refElem &#124; * | Operador, Inteiro longo | &#8594;  | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
-| seletor | Text | &#8594;  | Constante do parâmetro |
-| valor | Text, Boolean, Real | &#8594;  | Valor do parâmetro |
+| * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| refElem &#124; * | Operador, Inteiro longo | &#8594; | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
+| seletor | Text | &#8594; | Constante do parâmetro |
+| valor | Text, Boolean, Real | &#8594; | Valor do parâmetro |
 
 <!-- END REF-->
 

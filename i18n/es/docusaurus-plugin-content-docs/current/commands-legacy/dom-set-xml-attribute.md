@@ -5,13 +5,13 @@ slug: /commands/dom-set-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* ; *nomAtrib* ; *valorAtrib* {; *nomAtrib2* ; *valorAtrib2* ; ... ; *nomAtribN* ; *valorAtribN*} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* : Text ; *nomAtrib* : Text ; *valorAtrib* : Text, Boolean, Integer, Real, Time, Date {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Boolean, Integer, Real, Time, Date)} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
-| nomAtrib | Text | &#8594;  | Atributo a definir |
-| valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Nuevo valor del atributo |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
+| nomAtrib | Text | &#8594; | Atributo a definir |
+| valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594; | Nuevo valor del atributo |
 
 <!-- END REF-->
 

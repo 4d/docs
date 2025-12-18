@@ -5,12 +5,12 @@ slug: /commands/get-picture-metadata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE METADATA.Syntax-->**GET PICTURE METADATA** ( *imagen* ; *nomMeta* ; *ContenidoMeta* {; *nomMeta2* ; *ContenidoMeta2* ; ... ; *nomMetaN* ; *ContenidoMetaN*} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE METADATA.Syntax-->**GET PICTURE METADATA** ( *imagen* : Picture ; *nomMeta* : Text ; *ContenidoMeta* : Variable {; ...(*nomMeta* : Text, *ContenidoMeta* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE METADATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#8594;  | Imagen de la cual obtener los metadatos |
-| nomMeta | Text | &#8594;  | Nombre o ruta de acceso del bloque a leer |
+| imagen | Picture | &#8594; | Imagen de la cual obtener los metadatos |
+| nomMeta | Text | &#8594; | Nombre o ruta de acceso del bloque a leer |
 | ContenidoMeta | Variable | &#8592; | Contenido del metadato |
 
 <!-- END REF-->

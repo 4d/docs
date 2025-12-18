@@ -5,7 +5,7 @@ slug: /commands/st-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( {* ;} *object* ; *newText* {; *startSel* {; *endSel*}} )<!-- END REF-->
+<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *object* : Text ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST SET TEXT** ( *object* : Field, Variable ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

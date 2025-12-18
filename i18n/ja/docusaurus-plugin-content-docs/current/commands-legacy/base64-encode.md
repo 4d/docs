@@ -5,14 +5,13 @@ slug: /commands/base64-encode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *BLOB* {; *encoded*}{; *} )<!-- END REF-->
+<!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *BLOB* : Blob, Text {; *encoded* : Blob, Text}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob, Text | &#8594;  | Base 64フォーマットでコード化するBLOB |
-| &#8592; | Base 64フォーマットでコード化したBLOB |
+| Blob | Blob, Text | &#8596; | *in:* Value to encode<br/>*out:* Encoded value (if encoded parameter omitted) |
 | encoded | Blob, Text | &#8592; | エンコードされた値 |
-| * | 演算子 | &#8594;  | Base64URL フォーマットでエンコードする |
+| * | 演算子 | &#8594; | Base64URL フォーマットでエンコードする |
 
 <!-- END REF-->
 

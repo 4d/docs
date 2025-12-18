@@ -5,7 +5,7 @@ slug: /commands/get-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *tabMéthodes* )<!-- END REF-->
+<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *tabMéthodes* : Text array )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

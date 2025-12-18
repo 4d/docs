@@ -5,7 +5,7 @@ slug: /commands/list-of-choice-lists
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *arrayNums* ; *arrayNoms* )<!-- END REF-->
+<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *arrayNums* : Integer array ; *arrayNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/arctan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *Numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &#8594;  | Tangente para la cual calcular el ángulo |
+| Numero | Real | &#8594; | Tangente para la cual calcular el ángulo |
 | Resultado | Real | &#8592; | Ángulo en radianes |
 
 <!-- END REF-->

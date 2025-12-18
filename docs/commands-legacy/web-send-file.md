@@ -5,7 +5,7 @@ slug: /commands/web-send-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlFile* )<!-- END REF-->
+<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlFile* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

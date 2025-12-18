@@ -5,12 +5,12 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *numColuna* )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* : Integer ; *numColuna* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Número de Coluna |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Número de Coluna |
 
 <!-- END REF-->
 

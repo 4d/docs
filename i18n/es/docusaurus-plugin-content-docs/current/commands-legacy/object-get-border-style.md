@@ -5,12 +5,12 @@ slug: /commands/object-get-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get border style** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get border style.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
 | Resultado | Integer | &#8592; | Estilo de línea de borde |
 
 <!-- END REF-->

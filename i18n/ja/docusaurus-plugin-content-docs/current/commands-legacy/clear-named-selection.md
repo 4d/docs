@@ -5,11 +5,11 @@ slug: /commands/clear-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *name* )<!-- END REF-->
+<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *name* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | Text | &#8594;  | クリアする命名セレクション名 |
+| name | Text | &#8594; | クリアする命名セレクション名 |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/listbox-get-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( {* ;} *objeto* ; *linha* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( * ; *objeto* : Text ; *linha* : Integer ) : Integer<br/>**LISTBOX Get row font style** ( *objeto* : Field, Variable ; *linha* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row font style.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome do objeto(se especificado *) ou<br/>Variável (se omitido *) |
-| linha | Integer | &#8594;  | Número linha |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome do objeto(se especificado *) ou<br/>Variável (se omitido *) |
+| linha | Integer | &#8594; | Número linha |
 | Resultado | Integer | &#8592; | Valor de estilo |
 
 <!-- END REF-->

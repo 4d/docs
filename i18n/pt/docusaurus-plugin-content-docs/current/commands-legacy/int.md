@@ -5,11 +5,11 @@ slug: /commands/int
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Int.Syntax-->**Int** ( *numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Int.Syntax-->**Int** ( *numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &#8594;  | Número cuja porção inteira é devolvida |
+| numero | Real | &#8594; | Número cuja porção inteira é devolvida |
 | Resultado | Real | &#8592; | Porção inteira do número |
 
 <!-- END REF-->

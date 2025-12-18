@@ -5,11 +5,11 @@ slug: /commands/regenerate-missing-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *nomTable* )<!-- END REF-->
+<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *nomTable* : Text )<!-- END REF-->
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomTable | Text | &#8594;  | Nom de table manquante à regénérer |
+| nomTable | Text | &#8594; | Nom de table manquante à regénérer |
 
 <!-- END REF-->
 

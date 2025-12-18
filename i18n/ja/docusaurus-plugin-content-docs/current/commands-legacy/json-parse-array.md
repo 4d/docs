@@ -5,11 +5,11 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* : Text ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| jsonString | Text | &#8594;  | 解析したいJSON文字列 |
+| jsonString | Text | &#8594; | 解析したいJSON文字列 |
 | array | Array | &#8592; | JSON文字列を解析した結果を含む配列 |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/set-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
+<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

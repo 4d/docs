@@ -5,16 +5,16 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagem* ; *x* ; *y* ; *largura* ; *alto* ; *arrIDs* ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagem* ; *x* : Integer ; *y* : Integer ; *largura* : Integer ; *alto* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoPicture | Picture | &#8594;  | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
-| x | Integer | &#8594;  | Coordenada horizontal da esquina esquerda superior do retângulo de seleção |
-| y | Integer | &#8594;  | Coordenada vertical da esquina superior esquerda do retângulo de seleção |
-| largura | Integer | &#8594;  | Largura da seleção retangular |
-| alto | Integer | &#8594;  | Altura da seleção retangular |
+| * | Operador | &#8594; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
+| objetoPicture | Picture | &#8594; | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| x | Integer | &#8594; | Coordenada horizontal da esquina esquerda superior do retângulo de seleção |
+| y | Integer | &#8594; | Coordenada vertical da esquina superior esquerda do retângulo de seleção |
+| largura | Integer | &#8594; | Largura da seleção retangular |
+| alto | Integer | &#8594; | Altura da seleção retangular |
 | arrIDs | Text array | &#8592; | IDs dos elementos cujas molduras do retângulo intersecciona com o retângulo de seleção |
 | Resultado | Boolean | &#8592; | True = ao menos um elemento é encontrado |
 

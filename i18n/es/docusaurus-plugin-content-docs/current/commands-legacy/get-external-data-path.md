@@ -5,11 +5,11 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *elCampo* ) : Text<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *elCampo* : Text, Blob, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elCampo | Text, Blob, Picture | &#8594;  | Campo del cual obtener el lugar de almacenamiento |
+| elCampo | Text, Blob, Picture | &#8594; | Campo del cual obtener el lugar de almacenamiento |
 | resultado | Text | &#8592; | Ruta de acceso completa del archivo de almacenamiento externo |
 
 <!-- END REF-->

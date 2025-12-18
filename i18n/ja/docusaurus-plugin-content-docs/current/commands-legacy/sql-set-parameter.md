@@ -5,12 +5,12 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* ; *paramType* )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Object ; *paramType* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | 使用する4Dオブジェクト (変数、配列、フィールド) |
-| paramType | Integer | &#8594;  | 引数タイプ |
+| object | Object | &#8594; | 使用する4Dオブジェクト (変数、配列、フィールド) |
+| paramType | Integer | &#8594; | 引数タイプ |
 
 <!-- END REF-->
 

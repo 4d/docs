@@ -5,13 +5,13 @@ slug: /commands/set-picture-to-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *image* ; *refImage* ; *nomImage* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *image* : Picture ; *refImage* : Integer ; *nomImage* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &#8594;  | Nouvelle image |
-| refImage | Integer | &#8594;  | Numéro de référence de l'image dans la bibliothèque d'images |
-| nomImage | Text | &#8594;  | Nouveau nom de l’image |
+| image | Picture | &#8594; | Nouvelle image |
+| refImage | Integer | &#8594; | Numéro de référence de l'image dans la bibliothèque d'images |
+| nomImage | Text | &#8594; | Nouveau nom de l’image |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *objet* {; élément} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *objet* : Text {; élément} )<br/>**EDIT ITEM** ( *objet* : Field, Variable {; élément} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un table ou une variable |
-| objet | any | &#8594;  | Nom d’objet (si * spécifié) ou Table ou variable (si * omis) |
-| élément | Integer | &#8594;  | Numéro d’élément |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un table ou une variable |
+| objet | any | &#8594; | Nom d’objet (si * spécifié) ou Table ou variable (si * omis) |
+| élément | Integer | &#8594; | Numéro d’élément |
 
 <!-- END REF-->
 

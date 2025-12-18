@@ -5,14 +5,14 @@ slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( {* ;} *objet* ; *tabFiltres* ; *tabAutorisRefus* )<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *objet* : Text ; *tabFiltres* : Text array ; *tabAutorisRefus* : Boolean array )<br/>**WA SET URL FILTERS** ( *objet* : Field, Variable ; *tabFiltres* : Text array ; *tabAutorisRefus* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| tabFiltres | Text array | &#8594;  | Tableau de filtres |
-| tabAutorisRefus | Boolean array | &#8594;  | Tableau autoriser-refuser |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| tabFiltres | Text array | &#8594; | Tableau de filtres |
+| tabAutorisRefus | Boolean array | &#8594; | Tableau autoriser-refuser |
 
 <!-- END REF-->
 

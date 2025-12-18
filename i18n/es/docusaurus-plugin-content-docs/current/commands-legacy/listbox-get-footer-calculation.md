@@ -5,12 +5,12 @@ slug: /commands/listbox-get-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get footer calculation** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | resultado | Integer | &#8592; | Tipo de cálculo |
 
 <!-- END REF-->

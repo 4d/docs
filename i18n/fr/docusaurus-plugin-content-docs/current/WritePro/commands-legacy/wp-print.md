@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-print
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *docWP* {; *optionsImpr*} )<!-- END REF-->
+<!--REF #_command_.WP PRINT.Syntax-->**WP PRINT** ( *docWP* : Object {; *optionsImpr* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP PRINT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

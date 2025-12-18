@@ -5,11 +5,11 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Datos para los cuales se devuelve la desviación estándar |
+| series | Field, Array | &#8594; | Datos para los cuales se devuelve la desviación estándar |
 | Resultado | Real | &#8592; | Desviación estándar de series |
 
 <!-- END REF-->

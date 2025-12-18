@@ -5,7 +5,7 @@ displayed_sidebar: docs
 ---
 
 
-<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( {* ;} *object* ; *contextObj* )<!-- END REF-->
+<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( * ; *object* : Text ; *contextObj* : Object )<br/>**WA SET CONTEXT** ( *object* : Field, Variable ; *contextObj* : Object )<!-- END REF-->
 <!--REF #_command_.WA SET CONTEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

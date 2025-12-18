@@ -5,11 +5,11 @@ slug: /commands/get-print-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *option* ; *value1* {; *value2*} )<!-- END REF-->
+<!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *option* : Integer ; *value1* : Integer, Text {; *value2* : Integer, Text} )<!-- END REF-->
 <!--REF #_command_.GET PRINT OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | オプション番号 |
+| option | Integer | &#8594; | オプション番号 |
 | value1 | Integer, Text | &#8592; | オプションの値1 |
 | value2 | Integer, Text | &#8592; | オプションの値2 |
 

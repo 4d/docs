@@ -5,12 +5,12 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) : Object<!-- END REF-->
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| vJson | Object | &#8594;  | Objet JSON à valider |
-| vSchema | Object | &#8594;  | Schéma JSON utilisé pour valider les objets JSON |
+| vJson | Object | &#8594; | Objet JSON à valider |
+| vSchema | Object | &#8594; | Schéma JSON utilisé pour valider les objets JSON |
 | Résultat | Object | &#8592; | Statut de la validation et erreurs (éventuellement) |
 
 <!-- END REF-->

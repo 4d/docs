@@ -5,13 +5,13 @@ slug: /commands/distinct-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *campo* ; *array* {; *contArray*} )<!-- END REF-->
+<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *campo* : Field ; *array* : Array {; *contArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo ou subcampo indexável a utilizar para dados |
+| campo | Field | &#8594; | Campo ou subcampo indexável a utilizar para dados |
 | array | Array | &#8592; | Array a receber os dados do campo |
-| contArray | Integer array, Real array | &#8592; | Array a receber o contador de cada valor |
+| contArray | Integer array | &#8592; | Array a receber o contador de cada valor |
 
 <!-- END REF-->
 

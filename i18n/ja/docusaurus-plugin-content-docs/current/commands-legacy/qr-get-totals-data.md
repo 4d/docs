@@ -5,13 +5,13 @@ slug: /commands/qr-get-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* ; *text* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer ; *text* : Text )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNum | Integer | &#8594;  | カラム番号 |
-| breakNum | Integer | &#8594;  | ブレーク番号 |
+| area | Integer | &#8594; | エリア参照 |
+| colNum | Integer | &#8594; | カラム番号 |
+| breakNum | Integer | &#8594; | ブレーク番号 |
 | operator | Integer | &#8592; | セルの演算名 |
 | text | Text | &#8592; | セルの内容 |
 

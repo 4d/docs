@@ -5,12 +5,12 @@ slug: /commands/restart-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** {( *demora* {; *mensagem*} )}<!-- END REF-->
+<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** ( *demora* : Integer {; *mensagem* : Text} )}<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| demora | Integer | &#8594;  | Tempo de atraso (segundos) antes que 4D reinicie |
-| mensagem | Text | &#8594;  | Texto a mostrar nas máquinas clientes |
+| demora | Integer | &#8594; | Tempo de atraso (segundos) antes que 4D reinicie |
+| mensagem | Text | &#8594; | Texto a mostrar nas máquinas clientes |
 
 <!-- END REF-->
 

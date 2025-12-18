@@ -5,14 +5,14 @@ slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *refElément* {; *xPath*}; *valeurElément* {; *} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *refElément* : Text {; *xPath* : Text}; *valeurElément* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
-| xPath | Text | &#8594;  | Chemin XPath de l’élément XML |
-| valeurElément | Text, Variable | &#8594;  | Nouvelle valeur de l’élément |
-| * | Opérateur | &#8594;  | Si passé : définir la valeur en CDATA |
+| refElément | Text | &#8594; | Référence d’élément XML |
+| xPath | Text | &#8594; | Chemin XPath de l’élément XML |
+| valeurElément | Text, Variable | &#8594; | Nouvelle valeur de l’élément |
+| * | Opérateur | &#8594; | Si passé : définir la valeur en CDATA |
 
 <!-- END REF-->
 

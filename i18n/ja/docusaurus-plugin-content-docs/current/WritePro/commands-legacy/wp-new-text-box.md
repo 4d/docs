@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new-text-box
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* ; *pageNum* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* : Object ; *pageNum* : Number ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP New text box.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/printers-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *arrayNoms* {; *altNomesArray* {; *modelosArray*}} )<!-- END REF-->
+<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *arrayNoms* : Text array {; *altNomesArray* : Text array {; *modelosArray* : Text array}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resID* {; *resFile*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get string resource.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resID | Integer | &#8594;  | リソースID番号 |
-| resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resID | Integer | &#8594; | リソースID番号 |
+| resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 | 戻り値 | Text | &#8592; | 'STR 'リソースの内容 |
 
 <!-- END REF-->

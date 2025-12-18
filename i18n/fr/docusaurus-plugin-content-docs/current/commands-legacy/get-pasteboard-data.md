@@ -5,11 +5,11 @@ slug: /commands/get-pasteboard-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *typeDonnées* ; *données* )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *typeDonnées* : Text ; *données* : Blob )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeDonnées | Text | &#8594;  | Type de données à extraire du conteneur |
+| typeDonnées | Text | &#8594; | Type de données à extraire du conteneur |
 | données | Blob | &#8592; | Données extraites du conteneur |
 
 <!-- END REF-->

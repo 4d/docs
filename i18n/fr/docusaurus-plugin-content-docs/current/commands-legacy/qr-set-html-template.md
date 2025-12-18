@@ -5,12 +5,12 @@ slug: /commands/qr-set-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *zone* ; *modèle* )<!-- END REF-->
+<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *zone* : Integer ; *modèle* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| modèle | Text | &#8594;  | Code du modèle HTML |
+| zone | Integer | &#8594; | Référence de la zone |
+| modèle | Text | &#8594; | Code du modèle HTML |
 
 <!-- END REF-->
 

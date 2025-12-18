@@ -5,11 +5,11 @@ slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *tabla* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Before selection.Syntax-->**Before selection** ( *tabla* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
 | Resultado | Boolean | &#8592; | Sí (TRUE) o No (FALSE) |
 
 <!-- END REF-->

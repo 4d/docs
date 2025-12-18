@@ -5,11 +5,11 @@ slug: /commands/show-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** ( *fenêtre* : Integer )}<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/create-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* {; *fileType*} ) : Time<!-- END REF-->
+<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Create document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

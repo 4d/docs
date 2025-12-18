@@ -5,14 +5,14 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* ; *sendPrivKey* {; *recipPubKey*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* : Blob ; *sendPrivKey* : Blob {; *recipPubKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | toEncrypt | Blob | &#8596; | 暗号化するデータ |
-||| | 暗号化されたデータ |
-| sendPrivKey | Blob | &#8594;  | 送信者の秘密鍵 |
-| recipPubKey | Blob | &#8594;  | 受信者の公開鍵 |
+|  |  |  | 暗号化されたデータ |
+| sendPrivKey | Blob | &#8594; | 送信者の秘密鍵 |
+| recipPubKey | Blob | &#8594; | 受信者の公開鍵 |
 
 <!-- END REF-->
 

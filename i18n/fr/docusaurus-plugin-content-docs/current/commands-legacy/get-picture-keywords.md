@@ -5,13 +5,13 @@ slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *image* ; *tabMotsclés* {; *} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *image* : Picture, Picture ; *tabMotsclés* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture, Picture | &#8594;  | Image dont vous souhaitez lire les mots-clés associés |
+| image | Picture, Picture | &#8594; | Image dont vous souhaitez lire les mots-clés associés |
 | tabMotsclés | Text array | &#8592; | Tableau contenant les mots-clés extraits |
-| * | Opérateur | &#8594;  | Si passé = utiliser les valeurs distinctes |
+| * | Opérateur | &#8594; | Si passé = utiliser les valeurs distinctes |
 
 <!-- END REF-->
 

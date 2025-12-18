@@ -5,12 +5,12 @@ slug: /commands/find-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find window.Syntax-->**Find window** ( *izquierda* ; *superior* {; *parteVentana*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *izquierda* : Integer ; *superior* : Integer {; *parteVentana* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find window.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &#8594;  | Coordenada global izquierda |
-| superior | Integer | &#8594;  | Coordenada global superior |
+| izquierda | Integer | &#8594; | Coordenada global izquierda |
+| superior | Integer | &#8594; | Coordenada global superior |
 | parteVentana | Integer | &#8592; | Número de parte de ventana |
 | Resultado | Integer | &#8592; | Número de referencia de la ventana |
 

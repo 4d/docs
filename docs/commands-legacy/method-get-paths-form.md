@@ -5,15 +5,14 @@ slug: /commands/method-get-paths-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTable* ;} *arrPaths* {; *filter*}{; *stamp*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTable* : Table ;} *arrPaths* : Text array {; *filter* : Text}{; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table reference |
 | arrPaths | Text array | &#8592; | Array of method paths and names |
 | filter | Text | &#8594;  | Name filter |
-| stamp | Real | &#8594;  | Minimum value of stamp |
-| &#8592; | New current value |
+| stamp | Real | &#8596;  | *in:* Minimum value of stamp<br/>*out:* New current value |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->

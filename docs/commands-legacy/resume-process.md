@@ -5,7 +5,7 @@ slug: /commands/resume-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.RESUME PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

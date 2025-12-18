@@ -5,12 +5,12 @@ slug: /commands/wa-get-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( {* ;} *objeto* ; *arrFiltros* ; *arrAutorizRechazar* )<!-- END REF-->
+<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( * ; *objeto* : Text ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<br/>**WA GET EXTERNAL LINKS FILTERS** ( *objeto* : Field, Variable ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | arrFiltros | Text array | &#8592; | Array de filtros |
 | arrAutorizRechazar | Boolean array | &#8592; | Array autorizar-rechazar |
 

@@ -5,11 +5,11 @@ slug: /commands/show-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *janela* )}<!-- END REF-->
+<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** ( *janela* : Integer )}<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da janela ou processo atual da janela de primeiro plano, se omitido |
+| janela | Integer | &#8594; | Número de referência da janela ou processo atual da janela de primeiro plano, se omitido |
 
 <!-- END REF-->
 

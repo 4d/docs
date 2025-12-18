@@ -5,12 +5,12 @@ slug: /commands/dom-get-xml-attribute-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *elementRef* ; *nomAtrib* ; *valorAtrib* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *elementRef* : Text ; *nomAtrib* : Text ; *valorAtrib* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
-| nomAtrib | Text | &#8594;  | Nombre del atributo |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
+| nomAtrib | Text | &#8594; | Nombre del atributo |
 | valorAtrib | Variable | &#8592; | Valor del atributo |
 
 <!-- END REF-->

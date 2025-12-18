@@ -5,7 +5,7 @@ slug: /commands/set-assert-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *assertions* {; *} )<!-- END REF-->
+<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *assertions* : Boolean {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

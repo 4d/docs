@@ -5,11 +5,11 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomeVar* ) : Pointer<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomeVar* : Text ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeVar | Text | &#8594;  | Nome da variável processo ou interprocesso |
+| nomeVar | Text | &#8594; | Nome da variável processo ou interprocesso |
 | Resultado | Pointer | &#8592; | Ponteiro a variável processo ou interprocesso |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item style.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| process | Integer | &#8594;  | プロセス参照番号 |
+| menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| process | Integer | &#8594; | プロセス参照番号 |
 | 戻り値 | Integer | &#8592; | 現在のメニュー項目スタイル |
 
 <!-- END REF-->

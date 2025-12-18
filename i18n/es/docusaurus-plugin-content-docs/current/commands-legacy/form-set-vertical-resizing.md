@@ -5,13 +5,13 @@ slug: /commands/form-set-vertical-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *redimension* {; *alturaMin* {; *alturaMax*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *redimension* : Boolean {; *alturaMin* : Integer {; *alturaMax* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| redimension | Boolean | &#8594;  | True: el formulario es redimensionable verticalmente False: el formulario no puede ser redimensionado verticalmente |
-| alturaMin | Integer | &#8594;  | Altura mínima del formulario (píxeles) |
-| alturaMax | Integer | &#8594;  | Altura máxima del formulario (píxeles) |
+| redimension | Boolean | &#8594; | True: el formulario es redimensionable verticalmente False: el formulario no puede ser redimensionado verticalmente |
+| alturaMin | Integer | &#8594; | Altura mínima del formulario (píxeles) |
+| alturaMax | Integer | &#8594; | Altura máxima del formulario (píxeles) |
 
 <!-- END REF-->
 

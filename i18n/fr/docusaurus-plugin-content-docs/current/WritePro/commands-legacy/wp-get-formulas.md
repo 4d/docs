@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-formulas
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get formulas.Syntax-->**WP Get formulas** ( *objCible* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Get formulas.Syntax-->**WP Get formulas** ( *objCible* : Object ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get formulas.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

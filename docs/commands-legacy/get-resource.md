@@ -5,14 +5,13 @@ slug: /commands/get-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* ; *resID* ; *resData* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* : Text ; *resID* : Integer ; *resData* : Blob {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | 4-character resource type |
 | resID | Integer | &#8594;  | Resource ID number |
-| resData | Blob | &#8594;  | BLOB field or variable to receive the data |
-| &#8592; | Contents of the resource |
+| resData | Blob | &#8596;  | *in:* BLOB field or variable to receive the data <br/>*out:* Contents of the resource |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
 
 <!-- END REF-->
@@ -31,11 +30,8 @@ If you pass a valid resource file reference number in *resFile*, the resource is
 
 ## Platform independence 
 
- Remember that you are working with Mac OS-based resources. No matter what the platform, internal resource data such as Long Integer is stored using Macintosh byte ordering. On Windows, the data for standard resources (such as string list and pictures resources) is automatically byte swapped when necessary. On the other hand, if you create and use your own internal data structures, it is up to you to byte swap the data you extract from the BLOB (i.e., passing Macintosh byte ordering to a command such as [BLOB to longint](blob-to-longint.md)).
+ Remember that you are working with macOS-based resources. No matter what the platform, internal resource data such as Long Integer is stored using Macintosh byte ordering. On Windows, the data for standard resources (such as string list and pictures resources) is automatically byte swapped when necessary. On the other hand, if you create and use your own internal data structures, it is up to you to byte swap the data you extract from the BLOB (i.e., passing Macintosh byte ordering to a command such as [BLOB to longint](blob-to-longint.md)).
 
-## Example 
-
-See the example for the  command.
 
 ## System variables and sets 
 

@@ -5,15 +5,15 @@ slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objetos* ; *opções* ; *metodo* {; *arrayTabelas* {; *arrayCampos*}} )}<!-- END REF-->
+<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ( *objetos* : Integer ; *opções* : Integer ; *metodo* : Text {; *arrayTabelas* : Integer array {; *arrayCampos* : Integer array}} )}<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objetos | Integer | &#8594;  | Objeto a ser verificado |
-| opções | Integer | &#8594;  | Opções de verificação |
-| metodo | Text | &#8594;  | Nome do método 4D de retrochamada |
-| arrayTabelas | Integer array | &#8594;  | Números de tabelas a serem verificadas |
-| arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Número de índices a serem verificados |
+| objetos | Integer | &#8594; | Objeto a ser verificado |
+| opções | Integer | &#8594; | Opções de verificação |
+| metodo | Text | &#8594; | Nome do método 4D de retrochamada |
+| arrayTabelas | Integer array | &#8594; | Números de tabelas a serem verificadas |
+| arrayCampos | Integer array | &#8594; | 2D array, numbers of indexes to be checked |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( *arrActivities* {; *} )<br/>**ACTIVITY SNAPSHOT** ( *arrUUID* ; *arrStart* ; *arrDuration* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( *arrActivities* : Object array, テキスト配列 {; *} )<br/>**ACTIVITY SNAPSHOT** ( *arrUUID* : Object array, テキスト配列 ; *arrStart* : Text array ; *arrDuration* : Integer array ; *arrInfo* : Text array {; *arrDetails* : Object array}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | arrDuration | Integer array | &#8592; | オペレーションの所要時間(ミリ秒単位) |
 | arrInfo | Text array | &#8592; | オペレーションを説明するラベル |
 | arrDetails | Object array | &#8592; | コンテキストと、(あれば)サブオペレーションの詳細 |
-| * | 演算子 | &#8594;  | 渡した場合、サーバーの状態を取得 |
+| * | 演算子 | &#8594; | 渡した場合、サーバーの状態を取得 |
 
 <!-- END REF-->
 

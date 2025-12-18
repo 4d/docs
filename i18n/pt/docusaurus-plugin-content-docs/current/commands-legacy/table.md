@@ -5,24 +5,24 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( *numTabela* ) : Pointer<br/>**Table** ( *ptrTabela* ) : Integer<br/>**Table** ( *ptrCampo* ) : Integer<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *numTabela* : Integer ) : Pointer<br/>**Table** ( *ptrTabela* : Pointer ) : Integer<br/>**Table** ( *ptrCampo* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela | Integer | &#8594;  | Número de tabela |
-| ptrTabela | Pointer | &#8594;  | Ponteiro de Tabela |
-| ptrCampo | Pointer | &#8594;  | Ponteiro de Campo |
-| Resultado | any | &#8592; | Ponteiro tabela, se um número de tabela for passado<br/>Número de tabela, se um ponteiro de tabela ou um ponteiro de Campo for passado |
+| numTabela | Integer | &#8594; | Número de tabela |
+| ptrTabela | Pointer | &#8594; | Ponteiro de Tabela |
+| ptrCampo | Pointer | &#8594; | Ponteiro de Campo |
+| Resultado | Pointer, Integer | &#8592; | Ponteiro tabela, se um número de tabela for passado<br/>Número de tabela, se um ponteiro de tabela ou um ponteiro de Campo for passado |
 
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.Table.Summary-->O comando Table tem três sintaxes diferentes: 
+O comando Table tem três sintaxes diferentes: 
 
-* Se passa um número de tabela em *numTabela*, Table retorna um ponteiro para a tabela.<!-- END REF-->
-* Se passa um ponteiro de tabela em *Ponteiro*, Table retorna o número da tabela.
-* Se passa um ponteiro de campo em *Ponteiro*, Table retorna o número de tabela do campo.
+<!--REF #_command_.Table.Summary-->* Se passa um número de tabela em *numTabela*, Table retorna um ponteiro para a tabela.
+* Se passa um ponteiro de tabela em *ptrTabela*, Table retorna o número da tabela.
+* Se passa um ponteiro de campo em *ptrCampo*, Table retorna o número de tabela do campo.<!-- END REF-->
 
 ## Exemplo 1 
 

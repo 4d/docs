@@ -5,12 +5,12 @@ slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *objeto* ; *arrEvents* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *objeto* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *objeto* : Field, Variable ; *arrEvents* : Integer array )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto "" para designar el formulario (si se especifica *) o  Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto "" para designar el formulario (si se especifica *) o  Campo o variable (si se omite *) |
 | arrEvents | Integer array | &#8592; | Array de eventos desactivados |
 
 <!-- END REF-->

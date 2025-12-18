@@ -5,11 +5,11 @@ slug: /commands/structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Structure file.Syntax-->**Structure file** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Devuelve el archivo de estructura de la base local |
+| * | Operador | &#8594; | Devuelve el archivo de estructura de la base local |
 | Resultado | Text | &#8592; | Nombre largo del archivo de estructura de la base |
 
 <!-- END REF-->

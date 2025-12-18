@@ -5,7 +5,7 @@ slug: /commands/picture-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *picture* ; *pictureBlob* ; *codec* )<!-- END REF-->
+<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *picture* : Picture ; *pictureBlob* : Blob ; *codec* : Text )<!-- END REF-->
 <!--REF #_command_.PICTURE TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

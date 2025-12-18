@@ -5,11 +5,11 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tickCount | Integer | &#8594;  | Nombre de ticks ou -1 = Déclenchement dès que possible |
+| tickCount | Integer | &#8594; | Nombre de ticks ou -1 = Déclenchement dès que possible |
 
 <!-- END REF-->
 

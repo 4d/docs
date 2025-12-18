@@ -5,14 +5,14 @@ slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( {* ;} *objeto* {; *inicioSel* {; *finSel*}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )  : Text<br/>**ST Get text** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
-| inicioSel | Integer | &#8594;  | Inicio de la selección |
-| finSel | Integer | &#8594;  | Fin de la selección |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
+| inicioSel | Integer | &#8594; | Inicio de la selección |
+| finSel | Integer | &#8594; | Fin de la selección |
 | Resultado | Text | &#8592; | Texto incluyendo las etiquetas de estilo |
 
 <!-- END REF-->

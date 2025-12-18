@@ -5,7 +5,7 @@ slug: /commands/sql-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** {( *dataEntry* ; *userName* ; *password* ; * )}<!-- END REF-->
+<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ( *dataEntry* : Text ; *userName* : Text ; *password* : Text ; * )}<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

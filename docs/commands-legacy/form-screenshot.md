@@ -5,7 +5,7 @@ slug: /commands/form-screenshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*aTable* ;} *formName* ;} *formPict* {; *pageNum*} )<!-- END REF-->
+<!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*aTable* : Table ;} *formName* : Text ;} *formPict* : Picture {; *pageNum* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

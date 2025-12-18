@@ -5,15 +5,15 @@ slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *objetoSubForm* ; *nomeMetodo* {; *retorno* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; *return* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; * {; ...*param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objetoSubForm | Text | &#8594;  | Nome de objeto subformulário |
-| nomeMetodo | Object, Text | &#8594;  | Nome do projeto de método a ser executado |
-| retorno | *, Variable | &#8594;  | * Se método não retornar um valor |
-| &#8592; | Valor retornado pelo método |
-| param | Expression | &#8594;  | Parâmetros a passar ao método |
+| objetoSubForm | Text | &#8594; | Nome de objeto subformulário |
+| nomeMetodo | Object, Text | &#8594; | Nome do projeto de método a ser executado |
+| retorno | Variable | &#8592; | Value returned by formula (if any) |
+| \* | Operator | &#8594; | Formula does not return a value |
+| param | Expression | &#8594; | Parâmetros a passar ao método |
 
 <!-- END REF-->
 

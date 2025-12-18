@@ -5,12 +5,12 @@ slug: /commands/wa-back-url-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( * ; *objeto* : Text ) : Boolean<br/>**WA Back URL available** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.WA Back URL available.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Boolean | &#8592; | True si hay un URL anterior en la secuenca de URLs abiertos; de lo contrario, False |
 
 <!-- END REF-->

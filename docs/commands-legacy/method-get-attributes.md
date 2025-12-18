@@ -5,7 +5,7 @@ slug: /commands/method-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *path* ; *attributes* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *path* : Text, Text array ; *attributes* : Object, Object array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

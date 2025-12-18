@@ -5,11 +5,11 @@ slug: /commands/type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Type.Syntax-->**Type** ( *champVar* ) : Integer<!-- END REF-->
+<!--REF #_command_.Type.Syntax-->**Type** ( *champVar* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champVar | Field, Variable | &#8594;  | Champ ou variable à tester |
+| champVar | Field, Variable | &#8594; | Champ ou variable à tester |
 | Résultat | Integer | &#8592; | Numéro du type de données |
 
 <!-- END REF-->

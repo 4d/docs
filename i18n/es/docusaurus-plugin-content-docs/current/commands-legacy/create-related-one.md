@@ -5,11 +5,11 @@ slug: /commands/create-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *campo* )<!-- END REF-->
+<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *campo* : Field )<!-- END REF-->
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo Muchos |
+| campo | Field | &#8594; | Campo Muchos |
 
 <!-- END REF-->
 

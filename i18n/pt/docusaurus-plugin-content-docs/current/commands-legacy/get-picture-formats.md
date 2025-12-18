@@ -5,11 +5,11 @@ slug: /commands/get-picture-formats
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *imagem* ; *codecID* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *imagem* : Picture ; *codecID* : Text array )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#8594;  | Imagem a analisar |
+| imagem | Picture | &#8594; | Imagem a analisar |
 | codecID | Text array | &#8592; | ID de codec de imagem |
 
 <!-- END REF-->

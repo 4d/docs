@@ -5,12 +5,12 @@ slug: /commands/set-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *aField* ; *priority* )<!-- END REF-->
+<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *aField* : Field ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | Field whose index(es) priority value has to be set for the session |
-| priority | Integer | &#8594;  | Cache priority value for the field index(es) |
+| aField | Field | &#8594; | Field whose index(es) priority value has to be set for the session |
+| priority | Integer | &#8594; | Cache priority value for the field index(es) |
 
 <!-- END REF-->
 

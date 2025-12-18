@@ -5,12 +5,12 @@ slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* ; *instruction* )<!-- END REF-->
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* : Time ; *instruction* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
-| instruction | Text | &#8594;  | Instruction à insérer dans le document |
+| document | Time | &#8594; | Référence du document ouvert |
+| instruction | Text | &#8594; | Instruction à insérer dans le document |
 
 <!-- END REF-->
 

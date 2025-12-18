@@ -5,13 +5,13 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *tableN* ; *aller* ; *retour* )<br/>**SET FIELD RELATION** ( *champN* ; *aller* ; *retour* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *tableN* : Table, Champ ; *aller* : Integer ; *retour* : Integer )<br/>**SET FIELD RELATION** ( *champN* : Table, Champ ; *aller* : Integer ; *retour* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableN &#124; champN | Table, Champ | &#8594;  | Table de départ des liens ou Champ de départ du lien |
-| aller | Integer | &#8594;  | Statut du lien aller partant du champ ou des liens aller partant de la table |
-| retour | Integer | &#8594;  | Statut du lien retour partant du champ ou des liens retour partant de la table |
+| tableN &#124; champN | Table, Champ | &#8594; | Table de départ des liens ou Champ de départ du lien |
+| aller | Integer | &#8594; | Statut du lien aller partant du champ ou des liens aller partant de la table |
+| retour | Integer | &#8594; | Statut du lien retour partant du champ ou des liens retour partant de la table |
 
 <!-- END REF-->
 

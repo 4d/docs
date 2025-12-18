@@ -5,13 +5,13 @@ slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *lista* ; refElem | * ; *editavel* {; *estilos* {; *icone* {; *cor*}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *lista* : Integer, Text ; refElem | * ; *editavel* : Boolean {; *estilos* : Integer {; *icone* : Text, Integer {; *cor* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| refElem &#124; * | Operador, Inteiro longo | &#8594;  | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
+| * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| refElem &#124; * | Operador, Inteiro longo | &#8594; | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
 | editavel | Boolean | &#8592; | TRUE = Editável, FALSE = Não editável |
 | estilos | Integer | &#8592; | Estilo de fonte do elemento |
 | icone | Text, Integer | &#8592; | Número de recurso Mac OS ‘cicn’, ou 65536 + número de recurso Mac OS ‘PICT’, ou 131072 + número de referência de imagem |

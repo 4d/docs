@@ -5,11 +5,11 @@ slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *statement* )<!-- END REF-->
+<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *statement* : Text )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| statement | Text | &#8594;  | 実行するコード |
+| statement | Text | &#8594; | 実行するコード |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/quit-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** {( *tempo* )}<!-- END REF-->
+<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** ( *tempo* : Integer )}<!-- END REF-->
 <!--REF #_command_.QUIT 4D.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tempo | Integer | &#8594;  | Tempo (em seg) antes de sair do servidor |
+| tempo | Integer | &#8594; | Tempo (em seg) antes de sair do servidor |
 
 <!-- END REF-->
 

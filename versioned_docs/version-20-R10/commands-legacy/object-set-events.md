@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name or "" to designate the form (if * is specified) or<br/>Field or variable (if * is omitted) |
-| arrEvents | Array integer | &#8594;  | Array of events to set |
+| arrEvents | Integer array | &#8594;  | Array of events to set |
 | mode | Integer | &#8594;  | Activation mode for events defined in arrEvents |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/web-service-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *option* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,13 +5,13 @@ slug: /commands/picture-codec-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *arrayCodec* {; *arrayNomes*}{; *} )<!-- END REF-->
+<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *arrayCodec* : Text array {; *arrayNomes* : Text array}{; *} )<!-- END REF-->
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrayCodec | Text array | &#8592; | Identificadores de codecs de imagens disponíveis |
 | arrayNomes | Text array | &#8592; | Nomes dos Codecs de imagens |
-| * | Operador | &#8594;  | Retorna a lista de Codecs de leitura |
+| * | Operador | &#8594; | Retorna a lista de Codecs de leitura |
 
 <!-- END REF-->
 

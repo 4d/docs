@@ -5,12 +5,12 @@ slug: /commands/convert-path-posix-to-system
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *posixPath* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *posixPath* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| posixPath | Text | &#8594;  | POSIXパス名 |
-| * | 演算子 | &#8594;  | エンコーディングオプション |
+| posixPath | Text | &#8594; | POSIXパス名 |
+| * | 演算子 | &#8594; | エンコーディングオプション |
 | 戻り値 | Text | &#8592; | システムシンタックスで表現されたパス名 |
 
 <!-- END REF-->

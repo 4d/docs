@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-element-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *elementRef* ; *elementName* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *elementRef* : Text ; *elementName* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
+| elementRef | Text | &#8594; | XML要素参照 |
 | elementName | Variable | &#8592; | 要素の名前 |
 
 <!-- END REF-->

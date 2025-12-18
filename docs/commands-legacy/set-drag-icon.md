@@ -5,7 +5,7 @@ slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* {; *horOffset* {; *vertOffset*}} )<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* : Picture {; *horOffset* : Integer {; *vertOffset* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

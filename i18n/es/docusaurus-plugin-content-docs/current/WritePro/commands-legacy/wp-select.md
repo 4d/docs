@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *areaWP*;} {*targetObj*} {; *rangoInicio* ; *rangoFinal*} )<!-- END REF-->
+<!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *areaWP* : Text, Object;} {*targetObj* : Object} {; *rangoInicio* : Integer ; *rangoFinal* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

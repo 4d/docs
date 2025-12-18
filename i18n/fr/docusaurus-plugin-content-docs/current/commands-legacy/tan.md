@@ -5,11 +5,11 @@ slug: /commands/tan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tan.Syntax-->**Tan** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Tan.Syntax-->**Tan** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#8594;  | Nombre, exprimé en radians, dont vous voulez connaître la tangente |
+| nombre | Real | &#8594; | Nombre, exprimé en radians, dont vous voulez connaître la tangente |
 | Résultat | Real | &#8592; | Tangente de nombre |
 
 <!-- END REF-->

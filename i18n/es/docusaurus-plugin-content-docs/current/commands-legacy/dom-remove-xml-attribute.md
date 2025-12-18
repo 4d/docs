@@ -5,12 +5,12 @@ slug: /commands/dom-remove-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *refElement* ; *nomAtrib* )<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *refElement* : Text ; *nomAtrib* : Text )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement | Text | &#8594;  | Referencia del elemento XML |
-| nomAtrib | Text | &#8594;  | Atributo a borrar |
+| refElement | Text | &#8594; | Referencia del elemento XML |
+| nomAtrib | Text | &#8594; | Atributo a borrar |
 
 <!-- END REF-->
 

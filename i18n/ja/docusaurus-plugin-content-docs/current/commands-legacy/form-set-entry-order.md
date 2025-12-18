@@ -5,12 +5,12 @@ slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *objectNames* {; *pageNumber*} )<!-- END REF-->
+<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *objectNames* : Text array {; *pageNumber* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectNames | Text array | &#8594;  | 入力順に並べられたオブジェクト名の配列 |
-| pageNumber | Integer | &#8594;  | 入力順を指定するページの番号 (省略時はカレントページ) |
+| objectNames | Text array | &#8594; | 入力順に並べられたオブジェクト名の配列 |
+| pageNumber | Integer | &#8594; | 入力順を指定するページの番号 (省略時はカレントページ) |
 
 <!-- END REF-->
 

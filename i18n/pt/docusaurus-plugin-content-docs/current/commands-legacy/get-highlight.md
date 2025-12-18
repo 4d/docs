@@ -5,12 +5,12 @@ slug: /commands/get-highlight
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {*Objeto* ;} *area* ; *inicioSel* ; *fimSel* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {*Objeto* : * ;} *area* : Field, Variable, any ; *inicioSel* : Integer ; *fimSel* : Integer )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Objeto | * | &#8594;  | Se especificado, objeto é um nome de objeto (string=. Se omitido, objeto é um campo ou variável |
-| area | Field, Variable, any | &#8594;  | Nome de objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| Objeto | * | &#8594; | Se especificado, objeto é um nome de objeto (string=. Se omitido, objeto é um campo ou variável |
+| area | Field, Variable, any | &#8594; | Nome de objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
 | inicioSel | Integer | &#8592; | Posição inicial da seleção atual de texto |
 | fimSel | Integer | &#8592; | Posição final da seleção atual de texto |
 

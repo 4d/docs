@@ -5,12 +5,12 @@ slug: /commands/lowercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *cadeia* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Lowercase.Syntax-->**Lowercase** ( *cadeia* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Lowercase.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeia | Text | &#8594;  | Cadeia que vai passar para minúsculas |
-| * | Operador | &#8594;  | Se passado: manter os acentos |
+| cadeia | Text | &#8594; | Cadeia que vai passar para minúsculas |
+| * | Operador | &#8594; | Se passado: manter os acentos |
 | Resultado | Text | &#8592; | Cadeia em letras minúsculas |
 
 <!-- END REF-->

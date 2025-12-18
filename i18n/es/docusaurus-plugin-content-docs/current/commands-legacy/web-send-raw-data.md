@@ -5,12 +5,12 @@ slug: /commands/web-send-raw-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *datos* {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *datos* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| datos | Blob | &#8594;  | Datos HTTP a enviar |
-| * | Operador | &#8594;  | Envío en trozos (chunked) |
+| datos | Blob | &#8594; | Datos HTTP a enviar |
+| * | Operador | &#8594; | Envío en trozos (chunked) |
 
 <!-- END REF-->
 

@@ -5,11 +5,12 @@ slug: /commands/page-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( *|> )}<!-- END REF-->
+<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** ( *|> )}<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| *&#124;> | &#8594;  | * Cancela o trabalho de impressão iniciado com o Formulário de Impressão, ou > para forçar um trabalho de impressão. |
+| * | Operator | &#8594; | Cancel printing job started with Print form |
+| > | Operator | &#8594; | Force one printing job |
 
 <!-- END REF-->
 

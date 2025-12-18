@@ -5,11 +5,11 @@ slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** {( *groupes* )}<!-- END REF-->
+<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ( *groupes* : Collection )}<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| groupes | Collection | &#8594;  | Nom(s) de groupe(s) au(x)quel(s) le compte utilisateur doit appartenir durant la session |
+| groupes | Collection | &#8594; | Nom(s) de groupe(s) au(x)quel(s) le compte utilisateur doit appartenir durant la session |
 
 <!-- END REF-->
 

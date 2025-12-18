@@ -5,14 +5,14 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* ; *sendPrivKey* {; *recipPubKey*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* : Blob ; *sendPrivKey* : Blob {; *recipPubKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| toEncrypt | Blob | &#8596;  | Dados a encriptar |
-||| | Dados encriptados |
-| sendPrivKey | Blob | &#8594;  | Chave privada do emissor |
-| recipPubKey | Blob | &#8594;  | Chave pública do receptor |
+| toEncrypt | Blob | &#8596; | Dados a encriptar |
+|  |  |  | Dados encriptados |
+| sendPrivKey | Blob | &#8594; | Chave privada do emissor |
+| recipPubKey | Blob | &#8594; | Chave pública do receptor |
 
 <!-- END REF-->
 

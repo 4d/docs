@@ -5,13 +5,13 @@ slug: /commands/object-get-list-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *objet* {; *typeListe*} ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( * ; *objet* : Text {; *typeListe* : Integer} ) : Text<br/>**OBJECT Get list name** ( *objet* : Field, Variable {; *typeListe* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| typeListe | Integer | &#8594; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
 | Résultat | Text | &#8592; | Nom de l’énumération (définie en mode Développement) |
 
 <!-- END REF-->

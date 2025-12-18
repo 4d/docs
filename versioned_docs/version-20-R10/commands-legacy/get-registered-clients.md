@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | clientList | Text array | &#8592; | List of the saved 4D Clients |
-| methods | Array integer | &#8592; | List of the methods to be executed |
+| methods | Integer array | &#8592; | List of the methods to be executed |
 
 <!-- END REF-->
 

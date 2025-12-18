@@ -5,20 +5,19 @@ slug: /commands/users-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *users* )<!-- END REF-->
+<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *users* : Blob )<!-- END REF-->
 <!--REF #_command_.USERS TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| users | Blob | &#8594;  | BLOB that must contain users |
-| &#8592; | User accounts (encrypted) |
+| users | Blob | &#8596;  | *in:* BLOB that must contain users<br/>*out:* User accounts (encrypted) |
 
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.USERS TO BLOB.Summary-->**Compatibility Note:* This command only works in binary databases.<!-- END REF--> It always returns an empty BLOB in projects.* 
+**Compatibility Note:** This command only works in binary databases. It always returns an empty BLOB in projects.
 
-The **USERS TO BLOB** command stores in the BLOB *users* the list of all user accounts and database groups created by the Administrator.
+<!--REF #_command_.USERS TO BLOB.Summary-->The **USERS TO BLOB** command stores in the BLOB *users* the list of all user accounts and database groups created by the Administrator.<!-- END REF-->
 
 Only the database Administrator or the Designer can execute this command. If another user tries to execute it, the command does nothing and a privilege error (-9949) is generated.
 

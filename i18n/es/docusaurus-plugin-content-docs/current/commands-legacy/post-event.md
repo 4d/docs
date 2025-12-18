@@ -5,17 +5,17 @@ slug: /commands/post-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *que* ; *mensaje* ; *cuando* ; *ratonX* ; *ratonY* ; *modificadores* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *que* : Integer ; *mensaje* : Integer ; *cuando* : Integer ; *ratonX* : Integer ; *ratonY* : Integer ; *modificadores* : Integer {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| que | Integer | &#8594;  | Tipo de evento |
-| mensaje | Integer | &#8594;  | Mensaje del evento |
-| cuando | Integer | &#8594;  | Momento del evento expresado en tics |
-| ratonX | Integer | &#8594;  | Coordenada horizontal del ratón |
-| ratonY | Integer | &#8594;  | Coordenada vertical del ratón |
-| modificadores | Integer | &#8594;  | Estado de las teclas Modificadores |
-| proceso | Integer | &#8594;  | Número de referencia del proceso de destino o Fila de atención de los eventos de la aplicación, si se omite o si se pasa 0 |
+| que | Integer | &#8594; | Tipo de evento |
+| mensaje | Integer | &#8594; | Mensaje del evento |
+| cuando | Integer | &#8594; | Momento del evento expresado en tics |
+| ratonX | Integer | &#8594; | Coordenada horizontal del ratón |
+| ratonY | Integer | &#8594; | Coordenada vertical del ratón |
+| modificadores | Integer | &#8594; | Estado de las teclas Modificadores |
+| proceso | Integer | &#8594; | Número de referencia del proceso de destino o Fila de atención de los eventos de la aplicación, si se omite o si se pasa 0 |
 
 <!-- END REF-->
 

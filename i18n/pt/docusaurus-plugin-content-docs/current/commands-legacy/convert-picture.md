@@ -5,14 +5,13 @@ slug: /commands/convert-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT PICTURE.Syntax-->**CONVERT PICTURE** ( *imagem* ; *codec* {; *compressao*} )<!-- END REF-->
+<!--REF #_command_.CONVERT PICTURE.Syntax-->**CONVERT PICTURE** ( *imagem* : Picture ; *codec* : Text {; *compressao* : Real} )<!-- END REF-->
 <!--REF #_command_.CONVERT PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#8594;  | Imagem a ser convertida |
-| &#8592; | Imagem convertida |
-| codec | Text | &#8594;  | Codec de identificação de Imagem |
-| compressao | Real | &#8594;  | Qualidade da compressão |
+| imagem | Picture | &#8596; | *in:* Picture to be converted<br/>*out:* Converted picture |
+| codec | Text | &#8594; | Codec de identificação de Imagem |
+| compressao | Real | &#8594; | Qualidade da compressão |
 
 <!-- END REF-->
 

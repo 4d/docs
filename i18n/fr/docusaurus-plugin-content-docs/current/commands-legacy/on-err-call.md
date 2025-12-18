@@ -5,12 +5,12 @@ slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *méthodErreur* {; *portée*} )<!-- END REF-->
+<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *méthodErreur* : Text {; *portée* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| méthodErreur | Text | &#8594;  | Méthode de gestion d'erreur à appeler ou Chaîne vide pour désinstaller la méthode |
-| portée | Integer | &#8594;  | Portée de la méthode de gestion d'erreur |
+| méthodErreur | Text | &#8594; | Méthode de gestion d'erreur à appeler ou Chaîne vide pour désinstaller la méthode |
+| portée | Integer | &#8594; | Portée de la méthode de gestion d'erreur |
 
 <!-- END REF-->
 

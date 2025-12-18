@@ -5,13 +5,13 @@ slug: /commands/post-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* {; *modifiers* {; *process*}} )<!-- END REF-->
+<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* : Integer {; *modifiers* : Integer {; *process* : Integer}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| code | Integer | &#8594;  | 文字コードまたはファンクションキーコード |
-| modifiers | Integer | &#8594;  | モディファイアキーのステータス |
-| process | Integer | &#8594;  | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
+| code | Integer | &#8594; | 文字コードまたはファンクションキーコード |
+| modifiers | Integer | &#8594; | モディファイアキーのステータス |
+| process | Integer | &#8594; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
 
 <!-- END REF-->
 

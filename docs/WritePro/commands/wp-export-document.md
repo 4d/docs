@@ -4,7 +4,7 @@ title: WP EXPORT DOCUMENT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP EXPORT DOCUMENT.Syntax-->**WP EXPORT DOCUMENT** ( *wpDoc* ; *filePath* {; *format* {; *option*}} )<br/>**WP EXPORT DOCUMENT** ( *wpDoc* ; *fileObj* {; *format* {; *option*}} )<!-- END REF-->
+<!--REF #_command_.WP EXPORT DOCUMENT.Syntax-->**WP EXPORT DOCUMENT** ( *wpDoc* : Object ; *filePath* : Text {; *format* : Integer {; *option* : Object, Integer}} )<br/>**WP EXPORT DOCUMENT** ( *wpDoc* : Object ; *fileObj* : 4D.File {; *format* : Integer {; *option* : Object, Integer}} )<!-- END REF-->
 <!--REF #_command_.WP EXPORT DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

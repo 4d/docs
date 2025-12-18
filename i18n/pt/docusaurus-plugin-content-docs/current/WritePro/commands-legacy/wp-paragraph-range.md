@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-paragraph-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Paragraph range.Syntax-->**WP Paragraph range** ( *faixaObj* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Paragraph range.Syntax-->**WP Paragraph range** ( *faixaObj* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Paragraph range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

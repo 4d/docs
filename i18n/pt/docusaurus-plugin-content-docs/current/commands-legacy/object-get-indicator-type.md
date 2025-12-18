@@ -5,12 +5,12 @@ slug: /commands/object-get-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get indicator type** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get indicator type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
 | Resultado | Integer | &#8592; | Tipo de indicador |
 
 <!-- END REF-->

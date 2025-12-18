@@ -5,14 +5,14 @@ slug: /commands/method-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *rota* ; *tipoAtrib* ; *valorAtrib* {; *tipoAtrib2* ; *valorAtrib2* ; ... ; *tipoAtribN* ; *valorAtribN*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *rota* : Text ; *tipoAtrib* : Integer ; *valorAtrib* : Boolean, Text {; ...(*tipoAtrib* : Integer, *valorAtrib* : Boolean, Text)}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#8594;  | Rota do método projeto |
-| tipoAtrib | Integer | &#8594;  | Tipo de atributo |
-| valorAtrib | Boolean, Text | &#8594;  | True = selecionar atributo  False = desfazer a seleção do atributo |
-| * | Operador | &#8594;  | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text | &#8594; | Rota do método projeto |
+| tipoAtrib | Integer | &#8594; | Tipo de atributo |
+| valorAtrib | Boolean, Text | &#8594; | True = selecionar atributo  False = desfazer a seleção do atributo |
+| * | Operador | &#8594; | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

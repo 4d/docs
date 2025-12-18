@@ -5,11 +5,11 @@ slug: /commands/compress-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *blob* {; *compression*} )<!-- END REF-->
+<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *blob* : Blob {; *compression* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB to compress |
+| Blob | Blob | &#8594;  | BLOB to compress |
 | compression | Integer | &#8594;  | If not omitted: 1, compress as compact as possible 2, compress as fast as possible |
 
 <!-- END REF-->

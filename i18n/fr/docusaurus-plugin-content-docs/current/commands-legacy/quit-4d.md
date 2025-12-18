@@ -5,11 +5,11 @@ slug: /commands/quit-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** {( *délai* )}<!-- END REF-->
+<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** ( *délai* : Integer )}<!-- END REF-->
 <!--REF #_command_.QUIT 4D.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| délai | Integer | &#8594;  | Délai (secondes) avant que le serveur ne quitte |
+| délai | Integer | &#8594; | Délai (secondes) avant que le serveur ne quitte |
 
 <!-- END REF-->
 

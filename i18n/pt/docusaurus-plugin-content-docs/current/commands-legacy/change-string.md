@@ -5,13 +5,13 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *fonte* ; *novo* ; *posiçao* ) : Text<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *fonte* : Text ; *novo* : Text ; *posiçao* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &#8594;  | Cadeia original |
-| novo | Text | &#8594;  | Novos caracteres |
-| posiçao | Integer | &#8594;  | Onde começar as mudanças |
+| fonte | Text | &#8594; | Cadeia original |
+| novo | Text | &#8594; | Novos caracteres |
+| posiçao | Integer | &#8594; | Onde começar as mudanças |
 | Resultado | Text | &#8592; | Cadeia resultado |
 
 <!-- END REF-->

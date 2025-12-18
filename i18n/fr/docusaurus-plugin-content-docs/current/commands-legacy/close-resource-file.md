@@ -5,11 +5,11 @@ slug: /commands/close-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFichier* )<!-- END REF-->
+<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFichier* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources |
+| resFichier | Time | &#8594; | Numéro de référence de fichier de ressources |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/send-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ( *tabela* : Table )}<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual enviar o registro corrente, ou Tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela da qual enviar o registro corrente, ou Tabela padrão, se omitido |
 
 <!-- END REF-->
 

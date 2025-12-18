@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *objCible* {; *typeElement*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Get elements.Syntax-->**WP Get elements** ( *objCible* : Object {; *typeElement* : Integer} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get elements.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

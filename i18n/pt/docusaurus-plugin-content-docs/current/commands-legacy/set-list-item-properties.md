@@ -5,17 +5,17 @@ slug: /commands/set-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *lista* ; refElem | * ; *editavel* ; *estilos* {; *icone* {; *cor*}} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PROPERTIES.Syntax-->**SET LIST ITEM PROPERTIES** ( {* ;} *lista* : Integer, Text ; refElem | * ; *editavel* : Boolean ; *estilos* : Integer {; *icone* : Text, Integer {; *cor* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se for especificado, lista é um nome de objeto (string). Se omitido, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número lista referência (se* for omitido) ou Nome do objeto tipo lista (se * for passado) |
-| refElem &#124; * | Operador, Inteiro longo | &#8594;  | Número referência Item, ou 0 para o último item anexado a lista, ou * para o item de lista atual |
-| editavel | Boolean | &#8594;  | True = editável, False = não editável |
-| estilos | Integer | &#8594;  | Estilo de fonte para o item |
-| icone | Text, Integer | &#8594;  | Nome da Imagem ou número ("" ou 0 se não houver ícone) |
-| cor | Integer | &#8594;  | Valor de cor RGB ou -1 = volta para a cor original |
+| * | Operador | &#8594; | Se for especificado, lista é um nome de objeto (string). Se omitido, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número lista referência (se* for omitido) ou Nome do objeto tipo lista (se * for passado) |
+| refElem &#124; * | Operador, Inteiro longo | &#8594; | Número referência Item, ou 0 para o último item anexado a lista, ou * para o item de lista atual |
+| editavel | Boolean | &#8594; | True = editável, False = não editável |
+| estilos | Integer | &#8594; | Estilo de fonte para o item |
+| icone | Text, Integer | &#8594; | Nome da Imagem ou número ("" ou 0 se não houver ícone) |
+| cor | Integer | &#8594; | Valor de cor RGB ou -1 = volta para a cor original |
 
 <!-- END REF-->
 

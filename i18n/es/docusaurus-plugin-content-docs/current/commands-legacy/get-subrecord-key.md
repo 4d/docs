@@ -5,11 +5,11 @@ slug: /commands/get-subrecord-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *campoID* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *campoID* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get subrecord key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoID | Field | &#8594;  | Campo de tipo "Relación subtabla" o "Entero largo" de una relación subtabla anterior |
+| campoID | Field | &#8594; | Campo de tipo "Relación subtabla" o "Entero largo" de una relación subtabla anterior |
 | Resultado | Integer | &#8592; | Llave interna de la relación |
 
 <!-- END REF-->

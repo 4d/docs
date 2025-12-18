@@ -5,19 +5,18 @@ slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* : Integer ; *name* : Text ; *startup* : Text ; *password* : Text ; *nbLogin* : Integer ; *lastLogin* : Date {; *memberships* : Integer array {; *groupOwner* : Integer}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userID | Integer | &#8594;  | ユーザーアカウントのユニークなID番号、<br/>または -1= デザイナーに関連した新規ユーザーの追加 -2= 管理者に関連した新規ユーザーの追加 |
-| &#8592; | 追加したユーザーアカウント (あれば) のユニークなID番号 |
-| name | Text | &#8594;  | 新規ユーザーの名前 |
-| startup | Text | &#8594;  | 新規ユーザースタートアップメソッドの名前 |
-| password | Text | &#8594;  | 新しい (暗号化されていない) パスワード、または * を指定すると、パスワードは以前のまま |
-| nbLogin | Integer | &#8594;  | データベースへログインした回数 (バイナリデータベースのみ) |
-| lastLogin | Date | &#8594;  | データベースに最後にログインした日付 (バイナリデータベースのみ) |
-| memberships | Integer array | &#8594;  | ユーザーが属するグループのID番号 |
-| groupOwner | Integer | &#8594;  | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
+| userID | Integer | &#8596; | *in:* Unique ID number of user account, -1 for adding a user <br/>*out:* Unique ID number of added user account (if any) |
+| name | Text | &#8594; | 新規ユーザーの名前 |
+| startup | Text | &#8594; | 新規ユーザースタートアップメソッドの名前 |
+| password | Text | &#8594; | 新しい (暗号化されていない) パスワード、または * を指定すると、パスワードは以前のまま |
+| nbLogin | Integer | &#8594; | データベースへログインした回数 (バイナリデータベースのみ) |
+| lastLogin | Date | &#8594; | データベースに最後にログインした日付 (バイナリデータベースのみ) |
+| memberships | Integer array | &#8594; | ユーザーが属するグループのID番号 |
+| groupOwner | Integer | &#8594; | ユーザーグループオーナーの参照番号 (バイナリデータベースのみ) |
 | 戻り値 | Integer | &#8592; | 新規ユーザーのユニークなID番号 |
 
 <!-- END REF-->

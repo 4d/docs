@@ -5,14 +5,14 @@ slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* ; *mouseY* ; *mouseButton* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *mouseX* : Real ; *mouseY* : Real ; *mouseButton* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.MOUSE POSITION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | mouseX | Real | &#8592; | マウスの水平座標 |
 | mouseY | Real | &#8592; | マウスの垂直座標 |
 | mouseButton | Integer | &#8592; | マウスボタンンのステータス 0 = 何もしていない 1 = ボタンの押下 2 = 右マウスボタンの押下 3 = 両方のボタンの押下 |
-| * | 演算子 | &#8594;  | 指定した場合、グローバルの座標システムが使用される。 省略した場合、ローカルの座標システムが使用される |
+| * | 演算子 | &#8594; | 指定した場合、グローバルの座標システムが使用される。 省略した場合、ローカルの座標システムが使用される |
 
 <!-- END REF-->
 

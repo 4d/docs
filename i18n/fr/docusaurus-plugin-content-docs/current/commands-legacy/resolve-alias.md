@@ -5,11 +5,11 @@ slug: /commands/resolve-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *cheminAlias* ; *cheminCible* )<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *cheminAlias* : Text ; *cheminCible* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAlias | Text | &#8594;  | Nom ou chemin d’accès complet de l’alias/ du raccourci |
+| cheminAlias | Text | &#8594; | Nom ou chemin d’accès complet de l’alias/ du raccourci |
 | cheminCible | Text | &#8592; | Nom ou chemin d’accès complet de la cible de l’alias/du raccourci |
 
 <!-- END REF-->

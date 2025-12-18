@@ -5,28 +5,23 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *tableNum* ; *fieldNum* ) -> 戻り値 
-        
-            Field ( *fieldPtr* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *tableNum* : Integer ; *fieldNum* : Integer ) -> Pointer<br/>**Field** ( *fieldPtr* : Pointer ) -> Integer<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum | Integer | &#8594;  | テーブル番号 |
-| fieldNum | Integer | &#8594;  | フィールド番号 |
-| 戻り値 | Pointer | &#8592; | フィールドポインタ |
-| Field ( fieldPtr ) -> 戻り値 |
-| 引数 | 型 | 説明 |
-| fieldPtr | Pointer | &#8594;  | フィールドポインタ |
-| 戻り値 | Integer | &#8592; | フィールド番号 |
+| tableNum | Integer | &#8594; | テーブル番号 |
+| fieldNum | Integer | &#8594; | フィールド番号 |
+| fieldPtr | Pointer | &#8594; | フィールドポインタ |
+| 戻り値 | Pointer, Integer | &#8592; | フィールドポインタまたはフィールド番号 |
 
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.Field.Summary-->Field コマンドには、2つの形式があります。<!-- END REF-->
+<!--REF #_command_.Field.Summary-->Field コマンドには、2つの形式があります。
 
 * *tableNum*と*fieldNum*を指定した場合、Fieldはフィールドへのポインタを返します。
-* *fieldPtr*を指定した場合には、Fieldはフィールド番号を返します。
+* *fieldPtr*を指定した場合には、Fieldはフィールド番号を返します。<!-- END REF-->
 
 ## 例題 1 
 

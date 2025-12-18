@@ -5,11 +5,11 @@ slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *carpetaRaiz* )<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *carpetaRaiz* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpetaRaiz | Text | &#8594;  | Ruta de acceso de la carpeta raíz del servidor Web |
+| carpetaRaiz | Text | &#8594; | Ruta de acceso de la carpeta raíz del servidor Web |
 
 <!-- END REF-->
 

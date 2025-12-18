@@ -5,11 +5,11 @@ slug: /commands/count-menus
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menus.Syntax-->**Count menus** {( *process* )} : Integer<!-- END REF-->
+<!--REF #_command_.Count menus.Syntax-->**Count menus** ( *process* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menus.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | プロセス参照番号 |
+| process | Integer | &#8594; | プロセス参照番号 |
 | 戻り値 | Integer | &#8592; | カレントメニューバー中のメニュー数 |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get header.Syntax-->**WP Get header** ( *objRango* ) | (*wpDoc* ; *indiceSeccion* {; *tipoSubSeccion*} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Get header.Syntax-->**WP Get header** ( *objRango* : Object ) | (*wpDoc* : Object ; *indiceSeccion* : Integer {; *tipoSubSeccion* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get header.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

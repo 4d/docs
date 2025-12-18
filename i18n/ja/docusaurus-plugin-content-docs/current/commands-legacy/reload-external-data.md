@@ -5,11 +5,11 @@ slug: /commands/reload-external-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *aField* )<!-- END REF-->
+<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *aField* : Text, Blob, Picture, Object )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture, Object | &#8594;  | 外部ストレージからリロードを行うフィールド |
+| aField | Text, Blob, Picture, Object | &#8594; | 外部ストレージからリロードを行うフィールド |
 
 <!-- END REF-->
 

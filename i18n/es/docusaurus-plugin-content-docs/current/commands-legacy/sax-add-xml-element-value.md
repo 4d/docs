@@ -5,13 +5,13 @@ slug: /commands/sax-add-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *documento* ; *datos* {; *} )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *documento* : Time ; *datos* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
-| datos | Text, Variable | &#8594;  | Texto o variable a insertar en el documento |
-| * | Operador | &#8594;  | Si se pasa: codificar los caracteres especiales Si se omite: no codificación |
+| documento | Time | &#8594; | Referencia del documento abierto |
+| datos | Text, Variable | &#8594; | Texto o variable a insertar en el documento |
+| * | Operador | &#8594; | Si se pasa: codificar los caracteres especiales Si se omite: no codificación |
 
 <!-- END REF-->
 

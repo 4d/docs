@@ -5,11 +5,11 @@ slug: /commands/change-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *motDePasse* )<!-- END REF-->
+<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *motDePasse* : Text )<!-- END REF-->
 <!--REF #_command_.CHANGE PASSWORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| motDePasse | Text | &#8594;  | Nouveau mot de passe |
+| motDePasse | Text | &#8594; | Nouveau mot de passe |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/picture-library-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *refsImages* ; *nomsImages* )<!-- END REF-->
+<!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *refsImages* : Integer array ; *nomsImages* : Text array )<!-- END REF-->
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

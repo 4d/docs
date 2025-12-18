@@ -444,7 +444,7 @@ In this example, the first entity will be created and saved but the second will 
 <!-- REF #DataClassClass.get().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
+|primaryKey |Integer, Text|->|Primary key value of the entity to retrieve|
 |settings  |Object|->|Build option: context|
 |Result|4D.Entity|<-|Entity matching the designated primary key|
 <!-- END REF -->

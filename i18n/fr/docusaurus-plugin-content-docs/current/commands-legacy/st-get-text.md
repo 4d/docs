@@ -5,14 +5,14 @@ slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *objet* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )  : Text<br/>**ST Get text** ( *objet* : Field, Variable {; *débutSél* : Integer {; *finSél* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
-| débutSél | Integer | &#8594;  | Début de la sélection |
-| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
+| débutSél | Integer | &#8594; | Début de la sélection |
+| finSél | Integer | &#8594; | Fin de la sélection |
 | Résultat | Text | &#8592; | Texte incluant les balises de style |
 
 <!-- END REF-->

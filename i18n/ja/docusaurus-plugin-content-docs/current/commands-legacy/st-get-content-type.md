@@ -5,14 +5,14 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *object* {; *startSel* {; *endSel* {; *startBlock* {; *endBlock*}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| startSel | Integer | &#8594;  | 選択範囲の開始地点 |
-| endSel | Integer | &#8594;  | 選択範囲の終了地点 |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| startSel | Integer | &#8594; | 選択範囲の開始地点 |
+| endSel | Integer | &#8594; | 選択範囲の終了地点 |
 | startBlock | Integer | &#8592; | 選択範囲内の、同一のタイプの開始地点 |
 | endBlock | Integer | &#8592; | 選択範囲内の、同一のタイプの終了地点 |
 | 戻り値 | Integer | &#8592; | 内容のタイプ |

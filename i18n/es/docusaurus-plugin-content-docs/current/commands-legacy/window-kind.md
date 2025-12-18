@@ -5,11 +5,11 @@ slug: /commands/window-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window kind.Syntax-->**Window kind** {( *ventana* )} : Integer<!-- END REF-->
+<!--REF #_command_.Window kind.Syntax-->**Window kind** ( *ventana* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Window kind.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana o Ventana del primer plano del proceso actual, si se  omite |
+| ventana | Integer | &#8594; | Número de referencia de la ventana o Ventana del primer plano del proceso actual, si se  omite |
 | Resultado | Integer | &#8592; | Tipo de ventana |
 
 <!-- END REF-->

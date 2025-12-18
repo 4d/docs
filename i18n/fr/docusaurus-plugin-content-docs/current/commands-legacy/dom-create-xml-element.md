@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElément* ; *xPath* {; *nomAttribut* ; *valeurAttribut*} {; *nomAttribut2* ; *valeurAttribut2* ; ... ; *nomAttributN* ; *valeurAttributN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElément* : Text ; *xPath* : Text {; *nomAttribut* : Text ; *valeurAttribut* : Text, Boolean, Integer, Real, Time, Date} {; ...(*nomAttribut* : Text, *valeurAttribut* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML racine |
-| xPath | Text | &#8594;  | Chemin XPath de l’élément XML à créer |
-| nomAttribut | Text | &#8594;  | Attribut à définir |
-| valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Nouvelle valeur d’attribut |
+| refElément | Text | &#8594; | Référence d’élément XML racine |
+| xPath | Text | &#8594; | Chemin XPath de l’élément XML à créer |
+| nomAttribut | Text | &#8594; | Attribut à définir |
+| valeurAttribut | Text, Boolean, Integer, Real, Time, Date | &#8594; | Nouvelle valeur d’attribut |
 | Résultat | Text | &#8592; | Référence de l’élément XML créé |
 
 <!-- END REF-->

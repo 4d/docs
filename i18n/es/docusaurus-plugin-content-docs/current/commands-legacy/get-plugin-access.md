@@ -5,11 +5,11 @@ slug: /commands/get-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) : Text<!-- END REF-->
+<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get plugin access.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#8594;  | Número del plug-in |
+| plugIn | Integer | &#8594; | Número del plug-in |
 | Resultado | Text | &#8592; | Nombre del grupo asociado con el plug-in |
 
 <!-- END REF-->

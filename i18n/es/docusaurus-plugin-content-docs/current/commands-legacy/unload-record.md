@@ -5,11 +5,11 @@ slug: /commands/unload-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** ( *tabla* : Table )}<!-- END REF-->
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual descargar el registro o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual descargar el registro o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 

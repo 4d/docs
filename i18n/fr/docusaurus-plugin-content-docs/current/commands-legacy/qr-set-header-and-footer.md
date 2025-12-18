@@ -5,18 +5,18 @@ slug: /commands/qr-set-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *zone* ; *sélecteur* ; *titreGauche* ; *titreCentre* ; *titreDroit* ; *hauteur* {; *image* {; *alignementImage*}} )<!-- END REF-->
+<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *zone* : Integer ; *sélecteur* : Integer ; *titreGauche* : Text ; *titreCentre* : Text ; *titreDroit* : Text ; *hauteur* : Integer {; *image* : Picture {; *alignementImage* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| sélecteur | Integer | &#8594;  | 1 = En-tête, 2 = Pied de page |
-| titreGauche | Text | &#8594;  | Texte affiché sur le côté gauche |
-| titreCentre | Text | &#8594;  | Texte affiché au centre |
-| titreDroit | Text | &#8594;  | Texte affiché sur le côté droit |
-| hauteur | Integer | &#8594;  | Hauteur de l'en-tête ou du pied de page |
-| image | Picture | &#8594;  | Image à afficher |
-| alignementImage | Integer | &#8594;  | Alignement de l'image |
+| zone | Integer | &#8594; | Référence de la zone |
+| sélecteur | Integer | &#8594; | 1 = En-tête, 2 = Pied de page |
+| titreGauche | Text | &#8594; | Texte affiché sur le côté gauche |
+| titreCentre | Text | &#8594; | Texte affiché au centre |
+| titreDroit | Text | &#8594; | Texte affiché sur le côté droit |
+| hauteur | Integer | &#8594; | Hauteur de l'en-tête ou du pied de page |
+| image | Picture | &#8594; | Image à afficher |
+| alignementImage | Integer | &#8594; | Alignement de l'image |
 
 <!-- END REF-->
 

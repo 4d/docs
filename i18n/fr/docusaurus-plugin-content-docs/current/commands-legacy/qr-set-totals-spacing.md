@@ -5,13 +5,13 @@ slug: /commands/qr-set-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS SPACING.Syntax-->**QR SET TOTALS SPACING** ( *zone* ; *sousTotal* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS SPACING.Syntax-->**QR SET TOTALS SPACING** ( *zone* : Integer ; *sousTotal* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS SPACING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| sousTotal | Integer | &#8594;  | Numéro de sous-total |
-| valeur | Integer | &#8594;  | 0=pas d'espace, 32000=insère un saut de page, >0=espace ajouté sous le niveau de rupture, <0=augmentation proportionnelle |
+| zone | Integer | &#8594; | Référence de la zone |
+| sousTotal | Integer | &#8594; | Numéro de sous-total |
+| valeur | Integer | &#8594; | 0=pas d'espace, 32000=insère un saut de page, >0=espace ajouté sous le niveau de rupture, <0=augmentation proportionnelle |
 
 <!-- END REF-->
 

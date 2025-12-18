@@ -5,14 +5,14 @@ slug: /commands/st-compute-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( * ; *objet* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST COMPUTE EXPRESSIONS** ( *objet* : Field, Variable {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| débutSél | Integer | &#8594;  | Début de la sélection |
-| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594; | Début de la sélection |
+| finSél | Integer | &#8594; | Fin de la sélection |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
+| area | Integer | &#8594; | Referencia del área |
 | Resultado | Integer | &#8592; | Tipo del informe |
 
 <!-- END REF-->

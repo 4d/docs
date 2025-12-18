@@ -5,12 +5,12 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( {* ;} *objeto* ; *esquerda* ; *superior* ; *direita* ; *inferior* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *objeto* : Text ; *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer )<br/>**OBJECT GET COORDINATES** ( *objeto* : Field, Variable ; *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | esquerda | Integer | &#8592; | Coordenadas da esquerda do objeto |
 | superior | Integer | &#8592; | Coordenadas superiores do objeto |
 | direita | Integer | &#8592; | Coordenada direita do objeto |

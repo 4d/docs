@@ -5,13 +5,13 @@ slug: /commands/array-time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *nomArray* ; *tam* {; *tam2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *nomArray* : Array ; *tam* : Integer {; *tam2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY TIME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArray | Array | &#8594;  | Nombre de array |
-| tam | Integer | &#8594;  | Número de elementos en el array o Número de filas si se especifica tamaño2 |
-| tam2 | Integer | &#8594;  | Número de columnas en un array de dos dimensiones |
+| nomArray | Array | &#8594; | Nombre de array |
+| tam | Integer | &#8594; | Número de elementos en el array o Número de filas si se especifica tamaño2 |
+| tam2 | Integer | &#8594; | Número de columnas en un array de dos dimensiones |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *ptrTabla* ; *numCamp* ) : Boolean<br/>**Is field number valid** ( *numTabla* ; *numCamp* ) : Boolean<!-- END REF--> 
+<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *ptrTabla* : Entero largo, Puntero ; *numCamp* : Integer ) : Boolean<br/>**Is field number valid** ( *numTabla* : Entero largo, Puntero ; *numCamp* : Integer ) : Boolean<!-- END REF--> 
 <!--REF #_command_.Is field number valid.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594;  | Número de tabla o Puntero a una tabla |
-| numCamp | Integer | &#8594;  | Número de campo |
+| numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594; | Número de tabla o Puntero a una tabla |
+| numCamp | Integer | &#8594; | Número de campo |
 | Resultado | Boolean | &#8592; | True = el campo existe en la tabla False = el campo no existe en la tabla |
 
 <!-- END REF-->

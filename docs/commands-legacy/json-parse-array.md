@@ -5,11 +5,11 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *jsonString* ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonText | Text | &#8594;  | JSON string to parse |
+| jsonString | Text | &#8594;  | JSON string to parse |
 | array | Array | &#8592; | Array containing result from parsing of JSON string |
 
 <!-- END REF-->

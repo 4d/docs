@@ -5,11 +5,11 @@ slug: /commands/qr-get-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* ) : Text<!-- END REF-->
+<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.QR Get HTML template.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
+| area | Integer | &#8594; | Referência da área |
 | Resultado | Text | &#8592; | Código HTML usado como modelo |
 
 <!-- END REF-->

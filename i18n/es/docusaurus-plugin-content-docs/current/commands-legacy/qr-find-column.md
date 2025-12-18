@@ -5,12 +5,12 @@ slug: /commands/qr-find-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* ; *expresion* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* : Integer ; *expresion* : Text, Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Find column.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| expresion | Text, Pointer | &#8594;  | Objeto de columna |
+| area | Integer | &#8594; | Referencia del área |
+| expresion | Text, Pointer | &#8594; | Objeto de columna |
 | Resultado | Integer | &#8592; | Número de columna |
 
 <!-- END REF-->

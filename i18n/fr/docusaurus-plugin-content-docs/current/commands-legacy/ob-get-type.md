@@ -5,12 +5,12 @@ slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* ; *propriété* ) : Integer<!-- END REF-->
+<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *objet* : Object ; *propriété* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#8594;  | Objet structuré |
-| propriété | Text | &#8594;  | Nom de la propriété |
+| objet | Object | &#8594; | Objet structuré |
+| propriété | Text | &#8594; | Nom de la propriété |
 | Résultat | Integer | &#8592; | Type de valeur de la propriété |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomeObj* {; *numPagina*} )<!-- END REF-->
+<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomeObj* : Text array {; *numPagina* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeObj | Text array | &#8594;  | Array de nomes de objeto na sua ordem de entrada esperada |
-| numPagina | Integer | &#8594;  | Números de página para estabelecer a ordem de entrada (página atual se omitido) |
+| nomeObj | Text array | &#8594; | Array de nomes de objeto na sua ordem de entrada esperada |
+| numPagina | Integer | &#8594; | Números de página para estabelecer a ordem de entrada (página atual se omitido) |
 
 <!-- END REF-->
 

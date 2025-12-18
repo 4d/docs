@@ -5,11 +5,11 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( size )}<br/>**FLUSH CACHE** {( * )}<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** ( size )}<br/>**FLUSH CACHE** ( * )}<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| size &#124; * | 実数, 演算子 | &#8594;  | 解放するキャッシュサイズ(バイト単位)、* 指定時はキャッシュメモリを完全に空にする |
+| size &#124; * | 実数, 演算子 | &#8594; | 解放するキャッシュサイズ(バイト単位)、* 指定時はキャッシュメモリを完全に空にする |
 
 <!-- END REF-->
 

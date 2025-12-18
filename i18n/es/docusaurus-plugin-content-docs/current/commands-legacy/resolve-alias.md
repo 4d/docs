@@ -5,11 +5,11 @@ slug: /commands/resolve-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *rutaAlias* ; *rutaObjetivo* )<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *rutaAlias* : Text ; *rutaObjetivo* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaAlias | Text | &#8594;  | Nombre o ruta de acceso completa del alias/atajo |
+| rutaAlias | Text | &#8594; | Nombre o ruta de acceso completa del alias/atajo |
 | rutaObjetivo | Text | &#8592; | Nombre o ruta de acceso completa del objetivo del alias/atajo |
 
 <!-- END REF-->

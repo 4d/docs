@@ -5,15 +5,15 @@ slug: /commands/set-menu-item-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* ; *ligneMenu* ; *touche* ; *modificateurs* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *ligneMenu* : Integer ; *touche* : Text, Integer ; *modificateurs* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Numéro du menu ou Référence de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| touche | Text, Integer | &#8594;  | Lettre du raccourci clavier ou code de caractère du raccourci clavier (ancienne syntaxe) |
-| modificateurs | Integer | &#8594;  | Modificateur(s) à associer au raccourci (ignoré si un code de touche est passé) |
-| process | Integer | &#8594;  | Numéro de référence du process |
+| menu | Integer, Text | &#8594; | Numéro du menu ou Référence de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| touche | Text, Integer | &#8594; | Lettre du raccourci clavier ou code de caractère du raccourci clavier (ancienne syntaxe) |
+| modificateurs | Integer | &#8594; | Modificateur(s) à associer au raccourci (ignoré si un code de touche est passé) |
+| process | Integer | &#8594; | Numéro de référence du process |
 
 <!-- END REF-->
 

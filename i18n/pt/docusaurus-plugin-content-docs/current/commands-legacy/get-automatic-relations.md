@@ -5,7 +5,7 @@ slug: /commands/get-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *um* ; *muitos* )<!-- END REF-->
+<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *um* : Boolean ; *muitos* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get keyboard layout** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável ou campo(se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou um campo |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável ou campo(se omitido *) |
 | Resultado | Text | &#8592; | Código da linguagem de configuração, "" = sem configuração |
 
 <!-- END REF-->

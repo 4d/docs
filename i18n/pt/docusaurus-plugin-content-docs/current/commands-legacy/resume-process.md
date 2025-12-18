@@ -5,11 +5,11 @@ slug: /commands/resume-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *processo* )<!-- END REF-->
+<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *processo* : Integer )<!-- END REF-->
 <!--REF #_command_.RESUME PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#8594;  | Número de processo |
+| processo | Integer | &#8594; | Número de processo |
 
 <!-- END REF-->
 

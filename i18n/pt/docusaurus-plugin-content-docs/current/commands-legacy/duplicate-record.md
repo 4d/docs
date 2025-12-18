@@ -5,11 +5,11 @@ slug: /commands/duplicate-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** ( *tabela* : Table )}<!-- END REF-->
 <!--REF #_command_.DUPLICATE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual vai duplicar o registro atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela da qual vai duplicar o registro atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/import-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*tabela* ;} *documento* )<!-- END REF-->
+<!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*tabela* : Table ;} *documento* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT SYLK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual vai importar dados, ou tabela Padrão, se omitido |
-| documento | Text | &#8594;  | documento SYLK do qual vai importar dados |
+| tabela | Table | &#8594; | Tabela na qual vai importar dados, ou tabela Padrão, se omitido |
+| documento | Text | &#8594; | documento SYLK do qual vai importar dados |
 
 <!-- END REF-->
 

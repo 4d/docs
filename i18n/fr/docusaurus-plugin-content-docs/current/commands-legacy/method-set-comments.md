@@ -5,13 +5,13 @@ slug: /commands/method-set-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *chemin* ; *commentaires* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *chemin* : Text, Text array ; *commentaires* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
-| commentaires | Text, Text array | &#8594;  | Documentation de(s) méthode(s) désignée(s) |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text, Text array | &#8594; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| commentaires | Text, Text array | &#8594; | Documentation de(s) méthode(s) désignée(s) |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

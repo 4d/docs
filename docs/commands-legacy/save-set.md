@@ -5,7 +5,7 @@ slug: /commands/save-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* ; *document* )<!-- END REF-->
+<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* : Text ; *document* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

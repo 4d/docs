@@ -5,11 +5,11 @@ slug: /commands/dec
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dec.Syntax-->**Dec** ( *Numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Dec.Syntax-->**Dec** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Dec.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &#8594;  | Número cuya parte decimal se devuelve |
+| Numero | Real | &#8594; | Número cuya parte decimal se devuelve |
 | Resultado | Real | &#8592; | Parte decimal de número |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/object-set-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( {* ;} *object* ; *maxValue* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( * ; *object* : Text ; *maxValue* : Date, Time, Real )<br/>**OBJECT SET MAXIMUM VALUE** ( *object* : Field, Variable ; *maxValue* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or <br/>Field or variable (if * is omitted) |
-| maxValue | Date, Time, Number | &#8594;  | Maximum value for object |
+| maxValue | Date, Time, Real | &#8594;  | Maximum value for object |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-new-bookmark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *objFaixa* ; *nomeBookm* )<!-- END REF-->
+<!--REF #_command_.WP NEW BOOKMARK.Syntax-->**WP NEW BOOKMARK** ( *objFaixa* : Object ; *nomeBookm* : Text )<!-- END REF-->
 <!--REF #_command_.WP NEW BOOKMARK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/qr-on-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *zone* ; *nomMéthode* )<!-- END REF-->
+<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *zone* : Integer ; *nomMéthode* : Text )<!-- END REF-->
 <!--REF #_command_.QR ON COMMAND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| nomMéthode | Text | &#8594;  | Nom de la méthode à appeler |
+| zone | Integer | &#8594; | Référence de la zone |
+| nomMéthode | Text | &#8594; | Nom de la méthode à appeler |
 
 <!-- END REF-->
 

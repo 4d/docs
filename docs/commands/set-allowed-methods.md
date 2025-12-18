@@ -5,7 +5,7 @@ slug: /commands/set-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* )<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

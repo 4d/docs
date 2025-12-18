@@ -5,11 +5,11 @@ slug: /commands/is-a-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *puntero* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *puntero* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a variable.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| puntero | Pointer | &#8594;  | Puntero a probar |
+| puntero | Pointer | &#8594; | Puntero a probar |
 | Resultado | Boolean | &#8592; | TRUE = Puntero apunta a una variable FALSE = Puntero no apunta a una variable |
 
 <!-- END REF-->

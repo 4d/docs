@@ -5,12 +5,12 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
-| object | any | &#8594;  | オブジェクト名(* 指定時)、または変数(* 省略時) |
+| * | 演算子 | &#8594; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
+| object | any | &#8594; | オブジェクト名(* 指定時)、または変数(* 省略時) |
 | 戻り値 | Boolean | &#8592; | オブジェクトがマルチスタイルテキストであれば True 、そうでなければ False |
 
 <!-- END REF-->

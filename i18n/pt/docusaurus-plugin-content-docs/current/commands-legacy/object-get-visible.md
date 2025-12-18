@@ -5,12 +5,12 @@ slug: /commands/object-get-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get visible** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get visible.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou variável ou campo (se * é omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou variável ou campo (se * é omitido) |
 | Resultado | Boolean | &#8592; | True = objeto visível , ou então False |
 
 <!-- END REF-->

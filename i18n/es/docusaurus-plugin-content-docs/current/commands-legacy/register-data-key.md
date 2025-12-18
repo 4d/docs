@@ -5,11 +5,11 @@ slug: /commands/register-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* ) : Boolean<br/>**Register data key** ( *curDataKey* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* : Texto, Objeto ) : Boolean<br/>**Register data key** ( *curDataKey* : Texto, Objeto ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594;  | Frase contraseña actual (texto) o llave de cifrado de datos actual (objeto) |
+| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594; | Frase contraseña actual (texto) o llave de cifrado de datos actual (objeto) |
 | Resultado | Boolean | &#8592; | True si la llave de cifrado se ha agregado correctamente al llavero 4D, False si ya estaba en el llavero 4D |
 
 <!-- END REF-->

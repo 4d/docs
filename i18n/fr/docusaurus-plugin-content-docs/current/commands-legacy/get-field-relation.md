@@ -5,14 +5,14 @@ slug: /commands/get-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *champN* ; *aller* ; *retour* {; *} )<!-- END REF-->
+<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *champN* : Field ; *aller* : Integer ; *retour* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champN | Field | &#8594;  | Champ de départ du lien |
+| champN | Field | &#8594; | Champ de départ du lien |
 | aller | Integer | &#8592; | Statut du lien aller |
 | retour | Integer | &#8592; | Statut du lien retour |
-| * | Opérateur | &#8594;  | • Si passé : aller et retour retournent le statut courant effectif du lien (valeurs 2 ou 3 uniquement)• Si omis (défaut) : aller et retour peuvent retourner la valeur 1 si le lien n’a pas été modifié par programmation |
+| * | Opérateur | &#8594; | • Si passé : aller et retour retournent le statut courant effectif du lien (valeurs 2 ou 3 uniquement)• Si omis (défaut) : aller et retour peuvent retourner la valeur 1 si le lien n’a pas été modifié par programmation |
 
 <!-- END REF-->
 

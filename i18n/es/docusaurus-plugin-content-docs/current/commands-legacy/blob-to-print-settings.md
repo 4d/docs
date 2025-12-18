@@ -5,12 +5,12 @@ slug: /commands/blob-to-print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *confImpr* {; *params*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *confImpr* : Blob {; *params* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to print settings.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| confImpr | Blob | &#8594;  | BLOB que contiene la configuración de impresión |
-| params | Integer | &#8594;  | 0=Restaura valores guardados para el número de copias y rango de páginas, 1=Restablece los valores predeterminados |
+| confImpr | Blob | &#8594; | BLOB que contiene la configuración de impresión |
+| params | Integer | &#8594; | 0=Restaura valores guardados para el número de copias y rango de páginas, 1=Restablece los valores predeterminados |
 | Resultado | Integer | &#8592; | Código de estado: 1=operación exitosa, 0=no hay impresora actual, -1=parámetros incorrectos, 2=impresora modificada |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( {* ;} *object* ; *numColumns* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *object* : Text ; *numColumns* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *object* : Field, Variable ; *numColumns* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| numColumns | Integer | &#8594;  | 横スクロールしない列の数 |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| numColumns | Integer | &#8594; | 横スクロールしない列の数 |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/array-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY POINTER.Syntax-->**ARRAY POINTER** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY POINTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

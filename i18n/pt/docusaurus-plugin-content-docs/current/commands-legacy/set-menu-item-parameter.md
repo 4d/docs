@@ -5,13 +5,13 @@ slug: /commands/set-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *menuItem* ; *param* )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* : Integer, Text ; *menuItem* : Integer ; *param* : Text )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado ao menu |
-| param | Text | &#8594;  | String a ser associado como parâmetro |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item de menu ou -1 para o último item adicionado ao menu |
+| param | Text | &#8594; | String a ser associado como parâmetro |
 
 <!-- END REF-->
 

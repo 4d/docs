@@ -5,12 +5,12 @@ slug: /commands/use-character-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *filtre* {; *typeFiltre*} )<!-- END REF-->
+<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *filtre* : Text, Operator {; *typeFiltre* : Integer} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| filtre | Text, * | &#8594;  | Nom du jeu de caractères à utiliser ou * pour restaurer le jeu par défaut |
-| typeFiltre | Integer | &#8594;  | 0 = Filtre d'exportation, 1 = Filtre d'importation |
+| filtre | Text, Operator | &#8594; | Nom du jeu de caractères à utiliser ou * pour restaurer le jeu par défaut |
+| typeFiltre | Integer | &#8594; | 0 = Filtre d'exportation, 1 = Filtre d'importation |
 
 <!-- END REF-->
 

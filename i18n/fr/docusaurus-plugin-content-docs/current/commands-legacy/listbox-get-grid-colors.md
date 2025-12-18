@@ -5,12 +5,12 @@ slug: /commands/listbox-get-grid-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( {* ;} *objet* ; *couleurH* ; *couleurV* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( * ; *objet* : Text ; *couleurH* : Text, Integer ; *couleurV* : Text, Integer )<br/>**LISTBOX GET GRID COLORS** ( *objet* : Field, Variable ; *couleurH* : Text, Integer ; *couleurV* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | couleurH | Text, Integer | &#8592; | Valeur de couleur RVB pour les traits horizontaux |
 | couleurV | Text, Integer | &#8592; | Valeur de couleur RVB pour les traits verticaux |
 

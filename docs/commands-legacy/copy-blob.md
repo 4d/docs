@@ -5,7 +5,7 @@ slug: /commands/copy-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* ; *dstBLOB* ; *srcOffset* ; *dstOffset* ; *len* )<!-- END REF-->
+<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* : Blob ; *dstBLOB* : Blob ; *srcOffset* : Integer ; *dstOffset* : Integer ; *len* : Integer )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,12 +5,11 @@ slug: /commands/users-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *utilisateurs* )<!-- END REF-->
+<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *utilisateurs* : Blob )<!-- END REF-->
 <!--REF #_command_.USERS TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateurs | Blob | &#8594;  | BLOB devant contenir les utilisateurs |
-| &#8592; | Comptes utilisateurs (crypté) |
+| utilisateurs | Blob | &#8596; | *in:* BLOB that must contain users<br/>*out:* User accounts (encrypted) |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get enterable.Syntax-->**OBJECT Get enterable** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get enterable** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get enterable.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
 | Resultado | Boolean | &#8592; | True = objeto(s) editable(s) |
 
 <!-- END REF-->

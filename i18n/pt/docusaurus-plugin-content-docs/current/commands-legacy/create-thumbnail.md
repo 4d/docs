@@ -5,16 +5,16 @@ slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *fonte* ; *dest* {; *largura* {; *altura* {; *modo* {; *profundidade*}}}} )<!-- END REF-->
+<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *fonte* : Picture ; *dest* : Picture {; *largura* : Integer {; *altura* : Integer {; *modo* : Integer {; *profundidade* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Picture | &#8594;  | Fonte da imagem 4D ou variável a converter para uma miniatura |
+| fonte | Picture | &#8594; | Fonte da imagem 4D ou variável a converter para uma miniatura |
 | dest | Picture | &#8592; | Miniatura resultante |
-| largura | Integer | &#8594;  | Largura da miniatura em pixels. Valor padrão = 48 |
-| altura | Integer | &#8594;  | Altura da miniatura em pixels. Valor padrão = 48 |
-| modo | Integer | &#8594;  | Módulo de criação de miniaturas; Valor padrão= Proporcional centralizado (6) |
-| profundidade | Integer | &#8594;  | Obsoleto, não usar |
+| largura | Integer | &#8594; | Largura da miniatura em pixels. Valor padrão = 48 |
+| altura | Integer | &#8594; | Altura da miniatura em pixels. Valor padrão = 48 |
+| modo | Integer | &#8594; | Módulo de criação de miniaturas; Valor padrão= Proporcional centralizado (6) |
+| profundidade | Integer | &#8594; | Obsoleto, não usar |
 
 <!-- END REF-->
 

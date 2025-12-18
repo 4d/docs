@@ -5,11 +5,11 @@ slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDados* ) : Integer<!-- END REF-->
+<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDados* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipoDados | Text | &#8594;  | Tipo de dados a adicionar |
+| tipoDados | Text | &#8594; | Tipo de dados a adicionar |
 | Resultado | Integer | &#8592; | Tamanho (em bytes) dos dados armazenados na área de transferência ou então código do erro |
 
 <!-- END REF-->

@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objet* {; *typeListe*}; énumération )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *objet* : Text {; *typeListe* : Integer}; énumération )<br/>**OBJECT SET LIST BY NAME** ( *objet* : Field, Variable {; *typeListe* : Integer}; énumération )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
-| énumération | Text | &#8594;  | Nom de l'énumération (définie en mode Développement) ou "" pour dissocier l’énumération |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| typeListe | Integer | &#8594; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| énumération | Text | &#8594; | Nom de l'énumération (définie en mode Développement) ou "" pour dissocier l’énumération |
 
 <!-- END REF-->
 

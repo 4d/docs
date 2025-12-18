@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *image* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *image* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

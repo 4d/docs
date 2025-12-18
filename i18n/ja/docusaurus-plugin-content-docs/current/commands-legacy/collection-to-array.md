@@ -5,13 +5,13 @@ slug: /commands/collection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* ; *array* {; *propertyName*}{; *array2* ; *propertyName2* ; ... ; *arrayN* ; *propertyNameN*} )<!-- END REF-->
+<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* : Collection ; *array* : Array {; *propertyName* : Text}{; ...(*array* : Array ; *propertyName* : Text) } )<!-- END REF-->
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| collection | Collection | &#8594;  | 配列へとコピーしたいコレクション |
+| collection | Collection | &#8594; | 配列へとコピーしたいコレクション |
 | array | Array | &#8592; | コレクションの要素を受け取る配列。propertyName引数指定時はコレクションのpropertyNameの値を受け取る配列。 |
-| propertyName | Text | &#8594;  | 配列へとコピーしたいオブジェクトのプロパティ名(""を指定で全要素をコピー) |
+| propertyName | Text | &#8594; | 配列へとコピーしたいオブジェクトのプロパティ名(""を指定で全要素をコピー) |
 
 <!-- END REF-->
 

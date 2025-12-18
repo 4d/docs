@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-find-all
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Find all.Syntax-->**WP Find all** ( *objAlvo* ; *valorPesquisa* ; *condiçãoPesquisa* {; *valorSubstituir*} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Find all.Syntax-->**WP Find all** ( *objAlvo* : Object ; *valorPesquisa* : Text ; *condiçãoPesquisa* : Integer {; *valorSubstituir* : Text} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Find all.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

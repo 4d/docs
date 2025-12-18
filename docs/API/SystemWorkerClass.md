@@ -103,7 +103,7 @@ All callback functions receive two object parameters. Their contents depend on t
 |---|---|---|---|---|---|---|
 |$param1|Object|SystemWorker|SystemWorker|SystemWorker|SystemWorker|SystemWorker|
 |$param2.type|Text|"response"|"data"|"error"|"error"|"termination"|
-|$param2.data|Text or Blob||received data|error data|||
+|$param2.data|Text, Blob||received data|error data|||
 
 Here is the sequence of callback calls:
 

@@ -5,12 +5,12 @@ slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *objeto* ; *classe* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *objeto* : Object ; *classe* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object | &#8594;  | Objeto cuja classe vai ser testada |
-| classe | Object | &#8594;  | Classe a qual vai testar a pertenência |
+| objeto | Object | &#8594; | Objeto cuja classe vai ser testada |
+| classe | Object | &#8594; | Classe a qual vai testar a pertenência |
 | Resultado | Boolean | &#8592; | True se o objeto pertencer à classe especifica ou à uma classe child, senão false |
 
 <!-- END REF-->

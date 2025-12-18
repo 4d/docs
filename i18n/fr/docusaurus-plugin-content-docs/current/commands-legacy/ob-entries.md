@@ -5,11 +5,11 @@ slug: /commands/ob-entries
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objet* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objet* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Entries.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#8594;  | Objet retournant le contenu |
+| objet | Object | &#8594; | Objet retournant le contenu |
 | Résultat | Collection | &#8592; | Collection d'objets avec les propriétés key/value |
 
 <!-- END REF-->

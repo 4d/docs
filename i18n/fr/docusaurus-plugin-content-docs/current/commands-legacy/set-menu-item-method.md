@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* ; *ligneMenu* ; *nomMéthode* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* : Integer, Text ; *ligneMenu* : Integer ; *nomMéthode* : Text {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
-| nomMéthode | Text | &#8594;  | Nom de la méthode |
-| process | Integer | &#8594;  | Numéro de process |
+| menu | Integer, Text | &#8594; | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| nomMéthode | Text | &#8594; | Nom de la méthode |
+| process | Integer | &#8594; | Numéro de process |
 
 <!-- END REF-->
 

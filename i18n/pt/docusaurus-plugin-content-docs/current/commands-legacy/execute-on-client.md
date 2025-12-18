@@ -5,13 +5,13 @@ slug: /commands/execute-on-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *nomeCliente* ; *nomeMetodo* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *nomeCliente* : Text ; *nomeMetodo* : Text {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeCliente | Text | &#8594;  | Nome da sessão 4D Client |
-| nomeMetodo | Text | &#8594;  | Nome do método a ser executado |
-| param | &#8594;  | Parâmetro(s) do método |
+| nomeCliente | Text | &#8594; | Nome da sessão 4D Client |
+| nomeMetodo | Text | &#8594; | Nome do método a ser executado |
+| param | any | &#8594; | Method’s parameter(s) |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ( *tabela* : Table )}<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual o registro atual será apagado, ou tabela Padrão, se omitido |
+| tabela | Table | &#8594; | Tabela na qual o registro atual será apagado, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 

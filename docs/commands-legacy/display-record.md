@@ -5,7 +5,7 @@ slug: /commands/display-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-document-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* ; *encodage* ; *version* ; *autonome* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* : Time ; *encodage* : Text ; *version* : Text ; *autonome* : Boolean )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | encodage | Text | &#8592; | Jeu de caractères du document XML |
 | version | Text | &#8592; | Version du XML |
 | autonome | Boolean | &#8592; | Vrai=le document est autonome, sinon Faux |

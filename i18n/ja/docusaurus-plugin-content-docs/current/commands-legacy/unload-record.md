@@ -5,11 +5,11 @@ slug: /commands/unload-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードをアンロードするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | レコードをアンロードするテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

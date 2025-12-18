@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | password | Text | &#8592; | Always an empty string |
 | nbLogin | Integer | &#8592; | Number of logins to the database (Binary databases only) |
 | lastLogin | Date | &#8592; | Date of last login to the database (Binary databases only) |
-| memberships | Array integer | &#8592; | ID numbers of groups to which the user belongs |
+| memberships | Integer array | &#8592; | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8592; | ID number of user group owner (Binary databases only) |
 
 <!-- END REF-->

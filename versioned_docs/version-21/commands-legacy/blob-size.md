@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB field or variable |
+| Blob | Blob | &#8594;  | BLOB field or variable |
 | Function result | Integer | &#8592; | Size in bytes of the BLOB |
 
 <!-- END REF-->

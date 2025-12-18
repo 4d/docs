@@ -5,13 +5,13 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* ; *itemRef* ; *arrSelection* {; *arrValues*} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* ; * ; *arrSelection* {; *arrValues*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* : Integer, Text ; *itemRef* : 倍長整数, 演算子 ; *arrSelection* : Text array {; *arrValues* : Text array} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* : Integer, Text ; * ; *arrSelection* : Text array {; *arrValues* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時listはオブジェクト名 (文字列)省略時listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リストタイプのオブジェクト名 (* 指定時)またはリスト参照番号 (* 省略時) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#8594;  | 項目参照番号、または0 = リストに最後に追加された項目、または* = カレントリスト項目 |
+| * | 演算子 | &#8594; | 指定時listはオブジェクト名 (文字列)省略時listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リストタイプのオブジェクト名 (* 指定時)またはリスト参照番号 (* 省略時) |
+| itemRef &#124; * | 倍長整数, 演算子 | &#8594; | 項目参照番号、または0 = リストに最後に追加された項目、または* = カレントリスト項目 |
 | arrSelection | Text array | &#8592; | パラメーター名配列 |
 | arrValues | Text array | &#8592; | パラメーター値配列 |
 

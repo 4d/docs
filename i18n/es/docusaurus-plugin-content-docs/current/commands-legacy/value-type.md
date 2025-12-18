@@ -5,11 +5,11 @@ slug: /commands/value-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Value type.Syntax-->**Value type** ( *expresion* ) : Integer<!-- END REF-->
+<!--REF #_command_.Value type.Syntax-->**Value type** ( *expresion* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Expression | &#8594;  | Expresión cuyo valor resultante debe ser probado |
+| expresion | Expression | &#8594; | Expresión cuyo valor resultante debe ser probado |
 | Resultado | Integer | &#8592; | Número de tipo de dato |
 
 <!-- END REF-->

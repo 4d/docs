@@ -5,12 +5,12 @@ slug: /commands/get-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*laTable* ;} *sélecteur* {; *valeurAlpha*} ) : Real<!-- END REF-->
+<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*laTable* : Table ;} *sélecteur* : Integer {; *valeurAlpha* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table du paramètre ou Table par défaut si ce paramètre est omis |
-| sélecteur | Integer | &#8594;  | Code du paramètre de la base |
+| laTable | Table | &#8594; | Table du paramètre ou Table par défaut si ce paramètre est omis |
+| sélecteur | Integer | &#8594; | Code du paramètre de la base |
 | valeurAlpha | Text | &#8592; | Valeur alpha du paramètre |
 | Résultat | Real | &#8592; | Valeur du paramètre |
 

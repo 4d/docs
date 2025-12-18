@@ -5,12 +5,12 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *arrondi* ; *nbDécimales* ) : Real<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *arrondi* : Real ; *nbDécimales* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| arrondi | Real | &#8594;  | Nombre à arrondir |
-| nbDécimales | Integer | &#8594;  | Nombre de décimales de l'arrondi |
+| arrondi | Real | &#8594; | Nombre à arrondir |
+| nbDécimales | Integer | &#8594; | Nombre de décimales de l'arrondi |
 | Résultat | Real | &#8592; | Valeur de nombre arrondie avec une précision égale à nbDécimales |
 
 <!-- END REF-->

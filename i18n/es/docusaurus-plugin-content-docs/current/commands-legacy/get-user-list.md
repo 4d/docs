@@ -5,7 +5,7 @@ slug: /commands/get-user-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomsUsuario* ; *refUsuario* )<!-- END REF-->
+<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomsUsuario* : Text array ; *refUsuario* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

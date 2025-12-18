@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-document-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* ; *encoding* ; *version* ; *standalone* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* : Time ; *encoding* : Text ; *version* : Text ; *standalone* : Boolean )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
 | encoding | Text | &#8592; | XMLドキュメント文字セット |
 | version | Text | &#8592; | XMLバージョン |
 | standalone | Boolean | &#8592; | True = ドキュメントはスタンドアロン, そうない場合 False |

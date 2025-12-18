@@ -5,11 +5,11 @@ slug: /commands/ob-is-shared
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *aVerificar* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *aVerificar* : Object, Collection ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aVerificar | Object, Collection | &#8594;  | Objeto ou coleção a verificar |
+| aVerificar | Object, Collection | &#8594; | Objeto ou coleção a verificar |
 | Resultado | Boolean | &#8592; | True se o objeto ou coleção for compartilhável, False se for alterável |
 
 <!-- END REF-->

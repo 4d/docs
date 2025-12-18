@@ -5,13 +5,13 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* ; *keyObject* ; *salt* ; *decryptedBLOB* ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* ; *passPhrase* ; *salt* ; *decryptedBLOB* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *keyObject* : オブジェクト, テキスト ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *passPhrase* : オブジェクト, テキスト ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| blobToDecrypt | Blob | &#8594;  | 復号化したいBLOB |
-| keyObject &#124; passPhrase | オブジェクト, テキスト | &#8594;  | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
-| salt | Integer | &#8594;  | アルゴリズムのための追加のsalt |
+| blobToDecrypt | Blob | &#8594; | 復号化したいBLOB |
+| keyObject &#124; passPhrase | オブジェクト, テキスト | &#8594; | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
+| salt | Integer | &#8594; | アルゴリズムのための追加のsalt |
 | decryptedBlob | Blob | &#8592; | 復号化されたBLOB |
 | 戻り値 | Boolean | &#8592; | 復号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
 

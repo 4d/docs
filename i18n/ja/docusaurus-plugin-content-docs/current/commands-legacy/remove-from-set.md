@@ -5,12 +5,12 @@ slug: /commands/remove-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*aTable* ;} *set* )<!-- END REF-->
+<!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.REMOVE FROM SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードのテーブル、または 省略時、デフォルトテーブル |
-| set | Text | &#8594;  | カレントレコードを取り除くセットの名前 |
+| aTable | Table | &#8594; | カレントレコードのテーブル、または 省略時、デフォルトテーブル |
+| set | Text | &#8594; | カレントレコードを取り除くセットの名前 |
 
 <!-- END REF-->
 

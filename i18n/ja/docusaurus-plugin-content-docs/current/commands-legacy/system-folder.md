@@ -5,11 +5,11 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** ( *type* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| type | Integer | &#8594;  | システムフォルダのタイプ |
+| type | Integer | &#8594; | システムフォルダのタイプ |
 | 戻り値 | Text | &#8592; | システムフォルダへのパス名 |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/method-resolve-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *path* ; *methodType* ; *ptrTable* ; *objectName* ; *formObjectName* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *path* : Text ; *methodType* : Integer ; *ptrTable* : Pointer ; *objectName* : Text ; *formObjectName* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

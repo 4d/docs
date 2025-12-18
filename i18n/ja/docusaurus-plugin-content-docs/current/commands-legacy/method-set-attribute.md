@@ -5,14 +5,14 @@ slug: /commands/method-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *path* ; *attribType* ; *attribValue* {; *attribType2* ; *attribValue2* ; ... ; *attribTypeN* ; *attribValueN*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *path* : Text ; *attribType* : Integer ; *attribValue* : Boolean, Text {; ...(*attribType* : Integer, *attribValue* : Boolean, Text)}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | プロジェクトメソッドのパス |
-| attribType | Integer | &#8594;  | 属性タイプ |
-| attribValue | Boolean, Text | &#8594;  | True: 属性を選択False: 属性の選択解除 |
-| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドをホストデータベースに適用する (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| path | Text | &#8594; | プロジェクトメソッドのパス |
+| attribType | Integer | &#8594; | 属性タイプ |
+| attribValue | Boolean, Text | &#8594; | True: 属性を選択False: 属性の選択解除 |
+| * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドをホストデータベースに適用する (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

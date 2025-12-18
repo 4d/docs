@@ -5,14 +5,13 @@ slug: /commands/base64-encode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( àEncoder {; *encodé*}{; *} )<!-- END REF-->
+<!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( àEncoder {; *encodé* : Blob, Text}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àEncoder | Blob, Text | &#8594;  | Valeur à encoder |
-| &#8592; | Valeur encodée (si le paramètre encodé est omis) |
+| àEncoder | Blob, Text | &#8596; | *in:* Value to encode<br/>*out:* Encoded value (if encoded parameter omitted) |
 | encodé | Blob, Text | &#8592; | Valeur encodée |
-| * | Opérateur | &#8594;  | Encoder au format Base64URL |
+| * | Opérateur | &#8594; | Encoder au format Base64URL |
 
 <!-- END REF-->
 

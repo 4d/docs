@@ -5,12 +5,12 @@ slug: /commands/listbox-moved-row-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVED ROW NUMBER.Syntax-->**LISTBOX MOVED ROW NUMBER** ( {* ;} *objeto* ; *antPosicion* ; *nuevPosicion* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVED ROW NUMBER.Syntax-->**LISTBOX MOVED ROW NUMBER** ( * ; *objeto* : Text ; *antPosicion* : Integer ; *nuevPosicion* : Integer )<br/>**LISTBOX MOVED ROW NUMBER** ( *objeto* : Field, Variable ; *antPosicion* : Integer ; *nuevPosicion* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | antPosicion | Integer | &#8592; | Posición anterior de la fila movida |
 | nuevPosicion | Integer | &#8592; | Nueva posición de la fila movida |
 

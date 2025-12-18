@@ -5,12 +5,12 @@ slug: /commands/parse-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* {; *opções*}{; *mensagemErro*} ) : Text<!-- END REF-->
+<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* : Text {; *opções* : Integer}{; *mensagemErro* : Text} ) : Text<!-- END REF-->
 <!--REF #_command_.Parse formula.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| formula | Text | &#8594;  | Fórmula de texto simples |
-| opções | Integer | &#8594;  | Instruções para input/output |
+| formula | Text | &#8594; | Fórmula de texto simples |
+| opções | Integer | &#8594; | Instruções para input/output |
 | mensagemErro | Text | &#8592; | Mensagem de erro (string vazia se não houver erro) |
 | Resultado | Text | &#8592; | Fórmula transformada (texto simples) |
 

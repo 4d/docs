@@ -5,11 +5,11 @@ slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* )<!-- END REF-->
+<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB a expandir |
+| Blob | Blob | &#8594; | BLOB a expandir |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/get-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *tabla* ; *titulosCampos* ; *numCampos* )<!-- END REF-->
+<!--REF #_command_.GET FIELD TITLES.Syntax-->**GET FIELD TITLES** ( *tabla* : Table ; *titulosCampos* : Text array ; *numCampos* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET FIELD TITLES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual quiere conocer los nombres de los campos |
+| tabla | Table | &#8594; | Tabla de la cual quiere conocer los nombres de los campos |
 | titulosCampos | Text array | &#8592; | Nombres actuales de los campos |
 | numCampos | Integer array | &#8592; | Números de los campos |
 

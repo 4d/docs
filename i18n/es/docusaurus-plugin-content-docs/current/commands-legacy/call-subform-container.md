@@ -5,11 +5,11 @@ slug: /commands/call-subform-container
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *evento* )<!-- END REF-->
+<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *evento* : Integer )<!-- END REF-->
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| evento | Integer | &#8594;  | Evento a enviar |
+| evento | Integer | &#8594; | Evento a enviar |
 
 <!-- END REF-->
 

@@ -5,15 +5,15 @@ slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filter* {; *scope* {; *attributes* {; *attributesAsArray*}}} ) : Object<!-- END REF-->
+<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* : Text ; *filter* : Text {; *scope* : Text {; *attributes* : Text array {; *attributesAsArray* : Boolean array}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | 検索を開始するルートエントリーの識別名 |
-| filter | Text | &#8594;  | LDAP検索フィルター |
-| scope | Text | &#8594;  | 検索のスコープ: "base" (デフォルト)、"one"、または"sub" |
-| attributes | Text array | &#8594;  | 取得する属性 |
-| attributesAsArray | Boolean array | &#8594;  | True = 属性を強制的に配列として返す;<br/>False = 属性を強制的に単純な変数として返す |
+| dnRootEntry | Text | &#8594; | 検索を開始するルートエントリーの識別名 |
+| filter | Text | &#8594; | LDAP検索フィルター |
+| scope | Text | &#8594; | 検索のスコープ: "base" (デフォルト)、"one"、または"sub" |
+| attributes | Text array | &#8594; | 取得する属性 |
+| attributesAsArray | Boolean array | &#8594; | True = 属性を強制的に配列として返す;<br/>False = 属性を強制的に単純な変数として返す |
 | 戻り値 | Object | &#8592; | キー/値 属性 |
 
 <!-- END REF-->

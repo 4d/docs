@@ -5,12 +5,12 @@ slug: /commands/qr-blob-to-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* : Integer ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.QR BLOB TO REPORT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| Blob | Blob | &#8594;  | レポートを納めたBLOB |
+| area | Integer | &#8594; | エリア参照 |
+| Blob | Blob | &#8594; | レポートを納めたBLOB |
 
 <!-- END REF-->
 

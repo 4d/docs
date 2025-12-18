@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | Hierarchical list to store in the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the Hierarchical list |
+| Blob | Blob | &#8594;  | BLOB to receive the Hierarchical list |
 | * | Operator | &#8594;  | * to append the value |
 
 <!-- END REF-->

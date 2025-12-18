@@ -5,12 +5,12 @@ slug: /commands/set-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* ; *group* )<!-- END REF-->
+<!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* : Integer ; *group* : Text )<!-- END REF-->
 <!--REF #_command_.SET PLUGIN ACCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#8594;  | プラグイン番号 |
-| group | Text | &#8594;  | プラグインに関連するグル―プの名前 |
+| plugIn | Integer | &#8594; | プラグイン番号 |
+| group | Text | &#8594; | プラグインに関連するグル―プの名前 |
 
 <!-- END REF-->
 

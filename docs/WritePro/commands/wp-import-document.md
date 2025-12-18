@@ -4,7 +4,7 @@ title: WP Import document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Import document.Syntax-->**WP Import document** ( *filePath* {; *option*} ) : Object<br/>**WP Import document** ( *fileObj* {; *option*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Import document.Syntax-->**WP Import document** ( *filePath* : Text {; *option* : Integer, Object} ) : Object<br/>**WP Import document** ( *fileObj* : 4D.File {; *option* : Integer, Object} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Import document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ( *laTable* : Table )}<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle se placer sur l'enregistrement précédent de la sélection courante ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table dans laquelle se placer sur l'enregistrement précédent de la sélection courante ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

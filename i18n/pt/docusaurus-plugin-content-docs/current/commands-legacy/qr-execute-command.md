@@ -5,12 +5,12 @@ slug: /commands/qr-execute-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* ; *comando* )<!-- END REF-->
+<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* : Integer ; *comando* : Integer )<!-- END REF-->
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| comando | Integer | &#8594;  | Comando de menu a ser executado |
+| area | Integer | &#8594; | Referência da área |
+| comando | Integer | &#8594; | Comando de menu a ser executado |
 
 <!-- END REF-->
 

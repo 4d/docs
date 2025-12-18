@@ -5,7 +5,7 @@ slug: /commands/close-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFile* )<!-- END REF-->
+<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFile* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

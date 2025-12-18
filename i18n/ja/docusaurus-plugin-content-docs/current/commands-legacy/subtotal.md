@@ -5,12 +5,12 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* {; *pageBreak*} ) : Real<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* : Field {; *pageBreak* : Integer} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | Field | &#8594;  | 小計を求める数値型のフィールドまたは変数 |
-| pageBreak | Integer | &#8594;  | 改ページを行うブレークレベル |
+| data | Field | &#8594; | 小計を求める数値型のフィールドまたは変数 |
+| pageBreak | Integer | &#8594; | 改ページを行うブレークレベル |
 | 戻り値 | Real | &#8592; | データの小計 |
 
 <!-- END REF-->

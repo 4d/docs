@@ -5,13 +5,13 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *conjunto1* ; *conjunto2* ; *resultado* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *conjunto1* : Text ; *conjunto2* : Text ; *resultado* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto1 | Text | &#8594;  | Conjunto inicial |
-| conjunto2 | Text | &#8594;  | Conjunto a restar |
-| resultado | Text | &#8594;  | Conjunto resultante |
+| conjunto1 | Text | &#8594; | Conjunto inicial |
+| conjunto2 | Text | &#8594; | Conjunto a restar |
+| resultado | Text | &#8594; | Conjunto resultante |
 
 <!-- END REF-->
 

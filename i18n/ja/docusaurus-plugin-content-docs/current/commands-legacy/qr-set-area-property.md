@@ -5,13 +5,13 @@ slug: /commands/qr-set-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *area* ; *property* ; *value* )<!-- END REF-->
+<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *area* : Integer ; *property* : Integer ; *value* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET AREA PROPERTY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| property | Integer | &#8594;  | 指定するインタフェース要素 |
-| value | Integer | &#8594;  | 1 = 表示, 0 = 非表示 |
+| area | Integer | &#8594; | エリア参照 |
+| property | Integer | &#8594; | 指定するインタフェース要素 |
+| value | Integer | &#8594; | 1 = 表示, 0 = 非表示 |
 
 <!-- END REF-->
 

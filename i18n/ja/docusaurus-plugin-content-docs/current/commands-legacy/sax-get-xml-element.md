@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* ; *name* ; *prefix* ; *attrNames* ; *attrValues* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* : Time ; *name* : Text ; *prefix* : Text ; *attrNames* : Text array ; *attrValues* : Text array )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
 | name | Text | &#8592; | 要素名 |
 | prefix | Text | &#8592; | 名前空間 |
 | attrNames | Text array | &#8592; | 属性名 |

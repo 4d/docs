@@ -5,14 +5,14 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphImage* ; *graphNum*  ; *xCatégories* {; *zValeurs*} {; *zValeurs2* ; ... ; *zValeursN*} )<br/>**GRAPH** ( *graphImage* ; *graphParams* ; *xCatégories* {; *zValeurs*} {; *zValeurs2* ; ... ; *zValeursN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphImage* : Picture ; *graphNum* : Entier long, Objet  ; *xCatégories* : Array {; *...zValeurs* : Array} )<br/>**GRAPH** ( *graphImage* : Picture ; *graphParams* : Entier long, Objet ; *xCatégories* : Array {; *...zValeurs* : Array} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| graphImage | Picture | &#8594;  | Variable image |
-| graphNum &#124; graphParams | Entier long, Objet | &#8594;  | Entier long : Numéro de type de graphe, Objet (64 bits uniquement) : Paramètres du graphe |
-| xCatégories | Array | &#8594;  | Catégories sur l'axe des x |
-| zValeurs | Array | &#8594;  | Valeurs à représenter graphiquement (jusqu'à 8 valeurs) |
+| graphImage | Picture | &#8594; | Variable image |
+| graphNum &#124; graphParams | Entier long, Objet | &#8594; | Entier long : Numéro de type de graphe, Objet (64 bits uniquement) : Paramètres du graphe |
+| xCatégories | Array | &#8594; | Catégories sur l'axe des x |
+| zValeurs | Array | &#8594; | Valeurs à représenter graphiquement (jusqu'à 8 valeurs) |
 
 <!-- END REF-->
 

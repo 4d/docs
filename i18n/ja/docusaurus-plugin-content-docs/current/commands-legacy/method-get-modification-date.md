@@ -5,14 +5,14 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* ; *modDate* ; *modTime* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *path* : Text, Text配列 ; *modDate* : Date, Date配列 ; *modTime* : Time, Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text, Text配列 | &#8594;  | メソッドパスを格納したテキストまたはテキスト配列 |
+| path | Text, Text配列 | &#8594; | メソッドパスを格納したテキストまたはテキスト配列 |
 | modDate | Date, Date配列 | &#8592; | メソッド更新日 |
 | modTime | Time, Integer array | &#8592; | メソッド更新時刻 |
-| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-set-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( {* ;} *object* ; *height* {; *unit*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( * ; *object* : Text ; *height* : Integer {; *unit* : Integer} )<br/>**LISTBOX SET ROWS HEIGHT** ( *object* : Field, Variable ; *height* : Integer {; *unit* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

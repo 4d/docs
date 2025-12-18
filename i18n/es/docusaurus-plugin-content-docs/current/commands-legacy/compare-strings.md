@@ -5,13 +5,13 @@ slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *cadenaA* ; *cadenaB* {; *opciones*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *cadenaA* : Text ; *cadenaB* : Text {; *opciones* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadenaA | Text | &#8594;  | Cadena a comparar |
-| cadenaB | Text | &#8594;  | Cadena a comparar |
-| opciones | Integer | &#8594;  | Regla(s) de comparación |
+| cadenaA | Text | &#8594; | Cadena a comparar |
+| cadenaB | Text | &#8594; | Cadena a comparar |
+| opciones | Integer | &#8594; | Regla(s) de comparación |
 | Resultado | Integer | &#8592; | Resultado de la comparación de las cadenas |
 
 <!-- END REF-->

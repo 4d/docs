@@ -5,14 +5,14 @@ slug: /commands/object-set-resizing-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( {* ;} *objet* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( * ; *objet* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT SET RESIZING OPTIONS** ( *objet* : Field, Variable ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| horizontal | Integer | &#8594;  | Option de redimensionnement horizontal |
-| vertical | Integer | &#8594;  | Option de redimensionnement vertical |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| horizontal | Integer | &#8594; | Option de redimensionnement horizontal |
+| vertical | Integer | &#8594; | Option de redimensionnement vertical |
 
 <!-- END REF-->
 

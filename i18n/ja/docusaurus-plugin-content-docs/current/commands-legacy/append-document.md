@@ -5,12 +5,12 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* {; *fileType*} ) : Time<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | ドキュメント名、または 完全なドキュメントパス名、または 標準ファイルダイアログボックスの空の文字列 |
-| fileType | Text | &#8594;  | スクリーンされるドキュメントタイプのリスト、または ドキュメントをスクリーンしない場合 "*" |
+| document | Text | &#8594; | ドキュメント名、または 完全なドキュメントパス名、または 標準ファイルダイアログボックスの空の文字列 |
+| fileType | Text | &#8594; | スクリーンされるドキュメントタイプのリスト、または ドキュメントをスクリーンしない場合 "*" |
 | 戻り値 | Time | &#8592; | ドキュメント参照番号 |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/export-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *estruturaXML* {; *formato*} )<!-- END REF-->
+<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *estruturaXML* : Text {; *formato* : Text} )<!-- END REF-->
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | estruturaXML | Text | &#8592; | Exportação da definição XML da estrutura de banco de dados 4D |
-| formato | Text | &#8594;  | Formato de exportação: formato xml (padrão) ou formato html |
+| formato | Text | &#8594; | Formato de exportação: formato xml (padrão) ou formato html |
 
 <!-- END REF-->
 

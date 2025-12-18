@@ -5,12 +5,12 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *tableau* {; *tableau2* ; ... ; *tableauN*}{; > ou <} )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *tableau* : Array {; *...tableau* : Array}{; > ou <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#8594;  | Tableau(x) à trier |
-| > ou < | Opérateur | &#8594;  | ">" pour effectuer un tri par ordre croissant ou "<" pour effectuer un tri par ordre décroissant (tri croissant si omis) |
+| tableau | Array | &#8594; | Tableau(x) à trier |
+| > ou < | Opérateur | &#8594; | ">" pour effectuer un tri par ordre croissant ou "<" pour effectuer un tri par ordre décroissant (tri croissant si omis) |
 
 <!-- END REF-->
 

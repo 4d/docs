@@ -5,15 +5,15 @@ slug: /commands/blob-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *BLOB* ; *textFormat* {; *offset* {; *textLength*}} )  : Text<!-- END REF-->
+<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *BLOB* : Blob ; *textFormat* : Integer {; *offset* : Variable {; *textLength* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.BLOB to text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | テキストを取り出すBLOB |
-| textFormat | Integer | &#8594;  | テキストのフォーマットと文字セット |
-| offset | Variable |&#8596; | BLOB内のオフセット (バイト単位) |
-| ||| 読み込み後の新しいオフセット |
-| textLength | Integer | &#8594;  | 読み込む文字数 |
+| Blob | Blob | &#8594; | テキストを取り出すBLOB |
+| textFormat | Integer | &#8594; | テキストのフォーマットと文字セット |
+| offset | Variable | &#8596; | BLOB内のオフセット (バイト単位) |
+|  |  |  | 読み込み後の新しいオフセット |
+| textLength | Integer | &#8594; | 読み込む文字数 |
 | 戻り値 | Text | &#8592; | 取り出したテキスト |
 
 <!-- END REF-->

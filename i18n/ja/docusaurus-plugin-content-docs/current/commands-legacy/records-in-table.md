@@ -5,11 +5,11 @@ slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *aTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Records in table.Syntax-->**Records in table** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコード数を返すテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | レコード数を返すテーブル, または 省略時、デフォルトテーブル |
 | 戻り値 | Integer | &#8592; | テーブル中の総レコード数 |
 
 <!-- END REF-->

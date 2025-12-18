@@ -5,11 +5,11 @@ slug: /commands/qr-run
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *zone* )<!-- END REF-->
+<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *zone* : Integer )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone à exécuter |
+| zone | Integer | &#8594; | Référence de la zone à exécuter |
 
 <!-- END REF-->
 

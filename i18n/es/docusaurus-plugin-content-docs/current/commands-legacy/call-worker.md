@@ -5,13 +5,13 @@ slug: /commands/call-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *proceso* ; *metodo* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *proceso* : Text, Integer ; *metodo* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL WORKER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Text, Integer | &#8594;  | Nombre o número del proceso worker |
-| metodo | Object, Text | &#8594;  | Nombre del método proyecto a llamar |
-| param | Expression | &#8594;  | Parámetros pasados al método |
+| proceso | Text, Integer | &#8594; | Nombre o número del proceso worker |
+| metodo | Object, Text | &#8594; | Nombre del método proyecto a llamar |
+| param | Expression | &#8594; | Parámetros pasados al método |
 
 <!-- END REF-->
 

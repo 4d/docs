@@ -5,14 +5,14 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* ; *errorAction* {; *attribName* ; *attribValue*} {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* : Text ; *errorAction* : Integer {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text, *attribValue* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| scriptPath | Text | &#8594;  | 実行するSQLスクリプトが書かれたファイルの完全パス名 |
-| errorAction | Integer | &#8594;  | スクリプト実行中にエラーが発生した場合のアクション |
-| attribName | Text | &#8594;  | 使用する属性の名前 |
-| attribValue | Text | &#8594;  | 属性の値 |
+| scriptPath | Text | &#8594; | 実行するSQLスクリプトが書かれたファイルの完全パス名 |
+| errorAction | Integer | &#8594; | スクリプト実行中にエラーが発生した場合のアクション |
+| attribName | Text | &#8594; | 使用する属性の名前 |
+| attribValue | Text | &#8594; | 属性の値 |
 
 <!-- END REF-->
 

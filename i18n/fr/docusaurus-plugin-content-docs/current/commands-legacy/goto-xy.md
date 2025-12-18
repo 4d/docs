@@ -5,12 +5,12 @@ slug: /commands/goto-xy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* ; *y* )<!-- END REF-->
+<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| x | Integer | &#8594;  | Coordonnée x (horizontale) du curseur |
-| y | Integer | &#8594;  | Coordonnée y (verticale) du curseur |
+| x | Integer | &#8594; | Coordonnée x (horizontale) du curseur |
+| y | Integer | &#8594; | Coordonnée y (verticale) du curseur |
 
 <!-- END REF-->
 

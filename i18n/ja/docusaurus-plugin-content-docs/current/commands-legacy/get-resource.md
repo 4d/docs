@@ -5,15 +5,14 @@ slug: /commands/get-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* ; *resID* ; *resData* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* : Text ; *resID* : Integer ; *resData* : Blob {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4文字のリソースタイプ |
-| resID | Integer | &#8594;  | リソースID番号 |
-| resData | Blob | &#8594;  | データを受け取るBLOBフィールドまたは変数 |
-| &#8592; | リソースの内容 |
-| resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resType | Text | &#8594; | 4文字のリソースタイプ |
+| resID | Integer | &#8594; | リソースID番号 |
+| resData | Blob | &#8596; | *in:* BLOB field or variable to receive the data <br/>*out:* Contents of the resource |
+| resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 
 <!-- END REF-->
 
@@ -33,9 +32,6 @@ displayed_sidebar: docs
 
  Mac OSベースのリソースに対して作業していることを忘れないでください。プラットフォームが何であろうと、倍長整数のような内部リソースデータは Macintoshバイトオーダーで格納されます。Windows上では、(ストリングリストリソースおよびピクチャリソース等の) 標準リソースデータは必要に応じて自動的にバイトスワップされます。これに対して、カスタム内部データストラクチャを作成および使用する場合は、BLOB から取り出すデータのバイトスワップは開発者に任されています ([BLOB to longint](blob-to-longint.md "BLOB to longint")コマンドにMacintosh byte ordering定数を渡すなど)。
 
-## 例題 
-
-SET RESOURCEコマンドの例題参照
 
 ## システム変数およびセット 
 

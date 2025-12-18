@@ -5,7 +5,7 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* {; *messageText*} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* : Boolean {; *messageText* : Text} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

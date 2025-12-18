@@ -5,7 +5,7 @@ slug: /commands/web-service-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *accessURL* ; *soapAction* ; *methodName* ; *nameSpace* {; *complexType* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *accessURL* : Text ; *soapAction* : Text ; *methodName* : Text ; *nameSpace* : Text {; *complexType* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

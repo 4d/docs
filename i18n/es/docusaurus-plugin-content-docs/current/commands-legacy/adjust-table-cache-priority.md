@@ -5,12 +5,12 @@ slug: /commands/adjust-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *tabla* ; *prioridad* )<!-- END REF-->
+<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *tabla* : Table ; *prioridad* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla cuyo valor de prioridad de datos escalar tiene que ser ajustado |
-| prioridad | Integer | &#8594;  | Valor de prioridad de la caché para la tabla |
+| tabla | Table | &#8594; | Tabla cuyo valor de prioridad de datos escalar tiene que ser ajustado |
+| prioridad | Integer | &#8594; | Valor de prioridad de la caché para la tabla |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *proceso* )} : Text<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** ( *proceso* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de referencia del proceso |
+| proceso | Integer | &#8594; | Número de referencia del proceso |
 | Resultado | Text | &#8592; | Identificador de la barra de menús |
 
 <!-- END REF-->

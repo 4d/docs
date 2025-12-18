@@ -5,15 +5,15 @@ slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* ; *formula* {; *return* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; *return* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; * {; ...*param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| subformObject | Text | &#8594;  | サブフォームオブジェクトの名称 |
-| formula | Object, Text | &#8594;  | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
-| return | *, Variable | &#8594;  | メソッドが値を戻さない場合 * |
-| &#8592; | メソッドから返される値 |
-| param | Expression | &#8594;  | メソッドに渡す引数 |
+| subformObject | Text | &#8594; | サブフォームオブジェクトの名称 |
+| formula | Object, Text | &#8594; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
+| return | Variable | &#8592; | Value returned by formula (if any) |
+| \* | Operator | &#8594; | Formula does not return a value |
+| param | Expression | &#8594; | メソッドに渡す引数 |
 
 <!-- END REF-->
 

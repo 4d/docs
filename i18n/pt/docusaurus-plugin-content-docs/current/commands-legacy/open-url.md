@@ -5,13 +5,13 @@ slug: /commands/open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *rota* {; *appName*}{; *} )<!-- END REF-->
+<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *rota* : Text {; *appName* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#8594;  | Path of document or URL to open |
-| appName | Text | &#8594;  | Name of application to use |
-| * | Operador | &#8594;  | Se especificado = URL não é traduzido, se omitido = URL é traduzido |
+| rota | Text | &#8594; | Path of document or URL to open |
+| appName | Text | &#8594; | Name of application to use |
+| * | Operador | &#8594; | Se especificado = URL não é traduzido, se omitido = URL é traduzido |
 
 <!-- END REF-->
 

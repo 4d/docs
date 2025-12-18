@@ -5,15 +5,15 @@ slug: /commands/modify-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*tabla*}{; *modoSelección*}{; *entradaList*}{; *}{; *} )<!-- END REF-->
+<!--REF #_command_.MODIFY SELECTION.Syntax-->**MODIFY SELECTION** ( {*tabla* : Table}{; *modoSelección* : Integer}{; *entradaList* : Boolean}{; *} )<br/>**MODIFY SELECTION** ( {*tabla* : Table}{; *modoSelección* : Integer}{; *entradaList* : Boolean}; * {; *} )<!-- END REF-->
 <!--REF #_command_.MODIFY SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a mostrar y modificar o Tabla por defecto, si se omite |
-| modoSelección | Integer | &#8594;  | Modo de selección |
-| entradaList | Boolean | &#8594;  | Autorizar entrada en lista |
-| * | Operator |  &#8594;  | Utilizar formulario de salida para un sólo registro y ocultar las barras de desplazamiento en el formulario de     entrada |
-| * | Operator |  &#8594;  | Mostrar las barras de desplazamiento en el formulario de entrada (anula la segunda opción del primer parámetro *) |
+| tabla | Table | &#8594; | Tabla a mostrar y modificar o Tabla por defecto, si se omite |
+| modoSelección | Integer | &#8594; | Modo de selección |
+| entradaList | Boolean | &#8594; | Autorizar entrada en lista |
+| * | Operator | &#8594; | Utilizar formulario de salida para un sólo registro y ocultar las barras de desplazamiento en el formulario de     entrada |
+| * | Operator | &#8594; | Mostrar las barras de desplazamiento en el formulario de entrada (anula la segunda opción del primer parámetro *) |
 
 <!-- END REF-->
 

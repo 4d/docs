@@ -5,11 +5,11 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** {( *numReg* )}<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ( *numReg* : Integer )}<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numReg | Integer | &#8594;  | Número de registros a cargar |
+| numReg | Integer | &#8594; | Número de registros a cargar |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/dom-insert-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *refElementTarget* ; *refElementFuente* ; *indiceHijo* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *refElementTarget* : Text ; *refElementFuente* : Text ; *indiceHijo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Insert XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElementTarget | Text | &#8594;  | Referencia del elemento XML padre |
-| refElementFuente | Text | &#8594;  | Referencia del elemento XML a insertar |
-| indiceHijo | Integer | &#8594;  | Índice del hijo del elemento objetivo antes del cual se debe insertar el nuevo elemento |
+| refElementTarget | Text | &#8594; | Referencia del elemento XML padre |
+| refElementFuente | Text | &#8594; | Referencia del elemento XML a insertar |
+| indiceHijo | Integer | &#8594; | Índice del hijo del elemento objetivo antes del cual se debe insertar el nuevo elemento |
 | Resultado | Text | &#8592; | Referencia del nuevo elemento XML |
 
 <!-- END REF-->

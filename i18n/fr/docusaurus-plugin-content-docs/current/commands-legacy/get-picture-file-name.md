@@ -5,11 +5,11 @@ slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *image* ) : Text<!-- END REF-->
+<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *image* : Picture, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture, Picture | &#8594;  | Image dont vous souhaitez obtenir le nom par défaut |
+| image | Picture, Picture | &#8594; | Image dont vous souhaitez obtenir le nom par défaut |
 | Résultat | Text | &#8592; | Nom par défaut du fichier image |
 
 <!-- END REF-->

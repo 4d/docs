@@ -5,13 +5,13 @@ slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( {* ;} *objeto* ; *mensajeAyuda* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *objeto* : Text ; *mensajeAyuda* : Text )<br/>**OBJECT SET HELP TIP** ( *objeto* : Field, Variable ; *mensajeAyuda* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| mensajeAyuda | Text | &#8594;  | Contenido del mensaje de ayuda |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| mensajeAyuda | Text | &#8594; | Contenido del mensaje de ayuda |
 
 <!-- END REF-->
 

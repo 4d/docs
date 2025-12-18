@@ -5,7 +5,7 @@ slug: /commands/next-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.NEXT RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

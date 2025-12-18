@@ -5,12 +5,12 @@ slug: /commands/set-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* ; *tamaño* )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* : Time ; *tamaño* : Real )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referencia del documento |
-| tamaño | Real | &#8594;  | Nuevo tamaño expresado en bytes |
+| docRef | Time | &#8594; | Número de referencia del documento |
+| tamaño | Real | &#8594; | Nuevo tamaño expresado en bytes |
 
 <!-- END REF-->
 

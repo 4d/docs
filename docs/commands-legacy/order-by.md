@@ -5,7 +5,7 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* ;}{ *aField* }{; > or < }{; *aField2* ; > or <2 ; ... ; *aFieldN* ; > or <N}{; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table ;}{; ...(*aField* : Field {; >,<}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

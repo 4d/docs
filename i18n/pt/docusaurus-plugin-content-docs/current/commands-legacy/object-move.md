@@ -5,17 +5,17 @@ slug: /commands/object-move
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( {* ;} *objeto* ; *moverH* ; *moverV* {; *redimH* {; *redimV* {; *}}} )<!-- END REF-->
+<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *objeto* : Text ; *moverH* : Integer ; *moverV* : Integer {; *redimH* : Integer {; *redimV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *objeto* : Field, Variable ; *moverH* : Integer ; *moverV* : Integer {; *redimH* : Integer {; *redimV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Variável (se * é omitido) |
-| moverH | Integer | &#8594;  | Valor do movimento horizontal do objeto (>0 - para a direita, <0 - para esquerda) |
-| moverV | Integer | &#8594;  | Valor do movimento vertical do objeto (>0 - para baixo, <0 - para cima) |
-| redimH | Integer | &#8594;  | Valor do redimensionamento horizontal do objeto |
-| redimV | Integer | &#8594;  | Valor do redimensionamento vrtical do objeto |
-| * | Operador | &#8594;  | se especificado = coordenadas absolutas e se omitido = coordenadas relativas |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um  uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Variável (se * é omitido) |
+| moverH | Integer | &#8594; | Valor do movimento horizontal do objeto (>0 - para a direita, <0 - para esquerda) |
+| moverV | Integer | &#8594; | Valor do movimento vertical do objeto (>0 - para baixo, <0 - para cima) |
+| redimH | Integer | &#8594; | Valor do redimensionamento horizontal do objeto |
+| redimV | Integer | &#8594; | Valor do redimensionamento vrtical do objeto |
+| * | Operador | &#8594; | se especificado = coordenadas absolutas e se omitido = coordenadas relativas |
 
 <!-- END REF-->
 

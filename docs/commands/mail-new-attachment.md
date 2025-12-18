@@ -19,7 +19,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 |file|4D.File|&#8594; |Attachment file|
 |zipFile|4D.ZipFile|&#8594; |Attachment Zipfile|
-|blob|4D.Blob|&#8594; |BLOB containing the attachment|
+|blob|4D.Blob|&#8594; |Blob containing the attachment|
 |path|Text|&#8594; |Path of the attachment file|
 |name|Text|&#8594; |Name + extension used by the mail client to designate the attachment|
 |cid|Text|&#8594; |ID of attachment (HTML messages only), or " " if no cid is required|

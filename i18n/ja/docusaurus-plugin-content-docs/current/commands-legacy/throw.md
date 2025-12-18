@@ -5,17 +5,14 @@ slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *description*} ) 
-        
-            *throw* {( *errorObj* )}<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ( *errorObj* : Object )
+<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| errorCode | Integer | &#8594;  | エラーコードを表す倍調整数 |
-| description | Text | &#8594;  | エラーの説明 (テキスト) |
-| throw {( errorObj )} |
-| 引数 | 型 | 説明 |
-| errorObj | Object | &#8594;  | エラー構築用のプロパティを格納するオブジェクト |
+| errorCode | Integer | &#8594; | エラーコードを表す倍調整数 |
+| description | Text | &#8594; | エラーの説明 (テキスト) |
+| errorObj | Object | &#8594; | エラー構築用のプロパティを格納するオブジェクト |
 
 <!-- END REF-->
 

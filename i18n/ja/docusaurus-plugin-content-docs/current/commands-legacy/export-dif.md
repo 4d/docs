@@ -5,12 +5,12 @@ slug: /commands/export-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT DIF.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
-| document | Text | &#8594;  | データが書き出されるDIFドキュメント |
+| aTable | Table | &#8594; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
+| document | Text | &#8594; | データが書き出されるDIFドキュメント |
 
 <!-- END REF-->
 

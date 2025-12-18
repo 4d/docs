@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* ; *ligneMenu* {; *process*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item method.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
-| process | Integer | &#8594;  | Numéro de process |
+| menu | Integer, Text | &#8594; | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| process | Integer | &#8594; | Numéro de process |
 | Résultat | Text | &#8592; | Nom de la méthode |
 
 <!-- END REF-->

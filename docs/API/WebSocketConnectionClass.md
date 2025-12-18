@@ -74,7 +74,7 @@ This property is read-only.
 <!-- REF #WebSocketConnectionClass.send().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|message|Text / Blob / Object|->|The message to send|
+|message|Text, Blob, Object|->|The message to send|
 <!-- END REF -->
 
 #### Description

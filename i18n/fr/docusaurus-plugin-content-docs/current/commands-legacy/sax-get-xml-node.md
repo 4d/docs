@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) : Integer<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* : Time ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | Résultat | Integer | &#8592; | Evénement retourné par la fonction |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *colNumber* )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* : Integer ; *colNumber* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNumber | Integer | &#8594;  | カラム番号 |
+| area | Integer | &#8594; | エリア参照 |
+| colNumber | Integer | &#8594; | カラム番号 |
 
 <!-- END REF-->
 

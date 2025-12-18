@@ -5,11 +5,11 @@ slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | すべてのレコードが削除されるテーブル 省略時はデフォルトテーブル |
+| aTable | Table | &#8594; | すべてのレコードが削除されるテーブル 省略時はデフォルトテーブル |
 
 <!-- END REF-->
 

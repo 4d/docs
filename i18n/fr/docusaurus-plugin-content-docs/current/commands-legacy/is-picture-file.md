@@ -5,12 +5,12 @@ slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *cheminFichier* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *cheminFichier* : Text {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminFichier | Text | &#8594;  | Chemin d’accès de fichier |
-| * | Opérateur | &#8594;  | Valider les données |
+| cheminFichier | Text | &#8594; | Chemin d’accès de fichier |
+| * | Opérateur | &#8594; | Valider les données |
 | Résultat | Boolean | &#8592; | Vrai = cheminFichier désigne un fichier image, sinon Faux |
 
 <!-- END REF-->

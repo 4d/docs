@@ -5,13 +5,13 @@ slug: /commands/object-set-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( {* ;} *object* ; *action* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *object* : Text ; *action* : Text )<br/>**OBJECT SET ACTION** ( *object* : Field, Variable ; *action* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ACTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| action | Text | &#8594;  | 関連付けるアクション |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| action | Text | &#8594; | 関連付けるアクション |
 
 <!-- END REF-->
 

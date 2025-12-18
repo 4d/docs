@@ -5,14 +5,14 @@ slug: /commands/text-to-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *nomeArquivo* ; *texto* {; *conjCaracteres* {; *modoRetorno*}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *nomeArquivo* : Text ; *texto* : Text {; *conjCaracteres* : Text, Integer {; *modoRetorno* : Integer}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | Text | &#8594;  | Nome do documento ou caminho de acesso ao documento |
-| texto | Text | &#8594;  | Texto a armazenar no documento |
-| conjCaracteres | Text, Integer | &#8594;  | Nome ou número do conjunto de caracteres |
-| modoRetorno | Integer | &#8594;  | Modo de processamento para os retornos de linha |
+| nomeArquivo | Text | &#8594; | Nome do documento ou caminho de acesso ao documento |
+| texto | Text | &#8594; | Texto a armazenar no documento |
+| conjCaracteres | Text, Integer | &#8594; | Nome ou número do conjunto de caracteres |
+| modoRetorno | Integer | &#8594; | Modo de processamento para os retornos de linha |
 
 <!-- END REF-->
 

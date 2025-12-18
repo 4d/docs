@@ -5,14 +5,14 @@ slug: /commands/ldap-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* ; *login* ; *senha* {; *digest*} )<!-- END REF-->
+<!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* : Text ; *login* : Text ; *senha* : Text {; *digest* : Integer} )<!-- END REF-->
 <!--REF #_command_.LDAP LOGIN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | URL do servidor LDAP ao qual vai conectar |
-| login | Text | &#8594;  | Login do usuário |
-| senha | Text | &#8594;  | Senha do login |
-| digest | Integer | &#8594;  | 0 = envia senha em digest MD5 (padrão), 1 = envia senha sem criptografia |
+| url | Text | &#8594; | URL do servidor LDAP ao qual vai conectar |
+| login | Text | &#8594; | Login do usuário |
+| senha | Text | &#8594; | Senha do login |
+| digest | Integer | &#8594; | 0 = envia senha em digest MD5 (padrão), 1 = envia senha sem criptografia |
 
 <!-- END REF-->
 

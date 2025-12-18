@@ -5,11 +5,11 @@ slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** {( *groups* )}<!-- END REF-->
+<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ( *groups* : Collection )}<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| groups | Collection | &#8594;  | セッションの間4D ユーザーアカウントを所属させたいグループの名前 |
+| groups | Collection | &#8594; | セッションの間4D ユーザーアカウントを所属させたいグループの名前 |
 
 <!-- END REF-->
 

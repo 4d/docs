@@ -5,11 +5,11 @@ slug: /commands/clear-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *ensemble* )<!-- END REF-->
+<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *ensemble* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble | Text | &#8594;  | Nom de l'ensemble à effacer de la mémoire |
+| ensemble | Text | &#8594; | Nom de l'ensemble à effacer de la mémoire |
 
 <!-- END REF-->
 

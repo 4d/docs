@@ -5,12 +5,12 @@ slug: /commands/create-empty-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*tabla* ;} *conjunto* )<!-- END REF-->
+<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*tabla* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual crear un conjunto vacío o Tabla por defecto si se omite |
-| conjunto | Text | &#8594;  | Nombre del nuevo conjunto vacío |
+| tabla | Table | &#8594; | Tabla para la cual crear un conjunto vacío o Tabla por defecto si se omite |
+| conjunto | Text | &#8594; | Nombre del nuevo conjunto vacío |
 
 <!-- END REF-->
 

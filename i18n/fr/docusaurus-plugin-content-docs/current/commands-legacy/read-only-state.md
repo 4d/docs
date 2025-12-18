@@ -5,11 +5,11 @@ slug: /commands/read-only-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Read only state.Syntax-->**Read only state** {( *laTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Read only state.Syntax-->**Read only state** ( *laTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Read only state.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table pour laquelle il faut tester l'état ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table pour laquelle il faut tester l'état ou Table par défaut si ce paramètre est omis |
 | Résultat | Boolean | &#8592; | Accès à la table est lecture seulement (Vrai) ou Accès à la table est lecture-écriture (Faux) |
 
 <!-- END REF-->

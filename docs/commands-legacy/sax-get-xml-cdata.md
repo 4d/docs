@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-cdata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *document* ; *value* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *document* : Time ; *value* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SAX GET XML CDATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

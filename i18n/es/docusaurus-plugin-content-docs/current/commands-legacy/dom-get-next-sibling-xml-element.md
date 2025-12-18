@@ -5,11 +5,11 @@ slug: /commands/dom-get-next-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* {; *nomElemHermano* {; *valorElemHermano*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *elementRef* : Text {; *nomElemHermano* : Text {; *valorElemHermano* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
 | nomElemHermano | Text | &#8592; | Nombre del elemento XML hermano |
 | valorElemHermano | Text | &#8592; | Valor del elemento XML hermano |
 | Resultado | Text | &#8592; | Referencia del elemento XML hermano |

@@ -5,11 +5,11 @@ slug: /commands/maximize-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MAXIMIZE WINDOW.Syntax-->**MAXIMIZE WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.MAXIMIZE WINDOW.Syntax-->**MAXIMIZE WINDOW** ( *fenêtre* : Integer )}<!-- END REF-->
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (macOS) |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre Si omis = Toutes les fenêtres (Windows) ou Fenêtre de premier plan du process courant (macOS) |
 
 <!-- END REF-->
 

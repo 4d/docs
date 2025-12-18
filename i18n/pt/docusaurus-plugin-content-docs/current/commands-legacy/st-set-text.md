@@ -5,15 +5,15 @@ slug: /commands/st-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( {* ;} *objeto* ; *novoTexto* {; *inicioSel* {; *fimSel*}} )<!-- END REF-->
+<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *objeto* : Text ; *novoTexto* {; *inicioSel* : Integer {; *fimSel* : Integer}} )<br/>**ST SET TEXT** ( *objeto* : Field, Variable ; *novoTexto* {; *inicioSel* : Integer {; *fimSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou campo ou variável Texto (se * for omitido) |
-| novoText | Text | &#8594;  | Texto a inserir |
-| inicioSel | Integer | &#8594;  | Início da seleção |
-| fimSel | Integer | &#8594;  | Final da seleção |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou campo ou variável Texto (se * for omitido) |
+| novoText | Text | &#8594; | Texto a inserir |
+| inicioSel | Integer | &#8594; | Início da seleção |
+| fimSel | Integer | &#8594; | Final da seleção |
 
 <!-- END REF-->
 

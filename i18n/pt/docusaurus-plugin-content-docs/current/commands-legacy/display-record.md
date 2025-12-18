@@ -5,11 +5,11 @@ slug: /commands/display-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ( *tabela* : Table )}<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para qual exibir o registro atual, ou tabela Padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para qual exibir o registro atual, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 

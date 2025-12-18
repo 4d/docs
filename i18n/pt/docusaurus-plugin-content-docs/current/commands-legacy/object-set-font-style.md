@@ -5,13 +5,13 @@ slug: /commands/object-set-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT STYLE.Syntax-->**OBJECT SET FONT STYLE** ( {* ;} *objeto* ; *estilos* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT STYLE.Syntax-->**OBJECT SET FONT STYLE** ( * ; *objeto* : Text ; *estilos* : Integer )<br/>**OBJECT SET FONT STYLE** ( *objeto* : Field, Variable ; *estilos* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT STYLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| estilos | Integer | &#8594;  | Estilo de fonte |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| estilos | Integer | &#8594; | Estilo de fonte |
 
 <!-- END REF-->
 

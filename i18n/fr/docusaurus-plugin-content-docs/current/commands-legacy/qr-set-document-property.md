@@ -5,13 +5,13 @@ slug: /commands/qr-set-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *zone* ; *propriété* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *zone* : Integer ; *propriété* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| propriété | Integer | &#8594;  | 1 = Dialogue d'impression, 2 = Unité du document |
-| valeur | Integer | &#8594;  | Valeur de la propriété |
+| zone | Integer | &#8594; | Référence de la zone |
+| propriété | Integer | &#8594; | 1 = Dialogue d'impression, 2 = Unité du document |
+| valeur | Integer | &#8594; | Valeur de la propriété |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *lista* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *lista* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Referência da lista a ser testada |
+| lista | Integer | &#8594; | Referência da lista a ser testada |
 | Resultado | Boolean | &#8592; | TRUE se a lista é hierárquica e FALSE se não for uma lista hierárquica |
 
 <!-- END REF-->

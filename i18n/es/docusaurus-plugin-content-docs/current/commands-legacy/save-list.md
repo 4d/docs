@@ -5,12 +5,12 @@ slug: /commands/save-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *lista* ; *nomLista* )<!-- END REF-->
+<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *lista* : Integer ; *nomLista* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de la lista |
-| nomLista | Text | &#8594;  | Nombre de la lista como aparecerá en el editor de listas del entorno Diseño |
+| lista | Integer | &#8594; | Número de referencia de la lista |
+| nomLista | Text | &#8594; | Nombre de la lista como aparecerá en el editor de listas del entorno Diseño |
 
 <!-- END REF-->
 

@@ -5,14 +5,14 @@ slug: /commands/sql-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** {( *dataEntry* ; *userName* ; *password* ; * )}<!-- END REF-->
+<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ( *dataEntry* : Text ; *userName* : Text ; *password* : Text ; * )}<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataEntry | Text | &#8594;  | 外部データベース名、または<br/>外部データソースのIPアドレス、または<br/>ODBCマネジャーのデータソース名、または<br/>""で選択ダイアログボックスの表示 |
-| userName | Text | &#8594;  | データソースに登録されているユーザー名 |
-| password | Text | &#8594;  | データソースに登録されているパスワード |
-| * | 演算子 | &#8594;  | Begin SQL/End SQLへ適用される 省略した場合、適用しない(ローカルデータベース)、 渡す場合、適用する |
+| dataEntry | Text | &#8594; | 外部データベース名、または<br/>外部データソースのIPアドレス、または<br/>ODBCマネジャーのデータソース名、または<br/>""で選択ダイアログボックスの表示 |
+| userName | Text | &#8594; | データソースに登録されているユーザー名 |
+| password | Text | &#8594; | データソースに登録されているパスワード |
+| * | 演算子 | &#8594; | Begin SQL/End SQLへ適用される 省略した場合、適用しない(ローカルデータベース)、 渡す場合、適用する |
 
 <!-- END REF-->
 

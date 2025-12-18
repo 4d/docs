@@ -5,11 +5,11 @@ slug: /commands/sin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sin.Syntax-->**Sin** ( *Numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Sin.Syntax-->**Sin** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &#8594;  | Número, en radianes, cuyo seno se devuelve |
+| Numero | Real | &#8594; | Número, en radianes, cuyo seno se devuelve |
 | Resultado | Real | &#8592; | Seno del número |
 
 <!-- END REF-->

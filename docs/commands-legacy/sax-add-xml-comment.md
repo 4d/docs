@@ -5,7 +5,7 @@ slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* ; *comment* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

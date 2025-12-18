@@ -5,13 +5,13 @@ slug: /commands/ob-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *objeto* ; *propriedade* ; *array* )<!-- END REF-->
+<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *objeto* : Object ; *propriedade* : Text ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.OB GET ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594;  | Objeto estruturado |
-| propriedade | Text | &#8594;  | Nome da propriedade a ler |
-| array | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#8592; | Array valor da propriedade |
+| objeto | Object | &#8594; | Objeto estruturado |
+| propriedade | Text | &#8594; | Nome da propriedade a ler |
+| array | Array | &#8592; | Array valor da propriedade |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/set-print-preview
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *preview* )<!-- END REF-->
+<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *preview* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| preview | Boolean | &#8594;  | スクリーンにプレビュー (TRUE), または プレビューしない (FALSE) |
+| preview | Boolean | &#8594; | スクリーンにプレビュー (TRUE), または プレビューしない (FALSE) |
 
 <!-- END REF-->
 

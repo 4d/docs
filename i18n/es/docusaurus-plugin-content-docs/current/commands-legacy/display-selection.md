@@ -5,15 +5,16 @@ slug: /commands/display-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*tabla*}{; *modoSelección*}{; *entradaList*}{; *}{; *} )<!-- END REF-->
+<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** **DISPLAY SELECTION** ( {*tabla* : Table}{; *modoSelección* : Integer}{; *entradaList* : Boolean}{; *})<br/>**DISPLAY SELECTION** ( {*tabla* : Table}{; *modoSelección* : Integer}{; *entradaList* : Boolean} ; * {; *} )
+<!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a mostrar, o Tabla por defecto, si se omite |
-| modoSelección | Integer | &#8594;  | Modo de selección |
-| entradaList | Boolean | &#8594;  | Autorizar entrada en lista |
-| * | Operator |  &#8594;  | Utilizar el formulario de salida en caso de selección de un solo registro y ocultar las barras de desplazamiento en el formulario de entrada |
-| * | Operator |  &#8594;  | Mostrar las barras de desplazamiento en el formulario de entrada (anular el segundo efecto del primer parámetro *) |
+| tabla | Table | &#8594; | Tabla a mostrar, o Tabla por defecto, si se omite |
+| modoSelección | Integer | &#8594; | Modo de selección |
+| entradaList | Boolean | &#8594; | Autorizar entrada en lista |
+| * | Operator | &#8594; | Utilizar el formulario de salida en caso de selección de un solo registro y ocultar las barras de desplazamiento en el formulario de entrada |
+| * | Operator | &#8594; | Mostrar las barras de desplazamiento en el formulario de entrada (anular el segundo efecto del primer parámetro *) |
 
 <!-- END REF-->
 

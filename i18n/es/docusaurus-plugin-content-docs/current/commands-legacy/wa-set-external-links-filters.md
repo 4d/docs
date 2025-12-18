@@ -5,14 +5,14 @@ slug: /commands/wa-set-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( {* ;} *objeto* ; *arrFiltros* ; *arrAutorizRechazar* )<!-- END REF-->
+<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( * ; *objeto* : Text ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<br/>**WA SET EXTERNAL LINKS FILTERS** ( *objeto* : Field, Variable ; *arrFiltros* : Text array ; *arrAutorizRechazar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrFiltros | Text array | &#8594;  | Array de filtros |
-| arrAutorizRechazar | Boolean array | &#8594;  | Array autorizar- rechazar |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrFiltros | Text array | &#8594; | Array de filtros |
+| arrAutorizRechazar | Boolean array | &#8594; | Array autorizar- rechazar |
 
 <!-- END REF-->
 

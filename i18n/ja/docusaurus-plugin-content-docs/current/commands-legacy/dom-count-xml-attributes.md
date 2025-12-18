@@ -5,11 +5,11 @@ slug: /commands/dom-count-xml-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML attributes.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
+| elementRef | Text | &#8594; | XML要素参照 |
 | 戻り値 | Integer | &#8592; | 属性数 |
 
 <!-- END REF-->

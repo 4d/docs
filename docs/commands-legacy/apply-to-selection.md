@@ -5,7 +5,7 @@ slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* ; *statement* )<!-- END REF-->
+<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* : Table ; *statement* : Expression )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

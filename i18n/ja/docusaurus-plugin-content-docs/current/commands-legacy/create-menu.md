@@ -5,11 +5,11 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : Text<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** ( *menu* : Text, Integer, Text ) : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Text, Integer, Text | &#8594;  | メニュー参照 または 番号 または メニューバー名 |
+| menu | Text, Integer, Text | &#8594; | メニュー参照 または 番号 または メニューバー名 |
 | 戻り値 | Text | &#8592; | メニュー参照 |
 
 <!-- END REF-->

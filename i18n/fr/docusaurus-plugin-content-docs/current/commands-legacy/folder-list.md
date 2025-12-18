@@ -5,11 +5,11 @@ slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *cheminAccès* ; *dossiers* )<!-- END REF-->
+<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *cheminAccès* : Text ; *dossiers* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Chemin d'accès de volume, répertoire ou dossier |
+| cheminAccès | Text | &#8594; | Chemin d'accès de volume, répertoire ou dossier |
 | dossiers | Text array | &#8592; | Noms des dossiers situés à cet endroit |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* ; *valor* {; *inicio*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* : Array ; *valor* : Expression {; *inicio* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array a buscar |
-| valor | Expression | &#8594;  | Valor del mismo tipo a buscar en el array |
-| inicio | Integer | &#8594;  | Elemento a partir del cual comenzar la búsqueda |
+| array | Array | &#8594; | Array a buscar |
+| valor | Expression | &#8594; | Valor del mismo tipo a buscar en el array |
+| inicio | Integer | &#8594; | Elemento a partir del cual comenzar la búsqueda |
 | Resultado | Integer | &#8592; | Número del primer elemento en el array que corresponde al valor |
 
 <!-- END REF-->

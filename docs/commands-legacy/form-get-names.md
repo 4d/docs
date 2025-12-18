@@ -5,15 +5,14 @@ slug: /commands/form-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*aTable* ;} *arrNames* {; *filter* {; *marker*}}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*aTable* : Table ;} *arrNames* : Text array {; *filter* : Text {; *marker* : Real}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table reference |
 | arrNames | Text array | &#8592; | Array of form names |
 | filter | Text | &#8594;  | Name filter |
-| marker | Real | &#8594;  | Marker for minimum version to return |
-| &#8592; | New value |
+| marker | Real | &#8596;  | *in:* Marker for minimum version to return<br/>*out:* New value |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->

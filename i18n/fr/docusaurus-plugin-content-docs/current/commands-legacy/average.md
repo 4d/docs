@@ -5,12 +5,12 @@ slug: /commands/average
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Average.Syntax-->**Average** ( *séries* {; *cheminAttribut*} ) : Real<!-- END REF-->
+<!--REF #_command_.Average.Syntax-->**Average** ( *séries* : Field, Array {; *cheminAttribut* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &#8594;  | Valeurs dont vous voulez calculer la moyenne |
-| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la moyenne |
+| séries | Field, Array | &#8594; | Valeurs dont vous voulez calculer la moyenne |
+| cheminAttribut | Text | &#8594; | Chemin d'attribut duquel calculer la moyenne |
 | Résultat | Real | &#8592; | Moyenne arithmétique de séries |
 
 <!-- END REF-->

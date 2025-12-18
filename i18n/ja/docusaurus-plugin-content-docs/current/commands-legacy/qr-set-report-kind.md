@@ -5,12 +5,12 @@ slug: /commands/qr-set-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *area* ; *type* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *area* : Integer ; *type* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| type | Integer | &#8594;  | レポートタイプ |
+| area | Integer | &#8594; | エリア参照 |
+| type | Integer | &#8594; | レポートタイプ |
 
 <!-- END REF-->
 

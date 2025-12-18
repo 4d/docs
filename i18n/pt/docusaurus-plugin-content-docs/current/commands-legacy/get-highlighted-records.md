@@ -5,12 +5,12 @@ slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*tabela* ;} *nomConjunto* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*tabela* : Table ;} *nomConjunto* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual os registros selecionados serão lidos. Se omitido, a tabela do formulário atual |
-| nomConjunto | Text | &#8594;  | Conjunto onde os nomes selecionados serão armazenados |
+| tabela | Table | &#8594; | Tabela para a qual os registros selecionados serão lidos. Se omitido, a tabela do formulário atual |
+| nomConjunto | Text | &#8594; | Conjunto onde os nomes selecionados serão armazenados |
 
 <!-- END REF-->
 

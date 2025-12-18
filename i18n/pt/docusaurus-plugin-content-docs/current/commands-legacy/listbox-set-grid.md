@@ -5,14 +5,14 @@ slug: /commands/listbox-set-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( {* ;} *objeto* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( * ; *objeto* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID** ( *objeto* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| horizontal | Boolean | &#8594;  | True=mostrar; False=ocultar |
-| vertical | Boolean | &#8594;  | True=mostrar; False=ocultar |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| horizontal | Boolean | &#8594; | True=mostrar; False=ocultar |
+| vertical | Boolean | &#8594; | True=mostrar; False=ocultar |
 
 <!-- END REF-->
 

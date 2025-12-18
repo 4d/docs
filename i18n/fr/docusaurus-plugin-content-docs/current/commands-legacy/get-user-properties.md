@@ -5,11 +5,11 @@ slug: /commands/get-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *réfUtilisateur* ; *nom* ; *démarrage* ; *motDePasse* ; *nbUtilisations* ; *dernièreUtilisation* {; *adhésions* {; *groupePropriétaire*}} )<!-- END REF-->
+<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *réfUtilisateur* : Integer ; *nom* : Text ; *démarrage* : Text ; *motDePasse* : Text ; *nbUtilisations* : Integer ; *dernièreUtilisation* : Date {; *adhésions* : Integer array {; *groupePropriétaire* : Integer}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réfUtilisateur | Integer | &#8594;  | Numéro de référence unique de l'utilisateur |
+| réfUtilisateur | Integer | &#8594; | Numéro de référence unique de l'utilisateur |
 | nom | Text | &#8592; | Nom de l'utilisateur |
 | démarrage | Text | &#8592; | Nom de la méthode de démarrage |
 | motDePasse | Text | &#8592; | *** obsolète (chaîne vide)  *** |

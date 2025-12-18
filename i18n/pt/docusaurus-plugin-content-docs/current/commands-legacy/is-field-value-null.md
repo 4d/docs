@@ -5,11 +5,11 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *campo* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *campo* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo a ser avaliado |
+| campo | Field | &#8594; | Campo a ser avaliado |
 | Resultado | Boolean | &#8592; | TRUE = campo é NULL, False = campo não é NULL |
 
 <!-- END REF-->

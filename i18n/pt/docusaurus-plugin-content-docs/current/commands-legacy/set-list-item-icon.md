@@ -5,14 +5,14 @@ slug: /commands/set-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *lista* ; refElem | *  ; *icone* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM ICON.Syntax-->**SET LIST ITEM ICON** ( {* ;} *lista* : Integer, Text ; refElem | *  ; *icone* : Picture )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| refElem &#124; * | Inteiro longo, Operador | &#8594;  | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
-| icone | Picture | &#8594;  | Ícone a associar ao elemento |
+| * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| refElem &#124; * | Inteiro longo, Operador | &#8594; | Número de referencia do elemento, ou 0 para o último elemento adicionado à lista ou * para o elemento da lista atualmente selecionada |
+| icone | Picture | &#8594; | Ícone a associar ao elemento |
 
 <!-- END REF-->
 

@@ -5,15 +5,15 @@ slug: /commands/append-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *lista* ; *textoElem* ; *refElem* {; *sublista* ; *expandida*} )<!-- END REF-->
+<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *lista* : Integer ; *textoElem* : Text ; *refElem* : Integer {; *sublista* : Integer ; *expandida* : Boolean} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referência da lista |
-| textoElem | Text | &#8594;  | Texto do novo elemento de lista (máx. 255 caracteres) |
-| refElem | Integer | &#8594;  | Número de referencia único do novo elemento |
-| sublista | Integer | &#8594;  | Sub-lista opcional para adicionar ao novo elemento |
-| expandida | Boolean | &#8594;  | Indica se as sub-listas opcionais serão expandidas ou contraídas |
+| lista | Integer | &#8594; | Número de referência da lista |
+| textoElem | Text | &#8594; | Texto do novo elemento de lista (máx. 255 caracteres) |
+| refElem | Integer | &#8594; | Número de referencia único do novo elemento |
+| sublista | Integer | &#8594; | Sub-lista opcional para adicionar ao novo elemento |
+| expandida | Boolean | &#8594; | Indica se as sub-listas opcionais serão expandidas ou contraídas |
 
 <!-- END REF-->
 

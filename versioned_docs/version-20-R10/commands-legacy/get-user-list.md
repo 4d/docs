@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userNames | Text array | &#8592; | User names as they appear in the Password editor window |
-| userNumbers | Array integer | &#8592; | Corresponding unique user ID numbers |
+| userNumbers | Integer array | &#8592; | Corresponding unique user ID numbers |
 
 <!-- END REF-->
 

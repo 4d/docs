@@ -5,15 +5,15 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( {* ;} *objeto* ; *largOpt* ; *altOpt* {; *anchoMax*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *objeto* : Text ; *largOpt* : Integer ; *altOpt* : Integer {; *anchoMax* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *objeto* : Field, Variable ; *largOpt* : Integer ; *altOpt* : Integer {; *anchoMax* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
 | largOpt | Integer | &#8592; | Largo óptimo del objeto |
 | altOpt | Integer | &#8592; | Alto óptimo del objeto |
-| anchoMax | Integer | &#8594;  | Largo máximo del objeto |
+| anchoMax | Integer | &#8594; | Largo máximo del objeto |
 
 <!-- END REF-->
 

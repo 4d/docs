@@ -5,11 +5,11 @@ slug: /commands/post-outside-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *process* )<!-- END REF-->
+<!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.POST OUTSIDE CALL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Numéro du process |
+| process | Integer | &#8594; | Numéro du process |
 
 <!-- END REF-->
 

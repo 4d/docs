@@ -5,12 +5,12 @@ slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*tabela* ;} *numero* )<!-- END REF-->
+<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*tabela* : Table ;} *numero* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai reduzir a seleção, ou tabela padrão, se omitido |
-| numero | Integer | &#8594;  | Número de registros para manter selecionados |
+| tabela | Table | &#8594; | Tabela para a qual vai reduzir a seleção, ou tabela padrão, se omitido |
+| numero | Integer | &#8594; | Número de registros para manter selecionados |
 
 <!-- END REF-->
 

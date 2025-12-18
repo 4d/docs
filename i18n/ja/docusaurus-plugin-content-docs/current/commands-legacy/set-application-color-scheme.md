@@ -5,11 +5,11 @@ slug: /commands/set-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *colorScheme* )<!-- END REF-->
+<!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *colorScheme* : Text )<!-- END REF-->
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| colorScheme | Text | &#8594;  | "light"、"dark"、または "inherited" |
+| colorScheme | Text | &#8594; | "light"、"dark"、または "inherited" |
 
 <!-- END REF-->
 

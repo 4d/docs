@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-text-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *wpArea* ; *inicioFaixa* ; *fimFaixa* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Text range.Syntax-->**WP Text range** ( *wpArea* : Object ; *inicioFaixa* : Integer ; *fimFaixa* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Text range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

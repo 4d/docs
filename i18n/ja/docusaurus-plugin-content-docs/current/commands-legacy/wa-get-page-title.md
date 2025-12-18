@@ -5,12 +5,12 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *object* : Text ) : Text<br/>**WA Get page title** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | 現在のページのタイトル |
 
 <!-- END REF-->

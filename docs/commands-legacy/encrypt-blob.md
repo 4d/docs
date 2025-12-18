@@ -5,7 +5,7 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* ; *sendPrivKey* {; *recipPubKey*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* : Blob ; *sendPrivKey* : Blob {; *recipPubKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

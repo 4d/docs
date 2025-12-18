@@ -5,12 +5,12 @@ slug: /commands/object-get-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *objet* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( * ; *objet* : Text ) : Boolean<br/>**OBJECT Get focus rectangle invisible** ( *objet* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Boolean | &#8592; | Vrai = rectangle focus caché, Faux = rectangle focus visible |
 
 <!-- END REF-->

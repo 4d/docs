@@ -5,15 +5,15 @@ slug: /commands/set-menu-item-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* ; *menuItem* ; *itemKey* ; *modificadores* {; *processo*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemKey* : Text, Integer ; *modificadores* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado |
-| itemKey | Text, Integer | &#8594;  | Letra de atalho do teclado ou código do Caractere do atalho de teclado (sintaxe antiga) |
-| modificadores | Integer | &#8594;  | Modificador(es) para associar com atalho (ignorado se código de tecla for passado) |
-| processo | Integer | &#8594;  | Número de referência de processo |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item de menu ou -1 para o último item adicionado |
+| itemKey | Text, Integer | &#8594; | Letra de atalho do teclado ou código do Caractere do atalho de teclado (sintaxe antiga) |
+| modificadores | Integer | &#8594; | Modificador(es) para associar com atalho (ignorado se código de tecla for passado) |
+| processo | Integer | &#8594; | Número de referência de processo |
 
 <!-- END REF-->
 

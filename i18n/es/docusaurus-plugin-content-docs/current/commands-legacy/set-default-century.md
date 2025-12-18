@@ -5,12 +5,12 @@ slug: /commands/set-default-century
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *siglo* {; *añoPivote*} )<!-- END REF-->
+<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *siglo* : Integer {; *añoPivote* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| siglo | Integer | &#8594;  | Siglo por defecto (menos uno) para la entrada de años con dos dígitos |
-| añoPivote | Integer | &#8594;  | Año pivote para la entrada de años con dos dígitos |
+| siglo | Integer | &#8594; | Siglo por defecto (menos uno) para la entrada de años con dos dígitos |
+| añoPivote | Integer | &#8594; | Año pivote para la entrada de años con dos dígitos |
 
 <!-- END REF-->
 

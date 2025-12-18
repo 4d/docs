@@ -5,13 +5,13 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( {* ;} *objeto* ; *multilinea* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *objeto* : Text ; *multilinea* : Integer )<br/>**OBJECT SET MULTILINE** ( *objeto* : Field, Variable ; *multilinea* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| multilinea | Integer | &#8594;  | Estado de la propiedad multilínea |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| multilinea | Integer | &#8594; | Estado de la propiedad multilínea |
 
 <!-- END REF-->
 

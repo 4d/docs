@@ -5,14 +5,14 @@ slug: /commands/svg-show-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *objetoImagem* ; *id* {; *margem*} )<!-- END REF-->
+<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *objetoImagem* ; *id* : Text {; *margem* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoPicture | Picture | &#8594;  | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
-| id | Text | &#8594;  | Atributo ID do elemento a exibir |
-| margem | Integer | &#8594;  | Margem de visbilidade (em pixels por padrão) |
+| * | Operador | &#8594; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
+| objetoPicture | Picture | &#8594; | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
+| id | Text | &#8594; | Atributo ID do elemento a exibir |
+| margem | Integer | &#8594; | Margem de visbilidade (em pixels por padrão) |
 
 <!-- END REF-->
 

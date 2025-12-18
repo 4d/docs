@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get footer.Syntax-->**WP Get footer** ( *objFaixa* ) | (*docWP* ; *indiceSecao* {; *subtipoSecao*} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Get footer.Syntax-->**WP Get footer** ( *objFaixa* : Object ) | (*docWP* : Object ; *indiceSecao* : Integer {; *subtipoSecao* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get footer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

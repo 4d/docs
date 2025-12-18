@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | objects | Integer | &#8594;  | Objects to check |
 | options | Integer | &#8594;  | Checking options |
 | method | Text | &#8594;  | Name of 4D callback method |
-| tablesArray | Array integer | &#8594;  | Numbers of tables to be checked |
+| tablesArray | Integer array | &#8594;  | Numbers of tables to be checked |
 | fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numbers of indexes to be checked |
 
 <!-- END REF-->

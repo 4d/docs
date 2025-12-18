@@ -5,16 +5,16 @@ slug: /commands/listbox-expand
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( {* ;} *object* {; *recursive* {; *selector* {; linha | nivel  {; *coluna*}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX EXPAND.Syntax-->**LISTBOX EXPAND** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<br/>**LISTBOX EXPAND** ( *object* : Field, Variable {; *recursive* : Boolean {; *selector* : Integer {; linha | nivel  {; *coluna* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX EXPAND.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a variable |
-| object | any | &#8594;  | Object name (if * is specified) or <br/>Variable (if * is omitted) |
-| recursive | Boolean | &#8594;  | True = expand sublevels<br/>False = do not expand sublevels |
-| selector | Integer | &#8594;  | Part of list box to expand |
-| linha &#124; nivel | Inteiro longo | &#8594;  | Number of break row to expand or <br/>Number of list box level to expand |
-| coluna | Integer | &#8594;  | Number of break column to expand |
+| * | Operador | &#8594; | If specified, object is an object name (string)<br/>If omitted, object is a variable |
+| object | any | &#8594; | Object name (if * is specified) or <br/>Variable (if * is omitted) |
+| recursive | Boolean | &#8594; | True = expand sublevels<br/>False = do not expand sublevels |
+| selector | Integer | &#8594; | Part of list box to expand |
+| linha &#124; nivel | Inteiro longo | &#8594; | Number of break row to expand or <br/>Number of list box level to expand |
+| coluna | Integer | &#8594; | Number of break column to expand |
 
 <!-- END REF-->
 

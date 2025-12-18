@@ -5,17 +5,17 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *gauche* ; *haut* ; *droite* ; *bas* {; *type* {; *titre* {; *caseFermeture*}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *type* : Integer {; *titre* : Text {; *caseFermeture* : Text}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Integer | &#8594;  | Coordonnée gauche de l'intérieur de la fenêtre |
-| haut | Integer | &#8594;  | Coordonnée supérieure de l'intérieur de la fenêtre |
-| droite | Integer | &#8594;  | Coordonnée droite de l'intérieur de la fenêtre |
-| bas | Integer | &#8594;  | Coordonnée inférieure de l'intérieur de la fenêtre |
-| type | Integer | &#8594;  | Type de la fenêtre |
-| titre | Text | &#8594;  | Titre de la fenêtre |
-| caseFermeture | Text | &#8594;  | Méthode à appeler en cas de double-clic sur la case du menu Système ou de clic sur la case de fermeture |
+| gauche | Integer | &#8594; | Coordonnée gauche de l'intérieur de la fenêtre |
+| haut | Integer | &#8594; | Coordonnée supérieure de l'intérieur de la fenêtre |
+| droite | Integer | &#8594; | Coordonnée droite de l'intérieur de la fenêtre |
+| bas | Integer | &#8594; | Coordonnée inférieure de l'intérieur de la fenêtre |
+| type | Integer | &#8594; | Type de la fenêtre |
+| titre | Text | &#8594; | Titre de la fenêtre |
+| caseFermeture | Text | &#8594; | Méthode à appeler en cas de double-clic sur la case du menu Système ou de clic sur la case de fermeture |
 | Résultat | Integer | &#8592; | Numéro de référence de la fenêtre |
 
 <!-- END REF-->

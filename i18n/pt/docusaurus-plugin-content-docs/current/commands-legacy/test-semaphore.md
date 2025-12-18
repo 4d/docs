@@ -5,11 +5,11 @@ slug: /commands/test-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaforo* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaforo* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Test semaphore.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| semaforo | Text | &#8594;  | Semáforo a testar |
+| semaforo | Text | &#8594; | Semáforo a testar |
 | Resultado | Boolean | &#8592; | True = o semáforo existe, False = o semáforo não existe |
 
 <!-- END REF-->

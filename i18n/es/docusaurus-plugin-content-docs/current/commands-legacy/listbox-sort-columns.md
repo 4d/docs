@@ -5,14 +5,14 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( {* ;} *objeto* ; *numColumna* ; *orden* {; *numColumna2* ; *orden2* ; ... ; *numColumnaN* ; *ordenN*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *objeto* : Text ; *numColumna* : Integer ; *orden* : Operator {; ...(*numColumna* : Integer, *orden* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *objeto* : Field, Variable ; *numColumna* : Integer ; *orden* : Operator {; ...(*numColumna* : Integer, *orden* : Operator)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| numColumna | Integer | &#8594;  | Número(s) de columna(s) a ordenar |
-| orden | * | &#8594;  | ">" para una ordenación ascendente o "<" para una ordenación descendente |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| numColumna | Integer | &#8594; | Número(s) de columna(s) a ordenar |
+| orden | Operator | &#8594; | `>` to sort in ascending order or `<` to sort in descending order |
 
 <!-- END REF-->
 

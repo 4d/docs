@@ -5,11 +5,11 @@ slug: /commands/load-4d-view-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *4DViewDocumento* ) : Object<!-- END REF-->
+<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *4DViewDocumento* : Blob ) : Object<!-- END REF-->
 <!--REF #_command_.Load 4D View document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| 4DViewDocumento | Blob | &#8594;  | Documento 4D View |
+| 4DViewDocumento | Blob | &#8594; | Documento 4D View |
 | Resultado | Object | &#8592; | Representação de objeto no documento 4D View |
 
 <!-- END REF-->

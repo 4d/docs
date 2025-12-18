@@ -5,7 +5,7 @@ slug: /commands/pause-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTable* )<!-- END REF-->
+<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTable* : Table )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

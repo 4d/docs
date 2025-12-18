@@ -5,13 +5,13 @@ slug: /commands/object-set-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( {* ;} *objet* ; *formatAffich* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *objet* : Text ; *formatAffich* : Text )<br/>**OBJECT SET FORMAT** ( *objet* : Field, Variable ; *formatAffich* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| formatAffich | Text | &#8594;  | Nouveau format d'affichage de l'objet |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| formatAffich | Text | &#8594; | Nouveau format d'affichage de l'objet |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/user-in-group
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.User in group.Syntax-->**User in group** ( *usuario* ; *grupo* ) : Boolean<!-- END REF-->
+<!--REF #_command_.User in group.Syntax-->**User in group** ( *usuario* : Text ; *grupo* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.User in group.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| usuario | Text | &#8594;  | Nombre del usuario |
-| grupo | Text | &#8594;  | Nombre del grupo |
+| usuario | Text | &#8594; | Nombre del usuario |
+| grupo | Text | &#8594; | Nombre del grupo |
 | Resultado | Boolean | &#8592; | TRUE = el usuario está en el grupo FALSE = el usuario no está en el grupo |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/web-send-raw-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *data* {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *data* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | Blob | &#8594;  | 送るHTTPデータ |
-| * | 演算子 | &#8594;  | チャンクして送る |
+| data | Blob | &#8594; | 送るHTTPデータ |
+| * | 演算子 | &#8594; | チャンクして送る |
 
 <!-- END REF-->
 

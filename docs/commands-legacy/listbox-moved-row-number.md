@@ -5,7 +5,7 @@ slug: /commands/listbox-moved-row-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVED ROW NUMBER.Syntax-->**LISTBOX MOVED ROW NUMBER** ( {* ;} *object* ; *oldPosition* ; *newPosition* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVED ROW NUMBER.Syntax-->**LISTBOX MOVED ROW NUMBER** ( * ; *object* : Text ; *oldPosition* : Integer ; *newPosition* : Integer )<br/>**LISTBOX MOVED ROW NUMBER** ( *object* : Field, Variable ; *oldPosition* : Integer ; *newPosition* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVED ROW NUMBER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

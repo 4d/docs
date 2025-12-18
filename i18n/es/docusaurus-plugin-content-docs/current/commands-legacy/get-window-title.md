@@ -5,11 +5,11 @@ slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get window title.Syntax-->**Get window title** {( *ventana* )} : Text<!-- END REF-->
+<!--REF #_command_.Get window title.Syntax-->**Get window title** ( *ventana* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana o Ventana del primer plano del proceso actual si se omite |
+| ventana | Integer | &#8594; | Número de referencia de la ventana o Ventana del primer plano del proceso actual si se omite |
 | Resultado | Text | &#8592; | Título de la ventana |
 
 <!-- END REF-->

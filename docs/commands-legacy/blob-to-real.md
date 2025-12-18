@@ -5,11 +5,11 @@ slug: /commands/blob-to-real
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *blob* ; *realFormat* {; *offset*} ) : Real<!-- END REF-->
+<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *blob* : Blob ; *realFormat* : Integer {; *offset* : Variable} ) : Real<!-- END REF-->
 <!--REF #_command_.BLOB to real.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB from which to get the Real value |
+| Blob | Blob | &#8594;  | BLOB from which to get the Real value |
 | realFormat | Integer | &#8594;  | 0=Native real format, 1=Extended real format, 2=Macintosh Double real format, 3=Windows Double real format |
 | offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 |||| New offset after reading |

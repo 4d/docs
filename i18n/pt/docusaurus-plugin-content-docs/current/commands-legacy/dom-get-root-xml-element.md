@@ -5,11 +5,11 @@ slug: /commands/dom-get-root-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get root XML element** ( *refElemento* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get root XML element** ( *refElemento* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get root XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
+| refElemento | Text | &#8594; | Referência de elemento XML |
 | Resultado | Text | &#8592; | Referência do elemento raiz ou "" em caso de erro |
 
 <!-- END REF-->

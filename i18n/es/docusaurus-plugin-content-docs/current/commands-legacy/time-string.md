@@ -5,11 +5,11 @@ slug: /commands/time-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time string.Syntax-->**Time string** ( *segundos* ) : Text<!-- END REF-->
+<!--REF #_command_.Time string.Syntax-->**Time string** ( *segundos* : Integer, Time ) : Text<!-- END REF-->
 <!--REF #_command_.Time string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| segundos | Integer, Time | &#8594;  | Segundos desde la media noche |
+| segundos | Integer, Time | &#8594; | Segundos desde la media noche |
 | Resultado | Text | &#8592; | Hora como una cadena en formato 24 horas |
 
 <!-- END REF-->

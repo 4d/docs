@@ -5,12 +5,12 @@ slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* {; *set*} )<!-- END REF-->
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* : Boolean array {; *set* : Text} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | booleanArr | Boolean array | &#8592; | レコードがセットに含まれているかいないかを示す配列 |
-| set | Text | &#8594;  | セット名、または 引数が省略された場合UserSet |
+| set | Text | &#8594; | セット名、または 引数が省略された場合UserSet |
 
 <!-- END REF-->
 

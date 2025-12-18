@@ -5,7 +5,7 @@ slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *object* ; *column* ; *row* ; *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *object* : Text ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *object* : Field, Variable ; *column* : Integer ; *row* : Integer ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

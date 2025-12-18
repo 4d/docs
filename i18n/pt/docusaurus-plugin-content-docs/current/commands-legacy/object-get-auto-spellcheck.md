@@ -5,12 +5,12 @@ slug: /commands/object-get-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get auto spellcheck** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável ou campo (se omitido *) |
 | Resultado | Boolean | &#8592; | True = correção automática,False = não correção automática |
 
 <!-- END REF-->

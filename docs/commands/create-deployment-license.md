@@ -14,7 +14,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* ; *autoLicenseTarget* ) : Object<br/>**Create deployment license** ( *mergedApp* ; *buildLicense* {; *oemLicense*} ) : Object<!-- END REF-->
+<!--REF #_command_.Create deployment license.Syntax-->**Create deployment license** ( *mergedApp* : 4D.Folder ; *autoLicenseTarget* : Integer ) : Object<br/>**Create deployment license** ( *mergedApp* : 4D.Folder ; *buildLicense* : 4D.File {; *oemLicense* : 4D.File} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Create deployment license.Params-->
 | Parameter | Type |  | Description |

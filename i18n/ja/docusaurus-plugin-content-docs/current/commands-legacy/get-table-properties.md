@@ -5,11 +5,11 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( tablePtr| tableNum ; *invisible* {; *trigSaveNew* {; *trigSaveRec* {; *trigDelRec* {; *trigLoadRec*}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( tablePtr| tableNum ; *invisible* : Boolean {; *trigSaveNew* : Boolean {; *trigSaveRec* : Boolean {; *trigDelRec* : Boolean {; *trigLoadRec* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tablePtr&#124; tableNum | ポインター, 倍長整数 | &#8594;  | テーブルポインタ、またはテーブル番号 |
+| tablePtr&#124; tableNum | ポインター, 倍長整数 | &#8594; | テーブルポインタ、またはテーブル番号 |
 | invisible | Boolean | &#8592; | True = 非表示、False = 表示 |
 | trigSaveNew | Boolean | &#8592; | True = トリガ“新規レコード保存時”が有効、 False = それ以外 |
 | trigSaveRec | Boolean | &#8592; | True = トリガ“既存レコード保存時”が有効、 False = それ以外 |

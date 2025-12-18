@@ -5,14 +5,14 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *aCrypter* ; *cléPrivEmetteur* {; *cléPubRécepteur*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *aCrypter* : Blob ; *cléPrivEmetteur* : Blob {; *cléPubRécepteur* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | aCrypter | Blob | &#8596; | Données à crypter |
-| || | Données cryptées |
-| cléPrivEmetteur | Blob | &#8594;  | Clé privée de l’émetteur |
-| cléPubRécepteur | Blob | &#8594;  | Clé publique du récepteur |
+|  |  |  | Données cryptées |
+| cléPrivEmetteur | Blob | &#8594; | Clé privée de l’émetteur |
+| cléPubRécepteur | Blob | &#8594; | Clé publique du récepteur |
 
 <!-- END REF-->
 

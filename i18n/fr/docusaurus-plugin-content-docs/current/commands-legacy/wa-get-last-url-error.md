@@ -5,12 +5,12 @@ slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *objet* ; *url* ; *description* ; *codeErreur* )<!-- END REF-->
+<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *objet* : Text ; *url* : Text ; *description* : Text ; *codeErreur* : Integer )<br/>**WA GET LAST URL ERROR** ( *objet* : Field, Variable ; *url* : Text ; *description* : Text ; *codeErreur* : Integer )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | url | Text | &#8592; | URL à l’origine de l’erreur |
 | description | Text | &#8592; | Description de l’erreur (macOS) |
 | codeErreur | Integer | &#8592; | Code d'erreur |

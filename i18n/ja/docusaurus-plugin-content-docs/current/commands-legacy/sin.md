@@ -5,11 +5,11 @@ slug: /commands/sin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | 正弦を求めるラジアン値 |
+| number | Real | &#8594; | 正弦を求めるラジアン値 |
 | 戻り値 | Real | &#8592; | 正弦値 |
 
 <!-- END REF-->

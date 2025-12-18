@@ -5,12 +5,12 @@ slug: /commands/copy-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*tabela* ;} *nome* )<!-- END REF-->
+<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*tabela* : Table ;} *nome* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual copiar seleção, ou Tabela por padrão, se omitida |
-| nome | Text | &#8594;  | Nome da seleção temporal a criar |
+| tabela | Table | &#8594; | Tabela da qual copiar seleção, ou Tabela por padrão, se omitida |
+| nome | Text | &#8594; | Nome da seleção temporal a criar |
 
 <!-- END REF-->
 

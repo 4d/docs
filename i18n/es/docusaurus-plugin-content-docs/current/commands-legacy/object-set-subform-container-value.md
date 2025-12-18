@@ -5,11 +5,11 @@ slug: /commands/object-set-subform-container-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| value | any | &#8594;  | New value for the data source |
+| value | any | &#8594; | New value for the data source |
 
 <!-- END REF-->
 

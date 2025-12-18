@@ -5,11 +5,11 @@ slug: /commands/use-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *conjunto* )<!-- END REF-->
+<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nome do conjunto a usar |
+| conjunto | Text | &#8594; | Nome do conjunto a usar |
 
 <!-- END REF-->
 

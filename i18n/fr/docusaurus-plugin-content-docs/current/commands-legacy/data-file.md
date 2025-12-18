@@ -5,11 +5,11 @@ slug: /commands/data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file.Syntax-->**Data file** {( *segment* )} : Text<!-- END REF-->
+<!--REF #_command_.Data file.Syntax-->**Data file** ( *segment* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| segment | Integer | &#8594;  | Obsolète, ne pas utiliser |
+| segment | Integer | &#8594; | Obsolète, ne pas utiliser |
 | Résultat | Text | &#8592; | Nom long du fichier de données de la base |
 
 <!-- END REF-->

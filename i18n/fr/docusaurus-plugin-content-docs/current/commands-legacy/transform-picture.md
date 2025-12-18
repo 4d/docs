@@ -5,17 +5,16 @@ slug: /commands/transform-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *image* ; *opérateur* {; *param1* {; *param2* {; *param3* {; *param4*}}}} )<!-- END REF-->
+<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *image* : Picture ; *opérateur* : Integer {; *param1* : Real {; *param2* : Real {; *param3* : Real {; *param4* : Real}}}} )<!-- END REF-->
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &#8594;  | Image source à transformer |
-| &#8592; | Image résultant de la transformation |
-| opérateur | Integer | &#8594;  | Type de transformation à effectuer |
-| param1 | Real | &#8594;  | Paramètre de la transformation |
-| param2 | Real | &#8594;  | Paramètre de la transformation |
-| param3 | Real | &#8594;  | Paramètre de la transformation |
-| param4 | Real | &#8594;  | Paramètre de la transformation |
+| image | Picture | &#8596; | *in:* Source picture to be transformed<br/> *out:* Resulting picture after transformation |
+| opérateur | Integer | &#8594; | Type de transformation à effectuer |
+| param1 | Real | &#8594; | Paramètre de la transformation |
+| param2 | Real | &#8594; | Paramètre de la transformation |
+| param3 | Real | &#8594; | Paramètre de la transformation |
+| param4 | Real | &#8594; | Paramètre de la transformation |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/array-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *nomeArray* ; *tamanho* {; *tamanho2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *nomeArray* : Array ; *tamanho* : Integer {; *tamanho2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY LONGINT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArray | Array | &#8594;  | Nome do array |
-| tamanho | Integer | &#8594;  | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
-| tamanho2 | Integer | &#8594;  | Número de colunas no array de duas dimensões |
+| nomeArray | Array | &#8594; | Nome do array |
+| tamanho | Integer | &#8594; | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
+| tamanho2 | Integer | &#8594; | Número de colunas no array de duas dimensões |
 
 <!-- END REF-->
 

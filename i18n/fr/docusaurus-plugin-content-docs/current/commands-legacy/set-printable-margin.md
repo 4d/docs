@@ -5,14 +5,14 @@ slug: /commands/set-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Syntax-->**SET PRINTABLE MARGIN** ( *gauche* ; *haut* ; *droit* ; *bas* )<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Syntax-->**SET PRINTABLE MARGIN** ( *gauche* : Integer ; *haut* : Integer ; *droit* : Integer ; *bas* : Integer )<!-- END REF-->
 <!--REF #_command_.SET PRINTABLE MARGIN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Integer | &#8594;  | Marge gauche |
-| haut | Integer | &#8594;  | Marge supérieure |
-| droit | Integer | &#8594;  | Marge droite |
-| bas | Integer | &#8594;  | Marge inférieure |
+| gauche | Integer | &#8594; | Marge gauche |
+| haut | Integer | &#8594; | Marge supérieure |
+| droit | Integer | &#8594; | Marge droite |
+| bas | Integer | &#8594; | Marge inférieure |
 
 <!-- END REF-->
 

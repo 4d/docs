@@ -5,14 +5,14 @@ slug: /commands/blob-to-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* ; *byteOrdem* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* : Blob ; *byteOrdem* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB do qual obter o valor inteiro |
-| byteOrdem | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
-| offset | Variable | &#8596;  | Offset no BLOB (expressado em bytes) |
-| || | Novo offset depois da leitura |
+| Blob | Blob | &#8594; | BLOB do qual obter o valor inteiro |
+| byteOrdem | Integer | &#8594; | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
+| offset | Variable | &#8596; | Offset no BLOB (expressado em bytes) |
+|  |  |  | Novo offset depois da leitura |
 | Resultado da função | Integer | &#8592; | Valor inteiro (2 bytes) |
 
 <!-- END REF-->

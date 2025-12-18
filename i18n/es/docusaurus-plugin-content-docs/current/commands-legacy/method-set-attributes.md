@@ -5,13 +5,13 @@ slug: /commands/method-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *ruta* ; *atributos* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *ruta* : Text, Text array ; *atributos* : Object, Object array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &#8594;  | Rutas de métodos |
-| atributos | Object, Object array | &#8594;  | Atributos para definir los métodos seleccionados |
-| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text, Text array | &#8594; | Rutas de métodos |
+| atributos | Object, Object array | &#8594; | Atributos para definir los métodos seleccionados |
+| * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 

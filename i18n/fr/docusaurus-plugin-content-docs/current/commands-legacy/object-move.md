@@ -5,17 +5,17 @@ slug: /commands/object-move
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( {* ;} *objet* ; *dépH* ; *dépV* {; *redimH* {; *redimV* {; *}}} )<!-- END REF-->
+<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *objet* : Text ; *dépH* : Integer ; *dépV* : Integer {; *redimH* : Integer {; *redimV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *objet* : Field, Variable ; *dépH* : Integer ; *dépV* : Integer {; *redimH* : Integer {; *redimV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| dépH | Integer | &#8594;  | Valeur de déplacement horizontal de l’objet (>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Integer | &#8594;  | Valeur de déplacement vertical de l’objet (>0 = vers le bas, <0 = vers le haut) |
-| redimH | Integer | &#8594;  | Valeur de redimensionnement horizontal de l’objet |
-| redimV | Integer | &#8594;  | Valeur de redimensionnement vertical de l’objet |
-| * | Opérateur | &#8594;  | Si spécifié = coordonnées absolues Si omis = coordonnées relatives |
+| * | Opérateur | &#8594; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| dépH | Integer | &#8594; | Valeur de déplacement horizontal de l’objet (>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &#8594; | Valeur de déplacement vertical de l’objet (>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &#8594; | Valeur de redimensionnement horizontal de l’objet |
+| redimV | Integer | &#8594; | Valeur de redimensionnement vertical de l’objet |
+| * | Opérateur | &#8594; | Si spécifié = coordonnées absolues Si omis = coordonnées relatives |
 
 <!-- END REF-->
 

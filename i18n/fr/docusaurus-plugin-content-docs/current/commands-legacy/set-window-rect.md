@@ -5,16 +5,16 @@ slug: /commands/set-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *gauche* ; *haut* ; *droite* ; *bas* {; *fenêtre*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *fenêtre* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Integer | &#8594;  | Coordonnée gauche de l'intérieur de la fenêtre |
-| haut | Integer | &#8594;  | Coordonnée supérieure de l'intérieur de la fenêtre |
-| droite | Integer | &#8594;  | Coordonnée droite de l'intérieur de la fenêtre |
-| bas | Integer | &#8594;  | Coordonnée inférieure de l'intérieur de la fenêtre |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si ce paramètre est omis |
-| * | Opérateur | &#8594;  | Si omis (défaut) = passer la fenêtre au premier plan<br/>Si passé = ne pas changer le plan de la fenêtre |
+| gauche | Integer | &#8594; | Coordonnée gauche de l'intérieur de la fenêtre |
+| haut | Integer | &#8594; | Coordonnée supérieure de l'intérieur de la fenêtre |
+| droite | Integer | &#8594; | Coordonnée droite de l'intérieur de la fenêtre |
+| bas | Integer | &#8594; | Coordonnée inférieure de l'intérieur de la fenêtre |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si ce paramètre est omis |
+| * | Opérateur | &#8594; | Si omis (défaut) = passer la fenêtre au premier plan<br/>Si passé = ne pas changer le plan de la fenêtre |
 
 <!-- END REF-->
 

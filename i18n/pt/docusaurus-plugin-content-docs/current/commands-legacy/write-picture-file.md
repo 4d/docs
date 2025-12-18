@@ -5,13 +5,13 @@ slug: /commands/write-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomeArquivo* ; *imagem* {; *codec*} )<!-- END REF-->
+<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomeArquivo* : Text ; *imagem* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | Text | &#8594;  | Nome ou rota completa do arquivo a escrever, ou string vazia |
-| imagem | Picture | &#8594;  | Campo de imagem ou variável a escrever |
-| codec | Text | &#8594;  | Codec de identificação de Imagem |
+| nomeArquivo | Text | &#8594; | Nome ou rota completa do arquivo a escrever, ou string vazia |
+| imagem | Picture | &#8594; | Campo de imagem ou variável a escrever |
+| codec | Text | &#8594; | Codec de identificação de Imagem |
 
 <!-- END REF-->
 

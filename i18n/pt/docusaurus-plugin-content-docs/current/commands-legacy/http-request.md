@@ -5,19 +5,17 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* ; *url* ; *conteúdo* ; *resultado* {; *nomCab* ; *valCab*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* : Text ; *url* : Text ; *conteúdo* : Text, Blob, Picture, Object ; *resultado* : Integer {; *nomCab* : Text array ; *valCab* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoHTTP | Text | &#8594;  | Método HTTP para a solicitação |
-| url | Text | &#8594;  | URL à qual enviar a solicitação |
-| conteúdo | Text, Blob, Picture, Object | &#8594;  | Conteúdo do corpo(body)da solicitação |
+| metodoHTTP | Text | &#8594; | Método HTTP para a solicitação |
+| url | Text | &#8594; | URL à qual enviar a solicitação |
+| conteúdo | Text, Blob, Picture, Object | &#8594; | Conteúdo do corpo(body)da solicitação |
 | resultado | Text, Blob, Picture, Object | &#8592; | Resultado da solicitação |
-| nomCab | Text array | &#8594;  | Nomes dos cabeçalhos da solicitação |
-| &#8592; | Nomes dos cabeçalhos devolvidos |
-| valCab | Text array | &#8594;  | Valores dos cabeçalhos da solicitação |
-| &#8592; | Valores dos cabeçalhos devolvidos |
-| * | Operador | &#8594;  | Se passada, a conexão se mantém (keep-alive)Se omitida, a conexão é fechada automaticamente. |
+| nomCab | Text array | &#8596; | *in:* Header names of the request<br/>*out:* Returned header names |
+| valCab | Text array | &#8596; | *in:* Header values of the request<br/>*out:* Returned header values |
+| * | Operador | &#8594; | Se passada, a conexão se mantém (keep-alive)Se omitida, a conexão é fechada automaticamente. |
 | Resultado | Integer | &#8592; | Código de estado HTTP |
 
 <!-- END REF-->

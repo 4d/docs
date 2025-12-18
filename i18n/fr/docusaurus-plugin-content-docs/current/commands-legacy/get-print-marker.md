@@ -5,11 +5,11 @@ slug: /commands/get-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numTaquet* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numTaquet* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTaquet | Integer | &#8594;  | Numéro de taquet |
+| numTaquet | Integer | &#8594; | Numéro de taquet |
 | Résultat | Integer | &#8592; | Position du taquet |
 
 <!-- END REF-->

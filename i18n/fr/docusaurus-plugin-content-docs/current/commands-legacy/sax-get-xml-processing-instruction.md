@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* ; *nom* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* : Time ; *nom* : Text ; *valeur* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | nom | Text | &#8592; | Nom de l’instruction |
 | valeur | Text | &#8592; | Valeur de l’instruction |
 

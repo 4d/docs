@@ -5,13 +5,13 @@ slug: /commands/min
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Min.Syntax-->**Min** ( *series* {; *attributePath*} ) : any<!-- END REF-->
+<!--REF #_command_.Min.Syntax-->**Min** ( *series* : Field, Array {; *attributePath* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Min.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the minimum value |
 | attributePath | Text | &#8594;  | Path of attribute for which to return the minimum value |
-| Function result | Date, Number | &#8592; | Minimum value in series |
+| Function result | Date, Real | &#8592; | Minimum value in series |
 
 <!-- END REF-->
 

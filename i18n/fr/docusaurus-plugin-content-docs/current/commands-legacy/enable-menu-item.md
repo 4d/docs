@@ -5,13 +5,13 @@ slug: /commands/enable-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* ; *ligneMenu* {; *process*} )<!-- END REF-->
+<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.ENABLE MENU ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| process | Integer | &#8594;  | Numéro de référence du process |
+| menu | Integer, Text | &#8594; | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594; | Numéro de référence du process |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/resize-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *largeur* ; *hauteur* )<!-- END REF-->
+<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *largeur* : Integer ; *hauteur* : Integer )<!-- END REF-->
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| largeur | Integer | &#8594;  | Pixels à ajouter ou soustraire à la largeur courante de la fenêtre formulaire |
-| hauteur | Integer | &#8594;  | Pixels à ajouter ou soustraire à la hauteur courante de la fenêtre formulaire |
+| largeur | Integer | &#8594; | Pixels à ajouter ou soustraire à la largeur courante de la fenêtre formulaire |
+| hauteur | Integer | &#8594; | Pixels à ajouter ou soustraire à la hauteur courante de la fenêtre formulaire |
 
 <!-- END REF-->
 

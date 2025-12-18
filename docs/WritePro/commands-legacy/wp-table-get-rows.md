@@ -5,13 +5,14 @@ slug: /WritePro/commands/wp-table-get-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *targetObj* ) | ( *tableRef* ; startRow | wk header rows {; *numRows*} )  : Object<!-- END REF-->
+<!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *targetObj* : Object ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; startRow {; *numRows* : Integer} ) : Object<br/>**WP Table get rows** ( *tableRef* : Object ; *headers* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | tableRef | Object | &#8594;  | Table reference |
-| startRow &#124; wk header rows | Integer, Text | &#8594;  | Position of first row OR wk header rows |
+| startRow | Integer | &#8594;  | Position of first row |
+| headers | Text | &#8594;  | `wk header rows` |
 | numRows | Integer | &#8594;  | Number of rows to get |
 | Function result | Object | &#8592; | New row range containing selected rows |
 

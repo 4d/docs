@@ -5,14 +5,14 @@ slug: /commands/listbox-get-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( {* ;} *objet* ; *ligne* {; *typeCouleur*} )  : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( * ; *objet* : Text ; *ligne* : Integer {; *typeCouleur* : Integer} )  : Text<br/>**LISTBOX Get row color** ( *objet* : Field, Variable ; *ligne* : Integer {; *typeCouleur* : Integer} )  : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| ligne | Integer | &#8594;  | Numéro de ligne |
-| typeCouleur | Integer | &#8594;  | Couleur de police de la listbox (par défaut) ou couleur de fond de la listbox |
+| * | Opérateur | &#8594; | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594; | Numéro de ligne |
+| typeCouleur | Integer | &#8594; | Couleur de police de la listbox (par défaut) ou couleur de fond de la listbox |
 | Résultat | Text | &#8592; | Valeur de la couleur |
 
 <!-- END REF-->

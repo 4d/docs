@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* ; *commentaire* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* : Time ; *commentaire* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | commentaire | Text | &#8592; | Commentaire XML |
 
 <!-- END REF-->

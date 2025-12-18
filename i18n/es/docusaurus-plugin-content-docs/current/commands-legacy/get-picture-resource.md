@@ -5,14 +5,13 @@ slug: /commands/get-picture-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resNum* ; *resDatos* {; *resArchivo*} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resNum* : Integer ; *resDatos* : Field, Variable {; *resArchivo* : Time} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Número de recurso |
-| resDatos | Field, Variable | &#8594;  | Campo o variable imagen a recibir la imagen |
-| &#8592; | Contenido del recurso PICT |
-| resArchivo | Time | &#8594;  | Número de referencia del archivo de recursos o todos los archivos de recursos abiertos, si se omite |
+| resNum | Integer | &#8594; | Número de recurso |
+| resDatos | Field, Variable | &#8596; | *in:* Picture field or variable to receive the picture<br/>*out:* Contents of the PICT resource |
+| resArchivo | Time | &#8594; | Número de referencia del archivo de recursos o todos los archivos de recursos abiertos, si se omite |
 
 <!-- END REF-->
 

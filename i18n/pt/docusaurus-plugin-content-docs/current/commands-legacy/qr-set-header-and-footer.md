@@ -5,18 +5,18 @@ slug: /commands/qr-set-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* ; *seletor* ; *tituloEsq* ; *tituloCentro* ; *tituloDir* ; *altura* {; *imagem* {; *alinImag*}} )<!-- END REF-->
+<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* : Integer ; *seletor* : Integer ; *tituloEsq* : Text ; *tituloCentro* : Text ; *tituloDir* : Text ; *altura* : Integer {; *imagem* : Picture {; *alinImag* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| seletor | Integer | &#8594;  | 1= Cabeçalho, 2 = Rodapé |
-| tituloEsq | Text | &#8594;  | Texto a esquerda |
-| tituloCentro | Text | &#8594;  | Texto centralizado |
-| tituloDir | Text | &#8594;  | Texto a direita |
-| altura | Integer | &#8594;  | Altura do cabeçalho ou rodap~e |
-| imagem | Picture | &#8594;  | Imagem a exibir |
-| alinImag | Integer | &#8594;  | Atributo de alinhamento da imagem |
+| area | Integer | &#8594; | Referência da área |
+| seletor | Integer | &#8594; | 1= Cabeçalho, 2 = Rodapé |
+| tituloEsq | Text | &#8594; | Texto a esquerda |
+| tituloCentro | Text | &#8594; | Texto centralizado |
+| tituloDir | Text | &#8594; | Texto a direita |
+| altura | Integer | &#8594; | Altura do cabeçalho ou rodap~e |
+| imagem | Picture | &#8594; | Imagem a exibir |
+| alinImag | Integer | &#8594; | Atributo de alinhamento da imagem |
 
 <!-- END REF-->
 

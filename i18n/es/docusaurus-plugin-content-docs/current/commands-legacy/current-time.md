@@ -5,11 +5,11 @@ slug: /commands/current-time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current time.Syntax-->**Current time** {( * )} : Time<!-- END REF-->
+<!--REF #_command_.Current time.Syntax-->**Current time** ( * ) : Time<!-- END REF-->
 <!--REF #_command_.Current time.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Devuelve la hora actual del servidor |
+| * | Operador | &#8594; | Devuelve la hora actual del servidor |
 | Resultado | Time | &#8592; | Hora actual |
 
 <!-- END REF-->

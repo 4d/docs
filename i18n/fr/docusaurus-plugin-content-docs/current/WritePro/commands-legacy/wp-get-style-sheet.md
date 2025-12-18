@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get style sheet.Syntax-->**WP Get style sheet** ( *docWP* ; *nomFeuilleStyle* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Get style sheet.Syntax-->**WP Get style sheet** ( *docWP* : Object ; *nomFeuilleStyle* : Text ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get style sheet.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

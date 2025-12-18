@@ -5,13 +5,13 @@ slug: /commands/create-selection-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *laTable* ; *tabEnrg* {; *nom*} )<!-- END REF-->
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *laTable* : Table ; *tabEnrg* : Integer, Boolean array {; *nom* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de la sélection |
-| tabEnrg | Integer, Boolean array | &#8594;  | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans la sélection, Faux = il n’est pas dans la sélection) |
-| nom | Text | &#8594;  | Nom de la sélection temporaire à créer, ou Appliquer la commande à la sélection courante si ce paramètre est omis ou vide |
+| laTable | Table | &#8594; | Table de la sélection |
+| tabEnrg | Integer, Boolean array | &#8594; | Tableau de n° d’enregistrements, ou Tableau de booléens (Vrai = l’enregistrement est dans la sélection, Faux = il n’est pas dans la sélection) |
+| nom | Text | &#8594; | Nom de la sélection temporaire à créer, ou Appliquer la commande à la sélection courante si ce paramètre est omis ou vide |
 
 <!-- END REF-->
 

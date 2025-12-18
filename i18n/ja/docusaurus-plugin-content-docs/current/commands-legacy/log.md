@@ -5,11 +5,11 @@ slug: /commands/log
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log.Syntax-->**Log** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Log.Syntax-->**Log** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | 自然対数を求める数値 |
+| number | Real | &#8594; | 自然対数を求める数値 |
 | 戻り値 | Real | &#8592; | 自然対数値 |
 
 <!-- END REF-->

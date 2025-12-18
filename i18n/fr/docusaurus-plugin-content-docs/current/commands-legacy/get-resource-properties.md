@@ -5,13 +5,13 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resNum* {; *resFichier*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* : Text ; *resNum* : Integer {; *resFichier* : Time} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | Type de ressource (4 caractères) |
-| resNum | Integer | &#8594;  | Numéro de référence de ressource (ID) |
-| resFichier | Time | &#8594;  | Numéro de référence du fichier de ressource ou Tous les fichiers de ressources ouverts si omis |
+| resType | Text | &#8594; | Type de ressource (4 caractères) |
+| resNum | Integer | &#8594; | Numéro de référence de ressource (ID) |
+| resFichier | Time | &#8594; | Numéro de référence du fichier de ressource ou Tous les fichiers de ressources ouverts si omis |
 | Résultat | Integer | &#8592; | Attributs de la ressource |
 
 <!-- END REF-->

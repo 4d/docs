@@ -5,11 +5,11 @@ slug: /commands/set-real-comparison-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* )<!-- END REF-->
+<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* : Real )<!-- END REF-->
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| epsilon | Real | &#8594;  | Valeur epsilon pour les comparaisons d'égalité des réels |
+| epsilon | Real | &#8594; | Valeur epsilon pour les comparaisons d'égalité des réels |
 
 <!-- END REF-->
 

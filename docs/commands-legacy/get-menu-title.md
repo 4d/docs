@@ -5,7 +5,7 @@ slug: /commands/get-menu-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* {; *process*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* : Integer, Text {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

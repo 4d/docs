@@ -5,11 +5,11 @@ slug: /commands/clear-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *sémaphore* )<!-- END REF-->
+<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *sémaphore* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sémaphore | Text | &#8594;  | Sémaphore à effacer |
+| sémaphore | Text | &#8594; | Sémaphore à effacer |
 
 <!-- END REF-->
 

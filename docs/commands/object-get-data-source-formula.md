@@ -4,7 +4,7 @@ title: OBJECT Get data source formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( {* ;} *object* ) : 4D.Formula<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source formula.Syntax-->**OBJECT Get data source formula** ( * ; *object* : Text ) : 4D.Formula<br/>**OBJECT Get data source formula** ( *object* : Field, Variable ) : 4D.Formula<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

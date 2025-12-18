@@ -5,11 +5,11 @@ slug: /commands/get-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numeroMarc* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *numeroMarc* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numeroMarc | Integer | &#8594;  | Número de marcador |
+| numeroMarc | Integer | &#8594; | Número de marcador |
 | Resultado | Integer | &#8592; | Posição do marcador |
 
 <!-- END REF-->

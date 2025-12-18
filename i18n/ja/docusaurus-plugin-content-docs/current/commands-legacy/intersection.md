@@ -5,13 +5,13 @@ slug: /commands/intersection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
+<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set1 | Text | &#8594;  | 最初のセット |
-| set2 | Text | &#8594;  | 2番目のセット |
-| resultSet | Text | &#8594;  | 結果のセット |
+| set1 | Text | &#8594; | 最初のセット |
+| set2 | Text | &#8594; | 2番目のセット |
+| resultSet | Text | &#8594; | 結果のセット |
 
 <!-- END REF-->
 

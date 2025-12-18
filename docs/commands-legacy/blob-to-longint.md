@@ -5,11 +5,11 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* ; *byteOrder* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* : Blob ; *byteOrder* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
+| Blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
 | byteOrder | Integer | &#8594;  | 0 = Native byte ordering, 1 = Macintosh byte ordering, 2 = PC byte ordering |
 | offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 |||| New offset after reading |

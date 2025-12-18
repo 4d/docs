@@ -5,12 +5,12 @@ slug: /commands/cut-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*aTable* ;} *name* )<!-- END REF-->
+<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションをカットするテーブル, または 省略した場合デフォルトテーブル |
-| name | Text | &#8594;  | 作成する命名セレクションの名前 |
+| aTable | Table | &#8594; | セレクションをカットするテーブル, または 省略した場合デフォルトテーブル |
+| name | Text | &#8594; | 作成する命名セレクションの名前 |
 
 <!-- END REF-->
 

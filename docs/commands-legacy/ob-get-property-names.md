@@ -5,13 +5,13 @@ slug: /commands/ob-get-property-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *object* ; *arrProperties* {; *arrTypes*} )<!-- END REF-->
+<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *object* : Object ; *arrProperties* : Text array {; *arrTypes* : Integer array} )<!-- END REF-->
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | Structured object |
 | arrProperties | Text array | &#8592; | Property names |
-| arrTypes | Array integer | &#8592; | Property types |
+| arrTypes | Integer array | &#8592; | Property types |
 
 <!-- END REF-->
 

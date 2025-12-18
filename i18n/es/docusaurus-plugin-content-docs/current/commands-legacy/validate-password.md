@@ -5,13 +5,13 @@ slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* ; *contraseña* {; *digest*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* : Integer, Text ; *contraseña* : Text {; *digest* : Boolean} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Integer, Text | &#8594;  | Número de referencia único |
-| contraseña | Text | &#8594;  | Contraseña no encriptada |
-| digest | Boolean | &#8594;  | Contraseña digest = True, <br/>Contraseña texto plano (por defecto) = False |
+| refUsuario | Integer, Text | &#8594; | Número de referencia único |
+| contraseña | Text | &#8594; | Contraseña no encriptada |
+| digest | Boolean | &#8594; | Contraseña digest = True, <br/>Contraseña texto plano (por defecto) = False |
 | Resultado | Boolean | &#8592; | True = contraseña correcta False = contraseña incorrecta |
 
 <!-- END REF-->

@@ -5,11 +5,11 @@ slug: /commands/qr-delete-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *area* )<!-- END REF-->
+<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | 削除するエリアの参照 |
+| area | Integer | &#8594; | 削除するエリアの参照 |
 
 <!-- END REF-->
 

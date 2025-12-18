@@ -5,12 +5,12 @@ slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get horizontal alignment** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get horizontal alignment.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre del objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
 | Resultado | Integer | &#8592; | Código de alineación |
 
 <!-- END REF-->

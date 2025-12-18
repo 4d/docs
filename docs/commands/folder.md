@@ -22,7 +22,7 @@ displayed_sidebar: docs
 |path|Text|&#8594; |Folder path|
 |folderConstant|Integer|&#8594; |4D folder constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
-|*|operator|&#8594; |* to return folder of host database|
+|*|Operator|&#8594; |* to return folder of host database|
 |Result|[4D.Folder](../API/FolderClass.md)|&#8592;|New folder object|
 <!-- END REF -->
 

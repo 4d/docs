@@ -5,7 +5,7 @@ slug: /commands/listbox-set-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( {* ;} *object* ; *width* {; *minWidth* {; *maxWidth*}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( * ; *object* : Text ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<br/>**LISTBOX SET COLUMN WIDTH** ( *object* : Field, Variable ; *width* : Integer {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/count-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *tableau* ; *valeur* ) : Integer<!-- END REF-->
+<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *tableau* : Array ; *valeur* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Count in array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#8594;  | Tableau dans lequel effectuer le comptage |
-| valeur | Expression | &#8594;  | Valeur à compter |
+| tableau | Array | &#8594; | Tableau dans lequel effectuer le comptage |
+| valeur | Expression | &#8594; | Valeur à compter |
 | Résultat | Integer | &#8592; | Nombre d’occurrences trouvées |
 
 <!-- END REF-->

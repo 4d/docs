@@ -5,15 +5,15 @@ slug: /commands/longint-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *enteroLargo* ; *BLOB* ; *byteOrden* {; offset | *} )<!-- END REF-->
+<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *enteroLargo* : Integer ; *BLOB* : Blob ; *byteOrden* : Integer {; offset | *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| enteroLargo | Integer | &#8594;  | Valor de tipo Entero largo a escribir en el BLOB |
-| Blob | Blob | &#8594;  | BLOB a recibir el valor Entero largo |
-| byteOrden | Integer | &#8594;  | 0 Orden de bytes nativo 1 Orden de bytes Macintosh 2 Orden de bytes PC |
-| offset &#124; * | Variable, Operador | &#8596;  | Offset en el BLOB (expresado en bytes) o * para añadir el valor |
-| || | Nuevo offset después de la escritura si se omite * |
+| enteroLargo | Integer | &#8594; | Valor de tipo Entero largo a escribir en el BLOB |
+| Blob | Blob | &#8594; | BLOB a recibir el valor Entero largo |
+| byteOrden | Integer | &#8594; | 0 Orden de bytes nativo 1 Orden de bytes Macintosh 2 Orden de bytes PC |
+| offset &#124; * | Variable, Operador | &#8596; | Offset en el BLOB (expresado en bytes) o * para añadir el valor |
+|  |  |  | Nuevo offset después de la escritura si se omite * |
 
 <!-- END REF-->
 

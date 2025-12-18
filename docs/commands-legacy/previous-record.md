@@ -5,7 +5,7 @@ slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

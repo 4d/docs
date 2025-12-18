@@ -5,7 +5,7 @@ slug: /commands/move-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *srcPathname* ; *dstPathname* )<!-- END REF-->
+<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *srcPathname* : Text ; *dstPathname* : Text )<!-- END REF-->
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

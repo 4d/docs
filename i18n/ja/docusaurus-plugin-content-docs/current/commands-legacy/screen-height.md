@@ -5,11 +5,11 @@ slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Screen height.Syntax-->**Screen height** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | Windows: アプリケーションウィンドウの高さ または*が指定されている場合、画面の高さ Macintosh: メイン画面の高さ |
+| * | 演算子 | &#8594; | Windows: アプリケーションウィンドウの高さ または*が指定されている場合、画面の高さ Macintosh: メイン画面の高さ |
 | 戻り値 | Integer | &#8592; | ピクセル数で表される高さ |
 
 <!-- END REF-->

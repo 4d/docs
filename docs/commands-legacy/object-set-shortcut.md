@@ -5,7 +5,7 @@ slug: /commands/object-set-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( {* ;} *object* ; *key* {; *modifiers*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( * ; *object* : Text ; *key* : Text {; *modifiers* : Integer} )<br/>**OBJECT SET SHORTCUT** ( *object* : Field, Variable ; *key* : Text {; *modifiers* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

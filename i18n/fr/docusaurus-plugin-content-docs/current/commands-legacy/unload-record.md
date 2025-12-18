@@ -5,11 +5,11 @@ slug: /commands/unload-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** ( *laTable* : Table )}<!-- END REF-->
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table pour laquelle l'enregistrement est à libérer ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table pour laquelle l'enregistrement est à libérer ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

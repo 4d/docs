@@ -5,7 +5,7 @@ slug: /commands/list-of-style-sheets
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *arrHojasEstilo* )<!-- END REF-->
+<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *arrHojasEstilo* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

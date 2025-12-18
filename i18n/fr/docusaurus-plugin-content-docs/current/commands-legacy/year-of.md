@@ -5,11 +5,11 @@ slug: /commands/year-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* ) : Integer<!-- END REF-->
+<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | Date dont vous voulez extraire l'année |
+| date | Date | &#8594; | Date dont vous voulez extraire l'année |
 | Résultat | Integer | &#8592; | Nombre indiquant l'année de date |
 
 <!-- END REF-->

@@ -5,7 +5,7 @@ slug: /commands/character-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Character code.Syntax-->**Character code** ( *character* ) : Integer<!-- END REF-->
+<!--REF #_command_.Character code.Syntax-->**Character code** ( *character* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Character code.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( {* ;} *object* ; *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**OBJECT GET COORDINATES** ( *object* : Field, Variable ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

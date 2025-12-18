@@ -5,14 +5,14 @@ slug: /commands/execute-method-in-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* ; *formula* {; *return* {; *param*} {; *param2* ; ... ; *paramN*}} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD IN SUBFORM.Syntax-->**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; *return* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD IN SUBFORM** ( *subformObject* : Text ; *formula* : Object, Text ; * {; ...*param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD IN SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | subformObject | Text | &#8594;  | Name of subform object |
 | formula | Object, Text | &#8594;  | Formula object or Name of project method |
-| return | *, Variable | &#8594;  | * if formula does not return a value |
-| &#8592; | Value returned by formula |
+| return | Variable | &#8592;  | Value returned by formula (if any) |
+| \* | Operator | &#8594;  | Formula does not return a value |
 | param | Expression | &#8594;  | Parameter(s) passed to formula |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/qr-set-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *area* ; *linha* ; *ocultar* )<!-- END REF-->
+<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *area* : Integer ; *linha* : Integer ; *ocultar* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET INFO ROW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área criada |
-| linha | Integer | &#8594;  | Designa a Linha |
-| ocultar | Integer | &#8594;  | 0=exibir, 1=ocultar |
+| area | Integer | &#8594; | Referência da área criada |
+| linha | Integer | &#8594; | Designa a Linha |
+| ocultar | Integer | &#8594; | 0=exibir, 1=ocultar |
 
 <!-- END REF-->
 

@@ -5,20 +5,20 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objeto* ; *posiçaoCol* ; *nomeColuna* ; *formula* ; *tipoDados* ; *nomeCabe* ; *varTitulo* {; *nomeRodape* ; *varRodape*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *objeto* : Text ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *formula* : Text ; *tipoDados* : Integer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomeRodape* : Text ; *varRodape* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *objeto* : Field, Variable ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *formula* : Text ; *tipoDados* : Integer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomeRodape* : Text ; *varRodape* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Integer | &#8594;  | Localização da coluna a inserir |
-| nomeColuna | Text | &#8594;  | Nome do objeto de coluna |
-| formula | Text | &#8594;  | Fórmula 4D associada com a coluna |
-| tipoDados | Integer | &#8594;  | Tipo de resultado da fórmula |
-| nomeCabe | Text | &#8594;  | Nome do objeto título da coluna |
-| varTitulo | Integer, Pointer | &#8594;  | Variável título de coluna |
-| nomeRodape | Text | &#8594;  | Nome do rodapé  da coluna |
-| varRodape | Variable, Pointer | &#8594;  | Variável de rodapé da coluna |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &#8594; | Localização da coluna a inserir |
+| nomeColuna | Text | &#8594; | Nome do objeto de coluna |
+| formula | Text | &#8594; | Fórmula 4D associada com a coluna |
+| tipoDados | Integer | &#8594; | Tipo de resultado da fórmula |
+| nomeCabe | Text | &#8594; | Nome do objeto título da coluna |
+| varTitulo | Integer, Pointer | &#8594; | Variável título de coluna |
+| nomeRodape | Text | &#8594; | Nome do rodapé  da coluna |
+| varRodape | Variable, Pointer | &#8594; | Variável de rodapé da coluna |
 
 <!-- END REF-->
 

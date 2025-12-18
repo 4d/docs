@@ -5,12 +5,12 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *objeto* ; *paramTipo* )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *objeto* : Object ; *paramTipo* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object | &#8594;  | Objeto 4D a ser usado (variável, array ou campo) |
-| paramTipo | Integer | &#8594;  | Tipo de parâmetro |
+| objeto | Object | &#8594; | Objeto 4D a ser usado (variável, array ou campo) |
+| paramTipo | Integer | &#8594; | Tipo de parâmetro |
 
 <!-- END REF-->
 

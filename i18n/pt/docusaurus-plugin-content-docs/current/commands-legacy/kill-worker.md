@@ -5,11 +5,11 @@ slug: /commands/kill-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** {( *processo* )}<!-- END REF-->
+<!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** ( *processo* : Text, Integer )}<!-- END REF-->
 <!--REF #_command_.KILL WORKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Text, Integer | &#8594;  | Número ou nome de processo a terminar (terminar processo atual se omitido) |
+| processo | Text, Integer | &#8594; | Número ou nome de processo a terminar (terminar processo atual se omitido) |
 
 <!-- END REF-->
 

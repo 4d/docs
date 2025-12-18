@@ -5,15 +5,15 @@ slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *fonte* ; *obsoleto* ; *novo* {; *quantasVezes*}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* : Text ; *oldString* : Text ; *newString* : Text {; *howMany* : Integer}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &#8594;  | Cadeia original |
-| obsoleto | Text | &#8594;  | Caracteres a substituir |
-| novo | Text | &#8594;  | Cadeia que vai substituir a velha (se estiver vazia, as ocorrências são apagadas) |
-| quantasVezes | Integer | &#8594;  | Quantas vezes substituir; se omitido, todas as ocorrências serão substituídas |
-| * | Operador | &#8594;  | Se passado: avaliação baseada em códigos de caracteres |
+| fonte | Text | &#8594; | Cadeia original |
+| obsoleto | Text | &#8594; | Caracteres a substituir |
+| novo | Text | &#8594; | Cadeia que vai substituir a velha (se estiver vazia, as ocorrências são apagadas) |
+| quantasVezes | Integer | &#8594; | Quantas vezes substituir; se omitido, todas as ocorrências serão substituídas |
+| * | Operador | &#8594; | Se passado: avaliação baseada em códigos de caracteres |
 | Resultado | Text | &#8592; | Cadeia resultante |
 
 <!-- END REF-->

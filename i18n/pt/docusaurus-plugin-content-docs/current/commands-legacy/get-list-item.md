@@ -5,13 +5,13 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *lista* ; posiçaoElem | *  ; *refElem* ; *textoElem* {; *sublista* ; *expandida*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *lista* : Integer, Text ; posiçaoElem | *  ; *refElem* : Integer ; *textoElem* : Text {; *sublista* : Integer ; *expandida* : Boolean} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| posiçaoElem &#124; * | Operador, Inteiro longo | &#8594;  | Posição do elemento em lista(s) expandida(s) ou contraída(s) * para o elemento atual da lista. |
+| * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| posiçaoElem &#124; * | Operador, Inteiro longo | &#8594; | Posição do elemento em lista(s) expandida(s) ou contraída(s) * para o elemento atual da lista. |
 | refElem | Integer | &#8592; | Número de referência do elemento |
 | textoElem | Text | &#8592; | Texto do elemento da lista |
 | sublista | Integer | &#8592; | Número de referência da sub-lista (se existe) |

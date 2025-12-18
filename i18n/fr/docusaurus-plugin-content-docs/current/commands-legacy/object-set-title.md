@@ -5,13 +5,13 @@ slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( {* ;} *objet* ; *libellé* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *objet* : Text ; *libellé* : Text )<br/>**OBJECT SET TITLE** ( *objet* : Field, Variable ; *libellé* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| libellé | Text | &#8594;  | Nouveau libellé de l'objet |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| libellé | Text | &#8594; | Nouveau libellé de l'objet |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* ; *menuItem* {; *process*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item method.Syntax-->**Get menu item method** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item method.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| process | Integer | &#8594;  | プロセス番号 |
+| menu | Integer, Text | &#8594; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| process | Integer | &#8594; | プロセス番号 |
 | 戻り値 | Text | &#8592; | メソッド名 |
 
 <!-- END REF-->

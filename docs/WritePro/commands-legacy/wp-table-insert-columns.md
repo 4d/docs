@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-insert-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( targetObj | {*tableRef* ; *colNumber*} {; *numColumns*} )  : Object<!-- END REF-->
+<!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( *targetObj* : Object {; *numColumns* : Integer }) : Object<br/>**WP Table insert columns** ( *tableRef* : Object ; *colNumber* : Integer {; *numColumns* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP Table insert columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -23,7 +23,7 @@ displayed_sidebar: docs
 
 This command supports two syntaxes:
 
-* If you pass a targetObj as the first parameter, the command will insert the column(s) in the first table intersecting the target. *targetObj* can contain:  
+* If you pass a *targetObj* as the first parameter, the command will insert the column(s) in the first table intersecting the target. *targetObj* can contain:  
    * a range, or  
    * an element (row / paragraph / body / header / footer / inline picture / section / subsection), or  
    * a 4D Write Pro document.  

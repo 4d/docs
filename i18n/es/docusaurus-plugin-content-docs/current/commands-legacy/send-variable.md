@@ -5,11 +5,11 @@ slug: /commands/send-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.SEND VARIABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Variable a enviar |
+| variable | Variable | &#8594; | Variable a enviar |
 
 <!-- END REF-->
 

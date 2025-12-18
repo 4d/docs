@@ -5,11 +5,11 @@ slug: /commands/process-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process state.Syntax-->**Process state** ( *proceso* ) : Integer<!-- END REF-->
+<!--REF #_command_.Process state.Syntax-->**Process state** ( *proceso* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Process state.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de proceso |
+| proceso | Integer | &#8594; | Número de proceso |
 | Resultado | Integer | &#8592; | Estado del proceso |
 
 <!-- END REF-->

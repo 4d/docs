@@ -5,11 +5,11 @@ slug: /commands/web-get-body-part
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *parte* ; *conteudo* ; *nome* ; *tipoMime* ; *nomArquivo* )<!-- END REF-->
+<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *parte* : Integer ; *conteudo* : Blob, Text ; *nome* : Text ; *tipoMime* : Text ; *nomArquivo* : Text )<!-- END REF-->
 <!--REF #_command_.WEB GET BODY PART.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| parte | Integer | &#8594;  | Número de parte |
+| parte | Integer | &#8594; | Número de parte |
 | conteudo | Blob, Text | &#8592; | Conteúdo de parte |
 | nome | Text | &#8592; | Nome da variável "input" |
 | tipoMime | Text | &#8592; | Tipo mime do arquivo |

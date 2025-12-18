@@ -5,7 +5,7 @@ slug: /commands/method-get-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *path* ; *code* {; *option*} {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *path* : Text, Text array ; *code* : Text, Text array {; *option* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

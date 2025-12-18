@@ -5,11 +5,11 @@ slug: /commands/blob-to-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *blob* ; *variable* {; *offset*} )<!-- END REF-->
+<!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *blob* : Blob ; *variable* : Variable {; *offset* : Integer} )<!-- END REF-->
 <!--REF #_command_.BLOB TO VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB containing 4D variables |
+| Blob | Blob | &#8594;  | BLOB containing 4D variables |
 | variable | Variable | &#8592; | Variable to write with BLOB contents |
 | offset | Integer | &#8596;  | Position of variable within BLOB |
 | ||| Position of following variable within BLOB |

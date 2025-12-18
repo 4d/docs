@@ -5,7 +5,7 @@ slug: /commands/query-selection-with-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* ; *array* )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* : Field ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/month-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Month of.Syntax-->**Month of** ( *aDate* ) : Integer<!-- END REF-->
+<!--REF #_command_.Month of.Syntax-->**Month of** ( *aDate* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Month of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aDate | Date | &#8594;  | 月を取り出す日付 |
+| aDate | Date | &#8594; | 月を取り出す日付 |
 | 戻り値 | Integer | &#8592; | 日付の月を示す数値 |
 
 <!-- END REF-->

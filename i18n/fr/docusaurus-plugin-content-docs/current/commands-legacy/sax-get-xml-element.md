@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* ; *nom* ; *préfixe* ; *nomsAttributs* ; *valeursAttributs* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *document* : Time ; *nom* : Text ; *préfixe* : Text ; *nomsAttributs* : Text array ; *valeursAttributs* : Text array )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | nom | Text | &#8592; | Nom de l’élément |
 | préfixe | Text | &#8592; | Espace de nommage |
 | nomsAttributs | Text array | &#8592; | Noms des attributs |

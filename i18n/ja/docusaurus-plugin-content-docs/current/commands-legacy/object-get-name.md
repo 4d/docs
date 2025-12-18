@@ -5,11 +5,11 @@ slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *selector* )} : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** ( *selector* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | オブジェクトカテゴリ |
+| selector | Integer | &#8594; | オブジェクトカテゴリ |
 | 戻り値 | Text | &#8592; | オブジェクトの名前 |
 
 <!-- END REF-->

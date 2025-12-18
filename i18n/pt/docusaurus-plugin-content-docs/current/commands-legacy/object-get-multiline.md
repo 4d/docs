@@ -5,12 +5,12 @@ slug: /commands/object-get-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get multiline** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get multiline.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | Resultado | Integer | &#8592; | Estado Multi linha do objeto |
 
 <!-- END REF-->

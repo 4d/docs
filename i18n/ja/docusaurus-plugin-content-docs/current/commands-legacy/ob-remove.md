@@ -5,12 +5,12 @@ slug: /commands/ob-remove
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *object* ; *property* )<!-- END REF-->
+<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *object* : Object, Object ; *property* : Text )<!-- END REF-->
 <!--REF #_command_.OB REMOVE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | 構造化されたオブジェクト |
-| property | Text | &#8594;  | 削除したいプロパティの名前 |
+| object | Object, Object | &#8594; | 構造化されたオブジェクト |
+| property | Text | &#8594; | 削除したいプロパティの名前 |
 
 <!-- END REF-->
 

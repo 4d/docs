@@ -5,12 +5,12 @@ slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get horizontal alignment** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get horizontal alignment.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
 | 戻り値 | Integer | &#8592; | 整列コード |
 
 <!-- END REF-->

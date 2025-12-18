@@ -5,11 +5,11 @@ slug: /commands/set-cursor
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** {( *cursor* )}<!-- END REF-->
+<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** ( *cursor* : Integer )}<!-- END REF-->
 <!--REF #_command_.SET CURSOR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cursor | Integer | &#8594;  | Número de resource de cursor |
+| cursor | Integer | &#8594; | Número de resource de cursor |
 
 <!-- END REF-->
 

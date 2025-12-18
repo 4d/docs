@@ -5,14 +5,14 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* ; *byteOrden* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* : Blob ; *byteOrden* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB del cual obtener el valor entero largo |
-| byteOrden | Integer | &#8594;  | 0 Orden de bytes nativo 1 Orden de bytes Macintosh 2 Orden de bytes PC |
+| Blob | Blob | &#8594; | BLOB del cual obtener el valor entero largo |
+| byteOrden | Integer | &#8594; | 0 Orden de bytes nativo 1 Orden de bytes Macintosh 2 Orden de bytes PC |
 | offset | Variable | &#8596; | Offset en el BLOB (expresado en bytes) |
-||| | Nuevo offset después de la lectura |
+|  |  |  | Nuevo offset después de la lectura |
 | Resultado | Integer | &#8592; | Valor entero largo (4 bytes) |
 
 <!-- END REF-->

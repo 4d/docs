@@ -5,11 +5,11 @@ slug: /commands/get-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *seletor* ; *paramTexto* )<!-- END REF-->
+<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *seletor* : Integer ; *paramTexto* )<!-- END REF-->
 <!--REF #_command_.GET MACRO PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seletor | Integer | &#8594;  | Seleção a usar |
+| seletor | Integer | &#8594; | Seleção a usar |
 | paramText | Text | &#8592; | Texto retornado |
 
 <!-- END REF-->

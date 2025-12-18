@@ -5,11 +5,11 @@ slug: /commands/character-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Character code.Syntax-->**Character code** ( *unCaractère* ) : Integer<!-- END REF-->
+<!--REF #_command_.Character code.Syntax-->**Character code** ( *unCaractère* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Character code.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| unCaractère | Text | &#8594;  | Caractère dont vous voulez obtenir le code |
+| unCaractère | Text | &#8594; | Caractère dont vous voulez obtenir le code |
 | Résultat | Integer | &#8592; | Code du caractère |
 
 <!-- END REF-->

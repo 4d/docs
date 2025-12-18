@@ -5,7 +5,7 @@ slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* ; *folderPath* {; *numFiles* {; *fileLimitSize* {; *fieldLimitSize*}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* : Table ; *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

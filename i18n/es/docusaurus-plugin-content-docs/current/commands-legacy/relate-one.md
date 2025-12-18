@@ -5,12 +5,12 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( tablasN | CampoN {; *discriminante*} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( tablasN | CampoN {; *discriminante* : Field} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tablasN &#124; CampoN | Tabla, Campo | &#8594;  | Tabla para la cual definir todas las relaciones automáticas o Campo con la relación manual con la tabla Uno |
-| discriminante | Field | &#8594;  | Campo discriminante de la tabla 1 |
+| tablasN &#124; CampoN | Tabla, Campo | &#8594; | Tabla para la cual definir todas las relaciones automáticas o Campo con la relación manual con la tabla Uno |
+| discriminante | Field | &#8594; | Campo discriminante de la tabla 1 |
 
 <!-- END REF-->
 

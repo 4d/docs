@@ -5,12 +5,12 @@ slug: /commands/dom-find-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *refElemento* ; *xPath* {; *arrRefElementos*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *refElemento* : Text ; *xPath* : Text {; *arrRefElementos* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
-| xPath | Text | &#8594;  | Rota XPath do elemento a procurar |
+| refElemento | Text | &#8594; | Referência de elemento XML |
+| xPath | Text | &#8594; | Rota XPath do elemento a procurar |
 | arrRefElementos | Text array | &#8592; | Lista de referências de elementos encontradas (se aplicável) |
 | Resultado | Text | &#8592; | Referência do elemento encontrado (se aplicável) |
 

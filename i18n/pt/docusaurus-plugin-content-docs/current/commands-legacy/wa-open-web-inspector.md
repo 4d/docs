@@ -5,12 +5,12 @@ slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( {* ;} *objeto* )<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *objeto* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *objeto* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável (se * for omitido) |
+| * | Operador | &#8594; | Se especificado objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou Variável (se * for omitido) |
 
 <!-- END REF-->
 

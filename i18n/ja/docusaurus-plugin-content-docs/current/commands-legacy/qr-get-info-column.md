@@ -5,12 +5,12 @@ slug: /commands/qr-get-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* ; *colNum* ; *title* ; *object* ; *hide* ; *size* ; *repeatedValue* ; *displayFormat* {; *resultVar*} )<!-- END REF-->
+<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Text ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text {; *resultVar* : Text} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNum | Integer | &#8594;  | カラム番号 |
+| area | Integer | &#8594; | エリア参照 |
+| colNum | Integer | &#8594; | カラム番号 |
 | title | Text | &#8592; | カラムタイトル |
 | object | Text | &#8592; | カラムに割り当てられたオブジェクト |
 | hide | Integer | &#8592; | 0 = 表示, 1 = 非表示 |

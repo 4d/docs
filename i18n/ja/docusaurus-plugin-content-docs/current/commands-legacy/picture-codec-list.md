@@ -5,13 +5,13 @@ slug: /commands/picture-codec-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *codecArray* {; *namesArray*}{; *} )<!-- END REF-->
+<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *codecArray* : Text array {; *namesArray* : Text array}{; *} )<!-- END REF-->
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | codecArray | Text array | &#8592; | 利用可能なピクチャCodecのID |
 | namesArray | Text array | &#8592; | ピクチャCodecの名前 |
-| * | 演算子 | &#8594;  | 読み込み (デコード) CODECのリストを返す |
+| * | 演算子 | &#8594; | 読み込み (デコード) CODECのリストを返す |
 
 <!-- END REF-->
 

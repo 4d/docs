@@ -5,11 +5,11 @@ slug: /commands/release-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* )<!-- END REF-->
+<!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* : Text )<!-- END REF-->
 <!--REF #_command_.RELEASE MENU.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Text | &#8594;  | Referência de menu |
+| menu | Text | &#8594; | Referência de menu |
 
 <!-- END REF-->
 

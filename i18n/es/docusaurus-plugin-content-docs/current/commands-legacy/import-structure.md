@@ -5,11 +5,11 @@ slug: /commands/import-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *estructuraXML* )<!-- END REF-->
+<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *estructuraXML* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| estructuraXML | Text | &#8594;  | Definición XML de la estructura de la base 4D |
+| estructuraXML | Text | &#8594; | Definición XML de la estructura de la base 4D |
 
 <!-- END REF-->
 

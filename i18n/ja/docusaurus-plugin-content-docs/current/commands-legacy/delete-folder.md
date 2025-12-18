@@ -5,12 +5,12 @@ slug: /commands/delete-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *folder* {; *deleteOption*} )<!-- END REF-->
+<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *folder* : Text {; *deleteOption* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folder | Text | &#8594;  | 削除されるフォルダーの名称またはフルパス |
-| deleteOption | Integer | &#8594;  | フォルダー削除オプション |
+| folder | Text | &#8594; | 削除されるフォルダーの名称またはフルパス |
+| deleteOption | Integer | &#8594; | フォルダー削除オプション |
 
 <!-- END REF-->
 

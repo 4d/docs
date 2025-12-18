@@ -5,13 +5,13 @@ slug: /commands/method-set-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *path* ; *code* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *path* : Text, Text配列 ; *code* : Text, Text配列 {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET CODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text, Text配列 | &#8594;  | メソッドパスを格納したテキストまたはテキスト配列 |
-| code | Text, Text配列 | &#8594;  | 指定したメソッドのコード |
-| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドをホストデータベースに適用する (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| path | Text, Text配列 | &#8594; | メソッドパスを格納したテキストまたはテキスト配列 |
+| code | Text, Text配列 | &#8594; | 指定したメソッドのコード |
+| * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドをホストデータベースに適用する (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

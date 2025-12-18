@@ -5,7 +5,7 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* ; *paramType* )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Object ; *paramType* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

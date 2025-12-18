@@ -5,7 +5,7 @@ slug: /commands/send-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* ;} *packet* )<!-- END REF-->
+<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* : Time ;} *packet* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SEND PACKET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

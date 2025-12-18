@@ -5,7 +5,7 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

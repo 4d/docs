@@ -5,12 +5,12 @@ slug: /WritePro/commands/wp-new-text-box
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* ; *pageNum* ) : Object<!-- END REF-->
+<!--REF #_command_.WP New text box.Syntax-->**WP New text box** ( *wpDoc* : Object ; *pageNum* : Real ) : Object<!-- END REF-->
 <!--REF #_command_.WP New text box.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | wpDoc | Object | &#8594;  | 4D Write Pro document |
-| pageNum | Number | &#8594;  | Page number where to anchor the text box |
+| pageNum | Real | &#8594;  | Page number where to anchor the text box |
 | Function result | Object | &#8592; | Text box object |
 
 <!-- END REF-->

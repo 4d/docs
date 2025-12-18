@@ -5,13 +5,12 @@ slug: /commands/edit-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *tabela* ; *formula* )<!-- END REF-->
+<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *tabela* : Table ; *formula* : Text )<!-- END REF-->
 <!--REF #_command_.EDIT FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a mostrar por padrão no editor de fórmulas |
-| formula | Text | &#8594;  | Variável que contem a fórmula a mostrar no editor de fórmulas ou "" somente para mostrar o editor |
-| &#8592; | Fórmula validada pelo usuário |
+| tabela | Table | &#8594; | Tabela a mostrar por padrão no editor de fórmulas |
+| formula | Text | &#8596; | *in:* Variable containing the formula to display in the Formula editor or "" to display editor only<br/>*out:* Formula validated by the user |
 
 <!-- END REF-->
 

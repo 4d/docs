@@ -5,11 +5,11 @@ slug: /commands/dom-close-xml
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *refElément* )<!-- END REF-->
+<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *refElément* : Text )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| refElément | Text | &#8594; | Référence d’élément XML racine |
 
 <!-- END REF-->
 

@@ -5,17 +5,17 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *doc* ; *bloqueado* ; *invisible* ; creado el ; creado a las ; modificado el ; modificado a las )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *doc* : Text ; *bloqueado* : Boolean ; *invisible* : Boolean ; creado el ; creado a las ; modificado el ; modificado a las )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &#8594;  | Nombre del documento o ruta de acceso completa al documento |
-| bloqueado | Boolean | &#8594;  | Bloqueado (True) o desbloqueado (False) |
-| invisible | Boolean | &#8594;  | Invisible (True) o Visible (False) |
-| creado el | Fecha | &#8594;  | Fecha de creación |
-| creado a las | Hora | &#8594;  | Hora de creación |
-| modificado el | Fecha | &#8594;  | Última fecha de modificación |
-| modificado a las | Hora | &#8594;  | Hora de la última modificación |
+| doc | Text | &#8594; | Nombre del documento o ruta de acceso completa al documento |
+| bloqueado | Boolean | &#8594; | Bloqueado (True) o desbloqueado (False) |
+| invisible | Boolean | &#8594; | Invisible (True) o Visible (False) |
+| creado el | Fecha | &#8594; | Fecha de creación |
+| creado a las | Hora | &#8594; | Hora de creación |
+| modificado el | Fecha | &#8594; | Última fecha de modificación |
+| modificado a las | Hora | &#8594; | Hora de la última modificación |
 
 <!-- END REF-->
 

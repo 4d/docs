@@ -5,16 +5,15 @@ slug: /commands/method-get-paths-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTable* ;} *arrPaths* {; *filter*}{; *stamp*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTable* : Table ;} *arrPaths* : Text array {; *filter* : Text}{; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | テーブル参照 |
+| aTable | Table | &#8594; | テーブル参照 |
 | arrPaths | Text array | &#8592; | メソッドパスと名前の配列 |
-| filter | Text | &#8594;  | 名前フィルター |
-| stamp | Real | &#8594;  | スタンプの最小値 |
-| &#8592; | 新しい現在値 |
-| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| filter | Text | &#8594; | 名前フィルター |
+| stamp | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
+| * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 

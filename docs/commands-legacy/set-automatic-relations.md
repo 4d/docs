@@ -5,7 +5,7 @@ slug: /commands/set-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *one* {; *many*} )<!-- END REF-->
+<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *one* : Boolean {; *many* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

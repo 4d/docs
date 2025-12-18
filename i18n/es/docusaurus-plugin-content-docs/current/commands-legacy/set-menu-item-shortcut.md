@@ -5,15 +5,15 @@ slug: /commands/set-menu-item-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* ; *lineamenu* ; *tecla* ; *modificadores* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM SHORTCUT.Syntax-->**SET MENU ITEM SHORTCUT** ( *menu* : Integer, Text ; *lineamenu* : Integer ; *tecla* : Text, Integer ; *modificadores* : Integer {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM SHORTCUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Referencia de menú o número de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 para la última línea añadida al menú |
-| tecla | Text, Integer | &#8594;  | Código del carácter de atajo de teclado o letra del atajo de teclado |
-| modificadores | Integer | &#8594;  | Modificador(es) a asociar al atajo (se ignora si se pasa el código de tecla) |
-| proceso | Integer | &#8594;  | Número de referencia del proceso |
+| menu | Integer, Text | &#8594; | Referencia de menú o número de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 para la última línea añadida al menú |
+| tecla | Text, Integer | &#8594; | Código del carácter de atajo de teclado o letra del atajo de teclado |
+| modificadores | Integer | &#8594; | Modificador(es) a asociar al atajo (se ignora si se pasa el código de tecla) |
+| proceso | Integer | &#8594; | Número de referencia del proceso |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/break-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *nivel* {; *saltoPagina*} )<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *nivel* : Integer {; *saltoPagina* : Integer} )<!-- END REF-->
 <!--REF #_command_.BREAK LEVEL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nivel | Integer | &#8594;  | Número de níveis de quebra |
-| saltoPagina | Integer | &#8594;  | Nível de quebra para o qual fazer um salto de página. |
+| nivel | Integer | &#8594; | Número de níveis de quebra |
+| saltoPagina | Integer | &#8594; | Nível de quebra para o qual fazer um salto de página. |
 
 <!-- END REF-->
 

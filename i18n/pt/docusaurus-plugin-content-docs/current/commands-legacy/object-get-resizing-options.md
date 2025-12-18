@@ -5,12 +5,12 @@ slug: /commands/object-get-resizing-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET RESIZING OPTIONS.Syntax-->**OBJECT GET RESIZING OPTIONS** ( {* ;} *objeto* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET RESIZING OPTIONS.Syntax-->**OBJECT GET RESIZING OPTIONS** ( * ; *objeto* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT GET RESIZING OPTIONS** ( *objeto* : Field, Variable ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET RESIZING OPTIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | horizontal | Integer | &#8592; | Opção de redimensionar horizontalmente |
 | vertical | Integer | &#8592; | Opção de redimensionar verticalmente |
 

@@ -5,11 +5,11 @@ slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* : Integer ; *info1* : Integer, Date ; *info2* : Text, Time )<!-- END REF-->
 <!--REF #_command_.RESTORE INFO.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Tipo de información a recuperar |
+| selector | Integer | &#8594; | Tipo de información a recuperar |
 | info1 | Integer, Date | &#8592; | Valor 1 del selector |
 | info2 | Text, Time | &#8592; | Valor 2 del selector |
 

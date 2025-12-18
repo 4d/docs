@@ -5,7 +5,7 @@ slug: /commands/set-print-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *option* ; *value1* {; *value2*} )<!-- END REF-->
+<!--REF #_command_.SET PRINT OPTION.Syntax-->**SET PRINT OPTION** ( *option* : Integer ; *value1* : Integer, Text {; *value2* : Integer, Text} )<!-- END REF-->
 <!--REF #_command_.SET PRINT OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

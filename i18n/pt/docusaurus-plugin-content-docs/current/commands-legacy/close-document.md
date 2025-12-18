@@ -5,11 +5,11 @@ slug: /commands/close-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* )<!-- END REF-->
+<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referência de documento |
+| docRef | Time | &#8594; | Número de referência de documento |
 
 <!-- END REF-->
 

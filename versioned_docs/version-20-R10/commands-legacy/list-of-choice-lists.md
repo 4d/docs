@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numsArray | Array integer | &#8592; | Numbers of choice lists |
+| numsArray | Integer array | &#8592; | Numbers of choice lists |
 | namesArray | Text array | &#8592; | Names of choice lists |
 
 <!-- END REF-->

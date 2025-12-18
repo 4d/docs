@@ -5,14 +5,14 @@ slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( {* ;} *object* ; *filtersArr* ; *allowDenyArr* )<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA SET URL FILTERS** ( *object* : Field, Variable ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| filtersArr | Text array | &#8594;  | フィルタ配列 |
-| allowDenyArr | Boolean array | &#8594;  | 許可-拒否配列 |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| filtersArr | Text array | &#8594; | フィルタ配列 |
+| allowDenyArr | Boolean array | &#8594; | 許可-拒否配列 |
 
 <!-- END REF-->
 

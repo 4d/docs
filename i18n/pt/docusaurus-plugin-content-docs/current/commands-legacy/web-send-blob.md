@@ -5,12 +5,12 @@ slug: /commands/web-send-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *BLOB* ; *tipo* )<!-- END REF-->
+<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *BLOB* : Blob ; *tipo* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | Blob a enviar ao browser |
-| tipo | Text | &#8594;  | Tipo de dados do BLOB |
+| Blob | Blob | &#8594; | Blob a enviar ao browser |
+| tipo | Text | &#8594; | Tipo de dados do BLOB |
 
 <!-- END REF-->
 

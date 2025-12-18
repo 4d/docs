@@ -5,12 +5,12 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} : Text<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** ( *buildNum* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | buildNum | Integer | &#8592; | Número de build |
-| * | Operador | &#8594;  | Si pasa número de versión largo, de lo contrario número de versión corto |
+| * | Operador | &#8594; | Si pasa número de versión largo, de lo contrario número de versión corto |
 | Resultado | Text | &#8592; | Número de versión en una cadena codificada |
 
 <!-- END REF-->

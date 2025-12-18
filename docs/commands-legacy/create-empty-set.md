@@ -5,7 +5,7 @@ slug: /commands/create-empty-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*aTable* ;} *set* )<!-- END REF-->
+<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

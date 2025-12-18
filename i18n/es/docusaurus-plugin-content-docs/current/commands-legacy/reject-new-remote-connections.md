@@ -5,11 +5,11 @@ slug: /commands/reject-new-remote-connections
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *rejectStatus* )<!-- END REF-->
+<!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *rejectStatus* : Boolean )<!-- END REF-->
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rejectStatus | Boolean | &#8594;  | True si se rechazan las nuevas conexiones, de lo contrario false |
+| rejectStatus | Boolean | &#8594; | True si se rechazan las nuevas conexiones, de lo contrario false |
 
 <!-- END REF-->
 

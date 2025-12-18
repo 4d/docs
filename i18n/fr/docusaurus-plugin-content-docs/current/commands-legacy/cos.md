@@ -5,11 +5,11 @@ slug: /commands/cos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cos.Syntax-->**Cos** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Cos.Syntax-->**Cos** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#8594;  | Nombre, exprimé en radians, dont vous voulez connaître le cosinus |
+| nombre | Real | &#8594; | Nombre, exprimé en radians, dont vous voulez connaître le cosinus |
 | Résultat | Real | &#8592; | Cosinus de nombre |
 
 <!-- END REF-->

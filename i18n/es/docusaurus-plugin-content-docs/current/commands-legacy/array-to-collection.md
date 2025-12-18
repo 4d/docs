@@ -5,13 +5,13 @@ slug: /commands/array-to-collection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION**  ( *coleccion* ; *array* {; *nombreProp*}{; *array2* ; *nombreProp2* ; ... ; *arrayN* ; *nombrePropN*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION**  ( *coleccion* : Collection ; *array* : Array {; *nombreProp* : Text}{; *array2* ; *nombreProp2* ; ... ; *arrayN* ; *nombrePropN*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | coleccion | Collection | &#8592; | Colección a recibir los datos del array |
-| array | Array | &#8594;  | Array a copiar a la colección; si se pasó nombreProp, array a copiar a los valores de nombreProp en la colección. |
-| nombreProp | Text | &#8594;  | Nombre de la propiedad del objeto cuyo valor llenar con elementos del array |
+| array | Array | &#8594; | Array a copiar a la colección; si se pasó nombreProp, array a copiar a los valores de nombreProp en la colección. |
+| nombreProp | Text | &#8594; | Nombre de la propiedad del objeto cuyo valor llenar con elementos del array |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* ; *filePath* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* : Text ; *filePath* : Text )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | ルートXML要素参照 |
-| filePath | Text | &#8594;  | ファイルへのフルパス |
+| elementRef | Text | &#8594; | ルートXML要素参照 |
+| filePath | Text | &#8594; | ファイルへのフルパス |
 
 <!-- END REF-->
 

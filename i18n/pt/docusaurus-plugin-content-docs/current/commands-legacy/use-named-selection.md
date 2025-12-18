@@ -5,11 +5,11 @@ slug: /commands/use-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *nome* )<!-- END REF-->
+<!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *nome* : Text )<!-- END REF-->
 <!--REF #_command_.USE NAMED SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nome | Text | &#8594;  | Nome da seleção temporal a utilizar |
+| nome | Text | &#8594; | Nome da seleção temporal a utilizar |
 
 <!-- END REF-->
 

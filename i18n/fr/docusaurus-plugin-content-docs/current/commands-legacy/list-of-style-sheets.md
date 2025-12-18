@@ -5,7 +5,7 @@ slug: /commands/list-of-style-sheets
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *tabFeuillesStyle* )<!-- END REF-->
+<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *tabFeuillesStyle* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

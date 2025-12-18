@@ -5,18 +5,18 @@ slug: /commands/qr-set-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *area* ; *colNum* ; *title* ; *object* ; *hide* ; *size* ; *repeatedValue* ; *displayFormat* )<!-- END REF-->
+<!--REF #_command_.QR SET INFO COLUMN.Syntax-->**QR SET INFO COLUMN** ( *area* : Integer ; *colNum* : Integer ; *title* : Text ; *object* : Field, Variable ; *hide* : Integer ; *size* : Integer ; *repeatedValue* : Integer ; *displayFormat* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET INFO COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNum | Integer | &#8594;  | カラム番号 |
-| title | Text | &#8594;  | カラムタイトル |
-| object | Field, Variable | &#8594;  | カラムに割り当てられたオブジェクト |
-| hide | Integer | &#8594;  | 0 = 表示, 1 = 非表示 |
-| size | Integer | &#8594;  | カラムサイズ |
-| repeatedValue | Integer | &#8594;  | 0 = 繰り返ししない, 1 = 繰り返す |
-| displayFormat | Text | &#8594;  | データの表示フォーマット |
+| area | Integer | &#8594; | エリア参照 |
+| colNum | Integer | &#8594; | カラム番号 |
+| title | Text | &#8594; | カラムタイトル |
+| object | Field, Variable | &#8594; | カラムに割り当てられたオブジェクト |
+| hide | Integer | &#8594; | 0 = 表示, 1 = 非表示 |
+| size | Integer | &#8594; | カラムサイズ |
+| repeatedValue | Integer | &#8594; | 0 = 繰り返ししない, 1 = 繰り返す |
+| displayFormat | Text | &#8594; | データの表示フォーマット |
 
 <!-- END REF-->
 

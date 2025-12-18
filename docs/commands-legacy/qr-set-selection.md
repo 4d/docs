@@ -5,7 +5,7 @@ slug: /commands/qr-set-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* ; *left* ; *top* {; *right* {; *bottom*}} )<!-- END REF-->
+<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

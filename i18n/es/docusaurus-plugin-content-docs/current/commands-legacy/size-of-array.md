@@ -5,11 +5,11 @@ slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) : Integer<!-- END REF-->
+<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* : Array ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array cuyo tamaño se devuelve |
+| array | Array | &#8594; | Array cuyo tamaño se devuelve |
 | Resultado | Integer | &#8592; | Devuelve el número de elementos en el array |
 
 <!-- END REF-->

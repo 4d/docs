@@ -5,7 +5,7 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphPicture* ; *graphNumber* ; *xLabels* {; *yElements*} {; *yElements2* ; ... ; *yElementsN*} )<br/>**GRAPH** ( *graphPicture* ; *graphSettings* ; *xLabels* {; *yElements*} {; *yElements2* ; ... ; *yElementsN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphPicture* : Picture ; *graphNumber* : Integer, Object ; *xLabels* : Array {; *...yElements* : Array} )<br/>**GRAPH** ( *graphPicture* : Picture ; *graphSettings* : Integer, Object ; *xLabels* : Array {; *...yElements* : Array} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

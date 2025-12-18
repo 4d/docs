@@ -5,14 +5,14 @@ slug: /commands/listbox-delete-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( {* ;} *objet* ; *positionLigne* {; *nbLignes*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( * ; *objet* : Text ; *positionLigne* : Integer {; *nbLignes* : Integer} )<br/>**LISTBOX DELETE ROWS** ( *objet* : Field, Variable ; *positionLigne* : Integer {; *nbLignes* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionLigne | Integer | &#8594;  | Numéro de la première ligne à supprimer |
-| nbLignes | Integer | &#8594;  | Nombre de lignes à supprimer |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &#8594; | Numéro de la première ligne à supprimer |
+| nbLignes | Integer | &#8594; | Nombre de lignes à supprimer |
 
 <!-- END REF-->
 

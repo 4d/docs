@@ -5,11 +5,11 @@ slug: /commands/dom-export-to-var
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *elementRef* ; *vXmlVar* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *elementRef* : Text ; *vXmlVar* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML raíz |
+| elementRef | Text | &#8594; | Referencia del elemento XML raíz |
 | vXmlVar | Text, Blob | &#8592; | Variable a recibir el árbol XML |
 
 <!-- END REF-->

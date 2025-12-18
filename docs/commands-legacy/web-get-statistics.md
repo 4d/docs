@@ -5,12 +5,12 @@ slug: /commands/web-get-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* ; *hits* ; *usage* )<!-- END REF-->
+<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* : Text array ; *hits* : Integer array ; *usage* : Integer )<!-- END REF-->
 <!--REF #_command_.WEB GET STATISTICS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | pages | Text array | &#8592; | Names of the most consulted pages |
-| hits | Array integer | &#8592; | Number of hits for each page |
+| hits | Integer array | &#8592; | Number of hits for each page |
 | usage | Integer | &#8592; | Percentage of the cache used |
 
 <!-- END REF-->

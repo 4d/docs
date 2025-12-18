@@ -5,12 +5,12 @@ slug: /commands/wa-open-back-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( {* ;} *objeto* )<!-- END REF-->
+<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( * ; *objeto* : Text )<br/>**WA OPEN BACK URL** ( *objeto* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA OPEN BACK URL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
 
 <!-- END REF-->
 

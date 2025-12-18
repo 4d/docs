@@ -5,16 +5,15 @@ slug: /commands/form-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*laTable* ;} *tabNoms* {; *filtre* {; *marqueur*}}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*laTable* : Table ;} *tabNoms* : Text array {; *filtre* : Text {; *marqueur* : Real}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Référence de table |
+| laTable | Table | &#8594; | Référence de table |
 | tabNoms | Text array | &#8592; | Tableau des noms de formulaires |
-| filtre | Text | &#8594;  | Filtrage des noms |
-| marqueur | Real | &#8594;  | Marqueur de version minimale à retourner |
-| &#8592; | Nouvelle valeur |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| filtre | Text | &#8594; | Filtrage des noms |
+| marqueur | Real | &#8596; | *in:* Marker for minimum version to return<br/>*out:* New value |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

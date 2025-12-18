@@ -5,11 +5,11 @@ slug: /commands/display-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードを表示するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | カレントレコードを表示するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

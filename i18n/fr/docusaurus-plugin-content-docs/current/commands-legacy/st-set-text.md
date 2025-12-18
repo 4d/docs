@@ -5,15 +5,15 @@ slug: /commands/st-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( {* ;} *objet* ; *nouvTexte* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST SET TEXT.Syntax-->**ST SET TEXT** ( * ; *objet* : Text ; *nouvTexte* {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST SET TEXT** ( *objet* : Field, Variable ; *nouvTexte* {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
-| nouvText | Text | &#8594;  | Texte multistyle à insérer |
-| débutSél | Integer | &#8594;  | Début de la sélection |
-| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ Texte (si * est omis) |
+| nouvText | Text | &#8594; | Texte multistyle à insérer |
+| débutSél | Integer | &#8594; | Début de la sélection |
+| finSél | Integer | &#8594; | Fin de la sélection |
 
 <!-- END REF-->
 

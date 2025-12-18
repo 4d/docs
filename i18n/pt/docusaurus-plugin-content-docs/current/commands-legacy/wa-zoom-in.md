@@ -5,12 +5,12 @@ slug: /commands/wa-zoom-in
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( {* ;} *objeto* )<!-- END REF-->
+<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( * ; *objeto* : Text )<br/>**WA ZOOM IN** ( *objeto* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA ZOOM IN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 
 <!-- END REF-->
 

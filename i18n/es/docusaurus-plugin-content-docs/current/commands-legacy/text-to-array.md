@@ -5,17 +5,17 @@ slug: /commands/text-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* ; *arrText* ; *ancho* ; *nomFuente* ; *tamFuente* {; *estiloFuente* {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* : Text ; *arrText* : Text array ; *ancho* : Integer ; *nomFuente* : Text ; *tamFuente* : Integer {; *estiloFuente* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| varText | Text | &#8594;  | Texto original a dividir |
+| varText | Text | &#8594; | Texto original a dividir |
 | arrText | Text array | &#8592; | Array que contiene el texto dividido en palabras o líneas |
-| ancho | Integer | &#8594;  | Ancho máximo de la cadena(en píxeles) |
-| nomFuente | Text | &#8594;  | Nombre de la fuente |
-| tamFuente | Integer | &#8594;  | Tamaño de la fuente |
-| estiloFuente | Integer | &#8594;  | Estilo de fuente |
-| * | Operador | &#8594;  | Si se pasa = interpretar el texto como multistyle |
+| ancho | Integer | &#8594; | Ancho máximo de la cadena(en píxeles) |
+| nomFuente | Text | &#8594; | Nombre de la fuente |
+| tamFuente | Integer | &#8594; | Tamaño de la fuente |
+| estiloFuente | Integer | &#8594; | Estilo de fuente |
+| * | Operador | &#8594; | Si se pasa = interpretar el texto como multistyle |
 
 <!-- END REF-->
 

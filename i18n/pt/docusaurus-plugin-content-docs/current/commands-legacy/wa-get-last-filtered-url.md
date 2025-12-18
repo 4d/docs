@@ -5,12 +5,12 @@ slug: /commands/wa-get-last-filtered-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( * ; *objeto* : Text ) : Text<br/>**WA Get last filtered URL** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get last filtered URL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | Resultado | Text | &#8592; | Última URL filtrada |
 
 <!-- END REF-->

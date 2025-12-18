@@ -5,7 +5,7 @@ slug: /commands/sql-export-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *folderPath* {; *numFiles* {; *fileLimitSize* {; *fieldLimitSize*}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT DATABASE.Syntax-->**SQL EXPORT DATABASE** ( *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT DATABASE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

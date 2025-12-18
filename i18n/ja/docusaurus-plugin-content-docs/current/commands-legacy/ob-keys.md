@@ -5,11 +5,11 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | プロパティ名を返すオブジェクト |
+| object | Object | &#8594; | プロパティ名を返すオブジェクト |
 | 戻り値 | Collection | &#8592; | プロパティ名(文字列)のコレクション |
 
 <!-- END REF-->

@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( {* ;} *objeto* {; *tipoLista*}; *lista* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *objeto* : Field, Variable {; *tipoLista* : Integer}; *lista* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| tipoLista | Integer | &#8594;  | Tipo de lista: Lista de valores, Lista de obrigatórios ou Lista de excluídos |
-| lista | Integer | &#8594;  | Número de referência de lista |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| tipoLista | Integer | &#8594; | Tipo de lista: Lista de valores, Lista de obrigatórios ou Lista de excluídos |
+| lista | Integer | &#8594; | Número de referência de lista |
 
 <!-- END REF-->
 

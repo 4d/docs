@@ -5,7 +5,7 @@ slug: /commands/set-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *colorScheme* )<!-- END REF-->
+<!--REF #_command_.SET APPLICATION COLOR SCHEME.Syntax-->**SET APPLICATION COLOR SCHEME** ( *colorScheme* : Text )<!-- END REF-->
 <!--REF #_command_.SET APPLICATION COLOR SCHEME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

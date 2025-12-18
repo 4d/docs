@@ -5,12 +5,12 @@ slug: /commands/cut-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*laTable* ;} *nom* )<!-- END REF-->
+<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*laTable* : Table ;} *nom* : Text )<!-- END REF-->
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de la sélection ou Table par défaut si ce paramètre est omis |
-| nom | Text | &#8594;  | Nom de la sélection temporaire à créer |
+| laTable | Table | &#8594; | Table de la sélection ou Table par défaut si ce paramètre est omis |
+| nom | Text | &#8594; | Nom de la sélection temporaire à créer |
 
 <!-- END REF-->
 

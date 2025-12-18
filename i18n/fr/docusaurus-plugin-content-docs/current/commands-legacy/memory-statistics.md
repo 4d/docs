@@ -5,11 +5,11 @@ slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *typeInfo* ; *tabNoms* ; *tabValeurs* ; *tabNombre* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *typeInfo* : Integer ; *tabNoms* : Text array ; *tabValeurs* : Real array ; *tabNombre* : Real array )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeInfo | Integer | &#8594;  | Sélecteur d’information à obtenir |
+| typeInfo | Integer | &#8594; | Sélecteur d’information à obtenir |
 | tabNoms | Text array | &#8592; | Libellés des informations |
 | tabValeurs | Real array | &#8592; | Valeurs des informations |
 | tabNombre | Real array | &#8592; | Nombre d’objets concernés (si disponible) |

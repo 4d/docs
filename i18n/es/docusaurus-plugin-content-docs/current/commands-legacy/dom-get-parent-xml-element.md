@@ -5,11 +5,11 @@ slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* {; *nomElemPadre* {; *valorElemPadre*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *elementRef* : Text {; *nomElemPadre* : Text {; *valorElemPadre* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
 | nomElemPadre | Text | &#8592; | Nombre del elemento XML padre |
 | valorElemPadre | Text | &#8592; | Valor del elemento XML padre |
 | Resultado | Text | &#8592; | Referencia del elemento XML padre |

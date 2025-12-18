@@ -5,12 +5,12 @@ slug: /commands/get-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database localization.Syntax-->**Get database localization** {( {*tipoLeng*}{;}{*} )} : Text<!-- END REF-->
+<!--REF #_command_.Get database localization.Syntax-->**Get database localization** ( {*tipoLeng* : Integer}{;}{*} ) : Text<!-- END REF-->
 <!--REF #_command_.Get database localization.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoLeng | Integer | &#8594;  | Tipo de lenguaje |
-| * | Operador | &#8594;  | Devuelve información sobre la base local |
+| tipoLeng | Integer | &#8594; | Tipo de lenguaje |
+| * | Operador | &#8594; | Devuelve información sobre la base local |
 | Resultado | Text | &#8592; | Lenguaje actual de la base |
 
 <!-- END REF-->

@@ -5,15 +5,15 @@ slug: /commands/st-freeze-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( {* ;} *objeto* {; *inicioSel* {; *finSel*}}{; *} )<!-- END REF-->
+<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *finSel* : Integer}}{; *} )<br/>**ST FREEZE EXPRESSIONS** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| inicioSel | Integer | &#8594;  | Inicio de la selección |
-| finSel | Integer | &#8594;  | Fin de la selección |
-| * | Operador | &#8594;  | Si se pasa = actualizar las expresiones antes de congelarlas |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| inicioSel | Integer | &#8594; | Inicio de la selección |
+| finSel | Integer | &#8594; | Fin de la selección |
+| * | Operador | &#8594; | Si se pasa = actualizar las expresiones antes de congelarlas |
 
 <!-- END REF-->
 

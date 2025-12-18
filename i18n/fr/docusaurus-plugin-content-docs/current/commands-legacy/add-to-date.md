@@ -5,14 +5,14 @@ slug: /commands/add-to-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* ; *années* ; *mois* ; *jours* ) : Date<!-- END REF-->
+<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* : Date ; *années* : Integer ; *mois* : Integer ; *jours* : Integer ) : Date<!-- END REF-->
 <!--REF #_command_.Add to date.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | Date à laquelle ajouter jours, mois et années |
-| années | Integer | &#8594;  | Nombre d'années à ajouter à la date |
-| mois | Integer | &#8594;  | Nombre de mois à ajouter à la date |
-| jours | Integer | &#8594;  | Nombre de jours à ajouter à la date |
+| date | Date | &#8594; | Date à laquelle ajouter jours, mois et années |
+| années | Integer | &#8594; | Nombre d'années à ajouter à la date |
+| mois | Integer | &#8594; | Nombre de mois à ajouter à la date |
+| jours | Integer | &#8594; | Nombre de jours à ajouter à la date |
 | Résultat | Date | &#8592; | Date résultante |
 
 <!-- END REF-->

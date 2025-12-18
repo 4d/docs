@@ -5,11 +5,11 @@ slug: /commands/form-get-current-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.FORM Get current page.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Devuelve el número de página de subformulario actual |
+| * | Operador | &#8594; | Devuelve el número de página de subformulario actual |
 | Resultado | Integer | &#8592; | Número de la página del formulario mostrada actualmente |
 
 <!-- END REF-->

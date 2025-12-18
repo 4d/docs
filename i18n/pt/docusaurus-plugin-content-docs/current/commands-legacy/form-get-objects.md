@@ -5,14 +5,14 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *arrObjetos* {; *arrVariaveis*  {; *arrPags*}} {; *opcaoPag*} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *arrObjetos* : Text array {; *arrVariaveis* : Pointer array  {; *arrPags* : Integer array}} {; *opcaoPag* : Integer, *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrObjetos | Text array | &#8592; | Nome dos objetos do formulário |
 | arrVariaveis | Pointer array | &#8592; | Ponteiros a variáveis ou campos associados aos objetos |
-| arrPags | Array integer | &#8592; | Número de página de cada objeto |
-| opcaoPag | Integer, * | &#8594;  | 1=Página atual do formulário, 2=Todas as páginas, 4=Páginas herdadas<br/>Se passar * (obsoleto) = página atual com objetos herdados |
+| arrPags | Integer array | &#8592; | Número de página de cada objeto |
+| opcaoPag | Integer, * | &#8594; | 1=Página atual do formulário, 2=Todas as páginas, 4=Páginas herdadas<br/>Se passar * (obsoleto) = página atual com objetos herdados |
 
 <!-- END REF-->
 

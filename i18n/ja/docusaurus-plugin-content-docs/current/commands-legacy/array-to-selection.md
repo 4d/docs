@@ -5,13 +5,13 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** {( *array* ; *aField* {; *array2* ; *aField2* ; ... ; *arrayN* ; *aFieldN*}{; *} )}<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ( *array* : Array ; *aField* : Field {; ...(*array* : Array, *aField* : Field)}{; *} )}<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | コピー元の配列 |
+| array | Array | &#8594; | コピー元の配列 |
 | aField | Field | &#8592; | 配列データを受け取るフィールド |
-| * | 演算子 | &#8594;  | 実行をスタックする |
+| * | 演算子 | &#8594; | 実行をスタックする |
 
 <!-- END REF-->
 

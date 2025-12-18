@@ -5,13 +5,13 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *objet* {; *modeRéf*} ) : Text<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *objet* : Text {; *modeRéf* : Integer} ) : Text<br/>**ST Get plain text** ( *objet* : Field, Variable {; *modeRéf* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| modeRéf | Integer | &#8594;  | Mode de prise en charge des références présentes dans le texte |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| modeRéf | Integer | &#8594; | Mode de prise en charge des références présentes dans le texte |
 | Résultat | Text | &#8592; | Texte sans balises |
 
 <!-- END REF-->

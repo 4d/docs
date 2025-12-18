@@ -5,18 +5,17 @@ slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *userID* : Integer ; *name* : Text ; *startup* : Text ; *password* : Text ; *nbLogin* : Integer ; *lastLogin* : Date {; *memberships* : Integer array {; *groupOwner* : Integer}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| userID | Integer | &#8594;  | Unique ID number of user account, -1 for adding a user |
-| &#8592; | Unique ID number of added user account (if any) |
+| userID | Integer | &#8596;  |*in:* Unique ID number of user account, -1 for adding a user <br/>*out:* Unique ID number of added user account (if any) |
 | name | Text | &#8594;  | New user name |
 | startup | Text | &#8594;  | Name of new user startup method |
 | password | Text | &#8594;  | New (unencrypted) password, or * to leave the password unchanged |
 | nbLogin | Integer | &#8594;  | New number of logins to the database (Binary databases only) |
 | lastLogin | Date | &#8594;  | New date of last login to the database (Binary databases only) |
-| memberships | Array integer | &#8594;  | ID numbers of groups to which the user belongs |
+| memberships | Integer array | &#8594;  | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8594;  | Reference number of user group owner (Binary databases only) |
 | Function result | Integer | &#8592; | Unique ID number of new user |
 

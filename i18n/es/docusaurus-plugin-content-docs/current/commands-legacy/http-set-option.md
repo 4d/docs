@@ -5,12 +5,12 @@ slug: /commands/http-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP SET OPTION.Syntax-->**HTTP SET OPTION** ( *opcion* ; *valor* )<!-- END REF-->
+<!--REF #_command_.HTTP SET OPTION.Syntax-->**HTTP SET OPTION** ( *opcion* : Integer ; *valor* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP SET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opcion | Integer | &#8594;  | Código de la opción a definir |
-| valor | Integer | &#8594;  | Valor de la opción |
+| opcion | Integer | &#8594; | Código de la opción a definir |
+| valor | Integer | &#8594; | Valor de la opción |
 
 <!-- END REF-->
 

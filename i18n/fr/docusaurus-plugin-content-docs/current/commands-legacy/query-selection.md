@@ -5,13 +5,13 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*laTable* }{;}{ *critère* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*laTable* : Table }{;}{ *critère* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle effectuer la recherche ou ou Table par défaut si ce paramètre est omis |
-| critère | Expression | &#8594;  | Lignes de recherche |
-| * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
+| laTable | Table | &#8594; | Table dans laquelle effectuer la recherche ou ou Table par défaut si ce paramètre est omis |
+| critère | Expression | &#8594; | Lignes de recherche |
+| * | Opérateur | &#8594; | Attente d'exécution de la recherche |
 
 <!-- END REF-->
 

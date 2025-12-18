@@ -5,15 +5,15 @@ slug: /commands/listbox-set-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( {* ;} *objeto* ; *largura* {; *larguraMin* {; *larguraMax*}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN WIDTH.Syntax-->**LISTBOX SET COLUMN WIDTH** ( * ; *objeto* : Text ; *largura* : Integer {; *larguraMin* : Integer {; *larguraMax* : Integer}} )<br/>**LISTBOX SET COLUMN WIDTH** ( *objeto* : Field, Variable ; *largura* : Integer {; *larguraMin* : Integer {; *larguraMax* : Integer}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN WIDTH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| largura | Integer | &#8594;  | Largura da coluna (em píxels) |
-| larguraMin | Integer | &#8594;  | Largura mínima da coluna (em pixels) |
-| larguraMax | Integer | &#8594;  | Largura máxima da coluna (em pixels) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| largura | Integer | &#8594; | Largura da coluna (em píxels) |
+| larguraMin | Integer | &#8594; | Largura mínima da coluna (em pixels) |
+| larguraMax | Integer | &#8594; | Largura máxima da coluna (em pixels) |
 
 <!-- END REF-->
 

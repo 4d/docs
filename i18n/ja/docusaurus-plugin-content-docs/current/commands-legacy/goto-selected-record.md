@@ -5,12 +5,12 @@ slug: /commands/goto-selected-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*aTable* ;} *record* )<!-- END REF-->
+<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*aTable* : Table ;} *record* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | 指定したレコードをカレントレコードとするテーブル, または 省略時、デフォルトテーブル |
-| record | Integer | &#8594;  | セレクション中のレコード位置番号 |
+| aTable | Table | &#8594; | 指定したレコードをカレントレコードとするテーブル, または 省略時、デフォルトテーブル |
+| record | Integer | &#8594; | セレクション中のレコード位置番号 |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *tabBooléen* {; *ensemble*} )<!-- END REF-->
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *tabBooléen* : Boolean array {; *ensemble* : Text} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabBooléen | Boolean array | &#8592; | Tableau d'appartenance des enregistrements à l’ensemble |
-| ensemble | Text | &#8594;  | Nom de l’ensemble ou Ensemble UserSet si ce paramètre est omis |
+| ensemble | Text | &#8594; | Nom de l’ensemble ou Ensemble UserSet si ce paramètre est omis |
 
 <!-- END REF-->
 

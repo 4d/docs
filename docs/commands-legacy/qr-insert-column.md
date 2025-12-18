@@ -5,7 +5,7 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* ; *colNumber* ; *object* )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Field, Variable, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

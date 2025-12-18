@@ -5,7 +5,7 @@ slug: /commands/copy-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *source* ; *destination* )<!-- END REF-->
+<!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *source* : Array ; *destination* : Array )<!-- END REF-->
 <!--REF #_command_.COPY ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

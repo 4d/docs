@@ -5,13 +5,13 @@ slug: /commands/post-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *codigo* {; *modificadores* {; *proceso*}} )<!-- END REF-->
+<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *codigo* : Integer {; *modificadores* : Integer {; *proceso* : Integer}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| codigo | Integer | &#8594;  | Código de un caracter o código de tecla de función |
-| modificadores | Integer | &#8594;  | Estado de teclas Modificador |
-| proceso | Integer | &#8594;  | Número de referencia del proceso de destino o Fila de atención de eventos de la aplicación, si se omite o si es igual a 0 |
+| codigo | Integer | &#8594; | Código de un caracter o código de tecla de función |
+| modificadores | Integer | &#8594; | Estado de teclas Modificador |
+| proceso | Integer | &#8594; | Número de referencia del proceso de destino o Fila de atención de eventos de la aplicación, si se omite o si es igual a 0 |
 
 <!-- END REF-->
 

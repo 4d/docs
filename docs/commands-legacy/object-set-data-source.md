@@ -5,7 +5,7 @@ slug: /commands/object-set-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( {* ;} *object* ; *dataSource* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *object* : Text ; *dataSource* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *object* : Field, Variable ; *dataSource* : Pointer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

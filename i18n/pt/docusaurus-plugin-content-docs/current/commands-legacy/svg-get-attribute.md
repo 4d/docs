@@ -5,14 +5,14 @@ slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *objetoImagem* ; id_Elemento ; *nomeAtrib* ; *valorAtributo* )<!-- END REF-->
+<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *objetoImagem* ; id_Elemento ; *nomeAtrib* : Text ; *valorAtributo* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
-| objetoPicture | Picture | &#8594;  | Nome de objeto (se * for especificado) ou variável ou campo (se * for omitido) |
-| id_Elemento | Text | &#8594;  | ID do elemento cujo valor de atributo você deseja conseguir |
-| nomeAtrib | Text | &#8594;  | Atributo cujo valor você deseja obter |
+| * | Operador | &#8594; | Se especificado, objetoImagem é um nome de objeto (string). Se omitido, objetoImagem é uma variável |
+| objetoPicture | Picture | &#8594; | Nome de objeto (se * for especificado) ou variável ou campo (se * for omitido) |
+| id_Elemento | Text | &#8594; | ID do elemento cujo valor de atributo você deseja conseguir |
+| nomeAtrib | Text | &#8594; | Atributo cujo valor você deseja obter |
 | valorAtributo | Text, Integer | &#8592; | Valor atual do atributo |
 
 <!-- END REF-->

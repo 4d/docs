@@ -5,11 +5,11 @@ slug: /commands/get-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *refUsuario* ; *nome* ; *inicio* ; *senha* ; *numLogin* ; *ultLogin* {; *adesao* {; *propGrupo*}} )<!-- END REF-->
+<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *refUsuario* : Integer ; *nome* : Text ; *inicio* : Text ; *senha* : Text ; *numLogin* : Integer ; *ultLogin* : Date {; *adesao* : Integer array {; *propGrupo* : Integer}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &#8594;  | Nº de referência de usuário |
+| refUsuario | Integer | &#8594; | Nº de referência de usuário |
 | nome | Text | &#8592; | Nome de usuário |
 | inicio | Text | &#8592; | Nome de método de início |
 | senha | Text | &#8592; | Sempre é uma cadeia vazia |

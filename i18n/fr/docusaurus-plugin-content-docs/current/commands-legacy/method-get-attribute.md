@@ -5,13 +5,13 @@ slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *chemin* ; *typeAttribut* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *chemin* : Text ; *typeAttribut* : Integer {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text | &#8594;  | Chemin de méthode projet |
-| typeAttribut | Integer | &#8594;  | Type d’attribut à obtenir |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text | &#8594; | Chemin de méthode projet |
+| typeAttribut | Integer | &#8594; | Type d’attribut à obtenir |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 | Résultat | Boolean | &#8592; | Vrai = attribut sélectionné, sinon Faux |
 
 <!-- END REF-->

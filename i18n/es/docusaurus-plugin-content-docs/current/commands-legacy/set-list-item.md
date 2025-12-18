@@ -5,17 +5,17 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *lista* ; refElem | * ; *textElem* ; *nuevaRef* {; *sublista* ; *desplegada*} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *lista* : Integer, Text ; refElem | * ; *textElem* : Text ; *nuevaRef* : Integer {; *sublista* : Integer ; *desplegada* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo lista (si se pasa*) |
-| refElem &#124; * | Operador, Entero largo | &#8594;  | Número de referencia de elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
-| textElem | Text | &#8594;  | Nuevo texto del elemento |
-| nuevaRef | Integer | &#8594;  | Nuevo número de referencia del elemento |
-| sublista | Integer | &#8594;  | Nueva sublista asociada al elemento, o 0 = ninguna sublista (separar actual, si la hay), o -1 = ningún cambio |
-| desplegada | Boolean | &#8594;  | Indica si la sublista debe ser desplegada o contraída |
+| * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
+| lista | Integer, Text | &#8594; | Número de referencia de lista (si se omite *) o Nombre de objeto de tipo lista (si se pasa*) |
+| refElem &#124; * | Operador, Entero largo | &#8594; | Número de referencia de elemento, o 0 para el último elemento añadido a la lista, o * para el elemento actual de la lista |
+| textElem | Text | &#8594; | Nuevo texto del elemento |
+| nuevaRef | Integer | &#8594; | Nuevo número de referencia del elemento |
+| sublista | Integer | &#8594; | Nueva sublista asociada al elemento, o 0 = ninguna sublista (separar actual, si la hay), o -1 = ningún cambio |
+| desplegada | Boolean | &#8594; | Indica si la sublista debe ser desplegada o contraída |
 
 <!-- END REF-->
 

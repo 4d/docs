@@ -5,11 +5,11 @@ slug: /commands/use-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *name* )<!-- END REF-->
+<!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *name* : Text )<!-- END REF-->
 <!--REF #_command_.USE NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | Text | &#8594;  | 使用する命名セレクション名 |
+| name | Text | &#8594; | 使用する命名セレクション名 |
 
 <!-- END REF-->
 

@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-modifiers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* ; *menuItem* {; *processo*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* : Integer, Text ; *menuItem* : Integer {; *processo* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item modifiers.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de referência ou Número de Menu |
-| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado ao menu |
-| processo | Integer | &#8594;  | Número de processo |
+| menu | Integer, Text | &#8594; | Número de referência ou Número de Menu |
+| menuItem | Integer | &#8594; | Número de item de menu ou -1 para o último item adicionado ao menu |
+| processo | Integer | &#8594; | Número de processo |
 | Resultado | Integer | &#8592; | Chave de modificação associada com o item de menu |
 
 <!-- END REF-->

@@ -5,16 +5,16 @@ slug: /commands/qr-set-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* ; *column* ; *row* ; *border* ; *line* {; *color*} )<!-- END REF-->
+<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* : Integer ; *column* : Integer ; *row* : Integer ; *border* : Integer ; *line* : Integer {; *color* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR SET BORDERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| column | Integer | &#8594;  | カラム番号 |
-| row | Integer | &#8594;  | 行番号 |
-| border | Integer | &#8594;  | 罫線の合成値 |
-| line | Integer | &#8594;  | 線の太さ |
-| color | Integer | &#8594;  | 罫線のカラー |
+| area | Integer | &#8594; | エリア参照 |
+| column | Integer | &#8594; | カラム番号 |
+| row | Integer | &#8594; | 行番号 |
+| border | Integer | &#8594; | 罫線の合成値 |
+| line | Integer | &#8594; | 線の太さ |
+| color | Integer | &#8594; | 罫線のカラー |
 
 <!-- END REF-->
 

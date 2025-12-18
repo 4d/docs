@@ -5,16 +5,16 @@ slug: /commands/qr-set-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *zone* ; *colonne* ; *ligne* ; *encadrement* ; *ligne* {; *couleur*} )<!-- END REF-->
+<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *zone* : Integer ; *colonne* : Integer ; *ligne* : Integer ; *encadrement* : Integer ; *ligne* : Integer {; *couleur* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR SET BORDERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| colonne | Integer | &#8594;  | Numéro de colonne |
-| ligne | Integer | &#8594;  | Numéro de ligne |
-| encadrement | Integer | &#8594;  | Valeur d'encadrements composée |
-| ligne | Integer | &#8594;  | Epaisseur de ligne |
-| couleur | Integer | &#8594;  | Couleur de ligne |
+| zone | Integer | &#8594; | Référence de la zone |
+| colonne | Integer | &#8594; | Numéro de colonne |
+| ligne | Integer | &#8594; | Numéro de ligne |
+| encadrement | Integer | &#8594; | Valeur d'encadrements composée |
+| ligne | Integer | &#8594; | Epaisseur de ligne |
+| couleur | Integer | &#8594; | Couleur de ligne |
 
 <!-- END REF-->
 

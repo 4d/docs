@@ -248,7 +248,7 @@ As a result of the `WSHandler.onConnection` callback, pass a `connectionHandler`
 |ws||[`4D.WebSocketConnection`](WebSocketConnectionClass.md)|<-|Current WebSocket connection object|
 |event||Object|<-|Parameters|
 ||type|Text||"message"|
-||data|Text / Blob / Object||data sent by the client|
+||data|Text, Blob, Object||data sent by the client|
 
 This Callback for WebSocket data. Called each time the WebSocket receives data.
 

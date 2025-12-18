@@ -5,7 +5,7 @@ slug: /commands/get-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinoTipo* ; *destinoObjeto* ; *destinoPont* )<!-- END REF-->
+<!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinoTipo* : Integer ; *destinoObjeto* : Text ; *destinoPont* : Pointer )<!-- END REF-->
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

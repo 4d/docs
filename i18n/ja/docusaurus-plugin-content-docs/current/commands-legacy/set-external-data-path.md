@@ -5,12 +5,12 @@ slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aField* ; *path* )<!-- END REF-->
+<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aField* : Text, Blob, Picture ; *path* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture | &#8594;  | ストレージの場所を設定するフィールド |
-| path | Text, Integer | &#8594;  | 外部ストレージのパス名およびファイル名、または0 = ストラクチャー定義を使用する1 = デフォルトフォルダーを使用する |
+| aField | Text, Blob, Picture | &#8594; | ストレージの場所を設定するフィールド |
+| path | Text, Integer | &#8594; | 外部ストレージのパス名およびファイル名、または0 = ストラクチャー定義を使用する1 = デフォルトフォルダーを使用する |
 
 <!-- END REF-->
 

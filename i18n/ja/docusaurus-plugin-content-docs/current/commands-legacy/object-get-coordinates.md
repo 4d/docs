@@ -5,12 +5,12 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( {* ;} *object* ; *left* ; *top* ; *right* ; *bottom* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *object* : Text ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<br/>**OBJECT GET COORDINATES** ( *object* : Field, Variable ; *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
 | left | Integer | &#8592; | オブジェクトの左座標 |
 | top | Integer | &#8592; | オブジェクトの上座標 |
 | right | Integer | &#8592; | オブジェクトの右座標 |

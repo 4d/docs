@@ -5,11 +5,11 @@ slug: /commands/ob-get-property-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *object* ; *arrProperties* {; *arrTypes*} )<!-- END REF-->
+<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *object* : Object ; *arrProperties* : Text array {; *arrTypes* : Integer array} )<!-- END REF-->
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | 構造化されたオブジェクト |
+| object | Object | &#8594; | 構造化されたオブジェクト |
 | arrProperties | Text array | &#8592; | プロパティ名 |
 | arrTypes | Integer array | &#8592; | プロパティの型 |
 

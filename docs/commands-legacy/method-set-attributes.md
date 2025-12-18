@@ -5,7 +5,7 @@ slug: /commands/method-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *path* ; *attributes* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTES.Syntax-->**METHOD SET ATTRIBUTES** ( *path* : Text, Text array ; *attributes* : Object, Object array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

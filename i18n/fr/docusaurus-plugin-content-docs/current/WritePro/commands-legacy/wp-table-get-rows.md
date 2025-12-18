@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-get-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *objCible* ) | ( *refTableau* ; *debutLigne* {; *nbLignes*} )  -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Table get rows.Syntax-->**WP Table get rows** ( *objCible* : Object ) | ( *refTableau* : Object ; *debutLigne* : Integer, Text {; *nbLignes* : Integer} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table get rows.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

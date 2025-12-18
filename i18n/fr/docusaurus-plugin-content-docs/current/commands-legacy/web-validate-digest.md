@@ -5,12 +5,12 @@ slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUtilisateur* ; *motDePasse* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUtilisateur* : Text ; *motDePasse* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomUtilisateur | Text | &#8594;  | Nom de l'utilisateur |
-| motDePasse | Text | &#8594;  | Mot de passe de l'utilisateur |
+| nomUtilisateur | Text | &#8594; | Nom de l'utilisateur |
+| motDePasse | Text | &#8594; | Mot de passe de l'utilisateur |
 | Résultat | Boolean | &#8592; | Vrai=Authentification correcte, Faux=Echec de l’authentification |
 
 <!-- END REF-->

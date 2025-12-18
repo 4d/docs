@@ -5,13 +5,13 @@ slug: /commands/insert-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fonte* ; *inserir* ; *posiçao* ) : Text<!-- END REF-->
+<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fonte* : Text ; *inserir* : Text ; *posiçao* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Insert string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &#8594;  | Cadeia na qual vai inserir uma segunda cadeia |
-| inserir | Text | &#8594;  | Cadeia que será inserida na primeira cadeia |
-| posiçao | Integer | &#8594;  | Onde vai inserir |
+| fonte | Text | &#8594; | Cadeia na qual vai inserir uma segunda cadeia |
+| inserir | Text | &#8594; | Cadeia que será inserida na primeira cadeia |
+| posiçao | Integer | &#8594; | Onde vai inserir |
 | Resultado | Text | &#8592; | Cadeia resultante |
 
 <!-- END REF-->

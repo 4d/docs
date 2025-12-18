@@ -5,12 +5,12 @@ slug: /commands/convert-path-system-to-posix
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *rutaSistema* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *rutaSistema* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaSistema | Text | &#8594;  | Ruta de acceso relativa o absoluta expresada en sintaxis sistema |
-| * | Operador | &#8594;  | Opción de codificación |
+| rutaSistema | Text | &#8594; | Ruta de acceso relativa o absoluta expresada en sintaxis sistema |
+| * | Operador | &#8594; | Opción de codificación |
 | Resultado | Text | &#8592; | Absolute pathname expressed in POSIX syntax |
 
 <!-- END REF-->

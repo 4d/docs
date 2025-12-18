@@ -5,12 +5,12 @@ slug: /commands/add-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*aTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.ADD RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
-| * | Operator |  &#8594;  | スクロールバーを隠す |
+| aTable | Table | &#8594; | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
+| * | Operator | &#8594; | スクロールバーを隠す |
 
 <!-- END REF-->
 

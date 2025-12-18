@@ -5,11 +5,11 @@ slug: /commands/object-get-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjeto* ) : any<!-- END REF-->
+<!--REF #_command_.OBJECT Get value.Syntax-->**OBJECT Get value** ( *nomObjeto* : Text ) : any<!-- END REF-->
 <!--REF #_command_.OBJECT Get value.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomObjeto | Text | &#8594;  | Nome do objeto |
+| nomObjeto | Text | &#8594; | Nome do objeto |
 | Resultado | any | &#8592; | Valor atual da fonte de dados do objeto formulário |
 
 <!-- END REF-->

@@ -5,14 +5,14 @@ slug: /commands/blob-to-real
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *blob* ; *formatRéel* {; *offset*} ) : Real<!-- END REF-->
+<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *blob* : Blob ; *formatRéel* : Integer {; *offset* : Variable} ) : Real<!-- END REF-->
 <!--REF #_command_.BLOB to real.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB duquel extraire la valeur de type Réel |
-| formatRéel | Integer | &#8594;  | 0 Format réel natif 1 Format réel étendu 2  Format réel double Macintosh 3  Format réel double Windows |
-| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
-| ||| Nouvel offset après lecture |
+| Blob | Blob | &#8594; | BLOB duquel extraire la valeur de type Réel |
+| formatRéel | Integer | &#8594; | 0 Format réel natif 1 Format réel étendu 2  Format réel double Macintosh 3  Format réel double Windows |
+| offset | Variable | &#8596; | Offset (en octets) dans le BLOB |
+|  |  |  | Nouvel offset après lecture |
 | Résultat | Real | &#8592; | Valeur de type Réel |
 
 <!-- END REF-->

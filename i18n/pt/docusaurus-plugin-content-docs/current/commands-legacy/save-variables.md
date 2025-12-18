@@ -5,12 +5,12 @@ slug: /commands/save-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *documento* ; *variavel* {; *variavel2* ; ... ; *variavelN*} )<!-- END REF-->
+<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *documento* : Text ; *variavel* : Variable {; *...variavel* : Variable} )<!-- END REF-->
 <!--REF #_command_.SAVE VARIABLES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Documento no qual vai guardar as variáveis |
-| variavel | Variable | &#8594;  | Variáveis a guardar |
+| documento | Text | &#8594; | Documento no qual vai guardar as variáveis |
+| variavel | Variable | &#8594; | Variáveis a guardar |
 
 <!-- END REF-->
 

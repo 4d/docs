@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | groupID | Integer | &#8594;  | Unique group ID number |
 | name | Text | &#8592; | Name of the group |
 | owner | Integer | &#8592; | User ID number of group owner (Binary databases only) |
-| members | Array integer | &#8592; | Group members |
+| members | Integer array | &#8592; | Group members |
 
 <!-- END REF-->
 

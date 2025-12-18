@@ -5,13 +5,12 @@ slug: /commands/integrate-mirror-log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* ; *operationNum* {; *mode* {; *errObject*}} )<!-- END REF-->
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* : Text ; *operationNum* : Real {; *mode* : Integer {; *errObject* : Object}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pathName | Text | &#8594;  | Name or pathname of the log file to be integrated |
-| operationNum | Real | &#8594;  | Number of last operation integrated or -2 to integrate the whole file |
-| &#8592; | New number of last operation integrated |
+| pathName | Text | &#8594;  |  Name or pathname of the log file to be integrated |
+| operationNum | Real | &#8596;  | *in:* Number of last operation integrated or -2 to integrate the whole file<br/>*out:* New number of last operation integrated |
 | mode | Integer | &#8594;  | 0=strict mode (default mode), 1=auto repair mode |
 | errObject | Object | &#8592; | Missed operation(s) |
 
@@ -23,7 +22,7 @@ displayed_sidebar: docs
 
 The **INTEGRATE MIRROR LOG FILE** integrates the log file designated by *pathName* into a 4D Server database, after the *operationNum* operation. The command accepts to integrate any log file into the database, even if it does not correspond to the the data file. This command is specifically intended for use in the context of a mirror database. 
 
-**Note:** Since 4D v14, it is possible to use a log file as part of a "mirror" database: the "Use Log File" option can now be checked in the Database Settings of a 4D Server used as a logical mirror, thus allowing the implementation of a series of cascading mirror servers (see the *Setting up a logical mirror* section in the 4D Server manual).
+**Note:** It is possible to use a log file as part of a "mirror" database: the "Use Log File" option can now be checked in the Database Settings of a 4D Server used as a logical mirror, thus allowing the implementation of a series of cascading mirror servers (see the *Setting up a logical mirror* section in the 4D Server manual).
 
 Unlike the existing *\_o\_INTEGRATE LOG FILE* command, at the end of its execution **INTEGRATE MIRROR LOG FILE** does not replace the current log file with the integrated one: the current log file of the database continues to be used. Accordingly, any changes made during integration are saved in the current log file.
 
@@ -31,7 +30,7 @@ In *pathName*, you pass an absolute or relative path to the database folder. If 
 
 In the *operationNum* variable, you pass the number of the last operation integrated, so that integration begins at the next operation. After integration, the value of the *operationNum* variable is updated with the number of the last operation integrated. You must save this variable and then reuse it directly as the *operationNum* parameter for the next integration operation. This allows you to follow on with subsequent log file integrations using **INTEGRATE MIRROR LOG FILE**. Pass -2 in the variable to integrate all the operations in the log file.
 
-***Compatibility note:* In versions of 4D prior to v15 R4,* **the operationNum parameter was optional; however, from now on, if* **the operationNum parameter is omitted, an error is generated. To restore the original functioning of your former code, you can just pass -2* **in the operationNum parameter variable.* 
+**Compatibility note:** In versions of 4D prior to v15 R4, the *operationNum* parameter was optional; however, from now on, if the *operationNum* parameter is omitted, an error is generated. To restore the original functioning of your former code, you can just pass -2 in the *operationNum* parameter variable.
 
 In *mode*, you pass the integration mode you want to activate. You can use one of the following constants found in the "*Backup and Restore*" theme:
 

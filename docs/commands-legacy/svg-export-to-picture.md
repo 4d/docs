@@ -5,7 +5,7 @@ slug: /commands/svg-export-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* ; *pictVar* {; *exportType*} )<!-- END REF-->
+<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* : Text ; *pictVar* : Picture {; *exportType* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

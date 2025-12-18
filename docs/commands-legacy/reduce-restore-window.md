@@ -5,7 +5,7 @@ slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* )<!-- END REF-->
+<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

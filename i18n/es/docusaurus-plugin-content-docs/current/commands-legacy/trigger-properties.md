@@ -5,11 +5,11 @@ slug: /commands/trigger-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *nivelTrigger* ; *eventoBase* ; *numTabla* ; *regNum* )<!-- END REF-->
+<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *nivelTrigger* : Integer ; *eventoBase* : Integer ; *numTabla* : Integer ; *regNum* : Integer )<!-- END REF-->
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nivelTrigger | Integer | &#8594;  | Nivel de ejecución del trigger |
+| nivelTrigger | Integer | &#8594; | Nivel de ejecución del trigger |
 | eventoBase | Integer | &#8592; | Evento de base de datos |
 | numTabla | Integer | &#8592; | Número de la tabla |
 | regNum | Integer | &#8592; | Número del registro |

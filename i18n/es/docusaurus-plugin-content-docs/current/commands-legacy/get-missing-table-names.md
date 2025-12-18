@@ -5,7 +5,7 @@ slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabfalt* )<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabfalt* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

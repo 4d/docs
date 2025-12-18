@@ -5,14 +5,14 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *cheminScript* ; *actionErreur* {; *nomAttribut* ; *valAttribut*} {; *nomAttribut2* ; *valAttribut2* ; ... ; *nomAttributN* ; *valAttributN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *cheminScript* : Text ; *actionErreur* : Integer {; *nomAttribut* : Text ; *valAttribut* : Text} {; ...(*nomAttribut* : Text, *valAttribut* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminScript | Text | &#8594;  | Chemin d'accès complet du fichier contenant le script SQL à exécuter |
-| actionErreur | Integer | &#8594;  | Action à effectuer en cas d’erreur durant l’exécution du script |
-| nomAttribut | Text | &#8594;  | Nom d’attribut à utiliser |
-| valAttribut | Text | &#8594;  | Valeur de l’attribut |
+| cheminScript | Text | &#8594; | Chemin d'accès complet du fichier contenant le script SQL à exécuter |
+| actionErreur | Integer | &#8594; | Action à effectuer en cas d’erreur durant l’exécution du script |
+| nomAttribut | Text | &#8594; | Nom d’attribut à utiliser |
+| valAttribut | Text | &#8594; | Valeur de l’attribut |
 
 <!-- END REF-->
 

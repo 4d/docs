@@ -5,12 +5,12 @@ slug: /commands/qr-on-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* ; *nomeMetodo* )<!-- END REF-->
+<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* : Integer ; *nomeMetodo* : Text )<!-- END REF-->
 <!--REF #_command_.QR ON COMMAND.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| nomeMetodo | Text | &#8594;  | Nome do método a ser chamado |
+| area | Integer | &#8594; | Referência da área |
+| nomeMetodo | Text | &#8594; | Nome do método a ser chamado |
 
 <!-- END REF-->
 

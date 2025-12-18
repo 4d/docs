@@ -15,11 +15,11 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomCliente* )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomCliente* : Text )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomCliente | Text | &#8594;  | Nombre de la sesión 4D Client |
+| nomCliente | Text | &#8594; | Nombre de la sesión 4D Client |
 
 <!-- END REF-->
 

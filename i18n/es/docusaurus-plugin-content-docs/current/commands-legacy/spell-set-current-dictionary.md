@@ -5,11 +5,11 @@ slug: /commands/spell-set-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *diccionario* )<!-- END REF-->
+<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *diccionario* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| diccionario | Integer, Text | &#8594;  | ID, Nombre o Código de lenguaje del diccionario a utilizar para la corrección ortográficaSi se omite = restablecer el diccionario por defecto |
+| diccionario | Integer, Text | &#8594; | ID, Nombre o Código de lenguaje del diccionario a utilizar para la corrección ortográficaSi se omite = restablecer el diccionario por defecto |
 
 <!-- END REF-->
 

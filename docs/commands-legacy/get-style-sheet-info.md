@@ -5,7 +5,7 @@ slug: /commands/get-style-sheet-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *styleSheetName* ; *font* ; *size* ; *styles* )<!-- END REF-->
+<!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *styleSheetName* : Text ; *font* : Text ; *size* : Integer ; *styles* : Integer )<!-- END REF-->
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,15 +5,15 @@ slug: /commands/get-menu-item-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* ; *lineaMenu* ; *propiedad* ; *valor* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* : Integer ; *lineaMenu* : Integer ; *propiedad* : Text ; *valor* : any {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Referencia de menú o número de menú |
-| lineaMenu | Integer | &#8594;  | Número de línea de menú o -1 para el último elemento añadido al menú |
-| propiedad | Text | &#8594;  | Tipo de propiedad |
+| menu | Integer | &#8594; | Referencia de menú o número de menú |
+| lineaMenu | Integer | &#8594; | Número de línea de menú o -1 para el último elemento añadido al menú |
+| propiedad | Text | &#8594; | Tipo de propiedad |
 | valor | any | &#8592; | Valor de la propiedad |
-| proceso | Integer | &#8594;  | Número del proceso |
+| proceso | Integer | &#8594; | Número del proceso |
 
 <!-- END REF-->
 

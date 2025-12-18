@@ -5,12 +5,12 @@ slug: /commands/query-selection-with-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *campoObjetivo* ; *array* )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *campoObjetivo* : Field ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoObjetivo | Field | &#8594;  | Campo utilizado para comparar los valores |
-| array | Array | &#8594;  | Array de valores buscados |
+| campoObjetivo | Field | &#8594; | Campo utilizado para comparar los valores |
+| array | Array | &#8594; | Array de valores buscados |
 
 <!-- END REF-->
 

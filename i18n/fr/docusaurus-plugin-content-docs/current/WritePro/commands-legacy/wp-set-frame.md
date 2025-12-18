@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-set-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( {* ;} *zoneWP* ; *sélecteurCadre* {; *textBoxID*} )<!-- END REF-->
+<!--REF #_command_.WP SET FRAME.Syntax-->**WP SET FRAME** ( {* ;} *zoneWP* : Text ; *sélecteurCadre* : Integer {; *textBoxID* : Text} )<!-- END REF-->
 <!--REF #_command_.WP SET FRAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

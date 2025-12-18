@@ -5,13 +5,13 @@ slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* ; *value* {; *start*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* : Array ; *value* : Expression {; *start* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | 検索を行う配列 |
-| value | Expression | &#8594;  | 配列タイプと同じタイプの検索値 |
-| start | Integer | &#8594;  | 検索を開始する配列要素番号 |
+| array | Array | &#8594; | 検索を行う配列 |
+| value | Expression | &#8594; | 配列タイプと同じタイプの検索値 |
+| start | Integer | &#8594; | 検索を開始する配列要素番号 |
 | 戻り値 | Integer | &#8592; | 検索値が見つかった最初の要素番号 |
 
 <!-- END REF-->

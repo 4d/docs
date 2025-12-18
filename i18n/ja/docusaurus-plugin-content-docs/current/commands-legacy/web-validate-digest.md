@@ -5,12 +5,12 @@ slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *userName* ; *password* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *userName* : Text ; *password* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userName | Text | &#8594;  | ユーザの名前 |
-| password | Text | &#8594;  | ユーザのパスワード |
+| userName | Text | &#8594; | ユーザの名前 |
+| password | Text | &#8594; | ユーザのパスワード |
 | 戻り値 | Boolean | &#8592; | True=認証はOK、 False=認証は失敗 |
 
 <!-- END REF-->

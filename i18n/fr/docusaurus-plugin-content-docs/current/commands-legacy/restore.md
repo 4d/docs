@@ -5,12 +5,12 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *cheminArchive* {; *cheminDossierDest*} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ( *cheminArchive* : Text {; *cheminDossierDest* : Text} )}<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminArchive | Text | &#8594;  | Chemin d’accès de l’archive à restituer |
-| cheminDossierDest | Text | &#8594;  | Chemin d’accès du dossier de destination |
+| cheminArchive | Text | &#8594; | Chemin d’accès de l’archive à restituer |
+| cheminDossierDest | Text | &#8594; | Chemin d’accès du dossier de destination |
 
 <!-- END REF-->
 

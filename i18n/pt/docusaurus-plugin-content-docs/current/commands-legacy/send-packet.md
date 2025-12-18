@@ -5,12 +5,12 @@ slug: /commands/send-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* ;} *pacote* )<!-- END REF-->
+<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*docRef* : Time ;} *pacote* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SEND PACKET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referência do documento, o canal atual (porta serial ou documento) |
-| pacote | Text, Blob | &#8594;  | String ou BLOB a ser enviado |
+| docRef | Time | &#8594; | Número de referência do documento, o canal atual (porta serial ou documento) |
+| pacote | Text, Blob | &#8594; | String ou BLOB a ser enviado |
 
 <!-- END REF-->
 

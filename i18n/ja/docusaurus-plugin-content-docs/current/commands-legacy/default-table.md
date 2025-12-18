@@ -5,11 +5,11 @@ slug: /commands/default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *aTable* )<!-- END REF-->
+<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *aTable* : Table )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | デフォルトとして設定するテーブル |
+| aTable | Table | &#8594; | デフォルトとして設定するテーブル |
 
 <!-- END REF-->
 

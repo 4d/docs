@@ -5,11 +5,11 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *tabela* )} : Integer<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** ( *tabela* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual retornar o número de registros selecionados ou tabela padrão se omitida |
+| tabela | Table | &#8594; | Tabela para a qual retornar o número de registros selecionados ou tabela padrão se omitida |
 | Resultado | Integer | &#8592; | Nº registro selecionado do registro atual |
 
 <!-- END REF-->

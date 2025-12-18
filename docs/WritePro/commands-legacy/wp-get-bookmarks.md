@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-bookmarks
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP GET BOOKMARKS.Syntax-->**WP GET BOOKMARKS** ( *wpDoc* ; *arrBKNames* )<!-- END REF-->
+<!--REF #_command_.WP GET BOOKMARKS.Syntax-->**WP GET BOOKMARKS** ( *wpDoc* : Object ; *arrBKNames* : Array )<!-- END REF-->
 <!--REF #_command_.WP GET BOOKMARKS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

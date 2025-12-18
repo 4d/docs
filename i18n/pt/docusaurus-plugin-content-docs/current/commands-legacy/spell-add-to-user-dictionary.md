@@ -5,11 +5,11 @@ slug: /commands/spell-add-to-user-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL ADD TO USER DICTIONARY.Syntax-->**SPELL ADD TO USER DICTIONARY** ( *palavras* )<!-- END REF-->
+<!--REF #_command_.SPELL ADD TO USER DICTIONARY.Syntax-->**SPELL ADD TO USER DICTIONARY** ( *palavras* : Text, Text array )<!-- END REF-->
 <!--REF #_command_.SPELL ADD TO USER DICTIONARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| palavras | Text, Text array | &#8594;  | Palavra ou lista de palavras para agregar ao dicionário do usuário |
+| palavras | Text, Text array | &#8594; | Palavra ou lista de palavras para agregar ao dicionário do usuário |
 
 <!-- END REF-->
 

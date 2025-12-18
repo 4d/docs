@@ -5,13 +5,13 @@ slug: /commands/method-set-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *rota* ; *codigo* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET CODE.Syntax-->**METHOD SET CODE** ( *rota* : Text, Text array ; *codigo* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET CODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text, Text array | &#8594;  | Texto ou array texto que contém uma ou mais rotas de método |
-| codigo | Text, Text array | &#8594;  | Código dos métodos designados |
-| * | Operador | &#8594;  | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text, Text array | &#8594; | Texto ou array texto que contém uma ou mais rotas de método |
+| codigo | Text, Text array | &#8594; | Código dos métodos designados |
+| * | Operador | &#8594; | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

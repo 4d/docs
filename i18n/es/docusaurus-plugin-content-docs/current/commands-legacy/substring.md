@@ -5,13 +5,13 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *fuente* ; *aPartirDe* {; *numCaracteres*} ) : Text<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *fuente* : Text ; *aPartirDe* : Integer {; *numCaracteres* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Text | &#8594;  | Cadena de la cual obtener una subcadena |
-| aPartirDe | Integer | &#8594;  | Posición del primer carácter |
-| numCaracteres | Integer | &#8594;  | Número de caracteres a obtener |
+| fuente | Text | &#8594; | Cadena de la cual obtener una subcadena |
+| aPartirDe | Integer | &#8594; | Posición del primer carácter |
+| numCaracteres | Integer | &#8594; | Número de caracteres a obtener |
 | Resultado | Text | &#8592; | Subcadena de fuente |
 
 <!-- END REF-->

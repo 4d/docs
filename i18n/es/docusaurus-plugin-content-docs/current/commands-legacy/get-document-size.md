@@ -5,12 +5,12 @@ slug: /commands/get-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* {; *} ) : Real<!-- END REF-->
+<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* : Text, Time {; *} ) : Real<!-- END REF-->
 <!--REF #_command_.Get document size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| document | Text, Time | &#8594;  | Número de referencia del documento o Nombre del documento |
-| * | Operador | &#8594;  | En Mac OS únicamente: -si se omite, tamaño del data fork - si se especifica, tamaño del resource fork |
+| document | Text, Time | &#8594; | Número de referencia del documento o Nombre del documento |
+| * | Operador | &#8594; | En Mac OS únicamente: -si se omite, tamaño del data fork - si se especifica, tamaño del resource fork |
 | Resultado | Real | &#8592; | Tamaño (expresado en bytes) del documento |
 
 <!-- END REF-->

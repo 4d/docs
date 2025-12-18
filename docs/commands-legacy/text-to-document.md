@@ -5,7 +5,7 @@ slug: /commands/text-to-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *fileName* ; *text* {; *charSet* {; *breakMode*}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *fileName* : Text ; *text* : Text {; *charSet* : Text, Integer {; *breakMode* : Integer}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

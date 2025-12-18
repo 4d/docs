@@ -5,12 +5,12 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *ptrChp* ; *tableDest* ; *champDest* {; *discriminant* {; *allerAuto* {; *retourAuto*}}} )<br/>**GET RELATION PROPERTIES** ( *numTable* ; *numChamp* ; *tableDest* ; *champDest* {; *discriminant* {; *allerAuto* {; *retourAuto*}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *ptrChp* : Pointeur, Entier long ; *tableDest* : Integer ; *champDest* : Integer {; *discriminant* : Integer {; *allerAuto* : Boolean {; *retourAuto* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ; *tableDest* : Integer ; *champDest* : Integer {; *discriminant* : Integer {; *allerAuto* : Boolean {; *retourAuto* : Boolean}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de champ ou Numéro de table |
-| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| ptrChp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &#8594; | Numéro de champ si un numéro de table est passé en premier paramètre |
 | tableDest | Integer | &#8592; | Numéro de la table cible ou 0 si aucun lien ne part du champ |
 | champDest | Integer | &#8592; | Numéro du champ cible ou 0 si aucun lien ne part du champ |
 | discriminant | Integer | &#8592; | Numéro du champ discriminant ou 0 si aucun champ discriminant |

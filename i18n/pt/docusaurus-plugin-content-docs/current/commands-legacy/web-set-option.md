@@ -5,12 +5,12 @@ slug: /commands/web-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *seletor* ; *valor* )<!-- END REF-->
+<!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *seletor* : Integer ; *valor* : Integer, Text, Collection )<!-- END REF-->
 <!--REF #_command_.WEB SET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seletor | Integer | &#8594;  | Código da opção a modificar |
-| valor | Integer, Text, Collection | &#8594;  | Valor da opção |
+| seletor | Integer | &#8594; | Código da opção a modificar |
+| valor | Integer, Text, Collection | &#8594; | Valor da opção |
 
 <!-- END REF-->
 

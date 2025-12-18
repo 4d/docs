@@ -5,7 +5,7 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

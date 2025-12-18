@@ -5,14 +5,14 @@ slug: /commands/add-to-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* ; *years* ; *months* ; *days* ) : Date<!-- END REF-->
+<!--REF #_command_.Add to date.Syntax-->**Add to date** ( *date* : Date ; *years* : Integer ; *months* : Integer ; *days* : Integer ) : Date<!-- END REF-->
 <!--REF #_command_.Add to date.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | 年月日を加算する日付 |
-| years | Integer | &#8594;  | 日付に加算する年 |
-| months | Integer | &#8594;  | 日付に加算する月 |
-| days | Integer | &#8594;  | 日付に加算する日 |
+| date | Date | &#8594; | 年月日を加算する日付 |
+| years | Integer | &#8594; | 日付に加算する年 |
+| months | Integer | &#8594; | 日付に加算する月 |
+| days | Integer | &#8594; | 日付に加算する日 |
 | 戻り値 | Date | &#8592; | 結果の日付 |
 
 <!-- END REF-->

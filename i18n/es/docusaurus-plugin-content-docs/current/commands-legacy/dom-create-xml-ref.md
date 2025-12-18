@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* {; *nomEspacio*} {; *nSNom* ; *nSValor*} {; *nSNom2* ; *nSValor2* ; ... ; *nSNomN* ; *nSValorN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *raiz* : Text {; *nomEspacio* : Text} {; *nSNom* : Text ; *nSValor* : Text} {; ...(*nSNom* : Text, *nSValor* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| raiz | Text | &#8594;  | Nombre del elemento raíz |
-| nomEspacio | Text | &#8594;  | Valor del espacio de nombre (namespace) |
-| nSNom | Text | &#8594;  | Nombre del espacio de nombre |
-| nSValor | Text | &#8594;  | Valor de espacio de nombre |
+| raiz | Text | &#8594; | Nombre del elemento raíz |
+| nomEspacio | Text | &#8594; | Valor del espacio de nombre (namespace) |
+| nSNom | Text | &#8594; | Nombre del espacio de nombre |
+| nSValor | Text | &#8594; | Valor de espacio de nombre |
 | Resultado | Text | &#8592; | Referencia del elemento XML raíz |
 
 <!-- END REF-->

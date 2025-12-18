@@ -5,13 +5,13 @@ slug: /commands/qr-set-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *area* ; *type* {; *specifics*} )<!-- END REF-->
+<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *area* : Integer ; *type* : Integer {; *specifics* : Text, Variable} )<!-- END REF-->
 <!--REF #_command_.QR SET DESTINATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| type | Integer | &#8594;  | レポートの出力先 |
-| specifics | Text, Variable | &#8594;  | 出力先の詳細 |
+| area | Integer | &#8594; | エリア参照 |
+| type | Integer | &#8594; | レポートの出力先 |
+| specifics | Text, Variable | &#8594; | 出力先の詳細 |
 
 <!-- END REF-->
 

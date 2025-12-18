@@ -5,7 +5,7 @@ slug: /commands/log-file-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *destFolderPath* {; *maxSize* {; *logPath* {; *fieldAtt*}}} )<!-- END REF-->
+<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *destFolderPath* : Text {; *maxSize* : Integer {; *logPath* : Text {; *fieldAtt* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

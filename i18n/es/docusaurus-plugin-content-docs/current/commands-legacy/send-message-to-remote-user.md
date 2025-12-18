@@ -5,12 +5,12 @@ slug: /commands/send-message-to-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *mensaje* {; *sesionUsuario*} )<!-- END REF-->
+<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *mensaje* : Text {; *sesionUsuario* : Text} )<!-- END REF-->
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mensaje | Text | &#8594;  | Texto enviado al usuario |
-| sesionUsuario | Text | &#8594;  | ID de sesión del usuario |
+| mensaje | Text | &#8594; | Texto enviado al usuario |
+| sesionUsuario | Text | &#8594; | ID de sesión del usuario |
 
 <!-- END REF-->
 

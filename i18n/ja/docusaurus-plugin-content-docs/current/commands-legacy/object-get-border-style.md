@@ -5,12 +5,12 @@ slug: /commands/object-get-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get border style** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get border style.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字列)、省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (*指定時)、または変数やフィールド (*省略時) |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (*指定時)、または変数やフィールド (*省略時) |
 | 戻り値 | Integer | &#8592; | 境界線スタイル |
 
 <!-- END REF-->

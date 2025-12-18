@@ -5,11 +5,11 @@ slug: /commands/method-set-access-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* )<!-- END REF-->
+<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* : Integer )<!-- END REF-->
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| mode | Integer | &#8594;  | Mode d’accès aux objets verrouillés |
+| mode | Integer | &#8594; | Mode d’accès aux objets verrouillés |
 
 <!-- END REF-->
 

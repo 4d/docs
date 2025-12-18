@@ -5,15 +5,15 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( {* ;} *object* ; *bestWidth* ; *bestHeight* {; *maxWidth*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *object* : Text ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *object* : Field, Variable ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
 | bestWidth | Integer | &#8592; | 最適オブジェクト幅 |
 | bestHeight | Integer | &#8592; | 最適オブジェクト高さ |
-| maxWidth | Integer | &#8594;  | 最大オブジェクト幅 |
+| maxWidth | Integer | &#8594; | 最大オブジェクト幅 |
 
 <!-- END REF-->
 

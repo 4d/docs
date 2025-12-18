@@ -5,20 +5,20 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( {* ;} *object* {; *newName* {; *newVar* {; *boundTo* {; *moveH* {; *moveV* {; *resizeH* {; *resizeV*}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *object* : Field, Variable {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字列)、省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (*指定時)、または変数やフィールド (*省略時) |
-| newName | Text | &#8594;  | 新しいオブジェクトの名前 |
-| newVar | Pointer | &#8594;  | 新しいオブジェクトの変数へのポインター |
-| boundTo | Text | &#8594;  | 直前の入力順の入力可能オブジェクトまたはラジオボタングループ |
-| moveH | Integer | &#8594;  | 新しいオブジェクトの横シフト (>0 = 右方向, <0 = 左方向) |
-| moveV | Integer | &#8594;  | 新しいオブジェクトの縦シフト (>0 = 下方向, <0 = 上方向) |
-| resizeH | Integer | &#8594;  | オブジェクトの横リサイズ |
-| resizeV | Integer | &#8594;  | 新しいオブジェクトの縦リサイズ |
-| * | 演算子 | &#8594;  | 指定時= 絶対座標, 省略時= 相対座標 |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (*指定時)、または変数やフィールド (*省略時) |
+| newName | Text | &#8594; | 新しいオブジェクトの名前 |
+| newVar | Pointer | &#8594; | 新しいオブジェクトの変数へのポインター |
+| boundTo | Text | &#8594; | 直前の入力順の入力可能オブジェクトまたはラジオボタングループ |
+| moveH | Integer | &#8594; | 新しいオブジェクトの横シフト (>0 = 右方向, <0 = 左方向) |
+| moveV | Integer | &#8594; | 新しいオブジェクトの縦シフト (>0 = 下方向, <0 = 上方向) |
+| resizeH | Integer | &#8594; | オブジェクトの横リサイズ |
+| resizeV | Integer | &#8594; | 新しいオブジェクトの縦リサイズ |
+| * | 演算子 | &#8594; | 指定時= 絶対座標, 省略時= 相対座標 |
 
 <!-- END REF-->
 

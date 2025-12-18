@@ -5,14 +5,14 @@ slug: /commands/object-set-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( {* ;} *objet* ; *tailleVariable* {; *fixeSousForm*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( * ; *objet* : Text ; *tailleVariable* : Boolean {; *fixeSousForm* : Integer} )<br/>**OBJECT SET PRINT VARIABLE FRAME** ( *objet* : Field, Variable ; *tailleVariable* : Boolean {; *fixeSousForm* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| tailleVariable | Boolean | &#8594;  | Vrai = Impression taille variable, Faux = Impression taille fixe |
-| fixeSousForm | Integer | &#8594;  | Options d’impression en taille fixe des sous-formulaires |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| tailleVariable | Boolean | &#8594; | Vrai = Impression taille variable, Faux = Impression taille fixe |
+| fixeSousForm | Integer | &#8594; | Options d’impression en taille fixe des sous-formulaires |
 
 <!-- END REF-->
 

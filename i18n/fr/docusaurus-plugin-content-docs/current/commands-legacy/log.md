@@ -5,11 +5,11 @@ slug: /commands/log
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log.Syntax-->**Log** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Log.Syntax-->**Log** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#8594;  | Nombre dont vous voulez obtenir le logarithme népérien |
+| nombre | Real | &#8594; | Nombre dont vous voulez obtenir le logarithme népérien |
 | Résultat | Real | &#8592; | Logarithme népérien de nombre |
 
 <!-- END REF-->

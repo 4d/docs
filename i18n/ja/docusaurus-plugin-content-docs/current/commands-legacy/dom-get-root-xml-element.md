@@ -5,11 +5,11 @@ slug: /commands/dom-get-root-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get root XML element** ( *elementRef* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get root XML element.Syntax-->**DOM Get root XML element** ( *elementRef* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get root XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
+| elementRef | Text | &#8594; | XML要素参照 |
 | 戻り値 | Text | &#8592; | ルート要素参照 またはエラーの場合 "" |
 
 <!-- END REF-->

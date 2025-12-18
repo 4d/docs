@@ -5,19 +5,17 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *httpMethod* ; *url* ; *contents* ; *response* {; *headerNames* ; *headerValues*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *httpMethod* : Text ; *url* : Text ; *contents* : Text, Blob, Picture, Object ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| httpMethod | Text | &#8594;  | リクエストで使用するHTTPメソッド |
-| url | Text | &#8594;  | リクエストの送信先URL |
-| contents | Text, Blob, Picture, Object | &#8594;  | リクエストボディの内容 |
+| httpMethod | Text | &#8594; | リクエストで使用するHTTPメソッド |
+| url | Text | &#8594; | リクエストの送信先URL |
+| contents | Text, Blob, Picture, Object | &#8594; | リクエストボディの内容 |
 | response | Text, Blob, Picture, Object | &#8592; | レスポンスの内容 |
-| headerNames | Text array | &#8594;  | リクエストのヘッダー名 |
-| &#8592; | 返されたヘッダー名 |
-| headerValues | Text array | &#8594;  | リクエストのヘッダー値 |
-| &#8592; | 返されたヘッダー値 |
-| * | 演算子 | &#8594;  | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
+| headerNames | Text array | &#8596; | *in:* Header names of the request<br/>*out:* Returned header names |
+| headerValues | Text array | &#8596; | *in:* Header values of the request<br/>*out:* Returned header values |
+| * | 演算子 | &#8594; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
 | 戻り値 | Integer | &#8592; | HTTPステータスコード |
 
 <!-- END REF-->

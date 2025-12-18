@@ -5,13 +5,13 @@ slug: /commands/load-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*tabla* ;} *conjunto* ; *doc* )<!-- END REF-->
+<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*tabla* : Table ;} *conjunto* : Text ; *doc* : Text )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a la cual pertenece el conjunto o Tabla por defecto si se omite |
-| conjunto | Text | &#8594;  | Nombre del conjunto a crear en memoria |
-| doc | Text | &#8594;  | Documento que contiene el conjunto |
+| tabla | Table | &#8594; | Tabla a la cual pertenece el conjunto o Tabla por defecto si se omite |
+| conjunto | Text | &#8594; | Nombre del conjunto a crear en memoria |
+| doc | Text | &#8594; | Documento que contiene el conjunto |
 
 <!-- END REF-->
 

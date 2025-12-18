@@ -5,12 +5,12 @@ slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** {( *user* ; *password* )}<!-- END REF-->
+<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ( *user* : Text, Integer ; *password* : Text )}<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| user | Text, Integer | &#8594;  | 名前またはユニークなユーザーID |
-| password | Text | &#8594;  | (暗号化されていない)パスワード |
+| user | Text, Integer | &#8594; | 名前またはユニークなユーザーID |
+| password | Text | &#8594; | (暗号化されていない)パスワード |
 
 <!-- END REF-->
 

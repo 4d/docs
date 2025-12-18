@@ -5,7 +5,7 @@ slug: /commands/delete-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *userID* )<!-- END REF-->
+<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *userID* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

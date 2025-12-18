@@ -5,13 +5,13 @@ slug: /commands/object-set-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( {* ;} *objet* ; *correctionAuto* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( * ; *objet* : Text ; *correctionAuto* : Boolean )<br/>**OBJECT SET AUTO SPELLCHECK** ( *objet* : Field, Variable ; *correctionAuto* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| correctionAuto | Boolean | &#8594;  | Vrai = correction automatique, Faux = pas de correction automatique |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| correctionAuto | Boolean | &#8594; | Vrai = correction automatique, Faux = pas de correction automatique |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/get-printable-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *height* {; *width*} )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *height* : Integer {; *width* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/add-to-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*tabla* ;} *conjunto* )<!-- END REF-->
+<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*tabla* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla del registro actual o Tabla por defecto si se omite |
-| conjunto | Text | &#8594;  | Nombre del conjunto al cual añadir el registro actual |
+| tabla | Table | &#8594; | Tabla del registro actual o Tabla por defecto si se omite |
+| conjunto | Text | &#8594; | Nombre del conjunto al cual añadir el registro actual |
 
 <!-- END REF-->
 

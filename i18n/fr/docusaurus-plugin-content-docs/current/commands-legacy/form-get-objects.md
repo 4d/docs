@@ -5,14 +5,14 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; *optionPage* } )<br/>**FORM GET OBJECTS** ( *tabObjets* {; *tabVariables* {; *tabPages*}} {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *tabObjets* : Text array {; *tabVariables* : Pointer array {; *tabPages* : Integer array}} {; *optionPage* : Entier long, Opérateur } )<br/>**FORM GET OBJECTS** ( *tabObjets* : Text array {; *tabVariables* : Pointer array {; *tabPages* : Integer array}} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabObjets | Text array | &#8592; | Noms des objets du formulaire |
 | tabVariables | Pointer array | &#8592; | Pointeurs sur les variables ou champs associés aux objets |
-| tabPages | Array integer | &#8592; | Numéro de page de chaque objet |
-| optionPage &#124; * | Entier long, Opérateur | &#8594;  | 1=Page courante du formulaire, 2=Toutes les pages, 4=Pages héritées<br/>Si * passé (obsolète) = page courante avec objets hérités |
+| tabPages | Integer array | &#8592; | Numéro de page de chaque objet |
+| optionPage &#124; * | Entier long, Opérateur | &#8594; | 1=Page courante du formulaire, 2=Toutes les pages, 4=Pages héritées<br/>Si * passé (obsolète) = page courante avec objets hérités |
 
 <!-- END REF-->
 

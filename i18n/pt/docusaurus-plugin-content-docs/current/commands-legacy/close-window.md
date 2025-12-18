@@ -5,11 +5,11 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *janela* )}<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ( *janela* : Integer )}<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 
 <!-- END REF-->
 

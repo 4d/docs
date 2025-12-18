@@ -5,7 +5,7 @@ slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* ; *aColumns* ; *aOrders* )<!-- END REF-->
+<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* : Integer ; *aColumns* : Real array ; *aOrders* : Real array )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

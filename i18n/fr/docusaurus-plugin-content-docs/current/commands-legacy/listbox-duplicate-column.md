@@ -5,19 +5,19 @@ slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( {* ;} *objet* ; *positionCol* ; *nomCol* ; *variableCol* ; *nomEntête* ; *varEntête* {; *nomPied* ; *variablePied*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *objet* : Text ; *positionCol* : Integer ; *nomCol* : Text ; *variableCol* : Array, Field, Variable, Pointer ; *nomEntête* : Text ; *varEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *objet* : Field, Variable ; *positionCol* : Integer ; *nomCol* : Text ; *variableCol* : Array, Field, Variable, Pointer ; *nomEntête* : Text ; *varEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à dupliquer |
-| positionCol | Integer | &#8594;  | Emplacement de la nouvelle colonne dupliquée |
-| nomCol | Text | &#8594;  | Nom de la nouvelle colonne |
-| variableCol | Array, Field, Variable, Pointer | &#8594;  | Nom de la variable tableau de la colonne ou champ ou variable |
-| nomEntête | Text | &#8594;  | Nom d’objet de l’en-tête de la colonne |
-| varEntête | Integer, Pointer | &#8594;  | Variable d’en-tête de la colonne |
-| nomPied | Text | &#8594;  | Nom d’objet du pied de la colonne |
-| variablePied | Variable, Pointer | &#8594;  | Variable du pied de la colonne |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à dupliquer |
+| positionCol | Integer | &#8594; | Emplacement de la nouvelle colonne dupliquée |
+| nomCol | Text | &#8594; | Nom de la nouvelle colonne |
+| variableCol | Array, Field, Variable, Pointer | &#8594; | Nom de la variable tableau de la colonne ou champ ou variable |
+| nomEntête | Text | &#8594; | Nom d’objet de l’en-tête de la colonne |
+| varEntête | Integer, Pointer | &#8594; | Variable d’en-tête de la colonne |
+| nomPied | Text | &#8594; | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#8594; | Variable du pied de la colonne |
 
 <!-- END REF-->
 

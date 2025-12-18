@@ -5,11 +5,11 @@ slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *tabPolices* )<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *tabPolices* : Text array )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tabPolices | Text array | &#8594;  | Tableau de noms de polices |
+| tabPolices | Text array | &#8594; | Tableau de noms de polices |
 
 <!-- END REF-->
 

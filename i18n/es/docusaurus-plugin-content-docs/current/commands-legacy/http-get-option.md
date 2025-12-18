@@ -5,11 +5,11 @@ slug: /commands/http-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *opción* ; *valor* )<!-- END REF-->
+<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *opción* : Integer ; *valor* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP GET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opción | Integer | &#8594;  | Código de la opción a leer |
+| opción | Integer | &#8594; | Código de la opción a leer |
 | valor | Integer | &#8592; | Valor actual de la opción |
 
 <!-- END REF-->

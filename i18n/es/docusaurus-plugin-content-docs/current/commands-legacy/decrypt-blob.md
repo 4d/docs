@@ -5,14 +5,14 @@ slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDescifrar* ; *enviarLlavePub* {; *recepLlavePriv*} )<!-- END REF-->
+<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDescifrar* : Blob ; *enviarLlavePub* : Blob {; *recepLlavePriv* : Blob} )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aDescifrar | Blob | &#8596;  | Datos a descifrar |
-| || | Datos descifrados |
-| enviarLlavePub | Blob | &#8594;  | Llave pública del emisor |
-| recepLlavePriv | Blob | &#8594;  | Llave privada del receptor |
+| aDescifrar | Blob | &#8596; | Datos a descifrar |
+|  |  |  | Datos descifrados |
+| enviarLlavePub | Blob | &#8594; | Llave pública del emisor |
+| recepLlavePriv | Blob | &#8594; | Llave privada del receptor |
 
 <!-- END REF-->
 

@@ -5,19 +5,19 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( {* ;} *objeto* ; *posiçaoCol* ; *nomeColuna* ; *variavelCol* ; *nomeCabe* ; *varTitulo* {; *nomRodapé* ; *nomeVar*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *objeto* : Text ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *objeto* : Field, Variable ; *posiçaoCol* : Integer ; *nomeColuna* : Text ; *variavelCol* : Array, Field, Variable, Pointer ; *nomeCabe* : Text ; *varTitulo* : Integer, Pointer {; *nomRodapé* : Text ; *nomeVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçaoCol | Integer | &#8594;  | Localização da coluna a inserir |
-| nomeColuna | Text | &#8594;  | Nome do objeto coluna |
-| variavelCol | Array, Field, Variable, Pointer | &#8594;  | Nome de coluna do array ou campo ou variável |
-| nomeCabe | Text | &#8594;  | Nome do objeto título da coluna |
-| varTitulo | Integer, Pointer | &#8594;  | Variável título da coluna |
-| nomRodapé | Text | &#8594;  | Nome do rodapé da coluna |
-| nomeVar | Variable, Pointer | &#8594;  | Variável do rodapé da coluna |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçaoCol | Integer | &#8594; | Localização da coluna a inserir |
+| nomeColuna | Text | &#8594; | Nome do objeto coluna |
+| variavelCol | Array, Field, Variable, Pointer | &#8594; | Nome de coluna do array ou campo ou variável |
+| nomeCabe | Text | &#8594; | Nome do objeto título da coluna |
+| varTitulo | Integer, Pointer | &#8594; | Variável título da coluna |
+| nomRodapé | Text | &#8594; | Nome do rodapé da coluna |
+| nomeVar | Variable, Pointer | &#8594; | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

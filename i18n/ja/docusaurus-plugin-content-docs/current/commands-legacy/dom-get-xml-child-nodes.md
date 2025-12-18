@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-child-nodes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *elementRef* ; *childTypesArr* ; *nodeRefsArr* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *elementRef* : Text ; *childTypesArr* : Integer array ; *nodeRefsArr* : Text array )<!-- END REF-->
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
+| elementRef | Text | &#8594; | XML要素参照 |
 | childTypesArr | Integer array | &#8592; | 子ノードのタイプ |
 | nodeRefsArr | Text array | &#8592; | 子ノードの参照または値 |
 

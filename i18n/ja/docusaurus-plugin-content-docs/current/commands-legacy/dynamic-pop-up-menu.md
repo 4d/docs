@@ -5,14 +5,14 @@ slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *default* {; *xCoord* ; *yCoord*}} )  : Text<!-- END REF-->
+<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* : Text {; *default* : Text {; *xCoord* : Integer ; *yCoord* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Text | &#8594;  | メニュー参照 |
-| default | Text | &#8594;  | デフォルトで選択される項目のパラメーター |
-| xCoord | Integer | &#8594;  | 左上隅のx座標 |
-| yCoord | Integer | &#8594;  | 左上隅のy座標 |
+| menu | Text | &#8594; | メニュー参照 |
+| default | Text | &#8594; | デフォルトで選択される項目のパラメーター |
+| xCoord | Integer | &#8594; | 左上隅のx座標 |
+| yCoord | Integer | &#8594; | 左上隅のy座標 |
 | 戻り値 | Text | &#8592; | 選択されたメニュー項目のパラメーター |
 
 <!-- END REF-->

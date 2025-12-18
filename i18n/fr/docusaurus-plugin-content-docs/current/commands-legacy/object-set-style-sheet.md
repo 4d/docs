@@ -5,13 +5,13 @@ slug: /commands/object-set-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( {* ;} *objet* ; *nomFeuilleStyle* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( * ; *objet* : Text ; *nomFeuilleStyle* : Text )<br/>**OBJECT SET STYLE SHEET** ( *objet* : Field, Variable ; *nomFeuilleStyle* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| nomFeuilleStyle | Text | &#8594;  | Nom de la feuille de style |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| nomFeuilleStyle | Text | &#8594; | Nom de la feuille de style |
 
 <!-- END REF-->
 

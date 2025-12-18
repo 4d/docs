@@ -5,14 +5,14 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *grafImagen* ; *grafNum* ; *xCategorias* {; *yValores*} {; *yValores2* ; ... ; *yValoresN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *grafImagen* : Picture ; *grafNum* : Integer, Object ; *xCategorias* : Array {; *...yValores* : Array} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| grafImagen | Picture | &#8594;  | Variable imagen |
-| grafNum | Integer, Object | &#8594;  | Número de tipo de gráfico |
-| xCategorias | Array | &#8594;  | Categorías para el eje x |
-| yValores | Array | &#8594;  | Valores a representar gráficamente (hasta 8) |
+| grafImagen | Picture | &#8594; | Variable imagen |
+| grafNum | Integer, Object | &#8594; | Número de tipo de gráfico |
+| xCategorias | Array | &#8594; | Categorías para el eje x |
+| yValores | Array | &#8594; | Valores a representar gráficamente (hasta 8) |
 
 <!-- END REF-->
 

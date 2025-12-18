@@ -5,14 +5,14 @@ slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *objetoImagen* ; *x* ; *y* ) : Text<!-- END REF-->
+<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *objetoImagen* ; *x* : Integer ; *y* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, pictureObject es un nombre de objeto (cadena) Si se omite, pictureObject es un campo o variable |
-| objetoPicture | Picture | &#8594;  | Nombre de objeto (si se especifica *) o Campo o variable (si se omite *) |
-| x | Integer | &#8594;  | X coordenada en píxeles |
-| y | Integer | &#8594;  | Y coordenada en píxeles |
+| * | Operador | &#8594; | Si se especifica, pictureObject es un nombre de objeto (cadena) Si se omite, pictureObject es un campo o variable |
+| objetoPicture | Picture | &#8594; | Nombre de objeto (si se especifica *) o Campo o variable (si se omite *) |
+| x | Integer | &#8594; | X coordenada en píxeles |
+| y | Integer | &#8594; | Y coordenada en píxeles |
 | Resultado | Text | &#8592; | ID del elemento encontrado en la ubicación X,Y |
 
 <!-- END REF-->

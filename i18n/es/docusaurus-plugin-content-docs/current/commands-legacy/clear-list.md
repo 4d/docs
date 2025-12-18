@@ -5,12 +5,12 @@ slug: /commands/clear-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *lista* {; *} )<!-- END REF-->
+<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *lista* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de la lista |
-| * | Operator |  &#8594;  | Si se especifica, si hay sublistas las borra de la memoria, Si se omite, las sublistas no son borradas |
+| lista | Integer | &#8594; | Número de referencia de la lista |
+| * | Operator | &#8594; | Si se especifica, si hay sublistas las borra de la memoria, Si se omite, las sublistas no son borradas |
 
 <!-- END REF-->
 

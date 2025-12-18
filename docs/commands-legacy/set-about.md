@@ -5,7 +5,7 @@ slug: /commands/set-about
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *itemText* ; *method* )<!-- END REF-->
+<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *itemText* : Text ; *method* : Text )<!-- END REF-->
 <!--REF #_command_.SET ABOUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

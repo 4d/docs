@@ -5,7 +5,7 @@ slug: /commands/export-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *exportedStructure* {; *format*} )<!-- END REF-->
+<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *exportedStructure* : Text {; *format* : Text} )<!-- END REF-->
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

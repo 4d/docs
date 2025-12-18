@@ -5,7 +5,7 @@ slug: /commands/svg-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *pictureObject* ; element_ID ; *attribName* ; *attribValue* )<!-- END REF-->
+<!--REF #_command_.SVG GET ATTRIBUTE.Syntax-->**SVG GET ATTRIBUTE** ( {* ;} *pictureObject* : Picture ; element_ID ; *attribName* : Text ; *attribValue* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SVG GET ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/save-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* ; *document* )<!-- END REF-->
+<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* : Text ; *document* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | Text | &#8594;  | 保存するセットの名前 |
-| document | Text | &#8594;  | セットを保存するディスクファイルの名前 |
+| set | Text | &#8594; | 保存するセットの名前 |
+| document | Text | &#8594; | セットを保存するディスクファイルの名前 |
 
 <!-- END REF-->
 

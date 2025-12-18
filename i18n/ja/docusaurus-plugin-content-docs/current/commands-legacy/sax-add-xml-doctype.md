@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-doctype
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* ; *docType* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* : Time ; *docType* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
-| docType | Text | &#8594;  | 追加するDocType |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
+| docType | Text | &#8594; | 追加するDocType |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/set-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *uno* {; *muchos*} )<!-- END REF-->
+<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *uno* : Boolean {; *muchos* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| uno | Boolean | &#8594;  | Estado de todas las relaciones Muchos a Uno |
-| muchos | Boolean | &#8594;  | Estado de todas las relaciones de Uno a Muchos |
+| uno | Boolean | &#8594; | Estado de todas las relaciones Muchos a Uno |
+| muchos | Boolean | &#8594; | Estado de todas las relaciones de Uno a Muchos |
 
 <!-- END REF-->
 

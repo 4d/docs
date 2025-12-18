@@ -5,12 +5,12 @@ slug: /commands/web-send-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *texteHTML* {; *type*} )<!-- END REF-->
+<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *texteHTML* : Text {; *type* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texteHTML | Text | &#8594;  | Champ ou variable texte au format HTML à envoyer au navigateur |
-| type | Text | &#8594;  | Type MIME |
+| texteHTML | Text | &#8594; | Champ ou variable texte au format HTML à envoyer au navigateur |
+| type | Text | &#8594; | Type MIME |
 
 <!-- END REF-->
 

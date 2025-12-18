@@ -5,12 +5,12 @@ slug: /commands/send-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*DocRef* ;} *packet* )<!-- END REF-->
+<!--REF #_command_.SEND PACKET.Syntax-->**SEND PACKET** ( {*DocRef* ;} *packet* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SEND PACKET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &#8594;  | ドキュメント参照番号, または カレントのチャンネル (シリアルポートまたはドキュメント) |
-| packet | Text, Blob | &#8594;  | 送信する文字またはBLOB |
+| Time | Time | &#8594; | ドキュメント参照番号, または カレントのチャンネル (シリアルポートまたはドキュメント) |
+| packet | Text, Blob | &#8594; | 送信する文字またはBLOB |
 
 <!-- END REF-->
 

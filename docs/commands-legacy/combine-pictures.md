@@ -5,7 +5,7 @@ slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *resultingPict* ; *pict1* ; *operator* ; *pict2* {; *horOffset* ; *vertOffset*} )<!-- END REF-->
+<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *resultingPict* : Picture ; *pict1* : Picture ; *operator* : Integer ; *pict2* : Picture {; *horOffset* : Integer ; *vertOffset* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

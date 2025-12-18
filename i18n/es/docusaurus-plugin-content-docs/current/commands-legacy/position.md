@@ -5,24 +5,17 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( *buscar* ; *laCadena* {; *inicio* {; *longEncont*}}{; *} ) -> Resultado <br/>
-**Position** ( *buscar* ; *laCadena* ; *inicio* ; *longEncont* ; *opciones* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *buscar* : Text ; *laText* : Text {; *inicio* : Integer {; *longEncont* : Integer}}{; *} ) -> Integer<br/>**Position** ( *buscar* : Text ; *laText* : Text; *inicio* : Integer ; *longEncont* : Integer ; *opciones* : Integer ) -> Integer
+<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| buscar | Text | &#8594;  | Cadena a buscar |
-| laText | Text | &#8594;  | Cadena en la cual buscar |
-| inicio | Integer | &#8594;  | Posición en la cadena donde comenzar la búsqueda |
+| buscar | Text | &#8594; | Cadena a buscar |
+| laText | Text | &#8594; | Cadena en la cual buscar |
+| inicio | Integer | &#8594; | Posición en la cadena donde comenzar la búsqueda |
 | longEncont | Integer | &#8592; | Longitud de la cadena encontrada |
-| * | Operador | &#8594;  | Si se pasa: búsqueda diacrítica |
-| Resultado | Integer | &#8592; | Posición de la primera ocurrencia |
-| Position ( buscar ; laCadena ; inicio ; longEncont ; opciones ) -> Resultado |
-| Parámetro | Tipo | Descripción |
-| buscar | Text | &#8594;  | Cadena a buscar |
-| laText | Text | &#8594;  | Cadena en la cual buscar |
-| inicio | Integer | &#8594;  | Posición en la cadena donde comenzar la búsqueda |
-| longEncont | Integer | &#8594;  | Longitud de la cadena encontrada |
-| opciones | Integer | &#8594;  | Condición(es) de búsqueda |
+| * | Operador | &#8594; | Si se pasa: búsqueda diacrítica |
+| opciones | Integer | &#8594; | Condición(es) de búsqueda |
 | Resultado | Integer | &#8592; | Posición de la primera ocurrencia |
 
 <!-- END REF-->

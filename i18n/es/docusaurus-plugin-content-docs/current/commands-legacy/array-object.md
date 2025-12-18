@@ -5,13 +5,13 @@ slug: /commands/array-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *nomArray* ; *tam* {; *tam2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *nomArray* : Array ; *tam* : Integer {; *tam2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY OBJECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArray | Array | &#8594;  | Nombre del array |
-| tam | Integer | &#8594;  | Número de elementos del array o número de arrays si se especifica tam2 |
-| tam2 | Integer | &#8594;  | Número de elementos del array 2D |
+| nomArray | Array | &#8594; | Nombre del array |
+| tam | Integer | &#8594; | Número de elementos del array o número de arrays si se especifica tam2 |
+| tam2 | Integer | &#8594; | Número de elementos del array 2D |
 
 <!-- END REF-->
 

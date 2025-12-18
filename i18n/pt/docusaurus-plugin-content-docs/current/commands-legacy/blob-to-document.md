@@ -5,12 +5,12 @@ slug: /commands/blob-to-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO DOCUMENT.Syntax-->**BLOB TO DOCUMENT** ( *documento* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.BLOB TO DOCUMENT.Syntax-->**BLOB TO DOCUMENT** ( *documento* : Text ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Nome do documento gerado |
-| Blob | Blob | &#8594;  | Novo conteúdo para o documento |
+| documento | Text | &#8594; | Nome do documento gerado |
+| Blob | Blob | &#8594; | Novo conteúdo para o documento |
 
 <!-- END REF-->
 

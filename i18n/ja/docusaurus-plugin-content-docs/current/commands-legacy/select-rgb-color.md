@@ -5,12 +5,12 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** ( *defaultColor* : Integer {; *message* : Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| defaultColor | Integer | &#8594;  | 事前に選択されたRGBカラー |
-| message | Text | &#8594;  | 選択ウィンドウのタイトル |
+| defaultColor | Integer | &#8594; | 事前に選択されたRGBカラー |
+| message | Text | &#8594; | 選択ウィンドウのタイトル |
 | 戻り値 | Integer | &#8592; | RGBカラー |
 
 <!-- END REF-->

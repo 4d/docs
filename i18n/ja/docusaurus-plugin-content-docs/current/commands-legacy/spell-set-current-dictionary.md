@@ -5,11 +5,11 @@ slug: /commands/spell-set-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dictionary* )<!-- END REF-->
+<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dictionary* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dictionary | Integer, Text | &#8594;  | スペルチェック用に使用する辞書のID、名前または言語コード省略した場合デフォルトの辞書を使用 |
+| dictionary | Integer, Text | &#8594; | スペルチェック用に使用する辞書のID、名前または言語コード省略した場合デフォルトの辞書を使用 |
 
 <!-- END REF-->
 

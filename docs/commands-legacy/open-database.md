@@ -5,7 +5,7 @@ slug: /commands/open-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *filePath* )<!-- END REF-->
+<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *filePath* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATABASE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

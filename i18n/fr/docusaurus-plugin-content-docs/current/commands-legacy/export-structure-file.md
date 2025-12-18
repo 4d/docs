@@ -5,12 +5,12 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *cheminDossier* {; *options*} ) : Object<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *cheminDossier* : Text {; *options* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Text | &#8594;  | Chemin du dossier de destination pour les fichiers projets |
-| options | Object | &#8594;  | Options d'export |
+| cheminDossier | Text | &#8594; | Chemin du dossier de destination pour les fichiers projets |
+| options | Object | &#8594; | Options d'export |
 | Résultat | Object | &#8592; | Statuts et messages de validation (le cas échéant) |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *sélecteur* ; *paramTexte* )<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *sélecteur* : Integer ; *paramTexte* )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &#8594;  | Sélection à utiliser |
-| paramText | Text | &#8594;  | Texte envoyé |
+| sélecteur | Integer | &#8594; | Sélection à utiliser |
+| paramText | Text | &#8594; | Texte envoyé |
 
 <!-- END REF-->
 

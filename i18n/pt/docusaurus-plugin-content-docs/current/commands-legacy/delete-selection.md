@@ -5,11 +5,11 @@ slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ( *tabela* : Table )}<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a qual apagar a seleção atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela a qual apagar a seleção atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

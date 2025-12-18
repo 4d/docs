@@ -5,14 +5,14 @@ slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *liste* ; *refElément* ; *sélecteur* ; *valeur* )<br/>**GET LIST ITEM PARAMETER** ( * ; *liste* ; * ; *sélecteur* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *liste* : Integer, Text ; *refElément* : Entier long, Opérateur ; *sélecteur* : Text ; *valeur* : Text, Boolean, Real )<br/>**GET LIST ITEM PARAMETER** ( * ; *liste* : Integer, Text ; * ; *sélecteur* : Text ; *valeur* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
-| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| refElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
-| sélecteur | Text | &#8594;  | Constante de paramètre |
+| * | Opérateur | &#8594; | Si spécifié, liste est un nom d’objet (chaîne) Si omis, liste est un numéro de référence de liste |
+| liste | Integer, Text | &#8594; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| refElément &#124; * | Entier long, Opérateur | &#8594; | Numéro de référence d’élément ou 0 pour le dernier élément ajouté à la liste ou * pour l’élément courant de la liste |
+| sélecteur | Text | &#8594; | Constante de paramètre |
 | valeur | Text, Boolean, Real | &#8592; | Valeur courante du paramètre |
 
 <!-- END REF-->

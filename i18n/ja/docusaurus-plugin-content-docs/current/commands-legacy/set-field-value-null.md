@@ -5,11 +5,11 @@ slug: /commands/set-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *aField* )<!-- END REF-->
+<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | NULL値を割り当てるフィールド |
+| aField | Field | &#8594; | NULL値を割り当てるフィールド |
 
 <!-- END REF-->
 

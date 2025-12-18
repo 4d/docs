@@ -5,12 +5,12 @@ slug: /commands/soap-send-fault
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP SEND FAULT.Syntax-->**SOAP SEND FAULT** ( *typeErreur* ; *description* )<!-- END REF-->
+<!--REF #_command_.SOAP SEND FAULT.Syntax-->**SOAP SEND FAULT** ( *typeErreur* : Integer ; *description* : Text )<!-- END REF-->
 <!--REF #_command_.SOAP SEND FAULT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeErreur | Integer | &#8594;  | 1 = Erreur Client, 2 = Erreur Serveur |
-| description | Text | &#8594;  | Description de l’erreur à envoyer au client SOAP |
+| typeErreur | Integer | &#8594; | 1 = Erreur Client, 2 = Erreur Serveur |
+| description | Text | &#8594; | Description de l’erreur à envoyer au client SOAP |
 
 <!-- END REF-->
 

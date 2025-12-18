@@ -5,13 +5,13 @@ slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *assinaturas4D* ; *tiposNativos* {; *nomesFormatos*} )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *assinaturas4D* : Text array ; *tiposNativos* : Text array {; *nomesFormatos* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | assinaturas4D | Text array | &#8592; | Assinaturas 4D de tipos de dados |
 | tiposNativos | Text array | &#8592; | Tipos de dados nativos |
-| nomesFormatos | Text array | &#8592; | Nomes de formato|
+| nomesFormatos | Text array | &#8592; | Nomes de formato |
 
 <!-- END REF-->
 

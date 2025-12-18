@@ -5,11 +5,11 @@ slug: /commands/distinct-attribute-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* ; *pathArray* )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* : Field ; *pathArray* : Text array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectField | Field | &#8594;  | インデックスされたオブジェクトフィールド |
+| objectField | Field | &#8594; | インデックスされたオブジェクトフィールド |
 | pathArray | Text array | &#8592; | 重複しないパスのリストを取得させる配列 |
 
 <!-- END REF-->

@@ -5,12 +5,12 @@ slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valor* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valor* : Object, any {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valor | Object, any | &#8594;  | Dados a converter em cadeia JSON |
-| * | Operador | &#8594;  | Melhorar o formato |
+| valor | Object, any | &#8594; | Dados a converter em cadeia JSON |
+| * | Operador | &#8594; | Melhorar o formato |
 | Resultado | Text | &#8592; | Cadeia que contém o texto JSON serializado |
 
 <!-- END REF-->

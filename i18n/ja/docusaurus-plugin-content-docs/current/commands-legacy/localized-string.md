@@ -5,11 +5,11 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) : Text<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resName | Text | &#8594;  | resname属性値 |
+| resName | Text | &#8594; | resname属性値 |
 | 戻り値 | Text | &#8592; | カレントランゲージで resNameによって指定された文字列の値 |
 
 <!-- END REF-->

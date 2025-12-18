@@ -5,12 +5,12 @@ slug: /commands/resume-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *tabla* {; *} )<!-- END REF-->
+<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *tabla* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual reactivar los índices |
-| * | Operador | &#8594;  | Si se pasa = indexación asíncrona |
+| tabla | Table | &#8594; | Tabla para la cual reactivar los índices |
+| * | Operador | &#8594; | Si se pasa = indexación asíncrona |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/is-window-maximized
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window maximized.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Numéro de référence de la fenêtre |
+| window | Integer | &#8594; | Numéro de référence de la fenêtre |
 | Résultat | Boolean | &#8592; | Vrai si la fenêtre est maximisée, sinon Faux |
 
 <!-- END REF-->

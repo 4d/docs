@@ -5,12 +5,12 @@ slug: /commands/qr-get-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* ; *property* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *area* : Integer ; *property* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get area property.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリアの参照 |
-| property | Integer | &#8594;  | インタフェース要素 |
+| area | Integer | &#8594; | エリアの参照 |
+| property | Integer | &#8594; | インタフェース要素 |
 | 戻り値 | Integer | &#8592; | 1 = 表示, 0 = 非表示 |
 
 <!-- END REF-->

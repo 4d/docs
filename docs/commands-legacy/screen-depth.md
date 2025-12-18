@@ -5,7 +5,7 @@ slug: /commands/screen-depth
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *depth* ; *color* {; *screen*} )<!-- END REF-->
+<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *depth* : Integer ; *color* : Integer {; *screen* : Integer} )<!-- END REF-->
 <!--REF #_command_.SCREEN DEPTH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

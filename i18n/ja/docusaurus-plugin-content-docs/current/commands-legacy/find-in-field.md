@@ -5,13 +5,12 @@ slug: /commands/find-in-field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *targetField* ; *value* ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *targetField* : Field ; *value* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| targetField | Field | &#8594;  | 検索を実行するフィールド |
-| value | Field, Variable | &#8594;  | 検索する値 |
-| &#8592; | 検索された値 |
+| targetField | Field | &#8594; | 検索を実行するフィールド |
+| value | Field, Variable | &#8596; | *in:* Value to search<br/>*out:* Value found |
 | 戻り値 | Integer | &#8592; | 検索されたレコード番号 または レコードが検索されなかった場合、-1 |
 
 <!-- END REF-->

@@ -5,20 +5,20 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( {* ;} *objet* {; *nouvNom* {; *nouvVar* {; *reliéA* {; *dépH* {; *dépV* {; *redimH* {; *redimV*}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *objet* : Text {; *nouvNom* : Text {; *nouvVar* : Pointer {; *reliéA* : Text {; *dépH* : Integer {; *dépV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *objet* : Field, Variable {; *nouvNom* : Text {; *nouvVar* : Pointer {; *reliéA* : Text {; *dépH* : Integer {; *dépV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
-| nouvNom | Text | &#8594;  | Nom du nouvel objet |
-| nouvVar | Pointer | &#8594;  | Pointeur vers la variable du nouvel objet |
-| reliéA | Text | &#8594;  | Nom de l’objet saisissable (ou du bouton radio) précédent |
-| dépH | Integer | &#8594;  | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
-| dépV | Integer | &#8594;  | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
-| redimH | Integer | &#8594;  | Valeur de redimensionnement horizontal du nouvel objet |
-| redimV | Integer | &#8594;  | Valeur de redimensionnement vertical du nouvel objet |
-| * | Opérateur | &#8594;  | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| nouvNom | Text | &#8594; | Nom du nouvel objet |
+| nouvVar | Pointer | &#8594; | Pointeur vers la variable du nouvel objet |
+| reliéA | Text | &#8594; | Nom de l’objet saisissable (ou du bouton radio) précédent |
+| dépH | Integer | &#8594; | Décalage horizontal du nouvel objet<br/>(>0 = vers la droite, <0 = vers la gauche) |
+| dépV | Integer | &#8594; | Décalage vertical du nouvel objet<br/>(>0 = vers le bas, <0 = vers le haut) |
+| redimH | Integer | &#8594; | Valeur de redimensionnement horizontal du nouvel objet |
+| redimV | Integer | &#8594; | Valeur de redimensionnement vertical du nouvel objet |
+| * | Opérateur | &#8594; | Si spécifié = coordonnées absolues<br/>Si omis = coordonnées relatives |
 
 <!-- END REF-->
 

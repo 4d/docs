@@ -5,11 +5,11 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objeto* : Object, Campo Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594;  | Objeto estructurado |
+| objeto | Object, Campo Object | &#8594; | Objeto estructurado |
 | Resultado | Boolean | &#8592; | True si objeto está vacío o indefinido, de lo contrario False |
 
 <!-- END REF-->

@@ -5,13 +5,13 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( {* ;} *object* ; *multiline* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *object* : Text ; *multiline* : Integer )<br/>**OBJECT SET MULTILINE** ( *object* : Field, Variable ; *multiline* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| multiline | Integer | &#8594;  | 複数行プロパティの状態 |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| multiline | Integer | &#8594; | 複数行プロパティの状態 |
 
 <!-- END REF-->
 

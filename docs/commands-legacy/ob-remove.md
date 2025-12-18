@@ -5,7 +5,7 @@ slug: /commands/ob-remove
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *object* ; *property* )<!-- END REF-->
+<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *object* : Object, Object ; *property* : Text )<!-- END REF-->
 <!--REF #_command_.OB REMOVE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

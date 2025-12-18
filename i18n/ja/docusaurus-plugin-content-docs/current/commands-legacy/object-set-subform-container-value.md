@@ -5,11 +5,11 @@ slug: /commands/object-set-subform-container-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| value | any | &#8594;  | データソースの新しい値 |
+| value | any | &#8594; | データソースの新しい値 |
 
 <!-- END REF-->
 

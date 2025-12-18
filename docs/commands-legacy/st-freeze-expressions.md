@@ -5,7 +5,7 @@ slug: /commands/st-freeze-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( {* ;} *object* {; *startSel* {; *endSel*}}{; *} )<!-- END REF-->
+<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer}}{; *} )<br/>**ST FREEZE EXPRESSIONS** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

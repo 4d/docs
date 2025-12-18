@@ -5,11 +5,11 @@ slug: /commands/variance
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Datos para los cuales se devuelve la varianza |
+| series | Field, Array | &#8594; | Datos para los cuales se devuelve la varianza |
 | Resultado | Real | &#8592; | Varianza de series |
 
 <!-- END REF-->

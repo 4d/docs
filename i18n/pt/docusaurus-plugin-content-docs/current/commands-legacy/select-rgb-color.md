@@ -5,12 +5,12 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *corDefeito* {; *mensagem*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** ( *corDefeito* : Integer {; *mensagem* : Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| corDefeito | Integer | &#8594;  | Cor RGB pré-selecionada |
-| mensagem | Text | &#8594;  | Título da janela de seleção |
+| corDefeito | Integer | &#8594; | Cor RGB pré-selecionada |
+| mensagem | Text | &#8594; | Título da janela de seleção |
 | Resultado | Integer | &#8592; | Cor RGB |
 
 <!-- END REF-->

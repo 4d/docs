@@ -5,12 +5,12 @@ slug: /commands/qr-get-command-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *area* ; *comando* {; *valor*} ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *area* : Integer ; *comando* : Integer {; *valor* : Integer, Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get command status.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| comando | Integer | &#8594;  | Número de comando |
+| area | Integer | &#8594; | Referência da área |
+| comando | Integer | &#8594; | Número de comando |
 | valor | Integer, Text | &#8592; | Valor do subelemento selecionado |
 | Resultado | Integer | &#8592; | Estado do comando |
 

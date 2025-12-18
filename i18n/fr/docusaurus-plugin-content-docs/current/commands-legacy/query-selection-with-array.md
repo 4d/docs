@@ -5,12 +5,12 @@ slug: /commands/query-selection-with-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *champCible* ; *tableau* )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *champCible* : Field ; *tableau* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champCible | Field | &#8594;  | Champ duquel comparer les valeurs |
-| tableau | Array | &#8594;  | Tableau des valeurs recherchées |
+| champCible | Field | &#8594; | Champ duquel comparer les valeurs |
+| tableau | Array | &#8594; | Tableau des valeurs recherchées |
 
 <!-- END REF-->
 

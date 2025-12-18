@@ -5,12 +5,12 @@ slug: /commands/resume-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* {; *} )<!-- END REF-->
+<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to resume indexes |
-| * | Operador | &#8594;  | If passed = asynchronous indexing |
+| aTable | Table | &#8594; | Table for which to resume indexes |
+| * | Operador | &#8594; | If passed = asynchronous indexing |
 
 <!-- END REF-->
 

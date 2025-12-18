@@ -5,11 +5,11 @@ slug: /commands/get-adjusted-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *laTable* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted blobs cache priority.Syntax-->**Get adjusted blobs cache priority** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table pour laquelle connaître la valeur de priorité des "blobs" |
+| laTable | Table | &#8594; | Table pour laquelle connaître la valeur de priorité des "blobs" |
 | Résultat | Integer | &#8592; | Valeur de priorité courante pour les champs "blobs" |
 
 <!-- END REF-->

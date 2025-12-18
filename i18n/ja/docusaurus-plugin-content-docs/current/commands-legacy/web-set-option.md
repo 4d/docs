@@ -5,12 +5,12 @@ slug: /commands/web-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *selector* : Integer ; *value* : Integer, Text, Collection )<!-- END REF-->
 <!--REF #_command_.WEB SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | オプションコード |
-| value | Integer, Text, Collection | &#8594;  | オプション値 |
+| selector | Integer | &#8594; | オプションコード |
+| value | Integer, Text, Collection | &#8594; | オプション値 |
 
 <!-- END REF-->
 

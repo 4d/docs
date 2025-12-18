@@ -5,14 +5,14 @@ slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( {* ;} *objet* ; *positionLigne* {; *nbLignes*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *objet* : Text ; *positionLigne* : Integer {; *nbLignes* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *objet* : Field, Variable ; *positionLigne* : Integer {; *nbLignes* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionLigne | Integer | &#8594;  | Emplacement de la ligne à insérer |
-| nbLignes | Integer | &#8594;  | Nombre de lignes à insérer |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionLigne | Integer | &#8594; | Emplacement de la ligne à insérer |
+| nbLignes | Integer | &#8594; | Nombre de lignes à insérer |
 
 <!-- END REF-->
 

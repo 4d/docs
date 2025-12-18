@@ -5,13 +5,13 @@ slug: /commands/array-time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *nomTableau* ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY TIME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomArray | Array | &#8594;  | Nom du tableau |
-| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
-| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
+| nomArray | Array | &#8594; | Nom du tableau |
+| taille | Integer | &#8594; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594; | Nombre d'éléments des tableaux à deux dimensions |
 
 <!-- END REF-->
 

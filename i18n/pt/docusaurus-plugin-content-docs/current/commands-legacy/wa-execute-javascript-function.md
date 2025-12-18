@@ -5,16 +5,16 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objeto* ; *funcaoJS* ; resultado|* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objeto* : Text ; *funcaoJS* : Text ; resultado|* {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objeto* : Field, Variable ; *funcaoJS* : Text ; resultado|* {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| funcaoJS | Text | &#8594;  | Nome da função JavaScript a executar |
-| resultado&#124;* | Variável | &#8594;  | * para a função sem resultado ou |
-| &#8592; | Resultado da função (se esperado) |
-| param | Text, Number, Date, Object, Collection | &#8594;  | Parâmetros a passar a função |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| funcaoJS | Text | &#8594; | Nome da função JavaScript a executar |
+| result | Variable | &#8592; | Function result (if expected) |
+| * | Operator | &#8594; | Function with no result |
+| param | any | &#8594; | Parâmetros a passar a função |
 
 <!-- END REF-->
 

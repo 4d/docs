@@ -5,12 +5,12 @@ slug: /commands/verify-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash** ( *password* ; *hash* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash** ( *password* : Text ; *hash* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Verify password hash.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| password | Text | &#8594;  | ユーザーのパスワード。最初の72文字のみ使用。 |
-| hash | Text | &#8594;  | パスワードのハッシュ |
+| password | Text | &#8594; | ユーザーのパスワード。最初の72文字のみ使用。 |
+| hash | Text | &#8594; | パスワードのハッシュ |
 | 戻り値 | Boolean | &#8592; | パスワードとハッシュが合致する場合にはTRUE、それ以外の場合にはFALSE。 |
 
 <!-- END REF-->

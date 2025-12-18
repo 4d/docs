@@ -5,19 +5,19 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( {* ;} *objeto* ; *posicionCol* ; *nomCol* ; *variableCol* ; *nomEncabezado* ; *varTitulo* {; *nomPie* ; *nomVar*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *objeto* : Text ; *posicionCol* : Integer ; *nomCol* : Text ; *variableCol* : Array, Field, Variable, Pointer ; *nomEncabezado* : Text ; *varTitulo* : Integer, Pointer {; *nomPie* : Text ; *nomVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *objeto* : Field, Variable ; *posicionCol* : Integer ; *nomCol* : Text ; *variableCol* : Array, Field, Variable, Pointer ; *nomEncabezado* : Text ; *varTitulo* : Integer, Pointer {; *nomPie* : Text ; *nomVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionCol | Integer | &#8594;  | Ubicación de la columna a insertar |
-| nomCol | Text | &#8594;  | Nombre del objeto de la columna |
-| variableCol | Array, Field, Variable, Pointer | &#8594;  | Nombre de la variable de la columna |
-| nomEncabezado | Text | &#8594;  | Nombre del objeto del título de la columna |
-| varTitulo | Integer, Pointer | &#8594;  | Variable de título de la columna |
-| nomPie | Text | &#8594;  | Nombre del objeto de pie de la columna |
-| nomVar | Variable, Pointer | &#8594;  | Variable de pie de la columna |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionCol | Integer | &#8594; | Ubicación de la columna a insertar |
+| nomCol | Text | &#8594; | Nombre del objeto de la columna |
+| variableCol | Array, Field, Variable, Pointer | &#8594; | Nombre de la variable de la columna |
+| nomEncabezado | Text | &#8594; | Nombre del objeto del título de la columna |
+| varTitulo | Integer, Pointer | &#8594; | Variable de título de la columna |
+| nomPie | Text | &#8594; | Nombre del objeto de pie de la columna |
+| nomVar | Variable, Pointer | &#8594; | Variable de pie de la columna |
 
 <!-- END REF-->
 

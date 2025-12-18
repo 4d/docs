@@ -5,20 +5,20 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objeto* ; *posicionCol* ; *nomCol* ; *formula* ; *tipoDatos* ; *nomEncabezado* ; *varEncabezado* {; *nomPie* ; *variablePie*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *objeto* : Text ; *posicionCol* : Integer ; *nomCol* : Text ; *formula* : Text ; *tipoDatos* : Integer ; *nomEncabezado* : Text ; *varEncabezado* : Integer, Pointer {; *nomPie* : Text ; *variablePie* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *objeto* : Field, Variable ; *posicionCol* : Integer ; *nomCol* : Text ; *formula* : Text ; *tipoDatos* : Integer ; *nomEncabezado* : Text ; *varEncabezado* : Integer, Pointer {; *nomPie* : Text ; *variablePie* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si * se omite) |
-| posicionCol | Integer | &#8594;  | Ubicación de la columna a insertar |
-| nomCol | Text | &#8594;  | Nombre del objeto de la columna |
-| formula | Text | &#8594;  | Fórmula 4D asociada a la columna |
-| tipoDatos | Integer | &#8594;  | Tipo de resultado de la fórmula |
-| nomEncabezado | Text | &#8594;  | Nombre del objeto del encabezado de la columna |
-| varEncabezado | Integer, Pointer | &#8594;  | Variable del encabezado de la columna |
-| nomPie | Text | &#8594;  | Nombre del objeto de pie de la columna |
-| variablePie | Variable, Pointer | &#8594;  | Variable de pie de columna |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (si * se omite) |
+| posicionCol | Integer | &#8594; | Ubicación de la columna a insertar |
+| nomCol | Text | &#8594; | Nombre del objeto de la columna |
+| formula | Text | &#8594; | Fórmula 4D asociada a la columna |
+| tipoDatos | Integer | &#8594; | Tipo de resultado de la fórmula |
+| nomEncabezado | Text | &#8594; | Nombre del objeto del encabezado de la columna |
+| varEncabezado | Integer, Pointer | &#8594; | Variable del encabezado de la columna |
+| nomPie | Text | &#8594; | Nombre del objeto de pie de la columna |
+| variablePie | Variable, Pointer | &#8594; | Variable de pie de columna |
 
 <!-- END REF-->
 

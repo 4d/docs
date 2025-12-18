@@ -5,12 +5,12 @@ slug: /commands/qr-get-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* ; *numColumna* ; *titulo* ; *objeto* ; *oculta* ; *tamaño* ; *valoresRepetidos* ; *formato* {; *varResultado*} )<!-- END REF-->
+<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *area* : Integer ; *numColumna* : Integer ; *titulo* : Text ; *objeto* : Text ; *oculta* : Integer ; *tamaño* : Integer ; *valoresRepetidos* : Integer ; *formato* : Text {; *varResultado* : Text} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| numColumna | Integer | &#8594;  | Número de columna |
+| area | Integer | &#8594; | Referencia del área |
+| numColumna | Integer | &#8594; | Número de columna |
 | titulo | Text | &#8592; | Título de la columna |
 | objeto | Text | &#8592; | Objeto asignado a la columna |
 | oculta | Integer | &#8592; | 0 = visible, 1 = oculto |

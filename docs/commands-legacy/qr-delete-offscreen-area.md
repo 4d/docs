@@ -5,7 +5,7 @@ slug: /commands/qr-delete-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *area* )<!-- END REF-->
+<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

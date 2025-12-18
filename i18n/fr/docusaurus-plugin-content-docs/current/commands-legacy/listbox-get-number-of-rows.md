@@ -5,12 +5,12 @@ slug: /commands/listbox-get-number-of-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get number of rows.Syntax-->**LISTBOX Get number of rows** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of rows.Syntax-->**LISTBOX Get number of rows** ( * ; *objet* : Text ) : Integer<br/>**LISTBOX Get number of rows** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get number of rows.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Integer | &#8592; | Nombre de lignes |
 
 <!-- END REF-->

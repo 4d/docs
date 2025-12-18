@@ -5,7 +5,7 @@ slug: /commands/qr-get-command-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *area* ; *command* {; *value*} ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *area* : Integer ; *command* : Integer {; *value* : Integer, Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get command status.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/picture-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *image* ; *largeur* ; *hauteur* {; *hOffset* {; *vOffset* {; *mode*}}} )<!-- END REF-->
+<!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *image* : Picture ; *largeur* : Real ; *hauteur* : Real {; *hOffset* : Integer {; *vOffset* : Integer {; *mode* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &#8594;  | Image sur laquelle obtenir les informations |
+| image | Picture | &#8594; | Image sur laquelle obtenir les informations |
 | largeur | Real | &#8592; | Largeur de l'image exprimée en pixels |
 | hauteur | Real | &#8592; | Hauteur de l'image exprimée en pixels |
 | hOffset | Integer | &#8592; | Offset horizontal lorsque l'image est affichée en arrière-plan |

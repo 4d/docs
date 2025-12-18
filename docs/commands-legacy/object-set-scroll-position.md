@@ -5,7 +5,7 @@ slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *object* {; *vPosition* {; *hPosition*}}{; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION** ( * ; *object* : any {; *vPosition* : Integer {; *hPosition* : Integer}}{; *} )<br/>**OBJECT SET SCROLL POSITION** ( *object* : any {; *vPosition* : Integer {; *hPosition* : Integer}}{; *} )<br/><!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | object | any | &#8594;  | Object name (if * is specified) or Table or field or variable (if * is omitted) |
 | vPosition | Integer | &#8594;  | Line number to display or Vertical scrolling in pixels (pictures) |
 | hPosition | Integer | &#8594;  | Column number to display (list box) or<br/>Horizontal scrolling in pixels (pictures) |
-| * | Operator | &#8594;  | Display of line (and column if the hPosition parameter is passed) in first position after scroll |
+| * | Operator | &#8594;  | Display of line (and column if the *hPosition* parameter is passed) in first position after scroll |
 
 <!-- END REF-->
 

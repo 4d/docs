@@ -5,13 +5,13 @@ slug: /commands/select-list-items-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *list* ; *itemRef* {; *refArray*} )<!-- END REF-->
+<!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *list* : Integer ; *itemRef* : Integer {; *refArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | リスト参照番号 |
-| itemRef | Integer | &#8594;  | 項目参照番号 または 0: リストに最後に追加された項目 |
-| refArray | Integer array | &#8594;  | 項目参照番号配列 |
+| list | Integer | &#8594; | リスト参照番号 |
+| itemRef | Integer | &#8594; | 項目参照番号 または 0: リストに最後に追加された項目 |
+| refArray | Integer array | &#8594; | 項目参照番号配列 |
 
 <!-- END REF-->
 

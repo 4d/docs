@@ -5,15 +5,15 @@ slug: /commands/create-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *tabela* ; *arrayCampos* ; *tipoIndice* ; *nomeIndice* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *tabela* : Table ; *arrayCampos* : Pointer array ; *tipoIndice* : Integer ; *nomeIndice* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para qual criar um índice |
-| arrayCampos | Pointer array | &#8594;  | Ponteiros aos campos a serem indexados |
-| tipoIndice | Integer | &#8594;  | Tipo de índice a criar: -1 = Palavra chave, 0 = padrão, 1 = B-Tree padrão, 3 = Cluster B-Tree |
-| nomeIndice | Text | &#8594;  | Nome de Índice a criar |
-| * | Operador | &#8594;  | Se passado = índice assincrônico |
+| tabela | Table | &#8594; | Tabela para qual criar um índice |
+| arrayCampos | Pointer array | &#8594; | Ponteiros aos campos a serem indexados |
+| tipoIndice | Integer | &#8594; | Tipo de índice a criar: -1 = Palavra chave, 0 = padrão, 1 = B-Tree padrão, 3 = Cluster B-Tree |
+| nomeIndice | Text | &#8594; | Nome de Índice a criar |
+| * | Operador | &#8594; | Se passado = índice assincrônico |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*tabela*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*tabela* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a utilizar para entrada de dados ou Tabela por padrão, se omitida |
-| * | Operator |  &#8594;  | Ocultar barras de deslocamento |
+| tabela | Table | &#8594; | Tabela a utilizar para entrada de dados ou Tabela por padrão, se omitida |
+| * | Operator | &#8594; | Ocultar barras de deslocamento |
 
 <!-- END REF-->
 

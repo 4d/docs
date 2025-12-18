@@ -5,12 +5,12 @@ slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* ; *rutaArchivo* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* : Text ; *rutaArchivo* : Text )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML raíz |
-| rutaArchivo | Text | &#8594;  | Ruta de acceso completa del archivo |
+| elementRef | Text | &#8594; | Referencia del elemento XML raíz |
+| rutaArchivo | Text | &#8594; | Ruta de acceso completa del archivo |
 
 <!-- END REF-->
 

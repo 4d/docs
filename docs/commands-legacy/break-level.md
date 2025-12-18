@@ -5,7 +5,7 @@ slug: /commands/break-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *level* {; *pageBreak*} )<!-- END REF-->
+<!--REF #_command_.BREAK LEVEL.Syntax-->**BREAK LEVEL** ( *level* : Integer {; *pageBreak* : Integer} )<!-- END REF-->
 <!--REF #_command_.BREAK LEVEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

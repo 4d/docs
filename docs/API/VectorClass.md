@@ -52,7 +52,7 @@ Vector objects are shared, immutable, and streamable.
 <!--REF #4D.Vector.new().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|parameter|Collection of reals|->|Collection of real numbers representing a vector|
+|parameter|Collection|->|Collection of real numbers representing a vector|
 |Result|4D.Vector|<-|New Vector object|
 <!-- END REF -->
 

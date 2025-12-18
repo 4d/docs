@@ -5,18 +5,18 @@ slug: /commands/qr-set-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* ; *selector* ; *tituloIzq* ; *tituloCent* ; *tituloDer* ; *altura* {; *imagen* {; *alinImag*}} )<!-- END REF-->
+<!--REF #_command_.QR SET HEADER AND FOOTER.Syntax-->**QR SET HEADER AND FOOTER** ( *area* : Integer ; *selector* : Integer ; *tituloIzq* : Text ; *tituloCent* : Text ; *tituloDer* : Text ; *altura* : Integer {; *imagen* : Picture {; *alinImag* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET HEADER AND FOOTER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| selector | Integer | &#8594;  | 1 = Encabezado, 2 = Pie de página |
-| tituloIzq | Text | &#8594;  | Texto mostrado a la izquierda |
-| tituloCent | Text | &#8594;  | Texto mostrado en el centro |
-| tituloDer | Text | &#8594;  | Texto mostrado a la derecha |
-| altura | Integer | &#8594;  | Altura del encabezado o pie de página |
-| imagen | Picture | &#8594;  | Imagen a mostrar |
-| alinImag | Integer | &#8594;  | Atributo de alineación de la imagen |
+| area | Integer | &#8594; | Referencia del área |
+| selector | Integer | &#8594; | 1 = Encabezado, 2 = Pie de página |
+| tituloIzq | Text | &#8594; | Texto mostrado a la izquierda |
+| tituloCent | Text | &#8594; | Texto mostrado en el centro |
+| tituloDer | Text | &#8594; | Texto mostrado a la derecha |
+| altura | Integer | &#8594; | Altura del encabezado o pie de página |
+| imagen | Picture | &#8594; | Imagen a mostrar |
+| alinImag | Integer | &#8594; | Atributo de alineación de la imagen |
 
 <!-- END REF-->
 

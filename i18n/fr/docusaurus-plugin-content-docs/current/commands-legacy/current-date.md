@@ -5,11 +5,11 @@ slug: /commands/current-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current date.Syntax-->**Current date** {( * )} : Date<!-- END REF-->
+<!--REF #_command_.Current date.Syntax-->**Current date** ( * ) : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Retourne la date du jour du serveur |
+| * | Opérateur | &#8594; | Retourne la date du jour du serveur |
 | Résultat | Date | &#8592; | Date du jour |
 
 <!-- END REF-->

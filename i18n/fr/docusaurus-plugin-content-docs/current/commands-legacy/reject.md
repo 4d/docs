@@ -5,11 +5,11 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *leChamp* )}<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ( *leChamp* )}<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ dont la saisie doit être refusée |
+| leField | Field | &#8594; | Champ dont la saisie doit être refusée |
 
 <!-- END REF-->
 

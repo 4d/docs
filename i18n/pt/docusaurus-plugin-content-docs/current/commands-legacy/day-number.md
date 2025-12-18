@@ -5,11 +5,11 @@ slug: /commands/day-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day number.Syntax-->**Day number** ( *data* ) : Integer<!-- END REF-->
+<!--REF #_command_.Day number.Syntax-->**Day number** ( *data* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| data | Date | &#8594;  | Data para a qual devolver o número do dia |
+| data | Date | &#8594; | Data para a qual devolver o número do dia |
 | Resultado | Integer | &#8592; | Número que representa o dia da semana que corresponde a data |
 
 <!-- END REF-->

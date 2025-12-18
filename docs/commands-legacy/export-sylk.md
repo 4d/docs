@@ -5,7 +5,7 @@ slug: /commands/export-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT SYLK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

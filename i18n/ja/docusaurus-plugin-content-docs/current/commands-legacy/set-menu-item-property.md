@@ -5,15 +5,15 @@ slug: /commands/set-menu-item-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PROPERTY.Syntax-->**SET MENU ITEM PROPERTY** ( *menu* ; *menuItem* ; *property* ; *value* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PROPERTY.Syntax-->**SET MENU ITEM PROPERTY** ( *menu* : Integer, Text ; *menuItem* : Integer ; *property* : Text ; *value* : Text, Real, Boolean {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PROPERTY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| property | Text | &#8594;  | プロパティタイプ |
-| value | Text, Number, Boolean | &#8594;  | プロパティ値 |
-| process | Integer | &#8594;  | プロセス番号 |
+| menu | Integer, Text | &#8594; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| property | Text | &#8594; | プロパティタイプ |
+| value | Text, Real, Boolean | &#8594; | プロパティ値 |
+| process | Integer | &#8594; | プロセス番号 |
 
 <!-- END REF-->
 

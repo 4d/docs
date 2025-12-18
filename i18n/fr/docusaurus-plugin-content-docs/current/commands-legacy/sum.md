@@ -5,12 +5,12 @@ slug: /commands/sum
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum.Syntax-->**Sum** ( *séries* {; *cheminAttribut*} ) : Real<!-- END REF-->
+<!--REF #_command_.Sum.Syntax-->**Sum** ( *séries* : Field, Array {; *cheminAttribut* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &#8594;  | Valeurs dont vous souhaitez calculer la somme |
-| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la somme |
+| séries | Field, Array | &#8594; | Valeurs dont vous souhaitez calculer la somme |
+| cheminAttribut | Text | &#8594; | Chemin d'attribut duquel calculer la somme |
 | Résultat | Real | &#8592; | Somme de séries |
 
 <!-- END REF-->

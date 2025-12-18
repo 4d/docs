@@ -5,12 +5,12 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrChp* ; *énumération* ; *obligatoire* ; *nonSaisissable* ; *nonModifiable* )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTable* ; *numChamp* ; *énumération* ; *obligatoire* ; *nonSaisissable* ; *nonModifiable* )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *ptrChp* : Pointeur, Entier long ; *énumération* : Text ; *obligatoire* : Boolean ; *nonSaisissable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ; *énumération* : Text ; *obligatoire* : Boolean ; *nonSaisissable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de champ ou Numéro de table |
-| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| ptrChp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &#8594; | Numéro de champ si un numéro de table est passé en premier paramètre |
 | énumération | Text | &#8592; | Nom de l’énumération associée ou Chaîne vide |
 | obligatoire | Boolean | &#8592; | Vrai = Obligatoire, Faux = Facultatif |
 | nonSaisissable | Boolean | &#8592; | Vrai = Non saisissable, Faux = Saisissable |

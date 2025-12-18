@@ -5,14 +5,14 @@ slug: /commands/object-set-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( {* ;} *objet* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( * ; *objet* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT SET SCROLLBAR** ( *objet* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| horizontal | Boolean, Integer | &#8594;  | Visibilité de la barre horizontale |
-| vertical | Boolean, Integer | &#8594;  | Visibilité de la barre verticale |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| horizontal | Boolean, Integer | &#8594; | Visibilité de la barre horizontale |
+| vertical | Boolean, Integer | &#8594; | Visibilité de la barre verticale |
 
 <!-- END REF-->
 

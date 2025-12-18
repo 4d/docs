@@ -5,11 +5,11 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licencia* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** ( *licencia* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| licencia | Integer | &#8594;  | Plug-in al cual realizar una prueba de validez de la licencia |
+| licencia | Integer | &#8594; | Plug-in al cual realizar una prueba de validez de la licencia |
 | Resultado | Boolean | &#8592; | True si el plug-in está disponible,  sino False |
 
 <!-- END REF-->

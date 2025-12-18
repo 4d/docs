@@ -5,7 +5,7 @@ slug: /commands/dom-remove-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *elementRef* ; *attribName* )<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *elementRef* : Text ; *attribName* : Text )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

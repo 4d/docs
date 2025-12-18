@@ -5,12 +5,12 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( {* ;} *objeto* ; *arrNomsCols* ; *arrNomsTitulos* ; *arrVarCols* ; *arrVarTitulos* ; *arrColsVisiveis* ; *arrEstilos* {; *arrFooterNames* ; *arrFootersVars*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *objeto* : Text ; *arrNomsCols* : Text array ; *arrNomsTitulos* : Text array ; *arrVarCols* : Pointer array ; *arrVarTitulos* : Pointer array ; *arrColsVisiveis* : Boolean array ; *arrEstilos* : Pointer array {; *arrFooterNames* : Text array ; *arrFootersVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *objeto* : Field, Variable ; *arrNomsCols* : Text array ; *arrNomsTitulos* : Text array ; *arrVarCols* : Pointer array ; *arrVarTitulos* : Pointer array ; *arrColsVisiveis* : Boolean array ; *arrEstilos* : Pointer array {; *arrFooterNames* : Text array ; *arrFootersVars* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * for omitido) |
 | arrNomsCols | Text array | &#8592; | Nomes de objetos de colunas |
 | arrNomsTitulos | Text array | &#8592; | Nomes dos objetos títulos cabeçalhos |
 | arrVarCols | Pointer array | &#8592; | Ponteiros para variáveis de colunas ou Ponteiros para campos coluna ou Nil |

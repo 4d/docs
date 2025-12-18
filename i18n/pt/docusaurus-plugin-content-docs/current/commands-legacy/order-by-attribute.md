@@ -5,15 +5,15 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*tabela* ;} *campoObjeto* ; *rotaAtrib* ; > ou < {; *campoObjeto2* ; *rotaAtrib2* ; > ou <2 ; ... ; *campoObjetoN* ; *rotaAtribN* ; > ou <N} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; >,<})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai ordenar registros selecionados, ou a tabela padrão, se omitido |
-| campoObjeto | Object | &#8594;  | Campo Objeto contendo o atributo de ordenação |
-| rotaAtrib | Text | &#8594;  | Nome ou rota do atributo para o qual vai estabelecer a ordem para cada nível |
-| > ou < | Operador | &#8594;  | Direção de ordenação para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente. |
-| * | Operador | &#8594;  | Continuar a bandeira de ordem |
+| tabela | Table | &#8594; | Tabela para a qual vai ordenar registros selecionados, ou a tabela padrão, se omitido |
+| campoObjeto | Object | &#8594; | Campo Objeto contendo o atributo de ordenação |
+| rotaAtrib | Text | &#8594; | Nome ou rota do atributo para o qual vai estabelecer a ordem para cada nível |
+| > ou < | Operador | &#8594; | Direção de ordenação para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente. |
+| * | Operador | &#8594; | Continuar a bandeira de ordem |
 
 <!-- END REF-->
 

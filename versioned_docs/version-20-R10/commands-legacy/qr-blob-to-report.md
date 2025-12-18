@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| blob | Blob | &#8594;  | BLOB that houses the report |
+| Blob | Blob | &#8594;  | BLOB that houses the report |
 
 <!-- END REF-->
 

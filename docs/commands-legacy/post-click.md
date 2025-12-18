@@ -5,7 +5,7 @@ slug: /commands/post-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* ; *mouseY* {; *process*} {; *} )<!-- END REF-->
+<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* : Integer ; *mouseY* : Integer {; *process* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

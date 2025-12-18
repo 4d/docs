@@ -5,12 +5,12 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjeto* ; *valor* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjeto* : Text ; *valor* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomObjeto | Text | &#8594;  | Nombre de objeto |
-| valor | any | &#8594;  | Nuevo valor para la fuente de datos del objeto de formulario |
+| nomObjeto | Text | &#8594; | Nombre de objeto |
+| valor | any | &#8594; | Nuevo valor para la fuente de datos del objeto de formulario |
 
 <!-- END REF-->
 

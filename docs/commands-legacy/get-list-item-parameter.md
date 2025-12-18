@@ -5,7 +5,7 @@ slug: /commands/get-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *list* ; *itemRef* ; *selector* ; *value* )<br/>**GET LIST ITEM PARAMETER** ( * ; *list* ; * ; *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER.Syntax-->**GET LIST ITEM PARAMETER** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**GET LIST ITEM PARAMETER** ( * ; *list* : Integer, Text ; * ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

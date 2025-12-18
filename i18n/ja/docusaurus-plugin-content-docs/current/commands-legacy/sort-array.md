@@ -5,12 +5,12 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* {; *array2* ; ... ; *arrayN*}{; > または <} )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; > または <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | ソートする配列 |
-| > または < | 演算子 | &#8594;  | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合降順ソート |
+| array | Array | &#8594; | ソートする配列 |
+| > または < | 演算子 | &#8594; | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合降順ソート |
 
 <!-- END REF-->
 

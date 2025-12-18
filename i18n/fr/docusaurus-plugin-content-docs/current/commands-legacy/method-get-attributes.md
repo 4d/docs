@@ -5,13 +5,13 @@ slug: /commands/method-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *chemin* ; *attributs* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *chemin* : Text, Text array ; *attributs* : Object, Object array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#8594;  | Chemin(s) de méthode(s) |
+| chemin | Text, Text array | &#8594; | Chemin(s) de méthode(s) |
 | attributs | Object, Object array | &#8592; | Attribut(s) de méthode(s) |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

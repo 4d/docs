@@ -5,24 +5,17 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( *find* ; *aString* {; *start* {; *lengthFound*}}{; *} ) -> 戻り値 <br/>
-**Position** ( *find* ; *aString* ; *start* ; *lengthFound* ; *options* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *find* : Text ; *aString* : Text {; *start* : Integer {; *lengthFound* : Integer}}{; *} ) -> Integer<br/>**Position** ( *find* : Text ; *aString* : Text; *start* : Integer ; *lengthFound* : Integer ; *options* : Integer ) -> Integer
+<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| find | Text | &#8594;  | 見つける文字列 |
-| aString | Text | &#8594;  | 調べる文字列 |
-| start | Integer | &#8594;  | aString引数内で検索を開始する位置 |
+| find | Text | &#8594; | 見つける文字列 |
+| aString | Text | &#8594; | 調べる文字列 |
+| start | Integer | &#8594; | aString引数内で検索を開始する位置 |
 | lengthFound | Integer | &#8592; | 見つかった文字列の長さ |
-| * | 演算子 | &#8594;  | 渡されると、文字コードに基づいて評価 |
-| 戻り値 | Integer | &#8592; | 最初に見つかった位置 |
-| Position ( find ; aString ; start ; lengthFound ; options ) -> 戻り値 |
-| 引数 | 型 | 説明 |
-| find | Text | &#8594;  | 見つける文字列 |
-| aString | Text | &#8594;  | 調べる文字列 |
-| start | Integer | &#8594;  | aString引数内で検索を開始する位置 |
-| lengthFound | Integer | &#8594;  | 見つかった文字列の長さ |
-| options | Integer | &#8594;  | 検索条件 |
+| * | 演算子 | &#8594; | 渡されると、文字コードに基づいて評価 |
+| options | Integer | &#8594; | 検索条件 |
 | 戻り値 | Integer | &#8592; | 最初に見つかった位置 |
 
 <!-- END REF-->

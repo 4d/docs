@@ -5,15 +5,15 @@ slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( {* ;} *objeto* ; *fila* ; *coluna* {; *açao*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *objeto* : Text ; *fila* : Integer ; *coluna* : Integer {; *açao* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *objeto* : Field, Variable ; *fila* : Integer ; *coluna* : Integer {; *açao* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| fila | Integer | &#8594;  | Número de quebra de fila |
-| coluna | Integer | &#8594;  | Número de quebra de coluna |
-| açao | Integer | &#8594;  | Ação de seleção |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| fila | Integer | &#8594; | Número de quebra de fila |
+| coluna | Integer | &#8594; | Número de quebra de coluna |
+| açao | Integer | &#8594; | Ação de seleção |
 
 <!-- END REF-->
 

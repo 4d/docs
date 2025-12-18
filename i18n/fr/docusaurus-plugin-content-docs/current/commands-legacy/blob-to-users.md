@@ -5,11 +5,11 @@ slug: /commands/blob-to-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *utilisateurs* )<!-- END REF-->
+<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *utilisateurs* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateurs | Blob | &#8594;  | BLOB (crypté) contenant des comptes utilisateurs créés et sauvegardés par l'Administrateur |
+| utilisateurs | Blob | &#8594; | BLOB (crypté) contenant des comptes utilisateurs créés et sauvegardés par l'Administrateur |
 
 <!-- END REF-->
 

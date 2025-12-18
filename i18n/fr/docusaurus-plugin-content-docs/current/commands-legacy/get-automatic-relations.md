@@ -5,7 +5,7 @@ slug: /commands/get-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *aller* ; *retour* )<!-- END REF-->
+<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *aller* : Boolean ; *retour* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

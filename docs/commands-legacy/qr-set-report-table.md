@@ -5,7 +5,7 @@ slug: /commands/qr-set-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *area* ; *aTable* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *area* : Integer ; *aTable* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

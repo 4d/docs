@@ -5,17 +5,17 @@ slug: /commands/object-move
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( {* ;} *object* ; *moveH* ; *moveV* {; *resizeH* {; *resizeV* {; *}}} )<!-- END REF-->
+<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *object* : Text ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *object* : Field, Variable ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| moveH | Integer | &#8594;  | オブジェクトの水平移動量 (>0 = 右方向, <0 =左方向) |
-| moveV | Integer | &#8594;  | オブジェクトの垂直移動量 (>0 = 下方向, <0 = 上方向) |
-| resizeH | Integer | &#8594;  | オブジェクトの水平方向へのサイズ変更値 |
-| resizeV | Integer | &#8594;  | オブジェクトの垂直方向へのサイズ変更値 |
-| * | 演算子 | &#8594;  | 指定時 = 絶対座標 省略時 = 相対座標 |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| moveH | Integer | &#8594; | オブジェクトの水平移動量 (>0 = 右方向, <0 =左方向) |
+| moveV | Integer | &#8594; | オブジェクトの垂直移動量 (>0 = 下方向, <0 = 上方向) |
+| resizeH | Integer | &#8594; | オブジェクトの水平方向へのサイズ変更値 |
+| resizeV | Integer | &#8594; | オブジェクトの垂直方向へのサイズ変更値 |
+| * | 演算子 | &#8594; | 指定時 = 絶対座標 省略時 = 相対座標 |
 
 <!-- END REF-->
 

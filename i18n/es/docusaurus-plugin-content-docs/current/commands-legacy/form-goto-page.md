@@ -5,12 +5,12 @@ slug: /commands/form-goto-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *numPag* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *numPag* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numPag | Integer | &#8594;  | Número de la página a mostrar |
-| * | Operador | &#8594;  | Cambia la página del subformulario actual |
+| numPag | Integer | &#8594; | Número de la página a mostrar |
+| * | Operador | &#8594; | Cambia la página del subformulario actual |
 
 <!-- END REF-->
 

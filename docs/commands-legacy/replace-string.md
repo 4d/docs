@@ -5,13 +5,13 @@ slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* ; *oldString* ; *newString* {; *howMany*}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *source* : Text ; *oldString* : Text ; *newString* : Text {; *howMany* : Integer}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | source | Text | &#8594;  | Original string |
-| oldText | Text | &#8594;  | Characters to replace |
-| newText | Text | &#8594;  | Replacement string (if empty string, occurrences are deleted) |
+| oldString | Text | &#8594;  | Characters to replace |
+| newString | Text | &#8594;  | Replacement string (if empty string, occurrences are deleted) |
 | howMany | Integer | &#8594;  | How many times to replace If omitted, all occurrences are replaced |
 | * | Operator | &#8594;  | If passed: evaluation based on character codes |
 | Function result | Text | &#8592; | Resulting string |

@@ -5,13 +5,13 @@ slug: /commands/array-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* ; *lista* {; *refElementos*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* : Array ; *lista* : Text, Integer {; *refElementos* : Array} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array del cual copiar los elementos del array |
-| lista | Text, Integer | &#8594;  | Lista en la cual copiar los elementos del array |
-| refElementos | Array | &#8594;  | Array numérico de números de referencia de los elementos |
+| array | Array | &#8594; | Array del cual copiar los elementos del array |
+| lista | Text, Integer | &#8594; | Lista en la cual copiar los elementos del array |
+| refElementos | Array | &#8594; | Array numérico de números de referencia de los elementos |
 
 <!-- END REF-->
 

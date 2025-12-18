@@ -5,11 +5,11 @@ slug: /commands/set-cursor
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** {( *cursor* )}<!-- END REF-->
+<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** ( *cursor* : Integer )}<!-- END REF-->
 <!--REF #_command_.SET CURSOR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| cursor | Integer | &#8594;  | Mac OS ベースのカーソルリソース番号 |
+| cursor | Integer | &#8594; | Mac OS ベースのカーソルリソース番号 |
 
 <!-- END REF-->
 

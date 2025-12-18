@@ -5,14 +5,12 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* ; *yCoord* ; *from* ; *to* )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* : Integer ; *yCoord* : Integer ; *from* : Integer ; *to* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| xCoord | Integer | &#8594;  | Horizontal coordinate of a point (initial) |
-| &#8592; | Horizontal coordinate of a point (converted) |
-| yCoord | Integer | &#8594;  | Vertical coordinate of a point (initial) |
-| &#8592; | Vertical coordinate of a point (converted) |
+| xCoord | Integer | &#8596;  | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
+| yCoord | Integer | &#8596;  | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
 | from | Integer | &#8594;  | Coordinates system to convert from |
 | to | Integer | &#8594;  | Coordinates system to convert to |
 

@@ -5,11 +5,11 @@ slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *nomFichier* ; *verrouillé* ; *invisible* ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *nomFichier* : Text ; *verrouillé* : Boolean ; *invisible* : Boolean ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom du document |
+| nomFichier | Text | &#8594; | Nom du document |
 | verrouillé | Boolean | &#8592; | Verrouillé (Vrai) ou non verrouillé (Faux) |
 | invisible | Boolean | &#8592; | Invisible (Vrai) ou visible (Faux) |
 | créé le | Date | &#8592; | Date de création |

@@ -5,17 +5,17 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *izquierda* ; *superior* ; *derecha* ; *inferior* {; *tipo* {; *titulo* {; *casillaCerrar*}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *izquierda* : Integer ; *superior* : Integer ; *derecha* : Integer ; *inferior* : Integer {; *tipo* : Integer {; *titulo* : Text {; *casillaCerrar* : Text}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &#8594;  | Coordenada global izquierda del interior de la ventana |
-| superior | Integer | &#8594;  | Coordenada global superior del interior de la ventana |
-| derecha | Integer | &#8594;  | Coordenada global derecha del interior de la ventana |
-| inferior | Integer | &#8594;  | Coordenada global inferior del interior de la ventana |
-| tipo | Integer | &#8594;  | Tipo de la ventana |
-| titulo | Text | &#8594;  | Título de la ventana |
-| casillaCerrar | Text | &#8594;  | Método a llamar en caso de doble clic del menú Control o de clic en la casilla Cerrar |
+| izquierda | Integer | &#8594; | Coordenada global izquierda del interior de la ventana |
+| superior | Integer | &#8594; | Coordenada global superior del interior de la ventana |
+| derecha | Integer | &#8594; | Coordenada global derecha del interior de la ventana |
+| inferior | Integer | &#8594; | Coordenada global inferior del interior de la ventana |
+| tipo | Integer | &#8594; | Tipo de la ventana |
+| titulo | Text | &#8594; | Título de la ventana |
+| casillaCerrar | Text | &#8594; | Método a llamar en caso de doble clic del menú Control o de clic en la casilla Cerrar |
 | Resultado | Integer | &#8592; | Número de referencia de la ventana |
 
 <!-- END REF-->

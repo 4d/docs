@@ -5,14 +5,14 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *llavePriv* ; *peticionCertif* ; *arrayCod* ; *arrNombres* )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *llavePriv* : Blob ; *peticionCertif* : Blob ; *arrayCod* : Integer array ; *arrNombres* : Text array )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| llavePriv | Blob | &#8594;  | BLOB que contiene la llave privada |
+| llavePriv | Blob | &#8594; | BLOB que contiene la llave privada |
 | peticionCertif | Blob | &#8592; | BLOB que recibe la solicitud del certificado |
-| arrayCod | Integer array | &#8594;  | La lista de códigos de información |
-| arrNombres | Text array | &#8594;  | Lista de nombres |
+| arrayCod | Integer array | &#8594; | La lista de códigos de información |
+| arrNombres | Text array | &#8594; | Lista de nombres |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/time-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time string.Syntax-->**Time string** ( *seconds* ) : Text<!-- END REF-->
+<!--REF #_command_.Time string.Syntax-->**Time string** ( *seconds* : Integer, Time ) : Text<!-- END REF-->
 <!--REF #_command_.Time string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| seconds | Integer, Time | &#8594;  | 0時からの秒数 |
+| seconds | Integer, Time | &#8594; | 0時からの秒数 |
 | 戻り値 | Text | &#8592; | 24時フォーマットの時間文字列 |
 
 <!-- END REF-->

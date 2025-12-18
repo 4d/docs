@@ -5,7 +5,7 @@ slug: /commands/form-set-output
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*aTable* ;} *form* {; *userForm*} )<!-- END REF-->
+<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text} )<!-- END REF-->
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

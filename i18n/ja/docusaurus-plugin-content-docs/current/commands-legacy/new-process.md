@@ -14,15 +14,15 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *method* ; *stack* {; *name* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *method* : Text ; *stack* : Integer {; *name* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| method | Text | &#8594;  | プロセスで実行させるメソッド |
-| stack | Integer | &#8594;  | スタックサイズ (バイト) |
-| name | Text | &#8594;  | 作成するプロセスの名前 |
-| param | Expression | &#8594;  | メソッドに渡す引数 |
-| * | 演算子 | &#8594;  | 重複しないプロセス |
+| method | Text | &#8594; | プロセスで実行させるメソッド |
+| stack | Integer | &#8594; | スタックサイズ (バイト) |
+| name | Text | &#8594; | 作成するプロセスの名前 |
+| param | Expression | &#8594; | メソッドに渡す引数 |
+| * | 演算子 | &#8594; | 重複しないプロセス |
 | 戻り値 | Integer | &#8592; | 新規に作成されたプロセス番号 または既存のプロセス番号 |
 
 <!-- END REF-->

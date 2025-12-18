@@ -43,7 +43,7 @@ Attachment objects provide the following read-only properties and functions:
 |---------|--- |:---:|------|
 |file|4D.File|->|Attachment file|
 |zipFile|4D.ZipFile|->|Attachment Zipfile|
-|blob|4D.Blob|->|BLOB containing the attachment|
+|blob|4D.Blob|->|Blob containing the attachment|
 |path|Text|->|Path of the attachment file|
 |name|Text|->|Name + extension used by the mail client to designate the attachment|
 |cid|Text|->|ID of attachment (HTML messages only), or " " if no cid is required|

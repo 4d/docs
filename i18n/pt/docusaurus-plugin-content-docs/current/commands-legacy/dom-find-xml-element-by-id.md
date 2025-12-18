@@ -5,12 +5,12 @@ slug: /commands/dom-find-xml-element-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *refElemento* ; *id* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *refElemento* : Text ; *id* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element by ID.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
-| id | Text | &#8594;  | Valor do atributo ID do elemento a procurar |
+| refElemento | Text | &#8594; | Referência de elemento XML |
+| id | Text | &#8594; | Valor do atributo ID do elemento a procurar |
 | Resultado | Text | &#8592; | Referência do elemento encontrado (se aplicável) |
 
 <!-- END REF-->

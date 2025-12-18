@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-insert-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *targetObj* ; *mode* {; *rangeUpdate* {; *nbCols* {; *nbRows*}}} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *targetObj* : Object ; *mode* : Integer {; *rangeUpdate* : Integer {; *nbCols* : Integer {; *nbRows* : Integer}}} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

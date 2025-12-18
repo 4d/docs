@@ -5,11 +5,11 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomLista* ) : Integer<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomLista* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomLista | Text | &#8594;  | Nombre de una lista creada en el Editor de listas del entorno Diseño |
+| nomLista | Text | &#8594; | Nombre de una lista creada en el Editor de listas del entorno Diseño |
 | Resultado | Integer | &#8592; | Número de referencia de la lista creada recientemente |
 
 <!-- END REF-->

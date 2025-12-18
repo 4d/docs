@@ -5,13 +5,13 @@ slug: /commands/listbox-get-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( {* ;} *objet* {; *unité*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( * ; *objet* : Text {; *unité* : Integer} ) : Integer<br/>**LISTBOX Get rows height** ( *objet* : Field, Variable {; *unité* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get rows height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| unité | Integer | &#8594;  | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| unité | Integer | &#8594; | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
 | Résultat | Integer | &#8592; | Hauteur de ligne en pixels |
 
 <!-- END REF-->

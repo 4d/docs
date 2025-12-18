@@ -5,7 +5,7 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( encab|arrayCamp {; *arrayValores*} )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( encab|arrayCamp {; *arrayValores* : Text array} )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

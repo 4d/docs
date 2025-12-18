@@ -5,13 +5,13 @@ slug: /commands/set-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* {; *destinationObjet* {; *destinationPtr*}} )<!-- END REF-->
+<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* : Integer {; *destinationObjet* : Text, Variable {; *destinationPtr* : Pointer}} )<!-- END REF-->
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| destinationType | Integer | &#8594;  | 0=sélection courante, 1=ensemble, 2=sélection temporaire, 3=variable |
-| destinationObjet | Text, Variable | &#8594;  | Nom de l'ensemble ou Nom de la sélection temporaire ou Variable |
-| destinationPtr | Pointer | &#8594;  | Pointeur vers la variable locale si destinationType=3 |
+| destinationType | Integer | &#8594; | 0=sélection courante, 1=ensemble, 2=sélection temporaire, 3=variable |
+| destinationObjet | Text, Variable | &#8594; | Nom de l'ensemble ou Nom de la sélection temporaire ou Variable |
+| destinationPtr | Pointer | &#8594; | Pointeur vers la variable locale si destinationType=3 |
 
 <!-- END REF-->
 

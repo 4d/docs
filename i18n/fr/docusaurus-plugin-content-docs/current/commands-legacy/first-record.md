@@ -5,11 +5,11 @@ slug: /commands/first-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ( *laTable* : Table )}<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle charger le premier enregistrement de la sélection courantes ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de laquelle charger le premier enregistrement de la sélection courantes ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 

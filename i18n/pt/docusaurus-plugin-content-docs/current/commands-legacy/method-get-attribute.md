@@ -5,13 +5,13 @@ slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *rota* ; *tipoAtributo* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *rota* : Text ; *tipoAtributo* : Integer {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#8594;  | Rota do método projeto |
-| tipoAtributo | Integer | &#8594;  | Tipo de atributo a obter |
-| * | Operador | &#8594;  | Se passado = o comando aplica ao banco de dados local quando é executado desde um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text | &#8594; | Rota do método projeto |
+| tipoAtributo | Integer | &#8594; | Tipo de atributo a obter |
+| * | Operador | &#8594; | Se passado = o comando aplica ao banco de dados local quando é executado desde um componente (parâmetro ignorado fora deste contexto) |
 | Resultado | Boolean | &#8592; | True = Atributo selecionado, do contrário False |
 
 <!-- END REF-->

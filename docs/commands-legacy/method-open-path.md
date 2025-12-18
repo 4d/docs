@@ -5,12 +5,12 @@ slug: /commands/method-open-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *path* {; *line*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *path* : Text {; *line* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | path | Text | &#8594;  | Path of method to open |
-| line | Number | &#8594;  | Line number |
+| line | Real | &#8594;  | Line number |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->

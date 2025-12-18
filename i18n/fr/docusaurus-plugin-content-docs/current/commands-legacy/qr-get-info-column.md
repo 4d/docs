@@ -5,12 +5,12 @@ slug: /commands/qr-get-info-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *zone* ; *numColonne* ; *titre* ; *objet* ; *cachée* ; *taille* ; *valeursRépétées* ; *format* {; *varRésultat*} )<!-- END REF-->
+<!--REF #_command_.QR GET INFO COLUMN.Syntax-->**QR GET INFO COLUMN** ( *zone* : Integer ; *numColonne* : Integer ; *titre* : Text ; *objet* : Text ; *cachée* : Integer ; *taille* : Integer ; *valeursRépétées* : Integer ; *format* : Text {; *varRésultat* : Text} )<!-- END REF-->
 <!--REF #_command_.QR GET INFO COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numColonne | Integer | &#8594;  | Numéro de colonne |
+| zone | Integer | &#8594; | Référence de la zone |
+| numColonne | Integer | &#8594; | Numéro de colonne |
 | titre | Text | &#8592; | Titre de la colonne |
 | objet | Text | &#8592; | Nom du champ ou contenu de la formule affecté(e) à la colonne |
 | cachée | Integer | &#8592; | 0 = visible, 1 = invisible |

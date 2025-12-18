@@ -5,13 +5,13 @@ slug: /commands/ob-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objeto* ; *propiedad* ; *array* )<!-- END REF-->
+<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objeto* : Object, Object ; *propiedad* : Text ; *array* : Array, Variable )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Object | &#8594;  | Objeto estructurado |
-| propiedad | Text | &#8594;  | Nombre de la propiedad a definir |
-| array | Array, Variable | &#8594;  | Array a almacenar en propiedad |
+| objeto | Object, Object | &#8594; | Objeto estructurado |
+| propiedad | Text | &#8594; | Nombre de la propiedad a definir |
+| array | Array, Variable | &#8594; | Array a almacenar en propiedad |
 
 <!-- END REF-->
 

@@ -5,14 +5,14 @@ slug: /commands/post-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* ; *mouseY* {; *process*} {; *} )<!-- END REF-->
+<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *mouseX* : Integer ; *mouseY* : Integer {; *process* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mouseX | Integer | &#8594;  | 水平座標 |
-| mouseY | Integer | &#8594;  | 垂直座標 |
-| process | Integer | &#8594;  | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
-| * | Operator |  &#8594;  | 指定された場合はグローバルな座標システムが使用される 省略された場合はローカルな座標システムが使用される |
+| mouseX | Integer | &#8594; | 水平座標 |
+| mouseY | Integer | &#8594; | 垂直座標 |
+| process | Integer | &#8594; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
+| * | Operator | &#8594; | 指定された場合はグローバルな座標システムが使用される 省略された場合はローカルな座標システムが使用される |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *text* ; *blob* {; *textFormat* {; offset}} )<br/>**TEXT TO BLOB** ( *text* ; *blob* {; *textFormat* {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; offset}} )<br/>**TEXT TO BLOB** ( *text* : Text ; *blob* : Blob {; *textFormat* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | text | Text | &#8594;  | Text to write into the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the text |
+| Blob | Blob | &#8594;  | BLOB to receive the text |
 | textFormat | Integer | &#8594;  | Format and character set of text |
 | offset &#124; * | Variable, Operator |&#8596;  | Offset within the BLOB (expressed in bytes) or * to append the value |
 | ||| New offset after writing if not * |

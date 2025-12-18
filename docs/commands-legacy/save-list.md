@@ -5,7 +5,7 @@ slug: /commands/save-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *list* ; *listName* )<!-- END REF-->
+<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *list* : Integer ; *listName* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/dom-set-xml-element-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT NAME.Syntax-->**DOM SET XML ELEMENT NAME** ( *elementRef* ; *elementName* )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT NAME.Syntax-->**DOM SET XML ELEMENT NAME** ( *elementRef* : Text ; *elementName* : Text )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

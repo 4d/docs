@@ -5,13 +5,13 @@ slug: /commands/document-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *nomeRota* ; *documentos* {; *opções*} )<!-- END REF-->
+<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *nomeRota* : Text ; *documentos* : Text array {; *opções* : Integer} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeRota | Text | &#8594;  | Rota de acesso ao volume, diretório ou pasta |
+| nomeRota | Text | &#8594; | Rota de acesso ao volume, diretório ou pasta |
 | documentos | Text array | &#8592; | Nomes dos documentos presentes na localização |
-| opções | Integer | &#8594;  | Opções para construir lista |
+| opções | Integer | &#8594; | Opções para construir lista |
 
 <!-- END REF-->
 

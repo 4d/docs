@@ -5,11 +5,11 @@ slug: /commands/delete-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *réfUtilisateur* )<!-- END REF-->
+<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *réfUtilisateur* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| réfUtilisateur | Integer | &#8594;  | Numéro d'identification de l'utilisateur à supprimer |
+| réfUtilisateur | Integer | &#8594; | Numéro d'identification de l'utilisateur à supprimer |
 
 <!-- END REF-->
 

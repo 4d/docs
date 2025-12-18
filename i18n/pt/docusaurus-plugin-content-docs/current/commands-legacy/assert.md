@@ -5,12 +5,12 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressaoBool* {; *mensagemTexto*} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressaoBool* : Boolean {; *mensagemTexto*} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| expressaoBool | Boolean | &#8594;  | Expressão Booleana |
-| mensagemText | Text | &#8594;  | Texto de mensagem de erro |
+| expressaoBool | Boolean | &#8594; | Expressão Booleana |
+| mensagemText | Text | &#8594; | Texto de mensagem de erro |
 
 <!-- END REF-->
 

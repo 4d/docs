@@ -5,14 +5,14 @@ slug: /commands/listbox-set-headers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Syntax-->**LISTBOX SET HEADERS HEIGHT** ( {* ;} *objeto* ; *altura* {; *unidade*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Syntax-->**LISTBOX SET HEADERS HEIGHT** ( * ; *objeto* : Text ; *altura* : Integer {; *unidade* : Integer} )<br/>**LISTBOX SET HEADERS HEIGHT** ( *objeto* : Field, Variable ; *altura* : Integer {; *unidade* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HEADERS HEIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| altura | Integer | &#8594;  | Alto da linha |
-| unidade | Integer | &#8594;  | Unidade de valor de altura: 0 ou se omitido = pixeles, 1 = linhas |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| altura | Integer | &#8594; | Alto da linha |
+| unidade | Integer | &#8594; | Unidade de valor de altura: 0 ou se omitido = pixeles, 1 = linhas |
 
 <!-- END REF-->
 

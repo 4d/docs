@@ -5,15 +5,15 @@ slug: /commands/listbox-set-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( {* ;} *objet* ; *ligne* ; *couleur* {; *typeCouleur*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *objet* : Text ; *ligne* : Integer ; *couleur* : Text, Integer {; *typeCouleur* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *objet* : Field, Variable ; *ligne* : Integer ; *couleur* : Text, Integer {; *typeCouleur* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| ligne | Integer | &#8594;  | Numéro de ligne |
-| couleur | Text, Integer | &#8594;  | Valeur de couleur RVB |
-| typeCouleur | Integer | &#8594;  | Listbox couleur de police (défaut) ou Listbox couleur de fond |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594; | Numéro de ligne |
+| couleur | Text, Integer | &#8594; | Valeur de couleur RVB |
+| typeCouleur | Integer | &#8594; | Listbox couleur de police (défaut) ou Listbox couleur de fond |
 
 <!-- END REF-->
 

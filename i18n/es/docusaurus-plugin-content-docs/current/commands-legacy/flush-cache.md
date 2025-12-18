@@ -5,11 +5,11 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( tam | *  )}<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** ( tam | *  )}<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tam &#124; * | Real, Operador | &#8594;  | * para liberar la memoria caché completamente, o número de bytes a liberar en la caché |
+| tam &#124; * | Real, Operador | &#8594; | * para liberar la memoria caché completamente, o número de bytes a liberar en la caché |
 
 <!-- END REF-->
 

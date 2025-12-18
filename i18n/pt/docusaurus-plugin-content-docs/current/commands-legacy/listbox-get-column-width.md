@@ -5,12 +5,12 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *objeto* {; *larguraMin* {; *larguraMax*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *objeto* : Text {; *larguraMin* : Integer {; *larguraMax* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *objeto* : Field, Variable {; *larguraMin* : Integer {; *larguraMax* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | larguraMin | Integer | &#8592; | Largura mínima da coluna (em pixels) |
 | larguraMax | Integer | &#8592; | Largura máxima da coluna (em píxels) |
 | Resultado da função | Integer | &#8592; | Largura da coluna (em pixels) |

@@ -5,12 +5,12 @@ slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *lineaMenu* ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* : Integer, Text ; *lineaMenu* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item parameter.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Referencia de menú o número de menú |
-| lineaMenu | Integer | &#8594;  | Número de línea de menú o -1 para la última línea añadida al menú |
+| menu | Integer, Text | &#8594; | Referencia de menú o número de menú |
+| lineaMenu | Integer | &#8594; | Número de línea de menú o -1 para la última línea añadida al menú |
 | Resultado | Text | &#8592; | Parámetro personalizado de la línea de menú |
 
 <!-- END REF-->

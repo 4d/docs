@@ -5,7 +5,7 @@ slug: /commands/resume-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* {; *} )<!-- END REF-->
+<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

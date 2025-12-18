@@ -5,7 +5,7 @@ slug: /commands/bring-to-front
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* )<!-- END REF-->
+<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

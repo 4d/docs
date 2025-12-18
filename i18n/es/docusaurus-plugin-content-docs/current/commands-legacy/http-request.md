@@ -5,19 +5,17 @@ slug: /commands/http-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* ; *url* ; *contenido* ; *respuesta* {; *nomEncab* ; *valoresEncab*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Request.Syntax-->**HTTP Request** ( *metodoHTTP* : Text ; *url* : Text ; *contenido* : Text, Blob, Picture, Object ; *respuesta* : Text, Blob, Picture, Object {; *nomEncab* : Text array ; *valoresEncab* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Request.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| metodoHTTP | Text | &#8594;  | Método HTTP para la petición |
-| url | Text | &#8594;  | URL a la cual enviar la petición |
-| contenido | Text, Blob, Picture, Object | &#8594;  | Contenido del cuerpo(body)de la petición |
+| metodoHTTP | Text | &#8594; | Método HTTP para la petición |
+| url | Text | &#8594; | URL a la cual enviar la petición |
+| contenido | Text, Blob, Picture, Object | &#8594; | Contenido del cuerpo(body)de la petición |
 | respuesta | Text, Blob, Picture, Object | &#8592; | Resultado de la petición |
-| nomEncab | Text array | &#8594;  | Nombres de los encabezados de la petición |
-| &#8592; | Nombres de los encabezados devueltos |
-| valoresEncab | Text array | &#8594;  | Valores de los encabezados de la petición |
-| &#8592; | Valores de los encabezados devueltos |
-| * | Operador | &#8594;  | Si se pasa, la conexión se mantiene (keep-alive)Si se omite, la conexión se cierra automáticamente |
+| nomEncab | Text array | &#8596; | *in:* Header names of the request<br/>*out:* Returned header names |
+| valoresEncab | Text array | &#8596; | *in:* Header values of the request<br/>*out:* Returned header values |
+| * | Operador | &#8594; | Si se pasa, la conexión se mantiene (keep-alive)Si se omite, la conexión se cierra automáticamente |
 | Resultado | Integer | &#8592; | Código de estado HTTP |
 
 <!-- END REF-->

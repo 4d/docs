@@ -5,7 +5,7 @@ slug: /commands/accumulate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *...data* )<!-- END REF-->
+<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *...data* : Field)<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 <!--REF #_command_.ACCUMULATE.Summary-->**ACCUMULATE** specifies the fields or variables to be accumulated during a form report performed using [PRINT SELECTION](print-selection.md).<!-- END REF-->
 
-You **must** execute [BREAK LEVEL](break-level.md) and **ACCUMULATE**  before every report for which you want to do break processing. These commands activate break processing for a report. See the explanation for the [Subtotal](subtotal.md) command.
+You **must** execute [BREAK LEVEL](break-level.md) and **ACCUMULATE** before every report for which you want to do break processing. These commands activate break processing for a report. See the explanation for the [Subtotal](subtotal.md) command.
 
 Use **ACCUMULATE** when you want to include subtotals for numeric fields or variables in a form report. **ACCUMULATE** tells 4D to store subtotals for each of the Data arguments. The subtotals are accumulated for each break level specified with the [Subtotal](subtotal.md) command.
 

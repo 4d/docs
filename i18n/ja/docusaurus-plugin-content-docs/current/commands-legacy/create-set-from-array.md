@@ -5,13 +5,13 @@ slug: /commands/create-set-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *aTable* ; *recordsArray* {; *setName*} )<!-- END REF-->
+<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *aTable* : Table ; *recordsArray* : Integer, Boolean array {; *setName* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セットのテーブル |
-| recordsArray | Integer, Boolean array | &#8594;  | レコード番号配列、または ブール配列 (True = レコードはセットに含まれる, False = レコードはセットに含まれない) |
-| setName | Text | &#8594;  | 作成するセットの名前, または 省略時、UserSetに適用する |
+| aTable | Table | &#8594; | セットのテーブル |
+| recordsArray | Integer, Boolean array | &#8594; | レコード番号配列、または ブール配列 (True = レコードはセットに含まれる, False = レコードはセットに含まれない) |
+| setName | Text | &#8594; | 作成するセットの名前, または 省略時、UserSetに適用する |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( {* ;} *objeto* ; *tecla* ; *modificadores* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( * ; *objeto* : Text ; *tecla* : Text ; *modificadores* : Integer )<br/>**OBJECT GET SHORTCUT** ( *objeto* : Field, Variable ; *tecla* : Text ; *modificadores* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SHORTCUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | tecla | Text | &#8592; | Tecla asociada al objeto |
 | modificadores | Integer | &#8592; | Máscara o combinación de máscaras de teclas de modificación |
 

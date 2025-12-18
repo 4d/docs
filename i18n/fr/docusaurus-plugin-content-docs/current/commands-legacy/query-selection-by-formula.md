@@ -5,12 +5,12 @@ slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *laTable* {; *formule*} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *laTable* : Table {; *formule* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle effectuer la recherche parmi la sélection courante |
-| formule | Boolean | &#8594;  | Formule de recherche |
+| laTable | Table | &#8594; | Table dans laquelle effectuer la recherche parmi la sélection courante |
+| formule | Boolean | &#8594; | Formule de recherche |
 
 <!-- END REF-->
 

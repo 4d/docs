@@ -5,11 +5,11 @@ slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *tabela* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Before selection.Syntax-->**Before selection** ( *tabela* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual vai testar se o registro do ponteiro está antes do primeiro registro selecionado, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela na qual vai testar se o registro do ponteiro está antes do primeiro registro selecionado, ou tabela padrão, se omitido |
 | Resultado | Boolean | &#8592; | Sim (TRUE) ou Não (FALSE) |
 
 <!-- END REF-->

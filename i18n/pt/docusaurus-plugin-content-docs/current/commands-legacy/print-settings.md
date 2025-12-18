@@ -5,11 +5,11 @@ slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** {( *dialType* )}<!-- END REF-->
+<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ( *dialType* : Integer )}<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dialType | Integer | &#8594;  | Caixas de diálogo a mostrar |
+| dialType | Integer | &#8594; | Caixas de diálogo a mostrar |
 
 <!-- END REF-->
 

@@ -5,14 +5,14 @@ slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( {* ;} *objeto* ; *posicionL* {; *numLineas*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *objeto* : Text ; *posicionL* : Integer {; *numLineas* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *objeto* : Field, Variable ; *posicionL* : Integer {; *numLineas* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| posicionL | Integer | &#8594;  | Posición de la fila a insertar |
-| numLineas | Integer | &#8594;  | Número de líneas a insertar |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| posicionL | Integer | &#8594; | Posición de la fila a insertar |
+| numLineas | Integer | &#8594; | Número de líneas a insertar |
 
 <!-- END REF-->
 

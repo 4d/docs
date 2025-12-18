@@ -5,11 +5,11 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *lock* )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *lock* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| lock | Boolean | &#8594;  | True = クエリで見つけたレコードをロック False = レコードをロックしない |
+| lock | Boolean | &#8594; | True = クエリで見つけたレコードをロック False = レコードをロックしない |
 
 <!-- END REF-->
 

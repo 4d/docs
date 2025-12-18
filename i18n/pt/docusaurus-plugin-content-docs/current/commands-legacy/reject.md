@@ -5,11 +5,11 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *campo* )}<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ( *campo* : Field )}<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo a rejeitar |
+| campo | Field | &#8594; | Campo a rejeitar |
 
 <!-- END REF-->
 

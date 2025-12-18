@@ -5,13 +5,13 @@ slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( {* ;} *object* ; *helpTip* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *object* : Text ; *helpTip* : Text )<br/>**OBJECT SET HELP TIP** ( *object* : Field, Variable ; *helpTip* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| helpTip | Text | &#8594;  | ヘルプメッセージの内容 |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| helpTip | Text | &#8594; | ヘルプメッセージの内容 |
 
 <!-- END REF-->
 

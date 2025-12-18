@@ -5,13 +5,13 @@ slug: /commands/picture-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *picture* ; *pictureBlob* ; *codec* )<!-- END REF-->
+<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *picture* : Picture ; *pictureBlob* : Blob ; *codec* : Text )<!-- END REF-->
 <!--REF #_command_.PICTURE TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | ピクチャフィールドまたは変数 |
+| picture | Picture | &#8594; | ピクチャフィールドまたは変数 |
 | pictureBlob | Blob | &#8592; | 変換されたピクチャを受け取るBLOB |
-| codec | Text | &#8594;  | ピクチャCodec ID |
+| codec | Text | &#8594; | ピクチャCodec ID |
 
 <!-- END REF-->
 

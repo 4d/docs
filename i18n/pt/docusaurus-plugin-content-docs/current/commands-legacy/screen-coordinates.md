@@ -5,7 +5,7 @@ slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *esquerda* ; *superior* ; *direita* ; *inferior*  {; *tela* {; *areaTela*}} )<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer  {; *tela* : Integer {; *areaTela* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | superior | Integer | &#8592; | Coordenada superior da área da tela |
 | direita | Integer | &#8592; | Coordenada direita da área da tela |
 | inferior | Integer | &#8592; | Coordenada inferior da área da tela |
-| tela | Integer | &#8594;  | Número da tela, ou tela principal se omitida |
-| areaTela | Integer | &#8594;  | Tela inteira (padrão)ou então área de trabalho |
+| tela | Integer | &#8594; | Número da tela, ou tela principal se omitida |
+| areaTela | Integer | &#8594; | Tela inteira (padrão)ou então área de trabalho |
 
 <!-- END REF-->
 

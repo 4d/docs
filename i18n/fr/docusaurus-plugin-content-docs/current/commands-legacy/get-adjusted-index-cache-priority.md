@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ pour lequel connaître la valeur de priorité des index |
+| leField | Field | &#8594; | Champ pour lequel connaître la valeur de priorité des index |
 | Résultat | Integer | &#8592; | Valeur de priorité courante des index du champ |
 
 <!-- END REF-->

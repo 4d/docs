@@ -5,11 +5,11 @@ slug: /commands/blob-to-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *usuarios* )<!-- END REF-->
+<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *usuarios* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| usuarios | Blob | &#8594;  | BLOB (criptografado) contendo contas de usuários do banco de dados criadas e guardadas pelo administrador do banco |
+| usuarios | Blob | &#8594; | BLOB (criptografado) contendo contas de usuários do banco de dados criadas e guardadas pelo administrador do banco |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/query-selection-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable*}{;}{*conjOp* ;} *objectField* ; *attributePath* ; *queryOp* ; *value* {; *} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Syntax-->**QUERY SELECTION BY ATTRIBUTE** ( {*aTable* : Table}{;}{*conjOp* : Operator ;} *objectField* : Field ; *attributePath* : Text ; *queryOp* : Text, Operator ; *value* : Text, Real, Date, Time {; *} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | objectField | Field | &#8594;  | Object field to query attributes |
 | attributePath | Text | &#8594;  | Name or path of attribute |
 | queryOp | Text, Operator  | &#8594;  | Query operator (comparator) |
-| value | Text, Number, Date, Time | &#8594;  | Value to compare |
+| value | Text, Real, Date, Time | &#8594;  | Value to compare |
 | * | Operator | &#8594;  | Continue query flag |
 
 <!-- END REF-->

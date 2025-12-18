@@ -5,11 +5,11 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードを削除するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | カレントレコードを削除するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 

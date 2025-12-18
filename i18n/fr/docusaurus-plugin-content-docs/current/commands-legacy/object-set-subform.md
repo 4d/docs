@@ -5,15 +5,15 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *objet* {; *laTable*}; *sousFormDetail* {; *sousFormListe*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *objet* : Text {; *laTable* : Table}; *sousFormDetail* : Text, Object {; *sousFormListe* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *objet* : Field, Variable {; *laTable* : Table}; *sousFormDetail* : Text, Object {; *sousFormListe* : Text, Object} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| laTable | Table | &#8594;  | Table du formulaire (si formulaire table) |
-| sousFormDetail | Text, Object | &#8594;  | Nom (chaîne) du formulaire détail du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire détail, ouObjet décrivant le formulaire détail |
-| sousFormListe | Text, Object | &#8594;  | Nom (chaîne) du formulaire liste du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire liste, ouObjet décrivant le formulaire liste (formulaire table) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| laTable | Table | &#8594; | Table du formulaire (si formulaire table) |
+| sousFormDetail | Text, Object | &#8594; | Nom (chaîne) du formulaire détail du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire détail, ouObjet décrivant le formulaire détail |
+| sousFormListe | Text, Object | &#8594; | Nom (chaîne) du formulaire liste du sous-formulaire, ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire liste, ouObjet décrivant le formulaire liste (formulaire table) |
 
 <!-- END REF-->
 

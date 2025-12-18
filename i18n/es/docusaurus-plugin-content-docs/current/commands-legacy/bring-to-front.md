@@ -5,11 +5,11 @@ slug: /commands/bring-to-front
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *proceso* )<!-- END REF-->
+<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *proceso* : Integer )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número del proceso a pasar al primer plano |
+| proceso | Integer | &#8594; | Número del proceso a pasar al primer plano |
 
 <!-- END REF-->
 

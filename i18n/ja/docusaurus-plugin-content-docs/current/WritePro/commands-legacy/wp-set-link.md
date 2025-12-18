@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-set-link
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET LINK.Syntax-->**WP SET LINK** ( *targetObj* ; *linkObj* )<!-- END REF-->
+<!--REF #_command_.WP SET LINK.Syntax-->**WP SET LINK** ( *targetObj* : Object ; *linkObj* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET LINK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

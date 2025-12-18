@@ -5,13 +5,12 @@ slug: /commands/json-resolve-pointers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *objeto* {; *opciones*} ) : Object<!-- END REF-->
+<!--REF #_command_.JSON Resolve pointers.Syntax-->**JSON Resolve pointers** ( *objeto* : Object {; *opciones* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Resolve pointers.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object | &#8594;  | Objeto que contiene punteros JSON para resolver |
-| &#8592; | Objeto con punteros JSON resueltos (sólo si resultado es un objeto) |
-| opciones | Object | &#8594;  | Opciones para la resolución de punteros |
+| objeto | Object | &#8596; | *in:* Object containing JSON pointers to resolve<br/>*out:* Object with JSON pointers resolved (only if result is an object) |
+| opciones | Object | &#8594; | Opciones para la resolución de punteros |
 | Resultado | Object | &#8592; | Objeto que contiene el resultado del proceso |
 
 <!-- END REF-->

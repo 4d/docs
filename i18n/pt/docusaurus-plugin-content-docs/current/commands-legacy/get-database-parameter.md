@@ -5,12 +5,12 @@ slug: /commands/get-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*tabela* ;} *seletor* {; *valorAlfa*} ) : Real<!-- END REF-->
+<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*tabela* : Table ;} *seletor* : Integer {; *valorAlfa* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela do parâmetro ou tabela padrão se este parâmetro for omitido |
-| seletor | Integer | &#8594;  | Código do parâmetro do banco |
+| tabela | Table | &#8594; | Tabela do parâmetro ou tabela padrão se este parâmetro for omitido |
+| seletor | Integer | &#8594; | Código do parâmetro do banco |
 | valorAlfa | Text | &#8592; | Valor alfa do parâmetro |
 | Resultado | Real | &#8592; | Valor atual do parâmetro |
 

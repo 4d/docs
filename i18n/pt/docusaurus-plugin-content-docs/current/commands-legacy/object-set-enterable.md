@@ -5,13 +5,13 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( {* ;} *objeto* ; *editavel* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *objeto* : Text ; *editavel* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *objeto* : Field, Variable ; *editavel* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
-| editavel | Boolean, Integer | &#8594;  | True se editável; False para não editável |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* for especificado) ou variável (se * é omitido) |
+| editavel | Boolean, Integer | &#8594; | True se editável; False para não editável |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( {* ;} *object* ; *entryFilter* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *object* : Text ; *entryFilter* : Text )<br/>**OBJECT SET FILTER** ( *object* : Field, Variable ; *entryFilter* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *lengID* ; *lengArchivos* ; *lengNoms* )<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *lengID* : Integer array ; *lengArchivos* : Text array ; *lengNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

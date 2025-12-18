@@ -5,13 +5,13 @@ slug: /commands/object-set-minimum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MINIMUM VALUE.Syntax-->**OBJECT SET MINIMUM VALUE** ( {* ;} *object* ; *minValue* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MINIMUM VALUE.Syntax-->**OBJECT SET MINIMUM VALUE** ( * ; *object* : Text ; *minValue* : Date, Time, Real )<br/>**OBJECT SET MINIMUM VALUE** ( *object* : Field, Variable ; *minValue* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name (if * is specified) or<br/>Field or variable (if * is omitted) |
-| minValue | Date, Time, Number | &#8594;  | Minimum value for object |
+| minValue | Date, Time, Real | &#8594;  | Minimum value for object |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/user-in-group
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.User in group.Syntax-->**User in group** ( *user* ; *group* ) : Boolean<!-- END REF-->
+<!--REF #_command_.User in group.Syntax-->**User in group** ( *user* : Text ; *group* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.User in group.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| user | Text | &#8594;  | ユーザ名 |
-| group | Text | &#8594;  | グループ名 |
+| user | Text | &#8594; | ユーザ名 |
+| group | Text | &#8594; | グループ名 |
 | 戻り値 | Boolean | &#8592; | TRUE = ユーザがグループに存在する場合 FALSE = ユーザがグループに存在しない場合 |
 
 <!-- END REF-->

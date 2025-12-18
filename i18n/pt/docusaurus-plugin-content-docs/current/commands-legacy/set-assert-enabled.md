@@ -5,12 +5,12 @@ slug: /commands/set-assert-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *asserções* {; *} )<!-- END REF-->
+<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *asserções* : Boolean {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| asserções | Boolean | &#8594;  | TRUE = Ativa asserções FALSE = desativa asserções |
-| * | Operador | &#8594;  | Se omitido = comando aplica a todos os processos (existidos ou que serão criados) se passado, o comando = aplica apenas ao processo atual. |
+| asserções | Boolean | &#8594; | TRUE = Ativa asserções FALSE = desativa asserções |
+| * | Operador | &#8594; | Se omitido = comando aplica a todos os processos (existidos ou que serão criados) se passado, o comando = aplica apenas ao processo atual. |
 
 <!-- END REF-->
 

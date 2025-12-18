@@ -5,16 +5,16 @@ slug: /commands/ldap-search-all
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* ; *arrResultado* ; *filtro* {; *escopo* {; *atributos* {; *atributosComoArray*}}} )<!-- END REF-->
+<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *arrResultado* : Object array ; *filtro* : Text {; *escopo* : Text {; *atributos* : Text array {; *atributosComoArray* : Boolean array}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | o Distinguished Name do diretório raiz onde a pesquisa começará |
+| dnRootEntry | Text | &#8594; | o Distinguished Name do diretório raiz onde a pesquisa começará |
 | arrResultado | Object array | &#8592; | Resultado da pesquisa |
-| filtro | Text | &#8594;  | filtro de pesquisa LDAP |
-| escopo | Text | &#8594;  | Escopo da pesquisa "base" (padrão), "one", ou "sub" |
-| atributos | Text array | &#8594;  | Atributos da pesquisa |
-| atributosComoArray | Boolean array | &#8594;  | True = força os atributos a serem retornados como um array, false = força os atributos a serem retornados como uma variável simples |
+| filtro | Text | &#8594; | filtro de pesquisa LDAP |
+| escopo | Text | &#8594; | Escopo da pesquisa "base" (padrão), "one", ou "sub" |
+| atributos | Text array | &#8594; | Atributos da pesquisa |
+| atributosComoArray | Boolean array | &#8594; | True = força os atributos a serem retornados como um array, false = força os atributos a serem retornados como uma variável simples |
 
 <!-- END REF-->
 

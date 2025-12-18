@@ -5,14 +5,14 @@ slug: /commands/st-get-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( {* ;} *objet* {; *débutSél* {; *finSél*}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( * ; *objet* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )  : Text<br/>**ST Get expression** ( *objet* : Field, Variable {; *débutSél* : Integer {; *finSél* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get expression.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| débutSél | Integer | &#8594;  | Début de la sélection |
-| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| débutSél | Integer | &#8594; | Début de la sélection |
+| finSél | Integer | &#8594; | Fin de la sélection |
 | Résultat | Text | &#8592; | Libellé de l’expression |
 
 <!-- END REF-->

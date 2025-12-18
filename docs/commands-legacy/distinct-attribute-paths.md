@@ -5,7 +5,7 @@ slug: /commands/distinct-attribute-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* ; *pathArray* )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *objectField* : Field ; *pathArray* : Text array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

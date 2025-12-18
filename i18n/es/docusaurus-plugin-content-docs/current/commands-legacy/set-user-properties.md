@@ -5,19 +5,18 @@ slug: /commands/set-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *refUsuario* ; *nombre* ; *inicio* ; *contraseña* ; *nbLogin* ; *ultimoLogin* {; *membrecias* {; *grupoPropietario*}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Set user properties.Syntax-->**Set user properties** ( *refUsuario* : Integer ; *nombre* : Text ; *inicio* : Text ; *contraseña* : Text ; *nbLogin* : Integer ; *ultimoLogin* : Date {; *membrecias* : Integer array {; *grupoPropietario* : Integer}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Set user properties.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &#8594;  | Número de referencia único de cuenta de usuario, -1 para añadir un usuario |
-| &#8592; | Número de referencia único de la cuenta de usuario añadida(si la hay) |
-| nombre | Text | &#8594;  | Nuevo nombre de usuario |
-| inicio | Text | &#8594;  | Nombre del nuevo método de inicio |
-| contraseña | Text | &#8594;  | Nueva contraseña (encriptada) o * para no modificar la contraseña |
-| nbLogin | Integer | &#8594;  | Nuevo número de usos de la base |
-| ultimoLogin | Date | &#8594;  | Nueva fecha de la última utilización de la base |
-| membrecias | Integer array | &#8594;  | Números de referencia de los grupos a los que pertenece el usuario |
-| grupoPropietario | Integer | &#8594;  | Número de referencia del grupo propietario del usuario |
+| refUsuario | Integer | &#8596; | *in:* Unique ID number of user account, -1 for adding a user <br/>*out:* Unique ID number of added user account (if any) |
+| nombre | Text | &#8594; | Nuevo nombre de usuario |
+| inicio | Text | &#8594; | Nombre del nuevo método de inicio |
+| contraseña | Text | &#8594; | Nueva contraseña (encriptada) o * para no modificar la contraseña |
+| nbLogin | Integer | &#8594; | Nuevo número de usos de la base |
+| ultimoLogin | Date | &#8594; | Nueva fecha de la última utilización de la base |
+| membrecias | Integer array | &#8594; | Números de referencia de los grupos a los que pertenece el usuario |
+| grupoPropietario | Integer | &#8594; | Número de referencia del grupo propietario del usuario |
 | Resultado | Integer | &#8592; | Número de referencia único del nuevo usuario |
 
 <!-- END REF-->

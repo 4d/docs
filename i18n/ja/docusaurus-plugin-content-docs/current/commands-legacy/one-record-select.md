@@ -5,11 +5,11 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードをカレントセレクションにする テーブル、または省略時デフォルトテーブル |
+| aTable | Table | &#8594; | カレントレコードをカレントセレクションにする テーブル、または省略時デフォルトテーブル |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-merge-cells
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP TABLE MERGE CELLS.Syntax-->**WP TABLE MERGE CELLS** ( *targetObj* ) | ( *tableRef* ; *startColumn* ; *startRow* {; *columnCount*{; *rowCount*}} )<!-- END REF-->
+<!--REF #_command_.WP TABLE MERGE CELLS.Syntax-->**WP TABLE MERGE CELLS** ( *targetObj* : Object ) | ( *tableRef* : Object ; *startColumn* : Integer ; *startRow* : Integer {; *columnCount* : Integer{; *rowCount* : Integer}} )<!-- END REF-->
 <!--REF #_command_.WP TABLE MERGE CELLS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

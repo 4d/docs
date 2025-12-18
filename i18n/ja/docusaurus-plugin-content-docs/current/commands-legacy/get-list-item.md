@@ -5,13 +5,13 @@ slug: /commands/get-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* ; *itemPos* ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<br/>**GET LIST ITEM** ( {* ;} *list* ; * ; *itemRef* ; *itemText* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM.Syntax-->**GET LIST ITEM** ( {* ;} *list* : Integer, Text ; *itemPos* : 演算子, 倍長整数 ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**GET LIST ITEM** ( {* ;} *list* : Integer, Text ; * ; *itemRef* : Integer ; *itemText* : Text {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemPos &#124; * | 演算子, 倍長整数 | &#8594;  | 展開/折りたたまれたリスト中の項目位置 * の場合、リスト中のカレント項目 |
+| * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemPos &#124; * | 演算子, 倍長整数 | &#8594; | 展開/折りたたまれたリスト中の項目位置 * の場合、リスト中のカレント項目 |
 | itemRef | Integer | &#8592; | 項目参照番号 |
 | itemText | Text | &#8592; | リスト項目テキスト |
 | sublist | Integer | &#8592; | サブリストリスト参照番号 (サブリストがある場合) |

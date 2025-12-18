@@ -5,11 +5,11 @@ slug: /commands/abort-process-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* )<!-- END REF-->
+<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* : Integer )<!-- END REF-->
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| uniqueID | Integer | &#8594;  | 固有のプロセスID |
+| uniqueID | Integer | &#8594; | 固有のプロセスID |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *paramImpression* ) : Integer<!-- END REF-->
+<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *paramImpression* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

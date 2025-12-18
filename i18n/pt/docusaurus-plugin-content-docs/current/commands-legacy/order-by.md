@@ -5,14 +5,14 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*tabela* ;}{ *campo* }{; > ou < }{; *campo2* ; > ou <2 ; ... ; *campoN* ; > ou <N}{; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*aTable* : Table ;}{; ...(*aField* : Field {; >,<}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual vai ordenar os registros selecionados, ou tabela Padrão, se omitido |
-| campo | Field | &#8594;  | Campo no qual estabelecer a ordem para cada nível |
-| > ou < | Operador | &#8594;  | Direção da ordem para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente |
-| * | Operador | &#8594;  | Continuar a bandeira de ordem |
+| tabela | Table | &#8594; | Tabela na qual vai ordenar os registros selecionados, ou tabela Padrão, se omitido |
+| campo | Field | &#8594; | Campo no qual estabelecer a ordem para cada nível |
+| > ou < | Operador | &#8594; | Direção da ordem para cada nível: > para ordenar em ordem ascendente, ou < para ordenar em ordem descendente |
+| * | Operador | &#8594; | Continuar a bandeira de ordem |
 
 <!-- END REF-->
 

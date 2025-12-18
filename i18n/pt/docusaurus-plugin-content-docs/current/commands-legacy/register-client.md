@@ -5,13 +5,13 @@ slug: /commands/register-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomeCliente* {; *periodo*}{; *} )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomeCliente* : Text {; *periodo* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeCliente | Text | &#8594;  | Nome da sessão 4D Client |
-| periodo | Integer | &#8594;  | ***Ignorado a partir da versão 11.3*** |
-| * | Operador | &#8594;  | Processo local |
+| nomeCliente | Text | &#8594; | Nome da sessão 4D Client |
+| periodo | Integer | &#8594; | ***Ignorado a partir da versão 11.3*** |
+| * | Operador | &#8594; | Processo local |
 
 <!-- END REF-->
 

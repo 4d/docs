@@ -5,15 +5,15 @@ slug: /commands/listbox-set-grid-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( {* ;} *object* ; *color* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( * ; *object* : Text ; *color* : Text, Integer ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID COLOR** ( *object* : Field, Variable ; *color* : Text, Integer ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| color | Text, Integer | &#8594;  | RGBカラー値 |
-| horizontal | Boolean | &#8594;  | 水平グリッドラインにカラーを適用 |
-| vertical | Boolean | &#8594;  | 垂直グリッドラインにカラーを適用 |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| color | Text, Integer | &#8594; | RGBカラー値 |
+| horizontal | Boolean | &#8594; | 水平グリッドラインにカラーを適用 |
+| vertical | Boolean | &#8594; | 垂直グリッドラインにカラーを適用 |
 
 <!-- END REF-->
 

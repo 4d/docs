@@ -5,11 +5,11 @@ slug: /commands/exp
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Exp.Syntax-->**Exp** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Exp.Syntax-->**Exp** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#8594;  | Nombre à évaluer |
+| nombre | Real | &#8594; | Nombre à évaluer |
 | Résultat | Real | &#8592; | Exponentielle de nombre |
 
 <!-- END REF-->

@@ -5,11 +5,11 @@ slug: /commands/default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *tabla* )<!-- END REF-->
+<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *tabla* : Table )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a definir como tabla por defecto |
+| tabla | Table | &#8594; | Tabla a definir como tabla por defecto |
 
 <!-- END REF-->
 

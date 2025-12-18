@@ -5,14 +5,14 @@ slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *ratonX* ; *ratonY* ; *botonRaton* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *ratonX* : Real ; *ratonY* : Real ; *botonRaton* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.MOUSE POSITION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ratonX | Real | &#8592; | Coordenada horizontal del ratón |
 | ratonY | Real | &#8592; | Coordenada vertical del ratón |
 | botonRaton | Integer | &#8592; | Estado del botón del ratón: 0 = Botón arriba 1 = Botón presionado 2 = Botón derecho presionado 3 = Los dos botones presionados |
-| * | Operador | &#8594;  | Si se especifica, utlizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
+| * | Operador | &#8594; | Si se especifica, utlizar el sistema de coordenadas globales Si se omite, utilizar el sistema de coordenadas locales |
 
 <!-- END REF-->
 

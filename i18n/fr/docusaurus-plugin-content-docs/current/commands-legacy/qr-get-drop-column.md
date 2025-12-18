@@ -5,11 +5,11 @@ slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *zone* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *zone* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | Résultat | Integer | &#8592; | Emplacement du "déposer" |
 
 <!-- END REF-->

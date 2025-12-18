@@ -5,11 +5,11 @@ slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *sélecteur* )} : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** ( *sélecteur* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &#8594;  | Catégorie d’objet |
+| sélecteur | Integer | &#8594; | Catégorie d’objet |
 | Résultat | Text | &#8592; | Nom de l’objet |
 
 <!-- END REF-->

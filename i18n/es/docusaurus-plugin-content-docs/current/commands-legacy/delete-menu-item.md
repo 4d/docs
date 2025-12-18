@@ -5,13 +5,13 @@ slug: /commands/delete-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE MENU ITEM.Syntax-->**DELETE MENU ITEM** ( *menu* ; *lineamenu* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.DELETE MENU ITEM.Syntax-->**DELETE MENU ITEM** ( *menu* : Integer, Text ; *lineamenu* : Integer {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE MENU ITEM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 por el último elemento añadido |
-| proceso | Integer | &#8594;  | Número de referencia de proceso |
+| menu | Integer, Text | &#8594; | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 por el último elemento añadido |
+| proceso | Integer | &#8594; | Número de referencia de proceso |
 
 <!-- END REF-->
 

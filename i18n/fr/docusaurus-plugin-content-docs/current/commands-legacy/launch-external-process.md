@@ -5,12 +5,12 @@ slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomFichier* {; *fluxEntrée* {; *fluxSortie* {; *fluxErreur*}}}{; *pid*} )<!-- END REF-->
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomFichier* : Text {; *fluxEntrée* : Text, Blob {; *fluxSortie* : Text, Blob {; *fluxErreur* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Chemin d’accès et arguments du fichier à lancer |
-| fluxEntrée | Text, Blob | &#8594;  | Flux d’entrée (stdin) |
+| nomFichier | Text | &#8594; | Chemin d’accès et arguments du fichier à lancer |
+| fluxEntrée | Text, Blob | &#8594; | Flux d’entrée (stdin) |
 | fluxSortie | Text, Blob | &#8592; | Flux de sortie (stdout) |
 | fluxErreur | Text, Blob | &#8592; | Flux d’erreur (stderr) |
 | pid | Integer | &#8592; | Identifiant unique du process externe |

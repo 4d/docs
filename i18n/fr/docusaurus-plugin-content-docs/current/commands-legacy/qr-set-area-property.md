@@ -5,13 +5,13 @@ slug: /commands/qr-set-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *zone* ; *propriété* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET AREA PROPERTY.Syntax-->**QR SET AREA PROPERTY** ( *zone* : Integer ; *propriété* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET AREA PROPERTY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| propriété | Integer | &#8594;  | Elément d'interface |
-| valeur | Integer | &#8594;  | 1 = affiché, 0 = caché |
+| zone | Integer | &#8594; | Référence de la zone |
+| propriété | Integer | &#8594; | Elément d'interface |
+| valeur | Integer | &#8594; | 1 = affiché, 0 = caché |
 
 <!-- END REF-->
 

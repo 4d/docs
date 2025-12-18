@@ -5,16 +5,16 @@ slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* ; *image1* ; *opérateur* ; *image2* {; *décalHoriz* ; *décalVert*} )<!-- END REF-->
+<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imageRésultat* : Picture ; *image1* : Picture ; *opérateur* : Integer ; *image2* : Picture {; *décalHoriz* : Integer ; *décalVert* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | imageRésultat | Picture | &#8592; | Image résultant de la combinaison |
-| image1 | Picture | &#8594;  | Première image à combiner |
-| opérateur | Integer | &#8594;  | Type de combinaison à effectuer |
-| image2 | Picture | &#8594;  | Seconde image à combiner |
-| décalHoriz | Integer | &#8594;  | Décalage horizontal pour la superposition |
-| décalVert | Integer | &#8594;  | Décalage vertical pour la superposition |
+| image1 | Picture | &#8594; | Première image à combiner |
+| opérateur | Integer | &#8594; | Type de combinaison à effectuer |
+| image2 | Picture | &#8594; | Seconde image à combiner |
+| décalHoriz | Integer | &#8594; | Décalage horizontal pour la superposition |
+| décalVert | Integer | &#8594; | Décalage vertical pour la superposition |
 
 <!-- END REF-->
 

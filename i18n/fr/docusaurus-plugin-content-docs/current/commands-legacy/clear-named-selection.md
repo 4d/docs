@@ -5,11 +5,11 @@ slug: /commands/clear-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *nom* )<!-- END REF-->
+<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *nom* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &#8594;  | Nom de la sélection temporaire à effacer |
+| nom | Text | &#8594; | Nom de la sélection temporaire à effacer |
 
 <!-- END REF-->
 

@@ -5,14 +5,14 @@ slug: /commands/get-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* ; *lineamenu* ; *refIcono* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* : Integer, Text ; *lineamenu* : Integer ; *refIcono* : Text, Integer {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Referencia de menú o número de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 para el último elemento añadido al menú |
+| menu | Integer, Text | &#8594; | Referencia de menú o número de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 para el último elemento añadido al menú |
 | refIcono | Text, Integer | &#8592; | Nombre o número de imagen asociado con la línea de menú |
-| proceso | Integer | &#8594;  | Número de proceso |
+| proceso | Integer | &#8594; | Número de proceso |
 
 <!-- END REF-->
 

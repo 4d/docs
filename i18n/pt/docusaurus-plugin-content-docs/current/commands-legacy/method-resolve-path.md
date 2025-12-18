@@ -5,16 +5,16 @@ slug: /commands/method-resolve-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *rota* ; *tipoMetodo* ; *prtTabela* ; *nomObjeto* ; *nomObjetoForm* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD RESOLVE PATH.Syntax-->**METHOD RESOLVE PATH** ( *rota* : Text ; *tipoMetodo* : Integer ; *prtTabela* : Pointer ; *nomObjeto* : Text ; *nomObjetoForm* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD RESOLVE PATH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#8594;  | Rota a resolver |
+| rota | Text | &#8594; | Rota a resolver |
 | tipoMetodo | Integer | &#8592; | Seletor tipo de objeto |
 | prtTabela | Pointer | &#8592; | Referência de tabela |
 | nomObjeto | Text | &#8592; | Nome de formulário ou método de base |
 | nomObjetoForm | Text | &#8592; | Nome de objeto de formulário |
-| * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| * | Operador | &#8594; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

@@ -5,11 +5,11 @@ slug: /commands/web-send-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *archivohtml* )<!-- END REF-->
+<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *archivohtml* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| archivohtml | Text | &#8594;  | Ruta de acceso HTML al archivo HTML o cadena vacía para terminar SEND HTML FILE |
+| archivohtml | Text | &#8594; | Ruta de acceso HTML al archivo HTML o cadena vacía para terminar SEND HTML FILE |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/component-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *arrayComponentes* )<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *arrayComponentes* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *objeto* ; *puntTabla* ; *subFormDet* {; *subFormList*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *objeto* : Text ; *puntTabla* ; *subFormDet* : Text {; *subFormList* : Text} )<br/>**OBJECT GET SUBFORM** ( *objeto* : Field, Variable ; *puntTabla* ; *subFormDet* : Text {; *subFormList* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | puntTable | Table | &#8592; | Puntero a la tabla del formulario |
 | subFormDet | Text | &#8592; | Nombre del formulario detallado del subformulario |
 | subFormList | Text | &#8592; | Nombre del formulario listado del subformulario (formulario tabla) |

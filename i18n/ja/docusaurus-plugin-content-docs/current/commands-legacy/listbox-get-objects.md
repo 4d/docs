@@ -5,12 +5,12 @@ slug: /commands/listbox-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( {* ;} *object* ; *arrObjectNames* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( * ; *object* : Text ; *arrObjectNames* : Text array )<br/>**LISTBOX GET OBJECTS** ( *object* : Field, Variable ; *arrObjectNames* : Text array )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時、 Object はオブジェクト名(文字列)<br/>省略時、 Object は変数 |
-| object | any | &#8594;  | オブジェクト名(* 指定時)、<br/>または変数(* 省略時) |
+| * | 演算子 | &#8594; | 指定時、 Object はオブジェクト名(文字列)<br/>省略時、 Object は変数 |
+| object | any | &#8594; | オブジェクト名(* 指定時)、<br/>または変数(* 省略時) |
 | arrObjectNames | Text array | &#8592; | リストボックスを構成するサブオブジェクト名(ヘッダー、列、フッター) |
 
 <!-- END REF-->

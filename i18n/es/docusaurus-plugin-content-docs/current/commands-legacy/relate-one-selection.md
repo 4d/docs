@@ -5,12 +5,12 @@ slug: /commands/relate-one-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tablaN* ; *tabla1* )<!-- END REF-->
+<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tablaN* : Table ; *tabla1* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tablaN | Table | &#8594;  | Nombre de la tabla Muchos (donde inicia la relación) |
-| tabla1 | Table | &#8594;  | Nombre de la tabla Uno (donde termina la relación) |
+| tablaN | Table | &#8594; | Nombre de la tabla Muchos (donde inicia la relación) |
+| tabla1 | Table | &#8594; | Nombre de la tabla Uno (donde termina la relación) |
 
 <!-- END REF-->
 

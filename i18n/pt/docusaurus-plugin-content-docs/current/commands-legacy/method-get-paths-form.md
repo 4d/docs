@@ -5,16 +5,15 @@ slug: /commands/method-get-paths-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTabela* ;} *arrRotas* {; *filtro*}{; *marcador*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*aTabela* ;} *arrRotas* : Text array {; *filtro* : Text}{; *marcador* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Referência de tabela |
+| aTable | Table | &#8594; | Referência de tabela |
 | arrRotas | Text array | &#8592; | Arrays de rotas e nomes dos métodos |
-| filtro | Text | &#8594;  | Filtros de nomes |
-| marcador | Real | &#8594;  | Valor mínimo de marcador |
-| &#8592; | Novo valor atual |
-| * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| filtro | Text | &#8594; | Filtros de nomes |
+| marcador | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
+| * | Operador | &#8594; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 

@@ -5,15 +5,15 @@ slug: /commands/st-set-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( {* ;} *objeto* ; *novoTexto* {; *inicioSel* {; *fimSel*}} )<!-- END REF-->
+<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( * ; *objeto* : Text ; *novoTexto* {; *inicioSel* : Integer {; *fimSel* : Integer}} )<br/>**ST SET PLAIN TEXT** ( *objeto* : Field, Variable ; *novoTexto* {; *inicioSel* : Integer {; *fimSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se não, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
-| novoText | Text | &#8594;  | Texto a inserir |
-| inicioSel | Integer | &#8594;  | Inicio da seleção |
-| fimSel | Integer | &#8594;  | final da seleção |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se não, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
+| novoText | Text | &#8594; | Texto a inserir |
+| inicioSel | Integer | &#8594; | Inicio da seleção |
+| fimSel | Integer | &#8594; | final da seleção |
 
 <!-- END REF-->
 

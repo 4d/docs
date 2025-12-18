@@ -5,12 +5,12 @@ slug: /commands/set-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
+<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セッション中の"blob"データの優先度値を設定したいテーブル |
-| priority | Integer | &#8594;  | テーブル内のBLOBのキャッシュ優先度 |
+| aTable | Table | &#8594; | セッション中の"blob"データの優先度値を設定したいテーブル |
+| priority | Integer | &#8594; | テーブル内のBLOBのキャッシュ優先度 |
 
 <!-- END REF-->
 

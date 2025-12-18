@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table range.Syntax-->**WP Table range** ( *targetObj* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WP Table range.Syntax-->**WP Table range** ( *targetObj* : Object ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Table range.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

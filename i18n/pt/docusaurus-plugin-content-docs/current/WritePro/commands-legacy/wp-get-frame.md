@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get frame.Syntax-->**WP Get frame** ( {* ;} *wpArea* {; *textBoxID*} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Get frame.Syntax-->**WP Get frame** ( {* ;} *wpArea* : Text {; *textBoxID* : String} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get frame.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,11 +5,11 @@ slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *arrayFuentes* )<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *arrayFuentes* : Text array )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| arrayFuentes | Text array | &#8594;  | Array de nombres de fuentes |
+| arrayFuentes | Text array | &#8594; | Array de nombres de fuentes |
 
 <!-- END REF-->
 

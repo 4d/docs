@@ -5,12 +5,12 @@ slug: /commands/set-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *imagem* ; *nomArquivo* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *imagem* : Picture, Picture ; *nomArquivo* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture, Picture | &#8594;  | Imagem para à qual definir o nome por padrão |
-| nomArquivo | Text | &#8594;  | Nome da imagem por padrão |
+| imagem | Picture, Picture | &#8594; | Imagem para à qual definir o nome por padrão |
+| nomArquivo | Text | &#8594; | Nome da imagem por padrão |
 
 <!-- END REF-->
 

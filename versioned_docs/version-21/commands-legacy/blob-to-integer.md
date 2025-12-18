@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to integer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB from which to get the integer value |
+| Blob | Blob | &#8594;  | BLOB from which to get the integer value |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 | ||| New offset after reading |

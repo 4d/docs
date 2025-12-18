@@ -5,12 +5,12 @@ slug: /commands/object-get-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *objeto* : any ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
 | Resultado | Integer | &#8592; | Estilo de la fuente |
 
 <!-- END REF-->

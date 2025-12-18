@@ -5,11 +5,11 @@ slug: /commands/get-subrecord-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *champID* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get subrecord key.Syntax-->**Get subrecord key** ( *champID* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get subrecord key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champID | Field | &#8594;  | Champ de type "Lien sous-table" ou de type "Entier long" d’une ancienne relation sous-table |
+| champID | Field | &#8594; | Champ de type "Lien sous-table" ou de type "Entier long" d’une ancienne relation sous-table |
 | Entier long | Integer | &#8592; | Clé interne du lien |
 
 <!-- END REF-->

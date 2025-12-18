@@ -5,11 +5,11 @@ slug: /commands/volume-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* ; *taille* ; *utilisé* ; *libre* )<!-- END REF-->
+<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* : Text ; *taille* : Real ; *utilisé* : Real ; *libre* : Real )<!-- END REF-->
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| volume | Text | &#8594;  | Nom du volume |
+| volume | Text | &#8594; | Nom du volume |
 | taille | Real | &#8592; | Taille du volume exprimée en octets |
 | utilisé | Real | &#8592; | Place utilisée sur le volume exprimée en octets |
 | libre | Real | &#8592; | Place libre sur le volume exprimée en octets |

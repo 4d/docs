@@ -5,11 +5,11 @@ slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* )<!-- END REF-->
+<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* : Integer )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| limite | Integer | &#8594;  | Número de registros, ou 0 se não houver limite |
+| limite | Integer | &#8594; | Número de registros, ou 0 se não houver limite |
 
 <!-- END REF-->
 

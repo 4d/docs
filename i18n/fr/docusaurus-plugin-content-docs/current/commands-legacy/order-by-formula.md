@@ -5,13 +5,13 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *laTable* ; *formule* {; > ou <}{; *formule2* ; > ou <2 ; ... ; *formuleN* ; > ou <N} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *laTable* : Table ; *formule* : Expression {; >,<} {; ...(*formula* : Expression {; >,<})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle trier la sélection d'enregistrements |
-| formule | Expression | &#8594;  | Formule de tri des enregistrements (peut être de type Alphanumérique, Réel, Entier, Entier long, Date, Heure ou Booléen) |
-| > ou < | Opérateur | &#8594;  | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
+| laTable | Table | &#8594; | Table de laquelle trier la sélection d'enregistrements |
+| formule | Expression | &#8594; | Formule de tri des enregistrements (peut être de type Alphanumérique, Réel, Entier, Entier long, Date, Heure ou Booléen) |
+| > ou < | Opérateur | &#8594; | Ordre de tri pour chaque niveau : > ordre croissant ou < ordre décroissant |
 
 <!-- END REF-->
 

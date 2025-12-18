@@ -5,7 +5,7 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) : any<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *aField* : Field ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

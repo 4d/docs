@@ -5,16 +5,16 @@ slug: /commands/insert-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* ; *depuesDe* ; *textoElem* {; *subMenu* {; *proceso*}}{; *} )<!-- END REF-->
+<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* : Integer ; *depuesDe* : Integer ; *textoElem* : Text {; *subMenu* : Text {; *proceso* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Número de menú o referencia de menú |
-| depuesDe | Integer | &#8594;  | Número de la línea de menú |
-| textoElem | Text | &#8594;  | Texto para la línea de menú a insertar |
-| subMenu | Text | &#8594;  | Referencia del submenú asociado con la línea |
-| proceso | Integer | &#8594;  | Número de referencia del proceso |
-| * | Operador | &#8594;  | Si se pasa: considerar metacaracteres como caracteres estándar |
+| menu | Integer | &#8594; | Número de menú o referencia de menú |
+| depuesDe | Integer | &#8594; | Número de la línea de menú |
+| textoElem | Text | &#8594; | Texto para la línea de menú a insertar |
+| subMenu | Text | &#8594; | Referencia del submenú asociado con la línea |
+| proceso | Integer | &#8594; | Número de referencia del proceso |
+| * | Operador | &#8594; | Si se pasa: considerar metacaracteres como caracteres estándar |
 
 <!-- END REF-->
 

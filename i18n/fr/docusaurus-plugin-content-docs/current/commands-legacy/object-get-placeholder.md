@@ -5,12 +5,12 @@ slug: /commands/object-get-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( {* ;} *objet* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( * ; *objet* : Text ) : Text<br/>**OBJECT Get placeholder** ( *objet* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get placeholder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Text | &#8592; | Texte d’exemple associé à l’objet |
 
 <!-- END REF-->

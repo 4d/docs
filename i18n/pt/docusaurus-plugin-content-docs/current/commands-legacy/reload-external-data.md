@@ -5,11 +5,11 @@ slug: /commands/reload-external-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *oCampo* )<!-- END REF-->
+<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *oCampo* : Text, Blob, Picture, Object )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| oCampo | Text, Blob, Picture, Object | &#8594;  | Campo para definir a localização de armazenamento |
+| oCampo | Text, Blob, Picture, Object | &#8594; | Campo para definir a localização de armazenamento |
 
 <!-- END REF-->
 

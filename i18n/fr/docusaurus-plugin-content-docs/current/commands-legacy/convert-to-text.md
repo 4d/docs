@@ -5,12 +5,12 @@ slug: /commands/convert-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* ; *jeuCaractères* ) : Text<!-- END REF-->
+<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* : Blob ; *jeuCaractères* : Text, Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB contenant un texte exprimé dans un jeu de caractères spécifique |
-| jeuCaractères | Text, Integer | &#8594;  | Nom ou Numéro du jeu de caractères de blob |
+| Blob | Blob | &#8594; | BLOB contenant un texte exprimé dans un jeu de caractères spécifique |
+| jeuCaractères | Text, Integer | &#8594; | Nom ou Numéro du jeu de caractères de blob |
 | Résultat | Text | &#8592; | Contenu de blob exprimé dans le jeu de caractères 4D |
 
 <!-- END REF-->

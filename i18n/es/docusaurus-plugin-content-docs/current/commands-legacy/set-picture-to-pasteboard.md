@@ -5,11 +5,11 @@ slug: /commands/set-picture-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *imagen* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO PASTEBOARD.Syntax-->**SET PICTURE TO PASTEBOARD** ( *imagen* : Picture )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#8594;  | Imagen a copiar en el portapapeles |
+| imagen | Picture | &#8594; | Imagen a copiar en el portapapeles |
 
 <!-- END REF-->
 

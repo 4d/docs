@@ -5,11 +5,11 @@ slug: /commands/receive-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** ( *tabela* : Table )}<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual receber o registro, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela na qual receber o registro, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 

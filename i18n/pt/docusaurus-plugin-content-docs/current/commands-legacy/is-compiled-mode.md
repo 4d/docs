@@ -5,11 +5,11 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ( * ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Retorna a informação do banco local |
+| * | Operador | &#8594; | Retorna a informação do banco local |
 | Resultado | Boolean | &#8592; | Compilado (True), Interpretado (False) |
 
 <!-- END REF-->

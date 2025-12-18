@@ -5,14 +5,14 @@ slug: /commands/qr-get-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* ; *colNum* ; *rowNum* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* : Integer ; *colNum* : Integer ; *rowNum* : Integer ; *property* : Integer ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNum | Integer | &#8594;  | カラム番号 |
-| rowNum | Integer | &#8594;  | 行番号 |
-| property | Integer | &#8594;  | プロパティ番号 |
+| area | Integer | &#8594; | エリア参照 |
+| colNum | Integer | &#8594; | カラム番号 |
+| rowNum | Integer | &#8594; | 行番号 |
+| property | Integer | &#8594; | プロパティ番号 |
 | 戻り値 | Integer, Text | &#8592; | 選択したプロパティの値 |
 
 <!-- END REF-->

@@ -5,14 +5,13 @@ slug: /commands/base64-decode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BASE64 DECODE.Syntax-->**BASE64 DECODE** ( *textoCodificado* {; *BLOB*}{; *} )<!-- END REF-->
+<!--REF #_command_.BASE64 DECODE.Syntax-->**BASE64 DECODE** ( *textoCodificado* : Text, Blob {; *BLOB* : Text, Blob}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 DECODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| textoCodificado | Text, Blob | &#8594;  | Texto que contém o BLOB codificado no formato Base64 |
-| &#8592; | Valor decodificado (se parâmetro decodificado for omitido) |
+| textoCodificado | Text, Blob | &#8596; | *in:* Encoded value to decode<br/>*out:* Decoded value (if decoded parameter omitted) |
 | Blob | Text, Blob | &#8592; | BLOB decodificado |
-| * | Operador | &#8594;  | Decodificado em formato Base64URL |
+| * | Operador | &#8594; | Decodificado em formato Base64URL |
 
 <!-- END REF-->
 

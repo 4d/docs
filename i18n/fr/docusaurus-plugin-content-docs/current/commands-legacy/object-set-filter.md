@@ -5,13 +5,13 @@ slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( {* ;} *objet* ; *filtreSaisie* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *objet* : Text ; *filtreSaisie* : Text )<br/>**OBJECT SET FILTER** ( *objet* : Field, Variable ; *filtreSaisie* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| filtreSaisie | Text | &#8594;  | Nouveau filtre de saisie pour la zone saisissable |
+| * | Opérateur | &#8594; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| filtreSaisie | Text | &#8594; | Nouveau filtre de saisie pour la zone saisissable |
 
 <!-- END REF-->
 

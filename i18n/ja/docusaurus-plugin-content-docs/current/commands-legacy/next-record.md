@@ -5,11 +5,11 @@ slug: /commands/next-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** ( *aTable* : Table )}<!-- END REF-->
 <!--REF #_command_.NEXT RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードをセレクションの次のレコードに 移動するテーブル、省略時はデフォルトテーブル |
+| aTable | Table | &#8594; | カレントレコードをセレクションの次のレコードに 移動するテーブル、省略時はデフォルトテーブル |
 
 <!-- END REF-->
 

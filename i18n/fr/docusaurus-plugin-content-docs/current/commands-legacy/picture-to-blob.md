@@ -5,13 +5,13 @@ slug: /commands/picture-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *image* ; *blobImage* ; *codec* )<!-- END REF-->
+<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *image* : Picture ; *blobImage* : Blob ; *codec* : Text )<!-- END REF-->
 <!--REF #_command_.PICTURE TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture | &#8594;  | Champ ou variable image |
+| image | Picture | &#8594; | Champ ou variable image |
 | blobImage | Blob | &#8592; | BLOB devant contenir l’image convertie |
-| codec | Text | &#8594;  | Identifiant de codec d'image |
+| codec | Text | &#8594; | Identifiant de codec d'image |
 
 <!-- END REF-->
 

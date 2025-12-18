@@ -5,11 +5,11 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *ocampo* ) : Text<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *ocampo* : Text, Blob, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ocampo | Text, Blob, Picture | &#8594;  | Campo do qual obter o lugar de armazenamento |
+| ocampo | Text, Blob, Picture | &#8594; | Campo do qual obter o lugar de armazenamento |
 | Resultado | Text | &#8592; | Via de acesso completa do arquivo de armazenamento externo |
 
 <!-- END REF-->

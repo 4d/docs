@@ -5,11 +5,11 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *cadeia* ) : Integer<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *cadeia* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeia | Text | &#8594;  | Cadeia para a qual vai retornar o comprimento |
+| cadeia | Text | &#8594; | Cadeia para a qual vai retornar o comprimento |
 | Resultado | Integer | &#8592; | Comprimento da função |
 
 <!-- END REF-->

@@ -5,11 +5,11 @@ slug: /commands/is-new-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is new record.Syntax-->**Is new record** {( *tabela* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is new record.Syntax-->**Is new record** ( *tabela* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is new record.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela do registro a ser examinado ou tabela Padrão se o parâmetro é omitido |
+| tabela | Table | &#8594; | Tabela do registro a ser examinado ou tabela Padrão se o parâmetro é omitido |
 | Resultado | Boolean | &#8592; | Verdadeiro se o registro está sendo criado, ou então Falso |
 
 <!-- END REF-->

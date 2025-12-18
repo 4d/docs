@@ -5,12 +5,12 @@ slug: /commands/set-about
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *textoElem* ; *metodo* )<!-- END REF-->
+<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *textoElem* : Text ; *metodo* : Text )<!-- END REF-->
 <!--REF #_command_.SET ABOUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| textoElem | Text | &#8594;  | Nueva línea de menú Acerca de |
-| metodo | Text | &#8594;  | Nombre del método a ejecutar cuando se elije la línea |
+| textoElem | Text | &#8594; | Nueva línea de menú Acerca de |
+| metodo | Text | &#8594; | Nombre del método a ejecutar cuando se elije la línea |
 
 <!-- END REF-->
 

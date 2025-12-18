@@ -5,7 +5,7 @@ slug: /commands/export-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT DIF.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

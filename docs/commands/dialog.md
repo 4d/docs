@@ -4,7 +4,7 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 <!--REF #_command_.DIALOG.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

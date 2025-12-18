@@ -5,13 +5,13 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( manyTable | manyField ; *one* ; *many* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( manyTable | manyField ; *one* : Integer ; *many* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyTable &#124; manyField | テーブル, フィールド | &#8594;  | リレーションの開始テーブル, または リレーションの開始フィールド |
-| one | Integer | &#8594;  | テーブルまたはフィールドを開始点とする n対1リレーションの状態 |
-| many | Integer | &#8594;  | テーブルまたはフィールドを開始点とする 1対nリレーションの状態 |
+| manyTable &#124; manyField | テーブル, フィールド | &#8594; | リレーションの開始テーブル, または リレーションの開始フィールド |
+| one | Integer | &#8594; | テーブルまたはフィールドを開始点とする n対1リレーションの状態 |
+| many | Integer | &#8594; | テーブルまたはフィールドを開始点とする 1対nリレーションの状態 |
 
 <!-- END REF-->
 

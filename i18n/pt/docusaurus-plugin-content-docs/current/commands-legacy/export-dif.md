@@ -5,12 +5,12 @@ slug: /commands/export-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*tabela* ;} *documento* )<!-- END REF-->
+<!--REF #_command_.EXPORT DIF.Syntax-->**EXPORT DIF** ( {*tabela* : Table ;} *documento* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT DIF.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual exportar dados, ou tabela padrão, se omitida |
-| documento | Text | &#8594;  | documento DIF que recebe os dados |
+| tabela | Table | &#8594; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
+| documento | Text | &#8594; | documento DIF que recebe os dados |
 
 <!-- END REF-->
 

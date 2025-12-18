@@ -5,13 +5,13 @@ slug: /commands/get-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* ; *itemRef* ) : Text<br/>**Get list item font** ( * ; *list* ; * ) : Text<!-- END REF-->
+<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* : Integer, Text ; *itemRef* : 倍長整数, 演算子 ) : Text<br/>**Get list item font** ( * ; *list* : Integer, Text ; * ) : Text<!-- END REF-->
 <!--REF #_command_.Get list item font.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時) または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#8594;  | 項目参照番号 または 0 の場合最後に追加された項目 または *の場合リストのカレント項目 |
+| * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時) または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 倍長整数, 演算子 | &#8594; | 項目参照番号 または 0 の場合最後に追加された項目 または *の場合リストのカレント項目 |
 | 戻り値 | Text | &#8592; | フォント名 |
 
 <!-- END REF-->

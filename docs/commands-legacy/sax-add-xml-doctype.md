@@ -5,7 +5,7 @@ slug: /commands/sax-add-xml-doctype
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* ; *docType* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* : Time ; *docType* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElemento* ; *xRota* {; *nomeAtrib* ; *valorAtrib*} {; *nomeAtrib2* ; *valorAtrib2* ; ... ; *nomeAtribN* ; *valorAtribN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *refElemento* : Text ; *xRota* : Text {; *nomeAtrib* : Text ; *valorAtrib* : Text, Boolean, Integer, Real, Time, Date} {; ...(*nomeAtrib* : Text, *valorAtrib* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência do elemento Root XMLK |
-| xRota | Text | &#8594;  | Caminho xRota do elemento XML a ser criado |
-| nomeAtrib | Text | &#8594;  | Atributo a estabelecer |
-| valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Novo valor de atributo |
+| refElemento | Text | &#8594; | Referência do elemento Root XMLK |
+| xRota | Text | &#8594; | Caminho xRota do elemento XML a ser criado |
+| nomeAtrib | Text | &#8594; | Atributo a estabelecer |
+| valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594; | Novo valor de atributo |
 | Resultado | Text | &#8592; | Referência do elemento XML criado |
 
 <!-- END REF-->

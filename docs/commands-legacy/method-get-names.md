@@ -5,7 +5,7 @@ slug: /commands/method-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrNames* {; *filter*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrNames* : Text array {; *filter* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

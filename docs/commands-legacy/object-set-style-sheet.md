@@ -5,7 +5,7 @@ slug: /commands/object-set-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( {* ;} *object* ; *styleSheetName* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET STYLE SHEET.Syntax-->**OBJECT SET STYLE SHEET** ( * ; *object* : Text ; *styleSheetName* : Text )<br/>**OBJECT SET STYLE SHEET** ( *object* : Field, Variable ; *styleSheetName* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET STYLE SHEET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

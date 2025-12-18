@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-set-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *targetObj* ; *newText* ; *textPosition* {; *rangeUpdate*} )<!-- END REF-->
+<!--REF #_command_.WP SET TEXT.Syntax-->**WP SET TEXT** ( *targetObj* : Object ; *newText* : Text ; *textPosition* : Number {; *rangeUpdate* : Number} )<!-- END REF-->
 <!--REF #_command_.WP SET TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

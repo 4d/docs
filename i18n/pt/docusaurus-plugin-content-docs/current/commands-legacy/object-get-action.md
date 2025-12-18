@@ -5,12 +5,12 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get action** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se for especificado, objeto è um nome de objeto (string). Se omitido, objeto é um campo ou variável |
-| objeto | any | &#8594;  | Nome de Objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| * | Operador | &#8594; | Se for especificado, objeto è um nome de objeto (string). Se omitido, objeto é um campo ou variável |
+| objeto | any | &#8594; | Nome de Objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
 | Resultado | Text | &#8592; | Nome da ação padrão associada e (se houver) parâmetro string |
 
 <!-- END REF-->

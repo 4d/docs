@@ -5,11 +5,11 @@ slug: /commands/call-subform-container
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *event* )<!-- END REF-->
+<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *event* : Integer )<!-- END REF-->
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| event | Integer | &#8594;  | 送信するイベント |
+| event | Integer | &#8594; | 送信するイベント |
 
 <!-- END REF-->
 

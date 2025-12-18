@@ -5,13 +5,13 @@ slug: /commands/object-set-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( {* ;} *objeto* ; *radio* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *objeto* : Text ; *radio* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *objeto* : Field, Variable ; *radio* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Campo o variable (si se omite *) |
-| radio | Integer | &#8594;  | Nuevo radio de esquinas redondeadas (en píxeles) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Campo o variable (si se omite *) |
+| radio | Integer | &#8594; | Nuevo radio de esquinas redondeadas (en píxeles) |
 
 <!-- END REF-->
 

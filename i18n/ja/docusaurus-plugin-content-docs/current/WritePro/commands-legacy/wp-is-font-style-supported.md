@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-is-font-style-supported
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported** ( *targetObj* ; *wpFontStyle* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported** ( *targetObj* : Object ; *wpFontStyle* : Integer ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

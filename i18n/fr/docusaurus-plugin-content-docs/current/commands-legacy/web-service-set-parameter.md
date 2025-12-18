@@ -5,13 +5,13 @@ slug: /commands/web-service-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE SET PARAMETER.Syntax-->**WEB SERVICE SET PARAMETER** ( *nom* ; *valeur* {; *typeSOAP*} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE SET PARAMETER.Syntax-->**WEB SERVICE SET PARAMETER** ( *nom* : Text ; *valeur* : Variable {; *typeSOAP* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &#8594;  | Nom du paramètre à inclure dans la requête SOAP |
-| valeur | Variable | &#8594;  | Variable 4D contenant la valeur du paramètre |
-| typeSOAP | Text | &#8594;  | Type SOAP du paramètre |
+| nom | Text | &#8594; | Nom du paramètre à inclure dans la requête SOAP |
+| valeur | Variable | &#8594; | Variable 4D contenant la valeur du paramètre |
+| typeSOAP | Text | &#8594; | Type SOAP du paramètre |
 
 <!-- END REF-->
 

@@ -5,14 +5,14 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* {; *arrayElem* {; *}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* : Integer, Text {; *arrayElem* : Integer array {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica: lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
-| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre del objeto tipo lista (si se pasa *) |
+| * | Operador | &#8594; | Si se especifica: lista es un nombre de objeto (cadena) Si se omite, lista es una referencia de lista |
+| lista | Integer, Text | &#8594; | Número de referencia de lista (si se omite *) o Nombre del objeto tipo lista (si se pasa *) |
 | arrayElem | Integer array | &#8592; | Si  se omite el segundo *: Array contiene las posiciones de los elementos seleccionados en la(s) lista(s) Si se pasa el segundo *: Array contiene las referencias de los elementos seleccionados |
-| * | Operador | &#8594;  | Si se omite: posición(es) de(l) (los) elemento(s) Si se pasa: referencia(s) de(l) (los) elemento(s) |
+| * | Operador | &#8594; | Si se omite: posición(es) de(l) (los) elemento(s) Si se pasa: referencia(s) de(l) (los) elemento(s) |
 | Resultado | Integer | &#8592; | Si se omite segundo *: posición del elemento seleccionado en la(s) lista(s) desplegada(s) Si se pasa el segundo *: Referencia del elemento seleccionado |
 
 <!-- END REF-->

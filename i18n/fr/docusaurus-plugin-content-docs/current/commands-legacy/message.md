@@ -5,11 +5,11 @@ slug: /commands/message
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* )<!-- END REF-->
+<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message à afficher |
+| message | Text | &#8594; | Message à afficher |
 
 <!-- END REF-->
 

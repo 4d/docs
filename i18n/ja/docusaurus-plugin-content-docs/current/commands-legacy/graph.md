@@ -5,14 +5,14 @@ slug: /commands/graph
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphArea* ; *graphNumber* ; *xLabels* {; *yElements*} {; *yElements2* ; ... ; *yElementsN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH.Syntax-->**GRAPH** ( *graphArea* : Picture ; *graphNumber* : Integer, Object ; *xLabels* : Array {; *...yElements* : Array} )<!-- END REF-->
 <!--REF #_command_.GRAPH.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| graphArea | Picture | &#8594;  | ピクチャー変数 |
-| graphNumber | Integer, Object | &#8594;  | 倍長整数:グラフタイプ番号 オブジェクト(64-bit版のみ):グラフ設定 |
-| xLabels | Array | &#8594;  | X軸ラベル |
-| yElements | Array | &#8594;  | グラフにするデータ (最大8個) |
+| graphArea | Picture | &#8594; | ピクチャー変数 |
+| graphNumber | Integer, Object | &#8594; | 倍長整数:グラフタイプ番号 オブジェクト(64-bit版のみ):グラフ設定 |
+| xLabels | Array | &#8594; | X軸ラベル |
+| yElements | Array | &#8594; | グラフにするデータ (最大8個) |
 
 <!-- END REF-->
 

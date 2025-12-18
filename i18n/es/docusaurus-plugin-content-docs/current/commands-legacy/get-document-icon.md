@@ -5,13 +5,13 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *rutaDoc* ; *icono* {; *tamaño*} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *rutaDoc* : Text ; *icono* : Picture, Picture {; *tamaño* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaDoc | Text | &#8594;  | Nombre o ruta de acceso del archivo del cual obtener el icono o cadena vacía para mostrar la caja de diálogo de apertura de archivos |
+| rutaDoc | Text | &#8594; | Nombre o ruta de acceso del archivo del cual obtener el icono o cadena vacía para mostrar la caja de diálogo de apertura de archivos |
 | icono | Picture, Picture | &#8592; | Icono de documentación |
-| tamaño | Integer | &#8594;  | Tamaño del icono (en píxeles) |
+| tamaño | Integer | &#8594; | Tamaño del icono (en píxeles) |
 
 <!-- END REF-->
 

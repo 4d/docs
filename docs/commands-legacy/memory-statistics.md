@@ -5,7 +5,7 @@ slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* : Integer ; *arrNames* : Text array ; *arrValues* : Real array ; *arrCount* : Real array )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

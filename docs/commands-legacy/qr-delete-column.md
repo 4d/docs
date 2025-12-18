@@ -5,7 +5,7 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *colNumber* )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* : Integer ; *colNumber* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

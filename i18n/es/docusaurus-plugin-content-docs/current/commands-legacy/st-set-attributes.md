@@ -5,16 +5,16 @@ slug: /commands/st-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( {* ;} *objeto* ; *inicioSel* ; *finSel* ; *nomAtrib* ; *valorAtrib* {; *nomAtrib2* ; *valorAtrib2* ; ... ; *nomAtribN* ; *valorAtribN*} )<!-- END REF-->
+<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *objeto* : Text ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Text ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *objeto* : Field, Variable ; *inicioSel* : Integer ; *finSel* : Integer ; *nomAtrib* : Text ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *), o Variable o campo Texto (si se omite *) |
-| inicioSel | Integer | &#8594;  | Inicio de la nueva selección de texto |
-| finSel | Integer | &#8594;  | Fin de la nueva selección de texto |
-| nomAtrib | Text | &#8594;  | Atributo a definir |
-| valorAtrib | Text, Integer | &#8594;  | Nuevo valor del atributo |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *), o Variable o campo Texto (si se omite *) |
+| inicioSel | Integer | &#8594; | Inicio de la nueva selección de texto |
+| finSel | Integer | &#8594; | Fin de la nueva selección de texto |
+| nomAtrib | Text | &#8594; | Atributo a definir |
+| valorAtrib | Text, Integer | &#8594; | Nuevo valor del atributo |
 
 <!-- END REF-->
 

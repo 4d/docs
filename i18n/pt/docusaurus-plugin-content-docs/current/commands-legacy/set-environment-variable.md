@@ -5,12 +5,12 @@ slug: /commands/set-environment-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *nomeVar* ; *valorVar* )<!-- END REF-->
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *nomeVar* : Text ; *valorVar* : Text )<!-- END REF-->
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeVar | Text | &#8594;  | nome da variável a estabelecer. |
-| valorVar | Text | &#8594;  | Valor da variável ou "" para resetar para o valor padrão |
+| nomeVar | Text | &#8594; | nome da variável a estabelecer. |
+| valorVar | Text | &#8594; | Valor da variável ou "" para resetar para o valor padrão |
 
 <!-- END REF-->
 

@@ -5,16 +5,16 @@ slug: /commands/qr-set-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* ; *coluna* ; *linha* ; *borda* ; linha | nivel  {; *cor*} )<!-- END REF-->
+<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* : Integer ; *coluna* : Integer ; *linha* : Inteiro longo ; *borda* : Integer ; linha | nivel  {; *cor* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR SET BORDERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| coluna | Integer | &#8594;  | Número de coluna |
-| linha | Integer | &#8594;  | Nº da linha |
-| borda | Integer | &#8594;  | Valor composto da borda |
-| linha &#124; nivel | Inteiro longo | &#8594;  | Largura da linha |
-| cor | Integer | &#8594;  | Cor da linha |
+| area | Integer | &#8594; | Referência da área |
+| coluna | Integer | &#8594; | Número de coluna |
+| linha | Integer | &#8594; | Nº da linha |
+| borda | Integer | &#8594; | Valor composto da borda |
+| linha &#124; nivel | Inteiro longo | &#8594; | Largura da linha |
+| cor | Integer | &#8594; | Cor da linha |
 
 <!-- END REF-->
 

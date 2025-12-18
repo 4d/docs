@@ -5,11 +5,11 @@ slug: /commands/method-called-on-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on error.Syntax-->**Method called on error** {( *portée* )} : Text<!-- END REF-->
+<!--REF #_command_.Method called on error.Syntax-->**Method called on error** ( *portée* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Method called on error.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| portée | Integer | &#8594;  | Portée de la méthode de gestion d'erreur |
+| portée | Integer | &#8594; | Portée de la méthode de gestion d'erreur |
 | Résultat | Text | &#8592; | Nom de la méthode d’appel sur erreur |
 
 <!-- END REF-->

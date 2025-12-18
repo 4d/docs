@@ -5,13 +5,13 @@ slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* ; *nativeTypes* {; *formatNames*} )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* : Text array ; *nativeTypes* : Text array {; *formatNames* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | 4Dsignatures | Text array | &#8592; | データタイプの4D シグネチャ |
 | nativeTypes | Text array | &#8592; | ネイティブデータタイプ |
-| formatNames | Text array | &#8592; | フォーマット名|
+| formatNames | Text array | &#8592; | フォーマット名 |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/uppercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *aString* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *aString* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aString | Text | &#8594;  | 英大文字にする文字列 |
-| * | 演算子 | &#8594;  | 渡されると、アクセント符号を保持 |
+| aString | Text | &#8594; | 英大文字にする文字列 |
+| * | 演算子 | &#8594; | 渡されると、アクセント符号を保持 |
 | 戻り値 | Text | &#8592; | 英大文字に変換した文字列 |
 
 <!-- END REF-->

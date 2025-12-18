@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-text-box
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE TEXT BOX.Syntax-->**WP DELETE TEXT BOX** ( *textBox* )<!-- END REF-->
+<!--REF #_command_.WP DELETE TEXT BOX.Syntax-->**WP DELETE TEXT BOX** ( *textBox* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE TEXT BOX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

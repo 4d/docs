@@ -5,11 +5,11 @@ slug: /commands/set-print-preview
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *aperçu* )<!-- END REF-->
+<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *aperçu* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aperçu | Boolean | &#8594;  | Impression à l'écran (Vrai) ou non (Faux) |
+| aperçu | Boolean | &#8594; | Impression à l'écran (Vrai) ou non (Faux) |
 
 <!-- END REF-->
 

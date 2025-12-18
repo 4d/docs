@@ -5,12 +5,12 @@ slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* {; *} )<!-- END REF-->
+<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathname | Text | &#8594;  | 表示するアイテムのパス名 |
-| * | 演算子 | &#8594;  | アイテムがフォルダの場合、その内容を表示 |
+| pathname | Text | &#8594; | 表示するアイテムのパス名 |
+| * | 演算子 | &#8594; | アイテムがフォルダの場合、その内容を表示 |
 
 <!-- END REF-->
 

@@ -5,12 +5,12 @@ slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aCampo* ; *rota* )<!-- END REF-->
+<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aCampo* : Text, Blob, Picture ; *rota* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aCampo | Text, Blob, Picture | &#8594;  | Campo para definir o local de armazenamento |
-| rota | Text, Integer | &#8594;  | Caminho e nome do arquivo d armazenamento externo ou0=usar definição da estrutura1=usar pasta padrão |
+| aCampo | Text, Blob, Picture | &#8594; | Campo para definir o local de armazenamento |
+| rota | Text, Integer | &#8594; | Caminho e nome do arquivo d armazenamento externo ou0=usar definição da estrutura1=usar pasta padrão |
 
 <!-- END REF-->
 

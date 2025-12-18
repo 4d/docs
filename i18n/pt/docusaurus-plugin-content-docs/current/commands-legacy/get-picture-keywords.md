@@ -5,13 +5,13 @@ slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *imagem* ; *arrayPalavrasChaves* {; *} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *imagem* : Picture, Picture ; *arrayPalavrasChaves* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture, Picture | &#8594;  | Imagem para à qual obter as palavras chaves associadas |
+| imagem | Picture, Picture | &#8594; | Imagem para à qual obter as palavras chaves associadas |
 | arrayPalavrasChaves | Text array | &#8592; | Array com as palavras chaves extraídas |
-| * | Operador | &#8594;  | Se passado = usar valores diferentes |
+| * | Operador | &#8594; | Se passado = usar valores diferentes |
 
 <!-- END REF-->
 

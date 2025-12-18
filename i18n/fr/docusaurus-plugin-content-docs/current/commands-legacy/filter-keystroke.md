@@ -5,11 +5,11 @@ slug: /commands/filter-keystroke
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *carFiltré* )<!-- END REF-->
+<!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *carFiltré* : Text )<!-- END REF-->
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| carFiltré | Text | &#8594;  | Caractère(s) de remplacement ou Chaîne vide pour annuler le filtrage clavier |
+| carFiltré | Text | &#8594; | Caractère(s) de remplacement ou Chaîne vide pour annuler le filtrage clavier |
 
 <!-- END REF-->
 

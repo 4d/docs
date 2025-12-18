@@ -5,12 +5,12 @@ slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *leChamp* ; *chemin* )<!-- END REF-->
+<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *leChamp* : Text, Blob, Picture ; *chemin* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp | Text, Blob, Picture | &#8594;  | Champ pour lequel définir le lieu de stockage |
-| chemin | Text, Integer | &#8594;  | Chemin d’accès et nom du fichier de stockage externe ou<br/>0 = utiliser la définition en structure<br/>1 = utiliser le dossier par défaut |
+| leChamp | Text, Blob, Picture | &#8594; | Champ pour lequel définir le lieu de stockage |
+| chemin | Text, Integer | &#8594; | Chemin d’accès et nom du fichier de stockage externe ou<br/>0 = utiliser la définition en structure<br/>1 = utiliser le dossier par défaut |
 
 <!-- END REF-->
 

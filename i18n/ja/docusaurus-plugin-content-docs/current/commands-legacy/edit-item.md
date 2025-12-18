@@ -5,13 +5,13 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *object* {; *item*} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *object* : Text {; *item* : Integer} )<br/>**EDIT ITEM** ( *object* : Field, Variable {; *item* : Integer} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定した場合オブジェクト名（文字列） 省略するとテーブルまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (*が指定されている場合) または テーブルまたは変数 (*が省略された場合) |
-| item | Integer | &#8594;  | 項目番号 |
+| * | 演算子 | &#8594; | 指定した場合オブジェクト名（文字列） 省略するとテーブルまたは変数 |
+| object | any | &#8594; | オブジェクト名 (*が指定されている場合) または テーブルまたは変数 (*が省略された場合) |
+| item | Integer | &#8594; | 項目番号 |
 
 <!-- END REF-->
 

@@ -5,19 +5,19 @@ slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( {* ;} *objeto* ; *posCol* ; *nomCol* ; *varCol* ; *nomCabe* ; *varCabe* {; *nomRodape* ; *varRodape*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *objeto* : Text ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomCabe* : Text ; *varCabe* : Integer, Pointer {; *nomRodape* : Text ; *varRodape* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *objeto* : Field, Variable ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomCabe* : Text ; *varCabe* : Integer, Pointer {; *nomRodape* : Text ; *varRodape* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| posCol | Integer | &#8594;  | Localização da nova coluna duplicada |
-| nomCol | Text | &#8594;  | Nome da nova coluna |
-| varCol | Array, Field, Variable, Pointer | &#8594;  | Nome da variável array da coluna ou campo ou variável |
-| nomCabe | Text | &#8594;  | Nome do objeto do cabeçalho da coluna |
-| varCabe | Integer, Pointer | &#8594;  | Variável do cabeçalho da coluna |
-| nomRodape | Text | &#8594;  | Nome do objeto do rodapé da coluna |
-| varRodape | Variable, Pointer | &#8594;  | Variável do rodapé da coluna |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| posCol | Integer | &#8594; | Localização da nova coluna duplicada |
+| nomCol | Text | &#8594; | Nome da nova coluna |
+| varCol | Array, Field, Variable, Pointer | &#8594; | Nome da variável array da coluna ou campo ou variável |
+| nomCabe | Text | &#8594; | Nome do objeto do cabeçalho da coluna |
+| varCabe | Integer, Pointer | &#8594; | Variável do cabeçalho da coluna |
+| nomRodape | Text | &#8594; | Nome do objeto do rodapé da coluna |
+| varRodape | Variable, Pointer | &#8594; | Variável do rodapé da coluna |
 
 <!-- END REF-->
 

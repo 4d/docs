@@ -5,7 +5,7 @@ slug: /commands/date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Date.Syntax-->**Date** ( *expression* ) : Date<!-- END REF-->
+<!--REF #_command_.Date.Syntax-->**Date** ( *expression* : Text, Date ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

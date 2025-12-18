@@ -5,13 +5,13 @@ slug: /commands/print-label
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( {*tabela* }{;}{ *documento* {; *|>}} )<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( {*tabela* : Table }{;}{ *documento* : Text {; *|>}} )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a imprimir, ou tabela padrão, se omitido |
-| documento | Text | &#8594;  | Nome do documento de etiquetas do disco |
-| *&#124;> | &#8594;  | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar os parâmetros de impressão |
+| tabela | Table | &#8594; | Tabela a imprimir, ou tabela padrão, se omitido |
+| documento | Text | &#8594; | Nome do documento de etiquetas do disco |
+| *&#124;> | -> | * para apagar as caixas de diálogo de impressão, ou > para não reiniciar os parâmetros de impressão | * to suppress the printing dialog box, or > to not reinitialize print settings |
 
 <!-- END REF-->
 

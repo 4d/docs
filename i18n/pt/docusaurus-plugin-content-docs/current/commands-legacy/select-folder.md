@@ -5,13 +5,13 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*mensagem* }{;}{ *rotaPadrao* {; *opções*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*mensagem* : Text }{;}{ *rotaPadrao* : Text, Integer {; *opções* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mensagem | Text | &#8594;  | Título da janela |
-| rotaPadrao | Text, Integer | &#8594;  | • Rota padrão ou • String vazia para mostrar a pasta de usuário padrão (“Meus documentos” em Windows, “Documentos” em Mac OS), ou • Número de rota memorizada |
-| opções | Integer | &#8594;  | Opções de seleção em Mac OS |
+| mensagem | Text | &#8594; | Título da janela |
+| rotaPadrao | Text, Integer | &#8594; | • Rota padrão ou • String vazia para mostrar a pasta de usuário padrão (“Meus documentos” em Windows, “Documentos” em Mac OS), ou • Número de rota memorizada |
+| opções | Integer | &#8594; | Opções de seleção em Mac OS |
 | Resultado | Text | &#8592; | Rota de acesso à pasta selecionada |
 
 <!-- END REF-->

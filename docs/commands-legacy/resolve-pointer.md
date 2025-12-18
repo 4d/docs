@@ -5,7 +5,7 @@ slug: /commands/resolve-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *aPointer* ; *varName* ; *tableNum* ; *fieldNum* )<!-- END REF-->
+<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *aPointer* : Pointer ; *varName* : Text ; *tableNum* : Integer ; *fieldNum* : Integer )<!-- END REF-->
 <!--REF #_command_.RESOLVE POINTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

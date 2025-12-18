@@ -5,13 +5,13 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( {* ;} *object* ; *enterable* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *object* : Text ; *enterable* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *object* : Field, Variable ; *enterable* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または テーブルまたはフィールドまたは変数 (* 省略時) |
-| enterable | Boolean, Integer | &#8594;  | ブール値 True=入力可, False=入力不可倍長整数: 0=入力不可, 1=入力可能, 2=入力不可かつフォーカス不可 |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または テーブルまたはフィールドまたは変数 (* 省略時) |
+| enterable | Boolean, Integer | &#8594; | ブール値 True=入力可, False=入力不可倍長整数: 0=入力不可, 1=入力可能, 2=入力不可かつフォーカス不可 |
 
 <!-- END REF-->
 

@@ -5,7 +5,7 @@ slug: /commands/wa-zoom-out
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM OUT.Syntax-->**WA ZOOM OUT** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.WA ZOOM OUT.Syntax-->**WA ZOOM OUT** ( * ; *object* : Text )<br/>**WA ZOOM OUT** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA ZOOM OUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

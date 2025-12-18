@@ -5,11 +5,11 @@ slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *document* ; *locked* ; *invisible* ; created on ; created at ; modified on ; modified at )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; created on ; created at ; modified on ; modified at )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | ドキュメントの名前 |
+| document | Text | &#8594; | ドキュメントの名前 |
 | locked | Boolean | &#8592; | Trueの場合はロック、またはFalseの場合はアンロック |
 | invisible | Boolean | &#8592; | Trueの場合は非表示、またはFalseは表示 |
 | created on | 日付 | &#8592; | 作成日 |

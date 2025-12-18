@@ -5,11 +5,11 @@ slug: /commands/get-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *selector* ; *textParam* )<!-- END REF-->
+<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *selector* : Integer ; *textParam* : Text )<!-- END REF-->
 <!--REF #_command_.GET MACRO PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | 使用するセレクション |
+| selector | Integer | &#8594; | 使用するセレクション |
 | textParam | Text | &#8592; | 返されたテキスト |
 
 <!-- END REF-->

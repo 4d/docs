@@ -5,13 +5,13 @@ slug: /commands/qr-set-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* ; *aColunas* {; *aOrdem*} )<!-- END REF-->
+<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* : Integer ; *aColunas* : Real array {; *aOrdem* : Real array} )<!-- END REF-->
 <!--REF #_command_.QR SET SORTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| aColunas | Real array | &#8594;  | Colunas |
-| aOrdem | Real array | &#8594;  | Ordenar |
+| area | Integer | &#8594; | Referência da área |
+| aColunas | Real array | &#8594; | Colunas |
+| aOrdem | Real array | &#8594; | Ordenar |
 
 <!-- END REF-->
 

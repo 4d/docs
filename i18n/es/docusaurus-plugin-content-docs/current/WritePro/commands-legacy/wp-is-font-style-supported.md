@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-is-font-style-supported
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported**  ( *rangoObj* ; *estiloFuenteWP* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Is font style supported.Syntax-->**WP Is font style supported**  ( *rangoObj* : Object ; *estiloFuenteWP* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Is font style supported.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

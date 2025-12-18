@@ -5,7 +5,7 @@ slug: /commands/set-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *languageCode* {; *} )<!-- END REF-->
+<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *languageCode* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

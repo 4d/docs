@@ -5,14 +5,14 @@ slug: /commands/listbox-delete-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( {* ;} *objeto* ; *posiçao* {; *numRows*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE ROWS.Syntax-->**LISTBOX DELETE ROWS** ( * ; *objeto* : Text ; *posiçao* : Integer {; *numRows* : Integer} )<br/>**LISTBOX DELETE ROWS** ( *objeto* : Field, Variable ; *posiçao* : Integer {; *numRows* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE ROWS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Variável (se * é omitido) |
-| posiçao | Integer | &#8594;  | Posição da fila a apagar |
-| numRows | Integer | &#8594;  | Número de linhas a excluir |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Variável (se * é omitido) |
+| posiçao | Integer | &#8594; | Posição da fila a apagar |
+| numRows | Integer | &#8594; | Número de linhas a excluir |
 
 <!-- END REF-->
 

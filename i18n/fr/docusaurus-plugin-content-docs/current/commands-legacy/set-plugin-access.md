@@ -5,12 +5,12 @@ slug: /commands/set-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* ; *groupe* )<!-- END REF-->
+<!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* : Integer ; *groupe* : Text )<!-- END REF-->
 <!--REF #_command_.SET PLUGIN ACCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#8594;  | Numéro du plug-in |
-| groupe | Text | &#8594;  | Nom du groupe à associer au plug-in |
+| plugIn | Integer | &#8594; | Numéro du plug-in |
+| groupe | Text | &#8594; | Nom du groupe à associer au plug-in |
 
 <!-- END REF-->
 

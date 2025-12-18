@@ -5,13 +5,13 @@ slug: /commands/split-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Split string.Syntax-->**Split string** ( *cadenaASeparar* ; *separador* {; *opciones*} ) : Collection<!-- END REF-->
+<!--REF #_command_.Split string.Syntax-->**Split string** ( *cadenaASeparar* : Text ; *separador* : Text {; *opciones* : Integer} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadenaASeparar | Text | &#8594;  | Valor de la cadena |
-| separador | Text | &#8594;  | Cadena en la que cadenaASeparar se divide. Si cadena vacía (""), cada carácter de cadenaASeparar es una subcadena |
-| opciones | Integer | &#8594;  | Opciones relativas a las cadenas vacías y espacios |
+| cadenaASeparar | Text | &#8594; | Valor de la cadena |
+| separador | Text | &#8594; | Cadena en la que cadenaASeparar se divide. Si cadena vacía (""), cada carácter de cadenaASeparar es una subcadena |
+| opciones | Integer | &#8594; | Opciones relativas a las cadenas vacías y espacios |
 | Resultado | Collection | &#8592; | Colección de subcadenas |
 
 <!-- END REF-->

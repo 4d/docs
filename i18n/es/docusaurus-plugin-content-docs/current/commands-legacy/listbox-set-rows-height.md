@@ -5,14 +5,14 @@ slug: /commands/listbox-set-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( {* ;} *objeto* ; *altura* {; *unidad*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( * ; *objeto* : Text ; *altura* : Integer {; *unidad* : Integer} )<br/>**LISTBOX SET ROWS HEIGHT** ( *objeto* : Field, Variable ; *altura* : Integer {; *unidad* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| altura | Integer | &#8594;  | Altura de la fila (en píxeles) |
-| unidad | Integer | &#8594;  | Unidad de valor de altura:0 o se omite = píxeles, 1 = líneas |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| altura | Integer | &#8594; | Altura de la fila (en píxeles) |
+| unidad | Integer | &#8594; | Unidad de valor de altura:0 o se omite = píxeles, 1 = líneas |
 
 <!-- END REF-->
 

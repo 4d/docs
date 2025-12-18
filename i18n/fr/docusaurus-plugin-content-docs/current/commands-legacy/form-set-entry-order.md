@@ -5,12 +5,12 @@ slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomsObjets* {; *numPage*} )<!-- END REF-->
+<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomsObjets* : Text array {; *numPage* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomsObjets | Text array | &#8594;  | Tableau des noms d'objets dans l'ordre de saisie souhaité |
-| numPage | Integer | &#8594;  | Numéro de la page dont vous voulez fixer l'ordre de saisie (page courante si omis) |
+| nomsObjets | Text array | &#8594; | Tableau des noms d'objets dans l'ordre de saisie souhaité |
+| numPage | Integer | &#8594; | Numéro de la page dont vous voulez fixer l'ordre de saisie (page courante si omis) |
 
 <!-- END REF-->
 

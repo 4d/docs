@@ -5,16 +5,14 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* ; *yCoord* ; *de* ; *para* )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* : Integer ; *yCoord* : Integer ; *de* : Integer ; *para* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| xCoord | Integer | &#8594;  | Coordenada horizontal de um ponto (Inicial) |
-| &#8592; | Coordenada horizontal de um ponto (Convertida) |
-| yCoord | Integer | &#8594;  | Coordenada vertical de um ponto (inicial) |
-| &#8592; | Coordenada vertical de um ponto (convertida) |
-| de | Integer | &#8594;  | Sistema de coordenadas que vai ser convertido |
-| para | Integer | &#8594;  | Sistema de coordenadas para o qual vai converter |
+| xCoord | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
+| yCoord | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
+| de | Integer | &#8594; | Sistema de coordenadas que vai ser convertido |
+| para | Integer | &#8594; | Sistema de coordenadas para o qual vai converter |
 
 <!-- END REF-->
 

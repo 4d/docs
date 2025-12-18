@@ -5,13 +5,13 @@ slug: /commands/ob-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *objeto* ; *propiedad* ; *valor* {; *propiedad2* ; *valor2* ; ... ; *propiedadN* ; *valorN*} )<!-- END REF-->
+<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *objeto* : Object, Object ; *propiedad* : Text ; *valor* : Expression {; ...(*propiedad* : Text, *valor* : Expression)} )<!-- END REF-->
 <!--REF #_command_.OB SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Object | &#8594;  | Objeto estructurado |
-| propiedad | Text | &#8594;  | Nombre de la propiedad a configurar |
-| valor | Expression | &#8594;  | Nuevo valor de la propiedad |
+| objeto | Object, Object | &#8594; | Objeto estructurado |
+| propiedad | Text | &#8594; | Nombre de la propiedad a configurar |
+| valor | Expression | &#8594; | Nuevo valor de la propiedad |
 
 <!-- END REF-->
 

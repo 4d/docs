@@ -5,7 +5,7 @@ slug: /commands/copy-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* ;} *name* )<!-- END REF-->
+<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

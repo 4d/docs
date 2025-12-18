@@ -5,12 +5,12 @@ slug: /commands/listbox-get-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( {* ;} *objeto* ; *numTabla* {; *nombre* {; *nomSel*}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( * ; *objeto* : Text ; *numTabla* : Integer {; *nombre* : Text {; *nomSel* : Text}} )<br/>**LISTBOX GET TABLE SOURCE** ( *objeto* : Field, Variable ; *numTabla* : Integer {; *nombre* : Text {; *nomSel* : Text}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
 | numTabla | Integer | &#8592; | Número de la tabla de la selección |
 | nombre | Text | &#8592; | Nombre de la selección temporal o "" para la selección actual |
 | nomSel | Text | &#8592; | Nombre del conjunto seleccionado |

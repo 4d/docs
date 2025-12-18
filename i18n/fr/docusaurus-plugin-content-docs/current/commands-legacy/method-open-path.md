@@ -5,13 +5,13 @@ slug: /commands/method-open-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *chemin* {; *line*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *chemin* : Text {; *line* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text | &#8594;  | Chemin de la méthode à ouvrir |
-| line | Number | &#8594;  | Line number |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| chemin | Text | &#8594; | Chemin de la méthode à ouvrir |
+| line | Real | &#8594; | Line number |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 

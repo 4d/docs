@@ -5,7 +5,7 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *aField* )}<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ( *aField* : Field )}<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

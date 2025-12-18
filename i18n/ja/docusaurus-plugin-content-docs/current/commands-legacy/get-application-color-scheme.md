@@ -5,11 +5,11 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | ホストデータベースのカラースキームを返す |
+| * | 演算子 | &#8594; | ホストデータベースのカラースキームを返す |
 | 戻り値 | Text | &#8592; | カレントアプリケーションのカラースキーム |
 
 <!-- END REF-->

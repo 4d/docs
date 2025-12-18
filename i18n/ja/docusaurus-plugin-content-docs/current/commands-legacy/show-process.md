@@ -5,11 +5,11 @@ slug: /commands/show-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.SHOW PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | 表示させるプロセスのプロセス番号 |
+| process | Integer | &#8594; | 表示させるプロセスのプロセス番号 |
 
 <!-- END REF-->
 

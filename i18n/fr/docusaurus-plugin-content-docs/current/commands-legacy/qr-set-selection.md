@@ -5,15 +5,15 @@ slug: /commands/qr-set-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *zone* ; *gauche* ; *haut* {; *droite* {; *bas*}} )<!-- END REF-->
+<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *zone* : Integer ; *gauche* : Integer ; *haut* : Integer {; *droite* : Integer {; *bas* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| gauche | Integer | &#8594;  | Limite gauche |
-| haut | Integer | &#8594;  | Limite supérieure |
-| droite | Integer | &#8594;  | Limite droite |
-| bas | Integer | &#8594;  | Limite inférieure |
+| zone | Integer | &#8594; | Référence de la zone |
+| gauche | Integer | &#8594; | Limite gauche |
+| haut | Integer | &#8594; | Limite supérieure |
+| droite | Integer | &#8594; | Limite droite |
+| bas | Integer | &#8594; | Limite inférieure |
 
 <!-- END REF-->
 

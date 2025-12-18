@@ -5,12 +5,12 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *objeto* ; *posicionLinea* {; *posicionH*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *objeto* : Text ; *posicionLinea* : Integer {; *posicionH* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *objeto* : Field, Variable ; *posicionLinea* : Integer {; *posicionH* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable o campo (si se omite *) |
 | posicionLinea | Integer | &#8592; | Número de la primera línea mostrada o desplazamiento vertical en píxeles (imágenes) |
 | posicionH | Integer | &#8592; | Número de la primera columna mostrada (list box) o desplazamiento horizontal en píxeles (imágenes) |
 

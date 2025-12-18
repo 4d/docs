@@ -5,13 +5,13 @@ slug: /commands/distinct-attribute-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *campoObjeto* ; *rota* ; *arrayValores* )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *campoObjeto* : Field ; *rota* : Text ; *arrayValores* : Array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoObjeto | Field | &#8594;  | Campo Objeto do qual obtém a lista de valores atributo distintos |
-| rota | Text | &#8594;  | Rota do atributo cujos valores distintos deseja obter. |
-| arrayValores | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | Valores distintos na rota atributo |
+| campoObjeto | Field | &#8594; | Campo Objeto do qual obtém a lista de valores atributo distintos |
+| rota | Text | &#8594; | Rota do atributo cujos valores distintos deseja obter. |
+| arrayValores | Array | &#8592; | Valores distintos na rota atributo |
 
 <!-- END REF-->
 

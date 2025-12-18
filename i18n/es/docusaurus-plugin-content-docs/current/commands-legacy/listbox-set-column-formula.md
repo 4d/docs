@@ -5,14 +5,14 @@ slug: /commands/listbox-set-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( {* ;} *objeto* ; *formula* ; *tipoDato* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET COLUMN FORMULA.Syntax-->**LISTBOX SET COLUMN FORMULA** ( * ; *objeto* : Text ; *formula* : Text ; *tipoDato* : Integer )<br/>**LISTBOX SET COLUMN FORMULA** ( *objeto* : Field, Variable ; *formula* : Text ; *tipoDato* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET COLUMN FORMULA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| formula | Text | &#8594;  | Fórmula 4D asociada a la columna |
-| tipoDato | Integer | &#8594;  | Tipo de resultado de la fórmula |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| formula | Text | &#8594; | Fórmula 4D asociada a la columna |
+| tipoDato | Integer | &#8594; | Tipo de resultado de la fórmula |
 
 <!-- END REF-->
 

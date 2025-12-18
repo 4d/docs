@@ -5,11 +5,11 @@ slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *janela* )}<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ( *janela* : Integer )}<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 
 <!-- END REF-->
 

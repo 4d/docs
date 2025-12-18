@@ -5,11 +5,11 @@ slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *list* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *list* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | テストするListRef値 |
+| list | Integer | &#8594; | テストするListRef値 |
 | 戻り値 | Boolean | &#8592; | TRUE: listは階層リスト FALSE: listは階層リストでない |
 
 <!-- END REF-->

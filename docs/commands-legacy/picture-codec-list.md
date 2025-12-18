@@ -5,7 +5,7 @@ slug: /commands/picture-codec-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *codecArray* {; *namesArray*}{; *} )<!-- END REF-->
+<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *codecArray* : Text array {; *namesArray* : Text array}{; *} )<!-- END REF-->
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,12 +5,12 @@ slug: /commands/wa-refresh-current-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA REFRESH CURRENT URL.Syntax-->**WA REFRESH CURRENT URL** ( {* ;} *objet* )<!-- END REF-->
+<!--REF #_command_.WA REFRESH CURRENT URL.Syntax-->**WA REFRESH CURRENT URL** ( * ; *objet* : Text )<br/>**WA REFRESH CURRENT URL** ( *objet* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA REFRESH CURRENT URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 
 <!-- END REF-->
 

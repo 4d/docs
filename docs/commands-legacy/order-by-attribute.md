@@ -5,7 +5,7 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* ;} *objectField* ; *attributePath* ; > or < {; *objectField2* ; *attributePath2* ; > or <2 ; ... ; *objectFieldN* ; *attributePathN* ; > or <N} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; >,<})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

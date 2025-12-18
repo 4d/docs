@@ -5,12 +5,12 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*aTable* ;} *sqlFormula* )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*aTable* : Table ;} *sqlFormula* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードセレクションを返すテーブル、または 省略された場合デフォルトテーブル |
-| sqlFormula | Text | &#8594;  | SELECTクエリのWHERE節を表す 有効なSQL検索フォーミュラ |
+| aTable | Table | &#8594; | レコードセレクションを返すテーブル、または 省略された場合デフォルトテーブル |
+| sqlFormula | Text | &#8594; | SELECTクエリのWHERE節を表す 有効なSQL検索フォーミュラ |
 
 <!-- END REF-->
 

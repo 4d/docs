@@ -5,12 +5,12 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; numPagina | * } )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; numPagina | * } )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | objectNames | Text array | &#8592; | Nomes de objeto ordenados por ordem de entrada |
-| numPagina &#124; * | Inteiro longo, Operador | &#8594;  | Número de página para o qual obter a ordem definida de entrada (página atual se omitida) |
+| numPagina &#124; * | Inteiro longo, Operador | &#8594; | Número de página para o qual obter a ordem definida de entrada (página atual se omitida) |
 
 <!-- END REF-->
 

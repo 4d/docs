@@ -5,12 +5,12 @@ slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*aTable* ;} *setName* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*aTable* : Table ;} *setName* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | ハイライトされたレコードを読みだすテーブル 省略した場合、カレントフォームのテーブル |
-| setName | Text | &#8594;  | ハイライトしたレコードを格納するセット |
+| aTable | Table | &#8594; | ハイライトされたレコードを読みだすテーブル 省略した場合、カレントフォームのテーブル |
+| setName | Text | &#8594; | ハイライトしたレコードを格納するセット |
 
 <!-- END REF-->
 

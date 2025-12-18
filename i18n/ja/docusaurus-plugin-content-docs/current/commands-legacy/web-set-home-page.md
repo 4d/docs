@@ -5,11 +5,11 @@ slug: /commands/web-set-home-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* )<!-- END REF-->
+<!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| homePage | Text | &#8594;  | ページの名前またはページへのHTMLアクセスパス または、""でカスタムホームページを送らない |
+| homePage | Text | &#8594; | ページの名前またはページへのHTMLアクセスパス または、""でカスタムホームページを送らない |
 
 <!-- END REF-->
 

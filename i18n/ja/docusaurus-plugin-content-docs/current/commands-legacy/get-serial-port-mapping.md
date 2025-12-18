@@ -5,7 +5,7 @@ slug: /commands/get-serial-port-mapping
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* ; *nameArray* )<!-- END REF-->
+<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

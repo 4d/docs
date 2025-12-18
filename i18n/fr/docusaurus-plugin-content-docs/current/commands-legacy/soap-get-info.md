@@ -5,11 +5,11 @@ slug: /commands/soap-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *numInfo* ) : Text<!-- END REF-->
+<!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *numInfo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SOAP Get info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numInfo | Integer | &#8594;  | Numéro du type d’information SOAP à lire |
+| numInfo | Integer | &#8594; | Numéro du type d’information SOAP à lire |
 | Résultat | Text | &#8592; | Information SOAP |
 
 <!-- END REF-->
