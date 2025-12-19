@@ -5,7 +5,7 @@ slug: /commands/restart-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** ( *time* : Integer {; *message* : Text} )}<!-- END REF-->
+<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** ({ *time* : Integer {; *message* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

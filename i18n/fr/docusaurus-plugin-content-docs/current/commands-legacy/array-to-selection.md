@@ -5,7 +5,7 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ( *tableau* : Array ; *leChamp* {; ...(*tableau* : Array, *leChamp*)}{; *} )}<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *tableau* : Array ; *leChamp* {; ...(*tableau* : Array, *leChamp*)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

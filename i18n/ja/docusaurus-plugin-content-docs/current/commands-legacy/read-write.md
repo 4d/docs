@@ -5,7 +5,7 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ( *aTable* : テーブル, 演算子 )}<br/>**READ WRITE** ( * )}<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : テーブル, 演算子 })<br/>**READ WRITE** ({ * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

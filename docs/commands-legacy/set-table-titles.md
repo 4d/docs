@@ -5,7 +5,7 @@ slug: /commands/set-table-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TABLE TITLES.Syntax-->**SET TABLE TITLES** ( *tableTitles* : Text array ; *tableNumbers* : Integer array {; *})}<!-- END REF-->
+<!--REF #_command_.SET TABLE TITLES.Syntax-->**SET TABLE TITLES** ({ *tableTitles* : Text array ; *tableNumbers* : Integer array {; *}})<!-- END REF-->
 <!--REF #_command_.SET TABLE TITLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

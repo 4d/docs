@@ -5,7 +5,7 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ( *array* : Array ; *aField* : Field {; ...(*array* : Array, *aField* : Field)}{; *} )}<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *aField* : Field {; ...(*array* : Array, *aField* : Field)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

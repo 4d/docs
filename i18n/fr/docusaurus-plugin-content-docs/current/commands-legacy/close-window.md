@@ -5,7 +5,7 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ( *fenêtre* : Integer )}<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

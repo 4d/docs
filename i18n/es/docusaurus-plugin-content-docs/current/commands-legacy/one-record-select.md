@@ -5,7 +5,7 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ( *tabla* : Table )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

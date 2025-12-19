@@ -5,7 +5,7 @@ slug: /commands/send-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ( *laTable* : Table )}<!-- END REF-->
+<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

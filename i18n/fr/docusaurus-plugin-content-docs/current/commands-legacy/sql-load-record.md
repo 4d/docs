@@ -5,7 +5,7 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ( *nombreEnr* : Integer )}<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ({ *nombreEnr* : Integer })<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

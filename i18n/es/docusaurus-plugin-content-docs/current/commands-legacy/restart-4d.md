@@ -5,7 +5,7 @@ slug: /commands/restart-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** ( *demora* : Integer {; *mensaje* : Text} )}<!-- END REF-->
+<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** ({ *demora* : Integer {; *mensaje* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

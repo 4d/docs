@@ -5,7 +5,7 @@ slug: /commands/minimize-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** ( *fenêtre* : Integer )}<!-- END REF-->
+<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

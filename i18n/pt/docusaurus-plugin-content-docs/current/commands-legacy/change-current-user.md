@@ -5,7 +5,7 @@ slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ( *usuario* : Text, Integer ; *senha* : Text )}<!-- END REF-->
+<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ({ *usuario* : Text, Integer ; *senha* : Text })<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/last-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ( *tabla* : Table )}<!-- END REF-->
+<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

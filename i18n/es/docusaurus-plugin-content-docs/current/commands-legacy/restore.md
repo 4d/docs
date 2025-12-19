@@ -5,7 +5,7 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ( *rutaArchivo* : Text {; *rutaCarpetaDest* : Text} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *rutaArchivo* : Text {; *rutaCarpetaDest* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

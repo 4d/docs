@@ -5,7 +5,7 @@ slug: /commands/redraw-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ( *janela* : Integer )}<!-- END REF-->
+<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ({ *janela* : Integer })<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

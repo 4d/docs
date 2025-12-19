@@ -5,7 +5,7 @@ slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ( *dialType* : Integer )}<!-- END REF-->
+<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ({ *dialType* : Integer })<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

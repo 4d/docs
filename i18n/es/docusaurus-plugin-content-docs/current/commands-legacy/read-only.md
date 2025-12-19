@@ -5,7 +5,7 @@ slug: /commands/read-only
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ( tabla | * )}<!-- END REF-->
+<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ tabla | * })<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
