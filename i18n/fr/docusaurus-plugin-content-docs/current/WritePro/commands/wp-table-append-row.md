@@ -4,16 +4,16 @@ title: WP Table append row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* ; *...value* )  : Object<br/>**WP Table append row** ( *tableRef* ; *valueColl* ) : Object<!-- END REF-->
+<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* : Object ; *...value* : any )  : Object<br/>**WP Table append row** ( *tableRef* : Object ; *valueColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Table append row.Params-->
 
-| Paramètres | Type                                      |                             | Description                                          |
-| ---------- | ----------------------------------------- | --------------------------- | ---------------------------------------------------- |
-| tableRef   | Object                                    | &#8594; | Référence du tableau                                 |
-| value      | Text, Number, Time, Date, Picture, Object | &#8594; | Valeur(s) à définir dans la ligne |
-| valueColl  | Collection                                | &#8594; | Collection de valeurs à définir dans la ligne        |
-| Résultat   | Object                                    | &#8592; | Objet plage ligne                                    |
+| Paramètres | Type       |                             | Description                                          |
+| ---------- | ---------- | --------------------------- | ---------------------------------------------------- |
+| tableRef   | Object     | &#8594; | Référence du tableau                                 |
+| value      | any        | &#8594; | Valeur(s) à définir dans la ligne |
+| valueColl  | Collection | &#8594; | Collection de valeurs à définir dans la ligne        |
+| Résultat   | Object     | &#8592; | Objet plage ligne                                    |
 
 <!-- END REF-->
 

@@ -17,7 +17,7 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 
 Les types de sessions suivants sont pris en charge par cette classe :
 
-- [**Session utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-web-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
+- [**Sessions utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-web-sessions). Elles sont utilisées pour les connexions Web et REST, et peuvent se voir attribuer des privilèges.
 - [**Session utilisateur client distant**](../Desktop/clientServer.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
 - [**Session des procédures stockées**](https://doc.4d.com/4Dv20/4D/20/4D-Server-and-the-4D-Language.300-6330554.en.html) : Toutes les procédures stockées exécutées sur le serveur partagent la même session utilisateur virtuelle.
 - [**Session autonome**](../Project/overview.md#development) : objet session local retourné dans une application mono-utilisateur (utile dans les phases de développement et de test des applications client/serveur).

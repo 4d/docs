@@ -101,11 +101,11 @@ No parâmetro *options*, passe um objeto que possa conter as seguintes proprieda
 
 Todas as funções de chamada de retorno recebem dois parâmetros de objectos. O seu conteúdo depende do retorno da chamada:
 
-| Parâmetro                    | Tipo         | *onResponse* | *onData*        | *onDataError* | *onError*    | *onTerminate* |
-| ---------------------------- | ------------ | ------------ | --------------- | ------------- | ------------ | ------------- |
-| $param1                      | Object       | SystemWorker | SystemWorker    | SystemWorker  | SystemWorker | SystemWorker  |
-| $param2.type | Text         | "response"   | "data"          | "error"       | "error"      | "termination" |
-| $param2.data | Text ou Blob |              | dados recebidos | dados de erro |              |               |
+| Parâmetro                    | Tipo       | *onResponse* | *onData*        | *onDataError* | *onError*    | *onTerminate* |
+| ---------------------------- | ---------- | ------------ | --------------- | ------------- | ------------ | ------------- |
+| $param1                      | Object     | SystemWorker | SystemWorker    | SystemWorker  | SystemWorker | SystemWorker  |
+| $param2.type | Text       | "response"   | "data"          | "error"       | "error"      | "termination" |
+| $param2.data | Text, Blob |              | dados recebidos | dados de erro |              |               |
 
 Aqui está a sequência de chamadas de retorno:
 

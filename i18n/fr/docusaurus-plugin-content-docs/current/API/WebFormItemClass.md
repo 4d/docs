@@ -34,9 +34,9 @@ Par exemple, `WebFormObject.myImage` fait référence au composant image avec `m
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
-| Paramètres | Type   |     | Description                                 |
-| ---------- | ------ | :-: | ------------------------------------------- |
-| className  | string |  -> | Nom de la classe CSS à ajouter au composant |
+| Paramètres | Type |     | Description                                 |
+| ---------- | ---- | :-: | ------------------------------------------- |
+| className  | Text |  -> | Nom de la classe CSS à ajouter au composant |
 
 <!-- END REF -->
 
@@ -86,9 +86,9 @@ exposed Function isHidden()
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
-| Paramètres | Type   |     | Description                                   |
-| ---------- | ------ | :-: | --------------------------------------------- |
-| className  | string |  -> | Nom de la classe CSS à supprimer du composant |
+| Paramètres | Type |     | Description                                   |
+| ---------- | ---- | :-: | --------------------------------------------- |
+| className  | Text |  -> | Nom de la classe CSS à supprimer du composant |
 
 <!-- END REF -->
 

@@ -68,9 +68,9 @@ WebSocketConnection オブジェクトは、次のプロパティと関数を提
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
 
-| 引数      | 型                    |     | 説明        |
-| ------- | -------------------- | :-: | --------- |
-| message | Text / Blob / Object |  -> | 送信するメッセージ |
+| 引数      | 型                  |     | 説明        |
+| ------- | ------------------ | :-: | --------- |
+| message | Text, Blob, Object |  -> | 送信するメッセージ |
 
 <!-- END REF -->
 

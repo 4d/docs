@@ -4,17 +4,17 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* ; *...attribName* ; *...attribValue* ) : Object<br/>**WP Get attributes** ( *targetObj* ; *attribColl* ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| Parâmetro   | Tipo                                           |                             | Descrição                                 |
-| ----------- | ---------------------------------------------- | --------------------------- | ----------------------------------------- |
-| targetObj   | Object                                         | &#8594; | Range or element or 4D Write Pro document |
-| attribName  | Text                                           | &#8594; | Nome do atributo para obter               |
-| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | Current value of attribute for the target |
-| attribColl  | Collection                                     | &#8594; | Collection of attribute names to get      |
-| Resultado   | Object                                         | &#8592; | Nomes e valores dos atributos             |
+| Parâmetro   | Tipo       |                             | Descrição                                 |
+| ----------- | ---------- | --------------------------- | ----------------------------------------- |
+| targetObj   | Object     | &#8594; | Range or element or 4D Write Pro document |
+| attribName  | Text       | &#8594; | Nome do atributo para obter               |
+| attribValue | any        | &#8592; | Current value of attribute for the target |
+| attribColl  | Collection | &#8594; | Collection of attribute names to get      |
+| Resultado   | Object     | &#8592; | Nomes e valores dos atributos             |
 
 <!-- END REF-->
 

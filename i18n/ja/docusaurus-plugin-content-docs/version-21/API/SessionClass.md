@@ -17,15 +17,15 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 They are used for Web connections (including and REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
-- [**Desktop sessions**](../Desktop/sessions.md), which include:
-  - [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
-  - [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
-  - [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions): Local session object returned in single-user application (useful in development and test phases of client/server applications).
+- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
+- [**デスクトップセッション**](../Desktop/sessions.md)。これには以下のものが含まれます:
+  - [**リモートユーザー セッション**](../Desktop/sessions.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
+  - [**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション): サーバー上で実行される全てのストアドプロシージャーセッションの仮想ユーザーセッション。
+  - [**スタンドアロンセッション**](../Desktop/sessions.md#standalone-sessions): シングルユーザーアプリケーションで返されるローカルのセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
 
-:::warning About session privileges
+:::warning セッション権限について
 
-All session types can handle privileges, but only the code executed in [web user sessions](WebServer/sessions.md) is actually controlled by session's privileges.
+全てのセッションタイプは権限を管理できますが、[web ユーザーセッション](WebServer/sessions.md) 内で実行されたコードに関してだけは、実際にはセッションの権限によって管理されます。
 
 :::
 
@@ -55,10 +55,10 @@ All session types can handle privileges, but only the code executed in [web user
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                        |
-| ----- | ----------------------------------------- |
-| 21    | Support of remote and standalone sessions |
-| 18 R6 | 追加                                        |
+| リリース  | 内容                       |
+| ----- | ------------------------ |
+| 21    | リモートおよびスタンドアロンセッションのサポート |
+| 18 R6 | 追加                       |
 
 </details>
 
@@ -84,13 +84,13 @@ All session types can handle privileges, but only the code executed in [web user
 
 :::note
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
 :::
 
 #### 例題
 
 ```4d
-//Invalidate a web user session
+// Web ユーザーセッションを無効化する
 var $isGuest : Boolean
 var $isOK : Boolean
 
@@ -105,10 +105,10 @@ $isOK:=Session.clearPrivileges()
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                        |
-| ----- | ----------------------------------------- |
-| 21    | Support of remote and standalone sessions |
-| 20 R9 | 追加                                        |
+| リリース  | 内容                       |
+| ----- | ------------------------ |
+| 21    | リモートおよびスタンドアロンセッションのサポート |
+| 20 R9 | 追加                       |
 
 </details>
 
@@ -116,10 +116,10 @@ $isOK:=Session.clearPrivileges()
 
 <!-- REF #SessionClass.createOTP().Params -->
 
-| 引数       | 型       |                             | 説明                                                                       |
-| -------- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
-| lifespan | Integer |              ->             | Session token lifespan in seconds (web sessions only) |
-| 戻り値      | Text    | <- | トークンの UUID                                                               |
+| 引数       | 型       |                             | 説明                                                 |
+| -------- | ------- | :-------------------------: | -------------------------------------------------- |
+| lifespan | Integer |              ->             | 秒単位のセッショントークンの有効期限(Web セッションのみ) |
+| 戻り値      | Text    | <- | トークンの UUID                                         |
 
 <!-- END REF -->
 
@@ -131,13 +131,13 @@ OTP トークンについてのより詳細な情報については、[こちら
 
 セッションを復元するために失効したトークンを使用した場合、それは無視されます。
 
-For web sessions, you can set a custom timeout by passing a value in seconds in *lifespan*. デフォルトで、*lifespan* 引数が省略された場合、トークンはセッションの[`.idleTimeOut`](#idletimeout) と同じ有効期限を持って作成されます。
+Web セッションに対しては、*lifespan* に秒単位の値を渡すことで、カスタムのタイムアウト時間を設定することができます。 デフォルトで、*lifespan* 引数が省略された場合、トークンはセッションの[`.idleTimeOut`](#idletimeout) と同じ有効期限を持って作成されます。
 
-For desktop sessions, the token is created with a 10 seconds lifespan.
+デスクトップセッションの場合、トークンは10秒の有効期限を持って作成されます。
 
-The returned token can be used in exchanges with third-party applications or websites to securely identify the session. 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
+返されたトークンは、サードパーティアプリケーションや他のWebサイトとのやり取りで使用することでセッションを安全に特定することができます。 例えば、セッションOTP トークンは支払いアプリケーションなどにおいて使用することができます。
 
-The returned token can be used by 4D Server or 4D single-user application to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
+返されたトークンは、Web から入ってきた、[セッションを共有する](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses)リクエストを特定するために4D Server または4D シングルユーザーアプリケーションが使用することができます。
 
 #### 例題
 
@@ -246,10 +246,10 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                        |
-| ----- | ----------------------------------------- |
-| 21    | Support of remote and standalone sessions |
-| 20 R6 | 追加                                        |
+| リリース  | 内容                       |
+| ----- | ------------------------ |
+| 21    | リモートおよびスタンドアロンセッションのサポート |
+| 20 R6 | 追加                       |
 
 </details>
 
@@ -275,7 +275,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 :::note
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
 :::
 
 #### 例題
@@ -345,10 +345,10 @@ $privileges := Session.getPrivileges()
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                                                              |
-| ----- | ------------------------------------------------------------------------------- |
-| 21    | Returns True for promoted privileges, Support of remote and standalone sessions |
-| 18 R6 | 追加                                                                              |
+| リリース  | 内容                                        |
+| ----- | ----------------------------------------- |
+| 21    | 昇格した権限ならTrue を返す、リモートおよびスタンドアロンセッションのサポート |
+| 18 R6 | 追加                                        |
 
 </details>
 
@@ -375,25 +375,25 @@ $privileges := Session.getPrivileges()
 
 :::note
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
 :::
 
 #### 例題
 
-You want to check if the "CreateInvoices" privilege is associated to the web user session:
+"CreateInvoices" アクセス権が Webユーザーセッションに紐づいているかを確認します:
 
 ```4d
 If (Session.hasPrivilege("CreateInvoices"))
-	//Access to Invoice creation features
+	// 請求書作成機能へのアクセスを許可
 Else
-	//No access to Invoice creation features 
+	// 請求書作成機能へのアクセスはなし
 
 End if
 ```
 
 #### 参照
 
-[*Restrict data according to privileges or information saved in session storage* (blog post)](https://blog.4d.com/?s=hasPrivilege)
+[*Restrict data according to privileges or information saved in session storage* (blog 記事)](https://blog.4d.com/?s=hasPrivilege)
 
 <!-- END REF -->
 
@@ -486,16 +486,16 @@ End if
 
 #### 説明
 
-The `.info` property <!-- REF #SessionClass.info.Summary -->describes the desktop or web session<!-- END REF -->.
+`.info` プロパティは、<!-- REF #SessionClass.info.Summary -->サーバー上のデスクトップまたはWeb セッションの情報を格納します<!-- END REF -->。
 
-- **Remote sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command.
-- **Standalone sessions**: The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command.
+- **リモートセッション** および **ストアドプロシージャーセッション**の場合: `.info` オブジェクトは[`Process activity`](../commands/process-activity.md) コマンドの "session" プロパティに返されるオブジェクトと同じです。
+- **スタンドアロンセッションの場合**: `.info` オブジェクトは、[`Session info`](../commands/session-info.md) コマンドで返されるものと同じオブジェクトです。
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
 | プロパティ            | 型                                | 説明                                                                                                                        |
 | ---------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| type             | Text                             | Session type: "remote", "storedProcedure", "standalone", "rest", "web"                                    |
+| type             | Text                             | セッションのタイプ: "remote"、"storedProcedure"、"standalone"、"rest"、"web"                                           |
 | userName         | Text                             | 4Dユーザー名 ([`.userName`](#username) と同じ値)                                                                |
 | machineName      | Text                             | リモートセッション: リモートマシンの名前。 ストアドプロシージャセッション: サーバーマシンの名前。 スタンドアロンセッションの場合: マシン名 |
 | systemUserName   | Text                             | リモートセッション: リモートマシン上で開かれたシステムセッションの名前。                                                                     |
@@ -530,9 +530,9 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the deskto
 
 <!-- REF #SessionClass.isGuest().Params -->
 
-| 引数  | 型       |                             | 説明                                                                                     |
-| --- | ------- | :-------------------------: | -------------------------------------------------------------------------------------- |
-| 戻り値 | Boolean | <- | True if session is a Guest one, False otherwise (web sessions only) |
+| 引数  | 型       |                             | 説明                                                                 |
+| --- | ------- | :-------------------------: | ------------------------------------------------------------------ |
+| 戻り値 | Boolean | <- | セッションがゲストセッションの場合はTrue、それ以外はFalse (Web セッションのみ) |
 
 <!-- END REF -->
 
@@ -606,7 +606,7 @@ End if
 
 :::note
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
 :::
 
 #### 例題
@@ -703,11 +703,11 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                                        |
-| ----- | ----------------------------------------- |
-| 21    | Support of remote and standalone sessions |
-| 19 R8 | roles プロパティをサポート                          |
-| 18 R6 | 追加                                        |
+| リリース  | 内容                       |
+| ----- | ------------------------ |
+| 21    | リモートおよびスタンドアロンセッションのサポート |
+| 19 R8 | roles プロパティをサポート         |
+| 18 R6 | 追加                       |
 
 </details>
 
@@ -752,7 +752,7 @@ Function callback($request : 4D.IncomingMessage) : 4D.OutgoingMessage
 
 :::note
 
-Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
 :::
 
 #### 例題

@@ -101,11 +101,11 @@ En el parámetro *options*, pase un objeto que puede contener las siguientes pro
 
 Todas las funciones de retrollamada reciben dos parámetros objeto. Su contenido depende de la retrollamada:
 
-| Parámetros                   | Tipo        | *onResponse* | *onData*        | *onDataError*  | *onError*    | *onTerminate* |
-| ---------------------------- | ----------- | ------------ | --------------- | -------------- | ------------ | ------------- |
-| $param1                      | Object      | SystemWorker | SystemWorker    | SystemWorker   | SystemWorker | SystemWorker  |
-| $param2.type | Text        | "response"   | "data"          | "error"        | "error"      | "termination" |
-| $param2.data | Text o Blob |              | datos recibidos | datos de error |              |               |
+| Parámetros                   | Tipo       | *onResponse* | *onData*        | *onDataError*  | *onError*    | *onTerminate* |
+| ---------------------------- | ---------- | ------------ | --------------- | -------------- | ------------ | ------------- |
+| $param1                      | Object     | SystemWorker | SystemWorker    | SystemWorker   | SystemWorker | SystemWorker  |
+| $param2.type | Text       | "response"   | "data"          | "error"        | "error"      | "termination" |
+| $param2.data | Text, Blob |              | datos recibidos | datos de error |              |               |
 
 Esta es la secuencia de llamadas de retorno:
 

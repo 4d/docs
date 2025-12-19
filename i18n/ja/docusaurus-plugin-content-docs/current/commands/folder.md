@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path           | Text                                               | &#8594; | フォルダーパス                                                           |
 | folderConstant | Integer                                            | &#8594; | 4Dフォルダー定数                                                         |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
-| \*             | operator                                           | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
+| \*             | 演算子                                                | &#8594; | ホストデータベースのフォルダーを返すには \* を渡します                                     |
 | 戻り値            | [4D.Folder](../API/FolderClass.md) | &#8592; | 新規フォルダーオブジェクト                                                     |
 
 <!-- END REF -->
@@ -78,9 +78,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1567                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1567 |
+| スレッドセーフ | ◯    |
 
 

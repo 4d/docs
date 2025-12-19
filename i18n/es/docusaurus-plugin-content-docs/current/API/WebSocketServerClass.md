@@ -232,7 +232,7 @@ Como resultado de la retrollamada `WSHandler.onConnection`, pasa un objeto `conn
 | ws         |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Objeto de conexión WebSocket actual |
 | evento     |      | Object                                                  | <- | Parámetros                          |
 |            | type | Text                                                    |                             | "message"                           |
-|            | data | Text / Blob / Object                                    |                             | datos enviados por el cliente       |
+|            | data | Text, Blob, Object                                      |                             | datos enviados por el cliente       |
 
 Esta retrollamada para datos WebSocket. Llamada cada vez que el WebSocket recibe datos.
 

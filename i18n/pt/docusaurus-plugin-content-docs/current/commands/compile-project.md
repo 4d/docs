@@ -5,7 +5,7 @@ slug: /commands/compile-project
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compile project.Syntax-->**Compile project** {( {*projectFile*}{;}{*options*} )} : Object<!-- END REF-->
+<!--REF #_command_.Compile project.Syntax-->**Compile project** ( {*options* : Object} ) : Object<br/>**Compile project** ( *projectFile* : 4D.File } {; *options* : Object} ) : Object<!-- END REF-->
 
 <!--REF #_command_.Compile project.Params-->
 
@@ -194,9 +194,9 @@ var $result:=Compile project($options)
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1760                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1760 |
+| Thread safe       | não  |
 
 

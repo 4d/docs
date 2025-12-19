@@ -1081,7 +1081,7 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 | msgNumber  | Integer |              ->             | Numéro de séquence du message                                                                                                                                         |
 | msgID      | Text    |              ->             | ID unique du message                                                                                                                                                  |
 | updateSeen | Boolean |              ->             | Si Vrai, le message est marqué comme "seen" (lu) dans la boite de réception. Si Faux, le message demeure inchangé. |
-| Résultat   | BLOB    | <- | Blob de la chaine MIME retournée par le serveur mail                                                                                                                  |
+| Résultat   | Blob    | <- | Blob de la chaine MIME retournée par le serveur mail                                                                                                                  |
 
 <!-- END REF -->
 

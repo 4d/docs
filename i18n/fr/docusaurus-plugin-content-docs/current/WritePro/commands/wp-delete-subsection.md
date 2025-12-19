@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-subsection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE SUBSECTION.Syntax-->**WP DELETE SUBSECTION** ( *wpSection* ; *subSectionType* )<br/>**WP DELETE SUBSECTION** ( *subSection* )<!-- END REF-->
+<!--REF #_command_.WP DELETE SUBSECTION.Syntax-->**WP DELETE SUBSECTION** ( *wpSection* : Object ; *subSectionType* : Integer )<br/>**WP DELETE SUBSECTION** ( *subSection* : Object )<!-- END REF-->
 
 <!--REF #_command_.WP DELETE SUBSECTION.Params-->
 

@@ -34,9 +34,9 @@ title: WebFormItem
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
-| 引数        | 型      |     | 説明                      |
-| --------- | ------ | :-: | ----------------------- |
-| className | string |  -> | コンポーネントに追加する CSSクラスの名前。 |
+| 引数        | 型    |     | 説明                      |
+| --------- | ---- | :-: | ----------------------- |
+| className | Text |  -> | コンポーネントに追加する CSSクラスの名前。 |
 
 <!-- END REF -->
 
@@ -86,9 +86,9 @@ exposed Function isHidden()
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
-| 引数        | 型      |     | 説明                       |
-| --------- | ------ | :-: | ------------------------ |
-| className | string |  -> | コンポーネントから削除する CSSクラスの名前。 |
+| 引数        | 型    |     | 説明                       |
+| --------- | ---- | :-: | ------------------------ |
+| className | Text |  -> | コンポーネントから削除する CSSクラスの名前。 |
 
 <!-- END REF -->
 

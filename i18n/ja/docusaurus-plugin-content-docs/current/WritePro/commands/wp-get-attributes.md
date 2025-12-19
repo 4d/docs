@@ -4,17 +4,17 @@ title: WP Get attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* ; *...attribName* ; *...attribValue* ) : Object<br/>**WP Get attributes** ( *targetObj* ; *attribColl* ) : Object<!-- END REF-->
+<!--REF #_command_.WP Get attributes.Syntax-->**WP Get attributes** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any ) : Object<br/>**WP Get attributes** ( *targetObj* : Object ; *attribColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Get attributes.Params-->
 
-| 引数          | 型                                              |                             | 説明                             |
-| ----------- | ---------------------------------------------- | --------------------------- | ------------------------------ |
-| targetObj   | Object                                         | &#8594; | レンジまたは要素または4D Write Pro ドキュメント |
-| attribName  | Text                                           | &#8594; | 取得する属性の名前                      |
-| attribValue | Text, Number, Array, Collection, Picture, Date | &#8592; | ターゲットの属性のカレントの値                |
-| attribColl  | Collection                                     | &#8594; | 取得する属性名のコレクション                 |
-| 戻り値         | Object                                         | &#8592; | 属性名と値                          |
+| 引数          | 型          |                             | 説明                             |
+| ----------- | ---------- | --------------------------- | ------------------------------ |
+| targetObj   | Object     | &#8594; | レンジまたは要素または4D Write Pro ドキュメント |
+| attribName  | Text       | &#8594; | 取得する属性の名前                      |
+| attribValue | any        | &#8592; | ターゲットの属性のカレントの値                |
+| attribColl  | Collection | &#8594; | 取得する属性名のコレクション                 |
+| 戻り値         | Object     | &#8592; | 属性名と値                          |
 
 <!-- END REF-->
 

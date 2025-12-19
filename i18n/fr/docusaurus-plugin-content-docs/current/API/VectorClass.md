@@ -47,7 +47,7 @@ Les objets vectoriels sont partagés, immuables et transmissibles.
 
 | Paramètres | Type                      |                             | Description                                         |
 | ---------- | ------------------------- | --------------------------- | --------------------------------------------------- |
-| paramètres | Collection de réels       | ->                          | Collection de nombres réels représentant un vecteur |
+| paramètres | Collection                | ->                          | Collection de nombres réels représentant un vecteur |
 | Résultat   | 4D.Vector | <- | Nouvel objet vectoriel                              |
 
 <!-- END REF -->

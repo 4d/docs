@@ -68,9 +68,9 @@ Esta propriedade é só de leitura.
 
 <!-- REF #WebSocketConnectionClass.send().Params -->
 
-| Parâmetro | Tipo                 |     | Descrição           |
-| --------- | -------------------- | :-: | ------------------- |
-| message   | Text / Blob / Object |  -> | A mensagem a enviar |
+| Parâmetro | Tipo               |     | Descrição           |
+| --------- | ------------------ | :-: | ------------------- |
+| message   | Text, Blob, Object |  -> | A mensagem a enviar |
 
 <!-- END REF -->
 

@@ -47,7 +47,7 @@ Vector objects are shared, immutable, and streamable.
 
 | Parâmetro  | Tipo                      |                             | Descrição                                        |
 | ---------- | ------------------------- | --------------------------- | ------------------------------------------------ |
-| parâmetro  | Collection of reals       | ->                          | Collection of real numbers representing a vector |
+| parâmetro  | Collection                | ->                          | Collection of real numbers representing a vector |
 | Resultados | 4D.Vector | <- | New Vector object                                |
 
 <!-- END REF -->

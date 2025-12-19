@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path         | Text                                           | &#8594; | ファイルパス                                                            |
 | fileConstant | Integer                                        | &#8594; | 4Dファイル定数                                                          |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (デフォルト) または `fk platform path` |
-| \*           | operator                                       | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
+| \*           | 演算子                                            | &#8594; | ホストデータベースのファイルを返すには \* を渡します                                      |
 | 戻り値          | [4D.File](../API/FileClass.md) | &#8592; | 新規ファイルオブジェクト                                                      |
 
 <!-- END REF -->
@@ -88,9 +88,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1566                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1566 |
+| スレッドセーフ | ◯    |
 
 

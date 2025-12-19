@@ -38,7 +38,7 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | ----------- | ---------------------------------- | :-------------------------: | ------------------------------------------------------------------------------------------------- |
 | file        | 4D. File           |              ->             | Parâmetros                                                                                        |
 | zipFile     | 4D. ZipFile        |              ->             | Arquivo zip                                                                                       |
-| blob        | 4D. Blob           |              ->             | Blob contendo o anexo                                                                             |
+| blob        | 4D. Blob           |              ->             | Blob containing the attachment                                                                    |
 | path        | Text                               |              ->             | Pode passar uma rota ou um Blob para definir o anexo.                             |
 | name        | Text                               |              ->             | Nome + extensão usado pelo cliente email para designar o anexo                                    |
 | cid         | Text                               |              ->             | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |

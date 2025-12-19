@@ -1081,7 +1081,7 @@ Se quiser recuperar os 20 e-mails mais recentes sem alterar o seu estatuto de "v
 | msgNumber  | Integer    |              ->             | Número sequencial da mensagem                                                                                                             |
 | msgID      | Text       |              ->             | ID única da mensagem                                                                                                                      |
 | updateSeen | Parâmetros |              ->             | Se Verdadeiro, a mensagem é marcada "visto" na caixa de correio. Se Falso, a mensagem é deixada intocada. |
-| Resultados | BLOB       | <- | Blob da string MIME retornado do servidor mail                                                                                            |
+| Resultados | Blob       | <- | Blob da string MIME retornado do servidor mail                                                                                            |
 
 <!-- END REF -->
 

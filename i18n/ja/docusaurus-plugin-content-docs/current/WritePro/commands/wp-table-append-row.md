@@ -4,16 +4,16 @@ title: WP Table append row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* ; *...value* )  : Object<br/>**WP Table append row** ( *tableRef* ; *valueColl* ) : Object<!-- END REF-->
+<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* : Object ; *...value* : any )  : Object<br/>**WP Table append row** ( *tableRef* : Object ; *valueColl* : Collection ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Table append row.Params-->
 
-| 引数        | 型                                         |                             | 説明              |
-| --------- | ----------------------------------------- | --------------------------- | --------------- |
-| tableRef  | Object                                    | &#8594; | 表組の参照           |
-| value     | Text, Number, Time, Date, Picture, Object | &#8594; | 行内に設定する値        |
-| valueColl | Collection                                | &#8594; | 行内に設定する値のコレクション |
-| 戻り値       | Object                                    | &#8592; | 行レンジオブジェクト      |
+| 引数        | 型          |                             | 説明              |
+| --------- | ---------- | --------------------------- | --------------- |
+| tableRef  | Object     | &#8594; | 表組の参照           |
+| value     | any        | &#8594; | 行内に設定する値        |
+| valueColl | Collection | &#8594; | 行内に設定する値のコレクション |
+| 戻り値       | Object     | &#8592; | 行レンジオブジェクト      |
 
 <!-- END REF-->
 
