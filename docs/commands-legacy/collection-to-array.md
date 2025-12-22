@@ -5,7 +5,7 @@ slug: /commands/collection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** (( *collection* : Collection ; *array* : Array {; *propertyName* : Text}{; ...(*array* : Array ; *propertyName* : Text) } )<!-- END REF-->
+<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* : Collection ; *array* : Array {; *propertyName* : Text}{; ...(*array* : Array ; *propertyName* : Text) } )<!-- END REF-->
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
