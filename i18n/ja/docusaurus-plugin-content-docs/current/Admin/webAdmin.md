@@ -1,27 +1,27 @@
 ---
 id: webAdmin
-title: Web Administration Server
+title: Web 管理サーバー
 ---
 
-An embedded web server component, named `WebAdmin`, is used by 4D and 4D Server to provide a secured web access to specific features:
+`WebAdmin`, とは、4D および 4D Server に使用される組み込みの Webサーバーコンポーネントの名称で、以下のような特定の機能への安全な Webアクセスを提供します:
 
-- REST accesses to the project
-- the [Data Explorer](dataExplorer.md)
-- the [Qodly Studio preview rendering](https://developer.4d.com/qodly/4DQodlyPro/rendering#preview-in-qodly-studio)
+- プロジェクトへのREST アクセス
+- [データエクスプローラー](dataExplorer.md)
+- [Qodly Studio プレビューレンダリング](https://developer.4d.com/qodly/4DQodlyPro/rendering#preview-in-qodly-studio)
 
 ブラウザーや、任意の Webアプリケーションから、ローカルまたはリモートでこの Webサーバーに接続し、関連の 4Dアプリケーションにアクセスすることができます。
 
-The Web Administration Server handles the authentication of users with `WebAdmin` privileges, so that they can open administration sessions and access dedicated interfaces.
+Web 管理サーバーは、 `WebAdmin` 権限を持つユーザーの認証を処理し、管理セッションを開いて専用インターフェースにアクセスできるようにします。
 
 この機能は、ヘッドレスで動作する 4Dアプリケーションでも、インターフェースを持つ 4Dアプリケーションでも使用できます。
 
-## Starting the Web Administration Server
+## Web管理サーバーの起動
 
-By default, the Web Administration Server web server is not launched. 起動時に開始するように設定するか、(インターフェース付きの場合は) メニューから手動で開始する必要があります。
+デフォルトでは、Web 管理サーバーは起動していません。 起動時に開始するように設定するか、(インターフェース付きの場合は) メニューから手動で開始する必要があります。
 
 ### 自動スタートアップ
 
-You can configure the Web Administration Server to be launched at 4D or 4D Server application startup (before any project is loaded).
+Web 管理サーバーは、4D または 4D Server アプリケーションの起動時 (プロジェクトの読み込み前) に開始するように設定できます。
 
 - インターフェースを持つ 4Dアプリケーションを使用している場合は、**ファイル ＞ Web管理 ＞ 設定...** メニュー項目を選択します。
 
@@ -37,23 +37,23 @@ Web管理設定ダイアログボックスで、**WebAdmin サーバーをスタ
 open ~/Desktop/4D.app --webadmin-auto-start true
 ```
 
-> If the TCP port used by the Web Administration Server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. 利用可能なポートがない場合、Webサーバーは開始せず、エラーが表示されるか、(ヘッドレスアプリケーションの場合は) コンソールのログに記録されます。
+> Web 管理サーバーが使用する TCPポート (設定により、[HTTPS](#https-port) または [HTTP](#http-port)) が開始時に空いていない場合、4D は次の 20個のポートを順に試し、利用できる最初のポートを使用します。 利用可能なポートがない場合、Webサーバーは開始せず、エラーが表示されるか、(ヘッドレスアプリケーションの場合は) コンソールのログに記録されます。
 
 ### 開始と停止
 
-If you use a 4D application with interface, you can start or stop the Web Administration Server for your project at any moment:
+インターフェースを持つ 4Dアプリケーションを使用している場合、プロジェクトの Web 管理サーバーはいつでも開始または停止することができます:
 
 **ファイル ＞ Web管理 ＞ Webサーバー開始** メニュー項目を選択します。
 
 ![alt-text](../assets/en/Admin/waMenu2.png)
 
-The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the Web Administration Server.
+サーバーが開始されていると、メニュー項目は **Webサーバー停止** になります。Web 管理サーバーを停止するには、これを選択します。
 
-## Settings {#settings}
+## 設定 {#settings}
 
-Configuring the Web Administration Server is mandatory in particular to define the [**access key**](#access-key). デフォルトで、アクセスキーが設定されていない場合は、URL経由のアクセスは許可されません。
+[**アクセスキー**](#access-key) を定義するには、Web 管理サーバーの設定は必須です。 デフォルトで、アクセスキーが設定されていない場合は、URL経由のアクセスは許可されません。
 
-You can configure the Web Administration Server using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
+Web 管理サーバーの設定は、[Web管理設定ダイアログボックス](#settings-dialog-box) (後述参照) でおこないます。
 
 > ヘッドレス4Dアプリケーションを使用している場合は、[*コマンドライン・インターフェース* の引数](#webadmin-headless-configuration) を使用して基本的な設定を定義できます。 高度なパラメーターを定義するには、設定ファイルをカスタマイズする必要があります。
 
@@ -69,11 +69,11 @@ Web管理の設定ダイアログボックスを開くには、**ファイル �
 
 #### WebAdmin サーバーをスタートアップ時に起動
 
-Check this option if you want the Web Administration Server to be automatically launched when the 4D or 4D Server application starts ([see above](#launch-at-startup)). デフォルトでは、このオプションはチェックされていません。
+4D または 4D Server アプリケーションの起動時に Web 管理サーバーを自動的に開始させるには、このオプションをチェックします ([前述参照](#自動スタートアップ))。 デフォルトでは、このオプションはチェックされていません。
 
 #### ローカルホストでHTTP接続を受け入れる
 
-When this option is checked, you will be able to connect to the Web Administration Server through HTTP on the same machine as the 4D application. デフォルトでは、このオプションはチェックされています。
+このオプションを有効にすると、4Dアプリケーションと同じマシン上で HTTP を介して Web 管理サーバーに接続できます。 デフォルトでは、このオプションはチェックされています。
 
 :::note 注記
 
@@ -84,15 +84,15 @@ When this option is checked, you will be able to connect to the Web Administrati
 
 #### HTTP ポート
 
-Port number to use for connections through HTTP to the Web Administration Server when the **Accept HTTP connections on localhost** option is checked. デフォルト値は 7080 です。
+**ローカルホストでHTTP接続を受け入れる** オプションが有効な場合、Web 管理サーバーへの HTTP接続に使用するポート番号です。 デフォルト値は 7080 です。
 
 #### HTTPSを受け入れる
 
-When this option is checked, you will be able to connect to the Web Administration Server through HTTPS. デフォルトでは、このオプションはチェックされています。
+このオプションを有効にすると、Web 管理サーバーに HTTPS を介して接続できます。 デフォルトでは、このオプションはチェックされています。
 
 #### HTTPS ポート
 
-Port number to use for connections through HTTPS to the Web Administration Server when the **Accept HTTPS** option is checked. デフォルト値は 7443 です。
+**HTTPSを受け入れる** オプションが有効な場合、Web 管理サーバーへの HTTPS接続に使用するポート番号です。 デフォルト値は 7443 です。
 
 #### 認証フォルダパス
 
@@ -110,7 +110,7 @@ HTTPリクエストログファイル (アプリケーションの "Logs" フォ
 
 #### アクセスキー
 
-Defining an access key is mandatory to unlock access to the Web Administration Server through a URL (access via a 4D menu command does not require an access key). アクセスキーが定義されていない場合、[データエクスプローラーページ](dataExplorer.md) などの Web管理インターフェースに Webクライアントを使って URLを介した接続はできません。 接続リクエストがあった場合には、エラーページが返されます:
+Web 管理サーバーへの URL経由アクセスのロックを解除するには、アクセスキーの定義は必須です (4Dメニューコマンドによるアクセスにはアクセスキーは必要ありません)。 アクセスキーが定義されていない場合、[データエクスプローラーページ](dataExplorer.md) などの Web管理インターフェースに Webクライアントを使って URLを介した接続はできません。 接続リクエストがあった場合には、エラーページが返されます:
 
 ![alt-text](../assets/en/Admin/accessKey.png)
 
@@ -132,13 +132,13 @@ Defining an access key is mandatory to unlock access to the Web Administration S
 
 :::note
 
-This option is automatically checked if you used the [One-click configuration dialog box](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
+このオプションは、[ワンクリック設定ダイアログボックス](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration)を使用した場合には自動的にチェックされています。
 
 :::
 
-## Headless Configuration
+## ヘッドレス設定
 
-All [Web Administration Server settings](#settings) are stored in the `WebAdmin.4DSettings` file. 4D および 4D Server アプリケーション毎にデフォルトの `WebAdmin.4DSettings` ファイルが 1つ存在し、同じホストマシン上で複数のアプリケーションを運用することができます。
+すべての [Web 管理サーバー設定](#設定) は、`WebAdmin.4DSettings` ファイルに保存されます。 4D および 4D Server アプリケーション毎にデフォルトの `WebAdmin.4DSettings` ファイルが 1つ存在し、同じホストマシン上で複数のアプリケーションを運用することができます。
 
 4D および 4D Server アプリケーションをヘッドレスで実行している場合、デフォルトの `WebAdmin.4DSettings` ファイルを設定して使用するか、カスタムの `.4DSettings` ファイルを指定することができます。
 
@@ -159,17 +159,17 @@ All [Web Administration Server settings](#settings) are stored in the `WebAdmin.
 
 ## 認証
 
-When a web page controlled by the Web Administration Server is accessed by entering a URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box:
+事前に本人確認せずに、 Web 管理サーバーによって管理されている Web ページにURL経由でアクセスした場合、認証が必要になります。 ユーザーは認証ダイアログボックス内にて[アクセスキー](#アクセスキー) を入力する必要があります:
 
 ![alt-text](../assets/en/Admin/accessKeyEnter.png)
 
-If the access key was not defined in the Web Administration Server settings, no access via URL is possible (a specific message is displayed).
+アクセスキーがWeb 管理サーバー設定内で定義されていなかった場合、URL 経由でのアクセスはできません(特定のメッセージが表示されます)。
 
-When a web page controlled by the Web Administration Server page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated.
+4D または 4D Server のメニュー項目 (**レコード ＞ データエクスプローラー** または **ウィンドウ ＞ データエクスプローラー** (4D Server) など) から Web 管理サーバーページによって管理されているWebページに直接アクセスした場合、アクセスは認証なしで許可され、ユーザーは自動的に認証されます。
 
 :::note
 
-Once the access is granted, a [web session](WebServer/sessions.md) with a specific "WebAdmin" privilege is created by the Web Administration Server. This privilege provides an open access to all data through web processes, as soon as no [specific permissions are applied to resources](../ORDA/privileges.md).
+アクセスが許可されると、Web 管理サーバーによって "WebAdmin" 権限を持つ [Web セッション](WebServer/sessions.md) が作成されます。 この権限は[リソースに対して特定の許可が適用](../ORDA/privileges.md) されていない限り、Web プロセスを通して全てのデータへのオープンなアクセスを提供します。
 
 :::
 

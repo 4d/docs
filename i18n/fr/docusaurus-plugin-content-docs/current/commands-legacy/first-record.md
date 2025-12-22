@@ -5,7 +5,7 @@ slug: /commands/first-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ( *laTable* : Table )}<!-- END REF-->
+<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ( *archivePath* : Text {; *destFolderPath* : Text} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *archivePath* : Text {; *destFolderPath* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

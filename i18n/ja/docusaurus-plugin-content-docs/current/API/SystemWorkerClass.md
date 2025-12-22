@@ -101,11 +101,11 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 すべてのコールバック関数は、2つのオブジェクト引数を受け取ります。 その内容は、コールバックに依存します:
 
-| 引数                           | 型             | *onResponse* | *onData*     | *onDataError* | *onError*    | *onTerminate* |
-| ---------------------------- | ------------- | ------------ | ------------ | ------------- | ------------ | ------------- |
-| $param1                      | Object        | SystemWorker | SystemWorker | SystemWorker  | SystemWorker | SystemWorker  |
-| $param2.type | Text          | "response"   | "data"       | "error"       | "error"      | "termination" |
-| $param2.data | Text または Blob |              | 取得データ        | エラーデータ        |              |               |
+| 引数                           | 型          | *onResponse* | *onData*     | *onDataError* | *onError*    | *onTerminate* |
+| ---------------------------- | ---------- | ------------ | ------------ | ------------- | ------------ | ------------- |
+| $param1                      | Object     | SystemWorker | SystemWorker | SystemWorker  | SystemWorker | SystemWorker  |
+| $param2.type | Text       | "response"   | "data"       | "error"       | "error"      | "termination" |
+| $param2.data | Text, Blob |              | 取得データ        | エラーデータ        |              |               |
 
 以下は、コールバック呼び出しの流れです:
 

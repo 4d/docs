@@ -47,7 +47,7 @@ Los objetos vectoriales son compartidos, inmutables y transmisibles.
 
 | Parámetros | Tipo                      |                             | Descripción                                           |
 | ---------- | ------------------------- | --------------------------- | ----------------------------------------------------- |
-| parámetros | Colección de reales       | ->                          | Colección de números reales que representan un vector |
+| parámetros | Collection                | ->                          | Colección de números reales que representan un vector |
 | Resultado  | 4D.Vector | <- | Nuevo objeto vector                                   |
 
 <!-- END REF -->

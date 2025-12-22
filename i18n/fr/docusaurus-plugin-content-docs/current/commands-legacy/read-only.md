@@ -5,7 +5,7 @@ slug: /commands/read-only
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ( laTable )}<br/>**READ ONLY** ( * )}<!-- END REF-->
+<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ laTable })<br/>**READ ONLY** ({ * })<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

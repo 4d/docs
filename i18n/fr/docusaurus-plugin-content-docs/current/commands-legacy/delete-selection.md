@@ -5,7 +5,7 @@ slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ( *laTable* : Table )}<!-- END REF-->
+<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

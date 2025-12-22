@@ -5,7 +5,7 @@ slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ( *objets* : Integer ; *options* : Integer ; *méthode* : Text {; *tabTables* : Integer array {; *tabChamps* : Integer array}} )}<!-- END REF-->
+<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ({ *objets* : Integer ; *options* : Integer ; *méthode* : Text {; *tabTables* : Integer array {; *tabChamps* : Integer array}} })<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

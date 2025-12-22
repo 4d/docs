@@ -5,7 +5,7 @@ slug: /commands/pop-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ( *aTable* : Table )}<!-- END REF-->
+<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.POP RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

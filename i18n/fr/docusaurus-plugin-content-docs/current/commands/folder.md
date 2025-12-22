@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path           | Text                                               | &#8594; | Chemin du dossier                                                     |
 | folderConstant | Integer                                            | &#8594; | Constante de dossier 4D                                               |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
-| \*             | operator                                           | &#8594; | \* pour retourner le dossier de la base hôte                          |
+| \*             | Opérateur                                          | &#8594; | \* pour retourner le dossier de la base hôte                          |
 | Résultat       | [4D.Folder](../API/FolderClass.md) | &#8592; | Nouvel objet dossier                                                  |
 
 <!-- END REF -->
@@ -78,9 +78,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1567                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1567 |
+| Thread safe        | oui  |
 
 

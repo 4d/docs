@@ -232,7 +232,7 @@ En résultat d'une callback `WSHandler.onConnection`, passez un objet `connectio
 | ws         |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Objet connexion WebSocket courant |
 | event      |      | Object                                                  | <- | Paramètres                        |
 |            | type | Text                                                    |                             | "message"                         |
-|            | data | Text / Blob / Object                                    |                             | données envoyées par le client    |
+|            | data | Text, Blob, Object                                      |                             | données envoyées par le client    |
 
 Callback pour les données WebSocket. Appelée à chaque fois que le WebSocket reçoit des données.
 

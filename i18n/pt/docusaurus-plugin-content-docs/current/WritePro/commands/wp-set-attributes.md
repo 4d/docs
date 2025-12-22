@@ -4,16 +4,16 @@ title: WP SET ATTRIBUTES
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* ; *...attribName* ; *...attribValue* )<br/>**WP SET ATTRIBUTES** ( *targetObj* ; *attribObj* )<!-- END REF-->
+<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any )<br/>**WP SET ATTRIBUTES** ( *targetObj* : Object ; *attribObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| Parâmetro   | Tipo                                            |                             | Descrição                                                               |
-| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | Range or element or 4D Write Pro document                               |
-| attribName  | Text                                            | &#8594; | Nome do atributo a ser definido                                         |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Novo valor de atributo                                                  |
-| attribObj   | Object                                          | &#8594; | Object containing attribute names and their corresponding values to set |
+| Parâmetro   | Tipo   |                             | Descrição                                                               |
+| ----------- | ------ | --------------------------- | ----------------------------------------------------------------------- |
+| targetObj   | Object | &#8594; | Range or element or 4D Write Pro document                               |
+| attribName  | Text   | &#8594; | Nome do atributo a ser definido                                         |
+| attribValue | any    | &#8594; | Novo valor de atributo                                                  |
+| attribObj   | Object | &#8594; | Object containing attribute names and their corresponding values to set |
 
 <!-- END REF-->
 

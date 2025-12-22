@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path         | Text                                           | &#8594; | Ruta del archivo                                                      |
 | fileConstant | Integer                                        | &#8594; | Constante del archivo 4D                                              |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
-| \*           | operator                                       | &#8594; | \* para devolver el archivo de la base local                          |
+| \*           | Operador                                       | &#8594; | \* para devolver el archivo de la base local                          |
 | Resultado    | [4D.File](../API/FileClass.md) | &#8592; | Nuevo objeto de archivo                                               |
 
 <!-- END REF -->
@@ -88,9 +88,9 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1566                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1566 |
+| Hilo seguro       | sí   |
 
 

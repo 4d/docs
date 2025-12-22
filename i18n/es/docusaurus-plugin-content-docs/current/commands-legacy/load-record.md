@@ -5,7 +5,7 @@ slug: /commands/load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ( *tabla* : Table )}<!-- END REF-->
+<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

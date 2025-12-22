@@ -60,9 +60,9 @@ shared singleton Class constructor()
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| 引数    | 型      |     | 説明                      |
-| ----- | ------ | :-: | ----------------------- |
-| state | string |  -> | Web ページ上で無効化するstate の名前 |
+| 引数    | 型    |     | 説明                       |
+| ----- | ---- | :-: | ------------------------ |
+| state | Text |  -> | Webフォーム上で無効化する state の名称 |
 
 <!-- END REF -->
 
@@ -85,9 +85,9 @@ Web ページのステートについての詳細な情報については、[Qod
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| 引数    | 型      |     | 説明                       |
-| ----- | ------ | :-: | ------------------------ |
-| state | string |  -> | Web ページ上で有効化する state の名前 |
+| 引数    | 型    |     | 説明                       |
+| ----- | ---- | :-: | ------------------------ |
+| state | Text |  -> | Webフォーム上で有効化する state の名称 |
 
 <!-- END REF -->
 
@@ -121,9 +121,9 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| 引数  | 型      |     | 説明                   |
-| --- | ------ | :-: | -------------------- |
-| msg | string |  -> | Web ページに表示するエラーメッセージ |
+| 引数  | 型    |     | 説明                   |
+| --- | ---- | :-: | -------------------- |
+| msg | Text |  -> | Webフォームに表示するエラーメッセージ |
 
 <!-- END REF -->
 
@@ -156,9 +156,9 @@ myForm.setError("My error message")
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| 引数  | 型      |     | 説明                  |
-| --- | ------ | :-: | ------------------- |
-| msg | string |  -> | Web ページに表示する情報メッセージ |
+| 引数  | 型    |     | 説明                  |
+| --- | ---- | :-: | ------------------- |
+| msg | Text |  -> | Webフォームに表示する情報メッセージ |
 
 <!-- END REF -->
 
@@ -191,9 +191,9 @@ myForm.setMessage("My information message")
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| 引数  | 型      |     | 説明                  |
-| --- | ------ | :-: | ------------------- |
-| msg | string |  -> | Web ページに表示する警告メッセージ |
+| 引数  | 型    |     | 説明                  |
+| --- | ---- | :-: | ------------------- |
+| msg | Text |  -> | Webフォームに表示する警告メッセージ |
 
 <!-- END REF -->
 

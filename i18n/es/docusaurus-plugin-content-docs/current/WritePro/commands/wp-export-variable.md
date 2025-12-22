@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-export-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP EXPORT VARIABLE.Syntax-->**WP EXPORT VARIABLE** ( *wpDoc* ; *destination* ; *format* {; *option*} )<!-- END REF-->
+<!--REF #_command_.WP EXPORT VARIABLE.Syntax-->**WP EXPORT VARIABLE** ( *wpDoc* : Object ; *destination* : Text, Blob ; *format* : Integer {; *option* : Object, Integer} )<!-- END REF-->
 
 <!--REF #_command_.WP EXPORT VARIABLE.Params-->
 

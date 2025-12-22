@@ -438,7 +438,7 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 | Paramètres | Type                      |                             | Description                                       |
 | ---------- | ------------------------- | :-------------------------: | ------------------------------------------------- |
-| primaryKey | Integer OR Text           |              ->             | Valeur de la clé primaire de l'entité à récupérer |
+| primaryKey | Integer, Text             |              ->             | Valeur de la clé primaire de l'entité à récupérer |
 | settings   | Object                    |              ->             | Option de création : contexte     |
 | Résultat   | 4D.Entity | <- | Entité correspondant à la clé primaire indiquée   |
 

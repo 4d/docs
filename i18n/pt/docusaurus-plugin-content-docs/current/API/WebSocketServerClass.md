@@ -232,7 +232,7 @@ Como resultado do `WSHandler. callback nConnection`, passe um objeto `connection
 | ws        |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | Objecto de ligação WebSocket actual |
 | "event"   |      | Object                                                  | <- | Parâmetros                          |
 |           | type | Text                                                    |                             | "message"                           |
-|           | data | Text / Blob / Object                                    |                             | dados enviados pelo cliente         |
+|           | data | Text, Blob, Object                                      |                             | dados enviados pelo cliente         |
 
 Este Callback para dados WebSocket. Chamado sempre que o WebSocket recebe dados.
 

@@ -5,7 +5,7 @@ slug: /commands/create-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ( *aTable* : Table )}<!-- END REF-->
+<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -332,11 +332,11 @@ El valor devuelto es la llave pública.
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parámetros | Tipo         |                             | Descripción                                                           |
-| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------- |
-| message    | Texto O Blob | ->                          | Mensaje a firmar                                                      |
-| options    | Object       | ->                          | Opciones de firma                                                     |
-| Resultado  | Text         | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
+| Parámetros | Tipo       |                             | Descripción                                                           |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Mensaje a firmar                                                      |
+| options    | Object     | ->                          | Opciones de firma                                                     |
+| Resultado  | Text       | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 
 <!-- END REF -->
 
@@ -416,12 +416,12 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parámetros | Tipo         |                             | Descripción                                                                                   |
-| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------- |
-| message    | Texto O Blob | ->                          | Mensaje utilizado para producir la firma                                                      |
-| signature  | Text         | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
-| options    | Object       | ->                          | Opciones de firma                                                                             |
-| Resultado  | Object       | <- | Estado de la verificación                                                                     |
+| Parámetros | Tipo       |                             | Descripción                                                                                   |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Mensaje utilizado para producir la firma                                                      |
+| signature  | Text       | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
+| options    | Object     | ->                          | Opciones de firma                                                                             |
+| Resultado  | Object     | <- | Estado de la verificación                                                                     |
 
 <!-- END REF -->
 

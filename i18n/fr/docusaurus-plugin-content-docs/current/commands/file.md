@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path         | Text                                           | &#8594; | Chemin de fichier                                                     |
 | fileConstant | Integer                                        | &#8594; | Constante de fichier 4D                                               |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (par défaut) ou `fk platform path` |
-| \*           | operator                                       | &#8594; | \* pour retourner le fichier de la base hôte                          |
+| \*           | Opérateur                                      | &#8594; | \* pour retourner le fichier de la base hôte                          |
 | Résultat     | [4D.File](../API/FileClass.md) | &#8592; | Nouvel objet fichier                                                  |
 
 <!-- END REF -->
@@ -88,9 +88,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1566                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1566 |
+| Thread safe        | oui  |
 
 

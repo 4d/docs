@@ -5,7 +5,7 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ( *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}{; *})<br/>**SELECTION TO ARRAY** ( *laTable* : Champ, Table ; *tableau* : Array {; *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}{; *})<br/>**SELECTION TO ARRAY** ( *laTable* : Champ, Table ; *tableau* : Array {; *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}}{; *}})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -332,11 +332,11 @@ La valeur retournée est la clé publique.
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Paramètres | Type         |                             | Description                                                                |
-| ---------- | ------------ | --------------------------- | -------------------------------------------------------------------------- |
-| message    | Text OU Blob | ->                          | Message à signer                                                           |
-| options    | Object       | ->                          | Options de signature                                                       |
-| Résultat   | Text         | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
+| Paramètres | Type       |                             | Description                                                                |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Message à signer                                                           |
+| options    | Object     | ->                          | Options de signature                                                       |
+| Résultat   | Text       | <- | Signature en représentation Base64 ou Base64URL, selon l'option "encoding" |
 
 <!-- END REF -->
 
@@ -416,12 +416,12 @@ Contient le <!-- REF #CryptoKey.type.Summary -->nom du type de clé - "RSA", "EC
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Paramètres | Type         |                             | Description                                                                                     |
-| ---------- | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------- |
-| message    | Text OU Blob | ->                          | Message qui a été utilisé pour produire la signature                                            |
-| signature  | Text         | ->                          | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
-| options    | Object       | ->                          | Options de signature                                                                            |
-| Résultat   | Object       | <- | Statut de la vérification                                                                       |
+| Paramètres | Type       |                             | Description                                                                                     |
+| ---------- | ---------- | --------------------------- | ----------------------------------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Message qui a été utilisé pour produire la signature                                            |
+| signature  | Text       | ->                          | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
+| options    | Object     | ->                          | Options de signature                                                                            |
+| Résultat   | Object     | <- | Statut de la vérification                                                                       |
 
 <!-- END REF -->
 

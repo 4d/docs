@@ -1081,7 +1081,7 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 | msgNumber  | Integer |              ->             | Número de secuencia del mensaje                                                                                            |
 | msgID      | Text    |              ->             | ID único del mensaje                                                                                                       |
 | updateSeen | Boolean |              ->             | Si True, el mensaje se marca como "visto" en el buzón. Si False, el mensaje se deja igual. |
-| Resultado  | BLOB    | <- | Blob de la cadena MIME devuelta por el servidor de correo                                                                  |
+| Resultado  | Blob    | <- | Blob de la cadena MIME devuelta por el servidor de correo                                                                  |
 
 <!-- END REF -->
 

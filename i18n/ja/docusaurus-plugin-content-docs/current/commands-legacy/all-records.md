@@ -5,7 +5,7 @@ slug: /commands/all-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALL RECORDS.Syntax-->**ALL RECORDS** ( *aTable* : Table )}<!-- END REF-->
+<!--REF #_command_.ALL RECORDS.Syntax-->**ALL RECORDS** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.ALL RECORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/duplicate-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** ( *laTable* : Table )}<!-- END REF-->
+<!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.DUPLICATE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

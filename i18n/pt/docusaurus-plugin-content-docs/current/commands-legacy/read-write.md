@@ -5,7 +5,7 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ( tabela | * )}<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ tabela | * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

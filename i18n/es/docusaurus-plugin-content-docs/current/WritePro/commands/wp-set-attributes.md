@@ -4,16 +4,16 @@ title: WP SET ATTRIBUTES
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* ; *...attribName* ; *...attribValue* )<br/>**WP SET ATTRIBUTES** ( *targetObj* ; *attribObj* )<!-- END REF-->
+<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any )<br/>**WP SET ATTRIBUTES** ( *targetObj* : Object ; *attribObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| Parámetros  | Tipo                                            |                             | Descripción                                                                               |
-| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------------------------------------------------------------- |
-| targetObj   | Object                                          | &#8594; | Rango o elemento o documento 4D Write Pro                                                 |
-| attribName  | Text                                            | &#8594; | Nombre del atributo a definir                                                             |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | Nuevo valor de atributo                                                                   |
-| attribObj   | Object                                          | &#8594; | Objeto que contiene los nombres de los atributos y sus correspondientes valores a definir |
+| Parámetros  | Tipo   |                             | Descripción                                                                               |
+| ----------- | ------ | --------------------------- | ----------------------------------------------------------------------------------------- |
+| targetObj   | Object | &#8594; | Rango o elemento o documento 4D Write Pro                                                 |
+| attribName  | Text   | &#8594; | Nombre del atributo a definir                                                             |
+| attribValue | any    | &#8594; | Nuevo valor de atributo                                                                   |
+| attribObj   | Object | &#8594; | Objeto que contiene los nombres de los atributos y sus correspondientes valores a definir |
 
 <!-- END REF-->
 

@@ -443,7 +443,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 | Parâmetro  | Tipo                       |                             | Descrição                                            |
 | ---------- | -------------------------- | :-------------------------: | ---------------------------------------------------- |
-| primaryKey | Integer OR Text            |              ->             | Valor da chave primária da entidade a recuperar      |
+| primaryKey | Integer, Text              |              ->             | Valor da chave primária da entidade a recuperar      |
 | settings   | Object                     |              ->             | Opção de construção: context         |
 | Resultados | 4D. Entity | <- | Entidade que coincide com a chave primária designada |
 

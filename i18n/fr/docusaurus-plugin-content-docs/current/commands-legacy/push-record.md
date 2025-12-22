@@ -5,7 +5,7 @@ slug: /commands/push-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ( *laTable* : Table )}<!-- END REF-->
+<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

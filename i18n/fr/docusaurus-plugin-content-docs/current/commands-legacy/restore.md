@@ -5,7 +5,7 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ( *cheminArchive* : Text {; *cheminDossierDest* : Text} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *cheminArchive* : Text {; *cheminDossierDest* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

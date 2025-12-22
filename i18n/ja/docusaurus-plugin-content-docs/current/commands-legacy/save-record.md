@@ -5,7 +5,7 @@ slug: /commands/save-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** ( *aTable* : Table )}<!-- END REF-->
+<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.SAVE RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

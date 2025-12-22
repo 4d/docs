@@ -5,7 +5,7 @@ slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ( *aTable* : Table )}<!-- END REF-->
+<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

@@ -101,11 +101,11 @@ Dans le paramètre *options*, passez un objet qui peut contenir les propriétés
 
 Toutes les fonctions de callback reçoivent deux paramètres objet. Leur contenu dépend du callback :
 
-| Paramètres                   | Type         | *onResponse* | *onData*       | *onDataError*    | *onError*    | *onTerminate* |
-| ---------------------------- | ------------ | ------------ | -------------- | ---------------- | ------------ | ------------- |
-| $param1                      | Object       | SystemWorker | SystemWorker   | SystemWorker     | SystemWorker | SystemWorker  |
-| $param2.type | Text         | "response"   | "data"         | "error"          | "error"      | "termination" |
-| $param2.data | Text ou Blob |              | données reçues | données d'erreur |              |               |
+| Paramètres                   | Type       | *onResponse* | *onData*       | *onDataError*    | *onError*    | *onTerminate* |
+| ---------------------------- | ---------- | ------------ | -------------- | ---------------- | ------------ | ------------- |
+| $param1                      | Object     | SystemWorker | SystemWorker   | SystemWorker     | SystemWorker | SystemWorker  |
+| $param2.type | Text       | "response"   | "data"         | "error"          | "error"      | "termination" |
+| $param2.data | Text, Blob |              | données reçues | données d'erreur |              |               |
 
 Voici la séquence des appels de callbacks :
 
