@@ -606,9 +606,9 @@ Les paramètres suivants sont toujours pris en charge mais reposent sur des fonc
 
 Statut de validation d'adresse IP pour les cookies de session. Pour des raisons de sécurité, le serveur Web vérifie par défaut l'adresse IP de chaque requête contenant un cookie de session et la rejette si cette adresse ne correspond pas à l'adresse IP utilisée pour créer le cookie. Dans certaines applications spécifiques, vous souhaiterez peut-être désactiver cette validation et accepter les cookies de session, même lorsque leurs adresses IP ne correspondent pas. Par exemple, lorsque les appareils mobiles basculent entre les réseaux Wifi et 4G/5G, leur adresse IP change. Dans ce cas, vous devez passer 0 à cette option pour permettre aux clients de continuer à utiliser leurs sessions Web même lorsque les adresses IP changent. Note : ce paramètre réduit le niveau de sécurité de votre application. Une fois modifiée, cette option prend effet immédiatement (il n'est pas nécessaire de redémarrer le serveur HTTP).
 
-### Generic Web User
+### Utilisateur Web générique
 
-This option allows you to designate a user, previously defined in the [4D password table](../Users/handling_users_groups.md), as a "Generic Web User". In this case, each browser allowed to connect to the database gets access authorizations and restrictions associated with this user.
+Cette option vous permet de désigner un utilisateur, précédemment défini dans les [utilisateurs 4D](../Users/handling_users_groups.md), comme "utilisateur Web générique". Dans ce cas, chaque navigateur autorisé à se connecter à la base de données obtient les autorisations et les restrictions d'accès associées à cet utilisateur.
 
 #### Envoyer directement les caractères étendus
 

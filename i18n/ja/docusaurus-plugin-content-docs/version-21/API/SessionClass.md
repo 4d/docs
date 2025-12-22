@@ -540,11 +540,11 @@ End if
 
 :::note
 
-This function always returns **False** with desktop sessions.
+この関数はデスクトップセッションに対しては常に **False** を返します。
 
 :::
 
-The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True as long as `setPrivileges()` is not called in the session or after a [Qodly logout](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) has been executed in the session<!-- END REF -->.
+.isGuest()` 関数は <!-- REF #SessionClass.isGuest().Summary -->セッション内で`setPrivileges()\` が呼ばれていない、あるいはセッション内で[Qodly logout](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) が実行されたあとである場合には True を返します<!-- END REF -->。
 
 :::note 互換性
 
@@ -785,10 +785,10 @@ End if
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                          |
-| ----- | --------------------------- |
-| 20 R5 | Support of desktop sessions |
-| 18 R6 | 追加                          |
+| リリース  | 内容               |
+| ----- | ---------------- |
+| 20 R5 | デスクトップセッションのサポート |
+| 18 R6 | 追加               |
 
 </details>
 
@@ -810,7 +810,7 @@ End if
 
 :::
 
-When a desktop session and a web session are [shared using an OTP](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses), they also share the same `.storage` object.
+デスクトップセッションとWeb セッションが[OTP を使用して共有している](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses)場合、これらは同じ `.storage` オブジェクトを共有します。
 
 #### Webセッションの例題
 
@@ -842,10 +842,10 @@ End use
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                          |
-| ----- | --------------------------- |
-| 20 R5 | Support of desktop sessions |
-| 18 R6 | 追加                          |
+| リリース  | 内容               |
+| ----- | ---------------- |
+| 20 R5 | デスクトップセッションのサポート |
+| 18 R6 | 追加               |
 
 </details>
 
@@ -855,10 +855,10 @@ End use
 
 `.userName` プロパティは、<!-- REF #SessionClass.userName.Summary -->セッションと紐づいたユーザー名<!-- END REF -->を格納します。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
-- **Web sessions**: This property is an empty string by default. これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
-- **Remote/Stored procedure sessions**: This property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
-- **Standalone sessions**: This property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command.
+- **Web セッション**: このプロパティはデフォルトで空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
+- **リモート/ ストアドプロシージャーセッション**: このプロパティは [`Current user`](../commands-legacy/current-user.md) コマンドと同じユーザー名を返します。
+- **スタンドアロンセッション**: このプロパティは"designer" または[`SET USER ALIAS`](../commands-legacy/set-user-alias.md) コマンドで設定された名前が格納されています。
 
-This property is **read only** for desktop sessions.
+このプロパティはデスクトップセッションにおいては**読み取り専用**です。
 
 <!-- END REF -->

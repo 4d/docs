@@ -1,9 +1,9 @@
 ---
 id: webServerObject
-title: Web Server instances
+title: Instances du serveur Web
 ---
 
-A 4D project can start and monitor a web server for the main (host) application as well as each [hosted component](../Concepts/components.md).
+Un projet 4D peut démarrer et contrôler un serveur web pour l'application principale (hôte) ainsi que pour chaque [composant hébergé](../Concepts/components.md).
 
 Par exemple, si vous avez installé deux composants dans votre application principale, vous pouvez démarrer et contrôler jusqu'à trois serveurs Web indépendants à partir de votre application :
 

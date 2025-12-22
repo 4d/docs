@@ -5,7 +5,7 @@ title: Préférences de l'application
 
 Les préférences utilisateur spécifient divers paramètres associés à votre environnement de travail, tels que les options par défaut, les thèmes d'affichage, les fonctionnalités de l'éditeur de code, les raccourcis, etc. Elles sont appliquées à tous les projets ouverts avec votre application 4D ou 4D Server.
 
-**4D Server** : Le verrouillage des objets se produit lorsque deux utilisateurs ou plus tentent de modifier les paramètres de la boîte de dialogue Préférences en même temps. Un seul utilisateur à la fois peut utiliser la boîte de dialogue Préférences.
+**4D Server** : Un verrouillage des objets se produit lorsque deux utilisateurs ou plus tentent de modifier les paramètres de la boîte de dialogue Préférences en même temps. Un seul utilisateur à la fois peut utiliser la boîte de dialogue Préférences.
 
 > 4D propose un ensemble de paramètres spécifiques pour le projet ouvert : **Paramètres** (disponible dans le menu **Développement**). Pour plus d'informations, reportez-vous au chapitre Paramètres.
 
@@ -21,7 +21,7 @@ Vous pouvez également afficher la boîte de dialogue Préférences en mode Appl
 
 ## Storage
 
-Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](../commands-legacy/get-4d-folder.md) command:
+Les réglages effectués dans la boîte de dialogue des Préférences sont enregistrés dans un fichier de préférences au format XML nommé **4D Preferences vXX.4DPreferences** qui est stocké dans le dossier 4D actif de l'utilisateur courant, tel qu'il est renvoyé par la commande [`Get 4D folder`](../commands-legacy/get-4d-folder.md) :
 
 - Windows: `{disk}\Users\\{username\}\AppData\Roaming\4D`
 - macOS: `{disk}:Users:\{username\}:Library:Application Support:4D`

@@ -3,14 +3,14 @@ id: sessions
 title: Sessions Web
 ---
 
-Le serveur Web de 4D offre des fonctions intégrées pour la gestion des **sessions Web**. La création et la maintenance de sessions Web vous permettent de contrôler et d'améliorer l'expérience utilisateur de votre application web. Lorsque les sessions web sont activées, les clients web peuvent réutiliser le même contexte de serveur d'une requête à une autre.
+Le serveur Web de 4D offre des fonctions intégrées de gestion des **sessions Web**. La création et la maintenance de sessions Web vous permettent de contrôler et d'améliorer l'expérience utilisateur de votre application web. Lorsque les sessions web sont activées, les clients web peuvent réutiliser le même contexte de serveur d'une requête à une autre.
 
 Les sessions Web permettent de :
 
 - gérer simultanément plusieurs requêtes depuis le même client web via un nombre illimité de process préemptifs (les sessions web sont **évolutives**),
 - gérer la session à travers un objet `Session` et une [API de session](API/SessionClass.md),
 - stocker et partager des données entre les process d'un client web en utilisant le [.storage](../API/SessionClass.md#storage) de la session,
-- associate [privileges](../ORDA/privileges.md) to the user running the session.
+- accorder des [privilèges](../ORDA/privileges.md) à l'utilisateur qui exécute la session.
 
 :::tip Article(s) de blog sur le sujet
 
@@ -20,7 +20,7 @@ Les sessions Web permettent de :
 
 :::note
 
-Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
+Les applications Destkop (client/serveur et mono-utilisateur) fournissent également aux développeurs 4D des [sessions spécifiques](../Desktop/sessions.md).
 
 :::
 
@@ -31,7 +31,7 @@ Les sessions Web sont utilisées par :
 - les [applications Web](gettingStarted.md) envoyant des requêtes http (y compris les [Web services SOAP](../commands/theme/Web_Services_Server.md) et les requêtes [/4DACTION](../WebServer/httpRequests.md#4daction)),
 - les appels à l'[API REST](../REST/authUsers.md), qui sont effectués par les [datastores distants](../ORDA/remoteDatastores.md) et les [pages Qodly](qodly-studio.md).
 
-## Enabling web sessions {#enabling-web-sessions}
+## Activation des sessions web {#enabling-web-sessions}
 
 La gestion de session peut être activée et désactivée sur votre serveur Web 4D. Il y a différentes façons d'activer la gestion de session :
 
@@ -112,7 +112,7 @@ Vous pouvez fermer une session à partir d'une page Qodly en utilisant la foncti
 
 ## Privilèges
 
-Les privilèges sont associés aux sessions utilisateur web. Sur le serveur web, vous pouvez fournir un accès spécifique ou des fonctionnalités en fonction des privilèges de la session.
+Des privilèges peuvent être associés aux sessions utilisateur web. Sur le serveur web, vous pouvez fournir un accès spécifique ou des fonctionnalités en fonction des privilèges de la session.
 
 Vous assignez des privilèges en utilisant la [fonction `.setPrivileges()`](API/SessionClass.md#setprivileges). Dans votre code, vous pouvez vérifier les privilèges de la session pour autoriser ou refuser l'accès à l'aide de la fonction [`.hasPrivilege()`](API/SessionClass.md#hasprivilege). Par défaut, les nouvelles sessions n'ont aucun privilège : ce sont des sessions **Guest** (la fonction [`isGuest()`](API/SessionClass.md#isguest) retourne true).
 
@@ -227,7 +227,7 @@ Dans 4D, les tokens de session OTP sont utiles pour appeler des URL externes et 
 
 :::note
 
-Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
+Les tokens de session peuvent être partagés avec les [sessions desktop](../Desktop/sessions.md) permettant d'implémenter des applications utilisant des sessions hybrides.
 
 :::
 
@@ -487,7 +487,7 @@ Un nouvel utilisateur est créé et des informations sont stockées dans la sess
 - Les schémas HTTP et HTTPS sont tous deux pris en charge.
 - Seules des [sessions évolutives](#enabling-web-sessions) peuvent être réutilisées avec des tokens.
 - Seules les sessions de la base de données hôte peuvent être réutilisées (les sessions créées dans les serveurs web des composants ne peuvent pas être restaurées).
-- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
+- Les tokens peuvent être **partagés** avec des [sessions desktop](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) pour les accès hybrides (desktop et web).
 
 ### Durée de vie
 

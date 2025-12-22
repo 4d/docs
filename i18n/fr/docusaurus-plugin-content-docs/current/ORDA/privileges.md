@@ -27,19 +27,19 @@ Si un utilisateur tente d'exécuter une action et ne dispose pas des droits d'ac
 
 Vous pouvez assigner des actions de permission spécifiques aux ressources suivantes dans votre projet :
 
-- the [datastore](../ORDA/dsMapping.md#datastore)
-- the [dataclasses](../ORDA/dsMapping.md#dataclass)
-- [attributes](../ORDA/dsMapping.md#attribute) (including [computed](./ordaClasses.md#computed-attributes-1) and [alias](./ordaClasses.md#alias-attributes-1))
-- functions of the [data model classes](../ORDA/ordaClasses.md)
-- [singleton](../REST/$singleton.md) functions
+- le [datastore](../ORDA/dsMapping.md#datastore)
+- les [dataclasses](../ORDA/dsMapping.md#dataclass)
+- les [attributs](../ORDA/dsMapping.md#attribute) (y compris [calculés](./ordaClasses.md#computed-attributes-1) et [alias](./ordaClasses.md#alias-attributes-1))
+- les fonctions des [classes du modèle de données](../ORDA/ordaClasses.md)
+- les fonctions [singleton](../REST/$singleton.md)
 
 Chaque fois qu'on accède à une ressource dans une session (quelle que soit la manière dont on y accède), 4D vérifie que la session dispose des autorisations appropriées et rejette l'accès s'il n'est pas autorisé.
 
 ## Permissions
 
-A permission is the ability to do an action on a resource. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Permissions are defined for the project in the [`roles.json`](#rolesjson-file) file. Each permission can be given to one or more [privileges](#privileges-and-roles).
+Une permission est la possibilité d'effectuer une action sur une ressource. Par exemple, *exécuter la fonction ds.myTable.myFunction()* représente une **permission**. Les permissions sont définies pour le projet dans le fichier [`roles.json`](#rolesjson-file). Chaque permission peut être accordée à un ou plusieurs [privileges](#privileges-and-roles).
 
-When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
+Quand **aucune permission spécifique** n'a été définie pour une ressource, l'accès à la ressource peut être automatiquement **sans restriction** ou **restreint** selon le [mode par défaut défini pour le projet](#restriction-modes).
 
 ### Actions de permission
 
@@ -67,7 +67,7 @@ Les actions disponibles sont liées à la ressource cible.
 
 Le paramétrage des permissions nécessite d'être cohérent, en particulier les permissions **update** et **drop** ont également besoin d'une permission **read** (mais **create** n'en a pas besoin).
 
-### Inherited permissions
+### Permissions héritées
 
 Une action de permission définie à un certain niveau est héritée par défaut aux niveaux inférieurs, mais plusieurs niveaux de permissions peuvent être définis :
 
@@ -164,7 +164,7 @@ exposed Function authenticate($identifier : Text; $password : Text)->$result : T
 
 ## `roles.json`
 
-The `roles.json` file describes the whole web security settings for the project. La syntaxe du fichier `roles.json` est la suivante:
+Le fichier `roles.json` décrit l'ensemble des paramètres de sécurité du projet. La syntaxe du fichier `roles.json` est la suivante:
 
 | Nom de propriété    |                                                                                     |                                                                                  | Type                             | Obligatoire | Description                                                                                                                        |
 | ------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -184,19 +184,19 @@ The `roles.json` file describes the whole web security settings for the project.
 |                     |                                                                                     | \[].drop    | Collection de chaînes            |             | Liste de privilèges                                                                                                                |
 |                     |                                                                                     | \[].execute | Collection de chaînes            |             | Liste de privilèges                                                                                                                |
 |                     |                                                                                     | \[].promote | Collection de chaînes            |             | Liste de privilèges                                                                                                                |
-| restrictedByDefault |                                                                                     |                                                                                  | Boolean                          |             | If true, access to resources without explicit permissions is denied                                                                |
-| forceLogin          |                                                                                     |                                                                                  | Boolean                          |             | If true, enables ["forceLogin" mode](../REST/authUsers.md#force-login-mode)                                                        |
+| restrictedByDefault |                                                                                     |                                                                                  | Boolean                          |             | Si true, l'accès aux ressources sans permission explicite est refusé                                                               |
+| forceLogin          |                                                                                     |                                                                                  | Boolean                          |             | Si true, active le mode ["forceLogin"](../REST/authUsers.md#force-login-mode)                                                      |
 
 :::caution Rappel
 
 - Le nom de privilège "WebAdmin" est réservé à l'application. Il est déconseillé d'utiliser ce nom pour les privilèges personnalisés.
-- `privileges` and `roles` names are case-insensitive.
+- Les noms de `privileges` et de `roles` ne sont pas sensibles à la casse.
 
 :::
 
-### Default File Location and Content
+### Emplacement et contenu du fichier par défaut
 
-When a new project is created, a default `roles.json` file is generated at:
+Lorsqu'un nouveau projet est créé, un fichier `roles.json` par défaut est généré à cet emplacement :
 
 ```
 <project folder>/Project/Sources/ 
@@ -204,7 +204,7 @@ When a new project is created, a default `roles.json` file is generated at:
 
 Voir la section [Architecture](../Project/architecture.md#sources) .
 
-Default content:
+Contenu par défaut :
 
 ```json title="/Project/Sources/roles.json"
 
@@ -240,30 +240,30 @@ Dans les versions précédentes, le fichier `roles.json` n'était pas créé par
 
 :::note Qodly Studio
 
-In Qodly Studio for 4D, the login mode can be set using the [**Force login** option](https://developer.4d.com/qodly/4DQodlyPro/force-login) in the Roles and Privileges panel.
+Dans Qodly Studio pour 4D, le mode de connexion peut être réglé en utilisant l'option [**Force login**](https://developer.4d.com/qodly/4DQodlyPro/force-login) dans le panneau Rôles et Privilèges.
 
 :::
 
-## Restriction Modes
+## Modes de restriction
 
-The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permission):
+La propriété `restrictedByDefault` configure la manière dont chaque [ressource](#resources) est accessible lorsqu'[aucune permission spécifique n'est définie pour elle](#permission) :
 
-- **Unrestricted mode** (`restrictedByDefault`: **false**): Resources without defined permissions are accessible to all requests. This mode is suitable for development environments where access can be gradually restricted.
-- **Restricted mode** (`restrictedByDefault`: **true**): Resources without defined permissions are blocked by default. This mode is recommended for production environments where access must be explicitly granted.
+- **Mode sans restriction** (`restrictedByDefault`: **false**) : les ressources sans permissions définies sont accessibles à toutes les requêtes. Ce mode convient aux environnements de développement où l'accès peut être progressivement restreint.
+- **Mode restreint** (`restrictedByDefault` : **true**) : Les ressources qui n'ont pas de permissions définies sont bloquées par défaut. Ce mode est recommandé pour les environnements de production où l'accès doit être explicitement accordé.
 
 :::note Compatibilité
 
-- When **creating a new project**, the `restrictedByDefault` property is set to **false** in the *roles.json* file (see below). Keep in mind that this configuration is tailored for quick start and smooth development. In production environment, [it is recommended to set the `restrictedByDefault` and `forceLogin` properties to **true**](#configuring-restrictedbydefault-and-forcelogin-properties).
-- In **projects converted from previous releases**; when enabling access to Qodly Studio using the [One-click configuration dialog](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), the `restrictedByDefault` property is added with value **true** in the *roles.json* file.
+- Lors de la **création d'un projet**, la propriété `restrictedByDefault` est mise à **false** dans le fichier *roles.json* (voir ci-dessous). Gardez à l'esprit que cette configuration est conçue pour un démarrage rapide et un développement fluide. Dans un environnement de production, [il est recommandé de définir les propriétés `restrictedByDefault` et `forceLogin` à **true**](#configuring-restrictedbydefault-and-forcelogin-properties).
+- Dans les **projets convertis à partir de versions précédentes** ; lors de l'activation de l'accès à Qodly Studio en utilisant le [Dialogue de configuration en un clic](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration), la propriété `restrictedByDefault` est ajoutée avec la valeur **true** dans le fichier *roles.json*.
 
 :::
 
-### Recommended Configuration
+### Configuration recommandée
 
-Depending on your environment, the recommended settings are:
+En fonction de votre environnement, les paramètres recommandés sont les suivants :
 
-- **Production**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **true**. This ensures maximum security by requiring user authentication and explicitly defined permissions for resource access.
-- **Development**: Set both `restrictedByDefault` and [`forceLogin`](../REST/authUsers.md#force-login-mode) to **false**. This allows easier access during development and debugging, with the possibility to gradually apply restrictions.
+- **Production** : Configurez les deux options `restrictedByDefault` et [`forceLogin`](../REST/authUsers.md#force-login-mode) à **true**. Cela garantit une sécurité maximale en exigeant l'authentification de l'utilisateur et des permissions explicitement définies pour l'accès aux ressources.
+- **Développement** : Configurez les deux options `restrictedByDefault` et [`forceLogin`](../REST/authUsers.md#force-login-mode) à **false**. Cela permet un accès plus facile pendant le développement et le débogage, avec la possibilité d'appliquer progressivement des restrictions.
 
 ### `Roles_Errors.json`
 

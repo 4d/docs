@@ -24,7 +24,7 @@ Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événe
 
 :::info Note de compatibilité
 
-Les événements d'entité ORDA dans le magasin de données sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Note also that, unlike triggers, ORDA entity events do not lock the entire underlying table of a dataclass while saving or dropping entities. Several events can run in parallel as long as they involve distinct entities (i.e. records).
+Les événements d'entité ORDA dans le datastore sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Notez également que, contrairement aux triggers, les événements d'entité ORDA ne verrouillent pas l'ensemble de la table sous-jacente d'une dataclass lors de l'enregistrement ou de la suppression d'entités. Plusieurs événements peuvent se dérouler en parallèle tant qu'ils concernent des entités distinctes (c'est-à-dire des enregistrements distincts).
 
 :::
 
@@ -170,11 +170,11 @@ Function event touched($event : Object)
 
 #### Exemple 2
 
-The "touched" event is useful when it is not possible to write indexed query code in [`Function query()`](./ordaClasses.md#function-query-attributename) for a [computed attribute](./ordaClasses.md#computed-attributes).
+L'événement "touched" est utile quand il n'est pas possible d'écrire un code de requête indexée dans [`Function query()`](./ordaClasses.md#function-query-attributename) pour un [attribut calculé](./ordaClasses.md#computed-attributes).
 
-This is the case for example, when your [`query`](./ordaClasses.md#function-query-attributename) function has to compare the value of different attributes from the same entity with each other. You must use formulas in the returned ORDA query -- which triggers sequential queries.
+C'est le cas, par exemple, lorsque votre fonction [`query`](./ordaClasses.md#function-query-attributename) doit comparer la valeur de différents attributs de la même entité. Vous devez utiliser des formules dans la requête ORDA renvoyée, ce qui déclenche des requêtes séquentielles.
 
-To fully understand this case, let's examine the following two calculated attributes:
+Pour bien comprendre ce cas, examinons les deux attributs calculés suivants :
 
 ```4d
 Function get onGoing() : Boolean
@@ -184,9 +184,9 @@ Function get sameDay() : Boolean
         return (This.departureDate=This.arrivalDate)
 ```
 
-Even though they are very similar, these functions cannot be associated with identical queries because they do not compare the same types of values. The first compares attributes to a given value, while the second compares attributes to each other.
+Même si elles sont très similaires, ces fonctions ne peuvent pas être associées à des requêtes identiques car elles ne comparent pas les mêmes types de valeurs. Le premier compare les attributs à une valeur donnée, tandis que le second compare les attributs entre eux.
 
-- For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
+- Pour l'attribut *onGoing*, la fonction [`query`](./ordaClasses.md#function-query-attributename) est simple à écrire et utilise des attributs indexés :
 
 ```4d
 Function query onGoing($event : Object) : Object
@@ -207,12 +207,12 @@ Function query onGoing($event : Object) : Object
     End case 
 
     $myQuery:=($onGoingValue) ? "departureDate <= :1 AND arrivalDate >= :1" : "departureDate > :1 OR arrivalDate < :1"
-        // the ORDA query string uses indexed attributes, it will be indexed
+        // la chaîne de requête ORDA utilise des attributs indexés, elle sera indexée
     $parameters.push(Current date)
     return {query: $myQuery; parameters: $parameters}
 ```
 
-- For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
+- Pour l'attribut *sameDay*, la fonction [`query`](./ordaClasses.md#function-query-attributename) requiert une requête ORDA basée sur des formules et sera séquentielle :
 
 ```4d
 Function query sameDay($event : Object) : Text
@@ -230,11 +230,11 @@ Function query sameDay($event : Object) : Text
         End case 
 
     return ($sameDayValue) ? "eval(This.departureDate = This.arrivalDate)" : "eval(This.departureDate != This.arrivalDate)"
-        // the ORDA query string uses a formula, it will not be indexed
+        // la requête ORDA utilise une formule, elle ne sera pas indexée
 
 ```
 
-- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- L'utilisation d'un attribut **scalaire** *sameDay* mis à jour lorsque d'autres attributs sont "touched" permet de gagner du temps :
 
 ```4d
     //BookingEntity class
@@ -250,7 +250,7 @@ Function event touched arrivalDate($event : Object)
 
 ```
 
-#### Example 3 (diagram): Client/server with the `local` keyword:
+#### Exemple 3 (diagramme) : Client/serveur avec le mot-clé `local` :
 
 ```mermaid
 
@@ -265,11 +265,11 @@ Note over Client:$people.lastname is uppercased
 
     Client->>+Server: $people.apply()
    
-   Note over Server: The $people entity is received with the lastname attribute uppercased
+   Note over Server: L'entity $people est reçue avec l'attribut lastname en majuscules
 
 ```
 
-#### Example 4 (diagram): Client/server without the `local` keyword
+#### Exemple 4 (diagramme) : Client/serveur avec le mot-clé `local`
 
 ```mermaid
 
@@ -279,37 +279,37 @@ sequenceDiagram
 
     Client->>+Client: $people.lastname:="Brown"
 
-   Note over Client:$people.lastname is not uppercased
+   Note over Client:$people.lastname n'est pas en majuscules
 
     Client->>+Server: $people.apply()
 
    Note over Server: Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
 
-    Server-->>-Client: The $people entity is updated
+    Server-->>-Client: L'entité $people est mise à jour
 
-   Note over Client:$people.lastname is uppercased
+   Note over Client:$people.lastname est en majuscules
 
 
 ```
 
-#### Example 5 (diagram): Qodly application
+#### Exemple 5 (diagramme) : Application Qodly
 
 ```mermaid
 
 sequenceDiagram
 
-Qodly page->>+ Server: Get an entity into the People Qodly source
+Qodly page->>+ Server: Récupérer une entité dans la source Qodly People
 
-Qodly page->>+Qodly page: The user updates People.lastname
+Qodly page->>+Qodly page: L'utilisateur met à jour People.lastname
 
-Note over Qodly page: The People Qodly source lastname attribute is not uppercased
+Note over Qodly page: L'attribut lastname de la source Qodly People n'est pas en majuscules
 
-Qodly page->>+ Server: Function call People.apply()
+Qodly page->>+ Server: Appel de fonction People.apply()
 
 Note over Server: Function event touched lastname($event : Object) <br> This.lastname:=Uppercase(This.lastname)
 
-Server-->>-Qodly page: The People Qodly source is updated
-Note over Qodly page: The People Qodly source lastname attribute is uppercased
+Server-->>-Qodly page: La source Qodly People est mise à jour
+Note over Qodly page: L'attribut lastname de la source Qodly People est en majuscules
 
 
 ```
@@ -324,41 +324,41 @@ Function event validateSave <attributeName>($event : Object)
 // code
 ```
 
-This event is triggered each time an entity is about to be saved.
+Cet événement est déclenché chaque fois qu'une entité est sur le point d'être sauvegardée.
 
-- if you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
-- if you defined the function at the attribute level (second syntax), it is called only for this attribute. This function is **not** executed if the attribute has not been touched in the entity.
+- si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité.
+- si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut. Cette fonction n'est **pas** exécutée si l'attribut n'a pas été modifié dans l'entité.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-This event is triggered by the following functions:
+Cet événement est déclenché par les fonctions suivantes :
 
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-This event is triggered **before** the entity is actually saved and lets you check data consistency so that you can stop the action if needed. For example, you can check in this event that "departure date" < "arrival date".
+Cet événement est déclenché **avant** que l'entité ne soit réellement sauvegardée et vous permet de vérifier la cohérence des données afin d'interrompre l'action si nécessaire. Par exemple, vous pouvez vérifier dans cet événement que "date de départ" < "date d'arrivée".
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Pour stopper l'action, le code de la fonction doit renvoyer un [objet erreur](#error-object).
 
 :::note
 
-It is not recommended to update the entity within this function (using `This`).
+Il n'est pas recommandé de mettre à jour l'entité dans le cadre de cette fonction (en utilisant `This`).
 
 :::
 
 #### Exemple
 
-In this example, it is not allowed to save a product with a margin lower than 50%. In case of an invalid price attribute, you return an error object and thus, stop the save action.
+Dans cet exemple, il n'est pas permis de sauvegarder un produit dont la marge est inférieure à 50 %. En cas d'attribut de prix non valide, vous renvoyez un objet erreur et arrêtez ainsi l'action de sauvegarde.
 
 ```4d
 // ProductsEntity class
 //
-// validateSave event at attribute level
+// event validateSave au niveau attribut
 Function event validateSave margin($event : Object) : Object
 	
 var $result : Object
 	
-//The user can't create a product whose margin is < 50%
+//L'utilisateur ne peut pas créer un produit dont la marge est < 50%
 If (This.margin<50)
 	$result:={errCode: 1; message: "The validation of this product failed"; \
 	extraDescription: {info: "The margin of this product ("+String(This.margin)+") is lower than 50%"}; seriousError: False}
@@ -377,37 +377,37 @@ Function event saving <attributeName>($event : Object)
 // code
 ```
 
-This event is triggered each time an entity is being saved.
+Cet événement est déclenché chaque fois qu'une entité est sur le point d'être sauvegardée.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity. The function is executed even if no attribute has been touched in the entity (e.g. in case of sending data to an external app each time a save is done).
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute. The function is **not** executed if the attribute has not been touched in the entity.
+- Si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité. La fonction est exécutée même si aucun attribut n'a été touché dans l'entité (par exemple, dans le cas de l'envoi de données à une application externe à chaque fois qu'une sauvegarde est effectuée).
+- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut. La fonction n'est **pas** exécutée si l'attribut n'a pas été touché dans l'entité.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-This event is triggered by the following functions:
+Cet événement est déclenché par les fonctions suivantes :
 
 - [`entity.save()`](../API/EntityClass.md#save)
 - [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
 
-This event is triggered **while** the entity is actually saved. If a [`validateSave()`](#function-event-validatesave) event function was defined, the `saving()` event function is called if no error was triggered by `validateSave()`. For example, you can use this event to create a document on a Google Drive account.
+Cet événement est déclenché **pendant que** l'entité est sauvegardée. Si une fonction d'événement [`validateSave()`](#function-event-validatesave) a été définie, la fonction d'événement `saving()` est appelée si aucune erreur n'a été déclenchée par `validateSave()`. Par exemple, vous pouvez utiliser cet événement pour créer un document sur un compte Google Drive.
 
 :::note
 
-The business logic should raise errors which can't be detected during the `validateSave()` events, e.g. a network error
+La logique applicative doit générer les erreurs qui ne peuvent pas être détectées lors des événements `validateSave()`, par exemple une erreur de réseau.
 
 :::
 
-During the save action, 4D engine errors can be raised (index, stamp has changed, not enough space on disk).
+Lors de l'action de sauvegarde, des erreurs du moteur 4D peuvent être générées (index, le marqueur stamp a changé, pas assez d'espace sur le disque).
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Pour stopper l'action, le code de la fonction doit renvoyer un [objet erreur](#error-object).
 
 #### Exemple
 
-When a file is saved on disk, catch errors related to disk space for example.
+Lorsqu'un fichier est sauvegardé sur le disque, intercepter par exemple les erreurs liées à l'espace disque.
 
 ```4d
-// ProductsEntity class
-// saving event at attribute level
+// Classe ProductsEntity
+// Evénement save au niveau de l'attribut
 Function event saving userManualPath($event : Object) : Object
 	
 var $result : Object
@@ -417,17 +417,17 @@ var $fileCreated : Boolean
 If (This.userManualPath#"")
 	$userManualFile:=File(This.userManualPath)
 				
-	// The user manual document file is created on the disk
-	// This may fail if no more space is available
+	// Le fichier du manuel de l'utilisateur est créé sur le disque
+	// Cela peut échouer s'il n'y a plus d'espace disponible
 	Try
-        // The file content has been generated and stored in a map in Storage.docMap previously
-	    $docInfo:=Storage.docMap.query("name = :1"; This.name).first()
+        // Le contenu du fichier a été généré et stocké dans une carte dans Storage.docMap précédemment
+	    $docInfo:=Storage.docMap.query("name = :1" ; This.name).first()
         $userManualFile.setContent($docInfo.content)
 	Catch
-		// No more room on disk for example
+		// Il n'y a plus de place sur le disque par exemple
 		$result:={/
-            errCode: 1; message: "Error during the save action for this product"; /
-            extraDescription: {info: "There is no available space on disk to store the user manual"}/
+            errCode : 1 ; message : "Error during the save action for this product" ; /
+            extraDescription : {info : "Il n'y a pas d'espace disponible sur le disque pour stocker le manuel de l'utilisateur"}/
         }
 	End try
 End if 
@@ -438,7 +438,7 @@ return $result
 
 :::note
 
-The content of the file is generated outside the `saving` event because it can be time consuming.
+Le contenu du fichier est généré en dehors de l'événement `saving` car cela peut prendre du temps.
 
 :::
 
@@ -451,30 +451,30 @@ Function event afterSave($event : Object)
 // code
 ```
 
-This event is triggered just after an entity is saved in the data file, when at least one attribute was modified. It is not executed if no attribute has been touched in the entity.
+Cet événement est déclenché juste après la sauvegarde d'une entité dans le fichier de données, lorsqu'au moins un attribut a été modifié. Elle n'est pas exécutée si aucun attribut n'a été modifié dans l'entité.
 
-This event is useful after saving data to propagate the save action outside the application or to execute administration tasks. For example, it can be used to send a confirmation email after data have been saved. Or, in case of error while saving data, it can make a rollback to restore a consistent state of data.
+Cet événement est utile après la sauvegarde des données pour propager l'action de sauvegarde en dehors de l'application ou pour exécuter des tâches d'administration. Par exemple, il peut être utilisé pour envoyer un courriel de confirmation après la sauvegarde des données. Ou, en cas d'erreur lors de l'enregistrement des données, il peut effectuer un retour en arrière pour restaurer un état cohérent des données.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-- To avoid infinite loops, calling a [`save()`](../API/EntityClass.md#save) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
-- Throwing an [error object](#error-object) is **not supported** by this function.
+- Pour éviter les boucles infinies, appeler un [`save()`](../API/EntityClass.md#save) sur l'entité courante (via `This`) dans cette fonction n'est **pas autorisé**. Cela provoquera une erreur.
+- Faire un throw d'un [objet erreur](#error-object) n'est **pas pris en charge** par cette fonction.
 
 #### Exemple
 
-If an error occurred in the above saving event, the attribute value is reset accordingly in the `afterSave` event:
+Si une erreur s'est produite lors de l'événement de sauvegarder ci-dessus, la valeur de l'attribut est réinitialisée en conséquence dans l'événement `afterSave` :
 
 ```4d
-// ProductsEntity class
+// Classe ProductsEntity
 Function event afterSave($event : Object)
 	
 If (($event.status.success=False) && ($event.status.errors=Null))  
-    // $event.status.errors is filled if the error comes from the validateSave event
+    // $event.status.errors est rempli si l'erreur provient de l'événement validateSave
 		
-	// The userManualPath attribute has not been properly saved
-	// Its value is reset
+	// L'attribut userManualPath n'a pas été correctement sauvegardé
+	// Sa valeur est réinitialisée
 	If ($event.savedAttributes.indexOf("userManualPath")=-1)
-		This.userManualPath:=""
+		This.userManualPath:="
 		This.status:="KO"
 	End if 
 		
@@ -491,38 +491,38 @@ Function event validateDrop <attributeName>($event : Object)
 // code
 ```
 
-This event is triggered each time an entity is about to be dropped.
+Cet événement est déclenché chaque fois qu'une entité est sur le point d'être supprimée.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute.
+- Si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité.
+- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-This event is triggered by the following features:
+Cet événement est déclenché par les fonctionnalités suivantes :
 
 - [`entity.drop()`](../API/EntityClass.md#drop)
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
-- [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
+- [règles de contrôle de la suppression](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) qui peuvent être définies au niveau de la structure de la base de données.
 
-This event is triggered **before** the entity is actually dropped, allowing you to check data consistency and if necessary, to stop the drop action.
+Cet événement est déclenché **avant** que l'entité ne soit effectivement supprimée, ce qui permet de vérifier la cohérence des données et, le cas échéant, d'interrompre l'action de suppression.
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Pour stopper l'action, le code de la fonction doit renvoyer un [objet erreur](#error-object).
 
 #### Exemple
 
-In this example, it is not allowed to drop a product that is not labelled "TO DELETE". In this case, you return an error object and thus, stop the drop action.
+Dans cet exemple, il n'est pas permis de supprimer un produit qui n'est pas libellé "TO DELETE". Dans ce cas, vous renvoyez un objet d'erreur et stoppez ainsi l'action de suppression.
 
 ```4d
-// ProductsEntity class
+// Classe ProductsEntity
 
 Function event validateDrop status($event : Object) : Object
 
-var $result : Object
+var $result : Objet
 
-// Products must be marked as TO DELETE to be dropped
+// Les produits doivent être marqués TO DELETE pour être supprimables
 If (This.status#"TO DELETE")
-    $result:={errCode: 1; message: "You can't drop this product"; \
-    extraDescription: {info: "This product must be marked as To Delete"}; seriousError: False}
+    $result:={errCode : 1 ; message : "Vous ne pouvez pas supprimer ce produit" ; \
+    extraDescription : {info : "Ce produit doit être marqué comme à supprimer"} ; seriousError : False}
 End if 
 
 return $result
@@ -538,35 +538,35 @@ Function event dropping <attributeName>($event : Object)
 // code
 ```
 
-This event is triggered each time an entity is being dropped.
+Cet événement est déclenché chaque fois qu'une entité est supprimée.
 
-- If you defined the function at the entity level (first syntax), it is called for any attribute of the entity.
-- If you defined the function at the attribute level (second syntax), it is called only for this attribute.
+- Si vous avez défini la fonction au niveau de l'entité (première syntaxe), elle est appelée pour tout attribut de l'entité.
+- Si vous avez défini la fonction au niveau de l'attribut (deuxième syntaxe), elle n'est appelée que pour cet attribut.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-This event is triggered by the following features:
+Cet événement est déclenché par les fonctionnalités suivantes :
 
 - [`entity.drop()`](../API/EntityClass.md#drop)
 - [`entitySelection.drop()`](../API/DataClassClass.md#fromcollection)
-- [deletion control rules](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) that can be defined at the database structure level.
+- [règles de contrôle de la suppression](https://doc.4d.com/4Dv20/4D/20.2/Relation-properties.300-6750290.en.html#107320) qui peuvent être définies au niveau de la structure de la base de données.
 
-This event is triggered **while** the entity is actually dropped. If a [`validateDrop()`](#function-event-validatedrop) event function was defined, the `dropping()` event function is called if no error was triggered by `validateDrop()`.
+Cet événement est déclenché **pendant que** l'entité est effectivement supprimée. Si une fonction d'événement [`validateDrop()`](#function-event-validatedrop) a été définie, la fonction d'événement `dropping()` est appelée si aucune erreur n'a été générée par `validateDrop()`.
 
 :::note
 
-The business logic should raise errors which cannot be detected during the `validateDrop()` events, e.g. a network error.
+La logique applicative doit générer les erreurs qui ne peuvent pas être détectées lors des événements `validateDrop()`, par exemple une erreur de réseau.
 
 :::
 
-To stop the action, the code of the function must return an [error object](#error-object).
+Pour stopper l'action, le code de la fonction doit renvoyer un [objet erreur](#error-object).
 
 #### Exemple
 
-Here is an example of `dropping` event at entity level:
+Voici un exemple d'événement `dropping` au niveau de l'entité :
 
 ```4d
-// ProductsEntity class
+// Classe ProductsEntity
 Function event dropping($event : Object) : Object
 
 var $result : Object
@@ -574,15 +574,15 @@ var $userManualFile : 4D.File
 
 $userManualFile:=File(This.userManualPath)
 
-    // When dropping a product, its user manual is also deleted on the disk
-    // This action may fail
+    // Lors de la suppression d'un produit, son manuel d'utilisation est également supprimé sur le disque
+    // Cette action peut échouer
 Try
     If ($userManualFile.exists)
         $userManualFile.delete()
     End if 
 Catch
-    // Dropping the user manual failed
-    $result:={errCode: 1; message: "Drop failed"; extraDescription: {info: "The user manual can't be dropped"}}
+    // La suppression du manuel d'utilisation a échoué
+    $result:={errCode : 1 ; message : "Drop failed" ; extraDescription : {info : "Le manuel de l'utilisateur ne peut pas être supprimé"}}
 End try
 
 return $result
@@ -597,24 +597,24 @@ Function event afterDrop($event : Object)
 // code
 ```
 
-This event is triggered just after an entity is dropped.
+Cet événement est déclenché juste après la suppression d'une entité.
 
-This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. For example, it can be used to send a cancellation email after data have been dropped. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
+Cet événement est utile après la suppression de données pour propager l'action de suppression en dehors de l'application ou pour exécuter des tâches d'administration. Par exemple, il peut être utilisé pour envoyer un courriel d'annulation après la suppression de données. Ou, en cas d'erreur lors de la suppression des données, il peut enregistrer une information permettant à l'administrateur de vérifier la cohérence des données.
 
 La fonction reçoit un objet [*event*](#event-parameter) en paramètre.
 
-- To avoid infinite loops, calling a [`drop()`](../API/EntityClass.md#drop) on the current entity (through `This`) in this function is **not allowed**. It will raise an error.
-- Throwing an [error object](#error-object) is **not supported** by this function.
+- Pour éviter les boucles infinies, appeler [`drop()`](../API/EntityClass.md#drop) sur l'entité courante (à travers `This`) dans cette fonction n'est **pas autorisé**. Cela provoquera une erreur.
+- Faire un throw d'un [objet erreur](#error-object) n'est **pas pris en charge** par cette fonction.
 
 :::note
 
-The dropped entity is referenced by `This` and still exists in memory.
+L'entité supprimée est référencée par `This` et existe toujours en mémoire.
 
 :::
 
 #### Exemple
 
-If the drop action failed, then the product must be checked manually:
+Si l'action de suppression a échoué, le produit doit être vérifié manuellement :
 
 ```4d
 Function event afterDrop($event : Object)
@@ -622,8 +622,8 @@ Function event afterDrop($event : Object)
 var $status : Object
 
 If (($event.status.success=False) && ($event.status.errors=Null)) 
-        //$event.status.errors is filled 
-        //if the error comes from the validateDrop event
+        //$event.status.errors est rempli 
+        //si l'erreur provient de l'événement validateDrop
     This.status:="Check this product - Drop action failed"
     $status:=This.save()
 End if 

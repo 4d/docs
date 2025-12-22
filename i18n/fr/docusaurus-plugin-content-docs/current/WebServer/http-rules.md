@@ -1,101 +1,101 @@
 ---
 id: http-rules
-title: HTTP Rules
+title: Règles de configuration HTTP
 ---
 
-You can define HTTP rules to control HTTP response headers for any requests received by the 4D web server, including REST requests. You can add, modify, or remove HTTP headers, send redirections or set the HTTP status. This feature is useful to implement security policies based upon the handling of headers.
+Vous pouvez définir des règles de configuration HTTP pour contrôler les en-têtes de réponse HTTP pour toutes les requêtes reçues par le serveur web 4D, y compris les requêtes REST. Vous pouvez ajouter, modifier ou supprimer des en-têtes HTTP, envoyer des redirections ou définir le statut HTTP. Cette fonction est utile pour mettre en œuvre des politiques de sécurité basées sur le traitement des en-têtes.
 
-To define HTTP rules, you just need to write some RegEx to declare the URL patterns you want to control, as well as how to modify response headers. You can set these rules using a `HTTPRules.json` file stored in the project folder, or using the *settings* parameter [`start()`](../API/WebServerClass.md#start) function of the web server object.
+Pour définir des règles de configuration HTTP, il suffit d'écrire quelques RegEx pour déclarer les motifs (*patterns*) d'URL que l'on souhaite contrôler, ainsi que la manière de modifier les en-têtes de réponse. Vous pouvez définir ces règles en utilisant un fichier `HTTPRules.json` stocké dans le dossier du projet, ou en utilisant le paramètre *settings* de la fonction [`start()`](../API/WebServerClass.md#start) de l'objet serveur web.
 
 ## Conditions requises
 
-HTTP rules are supported in the following contexts:
+Les règles de configuration HTTP sont prises en charge dans les contextes suivants :
 
 - les [sessions extensibles](./sessions.md#enabling-web-sessions) ou [pas de sessions](../settings/web.md#no-sessions) sont activées,
 - un serveur web exécuté localement par 4D ou 4D Server, y compris ceux [exécutés par des composants](./webServerObject.md).
 
-## How to set rules
+## Comment déclarer des règles
 
-You can declare HTTP response rules:
+Vous pouvez déclarer des règles de réponse HTTP :
 
-- in a configuration file named **HTTPRules.json** stored in the [`Project/Sources`](../Project/architecture.md#sources) folder of the project. Rules are loaded and applied in the main Web server once it is started.
-- using a [`.rules`](../API/WebServerClass.md#rules) property set in the *settings* parameter of the [`start()`](../API/WebServerClass.md#start) function, for any web server object:
+- dans un fichier de configuration nommé **HTTPRules.json** stocké dans le dossier [`Project/Sources`](../Project/architecture.md#sources) du projet. Ces règles sont chargées et appliquées dans le serveur Web principal une fois qu'il a démarré.
+- en utilisant une propriété [`.rules`](../API/WebServerClass.md#rules) définie dans le paramètre *settings* de la fonction [`start()`](../API/WebServerClass.md#start), pour n'importe quel objet serveur web :
 
 ```4d
-WEB Server.start($settings.rules) //set rules at web server startup
+WEB Server.start($settings.rules) //règles au démarrage du serveur
 ```
 
-If both a **HTTPRules.json** file and a call to the [`WEB Server`](../commands/web-server.md) command with a valid `$settings.rules` are used, the `WEB Server` command has priority.
+Si un fichier **HTTPRules.json** et un appel à la commande [`WEB Server`](../commands/web-server.md) avec un `$settings.rules` valide sont utilisés simultanément, la commande `WEB Server` est prioritaire.
 
-If the URI of the request does not match any of the RegEx patterns, the web server returns a default response.
+Si l'URI de la requête ne correspond à aucun des *patterns* RegEx, le serveur web renvoie une réponse par défaut.
 
-## Rules Definition
+## Définition des règles
 
-The **HTTPRules.json** file or the [`.rules`](../API/WebServerClass.md#rules) property must contain a collection of **rule objects**.
+Le fichier **HTTPRules.json** ou la propriété [`.rules`](../API/WebServerClass.md#rules) doit contenir une collection d'**objets règle**.
 
-A rule object is defined by:
+Un objet règle est défini par:
 
-- a RegEx describing a URL pattern, e.g. "^(.\*\\.(jpg|jpeg|png|gif))"
-- the name of the action to execute for the HTTP response, e.g. "removeHeaders"
-- the value of the action, e.g. "X-Unwanted-Header1"
+- un RegEx décrivant un motif d'URL, par exemple "^(.\*\\.(jpg|jpeg|png|gif)"
+- le nom de l'action à exécuter pour la réponse HTTP, par exemple "removeHeaders"
+- la valeur de l'action, par exemple "X-Unwanted-Header1"
 
-Other properties are ignored.
+Les autres propriétés sont ignorées.
 
 ### Motifs d'URL
 
-URL patterns are given using **regular expressions**. To declare a regular expression pattern, use the "RegExPattern" property name.
+Les motifs d'URL sont donnés en utilisant des **expressions régulières**. Pour déclarer un *pattern* d'expression régulière, utilisez le nom de propriété "RegExPattern".
 
 Ex: `"RegExPattern": "/Test/Authorized/(.*)"`
 
-When the web server receives a request, **all** URL patterns are triggered sequentially in the given order, and all matching patterns are executed. In case of several actions modifying similar resources, the last executed action is taken into account.
+Lorsque le serveur web reçoit une requête, **tous** les motifs d'URL sont déclenchés séquentiellement dans l'ordre donné, et tous les motifs correspondants sont exécutés. Si plusieurs actions modifient des ressources similaires, la dernière action exécutée est prise en compte.
 
 ### Actions
 
-The following action keywords are supported:
+Les mots-clés d'action suivants sont pris en charge :
 
-| Mot-clé         | Value type                  | Description                                                                                                                                                                                                                                   |
-| --------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `removeHeaders` | Text or Collection of texts | Header(s) to remove from the HTTP responses. If a header to remove does not exist in the response header, it is ignored.                                                                   |
-| `addHeaders`    | Object                      | Name (text) and value (text) of header(s) to add to the HTTP responses.                                                                                              |
-| `setHeaders`    | Object                      | Name (text) and value (text) of header(s) to modify in the HTTP responses. If a header to modify does not exist in the response header, it is added. |
-| `denyAccess`    | Boolean                     | true to deny access to the resource, false to allow access. When the access to a resource is denied, the web server returns a 403 status by default                                                                           |
-| `redirect`      | Text                        | Redirection URL. When a redirection is triggered, the web server returns a 302 status by default                                                                                                                              |
-| `status`        | Number                      | HTTP status                                                                                                                                                                                                                                   |
+| Mot-clé         | Value type                 | Description                                                                                                                                                                                                                           |
+| --------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `removeHeaders` | Text ou collection de text | En-tête(s) à supprimer des réponses HTTP. Si un en-tête à supprimer n'existe pas dans l'en-tête de la réponse, il est ignoré.                                                      |
+| `addHeaders`    | Object                     | Nom (texte) et valeur (texte) des en-têtes à ajouter aux réponses HTTP.                                                                                                         |
+| `setHeaders`    | Object                     | Nom (texte) et valeur (texte) des en-têtes à modifier dans les réponses HTTP. Si l'en-tête à modifier n'existe pas dans l'en-tête de la réponse, il est ajouté. |
+| `denyAccess`    | Boolean                    | true pour refuser l'accès à la ressource, false pour l'autoriser. Lorsque l'accès à une ressource est refusé, le serveur web renvoie un statut 403 par défaut                                                         |
+| `redirect`      | Text                       | URL de redirection. Lorsqu'une redirection est déclenchée, le serveur web renvoie par défaut un statut 302                                                                                                            |
+| `status`        | Number                     | Statut HTTP                                                                                                                                                                                                                           |
 
-### Non-modifiable headers
+### En-têtes non modifiables
 
-Some headers could not be added, modified or removed:
+Certains en-têtes ne peuvent pas être ajoutés, modifiés ou supprimés :
 
-| Header           | Ajouter | Set        | Remove |
-| ---------------- | ------- | ---------- | ------ |
-| Date             | Non     | Non        | Non    |
-| Content-Length   | Non     | Non        | Non    |
-| Content-Encoding | Non     | Non        | Non    |
-| Vary             | Oui     | Non        | Non    |
-| Set-Cookie       | Oui     | Add cookie | Non    |
+| En-tête          | Ajout | Modification     | Suppression |
+| ---------------- | ----- | ---------------- | ----------- |
+| Date             | Non   | Non              | Non         |
+| Content-Length   | Non   | Non              | Non         |
+| Content-Encoding | Non   | Non              | Non         |
+| Vary             | Oui   | Non              | Non         |
+| Set-Cookie       | Oui   | Ajoute un cookie | Non         |
 
-Unauthorized changes on these headers do not generate errors, however modifications will be ignored.
+Les modifications non autorisées de ces en-têtes ne génèrent pas d'erreurs, mais les modifications seront ignorées.
 
-### Current rules
+### Règles de configuration courantes
 
-You can know the current rules using the [`.rules` property of the Web Server object](../API/WebServerClass.md#rules):
+Vous pouvez connaître les règles en vigueur en utilisant la [propriété `.rules` de l'objet Serveur Web](../API/WebServerClass.md#rules) :
 
 ```
 var $rules : Collection
-$rules:=WEB Server.rules //current rules
+$rules:=WEB Server.rules //règles de configuration courantes
 ```
 
 ## Exemples
 
-Rules can be set using a `HTTPRules.json` file or the *settings* parameter of the [`.start()`](../API/WebServerClass.md#start) web server function.
+Les règles de configuration peuvent être définies en utilisant un fichier `HTTPRules.json` ou le paramètre *settings* de la fonction [`.start()`](../API/WebServerClass.md#start) du serveur web.
 
-### Using a HTTPRules.json file
+### Utilisation d'un fichier HTTPRules.json
 
 ```json
 
 [
 	{
-		"comment": "All requests: allow GET method for, remove 'Server' header and set security headers",
+		"comment": "Toutes requêtes: autoriser méthode GET, supprimer en-tête 'Server' et définir en-têtes de sécurité",
 		"regexPattern": "/(.*)",
 		"setHeaders": {
 			"Allow": "GET",
@@ -107,14 +107,14 @@ Rules can be set using a `HTTPRules.json` file or the *settings* parameter of th
 		]
 	},
 	{
-		"comment": "REST requests: allow POST method",
+		"comment": "requêtes REST: autoriser méthode POST",
 		"regexPattern": "/rest/(.*)",
 		"addHeaders": {
 			"Allow": "POST"
 		}
 	},
 	{
-		"comment": "HTML files in 'doc' folder: set cache control",
+		"comment": "Fichiers html dans dossier 'doc' : contrôle du cache",
 		"regexPattern": "/docs/(.*).html",
 		"setHeaders": {
 			"Cache-Control": "max-age=3600"
@@ -124,28 +124,28 @@ Rules can be set using a `HTTPRules.json` file or the *settings* parameter of th
 		]
 	},
 	{
-		"comment": "Status 503 on 'maintenance' page",
+		"comment": "Status 503 sur page 'maintenance'",
 		"regexPattern": "^/maintenance.html",
 		"status": 503
 	},
 	{
-		"comment": "Redirect CSS and JS files",
+		"comment": "Redirection fichiers CSS et JS",
 		"regexPattern": "^(.*\\\\.(css|js))",
 		"redirect": "https://cdn.example.com/"
 	},
 	{
-		"comment": "Redirect images with permanent status code",
+		"comment": "Redirection images avec code de statut permanent",
 		"regexPattern": "^(.*\\\\.(jpg|jpeg|png|gif))",
 		"redirect": "https://cdn.example.com/images/",
 		"status": 301
 	},
 	{
-		"comment": "Deny access for all resources placed in the 'private' folder",
+		"comment": "Refuser accès à toutes les ressources dans le dossier 'private'",
 		"regexPattern": "/private/(.*)",
 		"denyAccess": true
 	},
 	{
-		"comment": "Allow access to all resources placed in the 'private/allowed' folder",
+		"comment": "Autoriser accès à toutes les ressources dans le dossier 'private/allowed'",
 		"regexPattern": "/private/allowed/(.*)",
 		"denyAccess": false
 	}
@@ -153,7 +153,7 @@ Rules can be set using a `HTTPRules.json` file or the *settings* parameter of th
 
 ```
 
-### Using a *settings* parameter
+### Utilisation du paramètre *settings*
 
 ```4d
 var $rule:={}
@@ -163,7 +163,7 @@ var $settings:={}
 $settings.rules:=[]
 
 $rule:={}
-$rule.comment:="All requests: allow GET method for, remove 'Server' header and set security headers"
+$rule.comment:="Toutes requêtes: autoriser méthode GET, supprimer en-tête 'Server' et définir en-têtes de sécurité"
 $rule.regexPattern:="/(.*)"
 $rule.setHeaders:={Allow: "GET"}
 $rule.setHeaders["X-Frame-Options"]:="SAMEORIGIN"
@@ -172,13 +172,13 @@ $rule.removeHeaders:=["Server"]
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="REST requests: allow POST method"
+$rule.comment:="requêtes REST: autoriser méthode POST"
 $rule.regexPattern:="/rest/(.*)"
 $rule.addHeaders:={Allow: "POST"}
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="HTML files in 'doc' folder: set cache control"
+$rule.comment:="Fichiers html dans dossier 'doc' : contrôle du cache"
 $rule.regexPattern:="/docs/(.*).html"
 $rule.setHeaders:={}
 $rule.setHeaders["Cache-Control"]:="max-age=3600"
@@ -186,32 +186,32 @@ $rule.removeHeaders:=["X-Powered-By"]
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="Status 503 on 'maintenance' page"
+$rule.comment:="Status 503 sur page 'maintenance'"
 $rule.regexPattern:="^/maintenance.html"
 $rule.status:=503
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="Redirect CSS and JS files"
+$rule.comment:="Redirection fichiers CSS et JS"
 $rule.regexPattern:="^(.*\\\\.(css|js))"
 $rule.redirect:="https://cdn.example.com/"
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="Redirect images with permanent status code"
+$rule.comment:="Redirection images avec code de statut permanent"
 $rule.regexPattern:="^(.*\\\\.(jpg|jpeg|png|gif))"
 $rule.redirect:="https://cdn.example.com/images/"
 $rule.status:=301
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="Deny access for all resources placed in the 'private' folder"
+$rule.comment:="Refuser accès à toutes les ressources dans le dossier 'private'"
 $rule.regexPattern:="/private/(.*)"
 $rule.denyAccess:=True
 $settings.rules.push($rule)
 
 $rule:={}
-$rule.comment:="Allow access to all resources placed in the 'private/allowed' folder"
+$rule.comment:="Autoriser accès à toutes les ressources dans le dossier 'private/allowed'"
 $rule.regexPattern:="/private/allowed/(.*)"
 $rule.denyAccess:=False
 $settings.rules.push($rule)

@@ -5,7 +5,7 @@ title: Page Structure
 
 ## Clé primaire
 
-These options in the preferences modify the default name and type of the primary key fields that are added automatically by 4D when new tables are created or by means of the [Primary key manager](https://doc.4d.com/4Dv20/4D/20.2/Primary-key-manager.300-6750292.en.html)).
+Ces options des préférences modifient le nom et le type par défaut des champs de clé primaire qui sont ajoutés automatiquement par 4D lors de la création de nouvelles tables ou au moyen du [Gestionnaire de clés primaires](https://doc.4d.com/4Dv20/4D/20.2/Primary-key-manager.300-6750292.en.html)).
 
 Les options suivantes sont disponibles :
 
@@ -22,5 +22,5 @@ Cette option permet de faire varier le niveau de détail graphique de l’édite
 
 ### Quand un dossier est masqué, son contenu est :
 
-This option sets the appearance of dimmed tables in the Structure editor, when you carry out selections by folder (see [Highlight/dim tables by folder](https://doc.4d.com/4Dv20/4D/20.2/Structure-editor.300-6750284.en.html#4592928)). Les options possibles sont Atténué (une ombre subsiste à l’emplacement de la table) et Invisible (la table disparaît entièrement).
+Cette option définit l'apparence des tables atténuées dans l'éditeur de structure, lorsque vous effectuez des sélections par dossier (voir [Filtrage des tables par dossier](https://doc.4d.com/4Dv20/4D/20.2/Structure-editor.300-6750284.en.html#4592928)). Les options possibles sont Atténué (une ombre subsiste à l’emplacement de la table) et Invisible (la table disparaît entièrement).
 

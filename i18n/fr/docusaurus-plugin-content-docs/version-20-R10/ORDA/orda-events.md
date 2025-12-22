@@ -17,7 +17,7 @@ Vous ne pouvez pas déclencher directement l'exécution d'une fonction d'événe
 
 :::info Note de compatibilité
 
-Les événements d'entité ORDA dans le magasin de données sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Note also that, unlike triggers, ORDA entity events do not lock the entire underlying table of a dataclass while saving or dropping entities. Several events can run in parallel as long as they involve distinct entities (i.e. records).
+Les événements d'entité ORDA dans le datastore sont équivalents aux triggers dans la base de données 4D. Cependant, les actions déclenchées au niveau de la base de données 4D à l'aide des commandes du langage classique 4D ou des actions standard ne déclenchent pas les événements ORDA. Notez également que, contrairement aux triggers, les événements d'entité ORDA ne verrouillent pas l'ensemble de la table sous-jacente d'une dataclass lors de l'enregistrement ou de la suppression d'entités. Plusieurs événements peuvent se dérouler en parallèle tant qu'ils concernent des entités distinctes (c'est-à-dire des enregistrements distincts).
 
 :::
 
@@ -127,11 +127,11 @@ Function event touched($event : Object)
 
 #### Exemple 2
 
-The "touched" event is useful when it is not possible to write indexed query code in [`Function query()`](./ordaClasses.md#function-query-attributename) for a [computed attribute](./ordaClasses.md#computed-attributes).
+L'événement "touched" est utile quand il n'est pas possible d'écrire un code de requête indexée dans [`Function query()`](./ordaClasses.md#function-query-attributename) pour un [attribut calculé](./ordaClasses.md#computed-attributes).
 
-This is the case for example, when your [`query`](./ordaClasses.md#function-query-attributename) function has to compare the value of different attributes from the same entity with each other. You must use formulas in the returned ORDA query -- which triggers sequential queries.
+C'est le cas, par exemple, lorsque votre fonction [`query`](./ordaClasses.md#function-query-attributename) doit comparer la valeur de différents attributs de la même entité. Vous devez utiliser des formules dans la requête ORDA renvoyée, ce qui déclenche des requêtes séquentielles.
 
-To fully understand this case, let's examine the following two calculated attributes:
+Pour bien comprendre ce cas, examinons les deux attributs calculés suivants :
 
 ```4d
 Function get onGoing() : Boolean
@@ -141,9 +141,9 @@ Function get sameDay() : Boolean
         return (This.departureDate=This.arrivalDate)
 ```
 
-Even though they are very similar, these functions cannot be associated with identical queries because they do not compare the same types of values. The first compares attributes to a given value, while the second compares attributes to each other.
+Même si elles sont très similaires, ces fonctions ne peuvent pas être associées à des requêtes identiques car elles ne comparent pas les mêmes types de valeurs. Le premier compare les attributs à une valeur donnée, tandis que le second compare les attributs entre eux.
 
-- For the *onGoing* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function is simple to write and uses indexed attributes:
+- Pour l'attribut *onGoing*, la fonction [`query`](./ordaClasses.md#function-query-attributename) est simple à écrire et utilise des attributs indexés :
 
 ```4d
 Function query onGoing($event : Object) : Object
@@ -164,12 +164,12 @@ Function query onGoing($event : Object) : Object
     End case 
 
     $myQuery:=($onGoingValue) ? "departureDate <= :1 AND arrivalDate >= :1" : "departureDate > :1 OR arrivalDate < :1"
-        // the ORDA query string uses indexed attributes, it will be indexed
+        // la chaîne de requête ORDA utilise des attributs indexés, elle sera indexée
     $parameters.push(Current date)
     return {query: $myQuery; parameters: $parameters}
 ```
 
-- For the *sameDay* attribute, the [`query`](./ordaClasses.md#function-query-attributename) function requires an ORDA query based on formulas and will be sequential:
+- Pour l'attribut *sameDay*, la fonction [`query`](./ordaClasses.md#function-query-attributename) requiert une requête ORDA basée sur des formules et sera séquentielle :
 
 ```4d
 Function query sameDay($event : Object) : Text
@@ -187,11 +187,11 @@ Function query sameDay($event : Object) : Text
         End case 
 
     return ($sameDayValue) ? "eval(This.departureDate = This.arrivalDate)" : "eval(This.departureDate != This.arrivalDate)"
-        // the ORDA query string uses a formula, it will not be indexed
+        // la requête ORDA utilise une formule, elle ne sera pas indexée
 
 ```
 
-- Using a **scalar** *sameDay* attribute updated when other attributes are "touched" will save time:
+- L'utilisation d'un attribut **scalaire** *sameDay* mis à jour lorsque d'autres attributs sont "touched" permet de gagner du temps :
 
 ```4d
     //BookingEntity class
@@ -207,7 +207,7 @@ Function event touched arrivalDate($event : Object)
 
 ```
 
-#### Example 3 (diagram): Client/server with the `local` keyword:
+#### Exemple 3 (diagramme) : Client/serveur avec le mot-clé `local` :
 
 ```mermaid
 
@@ -222,11 +222,11 @@ Note over Client:$people.lastname is uppercased
 
     Client->>+Server: $people.apply()
    
-   Note over Server: The $people entity is received with the lastname attribute uppercased
+   Note over Server: L'entity $people est reçue avec l'attribut lastname en majuscules
 
 ```
 
-#### Example 4 (diagram): Client/server without the `local` keyword
+#### Exemple 4 (diagramme) : Client/serveur avec le mot-clé `local`
 
 ```mermaid
 
@@ -236,37 +236,37 @@ sequenceDiagram
 
     Client->>+Client: $people.lastname:="Brown"
 
-   Note over Client:$people.lastname is not uppercased
+   Note over Client:$people.lastname n'est pas en majuscules
 
     Client->>+Server: $people.apply()
 
    Note over Server: Function event touched lastname($event : Object) <br>  This.lastname:=Uppercase(This.lastname)
 
-    Server-->>-Client: The $people entity is updated
+    Server-->>-Client: L'entité $people est mise à jour
 
-   Note over Client:$people.lastname is uppercased
+   Note over Client:$people.lastname est en majuscules
 
 
 ```
 
-#### Example 5 (diagram): Qodly application
+#### Exemple 5 (diagramme) : Application Qodly
 
 ```mermaid
 
 sequenceDiagram
 
-Qodly page->>+ Server: Get an entity into the People Qodly source
+Qodly page->>+ Server: Récupérer une entité dans la source Qodly People
 
-Qodly page->>+Qodly page: The user updates People.lastname
+Qodly page->>+Qodly page: L'utilisateur met à jour People.lastname
 
-Note over Qodly page: The People Qodly source lastname attribute is not uppercased
+Note over Qodly page: L'attribut lastname de la source Qodly People n'est pas en majuscules
 
-Qodly page->>+ Server: Function call People.apply()
+Qodly page->>+ Server: Appel de fonction People.apply()
 
 Note over Server: Function event touched lastname($event : Object) <br> This.lastname:=Uppercase(This.lastname)
 
-Server-->>-Qodly page: The People Qodly source is updated
-Note over Qodly page: The People Qodly source lastname attribute is uppercased
+Server-->>-Qodly page: La source Qodly People est mise à jour
+Note over Qodly page: L'attribut lastname de la source Qodly People est en majuscules
 
 
 ```

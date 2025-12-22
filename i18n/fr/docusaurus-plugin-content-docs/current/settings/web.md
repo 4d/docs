@@ -126,7 +126,7 @@ Définit le système d'authentification que vous souhaitez utiliser pour le serv
 
 Il est recommandé d'utiliser l'authentification **personnalisée**. See [**Authentication**](../WebServer/authentication.md) section.
 
-#### Generic Web User
+#### Utilisateur Web générique
 
 Voir [Propriétés obsolètes](../WebServer/webServerConfig.md#propriétés-obsolètes).
 
