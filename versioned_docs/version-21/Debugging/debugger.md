@@ -42,7 +42,7 @@ The Debugger window is usually displayed on the machine where the code is execut
 :::note Notes
 
 - If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
-- You can also [attach the Qodly Studio debugger to a 4D Server application](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
+- You can also [attach the Qodly Studio debugger to a 4D Server application](https://developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server) if you need to debug Qodly pages in a deployed environment.
 
 :::
 

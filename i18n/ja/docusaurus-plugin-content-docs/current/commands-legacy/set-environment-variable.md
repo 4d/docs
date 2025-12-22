@@ -16,7 +16,7 @@ displayed_sidebar: docs
 
 ## 説明 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->**SET ENVIRONMENT VARIABLE**コマンドを用いて、macOS とWindowsで環境変数値を設定できます。<!-- END REF-->このコマンドは[LAUNCH EXTERNAL PROCESS](launch-external-process.md)コマンドと共に使用します。また[PHP Execute](php-execute.md)コマンドとも動作します。
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->**SET ENVIRONMENT VARIABLE**コマンドを用いて、macOS とWindowsで環境変数値を設定できます。<!-- END REF-->このコマンドは[LAUNCH EXTERNAL PROCESS](launch-external-process.md)コマンドと共に使用します。
 
 変数の名前を*varName* に、その値を*varValue* に渡して定義します。
 

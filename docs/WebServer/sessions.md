@@ -30,7 +30,7 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 Web sessions are used for:
 
 - [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md). 
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](https://developer.4d.com/qodly/). 
 
 
 ## Enabling web sessions {#enabling-web-sessions}
@@ -80,11 +80,7 @@ The `Session` object of the current session can then be accessed through the [`S
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-:::info
 
-Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
-
-:::
 
 ## Storing and sharing session information
 
@@ -109,7 +105,7 @@ When a web session is closed, if the [`Session`](commands/session.md) command is
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.  
+You can close a session from a Qodly form using the [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) feature.  
 
 :::
 

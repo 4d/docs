@@ -23,7 +23,7 @@ This command is maintained for compatibility reasons only. It is now recommended
 
 ## Description 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->The **SET ENVIRONMENT VARIABLE** command allows you to set the value of an environment variable under macOS and Windows.<!-- END REF--> It is meant to be used with the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command. It also works with the [PHP Execute](php-execute.md) command.
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->The **SET ENVIRONMENT VARIABLE** command allows you to set the value of an environment variable under macOS and Windows.<!-- END REF--> It is meant to be used with the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) command. 
 
 Pass the name of the variable to define in *varName* and its value in *varValue*.
 

@@ -23,7 +23,8 @@ Cette commande est maintenue pour des raisons de compatibilité uniquement. Il e
 
 ## Description 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->La commande **SET ENVIRONMENT VARIABLE** vous permet de fixer la valeur d’une variable d’environnement sous macOS et Windows.<!-- END REF--> Elle est destinée à une utilisation conjointe avec la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md). Elle fonctionne également avec la commande [PHP Execute](php-execute.md).
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->La commande **SET ENVIRONMENT VARIABLE** vous permet de fixer la valeur d’une variable d’environnement sous macOS et Windows.<!-- END REF--> Elle est destinée à une utilisation conjointe avec la commande [LAUNCH EXTERNAL PROCESS](launch-external-process.md). 
+
 
 Passez dans le paramètre *nomVar* le nom de la variable à définir et dans le paramètre *valeurVar* sa valeur.
 
