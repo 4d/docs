@@ -29,10 +29,6 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 - [**Lista de bugs corregidos**](https://bugs.4d.fr/fixedbugslist?version=21): lista de todos los bugs que se han corregido en 4D 21.
 - [Notas de la versión de Qodly Pro 4D\*\*](https://developer.4d.com/qodly/4DQodlyPro/release-notes): novedades de Qodly Studio.
 
-#### Vista previa para desarrolladores
-
-El [renderizado **Fluent UI** para los formularios 4D](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) está disponible en Developer Preview durante el programa de pruebas beta.
-
 #### Cambios de comportamiento
 
 :::caution Reconstrucción del índice
@@ -42,7 +38,9 @@ El [renderizado **Fluent UI** para los formularios 4D](../FormEditor/forms.md#fl
 :::
 
 - Servicios web (SOAP): cuando las [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions) están activadas, los servicios web se ejecutan ahora en [**procesos apropiativos**](../Develop/preemptive.md) en modo compilado. Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
-- Servidor web: se elimina la compatibilidad con las URL obsoletas `4DSYNC/` y `4DCGI/`. Ya no se realiza ningún tratamiento específico en estas URL.
+- Servidor web:
+  - the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. Ya no se realiza ningún tratamiento específico en estas URL,
+  - web processes are no longer recycled when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled.
 - Las sesiones usuario web ahora son devueltas por [`Process activity`](../commands/process-activity.md).
 - PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
 - El comando [`HIGHLIGHT TEXT`](../commands/highlight-text) es ahora compatible en el contexto de los subformularios.

@@ -25,7 +25,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::warning セッション権限について
 
-全てのセッションタイプは権限を管理できますが、[web ユーザーセッション](WebServer/sessions.md) 内で実行されたコードに関してだけは、実際にはセッションの権限によって管理されます。
+全てのセッションタイプは権限を管理できますが、**web コンテキスト** 内で実行されたコードに関してだけは、実際にはセッションの権限によって管理されます。
 
 :::
 
@@ -91,7 +91,6 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 ```4d
 // Web ユーザーセッションを無効化する
-var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()

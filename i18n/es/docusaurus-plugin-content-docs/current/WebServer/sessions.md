@@ -29,7 +29,7 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 Las sesiones web se utilizan para:
 
 - [Aplicaciones web](gettingStarted.md) enviando peticiones http (incluyendo peticiones [SOAP Web services](../commands/theme/Web_Services_Server.md) y [/4DACTION](../WebServer/httpRequests.md#4daction)),
-- llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [formularios Qodly](qodly-studio.md).
+- llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [formularios Qodly](https://developer.4d.com/qodly/).
 
 ## Activando sesiones web {#enabling-web-sessions}
 
@@ -77,12 +77,6 @@ Se puede acceder al objeto `Session` de la sesión actual a través del comando 
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-:::info
-
-Los procesos web no suelen terminar, sino que se reciclan en un fondo común para ser más eficientes. Cuando un proceso termina de ejecutar una petición, se devuelve al pool y queda disponible para la siguiente petición. Dado que un proceso web puede ser reutilizado por cualquier sesión, las [variables proceso](Concepts/variables.md#process-variables) deben ser borradas por su código al final de su ejecución (utilizando [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) por ejemplo). Esta limpieza es necesaria para cualquier información relacionada con el proceso, como una referencia a un archivo abierto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
-
-:::
-
 ## Almacenar y compartir información de sesión
 
 Cada objeto `Session` proporciona una propiedad [`.storage`](API/SessionClass.md#storage) que es un [objeto compartido](Concepts/shared.md). Esta propiedad permite compartir información entre todos los procesos manejados por la sesión.
@@ -106,7 +100,7 @@ Cuando se cierra una sesión web, si después se llama al comando [`Session`](co
 
 :::info
 
-Puede cerrar una sesión desde un formulario Qodly utilizando la función [**logout**](qodly-studio.md#logout).
+Puede cerrar una sesión desde un formulario Qodly utilizando la función [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout).
 
 :::
 

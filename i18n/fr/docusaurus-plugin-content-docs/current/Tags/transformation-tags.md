@@ -167,35 +167,35 @@ Voici les caractéristiques de la balise 4DCODE :
 
 ## 4DEACH et 4DENDEACH
 
-#### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
+#### Syntaxe : `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
-The `<!--#4DEACH-->` comment allows iterating a specified item over all values of the *expression*. The item is set to a *variable* whose type depends on the *expression* type.
+Le commentaire `<!--#4DEACH-->` permet d'itérer un élément spécifié sur toutes les valeurs de l'*expression*. L'élément est défini comme une *variable* dont le type dépend du type de l'*expression*.
 
-The `<!--#4DEACH-->` comment can iterate through three expression types:
+Le commentaire `<!--#4DEACH-->` peut itérer sur trois types d'expression :
 
-- [collections](#--4deach-item-in-collection--): loop through each element of the collection,
-- [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
-- [objects](#--4deach-property-in-object--): loop through each object property.
+- les [collections](#--4deach-item-in-collection--) : boucle sur chaque élément de la collection,
+- les [entity selections](#--4deach-entity-in-entityselection--) : boucle sur chaque entité,
+- les [objets](#--4deach-property-in-object--) : boucle sur chaque propriété de l'objet.
 
 Le nombre d'itérations est évalué au démarrage et ne changera pas pendant le traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
 
 ### `<!--#4DEACH item in collection-->`
 
-This syntax iterates on each *item* of the *collection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each collection element.
+Cette syntaxe permet d'effectuer une itération sur chaque *item* de la *collection*. La partie du code située entre `<!--#4DEACH -->` et `<!--#4DENDEACH-->` est répétée pour chaque élément de collection.
 
-The *item* parameter is a variable of the same type as the collection elements.
+Le paramètre *item* est une variable du même type que les éléments de la collection.
 
-The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
+La collection ne doit contenir que des **éléments de même type**, sinon une erreur est renvoyée dès que la variable *item* se voit attribuer le premier type de valeur non concordant.
 
-Le nombre de boucles est basé sur le nombre d'éléments de la collection. Le nombre de boucles est basé sur le nombre d'éléments de la collection. Vous devez tenir compte des points suivants :
+Le nombre de boucles est basé sur le nombre d'éléments de la collection. À chaque itération, la variable *item* est automatiquement remplie avec l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Si la variable est de type scalaire, seule la variable sera modifiée.
-- The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
-- If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
+- Si la variable *item* est de type objet ou collection (c'est-à-dire si *expression* est une collection d'objets ou de collections), la modification de cette variable modifiera automatiquement l'élément correspondant de la collection (car les objets et les collections partagent les mêmes références). Si la variable est de type scalaire, seule la variable sera modifiée.
+- La variable *item* a le même type que le premier élément de la collection. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- Si la collection contient des éléments avec une valeur nulle, une erreur est générée si le type de variable *élément* ne prend pas en charge les valeurs nulles (comme les variables integer).
 
 #### Exemple avec une collection de valeurs scalaires
 
-*getNames* returns a collection of strings. The method has been declared as "[available through 4D tags and URLs](WebServer/allowProject.md)".
+*getNames* renvoie une collection de chaînes de caractères. La méthode a été déclarée comme "[disponible via les balises et les URL 4D](WebServer/allowProject.md)".
 
 ```html
  <table class="table">    
@@ -212,7 +212,7 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. Le n
 
 #### Exemple avec une collection d'objets
 
-*getSalesPersons* returns a collection of objects.
+*getSalesPersons* renvoie une collection d'objets.
 
 ```html
     <table class="table">    
@@ -233,11 +233,11 @@ Le nombre de boucles est basé sur le nombre d'éléments de la collection. Le n
 
 ### `<!--#4DEACH entity in entitySelection-->`
 
-This syntax iterates on each *entity* of the *entitySelection*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each entity of the entity selection.
+Cette syntaxe itère sur chaque *entité* de l'*entitySelection*. La partie du code située entre `<!--#4DEACH -->` et `<!--#4DENDEACH-->` est répétée pour chaque entité de l'entity selection.
 
-The *entity* parameter is an object variable of the entity selection class.
+Le paramètre *entity* est une variable objet de la classe entity selection.
 
-Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. At each iteration, the *entity* object variable is automatically filled with the matching entity of the entity selection.
+Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. À chaque itération, la variable objet *entity* est automatiquement remplie avec l'entité correspondante de l'entity selection.
 
 #### Exemple avec un tableau html
 
@@ -256,7 +256,7 @@ Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity
     </table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### Exemple avec `PROCESS 4D TAGS`
 
 ```4d
 var customers : cs.CustomersSelection
@@ -272,15 +272,15 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 ### `<!--#4DEACH property in object-->`
 
-This syntax iterates on each *property* of the *object*. The code portion located between `<!--#4DEACH -->` and `<!--#4DENDEACH-->` is repeated for each property of the object.
+Cette syntaxe itère sur chaque *property* de *object*. La partie du code située entre `<!--#4DEACH -->` et `<!--#4DENDEACH-->` est répétée pour chaque propriété de l'objet.
 
-The *property* parameter is a text variable automatically filled with the name of the currently processed property.
+Le paramètre *property* est une variable texte automatiquement remplie avec le nom de la propriété en cours de traitement.
 
 Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
 #### Exemple avec les propriétés d'un objet
 
-*getGamers* is a project method that returns an object like ("Mary"; 10; "Ann"; 20; "John"; 40) to figure gamer scores.
+*getGamers* est une méthode projet qui renvoie un objet tel que ("Mary" ; 10 ; "Ann" ; 20 ; "John" ; 40) pour calculer les scores des joueurs.
 
 ```html
     <table class="table">    
@@ -301,32 +301,32 @@ Les propriétés de l'objet sont itérées en fonction de leur ordre de créatio
 
 ## 4DEVAL
 
-#### Syntax: `<!--#4DEVAL expression-->`
+#### Syntaxe : `<!--#4DEVAL expression-->`
 
-#### Alternative syntax: `$4DEVAL(expression)`
+#### Syntaxe alternative : `$4DEVAL(expression)`
 
-The `4DEVAL` tag allows you to assess a 4D variable or expression. Like the [`4DHTML`](#4dhtml) tag, `4DEVAL` does not escape HTML characters when returning text. However, unlike `4DHTML` or [`4DTEXT`](#4dtext), `4DEVAL` allows you to execute any valid 4D statement, including assignments and expressions that do not return any value.
+La balise `4DEVAL` vous permet d'évaluer une variable ou une expression 4D. Comme la balise [`4DHTML`](#4dhtml), `4DEVAL` n'échappe pas les caractères HTML lorsqu'elle retourne du texte. Cependant, contrairement à `4DHTML` ou [`4DTEXT`](#4dtext), `4DEVAL` vous permet d'exécuter n'importe quelle instruction 4D valide, y compris les assignations et les expressions qui ne renvoient aucune valeur.
 
 Par exemple, vous pouvez exécuter :
 
 ```
- $input:="<!--#4DEVAL a:=42-->" //assignment
- $input:=$input+"<!--#4DEVAL a+1-->" //calculation
+ $input:="<!--#4DEVAL a:=42-->" //assignation
+ $input:=$input+"<!--#4DEVAL a+1-->" //calcul
  PROCESS 4D TAGS($input;$output)
   //$output = "43"
 ```
 
-In case of an error during interpretation, the text inserted will be in the form: `<!--#4DEVAL expr-->: ## error # error code`.
+En cas d'erreur d'interprétation, le texte inséré se présentera sous la forme suivante : `<!--#4DEVAL expr-->: ## error # error code`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Pour des raisons de sécurité, il est recommandé d'utiliser la balise [`4DTEXT`](#4dtext) lors du traitement de données introduites depuis l'extérieur de l'application, afin d'éviter [l'injection de code malveillant](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DHTML
 
-#### Syntax: `<!--#4DHTML expression-->`
+#### Syntaxe : `<!--#4DHTML expression-->`
 
-#### Alternative syntax: `$4DHTML(expression)`
+#### Syntaxe alternative : `$4DHTML(expression)`
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
+Tout comme la balise `4DTEXT`, cette balise vous permet d'évaluer une variable 4D ou une expression qui renvoie une valeur, et de l'insérer en tant qu'expression HTML. Contrairement à la balise `4DTEXT`, cette balise n'échappe pas les caractères spéciaux HTML (tels que ">").
 
 Par exemple, voici les résultats du traitement de la variable texte 4D myvar avec les balises disponibles :
 
@@ -335,9 +335,9 @@ Par exemple, voici les résultats du traitement de la variable texte 4D myvar av
 | `myvar:="<B>"`  | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"`  | `<!--#4DHTML myvar-->` | `<B>`               |
 
-In case of an interpretation error, the inserted text will be `<!--#4DHTML myvar--> : ## error # error code`.
+En cas d'erreur d'interprétation, le texte inséré sera `<!--#4DHTML myvar-->: ## error # error code`.
 
-> For security reasons, it is recommended to use the [`4DTEXT`](#4dtext) tag when processing data introduced from outside the application, in order to prevent the [insertion of malicious code](../WebServer/templates.md#prevention-of-malicious-code-insertion).
+> Pour des raisons de sécurité, il est recommandé d'utiliser la balise [`4DTEXT`](#4dtext) lors du traitement de données introduites depuis l'extérieur de l'application, afin d'éviter [l'injection de code malveillant](../WebServer/templates.md#prevention-of-malicious-code-insertion).
 
 ## 4DIF, 4DELSE, 4DELSEIF et 4DENDIF
 

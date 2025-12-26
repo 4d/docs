@@ -12,6 +12,7 @@ Leia [**O que há de novo no 4D v21 R2**](https://blog.4d.com/en-whats-new-in-4d
 - [Code Live Checker](../code-editor/write-class-method.md#warnings-and-errors) has been enhanced to provide greater precision in error detection (see [this blog post](https://blog.4d.com/better-error-handling-and-type-inference-for-4d-developers) for more information).
 - [4D Write Pro standard actions](../WritePro/user-legacy/standard-actions.md) that apply [lists](../WritePro/user-legacy/using-a-4d-write-pro-area.md#lists) now automatically adjust paragraph margins to keep markers positioned inside it.
 - Built-in support of `order by` in query strings for AI vector searches using [`query()`](../API/DataClassClass.md#query-by-vector-similarity) functions and the [REST API](../REST/$orderby.md).
+- You can [customize the icons of your components](../Extensions/develop-components.md#custom-icon).
 - 4D AIKit component: new [File API](../aikit/Classes/OpenAIFilesAPI.md) class to implement **file upload** features.
 - [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in contents**](../Project/search-replace.md#replace-in-contents) features can now support editable components.
 - [**Lista de erros corrigida**](https://bugs.4d.fr/fixedbugslist?version=21_R2): lista de todos os bugs corrigidos em 4D 21 R2.

@@ -66,7 +66,7 @@ Se soportan las siguientes palabras clave de acción:
 
 Algunos encabezados no pudieron ser añadidos, modificados o eliminados:
 
-| Encabezado       | Acción de añadir | Set           | Remove |
+| Encabezado       | Acción de añadir | Modificación  | Remove |
 | ---------------- | ---------------- | ------------- | ------ |
 | Fecha            | No               | No            | No     |
 | Content-Length   | No               | No            | No     |

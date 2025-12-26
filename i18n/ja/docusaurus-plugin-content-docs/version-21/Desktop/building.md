@@ -497,6 +497,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 - **SpellChecker**: 入力エリアと 4D Write Proエリアで利用可能なビルトインの [スペルチェック機能](../FormObjects/properties_Entry.md#自動スペルチェック) とコマンドに使用されます。
 - **4D Updater**: クライアントの [自動更新](#クライアントサーバーアプリケーションとは) をコントロールし、[サーバーの自動更新](#サーバーまたはシングルユーザーアプリケーションの自動更新) のための `SET UPDATE FOLDER` コマンドで使用されます。
+- **4D Qodly Pro**: [Qodly Studio とそのWeb レンダリング機能](https://developer.4d.com/qodly/) を含みます。
 
 ## ライセンス＆証明書ページ
 

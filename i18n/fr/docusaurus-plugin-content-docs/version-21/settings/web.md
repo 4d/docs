@@ -121,10 +121,10 @@ Permet de définir le délai maximum avant fermeture (timeout) des process Web i
 Définit le système d'authentification que vous souhaitez utiliser pour le serveur Web. Trois options sont proposées :
 
 - Authentification personnalisée (par défaut)
-- Passwords with BASIC protocol
-- Passwords with DIGEST protocol
+- Mots de passe protocole BASIC
+- Mots de passe protocole DIGEST
 
-Il est recommandé d'utiliser l'authentification **personnalisée**. See [**Authentication**](../WebServer/authentication.md) section.
+Il est recommandé d'utiliser l'authentification **personnalisée**. Voir la section [**Authentification**](../WebServer/authentication.md).
 
 #### Utilisateur Web générique
 

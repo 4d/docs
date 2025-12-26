@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current session<!-- END REF -->.
 
-Depending on the process from which the command is called, the current session can be:
+Dependiendo del proceso desde el que se llame al comando, la sesión actual puede ser:
 
 - una sesión web (cuando las [sesiones escalables están activadas](WebServer/sessions.md#enabling-web-sessions)),
 - una sesión de cliente remoto (en el servidor),
@@ -80,7 +80,7 @@ El objeto `Session` está disponible desde cualquier proceso en aplicaciones ind
 
 For more information on standalone sessions, please refer to the [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions) paragraph.
 
-### `Session` and components
+### `Session` y componentes
 
 When `Session` is called from the code of different [components loaded in the project](../Concepts/components.md), the command returns an object depending on the calling request and the context:
 

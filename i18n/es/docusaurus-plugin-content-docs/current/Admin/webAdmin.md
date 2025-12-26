@@ -1,6 +1,6 @@
 ---
 id: webAdmin
-title: Web Administration Server
+title: Servidor de administración web
 ---
 
 An embedded web server component, named `WebAdmin`, is used by 4D and 4D Server to provide a secured web access to specific features:

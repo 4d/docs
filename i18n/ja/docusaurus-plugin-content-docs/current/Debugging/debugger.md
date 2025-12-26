@@ -42,7 +42,7 @@ title: デバッガー
 :::note 注記
 
 - ヘッドレスモードで実行中のサーバーでは、デバッガーウィンドウを表示することはできません。この場合はリモートデバッガーを使用する必要があります。 [リモートマシンからのデバッグ](./debugging-remote.md) 参照。
-- 運用環境で Qodlyページをデバッグする必要がある場合は、[Qodly Studio のデバッガーを 4D Server アプリケーションで有効化する](../WebServer/qodly-studio.md#4d-server-で-qodlyデバッガーを使用する) こともできます。
+- 運用環境で Qodlyページをデバッグする必要がある場合は、[Qodly Studio のデバッガーを 4D Server アプリケーションで有効化する](https://developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server) こともできます。
 
 :::
 

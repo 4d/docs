@@ -26,21 +26,21 @@ displayed_sidebar: docs
 
 ## 説明
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current session<!-- END REF -->.
+`Session` コマンドは、<!-- REF #_command_.Session.Summary -->カレントのセッションに対応する `Session` オブジェクトを返します<!-- END REF -->。
 
-Depending on the process from which the command is called, the current session can be:
+コマンドを呼び出したプロセスによって、カレントセッションは次のいずれかです:
 
 - Web セッション([スケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合)
-- a remote client session (on the server),
-- a stored procedures session,
-- a standalone session.
+- (サーバー上の)リモートクライアントセッション
+- ストアドプロシージャーセッション
+- スタンドアロンセッション
 
 詳細については、[Session types](../API/SessionClass.md#session-types) の段落を参照ください。
 
-The command returns *Null* if:
+このコマンドは、以下の場合には **Null** を返します:
 
-- it is called in a web process and scalable sessions are disabled on the web server,
-- it is called on a remote 4D.
+- コマンドがWeb プロセス内で呼び出されているが、Web サーバーではスケーラブルセッションが無効化されている
+- コマンドがリモート4D から呼び出されている
 
 ### Webセッション
 
@@ -63,7 +63,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 - ORDA [データモデル関数](../ORDA/ordaClasses.md) ([`local`](../ORDA/ordaClasses.md#ローカル関数) キーワードで宣言されたものを除く)
 - `On Server Open Connection` および `On Server Shutdown Connection` データベースメソッド
 
-For more information on remote user sessions, please refer to the [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions) paragraph.
+リモートユーザーセッションの詳細については、[**リモートユーザーセッション**](../Desktop/sessions.md#リモートユーザーセッション) の段落を参照ください。
 
 ### ストアドプロシージャーセッション
 
@@ -72,29 +72,29 @@ For more information on remote user sessions, please refer to the [**Remote user
 - [`Execute on server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたメソッド
 - `On Server Startup`、`On Server Shutdown`、`On Backup Startup`、`On Backup Shutdown`、および `On System event` データベースメソッド
 
-For more information on stored procedures virtual user session, please refer to the [**Stored procedure sessions**](../Desktop/sessions.md#stored-procedure-sessions) paragraph.
+ストアドプロシージャーバーチャルユーザーセッションの詳細については、[**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション) の段落を参照ください。
 
 ### スタンドアロンセッション
 
 `Session` オブジェクトは、スタンドアロン(シングルユーザー)アプリケーション内の任意のプロセスから利用可能なため、4D 開発環境において`Session` オブジェクトを使用することで、クライアント/サーバー用のコードを書いてテストすることができます。
 
-For more information on standalone sessions, please refer to the [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions) paragraph.
+スタンドアロンセッションの詳細については、[**スタンドアロンセッション**](../Desktop/sessions.md#スタンドアロンセッション) の段落を参照ください。
 
-### `Session` and components
+### `Session`とコンポーネント
 
-When `Session` is called from the code of different [components loaded in the project](../Concepts/components.md), the command returns an object depending on the calling request and the context:
+`Session` が[プロジェクト内に配置されている異なるコンポーネント](../Concepts/components.md) のコードから呼び出された場合には、このコマンドは呼び出しリクエストとコンテキストに応じて異なるオブジェクトを返します:
 
-- in case of a web request, `Session` always returns the session attached to the target web server of the request (and not a session of the component's web server),
-- in case of a remote request executed on the server, `Session` always returns the session attached to the remote user,
-- in case of a stored procedure session or a standalone session, `Session` always returns the single current session (the same object is used during all the work session).
+- Web リクエストの場合、`Session` は常にリクエストのターゲットWeb サーバーにアタッチされているセッションを返します(コンポーネントのWeb サーバーのセッションではありません)。
+- サーバー上で実行されたリモートリクエストの場合、 `Session` は常にリモートユーザーにアタッチされたセッションを返します。
+- ストアドプロシージャーセッションまたはスタンドアロンセッションの場合、`Session` は常にシングルカレントセッションを返します(同じオブジェクトが全てのワークセッションにおいて使用されます)。
 
 ```mermaid
 flowchart TD
-    A[Need a session] --> B{Is it a web request?}
-    B -->|Yes| C[Use the session attached to the web server of the web request]
-    B -->|No| D{Is it a remote request?}
-    D -->|Yes| E[Use the object of the remote user session]
-    D -->|No| F[Use the unique object of the stored procedure/standalone session]
+    A[セッションが必要] --> B{それはWebリクエストか？}
+    B -->|はい| C[WebリクエストのWebサーバーに割り当てられているセッションを使用]
+    B -->|いいえ| D{それはリモートリクエストか？}
+    D -->|はい| E[リモートユーザーセッションのオブジェクトを使用]
+    D -->|いいえ| F[ストアドプロシージャー/スタンドアロンセッションの固有のオブジェクトを使用]
 
     classDef decision fill:#f9f,stroke:#333,stroke-width:2px;
     classDef process fill:#bbf,stroke:#333,stroke-width:2px;
@@ -107,17 +107,17 @@ flowchart TD
 
 ## 例題
 
-"公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
+"公開オプション: 4DタグとURL(4DACTION...)" 属性を有効にした `action_Session` メソッドを定義したとします。 ブラウザーに次の URL を入力してメソッドを呼び出します:
 
 ```
 IP:port/4DACTION/action_Session
 ```
 
 ```4d
-  //action_Session method
+  //action_Session メソッド
  Case of
     :(Session#Null)
-       If(Session.hasPrivilege("CreateInvoices")) //calling the hasPrivilege function
+       If(Session.hasPrivilege("CreateInvoices")) //hasPrivilege 関数を呼び出す
           WEB SEND TEXT("4DACTION --> Session is CreateInvoices")
        Else
           WEB SEND TEXT("4DACTION --> Session is not CreateInvoices")
@@ -133,7 +133,7 @@ IP:port/4DACTION/action_Session
 [Session API](../API/SessionClass.md)
 [Desktop sessions](../Desktop/sessions.md)
 [Web server user sessions](../WebServer/sessions.md)  
-[*Scalable sessions for advanced web applications* (blog post)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+[*Scalable sessions for advanced web applications* (blog 記事)](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
 
 ## プロパティ
 

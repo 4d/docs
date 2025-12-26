@@ -497,6 +497,7 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 - **SpellChecker**: Utilisé pour les fonctions intégrées de [vérification orthographique](../FormObjects/properties_Entry.md#auto-spellcheck) et les commandes disponibles pour les zones de saisie et les zones 4D Write Pro.
 - **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user
+- **4D Qodly Pro**: Includes [Qodly Studio and its web renderering features](https://developer.4d.com/qodly/).
 
 ## Page Licences & Certificat
 

@@ -31,7 +31,7 @@ El objeto devuelto contiene las siguientes propiedades:
 | data      |       | object | Información adicional en función del componente implicado                                                                                                                                                                                                     |
 |           | index | number | <li>Componente Pestañas: índice de la pestaña (la indexación comienza en 0)</li><li>Componente de la tabla de datos: número de columna</li>                                                                                                                   |
 |           | row   | number | Componente de la tabla de datos: número de línea                                                                                                                                                                                              |
-|           | name  | string | Data Table component: qodlysource name of the column (e.g. "firstname", "address.city")                                                                                    |
+|           | name  | string | Componente Data Table: nombre qodlysource de la columna (por ejemplo, "firstname", "address.city")                                                                                                         |
 
 #### Ejemplo
 

@@ -29,10 +29,6 @@ title: リリースノート
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21): 4D 21 で修正されたバグのリストです(日本語版は [こちら](https://4d-jp.github.io/2025/279/release-note-version-21/))。
 - [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): what's new in Qodly Studio.
 
-#### デベロッパー・プレビュー
-
-[4D フォームにおける**Fluent UI** レンダリング](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) はベータテストプログラム期間中、デベロッパープレビューとして提供されています。
-
 #### 動作の変更
 
 :::caution インデックスの再構築
@@ -42,7 +38,9 @@ title: リリースノート
 :::
 
 - Web サービス(SOAP): [スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) が有効化されている場合、コンパイルモードにおいてはWeb サービスは[**プリエンプティブプロセス**](../Develop/preemptive.md) で実行されます。 Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
-- Web サーバー: 廃止予定だった`4DSYNC/` および `4DCGI/` URL のサポートが削除されました。 これらのURL に関しては今後は何も特殊な処理は行われません。
+- Web server:
+  - the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore,
+  - web processes are no longer recycled when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled.
 - Web ユーザーセッションは今後[`Process activity`](../commands/process-activity.md) コマンドで返されるようになります。
 - PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
 - [`HIGHLIGHT TEXT`](../commands/highlight-text) コマンドは今後サブフォームのコンテキストでサポートされるようになりました。

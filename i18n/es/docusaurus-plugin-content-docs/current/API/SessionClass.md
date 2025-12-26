@@ -23,9 +23,9 @@ Los siguientes tipos de sesiones están soportados por esta clase:
   - [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
   - [**Standalone sessions**](../Desktop/sessions.md#standalone-sessions): Local session object returned in single-user application (useful in development and test phases of client/server applications).
 
-:::warning About session privileges
+:::warning Acerca de los privilegios de sesión
 
-All session types can handle privileges, but only the code executed in [web user sessions](WebServer/sessions.md) is actually controlled by session's privileges.
+All session types can handle privileges, but only the code executed in a **web context** is actually controlled by session's privileges.
 
 :::
 
@@ -91,7 +91,6 @@ Keep in mind that privileges only apply to the code executed through web accesse
 
 ```4d
 //Invalidate a web user session
-var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
@@ -380,7 +379,7 @@ Keep in mind that privileges only apply to the code executed through web accesse
 
 #### Ejemplo
 
-You want to check if the "CreateInvoices" privilege is associated to the web user session:
+Desea verificar si el privilegio "CreateInvoices" está asociado a la sesión del usuario web:
 
 ```4d
 If (Session.hasPrivilege("CreateInvoices"))
@@ -859,6 +858,6 @@ La propiedad `.userName` contiene <!-- REF #SessionClass.userName.Summary -->el 
 - **Remote/Stored procedure sessions**: This property returns the same user name as the [`Current user`](../commands-legacy/current-user.md) command.
 - **Standalone sessions**: This property contains "designer" or the name set with the [`SET USER ALIAS`](../commands-legacy/set-user-alias.md) command.
 
-This property is **read only** for desktop sessions.
+Esta propiedad es **sólo de lectura** para las sesiones de escritorio.
 
 <!-- END REF -->

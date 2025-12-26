@@ -116,46 +116,41 @@ When creating an OTP token in client/server environment, you need to execute the
 
 ### Exemple
 
-In the [*On Server Open Connection*](../commands-legacy/on-server-open-connection-database-method.md) database method:
+In a form, get an OTP and open a Qodly page in a Web area:
 
 ```4d
-var $otp : Text
+Form.otp:=getOTP
 
-// Some privileges are put in the remote user session on the server for a further web access
-resetPrivileges("basic")
+Form.url:="http://localhost/$lib/renderer/?w=Products&$4DSID="+Form.otp
 
-// An OTP is created on the server for this remote client session
-$otp:=getOTP
-
-
-// The user has already the required privileges for a web access
-// and the same session is shared between this remote user and the web Qodly app
-WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$otp)
+WA OPEN URL(*; "QodlyPage"; Form.url)
 
 ```
 
-*resetPrivileges* project method:
+The *getOTP* project method (with the [**Execute on server** property](../Project/project-method-properties.md#execute-on-server) in Client/Server):
 
 ```4d
-// This function is run on the server
-// and puts some privileges in the session for a further web access
+// In Client Server:
+// ----------------
+// Method executed on the server because the session object is on the server
+// The Session object is Null on the client 
+//
 
-#DECLARE ($priv : Text) 
-	
-Session.clearPrivileges()
-Session.setPrivileges($priv)
-```
+#DECLARE() : Text
 
-*getOTP* project method:
-
-```4d
-// This project method is run on the server 
-// and generates an OTP able to retrieve this remote user session 
-
-#DECLARE : Text 
-	
 return Session.createOTP()
-	
+
 ```
 
+Here is the code used to put the "viewProducts" privilege in the session:
+
+```4d
+// In Client Server:
+// ----------------
+// This code must be executed on the server because the session object is on the server
+// The Session object is Null on the client 
+
+Session.clearPrivileges() // Clean the session from its old privileges
+Session.setPrivileges("viewProducts")
+```
 

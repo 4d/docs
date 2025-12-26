@@ -29,7 +29,7 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 Webセッションは次のものに使用されます:
 
 - [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodlyフォーム](qodly-studio.md) が使用する [REST API](../REST/authUsers.md) への呼び出し
+- [リモートデータストア](../ORDA/remoteDatastores.md) や [Qodlyフォーム](https://developer.4d.com/qodly/) が使用する [REST API](../REST/authUsers.md) への呼び出し
 
 ## Enabling web sessions {#enabling-web-sessions}
 
@@ -76,12 +76,6 @@ RESTリクエストのための Webセッションを作成するには、利用
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-:::info
-
-Webプロセスは通常終了せず、効率化のためにプールされリサイクルされます。 プロセスがリクエストの実行を終えると、プールに戻され、次のリクエストに対応できるようになります。 Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). このクリア処理は、開かれたファイルへの参照など、プロセスに関連するすべての情報に対して必要です。 これが、セッション関連の情報を保持したい場合には、[Session](API/SessionClass.md) オブジェクトを使用することが **推奨** される理由です。
-
-:::
-
 ## セッション情報の保存と共有
 
 各 `Session` オブジェクトには、共有オブジェクトである [`.storage`](API/SessionClass.md#storage) プロパティが用意されています。  このプロパティにより、セッションで処理されるすべてのプロセス間で情報を共有することができます。
@@ -105,7 +99,7 @@ Webセッションが閉じられた後に [`Session`](commands/session.md) コ�
 
 :::info
 
-[**ログアウト**](qodly-studio.md#ログアウト) 機能を使用して、Qodly フォームからのセッションを閉じることができます。
+You can close a session from a Qodly form using the [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) feature.
 
 :::
 

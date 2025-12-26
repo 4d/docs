@@ -25,7 +25,7 @@ Os seguintes tipos de sessões são suportados por essa classe:
 
 :::warning About session privileges
 
-All session types can handle privileges, but only the code executed in [web user sessions](WebServer/sessions.md) is actually controlled by session's privileges.
+All session types can handle privileges, but only the code executed in a **web context** is actually controlled by session's privileges.
 
 :::
 
@@ -91,7 +91,6 @@ Keep in mind that privileges only apply to the code executed through web accesse
 
 ```4d
 //Invalidate a web user session
-var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()

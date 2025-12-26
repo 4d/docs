@@ -29,10 +29,6 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/
 - [**Fixed bug list**](https://bugs.4d.fr/fixedbugslist?version=21): list of all bugs that have been fixed in 4D 21.
 - [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes): what's new in Qodly Studio.
 
-#### Prévia do desenvolvedor
-
-[**Fluent UI** rendering for 4D forms](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) is proposed in Developer Preview during the beta test program.
-
 #### Mudanças de comportamento
 
 :::caution Index rebuild
@@ -42,7 +38,9 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/
 :::
 
 - Web services (SOAP): when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled, web services now run in [**preemptive processes**](../Develop/preemptive.md) in compiled mode. Make sure that your SOAP code is thread-safe and that the session in which it runs has appropriate [privileges](../API/SessionClass.md#setprivileges).
-- Web server: the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore.
+- Web server:
+  - the support of deprecated `4DSYNC/` and `4DCGI/` URLs is removed. No specific processing is done on these URLs anymore,
+  - web processes are no longer recycled when [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled.
 - Web user sessions are now returned by [`Process activity`](../commands/process-activity.md).
 - PHP commands are now [deprecated](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) and should no longer be used in your developments.
 - The [`HIGHLIGHT TEXT`](../commands/highlight-text) command is now supported in the context of subforms.

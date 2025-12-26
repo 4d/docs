@@ -6,7 +6,7 @@ title: Buscar y reemplazar
 4D provides several search and replace functions for elements in all of the Design environment.
 
 - You can search for a string or a type of object (variable, comment, expression, etc.) en parte o en todo el proyecto en función de criterios personalizados ("empieza por", "contiene", etc.). Por ejemplo, puede buscar todas las variables que contengan la cadena "MiVar", solo en los métodos cuyo nombre empiece por "HR_".
-- Los resultados se muestran en una ventana de resultados, donde es posible realizar sustituciones en los contenidos. You can also export these results in a text file that can be imported into a spreadsheet.
+- Los resultados se muestran en una ventana de resultados, donde es posible realizar sustituciones en los contenidos. También puede exportar estos resultados en un archivo de texto que puede importarse a una hoja de cálculo.
 - Puede detectar variables y métodos que no se utilicen en su código y eliminarlos para liberar memoria.
 - Puede renombrar un método proyecto o una variable en todo el entorno de diseño en una sola operación.
 
@@ -40,7 +40,7 @@ Cuando se busca en el entorno Diseño, se buscan los siguientes elementos:
 
 Especifique sus criterios de búsqueda en la ventana "Buscar en el diseño":
 
-1. Click on the Search button (![](../assets/en/Project/search-icon.png)) in the 4D toolbar.
+1. Haga clic en el botón Buscar (![](../assets/en/Project/search-icon.png)) de la barra de herramientas 4D.
    OR
    Select the **Find in Design...** command from the **Edit** menu.
 
@@ -65,7 +65,7 @@ You can cancel an extensive search that is underway using the **x** button; this
 
 :::
 
-Once you have executed a search, the value entered in the search area is saved in memory. Este valor, así como todos los demás valores introducidos durante la misma sesión, pueden seleccionarse en el combo box.
+Una vez ejecutada una búsqueda, el valor introducido en el área de búsqueda se guarda en la memoria. Este valor, así como todos los demás valores introducidos durante la misma sesión, pueden seleccionarse en el combo box.
 
 ### Buscar
 
@@ -80,21 +80,21 @@ El resultado final de ambos tipos de búsqueda depende del [modo de búsqueda](#
 
 :::
 
-- **Language expression**: Used to search for any valid 4D expression; the search is performed in the "contains" search mode. La validez es importante porque 4D debe ser capaz de evaluar una expresión para poder buscarla. For example, a search for "[clients" (invalid expression) will not return any result whereas "[clients]" is correct. This option is particularly suitable for searches for value assignments and comparisons. Por ejemplo:
+- **Language expression**: Used to search for any valid 4D expression; the search is performed in the "contains" search mode. La validez es importante porque 4D debe ser capaz de evaluar una expresión para poder buscarla. For example, a search for "[clients" (invalid expression) will not return any result whereas "[clients]" is correct. Esta opción es especialmente adecuada para la búsqueda de asignaciones de valor y comparaciones. Por ejemplo:
   - Buscar "myvar:=" (asignación)
   - Buscar "myvar=" (comparación)
-- **Language element**: Used to search for a specific language element by its name. 4D can distinguish between the following elements:
+- **Language element**: Used to search for a specific language element by its name. 4D puede distinguir entre los siguientes elementos:
   - **Cualquier elemento del lenguaje**: todo elemento de la lista de abajo.
   - **Método proyecto o clase**: nombre de un método proyecto o clase, por ejemplo "M_Add" o "EmployeeEntity".
   - **Form:** Form name, for example "Input". El comando busca entre formularios proyecto y formularios tabla.
   - **Field or Table**: Name of a table or field, for example "Customers".
-  - **Variable**: Any variable name, such as "$myvar".
+  - **Variable**: todo nombre de variable, como "$myvar".
     **4D constant**: Any constant, such as "Is Picture".
     **String in quotes**: Literal text constant; i.e. any value within quotes in the code editor or inserted into text areas of the Form editor (static text or group boxes). For example, a search for "Martin" will return results if your code contains the line: `ds.Customer.query("name = :1"; "Martin")`
   - **4D command**: Any 4D command, for example "Alert".
   - **Plug-in command**: Plug-in command installed in the application.
   - **Properties**: An object property name (includes ORDA attribute names). For example "lastname" will find "$o.lastname" and "ds.Employee.lastname".
-- **Any object**: This option searches among all the elements in the Design environment. Only the modification date filter is available. Use this option, for example, to search for "anything modified today".
+- **Cualquier objeto**: esta opción busca entre todos los elementos del entorno Diseño. Sólo está disponible el filtro de fecha de modificación. Use this option, for example, to search for "anything modified today".
 
 ### Modo de búsqueda
 
@@ -108,7 +108,7 @@ The search mode menu (i.e. "which", "that is" or "whose name") specifies how to 
 
 ### Search in components
 
-When your current project references [editable components](../Extensions/develop-components.md#editing-components), you can designate one or all your components as a target for the search. By default, a search is executed in the host only. To modify the target for a search, deploy the **in the project** menu:
+When your current project references [editable components](../Extensions/develop-components.md#editing-components), you can designate one or all your components as a target for the search. Por defecto, una búsqueda se ejecuta sólo en el host. To modify the target for a search, deploy the **in the project** menu:
 
 ![](../assets/en/Project/find-components.png)
 
@@ -153,7 +153,7 @@ Puede seleccionar opciones que le ayuden a agilizar sus búsquedas:
 - **Search in methods**: When this option is deselected, the search is done throughout the project, except in methods.
 - **Case Sensitive**: When this option is selected, the search uses the case of the characters as they have been entered in the Find area.
 
-## Results window
+## Ventana Resultados
 
 La ventana Resultados lista todos los elementos encontrados que coinciden con los criterios de búsqueda establecidos mediante distintos tipos de búsqueda:
 
@@ -179,7 +179,7 @@ When an element found belongs to a component, the **component name** is displaye
 
 Once a search is completed, you can use the ![](../assets/en/Project/result-window-re.png) button to perform the search again with the same criteria and options.
 
-### Options menu
+### Menú Opciones
 
 Puede realizar varias acciones utilizando el menú opciones:
 
@@ -194,7 +194,7 @@ Puede realizar varias acciones utilizando el menú opciones:
   - Proyecto anfitrión o nombre del componente
   - Type (method, Class, formObject, trigger...)
   - Path
-  - Property (if accurate): provides the property of the object that matches the criteria. For example, a string could be found in a variable name (variable property) and an object name (name property) within in the same form. This field is empty when the matching element is the object itself.
+  - Propiedad (si es preciso): ofrece la propiedad del objeto que coincide con los criterios. For example, a string could be found in a variable name (variable property) and an object name (name property) within in the same form. This field is empty when the matching element is the object itself.
   - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
   - Número de línea (para código) o número de página (para objetos de formulario)
 
@@ -247,13 +247,13 @@ Depending on the type of object you are renaming (project method or variable), t
 
 Two specific search commands allow you to detect variables and methods that are not used in the code of your host project. You can then remove them to free up memory. These commands are found in the **Edit** menu of the Design environment.
 
-### Find Unused Methods and Global Variables
+### Encontrar métodos y variables globales no utilizados
 
 This command looks for project methods as well as "global" variables (process and interprocess variables) that are declared but not used. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
 
-A project method is considered to be unused when:
+Se considera que un método proyecto no se utiliza cuando:
 
-- it is not in the Trash,
+- no está en la Papelera,
 - it is not called anywhere in the 4D code,
 - no es llamado por un comando de menú,
 - it is not called as a string constant in the 4D code (4D detects a method name in a string even when it is followed by parameters in parentheses).
@@ -277,7 +277,7 @@ Este código construye un nombre de método. The *mymethod42* project method is 
 
 This command looks for local variables that are declared but not used. Los resultados de la búsqueda aparecen en una [ventana de resultados](#results-window).
 
-A local variable is considered to be unused when:
+Se considera que una variable local no se utiliza cuando:
 
 - it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
 - it is not used anywhere else within the same method.

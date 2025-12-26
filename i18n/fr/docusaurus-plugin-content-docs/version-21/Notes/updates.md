@@ -29,10 +29,6 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=21) : liste de tous les bugs qui ont été corrigés dans 4D 21.
 - [**4D Qodly Pro Release notes**](https://developer.4d.com/qodly/4DQodlyPro/release-notes) : les nouveautés de Qodly Studio.
 
-#### Developer Preview
-
-Le [rendu **Fluent UI** pour les formulaires 4D](../FormEditor/forms.md#fluent-ui-rendering-developer-preview) est proposé en Developer Preview pendant le programme de bêta-test.
-
 #### Changements de comportement
 
 :::caution Reconstruction d'index
@@ -42,7 +38,9 @@ Le [rendu **Fluent UI** pour les formulaires 4D](../FormEditor/forms.md#fluent-u
 :::
 
 - Services web (SOAP) : lorsque les [sessions évolutives](../WebServer/sessions.md#enabling-web-sessions) sont activées, les services web s'exécutent désormais dans des [**process préemptifs**](../Develop/preemptive.md) en mode compilé. Assurez-vous que votre code SOAP est thread-safe et que la session dans laquelle il s'exécute dispose des [privilèges](../API/SessionClass.md#setprivileges) requis.
-- Serveur web : la prise en charge des URLs dépréciés `4DSYNC/` et `4DCGI/` est supprimée. Plus aucun traitement spécifique n'est effectué sur ces URLs.
+- Serveur Web :
+  - la prise en charge des URLs dépréciés `4DSYNC/` et `4DCGI/` est supprimée. Plus aucun traitement spécifique n'est effectué sur ces URLs,
+  - les process web ne sont plus recyclés lorsque l'option [sessions extensibles](../WebServer/sessions.md#enabling-web-sessions) est activée.
 - Les sessions utilisateurs Web sont désormais renvoyées par [`Process activity`](../commands/process-activity.md).
 - Les commandes PHP sont désormais [dépréciées](https://blog.4d.com/deprecation-of-php-commands-removal-of-4d-built-in-php-interpreter/) et ne doivent plus être utilisées dans vos développements.
 - La commande [`HIGHLIGHT TEXT`](../commands/highlight-text) est maintenant prise en charge dans le contexte des sous-formulaires.

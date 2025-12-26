@@ -7,11 +7,11 @@ Si plusieurs personnes utilisent une application, ce qui est souvent le cas dans
 
 La stratégie de contrôle d'accès 4D dépend de la configuration de votre déploiement :
 
-- in multi-user Web and REST applications, access control is based upon [ORDA's Roles and privileges](../ORDA/privileges.md) features.
-- in multi-user desktop applications, you can rely on 4D users and groups,
-- dans les applications monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](../commands-legacy/current-system-user.md).
+- dans les applications Web et REST multi-utilisateurs, le contrôle d'accès est basé sur les [rôles et privilèges d'ORDA](../ORDA/privileges.md).
+- dans les applications desktop multi-utilisateurs, vous pouvez vous appuyer sur les utilisateurs et les groupes 4D,
+- dans les applications desktop monoposte, l'accès des utilisateurs est contrôlé par la session du système, à l'aide de commandes telles que [`Current system user`](../commands-legacy/current-system-user.md).
 
-:::tip Related Blog post
+:::tip Article de blog lié
 
 Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
@@ -19,9 +19,9 @@ Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/
 
 ## Contrôle des accès dans les applications multi-utilisateurs
 
-Multi-user desktop applications are deployed with 4D Server. Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
+Les applications desktop multi-utilisateurs sont déployées avec 4D Server. Dans les applications multi-utilisateurs, le contrôle des accès se fait par le biais des [utilisateurs et des groupes 4D](handling_users_groups.md). Vous pouvez créer des utilisateurs, attribuer des mots de passe et créer des groupes d'accès qui ont différents niveaux de privilèges dans l'application.
 
-Initiez le système de contrôle des accès par mot de passe 4D avec 4D Server, [en attribuant un mot de passe au Super utilisateur](handling_users_groups.md#designer-and-administrator). Tant que vous n'attribuez pas de mot de passe au Super utilisateur, tous les accès à l'application se font avec les droits d'accès du Super utilisateur, même si vous avez [configuré des utilisateurs et des groupes](handling_users_groups.md) (à l'ouverture N'importe quelle partie de l'application peut être ouverte. N'importe quelle partie de l'application peut être ouverte.
+Vous initialisez le système de contrôle des accès par mot de passe 4D avec 4D Server, [en attribuant un mot de passe au Super utilisateur](handling_users_groups.md#designer-and-administrator). Tant que vous n'attribuez pas de mot de passe au Super utilisateur, tous les accès à l'application se font avec les droits d'accès du Super utilisateur, même si vous avez [configuré des utilisateurs et des groupes](handling_users_groups.md) (à l'ouverture, aucun identifiant n'est requis). N'importe quelle partie de l'application peut être ouverte.
 
 Lorsqu’un mot de passe est affecté au Super_Utilisateur, tous les privilèges d’accès que vous avez affectés prennent effet. Pour se connecter à l'application ou à un [serveur à accès protégé](handling_users_groups.md#assigning-group-access), les utilisateurs distants doivent saisir un login/mot de passe.
 
@@ -29,11 +29,11 @@ Pour désactiver le système de restriction d’accès, il suffit de supprimer (
 
 ## Contrôle d'accès dans les applications monoposte
 
-Single-user applications are desktop applications, deployed with 4D or merged with 4D Volume Desktop. Dans les applications monoposte, tous les utilisateurs qui ouvrent l'application sont des [Super utilisateurs](handling_users_groups.md#designer-and-administrator); ils possèdent tous les privilèges et leur nom est "Super utilisateur". Le contrôle des accès n'est pas basé sur les utilisateurs et les groupes 4D, mais sur les **sessions utilisateur**.
+Les applications monoposte sont des applications de bureau, déployées avec 4D ou fusionnées avec 4D Volume Desktop. Dans les applications monoposte, tous les utilisateurs qui ouvrent l'application sont des [Super utilisateurs](handling_users_groups.md#designer-and-administrator); ils possèdent tous les privilèges et leur nom est "Super utilisateur". Le contrôle des accès n'est pas basé sur les utilisateurs et les groupes 4D, mais sur les **sessions utilisateur**.
 
 ### Identification de l'utilisateur
 
-To identify the current user in a 4D single-user application, you can rely on the [`Current system user`](../commands-legacy/current-system-user.md) command, which returns the user who opened the system session. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
+Pour identifier l'utilisateur courant dans une application mono-utilisateur 4D, vous pouvez vous appuyer sur la commande [`Current system user`](../commands-legacy/current-system-user.md), qui renvoie l'utilisateur qui a ouvert la session système. Ainsi, l'authentification des utilisateurs est déléguée au système d'exploitation.
 
 Vous pouvez alors autoriser ou refuser les accès à votre application en utilisant un code suivant :
 

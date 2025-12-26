@@ -9,7 +9,7 @@ para importar
 
 ## Listas
 
-4D Write Pro supports two main types of lists:
+4D Write Pro soporta dos tipos principales de listas:
 
 - listas desordenadas: donde los elementos de la lista se marcan con viñetas, viñetas personalizadas o imágenes utilizadas como marcadores.
 - ordered lists: where list items are marked with numbers or letters

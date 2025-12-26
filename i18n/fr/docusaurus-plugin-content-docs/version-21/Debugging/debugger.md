@@ -42,7 +42,7 @@ La fenêtre du débogueur est généralement affichée sur la machine où le cod
 :::note Notes
 
 - Si le serveur fonctionne en mode headless, aucune fenêtre de débogage ne peut être affichée sur le serveur, vous devez utiliser le débogueur distant. Voir [Débogage depuis des machines distantes](./debugging-remote.md).
-- Vous pouvez également [attacher le débogueur Qodly Studio à une application 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) si vous devez déboguer des pages Qodly dans un environnement déployé.
+- Vous pouvez également [attacher le débogueur Qodly Studio à une application 4D Server](https://developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server) si vous devez déboguer des pages Qodly dans un environnement déployé.
 
 :::
 

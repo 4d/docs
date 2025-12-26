@@ -29,7 +29,7 @@ When [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions
 
 2. 事前に用意した [`authentify()` 関数](#function-authentify) を呼び出し、ユーザーの資格情報をチェックして、適切な権限で[`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) を呼び出します。 `authentify()` は公開された [データストアクラス関数](../ORDA/ordaClasses.md#datastore-クラス) でなければなりません。
 
-3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](../WebServer/qodly-studio.md) を利用できます。
+3. `/rest/$catalog/authentify` リクエストは、ユーザーの資格情報と共にサーバーに送信されます。 このステップでは、データにアクセスしない基本的なログインフォームのみが必要です。`/rest/$getWebForm`リクエストを介して呼び出される [Qodlyページ](https://developer.4d.com/qodly/) を利用できます。
 
 4. ユーザーが正常に認証された場合、4Dライセンスがサーバー上で消費され、すべての RESTリクエストが受け入れられます。
 

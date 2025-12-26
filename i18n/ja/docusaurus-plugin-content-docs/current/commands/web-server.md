@@ -30,11 +30,11 @@ displayed_sidebar: docs
 
 *option* が省略された場合のデフォルトでは、このコマンドはデータベースの Webサーバー (デフォルトWebサーバー) への参照を返します。 取得する Webサーバーを指定するには、*option* に以下の定数のいずれか一つを渡してください:
 
-| 定数                             | 値 | 説明                                                                                                 |
-| ------------------------------ | - | -------------------------------------------------------------------------------------------------- |
-| `Web server database`          | 1 | Web server of the project from which the command is called (default if omitted) |
-| `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー                                                                         |
-| `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー)                                              |
+| 定数                             | 値 | 説明                                                     |
+| ------------------------------ | - | ------------------------------------------------------ |
+| `Web server database`          | 1 | コマンドが呼ばれたプロジェクトのWeb サーバー(省略時のデフォルト) |
+| `Web server host database`     | 2 | コンポーネントのホストデータベースの Webサーバー                             |
+| `Web server receiving request` | 3 | リクエストを受け取った Webサーバー (ターゲットWebサーバー)  |
 
 **返されたWeb サーバーオブジェクト** には[Web server プロパティ](../API/WebServerClass.md) のカレントのプロパティが格納されています。
 

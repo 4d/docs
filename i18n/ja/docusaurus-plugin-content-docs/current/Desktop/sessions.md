@@ -1,41 +1,41 @@
 ---
 id: desktop-sessions
-title: Desktop Sessions
+title: デスクトップセッション
 ---
 
-A **desktop session** is a user-related execution context on 4D Server or 4D single-user that does not result from any web or REST access.
+**デスクトップセッション** とは、4D Server または4D シングルユーザー版のユーザー関連の実行コンテキストであり、Web やREST アクセスに起因するものではないものです。
 
-Just like in a [**web user session**](../WebServer/sessions.md), the code executed in a desktop session has access to a [`Session`](../API/SessionClass.md) object which provides functions and properties allowing you to store session values and to share them between user processes, for example using the [`session.storage`](../API/SessionClass.md#storage) object.
+[**Web ユーザーセッション**](../WebServer/sessions.md) 同様、デスクトップセッションで実行されたコードは[`Session`](../API/SessionClass.md) オブジェクトへのアクセスが可能で、これによって提供される関数やプロパティによって(例えば[`session.storage`](../API/SessionClass.md#storage) オブジェクトを使用することによって)セッションの値を保存したりユーザープロセス間で共有することが可能になります。
 
-However, unlike the code executed in web user sessions, the code executed in desktop sessions is not controlled by [roles and privileges](../ORDA/privileges.md). It can access any parts of the 4D application, including ORDA and data model classes. On 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses.
+しかしながら、Web ユーザーセッション内で実行されたコードとは違い、デスクトップセッション内で実行されたコードは[ロールと権限](../ORDA/privileges.md)によっては管理されません。 これはORDA およびデータモデルクラスを含め、4D アプリケーションのどの部分へもアクセスすることができます。 4D Server 上では、[ユーザー&グループ機能](../Users/handling_users_groups.md) でユーザーアクセスを管理することができます。
 
-You can nevertheless [**share** a desktop session with a web session](#sharing-a-desktop-session-for-web-accesses) so that a desktop user can access your 4D application through a web interface, using for example Qodly pages and Web areas.
+それでも、[デスクトップセッションをWeb セッションと**共有** すること](#webアクセス用にデスクトップセッションを共有する) ことができ、これによってデスクトップユーザーは、例えばQodly ページとWeb エリアを使用して、Web インターフェースを通して4D アプリケーションへとアクセスうすることができます。
 
 ## セッションの種類
 
-Desktop sessions include:
+デスクトップセッションには以下のような種類が含まれます:
 
-- **Remote user sessions**: In client/server applications, the session that manages the user processes on the server.
-- **Stored procedures sessions**: In client/server applications, the unique virtual user session that manages all stored procedures executed on the server.
-- **Standalone sessions**: Local session object returned in single-user application (useful in development and test phases of client/server applications).
+- **リモートユーザーセッション**: クライアント/サーバーアプリケーションにおいては、サーバー上でユーザープロセスを管理するセッション。
+- **ストアドプロシージャーセッション**: クライアント/サーバーアプリケーションにおいては、サーバー上で実行される全てのストアドプロシージャーを管理する固有のバーチャルユーザーセッション。
+- **スタンドアロンセッション**: シングルユーザーアプリケーション内で返されるローカルセッションオブジェクト(クライアント/サーバーアプリケーションの開発およびテストフェーズにおいて有用です)。
 
 :::note
 
-Keep in mind that [**Web sessions**](../WebServer/sessions.md) are used as soon as the 4D project is accessed through web or REST requests and [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled.
+[スケーラブルセッション](../WebServer/sessions.md#webセッションの有効化) 有効化されているときに、4D プロジェクトがWeb またはREST 経由でアクセスがあれば、すぐに[**Web セッション**](../WebServer/sessions.md) が使用されるという点に注意してください。
 
 :::
 
-The following diagram shows the different session types and how they interact:
+以下の図は、異なるセッションの種類とそれらがどのように関連するかを表しています:
 
 ![](../assets/en/Desktop/sessions.png)
 
 ## リモートユーザーセッション
 
-On the server, in "user processes" (i.e. processes related to remote users), the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
+サーバー上では、"ユーザープロセス"(つまりリモートユーザーに関連したプロセス)内では、[`Session`](../commands/session.md) コマンドはカレントのユーザーセッションを表す `session` オブジェクトを返します。  このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 :::note
 
-On a remote 4D, the `session` object always returns null.
+リモート4D では、 `session` オブジェクトは常に null を返します。
 
 :::
 
@@ -59,12 +59,12 @@ On a remote 4D, the `session` object always returns null.
 
 - [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
 - トリガー
-- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword),
-- Database methods such as [`On Server Open Connection`](../commands/on-server-open-connection-database-method) and [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
+- ORDA [データモデル関数](../ORDA/ordaClasses.md) (ただし、[`local`](../ORDA/ordaClasses.md#local-functions) キーワードで宣言されているものを除く)
+- [`On Server Open Connection`](../commands/on-server-open-connection-database-method) と [`On Server Close Connection`](../commands/on-server-close-connection-database-method)などのデータベースメソッド。
 
-## Stored procedure sessions
+## ストアドプロシージャーセッション
 
-On the server, all [stored procedures](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) share the same virtual user session.
+サーバー上では、全ての[ストアドプロシージャー](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.ja.html) は同じバーチャルユーザーセッションを共有します。
 
 ### 効果
 
@@ -116,46 +116,41 @@ When creating an OTP token in client/server environment, you need to execute the
 
 ### 例題
 
-In the [*On Server Open Connection*](../commands-legacy/on-server-open-connection-database-method.md) database method:
+In a form, get an OTP and open a Qodly page in a Web area:
 
 ```4d
-var $otp : Text
+Form.otp:=getOTP
 
-// Some privileges are put in the remote user session on the server for a further web access
-resetPrivileges("basic")
+Form.url:="http://localhost/$lib/renderer/?w=Products&$4DSID="+Form.otp
 
-// An OTP is created on the server for this remote client session
-$otp:=getOTP
-
-
-// The user has already the required privileges for a web access
-// and the same session is shared between this remote user and the web Qodly app
-WA OPEN URL(*; "Welcome"; "http://127.0.0.1/$lib/renderer/?w=People&$4DSID="+$otp)
+WA OPEN URL(*; "QodlyPage"; Form.url)
 
 ```
 
-*resetPrivileges* project method:
+The *getOTP* project method (with the [**Execute on server** property](../Project/project-method-properties.md#execute-on-server) in Client/Server):
 
 ```4d
-// This function is run on the server
-// and puts some privileges in the session for a further web access
+// In Client Server:
+// ----------------
+// Method executed on the server because the session object is on the server
+// The Session object is Null on the client 
+//
 
-#DECLARE ($priv : Text) 
-	
-Session.clearPrivileges()
-Session.setPrivileges($priv)
-```
+#DECLARE() : Text
 
-*getOTP* project method:
-
-```4d
-// This project method is run on the server 
-// and generates an OTP able to retrieve this remote user session 
-
-#DECLARE : Text 
-	
 return Session.createOTP()
-	
+
 ```
 
+Here is the code used to put the "viewProducts" privilege in the session:
+
+```4d
+// In Client Server:
+// ----------------
+// This code must be executed on the server because the session object is on the server
+// The Session object is Null on the client 
+
+Session.clearPrivileges() // Clean the session from its old privileges
+Session.setPrivileges("viewProducts")
+```
 

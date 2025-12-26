@@ -451,6 +451,30 @@ SAVE RECORD($tablepointer->)
 
 > セキュリティ上の理由から、`On Host Database Event` データベースメソッドを使用可能にするためには、その実行をホストデータベースで明示的に許可する必要があります。 このためには、ストラクチャー設定画面のセキュリティページ内の、[**コンポーネントの "On Host Database Event" メソッドを実行**](../settings/security.md#オプション) オプションにチェックを入れます:
 
+## カスタムアイコン
+
+You can use a **custom icon** for your dependency, so that it can be visually distinguished from other components in the [Project Dependencies panel](../Project/components.md#monitoring-project-dependencies).
+
+When no custom icon is defined, components use a **default icon**:
+
+![](../assets/en/Develop/icon-comp-default.png)
+
+To declare a custom icon for your component:
+
+1. Create a picture file for the icon and name it `logo.svg` or `logo.png`. Note that the picture will be displayed with a square shape (and automatically resized if necessary). The **svg** format is recommended.
+
+2. Copy the icon file in the [**Resources folder**](../Project/architecture.md#resources) of the component.
+
+The logo file will be used in the Project Dependency window for the component, whether it is interpreted or [built](../Desktop/building.md#build-component).
+
+![](../assets/en/Develop/icon-comp.png)
+
+:::note
+
+If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priority.
+
+:::
+
 ## Info.plist
 
 コンポーネントは、その[root フォルダ](../Project/architecture.md) にシステム(macOS のみ)と[依存関係マネージャ](../Project/components.md#コンポーネントのロード)が読み取り可能な追加の情報を提供する、 `Info.plist` ファイルを持っています。
