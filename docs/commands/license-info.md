@@ -8,7 +8,7 @@ displayed_sidebar: docs
 <!--REF #_command_.License info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| Function result | Object | &#8592; | Information about the active licence |
+| Function result | Object | &#8592; | Information about the active license |
 
 <!-- END REF-->
 

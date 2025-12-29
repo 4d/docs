@@ -38,7 +38,7 @@ Deployment licenses can be embedded at build step by the developer or entered at
 
 Some 4D licenses have an expiry date, after which they must be renewed. When the license subscription is renewed on 4D Store, your licenses are automatically updated in your 4D applications at startup [when you log](GettingStarted/Installation.md) in the Welcome Wizard. 
 
-In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licences Manager dialog box. 
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licenses Manager dialog box. 
 
 
 

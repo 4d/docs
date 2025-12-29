@@ -65,7 +65,7 @@ The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.m
 
 :::note
 
-Creating a web session for a REST request may require that a licence is available, see [this page](../REST/authUsers.md).
+Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
 
 :::
 
