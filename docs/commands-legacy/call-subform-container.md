@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 This command must be placed in the form method of the subform or in the object method of one of the subform objects. The event will only be received in the object method of the subform container. 
 
-In *event*, you can pass any predefined form event of 4D (you can use the constants of the "*Form Events*" theme) or any value corresponding to a custom event. In the first case, the event must be checked for the subform. In the case of a custom event, it is recommended to pass a negative value in *event* in order to avoid the risk of interfering with existing or future 4D event numbers.
+In *event*, you can pass one of the [4D form events that are supported by subforms](../FormObjects/subform_overview.md#call-subform-container-command) or any value corresponding to a custom event. In the first case, the event must be checked for the subform. In the case of a custom event, it is recommended to pass a negative value in *event* in order to avoid the risk of interfering with existing or future 4D event numbers.
 
 *Example of execution of the* CALL SUBFORM CONTAINER *command:*
 
