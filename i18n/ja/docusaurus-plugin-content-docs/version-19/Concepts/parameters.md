@@ -120,7 +120,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 
 :::note
 
-Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+**引数の宣言** と [**変数の宣言**](variables.md#declaring-variables) を混同しないでください。 引数に対して `var` キーワードを使用した場合、エラーを生成します。
 
 :::
 
