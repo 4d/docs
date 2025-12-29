@@ -34,8 +34,8 @@ The following code:
 
 ... will write the following line in the document: 
 
-```4d
- 
+```xml
+ <?xml-stylesheet type="text/xsl"href="style.xsl"?>
 ```
 
 ## System variables and sets 

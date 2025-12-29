@@ -31,8 +31,8 @@ L’instruction suivante :
 
 ... inscrira cette ligne dans le document : 
 
-```4d
- 
+```xml
+ <!DOCTYPE Livres SYSTEM "Livre.DTD">
 ```
 
 ## Variables et ensembles système 

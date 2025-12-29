@@ -34,8 +34,8 @@ El siguiente código:
 
 ... escribirá la siguiente línea en el documento: 
 
-```4d
- 
+```xml
+  <?xml-stylesheet type="text/xsl"href="style.xsl"?>
 ```
 
 ## Variables y conjuntos del sistema 

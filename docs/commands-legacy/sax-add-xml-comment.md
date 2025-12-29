@@ -31,8 +31,8 @@ The following statement:
 
 ... will write the following line in the document: 
 
-```4d
- 
+```xml
+ <!--Created by 4D-->
 ```
 
 ## System variables and sets 

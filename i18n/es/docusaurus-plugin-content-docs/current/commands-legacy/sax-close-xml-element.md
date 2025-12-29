@@ -29,8 +29,8 @@ Si el último elemento abierto es *<Book>*, la siguiente instrucción:
 
 ... escribirá la siguiente línea en el documento: 
 
-```4d
- 
+```xml
+  </Book>
 ```
 
 ## Ver también 

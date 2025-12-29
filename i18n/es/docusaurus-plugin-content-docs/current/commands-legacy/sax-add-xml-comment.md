@@ -31,8 +31,8 @@ La siguiente instrucción:
 
 ... escribirá la siguiente línea en el documento: 
 
-```4d
- 
+```xml
+ <!--Creado por 4D-->
 ```
 
 ## Variables y conjuntos del sistema 
