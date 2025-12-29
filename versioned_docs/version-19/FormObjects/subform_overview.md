@@ -134,6 +134,15 @@ The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to th
 
 The code of the event is unrestricted (for example, 20000 or -100). You can use a code that corresponds to an existing event (for example, 3 for `On Validate`), or use a custom code. In the first case, you can only use events that you have checked in the Property List for subform containers. In the second case, the code must not correspond to any existing form event. It is recommended to use a negative value to be sure that this code will not be used by 4D in future versions.
 
+Supported events for subforms are:
+- [On Load](../Events/onLoad.md)
+- [On Validate](../Events/onValidate.md)
+- [On Getting Focus](../Events/onGettingFocus.md)
+- [On Losing Focus](../Events/onLosingFocus.md)
+- [On Data Change](../Events/onDataChange.md)
+- [On Unload](../Events/onUnload.md)
+
+
 For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
 
 #### EXECUTE METHOD IN SUBFORM command
