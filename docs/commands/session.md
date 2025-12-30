@@ -29,7 +29,7 @@ The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Sessio
 Depending on the process from which the command is called, the current session can be:
 
 - a web session (when [scalable sessions are enabled](WebServer/sessions.md#enabling-web-sessions)),
-- a remote client session (on the server),
+- a remote user session (on the server),
 - a stored procedures session,
 - a standalone session.
 
@@ -38,7 +38,7 @@ For more information, see the [Session types](../API/SessionClass.md#session-typ
 The command returns *Null* if:
 
 - it is called in a web process and scalable sessions are disabled on the web server,
-- it is called on a remote 4D.
+- it is called on a remote 4D client.
 
 
 ### Web sessions
@@ -53,9 +53,9 @@ The `Session` object of web sessions is available from any web process:
 
 For more information on web user sessions, please refer to the [Web Server Sessions](../WebServer/sessions.md) section.
 
-### Remote client sessions
+### Remote user sessions
 
-The `Session` object of remote client sessions is available from:
+The `Session` object of remote user sessions is available from:
 
 - Project methods that have the [Execute on Server](../Project/code-overview.md#execute-on-server) attribute (they are executed in the "twinned" process of the client process),
 - Triggers,
