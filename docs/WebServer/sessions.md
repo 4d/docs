@@ -30,7 +30,7 @@ Destkop applications (client/server and single-user) also provide 4D developers 
 Web sessions are used for:
 
 - [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](https://developer.4d.com/qodly/). 
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/). 
 
 
 ## Enabling web sessions {#enabling-web-sessions}
