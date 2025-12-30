@@ -66,11 +66,12 @@ To open a page:
 
 Renaming or deleting a Qodly page can only be done in the [Page editor of Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
 
-Click on the pen icon to rename the page:
+Click on the pen icon to rename the page:<br/>
 ![](../assets/en/Develop/qodly-rename.png)
 
-Click on the options button and select **Delete** to delete a page:
+Click on the options button and select **Delete** to delete a page:<br/>
 ![](../assets/en/Develop/qodly-delete.png)
+
 A confirmation dialog box is displayed. 
 
 
