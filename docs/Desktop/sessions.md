@@ -77,7 +77,7 @@ On the server, all [stored procedures](https://doc.4d.com/4Dv20/4D/20/Stored-Pro
 
 ### Usage
 
-You can share data between all processes of a store procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
 
 ### Availability
  
