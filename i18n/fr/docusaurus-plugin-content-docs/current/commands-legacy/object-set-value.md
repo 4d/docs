@@ -5,12 +5,12 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjet* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjet* : Text ; *valeur* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomObjet | Text | &#8594;  | Nom de l'objet |
-| valeur | any | &#8594;  | Nouvelle valeur des sources de données de l'objet de formulaire |
+| nomObjet | Text | &#8594; | Nom de l'objet |
+| valeur | any | &#8594; | Nouvelle valeur des sources de données de l'objet de formulaire |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ Vous souhaitez lire la valeur des sources de données d'un objet formulaire, lir
 |  |  |
 | --- | --- |
 | Numéro de commande | 1742 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

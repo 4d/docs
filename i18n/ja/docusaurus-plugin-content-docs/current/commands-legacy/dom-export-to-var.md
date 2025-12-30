@@ -5,11 +5,11 @@ slug: /commands/dom-export-to-var
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *elementRef* ; *vXmlVar* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *elementRef* : Text ; *vXmlVar* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | ルートXML要素参照 |
+| elementRef | Text | &#8594; | ルートXML要素参照 |
 | vXmlVar | Text, Blob | &#8592; | XMLツリーを受け取る変数 |
 
 <!-- END REF-->
@@ -57,7 +57,7 @@ XMLにおいて、改行はそれがXML要素の内側あるいは間いずれ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 863 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

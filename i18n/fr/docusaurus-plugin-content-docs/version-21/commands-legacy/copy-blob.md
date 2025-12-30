@@ -35,6 +35,6 @@ Notez que le BLOB de destination peut être redimensionné si nécessaire.
 |  |  |
 | --- | --- |
 | Numéro de commande | 558 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

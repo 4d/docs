@@ -5,11 +5,11 @@ slug: /commands/window-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window kind.Syntax-->**Window kind** {( *fenêtre* )} : Integer<!-- END REF-->
+<!--REF #_command_.Window kind.Syntax-->**Window kind** ( *fenêtre* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Window kind.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 | Résultat | Integer | &#8592; | Type de la fenêtre |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 445 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

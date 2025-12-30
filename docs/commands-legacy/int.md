@@ -5,7 +5,7 @@ slug: /commands/int
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Int.Syntax-->**Int** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Int.Syntax-->**Int** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ The following example illustrates how Int works for both positive and negative n
 |  |  |
 | --- | --- |
 | Command number | 8 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

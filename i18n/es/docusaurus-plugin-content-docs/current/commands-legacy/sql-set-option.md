@@ -5,12 +5,12 @@ slug: /commands/sql-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *opción* ; *valor* )<!-- END REF-->
+<!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *opción* : Integer ; *valor* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SQL SET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opción | Integer | &#8594;  | Número de opción a definir |
-| valor | Integer, Text | &#8594;  | Nuevo valor de opción |
+| opción | Integer | &#8594; | Número de opción a definir |
+| valor | Integer, Text | &#8594; | Nuevo valor de opción |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK devuelve 1\. De l
 |  |  |
 | --- | --- |
 | Número de comando | 818 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -5,13 +5,13 @@ slug: /commands/intersection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *conjunto1* ; *conjunto2* ; *resultado* )<!-- END REF-->
+<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *conjunto1* : Text ; *conjunto2* : Text ; *resultado* : Text )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto1 | Text | &#8594;  | Primer conjunto |
-| conjunto2 | Text | &#8594;  | Segundo conjunto |
-| resultado | Text | &#8594;  | Conjunto resultante |
+| conjunto1 | Text | &#8594; | Primer conjunto |
+| conjunto2 | Text | &#8594; | Segundo conjunto |
+| resultado | Text | &#8594; | Conjunto resultante |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ El siguiente ejemplo busca los clientes que son atendidos por dos representantes
 |  |  |
 | --- | --- |
 | Número de comando | 121 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

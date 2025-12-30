@@ -5,13 +5,13 @@ slug: /commands/array-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY BLOB.Syntax-->**ARRAY BLOB** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY BLOB.Syntax-->**ARRAY BLOB** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | 配列名 |
-| size | Integer | &#8594;  | 配列の要素の数、もしくはsize2が指定されていた場合は配列の数 |
-| size2 | Integer | &#8594;  | 2次元配列の要素の数 |
+| arrayName | Array | &#8594; | 配列名 |
+| size | Integer | &#8594; | 配列の要素の数、もしくはsize2が指定されていた場合は配列の数 |
+| size2 | Integer | &#8594; | 2次元配列の要素の数 |
 
 <!-- END REF-->
 
@@ -64,6 +64,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1222 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

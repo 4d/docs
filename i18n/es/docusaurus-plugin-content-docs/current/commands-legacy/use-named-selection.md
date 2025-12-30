@@ -5,11 +5,11 @@ slug: /commands/use-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *nombre* )<!-- END REF-->
+<!--REF #_command_.USE NAMED SELECTION.Syntax-->**USE NAMED SELECTION** ( *nombre* : Text )<!-- END REF-->
 <!--REF #_command_.USE NAMED SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombre | Text | &#8594;  | Nombre de la selección temporal a utilizar |
+| nombre | Text | &#8594; | Nombre de la selección temporal a utilizar |
 
 <!-- END REF-->
 
@@ -35,7 +35,7 @@ Recuerde que una selección temporal es una representación de una selección de
 |  |  |
 | --- | --- |
 | Número de comando | 332 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

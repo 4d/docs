@@ -90,6 +90,6 @@ Se executa a seguinte instrução:
 |  |  |
 | --- | --- |
 | Número do comando | 288 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -78,6 +78,6 @@ São selecionados os elementos segundo, terceiro e quinto da lista hierárquica
 |  |  |
 | --- | --- |
 | Número do comando | 381 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

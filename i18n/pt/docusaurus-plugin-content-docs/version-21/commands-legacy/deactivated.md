@@ -31,6 +31,6 @@ Para que seja gerado o ciclo de execução Deactivated, tenha certeza de que o e
 |  |  |
 | --- | --- |
 | Número do comando | 347 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

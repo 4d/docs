@@ -5,13 +5,12 @@ slug: /commands/get-picture-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resID* ; *resData* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resID* : Integer ; *resData* : Field, Variable {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resID | Integer | &#8594;  | Resource ID number |
-| resData | Field, Variable | &#8594;  | Picture field or variable to receive the picture |
-| &#8592; | Contents of the PICT resource |
+| resData | Field, Variable | &#8596;  | *in:* Picture field or variable to receive the picture<br/>*out:* Contents of the PICT resource |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
 
 <!-- END REF-->
@@ -47,7 +46,7 @@ If there is not enough memory to load the picture, an error is generated. You ca
 |  |  |
 | --- | --- |
 | Command number | 502 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

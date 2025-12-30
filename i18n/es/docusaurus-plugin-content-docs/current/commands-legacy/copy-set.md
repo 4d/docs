@@ -5,12 +5,12 @@ slug: /commands/copy-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcCon* ; *dstCon* )<!-- END REF-->
+<!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcCon* : Text ; *dstCon* : Text )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| srcCon | Text | &#8594;  | Nombre del conjunto fuente |
-| dstCon | Text | &#8594;  | Nombre del conjunto de destino |
+| srcCon | Text | &#8594; | Nombre del conjunto fuente |
+| dstCon | Text | &#8594; | Nombre del conjunto de destino |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ El siguiente ejemplo en Cliente/Servidor, copia el conjunto proceso "ConjuntoA",
 |  |  |
 | --- | --- |
 | Número de comando | 600 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get horizontal alignment** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get horizontal alignment.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d’objet (si * est passé) ou Champ ou variable (si * est omis) |
 | Résultat | Integer | &#8592; | Code d’alignement |
 
 <!-- END REF-->
@@ -62,6 +62,6 @@ Les objets de formulaire auxquels un alignement peut être appliqué sont les su
 |  |  |
 | --- | --- |
 | Numéro de commande | 707 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

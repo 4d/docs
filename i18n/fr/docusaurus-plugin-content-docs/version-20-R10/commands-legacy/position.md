@@ -124,6 +124,6 @@ Dans l'exemple suivant, vous souhaitez recherchez toutes les instances d'une cha
 |  |  |
 | --- | --- |
 | Numéro de commande | 15 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

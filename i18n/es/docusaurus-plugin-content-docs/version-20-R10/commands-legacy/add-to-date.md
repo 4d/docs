@@ -42,6 +42,6 @@ Aunque usted puede utilizar los *Operadores de fechas* para añadir días a una 
 |  |  |
 | --- | --- |
 | Número de comando | 393 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

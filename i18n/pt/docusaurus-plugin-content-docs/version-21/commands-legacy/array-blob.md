@@ -66,6 +66,6 @@ Este exemplo cria um array local de 100 filas, contendo cada uma 50 elementos de
 |  |  |
 | --- | --- |
 | Número do comando | 1222 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

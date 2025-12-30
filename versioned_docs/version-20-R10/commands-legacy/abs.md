@@ -32,6 +32,6 @@ The following example returns the absolute value of –10.3, which is 10.3:
 |  |  |
 | --- | --- |
 | Command number | 99 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

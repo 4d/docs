@@ -5,7 +5,7 @@ slug: /commands/post-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* {; *modifiers* {; *process*}} )<!-- END REF-->
+<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* : Integer {; *modifiers* : Integer {; *process* : Integer}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ See example for the [Process number](../commands/process-number.md) command.
 |  |  |
 | --- | --- |
 | Command number | 465 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -39,7 +39,7 @@ O exemplo a seguir recupera o registro de um cliente na pilha:
 |  |  |
 | --- | --- |
 | Número do comando | 177 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

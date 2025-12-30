@@ -5,12 +5,12 @@ slug: /commands/object-get-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT GET SCROLLBAR** ( *object* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
 | horizontal | Boolean, Integer | &#8592; | True=表示, False=非表示 |
 | vertical | Boolean, Integer | &#8592; | True=表示, False=非表示 |
 
@@ -50,6 +50,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1076 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

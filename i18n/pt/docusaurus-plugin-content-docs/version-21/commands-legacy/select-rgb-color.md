@@ -46,7 +46,7 @@ O efeito da validação desta caixa de diálogo muda dependendo da plataforma:
 |  |  |
 | --- | --- |
 | Número do comando | 956 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Proibido no servidor ||
 

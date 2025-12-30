@@ -59,6 +59,6 @@ You want to draw a red rectangle around the selected cell of a list box:
 |  |  |
 | --- | --- |
 | Command number | 1330 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

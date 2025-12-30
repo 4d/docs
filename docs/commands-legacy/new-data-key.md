@@ -5,7 +5,7 @@ slug: /commands/new-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* ) : Object<!-- END REF-->
+<!--REF #_command_.New data key.Syntax-->**New data key** ( *passPhrase* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.New data key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,6 +61,6 @@ You want to save an encryption key in a .4DKeyChain file:
 |  |  |
 | --- | --- |
 | Command number | 1611 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

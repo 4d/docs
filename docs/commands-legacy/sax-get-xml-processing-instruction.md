@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* ; *name* ; *value* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Syntax-->**SAX GET XML PROCESSING INSTRUCTION** ( *document* : Time ; *name* : Text ; *value* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML PROCESSING INSTRUCTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ The following instruction will return “PI” in *vName* and “TextProcess” 
 |  |  |
 | --- | --- |
 | Command number | 875 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -123,11 +123,20 @@ Par exemple, l’instruction suivante :
 
 ... récupère un pointeur vers la variable "MyButton" qui se trouve dans l'objet sous-forme "MySubForm". Cette syntaxe permet d’accéder depuis le formulaire parent à tout objet se trouvant dans un sous-formulaire. A noter également la commande `OBJECT Get name` qui permet de récupérer le nom de l’objet ayant le focus.
 
-#### Commande CALL SUBFORM CONTAINER
+#### Commande CALL SUBFORM CONTAINER {#call-subform-container-command}
 
 La commande `CALL SUBFORM CONTAINER` permet à une instance de sous-formulaire d’envoyer un événement à l’objet conteneur du sous-formulaire, qui peut alors le traiter dans le contexte du formulaire parent. L’événement est reçu dans la méthode de l’objet conteneur. Il peut s’agir à l’origine de tout événement détecté par le sous-formulaire (clic, glisser-déposer, etc.).
 
 Le code de l’événement est libre (par exemple, 20000 ou -100). Vous pouvez soit utiliser un code correspondant à un événement existant (par exemple, 3 pour `Sur validation`), soit utiliser un code personnalisé. Dans le premier cas, seuls les événements présents dans la liste des événements "cochables" des conteneurs de sous-formulaire peuvent être utilisés (cf. Liste des propriétés). Dans le second cas, le code ne doit correspondre à aucun événement formulaire existant. Il est conseillé d’utiliser une valeur négative pour avoir l’assurance que 4D n’utilisera pas ce code dans les versions futures.
+
+Supported events for subforms are:
+- [On Load](../Events/onLoad.md)
+- [On Validate](../Events/onValidate.md)
+- [On Getting Focus](../Events/onGettingFocus.md)
+- [On Losing Focus](../Events/onLosingFocus.md)
+- [On Data Change](../Events/onDataChange.md)
+- [On Unload](../Events/onUnload.md)
+
 
 Pour plus d'informations, reportez-vous à la description de la commande `CALL SUBFORM CONTAINER`.
 

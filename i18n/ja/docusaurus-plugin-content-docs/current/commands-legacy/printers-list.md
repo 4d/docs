@@ -5,7 +5,7 @@ slug: /commands/printers-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *namesArray* {; *altNamesArray* {; *modelsArray*}} )<!-- END REF-->
+<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *namesArray* : Text array {; *altNamesArray* : Text array {; *modelsArray* : Text array}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ macOS上では、プリンタ名 (プリンタサーバの名前) を使用し�
 |  |  |
 | --- | --- |
 | コマンド番号 | 789 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

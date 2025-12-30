@@ -154,6 +154,6 @@ Syntaxe :
 |  |  |
 | --- | --- |
 | Numéro de commande | 143 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

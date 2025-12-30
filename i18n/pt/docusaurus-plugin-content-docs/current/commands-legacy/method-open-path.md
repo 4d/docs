@@ -5,13 +5,13 @@ slug: /commands/method-open-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *rota* {; *line*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD OPEN PATH.Syntax-->**METHOD OPEN PATH** ( *rota* : Text {; *line* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD OPEN PATH.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#8594;  | Rota do método à abrir |
-| line | Number | &#8594;  | Line number |
-| * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text | &#8594; | Rota do método à abrir |
+| line | Real | &#8594; | Line number |
+| * | Operador | &#8594; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ Pode executar este comando desde um componente, mas neste caso, deve passar o pa
 |  |  |
 | --- | --- |
 | Número do comando | 1213 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

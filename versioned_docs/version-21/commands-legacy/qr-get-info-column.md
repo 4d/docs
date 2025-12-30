@@ -113,7 +113,7 @@ You can write:
 |  |  |
 | --- | --- |
 | Command number | 766 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

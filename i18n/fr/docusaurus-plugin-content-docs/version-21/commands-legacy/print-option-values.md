@@ -60,6 +60,6 @@ Toutes les informations retournées par ces commandes sont fournies par le syst�
 |  |  |
 | --- | --- |
 | Numéro de commande | 785 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

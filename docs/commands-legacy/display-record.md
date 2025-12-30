@@ -5,7 +5,7 @@ slug: /commands/display-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ The following example displays a series of records as a slide show:
 |  |  |
 | --- | --- |
 | Command number | 105 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

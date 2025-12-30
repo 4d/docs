@@ -89,6 +89,6 @@ Uma entrada registrada se vê dessa maneira:
 |  |  |
 | --- | --- |
 | Número do comando | 5 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

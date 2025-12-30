@@ -55,6 +55,6 @@ Mientras efectúa una entrada de datos en un formulario, usted hace clic en un b
 |  |  |
 | --- | --- |
 | Número de comando | 213 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

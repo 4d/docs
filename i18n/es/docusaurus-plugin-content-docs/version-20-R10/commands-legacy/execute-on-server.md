@@ -192,6 +192,6 @@ Consulte la sección *Servicios basados en los procedimientos almacenados (ejemp
 |  |  |
 | --- | --- |
 | Número de comando | 373 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

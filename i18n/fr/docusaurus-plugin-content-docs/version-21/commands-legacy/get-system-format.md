@@ -48,6 +48,6 @@ Passez dans le paramètre *format* le type de paramètre dont vous souhaitez con
 |  |  |
 | --- | --- |
 | Numéro de commande | 994 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

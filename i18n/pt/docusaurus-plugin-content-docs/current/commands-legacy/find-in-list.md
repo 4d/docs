@@ -5,16 +5,16 @@ slug: /commands/find-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *lista* ; *valor* ; *alcance*  {; *arrayElem* {; *}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in list.Syntax-->**Find in list** ( {* ;} *lista* : Integer, Text ; *valor* : Text ; *alcance* : Integer  {; *arrayElem* : Integer array {; *}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in list.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
-| valor | Text | &#8594;  | Valor a buscar |
-| alcance | Integer | &#8594;  | 0=Lista principal, 1=Sub-lista |
+| * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| valor | Text | &#8594; | Valor a buscar |
+| alcance | Integer | &#8594; | 0=Lista principal, 1=Sub-lista |
 | arrayElem | Integer array | &#8592; | - Se omitido o 2do *: array de posições dos elementos encontrados - Se passado o segundo *: array de números de referência dos elementos encontrados |
-| * | Operador | &#8594;  | - Se omitido: utiliza a posição dos elementos - Se passado: utiliza o número de referência dos elementos |
+| * | Operador | &#8594; | - Se omitido: utiliza a posição dos elementos - Se passado: utiliza o número de referência dos elementos |
 | Resultado | Integer | &#8592; | - Se omitido o 2do *: posição do elemento encontrado - Se passado 2do *: número de referência do elemento encontrado |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ Dada a seguinte lista hierárquica:
 |  |  |
 | --- | --- |
 | Número do comando | 952 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

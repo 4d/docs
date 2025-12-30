@@ -5,12 +5,12 @@ slug: /commands/mod
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Mod.Syntax-->**Mod** ( *nombre1* ; *nombre2* ) : Real<!-- END REF-->
+<!--REF #_command_.Mod.Syntax-->**Mod** ( *nombre1* : Integer ; *nombre2* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre1 | Integer | &#8594;  | Nombre à diviser (numérateur) |
-| nombre2 | Integer | &#8594;  | Nombre diviseur (dénominateur) |
+| nombre1 | Integer | &#8594; | Nombre à diviser (numérateur) |
+| nombre2 | Integer | &#8594; | Nombre diviseur (dénominateur) |
 | Résultat | Real | &#8592; | Reste de la division entière de nombre1 par nombre2 |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ L'exemple suivant illustre le fonctionnement de **Mod** dans différents cas de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 98 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

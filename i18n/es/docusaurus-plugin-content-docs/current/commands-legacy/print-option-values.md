@@ -5,11 +5,11 @@ slug: /commands/print-option-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *opcion* ; *arrayNoms* {; *info1Array* {; *info2Array*}} )<!-- END REF-->
+<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *opcion* : Integer ; *arrayNoms* : Text array {; *info1Array* : Integer array {; *info2Array* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.PRINT OPTION VALUES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opcion | Integer | &#8594;  | Número de opción |
+| opcion | Integer | &#8594; | Número de opción |
 | arrayNoms | Text array | &#8592; | Nombres de los valores |
 | info1Array | Integer array | &#8592; | Valores (1) de la opción |
 | info2Array | Integer array | &#8592; | Valores (2) de la opción |
@@ -59,6 +59,6 @@ Toda la información devuelta por estos comandos es suministrada por el sistema 
 |  |  |
 | --- | --- |
 | Número de comando | 785 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

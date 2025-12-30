@@ -5,11 +5,11 @@ slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Datos para los cuales se devuelve la suma de cuadrados |
+| series | Field, Array | &#8594; | Datos para los cuales se devuelve la suma de cuadrados |
 | Resultado | Real | &#8592; | Suma de cuadrados de series |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Este ejemplo permite obtener la suma de cuadrados de los valores ubicados en un 
 |  |  |
 | --- | --- |
 | Número de comando | 28 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

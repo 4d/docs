@@ -5,7 +5,7 @@ slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Screen height.Syntax-->**Screen height** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ On Macintosh, Screen height returns the height of the main screen, the screen wh
 |  |  |
 | --- | --- |
 | Command number | 188 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

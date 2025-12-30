@@ -37,6 +37,6 @@ If *object* designates a picture (variable or field), *vPosition* returns the ve
 |  |  |
 | --- | --- |
 | Command number | 1114 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

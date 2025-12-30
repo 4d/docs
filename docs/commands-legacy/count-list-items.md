@@ -5,7 +5,7 @@ slug: /commands/count-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *list* {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *list* : Integer, Text {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count list items.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ Here a list named *hList* shown in the Application environment:
 |  |  |
 | --- | --- |
 | Command number | 380 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

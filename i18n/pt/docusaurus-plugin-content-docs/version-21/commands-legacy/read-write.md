@@ -36,6 +36,6 @@ Utilize READ WRITE quando tenha que modificar um registro e guardar as mudanças
 |  |  |
 | --- | --- |
 | Número do comando | 146 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

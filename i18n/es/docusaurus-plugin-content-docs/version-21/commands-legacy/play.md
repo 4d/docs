@@ -61,6 +61,6 @@ El siguiente código de ejemplo reproduce un sonido del sistema en macOS:
 |  |  |
 | --- | --- |
 | Número de comando | 290 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

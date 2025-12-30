@@ -5,7 +5,7 @@ slug: /commands/get-file-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* ) : Text<!-- END REF-->
+<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ The following example can be used to retrieve in an array all the pathnames of t
 |  |  |
 | --- | --- |
 | Command number | 976 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

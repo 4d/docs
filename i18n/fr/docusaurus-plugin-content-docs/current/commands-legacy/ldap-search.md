@@ -5,15 +5,15 @@ slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filtre* {; *scope* {; *attributs* {; *attributsEnTableau*}}} ) : Object<!-- END REF-->
+<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* : Text ; *filtre* : Text {; *scope* : Text {; *attributs* : Text array {; *attributsEnTableau* : Boolean array}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | Distinguished Name de l'élément racine où démarrer la recherche |
-| filtre | Text | &#8594;  | Filtre de recherche LDAP |
-| scope | Text | &#8594;  | Champ d'action de la recherche : "base" (défaut), "one" ou "sub" |
-| attributs | Text array | &#8594;  | Attribut(s) à récupérer |
-| attributsEnTableau | Boolean array | &#8594;  | Vrai = forcer le retour des attributs en tableaux, Faux = forcer le retour des attributs en variables simples |
+| dnRootEntry | Text | &#8594; | Distinguished Name de l'élément racine où démarrer la recherche |
+| filtre | Text | &#8594; | Filtre de recherche LDAP |
+| scope | Text | &#8594; | Champ d'action de la recherche : "base" (défaut), "one" ou "sub" |
+| attributs | Text array | &#8594; | Attribut(s) à récupérer |
+| attributsEnTableau | Boolean array | &#8594; | Vrai = forcer le retour des attributs en tableaux, Faux = forcer le retour des attributs en variables simples |
 | Résultat | Object | &#8592; | Attributs clé/valeur |
 
 <!-- END REF-->
@@ -89,6 +89,6 @@ Vous voulez obtenir un tableau de toutes les entrées trouvées pour l'attribut 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1328 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

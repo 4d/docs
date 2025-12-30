@@ -5,7 +5,7 @@ slug: /commands/intersection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
+<!--REF #_command_.INTERSECTION.Syntax-->**INTERSECTION** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.INTERSECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ The following example finds the customers who are served by two sales representa
 |  |  |
 | --- | --- |
 | Command number | 121 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

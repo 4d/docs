@@ -5,14 +5,14 @@ slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( {* ;} *objeto* ; *posiçao* {; *numFilas*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *objeto* : Text ; *posiçao* : Integer {; *numFilas* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *objeto* : Field, Variable ; *posiçao* : Integer {; *numFilas* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçao | Integer | &#8594;  | Posição da fila a apagar |
-| numFilas | Integer | &#8594;  | Número de filas a inserir |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçao | Integer | &#8594; | Posição da fila a apagar |
+| numFilas | Integer | &#8594; | Número de filas a inserir |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Se o parâmetro *numFilas* excede o número de linhas de tabelas nas arrays do l
 |  |  |
 | --- | --- |
 | Número do comando | 913 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

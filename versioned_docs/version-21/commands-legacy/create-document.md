@@ -78,7 +78,7 @@ If the document has been created correctly, the system variable OK is set to 1 a
 |  |  |
 | --- | --- |
 | Command number | 266 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

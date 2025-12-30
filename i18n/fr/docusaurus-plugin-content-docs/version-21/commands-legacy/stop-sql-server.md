@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 963 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -57,6 +57,6 @@ Puede excluir ciertos objetos del orden de entrada:
 |  |  |
 | --- | --- |
 | Número de comando | 1469 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

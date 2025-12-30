@@ -71,6 +71,6 @@ Los campos **Date** y **Content-Length** siempre son definidos por defecto por 4
 |  |  |
 | --- | --- |
 | Número de comando | 660 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

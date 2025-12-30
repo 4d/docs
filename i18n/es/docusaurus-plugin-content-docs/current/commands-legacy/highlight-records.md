@@ -5,13 +5,13 @@ slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*tabla* }{;}{ *nomConjunto* {; *}} )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*tabla* : Table }{;}{ *nomConjunto* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual seleccionar los registros Si se omite, tabla del formulario actual |
-| nomConjunto | Text | &#8594;  | Conjunto de registros a seleccionar o Userset si se omite |
-| * | Operador | &#8594;  | Desactivar el desplazamiento automático de la lista |
+| tabla | Table | &#8594; | Tabla de la cual seleccionar los registros Si se omite, tabla del formulario actual |
+| nomConjunto | Text | &#8594; | Conjunto de registros a seleccionar o Userset si se omite |
+| * | Operador | &#8594; | Desactivar el desplazamiento automático de la lista |
 
 <!-- END REF-->
 
@@ -53,6 +53,6 @@ Cuando el usuario hace clic en el botón, aparece la caja de diálogo estándar 
 |  |  |
 | --- | --- |
 | Número de comando | 656 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

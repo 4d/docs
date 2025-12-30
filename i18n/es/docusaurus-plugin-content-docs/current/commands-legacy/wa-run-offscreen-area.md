@@ -5,11 +5,11 @@ slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parametros* ) : any<!-- END REF-->
+<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parametros* : Object ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| parametros | Object | &#8594;  | Objeto que contiene los atributos del área web |
+| parametros | Object | &#8594; | Objeto que contiene los atributos del área web |
 | Resultado | any | &#8592; | Propiedad .result del objeto onEvent, o Null si no devuelve un valor |
 
 <!-- END REF-->
@@ -102,7 +102,7 @@ La variable del sistema OK se define en 0 si se ha alcanzado el tiempo de espera
 |  |  |
 | --- | --- |
 | Número de comando | 1727 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

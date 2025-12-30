@@ -5,12 +5,12 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *cheminAccès* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *cheminAccès* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Chemin d'accès au nouveau dossier à créer |
-| * | Opérateur | &#8594;  | Créer la hiérarchie du dossier |
+| cheminAccès | Text | &#8594; | Chemin d'accès au nouveau dossier à créer |
+| * | Opérateur | &#8594; | Créer la hiérarchie du dossier |
 
 <!-- END REF-->
 
@@ -77,7 +77,7 @@ Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\
 |  |  |
 | --- | --- |
 | Numéro de commande | 475 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

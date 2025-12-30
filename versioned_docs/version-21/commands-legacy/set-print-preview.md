@@ -42,6 +42,6 @@ The following example turns on the Preview on Screen option to display the resul
 |  |  |
 | --- | --- |
 | Command number | 364 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

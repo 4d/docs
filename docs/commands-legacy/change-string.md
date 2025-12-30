@@ -5,7 +5,7 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* ; *newChars* ; *where* ) : Text<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* : Text ; *newChars* : Text ; *where* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ The following example illustrates the use of **Change string**. The results are 
 |  |  |
 | --- | --- |
 | Command number | 234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

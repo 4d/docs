@@ -5,7 +5,7 @@ slug: /commands/sql-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *option* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SQL GET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ If the command was properly executed, the system variable OK is set to 1\. Other
 |  |  |
 | --- | --- |
 | Command number | 819 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

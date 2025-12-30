@@ -123,7 +123,7 @@ An error is generated when:
 |  |  |
 | --- | --- |
 | Command number | 864 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

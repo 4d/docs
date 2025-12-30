@@ -37,6 +37,6 @@ The following example is a one-line method called from a menu command. It displa
 |  |  |
 | --- | --- |
 | Command number | 248 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

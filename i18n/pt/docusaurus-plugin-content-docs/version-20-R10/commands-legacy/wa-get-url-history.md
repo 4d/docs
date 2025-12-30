@@ -49,6 +49,6 @@ Nota de Compatibilidade: A partir de 4D v19 R5, esse comando só retorna a URL a
 |  |  |
 | --- | --- |
 | Número do comando | 1048 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/confirm
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *mensagem* {; *okBotaoTitulo* {; *cancelarBotaoTitulo*}} )<!-- END REF-->
+<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *mensagem* : Text {; *okBotaoTitulo* : Text {; *cancelarBotaoTitulo* : Text}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mensagem | Text | &#8594;  | Mensagem a exibir na caixa de diálogo de confirmação |
-| okBotaoTitulo | Text | &#8594;  | Título do botão OK |
-| cancelarBotaoTitulo | Text | &#8594;  | Título do botão Cancelar |
+| mensagem | Text | &#8594; | Mensagem a exibir na caixa de diálogo de confirmação |
+| okBotaoTitulo | Text | &#8594; | Título do botão OK |
+| cancelarBotaoTitulo | Text | &#8594; | Título do botão Cancelar |
 
 <!-- END REF-->
 
@@ -98,7 +98,7 @@ Mostrará a seguinte caixa de diálogo de confirmação (em Macintosh):
 |  |  |
 | --- | --- |
 | Número do comando | 162 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

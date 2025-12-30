@@ -5,7 +5,7 @@ slug: /commands/request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Request.Syntax-->**Request** ( *message* {; *defaultResponse* {; *OKButtonTitle* {; *CancelButtonTitle*}}} )  : Text<!-- END REF-->
+<!--REF #_command_.Request.Syntax-->**Request** ( *message* : Text {; *defaultResponse* : Text {; *OKButtonTitle* : Text {; *CancelButtonTitle* : Text}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ will display the request dialog box (on Windows) shown here:
 |  |  |
 | --- | --- |
 | Command number | 163 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

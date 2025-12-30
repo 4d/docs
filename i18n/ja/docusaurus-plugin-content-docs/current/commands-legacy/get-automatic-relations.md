@@ -5,7 +5,7 @@ slug: /commands/get-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *one* ; *many* )<!-- END REF-->
+<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *one* : Boolean ; *many* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 899 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

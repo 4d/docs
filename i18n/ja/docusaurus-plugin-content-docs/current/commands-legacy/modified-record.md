@@ -5,11 +5,11 @@ slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Modified record.Syntax-->**Modified record** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードが修正されているかテストするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | カレントレコードが修正されているかテストするテーブル, または 省略時、デフォルトテーブル |
 | 戻り値 | Boolean | &#8592; | True: レコードは修正されている False: レコードは修正されていない |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 314 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

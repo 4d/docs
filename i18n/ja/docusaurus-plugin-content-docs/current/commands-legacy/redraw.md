@@ -5,11 +5,11 @@ slug: /commands/redraw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *object* )<!-- END REF-->
+<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *object* : any )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | any | &#8594;  | サブフォームを再描画するテーブル、またはエリアを再描画するフィールド、またはエリアを再描画する変数、または更新されるべきリストボックス |
+| object | any | &#8594; | サブフォームを再描画するテーブル、またはエリアを再描画するフィールド、またはエリアを再描画する変数、または更新されるべきリストボックス |
 
 <!-- END REF-->
 
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 174 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

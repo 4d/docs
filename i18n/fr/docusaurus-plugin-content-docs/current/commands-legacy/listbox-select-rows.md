@@ -5,14 +5,14 @@ slug: /commands/listbox-select-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( {* ;} *objet* ; *sélection* {; *action*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( * ; *objet* : Text ; *sélection* : Object, Collection {; *action* : Integer} )<br/>**LISTBOX SELECT ROWS** ( *objet* : Field, Variable ; *sélection* : Object, Collection {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable. |
-| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou Variable (si * est spécifié) |
-| sélection | Object, Collection | &#8594;  | Objet ou collection décrivant les lignes à sélectionner |
-| action | Integer | &#8594;  | lk remplacer sélection (omis par défaut), lk ajouter à sélection, lk supprimer de sélection |
+| * | Opérateur | &#8594; | Si spécifié, l'objet est un nom d'objet (chaîne). Si omis, l'objet est une variable. |
+| objet | any | &#8594; | Nom de l'objet (si * est spécifié) ou Variable (si * est spécifié) |
+| sélection | Object, Collection | &#8594; | Objet ou collection décrivant les lignes à sélectionner |
+| action | Integer | &#8594; | lk remplacer sélection (omis par défaut), lk ajouter à sélection, lk supprimer de sélection |
 
 <!-- END REF-->
 
@@ -90,6 +90,6 @@ Exemple avec une collection d'objets :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1715 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

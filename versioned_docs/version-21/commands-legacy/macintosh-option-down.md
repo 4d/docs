@@ -35,6 +35,6 @@ See example for the [Shift down](shift-down.md) command.
 |  |  |
 | --- | --- |
 | Command number | 545 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

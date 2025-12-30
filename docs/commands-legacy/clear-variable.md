@@ -5,7 +5,7 @@ slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,6 +50,6 @@ In a form, you are using the drop-down list *asMyDropDown* whose sole purpose is
 |  |  |
 | --- | --- |
 | Command number | 89 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

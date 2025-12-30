@@ -48,6 +48,6 @@ Abaixo o código do botão:
 |  |  |
 | --- | --- |
 | Número do comando | 1303 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

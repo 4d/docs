@@ -5,11 +5,11 @@ slug: /commands/is-user-deleted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *refUsuario* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *refUsuario* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is user deleted.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refUsuario | Integer | &#8594;  | Número de identificación del usuario |
+| refUsuario | Integer | &#8594; | Número de identificación del usuario |
 | Resultado | Boolean | &#8592; | TRUE = La cuenta del usuario ha sido borrada o no existe FALSE = La cuenta del usuario está activa |
 
 <!-- END REF-->
@@ -35,7 +35,7 @@ Si no tiene privilegios de acceso para llamar al comando Is user deleted o si ot
 |  |  |
 | --- | --- |
 | Número de comando | 616 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

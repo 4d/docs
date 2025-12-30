@@ -95,7 +95,7 @@ La variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s
 |  |  |
 | --- | --- |
 | Numéro de commande | 56 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

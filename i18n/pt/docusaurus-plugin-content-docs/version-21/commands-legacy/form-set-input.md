@@ -110,6 +110,6 @@ o que retorna:
 |  |  |
 | --- | --- |
 | Número do comando | 55 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

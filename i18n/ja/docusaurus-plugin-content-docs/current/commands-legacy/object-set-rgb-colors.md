@@ -5,15 +5,15 @@ slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( {* ;} *object* ; *foregroundColor* {; *backgroundColor* {; *altBackgrndColor*}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *object* : Text ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *object* : Field, Variable ; *foregroundColor* : Text, Integer {; *backgroundColor* : Text, Integer {; *altBackgrndColor* : Text, Integer}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| foregroundColor | Text, Integer | &#8594;  | 前景色のRGBカラー |
-| backgroundColor | Text, Integer | &#8594;  | 背景色のRGBカラー |
-| altBackgrndColor | Text, Integer | &#8594;  | 奇数行の背景色RGBカラー |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| foregroundColor | Text, Integer | &#8594; | 前景色のRGBカラー |
+| backgroundColor | Text, Integer | &#8594; | 背景色のRGBカラー |
+| altBackgrndColor | Text, Integer | &#8594; | 奇数行の背景色RGBカラー |
 
 <!-- END REF-->
 
@@ -109,6 +109,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 628 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

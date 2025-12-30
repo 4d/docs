@@ -38,6 +38,6 @@ If, for example, you are working with the database located in the folder Documen
 |  |  |
 | --- | --- |
 | Command number | 490 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

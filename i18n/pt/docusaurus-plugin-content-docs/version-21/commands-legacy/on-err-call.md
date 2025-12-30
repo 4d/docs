@@ -191,6 +191,6 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 |  |  |
 | --- | --- |
 | Número do comando | 155 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

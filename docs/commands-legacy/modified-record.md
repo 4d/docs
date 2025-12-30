@@ -5,7 +5,7 @@ slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Modified record.Syntax-->**Modified record** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ The following example shows a typical use for **Modified record**:
 |  |  |
 | --- | --- |
 | Command number | 314 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/push-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual apilar el registro actual o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual apilar el registro actual o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -39,6 +39,6 @@ El siguiente ejemplo apila el registro de un cliente:
 |  |  |
 | --- | --- |
 | Número de comando | 176 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

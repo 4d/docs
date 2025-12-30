@@ -5,15 +5,15 @@ slug: /commands/listbox-set-grid-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( {* ;} *objeto* ; *color* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID COLOR.Syntax-->**LISTBOX SET GRID COLOR** ( * ; *objeto* : Text ; *color* : Text, Integer ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID COLOR** ( *objeto* : Field, Variable ; *color* : Text, Integer ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID COLOR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| color | Text, Integer | &#8594;  | Valor de color RGB |
-| horizontal | Boolean | &#8594;  | Utilice el color para las líneas horizontales |
-| vertical | Boolean | &#8594;  | Utilice el color para las líneas verticales |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| color | Text, Integer | &#8594; | Valor de color RGB |
+| horizontal | Boolean | &#8594; | Utilice el color para las líneas horizontales |
+| vertical | Boolean | &#8594; | Utilice el color para las líneas verticales |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Los parámetros *horizontal* y *vertical* le permiten especificar las líneas a 
 |  |  |
 | --- | --- |
 | Número de comando | 842 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

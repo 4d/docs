@@ -5,11 +5,11 @@ slug: /commands/structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Structure file.Syntax-->**Structure file** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | ホストデータベースのストラクチャファイルを返す |
+| * | 演算子 | &#8594; | ホストデータベースのストラクチャファイルを返す |
 | 戻り値 | Text | &#8592; | データベースストラクチャファイルのパス名 |
 
 <!-- END REF-->
@@ -71,6 +71,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 489 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

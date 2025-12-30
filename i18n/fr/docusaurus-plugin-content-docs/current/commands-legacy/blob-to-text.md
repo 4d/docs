@@ -5,15 +5,15 @@ slug: /commands/blob-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *blob* ; *formatTexte* {; *offset* {; *longueurTexte*}} )  : Text<!-- END REF-->
+<!--REF #_command_.BLOB to text.Syntax-->**BLOB to text** ( *blob* : Blob ; *formatTexte* : Integer {; *offset* : Variable {; *longueurTexte* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.BLOB to text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB duquel extraire le texte |
-| formatTexte | Integer | &#8594;  | Format et jeu de caractères du texte |
-| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
-| ||| Nouvel offset après la lecture |
-| longueurTexte | Integer | &#8594;  | Nombre de caractères à lire |
+| Blob | Blob | &#8594; | BLOB duquel extraire le texte |
+| formatTexte | Integer | &#8594; | Format et jeu de caractères du texte |
+| offset | Variable | &#8596; | Offset (en octets) dans le BLOB |
+|  |  |  | Nouvel offset après la lecture |
+| longueurTexte | Integer | &#8594; | Nombre de caractères à lire |
 | Résultat | Text | &#8592; | Texte extrait |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ Après l'exécution de la commande, la variable *offset* est incrémentée du no
 |  |  |
 | --- | --- |
 | Numéro de commande | 555 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

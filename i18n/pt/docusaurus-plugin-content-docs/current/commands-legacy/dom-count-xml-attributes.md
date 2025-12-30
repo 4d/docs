@@ -5,11 +5,11 @@ slug: /commands/dom-count-xml-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *refElemento* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *refElemento* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML attributes.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
+| refElemento | Text | &#8594; | Referência de elemento XML |
 | Resultado | Integer | &#8592; | Número de atributos |
 
 <!-- END REF-->
@@ -58,7 +58,7 @@ Se o comando tiver sido executado corretamente, a variável sistema OK assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 727 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

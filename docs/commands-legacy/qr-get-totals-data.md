@@ -5,7 +5,7 @@ slug: /commands/qr-get-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* ; *text* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer ; *text* : Text )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ If you pass an invalid *breakNum* number, the error -9853 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 768 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

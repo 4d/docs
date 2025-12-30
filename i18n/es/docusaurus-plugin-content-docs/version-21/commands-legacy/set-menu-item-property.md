@@ -64,6 +64,6 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
 |  |  |
 | --- | --- |
 | Número de comando | 973 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

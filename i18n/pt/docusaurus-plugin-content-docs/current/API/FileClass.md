@@ -713,7 +713,7 @@ $app.setAppInfo($info)
 
 | Parâmetro | Tipo |    | Descrição                      |
 | --------- | ---- | -- | ------------------------------ |
-| content   | BLOB | -> | Novos conteúdos para o arquivo |
+| content   | Blob | -> | Novos conteúdos para o arquivo |
 
 <!-- END REF -->
 

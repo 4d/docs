@@ -36,6 +36,6 @@ The right and left printable margins, unlike the top and bottom margins (which m
 |  |  |
 | --- | --- |
 | Command number | 702 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

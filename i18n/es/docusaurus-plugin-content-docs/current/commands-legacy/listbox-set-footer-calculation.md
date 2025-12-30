@@ -5,13 +5,13 @@ slug: /commands/listbox-set-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( {* ;} *objeto* ; *calculo* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( * ; *objeto* : Text ; *calculo* : Integer )<br/>**LISTBOX SET FOOTER CALCULATION** ( *objeto* : Field, Variable ; *calculo* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| calculo | Integer | &#8594;  | Cálculo para el área de pie |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| calculo | Integer | &#8594; | Cálculo para el área de pie |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ Si el tipo de datos de la columna o de al menos una columna del list box (si obj
 |  |  |
 | --- | --- |
 | Número de comando | 1140 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/qr-get-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET DESTINATION.Syntax-->**QR GET DESTINATION** ( *area* ; *tipo* {; *especificos*} )<!-- END REF-->
+<!--REF #_command_.QR GET DESTINATION.Syntax-->**QR GET DESTINATION** ( *area* : Integer ; *tipo* : Integer {; *especificos* : Text, Variable} )<!-- END REF-->
 <!--REF #_command_.QR GET DESTINATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
+| area | Integer | &#8594; | Referencia del área |
 | tipo | Integer | &#8592; | Tipo de informe |
 | especificos | Text, Variable | &#8592; | Específicos asociados al tipo de salida |
 
@@ -42,7 +42,7 @@ Si pasa un número de *area* incorrecto, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 756 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

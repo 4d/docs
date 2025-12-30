@@ -5,15 +5,15 @@ slug: /commands/order-by-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* ;} *objectField* ; *attributePath* ; > or < {; *objectField2* ; *attributePath2* ; > or <2 ; ... ; *objectFieldN* ; *attributePathN* ; > or <N} {; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY ATTRIBUTE.Syntax-->**ORDER BY ATTRIBUTE** ( {*aTable* : Table ;} {; ...(*objectField* : Field ; *attributePath* : Text  {; >,<})} {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
-| objectField | Object | &#8594;  | ソートの基準とする属性を含むオブジェクトフィールド |
-| attributePath | Text | &#8594;  | ソートの基準とする属性の名前またはパス |
-| > or < | 演算子 | &#8594;  | ソート方向: >: 昇順, または <: 降順 |
-| * | 演算子 | &#8594;  | ソート継続フラグ |
+| aTable | Table | &#8594; | セレクションをソートするテーブル (省略時はデフォルトテーブル) |
+| objectField | Object | &#8594; | ソートの基準とする属性を含むオブジェクトフィールド |
+| attributePath | Text | &#8594; | ソートの基準とする属性の名前またはパス |
+| > or < | 演算子 | &#8594; | ソート方向: >: 昇順, または <: 降順 |
+| * | 演算子 | &#8594; | ソート継続フラグ |
 
 <!-- END REF-->
 
@@ -120,6 +120,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1407 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

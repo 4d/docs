@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* ; *menuItem* ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item parameter.Syntax-->**Get menu item parameter** ( *menu* : Integer, Text ; *menuItem* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1003 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

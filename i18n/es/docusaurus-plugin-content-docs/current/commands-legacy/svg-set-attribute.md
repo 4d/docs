@@ -5,16 +5,16 @@ slug: /commands/svg-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetoImagen* ; id_Element ; *nomAtrib* ; *valorAtrib* {; *nomAtrib2* ; *valorAtrib2* ; ... ; *nomAtribN* ; *valorAtribN*} {; *})<!-- END REF-->
+<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetoImagen* ; id_Element ; *nomAtrib* : Text ; *valorAtrib* : Text, Integer {; ...(*nomAtrib* : Text, *valorAtrib* : Text, Integer)} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
-| objetoPicture | Picture | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
-| id_Element | Text | &#8594;  | ID del elemento donde uno o más atributos se definen |
-| nomAtrib | Text | &#8594;  | Atributo a definir |
-| valorAtrib | Text, Integer | &#8594;  | Nuevo valor del atributo |
-| * | Operador | &#8594;  | Si se pasa = modificar el árbol DOM interno de la imagen SVG (variable únicamente) |
+| * | Operador | &#8594; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es una variable o un campo |
+| objetoPicture | Picture | &#8594; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| id_Element | Text | &#8594; | ID del elemento donde uno o más atributos se definen |
+| nomAtrib | Text | &#8594; | Atributo a definir |
+| valorAtrib | Text, Integer | &#8594; | Nuevo valor del atributo |
+| * | Operador | &#8594; | Si se pasa = modificar el árbol DOM interno de la imagen SVG (variable únicamente) |
 
 <!-- END REF-->
 
@@ -101,7 +101,7 @@ Modificación del contenido de un elemento de tipo texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1055 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

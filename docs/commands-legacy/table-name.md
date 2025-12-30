@@ -5,7 +5,7 @@ slug: /commands/table-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table name.Syntax-->**Table name** ( *tableNum* ) : Text<br/>**Table name** ( *tablePtr* ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *tableNum* : Integer, Pointer ) : Text<br/>**Table name** ( *tablePtr* : Integer, Pointer ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ The following is an example of a generic method that displays the records of a t
 |  |  |
 | --- | --- |
 | Command number | 256 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

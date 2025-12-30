@@ -5,11 +5,11 @@ slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDatos* ) : Integer<!-- END REF-->
+<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *tipoDatos* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoDatos | Text | &#8594;  | Tipo de datos (4 caracteres) |
+| tipoDatos | Text | &#8594; | Tipo de datos (4 caracteres) |
 | Resultado | Integer | &#8592; | Tamaño (en bytes) de datos almacenados en el portapapeles o código de error |
 
 <!-- END REF-->
@@ -97,7 +97,7 @@ Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard
 |  |  |
 | --- | --- |
 | Número de comando | 400 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/web-get-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *arrayNoms* ; *arrayValores* )<!-- END REF-->
+<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *arrayNoms* : Text array ; *arrayValores* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -70,6 +70,6 @@ La variable vNOMBRE contiene ROBERTO y vCIUDAD contiene PARIS.
 |  |  |
 | --- | --- |
 | Número de comando | 683 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

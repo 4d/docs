@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *ligneMenu* {; *process*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item mark.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| process | Integer | &#8594;  | Numéro de référence de process |
+| menu | Integer, Text | &#8594; | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594; | Numéro de référence de process |
 | Résultat | Text | &#8592; | Marque de ligne de menu courante |
 
 <!-- END REF-->
@@ -45,7 +45,7 @@ L'exemple suivant inverse l'état marqué d'une ligne de menu :
 |  |  |
 | --- | --- |
 | Numéro de commande | 428 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

@@ -5,12 +5,12 @@ slug: /commands/wa-zoom-out
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM OUT.Syntax-->**WA ZOOM OUT** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.WA ZOOM OUT.Syntax-->**WA ZOOM OUT** ( * ; *object* : Text )<br/>**WA ZOOM OUT** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA ZOOM OUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ Windows では、このコマンドのスコープはグローバルです。4D 
 |  |  |
 | --- | --- |
 | コマンド番号 | 1040 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -42,6 +42,6 @@ El siguiente ejemplo abre una ventana formulario y crea nuevos registros con el 
 |  |  |
 | --- | --- |
 | Número de comando | 154 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

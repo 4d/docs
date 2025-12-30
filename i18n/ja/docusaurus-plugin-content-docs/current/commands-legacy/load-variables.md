@@ -5,11 +5,11 @@ slug: /commands/load-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
+<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | 4D変数を保存したドキュメント |
+| document | Text | &#8594; | 4D変数を保存したドキュメント |
 | variable | Variable | &#8592; | 値を受け取る変数 |
 
 <!-- END REF-->
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 74 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document |
 
 

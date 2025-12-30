@@ -5,12 +5,12 @@ slug: /commands/set-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* ; *grupo* )<!-- END REF-->
+<!--REF #_command_.SET PLUGIN ACCESS.Syntax-->**SET PLUGIN ACCESS** ( *plugIn* : Integer ; *grupo* : Text )<!-- END REF-->
 <!--REF #_command_.SET PLUGIN ACCESS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| plugIn | Integer | &#8594;  | Número del plug-in |
-| grupo | Text | &#8594;  | Nombre del grupo a asociar al plug-in |
+| plugIn | Integer | &#8594; | Número del plug-in |
+| grupo | Text | &#8594; | Nombre del grupo a asociar al plug-in |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ Pase en el parámetro *grupo* el nombre del grupo cuyos usuarios están autoriza
 |  |  |
 | --- | --- |
 | Número de comando | 845 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

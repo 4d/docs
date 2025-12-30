@@ -54,6 +54,6 @@ Usted crea una base para el mercado internacional y necesita cambiar a los difer
 |  |  |
 | --- | --- |
 | Número de comando | 383 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -30,6 +30,6 @@ When you want to know the name of the variable being pointed to or the field num
 |  |  |
 | --- | --- |
 | Command number | 294 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

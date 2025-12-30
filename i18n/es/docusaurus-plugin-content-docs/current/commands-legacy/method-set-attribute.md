@@ -5,14 +5,14 @@ slug: /commands/method-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *ruta* ; *tipoAtrib* ; *valorAtrib* {; *tipoAtrib2* ; *valorAtrib2* ; ... ; *tipoAtribN* ; *valorAtribN*}{; *operador*} )<!-- END REF-->
+<!--REF #_command_.METHOD SET ATTRIBUTE.Syntax-->**METHOD SET ATTRIBUTE** ( *ruta* : Text ; *tipoAtrib* : Integer ; *valorAtrib* : Boolean, Text {; ...(*tipoAtrib* : Integer, *valorAtrib* : Boolean, Text)}{; *operador* : *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET ATTRIBUTE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text | &#8594;  | Ruta del método proyecto |
-| tipoAtrib | Integer | &#8594;  | Tipo de atributo |
-| valorAtrib | Boolean, Text | &#8594;  | True = seleccionar el atributo  False = deseleccionar el atributo |
-| operador | * | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text | &#8594; | Ruta del método proyecto |
+| tipoAtrib | Integer | &#8594; | Tipo de atributo |
+| valorAtrib | Boolean, Text | &#8594; | True = seleccionar el atributo  False = deseleccionar el atributo |
+| operador | * | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un  componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 
@@ -73,6 +73,6 @@ Definición de varios pares de atributos/valores:
 |  |  |
 | --- | --- |
 | Número de comando | 1192 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

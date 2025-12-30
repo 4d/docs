@@ -5,7 +5,7 @@ slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( {* ;} *object* ; *helpTip* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *object* : Text ; *helpTip* : Text )<br/>**OBJECT SET HELP TIP** ( *object* : Field, Variable ; *helpTip* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -134,6 +134,6 @@ The result is...
 |  |  |
 | --- | --- |
 | Command number | 1181 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

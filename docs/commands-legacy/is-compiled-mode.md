@@ -5,7 +5,7 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ( * ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ In one of your routines, you include debugging code useful only when you are run
 |  |  |
 | --- | --- |
 | Command number | 492 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

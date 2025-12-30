@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *picture* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *picture* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ If the picture is correctly extracted, OK is set to 1; otherwise OK is set to 0.
 |  |  |
 | --- | --- |
 | Command number | 522 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -5,13 +5,13 @@ slug: /commands/qr-set-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *area* ; *propiedad* ; *valor* )<!-- END REF-->
+<!--REF #_command_.QR SET DOCUMENT PROPERTY.Syntax-->**QR SET DOCUMENT PROPERTY** ( *area* : Integer ; *propiedad* : Integer ; *valor* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET DOCUMENT PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| propiedad | Integer | &#8594;  | 1 = Diálogo de impresión, 2 = Unidad del documento |
-| valor | Integer | &#8594;  | Valor de la propiedad |
+| area | Integer | &#8594; | Referencia del área |
+| propiedad | Integer | &#8594; | 1 = Diálogo de impresión, 2 = Unidad del documento |
+| valor | Integer | &#8594; | Valor de la propiedad |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ Si pasa un valor incorrecto en *propiedad* o *valor*, se genera el error corresp
 |  |  |
 | --- | --- |
 | Número de comando | 772 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

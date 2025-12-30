@@ -5,11 +5,11 @@ slug: /commands/create-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *cheminAccès* )<!-- END REF-->
+<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *cheminAccès* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Nom ou chemin d’accès complet du fichier de données à créer |
+| cheminAccès | Text | &#8594; | Nom ou chemin d’accès complet du fichier de données à créer |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Avant de lancer l’opération, la commande vérifie que le chemin spécifié ne
 |  |  |
 | --- | --- |
 | Numéro de commande | 313 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

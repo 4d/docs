@@ -5,15 +5,15 @@ slug: /commands/method-get-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *tipoMetodo* {; *laTabla*}{; *nomObjeto*{; *nomObjetoForm*}}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *tipoMetodo* : Integer {; *laTabla*}{; *nomObjeto* : Text{; *nomObjetoForm* : Text}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoMetodo | Integer | &#8594;  | Selector de tipo de objeto |
-| laTable | Table | &#8594;  | Referencia de tabla |
-| nomObjeto | Text | &#8594;  | Nombre de formulario o método base |
+| tipoMetodo | Integer | &#8594; | Selector de tipo de objeto |
+| laTable | Table | &#8594; | Referencia de tabla |
+| nomObjeto | Text | &#8594; | Nombre de formulario o método base |
 | nomObjetoForm | Text | &#8592; | Nombre del objeto de formulario |
-| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 | resultado | Text | &#8592; | Ruta de acceso completa del objeto |
 
 <!-- END REF-->
@@ -70,6 +70,6 @@ Si el comando se ejecuta desde un componente, devuelve por defecto las rutas de 
 |  |  |
 | --- | --- |
 | Número de comando | 1164 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

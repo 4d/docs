@@ -49,6 +49,6 @@ Desea cargar una imagen según el esquema actual del formulario:
 |  |  |
 | --- | --- |
 | Número de comando | 1761 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

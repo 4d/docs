@@ -104,7 +104,7 @@ Se o comando foi executado corretamente, a variável sistema Ok assume o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 861 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

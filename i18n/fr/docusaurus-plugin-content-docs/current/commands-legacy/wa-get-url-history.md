@@ -5,14 +5,14 @@ slug: /commands/wa-get-url-history
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( {* ;} *objet* ; *tabsUrls* {; *sens* {; *tabTitres*}} )<!-- END REF-->
+<!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( * ; *objet* : Text ; *tabsUrls* : Text array {; *sens* : Integer {; *tabTitres* : Text array}} )<br/>**WA GET URL HISTORY** ( *objet* : Field, Variable ; *tabsUrls* : Text array {; *sens* : Integer {; *tabTitres* : Text array}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
 | tabsUrls | Text array | &#8592; | Tableau des URLs visités |
-| sens | Integer | &#8594;  | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
+| sens | Integer | &#8594; | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
 | tabTitres | Text array | &#8592; | Tableau des titres de fenêtres |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ S’il est passé, le paramètre *tabTitres* contient la liste des noms de fenê
 |  |  |
 | --- | --- |
 | Numéro de commande | 1048 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -47,6 +47,6 @@ El parámetro opcional *subformFijo* le permite configurar una opción adicional
 |  |  |
 | --- | --- |
 | Número de comando | 1240 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

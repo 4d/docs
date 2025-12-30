@@ -5,13 +5,13 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) : Text<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* : Text ; *firstChar* : Integer {; *numChars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | 一部を取り出す文字列 |
-| firstChar | Integer | &#8594;  | 最初の文字位置 |
-| numChars | Integer | &#8594;  | 取り出す文字列の長さ |
+| source | Text | &#8594; | 一部を取り出す文字列 |
+| firstChar | Integer | &#8594; | 最初の文字位置 |
+| numChars | Integer | &#8594; | 取り出す文字列の長さ |
 | 戻り値 | Text | &#8592; | 文字列の一部 |
 
 <!-- END REF-->
@@ -69,6 +69,6 @@ Substringコマンドの使用例を次に示します。結果を変数 vsResul
 |  |  |
 | --- | --- |
 | コマンド番号 | 12 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

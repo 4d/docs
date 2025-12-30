@@ -51,7 +51,7 @@ If the variables are loaded properly, the OK system variable is set to 1; otherw
 |  |  |
 | --- | --- |
 | Command number | 74 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

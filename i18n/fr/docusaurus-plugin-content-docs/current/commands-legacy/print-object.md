@@ -5,16 +5,16 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *objet* {; *posX* {; *posY* {; *largeur* {; *hauteur*}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *objet* : Text {; *posX* : Integer {; *posY* : Integer {; *largeur* : Integer {; *hauteur* : Integer}}}} ) : Boolean<br/>**Print object** ( *objet* : Field, Variable {; *posX* : Integer {; *posY* : Integer {; *largeur* : Integer {; *hauteur* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
-| posX | Integer | &#8594;  | Emplacement horizontal de l'objet |
-| posY | Integer | &#8594;  | Emplacement vertical de l'objet |
-| largeur | Integer | &#8594;  | Largeur de l'objet (pixels) |
-| hauteur | Integer | &#8594;  | Hauteur de l'objet (pixels) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| posX | Integer | &#8594; | Emplacement horizontal de l'objet |
+| posY | Integer | &#8594; | Emplacement vertical de l'objet |
+| largeur | Integer | &#8594; | Largeur de l'objet (pixels) |
+| hauteur | Integer | &#8594; | Hauteur de l'objet (pixels) |
 | Résultat | Boolean | &#8592; | Vrai = objet entièrement imprimé, Faux sinon |
 
 <!-- END REF-->
@@ -102,6 +102,6 @@ Exemple d’impression d’une list box complète :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1095 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

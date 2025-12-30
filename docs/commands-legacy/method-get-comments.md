@@ -5,7 +5,7 @@ slug: /commands/method-get-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *path* ; *comments* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *path* : Text, Text array ; *comments* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET COMMENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ If the command is executed from a component, it applies by default to the compon
 |  |  |
 | --- | --- |
 | Command number | 1189 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

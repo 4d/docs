@@ -4,7 +4,7 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 <!--REF #_command_.SELECT LOG FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ OK is set to 1 if the log file is correctly created, or closed.
 |  |  |
 | --- | --- |
 | Command number | 345 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 

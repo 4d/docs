@@ -30,6 +30,6 @@ Par défaut, les assertions sont actives mais elles peuvent avoir été désacti
 |  |  |
 | --- | --- |
 | Numéro de commande | 1130 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

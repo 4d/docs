@@ -60,6 +60,6 @@ Utilize o comando **Trigger event** para estruturar seus triggers desta maneira:
 |  |  |
 | --- | --- |
 | Número do comando | 369 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

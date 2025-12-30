@@ -54,7 +54,7 @@ To obtain the shortcut associated with a menu item, it is useful to implement a 
 |  |  |
 | --- | --- |
 | Command number | 424 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

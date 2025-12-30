@@ -44,7 +44,7 @@ En un array de enteros largos, si un número de registro no es válido (registro
 |  |  |
 | --- | --- |
 | Número de comando | 641 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

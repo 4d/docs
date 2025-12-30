@@ -30,6 +30,6 @@ In order for the **After** execution cycle to be generated, make sure that the O
 |  |  |
 | --- | --- |
 | Command number | 31 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

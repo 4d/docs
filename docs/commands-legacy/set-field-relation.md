@@ -5,7 +5,7 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *manyTable* ; *one* ; *many* )<br/>**SET FIELD RELATION** ( *field* ; *one* ; *many* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( *manyTable* : Table, Field ; *one* : Integer ; *many* : Integer )<br/>**SET FIELD RELATION** ( *field* : Table, Field ; *one* : Integer ; *many* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ The following code allows setting only useful relations as automatic in the Quic
 |  |  |
 | --- | --- |
 | Command number | 919 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

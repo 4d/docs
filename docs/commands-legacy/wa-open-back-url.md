@@ -5,7 +5,7 @@ slug: /commands/wa-open-back-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.WA OPEN BACK URL.Syntax-->**WA OPEN BACK URL** ( * ; *object* : Text )<br/>**WA OPEN BACK URL** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA OPEN BACK URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If there is no previous URL, the command does nothing. You can test whether a pr
 |  |  |
 | --- | --- |
 | Command number | 1021 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

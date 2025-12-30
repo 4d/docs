@@ -39,6 +39,6 @@ In the *value* parameter, pass a variable that will receive the current value of
 |  |  |
 | --- | --- |
 | Command number | 1042 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

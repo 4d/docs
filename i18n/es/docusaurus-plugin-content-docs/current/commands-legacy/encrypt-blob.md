@@ -5,14 +5,14 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *aCifrar* ; *enviarLlavePriv* {; *recepLlavePub*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *aCifrar* : Blob ; *enviarLlavePriv* : Blob {; *recepLlavePub* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aCifrar | Blob | &#8596;  | Datos a cifrar |
-| ||| Datos cifrados |
-| enviarLlavePriv | Blob | &#8594;  | Llave privada del emisor |
-| recepLlavePub | Blob | &#8594;  | Llave pública del receptor |
+| aCifrar | Blob | &#8596; | Datos a cifrar |
+|  |  |  | Datos cifrados |
+| enviarLlavePriv | Blob | &#8594; | Llave privada del emisor |
+| recepLlavePub | Blob | &#8594; | Llave pública del receptor |
 
 <!-- END REF-->
 
@@ -191,6 +191,6 @@ Una empresa quiere utilizar el Internet para intercambiar información. Cada fil
 |  |  |
 | --- | --- |
 | Número de comando | 689 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

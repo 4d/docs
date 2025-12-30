@@ -5,11 +5,11 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum | Integer | &#8594;  | テーブル番号 |
+| tableNum | Integer | &#8594; | テーブル番号 |
 | 戻り値 | Boolean | &#8592; | True = テーブルがデータベースに存在する False = テーブルがデータベースに存在しない |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 999 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

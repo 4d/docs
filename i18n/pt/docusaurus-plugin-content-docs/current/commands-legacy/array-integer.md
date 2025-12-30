@@ -5,13 +5,13 @@ slug: /commands/array-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *nomeArray* ; *tamanho* {; *tamanho2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *nomeArray* : Array ; *tamanho* : Integer {; *tamanho2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY INTEGER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArray | Array | &#8594;  | Nome do array |
-| tamanho | Integer | &#8594;  | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
-| tamanho2 | Integer | &#8594;  | Número de colunas no array de duas dimensões |
+| nomeArray | Array | &#8594; | Nome do array |
+| tamanho | Integer | &#8594; | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
+| tamanho2 | Integer | &#8594; | Número de colunas no array de duas dimensões |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ Este exemplo cria um array interprocesso de 2 bytes de 50 elementos do tipo *Int
 |  |  |
 | --- | --- |
 | Número do comando | 220 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

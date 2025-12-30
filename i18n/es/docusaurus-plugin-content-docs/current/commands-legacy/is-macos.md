@@ -39,6 +39,6 @@ Usted desea determinar si el sistema operativo actual es macOS:
 |  |  |
 | --- | --- |
 | Número de comando | 1572 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -85,6 +85,6 @@ El mismo ejemplo puede escribirse:
 |  |  |
 | --- | --- |
 | Número de comando | 260 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

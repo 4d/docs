@@ -5,12 +5,12 @@ slug: /commands/listbox-moved-column-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Syntax-->**LISTBOX MOVED COLUMN NUMBER** ( {* ;} *objeto* ; *antPosiçao* ; *novaPosição* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Syntax-->**LISTBOX MOVED COLUMN NUMBER** ( * ; *objeto* : Text ; *antPosiçao* : Integer ; *novaPosição* : Integer )<br/>**LISTBOX MOVED COLUMN NUMBER** ( *objeto* : Field, Variable ; *antPosiçao* : Integer ; *novaPosição* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 | antPosiçao | Integer | &#8592; | Posição prévia da coluna movimentada |
 | novaPosição | Integer | &#8592; | Nova posição da coluna movimentada |
 
@@ -36,6 +36,6 @@ Este comando deve ser utilizado com o evento de formulário On column moved (ver
 |  |  |
 | --- | --- |
 | Número do comando | 844 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

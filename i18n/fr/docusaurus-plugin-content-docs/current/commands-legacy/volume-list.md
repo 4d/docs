@@ -5,7 +5,7 @@ slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* : Text array )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ A l'aide de la zone de défilement *ttVolumes*, vous voulez afficher la liste de
 |  |  |
 | --- | --- |
 | Numéro de commande | 471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

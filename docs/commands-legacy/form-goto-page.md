@@ -5,7 +5,7 @@ slug: /commands/form-goto-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *pageNumber* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GOTO PAGE.Syntax-->**FORM GOTO PAGE** ( *pageNumber* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GOTO PAGE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ The following example is an object method for a button. It displays a specific p
 |  |  |
 | --- | --- |
 | Command number | 247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

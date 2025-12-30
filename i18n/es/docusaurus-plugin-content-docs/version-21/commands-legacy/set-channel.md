@@ -174,7 +174,7 @@ Ver los ejemplos de los comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BUF
 |  |  |
 | --- | --- |
 | Número de comando | 77 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

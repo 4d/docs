@@ -5,7 +5,7 @@ slug: /commands/soap-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* ; *type* ; input_output {; *alias*} )<!-- END REF-->
+<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* : Variable ; *type* : Integer ; input_output {; *alias* : Text} )<!-- END REF-->
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -188,6 +188,6 @@ This example illustrates the results of different types of declarations:
 |  |  |
 | --- | --- |
 | Command number | 782 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -67,6 +67,6 @@ Pour cela, il suffit d'écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1097 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

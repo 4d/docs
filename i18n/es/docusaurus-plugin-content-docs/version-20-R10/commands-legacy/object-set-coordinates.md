@@ -60,6 +60,6 @@ La siguiente declaración ubica el objeto "button\_1" en las coordenadas (10,20)
 |  |  |
 | --- | --- |
 | Número de comando | 1248 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

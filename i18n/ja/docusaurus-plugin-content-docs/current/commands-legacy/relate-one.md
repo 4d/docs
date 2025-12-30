@@ -5,12 +5,12 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* {; *choiceField*} )<br/>**RELATE ONE** ( *field* {; *choiceField*} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* : テーブル, フィールド {; *choiceField* : Field} )<br/>**RELATE ONE** ( *field* : テーブル, フィールド {; *choiceField* : Field} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyTable &#124; Field | テーブル, フィールド | &#8594;  | すべての自動リレーションを実行するテーブル, または1テーブルへのマニュアルリレーションが引かれたフィールド |
-| choiceField | Field | &#8594;  | 1テーブルの選択フィールド |
+| manyTable &#124; Field | テーブル, フィールド | &#8594; | すべての自動リレーションを実行するテーブル, または1テーブルへのマニュアルリレーションが引かれたフィールド |
+| choiceField | Field | &#8594; | 1テーブルの選択フィールド |
 
 <!-- END REF-->
 
@@ -94,7 +94,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 42 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||

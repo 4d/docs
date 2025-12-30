@@ -5,7 +5,7 @@ slug: /commands/get-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *izquierda* ; *superior* ; *derecha* ; *inferior* {; *ventana*} )<!-- END REF-->
+<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *izquierda* : Integer ; *superior* : Integer ; *derecha* : Integer ; *inferior* : Integer {; *ventana* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | superior | Integer | &#8592; | Coordenada superior del interior de la ventana |
 | derecha | Integer | &#8592; | Coordenada derecha del interior de la ventana |
 | inferior | Integer | &#8592; | Coordenada inferior del interior de la ventana |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana o Ventana del primer plano del proceso si se omite o Ventana MDI si -1 (Windows) |
+| ventana | Integer | &#8594; | Número de referencia de la ventana o Ventana del primer plano del proceso si se omite o Ventana MDI si -1 (Windows) |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Ver el ejemplo del comando [WINDOW LIST](window-list.md "WINDOW LIST").
 |  |  |
 | --- | --- |
 | Número de comando | 443 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

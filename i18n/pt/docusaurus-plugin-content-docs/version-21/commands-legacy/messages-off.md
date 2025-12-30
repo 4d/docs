@@ -71,6 +71,6 @@ O exemplo a seguir elimina os termômetros de progresso antes de realizar uma or
 |  |  |
 | --- | --- |
 | Número do comando | 175 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

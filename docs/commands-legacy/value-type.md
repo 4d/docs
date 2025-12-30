@@ -5,7 +5,7 @@ slug: /commands/value-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* ) : Integer<!-- END REF-->
+<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -118,6 +118,6 @@ You want to sum up all numeric values in a collection:
 |  |  |
 | --- | --- |
 | Command number | 1509 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* ; *menuItem* ; *iconRef* {; *process*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* : Integer, Text ; *menuItem* : Integer ; *iconRef* : Text, Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ If no icon is associated with the menu item, the command returns a blank value.
 |  |  |
 | --- | --- |
 | Command number | 983 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

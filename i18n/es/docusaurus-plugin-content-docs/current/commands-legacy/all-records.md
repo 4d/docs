@@ -5,11 +5,11 @@ slug: /commands/all-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALL RECORDS.Syntax-->**ALL RECORDS** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.ALL RECORDS.Syntax-->**ALL RECORDS** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.ALL RECORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual seleccionar todos los registros o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual seleccionar todos los registros o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ El siguiente ejemplo muestra todos los registros de la tabla \[Personas\]:
 |  |  |
 | --- | --- |
 | Número de comando | 47 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

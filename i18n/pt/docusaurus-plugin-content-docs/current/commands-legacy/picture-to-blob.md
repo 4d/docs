@@ -5,13 +5,13 @@ slug: /commands/picture-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *imagem* ; *imagemBlob* ; *codec* )<!-- END REF-->
+<!--REF #_command_.PICTURE TO BLOB.Syntax-->**PICTURE TO BLOB** ( *imagem* : Picture ; *imagemBlob* : Blob ; *codec* : Text )<!-- END REF-->
 <!--REF #_command_.PICTURE TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#8594;  | Campo ou variável tipo Imagem |
+| imagem | Picture | &#8594; | Campo ou variável tipo Imagem |
 | imagemBlob | Blob | &#8592; | BLOB para receber a imagem convertida |
-| codec | Text | &#8594;  | Codec de identificação de Imagem |
+| codec | Text | &#8594; | Codec de identificação de Imagem |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ Se quiser converter uma imagem de um formato proprietário a formato GIF e mostr
 |  |  |
 | --- | --- |
 | Número do comando | 692 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -201,6 +201,6 @@ Obtendrá el siguiente resultado (objeto stringified):
 |  |  |
 | --- | --- |
 | Número de comando | 1528 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

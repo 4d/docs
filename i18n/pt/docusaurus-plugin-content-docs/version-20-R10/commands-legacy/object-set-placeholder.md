@@ -50,6 +50,6 @@ Você quer mostrar o texto "Buscar" um combo box:
 |  |  |
 | --- | --- |
 | Número do comando | 1295 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

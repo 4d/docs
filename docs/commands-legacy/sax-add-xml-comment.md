@@ -5,7 +5,7 @@ slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* ; *comment* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,8 +31,8 @@ The following statement:
 
 ... will write the following line in the document: 
 
-```4d
- 
+```xml
+ <!--Created by 4D-->
 ```
 
 ## System variables and sets 
@@ -52,7 +52,7 @@ In the event of an error, the command returns an error which can be intercepted 
 |  |  |
 | --- | --- |
 | Command number | 852 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

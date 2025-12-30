@@ -5,11 +5,11 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | ウィンドウ参照番号, または 省略した場合、カレントプロセスの最前面ウィンドウ |
+| window | Integer | &#8594; | ウィンドウ参照番号, または 省略した場合、カレントプロセスの最前面ウィンドウ |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 154 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

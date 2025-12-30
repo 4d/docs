@@ -5,11 +5,11 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *séries* ) : Real<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *séries* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir l'écart type |
+| séries | Field, Array | &#8594; | Valeurs dont vous voulez obtenir l'écart type |
 | Résultat | Real | &#8592; | Ecart type de séries |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs pl
 |  |  |
 | --- | --- |
 | Numéro de commande | 26 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

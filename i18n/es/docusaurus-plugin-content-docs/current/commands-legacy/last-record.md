@@ -5,11 +5,11 @@ slug: /commands/last-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual mover el último registro seleccionado o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual mover el último registro seleccionado o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ El siguiente ejemplo designa el último registro de la tabla \[Personas\] como r
 |  |  |
 | --- | --- |
 | Número de comando | 200 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

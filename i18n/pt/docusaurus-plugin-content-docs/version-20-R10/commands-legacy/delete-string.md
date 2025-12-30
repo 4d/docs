@@ -50,6 +50,6 @@ O exemplo abaixo ilustra o uso de Delete string. Os resultados são atribuídos 
 |  |  |
 | --- | --- |
 | Número do comando | 232 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

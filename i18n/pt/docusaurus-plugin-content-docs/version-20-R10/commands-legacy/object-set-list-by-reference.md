@@ -134,6 +134,6 @@ Com o propósito de atualizar a lista associada ao pop-up gerenciado por array, 
 |  |  |
 | --- | --- |
 | Número do comando | 1266 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

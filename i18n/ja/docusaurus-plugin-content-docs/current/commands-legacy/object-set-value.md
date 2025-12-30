@@ -5,12 +5,12 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* ; *value* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *objectName* : Text ; *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | &#8594;  | オブジェクト名 |
-| value | any | &#8594;  | フォームオブジェクトのデータソースの新しい値 |
+| objectName | Text | &#8594; | オブジェクト名 |
+| value | any | &#8594; | フォームオブジェクトのデータソースの新しい値 |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1742 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-plugin-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* ) : Text<!-- END REF-->
+<!--REF #_command_.Get plugin access.Syntax-->**Get plugin access** ( *plugIn* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get plugin access.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ Pass the number of the plug-in for which you want to find out the associated gro
 |  |  |
 | --- | --- |
 | Command number | 846 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

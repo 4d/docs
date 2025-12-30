@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-set-view-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET VIEW PROPERTIES.Syntax-->**WP SET VIEW PROPERTIES** ( {* ;} *zoneWP* ; *attributsVueWP* )<!-- END REF-->
+<!--REF #_command_.WP SET VIEW PROPERTIES.Syntax-->**WP SET VIEW PROPERTIES** ( {* ;} *zoneWP* : Text, Object ; *attributsVueWP* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET VIEW PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

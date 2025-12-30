@@ -64,6 +64,6 @@ Desea permitir que el usuario seleccione una línea que comience con la letra o 
 |  |  |
 | --- | --- |
 | Número de comando | 1744 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

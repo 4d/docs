@@ -5,12 +5,12 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( *numTable* ; *numChamp* ) : Text<br/>**Field name** ( *ptrChamp* ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ) : Text<br/>**Field name** ( *ptrChamp* : Pointeur, Entier long ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChamp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur vers un champ ou Numéro de table |
-| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| ptrChamp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur vers un champ ou Numéro de table |
+| numChamp | Integer | &#8594; | Numéro de champ si un numéro de table est passé en premier paramètre |
 | Résultat | Text | &#8592; | Nom du champ |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ L'exemple suivant affiche une boîte de dialogue d'alerte. Nous passons à cette
 |  |  |
 | --- | --- |
 | Numéro de commande | 257 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

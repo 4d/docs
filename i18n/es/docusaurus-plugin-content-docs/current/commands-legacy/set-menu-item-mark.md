@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* ; *lineamenu* ; *marca* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* : Integer, Text ; *lineamenu* : Integer ; *marca* : Text {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM MARK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 por el último elemento añadido |
-| marca | Text | &#8594;  | Nueva marca de línea de menú |
-| proceso | Integer | &#8594;  | Número de referencia de proceso |
+| menu | Integer, Text | &#8594; | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 por el último elemento añadido |
+| marca | Text | &#8594; | Nueva marca de línea de menú |
+| proceso | Integer | &#8594; | Número de referencia de proceso |
 
 <!-- END REF-->
 
@@ -42,7 +42,7 @@ Ver ejemplo para el comando [Get menu item mark](get-menu-item-mark.md "Get menu
 |  |  |
 | --- | --- |
 | Número de comando | 208 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

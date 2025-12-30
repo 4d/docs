@@ -28,6 +28,6 @@ If no such method has been installed, an empty string ("") is returned.
 |  |  |
 | --- | --- |
 | Command number | 705 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

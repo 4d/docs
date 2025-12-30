@@ -30,6 +30,6 @@ Se não se mostrar nenhuma barra de ferramentas, o comando devolve 0.
 |  |  |
 | --- | --- |
 | Número do comando | 1016 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

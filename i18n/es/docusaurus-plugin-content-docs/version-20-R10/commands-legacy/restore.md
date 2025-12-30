@@ -39,7 +39,7 @@ El comando RESTORE modifica el valor de las variables *OK* y *Document*: si la r
 |  |  |
 | --- | --- |
 | Número de comando | 918 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document, error |
 
 

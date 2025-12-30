@@ -37,7 +37,7 @@ Este conceito permite conservar um backup de usuários no banco e implementar um
 |  |  |
 | --- | --- |
 | Número do comando | 849 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

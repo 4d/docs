@@ -49,6 +49,6 @@ This test lets you run different code depending on whether the version is a merg
 |  |  |
 | --- | --- |
 | Command number | 495 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

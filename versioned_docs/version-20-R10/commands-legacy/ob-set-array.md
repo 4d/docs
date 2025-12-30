@@ -138,6 +138,6 @@ Using a picture array:
 |  |  |
 | --- | --- |
 | Command number | 1227 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

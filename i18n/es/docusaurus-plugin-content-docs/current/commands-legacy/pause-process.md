@@ -5,11 +5,11 @@ slug: /commands/pause-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *proceso* )<!-- END REF-->
+<!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *proceso* : Integer )<!-- END REF-->
 <!--REF #_command_.PAUSE PROCESS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de proceso |
+| proceso | Integer | &#8594; | Número de proceso |
 
 <!-- END REF-->
 
@@ -37,6 +37,6 @@ Cuando se suspende la ejecución de un proceso, las ventanas que pertenecen a es
 |  |  |
 | --- | --- |
 | Número de comando | 319 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -45,7 +45,7 @@ El siguiente ejemplo invierte la marca de una línea de menú:
 |  |  |
 | --- | --- |
 | Número de comando | 428 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

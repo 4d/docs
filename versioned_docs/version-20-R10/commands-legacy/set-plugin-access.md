@@ -49,6 +49,6 @@ Pass the name of the group whose users are authorized to use the plug-in in *gro
 |  |  |
 | --- | --- |
 | Command number | 845 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

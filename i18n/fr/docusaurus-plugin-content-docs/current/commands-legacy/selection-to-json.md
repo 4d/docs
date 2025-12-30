@@ -5,13 +5,13 @@ slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTable* {; *leChamp*}{; *leChamp2* ; ... ; *leChampN*}{; *template*})  : Text<!-- END REF-->
+<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *laTable* : Table {; *...leChamp*}{; *template* : Object})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table à sérialiser |
-| leField | Field | &#8594;  | Champ(s) dont le contenu doit être sérialisé |
-| template | Object | &#8594;  | Objet pour la sélection de libellés et de champs |
+| laTable | Table | &#8594; | Table à sérialiser |
+| leField | Field | &#8594; | Champ(s) dont le contenu doit être sérialisé |
+| template | Object | &#8594; | Objet pour la sélection de libellés et de champs |
 | Résultat | Text | &#8592; | Chaîne contenant le tableau JSON sérialisé |
 
 <!-- END REF-->
@@ -95,6 +95,6 @@ Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différen
 |  |  |
 | --- | --- |
 | Numéro de commande | 1234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

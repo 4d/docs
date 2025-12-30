@@ -76,7 +76,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 ## 例題
 
-"公開オプション: 4DタグとURL(4DACTION...)" ブラウザーに次の URL を入力してメソッドを呼び出します:
+"公開オプション: 4DタグとURL(4DACTION...)" 属性を有効にした `action_Session` メソッドを定義したとします。 ブラウザーに次の URL を入力してメソッドを呼び出します:
 
 ```
 IP:port/4DACTION/action_Session

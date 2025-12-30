@@ -37,6 +37,6 @@ O exemplo a seguir mostra um processo chamado Clientes, que foi ocultado previam
 |  |  |
 | --- | --- |
 | Número do comando | 325 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

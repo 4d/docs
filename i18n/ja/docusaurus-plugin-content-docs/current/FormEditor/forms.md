@@ -96,11 +96,11 @@ title: Forms
 
 マルチページフォームには、1つの背景ページと複数の表示ページが存在します。 背景ページ上に置かれたオブジェクトはすべての表示ページに現れますが、それらのオブジェクトの選択や編集は背景ページでのみ可能です。 複数ページフォームでは、ボタンパレットを背景ページに置くべきです。 また、ページ移動ツールオブジェクトを背景ページに配置し、ユーザーに提供する必要があります。
 
-## Fluent UI rendering (Developer Preview)
+## Fluent UIレンダリング(デベロッパープレビュー)
 
-On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
+Windows では、4D は **Fluent UI** フォームレンダリングをサポートしています。これは **WinUI 3** テクノロジーに基づいた、Microsoft のモダンなグラフィカルユーザーインターフェースデザインです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。
 
-Fluent UI rendering offers modern and attractive controls, support of dark/light system themes, smoother rendering optimized for high-resolution displays, and consistent user experience aligned with recent Microsoft applications.
+Fluent UI レンダリングは現代的かつ魅力的なコントロールを提供するだけでなく、ダーク/ライトシステムテーマのサポート、高解像度ディスプレイのために最適化されたよりスムーズなレンダリング、そして最近のMicrosoft アプリケーションに沿った、一貫したユーザーエクスペリエンスを提供します。
 
 | ライトテーマ                                  | ダークテーマ                                       |
 | --------------------------------------- | -------------------------------------------- |
@@ -108,13 +108,13 @@ Fluent UI rendering offers modern and attractive controls, support of dark/light
 
 :::caution デベロッパー・プレビュー
 
-Fluent UI support is currently in the Developer Preview phase. 本番環境で使用すべきではありません。
+Fluent UI のサポートは現在デベロッパープレビューのフェーズです。 本番環境で使用すべきではありません。
 
 :::
 
 :::info 利用可能性
 
-This feature can be used **in 4D projects on Windows**. It is not available on macOS or in binary 4D databases on Windows.
+この機能は、**Windows の4D プロジェクト内** で使用可能です。 macOS や、Windows のバイナリー4D データベースなどではご利用いただけません。
 
 :::
 
@@ -126,48 +126,48 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 ### 要件
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+Fluent UI レンダリングには、[**Windows App SDK version 1.7.3**](https://learn.microsoft.com/ja-jp/windows/apps/windows-app-sdk/downloads) がインストールされている必要があります。 フォームを表示するためには、この SDK をWindows マシンにインストールする必要があります。
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+Windows App SDK が適切にインストールされていない場合、4D はフォームを全てクラシックモードで、エラーなしに表示します。
 
-### Enabling the Fluent UI rendering
+### Fluent UI レンダリングを有効化する
 
-You can enable the Fluent UI rendering mode at the application level or at the form level. Form setting has priority over application setting.
+Fluent UI レンダリングモードは、アプリケーションレベルまたはフォームレベルで有効化することができます。 フォームでの設定の方がアプリケーションの設定より優先されます。
 
-#### Application setting
+#### アプリケーション設定
 
-Check the **Use Fluent UI on Windows** option in the "Interface" page of the Settings dialog box.
+ストラクチャー設定ダイアログボックスの"インターフェース" ページ内にある **Windows で Fluent UI を使用する** オプションをチェックします。
 
 ![](../assets/en/FormObjects/fluentui-setting.png)
 
-In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
+この場合、Windows 上ではデフォルトで全てのフォームにおいてFluent UI レンダリングモードが使用されます。
 
-#### Form setting
+#### フォーム設定
 
-Each form can define its own rendering via the **Widget appearance** property. 次のオプションから選択することができます:
+それぞれのフォームは、 **Widget appearance** プロパティによって独自のレンダリング設定を定義することができます。 次のオプションから選択することができます:
 
-- **Inherited**: inherits the global application setting (default),
-- **Classic**: uses the classic Windows style,
-- **Fluent UI**: enables the modern rendering based on Fluent UI. <br/>
+- **継承**: グローバルなアプリケーション設定を継承します(デフォルト)
+- **クラシック**: クラシック Windows スタイルを使用します
+- **Fluent UI**: Fluent UI に基づいたモダンなレンダリングを有効化します。 <br/>
   ![](../assets/en/FormObjects/fluentui-form.png)
 
-The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
+対応する[JSON フォームプロパティ](./properties_JSONref.md) は `fluentUI` で、値は未定義(つまり継承、デフォルト値)、 "true" または "false"です。
 
-### Specific behaviors
+### 特定の振る舞い
 
-When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
+Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
-- The new `FORM Windows theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
-- If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
-- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
-- [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
-- [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
-- The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
-- A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
+- 新しい `FORM Windows theme` コマンドはカレントのフォームの実際の表示テーマを返します。 取り得る値: "Classic" あるいは "FluentUI"。 カレントフォームがない場合、あるいはコマンドがmacOS 上で呼ばれた場合、空の文字列が返されます。
+- [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
+- [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
+- [ステッパー](../FormObjects/stepper.md) フォームオブジェクトは[ダブルクリックイベント](../Events/onDoubleClicked.md) サポートしません。
+- [サークルボタン](../FormObjects/button_overview.md#サークル) はサポートされています(macOS と同様)。
+- [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) コマンドは、システムレンダリングエンジンを使用したWeb エリアではサポートされません。
+- フォーカスの四角はピクチャーおよびテキストの[入力](../FormObjects/input_overview.md) に追加することができます。
 
-:::info Limitations
+:::info 制約
 
-This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
+この **デベロッパープレビュー** にはいくつかの制約があり、それらは[こちらのblog 記事にまとめられています](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)。
 
 :::
 

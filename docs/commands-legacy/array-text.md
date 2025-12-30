@@ -5,7 +5,7 @@ slug: /commands/array-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TEXT.Syntax-->**ARRAY TEXT** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TEXT.Syntax-->**ARRAY TEXT** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ This example creates an interprocess array of 50 [Text](# "A character string th
 |  |  |
 | --- | --- |
 | Command number | 222 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

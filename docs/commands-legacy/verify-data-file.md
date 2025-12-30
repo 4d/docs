@@ -5,7 +5,7 @@ slug: /commands/verify-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* ; *dataPath* ; *objects* ; *options* ; *method* {; *tablesArray* {; *fieldsArray*}} )<!-- END REF-->
+<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* : Text ; *dataPath* : Text ; *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,8 +14,8 @@ displayed_sidebar: docs
 | objects | Integer | &#8594;  | Objects to be checked |
 | options | Integer | &#8594;  | Checking options |
 | method | Text | &#8594;  | Name of 4D callback method |
-| tablesArray | Array integer | &#8594;  | Numbers of tables to be checked |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numbers of indexes to be checked |
+| tablesArray | Integer array | &#8594;  | Numbers of tables to be checked |
+| fieldsArray | Integer array | &#8594;  | Numbers of indexes to be checked |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ The *options* parameter is used to set verification options. The following optio
 
 | Constant                | Type    | Value  | Comment                                                                                                                                                                                                                                                                                                                        |
 | ----------------------- | ------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Do not create log file  | Integer | 16384  | Generally, this command creates a log file in XML format (refer to the end of the command description). With this option, no log file will be created.                                                                                                                                                                         |
+| Do not create log file  | Integer | 16384  | Generally, this command creates a log file in XML format (refer to the end of the command description). With this option, no log file will be created.    |
 | Timestamp log file name | Integer | 262144 | When this option is passed, the name of the log file generated will contain the date and time of its creation; as a result, it will not replace any log file already generated previously. By default, if this option is not passed, log file names are not timestamped and each new file generated replaces the previous one. |
   
   
@@ -52,8 +52,7 @@ Generally, the VERIFY DATA FILE command creates a log file in XML format (please
   
 The *method* parameter is used to set a callback method that will be called regularly during the verification. If you pass an empty string or an invalid method name, this parameter is ignored (no method is called). When called, the method receives up to 5 parameters depending on the objects being verified and on the event type originating the call (see calls table). It is imperative to declare these parameters in the method: 
 
-
-| Parameter | Type | Description |
+| \- $1 | Integer | Message type (see table) |
 | ----- | ------- | ------------------------ |
 | $messageType | Integer | Message type (see table) |
 | $objectType | Integer | Object type              |
@@ -80,16 +79,15 @@ The following table describes the contents of the parameters depending on the ev
 * 8 = index
 * 16 = structure object (preliminary check of data file).
 
-*Special case*: When $table = 0 for $messageType=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
+*Special case*: When $4 = 0 for $1=2, 3 or 5, the message does not concern a table or an index but rather the data file as a whole.
 
-The callback method must also return a *$result* integer value, which is used to check the execution of the operation:
+The callback method must also return a value in $0 (Longint), which is used to check the execution of the operation:
 
-* If $result = 0, the operation continues normally
-* If $result = -128, the operation is stopped without any error generated
-* If $result = another value, the operation is stopped and the value passed in $result is returned as the error number. This error can be intercepted by an error-handling method.
+* If $0 = 0, the operation continues normally
+* If $0 = -128, the operation is stopped without any error generated
+* If $0 = another value, the operation is stopped and the value passed in $0 is returned as the error number. This error can be intercepted by an error-handling method.
 
-**Note:** You cannot interrupt execution via $result after the *End of execution* event ($1=4) has been generated.
-
+**Note:** You cannot interrupt execution via $0 after the *End of execution* event ($4=1) has been generated.
 
 Two optional arrays can also be used by this command:
 
@@ -175,7 +173,7 @@ If the callback method does not exist, the verification is not carried out, an e
 |  |  |
 | --- | --- |
 | Command number | 939 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

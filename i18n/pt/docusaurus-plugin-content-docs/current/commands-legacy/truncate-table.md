@@ -5,11 +5,11 @@ slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela onde todos os registros serão apagados ou tabela padrão se esse parâmetro for omitido |
+| tabela | Table | &#8594; | Tabela onde todos os registros serão apagados ou tabela padrão se esse parâmetro for omitido |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ Se o comando tiver sido executado corretamente, a variável sistema OK assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 1051 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

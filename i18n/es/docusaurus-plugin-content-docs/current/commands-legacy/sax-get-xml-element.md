@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *documento* ; *nombre* ; *prefijo* ; *nomsAtributos* ; *valoresAtributos* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT.Syntax-->**SAX GET XML ELEMENT** ( *documento* : Time ; *nombre* : Text ; *prefijo* : Text ; *nomsAtributos* : Text array ; *valoresAtributos* : Text array )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
+| documento | Time | &#8594; | Referencia del documento abierto |
 | nombre | Text | &#8592; | Nombre del elemento |
 | prefijo | Text | &#8592; | Espacio de nombre |
 | nomsAtributos | Text array | &#8592; | Nombres de los atributos |
@@ -63,7 +63,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 876 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

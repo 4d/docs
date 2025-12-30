@@ -5,7 +5,7 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *object* ; *jsCode* {; *type*} )  : any<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *object* : Text ; *jsCode* : Text {; *type* : Integer} )  : any<br/>**WA Evaluate JavaScript** ( *object* : Field, Variable ; *jsCode* : Text {; *type* : Integer} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -107,6 +107,6 @@ You can then evaluate the JavaScript code from 4D:
 |  |  |
 | --- | --- |
 | Command number | 1029 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

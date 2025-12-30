@@ -5,17 +5,15 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *respuesta* {; *nomEncab* ; *valoresEncab*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *respuesta* : Text, Blob, Picture, Object {; *nomEncab* : Text array ; *valoresEncab* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | URL al cual enviar la petición |
+| url | Text | &#8594; | URL al cual enviar la petición |
 | respuesta | Text, Blob, Picture, Object | &#8592; | Resultado de la petición |
-| nomEncab | Text array | &#8594;  | Nombres de los encabezados de la petición |
-| &#8592; | Nombres de encabezados devueltos |
-| valoresEncab | Text array | &#8594;  | Valores de los encabezados de la petición |
-| &#8592; | Valores de los encabezados devueltos |
-| * | Operador | &#8594;  | Si se pasa, la conexión se mantiene(keep-alive)Si se omite, la conexión se cierra automáticamente |
+| nomEncab | Text array | &#8596; | *in:* Header names of the request<br/> *out:* Returned header names |
+| valoresEncab | Text array | &#8596; | *in:* Header values of the request<br/> *out:* Returned header values |
+| * | Operador | &#8594; | Si se pasa, la conexión se mantiene(keep-alive)Si se omite, la conexión se cierra automáticamente |
 | Resultado | Integer | &#8592; | Código de estado HTTP |
 
 <!-- END REF-->
@@ -111,7 +109,7 @@ Recuperación de un vídeo:
 |  |  |
 | --- | --- |
 | Número de comando | 1157 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

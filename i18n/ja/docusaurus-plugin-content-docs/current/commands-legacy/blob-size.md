@@ -5,11 +5,11 @@ slug: /commands/blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *BLOB* ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *BLOB* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOBフィールドまたは変数 |
+| Blob | Blob | &#8594; | BLOBフィールドまたは変数 |
 | 戻り値 | Integer | &#8592; | バイト単位のBLOBサイズ |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 605 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/create-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *accessPath* )<!-- END REF-->
+<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *accessPath* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ Before launching the operation, the command verifies that the specified access p
 |  |  |
 | --- | --- |
 | Command number | 313 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

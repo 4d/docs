@@ -37,7 +37,7 @@ A seguinte instrução atribui o relatório rápido armazenado na área MinhaAre
 |  |  |
 | --- | --- |
 | Número do comando | 770 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

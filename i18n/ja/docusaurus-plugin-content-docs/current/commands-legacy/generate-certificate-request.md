@@ -5,14 +5,14 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *privKey* ; *certifRequest* ; *codeArray* ; *nameArray* )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *privKey* : Blob ; *certifRequest* : Blob ; *codeArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| privKey | Blob | &#8594;  | 秘密鍵BLOB |
+| privKey | Blob | &#8594; | 秘密鍵BLOB |
 | certifRequest | Blob | &#8592; | CSRを受け取るBLOB |
-| codeArray | Integer array | &#8594;  | 情報コードリスト |
-| nameArray | Text array | &#8594;  | 名前リスト |
+| codeArray | Integer array | &#8594; | 情報コードリスト |
+| nameArray | Text array | &#8594; | 名前リスト |
 
 <!-- END REF-->
 
@@ -91,6 +91,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 691 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -31,6 +31,6 @@ Em Windows, o alcance deste comando é global: a configuração se conserva depo
 |  |  |
 | --- | --- |
 | Número do comando | 1040 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

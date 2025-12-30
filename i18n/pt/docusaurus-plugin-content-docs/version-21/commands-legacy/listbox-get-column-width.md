@@ -35,6 +35,6 @@ Se não tiver definido nenhum valor de largura mínima ou máxima para a coluna,
 |  |  |
 | --- | --- |
 | Número do comando | 834 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

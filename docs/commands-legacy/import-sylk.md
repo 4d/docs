@@ -5,7 +5,7 @@ slug: /commands/import-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT SYLK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ OK is set to 1 if the import is successfully complete; otherwise, it is set to 0
 |  |  |
 | --- | --- |
 | Command number | 87 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

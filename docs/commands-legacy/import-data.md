@@ -5,13 +5,12 @@ slug: /commands/import-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *fileName* {; *project* {; *}} )<!-- END REF-->
+<!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.IMPORT DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | Access path and name of the import file |
-| project | Text, Blob | &#8594;  | Contents of the import project |
-| &#8592; | New contents of the import project (if the * parameter has been passed) |
+| project | Text, Blob | &#8596;  | *in:* Contents of the import project<br/> *out:* New contents of the import project (if the * parameter has been passed)|
 | * | Operator | &#8594;  | Displays the import dialog box and updates the project |
 
 <!-- END REF-->
@@ -53,7 +52,7 @@ If the user clicks **Cancel** in the standard save file dialog box or in the imp
 |  |  |
 | --- | --- |
 | Command number | 665 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

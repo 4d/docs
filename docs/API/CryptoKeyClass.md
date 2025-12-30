@@ -316,7 +316,7 @@ The returned value is the public key.
 <!-- REF #CryptoKey.sign().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|message|Text OR Blob|->|Message to sign|  
+|message|Text, Blob|->|Message to sign|  
 |options|Object|->|Signing options|
 |Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
 <!-- END REF -->
@@ -395,7 +395,7 @@ Contains the <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "
 <!-- REF #CryptoKey.verify().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|message|Text OR Blob|->|Message that was used to produce the signature|  
+|message|Text, Blob|->|Message that was used to produce the signature|  
 |signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
 |options|Object|->|Signing options|
 |Result|Object|<-|Status of the verification|

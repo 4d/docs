@@ -5,11 +5,11 @@ slug: /commands/spell-set-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dicionário* )<!-- END REF-->
+<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dicionário* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dicionário | Integer, Text | &#8594;  | Dicionário a ser usado para correção ortográfica |
+| dicionário | Integer, Text | &#8594; | Dicionário a ser usado para correção ortográfica |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
 |  |  |
 | --- | --- |
 | Número do comando | 904 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

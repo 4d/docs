@@ -5,7 +5,7 @@ slug: /commands/set-user-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* )<!-- END REF-->
+<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
 <!--REF #_command_.SET USER ALIAS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ Your users are managed through a custom table and use the same 4D user account. 
 |  |  |
 | --- | --- |
 | Command number | 1666 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Forbidden on the server ||
 
 

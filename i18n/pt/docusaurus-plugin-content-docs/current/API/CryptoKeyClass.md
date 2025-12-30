@@ -332,11 +332,11 @@ O valor devolvido é a chave pública.
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parâmetro  | Tipo          |                             | Descrição                                                                       |
-| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------- |
-| message    | Texto OU Blob | ->                          | Mensagem a assinar                                                              |
-| options    | Object        | ->                          | Opções de assinatura                                                            |
-| Resultados | Text          | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "encoding" |
+| Parâmetro  | Tipo       |                             | Descrição                                                                       |
+| ---------- | ---------- | --------------------------- | ------------------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Mensagem a assinar                                                              |
+| options    | Object     | ->                          | Opções de assinatura                                                            |
+| Resultados | Text       | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "encoding" |
 
 <!-- END REF -->
 
@@ -416,12 +416,12 @@ Contém o nome <!-- REF #CryptoKey.type.Summary -->do tipo de chave - "RSA", "EC
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parâmetro  | Tipo          |                             | Descrição                                                                                                          |
-| ---------- | ------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| message    | Texto OU Blob | ->                          | Mensagem usada para produzir a assinatura                                                                          |
-| signature  | Text          | ->                          | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
-| options    | Object        | ->                          | Opções de assinatura                                                                                               |
-| Resultados | Object        | <- | Estado da verificação                                                                                              |
+| Parâmetro  | Tipo       |                             | Descrição                                                                                                          |
+| ---------- | ---------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| message    | Text, Blob | ->                          | Mensagem usada para produzir a assinatura                                                                          |
+| signature  | Text       | ->                          | Assinatura que vai ser verificada, em representação Base64 ou Base64URL, dependendo do valor de `options.encoding` |
+| options    | Object     | ->                          | Opções de assinatura                                                                                               |
+| Resultados | Object     | <- | Estado da verificação                                                                                              |
 
 <!-- END REF -->
 

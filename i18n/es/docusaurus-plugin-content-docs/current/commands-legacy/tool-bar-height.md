@@ -30,6 +30,6 @@ Si no se muestra ninguna barra de herramientas, el comando devuelve 0.
 |  |  |
 | --- | --- |
 | Número de comando | 1016 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

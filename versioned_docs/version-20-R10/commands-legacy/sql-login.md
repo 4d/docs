@@ -211,7 +211,7 @@ If the connection is successful, the system variable OK is set to 1; otherwise, 
 |  |  |
 | --- | --- |
 | Command number | 817 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -30,6 +30,6 @@ Este comando retorna uma string vazia se não houver título disponível para o 
 |  |  |
 | --- | --- |
 | Número do comando | 1036 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -28,6 +28,6 @@ Se nenhum usuário por padrão estiver definido, o comando retorna 0.
 |  |  |
 | --- | --- |
 | Número do comando | 826 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -43,6 +43,6 @@ Si aucune icône n’est associée à l’élément, la variable icône est reto
 |  |  |
 | --- | --- |
 | Numéro de commande | 951 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

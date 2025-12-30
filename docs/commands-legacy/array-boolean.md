@@ -5,7 +5,7 @@ slug: /commands/array-boolean
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY BOOLEAN.Syntax-->**ARRAY BOOLEAN** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY BOOLEAN.Syntax-->**ARRAY BOOLEAN** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY BOOLEAN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ This example creates an interprocess array of 50 Boolean elements and sets each 
 |  |  |
 | --- | --- |
 | Command number | 223 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

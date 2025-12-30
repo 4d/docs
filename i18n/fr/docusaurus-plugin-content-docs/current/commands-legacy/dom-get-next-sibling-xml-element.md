@@ -5,11 +5,11 @@ slug: /commands/dom-get-next-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *refElément* {; *nomElémentFrère* {; *valeurElémentFrère*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get next sibling XML element.Syntax-->**DOM Get next sibling XML element** ( *refElément* : Text {; *nomElémentFrère* : Text {; *valeurElémentFrère* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get next sibling XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
+| refElément | Text | &#8594; | Référence d’élément XML |
 | nomElémentFrère | Text | &#8592; | Nom de l'élément XML frère |
 | valeurElémentFrère | Text | &#8592; | Valeur de l'élément XML frère |
 | Résultat | Text | &#8592; | Référence de l’élément XML frère |
@@ -67,7 +67,7 @@ Si la commande a été correctement exécutée et si l’élément analysé n’
 |  |  |
 | --- | --- |
 | Numéro de commande | 724 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -5,16 +5,16 @@ slug: /commands/web-service-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAcceso* ; *soapAccion* ; *nomMetodo* ; *nomEspacio* {; *tipoCompuesto* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAcceso* : Text ; *soapAccion* : Text ; *nomMetodo* : Text ; *nomEspacio* : Text {; *tipoCompuesto* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| urlAcceso | Text | &#8594;  | URL de acceso al servicio Web |
-| soapAccion | Text | &#8594;  | Contenido del campo SOAPAction |
-| nomMetodo | Text | &#8594;  | Nombre del método |
-| nomEspacio | Text | &#8594;  | Espacio del nombre (Namespace) |
-| tipoCompuesto | Integer | &#8594;  | Configuración de tipos compuestos (tipos simples si se omite) |
-| * | Operador | &#8594;  | No cerrar la conexión |
+| urlAcceso | Text | &#8594; | URL de acceso al servicio Web |
+| soapAccion | Text | &#8594; | Contenido del campo SOAPAction |
+| nomMetodo | Text | &#8594; | Nombre del método |
+| nomEspacio | Text | &#8594; | Espacio del nombre (Namespace) |
+| tipoCompuesto | Integer | &#8594; | Configuración de tipos compuestos (tipos simples si se omite) |
+| * | Operador | &#8594; | No cerrar la conexión |
 
 <!-- END REF-->
 
@@ -167,7 +167,7 @@ Si la petición se enruta correctamente y el servicio web la acepta, la variable
 |  |  |
 | --- | --- |
 | Número de comando | 778 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

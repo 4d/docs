@@ -5,13 +5,13 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *leChamp* ; *nombre* {; > ou <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *leChamp* ; *nombre* : Integer {; > ou <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ indexé avec lequel "scanner" les enregistrements |
-| nombre | Integer | &#8594;  | Nombre d'enregistrements à retourner |
-| > ou < | Opérateur | &#8594;  | > à partir du début de l'index < à partir de la fin de l'index |
+| leField | Field | &#8594; | Champ indexé avec lequel "scanner" les enregistrements |
+| nombre | Integer | &#8594; | Nombre d'enregistrements à retourner |
+| > ou < | Opérateur | &#8594; | > à partir du début de l'index < à partir de la fin de l'index |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ L'exemple suivant envoie des lettres aux 50 plus mauvais clients puis aux 50 mei
 |  |  |
 | --- | --- |
 | Numéro de commande | 350 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

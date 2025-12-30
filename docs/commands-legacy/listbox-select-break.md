@@ -5,7 +5,7 @@ slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( {* ;} *object* ; *row* ; *column* {; *action*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *object* : Text ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *object* : Field, Variable ; *row* : Integer ; *column* : Integer {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ Here is the result:
 |  |  |
 | --- | --- |
 | Command number | 1117 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

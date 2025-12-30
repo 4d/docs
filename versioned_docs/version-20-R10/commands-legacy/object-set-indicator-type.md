@@ -40,6 +40,6 @@ In the *indicator* parameter, pass the type of indicator you want to display. Yo
 |  |  |
 | --- | --- |
 | Command number | 1246 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

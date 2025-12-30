@@ -66,6 +66,6 @@ L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 551 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

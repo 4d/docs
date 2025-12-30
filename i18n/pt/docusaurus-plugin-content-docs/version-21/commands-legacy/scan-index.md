@@ -57,7 +57,7 @@ O seguinte exemplo envia cartas aos 50 piores clientes e aos 50 melhores cliente
 |  |  |
 | --- | --- |
 | Número do comando | 350 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

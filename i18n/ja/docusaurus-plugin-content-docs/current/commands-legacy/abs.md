@@ -5,11 +5,11 @@ slug: /commands/abs
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Abs.Syntax-->**Abs** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Abs.Syntax-->**Abs** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Abs.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | 絶対値を求める数値 |
+| number | Real | &#8594; | 絶対値を求める数値 |
 | 戻り値 | Real | &#8592; | 絶対値 |
 
 <!-- END REF-->
@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 99 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

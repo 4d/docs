@@ -191,6 +191,6 @@ Una empresa quiere utilizar el Internet para intercambiar información. Cada fil
 |  |  |
 | --- | --- |
 | Número de comando | 689 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

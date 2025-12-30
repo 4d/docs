@@ -5,11 +5,11 @@ slug: /commands/get-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document position.Syntax-->**Get document position** ( *docRef* ) : Real<!-- END REF-->
+<!--REF #_command_.Get document position.Syntax-->**Get document position** ( *docRef* : Time ) : Real<!-- END REF-->
 <!--REF #_command_.Get document position.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referência de documento |
+| docRef | Time | &#8594; | Número de referência de documento |
 | Resultado | Real | &#8592; | Posição do arquivo (expressa em bytes) a partir do início do arquivo |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ Get document position devolve a posição, a partir do início do documento, ond
 |  |  |
 | --- | --- |
 | Número do comando | 481 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

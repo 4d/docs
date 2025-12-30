@@ -45,7 +45,7 @@ The effect of validating this dialog box differs depending on the platform:
 |  |  |
 | --- | --- |
 | Command number | 956 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Forbidden on the server ||
 

@@ -5,12 +5,12 @@ slug: /commands/generate-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *motDePasse* {; *options*} ) : Text<!-- END REF-->
+<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *motDePasse* : Text {; *options* : Object} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate password hash.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| motDePasse | Text | &#8594;  | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
-| options | Object | &#8594;  | Objet contenant des options |
+| motDePasse | Text | &#8594; | Mot de passe utilisateur (seuls les 72 premiers caractères sont utilisés) |
+| options | Object | &#8594; | Objet contenant des options |
 | Résultat | Text | &#8592; | Hash du mot de passe |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

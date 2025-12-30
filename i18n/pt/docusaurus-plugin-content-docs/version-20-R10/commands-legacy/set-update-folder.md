@@ -59,7 +59,7 @@ Você criou uma pasta "MyUpdates" em seu disco, na qual localizou uma nova vers�
 |  |  |
 | --- | --- |
 | Número do comando | 1291 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

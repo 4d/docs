@@ -5,13 +5,13 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *refElément* ; *nomElément* ; *indice* ; *valeurElément* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *refElément* : Text ; *nomElément* : Text ; *indice* : Integer ; *valeurElément* : Variable ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
-| nomElément | Text | &#8594;  | Nom de l’élément à lire |
-| indice | Integer | &#8594;  | Numéro d’indice de l’élément à lire |
+| refElément | Text | &#8594; | Référence d’élément XML |
+| nomElément | Text | &#8594; | Nom de l’élément à lire |
+| indice | Integer | &#8594; | Numéro d’indice de l’élément à lire |
 | valeurElément | Variable | &#8592; | Valeur de l’élément |
 | Résultat | Text | &#8592; | Référence de l’élément XML (16 caractères) |
 
@@ -39,7 +39,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 725 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

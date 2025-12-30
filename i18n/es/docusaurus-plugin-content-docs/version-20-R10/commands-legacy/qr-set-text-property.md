@@ -90,7 +90,7 @@ Este método define varios atributos para el título de la primera columna:
 |  |  |
 | --- | --- |
 | Número de comando | 759 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

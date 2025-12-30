@@ -5,15 +5,15 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *objeto* {; *aTabla*}; *subFormDet* {; *subFormList*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *objeto* : Text {; *aTabla*}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *objeto* : Field, Variable {; *aTabla*}; *subFormDet* : Text, Object {; *subFormList* : Text, Object} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| aTable | Table | &#8594;  | Tabla de formulario (si tabla de formulario) |
-| subFormDet | Text, Object | &#8594;  | Nombre del formulario detallado de subformulario |
-| subFormList | Text, Object | &#8594;  | Nombre del formulario listado de subformulario (formulario tabla) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| aTable | Table | &#8594; | Tabla de formulario (si tabla de formulario) |
+| subFormDet | Text, Object | &#8594; | Nombre del formulario detallado de subformulario |
+| subFormList | Text, Object | &#8594; | Nombre del formulario listado de subformulario (formulario tabla) |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ Cuando modifica un subformulario página, el comando puede ejecutarse en cualqui
 |  |  |
 | --- | --- |
 | Número de comando | 1138 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

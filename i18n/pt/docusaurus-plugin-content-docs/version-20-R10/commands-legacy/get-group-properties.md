@@ -45,7 +45,7 @@ Se não tiver privilégios de acesso para chamar ao comando GET GROUP PROPERTIES
 |  |  |
 | --- | --- |
 | Número do comando | 613 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

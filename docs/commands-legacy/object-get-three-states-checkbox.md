@@ -5,7 +5,7 @@ slug: /commands/object-get-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get three states checkbox** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get three states checkbox.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ You can set the "Three-States" property either using the Property List, or using
 |  |  |
 | --- | --- |
 | Command number | 1250 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

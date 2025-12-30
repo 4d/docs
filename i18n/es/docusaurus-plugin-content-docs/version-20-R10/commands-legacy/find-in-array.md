@@ -116,6 +116,6 @@ Desea encontrar una referencia a un objeto:
 |  |  |
 | --- | --- |
 | Número de comando | 230 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

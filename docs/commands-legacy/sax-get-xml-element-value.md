@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* ; *value* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* : Time ; *value* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ If the command was executed correctly, the system variable OK is set to 1\. Othe
 |  |  |
 | --- | --- |
 | Command number | 877 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

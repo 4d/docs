@@ -185,6 +185,6 @@ La méthode de gestion d'erreurs suivante ignore les interruptions de l'utilisat
 |  |  |
 | --- | --- |
 | Numéro de commande | 155 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get static columns** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get static columns.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
 | 戻り値 | Integer | &#8592; | ドラッグで移動しない列数 |
 
 <!-- END REF-->
@@ -37,6 +37,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1154 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/goto-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*tabla* ;} *posicion* )<!-- END REF-->
+<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*tabla* : Table ;} *posicion* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla del registro de destino o Tabla por defecto, si se omite |
-| posicion | Integer | &#8594;  | Número devuelto por número registro |
+| tabla | Table | &#8594; | Tabla del registro de destino o Tabla por defecto, si se omite |
+| posicion | Integer | &#8594; | Número devuelto por número registro |
 
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ Ver el ejemplo para Record Number.
 |  |  |
 | --- | --- |
 | Número de comando | 242 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 | Modifica la selección actual ||
 

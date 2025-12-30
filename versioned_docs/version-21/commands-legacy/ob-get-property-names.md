@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | object | Object | &#8594;  | Structured object |
 | arrProperties | Text array | &#8592; | Property names |
-| arrTypes | Array integer | &#8592; | Property types |
+| arrTypes | Integer array | &#8592; | Property types |
 
 <!-- END REF-->
 
@@ -102,6 +102,6 @@ Using an object array element:
 |  |  |
 | --- | --- |
 | Command number | 1232 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

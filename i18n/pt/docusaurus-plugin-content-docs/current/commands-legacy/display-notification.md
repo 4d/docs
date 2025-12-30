@@ -5,13 +5,13 @@ slug: /commands/display-notification
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titulo* ; *texto* {; *duraçao*} )<!-- END REF-->
+<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titulo* : Text ; *texto* : Text {; *duraçao* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| titulo | Text | &#8594;  | Título da notificação |
-| texto | Text | &#8594;  | Texto da notificação |
-| duraçao | Integer | &#8594;  | Duração da exibição em segundos |
+| titulo | Text | &#8594; | Título da notificação |
+| texto | Text | &#8594; | Texto da notificação |
+| duraçao | Integer | &#8594; | Duração da exibição em segundos |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Sob Windows, é mostrada a janela da mensagem se não se detecta atividade na m�
 |  |  |
 | --- | --- |
 | Número do comando | 910 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

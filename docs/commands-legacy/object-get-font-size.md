@@ -5,7 +5,7 @@ slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get font size** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 |  |  |
 | --- | --- |
 | Command number | 1070 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

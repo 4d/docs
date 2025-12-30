@@ -186,6 +186,6 @@ La méthode du formulaire Print\_List3 est la suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 709 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

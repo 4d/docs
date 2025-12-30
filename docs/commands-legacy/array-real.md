@@ -5,7 +5,7 @@ slug: /commands/array-real
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY REAL.Syntax-->**ARRAY REAL** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY REAL.Syntax-->**ARRAY REAL** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY REAL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ This example creates an interprocess array of 50 Real elements and sets each ele
 |  |  |
 | --- | --- |
 | Command number | 219 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/min
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Min.Syntax-->**Min** ( *series* {; *attributePath*} ) : any<!-- END REF-->
+<!--REF #_command_.Min.Syntax-->**Min** ( *series* : Field, Array {; *attributePath* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Min.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | 最小値を求めるデータ |
-| attributePath | Text | &#8594;  | 最小値を取得したい属性のパス |
-| 戻り値 | Number, Date | &#8592; | series中の最小値 |
+| series | Field, Array | &#8594; | 最小値を求めるデータ |
+| attributePath | Text | &#8594; | 最小値を取得したい属性のパス |
+| 戻り値 | Date, Real | &#8592; | series中の最小値 |
 
 <!-- END REF-->
 
@@ -83,7 +83,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 4 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

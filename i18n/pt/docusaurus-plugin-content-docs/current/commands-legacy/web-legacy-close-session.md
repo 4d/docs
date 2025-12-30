@@ -5,11 +5,11 @@ slug: /commands/web-legacy-close-session
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *sessao* )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *sessao* : Text )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| sessao | Text | &#8594;  | Sessão UUID |
+| sessao | Text | &#8594; | Sessão UUID |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Depois da execução deste comando, se um cliente web envia um pedido com uma co
 |  |  |
 | --- | --- |
 | Número do comando | 1208 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *documento* ; *valor* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *documento* : Time ; *valor* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
+| documento | Time | &#8594; | Referencia del documento abierto |
 | valor | Text, Blob | &#8592; | Valor del elemento |
 
 <!-- END REF-->
@@ -50,7 +50,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 877 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

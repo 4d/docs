@@ -5,13 +5,13 @@ slug: /commands/set-picture-metadata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *imagen* ; *nomMeta* ; *ContenidoMeta* {; *nomMeta2* ; *ContenidoMeta2* ; ... ; *nomMetaN* ; *ContenidoMetaN*} )<!-- END REF-->
+<!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *imagen* : Picture ; *nomMeta* : Text ; *ContenidoMeta* : Variable {; ...(*nomMeta* : Text, *ContenidoMeta* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PICTURE METADATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#8594;  | Imagen cuyos metadatos quiere escribir |
-| nomMeta | Text | &#8594;  | Nombre o ruta del bloque a escribir |
-| ContenidoMeta | Variable | &#8594;  | Contenido del metadato |
+| imagen | Picture | &#8594; | Imagen cuyos metadatos quiere escribir |
+| nomMeta | Text | &#8594; | Nombre o ruta del bloque a escribir |
+| ContenidoMeta | Variable | &#8594; | Contenido del metadato |
 
 <!-- END REF-->
 
@@ -88,7 +88,7 @@ Cuanto todos los metadatos se manipulan vía una referencia de elementos DOM, la
 |  |  |
 | --- | --- |
 | Número de comando | 1121 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

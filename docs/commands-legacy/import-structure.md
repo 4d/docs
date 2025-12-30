@@ -5,7 +5,7 @@ slug: /commands/import-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *xmlStructure* )<!-- END REF-->
+<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *xmlStructure* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,6 +53,6 @@ You want to import a saved structure definition into the current database:
 |  |  |
 | --- | --- |
 | Command number | 1310 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

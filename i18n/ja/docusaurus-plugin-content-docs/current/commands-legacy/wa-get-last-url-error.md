@@ -5,12 +5,12 @@ slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *object* ; *url* ; *description* ; *errorCode* )<!-- END REF-->
+<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *object* : Text ; *url* : Text ; *description* : Text ; *errorCode* : Integer )<br/>**WA GET LAST URL ERROR** ( *object* : Field, Variable ; *url* : Text ; *description* : Text ; *errorCode* : Integer )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | url | Text | &#8592; | エラー元のURL |
 | description | Text | &#8592; | エラーの説明 (macOS) |
 | errorCode | Integer | &#8592; | エラーコード |
@@ -40,6 +40,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1034 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

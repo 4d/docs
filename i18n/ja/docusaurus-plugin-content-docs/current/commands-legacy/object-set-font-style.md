@@ -5,13 +5,13 @@ slug: /commands/object-set-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT STYLE.Syntax-->**OBJECT SET FONT STYLE** ( {* ;} *object* ; *styles* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT STYLE.Syntax-->**OBJECT SET FONT STYLE** ( * ; *object* : Text ; *styles* : Integer )<br/>**OBJECT SET FONT STYLE** ( *object* : Field, Variable ; *styles* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT STYLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| styles | Integer | &#8594;  | フォントスタイル |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| styles | Integer | &#8594; | フォントスタイル |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 166 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -47,6 +47,6 @@ O exemplo a seguir pode ser utilizado para recuperar em um array todas as rotas 
 |  |  |
 | --- | --- |
 | Número do comando | 976 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

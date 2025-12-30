@@ -5,7 +5,7 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*aTable* }{;}{ *queryArgument* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ You will find all companies located in New York City, with a Stock Exchange acti
 |  |  |
 | --- | --- |
 | Command number | 341 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

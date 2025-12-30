@@ -27,6 +27,6 @@ Une séquence d'instructions SQL doit être encadrée par les mot-clés [Begin S
 |  |  |
 | --- | --- |
 | Numéro de commande | 949 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

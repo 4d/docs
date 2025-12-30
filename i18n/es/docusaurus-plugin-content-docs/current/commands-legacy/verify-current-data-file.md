@@ -5,15 +5,15 @@ slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objetos* ; *opciones* ; *metodo* {; *arrayTablas* {; *arrayCampos*}} )}<!-- END REF-->
+<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ({ *objetos* : Integer ; *opciones* : Integer ; *metodo* : Text {; *arrayTablas* : Integer array {; *arrayCampos* : Integer array}} })<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objetos | Integer | &#8594;  | Objetos a verificar |
-| opciones | Integer | &#8594;  | Opciones de verificación |
-| metodo | Text | &#8594;  | Nombre del método 4D de retrollamada |
-| arrayTablas | Integer array | &#8594;  | Números de las tablas a verificar |
-| arrayCampos | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Números de los índices a verificar |
+| objetos | Integer | &#8594; | Objetos a verificar |
+| opciones | Integer | &#8594; | Opciones de verificación |
+| metodo | Text | &#8594; | Nombre del método 4D de retrollamada |
+| arrayTablas | Integer array | &#8594; | Números de las tablas a verificar |
+| arrayCampos | Integer array | &#8594; | 2D array, numbers of indexes to be checked |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ Si el método de retrollamada no existe, la verificación no se efectúa, se gen
 |  |  |
 | --- | --- |
 | Número de comando | 1008 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

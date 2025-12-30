@@ -26,6 +26,6 @@ Cette commande retourne **Vrai** si vous passez une sélection d'entité partage
 |  |  |
 | --- | --- |
 | Numéro de commande | 1759 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

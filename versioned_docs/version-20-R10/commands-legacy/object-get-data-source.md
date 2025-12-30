@@ -46,6 +46,6 @@ You execute the following code:
 |  |  |
 | --- | --- |
 | Command number | 1265 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

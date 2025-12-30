@@ -5,7 +5,7 @@ slug: /commands/dom-append-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *targetElementRef* ; *sourceElementRef* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML element.Syntax-->**DOM Append XML element** ( *targetElementRef* : Text ; *sourceElementRef* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ See the example of the [DOM Insert XML element](dom-insert-xml-element.md "DOM I
 |  |  |
 | --- | --- |
 | Command number | 1082 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *object* ; *startSel* ; *endSel* )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *object* : Field, Variable, any ; *startSel* : Integer ; *endSel* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字列)、省略時: objectはフィールドまたは変数 |
-| object | Field, Variable, any | &#8594;  | オブジェクト名 (*指定時)、またはフィールドや変数 (*省略時) |
-| startSel | Integer | &#8594;  | 反転表示の先頭位置 |
-| endSel | Integer | &#8594;  | 反転表示の最終位置 |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字列)、省略時: objectはフィールドまたは変数 |
+| object | Field, Variable, any | &#8594; | オブジェクト名 (*指定時)、またはフィールドや変数 (*省略時) |
+| startSel | Integer | &#8594; | 反転表示の先頭位置 |
+| endSel | Integer | &#8594; | 反転表示の最終位置 |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ HIGHLIGHT TEXT コマンドは、サブフォームのコンテキストにお�
 |  |  |
 | --- | --- |
 | コマンド番号 | 210 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

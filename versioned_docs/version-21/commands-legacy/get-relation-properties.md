@@ -49,6 +49,6 @@ Once the command has been executed:
 |  |  |
 | --- | --- |
 | Command number | 686 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/qr-delete-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *zone* )<!-- END REF-->
+<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *zone* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 
 <!-- END REF-->
 
@@ -28,7 +28,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 754 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

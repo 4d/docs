@@ -55,6 +55,6 @@ If you omit the *type* parameter, the function will return the pathname to activ
 |  |  |
 | --- | --- |
 | Command number | 487 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

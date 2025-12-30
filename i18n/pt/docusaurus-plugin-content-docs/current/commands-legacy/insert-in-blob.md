@@ -5,14 +5,14 @@ slug: /commands/insert-in-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *BLOB* ; *offset* ; *len* {; *filler*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN BLOB.Syntax-->**INSERT IN BLOB** ( *BLOB* : Blob ; *offset* : Integer ; *len* : Integer {; *filler* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB no qual inserir os bytes |
-| offset | Integer | &#8594;  | Posição de início de inserção dos bytes |
-| len | Integer | &#8594;  | Número de bytes a ser inserido |
-| filler | Integer | &#8594;  | Valor de byte padrão (0x00..0xFF) 0x00 se omitido |
+| Blob | Blob | &#8594; | BLOB no qual inserir os bytes |
+| offset | Integer | &#8594; | Posição de início de inserção dos bytes |
+| len | Integer | &#8594; | Número de bytes a ser inserido |
+| filler | Integer | &#8594; | Valor de byte padrão (0x00..0xFF) 0x00 se omitido |
 
 <!-- END REF-->
 
@@ -37,6 +37,6 @@ Antes da chamada, você passa no parâmetro *offset* a posição de inserção e
 |  |  |
 | --- | --- |
 | Número do comando | 559 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

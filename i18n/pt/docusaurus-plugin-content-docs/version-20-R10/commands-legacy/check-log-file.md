@@ -40,7 +40,7 @@ Este comando só pode ser utilizado no contexto de aplicativos monousuários. Ma
 |  |  |
 | --- | --- |
 | Número do comando | 799 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

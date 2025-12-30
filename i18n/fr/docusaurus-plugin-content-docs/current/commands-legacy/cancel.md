@@ -54,7 +54,7 @@ Lorsque la commande [CANCEL](cancel.md) est exécutée (formulaire annulé ou an
 |  |  |
 | --- | --- |
 | Numéro de commande | 270 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

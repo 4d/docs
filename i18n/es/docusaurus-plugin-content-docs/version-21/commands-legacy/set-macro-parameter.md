@@ -63,6 +63,6 @@ Esta macro crea un nuevo texto que será devuelto al método llamante:
 |  |  |
 | --- | --- |
 | Número de comando | 998 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

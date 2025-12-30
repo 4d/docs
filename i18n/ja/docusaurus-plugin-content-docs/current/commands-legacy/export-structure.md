@@ -5,12 +5,12 @@ slug: /commands/export-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *exportedStructure* {; *format*} )<!-- END REF-->
+<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *exportedStructure* : Text {; *format* : Text} )<!-- END REF-->
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | exportedStructure | Text | &#8592; | 4D データベースストラクチャーを書き出したXML定義ファイル |
-| format | Text | &#8594;  | Export format: xml format (default) or html format |
+| format | Text | &#8594; | Export format: xml format (default) or html format |
 
 <!-- END REF-->
 
@@ -62,6 +62,6 @@ XML フォーマットで書き出されたストラクチャー定義は他の�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1311 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

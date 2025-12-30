@@ -65,6 +65,6 @@ Se executar o código:
 |  |  |
 | --- | --- |
 | Número do comando | 1570 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

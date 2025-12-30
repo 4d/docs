@@ -50,6 +50,6 @@ Para obtener más información, consulte la descripción del comando [OBJECT SET
 |  |  |
 | --- | --- |
 | Número de comando | 1076 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

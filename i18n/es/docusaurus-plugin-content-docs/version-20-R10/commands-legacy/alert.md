@@ -73,6 +73,6 @@ Muestra la siguiente caja de diálogo de alerta (en Windows):
 |  |  |
 | --- | --- |
 | Número de comando | 41 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

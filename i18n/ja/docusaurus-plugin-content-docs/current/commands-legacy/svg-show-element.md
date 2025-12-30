@@ -5,14 +5,14 @@ slug: /commands/svg-show-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *pictureObject* ; *id* {; *margin*} )<!-- END REF-->
+<!--REF #_command_.SVG SHOW ELEMENT.Syntax-->**SVG SHOW ELEMENT** ( {* ;} *pictureObject* : Picture ; *id* : Text {; *margin* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG SHOW ELEMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
-| pictureObject | Picture | &#8594;  | オブジェクト名 (* 指定時) または変数またはフィールド (* 省略時) |
-| id | Text | &#8594;  | 表示する要素のID属性 |
-| margin | Integer | &#8594;  | 表示のマージン (デフォルトでピクセル単位) |
+| * | 演算子 | &#8594; | 指定時: pictureObjectはオブジェクト名 (文字) <br/>省略時: pictureObjectは変数 |
+| pictureObject | Picture | &#8594; | オブジェクト名 (* 指定時) または変数またはフィールド (* 省略時) |
+| id | Text | &#8594; | 表示する要素のID属性 |
+| margin | Integer | &#8594; | 表示のマージン (デフォルトでピクセル単位) |
 
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1108 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

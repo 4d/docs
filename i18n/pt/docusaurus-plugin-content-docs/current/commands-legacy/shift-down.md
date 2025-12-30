@@ -57,6 +57,6 @@ O método abaixo de objeto para o botão *bUnBotao* realiza diferentes ações d
 |  |  |
 | --- | --- |
 | Número do comando | 543 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

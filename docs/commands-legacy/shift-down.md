@@ -57,6 +57,6 @@ The following object method for the button *bAnyButton* performs different actio
 |  |  |
 | --- | --- |
 | Command number | 543 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

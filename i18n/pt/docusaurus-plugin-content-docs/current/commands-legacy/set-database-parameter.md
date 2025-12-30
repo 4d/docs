@@ -5,13 +5,13 @@ slug: /commands/set-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*tabela* ;} *seletor* ; *value* )<!-- END REF-->
+<!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*tabela* : Table ;} *seletor* : Integer ; *value* : Real, Text )<!-- END REF-->
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a qual atribuir o parâmetro ou, Tabela padrão se o parâmetro for omitido. |
-| seletor | Integer | &#8594;  | Código do banco de dados a ser modificado |
-| value | Real, Text | &#8594;  | Valor do parâmetro |
+| tabela | Table | &#8594; | Tabela a qual atribuir o parâmetro ou, Tabela padrão se o parâmetro for omitido. |
+| seletor | Integer | &#8594; | Código do banco de dados a ser modificado |
+| value | Real, Text | &#8594; | Valor do parâmetro |
 
 <!-- END REF-->
 
@@ -1052,6 +1052,6 @@ Você quer exportar dados em JSON que contém uma data 4D convertida. Note que a
 |  |  |
 | --- | --- |
 | Número do comando | 642 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

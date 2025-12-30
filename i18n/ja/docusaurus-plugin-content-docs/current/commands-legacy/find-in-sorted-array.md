@@ -5,13 +5,13 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* ; *value* ; > or < {; *posFirst* {; *posLast*}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *value* : Expression ; > or < {; *posFirst* : Integer {; *posLast* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | 検索する配列 |
-| value | Expression | &#8594;  | 配列内で検索する値(配列と同じ型) |
-| > or < | 演算子 | &#8594;  | 配列が昇順になっている場合には>、降順になっている場合には< |
+| array | Array | &#8594; | 検索する配列 |
+| value | Expression | &#8594; | 配列内で検索する値(配列と同じ型) |
+| > or < | 演算子 | &#8594; | 配列が昇順になっている場合には>、降順になっている場合には< |
 | posFirst | Integer | &#8592; | 値が見つかった場合にはそれが見つかった最初の位置/そうでない場合には値が挿入されるべき位置 |
 | posLast | Integer | &#8592; | 値が見つかった場合にはそれが見つかった最後の位置/そうでない場合にはposFirstと同じ |
 | 戻り値 | Boolean | &#8592; | 配列内にて値と合致する要素が少なくとも一つある場合にはTrue、そうでない場合にはFalse |
@@ -77,6 +77,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1333 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

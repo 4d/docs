@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 |path|Text|&#8594; |File path|
 |fileConstant|Integer|&#8594;|4D file constant|
 |pathType|Integer|&#8594; |`fk posix path` (default) or `fk platform path`|
-|*|operator|&#8594; |* to return file of host database|
+|*|Operator|&#8594; |* to return file of host database|
 |Result|[4D.File](../API/FileClass.md)|&#8592;|New file object|
 <!-- END REF -->
 
@@ -92,6 +92,6 @@ If the command is called from a component, pass the optional `*` parameter to ge
 |  |  |
 | --- | --- |
 | Command number | 1566 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

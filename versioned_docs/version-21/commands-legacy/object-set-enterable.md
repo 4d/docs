@@ -78,6 +78,6 @@ Here is the object method of a checkbox located in the header of a list in order
 |  |  |
 | --- | --- |
 | Command number | 238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

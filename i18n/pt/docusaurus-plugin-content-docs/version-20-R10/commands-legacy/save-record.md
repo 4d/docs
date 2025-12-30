@@ -54,6 +54,6 @@ O exemplo a seguir é parte de um método que lê registros de um documento. Nes
 |  |  |
 | --- | --- |
 | Número do comando | 53 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

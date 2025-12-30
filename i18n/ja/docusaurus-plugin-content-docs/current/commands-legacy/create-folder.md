@@ -5,12 +5,12 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folderPath | Text | &#8594;  | 作成する新しいフォルダーのパス名 |
-| * | 演算子 | &#8594;  | パス中に存在しないフォルダーを作成する |
+| folderPath | Text | &#8594; | 作成する新しいフォルダーのパス名 |
+| * | 演算子 | &#8594; | パス中に存在しないフォルダーを作成する |
 
 <!-- END REF-->
 
@@ -77,7 +77,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 475 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

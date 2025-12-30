@@ -5,14 +5,14 @@ slug: /commands/qr-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*tabla* ;} *doc* {; *nomMetodo*}{; *} )<!-- END REF-->
+<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*tabla* : Table ;} *doc* : Text {; *nomMetodo* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a utilizar para el informe o tabla por defecto si se omite |
-| doc | Text | &#8594;  | Documento de informe rápido a cargar |
-| nomMetodo | Text | &#8594;  | Nombre del método a llamar |
-| * | Operador | &#8594;  | Eliminación de las cajas de diálogo de impresión |
+| tabla | Table | &#8594; | Tabla a utilizar para el informe o tabla por defecto si se omite |
+| doc | Text | &#8594; | Documento de informe rápido a cargar |
+| nomMetodo | Text | &#8594; | Nombre del método a llamar |
+| * | Operador | &#8594; | Eliminación de las cajas de diálogo de impresión |
 
 <!-- END REF-->
 
@@ -136,7 +136,7 @@ El método myCallbackMeth convierte el informe cuando se genera:
 |  |  |
 | --- | --- |
 | Número de comando | 197 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

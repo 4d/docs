@@ -68,6 +68,6 @@ Note the >= that lets you cover all cases. In fact, the function returns a recor
 |  |  |
 | --- | --- |
 | Command number | 653 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

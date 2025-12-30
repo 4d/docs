@@ -5,12 +5,12 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *zone* ; *numColonne* )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *zone* : Integer ; *numColonne* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numColonne | Integer | &#8594;  | Numéro de colonne |
+| zone | Integer | &#8594; | Référence de la zone |
+| numColonne | Integer | &#8594; | Numéro de colonne |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ Cet exemple supprime la troisième colonne de l'état :
 |  |  |
 | --- | --- |
 | Numéro de commande | 749 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

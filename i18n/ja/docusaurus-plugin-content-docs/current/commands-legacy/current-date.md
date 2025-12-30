@@ -5,11 +5,11 @@ slug: /commands/current-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current date.Syntax-->**Current date** {( * )} : Date<!-- END REF-->
+<!--REF #_command_.Current date.Syntax-->**Current date** ( * ) : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | サーバの日付を返す |
+| * | 演算子 | &#8594; | サーバの日付を返す |
 | 戻り値 | Date | &#8592; | 現在の日付 |
 
 <!-- END REF-->
@@ -103,6 +103,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 33 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

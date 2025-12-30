@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *menuItem* ; *itemStyle* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemStyle* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ You specify the font style of the item in the *itemStyle* parameter. You pass a 
 |  |  |
 | --- | --- |
 | Command number | 425 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -5,7 +5,7 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( {* ;} *object* {; *newName* {; *newVar* {; *boundTo* {; *moveH* {; *moveV* {; *resizeH* {; *resizeV*}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *object* : Text {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *object* : Field, Variable {; *newName* : Text {; *newVar* : Pointer {; *boundTo* : Text {; *moveH* : Integer {; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -110,7 +110,7 @@ Creation of a new radio button "bRadio6" based on the existing radio button "bRa
 |  |  |
 | --- | --- |
 | Command number | 1111 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

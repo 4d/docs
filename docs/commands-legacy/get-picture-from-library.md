@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef * ; *picture* )<br/>**GET PICTURE FROM LIBRARY** ( *picName* ; *picture* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef* : Integer, Text ; *picture* : Picture )<br/>**GET PICTURE FROM LIBRARY** ( *picName* : Integer, Text ; *picture* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,7 +67,7 @@ If there is not enough memory to return the picture, an error -108 is generated.
 |  |  |
 | --- | --- |
 | Command number | 565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

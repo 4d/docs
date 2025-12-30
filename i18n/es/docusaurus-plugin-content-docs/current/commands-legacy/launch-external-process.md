@@ -5,12 +5,12 @@ slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomArchivo* {; *flujoEntrada* {; *flujoSalida* {; *flujoError*}}}{; *pid*} )<!-- END REF-->
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomArchivo* : Text {; *flujoEntrada* : Text, Blob {; *flujoSalida* : Text, Blob {; *flujoError* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Text | &#8594;  | Ruta de acceso y argumentos del archivo a abrir |
-| flujoEntrada | Text, Blob | &#8594;  | Flujo de entrada(stdin) |
+| nomArchivo | Text | &#8594; | Ruta de acceso y argumentos del archivo a abrir |
+| flujoEntrada | Text, Blob | &#8594; | Flujo de entrada(stdin) |
 | flujoSalida | Text, Blob | &#8592; | Flujo de salida (stdout) |
 | flujoError | Text, Blob | &#8592; | Flujo de error(stderr) |
 | pid | Integer | &#8592; | Identificador único del proceso externo |
@@ -151,7 +151,7 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 |  |  |
 | --- | --- |
 | Número de comando | 811 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

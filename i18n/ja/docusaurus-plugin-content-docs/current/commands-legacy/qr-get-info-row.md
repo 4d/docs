@@ -5,12 +5,12 @@ slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* ; *row* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* : Integer ; *row* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| row | Integer | &#8594;  | 指定する行 |
+| area | Integer | &#8594; | エリア参照 |
+| row | Integer | &#8594; | 指定する行 |
 | 戻り値 | Integer | &#8592; | 0 = 表示, 1 = 非表示 |
 
 <!-- END REF-->
@@ -45,7 +45,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 769 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

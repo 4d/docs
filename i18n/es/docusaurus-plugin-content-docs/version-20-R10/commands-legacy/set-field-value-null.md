@@ -34,6 +34,6 @@ El valor NULL es utilizado por el motor SQL de 4D. Para mayor información, cons
 |  |  |
 | --- | --- |
 | Número de comando | 965 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

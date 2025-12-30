@@ -4,7 +4,7 @@ title: WP Insert document body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert document body.Syntax-->**WP Insert document body** ( *targetObj* ; *wpDoc* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert document body.Syntax-->**WP Insert document body** ( *targetObj* : Object ; *wpDoc* : Object ; *mode* : Integer {; *rangeUpdate* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Insert document body.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

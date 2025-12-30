@@ -5,12 +5,12 @@ slug: /commands/append-data-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *dataType* ; *data* )<!-- END REF-->
+<!--REF #_command_.APPEND DATA TO PASTEBOARD.Syntax-->**APPEND DATA TO PASTEBOARD** ( *dataType* : Text ; *data* : Blob )<!-- END REF-->
 <!--REF #_command_.APPEND DATA TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataType | Text | &#8594;  | 追加するデータのタイプ |
-| data | Blob | &#8594;  | ペーストボードに追加するデータ |
+| dataType | Text | &#8594; | 追加するデータのタイプ |
+| data | Blob | &#8594; | ペーストボードに追加するデータ |
 
 <!-- END REF-->
 
@@ -225,7 +225,7 @@ GET RECORD FROM PASTEBOARDメソッドを使用して、このレコードイメ
 |  |  |
 | --- | --- |
 | コマンド番号 | 403 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

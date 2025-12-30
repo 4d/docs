@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-cdata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *documento* ; *datos* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *documento* : Time ; *datos* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML CDATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
-| datos | Blob, Text | &#8594;  | Texto o BLOB a insertar en el documento entre etiquetas CData |
+| documento | Time | &#8594; | Referencia del documento abierto |
+| datos | Blob, Text | &#8594; | Texto o BLOB a insertar en el documento entre etiquetas CData |
 
 <!-- END REF-->
 
@@ -80,7 +80,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 856 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

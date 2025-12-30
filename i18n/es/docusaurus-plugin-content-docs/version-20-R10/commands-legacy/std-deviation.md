@@ -66,6 +66,6 @@ Este ejemplo obtiene la desviación estándar de una serie de valores ubicados e
 |  |  |
 | --- | --- |
 | Número de comando | 26 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

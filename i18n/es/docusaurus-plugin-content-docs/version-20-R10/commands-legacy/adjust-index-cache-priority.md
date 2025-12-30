@@ -58,6 +58,6 @@ Usted desea cambiar temporalmente la prioridad de la caché para el índice de c
 |  |  |
 | --- | --- |
 | Número de comando | 1430 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

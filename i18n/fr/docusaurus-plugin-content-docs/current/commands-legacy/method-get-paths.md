@@ -5,16 +5,15 @@ slug: /commands/method-get-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomDossier* ;} *typeMéthode* ; *tabChemins* {; *marqueur*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*nomDossier* : Text ;} *typeMéthode* : Integer ; *tabChemins* : Text array {; *marqueur* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomDossier | Text | &#8594;  | Nom de dossier de la page Démarrage |
-| typeMéthode | Integer | &#8594;  | Sélecteur de type de méthode à récupérer |
+| nomDossier | Text | &#8594; | Nom de dossier de la page Démarrage |
+| typeMéthode | Integer | &#8594; | Sélecteur de type de méthode à récupérer |
 | tabChemins | Text array | &#8592; | Tableau des chemins et noms des méthodes |
-| marqueur | Real | &#8594;  | Valeur minimum de marqueur |
-| &#8592; | Nouvelle valeur courante |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| marqueur | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 
@@ -90,6 +89,6 @@ Reportez-vous à l'exemple de la commande [METHOD SET CODE](method-set-code.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 1163 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

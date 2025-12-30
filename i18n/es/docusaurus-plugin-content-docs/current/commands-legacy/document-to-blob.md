@@ -5,13 +5,13 @@ slug: /commands/document-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *documento* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *documento* : Text ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.DOCUMENT TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Nombre del documento |
-| Blob | Blob | &#8596;  | Campo o variable de tipo BLOB a recibir el documento |
-| || | Contenido del documento |
+| documento | Text | &#8594; | Nombre del documento |
+| Blob | Blob | &#8596; | Campo o variable de tipo BLOB a recibir el documento |
+|  |  |  | Contenido del documento |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ En todos los casos, puede interceptar el error utilizando un método de interrup
 |  |  |
 | --- | --- |
 | Número de comando | 525 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

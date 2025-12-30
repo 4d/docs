@@ -52,6 +52,6 @@ Este comando não pode ser chamado desde uma fórmula 4D.
 |  |  |
 | --- | --- |
 | Número do comando | 684 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

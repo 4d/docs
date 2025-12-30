@@ -218,7 +218,7 @@ Se o parâmetro *pasta* não é válido ou se o endereço de acesso retornado é
 |  |  |
 | --- | --- |
 | Número do comando | 485 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

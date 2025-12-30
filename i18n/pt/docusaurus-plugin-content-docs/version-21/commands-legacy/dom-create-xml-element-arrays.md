@@ -67,6 +67,6 @@ Para isso, basta escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 1097 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* ; *colNumber* ; *object* )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *colNumber* : Integer ; *object* : Field, Variable, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| colNumber | Integer | &#8594;  | カラム番号 |
-| object | Field, Variable, Pointer | &#8594;  | カラムに挿入するオブジェクト |
+| area | Integer | &#8594; | エリア参照 |
+| colNumber | Integer | &#8594; | カラム番号 |
+| object | Field, Variable, Pointer | &#8594; | カラムに挿入するオブジェクト |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 748 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/set-real-comparison-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* )<!-- END REF-->
+<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* : Real )<!-- END REF-->
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| epsilon | Real | &#8594;  | 実数の同等性を比較するためのイプシロン値 |
+| epsilon | Real | &#8594; | 実数の同等性を比較するためのイプシロン値 |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 623 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

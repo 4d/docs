@@ -5,14 +5,14 @@ slug: /commands/qr-get-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* ; *numColuna* ; *numLinha* ; *propriedade* ) : any<!-- END REF-->
+<!--REF #_command_.QR Get text property.Syntax-->**QR Get text property** ( *area* : Integer ; *numColuna* : Integer ; *numLinha* : Integer ; *propriedade* : Integer ) : any<!-- END REF-->
 <!--REF #_command_.QR Get text property.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Nº da coluna |
-| numLinha | Integer | &#8594;  | N° da linha |
-| propriedade | Integer | &#8594;  | Número da propriedade |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Nº da coluna |
+| numLinha | Integer | &#8594; | N° da linha |
+| propriedade | Integer | &#8594; | Número da propriedade |
 | Function result | Inteiro longo, String | &#8592; | Valor da propriedade selecionada |
 
 <!-- END REF-->
@@ -73,7 +73,7 @@ Se o parâmetro *propriedade* é incorreto, se gera o erro -9854.
 |  |  |
 | --- | --- |
 | Número do comando | 760 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

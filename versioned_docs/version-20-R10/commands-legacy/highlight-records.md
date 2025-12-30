@@ -53,6 +53,6 @@ When the user clicks the button, the standard query dialog box appears. Once the
 |  |  |
 | --- | --- |
 | Command number | 656 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

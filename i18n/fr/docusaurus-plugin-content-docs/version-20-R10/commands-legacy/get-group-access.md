@@ -41,6 +41,6 @@ Vous souhaitez vérifier si l'utilisateur courant appartient au groupe "plugins"
 |  |  |
 | --- | --- |
 | Numéro de commande | 1738 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTable* {; *aField*}{; *aField2* ; ... ; *aFieldN*}{; *template*})  : Text<!-- END REF-->
+<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTable* : Table {; *...aField* : Field}{; *template* : Object})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | シリアライズするテーブル |
-| aField | Field | &#8594;  | シリアライズするフィールドを指定 |
-| template | Object | &#8594;  | プロパティ名と取り出したいフィールドを指定するポインターをオブジェクトで渡す |
+| aTable | Table | &#8594; | シリアライズするテーブル |
+| aField | Field | &#8594; | シリアライズするフィールドを指定 |
+| template | Object | &#8594; | プロパティ名と取り出したいフィールドを指定するポインターをオブジェクトで渡す |
 | 戻り値 | Text | &#8592; | シリアライズされた JSON 配列を含む文字列 |
 
 <!-- END REF-->
@@ -96,6 +96,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1234 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

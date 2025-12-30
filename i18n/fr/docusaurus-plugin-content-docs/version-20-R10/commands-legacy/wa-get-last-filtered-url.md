@@ -39,6 +39,6 @@ Il est judicieux d’appeler cette commande dans le contexte des événements fo
 |  |  |
 | --- | --- |
 | Numéro de commande | 1035 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

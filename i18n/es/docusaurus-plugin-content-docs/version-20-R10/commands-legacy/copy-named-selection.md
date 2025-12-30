@@ -56,6 +56,6 @@ El siguiente ejemplo permite verificar si hay otras facturas vencidas en la tabl
 |  |  |
 | --- | --- |
 | Número de comando | 331 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

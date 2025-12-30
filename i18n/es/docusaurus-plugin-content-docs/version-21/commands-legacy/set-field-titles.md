@@ -66,6 +66,6 @@ Ver el ejemplo del comando [SET TABLE TITLES](set-table-titles.md "SET TABLE TIT
 |  |  |
 | --- | --- |
 | Número de comando | 602 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

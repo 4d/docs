@@ -5,12 +5,12 @@ slug: /commands/qr-set-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* ; *plantilla* )<!-- END REF-->
+<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* : Integer ; *plantilla* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| plantilla | Text | &#8594;  | Código de la plantilla HTML |
+| area | Integer | &#8594; | Referencia del área |
+| plantilla | Text | &#8594; | Código de la plantilla HTML |
 
 <!-- END REF-->
 
@@ -79,7 +79,7 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 750 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

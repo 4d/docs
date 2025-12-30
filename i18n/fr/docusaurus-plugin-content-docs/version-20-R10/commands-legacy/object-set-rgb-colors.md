@@ -110,6 +110,6 @@ Passage du fond en transparent avec couleur de police claire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 628 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

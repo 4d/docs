@@ -67,6 +67,6 @@ Ajout d’une date de modification à une documentation de trigger existante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1193 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

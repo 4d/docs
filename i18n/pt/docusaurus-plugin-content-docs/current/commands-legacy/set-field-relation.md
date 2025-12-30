@@ -5,13 +5,13 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( tabelaN | campoN ; *um* ; *muitos* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( tabelaN | campoN ; *um* : Integer ; *muitos* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabelaN &#124; campoN | Tabela, Campo | &#8594;  | Tabela de início das relações ou Campo de início da relação |
-| um | Integer | &#8594;  | Estado da relação Muitos a Um a partir do campo ou das relações Muitos a Um da tabela |
-| muitos | Integer | &#8594;  | Estado da relação Um a Muitos a partir do campo ou das relações Um a Muitos da tabela |
+| tabelaN &#124; campoN | Tabela, Campo | &#8594; | Tabela de início das relações ou Campo de início da relação |
+| um | Integer | &#8594; | Estado da relação Muitos a Um a partir do campo ou das relações Muitos a Um da tabela |
+| muitos | Integer | &#8594; | Estado da relação Um a Muitos a partir do campo ou das relações Um a Muitos da tabela |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ QR REPORT(\[Faturas\];Char(1))\[#/code4D\]
 |  |  |
 | --- | --- |
 | Número do comando | 919 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

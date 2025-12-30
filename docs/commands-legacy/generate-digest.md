@@ -5,7 +5,7 @@ slug: /commands/generate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* ; *algorithm* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* : Blob, Text ; *algorithm* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate digest.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -90,6 +90,6 @@ These examples illustrate how to retrieve the digest key of a text:
 |  |  |
 | --- | --- |
 | Command number | 1147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/set-timeout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *segundos* )<!-- END REF-->
+<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *segundos* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMEOUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| segundos | Integer | &#8594;  | Segundos até o timeout |
+| segundos | Integer | &#8594; | Segundos até o timeout |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ O exemplo a seguir define a porta serial para receber dados. Em seguida, ele def
 |  |  |
 | --- | --- |
 | Número do comando | 268 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

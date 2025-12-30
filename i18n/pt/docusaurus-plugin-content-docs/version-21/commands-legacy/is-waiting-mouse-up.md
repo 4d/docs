@@ -64,6 +64,6 @@ O código abaixo pode ser usado para gerenciar uma propriedade de tracking de mo
 |  |  |
 | --- | --- |
 | Número do comando | 1422 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

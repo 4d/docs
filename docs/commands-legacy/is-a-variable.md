@@ -5,7 +5,7 @@ slug: /commands/is-a-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *aPointer* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a variable.Syntax-->**Is a variable** ( *aPointer* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a variable.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ When you want to know the name of the variable being pointed to or the field num
 |  |  |
 | --- | --- |
 | Command number | 294 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

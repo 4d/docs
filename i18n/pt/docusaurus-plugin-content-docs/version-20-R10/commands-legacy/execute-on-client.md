@@ -67,7 +67,7 @@ A variável do sistema **OK é** igual a 1 se o 4D Server recebeu corretamente o
 |  |  |
 | --- | --- |
 | Número do comando | 651 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

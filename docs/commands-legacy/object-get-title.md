@@ -5,7 +5,7 @@ slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *object* : Text ) : Text<br/>**OBJECT Get title** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 |  |  |
 | --- | --- |
 | Command number | 1068 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

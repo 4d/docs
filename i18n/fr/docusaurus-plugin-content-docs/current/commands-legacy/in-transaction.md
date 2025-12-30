@@ -36,6 +36,6 @@ Si vous effectuez l'opération depuis un trigger ou une sous-routine pouvant êt
 |  |  |
 | --- | --- |
 | Numéro de commande | 397 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

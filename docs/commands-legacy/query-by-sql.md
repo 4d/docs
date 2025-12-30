@@ -5,7 +5,7 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*aTable* ;} *sqlFormula* )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*aTable* : Table ;} *sqlFormula* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -162,7 +162,7 @@ If the format of the search condition is correct, the system variable OK is set 
 |  |  |
 | --- | --- |
 | Command number | 942 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 | Changes current record ||
 | Changes current selection ||

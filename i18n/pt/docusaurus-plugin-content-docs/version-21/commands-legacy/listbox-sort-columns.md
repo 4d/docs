@@ -40,6 +40,6 @@ Nota: O comando LISTBOX SORT COLUMNS não leva em consideração a propriedade d
 |  |  |
 | --- | --- |
 | Número do comando | 916 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

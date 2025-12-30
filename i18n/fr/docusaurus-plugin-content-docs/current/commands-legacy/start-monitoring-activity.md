@@ -5,12 +5,12 @@ slug: /commands/start-monitoring-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duree* {; *source*} )<!-- END REF-->
+<!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duree* : Real {; *source* : Integer} )<!-- END REF-->
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| duree | Real | &#8594;  | Durée (en secondes) avant l'ouverture d'une session |
-| source | Integer | &#8594;  | Origine d'une opération |
+| duree | Real | &#8594; | Durée (en secondes) avant l'ouverture d'une session |
+| source | Integer | &#8594; | Origine d'une opération |
 
 <!-- END REF-->
 
@@ -98,6 +98,6 @@ Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1712 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

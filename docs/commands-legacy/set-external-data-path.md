@@ -5,7 +5,7 @@ slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aField* ; *path* )<!-- END REF-->
+<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aField* : Text, Blob, Picture ; *path* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ You want to save an existing file in the picture field, stored outside of the da
 |  |  |
 | --- | --- |
 | Command number | 1134 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

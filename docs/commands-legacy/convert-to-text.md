@@ -5,11 +5,11 @@ slug: /commands/convert-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* ; *charSet* ) : Text<!-- END REF-->
+<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *blob* : Blob ; *charSet* : Text, Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB containing text expressed in a specific character set |
+| Blob | Blob | &#8594;  | BLOB containing text expressed in a specific character set |
 | charSet | Text, Integer | &#8594;  | Name or Number of BLOB character set |
 | Function result | Text | &#8592; | Contents of BLOB expressed in 4D character set |
 
@@ -36,7 +36,7 @@ If the command has been correctly executed, the OK variable is set to 1\. Otherw
 |  |  |
 | --- | --- |
 | Command number | 1012 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

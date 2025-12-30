@@ -5,7 +5,7 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -64,6 +64,6 @@ This example gets the standard deviation of a series of values placed in an arra
 |  |  |
 | --- | --- |
 | Command number | 26 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

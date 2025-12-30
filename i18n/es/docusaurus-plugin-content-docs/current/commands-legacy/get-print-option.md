@@ -5,11 +5,11 @@ slug: /commands/get-print-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *opcion* ; *valor1* {; *valor2*} )<!-- END REF-->
+<!--REF #_command_.GET PRINT OPTION.Syntax-->**GET PRINT OPTION** ( *opcion* : Integer ; *valor1* : Integer, Text {; *valor2* : Integer, Text} )<!-- END REF-->
 <!--REF #_command_.GET PRINT OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opcion | Integer | &#8594;  | Número de opción |
+| opcion | Integer | &#8594; | Número de opción |
 | valor1 | Integer, Text | &#8592; | Valor 1 de la opción |
 | valor2 | Integer, Text | &#8592; | Valor 2 de la opción |
 
@@ -55,7 +55,7 @@ La variable sistema OK toma el valor 1 si el comando ha sido ejecutado correctam
 |  |  |
 | --- | --- |
 | Número de comando | 734 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

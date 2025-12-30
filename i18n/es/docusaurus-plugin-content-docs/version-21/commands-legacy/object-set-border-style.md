@@ -44,6 +44,6 @@ En el parámetro *estiloBorde*, pase el valor del estilo de la línea fronteriza
 |  |  |
 | --- | --- |
 | Número de comando | 1262 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

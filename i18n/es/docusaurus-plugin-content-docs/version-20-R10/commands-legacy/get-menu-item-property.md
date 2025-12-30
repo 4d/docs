@@ -38,6 +38,6 @@ En el parámetro *propiedad*, pase la propiedad para la cual quiere obtener el v
 |  |  |
 | --- | --- |
 | Número de comando | 972 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

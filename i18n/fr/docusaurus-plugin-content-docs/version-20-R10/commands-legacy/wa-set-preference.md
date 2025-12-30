@@ -55,6 +55,6 @@ Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1041 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

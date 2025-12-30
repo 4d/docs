@@ -47,6 +47,6 @@ El parámetro *título* devuelve el título de la ventana del formulario, tal co
 |  |  |
 | --- | --- |
 | Número de comando | 674 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

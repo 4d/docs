@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) : Integer<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* : Time ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -62,7 +62,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 860 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

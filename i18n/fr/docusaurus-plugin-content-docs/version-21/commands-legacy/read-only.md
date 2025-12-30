@@ -32,6 +32,6 @@ Vous pouvez utiliser **READ ONLY** lorsqu'il n'est pas utile de modifier les enr
 |  |  |
 | --- | --- |
 | Numéro de commande | 145 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

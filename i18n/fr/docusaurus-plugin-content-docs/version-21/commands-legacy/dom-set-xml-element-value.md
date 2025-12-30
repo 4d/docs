@@ -122,7 +122,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 868 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

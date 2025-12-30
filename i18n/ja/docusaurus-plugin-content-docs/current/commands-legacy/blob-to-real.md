@@ -5,14 +5,14 @@ slug: /commands/blob-to-real
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *BLOB* ; *realFormat* {; *offset*} ) : Real<!-- END REF-->
+<!--REF #_command_.BLOB to real.Syntax-->**BLOB to real** ( *BLOB* : Blob ; *realFormat* : Integer {; *offset* : Variable} ) : Real<!-- END REF-->
 <!--REF #_command_.BLOB to real.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | 実数値を取り出すBLOB |
-| realFormat | Integer | &#8594;  | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
+| Blob | Blob | &#8594; | 実数値を取り出すBLOB |
+| realFormat | Integer | &#8594; | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
 | offset | Variable | &#8596; | BLOB中のオフセット (バイト単位) |
-| || | 読み込み後、新しいオフセット |
+|  |  |  | 読み込み後、新しいオフセット |
 | 戻り値 | Real | &#8592; | 実数値 |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 |  |  |
 | --- | --- |
 | コマンド番号 | 553 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

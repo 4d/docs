@@ -5,12 +5,12 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *round* ; *decimais* ) : Real<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *round* : Real ; *decimais* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| round | Real | &#8594;  | Número a ser arredondado |
-| decimais | Integer | &#8594;  | Número de casas decimais a arredondar |
+| round | Real | &#8594; | Número a ser arredondado |
+| decimais | Integer | &#8594; | Número de casas decimais a arredondar |
 | Resultado | Real | &#8592; | Valor arredondado ao número de casas decimais especificada por decimais |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ O exemplo a seguir ilustra como Round funciona com diferentes argumentos. Cada l
 |  |  |
 | --- | --- |
 | Número do comando | 94 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

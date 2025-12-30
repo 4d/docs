@@ -77,6 +77,6 @@ Après l'exécution des lignes de code suivantes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 381 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

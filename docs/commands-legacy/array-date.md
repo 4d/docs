@@ -5,7 +5,7 @@ slug: /commands/array-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY DATE.Syntax-->**ARRAY DATE** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY DATE.Syntax-->**ARRAY DATE** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY DATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ This example creates an interprocess array of 50 Date elements, and sets each el
 |  |  |
 | --- | --- |
 | Command number | 224 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

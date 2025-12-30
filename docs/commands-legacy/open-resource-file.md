@@ -5,7 +5,7 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* {; *fileType*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -103,7 +103,7 @@ If the resource file could not be opened due to a resource or I/O problem, an er
 |  |  |
 | --- | --- |
 | Command number | 497 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document, error |
 
 

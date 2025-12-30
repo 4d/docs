@@ -66,6 +66,6 @@ Reportez-vous à l'exemple de la fonction [Process number](../commands/process-n
 |  |  |
 | --- | --- |
 | Numéro de commande | 465 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

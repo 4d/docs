@@ -5,14 +5,14 @@ slug: /commands/qr-get-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *zone* ; *colonne* ; *ligne* ; *encadrement* ; *ligne* {; *couleur*} )<!-- END REF-->
+<!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *zone* : Integer ; *colonne* : Integer ; *ligne* : Integer ; *encadrement* : Integer ; *ligne* : Integer {; *couleur* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR GET BORDERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| colonne | Integer | &#8594;  | Numéro de colonne |
-| ligne | Integer | &#8594;  | Numéro de ligne |
-| encadrement | Integer | &#8594;  | Valeur d'encadrement |
+| zone | Integer | &#8594; | Référence de la zone |
+| colonne | Integer | &#8594; | Numéro de colonne |
+| ligne | Integer | &#8594; | Numéro de ligne |
+| encadrement | Integer | &#8594; | Valeur d'encadrement |
 | ligne | Integer | &#8592; | Epaisseur de trait |
 | couleur | Integer | &#8592; | Couleur de l'encadrement |
 
@@ -74,7 +74,7 @@ Si le paramètre *encadrement* est incorrect, l’erreur -9854 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 798 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

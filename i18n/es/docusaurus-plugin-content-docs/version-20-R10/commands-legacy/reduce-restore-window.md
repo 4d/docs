@@ -35,6 +35,6 @@ El comando cambia el estado de la ventana:
 |  |  |
 | --- | --- |
 | Número de comando | 1829 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

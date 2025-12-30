@@ -5,13 +5,13 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *objeto* ; *propriedade* {; *tipo*} ) : any<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *objeto* : Object, Campo Object ; *propriedade* : Text {; *tipo* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594;  | Objeto estruturado |
-| propriedade | Text | &#8594;  | Nome da propriedade a ler |
-| tipo | Integer | &#8594;  | Tipo ao qual converter o valor |
+| objeto | Object, Campo Object | &#8594; | Objeto estruturado |
+| propriedade | Text | &#8594; | Nome da propriedade a ler |
+| tipo | Integer | &#8594; | Tipo ao qual converter o valor |
 | Resultado | any | &#8592; | Valor atual de propriedade |
 
 <!-- END REF-->
@@ -226,6 +226,6 @@ Se quiser conhecer o tamanho de uma imagem armazenada em um atributo objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1224 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

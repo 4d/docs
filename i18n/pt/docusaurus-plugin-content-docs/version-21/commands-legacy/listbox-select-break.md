@@ -67,6 +67,6 @@ Este é o resultado:
 |  |  |
 | --- | --- |
 | Número do comando | 1117 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

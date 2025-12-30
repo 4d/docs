@@ -102,6 +102,6 @@ Example of printing a complete list box:
 |  |  |
 | --- | --- |
 | Command number | 1095 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

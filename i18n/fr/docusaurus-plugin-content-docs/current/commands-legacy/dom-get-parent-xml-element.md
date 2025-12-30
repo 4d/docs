@@ -5,11 +5,11 @@ slug: /commands/dom-get-parent-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *refElément* {; *nomElémentPar* {; *valeurElémentPar*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get parent XML element.Syntax-->**DOM Get parent XML element** ( *refElément* : Text {; *nomElémentPar* : Text {; *valeurElémentPar* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get parent XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
+| refElément | Text | &#8594; | Référence d’élément XML |
 | nomElémentPar | Text | &#8592; | Nom de l’élément XML parent |
 | valeurElémentPar | Text | &#8592; | Valeur de l’élément XML parent |
 | Résultat | Text | &#8592; | Référence de l’élément XML parent |
@@ -40,7 +40,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 923 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

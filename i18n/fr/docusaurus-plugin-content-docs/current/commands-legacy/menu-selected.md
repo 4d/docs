@@ -5,7 +5,7 @@ slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *sousMenu* )} : Integer<!-- END REF-->
+<!--REF #_command_.Menu selected.Syntax-->**Menu selected** ( *sousMenu* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ La méthode formulaire suivante utilise la fonction **Menu selected** pour fourn
 |  |  |
 | --- | --- |
 | Numéro de commande | 152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

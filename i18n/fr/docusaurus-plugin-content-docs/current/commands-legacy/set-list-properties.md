@@ -5,17 +5,17 @@ slug: /commands/set-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *liste* ; *apparence* {; *icône* {; *hauteurLigne* {; *doubleClic* {; *multiSélection* {; *modifiable*}}}}} )<!-- END REF-->
+<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *liste* : Integer ; *apparence* : Integer {; *icône* : Integer {; *hauteurLigne* : Integer {; *doubleClic* : Integer {; *multiSélection* : Integer {; *modifiable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &#8594;  | Numéro de référence de la liste |
-| apparence | Integer | &#8594;  | *** paramètre obsolète, toujours passer 0 *** |
-| icône | Integer | &#8594;  | *** Paramètre obsolète, toujours passer 0 *** |
-| hauteurLigne | Integer | &#8594;  | Hauteur minimale de la ligne (pixels) |
-| doubleClic | Integer | &#8594;  | Déploiement/contraction sur double-clic 0 = autoriser, 1= empêcher |
-| multiSélection | Integer | &#8594;  | Sélections multiples 0 = interdire (défaut), 1 = autoriser |
-| modifiable | Integer | &#8594;  | Enumération modifiable 0 = non, 1 = oui (défaut) |
+| liste | Integer | &#8594; | Numéro de référence de la liste |
+| apparence | Integer | &#8594; | *** paramètre obsolète, toujours passer 0 *** |
+| icône | Integer | &#8594; | *** Paramètre obsolète, toujours passer 0 *** |
+| hauteurLigne | Integer | &#8594; | Hauteur minimale de la ligne (pixels) |
+| doubleClic | Integer | &#8594; | Déploiement/contraction sur double-clic 0 = autoriser, 1= empêcher |
+| multiSélection | Integer | &#8594; | Sélections multiples 0 = interdire (défaut), 1 = autoriser |
+| modifiable | Integer | &#8594; | Enumération modifiable 0 = non, 1 = oui (défaut) |
 
 <!-- END REF-->
 
@@ -65,6 +65,6 @@ Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouve
 |  |  |
 | --- | --- |
 | Numéro de commande | 387 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* {; *pageBreak*} ) : Real<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *data* : Field {; *pageBreak* : Integer} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ The **Subtotal** function is necessary in order to display values on a form.
 |  |  |
 | --- | --- |
 | Command number | 97 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/web-get-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *paginas* ; *hits* ; *uso* )<!-- END REF-->
+<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *paginas* : Text array ; *hits* : Integer array ; *uso* : Integer )<!-- END REF-->
 <!--REF #_command_.WEB GET STATISTICS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ Puede enviar la página "stats.shtm" utilizando un enlace URL o utilizando el co
 |  |  |
 | --- | --- |
 | Número de comando | 658 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

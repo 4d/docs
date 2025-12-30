@@ -5,13 +5,13 @@ slug: /commands/method-get-folders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *tabNoms* {; *filtre*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *tabNoms* : Text array {; *filtre* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabNoms | Text array | &#8592; | Tableau des noms de dossiers de la page Démarrage |
-| filtre | Text | &#8594;  | Filtrage des noms |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| filtre | Text | &#8594; | Filtrage des noms |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ Si la commande est exécutée depuis un composant, elle retourne par défaut les
 |  |  |
 | --- | --- |
 | Numéro de commande | 1206 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

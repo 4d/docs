@@ -5,12 +5,12 @@ slug: /commands/goto-selected-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*laTable* ;} *enregistrement* )<!-- END REF-->
+<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*laTable* : Table ;} *enregistrement* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
-| enregistrement | Integer | &#8594;  | Position de l'enregistrement dans la sélection |
+| laTable | Table | &#8594; | Table dans laquelle aller à l'enregistrement spécifié ou Table par défaut si ce paramètre est omis |
+| enregistrement | Integer | &#8594; | Position de l'enregistrement dans la sélection |
 
 <!-- END REF-->
 
@@ -67,7 +67,7 @@ La méthode objet de la zone de défilement *taNoms* suivante sélectionne le bo
 |  |  |
 | --- | --- |
 | Numéro de commande | 245 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

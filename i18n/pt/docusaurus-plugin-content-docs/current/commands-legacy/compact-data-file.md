@@ -5,15 +5,15 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *endEstrutura* ; *endDados* {; *pastaArquivo* {; *opçao* {; *metodo*}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *endEstrutura* : Text ; *endDados* : Text {; *pastaArquivo* : Text {; *opçao* : Integer {; *metodo* : Text}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| endEstrutura | Text | &#8594;  | Endereço de acesso ao arquivo de estrutura |
-| endDados | Text | &#8594;  | Endereço de acesso ao arquivo de dados |
-| pastaArquivo | Text | &#8594;  | Endereço de acesso a pasta onde será colocado o arquivo de dados original |
-| opçao | Integer | &#8594;  | Opções de compactação |
-| metodo | Text | &#8594;  | Nome do método 4D de retrochamada |
+| endEstrutura | Text | &#8594; | Endereço de acesso ao arquivo de estrutura |
+| endDados | Text | &#8594; | Endereço de acesso ao arquivo de dados |
+| pastaArquivo | Text | &#8594; | Endereço de acesso a pasta onde será colocado o arquivo de dados original |
+| opçao | Integer | &#8594; | Opções de compactação |
+| metodo | Text | &#8594; | Nome do método 4D de retrochamada |
 | Resultado | Text | &#8592; | Endereço de acesso completo à pasta que contém o arquivo de dados original |
 
 <!-- END REF-->
@@ -76,7 +76,7 @@ Se um arquivo de histórico for gerado, seu nome de caminho completo é retornad
 |  |  |
 | --- | --- |
 | Número do comando | 937 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

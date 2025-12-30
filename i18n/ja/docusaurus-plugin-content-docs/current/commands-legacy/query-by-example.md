@@ -5,12 +5,12 @@ slug: /commands/query-by-example
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*aTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードのセレクションを返すテーブル, または 省略した場合、デフォルトテーブル |
-| * | 演算子 | &#8594;  | 指定した場合、スクロールバーの非表示 |
+| aTable | Table | &#8594; | レコードのセレクションを返すテーブル, または 省略した場合、デフォルトテーブル |
+| * | 演算子 | &#8594; | 指定した場合、スクロールバーの非表示 |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 292 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||

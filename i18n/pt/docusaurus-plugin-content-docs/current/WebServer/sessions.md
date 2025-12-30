@@ -10,11 +10,17 @@ As sessões Web permitem:
 - manipular várias solicitações simultaneamente do mesmo cliente web através de um número ilimitado de processos preventivos (sessões web são **escaláveis**),
 - gerenciar a sessão por um objeto `Session` e da [API de session](API/SessionClass.md),
 - armazena e compartilha dados entre processos de um cliente web usando o [.storage](../API/SessionClass.md#storage) da sessão,
-- associate privileges to the user running the session.
+- associate [privileges](../ORDA/privileges.md) to the user running the session.
 
 :::tip Related blog post
 
 [Scalable sessions for advanced web applications](https://blog.4d.com/scalable-sessions-for-advanced-web-applications/)
+
+:::
+
+:::note
+
+Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md).
 
 :::
 
@@ -23,7 +29,7 @@ As sessões Web permitem:
 As sessões Web são usadas para:
 
 - [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md).
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](https://developer.4d.com/qodly/).
 
 ## Enabling web sessions {#enabling-web-sessions}
 
@@ -63,19 +69,13 @@ O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API
 
 :::note
 
-La creación de una sesión web para una petición REST puede requerir que una licencia esté disponible, consulte [esta página](../REST/authUsers.md).
+Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
 
 :::
 
 The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
-
-:::info
-
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. Quando um processo termina de executar uma solicitação, ele é colocado de novo no pool e disponibilizado para a próxima solicitação. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). Esta limpeza é necessária para todas as informações relacionadas ao processo, como uma referência a um arquivo aberto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
-
-:::
 
 ## Armazenar e compartilhar informações de sessão
 
@@ -100,7 +100,7 @@ Quando uma sessão Web é fechada, se o comando [`Session`](commands/session.md)
 
 :::info
 
-Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout**](qodly-studio.md#logout).
+Você pode fechar uma sessão em um formulário Qodly usando o recurso [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout).
 
 :::
 
@@ -216,6 +216,12 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 :::tip Related blog posts
 
 [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
+:::note
+
+Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
 
 :::
 
@@ -475,7 +481,7 @@ A new user is created, and some information is stored in the session, especially
 - Both HTTP and HTTPS schemas are supported.
 - Apenas [sessões escaláveis](#enabling-web-sessions) podem ser reutilizadas com tokens.
 - Somente as sessões do banco de dados do host podem ser reutilizadas (as sessões criadas em servidores Web de componentes não podem ser restauradas).
-- Tokens are not supported with client/server sessions or single-user sessions.
+- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Lifespan
 

@@ -5,13 +5,13 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *objet* {; *typeListe*} ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( * ; *objet* : Text {; *typeListe* : Integer} ) : Integer<br/>**OBJECT Get list reference** ( *objet* : Field, Variable {; *typeListe* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| typeListe | Integer | &#8594; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
 | Résultat | Integer | &#8592; | Numéro de référence de la liste |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ Si aucune liste hiérarchique n’est associée à l’objet pour le *typeListe*
 |  |  |
 | --- | --- |
 | Numéro de commande | 1267 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

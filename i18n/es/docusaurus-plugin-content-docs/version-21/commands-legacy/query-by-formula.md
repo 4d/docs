@@ -84,7 +84,7 @@ Este ejemplo utiliza una unión para buscar todas las líneas de facturas de cli
 |  |  |
 | --- | --- |
 | Número de comando | 48 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

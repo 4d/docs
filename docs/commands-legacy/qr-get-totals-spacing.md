@@ -5,7 +5,7 @@ slug: /commands/qr-get-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *area* ; *subtotal* ; *value* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *area* : Integer ; *subtotal* : Integer ; *value* : Integer )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ If you pass an invalid *subtotal*, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 762 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

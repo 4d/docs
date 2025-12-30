@@ -5,11 +5,11 @@ slug: /commands/set-text-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texte* )<!-- END REF-->
+<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texte* : Text )<!-- END REF-->
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texte | Text | &#8594;  | Texte à placer dans le conteneur de données |
+| texte | Text | &#8594; | Texte à placer dans le conteneur de données |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Si la copie du texte est correctement placée dans le conteneur de données, la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 523 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

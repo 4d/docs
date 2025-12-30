@@ -5,11 +5,11 @@ slug: /commands/char
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Char.Syntax-->**Char** ( *codeCaractère* ) : Text<!-- END REF-->
+<!--REF #_command_.Char.Syntax-->**Char** ( *codeCaractère* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| codeCaractère | Integer | &#8594;  | Code de caractère |
+| codeCaractère | Integer | &#8594; | Code de caractère |
 | Résultat | Text | &#8592; | Caractère représenté par codeCaractère |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot d
 |  |  |
 | --- | --- |
 | Numéro de commande | 90 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

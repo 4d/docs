@@ -5,7 +5,7 @@ slug: /commands/is-user-deleted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is user deleted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ If you do not have the proper access privileges for calling Is user deleted or i
 |  |  |
 | --- | --- |
 | Command number | 616 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

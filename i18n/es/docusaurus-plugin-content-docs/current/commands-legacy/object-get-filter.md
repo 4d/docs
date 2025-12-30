@@ -5,12 +5,12 @@ slug: /commands/object-get-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get filter** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get filter.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variable o campo (si se omite) |
 | Resultado | Text | &#8592; | Nombre del filtro |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Si pasa el parámetro opcional *\**, indica que el parámetro objeto es un nombr
 |  |  |
 | --- | --- |
 | Número de comando | 1073 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

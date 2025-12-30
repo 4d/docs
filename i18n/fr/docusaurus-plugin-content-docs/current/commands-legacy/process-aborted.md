@@ -28,6 +28,6 @@ Ce statut se produira très rarement. Les process sont généralement arrêtés 
 |  |  |
 | --- | --- |
 | Numéro de commande | 672 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

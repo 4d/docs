@@ -163,7 +163,7 @@ Se o comando for executado corretamente, a variável sistema OK retorna 1, do co
 |  |  |
 | --- | --- |
 | Número do comando | 820 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

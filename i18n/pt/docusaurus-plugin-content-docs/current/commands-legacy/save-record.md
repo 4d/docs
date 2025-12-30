@@ -5,11 +5,11 @@ slug: /commands/save-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.SAVE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai salvar o registro atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual vai salvar o registro atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -54,6 +54,6 @@ O exemplo a seguir é parte de um método que lê registros de um documento. Nes
 |  |  |
 | --- | --- |
 | Número do comando | 53 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

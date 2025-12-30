@@ -5,13 +5,13 @@ slug: /commands/object-set-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( {* ;} *objet* ; *codeLangue* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *objet* : Text ; *codeLangue* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *objet* : Field, Variable ; *codeLangue* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable ou champ (si * est omis) |
-| codeLangue | Text | &#8594;  | Code de langue RFC3066 ISO639 et ISO3166, "" = pas de changement |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable ou champ (si * est omis) |
+| codeLangue | Text | &#8594; | Code de langue RFC3066 ISO639 et ISO3166, "" = pas de changement |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Passez dans le paramètre *codeLangue* une chaîne indiquant le code de langue �
 |  |  |
 | --- | --- |
 | Numéro de commande | 1179 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

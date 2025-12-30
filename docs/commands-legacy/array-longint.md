@@ -5,7 +5,7 @@ slug: /commands/array-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY LONGINT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,6 +63,6 @@ This example creates an interprocess array of 50 4-byte Long Integer elements an
 |  |  |
 | --- | --- |
 | Command number | 221 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

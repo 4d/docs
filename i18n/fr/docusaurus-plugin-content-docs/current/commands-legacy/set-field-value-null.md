@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ auquel attribuer la valeur NULL |
+| leField | Field | &#8594; | Champ auquel attribuer la valeur NULL |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ La valeur NULL est exploitée par le moteur SQL de 4D. Pour plus d’information
 |  |  |
 | --- | --- |
 | Numéro de commande | 965 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

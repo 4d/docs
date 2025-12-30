@@ -5,7 +5,7 @@ slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* ; *top* ; *right* ; *bottom* {; *screenID* {; *screenArea*}} )<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *screenID* : Integer {; *screenArea* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,6 +51,6 @@ The following images demonstrate the differences between the screen size and the
 |  |  |
 | --- | --- |
 | Command number | 438 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

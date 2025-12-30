@@ -41,7 +41,7 @@ The following example uses [LOAD SET](load-set.md) to load a set of the Acme loc
 |  |  |
 | --- | --- |
 | Command number | 118 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

@@ -37,6 +37,6 @@ You can compare the value returned with the constants of the *Listbox Footer Cal
 |  |  |
 | --- | --- |
 | Command number | 1150 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

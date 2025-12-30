@@ -5,7 +5,7 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* ; *itemRef* ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<br/>**SET LIST ITEM** ( * ; *list* ; * ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**SET LIST ITEM** ( * ; *list* : Integer, Text ; * ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -83,6 +83,6 @@ See example for the [APPEND TO LIST](append-to-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 385 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

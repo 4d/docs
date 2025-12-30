@@ -5,7 +5,7 @@ slug: /commands/qr-delete-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *area* )<!-- END REF-->
+<!--REF #_command_.QR DELETE OFFSCREEN AREA.Syntax-->**QR DELETE OFFSCREEN AREA** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE OFFSCREEN AREA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 754 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

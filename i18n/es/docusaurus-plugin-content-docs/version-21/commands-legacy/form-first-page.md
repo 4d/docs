@@ -37,6 +37,6 @@ El siguiente ejemplo es un método de una línea, llamado por un comando de men�
 |  |  |
 | --- | --- |
 | Número de comando | 250 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/import-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*laTable* ;} *nomFichier* )<!-- END REF-->
+<!--REF #_command_.IMPORT SYLK.Syntax-->**IMPORT SYLK** ( {*laTable* : Table ;} *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT SYLK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
-| nomFichier | Text | &#8594;  | Document SYLK à importer |
+| laTable | Table | &#8594; | Table dans laquelle effectuer l'import ou Table par défaut si ce paramètre est omis |
+| nomFichier | Text | &#8594; | Document SYLK à importer |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ OK prend la valeur 1 si l'import s'est correctement déroulé, sinon elle prend 
 |  |  |
 | --- | --- |
 | Numéro de commande | 87 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

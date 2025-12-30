@@ -5,13 +5,13 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( {* ;} *objet* ; *saisissable* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *objet* : Text ; *saisissable* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *objet* : Field, Variable ; *saisissable* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une table, un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Table ou Champ ou Variable (si * omis) |
-| saisissable | Boolean, Integer | &#8594;  | Booléen : Vrai=saisissable, Faux=non saisissable<br/>Entier long : 0=non saisissable, 1=saisissable, 2=non saisissable non focusable |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une table, un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * spécifié) ou Table ou Champ ou Variable (si * omis) |
+| saisissable | Boolean, Integer | &#8594; | Booléen : Vrai=saisissable, Faux=non saisissable<br/>Entier long : 0=non saisissable, 1=saisissable, 2=non saisissable non focusable |
 
 <!-- END REF-->
 
@@ -78,6 +78,6 @@ Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une
 |  |  |
 | --- | --- |
 | Numéro de commande | 238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

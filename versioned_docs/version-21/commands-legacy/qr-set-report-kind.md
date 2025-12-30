@@ -43,7 +43,7 @@ If you pass an invalid *type* value, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 738 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

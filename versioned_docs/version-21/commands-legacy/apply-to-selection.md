@@ -68,7 +68,7 @@ If the user clicks the Stop button in the progress thermometer, the OK system va
 |  |  |
 | --- | --- |
 | Command number | 70 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

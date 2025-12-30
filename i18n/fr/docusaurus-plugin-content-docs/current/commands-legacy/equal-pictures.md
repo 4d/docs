@@ -5,12 +5,12 @@ slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *image1* ; *image2* ; *masque* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *image1* : Picture, Picture ; *image2* : Picture, Picture ; *masque* : Picture, Picture ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image1 | Picture, Picture | &#8594;  | Image source originale |
-| image2 | Picture, Picture | &#8594;  | Image à comparer |
+| image1 | Picture, Picture | &#8594; | Image source originale |
+| image2 | Picture, Picture | &#8594; | Image à comparer |
 | masque | Picture, Picture | &#8592; | Masque résultant |
 | Résultat | Boolean | &#8592; | Vrai si les deux images sont identiques, sinon Faux |
 
@@ -48,7 +48,7 @@ Le code du bouton **Compare** est le suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1196 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -5,11 +5,11 @@ slug: /commands/resolve-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *pointer* ; *varName* ; *tableNum* ; *fieldNum* )<!-- END REF-->
+<!--REF #_command_.RESOLVE POINTER.Syntax-->**RESOLVE POINTER** ( *pointer* : Pointer ; *varName* : Text ; *tableNum* : Integer ; *fieldNum* : Integer )<!-- END REF-->
 <!--REF #_command_.RESOLVE POINTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pointer | Pointer | &#8594;  | 参照オブジェクトを取得するポインタ |
+| pointer | Pointer | &#8594; | 参照オブジェクトを取得するポインタ |
 | varName | Text | &#8592; | 参照された変数の名前または空の文字列 |
 | tableNum | Integer | &#8592; | 参照されたテーブルまたは配列要素の番号 または 0 あるいは -1 |
 | fieldNum | Integer | &#8592; | 参照されたフィールドの番号 または 0 あるいは -1 |
@@ -115,6 +115,6 @@ DRAG AND DROP PROPERTIES コマンドの例を参照.
 |  |  |
 | --- | --- |
 | コマンド番号 | 394 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

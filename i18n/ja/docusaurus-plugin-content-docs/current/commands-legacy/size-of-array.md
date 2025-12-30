@@ -5,11 +5,11 @@ slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* ) : Integer<!-- END REF-->
+<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *array* : Array ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | サイズを取得する配列 |
+| array | Array | &#8594; | サイズを取得する配列 |
 | 戻り値 | Integer | &#8592; | 配列の要素数 |
 
 <!-- END REF-->
@@ -52,6 +52,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 274 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

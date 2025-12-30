@@ -5,13 +5,13 @@ slug: /commands/document-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *document* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *document* : Text ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.DOCUMENT TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | ドキュメント名 |
-| Blob | Blob |&#8596; | ドキュメントを受け取るBLOBフィールドまたは変数 |
-||| | ドキュメントの内容 |
+| document | Text | &#8594; | ドキュメント名 |
+| Blob | Blob | &#8596; | ドキュメントを受け取るBLOBフィールドまたは変数 |
+|  |  |  | ドキュメントの内容 |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 525 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

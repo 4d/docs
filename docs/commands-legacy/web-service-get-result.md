@@ -5,7 +5,7 @@ slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* {; *returnName* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* : Variable {; *returnName* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ Imagine that a Web Service returns the current time in any city in the world. Th
 |  |  |
 | --- | --- |
 | Command number | 779 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

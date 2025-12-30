@@ -5,7 +5,7 @@ slug: /commands/form-set-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*object* ;} *horizontal* ; *vertical* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*object* : Text ;} *horizontal* : Integer ; *vertical* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -128,6 +128,6 @@ The object method associated with this button is as follows:
 |  |  |
 | --- | --- |
 | Command number | 891 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

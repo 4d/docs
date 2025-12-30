@@ -5,7 +5,7 @@ slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* ; *nativeTypes* {; *formatNames*} )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *4Dsignatures* : Text array ; *nativeTypes* : Text array {; *formatNames* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ For more information about the data types supported, please refer to the *Managi
 |  |  |
 | --- | --- |
 | Command number | 958 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

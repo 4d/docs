@@ -5,11 +5,11 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *liste* ) : Integer<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *liste* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &#8594;  | Numéro de référence de la liste à copier |
+| liste | Integer | &#8594; | Numéro de référence de la liste à copier |
 | Résultat | Integer | &#8592; | Numéro de référence de la nouvelle liste |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ Le contenu de la liste copiée est entièrement dupliqué. Une fois que vous en 
 |  |  |
 | --- | --- |
 | Numéro de commande | 626 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

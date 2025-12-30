@@ -5,13 +5,13 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *object* {; *refMode*} ) : Text<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *object* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *object* : Field, Variable {; *refMode* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
-| refMode | Integer | &#8594;  | Mode for handling references found in the text |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>テキストフィールドまたは変数 (* 省略時) |
+| refMode | Integer | &#8594; | Mode for handling references found in the text |
 | 戻り値 | Text | &#8592; | タグなしのテキスト |
 
 <!-- END REF-->
@@ -110,7 +110,7 @@ It is now   Go to the 4D site or Open a window
 |  |  |
 | --- | --- |
 | コマンド番号 | 1092 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

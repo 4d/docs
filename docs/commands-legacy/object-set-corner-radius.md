@@ -5,7 +5,7 @@ slug: /commands/object-set-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( {* ;} *object* ; *radius* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET CORNER RADIUS.Syntax-->**OBJECT SET CORNER RADIUS** ( * ; *object* : Text ; *radius* : Integer )<br/>**OBJECT SET CORNER RADIUS** ( *object* : Field, Variable ; *radius* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET CORNER RADIUS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -72,6 +72,6 @@ Note that for text areas (as well as inputs), unlike for rectangles, the corner 
 |  |  |
 | --- | --- |
 | Command number | 1323 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

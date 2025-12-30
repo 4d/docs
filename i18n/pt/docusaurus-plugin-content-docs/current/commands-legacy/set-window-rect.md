@@ -5,16 +5,16 @@ slug: /commands/set-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *esquerda* ; *superior* ; *direita* ; *inferior* {; *janela*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer {; *janela* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| esquerda | Integer | &#8594;  | Coordenada global esquerda da área de conteúdo da janela |
-| superior | Integer | &#8594;  | Coordenada global superior da área de conteúdo da janela |
-| direita | Integer | &#8594;  | Coordenada global direita da área de conteúdo da janela |
-| inferior | Integer | &#8594;  | Coordenada global inferior da área de conteúdo da janela |
-| janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
-| * | Operador | &#8594;  | Se omitido (padrão) = muda janela para o fundo<br/>Se passado = não muda o nível da janela |
+| esquerda | Integer | &#8594; | Coordenada global esquerda da área de conteúdo da janela |
+| superior | Integer | &#8594; | Coordenada global superior da área de conteúdo da janela |
+| direita | Integer | &#8594; | Coordenada global direita da área de conteúdo da janela |
+| inferior | Integer | &#8594; | Coordenada global inferior da área de conteúdo da janela |
+| janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| * | Operador | &#8594; | Se omitido (padrão) = muda janela para o fundo<br/>Se passado = não muda o nível da janela |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ A janela aparece desta forma:
 |  |  |
 | --- | --- |
 | Número do comando | 444 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -63,6 +63,6 @@ Este exemplo cria um array interprocesso de 2 bytes de 50 elementos do tipo *Int
 |  |  |
 | --- | --- |
 | Número do comando | 220 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

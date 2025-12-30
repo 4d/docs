@@ -55,6 +55,6 @@ The following example sets the font size for all the form objects whose name sta
 |  |  |
 | --- | --- |
 | Command number | 165 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

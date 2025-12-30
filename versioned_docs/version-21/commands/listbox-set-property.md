@@ -90,6 +90,6 @@ You want to set a maximum width for the column whose name is "ProductNumber":
 |  |  |
 | --- | --- |
 | Command number | 1440 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

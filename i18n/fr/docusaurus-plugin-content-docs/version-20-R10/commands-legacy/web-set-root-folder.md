@@ -43,7 +43,7 @@ Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fi
 |  |  |
 | --- | --- |
 | Numéro de commande | 634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

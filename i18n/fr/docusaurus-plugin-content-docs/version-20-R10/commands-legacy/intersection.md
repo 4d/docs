@@ -55,6 +55,6 @@ L'exemple suivant recherche les clients en contact avec deux représentants, Jea
 |  |  |
 | --- | --- |
 | Numéro de commande | 121 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

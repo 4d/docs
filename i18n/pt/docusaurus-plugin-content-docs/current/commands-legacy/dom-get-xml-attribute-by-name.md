@@ -5,12 +5,12 @@ slug: /commands/dom-get-xml-attribute-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *refElemento* ; *nomeAtrib* ; *valorAtrib* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Syntax-->**DOM GET XML ATTRIBUTE BY NAME** ( *refElemento* : Text ; *nomeAtrib* : Text ; *valorAtrib* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY NAME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
-| nomeAtrib | Text | &#8594;  | Nome de atributo |
+| refElemento | Text | &#8594; | Referência de elemento XML |
+| nomeAtrib | Text | &#8594; | Nome de atributo |
 | valorAtrib | Variable | &#8592; | Valor atributo |
 
 <!-- END REF-->
@@ -55,7 +55,7 @@ Se o comando tiver sido executado corretamente, a variável sistema OK assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 728 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

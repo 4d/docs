@@ -57,6 +57,6 @@ Pour plus d'informations sur ces propriétés, reportez-vous à la description d
 |  |  |
 | --- | --- |
 | Numéro de commande | 631 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

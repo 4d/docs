@@ -5,7 +5,7 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ The following example opens a form window and adds new records with the [ADD REC
 |  |  |
 | --- | --- |
 | Command number | 154 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

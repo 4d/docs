@@ -5,7 +5,7 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *object* ; *vPosition* {; *hPosition*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *object* : Text ; *vPosition* : Integer {; *hPosition* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *object* : Field, Variable ; *vPosition* : Integer {; *hPosition* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ If *object* designates a picture (variable or field), *vPosition* returns the ve
 |  |  |
 | --- | --- |
 | Command number | 1114 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

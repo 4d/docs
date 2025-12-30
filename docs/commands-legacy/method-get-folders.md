@@ -5,7 +5,7 @@ slug: /commands/method-get-folders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *arrNames* {; *filter*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *arrNames* : Text array {; *filter* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ If the command is executed from a component, it returns by default the paths of 
 |  |  |
 | --- | --- |
 | Command number | 1206 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

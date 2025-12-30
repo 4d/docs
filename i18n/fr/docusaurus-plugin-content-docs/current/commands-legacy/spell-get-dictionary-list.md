@@ -5,7 +5,7 @@ slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* ; *langFichiers* ; *langNoms* )<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* : Integer array ; *langFichiers* : Text array ; *langNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,6 +57,6 @@ Vous avez placé "fr-classique+reforme1990.aff" et "fr-classique+reforme1990.dic
 |  |  |
 | --- | --- |
 | Numéro de commande | 1204 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

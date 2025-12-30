@@ -48,7 +48,7 @@ Here is the code for the **Compare** button:
 |  |  |
 | --- | --- |
 | Command number | 1196 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

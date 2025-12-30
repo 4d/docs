@@ -5,7 +5,7 @@ slug: /commands/insert-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* ; *afterItem* ; *itemText* {; *subMenu* {; *process*}}{; *} )<!-- END REF-->
+<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* : Integer ; *afterItem* : Integer ; *itemText* : Text {; *subMenu* : Text {; *process* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ The following example creates a menu consisting of two commands to which it assi
 |  |  |
 | --- | --- |
 | Command number | 412 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

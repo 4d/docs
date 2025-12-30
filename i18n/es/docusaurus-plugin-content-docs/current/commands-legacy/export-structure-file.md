@@ -5,12 +5,12 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rutaCarpeta* {; *opciones*} ) : Object<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rutaCarpeta* : Text {; *opciones* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &#8594;  | Ruta de la carpeta de destino para archivos de proyecto |
-| opciones | Object | &#8594;  | Opciones de exportar |
+| rutaCarpeta | Text | &#8594; | Ruta de la carpeta de destino para archivos de proyecto |
+| opciones | Object | &#8594; | Opciones de exportar |
 | Resultado | Object | &#8592; | Estado de validación y mensajes (si los hay) |
 
 <!-- END REF-->
@@ -119,6 +119,6 @@ Desea exportar solo los métodos proyecto y base, y un archivo de registro:
 |  |  |
 | --- | --- |
 | Número de comando | 1565 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

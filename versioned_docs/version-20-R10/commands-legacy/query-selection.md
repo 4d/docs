@@ -49,7 +49,7 @@ You will find all companies located in New York City, with a Stock Exchange acti
 |  |  |
 | --- | --- |
 | Command number | 341 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

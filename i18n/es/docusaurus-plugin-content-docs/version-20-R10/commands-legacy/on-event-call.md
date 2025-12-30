@@ -120,7 +120,7 @@ Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SEL
 |  |  |
 | --- | --- |
 | Número de comando | 190 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

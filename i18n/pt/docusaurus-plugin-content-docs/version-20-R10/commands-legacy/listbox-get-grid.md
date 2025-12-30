@@ -33,6 +33,6 @@ O comando devolve nos parâmetros *horizontal* e *vertical*, o valor **True** ou
 |  |  |
 | --- | --- |
 | Número do comando | 1199 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

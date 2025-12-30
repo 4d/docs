@@ -61,7 +61,7 @@ La siguiente instrucción coloca el título “Título del centro” en el encab
 |  |  |
 | --- | --- |
 | Número de comando | 774 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -33,6 +33,6 @@ Se passar o parâmetro opcional *\** indica que o parâmetro *objeto* é um nome
 |  |  |
 | --- | --- |
 | Número do comando | 1243 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -48,6 +48,6 @@ The optional *fixedSubform* parameter lets you set an additional option when you
 |  |  |
 | --- | --- |
 | Command number | 1240 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -114,6 +114,6 @@ Com este comando, pode fácilmente manejar objetos em loops:
 |  |  |
 | --- | --- |
 | Número do comando | 1471 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

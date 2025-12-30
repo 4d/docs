@@ -73,7 +73,7 @@ A variável sistema OK assume o valor 1 se o comando for executado corretamente,
 |  |  |
 | --- | --- |
 | Número do comando | 694 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

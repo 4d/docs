@@ -408,8 +408,8 @@ Os elementos devem ser instalados:
 
 Para ativar este recurso, adicione as chaves DatabaseToEmbedInClientWinFolder e/ou DatabaseToEmbedInClientMacFolder no arquivo de configurações do buildApp. Quando uma das chaves estiver presente, a aplicação cliente gera uma aplicação monousuário: a estrutura compilada, ao inves do arquivo EnginedServer.4Dlink é colocada na pasta "Database".
 
-- Se existir uma pasta de dados padrão no aplicativo de usuário único, uma licença será incorporada.
-- Se não existir uma pasta de dados padrão no aplicativo de usuário único, ela será executada sem arquivo de dados e sem licença.
+- If a default data folder exists in the single-user application, a license is embedded.
+- If no default data folder exists in the single-user application, it will be executed without data file and without license.
 
 O cenário básico é o seguinte:
 
@@ -498,10 +498,11 @@ Os seguintes módulos opcionais podem ser desmarcados:
 
 - **SpellChecker**: usado para [correção ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) e comandos disponíveis para áreas de entrada e para áreas 4D Write Pro.
 - **4D Updater**: Controla a [atualização automática](#what-is-a-clientserver-application) das partes do cliente e é usado pelo comando `SET UPDATE FOLDER` para [atualizações automáticas do servidor](#automatic-updating-of-server-or-single-user-applications).
+- **4D Qodly Pro and Data Explorer**: Includes [Qodly Studio and its web renderering features](https://developer.4d.com/qodly/) as well as the [Data Explorer](../Admin/dataExplorer.md).
 
 ## Página de licenças e certificados
 
-A página de Licenças e Certificados pode ser usada:
+The Licenses & Certificate page can be used to:
 
 - configure the [deployment license(s)](../Admin/licenses.md#deployment-licenses) that you want to integrate into your [stand-alone](#application-page) or [client-server](#clientserver-page) application,
 - assinar a aplicação através de um certificado no macOS.
@@ -536,7 +537,7 @@ Um aplicativo de avaliação permite que o usuário final execute uma versão co
 
 - O comando [`License info`](../commands/license-info.md) permite que você saiba o tipo de licença do aplicativo (coleção *.attributes*) e sua data de expiração (objeto *.expirationDate*).
 - A chave xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permite que você gerencie as versões de avaliação.
-- O comando [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) não faz nada quando chamado a partir de uma versão de avaliação.
+- The [`CHANGE LICENSES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
 
 :::
 

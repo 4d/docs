@@ -5,7 +5,7 @@ slug: /commands/form-convert-to-dynamic
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*aTable* ;} *formName* ) : Object<!-- END REF-->
+<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*aTable* : Table ;} *formName* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ If you execute the code:
 |  |  |
 | --- | --- |
 | Command number | 1570 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

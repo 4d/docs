@@ -5,7 +5,7 @@ slug: /commands/save-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *document* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
+<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *document* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
 <!--REF #_command_.SAVE VARIABLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ If the variables are saved properly, the **OK** system variable is set to 1; oth
 |  |  |
 | --- | --- |
 | Command number | 75 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

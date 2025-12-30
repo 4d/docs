@@ -40,7 +40,7 @@ El siguiente ejemplo muestra al usuario la ventana de gestión de usuarios y gru
 |  |  |
 | --- | --- |
 | Número de comando | 281 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

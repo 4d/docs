@@ -42,6 +42,6 @@ Nota: para mais informação sobre o cálculo das alturas das linhas, consulte o
 |  |  |
 | --- | --- |
 | Número do comando | 835 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

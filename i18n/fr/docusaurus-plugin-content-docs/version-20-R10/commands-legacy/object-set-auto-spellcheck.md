@@ -37,6 +37,6 @@ Passez **Vrai** dans *correctionAuto* pour activer la correction automatique pou
 |  |  |
 | --- | --- |
 | Numéro de commande | 1173 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

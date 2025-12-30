@@ -43,6 +43,6 @@ Si el list box ya contiene las columnas, sus contenidos se actualizarán despué
 |  |  |
 | --- | --- |
 | Número de comando | 1013 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

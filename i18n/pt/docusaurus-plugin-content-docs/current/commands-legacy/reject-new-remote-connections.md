@@ -5,11 +5,11 @@ slug: /commands/reject-new-remote-connections
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *rejeitarStatus* )<!-- END REF-->
+<!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *rejeitarStatus* : Boolean )<!-- END REF-->
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rejeitarStatus | Boolean | &#8594;  | Verdadeiro se novas conexões forem rejeitadas, senão false |
+| rejeitarStatus | Boolean | &#8594; | Verdadeiro se novas conexões forem rejeitadas, senão false |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ Se quiser rejeitar ou aceitar as novas conexões de clientes:
 |  |  |
 | --- | --- |
 | Número do comando | 1635 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

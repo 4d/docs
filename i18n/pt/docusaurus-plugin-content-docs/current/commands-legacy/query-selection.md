@@ -5,13 +5,13 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*tabela* }{;}{ *criterioPesquisa* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*tabela* : Table }{;}{ *criterioPesquisa* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
-| criterioPesquisa | Expression | &#8594;  | Critério de Pesquisa |
-| * | Operador | &#8594;  | Flag para continuar a pesquisa |
+| tabela | Table | &#8594; | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
+| criterioPesquisa | Expression | &#8594; | Critério de Pesquisa |
+| * | Operador | &#8594; | Flag para continuar a pesquisa |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ Isso faz com que encontre todas as empresas localizadas em Nova Iorque, com ativ
 |  |  |
 | --- | --- |
 | Número do comando | 341 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

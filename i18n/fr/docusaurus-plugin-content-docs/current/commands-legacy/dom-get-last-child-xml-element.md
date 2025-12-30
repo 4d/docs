@@ -5,11 +5,11 @@ slug: /commands/dom-get-last-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *refElément* {; *nomElémentEnf* {; *valeurElémentEnf*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get last child XML element.Syntax-->**DOM Get last child XML element** ( *refElément* : Text {; *nomElémentEnf* : Text {; *valeurElémentEnf* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get last child XML element.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
+| refElément | Text | &#8594; | Référence d’élément XML |
 | nomElémentEnf | Text | &#8592; | Nom de l’élément enfant |
 | valeurElémentEnf | Text | &#8592; | Valeur de l’élément enfant |
 | Résultat | Text | &#8592; | Référence de l’élément XML |
@@ -49,7 +49,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 925 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

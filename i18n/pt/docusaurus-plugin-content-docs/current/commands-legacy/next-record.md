@@ -5,11 +5,11 @@ slug: /commands/next-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.NEXT RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual mover o novo registro selecionado, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual mover o novo registro selecionado, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ Ver o exemplo do comando [DISPLAY RECORD](display-record.md "DISPLAY RECORD").
 |  |  |
 | --- | --- |
 | Número do comando | 51 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

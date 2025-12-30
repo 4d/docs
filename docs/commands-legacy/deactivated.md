@@ -31,6 +31,6 @@ In order for the **Deactivated** execution cycle to be generated, make sure that
 |  |  |
 | --- | --- |
 | Command number | 347 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

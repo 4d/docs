@@ -5,7 +5,7 @@ slug: /commands/object-to-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *pathObject* ) : Text<!-- END REF-->
+<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *pathObject* : Object ) : Text<!-- END REF-->
 <!--REF #_command_.Object to path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,6 +61,6 @@ We want to duplicate and rename a file in its own folder:
 |  |  |
 | --- | --- |
 | Command number | 1548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

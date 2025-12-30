@@ -5,11 +5,11 @@ slug: /commands/get-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *markNum* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *markNum* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| markNum | Integer | &#8594;  | マーカ番号 |
+| markNum | Integer | &#8594; | マーカ番号 |
 | 戻り値 | Integer | &#8592; | マーカの位置 |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 708 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

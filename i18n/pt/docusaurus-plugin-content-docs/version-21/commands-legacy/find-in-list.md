@@ -68,6 +68,6 @@ Dada a seguinte lista hierárquica:
 |  |  |
 | --- | --- |
 | Número do comando | 952 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

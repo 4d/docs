@@ -5,7 +5,7 @@ slug: /commands/push-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ The following example pushes the record for the customer onto the record stack:
 |  |  |
 | --- | --- |
 | Command number | 176 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

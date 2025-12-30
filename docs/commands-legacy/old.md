@@ -5,7 +5,7 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) : any<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *aField* : Field ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ To restore the original value of a field, assign it the value returned by **Old*
 |  |  |
 | --- | --- |
 | Command number | 35 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

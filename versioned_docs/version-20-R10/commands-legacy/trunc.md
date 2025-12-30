@@ -41,6 +41,6 @@ The following example illustrates how Trunc works with different arguments. Each
 |  |  |
 | --- | --- |
 | Command number | 95 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

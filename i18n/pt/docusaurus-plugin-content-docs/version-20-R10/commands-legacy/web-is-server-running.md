@@ -43,6 +43,6 @@ Você quer verificar que o servidor web se está executando:
 |  |  |
 | --- | --- |
 | Número do comando | 1313 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

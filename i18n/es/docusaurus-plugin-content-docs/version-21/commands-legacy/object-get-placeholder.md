@@ -42,6 +42,6 @@ Si quiere recibir el texto del marcador de campo:
 |  |  |
 | --- | --- |
 | Número de comando | 1296 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

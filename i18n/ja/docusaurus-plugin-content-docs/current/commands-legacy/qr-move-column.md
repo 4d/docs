@@ -5,13 +5,13 @@ slug: /commands/qr-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* ; *column* ; *newPos* )<!-- END REF-->
+<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* : Integer ; *column* : Integer ; *newPos* : Integer )<!-- END REF-->
 <!--REF #_command_.QR MOVE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Reference of the area |
-| column | Integer | &#8594;  | Column number |
-| newPos | Integer | &#8594;  | New position for column |
+| area | Integer | &#8594; | Reference of the area |
+| column | Integer | &#8594; | Column number |
+| newPos | Integer | &#8594; | New position for column |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1325 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -114,6 +114,6 @@ Use os 50 primeiros registros atuais da tabela \[facturas\] para carregar vário
 |  |  |
 | --- | --- |
 | Número do comando | 368 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -71,7 +71,7 @@ La méthode suivante affiche le contenu et la hauteur des libellés des en-tête
 |  |  |
 | --- | --- |
 | Numéro de commande | 775 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

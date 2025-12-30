@@ -139,7 +139,7 @@ Depois que esses métodos foram adicionados a sua aplicação, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 532 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

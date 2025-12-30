@@ -5,13 +5,13 @@ slug: /commands/longint-array-from-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *laTable* ; *tabEnrg* {; *tempo*} )<!-- END REF-->
+<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *laTable* : Table ; *tabEnrg* : Integer array {; *tempo* : Text} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de la sélection courante |
+| laTable | Table | &#8594; | Table de la sélection courante |
 | tabEnrg | Integer array | &#8592; | Tableau de numéros d’enregistrements |
-| tempo | Text | &#8594;  | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
+| tempo | Text | &#8594; | Nom de la sélection temporaire ou Sélection courante si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Vous voulez récupérer les numéros des enregistrements de la sélection couran
 |  |  |
 | --- | --- |
 | Numéro de commande | 647 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

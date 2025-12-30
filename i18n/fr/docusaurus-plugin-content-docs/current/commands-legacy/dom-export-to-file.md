@@ -5,12 +5,12 @@ slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElément* ; *cheminFichier* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *refElément* : Text ; *cheminFichier* : Text )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML racine |
-| cheminFichier | Text | &#8594;  | Chemin d’accès complet du fichier |
+| refElément | Text | &#8594; | Référence d’élément XML racine |
+| cheminFichier | Text | &#8594; | Chemin d’accès complet du fichier |
 
 <!-- END REF-->
 
@@ -67,7 +67,7 @@ Une erreur est générée lorsque :
 |  |  |
 | --- | --- |
 | Numéro de commande | 862 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

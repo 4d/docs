@@ -5,12 +5,12 @@ slug: /commands/object-get-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get help tip** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get help tip.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | Resultado | Text | &#8592; | Mensagem de ajuda do objeto |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ O título de um botão imagem é guardado em forma de mensagem de ajuda. Este t�
 |  |  |
 | --- | --- |
 | Número do comando | 1182 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

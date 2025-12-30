@@ -5,11 +5,11 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *lista* ) : Integer<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *lista* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de la lista a copiar |
+| lista | Integer | &#8594; | Número de referencia de la lista a copiar |
 | Resultado | Integer | &#8592; | Número de referencia de la nueva lista |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ Una vez hay terminado de utilizar la nueva lista, llame a [CLEAR LIST](clear-lis
 |  |  |
 | --- | --- |
 | Número de comando | 626 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

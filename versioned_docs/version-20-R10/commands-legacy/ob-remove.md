@@ -43,6 +43,6 @@ You want to remove the "age" property of an object:
 |  |  |
 | --- | --- |
 | Command number | 1226 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

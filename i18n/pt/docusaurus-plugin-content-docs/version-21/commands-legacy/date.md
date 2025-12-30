@@ -100,6 +100,6 @@ Se quiser obter uma data de um atributo de objeto, qualquer que seja a opção a
 |  |  |
 | --- | --- |
 | Número do comando | 102 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

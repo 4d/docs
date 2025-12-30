@@ -185,6 +185,6 @@ Se quiser remover todos os campos personalizados e nomes de tabela definidos:
 |  |  |
 | --- | --- |
 | Número do comando | 601 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

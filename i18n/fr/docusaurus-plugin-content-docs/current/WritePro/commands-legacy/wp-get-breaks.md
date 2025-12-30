@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-breaks
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *objCible* {; *typeSaut*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Get breaks.Syntax-->**WP Get breaks** ( *objCible* : Object {; *typeSaut* : Integer} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Get breaks.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

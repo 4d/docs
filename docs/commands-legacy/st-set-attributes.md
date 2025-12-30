@@ -5,7 +5,7 @@ slug: /commands/st-set-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( {* ;} *object* ; *startSel* ; *endSel* ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.ST SET ATTRIBUTES.Syntax-->**ST SET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text, *attribValue* : Text, Integer)} )<br/>**ST SET ATTRIBUTES** ( *object* : Field, Variable ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Text ; *attribValue* : Text, Integer {; ...(*attribName* : Text, *attribValue* : Text, Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 |  |  |
 | --- | --- |
 | Command number | 1093 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

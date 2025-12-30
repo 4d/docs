@@ -75,6 +75,6 @@ En un formulario, si selecciona un elemento de menú de la barra de menús o si 
 |  |  |
 | --- | --- |
 | Número de comando | 276 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

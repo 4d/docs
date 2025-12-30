@@ -5,14 +5,14 @@ slug: /commands/pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contenu* {; *parDéfaut* {; *coordX* ; *coordY*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contenu* : Text {; *parDéfaut* : Integer {; *coordX* : Integer ; *coordY* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Pop up menu.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| contenu | Text | &#8594;  | Définition du texte du menu |
-| parDéfaut | Integer | &#8594;  | Numéro de l'élément sélectionné par défaut |
-| coordX | Integer | &#8594;  | Coordonnée X du coin supérieur gauche |
-| coordY | Integer | &#8594;  | Coordonnée Y du coin supérieur gauche |
+| contenu | Text | &#8594; | Définition du texte du menu |
+| parDéfaut | Integer | &#8594; | Numéro de l'élément sélectionné par défaut |
+| coordX | Integer | &#8594; | Coordonnée X du coin supérieur gauche |
+| coordY | Integer | &#8594; | Coordonnée Y du coin supérieur gauche |
 | Résultat | Integer | &#8592; | Numéro de l'élément de menu sélectionné |
 
 <!-- END REF-->
@@ -105,6 +105,6 @@ Voici le pop up menu tel qu'il s'affiche sous Windows (à gauche) et sous Mac OS
 |  |  |
 | --- | --- |
 | Numéro de commande | 542 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

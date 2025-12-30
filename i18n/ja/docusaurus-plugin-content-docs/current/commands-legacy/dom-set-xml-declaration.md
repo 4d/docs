@@ -5,14 +5,14 @@ slug: /commands/dom-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *elementRef* ; *encoding* {; *standalone* {; *indentation*}} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *elementRef* : Text ; *encoding* : Text {; *standalone* : Boolean {; *indentation* : Boolean}} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
-| encoding | Text | &#8594;  | XMLドキュメント文字セット |
-| standalone | Boolean | &#8594;  | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
-| indentation | Boolean | &#8594;  | ***廃止予定、使用しないでください*** |
+| elementRef | Text | &#8594; | XML要素参照 |
+| encoding | Text | &#8594; | XMLドキュメント文字セット |
+| standalone | Boolean | &#8594; | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
+| indentation | Boolean | &#8594; | ***廃止予定、使用しないでください*** |
 
 <!-- END REF-->
 
@@ -43,6 +43,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 859 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

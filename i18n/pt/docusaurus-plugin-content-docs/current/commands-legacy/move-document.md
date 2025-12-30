@@ -5,12 +5,12 @@ slug: /commands/move-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *rotaFonte* ; *rotaDestino* )<!-- END REF-->
+<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *rotaFonte* : Text ; *rotaDestino* : Text )<!-- END REF-->
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaFonte | Text | &#8594;  | Nome da rota completa do documento existente |
-| rotaDestino | Text | &#8594;  | Rota de acesso destino |
+| rotaFonte | Text | &#8594; | Nome da rota completa do documento existente |
+| rotaDestino | Text | &#8594; | Rota de acesso destino |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ O exemplo abaixo move o documento DocNome:
 |  |  |
 | --- | --- |
 | Número do comando | 540 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

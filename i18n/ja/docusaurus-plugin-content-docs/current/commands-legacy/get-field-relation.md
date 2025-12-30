@@ -5,14 +5,14 @@ slug: /commands/get-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *manyField* ; *one* ; *many* {; *} )<!-- END REF-->
+<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *manyField* : Field ; *one* : Integer ; *many* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| manyField | Field | &#8594;  | リレート開始フィールド |
+| manyField | Field | &#8594; | リレート開始フィールド |
 | one | Integer | &#8592; | n対1リレートの状態 |
 | many | Integer | &#8592; | 1対nリレートの状態 |
-| * | 演算子 | &#8594;  | 指定時: oneとmanyにはリレーション の現在の状態が返る (値は2または3のみ) 省略時 (デフォルト): プログラムでリレーションが 変更されていなければ、oneとmanyに1が返される |
+| * | 演算子 | &#8594; | 指定時: oneとmanyにはリレーション の現在の状態が返る (値は2または3のみ) 省略時 (デフォルト): プログラムでリレーションが 変更されていなければ、oneとmanyに1が返される |
 
 <!-- END REF-->
 
@@ -90,6 +90,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 920 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

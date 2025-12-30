@@ -72,7 +72,7 @@ Quand cette option est cochée, il est possible de se connecter au serveur `WebA
 
 **Notes :**
 
-- Les connections HTTP autres que sur localhost ne sont jamais acceptées.
+- Les connexions HTTP autres que sur localhost ne sont jamais acceptées.
 - Même si cette option est activée, quand [HTTPS Accepté](#accept-https) est activé et que la configuration TLS est valide, les connections sur localhost se font via HTTPS.
 
 #### Port HTTP

@@ -5,7 +5,7 @@ slug: /commands/day-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* ) : Integer<!-- END REF-->
+<!--REF #_command_.Day number.Syntax-->**Day number** ( *aDate* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ The following example is a function that returns the current day as a string:
 |  |  |
 | --- | --- |
 | Command number | 114 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

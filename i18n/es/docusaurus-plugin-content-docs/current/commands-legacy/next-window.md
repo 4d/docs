@@ -5,11 +5,11 @@ slug: /commands/next-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Next window.Syntax-->**Next window** ( *ventana* ) : Integer<!-- END REF-->
+<!--REF #_command_.Next window.Syntax-->**Next window** ( *ventana* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Next window.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana |
+| ventana | Integer | &#8594; | Número de referencia de la ventana |
 | Resultado | Integer | &#8592; | Número de referencia de ventana |
 
 <!-- END REF-->
@@ -29,6 +29,6 @@ El comando Next window devuelve el número de referencia de la ventana ubicada �
 |  |  |
 | --- | --- |
 | Número de comando | 448 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -180,6 +180,6 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 |  |  |
 | --- | --- |
 | Numéro de commande | 1217 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

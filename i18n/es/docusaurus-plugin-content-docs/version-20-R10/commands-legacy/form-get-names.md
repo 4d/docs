@@ -73,6 +73,6 @@ Ejemplos de uso típicos:
 |  |  |
 | --- | --- |
 | Número de comando | 1167 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

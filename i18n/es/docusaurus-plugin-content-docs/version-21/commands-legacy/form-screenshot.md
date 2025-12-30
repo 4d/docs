@@ -42,6 +42,6 @@ Por defecto, el comando devuelve una captura de pantalla de la página 1 del for
 |  |  |
 | --- | --- |
 | Número de comando | 940 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

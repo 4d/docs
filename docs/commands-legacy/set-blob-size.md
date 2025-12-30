@@ -5,11 +5,11 @@ slug: /commands/set-blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* ; *size* {; *filler*} )<!-- END REF-->
+<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* : Blob ; *size* : Integer {; *filler* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET BLOB SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB field or variable |
+| Blob | Blob | &#8594;  | BLOB field or variable |
 | size | Integer | &#8594;  | New size of the BLOB |
 | filler | Integer | &#8594;  | ASCII code of filler character |
 
@@ -56,6 +56,6 @@ The following example creates a BLOB of 16K filled of 0xFF:
 |  |  |
 | --- | --- |
 | Command number | 606 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

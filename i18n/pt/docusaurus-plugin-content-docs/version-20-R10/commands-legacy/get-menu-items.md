@@ -40,6 +40,6 @@ Imagine que queira conhecer o conteúdo da barra de menu do processo atual:
 |  |  |
 | --- | --- |
 | Número do comando | 977 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

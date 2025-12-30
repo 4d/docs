@@ -41,7 +41,7 @@ Si el parámetro *posicion* es superior al número de líneas del array del list
 |  |  |
 | --- | --- |
 | Número de comando | 914 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

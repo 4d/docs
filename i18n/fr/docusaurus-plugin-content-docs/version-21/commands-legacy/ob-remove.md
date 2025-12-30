@@ -43,6 +43,6 @@ Vous souhaitez supprimer la propriété "age" d’un objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1226 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

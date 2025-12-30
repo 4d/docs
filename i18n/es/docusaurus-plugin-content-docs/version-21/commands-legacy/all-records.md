@@ -40,7 +40,7 @@ El siguiente ejemplo muestra todos los registros de la tabla \[Personas\]:
 |  |  |
 | --- | --- |
 | Número de comando | 47 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

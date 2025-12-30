@@ -5,14 +5,14 @@ slug: /commands/selected-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* {; *arrayElem* {; *}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Selected list items.Syntax-->**Selected list items** ( {* ;} *lista* : Integer, Text {; *arrayElem* : Integer array {; *}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Selected list items.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
-| lista | Integer, Text | &#8594;  | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
+| * | Operador | &#8594; | Se especificada, lista é um nome de objeto (cadeia) Se omitida, lista é um número de referência de lista |
+| lista | Integer, Text | &#8594; | Número de referência de lista (se omitida *) ou Nome do objeto de tipo lista (se passada *) |
 | arrayElem | Integer array | &#8592; | Se omitido o segundo *: Array contém as posições dos elementos selecionados na(s) lista(s) Se passado o segundo *: Array contém as referências dos elementos selecionados |
-| * | Operador | &#8594;  | Se omitido: posição(es) do(s) elemento(s) Se passado: referencia(s) do(s) elemento(s) |
+| * | Operador | &#8594; | Se omitido: posição(es) do(s) elemento(s) Se passado: referencia(s) do(s) elemento(s) |
 | Resultado | Integer | &#8592; | Se omitido o segundo *: posição do elemento selecionado na(s) lista(s) expandida(s) Se passado o segundo *: Referência do elemento selecionado |
 
 <!-- END REF-->
@@ -90,6 +90,6 @@ Esta é uma lista chamada *hList,* mostrada no ambiente Aplicação:
 |  |  |
 | --- | --- |
 | Número do comando | 379 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/form-set-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomObjetos* {; *numPag*} )<!-- END REF-->
+<!--REF #_command_.FORM SET ENTRY ORDER.Syntax-->**FORM SET ENTRY ORDER** ( *nomObjetos* : Text array {; *numPag* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SET ENTRY ORDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomObjetos | Text array | &#8594;  | Array de nombres de objetos en su orden de entrada esperado |
-| numPag | Integer | &#8594;  | Número de la página para definir el orden de entrada (página actual si se omite) |
+| nomObjetos | Text array | &#8594; | Array de nombres de objetos en su orden de entrada esperado |
+| numPag | Integer | &#8594; | Número de la página para definir el orden de entrada (página actual si se omite) |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ Usted desea definir el orden de entrada de los objetos en el formulario basado e
 |  |  |
 | --- | --- |
 | Número de comando | 1468 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

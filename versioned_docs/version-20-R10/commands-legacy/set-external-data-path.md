@@ -68,6 +68,6 @@ You want to save an existing file in the picture field, stored outside of the da
 |  |  |
 | --- | --- |
 | Command number | 1134 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

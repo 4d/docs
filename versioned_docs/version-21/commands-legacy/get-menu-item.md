@@ -34,7 +34,7 @@ If you omit the *process* parameter, **Get menu item** applies to the menu bar f
 |  |  |
 | --- | --- |
 | Command number | 422 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

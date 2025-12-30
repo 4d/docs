@@ -5,13 +5,13 @@ slug: /commands/log-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*outputType* ;} *message* {; *importance*} )<!-- END REF-->
+<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*outputType* : Integer ;} *message* : Text {; *importance* : Integer} )<!-- END REF-->
 <!--REF #_command_.LOG EVENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| outputType | Integer | &#8594;  | メッセージの出力タイプ |
-| message | Text | &#8594;  | メッセージの内容 |
-| importance | Integer | &#8594;  | メッセージの重要度レベル |
+| outputType | Integer | &#8594; | メッセージの出力タイプ |
+| message | Text | &#8594; | メッセージの内容 |
+| importance | Integer | &#8594; | メッセージの重要度レベル |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ Windowsでデータベースが開かれた時の情報をログしたい場合�
 |  |  |
 | --- | --- |
 | コマンド番号 | 667 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/add-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*laTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*laTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.ADD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle ajouter des données ou Table par défaut si ce paramètre est omis |
-| * | Operator |  &#8594;  | Cacher les barres de défilement |
+| laTable | Table | &#8594; | Table dans laquelle ajouter des données ou Table par défaut si ce paramètre est omis |
+| * | Operator | &#8594; | Cacher les barres de défilement |
 
 <!-- END REF-->
 
@@ -95,7 +95,7 @@ La variable système OK prend la valeur 1 si l'enregistrement est validé et 0 s
 |  |  |
 | --- | --- |
 | Numéro de commande | 56 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

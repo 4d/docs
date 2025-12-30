@@ -51,6 +51,6 @@ Este comando é particularmente útil no contexto de componentes porque lhe perm
 |  |  |
 | --- | --- |
 | Número do comando | 704 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

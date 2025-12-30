@@ -94,6 +94,6 @@ Création d'un index de mots-clés :
 |  |  |
 | --- | --- |
 | Numéro de commande | 344 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

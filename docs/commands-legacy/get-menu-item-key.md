@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ To obtain the shortcut associated with a menu item, it is useful to implement a 
 |  |  |
 | --- | --- |
 | Command number | 424 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

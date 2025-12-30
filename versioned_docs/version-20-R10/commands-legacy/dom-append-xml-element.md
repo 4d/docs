@@ -34,6 +34,6 @@ See the example of the [DOM Insert XML element](dom-insert-xml-element.md "DOM I
 |  |  |
 | --- | --- |
 | Command number | 1082 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

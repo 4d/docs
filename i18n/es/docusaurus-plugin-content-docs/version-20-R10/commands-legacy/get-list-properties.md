@@ -43,6 +43,6 @@ Para una completa descripción de la apariencia, iconos de nodos, altura de lín
 |  |  |
 | --- | --- |
 | Número de comando | 632 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

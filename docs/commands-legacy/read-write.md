@@ -5,7 +5,7 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** {( *aTable* )}<br/>**READ WRITE** {( * )}<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : Table, Operator })<br/>**READ WRITE** ({ * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ Use READ WRITE when you must modify a record and save the changes. Also use READ
 |  |  |
 | --- | --- |
 | Command number | 146 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

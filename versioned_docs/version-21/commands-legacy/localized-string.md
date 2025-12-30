@@ -60,7 +60,7 @@ If the command is executed correctly, the OK variable is set to 1\. If *resName*
 |  |  |
 | --- | --- |
 | Command number | 991 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

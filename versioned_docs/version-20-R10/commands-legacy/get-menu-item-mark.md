@@ -45,7 +45,7 @@ The following example toggles the check mark of a menu item:
 |  |  |
 | --- | --- |
 | Command number | 428 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

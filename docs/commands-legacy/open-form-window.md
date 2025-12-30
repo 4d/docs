@@ -5,7 +5,7 @@ slug: /commands/open-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* ;} *formName* {; *type* {; *hPos* {; *vPos* {; *}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*aTable* : Table ;} *formName* : Text, Object {; *type* : Integer {; *hPos* : Integer {; *vPos* : Integer {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -139,6 +139,6 @@ which displays:
 |  |  |
 | --- | --- |
 | Command number | 675 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

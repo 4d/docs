@@ -214,7 +214,7 @@ Quando esse método tiver sido implementado no banco de dados, nóste mos todo o
 |  |  |
 | --- | --- |
 | Número do comando | 477 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

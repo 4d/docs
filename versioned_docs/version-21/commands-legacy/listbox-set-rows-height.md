@@ -42,6 +42,6 @@ By default, if you omit the *unit* parameter, the height is expressed in pixels.
 |  |  |
 | --- | --- |
 | Command number | 835 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

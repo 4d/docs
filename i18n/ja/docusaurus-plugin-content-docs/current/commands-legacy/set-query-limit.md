@@ -5,11 +5,11 @@ slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limit* )<!-- END REF-->
+<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limit* : Integer )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| limit | Integer | &#8594;  | レコード数, または 0: 制限なし |
+| limit | Integer | &#8594; | レコード数, または 0: 制限なし |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ SET QUERY LIMITは、下記のクエリコマンドの動作を変更します:
 |  |  |
 | --- | --- |
 | コマンド番号 | 395 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

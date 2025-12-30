@@ -5,14 +5,14 @@ slug: /commands/object-set-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT SET SCROLLBAR** ( *object* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
-| horizontal | Boolean, Integer | &#8594;  | True = 表示, False = 非表示 |
-| vertical | Boolean, Integer | &#8594;  | True = 表示, False = 非表示 |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または 変数 (* 省略時) |
+| horizontal | Boolean, Integer | &#8594; | True = 表示, False = 非表示 |
+| vertical | Boolean, Integer | &#8594; | True = 表示, False = 非表示 |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 843 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

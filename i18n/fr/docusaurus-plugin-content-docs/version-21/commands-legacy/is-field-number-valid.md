@@ -31,6 +31,6 @@ Cette commande permet de détecter d’éventuelles suppressions de champs, ce q
 |  |  |
 | --- | --- |
 | Numéro de commande | 1000 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

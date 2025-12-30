@@ -48,7 +48,7 @@ If the user clicks Cancel in the Open File dialog box, or there is an error duri
 |  |  |
 | --- | --- |
 | Command number | 185 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -5,12 +5,12 @@ slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* ; *property* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* : Integer ; *property* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| property | Integer | &#8594;  | 1 = 印刷ダイアログ, 2 = ドキュメント単位 |
+| area | Integer | &#8594; | エリア参照 |
+| property | Integer | &#8594; | 1 = 印刷ダイアログ, 2 = ドキュメント単位 |
 | 戻り値 | Integer | &#8592; | プロパティ値 |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 773 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

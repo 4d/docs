@@ -42,6 +42,6 @@ Se quiser recusar qualquer petição nova a seu servidor de serviços web:
 |  |  |
 | --- | --- |
 | Número do comando | 1636 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

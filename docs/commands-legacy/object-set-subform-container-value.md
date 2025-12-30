@@ -5,7 +5,7 @@ slug: /commands/object-set-subform-container-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Syntax-->**OBJECT SET SUBFORM CONTAINER VALUE** ( *value* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM CONTAINER VALUE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 |  |  |
 | --- | --- |
 | Command number | 1784 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

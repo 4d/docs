@@ -5,13 +5,13 @@ slug: /commands/object-set-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( {* ;} *objeto* ; *valorMax* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( * ; *objeto* : Text ; *valorMax* : Date, Time, Real )<br/>**OBJECT SET MAXIMUM VALUE** ( *objeto* : Field, Variable ; *valorMax* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si especifica, objeto es un nombre de objeto(cadena)<br/>Si se omite, objeto es un campo o variable |
-| objeto | any | &#8594;  | Nombre del objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
-| valorMax | Date, Time, Number | &#8594;  | Valor máximo para el objeto |
+| * | Operador | &#8594; | Si especifica, objeto es un nombre de objeto(cadena)<br/>Si se omite, objeto es un campo o variable |
+| objeto | any | &#8594; | Nombre del objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| valorMax | Date, Time, Real | &#8594; | Valor máximo para el objeto |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ En *valorMax*, pase el nuevo valor máximo que desea asignar al objeto para el p
 |  |  |
 | --- | --- |
 | Número de comando | 1244 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

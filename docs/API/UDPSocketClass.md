@@ -51,7 +51,7 @@ UDPSocket objects provide the following properties and functions:
 |---|---|---|---|
 |port|Integer|->|Local port used for UDP socket (0 or omitted = find any unused port to use)|
 |options|Object|->|Configuration [options](#options-parameter) for the socket|
-|Result|UDPSocket|<-|New UDPSocket object|                                
+|Result|4D.UDPSocket|<-|New UDPSocket object|                                
 
 <!-- END REF -->
 

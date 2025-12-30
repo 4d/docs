@@ -36,6 +36,6 @@ This command must be used with the form event On Column Moved (see the [Form eve
 |  |  |
 | --- | --- |
 | Command number | 844 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

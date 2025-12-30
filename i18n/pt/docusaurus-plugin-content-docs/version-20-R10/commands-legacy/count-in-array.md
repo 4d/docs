@@ -63,6 +63,6 @@ Para contar referências de objeto em um array de objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 907 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

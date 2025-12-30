@@ -5,7 +5,7 @@ slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* {; *set*} )<!-- END REF-->
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* : Boolean array {; *set* : Text} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ If you don’t pass the *set* parameter, the command will use UserSet in the cur
 |  |  |
 | --- | --- |
 | Command number | 646 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

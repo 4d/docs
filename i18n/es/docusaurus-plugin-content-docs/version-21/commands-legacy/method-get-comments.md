@@ -61,6 +61,6 @@ Si el comando se ejecuta desde un componente, se aplica por defecto a los métod
 |  |  |
 | --- | --- |
 | Número de comando | 1189 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

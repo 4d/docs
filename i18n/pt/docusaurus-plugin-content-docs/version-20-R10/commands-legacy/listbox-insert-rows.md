@@ -39,7 +39,7 @@ Se o parâmetro *numFilas* excede o número de linhas de tabelas nas arrays do l
 |  |  |
 | --- | --- |
 | Número do comando | 913 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

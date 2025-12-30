@@ -5,11 +5,11 @@ slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
+| area | Integer | &#8594; | Referência da área |
 | Resultado | Integer | &#8592; | Espaço de soltar |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 747 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

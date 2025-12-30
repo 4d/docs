@@ -48,6 +48,6 @@ L'exemple suivant permet à l'utilisateur de modifier son mot de passe :
 |  |  |
 | --- | --- |
 | Numéro de commande | 186 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

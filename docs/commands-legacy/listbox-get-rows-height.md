@@ -5,7 +5,7 @@ slug: /commands/listbox-get-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( {* ;} *object* {; *unit*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get rows height.Syntax-->**LISTBOX Get rows height** ( * ; *object* : Text {; *unit* : Integer} ) : Integer<br/>**LISTBOX Get rows height** ( *object* : Field, Variable {; *unit* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get rows height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ By default, if you omit the *unit* parameter, the row height returned is express
 |  |  |
 | --- | --- |
 | Command number | 836 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

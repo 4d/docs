@@ -5,13 +5,13 @@ slug: /commands/set-picture-to-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *imagen* ; *refImag* ; *nomImag* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *imagen* : Picture ; *refImag* : Integer ; *nomImag* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#8594;  | Nueva imagen |
-| refImag | Integer | &#8594;  | Número de referencia de la imagen en la librería de imágenes |
-| nomImag | Text | &#8594;  | Nuevo nombre de la imagen |
+| imagen | Picture | &#8594; | Nueva imagen |
+| refImag | Integer | &#8594; | Número de referencia de la imagen en la librería de imágenes |
+| nomImag | Text | &#8594; | Nuevo nombre de la imagen |
 
 <!-- END REF-->
 
@@ -104,7 +104,7 @@ Si no hay suficiente memoria para añadir la imagen a la librería de imágenes,
 |  |  |
 | --- | --- |
 | Número de comando | 566 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 | Prohibido en el servidor ||
 

@@ -5,11 +5,11 @@ slug: /commands/use-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *conjunto* )<!-- END REF-->
+<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nombre del conjunto a utilizar |
+| conjunto | Text | &#8594; | Nombre del conjunto a utilizar |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ El siguiente ejemplo utiliza [LOAD SET](load-set.md "LOAD SET") para cargar un c
 |  |  |
 | --- | --- |
 | Número de comando | 118 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

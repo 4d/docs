@@ -5,11 +5,11 @@ slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *zone* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *zone* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | Résultat | Integer | &#8592; | Emplacement du "déposer" |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 747 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -115,7 +115,7 @@ L'exemple suivant permet à l'utilisateur d'effectuer une recherche sur la table
 |  |  |
 | --- | --- |
 | Numéro de commande | 39 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

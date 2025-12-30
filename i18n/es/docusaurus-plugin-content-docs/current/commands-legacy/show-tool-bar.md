@@ -31,6 +31,6 @@ Consulte el ejemplo del comando [HIDE TOOL BAR](hide-tool-bar.md).
 |  |  |
 | --- | --- |
 | Número de comando | 433 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

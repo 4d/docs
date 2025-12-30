@@ -30,6 +30,6 @@ For more information on execution levels, see the topic *Cascading Triggers*.
 |  |  |
 | --- | --- |
 | Command number | 398 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

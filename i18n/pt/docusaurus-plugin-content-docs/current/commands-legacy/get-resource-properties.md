@@ -5,13 +5,13 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resTipo* ; *resNum* {; *resArquivo*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resTipo* : Text ; *resNum* : Integer {; *resArquivo* : Time} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resTipo | Text | &#8594;  | tipo de resource de 4 caracteres |
-| resNum | Integer | &#8594;  | Número do resource |
-| resArquivo | Time | &#8594;  | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
+| resTipo | Text | &#8594; | tipo de resource de 4 caracteres |
+| resNum | Integer | &#8594; | Número do resource |
+| resArquivo | Time | &#8594; | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
 | Resultado | Integer | &#8592; | Atributos dos resources |
 
 <!-- END REF-->
@@ -40,7 +40,7 @@ A variável sistema OK toma o valor 0 se o recurso não existir, do contrário a
 |  |  |
 | --- | --- |
 | Número do comando | 515 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

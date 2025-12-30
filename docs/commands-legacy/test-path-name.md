@@ -5,7 +5,7 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* ) : Integer<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *pathname* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ The following tests if the document “Journal” is present in the folder of th
 |  |  |
 | --- | --- |
 | Command number | 476 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -52,7 +52,7 @@ El siguiente ejemplo archiva los registros que tienen más de 30 días. Esta ope
 |  |  |
 | --- | --- |
 | Número de comando | 68 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

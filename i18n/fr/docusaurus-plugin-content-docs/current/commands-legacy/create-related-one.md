@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ N (champ d'où part le lien) |
+| leField | Field | &#8594; | Champ N (champ d'où part le lien) |
 
 <!-- END REF-->
 
@@ -28,6 +28,6 @@ Si un enregistrement lié existe déjà, la commande **CREATE RELATED ONE** a al
 |  |  |
 | --- | --- |
 | Numéro de commande | 65 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

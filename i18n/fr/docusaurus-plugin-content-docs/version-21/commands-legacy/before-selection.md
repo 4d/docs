@@ -69,6 +69,6 @@ La méthode formulaire suivante est utilisée pendant l'impression d'un état. E
 |  |  |
 | --- | --- |
 | Numéro de commande | 198 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

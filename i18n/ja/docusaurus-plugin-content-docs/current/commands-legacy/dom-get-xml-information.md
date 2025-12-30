@@ -5,12 +5,12 @@ slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* ; *xmlInfo* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* : Text ; *xmlInfo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XMLルート要素参照 |
-| xmlInfo | Integer | &#8594;  | 取得する情報のタイプ |
+| elementRef | Text | &#8594; | XMLルート要素参照 |
+| xmlInfo | Integer | &#8594; | 取得する情報のタイプ |
 | 戻り値 | Text | &#8592; | XML情報の値 |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 721 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

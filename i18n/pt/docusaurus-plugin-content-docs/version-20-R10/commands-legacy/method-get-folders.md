@@ -35,6 +35,6 @@ Se executado este comando desde um componente, devolve por defeito os caminhos d
 |  |  |
 | --- | --- |
 | Número do comando | 1206 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -61,6 +61,6 @@ Se a seleção é modificada utilizando as flechas do teclado, *coluna* devolve 
 |  |  |
 | --- | --- |
 | Número do comando | 971 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

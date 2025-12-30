@@ -43,6 +43,6 @@ O exemplo a seguir muda a posição dos números de página em um relatório de 
 |  |  |
 | --- | --- |
 | Número do comando | 275 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

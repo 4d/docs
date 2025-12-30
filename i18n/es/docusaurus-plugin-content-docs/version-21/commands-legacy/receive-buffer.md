@@ -69,7 +69,7 @@ Note que el acceso a la variable interproceso *vtBuffer* debe estar protegido po
 |  |  |
 | --- | --- |
 | Número de comando | 172 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

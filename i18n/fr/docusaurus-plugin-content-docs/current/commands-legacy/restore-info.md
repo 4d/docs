@@ -5,11 +5,11 @@ slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *sélecteur* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *sélecteur* : Integer ; *info1* : Integer, Date ; *info2* : Text, Time )<!-- END REF-->
 <!--REF #_command_.RESTORE INFO.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &#8594;  | Type d’information à récupérer |
+| sélecteur | Integer | &#8594; | Type d’information à récupérer |
 | info1 | Integer, Date | &#8592; | Valeur 1 du sélecteur |
 | info2 | Text, Time | &#8592; | Valeur 2 du sélecteur |
 
@@ -42,6 +42,6 @@ Le type et le contenu des paramètres *info1* et *info2* dépendent de la valeur
 |  |  |
 | --- | --- |
 | Numéro de commande | 889 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

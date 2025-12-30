@@ -5,12 +5,12 @@ slug: /commands/query-by-example
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*tabela*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.QUERY BY EXAMPLE.Syntax-->**QUERY BY EXAMPLE** ( {*tabela* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.QUERY BY EXAMPLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai retornar a seleção de registros, ou a tabela Padrão, se omitido |
-| * | Operador | &#8594;  | Se passado, a barra de rolagem não será exibida |
+| tabela | Table | &#8594; | Tabela para a qual vai retornar a seleção de registros, ou a tabela Padrão, se omitido |
+| * | Operador | &#8594; | Se passado, a barra de rolagem não será exibida |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ Se o usuário clicar no botão Aceitar, ou pressionar a tecla Enter, a variável
 |  |  |
 | --- | --- |
 | Número do comando | 292 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

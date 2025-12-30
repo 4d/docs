@@ -118,6 +118,6 @@ Os registros estão na seguinte ordem:
 |  |  |
 | --- | --- |
 | Número do comando | 1407 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -66,6 +66,6 @@ L'exemple suivant utilise l'option spéciale *%password*, destinée à la saisie
 |  |  |
 | --- | --- |
 | Numéro de commande | 164 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

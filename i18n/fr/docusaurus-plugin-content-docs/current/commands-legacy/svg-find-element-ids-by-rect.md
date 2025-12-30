@@ -5,16 +5,16 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetImage* ; *x* ; *y* ; *largeur* ; *hauteur* ; *tabIds* ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetImage* ; *x* : Integer ; *y* : Integer ; *largeur* : Integer ; *hauteur* : Integer ; *tabIds* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
-| objetPicture | Picture | &#8594;  | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
-| x | Integer | &#8594;  | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
-| y | Integer | &#8594;  | Coordonnée verticale du coin haut gauche du rectangle de sélection |
-| largeur | Integer | &#8594;  | Largeur du rectangle de sélection |
-| hauteur | Integer | &#8594;  | Hauteur du rectangle de sélection |
+| * | Opérateur | &#8594; | Si spécifié, objetImage est un nom d'objet (chaîne) <br/>Si omis, objetImage est un champ ou une variable |
+| objetPicture | Picture | &#8594; | Nom d’objet (si * spécifié) ou Champ ou Variable (si * omis) |
+| x | Integer | &#8594; | Coordonnée horizontale du coin haut gauche du rectangle de sélection |
+| y | Integer | &#8594; | Coordonnée verticale du coin haut gauche du rectangle de sélection |
+| largeur | Integer | &#8594; | Largeur du rectangle de sélection |
+| hauteur | Integer | &#8594; | Hauteur du rectangle de sélection |
 | tabIds | Text array | &#8592; | IDs des éléments dont le rectangle englobant est en intersection avec le rectangle de sélection |
 | Résultat | Boolean | &#8592; | Vrai = au moins un élément est trouvé, Faux sinon |
 
@@ -46,6 +46,6 @@ Tous les ID d’éléments dont le rectangle englobant est en intersection avec 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1109 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

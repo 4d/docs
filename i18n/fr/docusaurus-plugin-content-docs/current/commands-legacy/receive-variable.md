@@ -5,7 +5,7 @@ slug: /commands/receive-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE VARIABLE.Syntax-->**RECEIVE VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.RECEIVE VARIABLE.Syntax-->**RECEIVE VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.RECEIVE VARIABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ La variable système OK prend la valeur 1 si la variable est correctement reçue
 |  |  |
 | --- | --- |
 | Numéro de commande | 81 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

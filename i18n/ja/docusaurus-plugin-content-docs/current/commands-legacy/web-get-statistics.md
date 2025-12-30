@@ -5,7 +5,7 @@ slug: /commands/web-get-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* ; *hits* ; *usage* )<!-- END REF-->
+<!--REF #_command_.WEB GET STATISTICS.Syntax-->**WEB GET STATISTICS** ( *pages* : Text array ; *hits* : Integer array ; *usage* : Integer )<!-- END REF-->
 <!--REF #_command_.WEB GET STATISTICS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ URLリンクまたは[WEB SEND FILE](web-send-file.md)コマンドを使用し�
 |  |  |
 | --- | --- |
 | コマンド番号 | 658 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -43,6 +43,6 @@ Consulte el ejemplo de la rutina [PICTURE TO BLOB](picture-to-blob.md).
 |  |  |
 | --- | --- |
 | Número de comando | 654 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

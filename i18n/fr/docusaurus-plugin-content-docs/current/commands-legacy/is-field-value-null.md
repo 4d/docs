@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is field value Null.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ à évaluer |
+| leField | Field | &#8594; | Champ à évaluer |
 | Résultat | Boolean | &#8592; | Vrai = le champ est NULL, Faux = le champ n'est pas NULL |
 
 <!-- END REF-->
@@ -34,6 +34,6 @@ La valeur retournée par cette commande n'a de sens que si l'option "*Traduire l
 |  |  |
 | --- | --- |
 | Numéro de commande | 964 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/ob-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *object* ; *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )<!-- END REF-->
+<!--REF #_command_.OB SET.Syntax-->**OB SET** ( *object* : Object, Object ; *property* : Text ; *value* : Expression {; ...(*property* : Text, *value* : Expression)} )<!-- END REF-->
 <!--REF #_command_.OB SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -202,6 +202,6 @@ You want to store a picture in an object field. You can write:
 |  |  |
 | --- | --- |
 | Command number | 1220 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -36,6 +36,6 @@ Si efectúa la operación desde un trigger o una subrutina que puede ser llamado
 |  |  |
 | --- | --- |
 | Número de comando | 397 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

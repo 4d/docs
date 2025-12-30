@@ -5,11 +5,11 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objet* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objet* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#8594;  | Objet dont on veut obtenir les noms des propriétés |
+| objet | Object | &#8594; | Objet dont on veut obtenir les noms des propriétés |
 | Résultat | Collection | &#8592; | Collection de noms de propriété (chaines) |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ Vous souhaitez une collection avec tous les noms de propriétés de premier nive
 |  |  |
 | --- | --- |
 | Numéro de commande | 1719 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

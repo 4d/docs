@@ -60,7 +60,7 @@ L’exemple suivant supprime de la bibliothèque d’images celles dont le nom c
 |  |  |
 | --- | --- |
 | Numéro de commande | 567 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

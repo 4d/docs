@@ -38,7 +38,7 @@ Si el texto se extrae correctamente, OK toma el valor 1; de lo contrario OK toma
 |  |  |
 | --- | --- |
 | Número de comando | 524 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

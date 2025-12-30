@@ -5,14 +5,14 @@ slug: /commands/object-set-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( {* ;} *object* ; *arrEvents* ; *mode* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array ; *mode* : Integer )<br/>**OBJECT SET EVENTS** ( *object* : Field, Variable ; *arrEvents* : Integer array ; *mode* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時:object はオブジェクト名(文字列)、省略時:object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名または""( * 指定時)、または変数やフィールド( * 省略時) |
-| arrEvents | Integer array | &#8594;  | 設定したいイベントの配列 |
-| mode | Integer | &#8594;  | arrEvents 引数で定義されたイベントの起動モード |
+| * | 演算子 | &#8594; | 指定時:object はオブジェクト名(文字列)、省略時:object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名または""( * 指定時)、または変数やフィールド( * 省略時) |
+| arrEvents | Integer array | &#8594; | 設定したいイベントの配列 |
+| mode | Integer | &#8594; | arrEvents 引数で定義されたイベントの起動モード |
 
 <!-- END REF-->
 
@@ -172,6 +172,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1239 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

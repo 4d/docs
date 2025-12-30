@@ -5,7 +5,7 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* ; *keyObject* ; *salt* ; *encryptedBLOB* ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* ; *passPhrase* ; *salt* ; *encryptedBLOB* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *keyObject* : Object, Text ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *passPhrase* : Object, Text ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ Encrypt a text file located in the RESOURCES folder of the database:
 |  |  |
 | --- | --- |
 | Command number | 1773 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

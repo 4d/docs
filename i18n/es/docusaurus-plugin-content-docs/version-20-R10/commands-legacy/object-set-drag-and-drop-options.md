@@ -48,6 +48,6 @@ Definición de un área de texto en arrastrar y soltar auto:
 |  |  |
 | --- | --- |
 | Número de comando | 1183 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

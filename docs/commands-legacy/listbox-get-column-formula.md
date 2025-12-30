@@ -5,7 +5,7 @@ slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( * ; *object* : Text ) : Text<br/>**LISTBOX Get column formula** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If you pass the optional *\** parameter, this indicates that the *object* parame
 |  |  |
 | --- | --- |
 | Command number | 1202 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

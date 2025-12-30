@@ -39,6 +39,6 @@ Pase en el parámetro *valor* una variable que recibirá el valor actual de la p
 |  |  |
 | --- | --- |
 | Número de comando | 1042 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

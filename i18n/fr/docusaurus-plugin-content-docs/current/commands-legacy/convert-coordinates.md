@@ -5,16 +5,14 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* ; *coordY* ; *depuis* ; *vers* )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* : Integer ; *coordY* : Integer ; *depuis* : Integer ; *vers* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| coordX | Integer | &#8594;  | Coordonnée horizontale d'un point (initiale) |
-| &#8592; | Coordonnée horizontale d'un point (convertie) |
-| coordY | Integer | &#8594;  | Coordonnée verticale d'un point (initiale) |
-| &#8592; | Coordonnée verticale d'un point (convertie) |
-| depuis | Integer | &#8594;  | Système de coordonnées d'origine |
-| vers | Integer | &#8594;  | Système de coordonnées dans lequel convertir le point |
+| coordX | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
+| coordY | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
+| depuis | Integer | &#8594; | Système de coordonnées d'origine |
+| vers | Integer | &#8594; | Système de coordonnées dans lequel convertir le point |
 
 <!-- END REF-->
 
@@ -92,6 +90,6 @@ Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la sour
 |  |  |
 | --- | --- |
 | Numéro de commande | 1365 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} : Text<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** ( *buildNum* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | buildNum | Integer | &#8592; | ビルド番号 |
-| * | 演算子 | &#8594;  | 指定した場合、ロングバージョン番号 指定しなかった場合、ショートバージョン番号 |
+| * | 演算子 | &#8594; | 指定した場合、ロングバージョン番号 指定しなかった場合、ショートバージョン番号 |
 | 戻り値 | Text | &#8592; | バージョン番号のエンコードされた文字列 |
 
 <!-- END REF-->
@@ -125,6 +125,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 493 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

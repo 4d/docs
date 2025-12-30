@@ -5,7 +5,7 @@ slug: /commands/get-indexed-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resID* ; *strID* {; *resFile*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resID* : Integer ; *strID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 |  |  |
 | --- | --- |
 | Command number | 510 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

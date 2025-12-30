@@ -5,7 +5,7 @@ slug: /commands/get-table-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tableTitles* ; *tableNums* )<!-- END REF-->
+<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tableTitles* : Text array ; *tableNums* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET TABLE TITLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 803 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

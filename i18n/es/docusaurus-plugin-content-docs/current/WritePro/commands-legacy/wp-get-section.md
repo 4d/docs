@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-section
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get section.Syntax-->**WP Get section** ( *targetObj* ) | (*wpDoc* ; *indiceSeccion* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Get section.Syntax-->**WP Get section** ( *targetObj* : Object ) | (*wpDoc* : Object ; *indiceSeccion* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get section.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

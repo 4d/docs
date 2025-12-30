@@ -5,12 +5,12 @@ slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* ;} *nomForm* ; *largeur* ; *hauteur* {; *nbPages* {; *largeurFixe* {; *hauteurFixe* {; *titre*}}}} )<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*laTable* : Table ;} *nomForm* : Text ; *largeur* : Integer ; *hauteur* : Integer {; *nbPages* : Integer {; *largeurFixe* : Boolean {; *hauteurFixe* : Boolean {; *titre* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table du formulaire ou Table par défaut si ce paramètre est omis |
-| nomForm | Text | &#8594;  | Nom du formulaire |
+| laTable | Table | &#8594; | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| nomForm | Text | &#8594; | Nom du formulaire |
 | largeur | Integer | &#8592; | Largeur du formulaire (en pixels) |
 | hauteur | Integer | &#8592; | Hauteur du formulaire (en pixels) |
 | nbPages | Integer | &#8592; | Nombre de pages du formulaire |
@@ -47,6 +47,6 @@ Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il 
 |  |  |
 | --- | --- |
 | Numéro de commande | 674 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

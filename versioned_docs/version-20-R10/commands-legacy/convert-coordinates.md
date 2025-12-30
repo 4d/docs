@@ -90,6 +90,6 @@ You want to open a pop-up window at the position of the mouse cursor. On Windows
 |  |  |
 | --- | --- |
 | Command number | 1365 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -133,6 +133,6 @@ Con el fin de actualizar la lista asociada al pop-up gestionado por array, es ne
 |  |  |
 | --- | --- |
 | Número de comando | 1266 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

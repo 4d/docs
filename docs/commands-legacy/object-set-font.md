@@ -5,7 +5,7 @@ slug: /commands/object-set-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( {* ;} *object* ; *font* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *object* : Text ; *font* : Text )<br/>**OBJECT SET FONT** ( *object* : Field, Variable ; *font* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ The following example uses the special *%password* option, designed for entry an
 |  |  |
 | --- | --- |
 | Command number | 164 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

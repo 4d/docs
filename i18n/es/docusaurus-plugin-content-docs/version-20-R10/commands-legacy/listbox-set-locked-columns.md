@@ -37,6 +37,6 @@ Para eliminar el bloqueo de columnas, pase 0 o un valor negativo en *numColumnas
 |  |  |
 | --- | --- |
 | Número de comando | 1151 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

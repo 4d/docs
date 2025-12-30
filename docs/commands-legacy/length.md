@@ -5,7 +5,7 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *string* ) : Integer<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *string* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ This example illustrates the use of **Length**. The results, described in the co
 |  |  |
 | --- | --- |
 | Command number | 16 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

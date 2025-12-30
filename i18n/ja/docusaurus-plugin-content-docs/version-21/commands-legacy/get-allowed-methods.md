@@ -49,6 +49,6 @@ GET ALLOWED METHODSコマンドは、[SET ALLOWED METHODS](../commands/set-allow
 |  |  |
 | --- | --- |
 | コマンド番号 | 908 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

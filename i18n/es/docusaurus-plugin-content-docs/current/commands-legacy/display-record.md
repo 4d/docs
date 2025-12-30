@@ -5,11 +5,11 @@ slug: /commands/display-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.DISPLAY RECORD.Syntax-->**DISPLAY RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.DISPLAY RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual mostrar el registro actual o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual mostrar el registro actual o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ El siguiente ejemplo muestra una serie de registros como una presentación de di
 |  |  |
 | --- | --- |
 | Número de comando | 105 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

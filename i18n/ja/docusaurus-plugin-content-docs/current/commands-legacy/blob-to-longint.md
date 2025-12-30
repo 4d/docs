@@ -5,14 +5,14 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* ; *byteOrder* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *BLOB* : Blob ; *byteOrder* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | 倍長整数値を取り出すBLOB |
-| byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
-| offset | Variable | &#8596;  | BLOB中のオフセット (バイト単位) |
-| || | 読み込み後、新しいオフセット |
+| Blob | Blob | &#8594; | 倍長整数値を取り出すBLOB |
+| byteOrder | Integer | &#8594; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| offset | Variable | &#8596; | BLOB中のオフセット (バイト単位) |
+|  |  |  | 読み込み後、新しいオフセット |
 | 戻り値 | Integer | &#8592; | 4バイト整数値 |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 |  |  |
 | --- | --- |
 | コマンド番号 | 551 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

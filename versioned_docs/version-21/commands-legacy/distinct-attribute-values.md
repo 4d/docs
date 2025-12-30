@@ -99,6 +99,6 @@ The *aLChildNum* array receives the following elements:
 |  |  |
 | --- | --- |
 | Command number | 1397 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

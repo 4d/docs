@@ -47,6 +47,6 @@ Passez dans le paramètre *vertical* une valeur indiquant l’option de redimens
 |  |  |
 | --- | --- |
 | Numéro de commande | 1175 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

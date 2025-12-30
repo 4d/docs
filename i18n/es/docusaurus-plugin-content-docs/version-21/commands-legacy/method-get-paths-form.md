@@ -75,6 +75,6 @@ Lista de todos los objetos de los formularios "input" de la tabla \[Empleados\] 
 |  |  |
 | --- | --- |
 | Número de comando | 1168 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

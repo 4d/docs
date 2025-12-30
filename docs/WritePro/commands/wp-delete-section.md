@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-section
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE SECTION.Syntax-->**WP DELETE SECTION** ( *section* )<br/> **WP DELETE SECTION** ( *wpDoc* ; *indexNumber* {; *count*} )<!-- END REF-->
+<!--REF #_command_.WP DELETE SECTION.Syntax-->**WP DELETE SECTION** ( *section* : Object )<br/> **WP DELETE SECTION** ( *wpDoc* : Object ; *indexNumber* : Integer {; *count* : Integer} )<!-- END REF-->
 
 <!--REF #_command_.WP DELETE SECTION.Params-->
 | Parameter | Type |  | Description |

@@ -49,6 +49,6 @@ Se quiser carregar uma imagem dependendo do esquema atual do formulário:
 |  |  |
 | --- | --- |
 | Número do comando | 1761 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

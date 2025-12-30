@@ -5,11 +5,11 @@ slug: /commands/read-only-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Read only state.Syntax-->**Read only state** {( *tabla* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Read only state.Syntax-->**Read only state** ( *tabla* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Read only state.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual probar el estado sólo lectura o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla para la cual probar el estado sólo lectura o Tabla por defecto, si se omite |
 | Resultado | Boolean | &#8592; | El acceso a la tabla es sólo lectura (TRUE), o El acceso a la tabla es lectura/escritura (FALSE) |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ El siguiente ejemplo prueba el estado de la tabla \[Facturas\]. Si el estado de 
 |  |  |
 | --- | --- |
 | Número de comando | 362 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

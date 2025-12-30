@@ -44,6 +44,6 @@ The *expDate* parameter receives the expiration date and the *expTime* parameter
 |  |  |
 | --- | --- |
 | Command number | 1207 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -63,6 +63,6 @@ You want to count object references in an object array:
 |  |  |
 | --- | --- |
 | Command number | 907 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*laTable* ;} *nomEnsemble* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*laTable* : Table ;} *nomEnsemble* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
-| nomEnsemble | Text | &#8594;  | Ensemble dans lequel stocker les enregistrements marqués |
+| laTable | Table | &#8594; | Table de laquelle lire les enregistrements marqués Si omis, table du formulaire courant |
+| nomEnsemble | Text | &#8594; | Ensemble dans lequel stocker les enregistrements marqués |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 902 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

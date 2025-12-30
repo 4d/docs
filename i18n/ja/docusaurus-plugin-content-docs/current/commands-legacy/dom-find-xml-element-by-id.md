@@ -5,12 +5,12 @@ slug: /commands/dom-find-xml-element-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *elementRef* ; *id* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element by ID.Syntax-->**DOM Find XML element by ID** ( *elementRef* : Text ; *id* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element by ID.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
-| id | Text | &#8594;  | 検索する要素のID属性値 |
+| elementRef | Text | &#8594; | XML要素参照 |
+| id | Text | &#8594; | 検索する要素のID属性値 |
 | 戻り値 | Text | &#8592; | 見つけた要素の参照 (該当する場合) |
 
 <!-- END REF-->
@@ -34,7 +34,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1010 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

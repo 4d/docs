@@ -49,6 +49,6 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 |  |  |
 | --- | --- |
 | Command number | 1763 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* ; *comment* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 874 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -5,12 +5,12 @@ slug: /commands/alert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* {; *libelléBoutonOK*} )<!-- END REF-->
+<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* : Text {; *libelléBoutonOK* : Text} )<!-- END REF-->
 <!--REF #_command_.ALERT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message à afficher dans la boîte de dialogue d'alerte |
-| libelléBoutonOK | Text | &#8594;  | Libellé du bouton OK |
+| message | Text | &#8594; | Message à afficher dans la boîte de dialogue d'alerte |
+| libelléBoutonOK | Text | &#8594; | Libellé du bouton OK |
 
 <!-- END REF-->
 
@@ -73,6 +73,6 @@ Ce code affiche la boîte de dialogue d'alerte suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 41 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

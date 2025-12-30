@@ -5,11 +5,11 @@ slug: /commands/web-legacy-close-session
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *idSession* )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY CLOSE SESSION.Syntax-->**WEB LEGACY CLOSE SESSION** ( *idSession* : Text )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY CLOSE SESSION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| idSession | Text | &#8594;  | UUID de session |
+| idSession | Text | &#8594; | UUID de session |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Après l’exécution de cette commande, si un client Web envoie une requête ut
 |  |  |
 | --- | --- |
 | Numéro de commande | 1208 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

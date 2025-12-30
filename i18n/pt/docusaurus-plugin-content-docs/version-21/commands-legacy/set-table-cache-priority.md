@@ -55,6 +55,6 @@ Em , se quiser estabelecer uma prioridade mais alta para os dados escalares \[Cu
 |  |  |
 | --- | --- |
 | Número do comando | 1400 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

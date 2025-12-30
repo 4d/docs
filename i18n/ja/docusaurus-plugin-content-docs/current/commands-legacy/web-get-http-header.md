@@ -5,7 +5,7 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* )<br/>**WEB GET HTTP HEADER** ( *fieldArray* ; *valueArray* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( *header* : テキスト, テキスト配列 )<br/>**WEB GET HTTP HEADER** ( *fieldArray* : テキスト, テキスト配列 ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -121,6 +121,6 @@ HTTP標準に準拠するには、フィールド名を常に英語で記述し�
 |  |  |
 | --- | --- |
 | コマンド番号 | 697 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

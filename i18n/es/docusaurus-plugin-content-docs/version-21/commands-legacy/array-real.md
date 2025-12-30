@@ -65,6 +65,6 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo Real y asigna a 
 |  |  |
 | --- | --- |
 | Número de comando | 219 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

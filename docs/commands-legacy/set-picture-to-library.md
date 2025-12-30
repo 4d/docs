@@ -5,7 +5,7 @@ slug: /commands/set-picture-to-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *picture* ; *picRef* ; *picName* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE TO LIBRARY.Syntax-->**SET PICTURE TO LIBRARY** ( *picture* : Picture ; *picRef* : Integer ; *picName* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE TO LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -104,7 +104,7 @@ If there is not enough memory to add the picture to the Picture Library, an erro
 |  |  |
 | --- | --- |
 | Command number | 566 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 | Forbidden on the server ||
 

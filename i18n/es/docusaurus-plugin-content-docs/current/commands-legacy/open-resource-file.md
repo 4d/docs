@@ -5,12 +5,12 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomArchivo* {; *tipo*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resNomArchivo* : Text {; *tipo* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNomArchivo | Text | &#8594;  | Nombre o ruta de acceso completa del archivo de recursos o Cadena vacía para mostrar la caja de diálogo estándar de apertura de archivos |
-| tipo | Text | &#8594;  | Tipo de archivo Mac OS (cadena de 4 caracteres) o extensión del archivo Windows (cadena de 1 a 3 caracteres) o archivo de recursos ("res " / .RES) si se omite |
+| resNomArchivo | Text | &#8594; | Nombre o ruta de acceso completa del archivo de recursos o Cadena vacía para mostrar la caja de diálogo estándar de apertura de archivos |
+| tipo | Text | &#8594; | Tipo de archivo Mac OS (cadena de 4 caracteres) o extensión del archivo Windows (cadena de 1 a 3 caracteres) o archivo de recursos ("res " / .RES) si se omite |
 | Resultado | Time | &#8592; | Número de referencia del archivo de recursos |
 
 <!-- END REF-->
@@ -103,7 +103,7 @@ Si el archivo de recursos no se pudo abrir por un problema del recurso o de E/S,
 |  |  |
 | --- | --- |
 | Número de comando | 497 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document, error |
 
 

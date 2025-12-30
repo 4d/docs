@@ -90,6 +90,6 @@ If you execute the following statement:
 |  |  |
 | --- | --- |
 | Command number | 288 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

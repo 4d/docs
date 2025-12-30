@@ -5,13 +5,13 @@ slug: /commands/wa-open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( {* ;} *objeto* ; *url* )<!-- END REF-->
+<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( * ; *objeto* : Text ; *url* : Text )<br/>**WA OPEN URL** ( *objeto* : Field, Variable ; *url* : Text )<!-- END REF-->
 <!--REF #_command_.WA OPEN URL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| url | Text | &#8594;  | URL a carregar na área Web |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| url | Text | &#8594; | URL a carregar na área Web |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Este comando tem o mesmo efeito que a modificação do valor da variável "URL" 
 |  |  |
 | --- | --- |
 | Número do comando | 1020 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

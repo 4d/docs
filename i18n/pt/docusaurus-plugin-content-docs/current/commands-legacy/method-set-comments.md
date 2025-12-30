@@ -5,13 +5,13 @@ slug: /commands/method-set-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *rota* ; *Comentarios* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *rota* : Text, Text array ; *Comentarios* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text, Text array | &#8594;  | Texto ou array texto contendo uma ou mais rotas de método |
-| Comentarios | Text, Text array | &#8594;  | Comentários dos métodos designados |
-| * | Operador | &#8594;  | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
+| rota | Text, Text array | &#8594; | Texto ou array texto contendo uma ou mais rotas de método |
+| Comentarios | Text, Text array | &#8594; | Comentários dos métodos designados |
+| * | Operador | &#8594; | Se passado = o comando aplica ao banco de dados local quando é executado de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -75,6 +75,6 @@ Pode executar o comando de uma componente, mas neste caso você deve passar o pa
 |  |  |
 | --- | --- |
 | Número do comando | 1193 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

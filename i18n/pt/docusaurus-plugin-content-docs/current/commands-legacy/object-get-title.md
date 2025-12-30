@@ -5,12 +5,12 @@ slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objueto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou variável ou campo (se * for omitido) |
+| * | Operador | &#8594; | se especificado, objueto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou variável ou campo (se * for omitido) |
 | Resultado | Text | &#8592; | Título do botão |
 
 <!-- END REF-->
@@ -36,6 +36,6 @@ Se passar o parâmetro opcional *\**, indica que o parâmetro *objeto é* um nom
 |  |  |
 | --- | --- |
 | Número do comando | 1068 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

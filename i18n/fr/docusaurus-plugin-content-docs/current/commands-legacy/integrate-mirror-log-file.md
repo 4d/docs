@@ -5,14 +5,13 @@ slug: /commands/integrate-mirror-log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *cheminAccès* ; *numOpération* {; *mode* {; *objErreur*}} )<!-- END REF-->
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *cheminAccès* : Text ; *numOpération* : Real {; *mode* : Integer {; *objErreur* : Object}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Nom ou chemin d’accès du fichier d’historique à intégrer |
-| numOpération | Real | &#8594;  | Numéro de la dernière opération intégrée ou -2 pour tout intégrer |
-| &#8592; | Nouveau numéro de la dernière opération intégrée |
-| mode | Integer | &#8594;  | 0=mode strict (mode par défaut), 1=mode réparation auto |
+| cheminAccès | Text | &#8594; | Nom ou chemin d’accès du fichier d’historique à intégrer |
+| numOpération | Real | &#8596; | *in:* Number of last operation integrated or -2 to integrate the whole file<br/>*out:* New number of last operation integrated |
+| mode | Integer | &#8594; | 0=mode strict (mode par défaut), 1=mode réparation auto |
 | objErreur | Object | &#8592; | Opération(s) manquante(s) |
 
 <!-- END REF-->
@@ -105,7 +104,7 @@ Si l'intégration s'effectue correctement, la variable système OK prend la vale
 |  |  |
 | --- | --- |
 | Numéro de commande | 1312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

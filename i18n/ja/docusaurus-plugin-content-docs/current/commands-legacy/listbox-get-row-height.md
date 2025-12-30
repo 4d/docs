@@ -5,13 +5,13 @@ slug: /commands/listbox-get-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height** ( {* ;} *object* ; *row* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height** ( * ; *object* : Text ; *row* : Integer ) : Integer<br/>**LISTBOX Get row height** ( *object* : Field, Variable ; *row* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row height.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| row | Integer | &#8594;  | 高さの値を取得するリストボックスの行 |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| row | Integer | &#8594; | 高さの値を取得するリストボックスの行 |
 | 戻り値 | Integer | &#8592; | 行の高さ |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1408 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

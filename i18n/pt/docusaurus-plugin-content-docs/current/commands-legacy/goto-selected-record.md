@@ -5,12 +5,12 @@ slug: /commands/goto-selected-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*tabela* ;} *posicao* )<!-- END REF-->
+<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*tabela* : Table ;} *posicao* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual ir ao registro selecionado ou Tabela por padrão, se omitida |
-| posicao | Integer | &#8594;  | Posição do registro na seleção |
+| tabela | Table | &#8594; | Tabela na qual ir ao registro selecionado ou Tabela por padrão, se omitida |
+| posicao | Integer | &#8594; | Posição do registro na seleção |
 
 <!-- END REF-->
 
@@ -65,7 +65,7 @@ O seguinte método de objeto para *atNomes* seleciona o registro correto na sele
 |  |  |
 | --- | --- |
 | Número do comando | 245 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

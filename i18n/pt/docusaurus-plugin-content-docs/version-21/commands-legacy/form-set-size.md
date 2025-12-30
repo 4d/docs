@@ -127,6 +127,6 @@ O método de objeto associado com este botão é o seguinte:
 |  |  |
 | --- | --- |
 | Número do comando | 891 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

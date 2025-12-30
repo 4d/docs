@@ -66,6 +66,6 @@ El método de proyecto DEBUG se lista aquí:
 |  |  |
 | --- | --- |
 | Número de comando | 157 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/drop-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *userSession* )<!-- END REF-->
+<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *userSession* : Text )<!-- END REF-->
 <!--REF #_command_.DROP REMOTE USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ You want to drop a specific remote user:
 |  |  |
 | --- | --- |
 | Command number | 1633 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

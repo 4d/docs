@@ -5,19 +5,19 @@ slug: /commands/graph-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graphImage* ; *xmin* ; *xmax* ; *ymin* ; *ymax* ; *xprop* ; *grilleX* ; *grilleY* ; *titre* {; *titre2* ; ... ; *titreN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graphImage* : Picture ; *xmin* : Integer, Date, Time ; *xmax* : Integer, Date, Time ; *ymin* : Integer ; *ymax* : Integer ; *xprop* : Boolean ; *grilleX* : Boolean ; *grilleY* : Boolean ; *titre* : Text {; *...titre* : Text} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| graphImage | Picture | &#8594;  | Variable image |
-| xmin | Integer, Date, Time | &#8594;  | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
-| xmax | Integer, Date, Time | &#8594;  | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
-| ymin | Integer | &#8594;  | Valeur minimale de l'échelle des Y |
-| ymax | Integer | &#8594;  | Valeur maximale de l'échelle des Y |
-| xprop | Boolean | &#8594;  | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
-| grilleX | Boolean | &#8594;  | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
-| grilleY | Boolean | &#8594;  | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
-| titre | Text | &#8594;  | Titre(s) pour les titre(s) des série(s) |
+| graphImage | Picture | &#8594; | Variable image |
+| xmin | Integer, Date, Time | &#8594; | Valeur minimale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| xmax | Integer, Date, Time | &#8594; | Valeur maximale de l'échelle des X pour graphe proportionnel (lignes ou points) |
+| ymin | Integer | &#8594; | Valeur minimale de l'échelle des Y |
+| ymax | Integer | &#8594; | Valeur maximale de l'échelle des Y |
+| xprop | Boolean | &#8594; | VRAI pour l'échelle des X proportionnelle ; FAUX pour l'échelle des X normale (lignes ou points) |
+| grilleX | Boolean | &#8594; | VRAI pour la grille sur l'axe des X ; FAUX pour pas de grille sur l'axe des X (seulement si xprop est VRAI) |
+| grilleY | Boolean | &#8594; | VRAI pour la grille sur l'axe des Y; FAUX pour pas de grille sur l'axe des Y |
+| titre | Text | &#8594; | Titre(s) pour les titre(s) des série(s) |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ Reportez-vous à l'exemple de la commande GRAPHE.
 |  |  |
 | --- | --- |
 | Numéro de commande | 298 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

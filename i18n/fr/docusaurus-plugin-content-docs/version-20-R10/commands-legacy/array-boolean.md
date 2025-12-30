@@ -64,6 +64,6 @@ Cet exemple crée un tableau interprocess de 50 éléments de type Booléen et a
 |  |  |
 | --- | --- |
 | Numéro de commande | 223 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

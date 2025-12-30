@@ -5,7 +5,7 @@ slug: /commands/insert-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *list* ; *beforeItemRef* ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<br/>**INSERT IN LIST** ( * ; *list* ; * ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *list* : Integer, Text ; *beforeItemRef* : Integer, Operator ; *itemText* : Text ; *itemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**INSERT IN LIST** ( * ; *list* : Integer, Text ; * ; *itemText* : Text ; *itemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ The following code inserts an item (with no attached sublist) just before the cu
 |  |  |
 | --- | --- |
 | Command number | 625 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/char
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Char.Syntax-->**Char** ( *codigoCaractere* ) : Text<!-- END REF-->
+<!--REF #_command_.Char.Syntax-->**Char** ( *codigoCaractere* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| codigoCaractere | Integer | &#8594;  | Código do caractere |
+| codigoCaractere | Integer | &#8594; | Código do caractere |
 | Resultado | Text | &#8592; | Caractere representado por códigoCaractere |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ O seguinte exemplo utiliza Char para inserir um retorno de carro no texto de uma
 |  |  |
 | --- | --- |
 | Número do comando | 90 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

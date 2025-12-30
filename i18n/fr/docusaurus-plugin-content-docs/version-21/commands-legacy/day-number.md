@@ -65,6 +65,6 @@ L'exemple suivant est une fonction qui retourne le jour d'aujourd'hui sous forme
 |  |  |
 | --- | --- |
 | Numéro de commande | 114 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -37,6 +37,6 @@ Si *objeto* designa una imagen (variable o campo), *posicionLinea* devuelve el d
 |  |  |
 | --- | --- |
 | Número de comando | 1114 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/set-help-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* )<!-- END REF-->
+<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* : Collection )<!-- END REF-->
 <!--REF #_command_.SET HELP MENU.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ You want to customize the **Help** menu for your application:
 |  |  |
 | --- | --- |
 | Command number | 1801 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

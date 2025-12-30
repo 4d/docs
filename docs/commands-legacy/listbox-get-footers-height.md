@@ -5,7 +5,7 @@ slug: /commands/listbox-get-footers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footers height.Syntax-->**LISTBOX Get footers height** ( {* ;} *object* {; *unit*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footers height.Syntax-->**LISTBOX Get footers height** ( * ; *object* : Text {; *unit* : Integer} ) : Integer<br/>**LISTBOX Get footers height** ( *object* : Field, Variable {; *unit* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footers height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ By default, if you omit the *unit* parameter, the height of the row returned is 
 |  |  |
 | --- | --- |
 | Command number | 1146 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

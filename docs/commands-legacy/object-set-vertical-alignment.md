@@ -5,7 +5,7 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( {* ;} *object* ; *alignment* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *object* : Field, Variable ; *alignment* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ Vertical alignment can be applied to the following form objects:
 |  |  |
 | --- | --- |
 | Command number | 1187 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

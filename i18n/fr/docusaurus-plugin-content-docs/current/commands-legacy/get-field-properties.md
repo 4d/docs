@@ -5,12 +5,12 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *ptrChp* |; *champType* {; *champLong* {; *indexé* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *numTable* ; *numChamp* ; *champType* {; *champLong* {; *indexé* {; *unique* {; *invisible*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *ptrChp* : Pointeur, Entier long |; *champType* : Integer {; *champLong* : Integer {; *indexé* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *numTable* : Pointeur, Entier long ; *numChamp* : Integer ; *champType* : Integer {; *champLong* : Integer {; *indexé* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; numTable | Pointeur, Entier long | &#8594;  | Pointeur de champ ou Numéro de table |
-| numChamp | Integer | &#8594;  | Numéro de champ si un numéro de table est passé en premier paramètre |
+| ptrChp &#124; numTable | Pointeur, Entier long | &#8594; | Pointeur de champ ou Numéro de table |
+| numChamp | Integer | &#8594; | Numéro de champ si un numéro de table est passé en premier paramètre |
 | champType | Integer | &#8592; | Type de champ |
 | champLong | Integer | &#8592; | Longueur du champ (si alphanumérique) |
 | indexé | Boolean | &#8592; | Vrai = Indexé, Faux = Non indexé |
@@ -80,6 +80,6 @@ L'exemple suivant récupère dans les variables *vType*, *vLong*, *vIndex*, *vUn
 |  |  |
 | --- | --- |
 | Numéro de commande | 258 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

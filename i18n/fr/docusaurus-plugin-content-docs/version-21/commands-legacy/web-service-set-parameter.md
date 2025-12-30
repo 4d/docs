@@ -76,6 +76,6 @@ Cet exemple définit deux paramètres :
 |  |  |
 | --- | --- |
 | Numéro de commande | 777 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

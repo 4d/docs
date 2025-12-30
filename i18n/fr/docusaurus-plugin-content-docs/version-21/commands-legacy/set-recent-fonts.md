@@ -47,6 +47,6 @@ Le menu contient alors :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1305 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

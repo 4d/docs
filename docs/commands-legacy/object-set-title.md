@@ -5,7 +5,7 @@ slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( {* ;} *object* ; *title* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *object* : Text ; *title* : Text )<br/>**OBJECT SET TITLE** ( *object* : Field, Variable ; *title* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -77,6 +77,6 @@ You want to insert titles on two lines:
 |  |  |
 | --- | --- |
 | Command number | 194 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

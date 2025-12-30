@@ -49,6 +49,6 @@ El siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 911 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

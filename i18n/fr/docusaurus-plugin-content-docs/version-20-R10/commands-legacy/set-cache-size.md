@@ -45,6 +45,6 @@ Vous voulez ajouter 100 Mo à la taille du cache de votre base. Vous pouvez écr
 |  |  |
 | --- | --- |
 | Numéro de commande | 1399 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

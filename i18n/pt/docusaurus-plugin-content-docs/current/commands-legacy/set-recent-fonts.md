@@ -5,11 +5,11 @@ slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *fontsArray* )<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *fontsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fontsArray | Text array | &#8594;  | Array of font names |
+| fontsArray | Text array | &#8594; | Array of font names |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ Then the menu contains:
 |  |  |
 | --- | --- |
 | Número do comando | 1305 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

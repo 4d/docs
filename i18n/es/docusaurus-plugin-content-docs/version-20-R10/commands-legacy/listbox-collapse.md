@@ -56,6 +56,6 @@ Este ejemplo colapsa el primer nivel de líneas de ruptura de la selección en e
 |  |  |
 | --- | --- |
 | Número de comando | 1101 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

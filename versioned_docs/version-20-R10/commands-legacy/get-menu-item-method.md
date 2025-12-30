@@ -35,6 +35,6 @@ The command returns the name of the 4D method as a character string (expression)
 |  |  |
 | --- | --- |
 | Command number | 981 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

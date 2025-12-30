@@ -40,6 +40,6 @@ Los dos últimos parámetros sólo se llenan cuando el error viene de la fuente 
 |  |  |
 | --- | --- |
 | Número de comando | 825 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

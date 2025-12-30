@@ -34,6 +34,6 @@ Reportez-vous à l'exemple proposé dans la section *Présentation des ensembles
 |  |  |
 | --- | --- |
 | Numéro de commande | 140 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,16 +5,16 @@ slug: /commands/set-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *izquierda* ; *superior* ; *derecha* ; *inferior* {; *ventana*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *izquierda* : Integer ; *superior* : Integer ; *derecha* : Integer ; *inferior* : Integer {; *ventana* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &#8594;  | Coordenada global izquierda del interior de la ventana |
-| superior | Integer | &#8594;  | Coordenada global superior del interior de la ventana |
-| derecha | Integer | &#8594;  | Coordenada global derecha del interior de la ventana |
-| inferior | Integer | &#8594;  | Coordenada global inferior del interior de la ventana |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana o ventana del primer plano del proceso si se omite este parámetro |
-| * | Operador | &#8594;  | Si se omite (por defecto) = cambiar ventana al fondo<br/>Si se pasa = no cambiar el nivel de la ventana |
+| izquierda | Integer | &#8594; | Coordenada global izquierda del interior de la ventana |
+| superior | Integer | &#8594; | Coordenada global superior del interior de la ventana |
+| derecha | Integer | &#8594; | Coordenada global derecha del interior de la ventana |
+| inferior | Integer | &#8594; | Coordenada global inferior del interior de la ventana |
+| ventana | Integer | &#8594; | Número de referencia de la ventana o ventana del primer plano del proceso si se omite este parámetro |
+| * | Operador | &#8594; | Si se omite (por defecto) = cambiar ventana al fondo<br/>Si se pasa = no cambiar el nivel de la ventana |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ La ventana aparece de esta forma:
 |  |  |
 | --- | --- |
 | Número de comando | 444 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/size-of-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *tableau* ) : Integer<!-- END REF-->
+<!--REF #_command_.Size of array.Syntax-->**Size of array** ( *tableau* : Array ) : Integer<!-- END REF-->
 <!--REF #_command_.Size of array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#8594;  | Tableau dont vous désirez connaître la taille |
+| tableau | Array | &#8594; | Tableau dont vous désirez connaître la taille |
 | Résultat | Integer | &#8592; | Nombre d'éléments dans le tableau |
 
 <!-- END REF-->
@@ -52,6 +52,6 @@ L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deu
 |  |  |
 | --- | --- |
 | Numéro de commande | 274 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

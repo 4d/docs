@@ -5,7 +5,7 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ The value returned by this command is only meaningful if the "*Map NULL values t
 |  |  |
 | --- | --- |
 | Command number | 964 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

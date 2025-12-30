@@ -121,6 +121,6 @@ Dans cet exemple complet, nous allons créer par programmation une barre comport
 |  |  |
 | --- | --- |
 | Numéro de commande | 67 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

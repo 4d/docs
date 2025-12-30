@@ -5,12 +5,12 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressaoBool* {; *mensagemTexto*} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *expressaoBool* : Boolean {; *mensagemTexto*} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| expressaoBool | Boolean | &#8594;  | Expressão Booleana |
-| mensagemText | Text | &#8594;  | Texto de mensagem de erro |
+| expressaoBool | Boolean | &#8594; | Expressão Booleana |
+| mensagemText | Text | &#8594; | Texto de mensagem de erro |
 
 <!-- END REF-->
 
@@ -59,7 +59,7 @@ Uma asserção permite provar os parâmetros passados a um método de projeto pa
 |  |  |
 | --- | --- |
 | Número do comando | 1129 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

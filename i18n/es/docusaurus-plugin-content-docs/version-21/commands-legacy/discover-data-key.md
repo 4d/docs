@@ -55,6 +55,6 @@ Los archivos llave (archivos de extensión ".4DKeyChain") deben almacenarse en e
 |  |  |
 | --- | --- |
 | Número de comando | 1639 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

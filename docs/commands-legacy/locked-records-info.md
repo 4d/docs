@@ -5,7 +5,7 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* ) : Object<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *aTable* : Table ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -94,6 +94,6 @@ If the code is executed on a 4D Server and the locking is caused by a remote cli
 |  |  |
 | --- | --- |
 | Command number | 1316 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

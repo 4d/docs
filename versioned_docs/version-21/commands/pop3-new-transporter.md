@@ -72,6 +72,6 @@ The function returns a [**POP3 transporter object**](../API/POP3TransporterClass
 |  |  |
 | --- | --- |
 | Command number | 1697 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

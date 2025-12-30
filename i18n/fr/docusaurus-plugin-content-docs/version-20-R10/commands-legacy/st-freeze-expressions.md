@@ -71,6 +71,6 @@ Vous souhaitez insérer l’heure courante au début du texte et la figer avant 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1282 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

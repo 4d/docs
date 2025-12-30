@@ -41,6 +41,6 @@ Se o *objeto* é um sub formulário e se a impressão em tamanho variável está
 |  |  |
 | --- | --- |
 | Número do comando | 1241 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

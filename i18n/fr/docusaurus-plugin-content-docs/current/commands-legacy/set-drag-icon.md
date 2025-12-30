@@ -5,13 +5,13 @@ slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icône* {; *décalageH* {; *décalageV*}} )<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icône* : Picture {; *décalageH* : Integer {; *décalageV* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| icône | Picture | &#8594;  | Icône à utiliser lors du glisser |
-| décalageH | Integer | &#8594;  | Décalage horizontal du bord gauche de l’image par rapport à la position du curseur (>0 = vers la gauche, <0 = vers la droite) |
-| décalageV | Integer | &#8594;  | Décalage vertical du bord supérieur de l’image par rapport à la position du curseur (>0 = vers le haut, <0 = vers le bas) |
+| icône | Picture | &#8594; | Icône à utiliser lors du glisser |
+| décalageH | Integer | &#8594; | Décalage horizontal du bord gauche de l’image par rapport à la position du curseur (>0 = vers la gauche, <0 = vers la droite) |
+| décalageV | Integer | &#8594; | Décalage vertical du bord supérieur de l’image par rapport à la position du curseur (>0 = vers le haut, <0 = vers le bas) |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ A noter que vous pouvez modifier la position du curseur par rapport à l’image
 |  |  |
 | --- | --- |
 | Numéro de commande | 1272 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

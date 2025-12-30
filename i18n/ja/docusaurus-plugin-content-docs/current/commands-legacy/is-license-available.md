@@ -5,11 +5,11 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *license* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** ( *license* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| license | Integer | &#8594;  | ライセンスの有効性テストを行うプラグイン |
+| license | Integer | &#8594; | ライセンスの有効性テストを行うプラグイン |
 | 戻り値 | Boolean | &#8592; | プラグインが利用可能な場合はTrue、その他の場合はFalse |
 
 <!-- END REF-->
@@ -51,6 +51,6 @@ Is license available コマンドは次のような3通りの使用が可能で�
 |  |  |
 | --- | --- |
 | コマンド番号 | 714 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

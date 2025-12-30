@@ -38,6 +38,6 @@ See example for the [RECEIVE RECORD](receive-record.md) command.
 |  |  |
 | --- | --- |
 | Command number | 80 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

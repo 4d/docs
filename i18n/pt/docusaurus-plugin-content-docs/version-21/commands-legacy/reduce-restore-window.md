@@ -35,6 +35,6 @@ O comando muda o estado da janela:
 |  |  |
 | --- | --- |
 | Número do comando | 1829 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* ; *statement* )<!-- END REF-->
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *document* : Time ; *statement* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開かれたドキュメントの参照 |
-| statement | Text | &#8594;  | ドキュメントに挿入するステートメント |
+| document | Time | &#8594; | 開かれたドキュメントの参照 |
+| statement | Text | &#8594; | ドキュメントに挿入するステートメント |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 857 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

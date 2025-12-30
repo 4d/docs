@@ -5,13 +5,13 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* {; *type*}{; *} ) : any<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* : Text {; *type* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| jsonString | Text | &#8594;  | 解析したいJSON文字列 |
-| type | Integer | &#8594;  | 値を変換したい型 |
-| * | 演算子 | &#8594;  | 返された値がオブジェクトの場合、各プロパティの行の位置とオフセットを追加 |
+| jsonString | Text | &#8594; | 解析したいJSON文字列 |
+| type | Integer | &#8594; | 値を変換したい型 |
+| * | 演算子 | &#8594; | 返された値がオブジェクトの場合、各プロパティの行の位置とオフセットを追加 |
 | 戻り値 | any, Object | &#8592; | JSON文字列から取り出した値 |
 
 <!-- END REF-->
@@ -191,6 +191,6 @@ beta[1].golf:{line:10,offset:12}}}
 |  |  |
 | --- | --- |
 | コマンド番号 | 1218 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

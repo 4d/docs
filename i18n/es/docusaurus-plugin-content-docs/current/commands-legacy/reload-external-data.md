@@ -5,11 +5,11 @@ slug: /commands/reload-external-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *elCampo* )<!-- END REF-->
+<!--REF #_command_.RELOAD EXTERNAL DATA.Syntax-->**RELOAD EXTERNAL DATA** ( *elCampo* : Text, Blob, Picture, Object )<!-- END REF-->
 <!--REF #_command_.RELOAD EXTERNAL DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elCampo | Text, Blob, Picture, Object | &#8594;  | Campo para el cual recargar los datos |
+| elCampo | Text, Blob, Picture, Object | &#8594; | Campo para el cual recargar los datos |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ A continuación debe recargar los datos utilizando el comando **RELOAD EXTERNAL 
 |  |  |
 | --- | --- |
 | Número de comando | 1135 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -54,7 +54,7 @@ Si un número de registro no es válido (registro no creado), se genera el error
 |  |  |
 | --- | --- |
 | Número de comando | 640 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 | Modifica la selección actual ||
 

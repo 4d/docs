@@ -246,6 +246,6 @@ La méthode obtenirTexteSelectionne est la suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 389 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

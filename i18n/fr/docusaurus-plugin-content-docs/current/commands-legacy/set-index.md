@@ -5,13 +5,13 @@ slug: /commands/set-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *leChamp* ; *index* {; *} )<!-- END REF-->
+<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *leChamp* ; *index* : Boolean, Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ duquel créer ou supprimer l’index |
-| index | Boolean, Integer | &#8594;  | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
-| * | Operator |  &#8594;  | Indexation asynchrone si * est passé |
+| leField | Field | &#8594; | Champ duquel créer ou supprimer l’index |
+| index | Boolean, Integer | &#8594; | • Vrai=Créer l’index, Faux=Supprimer l’index, ou• Créer un index de type : -1=mots-clés, 0=par défaut, 1=B-Tree standard, 3=B-Tree cluster |
+| * | Operator | &#8594; | Indexation asynchrone si * est passé |
 
 <!-- END REF-->
 
@@ -94,6 +94,6 @@ Création d'un index de mots-clés :
 |  |  |
 | --- | --- |
 | Numéro de commande | 344 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -51,6 +51,6 @@ O exemplo a seguir adiciona um elemento a um array:
 |  |  |
 | --- | --- |
 | Número do comando | 227 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

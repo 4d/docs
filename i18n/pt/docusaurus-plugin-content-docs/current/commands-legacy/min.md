@@ -5,13 +5,13 @@ slug: /commands/min
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Min.Syntax-->**Min** ( *series* {; *atributoRota*} ) : any<!-- END REF-->
+<!--REF #_command_.Min.Syntax-->**Min** ( *series* : Field, Array {; *atributoRota* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Min.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Dados para os quais se retorna o valor mínimo |
-| atributoRota | Text | &#8594;  | Rota do atributo para o qual retorna o valor mínimo |
-| Resultado | Date, Number | &#8592; | Valor mínimo em séries |
+| series | Field, Array | &#8594; | Dados para os quais se retorna o valor mínimo |
+| atributoRota | Text | &#8594; | Rota do atributo para o qual retorna o valor mínimo |
+| Resultado | Date, Real | &#8592; | Valor mínimo em séries |
 
 <!-- END REF-->
 
@@ -84,7 +84,7 @@ Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descri
 |  |  |
 | --- | --- |
 | Número do comando | 4 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

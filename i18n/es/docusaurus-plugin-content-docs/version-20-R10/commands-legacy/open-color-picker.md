@@ -34,6 +34,6 @@ Si el color se ha cambiado, el evento formulario On After Edit se genera para el
 |  |  |
 | --- | --- |
 | Número de comando | 1304 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

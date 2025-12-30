@@ -5,11 +5,11 @@ slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *dossierRacine* )<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *dossierRacine* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dossierRacine | Text | &#8594;  | Chemin d'accès du dossier racine du serveur Web |
+| dossierRacine | Text | &#8594; | Chemin d'accès du dossier racine du serveur Web |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Si vous passez un chemin d'accès invalide, une erreur liée à la gestion de fi
 |  |  |
 | --- | --- |
 | Numéro de commande | 634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

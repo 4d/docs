@@ -5,13 +5,13 @@ slug: /commands/sax-add-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *document* ; *données* {; *} )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML ELEMENT VALUE.Syntax-->**SAX ADD XML ELEMENT VALUE** ( *document* : Time ; *données* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML ELEMENT VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
-| données | Text, Variable | &#8594;  | Texte ou variable à insérer dans le document |
-| * | Opérateur | &#8594;  | Si passé = Encoder les caractères spéciaux en mode 'XML Données brutes' |
+| document | Time | &#8594; | Référence du document ouvert |
+| données | Text, Variable | &#8594; | Texte ou variable à insérer dans le document |
+| * | Opérateur | &#8594; | Si passé = Encoder les caractères spéciaux en mode 'XML Données brutes' |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 855 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

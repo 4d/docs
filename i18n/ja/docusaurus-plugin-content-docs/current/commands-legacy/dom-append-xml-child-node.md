@@ -5,13 +5,13 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* ; *childType* ; *childValue* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* : Text ; *childType* : Integer ; *childValue* : Text, Blob ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
-| childType | Integer | &#8594;  | 追加する子のタイプ |
-| childValue | Text, Blob | &#8594;  | 子ノードとして挿入するテキストまたは (テキストあるいはBlob) 変数 |
+| elementRef | Text | &#8594; | XML要素参照 |
+| childType | Integer | &#8594; | 追加する子のタイプ |
+| childValue | Text, Blob | &#8594; | 子ノードとして挿入するテキストまたは (テキストあるいはBlob) 変数 |
 | 戻り値 | Text | &#8592; | 子XML要素参照 |
 
 <!-- END REF-->
@@ -152,6 +152,6 @@ Result:
 |  |  |
 | --- | --- |
 | コマンド番号 | 1080 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

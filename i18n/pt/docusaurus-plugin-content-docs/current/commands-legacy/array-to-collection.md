@@ -5,13 +5,13 @@ slug: /commands/array-to-collection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION**  ( *coleçãlo* ; *array* {; *nomProp*}{; *array2* ; *nomProp2* ; ... ; *arrayN* ; *nomPropN*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO COLLECTION.Syntax-->**ARRAY TO COLLECTION**  ( *coleçãlo* : Collection ; *array* : Array {; *nomProp* : Text}{; *array2* ; *nomProp2* ; ... ; *arrayN* ; *nomPropN*} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO COLLECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | coleçãlo | Collection | &#8592; | Coleção a receber o array de dados |
-| array | Array | &#8594;  | Array a copiar para a coleção, se nomeProp for passado, array a copiar aos valores da arrayProp na coleção |
-| nomProp | Text | &#8594;  | Nome de propriedade objeto cujmo valor a preencher com elementos do array |
+| array | Array | &#8594; | Array a copiar para a coleção, se nomeProp for passado, array a copiar aos valores da arrayProp na coleção |
+| nomProp | Text | &#8594; | Nome de propriedade objeto cujmo valor a preencher com elementos do array |
 
 <!-- END REF-->
 
@@ -88,6 +88,6 @@ Se quiser copiar um array de texto em uma coleção compartilhada:
 |  |  |
 | --- | --- |
 | Número do comando | 1563 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

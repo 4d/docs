@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* ; *menuItem* ; *methodName* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM METHOD.Syntax-->**SET MENU ITEM METHOD** ( *menu* : Integer, Text ; *menuItem* : Integer ; *methodName* : Text {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM METHOD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ Refer to the example of the [SET MENU BAR](set-menu-bar.md) command.
 |  |  |
 | --- | --- |
 | Command number | 982 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

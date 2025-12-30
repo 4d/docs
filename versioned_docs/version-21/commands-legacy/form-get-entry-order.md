@@ -57,6 +57,6 @@ You want to exclude some objects from the current entry order:
 |  |  |
 | --- | --- |
 | Command number | 1469 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -67,7 +67,7 @@ BLOB to listや[LIST TO BLOB](list-to-blob.md "LIST TO BLOB")は、 BLOBに格�
 |  |  |
 | --- | --- |
 | コマンド番号 | 557 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

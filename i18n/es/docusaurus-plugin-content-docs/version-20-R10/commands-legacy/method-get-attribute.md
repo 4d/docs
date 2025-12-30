@@ -45,6 +45,6 @@ El comando devuelve **True** si se selecciona un atributo y **False** si se dese
 |  |  |
 | --- | --- |
 | Número de comando | 1169 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

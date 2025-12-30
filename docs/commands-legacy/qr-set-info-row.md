@@ -5,7 +5,7 @@ slug: /commands/qr-set-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *area* ; *row* ; *hide* )<!-- END REF-->
+<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *area* : Integer ; *row* : Integer ; *hide* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET INFO ROW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ The following statement hides the detail row:
 |  |  |
 | --- | --- |
 | Command number | 763 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

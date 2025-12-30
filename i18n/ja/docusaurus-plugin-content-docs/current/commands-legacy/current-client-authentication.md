@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domain* ; *protocol* )} : Text<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** ( *domain* : Text ; *protocol* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -79,6 +79,6 @@ Windows セッションのログインに基づいてクライアントにアク
 |  |  |
 | --- | --- |
 | コマンド番号 | 1355 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

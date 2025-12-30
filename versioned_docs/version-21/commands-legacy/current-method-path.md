@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1201 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -72,6 +72,6 @@ This example gets the variance of the values placed in an array:
 |  |  |
 | --- | --- |
 | Command number | 27 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

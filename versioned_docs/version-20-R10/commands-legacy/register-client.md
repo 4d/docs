@@ -119,7 +119,7 @@ If the 4D client is correctly registered, the OK system variable is equal to 1\.
 |  |  |
 | --- | --- |
 | Command number | 648 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

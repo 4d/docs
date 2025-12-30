@@ -5,7 +5,7 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( size )}<br/>**FLUSH CACHE** {( * )}<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** ({ size })<br/>**FLUSH CACHE** ({ * })<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ In normal cases, you should not call this command, as 4D saves data modification
 |  |  |
 | --- | --- |
 | Command number | 297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

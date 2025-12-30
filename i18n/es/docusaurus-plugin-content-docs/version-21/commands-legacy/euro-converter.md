@@ -85,6 +85,6 @@ Estos son algunos ejemplos de conversiones que pueden realizarse con este comand
 |  |  |
 | --- | --- |
 | Número de comando | 676 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

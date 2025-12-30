@@ -5,11 +5,11 @@ slug: /commands/filter-keystroke
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *carFiltro* )<!-- END REF-->
+<!--REF #_command_.FILTER KEYSTROKE.Syntax-->**FILTER KEYSTROKE** ( *carFiltro* : Text )<!-- END REF-->
 <!--REF #_command_.FILTER KEYSTROKE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| carFiltro | Text | &#8594;  | Caracter de filtrado de tecle ou Cadeia vazia para cancelar o filtrado |
+| carFiltro | Text | &#8594; | Caracter de filtrado de tecle ou Cadeia vazia para cancelar o filtrado |
 
 <!-- END REF-->
 
@@ -247,6 +247,6 @@ O método ObterTextoSelecionado é o seguinte:
 |  |  |
 | --- | --- |
 | Número do comando | 389 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

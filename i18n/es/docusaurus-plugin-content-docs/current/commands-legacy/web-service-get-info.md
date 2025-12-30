@@ -5,11 +5,11 @@ slug: /commands/web-service-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *tipoInfo* ) : Text<!-- END REF-->
+<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *tipoInfo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoInfo | Integer | &#8594;  | Información a recuperar |
+| tipoInfo | Integer | &#8594; | Información a recuperar |
 | Resultado | Text | &#8592; | Información sobre el último error SOAP |
 
 <!-- END REF-->
@@ -36,6 +36,6 @@ Se devuelve una cadena vacía cuando no hay información disponible, en particul
 |  |  |
 | --- | --- |
 | Número de comando | 780 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

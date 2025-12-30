@@ -47,6 +47,6 @@ Vous souhaitez supprimer un utilisateur distant spécifique :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1633 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

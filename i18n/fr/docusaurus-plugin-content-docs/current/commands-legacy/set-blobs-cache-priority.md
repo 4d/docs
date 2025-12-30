@@ -5,12 +5,12 @@ slug: /commands/set-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *laTable* ; *priorité* )<!-- END REF-->
+<!--REF #_command_.SET BLOBS CACHE PRIORITY.Syntax-->**SET BLOBS CACHE PRIORITY** ( *laTable* : Table ; *priorité* : Integer )<!-- END REF-->
 <!--REF #_command_.SET BLOBS CACHE PRIORITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
-| priorité | Integer | &#8594;  | Priorité des données "blobs" de la table dans le cache |
+| laTable | Table | &#8594; | Table dont vous souhaitez modifier la priorité des données "blobs" pour toute la session |
+| priorité | Integer | &#8594; | Priorité des données "blobs" de la table dans le cache |
 
 <!-- END REF-->
 
@@ -54,6 +54,6 @@ Dans la , vous souhaitez fixer une priorité très haute pour les "blobs" de la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1425 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

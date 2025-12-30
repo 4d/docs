@@ -5,7 +5,7 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *operator* )<br/>**QR SET TOTALS DATA** ( *area* ; *colNum* ; *breakNum* ; *value* )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *operator* : Integer, Text )<br/>**QR SET TOTALS DATA** ( *area* : Integer ; *colNum* : Integer ; *breakNum* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -101,7 +101,7 @@ If you pass an invalid *breakNum* number, the error -9853 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 767 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

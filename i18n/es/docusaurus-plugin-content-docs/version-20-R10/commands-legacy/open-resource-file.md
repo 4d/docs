@@ -103,7 +103,7 @@ Si el archivo de recursos no se pudo abrir por un problema del recurso o de E/S,
 |  |  |
 | --- | --- |
 | Número de comando | 497 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document, error |
 
 

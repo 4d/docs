@@ -5,14 +5,14 @@ slug: /commands/listbox-get-cell-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( {* ;} *objeto* ; *coluna* ; *linha* ; *esquerda* ; *superior* ; *direita* ; *inferior* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL COORDINATES.Syntax-->**LISTBOX GET CELL COORDINATES** ( * ; *objeto* : Text ; *coluna* : Integer ; *linha* : Integer ; *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer )<br/>**LISTBOX GET CELL COORDINATES** ( *objeto* : Field, Variable ; *coluna* : Integer ; *linha* : Integer ; *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado = objeto é um nome de objeto (cadeia) |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
-| coluna | Integer | &#8594;  | Número de coluna |
-| linha | Integer | &#8594;  | Número de linha |
+| * | Operador | &#8594; | Se especificado = objeto é um nome de objeto (cadeia) |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou variável (se * for omitido) |
+| coluna | Integer | &#8594; | Número de coluna |
+| linha | Integer | &#8594; | Número de linha |
 | esquerda | Integer | &#8592; | Coordenada esquerda do objeto |
 | superior | Integer | &#8592; | Coordenada superior do objeto |
 | direita | Integer | &#8592; | Coordenada direita do objeto |
@@ -58,6 +58,6 @@ Você quer desenhar um retângulo vermelho arredor da célula selecionada de um 
 |  |  |
 | --- | --- |
 | Número do comando | 1330 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

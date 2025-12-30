@@ -5,11 +5,11 @@ slug: /commands/trigger-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *niveauTrigger* ; *evenementBase* ; *numTable* ; *numEnreg* )<!-- END REF-->
+<!--REF #_command_.TRIGGER PROPERTIES.Syntax-->**TRIGGER PROPERTIES** ( *niveauTrigger* : Integer ; *evenementBase* : Integer ; *numTable* : Integer ; *numEnreg* : Integer )<!-- END REF-->
 <!--REF #_command_.TRIGGER PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| niveauTrigger | Integer | &#8594;  | Niveau d'exécution du trigger |
+| niveauTrigger | Integer | &#8594; | Niveau d'exécution du trigger |
 | evenementBase | Integer | &#8592; | Evénement de base de données |
 | numTable | Integer | &#8592; | Numéro de la table |
 | numEnreg | Integer | &#8592; | Numéro de l'enregistrement |
@@ -44,6 +44,6 @@ Le numéro de table et d'enregistrement pour l'enregistrement concerné par l'é
 |  |  |
 | --- | --- |
 | Numéro de commande | 399 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

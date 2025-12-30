@@ -38,6 +38,6 @@ L'exemple suivant crée un ensemble après qu'une recherche ait été effectuée
 |  |  |
 | --- | --- |
 | Numéro de commande | 116 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

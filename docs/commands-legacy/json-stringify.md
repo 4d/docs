@@ -5,7 +5,7 @@ slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *value* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *value* : Object, any {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -179,6 +179,6 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 |  |  |
 | --- | --- |
 | Command number | 1217 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

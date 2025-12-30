@@ -5,14 +5,14 @@ slug: /commands/listbox-set-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( {* ;} *objeto* ; *linha* ; *altura* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( * ; *objeto* : Text ; *linha* : Integer ; *altura* : Integer )<br/>**LISTBOX SET ROW HEIGHT** ( *objeto* : Field, Variable ; *linha* : Integer ; *altura* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string) Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for omitido) ou variável (se * omitido) |
-| linha | Integer | &#8594;  | Linha list box cuja altura você quer estabelecer |
-| altura | Integer | &#8594;  | Altura da linha de list box |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string) Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for omitido) ou variável (se * omitido) |
+| linha | Integer | &#8594; | Linha list box cuja altura você quer estabelecer |
+| altura | Integer | &#8594; | Altura da linha de list box |
 
 <!-- END REF-->
 
@@ -90,6 +90,6 @@ Por outro lado, se o código abaixo for executado posteriormente...
 |  |  |
 | --- | --- |
 | Número do comando | 1409 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

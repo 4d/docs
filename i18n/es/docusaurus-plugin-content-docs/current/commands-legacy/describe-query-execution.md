@@ -5,11 +5,11 @@ slug: /commands/describe-query-execution
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *estado* )<!-- END REF-->
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *estado* : Boolean )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| estado | Boolean | &#8594;  | True=Activar análisis de búsquedas internas, False=Desactivar el análisis de búsquedas internas |
+| estado | Boolean | &#8594; | True=Activar análisis de búsquedas internas, False=Desactivar el análisis de búsquedas internas |
 
 <!-- END REF-->
 
@@ -73,6 +73,6 @@ $vResultPath :
 |  |  |
 | --- | --- |
 | Número de comando | 1044 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

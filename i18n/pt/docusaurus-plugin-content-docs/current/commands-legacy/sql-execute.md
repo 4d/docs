@@ -5,11 +5,11 @@ slug: /commands/sql-execute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *instrucaoSQL* {; *objAssoc*}{; *objAssoc2* ; ... ; *objAssocN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *instrucaoSQL* : Text {; *...objAssoc* : Variable, Field} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| instrucaoSQL | Text | &#8594;  | Comando SQL a executar |
+| instrucaoSQL | Text | &#8594; | Comando SQL a executar |
 | objAssoc | Variable, Field | &#8592; | Recebe resultado (se necessário) |
 
 <!-- END REF-->
@@ -163,7 +163,7 @@ Se o comando for executado corretamente, a variável sistema OK retorna 1, do co
 |  |  |
 | --- | --- |
 | Número do comando | 820 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

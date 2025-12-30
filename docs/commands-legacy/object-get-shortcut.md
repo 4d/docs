@@ -5,7 +5,7 @@ slug: /commands/object-get-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( {* ;} *object* ; *key* ; *modifiers* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SHORTCUT.Syntax-->**OBJECT GET SHORTCUT** ( * ; *object* : Text ; *key* : Text ; *modifiers* : Integer )<br/>**OBJECT GET SHORTCUT** ( *object* : Field, Variable ; *key* : Text ; *modifiers* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SHORTCUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ If there are no modifier keys for the shortcut, *modifiers* returns 0\.
 |  |  |
 | --- | --- |
 | Command number | 1186 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

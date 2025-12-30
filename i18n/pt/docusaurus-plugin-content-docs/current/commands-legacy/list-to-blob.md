@@ -5,13 +5,13 @@ slug: /commands/list-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *lista* ; *BLOB* {; *} )<!-- END REF-->
+<!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *lista* : Integer ; *BLOB* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.LIST TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Lista hierárquica a armazenar no BLOB |
-| Blob | Blob | &#8594;  | BLOB a receber a lista hierárquica |
-| * | Operador | &#8594;  | * adicionar o valor |
+| lista | Integer | &#8594; | Lista hierárquica a armazenar no BLOB |
+| Blob | Blob | &#8594; | BLOB a receber a lista hierárquica |
+| * | Operador | &#8594; | * adicionar o valor |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ Veja o exemplo para o comando [BLOB to list](blob-to-list.md "BLOB to list").
 |  |  |
 | --- | --- |
 | Número do comando | 556 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

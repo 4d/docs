@@ -38,6 +38,6 @@ O seguinte exemplo cria um conjunto depois de realizar uma pesquisa, de maneira 
 |  |  |
 | --- | --- |
 | Número do comando | 116 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

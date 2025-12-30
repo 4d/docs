@@ -5,7 +5,7 @@ slug: /commands/set-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *aField* ; *priority* )<!-- END REF-->
+<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *aField* : Field ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ In the , you want to set a high priority for the \[Customer\]LastName field inde
 |  |  |
 | --- | --- |
 | Command number | 1401 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

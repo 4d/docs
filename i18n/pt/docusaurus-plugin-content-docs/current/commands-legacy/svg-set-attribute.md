@@ -5,16 +5,16 @@ slug: /commands/svg-set-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetoImagem* ; id_Elemento ; *nomeAtrib* ; *valorAtributo* {; *nomeAtrib2* ; *valorAtributo2* ; ... ; *nomeAtribN* ; *valorAtributoN*} {; *})<!-- END REF-->
+<!--REF #_command_.SVG SET ATTRIBUTE.Syntax-->**SVG SET ATTRIBUTE** ( {* ;} *objetoImagem* ; id_Elemento ; *nomeAtrib* : Text ; *valorAtributo* : Text, Integer {; ...(*nomeAtrib* : Text, *valorAtributo* : Text, Integer)} {; *})<!-- END REF-->
 <!--REF #_command_.SVG SET ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objImagem é um nome objeto (string). Se omitido, objImagem é uma variável |
-| objetoPicture | Picture | &#8594;  | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
-| id_Elemento | Text | &#8594;  | ID do elemento onde um ou mais atributos são estabelecidos |
-| nomeAtrib | Text | &#8594;  | Atributo a estabelecer |
-| valorAtributo | Text, Integer | &#8594;  | Novo valor do atributo |
-| * | Operador | &#8594;  | Se passado = modifica a própria imagem SVG |
+| * | Operador | &#8594; | Se especificado, objImagem é um nome objeto (string). Se omitido, objImagem é uma variável |
+| objetoPicture | Picture | &#8594; | Nome de objeto (se * for especificado) ou variável ou campo (se * for otimido) |
+| id_Elemento | Text | &#8594; | ID do elemento onde um ou mais atributos são estabelecidos |
+| nomeAtrib | Text | &#8594; | Atributo a estabelecer |
+| valorAtributo | Text, Integer | &#8594; | Novo valor do atributo |
+| * | Operador | &#8594; | Se passado = modifica a própria imagem SVG |
 
 <!-- END REF-->
 
@@ -100,7 +100,7 @@ Modificação do conteúdo de um elemento de tipo texto:
 |  |  |
 | --- | --- |
 | Número do comando | 1055 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

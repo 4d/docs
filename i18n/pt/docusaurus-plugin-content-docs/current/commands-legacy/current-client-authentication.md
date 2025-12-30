@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *dominio* ; *protocolo* )} : Text<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** ( *dominio* : Text ; *protocolo* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -77,6 +77,6 @@ Com esta configuração, não se mostra um diálogo de senha para um 4D remoto q
 |  |  |
 | --- | --- |
 | Número do comando | 1355 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

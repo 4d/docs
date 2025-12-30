@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-picture-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *faixaObj* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Picture range.Syntax-->**WP Picture range** ( *faixaObj* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Picture range.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

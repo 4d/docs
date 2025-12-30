@@ -36,6 +36,6 @@ Reportez-vous à l'exemple de la commande [GET FIELD RELATION](get-field-relatio
 |  |  |
 | --- | --- |
 | Numéro de commande | 899 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

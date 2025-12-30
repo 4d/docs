@@ -86,6 +86,6 @@ Vous affichez les noms d'une table \[Personnes\] dans une fenêtre flottante. Ce
 |  |  |
 | --- | --- |
 | Numéro de commande | 229 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

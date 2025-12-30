@@ -34,7 +34,7 @@ If this command is not executed in the context of a form or if an invalid *pictu
 |  |  |
 | --- | --- |
 | Command number | 1108 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

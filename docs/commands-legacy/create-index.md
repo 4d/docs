@@ -5,7 +5,7 @@ slug: /commands/create-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *aTable* ; *fieldsArray* ; *indexType* ; *indexName* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *aTable* : Table ; *fieldsArray* : Pointer array ; *indexType* : Integer ; *indexName* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -93,6 +93,6 @@ Creation of a composite index on the “City” and “Zipcode” fields of the 
 |  |  |
 | --- | --- |
 | Command number | 966 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

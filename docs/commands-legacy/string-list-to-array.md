@@ -5,7 +5,7 @@ slug: /commands/string-list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resID* ; *strings* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resID* : Integer ; *strings* : Text array {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 |  |  |
 | --- | --- |
 | Command number | 511 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

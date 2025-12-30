@@ -59,7 +59,7 @@ Si la commande est correctement exécutée, la variable système OK prend la val
 |  |  |
 | --- | --- |
 | Numéro de commande | 989 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

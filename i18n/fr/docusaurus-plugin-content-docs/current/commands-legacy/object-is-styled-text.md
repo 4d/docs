@@ -5,12 +5,12 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *objet* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *objet* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *objet* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Boolean | &#8592; | Vrai si l’objet est un texte en multistyle, Faux sinon |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Un formulaire comporte un champ représenté par deux objets différents, l’un
 |  |  |
 | --- | --- |
 | Numéro de commande | 1261 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

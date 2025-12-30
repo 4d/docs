@@ -93,6 +93,6 @@ Este ejemplo compara los resultados obtenidos dependiendo del separador “actua
 |  |  |
 | --- | --- |
 | Número de comando | 11 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

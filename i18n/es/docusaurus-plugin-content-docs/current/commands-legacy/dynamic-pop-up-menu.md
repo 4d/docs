@@ -5,14 +5,14 @@ slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *pordefecto* {; *CoordX* ; *CoordY*}} )  : Text<!-- END REF-->
+<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* : Text {; *pordefecto* : Text {; *CoordX* : Integer ; *CoordY* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Text | &#8594;  | Referencia de menú |
-| pordefecto | Text | &#8594;  | Parámetro del elemento seleccionado por defecto |
-| CoordX | Integer | &#8594;  | Coordenada X de la esquina superior izquierda |
-| CoordY | Integer | &#8594;  | Coordenada Y de la esquina superior izquierda |
+| menu | Text | &#8594; | Referencia de menú |
+| pordefecto | Text | &#8594; | Parámetro del elemento seleccionado por defecto |
+| CoordX | Integer | &#8594; | Coordenada X de la esquina superior izquierda |
+| CoordY | Integer | &#8594; | Coordenada Y de la esquina superior izquierda |
 | Resultado | Text | &#8592; | Parámetro del elemento de menú seleccionado |
 
 <!-- END REF-->
@@ -97,6 +97,6 @@ Este código permite crear un menú emergente dinámico jerárquico basado en ac
 |  |  |
 | --- | --- |
 | Número de comando | 1006 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

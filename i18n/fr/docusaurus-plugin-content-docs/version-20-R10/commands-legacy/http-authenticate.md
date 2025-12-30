@@ -62,6 +62,6 @@ Exemples de requêtes avec authentification :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1161 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

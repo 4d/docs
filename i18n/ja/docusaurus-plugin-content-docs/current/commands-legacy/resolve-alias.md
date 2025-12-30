@@ -5,11 +5,11 @@ slug: /commands/resolve-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *aliasPath* ; *targetPath* )<!-- END REF-->
+<!--REF #_command_.RESOLVE ALIAS.Syntax-->**RESOLVE ALIAS** ( *aliasPath* : Text ; *targetPath* : Text )<!-- END REF-->
 <!--REF #_command_.RESOLVE ALIAS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aliasPath | Text | &#8594;  | エイリアス/ショートカットのアクセスパスまたは名前 |
+| aliasPath | Text | &#8594; | エイリアス/ショートカットのアクセスパスまたは名前 |
 | targetPath | Text | &#8592; | エイリアス/ショートカットターゲットのアクセスパスまたは名前 |
 
 <!-- END REF-->
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 695 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

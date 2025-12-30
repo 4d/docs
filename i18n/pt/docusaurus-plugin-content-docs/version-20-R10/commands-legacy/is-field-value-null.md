@@ -34,6 +34,6 @@ O valor retornado por esse comando só tem significado se a opção *Mapear valo
 |  |  |
 | --- | --- |
 | Número do comando | 964 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

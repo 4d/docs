@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| table1 &#124; champ1 | Table, Champ | &#8594;  | Table pour laquelle établir tous les liens de 1 vers N ou champ 1 |
+| table1 &#124; champ1 | Table, Champ | &#8594; | Table pour laquelle établir tous les liens de 1 vers N ou champ 1 |
 
 <!-- END REF-->
 
@@ -66,7 +66,7 @@ Par exemple, la méthode suivante effectue une boucle sur chaque enregistrement 
 |  |  |
 | --- | --- |
 | Numéro de commande | 262 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

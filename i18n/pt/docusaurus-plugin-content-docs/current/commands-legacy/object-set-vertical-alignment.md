@@ -5,13 +5,13 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( {* ;} *objeto* ; *alinhamento* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *objeto* : Text ; *alinhamento* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *objeto* : Field, Variable ; *alinhamento* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| alinhamento | Integer | &#8594;  | Código de alinhamento |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| alinhamento | Integer | &#8594; | Código de alinhamento |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ A alienação vertical pode aplicar-se aos seguintes tipos de objetos de formul�
 |  |  |
 | --- | --- |
 | Número do comando | 1187 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

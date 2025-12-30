@@ -5,7 +5,7 @@ slug: /commands/dom-get-first-child-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* {; *childElemName* {; *childElemValue*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get first child XML element.Syntax-->**DOM Get first child XML element** ( *elementRef* : Text {; *childElemName* : Text {; *childElemValue* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get first child XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -64,7 +64,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 723 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

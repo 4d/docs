@@ -137,6 +137,6 @@ Se o código for executado em 4D Server, o objeto contém (por exemplo):
 |  |  |
 | --- | --- |
 | Número do comando | 1599 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -58,7 +58,7 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 |  |  |
 | --- | --- |
 | Número de comando | 727 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

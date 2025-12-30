@@ -41,6 +41,6 @@ Después de la ejecución de este comando, si un cliente web envía una petició
 |  |  |
 | --- | --- |
 | Número de comando | 1208 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

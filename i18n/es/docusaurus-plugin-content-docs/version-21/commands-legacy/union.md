@@ -56,6 +56,6 @@ Este ejemplo añade registros al conjunto de mejores clientes. Los registros se 
 |  |  |
 | --- | --- |
 | Número de comando | 120 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

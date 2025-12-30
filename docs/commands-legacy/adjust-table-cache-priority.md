@@ -5,7 +5,7 @@ slug: /commands/adjust-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
+<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ You want to temporarily change the cache priority for the \[Docs\] scalar fields
 |  |  |
 | --- | --- |
 | Command number | 1429 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

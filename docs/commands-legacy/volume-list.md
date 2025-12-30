@@ -5,7 +5,7 @@ slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* : Text array )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ Using a scrollable area named *atVolumes* you want to display the list of the vo
 |  |  |
 | --- | --- |
 | Command number | 471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -72,6 +72,6 @@ Si la langue courante est, par exemple, le français canadien (fr-ca), la comman
 |  |  |
 | --- | --- |
 | Numéro de commande | 1105 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

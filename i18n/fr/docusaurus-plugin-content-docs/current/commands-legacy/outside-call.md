@@ -31,6 +31,6 @@ Si vous voulez que le cycle d'exécution **Outside call** soit généré, vérif
 |  |  |
 | --- | --- |
 | Numéro de commande | 328 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

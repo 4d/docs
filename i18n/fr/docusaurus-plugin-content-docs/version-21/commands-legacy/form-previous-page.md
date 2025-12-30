@@ -37,6 +37,6 @@ Cet exemple est une méthode appelée par une commande de menu. Elle provoque l'
 |  |  |
 | --- | --- |
 | Numéro de commande | 249 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

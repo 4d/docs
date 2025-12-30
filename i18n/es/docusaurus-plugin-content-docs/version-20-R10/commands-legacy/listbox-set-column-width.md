@@ -38,6 +38,6 @@ Los parámetros opcionales *anchoMin* y *anchoMax* permiten definir los límites
 |  |  |
 | --- | --- |
 | Número de comando | 833 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

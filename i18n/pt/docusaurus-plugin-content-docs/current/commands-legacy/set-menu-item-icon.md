@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* ; *menuItem* ; *iconeRef* {; *processo*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* : Integer, Text ; *menuItem* : Integer ; *iconeRef* : Text, Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de referência ou Número de Menu |
-| menuItem | Integer | &#8594;  | Número do item de menu ou -1 para o último item adicionado ao menu |
-| iconeRef | Text, Integer | &#8594;  | Nome ou número de imagem a ser associado com o item de menu |
-| processo | Integer | &#8594;  | Número de processo |
+| menu | Integer, Text | &#8594; | Número de referência ou Número de Menu |
+| menuItem | Integer | &#8594; | Número do item de menu ou -1 para o último item adicionado ao menu |
+| iconeRef | Text, Integer | &#8594; | Nome ou número de imagem a ser associado com o item de menu |
+| processo | Integer | &#8594; | Número de processo |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ Uso de uma imagem localizada na pasta Recursos do banco de dados:
 |  |  |
 | --- | --- |
 | Número do comando | 984 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

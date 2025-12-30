@@ -97,6 +97,6 @@ ou:
 |  |  |
 | --- | --- |
 | Número do comando | 259 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

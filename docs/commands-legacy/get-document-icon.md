@@ -5,7 +5,7 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* ; *icon* {; *size*} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* : Text ; *icon* : Picture, Picture {; *size* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ The optional *size* parameter sets the dimensions in pixels of the returned icon
 |  |  |
 | --- | --- |
 | Command number | 700 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | Document, error |
 
 

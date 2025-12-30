@@ -5,11 +5,11 @@ slug: /commands/register-data-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* ) : Boolean<br/>**Register data key** ( *curDataKey* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Register data key.Syntax-->**Register data key** ( *curPassPhrase* : Texto, Objeto ) : Boolean<br/>**Register data key** ( *curDataKey* : Texto, Objeto ) : Boolean<!-- END REF-->
 <!--REF #_command_.Register data key.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594;  | Frase passe atual (texto) ou chave de criptografia de dados atual (objeto) |
+| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594; | Frase passe atual (texto) ou chave de criptografia de dados atual (objeto) |
 | Resultado | Boolean | &#8592; | True se a chave de criptografia tiver sido adicionada com sucesso ao chaveiro 4D, False se já estiver no chaveiro. |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ No primeiro parâmetro, passe *curPassPhrase* ou *curDataKey* que define a chave
 |  |  |
 | --- | --- |
 | Número do comando | 1638 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

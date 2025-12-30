@@ -41,6 +41,6 @@ Quiere recuperar los números de los registros de la selección actual:
 |  |  |
 | --- | --- |
 | Número de comando | 647 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

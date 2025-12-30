@@ -64,6 +64,6 @@ Dado el siguiente list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1271 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

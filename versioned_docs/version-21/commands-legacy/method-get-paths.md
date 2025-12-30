@@ -90,6 +90,6 @@ Refer to the example of the [METHOD SET CODE](method-set-code.md) command.
 |  |  |
 | --- | --- |
 | Command number | 1163 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

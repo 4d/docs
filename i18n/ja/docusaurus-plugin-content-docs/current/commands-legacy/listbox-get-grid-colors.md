@@ -5,12 +5,12 @@ slug: /commands/listbox-get-grid-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( {* ;} *object* ; *hColor* ; *vColor* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID COLORS.Syntax-->**LISTBOX GET GRID COLORS** ( * ; *object* : Text ; *hColor* : Text, Integer ; *vColor* : Text, Integer )<br/>**LISTBOX GET GRID COLORS** ( *object* : Field, Variable ; *hColor* : Text, Integer ; *vColor* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID COLORS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
 | hColor | Text, Integer | &#8592; | 横グリッドのRGBカラー値 |
 | vColor | Text, Integer | &#8592; | 縦グリッドのRGBカラー値 |
 
@@ -36,6 +36,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1200 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

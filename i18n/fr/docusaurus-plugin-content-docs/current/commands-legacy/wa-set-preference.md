@@ -5,14 +5,14 @@ slug: /commands/wa-set-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( {* ;} *objet* ; *sélecteur* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( * ; *objet* : Text ; *sélecteur* : Integer ; *valeur* : Boolean )<br/>**WA SET PREFERENCE** ( *objet* : Field, Variable ; *sélecteur* : Integer ; *valeur* : Boolean )<!-- END REF-->
 <!--REF #_command_.WA SET PREFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| sélecteur | Integer | &#8594;  | Préférence à modifier |
-| valeur | Boolean | &#8594;  | Valeur de la préférence (Vrai = autorisé, Faux = non autorisé) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| sélecteur | Integer | &#8594; | Préférence à modifier |
+| valeur | Boolean | &#8594; | Valeur de la préférence (Vrai = autorisé, Faux = non autorisé) |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ Vous souhaitez autoriser le déposer d'URLs dans la zone Web 'myarea' :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1041 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

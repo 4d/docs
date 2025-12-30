@@ -69,6 +69,6 @@ The following project method appends the paragraphs found in the text (passed as
 |  |  |
 | --- | --- |
 | Command number | 12 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

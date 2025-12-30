@@ -5,14 +5,14 @@ slug: /commands/st-get-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( {* ;} *objeto* {; *inicioSel* {; *fimSel*}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get expression.Syntax-->**ST Get expression** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer}} )  : Text<br/>**ST Get expression** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *fimSel* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get expression.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| inicioSel | Integer | &#8594;  | Inicio da seleção |
-| fimSel | Integer | &#8594;  | Fim da seleção |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| inicioSel | Integer | &#8594; | Inicio da seleção |
+| fimSel | Integer | &#8594; | Fim da seleção |
 | Resultado | Text | &#8592; | Etiqueta da expressão |
 
 <!-- END REF-->
@@ -98,7 +98,7 @@ Você quer executar um método 4D quando é feito clique em um link de um usuár
 |  |  |
 | --- | --- |
 | Número do comando | 1287 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

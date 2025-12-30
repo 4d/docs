@@ -5,12 +5,12 @@ slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomeArquivo* {; *fluxoEntrada* {; *fluxoSaida* {; *fluxoErro*}}}{; *pid*} )<!-- END REF-->
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *nomeArquivo* : Text {; *fluxoEntrada* : Text, Blob {; *fluxoSaida* : Text, Blob {; *fluxoErro* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | Text | &#8594;  | Rota de acesso e argumentos de arquivo a lançar |
-| fluxoEntrada | Text, Blob | &#8594;  | Fluxo de entrada(stdin) |
+| nomeArquivo | Text | &#8594; | Rota de acesso e argumentos de arquivo a lançar |
+| fluxoEntrada | Text, Blob | &#8594; | Fluxo de entrada(stdin) |
 | fluxoSaida | Text, Blob | &#8592; | Fluxo de saída (stdout) |
 | fluxoErro | Text, Blob | &#8592; | Fluxo de erro(stderr) |
 | pid | Integer | &#8592; | Identificador único para processo externo |
@@ -142,7 +142,7 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 811 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -5,7 +5,7 @@ slug: /commands/wa-set-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( {* ;} *object* ; *content* ; *baseURL* )<!-- END REF-->
+<!--REF #_command_.WA SET PAGE CONTENT.Syntax-->**WA SET PAGE CONTENT** ( * ; *object* : Text ; *content* : Text ; *baseURL* : Text )<br/>**WA SET PAGE CONTENT** ( *object* : Field, Variable ; *content* : Text ; *baseURL* : Text )<!-- END REF-->
 <!--REF #_command_.WA SET PAGE CONTENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ WA SET PAGE CONTENT(MyWArea;"<html><body><h1>Hello World!</h1></body></html>";"f
 |  |  |
 | --- | --- |
 | Command number | 1037 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

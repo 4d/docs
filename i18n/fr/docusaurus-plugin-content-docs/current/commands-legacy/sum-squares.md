@@ -5,11 +5,11 @@ slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *séries* ) : Real<!-- END REF-->
+<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *séries* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir la somme des carrés |
+| séries | Field, Array | &#8594; | Valeurs dont vous voulez obtenir la somme des carrés |
 | Résultat | Real | &#8592; | Somme des carrés de séries |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Cet exemple vous permet d’obtenir la somme des carrés des valeurs placées da
 |  |  |
 | --- | --- |
 | Numéro de commande | 28 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

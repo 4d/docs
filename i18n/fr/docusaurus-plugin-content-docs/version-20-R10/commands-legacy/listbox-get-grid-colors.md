@@ -36,6 +36,6 @@ La commande retourne dans les paramètres *couleurH* et *couleurV* des valeurs d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1200 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

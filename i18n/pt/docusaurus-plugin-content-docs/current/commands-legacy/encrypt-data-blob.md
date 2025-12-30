@@ -5,13 +5,13 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobAcriptografar* ; objetoChave / passefrase ; *salt* ; blobCriptografado' ) : Boolean<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobAcriptografar* : Blob ; objetoChave / passefrase ; *salt* : Integer ; blobCriptografado' ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| blobAcriptografar | Blob | &#8594;  | BLOB que vai criptografar |
-| objetoChave / passefrase | Objeto, Texto | &#8594;  | Objeto JSON que contém a chave de criptografia ou passefrase para geração de uma chave de criptografia direta (texto) |
-| salt | Integer | &#8594;  | Sal de criptografia (para adicionar dados aleatórios) para maior segurança do algoritmo |
+| blobAcriptografar | Blob | &#8594; | BLOB que vai criptografar |
+| objetoChave / passefrase | Objeto, Texto | &#8594; | Objeto JSON que contém a chave de criptografia ou passefrase para geração de uma chave de criptografia direta (texto) |
+| salt | Integer | &#8594; | Sal de criptografia (para adicionar dados aleatórios) para maior segurança do algoritmo |
 | blobCriptografado' | BLOB | &#8592; | BLOB que foi criptografado |
 | Resultado | Boolean | &#8592; | TRUE se a criptografia for realizada corretamente, senão FALSE |
 
@@ -65,6 +65,6 @@ Para criptografar um arquivo texto na pasta RESOURCES no banco de dados:
 |  |  |
 | --- | --- |
 | Número do comando | 1773 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

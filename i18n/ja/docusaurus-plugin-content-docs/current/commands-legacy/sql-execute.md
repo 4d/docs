@@ -5,11 +5,11 @@ slug: /commands/sql-execute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *sqlStatement* {; *boundObj*}{; *boundObj2* ; ... ; *boundObjN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *sqlStatement* : Text {; *...boundObj* : Variable, Field} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sqlStatement | Text | &#8594;  | 実行するSQLコマンド |
+| sqlStatement | Text | &#8594; | 実行するSQLコマンド |
 | boundObj | Variable, Field | &#8592; | 結果を受け取る(必要に応じて) |
 
 <!-- END REF-->
@@ -163,7 +163,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 820 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

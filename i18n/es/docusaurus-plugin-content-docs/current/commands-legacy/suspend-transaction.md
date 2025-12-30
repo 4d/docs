@@ -29,6 +29,6 @@ Para más información, por favor consulte la sección *Suspender las transaccio
 |  |  |
 | --- | --- |
 | Número de comando | 1385 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -337,6 +337,6 @@ Queremos obtener las medidas de bytes de caché en los últimos dos minutos:
 |  |  |
 | --- | --- |
 | Número de comando | 1314 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -49,6 +49,6 @@ If it is passed, the *titlesArr* parameter contains the list of window names ass
 |  |  |
 | --- | --- |
 | Command number | 1048 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

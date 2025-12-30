@@ -5,14 +5,14 @@ slug: /commands/wa-get-url-history
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( {* ;} *objeto* ; *arrUrls* {; *direccion* {; *arrTitulos*}} )<!-- END REF-->
+<!--REF #_command_.WA GET URL HISTORY.Syntax-->**WA GET URL HISTORY** ( * ; *objeto* : Text ; *arrUrls* : Text array {; *direccion* : Integer {; *arrTitulos* : Text array}} )<br/>**WA GET URL HISTORY** ( *objeto* : Field, Variable ; *arrUrls* : Text array {; *direccion* : Integer {; *arrTitulos* : Text array}} )<!-- END REF-->
 <!--REF #_command_.WA GET URL HISTORY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | arrUrls | Text array | &#8592; | Array de los URLs visitados |
-| direccion | Integer | &#8594;  | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
+| direccion | Integer | &#8594; | 0 ó si se omite=Lista de los URLs anteriores, 1=Lista de los URLs siguientes |
 | arrTitulos | Text array | &#8592; | Array de títulos de ventanas |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ Si se pasa, el parámetro *arrTitulos* contiene la lista de los nombres de venta
 |  |  |
 | --- | --- |
 | Número de comando | 1048 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

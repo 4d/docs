@@ -5,7 +5,7 @@ slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *rootFolder* )<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *rootFolder* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -43,7 +43,7 @@ If you specify an invalid pathname, an OS File manager error is generated. You c
 |  |  |
 | --- | --- |
 | Command number | 634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

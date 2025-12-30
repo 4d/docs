@@ -47,6 +47,6 @@ L’exemple suivant permet de récupérer dans un tableau tous les chemins d’a
 |  |  |
 | --- | --- |
 | Numéro de commande | 976 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

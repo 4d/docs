@@ -5,7 +5,7 @@ slug: /commands/get-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *arrMetodos* )<!-- END REF-->
+<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *arrMetodos* : Text array )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ Este exemplo autoriza um conjunto de métodos específicos para criar um relató
 |  |  |
 | --- | --- |
 | Número do comando | 908 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

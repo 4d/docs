@@ -5,7 +5,7 @@ slug: /commands/unload-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ If a record has a large amount of data, picture fields, or external documents (s
 |  |  |
 | --- | --- |
 | Command number | 212 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -34,6 +34,6 @@ La commande retourne le nom de la méthode 4D sous la forme d’une chaîne de c
 |  |  |
 | --- | --- |
 | Numéro de commande | 981 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

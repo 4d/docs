@@ -60,6 +60,6 @@ Vous voulez sauvegarder les paramètres d'impression courants sur disque :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1433 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

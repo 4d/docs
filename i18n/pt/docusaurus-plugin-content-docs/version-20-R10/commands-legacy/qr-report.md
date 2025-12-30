@@ -140,7 +140,7 @@ O método myCallbackMeth converte o relatório quando é gerado:
 |  |  |
 | --- | --- |
 | Número do comando | 197 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

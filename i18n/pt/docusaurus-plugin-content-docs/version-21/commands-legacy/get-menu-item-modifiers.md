@@ -57,6 +57,6 @@ Consulte o exemplo do comando [Get menu item key](get-menu-item-key.md "Get menu
 |  |  |
 | --- | --- |
 | Número do comando | 980 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

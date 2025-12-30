@@ -5,11 +5,11 @@ slug: /commands/qr-get-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* ; *esquerda* ; *superior* {; *direita* {; *inferior* }} )<!-- END REF-->
+<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* : Integer ; *esquerda* : Integer ; *superior* : Integer {; *direita* : Integer {; *inferior* : Integer }} )<!-- END REF-->
 <!--REF #_command_.QR GET SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
+| area | Integer | &#8594; | Referência da área |
 | esquerda | Integer | &#8592; | Limite esquerdo |
 | superior | Integer | &#8592; | Limite superior |
 | direita | Integer | &#8592; | Limite direito |
@@ -44,7 +44,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 793 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/http-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *opção* ; *valor* )<!-- END REF-->
+<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *opção* : Integer ; *valor* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP GET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opção | Integer | &#8594;  | Código da opção a ler |
+| opção | Integer | &#8594; | Código da opção a ler |
 | valor | Integer | &#8592; | Valor atual da opção |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ No parâmetro *valor*, passe uma variável para receber o valor atual da *opçã
 |  |  |
 | --- | --- |
 | Número do comando | 1159 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

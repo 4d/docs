@@ -67,6 +67,6 @@ Ver el ejemplo del comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTR
 |  |  |
 | --- | --- |
 | Número de comando | 210 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/frontmost-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ See the example for [BRING TO FRONT](bring-to-front.md).
 |  |  |
 | --- | --- |
 | Command number | 327 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/disable-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISABLE MENU ITEM.Syntax-->**DISABLE MENU ITEM** ( *menu* ; *menuItem* {; *processo*} )<!-- END REF-->
+<!--REF #_command_.DISABLE MENU ITEM.Syntax-->**DISABLE MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISABLE MENU ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado |
-| processo | Integer | &#8594;  | Número de referência do processo |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item de menu ou -1 para o último item adicionado |
+| processo | Integer | &#8594; | Número de referência do processo |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ Se o parâmetro *menuItem* designa um submenu hierárquico, todos os elementos d
 |  |  |
 | --- | --- |
 | Número do comando | 150 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

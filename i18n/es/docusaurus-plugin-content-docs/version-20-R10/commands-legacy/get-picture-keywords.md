@@ -39,6 +39,6 @@ Si la imagen no contiene palabras claves o metadatos IPTC/Keywords, el comando d
 |  |  |
 | --- | --- |
 | Número de comando | 1142 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

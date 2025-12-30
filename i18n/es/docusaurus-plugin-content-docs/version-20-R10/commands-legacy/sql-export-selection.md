@@ -42,7 +42,7 @@ Si la exportación se lleva a cabo correctamente, la variable *OK* toma el valor
 |  |  |
 | --- | --- |
 | Número de comando | 1064 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

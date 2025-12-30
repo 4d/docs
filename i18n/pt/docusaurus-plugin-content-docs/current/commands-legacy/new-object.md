@@ -5,12 +5,12 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** {( *propriedade* ; *valor* {; *propriedade2* ; *valor2* ; ... ; *propriedadeN* ; *valorN*} )} : Object<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** ( *propriedade* : Text ; *valor* : any {; ...(*propriedade* : Text, *valor* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| propriedade | Text | &#8594;  | Nome da propriedade a criar |
-| valor | any | &#8594;  | Valor da propriedade |
+| propriedade | Text | &#8594; | Nome da propriedade a criar |
+| valor | any | &#8594; | Valor da propriedade |
 | Resultado | Object | &#8592; | Novo objeto linguagem |
 
 <!-- END REF-->
@@ -114,6 +114,6 @@ Com este comando, pode fácilmente manejar objetos em loops:
 |  |  |
 | --- | --- |
 | Número do comando | 1471 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

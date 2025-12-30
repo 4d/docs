@@ -36,6 +36,6 @@ Cette méthode empêchera l’ouverture de la base si le fichier de données est
 |  |  |
 | --- | --- |
 | Numéro de commande | 716 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

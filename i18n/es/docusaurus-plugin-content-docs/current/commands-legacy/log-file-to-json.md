@@ -5,14 +5,14 @@ slug: /commands/log-file-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *rutaCarpetaDest* {; *tamMax* {; *rutaHist* {; *atribCampo*}}} )<!-- END REF-->
+<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *rutaCarpetaDest* : Text {; *tamMax* : Integer {; *rutaHist* : Text {; *atribCampo* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpetaDest | Text | &#8594;  | Ruta de acceso de la carpeta de destino del archivo guardado |
-| tamMax | Integer | &#8594;  | Tamaño máximo del archivo JSON a crear (bytes) |
-| rutaHist | Text | &#8594;  | Ruta de acceso del archivo de historial a exportar; utilizar el historial actual si se omite |
-| atribCampo | Integer | &#8594;  | Atributo de descripción del campo: 1 = utilizar número(por defecto), 2 = utilizar nombre |
+| rutaCarpetaDest | Text | &#8594; | Ruta de acceso de la carpeta de destino del archivo guardado |
+| tamMax | Integer | &#8594; | Tamaño máximo del archivo JSON a crear (bytes) |
+| rutaHist | Text | &#8594; | Ruta de acceso del archivo de historial a exportar; utilizar el historial actual si se omite |
+| atribCampo | Integer | &#8594; | Atributo de descripción del campo: 1 = utilizar número(por defecto), 2 = utilizar nombre |
 
 <!-- END REF-->
 
@@ -102,7 +102,7 @@ El comando **LOG FILE TO JSON** modifica el valor de las variables sistema OK y 
 |  |  |
 | --- | --- |
 | Número de comando | 1352 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

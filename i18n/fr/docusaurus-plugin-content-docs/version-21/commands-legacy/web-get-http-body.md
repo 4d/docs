@@ -54,6 +54,6 @@ Lorsque le formulaire est soumis au serveur Web, la variable $texteRequete reço
 |  |  |
 | --- | --- |
 | Numéro de commande | 814 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

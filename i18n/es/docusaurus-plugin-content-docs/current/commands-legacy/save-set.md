@@ -5,12 +5,12 @@ slug: /commands/save-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *conjunto* ; *doc* )<!-- END REF-->
+<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *conjunto* : Text ; *doc* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nombre del conjunto a guardar |
-| doc | Text | &#8594;  | Nombre del archivo en el cual guardar el conjunto |
+| conjunto | Text | &#8594; | Nombre del conjunto a guardar |
+| doc | Text | &#8594; | Nombre del archivo en el cual guardar el conjunto |
 
 <!-- END REF-->
 
@@ -47,7 +47,7 @@ Si el usuario hace clic en el botón Cancelar en la caja de diálogo de guardar 
 |  |  |
 | --- | --- |
 | Número de comando | 184 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

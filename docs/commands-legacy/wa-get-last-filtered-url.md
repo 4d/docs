@@ -5,7 +5,7 @@ slug: /commands/wa-get-last-filtered-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( * ; *object* : Text ) : Text<br/>**WA Get last filtered URL** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get last filtered URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ It is advisable to call this command in the context of the On URL Filtering, On 
 |  |  |
 | --- | --- |
 | Command number | 1035 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

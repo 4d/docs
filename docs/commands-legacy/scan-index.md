@@ -5,7 +5,7 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* ; *number* {; > or <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* : Field ; *number* : Integer {; > or <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ The following example mails letters to 50 of the worst customers and then to 50 
 |  |  |
 | --- | --- |
 | Command number | 350 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

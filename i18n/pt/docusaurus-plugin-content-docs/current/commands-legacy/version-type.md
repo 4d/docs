@@ -49,6 +49,6 @@ Esta prova permite executar código diferente dependendo de que versão é uma a
 |  |  |
 | --- | --- |
 | Número do comando | 495 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

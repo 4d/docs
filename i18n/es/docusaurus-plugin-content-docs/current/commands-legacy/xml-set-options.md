@@ -5,13 +5,13 @@ slug: /commands/xml-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( refElement | document ; *selector* ; *valor* {; *selector2* ; *valor2* ; ... ; *selectorN* ; *valorN*} )<!-- END REF-->
+<!--REF #_command_.XML SET OPTIONS.Syntax-->**XML SET OPTIONS** ( refElement | document ; *selector* : Integer ; *valor* : Integer {; ...(*selector* : Integer, *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML SET OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement &#124; document | Texto | &#8594;  | Referencia del elemento XML raíz o Referencia del documento abierto |
-| selector | Integer | &#8594;  | Opción a definir |
-| valor | Integer | &#8594;  | Valor de la opción |
+| refElement &#124; document | Texto | &#8594; | Referencia del elemento XML raíz o Referencia del documento abierto |
+| selector | Integer | &#8594; | Opción a definir |
+| valor | Integer | &#8594; | Valor de la opción |
 
 <!-- END REF-->
 
@@ -75,6 +75,6 @@ Inserción de una imagen SVG:
 |  |  |
 | --- | --- |
 | Número de comando | 1090 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

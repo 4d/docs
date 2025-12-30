@@ -5,12 +5,12 @@ slug: /commands/export-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*tabela* ;} *documento* )<!-- END REF-->
+<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*tabela* : Table ;} *documento* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual vai exportar dados, ou tabela Padrão, se omitida |
-| documento | Text | &#8594;  | Documento texto que recebe os dados |
+| tabela | Table | &#8594; | Tabela da qual vai exportar dados, ou tabela Padrão, se omitida |
+| documento | Text | &#8594; | Documento texto que recebe os dados |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ OK toma o valor 1 se a exportação termina com sucesso; do contrário, toma o v
 |  |  |
 | --- | --- |
 | Número do comando | 167 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

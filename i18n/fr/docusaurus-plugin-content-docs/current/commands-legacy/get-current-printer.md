@@ -37,6 +37,6 @@ Si aucune imprimante n'est installée, une erreur est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 788 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

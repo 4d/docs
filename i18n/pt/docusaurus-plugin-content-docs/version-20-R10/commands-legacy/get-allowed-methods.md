@@ -49,6 +49,6 @@ Este exemplo autoriza um conjunto de métodos específicos para criar um relató
 |  |  |
 | --- | --- |
 | Número do comando | 908 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

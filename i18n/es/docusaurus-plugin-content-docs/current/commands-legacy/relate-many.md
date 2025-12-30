@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla1 &#124; campo1 | Tabla, Campo | &#8594;  | Tabla para la cual establecer todas las relaciones de Uno a Muchos o campo Uno |
+| tabla1 &#124; campo1 | Tabla, Campo | &#8594; | Tabla para la cual establecer todas las relaciones de Uno a Muchos o campo Uno |
 
 <!-- END REF-->
 
@@ -71,7 +71,7 @@ Note que es necesario el comando RELATE MANY, aunque las relaciones sean automá
 |  |  |
 | --- | --- |
 | Número de comando | 262 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

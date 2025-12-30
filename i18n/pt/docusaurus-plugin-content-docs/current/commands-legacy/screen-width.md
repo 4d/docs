@@ -5,11 +5,11 @@ slug: /commands/screen-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen width.Syntax-->**Screen width** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Screen width.Syntax-->**Screen width** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Windows: largo da janela da aplicação ou altura da tela se especificada * Macintosh: largo da tela principal |
+| * | Operador | &#8594; | Windows: largo da janela da aplicação ou altura da tela se especificada * Macintosh: largo da tela principal |
 | Resultado | Integer | &#8592; | Largo expressado em pixeles |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Em Macintosh, Screen width devolve o largo da tela principal, ou seja o largo da
 |  |  |
 | --- | --- |
 | Número do comando | 187 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

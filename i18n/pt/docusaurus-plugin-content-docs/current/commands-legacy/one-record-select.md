@@ -5,11 +5,11 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual reduzir a seleção ao registro atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela na qual reduzir a seleção ao registro atual, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -37,7 +37,7 @@ Aviso: lembre que um número de registro pode ser reutilizado se o registro for 
 |  |  |
 | --- | --- |
 | Número do comando | 189 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

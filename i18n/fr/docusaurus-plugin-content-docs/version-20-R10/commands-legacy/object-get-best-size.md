@@ -54,6 +54,6 @@ Reportez-vous à l’exemple de la routine [SET PRINT MARKER](set-print-marker.m
 |  |  |
 | --- | --- |
 | Numéro de commande | 717 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

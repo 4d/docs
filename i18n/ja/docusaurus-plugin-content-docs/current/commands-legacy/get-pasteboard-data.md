@@ -5,11 +5,11 @@ slug: /commands/get-pasteboard-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *dataType* ; *data* )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *dataType* : Text ; *data* : Blob )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dataType | Text | &#8594;  | ペーストボードから取り出すデータのタイプ |
+| dataType | Text | &#8594; | ペーストボードから取り出すデータのタイプ |
 | data | Blob | &#8592; | ペーストボードから取り出されたデータ |
 
 <!-- END REF-->
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 401 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

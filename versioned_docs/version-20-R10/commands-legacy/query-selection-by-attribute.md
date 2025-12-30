@@ -51,7 +51,7 @@ You want to find people with an age between 20 and 30, among the records that we
 |  |  |
 | --- | --- |
 | Command number | 1424 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

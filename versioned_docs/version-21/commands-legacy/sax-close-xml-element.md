@@ -29,8 +29,8 @@ If the last element opened is *<Book>*, the following statement:
 
 ... will write the following line in the document: 
 
-```4d
- 
+```xml
+ </Book>
 ```
 
 ## See also 
@@ -43,6 +43,6 @@ If the last element opened is *<Book>*, the following statement:
 |  |  |
 | --- | --- |
 | Command number | 854 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

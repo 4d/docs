@@ -98,7 +98,7 @@ No caso de um erro, a variável não muda. Quando se produz um erro em uma vari�
 |  |  |
 | --- | --- |
 | Número do comando | 1136 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

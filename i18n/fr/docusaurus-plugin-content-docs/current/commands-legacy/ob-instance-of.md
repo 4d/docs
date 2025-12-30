@@ -5,12 +5,12 @@ slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *objet* ; *classe* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *objet* : Object ; *classe* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#8594;  | Objet dont la classe doit être identifiée |
-| classe | Object | &#8594;  | Classe dont l'appartenance est à identifier |
+| objet | Object | &#8594; | Objet dont la classe doit être identifiée |
+| classe | Object | &#8594; | Classe dont l'appartenance est à identifier |
 | Résultat | Boolean | &#8592; | Vrai si l'objet appartient à la classe ou classe enfant indiquée, sinon faux |
 
 <!-- END REF-->
@@ -51,6 +51,6 @@ Puis, dans une méthode, vous pouvez saisir :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1731 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

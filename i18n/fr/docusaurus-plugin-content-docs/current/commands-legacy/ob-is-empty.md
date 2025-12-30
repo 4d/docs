@@ -5,11 +5,11 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objet* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *objet* : Object, Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &#8594;  | Objet structuré |
+| objet | Object, Object | &#8594; | Objet structuré |
 | Résultat | Boolean | &#8592; | Vrai si objet est vide ou indéfini, sinon Faux |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ Voici les différents résultats de la commande ainsi que de la commande [OB Is 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

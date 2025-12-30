@@ -5,12 +5,11 @@ slug: /commands/users-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *usuarios* )<!-- END REF-->
+<!--REF #_command_.USERS TO BLOB.Syntax-->**USERS TO BLOB** ( *usuarios* : Blob )<!-- END REF-->
 <!--REF #_command_.USERS TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| usuarios | Blob | &#8594;  | Blob que contém os usuários |
-| &#8592; | Conta de usuários (criptografadas) |
+| usuarios | Blob | &#8596; | *in:* BLOB that must contain users<br/>*out:* User accounts (encrypted) |
 
 <!-- END REF-->
 
@@ -37,7 +36,7 @@ Este conceito permite conservar um backup de usuários no banco e implementar um
 |  |  |
 | --- | --- |
 | Número do comando | 849 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

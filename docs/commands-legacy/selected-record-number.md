@@ -5,7 +5,7 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *aTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ The following example saves the current selected record number in a variable:
 |  |  |
 | --- | --- |
 | Command number | 246 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

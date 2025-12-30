@@ -5,7 +5,7 @@ slug: /commands/enable-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* ; *menuItem* {; *process*} )<!-- END REF-->
+<!--REF #_command_.ENABLE MENU ITEM.Syntax-->**ENABLE MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.ENABLE MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ If you omit the *process* parameter, **ENABLE MENU ITEM** applies to the menu ba
 |  |  |
 | --- | --- |
 | Command number | 149 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

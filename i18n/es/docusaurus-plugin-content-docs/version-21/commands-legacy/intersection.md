@@ -55,6 +55,6 @@ El siguiente ejemplo busca los clientes que son atendidos por dos representantes
 |  |  |
 | --- | --- |
 | Número de comando | 121 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

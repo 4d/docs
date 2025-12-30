@@ -52,7 +52,7 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 |  |  |
 | --- | --- |
 | Command number | 511 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

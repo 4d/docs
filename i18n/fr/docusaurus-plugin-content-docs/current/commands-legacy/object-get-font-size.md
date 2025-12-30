@@ -5,12 +5,12 @@ slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get font size** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
 | Résultat | Integer | &#8592; | Taille de la police en points |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Si vous passez le paramètre optionnel *\**, vous indiquez que le paramètre *ob
 |  |  |
 | --- | --- |
 | Numéro de commande | 1070 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

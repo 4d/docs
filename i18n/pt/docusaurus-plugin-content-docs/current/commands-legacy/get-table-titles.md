@@ -5,7 +5,7 @@ slug: /commands/get-table-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tituloTabelas* ; *numTabelas* )<!-- END REF-->
+<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *tituloTabelas* : Text array ; *numTabelas* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET TABLE TITLES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ Em ambos os casos, o comando não retorna as tabelas invisíveis.
 |  |  |
 | --- | --- |
 | Número do comando | 803 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

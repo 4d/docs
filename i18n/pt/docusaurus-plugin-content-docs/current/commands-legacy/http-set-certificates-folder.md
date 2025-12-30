@@ -5,11 +5,11 @@ slug: /commands/http-set-certificates-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *pastaCertificados* )<!-- END REF-->
+<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *pastaCertificados* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pastaCertificados | Text | &#8594;  | Caminho e nome da pasta de certificados do cliente |
+| pastaCertificados | Text | &#8594; | Caminho e nome da pasta de certificados do cliente |
 
 <!-- END REF-->
 
@@ -62,6 +62,6 @@ Você quer mudar temporalmente a pasta de certificados:
 |  |  |
 | --- | --- |
 | Número do comando | 1306 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

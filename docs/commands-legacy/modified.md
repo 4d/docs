@@ -5,7 +5,7 @@ slug: /commands/modified
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified.Syntax-->**Modified** ( *aField* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Modified.Syntax-->**Modified** ( *aField* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ You select a record for the table *\[anyTable\]*, then you call multiple subrout
 |  |  |
 | --- | --- |
 | Command number | 32 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

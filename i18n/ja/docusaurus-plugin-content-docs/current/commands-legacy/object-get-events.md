@@ -5,12 +5,12 @@ slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *object* ; *arrEvents* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *object* : Field, Variable ; *arrEvents* : Integer array )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
 | arrEvents | Integer array | &#8592; | Array of enabled events |
 
 <!-- END REF-->
@@ -52,6 +52,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1238 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

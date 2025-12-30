@@ -48,6 +48,6 @@ Desea detener el proceso seleccionado de la colección de procesos que se muestr
 |  |  |
 | --- | --- |
 | Número de comando | 1634 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

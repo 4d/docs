@@ -5,13 +5,13 @@ slug: /commands/insert-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fuente* ; *ainsertar* ; *posicion* ) : Text<!-- END REF-->
+<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *fuente* : Text ; *ainsertar* : Text ; *posicion* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Insert string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Text | &#8594;  | Cadena en la cual insertar otra cadena |
-| ainsertar | Text | &#8594;  | Cadena a insertar |
-| posicion | Integer | &#8594;  | Posición de la inserción |
+| fuente | Text | &#8594; | Cadena en la cual insertar otra cadena |
+| ainsertar | Text | &#8594; | Cadena a insertar |
+| posicion | Integer | &#8594; | Posición de la inserción |
 | Resultado | Text | &#8592; | Cadena resultante |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ El siguiente ejemplo ilustra el uso de Insert string. Los resultados se asignan 
 |  |  |
 | --- | --- |
 | Número de comando | 231 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

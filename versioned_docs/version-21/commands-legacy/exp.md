@@ -37,6 +37,6 @@ The following example assigns the exponential of 1 to *vrE* (the log of *vrE* is
 |  |  |
 | --- | --- |
 | Command number | 21 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

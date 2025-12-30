@@ -71,6 +71,6 @@ Este comando afeta só a entrada de dados. Não tem nenhum efeito no armazenamen
 |  |  |
 | --- | --- |
 | Número do comando | 392 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/ob-class
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *object* ) : any<!-- END REF-->
+<!--REF #_command_.OB Class.Syntax-->**OB Class** ( *object* : Object ) : any<!-- END REF-->
 <!--REF #_command_.OB Class.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | クラスを返してほしいオブジェクト |
+| object | Object | &#8594; | クラスを返してほしいオブジェクト |
 | 戻り値 | Null, Object | &#8592; | オブジェクトのクラス |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Polygon というクラスを作成した場合を考えます:
 |  |  |
 | --- | --- |
 | コマンド番号 | 1730 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

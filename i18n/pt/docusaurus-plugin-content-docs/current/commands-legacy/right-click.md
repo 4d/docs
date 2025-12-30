@@ -29,6 +29,6 @@ Este comando deve ser utilizado unicamente no contexto do evento de formulário 
 |  |  |
 | --- | --- |
 | Número do comando | 712 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

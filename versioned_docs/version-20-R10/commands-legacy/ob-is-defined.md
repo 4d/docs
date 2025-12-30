@@ -66,6 +66,6 @@ This test is equivalent to:
 |  |  |
 | --- | --- |
 | Command number | 1231 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

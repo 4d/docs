@@ -5,11 +5,11 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *refImage * ; *image* )<br/>**GET PICTURE FROM LIBRARY** ( *nomImage* ; *image* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *refImage* : Entier long, Chaîne ; *image* : Picture )<br/>**GET PICTURE FROM LIBRARY** ( *nomImage* : Entier long, Chaîne ; *image* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refImage &#124; nomImage | Entier long, Chaîne | &#8594;  | Numéro de référence ou Nom d'une image de la bibliothèque d’images |
+| refImage &#124; nomImage | Entier long, Chaîne | &#8594; | Numéro de référence ou Nom d'une image de la bibliothèque d’images |
 | image | Picture | &#8592; | Image de la bibliothèque d'images |
 
 <!-- END REF-->
@@ -67,7 +67,7 @@ S'il n'y a pas assez de mémoire pour retourner l’image, l'erreur –108 est g
 |  |  |
 | --- | --- |
 | Numéro de commande | 565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

@@ -5,13 +5,13 @@ slug: /commands/object-set-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( {* ;} *objet* ; *actif* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENABLED.Syntax-->**OBJECT SET ENABLED** ( * ; *objet* : Text ; *actif* : Boolean )<br/>**OBJECT SET ENABLED** ( *objet* : Field, Variable ; *actif* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENABLED.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| actif | Boolean | &#8594;  | Vrai = objet(s) activé(s), Faux sinon |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) <br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| actif | Boolean | &#8594; | Vrai = objet(s) activé(s), Faux sinon |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ Cette commande peut être appliquée aux types d'objets suivants :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1123 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

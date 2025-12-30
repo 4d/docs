@@ -35,6 +35,6 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 |  |  |
 | --- | --- |
 | Command number | 915 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

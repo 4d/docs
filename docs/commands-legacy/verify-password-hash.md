@@ -5,7 +5,7 @@ slug: /commands/verify-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash** ( *password* ; *hash* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash** ( *password* : Text ; *hash* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Verify password hash.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ This example verifies a password hash previously created by [Generate password h
 |  |  |
 | --- | --- |
 | Command number | 1534 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

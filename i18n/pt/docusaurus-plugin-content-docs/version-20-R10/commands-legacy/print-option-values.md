@@ -59,6 +59,6 @@ Toda a informação devolvida por estes comandos é fornecida pelo sistema opera
 |  |  |
 | --- | --- |
 | Número do comando | 785 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

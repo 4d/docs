@@ -5,13 +5,13 @@ slug: /commands/set-blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* ; *taille* {; *remplisseur*} )<!-- END REF-->
+<!--REF #_command_.SET BLOB SIZE.Syntax-->**SET BLOB SIZE** ( *blob* : Blob ; *taille* : Integer {; *remplisseur* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET BLOB SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | Champ ou variable de type BLOB |
-| taille | Integer | &#8594;  | Nouvelle taille de BLOB |
-| remplisseur | Integer | &#8594;  | Code du caractère de remplissage |
+| Blob | Blob | &#8594; | Champ ou variable de type BLOB |
+| taille | Integer | &#8594; | Nouvelle taille de BLOB |
+| remplisseur | Integer | &#8594; | Code du caractère de remplissage |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 606 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

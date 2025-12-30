@@ -175,11 +175,20 @@ Pour répondre à ces besoins, 4D propose les mécanismes suivants :
 
 > La commande `GOTO OBJECT` peut rechercher l’objet de destination dans le formulaire parent même si elle exécutée depuis un sous-formulaire.
 
-#### Commande CALL SUBFORM CONTAINER
+#### CALL SUBFORM CONTAINER command {#call-subform-container-command}
 
 La commande `CALL SUBFORM CONTAINER` permet à une instance de sous-formulaire d'envoyer un [événement](../Events/overview.md) à l'objet conteneur de sous-formulaire, qui peut alors le traiter dans le contexte du formulaire parent. L’événement est reçu dans la méthode de l’objet conteneur. Il peut s’agir à l’origine de tout événement détecté par le sous-formulaire (clic, glisser-déposer, etc.).
 
 Le code de l’événement est libre (par exemple, 20000 ou -100). Vous pouvez soit utiliser un code correspondant à un événement existant (par exemple, 3 pour `Sur validation`), soit utiliser un code personnalisé. Dans le premier cas, seuls les événements présents dans la liste des événements "cochables" des conteneurs de sous-formulaire peuvent être utilisés (cf. Liste des propriétés). Dans le second cas, le code ne doit correspondre à aucun événement formulaire existant. Il est conseillé d’utiliser une valeur négative pour avoir l’assurance que 4D n’utilisera pas ce code dans les versions futures.
+
+Supported events for subforms are:
+
+- [On Load](../Events/onLoad.md)
+- [On Validate](../Events/onValidate.md)
+- [On Getting Focus](../Events/onGettingFocus.md)
+- [On Losing Focus](../Events/onLosingFocus.md)
+- [On Data Change](../Events/onDataChange.md)
+- [On Unload](../Events/onUnload.md)
 
 Pour plus d'informations, reportez-vous à la description de la commande `CALL SUBFORM CONTAINER`.
 

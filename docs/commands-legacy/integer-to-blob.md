@@ -5,13 +5,13 @@ slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; offset} )<br/>**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; offset} )<br/>**INTEGER TO BLOB** ( *integer* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | integer| Integer | &#8594;  | Integer value to write into the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the Integer value |
+| Blob | Blob | &#8594;  | BLOB to receive the Integer value |
 | byteOrder| Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset  | Variable | &#8596;  | Offset expressed in bytes within the BLOB<br/>New offset after writing if not *  |
 | * | Operator | &#8594; | * to append the value |
@@ -121,6 +121,6 @@ After executing this code:
 |  |  |
 | --- | --- |
 | Command number | 548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

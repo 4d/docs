@@ -191,7 +191,7 @@ Si la commande a été correctement exécutée, la variable OK prend la valeur 1
 |  |  |
 | --- | --- |
 | Numéro de commande | 1011 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

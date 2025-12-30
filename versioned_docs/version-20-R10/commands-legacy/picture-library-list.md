@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picRefs | Array integer | &#8592; | Reference numbers of the Picture Library graphics |
+| picRefs | Integer array | &#8592; | Reference numbers of the Picture Library graphics |
 | picNames | Text array | &#8592; | Names of the Picture Library graphics |
 
 <!-- END REF-->
@@ -106,6 +106,6 @@ The following example exports the Picture Library to a document on disk:
 |  |  |
 | --- | --- |
 | Command number | 564 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

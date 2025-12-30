@@ -5,14 +5,14 @@ slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* {; *xPath*}; *elementValue* {; *} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xPath* : Text}; *elementValue* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
-| xPath | Text | &#8594;  | XML要素のXPathパス |
-| elementValue | Text, Variable | &#8594;  | 要素の新しい値 |
-| * | 演算子 | &#8594;  | 指定時: 値をCDATAに設定 |
+| elementRef | Text | &#8594; | XML要素参照 |
+| xPath | Text | &#8594; | XML要素のXPathパス |
+| elementValue | Text, Variable | &#8594; | 要素の新しい値 |
+| * | 演算子 | &#8594; | 指定時: 値をCDATAに設定 |
 
 <!-- END REF-->
 
@@ -122,7 +122,7 @@ XML処理のルールに準拠するため、行末文字シークエンス(CR�
 |  |  |
 | --- | --- |
 | コマンド番号 | 868 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

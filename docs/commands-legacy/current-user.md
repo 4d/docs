@@ -5,7 +5,7 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** {( *user* )} : Text<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** ( *user* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ See example for the [User in group](user-in-group.md) command.
 |  |  |
 | --- | --- |
 | Command number | 182 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

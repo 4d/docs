@@ -54,7 +54,7 @@ Para obtener un atajo asociado con un comando de menú, es útil implementar una
 |  |  |
 | --- | --- |
 | Número de comando | 424 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

@@ -5,15 +5,15 @@ slug: /commands/qr-set-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* ; *numColuna* ; *numLinha* ; *propriedade* ; *valor* )<!-- END REF-->
+<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* : Integer ; *numColuna* : Integer ; *numLinha* : Integer ; *propriedade* : Integer ; *valor* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Nº da coluna |
-| numLinha | Integer | &#8594;  | N° da linha |
-| propriedade | Integer | &#8594;  | Valor do operador para a célula |
-| valor | Integer, Text | &#8594;  | Valor para a propriedade selecionada |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Nº da coluna |
+| numLinha | Integer | &#8594; | N° da linha |
+| propriedade | Integer | &#8594; | Valor do operador para a célula |
+| valor | Integer, Text | &#8594; | Valor para a propriedade selecionada |
 
 <!-- END REF-->
 
@@ -90,7 +90,7 @@ Este método define vários atributos para o título da primeira coluna:
 |  |  |
 | --- | --- |
 | Número do comando | 759 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

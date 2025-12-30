@@ -5,7 +5,7 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *document* ; *locked* ; *invisible* ; created on ; created at ; modified on ; modified at )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *document* : Text ; *locked* : Boolean ; *invisible* : Boolean ; created on ; created at ; modified on ; modified at )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ The dates and times of creation and last modification are managed by the file ma
 |  |  |
 | --- | --- |
 | Command number | 478 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

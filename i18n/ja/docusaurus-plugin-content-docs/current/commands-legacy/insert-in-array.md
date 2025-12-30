@@ -5,13 +5,13 @@ slug: /commands/insert-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *array* ; *where* {; *howMany*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *array* : Array ; *where* : Integer {; *howMany* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | 配列名 |
-| where | Integer | &#8594;  | 要素を挿入する位置 |
-| howMany | Integer | &#8594;  | 挿入する要素数, または 省略時は1 |
+| array | Array | &#8594; | 配列名 |
+| where | Integer | &#8594; | 要素を挿入する位置 |
+| howMany | Integer | &#8594; | 挿入する要素数, または 省略時は1 |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 227 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

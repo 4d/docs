@@ -5,11 +5,11 @@ slug: /commands/value-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Value type.Syntax-->**Value type** ( *expressão* ) : Integer<!-- END REF-->
+<!--REF #_command_.Value type.Syntax-->**Value type** ( *expressão* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| expressão | Expression | &#8594;  | Expressão cujo valor resultante será testado |
+| expressão | Expression | &#8594; | Expressão cujo valor resultante será testado |
 | Resultado | Integer | &#8592; | Número do tipo de dado |
 
 <!-- END REF-->
@@ -122,6 +122,6 @@ var $sum : Real
 |  |  |
 | --- | --- |
 | Número do comando | 1509 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

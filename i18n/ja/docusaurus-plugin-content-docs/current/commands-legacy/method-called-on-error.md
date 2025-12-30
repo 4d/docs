@@ -5,11 +5,11 @@ slug: /commands/method-called-on-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on error.Syntax-->**Method called on error** {( *scope* )} : Text<!-- END REF-->
+<!--REF #_command_.Method called on error.Syntax-->**Method called on error** ( *scope* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Method called on error.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| scope | Integer | &#8594;  | エラーメソッドのスコープ |
+| scope | Integer | &#8594; | エラーメソッドのスコープ |
 | 戻り値 | Text | &#8592; | エラー時に呼び出されるメソッド名 |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 704 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

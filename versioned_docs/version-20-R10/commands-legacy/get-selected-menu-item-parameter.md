@@ -30,6 +30,6 @@ If no menu item has been selected, the command returns an empty string "".
 |  |  |
 | --- | --- |
 | Command number | 1005 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

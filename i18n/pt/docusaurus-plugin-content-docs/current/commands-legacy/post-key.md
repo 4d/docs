@@ -5,13 +5,13 @@ slug: /commands/post-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *codigo* {; *modificadores* {; *processo*}} )<!-- END REF-->
+<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *codigo* : Integer {; *modificadores* : Integer {; *processo* : Integer}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| codigo | Integer | &#8594;  | Código do caractere ou código da tecla de função |
-| modificadores | Integer | &#8594;  | Estado de teclas modificadoras |
-| processo | Integer | &#8594;  | Número de referência do processo destino; ou fila do evento de aplicação, se omitido, ou 0 |
+| codigo | Integer | &#8594; | Código do caractere ou código da tecla de função |
+| modificadores | Integer | &#8594; | Estado de teclas modificadoras |
+| processo | Integer | &#8594; | Número de referência do processo destino; ou fila do evento de aplicação, se omitido, ou 0 |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Ver exemplo do comando [Process number](../commands/process-number.md).
 |  |  |
 | --- | --- |
 | Número do comando | 465 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

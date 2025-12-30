@@ -5,13 +5,13 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *objeto* {; *endereço*} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *objeto* : Text {; *endereço* : Integer} ) : Text<br/>**WA Create URL history menu** ( *objeto* : Field, Variable {; *endereço* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| endereço | Integer | &#8594;  | 0 ou omitido = Lista de URLs anteriores; 1 = Lista de próximas URLs |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| endereço | Integer | &#8594; | 0 ou omitido = Lista de URLs anteriores; 1 = Lista de próximas URLs |
 | Resultado | Text | &#8592; | Menu reference |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ O código abaixo pode estar associado a um botão 3D com menu pop up chamado "An
 |  |  |
 | --- | --- |
 | Número do comando | 1049 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

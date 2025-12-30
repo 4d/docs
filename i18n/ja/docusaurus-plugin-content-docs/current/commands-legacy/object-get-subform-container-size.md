@@ -5,7 +5,7 @@ slug: /commands/object-get-subform-container-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *width* ; *height* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *width* : Integer ; *height* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1148 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

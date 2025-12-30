@@ -85,6 +85,6 @@ Cet exemple illustre l’emploi de l’option chunked avec la commande **WEB SEN
 |  |  |
 | --- | --- |
 | Numéro de commande | 815 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

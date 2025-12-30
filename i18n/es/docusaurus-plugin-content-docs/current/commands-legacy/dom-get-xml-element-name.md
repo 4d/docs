@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-element-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *elementRef* ; *nomElement* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT NAME.Syntax-->**DOM GET XML ELEMENT NAME** ( *elementRef* : Text ; *nomElement* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT NAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
 | nomElement | Variable | &#8592; | Nombre del elemento |
 
 <!-- END REF-->
@@ -46,7 +46,7 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 |  |  |
 | --- | --- |
 | Número de comando | 730 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

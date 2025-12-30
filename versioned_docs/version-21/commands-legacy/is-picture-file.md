@@ -34,6 +34,6 @@ If you do not pass the *\** parameter, the command tests the file by looking for
 |  |  |
 | --- | --- |
 | Command number | 1113 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

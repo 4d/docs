@@ -27,6 +27,6 @@ Si aucun utilisateur par défaut n’est défini, la commande retourne 0.
 |  |  |
 | --- | --- |
 | Numéro de commande | 826 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -31,8 +31,8 @@ L’instruction suivante :
 
 ... inscrira cette ligne dans le document : 
 
-```4d
- 
+```xml
+ <!DOCTYPE Livres SYSTEM "Livre.DTD">
 ```
 
 ## Variables et ensembles système 
@@ -52,7 +52,7 @@ En cas d’erreur, la commande retourne une erreur qui peut être interceptée v
 |  |  |
 | --- | --- |
 | Numéro de commande | 851 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *bloq* )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *bloq* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| bloq | Boolean | &#8594;  | True = bloquear os registros encontrados por pesquisas; False = Não bloquear os registros |
+| bloq | Boolean | &#8594; | True = bloquear os registros encontrados por pesquisas; False = Não bloquear os registros |
 
 <!-- END REF-->
 
@@ -75,7 +75,7 @@ Se o comando não é chamado no contexto de uma transação, um erro é gerado.
 |  |  |
 | --- | --- |
 | Número do comando | 661 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

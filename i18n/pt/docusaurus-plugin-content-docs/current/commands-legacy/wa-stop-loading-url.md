@@ -5,12 +5,12 @@ slug: /commands/wa-stop-loading-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA STOP LOADING URL.Syntax-->**WA STOP LOADING URL** ( {* ;} *objeto* )<!-- END REF-->
+<!--REF #_command_.WA STOP LOADING URL.Syntax-->**WA STOP LOADING URL** ( * ; *objeto* : Text )<br/>**WA STOP LOADING URL** ( *objeto* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA STOP LOADING URL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 
 <!-- END REF-->
 
@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 1024 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

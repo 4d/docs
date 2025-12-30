@@ -5,11 +5,11 @@ slug: /commands/dom-close-xml
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *elementRef* )<!-- END REF-->
+<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *elementRef* : Text )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML raíz |
+| elementRef | Text | &#8594; | Referencia del elemento XML raíz |
 
 <!-- END REF-->
 
@@ -33,7 +33,7 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 |  |  |
 | --- | --- |
 | Número de comando | 722 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

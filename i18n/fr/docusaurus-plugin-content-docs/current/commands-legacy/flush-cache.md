@@ -5,11 +5,11 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( taille )}<br/>**FLUSH CACHE** {( * )}<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** ({ taille })<br/>**FLUSH CACHE** ({ * })<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| taille &#124; * | Réel, Opérateur | &#8594;  | * pour vider le cache, ou nombre d'octets minimum de libération du cache |
+| taille &#124; * | Réel, Opérateur | &#8594; | * pour vider le cache, ou nombre d'octets minimum de libération du cache |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ En temps normal, vous n'avez pas à appeler cette commande, car 4D sauvegarde r�
 |  |  |
 | --- | --- |
 | Numéro de commande | 297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is nil pointer.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umPointer | Pointer | &#8594;  | Ponteiros a ser testado |
+| umPointer | Pointer | &#8594; | Ponteiros a ser testado |
 | Resultado | Boolean | &#8592; | TRUE = ponteiro nulo (->[])FALSE = ponteiro válido a um objeto existente |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ Caso deseje conhecer o nome da variável apontada ou o número do campo, pode ut
 |  |  |
 | --- | --- |
 | Número do comando | 315 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

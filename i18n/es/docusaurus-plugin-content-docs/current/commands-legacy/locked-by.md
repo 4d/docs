@@ -5,11 +5,11 @@ slug: /commands/locked-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*tabla* ;} *proceso* ; *usuario4D* ; *sesionUsuario* ; *nombreProceso* )<!-- END REF-->
+<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*tabla* : Table ;} *proceso* : Integer ; *usuario4D* : Text ; *sesionUsuario* : Text ; *nombreProceso* : Text )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a verificar si el registro está bloqueado o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla a verificar si el registro está bloqueado o Tabla por defecto, si se omite |
 | proceso | Integer | &#8592; | Número de referencia del proceso |
 | usuario4D | Text | &#8592; | Nombre del usuario 4D |
 | sesionUsuario | Text | &#8592; | Nombre del usuario que inició la sesion de trabajo |
@@ -46,6 +46,6 @@ Si el registro ha sido bloqueado por una *petición $lock REST*:
 |  |  |
 | --- | --- |
 | Número de comando | 353 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

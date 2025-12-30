@@ -31,6 +31,6 @@ Para que se genere el ciclo de ejecución **In break** asegúrese de que la prop
 |  |  |
 | --- | --- |
 | Número de comando | 113 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

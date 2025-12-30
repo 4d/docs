@@ -5,7 +5,7 @@ slug: /commands/text-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* ; *arrText* ; *width* ; *fontName* ; *fontSize* {; *fontStyle* {; *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO ARRAY.Syntax-->**TEXT TO ARRAY** ( *varText* : Text ; *arrText* : Text array ; *width* : Integer ; *fontName* : Text ; *fontSize* : Integer {; *fontStyle* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -113,6 +113,6 @@ You need to print in a 400-pixel wide area, a text with a maximum of 80 lines an
 |  |  |
 | --- | --- |
 | Command number | 1149 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

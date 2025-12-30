@@ -5,14 +5,14 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *rota* ; *dataMod* ; *horaMod* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *rota* : Text, Text array ; *dataMod* : Date, Date array ; *horaMod* : Time, Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text, Text array | &#8594;  | Texto ou array que contém uma ou mais rotas de acesso |
+| rota | Text, Text array | &#8594; | Texto ou array que contém uma ou mais rotas de acesso |
 | dataMod | Date, Date array | &#8592; | Data(s) de modificação do método |
 | horaMod | Time, Integer array | &#8592; | Hora(s) de modificação do método |
-| * | Operador | &#8594;  | Se passar = o comando é aplicado ao banco local quando é executado apartir de um componente (parâmetro ignorado fora deste contexto) |
+| * | Operador | &#8594; | Se passar = o comando é aplicado ao banco local quando é executado apartir de um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -74,6 +74,6 @@ Se quiser obter as datas de modificação dos métodos de um módulo com o prefi
 |  |  |
 | --- | --- |
 | Número do comando | 1170 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

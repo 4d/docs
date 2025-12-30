@@ -86,6 +86,6 @@ The *appName* parameter lets you open the same text file using different applica
 |  |  |
 | --- | --- |
 | Command number | 673 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/listbox-set-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *numTable* {; *nomSurlignage*} )<br/>**LISTBOX SET TABLE SOURCE** ( {* ;} *objet* ; *tempo* {; *nomSurlignage*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET TABLE SOURCE.Syntax-->**LISTBOX SET TABLE SOURCE** ( * ; *objet* : Text ; *numTable* : Entier long, Chaîne {; *nomSurlignage* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *objet* : Field, Variable ; *numTable* : Entier long, Chaîne {; *nomSurlignage* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( * ; *objet* : Text ; *tempo* : Entier long, Chaîne {; *nomSurlignage* : Text} )<br/>**LISTBOX SET TABLE SOURCE** ( *objet* : Field, Variable ; *tempo* : Entier long, Chaîne {; *nomSurlignage* : Text} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET TABLE SOURCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| numTable &#124; tempo | Entier long, Chaîne | &#8594;  | Numéro de la table de laquelle utiliser la sélection courante ou Nom de la sélection temporaire à utiliser |
-| nomSurlignage | Text | &#8594;  | Nom de l’ensemble de surlignage |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| numTable &#124; tempo | Entier long, Chaîne | &#8594; | Numéro de la table de laquelle utiliser la sélection courante ou Nom de la sélection temporaire à utiliser |
+| nomSurlignage | Text | &#8594; | Nom de l’ensemble de surlignage |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ Si la list box contenait déjà des colonnes, leur contenu est mis à jour à l�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1013 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

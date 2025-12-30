@@ -63,6 +63,6 @@ Usted desea guardar el contenido de un archivo existente en el campo imagen, alm
 |  |  |
 | --- | --- |
 | Número de comando | 1134 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

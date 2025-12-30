@@ -5,11 +5,11 @@ slug: /commands/blob-to-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *usuarios* )<!-- END REF-->
+<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *usuarios* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| usuarios | Blob | &#8594;  | BLOB (encriptado) contiene las cuentas de usuarios creadas y guardadas por el Administrador |
+| usuarios | Blob | &#8594; | BLOB (encriptado) contiene las cuentas de usuarios creadas y guardadas por el Administrador |
 
 <!-- END REF-->
 
@@ -53,7 +53,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 850 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

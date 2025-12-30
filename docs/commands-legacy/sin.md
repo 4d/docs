@@ -5,7 +5,7 @@ slug: /commands/sin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Sin.Syntax-->**Sin** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Sin.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 17 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/get-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *list* ; *appearance* {; *icon* {; *lineHeight* {; *doubleClick* {; *multiSelections* {; *editable*}}}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *list* : Integer ; *appearance* : Integer {; *icon* : Integer {; *lineHeight* : Integer {; *doubleClick* : Integer {; *multiSelections* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | リスト参照番号 |
+| list | Integer | &#8594; | リスト参照番号 |
 | appearance | Integer | &#8592; | リストの描画スタイル 1 = Macスタイル 2 = Windowsスタイル |
 | icon | Integer | &#8592; | *** 廃止予定、常に0を返します *** |
 | lineHeight | Integer | &#8592; | 行の最小高さ (ピクセル単位) |
@@ -48,6 +48,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 632 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla en la cual reducir la selección actual al registro actual o Tabla por defecto si se omite |
+| tabla | Table | &#8594; | Tabla en la cual reducir la selección actual al registro actual o Tabla por defecto si se omite |
 
 <!-- END REF-->
 
@@ -35,7 +35,7 @@ Este comando fue útil para “reponer” un registro que había sido apilado y 
 |  |  |
 | --- | --- |
 | Número de comando | 189 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

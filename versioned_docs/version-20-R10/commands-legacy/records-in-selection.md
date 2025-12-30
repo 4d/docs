@@ -39,6 +39,6 @@ The following example shows a loop technique commonly used to move through all t
 |  |  |
 | --- | --- |
 | Command number | 76 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

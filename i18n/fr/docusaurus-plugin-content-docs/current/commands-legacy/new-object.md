@@ -5,12 +5,12 @@ slug: /commands/new-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New object.Syntax-->**New object** {( *propriété* ; *valeur* {; *propriété2* ; *valeur2* ; ... ; *propriétéN* ; *valeurN*} )} : Object<!-- END REF-->
+<!--REF #_command_.New object.Syntax-->**New object** ( *propriété* : Text ; *valeur* : any {; ...(*propriété* : Text, *valeur* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| propriété | Text | &#8594;  | Nom de la propriété à créer |
-| valeur | any | &#8594;  | Valeur de la propriété |
+| propriété | Text | &#8594; | Nom de la propriété à créer |
+| valeur | any | &#8594; | Valeur de la propriété |
 | Résultat | Object | &#8592; | Nouvel objet structuré |
 
 <!-- END REF-->
@@ -112,6 +112,6 @@ Avec cette commande, vous pouvez aisément gérer des objets en boucle :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

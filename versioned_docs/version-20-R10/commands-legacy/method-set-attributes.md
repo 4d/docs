@@ -57,6 +57,6 @@ You want to set a single attribute:
 |  |  |
 | --- | --- |
 | Command number | 1335 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

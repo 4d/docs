@@ -37,6 +37,6 @@ If no printer is installed, an error is generated.
 |  |  |
 | --- | --- |
 | Command number | 788 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

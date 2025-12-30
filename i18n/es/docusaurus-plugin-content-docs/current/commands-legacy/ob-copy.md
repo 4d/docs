@@ -5,14 +5,14 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objeto* {; resuelvePunt | {; *option* {; *agruparCon*}}} )  : Object<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objeto* : Object, Campo Object {; resuelvePunt | {; *option* : Integer {; *agruparCon* : Collection, Object}}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594;  | Objeto estructurado |
-| resuelvePunt | Boolean | &#8594;  | True = resuelve los puntero, False o se omite = no resuelve punteros |
-| option | Integer | &#8594;  | ck shared: devuelve un objeto compartido,ck resolve pointers: resuelve punteros antes de copiar |
-| agruparCon | Collection, Object | &#8594;  | Colección u objeto compartido a agrupar con el objeto resultante |
+| objeto | Object, Campo Object | &#8594; | Objeto estructurado |
+| resuelvePunt | Boolean | &#8594; | True = resuelve los puntero, False o se omite = no resuelve punteros |
+| option | Integer | &#8594; | ck shared: devuelve un objeto compartido,ck resolve pointers: resuelve punteros antes de copiar |
+| agruparCon | Collection, Object | &#8594; | Colección u objeto compartido a agrupar con el objeto resultante |
 | Resultado | Object | &#8592; | Copia de objeto |
 
 <!-- END REF-->
@@ -170,6 +170,6 @@ Queremos copiar *$sharedObj e*n *$sharedColl* pero dado que pertenecen a diferen
 |  |  |
 | --- | --- |
 | Número de comando | 1225 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

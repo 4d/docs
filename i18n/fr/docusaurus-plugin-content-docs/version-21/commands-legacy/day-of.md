@@ -42,6 +42,6 @@ Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 23 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

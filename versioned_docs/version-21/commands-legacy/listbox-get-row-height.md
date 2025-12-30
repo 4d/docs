@@ -40,6 +40,6 @@ The returned height value is expressed:
 |  |  |
 | --- | --- |
 | Command number | 1408 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -124,6 +124,6 @@ The resulting document will contain:
 |  |  |
 | --- | --- |
 | Command number | 1190 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

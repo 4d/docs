@@ -5,7 +5,7 @@ slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( {* ;} *object* ; *colPosition* ; *colName* ; *colVariable* ; *headerName* ; *headerVar* {; *footerName* ; *footerVar*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *object* : Field, Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -99,6 +99,6 @@ You want to duplicate a Boolean column and change its title:
 |  |  |
 | --- | --- |
 | Command number | 1273 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

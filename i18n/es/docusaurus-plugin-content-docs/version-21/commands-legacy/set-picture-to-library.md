@@ -104,7 +104,7 @@ Si no hay suficiente memoria para añadir la imagen a la librería de imágenes,
 |  |  |
 | --- | --- |
 | Número de comando | 566 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 | Prohibido en el servidor ||
 

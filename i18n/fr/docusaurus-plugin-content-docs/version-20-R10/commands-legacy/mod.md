@@ -39,6 +39,6 @@ L'exemple suivant illustre le fonctionnement de **Mod** dans différents cas de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 98 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

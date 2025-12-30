@@ -5,11 +5,11 @@ slug: /commands/undefined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *variavel* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *variavel* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variavel | Expression | &#8594;  | Variável a testar |
+| variavel | Expression | &#8594; | Variável a testar |
 | Resultado | Boolean | &#8592; | TRUE=Variável é atualmente indefinida; FALSE= Variável é atualmente definida |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ Abaixo os diferentes resultados do comando [Undefined](undefined.md) assim como 
 |  |  |
 | --- | --- |
 | Número do comando | 82 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

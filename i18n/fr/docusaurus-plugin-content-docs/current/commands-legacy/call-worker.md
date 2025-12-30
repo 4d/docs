@@ -5,13 +5,13 @@ slug: /commands/call-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *process* ; *formule* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *process* : Text, Integer ; *formule* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL WORKER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Text, Integer | &#8594;  | Nom ou numéro du process worker |
-| formule | Object, Text | &#8594;  | Objet Formula ou Nom de la méthode projet |
-| param | Expression | &#8594;  | Paramètre(s) passé(s) à la méthode |
+| process | Text, Integer | &#8594; | Nom ou numéro du process worker |
+| formule | Object, Text | &#8594; | Objet Formula ou Nom de la méthode projet |
+| param | Expression | &#8594; | Paramètre(s) passé(s) à la méthode |
 
 <!-- END REF-->
 
@@ -82,6 +82,6 @@ Voici le code de *méthodeWorker* :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1389 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/open-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *accessPath* )<!-- END REF-->
+<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *accessPath* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| accessPath | Text | &#8594;  | 開くデータファイルの名前または完全アクセスパス |
+| accessPath | Text | &#8594; | 開くデータファイルの名前または完全アクセスパス |
 
 <!-- END REF-->
 
@@ -58,6 +58,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 312 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

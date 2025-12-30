@@ -5,7 +5,7 @@ slug: /commands/listbox-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( {* ;} *object* ; *rowPosition* {; *numRows*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT ROWS.Syntax-->**LISTBOX INSERT ROWS** ( * ; *object* : Text ; *rowPosition* : Integer {; *numRows* : Integer} )<br/>**LISTBOX INSERT ROWS** ( *object* : Field, Variable ; *rowPosition* : Integer {; *numRows* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT ROWS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ If the *rowPosition* value is higher than the total number of rows in the list b
 |  |  |
 | --- | --- |
 | Command number | 913 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

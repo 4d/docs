@@ -5,13 +5,13 @@ slug: /commands/document-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomeArquivo* {; *conjCaracteres* {; *modoRetorno*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomeArquivo* : Text {; *conjCaracteres* : Text, Integer {; *modoRetorno* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArquivo | Text | &#8594;  | Nome do documento ou caminho ao documento |
-| conjCaracteres | Text, Integer | &#8594;  | Nome ou número do conjunto de caracteres |
-| modoRetorno | Integer | &#8594;  | Modo de processamento para as linhas de ruptura |
+| nomeArquivo | Text | &#8594; | Nome do documento ou caminho ao documento |
+| conjCaracteres | Text, Integer | &#8594; | Nome ou número do conjunto de caracteres |
+| modoRetorno | Integer | &#8594; | Modo de processamento para as linhas de ruptura |
 | Resultado | Text | &#8592; | Texto do documento |
 
 <!-- END REF-->
@@ -83,6 +83,6 @@ Quando executa este código:
 |  |  |
 | --- | --- |
 | Número do comando | 1236 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

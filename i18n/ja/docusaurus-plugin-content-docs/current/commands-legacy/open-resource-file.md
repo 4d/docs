@@ -5,12 +5,12 @@ slug: /commands/open-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* {; *fileType*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open resource file.Syntax-->**Open resource file** ( *resFilename* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Open resource file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resFilename | Text | &#8594;  | リソースファイルのファイル名またはフルパス名, または 空の文字列を指定するとファイルを開くダイアログボックスを表示 |
-| fileType | Text | &#8594;  | Mac OSファイルタイプ (4文字)、または Windowsファイル拡張子(1から3文字)、または 省略時、すべてのファイル |
+| resFilename | Text | &#8594; | リソースファイルのファイル名またはフルパス名, または 空の文字列を指定するとファイルを開くダイアログボックスを表示 |
+| fileType | Text | &#8594; | Mac OSファイルタイプ (4文字)、または Windowsファイル拡張子(1から3文字)、または 省略時、すべてのファイル |
 | 戻り値 | Time | &#8592; | リソースファイル参照番号 |
 
 <!-- END REF-->
@@ -103,7 +103,7 @@ Macintosh上で、この例は“MyPrefs”ファイルを開きます。
 |  |  |
 | --- | --- |
 | コマンド番号 | 497 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK、Document、error |
 
 

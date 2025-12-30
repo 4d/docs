@@ -71,6 +71,6 @@ Insertion of an SVG picture:
 |  |  |
 | --- | --- |
 | Command number | 1090 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

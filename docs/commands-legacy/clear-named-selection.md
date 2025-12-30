@@ -5,7 +5,7 @@ slug: /commands/clear-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *name* )<!-- END REF-->
+<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *name* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If *name* was created using the [CUT NAMED SELECTION](cut-named-selection.md) co
 |  |  |
 | --- | --- |
 | Command number | 333 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

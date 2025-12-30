@@ -5,14 +5,14 @@ slug: /commands/get-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* ; *menuItem* ; *refIcone* {; *processo*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* : Integer, Text ; *menuItem* : Integer ; *refIcone* : Text, Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de menu de item ou -1 para o último item adicionado ao menu |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de menu de item ou -1 para o último item adicionado ao menu |
 | refIcone | Text, Integer | &#8592; | Nome ou número da imagem associada com o item de menu |
-| processo | Integer | &#8594;  | Número de processo |
+| processo | Integer | &#8594; | Número de processo |
 
 <!-- END REF-->
 
@@ -39,6 +39,6 @@ Se nenhum ícone está associado a linha de menu, o comando devolve uma imagem v
 |  |  |
 | --- | --- |
 | Número do comando | 983 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | array | Array | &#8594;  | Array(s) to be sorted |
 | sort | * | &#8594;  | ">" to sort by increasing order or  "<" to sort by decreasing order If omitted  no sort |
 | ptrArrayName | Pointer array | &#8594;  | Array of array pointers |
-| sortArrayName | Array integer | &#8594;  | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
+| sortArrayName | Integer array | &#8594;  | Sort order array (1 = sort by increasing order, -1 = sort by decreasing order, 0 = synchronization with previous sorts) |
 
 <!-- END REF-->
 
@@ -113,6 +113,6 @@ If you want the array of names be used as a third sort criterion, you need to as
 |  |  |
 | --- | --- |
 | Command number | 718 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

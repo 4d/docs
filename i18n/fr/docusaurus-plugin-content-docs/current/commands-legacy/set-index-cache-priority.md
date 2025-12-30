@@ -5,12 +5,12 @@ slug: /commands/set-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *leChamp* ; *priorité* )<!-- END REF-->
+<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *leChamp* ; *priorité* : Integer )<!-- END REF-->
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ dont vous voulez modifier la priorité des index pour toute la session |
-| priorité | Integer | &#8594;  | Priorité du ou des index du champ dans le cache |
+| leField | Field | &#8594; | Champ dont vous voulez modifier la priorité des index pour toute la session |
+| priorité | Integer | &#8594; | Priorité du ou des index du champ dans le cache |
 
 <!-- END REF-->
 
@@ -54,6 +54,6 @@ Dans la , vous souhaitez définir une priorité très haute pour les index du ch
 |  |  |
 | --- | --- |
 | Numéro de commande | 1401 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

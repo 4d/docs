@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* {; *nameSpace*} {; *nameSpaceName* ; *nameSpaceValue*} {; *nameSpaceName2* ; *nameSpaceValue2* ; ... ; *nameSpaceNameN* ; *nameSpaceValueN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* : Text {; *nameSpace* : Text} {; *nameSpaceName* : Text ; *nameSpaceValue* : Text} {; ...(*nameSpaceName* : Text, *nameSpaceValue* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| root | Text | &#8594;  | ルート要素名 |
-| nameSpace | Text | &#8594;  | 名前空間の値 |
-| nameSpaceName | Text | &#8594;  | 名前空間名 |
-| nameSpaceValue | Text | &#8594;  | 名前空間値 |
+| root | Text | &#8594; | ルート要素名 |
+| nameSpace | Text | &#8594; | 名前空間の値 |
+| nameSpaceName | Text | &#8594; | 名前空間名 |
+| nameSpaceValue | Text | &#8594; | 名前空間値 |
 | 戻り値 | Text | &#8592; | ルートXML要素参照 |
 
 <!-- END REF-->
@@ -101,7 +101,7 @@ NSName2="http://www.4D.com/Mkt/namespace"/>
 |  |  |
 | --- | --- |
 | コマンド番号 | 861 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

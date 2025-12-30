@@ -5,13 +5,13 @@ slug: /commands/form-set-vertical-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *redimension* {; *hauteurMini* {; *hauteurMaxi*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *redimension* : Boolean {; *hauteurMini* : Integer {; *hauteurMaxi* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| redimension | Boolean | &#8594;  | Vrai : le formulaire est redimensionnable verticalement Faux : le formulaire n’est pas redimensionnable verticalement |
-| hauteurMini | Integer | &#8594;  | Hauteur minimale du formulaire (pixels) |
-| hauteurMaxi | Integer | &#8594;  | Hauteur maximale du formulaire (pixels) |
+| redimension | Boolean | &#8594; | Vrai : le formulaire est redimensionnable verticalement Faux : le formulaire n’est pas redimensionnable verticalement |
+| hauteurMini | Integer | &#8594; | Hauteur minimale du formulaire (pixels) |
+| hauteurMaxi | Integer | &#8594; | Hauteur maximale du formulaire (pixels) |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ Reportez-vous à l'exemple de la commande [FORM SET SIZE](form-set-size.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 893 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

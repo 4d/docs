@@ -408,8 +408,8 @@ Los elementos deben ser instalados:
 
 Para activar esta funcionalidad, añada las llaves `DatabaseToEmbedInClientWinFolder` y/o `DatabaseToEmbedInClientMacFolder` en el archivo de configuración *buildApp*. Cuando una de estas llaves está presente, el proceso de generación de la aplicación cliente genera una aplicación monopuesto: la estructura compilada, en lugar del archivo *EnginedServer.4Dlink*, se coloca en la carpeta "Database".
 
-* Si existe una carpeta de datos por defecto en la aplicación monopuesto, se integra una licencia.
-* Si no existe una carpeta de datos por defecto en la aplicación monopuesto, ésta se ejecutará sin archivo de datos y sin licencia.
+* If a default data folder exists in the single-user application, a license is embedded.
+* If no default data folder exists in the single-user application, it will be executed without data file and without license.
 
 El escenario básico es:
 
@@ -501,7 +501,7 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 ## Página licencias y certificados
 
-La página de Licencias y certificados puede utilizarse para:
+The Licenses & Certificate page can be used to:
 
 * designe el número o los números de licencia que desea integrar en su [aplicación ejecutable monopuesto](#application-page),
 * firmar la aplicación mediante un certificado en macOS.

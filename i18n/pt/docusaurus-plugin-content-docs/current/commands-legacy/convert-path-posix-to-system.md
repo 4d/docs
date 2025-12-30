@@ -5,12 +5,12 @@ slug: /commands/convert-path-posix-to-system
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *rotaPosix* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *rotaPosix* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPosix | Text | &#8594;  | Nome de rota POSIX |
-| * | Operador | &#8594;  | Opção de codificação |
+| rotaPosix | Text | &#8594; | Nome de rota POSIX |
+| * | Operador | &#8594; | Opção de codificação |
 | Resultado | Text | &#8592; | Rota de acesso expressa em sintaxe de sistema |
 
 <!-- END REF-->
@@ -60,6 +60,6 @@ Exemplos em Windows:
 |  |  |
 | --- | --- |
 | Número do comando | 1107 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

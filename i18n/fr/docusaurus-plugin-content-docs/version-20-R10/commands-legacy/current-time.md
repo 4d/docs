@@ -55,6 +55,6 @@ L'exemple suivant extrait les heures, minutes et secondes de l'heure courante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 178 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

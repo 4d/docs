@@ -5,7 +5,7 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* {; *messageText*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* : Boolean {; *messageText* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ Insertion of an assertion in the evaluation of an expression:
 |  |  |
 | --- | --- |
 | Command number | 1132 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

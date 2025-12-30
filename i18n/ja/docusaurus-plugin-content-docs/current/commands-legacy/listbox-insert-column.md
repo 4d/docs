@@ -5,19 +5,19 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( {* ;} *object* ; *colPosition* ; *colName* ; *colVariable* ; *headerName* ; *headerVar* {; *footerName* ; *footerVar*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *object* : Text ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *object* : Field, Variable ; *colPosition* : Integer ; *colName* : Text ; *colVariable* : Array, Field, Variable, Pointer ; *headerName* : Text ; *headerVar* : Integer, Pointer {; *footerName* : Text ; *footerVar* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| colPosition | Integer | &#8594;  | 列の挿入場所 |
-| colName | Text | &#8594;  | 列オブジェクト名 |
-| colVariable | Array, Field, Variable, Pointer | &#8594;  | 列配列名 または フィールド または 変数 |
-| headerName | Text | &#8594;  | 列ヘッダオブジェクト名 |
-| headerVar | Integer, Pointer | &#8594;  | 列ヘッダ変数 |
-| footerName | Text | &#8594;  | 列フッターオブジェクト名 |
-| footerVar | Variable, Pointer | &#8594;  | 列フッター変数 |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| colPosition | Integer | &#8594; | 列の挿入場所 |
+| colName | Text | &#8594; | 列オブジェクト名 |
+| colVariable | Array, Field, Variable, Pointer | &#8594; | 列配列名 または フィールド または 変数 |
+| headerName | Text | &#8594; | 列ヘッダオブジェクト名 |
+| headerVar | Integer, Pointer | &#8594; | 列ヘッダ変数 |
+| footerName | Text | &#8594; | 列フッターオブジェクト名 |
+| footerVar | Variable, Pointer | &#8594; | 列フッター変数 |
 
 <!-- END REF-->
 
@@ -102,6 +102,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 829 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

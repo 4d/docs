@@ -50,7 +50,7 @@ OK prend la valeur 1 si la ressource est trouvée, sinon elle prend la valeur 0 
 |  |  |
 | --- | --- |
 | Numéro de commande | 510 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

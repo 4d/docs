@@ -5,7 +5,7 @@ slug: /commands/xml-decode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( *xmlValue* ; *4Dvar* )<!-- END REF-->
+<!--REF #_command_.XML DECODE.Syntax-->**XML DECODE** ( *xmlValue* : Text ; *4Dvar* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.XML DECODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -78,6 +78,6 @@ Example of XML document:
 |  |  |
 | --- | --- |
 | Command number | 1091 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

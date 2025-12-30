@@ -5,7 +5,7 @@ slug: /commands/set-real-comparison-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* )<!-- END REF-->
+<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* : Real )<!-- END REF-->
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ Using **SET REAL COMPARISON LEVEL**, you can increase or decrease the epsilon va
 |  |  |
 | --- | --- |
 | Command number | 623 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

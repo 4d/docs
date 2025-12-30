@@ -5,16 +5,16 @@ slug: /commands/open-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*laTable* ;} *nomForm* {; *type* {; *posH* {; *posV* {; *}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open form window.Syntax-->**Open form window** ( {*laTable* : Table ;} *nomForm* : Text, Object {; *type* : Integer {; *posH* : Integer {; *posV* : Integer {; *}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open form window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table du formulaire ou Table par défaut si ce paramètre est omis |
-| nomForm | Text, Object | &#8594;  | Nom du formulaire table ou projet (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| type | Integer | &#8594;  | Type de la fenêtre |
-| posH | Integer | &#8594;  | Position horizontale de la fenêtre |
-| posV | Integer | &#8594;  | Position verticale de la fenêtre |
-| * | Opérateur | &#8594;  | Conserver la position et la taille précédentes de la fenêtre |
+| laTable | Table | &#8594; | Table du formulaire ou Table par défaut si ce paramètre est omis |
+| nomForm | Text, Object | &#8594; | Nom du formulaire table ou projet (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| type | Integer | &#8594; | Type de la fenêtre |
+| posH | Integer | &#8594; | Position horizontale de la fenêtre |
+| posV | Integer | &#8594; | Position verticale de la fenêtre |
+| * | Opérateur | &#8594; | Conserver la position et la taille précédentes de la fenêtre |
 | Résultat | Integer | &#8592; | Numéro de référence de la fenêtre |
 
 <!-- END REF-->
@@ -139,6 +139,6 @@ Résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 675 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

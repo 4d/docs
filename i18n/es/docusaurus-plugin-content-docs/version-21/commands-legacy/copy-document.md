@@ -123,7 +123,7 @@ Los siguientes ejemplos crean diferentes archivos y carpetas en la carpeta de la
 |  |  |
 | --- | --- |
 | Número de comando | 541 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/dom-count-xml-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML attributes.Syntax-->**DOM Count XML attributes** ( *elementRef* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML attributes.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 727 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

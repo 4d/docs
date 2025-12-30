@@ -60,6 +60,6 @@ The *depth* parameter is ignored and must be omitted. The command always uses th
 |  |  |
 | --- | --- |
 | Command number | 679 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

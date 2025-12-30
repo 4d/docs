@@ -64,6 +64,6 @@ L'exemple ci-dessous :
 |  |  |
 | --- | --- |
 | Numéro de commande | 161 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

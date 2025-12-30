@@ -5,12 +5,12 @@ slug: /commands/qr-blob-to-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* ; *blob* )<!-- END REF-->
+<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* : Integer ; *blob* : Blob )<!-- END REF-->
 <!--REF #_command_.QR BLOB TO REPORT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | area | Integer | &#8594;  | Reference of the area |
-| blob | Blob | &#8594;  | BLOB that houses the report |
+| Blob | Blob | &#8594;  | BLOB that houses the report |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ The following statement retrieves the Quick Report stored in Field4 and displays
 |  |  |
 | --- | --- |
 | Command number | 771 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

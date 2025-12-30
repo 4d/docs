@@ -69,6 +69,6 @@ Tenga en cuenta >= permite cubrir todos los casos. De hecho, la función devuelv
 |  |  |
 | --- | --- |
 | Número de comando | 653 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

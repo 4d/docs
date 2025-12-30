@@ -78,6 +78,6 @@ Si vous passez le paramètre *process*, l'événement est envoyé au process don
 |  |  |
 | --- | --- |
 | Numéro de commande | 467 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

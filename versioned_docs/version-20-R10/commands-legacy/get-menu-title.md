@@ -32,7 +32,7 @@ If you omit the *process* parameter, **Get menu title** applies to the menu bar 
 |  |  |
 | --- | --- |
 | Command number | 430 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -5,7 +5,7 @@ slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ If **PREVIOUS RECORD** moves the current record pointer before the current selec
 |  |  |
 | --- | --- |
 | Command number | 110 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

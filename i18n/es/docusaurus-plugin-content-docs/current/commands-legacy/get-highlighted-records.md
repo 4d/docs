@@ -5,12 +5,12 @@ slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*tabla* ;} *nomConjunto* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*tabla* : Table ;} *nomConjunto* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual leer los registros seleccionados Si se omite, tabla del formulario actual |
-| nomConjunto | Text | &#8594;  | Conjunto en el cual guardar los registros seleccionados |
+| tabla | Table | &#8594; | Tabla de la cual leer los registros seleccionados Si se omite, tabla del formulario actual |
+| nomConjunto | Text | &#8594; | Conjunto en el cual guardar los registros seleccionados |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 902 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

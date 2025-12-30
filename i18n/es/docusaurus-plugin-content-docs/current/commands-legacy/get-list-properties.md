@@ -5,11 +5,11 @@ slug: /commands/get-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *lista* ; *apariencia* {; *icono* {; *altoLinea* {; *dobleClic* {; *multiSeleccion* {; *editable*}}}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *lista* : Integer ; *apariencia* : Integer {; *icono* : Integer {; *altoLinea* : Integer {; *dobleClic* : Integer {; *multiSeleccion* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de la lista |
+| lista | Integer | &#8594; | Número de referencia de la lista |
 | apariencia | Integer | &#8592; | Estilo gráfico de la lista 1 = Lista jerárquica a la Macintosh 2 = Lista jerárquica a la Windows |
 | icono | Integer | &#8592; | Referencia de recurso Mac OS  ‘cicn’ |
 | altoLinea | Integer | &#8592; | Altura mínima de la línea expresada en píxeles |
@@ -43,6 +43,6 @@ Para una completa descripción de la apariencia, iconos de nodos, altura de lín
 |  |  |
 | --- | --- |
 | Número de comando | 632 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

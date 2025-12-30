@@ -5,7 +5,7 @@ slug: /commands/component-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *componentsArray* )<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *componentsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ For more information about 4D components, please refer to the Design Reference m
 |  |  |
 | --- | --- |
 | Command number | 1001 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -54,6 +54,6 @@ En el , usted desea definir una prioridad alta para la tabla \[Customer\]:
 |  |  |
 | --- | --- |
 | Número de comando | 1425 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

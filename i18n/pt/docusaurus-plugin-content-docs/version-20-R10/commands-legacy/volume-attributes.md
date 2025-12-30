@@ -101,7 +101,7 @@ Quando tiver sido adicionado este método de projeto a sua aplicação, pode esc
 |  |  |
 | --- | --- |
 | Número do comando | 472 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

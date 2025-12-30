@@ -40,7 +40,7 @@ If you pass an invalid value in the *property* or *value* parameter, the corresp
 |  |  |
 | --- | --- |
 | Command number | 772 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/window-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window process.Syntax-->**Window process** {( *window* )} : Integer<!-- END REF-->
+<!--REF #_command_.Window process.Syntax-->**Window process** ( *window* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Window process.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ If you omit the *window* parameter, Window process returns the process of the cu
 |  |  |
 | --- | --- |
 | Command number | 446 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/get-relation-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *ptrCamp* ; *tablaUno* ; *campUno* {; *discriminante* {; *autoUno* {; *autoMuchos*}}} )<br/>**GET RELATION PROPERTIES** ( *numTabla* ; *numCamp* ; *tablaUno* ; *campUno* {; *discriminante* {; *autoUno* {; *autoMuchos*}}} )<!-- END REF-->
+<!--REF #_command_.GET RELATION PROPERTIES.Syntax-->**GET RELATION PROPERTIES** ( *ptrCamp* : Puntero, Entero largo ; *tablaUno* : Integer ; *campUno* : Integer {; *discriminante* : Integer {; *autoUno* : Boolean {; *autoMuchos* : Boolean}}} )<br/>**GET RELATION PROPERTIES** ( *numTabla* : Puntero, Entero largo ; *numCamp* : Integer ; *tablaUno* : Integer ; *campUno* : Integer {; *discriminante* : Integer {; *autoUno* : Boolean {; *autoMuchos* : Boolean}}} )<!-- END REF-->
 <!--REF #_command_.GET RELATION PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ptrCamp&#124;numTabla | Puntero, Entero largo | &#8594;  | Puntero de campo o número de tabla |
-| numCamp | Integer | &#8594;  | Número de campo si se pasa un número de tabla  como primer parámetro |
+| ptrCamp&#124;numTabla | Puntero, Entero largo | &#8594; | Puntero de campo o número de tabla |
+| numCamp | Integer | &#8594; | Número de campo si se pasa un número de tabla  como primer parámetro |
 | tablaUno | Integer | &#8592; | Número de la tabla Uno ó 0 si no se define  ninguna relación desde el campo |
 | campUno | Integer | &#8592; | Número de campo Uno ó 0 si no se define  ninguna relación desde el campo |
 | discriminante | Integer | &#8592; | Número de campo discriminante o 0 si ningún campo discriminante |
@@ -49,6 +49,6 @@ Una se haya ejecutado el comando:
 |  |  |
 | --- | --- |
 | Número de comando | 686 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/listbox-select-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( {* ;} *object* ; *selection* {; *action*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( * ; *object* : Text ; *selection* : Object, Collection {; *action* : Integer} )<br/>**LISTBOX SELECT ROWS** ( *object* : Field, Variable ; *selection* : Object, Collection {; *action* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時、 Object はオブジェクト名(文字列) 省略時、 Object は変数 |
-| object | any | &#8594;  | オブジェクト名(* 指定時)、 または変数(* 省略時) |
-| selection | Object, Collection | &#8594;  | 選択する行を指定するオブジェクトまたはコレクション |
-| action | Integer | &#8594;  | lk replace selection (省略時のデフォルト)、lk add to selection、lk remove from selection |
+| * | 演算子 | &#8594; | 指定時、 Object はオブジェクト名(文字列) 省略時、 Object は変数 |
+| object | any | &#8594; | オブジェクト名(* 指定時)、 または変数(* 省略時) |
+| selection | Object, Collection | &#8594; | 選択する行を指定するオブジェクトまたはコレクション |
+| action | Integer | &#8594; | lk replace selection (省略時のデフォルト)、lk add to selection、lk remove from selection |
 
 <!-- END REF-->
 
@@ -89,6 +89,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1715 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

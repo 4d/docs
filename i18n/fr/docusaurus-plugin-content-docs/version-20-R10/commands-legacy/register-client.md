@@ -124,7 +124,7 @@ Si le poste client est correctement inscrit, la variable système OK prend la va
 |  |  |
 | --- | --- |
 | Numéro de commande | 648 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

@@ -5,13 +5,13 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*tabela* }{;}{ *criterioPesquisa* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*tabela* : Table }{;}{ *criterioPesquisa* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
-| criterioPesquisa | Expression | &#8594;  | Critério de pesquisa |
-| * | Operador | &#8594;  | Continuar a execução da pesquisa |
+| tabela | Table | &#8594; | Tabela para a qual devolver uma seleção de registros ou Tabela por padrão, se for omitido |
+| criterioPesquisa | Expression | &#8594; | Critério de pesquisa |
+| * | Operador | &#8594; | Continuar a execução da pesquisa |
 
 <!-- END REF-->
 
@@ -316,7 +316,7 @@ A variável Ok toma o valor 0 se:
 |  |  |
 | --- | --- |
 | Número do comando | 277 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

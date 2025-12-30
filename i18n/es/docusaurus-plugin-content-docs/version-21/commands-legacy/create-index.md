@@ -93,6 +93,6 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
 |  |  |
 | --- | --- |
 | Número de comando | 966 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

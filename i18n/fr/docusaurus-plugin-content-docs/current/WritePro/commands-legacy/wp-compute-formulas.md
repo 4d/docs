@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-compute-formulas
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP COMPUTE FORMULAS.Syntax-->**WP COMPUTE FORMULAS** ( *objCible* )<!-- END REF-->
+<!--REF #_command_.WP COMPUTE FORMULAS.Syntax-->**WP COMPUTE FORMULAS** ( *objCible* : Object )<!-- END REF-->
 <!--REF #_command_.WP COMPUTE FORMULAS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

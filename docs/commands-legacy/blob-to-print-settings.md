@@ -5,7 +5,7 @@ slug: /commands/blob-to-print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *printSettings* {; *params*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to print settings.Syntax-->**BLOB to print settings** ( *printSettings* : Blob {; *params* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to print settings.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -75,6 +75,6 @@ You want to apply print settings previously saved to disk to the current 4D prin
 |  |  |
 | --- | --- |
 | Command number | 1434 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

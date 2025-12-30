@@ -5,16 +5,16 @@ slug: /commands/web-service-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAcesso* ; *soapAction* ; *nomeMetodo* ; *nomeEspaço* {; *tipoComplexo* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAcesso* : Text ; *soapAction* : Text ; *nomeMetodo* : Text ; *nomeEspaço* : Text {; *tipoComplexo* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| urlAcesso | Text | &#8594;  | Acesso URL ao Webservice |
-| soapAction | Text | &#8594;  | Conteúdos do campo SOAPAction |
-| nomeMetodo | Text | &#8594;  | Nome do método |
-| nomeEspaço | Text | &#8594;  | nomeespaço XML |
-| tipoComplexo | Integer | &#8594;  | Configuração de tipos complexos (tipos simples se omitido) |
-| * | Operador | &#8594;  | Não fechar a conexão |
+| urlAcesso | Text | &#8594; | Acesso URL ao Webservice |
+| soapAction | Text | &#8594; | Conteúdos do campo SOAPAction |
+| nomeMetodo | Text | &#8594; | Nome do método |
+| nomeEspaço | Text | &#8594; | nomeespaço XML |
+| tipoComplexo | Integer | &#8594; | Configuração de tipos complexos (tipos simples se omitido) |
+| * | Operador | &#8594; | Não fechar a conexão |
 
 <!-- END REF-->
 
@@ -173,7 +173,7 @@ Se a petição for corretamente encaminhada, e o Web Service a aceitar, a variá
 |  |  |
 | --- | --- |
 | Número do comando | 778 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

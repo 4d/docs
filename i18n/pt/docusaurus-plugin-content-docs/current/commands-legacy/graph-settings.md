@@ -5,19 +5,19 @@ slug: /commands/graph-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graf* ; *xmin* ; *xmax* ; *ymin* ; *ymax* ; *xprop* ; *xgrid* ; *ygrid* ; *titulo* {; *titulo2* ; ... ; *tituloN*} )<!-- END REF-->
+<!--REF #_command_.GRAPH SETTINGS.Syntax-->**GRAPH SETTINGS** ( *graf* : Picture ; *xmin* : Integer, Date, Time ; *xmax* : Integer, Date, Time ; *ymin* : Integer ; *ymax* : Integer ; *xprop* : Boolean ; *xgrid* : Boolean ; *ygrid* : Boolean ; *titulo* : Text {; *...titulo* : Text} )<!-- END REF-->
 <!--REF #_command_.GRAPH SETTINGS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| graf | Picture | &#8594;  | Área da gráfica ou da variável imagem |
-| xmin | Integer, Date, Time | &#8594;  | Valor mínimo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
-| xmax | Integer, Date, Time | &#8594;  | Valor máximo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
-| ymin | Integer | &#8594;  | Valor mínimo do eixo y |
-| ymax | Integer | &#8594;  | Valor máximo do eixo y |
-| xprop | Boolean | &#8594;  | TRUE para eixo x proporcional; FALSE para eixo x normal (linhas ou pontos somente) |
-| xgrid | Boolean | &#8594;  | TRUE para grade eixo x; FALSE para não grade no eixo x (somente se xprop é TRUE) |
-| ygrid | Boolean | &#8594;  | TRUE para a grade do eixo y; FALSE para as grades que não forem do eixo y |
-| titulo | Text | &#8594;  | Título para a legenda do gráfico |
+| graf | Picture | &#8594; | Área da gráfica ou da variável imagem |
+| xmin | Integer, Date, Time | &#8594; | Valor mínimo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
+| xmax | Integer, Date, Time | &#8594; | Valor máximo do eixo das x para gráfico proporcional (linhas ou pontos somente) |
+| ymin | Integer | &#8594; | Valor mínimo do eixo y |
+| ymax | Integer | &#8594; | Valor máximo do eixo y |
+| xprop | Boolean | &#8594; | TRUE para eixo x proporcional; FALSE para eixo x normal (linhas ou pontos somente) |
+| xgrid | Boolean | &#8594; | TRUE para grade eixo x; FALSE para não grade no eixo x (somente se xprop é TRUE) |
+| ygrid | Boolean | &#8594; | TRUE para a grade do eixo y; FALSE para as grades que não forem do eixo y |
+| titulo | Text | &#8594; | Título para a legenda do gráfico |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ Ver o exemplo do comando [GRAPH](graph.md "GRAPH").
 |  |  |
 | --- | --- |
 | Número do comando | 298 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

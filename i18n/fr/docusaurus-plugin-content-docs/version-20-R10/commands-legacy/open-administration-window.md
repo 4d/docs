@@ -55,7 +55,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 1047 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

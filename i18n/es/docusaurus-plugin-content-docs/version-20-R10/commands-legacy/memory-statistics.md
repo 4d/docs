@@ -33,6 +33,6 @@ Después de ejecutar el comando, las estadísticas solicitadas se entregan en lo
 |  |  |
 | --- | --- |
 | Número de comando | 1118 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

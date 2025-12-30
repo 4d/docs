@@ -5,7 +5,7 @@ slug: /commands/select-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* ; *fileTypes* ; *title* ; *options* {; *selected*} ) : Text<!-- END REF-->
+<!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* : Text, Integer ; *fileTypes* : Text ; *title* : Text ; *options* : Integer {; *selected* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -102,7 +102,7 @@ If no file was selected (for example, if the user clicked on the **Cancel** butt
 |  |  |
 | --- | --- |
 | Command number | 905 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

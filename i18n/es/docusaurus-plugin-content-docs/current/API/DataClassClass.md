@@ -444,7 +444,7 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 | Parámetros | Tipo                      |                             | Descripción                                          |
 | ---------- | ------------------------- | :-------------------------: | ---------------------------------------------------- |
-| primaryKey | Integer OR Text           |              ->             | Valor de la llave primaria de la entidad a recuperar |
+| primaryKey | Integer, Text             |              ->             | Valor de la llave primaria de la entidad a recuperar |
 | settings   | Object                    |              ->             | Opciones de construcción: context    |
 | Resultado  | 4D.Entity | <- | Entidad que coincide con la llave primaria designada |
 

@@ -61,7 +61,7 @@ If the export has been carried out correctly, the OK variable is set to 1\. Othe
 |  |  |
 | --- | --- |
 | Command number | 1065 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -5,15 +5,15 @@ slug: /commands/execute-on-server
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procédure* ; *pile* {; *nom* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Execute on server.Syntax-->**Execute on server** ( *procédure* : Text ; *pile* : Integer {; *nom* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Execute on server.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| procédure | Text | &#8594;  | Procédure à exécuter dans le process |
-| pile | Integer | &#8594;  | Taille de la pile en octets (0 = taille par défaut) |
-| nom | Text | &#8594;  | Nom du process créé |
-| param | Expression | &#8594;  | Paramètre(s) de la procédure |
-| * | Opérateur | &#8594;  | Process unique |
+| procédure | Text | &#8594; | Procédure à exécuter dans le process |
+| pile | Integer | &#8594; | Taille de la pile en octets (0 = taille par défaut) |
+| nom | Text | &#8594; | Nom du process créé |
+| param | Expression | &#8594; | Paramètre(s) de la procédure |
+| * | Opérateur | &#8594; | Process unique |
 | Résultat | Integer | &#8592; | Numéro du process pour un process nouvellement créé ou un process déjà en cours d'exécution |
 
 <!-- END REF-->
@@ -191,6 +191,6 @@ Reportez-vous à la section *Services basés sur les procédures stockées (exem
 |  |  |
 | --- | --- |
 | Numéro de commande | 373 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* ) : Integer<!-- END REF-->
+<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *printSettings* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ You want to store the current print settings to disk:
 |  |  |
 | --- | --- |
 | Command number | 1433 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

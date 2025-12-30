@@ -67,7 +67,7 @@ El siguiente método de objeto del área desplegable *atNames* selecciona el reg
 |  |  |
 | --- | --- |
 | Número de comando | 245 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

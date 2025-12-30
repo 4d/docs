@@ -5,13 +5,13 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set* ; *subtractSet* ; *resultSet* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set* : Text ; *subtractSet* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| set | Text | &#8594;  | セット |
-| subtractSet | Text | &#8594;  | 取り除くセット |
-| resultSet | Text | &#8594;  | 結果のセット |
+| set | Text | &#8594; | セット |
+| subtractSet | Text | &#8594; | 取り除くセット |
+| resultSet | Text | &#8594; | 結果のセット |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 122 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -66,6 +66,6 @@ Si vous n'avez pas les privilèges d'accès pour appeler **Set user properties**
 |  |  |
 | --- | --- |
 | Numéro de commande | 612 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

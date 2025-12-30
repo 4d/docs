@@ -31,6 +31,6 @@ In order for the   **In footer** execution cycle to be generated, make sure that
 |  |  |
 | --- | --- |
 | Command number | 191 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

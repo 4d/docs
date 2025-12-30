@@ -5,12 +5,12 @@ slug: /commands/compress-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *BLOB* {; *compressão*} )<!-- END REF-->
+<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *BLOB* : Blob {; *compressão* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB a ser comprimido |
-| compressão | Integer | &#8594;  | Se não se omite: 1, compressão máxima possível 2, velocidade de compressão máxima |
+| Blob | Blob | &#8594; | BLOB a ser comprimido |
+| compressão | Integer | &#8594; | Se não se omite: 1, compressão máxima possível 2, velocidade de compressão máxima |
 
 <!-- END REF-->
 
@@ -97,7 +97,7 @@ A variável OK é definida como 1 se o BLOB foi compactado com sucesso, caso con
 |  |  |
 | --- | --- |
 | Número do comando | 534 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

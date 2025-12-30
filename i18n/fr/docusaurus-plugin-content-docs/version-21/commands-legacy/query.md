@@ -314,7 +314,7 @@ La variable OK prend la valeur 0 si :
 |  |  |
 | --- | --- |
 | Numéro de commande | 277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

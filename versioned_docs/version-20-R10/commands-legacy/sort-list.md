@@ -61,6 +61,6 @@ The list looks like:
 |  |  |
 | --- | --- |
 | Command number | 391 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

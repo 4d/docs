@@ -5,11 +5,11 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *chaîneJSON* ; *tab* )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *chaîneJSON* : Text ; *tab* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chaîneJSON | Text | &#8594;  | Chaîne en JSON à analyser |
+| chaîneJSON | Text | &#8594; | Chaîne en JSON à analyser |
 | tab | Array | &#8592; | Tableau contenant le résultat de l’analyse de la chaîne JSON |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Dans cet exemple, les données des champs des enregistrements d’une table sont
 |  |  |
 | --- | --- |
 | Numéro de commande | 1219 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

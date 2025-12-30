@@ -5,7 +5,7 @@ slug: /commands/spell-check-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* ; *errPos* ; *errLength* ; *checkPos* ; *arrSuggest* )<!-- END REF-->
+<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* : Text ; *errPos* : Integer ; *errLength* : Integer ; *checkPos* : Integer ; *arrSuggest* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ We want to count the number of possible errors in a text:
 |  |  |
 | --- | --- |
 | Command number | 1215 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

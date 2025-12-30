@@ -5,7 +5,7 @@ slug: /commands/xml-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *elementRef* ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<br/>**XML GET OPTIONS** ( *document*  ; *selector* ; *value* {; *selector2* ; *value2* ; ... ; *selectorN* ; *valueN*} )<!-- END REF-->
+<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *elementRef* : Text ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer, *value* : Integer)} )<br/>**XML GET OPTIONS** ( *document* : Text  ; *selector* : Integer ; *value* : Integer {; ...(*selector* : Integer, *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML GET OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -43,6 +43,6 @@ In selector, pass a constant of the "*XML*" theme indicating the option to get. 
 |  |  |
 | --- | --- |
 | Command number | 1096 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

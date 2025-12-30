@@ -59,6 +59,6 @@ Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même f
 |  |  |
 | --- | --- |
 | Numéro de commande | 1124 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

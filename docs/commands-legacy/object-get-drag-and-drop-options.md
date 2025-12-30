@@ -5,7 +5,7 @@ slug: /commands/object-get-drag-and-drop-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax-->**OBJECT GET DRAG AND DROP OPTIONS** ( {* ;} *object* ; *draggable* ; *automaticDrag* ; *droppable* ; *automaticDrop* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Syntax-->**OBJECT GET DRAG AND DROP OPTIONS** ( * ; *object* : Text ; *draggable* : Boolean ; *automaticDrag* : Boolean ; *droppable* : Boolean ; *automaticDrop* : Boolean )<br/>**OBJECT GET DRAG AND DROP OPTIONS** ( *object* : Field, Variable ; *draggable* : Boolean ; *automaticDrag* : Boolean ; *droppable* : Boolean ; *automaticDrop* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT GET DRAG AND DROP OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ Each parameter returns True or False according to whether the corresponding opti
 |  |  |
 | --- | --- |
 | Command number | 1184 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

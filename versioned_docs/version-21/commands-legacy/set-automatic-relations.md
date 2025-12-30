@@ -50,6 +50,6 @@ The following example makes all manual Many-to-One relations automatic and rever
 |  |  |
 | --- | --- |
 | Command number | 310 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

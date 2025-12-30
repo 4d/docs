@@ -5,11 +5,11 @@ slug: /commands/build-application
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *confCreacionApp* )}<!-- END REF-->
+<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *confCreacionApp* : Text })<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| confCreacionApp | Text | &#8594;  | Ruta de acceso completa del proyecto a utilizar |
+| confCreacionApp | Text | &#8594; | Ruta de acceso completa del proyecto a utilizar |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ Si el comando falla, se genera un error que puede interceptar con la ayuda del c
 |  |  |
 | --- | --- |
 | Número de comando | 871 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document, error |
 | Prohibido en el servidor ||
 

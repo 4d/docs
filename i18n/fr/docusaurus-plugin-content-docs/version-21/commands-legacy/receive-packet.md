@@ -118,7 +118,7 @@ Après un appel à **RECEIVE PACKET**, la variable système OK prend la valeur 1
 |  |  |
 | --- | --- |
 | Numéro de commande | 104 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

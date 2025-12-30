@@ -5,12 +5,12 @@ slug: /commands/goto-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *objet* )<!-- END REF-->
+<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *objet* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | Field, Variable | &#8594;  | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
+| * | Opérateur | &#8594; | Si spécifié = objet est un nom d’objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | Field, Variable | &#8594; | Nom d’objet (si * spécifié) sinon Variable ou champ saisissable à sélectionner |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ Reportez-vous à l'exemple de la commande [REJECT](reject.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 206 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

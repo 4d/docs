@@ -30,6 +30,6 @@ On Macintosh, Screen height returns the height of the main screen, the screen wh
 |  |  |
 | --- | --- |
 | Command number | 188 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

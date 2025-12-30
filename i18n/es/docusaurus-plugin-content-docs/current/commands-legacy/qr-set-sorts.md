@@ -5,13 +5,13 @@ slug: /commands/qr-set-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* ; *aColumnas* {; *aOrden*} )<!-- END REF-->
+<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* : Integer ; *aColumnas* : Real array {; *aOrden* : Real array} )<!-- END REF-->
 <!--REF #_command_.QR SET SORTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| aColumnas | Real array | &#8594;  | Columnas |
-| aOrden | Real array | &#8594;  | Sentido de ordenación |
+| area | Integer | &#8594; | Referencia del área |
+| aColumnas | Real array | &#8594; | Columnas |
+| aOrden | Real array | &#8594; | Sentido de ordenación |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 752 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

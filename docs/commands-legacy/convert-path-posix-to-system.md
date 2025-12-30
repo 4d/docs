@@ -5,7 +5,7 @@ slug: /commands/convert-path-posix-to-system
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *posixPath* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path POSIX to system.Syntax-->**Convert path POSIX to system** ( *posixPath* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path POSIX to system.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,6 +60,6 @@ Examples under Windows:
 |  |  |
 | --- | --- |
 | Command number | 1107 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

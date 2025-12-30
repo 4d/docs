@@ -5,11 +5,11 @@ slug: /commands/blob-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *BLOB* ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB size.Syntax-->**BLOB size** ( *BLOB* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | Campo o variable de tipo BLOB |
+| Blob | Blob | &#8594; | Campo o variable de tipo BLOB |
 | Resultado | Integer | &#8592; | Tamaño en bytes del BLOB |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ La línea de código añade 100 bytes al BLOB *miBlob*:
 |  |  |
 | --- | --- |
 | Número de comando | 605 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

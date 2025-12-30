@@ -5,7 +5,7 @@ slug: /commands/array-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* ; *list* {; *itemRefs*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* : Array ; *list* : Text, Integer {; *itemRefs* : Array} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is c
 |  |  |
 | --- | --- |
 | Command number | 287 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

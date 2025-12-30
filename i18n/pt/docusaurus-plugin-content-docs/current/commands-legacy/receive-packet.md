@@ -5,13 +5,13 @@ slug: /commands/receive-packet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* ;} *receiveVar* ; *stopChar* )<br/>**RECEIVE PACKET** ( {*docRef* ;} *receiveVar* ; *numBytes* )<!-- END REF-->
+<!--REF #_command_.RECEIVE PACKET.Syntax-->**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *stopChar* : String, Inteiro longo )<br/>**RECEIVE PACKET** ( {*docRef* : Time ;} *receiveVar* : Text, Blob ; *numBytes* : String, Inteiro longo )<!-- END REF-->
 <!--REF #_command_.RECEIVE PACKET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referência do documento, o canal atual (porta serial ou documento) |
+| docRef | Time | &#8594; | Número de referência do documento, o canal atual (porta serial ou documento) |
 | receiveVar | Text, Blob | &#8592; | Variável a receber os dados |
-| stopChar &#124; numBytes | String, Inteiro longo | &#8594;  | Caractere(s) no qual parar a recepção, ou Número de bytes a receber |
+| stopChar &#124; numBytes | String, Inteiro longo | &#8594; | Caractere(s) no qual parar a recepção, ou Número de bytes a receber |
 
 <!-- END REF-->
 
@@ -121,7 +121,7 @@ Depois de um chamado a RECEIVE PACKET, a variável sistema OK recebe o valor 1 s
 |  |  |
 | --- | --- |
 | Número do comando | 104 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

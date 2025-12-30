@@ -33,7 +33,7 @@ El parámetro opcional *tamaño* permite indicar las dimensiones en píxeles del
 |  |  |
 | --- | --- |
 | Número de comando | 700 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | Document, error |
 
 

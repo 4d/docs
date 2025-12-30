@@ -284,6 +284,6 @@ Pour plus d'informations sur la fonction *trim*, veuillez vous reporter à la do
 |  |  |
 | --- | --- |
 | Numéro de commande | 1058 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

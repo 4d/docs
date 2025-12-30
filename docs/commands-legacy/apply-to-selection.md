@@ -5,7 +5,7 @@ slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* ; *statement* )<!-- END REF-->
+<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* : Table ; *statement* : Expression )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ If the user clicks the Stop button in the progress thermometer, the OK system va
 |  |  |
 | --- | --- |
 | Command number | 70 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

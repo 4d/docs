@@ -5,14 +5,14 @@ slug: /commands/set-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *tabela* ; *titulosCampos* ; *numCampos* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *tabela* : Table ; *titulosCampos* : Text array ; *numCampos* : Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai estabelecer os títulos dos campos |
-| titulosCampos | Text array | &#8594;  | Nomes dos campos do jeito que eles vão aparecer nas caixas de diálogo |
-| numCampos | Integer array | &#8594;  | Números de campos atuais |
-| * | Operator |  &#8594;  | Use os nomes personalizados no editor de fórmulas |
+| tabela | Table | &#8594; | Tabela para a qual vai estabelecer os títulos dos campos |
+| titulosCampos | Text array | &#8594; | Nomes dos campos do jeito que eles vão aparecer nas caixas de diálogo |
+| numCampos | Integer array | &#8594; | Números de campos atuais |
+| * | Operator | &#8594; | Use os nomes personalizados no editor de fórmulas |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Ver o exemplo do comando [SET TABLE TITLES](set-table-titles.md).
 |  |  |
 | --- | --- |
 | Número do comando | 602 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

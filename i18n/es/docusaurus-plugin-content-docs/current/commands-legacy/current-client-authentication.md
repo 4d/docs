@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *dominio* ; *protocolo* )} : Text<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** ( *dominio* : Text ; *protocolo* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -75,6 +75,6 @@ Con esta configuración, no se muestra un diálogo de contraseña para un 4D rem
 |  |  |
 | --- | --- |
 | Número de comando | 1355 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

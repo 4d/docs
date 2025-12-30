@@ -40,6 +40,6 @@ Passez dans le paramètre *hauteur* la hauteur à définir. Par défaut, si vous
 |  |  |
 | --- | --- |
 | Numéro de commande | 1145 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

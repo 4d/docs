@@ -5,7 +5,7 @@ slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limit* )<!-- END REF-->
+<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limit* : Integer )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,6 +69,6 @@ See the second example for the [SET QUERY DESTINATION](set-query-destination.md)
 |  |  |
 | --- | --- |
 | Command number | 395 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

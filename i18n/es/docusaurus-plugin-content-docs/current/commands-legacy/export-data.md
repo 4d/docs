@@ -5,14 +5,13 @@ slug: /commands/export-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *nomArchivo* {; *proyecto* {; *}} )<!-- END REF-->
+<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *nomArchivo* : Text {; *proyecto* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Text | &#8594;  | Ruta de acceso y nombre del archivo a exportar |
-| proyecto | Text, Blob | &#8594;  | Contenido del proyecto de exportación |
-| &#8592; | Nuevo contenido del proyecto de exportación (si se  pasa el parámetro *) |
-| * | Operador | &#8594;  | Visualización de la caja de diálogo de exportación y actualización del proyecto |
+| nomArchivo | Text | &#8594; | Ruta de acceso y nombre del archivo a exportar |
+| proyecto | Text, Blob | &#8596; | *in:* Contents of the export project<br/>*out:* New contents of the export project (if the * parameter has been passed) |
+| * | Operador | &#8594; | Visualización de la caja de diálogo de exportación y actualización del proyecto |
 
 <!-- END REF-->
 
@@ -103,7 +102,7 @@ Si el usuario hace clic en **Cancelar** en la caja de diálogo estándar de abri
 |  |  |
 | --- | --- |
 | Número de comando | 666 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document |
 
 

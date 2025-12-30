@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-cdata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *document* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML CDATA.Syntax-->**SAX GET XML CDATA** ( *document* : Time ; *valeur* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SAX GET XML CDATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | valeur | Text, Blob | &#8592; | Valeur de l’élément |
 
 <!-- END REF-->
@@ -55,7 +55,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 878 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

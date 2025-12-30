@@ -5,7 +5,7 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} : Collection<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ( *startFrom* : Integer ) : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -86,6 +86,6 @@ Since the command returns a collection, it can be used with **.join()** to build
 |  |  |
 | --- | --- |
 | Command number | 1790 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

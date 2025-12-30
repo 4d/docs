@@ -59,6 +59,6 @@ This command takes into account any selection or deselection actions whether by 
 |  |  |
 | --- | --- |
 | Command number | 971 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

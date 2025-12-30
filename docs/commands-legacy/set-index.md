@@ -5,7 +5,7 @@ slug: /commands/set-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *aField* ; *index* {; *} )<!-- END REF-->
+<!--REF #_command_.SET INDEX.Syntax-->**SET INDEX** ( *aField* : Field ; *index* : Boolean, Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -94,6 +94,6 @@ Creation of a keywords index:
 |  |  |
 | --- | --- |
 | Command number | 344 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

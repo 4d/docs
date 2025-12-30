@@ -67,7 +67,7 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
 |  |  |
 | --- | --- |
 | Número de comando | 60 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

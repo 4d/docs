@@ -58,7 +58,7 @@ We want to count the number of possible errors in a text:
 |  |  |
 | --- | --- |
 | Command number | 1215 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

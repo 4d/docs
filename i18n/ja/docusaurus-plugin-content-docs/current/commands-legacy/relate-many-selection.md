@@ -5,11 +5,11 @@ slug: /commands/relate-many-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *aField* )<!-- END REF-->
+<!--REF #_command_.RELATE MANY SELECTION.Syntax-->**RELATE MANY SELECTION** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | nテーブルのフィールド (リレーションの開始元) |
+| aField | Field | &#8594; | nテーブルのフィールド (リレーションの開始元) |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 340 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||
 

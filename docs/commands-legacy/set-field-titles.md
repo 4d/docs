@@ -5,13 +5,13 @@ slug: /commands/set-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *aTable* ; *fieldTitles* ; *fieldNumbers* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *aTable* : Table ; *fieldTitles* : Text array ; *fieldNumbers* : Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which to set the field titles |
 | fieldTitles | Text array | &#8594;  | Field names as they must appear in dialog boxes |
-| fieldNumbers | Array integer | &#8594;  | Actual field numbers |
+| fieldNumbers | Integer array | &#8594;  | Actual field numbers |
 | * | Operator |  &#8594;  | Use the custom names in the formula editor |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ See example for the [SET TABLE TITLES](set-table-titles.md) command.
 |  |  |
 | --- | --- |
 | Command number | 602 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

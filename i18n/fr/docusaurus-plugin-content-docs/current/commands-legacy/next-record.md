@@ -5,11 +5,11 @@ slug: /commands/next-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.NEXT RECORD.Syntax-->**NEXT RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.NEXT RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle se placer sur l'enregistrement suivant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table dans laquelle se placer sur l'enregistrement suivant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ Reportez-vous à l'exemple de la commande [DISPLAY RECORD](display-record.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 51 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

@@ -5,7 +5,7 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *folderPath* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -77,7 +77,7 @@ Creation of the "\\February\\" subfolder in the existing "C:\\Archives\\" folder
 |  |  |
 | --- | --- |
 | Command number | 475 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

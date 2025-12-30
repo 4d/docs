@@ -5,7 +5,7 @@ slug: /commands/open-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* ; *top* ; *right* ; *bottom* {; *type* {; *title* {; *controlMenuBox*}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Open window.Syntax-->**Open window** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *type* : Integer {; *title* : Text {; *controlMenuBox* : Text}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Open window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -166,6 +166,6 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 |  |  |
 | --- | --- |
 | Command number | 153 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

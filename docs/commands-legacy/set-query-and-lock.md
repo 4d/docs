@@ -5,7 +5,7 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *lock* )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *lock* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -75,7 +75,7 @@ If the command is not called in the context of a transaction, an error is genera
 |  |  |
 | --- | --- |
 | Command number | 661 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -36,7 +36,7 @@ Ce principe permet de conserver une sauvegarde des utilisateurs parmi les donné
 |  |  |
 | --- | --- |
 | Numéro de commande | 849 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

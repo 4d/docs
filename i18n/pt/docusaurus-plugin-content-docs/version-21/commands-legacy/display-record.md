@@ -46,6 +46,6 @@ O exemplo a seguir mostra uma série de registros como uma apresentação de sli
 |  |  |
 | --- | --- |
 | Número do comando | 105 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

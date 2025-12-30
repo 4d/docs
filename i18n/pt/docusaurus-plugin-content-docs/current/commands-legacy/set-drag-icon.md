@@ -5,13 +5,13 @@ slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icone* {; *deslH* {; *deslV*}} )<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icone* : Picture {; *deslH* : Integer {; *deslV* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| icone | Picture | &#8594;  | Ícone a utilizar durante arrastar |
-| deslH | Integer | &#8594;  | Deslocamento horizontal do borde esquerdo da imagem com respeito a posição do cursor (> = 0, a esquerda, <0 = a direita) |
-| deslV | Integer | &#8594;  | Deslocamento vertical do borde superior da imagem com respeito a posição do cursor (> 0 = para cima, <0 = para baixo) |
+| icone | Picture | &#8594; | Ícone a utilizar durante arrastar |
+| deslH | Integer | &#8594; | Deslocamento horizontal do borde esquerdo da imagem com respeito a posição do cursor (> = 0, a esquerda, <0 = a direita) |
+| deslV | Integer | &#8594; | Deslocamento vertical do borde superior da imagem com respeito a posição do cursor (> 0 = para cima, <0 = para baixo) |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ Note que pode modificar a posição do cursor com respeito a imagem:
 |  |  |
 | --- | --- |
 | Número do comando | 1272 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

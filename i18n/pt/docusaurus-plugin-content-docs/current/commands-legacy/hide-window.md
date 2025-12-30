@@ -5,11 +5,11 @@ slug: /commands/hide-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** {( *janela* )}<!-- END REF-->
+<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *janela* : Integer })<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da janela ou processo atual da janela de primeiro plano, se omitido |
+| janela | Integer | &#8594; | Número de referência da janela ou processo atual da janela de primeiro plano, se omitido |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Este exemplo corresponde a um método de um botão localizado em um formulário 
 |  |  |
 | --- | --- |
 | Número do comando | 436 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

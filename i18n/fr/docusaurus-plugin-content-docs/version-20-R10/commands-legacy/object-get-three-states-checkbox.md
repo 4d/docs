@@ -30,6 +30,6 @@ La propriété "Trois états" peut avoir été définie soit via la Liste des pr
 |  |  |
 | --- | --- |
 | Numéro de commande | 1250 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

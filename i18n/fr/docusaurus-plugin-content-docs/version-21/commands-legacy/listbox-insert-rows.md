@@ -39,7 +39,7 @@ Si le paramètre *positionLigne* est supérieur au nombre de lignes des tableaux
 |  |  |
 | --- | --- |
 | Numéro de commande | 913 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

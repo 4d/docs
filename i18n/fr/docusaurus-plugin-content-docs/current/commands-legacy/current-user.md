@@ -5,11 +5,11 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** {( *utilisateur* )} : Text<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** ( *utilisateur* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateur | Integer | &#8594;  | Alias utilisateur ou compte utilisateur 4D |
+| utilisateur | Integer | &#8594; | Alias utilisateur ou compte utilisateur 4D |
 | Résultat | Text | &#8592; | Nom de l'utilisateur courant |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ Reportez-vous à l'exemple de la commande [User in group](user-in-group.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 182 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

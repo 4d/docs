@@ -29,6 +29,6 @@ Cuando se ejecuta en una aplicación 4D monousuario, **Count users** devuelve 1.
 |  |  |
 | --- | --- |
 | Número de comando | 342 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

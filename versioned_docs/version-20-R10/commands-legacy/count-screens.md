@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 437 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

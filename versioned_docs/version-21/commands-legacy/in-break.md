@@ -31,6 +31,6 @@ In order for the **In break** execution cycle to be generated, make sure that th
 |  |  |
 | --- | --- |
 | Command number | 113 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

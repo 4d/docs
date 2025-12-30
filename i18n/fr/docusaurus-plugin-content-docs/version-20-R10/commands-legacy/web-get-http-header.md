@@ -122,6 +122,6 @@ A titre indicatif, voici une liste non exhaustive des champs HTTP pouvant être 
 |  |  |
 | --- | --- |
 | Numéro de commande | 697 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

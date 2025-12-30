@@ -5,7 +5,7 @@ slug: /commands/create-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* {; *fileType*} ) : Time<!-- END REF-->
+<!--REF #_command_.Create document.Syntax-->**Create document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Create document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ If the document has been created correctly, the system variable OK is set to 1 a
 |  |  |
 | --- | --- |
 | Command number | 266 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

@@ -54,6 +54,6 @@ You want to make sure the font used in a text area is available on the user syst
 |  |  |
 | --- | --- |
 | Número do comando | 1700 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

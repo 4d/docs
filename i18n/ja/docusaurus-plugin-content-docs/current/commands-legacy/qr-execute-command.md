@@ -5,12 +5,12 @@ slug: /commands/qr-execute-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* ; *command* )<!-- END REF-->
+<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* : Integer ; *command* : Integer )<!-- END REF-->
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| command | Integer | &#8594;  | 実行するメニューコマンド |
+| area | Integer | &#8594; | エリア参照 |
+| command | Integer | &#8594; | 実行するメニューコマンド |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 791 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

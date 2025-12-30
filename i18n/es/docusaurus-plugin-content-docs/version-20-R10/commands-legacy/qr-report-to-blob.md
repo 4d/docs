@@ -37,7 +37,7 @@ La siguiente instrucción asigna el informe rápido almacenado en el área MiAre
 |  |  |
 | --- | --- |
 | Número de comando | 770 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

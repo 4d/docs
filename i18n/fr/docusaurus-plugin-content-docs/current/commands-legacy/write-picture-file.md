@@ -5,13 +5,13 @@ slug: /commands/write-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomFichier* ; *image* {; *codec*} )<!-- END REF-->
+<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomFichier* : Text ; *image* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom ou chemin d’accès complet du fichier à écrire, ou chaîne vide |
-| image | Picture | &#8594;  | Champ ou variable image à écrire |
-| codec | Text | &#8594;  | Identifiant de codec d'image |
+| nomFichier | Text | &#8594; | Nom ou chemin d’accès complet du fichier à écrire, ou chaîne vide |
+| image | Picture | &#8594; | Champ ou variable image à écrire |
+| codec | Text | &#8594; | Identifiant de codec d'image |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ Si l’exécution de la commande est correcte, la variable système Document con
 |  |  |
 | --- | --- |
 | Numéro de commande | 680 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

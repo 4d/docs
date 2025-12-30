@@ -60,6 +60,6 @@ Cet exemple illustre les cas d'utilisation de cette commande :
 |  |  |
 | --- | --- |
 | Numéro de commande | 978 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

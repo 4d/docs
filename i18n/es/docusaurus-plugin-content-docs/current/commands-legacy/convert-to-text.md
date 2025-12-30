@@ -5,12 +5,12 @@ slug: /commands/convert-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *BLOB* ; *juegoCaracteres* ) : Text<!-- END REF-->
+<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *BLOB* : Blob ; *juegoCaracteres* : Text, Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB que contiene un texto expresado en un juego de caracteres específico |
-| juegoCaracteres | Text, Integer | &#8594;  | Nombre o número de juego de caracteres de blob |
+| Blob | Blob | &#8594; | BLOB que contiene un texto expresado en un juego de caracteres específico |
+| juegoCaracteres | Text, Integer | &#8594; | Nombre o número de juego de caracteres de blob |
 | Resultado | Text | &#8592; | Contenido del BLOB expresado en el juego de caracteres 4D |
 
 <!-- END REF-->
@@ -37,7 +37,7 @@ Si el comando se ejecuta correctamente, la variable OK toma el valor 1\. De lo c
 |  |  |
 | --- | --- |
 | Número de comando | 1012 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

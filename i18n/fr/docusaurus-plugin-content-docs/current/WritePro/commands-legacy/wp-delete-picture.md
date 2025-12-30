@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE PICTURE.Syntax-->**WP DELETE PICTURE** ( *objImage* )<!-- END REF-->
+<!--REF #_command_.WP DELETE PICTURE.Syntax-->**WP DELETE PICTURE** ( *objImage* : Object )<!-- END REF-->
 <!--REF #_command_.WP DELETE PICTURE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

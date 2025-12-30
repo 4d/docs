@@ -5,12 +5,12 @@ slug: /commands/window-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *fenêtres* {; *} )<!-- END REF-->
+<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *fenêtres* : Array {; *} )<!-- END REF-->
 <!--REF #_command_.WINDOW LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | fenêtres | Array | &#8592; | Tableau des numéros de référence des fenêtres |
-| * | Opérateur | &#8594;  | Si omis, ignorer fenêtres flottantes Si spécifié, tenir compte des fenêtres flottantes |
+| * | Opérateur | &#8594; | Si omis, ignorer fenêtres flottantes Si spécifié, tenir compte des fenêtres flottantes |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ La méthode projet suivante place en "mosaïque" toutes les fenêtres ouvertes (
 |  |  |
 | --- | --- |
 | Numéro de commande | 442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

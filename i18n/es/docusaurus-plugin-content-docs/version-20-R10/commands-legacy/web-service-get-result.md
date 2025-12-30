@@ -53,6 +53,6 @@ Imagine un servicio web que devuelve la hora actual en cualquier ciudad del mund
 |  |  |
 | --- | --- |
 | Número de comando | 779 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

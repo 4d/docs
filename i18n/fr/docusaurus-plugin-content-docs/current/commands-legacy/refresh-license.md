@@ -51,6 +51,6 @@ Vous souhaitez mettre à jour votre licence et recevoir un message à la fin de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1336 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

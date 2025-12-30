@@ -45,6 +45,6 @@ Se quiser rejeitar ou aceitar as novas conexões de clientes:
 |  |  |
 | --- | --- |
 | Número do comando | 1635 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

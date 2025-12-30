@@ -71,6 +71,6 @@ Exemplos de usos típicos:
 |  |  |
 | --- | --- |
 | Número do comando | 1167 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

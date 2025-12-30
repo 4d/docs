@@ -33,6 +33,6 @@ To stop sending *homePage* as home page for the current Web process, execute **W
 |  |  |
 | --- | --- |
 | Command number | 639 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

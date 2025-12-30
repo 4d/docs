@@ -5,7 +5,7 @@ slug: /commands/set-file-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *file* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *file* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ The command accepts the star *\** as an optional parameter. By default, when thi
 |  |  |
 | --- | --- |
 | Command number | 975 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

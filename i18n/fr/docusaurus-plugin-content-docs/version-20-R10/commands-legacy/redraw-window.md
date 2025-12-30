@@ -30,6 +30,6 @@ Si vous omettez le paramètre *fenêtre*, **REDRAW WINDOW** s'appliquera à la f
 |  |  |
 | --- | --- |
 | Numéro de commande | 456 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

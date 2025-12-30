@@ -39,7 +39,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler **DELETE USER** ou si u
 |  |  |
 | --- | --- |
 | Numéro de commande | 615 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

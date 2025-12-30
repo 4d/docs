@@ -59,7 +59,7 @@ Em todos os casos, você pode interceptar o erro usando um método [ON ERR CALL]
 |  |  |
 | --- | --- |
 | Número do comando | 526 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

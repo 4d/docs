@@ -5,7 +5,7 @@ slug: /commands/listbox-set-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( {* ;} *object* ; *height* {; *unit*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( * ; *object* : Text ; *height* : Integer {; *unit* : Integer} )<br/>**LISTBOX SET ROWS HEIGHT** ( *object* : Field, Variable ; *height* : Integer {; *unit* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ By default, if you omit the *unit* parameter, the height is expressed in pixels.
 |  |  |
 | --- | --- |
 | Command number | 835 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

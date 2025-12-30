@@ -5,7 +5,7 @@ slug: /commands/convert-from-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *4Dtext* ; *charSet* ; *convertedBLOB* )<!-- END REF-->
+<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *4Dtext* : Text ; *charSet* : Text, Integer ; *convertedBLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -193,7 +193,7 @@ If the command has been correctly executed, the OK variable is set to 1\. Otherw
 |  |  |
 | --- | --- |
 | Command number | 1011 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

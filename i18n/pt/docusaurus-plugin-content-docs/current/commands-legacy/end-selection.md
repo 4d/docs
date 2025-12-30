@@ -5,11 +5,11 @@ slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.End selection.Syntax-->**End selection** {( *tabela* )} : Boolean<!-- END REF-->
+<!--REF #_command_.End selection.Syntax-->**End selection** ( *tabela* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual provar se o ponteiro do registro está além do último registro selecionado, ou Tabela por padrão, se omitida |
+| tabela | Table | &#8594; | Tabela na qual provar se o ponteiro do registro está além do último registro selecionado, ou Tabela por padrão, se omitida |
 | Resultado | Boolean | &#8592; | Sim (TRUE) ou Não (FALSE) |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ Este método de formulário é utilizado durante a impressão de um relatório. 
 |  |  |
 | --- | --- |
 | Número do comando | 36 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

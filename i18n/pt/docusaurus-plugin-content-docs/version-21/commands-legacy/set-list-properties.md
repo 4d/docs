@@ -70,6 +70,6 @@ Se deseja recusar a sublista de expandir/contrair ao dar duplo clique, pode escr
 |  |  |
 | --- | --- |
 | Número do comando | 387 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

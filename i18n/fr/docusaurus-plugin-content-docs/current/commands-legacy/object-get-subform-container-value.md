@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 1785 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

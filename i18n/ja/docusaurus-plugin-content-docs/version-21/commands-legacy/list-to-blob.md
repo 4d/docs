@@ -53,7 +53,7 @@ LIST TO BLOBや[BLOB to list](blob-to-list.md "BLOB to list")は、 BLOBに格�
 |  |  |
 | --- | --- |
 | コマンド番号 | 556 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

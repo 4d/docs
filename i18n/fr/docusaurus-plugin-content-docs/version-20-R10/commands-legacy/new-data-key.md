@@ -61,6 +61,6 @@ Vous souhaitez sauvegarder une clé de chiffrement dans un fichier .4DKeyChain :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1611 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -72,6 +72,6 @@ If the current language is, for example, French Canadian (fr-ca), the command re
 |  |  |
 | --- | --- |
 | Command number | 1105 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

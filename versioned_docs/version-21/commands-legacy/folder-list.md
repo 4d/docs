@@ -30,7 +30,7 @@ If there are no folders at the specified location, the command returns an empty 
 |  |  |
 | --- | --- |
 | Command number | 473 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

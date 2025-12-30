@@ -50,6 +50,6 @@ El siguiente ejemplo imprime un informe con dos niveles de ruptura. La selecció
 |  |  |
 | --- | --- |
 | Número de comando | 302 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

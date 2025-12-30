@@ -56,6 +56,6 @@ Utilisation de pointeurs vers des éléments de tableaux à deux dimensions :
 |  |  |
 | --- | --- |
 | Numéro de commande | 304 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

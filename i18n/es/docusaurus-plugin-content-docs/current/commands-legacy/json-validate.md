@@ -5,12 +5,12 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) : Object<!-- END REF-->
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| vJson | Object | &#8594;  | Objeto JSON a validar |
-| vSchema | Object | &#8594;  | Esquema JSON utilizado para validar objetos JSON |
+| vJson | Object | &#8594; | Objeto JSON a validar |
+| vSchema | Object | &#8594; | Esquema JSON utilizado para validar objetos JSON |
 | Resultado | Object | &#8592; | Estado de validación y errores (si los hay) |
 
 <!-- END REF-->
@@ -110,6 +110,6 @@ Usted desea validar un objeto JSON con un esquema y obtener la lista de errores 
 |  |  |
 | --- | --- |
 | Número de comando | 1456 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

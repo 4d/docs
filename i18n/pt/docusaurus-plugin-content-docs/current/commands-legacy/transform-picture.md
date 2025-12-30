@@ -5,17 +5,16 @@ slug: /commands/transform-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *imagem* ; *operador* {; *param1* {; *param2* {; *param3* {; *param4*}}}} )<!-- END REF-->
+<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *imagem* : Picture ; *operador* : Integer {; *param1* : Real {; *param2* : Real {; *param3* : Real {; *param4* : Real}}}} )<!-- END REF-->
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#8594;  | Fonte da imagem a ser transformada |
-| &#8592; | Imagem resultante depois da transformação |
-| operador | Integer | &#8594;  | Tipo de transformação a ser feita |
-| param1 | Real | &#8594;  | Parâmetro de transformação |
-| param2 | Real | &#8594;  | Parâmetro de transformação |
-| param3 | Real | &#8594;  | Parâmetro de transformação |
-| param4 | Real | &#8594;  | Parâmetro de transformação |
+| imagem | Picture | &#8596; | *in:* Source picture to be transformed<br/> *out:* Resulting picture after transformation |
+| operador | Integer | &#8594; | Tipo de transformação a ser feita |
+| param1 | Real | &#8594; | Parâmetro de transformação |
+| param2 | Real | &#8594; | Parâmetro de transformação |
+| param3 | Real | &#8594; | Parâmetro de transformação |
+| param4 | Real | &#8594; | Parâmetro de transformação |
 
 <!-- END REF-->
 
@@ -78,6 +77,6 @@ Este é um exemplo de corte de uma imagem (a imagem se mostra no formulário com
 |  |  |
 | --- | --- |
 | Número do comando | 988 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

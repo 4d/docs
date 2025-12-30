@@ -5,11 +5,11 @@ slug: /commands/http-set-certificates-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *carpetaCertificados* )<!-- END REF-->
+<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *carpetaCertificados* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpetaCertificados | Text | &#8594;  | Ruta y nombre de la carpeta de certificados del cliente |
+| carpetaCertificados | Text | &#8594; | Ruta y nombre de la carpeta de certificados del cliente |
 
 <!-- END REF-->
 
@@ -62,6 +62,6 @@ Usted quiere cambiar temporalmente la carpeta de certificados:
 |  |  |
 | --- | --- |
 | Número de comando | 1306 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

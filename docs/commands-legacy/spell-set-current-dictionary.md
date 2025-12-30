@@ -5,7 +5,7 @@ slug: /commands/spell-set-current-dictionary
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dictionary* )<!-- END REF-->
+<!--REF #_command_.SPELL SET CURRENT DICTIONARY.Syntax-->**SPELL SET CURRENT DICTIONARY** ( *dictionary* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SPELL SET CURRENT DICTIONARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,7 +56,7 @@ Loading of the "fr-classic" dictionary found in the Hunspell folder:
 |  |  |
 | --- | --- |
 | Command number | 904 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -50,7 +50,7 @@ Desea promocionar al usuario actual a los grupos "admin" y "plugins" para la ses
 |  |  |
 | --- | --- |
 | Número de comando | 1737 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Prohibido en el servidor ||
 
 

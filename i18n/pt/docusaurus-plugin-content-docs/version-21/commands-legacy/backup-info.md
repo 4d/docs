@@ -37,6 +37,6 @@ Passe o tipo de informação a se obter em *seletor*. É possível utilizar uma 
 |  |  |
 | --- | --- |
 | Número do comando | 888 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

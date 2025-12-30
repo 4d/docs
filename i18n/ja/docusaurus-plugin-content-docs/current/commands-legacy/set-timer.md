@@ -5,11 +5,11 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tickCount | Integer | &#8594;  | Tickcount または -1=すぐに実行する |
+| tickCount | Integer | &#8594; | Tickcount または -1=すぐに実行する |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ On Timerフォームイベントの生成を取り消すには、*tickCount*に0
 |  |  |
 | --- | --- |
 | コマンド番号 | 645 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -136,7 +136,7 @@ El método myCallbackMeth convierte el informe cuando se genera:
 |  |  |
 | --- | --- |
 | Número de comando | 197 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

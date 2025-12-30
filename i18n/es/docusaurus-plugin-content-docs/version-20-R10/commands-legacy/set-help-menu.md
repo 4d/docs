@@ -65,6 +65,6 @@ Desea personalizar el menú **Ayuda** de su aplicación:
 |  |  |
 | --- | --- |
 | Número de comando | 1801 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

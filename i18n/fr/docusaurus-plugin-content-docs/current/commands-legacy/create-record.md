@@ -5,11 +5,11 @@ slug: /commands/create-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle créer un enregistrement ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table dans laquelle créer un enregistrement ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ L'exemple suivant archive les enregistrements datant de plus de 30 jours. Cette 
 |  |  |
 | --- | --- |
 | Numéro de commande | 68 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

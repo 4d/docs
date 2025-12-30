@@ -5,7 +5,7 @@ slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabelasNaoEncontradas* )<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabelasNaoEncontradas* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ Quando tiver identificado as tabelas faltantes do banco, pode reativá-las atrav
 |  |  |
 | --- | --- |
 | Número do comando | 1125 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

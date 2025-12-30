@@ -36,7 +36,7 @@ Se o parâmetro *menuItem* designa um submenu hierárquico, todos os elementos d
 |  |  |
 | --- | --- |
 | Número do comando | 150 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

@@ -5,13 +5,13 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *conjunto1* ; *conjunto2* ; *conjuntoResultado* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *conjunto1* : Text ; *conjunto2* : Text ; *conjuntoResultado* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto1 | Text | &#8594;  | Conjunto |
-| conjunto2 | Text | &#8594;  | Conjunto que será subtraído |
-| conjuntoResultado | Text | &#8594;  | Conjunto Resultado |
+| conjunto1 | Text | &#8594; | Conjunto |
+| conjunto2 | Text | &#8594; | Conjunto que será subtraído |
+| conjuntoResultado | Text | &#8594; | Conjunto Resultado |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ Ao final da lista de registros há um botão com um método de objeto. O método
 |  |  |
 | --- | --- |
 | Número do comando | 122 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

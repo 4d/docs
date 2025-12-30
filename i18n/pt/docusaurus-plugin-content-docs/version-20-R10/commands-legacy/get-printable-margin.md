@@ -49,6 +49,6 @@ Por padrão, em 4D o cálculo das impressões é realizada baseada nas “margen
 |  |  |
 | --- | --- |
 | Número do comando | 711 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

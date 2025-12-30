@@ -364,6 +364,6 @@ Passage d'un thermomètre en mode "Barber shop" :
 |  |  |
 | --- | --- |
 | Numéro de commande | 236 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

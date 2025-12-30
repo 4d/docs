@@ -5,7 +5,7 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ Please refer to the [SET APPLICATION COLOR SCHEME](set-application-color-scheme.
 |  |  |
 | --- | --- |
 | Command number | 1763 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -69,6 +69,6 @@ In an array type list box, we want to set colors for a row and for one cell in t
 |  |  |
 | --- | --- |
 | Command number | 1270 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

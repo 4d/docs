@@ -5,7 +5,7 @@ slug: /commands/find-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find window.Syntax-->**Find window** ( *left* ; *top* {; *windowPart*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *left* : Integer ; *top* : Integer {; *windowPart* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ The *windowPart* parameter returns 3 if the window is touched, and 0 otherwise. 
 |  |  |
 | --- | --- |
 | Command number | 449 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/dom-export-to-var
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *refElément* ; *vVarXml* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *refElément* : Text ; *vVarXml* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML racine |
+| refElément | Text | &#8594; | Référence d’élément XML racine |
 | vVarXml | Text, Blob | &#8592; | Variable devant recevoir l’arbre XML |
 
 <!-- END REF-->
@@ -63,7 +63,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 863 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

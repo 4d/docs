@@ -43,6 +43,6 @@ If the listbox already contains columns, their contents will be updated after th
 |  |  |
 | --- | --- |
 | Command number | 1013 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

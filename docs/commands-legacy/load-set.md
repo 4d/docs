@@ -5,7 +5,7 @@ slug: /commands/load-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*aTable* ;} *set* ; *document* )<!-- END REF-->
+<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*aTable* : Table ;} *set* : Text ; *document* : Text )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ If the user clicks Cancel in the Open File dialog box, or there is an error duri
 |  |  |
 | --- | --- |
 | Command number | 185 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

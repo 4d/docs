@@ -5,12 +5,12 @@ slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *fileName* {; *inputStream* {; *outputStream* {; *errorStream*}}}{; *pid*} )<!-- END REF-->
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *fileName* : Text {; *inputStream* : Text, Blob {; *outputStream* : Text, Blob {; *errorStream* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | ファイルパスと起動するファイルの引数 |
-| inputStream | Text, Blob | &#8594;  | 入力ストリーム(stdin) |
+| fileName | Text | &#8594; | ファイルパスと起動するファイルの引数 |
+| inputStream | Text, Blob | &#8594; | 入力ストリーム(stdin) |
 | outputStream | Text, Blob | &#8592; | 出力ストリーム(stdout) |
 | errorStream | Text, Blob | &#8592; | エラーストリーム(stderr) |
 | pid | Integer | &#8592; | 外部プロセスの固有識別子 |
@@ -146,7 +146,7 @@ Application/UtilitiesフォルダにあるmacOS ターミナルを使用しま�
 |  |  |
 | --- | --- |
 | コマンド番号 | 811 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

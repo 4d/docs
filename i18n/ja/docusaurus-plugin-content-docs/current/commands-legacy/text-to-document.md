@@ -5,14 +5,14 @@ slug: /commands/text-to-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *fileName* ; *text* {; *charSet* {; *breakMode*}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *fileName* : Text ; *text* : Text {; *charSet* : Text, Integer {; *breakMode* : Integer}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | ドキュメント名またはドキュメントへのパス名 |
-| text | Text | &#8594;  | ドキュメントに保存するテキスト |
-| charSet | Text, Integer | &#8594;  | 文字コードの名前または数字 |
-| breakMode | Integer | &#8594;  | 改行の処理モード |
+| fileName | Text | &#8594; | ドキュメント名またはドキュメントへのパス名 |
+| text | Text | &#8594; | ドキュメントに保存するテキスト |
+| charSet | Text, Integer | &#8594; | 文字コードの名前または数字 |
+| breakMode | Integer | &#8594; | 改行の処理モード |
 
 <!-- END REF-->
 
@@ -88,6 +88,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1237 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

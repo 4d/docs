@@ -5,13 +5,13 @@ slug: /commands/form-set-horizontal-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *resize* {; *minWidth* {; *maxWidth*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *resize* : Boolean {; *minWidth* : Integer {; *maxWidth* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resize | Boolean | &#8594;  | True: フォームを横方向にリサイズ可能 False: フォームを横方向にリサイズ不可 |
-| minWidth | Integer | &#8594;  | 最小幅 (ピクセル) |
-| maxWidth | Integer | &#8594;  | 最大幅 (ピクセル) |
+| resize | Boolean | &#8594; | True: フォームを横方向にリサイズ可能 False: フォームを横方向にリサイズ不可 |
+| minWidth | Integer | &#8594; | 最小幅 (ピクセル) |
+| maxWidth | Integer | &#8594; | 最大幅 (ピクセル) |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 892 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

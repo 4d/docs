@@ -5,11 +5,11 @@ slug: /commands/qr-get-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *zone* ) : Text<!-- END REF-->
+<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *zone* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.QR Get HTML template.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | Résultat | Text | &#8592; | Code HTML utilisé comme modèle |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 751 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

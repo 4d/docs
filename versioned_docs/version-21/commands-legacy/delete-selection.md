@@ -69,7 +69,7 @@ If a locked record is encountered during the execution of **DELETE SELECTION**, 
 |  |  |
 | --- | --- |
 | Command number | 66 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

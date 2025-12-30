@@ -38,6 +38,6 @@ La description du plan de la dernière recherche peut être comparée à la desc
 |  |  |
 | --- | --- |
 | Numéro de commande | 1046 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

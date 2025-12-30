@@ -35,6 +35,6 @@ Passez dans *valeurMaxi* la nouvelle valeur maximum à affecter à l’*objet* p
 |  |  |
 | --- | --- |
 | Numéro de commande | 1244 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

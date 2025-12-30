@@ -5,12 +5,12 @@ slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *objeto* ; *arrEvents* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *objeto* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *objeto* : Field, Variable ; *arrEvents* : Integer array )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto "" para designar o formulário (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto "" para designar o formulário (se for especificado *) ou<br/>Campo ou variável (se for omitido *) |
 | arrEvents | Integer array | &#8592; | Array de eventos desativados |
 
 <!-- END REF-->
@@ -52,6 +52,6 @@ Você quer ativar dois eventos e obter a lista de eventos para um objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1238 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

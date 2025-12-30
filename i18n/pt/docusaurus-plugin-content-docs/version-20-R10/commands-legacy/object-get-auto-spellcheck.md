@@ -37,6 +37,6 @@ O comando devolve **True** quando a correção ortográfica automática está at
 |  |  |
 | --- | --- |
 | Número do comando | 1174 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

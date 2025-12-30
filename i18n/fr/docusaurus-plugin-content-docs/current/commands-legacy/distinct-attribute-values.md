@@ -5,13 +5,13 @@ slug: /commands/distinct-attribute-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *champObjet* ; *cheminAttribut* ; *tabValeurs* )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *champObjet* : Field ; *cheminAttribut* : Text ; *tabValeurs* : Array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| champObjet | Field | &#8594;  | Champ objet à utiliser |
-| cheminAttribut | Text | &#8594;  | Nom ou chemin de l'attribut dont vous voulez obtenir les valeurs distinctes |
-| tabValeurs | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | Tableau des valeurs distinctes dans l'attribut |
+| champObjet | Field | &#8594; | Champ objet à utiliser |
+| cheminAttribut | Text | &#8594; | Nom ou chemin de l'attribut dont vous voulez obtenir les valeurs distinctes |
+| tabValeurs | Array | &#8592; | Tableau des valeurs distinctes dans l'attribut |
 
 <!-- END REF-->
 
@@ -101,6 +101,6 @@ Le tableau *aLChildNum* reçoit les éléments suivants :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1397 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

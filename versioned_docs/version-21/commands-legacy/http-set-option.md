@@ -50,6 +50,6 @@ You can call options in any order. If the same option is set more than once, onl
 |  |  |
 | --- | --- |
 | Command number | 1160 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

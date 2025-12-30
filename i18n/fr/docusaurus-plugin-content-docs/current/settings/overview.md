@@ -57,7 +57,7 @@ Ce bouton réinitialise tous les paramètres de la page courante. Il devient act
 
 4D propose deux modes de fonctionnement pour les Propriétés des projets :
 
-- **Standard** mode: all settings are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
+- **Mode Standard** : tous les paramètres sont stockés dans le fichier [*settings.4DSettings* au niveau du projet](../Project/architecture.md#sources) et sont appliqués dans tous les cas. C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
 
 - **Mode propriétés utilisateur** : une partie des paramètres personnalisés sont stockés dans un fichier *settings.4DSettings* [dans le dossier Settings](../Project/architecture.md#settings-user) (pour tous les fichiers de données) ou [dans le dossier Data](../Project/architecture.md#settings-user-data) (pour ce fichier de données) et sont utilisés à la place des paramètres de structure. Ce mode convient à la phase de déploiement pour les applications Desktop. Vous activez ce mode à l'aide d'une option située sur la [page Sécurité](./security.md) des Propriétés.
 

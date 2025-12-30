@@ -191,6 +191,6 @@ Reportez-vous à la section *Services basés sur les procédures stockées (exem
 |  |  |
 | --- | --- |
 | Numéro de commande | 373 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* ; *arrNames* ; *arrValues* ; *arrCount* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *infoType* : Integer ; *arrNames* : Text array ; *arrValues* : Real array ; *arrCount* : Real array )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| infoType | Integer | &#8594;  | 取得する情報のセレクター |
+| infoType | Integer | &#8594; | 取得する情報のセレクター |
 | arrNames | Text array | &#8592; | 情報のタイトル |
 | arrValues | Real array | &#8592; | 情報の値 |
 | arrCount | Real array | &#8592; | 関連するオブジェクトの数 (利用可能な場合) |
@@ -33,6 +33,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1118 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

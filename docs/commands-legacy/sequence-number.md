@@ -5,7 +5,7 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *aTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -64,6 +64,6 @@ The following example is part of a form method. It tests to see if this is a new
 |  |  |
 | --- | --- |
 | Command number | 244 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/qr-set-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* ; *template* )<!-- END REF-->
+<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* : Integer ; *template* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 750 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

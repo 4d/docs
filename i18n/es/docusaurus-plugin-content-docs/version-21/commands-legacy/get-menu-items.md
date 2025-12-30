@@ -40,6 +40,6 @@ Usted quiere conocer el contenido de la barra de menú del proceso actual:
 |  |  |
 | --- | --- |
 | Número de comando | 977 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

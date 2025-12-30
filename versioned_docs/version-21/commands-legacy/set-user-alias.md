@@ -46,7 +46,7 @@ Your users are managed through a custom table and use the same 4D user account. 
 |  |  |
 | --- | --- |
 | Command number | 1666 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Forbidden on the server ||
 
 

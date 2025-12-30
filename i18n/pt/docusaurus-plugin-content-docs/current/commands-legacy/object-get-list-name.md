@@ -5,13 +5,13 @@ slug: /commands/object-get-list-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *objeto* {; *tipoLista*} ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( * ; *objeto* : Text {; *tipoLista* : Integer} ) : Text<br/>**OBJECT Get list name** ( *objeto* : Field, Variable {; *tipoLista* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
-| tipoLista | Integer | &#8594;  | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou Variável ou campo (se * for omitido) |
+| tipoLista | Integer | &#8594; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
 | Resultado | Text | &#8592; | Nome da lista de escolha (especificado no modo Desenho) |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ Se nenhuma lista do tipo definido está associada ao *objeto*, o comando devolve
 |  |  |
 | --- | --- |
 | Número do comando | 1072 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

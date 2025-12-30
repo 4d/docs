@@ -35,6 +35,6 @@ Si un registro tiene una cantidad importante de datos, de campos de imagen, o de
 |  |  |
 | --- | --- |
 | Número de comando | 212 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

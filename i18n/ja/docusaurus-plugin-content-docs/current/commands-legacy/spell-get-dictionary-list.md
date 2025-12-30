@@ -5,7 +5,7 @@ slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* ; *langFiles* ; *langNames* )<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* : Integer array ; *langFiles* : Text array ; *langNames* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ Hunspell辞書に"fr-classic+reform1990.aff"、"fr-classic+reform1990.dic"、"fr
 |  |  |
 | --- | --- |
 | コマンド番号 | 1204 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

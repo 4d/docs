@@ -55,6 +55,6 @@ El siguiente ejemplo extrae las horas, minutos y segundos de la hora actual:
 |  |  |
 | --- | --- |
 | Número de comando | 178 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

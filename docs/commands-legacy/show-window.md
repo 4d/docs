@@ -5,7 +5,7 @@ slug: /commands/show-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ Refer to the example of the [HIDE WINDOW](hide-window.md) command.
 |  |  |
 | --- | --- |
 | Command number | 435 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

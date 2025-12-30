@@ -5,12 +5,12 @@ slug: /commands/wa-get-last-filtered-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get last filtered URL.Syntax-->**WA Get last filtered URL** ( * ; *object* : Text ) : Text<br/>**WA Get last filtered URL** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get last filtered URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | 最後にフィルタされたURL |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ URLは以下のいずれかの理由でフィルタされることがありま�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1035 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

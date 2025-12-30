@@ -5,16 +5,16 @@ slug: /commands/st-insert-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( {* ;} *objet* ; *texteURL* ; *adresseURL* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( * ; *objet* : Text ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST INSERT URL** ( *objet* : Field, Variable ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| texteURL | Text | &#8594;  | Libellé visible de l’URL |
-| adresseURL | Text | &#8594;  | Adresse de l’URL |
-| débutSél | Integer | &#8594;  | Début de la sélection |
-| finSél | Integer | &#8594;  | Fin de la sélection |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| texteURL | Text | &#8594; | Libellé visible de l’URL |
+| adresseURL | Text | &#8594; | Adresse de l’URL |
+| débutSél | Integer | &#8594; | Début de la sélection |
+| finSél | Integer | &#8594; | Fin de la sélection |
 
 <!-- END REF-->
 
@@ -69,7 +69,7 @@ Vous souhaitez insérer un lien vers le site Web de 4D à la place de la sélect
 |  |  |
 | --- | --- |
 | Numéro de commande | 1280 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

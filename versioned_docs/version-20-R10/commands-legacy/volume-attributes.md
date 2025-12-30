@@ -101,7 +101,7 @@ Once this project method is added to your application, you can for instance writ
 |  |  |
 | --- | --- |
 | Command number | 472 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

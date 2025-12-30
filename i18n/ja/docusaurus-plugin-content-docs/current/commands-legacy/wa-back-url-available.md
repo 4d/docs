@@ -5,12 +5,12 @@ slug: /commands/wa-back-url-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( * ; *object* : Text ) : Boolean<br/>**WA Back URL available** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.WA Back URL available.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | 戻り値 | Boolean | &#8592; | 開かれた一連のURLで、前のURLが有効ならTrue、 そうでなければFalse |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1026 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

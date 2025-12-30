@@ -5,7 +5,7 @@ slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* ; *top* ; *right* ; *bottom* {; *screen* {; *screenArea*}} )<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *screen* : Integer {; *screenArea* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | top | Integer | &#8592; | 画面エリアの上端のグローバル座標 |
 | right | Integer | &#8592; | 画面エリアの右端のグローバル座標 |
 | bottom | Integer | &#8592; | 画面エリアの下端のグローバル座標 |
-| screen | Integer | &#8594;  | 画面番号、または省略した場合には主画面(メインスクリーン) |
-| screenArea | Integer | &#8594;  | 画面全体(デフォルト)または利用可能エリア |
+| screen | Integer | &#8594; | 画面番号、または省略した場合には主画面(メインスクリーン) |
+| screenArea | Integer | &#8594; | 画面全体(デフォルト)または利用可能エリア |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 438 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

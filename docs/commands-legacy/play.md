@@ -5,7 +5,7 @@ slug: /commands/play
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *objectName* {; *async*} )<!-- END REF-->
+<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *objectName* : Text {; *async* : Integer} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -62,6 +62,6 @@ The following example code plays a system sound on macOS:
 |  |  |
 | --- | --- |
 | Command number | 290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

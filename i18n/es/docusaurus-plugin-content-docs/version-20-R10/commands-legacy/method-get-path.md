@@ -70,6 +70,6 @@ Si el comando se ejecuta desde un componente, devuelve por defecto las rutas de 
 |  |  |
 | --- | --- |
 | Número de comando | 1164 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

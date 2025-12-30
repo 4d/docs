@@ -5,7 +5,7 @@ slug: /commands/screen-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *gauche* ; *haut* ; *droite* ; *bas* {; *idEcran* {; *zoneEcran*}} )<!-- END REF-->
+<!--REF #_command_.SCREEN COORDINATES.Syntax-->**SCREEN COORDINATES** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *idEcran* : Integer {; *zoneEcran* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SCREEN COORDINATES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -13,8 +13,8 @@ displayed_sidebar: docs
 | haut | Integer | &#8592; | Coordonnée supérieure de la zone de l'écran |
 | droite | Integer | &#8592; | Coordonnée droite de la zone de l'écran |
 | bas | Integer | &#8592; | Coordonnée inférieure de la zone de l'écran |
-| idEcran | Integer | &#8594;  | Numéro de l'écran ou écran principal si omis |
-| zoneEcran | Integer | &#8594;  | Ecran entier (par défaut) ou zone de travail |
+| idEcran | Integer | &#8594; | Numéro de l'écran ou écran principal si omis |
+| zoneEcran | Integer | &#8594; | Ecran entier (par défaut) ou zone de travail |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Les images suivantes illustrent les différences entre la zone de l'écran et la
 |  |  |
 | --- | --- |
 | Numéro de commande | 438 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

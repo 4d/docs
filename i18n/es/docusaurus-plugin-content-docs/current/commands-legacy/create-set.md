@@ -5,12 +5,12 @@ slug: /commands/create-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SET.Syntax-->**CREATE SET** ( {*tabla* ;} *conjunto* )<!-- END REF-->
+<!--REF #_command_.CREATE SET.Syntax-->**CREATE SET** ( {*tabla* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE SET.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual crear un conjunto a partir de la selección actual o Tabla por defecto si se omite |
-| conjunto | Text | &#8594;  | Nombre del nuevo conjunto |
+| tabla | Table | &#8594; | Tabla para la cual crear un conjunto a partir de la selección actual o Tabla por defecto si se omite |
+| conjunto | Text | &#8594; | Nombre del nuevo conjunto |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ El siguiente ejemplo crea un conjunto después de efectuar una búsqueda, de man
 |  |  |
 | --- | --- |
 | Número de comando | 116 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

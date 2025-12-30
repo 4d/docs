@@ -55,7 +55,7 @@ El siguiente código define el archivo texto Midoc.txt como tipo de destino del 
 |  |  |
 | --- | --- |
 | Número de comando | 745 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -76,6 +76,6 @@ The following example illustrates the use of the \* parameter in the case of a d
 |  |  |
 | --- | --- |
 | Command number | 233 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

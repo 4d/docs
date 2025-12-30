@@ -204,7 +204,7 @@ Each button calls the MULTILEVEL project method with a pointer to the correspond
 |  |  |
 | --- | --- |
 | Command number | 49 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 

@@ -49,7 +49,7 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 902 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

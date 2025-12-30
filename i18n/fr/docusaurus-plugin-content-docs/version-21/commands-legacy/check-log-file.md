@@ -40,7 +40,7 @@ Vous pouvez intercepter ces erreurs à l’aide d’une méthode de gestion d’
 |  |  |
 | --- | --- |
 | Numéro de commande | 799 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

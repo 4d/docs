@@ -5,11 +5,11 @@ slug: /commands/data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file.Syntax-->**Data file** {( *segmento* )} : Text<!-- END REF-->
+<!--REF #_command_.Data file.Syntax-->**Data file** ( *segmento* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| segmento | Integer | &#8594;  | Obsoleto, no utilizar |
+| segmento | Integer | &#8594; | Obsoleto, no utilizar |
 | Resultado | Text | &#8592; | Nombre largo del archivo de datos de la base |
 
 <!-- END REF-->
@@ -38,6 +38,6 @@ Si está trabajando por ejemplo con la base en la carpeta Documentos:MisCDsƒ: e
 |  |  |
 | --- | --- |
 | Número de comando | 490 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

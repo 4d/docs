@@ -55,7 +55,7 @@ If the command has been executed correctly, the OK system variable is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 1047 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

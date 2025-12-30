@@ -5,7 +5,7 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* {; resolvePtrs } )  : Object<br/>**OB Copy** ( *object* {; *option* {; *groupWith*}} )  : Object<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *object* : Object, Object {; resolvePtrs } )  : Object<br/>**OB Copy** ( *object* : Object, Object {; *option* : Integer {; *groupWith* : Collection, Object}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -170,6 +170,6 @@ We want to copy *$sharedObj* in *$sharedColl* but since they belong to different
 |  |  |
 | --- | --- |
 | Command number | 1225 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

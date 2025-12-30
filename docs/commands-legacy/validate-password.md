@@ -5,7 +5,7 @@ slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *userID* ; *password* {; *digest*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *userID* : Integer, Text ; *password* : Text {; *digest* : Boolean} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ In the [On REST Authentication database method](on-rest-authentication-database-
 |  |  |
 | --- | --- |
 | Command number | 638 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

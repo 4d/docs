@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to longint.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
+| Blob | Blob | &#8594;  | BLOB from which to get the Long Integer value |
 | byteOrder | Integer | &#8594;  | 0 = Native byte ordering, 1 = Macintosh byte ordering, 2 = PC byte ordering |
 | offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 |||| New offset after reading |
@@ -64,6 +64,6 @@ The following example reads 20 Long Integer values from a BLOB, starting at the 
 |  |  |
 | --- | --- |
 | Command number | 551 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

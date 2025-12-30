@@ -5,11 +5,11 @@ slug: /commands/is-record-loaded
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is record loaded.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードを検査するテーブル または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | レコードを検査するテーブル または 省略時、デフォルトテーブル |
 | 戻り値 | Boolean | &#8592; | True: レコードはロードされている そうでなければFalse |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 669 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

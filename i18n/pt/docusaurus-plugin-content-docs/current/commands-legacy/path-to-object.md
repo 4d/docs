@@ -5,12 +5,12 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object**  ( *rota* {; *tipoRota*} ) : Object<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object**  ( *rota* : Text {; *tipoRota* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text | &#8594;  | Nome da rota |
-| tipoRota | Integer | &#8594;  | Sintaxe do tipo de rota: System (padrão) ou Posix |
+| rota | Text | &#8594; | Nome da rota |
+| tipoRota | Integer | &#8594; | Sintaxe do tipo de rota: System (padrão) ou Posix |
 | Resultado | Object | &#8592; | Objeto que descreve o conteúdo da rota. |
 
 <!-- END REF-->
@@ -179,6 +179,6 @@ Se quiser saber a quantidade de subpastas em uma rota:
 |  |  |
 | --- | --- |
 | Número do comando | 1547 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

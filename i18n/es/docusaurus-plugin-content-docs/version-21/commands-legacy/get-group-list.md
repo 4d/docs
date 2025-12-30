@@ -38,7 +38,7 @@ Si no tiene privilegios de acceso para llamar al comando GET GROUP LIST o si otr
 |  |  |
 | --- | --- |
 | Número de comando | 610 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/quit-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** {( *tiempo* )}<!-- END REF-->
+<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** ({ *tiempo* : Integer })<!-- END REF-->
 <!--REF #_command_.QUIT 4D.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tiempo | Integer | &#8594;  | Tiempo en segundos antes de salir del servidor |
+| tiempo | Integer | &#8594; | Tiempo en segundos antes de salir del servidor |
 
 <!-- END REF-->
 
@@ -72,6 +72,6 @@ El método de proyecto siguiente está asociado al elemento de menú Salir en el
 |  |  |
 | --- | --- |
 | Número de comando | 291 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/launch-external-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *fileName* {; *inputStream* {; *outputStream* {; *errorStream*}}}{; *pid*} )<!-- END REF-->
+<!--REF #_command_.LAUNCH EXTERNAL PROCESS.Syntax-->**LAUNCH EXTERNAL PROCESS** ( *fileName* : Text {; *inputStream* : Text, Blob {; *outputStream* : Text, Blob {; *errorStream* : Text, Blob}}}{; *pid* : Integer} )<!-- END REF-->
 <!--REF #_command_.LAUNCH EXTERNAL PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -152,7 +152,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 811 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

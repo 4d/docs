@@ -55,7 +55,7 @@ The following example mails letters to 50 of the worst customers and then to 50 
 |  |  |
 | --- | --- |
 | Command number | 350 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

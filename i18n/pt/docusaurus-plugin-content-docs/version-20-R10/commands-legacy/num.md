@@ -91,6 +91,6 @@ Este exemplo compara os resultados obtidos dependendo do separador “atual”:
 |  |  |
 | --- | --- |
 | Número do comando | 11 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

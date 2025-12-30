@@ -28,6 +28,6 @@ Cette commande peut être utilisée pour des raisons de sécurité dans la *Mét
 |  |  |
 | --- | --- |
 | Numéro de commande | 783 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

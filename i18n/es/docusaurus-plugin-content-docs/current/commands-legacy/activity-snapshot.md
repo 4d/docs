@@ -5,7 +5,7 @@ slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( arrActividades | arrUUID ; *arrInicio* ; *arrDuracion* ; *arrInfo* {; *arrDetails*}{; *} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** ( arrActividades | arrUUID ; *arrInicio* : Text array ; *arrDuracion* : Integer array ; *arrInfo* : Text array {; *arrDetails* : Object array}{; *} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | arrDuracion | Integer array | &#8592; | Duración de las operaciones en milisegundos |
 | arrInfo | Text array | &#8592; | Descripción |
 | arrDetails | Object array | &#8592; | Detalles del contexto y sub operaciones (si las hay) |
-| * | Operador | &#8594;  | Si se pasa = Traer actividad del servidor |
+| * | Operador | &#8594; | Si se pasa = Traer actividad del servidor |
 
 <!-- END REF-->
 
@@ -111,6 +111,6 @@ Obtiene arrays del tipo:
 |  |  |
 | --- | --- |
 | Número de comando | 1277 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

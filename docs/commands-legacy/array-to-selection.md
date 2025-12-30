@@ -5,7 +5,7 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** {( *array* ; *aField* {; *array2* ; *aField2* ; ... ; *arrayN* ; *aFieldN*}{; *} )}<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *aField* : Field {; ...(*array* : Array, *aField* : Field)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ You want to copy a selection of records to an archive table by selecting the fie
 |  |  |
 | --- | --- |
 | Command number | 261 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

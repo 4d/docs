@@ -215,7 +215,7 @@ Si les données dans le BLOB sont correctement ajoutées au conteneur, la variab
 |  |  |
 | --- | --- |
 | Numéro de commande | 403 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

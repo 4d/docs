@@ -5,7 +5,7 @@ slug: /commands/get-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item.Syntax-->**Get menu item** ( *menu* ; *menuItem* {; *process*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item.Syntax-->**Get menu item** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ If you omit the *process* parameter, **Get menu item** applies to the menu bar f
 |  |  |
 | --- | --- |
 | Command number | 422 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

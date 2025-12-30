@@ -5,12 +5,12 @@ slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* : Text {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| filePath | Text | &#8594;  | ファイルパス名 |
-| * | 演算子 | &#8594;  | データの検証 |
+| filePath | Text | &#8594; | ファイルパス名 |
+| * | 演算子 | &#8594; | データの検証 |
 | 戻り値 | Boolean | &#8592; | True = filePathはピクチャファイルである、そうでなければFalse |
 
 <!-- END REF-->
@@ -34,6 +34,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1113 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

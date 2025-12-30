@@ -55,6 +55,6 @@ Para activar la URL suéltela en el área web 'myarea':
 |  |  |
 | --- | --- |
 | Número de comando | 1041 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

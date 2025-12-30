@@ -43,6 +43,6 @@ The following example changes the position of the page numbers on a report so th
 |  |  |
 | --- | --- |
 | Command number | 275 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

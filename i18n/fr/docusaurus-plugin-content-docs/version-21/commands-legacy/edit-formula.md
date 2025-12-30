@@ -60,7 +60,7 @@ Si l’utilisateur valide la boîte de dialogue, la variable système OK prend l
 |  |  |
 | --- | --- |
 | Numéro de commande | 806 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

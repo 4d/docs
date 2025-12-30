@@ -71,6 +71,6 @@ L'exemple suivant imprime le même enregistrement courant dans deux formulaires 
 |  |  |
 | --- | --- |
 | Numéro de commande | 71 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

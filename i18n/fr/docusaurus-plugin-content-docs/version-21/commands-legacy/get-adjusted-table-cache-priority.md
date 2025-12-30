@@ -33,6 +33,6 @@ Les types de données scalaires incluent les types date/heure, numériques et al
 |  |  |
 | --- | --- |
 | Numéro de commande | 1426 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

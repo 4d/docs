@@ -84,7 +84,7 @@ will display the request dialog box (on Windows) shown here:
 |  |  |
 | --- | --- |
 | Command number | 163 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

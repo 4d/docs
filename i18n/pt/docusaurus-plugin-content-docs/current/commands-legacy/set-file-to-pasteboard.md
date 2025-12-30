@@ -5,12 +5,12 @@ slug: /commands/set-file-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *rotaArquivo* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FILE TO PASTEBOARD.Syntax-->**SET FILE TO PASTEBOARD** ( *rotaArquivo* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET FILE TO PASTEBOARD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaArquivo | Text | &#8594;  | Nome do arquivo ou rota de acesso completa |
-| * | Operador | &#8594;  | Se passar = adicionar; se omitido = substituir |
+| rotaArquivo | Text | &#8594; | Nome do arquivo ou rota de acesso completa |
+| * | Operador | &#8594; | Se passar = adicionar; se omitido = substituir |
 
 <!-- END REF-->
 
@@ -33,6 +33,6 @@ O comando admite o asterisco *\** como parâmetro opcional. Automaticamente, qua
 |  |  |
 | --- | --- |
 | Número do comando | 975 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

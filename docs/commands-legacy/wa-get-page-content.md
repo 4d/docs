@@ -5,7 +5,7 @@ slug: /commands/wa-get-page-content
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page content.Syntax-->**WA Get page content** ( * ; *object* : Text ) : Text<br/>**WA Get page content** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page content.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ This command returns an empty string if the contents of the current page is not 
 |  |  |
 | --- | --- |
 | Command number | 1038 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

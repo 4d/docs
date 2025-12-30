@@ -106,7 +106,7 @@ The *OK* system variable returns 1 if the retrieval of the metadata has proceede
 |  |  |
 | --- | --- |
 | Command number | 1122 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

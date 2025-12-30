@@ -5,13 +5,13 @@ slug: /commands/listbox-get-print-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( {* ;} *objet* ; *sélecteur* ; *info* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET PRINT INFORMATION.Syntax-->**LISTBOX GET PRINT INFORMATION** ( * ; *objet* : Text ; *sélecteur* : Integer ; *info* : Integer )<br/>**LISTBOX GET PRINT INFORMATION** ( *objet* : Field, Variable ; *sélecteur* : Integer ; *info* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET PRINT INFORMATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * spécifié) ou Variable (si * omis) |
-| sélecteur | Integer | &#8594;  | Information à obtenir |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * spécifié) ou Variable (si * omis) |
+| sélecteur | Integer | &#8594; | Information à obtenir |
 | info | Integer | &#8592; | Valeur courante |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ Impression d’au moins 500 lignes de la list box, sachant que certaines lignes 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1110 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -71,6 +71,6 @@ Si el lenguaje actual es, por ejemplo, francés canadiense (fr-ca), el comando d
 |  |  |
 | --- | --- |
 | Número de comando | 1105 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

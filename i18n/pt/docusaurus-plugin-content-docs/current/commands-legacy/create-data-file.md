@@ -5,11 +5,11 @@ slug: /commands/create-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *endAcesso* )<!-- END REF-->
+<!--REF #_command_.CREATE DATA FILE.Syntax-->**CREATE DATA FILE** ( *endAcesso* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE DATA FILE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| endAcesso | Text | &#8594;  | Nome ou endereço completo de acesso ao arquivo de dados a ser criado |
+| endAcesso | Text | &#8594; | Nome ou endereço completo de acesso ao arquivo de dados a ser criado |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Antes de iniciar a operação, o comando verifica que o endereço de acesso não
 |  |  |
 | --- | --- |
 | Número do comando | 313 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

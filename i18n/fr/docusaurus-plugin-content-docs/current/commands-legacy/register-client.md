@@ -14,11 +14,11 @@ displayed_sidebar: docs
 
 </details>
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomClient* )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *nomClient* : Text )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomClient | Text | &#8594;  | Nom de la session cliente 4D |
+| nomClient | Text | &#8594; | Nom de la session cliente 4D |
 
 <!-- END REF-->
 
@@ -134,7 +134,7 @@ Si le poste client est correctement inscrit, la variable système OK prend la va
 |  |  |
 | --- | --- |
 | Numéro de commande | 648 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

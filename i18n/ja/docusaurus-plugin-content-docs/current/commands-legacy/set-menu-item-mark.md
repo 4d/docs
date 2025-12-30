@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* ; *menuItem* ; *mark* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* : Integer, Text ; *menuItem* : Integer ; *mark* : Text {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM MARK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| mark | Text | &#8594;  | 新しいメニュー項目マーク |
-| process | Integer | &#8594;  | プロセス参照番号 |
+| menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| mark | Text | &#8594; | 新しいメニュー項目マーク |
+| process | Integer | &#8594; | プロセス参照番号 |
 
 <!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 208 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | サーバー上での使用は不可 ||
 
 

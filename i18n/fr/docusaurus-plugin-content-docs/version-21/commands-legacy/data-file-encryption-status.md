@@ -74,6 +74,6 @@ Vous souhaitez connaitre le statut de chiffrement d'un fichier de données corre
 |  |  |
 | --- | --- |
 | Numéro de commande | 1609 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

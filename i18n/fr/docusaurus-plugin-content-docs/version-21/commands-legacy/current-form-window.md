@@ -30,6 +30,6 @@ La fenêtre du formulaire courant peut avoir été générée automatiquement pa
 |  |  |
 | --- | --- |
 | Numéro de commande | 827 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

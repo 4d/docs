@@ -33,6 +33,6 @@ Para no enviar *pagInicio* como página de inicio para el proceso web actual, ej
 |  |  |
 | --- | --- |
 | Número de comando | 639 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

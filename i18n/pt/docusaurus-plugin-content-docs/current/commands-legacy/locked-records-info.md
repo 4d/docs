@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Locked records info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Tabela da qual obter os registros bloqueados |
+| aTable | Table | &#8594; | Tabela da qual obter os registros bloqueados |
 | Resultado | Object | &#8592; | Descrição dos registros bloqueados (se houver) |
 
 <!-- END REF-->
@@ -96,6 +96,6 @@ Se o código é executado em um 4D Server e o bloqueio é causado por uma máqui
 |  |  |
 | --- | --- |
 | Número do comando | 1316 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

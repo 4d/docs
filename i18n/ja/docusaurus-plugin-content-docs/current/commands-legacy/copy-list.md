@@ -5,11 +5,11 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* ) : Integer<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | コピーするリストの参照 |
+| list | Integer | &#8594; | コピーするリストの参照 |
 | 戻り値 | Integer | &#8592; | 複製されたリストのリスト参照番号 |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 626 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

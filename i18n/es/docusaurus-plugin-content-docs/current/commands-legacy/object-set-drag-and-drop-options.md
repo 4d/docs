@@ -5,16 +5,16 @@ slug: /commands/object-set-drag-and-drop-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( {* ;} *objeto* ; *arrastrable* ; *arrastrableAuto* ; *soltable* ; *soltableAuto* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( * ; *objeto* : Text ; *arrastrable* : Boolean ; *arrastrableAuto* : Boolean ; *soltable* : Boolean ; *soltableAuto* : Boolean )<br/>**OBJECT SET DRAG AND DROP OPTIONS** ( *objeto* : Field, Variable ; *arrastrable* : Boolean ; *arrastrableAuto* : Boolean ; *soltable* : Boolean ; *soltableAuto* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| arrastrable | Boolean | &#8594;  | 0 = False, 1 = True |
-| arrastrableAuto | Boolean | &#8594;  | 0 = False, 1 = True |
-| soltable | Boolean | &#8594;  | 0 = False, 1 = True |
-| soltableAuto | Boolean | &#8594;  | 0 = False, 1 = True |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| arrastrable | Boolean | &#8594; | 0 = False, 1 = True |
+| arrastrableAuto | Boolean | &#8594; | 0 = False, 1 = True |
+| soltable | Boolean | &#8594; | 0 = False, 1 = True |
+| soltableAuto | Boolean | &#8594; | 0 = False, 1 = True |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ Definición de un área de texto en arrastrar y soltar auto:
 |  |  |
 | --- | --- |
 | Número de comando | 1183 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

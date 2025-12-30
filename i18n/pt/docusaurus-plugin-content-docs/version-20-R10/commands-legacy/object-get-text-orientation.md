@@ -61,6 +61,6 @@ Quando se executa o formulário, é chamada a seguinte declaração:
 |  |  |
 | --- | --- |
 | Número do comando | 1283 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

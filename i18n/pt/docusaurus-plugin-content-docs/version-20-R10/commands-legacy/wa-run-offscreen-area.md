@@ -101,7 +101,7 @@ A variável de sistema OK é estabelecida como 0 se o timeout foi alcançaddo ou
 |  |  |
 | --- | --- |
 | Número do comando | 1727 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

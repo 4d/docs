@@ -5,13 +5,13 @@ slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* ; *positionDépart* ; *nbCars* ) : Text<!-- END REF-->
+<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* : Text ; *positionDépart* : Integer ; *nbCars* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | Chaîne de départ |
-| positionDépart | Integer | &#8594;  | Premier caractère à supprimer |
-| nbCars | Integer | &#8594;  | Nombre de caractères à supprimer |
+| source | Text | &#8594; | Chaîne de départ |
+| positionDépart | Integer | &#8594; | Premier caractère à supprimer |
+| nbCars | Integer | &#8594; | Nombre de caractères à supprimer |
 | Résultat | Text | &#8592; | Chaîne résultante |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ L'exemple suivant illustre l'utilisation de **Delete string**. Les résultats so
 |  |  |
 | --- | --- |
 | Numéro de commande | 232 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

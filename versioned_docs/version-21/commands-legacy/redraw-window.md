@@ -30,6 +30,6 @@ If you omit the *window* parameter, REDRAW WINDOW applies to the frontmost windo
 |  |  |
 | --- | --- |
 | Command number | 456 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

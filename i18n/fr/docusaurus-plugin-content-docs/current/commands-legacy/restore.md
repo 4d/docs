@@ -5,12 +5,12 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *cheminArchive* {; *cheminDossierDest*} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *cheminArchive* : Text {; *cheminDossierDest* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminArchive | Text | &#8594;  | Chemin d’accès de l’archive à restituer |
-| cheminDossierDest | Text | &#8594;  | Chemin d’accès du dossier de destination |
+| cheminArchive | Text | &#8594; | Chemin d’accès de l’archive à restituer |
+| cheminDossierDest | Text | &#8594; | Chemin d’accès du dossier de destination |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ La commande **RESTORE** modifie la valeur des variables *OK* et *Document* : si 
 |  |  |
 | --- | --- |
 | Numéro de commande | 918 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, Document, error |
 
 

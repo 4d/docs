@@ -66,6 +66,6 @@ Cet exemple vous permet d’obtenir l’écart type d’une série de valeurs pl
 |  |  |
 | --- | --- |
 | Numéro de commande | 26 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

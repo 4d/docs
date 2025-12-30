@@ -5,12 +5,12 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *objet* ; *ptrTable* ; *sousFormDetail* {; *sousFormListe*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *objet* : Text ; *ptrTable* : Table ; *sousFormDetail* : Text {; *sousFormListe* : Text} )<br/>**OBJECT GET SUBFORM** ( *objet* : Field, Variable ; *ptrTable* : Table ; *sousFormDetail* : Text {; *sousFormListe* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | ptrTable | Table | &#8592; | Pointeur vers la table du formulaire |
 | sousFormDetail | Text | &#8592; | Nom du formulaire détail du sous-formulaire |
 | sousFormListe | Text | &#8592; | Nom du formulaire liste du sous-formulaire (formulaire table) |
@@ -45,6 +45,6 @@ S’il n’y a pas de formulaire liste, une chaîne vide est retournée dans le 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1139 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

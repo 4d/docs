@@ -5,7 +5,7 @@ slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *statement* )<!-- END REF-->
+<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *statement* : Text )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ You want to execute a formula including calls to 4D commands and tables. Since t
 |  |  |
 | --- | --- |
 | Command number | 63 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

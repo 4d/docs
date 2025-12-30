@@ -29,6 +29,6 @@ Para saber mais, consulte *Suspender as transações*.
 |  |  |
 | --- | --- |
 | Número do comando | 1386 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

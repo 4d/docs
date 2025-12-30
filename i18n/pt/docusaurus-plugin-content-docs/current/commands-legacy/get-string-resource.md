@@ -5,12 +5,12 @@ slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* {; *resArquivo*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* : Integer {; *resArquivo* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get string resource.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Número do resource |
-| resArquivo | Time | &#8594;  | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
+| resNum | Integer | &#8594; | Número do resource |
+| resArquivo | Time | &#8594; | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
 | Resultado | Text | &#8592; | Conteúdos do resource STR |
 
 <!-- END REF-->
@@ -48,7 +48,7 @@ A variável sistema OK toma o valor 1 se for encontrado o recurso, do contrário
 |  |  |
 | --- | --- |
 | Número do comando | 506 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

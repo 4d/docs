@@ -69,7 +69,7 @@ Vous souhaitez insérer un lien vers le site Web de 4D à la place de la sélect
 |  |  |
 | --- | --- |
 | Numéro de commande | 1280 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

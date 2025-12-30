@@ -56,6 +56,6 @@ Refer to the example of the [Get menu item key](get-menu-item-key.md) command.
 |  |  |
 | --- | --- |
 | Command number | 980 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -32,6 +32,6 @@ See the examples for [DELAY PROCESS](delay-process.md) and [Process info](../com
 |  |  |
 | --- | --- |
 | Command number | 322 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

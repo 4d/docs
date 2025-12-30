@@ -5,7 +5,7 @@ slug: /commands/receive-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE VARIABLE.Syntax-->**RECEIVE VARIABLE** ( *variavel* )<!-- END REF-->
+<!--REF #_command_.RECEIVE VARIABLE.Syntax-->**RECEIVE VARIABLE** ( *variavel* : Variable )<!-- END REF-->
 <!--REF #_command_.RECEIVE VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ A variável de sistema OK é definida como 1 se a variável for recebida. Caso c
 |  |  |
 | --- | --- |
 | Número do comando | 81 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

@@ -98,7 +98,7 @@ En caso de un error, la variable no cambia. Cuando se produce un error en una va
 |  |  |
 | --- | --- |
 | Número de comando | 1136 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -5,7 +5,7 @@ slug: /commands/union
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNION.Syntax-->**UNION** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
+<!--REF #_command_.UNION.Syntax-->**UNION** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.UNION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ This example adds records to a set of best customers. The records are displayed 
 |  |  |
 | --- | --- |
 | Command number | 120 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

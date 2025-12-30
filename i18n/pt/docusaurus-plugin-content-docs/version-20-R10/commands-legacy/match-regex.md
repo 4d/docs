@@ -118,7 +118,7 @@ Em caso de erro, o comando gera um erro que pode interceptar através de um mét
 |  |  |
 | --- | --- |
 | Número do comando | 1019 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

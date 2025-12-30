@@ -5,13 +5,13 @@ slug: /commands/listbox-set-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( {* ;} *objeto* ; *calculo* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( * ; *objeto* : Text ; *calculo* : Integer )<br/>**LISTBOX SET FOOTER CALCULATION** ( *objeto* : Field, Variable ; *calculo* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| calculo | Integer | &#8594;  | Calculo para à área de rodapé |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| calculo | Integer | &#8594; | Calculo para à área de rodapé |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ Se o tipo de dados da coluna ou de pelo menos uma coluna do list box (se objeto 
 |  |  |
 | --- | --- |
 | Número do comando | 1140 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

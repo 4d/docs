@@ -175,7 +175,7 @@ Veja os exemplos para os comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BU
 |  |  |
 | --- | --- |
 | Número do comando | 77 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

@@ -52,6 +52,6 @@ L'exemple suivant retourne le nombre de colonnes d'une ligne d'un tableau à deu
 |  |  |
 | --- | --- |
 | Numéro de commande | 274 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

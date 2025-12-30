@@ -5,11 +5,11 @@ slug: /commands/flush-cache
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** {( tamanho|* )}<!-- END REF-->
+<!--REF #_command_.FLUSH CACHE.Syntax-->**FLUSH CACHE** ({ tamanho|* })<!-- END REF-->
 <!--REF #_command_.FLUSH CACHE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tamanho&#124;* | Real, Operador | &#8594;  | *para completamente liberar a memória cache, ou números de bytes a liberar em cache |
+| tamanho&#124;* | Real, Operador | &#8594; | *para completamente liberar a memória cache, ou números de bytes a liberar em cache |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ Geralmente não precisa chamar este comando, já que 4D salva modificações de 
 |  |  |
 | --- | --- |
 | Número do comando | 297 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

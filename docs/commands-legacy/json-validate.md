@@ -5,7 +5,7 @@ slug: /commands/json-validate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* ; *vSchema* ) : Object<!-- END REF-->
+<!--REF #_command_.JSON Validate.Syntax-->**JSON Validate** ( *vJson* : Object ; *vSchema* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.JSON Validate.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -110,6 +110,6 @@ You want to validate a JSON object with a schema and get the list of validation 
 |  |  |
 | --- | --- |
 | Command number | 1456 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

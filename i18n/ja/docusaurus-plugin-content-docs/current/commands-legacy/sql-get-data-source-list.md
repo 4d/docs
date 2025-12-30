@@ -5,11 +5,11 @@ slug: /commands/sql-get-data-source-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *sourceType* ; *sourceNamesArr* ; *driversArr* )<!-- END REF-->
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *sourceType* : Integer ; *sourceNamesArr* : Text array ; *driversArr* : Text array )<!-- END REF-->
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| sourceType | Integer | &#8594;  | ソースタイプ: ユーザまたはシステム |
+| sourceType | Integer | &#8594; | ソースタイプ: ユーザまたはシステム |
 | sourceNamesArr | Text array | &#8592; | データソース名の配列 |
 | driversArr | Text array | &#8592; | ソース用のドライバの配列 |
 
@@ -59,7 +59,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 989 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

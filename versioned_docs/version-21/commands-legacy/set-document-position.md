@@ -34,6 +34,6 @@ Depending on the anchor you can pass positive or negative values in *offset*.
 |  |  |
 | --- | --- |
 | Command number | 482 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

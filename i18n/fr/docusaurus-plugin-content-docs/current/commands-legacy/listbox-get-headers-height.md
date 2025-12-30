@@ -5,13 +5,13 @@ slug: /commands/listbox-get-headers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( {* ;} *objet* {; *unité*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( * ; *objet* : Text {; *unité* : Integer} ) : Integer<br/>**LISTBOX Get headers height** ( *objet* : Field, Variable {; *unité* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get headers height.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| unité | Integer | &#8594;  | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| unité | Integer | &#8594; | Unité de la valeur de hauteur : <br/>0 ou omis = pixels, 1 = lignes |
 | Résultat | Integer | &#8592; | Hauteur de la ligne |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Par défaut, si vous omettez le paramètre *unité*, la hauteur de ligne retourn
 |  |  |
 | --- | --- |
 | Numéro de commande | 1144 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *esquerda* ; *superior* ; *direita* ; *inferior* {; *janela*} )<!-- END REF-->
+<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer {; *janela* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | superior | Integer | &#8592; | Coordenada superior da área de conteúdo da janela |
 | direita | Integer | &#8592; | Coordenada direita da área de conteúdo da janela |
 | inferior | Integer | &#8592; | Coordenada inferior da área de conteúdo da janela |
-| janela | Integer | &#8594;  | Número de referência de janela; ou janela do primeiro plano do processo atual, se omitido; ou janela MDI se for -1 (Windows) |
+| janela | Integer | &#8594; | Número de referência de janela; ou janela do primeiro plano do processo atual, se omitido; ou janela MDI se for -1 (Windows) |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Ver o exemplo do comando [WINDOW LIST](window-list.md)..
 |  |  |
 | --- | --- |
 | Número do comando | 443 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

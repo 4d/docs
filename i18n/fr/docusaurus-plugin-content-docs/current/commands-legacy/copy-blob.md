@@ -5,15 +5,15 @@ slug: /commands/copy-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* ; *dstBLOB* ; *srcOffset* ; *dstOffset* ; *nombre* )<!-- END REF-->
+<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* : Blob ; *dstBLOB* : Blob ; *srcOffset* : Integer ; *dstOffset* : Integer ; *nombre* : Integer )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| srcBlob | Blob | &#8594;  | BLOB source |
-| dstBlob | Blob | &#8594;  | BLOB de destination |
-| srcOffset | Integer | &#8594;  | Position dans la source pour la copie |
-| dstOffset | Integer | &#8594;  | Position dans la destination pour la copie |
-| nombre | Integer | &#8594;  | Nombre d'octets à copier |
+| srcBlob | Blob | &#8594; | BLOB source |
+| dstBlob | Blob | &#8594; | BLOB de destination |
+| srcOffset | Integer | &#8594; | Position dans la source pour la copie |
+| dstOffset | Integer | &#8594; | Position dans la destination pour la copie |
+| nombre | Integer | &#8594; | Nombre d'octets à copier |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ Notez que le BLOB de destination peut être redimensionné si nécessaire.
 |  |  |
 | --- | --- |
 | Numéro de commande | 558 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

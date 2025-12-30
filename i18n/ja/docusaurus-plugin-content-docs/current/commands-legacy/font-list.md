@@ -5,12 +5,12 @@ slug: /commands/font-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fonts* {; *listType* } )<br/>**FONT LIST** ( *fonts* {; *} )<!-- END REF-->
+<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fonts* : Text array {; *listType* : 倍長整数, 演算子 } )<br/>**FONT LIST** ( *fonts* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | fonts | Text array | &#8592; | フォント名の配列 |
-| listType &#124; * | 倍長整数, 演算子 | &#8594;  | 取得したいフォント型のリスト、フォント名を取得するために*を指定(OS Xのみ) |
+| listType &#124; * | 倍長整数, 演算子 | &#8594; | 取得したいフォント型のリスト、フォント名を取得するために*を指定(OS Xのみ) |
 
 <!-- END REF-->
 
@@ -77,6 +77,6 @@ Windows環境下では、この原理は4D v15 R4から採用されています�
 |  |  |
 | --- | --- |
 | コマンド番号 | 460 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

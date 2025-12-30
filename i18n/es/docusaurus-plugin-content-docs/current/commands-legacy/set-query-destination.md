@@ -5,13 +5,13 @@ slug: /commands/set-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinoTipo* {; *destinoObjeto* {; *destPunt*}} )<!-- END REF-->
+<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinoTipo* : Integer {; *destinoObjeto* : Text, Variable {; *destPunt* : Pointer}} )<!-- END REF-->
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| destinoTipo | Integer | &#8594;  | 0 = selección actual, 1 = conjunto, 2 = selección temporal, 3 = variable |
-| destinoObjeto | Text, Variable | &#8594;  | Nombre del conjunto o Nombre de la selección temporal o variable |
-| destPunt | Pointer | &#8594;  | Puntero a la variable local si destinoTipo=3 |
+| destinoTipo | Integer | &#8594; | 0 = selección actual, 1 = conjunto, 2 = selección temporal, 3 = variable |
+| destinoObjeto | Text, Variable | &#8594; | Nombre del conjunto o Nombre de la selección temporal o variable |
+| destPunt | Pointer | &#8594; | Puntero a la variable local si destinoTipo=3 |
 
 <!-- END REF-->
 
@@ -257,6 +257,6 @@ Después de implementar este método de proyecto en su aplicación, puede escrib
 |  |  |
 | --- | --- |
 | Número de comando | 396 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

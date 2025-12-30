@@ -5,15 +5,15 @@ slug: /commands/st-freeze-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( {* ;} *objeto* {; *inicioSel* {; *fimSel*}}{; *} )<!-- END REF-->
+<!--REF #_command_.ST FREEZE EXPRESSIONS.Syntax-->**ST FREEZE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer}}{; *} )<br/>**ST FREEZE EXPRESSIONS** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *fimSel* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.ST FREEZE EXPRESSIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| inicioSel | Integer | &#8594;  | Inicio da seleção |
-| fimSel | Integer | &#8594;  | Fim da seleção |
-| * | Operador | &#8594;  | Se passar = atualizar as expressões antes de congelar elas |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| inicioSel | Integer | &#8594; | Inicio da seleção |
+| fimSel | Integer | &#8594; | Fim da seleção |
+| * | Operador | &#8594; | Se passar = atualizar as expressões antes de congelar elas |
 
 <!-- END REF-->
 
@@ -72,6 +72,6 @@ Você quer inserir a hora atual ao início do texto e logo congelar ela antes de
 |  |  |
 | --- | --- |
 | Número do comando | 1282 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

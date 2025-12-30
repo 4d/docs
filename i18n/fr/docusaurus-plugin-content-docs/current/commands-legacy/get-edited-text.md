@@ -72,6 +72,6 @@ Voici un exemple de traitement à la volée des caractères saisis dans un champ
 |  |  |
 | --- | --- |
 | Numéro de commande | 655 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

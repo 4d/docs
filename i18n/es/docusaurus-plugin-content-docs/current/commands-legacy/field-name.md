@@ -5,12 +5,12 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( *campPtr* ) : Text<br/>**Field name** ( *numTabla* ; *numCamp* ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *campPtr* : Puntero, Entero largo ) : Text<br/>**Field name** ( *numTabla* ; *numCamp* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campPtr &#124; tablaNum | Puntero, Entero largo | &#8594;  | Puntero a un campo o número de tabla |
-| numCamp | Integer | &#8594;  | Número de campo si se pasa un número de tabla como primer parámetro |
+| campPtr &#124; tablaNum | Puntero, Entero largo | &#8594; | Puntero a un campo o número de tabla |
+| numCamp | Integer | &#8594; | Número de campo si se pasa un número de tabla como primer parámetro |
 | Resultado | Text | &#8592; | Nombre del campo |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ Este ejemplo muestra una alerta. Este método pasa un puntero a un campo:
 |  |  |
 | --- | --- |
 | Número de comando | 257 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

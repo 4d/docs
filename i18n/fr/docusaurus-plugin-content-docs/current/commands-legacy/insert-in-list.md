@@ -5,17 +5,17 @@ slug: /commands/insert-in-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *liste* ; *avantElément* ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<br/>**INSERT IN LIST** ( * ; *liste* ; * ; *libelléElément* ; *réfElément* {; sous_Liste ; *déployée*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN LIST.Syntax-->**INSERT IN LIST** ( {* ;} *liste* : Integer, Text ; *avantElément* : Entier long, Opérateur ; *libelléElément* : Text ; *réfElément* : Integer {; sous_Liste ; *déployée* : Boolean} )<br/>**INSERT IN LIST** ( * ; *liste* : Integer, Text ; * ; *libelléElément* : Text ; *réfElément* : Integer {; sous_Liste ; *déployée* : Boolean} )<!-- END REF-->
 <!--REF #_command_.INSERT IN LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| avantElément &#124; * | Entier long, Opérateur | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
-| libelléElément | Text | &#8594;  | Libellé du nouvel élément |
-| réfElément | Integer | &#8594;  | Numéro de référence unique du nouvel élément |
-| sous_Liste | Integer | &#8594;  | Sous-liste optionnelle rattachée au nouvel élément |
-| déployée | Boolean | &#8594;  | Indique si la sous-liste doit être déployée ou non |
+| * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| avantElément &#124; * | Entier long, Opérateur | &#8594; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste ou * pour l'élément de la liste actuellement sélectionné |
+| libelléElément | Text | &#8594; | Libellé du nouvel élément |
+| réfElément | Integer | &#8594; | Numéro de référence unique du nouvel élément |
+| sous_Liste | Integer | &#8594; | Sous-liste optionnelle rattachée au nouvel élément |
+| déployée | Boolean | &#8594; | Indique si la sous-liste doit être déployée ou non |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ L'exemple suivant insère un élément (associé à aucune sous-liste) juste dev
 |  |  |
 | --- | --- |
 | Numéro de commande | 625 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

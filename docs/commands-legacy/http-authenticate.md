@@ -5,7 +5,7 @@ slug: /commands/http-authenticate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *name* ; *password* {; *authMethod*} {; *} )<!-- END REF-->
+<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *name* : Text ; *password* : Text {; *authMethod* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,6 +63,6 @@ Examples of requests with authentication:
 |  |  |
 | --- | --- |
 | Command number | 1161 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

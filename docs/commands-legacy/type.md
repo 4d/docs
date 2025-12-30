@@ -5,7 +5,7 @@ slug: /commands/type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Type.Syntax-->**Type** ( *fieldVar* ) : Integer<!-- END REF-->
+<!--REF #_command_.Type.Syntax-->**Type** ( *fieldVar* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -152,6 +152,6 @@ See example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md) co
 |  |  |
 | --- | --- |
 | Command number | 295 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

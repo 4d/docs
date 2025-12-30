@@ -5,11 +5,11 @@ slug: /commands/get-system-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* ; *value* )<!-- END REF-->
+<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* : Integer ; *value* : Text )<!-- END REF-->
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| format | Integer | &#8594;  | 取得するシステムフォーマット |
+| format | Integer | &#8594; | 取得するシステムフォーマット |
 | value | Text | &#8592; | システムで定義されるフォーマットの値 |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 994 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

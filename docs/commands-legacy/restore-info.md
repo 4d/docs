@@ -5,7 +5,7 @@ slug: /commands/restore-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.RESTORE INFO.Syntax-->**RESTORE INFO** ( *selector* : Integer ; *info1* : Integer, Date ; *info2* : Text, Time )<!-- END REF-->
 <!--REF #_command_.RESTORE INFO.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ The type and content of the *info1* and *info2* parameters depend on the value o
 |  |  |
 | --- | --- |
 | Command number | 889 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

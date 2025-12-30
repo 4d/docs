@@ -5,12 +5,12 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *archivePath* {; *destFolderPath*} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *archivePath* : Text {; *destFolderPath* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| archivePath | Text | &#8594;  | Pathname of archive to restore |
-| destFolderPath | Text | &#8594;  | Pathname of destination folder |
+| archivePath | Text | &#8594; | Pathname of archive to restore |
+| destFolderPath | Text | &#8594; | Pathname of destination folder |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ RESTORE コマンドは*OK*および*Document*変数を更新します。復元�
 |  |  |
 | --- | --- |
 | コマンド番号 | 918 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK、Document、error |
 
 

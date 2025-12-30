@@ -46,6 +46,6 @@ Este método, combinado com uma área de rolagem, lhe permite modificar o valor 
 |  |  |
 | --- | --- |
 | Número do comando | 713 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

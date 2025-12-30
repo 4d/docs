@@ -5,14 +5,14 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objeto* {; resolvePont | {; *opção* {; *groupWith*}}} )  : Object<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objeto* : Object, Campo Object {; resolvePont | {; *opção* : Integer {; *groupWith* : Collection, Object}}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594;  | Objeto estruturado |
-| resolvePont | Boolean | &#8594;  | True = resolve os ponteiros, False ou se omitido = não resolve ponteiros |
-| opção | Integer | &#8594;  | ck shared: retorna um objeto partilhado, ck resolve pointers: resolve os ponteiros antes de copiar |
-| groupWith | Collection, Object | &#8594;  | Coleção partilhada ou objeto para ser agrupado com o objeto retornado |
+| objeto | Object, Campo Object | &#8594; | Objeto estruturado |
+| resolvePont | Boolean | &#8594; | True = resolve os ponteiros, False ou se omitido = não resolve ponteiros |
+| opção | Integer | &#8594; | ck shared: retorna um objeto partilhado, ck resolve pointers: resolve os ponteiros antes de copiar |
+| groupWith | Collection, Object | &#8594; | Coleção partilhada ou objeto para ser agrupado com o objeto retornado |
 | Resultado | Object | &#8592; | Cópia de objeto |
 
 <!-- END REF-->
@@ -171,6 +171,6 @@ Imagine que queira copiar *$sharedObj* em *$sharedCol mas* como eles pertencem a
 |  |  |
 | --- | --- |
 | Número do comando | 1225 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

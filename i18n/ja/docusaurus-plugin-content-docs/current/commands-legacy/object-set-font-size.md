@@ -5,13 +5,13 @@ slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( {* ;} *object* ; *size* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *object* : Text ; *size* : Integer )<br/>**OBJECT SET FONT SIZE** ( *object* : Field, Variable ; *size* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| size | Integer | &#8594;  | フォントサイズ (ポイント) |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| size | Integer | &#8594; | フォントサイズ (ポイント) |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 165 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/listbox-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( {* ;} *objeto* ; *tipoArray* ; *ptrArray* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *objeto* : Text ; *tipoArray* : Integer ; *ptrArray* : Pointer )<br/>**LISTBOX SET ARRAY** ( *objeto* : Field, Variable ; *tipoArray* : Integer ; *ptrArray* : Pointer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) |
-| tipoArray | Integer | &#8594;  | Tipo de array |
-| ptrArray | Pointer | &#8594;  | Array a asociar a la propiedad |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) |
+| tipoArray | Integer | &#8594; | Tipo de array |
+| ptrArray | Pointer | &#8594; | Array a asociar a la propiedad |
 
 <!-- END REF-->
 
@@ -71,6 +71,6 @@ Usted desea definir un array de altura de línea para un list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1279 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

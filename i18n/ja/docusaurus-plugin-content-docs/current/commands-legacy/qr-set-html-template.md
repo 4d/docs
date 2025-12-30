@@ -5,12 +5,12 @@ slug: /commands/qr-set-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* ; *template* )<!-- END REF-->
+<!--REF #_command_.QR SET HTML TEMPLATE.Syntax-->**QR SET HTML TEMPLATE** ( *area* : Integer ; *template* : Text )<!-- END REF-->
 <!--REF #_command_.QR SET HTML TEMPLATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| template | Text | &#8594;  | HTMLテンプレート |
+| area | Integer | &#8594; | エリア参照 |
+| template | Text | &#8594; | HTMLテンプレート |
 
 <!-- END REF-->
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 750 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

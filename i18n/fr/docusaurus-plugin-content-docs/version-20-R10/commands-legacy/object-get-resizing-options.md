@@ -49,6 +49,6 @@ Le paramètre *vertical* retourne une valeur indiquant l’option de redimension
 |  |  |
 | --- | --- |
 | Numéro de commande | 1176 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/array-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nomTableau* ; *taille* {; *taille2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nomTableau* ; *taille* : Integer {; *taille2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY PICTURE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomArray | Array | &#8594;  | Nom du tableau |
-| taille | Integer | &#8594;  | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
-| taille2 | Integer | &#8594;  | Nombre d'éléments des tableaux à deux dimensions |
+| nomArray | Array | &#8594; | Nom du tableau |
+| taille | Integer | &#8594; | Nombre d'éléments du tableau ou Nombre de tableaux si taille2 est spécifié |
+| taille2 | Integer | &#8594; | Nombre d'éléments des tableaux à deux dimensions |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Cet exemple crée un tableau interprocess d'éléments de type [Image](# "Can be
 |  |  |
 | --- | --- |
 | Numéro de commande | 279 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

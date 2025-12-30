@@ -5,11 +5,11 @@ slug: /commands/set-cursor
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** {( *curseur* )}<!-- END REF-->
+<!--REF #_command_.SET CURSOR.Syntax-->**SET CURSOR** ({ *curseur* : Integer })<!-- END REF-->
 <!--REF #_command_.SET CURSOR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| curseur | Integer | &#8594;  | Numéro de curseur système |
+| curseur | Integer | &#8594; | Numéro de curseur système |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Vous souhaitez que le curseur se transforme en ![](../assets/en/commands/pict247
 |  |  |
 | --- | --- |
 | Numéro de commande | 469 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

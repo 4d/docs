@@ -5,11 +5,11 @@ slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* ) : any<!-- END REF-->
+<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* : Object ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| parameters | Object | &#8594;  | Web エリアの属性を格納したオブジェクト |
+| parameters | Object | &#8594; | Web エリアの属性を格納したオブジェクト |
 | 戻り値 | any | &#8592; | コールバックメソッドによって返された値 |
 
 <!-- END REF-->
@@ -101,7 +101,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1727 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

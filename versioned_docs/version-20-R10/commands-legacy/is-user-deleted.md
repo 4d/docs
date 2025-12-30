@@ -35,7 +35,7 @@ If you do not have the proper access privileges for calling Is user deleted or i
 |  |  |
 | --- | --- |
 | Command number | 616 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

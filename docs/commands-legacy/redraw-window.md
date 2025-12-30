@@ -5,7 +5,7 @@ slug: /commands/redraw-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If you omit the *window* parameter, REDRAW WINDOW applies to the frontmost windo
 |  |  |
 | --- | --- |
 | Command number | 456 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

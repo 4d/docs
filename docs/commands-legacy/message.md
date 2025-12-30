@@ -5,7 +5,7 @@ slug: /commands/message
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* )<!-- END REF-->
+<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *message* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -118,6 +118,6 @@ This provides the following result (shown here on Windows):
 |  |  |
 | --- | --- |
 | Command number | 88 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

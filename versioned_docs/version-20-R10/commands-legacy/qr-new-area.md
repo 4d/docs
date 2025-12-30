@@ -26,6 +26,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1320 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

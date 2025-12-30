@@ -64,6 +64,6 @@ Vous voulez sélectionner les styles de la famille de police "Verdana" (si elle 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1362 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

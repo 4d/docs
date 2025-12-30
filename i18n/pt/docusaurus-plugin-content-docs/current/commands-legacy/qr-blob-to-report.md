@@ -5,12 +5,12 @@ slug: /commands/qr-blob-to-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.QR BLOB TO REPORT.Syntax-->**QR BLOB TO REPORT** ( *area* : Integer ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.QR BLOB TO REPORT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| Blob | Blob | &#8594;  | BLOB que contém o relatório |
+| area | Integer | &#8594; | Referência da área |
+| Blob | Blob | &#8594; | BLOB que contém o relatório |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ A instrução a seguir recupera o relatório rápido armazenado em Campo4 e o mo
 |  |  |
 | --- | --- |
 | Número do comando | 771 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

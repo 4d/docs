@@ -58,6 +58,6 @@ You want to set the entry order of objects in the form based upon their names:
 |  |  |
 | --- | --- |
 | Command number | 1468 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

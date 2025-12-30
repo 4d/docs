@@ -5,12 +5,12 @@ slug: /commands/goto-xy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* ; *y* )<!-- END REF-->
+<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| x | Integer | &#8594;  | x カーソルの水平位置 |
-| y | Integer | &#8594;  | y カーソルの垂直位置 |
+| x | Integer | &#8594; | x カーソルの水平位置 |
+| y | Integer | &#8594; | y カーソルの垂直位置 |
 
 <!-- END REF-->
 
@@ -64,6 +64,6 @@ GOTO XY コマンドでカーソルの位置を指定してから、[MESSAGE](me
 |  |  |
 | --- | --- |
 | コマンド番号 | 161 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

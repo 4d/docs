@@ -5,12 +5,12 @@ slug: /commands/dom-remove-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *refElément* ; *nomAttribut* )<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Syntax-->**DOM REMOVE XML ATTRIBUTE** ( *refElément* : Text ; *nomAttribut* : Text )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ATTRIBUTE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
-| nomAttribut | Text | &#8594;  | Attribut à supprimer |
+| refElément | Text | &#8594; | Référence d’élément XML |
+| nomAttribut | Text | &#8594; | Attribut à supprimer |
 
 <!-- END REF-->
 
@@ -50,7 +50,7 @@ Le code suivant permet de supprimer le premier attribut "N=1" :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1084 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

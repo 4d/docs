@@ -5,7 +5,7 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* ) : Pointer<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *varName* : Text ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ Using pointers to elements of two-dimensional arrays:
 |  |  |
 | --- | --- |
 | Command number | 304 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

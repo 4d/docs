@@ -5,7 +5,7 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* : Text {; *fileType* : Text}{; *mode* : Integer} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -93,7 +93,7 @@ If you call **Open document** with a mode of 3, the function returns ?00:00:00? 
 |  |  |
 | --- | --- |
 | Command number | 264 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

@@ -5,13 +5,13 @@ slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* ; *senha* {; *digest*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *refUsuario* : Integer, Text ; *senha* : Text {; *digest* : Boolean} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refUsuario | Integer, Text | &#8594;  | ID de usuário |
-| senha | Text | &#8594;  | Senha não criptografada |
-| digest | Boolean | &#8594;  | Senha digest = True, Senha texto plano (por padrão) = False |
+| refUsuario | Integer, Text | &#8594; | ID de usuário |
+| senha | Text | &#8594; | Senha não criptografada |
+| digest | Boolean | &#8594; | Senha digest = True, Senha texto plano (por padrão) = False |
 | Resultado | Boolean | &#8592; | TRUE= senha válida; FALSE = senha inválida |
 
 <!-- END REF-->
@@ -65,6 +65,6 @@ No [On 4D Mobile Authentication database method](on-4d-mobile-authentication-dat
 |  |  |
 | --- | --- |
 | Número do comando | 638 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

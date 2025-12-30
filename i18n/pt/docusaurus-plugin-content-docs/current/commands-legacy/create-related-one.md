@@ -5,11 +5,11 @@ slug: /commands/create-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *campo* )<!-- END REF-->
+<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *campo* : Field )<!-- END REF-->
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Muitos campos |
+| campo | Field | &#8594; | Muitos campos |
 
 <!-- END REF-->
 
@@ -30,6 +30,6 @@ Se já existe um registro relacionado, CREATE RELATED ONE atua como [RELATE ONE]
 |  |  |
 | --- | --- |
 | Número do comando | 65 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -207,7 +207,7 @@ Quelle que soit la manière dont le tri est défini, si l'opération risque de p
 |  |  |
 | --- | --- |
 | Numéro de commande | 49 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 

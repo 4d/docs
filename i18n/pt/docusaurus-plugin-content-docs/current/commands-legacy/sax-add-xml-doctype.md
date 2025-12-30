@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-doctype
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *documento* ; *docType* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *documento* : Time ; *docType* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
-| docType | Text | &#8594;  | DOCTYPE a ser adicionado |
+| documento | Time | &#8594; | Referência do documento aberto |
+| docType | Text | &#8594; | DOCTYPE a ser adicionado |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ Em caso de erro, o comando retorna um erro que possa ser interceptado usando um 
 |  |  |
 | --- | --- |
 | Número do comando | 851 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

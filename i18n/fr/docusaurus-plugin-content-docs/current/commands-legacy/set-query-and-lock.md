@@ -5,11 +5,11 @@ slug: /commands/set-query-and-lock
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* )<!-- END REF-->
+<!--REF #_command_.SET QUERY AND LOCK.Syntax-->**SET QUERY AND LOCK** ( *verrou* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET QUERY AND LOCK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| verrou | Boolean | &#8594;  | Vrai = verrouiller les enregistrements trouvés par les recherches, Faux = ne pas les verrouiller |
+| verrou | Boolean | &#8594; | Vrai = verrouiller les enregistrements trouvés par les recherches, Faux = ne pas les verrouiller |
 
 <!-- END REF-->
 
@@ -75,7 +75,7 @@ Si la commande est appelée hors du contexte d’une transaction, une erreur est
 |  |  |
 | --- | --- |
 | Numéro de commande | 661 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

@@ -31,6 +31,6 @@ Reportez-vous à l'exemple de la commande [HIDE TOOL BAR](hide-tool-bar.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 433 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

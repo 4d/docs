@@ -55,6 +55,6 @@ Desea aplicar una orientación de 270° a una variable en su formulario:
 |  |  |
 | --- | --- |
 | Número de comando | 1284 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

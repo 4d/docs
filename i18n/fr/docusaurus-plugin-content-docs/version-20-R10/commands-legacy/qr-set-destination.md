@@ -59,7 +59,7 @@ L'exemple suivant définit le fichier texte "MonDoc.txt" comme type de destinati
 |  |  |
 | --- | --- |
 | Numéro de commande | 745 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

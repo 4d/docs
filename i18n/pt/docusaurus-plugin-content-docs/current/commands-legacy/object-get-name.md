@@ -5,11 +5,11 @@ slug: /commands/object-get-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** {( *seletor* )} : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get name.Syntax-->**OBJECT Get name** ( *seletor* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seletor | Integer | &#8594;  | Categoria de objeto |
+| seletor | Integer | &#8594; | Categoria de objeto |
 | Resultado | Text | &#8592; | Nome de objeto |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ Depois da execução deste método objeto, a variável *$btnName* contém o valo
 |  |  |
 | --- | --- |
 | Número do comando | 1087 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

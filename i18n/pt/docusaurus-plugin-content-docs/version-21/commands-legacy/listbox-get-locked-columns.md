@@ -35,6 +35,6 @@ Se uma coluna é inserida ou é eliminada por programação dentro de uma área 
 |  |  |
 | --- | --- |
 | Número do comando | 1152 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

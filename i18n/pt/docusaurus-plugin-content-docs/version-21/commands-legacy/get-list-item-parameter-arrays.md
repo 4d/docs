@@ -81,6 +81,6 @@ Caso também queiras obter os valores dos parâmetros, escreva:
 |  |  |
 | --- | --- |
 | Número do comando | 1195 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

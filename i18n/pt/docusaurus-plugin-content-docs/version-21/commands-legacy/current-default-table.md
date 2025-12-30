@@ -36,6 +36,6 @@ Desde que uma tabela padrão tenha sido estabelecida, a linha de código abaixo 
 |  |  |
 | --- | --- |
 | Número do comando | 363 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/method-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *path* ; *attributes* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *path* : Text, Text配列 ; *attributes* : Object, Object array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text, Text配列 | &#8594;  | メソッドのパス |
+| path | Text, Text配列 | &#8594; | メソッドのパス |
 | attributes | Object, Object array | &#8592; | 選択したメソッドの属性 |
-| * | 演算子 | &#8594;  | 指定すると、コマンドはコンポーネントから実行されたときにホストデータベースへと適用されます<br/>(このコンテキスト外ではこの引数は無視されます) |
+| * | 演算子 | &#8594; | 指定すると、コマンドはコンポーネントから実行されたときにホストデータベースへと適用されます<br/>(このコンテキスト外ではこの引数は無視されます) |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1334 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/http-authenticate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *nom* ; *motDePasse* {; *méthodeAuth*} {; *} )<!-- END REF-->
+<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *nom* : Text ; *motDePasse* : Text {; *méthodeAuth* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nom | Text | &#8594;  | Nom de l’utilisateur |
-| motDePasse | Text | &#8594;  | Mot de passe de l’utilisateur |
-| méthodeAuth | Integer | &#8594;  | Méthode d’authentification : 0 ou omis=non définie, 1=BASIC, 2=DIGEST |
-| * | Opérateur | &#8594;  | Si passé : authentification par proxy |
+| nom | Text | &#8594; | Nom de l’utilisateur |
+| motDePasse | Text | &#8594; | Mot de passe de l’utilisateur |
+| méthodeAuth | Integer | &#8594; | Méthode d’authentification : 0 ou omis=non définie, 1=BASIC, 2=DIGEST |
+| * | Opérateur | &#8594; | Si passé : authentification par proxy |
 
 <!-- END REF-->
 
@@ -62,6 +62,6 @@ Exemples de requêtes avec authentification :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1161 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

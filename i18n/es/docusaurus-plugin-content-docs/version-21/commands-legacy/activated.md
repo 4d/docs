@@ -33,6 +33,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 346 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

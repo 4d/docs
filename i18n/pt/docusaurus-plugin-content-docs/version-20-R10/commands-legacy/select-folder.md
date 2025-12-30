@@ -95,7 +95,7 @@ O exemplo abaixo lhe permite selecionar a pasta na qual serão armazenadas as im
 |  |  |
 | --- | --- |
 | Número do comando | 670 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

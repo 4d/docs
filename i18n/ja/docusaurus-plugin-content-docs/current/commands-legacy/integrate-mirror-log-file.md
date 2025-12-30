@@ -5,14 +5,13 @@ slug: /commands/integrate-mirror-log-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* ; *operationNum* {; *mode* {; *errObject*}} )<!-- END REF-->
+<!--REF #_command_.INTEGRATE MIRROR LOG FILE.Syntax-->**INTEGRATE MIRROR LOG FILE** ( *pathName* : Text ; *operationNum* : Real {; *mode* : Integer {; *errObject* : Object}} )<!-- END REF-->
 <!--REF #_command_.INTEGRATE MIRROR LOG FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| pathName | Text | &#8594;  | 統合されるログファイルの名前もしくはパス名 |
-| operationNum | Real | &#8594;  | 統合が開始されるオペレーションの番号 |
-| &#8592; | 最後に統合されたオペレーションの番号 |
-| mode | Integer | &#8594;  | 0=厳格な統合モード(デフォルトモード)、1=自動修復モード |
+| pathName | Text | &#8594; | 統合されるログファイルの名前もしくはパス名 |
+| operationNum | Real | &#8596; | *in:* Number of last operation integrated or -2 to integrate the whole file<br/>*out:* New number of last operation integrated |
+| mode | Integer | &#8594; | 0=厳格な統合モード(デフォルトモード)、1=自動修復モード |
 | errObject | Object | &#8592; | 失われたオペレーション |
 
 <!-- END REF-->
@@ -105,7 +104,7 @@ Blobまたはピクチャーの値の場合、その保存場所に応じて異�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1312 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

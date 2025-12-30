@@ -35,6 +35,6 @@ El siguiente ejemplo muestra una alerta que indica el número de registros en la
 |  |  |
 | --- | --- |
 | Número de comando | 83 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

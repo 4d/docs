@@ -5,7 +5,7 @@ slug: /commands/receive-buffer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *varRecep* )<!-- END REF-->
+<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *varRecep* : Text )<!-- END REF-->
 <!--REF #_command_.RECEIVE BUFFER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ Note que el acceso a la variable interproceso *vtBuffer* debe estar protegido po
 |  |  |
 | --- | --- |
 | Número de comando | 172 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

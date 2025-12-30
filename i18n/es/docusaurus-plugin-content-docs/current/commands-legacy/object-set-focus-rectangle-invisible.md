@@ -5,13 +5,13 @@ slug: /commands/object-set-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Syntax-->**OBJECT SET FOCUS RECTANGLE INVISIBLE** ( {* ;} *objeto* ; *invisible* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Syntax-->**OBJECT SET FOCUS RECTANGLE INVISIBLE** ( * ; *objeto* : Text ; *invisible* : Boolean )<br/>**OBJECT SET FOCUS RECTANGLE INVISIBLE** ( *objeto* : Field, Variable ; *invisible* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FOCUS RECTANGLE INVISIBLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| invisible | Boolean | &#8594;  | True = rectángulo de foco oculto,False = rectángulo de foco visible |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| invisible | Boolean | &#8594; | True = rectángulo de foco oculto,False = rectángulo de foco visible |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ Pase **True** en el parámetro *invisible* para ocultar el rectángulo de foco y
 |  |  |
 | --- | --- |
 | Número de comando | 1177 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

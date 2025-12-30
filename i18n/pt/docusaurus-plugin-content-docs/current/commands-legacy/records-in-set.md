@@ -5,11 +5,11 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *conjunto* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nome do conjunto a testar |
+| conjunto | Text | &#8594; | Nome do conjunto a testar |
 | Resultado Função | Integer | &#8592; | Número de registros em conjunto |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ O seguinte exemplo mostra um alerta indicando a porcentagem de clientes classifi
 |  |  |
 | --- | --- |
 | Número do comando | 195 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

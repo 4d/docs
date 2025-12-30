@@ -5,13 +5,13 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* }{;}{ *répertoire* {; *options*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* : Text }{;}{ *répertoire* : Text, Integer {; *options* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Titre de la fenêtre de sélection |
-| répertoire | Text, Integer | &#8594;  | Chemin d’accès du répertoire par défautou Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS),ou Numéro de chemin d’accès mémorisé |
-| options | Integer | &#8594;  | Option(s) de sélection sous Mac OS |
+| message | Text | &#8594; | Titre de la fenêtre de sélection |
+| répertoire | Text, Integer | &#8594; | Chemin d’accès du répertoire par défautou Chaîne vide pour afficher le dossier d’utilisateur par défaut (“Mes documents” sous Windows, “Documents” sous Mac OS),ou Numéro de chemin d’accès mémorisé |
+| options | Integer | &#8594; | Option(s) de sélection sous Mac OS |
 | Résultat | Text | &#8592; | Chemin d’accès au dossier sélectionné |
 
 <!-- END REF-->
@@ -89,7 +89,7 @@ L’exemple suivant permet de sélectionner le dossier dans lequel toutes les im
 |  |  |
 | --- | --- |
 | Numéro de commande | 670 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

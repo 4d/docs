@@ -27,7 +27,7 @@ title: 入力
 
 ピクチャー型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド (カット、コピー、ペースト、そしてクリア) に加え、ファイルからピクチャーを読み込むために使用することのできる **読み込み...** コマンド、ピクチャーをディスクに保存するのに使用する **別名で保存...** コマンドなどがあります。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。 **トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display.md#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
 
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md) or [listbox column](listbox_overview.md#list-box-columns), in addition to standard editing commands, the context menu provides the following commands:
+[マルチスタイル](properties_Text.md#マルチスタイル) オプションがチェックされているテキスト型の [入力](input_overview.md) オブジェクトまたは [リストボックスカラム](listbox_overview.md#リストボックスカラム) の場合、標準の編集コマンド以外に以下の様なコマンドを使用することができます:
 
 - **フォント...**: フォントシステムダイアログボックスを表示させます。
 - **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。

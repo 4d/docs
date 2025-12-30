@@ -61,6 +61,6 @@ Este ejemplo crea un array interproceso de elementos de tipo [Puntero](# "A refe
 |  |  |
 | --- | --- |
 | Número de comando | 280 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

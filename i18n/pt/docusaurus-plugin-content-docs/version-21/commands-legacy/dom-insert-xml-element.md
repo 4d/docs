@@ -84,6 +84,6 @@ Para fazer isso, simplesmente execute o código abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 1083 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -58,6 +58,6 @@ You want to send a message to all users, then send a message to a specific user:
 |  |  |
 | --- | --- |
 | Command number | 1632 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

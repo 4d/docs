@@ -36,6 +36,6 @@ Geralmente não precisa chamar este comando, já que 4D salva modificações de 
 |  |  |
 | --- | --- |
 | Número do comando | 297 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

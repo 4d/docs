@@ -29,7 +29,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 746 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

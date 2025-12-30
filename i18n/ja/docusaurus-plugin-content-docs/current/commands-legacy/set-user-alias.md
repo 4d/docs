@@ -5,11 +5,11 @@ slug: /commands/set-user-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* )<!-- END REF-->
+<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
 <!--REF #_command_.SET USER ALIAS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| alias | Text | &#8594;  | 4Dユーザーアカウントに対して使用する代理の名前、またはその名前をリセットするためには"" |
+| alias | Text | &#8594; | 4Dユーザーアカウントに対して使用する代理の名前、またはその名前をリセットするためには"" |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1666 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | サーバー上での使用は不可 ||
 
 

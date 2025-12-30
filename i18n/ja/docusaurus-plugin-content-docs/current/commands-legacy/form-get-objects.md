@@ -5,14 +5,14 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; *formPageOption*} )<br/>**FORM GET OBJECTS** ( *objectsArray* {; *variablesArray* {; *pagesArray*}} {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *formPageOption* : 倍長整数, 演算子} )<br/>**FORM GET OBJECTS** ( *objectsArray* : Text array {; *variablesArray* : Pointer array {; *pagesArray* : Integer array}} {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | objectsArray | Text array | &#8592; | フォームオブジェクト名 |
 | variablesArray | Pointer array | &#8592; | オブジェクトに関連付けられた 変数やフィールドへのポインタ |
-| pagesArray | Array integer | &#8592; | オブジェクトごとのページ番号 |
-| formPageOption &#124; * | 倍長整数, 演算子 | &#8594;  | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>* 指定時(廃止予定) = Form current pageとForm inherited |
+| pagesArray | Integer array | &#8592; | オブジェクトごとのページ番号 |
+| formPageOption &#124; * | 倍長整数, 演算子 | &#8594; | 1=Form current page, 2=Form all pages, 4=Form inherited<br/>* 指定時(廃止予定) = Form current pageとForm inherited |
 
 <!-- END REF-->
 
@@ -129,6 +129,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 898 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

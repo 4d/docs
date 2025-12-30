@@ -62,6 +62,6 @@ Los objetos de formulario a los cuales puede aplicar este comando son los siguie
 |  |  |
 | --- | --- |
 | Número de comando | 706 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

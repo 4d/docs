@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-freeze-formulas
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP FREEZE FORMULAS.Syntax-->**WP FREEZE FORMULAS** ( *alvoObj* {; *recompute*} )<!-- END REF-->
+<!--REF #_command_.WP FREEZE FORMULAS.Syntax-->**WP FREEZE FORMULAS** ( *alvoObj* : Object {; *recompute* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP FREEZE FORMULAS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

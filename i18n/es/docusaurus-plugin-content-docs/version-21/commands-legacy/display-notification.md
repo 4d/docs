@@ -46,6 +46,6 @@ Bajo Windows, se muestra la ventana del mensaje si no se detecta actividad en la
 |  |  |
 | --- | --- |
 | Número de comando | 910 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

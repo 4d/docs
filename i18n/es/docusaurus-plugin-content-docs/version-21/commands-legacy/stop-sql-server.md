@@ -29,6 +29,6 @@ Si el servidor SQL ha sido lanzado, todas las conexiones SQL se interrumpen y el
 |  |  |
 | --- | --- |
 | Número de comando | 963 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

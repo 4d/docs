@@ -64,7 +64,7 @@ Une erreur est générée lorsque :
 |  |  |
 | --- | --- |
 | Numéro de commande | 867 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

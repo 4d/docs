@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB from which to delete bytes |
+| Blob | Blob | &#8594;  | BLOB from which to delete bytes |
 | offset | Integer | &#8594;  | Starting offset where bytes will be deleted |
 | len | Integer | &#8594;  | Number of bytes to be deleted |
 
@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 560 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

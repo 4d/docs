@@ -5,7 +5,7 @@ slug: /commands/set-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *markNum* ; *position* {; *} )<!-- END REF-->
+<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *markNum* : Integer ; *position* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -185,6 +185,6 @@ The Print\_List3 form method is as follows:
 |  |  |
 | --- | --- |
 | Command number | 709 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

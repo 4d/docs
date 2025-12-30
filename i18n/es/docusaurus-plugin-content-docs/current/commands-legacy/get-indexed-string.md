@@ -5,13 +5,13 @@ slug: /commands/get-indexed-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resNum* ; *strNum* {; *resArchivo*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get indexed string.Syntax-->**Get indexed string** ( *resNum* : Integer ; *strNum* : Integer {; *resArchivo* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get indexed string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Número de recurso o Atributo "id" del elemento "grupo" (XLIFF) |
-| strNum | Integer | &#8594;  | Número de cadena o Atributo "id" del elemento "trans-unit" (XLIFF) |
-| resArchivo | Time | &#8594;  | Número de referencia del archivo de recursos Si se omite: todos los archivos XLIFF o los archivos de recursos abiertos |
+| resNum | Integer | &#8594; | Número de recurso o Atributo "id" del elemento "grupo" (XLIFF) |
+| strNum | Integer | &#8594; | Número de cadena o Atributo "id" del elemento "trans-unit" (XLIFF) |
+| resArchivo | Time | &#8594; | Número de referencia del archivo de recursos Si se omite: todos los archivos XLIFF o los archivos de recursos abiertos |
 | Resultado | Text | &#8592; | Valor de la cadena indexada |
 
 <!-- END REF-->
@@ -44,7 +44,7 @@ Si el recurso se encuentra, OK toma el valor 1, de lo contrario toma el valor 0 
 |  |  |
 | --- | --- |
 | Número de comando | 510 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

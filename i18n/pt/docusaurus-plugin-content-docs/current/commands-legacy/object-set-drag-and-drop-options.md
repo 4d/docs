@@ -5,16 +5,16 @@ slug: /commands/object-set-drag-and-drop-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( {* ;} *objeto* ; *arrastavel* ; *arrastavelAuto* ; *soltavel* ; *soltavelAuto* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Syntax-->**OBJECT SET DRAG AND DROP OPTIONS** ( * ; *objeto* : Text ; *arrastavel* : Boolean ; *arrastavelAuto* : Boolean ; *soltavel* : Boolean ; *soltavelAuto* : Boolean )<br/>**OBJECT SET DRAG AND DROP OPTIONS** ( *objeto* : Field, Variable ; *arrastavel* : Boolean ; *arrastavelAuto* : Boolean ; *soltavel* : Boolean ; *soltavelAuto* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DRAG AND DROP OPTIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| arrastavel | Boolean | &#8594;  | 0 = False, 1 = True |
-| arrastavelAuto | Boolean | &#8594;  | 0 = False, 1 = True |
-| soltavel | Boolean | &#8594;  | 0 = False, 1 = True |
-| soltavelAuto | Boolean | &#8594;  | 0 = False, 1 = True |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| arrastavel | Boolean | &#8594; | 0 = False, 1 = True |
+| arrastavelAuto | Boolean | &#8594; | 0 = False, 1 = True |
+| soltavel | Boolean | &#8594; | 0 = False, 1 = True |
+| soltavelAuto | Boolean | &#8594; | 0 = False, 1 = True |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ Definição de uma área de texto em arrastar e soltar auto:
 |  |  |
 | --- | --- |
 | Número do comando | 1183 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

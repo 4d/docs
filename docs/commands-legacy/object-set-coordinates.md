@@ -5,7 +5,7 @@ slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* ; *left* ; *top* {; *right* ; *bottom*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,6 +60,6 @@ The following statement places the "button\_1" object at the (10,20) (30,40) coo
 |  |  |
 | --- | --- |
 | Command number | 1248 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

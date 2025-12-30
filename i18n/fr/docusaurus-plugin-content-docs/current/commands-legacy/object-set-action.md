@@ -5,13 +5,13 @@ slug: /commands/object-set-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( {* ;} *objet* ; *action* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ACTION.Syntax-->**OBJECT SET ACTION** ( * ; *objet* : Text ; *action* : Text )<br/>**OBJECT SET ACTION** ( *objet* : Field, Variable ; *action* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ACTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| action | Text | &#8594;  | Nom d'action à associer (avec paramètre si nécessaire) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| action | Text | &#8594; | Nom d'action à associer (avec paramètre si nécessaire) |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ Vous souhaitez associer l’action standard de validation à un bouton :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1259 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

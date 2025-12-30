@@ -5,7 +5,7 @@ slug: /commands/get-registered-clients
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listeClients* ; *nbMéthodes* )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listeClients* : Text array ; *nbMéthodes* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ Si l’opération se déroule correctement, la variable système OK prend la val
 |  |  |
 | --- | --- |
 | Numéro de commande | 650 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

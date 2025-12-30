@@ -5,14 +5,14 @@ slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( {* ;} *object* ; *hierarchical* {; *hierarchy*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *object* : Text ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *object* : Field, Variable ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| hierarchical | Boolean | &#8594;  | True = 階層リストボックス<br/>False = 非階層リストボックス |
-| hierarchy | Pointer array | &#8594;  | ポインタの配列 |
+| * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| hierarchical | Boolean | &#8594; | True = 階層リストボックス<br/>False = 非階層リストボックス |
+| hierarchy | Pointer array | &#8594; | ポインタの配列 |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ aCountry、aRegion、そしてaCity配列をリストボックスの階層とし
 |  |  |
 | --- | --- |
 | コマンド番号 | 1098 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

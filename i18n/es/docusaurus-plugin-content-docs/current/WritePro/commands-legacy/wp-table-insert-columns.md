@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-insert-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( objRango | {*refTabla* ; *numCol*} {; *numColumns*} )  -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Table insert columns.Syntax-->**WP Table insert columns** ( objRango | {*refTabla* : Object ; *numCol* : Integer} {; *numColumns* : Integer} )  -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Table insert columns.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

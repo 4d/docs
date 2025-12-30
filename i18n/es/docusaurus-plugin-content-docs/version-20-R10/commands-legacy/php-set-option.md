@@ -45,6 +45,6 @@ Por defecto, **PHP SET OPTION** define la opción para todas las llamadas poster
 |  |  |
 | --- | --- |
 | Número de comando | 1059 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

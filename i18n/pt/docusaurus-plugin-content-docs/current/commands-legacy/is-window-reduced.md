@@ -5,11 +5,11 @@ slug: /commands/is-window-reduced
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *janela* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *janela* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da janela |
+| janela | Integer | &#8594; | Número de referência da janela |
 | Resultado | Boolean | &#8592; | true se a janela for reduzida no taskbar ou no dock. Se não, false |
 
 <!-- END REF-->
@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 1831 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

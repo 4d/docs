@@ -45,6 +45,6 @@ Dado que los intercambios entre 4D y el intérprete PHP se efectúan a través d
 |  |  |
 | --- | --- |
 | Número de comando | 1061 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

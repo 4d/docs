@@ -41,6 +41,6 @@ The following example uses **Char** to insert a carriage return within the text 
 |  |  |
 | --- | --- |
 | Command number | 90 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

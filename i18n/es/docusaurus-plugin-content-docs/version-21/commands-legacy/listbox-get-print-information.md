@@ -73,6 +73,6 @@ Impresión de al menos 500 líneas del list box, conociendo que algunas líneas 
 |  |  |
 | --- | --- |
 | Número de comando | 1110 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

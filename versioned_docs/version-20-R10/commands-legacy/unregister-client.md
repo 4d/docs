@@ -39,7 +39,7 @@ If the client is correctly unregistered, the OK system variable is set to 1\. If
 |  |  |
 | --- | --- |
 | Command number | 649 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

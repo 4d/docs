@@ -5,7 +5,7 @@ slug: /commands/display-notification
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *title* ; *text* {; *duration*} )<!-- END REF-->
+<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *title* : Text ; *text* : Text {; *duration* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ Under Windows, the message window remains displayed as long as no activity has b
 |  |  |
 | --- | --- |
 | Command number | 910 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

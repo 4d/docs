@@ -69,7 +69,7 @@ You want to insert a link to the 4D Web site to replace the text selected in the
 |  |  |
 | --- | --- |
 | Command number | 1280 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

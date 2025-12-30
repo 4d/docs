@@ -77,6 +77,6 @@ Dadas dos columnas de un list box donde los nombres de las variables asociadas s
 |  |  |
 | --- | --- |
 | Número de comando | 870 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

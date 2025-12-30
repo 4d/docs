@@ -86,7 +86,7 @@ You want to copy a selection of records to an archive table by selecting the fie
 |  |  |
 | --- | --- |
 | Command number | 261 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

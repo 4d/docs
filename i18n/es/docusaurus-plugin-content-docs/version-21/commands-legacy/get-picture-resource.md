@@ -47,7 +47,7 @@ Si no hay suficiente memoria para cargar la imagen, se genera un error. Puede in
 |  |  |
 | --- | --- |
 | Número de comando | 502 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

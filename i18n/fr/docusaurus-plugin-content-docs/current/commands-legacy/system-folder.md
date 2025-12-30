@@ -5,11 +5,11 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** ( *type* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| type | Integer | &#8594;  | Type de dossier système |
+| type | Integer | &#8594; | Type de dossier système |
 | Résultat | Text | &#8592; | Chemin d’accès d’un dossier du système actif |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ Vous passez dans *type* un code représentant le type de dossier. 4D fournit les
 |  |  |
 | --- | --- |
 | Numéro de commande | 487 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/open-color-picker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *textOrBackground* )}<!-- END REF-->
+<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** ({ *textOrBackground* : Integer })<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| textOrBackground | Integer | &#8594;  | 0 ou se omite = cor do texto, 1 = cor do fundo do texto |
+| textOrBackground | Integer | &#8594; | 0 ou se omite = cor do texto, 1 = cor do fundo do texto |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ Se a cor mudou, o evento formulário On After Edit é gerado para o objeto.
 |  |  |
 | --- | --- |
 | Número do comando | 1304 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

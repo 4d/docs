@@ -5,7 +5,7 @@ slug: /commands/minimize-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,6 +53,6 @@ Mac OS
 |  |  |
 | --- | --- |
 | Command number | 454 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

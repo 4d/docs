@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( {* ;} *objet* {; *typeListe*}; *liste* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *objet* : Text {; *typeListe* : Integer}; *liste* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *objet* : Field, Variable {; *typeListe* : Integer}; *liste* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| typeListe | Integer | &#8594;  | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
-| liste | Integer | &#8594;  | Numéro de référence de liste |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| typeListe | Integer | &#8594; | Type de liste : Liste énumération, Liste obligations ou Liste exclusions |
+| liste | Integer | &#8594; | Numéro de référence de liste |
 
 <!-- END REF-->
 
@@ -133,6 +133,6 @@ Pour pouvoir mettre à jour la liste associée au pop up géré par tableau, il 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1266 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

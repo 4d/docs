@@ -5,12 +5,12 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *chemin* {; *typeChemin*} ) : Object<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *chemin* : Text {; *typeChemin* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text | &#8594;  | Chemin |
-| typeChemin | Integer | &#8594;  | Type de syntaxe du chemin : Système (par défaut) ou  Posix |
+| chemin | Text | &#8594; | Chemin |
+| typeChemin | Integer | &#8594; | Type de syntaxe du chemin : Système (par défaut) ou  Posix |
 | Résultat | Object | &#8592; | Objet décrivant le contenu du chemin |
 
 <!-- END REF-->
@@ -182,6 +182,6 @@ Vous voulez connaître le nombre de sous-dossiers contenus dans un chemin :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1547 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

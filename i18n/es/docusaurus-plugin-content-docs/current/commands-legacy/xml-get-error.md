@@ -5,11 +5,11 @@ slug: /commands/xml-get-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *elementRef* ; *textoError* {; *linea* {; *columna*}} )<!-- END REF-->
+<!--REF #_command_.XML GET ERROR.Syntax-->**XML GET ERROR** ( *elementRef* : Text ; *textoError* : Variable {; *linea* : Variable {; *columna* : Variable}} )<!-- END REF-->
 <!--REF #_command_.XML GET ERROR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
 | textoError | Variable | &#8592; | Texto del error |
 | linea | Variable | &#8592; | Número de línea |
 | columna | Variable | &#8592; | Número de columna |
@@ -35,7 +35,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 732 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

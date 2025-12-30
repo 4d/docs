@@ -5,12 +5,12 @@ slug: /commands/object-get-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get visible.Syntax-->**OBJECT Get visible** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get visible** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get visible.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
 | 戻り値 | Boolean | &#8592; | True = オブジェクトは表示; そうでなければFalse |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1075 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

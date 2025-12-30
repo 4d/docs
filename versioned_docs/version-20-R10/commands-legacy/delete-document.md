@@ -53,7 +53,7 @@ Deleting a document sets the OK system variable to 1\. If **DELETE DOCUMENT** ca
 |  |  |
 | --- | --- |
 | Command number | 159 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

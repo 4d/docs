@@ -5,11 +5,11 @@ slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Nom de la variable à effacer |
+| variable | Variable | &#8594; | Nom de la variable à effacer |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ Dans un formulaire, vous utilisez une liste déroulante appelée *asMalListeD* n
 |  |  |
 | --- | --- |
 | Numéro de commande | 89 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

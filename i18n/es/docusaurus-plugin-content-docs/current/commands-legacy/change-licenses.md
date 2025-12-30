@@ -45,7 +45,7 @@ De esta forma un usuario puede activar licencias sin tener que modificar la base
 |  |  |
 | --- | --- |
 | Número de comando | 637 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

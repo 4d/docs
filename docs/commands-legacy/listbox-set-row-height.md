@@ -5,7 +5,7 @@ slug: /commands/listbox-set-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( {* ;} *object* ; *row* ; *height* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW HEIGHT.Syntax-->**LISTBOX SET ROW HEIGHT** ( * ; *object* : Text ; *row* : Integer ; *height* : Integer )<br/>**LISTBOX SET ROW HEIGHT** ( *object* : Field, Variable ; *row* : Integer ; *height* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW HEIGHT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -88,6 +88,6 @@ On the other hand, if the code below is executed subsequently…
 |  |  |
 | --- | --- |
 | Command number | 1409 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

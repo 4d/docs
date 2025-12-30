@@ -5,13 +5,13 @@ slug: /commands/listbox-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( {* ;} *objeto* ; *tipoArray* ) : Pointer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( * ; *objeto* : Text ; *tipoArray* : Integer ) : Pointer<br/>**LISTBOX Get array** ( *objeto* : Field, Variable ; *tipoArray* : Integer ) : Pointer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get array.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Variável (se * for omitido) |
-| tipoArray | Integer | &#8594;  | Tipo de array |
+| * | Operador | &#8594; | Se for especificado, objeto é um nome de objeto (cadeia) Se for omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Variável (se * for omitido) |
+| tipoArray | Integer | &#8594; | Tipo de array |
 | Resultado | Pointer | &#8592; | Ponteiro ao array associado a propriedade |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ Exemplos típicos de uso:
 |  |  |
 | --- | --- |
 | Número do comando | 1278 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/release-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* )<!-- END REF-->
+<!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* : Text )<!-- END REF-->
 <!--REF #_command_.RELEASE MENU.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,6 +60,6 @@ This example shows different ways to use this command:
 |  |  |
 | --- | --- |
 | Command number | 978 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -57,6 +57,6 @@ Resultado:
 |  |  |
 | --- | --- |
 | Número do comando | 987 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

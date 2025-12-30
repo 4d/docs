@@ -53,7 +53,7 @@ La suppression d'un document met la variable système OK à 1\. Si **DELETE DOCU
 |  |  |
 | --- | --- |
 | Numéro de commande | 159 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

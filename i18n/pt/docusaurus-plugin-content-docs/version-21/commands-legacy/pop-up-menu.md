@@ -123,6 +123,6 @@ O próximo é o menu pop-up tal como aparece em Windows (esquerda) e Macintosh (
 |  |  |
 | --- | --- |
 | Número do comando | 542 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

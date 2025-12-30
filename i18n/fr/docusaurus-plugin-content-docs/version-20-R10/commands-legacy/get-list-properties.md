@@ -43,6 +43,6 @@ Pour une description complète de ces propriétés d'apparence et de comportemen
 |  |  |
 | --- | --- |
 | Numéro de commande | 632 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

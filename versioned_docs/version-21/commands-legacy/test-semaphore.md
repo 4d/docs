@@ -48,6 +48,6 @@ The following example allows you to know the state of a process (in our case, wh
 |  |  |
 | --- | --- |
 | Command number | 652 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

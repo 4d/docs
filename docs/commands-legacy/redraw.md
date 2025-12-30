@@ -5,7 +5,7 @@ slug: /commands/redraw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *object* )<!-- END REF-->
+<!--REF #_command_.REDRAW.Syntax-->**REDRAW** ( *object* : any )<!-- END REF-->
 <!--REF #_command_.REDRAW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,6 +28,6 @@ In the context of list boxes in selection mode, when the REDRAW statement is app
 |  |  |
 | --- | --- |
 | Command number | 174 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/delete-from-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *BLOB* ; *offset* ; *len* )<!-- END REF-->
+<!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *BLOB* : Blob ; *offset* : Integer ; *len* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | バイト列を削除するBLOB |
-| offset | Integer | &#8594;  | バイト削除開始位置 |
-| len | Integer | &#8594;  | 削除するバイト数 |
+| Blob | Blob | &#8594; | バイト列を削除するBLOB |
+| offset | Integer | &#8594; | バイト削除開始位置 |
+| len | Integer | &#8594; | 削除するバイト数 |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 560 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

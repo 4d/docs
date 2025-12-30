@@ -5,11 +5,11 @@ slug: /commands/set-user-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* )<!-- END REF-->
+<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
 <!--REF #_command_.SET USER ALIAS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| alias | Text | &#8594;  | Alias ou apelido é o nome de usuário alternativo para a conta de usuário 4D ou "" para resetar |
+| alias | Text | &#8594; | Alias ou apelido é o nome de usuário alternativo para a conta de usuário 4D ou "" para resetar |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ Seus usuários se administran através de uma tabela personalizada e utilizam a 
 |  |  |
 | --- | --- |
 | Número do comando | 1666 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Proibido no servidor ||
 
 

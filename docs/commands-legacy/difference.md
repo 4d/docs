@@ -5,7 +5,7 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set1* ; *set2* ; *resultSet* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *set1* : Text ; *set2* : Text ; *resultSet* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,6 +61,6 @@ At the bottom of the list of records is a button with an object method. The obje
 |  |  |
 | --- | --- |
 | Command number | 122 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

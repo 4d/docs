@@ -5,7 +5,7 @@ slug: /commands/listbox-get-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( {* ;} *object* ; *hierarchical* {; *hierarchy*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( * ; *object* : Text ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<br/>**LISTBOX GET HIERARCHY** ( *object* : Field, Variable ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET HIERARCHY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ If the list box is in hierarchical mode, the command fills the *hierarchy* array
 |  |  |
 | --- | --- |
 | Command number | 1099 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

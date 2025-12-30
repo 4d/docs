@@ -35,6 +35,6 @@ La copia comienza en la posición (expresada con relación al comienzo del BLOB 
 |  |  |
 | --- | --- |
 | Número de comando | 558 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

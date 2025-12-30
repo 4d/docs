@@ -5,7 +5,7 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *pictureObject* ; *x* ; *y* ; *width* ; *height* ; *arrIDs* ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ; *width* : Integer ; *height* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ All elements whose bounding rectangle intersects with the selection rectangle ar
 |  |  |
 | --- | --- |
 | Command number | 1109 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

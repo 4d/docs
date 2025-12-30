@@ -5,15 +5,15 @@ slug: /commands/copy-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* ; *dstBLOB* ; *srcOffset* ; *dstOffset* ; *numero* )<!-- END REF-->
+<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* : Blob ; *dstBLOB* : Blob ; *srcOffset* : Integer ; *dstOffset* : Integer ; *numero* : Integer )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| srcBlob | Blob | &#8594;  | BLOB fuente |
-| dstBlob | Blob | &#8594;  | BLOB de destino |
-| srcOffset | Integer | &#8594;  | Posición de la fuente para la copia |
-| dstOffset | Integer | &#8594;  | Posición de destino para la copia |
-| numero | Integer | &#8594;  | Número de bytes a copiar |
+| srcBlob | Blob | &#8594; | BLOB fuente |
+| dstBlob | Blob | &#8594; | BLOB de destino |
+| srcOffset | Integer | &#8594; | Posición de la fuente para la copia |
+| dstOffset | Integer | &#8594; | Posición de destino para la copia |
+| numero | Integer | &#8594; | Número de bytes a copiar |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ La copia comienza en la posición (expresada con relación al comienzo del BLOB 
 |  |  |
 | --- | --- |
 | Número de comando | 558 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

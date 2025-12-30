@@ -5,11 +5,11 @@ slug: /commands/table-fragmentation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* ) : Real<!-- END REF-->
+<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* : Table ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | フラグメント率を取得するテーブル |
+| aTable | Table | &#8594; | フラグメント率を取得するテーブル |
 | 戻り値 | Real | &#8592; | フラグメンテーションの割合 |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1127 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

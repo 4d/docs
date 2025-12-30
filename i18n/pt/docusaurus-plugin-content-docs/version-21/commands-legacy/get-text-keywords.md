@@ -89,6 +89,6 @@ Para contar as palavras de um texto:
 |  |  |
 | --- | --- |
 | Número do comando | 1141 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

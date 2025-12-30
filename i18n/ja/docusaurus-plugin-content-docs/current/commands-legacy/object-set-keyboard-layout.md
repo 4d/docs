@@ -5,13 +5,13 @@ slug: /commands/object-set-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( {* ;} *object* ; *languageCode* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Syntax-->**OBJECT SET KEYBOARD LAYOUT** ( * ; *object* : Text ; *languageCode* : Text )<br/>**OBJECT SET KEYBOARD LAYOUT** ( *object* : Field, Variable ; *languageCode* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET KEYBOARD LAYOUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
-| languageCode | Text | &#8594;  | RFC3066 ISO639 そして ISO3166 言語コード<br/>"" = 変更しない |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| languageCode | Text | &#8594; | RFC3066 ISO639 そして ISO3166 言語コード<br/>"" = 変更しない |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1179 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

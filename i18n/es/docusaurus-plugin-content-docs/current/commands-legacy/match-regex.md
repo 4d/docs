@@ -10,18 +10,13 @@ displayed_sidebar: docs
 <!--REF #_command_.Match regex.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| patron | Text | &#8594;  | Expresión regular |
-| laCadena | Text | &#8594;  | Cadena en la cual se efectúa la búsqueda |
-| inicio | Integer | &#8594;  | Posición de laCadena donde comenzar la búsqueda |
-| pos_encont. | Array entero largo, Variable entero largo | &#8592; | Posición de la ocurrencia |
-| long_encont. | Array entero largo, Variable entero largo | &#8592; | Longitud de la ocurrencia |
-| * | Operador | &#8594;  | Si se pasa: buscar únicamente en la posición indicada |
+| patron | Text | &#8594; | Regular expression (complete equality with two-parameters syntax) |
+| laCadena | Text | &#8594; | Cadena en la cual se efectúa la búsqueda |
+| inicio | Integer | &#8594; | Posición de laCadena donde comenzar la búsqueda |
+| pos_encont. | Integer, Integer array | &#8592; | Posición de la ocurrencia |
+| long_encont. | Integer, Integer array | &#8592; | Longitud de la ocurrencia |
+| * | Operador | &#8594; | Si se pasa: buscar únicamente en la posición indicada |
 | Resultado | Boolean | &#8592; | True = la búsqueda ha encontrado una ocurrencia; De lo contrario, False. |
-| Match regex ( patron ; laCadena ) -> Resultado |
-| Parámetro | Tipo | Descripción |
-| patron | Text | &#8594;  | Expresión regular (igualdad completa) |
-| laCadena | Text | &#8594;  | Cadena en la cual se efectúa la búsqueda |
-| Resultado | Boolean | &#8592; | True= la cadena encuentra una ocurrencia, de lo contrario False |
 
 <!-- END REF-->
 
@@ -120,7 +115,7 @@ En caso de error, el comando genera un error que puede interceptar vía un méto
 |  |  |
 | --- | --- |
 | Número de comando | 1019 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

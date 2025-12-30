@@ -5,11 +5,11 @@ slug: /commands/year-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Year of.Syntax-->**Year of** ( *fecha* ) : Integer<!-- END REF-->
+<!--REF #_command_.Year of.Syntax-->**Year of** ( *fecha* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &#8594;  | Fecha para la cual devolver el año |
+| fecha | Date | &#8594; | Fecha para la cual devolver el año |
 | Resultado | Integer | &#8592; | Número indicando el año de la fecha |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ Ver el ejemplo del comando [Current date](current-date.md "Current date").
 |  |  |
 | --- | --- |
 | Número de comando | 25 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/drop-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *userSession* )<!-- END REF-->
+<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *userSession* : Text )<!-- END REF-->
 <!--REF #_command_.DROP REMOTE USER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userSession | Text | &#8594;  | ユーザーのセッションID |
+| userSession | Text | &#8594; | ユーザーのセッションID |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1633 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

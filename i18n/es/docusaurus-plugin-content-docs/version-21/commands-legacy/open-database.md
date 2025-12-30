@@ -76,6 +76,6 @@ Desea seleccionar un servidor al inicio desde una aplicación mono usuario. Pued
 |  |  |
 | --- | --- |
 | Número de comando | 1321 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

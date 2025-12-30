@@ -5,12 +5,12 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *rutaArchivo* {; *rutaCarpetaDest*} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *rutaArchivo* : Text {; *rutaCarpetaDest* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaArchivo | Text | &#8594;  | Ruta de acceso del archivo a restituir |
-| rutaCarpetaDest | Text | &#8594;  | Ruta de acceso de la carpeta de destino |
+| rutaArchivo | Text | &#8594; | Ruta de acceso del archivo a restituir |
+| rutaCarpetaDest | Text | &#8594; | Ruta de acceso de la carpeta de destino |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ El comando RESTORE modifica el valor de las variables *OK* y *Document*: si la r
 |  |  |
 | --- | --- |
 | Número de comando | 918 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, Document, error |
 
 

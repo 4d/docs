@@ -67,7 +67,7 @@ The following object method for *atNames* selects the correct record in the \[Pe
 |  |  |
 | --- | --- |
 | Command number | 245 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

@@ -316,7 +316,7 @@ A variável Ok toma o valor 0 se:
 |  |  |
 | --- | --- |
 | Número do comando | 277 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

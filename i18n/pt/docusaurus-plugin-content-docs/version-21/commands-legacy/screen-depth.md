@@ -65,6 +65,6 @@ Sua aplicação mostra vários gráficos a cor. Pode escrever em alguma parte em
 |  |  |
 | --- | --- |
 | Número do comando | 439 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

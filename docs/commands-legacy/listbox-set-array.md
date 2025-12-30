@@ -5,7 +5,7 @@ slug: /commands/listbox-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( {* ;} *object* ; *arrType* ; *arrPtr* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ARRAY.Syntax-->**LISTBOX SET ARRAY** ( * ; *object* : Text ; *arrType* : Integer ; *arrPtr* : Pointer )<br/>**LISTBOX SET ARRAY** ( *object* : Field, Variable ; *arrType* : Integer ; *arrPtr* : Pointer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -70,6 +70,6 @@ You want to set a row height array for a list box:
 |  |  |
 | --- | --- |
 | Command number | 1279 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

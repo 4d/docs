@@ -5,7 +5,7 @@ slug: /commands/user-in-group
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.User in group.Syntax-->**User in group** ( *user* ; *group* ) : Boolean<!-- END REF-->
+<!--REF #_command_.User in group.Syntax-->**User in group** ( *user* : Text ; *group* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.User in group.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ The following example searches for specific invoices. If the current user is in 
 |  |  |
 | --- | --- |
 | Command number | 338 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

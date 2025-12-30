@@ -5,12 +5,12 @@ slug: /commands/delete-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *dossier* {; *optionSuppression*} )<!-- END REF-->
+<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *dossier* : Text {; *optionSuppression* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| dossier | Text | &#8594;  | Nom ou chemin d’accès complet du dossier à supprimer |
-| optionSuppression | Integer | &#8594;  | Option de suppression du dossier |
+| dossier | Text | &#8594; | Nom ou chemin d’accès complet du dossier à supprimer |
+| optionSuppression | Integer | &#8594; | Option de suppression du dossier |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ Vous pouvez intercepter ces erreurs à l’aide d’une méthode installée par 
 |  |  |
 | --- | --- |
 | Numéro de commande | 693 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-pasteboard-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *dataType* ; *data* )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA.Syntax-->**GET PASTEBOARD DATA** ( *dataType* : Text ; *data* : Blob )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ If the data is correctly extracted, OK is set to 1; otherwise OK is set to 0 and
 |  |  |
 | --- | --- |
 | Command number | 401 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

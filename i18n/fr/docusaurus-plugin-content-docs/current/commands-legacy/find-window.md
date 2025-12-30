@@ -5,12 +5,12 @@ slug: /commands/find-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find window.Syntax-->**Find window** ( *gauche* ; *haut* {; *partieFenêtre*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find window.Syntax-->**Find window** ( *gauche* : Integer ; *haut* : Integer {; *partieFenêtre* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find window.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| gauche | Integer | &#8594;  | Coordonnée globale gauche |
-| haut | Integer | &#8594;  | Coordonnée globale supérieure |
+| gauche | Integer | &#8594; | Coordonnée globale gauche |
+| haut | Integer | &#8594; | Coordonnée globale supérieure |
 | partieFenêtre | Integer | &#8592; | 3 si une fenêtre est "touchée", 0 sinon |
 | Résultat | Integer | &#8592; | Numéro de référence de fenêtre |
 
@@ -34,6 +34,6 @@ Le paramètre *partieFenêtre* retourne 3 si une fenêtre est touchée, et 0 sin
 |  |  |
 | --- | --- |
 | Numéro de commande | 449 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *zone* ; *numColonne* ; *numRupture* ; *opérateur* )<br/>**QR SET TOTALS DATA** ( *zone* ; *numColonne* ; *numRupture* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *zone* : Integer ; *numColonne* : Integer ; *numRupture* : Integer ; *opérateur* : Entier long, Chaîne )<br/>**QR SET TOTALS DATA** ( *zone* : Integer ; *numColonne* : Integer ; *numRupture* : Integer ; *valeur* : Entier long, Chaîne )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numColonne | Integer | &#8594;  | Numéro de colonne |
-| numRupture | Integer | &#8594;  | Numéro de rupture |
-| opérateur &#124; valeur | Entier long, Chaîne | &#8594;  | Opérateur pour la cellule ou Contenu de la cellule |
+| zone | Integer | &#8594; | Référence de la zone |
+| numColonne | Integer | &#8594; | Numéro de colonne |
+| numRupture | Integer | &#8594; | Numéro de rupture |
+| opérateur &#124; valeur | Entier long, Chaîne | &#8594; | Opérateur pour la cellule ou Contenu de la cellule |
 
 <!-- END REF-->
 
@@ -101,7 +101,7 @@ Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 767 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

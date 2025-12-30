@@ -5,11 +5,11 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licence* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** ( *licence* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| licence | Integer | &#8594;  | Plug-in duquel tester la validité de la licence |
+| licence | Integer | &#8594; | Plug-in duquel tester la validité de la licence |
 | Résultat | Boolean | &#8592; | Vrai si le plug-in est disponible, sinon Faux |
 
 <!-- END REF-->
@@ -52,6 +52,6 @@ Dans ce cas, la commande retourne Vrai si le plug-in correspondant dispose d’u
 |  |  |
 | --- | --- |
 | Numéro de commande | 714 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

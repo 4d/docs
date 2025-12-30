@@ -5,7 +5,7 @@ slug: /commands/dom-find-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *elementRef* ; *xPath* {; *arrElementRefs*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Find XML element.Syntax-->**DOM Find XML element** ( *elementRef* : Text ; *xPath* : Text {; *arrElementRefs* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Find XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -123,7 +123,7 @@ An error is generated when:
 |  |  |
 | --- | --- |
 | Command number | 864 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

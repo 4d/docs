@@ -48,6 +48,6 @@ The following code deletes the currently selected item of the list *hList*. If t
 |  |  |
 | --- | --- |
 | Command number | 624 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

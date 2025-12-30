@@ -5,7 +5,7 @@ slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* ; *class* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* : Object ; *class* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,6 +58,6 @@ Then, in a method, you can write:
 |  |  |
 | --- | --- |
 | Command number | 1731 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

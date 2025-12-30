@@ -5,7 +5,7 @@ slug: /commands/split-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Split string.Syntax-->**Split string** ( *stringToSplit* ; *separator* {; *options*} ) : Collection<!-- END REF-->
+<!--REF #_command_.Split string.Syntax-->**Split string** ( *stringToSplit* : Text ; *separator* : Text {; *options* : Integer} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,6 +63,6 @@ The *separator* parameter can be a multiple-character string:
 |  |  |
 | --- | --- |
 | Command number | 1554 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

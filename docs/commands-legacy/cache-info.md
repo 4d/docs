@@ -5,7 +5,7 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *dbFilter* )} : Object<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** ( *dbFilter* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ You want to get cache information for the database and all opened components:
 |  |  |
 | --- | --- |
 | Command number | 1402 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

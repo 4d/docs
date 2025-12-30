@@ -5,11 +5,11 @@ slug: /commands/is-window-maximized
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *ventana* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *ventana* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window maximized.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana |
+| ventana | Integer | &#8594; | Número de referencia de la ventana |
 | Resultado | Boolean | &#8592; | True si la ventana está maximizada, False en caso contrario |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Quiere cambiar entre el estado maximizado y el anterior:
 |  |  |
 | --- | --- |
 | Número de comando | 1830 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

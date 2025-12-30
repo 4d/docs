@@ -90,6 +90,6 @@ These examples illustrate how to retrieve the digest key of a text:
 |  |  |
 | --- | --- |
 | Command number | 1147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

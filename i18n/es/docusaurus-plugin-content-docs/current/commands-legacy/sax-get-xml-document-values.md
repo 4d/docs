@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-document-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *documento* ; *codificacion* ; *version* ; *autonomo* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *documento* : Time ; *codificacion* : Text ; *version* : Text ; *autonomo* : Boolean )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
+| documento | Time | &#8594; | Referencia del documento abierto |
 | codificacion | Text | &#8592; | Conjunto de caracteres del documento XML |
 | version | Text | &#8592; | Versión XML |
 | autonomo | Boolean | &#8592; | True = el documento es autónomo, de lo contrario es False |
@@ -36,7 +36,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 873 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

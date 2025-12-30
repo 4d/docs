@@ -44,6 +44,6 @@ Pass a constant from the "*PHP*" theme in the *option* parameter to designate th
 |  |  |
 | --- | --- |
 | Command number | 1060 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

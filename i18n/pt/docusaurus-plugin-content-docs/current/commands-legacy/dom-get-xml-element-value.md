@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *refElemento* ; *valorElemento* {; *cDATA*} )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *refElemento* : Text ; *valorElemento* : Variable {; *cDATA* : Variable} )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
+| refElemento | Text | &#8594; | Referência de elemento XML |
 | valorElemento | Variable | &#8592; | Valor do elemento |
 | cDATA | Variable | &#8592; | Conteúdo de seção CDATA |
 
@@ -49,7 +49,7 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 731 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

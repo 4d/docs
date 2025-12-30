@@ -102,6 +102,6 @@ Utilisation d’un élément de tableau d’objets :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1232 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

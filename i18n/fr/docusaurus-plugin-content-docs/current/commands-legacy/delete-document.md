@@ -5,11 +5,11 @@ slug: /commands/delete-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *nomFichier* )<!-- END REF-->
+<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom de document ou Chemin d'accès complet au document |
+| nomFichier | Text | &#8594; | Nom de document ou Chemin d'accès complet au document |
 
 <!-- END REF-->
 
@@ -53,7 +53,7 @@ La suppression d'un document met la variable système OK à 1\. Si **DELETE DOCU
 |  |  |
 | --- | --- |
 | Numéro de commande | 159 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

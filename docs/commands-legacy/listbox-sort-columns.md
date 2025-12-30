@@ -5,14 +5,14 @@ slug: /commands/listbox-sort-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( {* ;} *object* ; *colNum* ; *order* {; *colNum2* ; *order2* ; ... ; *colNumN* ; *orderN*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SORT COLUMNS.Syntax-->**LISTBOX SORT COLUMNS** ( * ; *object* : Text ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<br/>**LISTBOX SORT COLUMNS** ( *object* : Field, Variable ; *colNum* : Integer ; *order* : Operator {; ...(*colNum* : Integer, *order* : Operator)} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SORT COLUMNS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | colNum | Integer | &#8594;  | Column number(s) to sort |
-| order | * | &#8594;  | ">" to sort in ascending order or "<" to sort in descending order |
+| order | Operator | &#8594;  | `>` to sort in ascending order or `<` to sort in descending order |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ In conformity with the principle of list box operation, the columns are synchron
 |  |  |
 | --- | --- |
 | Command number | 916 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

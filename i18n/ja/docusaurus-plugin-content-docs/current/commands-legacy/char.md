@@ -5,11 +5,11 @@ slug: /commands/char
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Char.Syntax-->**Char** ( *charCode* ) : Text<!-- END REF-->
+<!--REF #_command_.Char.Syntax-->**Char** ( *charCode* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Char.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| charCode | Integer | &#8594;  | 文字コード |
+| charCode | Integer | &#8594; | 文字コード |
 | 戻り値 | Text | &#8592; | 文字コードによって表現された文字 |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 90 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

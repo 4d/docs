@@ -5,7 +5,7 @@ slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* : Text array )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 471 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

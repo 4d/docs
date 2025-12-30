@@ -5,16 +5,16 @@ slug: /commands/web-service-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAccès* ; *soapAction* ; *nomMéthode* ; *nameSpace* {; *typeComposé* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE CALL.Syntax-->**WEB SERVICE CALL** ( *urlAccès* : Text ; *soapAction* : Text ; *nomMéthode* : Text ; *nameSpace* : Text {; *typeComposé* : Integer {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE CALL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| urlAccès | Text | &#8594;  | URL d’accès au Web Service |
-| soapAction | Text | &#8594;  | Contenu du champ SOAPAction |
-| nomMéthode | Text | &#8594;  | Nom de la méthode |
-| nameSpace | Text | &#8594;  | Espace de nommage |
-| typeComposé | Integer | &#8594;  | Configuration de types composés (types simples si omis) |
-| * | Opérateur | &#8594;  | Ne pas fermer la connexion |
+| urlAccès | Text | &#8594; | URL d’accès au Web Service |
+| soapAction | Text | &#8594; | Contenu du champ SOAPAction |
+| nomMéthode | Text | &#8594; | Nom de la méthode |
+| nameSpace | Text | &#8594; | Espace de nommage |
+| typeComposé | Integer | &#8594; | Configuration de types composés (types simples si omis) |
+| * | Opérateur | &#8594; | Ne pas fermer la connexion |
 
 <!-- END REF-->
 
@@ -154,7 +154,7 @@ Si la requête est correctement acheminée et que le Web Service l’a acceptée
 |  |  |
 | --- | --- |
 | Numéro de commande | 778 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

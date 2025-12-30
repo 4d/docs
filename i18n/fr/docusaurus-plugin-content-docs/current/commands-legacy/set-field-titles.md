@@ -5,14 +5,14 @@ slug: /commands/set-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *laTable* ; *titresChamps* ; *numChamps* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *laTable* : Table ; *titresChamps* : Text array ; *numChamps* : Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dont vous voulez redéfinir les titres des champs |
-| titresChamps | Text array | &#8594;  | Nouveaux titres des champs |
-| numChamps | Integer array | &#8594;  | Numéros des champs |
-| * | Operator |  &#8594;  | Utiliser les noms personnalisés dans l’éditeur de formules |
+| laTable | Table | &#8594; | Table dont vous voulez redéfinir les titres des champs |
+| titresChamps | Text array | &#8594; | Nouveaux titres des champs |
+| numChamps | Integer array | &#8594; | Numéros des champs |
+| * | Operator | &#8594; | Utiliser les noms personnalisés dans l’éditeur de formules |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ Reportez-vous à l'exemple de la commande [SET TABLE TITLES](set-table-titles.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 602 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/trunc
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* ; *places* ) : Real<!-- END REF-->
+<!--REF #_command_.Trunc.Syntax-->**Trunc** ( *number* : Real ; *places* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Trunc.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ The following example illustrates how Trunc works with different arguments. Each
 |  |  |
 | --- | --- |
 | Command number | 95 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

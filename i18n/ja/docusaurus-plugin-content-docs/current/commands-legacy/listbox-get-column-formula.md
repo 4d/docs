@@ -5,12 +5,12 @@ slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( * ; *object* : Text ) : Text<br/>**LISTBOX Get column formula** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | 列に割り当てられたフォーミュラ |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1202 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *racine* {; *nameSpace*} {; *nSNom* ; *nSValeur*} {; *nSNom2* ; *nSValeur2* ; ... ; *nSNomN* ; *nSValeurN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *racine* : Text {; *nameSpace* : Text} {; *nSNom* : Text ; *nSValeur* : Text} {; ...(*nSNom* : Text, *nSValeur* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| racine | Text | &#8594;  | Nom de l’élément racine |
-| nameSpace | Text | &#8594;  | Valeur de l’espace de nommage (Namespace) |
-| nSNom | Text | &#8594;  | Nom d’espace de nommage |
-| nSValeur | Text | &#8594;  | Valeur d’espace de nommage |
+| racine | Text | &#8594; | Nom de l’élément racine |
+| nameSpace | Text | &#8594; | Valeur de l’espace de nommage (Namespace) |
+| nSNom | Text | &#8594; | Nom d’espace de nommage |
+| nSValeur | Text | &#8594; | Valeur d’espace de nommage |
 | Résultat | Text | &#8592; | Référence de l’élément XML racine |
 
 <!-- END REF-->
@@ -103,7 +103,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 861 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

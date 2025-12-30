@@ -5,7 +5,7 @@ slug: /commands/log-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*outputType* ;} *message* {; *importance*} )<!-- END REF-->
+<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*outputType* : Integer ;} *message* : Text {; *importance* : Integer} )<!-- END REF-->
 <!--REF #_command_.LOG EVENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -70,6 +70,6 @@ Each time the database is opened, this information will be written in Windows’
 |  |  |
 | --- | --- |
 | Command number | 667 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

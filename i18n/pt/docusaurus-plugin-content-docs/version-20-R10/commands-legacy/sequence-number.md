@@ -65,6 +65,6 @@ O exemplo a seguir é parte de um método de formulário. Estas linhas de códig
 |  |  |
 | --- | --- |
 | Número do comando | 244 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

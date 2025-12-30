@@ -5,11 +5,11 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Devuelve el esquema de color de la base local |
+| * | Operador | &#8594; | Devuelve el esquema de color de la base local |
 | Resultado | Text | &#8592; | Esquema de color de la aplicación actual |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ Consulte la descripción del comando [SET APPLICATION COLOR SCHEME](set-applicat
 |  |  |
 | --- | --- |
 | Número de comando | 1763 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

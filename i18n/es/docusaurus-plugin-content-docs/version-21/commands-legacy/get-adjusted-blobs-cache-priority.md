@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1428 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

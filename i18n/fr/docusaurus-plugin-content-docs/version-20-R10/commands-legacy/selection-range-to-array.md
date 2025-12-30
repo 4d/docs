@@ -112,6 +112,6 @@ Utilisation des 50 premiers enregistrements courants de la table \[Factures\] po
 |  |  |
 | --- | --- |
 | Numéro de commande | 368 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

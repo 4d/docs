@@ -5,11 +5,11 @@ slug: /commands/build-application
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *nomProjet* )}<!-- END REF-->
+<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *nomProjet* : Text })<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomProjet | Text | &#8594;  | Chemin d’accès complet du projet à utiliser |
+| nomProjet | Text | &#8594; | Chemin d’accès complet du projet à utiliser |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ Si la commande échoue, une erreur est générée, que vous pouvez intercepter �
 |  |  |
 | --- | --- |
 | Numéro de commande | 871 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, Document, error |
 | Interdite sur le serveur ||
 

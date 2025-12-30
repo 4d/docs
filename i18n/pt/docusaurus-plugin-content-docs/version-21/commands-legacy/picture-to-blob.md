@@ -56,7 +56,7 @@ Se quiser converter uma imagem de um formato proprietário a formato GIF e mostr
 |  |  |
 | --- | --- |
 | Número do comando | 692 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( {* ;} *objeto* ; *izquierdo* ; *superior* ; *derecho* ; *inferior* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET COORDINATES.Syntax-->**OBJECT GET COORDINATES** ( * ; *objeto* : Text ; *izquierdo* : Integer ; *superior* : Integer ; *derecho* : Integer ; *inferior* : Integer )<br/>**OBJECT GET COORDINATES** ( *objeto* : Field, Variable ; *izquierdo* : Integer ; *superior* : Integer ; *derecho* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET COORDINATES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es el nombre del objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es el nombre del objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
 | izquierdo | Integer | &#8592; | Coordenada izquierada del objeto |
 | superior | Integer | &#8592; | Coordenada superior del objeto |
 | derecho | Integer | &#8592; | Coordenada derecha del objeto |
@@ -90,6 +90,6 @@ El método devuelve las coordenadas teóricas. Si el listbox es redimensionado, 
 |  |  |
 | --- | --- |
 | Número de comando | 663 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

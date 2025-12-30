@@ -59,6 +59,6 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo Fecha y asigna a
 |  |  |
 | --- | --- |
 | Número de comando | 224 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

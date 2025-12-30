@@ -73,6 +73,6 @@ Cet exemple génère un hash de mot de passe à l'aide de bcrypt avec un coût d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

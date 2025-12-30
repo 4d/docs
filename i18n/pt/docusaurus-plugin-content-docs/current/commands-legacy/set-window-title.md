@@ -5,12 +5,12 @@ slug: /commands/set-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *titulo* {; *janela*} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *titulo* : Text {; *janela* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| titulo | Text | &#8594;  | título da janela |
-| janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| titulo | Text | &#8594; | título da janela |
+| janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ Enquanto realiza uma entrada de dados em um formulário, você clica em um botã
 |  |  |
 | --- | --- |
 | Número do comando | 213 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

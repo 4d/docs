@@ -5,12 +5,12 @@ slug: /commands/set-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *aller* {; *retour*} )<!-- END REF-->
+<!--REF #_command_.SET AUTOMATIC RELATIONS.Syntax-->**SET AUTOMATIC RELATIONS** ( *aller* : Boolean {; *retour* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET AUTOMATIC RELATIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aller | Boolean | &#8594;  | Statut de tous les liens de N vers 1 |
-| retour | Boolean | &#8594;  | Statut de tous les liens de 1 vers N |
+| aller | Boolean | &#8594; | Statut de tous les liens de N vers 1 |
+| retour | Boolean | &#8594; | Statut de tous les liens de 1 vers N |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ L'exemple suivant rend tous les liens N vers 1 automatiques et rétablit en manu
 |  |  |
 | --- | --- |
 | Numéro de commande | 310 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

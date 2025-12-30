@@ -41,6 +41,6 @@ La página mostrada es el URL "www.apple.com" y la página "www.4dhispano.com" e
 |  |  |
 | --- | --- |
 | Número de comando | 1025 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

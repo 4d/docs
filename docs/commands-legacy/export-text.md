@@ -5,7 +5,7 @@ slug: /commands/export-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ OK is set to 1 if the export is successfully completed; otherwise, it is set to 
 |  |  |
 | --- | --- |
 | Command number | 167 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

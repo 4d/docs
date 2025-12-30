@@ -5,11 +5,11 @@ slug: /commands/record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Record number.Syntax-->**Record number** {( *laTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Record number.Syntax-->**Record number** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de laquelle vous souhaitez obtenir le numéro de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &#8592; | Numéro d'enregistrement courant |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ L'exemple suivant sauvegarde le numéro d'enregistrement courant puis cherche da
 |  |  |
 | --- | --- |
 | Numéro de commande | 243 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

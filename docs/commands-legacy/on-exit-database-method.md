@@ -111,6 +111,6 @@ The following example shows a typical case where you launch one or more backgrou
 |  |  |
 | --- | --- |
 | Command number | 905252 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

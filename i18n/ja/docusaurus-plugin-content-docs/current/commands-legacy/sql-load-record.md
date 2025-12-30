@@ -5,11 +5,11 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** {( *numRecords* )}<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ({ *numRecords* : Integer })<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| numRecords | Integer | &#8594;  | ロードするレコード数 |
+| numRecords | Integer | &#8594; | ロードするレコード数 |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 822 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

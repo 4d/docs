@@ -55,7 +55,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 728 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

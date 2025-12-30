@@ -180,6 +180,6 @@ You want to know the number of subfolders contained in a path:
 |  |  |
 | --- | --- |
 | Command number | 1547 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

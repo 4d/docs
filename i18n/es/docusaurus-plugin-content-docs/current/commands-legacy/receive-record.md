@@ -5,11 +5,11 @@ slug: /commands/receive-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla en la cual recibir el registro o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla en la cual recibir el registro o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -157,7 +157,7 @@ La variable sistema OK toma el valor 1 si se recibe el registro. De lo contrario
 |  |  |
 | --- | --- |
 | Número de comando | 79 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

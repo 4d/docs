@@ -5,11 +5,11 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *tipo* )} : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** ( *tipo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tipo | Integer | &#8594;  | Tipo de pasta sistema |
+| tipo | Integer | &#8594; | Tipo de pasta sistema |
 | Resultado | Text | &#8592; | Rota de acesso de uma pasta do sistema ativo |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ Se omitido o parâmetro *tipo*, a função devolverá a rota à pasta sistema at
 |  |  |
 | --- | --- |
 | Número do comando | 487 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/web-send-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlFile* )<!-- END REF-->
+<!--REF #_command_.WEB SEND FILE.Syntax-->**WEB SEND FILE** ( *htmlFile* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,7 +55,7 @@ If the file to be sent exists and if the timeout has not run out, OK is set to 1
 |  |  |
 | --- | --- |
 | Command number | 619 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

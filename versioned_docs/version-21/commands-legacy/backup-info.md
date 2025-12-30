@@ -37,6 +37,6 @@ Pass the type of information to get in *selector*. The type and content of the *
 |  |  |
 | --- | --- |
 | Command number | 888 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

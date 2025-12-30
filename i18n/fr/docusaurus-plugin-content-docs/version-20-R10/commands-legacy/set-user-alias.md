@@ -46,7 +46,7 @@ Vos utilisateurs sont gérés via une table personnalisée et utilisent le même
 |  |  |
 | --- | --- |
 | Numéro de commande | 1666 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Interdite sur le serveur ||
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-picture-formats
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *picture* ; *codecIDs* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *picture* : Picture ; *codecIDs* : Text array )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -52,6 +52,6 @@ You want to know the picture formats stored in a field for the current record:
 |  |  |
 | --- | --- |
 | Command number | 1406 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

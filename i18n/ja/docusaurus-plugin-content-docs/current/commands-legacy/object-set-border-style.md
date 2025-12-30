@@ -5,13 +5,13 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( {* ;} *object* ; *borderStyle* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *object* : Text ; *borderStyle* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *object* : Field, Variable ; *borderStyle* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| borderStyle | Integer | &#8594;  | 境界線スタイル |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| borderStyle | Integer | &#8594; | 境界線スタイル |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1262 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

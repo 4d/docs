@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-set-data-context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET DATA CONTEXT.Syntax-->**WP SET DATA CONTEXT** ( *wpDoc* ; *datosContext* )<!-- END REF-->
+<!--REF #_command_.WP SET DATA CONTEXT.Syntax-->**WP SET DATA CONTEXT** ( *wpDoc* : Object ; *datosContext* : Object )<!-- END REF-->
 <!--REF #_command_.WP SET DATA CONTEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

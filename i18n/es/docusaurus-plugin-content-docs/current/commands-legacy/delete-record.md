@@ -5,11 +5,11 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual borrar el registro actual, o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual borrar el registro actual, o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ El siguiente ejemplo borra un registro de un empleado. El código pregunta al us
 |  |  |
 | --- | --- |
 | Número de comando | 58 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

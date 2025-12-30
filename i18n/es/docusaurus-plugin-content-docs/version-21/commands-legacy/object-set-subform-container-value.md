@@ -37,6 +37,6 @@ A detailed example is available in the [OBJECT Get subform container value](obje
 |  |  |
 | --- | --- |
 | Número de comando | 1784 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

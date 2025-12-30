@@ -43,6 +43,6 @@ Passez dans *sélecteur* une des constantes du thème *XML* ci-dessous, indiquan
 |  |  |
 | --- | --- |
 | Numéro de commande | 1096 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

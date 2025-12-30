@@ -5,15 +5,15 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *rutaEstructura* ; *rutaDatos* {; *carpetaArchivo* {; *opcion* {; *metodo*}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *rutaEstructura* : Text ; *rutaDatos* : Text {; *carpetaArchivo* : Text {; *opcion* : Integer {; *metodo* : Text}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstructura | Text | &#8594;  | Ruta de acceso al archivo de estructura |
-| rutaDatos | Text | &#8594;  | Ruta de acceso al archivo de datos |
-| carpetaArchivo | Text | &#8594;  | Ruta de acceso a la carpeta donde se colocará el archivo de datos original |
-| opcion | Integer | &#8594;  | Opciones de compactación |
-| metodo | Text | &#8594;  | Nombre del método 4D de retrollamada |
+| rutaEstructura | Text | &#8594; | Ruta de acceso al archivo de estructura |
+| rutaDatos | Text | &#8594; | Ruta de acceso al archivo de datos |
+| carpetaArchivo | Text | &#8594; | Ruta de acceso a la carpeta donde se colocará el archivo de datos original |
+| opcion | Integer | &#8594; | Opciones de compactación |
+| metodo | Text | &#8594; | Nombre del método 4D de retrollamada |
 | Resultado | Text | &#8592; | Ruta de acceso completa de la carpeta que contiene el archivo de datos original |
 
 <!-- END REF-->
@@ -76,7 +76,7 @@ Si la operación de compactación se lleva a cabo correctamente, la variable sis
 |  |  |
 | --- | --- |
 | Número de comando | 937 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

@@ -54,7 +54,7 @@ If a record number is invalid (record not created), the error -10503 is generate
 |  |  |
 | --- | --- |
 | Command number | 640 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 | Changes current selection ||
 

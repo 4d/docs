@@ -59,6 +59,6 @@ Este exemplo cria um array de interprocesso de elementos do tipo texto e atribui
 |  |  |
 | --- | --- |
 | Número do comando | 222 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -99,6 +99,6 @@ O método de objeto de list box da esquerda (destino) contém o código abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 608 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

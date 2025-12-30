@@ -5,13 +5,13 @@ slug: /commands/open-settings-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *sélecteur* {; *accès* {; *typePropriétés*}} )<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *sélecteur* : Text {; *accès* : Boolean {; *typePropriétés* : Integer}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Text | &#8594;  | Clé désignant un thème ou une page de la boîte de dialogue des Préférences ou des Propriétés de la base |
-| accès | Boolean | &#8594;  | Vrai=Verrouiller les autres pages de la boîte de dialogue, Faux ou omis=Laisser actives les autres pages de la boîte de dialogue |
-| typePropriétés | Integer | &#8594;  | 0 ou omis = Propriétés structure (mode standard), 1 = Propriétés utilisateur, 2 = Propriétés utilisateur pour données |
+| sélecteur | Text | &#8594; | Clé désignant un thème ou une page de la boîte de dialogue des Préférences ou des Propriétés de la base |
+| accès | Boolean | &#8594; | Vrai=Verrouiller les autres pages de la boîte de dialogue, Faux ou omis=Laisser actives les autres pages de la boîte de dialogue |
+| typePropriétés | Integer | &#8594; | 0 ou omis = Propriétés structure (mode standard), 1 = Propriétés utilisateur, 2 = Propriétés utilisateur pour données |
 
 <!-- END REF-->
 
@@ -144,7 +144,7 @@ Si la boîte de dialogue des préférences/propriétés est validée, la variabl
 |  |  |
 | --- | --- |
 | Numéro de commande | 903 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

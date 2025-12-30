@@ -5,12 +5,12 @@ slug: /commands/object-get-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( {* ;} *objeto* ; *tamVariable* {; *subformFijo*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( * ; *objeto* : Text ; *tamVariable* : Boolean {; *subformFijo* : Integer} )<br/>**OBJECT GET PRINT VARIABLE FRAME** ( *objeto* : Field, Variable ; *tamVariable* : Boolean {; *subformFijo* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
 | tamVariable | Boolean | &#8592; | True = Impresión tamaño variable, False = impresión tamaño fijo |
 | subformFijo | Integer | &#8592; | Opción para impresión de subformularios de tamaño fijo |
 
@@ -41,6 +41,6 @@ Si el *objeto* es un subformulario y si la impresión en tamaño variable está 
 |  |  |
 | --- | --- |
 | Número de comando | 1241 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

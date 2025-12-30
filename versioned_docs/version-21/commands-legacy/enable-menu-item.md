@@ -36,7 +36,7 @@ If you omit the *process* parameter, **ENABLE MENU ITEM** applies to the menu ba
 |  |  |
 | --- | --- |
 | Command number | 149 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

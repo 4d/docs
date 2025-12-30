@@ -5,7 +5,7 @@ slug: /commands/get-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *izquierda* ; *superior* ; *derecha* ; *inferior* )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *izquierda* : Integer ; *superior* : Integer ; *derecha* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE MARGIN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ Es posible basar la impresión de los formularios efectuados utilizando los coma
 |  |  |
 | --- | --- |
 | Número de comando | 711 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

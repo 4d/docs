@@ -5,13 +5,13 @@ slug: /commands/insert-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *source* ; *what* ; *where* ) : Text<!-- END REF-->
+<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *source* : Text ; *what* : Text ; *where* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Insert string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | 文字列を挿入する文字列 |
-| what | Text | &#8594;  | 挿入する文字列 |
-| where | Integer | &#8594;  | 挿入する位置 |
+| source | Text | &#8594; | 文字列を挿入する文字列 |
+| what | Text | &#8594; | 挿入する文字列 |
+| where | Integer | &#8594; | 挿入する位置 |
 | 戻り値 | Text | &#8592; | 結果の文字列 |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ Insert string関数の使用例を次に示します。結果を変数*vtResult*
 |  |  |
 | --- | --- |
 | コマンド番号 | 231 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

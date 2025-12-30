@@ -80,6 +80,6 @@ Se quiser aplicar a configuração de impressão salva no disco para o contexto 
 |  |  |
 | --- | --- |
 | Número do comando | 1434 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

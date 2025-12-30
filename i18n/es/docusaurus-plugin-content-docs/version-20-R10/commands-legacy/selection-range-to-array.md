@@ -114,6 +114,6 @@ Uso de los 50 primeros registros actuales de la tabla \[Facturas\] para cargar v
 |  |  |
 | --- | --- |
 | Número de comando | 368 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

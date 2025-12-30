@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 19 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

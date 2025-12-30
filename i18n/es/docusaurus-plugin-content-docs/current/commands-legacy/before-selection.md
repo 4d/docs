@@ -5,11 +5,11 @@ slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *tabla* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Before selection.Syntax-->**Before selection** ( *tabla* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla para la cual probar si el puntero se encuentra antes del primer registro seleccionado o Tabla por defecto, si se omite |
 | Resultado | Boolean | &#8592; | Sí (TRUE) o No (FALSE) |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ Este método de formulario se utiliza durante la impresión de un informe. Defin
 |  |  |
 | --- | --- |
 | Número de comando | 198 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

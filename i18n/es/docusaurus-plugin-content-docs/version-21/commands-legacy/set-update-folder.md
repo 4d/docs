@@ -59,7 +59,7 @@ Usted creó una carpeta "MyUpdates" en su disco, en la cual ubicó una nueva ver
 |  |  |
 | --- | --- |
 | Número de comando | 1291 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

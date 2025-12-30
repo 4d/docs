@@ -32,7 +32,7 @@ If **PREVIOUS RECORD** moves the current record pointer before the current selec
 |  |  |
 | --- | --- |
 | Command number | 110 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

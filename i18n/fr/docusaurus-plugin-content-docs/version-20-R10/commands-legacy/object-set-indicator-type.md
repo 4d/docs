@@ -40,6 +40,6 @@ Passez dans le paramètre *indicateur* le type d’indicateur à afficher. Vous 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1246 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

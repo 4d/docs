@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.New shared collection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| value |Number, Text, Date, Time, Boolean, Object, Collection| &#8594;  | Shared collection's value(s) |
+| value |any| &#8594;  | Shared collection's value(s) |
 | Function result | Collection | &#8592; | New shared collection |
 
 <!-- END REF-->
@@ -76,6 +76,6 @@ Unlike standard (not shared) collections, shared collections do not support pict
 |  |  |
 | --- | --- |
 | Command number | 1527 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

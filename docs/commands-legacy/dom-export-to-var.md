@@ -5,7 +5,7 @@ slug: /commands/dom-export-to-var
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *elementRef* ; *vXmlVar* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *elementRef* : Text ; *vXmlVar* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,7 +61,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 863 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

@@ -10,12 +10,12 @@ displayed_sidebar: docs
 <!--REF #_command_.SET CHANNEL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| porta | Integer | &#8594;  | Número da porta serial |
-| configuraçao | Integer | &#8594;  | Configuração da porta serial |
-| SET CHANNEL ( operaçao ; documento ) |
-| Parâmetro | Tipo | Descrição |
-| operaçao | Integer | &#8594;  | Operação de documento a ser realizada |
-| documento | Text | &#8594;  | Nome do documento |
+| porta | Integer | &#8594; | Número da porta serial |
+| configuraçao | Integer | &#8594; | Configuração da porta serial |
+| SET CHANNEL ( operaçao ; documento ) |  |  |  |
+| Parâmetro | Tipo | Descrição |  |
+| operaçao | Integer | &#8594; | Operação de documento a ser realizada |
+| documento | Text | &#8594; | Nome do documento |
 
 <!-- END REF-->
 
@@ -175,7 +175,7 @@ Veja os exemplos para os comandos [RECEIVE BUFFER](receive-buffer.md "RECEIVE BU
 |  |  |
 | --- | --- |
 | Número do comando | 77 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

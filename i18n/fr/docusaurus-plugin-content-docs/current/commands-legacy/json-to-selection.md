@@ -5,12 +5,12 @@ slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *laTable* ; *jsonTab* )<!-- END REF-->
+<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *laTable* : Table ; *jsonTab* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table 4D dans laquelle copier les éléments |
-| jsonTab | Text | &#8594;  | Tableau d'objets en JSON |
+| laTable | Table | &#8594; | Table 4D dans laquelle copier les éléments |
+| jsonTab | Text | &#8594; | Tableau d'objets en JSON |
 
 <!-- END REF-->
 
@@ -74,6 +74,6 @@ Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrement
 |  |  |
 | --- | --- |
 | Numéro de commande | 1235 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

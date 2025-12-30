@@ -24,7 +24,7 @@ Si vous modifiez ce paramètre, vous devez redémarrer la base du serveur pour q
 
 #### Nom de publication
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Opening a remote project](../Desktop/clientServer.md#opening-a-remote-project) paragraph). Par défaut, 4D Server utilise le nom du fichier de projet. Vous pouvez saisir le nom personnalisé de votre choix.
+Cette option permet de modifier le nom de publication d'une base de données 4D Server, c'est-à-dire le nom affiché dans l'onglet dynamique **Disponible** de la boîte de dialogue de connexion (voir le paragraphe [Ouverture d'un projet distant](../Desktop/clientServer.md#opening-a-remote-project)). Par défaut, 4D Server utilise le nom du fichier de projet. Vous pouvez saisir le nom personnalisé de votre choix.
 
 :::note
 
@@ -39,7 +39,7 @@ Cette option vous permet de modifier le numéro du port TCP sur lequel 4D Server
 La personnalisation de cette valeur est nécessaire lorsque vous souhaitez utiliser plusieurs applications 4D sur la même machine ; dans ce cas, vous devez spécifier un numéro de port différent pour chaque application.
 Lorsque vous modifiez cette valeur depuis 4D Server ou 4D, elle est automatiquement passée à toutes les machines 4D connectées à la base de données.
 
-Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il suffit de saisir le nouveau numéro de port (précédé de deux points) après l'adresse IP de la machine serveur dans l'onglet **Personnalisé** de la boîte de dialogue de connexion Par exemple, si le nouveau numéro de port est 19888 : Par exemple, si le nouveau numéro de port est 19888 : Par exemple, si le nouveau numéro de port est 19888 :
+Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il suffit de saisir le nouveau numéro de port (précédé de deux points) après l'adresse IP de la machine serveur dans l'onglet **Personnalisé** de la boîte de dialogue de connexion. Par exemple, si le nouveau numéro de port est 19888 :
 
 ![](../assets/en/settings/client-server-network.png)
 

@@ -59,6 +59,6 @@ Definición de los arrays aPais, aRegion y aCiudad como jerarquía de un list bo
 |  |  |
 | --- | --- |
 | Número de comando | 1098 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

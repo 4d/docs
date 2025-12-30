@@ -5,7 +5,7 @@ slug: /commands/object-get-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get filter.Syntax-->**OBJECT Get filter** ( * ; *object* : Text ) : Text<br/>**OBJECT Get filter** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get filter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 |  |  |
 | --- | --- |
 | Command number | 1073 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* ; *encoding* {; *standalone*} )<!-- END REF-->
+<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *document* : Time ; *encoding* : Text {; *standalone* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
-| encoding | Text | &#8594;  | XMLドキュメント文字セット |
-| standalone | Boolean | &#8594;  | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
+| encoding | Text | &#8594; | XMLドキュメント文字セット |
+| standalone | Boolean | &#8594; | True = ドキュメントはスタンドアロン False (デフォルト) = ドキュメントはスタンドアロンではない |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 858 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

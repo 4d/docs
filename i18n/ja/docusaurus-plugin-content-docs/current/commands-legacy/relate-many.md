@@ -5,11 +5,11 @@ slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* )<br/>**RELATE MANY** ( *Field* )<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* : テーブル, フィールド )<br/>**RELATE MANY** ( *Field* : テーブル, フィールド )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| oneTable &#124; Field | テーブル, フィールド | &#8594;  | すべての1対nリレーションを実行するテーブル または1フィールド |
+| oneTable &#124; Field | テーブル, フィールド | &#8594; | すべての1対nリレーションを実行するテーブル または1フィールド |
 
 <!-- END REF-->
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 262 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントセレクションを変更する ||
 
 

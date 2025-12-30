@@ -5,14 +5,14 @@ slug: /commands/blob-to-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *BLOB* ; *variable* {; *offset*} )<!-- END REF-->
+<!--REF #_command_.BLOB TO VARIABLE.Syntax-->**BLOB TO VARIABLE** ( *BLOB* : Blob ; *variable* : Variable {; *offset* : Integer} )<!-- END REF-->
 <!--REF #_command_.BLOB TO VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | 4D変数を格納したBLOB |
+| Blob | Blob | &#8594; | 4D変数を格納したBLOB |
 | variable | Variable | &#8592; | BLOBの内容を書き込む変数 |
-| offset | Integer |&#8596;  | BLOB内の変数の位置 |
-| || | BLOB内の次の変数の位置 |
+| offset | Integer | &#8596; | BLOB内の変数の位置 |
+|  |  |  | BLOB内の次の変数の位置 |
 
 <!-- END REF-->
 
@@ -50,7 +50,7 @@ BLOB TO VARIABLEと[VARIABLE TO BLOB](variable-to-blob.md)は4Dの内部フォ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 533 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

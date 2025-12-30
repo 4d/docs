@@ -103,6 +103,6 @@ Cet exemple permet d’exporter et d’importer la totalité des méthodes proje
 |  |  |
 | --- | --- |
 | Numéro de commande | 1194 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

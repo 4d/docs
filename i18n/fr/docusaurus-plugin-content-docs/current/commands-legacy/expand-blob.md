@@ -5,11 +5,11 @@ slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *blob* )<!-- END REF-->
+<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *blob* : Blob )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB à décompresser |
+| Blob | Blob | &#8594; | BLOB à décompresser |
 
 <!-- END REF-->
 
@@ -71,7 +71,7 @@ La variable OK prend la valeur 1 si le BLOB a été correctement décompressé, 
 |  |  |
 | --- | --- |
 | Numéro de commande | 535 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get vertical alignment** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | Résultat | Integer | &#8592; | Type d’alignement |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 |  |  |
 | --- | --- |
 | Numéro de commande | 1188 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

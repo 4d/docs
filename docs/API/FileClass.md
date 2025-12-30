@@ -695,7 +695,7 @@ $app.setAppInfo($info)
 <!--REF #FileClass.setContent().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|content|BLOB|->|New contents for the file|
+|content|Blob|->|New contents for the file|
 <!-- END REF -->
 
 #### Description

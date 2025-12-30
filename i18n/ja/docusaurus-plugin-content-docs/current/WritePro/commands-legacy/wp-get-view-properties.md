@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-view-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get view properties.Syntax-->**WP Get view properties** ( * ; *wpArea* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WP Get view properties.Syntax-->**WP Get view properties** ( * ; *wpArea* : Text, Object ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get view properties.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

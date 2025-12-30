@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| map &#124; * | 文字, 演算子 | &#8594;  | 使用する文字セット名 (Unicodeモード), または 使用するASCIIマップドキュメント名 (ASCIIモード), または * の場合、デフォルトの文字セット/ASCIIマップにリセット |
-| mapInOut | Integer | &#8594;  | 0 = 出力マップ 1 = 入力マップ 省略した場合、出力マップ |
+| map &#124; * | Text, Operator | &#8594; | 使用する文字セット名 (Unicodeモード), または 使用するASCIIマップドキュメント名 (ASCIIモード), または * の場合、デフォルトの文字セット/ASCIIマップにリセット |
+| mapInOut | Integer | &#8594; | 0 = 出力マップ 1 = 入力マップ 省略した場合、出力マップ |
 
 <!-- END REF-->
 
@@ -60,7 +60,7 @@ IANA名に関する説明は[CONVERT FROM TEXT](convert-from-text.md)コマン�
 |  |  |
 | --- | --- |
 | コマンド番号 | 205 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

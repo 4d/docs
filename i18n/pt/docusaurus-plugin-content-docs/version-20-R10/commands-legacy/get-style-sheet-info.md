@@ -70,7 +70,7 @@ Se quiser conhecer a configuração atual da folha de estilo "Automatic"
 |  |  |
 | --- | --- |
 | Número do comando | 1256 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

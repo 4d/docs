@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Last field number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable &#124; ptrTable | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur vers une table |
+| numTable &#124; ptrTable | Entier long, Pointeur | &#8594; | Numéro de table ou Pointeur vers une table |
 | Résultat | Integer | &#8592; | Numéro de champ le plus élevé dans la table |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ La méthode projet suivante crée le tableau *taChamps* avec les noms des champs
 |  |  |
 | --- | --- |
 | Numéro de commande | 255 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

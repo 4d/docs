@@ -56,6 +56,6 @@ The following project method tiles all the current open window, except floating 
 |  |  |
 | --- | --- |
 | Command number | 442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -188,6 +188,6 @@ This example illustrates the results of different types of declarations:
 |  |  |
 | --- | --- |
 | Command number | 782 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( *fieldPtr* ) : Text<br/>**Field name** ( *tableNum* ; *fieldNum* ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *fieldPtr* : ポインター, 倍長整数 ) : Text<br/>**Field name** ( *tableNum* : ポインター, 倍長整数 ; *fieldNum* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#8594;  | フィールドポインタ、またはテーブル番号 |
-| fieldNum | Integer | &#8594;  | 最初の引数にテーブル番号を渡した場合は、 フィールド番号 |
+| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#8594; | フィールドポインタ、またはテーブル番号 |
+| fieldNum | Integer | &#8594; | 最初の引数にテーブル番号を渡した場合は、 フィールド番号 |
 | 戻り値 | Text | &#8592; | フィールド名 |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 257 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

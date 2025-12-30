@@ -44,6 +44,6 @@ This command cannot be called from within a 4D formula.
 |  |  |
 | --- | --- |
 | Command number | 684 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

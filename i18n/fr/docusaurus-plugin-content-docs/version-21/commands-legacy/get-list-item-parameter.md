@@ -40,6 +40,6 @@ Vous pouvez passer dans *sélecteur* la constante Additional text ou Associated 
 |  |  |
 | --- | --- |
 | Numéro de commande | 985 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

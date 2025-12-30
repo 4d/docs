@@ -5,14 +5,14 @@ slug: /commands/dom-set-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* {; *xRuta*}; *valorElement* {; *} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT VALUE.Syntax-->**DOM SET XML ELEMENT VALUE** ( *elementRef* : Text {; *xRuta* : Text}; *valorElement* : Text, Variable {; *} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
-| xRuta | Text | &#8594;  | Ruta XPath del elemento XML |
-| valorElement | Text, Variable | &#8594;  | Nuevo valor del elemento |
-| * | Operador | &#8594;  | Si se pasa: definir el valor en CDATA |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
+| xRuta | Text | &#8594; | Ruta XPath del elemento XML |
+| valorElement | Text, Variable | &#8594; | Nuevo valor del elemento |
+| * | Operador | &#8594; | Si se pasa: definir el valor en CDATA |
 
 <!-- END REF-->
 
@@ -122,7 +122,7 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 |  |  |
 | --- | --- |
 | Número de comando | 868 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

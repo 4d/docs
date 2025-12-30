@@ -5,12 +5,12 @@ slug: /commands/resource-type-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* : Text array {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | resTypes | Text array | &#8592; | 利用可能なリストタイプのリスト |
-| resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 
 <!-- END REF-->
 
@@ -84,6 +84,6 @@ RESOURCE TYPE LISTを呼び出す前に、*resTypes*配列を文字列配列ま�
 |  |  |
 | --- | --- |
 | コマンド番号 | 499 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

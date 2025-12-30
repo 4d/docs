@@ -31,6 +31,6 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 |  |  |
 | --- | --- |
 | Command number | 239 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

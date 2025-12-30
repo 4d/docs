@@ -5,7 +5,7 @@ slug: /commands/component-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *tabComposants* )<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *tabComposants* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ Pour plus d'informations sur les composants 4D, reportez-vous au manuel *Mode D�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1001 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

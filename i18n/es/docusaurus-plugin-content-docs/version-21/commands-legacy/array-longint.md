@@ -63,6 +63,6 @@ Este ejemplo crea un array interproceso de 4 bytes de 50 elementos de tipo [Ente
 |  |  |
 | --- | --- |
 | Número de comando | 221 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

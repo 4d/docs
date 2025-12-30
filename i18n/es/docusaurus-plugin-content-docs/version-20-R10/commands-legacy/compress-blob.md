@@ -96,7 +96,7 @@ La variable OK toma el valor 1 si el BLOB se comprime correctamente; de lo contr
 |  |  |
 | --- | --- |
 | Número de comando | 534 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

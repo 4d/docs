@@ -52,6 +52,6 @@ El siguiente código puede añadirse a un método de un botón:
 |  |  |
 | --- | --- |
 | Número de comando | 1324 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

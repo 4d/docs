@@ -5,13 +5,13 @@ slug: /commands/log-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*tipoSalida* ;} *mensaje* {; *importancia*} )<!-- END REF-->
+<!--REF #_command_.LOG EVENT.Syntax-->**LOG EVENT** ( {*tipoSalida* : Integer ;} *mensaje* : Text {; *importancia* : Integer} )<!-- END REF-->
 <!--REF #_command_.LOG EVENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoSalida | Integer | &#8594;  | Tipo de salida del mensaje |
-| mensaje | Text | &#8594;  | Contenido del mensaje |
-| importancia | Integer | &#8594;  | Nivel de importancia del mensaje (sólo para Windows) |
+| tipoSalida | Integer | &#8594; | Tipo de salida del mensaje |
+| mensaje | Text | &#8594; | Contenido del mensaje |
+| importancia | Integer | &#8594; | Nivel de importancia del mensaje (sólo para Windows) |
 
 <!-- END REF-->
 
@@ -70,6 +70,6 @@ Cada vez que se abre la base, esta información se escribirá en el visor de eve
 |  |  |
 | --- | --- |
 | Número de comando | 667 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

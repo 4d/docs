@@ -32,7 +32,7 @@ title: ライセンスリスト
 
 一部の4D ライセンスには有効期限があり、それを過ぎた場合には更新する必要があります。 ライセンスのサブスクリプションが4D ストア上で更新されると、ウェルカムウィザードから[ログイン](GettingStarted/Installation.md)すると、お使いの4D アプリケーション内のライセンスは自動的に更新されます。
 
-一部のケースにおいては、ライセンスマネージャダイアログボックス内の[**更新** ボタン](#更新) をクリックする必要があるものもあります。
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licenses Manager dialog box.
 
 ## ライセンスの有効化
 

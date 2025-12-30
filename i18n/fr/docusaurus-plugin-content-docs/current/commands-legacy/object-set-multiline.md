@@ -5,13 +5,13 @@ slug: /commands/object-set-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( {* ;} *objet* ; *multiLigne* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MULTILINE.Syntax-->**OBJECT SET MULTILINE** ( * ; *objet* : Text ; *multiLigne* : Integer )<br/>**OBJECT SET MULTILINE** ( *objet* : Field, Variable ; *multiLigne* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MULTILINE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| multiLigne | Integer | &#8594;  | Statut de la propriété multiligne |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| multiLigne | Integer | &#8594; | Statut de la propriété multiligne |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ Vous souhaitez interdire le multiligne dans une zone de saisie :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1253 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

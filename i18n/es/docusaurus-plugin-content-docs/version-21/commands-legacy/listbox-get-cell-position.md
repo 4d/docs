@@ -59,6 +59,6 @@ Este comando tiene en cuenta las acciones de selección o deselección efectuada
 |  |  |
 | --- | --- |
 | Número de comando | 971 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

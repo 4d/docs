@@ -54,6 +54,6 @@ L'exemple suivant est une partie d'une méthode récupérant des enregistrements
 |  |  |
 | --- | --- |
 | Numéro de commande | 53 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

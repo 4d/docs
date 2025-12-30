@@ -5,11 +5,11 @@ slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* ; *aColumnas* ; *aOrden* )<!-- END REF-->
+<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* : Integer ; *aColumnas* : Real array ; *aOrden* : Real array )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
+| area | Integer | &#8594; | Referencia del área |
 | aColumnas | Real array | &#8592; | Columnas ordenadas |
 | aOrden | Real array | &#8592; | Sentido de ordenación |
 
@@ -41,7 +41,7 @@ Si pasa un número de area inválido, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 753 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

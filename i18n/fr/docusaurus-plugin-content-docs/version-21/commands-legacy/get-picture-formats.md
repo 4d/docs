@@ -52,6 +52,6 @@ Vous souhaitez connaître les formats de l'image stockée dans un champ Image de
 |  |  |
 | --- | --- |
 | Numéro de commande | 1406 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

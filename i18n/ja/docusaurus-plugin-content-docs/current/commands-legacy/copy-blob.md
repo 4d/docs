@@ -5,15 +5,15 @@ slug: /commands/copy-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* ; *dstBLOB* ; *srcOffset* ; *dstOffset* ; *len* )<!-- END REF-->
+<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *srcBLOB* : Blob ; *dstBLOB* : Blob ; *srcOffset* : Integer ; *dstOffset* : Integer ; *len* : Integer )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| srcBlob | Blob | &#8594;  | コピー元BLOB |
-| dstBlob | Blob | &#8594;  | コピー先BLOB |
-| srcOffset | Integer | &#8594;  | コピー元のコピー開始位置 |
-| dstOffset | Integer | &#8594;  | コピー先のコピー開始位置 |
-| len | Integer | &#8594;  | コピーするバイト数 |
+| srcBlob | Blob | &#8594; | コピー元BLOB |
+| dstBlob | Blob | &#8594; | コピー先BLOB |
+| srcOffset | Integer | &#8594; | コピー元のコピー開始位置 |
+| dstOffset | Integer | &#8594; | コピー先のコピー開始位置 |
+| len | Integer | &#8594; | コピーするバイト数 |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 558 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

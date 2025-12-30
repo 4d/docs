@@ -4,12 +4,12 @@ title: WP Table append row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* ; *...value* )  : Object<br/>**WP Table append row** ( *tableRef* ; *valueColl* ) : Object<!-- END REF-->
+<!--REF #_command_.WP Table append row.Syntax-->**WP Table append row** ( *tableRef* : Object ; *...value* : any )  : Object<br/>**WP Table append row** ( *tableRef* : Object ; *valueColl* : Collection ) : Object<!-- END REF-->
 <!--REF #_command_.WP Table append row.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableRef | Object | &#8594;  | Table reference |
-| value | Text, Number, Time, Date, Picture, Object | &#8594;  | Value(s) to set in the row |
+| value | any | &#8594;  | Value(s) to set in the row |
 | valueColl | Collection | &#8594;  | Collection of values to set in the row |
 | Function result | Object | &#8592; | Row range object |
 

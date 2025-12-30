@@ -5,7 +5,7 @@ slug: /commands/dom-get-previous-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *elementRef* {; *siblingElemName* {; *siblingElemValue*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *elementRef* : Text {; *siblingElemName* : Text {; *siblingElemValue* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ If the command has been executed correctly and if the referenced element is not 
 |  |  |
 | --- | --- |
 | Command number | 924 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

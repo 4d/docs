@@ -86,6 +86,6 @@ Exemple permettant à l’utilisateur de désigner l’emplacement du fichier à
 |  |  |
 | --- | --- |
 | Numéro de commande | 1237 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

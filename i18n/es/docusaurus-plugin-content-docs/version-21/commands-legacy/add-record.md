@@ -95,7 +95,7 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 |  |  |
 | --- | --- |
 | Número de comando | 56 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 | Modifica la selección actual ||

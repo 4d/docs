@@ -5,11 +5,11 @@ slug: /commands/modified-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Modified record.Syntax-->**Modified record** {( *laTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Modified record.Syntax-->**Modified record** ( *laTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Modified record.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle tester si l'enregistrement courant a été modifié ou Table par défaut si paramètre omis |
+| laTable | Table | &#8594; | Table de laquelle tester si l'enregistrement courant a été modifié ou Table par défaut si paramètre omis |
 | Résultat | Boolean | &#8592; | L'enregistrement a été modifié (Vrai) ou L'enregistrement n'a pas été modifié (Faux) |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ L'exemple suivant montre une utilisation typique de **Modified record** :
 |  |  |
 | --- | --- |
 | Numéro de commande | 314 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/qr-run
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *zone* )<!-- END REF-->
+<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *zone* : Integer )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone à exécuter |
+| zone | Integer | &#8594; | Référence de la zone à exécuter |
 
 <!-- END REF-->
 
@@ -29,7 +29,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 746 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

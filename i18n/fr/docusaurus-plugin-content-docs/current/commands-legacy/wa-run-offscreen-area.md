@@ -5,11 +5,11 @@ slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *paramètres* ) : any<!-- END REF-->
+<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *paramètres* : Object ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| paramètres | Object | &#8594;  | Objet contenant les attributs de la zone web |
+| paramètres | Object | &#8594; | Objet contenant les attributs de la zone web |
 | Résultat | any | &#8592; | Valeur retournée par la méthode callback (ou méthode de rétro-appel) |
 
 <!-- END REF-->
@@ -101,7 +101,7 @@ La variable système OK est définie sur 0 si le timeout a été atteint ou si l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1727 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

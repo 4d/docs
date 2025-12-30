@@ -5,13 +5,13 @@ slug: /commands/document-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomFichier* {; *jeuCaractères* {; *modeRetour*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Document to text.Syntax-->**Document to text** ( *nomFichier* : Text {; *jeuCaractères* : Text, Integer {; *modeRetour* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Document to text.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom de document ou Chemin d'accès à un document |
-| jeuCaractères | Text, Integer | &#8594;  | Nom ou Numéro de jeu de caractères |
-| modeRetour | Integer | &#8594;  | Mode de traitement des retours à la ligne |
+| nomFichier | Text | &#8594; | Nom de document ou Chemin d'accès à un document |
+| jeuCaractères | Text, Integer | &#8594; | Nom ou Numéro de jeu de caractères |
+| modeRetour | Integer | &#8594; | Mode de traitement des retours à la ligne |
 | Résultat | Text | &#8592; | Texte issu du document |
 
 <!-- END REF-->
@@ -83,6 +83,6 @@ Si vous exécutez ce code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1236 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

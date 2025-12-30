@@ -47,6 +47,6 @@ Ver o exemplo do comando [Pop up menu](pop-up-menu.md).
 |  |  |
 | --- | --- |
 | Número do comando | 468 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

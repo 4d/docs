@@ -5,12 +5,12 @@ slug: /commands/web-send-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *blob* ; *type* )<!-- END REF-->
+<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *blob* : Blob ; *type* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB à envoyer au browser |
-| type | Text | &#8594;  | Type de données du BLOB |
+| Blob | Blob | &#8594; | BLOB à envoyer au browser |
+| type | Text | &#8594; | Type de données du BLOB |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ Reportez-vous à l’exemple de la routine [PICTURE TO BLOB](picture-to-blob.md)
 |  |  |
 | --- | --- |
 | Numéro de commande | 654 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

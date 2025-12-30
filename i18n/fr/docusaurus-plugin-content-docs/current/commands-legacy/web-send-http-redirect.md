@@ -5,12 +5,12 @@ slug: /commands/web-send-http-redirect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND HTTP REDIRECT.Syntax-->**WEB SEND HTTP REDIRECT** ( *url* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND HTTP REDIRECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | Nouvel URL |
-| * | Opérateur | &#8594;  | Si spécifié = l’URL n’est pas traduit, Si omis = l’URL est traduit |
+| url | Text | &#8594; | Nouvel URL |
+| * | Opérateur | &#8594; | Si spécifié = l’URL n’est pas traduit, Si omis = l’URL est traduit |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ Dans la [On Web Connection](./on-web-connection-database-method.md), placez les 
 |  |  |
 | --- | --- |
 | Numéro de commande | 659 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

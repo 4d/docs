@@ -5,12 +5,12 @@ slug: /commands/web-send-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *BLOB* ; *type* )<!-- END REF-->
+<!--REF #_command_.WEB SEND BLOB.Syntax-->**WEB SEND BLOB** ( *BLOB* : Blob ; *type* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SEND BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | ブラウザへ送るBLOB |
-| type | Text | &#8594;  | BLOBのデータタイプ |
+| Blob | Blob | &#8594; | ブラウザへ送るBLOB |
+| type | Text | &#8594; | BLOBのデータタイプ |
 
 <!-- END REF-->
 
@@ -85,6 +85,6 @@ BLOBに含まれるデータのタイプは *type* によって示されます�
 |  |  |
 | --- | --- |
 | コマンド番号 | 654 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

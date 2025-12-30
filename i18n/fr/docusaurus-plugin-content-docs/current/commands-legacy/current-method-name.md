@@ -44,6 +44,6 @@ Cette commande ne doit pas être appelée depuis une formule 4D.
 |  |  |
 | --- | --- |
 | Numéro de commande | 684 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/set-timeout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *seconds* )<!-- END REF-->
+<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *seconds* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMEOUT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| seconds | Integer | &#8594;  | タイムアウト秒数 |
+| seconds | Integer | &#8594; | タイムアウト秒数 |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 268 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

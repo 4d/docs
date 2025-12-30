@@ -63,7 +63,7 @@ While `myForm` may not display typical object properties when examined in the de
 <!-- REF #WebFormClass.disableState().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|state|string|->|Name of state to disable from the web page|
+|state|Text|->|Name of state to disable from the web form|
 <!-- END REF -->
 
 #### Description
@@ -88,7 +88,7 @@ For more information on web pages states, please refer to the [States section in
 <!-- REF #WebFormClass.enableState().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|state|string|->|Name of state to enable on the web pages|
+|state|Text|->|Name of state to enable on the web form|
 <!-- END REF -->
 
 #### Description
@@ -122,7 +122,7 @@ Function authenticationError()
 <!-- REF #WebFormClass.setError().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msg|string|->|Error message to display in the web page|
+|msg|Text|->|Error message to display in the web form|
 <!-- END REF -->
 
 #### Description
@@ -155,7 +155,7 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 <!-- REF #WebFormClass.setMessage().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msg|string|->|Information message to display in the web page|
+|msg|Text|->|Information message to display in the web form|
 <!-- END REF -->
 
 #### Description
@@ -188,7 +188,7 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 <!-- REF #WebFormClass.setWarning().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msg|string|->|Warning message to display in the web page|
+|msg|Text|->|Warning message to display in the web form|
 <!-- END REF -->
 
 #### Description

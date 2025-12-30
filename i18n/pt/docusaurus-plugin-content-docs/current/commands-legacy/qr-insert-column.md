@@ -5,13 +5,13 @@ slug: /commands/qr-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* ; *numColuna* ; *objeto* )<!-- END REF-->
+<!--REF #_command_.QR INSERT COLUMN.Syntax-->**QR INSERT COLUMN** ( *area* : Integer ; *numColuna* : Integer ; *objeto* : Field, Variable, Pointer )<!-- END REF-->
 <!--REF #_command_.QR INSERT COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Número de Coluna |
-| objeto | Field, Variable, Pointer | &#8594;  | Objeto a inserir na coluna |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Número de Coluna |
+| objeto | Field, Variable, Pointer | &#8594; | Objeto a inserir na coluna |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ A seguinte instrução insere (ou cria) uma primeira coluna na área MinhaArea, 
 |  |  |
 | --- | --- |
 | Número do comando | 748 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

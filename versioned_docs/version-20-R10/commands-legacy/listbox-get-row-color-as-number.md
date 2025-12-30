@@ -65,6 +65,6 @@ Given the following list box:
 |  |  |
 | --- | --- |
 | Command number | 1271 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

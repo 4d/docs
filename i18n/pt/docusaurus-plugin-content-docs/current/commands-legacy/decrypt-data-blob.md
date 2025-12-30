@@ -5,13 +5,13 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobDecriptografar* ; objetoChave / passefrase ; *salt* ; *BLOBdecriptografado* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobDecriptografar* : Blob ; objetoChave / passefrase ; *salt* : Integer ; *BLOBdecriptografado* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| blobDecriptografar | Blob | &#8594;  | Blob que vai ser decriptografado |
-| objetoChave / passefrase | Objeto, Texto | &#8594;  | Objeto JSON que contém a chave de criptografia ou passefrase para geração de chave direta de criptografia (texto) |
-| salt | Integer | &#8594;  | Salt (ou sal/dados aleatórios) para o algoritmo de criptografia |
+| blobDecriptografar | Blob | &#8594; | Blob que vai ser decriptografado |
+| objetoChave / passefrase | Objeto, Texto | &#8594; | Objeto JSON que contém a chave de criptografia ou passefrase para geração de chave direta de criptografia (texto) |
+| salt | Integer | &#8594; | Salt (ou sal/dados aleatórios) para o algoritmo de criptografia |
 | Blobdecriptografado | Blob | &#8592; | BLOB que foi decriptografado |
 | Resultado | Boolean | &#8592; | True se a descrição tiver sido realizada corretamente. Senão False |
 
@@ -65,6 +65,6 @@ O exemplo abaixo mostra como decriptogrofar um arquivo criptografado localizado 
 |  |  |
 | --- | --- |
 | Número do comando | 1774 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

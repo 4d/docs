@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 560 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

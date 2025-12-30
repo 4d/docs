@@ -5,11 +5,11 @@ slug: /commands/current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current user.Syntax-->**Current user** {( *user* )} : Text<!-- END REF-->
+<!--REF #_command_.Current user.Syntax-->**Current user** ( *user* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Current user.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| user | Integer | &#8594;  | ユーザーエイリアスまたは4Dユーザーアカウント |
+| user | Integer | &#8594; | ユーザーエイリアスまたは4Dユーザーアカウント |
 | 戻り値 | Text | &#8592; | カレントユーザのユーザ名 |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 182 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

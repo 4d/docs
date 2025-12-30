@@ -48,6 +48,6 @@ Para obter mais informação acerca dos atributos SVG, consulte a descripção d
 |  |  |
 | --- | --- |
 | Número do comando | 1056 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

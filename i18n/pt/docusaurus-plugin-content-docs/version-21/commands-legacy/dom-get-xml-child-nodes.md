@@ -69,6 +69,6 @@ Depois da execução destas instruções:
 |  |  |
 | --- | --- |
 | Número do comando | 1081 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

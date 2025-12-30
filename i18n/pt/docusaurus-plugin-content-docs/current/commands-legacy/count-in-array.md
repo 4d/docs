@@ -5,12 +5,12 @@ slug: /commands/count-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *array* ; *valor* ) : Integer<!-- END REF-->
+<!--REF #_command_.Count in array.Syntax-->**Count in array** ( *array* : Array ; *valor* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Count in array.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array no qual a contagem deve ocorrer |
-| valor | Expression | &#8594;  | Valor a contar |
+| array | Array | &#8594; | Array no qual a contagem deve ocorrer |
+| valor | Expression | &#8594; | Valor a contar |
 | Resultado | Integer | &#8592; | Número de ocorrências encontradas |
 
 <!-- END REF-->
@@ -63,6 +63,6 @@ Para contar referências de objeto em um array de objeto:
 |  |  |
 | --- | --- |
 | Número do comando | 907 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

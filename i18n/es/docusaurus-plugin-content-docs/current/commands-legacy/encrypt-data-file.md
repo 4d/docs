@@ -5,16 +5,16 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *rutaEstruct* ; *rutaDatos* {; newPassPhrase | newDataKey {; *carpetaArchivo* {; curPassPhrase | curDataKey {; *nomMetod*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *rutaEstruct* : Text ; *rutaDatos* : Text {; newPassPhrase | newDataKey {; *carpetaArchivo* : Text {; curPassPhrase | curDataKey {; *nomMetod* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstruct | Text | &#8594;  | Nombre de ruta del archivo de estructura |
-| rutaDatos | Text | &#8594;  | Nombre de ruta del archivo de datos a cifrar |
-| newPassPhrase &#124; newDataKey | Texto, Objeto | &#8594;  | En caso de reemplazo: nueva passPhrase (texto) o nueva llave de cifrado (objeto) |
-| carpetaArchivo | Text | &#8594;  | Nombre de ruta de la carpeta donde se guardarán los archivos originales |
-| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594;  | passPhrase actual (texto) o llave de encripción actual(objeto) |
-| nomMetod | Text | &#8594;  | Nombre del método de retrollamada 4D |
+| rutaEstruct | Text | &#8594; | Nombre de ruta del archivo de estructura |
+| rutaDatos | Text | &#8594; | Nombre de ruta del archivo de datos a cifrar |
+| newPassPhrase &#124; newDataKey | Texto, Objeto | &#8594; | En caso de reemplazo: nueva passPhrase (texto) o nueva llave de cifrado (objeto) |
+| carpetaArchivo | Text | &#8594; | Nombre de ruta de la carpeta donde se guardarán los archivos originales |
+| curPassPhrase &#124; curDataKey | Texto, Objeto | &#8594; | passPhrase actual (texto) o llave de encripción actual(objeto) |
+| nomMetod | Text | &#8594; | Nombre del método de retrollamada 4D |
 | Resultado | Text | &#8592; | Nombre completo de la carpeta donde se guardaron los archivos originales |
 
 <!-- END REF-->
@@ -137,6 +137,6 @@ Vuelva a cifrar un archivo de datos encriptados con la llave actual (por ejemplo
 |  |  |
 | --- | --- |
 | Número de comando | 1610 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

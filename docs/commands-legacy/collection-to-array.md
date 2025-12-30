@@ -5,7 +5,7 @@ slug: /commands/collection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* ; *array* {; *propertyName*}{; *array2* ; *propertyName2* ; ... ; *arrayN* ; *propertyNameN*} )<!-- END REF-->
+<!--REF #_command_.COLLECTION TO ARRAY.Syntax-->**COLLECTION TO ARRAY** ( *collection* : Collection ; *array* : Array {; *propertyName* : Text}{; ...(*array* : Array ; *propertyName* : Text) } )<!-- END REF-->
 <!--REF #_command_.COLLECTION TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -71,6 +71,6 @@ You want to copy different property values from a collection of objects in diffe
 |  |  |
 | --- | --- |
 | Command number | 1562 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

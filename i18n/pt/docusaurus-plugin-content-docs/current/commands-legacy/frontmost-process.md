@@ -5,11 +5,11 @@ slug: /commands/frontmost-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost process.Syntax-->**Frontmost process** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost process.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Número do processo para a primeira janela não flutuante |
+| * | Operador | &#8594; | Número do processo para a primeira janela não flutuante |
 | Resultado | Integer | &#8592; | Número do processo cujas janelas estão em primeiro plano |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ Ver o exemplo para [BRING TO FRONT](bring-to-front.md "BRING TO FRONT").
 |  |  |
 | --- | --- |
 | Número do comando | 327 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

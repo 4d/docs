@@ -39,6 +39,6 @@ Se quiser determinar se o sistema operativo atual for macOS:
 |  |  |
 | --- | --- |
 | Número do comando | 1572 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

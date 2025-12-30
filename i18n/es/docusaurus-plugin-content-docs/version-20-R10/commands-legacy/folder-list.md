@@ -30,7 +30,7 @@ Si no hay carpetas en la ubicación especificada, el comando devuelve un array v
 |  |  |
 | --- | --- |
 | Número de comando | 473 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

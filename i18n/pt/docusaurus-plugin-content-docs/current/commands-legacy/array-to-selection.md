@@ -5,13 +5,13 @@ slug: /commands/array-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** {( *array* ; *campo* {; *array2* ; *campo2* ; ... ; *arrayN* ; *campoN*}{; *} )}<!-- END REF-->
+<!--REF #_command_.ARRAY TO SELECTION.Syntax-->**ARRAY TO SELECTION** ({ *array* : Array ; *campo* : Field {; ...(*array* : Array, *campo* : Field)}{; *} })<!-- END REF-->
 <!--REF #_command_.ARRAY TO SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array a se copiar na seleção |
+| array | Array | &#8594; | Array a se copiar na seleção |
 | campo | Field | &#8592; | Campo para receber os valores do array |
-| * | Operador | &#8594;  | Aguarda execução |
+| * | Operador | &#8594; | Aguarda execução |
 
 <!-- END REF-->
 
@@ -86,7 +86,7 @@ Se quiser copiar uma seleção de registroar para uma tablela arquivo selecionan
 |  |  |
 | --- | --- |
 | Número do comando | 261 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar a seleção atual ||
 
 

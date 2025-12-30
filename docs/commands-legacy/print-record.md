@@ -5,7 +5,7 @@ slug: /commands/print-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *aTable* {; *} )<br/>**PRINT RECORD** ( *aTable* {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT RECORD.Syntax-->**PRINT RECORD** ( *aTable* : Table {; *} )<br/>**PRINT RECORD** ( *aTable* : Table {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ The following example prints the same current record in two different forms. The
 |  |  |
 | --- | --- |
 | Command number | 71 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

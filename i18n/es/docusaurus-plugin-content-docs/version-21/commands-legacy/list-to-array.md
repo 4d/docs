@@ -90,6 +90,6 @@ Si ejecuta la siguiente instrucción:
 |  |  |
 | --- | --- |
 | Número de comando | 288 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item style.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ To test if a menu item is displayed in bold, you write:
 |  |  |
 | --- | --- |
 | Command number | 426 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

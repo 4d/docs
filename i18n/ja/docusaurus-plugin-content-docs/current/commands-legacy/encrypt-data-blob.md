@@ -5,13 +5,13 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* ; *keyObject* ; *salt* ; *encryptedBLOB* ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* ; *passPhrase* ; *salt* ; *encryptedBLOB* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *keyObject* : オブジェクト, テキスト ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *passPhrase* : オブジェクト, テキスト ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| blobToEncrypt | Blob | &#8594;  | 暗号化したいBLOB |
-| keyObject &#124; passPhrase | オブジェクト, テキスト | &#8594;  | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
-| salt | Integer | &#8594;  | アルゴリズムのための追加のsalt |
+| blobToEncrypt | Blob | &#8594; | 暗号化したいBLOB |
+| keyObject &#124; passPhrase | オブジェクト, テキスト | &#8594; | 暗号化鍵を格納したJSON オブジェクト、または直接暗号化鍵を生成するためのパスフレーズ(テキスト) |
+| salt | Integer | &#8594; | アルゴリズムのための追加のsalt |
 | encryptedBlob | Blob | &#8592; | 暗号化されたBLOB |
 | 戻り値 | Boolean | &#8592; | 暗号化が正常に実行された場合にはTrue、それ以外の場合にはFalse |
 
@@ -65,6 +65,6 @@ BLOB を暗号化するのには、*keyObject* または *passPhrase* のいづ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1773 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

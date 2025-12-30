@@ -36,6 +36,6 @@ Utilice READ WRITE cuando tenga que modificar un registro y guardar los cambios.
 |  |  |
 | --- | --- |
 | Número de comando | 146 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

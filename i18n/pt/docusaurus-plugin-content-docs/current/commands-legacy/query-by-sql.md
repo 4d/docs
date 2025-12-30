@@ -5,12 +5,12 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*tabela* ;} *sqlFormula* )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*tabela* : Table ;} *sqlFormula* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual se devolve a seleção de registros  ou tabela padrão se o parâmetro for omitido |
-| sqlFormula | Text | &#8594;  | Fórmula válida de pesquisa SQL representando a cláusula WHERE da pesquisa SELECT |
+| tabela | Table | &#8594; | Tabela para a qual se devolve a seleção de registros  ou tabela padrão se o parâmetro for omitido |
+| sqlFormula | Text | &#8594; | Fórmula válida de pesquisa SQL representando a cláusula WHERE da pesquisa SELECT |
 
 <!-- END REF-->
 
@@ -169,7 +169,7 @@ Se o formato da condição de pesquisa for correto, a variável Sistema OK assum
 |  |  |
 | --- | --- |
 | Número do comando | 942 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

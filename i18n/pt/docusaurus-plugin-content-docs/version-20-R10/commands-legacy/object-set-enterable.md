@@ -78,6 +78,6 @@ Este é o método de objeto de uma caixa de seleção localizada no cabeçalho d
 |  |  |
 | --- | --- |
 | Número do comando | 238 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

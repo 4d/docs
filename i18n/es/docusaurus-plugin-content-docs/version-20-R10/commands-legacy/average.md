@@ -95,7 +95,7 @@ Puede hacer los siguientes cálculos:
 |  |  |
 | --- | --- |
 | Número de comando | 2 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

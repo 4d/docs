@@ -5,11 +5,11 @@ slug: /commands/hide-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE PROCESS.Syntax-->**HIDE PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.HIDE PROCESS.Syntax-->**HIDE PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.HIDE PROCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Numéro du process à cacher |
+| process | Integer | &#8594; | Numéro du process à cacher |
 
 <!-- END REF-->
 
@@ -43,6 +43,6 @@ L'exemple suivant cachera toutes les fenêtres appartenant au process courant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 324 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

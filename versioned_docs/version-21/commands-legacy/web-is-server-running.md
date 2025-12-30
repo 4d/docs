@@ -43,6 +43,6 @@ You want to check that the Web server is running:
 |  |  |
 | --- | --- |
 | Command number | 1313 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

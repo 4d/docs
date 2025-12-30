@@ -81,6 +81,6 @@ Você quer obter uma lista de fontes recentes:
 |  |  |
 | --- | --- |
 | Número do comando | 460 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

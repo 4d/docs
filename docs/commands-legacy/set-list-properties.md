@@ -5,7 +5,7 @@ slug: /commands/set-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *list* ; *appearance* {; *icon* {; *lineHeight* {; *doubleClick* {; *multiSelections* {; *editable*}}}}} )<!-- END REF-->
+<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *list* : Integer ; *appearance* : Integer {; *icon* : Integer {; *lineHeight* : Integer {; *doubleClick* : Integer {; *multiSelections* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ You want to disallow the expand/collapse sublist on double-click. You can write 
 |  |  |
 | --- | --- |
 | Command number | 387 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

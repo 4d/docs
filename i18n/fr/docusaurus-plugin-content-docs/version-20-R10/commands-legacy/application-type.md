@@ -48,6 +48,6 @@ Quelque part dans votre code, ailleurs que dans la *On Server Startup Database M
 |  |  |
 | --- | --- |
 | Numéro de commande | 494 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

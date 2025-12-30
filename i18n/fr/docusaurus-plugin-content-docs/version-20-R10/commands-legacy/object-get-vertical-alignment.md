@@ -48,6 +48,6 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 |  |  |
 | --- | --- |
 | Numéro de commande | 1188 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

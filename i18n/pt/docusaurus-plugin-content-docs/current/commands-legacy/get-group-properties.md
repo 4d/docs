@@ -5,11 +5,11 @@ slug: /commands/get-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *refGrupo* ; *nome* ; *proprietario* {; *membros*} )<!-- END REF-->
+<!--REF #_command_.GET GROUP PROPERTIES.Syntax-->**GET GROUP PROPERTIES** ( *refGrupo* : Integer ; *nome* : Text ; *proprietario* : Integer {; *membros* : Integer array} )<!-- END REF-->
 <!--REF #_command_.GET GROUP PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refGrupo | Integer | &#8594;  | Número de referencia ID de grupo |
+| refGrupo | Integer | &#8594; | Número de referencia ID de grupo |
 | nome | Text | &#8592; | Nome do grupo |
 | proprietario | Integer | &#8592; | Número de ID do proprietário do grupo |
 | membros | Integer array | &#8592; | Membros do grupo |
@@ -45,7 +45,7 @@ Se não tiver privilégios de acesso para chamar ao comando GET GROUP PROPERTIES
 |  |  |
 | --- | --- |
 | Número do comando | 613 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

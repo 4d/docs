@@ -59,6 +59,6 @@ Cet exemple crée un tableau interprocess de 50 éléments de type [Texte](# "Un
 |  |  |
 | --- | --- |
 | Numéro de commande | 222 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/set-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *aField* )<!-- END REF-->
+<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ The NULL value is used by the SQL kernel of 4D. For more information, please ref
 |  |  |
 | --- | --- |
 | Command number | 965 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

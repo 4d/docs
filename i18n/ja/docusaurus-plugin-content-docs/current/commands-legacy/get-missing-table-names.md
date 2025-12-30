@@ -5,7 +5,7 @@ slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *missingTables* )<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *missingTables* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1125 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *body* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *body* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -53,6 +53,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 814 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

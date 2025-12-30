@@ -58,6 +58,6 @@ Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list 
 |  |  |
 | --- | --- |
 | Command number | 1098 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

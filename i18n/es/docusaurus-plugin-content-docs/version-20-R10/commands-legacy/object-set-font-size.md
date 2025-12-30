@@ -55,6 +55,6 @@ El siguiente ejemplo define el tamaño de fuente para todos los objetos de formu
 |  |  |
 | --- | --- |
 | Número de comando | 165 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

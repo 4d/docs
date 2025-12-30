@@ -5,12 +5,12 @@ slug: /commands/listbox-get-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column formula.Syntax-->**LISTBOX Get column formula** ( * ; *objeto* : Text ) : Text<br/>**LISTBOX Get column formula** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column formula.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Text | &#8592; | Fórmula asociada a la columna |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
 |  |  |
 | --- | --- |
 | Número de comando | 1202 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

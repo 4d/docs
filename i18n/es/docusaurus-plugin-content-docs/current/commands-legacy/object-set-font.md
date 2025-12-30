@@ -5,13 +5,13 @@ slug: /commands/object-set-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( {* ;} *objeto* ; *fuente* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT.Syntax-->**OBJECT SET FONT** ( * ; *objeto* : Text ; *fuente* : Text )<br/>**OBJECT SET FONT** ( *objeto* : Field, Variable ; *fuente* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| fuente | Text | &#8594;  | Nombre o número de fuente |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| fuente | Text | &#8594; | Nombre o número de fuente |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ El siguiente ejemplo utiliza la opción especial *%password*, diseñada para la 
 |  |  |
 | --- | --- |
 | Número de comando | 164 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

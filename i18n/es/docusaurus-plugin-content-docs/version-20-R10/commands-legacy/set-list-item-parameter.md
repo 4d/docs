@@ -67,6 +67,6 @@ Usted desea definir como lista de opciones de un menú emergente jerárquico una
 |  |  |
 | --- | --- |
 | Número de comando | 986 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

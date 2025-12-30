@@ -59,6 +59,6 @@ This example verifies a password hash previously created by [Generate password h
 |  |  |
 | --- | --- |
 | Command number | 1534 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

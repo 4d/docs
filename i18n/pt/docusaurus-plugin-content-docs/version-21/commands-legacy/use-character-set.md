@@ -58,7 +58,7 @@ A variável de sistema OK é definida como 1 se o mapa é carregado corretamente
 |  |  |
 | --- | --- |
 | Número do comando | 205 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

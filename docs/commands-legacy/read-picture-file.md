@@ -5,7 +5,7 @@ slug: /commands/read-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* ; *picture* {; *} )<!-- END REF-->
+<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* : Text ; *picture* : Picture {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ If the command is executed successfully, the system variable Document contains t
 |  |  |
 | --- | --- |
 | Command number | 678 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

@@ -72,6 +72,6 @@ You want to insert the current time at the start of the text and then freeze it 
 |  |  |
 | --- | --- |
 | Command number | 1282 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

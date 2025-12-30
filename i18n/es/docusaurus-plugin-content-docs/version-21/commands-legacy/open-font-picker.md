@@ -48,6 +48,6 @@ Este es el código del botón:
 |  |  |
 | --- | --- |
 | Número de comando | 1303 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-import-style-sheets
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP IMPORT STYLE SHEETS.Syntax-->**WP IMPORT STYLE SHEETS** ( *docTarget* ; *docSource* )<!-- END REF-->
+<!--REF #_command_.WP IMPORT STYLE SHEETS.Syntax-->**WP IMPORT STYLE SHEETS** ( *docTarget* : Object ; *docSource* : Object )<!-- END REF-->
 <!--REF #_command_.WP IMPORT STYLE SHEETS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

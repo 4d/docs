@@ -5,11 +5,11 @@ slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *zone* ; *tabColonnes* ; *tabTris* )<!-- END REF-->
+<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *zone* : Integer ; *tabColonnes* : Real array ; *tabTris* : Real array )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | tabColonnes | Real array | &#8592; | Colonnes triées |
 | tabTris | Real array | &#8592; | Ordres de tris |
 
@@ -41,7 +41,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 753 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

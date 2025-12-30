@@ -5,7 +5,7 @@ slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* ; *arrKeywords* {; *} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* : Picture, Picture ; *arrKeywords* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ If the picture does not contain keywords or IPTC/Keywords metadata, the command 
 |  |  |
 | --- | --- |
 | Command number | 1142 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

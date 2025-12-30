@@ -49,6 +49,6 @@ El siguiente ejemplo reinicializa el comando de menú Acerca de 4D:
 |  |  |
 | --- | --- |
 | Número de comando | 316 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

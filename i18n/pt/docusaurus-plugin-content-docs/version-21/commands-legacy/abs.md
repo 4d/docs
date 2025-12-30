@@ -32,6 +32,6 @@ O exemplo a seguir retorna o valor absoluto de –10.3, que é de 10.3:
 |  |  |
 | --- | --- |
 | Número do comando | 99 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/change-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *password* )<!-- END REF-->
+<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *password* : Text )<!-- END REF-->
 <!--REF #_command_.CHANGE PASSWORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ The following example allows the user to change his or her password.
 |  |  |
 | --- | --- |
 | Command number | 186 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

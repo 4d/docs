@@ -103,6 +103,6 @@ This example exports and imports all the project methods of an application:
 |  |  |
 | --- | --- |
 | Command number | 1194 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

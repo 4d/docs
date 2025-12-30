@@ -68,6 +68,6 @@ La función Subtotal es necesaria para mostrar valores en un formulario.
 |  |  |
 | --- | --- |
 | Número de comando | 97 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

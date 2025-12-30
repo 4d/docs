@@ -33,6 +33,6 @@ El comando admite el asterisco *\** como parámetro opcional. Por defecto, cuand
 |  |  |
 | --- | --- |
 | Número de comando | 975 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

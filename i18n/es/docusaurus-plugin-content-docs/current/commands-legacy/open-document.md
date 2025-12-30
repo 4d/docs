@@ -5,13 +5,13 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *doc* {; *tipo*}{; *modo*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *doc* : Text {; *tipo* : Text}{; *modo* : Integer} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &#8594;  | Nombre del documento o Ruta de acceso completa al documento o Cadena vacía para mostrar la caja de diálogo |
-| tipo | Text | &#8594;  | Lista de los tipos de documentos a filtrar o "*" para no filtrar los documentos |
-| modo | Integer | &#8594;  | Modo de apertura del documento |
+| doc | Text | &#8594; | Nombre del documento o Ruta de acceso completa al documento o Cadena vacía para mostrar la caja de diálogo |
+| tipo | Text | &#8594; | Lista de los tipos de documentos a filtrar o "*" para no filtrar los documentos |
+| modo | Integer | &#8594; | Modo de apertura del documento |
 | Resultado | Time | &#8592; | Número de referencia del documento |
 
 <!-- END REF-->
@@ -93,7 +93,7 @@ Si pasa el valor 3 en *modo*, la función devuelve ?00:00:00? (sin referencia de
 |  |  |
 | --- | --- |
 | Número de comando | 264 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

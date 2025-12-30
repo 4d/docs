@@ -5,11 +5,11 @@ slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Dados para os quais se retorna a soma de quadrados. |
+| series | Field, Array | &#8594; | Dados para os quais se retorna a soma de quadrados. |
 | Resultado | Real | &#8592; | Soma dos quadrados dos valores da série |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Este exemplo permite obter a soma de quadrados dos valores localizados num array
 |  |  |
 | --- | --- |
 | Número do comando | 28 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

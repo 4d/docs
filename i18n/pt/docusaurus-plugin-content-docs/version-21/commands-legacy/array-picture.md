@@ -66,6 +66,6 @@ Este exemplo cria um array de interprocesso de tipo [Imagem](# "Can be any Windo
 |  |  |
 | --- | --- |
 | Número do comando | 279 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

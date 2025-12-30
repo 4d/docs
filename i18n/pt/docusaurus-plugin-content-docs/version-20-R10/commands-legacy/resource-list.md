@@ -75,6 +75,6 @@ O exemplo a seguir copia os recursos imagem presentes em todos os arquivos de re
 |  |  |
 | --- | --- |
 | Número do comando | 500 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

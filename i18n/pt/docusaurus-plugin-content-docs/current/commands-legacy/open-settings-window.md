@@ -5,13 +5,13 @@ slug: /commands/open-settings-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *seletor* {; *acesso* {; *tipoConfiguração*}} )<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *seletor* : Text {; *acesso* : Boolean {; *tipoConfiguração* : Integer}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| seletor | Text | &#8594;  | Chave que designa um tema ou página ou um grupo de parâmetros da caixa de diálogo Preferências |
-| acesso | Boolean | &#8594;  | True=Bloquear as outras páginas da caixa de diálogo, False ou se omitir=Deixar ativas as outras páginas da caixa de diálogo |
-| tipoConfiguração | Integer | &#8594;  | 0 ou omitido = configuração da estrutura; 1 = configuração de usuário, 2 = Configuração usuário para arquivo de dados |
+| seletor | Text | &#8594; | Chave que designa um tema ou página ou um grupo de parâmetros da caixa de diálogo Preferências |
+| acesso | Boolean | &#8594; | True=Bloquear as outras páginas da caixa de diálogo, False ou se omitir=Deixar ativas as outras páginas da caixa de diálogo |
+| tipoConfiguração | Integer | &#8594; | 0 ou omitido = configuração da estrutura; 1 = configuração de usuário, 2 = Configuração usuário para arquivo de dados |
 
 <!-- END REF-->
 
@@ -171,7 +171,7 @@ Se a caixa de diálogo Preferências/Propriedades é validada, a variável siste
 |  |  |
 | --- | --- |
 | Número do comando | 903 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

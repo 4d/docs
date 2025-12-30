@@ -5,7 +5,7 @@ slug: /commands/get-pasteboard-data-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *firmas4D* ; *tiposNativos* {; *nombresFormatos*} )<!-- END REF-->
+<!--REF #_command_.GET PASTEBOARD DATA TYPE.Syntax-->**GET PASTEBOARD DATA TYPE** ( *firmas4D* : Text array ; *tiposNativos* : Text array {; *nombresFormatos* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET PASTEBOARD DATA TYPE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -43,6 +43,6 @@ Para mayor información sobre los tipos de datos soportados, consulte la secció
 |  |  |
 | --- | --- |
 | Número de comando | 958 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

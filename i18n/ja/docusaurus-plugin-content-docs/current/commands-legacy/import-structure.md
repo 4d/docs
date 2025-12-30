@@ -5,11 +5,11 @@ slug: /commands/import-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *xmlStructure* )<!-- END REF-->
+<!--REF #_command_.IMPORT STRUCTURE.Syntax-->**IMPORT STRUCTURE** ( *xmlStructure* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT STRUCTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xmlStructure | Text | &#8594;  | 4D データベースストラクチャーのXML定義ファイル |
+| xmlStructure | Text | &#8594; | 4D データベースストラクチャーのXML定義ファイル |
 
 <!-- END REF-->
 
@@ -53,6 +53,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1310 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

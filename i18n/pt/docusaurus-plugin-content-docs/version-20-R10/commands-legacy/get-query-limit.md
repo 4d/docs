@@ -30,6 +30,6 @@ Por defeito, caso nenhum limite tenha sido definido, o comando devolve 0.
 |  |  |
 | --- | --- |
 | Número do comando | 1156 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

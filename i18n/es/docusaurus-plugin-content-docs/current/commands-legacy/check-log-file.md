@@ -40,7 +40,7 @@ Puede interceptar estos errores utilizando un método de manejo de errores insta
 |  |  |
 | --- | --- |
 | Número de comando | 799 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

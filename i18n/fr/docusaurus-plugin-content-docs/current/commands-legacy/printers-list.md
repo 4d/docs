@@ -5,7 +5,7 @@ slug: /commands/printers-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *tabNoms* {; *tabNomsAlt* {; *tabModèles*}} )<!-- END REF-->
+<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *tabNoms* : Text array {; *tabNomsAlt* : Text array {; *tabModèles* : Text array}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ La variable système OK prend la valeur 1 si la commande a été exécutée corr
 |  |  |
 | --- | --- |
 | Numéro de commande | 789 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

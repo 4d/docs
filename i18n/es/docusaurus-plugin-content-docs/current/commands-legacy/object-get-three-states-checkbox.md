@@ -5,12 +5,12 @@ slug: /commands/object-get-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( {* ;} *objeto* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( * ; *objeto* : Text ) : Boolean<br/>**OBJECT Get three states checkbox** ( *objeto* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get three states checkbox.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
 | Resultado | Boolean | &#8592; | True = casilla de selección de tres estados, False = casilla de selección estándar |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ La propiedad "Tres estados" se puede definir ya sea usando la lista de propiedad
 |  |  |
 | --- | --- |
 | Número de comando | 1250 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

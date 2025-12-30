@@ -5,13 +5,13 @@ slug: /commands/order-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *aTable* ; *expression* {; > or <}{; *expression2* ; > or <2 ; ... ; *expressionN* ; > or <N} )<!-- END REF-->
+<!--REF #_command_.ORDER BY FORMULA.Syntax-->**ORDER BY FORMULA** ( *aTable* : Table ; *formula* : Expression {; >,<} {; ...(*formula* : Expression {; >,<})} )<!-- END REF-->
 <!--REF #_command_.ORDER BY FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションをソートするテーブル |
-| expression | Expression | &#8594;  | 各レベルのソートに設定する式 (文字, 実数, 整数, 倍長整数, 日付, 時間または ブール) |
-| > or < | 演算子 | &#8594;  | 各レベルのソート方向: >: 昇順, または <: 降順 |
+| aTable | Table | &#8594; | セレクションをソートするテーブル |
+| expression | Expression | &#8594; | 各レベルのソートに設定する式 (文字, 実数, 整数, 倍長整数, 日付, 時間または ブール) |
+| > or < | 演算子 | &#8594; | 各レベルのソート方向: >: 昇順, または <: 降順 |
 
 <!-- END REF-->
 
@@ -50,7 +50,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 300 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 | カレントレコードを変更する ||
 

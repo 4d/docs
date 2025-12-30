@@ -5,11 +5,11 @@ slug: /commands/locked-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*laTable* ;} *process* ; *utilisateur4D* ; *utilisateurSession* ; *nomProcess* )<!-- END REF-->
+<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*laTable* : Table ;} *process* : Integer ; *utilisateur4D* : Text ; *utilisateurSession* : Text ; *nomProcess* : Text )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de l'enregistrement verrouillé ou Table par défaut si ce paramètre est omis |
 | process | Integer | &#8592; | Numéro du process |
 | utilisateur4D | Text | &#8592; | Nom de l'utilisateur 4D |
 | utilisateurSession | Text | &#8592; | Nom de l'utilisateur ayant ouvert la session de travail |
@@ -46,6 +46,6 @@ Si l'enregistrement a été verrouillé par une *requête REST $lock*:
 |  |  |
 | --- | --- |
 | Numéro de commande | 353 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

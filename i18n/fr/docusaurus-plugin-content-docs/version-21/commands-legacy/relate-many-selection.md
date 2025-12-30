@@ -39,7 +39,7 @@ Prenons l'exemple d'une base de données comportant une table *\[Factures\]* don
 |  |  |
 | --- | --- |
 | Numéro de commande | 340 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

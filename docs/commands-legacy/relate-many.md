@@ -5,7 +5,7 @@ slug: /commands/relate-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* )<br/>**RELATE MANY** ( *Field* )<!-- END REF-->
+<!--REF #_command_.RELATE MANY.Syntax-->**RELATE MANY** ( *oneTable* : Table, Field )<br/>**RELATE MANY** ( *Field* : Table, Field )<!-- END REF-->
 <!--REF #_command_.RELATE MANY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Note that the RELATE MANY command is needed, even though the relations are autom
 |  |  |
 | --- | --- |
 | Command number | 262 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

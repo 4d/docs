@@ -5,13 +5,13 @@ slug: /commands/qr-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* ; *numColuna* ; *novaPosição* )<!-- END REF-->
+<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* : Integer ; *numColuna* : Integer ; *novaPosição* : Integer )<!-- END REF-->
 <!--REF #_command_.QR MOVE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Número de coluna |
-| novaPosição | Integer | &#8594;  | Nova posição para a coluna |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Número de coluna |
+| novaPosição | Integer | &#8594; | Nova posição para a coluna |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ O resultado será:
 |  |  |
 | --- | --- |
 | Número do comando | 1325 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

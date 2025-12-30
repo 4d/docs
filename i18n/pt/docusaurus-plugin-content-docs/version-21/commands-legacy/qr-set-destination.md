@@ -58,7 +58,7 @@ O código a seguir define o arquivo texto Midoc.txt como tipo de destino do rela
 |  |  |
 | --- | --- |
 | Número do comando | 745 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

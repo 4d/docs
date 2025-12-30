@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *lineamenu* {; *proceso*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* : Integer, Text ; *lineamenu* : Integer {; *proceso* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 por el último elemento añadido |
-| proceso | Integer | &#8594;  | Número de referencia de proceso |
+| menu | Integer, Text | &#8594; | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 por el último elemento añadido |
+| proceso | Integer | &#8594; | Número de referencia de proceso |
 | Resultado | Integer | &#8592; | Código de caracter de la tecla de atajo estándar asociada a la línea de menú |
 
 <!-- END REF-->
@@ -54,7 +54,7 @@ Para obtener un atajo asociado con un comando de menú, es útil implementar una
 |  |  |
 | --- | --- |
 | Número de comando | 424 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

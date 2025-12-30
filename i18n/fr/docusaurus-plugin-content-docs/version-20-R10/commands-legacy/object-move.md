@@ -67,6 +67,6 @@ L’instruction suivante place le bouton “Bouton\_1” aux coordonnées (10;20
 |  |  |
 | --- | --- |
 | Numéro de commande | 664 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

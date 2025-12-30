@@ -5,15 +5,15 @@ slug: /commands/qr-set-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* ; *left* ; *top* {; *right* {; *bottom*}} )<!-- END REF-->
+<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| left | Integer | &#8594;  | 左境界 |
-| top | Integer | &#8594;  | 上境界 |
-| right | Integer | &#8594;  | 右境界 |
-| bottom | Integer | &#8594;  | 下境界 |
+| area | Integer | &#8594; | エリア参照 |
+| left | Integer | &#8594; | 左境界 |
+| top | Integer | &#8594; | 上境界 |
+| right | Integer | &#8594; | 右境界 |
+| bottom | Integer | &#8594; | 下境界 |
 
 <!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 794 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

@@ -31,7 +31,7 @@ If the Web Server is successfully started, **OK** is set to 1; otherwise **OK** 
 |  |  |
 | --- | --- |
 | Command number | 617 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

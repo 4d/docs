@@ -46,7 +46,7 @@ Se o usuário clicar no botão Aceitar, ou pressionar a tecla Enter, a variável
 |  |  |
 | --- | --- |
 | Número do comando | 292 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

@@ -245,7 +245,7 @@ In Qodly Studio for 4D, the login mode can be set using the [**Force login** opt
 
 :::
 
-## Restriction Modes
+## 制限モード
 
 The `restrictedByDefault` property configures how every [resource](#resources) are accessed when [no specific permission is defined for it](#permission):
 

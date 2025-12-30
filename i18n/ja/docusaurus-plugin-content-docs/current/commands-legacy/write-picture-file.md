@@ -5,13 +5,13 @@ slug: /commands/write-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *fileName* ; *picture* {; *codec*} )<!-- END REF-->
+<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *fileName* : Text ; *picture* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | 書き出すファイルのフルパス名, または空の文字列 |
-| picture | Picture | &#8594;  | 書き出すピクチャフィールドまたは変数 |
-| codec | Text | &#8594;  | ピクチャCodec ID |
+| fileName | Text | &#8594; | 書き出すファイルのフルパス名, または空の文字列 |
+| picture | Picture | &#8594; | 書き出すピクチャフィールドまたは変数 |
+| codec | Text | &#8594; | ピクチャCodec ID |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 680 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document |
 
 

@@ -27,6 +27,6 @@ Chamar este comando é necessário quando se utiliza o comando [FORM LOAD](../co
 |  |  |
 | --- | --- |
 | Número do comando | 1299 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

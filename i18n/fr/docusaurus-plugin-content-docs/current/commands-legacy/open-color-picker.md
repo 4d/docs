@@ -5,11 +5,11 @@ slug: /commands/open-color-picker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *texteOuFond* )}<!-- END REF-->
+<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** ({ *texteOuFond* : Integer })<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| texteOuFond | Integer | &#8594;  | 0 ou omis = couleur du texte, 1 = couleur du fond du texte |
+| texteOuFond | Integer | &#8594; | 0 ou omis = couleur du texte, 1 = couleur du fond du texte |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ Si la couleur a été modifiée, l’événement formulaire On After Edit est g�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1304 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/insert-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *source* ; *insertion* ; *positionDépart* ) : Text<!-- END REF-->
+<!--REF #_command_.Insert string.Syntax-->**Insert string** ( *source* : Text ; *insertion* : Text ; *positionDépart* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Insert string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | Chaîne dans laquelle effectuer l'insertion |
-| insertion | Text | &#8594;  | Chaîne à insérer dans source |
-| positionDépart | Integer | &#8594;  | Position de l'insertion |
+| source | Text | &#8594; | Chaîne dans laquelle effectuer l'insertion |
+| insertion | Text | &#8594; | Chaîne à insérer dans source |
+| positionDépart | Integer | &#8594; | Position de l'insertion |
 | Résultat | Text | &#8592; | Chaîne résultante |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ L'exemple suivant illustre l'utilisation de **Insert string**. Les résultats so
 |  |  |
 | --- | --- |
 | Numéro de commande | 231 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

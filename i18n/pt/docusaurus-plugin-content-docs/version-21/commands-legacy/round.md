@@ -43,6 +43,6 @@ O exemplo a seguir ilustra como Round funciona com diferentes argumentos. Cada l
 |  |  |
 | --- | --- |
 | Número do comando | 94 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

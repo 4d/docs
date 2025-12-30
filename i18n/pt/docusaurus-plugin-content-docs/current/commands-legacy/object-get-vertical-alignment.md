@@ -5,12 +5,12 @@ slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get vertical alignment** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | Resultado | Integer | &#8592; | Tipo de alienação |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ O alinhamento vertical pode ser aplicado aos seguintes tipos de objetos de formu
 |  |  |
 | --- | --- |
 | Número do comando | 1188 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

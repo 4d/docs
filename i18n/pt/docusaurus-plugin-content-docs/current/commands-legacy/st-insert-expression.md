@@ -5,15 +5,15 @@ slug: /commands/st-insert-expression
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( {* ;} *objeto* ; *expressao* {; *inicioSel* {; *fimSel*}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT EXPRESSION.Syntax-->**ST INSERT EXPRESSION** ( {* ;} *objeto* : Object ; *expressao* : Text {; *inicioSel* : Integer {; *fimSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT EXPRESSION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | Object | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| expressao | Text | &#8594;  | Expressão e (opcional) formato a inserir |
-| inicioSel | Integer | &#8594;  | Início da seleção |
-| fimSel | Integer | &#8594;  | Fim da seleção |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | Object | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| expressao | Text | &#8594; | Expressão e (opcional) formato a inserir |
+| inicioSel | Integer | &#8594; | Início da seleção |
+| fimSel | Integer | &#8594; | Fim da seleção |
 
 <!-- END REF-->
 
@@ -94,7 +94,7 @@ Deseja substituir o texto selecionado com o resultado de um método projeto:
 |  |  |
 | --- | --- |
 | Número do comando | 1281 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

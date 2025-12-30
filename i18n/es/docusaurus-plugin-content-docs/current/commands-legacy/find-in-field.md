@@ -5,13 +5,12 @@ slug: /commands/find-in-field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *campoObjetivo* ; *valor* ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *campoObjetivo* : Field ; *valor* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoObjetivo | Field | &#8594;  | Campo objetivo en el cual ejecutar la búsqueda. |
-| valor | Field, Variable | &#8594;  | Valor a buscar |
-| &#8592; | Valor encontrado |
+| campoObjetivo | Field | &#8594; | Campo objetivo en el cual ejecutar la búsqueda. |
+| valor | Field, Variable | &#8596; | *in:* Value to search<br/>*out:* Value found |
 | Resultado | Integer | &#8592; | Número del registro encontrado o -1 si no se encontró ningún registro |
 
 <!-- END REF-->
@@ -69,6 +68,6 @@ Tenga en cuenta >= permite cubrir todos los casos. De hecho, la función devuelv
 |  |  |
 | --- | --- |
 | Número de comando | 653 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

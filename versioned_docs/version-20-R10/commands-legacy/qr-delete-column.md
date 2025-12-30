@@ -40,7 +40,7 @@ The following example makes sure the report is a list report and deletes the thi
 |  |  |
 | --- | --- |
 | Command number | 749 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

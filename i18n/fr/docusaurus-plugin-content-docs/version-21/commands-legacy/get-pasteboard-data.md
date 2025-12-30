@@ -59,7 +59,7 @@ Si les données sont extraites correctement, la variable OK prend la valeur 1\. 
 |  |  |
 | --- | --- |
 | Numéro de commande | 401 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

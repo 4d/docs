@@ -5,7 +5,7 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* {; *fileType*} ) : Time<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *document* : Text {; *fileType* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ The following example opens an existing document called Note, appends the string
 |  |  |
 | --- | --- |
 | Command number | 265 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

@@ -72,7 +72,7 @@ La variable système OK prend la valeur 1 si la commande a été exécutée corr
 |  |  |
 | --- | --- |
 | Numéro de commande | 734 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

@@ -5,11 +5,11 @@ slug: /commands/accumulate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *...data* )<!-- END REF-->
+<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *...data* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| data | Field, Variable | &#8594;  | 累計する数値型のフィールドまたは変数 |
+| data | Field, Variable | &#8594; | 累計する数値型のフィールドまたは変数 |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 303 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

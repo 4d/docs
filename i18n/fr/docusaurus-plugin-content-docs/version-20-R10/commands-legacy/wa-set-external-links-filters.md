@@ -78,6 +78,6 @@ Cet exemple combine des filtrages de sites et de liens externes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1032 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

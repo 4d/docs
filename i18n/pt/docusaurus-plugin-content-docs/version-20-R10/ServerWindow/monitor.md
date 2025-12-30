@@ -34,7 +34,7 @@ A área "Visão Geral" fornece várias informações sobre o sistema, aplicativo
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-Geralmente, você precisará verificar o [**Gerenciador de licenças**](Admin/licenses.md).
+Usually, you will need to check the [**Licenses Manager**](Admin/licenses.md).
 
 ## Área Detalhes
 

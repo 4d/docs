@@ -9,7 +9,7 @@ Los objetos `4D.WebFormItem` son propiedades del objeto [`4D.WebForm`](WebFormCl
 
 When you call the [`Web Form`](../commands/web-form.md) command, the returned `4D.WebForm` proxy object holds as many `4D.WebFormItems` as there are components with [**server-side references**](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#server-side) in your webform.
 
-For example, `WebFormObject.myImage` refers to the image component with `myImage` as server reference.
+Por ejemplo, `WebFormObject.myImage` hace referencia al componente de imagen con `myImage` como referencia del servidor.
 
 <details><summary>Historia</summary>
 
@@ -34,9 +34,9 @@ For example, `WebFormObject.myImage` refers to the image component with `myImage
 
 <!-- REF #WebFormItemClass.addCSSClass().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                   |
-| ---------- | ------ | :-: | --------------------------------------------- |
-| className  | string |  -> | Nombre de la clase CSS a añadir al componente |
+| Parámetros | Tipo |     | Descripción                                   |
+| ---------- | ---- | :-: | --------------------------------------------- |
+| className  | Text |  -> | Nombre de la clase CSS a añadir al componente |
 
 <!-- END REF -->
 
@@ -77,7 +77,7 @@ exposed Function isHidden()
 ```
 
 2. In Qodly Studio: Select the image component on the canvas, and enter a server-side reference in the Properties Panel > Server Side, for example "myImage".
-3. Select the Button component and add an `onclick` event to it.
+3. Seleccione el componente Button y añádale un evento `onclick`.
 4. Adjunta la función `isHidden` al evento.
 
 ### .removeCSSClass()
@@ -86,9 +86,9 @@ exposed Function isHidden()
 
 <!-- REF #WebFormItemClass.removeCSSClass().Params -->
 
-| Parámetros | Tipo   |     | Descripción                                      |
-| ---------- | ------ | :-: | ------------------------------------------------ |
-| className  | string |  -> | Nombre de la clase CSS a eliminar del componente |
+| Parámetros | Tipo |     | Descripción                                      |
+| ---------- | ---- | :-: | ------------------------------------------------ |
+| className  | Text |  -> | Nombre de la clase CSS a eliminar del componente |
 
 <!-- END REF -->
 

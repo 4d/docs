@@ -5,12 +5,12 @@ slug: /commands/add-to-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* ;} *set* )<!-- END REF-->
+<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントレコードのテーブル, または 省略時デフォルトテーブル |
-| set | Text | &#8594;  | カレントレコードを追加するセットの名前 |
+| aTable | Table | &#8594; | カレントレコードのテーブル, または 省略時デフォルトテーブル |
+| set | Text | &#8594; | カレントレコードを追加するセットの名前 |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 119 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

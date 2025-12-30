@@ -5,11 +5,11 @@ slug: /commands/dec
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dec.Syntax-->**Dec** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Dec.Syntax-->**Dec** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Dec.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#8594;  | Valeur dont voulez obtenir la partie décimale |
+| nombre | Real | &#8594; | Valeur dont voulez obtenir la partie décimale |
 | Résultat | Real | &#8592; | Partie décimale de nombre |
 
 <!-- END REF-->
@@ -36,6 +36,6 @@ L'exemple suivant utilise une valeur monétaire exprimée sous forme numérique 
 |  |  |
 | --- | --- |
 | Numéro de commande | 9 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

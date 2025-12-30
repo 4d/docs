@@ -65,6 +65,6 @@ El siguiente ejemplo es una función que devuelve el día actual como una cadena
 |  |  |
 | --- | --- |
 | Número de comando | 114 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

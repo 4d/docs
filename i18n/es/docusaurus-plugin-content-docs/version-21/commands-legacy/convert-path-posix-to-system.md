@@ -60,6 +60,6 @@ Ejemplos bajo Windows:
 |  |  |
 | --- | --- |
 | Número de comando | 1107 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

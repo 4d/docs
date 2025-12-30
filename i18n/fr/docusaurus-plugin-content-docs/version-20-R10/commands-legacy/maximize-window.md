@@ -86,6 +86,6 @@ Dans le contexte suivant, si l'utilisateur clique sur le bouton :
 |  |  |
 | --- | --- |
 | Numéro de commande | 453 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

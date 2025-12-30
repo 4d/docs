@@ -5,13 +5,13 @@ slug: /commands/list-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *list* ; *BLOB* {; *} )<!-- END REF-->
+<!--REF #_command_.LIST TO BLOB.Syntax-->**LIST TO BLOB** ( *list* : Integer ; *BLOB* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.LIST TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | BLOBに格納する階層リスト |
-| Blob | Blob | &#8594;  | 階層リストを受け取るBLOB |
-| * | 演算子 | &#8594;  | 値を追加するには* |
+| list | Integer | &#8594; | BLOBに格納する階層リスト |
+| Blob | Blob | &#8594; | 階層リストを受け取るBLOB |
+| * | 演算子 | &#8594; | 値を追加するには* |
 
 <!-- END REF-->
 
@@ -53,7 +53,7 @@ LIST TO BLOBや[BLOB to list](blob-to-list.md "BLOB to list")は、 BLOBに格�
 |  |  |
 | --- | --- |
 | コマンド番号 | 556 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

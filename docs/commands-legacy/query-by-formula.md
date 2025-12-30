@@ -5,7 +5,7 @@ slug: /commands/query-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *aTable* {; *queryFormula*} )<!-- END REF-->
+<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *aTable* : Table {; *queryFormula* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY BY FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -84,7 +84,7 @@ This example uses a join to query all the lines of "ACME" client invoices even t
 |  |  |
 | --- | --- |
 | Command number | 48 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

@@ -29,6 +29,6 @@ If this command is called outside of the context of a Web session, it returns an
 |  |  |
 | --- | --- |
 | Command number | 1162 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

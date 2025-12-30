@@ -5,12 +5,12 @@ slug: /commands/get-registered-clients
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* ; *methods* )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *clientList* : Text array ; *methods* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | clientList | Text array | &#8592; | List of the saved 4D Clients |
-| methods | Array integer | &#8592; | List of the methods to be executed |
+| methods | Integer array | &#8592; | List of the methods to be executed |
 
 <!-- END REF-->
 
@@ -50,7 +50,7 @@ If the operation was successful, the OK system variable is equal to 1.
 |  |  |
 | --- | --- |
 | Command number | 650 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

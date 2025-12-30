@@ -37,7 +37,7 @@ Se o banco de dados funciona com um arquivo de histórico, a variável de sistem
 |  |  |
 | --- | --- |
 | Número do comando | 928 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

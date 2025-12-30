@@ -30,6 +30,6 @@ You can set the "Three-States" property either using the Property List, or using
 |  |  |
 | --- | --- |
 | Command number | 1250 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* ; *where* ; *numChars* ) : Text<!-- END REF-->
+<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *source* : Text ; *where* : Integer ; *numChars* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | 文字を削除する文字列 |
-| where | Integer | &#8594;  | 削除開始位置 |
-| numChars | Integer | &#8594;  | 削除する文字数 |
+| source | Text | &#8594; | 文字を削除する文字列 |
+| where | Integer | &#8594; | 削除開始位置 |
+| numChars | Integer | &#8594; | 削除する文字数 |
 | 戻り値 | Text | &#8592; | 結果の文字列 |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ Delete stringの使用例を次に示します。結果を変数*vtResult*に代
 |  |  |
 | --- | --- |
 | コマンド番号 | 232 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

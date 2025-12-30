@@ -195,6 +195,6 @@ beta[1].golf:{line:10,offset:12}}}
 |  |  |
 | --- | --- |
 | Número do comando | 1218 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

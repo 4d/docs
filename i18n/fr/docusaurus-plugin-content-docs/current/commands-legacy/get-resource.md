@@ -5,15 +5,14 @@ slug: /commands/get-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* ; *resNum* ; *resDonnées* {; *resFichier*} )<!-- END REF-->
+<!--REF #_command_.GET RESOURCE.Syntax-->**GET RESOURCE** ( *resType* : Text ; *resNum* : Integer ; *resDonnées* : Blob {; *resFichier* : Time} )<!-- END REF-->
 <!--REF #_command_.GET RESOURCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | Type de ressource (4 caractères) |
-| resNum | Integer | &#8594;  | Numéro de ressource |
-| resDonnées | Blob | &#8594;  | Champ ou variable BLOB devant recevoir les données |
-| &#8592; | Contenu de la ressource |
-| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou Tous les fichiers de ressources ouverts si omis |
+| resType | Text | &#8594; | Type de ressource (4 caractères) |
+| resNum | Integer | &#8594; | Numéro de ressource |
+| resDonnées | Blob | &#8596; | *in:* BLOB field or variable to receive the data <br/>*out:* Contents of the resource |
+| resFichier | Time | &#8594; | Numéro de référence de fichier de ressources ou Tous les fichiers de ressources ouverts si omis |
 
 <!-- END REF-->
 
@@ -33,9 +32,6 @@ Si vous passez un numéro de référence de fichier de ressources valide dans *r
 
  Rappelez-vous que vous travaillez avec des ressources issues de Mac OS. Quelle que soit la plate-forme utilisée, les valeurs internes des ressources comme des entiers longs sont stockées avec l'ordre d'octets ("byte ordering") Mac OS. Sous Windows, pour les données des ressources standard (telles que les ressources listes de chaînes et les ressources images) l'ordre des octets est automatiquement inversé ("byte swapping") si nécessaire. D'un autre côté, si vous créez et utilisez vos propres structures internes de données, c'est à vous d'effectuer l'inversion d'octets des données lorsque vous les extrayez d'un BLOB (par exemple en passant Macintosh byte ordering à une commande telle que [BLOB to longint](blob-to-longint.md)).
 
-## Exemple 
-
-Reportez-vous à l'exemple de la commande .
 
 ## Variables et ensembles système 
 
@@ -54,7 +50,7 @@ S'il n'y a pas assez de mémoire disponible pour charger l'image, une erreur est
 |  |  |
 | --- | --- |
 | Numéro de commande | 508 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

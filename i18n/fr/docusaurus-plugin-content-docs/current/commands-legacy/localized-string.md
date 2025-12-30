@@ -5,11 +5,11 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) : Text<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resName | Text | &#8594;  | Nom d’attribut resname |
+| resName | Text | &#8594; | Nom d’attribut resname |
 | Résultat | Text | &#8592; | Valeur de la chaîne désignée par resName dans le langage courant |
 
 <!-- END REF-->
@@ -60,7 +60,7 @@ Si la commande a été exécutée correctement, la variable OK prend la valeur 1
 |  |  |
 | --- | --- |
 | Numéro de commande | 991 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

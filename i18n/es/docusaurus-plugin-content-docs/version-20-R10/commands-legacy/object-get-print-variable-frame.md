@@ -41,6 +41,6 @@ Si el *objeto* es un subformulario y si la impresión en tamaño variable está 
 |  |  |
 | --- | --- |
 | Número de comando | 1241 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/adjust-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *laTable* ; *priorité* )<!-- END REF-->
+<!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *laTable* : Table ; *priorité* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dont vous souhaitez ajuster la priorité des données "blobs" |
-| priorité | Integer | &#8594;  | Priorité des données "blobs" de la table dans le cache |
+| laTable | Table | &#8594; | Table dont vous souhaitez ajuster la priorité des données "blobs" |
+| priorité | Integer | &#8594; | Priorité des données "blobs" de la table dans le cache |
 
 <!-- END REF-->
 
@@ -58,6 +58,6 @@ Vous souhaitez modifier temporairement la priorité des champs Texte de la table
 |  |  |
 | --- | --- |
 | Numéro de commande | 1431 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

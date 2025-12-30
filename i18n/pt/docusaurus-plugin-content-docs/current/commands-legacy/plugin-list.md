@@ -5,7 +5,7 @@ slug: /commands/plugin-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *numerosArray* ; *arrayNomes* )<!-- END REF-->
+<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *numerosArray* : Integer array ; *arrayNomes* : Text array )<!-- END REF-->
 <!--REF #_command_.PLUGIN LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ PLUGIN LIST leva todos os plug-ins em consideração, incluindo aqueles que est�
 |  |  |
 | --- | --- |
 | Número do comando | 847 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

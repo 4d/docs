@@ -5,12 +5,12 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} : Text<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** ( *buildNum* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | buildNum | Integer | &#8592; | Número de build |
-| * | Operador | &#8594;  | Se passar número de versão longo, caso contrário número de versão curto |
+| * | Operador | &#8594; | Se passar número de versão longo, caso contrário número de versão curto |
 | Resultado | Text | &#8592; | Número de versão em uma string codificada |
 
 <!-- END REF-->
@@ -125,6 +125,6 @@ Você quer usar o número pequeno de versão da aplicação retornado pelo coman
 |  |  |
 | --- | --- |
 | Número do comando | 493 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

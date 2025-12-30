@@ -5,13 +5,13 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *objeto* {; *elemento*} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *objeto* : Text {; *elemento* : Integer} )<br/>**EDIT ITEM** ( *objeto* : Field, Variable {; *elemento* : Integer} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una tabla o variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Tabla o variable (si se omite *) |
-| elemento | Integer | &#8594;  | Número de elemento |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una tabla o variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Tabla o variable (si se omite *) |
+| elemento | Integer | &#8594; | Número de elemento |
 
 <!-- END REF-->
 
@@ -77,6 +77,6 @@ Dadas dos columnas de un list box donde los nombres de las variables asociadas s
 |  |  |
 | --- | --- |
 | Número de comando | 870 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

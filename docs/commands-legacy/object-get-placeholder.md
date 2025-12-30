@@ -5,7 +5,7 @@ slug: /commands/object-get-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get placeholder.Syntax-->**OBJECT Get placeholder** ( * ; *object* : Text ) : Text<br/>**OBJECT Get placeholder** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get placeholder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ You want to get the field placeholder text:
 |  |  |
 | --- | --- |
 | Command number | 1296 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

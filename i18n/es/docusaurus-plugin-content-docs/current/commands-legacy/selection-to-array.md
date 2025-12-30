@@ -5,15 +5,15 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *campo* ; *array* {; *campo* ; *array* {; *campo2* ; *array2* ; ... ; *campoN* ; *arrayN*}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *campo* : Field ; *array* : Array {; *campo* : Field ; *array* : Array {; ...(*campo* : Field, *array* : Array)}}{; *}})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field, Table | &#8594;  | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registros |
+| campo | Field, Table | &#8594; | Campo a utilizar para recuperar datos o Tabla a utilizar para recuperar números de registros |
 | array | Array | &#8592; | Array para recibir valores de campos o números de registros |
-| campo | Field | &#8594;  | Campo a recuperar en el array |
+| campo | Field | &#8594; | Campo a recuperar en el array |
 | array | Array | &#8592; | Array que recibe los valores del campo |
-| * | Operador | &#8594;  | Esperar ejecución |
+| * | Operador | &#8594; | Esperar ejecución |
 
 <!-- END REF-->
 
@@ -85,6 +85,6 @@ El mismo ejemplo puede escribirse:
 |  |  |
 | --- | --- |
 | Número de comando | 260 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

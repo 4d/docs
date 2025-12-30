@@ -5,7 +5,7 @@ slug: /commands/object-get-keyboard-layout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get keyboard layout.Syntax-->**OBJECT Get keyboard layout** ( * ; *object* : Text ) : Text<br/>**OBJECT Get keyboard layout** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get keyboard layout.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ The command returns a string indicating the language code used, based on RFC3066
 |  |  |
 | --- | --- |
 | Command number | 1180 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

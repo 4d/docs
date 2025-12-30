@@ -5,20 +5,24 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( numTable | unPtr ) : any<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* : Integer ) : Pointer<br/>**Table** ( *tablePtr* : Pointer ) : Integer<br/>**Table** ( *fieldPtr* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable &#124; unPtr | Entier long, Pointeur | &#8594;  | Numéro de table ou Pointeur de table ou Pointeur de champ |
-| Résultat | Integer, Pointer | &#8592; | Pointeur de table si un Numéro de table est passé, Numéro de table si un Pointeur de table est passé, Numéro de table si un Pointeur de champ est passé |
+| tableNum | Integer | &#8594;  | Numéro de table |
+| tablePtr | Pointer | &#8594;  | Pointeur de table |
+| fieldPtr | Pointer | &#8594;  | Pointeur de champ |
+| Résultat | Pointer, Integer | &#8592; | Pointeur de table si un numéro de table est passé<br/>Numéro de table si un pointeur de table ou un pointeur de champ est passé|
 
 <!-- END REF-->
 
 ## Description 
 
-<!--REF #_command_.Table.Summary-->**Table** a trois syntaxes différentes.<!-- END REF-->retourne un pointeur sur la table.
-* Si vous passez un pointeur de table dans *unPtr*, **Table** retourne le numéro de la table.
-* Si vous passez un pointeur de champ dans *unPtr*, **Table** retourne le numéro de table du champ.
+**Table** a trois syntaxes différentes :
+
+<!--REF #_command_.Table.Summary-->* Si vous passez un numéro de table dans *tableNum*, **Table** retourne un pointeur sur la table.
+* Si vous passez un pointeur de table dans *tablePtr*, **Table** retourne le numéro de la table.
+* Si vous passez un pointeur de champ dans *fieldPtr*, **Table** retourne le numéro de table du champ.<!-- END REF-->
 
 ## Exemple 1 
 
@@ -63,6 +67,6 @@ Dans l'exemple suivant, la variable *numTable* est égale au numéro de la table
 |  |  |
 | --- | --- |
 | Numéro de commande | 252 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,15 +5,15 @@ slug: /commands/get-menu-item-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* ; *menuItem* ; *propriedade* ; *valor* {; *processo*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* : Integer ; *menuItem* : Integer ; *propriedade* : Text ; *valor* : any {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para o último item adicionado ao menu |
-| propriedade | Text | &#8594;  | Tipo de propriedade |
+| menu | Integer | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item de menu ou -1 para o último item adicionado ao menu |
+| propriedade | Text | &#8594; | Tipo de propriedade |
 | valor | any | &#8592; | Valor da propriedade |
-| processo | Integer | &#8594;  | Número de processo |
+| processo | Integer | &#8594; | Número de processo |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ Nota de compatibilidade: Como padrão, se o valor da variável não for digitado
 |  |  |
 | --- | --- |
 | Número do comando | 972 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

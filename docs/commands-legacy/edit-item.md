@@ -5,7 +5,7 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *object* {; *item*} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *object* : Text {; *item* : Integer} )<br/>**EDIT ITEM** ( *object* : Field, Variable {; *item* : Integer} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -77,6 +77,6 @@ Given two columns in a list box whose variable names are “Array1” and “Arr
 |  |  |
 | --- | --- |
 | Command number | 870 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

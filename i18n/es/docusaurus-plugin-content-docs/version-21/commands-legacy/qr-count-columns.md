@@ -39,7 +39,7 @@ El siguiente código permite añadir una columna adicional a la derecha de la ú
 |  |  |
 | --- | --- |
 | Número de comando | 764 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

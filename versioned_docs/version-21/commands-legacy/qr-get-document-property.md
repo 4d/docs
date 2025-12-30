@@ -40,6 +40,6 @@ If you pass an invalid *property* value, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 773 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

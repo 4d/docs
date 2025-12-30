@@ -4,7 +4,7 @@ title: OBJECT SET DATA SOURCE FORMULA
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( {* ;} *object* ; *formula* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Syntax-->**OBJECT SET DATA SOURCE FORMULA** ( * ; *object* : Text ; *formula* : 4D.Formula )<br/>**OBJECT SET DATA SOURCE FORMULA** ( *object* : Field, Variable ; *formula* : 4D.Formula )<!-- END REF-->
 
 <!--REF #_command_.OBJECT SET DATA SOURCE FORMULA.Params-->
 
@@ -63,6 +63,6 @@ OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
 |  |  |
 | --- | --- |
 | Command number | 1851 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

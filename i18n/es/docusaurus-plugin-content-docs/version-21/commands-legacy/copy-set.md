@@ -45,6 +45,6 @@ El siguiente ejemplo en Cliente/Servidor, copia el conjunto proceso "ConjuntoA",
 |  |  |
 | --- | --- |
 | Número de comando | 600 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

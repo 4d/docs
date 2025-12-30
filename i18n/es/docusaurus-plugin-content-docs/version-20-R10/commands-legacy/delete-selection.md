@@ -70,7 +70,7 @@ Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION,
 |  |  |
 | --- | --- |
 | Número de comando | 66 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

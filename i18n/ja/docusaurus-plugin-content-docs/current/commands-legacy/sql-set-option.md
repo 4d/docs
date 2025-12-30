@@ -5,12 +5,12 @@ slug: /commands/sql-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.SQL SET OPTION.Syntax-->**SQL SET OPTION** ( *option* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SQL SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | 設定するオプション番号 |
-| value | Integer, Text | &#8594;  | 新しいオプションの値 |
+| option | Integer | &#8594; | 設定するオプション番号 |
+| value | Integer, Text | &#8594; | 新しいオプションの値 |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 818 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

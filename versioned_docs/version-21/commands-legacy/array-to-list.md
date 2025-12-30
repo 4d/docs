@@ -66,7 +66,7 @@ An error *\-9957* is generated when ARRAY TO LIST is applied to a list that is c
 |  |  |
 | --- | --- |
 | Command number | 287 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

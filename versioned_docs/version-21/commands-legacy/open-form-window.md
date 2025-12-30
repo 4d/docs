@@ -139,6 +139,6 @@ which displays:
 |  |  |
 | --- | --- |
 | Command number | 675 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

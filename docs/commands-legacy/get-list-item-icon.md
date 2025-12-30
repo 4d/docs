@@ -5,7 +5,7 @@ slug: /commands/get-list-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* ; *itemRef* ; *icon* )<br/>**GET LIST ITEM ICON** ( * ; *list* ; * ; *icon* <!-- END REF-->
+<!--REF #_command_.GET LIST ITEM ICON.Syntax-->**GET LIST ITEM ICON** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *icon* : Picture )<br/>**GET LIST ITEM ICON** ( * ; *list* : Integer, Text ; * ; *icon* : Picture<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -43,6 +43,6 @@ If no icon is associated with the item, the icon variable is returned empty.
 |  |  |
 | --- | --- |
 | Command number | 951 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/delete-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *userID* )<!-- END REF-->
+<!--REF #_command_.DELETE USER.Syntax-->**DELETE USER** ( *userID* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ If you do not have the proper access privileges for calling DELETE USER or if th
 |  |  |
 | --- | --- |
 | Command number | 615 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

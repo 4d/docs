@@ -5,13 +5,13 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* ; *icon* {; *size*} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *docPath* : Text ; *icon* : Picture, Picture {; *size* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| docPath | Text | &#8594;  | アイコンを取得するドキュメントのパスまたは名前、 または空の文字列の場合標準のファイルを開くダイアログ |
+| docPath | Text | &#8594; | アイコンを取得するドキュメントのパスまたは名前、 または空の文字列の場合標準のファイルを開くダイアログ |
 | icon | Picture, Picture | &#8592; | ドキュメントアイコン |
-| size | Integer | &#8594;  | 返されたピクチャのサイズ(ピクセルで) |
+| size | Integer | &#8594; | 返されたピクチャのサイズ(ピクセルで) |
 
 <!-- END REF-->
 
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 700 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | Document、error |
 
 

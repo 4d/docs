@@ -5,11 +5,11 @@ slug: /commands/send-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.SEND VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | 送信する変数 |
+| variable | Variable | &#8594; | 送信する変数 |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 80 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

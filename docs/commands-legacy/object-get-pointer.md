@@ -5,7 +5,7 @@ slug: /commands/object-get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *selector* {; *objectName* {; *subformName*}})} : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** ( *selector* : Integer {; *objectName* : Text {; *subformName* : Text}}) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,6 +61,6 @@ Given a form "SF" used twice as a subform in the same parent form. The subform o
 |  |  |
 | --- | --- |
 | Command number | 1124 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

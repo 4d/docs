@@ -5,13 +5,13 @@ slug: /commands/execute-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *nomeMetodo* {; *resultado* {; *param*}}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.EXECUTE METHOD.Syntax-->**EXECUTE METHOD** ( *methodName* : Text ; *result* : Variable {; ...*param* : Expression} )<br/>**EXECUTE METHOD** ( *methodName* : Text ; * {; ...*param* : Expression} )<!-- END REF-->
 <!--REF #_command_.EXECUTE METHOD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeMetodo | Text | &#8594;  | Nome do método de projeto a ser executado |
-| resultado | Variable, * | &#8592; | Variável que recebe o método de resultado ou * por um método não retornando um resultado |
-| param | Expression | &#8594;  | Parâmetros do método |
+| nomeMetodo | Text | &#8594; | Nome do método de projeto a ser executado |
+| resultado | Variable, Operator | &#8592; | Variável que recebe o método de resultado ou * por um método não retornando um resultado |
+| param | Expression | &#8594; | Parâmetros do método |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ Se este comando é executado corretamente, a variável sistema OK toma o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 1007 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

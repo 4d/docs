@@ -163,7 +163,7 @@ Si le format de la condition de recherche est correct, la variable système OK p
 |  |  |
 | --- | --- |
 | Numéro de commande | 942 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

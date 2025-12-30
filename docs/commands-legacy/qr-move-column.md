@@ -5,7 +5,7 @@ slug: /commands/qr-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* ; *column* ; *newPos* )<!-- END REF-->
+<!--REF #_command_.QR MOVE COLUMN.Syntax-->**QR MOVE COLUMN** ( *area* : Integer ; *column* : Integer ; *newPos* : Integer )<!-- END REF-->
 <!--REF #_command_.QR MOVE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ The result is:
 |  |  |
 | --- | --- |
 | Command number | 1325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

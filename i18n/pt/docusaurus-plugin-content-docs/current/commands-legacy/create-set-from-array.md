@@ -5,13 +5,13 @@ slug: /commands/create-set-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *tabela* ; *arrayReg* {; *nomConjunto*} )<!-- END REF-->
+<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *tabela* : Table ; *arrayReg* : Integer, Boolean array {; *nomConjunto* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela do conjunto |
-| arrayReg | Integer, Boolean array | &#8594;  | Array de números de registrs, ou Array de booleanos (True = o registro está no conjunto, False = o registro não está no conjunto) |
-| nomConjunto | Text | &#8594;  | Nome do conjunto a criar, ou Aplicar o comando ao UserSet se omitido |
+| tabela | Table | &#8594; | Tabela do conjunto |
+| arrayReg | Integer, Boolean array | &#8594; | Array de números de registrs, ou Array de booleanos (True = o registro está no conjunto, False = o registro não está no conjunto) |
+| nomConjunto | Text | &#8594; | Nome do conjunto a criar, ou Aplicar o comando ao UserSet se omitido |
 
 <!-- END REF-->
 
@@ -45,7 +45,7 @@ Em um array de inteiros longos, se um número de registro não for válido (regi
 |  |  |
 | --- | --- |
 | Número do comando | 641 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

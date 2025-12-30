@@ -32,6 +32,6 @@ El comando devuelve una cadena indicando el código del lenguaje utilizado, basa
 |  |  |
 | --- | --- |
 | Número de comando | 1180 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -53,6 +53,6 @@ Cuando el usuario hace clic en el botón, aparece la caja de diálogo estándar 
 |  |  |
 | --- | --- |
 | Número de comando | 656 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

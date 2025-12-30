@@ -5,13 +5,13 @@ slug: /commands/object-set-visible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( {* ;} *objet* ; *visible* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VISIBLE.Syntax-->**OBJECT SET VISIBLE** ( * ; *objet* : Text ; *visible* : Boolean )<br/>**OBJECT SET VISIBLE** ( *objet* : Field, Variable ; *visible* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VISIBLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est passé) ou Champ ou Variable (si * est omis) |
-| visible | Boolean | &#8594;  | Vrai = visible, Faux = invisible |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est passé) ou Champ ou Variable (si * est omis) |
+| visible | Boolean | &#8594; | Vrai = visible, Faux = invisible |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ ou ainsi :
 |  |  |
 | --- | --- |
 | Numéro de commande | 603 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

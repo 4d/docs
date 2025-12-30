@@ -38,6 +38,6 @@ Si está trabajando por ejemplo con la base en la carpeta Documentos:MisCDsƒ: e
 |  |  |
 | --- | --- |
 | Número de comando | 490 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

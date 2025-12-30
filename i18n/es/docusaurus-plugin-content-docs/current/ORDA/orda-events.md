@@ -599,7 +599,7 @@ Function event afterDrop($event : Object)
 
 Este evento se activa justo después de que una entidad es soltada.
 
-This event is useful after dropping data to propagate the drop action outside the application or to execute administration tasks. Por ejemplo, se puede utilizar para enviar un correo electrónico de cancelación después de soltar los datos. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
+Este evento es útil después de soltar datos para propagar la acción de soltar fuera de la aplicación o para ejecutar tareas de administración. Por ejemplo, se puede utilizar para enviar un correo electrónico de cancelación después de soltar los datos. Or, in case of error while dropping data, it can log an information for the administrator to check data consistency.
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.
 

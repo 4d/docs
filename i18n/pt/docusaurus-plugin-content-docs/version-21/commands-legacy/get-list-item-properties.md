@@ -57,6 +57,6 @@ Para maior informação sobre estas propriedades, consulte a descrição do coma
 |  |  |
 | --- | --- |
 | Número do comando | 631 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

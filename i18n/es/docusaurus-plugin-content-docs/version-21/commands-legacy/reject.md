@@ -68,6 +68,6 @@ El siguiente ejemplo es parte de un método de objeto para un campo *\[Employees
 |  |  |
 | --- | --- |
 | Número de comando | 38 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

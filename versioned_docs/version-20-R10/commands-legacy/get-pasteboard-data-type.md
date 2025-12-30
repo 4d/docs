@@ -39,6 +39,6 @@ For more information about the data types supported, please refer to the *Managi
 |  |  |
 | --- | --- |
 | Command number | 958 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

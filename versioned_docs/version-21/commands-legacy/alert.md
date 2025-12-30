@@ -73,6 +73,6 @@ displays the alert dialog box (on Windows) shown:
 |  |  |
 | --- | --- |
 | Command number | 41 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

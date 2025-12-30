@@ -61,6 +61,6 @@ We want to duplicate and rename a file in its own folder:
 |  |  |
 | --- | --- |
 | Command number | 1548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

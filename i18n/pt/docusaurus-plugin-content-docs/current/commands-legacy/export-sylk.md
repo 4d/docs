@@ -5,12 +5,12 @@ slug: /commands/export-sylk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*tabela* ;} *documento* )<!-- END REF-->
+<!--REF #_command_.EXPORT SYLK.Syntax-->**EXPORT SYLK** ( {*tabela* : Table ;} *documento* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT SYLK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual exportar dados, ou tabela padrão, se omitida |
-| documento | Text | &#8594;  | documento SYLK a receber os dados |
+| tabela | Table | &#8594; | Tabela da qual exportar dados, ou tabela padrão, se omitida |
+| documento | Text | &#8594; | documento SYLK a receber os dados |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ OK toma el valor 1 se a exportação termina com sucesso; do contrário, toma o 
 |  |  |
 | --- | --- |
 | Número do comando | 85 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

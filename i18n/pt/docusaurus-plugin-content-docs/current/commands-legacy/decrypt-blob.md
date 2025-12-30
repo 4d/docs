@@ -5,14 +5,14 @@ slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDecifrar*  ; *enviarChavePub*  {; *recepChavePriv* } )<!-- END REF-->
+<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDecifrar* : Blob  ; *enviarChavePub* : Blob  {; *recepChavePriv* : Blob } )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aDecifrar | Blob | &#8596;  | Dados a decifrar |
-| ||| Dados decifrados |
-| enviarChavePub | Blob | &#8594;  | Chave pública do emissor |
-| recepChavePriv | Blob | &#8594;  | Chave privada do receptor |
+| aDecifrar | Blob | &#8596; | Dados a decifrar |
+|  |  |  | Dados decifrados |
+| enviarChavePub | Blob | &#8594; | Chave pública do emissor |
+| recepChavePriv | Blob | &#8594; | Chave privada do receptor |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ Consulte os exemplos dados para o comando .
 |  |  |
 | --- | --- |
 | Número do comando | 690 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -39,6 +39,6 @@ Si ningún icono está asociado a la línea de menú, el comando devuelve un val
 |  |  |
 | --- | --- |
 | Número de comando | 983 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

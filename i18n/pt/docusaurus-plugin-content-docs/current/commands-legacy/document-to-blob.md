@@ -5,13 +5,13 @@ slug: /commands/document-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *documento* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.DOCUMENT TO BLOB.Syntax-->**DOCUMENT TO BLOB** ( *documento* : Text ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.DOCUMENT TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Nome do documento gerado |
-| Blob | Blob | &#8596;  | Campo ou variável de tipo BLOB a receber o documento |
-| || | Conteúdo do documento |
+| documento | Text | &#8594; | Nome do documento gerado |
+| Blob | Blob | &#8596; | Campo ou variável de tipo BLOB a receber o documento |
+|  |  |  | Conteúdo do documento |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ Em cada caso, você pode interceptar o erro usando um método de interrupção [
 |  |  |
 | --- | --- |
 | Número do comando | 525 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

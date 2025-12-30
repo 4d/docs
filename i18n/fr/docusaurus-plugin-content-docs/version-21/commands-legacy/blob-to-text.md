@@ -67,6 +67,6 @@ Après l'exécution de la commande, la variable *offset* est incrémentée du no
 |  |  |
 | --- | --- |
 | Numéro de commande | 555 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

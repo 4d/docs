@@ -86,6 +86,6 @@ Como el comando devuelve una colección, se puede utilizar con **.join()** para 
 |  |  |
 | --- | --- |
 | Número de comando | 1790 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

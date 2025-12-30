@@ -40,6 +40,6 @@ Si el list box está en modo jerárquico, el comando llena el array *jerarquia* 
 |  |  |
 | --- | --- |
 | Número de comando | 1099 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

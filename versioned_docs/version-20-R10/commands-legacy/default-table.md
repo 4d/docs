@@ -81,6 +81,6 @@ Specifying the default table results in this code:
 |  |  |
 | --- | --- |
 | Command number | 46 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

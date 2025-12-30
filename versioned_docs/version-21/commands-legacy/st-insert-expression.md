@@ -93,7 +93,7 @@ You want to replace the highlighted text with a field value:
 |  |  |
 | --- | --- |
 | Command number | 1281 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

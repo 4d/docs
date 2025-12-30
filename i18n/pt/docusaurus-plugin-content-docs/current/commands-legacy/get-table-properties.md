@@ -5,11 +5,11 @@ slug: /commands/get-table-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *ponTabela* ; *invisible* {; *trigSalvarNovo* {; *trigSalvarRegistro* {; *trigApagarRegistro* {; *trigCarregarRegistro*}}}} )<br/>**GET TABLE PROPERTIES** ( *NumTabela* ; *invisible* {; *trigSalvarNovo* {; *trigSalvarRegistro* {; *trigApagarRegistro* {; *trigCarregarRegistro*}}}} )<!-- END REF-->
+<!--REF #_command_.GET TABLE PROPERTIES.Syntax-->**GET TABLE PROPERTIES** ( *ponTabela* : Ponteiro, Inteiro longo ; *invisible* {; *trigSalvarNovo* : Boolean {; *trigSalvarRegistro* : Boolean {; *trigApagarRegistro* : Boolean {; *trigCarregarRegistro* : Boolean}}}} )<br/>**GET TABLE PROPERTIES** ( *NumTabela* : Ponteiro, Inteiro longo ; *invisible* {; *trigSalvarNovo* : Boolean {; *trigSalvarRegistro* : Boolean {; *trigApagarRegistro* : Boolean {; *trigCarregarRegistro* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET TABLE PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ponTabela&#124;NumTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro de tabela ou número de tabela |
+| ponTabela&#124;NumTabela | Ponteiro, Inteiro longo | &#8594; | Ponteiro de tabela ou número de tabela |
 | invisivel | Boolean | &#8592; | True = invisível, False = visível |
 | trigSalvarNovo | Boolean | &#8592; | True = Trigger "On saving new record" ativado; senão, False |
 | trigSalvarRegistro | Boolean | &#8592; | True = Trigger "On saving an existing record" ativado; senão, False |
@@ -40,6 +40,6 @@ Una vez executado o comando:
 |  |  |
 | --- | --- |
 | Número do comando | 687 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

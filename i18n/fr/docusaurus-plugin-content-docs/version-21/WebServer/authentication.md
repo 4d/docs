@@ -119,7 +119,7 @@ Vous devez déclarer ces paramètres de la manière suivante :
 
 :::note
 
-Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. The information received by the database method depends on the selected [authentication mode](#authentication-modes).
+Tous les paramètres de la méthode base `On Web Authentication` ne sont pas nécessairement remplis. Les informations reçues par la méthode base dépendent du [mode d'authentification](#authentication-modes) sélectionné.
 
 :::
 
@@ -127,9 +127,9 @@ Tous les paramètres de la méthode base `On Web Authentication` ne sont pas né
 
 Le premier paramètre (`$url`) est l'URL reçue par le serveur, dont l'adresse de l'hôte a été supprimée.
 
-Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. The following table shows the values of $url depending on the URL entered in the Web browser:
+Prenons l'exemple d'une connexion Intranet. Supposons que l'adresse IP de votre machine serveur Web 4D est 123.45.67.89. Le tableau suivant indique les valeurs de $url en fonction de l'URL saisie dans le navigateur Web :
 
-| URL entrée dans le navigateur web                                                                                                                 | Value of parameter $url                                                               |
+| URL entrée dans le navigateur web                                                                                                                 | Valeur du paramètre $url                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
 | 123.45.67.89                                                                                      | /                                                                                     |
 | http://123.45.67.89                                                               | /                                                                                     |

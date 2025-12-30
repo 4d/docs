@@ -38,6 +38,6 @@ If the list box is associated with arrays, *tableNum* returns -1 and *name*, if 
 |  |  |
 | --- | --- |
 | Command number | 1014 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

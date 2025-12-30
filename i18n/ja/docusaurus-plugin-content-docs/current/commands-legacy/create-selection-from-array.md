@@ -5,13 +5,13 @@ slug: /commands/create-selection-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *aTable* ; *recordArray* {; *selectionName*} )<!-- END REF-->
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *aTable* : Table ; *recordArray* : Integer, Boolean array {; *selectionName* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションを作成するテーブル |
-| recordArray | Integer, Boolean array | &#8594;  | レコード番号の配列, または ブール配列 (True = レコードをセレクションに含める False = レコードをセレクションに含めない) |
-| selectionName | Text | &#8594;  | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレント セレクションに適用する |
+| aTable | Table | &#8594; | セレクションを作成するテーブル |
+| recordArray | Integer, Boolean array | &#8594; | レコード番号の配列, または ブール配列 (True = レコードをセレクションに含める False = レコードをセレクションに含めない) |
+| selectionName | Text | &#8594; | 作成する命名セレクションの名前, または 引数を省略した場合、コマンドをカレント セレクションに適用する |
 
 <!-- END REF-->
 
@@ -54,7 +54,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 640 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 | カレントセレクションを変更する ||
 

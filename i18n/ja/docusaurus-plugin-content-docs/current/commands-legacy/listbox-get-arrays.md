@@ -5,12 +5,12 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( {* ;} *object* ; *arrColNames* ; *arrHeaderNames* ; *arrColVars* ; *arrHeaderVars* ; *arrColsVisible* ; *arrStyles* {; *arrFooterNames* ; *arrFooterVars*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *object* : Text ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *object* : Field, Variable ; *arrColNames* : Text array ; *arrHeaderNames* : Text array ; *arrColVars* : Pointer array ; *arrHeaderVars* : Pointer array ; *arrColsVisible* : Boolean array ; *arrStyles* : Pointer array {; *arrFooterNames* : Text array ; *arrFooterVars* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
 | arrColNames | Text array | &#8592; | 列オブジェクト名 |
 | arrHeaderNames | Text array | &#8592; | ヘッダーオブジェクト名 |
 | arrColVars | Pointer array | &#8592; | 列変数へのポインターまたは列フィールドへのポインターまたはNil |
@@ -55,6 +55,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 832 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -77,7 +77,7 @@ Se o parâmetro *numQuebra* é incorreto, se gera o erro -9853.
 |  |  |
 | --- | --- |
 | Número do comando | 768 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

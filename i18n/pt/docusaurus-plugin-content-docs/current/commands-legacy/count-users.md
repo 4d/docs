@@ -29,6 +29,6 @@ Quando em versão monousuário de 4D, **Count users** devolve 1.
 |  |  |
 | --- | --- |
 | Número do comando | 342 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

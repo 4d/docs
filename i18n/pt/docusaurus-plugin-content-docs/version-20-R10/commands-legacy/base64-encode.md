@@ -43,6 +43,6 @@ Por padrão, se omitir o parâmetro *\**, o comando utiliza uma codificação Ba
 |  |  |
 | --- | --- |
 | Número do comando | 895 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

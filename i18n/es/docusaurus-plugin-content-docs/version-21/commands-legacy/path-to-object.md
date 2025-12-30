@@ -180,6 +180,6 @@ Desea saber la cantidad de subcarpetas en una ruta:
 |  |  |
 | --- | --- |
 | Número de comando | 1547 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

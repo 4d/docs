@@ -180,6 +180,6 @@ Se a expressão for avaliada como Null, o comando devolve a string "null". Isto 
 |  |  |
 | --- | --- |
 | Número do comando | 10 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

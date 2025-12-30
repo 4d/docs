@@ -5,15 +5,15 @@ slug: /commands/real-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *real* ; *blob* ; *realFormat* {; offset } )<br/>**REAL TO BLOB** ( *real* ; *blob* ; *realFormat* {; *} )<!-- END REF-->
+<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *real* : Real ; *blob* : Blob ; *realFormat* : Integer {; offset } )<br/>**REAL TO BLOB** ( *real* : Real ; *blob* : Blob ; *realFormat* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.REAL TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| real | Real | &#8594;  | BLOBに書き込む実数値 |
-| Blob | Blob | &#8594;  | 実数値を受け取るBLOB |
-| realFormat | Integer | &#8594;  | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
+| real | Real | &#8594; | BLOBに書き込む実数値 |
+| Blob | Blob | &#8594; | 実数値を受け取るBLOB |
+| realFormat | Integer | &#8594; | 0 Native real format 1 Extended real format 2  Macintosh Double real format 3  Windows Double real format |
 | offset &#124; * | 変数, 演算子 | &#8596; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
-| ||| *でない場合、書き込み後の新しいオフセット |
+|  |  |  | *でない場合、書き込み後の新しいオフセット |
 
 <!-- END REF-->
 
@@ -140,6 +140,6 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 |  |  |
 | --- | --- |
 | コマンド番号 | 552 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

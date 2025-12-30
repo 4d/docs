@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | integer| Integer | &#8594;  | Integer value to write into the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the Integer value |
+| Blob | Blob | &#8594;  | BLOB to receive the Integer value |
 | byteOrder| Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset  | Variable | &#8596;  | Offset expressed in bytes within the BLOB<br/>New offset after writing if not *  |
 | * | Operator | &#8594; | * to append the value |
@@ -121,6 +121,6 @@ After executing this code:
 |  |  |
 | --- | --- |
 | Command number | 548 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

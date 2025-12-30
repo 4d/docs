@@ -5,11 +5,11 @@ slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *formatDesc* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *formatDesc* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| formatDesc | Integer | &#8594;  | Format de description (Texte ou XML) |
+| formatDesc | Integer | &#8594; | Format de description (Texte ou XML) |
 | Résultat | Text | &#8592; | Description du plan de la dernière recherche exécutée |
 
 <!-- END REF-->
@@ -38,6 +38,6 @@ La description du plan de la dernière recherche peut être comparée à la desc
 |  |  |
 | --- | --- |
 | Numéro de commande | 1046 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

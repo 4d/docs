@@ -5,7 +5,7 @@ slug: /commands/get-serial-port-mapping
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *tabNums* ; *tabLibellés* )<!-- END REF-->
+<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *tabNums* : Integer array ; *tabLibellés* : Text array )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ Cette méthode projet permet d'adresser le même port série (sans protocole), q
 |  |  |
 | --- | --- |
 | Numéro de commande | 909 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

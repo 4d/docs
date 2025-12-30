@@ -60,6 +60,6 @@ No método (*theWorker*), adicionou código para manejar esta situaçao:
 |  |  |
 | --- | --- |
 | Número do comando | 1390 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

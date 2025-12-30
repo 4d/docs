@@ -5,13 +5,13 @@ slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( {* ;} *object* ; *title* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *object* : Text ; *title* : Text )<br/>**OBJECT SET TITLE** ( *object* : Field, Variable ; *title* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| title | Text | &#8594;  | オブジェクトの新しいタイトル |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| title | Text | &#8594; | オブジェクトの新しいタイトル |
 
 <!-- END REF-->
 
@@ -77,6 +77,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 194 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

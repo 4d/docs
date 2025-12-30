@@ -45,6 +45,6 @@ S’il n’y a pas de formulaire liste, une chaîne vide est retournée dans le 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1139 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

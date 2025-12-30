@@ -53,6 +53,6 @@ Refer to the example in the [SET PRINT MARKER](set-print-marker.md) command.
 |  |  |
 | --- | --- |
 | Command number | 717 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

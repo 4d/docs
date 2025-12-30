@@ -5,12 +5,12 @@ slug: /commands/json-stringify-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *tab* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *tab* : Text array, Real array, Boolean array, Pointer array, Object array {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify array.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tab | Text array, Real array, Boolean array, Pointer array, Object array | &#8594;  | Tableau dont le contenu doit être sérialisé |
-| * | Opérateur | &#8594;  | Améliorer le formatage |
+| tab | Text array, Real array, Boolean array, Pointer array, Object array | &#8594; | Tableau dont le contenu doit être sérialisé |
+| * | Opérateur | &#8594; | Améliorer le formatage |
 | Résultat | Text | &#8592; | Chaîne contenant le tableau JSON sérialisé |
 
 <!-- END REF-->
@@ -114,6 +114,6 @@ Conversion d’une sélection 4D dans un tableau objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1228 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

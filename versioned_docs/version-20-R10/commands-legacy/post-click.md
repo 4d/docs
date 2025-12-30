@@ -34,6 +34,6 @@ If you specify the *process* parameter, the click is sent to the process whose p
 |  |  |
 | --- | --- |
 | Command number | 466 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

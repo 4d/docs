@@ -42,7 +42,7 @@ If the export is carried out correctly, the *OK* variable is set to 1\. Otherwis
 |  |  |
 | --- | --- |
 | Command number | 1064 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

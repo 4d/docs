@@ -5,11 +5,11 @@ slug: /commands/build-application
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *projectName* )}<!-- END REF-->
+<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *projectName* : Text })<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| projectName | Text | &#8594;  | 使用する設定ファイルのフルアクセスパス |
+| projectName | Text | &#8594; | 使用する設定ファイルのフルアクセスパス |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 871 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK、Document、error |
 | サーバー上での使用は不可 ||
 

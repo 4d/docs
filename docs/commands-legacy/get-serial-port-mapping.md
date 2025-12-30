@@ -5,11 +5,11 @@ slug: /commands/get-serial-port-mapping
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* ; *nameArray* )<!-- END REF-->
+<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numArray | Array integer | &#8592; | Array of port numbers |
+| numArray | Integer array | &#8592; | Array of port numbers |
 | nameArray | Text array | &#8592; | Array of port names |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ This project method can be used to address the same serial port (without protoco
 |  |  |
 | --- | --- |
 | Command number | 909 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

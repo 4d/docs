@@ -5,7 +5,7 @@ slug: /commands/method-set-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *path* ; *comments* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD SET COMMENTS.Syntax-->**METHOD SET COMMENTS** ( *path* : Text, Text array ; *comments* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD SET COMMENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ Add a modification date to an existing trigger documentation:
 |  |  |
 | --- | --- |
 | Command number | 1193 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

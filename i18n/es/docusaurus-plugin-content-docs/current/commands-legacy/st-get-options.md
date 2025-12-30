@@ -5,13 +5,13 @@ slug: /commands/st-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( {* ;} *objeto* ; *opcion* ; *valor* {; *opcion2* ; *valor2* ; ... ; *opcionN* ; *valorN*} )<!-- END REF-->
+<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *objeto* : Text ; *opcion* : Integer ; *valor* : Integer {; ...(*opcion* : Integer, *valor* : Integer)} )<br/>**ST GET OPTIONS** ( *objeto* : Field, Variable ; *opcion* : Integer ; *valor* : Integer {; ...(*opcion* : Integer, *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| opcion | Integer | &#8594;  | Opción a leer |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| opcion | Integer | &#8594; | Opción a leer |
 | valor | Integer | &#8592; | Valor actual de la opción |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Pase el código de la opción a leer en el parámetro *opcion*. El comando devue
 |  |  |
 | --- | --- |
 | Número de comando | 1290 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

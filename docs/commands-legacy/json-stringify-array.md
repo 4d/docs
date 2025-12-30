@@ -5,7 +5,7 @@ slug: /commands/json-stringify-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* : Text array, Real array, Boolean array, Pointer array, Object array {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -114,6 +114,6 @@ Conversion of a 4D selection in an object array:
 |  |  |
 | --- | --- |
 | Command number | 1228 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

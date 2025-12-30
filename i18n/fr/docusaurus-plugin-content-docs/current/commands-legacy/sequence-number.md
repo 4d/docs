@@ -5,11 +5,11 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *laTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table à numéroter automatiquement ou Table par défaut si ce paramètre est omis |
 | Résultat | Integer | &#8592; | Numéro automatique |
 
 <!-- END REF-->
@@ -62,6 +62,6 @@ L'exemple suivant fait partie d'une méthode formulaire. Ces lignes de code test
 |  |  |
 | --- | --- |
 | Numéro de commande | 244 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

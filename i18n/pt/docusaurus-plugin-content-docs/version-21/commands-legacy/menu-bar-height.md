@@ -35,6 +35,6 @@ O comando retorna 0:
 |  |  |
 | --- | --- |
 | Número do comando | 440 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

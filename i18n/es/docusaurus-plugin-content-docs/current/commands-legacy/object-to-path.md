@@ -5,11 +5,11 @@ slug: /commands/object-to-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objRuta* ) : Text<!-- END REF-->
+<!--REF #_command_.Object to path.Syntax-->**Object to path** ( *objRuta* : Object ) : Text<!-- END REF-->
 <!--REF #_command_.Object to path.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objRuta | Object | &#8594;  | Objeto que describe los contenidos de una ruta |
+| objRuta | Object | &#8594; | Objeto que describe los contenidos de una ruta |
 | Resultado | Text | &#8592; | Nombre de ruta |
 
 <!-- END REF-->
@@ -61,6 +61,6 @@ Queremos duplicar y cambiar el nombre de un archivo en su propia carpeta
 |  |  |
 | --- | --- |
 | Número de comando | 1548 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

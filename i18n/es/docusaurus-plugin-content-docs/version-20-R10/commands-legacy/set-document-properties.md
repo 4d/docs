@@ -41,7 +41,7 @@ Las fechas y horas de creación y última modificación son administradas por el
 |  |  |
 | --- | --- |
 | Número de comando | 478 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

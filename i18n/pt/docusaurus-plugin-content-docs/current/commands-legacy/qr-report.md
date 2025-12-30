@@ -5,14 +5,14 @@ slug: /commands/qr-report
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*tabela* ;} *documento* {; *nomeMetodo*}{; *} )<!-- END REF-->
+<!--REF #_command_.QR REPORT.Syntax-->**QR REPORT** ( {*tabela* : Table ;} *documento* : Text {; *nomeMetodo* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.QR REPORT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a utilizar para o relatório ou tabela por padrão se for omitido |
-| documento | Text | &#8594;  | Documento de Relatório Rápido a carregar |
-| nomeMetodo | Text | &#8594;  | Nome do mètodo a chamar |
-| * | Operador | &#8594;  | Eliminação das caixas de diálogo de impressão |
+| tabela | Table | &#8594; | Tabela a utilizar para o relatório ou tabela por padrão se for omitido |
+| documento | Text | &#8594; | Documento de Relatório Rápido a carregar |
+| nomeMetodo | Text | &#8594; | Nome do mètodo a chamar |
+| * | Operador | &#8594; | Eliminação das caixas de diálogo de impressão |
 
 <!-- END REF-->
 
@@ -140,7 +140,7 @@ O método myCallbackMeth converte o relatório quando é gerado:
 |  |  |
 | --- | --- |
 | Número do comando | 197 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

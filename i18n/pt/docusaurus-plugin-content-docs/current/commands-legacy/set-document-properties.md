@@ -5,17 +5,17 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *documento* ; *bloqueado* ; *invisivel* ; *criadoEm* ; *criadoAs* ; *modificadoEm* ; *modificadoAs* )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *documento* : Text ; *bloqueado* : Boolean ; *invisivel* : Boolean ; *criadoEm* : Date ; *criadoAs* : Time ; *modificadoEm* : Date ; *modificadoAs* : Time )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Nome do documento ou rota de acesso completa |
-| bloqueado | Boolean | &#8594;  | Bloqueado (True) ou Desbloqueado (False) |
-| invisivel | Boolean | &#8594;  | Invisível (True) ou Visível (False) |
-| criadoEm | Date | &#8594;  | Data de criação |
-| criadoAs | Time | &#8594;  | HOra de criação |
-| modificadoEm | Date | &#8594;  | última modificação de data |
-| modificadoAs | Time | &#8594;  | última hora modificada |
+| documento | Text | &#8594; | Nome do documento ou rota de acesso completa |
+| bloqueado | Boolean | &#8594; | Bloqueado (True) ou Desbloqueado (False) |
+| invisivel | Boolean | &#8594; | Invisível (True) ou Visível (False) |
+| criadoEm | Date | &#8594; | Data de criação |
+| criadoAs | Time | &#8594; | HOra de criação |
+| modificadoEm | Date | &#8594; | última modificação de data |
+| modificadoAs | Time | &#8594; | última hora modificada |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ As datas e horas de criação e última modificação são administradas pelo ad
 |  |  |
 | --- | --- |
 | Número do comando | 478 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

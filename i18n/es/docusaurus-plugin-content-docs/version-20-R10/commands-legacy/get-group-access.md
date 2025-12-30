@@ -41,6 +41,6 @@ Desea verificar si el usuario actual pertenece al grupo "plugins":
 |  |  |
 | --- | --- |
 | Número de comando | 1738 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -50,6 +50,6 @@ Si ninguna lista está asociada al campo o si el tipo del campo no permite la as
 |  |  |
 | --- | --- |
 | Número de comando | 685 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

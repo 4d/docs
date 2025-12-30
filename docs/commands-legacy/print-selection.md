@@ -5,7 +5,7 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *aTable* {; *} )<br/>**PRINT SELECTION** ( *aTable* {; >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( *aTable* : Table {; *} )<br/>**PRINT SELECTION** ( *aTable* : Table {; >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,7 +66,7 @@ The following example selects all the records in the \[People\] table. It then u
 |  |  |
 | --- | --- |
 | Command number | 60 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

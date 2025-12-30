@@ -5,12 +5,12 @@ slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *lista* {; > ou <} )<!-- END REF-->
+<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *lista* : Integer {; > ou <} )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de lista |
-| > ou < | Operador | &#8594;  | Criterio de ordenación: > ordenar en orden ascendente, u < ordenar en orden descendente |
+| lista | Integer | &#8594; | Número de referencia de lista |
+| > ou < | Operador | &#8594; | Criterio de ordenación: > ordenar en orden ascendente, u < ordenar en orden descendente |
 
 <!-- END REF-->
 
@@ -62,6 +62,6 @@ La lista se ve de esta forma:
 |  |  |
 | --- | --- |
 | Número de comando | 391 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

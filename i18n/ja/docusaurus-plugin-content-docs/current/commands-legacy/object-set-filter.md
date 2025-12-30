@@ -5,13 +5,13 @@ slug: /commands/object-set-filter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( {* ;} *object* ; *entryFilter* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FILTER.Syntax-->**OBJECT SET FILTER** ( * ; *object* : Text ; *entryFilter* : Text )<br/>**OBJECT SET FILTER** ( *object* : Field, Variable ; *entryFilter* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FILTER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| entryFilter | Text | &#8594;  | 入力可エリアの新しい入力フィルタ |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| entryFilter | Text | &#8594; | 入力可エリアの新しい入力フィルタ |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ OBJECT SET FILTER は、入力フォームおよびダイアログ用フォー�
 |  |  |
 | --- | --- |
 | コマンド番号 | 235 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

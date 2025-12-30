@@ -5,14 +5,13 @@ slug: /commands/get-picture-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resNum* ; *resDados* {; *resArquivo*} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE RESOURCE.Syntax-->**GET PICTURE RESOURCE** ( *resNum* : Integer ; *resDados* : Field, Variable {; *resArquivo* : Time} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE RESOURCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Número de Resource |
-| resDados | Field, Variable | &#8594;  | Campo imagem ou variável a receber a imagem |
-| &#8592; | Conteúdos do recurso PICT |
-| resArquivo | Time | &#8594;  | Número de referência do arquivo de Resource ou arquivo de resource atual se omitido |
+| resNum | Integer | &#8594; | Número de Resource |
+| resDados | Field, Variable | &#8596; | *in:* Picture field or variable to receive the picture<br/>*out:* Contents of the PICT resource |
+| resArquivo | Time | &#8594; | Número de referência do arquivo de Resource ou arquivo de resource atual se omitido |
 
 <!-- END REF-->
 
@@ -47,7 +46,7 @@ Se não houver memória suficiente para carregar a imagem, um erro é gerado. Po
 |  |  |
 | --- | --- |
 | Número do comando | 502 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

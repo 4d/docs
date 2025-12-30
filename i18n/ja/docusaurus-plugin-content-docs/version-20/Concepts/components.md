@@ -7,7 +7,7 @@ title: コンポーネント
 
 ## コンポーネントの見つけ方
 
-Several components are [preinstalled in the 4D development environment](Extensions/overview.md), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/topics/4d-component). また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。
+いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが [GitHub 上に公開](https://github.com/topics/4d-component) されています。 また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。
 
 
 ## コンポーネントのインストール

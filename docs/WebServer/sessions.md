@@ -10,7 +10,7 @@ Web sessions allow to:
 - handle multiple requests simultaneously from the same web client through an unlimited number of preemptive processes (web sessions are **scalable**),
 - manage session through a `Session` object and the [Session API](API/SessionClass.md),
 - store and share data between processes of a web client using the [.storage](../API/SessionClass.md#storage) of the session,
-- associate privileges to the user running the session.
+- associate [privileges](../ORDA/privileges.md) to the user running the session.
 
 :::tip Related blog post
 
@@ -18,12 +18,19 @@ Web sessions allow to:
 
 :::
 
+:::note
+
+Destkop applications (client/server and single-user) also provide 4D developers with [specific sessions](../Desktop/sessions.md). 
+
+:::
+
+
 ## Usages
 
 Web sessions are used for:
 
 - [Web applications](gettingStarted.md) sending http requests (including [SOAP Web services](../commands/theme/Web_Services_Server.md) and [/4DACTION](../WebServer/httpRequests.md#4daction) requests),
-- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](qodly-studio.md). 
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly forms](https://developer.4d.com/qodly/). 
 
 
 ## Enabling web sessions {#enabling-web-sessions}
@@ -65,7 +72,7 @@ The cookie name can be get using the [`.sessionCookieName`](API/WebServerClass.m
 
 :::note
 
-Creating a web session for a REST request may require that a licence is available, see [this page](../REST/authUsers.md).
+Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
 
 :::
 
@@ -73,11 +80,7 @@ The `Session` object of the current session can then be accessed through the [`S
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-:::info
 
-Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
-
-:::
 
 ## Storing and sharing session information
 
@@ -102,7 +105,7 @@ When a web session is closed, if the [`Session`](commands/session.md) command is
 
 :::info
 
-You can close a session from a Qodly form using the [**logout**](qodly-studio.md#logout) feature.  
+You can close a session from a Qodly form using the [**logout**](https://developer.4d.com/qodly/4DQodlyPro/force-login#logout) feature.  
 
 :::
 
@@ -224,6 +227,13 @@ In 4D, OTP session tokens are useful when calling external URLs and being called
 :::tip Related blog posts
 
 [Connect Your Web Apps to Third-Party Systems](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/) 
+
+:::
+
+
+:::note
+
+Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.  
 
 :::
 
@@ -492,7 +502,7 @@ A new user is created, and some information is stored in the session, especially
 - Both HTTP and HTTPS schemas are supported. 
 - Only [scalable sessions](#enabling-web-sessions) can be reused with tokens.
 - Only sessions of the host database can be reused (sessions created in component web servers cannot be restored).
-- Tokens are not supported with client/server sessions or single-user sessions.
+- Tokens can be **shared** with [desktop sessions](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses) for hybrid accesses (desktop and web).
 
 ### Lifespan 
 

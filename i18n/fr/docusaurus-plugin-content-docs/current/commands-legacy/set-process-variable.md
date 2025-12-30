@@ -5,13 +5,13 @@ slug: /commands/set-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* ; *varDestination* ; *exprSource* {; *varDestination2* ; *exprSource2* ; ... ; *varDestinationN* ; *exprSourceN*} )<!-- END REF-->
+<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* : Integer ; *varDestination* : Variable ; *exprSource* : Variable {; ...(*varDestination* : Variable, *exprSource* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Numéro de process de destination |
-| varDestination | Variable | &#8594;  | Variable de destination |
-| exprSource | Variable | &#8594;  | Expression source (ou variable source) |
+| process | Integer | &#8594; | Numéro de process de destination |
+| varDestination | Variable | &#8594; | Variable de destination |
+| exprSource | Variable | &#8594; | Expression source (ou variable source) |
 
 <!-- END REF-->
 
@@ -103,6 +103,6 @@ L'exemple suivant écrit l'instance des variables *v1*, *v2*, *v3* dans le proce
 |  |  |
 | --- | --- |
 | Numéro de commande | 370 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

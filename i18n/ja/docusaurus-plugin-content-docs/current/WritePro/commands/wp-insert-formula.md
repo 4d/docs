@@ -4,7 +4,7 @@ title: WP Insert formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* ; *formula* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* : Object ; *formula* : Object ; *mode* : Real {; *rangeUpdate* : Real} ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert formula.Params-->
 
@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | ----------- | ------ | --------------------------- | -------------------------------------------- |
 | targetObj   | Object | &#8594; | レンジまたは要素または4D Write Pro ドキュメント               |
 | formula     | Object | &#8594; | フォーミュラオブジェクト、またはformula とname プロパティを持つオブジェクト |
-| mode        | Number | &#8594; | 挿入モード                                        |
-| rangeUpdate | Number | &#8594; | 挿入されたコンテンツをレンジ内に含めるか含めないかを指定                 |
+| mode        | Real   | &#8594; | 挿入モード                                        |
+| rangeUpdate | Real   | &#8594; | 挿入されたコンテンツをレンジ内に含めるか含めないかを指定                 |
 | 戻り値         | Object | &#8592; | フォーミュラの結果を表すテキストレンジオブジェクト                    |
 
 <!-- END REF-->

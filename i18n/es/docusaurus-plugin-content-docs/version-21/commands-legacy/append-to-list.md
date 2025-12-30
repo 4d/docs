@@ -159,6 +159,6 @@ Cuando el formulario se ejecuta, la lista se verá de esta forma:
 |  |  |
 | --- | --- |
 | Número de comando | 376 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,16 +5,14 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* ; *yCoord* ; *from* ; *to* )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *xCoord* : Integer ; *yCoord* : Integer ; *from* : Integer ; *to* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xCoord | Integer | &#8594;  | 点の水平方向の座標(変換前) |
-| &#8592; | 点の水平方向の座標(変換後) |
-| yCoord | Integer | &#8594;  | 点の垂直方向の座標(変換前) |
-| &#8592; | 点の垂直方向の座標(変換後) |
-| from | Integer | &#8594;  | 変換前の座標系 |
-| to | Integer | &#8594;  | 変換後の座標系 |
+| xCoord | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
+| yCoord | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
+| from | Integer | &#8594; | 変換前の座標系 |
+| to | Integer | &#8594; | 変換後の座標系 |
 
 <!-- END REF-->
 
@@ -90,6 +88,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1365 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

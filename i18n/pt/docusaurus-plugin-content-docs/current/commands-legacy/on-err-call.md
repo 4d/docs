@@ -5,12 +5,12 @@ slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *metodoErro* {; *escopo*} )<!-- END REF-->
+<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *metodoErro* : Text {; *escopo* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| metodoErro | Text | &#8594;  | Método de erro a ser chamado, ou string Vazia para não capturar erros |
-| escopo | Integer | &#8594;  | Escopo do método de erro |
+| metodoErro | Text | &#8594; | Método de erro a ser chamado, ou string Vazia para não capturar erros |
+| escopo | Integer | &#8594; | Escopo do método de erro |
 
 <!-- END REF-->
 
@@ -191,6 +191,6 @@ O método abaixo de gestão de erros ignora as interrupções de usuário e most
 |  |  |
 | --- | --- |
 | Número do comando | 155 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -95,6 +95,6 @@ Creación de un índice de palabras claves:
 |  |  |
 | --- | --- |
 | Número de comando | 344 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

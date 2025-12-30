@@ -5,15 +5,15 @@ slug: /commands/replace-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *fuente* ; *obsoleta* ; *nueva* {; *reemplazos*}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Replace string.Syntax-->**Replace string** ( *fuente* : Text ; *obsoleta* : Text ; *nueva* : Text {; *reemplazos* : Integer}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Replace string.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fuente | Text | &#8594;  | Cadena original |
-| obsoleta | Text | &#8594;  | Caracteres a reemplazar |
-| nueva | Text | &#8594;  | Cadena de reemplazo (si la cadena está vacía, se borran todas las ocurrencias) |
-| reemplazos | Integer | &#8594;  | Número de reemplazos a efectuar Si se omite, se reemplazan todas las ocurrencias |
-| * | Operador | &#8594;  | Si se pasa: evaluación basada en los códigos de los caracteres |
+| fuente | Text | &#8594; | Cadena original |
+| obsoleta | Text | &#8594; | Caracteres a reemplazar |
+| nueva | Text | &#8594; | Cadena de reemplazo (si la cadena está vacía, se borran todas las ocurrencias) |
+| reemplazos | Integer | &#8594; | Número de reemplazos a efectuar Si se omite, se reemplazan todas las ocurrencias |
+| * | Operador | &#8594; | Si se pasa: evaluación basada en los códigos de los caracteres |
 | Resultado | Text | &#8592; | Cadena resultante |
 
 <!-- END REF-->
@@ -78,6 +78,6 @@ El siguiente ejemplo ilustra el uso del parámetro \* en el caso de una evaluaci
 |  |  |
 | --- | --- |
 | Número de comando | 233 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

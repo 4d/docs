@@ -5,11 +5,11 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *refImage* )<br/>**REMOVE PICTURE FROM LIBRARY** ( *nomImage* )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *refImage* : Entier long, Chaîne )<br/>**REMOVE PICTURE FROM LIBRARY** ( *nomImage* : Entier long, Chaîne )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refImage &#124; nomImage | Entier long, Chaîne | &#8594;  | Numéro de référence ou Nom d'une image de la bibliothèque d'images |
+| refImage &#124; nomImage | Entier long, Chaîne | &#8594; | Numéro de référence ou Nom d'une image de la bibliothèque d'images |
 
 <!-- END REF-->
 
@@ -60,7 +60,7 @@ L’exemple suivant supprime de la bibliothèque d’images celles dont le nom c
 |  |  |
 | --- | --- |
 | Numéro de commande | 567 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

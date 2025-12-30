@@ -59,6 +59,6 @@ Se quiser definir a ordem de entrada dos objetos no formulário baseado em seus 
 |  |  |
 | --- | --- |
 | Número do comando | 1468 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

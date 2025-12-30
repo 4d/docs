@@ -5,11 +5,11 @@ slug: /commands/load-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *doc* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
+<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *doc* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &#8594;  | Documento que contiene el o las variables 4D |
+| doc | Text | &#8594; | Documento que contiene el o las variables 4D |
 | variable | Variable | &#8592; | Variables a recibir los valores |
 
 <!-- END REF-->
@@ -51,7 +51,7 @@ Si las variables se cargan correctamente, la variable sistema OK toma el valor 1
 |  |  |
 | --- | --- |
 | Número de comando | 74 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

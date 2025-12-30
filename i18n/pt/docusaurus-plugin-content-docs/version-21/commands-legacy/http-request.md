@@ -133,6 +133,6 @@ Petição para adicionar um registro em JSON a um banco de dados remoto:
 |  |  |
 | --- | --- |
 | Número do comando | 1158 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

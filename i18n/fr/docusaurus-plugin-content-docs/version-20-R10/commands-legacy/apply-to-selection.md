@@ -69,7 +69,7 @@ Si l'utilisateur clique sur le bouton Stop dans le thermomètre de progression, 
 |  |  |
 | --- | --- |
 | Numéro de commande | 70 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

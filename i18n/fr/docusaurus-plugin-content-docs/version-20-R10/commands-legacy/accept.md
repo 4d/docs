@@ -41,7 +41,7 @@ La commande **ACCEPT** est autorisée en mode headless, dans le contexte des zon
 |  |  |
 | --- | --- |
 | Numéro de commande | 269 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

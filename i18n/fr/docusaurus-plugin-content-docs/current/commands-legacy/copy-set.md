@@ -5,12 +5,12 @@ slug: /commands/copy-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcEns* ; *dstEns* )<!-- END REF-->
+<!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *srcEns* : Text ; *dstEns* : Text )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| srcEns | Text | &#8594;  | Nom de l'ensemble source |
-| dstEns | Text | &#8594;  | Nom de l'ensemble de destination |
+| srcEns | Text | &#8594; | Nom de l'ensemble source |
+| dstEns | Text | &#8594; | Nom de l'ensemble de destination |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ L'exemple suivant, en client/serveur, copie l'ensemble process "*SetA*", conserv
 |  |  |
 | --- | --- |
 | Numéro de commande | 600 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

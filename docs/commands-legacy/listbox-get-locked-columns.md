@@ -5,7 +5,7 @@ slug: /commands/listbox-get-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get locked columns** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ However, the command does not take into account the visible/invisible status of 
 |  |  |
 | --- | --- |
 | Command number | 1152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

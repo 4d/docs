@@ -31,6 +31,6 @@ Cette commande permet par exemple, le cas échéant, de refuser les tentatives d
 |  |  |
 | --- | --- |
 | Numéro de commande | 698 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

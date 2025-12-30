@@ -5,7 +5,7 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* {; *messageText*} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* : Boolean {; *messageText* : Text} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ An assertion can allow parameters passed to a project method to be tested in ord
 |  |  |
 | --- | --- |
 | Command number | 1129 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

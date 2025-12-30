@@ -5,13 +5,13 @@ slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *objeto* ; *selector* ; *valor* )<!-- END REF-->
+<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *objeto* : Text ; *selector* : Integer ; *valor* : Variable )<br/>**WA GET PREFERENCE** ( *objeto* : Field, Variable ; *selector* : Integer ; *valor* : Variable )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| selector | Integer | &#8594;  | Preferencia a leer |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| selector | Integer | &#8594; | Preferencia a leer |
 | valor | Variable | &#8592; | Valor actual de la preferencia |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ Pase en el parámetro *valor* una variable que recibirá el valor actual de la p
 |  |  |
 | --- | --- |
 | Número de comando | 1042 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

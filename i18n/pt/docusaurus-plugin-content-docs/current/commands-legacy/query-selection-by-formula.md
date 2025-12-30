@@ -5,12 +5,12 @@ slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *tabela* {; *formula*} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *tabela* : Table {; *formula* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual retornar a seleção de registros |
-| formula | Boolean | &#8594;  | Fórmula de pesquisa |
+| tabela | Table | &#8594; | Tabela para a qual retornar a seleção de registros |
+| formula | Boolean | &#8594; | Fórmula de pesquisa |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ Para maior informação, consulte a descrição do comando [QUERY BY FORMULA](qu
 |  |  |
 | --- | --- |
 | Número do comando | 207 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

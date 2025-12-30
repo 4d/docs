@@ -5,11 +5,11 @@ slug: /commands/cos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cos.Syntax-->**Cos** ( *Numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Cos.Syntax-->**Cos** ( *Numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Numero | Real | &#8594;  | Número, en radianes, cuyo coseno se devuelve |
+| Numero | Real | &#8594; | Número, en radianes, cuyo coseno se devuelve |
 | Resultado | Real | &#8592; | Coseno del número |
 
 <!-- END REF-->
@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 18 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

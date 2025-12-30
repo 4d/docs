@@ -15,7 +15,7 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* : Text )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -131,7 +131,7 @@ If the 4D client is correctly registered, the OK system variable is equal to 1\.
 |  |  |
 | --- | --- |
 | Command number | 648 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

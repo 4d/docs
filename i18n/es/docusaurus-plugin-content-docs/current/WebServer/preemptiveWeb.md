@@ -29,7 +29,7 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 - ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
   - si las sesiones escalables están activadas, el modo apropiativo se utiliza automáticamente para los procesos web y servicios web.
   - si las sesiones escalables no están activadas:
-    - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
+    - para los procesos web, se tiene en cuenta la opción [**Usar procesos apropiativos**](webServerConfig.md#use-preemptive-processes).
     - para los procesos de servicios web (servidor o cliente), el modo preventivo está soportado a nivel de método.
 
 ## Escribir código servidor web hilo seguro

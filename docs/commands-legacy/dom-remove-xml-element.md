@@ -5,7 +5,7 @@ slug: /commands/dom-remove-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *elementRef* )<!-- END REF-->
+<!--REF #_command_.DOM REMOVE XML ELEMENT.Syntax-->**DOM REMOVE XML ELEMENT** ( *elementRef* : Text )<!-- END REF-->
 <!--REF #_command_.DOM REMOVE XML ELEMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ An error is generated when the element reference is invalid.
 |  |  |
 | --- | --- |
 | Command number | 869 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

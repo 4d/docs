@@ -35,6 +35,6 @@ O comando devolve o nome do método 4D como uma cadeia de caracteres (expressão
 |  |  |
 | --- | --- |
 | Número do comando | 981 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

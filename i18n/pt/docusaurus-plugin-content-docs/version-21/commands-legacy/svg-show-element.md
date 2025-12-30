@@ -34,7 +34,7 @@ Se este comando não for executado no contexto de um formulário ou se for passa
 |  |  |
 | --- | --- |
 | Número do comando | 1108 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

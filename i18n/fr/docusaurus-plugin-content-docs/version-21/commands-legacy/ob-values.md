@@ -50,6 +50,6 @@ Vous souhaitez une collection avec toutes les valeurs des propriétés d'un obje
 |  |  |
 | --- | --- |
 | Numéro de commande | 1718 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

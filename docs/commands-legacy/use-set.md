@@ -5,7 +5,7 @@ slug: /commands/use-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *set* )<!-- END REF-->
+<!--REF #_command_.USE SET.Syntax-->**USE SET** ( *set* : Text )<!-- END REF-->
 <!--REF #_command_.USE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ The following example uses [LOAD SET](load-set.md) to load a set of the Acme loc
 |  |  |
 | --- | --- |
 | Command number | 118 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

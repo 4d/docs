@@ -5,7 +5,7 @@ slug: /commands/create-thumbnail
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* ; *dest* {; *width* {; *height* {; *mode* {; *depth*}}}} )<!-- END REF-->
+<!--REF #_command_.CREATE THUMBNAIL.Syntax-->**CREATE THUMBNAIL** ( *source* : Picture ; *dest* : Picture {; *width* : Integer {; *height* : Integer {; *mode* : Integer {; *depth* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.CREATE THUMBNAIL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,6 +60,6 @@ The *depth* parameter is ignored and must be omitted. The command always uses th
 |  |  |
 | --- | --- |
 | Command number | 679 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

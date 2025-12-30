@@ -58,6 +58,6 @@ L’exemple suivant permet d’afficher “Hello World” dans une image 4D :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1017 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

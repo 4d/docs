@@ -5,11 +5,11 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objeto* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *objeto* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object | &#8594;  | Objeto para devolver nombres de propiedad |
+| objeto | Object | &#8594; | Objeto para devolver nombres de propiedad |
 | Resultado | Collection | &#8592; | Colección de nombres de propiedad (cadenas) |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ Quiere una colección con todos los nombres de propiedad de primer nivel de un o
 |  |  |
 | --- | --- |
 | Número de comando | 1719 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

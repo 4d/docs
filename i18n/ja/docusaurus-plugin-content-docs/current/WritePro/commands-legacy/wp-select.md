@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *wpArea*;} {*targetObj*} {; *startRange* ; *endRange*} )<!-- END REF-->
+<!--REF #_command_.WP SELECT.Syntax-->**WP SELECT** ( {{* ;} *wpArea* : Text, Object;} {*targetObj* : Object} {; *startRange* : Integer ; *endRange* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP SELECT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

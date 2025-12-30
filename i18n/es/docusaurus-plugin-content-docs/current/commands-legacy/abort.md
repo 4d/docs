@@ -41,6 +41,6 @@ Aunque el comando ABORT está destinado a ser utilizado sólo desde un método d
 |  |  |
 | --- | --- |
 | Número de comando | 156 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

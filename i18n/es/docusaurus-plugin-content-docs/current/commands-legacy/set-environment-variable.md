@@ -5,12 +5,12 @@ slug: /commands/set-environment-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *nomVar* ; *valorVar* )<!-- END REF-->
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *nomVar* : Text ; *valorVar* : Text )<!-- END REF-->
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomVar | Text | &#8594;  | Nombre de la variable a definir |
-| valorVar | Text | &#8594;  | Valor de la variable o "" para restablecer el valor por defecto |
+| nomVar | Text | &#8594; | Nombre de la variable a definir |
+| valorVar | Text | &#8594; | Valor de la variable o "" para restablecer el valor por defecto |
 
 <!-- END REF-->
 
@@ -23,7 +23,7 @@ Se recomienda utilizar la clase [`4D.SystemWorker class`](../API/SystemWorkerCla
 
 ## Descripción 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->El comando **SET ENVIRONMENT VARIABLE** permite fijar el valor de una variable de entorno bajo macOS y Windows.<!-- END REF--> Está diseñado para utilizarse con el comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md). También funciona con el comando [PHP Execute](php-execute.md).  
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->El comando **SET ENVIRONMENT VARIABLE** permite fijar el valor de una variable de entorno bajo macOS y Windows.<!-- END REF--> Está diseñado para utilizarse con el comando [LAUNCH EXTERNAL PROCESS](launch-external-process.md). 
   
 Pase el nombre de la variable a definir en *nomVar* y su valor en *valorVar*.
 
@@ -48,6 +48,6 @@ Consulte los ejemplos del comando [LAUNCH EXTERNAL PROCESS](launch-external-proc
 |  |  |
 | --- | --- |
 | Número de comando | 812 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

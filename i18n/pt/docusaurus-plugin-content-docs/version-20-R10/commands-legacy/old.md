@@ -45,6 +45,6 @@ Para restaurar o valor original de um campo, atribua-lhe o valor retornado por O
 |  |  |
 | --- | --- |
 | Número do comando | 35 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

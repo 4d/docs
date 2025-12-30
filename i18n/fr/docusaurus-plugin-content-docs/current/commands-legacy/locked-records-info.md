@@ -5,11 +5,11 @@ slug: /commands/locked-records-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTable* ) : Object<!-- END REF-->
+<!--REF #_command_.Locked records info.Syntax-->**Locked records info** ( *laTable* : Table ) : Object<!-- END REF-->
 <!--REF #_command_.Locked records info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
+| laTable | Table | &#8594; | Table de laquelle vous souhaitez connaître les enregistrements verrouillés |
 | Résultat | Object | &#8592; | Description des enregistrements verrouillés (le cas échéant) |
 
 <!-- END REF-->
@@ -94,6 +94,6 @@ Si le code est exécuté sur 4D Server et que le verrouillage est causé par un 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1316 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

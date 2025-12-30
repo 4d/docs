@@ -84,6 +84,6 @@ Una vez este método de proyecto se implementa en una base, puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 499 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

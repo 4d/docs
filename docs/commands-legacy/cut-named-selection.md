@@ -5,7 +5,7 @@ slug: /commands/cut-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*aTable* ;} *name* )<!-- END REF-->
+<!--REF #_command_.CUT NAMED SELECTION.Syntax-->**CUT NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
 <!--REF #_command_.CUT NAMED SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ The following method empties the current selection of a table *\[Customers\]*:
 |  |  |
 | --- | --- |
 | Command number | 334 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

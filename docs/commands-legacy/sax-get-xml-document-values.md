@@ -5,7 +5,7 @@ slug: /commands/sax-get-xml-document-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* ; *encoding* ; *version* ; *standalone* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML DOCUMENT VALUES.Syntax-->**SAX GET XML DOCUMENT VALUES** ( *document* : Time ; *encoding* : Text ; *version* : Text ; *standalone* : Boolean )<!-- END REF-->
 <!--REF #_command_.SAX GET XML DOCUMENT VALUES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 873 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

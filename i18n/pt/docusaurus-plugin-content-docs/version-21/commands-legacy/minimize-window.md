@@ -56,6 +56,6 @@ Mac OS
 |  |  |
 | --- | --- |
 | Número do comando | 454 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

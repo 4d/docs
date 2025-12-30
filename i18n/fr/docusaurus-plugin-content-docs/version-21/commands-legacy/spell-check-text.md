@@ -59,7 +59,7 @@ On souhaite compter le nombre de fautes potentielles dans un texte :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1215 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

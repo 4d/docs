@@ -5,12 +5,12 @@ slug: /commands/convert-path-system-to-posix
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *cheminSystème* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Convert path system to POSIX.Syntax-->**Convert path system to POSIX** ( *cheminSystème* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Convert path system to POSIX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminSystème | Text | &#8594;  | Chemin d’accès relatif ou absolu exprimé en syntaxe système |
-| * | Opérateur | &#8594;  | Option d’encodage |
+| cheminSystème | Text | &#8594; | Chemin d’accès relatif ou absolu exprimé en syntaxe système |
+| * | Opérateur | &#8594; | Option d’encodage |
 | Résultat | Text | &#8592; | Chemin d’accès absolu exprimé en syntaxe POSIX |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ Exemple sous Windows
 |  |  |
 | --- | --- |
 | Numéro de commande | 1106 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

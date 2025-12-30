@@ -5,7 +5,7 @@ slug: /commands/open-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *accessPath* )<!-- END REF-->
+<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *accessPath* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,6 +60,6 @@ In the context of deploying a merged application, you want to open or create the
 |  |  |
 | --- | --- |
 | Command number | 312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

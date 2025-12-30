@@ -5,16 +5,16 @@ slug: /commands/st-get-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( {* ;} *objeto* ; *textoURL* ; *direccionURL* {; *inicioSel* {; *finSel*}} )<!-- END REF-->
+<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *objeto* : Text ; *textoURL* : Text ; *direccionURL* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<br/>**ST GET URL** ( *objeto* : Field, Variable ; *textoURL* : Text ; *direccionURL* : Text {; *inicioSel* : Integer {; *finSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST GET URL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
 | textoURL | Text | &#8592; | Texto visible de la URL |
 | direccionURL | Text | &#8592; | Dirección de la URL |
-| inicioSel | Integer | &#8594;  | Inicio de la selección |
-| finSel | Integer | &#8594;  | Fin de la selección |
+| inicioSel | Integer | &#8594; | Inicio de la selección |
+| finSel | Integer | &#8594; | Fin de la selección |
 
 <!-- END REF-->
 
@@ -75,6 +75,6 @@ Cuando hay un evento de doble clic, se comprueba que no existe en realidad una U
 |  |  |
 | --- | --- |
 | Número de comando | 1288 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -32,6 +32,6 @@ The filters are installed by the [WA SET EXTERNAL LINKS FILTERS](wa-set-external
 |  |  |
 | --- | --- |
 | Command number | 1033 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

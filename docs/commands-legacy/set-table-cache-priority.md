@@ -5,7 +5,7 @@ slug: /commands/set-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
+<!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ In the , you want to set a high priority for the \[Customer\] scalar data:
 |  |  |
 | --- | --- |
 | Command number | 1400 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

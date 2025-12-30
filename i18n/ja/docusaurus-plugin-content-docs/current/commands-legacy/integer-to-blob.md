@@ -5,15 +5,15 @@ slug: /commands/integer-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; offset} )<br/>**INTEGER TO BLOB** ( *integer* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
+<!--REF #_command_.INTEGER TO BLOB.Syntax-->**INTEGER TO BLOB** ( *integer* ; *blob* : Blob ; *byteOrder* {; offset} )<br/>**INTEGER TO BLOB** ( *integer* ; *blob* : Blob ; *byteOrder* {; *} )<!-- END REF-->
 <!--REF #_command_.INTEGER TO BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| entier | Integer | &#8594;  | BLOBに書き込む整数値 |
-| Blob | Blob | &#8594;  | 整数値を受け取るBLOB |
-| ordreOctet | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| entier | Integer | &#8594; | BLOBに書き込む整数値 |
+| Blob | Blob | &#8594; | 整数値を受け取るBLOB |
+| ordreOctet | Integer | &#8594; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset &#124; * | 変数, 演算子 | &#8596; | BLOB内のオフセット (バイト単位) または値を追加する場合 * |
-| || | *でない場合、書き込み後の新しいオフセット |
+|  |  |  | *でない場合、書き込み後の新しいオフセット |
 
 <!-- END REF-->
 
@@ -122,6 +122,6 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 |  |  |
 | --- | --- |
 | コマンド番号 | 548 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

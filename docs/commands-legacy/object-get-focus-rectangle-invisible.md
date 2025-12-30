@@ -5,7 +5,7 @@ slug: /commands/object-get-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get focus rectangle invisible** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ The command returns **True** when the focus rectangle is hidden and **False** wh
 |  |  |
 | --- | --- |
 | Command number | 1178 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

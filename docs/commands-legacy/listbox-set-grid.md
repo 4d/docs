@@ -5,7 +5,7 @@ slug: /commands/listbox-set-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET GRID.Syntax-->**LISTBOX SET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX SET GRID** ( *object* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET GRID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ Pass the Boolean values in *horizontal* and *vertical* that indicate if the corr
 |  |  |
 | --- | --- |
 | Command number | 841 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -51,7 +51,7 @@ L'exemple suivant trie les enregistrements de la table \[Personnes\] dans l'ordr
 |  |  |
 | --- | --- |
 | Numéro de commande | 300 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 

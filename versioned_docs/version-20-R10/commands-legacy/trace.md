@@ -66,6 +66,6 @@ The DEBUG project method is listed here:
 |  |  |
 | --- | --- |
 | Command number | 157 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

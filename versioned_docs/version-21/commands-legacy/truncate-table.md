@@ -44,7 +44,7 @@ If the command has been executed correctly, the OK system variable is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 1051 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

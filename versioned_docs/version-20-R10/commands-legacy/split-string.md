@@ -63,6 +63,6 @@ The *separator* parameter can be a multiple-character string:
 |  |  |
 | --- | --- |
 | Command number | 1554 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

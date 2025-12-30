@@ -5,7 +5,7 @@ slug: /commands/get-user-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *userID* ; *name* ; *startup* ; *password* ; *nbLogin* ; *lastLogin* {; *memberships* {; *groupOwner*}} )<!-- END REF-->
+<!--REF #_command_.GET USER PROPERTIES.Syntax-->**GET USER PROPERTIES** ( *userID* : Integer ; *name* : Text ; *startup* : Text ; *password* : Text ; *nbLogin* : Integer ; *lastLogin* : Date {; *memberships* : Integer array {; *groupOwner* : Integer}} )<!-- END REF-->
 <!--REF #_command_.GET USER PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -15,7 +15,7 @@ displayed_sidebar: docs
 | password | Text | &#8592; | Always an empty string |
 | nbLogin | Integer | &#8592; | Number of logins to the database (Binary databases only) |
 | lastLogin | Date | &#8592; | Date of last login to the database (Binary databases only) |
-| memberships | Array integer | &#8592; | ID numbers of groups to which the user belongs |
+| memberships | Integer array | &#8592; | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8592; | ID number of user group owner (Binary databases only) |
 
 <!-- END REF-->
@@ -58,7 +58,7 @@ If you do not have the proper access privileges for calling GET USER PROPERTIES 
 |  |  |
 | --- | --- |
 | Command number | 611 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

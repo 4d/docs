@@ -78,6 +78,6 @@ O exemplo abaixo ilustra o uso do parâmetro \* no caso de uma avaliação diacr
 |  |  |
 | --- | --- |
 | Número do comando | 233 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

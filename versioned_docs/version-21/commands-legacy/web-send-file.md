@@ -55,7 +55,7 @@ If the file to be sent exists and if the timeout has not run out, OK is set to 1
 |  |  |
 | --- | --- |
 | Command number | 619 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

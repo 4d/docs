@@ -33,6 +33,6 @@ Scalar data field types include fields of date/hour, numeric, or string type.
 |  |  |
 | --- | --- |
 | Command number | 1426 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* ; *itemRef* ; *arrSelection* {; *arrValues*} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* ; * ; *arrSelection* {; *arrValues*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *arrSelection* : Text array {; *arrValues* : Text array} )<br/>**GET LIST ITEM PARAMETER ARRAYS** ( * ; *list* : Integer, Text ; * ; *arrSelection* : Text array {; *arrValues* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -80,6 +80,6 @@ If you want to get the parameter values as well, you write:
 |  |  |
 | --- | --- |
 | Command number | 1195 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

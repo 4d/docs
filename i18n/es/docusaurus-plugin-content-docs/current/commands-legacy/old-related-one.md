@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OLD RELATED ONE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unField | Field | &#8594;  | Campo Muchos |
+| unField | Field | &#8594; | Campo Muchos |
 
 <!-- END REF-->
 
@@ -37,7 +37,7 @@ Si el comando se ejecuta correctamente y si los registros relacionados se han ca
 |  |  |
 | --- | --- |
 | Número de comando | 44 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

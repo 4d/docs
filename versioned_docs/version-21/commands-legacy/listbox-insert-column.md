@@ -102,6 +102,6 @@ You want to insert a column dynamically into an array type list box and define i
 |  |  |
 | --- | --- |
 | Command number | 829 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

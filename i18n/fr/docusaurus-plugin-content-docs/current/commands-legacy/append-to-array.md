@@ -5,12 +5,12 @@ slug: /commands/append-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *tableau* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *tableau* : Array ; *valeur* : Expression )<!-- END REF-->
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#8594;  | Tableau auquel ajouter une valeur |
-| valeur | Expression | &#8594;  | Valeur à ajouter au tableau |
+| tableau | Array | &#8594; | Tableau auquel ajouter une valeur |
+| valeur | Expression | &#8594; | Valeur à ajouter au tableau |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ Le code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 911 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

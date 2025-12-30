@@ -30,6 +30,6 @@ If there is no next URL (in other words, if the user has never returned to a pre
 |  |  |
 | --- | --- |
 | Command number | 1022 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

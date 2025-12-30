@@ -96,6 +96,6 @@ Si el código se ejecuta en un 4D Server y el bloqueo es causado por una máquin
 |  |  |
 | --- | --- |
 | Número de comando | 1316 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

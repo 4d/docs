@@ -56,6 +56,6 @@ This example collapses the first level of the break rows of the selection in the
 |  |  |
 | --- | --- |
 | Command number | 1101 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

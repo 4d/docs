@@ -36,6 +36,6 @@ This method will prevent the opening of the database if the data file is locked:
 |  |  |
 | --- | --- |
 | Command number | 716 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

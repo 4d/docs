@@ -5,13 +5,13 @@ slug: /commands/st-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( {* ;} *objet* ; *option* ; *valeur* {; *option2* ; *valeur2* ; ... ; *optionN* ; *valeurN*} )<!-- END REF-->
+<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *objet* : Text ; *option* : Integer ; *valeur* : Integer {; ...(*option* : Integer, *valeur* : Integer)} )<br/>**ST GET OPTIONS** ( *objet* : Field, Variable ; *option* : Integer ; *valeur* : Integer {; ...(*option* : Integer, *valeur* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| option | Integer | &#8594;  | Option à lire |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| option | Integer | &#8594; | Option à lire |
 | valeur | Integer | &#8592; | Valeur courante de l’option |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Passez dans *option* le code de l’option à lire. La commande retourne dans *v
 |  |  |
 | --- | --- |
 | Numéro de commande | 1290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

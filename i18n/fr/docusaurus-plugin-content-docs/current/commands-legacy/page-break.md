@@ -5,11 +5,12 @@ slug: /commands/page-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
+<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** ({ * })<br/>**PAGE BREAK** ({ > })<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * &#124; > |Operator| &#8594;  | * Annule l'impression lancée par Imprimer ligne ou > Rend l'impression prioritaire |
+| * | Operator | &#8594; | Cancel printing job started with Print form |
+| > | Operator | &#8594; | Force one printing job |
 
 <!-- END REF-->
 
@@ -50,7 +51,7 @@ Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 6 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

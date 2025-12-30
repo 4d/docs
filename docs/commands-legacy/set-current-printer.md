@@ -5,7 +5,7 @@ slug: /commands/set-current-printer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CURRENT PRINTER.Syntax-->**SET CURRENT PRINTER** ( *printerName* )<!-- END REF-->
+<!--REF #_command_.SET CURRENT PRINTER.Syntax-->**SET CURRENT PRINTER** ( *printerName* : Text )<!-- END REF-->
 <!--REF #_command_.SET CURRENT PRINTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ Creation of a PDF document under Windows:
 |  |  |
 | --- | --- |
 | Command number | 787 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

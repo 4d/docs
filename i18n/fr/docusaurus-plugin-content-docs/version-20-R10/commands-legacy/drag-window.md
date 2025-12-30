@@ -52,6 +52,6 @@ Vous pouvez la déplacer en cliquant sur les bordures.
 |  |  |
 | --- | --- |
 | Numéro de commande | 452 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -74,6 +74,6 @@ Uso del comando **JSON TO SELECTION** para añadir los registros a la tabla \[Co
 |  |  |
 | --- | --- |
 | Número de comando | 1235 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

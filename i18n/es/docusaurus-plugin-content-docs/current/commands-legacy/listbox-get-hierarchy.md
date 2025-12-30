@@ -5,12 +5,12 @@ slug: /commands/listbox-get-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( {* ;} *objeto* ; *jerarquico* {; *jerarquia*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( * ; *objeto* : Text ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<br/>**LISTBOX GET HIERARCHY** ( *objeto* : Field, Variable ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET HIERARCHY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variables (si * se omite) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variables (si * se omite) |
 | jerarquico | Boolean | &#8592; | True = list box jerárquico, False = list box no jerárquico |
 | jerarquia | Pointer array | &#8592; | Array de punteros |
 
@@ -40,6 +40,6 @@ Si el list box está en modo jerárquico, el comando llena el array *jerarquia* 
 |  |  |
 | --- | --- |
 | Número de comando | 1099 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/screen-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen height.Syntax-->**Screen height** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Screen height.Syntax-->**Screen height** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Screen height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Windows: altura de la ventana de la aplicación o altura de la pantalla si se especifica * Macintosh: altura de la pantalla principal |
+| * | Operador | &#8594; | Windows: altura de la ventana de la aplicación o altura de la pantalla si se especifica * Macintosh: altura de la pantalla principal |
 | Resultado | Integer | &#8592; | Altura expresada en píxeles |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ En Mac OS, Screen height devuelve la altura de la pantalla principal, es decir l
 |  |  |
 | --- | --- |
 | Número de comando | 188 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

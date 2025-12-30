@@ -40,7 +40,7 @@ L'exemple suivant charge le premier enregistrement de la table \[Clients\] :
 |  |  |
 | --- | --- |
 | Numéro de commande | 50 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

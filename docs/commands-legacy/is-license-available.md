@@ -5,7 +5,7 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *license* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** ( *license* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -52,6 +52,6 @@ Is license available returns [False](false.md "False") if the plug-in is operati
 |  |  |
 | --- | --- |
 | Command number | 714 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

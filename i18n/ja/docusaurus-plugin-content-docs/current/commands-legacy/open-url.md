@@ -5,13 +5,13 @@ slug: /commands/open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *path* {; *appName*}{; *} )<!-- END REF-->
+<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *path* : Text {; *appName* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| path | Text | &#8594;  | 開くドキュメントまたはURL |
-| appName | Text | &#8594;  | 使用するアプリケーション名 |
-| * | 演算子 | &#8594;  | 指定した場合 = URLをエンコードしない, 省略した場合 = URLをエンコードする |
+| path | Text | &#8594; | 開くドキュメントまたはURL |
+| appName | Text | &#8594; | 使用するアプリケーション名 |
+| * | 演算子 | &#8594; | 指定した場合 = URLをエンコードしない, 省略した場合 = URLをエンコードする |
 
 <!-- END REF-->
 
@@ -85,6 +85,6 @@ macOS 環境下では、アプリケーションを探すのに、インスト�
 |  |  |
 | --- | --- |
 | コマンド番号 | 673 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

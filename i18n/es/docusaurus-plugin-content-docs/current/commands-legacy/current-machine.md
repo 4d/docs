@@ -36,6 +36,6 @@ Incluso si no está corriendo la versión cliente/servidor de 4D, su aplicación
 |  |  |
 | --- | --- |
 | Número de comando | 483 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

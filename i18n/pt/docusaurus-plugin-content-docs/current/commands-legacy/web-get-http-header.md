@@ -5,7 +5,7 @@ slug: /commands/web-get-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( cabeçalho|arrayCampo {; *valorArray*} )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP HEADER.Syntax-->**WEB GET HTTP HEADER** ( cabeçalho|arrayCampo {; *valorArray* : Text array} )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP HEADER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -123,6 +123,6 @@ O seguinte método permite recuperar o conteúdo de todo campo de cabeçalho de 
 |  |  |
 | --- | --- |
 | Número do comando | 697 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

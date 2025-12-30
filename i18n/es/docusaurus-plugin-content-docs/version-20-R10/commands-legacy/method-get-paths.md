@@ -90,6 +90,6 @@ Consulte el ejemplo del comando [METHOD SET CODE](method-set-code.md).
 |  |  |
 | --- | --- |
 | Número de comando | 1163 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -32,6 +32,6 @@ Antes de iniciar a operação, o comando verifica que o endereço de acesso não
 |  |  |
 | --- | --- |
 | Número do comando | 313 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

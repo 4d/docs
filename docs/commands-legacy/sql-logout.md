@@ -29,7 +29,7 @@ If the logout is performed properly, the system variable OK is set to 1; otherwi
 |  |  |
 | --- | --- |
 | Command number | 872 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

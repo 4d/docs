@@ -5,11 +5,11 @@ slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
+| area | Integer | &#8594; | エリア参照 |
 | 戻り値 | Integer | &#8592; | レポートタイプ |
 
 <!-- END REF-->
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 755 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

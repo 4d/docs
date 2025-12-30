@@ -55,6 +55,6 @@ Imagine that a Web Service returns the current time in any city in the world. Th
 |  |  |
 | --- | --- |
 | Command number | 779 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

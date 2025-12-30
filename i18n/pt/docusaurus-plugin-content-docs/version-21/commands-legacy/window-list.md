@@ -56,6 +56,6 @@ O método de projeto abaixo coloca em mosaico todas as janelas abertas atualment
 |  |  |
 | --- | --- |
 | Número do comando | 442 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

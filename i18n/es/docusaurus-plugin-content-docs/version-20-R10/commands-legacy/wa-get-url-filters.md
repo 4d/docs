@@ -32,6 +32,6 @@ Los filtros son instalados por el comando [WA SET URL FILTERS](wa-set-url-filter
 |  |  |
 | --- | --- |
 | Número de comando | 1031 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

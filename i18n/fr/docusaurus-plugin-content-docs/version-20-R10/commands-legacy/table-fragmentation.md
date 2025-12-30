@@ -47,6 +47,6 @@ Cette méthode de maintenance permet de demander le compactage du fichier de don
 |  |  |
 | --- | --- |
 | Numéro de commande | 1127 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

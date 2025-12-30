@@ -55,6 +55,6 @@ Vous souhaitez vérifier que la police utilisée dans une zone de texte est int�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1700 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

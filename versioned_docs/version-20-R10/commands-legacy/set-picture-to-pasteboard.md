@@ -53,7 +53,7 @@ If there is not enough memory to paste the picture into the pasteboard, the OK v
 |  |  |
 | --- | --- |
 | Command number | 521 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

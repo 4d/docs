@@ -59,7 +59,7 @@ Uma asserção permite provar os parâmetros passados a um método de projeto pa
 |  |  |
 | --- | --- |
 | Número do comando | 1129 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

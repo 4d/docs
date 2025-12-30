@@ -5,11 +5,11 @@ slug: /commands/tan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tan.Syntax-->**Tan** ( *numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Tan.Syntax-->**Tan** ( *numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &#8594;  | Número, em radianos, cuja tangente é devolvida |
+| numero | Real | &#8594; | Número, em radianos, cuja tangente é devolvida |
 | Resultado | Real | &#8592; | Tangente do número |
 
 <!-- END REF-->
@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 19 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

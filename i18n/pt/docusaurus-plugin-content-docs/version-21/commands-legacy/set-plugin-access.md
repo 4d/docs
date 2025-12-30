@@ -49,6 +49,6 @@ Passe no parâmetro *grupo* o nome do grupo cujos usuários estão autorizados a
 |  |  |
 | --- | --- |
 | Número do comando | 845 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

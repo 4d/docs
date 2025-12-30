@@ -59,7 +59,7 @@ Si el usuario valida la caja de diálogo, la variable sistema OK toma el valor 1
 |  |  |
 | --- | --- |
 | Número de comando | 806 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

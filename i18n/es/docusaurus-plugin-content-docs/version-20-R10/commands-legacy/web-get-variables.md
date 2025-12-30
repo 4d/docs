@@ -70,6 +70,6 @@ La variable vNOMBRE contiene ROBERTO y vCIUDAD contiene PARIS.
 |  |  |
 | --- | --- |
 | Número de comando | 683 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

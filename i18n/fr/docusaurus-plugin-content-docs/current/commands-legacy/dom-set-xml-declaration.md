@@ -5,14 +5,14 @@ slug: /commands/dom-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *refElément* ; *encodage* {; *autonome* {; *indentation*}} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *refElément* : Text ; *encodage* : Text {; *autonome* : Boolean {; *indentation* : Boolean}} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
-| encodage | Text | &#8594;  | Jeu de caractères du document XML |
-| autonome | Boolean | &#8594;  | Vrai=le document est autonome Faux (défaut)=le document n’est pas autonome |
-| indentation | Boolean | &#8594;  | *** Obsolète, ne plus utiliser *** |
+| refElément | Text | &#8594; | Référence d’élément XML |
+| encodage | Text | &#8594; | Jeu de caractères du document XML |
+| autonome | Boolean | &#8594; | Vrai=le document est autonome Faux (défaut)=le document n’est pas autonome |
+| indentation | Boolean | &#8594; | *** Obsolète, ne plus utiliser *** |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ Cet exemple définit l’encodage et l’option standalone de l’élément *ref
 |  |  |
 | --- | --- |
 | Numéro de commande | 859 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

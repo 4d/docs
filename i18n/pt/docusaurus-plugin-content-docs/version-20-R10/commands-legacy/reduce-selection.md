@@ -61,7 +61,7 @@ O seguinte exemplo pesquisa as estatísticas corretas para uma concorrência mun
 |  |  |
 | --- | --- |
 | Número do comando | 351 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

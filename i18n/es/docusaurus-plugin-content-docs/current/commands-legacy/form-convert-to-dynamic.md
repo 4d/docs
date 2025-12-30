@@ -5,12 +5,12 @@ slug: /commands/form-convert-to-dynamic
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*tabla* ;} *nomFormulario* ) : Object<!-- END REF-->
+<!--REF #_command_.FORM Convert to dynamic.Syntax-->**FORM Convert to dynamic** ( {*tabla* : Table ;} *nomFormulario* : Text ) : Object<!-- END REF-->
 <!--REF #_command_.FORM Convert to dynamic.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de formulario |
-| nomFormulario | Text | &#8594;  | Nombre de un proyecto "clásico" o formulario tabla |
+| tabla | Table | &#8594; | Tabla de formulario |
+| nomFormulario | Text | &#8594; | Nombre de un proyecto "clásico" o formulario tabla |
 | Resultado | Object | &#8592; | nomFormulario convertido a formulario dinámico |
 
 <!-- END REF-->
@@ -63,6 +63,6 @@ Si ejecuta el código:
 |  |  |
 | --- | --- |
 | Número de comando | 1570 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

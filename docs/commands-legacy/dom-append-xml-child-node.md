@@ -5,7 +5,7 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* ; *childType* ; *childValue* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *elementRef* : Text ; *childType* : Integer ; *childValue* : Text, Blob ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -151,6 +151,6 @@ If the contents of *childValue* are not valid, an error is returned.
 |  |  |
 | --- | --- |
 | Command number | 1080 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

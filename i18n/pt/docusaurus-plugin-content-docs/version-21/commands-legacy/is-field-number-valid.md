@@ -31,6 +31,6 @@ Este comando permite detectar as eventuais eliminações de campos, que criam qu
 |  |  |
 | --- | --- |
 | Número do comando | 1000 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

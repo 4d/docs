@@ -5,7 +5,7 @@ slug: /commands/last-query-plan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query plan.Syntax-->**Last query plan** ( *descFormat* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query plan.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ The description of the last query plan can be compared to the description of the
 |  |  |
 | --- | --- |
 | Command number | 1046 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -43,6 +43,6 @@ El siguiente ejemplo permite al usuario crear un nuevo documento, escribe la cad
 |  |  |
 | --- | --- |
 | Número de comando | 267 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

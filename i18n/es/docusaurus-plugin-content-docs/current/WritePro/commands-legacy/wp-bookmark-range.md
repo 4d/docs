@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-bookmark-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *docWP* ; *nombk* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Bookmark range.Syntax-->**WP Bookmark range** ( *docWP* : Object ; *nombk* : Text ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Bookmark range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

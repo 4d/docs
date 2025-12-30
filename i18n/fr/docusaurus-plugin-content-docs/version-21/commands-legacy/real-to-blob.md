@@ -139,6 +139,6 @@ Après l'exécution de ce code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 552 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
-| childTypesArr | Array integer | &#8592; | Types of child nodes |
+| childTypesArr | Integer array | &#8592; | Types of child nodes |
 | nodeRefsArr | Text array | &#8592; | References or Values of child nodes |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ After executing these instructions:
 |  |  |
 | --- | --- |
 | Command number | 1081 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

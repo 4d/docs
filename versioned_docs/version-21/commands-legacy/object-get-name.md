@@ -44,6 +44,6 @@ After the execution of this object method, the *$btnName* variable contains the 
 |  |  |
 | --- | --- |
 | Command number | 1087 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

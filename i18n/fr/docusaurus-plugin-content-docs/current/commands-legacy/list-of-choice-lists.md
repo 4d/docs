@@ -5,7 +5,7 @@ slug: /commands/list-of-choice-lists
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *tabNums* ; *tabNoms* )<!-- END REF-->
+<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *tabNums* : Integer array ; *tabNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -26,6 +26,6 @@ Les numéros des énumérations correspondent à leur ordre de création. Dans l
 |  |  |
 | --- | --- |
 | Numéro de commande | 957 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

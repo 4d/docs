@@ -29,6 +29,6 @@ Se omitir o parâmetro *janela*, Window process devolve o número do processo da
 |  |  |
 | --- | --- |
 | Número do comando | 446 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

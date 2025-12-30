@@ -5,7 +5,7 @@ slug: /commands/print-settings-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *confImpress* ) : Integer<!-- END REF-->
+<!--REF #_command_.Print settings to BLOB.Syntax-->**Print settings to BLOB** ( *confImpress* : Blob ) : Integer<!-- END REF-->
 <!--REF #_command_.Print settings to BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ Se quiser armazenar a configuração de impressão atual no disco:
 |  |  |
 | --- | --- |
 | Número do comando | 1433 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

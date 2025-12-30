@@ -5,11 +5,11 @@ slug: /commands/volume-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volumen* ; *tamaño* ; *utilizado* ; *libre* )<!-- END REF-->
+<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volumen* : Text ; *tamaño* : Real ; *utilizado* : Real ; *libre* : Real )<!-- END REF-->
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| volumen | Text | &#8594;  | Nombre del volumen |
+| volumen | Text | &#8594; | Nombre del volumen |
 | tamaño | Real | &#8592; | Tamaño del volumen expresado en bytes |
 | utilizado | Real | &#8592; | Espacio utilizado expresado en bytes |
 | libre | Real | &#8592; | Espacio libre expresado en bytes |
@@ -101,7 +101,7 @@ Una vez se añade este método de proyecto a su aplicación, puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 472 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

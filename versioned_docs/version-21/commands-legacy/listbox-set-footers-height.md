@@ -40,6 +40,6 @@ Pass the height to set in the *height* parameter. By default, if you omit the *u
 |  |  |
 | --- | --- |
 | Command number | 1145 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

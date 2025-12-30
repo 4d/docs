@@ -5,7 +5,7 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* {; *array2* ; ... ; *arrayN*}{; > or <} )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; > or <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -86,6 +86,6 @@ You display the names from a *\[People\]* table in a floating window. When you c
 |  |  |
 | --- | --- |
 | Command number | 229 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

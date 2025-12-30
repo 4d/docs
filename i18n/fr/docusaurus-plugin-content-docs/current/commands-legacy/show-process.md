@@ -5,11 +5,11 @@ slug: /commands/show-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.SHOW PROCESS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Numéro du process dont les fenêtres doivent être affichées |
+| process | Integer | &#8594; | Numéro du process dont les fenêtres doivent être affichées |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ L'exemple suivant affiche le process "Clients", s'il était caché auparavant. L
 |  |  |
 | --- | --- |
 | Numéro de commande | 325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

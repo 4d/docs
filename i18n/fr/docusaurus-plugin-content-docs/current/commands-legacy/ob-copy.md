@@ -5,14 +5,14 @@ slug: /commands/ob-copy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objet* {; *résoudrePtrs* } )  : Object<br/>**OB Copy** ( *objet* {; *option* {; *grouperAvec*}} )  : Object<!-- END REF-->
+<!--REF #_command_.OB Copy.Syntax-->**OB Copy** ( *objet* : Object, Object {; *résoudrePtrs* : Boolean } )  : Object<br/>**OB Copy** ( *objet* : Object, Object {; *option* : Integer {; *grouperAvec* : Collection, Object}} )  : Object<!-- END REF-->
 <!--REF #_command_.OB Copy.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &#8594;  | Objet structuré |
-| résoudrePtrs | Boolean | &#8594;  | Vrai = résoudre les pointeurs, Faux ou omis = ne pas les résoudre |
-| option | Integer | &#8594;  | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
-| grouperAvec | Collection, Object | &#8594;  | Collection ou objet partagé(e) à grouper avec l'objet résultant |
+| objet | Object, Object | &#8594; | Objet structuré |
+| résoudrePtrs | Boolean | &#8594; | Vrai = résoudre les pointeurs, Faux ou omis = ne pas les résoudre |
+| option | Integer | &#8594; | ck shared: return a shared object,ck resolve pointers: resolve pointers before copying |
+| grouperAvec | Collection, Object | &#8594; | Collection ou objet partagé(e) à grouper avec l'objet résultant |
 | Résultat | Object | &#8592; | Copie de objet |
 
 <!-- END REF-->
@@ -170,6 +170,6 @@ Nous souhaitons copier *$sharedObj* dans *$sharedColl.* Etant donné qu'ils appa
 |  |  |
 | --- | --- |
 | Numéro de commande | 1225 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/mod
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Mod.Syntax-->**Mod** ( *number1* ; *number2* ) : Real<!-- END REF-->
+<!--REF #_command_.Mod.Syntax-->**Mod** ( *number1* : Integer ; *number2* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ The following example illustrates how the Mod function works with different argu
 |  |  |
 | --- | --- |
 | Command number | 98 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

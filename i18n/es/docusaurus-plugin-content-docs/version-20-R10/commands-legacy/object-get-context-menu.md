@@ -34,6 +34,6 @@ El comando devuelve **True** si el menú contextual está activo para el objeto 
 |  |  |
 | --- | --- |
 | Número de comando | 1252 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

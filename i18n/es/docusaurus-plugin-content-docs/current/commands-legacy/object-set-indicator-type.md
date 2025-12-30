@@ -5,13 +5,13 @@ slug: /commands/object-set-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( {* ;} *objeto* ; *indicador* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( * ; *objeto* : Text ; *indicador* : Integer )<br/>**OBJECT SET INDICATOR TYPE** ( *objeto* : Field, Variable ; *indicador* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| indicador | Integer | &#8594;  | Tipo de indicador |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| indicador | Integer | &#8594; | Tipo de indicador |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ En el parámetro *indicador*, pase el tipo de indicador a mostrar. Puede utiliza
 |  |  |
 | --- | --- |
 | Número de comando | 1246 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

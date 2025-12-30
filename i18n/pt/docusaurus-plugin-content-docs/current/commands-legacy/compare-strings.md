@@ -5,13 +5,13 @@ slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *string* ; *stringB* {; *opções*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *string* : Text ; *stringB* : Text {; *opções* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| string | Text | &#8594;  | String a comparar |
-| stringB | Text | &#8594;  | String a ser comparada |
-| opções | Integer | &#8594;  | Regras de comparação |
+| string | Text | &#8594; | String a comparar |
+| stringB | Text | &#8594; | String a ser comparada |
+| opções | Integer | &#8594; | Regras de comparação |
 | Resultado | Integer | &#8592; | Resultado da comparação de strings |
 
 <!-- END REF-->
@@ -109,6 +109,6 @@ Os exemplos abaixo ilustram o impacto específico das opções no **contexto da 
 |  |  |
 | --- | --- |
 | Número do comando | 1756 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

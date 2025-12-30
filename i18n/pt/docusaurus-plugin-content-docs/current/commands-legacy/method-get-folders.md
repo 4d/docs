@@ -5,13 +5,13 @@ slug: /commands/method-get-folders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *arrayNoms* {; *filtro*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET FOLDERS.Syntax-->**METHOD GET FOLDERS** ( *arrayNoms* : Text array {; *filtro* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET FOLDERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrayNoms | Text array | &#8592; | Array de nomes de pastas da página de início |
-| filtro | Text | &#8594;  | Filtro de nomes |
-| * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| filtro | Text | &#8594; | Filtro de nomes |
+| * | Operador | &#8594; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ Se executado este comando desde um componente, devolve por defeito os caminhos d
 |  |  |
 | --- | --- |
 | Número do comando | 1206 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

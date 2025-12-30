@@ -5,13 +5,13 @@ slug: /commands/euro-converter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *valor* ; *deMoeda* ; *paraMoeda* ) : Real<!-- END REF-->
+<!--REF #_command_.Euro converter.Syntax-->**Euro converter** ( *valor* : Real ; *deMoeda* : Text ; *paraMoeda* : Text ) : Real<!-- END REF-->
 <!--REF #_command_.Euro converter.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| valor | Real | &#8594;  | Valor a converter |
-| deMoeda | Text | &#8594;  | Código da moeda na qual o valor é expresso |
-| paraMoeda | Text | &#8594;  | Código da moeda para o qual o valor será convertido |
+| valor | Real | &#8594; | Valor a converter |
+| deMoeda | Text | &#8594; | Código da moeda na qual o valor é expresso |
+| paraMoeda | Text | &#8594; | Código da moeda para o qual o valor será convertido |
 | Resultado | Real | &#8592; | Valor convertido |
 
 <!-- END REF-->
@@ -85,6 +85,6 @@ Estes são alguns exemplos de conversões que podem ser realizadas com este coma
 |  |  |
 | --- | --- |
 | Número do comando | 676 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

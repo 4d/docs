@@ -5,13 +5,13 @@ slug: /commands/query-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*aTable* }{;}{ *queryArgument* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION.Syntax-->**QUERY SELECTION** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
-| queryArgument | Expression | &#8594;  | 検索条件 |
-| * | 演算子 | &#8594;  | 検索継続フラグ |
+| aTable | Table | &#8594; | レコードセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
+| queryArgument | Expression | &#8594; | 検索条件 |
+| * | 演算子 | &#8594; | 検索継続フラグ |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 341 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||

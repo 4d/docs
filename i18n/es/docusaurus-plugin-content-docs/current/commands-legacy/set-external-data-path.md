@@ -5,12 +5,12 @@ slug: /commands/set-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aCampo* ; *ruta* )<!-- END REF-->
+<!--REF #_command_.SET EXTERNAL DATA PATH.Syntax-->**SET EXTERNAL DATA PATH** ( *aCampo* : Text, Blob, Picture ; *ruta* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET EXTERNAL DATA PATH.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aCampo | Text, Blob, Picture | &#8594;  | Campo para el cual definir el lugar de almacenamiento |
-| ruta | Text, Integer | &#8594;  | Ruta de acceso y nombre del archivo de almacenamiento externo o0 = utilizar la definición en estructura 1 = utilizar la carpeta por defecto |
+| aCampo | Text, Blob, Picture | &#8594; | Campo para el cual definir el lugar de almacenamiento |
+| ruta | Text, Integer | &#8594; | Ruta de acceso y nombre del archivo de almacenamiento externo o0 = utilizar la definición en estructura 1 = utilizar la carpeta por defecto |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ Usted desea guardar el contenido de un archivo existente en el campo imagen, alm
 |  |  |
 | --- | --- |
 | Número de comando | 1134 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

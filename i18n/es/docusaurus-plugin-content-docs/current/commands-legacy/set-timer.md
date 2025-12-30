@@ -5,11 +5,11 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *ticCont* )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *ticCont* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ticCont | Integer | &#8594;  | Número de tics |
+| ticCont | Integer | &#8594; | Número de tics |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Imaginemos que usted quiere, cuando un formulario aparece en pantalla, que el or
 |  |  |
 | --- | --- |
 | Número de comando | 645 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1003 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

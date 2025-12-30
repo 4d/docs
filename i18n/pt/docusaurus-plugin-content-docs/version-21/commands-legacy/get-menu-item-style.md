@@ -52,7 +52,7 @@ Para provar se um elemento de menu é mostrado em negrito, escreve:
 |  |  |
 | --- | --- |
 | Número do comando | 426 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

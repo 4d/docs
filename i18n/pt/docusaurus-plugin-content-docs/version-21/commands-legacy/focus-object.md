@@ -51,6 +51,6 @@ O exemplo abaixo é um método de objeto para um botão. O método de objeto mod
 |  |  |
 | --- | --- |
 | Número do comando | 278 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

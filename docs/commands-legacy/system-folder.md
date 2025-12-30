@@ -5,7 +5,7 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *type* )} : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** ( *type* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ If you omit the *type* parameter, the function will return the pathname to activ
 |  |  |
 | --- | --- |
 | Command number | 487 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

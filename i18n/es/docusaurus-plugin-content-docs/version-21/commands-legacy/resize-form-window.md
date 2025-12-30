@@ -52,6 +52,6 @@ Después de la ejecución de esta línea:
 |  |  |
 | --- | --- |
 | Número de comando | 890 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

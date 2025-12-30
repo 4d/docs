@@ -5,14 +5,14 @@ slug: /commands/object-set-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( {* ;} *objeto* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLLBAR.Syntax-->**OBJECT SET SCROLLBAR** ( * ; *objeto* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT SET SCROLLBAR** ( *objeto* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLLBAR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| horizontal | Boolean, Integer | &#8594;  | True = exibir, False = esconder |
-| vertical | Boolean, Integer | &#8594;  | True = exibir, False = esconder |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| horizontal | Boolean, Integer | &#8594; | True = exibir, False = esconder |
+| vertical | Boolean, Integer | &#8594; | True = exibir, False = esconder |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ Passe nos parâmetros *horizontal* e *vertical* os valores booleanos indicando s
 |  |  |
 | --- | --- |
 | Número do comando | 843 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

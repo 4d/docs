@@ -110,6 +110,6 @@ Vous obtenez des tableaux du type :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

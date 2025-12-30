@@ -5,11 +5,11 @@ slug: /commands/accumulate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *objeto* {; *objeto2* ; ... ; *objetoN*} )<!-- END REF-->
+<!--REF #_command_.ACCUMULATE.Syntax-->**ACCUMULATE** ( *objeto* : Field, Variable {; *...objeto* : Field, Variable} )<!-- END REF-->
 <!--REF #_command_.ACCUMULATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Field, Variable | &#8594;  | Campo o variable de tipo numérico a acumular |
+| objeto | Field, Variable | &#8594; | Campo o variable de tipo numérico a acumular |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Ver el ejemplo del comando [BREAK LEVEL](break-level.md "BREAK LEVEL").
 |  |  |
 | --- | --- |
 | Número de comando | 303 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

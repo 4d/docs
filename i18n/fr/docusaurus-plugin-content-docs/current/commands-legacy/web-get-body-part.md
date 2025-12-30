@@ -5,11 +5,11 @@ slug: /commands/web-get-body-part
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *partie* ; *contenuPartie* ; *nomPartie* ; *typeMime* ; *nomFichier* )<!-- END REF-->
+<!--REF #_command_.WEB GET BODY PART.Syntax-->**WEB GET BODY PART** ( *partie* : Integer ; *contenuPartie* : Blob, Text ; *nomPartie* : Text ; *typeMime* : Text ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.WEB GET BODY PART.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| partie | Integer | &#8594;  | Numéro de partie |
+| partie | Integer | &#8594; | Numéro de partie |
 | contenuPartie | Blob, Text | &#8592; | Contenu de la partie |
 | nomPartie | Text | &#8592; | Nom de la variable "input" |
 | typeMime | Text | &#8592; | Type mime du fichier |
@@ -98,6 +98,6 @@ Voici le code de la méthode GetFile :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1212 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

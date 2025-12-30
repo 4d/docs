@@ -5,7 +5,7 @@ slug: /commands/get-highlighted-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*aTable* ;} *setName* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHTED RECORDS.Syntax-->**GET HIGHLIGHTED RECORDS** ( {*aTable* : Table ;} *setName* : Text )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHTED RECORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ If the command was executed properly, the system variable OK is set to 1\. Other
 |  |  |
 | --- | --- |
 | Command number | 902 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -112,6 +112,6 @@ que devuelve:
 |  |  |
 | --- | --- |
 | Número de comando | 55 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

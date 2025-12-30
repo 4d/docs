@@ -5,11 +5,11 @@ slug: /commands/memory-statistics
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *tipoInfo* ; *arrayNombres* ; *arrayValores* ; *ArrayContador* )<!-- END REF-->
+<!--REF #_command_.MEMORY STATISTICS.Syntax-->**MEMORY STATISTICS** ( *tipoInfo* : Integer ; *arrayNombres* : Text array ; *arrayValores* : Real array ; *ArrayContador* : Real array )<!-- END REF-->
 <!--REF #_command_.MEMORY STATISTICS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipoInfo | Integer | &#8594;  | Selector de información a obtener |
+| tipoInfo | Integer | &#8594; | Selector de información a obtener |
 | arrayNombres | Text array | &#8592; | Títulos de la información |
 | arrayValores | Real array | &#8592; | Valores de la información |
 | ArrayContador | Real array | &#8592; | Número de objetos respectivos (si disponible) |
@@ -33,6 +33,6 @@ Después de ejecutar el comando, las estadísticas solicitadas se entregan en lo
 |  |  |
 | --- | --- |
 | Número de comando | 1118 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

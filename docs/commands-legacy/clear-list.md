@@ -5,7 +5,7 @@ slug: /commands/clear-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *list* {; *} )<!-- END REF-->
+<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *list* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,6 +58,6 @@ See example for the [BLOB to list](blob-to-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 377 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

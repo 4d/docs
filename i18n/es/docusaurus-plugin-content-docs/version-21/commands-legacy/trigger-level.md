@@ -30,6 +30,6 @@ Para mayor información sobre niveles de ejecución, consulte el tema *Triggers 
 |  |  |
 | --- | --- |
 | Número de comando | 398 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

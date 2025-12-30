@@ -5,7 +5,7 @@ slug: /commands/sql-get-last-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* ; *errTexte* ; *errODBC* ; *errSQLServer* )<!-- END REF-->
+<!--REF #_command_.SQL GET LAST ERROR.Syntax-->**SQL GET LAST ERROR** ( *errCode* : Integer ; *errTexte* ; *errODBC* : Text ; *errSQLServer* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL GET LAST ERROR.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ Les deux derniers paramètres ne sont remplis que si l’erreur provient de la s
 |  |  |
 | --- | --- |
 | Numéro de commande | 825 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

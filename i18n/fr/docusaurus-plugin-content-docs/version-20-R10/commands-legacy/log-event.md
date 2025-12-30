@@ -69,6 +69,6 @@ A chaque ouverture de la base, cette information sera inscrite dans l’Observat
 |  |  |
 | --- | --- |
 | Numéro de commande | 667 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -30,6 +30,6 @@ Se não houver um URL antecedente, o comando não faz nada. Pode testar a dispon
 |  |  |
 | --- | --- |
 | Número do comando | 1021 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -51,7 +51,7 @@ Se o comando for executado corretamente, a variável Sistema OK retorna 1\. Do c
 |  |  |
 | --- | --- |
 | Número do comando | 818 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

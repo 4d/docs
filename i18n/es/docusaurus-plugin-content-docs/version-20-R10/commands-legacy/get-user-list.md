@@ -41,7 +41,7 @@ Si no tiene privilegios de acceso para llamar al comando GET USER LIST o si otro
 |  |  |
 | --- | --- |
 | Número de comando | 609 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

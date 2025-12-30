@@ -47,7 +47,7 @@ Se a execução do comando é correta, a variável sistema Document contém a ro
 |  |  |
 | --- | --- |
 | Número do comando | 678 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document |
 
 

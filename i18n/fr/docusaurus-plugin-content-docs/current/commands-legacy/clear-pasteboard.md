@@ -45,6 +45,6 @@ Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-dat
 |  |  |
 | --- | --- |
 | Numéro de commande | 402 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

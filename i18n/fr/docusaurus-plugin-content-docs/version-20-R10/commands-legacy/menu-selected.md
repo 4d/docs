@@ -65,7 +65,7 @@ La méthode formulaire suivante utilise la fonction **Menu selected** pour fourn
 |  |  |
 | --- | --- |
 | Numéro de commande | 152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

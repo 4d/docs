@@ -13,12 +13,12 @@ La clase `OpenAIFileListResult` contiene el resultado de la lista de los archivo
 
 ## Propiedades calculadas
 
-| Propiedad  | Tipo       | Descripción                                                                                                                                              |
-| ---------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `files`    | Collection | Returns a collection of [OpenAIFile](OpenAIFile.md) objects from the API response, or an empty collection if no files are found.         |
-| `first_id` | Text       | Devuelve el ID del primer archivo de la lista, o una cadena vacía si no está disponible.                                                 |
-| `last_id`  | Text       | Devuelve el ID del último archivo de la lista, o una cadena vacía si no está disponible.                                                 |
-| `has_more` | Boolean    | Indica si hay más archivos más allá de esta página. `True` si hay más archivos que recuperar, `False` en caso contrario. |
+| Propiedad  | Tipo       | Descripción                                                                                                                                                       |
+| ---------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `files`    | Collection | Devuelve una colección de objetos [OpenAIFile](OpenAIFile.md) de la respuesta de la API, o una colección vacía si no se encuentra ningún archivo. |
+| `first_id` | Text       | Devuelve el ID del primer archivo de la lista, o una cadena vacía si no está disponible.                                                          |
+| `last_id`  | Text       | Devuelve el ID del último archivo de la lista, o una cadena vacía si no está disponible.                                                          |
+| `has_more` | Boolean    | Indica si hay más archivos más allá de esta página. `True` si hay más archivos que recuperar, `False` en caso contrario.          |
 
 ## Ejemplo de Uso
 

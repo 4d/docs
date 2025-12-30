@@ -5,7 +5,7 @@ slug: /commands/undefined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ Here are the different results of the [Undefined](undefined.md) command as well 
 |  |  |
 | --- | --- |
 | Command number | 82 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

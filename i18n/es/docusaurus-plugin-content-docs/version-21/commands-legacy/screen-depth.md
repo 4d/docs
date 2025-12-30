@@ -65,6 +65,6 @@ Su aplicación muestra varios gráficos a color. Puede escribir en alguna parte 
 |  |  |
 | --- | --- |
 | Número de comando | 439 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

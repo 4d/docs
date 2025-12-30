@@ -5,11 +5,11 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tickCount | Integer | &#8594;  | Nombre de ticks ou -1 = Déclenchement dès que possible |
+| tickCount | Integer | &#8594; | Nombre de ticks ou -1 = Déclenchement dès que possible |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Vous souhaitez que, lorsqu’un formulaire est affiché à l’écran, un bip so
 |  |  |
 | --- | --- |
 | Numéro de commande | 645 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

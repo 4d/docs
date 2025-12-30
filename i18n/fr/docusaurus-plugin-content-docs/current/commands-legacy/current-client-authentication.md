@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domaine* ; *protocole* )} : Text<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** ( *domaine* : Text ; *protocole* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -79,6 +79,6 @@ Avec ce paramétrage, aucune boîte de dialogue d'identification n'est affichée
 |  |  |
 | --- | --- |
 | Numéro de commande | 1355 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

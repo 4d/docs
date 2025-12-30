@@ -5,7 +5,7 @@ slug: /commands/sax-close-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *document* )<!-- END REF-->
+<!--REF #_command_.SAX CLOSE XML ELEMENT.Syntax-->**SAX CLOSE XML ELEMENT** ( *document* : Time )<!-- END REF-->
 <!--REF #_command_.SAX CLOSE XML ELEMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,8 +29,8 @@ If the last element opened is *<Book>*, the following statement:
 
 ... will write the following line in the document: 
 
-```4d
- 
+```xml
+ </Book>
 ```
 
 ## See also 
@@ -43,6 +43,6 @@ If the last element opened is *<Book>*, the following statement:
 |  |  |
 | --- | --- |
 | Command number | 854 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/confirm
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* {; *okButtonTitle* {; *cancelButtonTitle*}} )<!-- END REF-->
+<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; *okButtonTitle* : Text {; *cancelButtonTitle* : Text}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -98,7 +98,7 @@ will display the confirm dialog box (on Windows) shown here:
 |  |  |
 | --- | --- |
 | Command number | 162 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

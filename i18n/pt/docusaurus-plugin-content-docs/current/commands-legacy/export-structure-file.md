@@ -5,12 +5,12 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rotaPasta* {; *opções*} ) : Object<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *rotaPasta* : Text {; *opções* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPasta | Text | &#8594;  | Rota da pasta destino para arquivos projeto |
-| opções | Object | &#8594;  | Opções de exportação |
+| rotaPasta | Text | &#8594; | Rota da pasta destino para arquivos projeto |
+| opções | Object | &#8594; | Opções de exportação |
 | Resultado | Object | &#8592; | Estado de validação e mensagens (se houver) |
 
 <!-- END REF-->
@@ -119,6 +119,6 @@ Se quiser exportar apenas os métodos projeto e banco de dados, e um arquivo de 
 |  |  |
 | --- | --- |
 | Número do comando | 1565 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

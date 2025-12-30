@@ -5,12 +5,12 @@ slug: /commands/goto-xy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* ; *y* )<!-- END REF-->
+<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| x | Integer | &#8594;  | posição x (horizontal) do cursor |
-| y | Integer | &#8594;  | posição y (vertical) do cursor |
+| x | Integer | &#8594; | posição x (horizontal) do cursor |
+| y | Integer | &#8594; | posição y (vertical) do cursor |
 
 <!-- END REF-->
 
@@ -64,6 +64,6 @@ Mostra a janela a seguir (em Macintosh) por 30 segundos:
 |  |  |
 | --- | --- |
 | Número do comando | 161 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

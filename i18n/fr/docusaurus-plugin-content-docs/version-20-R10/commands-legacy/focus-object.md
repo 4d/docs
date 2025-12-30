@@ -51,6 +51,6 @@ L'exemple suivant est une méthode objet pour un bouton. Cette méthode passe le
 |  |  |
 | --- | --- |
 | Numéro de commande | 278 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

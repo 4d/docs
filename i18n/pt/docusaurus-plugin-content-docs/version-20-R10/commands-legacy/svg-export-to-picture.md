@@ -59,6 +59,6 @@ O exemplo abaixo pode ser utilizado para mostrar “Hello World” em uma imagem
 |  |  |
 | --- | --- |
 | Número do comando | 1017 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

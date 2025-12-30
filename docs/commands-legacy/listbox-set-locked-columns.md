@@ -5,7 +5,7 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( {* ;} *object* ; *numColumns* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *object* : Text ; *numColumns* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *object* : Field, Variable ; *numColumns* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ To remove the column locking, pass 0 or a negative value in *numColumns*.
 |  |  |
 | --- | --- |
 | Command number | 1151 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -69,6 +69,6 @@ A variável vNOME contém ROBERTO e vCIDADE contém PARIS.
 |  |  |
 | --- | --- |
 | Número do comando | 683 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

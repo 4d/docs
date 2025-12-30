@@ -5,7 +5,7 @@ slug: /commands/sax-open-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* ; *tag* {; *attribName* ; *attribValue*} {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *document* : Time ; *tag* : Text {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text, *attribValue* : Text)} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,7 +58,7 @@ If an invalid character is passed in *tag*, an error is generated.
 |  |  |
 | --- | --- |
 | Command number | 853 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

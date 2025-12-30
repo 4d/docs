@@ -5,7 +5,7 @@ slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} : Integer<!-- END REF-->
+<!--REF #_command_.Menu selected.Syntax-->**Menu selected** ( *subMenu* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 152 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | サーバー上での使用は不可 ||
 
 

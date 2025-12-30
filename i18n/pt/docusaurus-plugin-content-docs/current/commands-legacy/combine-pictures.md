@@ -5,16 +5,16 @@ slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imagemResult* ; *imagem1* ; *operador* ; *imagem2* {; *deslocHor* ; *deslocVert*} )<!-- END REF-->
+<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imagemResult* : Picture ; *imagem1* : Picture ; *operador* : Integer ; *imagem2* : Picture {; *deslocHor* : Integer ; *deslocVert* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | imagemResult | Picture | &#8592; | Imagem resultante da combinação |
-| imagem1 | Picture | &#8594;  | Primeira imagem a combinar |
-| operador | Integer | &#8594;  | Tipo de combinação a ser feita |
-| imagem2 | Picture | &#8594;  | Segunda imagem a combinar |
-| deslocHor | Integer | &#8594;  | Deslocamento horizontal para super-imposição |
-| deslocVert | Integer | &#8594;  | Deslocamento vertical para super-imposição |
+| imagem1 | Picture | &#8594; | Primeira imagem a combinar |
+| operador | Integer | &#8594; | Tipo de combinação a ser feita |
+| imagem2 | Picture | &#8594; | Segunda imagem a combinar |
+| deslocHor | Integer | &#8594; | Deslocamento horizontal para super-imposição |
+| deslocVert | Integer | &#8594; | Deslocamento vertical para super-imposição |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ Resultado:
 |  |  |
 | --- | --- |
 | Número do comando | 987 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *documento* ) : Integer<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *documento* : Time ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
+| documento | Time | &#8594; | Referência do documento aberto |
 | Resultado | Integer | &#8592; | Event returned by function |
 
 <!-- END REF-->
@@ -62,7 +62,7 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 860 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

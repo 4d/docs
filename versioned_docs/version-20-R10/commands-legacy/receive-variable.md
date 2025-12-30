@@ -45,7 +45,7 @@ The OK system variable is set to 1 if the variable is received. Otherwise, the O
 |  |  |
 | --- | --- |
 | Command number | 81 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

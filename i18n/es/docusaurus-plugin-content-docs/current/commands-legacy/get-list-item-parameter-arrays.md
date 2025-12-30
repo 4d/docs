@@ -5,13 +5,13 @@ slug: /commands/get-list-item-parameter-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *lista* ; *refElemento* ; *arrSelectores* {; *arrValores*} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Syntax-->**GET LIST ITEM PARAMETER ARRAYS** ( {* ;} *lista* : Integer, Text ; *refElemento* : Integer, * ; *arrSelectores* : Text array {; *arrValores* : Text array} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PARAMETER ARRAYS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena)Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &#8594;  | Número de referencia de lista oNombre de objeto de tipo lista (si se pasa *) |
-| refElemento | Integer, * | &#8594;  | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
+| * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena)Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &#8594; | Número de referencia de lista oNombre de objeto de tipo lista (si se pasa *) |
+| refElemento | Integer, * | &#8594; | Número de referencia del elemento o 0 para el último elemento añadido a la lista o * para el elemento actual de la lista |
 | arrSelectores | Text array | &#8592; | Array de los nombres de parámetros |
 | arrValores | Text array | &#8592; | Array de los valores de los parámetros |
 
@@ -81,6 +81,6 @@ Si también quiere obtener los valores de los parámetros, escriba:
 |  |  |
 | --- | --- |
 | Número de comando | 1195 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

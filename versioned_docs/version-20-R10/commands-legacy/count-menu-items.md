@@ -32,7 +32,7 @@ If you omit the *process* parameter, **Count menu items** applies to the menu ba
 |  |  |
 | --- | --- |
 | Command number | 405 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

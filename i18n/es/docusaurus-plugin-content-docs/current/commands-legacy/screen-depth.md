@@ -5,13 +5,13 @@ slug: /commands/screen-depth
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *profundidad* ; *color* {; *pantalla*} )<!-- END REF-->
+<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *profundidad* : Integer ; *color* : Integer {; *pantalla* : Integer} )<!-- END REF-->
 <!--REF #_command_.SCREEN DEPTH.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | profundidad | Integer | &#8592; | Profundidad de la pantalla (número de colores = 2 ^ profundidad) |
 | color | Integer | &#8592; | 1 = Pantalla color 0 = Pantalla blanco y negro o escala de grises |
-| pantalla | Integer | &#8594;  | Número de la pantalla, o pantalla principal si se omite |
+| pantalla | Integer | &#8594; | Número de la pantalla, o pantalla principal si se omite |
 
 <!-- END REF-->
 
@@ -65,6 +65,6 @@ Su aplicación muestra varios gráficos a color. Puede escribir en alguna parte 
 |  |  |
 | --- | --- |
 | Número de comando | 439 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

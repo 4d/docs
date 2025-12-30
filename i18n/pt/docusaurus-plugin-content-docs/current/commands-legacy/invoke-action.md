@@ -5,12 +5,12 @@ slug: /commands/invoke-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *ação* {; *alvo*} )<!-- END REF-->
+<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *ação* : Text {; *alvo* : Integer} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ação | Text | &#8594;  | Nome ação padrão ou padrão incluindo parâmetro se exigido |
-| alvo | Integer | &#8594;  | Define onde executar a ação: formulário atual (padrão) ou formulário principal |
+| ação | Text | &#8594; | Nome ação padrão ou padrão incluindo parâmetro se exigido |
+| alvo | Integer | &#8594; | Define onde executar a ação: formulário atual (padrão) ou formulário principal |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ Se quiser executar uma ação padrão **Goto page** (página 3) no formulário p
 |  |  |
 | --- | --- |
 | Número do comando | 1439 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

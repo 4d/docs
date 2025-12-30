@@ -5,12 +5,12 @@ slug: /commands/get-menu-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* {; *proceso*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* : Integer, Text {; *proceso* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
-| proceso | Integer | &#8594;  | Número de referencia del proceso |
+| menu | Integer, Text | &#8594; | Número de menú o Referencia de menú |
+| proceso | Integer | &#8594; | Número de referencia del proceso |
 | Resultado | Text | &#8592; | Título del menú |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Si omite el parámetro *proceso*, Get menu title se aplica a la barra de menús 
 |  |  |
 | --- | --- |
 | Número de comando | 430 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

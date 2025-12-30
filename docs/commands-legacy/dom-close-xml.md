@@ -5,7 +5,7 @@ slug: /commands/dom-close-xml
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *elementRef* )<!-- END REF-->
+<!--REF #_command_.DOM CLOSE XML.Syntax-->**DOM CLOSE XML** ( *elementRef* : Text )<!-- END REF-->
 <!--REF #_command_.DOM CLOSE XML.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 722 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

@@ -37,6 +37,6 @@ Vous passez dans le paramètre *décalage* la position (relative à l'origine du
 |  |  |
 | --- | --- |
 | Numéro de commande | 559 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

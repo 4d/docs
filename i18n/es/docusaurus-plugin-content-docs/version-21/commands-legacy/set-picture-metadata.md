@@ -88,7 +88,7 @@ Cuanto todos los metadatos se manipulan vía una referencia de elementos DOM, la
 |  |  |
 | --- | --- |
 | Número de comando | 1121 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

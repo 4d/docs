@@ -47,7 +47,7 @@ La variable OK toma el valor 1 si la variable ha sido reescrita correctamente, d
 |  |  |
 | --- | --- |
 | Número de comando | 533 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

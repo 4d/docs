@@ -5,16 +5,16 @@ slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* ; *esquerda* ; *superior* {; *direita* ; *bottom*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* : Integer ; *esquerda* : Integer ; *superior* : Integer {; *direita* : Integer ; *bottom* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificar, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
-| object | Integer | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| esquerda | Integer | &#8594;  | Coordenada esquerda do objeto em pixels |
-| superior | Integer | &#8594;  | Coordenada superior do objeto em pixels |
-| direita | Integer | &#8594;  | Coordenada direita do objeto em pixels |
-| bottom | Integer | &#8594;  | Coordenada inferior do objeto em pixels |
+| * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
+| object | Integer | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| esquerda | Integer | &#8594; | Coordenada esquerda do objeto em pixels |
+| superior | Integer | &#8594; | Coordenada superior do objeto em pixels |
+| direita | Integer | &#8594; | Coordenada direita do objeto em pixels |
+| bottom | Integer | &#8594; | Coordenada inferior do objeto em pixels |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ A seguinte declaração localiza oi objeto "button\_1" nas coordenadas (10,20) (
 |  |  |
 | --- | --- |
 | Número do comando | 1248 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

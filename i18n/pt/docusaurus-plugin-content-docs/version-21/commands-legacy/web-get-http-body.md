@@ -54,6 +54,6 @@ Quando o formulário é enviado ao servidor web, a variável $textoPetição rec
 |  |  |
 | --- | --- |
 | Número do comando | 814 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

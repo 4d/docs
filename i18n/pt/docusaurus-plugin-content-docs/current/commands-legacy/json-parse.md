@@ -5,13 +5,13 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *cadeiaJSON* {; *tipo*}{; *} ) : any<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *cadeiaJSON* : Text {; *tipo* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeiaJSON | Text | &#8594;  | Cadeia em JSON a analisar |
-| tipo | Integer | &#8594;  | Tipo no qual converter os valores |
-| * | Operador | &#8594;  | Adiciona uma posição de linha e offset de cada propriedade se o valor retornado for um objeto |
+| cadeiaJSON | Text | &#8594; | Cadeia em JSON a analisar |
+| tipo | Integer | &#8594; | Tipo no qual converter os valores |
+| * | Operador | &#8594; | Adiciona uma posição de linha e offset de cada propriedade se o valor retornado for um objeto |
 | Resultado | any, Object | &#8592; | Valores extraídos da cadeia JSON |
 
 <!-- END REF-->
@@ -195,6 +195,6 @@ beta[1].golf:{line:10,offset:12}}}
 |  |  |
 | --- | --- |
 | Número do comando | 1218 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

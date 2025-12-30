@@ -46,6 +46,6 @@ Passez dans le paramètre *option* une constante du thème *PHP* désignant l’
 |  |  |
 | --- | --- |
 | Numéro de commande | 1060 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

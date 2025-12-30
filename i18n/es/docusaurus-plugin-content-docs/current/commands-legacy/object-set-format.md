@@ -5,13 +5,13 @@ slug: /commands/object-set-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( {* ;} *objeto* ; *formato* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *objeto* : Text ; *formato* : Text )<br/>**OBJECT SET FORMAT** ( *objeto* : Field, Variable ; *formato* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| formato | Text | &#8594;  | Nuevo formato de salida para el objeto |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| formato | Text | &#8594; | Nuevo formato de salida para el objeto |
 
 <!-- END REF-->
 
@@ -364,6 +364,6 @@ Pase un termómetro a modo "Barber shop"
 |  |  |
 | --- | --- |
 | Número de comando | 236 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

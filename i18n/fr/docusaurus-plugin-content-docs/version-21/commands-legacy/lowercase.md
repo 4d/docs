@@ -54,6 +54,6 @@ Cet exemple compare les résultats obtenus suivant que le paramètre *\** a ét�
 |  |  |
 | --- | --- |
 | Numéro de commande | 14 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

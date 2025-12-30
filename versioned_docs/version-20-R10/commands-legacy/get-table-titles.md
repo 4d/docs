@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &#8592; | Current table names |
-| tableNums | Array integer | &#8592; | Table numbers |
+| tableNums | Integer array | &#8592; | Table numbers |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ In both cases, the command does not return invisible tables.
 |  |  |
 | --- | --- |
 | Command number | 803 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

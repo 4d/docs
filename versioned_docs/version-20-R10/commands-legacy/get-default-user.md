@@ -27,6 +27,6 @@ If no default user has been set, the command returns 0.
 |  |  |
 | --- | --- |
 | Command number | 826 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

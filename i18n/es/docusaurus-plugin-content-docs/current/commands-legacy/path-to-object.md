@@ -5,12 +5,12 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object**  ( *Ruta* {; *tipoRuta*} ) : Object<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object**  ( *Ruta* : Text {; *tipoRuta* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Ruta | Text | &#8594;  | Nombre de la ruta |
-| tipoRuta | Integer | &#8594;  | Tipo de sintaxis de ruta: Sistema (por defecto) o Posix |
+| Ruta | Text | &#8594; | Nombre de la ruta |
+| tipoRuta | Integer | &#8594; | Tipo de sintaxis de ruta: Sistema (por defecto) o Posix |
 | Resultado | Object | &#8592; | Objeto que describe los contenidos de la ruta |
 
 <!-- END REF-->
@@ -180,6 +180,6 @@ Desea saber la cantidad de subcarpetas en una ruta:
 |  |  |
 | --- | --- |
 | Número de comando | 1547 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

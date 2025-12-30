@@ -5,15 +5,14 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* {; *orden*}{; *array2* ; *orden2* ; ... ; *arrayN* ; *ordenN*} ) <br/>
-**MULTI SORT ARRAY** ( *ptrArrayNombre* ; *ordenArrayNombre* )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* : Array {; *orden* : Operator}{; ...*array* : Array ; ...*orden* : Operator} )<br/>**MULTI SORT ARRAY** ( *ptrArrayNombre* : Pointer array ; *ordenArrayNombre* : Integer array )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array(s) a ordenar |
-| orden | * | &#8594;  | ">" efectuar una ordenación creciente o "<" efectuar una ordenación decreciente Si se omite "aa" no ordenación |
-| ptrArrayNombre | Pointer array | &#8594;  | Array de punteros de arrays |
-| ordenArrayNombre | Integer array | &#8594;  | Array de criterio de ordenación (1= ordenar por orden creciente, -1= ordenar por orden decreciente), 0= sincronización con ordenaciones anteriores |
+| array | Array | &#8594; | Array(s) a ordenar |
+| orden | Operator | &#8594; | `>` to sort by increasing order or  `<` to sort by decreasing order; if omitted no sort |
+| ptrArrayNombre | Pointer array | &#8594; | Array de punteros de arrays |
+| ordenArrayNombre | Integer array | &#8594; | Array de criterio de ordenación (1= ordenar por orden creciente, -1= ordenar por orden decreciente), 0= sincronización con ordenaciones anteriores |
 
 <!-- END REF-->
 
@@ -114,6 +113,6 @@ Si quiere que el array de nombres se utilice como tercer criterio de ordenación
 |  |  |
 | --- | --- |
 | Número de comando | 718 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

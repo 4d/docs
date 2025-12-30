@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 441 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

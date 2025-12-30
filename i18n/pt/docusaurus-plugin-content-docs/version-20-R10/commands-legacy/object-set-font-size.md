@@ -57,6 +57,6 @@ O exemplo a seguir define o tamanho de fonte para todos os objetos de formulári
 |  |  |
 | --- | --- |
 | Número do comando | 165 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

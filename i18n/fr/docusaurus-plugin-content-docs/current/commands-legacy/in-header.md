@@ -31,6 +31,6 @@ Si vous souhaitez que le cycle d'exécution **In header** soit généré, assure
 |  |  |
 | --- | --- |
 | Numéro de commande | 112 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

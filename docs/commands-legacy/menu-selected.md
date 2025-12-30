@@ -5,7 +5,7 @@ slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} : Integer<!-- END REF-->
+<!--REF #_command_.Menu selected.Syntax-->**Menu selected** ( *subMenu* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ The following form method uses **Menu selected** to supply the menu and menu ite
 |  |  |
 | --- | --- |
 | Command number | 152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

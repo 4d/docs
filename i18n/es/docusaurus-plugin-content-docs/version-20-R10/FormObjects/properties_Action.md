@@ -189,7 +189,7 @@ En otros casos (list box basados en selecciones temporales, columnas asociadas a
 
 ## Acción estándar
 
-Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) de la *manual de Diseño*. There are also standard actions specific to 4D Write Pro areas.
+Actividades típicas que deben realizar los objetos activos (\*por ejemplo, permitir al usuario aceptar, cancelar o eliminar registros, desplazarse entre registros o de una página a otra en un formulario multipágina, etc.) han sido predefinidas por 4D como acciones estándar. Se describen con detalle en la sección [Acciones estándar](https://doc.4d.com/4Dv20/4D/20.2/Standard-actions.300-6750239.en.html) de la *manual de Diseño*. También hay acciones estándar específicas de las áreas de 4D Write Pro.
 
 Puede asignar al mismo tiempo una acción estándar y un método proyecto de un objeto. En este caso, la acción estándar suele ejecutarse después del método y 4D utiliza esta acción para activar/desactivar el objeto según el contexto actual. Cuando se desactiva un objeto, no se puede ejecutar el método proyecto asociado.
 

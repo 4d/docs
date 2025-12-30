@@ -77,6 +77,6 @@ You want to insert titles on two lines:
 |  |  |
 | --- | --- |
 | Command number | 194 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

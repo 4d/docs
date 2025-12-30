@@ -5,7 +5,7 @@ slug: /commands/ob-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* ; *property* {; *type*} ) : any<!-- END REF-->
+<!--REF #_command_.OB Get.Syntax-->**OB Get** ( *object* : Object, Object ; *property* : Text {; *type* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.OB Get.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -226,6 +226,6 @@ You want to know the size of a picture stored in an object attribute:
 |  |  |
 | --- | --- |
 | Command number | 1224 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -49,6 +49,6 @@ El parámetro *vertical* devuelve un valor indicando la opción de redimensionam
 |  |  |
 | --- | --- |
 | Número de comando | 1176 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

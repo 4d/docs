@@ -86,6 +86,6 @@ Voici un exemple d'entrée enregistrée dans le fichier d'historique :
 |  |  |
 | --- | --- |
 | Numéro de commande | 5 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

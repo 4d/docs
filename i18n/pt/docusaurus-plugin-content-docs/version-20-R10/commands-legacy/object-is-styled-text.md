@@ -48,6 +48,6 @@ Um formulário contém um campo representado por dois objetos diferentes, um dos
 |  |  |
 | --- | --- |
 | Número do comando | 1261 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

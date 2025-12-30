@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-use-page-setup
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP USE PAGE SETUP.Syntax-->**WP USE PAGE SETUP** ( *docWP* )<!-- END REF-->
+<!--REF #_command_.WP USE PAGE SETUP.Syntax-->**WP USE PAGE SETUP** ( *docWP* : Object )<!-- END REF-->
 <!--REF #_command_.WP USE PAGE SETUP.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

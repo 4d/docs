@@ -5,13 +5,13 @@ slug: /commands/ob-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objet* ; *propriété* ; *tableau* )<!-- END REF-->
+<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objet* : Object, Object ; *propriété* : Text ; *tableau* : Array, Variable )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &#8594;  | Objet structuré |
-| propriété | Text | &#8594;  | Nom de la propriété à définir |
-| tableau | Array, Variable | &#8594;  | Tableau à stocker dans la propriété |
+| objet | Object, Object | &#8594; | Objet structuré |
+| propriété | Text | &#8594; | Nom de la propriété à définir |
+| tableau | Array, Variable | &#8594; | Tableau à stocker dans la propriété |
 
 <!-- END REF-->
 
@@ -126,6 +126,6 @@ Utilisation d'un champ objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1227 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

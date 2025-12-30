@@ -122,6 +122,6 @@ See the example for the *\_o\_DRAG AND DROP PROPERTIES* command.
 |  |  |
 | --- | --- |
 | Command number | 371 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

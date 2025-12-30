@@ -5,13 +5,13 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* }{;}{ *queryArgument* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードのセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
-| queryArgument | Expression | &#8594;  | 検索条件 |
-| * | 演算子 | &#8594;  | 検索継続フラグ |
+| aTable | Table | &#8594; | レコードのセレクションを求めるテーブル, または 省略した場合、デフォルトテーブル |
+| queryArgument | Expression | &#8594; | 検索条件 |
+| * | 演算子 | &#8594; | 検索継続フラグ |
 
 <!-- END REF-->
 
@@ -316,7 +316,7 @@ N対1でリレートされた3つのテーブルがあります: \[City\] -> \[D
 |  |  |
 | --- | --- |
 | コマンド番号 | 277 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||

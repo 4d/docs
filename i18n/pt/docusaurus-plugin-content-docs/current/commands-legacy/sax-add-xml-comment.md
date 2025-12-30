@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *documento* ; *comentario* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *documento* : Time ; *comentario* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
-| comentario | Text | &#8594;  | Comentário a ser adicionado |
+| documento | Time | &#8594; | Referência do documento aberto |
+| comentario | Text | &#8594; | Comentário a ser adicionado |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ No caso de um erro, o comando devolve um erro que pode ser interceptado usando u
 |  |  |
 | --- | --- |
 | Número do comando | 852 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

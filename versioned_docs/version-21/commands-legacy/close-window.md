@@ -44,6 +44,6 @@ The following example opens a form window and adds new records with the [ADD REC
 |  |  |
 | --- | --- |
 | Command number | 154 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

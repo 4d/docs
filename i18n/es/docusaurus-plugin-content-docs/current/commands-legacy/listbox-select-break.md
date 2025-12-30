@@ -5,15 +5,15 @@ slug: /commands/listbox-select-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( {* ;} *objeto* ; *linea* ; *columna* {; *accion*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT BREAK.Syntax-->**LISTBOX SELECT BREAK** ( * ; *objeto* : Text ; *linea* : Integer ; *columna* : Integer {; *accion* : Integer} )<br/>**LISTBOX SELECT BREAK** ( *objeto* : Field, Variable ; *linea* : Integer ; *columna* : Integer {; *accion* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT BREAK.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable (si se omite *) |
-| linea | Integer | &#8594;  | Número de línea de la ruptura |
-| columna | Integer | &#8594;  | Número de columna de la ruptura |
-| accion | Integer | &#8594;  | Acción de selección |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variable (si se omite *) |
+| linea | Integer | &#8594; | Número de línea de la ruptura |
+| columna | Integer | &#8594; | Número de columna de la ruptura |
+| accion | Integer | &#8594; | Acción de selección |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ Este es el resultado:
 |  |  |
 | --- | --- |
 | Número de comando | 1117 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

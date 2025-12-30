@@ -170,6 +170,6 @@ Queremos copiar *$sharedObj e*n *$sharedColl* pero dado que pertenecen a diferen
 |  |  |
 | --- | --- |
 | Número de comando | 1225 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

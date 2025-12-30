@@ -5,7 +5,7 @@ slug: /commands/read-only
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** {( *aTable* )}<br/>**READ ONLY** {( * )}<!-- END REF-->
+<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ *aTable* : Table, Operator })<br/>**READ ONLY** ({ * })<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ Use READ ONLY when you do not need to modify the record or records.
 |  |  |
 | --- | --- |
 | Command number | 145 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

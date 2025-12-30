@@ -45,6 +45,6 @@ If the command is executed with the \* parameter from a process on the server ma
 |  |  |
 | --- | --- |
 | Command number | 372 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

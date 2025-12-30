@@ -5,7 +5,7 @@ slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( {* ;} *object* ; *filtersArr* ; *allowDenyArr* )<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA SET URL FILTERS** ( *object* : Field, Variable ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -143,6 +143,6 @@ You want to deny access to specific IP addresses:
 |  |  |
 | --- | --- |
 | Command number | 1030 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

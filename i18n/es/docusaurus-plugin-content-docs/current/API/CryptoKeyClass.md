@@ -50,7 +50,7 @@ Para obtener una visión general de esta clase, consulte la entrada del blog [**
 
 <!-- END REF -->
 
-La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, en función del parámetro *settings*. It allows to generate a new RSA or ECDSA key, or to load an existing key pair from a PEM definition.
+La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, en función del parámetro *settings*. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.
 
 #### *settings*
 
@@ -332,11 +332,11 @@ El valor devuelto es la llave pública.
 
 <!-- REF #CryptoKey.sign().Params -->
 
-| Parámetros | Tipo         |                             | Descripción                                                           |
-| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------- |
-| message    | Texto O Blob | ->                          | Mensaje a firmar                                                      |
-| options    | Object       | ->                          | Opciones de firma                                                     |
-| Resultado  | Text         | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
+| Parámetros | Tipo       |                             | Descripción                                                           |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Mensaje a firmar                                                      |
+| options    | Object     | ->                          | Opciones de firma                                                     |
+| Resultado  | Text       | <- | Firma en representación Base64 o Base64URL, según la opción "encoding |
 
 <!-- END REF -->
 
@@ -416,12 +416,12 @@ Contiene el <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA"
 
 <!-- REF #CryptoKey.verify().Params -->
 
-| Parámetros | Tipo         |                             | Descripción                                                                                   |
-| ---------- | ------------ | --------------------------- | --------------------------------------------------------------------------------------------- |
-| message    | Texto O Blob | ->                          | Mensaje utilizado para producir la firma                                                      |
-| signature  | Text         | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
-| options    | Object       | ->                          | Opciones de firma                                                                             |
-| Resultado  | Object       | <- | Estado de la verificación                                                                     |
+| Parámetros | Tipo       |                             | Descripción                                                                                   |
+| ---------- | ---------- | --------------------------- | --------------------------------------------------------------------------------------------- |
+| message    | Text, Blob | ->                          | Mensaje utilizado para producir la firma                                                      |
+| signature  | Text       | ->                          | Firma a verificar, en representación Base64 o Base64URL, según el valor de `options.encoding` |
+| options    | Object     | ->                          | Opciones de firma                                                                             |
+| Resultado  | Object     | <- | Estado de la verificación                                                                     |
 
 <!-- END REF -->
 

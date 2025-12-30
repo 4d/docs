@@ -73,6 +73,6 @@ Impressão de pelo menos 500 linhas do list box, conhecendo que algumas linhas e
 |  |  |
 | --- | --- |
 | Número do comando | 1110 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -49,7 +49,7 @@ Vous trouvez donc toutes les sociétés basées à Paris, dont l'activité est b
 |  |  |
 | --- | --- |
 | Numéro de commande | 341 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

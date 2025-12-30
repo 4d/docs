@@ -5,7 +5,7 @@ slug: /commands/hide-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,6 +51,6 @@ This example corresponds to a method of a button located in an input form. This 
 |  |  |
 | --- | --- |
 | Command number | 436 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

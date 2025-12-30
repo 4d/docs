@@ -32,6 +32,6 @@ Avant de lancer l’opération, la commande vérifie que le chemin spécifié ne
 |  |  |
 | --- | --- |
 | Numéro de commande | 313 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

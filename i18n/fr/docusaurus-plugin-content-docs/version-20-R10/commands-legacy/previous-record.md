@@ -32,7 +32,7 @@ Si **PREVIOUS RECORD** place le pointeur d'enregistrement courant avant la séle
 |  |  |
 | --- | --- |
 | Numéro de commande | 110 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

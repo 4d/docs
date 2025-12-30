@@ -164,7 +164,7 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 |  |  |
 | --- | --- |
 | Numéro de commande | 820 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

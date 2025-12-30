@@ -5,7 +5,7 @@ slug: /commands/object-get-subform-container-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *largura* ; *altura* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Syntax-->**OBJECT GET SUBFORM CONTAINER SIZE** ( *largura* : Integer ; *altura* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM CONTAINER SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ O evento On Resize é gerado no método formulario de subformulário se o objeto
 |  |  |
 | --- | --- |
 | Número do comando | 1148 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

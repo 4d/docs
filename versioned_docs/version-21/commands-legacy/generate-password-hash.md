@@ -73,6 +73,6 @@ This example generates a password hash using bcrypt with a cost factor 4.
 |  |  |
 | --- | --- |
 | Command number | 1533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

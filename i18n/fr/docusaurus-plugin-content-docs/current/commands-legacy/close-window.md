@@ -5,11 +5,11 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre externe ou Fenêtre de premier plan du process si ce paramètre est omis |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre externe ou Fenêtre de premier plan du process si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à 
 |  |  |
 | --- | --- |
 | Numéro de commande | 154 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -42,6 +42,6 @@ L'exemple suivant est une méthode qui peut être exécutée à partir d'une com
 |  |  |
 | --- | --- |
 | Numéro de commande | 326 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

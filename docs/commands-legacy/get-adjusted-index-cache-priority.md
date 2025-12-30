@@ -5,7 +5,7 @@ slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1427 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

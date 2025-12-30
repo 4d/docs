@@ -5,11 +5,11 @@ slug: /commands/resume-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *proceso* )<!-- END REF-->
+<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *proceso* : Integer )<!-- END REF-->
 <!--REF #_command_.RESUME PROCESS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de proceso |
+| proceso | Integer | &#8594; | Número de proceso |
 
 <!-- END REF-->
 
@@ -31,7 +31,7 @@ Si *proceso* ha sido retrasado anteriormente, consulte los comandos [PAUSE PROCE
 |  |  |
 | --- | --- |
 | Número de comando | 320 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Prohibido en el servidor ||
 
 

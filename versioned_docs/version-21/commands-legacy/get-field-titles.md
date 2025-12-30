@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table for which you want to find out the field names |
 | fieldTitles | Text array | &#8592; | Current field names |
-| fieldNums | Array integer | &#8592; | Field numbers |
+| fieldNums | Integer array | &#8592; | Field numbers |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ In both cases, the command does not return invisible fields.
 |  |  |
 | --- | --- |
 | Command number | 804 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

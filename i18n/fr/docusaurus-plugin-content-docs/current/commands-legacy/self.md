@@ -44,6 +44,6 @@ Référez-vous à l'exemple de la commande [RESOLVE POINTER](resolve-pointer.md)
 |  |  |
 | --- | --- |
 | Numéro de commande | 308 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

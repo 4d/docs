@@ -111,7 +111,7 @@ O exemplo a seguir lhe permite ao usuário efetuar uma pesquisa na tabela \[Pess
 |  |  |
 | --- | --- |
 | Número do comando | 39 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

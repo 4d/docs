@@ -41,7 +41,7 @@ As datas e horas de criação e última modificação são administradas pelo ad
 |  |  |
 | --- | --- |
 | Número do comando | 478 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

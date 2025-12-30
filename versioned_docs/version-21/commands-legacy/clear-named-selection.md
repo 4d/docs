@@ -30,6 +30,6 @@ If *name* was created using the [CUT NAMED SELECTION](cut-named-selection.md) co
 |  |  |
 | --- | --- |
 | Command number | 333 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

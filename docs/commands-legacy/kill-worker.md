@@ -5,7 +5,7 @@ slug: /commands/kill-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** {( *process* )}<!-- END REF-->
+<!--REF #_command_.KILL WORKER.Syntax-->**KILL WORKER** ({ *process* : Text, Integer })<!-- END REF-->
 <!--REF #_command_.KILL WORKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ In the worker method (*theWorker*), you add some code to handle this situation:
 |  |  |
 | --- | --- |
 | Command number | 1390 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

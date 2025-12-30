@@ -5,13 +5,13 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElemento* ; *tipoFilho* ; *valorFilho* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElemento* : Text ; *tipoFilho* : Integer ; *valorFilho* : Text, Blob ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | elemento de referência XML |
-| tipoFilho | Integer | &#8594;  | Tipo de filho a anexar |
-| valorFilho | Text, Blob | &#8594;  | Texto ou variável (texto ou BLOB) cujo valor deve ser inserido como um nodo filho |
+| refElemento | Text | &#8594; | elemento de referência XML |
+| tipoFilho | Integer | &#8594; | Tipo de filho a anexar |
+| valorFilho | Text, Blob | &#8594; | Texto ou variável (texto ou BLOB) cujo valor deve ser inserido como um nodo filho |
 | Resultado | Text | &#8592; | Refência do elemento filho XML |
 
 <!-- END REF-->
@@ -152,6 +152,6 @@ Se o conteúdo de *valorFilho* não é válido, se devolve um erro.
 |  |  |
 | --- | --- |
 | Número do comando | 1080 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

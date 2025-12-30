@@ -28,6 +28,6 @@ This command can be used for security reasons in the *On Web Authentication Data
 |  |  |
 | --- | --- |
 | Command number | 783 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

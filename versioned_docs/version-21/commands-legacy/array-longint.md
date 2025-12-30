@@ -63,6 +63,6 @@ This example creates an interprocess array of 50 4-byte Long Integer elements an
 |  |  |
 | --- | --- |
 | Command number | 221 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/describe-query-execution
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *status* )<!-- END REF-->
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *status* : Boolean )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ $vResultPath :
 |  |  |
 | --- | --- |
 | Command number | 1044 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

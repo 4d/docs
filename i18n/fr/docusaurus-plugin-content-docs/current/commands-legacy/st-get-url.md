@@ -5,16 +5,16 @@ slug: /commands/st-get-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( {* ;} *objet* ; *texteURL* ; *adresseURL* {; *débutSél* {; *finSél*}} )<!-- END REF-->
+<!--REF #_command_.ST GET URL.Syntax-->**ST GET URL** ( * ; *objet* : Text ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<br/>**ST GET URL** ( *objet* : Field, Variable ; *texteURL* : Text ; *adresseURL* : Text {; *débutSél* : Integer {; *finSél* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST GET URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | texteURL | Text | &#8592; | Libellé visible de l’URL |
 | adresseURL | Text | &#8592; | Adresse de l’URL |
-| débutSél | Integer | &#8594;  | Début de la sélection |
-| finSél | Integer | &#8594;  | Fin de la sélection |
+| débutSél | Integer | &#8594; | Début de la sélection |
+| finSél | Integer | &#8594; | Fin de la sélection |
 
 <!-- END REF-->
 
@@ -76,6 +76,6 @@ Sur un événement double-clic, vous vérifiez que vous êtes bien en présence 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1288 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* )<!-- END REF-->
+<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB a descomprimir |
+| Blob | Blob | &#8594; | BLOB a descomprimir |
 
 <!-- END REF-->
 
@@ -70,7 +70,7 @@ La variable OK toma el valor 1 si el BLOB ha sido descomprimido con éxito, de l
 |  |  |
 | --- | --- |
 | Número de comando | 535 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

@@ -70,6 +70,6 @@ Cada vez que se abre o banco de dados, esta informação será escrita no visor 
 |  |  |
 | --- | --- |
 | Número do comando | 667 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

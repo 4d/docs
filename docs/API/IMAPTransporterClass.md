@@ -1060,7 +1060,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 |msgNumber|Integer|-> |Sequence number of the message|
 |msgID|Text|-> |Unique ID of the message|
 |updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
-|Result|BLOB|<-|Blob of the MIME string returned from the mail server|
+|Result|Blob|<-|Blob of the MIME string returned from the mail server|
 <!-- END REF -->
 
 #### Description

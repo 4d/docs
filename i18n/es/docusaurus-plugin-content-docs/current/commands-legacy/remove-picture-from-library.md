@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refImag &#124; nomImag | Entero largo, Cadena | &#8594;  | Número de referencia o nombre de una imagen de la librería de imágenes |
+| refImag &#124; nomImag | Entero largo, Cadena | &#8594; | Número de referencia o nombre de una imagen de la librería de imágenes |
 
 <!-- END REF-->
 
@@ -61,7 +61,7 @@ El siguiente ejemplo borra de la librería de imágenes toda imagen cuyo nombre 
 |  |  |
 | --- | --- |
 | Número de comando | 567 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

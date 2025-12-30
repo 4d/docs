@@ -5,11 +5,11 @@ slug: /commands/volume-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* ; *taille* ; *utilisé* ; *libre* )<!-- END REF-->
+<!--REF #_command_.VOLUME ATTRIBUTES.Syntax-->**VOLUME ATTRIBUTES** ( *volume* : Text ; *taille* : Real ; *utilisé* : Real ; *libre* : Real )<!-- END REF-->
 <!--REF #_command_.VOLUME ATTRIBUTES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| volume | Text | &#8594;  | Nom du volume |
+| volume | Text | &#8594; | Nom du volume |
 | taille | Real | &#8592; | Taille du volume exprimée en octets |
 | utilisé | Real | &#8592; | Place utilisée sur le volume exprimée en octets |
 | libre | Real | &#8592; | Place libre sur le volume exprimée en octets |
@@ -103,7 +103,7 @@ Votre application comprend des opérations par lots qui sont exécutées la nuit
 |  |  |
 | --- | --- |
 | Numéro de commande | 472 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

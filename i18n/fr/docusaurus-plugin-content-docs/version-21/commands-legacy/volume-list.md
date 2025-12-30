@@ -45,6 +45,6 @@ A l'aide de la zone de défilement *ttVolumes*, vous voulez afficher la liste de
 |  |  |
 | --- | --- |
 | Numéro de commande | 471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

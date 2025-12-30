@@ -5,7 +5,7 @@ slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* {; *} )<!-- END REF-->
+<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *pathname* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,7 +53,7 @@ The system variable OK is set to 1 if the command is executed correctly.
 |  |  |
 | --- | --- |
 | Command number | 922 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

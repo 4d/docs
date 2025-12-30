@@ -5,7 +5,7 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *object* {; *direction*} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *object* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *object* : Field, Variable {; *direction* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ The following code can be associated with a 3D button having a pop-up menu entit
 |  |  |
 | --- | --- |
 | Command number | 1049 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

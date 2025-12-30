@@ -72,6 +72,6 @@ $vResultPath :
 |  |  |
 | --- | --- |
 | Número do comando | 1044 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,17 +5,15 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *response* {; *headerNames* ; *headerValues*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *response* : Text, Blob, Picture, Object {; *headerNames* : Text array ; *headerValues* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | リクエスト送信先URL |
+| url | Text | &#8594; | リクエスト送信先URL |
 | response | Text, Blob, Picture, Object | &#8592; | リクエストの結果 |
-| headerNames | Text array | &#8594;  | リクエストのヘッダー名 |
-| &#8592; | 返されたヘッダー名 |
-| headerValues | Text array | &#8594;  | リクエストのヘッダー値 |
-| &#8592; | 返されたヘッダー値 |
-| * | 演算子 | &#8594;  | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
+| headerNames | Text array | &#8596; | *in:* Header names of the request<br/> *out:* Returned header names |
+| headerValues | Text array | &#8596; | *in:* Header values of the request<br/> *out:* Returned header values |
+| * | 演算子 | &#8594; | 指定時: 接続を保持する (keep-alive)省略時: 自動で接続を閉じる |
 | 戻り値 | Integer | &#8592; | HTTPステータスコード |
 
 <!-- END REF-->
@@ -109,7 +107,7 @@ RFCを取得する:
 |  |  |
 | --- | --- |
 | コマンド番号 | 1157 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

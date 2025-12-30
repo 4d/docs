@@ -52,6 +52,6 @@ Example of method for importing large amounts of data:
 |  |  |
 | --- | --- |
 | Command number | 1293 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

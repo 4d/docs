@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *menuItem* ; *itemStyle* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemStyle* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| itemStyle | Integer | &#8594;  | 新しいメニュー項目スタイル |
-| process | Integer | &#8594;  | プロセス参照番号 |
+| menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| itemStyle | Integer | &#8594; | 新しいメニュー項目スタイル |
+| process | Integer | &#8594; | プロセス参照番号 |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 425 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | サーバー上での使用は不可 ||
 
 

@@ -53,7 +53,7 @@ La eliminación de un documento hace que la variable sistema tome el valor 1\. S
 |  |  |
 | --- | --- |
 | Número de comando | 159 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

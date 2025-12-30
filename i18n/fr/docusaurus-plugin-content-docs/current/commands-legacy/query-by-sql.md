@@ -5,12 +5,12 @@ slug: /commands/query-by-sql
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* ;} *formuleSQL* )<!-- END REF-->
+<!--REF #_command_.QUERY BY SQL.Syntax-->**QUERY BY SQL** ( {*laTable* : Table ;} *formuleSQL* : Text )<!-- END REF-->
 <!--REF #_command_.QUERY BY SQL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle retourner une sélection d’enregistrements ou Table par défaut si ce paramètre est omis |
-| formuleSQL | Text | &#8594;  | Formule de recherche SQL valide représentant la clause WHERE de la requête SELECT |
+| laTable | Table | &#8594; | Table de laquelle retourner une sélection d’enregistrements ou Table par défaut si ce paramètre est omis |
+| formuleSQL | Text | &#8594; | Formule de recherche SQL valide représentant la clause WHERE de la requête SELECT |
 
 <!-- END REF-->
 
@@ -163,7 +163,7 @@ Si le format de la condition de recherche est correct, la variable système OK p
 |  |  |
 | --- | --- |
 | Numéro de commande | 942 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

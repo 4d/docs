@@ -5,11 +5,11 @@ slug: /commands/process-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process state.Syntax-->**Process state** ( *processo* ) : Integer<!-- END REF-->
+<!--REF #_command_.Process state.Syntax-->**Process state** ( *processo* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Process state.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#8594;  | Número de processo |
+| processo | Integer | &#8594; | Número de processo |
 | Resultado | Integer | &#8592; | Estado do processo |
 
 <!-- END REF-->
@@ -65,6 +65,6 @@ O seguinte exemplo coloca o nome e número de referencia para cada processo nos 
 |  |  |
 | --- | --- |
 | Número do comando | 330 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

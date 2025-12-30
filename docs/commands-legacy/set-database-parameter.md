@@ -5,7 +5,7 @@ slug: /commands/set-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*aTable* ;} *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.SET DATABASE PARAMETER.Syntax-->**SET DATABASE PARAMETER** ( {*aTable* : Table ;} *selector* : Integer ; *value* : Real, Text )<!-- END REF-->
 <!--REF #_command_.SET DATABASE PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -1114,6 +1114,6 @@ You want to export data in JSON that contains a converted 4D date. Note that con
 |  |  |
 | --- | --- |
 | Command number | 642 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

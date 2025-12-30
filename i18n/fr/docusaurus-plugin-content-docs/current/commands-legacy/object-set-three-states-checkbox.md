@@ -5,13 +5,13 @@ slug: /commands/object-set-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( {* ;} *objet* ; *troisEtats* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *objet* : Text ; *troisEtats* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *objet* : Field, Variable ; *troisEtats* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| troisEtats | Boolean | &#8594;  | Vrai = case à cocher à trois états, Faux = case à cocher standard |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| troisEtats | Boolean | &#8594; | Vrai = case à cocher à trois états, Faux = case à cocher standard |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ Passez **Vrai** dans le paramètre *troisEtat* pour activer le mode "trois état
 |  |  |
 | --- | --- |
 | Numéro de commande | 1249 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -66,7 +66,7 @@ If the command has been correctly executed and if the parsed element is not the 
 |  |  |
 | --- | --- |
 | Command number | 724 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

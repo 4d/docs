@@ -5,11 +5,11 @@ slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
+| fenêtre | Integer | &#8594; | Numéro de référence de fenêtre ou Fenêtre au premier plan du process courant si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -33,6 +33,6 @@ Ne confondez pas **ERASE WINDOW**, qui efface le contenu d'une fenêtre, et [GOT
 |  |  |
 | --- | --- |
 | Numéro de commande | 160 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

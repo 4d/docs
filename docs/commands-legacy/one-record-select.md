@@ -5,7 +5,7 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ This command was useful to “return” a record that had been pushed and popped
 |  |  |
 | --- | --- |
 | Command number | 189 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

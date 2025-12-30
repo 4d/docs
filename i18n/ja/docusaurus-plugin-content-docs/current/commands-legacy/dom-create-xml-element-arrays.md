@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *elementRef* ; *xPath* {; *attribNamesArray* ; *attribValuesArray*} {; *attribNamesArray2* ; *attribValuesArray2* ; ... ; *attribNamesArrayN* ; *attribValuesArrayN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *elementRef* : Text ; *xPath* : Text {; *attribNamesArray* : Text array ; *attribValuesArray* : Text array} {; ...(*attribNamesArray* : Text array, *attribValuesArray* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XMLルート要素参照 |
-| xPath | Text | &#8594;  | 作成するXML要素のXPathパス |
-| attribNamesArray | Text array | &#8594;  | 属性名配列 |
-| attribValuesArray | Text array | &#8594;  | 属性値配列 |
+| elementRef | Text | &#8594; | XMLルート要素参照 |
+| xPath | Text | &#8594; | 作成するXML要素のXPathパス |
+| attribNamesArray | Text array | &#8594; | 属性名配列 |
+| attribValuesArray | Text array | &#8594; | 属性値配列 |
 | 戻り値 | Text | &#8592; | 作成されたXML要素の参照 |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1097 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

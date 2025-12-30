@@ -5,7 +5,7 @@ slug: /commands/abort-process-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* )<!-- END REF-->
+<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *uniqueID* : Integer )<!-- END REF-->
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ You want to stop the selected process of the processes collection displayed in a
 |  |  |
 | --- | --- |
 | Command number | 1634 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

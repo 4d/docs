@@ -119,7 +119,7 @@ Liste de tous les documents en mode récursif POSIX (relatif) :
 |  |  |
 | --- | --- |
 | Numéro de commande | 474 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

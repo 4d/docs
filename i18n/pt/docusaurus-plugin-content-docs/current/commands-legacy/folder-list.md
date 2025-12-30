@@ -5,11 +5,11 @@ slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *nomeRota* ; *diretorios* )<!-- END REF-->
+<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *nomeRota* : Text ; *diretorios* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeRota | Text | &#8594;  | Rota de acesso ao volume, diretório ou pasta |
+| nomeRota | Text | &#8594; | Rota de acesso ao volume, diretório ou pasta |
 | diretorios | Text array | &#8592; | Nomes dos diretórios presentes nessa localização |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Se não houver pastas na localização especificada, o comando retorna um array 
 |  |  |
 | --- | --- |
 | Número do comando | 473 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

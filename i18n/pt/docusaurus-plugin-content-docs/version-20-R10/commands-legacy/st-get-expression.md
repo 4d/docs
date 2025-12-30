@@ -98,7 +98,7 @@ Você quer executar um método 4D quando é feito clique em um link de um usuár
 |  |  |
 | --- | --- |
 | Número do comando | 1287 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

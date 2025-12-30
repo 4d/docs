@@ -68,6 +68,6 @@ Dada la siguiente lista jerárquica:
 |  |  |
 | --- | --- |
 | Número de comando | 952 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

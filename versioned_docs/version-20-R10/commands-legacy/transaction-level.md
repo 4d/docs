@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 961 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/longint-array-from-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *tabela* ; *arrayRegistro* {; *seleçao*} )<!-- END REF-->
+<!--REF #_command_.LONGINT ARRAY FROM SELECTION.Syntax-->**LONGINT ARRAY FROM SELECTION** ( *tabela* : Table ; *arrayRegistro* : Integer array {; *seleçao* : Text} )<!-- END REF-->
 <!--REF #_command_.LONGINT ARRAY FROM SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da seleção atual |
+| tabela | Table | &#8594; | Tabela da seleção atual |
 | arrayRegistro | Integer array | &#8592; | Array dos números gravados |
-| seleçao | Text | &#8594;  | Nome da seleção escolhida ou a seleção atual se este parâmetro for omitido |
+| seleçao | Text | &#8594; | Nome da seleção escolhida ou a seleção atual se este parâmetro for omitido |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Se quiser recuperar os números dos registros da seleção atual:
 |  |  |
 | --- | --- |
 | Número do comando | 647 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

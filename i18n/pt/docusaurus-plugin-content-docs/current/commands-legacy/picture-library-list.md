@@ -5,7 +5,7 @@ slug: /commands/picture-library-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *refsImagem* ; *nomsImagem* )<!-- END REF-->
+<!--REF #_command_.PICTURE LIBRARY LIST.Syntax-->**PICTURE LIBRARY LIST** ( *refsImagem* : Integer array ; *nomsImagem* : Text array )<!-- END REF-->
 <!--REF #_command_.PICTURE LIBRARY LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -98,6 +98,6 @@ O exemplo a seguir exporta a biblioteca de imagens a um documento armazenado no 
 |  |  |
 | --- | --- |
 | Número do comando | 564 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

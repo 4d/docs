@@ -5,7 +5,7 @@ slug: /commands/font-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* {; *fontStyle*} ) : any<!-- END REF-->
+<!--REF #_command_.Font file.Syntax-->**Font file** ( *fontFamily* : Text {; *fontStyle* : Integer} ) : any<!-- END REF-->
 <!--REF #_command_.Font file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ You want to make sure the font used in a text area is available on the user syst
 |  |  |
 | --- | --- |
 | Command number | 1700 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

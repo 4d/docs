@@ -5,7 +5,7 @@ slug: /commands/get-resource-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* ; *resID* {; *resFile*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get resource properties.Syntax-->**Get resource properties** ( *resType* : Text ; *resID* : Integer {; *resFile* : Time} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get resource properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ The OK variable is set to 0 if the resource does not exist; otherwise, it is set
 |  |  |
 | --- | --- |
 | Command number | 515 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

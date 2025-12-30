@@ -5,7 +5,7 @@ slug: /commands/set-menu-bar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* {; *process*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU BAR.Syntax-->**SET MENU BAR** ( *menuBar* : Integer, Text, Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU BAR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -124,6 +124,6 @@ In this comprehensive example, we will create, by programming, a menu bar includ
 |  |  |
 | --- | --- |
 | Command number | 67 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

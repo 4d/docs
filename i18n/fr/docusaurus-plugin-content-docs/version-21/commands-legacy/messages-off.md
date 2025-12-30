@@ -68,6 +68,6 @@ L'exemple suivant supprime les thermomètres de progression avant d'effectuer un
 |  |  |
 | --- | --- |
 | Numéro de commande | 175 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

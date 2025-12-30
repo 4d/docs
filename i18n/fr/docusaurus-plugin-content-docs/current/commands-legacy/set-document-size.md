@@ -5,12 +5,12 @@ slug: /commands/set-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* ; *taille* )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT SIZE.Syntax-->**SET DOCUMENT SIZE** ( *docRef* : Time ; *taille* : Real )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Numéro de référence de document |
-| taille | Real | &#8594;  | Nouvelle taille (en octets) de document |
+| docRef | Time | &#8594; | Numéro de référence de document |
+| taille | Real | &#8594; | Nouvelle taille (en octets) de document |
 
 <!-- END REF-->
 
@@ -33,6 +33,6 @@ Sous Mac OS, c'est la taille de la data fork du document qui est modifiée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 480 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *chaîne* ) : Integer<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *chaîne* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chaîne | Text | &#8594;  | Chaîne dont vous voulez connaître la longueur |
+| chaîne | Text | &#8594; | Chaîne dont vous voulez connaître la longueur |
 | Résultat | Integer | &#8592; | Nombre de caractères de chaîne |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ L'exemple suivant illustre l'utilisation de **Length**. Les valeurs retournées 
 |  |  |
 | --- | --- |
 | Numéro de commande | 16 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

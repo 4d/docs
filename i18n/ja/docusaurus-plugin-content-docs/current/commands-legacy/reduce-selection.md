@@ -5,12 +5,12 @@ slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* ;} *number* )<!-- END REF-->
+<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* : Table ;} *number* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションの数を減らすテーブル, または 省略時デフォルトテーブル |
-| number | Integer | &#8594;  | 選択するレコード数 |
+| aTable | Table | &#8594; | セレクションの数を減らすテーブル, または 省略時デフォルトテーブル |
+| number | Integer | &#8594; | 選択するレコード数 |
 
 <!-- END REF-->
 
@@ -63,7 +63,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 351 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||
 

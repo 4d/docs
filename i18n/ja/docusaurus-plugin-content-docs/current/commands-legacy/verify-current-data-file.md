@@ -5,15 +5,15 @@ slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objects* ; *options* ; *method* {; *tablesArray* {; *fieldsArray*}} )}<!-- END REF-->
+<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ({ *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} })<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| objects | Integer | &#8594;  | 検証するオブジェクト |
-| options | Integer | &#8594;  | 検証オプション |
-| method | Text | &#8594;  | 4Dコールバックメソッド名 |
-| tablesArray | Integer array | &#8594;  | 検証するテーブル番号 |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | 検証するインデックス番号 |
+| objects | Integer | &#8594; | 検証するオブジェクト |
+| options | Integer | &#8594; | 検証オプション |
+| method | Text | &#8594; | 4Dコールバックメソッド名 |
+| tablesArray | Integer array | &#8594; | 検証するテーブル番号 |
+| fieldsArray | Integer array | &#8594; | 2D array, numbers of indexes to be checked |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ VERIFY CURRENT DATA FILEコマンドを引数なしで呼び出すと、デフ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1008 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document、error |
 
 

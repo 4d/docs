@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objeto* {; *listType*}; *lista* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *objeto* : Text {; *listType* : Integer}; *lista* : Text )<br/>**OBJECT SET LIST BY NAME** ( *objeto* : Field, Variable {; *listType* : Integer}; *lista* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
-| listType | Integer | &#8594;  | Tipo de lista: Lista de selección, Lista obligatoria o Lista de excluidos |
-| lista | Text | &#8594;  | Nombre de la lista a utilizar (definida en el entorno Diseño) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Campo o variable (si se omite *) |
+| listType | Integer | &#8594; | Tipo de lista: Lista de selección, Lista obligatoria o Lista de excluidos |
+| lista | Text | &#8594; | Nombre de la lista a utilizar (definida en el entorno Diseño) |
 
 <!-- END REF-->
 
@@ -98,6 +98,6 @@ Usted quiere eliminar la lista de asociaciones:
 |  |  |
 | --- | --- |
 | Número de comando | 237 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/ob-keys
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Keys.Syntax-->**OB Keys** ( *object* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Keys.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,6 +50,6 @@ You want a collection with all first-level property names of an object:
 |  |  |
 | --- | --- |
 | Command number | 1719 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

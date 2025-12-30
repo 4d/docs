@@ -60,6 +60,6 @@ Este ejemplo crea un array interproceso de 50 elementos de tipo texto y asigna a
 |  |  |
 | --- | --- |
 | Número de comando | 222 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

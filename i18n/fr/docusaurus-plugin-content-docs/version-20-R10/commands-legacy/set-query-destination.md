@@ -257,6 +257,6 @@ Lorsque cette méthode est implémentée dans votre application, vous pouvez éc
 |  |  |
 | --- | --- |
 | Numéro de commande | 396 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

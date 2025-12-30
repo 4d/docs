@@ -5,13 +5,13 @@ slug: /commands/get-resource-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* ; *resID* {; *resFile*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get resource name.Syntax-->**Get resource name** ( *resType* : Text ; *resID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get resource name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4文字のリソースタイプ |
-| resID | Integer | &#8594;  | リソースID番号 |
-| resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resType | Text | &#8594; | 4文字のリソースタイプ |
+| resID | Integer | &#8594; | リソースID番号 |
+| resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 | 戻り値 | Text | &#8592; | リソースの名前 |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 513 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

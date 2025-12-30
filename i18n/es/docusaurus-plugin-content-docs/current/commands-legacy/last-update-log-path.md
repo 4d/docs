@@ -31,6 +31,6 @@ Este comando está destinado a ser utilizado en un proceso de actualización aut
 |  |  |
 | --- | --- |
 | Número de comando | 1301 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

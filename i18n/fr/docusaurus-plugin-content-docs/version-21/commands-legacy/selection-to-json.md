@@ -95,6 +95,6 @@ Vous utilisez la syntaxe avec *template* afin d'exporter des champs de différen
 |  |  |
 | --- | --- |
 | Numéro de commande | 1234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,15 +5,15 @@ slug: /commands/listbox-set-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( {* ;} *objeto* ; *fila* ; *color* {; *tipoColor*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *objeto* : Text ; *fila* : Integer ; *color* : Text, Integer {; *tipoColor* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *objeto* : Field, Variable ; *fila* : Integer ; *color* : Text, Integer {; *tipoColor* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o  Variable (si se omite *) |
-| fila | Integer | &#8594;  | Numero de fila |
-| color | Text, Integer | &#8594;  | Valor de color RGB |
-| tipoColor | Integer | &#8594;  | color de fuente del Listbox (por defecto) o color de fondo del Listbox |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o  Variable (si se omite *) |
+| fila | Integer | &#8594; | Numero de fila |
+| color | Text, Integer | &#8594; | Valor de color RGB |
+| tipoColor | Integer | &#8594; | color de fuente del Listbox (por defecto) o color de fondo del Listbox |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ En un array de tipo list box, queremos establecer los colores de una fila y para
 |  |  |
 | --- | --- |
 | Número de comando | 1270 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

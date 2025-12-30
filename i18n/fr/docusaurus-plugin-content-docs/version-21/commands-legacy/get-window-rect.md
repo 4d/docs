@@ -41,6 +41,6 @@ Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 443 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

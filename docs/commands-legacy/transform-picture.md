@@ -5,12 +5,11 @@ slug: /commands/transform-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *picture* ; *operator* {; *param1* {; *param2* {; *param3* {; *param4*}}}} )<!-- END REF-->
+<!--REF #_command_.TRANSFORM PICTURE.Syntax-->**TRANSFORM PICTURE** ( *picture* : Picture ; *operator* : Integer {; *param1* : Real {; *param2* : Real {; *param3* : Real {; *param4* : Real}}}} )<!-- END REF-->
 <!--REF #_command_.TRANSFORM PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | Source picture to be transformed |
-| &#8592; | Resulting picture after transformation |
+| picture | Picture | &#8596;  | *in:* Source picture to be transformed<br/> *out:* Resulting picture after transformation|
 | operator | Integer | &#8594;  | Type of transformation to be done |
 | param1 | Real | &#8594;  | Transformation parameter |
 | param2 | Real | &#8594;  | Transformation parameter |
@@ -77,6 +76,6 @@ Here is an example of cropping a picture (the picture is displayed in the form w
 |  |  |
 | --- | --- |
 | Command number | 988 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -51,6 +51,6 @@ Este exemplo ilustra as duas sintaxes do comando:
 |  |  |
 | --- | --- |
 | Número do comando | 967 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

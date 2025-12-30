@@ -86,6 +86,6 @@ Pour calculer des statistiques, vous voulez trier le nombre de valeurs distincte
 |  |  |
 | --- | --- |
 | Numéro de commande | 339 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

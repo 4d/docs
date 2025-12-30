@@ -47,6 +47,6 @@ Si ninguna tecla de modificación se ha definido para el atajo, modificadores de
 |  |  |
 | --- | --- |
 | Número de comando | 1186 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

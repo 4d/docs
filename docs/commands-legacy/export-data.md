@@ -5,13 +5,12 @@ slug: /commands/export-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* {; *project* {; *}} )<!-- END REF-->
+<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | fileName | Text | &#8594;  | Full path name of the export file |
-| project | Text, Blob | &#8594;  | Contents of the export project |
-| &#8592; | New contents of the export project (if the * parameter has been passed) |
+| project | Text, Blob | &#8596;  | *in:* Contents of the export project<br/>*out:* New contents of the export project (if the * parameter has been passed) |
 | * | Operator | &#8594;  | Displays the export dialog box and updates the project |
 
 <!-- END REF-->
@@ -101,7 +100,7 @@ If the user clicks **Cancel** in the standard open file dialog box or in the exp
 |  |  |
 | --- | --- |
 | Command number | 666 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document |
 
 

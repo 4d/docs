@@ -110,6 +110,6 @@ Muda o fundo transparente com uma cor de fonte clara:
 |  |  |
 | --- | --- |
 | Número do comando | 628 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

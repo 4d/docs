@@ -69,6 +69,6 @@ Como los arrays de horas aceptan valores numéricos, el siguiente código es vá
 |  |  |
 | --- | --- |
 | Número de comando | 1223 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

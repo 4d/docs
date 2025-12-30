@@ -5,16 +5,16 @@ slug: /commands/print-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print object.Syntax-->**Print object** ( {* ;} *object* {; *posX* {; *posY* {; *width* {; *height*}}}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Print object.Syntax-->**Print object** ( * ; *object* : Text {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<br/>**Print object** ( *object* : Field, Variable {; *posX* : Integer {; *posY* : Integer {; *width* : Integer {; *height* : Integer}}}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Print object.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| posX | Integer | &#8594;  | オブジェクトの横位置 |
-| posY | Integer | &#8594;  | オブジェクトの縦位置 |
-| width | Integer | &#8594;  | オブジェクトの幅 (ピクセル) |
-| height | Integer | &#8594;  | オブジェクトの高さ (ピクセル) |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列) <br/>省略時 objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| posX | Integer | &#8594; | オブジェクトの横位置 |
+| posY | Integer | &#8594; | オブジェクトの縦位置 |
+| width | Integer | &#8594; | オブジェクトの幅 (ピクセル) |
+| height | Integer | &#8594; | オブジェクトの高さ (ピクセル) |
 | 戻り値 | Boolean | &#8592; | True = オブジェクトが完全に印刷された; そうでなければFalse |
 
 <!-- END REF-->
@@ -102,6 +102,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1095 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

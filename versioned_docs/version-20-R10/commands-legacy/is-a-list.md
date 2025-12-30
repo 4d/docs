@@ -29,6 +29,6 @@ See example for the [CLEAR LIST](clear-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 621 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

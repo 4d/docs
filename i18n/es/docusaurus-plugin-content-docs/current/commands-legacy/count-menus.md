@@ -5,11 +5,11 @@ slug: /commands/count-menus
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menus.Syntax-->**Count menus** {( *proceso* )} : Integer<!-- END REF-->
+<!--REF #_command_.Count menus.Syntax-->**Count menus** ( *proceso* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menus.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de referencia de proceso |
+| proceso | Integer | &#8594; | Número de referencia de proceso |
 | Resultado | Integer | &#8592; | Número de menús de la barra de menús actual |
 
 <!-- END REF-->
@@ -29,7 +29,7 @@ Si omite el parámetro *proceso*, Count menus se aplica a la barra de menús del
 |  |  |
 | --- | --- |
 | Número de comando | 404 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

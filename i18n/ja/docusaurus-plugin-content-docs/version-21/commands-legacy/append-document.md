@@ -44,7 +44,7 @@ Append documentの使用についての詳細は、[Open document](open-document
 |  |  |
 | --- | --- |
 | コマンド番号 | 265 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document、error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/form-get-current-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.FORM Get current page.Syntax-->**FORM Get current page** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.FORM Get current page.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ In a form, when you select a menu item from the menu bar or when the form receiv
 |  |  |
 | --- | --- |
 | Command number | 276 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

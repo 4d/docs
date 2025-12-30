@@ -101,6 +101,6 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 |  |  |
 | --- | --- |
 | Número do comando | 1300 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

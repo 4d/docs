@@ -38,6 +38,6 @@ A URL pode ter sido filtrada por uma das seguintes razões:
 |  |  |
 | --- | --- |
 | Número do comando | 1035 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

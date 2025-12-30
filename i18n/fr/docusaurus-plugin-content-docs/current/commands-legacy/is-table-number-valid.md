@@ -5,11 +5,11 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTable* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTable* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTable | Integer | &#8594;  | Numéro de table |
+| numTable | Integer | &#8594; | Numéro de table |
 | Résultat | Boolean | &#8592; | Vrai = la table existe dans la base, Faux = la table n’existe pas dans la base |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Cette commande permet de détecter d’éventuelles suppressions de tables, ce q
 |  |  |
 | --- | --- |
 | Numéro de commande | 999 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

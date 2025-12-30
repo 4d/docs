@@ -5,12 +5,12 @@ slug: /commands/import-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*tabla* ;} *doc* )<!-- END REF-->
+<!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*tabla* : Table ;} *doc* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT DIF.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla en la cual importar datos, o Tabla por defecto, si se omite |
-| doc | Text | &#8594;  | Documento DIF a importar |
+| tabla | Table | &#8594; | Tabla en la cual importar datos, o Tabla por defecto, si se omite |
+| doc | Text | &#8594; | Documento DIF a importar |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ OK toma el valor 1 si la importación termina con éxito; de lo contrario, toma 
 |  |  |
 | --- | --- |
 | Número de comando | 86 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

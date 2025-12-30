@@ -5,11 +5,11 @@ slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruçao* )<!-- END REF-->
+<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruçao* : Text )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| instruçao | Text | &#8594;  | Código a executar |
+| instruçao | Text | &#8594; | Código a executar |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ Se quiser executar instruções usando chamadas para comandos 4D e tabelas. Já 
 |  |  |
 | --- | --- |
 | Número do comando | 63 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

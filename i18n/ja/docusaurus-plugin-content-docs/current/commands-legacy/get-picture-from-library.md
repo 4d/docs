@@ -5,11 +5,11 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef * ; *picture* )<br/>**GET PICTURE FROM LIBRARY** ( *picName* ; *picture* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( *picRef* : 倍長整数, 文字 ; *picture* : Picture )<br/>**GET PICTURE FROM LIBRARY** ( *picName* : 倍長整数, 文字 ; *picture* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picRef &#124; picName | 倍長整数, 文字 | &#8594;  | ピクチャライブラリ画像の参照番号 または ピクチャライブラリ画像の名前 |
+| picRef &#124; picName | 倍長整数, 文字 | &#8594; | ピクチャライブラリ画像の参照番号 または ピクチャライブラリ画像の名前 |
 | picture | Picture | &#8592; | ピクチャライブラリのピクチャ |
 
 <!-- END REF-->
@@ -66,7 +66,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 565 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK、error |
 
 

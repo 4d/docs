@@ -5,7 +5,7 @@ slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *process* )} : Text<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** ( *process* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ Refer to the example of the [GET MENU ITEMS](get-menu-items.md) command.
 |  |  |
 | --- | --- |
 | Command number | 979 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

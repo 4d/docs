@@ -48,6 +48,6 @@ L'exemple suivant montre une utilisation typique de **Modified record** :
 |  |  |
 | --- | --- |
 | Numéro de commande | 314 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

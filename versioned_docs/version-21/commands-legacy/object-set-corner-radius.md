@@ -72,6 +72,6 @@ Note that for text areas (as well as inputs), unlike for rectangles, the corner 
 |  |  |
 | --- | --- |
 | Command number | 1323 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

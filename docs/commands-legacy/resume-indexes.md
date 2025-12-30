@@ -5,7 +5,7 @@ slug: /commands/resume-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* {; *} )<!-- END REF-->
+<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ The **RESUME INDEXES** command can only be called from 4D Server or a local 4D. 
 |  |  |
 | --- | --- |
 | Command number | 1294 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

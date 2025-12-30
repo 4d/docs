@@ -63,6 +63,6 @@ Dans une list box où les hauteurs de lignes sont automatiques, vous voulez déf
 |  |  |
 | --- | --- |
 | Numéro de commande | 1501 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

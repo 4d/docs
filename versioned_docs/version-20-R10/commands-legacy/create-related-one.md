@@ -30,6 +30,6 @@ If a related record exists, **CREATE RELATED ONE** acts just like [RELATE ONE](r
 |  |  |
 | --- | --- |
 | Command number | 65 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

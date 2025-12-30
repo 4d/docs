@@ -5,7 +5,7 @@ slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *aTable* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ Scalar data field types include fields of date/hour, numeric, or string type.
 |  |  |
 | --- | --- |
 | Command number | 1426 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

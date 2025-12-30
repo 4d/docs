@@ -5,7 +5,7 @@ slug: /commands/receive-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -157,7 +157,7 @@ The OK system variable is set to 1 if the record is received. Otherwise, the OK 
 |  |  |
 | --- | --- |
 | Command number | 79 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

@@ -5,13 +5,13 @@ slug: /commands/disable-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISABLE MENU ITEM.Syntax-->**DISABLE MENU ITEM** ( *menu* ; *ligneMenu* {; *process*} )<!-- END REF-->
+<!--REF #_command_.DISABLE MENU ITEM.Syntax-->**DISABLE MENU ITEM** ( *menu* : Integer, Text ; *ligneMenu* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISABLE MENU ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| process | Integer | &#8594;  | Numéro de référence du process |
+| menu | Integer, Text | &#8594; | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| process | Integer | &#8594; | Numéro de référence du process |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ Si vous omettez le paramètre *process*, **DISABLE MENU ITEM** s'applique à la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 150 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

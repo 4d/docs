@@ -2489,6 +2489,11 @@
           "id": "Desktop/clientServer"
         },
         {
+          "type": "doc",
+          "label": "Sessions",
+          "id": "Desktop/desktop-sessions"
+        },
+        {
           "type": "category",
           "label": "Forms",
           "link": {
@@ -3198,6 +3203,7 @@
               ]
             },
             "WritePro/commands-legacy/4d-write-pro-attributes",
+            "WritePro/user-legacy/standard-actions",
             {
               "type": "category",
               "label": "Commands",

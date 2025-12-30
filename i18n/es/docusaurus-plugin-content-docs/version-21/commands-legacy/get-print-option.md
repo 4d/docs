@@ -55,7 +55,7 @@ La variable sistema OK toma el valor 1 si el comando ha sido ejecutado correctam
 |  |  |
 | --- | --- |
 | Número de comando | 734 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

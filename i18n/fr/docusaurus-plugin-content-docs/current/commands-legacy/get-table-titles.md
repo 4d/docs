@@ -5,7 +5,7 @@ slug: /commands/get-table-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *titresTables* ; *numTables* )<!-- END REF-->
+<!--REF #_command_.GET TABLE TITLES.Syntax-->**GET TABLE TITLES** ( *titresTables* : Text array ; *numTables* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET TABLE TITLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ Dans les deux cas, la commande ne retourne pas les tables déclarées invisibles
 |  |  |
 | --- | --- |
 | Numéro de commande | 803 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -75,6 +75,6 @@ You want to get the path of the last backup file:
 |  |  |
 | --- | --- |
 | Command number | 1418 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

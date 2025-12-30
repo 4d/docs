@@ -44,7 +44,7 @@ Si el parámetro *linea* es incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 769 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

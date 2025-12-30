@@ -84,6 +84,6 @@ This table details the contents of the session object for REST sessions:
 |  |  |
 | --- | --- |
 | Command number | 1782 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

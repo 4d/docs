@@ -5,11 +5,11 @@ slug: /commands/square-root
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Square root.Syntax-->**Square root** ( *numero* ) : Real<!-- END REF-->
+<!--REF #_command_.Square root.Syntax-->**Square root** ( *numero* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Square root.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numero | Real | &#8594;  | Número cuja raiz quadrada é calculada |
+| numero | Real | &#8594; | Número cuja raiz quadrada é calculada |
 | Resultado | Real | &#8592; | Raiz quadrada do número |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Por exemplo, Hipotenusa (4;3) devolve 5.
 |  |  |
 | --- | --- |
 | Número do comando | 539 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

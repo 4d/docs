@@ -61,6 +61,6 @@ Cet exemple crée un tableau interprocess d'éléments de type [Pointeur](# "A r
 |  |  |
 | --- | --- |
 | Numéro de commande | 280 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

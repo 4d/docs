@@ -5,11 +5,11 @@ slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagen* ) : Text<!-- END REF-->
+<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagen* : Picture, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture, Picture | &#8594;  | Imagen para la cual obtener el nombre por defecto |
+| imagen | Picture, Picture | &#8594; | Imagen para la cual obtener el nombre por defecto |
 | Resultado | Text | &#8592; | Nombre por defecto del archivo imagen |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ Si la imagen no tienen un nombre por defecto, el comando devuelve una cadena vac
 |  |  |
 | --- | --- |
 | Número de comando | 1171 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

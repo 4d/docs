@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.EXPAND BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB to expand |
+| Blob | Blob | &#8594;  | BLOB to expand |
 
 <!-- END REF-->
 
@@ -70,7 +70,7 @@ The OK variable is set to 1 if the BLOB has been successfully expanded, otherwis
 |  |  |
 | --- | --- |
 | Command number | 535 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

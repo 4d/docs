@@ -5,12 +5,12 @@ slug: /commands/object-get-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( {* ;} *objeto* ) : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get data source.Syntax-->**OBJECT Get data source** ( * ; *objeto* : Text ) : Pointer<br/>**OBJECT Get data source** ( *objeto* : Field, Variable ) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get data source.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
 | Resultado | Pointer | &#8592; | Ponteiro a fonte de dados atual do objeto |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ Executa o seguinte código:
 |  |  |
 | --- | --- |
 | Número do comando | 1265 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/object-get-multiline
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get multiline.Syntax-->**OBJECT Get multiline** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get multiline** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get multiline.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ The value returned corresponds to one of the following constants, found in the "
 |  |  |
 | --- | --- |
 | Command number | 1254 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

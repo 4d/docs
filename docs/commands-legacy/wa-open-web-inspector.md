@@ -5,7 +5,7 @@ slug: /commands/wa-open-web-inspector
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.WA OPEN WEB INSPECTOR.Syntax-->**WA OPEN WEB INSPECTOR** ( * ; *object* : Text )<br/>**WA OPEN WEB INSPECTOR** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA OPEN WEB INSPECTOR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1736 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

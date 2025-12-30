@@ -26,6 +26,6 @@ Este comando devolve **True** se for passado uma seleção de entidades compaív
 |  |  |
 | --- | --- |
 | Número do comando | 1759 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

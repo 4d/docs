@@ -5,7 +5,7 @@ slug: /commands/ob-set-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *object* ; *property* )<!-- END REF-->
+<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *object* : Object, Object ; *property* : Text )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ We want to put the null value in the "age" property for Lea:
 |  |  |
 | --- | --- |
 | Command number | 1233 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

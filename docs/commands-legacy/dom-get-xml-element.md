@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* ; *elementName* ; *index* ; *elementValue* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML element.Syntax-->**DOM Get XML element** ( *elementRef* : Text ; *elementName* : Text ; *index* : Integer ; *elementValue* : Variable ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 725 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

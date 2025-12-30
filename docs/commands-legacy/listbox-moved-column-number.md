@@ -5,7 +5,7 @@ slug: /commands/listbox-moved-column-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Syntax-->**LISTBOX MOVED COLUMN NUMBER** ( {* ;} *object* ; *oldPosition* ; *newPosition* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Syntax-->**LISTBOX MOVED COLUMN NUMBER** ( * ; *object* : Text ; *oldPosition* : Integer ; *newPosition* : Integer )<br/>**LISTBOX MOVED COLUMN NUMBER** ( *object* : Field, Variable ; *oldPosition* : Integer ; *newPosition* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVED COLUMN NUMBER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ This command must be used with the form event On Column Moved (see the [Form eve
 |  |  |
 | --- | --- |
 | Command number | 844 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

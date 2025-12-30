@@ -51,6 +51,6 @@ Vous souhaitez réinitialiser toutes les sessions en cours pour toutes les appli
 |  |  |
 | --- | --- |
 | Numéro de commande | 1596 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

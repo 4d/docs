@@ -31,6 +31,6 @@ A compter de la version 11 de 4D, vous pouvez imbriquer plusieurs transactions (
 |  |  |
 | --- | --- |
 | Numéro de commande | 239 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

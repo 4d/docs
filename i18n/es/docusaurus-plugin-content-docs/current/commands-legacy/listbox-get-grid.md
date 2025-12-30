@@ -5,12 +5,12 @@ slug: /commands/listbox-get-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( {* ;} *objeto* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( * ; *objeto* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX GET GRID** ( *objeto* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | horizontal | Boolean | &#8592; | True = visible, False = oculto |
 | vertical | Boolean | &#8592; | True = visible, False = oculto |
 
@@ -33,6 +33,6 @@ El comando devuelve en los parámetros *horizontal* y *vertical*, el valor **Tru
 |  |  |
 | --- | --- |
 | Número de comando | 1199 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

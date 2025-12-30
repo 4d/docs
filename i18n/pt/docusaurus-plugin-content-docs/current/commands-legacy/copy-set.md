@@ -5,12 +5,12 @@ slug: /commands/copy-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *comOrigem* ; *comDestino* )<!-- END REF-->
+<!--REF #_command_.COPY SET.Syntax-->**COPY SET** ( *comOrigem* : Text ; *comDestino* : Text )<!-- END REF-->
 <!--REF #_command_.COPY SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| comOrigem | Text | &#8594;  | Nome do conjunto de origem |
-| comDestino | Text | &#8594;  | Nome do Conjunto de Destino |
+| comOrigem | Text | &#8594; | Nome do conjunto de origem |
+| comDestino | Text | &#8594; | Nome do Conjunto de Destino |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ O seguinte exemplo em Cliente/Servidor, copia o conjunto processo "*ConjuntoA*",
 |  |  |
 | --- | --- |
 | Número do comando | 600 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

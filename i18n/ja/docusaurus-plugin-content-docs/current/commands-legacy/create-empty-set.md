@@ -5,12 +5,12 @@ slug: /commands/create-empty-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*aTable* ;} *set* )<!-- END REF-->
+<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | 空のセットを作成するテーブル, または 省略時、デフォルトテーブル |
-| set | Text | &#8594;  | 新しい空のセットの名前 |
+| aTable | Table | &#8594; | 空のセットを作成するテーブル, または 省略時、デフォルトテーブル |
+| set | Text | &#8594; | 新しい空のセットの名前 |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 140 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

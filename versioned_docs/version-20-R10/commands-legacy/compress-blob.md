@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB to compress |
+| Blob | Blob | &#8594;  | BLOB to compress |
 | compression | Integer | &#8594;  | If not omitted: 1, compress as compact as possible 2, compress as fast as possible |
 
 <!-- END REF-->
@@ -98,7 +98,7 @@ The OK variable is set to 1 if the BLOB has been successfully compressed; otherw
 |  |  |
 | --- | --- |
 | Command number | 534 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

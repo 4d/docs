@@ -5,14 +5,14 @@ slug: /commands/order-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*tabla* ;}{ *unCampo* }{; > o < }{; *unCampo2* ; > o <2 ; ... ; *unCampoN* ; > o <N}{; *} )<!-- END REF-->
+<!--REF #_command_.ORDER BY.Syntax-->**ORDER BY** ( {*tabla* : Table ;}{; ...(*unField* : Field {; >,<}) } {; *} )<!-- END REF-->
 <!--REF #_command_.ORDER BY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual ordenar los registros seleccionados o Tabla por defecto si se omite |
-| unField | Field | &#8594;  | Campo en el cual efectuar la ordenación para cada nivel |
-| > o < | Operador | &#8594;  | Sentido de la ordenación para cada nivel: > para orden ascendente o < para orden descendente |
-| * | Operador | &#8594;  | Continua la bandera de ordenación |
+| tabla | Table | &#8594; | Tabla para la cual ordenar los registros seleccionados o Tabla por defecto si se omite |
+| unField | Field | &#8594; | Campo en el cual efectuar la ordenación para cada nivel |
+| > o < | Operador | &#8594; | Sentido de la ordenación para cada nivel: > para orden ascendente o < para orden descendente |
+| * | Operador | &#8594; | Continua la bandera de ordenación |
 
 <!-- END REF-->
 
@@ -206,7 +206,7 @@ Cada botón llama al método de proyecto MULTINIVEL con un puntero al campo de l
 |  |  |
 | --- | --- |
 | Número de comando | 49 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 

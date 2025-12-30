@@ -5,7 +5,7 @@ slug: /commands/soap-reject-new-requests
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *rejectStatus* )<!-- END REF-->
+<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *rejectStatus* : Boolean )<!-- END REF-->
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ You want to deny any new requests to your Web Services server:
 |  |  |
 | --- | --- |
 | Command number | 1636 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

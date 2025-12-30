@@ -45,6 +45,6 @@ Desea rechazar o aceptar las nuevas conexiones de clientes:
 |  |  |
 | --- | --- |
 | Número de comando | 1635 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

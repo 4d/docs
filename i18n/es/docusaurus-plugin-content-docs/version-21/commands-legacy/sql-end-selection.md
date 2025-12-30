@@ -44,6 +44,6 @@ Este código devolverá en la variable 4D *vNombre* los nombres (ename) almacena
 |  |  |
 | --- | --- |
 | Número de comando | 821 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

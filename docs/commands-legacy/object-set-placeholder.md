@@ -5,7 +5,7 @@ slug: /commands/object-set-placeholder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( {* ;} *object* ; *placeholderText* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PLACEHOLDER.Syntax-->**OBJECT SET PLACEHOLDER** ( * ; *object* : Text ; *placeholderText* : Text )<br/>**OBJECT SET PLACEHOLDER** ( *object* : Field, Variable ; *placeholderText* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PLACEHOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,6 +50,6 @@ You want to display "Search" as placeholder text in a combo box:
 |  |  |
 | --- | --- |
 | Command number | 1295 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

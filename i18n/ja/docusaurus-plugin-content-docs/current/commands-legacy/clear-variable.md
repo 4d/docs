@@ -5,11 +5,11 @@ slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | クリアする変数 |
+| variable | Variable | &#8594; | クリアする変数 |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 89 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

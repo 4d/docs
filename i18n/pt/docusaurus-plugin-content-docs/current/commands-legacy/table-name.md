@@ -5,11 +5,11 @@ slug: /commands/table-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabela* ) : Text<br/>**Table name** ( *pontTabela* ) : Text<!-- END REF-->
+<!--REF #_command_.Table name.Syntax-->**Table name** ( *numTabela* : Inteiro longo, Ponteiro ) : Text<br/>**Table name** ( *pontTabela* : Inteiro longo, Ponteiro ) : Text<!-- END REF-->
 <!--REF #_command_.Table name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#8594;  | Número da tabela ou ponteiro a tabela |
+| numTabela&#124;pontTabela | Inteiro longo, Ponteiro | &#8594; | Número da tabela ou ponteiro a tabela |
 | Resultado | Text | &#8592; | Nome da tabela |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ O seguinte é um exemplo de um método genérico que mostra os registros de uma 
 |  |  |
 | --- | --- |
 | Número do comando | 256 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

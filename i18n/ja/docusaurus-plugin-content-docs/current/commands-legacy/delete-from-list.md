@@ -5,14 +5,14 @@ slug: /commands/delete-from-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *list* ; itemRef | * {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( * ; *list* : Text ; *itemRef* : Integer, Operator {; *} )<br/>**DELETE FROM LIST** ( *list* : Integer ; *itemRef* : Integer, Operator {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定した場合, listはオブジェクト名 (文字列) 省略した場合, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* が省略された場合), または リストタイプオブジェクト名 (* を渡した場合) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#8594;  | 項目参照番号, または 0 はリストに最後に追加された項目 または * 現在選択されているリスト項目 |
-| * | Operator |  &#8594;  | 指定した場合, サブリストがあればそれもメモリから消去 省略した場合, サブリストがあってもそれを消去しない |
+| * | 演算子 | &#8594; | 指定した場合, listはオブジェクト名 (文字列) 省略した場合, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* が省略された場合), または リストタイプオブジェクト名 (* を渡した場合) |
+| itemRef &#124; * | 倍長整数, 演算子 | &#8594; | 項目参照番号, または 0 はリストに最後に追加された項目 または * 現在選択されているリスト項目 |
+| * | Operator | &#8594; | 指定した場合, サブリストがあればそれもメモリから消去 省略した場合, サブリストがあってもそれを消去しない |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 624 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

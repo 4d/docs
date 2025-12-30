@@ -5,12 +5,12 @@ slug: /commands/add-to-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*laTable* ;} *ensemble* )<!-- END REF-->
+<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*laTable* : Table ;} *ensemble* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
-| ensemble | Text | &#8594;  | Nom de l'ensemble auquel ajouter l'enregistrement courant |
+| laTable | Table | &#8594; | Table de l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594; | Nom de l'ensemble auquel ajouter l'enregistrement courant |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 119 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

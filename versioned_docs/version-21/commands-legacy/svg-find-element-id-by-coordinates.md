@@ -58,7 +58,7 @@ If *pictureObject* does not contain a valid SVG picture, the command returns an 
 |  |  |
 | --- | --- |
 | Command number | 1054 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

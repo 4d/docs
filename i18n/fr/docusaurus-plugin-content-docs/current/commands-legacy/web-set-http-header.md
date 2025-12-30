@@ -5,12 +5,12 @@ slug: /commands/web-set-http-header
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( *entête* )<br/>**WEB SET HTTP HEADER** ( *tabChamps* ; *tabValeurs* )<!-- END REF-->
+<!--REF #_command_.WEB SET HTTP HEADER.Syntax-->**WEB SET HTTP HEADER** ( *entête* : Texte, Tableau texte )<br/>**WEB SET HTTP HEADER** ( *tabChamps* : Texte, Tableau texte ; *tabValeurs* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB SET HTTP HEADER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| entête &#124; tabChamps | Texte, Tableau texte | &#8594;  | Champ ou variable contenant l'en-tête HTTP de la requête ou Tableau des champs de l'en-tête HTTP |
-| tabValeurs | Text array | &#8594;  | Contenu des champs de l’en-tête HTTP |
+| entête &#124; tabChamps | Texte, Tableau texte | &#8594; | Champ ou variable contenant l'en-tête HTTP de la requête ou Tableau des champs de l'en-tête HTTP |
+| tabValeurs | Text array | &#8594; | Contenu des champs de l’en-tête HTTP |
 
 <!-- END REF-->
 
@@ -70,6 +70,6 @@ Si vous ne spécifiez pas de statut, celui-ci est automatiquement HTTP/1.0 200 O
 |  |  |
 | --- | --- |
 | Numéro de commande | 660 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

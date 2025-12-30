@@ -5,11 +5,11 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *tabela* )} : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *tabela* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual devolver o número de sequência, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual devolver o número de sequência, ou tabela padrão, se omitido |
 | Resultado | Integer | &#8592; | Número de sequência |
 
 <!-- END REF-->
@@ -65,6 +65,6 @@ O exemplo a seguir é parte de um método de formulário. Estas linhas de códig
 |  |  |
 | --- | --- |
 | Número do comando | 244 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

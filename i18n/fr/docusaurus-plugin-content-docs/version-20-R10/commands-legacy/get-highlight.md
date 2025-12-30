@@ -68,6 +68,6 @@ Modification du style du texte sélectionné :
 |  |  |
 | --- | --- |
 | Numéro de commande | 209 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

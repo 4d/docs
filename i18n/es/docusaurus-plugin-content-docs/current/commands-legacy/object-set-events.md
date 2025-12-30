@@ -5,14 +5,14 @@ slug: /commands/object-set-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( {* ;} *objeto* ; *arrEventos* ; *modo* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *objeto* : Text ; *arrEventos* : Integer array ; *modo* : Integer )<br/>**OBJECT SET EVENTS** ( *objeto* : Field, Variable ; *arrEventos* : Integer array ; *modo* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto o "" para designar el formulario (si * se especifica) o <br/>Campo o variable (si * se omite) |
-| arrEventos | Integer array | &#8594;  | Array de eventos a definir |
-| modo | Integer | &#8594;  | Modo de activación de los eventos definidos en arrEvents |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto o "" para designar el formulario (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| arrEventos | Integer array | &#8594; | Array de eventos a definir |
+| modo | Integer | &#8594; | Modo de activación de los eventos definidos en arrEvents |
 
 <!-- END REF-->
 
@@ -171,6 +171,6 @@ Desactivación de un solo evento del formulario sin modificar los otros:
 |  |  |
 | --- | --- |
 | Número de comando | 1239 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

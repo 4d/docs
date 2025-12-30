@@ -5,7 +5,7 @@ slug: /commands/web-service-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *infoType* ) : Text<!-- END REF-->
+<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *infoType* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ An empty string is returned when no information is available, more particularly 
 |  |  |
 | --- | --- |
 | Command number | 780 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

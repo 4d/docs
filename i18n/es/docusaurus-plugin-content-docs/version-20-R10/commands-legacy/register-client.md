@@ -122,7 +122,7 @@ Si el cliente 4D está registrado correctamente, la variable sistema OK es igual
 |  |  |
 | --- | --- |
 | Número de comando | 648 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

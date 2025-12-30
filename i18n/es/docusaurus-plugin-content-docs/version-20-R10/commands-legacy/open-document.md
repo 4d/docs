@@ -93,7 +93,7 @@ Si pasa el valor 3 en *modo*, la función devuelve ?00:00:00? (sin referencia de
 |  |  |
 | --- | --- |
 | Número de comando | 264 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/qr-run
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* )<!-- END REF-->
+<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 746 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

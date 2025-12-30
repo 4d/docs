@@ -55,6 +55,6 @@ Se trabalha com os números de referência dos elementos, tenha certeza de const
 |  |  |
 | --- | --- |
 | Número do comando | 630 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

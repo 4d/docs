@@ -55,6 +55,6 @@ Este método de proyecto puede utilizarse para direccionar el mismo puerto seria
 |  |  |
 | --- | --- |
 | Número de comando | 909 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** {( *aTable* )}<br/>**READ WRITE** {( * )}<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ *aTable* : テーブル, 演算子 })<br/>**READ WRITE** ({ * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable &#124; * | テーブル, 演算子 | &#8594;  | 読み書き可にするテーブル, または *: すべてのテーブル, または 省略時: デフォルトテーブル |
+| aTable &#124; * | テーブル, 演算子 | &#8594; | 読み書き可にするテーブル, または *: すべてのテーブル, または 省略時: デフォルトテーブル |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ READ WRITEコマンドは、レコードを修正しその結果を保存しな�
 |  |  |
 | --- | --- |
 | コマンド番号 | 146 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

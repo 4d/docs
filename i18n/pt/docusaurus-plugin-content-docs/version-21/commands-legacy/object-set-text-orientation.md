@@ -55,6 +55,6 @@ Deseja aplicar uma orientação de 270° a uma variável em seu formulário:
 |  |  |
 | --- | --- |
 | Número do comando | 1284 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

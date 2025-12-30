@@ -5,7 +5,7 @@ slug: /commands/wa-get-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( {* ;} *object* ; *filtersArr* ; *allowDenyArr* )<!-- END REF-->
+<!--REF #_command_.WA GET URL FILTERS.Syntax-->**WA GET URL FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA GET URL FILTERS** ( *object* : Field, Variable ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA GET URL FILTERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ The filters are installed by the [WA SET URL FILTERS](wa-set-url-filters.md) com
 |  |  |
 | --- | --- |
 | Command number | 1031 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

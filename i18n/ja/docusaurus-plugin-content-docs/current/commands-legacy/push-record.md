@@ -5,11 +5,11 @@ slug: /commands/push-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードをプッシュするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | レコードをプッシュするテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 
@@ -39,6 +39,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 176 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

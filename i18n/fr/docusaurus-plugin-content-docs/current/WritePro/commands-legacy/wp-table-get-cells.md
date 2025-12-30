@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-get-cells
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table get cells.Syntax-->**WP Table get cells** ( *objCible* ) | ( *refTableau* ; *debutCol* ; *debutLigne* {; *nbCols*{; *nbLignes*}} )  -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Table get cells.Syntax-->**WP Table get cells** ( *objCible* : Object ) | ( *refTableau* : Object ; *debutCol* : Integer ; *debutLigne* : Integer {; *nbCols* : Integer{; *nbLignes* : Integer}} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table get cells.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

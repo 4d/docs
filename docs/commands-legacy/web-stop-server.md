@@ -27,6 +27,6 @@ If the Web server has not been started, the command does nothing.
 |  |  |
 | --- | --- |
 | Command number | 618 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

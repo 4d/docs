@@ -5,7 +5,7 @@ slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *object* ; *property* ) : Integer<!-- END REF-->
+<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *object* : Object ; *property* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,6 +58,6 @@ We want to get the type of standard values:
 |  |  |
 | --- | --- |
 | Command number | 1230 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

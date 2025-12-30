@@ -92,4 +92,4 @@ Here is an example of output object:
 |  |  |
 | --- | --- |
 | Command number | 1844|
-| Thread safe | &check; |
+| Thread safe | yes |

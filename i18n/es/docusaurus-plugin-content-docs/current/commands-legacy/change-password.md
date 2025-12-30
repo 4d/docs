@@ -5,11 +5,11 @@ slug: /commands/change-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *contraseña* )<!-- END REF-->
+<!--REF #_command_.CHANGE PASSWORD.Syntax-->**CHANGE PASSWORD** ( *contraseña* : Text )<!-- END REF-->
 <!--REF #_command_.CHANGE PASSWORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| contraseña | Text | &#8594;  | Nueva contraseña |
+| contraseña | Text | &#8594; | Nueva contraseña |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ El siguiente ejemplo permite al usuario cambiar su contraseña.
 |  |  |
 | --- | --- |
 | Número de comando | 186 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( {* ;} *object* ; *hierarchical* {; *hierarchy*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *object* : Text ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *object* : Field, Variable ; *hierarchical* : Boolean {; *hierarchy* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,6 +58,6 @@ Definition of the aCountry, aRegion and aCity arrays as the hierarchy of a list 
 |  |  |
 | --- | --- |
 | Command number | 1098 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

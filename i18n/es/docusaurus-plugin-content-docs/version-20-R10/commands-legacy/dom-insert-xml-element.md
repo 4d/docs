@@ -86,6 +86,6 @@ $rootRef:=DOM Parse XML source("") //selección de documento XML
 |  |  |
 | --- | --- |
 | Número de comando | 1083 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

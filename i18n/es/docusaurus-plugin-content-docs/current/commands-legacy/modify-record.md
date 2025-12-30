@@ -5,12 +5,12 @@ slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*tabla*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*tabla* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla a utilizar para entrada de datos o Tabla por defecto, si se omite |
-| * | Operator |  &#8594;  | Ocultar barras de desplazamiento |
+| tabla | Table | &#8594; | Tabla a utilizar para entrada de datos o Tabla por defecto, si se omite |
+| * | Operator | &#8594; | Ocultar barras de desplazamiento |
 
 <!-- END REF-->
 
@@ -54,7 +54,7 @@ La variable sistema OK toma el valor 1 si se acepta el registro y 0 si se cancel
 |  |  |
 | --- | --- |
 | Número de comando | 57 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Prohibido en el servidor ||
 

@@ -59,6 +59,6 @@ Este exemplo verifica um hash de senha previamente criado por [Generate password
 |  |  |
 | --- | --- |
 | Número do comando | 1534 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-get-grid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET GRID.Syntax-->**LISTBOX GET GRID** ( * ; *object* : Text ; *horizontal* : Boolean ; *vertical* : Boolean )<br/>**LISTBOX GET GRID** ( *object* : Field, Variable ; *horizontal* : Boolean ; *vertical* : Boolean )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET GRID.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ In *horizontal* and *vertical*, the command returns the value **True** or **Fals
 |  |  |
 | --- | --- |
 | Command number | 1199 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

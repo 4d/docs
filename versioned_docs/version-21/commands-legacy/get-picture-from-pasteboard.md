@@ -46,7 +46,7 @@ If the picture is correctly extracted, OK is set to 1; otherwise OK is set to 0.
 |  |  |
 | --- | --- |
 | Command number | 522 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* ; *lineamenu* {; *proceso*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item style.Syntax-->**Get menu item style** ( *menu* : Integer, Text ; *lineamenu* : Integer {; *proceso* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item style.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 para el último elemento añadido |
-| proceso | Integer | &#8594;  | Process reference number |
+| menu | Integer, Text | &#8594; | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 para el último elemento añadido |
+| proceso | Integer | &#8594; | Process reference number |
 | Resultado | Integer | &#8592; | Estilo del comando de menú |
 
 <!-- END REF-->
@@ -52,7 +52,7 @@ Para probar si un elemento de menú se muestra en negrita, escribe:
 |  |  |
 | --- | --- |
 | Número de comando | 426 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

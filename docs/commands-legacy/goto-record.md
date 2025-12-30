@@ -5,7 +5,7 @@ slug: /commands/goto-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*aTable* ;} *record* )<!-- END REF-->
+<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*aTable* : Table ;} *record* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ See the example for [Record number](record-number.md).
 |  |  |
 | --- | --- |
 | Command number | 242 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 | Changes current selection ||
 

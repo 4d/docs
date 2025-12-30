@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( {* ;} *objeto* {; *tipoLista*}; *lista* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *objeto* : Field, Variable {; *tipoLista* : Integer}; *lista* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| tipoLista | Integer | &#8594;  | Tipo de lista: Lista de valores, Lista de obligatorios o Lista de excluidos |
-| lista | Integer | &#8594;  | Número de referencia de lista |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| tipoLista | Integer | &#8594; | Tipo de lista: Lista de valores, Lista de obligatorios o Lista de excluidos |
+| lista | Integer | &#8594; | Número de referencia de lista |
 
 <!-- END REF-->
 
@@ -133,6 +133,6 @@ Con el fin de actualizar la lista asociada al pop-up gestionado por array, es ne
 |  |  |
 | --- | --- |
 | Número de comando | 1266 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -85,6 +85,6 @@ This example illustrates different ways of using the command. Given the followin
 |  |  |
 | --- | --- |
 | Command number | 1100 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

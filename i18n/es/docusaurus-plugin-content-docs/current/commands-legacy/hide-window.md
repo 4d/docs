@@ -5,11 +5,11 @@ slug: /commands/hide-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** {( *ventana* )}<!-- END REF-->
+<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *ventana* : Integer })<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana o Ventana del primer plano del proceso actual, si se omite |
+| ventana | Integer | &#8594; | Número de referencia de la ventana o Ventana del primer plano del proceso actual, si se omite |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Este ejemplo corresponde a un método de un botón ubicado en un formulario de e
 |  |  |
 | --- | --- |
 | Número de comando | 436 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

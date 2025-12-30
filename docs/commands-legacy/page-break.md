@@ -5,11 +5,13 @@ slug: /commands/page-break
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** {( * )}<br/>**PAGE BREAK** {( > )}<!-- END REF-->
+<!--REF #_command_.PAGE BREAK.Syntax-->**PAGE BREAK** ({ * })<br/>**PAGE BREAK** ({ > })<!-- END REF-->
 <!--REF #_command_.PAGE BREAK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| * &#124; > | &#8594;  | * Cancel printing job started with Print form, or > Force one printing job |
+| * | Operator | &#8594;  | Cancel printing job started with Print form |
+| > | Operator | &#8594;  | Force one printing job |
+
 
 <!-- END REF-->
 
@@ -49,7 +51,7 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 |  |  |
 | --- | --- |
 | Command number | 6 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

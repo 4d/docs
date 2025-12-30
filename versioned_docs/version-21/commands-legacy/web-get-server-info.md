@@ -136,6 +136,6 @@ After you execute the following code:
 |  |  |
 | --- | --- |
 | Command number | 1531 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

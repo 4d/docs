@@ -34,6 +34,6 @@ Este comando permite verificar la fuente de datos actual, generalmente antes de 
 |  |  |
 | --- | --- |
 | Número de comando | 990 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

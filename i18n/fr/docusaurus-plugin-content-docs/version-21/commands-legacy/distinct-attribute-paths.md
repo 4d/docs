@@ -75,6 +75,6 @@ Le tableau *aTPaths* reçoit les éléments suivants :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1395 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

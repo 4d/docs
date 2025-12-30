@@ -66,6 +66,6 @@ A janela aparece desta forma:
 |  |  |
 | --- | --- |
 | Número do comando | 444 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

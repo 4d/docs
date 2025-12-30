@@ -48,7 +48,7 @@ You can intercept these errors using a method installed by the [ON ERR CALL](on-
 |  |  |
 | --- | --- |
 | Command number | 693 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

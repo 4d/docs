@@ -92,7 +92,7 @@ Si vous passez la valeur 3 dans *mode*, la fonction retourne ?00:00:00? (pas de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 264 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | list | Integer, Text | &#8594;  | List reference number (if * omitted) Name of list type object (if * passed) |
 | value | Text | &#8594;  | Value to be searched for |
 | scope | Integer | &#8594;  | 0=Main list, 1=Sublist |
-| itemsArray | Array integer | &#8592; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
+| itemsArray | Integer array | &#8592; | - If 2nd * omitted: array of positions of items found - If 2nd * passed: array of reference numbers of items found |
 | * | Operator | &#8594;  | - If omitted: use position of items - If passed: use reference number of items |
 | Function result | Integer | &#8592; | - If 2nd * omitted: position of item found - If 2nd * passed: reference number of item found |
 
@@ -68,6 +68,6 @@ Given the following hierarchical list:
 |  |  |
 | --- | --- |
 | Command number | 952 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

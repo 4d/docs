@@ -5,7 +5,7 @@ slug: /commands/pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contents* {; *default* {; *xCoord* ; *yCoord*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.Pop up menu.Syntax-->**Pop up menu** ( *contents* : Text {; *default* : Integer {; *xCoord* : Integer ; *yCoord* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.Pop up menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -108,6 +108,6 @@ The following is the pop-up menu as it appears on Windows (left) and Macintosh (
 |  |  |
 | --- | --- |
 | Command number | 542 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

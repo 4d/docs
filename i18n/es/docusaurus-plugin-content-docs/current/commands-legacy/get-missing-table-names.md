@@ -5,7 +5,7 @@ slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabfalt* )<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabfalt* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ Una vez haya identificado las tablas faltantes de la base, puede reactivarlas v�
 |  |  |
 | --- | --- |
 | Número de comando | 1125 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

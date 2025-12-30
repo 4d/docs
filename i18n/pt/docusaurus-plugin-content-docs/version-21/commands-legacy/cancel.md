@@ -56,7 +56,7 @@ Quando o comando CANCEL é executado (anulação de formulário ou de impressão
 |  |  |
 | --- | --- |
 | Número do comando | 270 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

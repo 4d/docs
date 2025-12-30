@@ -5,12 +5,12 @@ slug: /commands/play
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomObjet* {; *asynchrone*} )<!-- END REF-->
+<!--REF #_command_.PLAY.Syntax-->**PLAY** ( *nomObjet* : Text {; *asynchrone* : Integer} )<!-- END REF-->
 <!--REF #_command_.PLAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomObjet | Text | &#8594;  | Nom ou chemin de fichier son ou son systèmeChaîne vide pour stopper un son asynchrone |
-| asynchrone | Integer | &#8594;  | (Windows) Si passé : exécution asynchrone, si omis : exécution synchrone |
+| nomObjet | Text | &#8594; | Nom ou chemin de fichier son ou son systèmeChaîne vide pour stopper un son asynchrone |
+| asynchrone | Integer | &#8594; | (Windows) Si passé : exécution asynchrone, si omis : exécution synchrone |
 
 <!-- END REF-->
 
@@ -62,6 +62,6 @@ Exemple de son système sous macOS :
 |  |  |
 | --- | --- |
 | Numéro de commande | 290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

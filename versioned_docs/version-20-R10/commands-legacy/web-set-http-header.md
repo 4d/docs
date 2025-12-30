@@ -69,6 +69,6 @@ If you do not specify a state, it will automatically be HTTP/1.0 200 OK. By defa
 |  |  |
 | --- | --- |
 | Command number | 660 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

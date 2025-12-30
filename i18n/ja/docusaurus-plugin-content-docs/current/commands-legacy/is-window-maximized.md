@@ -5,11 +5,11 @@ slug: /commands/is-window-maximized
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window maximized.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | ウィンドウ参照番号 |
+| window | Integer | &#8594; | ウィンドウ参照番号 |
 | 戻り値 | Boolean | &#8592; | ウィンドウが最大化されていればTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1830 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

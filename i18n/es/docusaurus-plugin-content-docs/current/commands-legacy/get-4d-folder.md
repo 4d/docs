@@ -5,13 +5,13 @@ slug: /commands/get-4d-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *carpeta* {; *opciones*} {; *})} : Text<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ( *carpeta* : Integer {; *opciones* : Object} {; *}) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| carpeta | Integer | &#8594;  | Tipo de carpeta (si se omite = carpeta activa 4D) |
-| opciones | Object | &#8594;  | Configuración de la ruta de la carpeta de la base 4D Client |
-| * | Operador | &#8594;  | Devuelve la carpeta de la base local |
+| carpeta | Integer | &#8594; | Tipo de carpeta (si se omite = carpeta activa 4D) |
+| opciones | Object | &#8594; | Configuración de la ruta de la carpeta de la base 4D Client |
+| * | Operador | &#8594; | Devuelve la carpeta de la base local |
 | Resultado | Text | &#8592; | Ruta de acceso a la carpeta designada |
 
 <!-- END REF-->
@@ -214,7 +214,7 @@ Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está v
 |  |  |
 | --- | --- |
 | Número de comando | 485 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

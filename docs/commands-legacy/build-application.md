@@ -5,7 +5,7 @@ slug: /commands/build-application
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** {( *buildAppSettings* )}<!-- END REF-->
+<!--REF #_command_.BUILD APPLICATION.Syntax-->**BUILD APPLICATION** ({ *buildAppSettings* : Text })<!-- END REF-->
 <!--REF #_command_.BUILD APPLICATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ If the command fails, an error is generated that you can intercept using the [ON
 |  |  |
 | --- | --- |
 | Command number | 871 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document, error |
 | Forbidden on the server ||
 

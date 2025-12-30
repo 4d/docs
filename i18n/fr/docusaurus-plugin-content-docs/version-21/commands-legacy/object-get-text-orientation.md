@@ -61,6 +61,6 @@ Si, à l’exécution du formulaire, vous appelez l’instruction suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1283 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

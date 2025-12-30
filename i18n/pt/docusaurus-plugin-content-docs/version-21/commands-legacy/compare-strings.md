@@ -109,6 +109,6 @@ Os exemplos abaixo ilustram o impacto específico das opções no **contexto da 
 |  |  |
 | --- | --- |
 | Número do comando | 1756 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* ; *xPath* {; *attrName* ; *attrValue*} {; *attrName2* ; *attrValue2* ; ... ; *attrNameN* ; *attrValueN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element.Syntax-->**DOM Create XML element** ( *elementRef* : Text ; *xPath* : Text {; *attrName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date} {; ...(*attrName* : Text, *attrValue* : Text, Boolean, Integer, Real, Time, Date)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | ルートXML要素参照 |
-| xPath | Text | &#8594;  | 作成するXML要素のXPathパス |
-| attrName | Text | &#8594;  | 設定する属性 |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | 新しい属性値 |
+| elementRef | Text | &#8594; | ルートXML要素参照 |
+| xPath | Text | &#8594; | 作成するXML要素のXPathパス |
+| attrName | Text | &#8594; | 設定する属性 |
+| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594; | 新しい属性値 |
 | 戻り値 | Text | &#8592; | 作成されたXML要素の参照 |
 
 <!-- END REF-->
@@ -164,7 +164,7 @@ $aAttrName1:="Font"
 |  |  |
 | --- | --- |
 | コマンド番号 | 865 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

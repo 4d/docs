@@ -5,7 +5,7 @@ slug: /commands/sql-execute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *sqlStatement* {; *boundObj*}{; *boundObj2* ; ... ; *boundObjN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE.Syntax-->**SQL EXECUTE** ( *sqlStatement* : Text {; *...boundObj* : Variable, Field} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -164,7 +164,7 @@ If the command has been executed correctly, the system variable OK returns 1\. O
 |  |  |
 | --- | --- |
 | Command number | 820 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

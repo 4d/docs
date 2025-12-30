@@ -5,7 +5,7 @@ slug: /commands/wa-run-offscreen-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* ) : any<!-- END REF-->
+<!--REF #_command_.WA Run offscreen area.Syntax-->**WA Run offscreen area** ( *parameters* : Object ) : any<!-- END REF-->
 <!--REF #_command_.WA Run offscreen area.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -102,7 +102,7 @@ The OK system variable is set to 0 if the timeout has been reached or the [CANCE
 |  |  |
 | --- | --- |
 | Command number | 1727 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

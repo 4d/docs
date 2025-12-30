@@ -38,6 +38,6 @@ Este exemplo atribui primeiro Verdadeiro a uma variável, logo muda o valor da v
 |  |  |
 | --- | --- |
 | Número do comando | 34 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

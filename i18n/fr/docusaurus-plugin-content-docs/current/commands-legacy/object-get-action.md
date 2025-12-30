@@ -5,12 +5,12 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objet* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *objet* : Text ) : Text<br/>**OBJECT Get action** ( *objet* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne). Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne). Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom de l'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Text | &#8592; | Nom de l'action standard associée et (s'il existe) son paramètre chaîne. |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ Vous souhaitez associer l'action "Annuler" à tous les objets du formulaire qui 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1457 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

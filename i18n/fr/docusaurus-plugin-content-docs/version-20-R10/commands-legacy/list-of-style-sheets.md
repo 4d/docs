@@ -55,6 +55,6 @@ Si vous exécutez le code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1255 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

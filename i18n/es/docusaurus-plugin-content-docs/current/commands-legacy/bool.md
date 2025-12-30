@@ -5,11 +5,11 @@ slug: /commands/bool
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Bool.Syntax-->**Bool** ( *expresion* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Bool.Syntax-->**Bool** ( *expresion* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Bool.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Expression | &#8594;  | Expresión para la cual devolver la forma booleana |
+| expresion | Expression | &#8594; | Expresión para la cual devolver la forma booleana |
 | Resultado | Boolean | &#8592; | Forma booleana de la expresión |
 
 <!-- END REF-->
@@ -53,6 +53,6 @@ Selecciona un valor dependiendo del contenido de un atributo de campo de objeto,
 |  |  |
 | --- | --- |
 | Número de comando | 1537 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/dom-export-to-var
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *refElemento* ; *vXMLVar* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO VAR.Syntax-->**DOM EXPORT TO VAR** ( *refElemento* : Text ; *vXMLVar* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO VAR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência do elemento Root XMLK |
+| refElemento | Text | &#8594; | Referência do elemento Root XMLK |
 | vXMLVar | Text, Blob | &#8592; | Variável que recebe a árvore XML |
 
 <!-- END REF-->
@@ -61,7 +61,7 @@ Se o comando for executado corretamente, a variável sistema OK assume o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 863 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

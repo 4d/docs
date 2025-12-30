@@ -5,12 +5,12 @@ slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *objet* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( * ; *objet* : Text ) : Text<br/>**OBJECT Get style sheet** ( *objet* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get style sheet.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Text | &#8592; | Nom de la feuille de style |
 
 <!-- END REF-->
@@ -51,6 +51,6 @@ Dans **l'architecture Projet**, seules les trois feuilles de style automatiques 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1258 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

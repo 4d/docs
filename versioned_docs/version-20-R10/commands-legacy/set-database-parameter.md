@@ -1036,6 +1036,6 @@ You want to export data in JSON that contains a converted 4D date. Note that con
 |  |  |
 | --- | --- |
 | Command number | 642 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

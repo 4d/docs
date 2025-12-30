@@ -5,7 +5,7 @@ slug: /commands/duplicate-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DUPLICATE RECORD.Syntax-->**DUPLICATE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DUPLICATE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 225 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

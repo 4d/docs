@@ -5,7 +5,7 @@ slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.End selection.Syntax-->**End selection** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.End selection.Syntax-->**End selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ This form method is used during the printing of a report. It sets the variable *
 |  |  |
 | --- | --- |
 | Command number | 36 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

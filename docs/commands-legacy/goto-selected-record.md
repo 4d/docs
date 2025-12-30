@@ -5,7 +5,7 @@ slug: /commands/goto-selected-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*aTable* ;} *record* )<!-- END REF-->
+<!--REF #_command_.GOTO SELECTED RECORD.Syntax-->**GOTO SELECTED RECORD** ( {*aTable* : Table ;} *record* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO SELECTED RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,7 +67,7 @@ The following object method for *atNames* selects the correct record in the \[Pe
 |  |  |
 | --- | --- |
 | Command number | 245 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

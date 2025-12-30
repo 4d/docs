@@ -89,6 +89,6 @@ This example compares the results obtained depending on the “current” separa
 |  |  |
 | --- | --- |
 | Command number | 11 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

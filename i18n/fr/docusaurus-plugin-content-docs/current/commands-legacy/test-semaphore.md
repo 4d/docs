@@ -5,11 +5,11 @@ slug: /commands/test-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *sémaphore* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *sémaphore* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Test semaphore.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sémaphore | Text | &#8594;  | Nom du sémaphore à tester |
+| sémaphore | Text | &#8594; | Nom du sémaphore à tester |
 | Résultat | Boolean | &#8592; | Vrai = le sémaphore existe, Faux = le sémaphore n’existe pas |
 
 <!-- END REF-->
@@ -51,6 +51,6 @@ Cet exemple permet de connaître l’état d’un traitement (en l’occurrence,
 |  |  |
 | --- | --- |
 | Numéro de commande | 652 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

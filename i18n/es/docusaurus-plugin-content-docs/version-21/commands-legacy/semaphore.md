@@ -153,6 +153,6 @@ Sintaxis:
 |  |  |
 | --- | --- |
 | Número de comando | 143 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

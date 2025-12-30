@@ -5,11 +5,11 @@ slug: /commands/delete-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *doc* )<!-- END REF-->
+<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *doc* : Text )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &#8594;  | Nombre del documento o Ruta de acceso completa al documento |
+| doc | Text | &#8594; | Nombre del documento o Ruta de acceso completa al documento |
 
 <!-- END REF-->
 
@@ -53,7 +53,7 @@ La eliminación de un documento hace que la variable sistema tome el valor 1\. S
 |  |  |
 | --- | --- |
 | Número de comando | 159 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

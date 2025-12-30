@@ -5,7 +5,7 @@ slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *list* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *list* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ See example for the [CLEAR LIST](clear-list.md) command.
 |  |  |
 | --- | --- |
 | Command number | 621 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

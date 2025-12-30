@@ -5,11 +5,11 @@ slug: /commands/qr-get-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *zone* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report kind.Syntax-->**QR Get report kind** ( *zone* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report kind.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | Résultat | Integer | &#8592; | Type d'état |
 
 <!-- END REF-->
@@ -36,7 +36,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 755 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -45,6 +45,6 @@ El siguiente ejemplo inicializa los elementos del array *asTablas,* con los nomb
 |  |  |
 | --- | --- |
 | Número de comando | 254 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

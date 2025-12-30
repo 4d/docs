@@ -5,11 +5,11 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ( * ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Devuelve la información de la base local |
+| * | Operador | &#8594; | Devuelve la información de la base local |
 | Resultado | Boolean | &#8592; | Compilado (True), Interpretado (False) |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ En una de sus rutinas, usted incluyó el código de depuración de la base, úti
 |  |  |
 | --- | --- |
 | Número de comando | 492 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

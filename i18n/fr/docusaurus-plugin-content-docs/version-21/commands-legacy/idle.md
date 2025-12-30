@@ -58,6 +58,6 @@ La méthode METHODE EVENEMENT :
 |  |  |
 | --- | --- |
 | Numéro de commande | 311 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

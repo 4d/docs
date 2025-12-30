@@ -5,13 +5,13 @@ slug: /commands/ob-set-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objeto* ; *propriedade* ; *array* )<!-- END REF-->
+<!--REF #_command_.OB SET ARRAY.Syntax-->**OB SET ARRAY** ( *objeto* : Object, Object ; *propriedade* : Text ; *array* : Array, Variable )<!-- END REF-->
 <!--REF #_command_.OB SET ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Object | &#8594;  | Objeto estruturado |
-| propriedade | Text | &#8594;  | Nome da propriedade a definir |
-| array | Array, Variable | &#8594;  | Array a armazenar em propriedade |
+| objeto | Object, Object | &#8594; | Objeto estruturado |
+| propriedade | Text | &#8594; | Nome da propriedade a definir |
+| array | Array, Variable | &#8594; | Array a armazenar em propriedade |
 
 <!-- END REF-->
 
@@ -136,6 +136,6 @@ Usar um array de imagem:
 |  |  |
 | --- | --- |
 | Número do comando | 1227 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

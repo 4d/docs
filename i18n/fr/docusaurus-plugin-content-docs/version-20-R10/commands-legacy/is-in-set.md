@@ -40,6 +40,6 @@ L'exemple suivant est la méthode objet d'un bouton testant si l'enregistrement 
 |  |  |
 | --- | --- |
 | Numéro de commande | 273 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

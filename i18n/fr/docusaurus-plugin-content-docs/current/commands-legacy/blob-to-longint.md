@@ -5,14 +5,14 @@ slug: /commands/blob-to-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* ; *ordreOctet* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to longint.Syntax-->**BLOB to longint** ( *blob* : Blob ; *ordreOctet* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to longint.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB duquel extraire la valeur de type Entier long |
-| ordreOctet | Integer | &#8594;  | 0 = Ordre d'octets natif 1 = Ordre d'octets Macintosh 2 = Ordre d'octets PC |
-| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
-| ||| Nouvel offset après lecture |
+| Blob | Blob | &#8594; | BLOB duquel extraire la valeur de type Entier long |
+| ordreOctet | Integer | &#8594; | 0 = Ordre d'octets natif 1 = Ordre d'octets Macintosh 2 = Ordre d'octets PC |
+| offset | Variable | &#8596; | Offset (en octets) dans le BLOB |
+|  |  |  | Nouvel offset après lecture |
 | Résultat | Integer | &#8592; | Valeur de type Entier long (4 octets) |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ L'exemple suivant lit 20 valeurs de type Entier long dans un BLOB, à partir de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 551 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

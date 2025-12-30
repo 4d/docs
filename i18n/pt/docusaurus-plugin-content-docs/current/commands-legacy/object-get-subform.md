@@ -5,12 +5,12 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *objeto* ; *pontTabela* ; *subFormDet* {; *subFormList*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *objeto* : Text ; *pontTabela* ; *subFormDet* : Text {; *subFormList* : Text} )<br/>**OBJECT GET SUBFORM** ( *objeto* : Field, Variable ; *pontTabela* ; *subFormDet* : Text {; *subFormList* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | pontTable | Table | &#8592; | Ponteiro à tabela do formulário |
 | subFormDet | Text | &#8592; | Nome do formulário detalhado do sub-formulário |
 | subFormList | Text | &#8592; | Nome do formulário listado do sub-formulário (formulário tabela) |
@@ -46,6 +46,6 @@ Se não houver formulário lista, uma string vazia é devolvida no parâmetro *s
 |  |  |
 | --- | --- |
 | Número do comando | 1139 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -57,7 +57,7 @@ L'instruction suivante masque le contenu de la ligne Détail :
 |  |  |
 | --- | --- |
 | Numéro de commande | 763 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

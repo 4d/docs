@@ -59,6 +59,6 @@ Después de la ejecución del método, los arrays son sincronizados: si el array
 |  |  |
 | --- | --- |
 | Número de comando | 912 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/is-nil-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *aPointer* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is nil pointer.Syntax-->**Is nil pointer** ( *aPointer* : Pointer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is nil pointer.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ If you want to find out the name of the variable or the number of the field that
 |  |  |
 | --- | --- |
 | Command number | 315 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

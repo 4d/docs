@@ -5,17 +5,15 @@ slug: /commands/http-get
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* ; *réponse* {; *nomsEnTêtes* ; *valeursEnTêtes*}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.HTTP Get.Syntax-->**HTTP Get** ( *url* : Text ; *réponse* : Text, Blob, Picture, Object {; *nomsEnTêtes* : Text array ; *valeursEnTêtes* : Text array}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.HTTP Get.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | URL auquel envoyer la requête |
+| url | Text | &#8594; | URL auquel envoyer la requête |
 | réponse | Text, Blob, Picture, Object | &#8592; | Résultat de la requête |
-| nomsEnTêtes | Text array | &#8594;  | Noms des en-têtes de la requête |
-| &#8592; | Noms d’en-têtes retournés |
-| valeursEnTêtes | Text array | &#8594;  | Valeurs d’en-têtes de la requête |
-| &#8592; | Valeurs d’en-têtes retournées |
-| * | Opérateur | &#8594;  | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
+| nomsEnTêtes | Text array | &#8596; | *in:* Header names of the request<br/> *out:* Returned header names |
+| valeursEnTêtes | Text array | &#8596; | *in:* Header values of the request<br/> *out:* Returned header values |
+| * | Opérateur | &#8594; | Si passé, la connexion est maintenue (keep-alive)<br/>Si omis, la connexion est automatiquement refermée |
 | Résultat | Integer | &#8592; | Code de statut HTTP |
 
 <!-- END REF-->
@@ -110,7 +108,7 @@ Récupération d’une vidéo :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1157 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

@@ -5,16 +5,15 @@ slug: /commands/form-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*tabela* ;} *arrayNome* {; *filtro* {; *marcador*}}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*tabela* : Table ;} *arrayNome* : Text array {; *filtro* : Text {; *marcador* : Real}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Referencia de tabela |
+| tabela | Table | &#8594; | Referencia de tabela |
 | arrayNome | Text array | &#8592; | Arrays de nomes de formulário |
-| filtro | Text | &#8594;  | Filtro de nomes |
-| marcador | Real | &#8594;  | Marcador para versão mínima a devolver |
-| &#8592; | Novo valor |
-| * | Operador | &#8594;  | Se passa = o comando é aplicado a base local quando é executado desde um componente(parâmetro ignorado fora deste contexto) |
+| filtro | Text | &#8594; | Filtro de nomes |
+| marcador | Real | &#8596; | *in:* Marker for minimum version to return<br/>*out:* New value |
+| * | Operador | &#8594; | Se passa = o comando é aplicado a base local quando é executado desde um componente(parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -71,6 +70,6 @@ Exemplos de usos típicos:
 |  |  |
 | --- | --- |
 | Número do comando | 1167 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

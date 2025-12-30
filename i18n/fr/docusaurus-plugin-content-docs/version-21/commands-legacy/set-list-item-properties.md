@@ -83,6 +83,6 @@ L’exemple suivant passe le texte de l’élément courant de *liste* en gras e
 |  |  |
 | --- | --- |
 | Numéro de commande | 386 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

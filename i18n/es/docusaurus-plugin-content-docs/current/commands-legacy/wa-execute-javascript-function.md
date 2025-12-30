@@ -5,16 +5,16 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *objeto* ; *funcionjs* ; resultado|* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *objeto* : Text ; *funcionjs* : Text ; resultado|* {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *objeto* : Field, Variable ; *funcionjs* : Text ; resultado|* {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| funcionjs | Text | &#8594;  | Nombre de la función JavaScript a ejecutar |
-| resultado&#124;* | Variable | &#8594;  | * para una función sin resultado o |
-| &#8592; | Resultado de la función (si se espera) |
-| param | Text, Number, Date, Object, Collection | &#8594;  | Parámetro(s) a pasar a la función |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| funcionjs | Text | &#8594; | Nombre de la función JavaScript a ejecutar |
+| result | Variable | &#8592; | Function result (if expected) |
+| * | Operator | &#8594; | Function with no result |
+| param | any | &#8594; | Parámetro(s) a pasar a la función |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ La función JavaScript "getCustomerInfo" recibe un número ID como parámetro y 
 |  |  |
 | --- | --- |
 | Número de comando | 1043 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

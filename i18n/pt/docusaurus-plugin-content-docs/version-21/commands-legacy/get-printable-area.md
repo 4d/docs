@@ -44,6 +44,6 @@ Para saber o tamanho total da página, pode:
 |  |  |
 | --- | --- |
 | Número do comando | 703 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

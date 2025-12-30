@@ -36,7 +36,7 @@ See the example for [DISPLAY RECORD](display-record.md).
 |  |  |
 | --- | --- |
 | Command number | 51 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

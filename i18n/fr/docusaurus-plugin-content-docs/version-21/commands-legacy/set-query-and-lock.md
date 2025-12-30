@@ -75,7 +75,7 @@ Si la commande est appelée hors du contexte d’une transaction, une erreur est
 |  |  |
 | --- | --- |
 | Numéro de commande | 661 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

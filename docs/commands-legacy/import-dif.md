@@ -5,7 +5,7 @@ slug: /commands/import-dif
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.IMPORT DIF.Syntax-->**IMPORT DIF** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT DIF.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ OK is set to 1 if the import is successfully completed; otherwise, it is set to 
 |  |  |
 | --- | --- |
 | Command number | 86 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

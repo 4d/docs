@@ -5,7 +5,7 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *object* ; *tablePtr* ; *detailSubform* {; *listSubform*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *object* : Text ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<br/>**OBJECT GET SUBFORM** ( *object* : Field, Variable ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ If there is no list form, an empty string is returned in the *listSubform* param
 |  |  |
 | --- | --- |
 | Command number | 1139 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

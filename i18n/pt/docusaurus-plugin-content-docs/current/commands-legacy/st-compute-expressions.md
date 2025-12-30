@@ -5,14 +5,14 @@ slug: /commands/st-compute-expressions
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( {* ;} *objeto* {; *inicioSel* {; *fimSel*}} )<!-- END REF-->
+<!--REF #_command_.ST COMPUTE EXPRESSIONS.Syntax-->**ST COMPUTE EXPRESSIONS** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer}} )<br/>**ST COMPUTE EXPRESSIONS** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *fimSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST COMPUTE EXPRESSIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| inicioSel | Integer | &#8594;  | Inicio da seleção |
-| fimSel | Integer | &#8594;  | Fim da seleção |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| inicioSel | Integer | &#8594; | Inicio da seleção |
+| fimSel | Integer | &#8594; | Fim da seleção |
 
 <!-- END REF-->
 
@@ -72,7 +72,7 @@ Você deseja atualizar as referências incluídas na seleção de texto:
 |  |  |
 | --- | --- |
 | Número do comando | 1285 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

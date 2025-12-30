@@ -81,7 +81,7 @@ Se este comando é executado corretamente, a variável sistema OK toma o valor 1
 |  |  |
 | --- | --- |
 | Número do comando | 1085 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

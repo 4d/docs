@@ -5,7 +5,7 @@ slug: /commands/web-service-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE SET PARAMETER.Syntax-->**WEB SERVICE SET PARAMETER** ( *name* ; *value* {; *soapType*} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE SET PARAMETER.Syntax-->**WEB SERVICE SET PARAMETER** ( *name* : Text ; *value* : Variable {; *soapType* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -78,6 +78,6 @@ This example defines two parameters:
 |  |  |
 | --- | --- |
 | Command number | 777 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

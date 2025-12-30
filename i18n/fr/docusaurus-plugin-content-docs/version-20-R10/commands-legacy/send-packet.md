@@ -87,6 +87,6 @@ Cet exemple illustre l’envoi et la récupération de caractères étendus via 
 |  |  |
 | --- | --- |
 | Numéro de commande | 103 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

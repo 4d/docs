@@ -5,11 +5,11 @@ slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variavel* )<!-- END REF-->
+<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variavel* : Variable )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variavel | Variable | &#8594;  | Variável a apagar |
+| variavel | Variable | &#8594; | Variável a apagar |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ Em um formulário, utilize uma lista suspensa (drop down) chamada *MinhaListaSus
 |  |  |
 | --- | --- |
 | Número do comando | 89 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

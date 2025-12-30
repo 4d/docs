@@ -5,13 +5,13 @@ slug: /commands/svg-export-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* ; *pictVar* {; *exportType*} )<!-- END REF-->
+<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* : Text ; *pictVar* : Picture {; *exportType* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | ルートXML要素参照 |
-| pictVar | Picture | &#8594;  | XMLツリーを受け取るピクチャ変 (SVG ピクチャ) |
-| exportType | Integer | &#8594;  | 0 = データソースを保持しない、1 = データソースをコピー(デフォルト)、2 = データソースを移動 |
+| elementRef | Text | &#8594; | ルートXML要素参照 |
+| pictVar | Picture | &#8594; | XMLツリーを受け取るピクチャ変 (SVG ピクチャ) |
+| exportType | Integer | &#8594; | 0 = データソースを保持しない、1 = データソースをコピー(デフォルト)、2 = データソースを移動 |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1017 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB to text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB from which to get the text |
+| Blob | Blob | &#8594;  | BLOB from which to get the text |
 | textFormat | Integer | &#8594;  | Format and character set of text |
 | offset | Variable | &#8596;  | Offset within the BLOB (expressed in bytes) |
 | || | New offset after reading |
@@ -66,6 +66,6 @@ After the call, the variable is incremented by the number of bytes read. Therefo
 |  |  |
 | --- | --- |
 | Command number | 555 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -35,6 +35,6 @@ La línea de código añade 100 bytes al BLOB *miBlob*:
 |  |  |
 | --- | --- |
 | Número de comando | 605 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | カレントセレクションを削除するテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | カレントセレクションを削除するテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 
@@ -71,7 +71,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 66 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントセレクションを変更する ||
 
 

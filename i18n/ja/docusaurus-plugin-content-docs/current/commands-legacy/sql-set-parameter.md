@@ -5,12 +5,12 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* ; *paramType* )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *object* : Object ; *paramType* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | 使用する4Dオブジェクト (変数、配列、フィールド) |
-| paramType | Integer | &#8594;  | 引数タイプ |
+| object | Object | &#8594; | 使用する4Dオブジェクト (変数、配列、フィールド) |
+| paramType | Integer | &#8594; | 引数タイプ |
 
 <!-- END REF-->
 
@@ -84,7 +84,7 @@ SQLリクエスト内におかれた*?*記号が4Dオブジェクトの値で置
 |  |  |
 | --- | --- |
 | コマンド番号 | 823 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

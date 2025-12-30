@@ -5,15 +5,15 @@ slug: /commands/copy-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *oriBLOB*  ; *dstBLOB* ; *oriOffset*  ; *dstOffset* ; *tamanho* )<!-- END REF-->
+<!--REF #_command_.COPY BLOB.Syntax-->**COPY BLOB** ( *oriBLOB* : Blob  ; *dstBLOB* : Blob ; *oriOffset* : Integer  ; *dstOffset* : Integer ; *tamanho* : Integer )<!-- END REF-->
 <!--REF #_command_.COPY BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| oriBlob | Blob | &#8594;  | BLOB origem |
-| dstBlob | Blob | &#8594;  | BLOB destino |
-| oriOffset | Integer | &#8594;  | Posição da fonte para a cópia |
-| dstOffset | Integer | &#8594;  | Posição de destino para a cópia |
-| tamanho | Integer | &#8594;  | Número de bytes a copiar |
+| oriBlob | Blob | &#8594; | BLOB origem |
+| dstBlob | Blob | &#8594; | BLOB destino |
+| oriOffset | Integer | &#8594; | Posição da fonte para a cópia |
+| dstOffset | Integer | &#8594; | Posição de destino para a cópia |
+| tamanho | Integer | &#8594; | Número de bytes a copiar |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ A cópia começa na posição (expressa em relação ao início do BLOB fonte) e
 |  |  |
 | --- | --- |
 | Número do comando | 558 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

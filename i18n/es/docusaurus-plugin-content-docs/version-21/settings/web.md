@@ -294,7 +294,7 @@ Inicia y detiene el servidor REST. Ver [Configuración del servidor REST](../RES
 
 :::
 
-See [Users and sessions](../REST/authUsers.md) to know the recommended way to control and manage REST access in your 4D projects.
+Ver [Usuarios y sesiones](../REST/authUsers.md) para conocer la forma recomendada de controlar y administrar el acceso REST en sus proyectos 4D.
 
 #### Activar la autenticación REST mediante la función ds.authentify()
 

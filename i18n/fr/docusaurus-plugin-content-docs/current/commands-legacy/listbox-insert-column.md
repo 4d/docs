@@ -5,19 +5,19 @@ slug: /commands/listbox-insert-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( {* ;} *objet* ; *positionCol* ; *nomCol* ; *variableCol* ; *nomEnTête* ; *variableEntête* {; *nomPied* ; *variablePied*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN.Syntax-->**LISTBOX INSERT COLUMN** ( * ; *objet* : Text ; *positionCol* : Integer ; *nomCol* : Text ; *variableCol* : Array, Field, Variable, Pointer ; *nomEnTête* : Text ; *variableEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN** ( *objet* : Field, Variable ; *positionCol* : Integer ; *nomCol* : Text ; *variableCol* : Array, Field, Variable, Pointer ; *nomEnTête* : Text ; *variableEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionCol | Integer | &#8594;  | Emplacement de la colonne à insérer |
-| nomCol | Text | &#8594;  | Nom d’objet de la colonne |
-| variableCol | Array, Field, Variable, Pointer | &#8594;  | Nom de la variable tableau de la colonne ou champ ou variable |
-| nomEnTête | Text | &#8594;  | Nom d’objet de l’en-tête de la colonne |
-| variableEntête | Integer, Pointer | &#8594;  | Variable d’en-tête de la colonne |
-| nomPied | Text | &#8594;  | Nom d’objet du pied de la colonne |
-| variablePied | Variable, Pointer | &#8594;  | Variable du pied de la colonne |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594; | Emplacement de la colonne à insérer |
+| nomCol | Text | &#8594; | Nom d’objet de la colonne |
+| variableCol | Array, Field, Variable, Pointer | &#8594; | Nom de la variable tableau de la colonne ou champ ou variable |
+| nomEnTête | Text | &#8594; | Nom d’objet de l’en-tête de la colonne |
+| variableEntête | Integer, Pointer | &#8594; | Variable d’en-tête de la colonne |
+| nomPied | Text | &#8594; | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#8594; | Variable du pied de la colonne |
 
 <!-- END REF-->
 
@@ -102,6 +102,6 @@ Vous souhaitez insérer dynamiquement une colonne dans une list box de type tabl
 |  |  |
 | --- | --- |
 | Numéro de commande | 829 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

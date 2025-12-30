@@ -5,11 +5,11 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *startFrom* )} : Collection<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ( *startFrom* : Integer ) : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| startFrom | Integer | &#8594;  | 開始インデックス(指定した引数含む) |
+| startFrom | Integer | &#8594; | 開始インデックス(指定した引数含む) |
 | 戻り値 | Collection | &#8592; | 実際に渡された引数を格納した新しいコレクション |
 
 <!-- END REF-->
@@ -86,6 +86,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1790 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

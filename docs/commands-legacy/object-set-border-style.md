@@ -5,7 +5,7 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( {* ;} *object* ; *borderStyle* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *object* : Text ; *borderStyle* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *object* : Field, Variable ; *borderStyle* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ In the *borderStyle* parameter, pass the value of the border line style that you
 |  |  |
 | --- | --- |
 | Command number | 1262 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

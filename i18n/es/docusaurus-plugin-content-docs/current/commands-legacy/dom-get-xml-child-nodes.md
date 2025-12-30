@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-child-nodes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *refElement* ; *ArrTiposHijos* ; *arrRefsNodos* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *refElement* : Text ; *ArrTiposHijos* : Integer array ; *arrRefsNodos* : Text array )<!-- END REF-->
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement | Text | &#8594;  | Referencia del elemento XML |
+| refElement | Text | &#8594; | Referencia del elemento XML |
 | ArrTiposHijos | Integer array | &#8592; | Tipos de nodos hijos |
 | arrRefsNodos | Text array | &#8592; | Referencias o Valores de los nodos hijos |
 
@@ -68,6 +68,6 @@ Después de la ejecución de estas instrucciones:
 |  |  |
 | --- | --- |
 | Número de comando | 1081 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

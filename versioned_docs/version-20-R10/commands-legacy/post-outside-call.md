@@ -50,7 +50,7 @@ See example for [Semaphore](semaphore.md).
 |  |  |
 | --- | --- |
 | Command number | 329 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -5,13 +5,13 @@ slug: /commands/listbox-set-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET STATIC COLUMNS.Syntax-->**LISTBOX SET STATIC COLUMNS** ( {* ;} *object* ; *numColumn* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET STATIC COLUMNS.Syntax-->**LISTBOX SET STATIC COLUMNS** ( * ; *object* : Text ; *numColumn* : Integer )<br/>**LISTBOX SET STATIC COLUMNS** ( *object* : Field, Variable ; *numColumn* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET STATIC COLUMNS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| numColumn | Integer | &#8594;  | ドラッグで移動しない列数 |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| numColumn | Integer | &#8594; | ドラッグで移動しない列数 |
 
 <!-- END REF-->
 
@@ -33,6 +33,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1153 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

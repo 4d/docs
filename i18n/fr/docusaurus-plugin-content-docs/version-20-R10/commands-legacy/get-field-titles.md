@@ -33,6 +33,6 @@ Dans les deux cas, la commande ne retourne pas les champs déclarés invisibles.
 |  |  |
 | --- | --- |
 | Numéro de commande | 804 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

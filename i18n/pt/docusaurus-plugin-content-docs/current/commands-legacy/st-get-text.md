@@ -5,14 +5,14 @@ slug: /commands/st-get-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( {* ;} *objeto* {; *inicioSel* {; *fimSel*}} )  : Text<!-- END REF-->
+<!--REF #_command_.ST Get text.Syntax-->**ST Get text** ( * ; *objeto* : Text {; *inicioSel* : Integer {; *fimSel* : Integer}} )  : Text<br/>**ST Get text** ( *objeto* : Field, Variable {; *inicioSel* : Integer {; *fimSel* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.ST Get text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se nao, objeto é uma variável ou campo. |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificada) ou campo texto ou variável (se * for omitida) |
-| inicioSel | Integer | &#8594;  | Inicio da seleção |
-| fimSel | Integer | &#8594;  | final da seleção |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se nao, objeto é uma variável ou campo. |
+| objeto | any | &#8594; | Nome de objeto (se * for especificada) ou campo texto ou variável (se * for omitida) |
+| inicioSel | Integer | &#8594; | Inicio da seleção |
+| fimSel | Integer | &#8594; | final da seleção |
 | Resultado | Text | &#8592; | Texto incluindo etiquetas de estilo |
 
 <!-- END REF-->
@@ -67,7 +67,7 @@ No caso de erro, não modifica a variável. Quando ocorre um erro em uma variáv
 |  |  |
 | --- | --- |
 | Número do comando | 1116 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

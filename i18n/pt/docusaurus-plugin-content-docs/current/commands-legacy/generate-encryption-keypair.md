@@ -5,13 +5,13 @@ slug: /commands/generate-encryption-keypair
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *chavPriv* ; *chavPublica* {; *tamanho*} )<!-- END REF-->
+<!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Syntax-->**GENERATE ENCRYPTION KEYPAIR** ( *chavPriv* : Blob ; *chavPublica* : Blob {; *tamanho* : Integer} )<!-- END REF-->
 <!--REF #_command_.GENERATE ENCRYPTION KEYPAIR.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | chavPriv | Blob | &#8592; | BLOB que contém a chave privada |
 | chavPublica | Blob | &#8592; | BLOB que contém a chave pública |
-| tamanho | Integer | &#8594;  | Tamanho da chave (bits) [512...2048]. O valor normal é  512 |
+| tamanho | Integer | &#8594; | Tamanho da chave (bits) [512...2048]. O valor normal é  512 |
 
 <!-- END REF-->
 
@@ -58,6 +58,6 @@ Ver o exemplo do comando [ENCRYPT BLOB](encrypt-blob.md).
 |  |  |
 | --- | --- |
 | Número do comando | 688 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

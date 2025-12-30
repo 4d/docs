@@ -5,11 +5,11 @@ slug: /commands/copy-parameters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** {( *inicioDesde* )} : Collection<!-- END REF-->
+<!--REF #_command_.Copy parameters.Syntax-->**Copy parameters** ( *inicioDesde* : Integer ) : Collection<!-- END REF-->
 <!--REF #_command_.Copy parameters.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| inicioDesde | Integer | &#8594;  | Índice de inicio(incluido) |
+| inicioDesde | Integer | &#8594; | Índice de inicio(incluido) |
 | Resultado | Collection | &#8592; | Nueva colección que contiene los parámetros pasados realmente |
 
 <!-- END REF-->
@@ -86,6 +86,6 @@ Como el comando devuelve una colección, se puede utilizar con **.join()** para 
 |  |  |
 | --- | --- |
 | Número de comando | 1790 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

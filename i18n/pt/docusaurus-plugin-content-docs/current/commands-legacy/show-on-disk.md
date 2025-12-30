@@ -5,12 +5,12 @@ slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *nomeRota* {; *} )<!-- END REF-->
+<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *nomeRota* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeRota | Text | &#8594;  | Rota de acesso ao item a exibir |
-| * | Operador | &#8594;  | Se o item é uma pasta, mostras os conteúdos |
+| nomeRota | Text | &#8594; | Rota de acesso ao item a exibir |
+| * | Operador | &#8594; | Se o item é uma pasta, mostras os conteúdos |
 
 <!-- END REF-->
 
@@ -54,7 +54,7 @@ A variável sistema OK assume o valor 1 se o comando for executado corretamente,
 |  |  |
 | --- | --- |
 | Número do comando | 922 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

@@ -171,6 +171,6 @@ Imagine que queira copiar *$sharedObj* em *$sharedCol mas* como eles pertencem a
 |  |  |
 | --- | --- |
 | Número do comando | 1225 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

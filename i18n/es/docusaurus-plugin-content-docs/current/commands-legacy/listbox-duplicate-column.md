@@ -5,19 +5,19 @@ slug: /commands/listbox-duplicate-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( {* ;} *objeto* ; *posCol* ; *nomCol* ; *varCol* ; *nomEncab* ; *varEncab* {; *nomPie* ; *varPie*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DUPLICATE COLUMN.Syntax-->**LISTBOX DUPLICATE COLUMN** ( * ; *objeto* : Text ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<br/>**LISTBOX DUPLICATE COLUMN** ( *objeto* : Field, Variable ; *posCol* : Integer ; *nomCol* : Text ; *varCol* : Array, Field, Variable, Pointer ; *nomEncab* : Text ; *varEncab* : Integer, Pointer {; *nomPie* : Text ; *varPie* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DUPLICATE COLUMN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| posCol | Integer | &#8594;  | Ubicación de la nueva columna duplicada |
-| nomCol | Text | &#8594;  | Nombre de la nueva columna |
-| varCol | Array, Field, Variable, Pointer | &#8594;  | Nombre de la variable array de la columna o campo o variable |
-| nomEncab | Text | &#8594;  | Nombre del objeto del encabezado de la columna |
-| varEncab | Integer, Pointer | &#8594;  | Variable del encabezado de la columna |
-| nomPie | Text | &#8594;  | Nombre del objeto del pie de la columna |
-| varPie | Variable, Pointer | &#8594;  | Variable del pie de la columna |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| posCol | Integer | &#8594; | Ubicación de la nueva columna duplicada |
+| nomCol | Text | &#8594; | Nombre de la nueva columna |
+| varCol | Array, Field, Variable, Pointer | &#8594; | Nombre de la variable array de la columna o campo o variable |
+| nomEncab | Text | &#8594; | Nombre del objeto del encabezado de la columna |
+| varEncab | Integer, Pointer | &#8594; | Variable del encabezado de la columna |
+| nomPie | Text | &#8594; | Nombre del objeto del pie de la columna |
+| varPie | Variable, Pointer | &#8594; | Variable del pie de la columna |
 
 <!-- END REF-->
 
@@ -91,6 +91,6 @@ Note que las variables de encabezado y de pie de página siempre se crean con un
 |  |  |
 | --- | --- |
 | Número de comando | 1273 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

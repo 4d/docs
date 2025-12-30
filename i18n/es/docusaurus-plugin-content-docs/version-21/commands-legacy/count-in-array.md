@@ -63,6 +63,6 @@ Desea contar las referencias a objetos en un array objeto:
 |  |  |
 | --- | --- |
 | Número de comando | 907 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

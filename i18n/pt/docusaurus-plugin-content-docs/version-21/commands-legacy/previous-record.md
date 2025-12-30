@@ -32,7 +32,7 @@ Se PREVIOUS RECORD move o ponteiro do registro atual antes da seleção atual, B
 |  |  |
 | --- | --- |
 | Número do comando | 110 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

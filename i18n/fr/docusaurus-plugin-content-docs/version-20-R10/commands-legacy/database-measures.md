@@ -333,6 +333,6 @@ Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1314 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

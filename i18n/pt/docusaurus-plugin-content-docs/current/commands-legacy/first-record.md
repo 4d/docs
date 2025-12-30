@@ -5,11 +5,11 @@ slug: /commands/first-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai mover o primeiro registro selecionado, ou a tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual vai mover o primeiro registro selecionado, ou a tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ O exemplo a seguir carrega o primeiro registro da tabela \[Clientes\]:
 |  |  |
 | --- | --- |
 | Número do comando | 50 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

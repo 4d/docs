@@ -5,7 +5,7 @@ slug: /commands/locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked.Syntax-->**Locked** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Locked.Syntax-->**Locked** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ During transaction processing, [LOAD RECORD](load-record.md) and **Locked** are 
 |  |  |
 | --- | --- |
 | Command number | 147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

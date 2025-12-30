@@ -5,11 +5,11 @@ slug: /commands/dom-get-previous-sibling-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *refElemento* {; *nomeElemIrmao* {; *valorElemIrmao*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get previous sibling XML element.Syntax-->**DOM Get previous sibling XML element** ( *refElemento* : Text {; *nomeElemIrmao* : Text {; *valorElemIrmao* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get previous sibling XML element.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
+| refElemento | Text | &#8594; | Referência de elemento XML |
 | nomeElemIrmao | Text | &#8592; | Nome do elemento XML irmão |
 | valorElemIrmao | Text | &#8592; | Valor do elemento XML irmão |
 | Resultado | Text | &#8592; | Elemento de referência XML irmão |
@@ -39,7 +39,7 @@ Se o comando for executado corretamente e se o elemento referenciado não for o 
 |  |  |
 | --- | --- |
 | Número do comando | 924 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

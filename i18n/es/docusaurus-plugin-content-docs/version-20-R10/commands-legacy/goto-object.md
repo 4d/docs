@@ -55,6 +55,6 @@ Ver el ejemplo del comando [REJECT](reject.md "REJECT").
 |  |  |
 | --- | --- |
 | Número de comando | 206 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

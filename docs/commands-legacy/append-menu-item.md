@@ -5,7 +5,7 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* ; *itemText* {; *subMenu* {; *process* {; *}}} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer ; *itemText* : Text {; *subMenu* : Text {; *process* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -85,7 +85,7 @@ Then, in any form or project method, you can write:
 |  |  |
 | --- | --- |
 | Command number | 411 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

@@ -57,6 +57,6 @@ con:
 |  |  |
 | --- | --- |
 | Número de comando | 311 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

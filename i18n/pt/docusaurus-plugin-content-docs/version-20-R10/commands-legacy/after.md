@@ -30,6 +30,6 @@ Para que seja gerado o ciclo de execução **After**, tenha certeza de que o eve
 |  |  |
 | --- | --- |
 | Número do comando | 31 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

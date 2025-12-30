@@ -5,7 +5,7 @@ slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* )<!-- END REF-->
+<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *window* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ The command toggles the window state:
 |  |  |
 | --- | --- |
 | Command number | 1829 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

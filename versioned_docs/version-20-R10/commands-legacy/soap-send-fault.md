@@ -49,6 +49,6 @@ To go back to the example of the “Square\_root” Web Service provided in the 
 |  |  |
 | --- | --- |
 | Command number | 781 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

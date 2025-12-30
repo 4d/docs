@@ -5,11 +5,11 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTabela* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTabela* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela | Integer | &#8594;  | Número de tabela |
+| numTabela | Integer | &#8594; | Número de tabela |
 | Resultado | Boolean | &#8592; | True = tabela existe no banco de dados; False = tabela não existe no banco de dados |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Este comando permite detectar as eventuais eliminações de tabelas, que criam q
 |  |  |
 | --- | --- |
 | Número do comando | 999 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

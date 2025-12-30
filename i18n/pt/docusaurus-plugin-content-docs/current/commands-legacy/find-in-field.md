@@ -5,13 +5,12 @@ slug: /commands/find-in-field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *campoAlvo* ; *valor* ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in field.Syntax-->**Find in field** ( *campoAlvo* : Field ; *valor* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in field.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoAlvo | Field | &#8594;  | Campo Alvo no qual executar a pesquisa |
-| valor | Field, Variable | &#8594;  | valor a procurar |
-| &#8592; | valor encontrado |
+| campoAlvo | Field | &#8594; | Campo Alvo no qual executar a pesquisa |
+| valor | Field, Variable | &#8596; | *in:* Value to search<br/>*out:* Value found |
 | Resultado | Integer | &#8592; | Número do registro encontrado, ou -1 se nenhum registro for encontrado |
 
 <!-- END REF-->
@@ -68,6 +67,6 @@ Tenha em conta >= permite cobrir todos os casos. De fato, a função devolve um 
 |  |  |
 | --- | --- |
 | Número do comando | 653 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

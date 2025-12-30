@@ -48,6 +48,6 @@ Le paramètre optionnel *fixeSousForm* vous permet de définir une option suppl�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1240 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

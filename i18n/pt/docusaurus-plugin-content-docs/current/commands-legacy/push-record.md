@@ -5,11 +5,11 @@ slug: /commands/push-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.PUSH RECORD.Syntax-->**PUSH RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.PUSH RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual empilhar os registros, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual empilhar os registros, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -39,6 +39,6 @@ O seguinte exemplo empilha o registro de um cliente:
 |  |  |
 | --- | --- |
 | Número do comando | 176 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

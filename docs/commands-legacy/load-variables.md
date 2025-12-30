@@ -5,7 +5,7 @@ slug: /commands/load-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
+<!--REF #_command_.LOAD VARIABLES.Syntax-->**LOAD VARIABLES** ( *document* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
 <!--REF #_command_.LOAD VARIABLES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ If the variables are loaded properly, the OK system variable is set to 1; otherw
 |  |  |
 | --- | --- |
 | Command number | 74 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

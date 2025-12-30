@@ -5,13 +5,13 @@ slug: /commands/set-picture-metadata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *picture* ; *metaName* ; *metaContents* {; *metaName2* ; *metaContents2* ; ... ; *metaNameN* ; *metaContentsN*} )<!-- END REF-->
+<!--REF #_command_.SET PICTURE METADATA.Syntax-->**SET PICTURE METADATA** ( *picture* : Picture ; *metaName* : Text ; *metaContents* : Variable {; ...(*metaName* : Text, *metaContents* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PICTURE METADATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture | &#8594;  | メタデータを設定するピクチャ |
-| metaName | Text | &#8594;  | 設定するブロックの名前またはパス |
-| metaContents | Variable | &#8594;  | メタデータの内容 |
+| picture | Picture | &#8594; | メタデータを設定するピクチャ |
+| metaName | Text | &#8594; | 設定するブロックの名前またはパス |
+| metaContents | Variable | &#8594; | メタデータの内容 |
 
 <!-- END REF-->
 
@@ -87,7 +87,7 @@ DOM参照を使用してGPSブロックを設定します:
 |  |  |
 | --- | --- |
 | コマンド番号 | 1121 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

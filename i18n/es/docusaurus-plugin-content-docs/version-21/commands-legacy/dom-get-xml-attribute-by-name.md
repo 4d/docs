@@ -55,7 +55,7 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 |  |  |
 | --- | --- |
 | Número de comando | 728 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

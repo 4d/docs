@@ -59,6 +59,6 @@ Cet exemple compare un hash de mot de passe créé par la commande [Generate pas
 |  |  |
 | --- | --- |
 | Numéro de commande | 1534 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

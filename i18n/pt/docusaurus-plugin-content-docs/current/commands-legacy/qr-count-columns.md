@@ -5,11 +5,11 @@ slug: /commands/qr-count-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Count columns.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
+| area | Integer | &#8594; | Referência da área |
 | Resultado | Integer | &#8592; | Número de colunas em área |
 
 <!-- END REF-->
@@ -39,7 +39,7 @@ O código a seguir permite adicionar uma coluna adicional à direita da última 
 |  |  |
 | --- | --- |
 | Número do comando | 764 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

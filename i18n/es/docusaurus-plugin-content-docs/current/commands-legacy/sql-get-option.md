@@ -5,11 +5,11 @@ slug: /commands/sql-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *opcion* ; *valor* )<!-- END REF-->
+<!--REF #_command_.SQL GET OPTION.Syntax-->**SQL GET OPTION** ( *opcion* : Integer ; *valor* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.SQL GET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| opcion | Integer | &#8594;  | Número de opción |
+| opcion | Integer | &#8594; | Número de opción |
 | valor | Integer, Text | &#8592; | Valor de la opción |
 
 <!-- END REF-->
@@ -33,7 +33,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 819 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

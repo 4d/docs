@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Time.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| horaText | Text, Integer | &#8594;  | Hora para a qual devolver o número de segundos |
+| horaText | Text, Integer | &#8594; | Hora para a qual devolver o número de segundos |
 | Resultado | Time | &#8592; | Hora especificada por horaString |
 
 <!-- END REF-->
@@ -57,6 +57,6 @@ Pode expressar todo valor numérico como uma hora:
 |  |  |
 | --- | --- |
 | Número do comando | 179 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

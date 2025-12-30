@@ -5,11 +5,11 @@ slug: /commands/variance
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Variance.Syntax-->**Variance** ( *séries* ) : Real<!-- END REF-->
+<!--REF #_command_.Variance.Syntax-->**Variance** ( *séries* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &#8594;  | Valeurs dont vous voulez obtenir la variance |
+| séries | Field, Array | &#8594; | Valeurs dont vous voulez obtenir la variance |
 | Résultat | Real | &#8592; | Variance de séries |
 
 <!-- END REF-->
@@ -72,6 +72,6 @@ Cet exemple vous permet d’obtenir la variance des valeurs placées dans un tab
 |  |  |
 | --- | --- |
 | Numéro de commande | 27 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,15 +5,15 @@ slug: /commands/object-set-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( {* ;} *objeto* ; *corPrimeiroPlano* {; *corFundo* {; *corFundoAlternativo*}} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RGB COLORS.Syntax-->**OBJECT SET RGB COLORS** ( * ; *objeto* : Text ; *corPrimeiroPlano* : Text, Integer {; *corFundo* : Text, Integer {; *corFundoAlternativo* : Text, Integer}} )<br/>**OBJECT SET RGB COLORS** ( *objeto* : Field, Variable ; *corPrimeiroPlano* : Text, Integer {; *corFundo* : Text, Integer {; *corFundoAlternativo* : Text, Integer}} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RGB COLORS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| corPrimeiroPlano | Text, Integer | &#8594;  | Valor de cor RGB para a cor de Primeiro Plano |
-| corFundo | Text, Integer | &#8594;  | Valor RGB da cor de Fundo |
-| corFundoAlternativo | Text, Integer | &#8594;  | Valor RGB da cor de fundo alternativa |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| corPrimeiroPlano | Text, Integer | &#8594; | Valor de cor RGB para a cor de Primeiro Plano |
+| corFundo | Text, Integer | &#8594; | Valor RGB da cor de Fundo |
+| corFundoAlternativo | Text, Integer | &#8594; | Valor RGB da cor de fundo alternativa |
 
 <!-- END REF-->
 
@@ -110,6 +110,6 @@ Muda o fundo transparente com uma cor de fonte clara:
 |  |  |
 | --- | --- |
 | Número do comando | 628 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

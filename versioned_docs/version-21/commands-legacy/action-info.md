@@ -71,6 +71,6 @@ You want to know if the copy action is available (i.e. if some data is selected)
 |  |  |
 | --- | --- |
 | Command number | 1442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -35,7 +35,7 @@ A l'origine, cette commande était utile pour "replacer" dans la sélection cour
 |  |  |
 | --- | --- |
 | Numéro de commande | 189 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

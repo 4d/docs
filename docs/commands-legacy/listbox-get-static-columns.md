@@ -5,7 +5,7 @@ slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get static columns** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get static columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ However, the command does not take into account the visible/invisible status of 
 |  |  |
 | --- | --- |
 | Command number | 1154 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

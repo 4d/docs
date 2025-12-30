@@ -27,6 +27,6 @@ Uma sequência de instruções SQL deve estar rodeada pelas palavras chaves [Beg
 |  |  |
 | --- | --- |
 | Número do comando | 949 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

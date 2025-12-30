@@ -73,6 +73,6 @@ Setting several attribute/value pairs:
 |  |  |
 | --- | --- |
 | Command number | 1192 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

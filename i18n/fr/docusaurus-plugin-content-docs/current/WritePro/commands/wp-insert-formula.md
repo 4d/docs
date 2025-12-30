@@ -4,7 +4,7 @@ title: WP Insert formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* ; *formula* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* : Object ; *formula* : Object ; *mode* : Real {; *rangeUpdate* : Real} ) : Object<!-- END REF-->
 
 <!--REF #_command_.WP Insert formula.Params-->
 
@@ -12,8 +12,8 @@ displayed_sidebar: docs
 | ----------- | ------ | --------------------------- | ------------------------------------------------------------------ |
 | targetObj   | Object | &#8594; | Plage ou élément ou document 4D Write Pro                          |
 | formula     | Object | &#8594; | Objet de formule OU Objet avec des propriétés de formule et de nom |
-| mode        | Number | &#8594; | Mode d'insertion                                                   |
-| rangeUpdate | Number | &#8594; | Inclut ou exclut le contenu inséré dans la plage                   |
+| mode        | Real   | &#8594; | Mode d'insertion                                                   |
+| rangeUpdate | Real   | &#8594; | Inclut ou exclut le contenu inséré dans la plage                   |
 | Résultat    | Object | &#8592; | Objet de plage de texte représentant le résultat de la formule     |
 
 <!-- END REF-->

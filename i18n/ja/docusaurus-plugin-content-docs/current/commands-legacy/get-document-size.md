@@ -5,12 +5,12 @@ slug: /commands/get-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* {; *} ) : Real<!-- END REF-->
+<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* : Text, Time {; *} ) : Real<!-- END REF-->
 <!--REF #_command_.Get document size.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text, Time | &#8594;  | ドキュメント参照番号 または、ドキュメントの名前 |
-| * | 演算子 | &#8594;  | Mac OSのみ: 省略した場合、データフォークのサイズ 指定した場合、リソースフォークのサイズ |
+| document | Text, Time | &#8594; | ドキュメント参照番号 または、ドキュメントの名前 |
+| * | 演算子 | &#8594; | Mac OSのみ: 省略した場合、データフォークのサイズ 指定した場合、リソースフォークのサイズ |
 | 戻り値 | Real | &#8592; | ドキュメントのサイズ(バイト単位) |
 
 <!-- END REF-->
@@ -35,7 +35,7 @@ Macintoshでは、任意の引数 *\** を渡さない場合、データフォ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 479 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

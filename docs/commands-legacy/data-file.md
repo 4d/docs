@@ -5,7 +5,7 @@ slug: /commands/data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Data file.Syntax-->**Data file** {( *segment* )} : Text<!-- END REF-->
+<!--REF #_command_.Data file.Syntax-->**Data file** ( *segment* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ If, for example, you are working with the database located in the folder Documen
 |  |  |
 | --- | --- |
 | Command number | 490 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

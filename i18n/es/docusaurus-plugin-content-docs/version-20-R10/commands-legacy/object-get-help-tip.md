@@ -42,6 +42,6 @@ El título de un botón imagen se guarda en forma de mensaje de ayuda. Este tít
 |  |  |
 | --- | --- |
 | Número de comando | 1182 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

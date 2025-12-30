@@ -5,7 +5,7 @@ slug: /commands/listbox-get-column-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( {* ;} *object* {; *minWidth* {; *maxWidth*}} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get column width.Syntax-->**LISTBOX Get column width** ( * ; *object* : Text {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<br/>**LISTBOX Get column width** ( *object* : Field, Variable {; *minWidth* : Integer {; *maxWidth* : Integer}} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get column width.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ If no minimum and/or maximum value has been set for the column, the correspondin
 |  |  |
 | --- | --- |
 | Command number | 834 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

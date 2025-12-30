@@ -5,13 +5,13 @@ slug: /commands/load-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*laTable* ;} *ensemble* ; *nomFichier* )<!-- END REF-->
+<!--REF #_command_.LOAD SET.Syntax-->**LOAD SET** ( {*laTable* : Table ;} *ensemble* : Text ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.LOAD SET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
-| ensemble | Text | &#8594;  | Nom de l'ensemble à créer en mémoire |
-| nomFichier | Text | &#8594;  | Document disque contenant l'ensemble |
+| laTable | Table | &#8594; | Table à laquelle appartient l'ensemble ou Table par défaut si ce paramètre est omis |
+| ensemble | Text | &#8594; | Nom de l'ensemble à créer en mémoire |
+| nomFichier | Text | &#8594; | Document disque contenant l'ensemble |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ Si l'utilisateur clique sur Annuler dans la boîte de dialogue d'ouverture de fi
 |  |  |
 | --- | --- |
 | Numéro de commande | 185 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -72,7 +72,7 @@ title: リストボックス
 > 配列タイプのリストボックスは、特別なメカニズムをもつ [階層モード](listbox_overview.md#階層リストボックス) で表示することができます。
 
 配列タイプのリストボックスでは、入力あるいは表示される値は 4Dランゲージで制御します。 列に [選択リスト](properties_DataSource.md#選択リスト) を割り当てて、データ入力を制御することもできます。
-The values of columns are managed using high-level List box commands (such as [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) or `LISTBOX DELETE ROWS`) as well as array manipulation commands. たとえば、列の内容を初期化するには、以下の命令を使用できます:
+リストボックスのハイレベルコマンド ([`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) や `LISTBOX DELETE ROWS` 等) や配列操作コマンドを使用して、列の値を管理します。 たとえば、列の内容を初期化するには、以下の命令を使用できます:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -136,7 +136,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | [ヘッダーを表示](properties_Headers.md#ヘッダーを表示)                                 | X         | X             | X                            |
 | [フッターを表示](properties_Footers.md#フッターを表示)                                 | X         | X             | X                            |
 | [行をダブルクリック](properties_ListBox.md#行をダブルクリック)                             |           | X             |                              |
-| [Draggable](properties_Action.md#draggable)                              | X         | X             | X                            |
+| [ドラッグ有効](properties_Action.md#ドラッグ有効)                                    | X         | X             | X                            |
 | [ドロップ有効](properties_Action.md#ドロップ有効)                                    | X         | X             | X                            |
 | [フォーカス可](properties_Entry.md#フォーカス可)                                     | X         | X             | X                            |
 | [フォント](properties_Text.md#フォント)                                          | X         | X             | X                            |
@@ -195,7 +195,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 > リストボックスの列、ヘッダーおよびフッターにもそれぞれ固有のプロパティがあります。
 
-### Supported Form Events {#supported-form-events}
+### サポートされるフォームイベント {#supported-form-events}
 
 | フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                           | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -232,7 +232,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | On Scroll            | <li>[horizontalScroll](#追加プロパティ)</li><li>[verticalScroll](#追加プロパティ)</li>                                                                 |                                                                                                                              |
 | On Unload            |                                                                                                                                          |                                                                                                                              |
 
-#### Additional Properties {additional-properties}
+#### 追加プロパティ {additional-properties}
 
 リストボックスやリストボックス列オブジェクトにて発生するフォームイベントは、次の追加プロパティを返すことがあります:
 
@@ -266,11 +266,11 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 > 配列型リストボックスのカラムについては、[式タイプ](properties_Object.md#式の型-式タイプ)
 > (テキスト、数値、整数、ブール、ピクチャー、時間、日付、あるいはオブジェクト) を定義することができます。
 
-### Column Specific Properties {#column-specific-properties}
+### カラム特有のプロパティ {#column-specific-properties}
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_BackgroundAndBorder.md#background-color--fill-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type-list) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-list-of-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-falsetext-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型式タイプ) - [CSSクラス](properties_Object.md#cssクラス) - [選択リスト](properties_DataSource.md#選択リスト-静的リスト) - [式](properties_DataSource.md#式) - [幅](properties_CoordinatesAndSizing.md#幅) - [入力可](properties_Entry.md#入力可) - [フォーカス可](properties_Entry.md#フォーカス可) - [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) - [デフォルト値](properties_DataSource.md#デフォルト値) - [選択リスト](properties_DataSource.md#選択リスト) - [式](properties_DataSource.md#式) - [データタイプ (リスト)](properties_DataSource.md#データタイプ-リスト) - [関連付け](properties_DataSource.md#関連付け) - [自動行高](properties_CoordinatesAndSizing.md#自動行高) - [最小幅](properties_CoordinatesAndSizing.md#最小幅) - [最大幅](properties_CoordinatesAndSizing.md#最大幅) - [横方向パディング](properties_CoordinatesAndSizing.md#横方向パディング) - [縦方向パディング](properties_CoordinatesAndSizing.md#縦方向パディング) - [サイズ変更可](properties_ResizingOptions.md#サイズ変更可) - [指定リスト](properties_RangeOfValues.md#指定リスト) - [除外リスト](properties_RangeOfValues.md#除外リスト) - [表示タイプ](properties_Display.md#d表示タイプ) - [文字フォ－マット](properties_Display.md#文字フォ－マット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [数値フォーマット](properties_Display.md#数値フォーマット) - [テキスト (True時)/テキスト (False時)](properties_Display.md#テキスト-true時-テキスト-false時) - [ピクチャーフォーマット](properties_Display.md#ピクチャーフォーマット) - [非表示](properties_Display.md#表示状態) - [ワードラップ](properties_Display.md#ワードラップ) - [エリプシスを使用して省略](properties_Display.md#エリプシスを使用して省略) - [背景色](properties_BackgroundAndBorder.md#背景色-塗りカラー) - [交互に使用する背景色](properties_BackgroundAndBorder.md#交互に使用する背景色) - [背景色式](properties_BackgroundAndBorder.md#背景色式) - [行背景色配列](properties_BackgroundAndBorder.md#行背景色配列) - [フォント](properties_Text.md#フォント) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [行スタイル配列](properties_Text.md#行スタイル配列) - [スタイル式](properties_Text.md#スタイル式) - [フォントカラー](properties_Text.md#フォントカラー) - [行フォントカラー配列](properties_Text.md#行フォントカラー配列) - [横揃え](properties_Text.md#横揃え) - [縦揃え](properties_Text.md#縦揃え) - [マルチスタイル](properties_Text.md#マルチスタイル) - [メソッド](properties_Action.md#メソッド)
 
-### Supported Form Events {#supported-form-events-1}
+### サポートされるフォームイベント {#supported-form-events-1}
 
 | フォームイベント             | 返される追加のプロパティ(主なプロパティについては[Form event](../commands/form-event.md) を参照してください)                                           | コメント                                                                                                                         |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
@@ -313,7 +313,7 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 
 ランタイムにおいてヘッダーで発生したイベントは、その列のオブジェクトメソッド が受け取ります。
 
-When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used with a header, it is applied to all headers, regardless of the individual element set by the command. たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
+ヘッダーに [`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのヘッダーが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"header3";False)` という命令の場合、指定したヘッダーだけではなく、*header3* が属するリストボックスの全ヘッダーを非表示にします。
 
 ### ヘッダー特有のプロパティ
 
@@ -349,7 +349,7 @@ When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used 
 
 ランタイムにおいてフッターで発生したイベントは、その列のオブジェクトメソッド が受け取ります。
 
-When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
+フッターに [`OBJECT SET VISIBLE`](../commands/object-set-visible) コマンドを使用すると、このコマンドに渡した引数に関わらず、そのリストボックスのすべてのフッターが対象になります。 たとえば、`OBJECT SET VISIBLE(*;"footer3";False)` という命令の場合、指定したフッターだけではなく、*footer3* が属するリストボックスの全フッターを非表示にします。
 
 ### フッター特有のプロパティ
 
@@ -461,7 +461,7 @@ When the [`OBJECT SET VISIBLE`](../commands/object-set-visible) command is used 
  End if
 ```
 
-> The [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command scrolls the list box rows so that the first selected row or a specified row is displayed.
+> [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) コマンドは、最初に選択された行または指定された行を表示するようにリストボックスをスクロールします。
 
 ### 選択行の見た目のカスタマイズ
 
@@ -693,14 +693,14 @@ End if
 
 ### 詳細モード
 
-このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command is used to control the printing of the object.
+このモードでは、リストボックスの印刷は `Print object` コマンドを使用してプログラムにより実行されます (プロジェクトフォームとテーブルフォームがサポートされています)。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドはオブジェクトの印刷をコントロールするために使用されるコマンドです。
 
 このモードでは:
 
-- オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 The size of the object actually printed can be obtained via the [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command.
+- オブジェクトの高さよりも印刷する行数が少ない場合、リストボックスオブジェクトの高さは自動で減少させられます ("空白" 行は印刷されません)。 他方、オブジェクトの内容に基づき高さが自動で増大することはありません。 実際に印刷されたオブジェクトのサイズは [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用することで取得することができます。
 - リストボックスオブジェクトは "そのまま" 印刷されます。言い換えれば、ヘッダーやグリッド線の表示、表示/非表示行など、現在の表示設定が考慮されます。
-  These parameters also include the first row to be printed: if you call the [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) command before launching the printing, the first row printed in the list box will be the one designated by the command.
-- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 The [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) command can be used to check the status of the printing while it is underway.
+  これらの設定には印刷される最初の行も含みます。印刷を実行する前に [`OBJECT SET SCROLL POSITION`](../commands/object-set-scroll-position) を呼び出すと、リストボックスに印刷される最初の行はコマンドで指定した行になります。
+- 自動メカニズムにより、表示可能な行以上の行数を含むリストボックスの印刷が容易になります。連続して `Print object` を呼び出し、呼び出し毎に別の行のまとまりを印刷することができます。 [`LISTBOX GET PRINT INFORMATION`](../commands/listbox-get-print-information) コマンドを使用して印刷の状態を進行中にチェックすることができます。
 
 ## 階層リストボックス
 
@@ -716,7 +716,7 @@ End if
 
 - フォームエディターのプロパティリストを使用して階層要素を手作業で設定する (または JSON フォームを編集する)。
 - フォームエディターのリストボックス管理メニューを使用して階層を生成する。
-- Use the [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) and [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) commands.
+- [`LISTBOX SET HIERARCHY`](../commands-legacy/listbox-set-hierarchy.md) と [`LISTBOX GET HIERARCHY`](../commands-legacy/listbox-get-hierarchy.md) コマンドを使用する。
 
 #### "階層リストボックス" プロパティによる階層化
 
@@ -839,7 +839,7 @@ Variable 2 も常に表示され、入力できます。 これは二番目の�
 
 > 親が折りたたまれているために行が非表示になっていると、それらは選択から除外されます。 (直接あるいはスクロールによって) 表示されている行のみを選択できます。 言い換えれば、行を選択かつ隠された状態にすることはできません。
 
-As with selections, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command will return the same values for a hierarchical list box and a non-hierarchical list box. This means that in both of the examples below, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) will return the same position: (3;2).
+選択と同様に、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは階層リストボックスと非階層リストボックスにおいて同じ値を返します。 つまり以下の両方の例題で、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は同じ位置 (3;2) を返します。
 
 *非階層表示:*
 ![](../assets/en/FormObjects/hierarch9.png)
@@ -851,11 +851,11 @@ As with selections, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-ce
 
 #### ブレーク行の管理
 
-If the user selects a break row, [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns the first occurrence of the row in the corresponding array. 以下のケースで:
+ユーザーがブレーク行を選択すると、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は対応する配列の最初のオカレンスを返します。 以下のケースで:
 
 ![](../assets/en/FormObjects/hierarch11.png)
 
-... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) returns (2;4). To select a break row by programming, you will need to use the [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) command.
+... [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) は (2;4) を返します。 プログラムでブレーク行を選択するには [`LISTBOX SELECT BREAK`](../commands/listbox-select-break) コマンドを使用する必要があります。
 
 ブレーク行はリストボックスのグラフィカルな表示 (スタイルやカラー) を管理する内部的な配列では考慮されません。 しかし、オブジェクトのグラフィックを管理するオブジェクト (フォーム) テーマのコマンドを使用してブレーク行の表示を変更できます。 階層を構成する配列に対して、適切なコマンドを実行します。
 
@@ -884,19 +884,19 @@ If the user selects a break row, [`LISTBOX GET CELL POSITION`](../commands/listb
 
 `On Expand` や `On Collapse` フォームイベントを使用して階層リストボックスの表示を最適化できます。
 
-階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 This makes it difficult to build large hierarchical list boxes based on arrays generated from data (through the [`SELECTION TO ARRAY`](../commands/selection-to-array) command), not only because of the display speed but also the memory used.
+階層リストボックスはその配列の内容から構築されます。 そのためこれらの配列すべてがメモリにロードされる必要があります。 大量のデータから ([`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドを使用して) 生成される配列をもとに階層リストボックスを構築するのは、表示速度だけでなくメモリ使用量の観点からも困難が伴います。
 
-`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 In the context of these events, the [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell where the user clicked in order to expand or collapse a row.
+`On Expand` と `On Collapse` フォームイベントを使用することで、この制限を回避できます。たとえば、ユーザーのアクションに基づいて階層の一部だけを表示したり、必要に応じて配列をロード/アンロードできます。 これらのイベントのコンテキストでは、[`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは、行を展開/折りたたむためにユーザーがクリックしたセルを返します。
 
 この場合、開発者がコードを使用して配列を空にしたり値を埋めたりしなければなりません。 実装する際注意すべき原則は以下のとおりです:
 
 - リストボックスが表示される際、先頭の配列のみ値を埋めます。 しかし 2番目の配列を空の値で生成し、リストボックスに展開/折りたたみアイコンが表示されるようにしなければなりません:
   ![](../assets/en/FormObjects/hierarch15.png)
 
-- ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned and lets you build the appropriate hierarchy: you fill the first array with the repeated values and the second with the values sent from the [`SELECTION TO ARRAY`](../commands/selection-to-array) command and you insert as many rows as needed in the list box using the [`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) command.
+- ユーザーが展開アイコンをクリックすると `On Expand` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドはクリックされたセルを返すので、適切な階層を構築します: 先頭の配列に繰り返しの値を設定し、2番目の配列には [`SELECTION TO ARRAY`](../commands/selection-to-array) コマンドから得られる値を設定します。そして[`LISTBOX INSERT ROWS`](../commands/listbox-insert-rows) コマンドを使用して必要なだけ行を挿入します。
   ![](../assets/en/FormObjects/hierarch16.png)
 
-- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 The [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) command returns the cell concerned: you remove as many rows as needed from the list box using the [`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) command.
+- ユーザーが折りたたみアイコンをクリックすると `On Collapse` イベントが生成されます。 [`LISTBOX GET CELL POSITION`](../commands/listbox-get-cell-position) コマンドは該当するセルを返します。そして[`LISTBOX DELETE ROWS`](../commands/listbox-delete-rows) コマンドを使用して必要なだけ行をリストボックスから削除することができます。
 
 ## オブジェクト配列の使用
 
@@ -923,10 +923,10 @@ If the user selects a break row, [`LISTBOX GET CELL POSITION`](../commands/listb
 これらのプロパティを定義するには、適切な属性をオブジェクト内に設定する必要があります (使用可能な属性は以下に一覧としてまとめてあります)。  たとえば、以下ような簡単なコードを使用してオブジェクトカラム内に "Hello World!" 書き込むことができます:
 
 ```4d
-ARRAY OBJECT(obColumn;0) //column array
- var $ob : Object //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
+ARRAY OBJECT(obColumn;0) //カラム配列
+ var $ob : Object //第一要素
+ OB SET($ob;"valueType";"text") //値の型を定義 (必須)
+ OB SET($ob;"value";"Hello World!") //値を定義
  APPEND TO ARRAY(obColumn;$ob)  
 ```
 
@@ -1005,11 +1005,11 @@ ARRAY OBJECT(obColumn;0) //column array
 セルの値は "value" 属性に保存されています。 この属性は入力と出力に使用されるほか、 この属性は入力と出力に使用されるほか、 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。 リストを使用する際のデフォルト値を定義するのにも使用できます (以下参照)。
 
 ```4d
- ARRAY OBJECT(obColumn;0) //column array
+ ARRAY OBJECT(obColumn;0) //カラム配列
  var $ob1;$ob2;$ob3 : Object
  var $entry:="Hello world!"
  OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ OB SET($ob1;"value";$entry) // ユーザーが新しい値を入力した場合、編集された値は $entry に格納されます
 
  OB SET($ob2;"valueType";"real")
  OB SET($ob2;"value";2/3)
@@ -1100,7 +1100,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	APPEND TO ARRAY($ChoiceList;100)
 	var $ob : Object
 	OB SET($ob;"valueType";"integer")
-	OB SET($ob;"value";10) //10 as default value
+	OB SET($ob;"value";10) //10 をデフォルト値として使用
 	OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
@@ -1142,7 +1142,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
 	var $ob : Object
 	OB SET($ob;"valueType";"integer")
 	OB SET($ob;"saveAs";"reference")
-	OB SET($ob;"value";2) //displays London by default
+	OB SET($ob;"value";2) //デフォルトで London を表示
 	OB SET($ob;"requiredListReference";<>List)
 ```
 

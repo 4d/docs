@@ -5,16 +5,16 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* ; *dataPath* {; *newPassPhrase* {; *archiveFolder* {; *curPassPhrase* {; *methodName*}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* ; *dataPath* {; *newDataKey* {; *archiveFolder* {; *curDataKey* {; *methodName*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newPassPhrase* : テキスト, オブジェクト {; *archiveFolder* : Text {; *curPassPhrase* : テキスト, オブジェクト {; *methodName* : Text}}}} ) : Text<br/>**Encrypt data file** ( *structurePath* : Text ; *dataPath* : Text {; *newDataKey* : テキスト, オブジェクト {; *archiveFolder* : Text {; *curDataKey* : テキスト, オブジェクト {; *methodName* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| structurePath | Text | &#8594;  | ストラクチャーファイルのパス名 |
-| dataPath | Text | &#8594;  | 暗号化するデータファイルへのパス名 |
-| newPassPhrase &#124; newDataKey | テキスト, オブジェクト | &#8594;  | 更新したい場合: 新しいパスフレーズ (テキスト)または新しい暗号化キー(オブジェクト) |
-| archiveFolder | Text | &#8594;  | 元のファイルを保存しておくフォルダのパス名 |
-| curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &#8594;  | カレントのパスフレーズ(テキスト)またはカレントの暗号化キー(オブジェクト) |
-| methodName | Text | &#8594;  | 4Dコールバックメソッド名 |
+| structurePath | Text | &#8594; | ストラクチャーファイルのパス名 |
+| dataPath | Text | &#8594; | 暗号化するデータファイルへのパス名 |
+| newPassPhrase &#124; newDataKey | テキスト, オブジェクト | &#8594; | 更新したい場合: 新しいパスフレーズ (テキスト)または新しい暗号化キー(オブジェクト) |
+| archiveFolder | Text | &#8594; | 元のファイルを保存しておくフォルダのパス名 |
+| curPassPhrase &#124; curDataKey | テキスト, オブジェクト | &#8594; | カレントのパスフレーズ(テキスト)またはカレントの暗号化キー(オブジェクト) |
+| methodName | Text | &#8594; | 4Dコールバックメソッド名 |
 | 戻り値 | Text | &#8592; | 元のファイルが保存されたフォルダの完全なパス名 |
 
 <!-- END REF-->
@@ -138,6 +138,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1610 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

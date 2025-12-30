@@ -64,6 +64,6 @@ displays the following window (on Macintosh) for 30 seconds:
 |  |  |
 | --- | --- |
 | Command number | 161 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

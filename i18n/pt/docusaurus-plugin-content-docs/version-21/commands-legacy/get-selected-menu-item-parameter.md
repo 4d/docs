@@ -31,6 +31,6 @@ Se nenhuma linha de menu for selecionada, o comando retorna uma cadeia vazia"".
 |  |  |
 | --- | --- |
 | Número do comando | 1005 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

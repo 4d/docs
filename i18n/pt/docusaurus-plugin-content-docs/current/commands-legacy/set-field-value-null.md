@@ -5,11 +5,11 @@ slug: /commands/set-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *campo* )<!-- END REF-->
+<!--REF #_command_.SET FIELD VALUE NULL.Syntax-->**SET FIELD VALUE NULL** ( *campo* : Field )<!-- END REF-->
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo onde o valor NULL vai ser atribuído |
+| campo | Field | &#8594; | Campo onde o valor NULL vai ser atribuído |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ O valor NULL é utilizado pelo motor SQL de 4D. Para maior informação, consult
 |  |  |
 | --- | --- |
 | Número do comando | 965 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

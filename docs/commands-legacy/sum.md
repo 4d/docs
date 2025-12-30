@@ -5,7 +5,7 @@ slug: /commands/sum
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *attributePath*} ) : Real<!-- END REF-->
+<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* : Field, Array {; *attributePath* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -78,7 +78,7 @@ For an example of computing an object field attribute, please refer to the examp
 |  |  |
 | --- | --- |
 | Command number | 1 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

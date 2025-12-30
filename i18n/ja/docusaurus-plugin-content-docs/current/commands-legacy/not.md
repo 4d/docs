@@ -5,11 +5,11 @@ slug: /commands/not
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Not.Syntax-->**Not** ( *boolean* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Not.Syntax-->**Not** ( *boolean* : Boolean ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| boolean | Boolean | &#8594;  | 否定を求めるブール値 |
+| boolean | Boolean | &#8594; | 否定を求めるブール値 |
 | 戻り値 | Boolean | &#8592; | 反対のブール値 |
 
 <!-- END REF-->
@@ -38,6 +38,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 34 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

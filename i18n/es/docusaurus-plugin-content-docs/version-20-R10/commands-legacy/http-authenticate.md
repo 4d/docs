@@ -63,6 +63,6 @@ Ejemplos de peticiones con autenticación:
 |  |  |
 | --- | --- |
 | Número de comando | 1161 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

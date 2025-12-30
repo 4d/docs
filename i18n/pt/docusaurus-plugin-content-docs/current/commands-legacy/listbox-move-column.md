@@ -5,13 +5,13 @@ slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( {* ;} *objeto* ; *colPosition* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *objeto* : Text ; *colPosition* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *objeto* : Field, Variable ; *colPosition* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome do objeto (se especificado *) ou<br/>Variável (se omitido *) da coluna a mover |
-| colPosition | Integer | &#8594;  | Nova localização da coluna |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome do objeto (se especificado *) ou<br/>Variável (se omitido *) da coluna a mover |
+| colPosition | Integer | &#8594; | Nova localização da coluna |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Você quer inverter a segunda e terceira coluna do list box:
 |  |  |
 | --- | --- |
 | Número do comando | 1274 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

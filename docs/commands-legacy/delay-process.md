@@ -5,7 +5,7 @@ slug: /commands/delay-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *process* ; *duration* )<!-- END REF-->
+<!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *process* : Integer ; *duration* : Real )<!-- END REF-->
 <!--REF #_command_.DELAY PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ See example for the command [Process number](../commands/process-number.md).
 |  |  |
 | --- | --- |
 | Command number | 323 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -71,6 +71,6 @@ Here is an example of how to process on the fly characters entered in a text fie
 |  |  |
 | --- | --- |
 | Command number | 655 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

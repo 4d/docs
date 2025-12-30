@@ -5,13 +5,13 @@ slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( {* ;} *objet* ; *taille* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *objet* : Text ; *taille* : Integer )<br/>**OBJECT SET FONT SIZE** ( *objet* : Field, Variable ; *taille* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
-| taille | Integer | &#8594;  | Taille de police en points |
+| * | Opérateur | &#8594; | Si spécifié = objet est un nom d'objet (chaîne) Si omis = objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| taille | Integer | &#8594; | Taille de police en points |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ L'exemple suivant définit la taille de police de tous les objets de formulaire 
 |  |  |
 | --- | --- |
 | Numéro de commande | 165 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

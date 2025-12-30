@@ -5,12 +5,12 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* {; *messageText*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *boolExpression* : Boolean {; *messageText* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| boolExpression | Boolean | &#8594;  | ブール式 |
-| messageText | Text | &#8594;  | エラーメッセージテキスト |
+| boolExpression | Boolean | &#8594; | ブール式 |
+| messageText | Text | &#8594; | エラーメッセージテキスト |
 | 戻り値 | Boolean | &#8592; | boolExpressionの評価結果 |
 
 <!-- END REF-->
@@ -47,7 +47,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1132 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

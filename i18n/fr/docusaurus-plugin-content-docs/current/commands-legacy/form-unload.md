@@ -27,6 +27,6 @@ L’appel de cette commande est nécessaire lors de l’utilisation de la comman
 |  |  |
 | --- | --- |
 | Numéro de commande | 1299 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

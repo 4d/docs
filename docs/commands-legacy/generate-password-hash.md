@@ -5,7 +5,7 @@ slug: /commands/generate-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *password* {; *options*} ) : Text<!-- END REF-->
+<!--REF #_command_.Generate password hash.Syntax-->**Generate password hash** ( *password* : Text {; *options* : Object} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate password hash.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ This example generates a password hash using bcrypt with a cost factor 4.
 |  |  |
 | --- | --- |
 | Command number | 1533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

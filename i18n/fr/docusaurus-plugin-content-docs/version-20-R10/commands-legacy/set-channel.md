@@ -177,7 +177,7 @@ Reportez-vous aux exemples des commandes [RECEIVE BUFFER](receive-buffer.md), [S
 |  |  |
 | --- | --- |
 | Numéro de commande | 77 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

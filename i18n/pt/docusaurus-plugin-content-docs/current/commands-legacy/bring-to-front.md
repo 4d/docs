@@ -5,11 +5,11 @@ slug: /commands/bring-to-front
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *processo* )<!-- END REF-->
+<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *processo* : Integer )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#8594;  | Número de processo do processo a passar ao primeiro plano |
+| processo | Integer | &#8594; | Número de processo do processo a passar ao primeiro plano |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ O exemplo a seguir é um método que pode ser executado desde um menu. Ele verif
 |  |  |
 | --- | --- |
 | Número do comando | 326 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

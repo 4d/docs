@@ -59,6 +59,6 @@ You want to get cache information for the database and all opened components:
 |  |  |
 | --- | --- |
 | Command number | 1402 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

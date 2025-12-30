@@ -78,6 +78,6 @@ Voici la méthode objet d’une case à cocher placée dans l’en-tête d’une
 |  |  |
 | --- | --- |
 | Numéro de commande | 238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

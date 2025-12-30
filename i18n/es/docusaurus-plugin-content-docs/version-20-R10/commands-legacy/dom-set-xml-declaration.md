@@ -43,6 +43,6 @@ El siguiente ejemplo define la codificación a utilizar y la opción autónomo d
 |  |  |
 | --- | --- |
 | Número de comando | 859 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

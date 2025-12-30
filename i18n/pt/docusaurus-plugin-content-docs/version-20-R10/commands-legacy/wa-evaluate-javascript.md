@@ -107,6 +107,6 @@ Logo pode avaliar o código JavaScript desde 4D:
 |  |  |
 | --- | --- |
 | Número do comando | 1029 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

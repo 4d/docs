@@ -148,7 +148,7 @@ title: フォームエディター
 
 1. ツールバーの矢印ツールをクリックします。<br/>![](../assets/en/FormEditor/selection.png)
 
-<br/>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer.
+<br/>マウスカーソルをフォームエリアに移動させると、カーソルは標準の矢印の形をしたポインターに変わります。
 
 2. 選択したいオブジェクトをクリックします。 サイズ変更ハンドルが表示され、オブジェクトが選択されたことを表わします。<br/>![](../assets/en/FormEditor/selectResize.png)
 
@@ -156,9 +156,8 @@ title: フォームエディター
 
 1. プロパティリストの一番上にあるオブジェクトリストドロップダウンリストからオブジェクト名を選択します。 この方法では、他のオブジェクトの下に隠れているオブジェクトや、カレントウィンドウの表示領域外に置かれているオブジェクトを選択することができます。
    オブジェクトの選択を解除するには、オブジェクト境界の外側をクリックするか、またはオブジェクト上で **Shift+クリック** します。
-   &#062; "デザインモードを検索" の結果ウィンドウでオブジェクトをダブルクリックして選択することもできます。
 
-> It is also possible to select objects by double-clicking them in the result window of "Find in design" operation.
+> "デザインモードを検索" の結果ウィンドウでオブジェクトをダブルクリックすることで選択することもできます。
 
 ### 複数オブジェクトの選択
 
@@ -248,7 +247,7 @@ title: フォームエディター
 オブジェクトのグループ化を解除するには:
 
 1. グループ化を解除したいグループオブジェクトを選択します。
-2. Choose **Ungroup** from the **Object** menu.<br/>OR<br/>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.<br/>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form. 4D は個々のオブジェクトの境界をハンドルで表わします。
+2. **オブジェクト** メニューから **グループ化解除** を選択します。<br/>または<br/>フォームエディターのツールバーで **グループ化解除** ボタン (**グループ化** ボタンのサブ項目) をクリックします。<br/>**グループ化解除** が選択不可の場合、選択したオブジェクトはグループに属していないことを意味します。 4D は個々のオブジェクトの境界をハンドルで表わします。
 
 ### オブジェクトの整列
 
@@ -315,7 +314,7 @@ title: フォームエディター
 
 1. 3つ以上のオブジェクトを選択し、希望する均等配置ツールをクリックします。
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>OR<br/>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<br/>![](../assets/en/FormEditor/distributionTool.png)<br/>または<br/>**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから均等揃えメニューコマンドを選択します。
    4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
 
 "整列と均等配置" ダイアログボックスを用いてオブジェクトを均等に配置するには:
@@ -353,7 +352,7 @@ title: フォームエディター
 
 :::note
 
-In binary databases, use **Ctrl+Click / Command+Click** to perform the same action.
+バイナリーデータベースにおいては、同じアクションを実行するためには **Ctrl+クリック / Command+クリック** を使用してください。
 
 :::
 

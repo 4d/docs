@@ -5,11 +5,11 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *bdFiltro* )} : Object<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** ( *bdFiltro* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| bdFiltro | Object | &#8594;  | Define a lista de atributos a ser retornada (filtrada por banco de dados) |
+| bdFiltro | Object | &#8594; | Define a lista de atributos a ser retornada (filtrada por banco de dados) |
 | Resultado | Object | &#8592; | Informação sobre cache |
 
 <!-- END REF-->
@@ -59,6 +59,6 @@ Se quiser obter informação da cache do banco de dados e todos os componentes a
 |  |  |
 | --- | --- |
 | Número do comando | 1402 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

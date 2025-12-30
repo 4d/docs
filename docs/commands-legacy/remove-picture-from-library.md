@@ -5,7 +5,7 @@ slug: /commands/remove-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* )<!-- END REF-->
+<!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Syntax-->**REMOVE PICTURE FROM LIBRARY** ( *picRef* : Integer, Text )<br/>**REMOVE PICTURE FROM LIBRARY** ( *picName* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ The following example deletes from the Picture Library any pictures whose names 
 |  |  |
 | --- | --- |
 | Command number | 567 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

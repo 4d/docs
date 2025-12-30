@@ -427,5 +427,6 @@ En el siguiente ejemplo, el caracter **Retorno de carro** (secuencia de escape `
 Las siguientes convenciones se utilizan en la documentación del lenguaje 4D:
 
 - los caracteres{ }`(llaves) indican parámetros opcionales. Por ejemplo,`.delete( { option : Integer } )\` significa que el parámetro *option* puede omitirse al llamar a la función.
-- la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
+- the `{; ...*param* : Type}` notation indicates an unlimited number of parameters of the same type. For example, `.concat( value : any { ;...valueN : Text } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
+- the `{; ...(*param* : Type ; *param2* : Type) }` notation indicates an unlimited number of groups of parameters. For example, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` means that an unlimited number of couple values or type array/text can be passed to the command.
 - la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo (número, texto, booleano, fecha, hora, objeto, colección...).

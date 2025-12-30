@@ -37,7 +37,7 @@ This lets you keep a backup of users in the database data and, as such, implemen
 |  |  |
 | --- | --- |
 | Command number | 849 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

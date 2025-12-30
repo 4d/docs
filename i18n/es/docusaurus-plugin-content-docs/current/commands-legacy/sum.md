@@ -5,12 +5,12 @@ slug: /commands/sum
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* {; *rutaAtributo*} ) : Real<!-- END REF-->
+<!--REF #_command_.Sum.Syntax-->**Sum** ( *series* : Field, Array {; *rutaAtributo* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Sum.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Datos para los cuales se devuelve la suma |
-| rutaAtributo | Text | &#8594;  | Ruta de atributo para el cual calcular la suma |
+| series | Field, Array | &#8594; | Datos para los cuales se devuelve la suma |
+| rutaAtributo | Text | &#8594; | Ruta de atributo para el cual calcular la suma |
 | Resultado | Real | &#8592; | Suma de series |
 
 <!-- END REF-->
@@ -78,7 +78,7 @@ Para un ejemplo de cálculo de un atributo campo de objeto, consulte el ejemplo 
 |  |  |
 | --- | --- |
 | Número de comando | 1 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

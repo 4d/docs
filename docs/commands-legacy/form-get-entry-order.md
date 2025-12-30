@@ -5,7 +5,7 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* {; *pageNumber* } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *pageNumber* : Integer, Operator } )<br/>**FORM GET ENTRY ORDER** ( *objectNames* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,6 +57,6 @@ You want to exclude some objects from the current entry order:
 |  |  |
 | --- | --- |
 | Command number | 1469 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

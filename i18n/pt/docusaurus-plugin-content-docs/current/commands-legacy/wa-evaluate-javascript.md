@@ -5,14 +5,14 @@ slug: /commands/wa-evaluate-javascript
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( {* ;} *objeto* ; *codeJS* {; *tipo*} )  : any<!-- END REF-->
+<!--REF #_command_.WA Evaluate JavaScript.Syntax-->**WA Evaluate JavaScript** ( * ; *objeto* : Text ; *codeJS* : Text {; *tipo* : Integer} )  : any<br/>**WA Evaluate JavaScript** ( *objeto* : Field, Variable ; *codeJS* : Text {; *tipo* : Integer} )  : any<!-- END REF-->
 <!--REF #_command_.WA Evaluate JavaScript.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| codeJS | Text | &#8594;  | Código Java Script |
-| tipo | Integer | &#8594;  | Tipo ao qual converter o resultado |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| codeJS | Text | &#8594; | Código Java Script |
+| tipo | Integer | &#8594; | Tipo ao qual converter o resultado |
 | Resultado | Date, Time, Object, Pointer, Real, Text | &#8592; | Resultado da função |
 
 <!-- END REF-->
@@ -107,6 +107,6 @@ Logo pode avaliar o código JavaScript desde 4D:
 |  |  |
 | --- | --- |
 | Número do comando | 1029 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

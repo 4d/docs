@@ -153,6 +153,6 @@ Dans le formulaire en exécution, la liste apparaîtra ainsi :
 |  |  |
 | --- | --- |
 | Numéro de commande | 376 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

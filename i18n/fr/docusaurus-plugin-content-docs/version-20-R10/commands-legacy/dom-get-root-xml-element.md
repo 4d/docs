@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 1053 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

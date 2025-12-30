@@ -40,7 +40,7 @@ O exemplo a seguir carrega o primeiro registro da tabela \[Clientes\]:
 |  |  |
 | --- | --- |
 | Número do comando | 50 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

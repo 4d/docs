@@ -5,12 +5,12 @@ slug: /commands/set-update-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *cheminDossier* {; *erreursDiscrètes*} )<!-- END REF-->
+<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *cheminDossier* : Text {; *erreursDiscrètes* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDossier | Text | &#8594;  | Chemin d’accès du dossier (package sous macOS) contenant l’application mise à jour |
-| erreursDiscrètes | Boolean | &#8594;  | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
+| cheminDossier | Text | &#8594; | Chemin d’accès du dossier (package sous macOS) contenant l’application mise à jour |
+| erreursDiscrètes | Boolean | &#8594; | Faux (défaut) = afficher des messages d’erreur, Vrai = ne pas afficher de messages (uniquement enregistrer les erreurs) |
 
 <!-- END REF-->
 
@@ -61,7 +61,7 @@ Vous avez créé un dossier "MesMisesAJour" sur votre disque, dans lequel vous a
 |  |  |
 | --- | --- |
 | Numéro de commande | 1291 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

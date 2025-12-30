@@ -73,6 +73,6 @@ The project method listed here is associated with the Quit or Exit menu item in 
 |  |  |
 | --- | --- |
 | Command number | 291 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

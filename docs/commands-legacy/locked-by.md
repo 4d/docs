@@ -5,7 +5,7 @@ slug: /commands/locked-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*aTable* ;} *process* ; *4Duser* ; *sessionUser* ; *processName* )<!-- END REF-->
+<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*aTable* : Table ;} *process* : Integer ; *4Duser* : Text ; *sessionUser* : Text ; *processName* : Text )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ If the record has been locked by a *$lock REST request*:
 |  |  |
 | --- | --- |
 | Command number | 353 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

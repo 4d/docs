@@ -43,6 +43,6 @@ L'exemple suivant change la position des numéros de page sur un état pour que 
 |  |  |
 | --- | --- |
 | Numéro de commande | 275 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

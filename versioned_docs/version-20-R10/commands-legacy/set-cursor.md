@@ -66,6 +66,6 @@ You want the cursor to be displayed as a ![](../assets/en/commands/pict2478692.e
 |  |  |
 | --- | --- |
 | Command number | 469 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

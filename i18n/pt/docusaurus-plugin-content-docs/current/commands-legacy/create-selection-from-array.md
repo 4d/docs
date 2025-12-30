@@ -5,13 +5,13 @@ slug: /commands/create-selection-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *tabela* ; *regArray* {; *temp*} )<!-- END REF-->
+<!--REF #_command_.CREATE SELECTION FROM ARRAY.Syntax-->**CREATE SELECTION FROM ARRAY** ( *tabela* : Table ; *regArray* : Integer, Boolean array {; *temp* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SELECTION FROM ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual criar a seleção |
-| regArray | Integer, Boolean array | &#8594;  | Array de números de registros, ou Array de booleanos (True = o registro está na seleção, False = o registro não está na seleção) |
-| temp | Text | &#8594;  | Nome da seleção temporal a criar, ou Aplicar o comando a seleção atual se o parâmetro se omite |
+| tabela | Table | &#8594; | Tabela da qual criar a seleção |
+| regArray | Integer, Boolean array | &#8594; | Array de números de registros, ou Array de booleanos (True = o registro está na seleção, False = o registro não está na seleção) |
+| temp | Text | &#8594; | Nome da seleção temporal a criar, ou Aplicar o comando a seleção atual se o parâmetro se omite |
 
 <!-- END REF-->
 
@@ -54,7 +54,7 @@ Se um número de registro não é válido (registro não criado), é gerado o er
 |  |  |
 | --- | --- |
 | Número do comando | 640 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 | Modificar a seleção atual ||
 

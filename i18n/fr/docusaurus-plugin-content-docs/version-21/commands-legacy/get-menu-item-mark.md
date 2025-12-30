@@ -45,7 +45,7 @@ L'exemple suivant inverse l'état marqué d'une ligne de menu :
 |  |  |
 | --- | --- |
 | Numéro de commande | 428 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

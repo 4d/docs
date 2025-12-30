@@ -42,6 +42,6 @@ Por padrão, se omitir o parâmetro *unidade*, a altura da linha devolvida é ex
 |  |  |
 | --- | --- |
 | Número do comando | 836 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

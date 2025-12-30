@@ -34,6 +34,6 @@ O parâmetro *parteJanela*, devolve 3 se toca a janela, caso contrário 0\. (**N
 |  |  |
 | --- | --- |
 | Número do comando | 449 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

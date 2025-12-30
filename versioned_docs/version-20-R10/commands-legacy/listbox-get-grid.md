@@ -33,6 +33,6 @@ In *horizontal* and *vertical*, the command returns the value **True** or **Fals
 |  |  |
 | --- | --- |
 | Command number | 1199 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

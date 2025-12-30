@@ -39,6 +39,6 @@ L'exemple suivant assigne une valeur entière aléatoire entre 10 et 30 à la va
 |  |  |
 | --- | --- |
 | Numéro de commande | 100 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

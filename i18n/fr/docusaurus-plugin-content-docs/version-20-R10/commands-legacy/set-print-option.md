@@ -84,7 +84,7 @@ Si la valeur passée pour une *option* est invalide ou si elle n'est pas disponi
 |  |  |
 | --- | --- |
 | Numéro de commande | 733 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, error |
 
 

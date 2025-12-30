@@ -65,6 +65,6 @@ On obtient alors :
 |  |  |
 | --- | --- |
 | Numéro de commande | 683 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

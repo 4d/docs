@@ -34,6 +34,6 @@ Ver el ejemplo de [Semaphore](semaphore.md "Semaphore").
 |  |  |
 | --- | --- |
 | Número de comando | 144 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -42,6 +42,6 @@ The following example displays an alert box with the message, “46800 seconds i
 |  |  |
 | --- | --- |
 | Command number | 180 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

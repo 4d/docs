@@ -5,11 +5,11 @@ slug: /commands/not
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Not.Syntax-->**Not** ( *booléen* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Not.Syntax-->**Not** ( *booléen* : Boolean ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| booléen | Boolean | &#8594;  | Valeur booléenne à inverser |
+| booléen | Boolean | &#8594; | Valeur booléenne à inverser |
 | Résultat | Boolean | &#8592; | Inverse de booléen |
 
 <!-- END REF-->
@@ -38,6 +38,6 @@ Dans l'exemple suivant, la valeur [True](true.md) est assignée à une variable.
 |  |  |
 | --- | --- |
 | Numéro de commande | 34 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

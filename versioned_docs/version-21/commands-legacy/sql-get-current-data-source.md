@@ -34,6 +34,6 @@ This command lets you check the current data source, generally before executing 
 |  |  |
 | --- | --- |
 | Command number | 990 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

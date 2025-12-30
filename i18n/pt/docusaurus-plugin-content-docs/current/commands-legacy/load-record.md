@@ -5,11 +5,11 @@ slug: /commands/load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para aqual carregar registros, ou tabela Padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para aqual carregar registros, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 52 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

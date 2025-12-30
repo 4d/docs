@@ -14,15 +14,15 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.New process.Syntax-->**New process** ( *metodo* ; *pila* {; *nombre* {; *param* {; *param2* ; ... ; *paramN*}}}{; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.New process.Syntax-->**New process** ( *metodo* : Text ; *pila* : Integer {; *nombre* : Text {; *param* : Expression {; *...param* : Expression}}}{; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.New process.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| metodo | Text | &#8594;  | Método a ejecutar en el proceso |
-| pila | Integer | &#8594;  | Tamaño de la pila en bytes |
-| nombre | Text | &#8594;  | Nombre del proceso creado |
-| param | Expression | &#8594;  | Parámetros del método |
-| * | Operador | &#8594;  | Proceso único |
+| metodo | Text | &#8594; | Método a ejecutar en el proceso |
+| pila | Integer | &#8594; | Tamaño de la pila en bytes |
+| nombre | Text | &#8594; | Nombre del proceso creado |
+| param | Expression | &#8594; | Parámetros del método |
+| * | Operador | &#8594; | Proceso único |
 | Resultado | Integer | &#8592; | Número del proceso creado recientemente o del proceso que está siendo ejecutado |
 
 <!-- END REF-->
@@ -121,6 +121,6 @@ En el editor de barras de menús, puede reemplazar ADD CUSTOMERS por el método 
 |  |  |
 | --- | --- |
 | Número de comando | 317 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

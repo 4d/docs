@@ -5,11 +5,11 @@ slug: /commands/get-picture-formats
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *imagen* ; *codecIDs* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FORMATS.Syntax-->**GET PICTURE FORMATS** ( *imagen* : Picture ; *codecIDs* : Text array )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FORMATS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#8594;  | Campo o variable imagen a analizar |
+| imagen | Picture | &#8594; | Campo o variable imagen a analizar |
 | codecIDs | Text array | &#8592; | IDs de codec Imagen |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ Usted quiere saber los formatos de imagen almacenados en un campo para el regist
 |  |  |
 | --- | --- |
 | Número de comando | 1406 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -100,7 +100,7 @@ Référez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-da
 |  |  |
 | --- | --- |
 | Numéro de commande | 400 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

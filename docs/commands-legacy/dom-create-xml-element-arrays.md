@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *elementRef* ; *xPath* {; *attribNamesArray* ; *attribValuesArray*} {; *attribNamesArray2* ; *attribValuesArray2* ; ... ; *attribNamesArrayN* ; *attribValuesArrayN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *elementRef* : Text ; *xPath* : Text {; *attribNamesArray* : Text array ; *attribValuesArray* : Text array} {; ...(*attribNamesArray* : Text array, *attribValuesArray* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ For this, you can simply write:
 |  |  |
 | --- | --- |
 | Command number | 1097 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

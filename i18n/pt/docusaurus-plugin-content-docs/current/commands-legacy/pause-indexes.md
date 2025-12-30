@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Tabela para a qual parar os índices |
+| aTable | Table | &#8594; | Tabela para a qual parar os índices |
 
 <!-- END REF-->
 
@@ -53,6 +53,6 @@ Exemplo de método de importação massivo de dados:
 |  |  |
 | --- | --- |
 | Número do comando | 1293 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

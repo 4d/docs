@@ -5,11 +5,11 @@ slug: /commands/get-external-data-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *aField* ) : Text<!-- END REF-->
+<!--REF #_command_.Get external data path.Syntax-->**Get external data path** ( *aField* : Text, Blob, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get external data path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Text, Blob, Picture | &#8594;  | 外部ストレージの場所を取得するフィールド |
+| aField | Text, Blob, Picture | &#8594; | 外部ストレージの場所を取得するフィールド |
 | 戻り値 | Text | &#8592; | 外部ストレージファイルのフルパス名 |
 
 <!-- END REF-->
@@ -37,6 +37,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1133 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

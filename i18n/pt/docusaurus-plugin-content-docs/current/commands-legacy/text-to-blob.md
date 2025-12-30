@@ -5,15 +5,15 @@ slug: /commands/text-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texto* ; *BLOB* {; *textFormat* {; offset | *}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO BLOB.Syntax-->**TEXT TO BLOB** ( *texto* : Text ; *BLOB* : Blob {; *textFormat* : Integer {; offset | *}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| texto | Text | &#8594;  | Texto a escrever no BLOB |
-| Blob | Blob | &#8594;  | BLOB a receber o texto |
-| textFormat | Integer | &#8594;  | Formato e conjunto de caracteres de texto |
+| texto | Text | &#8594; | Texto a escrever no BLOB |
+| Blob | Blob | &#8594; | BLOB a receber o texto |
+| textFormat | Integer | &#8594; | Formato e conjunto de caracteres de texto |
 | offset &#124; * | Variável, Operador | &#8596; | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
-||| | Novo offset depois da escritura se * for omitido |
+|  |  |  | Novo offset depois da escritura se * for omitido |
 
 <!-- END REF-->
 
@@ -112,6 +112,6 @@ Depois de executar este código:
 |  |  |
 | --- | --- |
 | Número do comando | 554 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

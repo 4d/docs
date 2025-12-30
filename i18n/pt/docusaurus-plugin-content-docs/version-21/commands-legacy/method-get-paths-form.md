@@ -75,6 +75,6 @@ Lista de todos os objetos dos formulários "input" da tabela \[Empregados\] a pa
 |  |  |
 | --- | --- |
 | Número do comando | 1168 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

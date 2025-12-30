@@ -5,7 +5,7 @@ slug: /commands/listbox-get-table-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( {* ;} *object* ; *tableNum* {; *name* {; *highlightName*}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET TABLE SOURCE.Syntax-->**LISTBOX GET TABLE SOURCE** ( * ; *object* : Text ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<br/>**LISTBOX GET TABLE SOURCE** ( *object* : Field, Variable ; *tableNum* : Integer {; *name* : Text {; *highlightName* : Text}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET TABLE SOURCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ If the list box is associated with arrays, *tableNum* returns -1 and *name*, if 
 |  |  |
 | --- | --- |
 | Command number | 1014 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

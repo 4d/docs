@@ -5,14 +5,14 @@ slug: /commands/post-click
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *sourisX* ; *sourisY* {; *process*} {; *} )<!-- END REF-->
+<!--REF #_command_.POST CLICK.Syntax-->**POST CLICK** ( *sourisX* : Integer ; *sourisY* : Integer {; *process* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.POST CLICK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sourisX | Integer | &#8594;  | Coordonnée horizontale |
-| sourisY | Integer | &#8594;  | Coordonnée verticale |
-| process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
-| * | Operator |  &#8594;  | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
+| sourisX | Integer | &#8594; | Coordonnée horizontale |
+| sourisY | Integer | &#8594; | Coordonnée verticale |
+| process | Integer | &#8594; | Numéro de référence du process de destination ou File d'attente des événements de l'application si ce paramètre est omis ou si vous passez 0 |
+| * | Operator | &#8594; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ Si vous passez le paramètre *process*, le clic est envoyé au process dont vous
 |  |  |
 | --- | --- |
 | Numéro de commande | 466 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

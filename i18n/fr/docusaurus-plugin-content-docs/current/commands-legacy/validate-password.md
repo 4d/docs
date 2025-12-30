@@ -5,13 +5,13 @@ slug: /commands/validate-password
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *utilisateur* ; *motDePasse* {; *digest*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Validate password.Syntax-->**Validate password** ( *utilisateur* : Integer, Text ; *motDePasse* : Text {; *digest* : Boolean} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Validate password.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| utilisateur | Integer, Text | &#8594;  | N° de référence unique ou Nom de l’utilisateur |
-| motDePasse | Text | &#8594;  | Mot de passe non crypté |
-| digest | Boolean | &#8594;  | Mot de passe digest = Vrai, <br/>Mot de passe en clair (défaut)= Faux |
+| utilisateur | Integer, Text | &#8594; | N° de référence unique ou Nom de l’utilisateur |
+| motDePasse | Text | &#8594; | Mot de passe non crypté |
+| digest | Boolean | &#8594; | Mot de passe digest = Vrai, <br/>Mot de passe en clair (défaut)= Faux |
 | Résultat | Boolean | &#8592; | Vrai = mot de passe correct, Faux = mot de passe incorrect |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ Dans la [On REST Authentication database method](on-rest-authentication-database
 |  |  |
 | --- | --- |
 | Numéro de commande | 638 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

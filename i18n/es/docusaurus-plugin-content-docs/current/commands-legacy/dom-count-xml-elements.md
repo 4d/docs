@@ -5,12 +5,12 @@ slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* ; *nomElement* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* : Text ; *nomElement* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
-| nomElement | Text | &#8594;  | Nombre de los elementos XML a contar |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
+| nomElement | Text | &#8594; | Nombre de los elementos XML a contar |
 | Resultado | Integer | &#8592; | Número de elementos |
 
 <!-- END REF-->
@@ -33,7 +33,7 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK toma el valo
 |  |  |
 | --- | --- |
 | Número de comando | 726 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

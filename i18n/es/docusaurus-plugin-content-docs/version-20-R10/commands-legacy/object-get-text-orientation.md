@@ -61,6 +61,6 @@ Cuando se ejecuta el formulario, si se llama a la siguiente declaración:
 |  |  |
 | --- | --- |
 | Número de comando | 1283 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

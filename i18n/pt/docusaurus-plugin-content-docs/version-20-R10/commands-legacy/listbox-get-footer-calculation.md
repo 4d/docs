@@ -36,6 +36,6 @@ Pode comparar o valor devolvido com as constantes do tema *Listbox Footer Calcul
 |  |  |
 | --- | --- |
 | Número do comando | 1150 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

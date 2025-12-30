@@ -5,7 +5,7 @@ slug: /commands/pop-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.POP RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ The following example pops the record for the customer off the record stack:
 |  |  |
 | --- | --- |
 | Command number | 177 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

@@ -5,11 +5,11 @@ slug: /commands/copy-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *fonte* ; *destino* )<!-- END REF-->
+<!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *fonte* : Array ; *destino* : Array )<!-- END REF-->
 <!--REF #_command_.COPY ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Array | &#8594;  | Array do qual se copia |
+| fonte | Array | &#8594; | Array do qual se copia |
 | destino | Array | &#8592; | Array para o qual se copia |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ O exemplo seguinte preenche o array chamado C. Ele então cria um novo array, ch
 |  |  |
 | --- | --- |
 | Número do comando | 226 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

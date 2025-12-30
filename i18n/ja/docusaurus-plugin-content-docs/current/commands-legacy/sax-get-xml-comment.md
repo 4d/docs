@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* ; *comment* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
 | comment | Text | &#8592; | XMLコメント |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 874 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

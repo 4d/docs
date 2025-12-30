@@ -30,6 +30,6 @@ Este comando devuelve una cadena vacía si no hay título disponible para el URL
 |  |  |
 | --- | --- |
 | Número de comando | 1036 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

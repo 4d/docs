@@ -38,6 +38,6 @@ Quiere llamar a un proceso worker y pasar el nombre del proceso de llamada como 
 |  |  |
 | --- | --- |
 | Número de comando | 1392 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

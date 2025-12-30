@@ -72,6 +72,6 @@ Este ejemplo es una plantilla para un método de formulario. Muestra cada evento
 |  |  |
 | --- | --- |
 | Número de comando | 101 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* ; *infoXML* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *elementRef* : Text ; *infoXML* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML raíz |
-| infoXML | Integer | &#8594;  | Tipo de información a obtener |
+| elementRef | Text | &#8594; | Referencia del elemento XML raíz |
+| infoXML | Integer | &#8594; | Tipo de información a obtener |
 | Resultado | Text | &#8592; | Valor de la información XML |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Estas constantes indican la siguiente información:
 |  |  |
 | --- | --- |
 | Número de comando | 721 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

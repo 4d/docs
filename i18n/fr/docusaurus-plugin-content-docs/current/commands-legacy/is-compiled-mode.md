@@ -5,11 +5,11 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ( * ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Retourner l'information de la base hôte |
+| * | Opérateur | &#8594; | Retourner l'information de la base hôte |
 | Résultat | Boolean | &#8592; | Mode compilé (Vrai), mode interprété (Faux) |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ Dans une de vos méthodes, vous avez placé du code pour déboguer la base lorsq
 |  |  |
 | --- | --- |
 | Numéro de commande | 492 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomVar* ) : Pointer<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomVar* : Text ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomVar | Text | &#8594;  | Nombre de una variable proceso o interproceso |
+| nomVar | Text | &#8594; | Nombre de una variable proceso o interproceso |
 | Resultado | Pointer | &#8592; | Puntero hacia una variable proceso o interproceso |
 
 <!-- END REF-->
@@ -56,6 +56,6 @@ Utilizar punteros a elementos de arrays de dos dimensiones:
 |  |  |
 | --- | --- |
 | Número de comando | 304 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

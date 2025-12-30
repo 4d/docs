@@ -5,7 +5,7 @@ slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) : Object<!-- END REF-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* : Text {; *target* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -71,6 +71,6 @@ You want to know if the copy action is available (i.e. if some data is selected)
 |  |  |
 | --- | --- |
 | Command number | 1442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

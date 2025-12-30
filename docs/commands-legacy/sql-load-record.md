@@ -5,7 +5,7 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** {( *numRecords* )}<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ({ *numRecords* : Integer })<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ If the command has been executed correctly, the system variable OK returns 1\. O
 |  |  |
 | --- | --- |
 | Command number | 822 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

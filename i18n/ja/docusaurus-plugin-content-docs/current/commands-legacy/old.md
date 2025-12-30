@@ -5,11 +5,11 @@ slug: /commands/old
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Old.Syntax-->**Old** ( *aField* ) : any<!-- END REF-->
+<!--REF #_command_.Old.Syntax-->**Old** ( *aField* : Field ) : any<!-- END REF-->
 <!--REF #_command_.Old.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | 元の値を取得するフィールド |
+| aField | Field | &#8594; | 元の値を取得するフィールド |
 | 戻り値 | any | &#8592; | 元のフィールド値 |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ Oldは、すべてのフィールドタイプに適用できます。
 |  |  |
 | --- | --- |
 | コマンド番号 | 35 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

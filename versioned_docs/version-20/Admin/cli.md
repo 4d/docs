@@ -50,7 +50,7 @@ Syntax:
 |`--skip-onstartup`||Launches the project without executing any "automatic" methods, including the `On Startup` and `On Exit` database methods|
 |`--startup-method`|Project method name (string)|Project method to execute immediately after the `On Startup` database method (if not skipped with `--skip-onstartup`).|
 
-(*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
+(*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (license alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
 ### Examples
 

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-insert-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( objCible | {*refTableau* ; *numLigne*} {; *nbLignes*} )  -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Table insert rows.Syntax-->**WP Table insert rows** ( objCible | {*refTableau* : Object ; *numLigne* : Integer} {; *nbLignes* : Integer} )  -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Table insert rows.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

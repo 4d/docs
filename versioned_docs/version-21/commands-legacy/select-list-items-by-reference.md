@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | list | Integer | &#8594;  | List reference number |
 | itemRef | Integer | &#8594;  | Item reference number or 0 for the last item added to the list |
-| refArray | Array integer | &#8594;  | Array of item reference numbers |
+| refArray | Integer array | &#8594;  | Array of item reference numbers |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ If you work with item reference numbers, be sure to build a list in which the it
 |  |  |
 | --- | --- |
 | Command number | 630 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

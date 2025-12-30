@@ -5,7 +5,7 @@ slug: /commands/export-structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *folderPath* {; *options*} ) : Object<!-- END REF-->
+<!--REF #_command_.Export structure file.Syntax-->**Export structure file** ( *folderPath* : Text {; *options* : Object} ) : Object<!-- END REF-->
 <!--REF #_command_.Export structure file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -120,6 +120,6 @@ You want to export only project and database methods, and a log file:
 |  |  |
 | --- | --- |
 | Command number | 1565 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

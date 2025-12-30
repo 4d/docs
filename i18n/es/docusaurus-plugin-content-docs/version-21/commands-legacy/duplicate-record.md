@@ -30,7 +30,7 @@ DUPLICATE RECORD puede ejecutarse durante la entrada de datos. Esto permite dupl
 |  |  |
 | --- | --- |
 | Número de comando | 225 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 
 

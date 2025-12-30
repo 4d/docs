@@ -57,6 +57,6 @@ On souhaite changer une valeur dans le premier élément du tableau :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1229 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

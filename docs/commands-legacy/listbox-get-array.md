@@ -5,7 +5,7 @@ slug: /commands/listbox-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( {* ;} *object* ; *arrType* ) : Pointer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get array.Syntax-->**LISTBOX Get array** ( * ; *object* : Text ; *arrType* : Integer ) : Pointer<br/>**LISTBOX Get array** ( *object* : Field, Variable ; *arrType* : Integer ) : Pointer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ Typical examples of use:
 |  |  |
 | --- | --- |
 | Command number | 1278 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

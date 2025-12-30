@@ -5,11 +5,11 @@ slug: /commands/is-compiled-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** {( * )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is compiled mode.Syntax-->**Is compiled mode** ( * ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is compiled mode.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | ホストデータベースの情報を返す |
+| * | 演算子 | &#8594; | ホストデータベースの情報を返す |
 | 戻り値 | Boolean | &#8592; | コンパイル済み (True), インタプリタ (False) |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 492 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

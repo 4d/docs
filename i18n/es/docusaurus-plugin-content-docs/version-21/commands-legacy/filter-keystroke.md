@@ -247,6 +247,6 @@ El método ObtenerTextoSeleccionado es el siguiente:
 |  |  |
 | --- | --- |
 | Número de comando | 389 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

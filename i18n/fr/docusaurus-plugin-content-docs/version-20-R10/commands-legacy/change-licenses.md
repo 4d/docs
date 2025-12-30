@@ -45,7 +45,7 @@ Vous permettrez ainsi à un utilisateur d‘activer des licences sans avoir à m
 |  |  |
 | --- | --- |
 | Numéro de commande | 637 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

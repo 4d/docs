@@ -45,6 +45,6 @@ Se quiser adicionar 100 MB ao tamanho da cache de seu banco de ados atual. Pode 
 |  |  |
 | --- | --- |
 | Número do comando | 1399 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

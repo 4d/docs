@@ -5,11 +5,11 @@ slug: /commands/pop-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.POP RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela da qual desempilhar o registro, a tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela da qual desempilhar o registro, a tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ O exemplo a seguir recupera o registro de um cliente na pilha:
 |  |  |
 | --- | --- |
 | Número do comando | 177 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

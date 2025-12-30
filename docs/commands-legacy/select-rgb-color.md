@@ -5,7 +5,7 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *defaultColor* {; *message*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** ( *defaultColor* : Integer {; *message* : Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ The effect of validating this dialog box differs depending on the platform:
 |  |  |
 | --- | --- |
 | Command number | 956 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Forbidden on the server ||
 

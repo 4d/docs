@@ -65,6 +65,6 @@ The **Subtotal** function is necessary in order to display values on a form.
 |  |  |
 | --- | --- |
 | Command number | 97 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -65,7 +65,7 @@ La variable OK prend la valeur 1 si la liste a été correctement créée, sinon
 |  |  |
 | --- | --- |
 | Numéro de commande | 557 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

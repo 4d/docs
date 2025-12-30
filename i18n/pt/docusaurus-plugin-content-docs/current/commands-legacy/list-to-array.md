@@ -5,11 +5,11 @@ slug: /commands/list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *lista* ; *array* {; *itemRefs*} )<!-- END REF-->
+<!--REF #_command_.LIST TO ARRAY.Syntax-->**LIST TO ARRAY** ( *lista* : Text, Integer ; *array* : Array {; *itemRefs* : Array} )<!-- END REF-->
 <!--REF #_command_.LIST TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Text, Integer | &#8594;  | Lista da qual copiar os itens de primeiro nível |
+| lista | Text, Integer | &#8594; | Lista da qual copiar os itens de primeiro nível |
 | array | Array | &#8592; | Array para o qual copiar os itens da lista |
 | itemRefs | Array | &#8592; | Números de referência da lista de itens |
 
@@ -90,6 +90,6 @@ Se executa a seguinte instrução:
 |  |  |
 | --- | --- |
 | Número do comando | 288 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

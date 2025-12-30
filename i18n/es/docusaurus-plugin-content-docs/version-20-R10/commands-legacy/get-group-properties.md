@@ -45,7 +45,7 @@ Si no tiene privilegios de acceso para llamar al comando GET GROUP PROPERTIES o 
 |  |  |
 | --- | --- |
 | Número de comando | 613 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

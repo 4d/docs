@@ -5,12 +5,12 @@ slug: /commands/web-service-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *option* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | 設定するオプションのコード |
-| value | Integer, Text | &#8594;  | オプションの値 |
+| option | Integer | &#8594; | 設定するオプションのコード |
+| value | Integer, Text | &#8594; | オプションの値 |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ SOAPリクエストにカスタマイズしたヘッダーを挿入する:
 |  |  |
 | --- | --- |
 | コマンド番号 | 901 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

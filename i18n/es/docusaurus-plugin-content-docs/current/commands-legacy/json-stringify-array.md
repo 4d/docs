@@ -5,12 +5,12 @@ slug: /commands/json-stringify-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify array.Syntax-->**JSON Stringify array** ( *array* : Text array, Real array, Boolean array, Pointer array, Object array {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify array.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Text array, Real array, Boolean array, Pointer array, Object array | &#8594;  | Array cuyo contenido debe ser serializado |
-| * | Operador | &#8594;  | Mejorar el formato |
+| array | Text array, Real array, Boolean array, Pointer array, Object array | &#8594; | Array cuyo contenido debe ser serializado |
+| * | Operador | &#8594; | Mejorar el formato |
 | Resultado | Text | &#8592; | Cadena que contiene el array JSON serializado |
 
 <!-- END REF-->
@@ -114,6 +114,6 @@ Conversión de una selección 4D en un array objeto:
 |  |  |
 | --- | --- |
 | Número de comando | 1228 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

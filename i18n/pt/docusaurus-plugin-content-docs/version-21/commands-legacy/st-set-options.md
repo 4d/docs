@@ -67,6 +67,6 @@ O seguinte código permite mudar o modo de visualização da área:
 |  |  |
 | --- | --- |
 | Número do comando | 1289 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

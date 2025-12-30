@@ -5,7 +5,7 @@ slug: /commands/restart-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** {( *time* {; *message*} )}<!-- END REF-->
+<!--REF #_command_.RESTART 4D.Syntax-->**RESTART 4D** ({ *time* : Integer {; *message* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTART 4D.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ If the command is executed correctly, the OK system variable is set to 1; otherw
 |  |  |
 | --- | --- |
 | Command number | 1292 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

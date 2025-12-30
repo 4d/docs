@@ -5,14 +5,14 @@ slug: /commands/copy-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomFuente* ; *nomDest* {; *nuevNombre*} {; *} )<!-- END REF-->
+<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *nomFuente* : Text ; *nomDest* : Text {; *nuevNombre* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomFuente | Text | &#8594;  | Nombre del documento a copiar |
-| nomDest | Text | &#8594;  | Nombre del documento copiado |
-| nuevNombre | Text | &#8594;  | Nuevo nombre del archivo o carpeta copiado |
-| * | Operador | &#8594;  | Reemplazar documento existente si lo hay |
+| nomFuente | Text | &#8594; | Nombre del documento a copiar |
+| nomDest | Text | &#8594; | Nombre del documento copiado |
+| nuevNombre | Text | &#8594; | Nuevo nombre del archivo o carpeta copiado |
+| * | Operador | &#8594; | Reemplazar documento existente si lo hay |
 
 <!-- END REF-->
 
@@ -123,7 +123,7 @@ Los siguientes ejemplos crean diferentes archivos y carpetas en la carpeta de la
 |  |  |
 | --- | --- |
 | Número de comando | 541 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

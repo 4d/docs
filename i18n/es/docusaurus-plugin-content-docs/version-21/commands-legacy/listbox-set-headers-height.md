@@ -45,6 +45,6 @@ Los encabezados deben respetar la altura mínima establecida por el sistema. Est
 |  |  |
 | --- | --- |
 | Número de comando | 1143 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

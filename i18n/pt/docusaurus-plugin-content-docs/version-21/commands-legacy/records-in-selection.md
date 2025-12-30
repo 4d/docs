@@ -41,6 +41,6 @@ End for
 |  |  |
 | --- | --- |
 | Número do comando | 76 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

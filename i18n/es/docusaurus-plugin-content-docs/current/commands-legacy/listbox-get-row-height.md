@@ -5,13 +5,13 @@ slug: /commands/listbox-get-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height**  ( {* ;} *objeto* ; *linea* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row height.Syntax-->**LISTBOX Get row height**  ( * ; *objeto* : Text ; *linea* : Integer ) : Integer<br/>**LISTBOX Get row height**  ( *objeto* : Field, Variable ; *linea* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| linea | Integer | &#8594;  | Línea de list box, cuya altura desea obtener |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| linea | Integer | &#8594; | Línea de list box, cuya altura desea obtener |
 | Resultado | Integer | &#8592; | Altura de la fila |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ El valor de la altura de la línea se expresa:
 |  |  |
 | --- | --- |
 | Número de comando | 1408 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

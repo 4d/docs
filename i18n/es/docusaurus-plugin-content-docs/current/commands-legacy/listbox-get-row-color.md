@@ -5,14 +5,14 @@ slug: /commands/listbox-get-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( {* ;} *objeto* ; *fila* {; *tipoColor*} )  : Text<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color.Syntax-->**LISTBOX Get row color** ( * ; *objeto* : Text ; *fila* : Integer {; *tipoColor* : Integer} )  : Text<br/>**LISTBOX Get row color** ( *objeto* : Field, Variable ; *fila* : Integer {; *tipoColor* : Integer} )  : Text<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, el objeto es un nombre de objeto (cadena) Si se omite, el objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) |
-| fila | Integer | &#8594;  | Numero de fila |
-| tipoColor | Integer | &#8594;  | Color de fuente del list box (predeterminado) o color de fondo del list box |
+| * | Operador | &#8594; | Si se especifica, el objeto es un nombre de objeto (cadena) Si se omite, el objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Variable (si se omite *) |
+| fila | Integer | &#8594; | Numero de fila |
+| tipoColor | Integer | &#8594; | Color de fuente del list box (predeterminado) o color de fondo del list box |
 | Resultado | Text | &#8592; | Valor del color |
 
 <!-- END REF-->
@@ -63,6 +63,6 @@ Dado el siguiente list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1658 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

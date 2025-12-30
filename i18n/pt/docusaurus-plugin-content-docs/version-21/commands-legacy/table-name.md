@@ -44,6 +44,6 @@ O seguinte é um exemplo de um método genérico que mostra os registros de uma 
 |  |  |
 | --- | --- |
 | Número do comando | 256 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

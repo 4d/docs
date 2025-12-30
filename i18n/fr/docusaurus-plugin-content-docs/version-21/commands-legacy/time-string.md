@@ -42,6 +42,6 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “468
 |  |  |
 | --- | --- |
 | Numéro de commande | 180 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

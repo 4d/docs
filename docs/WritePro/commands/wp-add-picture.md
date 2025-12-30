@@ -4,7 +4,7 @@ title: WP Add picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* {; *picture*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *picturePath*} ) : Object<br/>**WP Add picture** ( *wpDoc* {; *pictureFileObj*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Add picture.Syntax-->**WP Add picture** ( *wpDoc* : Object {; *picture* : Picture} ) : Object<br/>**WP Add picture** ( *wpDoc* : Object {; *picturePath* : Text} ) : Object<br/>**WP Add picture** ( *wpDoc* : Object {; *pictureFileObj* : 4D.File} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Add picture.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

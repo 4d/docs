@@ -44,6 +44,6 @@ O seguinte exemplo ilustra o uso de Change string. Os resultados são atribuído
 |  |  |
 | --- | --- |
 | Número do comando | 234 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

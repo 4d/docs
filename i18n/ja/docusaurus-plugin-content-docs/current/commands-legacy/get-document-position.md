@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get document position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Time | Time | &#8594;  | ドキュメント参照番号 |
+| Time | Time | &#8594; | ドキュメント参照番号 |
 | 戻り値 | Real | &#8592; | ドキュメント開始位置からの ファイル位置(バイト単位) |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ Get document positionは、ドキュメントの最初から見て、次の読�
 |  |  |
 | --- | --- |
 | コマンド番号 | 481 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

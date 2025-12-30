@@ -5,7 +5,7 @@ slug: /commands/send-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ See example for the [RECEIVE RECORD](receive-record.md) command.
 |  |  |
 | --- | --- |
 | Command number | 78 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

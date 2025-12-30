@@ -5,7 +5,7 @@ slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filter* {; *scope* {; *attributes* {; *attributesAsArray*}}} ) : Object<!-- END REF-->
+<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* : Text ; *filter* : Text {; *scope* : Text {; *attributes* : Text array {; *attributesAsArray* : Boolean array}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -89,6 +89,6 @@ We want to get an array of all entries found for the "memberOf" attribute:
 |  |  |
 | --- | --- |
 | Command number | 1328 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

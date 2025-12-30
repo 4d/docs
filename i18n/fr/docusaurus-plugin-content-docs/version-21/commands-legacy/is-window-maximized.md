@@ -40,6 +40,6 @@ Vous souhaitez passer entre l'état maximisé et l'état précédent :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1830 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/append-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *array* ; *value* )<!-- END REF-->
+<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *array* : Array ; *value* : Expression )<!-- END REF-->
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,6 +50,6 @@ The following code:
 |  |  |
 | --- | --- |
 | Command number | 911 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

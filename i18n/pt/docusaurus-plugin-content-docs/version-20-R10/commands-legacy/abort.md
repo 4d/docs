@@ -41,6 +41,6 @@ Apesar do comando ABORT está destinado a ser utilizado apenas a partir de um m�
 |  |  |
 | --- | --- |
 | Número do comando | 156 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

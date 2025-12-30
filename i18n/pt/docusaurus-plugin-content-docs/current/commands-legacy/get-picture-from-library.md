@@ -5,11 +5,11 @@ slug: /commands/get-picture-from-library
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( refImag | nomImag ; *imagem* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM LIBRARY.Syntax-->**GET PICTURE FROM LIBRARY** ( refImag | nomImag ; *imagem* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM LIBRARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refImag &#124; nomImag | Inteiro longo, String | &#8594;  | Número de referência ou Nome da imagem da biblioteca de imagens |
+| refImag &#124; nomImag | Inteiro longo, String | &#8594; | Número de referência ou Nome da imagem da biblioteca de imagens |
 | imagem | Picture | &#8592; | Imagem da biblioteca de imagens |
 
 <!-- END REF-->
@@ -59,7 +59,7 @@ Se não houver suficiente memória para devolver a imagem, se gera o erro -108\.
 |  |  |
 | --- | --- |
 | Número do comando | 565 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

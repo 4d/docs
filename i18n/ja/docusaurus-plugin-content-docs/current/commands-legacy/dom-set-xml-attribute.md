@@ -5,13 +5,13 @@ slug: /commands/dom-set-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* ; *attrName* ; *attrValue* {; *attrName2* ; *attrValue2* ; ... ; *attrNameN* ; *attrValueN*} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *elementRef* : Text ; *attrName* : Text ; *attrValue* : Text, Boolean, Integer, Real, Time, Date {; ...(*attrName* : Text, *attrValue* : Text, Boolean, Integer, Real, Time, Date)} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
-| attrName | Text | &#8594;  | 設定する属性 |
-| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594;  | 新しい属性値 |
+| elementRef | Text | &#8594; | XML要素参照 |
+| attrName | Text | &#8594; | 設定する属性 |
+| attrValue | Text, Boolean, Integer, Real, Time, Date | &#8594; | 新しい属性値 |
 
 <!-- END REF-->
 
@@ -72,7 +72,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 866 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

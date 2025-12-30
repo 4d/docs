@@ -5,12 +5,12 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *ptrChp* {; *} )<br/>**DELETE INDEX** ( *nomIndex* {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *ptrChp* : Pointeur, Chaîne {; *} )<br/>**DELETE INDEX** ( *nomIndex* : Pointeur, Chaîne {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ptrChp &#124; nomIndex | Pointeur, Chaîne | &#8594;  | Pointeur vers le champ duquel supprimer les index ou Nom de l’index à supprimer |
-| * | Opérateur | &#8594;  | Si passé = opération asynchrone |
+| ptrChp &#124; nomIndex | Pointeur, Chaîne | &#8594; | Pointeur vers le champ duquel supprimer les index ou Nom de l’index à supprimer |
+| * | Opérateur | &#8594; | Si passé = opération asynchrone |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Cet exemple illustre les deux syntaxes de la commande :
 |  |  |
 | --- | --- |
 | Numéro de commande | 967 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

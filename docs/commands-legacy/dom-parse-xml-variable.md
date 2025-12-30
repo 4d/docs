@@ -5,7 +5,7 @@ slug: /commands/dom-parse-xml-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* {; *validation* {; *dtd* }} ) : Text<br/>**DOM Parse XML variable** ( *variable* {; *validation* {; *schema*}} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *dtd* : Text }} ) : Text<br/>**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *schema* : Text}} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML variable.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -89,7 +89,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 720 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

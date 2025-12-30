@@ -62,6 +62,6 @@ En el [On Web Connection](./on-web-connection-database-method.md), inserte el si
 |  |  |
 | --- | --- |
 | Número de comando | 659 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

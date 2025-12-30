@@ -42,6 +42,6 @@ Reportez-vous à l'exemple de la commande [FORM SET SIZE](form-set-size.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 893 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

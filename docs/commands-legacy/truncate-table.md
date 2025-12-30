@@ -5,7 +5,7 @@ slug: /commands/truncate-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.TRUNCATE TABLE.Syntax-->**TRUNCATE TABLE** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.TRUNCATE TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ If the command has been executed correctly, the OK system variable is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 1051 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

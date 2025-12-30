@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-bookmark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE BOOKMARK.Syntax-->**WP DELETE BOOKMARK** ( *docWP* ; *nomSignet* )<!-- END REF-->
+<!--REF #_command_.WP DELETE BOOKMARK.Syntax-->**WP DELETE BOOKMARK** ( *docWP* : Object ; *nomSignet* : Text )<!-- END REF-->
 <!--REF #_command_.WP DELETE BOOKMARK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -5,15 +5,14 @@ slug: /commands/set-group-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *groupID* ; *name* ; *owner* {; *members*} )  : Integer<!-- END REF-->
+<!--REF #_command_.Set group properties.Syntax-->**Set group properties** ( *groupID* : Integer ; *name* : Text ; *owner* : Integer {; *members* : Integer array} )  : Integer<!-- END REF-->
 <!--REF #_command_.Set group properties.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| groupID | Integer | &#8594;  | Unique ID number of group, -1 for adding a group |
-| &#8592; | Unique ID number of added group (if any) |
+| groupID | Integer | &#8596;  | *in:* Unique ID number of group, -1 for adding a group <br/>*out:* Unique ID number of added group (if any)|
 | name | Text | &#8594;  | New group name |
 | owner | Integer | &#8594;  | User ID number of new group owner (Binary databases only) |
-| members | Array integer | &#8594;  | New group members |
+| members | Integer array | &#8594;  | New group members |
 | Function result | Integer | &#8592; | Unique ID number of new group |
 
 <!-- END REF-->
@@ -62,7 +61,7 @@ If you do not have the proper access privileges for calling Set group properties
 |  |  |
 | --- | --- |
 | Command number | 614 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

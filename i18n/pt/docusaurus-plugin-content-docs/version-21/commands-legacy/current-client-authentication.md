@@ -77,6 +77,6 @@ Com esta configuração, não se mostra um diálogo de senha para um 4D remoto q
 |  |  |
 | --- | --- |
 | Número do comando | 1355 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

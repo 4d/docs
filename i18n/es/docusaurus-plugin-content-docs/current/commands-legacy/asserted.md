@@ -5,12 +5,12 @@ slug: /commands/asserted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *expresionBool* {; *textoMensaje*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Asserted.Syntax-->**Asserted** ( *expresionBool* : Boolean {; *textoMensaje* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Asserted.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresionBool | Boolean | &#8594;  | Expresión booleana |
-| textoMensaje | Text | &#8594;  | Texto del mensaje de error |
+| expresionBool | Boolean | &#8594; | Expresión booleana |
+| textoMensaje | Text | &#8594; | Texto del mensaje de error |
 | Resultado | Boolean | &#8592; | Resultado de la evaluación de expresionBool |
 
 <!-- END REF-->
@@ -47,7 +47,7 @@ Inserción de una aserción en la evaluación de una expresión:
 |  |  |
 | --- | --- |
 | Número de comando | 1132 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/bring-to-front
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* )<!-- END REF-->
+<!--REF #_command_.BRING TO FRONT.Syntax-->**BRING TO FRONT** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.BRING TO FRONT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | Numéro du process à passer au premier plan |
+| process | Integer | &#8594; | Numéro du process à passer au premier plan |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ L'exemple suivant est une méthode qui peut être exécutée à partir d'une com
 |  |  |
 | --- | --- |
 | Numéro de commande | 326 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

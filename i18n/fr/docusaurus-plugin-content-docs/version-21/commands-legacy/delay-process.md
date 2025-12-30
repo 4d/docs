@@ -44,6 +44,6 @@ Reportez-vous à l'exemple de la fonction [Process number](../commands/process-n
 |  |  |
 | --- | --- |
 | Numéro de commande | 323 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

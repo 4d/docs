@@ -75,6 +75,6 @@ Creación y llenado de un array local de objetos:
 |  |  |
 | --- | --- |
 | Número de comando | 1221 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

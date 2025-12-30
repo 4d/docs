@@ -5,12 +5,12 @@ slug: /commands/web-service-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *opçao* ; *valor* )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE SET OPTION.Syntax-->**WEB SERVICE SET OPTION** ( *opçao* : Integer ; *valor* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE SET OPTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opçao | Integer | &#8594;  | Código da opção a estabelecer |
-| valor | Integer, Text | &#8594;  | Valor da opção |
+| opçao | Integer | &#8594; | Código da opção a estabelecer |
+| valor | Integer, Text | &#8594; | Valor da opção |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ Utilização da versão 1.2 do protocolo SOAP:
 |  |  |
 | --- | --- |
 | Número do comando | 901 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

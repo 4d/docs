@@ -5,15 +5,15 @@ slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION**   ( * ; *objeto* {; *posicionL* {; *posicionH*}}{; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION**   ( * ; *objeto* : any {; *posicionL* : Integer {; *posicionH* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una tabla o una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Tabla o variable (si se omite *) |
-| posicionL | Integer | &#8594;  | Número de línea a mostrar |
-| posicionH | Integer | &#8594;  | Número de columna a mostrar (list box) o Desplazamiento horizontal en píxeles (imágenes) |
-| * | Operador | &#8594;  | Mostrar la línea en primera posición después del desplazamiento |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una tabla o una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Tabla o variable (si se omite *) |
+| posicionL | Integer | &#8594; | Número de línea a mostrar |
+| posicionH | Integer | &#8594; | Número de columna a mostrar (list box) o Desplazamiento horizontal en píxeles (imágenes) |
+| * | Operador | &#8594; | Mostrar la línea en primera posición después del desplazamiento |
 
 <!-- END REF-->
 
@@ -95,6 +95,6 @@ Asegúrese de no omitir el segundo parámetro *\** en este caso, de lo contrario
 |  |  |
 | --- | --- |
 | Número de comando | 906 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

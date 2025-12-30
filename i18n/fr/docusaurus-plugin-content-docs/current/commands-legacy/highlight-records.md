@@ -5,13 +5,13 @@ slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*laTable* }{;}{ *nomEnsemble* {; *}} )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*laTable* : Table }{;}{ *nomEnsemble* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle marquer les enregistrements Si omis, table du formulaire courant |
-| nomEnsemble | Text | &#8594;  | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
-| * | Opérateur | &#8594;  | Inactiver le défilement automatique de la liste |
+| laTable | Table | &#8594; | Table de laquelle marquer les enregistrements Si omis, table du formulaire courant |
+| nomEnsemble | Text | &#8594; | Ensemble d’enregistrements à marquer ou Ensemble Userset si ce paramètre est omis |
+| * | Opérateur | &#8594; | Inactiver le défilement automatique de la liste |
 
 <!-- END REF-->
 
@@ -53,6 +53,6 @@ Lorsque l’utilisateur clique sur le bouton, la boîte de dialogue standard de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 656 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

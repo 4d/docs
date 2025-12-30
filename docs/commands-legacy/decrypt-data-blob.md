@@ -5,7 +5,7 @@ slug: /commands/decrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* ; *keyObject* ; *salt* ; *decryptedBLOB* ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* ; *passPhrase* ; *salt* ; *decryptedBLOB* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Decrypt data BLOB.Syntax-->**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *keyObject* : Object, Text ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<br/>**Decrypt data BLOB** ( *blobToDecrypt* : Blob ; *passPhrase* : Object, Text ; *salt* : Integer ; *decryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Decrypt data BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -64,6 +64,6 @@ The *passPhrase* and *salt* used for decryption are identical to the *passPhrase
 |  |  |
 | --- | --- |
 | Command number | 1774 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

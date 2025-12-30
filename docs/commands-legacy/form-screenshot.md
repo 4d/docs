@@ -5,7 +5,7 @@ slug: /commands/form-screenshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*aTable* ;} *formName* ;} *formPict* {; *pageNum*} )<!-- END REF-->
+<!--REF #_command_.FORM SCREENSHOT.Syntax-->**FORM SCREENSHOT** ( {{*aTable* : Table ;} *formName* : Text ;} *formPict* : Picture {; *pageNum* : Integer} )<!-- END REF-->
 <!--REF #_command_.FORM SCREENSHOT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ By default, the command returns a screenshot of page 1 of the form. If you only 
 |  |  |
 | --- | --- |
 | Command number | 940 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

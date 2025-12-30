@@ -5,12 +5,12 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *pontCampo* ; *tipoCampo* {; *tamanhoCampo* {; *indexado* {; *unico* {; *invisivel*}}}} )<br/>**GET FIELD PROPERTIES** ( *numTabela* ; *numCampo* ; *tipoCampo* {; *tamanhoCampo* {; *indexado* {; *unico* {; *invisivel*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *pontCampo* : Ponteiro, Inteiro longo ; *tipoCampo* : Integer {; *tamanhoCampo* : Integer {; *indexado* : Boolean {; *unico* : Boolean {; *invisivel* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *numTabela* : Ponteiro, Inteiro longo ; *numCampo* : Integer ; *tipoCampo* : Integer {; *tamanhoCampo* : Integer {; *indexado* : Boolean {; *unico* : Boolean {; *invisivel* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Número de tabela ou ponteiro do campo |
-| numCampo | Integer | &#8594;  | Número do campo se número de tabela for passado |
+| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594; | Número de tabela ou ponteiro do campo |
+| numCampo | Integer | &#8594; | Número do campo se número de tabela for passado |
 | tipoCampo | Integer | &#8592; | Tipo de Campo |
 | tamanhoCampo | Integer | &#8592; | Comprimento do campo, se alfanumérico |
 | indexado | Boolean | &#8592; | True = indexado, False = não indexado |
@@ -79,6 +79,6 @@ Este exemplo recupera nas variáveis *vTipo*, *vTamanho*, *vIndice*, *vUnico* e 
 |  |  |
 | --- | --- |
 | Número do comando | 258 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

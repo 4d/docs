@@ -89,6 +89,6 @@ Para contar las palabras de un texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1141 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

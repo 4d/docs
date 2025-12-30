@@ -61,6 +61,6 @@ Given a form "SF" used twice as a subform in the same parent form. The subform o
 |  |  |
 | --- | --- |
 | Command number | 1124 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

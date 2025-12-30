@@ -54,6 +54,6 @@ Cuando el formulario se envia al servidor web, la variable $textoSolicitud recib
 |  |  |
 | --- | --- |
 | Número de comando | 814 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

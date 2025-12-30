@@ -41,6 +41,6 @@ L'exemple suivant utilise la fonction **Char** pour insérer un retour chariot d
 |  |  |
 | --- | --- |
 | Numéro de commande | 90 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; \* } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path         | Text                                           | &#8594; | Rota do arquivo                                                   |
 | fileConstant | Integer                                        | &#8594; | Constante de arquivo 4D                                           |
 | pathType     | Integer                                        | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
-| \*           | operator                                       | &#8594; | \* para devolver o arquivo da base de dados anfitriã              |
+| \*           | Operador                                       | &#8594; | \* para devolver o arquivo da base de dados anfitriã              |
 | Resultados   | [4D.File](../API/FileClass.md) | &#8592; | Novo objeto arquivo                                               |
 
 <!-- END REF -->
@@ -88,9 +88,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1566                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1566 |
+| Thread safe       | sim  |
 
 

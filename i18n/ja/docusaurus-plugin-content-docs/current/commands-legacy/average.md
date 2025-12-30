@@ -5,12 +5,12 @@ slug: /commands/average
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Average.Syntax-->**Average** ( *series* {; *attributePath*} ) : Real<!-- END REF-->
+<!--REF #_command_.Average.Syntax-->**Average** ( *series* : Field, Array {; *attributePath* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | 平均を求めるデータ |
-| attributePath | Text | &#8594;  | 平均を取得したい属性のパス |
+| series | Field, Array | &#8594; | 平均を求めるデータ |
+| attributePath | Text | &#8594; | 平均を取得したい属性のパス |
 | 戻り値 | Real | &#8592; | seriesの平均値 |
 
 <!-- END REF-->
@@ -96,7 +96,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 2 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

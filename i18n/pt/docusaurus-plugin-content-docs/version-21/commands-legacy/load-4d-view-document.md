@@ -201,6 +201,6 @@ Obterá o resultado abaixo (objeto stringified):
 |  |  |
 | --- | --- |
 | Número do comando | 1528 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

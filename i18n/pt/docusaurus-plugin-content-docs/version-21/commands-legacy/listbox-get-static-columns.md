@@ -37,6 +37,6 @@ Se uma coluna é inserida ou é eliminada por programação dentro de uma conjun
 |  |  |
 | --- | --- |
 | Número do comando | 1154 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

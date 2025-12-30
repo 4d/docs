@@ -5,11 +5,11 @@ slug: /commands/list-of-choice-lists
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *numsArray* ; *namesArray* )<!-- END REF-->
+<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *numsArray* : Integer array ; *namesArray* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numsArray | Array integer | &#8592; | Numbers of choice lists |
+| numsArray | Integer array | &#8592; | Numbers of choice lists |
 | namesArray | Text array | &#8592; | Names of choice lists |
 
 <!-- END REF-->
@@ -26,6 +26,6 @@ The numbers of choice lists correspond to their order of creation. In the list e
 |  |  |
 | --- | --- |
 | Command number | 957 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

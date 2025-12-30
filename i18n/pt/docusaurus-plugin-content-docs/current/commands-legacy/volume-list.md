@@ -5,7 +5,7 @@ slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* )<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumes* : Text array )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ Utilizando uma área de rolagem chamada *atVolumes*,se quiser mostrar a lista de
 |  |  |
 | --- | --- |
 | Número do comando | 471 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

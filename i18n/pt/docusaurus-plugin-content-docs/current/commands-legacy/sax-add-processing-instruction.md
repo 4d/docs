@@ -5,12 +5,12 @@ slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *documento* ; *instruçao* )<!-- END REF-->
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *documento* : Time ; *instruçao* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
-| instruçao | Text | &#8594;  | Instrução a inserir no documento |
+| documento | Time | &#8594; | Referência do documento aberto |
+| instruçao | Text | &#8594; | Instrução a inserir no documento |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ Se ou comando tiver sido executado corretamente, a variável sistema Ok assume o
 |  |  |
 | --- | --- |
 | Número do comando | 857 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

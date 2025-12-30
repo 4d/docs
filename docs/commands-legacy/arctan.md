@@ -5,7 +5,7 @@ slug: /commands/arctan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ The following example shows the value of Pi:
 |  |  |
 | --- | --- |
 | Command number | 20 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

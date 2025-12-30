@@ -47,7 +47,7 @@ If the user clicks Cancel in the Save File dialog box, or if there is an error d
 |  |  |
 | --- | --- |
 | Command number | 184 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

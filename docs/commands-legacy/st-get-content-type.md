@@ -5,7 +5,7 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *object* {; *startSel* {; *endSel* {; *startBlock* {; *endBlock*}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Field, Variable {; *startSel* : Integer {; *endSel* : Integer {; *startBlock* : Integer {; *endBlock* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -107,7 +107,7 @@ You want to display context-menu commands based on the type of contents selected
 |  |  |
 | --- | --- |
 | Command number | 1286 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

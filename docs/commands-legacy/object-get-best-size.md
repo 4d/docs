@@ -5,7 +5,7 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( {* ;} *object* ; *bestWidth* ; *bestHeight* {; *maxWidth*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *object* : Text ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *object* : Field, Variable ; *bestWidth* : Integer ; *bestHeight* : Integer {; *maxWidth* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,6 +53,6 @@ Refer to the example in the [SET PRINT MARKER](set-print-marker.md) command.
 |  |  |
 | --- | --- |
 | Command number | 717 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

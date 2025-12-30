@@ -5,7 +5,7 @@ slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *object* ; *url* ; *description* ; *errorCode* )<!-- END REF-->
+<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *object* : Text ; *url* : Text ; *description* : Text ; *errorCode* : Integer )<br/>**WA GET LAST URL ERROR** ( *object* : Field, Variable ; *url* : Text ; *description* : Text ; *errorCode* : Integer )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ It is recommended to call this command within the framework of the On URL Loadin
 |  |  |
 | --- | --- |
 | Command number | 1034 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

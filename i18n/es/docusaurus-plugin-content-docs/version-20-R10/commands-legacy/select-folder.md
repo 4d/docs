@@ -93,7 +93,7 @@ El siguiente ejemplo le permite seleccionar la carpeta en la cual se almacenará
 |  |  |
 | --- | --- |
 | Número de comando | 670 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

@@ -57,6 +57,6 @@ Utilisez la fonction **Trigger event** pour structurer vos triggers comme ci-des
 |  |  |
 | --- | --- |
 | Numéro de commande | 369 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

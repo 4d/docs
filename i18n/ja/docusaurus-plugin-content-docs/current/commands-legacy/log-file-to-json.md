@@ -5,14 +5,14 @@ slug: /commands/log-file-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *destFolderPath* {; *maxSize* {; *logPath* {; *fieldAtt*}}} )<!-- END REF-->
+<!--REF #_command_.LOG FILE TO JSON.Syntax-->**LOG FILE TO JSON** ( *destFolderPath* : Text {; *maxSize* : Integer {; *logPath* : Text {; *fieldAtt* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.LOG FILE TO JSON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| destFolderPath | Text | &#8594;  | 保存されているファイルの保存先フォルダへのパス |
-| maxSize | Integer | &#8594;  | 作成するJSONファイルの最大サイズ(バイト単位) |
-| logPath | Text | &#8594;  | 書き出すログファイルのパス名; 省略時はカレントログファイルを使用 |
-| fieldAtt | Integer | &#8594;  | フィールド詳細属性: 1 = 数字を使用(デフォルト)、2 = 名前を使用 |
+| destFolderPath | Text | &#8594; | 保存されているファイルの保存先フォルダへのパス |
+| maxSize | Integer | &#8594; | 作成するJSONファイルの最大サイズ(バイト単位) |
+| logPath | Text | &#8594; | 書き出すログファイルのパス名; 省略時はカレントログファイルを使用 |
+| fieldAtt | Integer | &#8594; | フィールド詳細属性: 1 = 数字を使用(デフォルト)、2 = 名前を使用 |
 
 <!-- END REF-->
 
@@ -102,7 +102,7 @@ Blobおよびピクチャーフィールドの場合、保存場所によって�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1352 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document |
 
 

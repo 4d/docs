@@ -103,7 +103,7 @@ If the resource file could not be opened due to a resource or I/O problem, an er
 |  |  |
 | --- | --- |
 | Command number | 497 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document, error |
 
 

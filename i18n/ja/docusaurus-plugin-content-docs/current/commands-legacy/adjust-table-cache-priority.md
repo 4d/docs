@@ -5,12 +5,12 @@ slug: /commands/adjust-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
+<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | スカラーデータの優先度値を調整したいテーブル |
-| priority | Integer | &#8594;  | テーブルのキャッシュ優先度値 |
+| aTable | Table | &#8594; | スカラーデータの優先度値を調整したいテーブル |
+| priority | Integer | &#8594; | テーブルのキャッシュ優先度値 |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1429 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

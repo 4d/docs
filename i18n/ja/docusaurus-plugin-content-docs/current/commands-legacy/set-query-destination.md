@@ -5,13 +5,13 @@ slug: /commands/set-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* {; *destinationObject* {; *destinationPtr*}} )<!-- END REF-->
+<!--REF #_command_.SET QUERY DESTINATION.Syntax-->**SET QUERY DESTINATION** ( *destinationType* : Integer {; *destinationObject* : Text, Variable {; *destinationPtr* : Pointer}} )<!-- END REF-->
 <!--REF #_command_.SET QUERY DESTINATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| destinationType | Integer | &#8594;  | 0=カレントセレクション, 1=セット, 2=命名セレクション, 3=変数 |
-| destinationObject | Text, Variable | &#8594;  | セット名、命名セレクション名、変数、または空の文字列 |
-| destinationPtr | Pointer | &#8594;  | destinationType=3のとき変数へのポインター |
+| destinationType | Integer | &#8594; | 0=カレントセレクション, 1=セット, 2=命名セレクション, 3=変数 |
+| destinationObject | Text, Variable | &#8594; | セット名、命名セレクション名、変数、または空の文字列 |
+| destinationPtr | Pointer | &#8594; | destinationType=3のとき変数へのポインター |
 
 <!-- END REF-->
 
@@ -257,6 +257,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 396 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

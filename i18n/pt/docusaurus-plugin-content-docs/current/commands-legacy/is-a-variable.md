@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Is a variable.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umPointer | Pointer | &#8594;  | Ponteiro a ser testado |
+| umPointer | Pointer | &#8594; | Ponteiro a ser testado |
 | Resultado | Boolean | &#8592; | TRUE= Ponteiro aponta a variável FALSE = Ponteiro não aponta a variável |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 294 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -37,6 +37,6 @@ La commande retourne **Vrai** si la correction automatique est activée pour l�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1174 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* {; *} )<br/>**DELETE INDEX** ( *indexName* {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *fieldPtr* : Pointer, Text {; *} )<br/>**DELETE INDEX** ( *indexName* : Pointer, Text {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -52,6 +52,6 @@ This example illustrates both syntaxes of the command:
 |  |  |
 | --- | --- |
 | Command number | 967 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

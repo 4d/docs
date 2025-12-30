@@ -46,6 +46,6 @@ As duas instruções a seguir são idênticas. A segunda é recomendada para que
 |  |  |
 | --- | --- |
 | Número do comando | 668 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -45,6 +45,6 @@ Ver o exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.m
 |  |  |
 | --- | --- |
 | Número do comando | 402 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

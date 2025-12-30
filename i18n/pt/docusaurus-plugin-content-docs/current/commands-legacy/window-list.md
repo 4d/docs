@@ -5,12 +5,12 @@ slug: /commands/window-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *janelas* {; *} )<!-- END REF-->
+<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *janelas* : Array {; *} )<!-- END REF-->
 <!--REF #_command_.WINDOW LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | janelas | Array | &#8592; | Array de números de referência de janelas |
-| * | Operador | &#8594;  | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
+| * | Operador | &#8594; | Se especificado, considere janela flutuante, se omitido, ignore janela flutuante |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ O método de projeto abaixo coloca em mosaico todas as janelas abertas atualment
 |  |  |
 | --- | --- |
 | Número do comando | 442 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

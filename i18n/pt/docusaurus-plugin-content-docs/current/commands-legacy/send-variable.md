@@ -5,11 +5,11 @@ slug: /commands/send-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variavel* )<!-- END REF-->
+<!--REF #_command_.SEND VARIABLE.Syntax-->**SEND VARIABLE** ( *variavel* : Variable )<!-- END REF-->
 <!--REF #_command_.SEND VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variavel | Variable | &#8594;  | Variável a ser enviada |
+| variavel | Variable | &#8594; | Variável a ser enviada |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ Veja o exemplo para o comando [RECEIVE RECORD](receive-record.md "RECEIVE RECORD
 |  |  |
 | --- | --- |
 | Número do comando | 80 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

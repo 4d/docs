@@ -52,6 +52,6 @@ O seguinte código pode ser adicionado a um método button:
 |  |  |
 | --- | --- |
 | Número do comando | 1324 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/list-of-style-sheets
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *tabFeuillesStyle* )<!-- END REF-->
+<!--REF #_command_.LIST OF STYLE SHEETS.Syntax-->**LIST OF STYLE SHEETS** ( *tabFeuillesStyle* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF STYLE SHEETS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ Si vous exécutez le code suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1255 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

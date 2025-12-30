@@ -5,7 +5,7 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *object* {; *listType*}; *list* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *object* : Text {; *listType* : Integer}; *list* : Text )<br/>**OBJECT SET LIST BY NAME** ( *object* : Field, Variable {; *listType* : Integer}; *list* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -95,6 +95,6 @@ You want to remove the list associations:
 |  |  |
 | --- | --- |
 | Command number | 237 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

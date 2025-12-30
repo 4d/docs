@@ -5,7 +5,7 @@ slug: /commands/wa-get-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( {* ;} *object* ; *filtersArr* ; *allowDenyArr* )<!-- END REF-->
+<!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Syntax-->**WA GET EXTERNAL LINKS FILTERS** ( * ; *object* : Text ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<br/>**WA GET EXTERNAL LINKS FILTERS** ( *object* : Field, Variable ; *filtersArr* : Text array ; *allowDenyArr* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA GET EXTERNAL LINKS FILTERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ The filters are installed by the [WA SET EXTERNAL LINKS FILTERS](wa-set-external
 |  |  |
 | --- | --- |
 | Command number | 1033 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

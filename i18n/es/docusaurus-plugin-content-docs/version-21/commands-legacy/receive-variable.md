@@ -47,7 +47,7 @@ La variable sistema OK toma el valor 1 si se recibe la variable. De lo contrario
 |  |  |
 | --- | --- |
 | Número de comando | 81 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

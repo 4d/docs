@@ -5,12 +5,12 @@ slug: /commands/form-get-entry-order
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomObjetos* {; numPag | * } )<!-- END REF-->
+<!--REF #_command_.FORM GET ENTRY ORDER.Syntax-->**FORM GET ENTRY ORDER** ( *nomObjetos* : Text array {; numPag | * } )<!-- END REF-->
 <!--REF #_command_.FORM GET ENTRY ORDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | nomObjetos | Text array | &#8592; | Nombres de objetos ordenados por orden de entrada |
-| numPag &#124; * | Entero largo, Operador | &#8594;  | Número de la página para la que se obtiene el orden de entrada definido (página actual si se omite), o  * para obtener el orden de entrada real de la página actual |
+| numPag &#124; * | Entero largo, Operador | &#8594; | Número de la página para la que se obtiene el orden de entrada definido (página actual si se omite), o  * para obtener el orden de entrada real de la página actual |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ Puede excluir ciertos objetos del orden de entrada:
 |  |  |
 | --- | --- |
 | Número de comando | 1469 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Structure file.Syntax-->**Structure file** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -71,6 +71,6 @@ The following example can be used to find out whether the method is called from 
 |  |  |
 | --- | --- |
 | Command number | 489 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

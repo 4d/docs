@@ -64,6 +64,6 @@ Este ejemplo permite obtener la suma de cuadrados de los valores ubicados en un 
 |  |  |
 | --- | --- |
 | Número de comando | 28 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

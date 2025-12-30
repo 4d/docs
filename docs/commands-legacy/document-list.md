@@ -5,7 +5,7 @@ slug: /commands/document-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *pathname* ; *documents* {; *options*} )<!-- END REF-->
+<!--REF #_command_.DOCUMENT LIST.Syntax-->**DOCUMENT LIST** ( *pathname* : Text ; *documents* : Text array {; *options* : Integer} )<!-- END REF-->
 <!--REF #_command_.DOCUMENT LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -119,7 +119,7 @@ List of all documents in recursive Posix (relative) mode:
 |  |  |
 | --- | --- |
 | Command number | 474 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

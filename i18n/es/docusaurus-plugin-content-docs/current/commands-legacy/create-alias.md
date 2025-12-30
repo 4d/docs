@@ -5,12 +5,12 @@ slug: /commands/create-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *rutaObjetivo* ; *rutaAlias* )<!-- END REF-->
+<!--REF #_command_.CREATE ALIAS.Syntax-->**CREATE ALIAS** ( *rutaObjetivo* : Text ; *rutaAlias* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE ALIAS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaObjetivo | Text | &#8594;  | Nombre o ruta de acceso al objetivo del alias/atajo |
-| rutaAlias | Text | &#8594;  | Nombre o ruta de acceso completa del alias/del atajo a crear |
+| rutaObjetivo | Text | &#8594; | Nombre o ruta de acceso al objetivo del alias/atajo |
+| rutaAlias | Text | &#8594; | Nombre o ruta de acceso completa del alias/del atajo a crear |
 
 <!-- END REF-->
 
@@ -73,7 +73,7 @@ La variable sistema OK toma el valor 1 si el comando se ejecuta correctamente, s
 |  |  |
 | --- | --- |
 | Número de comando | 694 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

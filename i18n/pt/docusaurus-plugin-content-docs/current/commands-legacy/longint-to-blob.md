@@ -5,15 +5,15 @@ slug: /commands/longint-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *longint* ; *blob* ; *byteOrder* {; offset } )<br/>**LONGINT TO BLOB** ( *longint* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
+<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *longint* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; offset } )<br/>**LONGINT TO BLOB** ( *longint* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| longInt | Integer | &#8594;  | Valor de tipo Inteiro longo a escrever no BLOB |
-| Blob | Blob | &#8594;  | BLOB a receber o valor Inteiro longo |
-| byteOrder | Integer | &#8594;  | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
-| offset &#124; * | Variável, Operador | &#8596;  | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
-||| | Novo offset depois da escritura se * for omitido |
+| longInt | Integer | &#8594; | Valor de tipo Inteiro longo a escrever no BLOB |
+| Blob | Blob | &#8594; | BLOB a receber o valor Inteiro longo |
+| byteOrder | Integer | &#8594; | 0 Ordem de bytes nativo 1 Ordem de bytes Macintosh 2 Ordem de bytes PC |
+| offset &#124; * | Variável, Operador | &#8596; | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
+|  |  |  | Novo offset depois da escritura se * for omitido |
 
 <!-- END REF-->
 
@@ -120,6 +120,6 @@ Depois de executar esse código:
 |  |  |
 | --- | --- |
 | Número do comando | 550 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

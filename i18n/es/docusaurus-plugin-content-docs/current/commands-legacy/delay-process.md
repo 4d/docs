@@ -5,12 +5,12 @@ slug: /commands/delay-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *proceso* ; *duracion* )<!-- END REF-->
+<!--REF #_command_.DELAY PROCESS.Syntax-->**DELAY PROCESS** ( *proceso* : Integer ; *duracion* : Real )<!-- END REF-->
 <!--REF #_command_.DELAY PROCESS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de proceso |
-| duracion | Real | &#8594;  | Duración expresada en tics |
+| proceso | Integer | &#8594; | Número de proceso |
+| duracion | Real | &#8594; | Duración expresada en tics |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ Ver el ejemplo del comando [Process Number](process-number.md "Process Number").
 |  |  |
 | --- | --- |
 | Número de comando | 323 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

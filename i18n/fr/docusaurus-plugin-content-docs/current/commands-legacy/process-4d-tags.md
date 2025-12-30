@@ -5,13 +5,13 @@ slug: /commands/process-4d-tags
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *templateEntrée* ; *résultatSortie* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.PROCESS 4D TAGS.Syntax-->**PROCESS 4D TAGS** ( *templateEntrée* : Text ; *résultatSortie* : Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.PROCESS 4D TAGS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| templateEntrée | Text | &#8594;  | Données contenant des balises à traiter |
+| templateEntrée | Text | &#8594; | Données contenant des balises à traiter |
 | résultatSortie | Text | &#8592; | Résultat de l'exécution du template |
-| param | Expression | &#8594;  | Paramètre(s) à passer au template en exécution |
+| param | Expression | &#8594; | Paramètre(s) à passer au template en exécution |
 
 <!-- END REF-->
 
@@ -79,6 +79,6 @@ PROCESS 4D TAGS($input; $output; "elements = "; ->$array)
 |  |  |
 | --- | --- |
 | Numéro de commande | 816 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

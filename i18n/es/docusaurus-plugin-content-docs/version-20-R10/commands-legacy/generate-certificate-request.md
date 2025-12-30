@@ -93,6 +93,6 @@ Este es el método del botón **Generar**
 |  |  |
 | --- | --- |
 | Número de comando | 691 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

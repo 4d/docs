@@ -5,7 +5,7 @@ slug: /commands/list-of-choice-lists
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *arrayNums* ; *arrayNoms* )<!-- END REF-->
+<!--REF #_command_.LIST OF CHOICE LISTS.Syntax-->**LIST OF CHOICE LISTS** ( *arrayNums* : Integer array ; *arrayNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.LIST OF CHOICE LISTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -26,6 +26,6 @@ Os números das listas correspondem a sua ordem de criação. No editor de lista
 |  |  |
 | --- | --- |
 | Número do comando | 957 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

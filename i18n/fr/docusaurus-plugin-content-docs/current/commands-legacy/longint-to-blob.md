@@ -5,15 +5,15 @@ slug: /commands/longint-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *entierLong* ; *blob* ; *ordreOctet* {; offset } )<br/>**LONGINT TO BLOB** ( *entierLong* ; *blob* ; *ordreOctet* {; *} )<!-- END REF-->
+<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *entierLong* : Integer ; *blob* : Blob ; *ordreOctet* : Integer {; offset } )<br/>**LONGINT TO BLOB** ( *entierLong* : Integer ; *blob* : Blob ; *ordreOctet* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| entierLong | Integer | &#8594;  | Valeur de type Entier long à écrire dans BLOB |
-| blob | Blob | &#8594;  | BLOB devant recevoir l'entier long |
-| ordreOctet | Integer | &#8594;  | 0=Ordre d'octets natif, 1=Ordre d'octets Macintosh, 2=Ordre d'octets PC |
-| offset &#124; * | Variable, Opérateur |&#8596; | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
-| || | Nouvel offset après l'écriture si * omis |
+| entierLong | Integer | &#8594; | Valeur de type Entier long à écrire dans BLOB |
+| Blob | Blob | &#8594; | BLOB devant recevoir l'entier long |
+| ordreOctet | Integer | &#8594; | 0=Ordre d'octets natif, 1=Ordre d'octets Macintosh, 2=Ordre d'octets PC |
+| offset &#124; * | Variable, Opérateur | &#8596; | Offset (en octets) dans le BLOB ou * pour ajouter la valeur à la fin du BLOB |
+|  |  |  | Nouvel offset après l'écriture si * omis |
 
 <!-- END REF-->
 
@@ -120,6 +120,6 @@ Après l'exécution de ce code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 550 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

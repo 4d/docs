@@ -83,6 +83,6 @@ Neste código o resultado da tabela padrão:
 |  |  |
 | --- | --- |
 | Número do comando | 46 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

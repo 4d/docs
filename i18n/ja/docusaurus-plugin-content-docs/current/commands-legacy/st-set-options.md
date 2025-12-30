@@ -5,14 +5,14 @@ slug: /commands/st-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( {* ;} *object* ; *option* ; *value* {; *option2* ; *value2* ; ... ; *optionN* ; *valueN*} )<!-- END REF-->
+<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<br/>**ST SET OPTIONS** ( *object* : Field, Variable ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET OPTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
-| option | Integer | &#8594;  | 設定したいオプション |
-| value | Integer | &#8594;  | オプションの新しい値 |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)<br/>省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、<br/>または変数やフィールド( * 省略時) |
+| option | Integer | &#8594; | 設定したいオプション |
+| value | Integer | &#8594; | オプションの新しい値 |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1289 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

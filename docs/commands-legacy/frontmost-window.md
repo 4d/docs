@@ -5,7 +5,7 @@ slug: /commands/frontmost-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Frontmost window.Syntax-->**Frontmost window** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Frontmost window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 447 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

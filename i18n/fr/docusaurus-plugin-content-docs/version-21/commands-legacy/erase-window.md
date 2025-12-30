@@ -33,6 +33,6 @@ Ne confondez pas **ERASE WINDOW**, qui efface le contenu d'une fenêtre, et [GOT
 |  |  |
 | --- | --- |
 | Numéro de commande | 160 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

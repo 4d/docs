@@ -90,6 +90,6 @@ Estos ejemplos ilustran cómo recuperar el extracto de un texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1147 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

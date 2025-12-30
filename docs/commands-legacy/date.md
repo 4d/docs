@@ -5,7 +5,7 @@ slug: /commands/date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Date.Syntax-->**Date** ( *expression* ) : Date<!-- END REF-->
+<!--REF #_command_.Date.Syntax-->**Date** ( *expression* : Text, Date ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -98,6 +98,6 @@ You want to get a date from an object attribute, whatever the current attribute 
 |  |  |
 | --- | --- |
 | Command number | 102 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

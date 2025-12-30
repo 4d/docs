@@ -103,7 +103,7 @@ Si le fichier de ressources n'a pas pu être ouvert à la suite d'un problème d
 |  |  |
 | --- | --- |
 | Numéro de commande | 497 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK, Document, error |
 
 

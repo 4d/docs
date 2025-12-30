@@ -45,7 +45,7 @@ Si le paramètre *ligne* est incorrect, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 769 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

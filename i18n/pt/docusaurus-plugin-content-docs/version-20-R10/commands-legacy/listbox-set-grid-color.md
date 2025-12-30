@@ -41,6 +41,6 @@ Os parâmetros *horizontal* e *vertical* lhe permitem especificar as linhas as q
 |  |  |
 | --- | --- |
 | Número do comando | 842 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

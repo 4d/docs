@@ -5,12 +5,12 @@ slug: /commands/export-structure
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *estructuraXML* {; *format*} )<!-- END REF-->
+<!--REF #_command_.EXPORT STRUCTURE.Syntax-->**EXPORT STRUCTURE** ( *estructuraXML* : Text {; *format* : Text} )<!-- END REF-->
 <!--REF #_command_.EXPORT STRUCTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | estructuraXML | Text | &#8592; | Exportación de la definición XML de la estructura de la base 4D |
-| format | Text | &#8594;  | Export format: xml format (default) or html format |
+| format | Text | &#8594; | Export format: xml format (default) or html format |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ Desea exportar la estructura actual de la base de datos en formato html:
 |  |  |
 | --- | --- |
 | Número de comando | 1311 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

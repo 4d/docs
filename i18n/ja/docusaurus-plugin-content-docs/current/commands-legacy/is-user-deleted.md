@@ -5,11 +5,11 @@ slug: /commands/is-user-deleted
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is user deleted.Syntax-->**Is user deleted** ( *userNumber* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is user deleted.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| userNumber | Integer | &#8594;  | ユーザーID番号 |
+| userNumber | Integer | &#8594; | ユーザーID番号 |
 | 戻り値 | Boolean | &#8592; | TRUE = ユーザーアカウントが削除されている、または存在しない場合；FALSE = ユーザーアカウントがアクティブな場合 |
 
 <!-- END REF-->
@@ -35,7 +35,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 616 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

@@ -47,6 +47,6 @@ Este método de mantenimiento permite solicitar la compactación del archivo de 
 |  |  |
 | --- | --- |
 | Número de comando | 1127 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

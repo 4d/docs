@@ -46,6 +46,6 @@ La siguiente instrucción devolverá “PI” en *vNom* y “TextProcess” en *
 |  |  |
 | --- | --- |
 | Número de comando | 875 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

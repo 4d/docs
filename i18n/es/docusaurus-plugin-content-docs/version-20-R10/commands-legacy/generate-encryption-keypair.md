@@ -58,6 +58,6 @@ Ver el ejemplo del comando [ENCRYPT BLOB](encrypt-blob.md "ENCRYPT BLOB").
 |  |  |
 | --- | --- |
 | Número de comando | 688 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -56,7 +56,7 @@ Si *objetoImagen* no contiene una imagen SVG válida, el comando devuelve una ca
 |  |  |
 | --- | --- |
 | Número de comando | 1054 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

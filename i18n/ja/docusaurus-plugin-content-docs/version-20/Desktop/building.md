@@ -408,8 +408,8 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 この機能を有効化するためには、*buildApp* 設定ファイルに `DatabaseToEmbedInClientWinFolder` または `DatabaseToEmbedInClientMacFolder` キーを追加します。 いずれかのキーが存在する場合、アプリケーションビルドプロセスの途中で組み込みシングルユーザーアプリケーションが生成され、コンパイルされたストラクチャーが (EnginedServer.4Dlink ファイルの代わりに) "Database" フォルダー内に置かれます。
 
-* シングルユーザーアプリケーション内に "Default Data" フォルダーがあれば、アプリケーションにはライセンスが埋め込まれます。
-* シングルユーザーアプリケーション内に "Default Data" フォルダーがなければ、データファイルおよびライセンスなしでアプリケーションが実行されます。
+* If a default data folder exists in the single-user application, a license is embedded.
+* If no default data folder exists in the single-user application, it will be executed without data file and without license.
 
 基本シナリオは以下の通りです:
 
@@ -501,7 +501,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ## ライセンス＆証明書ページ
 
-ライセンス&証明書のページでは、次のようなことができます:
+The Licenses & Certificate page can be used to:
 
 * シングルユーザーの[スタンドアロンアプリケーション](#アプリケーションページ)に統合するライセンス番号を指定します。
 * macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。

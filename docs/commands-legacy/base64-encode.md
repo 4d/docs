@@ -5,12 +5,11 @@ slug: /commands/base64-encode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *toEncode* {; *encoded*}{; *} )<!-- END REF-->
+<!--REF #_command_.BASE64 ENCODE.Syntax-->**BASE64 ENCODE** ( *toEncode* : Blob, Text {; *encoded* : Blob, Text}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 ENCODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| toEncode | Blob, Text | &#8594;  | Value to encode |
-| &#8592; | Encoded value (if encoded parameter omitted) |
+| toEncode | Blob, Text | &#8596;  |*in:* Value to encode<br/>*out:* Encoded value (if encoded parameter omitted)|
 | encoded | Blob, Text | &#8592; | Encoded value |
 | * | Operator | &#8594;  | Encode in Base64URL format |
 
@@ -36,7 +35,6 @@ By default if the *\** parameter is omitted, the command uses a Base64 encoding.
 
 [BASE64 DECODE](base64-decode.md)  
 [Generate digest](generate-digest.md)  
-*Overview of XML DOM Commands*  
 [XML DECODE](xml-decode.md)  
 
 ## Properties
@@ -44,6 +42,6 @@ By default if the *\** parameter is omitted, the command uses a Base64 encoding.
 |  |  |
 | --- | --- |
 | Command number | 895 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

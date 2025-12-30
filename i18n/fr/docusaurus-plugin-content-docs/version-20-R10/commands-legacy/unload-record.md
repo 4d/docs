@@ -35,6 +35,6 @@ Si les enregistrements contiennent une quantité importante de données, de cham
 |  |  |
 | --- | --- |
 | Numéro de commande | 212 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.WEB SEND BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB to send to the browser |
+| Blob | Blob | &#8594;  | BLOB to send to the browser |
 | type | Text | &#8594;  | Data type of the BLOB |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ Refer to the example of the [PICTURE TO BLOB](picture-to-blob.md) routine.
 |  |  |
 | --- | --- |
 | Command number | 654 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

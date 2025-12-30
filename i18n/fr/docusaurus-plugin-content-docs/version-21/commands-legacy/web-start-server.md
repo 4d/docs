@@ -31,7 +31,7 @@ Si le serveur Web est correctement démarré, OK prend la valeur 1, sinon OK pre
 |  |  |
 | --- | --- |
 | Numéro de commande | 617 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

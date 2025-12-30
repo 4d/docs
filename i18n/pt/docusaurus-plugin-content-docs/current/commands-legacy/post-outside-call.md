@@ -5,11 +5,11 @@ slug: /commands/post-outside-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *processo* )<!-- END REF-->
+<!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *processo* : Integer )<!-- END REF-->
 <!--REF #_command_.POST OUTSIDE CALL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#8594;  | número de processo |
+| processo | Integer | &#8594; | número de processo |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ Ver o exemplo de [On Exit Database Method](metodo-banco-de-dados-on-exit.md "On 
 |  |  |
 | --- | --- |
 | Número do comando | 329 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

@@ -59,7 +59,7 @@ An assertion can allow parameters passed to a project method to be tested in ord
 |  |  |
 | --- | --- |
 | Command number | 1129 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -5,12 +5,12 @@ slug: /commands/listbox-get-static-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get static columns.Syntax-->**LISTBOX Get static columns** ( * ; *objeto* : Text ) : Integer<br/>**LISTBOX Get static columns** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get static columns.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | resultado | Integer | &#8592; | Número de columnas estáticas |
 
 <!-- END REF-->
@@ -37,6 +37,6 @@ Sin embargo, el comando no tiene en cuenta el estado visible/invisible de las co
 |  |  |
 | --- | --- |
 | Número de comando | 1154 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

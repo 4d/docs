@@ -5,11 +5,11 @@ slug: /commands/qr-get-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *zone* ; *gauche* ; *haut* {; *droite* {; *bas*}} )<!-- END REF-->
+<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *zone* : Integer ; *gauche* : Integer ; *haut* : Integer {; *droite* : Integer {; *bas* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR GET SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
+| zone | Integer | &#8594; | Référence de la zone |
 | gauche | Integer | &#8592; | Limite gauche |
 | haut | Integer | &#8592; | Limite supérieure |
 | droite | Integer | &#8592; | Limite droite |
@@ -42,7 +42,7 @@ Si un numéro de *zone* invalide est passé, l’erreur -9850 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 793 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -66,6 +66,6 @@ Esta prova é equivalente a:
 |  |  |
 | --- | --- |
 | Número do comando | 1231 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

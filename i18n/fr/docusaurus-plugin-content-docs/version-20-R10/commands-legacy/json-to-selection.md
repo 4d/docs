@@ -74,6 +74,6 @@ Utilisation de la commande **JSON TO SELECTION** pour ajouter des enregistrement
 |  |  |
 | --- | --- |
 | Numéro de commande | 1235 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

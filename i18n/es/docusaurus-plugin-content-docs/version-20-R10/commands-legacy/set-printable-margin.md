@@ -63,6 +63,6 @@ El siguiente ejemplo le permite obtener el tamaño del papel:
 |  |  |
 | --- | --- |
 | Número de comando | 710 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

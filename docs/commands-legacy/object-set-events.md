@@ -5,13 +5,13 @@ slug: /commands/object-set-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( {* ;} *object* ; *arrEvents* ; *mode* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET EVENTS.Syntax-->**OBJECT SET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array ; *mode* : Integer )<br/>**OBJECT SET EVENTS** ( *object* : Field, Variable ; *arrEvents* : Integer array ; *mode* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET EVENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name or "" to designate the form (if * is specified) or<br/>Field or variable (if * is omitted) |
-| arrEvents | Array integer | &#8594;  | Array of events to set |
+| arrEvents | Integer array | &#8594;  | Array of events to set |
 | mode | Integer | &#8594;  | Activation mode for events defined in arrEvents |
 
 <!-- END REF-->
@@ -171,6 +171,6 @@ Disables a single event of the form without modifying the others:
 |  |  |
 | --- | --- |
 | Command number | 1239 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

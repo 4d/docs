@@ -134,6 +134,6 @@ The result is...
 |  |  |
 | --- | --- |
 | Command number | 1181 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get indicator type** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get indicator type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | Résultat | Integer | &#8592; | Type d’indicateur |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Vous pouvez comparer la valeur retournée par la commande aux constantes suivant
 |  |  |
 | --- | --- |
 | Numéro de commande | 1247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

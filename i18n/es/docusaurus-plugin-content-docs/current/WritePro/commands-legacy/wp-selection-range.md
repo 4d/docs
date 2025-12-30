@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-selection-range
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Selection range.Syntax-->**WP Selection range** ( {* ;} *wpArea* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Selection range.Syntax-->**WP Selection range** ( {* ;} *wpArea* : Text ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Selection range.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/get-user-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomsUtil* ; *réfUtil* )<!-- END REF-->
+<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *nomsUtil* : Text array ; *réfUtil* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ Si vous n'avez pas les privilèges d'accès pour appeler la commande **GET USER 
 |  |  |
 | --- | --- |
 | Numéro de commande | 609 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

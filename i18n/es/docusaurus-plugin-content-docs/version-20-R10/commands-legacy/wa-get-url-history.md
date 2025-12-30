@@ -49,6 +49,6 @@ Si se pasa, el parámetro *arrTitulos* contiene la lista de los nombres de venta
 |  |  |
 | --- | --- |
 | Número de comando | 1048 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

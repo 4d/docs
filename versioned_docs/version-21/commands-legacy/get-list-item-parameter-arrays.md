@@ -80,6 +80,6 @@ If you want to get the parameter values as well, you write:
 |  |  |
 | --- | --- |
 | Command number | 1195 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

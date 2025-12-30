@@ -71,6 +71,6 @@ Se quiser definir um array de altura de linha para um list box:
 |  |  |
 | --- | --- |
 | Número do comando | 1279 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

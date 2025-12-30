@@ -31,6 +31,6 @@ Para que se genere el ciclo de ejecución **Deactivated**, asegúrese de que la 
 |  |  |
 | --- | --- |
 | Número de comando | 347 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

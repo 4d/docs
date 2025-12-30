@@ -42,6 +42,6 @@ O exemplo a seguir é um método que pode ser executado desde um menu. Ele verif
 |  |  |
 | --- | --- |
 | Número do comando | 326 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -32,7 +32,7 @@ Se não houver pastas na localização especificada, o comando retorna um array 
 |  |  |
 | --- | --- |
 | Número do comando | 473 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

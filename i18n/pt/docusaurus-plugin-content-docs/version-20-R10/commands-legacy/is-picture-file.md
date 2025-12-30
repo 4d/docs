@@ -34,6 +34,6 @@ Se não passa o parâmetro *\**, o comando prova o arquivo buscando sua extensã
 |  |  |
 | --- | --- |
 | Número do comando | 1113 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

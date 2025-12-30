@@ -5,12 +5,12 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *numColuna* )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* : Integer ; *numColuna* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Número de Coluna |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Número de Coluna |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ O exemplo a seguir garante de que o relatório seja listado e apaga a terceira c
 |  |  |
 | --- | --- |
 | Número do comando | 749 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

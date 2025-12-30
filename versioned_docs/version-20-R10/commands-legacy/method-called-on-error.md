@@ -51,6 +51,6 @@ This command is particularly useful in the context of components because it enab
 |  |  |
 | --- | --- |
 | Command number | 704 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

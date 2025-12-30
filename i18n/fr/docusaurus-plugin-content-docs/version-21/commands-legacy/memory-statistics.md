@@ -33,6 +33,6 @@ A l’issue de l’exécution de la commande, les statistiques demandées sont f
 |  |  |
 | --- | --- |
 | Numéro de commande | 1118 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

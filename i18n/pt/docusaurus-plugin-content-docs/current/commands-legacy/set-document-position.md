@@ -5,13 +5,13 @@ slug: /commands/set-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* ; *offset* {; *ancora*} )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* : Time ; *offset* : Real {; *ancora* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referência de documento |
-| offset | Real | &#8594;  | Posição de arquivo (expresso em bytes) |
-| ancora | Integer | &#8594;  | 1 = em relação ao começo do arquivo 2= em relação ao final do arquivo 3= em relação a posição atual |
+| docRef | Time | &#8594; | Número de referência de documento |
+| offset | Real | &#8594; | Posição de arquivo (expresso em bytes) |
+| ancora | Integer | &#8594; | 1 = em relação ao começo do arquivo 2= em relação ao final do arquivo 3= em relação a posição atual |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ Se omite o parâmetro opcional *ancora*, a posição é relativa ao início do d
 |  |  |
 | --- | --- |
 | Número do comando | 482 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

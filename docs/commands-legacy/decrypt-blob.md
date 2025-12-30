@@ -5,7 +5,7 @@ slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *toDecrypt* ; *sendPubKey* {; *recipPrivKey*} )<!-- END REF-->
+<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *toDecrypt* : Blob ; *sendPubKey* : Blob {; *recipPrivKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ Refer to the examples given for the [ENCRYPT BLOB](encrypt-blob.md) command.
 |  |  |
 | --- | --- |
 | Command number | 690 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

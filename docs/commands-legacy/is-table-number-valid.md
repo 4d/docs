@@ -5,7 +5,7 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *tableNum* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ This command can be used to detect any table deletions, which create gaps in the
 |  |  |
 | --- | --- |
 | Command number | 999 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

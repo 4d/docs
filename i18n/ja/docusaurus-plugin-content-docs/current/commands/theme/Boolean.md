@@ -1,7 +1,7 @@
 ---
 id: Boolean_theme
 title: Boolean
-sidebar_label: Boolean
+sidebar_label: ブール
 slug: /commands/theme/Boolean
 ---
 

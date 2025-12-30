@@ -5,7 +5,7 @@ slug: /commands/object-set-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( {* ;} *object* ; *indicator* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET INDICATOR TYPE.Syntax-->**OBJECT SET INDICATOR TYPE** ( * ; *object* : Text ; *indicator* : Integer )<br/>**OBJECT SET INDICATOR TYPE** ( *object* : Field, Variable ; *indicator* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET INDICATOR TYPE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ In the *indicator* parameter, pass the type of indicator you want to display. Yo
 |  |  |
 | --- | --- |
 | Command number | 1246 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

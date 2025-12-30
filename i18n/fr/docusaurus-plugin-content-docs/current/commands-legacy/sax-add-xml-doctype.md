@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-doctype
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* ; *docType* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML DOCTYPE.Syntax-->**SAX ADD XML DOCTYPE** ( *document* : Time ; *docType* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML DOCTYPE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
-| docType | Text | &#8594;  | DocType à ajouter |
+| document | Time | &#8594; | Référence du document ouvert |
+| docType | Text | &#8594; | DocType à ajouter |
 
 <!-- END REF-->
 
@@ -31,8 +31,8 @@ L’instruction suivante :
 
 ... inscrira cette ligne dans le document : 
 
-```4d
- 
+```xml
+ <!DOCTYPE Livres SYSTEM "Livre.DTD">
 ```
 
 ## Variables et ensembles système 
@@ -52,7 +52,7 @@ En cas d’erreur, la commande retourne une erreur qui peut être interceptée v
 |  |  |
 | --- | --- |
 | Numéro de commande | 851 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

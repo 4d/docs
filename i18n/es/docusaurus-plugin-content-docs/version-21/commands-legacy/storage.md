@@ -88,6 +88,6 @@ Este ejemplo muestra una forma estándar de establecer valores de **Almacenamien
 |  |  |
 | --- | --- |
 | Número de comando | 1525 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

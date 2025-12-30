@@ -5,7 +5,7 @@ slug: /commands/listbox-get-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( {* ;} *object* ; *row* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row font style.Syntax-->**LISTBOX Get row font style** ( * ; *object* : Text ; *row* : Integer ) : Integer<br/>**LISTBOX Get row font style** ( *object* : Field, Variable ; *row* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row font style.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ Given the following list box:
 |  |  |
 | --- | --- |
 | Command number | 1269 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

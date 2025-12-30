@@ -5,7 +5,7 @@ slug: /commands/listbox-set-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( {* ;} *object* ; *row* ; *style* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( * ; *object* : Text ; *row* : Integer ; *style* : Integer )<br/>**LISTBOX SET ROW FONT STYLE** ( *object* : Field, Variable ; *row* : Integer ; *style* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -83,6 +83,6 @@ After the second statement, all the cells of the third row change to underlined 
 |  |  |
 | --- | --- |
 | Command number | 1268 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

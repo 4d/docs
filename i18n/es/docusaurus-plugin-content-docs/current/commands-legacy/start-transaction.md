@@ -31,6 +31,6 @@ A partir de la versión 11 de 4D, puede anidar varias transacciones (subtransacc
 |  |  |
 | --- | --- |
 | Número de comando | 239 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

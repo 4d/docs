@@ -39,7 +39,7 @@ Si el comando se ha ejecutado correctamente y si el elemento referenciado no es 
 |  |  |
 | --- | --- |
 | Número de comando | 924 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

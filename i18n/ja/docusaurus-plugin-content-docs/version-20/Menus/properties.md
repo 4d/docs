@@ -15,7 +15,7 @@ title: メニュープロパティ
 - :xliff:MyLabel という形の XLIFFリソース参照。 XLIFF参照についての詳細は、*4D デザインリファレンス* の [XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください。
 - (**Deprecated**) An interprocess variable name followed by a number, for example: `:<>vlang,3`. この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
 
-Using the 4D language, you set the title property through the *itemText* parameter of the [`APPEND MENU ITEM`](../commands/append-menu-item), [`INSERT MENU ITEM`](../commands/insert-menu-item), and [`SET MENU ITEM`](../commands/set-menu-item) commands.
+4Dランゲージを使う場合は、[`APPEND MENU ITEM`](../commands/append-menu-item)、[`INSERT MENU ITEM`](../commands/insert-menu-item)、および [`SET MENU ITEM`](../commands/set-menu-item) コマンドの *itemText* パラメーターでタイトルプロパティを設定します。
 
 ### 制御文字の使用
 

@@ -5,12 +5,11 @@ slug: /commands/base64-decode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BASE64 DECODE.Syntax-->**BASE64 DECODE** ( *toDecode* {; *decoded*}{; *} )<!-- END REF-->
+<!--REF #_command_.BASE64 DECODE.Syntax-->**BASE64 DECODE** ( *toDecode* : Text, Blob {; *decoded* : Text, Blob}{; *} )<!-- END REF-->
 <!--REF #_command_.BASE64 DECODE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| toDecode | Text, Blob | &#8594;  | Encoded value to decode |
-| &#8592; | Decoded value (if decoded parameter omitted) |
+| toDecode | Text, Blob | &#8596;  |*in:* Encoded value to decode<br/>*out:* Decoded value (if decoded parameter omitted)|
 | decoded | Text, Blob | &#8592; | Decoded value |
 | * | Operator | &#8594;  | Decode in Base64URL format |
 
@@ -22,7 +21,7 @@ displayed_sidebar: docs
 
 Pass in *toDecode* the Base64 or Base64URL encoded text or blob value to decode. 
 
-If you pass the *decoded* parameter, the command decodes the contents of *toDecode* in the decoded parameter -- the *toDecode* parameter is left untouched. If you omit the *decoded* parameter, the command directly modifies the contents of the *toDecode* parameter.
+If you pass the *decoded* parameter, the command decodes the contents of *toDecode* in the *decoded* parameter -- the *toDecode* parameter is left untouched. If you omit the *decoded* parameter, the command directly modifies the contents of the *toDecode* parameter.
 
 **Note:** If a text variable is passed to receive what is decoded by the command, it receives the decoded bytes interpreted as utf-8.
 
@@ -53,7 +52,6 @@ This example lets you transfer a picture via a BLOB:
 
 [BASE64 ENCODE](base64-encode.md)  
 [Generate digest](generate-digest.md)  
-*Overview of XML DOM Commands*  
 [XML DECODE](xml-decode.md)  
 
 ## Properties
@@ -61,6 +59,6 @@ This example lets you transfer a picture via a BLOB:
 |  |  |
 | --- | --- |
 | Command number | 896 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

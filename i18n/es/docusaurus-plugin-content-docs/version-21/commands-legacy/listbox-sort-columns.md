@@ -40,6 +40,6 @@ Conforme con el principio de funcionamiento del list box, las columnas están si
 |  |  |
 | --- | --- |
 | Número de comando | 916 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

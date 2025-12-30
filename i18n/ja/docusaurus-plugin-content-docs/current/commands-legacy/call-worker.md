@@ -5,13 +5,13 @@ slug: /commands/call-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *process* ; *formula* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *process* : Text, Integer ; *formula* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL WORKER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Text, Integer | &#8594;  | プロセス番号、またはプロセス名 |
-| formula | Object, Text | &#8594;  | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
-| param | Expression | &#8594;  | メソッドに渡す引数 |
+| process | Text, Integer | &#8594; | プロセス番号、またはプロセス名 |
+| formula | Object, Text | &#8594; | 実行するプロジェクトメソッドの名前、または Formulaオブジェクト |
+| param | Expression | &#8594; | メソッドに渡す引数 |
 
 <!-- END REF-->
 
@@ -80,6 +80,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1389 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,15 +5,15 @@ slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objects* ; *options* ; *method* {; *tablesArray* {; *fieldsArray*}} )}<!-- END REF-->
+<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ({ *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} })<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | objects | Integer | &#8594;  | Objects to check |
 | options | Integer | &#8594;  | Checking options |
 | method | Text | &#8594;  | Name of 4D callback method |
-| tablesArray | Array integer | &#8594;  | Numbers of tables to be checked |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numbers of indexes to be checked |
+| tablesArray | Integer array | &#8594;  | Numbers of tables to be checked |
+| fieldsArray | Integer array | &#8594;  | 2D array, numbers of indexes to be checked |
 
 <!-- END REF-->
 
@@ -49,7 +49,7 @@ If the callback method does not exist, the verification is not carried out, an e
 |  |  |
 | --- | --- |
 | Command number | 1008 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( * ; *object* : Text {; *listType* : Integer} ) : Integer<br/>**OBJECT Get list reference** ( *object* : Field, Variable {; *listType* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ If there is no hierarchical list associated with the object for the *listType* d
 |  |  |
 | --- | --- |
 | Command number | 1267 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

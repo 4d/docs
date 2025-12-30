@@ -5,12 +5,12 @@ slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** {( *usuario* ; *senha* )}<!-- END REF-->
+<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ({ *usuario* : Text, Integer ; *senha* : Text })<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| usuario | Text, Integer | &#8594;  | Nome do usuário ou ID única |
-| senha | Text | &#8594;  | Senha (não criptografada) |
+| usuario | Text, Integer | &#8594; | Nome do usuário ou ID única |
+| senha | Text | &#8594; | Senha (não criptografada) |
 
 <!-- END REF-->
 
@@ -73,6 +73,6 @@ O exemplo abaixo exibe a caixa de diálogo de conexão:
 |  |  |
 | --- | --- |
 | Número do comando | 289 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,15 +5,15 @@ slug: /commands/object-get-best-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( {* ;} *objeto* ; *largIdeal* ; *alturaIdeal* {; *larguraMax*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET BEST SIZE.Syntax-->**OBJECT GET BEST SIZE** ( * ; *objeto* : Text ; *largIdeal* : Integer ; *alturaIdeal* : Integer {; *larguraMax* : Integer} )<br/>**OBJECT GET BEST SIZE** ( *objeto* : Field, Variable ; *largIdeal* : Integer ; *alturaIdeal* : Integer {; *larguraMax* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET BEST SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | largIdeal | Integer | &#8592; | Largura ideal do objeto |
 | alturaIdeal | Integer | &#8592; | Altura ideal do objeto |
-| larguraMax | Integer | &#8594;  | Altura máxima do objeto |
+| larguraMax | Integer | &#8594; | Altura máxima do objeto |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ Consulte o exemplo no comando [SET PRINT MARKER](set-print-marker.md "SET PRINT 
 |  |  |
 | --- | --- |
 | Número do comando | 717 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

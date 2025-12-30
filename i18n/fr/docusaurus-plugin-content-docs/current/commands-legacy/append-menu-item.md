@@ -5,15 +5,15 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* ; *libelléLigne* {; *sousMenu* {; *process* {; *}}} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer ; *libelléLigne* : Text {; *sousMenu* : Text {; *process* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Numéro de menu ou Référence de menu |
-| libelléLigne | Text | &#8594;  | Libellé du ou des nouvelle(s) ligne(s) de menu |
-| sousMenu | Text | &#8594;  | Référence du sous-menu associé à la ligne |
-| process | Integer | &#8594;  | Numéro de référence du process |
-| * | Opérateur | &#8594;  | Si passé : considérer les métacaractères comme des caractères standard |
+| menu | Integer | &#8594; | Numéro de menu ou Référence de menu |
+| libelléLigne | Text | &#8594; | Libellé du ou des nouvelle(s) ligne(s) de menu |
+| sousMenu | Text | &#8594; | Référence du sous-menu associé à la ligne |
+| process | Integer | &#8594; | Numéro de référence du process |
+| * | Opérateur | &#8594; | Si passé : considérer les métacaractères comme des caractères standard |
 
 <!-- END REF-->
 
@@ -82,7 +82,7 @@ Ensuite, dans toute méthode formulaire ou projet, vous pouvez écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 411 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

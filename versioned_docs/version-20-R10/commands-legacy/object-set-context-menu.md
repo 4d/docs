@@ -34,6 +34,6 @@ Pass **True** in the *contextMenu* parameter to enable the context menu, and **F
 |  |  |
 | --- | --- |
 | Command number | 1251 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

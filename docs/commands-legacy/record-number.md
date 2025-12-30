@@ -5,7 +5,7 @@ slug: /commands/record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Record number.Syntax-->**Record number** {( *aTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Record number.Syntax-->**Record number** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ The following example saves the current record number and then searches for any 
 |  |  |
 | --- | --- |
 | Command number | 243 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

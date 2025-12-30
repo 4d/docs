@@ -5,20 +5,20 @@ slug: /commands/listbox-insert-column-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( {* ;} *objet* ; *positionCol* ; *nomCol* ; *formule* ; *typeDonnées* ; *nomEnTête* ; *variableEntête* {; *nomPied* ; *variablePied*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Syntax-->**LISTBOX INSERT COLUMN FORMULA** ( * ; *objet* : Text ; *positionCol* : Integer ; *nomCol* : Text ; *formule* : Text ; *typeDonnées* : Integer ; *nomEnTête* : Text ; *variableEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<br/>**LISTBOX INSERT COLUMN FORMULA** ( *objet* : Field, Variable ; *positionCol* : Integer ; *nomCol* : Text ; *formule* : Text ; *typeDonnées* : Integer ; *nomEnTête* : Text ; *variableEntête* : Integer, Pointer {; *nomPied* : Text ; *variablePied* : Variable, Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX INSERT COLUMN FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
-| positionCol | Integer | &#8594;  | Emplacement de la colonne à insérer |
-| nomCol | Text | &#8594;  | Nom d’objet de la colonne |
-| formule | Text | &#8594;  | Formule 4D associée à la colonne |
-| typeDonnées | Integer | &#8594;  | Type de résultat de la formule |
-| nomEnTête | Text | &#8594;  | Nom d'objet de l'en-tête de la colonne |
-| variableEntête | Integer, Pointer | &#8594;  | Variable d'en-tête de la colonne |
-| nomPied | Text | &#8594;  | Nom d’objet du pied de la colonne |
-| variablePied | Variable, Pointer | &#8594;  | Variable du pied de la colonne |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594; | Emplacement de la colonne à insérer |
+| nomCol | Text | &#8594; | Nom d’objet de la colonne |
+| formule | Text | &#8594; | Formule 4D associée à la colonne |
+| typeDonnées | Integer | &#8594; | Type de résultat de la formule |
+| nomEnTête | Text | &#8594; | Nom d'objet de l'en-tête de la colonne |
+| variableEntête | Integer, Pointer | &#8594; | Variable d'en-tête de la colonne |
+| nomPied | Text | &#8594; | Nom d’objet du pied de la colonne |
+| variablePied | Variable, Pointer | &#8594; | Variable du pied de la colonne |
 
 <!-- END REF-->
 
@@ -122,6 +122,6 @@ La colonne est ajoutée à la list box :
 |  |  |
 | --- | --- |
 | Numéro de commande | 970 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

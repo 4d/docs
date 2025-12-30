@@ -60,6 +60,6 @@ In the context of deploying a merged application, you want to open or create the
 |  |  |
 | --- | --- |
 | Command number | 312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

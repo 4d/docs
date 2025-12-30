@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | variable | Variable | &#8594;  | Variable to store in the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the variable |
+| Blob | Blob | &#8594;  | BLOB to receive the variable |
 | offset &#124; * | Variable, Operator | &#8596; | Offset within the BLOB (expressed in bytes) or * to append the value |
 | ||| New offset after writing if not * |
 
@@ -136,7 +136,7 @@ After these methods have been added to your application, you can write:
 |  |  |
 | --- | --- |
 | Command number | 532 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

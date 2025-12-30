@@ -5,11 +5,11 @@ slug: /commands/structure-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Structure file.Syntax-->**Structure file** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Structure file.Syntax-->**Structure file** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Structure file.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Devuelve el archivo de estructura de la base local |
+| * | Operador | &#8594; | Devuelve el archivo de estructura de la base local |
 | Resultado | Text | &#8592; | Nombre largo del archivo de estructura de la base |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ El siguiente ejemplo puede utilizarse para saber si el método se llama desde un
 |  |  |
 | --- | --- |
 | Número de comando | 489 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

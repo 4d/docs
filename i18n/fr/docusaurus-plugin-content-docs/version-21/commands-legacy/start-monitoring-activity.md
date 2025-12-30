@@ -98,6 +98,6 @@ Vous souhaitez lancer/arrêter le suivi et revoir les activités de données 4D 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1712 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

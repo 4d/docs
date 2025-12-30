@@ -72,6 +72,6 @@ Você quer inserir os títulos em duas linhas:
 |  |  |
 | --- | --- |
 | Número do comando | 194 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -208,7 +208,7 @@ Une fois que cela est implémenté dans votre base, il suffit d'écrire la méth
 |  |  |
 | --- | --- |
 | Numéro de commande | 477 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

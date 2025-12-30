@@ -5,12 +5,12 @@ slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *object* : Text ) : Text<br/>**OBJECT Get title** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字)、省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または、フィールドまたは変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | ボタンのタイトル |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1068 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

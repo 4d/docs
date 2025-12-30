@@ -55,6 +55,6 @@ Conversion of a picture with 60% quality:
 |  |  |
 | --- | --- |
 | Command number | 1002 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

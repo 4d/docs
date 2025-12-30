@@ -47,6 +47,6 @@ O parâmetro *título* retorna o título da janela do formulário, tal como foi 
 |  |  |
 | --- | --- |
 | Número do comando | 674 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

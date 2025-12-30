@@ -179,6 +179,6 @@ Se quiser saber a quantidade de subpastas em uma rota:
 |  |  |
 | --- | --- |
 | Número do comando | 1547 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -55,7 +55,7 @@ Si el comando ha sido ejecutado correctamente, la variable sistema OK toma el va
 |  |  |
 | --- | --- |
 | Número de comando | 1047 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

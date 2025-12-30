@@ -5,13 +5,13 @@ slug: /commands/object-set-minimum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MINIMUM VALUE.Syntax-->**OBJECT SET MINIMUM VALUE** ( {* ;} *objeto* ; *valorMinimo* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MINIMUM VALUE.Syntax-->**OBJECT SET MINIMUM VALUE** ( * ; *objeto* : Text ; *valorMinimo* : Date, Time, Real )<br/>**OBJECT SET MINIMUM VALUE** ( *objeto* : Field, Variable ; *valorMinimo* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MINIMUM VALUE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
-| valorMinimo | Date, Time, Number | &#8594;  | Valor mínimo para el objeto |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si * se especifica) o <br/>Campo o variable (si * se omite) |
+| valorMinimo | Date, Time, Real | &#8594; | Valor mínimo para el objeto |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ En *valorMinimo*, pase el nuevo valor mínimo a asignar al objeto para el proces
 |  |  |
 | --- | --- |
 | Número de comando | 1242 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

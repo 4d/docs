@@ -5,11 +5,11 @@ slug: /commands/delete-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *document* )<!-- END REF-->
+<!--REF #_command_.DELETE DOCUMENT.Syntax-->**DELETE DOCUMENT** ( *document* : Text )<!-- END REF-->
 <!--REF #_command_.DELETE DOCUMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | ドキュメント名、または 完全なドキュメントのパス名 |
+| document | Text | &#8594; | ドキュメント名、または 完全なドキュメントのパス名 |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 159 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

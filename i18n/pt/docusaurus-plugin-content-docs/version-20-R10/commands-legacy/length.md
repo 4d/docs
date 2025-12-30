@@ -35,6 +35,6 @@ Este exemplo ilustra o uso de **Length**. Os resultados, descritos nos comentár
 |  |  |
 | --- | --- |
 | Número do comando | 16 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

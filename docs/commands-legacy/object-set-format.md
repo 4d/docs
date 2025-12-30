@@ -5,7 +5,7 @@ slug: /commands/object-set-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( {* ;} *object* ; *displayFormat* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FORMAT.Syntax-->**OBJECT SET FORMAT** ( * ; *object* : Text ; *displayFormat* : Text )<br/>**OBJECT SET FORMAT** ( *object* : Field, Variable ; *displayFormat* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FORMAT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -366,6 +366,6 @@ Switching a thermometer to "Barber shop" mode:
 |  |  |
 | --- | --- |
 | Command number | 236 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

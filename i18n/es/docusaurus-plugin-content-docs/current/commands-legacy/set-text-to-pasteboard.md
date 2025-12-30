@@ -5,11 +5,11 @@ slug: /commands/set-text-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texto* )<!-- END REF-->
+<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texto* : Text )<!-- END REF-->
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| texto | Text | &#8594;  | Texto a copiar en el portapapeles |
+| texto | Text | &#8594; | Texto a copiar en el portapapeles |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Si el texto se coloca correctamente en el portapapeles, la variable OK toma el v
 |  |  |
 | --- | --- |
 | Número de comando | 523 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -31,8 +31,8 @@ La siguiente instrucción:
 
 ... escribirá la siguiente línea en el documento: 
 
-```4d
- 
+```xml
+ <!--Creado por 4D-->
 ```
 
 ## Variables y conjuntos del sistema 
@@ -52,7 +52,7 @@ En caso de error, el comando devuelve un error que puede interceptarse utilizand
 |  |  |
 | --- | --- |
 | Número de comando | 852 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

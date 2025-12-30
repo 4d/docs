@@ -63,7 +63,7 @@ El siguiente ejemplo busca las estadísticas correctas para una competencia mund
 |  |  |
 | --- | --- |
 | Número de comando | 351 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

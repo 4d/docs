@@ -45,6 +45,6 @@ CLEAR PASTEBOARDを1回呼び出してから、[APPEND DATA TO PASTEBOARD](appen
 |  |  |
 | --- | --- |
 | コマンド番号 | 402 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

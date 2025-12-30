@@ -40,7 +40,7 @@ Se o comando se executa corretamente, a variável sistema OK toma o valor 1, cas
 |  |  |
 | --- | --- |
 | Número do comando | 1292 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

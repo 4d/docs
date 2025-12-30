@@ -73,6 +73,6 @@ O array *aTPaths* obtém os elementos abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 1395 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

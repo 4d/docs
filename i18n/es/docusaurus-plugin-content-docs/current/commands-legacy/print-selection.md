@@ -5,12 +5,12 @@ slug: /commands/print-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*tabla*}{;}{* | >} )<!-- END REF-->
+<!--REF #_command_.PRINT SELECTION.Syntax-->**PRINT SELECTION** ( {*tabla* : Table}{;}{* | >} )<!-- END REF-->
 <!--REF #_command_.PRINT SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual imprimir la selección, o Tabla por defecto, si se omite |
-| * &#124; > | Operador | &#8594;  | * para eliminar las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
+| tabla | Table | &#8594; | Tabla para la cual imprimir la selección, o Tabla por defecto, si se omite |
+| * &#124; > | Operador | &#8594; | * para eliminar las cajas de diálogo de impresión, o > para no reiniciar los parámetros de impresión |
 
 <!-- END REF-->
 
@@ -67,7 +67,7 @@ El siguiente ejemplo selecciona todos los registros en la tabla \[Personas\]. El
 |  |  |
 | --- | --- |
 | Número de comando | 60 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -5,7 +5,7 @@ slug: /commands/form-get-vertical-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET VERTICAL RESIZING.Syntax-->**FORM GET VERTICAL RESIZING** ( *redimension* {; *hauteurMini* {; *hauteurMaxi*}} )<!-- END REF-->
+<!--REF #_command_.FORM GET VERTICAL RESIZING.Syntax-->**FORM GET VERTICAL RESIZING** ( *redimension* : Boolean {; *hauteurMini* : Integer {; *hauteurMaxi* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM GET VERTICAL RESIZING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 1078 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/object-get-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get vertical alignment.Syntax-->**OBJECT Get vertical alignment** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get vertical alignment** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get vertical alignment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ Vertical alignment can be applied to the following types of form objects:
 |  |  |
 | --- | --- |
 | Command number | 1188 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *menuItem* ; *itemEstilo* {; *processo*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemEstilo* : Integer {; *processo* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item de menu ou -1 para último item adicionado |
-| itemEstilo | Integer | &#8594;  | Novo estilo de item de menu |
-| processo | Integer | &#8594;  | Número de referência de processo |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item de menu ou -1 para último item adicionado |
+| itemEstilo | Integer | &#8594; | Novo estilo de item de menu |
+| processo | Integer | &#8594; | Número de referência de processo |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ No parâmetro *itemEstilo* pode definir o estilo do elemento. Passe uma combina�
 |  |  |
 | --- | --- |
 | Número do comando | 425 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

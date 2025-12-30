@@ -103,6 +103,6 @@ Utilizando um elemento de array de objetos:
 |  |  |
 | --- | --- |
 | Número do comando | 1232 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

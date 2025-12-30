@@ -109,6 +109,6 @@ Cambia a fondo transparente con un color de fuente claro:
 |  |  |
 | --- | --- |
 | Número de comando | 628 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

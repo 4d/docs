@@ -47,6 +47,6 @@ L'exemple suivant supprime l'élément sélectionné de la liste *hList*. Si une
 |  |  |
 | --- | --- |
 | Numéro de commande | 624 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

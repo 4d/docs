@@ -34,6 +34,6 @@ The NULL value is used by the SQL kernel of 4D. For more information, please ref
 |  |  |
 | --- | --- |
 | Command number | 965 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

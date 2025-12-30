@@ -5,11 +5,11 @@ slug: /commands/json-parse-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *cadeiaJSON* ; *arrayObjeto* )<!-- END REF-->
+<!--REF #_command_.JSON PARSE ARRAY.Syntax-->**JSON PARSE ARRAY** ( *cadeiaJSON* : Text ; *arrayObjeto* : Array )<!-- END REF-->
 <!--REF #_command_.JSON PARSE ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeiaJSON | Text | &#8594;  | Cadeia JSON a analisar |
+| cadeiaJSON | Text | &#8594; | Cadeia JSON a analisar |
 | arrayObjeto | Array | &#8592; | Array que contém o resultado da análise da cadeia JSON |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Neste exemplo, os dados dos campos dos registros de uma tabela se extraem e loca
 |  |  |
 | --- | --- |
 | Número do comando | 1219 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

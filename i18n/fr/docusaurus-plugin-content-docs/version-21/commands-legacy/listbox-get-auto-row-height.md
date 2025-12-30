@@ -61,6 +61,6 @@ Vous voulez connaître le nombre de lignes maximum pouvant être affichées dans
 |  |  |
 | --- | --- |
 | Numéro de commande | 1502 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

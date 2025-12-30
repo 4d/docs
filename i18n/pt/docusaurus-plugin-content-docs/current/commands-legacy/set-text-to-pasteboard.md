@@ -5,11 +5,11 @@ slug: /commands/set-text-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texto* )<!-- END REF-->
+<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *texto* : Text )<!-- END REF-->
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| texto | Text | &#8594;  | Texto a copiar na área de transferência |
+| texto | Text | &#8594; | Texto a copiar na área de transferência |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Se o texto se coloca corretamente na área de transferência, a variável OK tom
 |  |  |
 | --- | --- |
 | Número do comando | 523 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

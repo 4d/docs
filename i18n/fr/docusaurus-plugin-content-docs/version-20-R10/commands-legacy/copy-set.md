@@ -45,6 +45,6 @@ L'exemple suivant, en client/serveur, copie l'ensemble process "*SetA*", conserv
 |  |  |
 | --- | --- |
 | Numéro de commande | 600 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

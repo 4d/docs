@@ -5,14 +5,14 @@ slug: /commands/object-set-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( {* ;} *objeto* ; *marcoVariable* {; *subformFijo*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Syntax-->**OBJECT SET PRINT VARIABLE FRAME** ( * ; *objeto* : Text ; *marcoVariable* : Boolean {; *subformFijo* : Integer} )<br/>**OBJECT SET PRINT VARIABLE FRAME** ( *objeto* : Field, Variable ; *marcoVariable* : Boolean {; *subformFijo* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET PRINT VARIABLE FRAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
-| marcoVariable | Boolean | &#8594;  | True = Impresión de marco variable, False = Impresión de marco fijo |
-| subformFijo | Integer | &#8594;  | Opciones de impresión de subformularios en tamaño fijo |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| marcoVariable | Boolean | &#8594; | True = Impresión de marco variable, False = Impresión de marco fijo |
+| subformFijo | Integer | &#8594; | Opciones de impresión de subformularios en tamaño fijo |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ El parámetro opcional *subformFijo* le permite configurar una opción adicional
 |  |  |
 | --- | --- |
 | Número de comando | 1240 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/object-set-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( {* ;} *object* ; *alignment* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Syntax-->**OBJECT SET HORIZONTAL ALIGNMENT** ( * ; *object* : Text ; *alignment* : Integer )<br/>**OBJECT SET HORIZONTAL ALIGNMENT** ( *object* : Field, Variable ; *alignment* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HORIZONTAL ALIGNMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
-| alignment | Integer | &#8594;  | 整列コード |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| alignment | Integer | &#8594; | 整列コード |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 706 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

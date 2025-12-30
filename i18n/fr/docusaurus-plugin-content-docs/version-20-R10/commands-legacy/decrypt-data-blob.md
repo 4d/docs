@@ -64,6 +64,6 @@ Les paramètres *passPhrase* et le *salt* utilisés pour le déchiffrement sont 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1774 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/menu-selected
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Menu selected.Syntax-->**Menu selected** {( *subMenu* )} : Integer<!-- END REF-->
+<!--REF #_command_.Menu selected.Syntax-->**Menu selected** ( *subMenu* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Menu selected.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -65,7 +65,7 @@ El siguiente método de formulario utiliza Menu selected para proporcionar los a
 |  |  |
 | --- | --- |
 | Número de comando | 152 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

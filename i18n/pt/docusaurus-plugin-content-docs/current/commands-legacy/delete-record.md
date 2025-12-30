@@ -5,11 +5,11 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual o registro atual será apagado, ou tabela Padrão, se omitido |
+| tabela | Table | &#8594; | Tabela na qual o registro atual será apagado, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ O exemplo apaga um registro de um empregado. O código pergunta ao usuário o n�
 |  |  |
 | --- | --- |
 | Número do comando | 58 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

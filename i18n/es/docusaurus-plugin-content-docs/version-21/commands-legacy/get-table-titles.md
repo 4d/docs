@@ -34,6 +34,6 @@ En ambos casos, el comando no devuelve las tablas invisibles.
 |  |  |
 | --- | --- |
 | Número de comando | 803 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -315,7 +315,7 @@ The OK variable is set to 0 if:
 |  |  |
 | --- | --- |
 | Command number | 277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

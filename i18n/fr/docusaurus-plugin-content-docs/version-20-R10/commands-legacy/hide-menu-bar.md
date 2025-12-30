@@ -49,7 +49,7 @@ La méthode suivante passe un enregistrement en plein écran (sous Mac OS) jusqu
 |  |  |
 | --- | --- |
 | Numéro de commande | 432 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

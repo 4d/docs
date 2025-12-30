@@ -5,12 +5,12 @@ slug: /commands/ob-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *object* ; *property* ) : Integer<!-- END REF-->
+<!--REF #_command_.OB Get type.Syntax-->**OB Get type** ( *object* : Object ; *property* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.OB Get type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | 構造化されたオブジェクト |
-| property | Text | &#8594;  | 読み出したいプロパティ名 |
+| object | Object | &#8594; | 構造化されたオブジェクト |
+| property | Text | &#8594; | 読み出したいプロパティ名 |
 | 戻り値 | Integer | &#8592; | プロパティの値のタイプ |
 
 <!-- END REF-->
@@ -58,6 +58,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1230 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

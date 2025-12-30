@@ -5,11 +5,11 @@ slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get window title.Syntax-->**Get window title** {( *fenêtre* )} : Text<!-- END REF-->
+<!--REF #_command_.Get window title.Syntax-->**Get window title** ( *fenêtre* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 | Résultat | Text | &#8592; | Titre de la fenêtre |
 
 <!-- END REF-->
@@ -33,6 +33,6 @@ Reportez-vous à l'exemple de la commande [SET WINDOW TITLE](set-window-title.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 450 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

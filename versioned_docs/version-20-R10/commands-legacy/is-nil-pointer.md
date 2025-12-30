@@ -42,6 +42,6 @@ If you want to find out the name of the variable or the number of the field that
 |  |  |
 | --- | --- |
 | Command number | 315 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

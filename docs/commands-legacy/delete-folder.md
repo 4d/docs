@@ -5,7 +5,7 @@ slug: /commands/delete-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *folder* {; *deleteOption*} )<!-- END REF-->
+<!--REF #_command_.DELETE FOLDER.Syntax-->**DELETE FOLDER** ( *folder* : Text {; *deleteOption* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ You can intercept these errors using a method installed by the [ON ERR CALL](on-
 |  |  |
 | --- | --- |
 | Command number | 693 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

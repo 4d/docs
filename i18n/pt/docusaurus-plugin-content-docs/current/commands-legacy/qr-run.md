@@ -5,11 +5,11 @@ slug: /commands/qr-run
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* )<!-- END REF-->
+<!--REF #_command_.QR RUN.Syntax-->**QR RUN** ( *area* : Integer )<!-- END REF-->
 <!--REF #_command_.QR RUN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área a executar |
+| area | Integer | &#8594; | Referência da área a executar |
 
 <!-- END REF-->
 
@@ -29,7 +29,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 746 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

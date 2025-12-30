@@ -5,7 +5,7 @@ slug: /commands/get-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *markNum* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get print marker.Syntax-->**Get print marker** ( *markNum* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Get print marker.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ Refer to the example of the [SET PRINT MARKER](set-print-marker.md) command.
 |  |  |
 | --- | --- |
 | Command number | 708 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

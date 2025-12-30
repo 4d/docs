@@ -5,13 +5,13 @@ slug: /commands/dom-parse-xml-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *nomFichier* {; *validation* {; *dtd* }} ) : Text<br/>**DOM Parse XML source** ( *nomFichier* {; *validation* {; *schéma* }} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *nomFichier* : Text {; *validation* : Boolean {; *dtd* : Chaîne }} ) : Text<br/>**DOM Parse XML source** ( *nomFichier* : Text {; *validation* : Boolean {; *schéma* : Chaîne }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML source.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Chemin d’accès du document |
-| validation | Boolean | &#8594;  | Vrai = Validation, Faux = Pas de validation |
-| dtd &#124; schéma | Chaîne | &#8594;  | Emplacement de la DTD ou du schéma XML |
+| nomFichier | Text | &#8594; | Chemin d’accès du document |
+| validation | Boolean | &#8594; | Vrai = Validation, Faux = Pas de validation |
+| dtd &#124; schéma | Chaîne | &#8594; | Emplacement de la DTD ou du schéma XML |
 | Résultat | Text | &#8592; | Référence de l’élément XML |
 
 <!-- END REF-->
@@ -99,7 +99,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 719 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

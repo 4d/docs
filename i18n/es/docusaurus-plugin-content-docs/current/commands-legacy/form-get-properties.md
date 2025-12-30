@@ -5,12 +5,12 @@ slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*tabla* ;} *nomForm* ; *ancho* ; *alto* {; *numPags* {; *largoFijo* {; *altFijo* {; *titulo*}}}} )<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*tabla* : Table ;} *nomForm* : Text ; *ancho* : Integer ; *alto* : Integer {; *numPags* : Integer {; *largoFijo* : Boolean {; *altFijo* : Boolean {; *titulo* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla del formulario o tabla por defecto, si se omite |
-| nomForm | Text | &#8594;  | Nombre del formulario |
+| tabla | Table | &#8594; | Tabla del formulario o tabla por defecto, si se omite |
+| nomForm | Text | &#8594; | Nombre del formulario |
 | ancho | Integer | &#8592; | Ancho del formulario (en píxeles) |
 | alto | Integer | &#8592; | Altura del formulario (en píxeles) |
 | numPags | Integer | &#8592; | Número de páginas en el formulario |
@@ -47,6 +47,6 @@ El parámetro *título* devuelve el título de la ventana del formulario, tal co
 |  |  |
 | --- | --- |
 | Número de comando | 674 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

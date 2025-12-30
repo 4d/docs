@@ -64,6 +64,6 @@ Se você deseja guardar o conteúdo de um arquivo existente no campo imagem, arm
 |  |  |
 | --- | --- |
 | Número do comando | 1134 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

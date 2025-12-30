@@ -84,7 +84,7 @@ Vous souhaitez recopier la sélection d'enregistrements vers une table d'archive
 |  |  |
 | --- | --- |
 | Numéro de commande | 261 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change la sélection courante ||
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Old.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ dont vous voulez obtenir l'ancienne valeur |
+| leField | Field | &#8594; | Champ dont vous voulez obtenir l'ancienne valeur |
 | Résultat | any | &#8592; | Valeur originale de champ |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Pour restaurer la valeur originale d'un champ, assignez-lui la valeur retournée
 |  |  |
 | --- | --- |
 | Numéro de commande | 35 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

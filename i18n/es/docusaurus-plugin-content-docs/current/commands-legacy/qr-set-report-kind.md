@@ -5,12 +5,12 @@ slug: /commands/qr-set-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *area* ; *tipo* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *area* : Integer ; *tipo* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| tipo | Integer | &#8594;  | Tipo del informe |
+| area | Integer | &#8594; | Referencia del área |
+| tipo | Integer | &#8594; | Tipo del informe |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ Si pasa un valor incorrecto del parámetro *propiedad*, se genera el error -9852
 |  |  |
 | --- | --- |
 | Número de comando | 738 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

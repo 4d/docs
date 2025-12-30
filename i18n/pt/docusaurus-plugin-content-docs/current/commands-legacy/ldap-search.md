@@ -5,15 +5,15 @@ slug: /commands/ldap-search
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* ; *filtro* {; *escopo* {; *atributos* {; *atributoComoArray*}}} ) : Object<!-- END REF-->
+<!--REF #_command_.LDAP Search.Syntax-->**LDAP Search** ( *dnRootEntry* : Text ; *filtro* : Text {; *escopo* : Text {; *atributos* : Text array {; *atributoComoArray* : Boolean array}}} ) : Object<!-- END REF-->
 <!--REF #_command_.LDAP Search.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | Nome distinto da root entry onde a pesquisa começa |
-| filtro | Text | &#8594;  | Filtro de pesquisa LDAP |
-| escopo | Text | &#8594;  | Escopo da pesquisa: "base" (padrão), "one", ou "sub" |
-| atributos | Text array | &#8594;  | Atributos a capturar |
-| atributoComoArray | Boolean array | &#8594;  | True= força atributos a ser retornados como array, False = força atributos a ser retornados como uma variável simples |
+| dnRootEntry | Text | &#8594; | Nome distinto da root entry onde a pesquisa começa |
+| filtro | Text | &#8594; | Filtro de pesquisa LDAP |
+| escopo | Text | &#8594; | Escopo da pesquisa: "base" (padrão), "one", ou "sub" |
+| atributos | Text array | &#8594; | Atributos a capturar |
+| atributoComoArray | Boolean array | &#8594; | True= força atributos a ser retornados como array, False = força atributos a ser retornados como uma variável simples |
 | Resultado | Object | &#8592; | Atributos Chave/Valor |
 
 <!-- END REF-->
@@ -89,6 +89,6 @@ Queremos obter um array de todas as entradas que se encontram no atributo "membe
 |  |  |
 | --- | --- |
 | Número do comando | 1328 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

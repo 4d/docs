@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | tableTitles | Text array | &#8594;  | Table names as they must appear in dialog boxes |
-| tableNumbers | Array integer | &#8594;  | Actual table numbers |
+| tableNumbers | Integer array | &#8594;  | Actual table numbers |
 | * | Operator | &#8594;  | Use the custom names in the formula editor |
 
 <!-- END REF-->
@@ -191,6 +191,6 @@ You want to remove all defined custom field and table names:
 |  |  |
 | --- | --- |
 | Command number | 601 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

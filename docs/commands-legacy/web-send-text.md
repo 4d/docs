@@ -5,7 +5,7 @@ slug: /commands/web-send-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *htmlText* {; *type*} )<!-- END REF-->
+<!--REF #_command_.WEB SEND TEXT.Syntax-->**WEB SEND TEXT** ( *htmlText* : Text {; *type* : Text} )<!-- END REF-->
 <!--REF #_command_.WEB SEND TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ The following method:
 |  |  |
 | --- | --- |
 | Command number | 677 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

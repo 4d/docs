@@ -5,7 +5,7 @@ slug: /commands/get-query-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinationType* ; *destinationObjet* ; *destinationPtr* )<!-- END REF-->
+<!--REF #_command_.GET QUERY DESTINATION.Syntax-->**GET QUERY DESTINATION** ( *destinationType* : Integer ; *destinationObjet* : Text ; *destinationPtr* : Pointer )<!-- END REF-->
 <!--REF #_command_.GET QUERY DESTINATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -62,6 +62,6 @@ Nous souhaitons modifier temporairement la destination de recherche, et rétabli
 |  |  |
 | --- | --- |
 | Numéro de commande | 1155 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

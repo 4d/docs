@@ -5,12 +5,12 @@ slug: /commands/set-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *imagen* ; *nomArchivo* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *imagen* : Picture, Picture ; *nomArchivo* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture, Picture | &#8594;  | Imagen para la cual definir el nombre por defecto |
-| nomArchivo | Text | &#8594;  | Nombre de la imagen por defecto |
+| imagen | Picture, Picture | &#8594; | Imagen para la cual definir el nombre por defecto |
+| nomArchivo | Text | &#8594; | Nombre de la imagen por defecto |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ El nombre por defecto se utiliza como nombre de archivo cuando la imagen se expo
 |  |  |
 | --- | --- |
 | Número de comando | 1172 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

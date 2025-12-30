@@ -5,11 +5,11 @@ slug: /commands/get-menu-bar-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** {( *process* )} : Text<!-- END REF-->
+<!--REF #_command_.Get menu bar reference.Syntax-->**Get menu bar reference** ( *process* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu bar reference.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | プロセス参照番号 |
+| process | Integer | &#8594; | プロセス参照番号 |
 | 戻り値 | Text | &#8592; | メニューバーID |
 
 <!-- END REF-->
@@ -45,6 +45,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 979 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

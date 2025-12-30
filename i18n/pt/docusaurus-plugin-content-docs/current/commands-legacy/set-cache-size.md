@@ -5,12 +5,12 @@ slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *tamanho* {; *libMin*} )<!-- END REF-->
+<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *tamanho* : Real {; *libMin* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tamanho | Real | &#8594;  | Tamanho do banco de dados em bytes |
-| libMin | Real | &#8594;  | Mínimo número de bytes a liberar quando cache estiver cheia |
+| tamanho | Real | &#8594; | Tamanho do banco de dados em bytes |
+| libMin | Real | &#8594; | Mínimo número de bytes a liberar quando cache estiver cheia |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ Se quiser adicionar 100 MB ao tamanho da cache de seu banco de ados atual. Pode 
 |  |  |
 | --- | --- |
 | Número do comando | 1399 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

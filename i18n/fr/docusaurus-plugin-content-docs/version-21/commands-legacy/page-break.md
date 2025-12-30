@@ -50,7 +50,7 @@ Reportez-vous à l'exemple de la commande [SET PRINT MARKER](set-print-marker.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 6 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

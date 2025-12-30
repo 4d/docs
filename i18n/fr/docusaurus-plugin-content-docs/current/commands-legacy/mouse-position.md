@@ -5,14 +5,14 @@ slug: /commands/mouse-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *sourisX* ; *sourisY* ; *boutonSouris* {; *} )<!-- END REF-->
+<!--REF #_command_.MOUSE POSITION.Syntax-->**MOUSE POSITION** ( *sourisX* : Real ; *sourisY* : Real ; *boutonSouris* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.MOUSE POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | sourisX | Real | &#8592; | Coordonnée horizontale de la souris |
 | sourisY | Real | &#8592; | Coordonnée verticale de la souris |
 | boutonSouris | Integer | &#8592; | Etat du bouton de la souris : 0 = Bouton relâché 1 = Bouton enfoncé 2 = Bouton droit enfoncé 3 = Les deux boutons enfoncés |
-| * | Opérateur | &#8594;  | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
+| * | Opérateur | &#8594; | Si spécifié, utiliser le système de coordonnées globales Si omis, utiliser le système de coordonnées locales |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Reportez-vous à l'exemple de la commande [Pop up menu](pop-up-menu.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 468 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

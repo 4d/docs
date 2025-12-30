@@ -30,6 +30,6 @@ If the resource does not exist, **Get resource name** returns an empty string.
 |  |  |
 | --- | --- |
 | Command number | 513 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

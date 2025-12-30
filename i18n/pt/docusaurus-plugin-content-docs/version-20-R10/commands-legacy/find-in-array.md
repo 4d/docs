@@ -123,6 +123,6 @@ $o1:={a10;b"xyz"}
 |  |  |
 | --- | --- |
 | Número do comando | 230 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

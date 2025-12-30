@@ -5,13 +5,13 @@ slug: /commands/delete-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *fonte* ; *posiçao* ; *numCaracteres* ) : Text<!-- END REF-->
+<!--REF #_command_.Delete string.Syntax-->**Delete string** ( *fonte* : Text ; *posiçao* : Integer ; *numCaracteres* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Delete string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &#8594;  | Cadeia da qual vai apagar caracteres |
-| posiçao | Integer | &#8594;  | Primeiro caractere a apagar |
-| numCaracteres | Integer | &#8594;  | Número de caracteres a apagar |
+| fonte | Text | &#8594; | Cadeia da qual vai apagar caracteres |
+| posiçao | Integer | &#8594; | Primeiro caractere a apagar |
+| numCaracteres | Integer | &#8594; | Número de caracteres a apagar |
 | Resultado | Text | &#8592; | Cadeia resultante |
 
 <!-- END REF-->
@@ -50,6 +50,6 @@ O exemplo abaixo ilustra o uso de Delete string. Os resultados são atribuídos 
 |  |  |
 | --- | --- |
 | Número do comando | 232 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

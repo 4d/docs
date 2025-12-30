@@ -51,6 +51,6 @@ El siguiente ejemplo ilustra el uso de Delete string. Los resultados se asignan 
 |  |  |
 | --- | --- |
 | Número de comando | 232 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

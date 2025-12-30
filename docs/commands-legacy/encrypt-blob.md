@@ -5,7 +5,7 @@ slug: /commands/encrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* ; *sendPrivKey* {; *recipPubKey*} )<!-- END REF-->
+<!--REF #_command_.ENCRYPT BLOB.Syntax-->**ENCRYPT BLOB** ( *toEncrypt* : Blob ; *sendPrivKey* : Blob {; *recipPubKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.ENCRYPT BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -187,6 +187,6 @@ A company wants to use the Internet to exchange information. Each subsidiary rec
 |  |  |
 | --- | --- |
 | Command number | 689 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

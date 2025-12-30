@@ -38,6 +38,6 @@ Quando tiver identificado as tabelas faltantes do banco, pode reativá-las atrav
 |  |  |
 | --- | --- |
 | Número do comando | 1125 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

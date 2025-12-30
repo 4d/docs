@@ -5,11 +5,11 @@ slug: /commands/date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Date.Syntax-->**Date** ( *expresion* ) : Date<!-- END REF-->
+<!--REF #_command_.Date.Syntax-->**Date** ( *expresion* : Text, Date ) : Date<!-- END REF-->
 <!--REF #_command_.Date.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| expresion | Text, Date | &#8594;  | Cadena que contiene la fecha a devolver |
+| expresion | Text, Date | &#8594; | Cadena que contiene la fecha a devolver |
 | Resultado | Date | &#8592; | Fecha |
 
 <!-- END REF-->
@@ -100,6 +100,6 @@ Usted desea obtener una fecha de un atributo objeto, sea cual sea la opción de 
 |  |  |
 | --- | --- |
 | Número de comando | 102 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

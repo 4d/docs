@@ -5,7 +5,7 @@ slug: /commands/get-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *selector* ; *textParam* )<!-- END REF-->
+<!--REF #_command_.GET MACRO PARAMETER.Syntax-->**GET MACRO PARAMETER** ( *selector* : Integer ; *textParam* : Text )<!-- END REF-->
 <!--REF #_command_.GET MACRO PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ Refer to the example of the [SET MACRO PARAMETER](set-macro-parameter.md) comman
 |  |  |
 | --- | --- |
 | Command number | 997 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

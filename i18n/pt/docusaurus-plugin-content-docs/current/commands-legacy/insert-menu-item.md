@@ -5,16 +5,16 @@ slug: /commands/insert-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* ; *depoisItem* ; *textoElem* {; *subMenu* {; *processo*}}{; *} )<!-- END REF-->
+<!--REF #_command_.INSERT MENU ITEM.Syntax-->**INSERT MENU ITEM** ( *menu* : Integer ; *depoisItem* : Integer ; *textoElem* : Text {; *subMenu* : Text {; *processo* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.INSERT MENU ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Número de menu ou menu de referência |
-| depoisItem | Integer | &#8594;  | Número de item de menu |
-| textoElem | Text | &#8594;  | Texto para o item de menu a ser inserido |
-| subMenu | Text | &#8594;  | Referência do submenu associado com o item |
-| processo | Integer | &#8594;  | Número de referência de processo |
-| * | Operador | &#8594;  | Se passado: considerar metacaracteres como caracteres comuns |
+| menu | Integer | &#8594; | Número de menu ou menu de referência |
+| depoisItem | Integer | &#8594; | Número de item de menu |
+| textoElem | Text | &#8594; | Texto para o item de menu a ser inserido |
+| subMenu | Text | &#8594; | Referência do submenu associado com o item |
+| processo | Integer | &#8594; | Número de referência de processo |
+| * | Operador | &#8594; | Se passado: considerar metacaracteres como caracteres comuns |
 
 <!-- END REF-->
 
@@ -60,7 +60,7 @@ O exemplo a seguir cria um menu que consiste em dois comandos os quais atribuem 
 |  |  |
 | --- | --- |
 | Número do comando | 412 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

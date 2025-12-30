@@ -65,6 +65,6 @@ Este método regenera todas las tablas faltantes eventualmente presentes en la b
 |  |  |
 | --- | --- |
 | Número de comando | 1126 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

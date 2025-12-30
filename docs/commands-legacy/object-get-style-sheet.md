@@ -5,7 +5,7 @@ slug: /commands/object-get-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get style sheet.Syntax-->**OBJECT Get style sheet** ( * ; *object* : Text ) : Text<br/>**OBJECT Get style sheet** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get style sheet.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,6 +51,6 @@ In **project architecture**, only the three automatic style sheets are supported
 |  |  |
 | --- | --- |
 | Command number | 1258 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

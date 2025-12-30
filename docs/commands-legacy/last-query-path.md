@@ -5,7 +5,7 @@ slug: /commands/last-query-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ The description of the last query path can be compared to the description of the
 |  |  |
 | --- | --- |
 | Command number | 1045 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

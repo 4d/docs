@@ -5,13 +5,13 @@ slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* ; *arrKeywords* {; *} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* : Picture, Picture ; *arrKeywords* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture, Picture | &#8594;  | 割り当てられたキーワードを取得するピクチャー |
+| picture | Picture, Picture | &#8594; | 割り当てられたキーワードを取得するピクチャー |
 | arrKeywords | Text array | &#8592; | キーワードを受け取る配列 |
-| * | 演算子 | &#8594;  | 指定時: 重複するキーワードを取り除く |
+| * | 演算子 | &#8594; | 指定時: 重複するキーワードを取り除く |
 
 <!-- END REF-->
 
@@ -37,6 +37,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1142 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

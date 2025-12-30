@@ -5,16 +5,15 @@ slug: /commands/form-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*aTable* ;} *arrNames* {; *filter* {; *marker*}}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM GET NAMES.Syntax-->**FORM GET NAMES** ( {*aTable* : Table ;} *arrNames* : Text array {; *filter* : Text {; *marker* : Real}}{; *} )<!-- END REF-->
 <!--REF #_command_.FORM GET NAMES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | テーブル参照 |
+| aTable | Table | &#8594; | テーブル参照 |
 | arrNames | Text array | &#8592; | フォーム名の配列 |
-| filter | Text | &#8594;  | 名前のフィルター |
-| marker | Real | &#8594;  | 返す最古のカウンター |
-| &#8592; | 最新のカウンター |
-| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| filter | Text | &#8594; | 名前のフィルター |
+| marker | Real | &#8596; | *in:* Marker for minimum version to return<br/>*out:* New value |
+| * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 
@@ -67,6 +66,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1167 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

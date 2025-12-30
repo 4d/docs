@@ -112,7 +112,7 @@ El siguiente ejemplo le permite al usuario efectuar una búsqueda en la tabla \[
 |  |  |
 | --- | --- |
 | Número de comando | 39 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

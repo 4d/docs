@@ -5,14 +5,14 @@ slug: /commands/set-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINTABLE MARGIN.Syntax-->**SET PRINTABLE MARGIN** ( *izquierda* ; *superior* ; *derecha* ; *inferior* )<!-- END REF-->
+<!--REF #_command_.SET PRINTABLE MARGIN.Syntax-->**SET PRINTABLE MARGIN** ( *izquierda* : Integer ; *superior* : Integer ; *derecha* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.SET PRINTABLE MARGIN.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| izquierda | Integer | &#8594;  | Margen izquierda |
-| superior | Integer | &#8594;  | Margen superior |
-| derecha | Integer | &#8594;  | Margen derecha |
-| inferior | Integer | &#8594;  | Margen inferior |
+| izquierda | Integer | &#8594; | Margen izquierda |
+| superior | Integer | &#8594; | Margen superior |
+| derecha | Integer | &#8594; | Margen derecha |
+| inferior | Integer | &#8594; | Margen inferior |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ El siguiente ejemplo le permite obtener el tamaño del papel:
 |  |  |
 | --- | --- |
 | Número de comando | 710 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

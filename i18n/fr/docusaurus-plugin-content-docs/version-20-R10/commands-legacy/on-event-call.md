@@ -121,7 +121,7 @@ Lorsque vous imprimez un état à l'aide la commande [PRINT SELECTION](print-sel
 |  |  |
 | --- | --- |
 | Numéro de commande | 190 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

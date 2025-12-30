@@ -5,11 +5,11 @@ slug: /commands/is-field-value-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field value Null.Syntax-->**Is field value Null** ( *aField* : Field ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field value Null.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | 評価するフィールド |
+| aField | Field | &#8594; | 評価するフィールド |
 | 戻り値 | Boolean | &#8592; | True = フィールドはNULL, False = フィールドはNULLでない |
 
 <!-- END REF-->
@@ -34,6 +34,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 964 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -46,6 +46,6 @@ See the example for the [Pop up menu](pop-up-menu.md) command.
 |  |  |
 | --- | --- |
 | Command number | 468 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

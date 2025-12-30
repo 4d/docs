@@ -56,6 +56,6 @@ O seguinte exemplo prova a presença do documento “Diário” na pasta da base
 |  |  |
 | --- | --- |
 | Número do comando | 476 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

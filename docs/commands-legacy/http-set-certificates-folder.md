@@ -5,7 +5,7 @@ slug: /commands/http-set-certificates-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *certificatesFolder* )<!-- END REF-->
+<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *certificatesFolder* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -62,6 +62,6 @@ You want to change certificates folder temporarily:
 |  |  |
 | --- | --- |
 | Command number | 1306 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

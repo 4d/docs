@@ -5,7 +5,7 @@ slug: /commands/web-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* : Integer ; *value* : Integer, Text, Collection )<!-- END REF-->
 <!--REF #_command_.WEB GET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,6 +69,6 @@ When you use the Web debug log *selector*, you can receive one of the following 
 |  |  |
 | --- | --- |
 | Command number | 1209 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

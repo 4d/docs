@@ -5,11 +5,11 @@ slug: /commands/get-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *arrayTitMenus* ; *arraysRefMenus* )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* : Integer, Text ; *arrayTitMenus* : Text array ; *arraysRefMenus* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Referencia de menú o número de menú |
+| menu | Integer, Text | &#8594; | Referencia de menú o número de menú |
 | arrayTitMenus | Text array | &#8592; | Array de títulos de menú |
 | arraysRefMenus | Text array | &#8592; | Array de referencias de menú |
 
@@ -40,6 +40,6 @@ Usted quiere conocer el contenido de la barra de menú del proceso actual:
 |  |  |
 | --- | --- |
 | Número de comando | 977 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

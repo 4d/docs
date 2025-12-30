@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| vista previa | Booleano | &#8594;  | Previsualización en pantalla (TRUE), o Sin previsualización (FALSE) |
+| vista previa | Booleano | &#8594; | Previsualización en pantalla (TRUE), o Sin previsualización (FALSE) |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ El siguiente ejemplo selecciona la opción Previsualización en pantalla para mo
 |  |  |
 | --- | --- |
 | Número de comando | 364 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

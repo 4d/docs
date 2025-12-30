@@ -5,13 +5,13 @@ slug: /commands/sax-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *documento* ; *codificaçao* {; *autonomo*} )<!-- END REF-->
+<!--REF #_command_.SAX SET XML DECLARATION.Syntax-->**SAX SET XML DECLARATION** ( *documento* : Time ; *codificaçao* : Text {; *autonomo* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SAX SET XML DECLARATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
-| codificaçao | Text | &#8594;  | Conjunto de caracteres usado no documento XML |
-| autonomo | Boolean | &#8594;  | True= o documento é autônomo (standalone); False (padrão) = documento não é standalone |
+| documento | Time | &#8594; | Referência do documento aberto |
+| codificaçao | Text | &#8594; | Conjunto de caracteres usado no documento XML |
+| autonomo | Boolean | &#8594; | True= o documento é autônomo (standalone); False (padrão) = documento não é standalone |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ O código abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 858 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

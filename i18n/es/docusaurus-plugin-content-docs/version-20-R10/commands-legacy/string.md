@@ -192,6 +192,6 @@ Si *expresion* se evalúa como Null, el comando devuelve la cadena "null". Esto 
 |  |  |
 | --- | --- |
 | Número de comando | 10 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

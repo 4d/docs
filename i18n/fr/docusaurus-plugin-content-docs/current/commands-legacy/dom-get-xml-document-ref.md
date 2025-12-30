@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-document-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *refElément* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *refElément* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’un élément existant dans un arbre DOM |
+| refElément | Text | &#8594; | Référence d’un élément existant dans un arbre DOM |
 | Résultat | Text | &#8592; | Référence du premier élément de l'arbre DOM (noeud document) |
 
 <!-- END REF-->
@@ -59,6 +59,6 @@ Dans cet exemple nous cherchons à retrouver la déclaration de DTD du document 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1088 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

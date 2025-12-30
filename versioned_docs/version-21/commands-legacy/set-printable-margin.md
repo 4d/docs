@@ -63,6 +63,6 @@ The following example gets the paper size:
 |  |  |
 | --- | --- |
 | Command number | 710 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

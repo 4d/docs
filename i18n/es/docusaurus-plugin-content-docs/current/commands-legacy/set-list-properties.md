@@ -5,17 +5,17 @@ slug: /commands/set-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *lista* ; *apariencia* {; *icono* {; *altoLinea* {; *dobleClic* {; *multiSeleccion* {; *editable*}}}}} )<!-- END REF-->
+<!--REF #_command_.SET LIST PROPERTIES.Syntax-->**SET LIST PROPERTIES** ( *lista* : Integer ; *apariencia* : Integer {; *icono* : Integer {; *altoLinea* : Integer {; *dobleClic* : Integer {; *multiSeleccion* : Integer {; *editable* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.SET LIST PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de la lista |
-| apariencia | Integer | &#8594;  | Estilo gráfico de la lista 1 = Lista jerárquica a la Macintosh 2 = Lista jerárquica a la Windows 0 = Aparición auto dependiendo de la plataforma |
-| icono | Integer | &#8594;  | ID de recurso Mac OS ‘cicn’ o 0 = icono por defecto de la plataforma |
-| altoLinea | Integer | &#8594;  | Altura mínima de la línea expresada en píxeles |
-| dobleClic | Integer | &#8594;  | Desplegar/Contraer sublista con doble-clic 0 = Sí, 1= No |
-| multiSeleccion | Integer | &#8594;  | Selecciones múltiples: 0 = No (por defecto), 1 = Sí |
-| editable | Integer | &#8594;  | 0 = Lista no editable por el usuario, 1 = Lista editable por el usuario (por defecto) |
+| lista | Integer | &#8594; | Número de referencia de la lista |
+| apariencia | Integer | &#8594; | Estilo gráfico de la lista 1 = Lista jerárquica a la Macintosh 2 = Lista jerárquica a la Windows 0 = Aparición auto dependiendo de la plataforma |
+| icono | Integer | &#8594; | ID de recurso Mac OS ‘cicn’ o 0 = icono por defecto de la plataforma |
+| altoLinea | Integer | &#8594; | Altura mínima de la línea expresada en píxeles |
+| dobleClic | Integer | &#8594; | Desplegar/Contraer sublista con doble-clic 0 = Sí, 1= No |
+| multiSeleccion | Integer | &#8594; | Selecciones múltiples: 0 = No (por defecto), 1 = Sí |
+| editable | Integer | &#8594; | 0 = Lista no editable por el usuario, 1 = Lista editable por el usuario (por defecto) |
 
 <!-- END REF-->
 
@@ -71,6 +71,6 @@ Desea rechazar la sublista de expandir/contraer al hacer doble clic. Puede escri
 |  |  |
 | --- | --- |
 | Número de comando | 387 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

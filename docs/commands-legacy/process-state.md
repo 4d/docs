@@ -5,7 +5,7 @@ slug: /commands/process-state
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process state.Syntax-->**Process state** ( *process* ) : Integer<!-- END REF-->
+<!--REF #_command_.Process state.Syntax-->**Process state** ( *process* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Process state.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ The following example puts the name and process reference number for each proces
 |  |  |
 | --- | --- |
 | Command number | 330 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

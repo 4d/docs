@@ -114,6 +114,6 @@ Conversión de una selección 4D en un array objeto:
 |  |  |
 | --- | --- |
 | Número de comando | 1228 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

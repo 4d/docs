@@ -5,12 +5,12 @@ slug: /commands/sax-add-processing-instruction
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *documento* ; *instruccion* )<!-- END REF-->
+<!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Syntax-->**SAX ADD PROCESSING INSTRUCTION** ( *documento* : Time ; *instruccion* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD PROCESSING INSTRUCTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
-| instruccion | Text | &#8594;  | Instrucción a insertar en el documento |
+| documento | Time | &#8594; | Referencia del documento abierto |
+| instruccion | Text | &#8594; | Instrucción a insertar en el documento |
 
 <!-- END REF-->
 
@@ -34,8 +34,8 @@ El siguiente código:
 
 ... escribirá la siguiente línea en el documento: 
 
-```4d
- 
+```xml
+  <?xml-stylesheet type="text/xsl"href="style.xsl"?>
 ```
 
 ## Variables y conjuntos del sistema 
@@ -51,7 +51,7 @@ Si el comando se ejecuta correctamente, la variable sistema OK toma el valor 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 857 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

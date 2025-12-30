@@ -40,6 +40,6 @@ Durante una transacción, [LOAD RECORD](load-record.md) y Locked se utilizan con
 |  |  |
 | --- | --- |
 | Número de comando | 147 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

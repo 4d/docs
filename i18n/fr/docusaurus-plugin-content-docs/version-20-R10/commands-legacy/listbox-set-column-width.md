@@ -39,6 +39,6 @@ Les paramètres optionnels *largeurMini* et *largeurMaxi* permettent de fixer de
 |  |  |
 | --- | --- |
 | Numéro de commande | 833 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

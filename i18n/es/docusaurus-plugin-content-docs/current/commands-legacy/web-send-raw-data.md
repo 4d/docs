@@ -5,12 +5,12 @@ slug: /commands/web-send-raw-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *datos* {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SEND RAW DATA.Syntax-->**WEB SEND RAW DATA** ( *datos* : Blob {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SEND RAW DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| datos | Blob | &#8594;  | Datos HTTP a enviar |
-| * | Operador | &#8594;  | Envío en trozos (chunked) |
+| datos | Blob | &#8594; | Datos HTTP a enviar |
+| * | Operador | &#8594; | Envío en trozos (chunked) |
 
 <!-- END REF-->
 
@@ -87,6 +87,6 @@ Este ejemplo ilustra el uso de la opción chunked con el comando **WEB SEND RAW 
 |  |  |
 | --- | --- |
 | Número de comando | 815 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -87,6 +87,6 @@ This example illustrates the sending and retrieval of extended characters via a 
 |  |  |
 | --- | --- |
 | Command number | 103 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

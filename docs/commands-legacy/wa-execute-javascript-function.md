@@ -5,16 +5,16 @@ slug: /commands/wa-execute-javascript-function
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *object* ; *jsFunction* ; *result* {; *param*}{; *param2* ; ... ; *paramN*} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( {* ;} *object* ; *jsFunction* ; * {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Syntax-->**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text ; *result* : Variable {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Field, Variable ; *jsFunction* : Text ; *result* : Variable {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( * ; *object* : Text ; *jsFunction* : Text ; * {; *...param* : any} )<br/>**WA EXECUTE JAVASCRIPT FUNCTION** ( *object* : Field, Variable ; *jsFunction* : Text ; * {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.WA EXECUTE JAVASCRIPT FUNCTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string) If omitted, object is a variable |
 | object | any | &#8594;  | Object name (if * is specified) or Variable (if * is omitted) |
 | jsFunction | Text | &#8594;  | Name of JavaScript function to execute |
-| result&#124;* | Variable | &#8594;  | * for a function with no result or |
-| &#8592; | Function result (if expected) |
-| param | Text, Number, Date, Object, Collection | &#8594;  | Parameter(s) to pass to function |
+| result | Variable | &#8592; | Function result (if expected) |
+| * | Operator | &#8594;  | Function with no result |
+| param | any | &#8594;  | Parameter(s) to pass to function |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ The "getCustomerInfo" JavaScript function receive a number ID as parameter and r
 |  |  |
 | --- | --- |
 | Command number | 1043 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

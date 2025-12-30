@@ -31,6 +31,6 @@ If there is already a list with this name, its contents are replaced.
 |  |  |
 | --- | --- |
 | Command number | 384 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

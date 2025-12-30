@@ -94,6 +94,6 @@ Depois de executar o código abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 1531 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

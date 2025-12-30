@@ -5,11 +5,11 @@ slug: /commands/web-get-server-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** {( *conCaché* )} : Object<!-- END REF-->
+<!--REF #_command_.WEB Get server info.Syntax-->**WEB Get server info** ( *conCaché* : Boolean ) : Object<!-- END REF-->
 <!--REF #_command_.WEB Get server info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| conCaché | Boolean | &#8594;  | True para devolver la descripción de la caché Web. De lo contrario (por defecto), no se devuelve la descripción de la caché. |
+| conCaché | Boolean | &#8594; | True para devolver la descripción de la caché Web. De lo contrario (por defecto), no se devuelve la descripción de la caché. |
 | Resultado | Object | &#8592; | Información sobre el servidor Web en ejecución y el servidor SOAP |
 
 <!-- END REF-->
@@ -134,6 +134,6 @@ Después de ejecutar el siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 1531 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

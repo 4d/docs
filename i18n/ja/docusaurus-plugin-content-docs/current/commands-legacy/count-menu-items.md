@@ -5,12 +5,12 @@ slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* : Integer, Text {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menu items.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
-| process | Integer | &#8594;  | プロセス参照番号 |
+| menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
+| process | Integer | &#8594; | プロセス参照番号 |
 | 戻り値 | Integer | &#8592; | メニュー中のメニュー項目数 |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 405 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | サーバー上での使用は不可 ||
 
 

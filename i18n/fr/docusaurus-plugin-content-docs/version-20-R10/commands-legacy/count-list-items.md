@@ -64,6 +64,6 @@ Voici la liste *hList* affichée en mode Application :
 |  |  |
 | --- | --- |
 | Numéro de commande | 380 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

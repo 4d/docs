@@ -5,12 +5,12 @@ slug: /commands/create-empty-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*tabela* ;} *conjunto* )<!-- END REF-->
+<!--REF #_command_.CREATE EMPTY SET.Syntax-->**CREATE EMPTY SET** ( {*tabela* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE EMPTY SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual vai criar um conjunto vazio, ou tabela padrão, se omitido |
-| conjunto | Text | &#8594;  | Nome do conjunto vazio |
+| tabela | Table | &#8594; | Tabela na qual vai criar um conjunto vazio, ou tabela padrão, se omitido |
+| conjunto | Text | &#8594; | Nome do conjunto vazio |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ Consulte o exemplo da seção *Conjuntos*.
 |  |  |
 | --- | --- |
 | Número do comando | 140 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -48,6 +48,6 @@ Instead of using the “Next record” or “Previous record” automatic action
 |  |  |
 | --- | --- |
 | Command number | 669 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

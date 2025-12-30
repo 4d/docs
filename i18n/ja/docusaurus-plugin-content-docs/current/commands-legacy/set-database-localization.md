@@ -5,12 +5,12 @@ slug: /commands/set-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *languageCode* {; *} )<!-- END REF-->
+<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *languageCode* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| languageCode | Text | &#8594;  | 言語セレクタ |
-| * | 演算子 | &#8594;  | コマンドのスコープ |
+| languageCode | Text | &#8594; | 言語セレクタ |
+| * | 演算子 | &#8594; | コマンドのスコープ |
 
 <!-- END REF-->
 
@@ -75,7 +75,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1104 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

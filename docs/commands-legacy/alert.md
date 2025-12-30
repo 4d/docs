@@ -5,7 +5,7 @@ slug: /commands/alert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* {; *okButtonTitle*} )<!-- END REF-->
+<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *message* : Text {; *okButtonTitle* : Text} )<!-- END REF-->
 <!--REF #_command_.ALERT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ displays the alert dialog box (on Windows) shown:
 |  |  |
 | --- | --- |
 | Command number | 41 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

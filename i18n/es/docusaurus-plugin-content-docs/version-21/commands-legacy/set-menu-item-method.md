@@ -41,6 +41,6 @@ Consulte el ejemplo del comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 |  |  |
 | --- | --- |
 | Número de comando | 982 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -42,7 +42,7 @@ Se o parâmetro *comando* for incorreto, se gera o erro -9852.
 |  |  |
 | --- | --- |
 | Número do comando | 792 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

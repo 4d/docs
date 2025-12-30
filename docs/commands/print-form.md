@@ -4,7 +4,7 @@ title: Print form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
 <!--REF #_command_.Print form.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -187,6 +187,6 @@ The code that calls the dialog then prints its body:
 |  |  |
 | --- | --- |
 | Command number | 5 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

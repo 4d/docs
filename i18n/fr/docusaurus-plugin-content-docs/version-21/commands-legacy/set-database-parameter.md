@@ -841,6 +841,6 @@ Vous souhaitez exporter des données en JSON contenant une date 4D convertie. A 
 |  |  |
 | --- | --- |
 | Numéro de commande | 642 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

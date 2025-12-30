@@ -46,6 +46,6 @@ Vous souhaitez changer temporairement de dossier de certificats :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1307 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

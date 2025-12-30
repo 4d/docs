@@ -52,7 +52,7 @@ Si la commande est exécutée correctement, la variable système OK prend la val
 |  |  |
 | --- | --- |
 | Numéro de commande | 850 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

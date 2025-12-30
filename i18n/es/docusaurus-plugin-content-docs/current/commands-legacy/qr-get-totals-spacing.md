@@ -5,12 +5,12 @@ slug: /commands/qr-get-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *area* ; *subtotal* ; *valor* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *area* : Integer ; *subtotal* : Integer ; *valor* : Integer )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| subtotal | Integer | &#8594;  | Número subtotal |
+| area | Integer | &#8594; | Referencia del área |
+| subtotal | Integer | &#8594; | Número subtotal |
 | valor | Integer | &#8592; | 0=sin espacio, 32000=inserta un salto de página, >0=espacio añadido en la parte superior del nivel de ruptura, <0=aumento proporcional |
 
 <!-- END REF-->
@@ -42,7 +42,7 @@ Si el parámetro *subtotal* es incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 762 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

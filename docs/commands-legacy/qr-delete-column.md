@@ -5,7 +5,7 @@ slug: /commands/qr-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* ; *colNumber* )<!-- END REF-->
+<!--REF #_command_.QR DELETE COLUMN.Syntax-->**QR DELETE COLUMN** ( *area* : Integer ; *colNumber* : Integer )<!-- END REF-->
 <!--REF #_command_.QR DELETE COLUMN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ The following example makes sure the report is a list report and deletes the thi
 |  |  |
 | --- | --- |
 | Command number | 749 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

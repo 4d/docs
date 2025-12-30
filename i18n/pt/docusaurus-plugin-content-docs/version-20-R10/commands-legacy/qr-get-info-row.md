@@ -44,7 +44,7 @@ Se o parâmetro *linha* é incorreto, se gera o erro -9852.
 |  |  |
 | --- | --- |
 | Número do comando | 769 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

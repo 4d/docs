@@ -110,7 +110,7 @@ Recuperação de um vídeo:
 |  |  |
 | --- | --- |
 | Número do comando | 1157 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

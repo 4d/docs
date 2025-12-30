@@ -42,6 +42,6 @@ L'exemple suivant teste le statut de la table \[Factures\]. Si elle est en lectu
 |  |  |
 | --- | --- |
 | Numéro de commande | 362 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

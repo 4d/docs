@@ -46,6 +46,6 @@ If there are no modifier keys for the shortcut, *modifiers* returns 0\.
 |  |  |
 | --- | --- |
 | Command number | 1186 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/volume-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumenes* )<!-- END REF-->
+<!--REF #_command_.VOLUME LIST.Syntax-->**VOLUME LIST** ( *volumenes* : Text array )<!-- END REF-->
 <!--REF #_command_.VOLUME LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ Utilizando un área de desplazamiento llamada *atVolumenes,* usted quiere mostra
 |  |  |
 | --- | --- |
 | Número de comando | 471 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

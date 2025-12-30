@@ -63,7 +63,7 @@ If the script is executed correctly (no error occurs), the *OK* system variable 
 |  |  |
 | --- | --- |
 | Command number | 1089 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

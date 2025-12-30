@@ -5,13 +5,13 @@ slug: /commands/listbox-get-footers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footers height.Syntax-->**LISTBOX Get footers height** ( {* ;} *objeto* {; *unidad*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footers height.Syntax-->**LISTBOX Get footers height** ( * ; *objeto* : Text {; *unidad* : Integer} ) : Integer<br/>**LISTBOX Get footers height** ( *objeto* : Field, Variable {; *unidad* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footers height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| unidad | Integer | &#8594;  | Unidad de valor de altura: 0 o si se omite = píxeles, 1 = líneas |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| unidad | Integer | &#8594; | Unidad de valor de altura: 0 o si se omite = píxeles, 1 = líneas |
 | resultado | Integer | &#8592; | Alto de la línea |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ Por defecto, si omite el parámetro *unidad*, la altura de línea devuelta se ex
 |  |  |
 | --- | --- |
 | Número de comando | 1146 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

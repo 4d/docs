@@ -5,11 +5,11 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** {( *nombreEnr* )}<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ({ *nombreEnr* : Integer })<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombreEnr | Integer | &#8594;  | Nombre d’enregistrements à charger |
+| nombreEnr | Integer | &#8594; | Nombre d’enregistrements à charger |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Si la commande a été correctement exécutée, la variable système OK retourne
 |  |  |
 | --- | --- |
 | Numéro de commande | 822 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

@@ -5,13 +5,13 @@ slug: /commands/method-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *ruta* ; *atributos* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET ATTRIBUTES.Syntax-->**METHOD GET ATTRIBUTES** ( *ruta* : Text, Text array ; *atributos* : Object, Object array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET ATTRIBUTES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &#8594;  | Rutas de métodos |
+| ruta | Text, Text array | &#8594; | Rutas de métodos |
 | atributos | Object, Object array | &#8592; | Atributos para los métodos seleccionados |
-| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Después de la ejecución, $att contiene, por ejemplo:
 |  |  |
 | --- | --- |
 | Número de comando | 1334 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

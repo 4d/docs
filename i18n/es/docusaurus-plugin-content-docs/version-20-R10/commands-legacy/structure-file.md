@@ -73,6 +73,6 @@ El siguiente ejemplo puede utilizarse para saber si el método se llama desde un
 |  |  |
 | --- | --- |
 | Número de comando | 489 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

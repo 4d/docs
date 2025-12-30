@@ -69,6 +69,6 @@ Vous souhaitez exécuter l'action standard **Aller a page** (page 3) dans le for
 |  |  |
 | --- | --- |
 | Numéro de commande | 1439 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

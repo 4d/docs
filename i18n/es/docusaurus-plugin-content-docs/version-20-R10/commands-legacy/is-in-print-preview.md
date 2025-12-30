@@ -50,6 +50,6 @@ Este ejemplo permite tener en cuenta todos los tipos de impresiones:
 |  |  |
 | --- | --- |
 | Número de comando | 1198 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

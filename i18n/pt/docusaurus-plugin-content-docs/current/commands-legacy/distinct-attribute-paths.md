@@ -5,11 +5,11 @@ slug: /commands/distinct-attribute-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *campoObjeto* ; *rotaArray* )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Syntax-->**DISTINCT ATTRIBUTE PATHS** ( *campoObjeto* : Field ; *rotaArray* : Text array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE PATHS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campoObjeto | Field | &#8594;  | campo objeto indexado |
+| campoObjeto | Field | &#8594; | campo objeto indexado |
 | rotaArray | Text array | &#8592; | Array que vai receber a lsita de diferentes rotas |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ O array *aTPaths* obtém os elementos abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 1395 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

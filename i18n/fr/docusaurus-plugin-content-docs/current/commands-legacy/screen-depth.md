@@ -5,13 +5,13 @@ slug: /commands/screen-depth
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *profondeur* ; *couleur* {; écran} )<!-- END REF-->
+<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *profondeur* : Integer ; *couleur* : Integer {; écran} )<!-- END REF-->
 <!--REF #_command_.SCREEN DEPTH.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | profondeur | Integer | &#8592; | Profondeur de l'écran (nombre de couleurs = 2 ^ profondeur) |
 | couleur | Integer | &#8592; | 1 = écran couleur 0 = écran noir et blanc ou niveaux de gris |
-| écran | Integer | &#8594;  | Numéro de l'écran ou écran principal si omis |
+| écran | Integer | &#8594; | Numéro de l'écran ou écran principal si omis |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ Votre application affiche de nombreux graphiques en couleurs. Vous pouvez écrir
 |  |  |
 | --- | --- |
 | Numéro de commande | 439 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/adjust-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *Tabela* ; *prioridade* )<!-- END REF-->
+<!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Syntax-->**ADJUST TABLE CACHE PRIORITY** ( *Tabela* ; *prioridade* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST TABLE CACHE PRIORITY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Table | Table | &#8594;  | Tabela cujo valor de prioridade de dados escalares vai ser ajustada |
-| prioridade | Integer | &#8594;  | Valor de prioridade de cache para a tabela |
+| Table | Table | &#8594; | Tabela cujo valor de prioridade de dados escalares vai ser ajustada |
+| prioridade | Integer | &#8594; | Valor de prioridade de cache para a tabela |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ Se quiser mudar temporariamente a prioridade de cache para os campos escalares \
 |  |  |
 | --- | --- |
 | Número do comando | 1429 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

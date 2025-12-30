@@ -31,6 +31,6 @@ Para que se genere el ciclo de ejecución **In header**, asegúrese de que la pr
 |  |  |
 | --- | --- |
 | Número de comando | 112 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

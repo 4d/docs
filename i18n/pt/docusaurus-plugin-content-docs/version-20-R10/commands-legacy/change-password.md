@@ -48,6 +48,6 @@ O exemplo abaixo permite ao usuário mudar sua senha.
 |  |  |
 | --- | --- |
 | Número do comando | 186 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

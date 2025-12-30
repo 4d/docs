@@ -5,7 +5,7 @@ slug: /commands/object-get-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get help tip.Syntax-->**OBJECT Get help tip** ( * ; *object* : Text ) : Text<br/>**OBJECT Get help tip** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get help tip.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ The title of a picture button is stored as a help message. This title is stored 
 |  |  |
 | --- | --- |
 | Command number | 1182 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

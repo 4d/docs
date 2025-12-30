@@ -5,12 +5,12 @@ slug: /commands/query-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *tabela* {; *formula*} )<!-- END REF-->
+<!--REF #_command_.QUERY BY FORMULA.Syntax-->**QUERY BY FORMULA** ( *tabela* : Table {; *formula* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY BY FORMULA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual retornar a seleção de registros |
-| formula | Boolean | &#8594;  | Fórmula de pesquisa |
+| tabela | Table | &#8594; | Tabela para a qual retornar a seleção de registros |
+| formula | Boolean | &#8594; | Fórmula de pesquisa |
 
 <!-- END REF-->
 
@@ -86,7 +86,7 @@ Este exemplo utiliza uma união para buscar todas as linhas de faturas de client
 |  |  |
 | --- | --- |
 | Número do comando | 48 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

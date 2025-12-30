@@ -5,12 +5,12 @@ slug: /commands/move-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *cheminSource* ; *cheminDest* )<!-- END REF-->
+<!--REF #_command_.MOVE DOCUMENT.Syntax-->**MOVE DOCUMENT** ( *cheminSource* : Text ; *cheminDest* : Text )<!-- END REF-->
 <!--REF #_command_.MOVE DOCUMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminSource | Text | &#8594;  | Chemin d'accès complet au document existant |
-| cheminDest | Text | &#8594;  | Chemin d'accès de destination |
+| cheminSource | Text | &#8594; | Chemin d'accès complet au document existant |
+| cheminDest | Text | &#8594; | Chemin d'accès de destination |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ L'exemple suivant déplace le document DocNom :
 |  |  |
 | --- | --- |
 | Numéro de commande | 540 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

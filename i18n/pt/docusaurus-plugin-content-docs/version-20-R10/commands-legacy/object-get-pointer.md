@@ -61,6 +61,6 @@ Dado um formulário "SF" utilizado duas vezes como sub-formulário no mesmo form
 |  |  |
 | --- | --- |
 | Número do comando | 1124 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

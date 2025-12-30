@@ -5,12 +5,12 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *objet* ; *positionLigne* {; *positionH*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *objet* : Text ; *positionLigne* : Integer {; *positionH* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *objet* : Field, Variable ; *positionLigne* : Integer {; *positionH* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable ou champ (si * est omis) |
 | positionLigne | Integer | &#8592; | Numéro de la première ligne affichée ou Défilement vertical en pixels (images) |
 | positionH | Integer | &#8592; | Numéro de la première colonne affichée (list box) ou<br/>Défilement horizontal en pixels (images) |
 
@@ -37,6 +37,6 @@ Si *objet* désigne une image (variable ou champ), *positionLigne* retourne le d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1114 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

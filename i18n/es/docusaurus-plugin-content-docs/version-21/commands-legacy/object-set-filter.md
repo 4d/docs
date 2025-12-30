@@ -61,6 +61,6 @@ El siguiente ejemplo permite únicamente la entrada de las letras “a,” “b,
 |  |  |
 | --- | --- |
 | Número de comando | 235 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

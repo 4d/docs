@@ -36,7 +36,7 @@ Si el parámetro *menuItem* designa un submenú jerárquico, todos los elementos
 |  |  |
 | --- | --- |
 | Número de comando | 150 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

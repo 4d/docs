@@ -5,7 +5,7 @@ slug: /commands/get-field-entry-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* ; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* ; *fieldNum* ; *list* ; *mandatory* ; *nonEnterable* ; *nonModifiable* )<!-- END REF-->
+<!--REF #_command_.GET FIELD ENTRY PROPERTIES.Syntax-->**GET FIELD ENTRY PROPERTIES** ( *fieldPtr* : Pointer, Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<br/>**GET FIELD ENTRY PROPERTIES** ( *tableNum* : Pointer, Integer ; *fieldNum* : Integer ; *list* : Text ; *mandatory* : Boolean ; *nonEnterable* : Boolean ; *nonModifiable* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET FIELD ENTRY PROPERTIES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ If there is no choice list associated to the field or if the field type is not s
 |  |  |
 | --- | --- |
 | Command number | 685 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

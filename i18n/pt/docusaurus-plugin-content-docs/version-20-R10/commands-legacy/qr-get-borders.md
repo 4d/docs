@@ -73,7 +73,7 @@ Se o parâmetro *borda* é incorreto, se gera o erro -9854.
 |  |  |
 | --- | --- |
 | Número do comando | 798 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

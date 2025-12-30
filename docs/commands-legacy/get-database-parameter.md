@@ -5,7 +5,7 @@ slug: /commands/get-database-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*aTable* ;} *selector* {; *stringValue*} ) : Real<!-- END REF-->
+<!--REF #_command_.Get database parameter.Syntax-->**Get database parameter** ( {*aTable* : Table ;} *selector* : Integer {; *stringValue* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Get database parameter.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -1099,6 +1099,6 @@ In the [On Startup database method](on-startup-database-method.md), you write:
 |  |  |
 | --- | --- |
 | Command number | 643 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/object-set-enterable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( {* ;} *objeto* ; *editable* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET ENTERABLE.Syntax-->**OBJECT SET ENTERABLE** ( * ; *objeto* : Text ; *editable* : Boolean, Integer )<br/>**OBJECT SET ENTERABLE** ( *objeto* : Field, Variable ; *editable* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET ENTERABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *), o Tabla o campo o variable (si se omite *) |
-| editable | Boolean, Integer | &#8594;  | True para editable; False para no editable |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *), o Tabla o campo o variable (si se omite *) |
+| editable | Boolean, Integer | &#8594; | True para editable; False para no editable |
 
 <!-- END REF-->
 
@@ -78,6 +78,6 @@ Este es el método de objeto de una casilla de selección ubicada en el encabeza
 |  |  |
 | --- | --- |
 | Número de comando | 238 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

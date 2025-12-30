@@ -165,6 +165,6 @@ You want to print a form containing a list box. During the *on load* event, you 
 |  |  |
 | --- | --- |
 | Command number | 1103 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/before-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Before selection.Syntax-->**Before selection** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Before selection.Syntax-->**Before selection** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Before selection.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ This form method is used during the printing of a report. It sets a variable, *v
 |  |  |
 | --- | --- |
 | Command number | 198 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

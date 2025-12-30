@@ -5,15 +5,15 @@ slug: /commands/set-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* ; *lineamenu* ; *textoElem* {; *proceso*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* : Integer, Text ; *lineamenu* : Integer ; *textoElem* : Text {; *proceso* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o referencia de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 para el último elemento añadido |
-| textoElem | Text | &#8594;  | Nuevo texto de la línea de menú |
-| proceso | Integer | &#8594;  | Número de referencia del proceso |
-| * | Operador | &#8594;  | Si se pasa: considerar metacaracteres como caracteres estándar |
+| menu | Integer, Text | &#8594; | Número de menú o referencia de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 para el último elemento añadido |
+| textoElem | Text | &#8594; | Nuevo texto de la línea de menú |
+| proceso | Integer | &#8594; | Número de referencia del proceso |
+| * | Operador | &#8594; | Si se pasa: considerar metacaracteres como caracteres estándar |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ Si omite el parámetro *proceso*, SET MENU ITEM se aplica a la barra de menús d
 |  |  |
 | --- | --- |
 | Número de comando | 348 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

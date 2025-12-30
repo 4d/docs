@@ -5,12 +5,12 @@ slug: /commands/form-get-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*tabela* ;} *nomeForm* ; *largura* ; *altura* {; *numPags* {; *larguraFixa* {; *alturaFixa* {; *titulo*}}}} )<!-- END REF-->
+<!--REF #_command_.FORM GET PROPERTIES.Syntax-->**FORM GET PROPERTIES** ( {*tabela* : Table ;} *nomeForm* : Text ; *largura* : Integer ; *altura* : Integer {; *numPags* : Integer {; *larguraFixa* : Boolean {; *alturaFixa* : Boolean {; *titulo* : Text}}}} )<!-- END REF-->
 <!--REF #_command_.FORM GET PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela do formulário ou tabela por padrão, se for omitido |
-| nomeForm | Text | &#8594;  | Nome do formulário |
+| tabela | Table | &#8594; | Tabela do formulário ou tabela por padrão, se for omitido |
+| nomeForm | Text | &#8594; | Nome do formulário |
 | largura | Integer | &#8592; | Largura do formulário (em pixels) |
 | altura | Integer | &#8592; | Altura do formulário (em pixels) |
 | numPags | Integer | &#8592; | Número de páginas no formulário |
@@ -47,6 +47,6 @@ O parâmetro *título* retorna o título da janela do formulário, tal como foi 
 |  |  |
 | --- | --- |
 | Número do comando | 674 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

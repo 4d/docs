@@ -34,6 +34,6 @@ Si vous passez le paramètre *process*, le clic est envoyé au process dont vous
 |  |  |
 | --- | --- |
 | Numéro de commande | 466 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

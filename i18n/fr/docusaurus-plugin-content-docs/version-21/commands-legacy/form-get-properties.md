@@ -47,6 +47,6 @@ Le paramètre *titre* retourne le nom de la fenêtre du formulaire, tel qu’il 
 |  |  |
 | --- | --- |
 | Numéro de commande | 674 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

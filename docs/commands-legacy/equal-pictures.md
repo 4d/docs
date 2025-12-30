@@ -5,7 +5,7 @@ slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* ; *picture2* ; *mask* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* : Picture, Picture ; *picture2* : Picture, Picture ; *mask* : Picture, Picture ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ Here is the code for the **Compare** button:
 |  |  |
 | --- | --- |
 | Command number | 1196 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

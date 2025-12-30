@@ -5,13 +5,13 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *objet* {; *direction*} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *objet* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *objet* : Field, Variable {; *direction* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| direction | Integer | &#8594;  | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| direction | Integer | &#8594; | 0 ou omis=Liste des URLs précédents, 1=Liste des URLs suivants |
 | Résultat | Text | &#8592; | Référence du menu |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ Le code suivant pourrait être associé à un bouton 3D avec pop up menu libell�
 |  |  |
 | --- | --- |
 | Numéro de commande | 1049 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

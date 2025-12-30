@@ -5,14 +5,14 @@ slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDécrypter* ; *cléPubEmetteur* {; *cléPrivRécepteur*} )<!-- END REF-->
+<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *aDécrypter* : Blob ; *cléPubEmetteur* : Blob {; *cléPrivRécepteur* : Blob} )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aDécrypter | Blob | &#8596;  | Données à décrypter |
-| ||| Données décryptées |
-| cléPubEmetteur | Blob | &#8594;  | Clé publique de l’émetteur |
-| cléPrivRécepteur | Blob | &#8594;  | Clé privée du récepteur |
+| aDécrypter | Blob | &#8596; | Données à décrypter |
+|  |  |  | Données décryptées |
+| cléPubEmetteur | Blob | &#8594; | Clé publique de l’émetteur |
+| cléPrivRécepteur | Blob | &#8594; | Clé privée du récepteur |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Reportez-vous aux exemples de la commande [ENCRYPT BLOB](encrypt-blob.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 690 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -195,7 +195,7 @@ A list box is made of one or more column object(s) which have specific propertie
 
 You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
 
->You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). The use of object arrays requires a 4D View Pro licence (see [Object arrays in columns (4D View Pro)](#object-arrays-in-columns-4d-view-pro)).
+>You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). The use of object arrays requires a 4D View Pro license (see [Object arrays in columns (4D View Pro)](#object-arrays-in-columns-4d-view-pro)).
 
 ### Column Specific Properties {#column-specific-properties}
 

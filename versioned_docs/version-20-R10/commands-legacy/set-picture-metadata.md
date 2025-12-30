@@ -87,7 +87,7 @@ When all the metadata are handled via a DOM element reference, the tags are stor
 |  |  |
 | --- | --- |
 | Command number | 1121 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

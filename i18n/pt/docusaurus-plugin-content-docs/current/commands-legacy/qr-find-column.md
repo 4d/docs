@@ -5,12 +5,12 @@ slug: /commands/qr-find-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* ; *expressao* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Find column.Syntax-->**QR Find column** ( *area* : Integer ; *expressao* : Text, Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Find column.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| expressao | Text, Pointer | &#8594;  | Objeto de coluna |
+| area | Integer | &#8594; | Referência da área |
+| expressao | Text, Pointer | &#8594; | Objeto de coluna |
 | Resultado | Integer | &#8592; | Número da coluna |
 
 <!-- END REF-->
@@ -48,7 +48,7 @@ $NumColumn:=QR Find column (MiArea; "\[G.NQR Tests\]Trimestre")
 |  |  |
 | --- | --- |
 | Número do comando | 776 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

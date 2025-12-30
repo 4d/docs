@@ -5,17 +5,17 @@ slug: /commands/set-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *nomFichier* ; *verrouillé* ; *invisible* ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT PROPERTIES.Syntax-->**SET DOCUMENT PROPERTIES** ( *nomFichier* : Text ; *verrouillé* : Boolean ; *invisible* : Boolean ; créé le ; créé à  ; modifié le ; modifié à )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT PROPERTIES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom du document ou Chemin d'accès complet au document |
-| verrouillé | Boolean | &#8594;  | Verrouillé (Vrai) ou non verrouillé (Faux) |
-| invisible | Boolean | &#8594;  | Invisible (Vrai) ou visible (Faux) |
-| créé le | Date | &#8594;  | Date de création |
-| créé à | Heure | &#8594;  | Heure de création |
-| modifié le | Date | &#8594;  | Date de dernière modification |
-| modifié à | Heure | &#8594;  | Heure de dernière modification |
+| nomFichier | Text | &#8594; | Nom du document ou Chemin d'accès complet au document |
+| verrouillé | Boolean | &#8594; | Verrouillé (Vrai) ou non verrouillé (Faux) |
+| invisible | Boolean | &#8594; | Invisible (Vrai) ou visible (Faux) |
+| créé le | Date | &#8594; | Date de création |
+| créé à | Heure | &#8594; | Heure de création |
+| modifié le | Date | &#8594; | Date de dernière modification |
+| modifié à | Heure | &#8594; | Heure de dernière modification |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ L'heure et la date de création et de dernière modification sont gérées par l
 |  |  |
 | --- | --- |
 | Numéro de commande | 478 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

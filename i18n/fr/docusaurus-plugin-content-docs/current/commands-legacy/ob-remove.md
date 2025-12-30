@@ -5,12 +5,12 @@ slug: /commands/ob-remove
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *objet* ; *propriété* )<!-- END REF-->
+<!--REF #_command_.OB REMOVE.Syntax-->**OB REMOVE** ( *objet* : Object, Object ; *propriété* : Text )<!-- END REF-->
 <!--REF #_command_.OB REMOVE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &#8594;  | Objet structuré |
-| propriété | Text | &#8594;  | Nom de la propriété à supprimer |
+| objet | Object, Object | &#8594; | Objet structuré |
+| propriété | Text | &#8594; | Nom de la propriété à supprimer |
 
 <!-- END REF-->
 
@@ -43,6 +43,6 @@ Vous souhaitez supprimer la propriété "age" d’un objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1226 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

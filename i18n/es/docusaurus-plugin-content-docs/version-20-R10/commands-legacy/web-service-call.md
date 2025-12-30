@@ -167,7 +167,7 @@ Si la petición se enruta correctamente y el servicio web la acepta, la variable
 |  |  |
 | --- | --- |
 | Número de comando | 778 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

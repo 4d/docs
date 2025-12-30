@@ -5,7 +5,7 @@ slug: /commands/soap-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *infoNum* ) : Text<!-- END REF-->
+<!--REF #_command_.SOAP Get info.Syntax-->**SOAP Get info** ( *infoNum* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SOAP Get info.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ Pass the number of the type of SOAP information you want to get in the *infoNum*
 |  |  |
 | --- | --- |
 | Command number | 784 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

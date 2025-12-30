@@ -5,7 +5,7 @@ slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* : Integer ; *info1* : Integer, Date ; *info2* : Time, Text )<!-- END REF-->
 <!--REF #_command_.BACKUP INFO.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ Pass the type of information to get in *selector*. The type and content of the *
 |  |  |
 | --- | --- |
 | Command number | 888 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/set-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* ; *offset* {; *ancre*} )<!-- END REF-->
+<!--REF #_command_.SET DOCUMENT POSITION.Syntax-->**SET DOCUMENT POSITION** ( *docRef* : Time ; *offset* : Real {; *ancre* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DOCUMENT POSITION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Numéro de référence de document |
-| offset | Real | &#8594;  | Position dans fichier (exprimée en octets) |
-| ancre | Integer | &#8594;  | 1 = Par rapport au début du fichier 2 = Par rapport à la fin du fichier 3 = Par rapport à la position courante |
+| docRef | Time | &#8594; | Numéro de référence de document |
+| offset | Real | &#8594; | Position dans fichier (exprimée en octets) |
+| ancre | Integer | &#8594; | 1 = Par rapport au début du fichier 2 = Par rapport à la fin du fichier 3 = Par rapport à la position courante |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ En fonction de l'*ancre* définie, vous pouvez passer des valeurs positives ou n
 |  |  |
 | --- | --- |
 | Numéro de commande | 482 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

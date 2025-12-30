@@ -75,6 +75,6 @@ Cuando hay un evento de doble clic, se comprueba que no existe en realidad una U
 |  |  |
 | --- | --- |
 | Número de comando | 1288 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

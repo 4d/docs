@@ -5,11 +5,11 @@ slug: /commands/method-set-access-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* )<!-- END REF-->
+<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *mode* : Integer )<!-- END REF-->
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| mode | Integer | &#8594;  | ロックされたオブジェクトのアクセスモード |
+| mode | Integer | &#8594; | ロックされたオブジェクトのアクセスモード |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1191 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

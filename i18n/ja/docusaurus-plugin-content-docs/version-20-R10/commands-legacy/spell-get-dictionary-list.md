@@ -55,6 +55,6 @@ Hunspell辞書に"fr-classic+reform1990.aff"、"fr-classic+reform1990.dic"、"fr
 |  |  |
 | --- | --- |
 | コマンド番号 | 1204 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

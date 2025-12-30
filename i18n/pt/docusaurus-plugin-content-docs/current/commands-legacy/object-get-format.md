@@ -5,12 +5,12 @@ slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get format** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
 | Resultado | Text | &#8592; | Exibir formato de objeto |
 
 <!-- END REF-->
@@ -69,6 +69,6 @@ Customized formats are returned untouched:
 |  |  |
 | --- | --- |
 | Número do comando | 894 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

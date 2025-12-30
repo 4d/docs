@@ -5,12 +5,12 @@ slug: /commands/qr-execute-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *zone* ; *numCommande* )<!-- END REF-->
+<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *zone* : Integer ; *numCommande* : Integer )<!-- END REF-->
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numCommande | Integer | &#8594;  | Commande de menu à exécuter |
+| zone | Integer | &#8594; | Référence de la zone |
+| numCommande | Integer | &#8594; | Commande de menu à exécuter |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Si le paramètre *numCommande* est incorrect, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 791 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -5,13 +5,13 @@ slug: /commands/count-list-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *liste* {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count list items.Syntax-->**Count list items** ( {* ;} *liste* : Integer, Text {; *} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count list items.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
-| liste | Integer, Text | &#8594;  | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
-| * | Opérateur | &#8594;  | Si omis (défaut) : Retourner les éléments visibles (déployés) dans la ou les liste(s) Si spécifié : Retourner tous les éléments |
+| * | Opérateur | &#8594; | Si spécifié, liste est un nom d'objet (chaîne) Si omis, liste est une référence de liste |
+| liste | Integer, Text | &#8594; | Numéro de référence de liste (si * omis) ou Nom d'objet de type liste (si * passé) |
+| * | Opérateur | &#8594; | Si omis (défaut) : Retourner les éléments visibles (déployés) dans la ou les liste(s) Si spécifié : Retourner tous les éléments |
 | Résultat | Integer | &#8592; | Nombre d'éléments visibles (déployés) si 2e * omis ou Nombre total d’éléments si 2e * passé |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Voici la liste *hList* affichée en mode Application :
 |  |  |
 | --- | --- |
 | Numéro de commande | 380 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

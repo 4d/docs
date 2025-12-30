@@ -53,6 +53,6 @@ El siguiente código espera hasta 5 segundos para que un registro bloqueado se d
 |  |  |
 | --- | --- |
 | Número de comando | 459 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

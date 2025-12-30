@@ -49,6 +49,6 @@ Vous souhaitez interdire le multiligne dans une zone de saisie :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1253 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

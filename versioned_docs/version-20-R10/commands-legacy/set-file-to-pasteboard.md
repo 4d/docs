@@ -33,6 +33,6 @@ The command accepts the star *\** as an optional parameter. By default, when thi
 |  |  |
 | --- | --- |
 | Command number | 975 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

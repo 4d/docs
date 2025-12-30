@@ -5,11 +5,11 @@ slug: /commands/open-database
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *filePath* )<!-- END REF-->
+<!--REF #_command_.OPEN DATABASE.Syntax-->**OPEN DATABASE** ( *filePath* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATABASE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| filePath | Text | &#8594;  | Nome ou via de acesso completa do arquivo de base de dados a abrir (.4db, .4dc, .4dbase ou .4dlink) |
+| filePath | Text | &#8594; | Nome ou via de acesso completa do arquivo de base de dados a abrir (.4db, .4dc, .4dbase ou .4dlink) |
 
 <!-- END REF-->
 
@@ -77,6 +77,6 @@ Se quiser selecionar um servidor no início desde uma aplicação monousuário. 
 |  |  |
 | --- | --- |
 | Número do comando | 1321 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

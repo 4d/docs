@@ -5,15 +5,15 @@ slug: /commands/object-set-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION**   ( * ; *objeto* {; *posiçao* {; *hPosicao*}}{; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SCROLL POSITION.Syntax-->**OBJECT SET SCROLL POSITION**   ( * ; *objeto* : any {; *posiçao* : Integer {; *hPosicao* : Integer}}{; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SCROLL POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Tabela ou Campo ou Variável (se * é omitido) |
-| posiçao | Integer | &#8594;  | Número da fila a selecionar ou rolagem vertical em pixels (imagens) |
-| hPosicao | Integer | &#8594;  | Número de coluna a exibir (list box) ou rolagem horizontal em pixels (imagens) |
-| * | Operador | &#8594;  | Exibição da linha (e coluna se parâmetro hPosição é passada) na primeira posição após rolagem. |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Tabela ou Campo ou Variável (se * é omitido) |
+| posiçao | Integer | &#8594; | Número da fila a selecionar ou rolagem vertical em pixels (imagens) |
+| hPosicao | Integer | &#8594; | Número de coluna a exibir (list box) ou rolagem horizontal em pixels (imagens) |
+| * | Operador | &#8594; | Exibição da linha (e coluna se parâmetro hPosição é passada) na primeira posição após rolagem. |
 
 <!-- END REF-->
 
@@ -96,6 +96,6 @@ Tenha a certeza de não omitir o segundo parâmetro *\** neste caso, caso contr�
 |  |  |
 | --- | --- |
 | Número do comando | 906 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

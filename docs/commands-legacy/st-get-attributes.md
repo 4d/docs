@@ -5,7 +5,7 @@ slug: /commands/st-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( {* ;} *object* ; *startSel* ; *endSel* ; *attribName* ; *attribValue* {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *object* : Text ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer, *attribValue* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *object* : Field, Variable ; *startSel* : Integer ; *endSel* : Integer ; *attribName* : Integer ; *attribValue* : Variable {; ...(*attribName* : Integer, *attribValue* : Variable)} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 |  |  |
 | --- | --- |
 | Command number | 1094 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

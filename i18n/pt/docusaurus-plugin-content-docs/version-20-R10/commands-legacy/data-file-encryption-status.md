@@ -74,6 +74,6 @@ Se quiser conhecer o estado de criptografia de um arquivo de dados que correspon
 |  |  |
 | --- | --- |
 | Número do comando | 1609 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

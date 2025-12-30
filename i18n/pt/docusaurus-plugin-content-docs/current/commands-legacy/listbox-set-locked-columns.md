@@ -5,13 +5,13 @@ slug: /commands/listbox-set-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( {* ;} *objeto* ; *numColunas* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Syntax-->**LISTBOX SET LOCKED COLUMNS** ( * ; *objeto* : Text ; *numColunas* : Integer )<br/>**LISTBOX SET LOCKED COLUMNS** ( *objeto* : Field, Variable ; *numColunas* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET LOCKED COLUMNS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
-| numColunas | Integer | &#8594;  | Número de colunas a bloquear |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto(cadeia)Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| numColunas | Integer | &#8594; | Número de colunas a bloquear |
 
 <!-- END REF-->
 
@@ -37,6 +37,6 @@ Para eliminar o bloqueio de colunas, passe 0 em *numColunas*.
 |  |  |
 | --- | --- |
 | Número do comando | 1151 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

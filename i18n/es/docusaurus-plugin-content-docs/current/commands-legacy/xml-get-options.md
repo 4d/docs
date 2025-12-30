@@ -5,12 +5,12 @@ slug: /commands/xml-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( refElement | document ; *selector* ; *valor* {; *selector2* ; *valor2* ; ... ; *selectorN* ; *valorN*} )<!-- END REF-->
+<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( refElement | document ; *selector* : Integer ; *valor* : Integer {; ...(*selector* : Integer, *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML GET OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement &#124; document | Texto | &#8594;  | Referencia del elemento XML raíz o referenica del documento abierto |
-| selector | Integer | &#8594;  | Opción a leer |
+| refElement &#124; document | Texto | &#8594; | Referencia del elemento XML raíz o referenica del documento abierto |
+| selector | Integer | &#8594; | Opción a leer |
 | valor | Integer | &#8592; | Valor actual de la opción |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ En *selector*, pase una de las constantes del tema *XML* indicando la opción a 
 |  |  |
 | --- | --- |
 | Número de comando | 1096 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

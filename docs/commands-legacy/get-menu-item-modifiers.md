@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-modifiers
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* ; *menuItem* {; *process*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item modifiers.Syntax-->**Get menu item modifiers** ( *menu* : Integer, Text ; *menuItem* : Integer {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item modifiers.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ Refer to the example of the [Get menu item key](get-menu-item-key.md) command.
 |  |  |
 | --- | --- |
 | Command number | 980 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

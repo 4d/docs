@@ -5,11 +5,11 @@ slug: /commands/test-path-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *cheminAccès* ) : Integer<!-- END REF-->
+<!--REF #_command_.Test path name.Syntax-->**Test path name** ( *cheminAccès* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Test path name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Chemin d'accès à un dossier ou un document |
+| cheminAccès | Text | &#8594; | Chemin d'accès à un dossier ou un document |
 | Résultat | Integer | &#8592; | 1= cheminAccès est un document existant 0 = cheminAccès est un dossier existant <0 = chemin d'accès invalide, code d'erreur du gestionnaire de fichiers du système |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ L'exemple suivant teste la présence du document “Journal” dans le dossier d
 |  |  |
 | --- | --- |
 | Numéro de commande | 476 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

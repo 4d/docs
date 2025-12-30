@@ -5,12 +5,12 @@ slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*laTable* ;} *nombre* )<!-- END REF-->
+<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*laTable* : Table ;} *nombre* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle réduire la sélection ou Table par défaut si ce paramètre est omis |
-| nombre | Integer | &#8594;  | Nombre d'enregistrements à conserver |
+| laTable | Table | &#8594; | Table de laquelle réduire la sélection ou Table par défaut si ce paramètre est omis |
+| nombre | Integer | &#8594; | Nombre d'enregistrements à conserver |
 
 <!-- END REF-->
 
@@ -64,7 +64,7 @@ L'exemple suivant établit des statistiques pour une compétition mondiale parmi
 |  |  |
 | --- | --- |
 | Numéro de commande | 351 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

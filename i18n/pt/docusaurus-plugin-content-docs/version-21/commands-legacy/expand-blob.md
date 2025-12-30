@@ -70,7 +70,7 @@ A variável OK é definida como 1 se o BLOB foi expandido com êxito, caso contr
 |  |  |
 | --- | --- |
 | Número do comando | 535 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

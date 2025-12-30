@@ -4,7 +4,7 @@ title: WP Insert picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* ; *picture* ; *mode* {; *rangeUpdate*} ): Object<br/>**WP Insert picture** ( *targetObj* ; *pictureFileObj*; *mode* {; *rangeUpdate*}): Object<!-- END REF-->
+<!--REF #_command_.WP Insert picture.Syntax-->**WP Insert picture** ( *targetObj* : Object ; *picture* : Picture ; *mode* : Integer {; *rangeUpdate* : Integer} ): Object<br/>**WP Insert picture** ( *targetObj* : Object ; *pictureFileObj* : 4D.File; *mode* : Integer {; *rangeUpdate* : Integer}): Object<!-- END REF-->
 <!--REF #_command_.WP Insert picture.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

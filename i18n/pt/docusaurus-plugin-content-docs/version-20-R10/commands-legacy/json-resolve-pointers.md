@@ -236,6 +236,6 @@ Se executar:
 |  |  |
 | --- | --- |
 | Número do comando | 1478 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

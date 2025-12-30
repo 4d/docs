@@ -33,6 +33,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 346 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

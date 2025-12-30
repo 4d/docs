@@ -5,11 +5,11 @@ slug: /commands/undefined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#8594;  | Expression à tester |
+| expression | Expression | &#8594; | Expression à tester |
 | Résultat | Boolean | &#8592; | Vrai = Variable actuellement indéfinie Faux = Variable actuellement définie |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ Cet exemple compare les différents résultats de la commande [Undefined](undefi
 |  |  |
 | --- | --- |
 | Numéro de commande | 82 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

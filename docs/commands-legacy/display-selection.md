@@ -5,7 +5,8 @@ slug: /commands/display-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable*}{; *selectMode*}{; *enterList*}{; *}{; *} )<!-- END REF-->
+<!--REF #_command_.DISPLAY SELECTION.Syntax-->**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean}{; *})<br/>**DISPLAY SELECTION** ( {*aTable* : Table}{; *selectMode* : Integer}{; *enterList* : Boolean} ; * {; *} )
+<!-- END REF-->
 <!--REF #_command_.DISPLAY SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -99,7 +100,7 @@ You can also use other commands, such as [PRINT SELECTION](print-selection.md), 
 |  |  |
 | --- | --- |
 | Command number | 59 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

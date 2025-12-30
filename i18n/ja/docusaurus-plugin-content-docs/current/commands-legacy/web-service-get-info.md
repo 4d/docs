@@ -5,11 +5,11 @@ slug: /commands/web-service-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *infoType* ) : Text<!-- END REF-->
+<!--REF #_command_.WEB SERVICE Get info.Syntax-->**WEB SERVICE Get info** ( *infoType* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.WEB SERVICE Get info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| infoType | Integer | &#8594;  | 取得する情報 |
+| infoType | Integer | &#8594; | 取得する情報 |
 | 戻り値 | Text | &#8592; | 最新のSOAPエラーに関する情報 |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 780 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

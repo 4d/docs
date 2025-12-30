@@ -42,6 +42,6 @@ Se quer receber o texto do marcador de campo:
 |  |  |
 | --- | --- |
 | Número do comando | 1296 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

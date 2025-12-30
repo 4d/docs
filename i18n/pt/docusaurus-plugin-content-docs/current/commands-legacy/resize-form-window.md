@@ -5,12 +5,12 @@ slug: /commands/resize-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *largura* ; *altura* )<!-- END REF-->
+<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *largura* : Integer ; *altura* : Integer )<!-- END REF-->
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| largura | Integer | &#8594;  | Pixels a adicionar ou remover da largura da janela do formulário atual |
-| altura | Integer | &#8594;  | Pixels a adicionar ou remover da altura da janela do formulário atual |
+| largura | Integer | &#8594; | Pixels a adicionar ou remover da largura da janela do formulário atual |
+| altura | Integer | &#8594; | Pixels a adicionar ou remover da altura da janela do formulário atual |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Depois da execução desta linha:
 |  |  |
 | --- | --- |
 | Número do comando | 890 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

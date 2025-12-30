@@ -5,14 +5,14 @@ slug: /commands/wa-set-external-links-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( {* ;} *objeto* ; *arrFiltro* ; *permitirArrRecusar* )<!-- END REF-->
+<!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Syntax-->**WA SET EXTERNAL LINKS FILTERS** ( * ; *objeto* : Text ; *arrFiltro* : Text array ; *permitirArrRecusar* : Boolean array )<br/>**WA SET EXTERNAL LINKS FILTERS** ( *objeto* : Field, Variable ; *arrFiltro* : Text array ; *permitirArrRecusar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET EXTERNAL LINKS FILTERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| arrFiltro | Text array | &#8594;  | Array filtros |
-| permitirArrRecusar | Boolean array | &#8594;  | Allow-deny array |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| arrFiltro | Text array | &#8594; | Array filtros |
+| permitirArrRecusar | Boolean array | &#8594; | Allow-deny array |
 
 <!-- END REF-->
 
@@ -79,6 +79,6 @@ Este exemplo combina os filtros de sites e de links externos:
 |  |  |
 | --- | --- |
 | Número do comando | 1032 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

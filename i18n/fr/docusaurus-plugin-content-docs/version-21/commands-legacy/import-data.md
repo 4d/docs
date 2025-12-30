@@ -51,7 +51,7 @@ Si l'utilisateur clique sur **Annuler** dans une des boîtes de dialogue (de sé
 |  |  |
 | --- | --- |
 | Numéro de commande | 665 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

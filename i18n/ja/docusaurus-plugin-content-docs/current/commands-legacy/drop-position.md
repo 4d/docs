@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( *columnNumber* )} : Integer<br/>**Drop position** {( *pictPosY* )} : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** ( *columnNumber* : 倍長整数 ) : Integer<br/>**Drop position** ( *pictPosY* : 倍長整数 ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -98,6 +98,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 608 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

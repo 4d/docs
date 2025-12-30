@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path           | Text                                               | &#8594; | Folder path                                                       |
 | folderConstant | Integer                                            | &#8594; | Constante Pasta 4D                                                |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (padrão) ou `fk platform path` |
-| \*             | operator                                           | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
+| \*             | Operador                                           | &#8594; | \* para devolver a pasta da base de dados do anfitrião            |
 | Resultados     | [4D.Folder](../API/FolderClass.md) | &#8592; | Novo Objeto Folder                                                |
 
 <!-- END REF -->
@@ -78,9 +78,9 @@ If the command is called from a component, pass the optional `*` parameter to ge
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1567                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1567 |
+| Thread safe       | sim  |
 
 

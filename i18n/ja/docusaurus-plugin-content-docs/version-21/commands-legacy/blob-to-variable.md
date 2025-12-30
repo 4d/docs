@@ -50,7 +50,7 @@ BLOB TO VARIABLEと[VARIABLE TO BLOB](variable-to-blob.md)は4Dの内部フォ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 533 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

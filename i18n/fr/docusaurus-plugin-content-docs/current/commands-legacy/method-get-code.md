@@ -5,14 +5,14 @@ slug: /commands/method-get-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *chemin* ; *code* {; *option*} {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *chemin* : Text, Text array ; *code* : Text, Text array {; *option* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| chemin | Text, Text array | &#8594; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
 | code | Text, Text array | &#8592; | Code de(s) méthode(s) désignée(s) |
-| option | Integer | &#8594;  | 0 ou omis = export simple (sans tokens), 1 = export avec tokens |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| option | Integer | &#8594; | 0 ou omis = export simple (sans tokens), 1 = export avec tokens |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 
@@ -124,6 +124,6 @@ Le document résultant contient alors :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1190 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

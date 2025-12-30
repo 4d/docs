@@ -5,14 +5,14 @@ slug: /commands/request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Request.Syntax-->**Request** ( *message* {; *réponseDéfaut* {; *titreBoutonOK* {; *titreBoutonAnn*}}} )  : Text<!-- END REF-->
+<!--REF #_command_.Request.Syntax-->**Request** ( *message* : Text {; *réponseDéfaut* : Text {; *titreBoutonOK* : Text {; *titreBoutonAnn* : Text}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | Message à afficher dans la boîte de dialogue |
-| réponseDéfaut | Text | &#8594;  | Valeur par défaut dans la zone de saisie de texte |
-| titreBoutonOK | Text | &#8594;  | Libellé du bouton OK |
-| titreBoutonAnn | Text | &#8594;  | Libellé du bouton Annuler |
+| message | Text | &#8594; | Message à afficher dans la boîte de dialogue |
+| réponseDéfaut | Text | &#8594; | Valeur par défaut dans la zone de saisie de texte |
+| titreBoutonOK | Text | &#8594; | Libellé du bouton OK |
+| titreBoutonAnn | Text | &#8594; | Libellé du bouton Annuler |
 | Résultat | Text | &#8592; | Valeur saisie par l'utilisateur |
 
 <!-- END REF-->
@@ -84,7 +84,7 @@ La ligne de code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 163 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

@@ -12,7 +12,7 @@ displayed_sidebar: docs
 | * | Operator | &#8594;  | If specified, list is an object name (string) If omitted, list is a list reference number |
 | list | Integer, Text | &#8594;  | List reference number (if * omitted), or Name of list type object (if * passed) |
 | itemPos | Integer | &#8594;  | Position of item in expanded/collapsed list(s) |
-| positionsArray | Array integer | &#8594;  | Array of the positions in the expanded/collapsed list(s) |
+| positionsArray | Integer array | &#8594;  | Array of the positions in the expanded/collapsed list(s) |
 
 <!-- END REF-->
 
@@ -78,6 +78,6 @@ After execution of the following lines of code:
 |  |  |
 | --- | --- |
 | Command number | 381 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

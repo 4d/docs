@@ -5,7 +5,7 @@ slug: /commands/form-set-vertical-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *resize* {; *minHeight* {; *maxHeight*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *resize* : Boolean {; *minHeight* : Integer {; *maxHeight* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ Refer to the example of the [FORM SET SIZE](form-set-size.md) command.
 |  |  |
 | --- | --- |
 | Command number | 893 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

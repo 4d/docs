@@ -95,7 +95,7 @@ Se o comando for executado corretamente e se os registros relacionados forem car
 |  |  |
 | --- | --- |
 | Número do comando | 42 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

@@ -5,13 +5,13 @@ slug: /commands/object-get-list-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( {* ;} *object* {; *listType*} ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get list name.Syntax-->**OBJECT Get list name** ( * ; *object* : Text {; *listType* : Integer} ) : Text<br/>**OBJECT Get list name** ( *object* : Field, Variable {; *listType* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get list name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
-| listType | Integer | &#8594;  | Type of list: Choice list, Required list or Excluded list |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) <br/>省略時: objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>フィールドまたは変数 (* 省略時) |
+| listType | Integer | &#8594; | Type of list: Choice list, Required list or Excluded list |
 | 戻り値 | Text | &#8592; | (デザインモードで指定された) 選択リストの名前 |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1072 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

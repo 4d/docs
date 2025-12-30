@@ -5,14 +5,13 @@ slug: /commands/export-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* {; *project* {; *}} )<!-- END REF-->
+<!--REF #_command_.EXPORT DATA.Syntax-->**EXPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.EXPORT DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | エクスポートファイルのフルパス名 |
-| project | Text, Blob | &#8594;  | エクスポートプロジェクト |
-| &#8592; | エクスポートプロジェクトの新しい内容 (*引数指定時) |
-| * | 演算子 | &#8594;  | エクスポートダイアログを表示し プロジェクトの内容を更新 |
+| fileName | Text | &#8594; | エクスポートファイルのフルパス名 |
+| project | Text, Blob | &#8596; | *in:* Contents of the export project<br/>*out:* New contents of the export project (if the * parameter has been passed) |
+| * | 演算子 | &#8594; | エクスポートダイアログを表示し プロジェクトの内容を更新 |
 
 <!-- END REF-->
 
@@ -103,7 +102,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 666 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK、Document |
 
 

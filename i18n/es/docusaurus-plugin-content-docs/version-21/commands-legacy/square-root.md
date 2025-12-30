@@ -48,6 +48,6 @@ Por ejemplo, Hipotenusa (4;3) devuelve 5.
 |  |  |
 | --- | --- |
 | Número de comando | 539 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

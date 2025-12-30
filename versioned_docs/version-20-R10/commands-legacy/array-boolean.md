@@ -68,6 +68,6 @@ This example creates an interprocess array of 50 Boolean elements and sets each 
 |  |  |
 | --- | --- |
 | Command number | 223 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

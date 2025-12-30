@@ -5,12 +5,12 @@ slug: /commands/uppercase
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *cadeia* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Uppercase.Syntax-->**Uppercase** ( *cadeia* : Text {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Uppercase.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| cadeia | Text | &#8594;  | Cadeia a converter para maiúsculas |
-| * | Operador | &#8594;  | Se passado: manter os acentos |
+| cadeia | Text | &#8594; | Cadeia a converter para maiúsculas |
+| * | Operador | &#8594; | Se passado: manter os acentos |
 | Resultado | Text | &#8592; | Cadeia em letras maiúsculas |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ Ver o exemplo para [Lowercase](lowercase.md "Lowercase").
 |  |  |
 | --- | --- |
 | Número do comando | 13 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

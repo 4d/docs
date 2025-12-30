@@ -5,11 +5,11 @@ slug: /commands/set-print-preview
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *aperçu* )<!-- END REF-->
+<!--REF #_command_.SET PRINT PREVIEW.Syntax-->**SET PRINT PREVIEW** ( *aperçu* : Boolean )<!-- END REF-->
 <!--REF #_command_.SET PRINT PREVIEW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| aperçu | Boolean | &#8594;  | Impression à l'écran (Vrai) ou non (Faux) |
+| aperçu | Boolean | &#8594; | Impression à l'écran (Vrai) ou non (Faux) |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ L'exemple suivant sélectionne l'option **A l'écran** pour afficher le résulta
 |  |  |
 | --- | --- |
 | Numéro de commande | 364 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

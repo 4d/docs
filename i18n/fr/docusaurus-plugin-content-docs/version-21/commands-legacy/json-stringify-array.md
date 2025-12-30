@@ -114,6 +114,6 @@ Conversion d’une sélection 4D dans un tableau objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1228 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

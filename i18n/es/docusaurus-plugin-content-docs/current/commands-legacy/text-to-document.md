@@ -5,14 +5,14 @@ slug: /commands/text-to-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *nomArchivo* ; *texto* {; *conjCaract* {; *ModoRetorno*}} )<!-- END REF-->
+<!--REF #_command_.TEXT TO DOCUMENT.Syntax-->**TEXT TO DOCUMENT** ( *nomArchivo* : Text ; *texto* : Text {; *conjCaract* : Text, Integer {; *ModoRetorno* : Integer}} )<!-- END REF-->
 <!--REF #_command_.TEXT TO DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Text | &#8594;  | Nombre del documento o ruta de acceso al documento |
-| texto | Text | &#8594;  | Texto a almacenar en el documento |
-| conjCaract | Text, Integer | &#8594;  | Nombre o número del conjunto de caracteres |
-| ModoRetorno | Integer | &#8594;  | Modo de procesamiento para los retornos de línea |
+| nomArchivo | Text | &#8594; | Nombre del documento o ruta de acceso al documento |
+| texto | Text | &#8594; | Texto a almacenar en el documento |
+| conjCaract | Text, Integer | &#8594; | Nombre o número del conjunto de caracteres |
+| ModoRetorno | Integer | &#8594; | Modo de procesamiento para los retornos de línea |
 
 <!-- END REF-->
 
@@ -88,6 +88,6 @@ Ejemplo que permite al usuario indicar la ubicación del archivo a crear:
 |  |  |
 | --- | --- |
 | Número de comando | 1237 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

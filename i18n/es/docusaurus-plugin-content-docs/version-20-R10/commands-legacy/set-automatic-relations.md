@@ -50,6 +50,6 @@ El siguiente ejemplo vuelve automáticas todas las relaciones Muchos a Uno y res
 |  |  |
 | --- | --- |
 | Número de comando | 310 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

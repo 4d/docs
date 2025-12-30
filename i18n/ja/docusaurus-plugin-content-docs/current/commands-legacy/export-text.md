@@ -5,12 +5,12 @@ slug: /commands/export-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.EXPORT TEXT.Syntax-->**EXPORT TEXT** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.EXPORT TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
-| document | Text | &#8594;  | データが書き出されるテキストドキュメント |
+| aTable | Table | &#8594; | データを書き出すテーブル, または 省略した場合, デフォルトテーブル |
+| document | Text | &#8594; | データが書き出されるテキストドキュメント |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ EXPORT TEXT を使用する際、デフォルトのフィールド区切り文�
 |  |  |
 | --- | --- |
 | コマンド番号 | 167 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

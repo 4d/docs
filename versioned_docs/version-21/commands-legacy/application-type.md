@@ -48,6 +48,6 @@ Somewhere in your code, other than in the *On Server Startup Database Method*, y
 |  |  |
 | --- | --- |
 | Command number | 494 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

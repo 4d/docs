@@ -5,7 +5,7 @@ slug: /commands/get-picture-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *imagen* )<!-- END REF-->
+<!--REF #_command_.GET PICTURE FROM PASTEBOARD.Syntax-->**GET PICTURE FROM PASTEBOARD** ( *imagen* : Picture )<!-- END REF-->
 <!--REF #_command_.GET PICTURE FROM PASTEBOARD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ Si la imagen se extrae correctamente, OK toma el valor 1; de lo contrario OK tom
 |  |  |
 | --- | --- |
 | Número de comando | 522 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

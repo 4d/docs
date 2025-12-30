@@ -5,11 +5,11 @@ slug: /commands/records-in-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in selection.Syntax-->**Records in selection** {( *tabela* )} : Integer<!-- END REF-->
+<!--REF #_command_.Records in selection.Syntax-->**Records in selection** ( *tabela* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in selection.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual retornar número dos registros selecionados, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual retornar número dos registros selecionados, ou tabela padrão, se omitido |
 | Resultado | Integer | &#8592; | Registros em seleção da tabela |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ End for
 |  |  |
 | --- | --- |
 | Número do comando | 76 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

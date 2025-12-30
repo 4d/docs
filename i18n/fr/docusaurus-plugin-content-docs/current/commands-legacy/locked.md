@@ -5,11 +5,11 @@ slug: /commands/locked
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Locked.Syntax-->**Locked** {( *laTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Locked.Syntax-->**Locked** ( *laTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Locked.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de l'enregistrement dont vous voulez tester le verrouillage ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de l'enregistrement dont vous voulez tester le verrouillage ou Table par défaut si ce paramètre est omis |
 | Résultat | Boolean | &#8592; | L'enregistrement est verrouillé (Vrai) ou L'enregistrement n'est pas verrouillé (Faux) |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Au cours d'une transaction, [LOAD RECORD](load-record.md) et **Locked** sont sou
 |  |  |
 | --- | --- |
 | Numéro de commande | 147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

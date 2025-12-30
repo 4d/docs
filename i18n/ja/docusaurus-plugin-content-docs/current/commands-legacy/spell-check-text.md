@@ -5,14 +5,14 @@ slug: /commands/spell-check-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* ; *errPos* ; *errLength* ; *checkPos* ; *arrSuggest* )<!-- END REF-->
+<!--REF #_command_.SPELL CHECK TEXT.Syntax-->**SPELL CHECK TEXT** ( *text* : Text ; *errPos* : Integer ; *errLength* : Integer ; *checkPos* : Integer ; *arrSuggest* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL CHECK TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | Text | &#8594;  | チェックするテキスト |
+| text | Text | &#8594; | チェックするテキスト |
 | errPos | Integer | &#8592; | 未知の単語の最初の文字位置 |
 | errLength | Integer | &#8592; | 未知の単語の長さ |
-| checkPos | Integer | &#8594;  | チェックを開始する位置 |
+| checkPos | Integer | &#8594; | チェックを開始する位置 |
 | arrSuggest | Text array | &#8592; | 推奨候補リスト |
 
 <!-- END REF-->
@@ -58,7 +58,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1215 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

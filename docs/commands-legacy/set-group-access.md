@@ -5,7 +5,7 @@ slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** {( *groups* )}<!-- END REF-->
+<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ({ *groups* : Collection })<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ You want to promote the current user to the "admin" and "plugins" groups for the
 |  |  |
 | --- | --- |
 | Command number | 1737 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Forbidden on the server ||
 
 

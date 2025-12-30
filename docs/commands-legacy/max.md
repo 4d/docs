@@ -5,13 +5,13 @@ slug: /commands/max
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Max.Syntax-->**Max** ( *series* {; *attributePath*} ) : any<!-- END REF-->
+<!--REF #_command_.Max.Syntax-->**Max** ( *series* : Field, Array {; *attributePath* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | series | Field, Array | &#8594;  | Data for which to return the maximum value |
 | attributePath | Text | &#8594;  | Path of attribute for which to return the maximum value |
-| Function result | Date, Number | &#8592; | Maximum value in series |
+| Function result | Date, Real | &#8592; | Maximum value in series |
 
 <!-- END REF-->
 
@@ -75,7 +75,7 @@ For an example of computing an object field attribute, please refer to the examp
 |  |  |
 | --- | --- |
 | Command number | 3 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

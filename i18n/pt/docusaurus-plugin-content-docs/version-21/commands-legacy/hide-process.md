@@ -41,6 +41,6 @@ O exemplo a seguir oculta todas as janelas que pertencem ao processo atual:
 |  |  |
 | --- | --- |
 | Número do comando | 324 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

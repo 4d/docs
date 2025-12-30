@@ -56,6 +56,6 @@ Se quiser mudar temporariamente a prioridade de cache para os campos escalares \
 |  |  |
 | --- | --- |
 | Número do comando | 1429 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

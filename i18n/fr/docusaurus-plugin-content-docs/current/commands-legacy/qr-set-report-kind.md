@@ -5,12 +5,12 @@ slug: /commands/qr-set-report-kind
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *zone* ; *type* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT KIND.Syntax-->**QR SET REPORT KIND** ( *zone* : Integer ; *type* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT KIND.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| type | Integer | &#8594;  | Type d'état |
+| zone | Integer | &#8594; | Référence de la zone |
+| type | Integer | &#8594; | Type d'état |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Si la valeur de *type* est incorrecte, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 738 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

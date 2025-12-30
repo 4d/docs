@@ -48,6 +48,6 @@ En el parámetro *vertical*, pase un valor que indique la opción de redimension
 |  |  |
 | --- | --- |
 | Número de comando | 1175 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/is-record-loaded
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is record loaded.Syntax-->**Is record loaded** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is record loaded.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ Instead of using the “Next record” or “Previous record” automatic action
 |  |  |
 | --- | --- |
 | Command number | 669 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

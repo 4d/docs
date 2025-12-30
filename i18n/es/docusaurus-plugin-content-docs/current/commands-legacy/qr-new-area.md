@@ -5,11 +5,11 @@ slug: /commands/qr-new-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* )<!-- END REF-->
+<!--REF #_command_.QR NEW AREA.Syntax-->**QR NEW AREA** ( *ptr* : Pointer )<!-- END REF-->
 <!--REF #_command_.QR NEW AREA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ptr | Pointer | &#8594;  | Puntero a una variable |
+| ptr | Pointer | &#8594; | Puntero a una variable |
 
 <!-- END REF-->
 
@@ -26,6 +26,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1320 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

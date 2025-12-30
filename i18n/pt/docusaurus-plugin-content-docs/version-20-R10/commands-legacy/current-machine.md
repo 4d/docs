@@ -36,6 +36,6 @@ Inclusive se não está correndo a versão cliente/servidor de 4D, sua aplicaç�
 |  |  |
 | --- | --- |
 | Número do comando | 483 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

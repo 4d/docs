@@ -40,6 +40,6 @@ You want to find out the contents of the menu bar of the current process:
 |  |  |
 | --- | --- |
 | Command number | 977 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

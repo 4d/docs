@@ -5,12 +5,12 @@ slug: /commands/save-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *nomFichier* ; *variable* {; *variable2* ; ... ; *variableN*} )<!-- END REF-->
+<!--REF #_command_.SAVE VARIABLES.Syntax-->**SAVE VARIABLES** ( *nomFichier* : Text ; *variable* : Variable {; *...variable* : Variable} )<!-- END REF-->
 <!--REF #_command_.SAVE VARIABLES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom du document dans lequel sauvegarder la ou les variable(s) |
-| variable | Variable | &#8594;  | Variable(s) à sauvegarder |
+| nomFichier | Text | &#8594; | Nom du document dans lequel sauvegarder la ou les variable(s) |
+| variable | Variable | &#8594; | Variable(s) à sauvegarder |
 
 <!-- END REF-->
 
@@ -54,7 +54,7 @@ Si l'opération s'est correctement déroulée, la variable OK prend la valeur 1,
 |  |  |
 | --- | --- |
 | Numéro de commande | 75 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document |
 
 

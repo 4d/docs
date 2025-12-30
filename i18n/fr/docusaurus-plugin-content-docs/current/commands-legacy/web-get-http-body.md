@@ -5,7 +5,7 @@ slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corps* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corps* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ Lorsque le formulaire est soumis au serveur Web, la variable $texteRequete reço
 |  |  |
 | --- | --- |
 | Numéro de commande | 814 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

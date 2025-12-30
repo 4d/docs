@@ -5,7 +5,7 @@ slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *body* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *body* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ When the form is submitted to the Web server, the $requestText variable receives
 |  |  |
 | --- | --- |
 | Command number | 814 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

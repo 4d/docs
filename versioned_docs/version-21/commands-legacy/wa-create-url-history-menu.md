@@ -73,6 +73,6 @@ The following code can be associated with a 3D button having a pop-up menu entit
 |  |  |
 | --- | --- |
 | Command number | 1049 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

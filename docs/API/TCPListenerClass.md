@@ -74,7 +74,7 @@ TCPListener objects provide the following properties and functions:
 <!-- REF #4D.TCPListener.new().params -->
 |Parameter|Type| |Description|
 |---|---|---|---|
-|port|Number|->|TCP port to listen|
+|port|Real|->|TCP port to listen|
 |options|Object|->|Configuration [options](#options-parameter) for the listener|
 |Result|4D.TCPListener|<-|New TCPListener object| 
 

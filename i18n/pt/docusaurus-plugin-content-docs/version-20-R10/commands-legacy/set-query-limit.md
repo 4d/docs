@@ -69,6 +69,6 @@ Ver o segundo exemplo do comando [SET QUERY DESTINATION](set-query-destination.m
 |  |  |
 | --- | --- |
 | Número do comando | 395 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

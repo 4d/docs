@@ -42,6 +42,6 @@ No parâmetro *esquemaCor*, passe um esquema de cores a aplicar:
 |  |  |
 | --- | --- |
 | Número do comando | 1762 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

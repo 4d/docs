@@ -5,11 +5,11 @@ slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagem* ) : Text<!-- END REF-->
+<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *imagem* : Picture, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture, Picture | &#8594;  | Imagem para a qual obter o nome por defeito |
+| imagem | Picture, Picture | &#8594; | Imagem para a qual obter o nome por defeito |
 | Resultado | Text | &#8592; | Nome por defeito do arquivo imagem |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ Se a imagem nao tiver um nome por defeito, o comando devolve uma cadeia vazia.
 |  |  |
 | --- | --- |
 | Número do comando | 1171 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

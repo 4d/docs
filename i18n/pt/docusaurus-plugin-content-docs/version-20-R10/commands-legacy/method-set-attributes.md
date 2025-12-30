@@ -66,6 +66,6 @@ Se você desejar modificar apenas um atributo:
 |  |  |
 | --- | --- |
 | Número do comando | 1335 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

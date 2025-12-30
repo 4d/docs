@@ -5,11 +5,11 @@ slug: /commands/variance
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | Dados para os quais se retorna a variância |
+| series | Field, Array | &#8594; | Dados para os quais se retorna a variância |
 | Resultado | Real | &#8592; | Variância da série |
 
 <!-- END REF-->
@@ -72,6 +72,6 @@ Este exemplo permite obter a variância de valores localizados num array:
 |  |  |
 | --- | --- |
 | Número do comando | 27 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

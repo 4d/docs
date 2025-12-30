@@ -44,7 +44,7 @@ O exemplo abaixo abre um documento existente chamado Nota, adiciona a string “
 |  |  |
 | --- | --- |
 | Número do comando | 265 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document, error |
 
 

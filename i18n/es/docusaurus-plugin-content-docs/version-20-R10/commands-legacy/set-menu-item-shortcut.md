@@ -83,7 +83,7 @@ Definición del atajo de teclado F4 para la opción de menú "Cerrar":
 |  |  |
 | --- | --- |
 | Número de comando | 423 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

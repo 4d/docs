@@ -38,6 +38,6 @@ Consulte o exemplo do comando [GET FIELD RELATION](get-field-relation.md "GET FI
 |  |  |
 | --- | --- |
 | Número do comando | 899 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

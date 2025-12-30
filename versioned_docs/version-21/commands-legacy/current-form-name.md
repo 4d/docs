@@ -63,6 +63,6 @@ You want to get the current form if it is a project form:
 |  |  |
 | --- | --- |
 | Command number | 1298 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* ; *comment* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *document* : Time ; *comment* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開かれたドキュメントの参照 |
-| comment | Text | &#8594;  | 追加するコメント |
+| document | Time | &#8594; | 開かれたドキュメントの参照 |
+| comment | Text | &#8594; | 追加するコメント |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ XMLのコメントはXMLインタプリタが内容を解析しないテキス�
 |  |  |
 | --- | --- |
 | コマンド番号 | 852 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

@@ -53,6 +53,6 @@ Es equivalente a:
 |  |  |
 | --- | --- |
 | Número de comando | 1020 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

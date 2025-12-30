@@ -118,6 +118,6 @@ O resultado é o seguinte (em Windows):
 |  |  |
 | --- | --- |
 | Número do comando | 88 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

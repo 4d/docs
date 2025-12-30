@@ -79,6 +79,6 @@ If you specify the *process* parameter, the event is sent to the process whose p
 |  |  |
 | --- | --- |
 | Command number | 467 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

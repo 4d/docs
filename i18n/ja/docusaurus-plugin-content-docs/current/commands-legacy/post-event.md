@@ -5,17 +5,17 @@ slug: /commands/post-event
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *what* ; *message* ; *when* ; *mouseX* ; *mouseY* ; *modifiers* {; *process*} )<!-- END REF-->
+<!--REF #_command_.POST EVENT.Syntax-->**POST EVENT** ( *what* : Integer ; *message* : Integer ; *when* : Integer ; *mouseX* : Integer ; *mouseY* : Integer ; *modifiers* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.POST EVENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| what | Integer | &#8594;  | イベントのタイプ |
-| message | Integer | &#8594;  | イベントメッセージ |
-| when | Integer | &#8594;  | Tick単位でのイベント時間 |
-| mouseX | Integer | &#8594;  | マウスの水平座標 |
-| mouseY | Integer | &#8594;  | マウスの垂直座標 |
-| modifiers | Integer | &#8594;  | モディファイアキーのステータス |
-| process | Integer | &#8594;  | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
+| what | Integer | &#8594; | イベントのタイプ |
+| message | Integer | &#8594; | イベントメッセージ |
+| when | Integer | &#8594; | Tick単位でのイベント時間 |
+| mouseX | Integer | &#8594; | マウスの水平座標 |
+| mouseY | Integer | &#8594; | マウスの垂直座標 |
+| modifiers | Integer | &#8594; | モディファイアキーのステータス |
+| process | Integer | &#8594; | 送信先のプロセス参照番号、 省略または0の場合、アプリケーションイベントキュー |
 
 <!-- END REF-->
 
@@ -79,6 +79,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 467 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

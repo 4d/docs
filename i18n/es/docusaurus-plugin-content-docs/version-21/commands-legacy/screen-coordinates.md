@@ -51,6 +51,6 @@ Las siguientes imágenes demuestran las diferencias entre el tamaño de la panta
 |  |  |
 | --- | --- |
 | Número de comando | 438 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -72,6 +72,6 @@ This example is a template for a form method. It shows each of the possible even
 |  |  |
 | --- | --- |
 | Command number | 101 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

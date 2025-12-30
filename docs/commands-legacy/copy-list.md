@@ -5,7 +5,7 @@ slug: /commands/copy-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* ) : Integer<!-- END REF-->
+<!--REF #_command_.Copy list.Syntax-->**Copy list** ( *list* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Copy list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ After you have finished with the new list, call [CLEAR LIST](clear-list.md) to d
 |  |  |
 | --- | --- |
 | Command number | 626 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

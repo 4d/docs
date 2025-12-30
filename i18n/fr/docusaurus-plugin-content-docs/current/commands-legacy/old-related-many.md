@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OLD RELATED MANY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ recevant un lien |
+| leField | Field | &#8594; | Champ recevant un lien |
 
 <!-- END REF-->
 
@@ -29,7 +29,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 263 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

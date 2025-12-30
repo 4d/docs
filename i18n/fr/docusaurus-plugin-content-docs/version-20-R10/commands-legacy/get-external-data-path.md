@@ -37,6 +37,6 @@ Cette commande vous permet notamment de recopier le fichier externe.
 |  |  |
 | --- | --- |
 | Numéro de commande | 1133 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

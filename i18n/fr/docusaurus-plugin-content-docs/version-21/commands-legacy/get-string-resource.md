@@ -48,7 +48,7 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 |  |  |
 | --- | --- |
 | Numéro de commande | 506 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

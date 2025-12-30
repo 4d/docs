@@ -207,7 +207,7 @@ Si la conexión es exitosa, el variable sistema OK toma el valor 1; de lo contra
 |  |  |
 | --- | --- |
 | Número de comando | 817 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

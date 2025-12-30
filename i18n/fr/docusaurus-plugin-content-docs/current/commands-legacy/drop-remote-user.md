@@ -5,11 +5,11 @@ slug: /commands/drop-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *sessionUtilisateur* )<!-- END REF-->
+<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *sessionUtilisateur* : Text )<!-- END REF-->
 <!--REF #_command_.DROP REMOTE USER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sessionUtilisateur | Text | &#8594;  | ID de la session de l'utilisateur |
+| sessionUtilisateur | Text | &#8594; | ID de la session de l'utilisateur |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ Vous souhaitez supprimer un utilisateur distant spécifique :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1633 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

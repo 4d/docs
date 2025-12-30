@@ -36,6 +36,6 @@ Refer to the example of the [GET FIELD RELATION](get-field-relation.md) command.
 |  |  |
 | --- | --- |
 | Command number | 899 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

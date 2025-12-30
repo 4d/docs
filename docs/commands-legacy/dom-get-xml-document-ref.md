@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-document-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *elementRef* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *elementRef* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,6 +60,6 @@ In this example, we want to find the DTD declaration of the XML document:
 |  |  |
 | --- | --- |
 | Command number | 1088 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

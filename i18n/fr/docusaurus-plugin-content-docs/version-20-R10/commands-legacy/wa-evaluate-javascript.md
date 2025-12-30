@@ -107,6 +107,6 @@ Vous pouvez alors évaluer le code JavaScript depuis 4D :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1029 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

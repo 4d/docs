@@ -165,6 +165,6 @@ Dans ce cas, le paramètre *format*, s'il est passé, est ignoré.
 |  |  |
 | --- | --- |
 | Numéro de commande | 10 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

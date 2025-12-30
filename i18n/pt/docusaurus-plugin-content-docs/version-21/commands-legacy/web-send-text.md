@@ -50,6 +50,6 @@ O método abaixo:
 |  |  |
 | --- | --- |
 | Número do comando | 677 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

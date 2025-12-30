@@ -5,7 +5,7 @@ slug: /commands/object-get-horizontal-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get horizontal alignment.Syntax-->**OBJECT Get horizontal alignment** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get horizontal alignment** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get horizontal alignment.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,6 +63,6 @@ The form objects to which alignment can be applied are as follows:
 |  |  |
 | --- | --- |
 | Command number | 707 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

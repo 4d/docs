@@ -45,6 +45,6 @@ O seguinte exemplo inicializa os elementos do array *arrayTabelas*, com os nomes
 |  |  |
 | --- | --- |
 | Número do comando | 254 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

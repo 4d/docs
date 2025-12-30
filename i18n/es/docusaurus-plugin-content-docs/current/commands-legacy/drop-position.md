@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( colNum | posXImagen )} : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** ( colNum | posXImagen ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -99,6 +99,6 @@ El método de objeto list box de la izquierda (destino) contiene el siguiente c�
 |  |  |
 | --- | --- |
 | Número de comando | 608 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/pause-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.PAUSE PROCESS.Syntax-->**PAUSE PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.PAUSE PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ While process execution is suspended, the windows belonging to this process are 
 |  |  |
 | --- | --- |
 | Command number | 319 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

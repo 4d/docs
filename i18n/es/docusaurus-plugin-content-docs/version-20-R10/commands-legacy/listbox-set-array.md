@@ -71,6 +71,6 @@ Usted desea definir un array de altura de línea para un list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1279 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

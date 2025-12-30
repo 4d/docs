@@ -66,6 +66,6 @@ Aquí están los diferentes resultados del comando [Undefined](undefined.md) as�
 |  |  |
 | --- | --- |
 | Número de comando | 82 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

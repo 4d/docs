@@ -5,11 +5,11 @@ slug: /commands/qr-get-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
+| area | Integer | &#8594; | Referencia del área |
 | Resultado | Integer | &#8592; | Número de tabla |
 
 <!-- END REF-->
@@ -29,7 +29,7 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 758 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

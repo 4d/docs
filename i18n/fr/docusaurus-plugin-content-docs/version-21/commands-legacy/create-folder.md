@@ -77,7 +77,7 @@ Création du sous-dossier "\\February\\" dans le dossier existant "C:\\Archives\
 |  |  |
 | --- | --- |
 | Numéro de commande | 475 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

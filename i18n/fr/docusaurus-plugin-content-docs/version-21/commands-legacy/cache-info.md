@@ -59,6 +59,6 @@ Vous souhaitez obtenir des informations sur la base courante et tous les composa
 |  |  |
 | --- | --- |
 | Numéro de commande | 1402 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

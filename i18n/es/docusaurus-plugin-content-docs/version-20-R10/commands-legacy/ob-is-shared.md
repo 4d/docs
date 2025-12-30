@@ -26,6 +26,6 @@ Este comando devuelve **True** si se pasa una selección de entidades compartibl
 |  |  |
 | --- | --- |
 | Número de comando | 1759 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

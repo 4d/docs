@@ -159,6 +159,6 @@ Quando o formulário é executado, a lista será vista desta forma:
 |  |  |
 | --- | --- |
 | Número do comando | 376 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

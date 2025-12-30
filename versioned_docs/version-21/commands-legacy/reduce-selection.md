@@ -63,7 +63,7 @@ The following example first finds the correct statistics for a worldwide contest
 |  |  |
 | --- | --- |
 | Command number | 351 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

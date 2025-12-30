@@ -5,11 +5,11 @@ slug: /commands/json-parse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* {; *type*}{; *} ) : any<!-- END REF-->
+<!--REF #_command_.JSON Parse.Syntax-->**JSON Parse** ( *jsonString* : Text {; *type* : Integer}{; *} ) : any<!-- END REF-->
 <!--REF #_command_.JSON Parse.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| jsonText | Text | &#8594;  | JSON string to parse |
+| jsonString | Text | &#8594;  | JSON string to parse |
 | type | Integer | &#8594;  | Type in which to convert the values |
 | * | Operator | &#8594;  | Adds line position and offset of each property if returned value is an object |
 | Function result | any | &#8592; | Values extracted from JSON string |
@@ -195,6 +195,6 @@ beta[1].golf:{line:10,offset:12}}}
 |  |  |
 | --- | --- |
 | Command number | 1218 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

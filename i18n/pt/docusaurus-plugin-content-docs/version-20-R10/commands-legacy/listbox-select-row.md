@@ -59,6 +59,6 @@ Depois da execução do método, os arrays são sincronizados: se o array fonte 
 |  |  |
 | --- | --- |
 | Número do comando | 912 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

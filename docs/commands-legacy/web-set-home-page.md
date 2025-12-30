@@ -5,7 +5,7 @@ slug: /commands/web-set-home-page
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* )<!-- END REF-->
+<!--REF #_command_.WEB SET HOME PAGE.Syntax-->**WEB SET HOME PAGE** ( *homePage* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET HOME PAGE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ To stop sending *homePage* as home page for the current Web process, execute **W
 |  |  |
 | --- | --- |
 | Command number | 639 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

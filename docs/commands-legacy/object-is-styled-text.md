@@ -5,7 +5,7 @@ slug: /commands/object-is-styled-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Is styled text.Syntax-->**OBJECT Is styled text** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Is styled text** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Is styled text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ A form contains a field represented by two different objects; one of the objects
 |  |  |
 | --- | --- |
 | Command number | 1261 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

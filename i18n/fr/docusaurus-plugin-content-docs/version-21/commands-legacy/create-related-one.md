@@ -28,6 +28,6 @@ Si un enregistrement lié existe déjà, la commande **CREATE RELATED ONE** a al
 |  |  |
 | --- | --- |
 | Numéro de commande | 65 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

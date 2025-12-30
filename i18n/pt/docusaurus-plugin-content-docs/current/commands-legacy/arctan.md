@@ -5,11 +5,11 @@ slug: /commands/arctan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *número* ) : Real<!-- END REF-->
+<!--REF #_command_.Arctan.Syntax-->**Arctan** ( *número* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Arctan.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| número | Real | &#8594;  | Tangente para a qual deseja calcular o ângulo |
+| número | Real | &#8594; | Tangente para a qual deseja calcular o ângulo |
 | Resultado da função | Real | &#8592; | Ângulo em radianos |
 
 <!-- END REF-->
@@ -37,6 +37,6 @@ O exemplo a seguir mostra o valor de Pi:
 |  |  |
 | --- | --- |
 | Número do comando | 20 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

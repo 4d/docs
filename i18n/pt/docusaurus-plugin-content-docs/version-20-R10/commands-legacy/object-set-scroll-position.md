@@ -96,6 +96,6 @@ Tenha a certeza de não omitir o segundo parâmetro *\** neste caso, caso contr�
 |  |  |
 | --- | --- |
 | Número do comando | 906 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

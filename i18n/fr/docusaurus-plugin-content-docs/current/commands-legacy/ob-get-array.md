@@ -5,13 +5,13 @@ slug: /commands/ob-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *objet* ; *propriété* ; *tableau* )<!-- END REF-->
+<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *objet* : Object ; *propriété* : Text ; *tableau* : Array )<!-- END REF-->
 <!--REF #_command_.OB GET ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object, Object | &#8594;  | Objet structuré |
-| propriété | Text | &#8594;  | Nom de la propriété à lire |
-| tableau | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#8592; | Tableau valeur de la propriété |
+| objet | Object | &#8594; | Objet structuré |
+| propriété | Text | &#8594; | Nom de la propriété à lire |
+| tableau | Array | &#8592; | Tableau valeur de la propriété |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ On souhaite changer une valeur dans le premier élément du tableau :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1229 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

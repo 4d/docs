@@ -48,6 +48,6 @@ El siguiente ejemplo permite al usuario cambiar su contraseña.
 |  |  |
 | --- | --- |
 | Número de comando | 186 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

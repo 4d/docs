@@ -5,14 +5,14 @@ slug: /commands/st-get-content-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( {* ;} *object* {; *inicioSel* {; *finSel* {; *inicioBloq* {; *finBloq*}}}} ) : Integer<!-- END REF-->
+<!--REF #_command_.ST Get content type.Syntax-->**ST Get content type** ( * ; *object* : Text {; *inicioSel* : Integer {; *finSel* : Integer {; *inicioBloq* : Integer {; *finBloq* : Integer}}}} ) : Integer<br/>**ST Get content type** ( *object* : Field, Variable {; *inicioSel* : Integer {; *finSel* : Integer {; *inicioBloq* : Integer {; *finBloq* : Integer}}}} ) : Integer<!-- END REF-->
 <!--REF #_command_.ST Get content type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
-| object | any | &#8594;  | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
-| inicioSel | Integer | &#8594;  | Inicio de la selección |
-| finSel | Integer | &#8594;  | Fin de la selección |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)<br/>Si se omite, objeto es un campo o una variable |
+| object | any | &#8594; | Nombre del objeto (si se especifica *) o<br/>Campo o variable (si se omite *) |
+| inicioSel | Integer | &#8594; | Inicio de la selección |
+| finSel | Integer | &#8594; | Fin de la selección |
 | inicioBloq | Integer | &#8592; | Inicio de posición del primer tipo de la selección |
 | finBloq | Integer | &#8592; | Fin de posición del primer tipo de la selección |
 | Resultado | Integer | &#8592; | Tipo de contenido |
@@ -106,7 +106,7 @@ Usted desea mostrar los comandos de un menú contextual basado en el tipo de con
 |  |  |
 | --- | --- |
 | Número de comando | 1286 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

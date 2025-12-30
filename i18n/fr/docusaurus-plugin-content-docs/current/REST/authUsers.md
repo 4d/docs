@@ -29,7 +29,7 @@ La séquence de connexion d'un utilisateur est la suivante :
 
 2. `authentify()` doit être une [fonction de datastore class](../ORDA/ordaClasses.md#datastore-class) exposée. Vous appelez votre fonction [`authentify()`](#function-authentify) (créée au préalable), dans laquelle vous vérifiez les informations d'identification de l'utilisateur et appelez [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) avec les privilèges appropriés.
 
-3. La requête `/rest/$catalog/authentify` est envoyée au serveur avec les informations d'identification de l'utilisateur. Cette étape nécessite seulement un formulaire de connexion basique qui n'accède pas aux données ; cela peut être une [page Qodly](../WebServer/qodly-studio.md) (appelée via la requête `/rest/$getWebForm`).
+3. La requête `/rest/$catalog/authentify` est envoyée au serveur avec les informations d'identification de l'utilisateur. Cette étape nécessite seulement un formulaire de connexion basique qui n'accède pas aux données ; cela peut être une [page Qodly](https://developer.4d.com/qodly/) (appelée via la requête `/rest/$getWebForm`).
 
 4. Si l'utilisateur est authentifié avec succès, une licence 4D est consommée sur le serveur et toutes les requêtes REST sont acceptées.
 

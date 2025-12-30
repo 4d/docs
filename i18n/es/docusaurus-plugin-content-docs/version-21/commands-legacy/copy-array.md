@@ -41,6 +41,6 @@ El siguiente ejemplo llena el array C. Luego crea un nuevo array, llamado D, del
 |  |  |
 | --- | --- |
 | Número de comando | 226 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

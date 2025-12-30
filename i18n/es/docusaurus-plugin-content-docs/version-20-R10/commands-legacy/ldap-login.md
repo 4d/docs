@@ -102,6 +102,6 @@ Este ejemplo intenta conectarse a una aplicación:
 |  |  |
 | --- | --- |
 | Número de comando | 1326 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

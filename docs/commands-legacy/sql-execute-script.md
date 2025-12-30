@@ -5,7 +5,7 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* ; *errorAction* {; *attribName* ; *attribValue*} {; *attribName2* ; *attribValue2* ; ... ; *attribNameN* ; *attribValueN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *scriptPath* : Text ; *errorAction* : Integer {; *attribName* : Text ; *attribValue* : Text} {; ...(*attribName* : Text, *attribValue* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ If the script is executed correctly (no error occurs), the *OK* system variable 
 |  |  |
 | --- | --- |
 | Command number | 1089 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

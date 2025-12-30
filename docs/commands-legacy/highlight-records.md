@@ -5,7 +5,7 @@ slug: /commands/highlight-records
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*aTable* }{;}{ *setName* {; *}} )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT RECORDS.Syntax-->**HIGHLIGHT RECORDS** ( {*aTable* : Table }{;}{ *setName* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT RECORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,6 +53,6 @@ When the user clicks the button, the standard query dialog box appears. Once the
 |  |  |
 | --- | --- |
 | Command number | 656 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

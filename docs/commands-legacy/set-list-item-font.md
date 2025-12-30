@@ -5,7 +5,7 @@ slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* ; *itemRef* ; *font* )<br/>**SET LIST ITEM FONT** ( * ; *list* ; * ; *font* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ; *font* : Text, Integer )<br/>**SET LIST ITEM FONT** ( * ; *list* : Integer, Text ; * ; *font* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ Apply the Times font to the current item of the list:
 |  |  |
 | --- | --- |
 | Command number | 953 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

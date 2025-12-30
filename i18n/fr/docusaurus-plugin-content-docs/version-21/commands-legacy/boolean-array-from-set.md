@@ -38,6 +38,6 @@ Si vous ne passez pas le paramètre *ensemble*, la commande utilisera l’ensemb
 |  |  |
 | --- | --- |
 | Numéro de commande | 646 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

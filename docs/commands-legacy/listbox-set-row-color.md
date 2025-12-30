@@ -5,7 +5,7 @@ slug: /commands/listbox-set-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( {* ;} *object* ; *row* ; *color* {; *colorType*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *object* : Text ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *object* : Field, Variable ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,6 +69,6 @@ In an array type list box, we want to set colors for a row and for one cell in t
 |  |  |
 | --- | --- |
 | Command number | 1270 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

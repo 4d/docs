@@ -5,7 +5,7 @@ slug: /commands/object-get-print-variable-frame
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( {* ;} *object* ; *variableFrame* {; *fixedSubform*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Syntax-->**OBJECT GET PRINT VARIABLE FRAME** ( * ; *object* : Text ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<br/>**OBJECT GET PRINT VARIABLE FRAME** ( *object* : Field, Variable ; *variableFrame* : Boolean {; *fixedSubform* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET PRINT VARIABLE FRAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,6 +42,6 @@ If the *object* is a subform and if variable frame printing is disabled (**False
 |  |  |
 | --- | --- |
 | Command number | 1241 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

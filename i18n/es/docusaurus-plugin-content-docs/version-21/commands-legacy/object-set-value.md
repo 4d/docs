@@ -45,6 +45,6 @@ Desea obtener el valor de la fuente de datos para un objeto de formulario, obten
 |  |  |
 | --- | --- |
 | Número de comando | 1742 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

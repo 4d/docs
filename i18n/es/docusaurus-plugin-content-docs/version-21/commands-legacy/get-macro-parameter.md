@@ -40,6 +40,6 @@ Consulte el ejemplo del comando [SET MACRO PARAMETER](set-macro-parameter.md "SE
 |  |  |
 | --- | --- |
 | Número de comando | 997 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

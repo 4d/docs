@@ -43,7 +43,7 @@ L'exemple suivant utilise [LOAD SET](load-set.md) pour charger un ensemble des s
 |  |  |
 | --- | --- |
 | Numéro de commande | 118 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

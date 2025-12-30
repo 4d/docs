@@ -5,13 +5,13 @@ slug: /commands/object-set-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( {* ;} *objeto* ; *tamanho* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET FONT SIZE.Syntax-->**OBJECT SET FONT SIZE** ( * ; *objeto* : Text ; *tamanho* : Integer )<br/>**OBJECT SET FONT SIZE** ( *objeto* : Field, Variable ; *tamanho* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET FONT SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
-| tamanho | Integer | &#8594;  | Tamanho da fonte em pontos |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
+| tamanho | Integer | &#8594; | Tamanho da fonte em pontos |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ O exemplo a seguir define o tamanho de fonte para todos os objetos de formulári
 |  |  |
 | --- | --- |
 | Número do comando | 165 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

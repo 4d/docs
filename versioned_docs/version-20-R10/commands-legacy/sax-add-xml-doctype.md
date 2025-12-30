@@ -31,8 +31,8 @@ The following statement:
 
 ... will write the following line in the document: 
 
-```4d
- 
+```xml
+ <!DOCTYPE SYSTEM Books"Book.DTD">
 ```
 
 ## System variables and sets 
@@ -52,7 +52,7 @@ In the event of an error, the the command returns an error which can be intercep
 |  |  |
 | --- | --- |
 | Command number | 851 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

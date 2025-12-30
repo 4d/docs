@@ -5,11 +5,11 @@ slug: /commands/time-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time string.Syntax-->**Time string** ( *secondes* ) : Text<!-- END REF-->
+<!--REF #_command_.Time string.Syntax-->**Time string** ( *secondes* : Integer, Time ) : Text<!-- END REF-->
 <!--REF #_command_.Time string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| secondes | Integer, Time | &#8594;  | Secondes écoulées depuis minuit |
+| secondes | Integer, Time | &#8594; | Secondes écoulées depuis minuit |
 | Résultat | Text | &#8592; | Heure sous forme de chaîne au format 24 heures |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ L'exemple suivant affiche une boîte de dialogue d'alerte avec le message “468
 |  |  |
 | --- | --- |
 | Numéro de commande | 180 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

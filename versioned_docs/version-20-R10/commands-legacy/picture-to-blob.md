@@ -56,7 +56,7 @@ You want to convert an image from a proprietary format to GIF format and display
 |  |  |
 | --- | --- |
 | Command number | 692 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

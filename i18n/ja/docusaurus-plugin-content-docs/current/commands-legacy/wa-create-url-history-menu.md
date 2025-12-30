@@ -5,13 +5,13 @@ slug: /commands/wa-create-url-history-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( {* ;} *object* {; *direction*} ) : Text<!-- END REF-->
+<!--REF #_command_.WA Create URL history menu.Syntax-->**WA Create URL history menu** ( * ; *object* : Text {; *direction* : Integer} ) : Text<br/>**WA Create URL history menu** ( *object* : Field, Variable {; *direction* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.WA Create URL history menu.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| direction | Integer | &#8594;  | 0 または省略=戻るURLのリスト, 1=進むURLリスト |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| direction | Integer | &#8594; | 0 または省略=戻るURLのリスト, 1=進むURLリスト |
 | 戻り値 | Text | &#8592; | メニュー参照 |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1049 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

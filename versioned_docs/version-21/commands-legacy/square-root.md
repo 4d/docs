@@ -48,6 +48,6 @@ For instance, Hypotenuse (4;3) returns 5.
 |  |  |
 | --- | --- |
 | Command number | 539 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

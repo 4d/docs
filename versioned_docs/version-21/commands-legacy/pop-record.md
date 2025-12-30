@@ -37,7 +37,7 @@ The following example pops the record for the customer off the record stack:
 |  |  |
 | --- | --- |
 | Command number | 177 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

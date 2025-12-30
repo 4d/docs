@@ -5,15 +5,15 @@ slug: /commands/qr-set-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* ; *numColumna* ; *numLinea* ; *propiedad* ; *valor* )<!-- END REF-->
+<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* : Integer ; *numColumna* : Integer ; *numLinea* : Integer ; *propiedad* : Integer ; *valor* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| numColumna | Integer | &#8594;  | Número de columna |
-| numLinea | Integer | &#8594;  | Número de línea |
-| propiedad | Integer | &#8594;  | Número de propiedad |
-| valor | Integer, Text | &#8594;  | Valor de la propiedad seleccionada |
+| area | Integer | &#8594; | Referencia del área |
+| numColumna | Integer | &#8594; | Número de columna |
+| numLinea | Integer | &#8594; | Número de línea |
+| propiedad | Integer | &#8594; | Número de propiedad |
+| valor | Integer, Text | &#8594; | Valor de la propiedad seleccionada |
 
 <!-- END REF-->
 
@@ -90,7 +90,7 @@ Este método define varios atributos para el título de la primera columna:
 |  |  |
 | --- | --- |
 | Número de comando | 759 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

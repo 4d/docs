@@ -43,6 +43,6 @@ Si no hay una lista jerárquica asociada al objeto para el *tipoLista* definido,
 |  |  |
 | --- | --- |
 | Número de comando | 1267 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

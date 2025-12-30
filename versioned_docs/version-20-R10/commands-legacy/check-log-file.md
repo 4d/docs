@@ -40,7 +40,7 @@ You can intercept these errors using an error-handling method installed with the
 |  |  |
 | --- | --- |
 | Command number | 799 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

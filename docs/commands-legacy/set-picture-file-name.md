@@ -5,7 +5,7 @@ slug: /commands/set-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *picture* ; *fileName* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *picture* : Picture, Picture ; *fileName* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,6 +32,6 @@ The default name is used as the file name when the picture is exported in a disk
 |  |  |
 | --- | --- |
 | Command number | 1172 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/is-window-reduced
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1831 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -101,6 +101,6 @@ You want to load a form and get a list of all the objects of list boxes that it 
 |  |  |
 | --- | --- |
 | Command number | 1300 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

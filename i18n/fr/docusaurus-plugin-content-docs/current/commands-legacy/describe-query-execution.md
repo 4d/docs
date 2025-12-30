@@ -5,11 +5,11 @@ slug: /commands/describe-query-execution
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *statut* )<!-- END REF-->
+<!--REF #_command_.DESCRIBE QUERY EXECUTION.Syntax-->**DESCRIBE QUERY EXECUTION** ( *statut* : Boolean )<!-- END REF-->
 <!--REF #_command_.DESCRIBE QUERY EXECUTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| statut | Boolean | &#8594;  | Vrai=Enregistrer la description des requêtes, Faux=Stopper l'enregistrement |
+| statut | Boolean | &#8594; | Vrai=Enregistrer la description des requêtes, Faux=Stopper l'enregistrement |
 
 <!-- END REF-->
 
@@ -73,6 +73,6 @@ $vResultPath :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1044 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

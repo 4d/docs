@@ -31,6 +31,6 @@ Seus conteúdos são substituídos se houver uma lista com o mesmo nome.
 |  |  |
 | --- | --- |
 | Número do comando | 384 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -51,7 +51,7 @@ Vous souhaitez trouver les personnes âgées entre 20 et 30 ans parmi les enregi
 |  |  |
 | --- | --- |
 | Numéro de commande | 1424 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

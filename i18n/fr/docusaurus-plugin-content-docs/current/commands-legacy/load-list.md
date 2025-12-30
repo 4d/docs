@@ -5,11 +5,11 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomListe* ) : Integer<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *nomListe* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomListe | Text | &#8594;  | Nom de liste créée dans l'éditeur d'énumérations |
+| nomListe | Text | &#8594; | Nom de liste créée dans l'éditeur d'énumérations |
 | Résultat | Integer | &#8592; | Numéro de référence de la liste nouvellement créée |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ Imaginons que vous créez une base pour le marché international. Vous voulez po
 |  |  |
 | --- | --- |
 | Numéro de commande | 383 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/soap-reject-new-requests
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *statutRejet* )<!-- END REF-->
+<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *statutRejet* : Boolean )<!-- END REF-->
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| statutRejet | Boolean | &#8594;  | Vrai si rejet de nouvelles requêtes, sinon Faux |
+| statutRejet | Boolean | &#8594; | Vrai si rejet de nouvelles requêtes, sinon Faux |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ Vous souhaitez rejeter les nouvelles requêtes reçues par votre serveur Web Ser
 |  |  |
 | --- | --- |
 | Numéro de commande | 1636 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,16 +5,16 @@ slug: /commands/encrypt-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; *nouvellePhraseSecrète* {; *dossierArchive* {; *phraseSecrèteCour* {; *nomMéthode*}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* ; *cheminDonnées* {; *nouvelleCléDonnées* {; *dossierArchive* {; *cléDonnéesCour* {; *nomMéthode*}}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Encrypt data file.Syntax-->**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvellePhraseSecrète* : Texte, Objet {; *dossierArchive* : Text {; *phraseSecrèteCour* : Texte, Objet {; *nomMéthode* : Text}}}} ) : Text<br/>**Encrypt data file** ( *cheminStructure* : Text ; *cheminDonnées* : Text {; *nouvelleCléDonnées* : Texte, Objet {; *dossierArchive* : Text {; *cléDonnéesCour* : Texte, Objet {; *nomMéthode* : Text}}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Encrypt data file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminStructure | Text | &#8594;  | Chemin d'accès du fichier de structure |
-| cheminDonnées | Text | &#8594;  | Chemin d'accès du fichier de données |
-| nouvellePhraseSecrète &#124; nouvelleCléDonnées | Texte, Objet | &#8594;  | En cas de remplacement : nouvelle phrase secrète (texte) ou nouvelle clé de chiffrement (objet) |
-| dossierArchive | Text | &#8594;  | Chemin d'accès du dossier dans lequel placer le fichier de données original |
-| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594;  | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
-| nomMéthode | Text | &#8594;  | Nom de la méthode 4D de rétro-appel |
+| cheminStructure | Text | &#8594; | Chemin d'accès du fichier de structure |
+| cheminDonnées | Text | &#8594; | Chemin d'accès du fichier de données |
+| nouvellePhraseSecrète &#124; nouvelleCléDonnées | Texte, Objet | &#8594; | En cas de remplacement : nouvelle phrase secrète (texte) ou nouvelle clé de chiffrement (objet) |
+| dossierArchive | Text | &#8594; | Chemin d'accès du dossier dans lequel placer le fichier de données original |
+| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594; | Phrase secrète courante (texte) ou clé de chiffrement courante (objet) |
+| nomMéthode | Text | &#8594; | Nom de la méthode 4D de rétro-appel |
 | Résultat | Text | &#8592; | Nom de chemin d'accès complet au dossier dans lequel les fichiers originaux ont été stockés |
 
 <!-- END REF-->
@@ -142,6 +142,6 @@ $folder:=Encrypt data file(Structure file;"myData.4DD")
 |  |  |
 | --- | --- |
 | Numéro de commande | 1610 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

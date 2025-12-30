@@ -5,12 +5,12 @@ slug: /commands/boolean-array-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* {; *conjunto*} )<!-- END REF-->
+<!--REF #_command_.BOOLEAN ARRAY FROM SET.Syntax-->**BOOLEAN ARRAY FROM SET** ( *booleanArr* : Boolean array {; *conjunto* : Text} )<!-- END REF-->
 <!--REF #_command_.BOOLEAN ARRAY FROM SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | booleanArr | Boolean array | &#8592; | Array para indicar se um registro está no conjunto ou não |
-| conjunto | Text | &#8594;  | Nome do conjunto ou UserSet se o parâmetro for omitido |
+| conjunto | Text | &#8594; | Nome do conjunto ou UserSet se o parâmetro for omitido |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ Se você não passar o parâmetro *conjunto*, o comando utilizará UserSet no pr
 |  |  |
 | --- | --- |
 | Número do comando | 646 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

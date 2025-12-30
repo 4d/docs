@@ -5,11 +5,11 @@ slug: /commands/pause-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *laTable* )<!-- END REF-->
+<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *laTable* : Table )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table pour laquelle suspendre les index |
+| laTable | Table | &#8594; | Table pour laquelle suspendre les index |
 
 <!-- END REF-->
 
@@ -52,6 +52,6 @@ Exemple de méthode d’import massif de données :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1293 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

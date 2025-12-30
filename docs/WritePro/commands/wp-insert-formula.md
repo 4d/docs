@@ -4,14 +4,14 @@ title: WP Insert formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* ; *formula* ; *mode* {; *rangeUpdate*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Insert formula.Syntax-->**WP Insert formula** ( *targetObj* : Object ; *formula* : Object ; *mode* : Real {; *rangeUpdate* : Real} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Insert formula.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | targetObj | Object | &#8594;  | Range or element or 4D Write Pro document |
 | formula | Object | &#8594;  | Formula object OR Object with formula and name properties |
-| mode | Number | &#8594;  | Insertion mode |
-| rangeUpdate | Number | &#8594;  | Includes or excludes the inserted content within the range |
+| mode | Real | &#8594;  | Insertion mode |
+| rangeUpdate | Real | &#8594;  | Includes or excludes the inserted content within the range |
 | Function result | Object | &#8592; | Text range object reprsenting the result of the formula |
 
 <!-- END REF-->

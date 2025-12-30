@@ -5,13 +5,13 @@ slug: /commands/insert-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *array* ; *posicion* {; *reemplazos*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *array* : Array ; *posicion* : Integer {; *reemplazos* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Nombre del array |
-| posicion | Integer | &#8594;  | Donde insertar los elementos |
-| reemplazos | Integer | &#8594;  | Número de elementos a insertar, o 1 elemento si se omite |
+| array | Array | &#8594; | Nombre del array |
+| posicion | Integer | &#8594; | Donde insertar los elementos |
+| reemplazos | Integer | &#8594; | Número de elementos a insertar, o 1 elemento si se omite |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ El siguiente ejemplo añade un elemento a un array:
 |  |  |
 | --- | --- |
 | Número de comando | 227 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

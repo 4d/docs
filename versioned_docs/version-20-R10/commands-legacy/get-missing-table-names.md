@@ -39,6 +39,6 @@ Once you have identified the missing tables of the database, you can reactivate 
 |  |  |
 | --- | --- |
 | Command number | 1125 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

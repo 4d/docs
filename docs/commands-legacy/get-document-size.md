@@ -5,7 +5,7 @@ slug: /commands/get-document-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* {; *} ) : Real<!-- END REF-->
+<!--REF #_command_.Get document size.Syntax-->**Get document size** ( *document* : Text, Time {; *} ) : Real<!-- END REF-->
 <!--REF #_command_.Get document size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ On Macintosh, if you do not pass the optional *\** parameter, the size of the da
 |  |  |
 | --- | --- |
 | Command number | 479 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

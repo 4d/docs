@@ -35,6 +35,6 @@ Passez dans *valeurMini* la nouvelle valeur minimum à affecter à l’objet pou
 |  |  |
 | --- | --- |
 | Numéro de commande | 1242 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

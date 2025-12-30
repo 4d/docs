@@ -97,6 +97,6 @@ Pode usar a sintaxe *modelo* para exportar campos de tabelas diferentes:
 |  |  |
 | --- | --- |
 | Número do comando | 1234 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *refElément* ; *nomElément* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *refElément* : Text ; *nomElément* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
-| nomElément | Text | &#8594;  | Nom d'éléments XML à compter |
+| refElément | Text | &#8594; | Référence d’élément XML |
+| nomElément | Text | &#8594; | Nom d'éléments XML à compter |
 | Résultat | Integer | &#8592; | Nombre d’éléments |
 
 <!-- END REF-->
@@ -33,7 +33,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 726 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

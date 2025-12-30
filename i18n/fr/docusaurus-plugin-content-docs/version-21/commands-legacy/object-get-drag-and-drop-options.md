@@ -42,6 +42,6 @@ Chaque paramètre retourne Vrai ou Faux suivant que l’option correspondante es
 |  |  |
 | --- | --- |
 | Numéro de commande | 1184 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

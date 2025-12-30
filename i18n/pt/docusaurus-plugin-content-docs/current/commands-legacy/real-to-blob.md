@@ -5,15 +5,15 @@ slug: /commands/real-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *real* ; *blob* ; *realFormat* {; offset } )<br/>**REAL TO BLOB** ( *real* ; *blob* ; *realFormat* {; *} )<!-- END REF-->
+<!--REF #_command_.REAL TO BLOB.Syntax-->**REAL TO BLOB** ( *real* : Real ; *blob* : Blob ; *realFormat* : Integer {; offset } )<br/>**REAL TO BLOB** ( *real* : Real ; *blob* : Blob ; *realFormat* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.REAL TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| real | Real | &#8594;  | Valor de tipo real a escrever no BLOB |
-| Blob | Blob | &#8594;  | BLOB a receber o valor Real |
-| realFormat | Integer | &#8594;  | 0 Formato real nativo 1 Formato real estendido 2 Formato real doble Macintosh 3 Formato real duplo Windows |
-| offset &#124; * | Variável, Operador |&#8596;  | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
-|||| Novo offset depois da escritura se * for omitido |
+| real | Real | &#8594; | Valor de tipo real a escrever no BLOB |
+| Blob | Blob | &#8594; | BLOB a receber o valor Real |
+| realFormat | Integer | &#8594; | 0 Formato real nativo 1 Formato real estendido 2 Formato real doble Macintosh 3 Formato real duplo Windows |
+| offset &#124; * | Variável, Operador | &#8596; | Offset no BLOB (expressado em bytes) ou * para adicionar o valor |
+|  |  |  | Novo offset depois da escritura se * for omitido |
 
 <!-- END REF-->
 
@@ -138,6 +138,6 @@ Depois de executar este código:
 |  |  |
 | --- | --- |
 | Número do comando | 552 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -90,6 +90,6 @@ Se quiser abrir uma janela pop-up na posição do cursor do mouse, em Windows, p
 |  |  |
 | --- | --- |
 | Número do comando | 1365 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

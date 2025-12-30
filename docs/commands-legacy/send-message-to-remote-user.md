@@ -5,7 +5,7 @@ slug: /commands/send-message-to-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *message* {; *userSession*} )<!-- END REF-->
+<!--REF #_command_.SEND MESSAGE TO REMOTE USER.Syntax-->**SEND MESSAGE TO REMOTE USER** ( *message* : Text {; *userSession* : Text} )<!-- END REF-->
 <!--REF #_command_.SEND MESSAGE TO REMOTE USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,6 +58,6 @@ You want to send a message to all users, then send a message to a specific user:
 |  |  |
 | --- | --- |
 | Command number | 1632 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

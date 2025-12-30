@@ -5,13 +5,13 @@ slug: /commands/insert-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *tableau* ; *positionDépart* {; *combien*} )<!-- END REF-->
+<!--REF #_command_.INSERT IN ARRAY.Syntax-->**INSERT IN ARRAY** ( *tableau* : Array ; *positionDépart* : Integer {; *combien* : Integer} )<!-- END REF-->
 <!--REF #_command_.INSERT IN ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| tableau | Array | &#8594;  | Nom du tableau dans lequel insérer des éléments |
-| positionDépart | Integer | &#8594;  | Position de départ du ou des élément(s) à insérer |
-| combien | Integer | &#8594;  | Nombre d'éléments à insérer ou 1 élément si ce paramètre est omis |
+| tableau | Array | &#8594; | Nom du tableau dans lequel insérer des éléments |
+| positionDépart | Integer | &#8594; | Position de départ du ou des élément(s) à insérer |
+| combien | Integer | &#8594; | Nombre d'éléments à insérer ou 1 élément si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ L'exemple suivant ajoute un élément à un tableau :
 |  |  |
 | --- | --- |
 | Numéro de commande | 227 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

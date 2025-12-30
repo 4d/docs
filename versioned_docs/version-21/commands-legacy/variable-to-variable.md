@@ -65,6 +65,6 @@ The following example reads a process array from the process indicated by *$vlPr
 |  |  |
 | --- | --- |
 | Command number | 635 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

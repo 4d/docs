@@ -5,12 +5,12 @@ slug: /commands/listbox-get-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( {* ;} *objet* ; *tabNomsCols* ; *tabNomsEntêtes* ; *tabVarCols* ; *tabVarEntêtes* ; *tabColsVisibles* ; *tabStyles* {; *tabNomsPieds* ; *tabVarPieds*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET ARRAYS.Syntax-->**LISTBOX GET ARRAYS** ( * ; *objet* : Text ; *tabNomsCols* : Text array ; *tabNomsEntêtes* : Text array ; *tabVarCols* : Pointer array ; *tabVarEntêtes* : Pointer array ; *tabColsVisibles* : Boolean array ; *tabStyles* : Pointer array {; *tabNomsPieds* : Text array ; *tabVarPieds* : Pointer array} )<br/>**LISTBOX GET ARRAYS** ( *objet* : Field, Variable ; *tabNomsCols* : Text array ; *tabNomsEntêtes* : Text array ; *tabVarCols* : Pointer array ; *tabVarEntêtes* : Pointer array ; *tabColsVisibles* : Boolean array ; *tabStyles* : Pointer array {; *tabNomsPieds* : Text array ; *tabVarPieds* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET ARRAYS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d’objet (si * est spécifié) ou Variable (si * est omis) |
 | tabNomsCols | Text array | &#8592; | Noms d’objet des colonnes |
 | tabNomsEntêtes | Text array | &#8592; | Noms d’objet des en-têtes |
 | tabVarCols | Pointer array | &#8592; | Pointeurs vers les variables des colonnes ou Pointeurs vers les champs des colonnes ou Nil |
@@ -55,6 +55,6 @@ Pour une list box de type sélection, collection ou entity selection, *tabStyles
 |  |  |
 | --- | --- |
 | Numéro de commande | 832 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

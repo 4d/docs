@@ -5,14 +5,14 @@ slug: /commands/get-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* ; *ligneMenu* ; *refIcône* {; *process*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM ICON.Syntax-->**GET MENU ITEM ICON** ( *menu* : Integer, Text ; *ligneMenu* : Integer ; *refIcône* : Text, Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| menu | Integer, Text | &#8594; | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
 | refIcône | Text, Integer | &#8592; | Nom ou numéro de l’image associée à la ligne de menu |
-| process | Integer | &#8594;  | Numéro de process |
+| process | Integer | &#8594; | Numéro de process |
 
 <!-- END REF-->
 
@@ -39,6 +39,6 @@ Si aucune icône n’est associée à la ligne, la commande retourne une valeur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 983 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/object-set-resizing-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( {* ;} *objeto* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET RESIZING OPTIONS.Syntax-->**OBJECT SET RESIZING OPTIONS** ( * ; *objeto* : Text ; *horizontal* : Integer ; *vertical* : Integer )<br/>**OBJECT SET RESIZING OPTIONS** ( *objeto* : Field, Variable ; *horizontal* : Integer ; *vertical* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET RESIZING OPTIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| horizontal | Integer | &#8594;  | Opción de redimensionamiento horizontal |
-| vertical | Integer | &#8594;  | Opción de redimensionamiento vertical |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena)Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| horizontal | Integer | &#8594; | Opción de redimensionamiento horizontal |
+| vertical | Integer | &#8594; | Opción de redimensionamiento vertical |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ En el parámetro *vertical*, pase un valor que indique la opción de redimension
 |  |  |
 | --- | --- |
 | Número de comando | 1175 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

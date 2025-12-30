@@ -5,13 +5,13 @@ slug: /commands/method-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *tabNoms* {; *filtre*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *tabNoms* : Text array {; *filtre* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | tabNoms | Text array | &#8592; | Tableau des noms de méthodes projet |
-| filtre | Text | &#8594;  | Filtrage des noms |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| filtre | Text | &#8594; | Filtrage des noms |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Exemples d’utilisations types :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1166 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

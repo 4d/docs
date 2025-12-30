@@ -5,15 +5,15 @@ slug: /commands/set-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* ; *menuItem* ; *itemText* {; *process*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemText* : Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー番号またはメニュー参照 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| itemText | Text | &#8594;  | メニュー項目の新しいテキスト |
-| process | Integer | &#8594;  | プロセス参照番号 |
-| * | 演算子 | &#8594;  | 指定時: メタ文字を標準文字として扱う |
+| menu | Integer, Text | &#8594; | メニュー番号またはメニュー参照 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| itemText | Text | &#8594; | メニュー項目の新しいテキスト |
+| process | Integer | &#8594; | プロセス参照番号 |
+| * | 演算子 | &#8594; | 指定時: メタ文字を標準文字として扱う |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 348 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | サーバー上での使用は不可 ||
 
 

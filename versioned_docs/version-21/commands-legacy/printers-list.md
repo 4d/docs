@@ -50,7 +50,7 @@ The system variable OK is set to 1 if the command has been executed correctly; o
 |  |  |
 | --- | --- |
 | Command number | 789 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

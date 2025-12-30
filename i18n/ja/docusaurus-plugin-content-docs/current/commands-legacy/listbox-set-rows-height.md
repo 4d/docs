@@ -5,14 +5,14 @@ slug: /commands/listbox-set-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( {* ;} *object* ; *height* {; *unit*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( * ; *object* : Text ; *height* : Integer {; *unit* : Integer} )<br/>**LISTBOX SET ROWS HEIGHT** ( *object* : Field, Variable ; *height* : Integer {; *unit* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| height | Integer | &#8594;  | 行の高さ |
-| unit | Integer | &#8594;  | 高さを表す単位: 0または省略時はピクセル、1の場合行単位 |
+| * | 演算子 | &#8594; | 指定時, objectはオブジェクト名 (文字列) 省略時, objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| height | Integer | &#8594; | 行の高さ |
+| unit | Integer | &#8594; | 高さを表す単位: 0または省略時はピクセル、1の場合行単位 |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 835 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

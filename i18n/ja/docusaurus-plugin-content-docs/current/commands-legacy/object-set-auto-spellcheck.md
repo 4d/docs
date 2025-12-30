@@ -5,13 +5,13 @@ slug: /commands/object-set-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( {* ;} *object* ; *autoSpellcheck* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Syntax-->**OBJECT SET AUTO SPELLCHECK** ( * ; *object* : Text ; *autoSpellcheck* : Boolean )<br/>**OBJECT SET AUTO SPELLCHECK** ( *object* : Field, Variable ; *autoSpellcheck* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET AUTO SPELLCHECK.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
-| autoSpellcheck | Boolean | &#8594;  | True = 自動スペルチェックFalse = 自動スペルチェックなし |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| autoSpellcheck | Boolean | &#8594; | True = 自動スペルチェックFalse = 自動スペルチェックなし |
 
 <!-- END REF-->
 
@@ -37,6 +37,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1173 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

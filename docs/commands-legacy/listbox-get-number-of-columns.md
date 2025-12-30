@@ -5,7 +5,7 @@ slug: /commands/listbox-get-number-of-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get number of columns.Syntax-->**LISTBOX Get number of columns** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get number of columns** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get number of columns.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If you pass the optional *\** parameter, you indicate that the *object* paramete
 |  |  |
 | --- | --- |
 | Command number | 831 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

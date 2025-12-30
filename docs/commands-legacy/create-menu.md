@@ -5,7 +5,7 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : Text<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** ( *menu* : Text, Integer, Text ) : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,6 +46,6 @@ Refer to the example of the [SET MENU BAR](set-menu-bar.md) command.
 |  |  |
 | --- | --- |
 | Command number | 408 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

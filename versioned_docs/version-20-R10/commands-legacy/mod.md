@@ -42,6 +42,6 @@ The following example illustrates how the Mod function works with different argu
 |  |  |
 | --- | --- |
 | Command number | 98 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

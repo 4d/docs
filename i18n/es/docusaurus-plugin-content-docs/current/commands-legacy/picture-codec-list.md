@@ -5,13 +5,13 @@ slug: /commands/picture-codec-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *arrayCodec* {; *arrayNoms*}{; *} )<!-- END REF-->
+<!--REF #_command_.PICTURE CODEC LIST.Syntax-->**PICTURE CODEC LIST** ( *arrayCodec* : Text array {; *arrayNoms* : Text array}{; *} )<!-- END REF-->
 <!--REF #_command_.PICTURE CODEC LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrayCodec | Text array | &#8592; | Identificadores de codecs de imágenes disponibles |
 | arrayNoms | Text array | &#8592; | Nombres de los codecs de imágenes |
-| * | Operador | &#8594;  | Devuelve la lista de los codecs de lectura |
+| * | Operador | &#8594; | Devuelve la lista de los codecs de lectura |
 
 <!-- END REF-->
 
@@ -38,6 +38,6 @@ Por defecto, si no pasa el parámetro *\**, el comando devuelve únicamente los 
 |  |  |
 | --- | --- |
 | Número de comando | 992 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

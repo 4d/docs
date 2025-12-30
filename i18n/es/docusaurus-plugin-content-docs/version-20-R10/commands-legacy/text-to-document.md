@@ -88,6 +88,6 @@ Ejemplo que permite al usuario indicar la ubicación del archivo a crear:
 |  |  |
 | --- | --- |
 | Número de comando | 1237 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/dom-set-xml-element-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ELEMENT NAME.Syntax-->**DOM SET XML ELEMENT NAME** ( *refElément* ; *nomElément* )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ELEMENT NAME.Syntax-->**DOM SET XML ELEMENT NAME** ( *refElément* : Text ; *nomElément* : Text )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ELEMENT NAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML |
-| nomElément | Text | &#8594;  | Nouveau nom de l’élément |
+| refElément | Text | &#8594; | Référence d’élément XML |
+| nomElément | Text | &#8594; | Nouveau nom de l’élément |
 
 <!-- END REF-->
 
@@ -64,7 +64,7 @@ Une erreur est générée lorsque :
 |  |  |
 | --- | --- |
 | Numéro de commande | 867 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

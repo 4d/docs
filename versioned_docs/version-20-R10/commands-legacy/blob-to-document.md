@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | document | Text | &#8594;  | Name of the document |
-| blob | Blob | &#8594;  | New contents for the document |
+| Blob | Blob | &#8594;  | New contents for the document |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ In all cases, you can trap the error using an [ON ERR CALL](on-err-call.md) inte
 |  |  |
 | --- | --- |
 | Command number | 526 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

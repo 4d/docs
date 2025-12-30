@@ -54,6 +54,6 @@ You want to apply an orientation of 270° to a variable in your form:
 |  |  |
 | --- | --- |
 | Command number | 1284 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

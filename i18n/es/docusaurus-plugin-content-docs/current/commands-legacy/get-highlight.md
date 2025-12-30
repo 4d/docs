@@ -5,12 +5,12 @@ slug: /commands/get-highlight
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {* ;} *objeto* ; *inicioSel* ; *finSel* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {* ;} *objeto* : Field, Variable, any ; *inicioSel* : Integer ; *finSel* : Integer )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
-| objeto | Field, Variable, any | &#8594;  | Nombre del objeto (si se especifica *) o campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o una variable |
+| objeto | Field, Variable, any | &#8594; | Nombre del objeto (si se especifica *) o campo o variable (si se omite *) |
 | inicioSel | Integer | &#8592; | Posición del inicio de la selección de texto |
 | finSel | Integer | &#8592; | Posición del fin de la selección de texto |
 
@@ -69,6 +69,6 @@ Modificación del estilo del texto resaltado:
 |  |  |
 | --- | --- |
 | Número de comando | 209 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

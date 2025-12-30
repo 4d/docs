@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* ; *menuItem* ; *mark* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM MARK.Syntax-->**SET MENU ITEM MARK** ( *menu* : Integer, Text ; *menuItem* : Integer ; *mark* : Text {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM MARK.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -42,7 +42,7 @@ See example for the [Get menu item mark](get-menu-item-mark.md) command.
 |  |  |
 | --- | --- |
 | Command number | 208 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

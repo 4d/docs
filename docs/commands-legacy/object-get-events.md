@@ -5,13 +5,13 @@ slug: /commands/object-get-events
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( {* ;} *object* ; *arrEvents* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET EVENTS.Syntax-->**OBJECT GET EVENTS** ( * ; *object* : Text ; *arrEvents* : Integer array )<br/>**OBJECT GET EVENTS** ( *object* : Field, Variable ; *arrEvents* : Integer array )<!-- END REF-->
 <!--REF #_command_.OBJECT GET EVENTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name or "" to designate the form (if * is specified) orField or variable (if * is omitted) |
-| arrEvents | Array integer | &#8592; | Array of enabled events |
+| arrEvents | Integer array | &#8592; | Array of enabled events |
 
 <!-- END REF-->
 
@@ -52,6 +52,6 @@ You want to enable two events and get the list of events for an object:
 |  |  |
 | --- | --- |
 | Command number | 1238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

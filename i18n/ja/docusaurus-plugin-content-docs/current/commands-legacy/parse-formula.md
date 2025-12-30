@@ -5,12 +5,12 @@ slug: /commands/parse-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* {; *options*}{; *errorMessage*} ) : Text<!-- END REF-->
+<!--REF #_command_.Parse formula.Syntax-->**Parse formula** ( *formula* : Text {; *options* : Integer}{; *errorMessage* : Text} ) : Text<!-- END REF-->
 <!--REF #_command_.Parse formula.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| formula | Text | &#8594;  | 標準テキストのフォーミュラ |
-| options | Integer | &#8594;  | 入力/出力の形式の指示 |
+| formula | Text | &#8594; | 標準テキストのフォーミュラ |
+| options | Integer | &#8594; | 入力/出力の形式の指示 |
 | errorMessage | Text | &#8592; | エラーメッセージ(エラーなしの場合には空の文字列) |
 | 戻り値 | Text | &#8592; | 変換されたフォーミュラ(標準テキスト) |
 
@@ -110,6 +110,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1576 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

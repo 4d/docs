@@ -5,12 +5,12 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *rotaPasta* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *rotaPasta* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaPasta | Text | &#8594;  | Rota de acesso a nova pasta a criar |
-| * | Operador | &#8594;  | Cria hierarquia de pastas |
+| rotaPasta | Text | &#8594; | Rota de acesso a nova pasta a criar |
+| * | Operador | &#8594; | Cria hierarquia de pastas |
 
 <!-- END REF-->
 
@@ -73,7 +73,7 @@ Criação da subpasta "\\Fevereiro\\" na atual pasta "C:\\Arquivos\\":
 |  |  |
 | --- | --- |
 | Número do comando | 475 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

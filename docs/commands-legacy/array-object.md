@@ -5,7 +5,7 @@ slug: /commands/array-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY OBJECT.Syntax-->**ARRAY OBJECT** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY OBJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -74,6 +74,6 @@ Creation and filling of a local object array:
 |  |  |
 | --- | --- |
 | Command number | 1221 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

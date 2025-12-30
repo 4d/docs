@@ -5,12 +5,12 @@ slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( * ; *object* : Text ) : Text<br/>**OBJECT Get format** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時, Objectはオブジェクト名 (文字列) 省略時, Objectはフィールドまたは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時), または フィールドまたは変数 (* 省略時) |
 | 戻り値 | Text | &#8592; | オブジェクト表示フォーマット |
 
 <!-- END REF-->
@@ -69,6 +69,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 894 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

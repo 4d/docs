@@ -5,15 +5,15 @@ slug: /commands/qr-set-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* ; *izquierda* ; *superior* {; *derecha* {; *inferior*}} )<!-- END REF-->
+<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* : Integer ; *izquierda* : Integer ; *superior* : Integer {; *derecha* : Integer {; *inferior* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| izquierda | Integer | &#8594;  | Límite izquierdo |
-| superior | Integer | &#8594;  | Límite superior |
-| derecha | Integer | &#8594;  | Límite derecho |
-| inferior | Integer | &#8594;  | Límite inferior |
+| area | Integer | &#8594; | Referencia del área |
+| izquierda | Integer | &#8594; | Límite izquierdo |
+| superior | Integer | &#8594; | Límite superior |
+| derecha | Integer | &#8594; | Límite derecho |
+| inferior | Integer | &#8594; | Límite inferior |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ Si pasa un número de *area* inválido, se genera el error -9850.
 |  |  |
 | --- | --- |
 | Número de comando | 794 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

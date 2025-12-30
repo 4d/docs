@@ -46,6 +46,6 @@ Since exchanges between 4D and the PHP interpreter are carried out via FastCGI, 
 |  |  |
 | --- | --- |
 | Command number | 1061 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/set-field-titles
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *aTable* ; *fieldTitles* ; *fieldNumbers* {; *} )<!-- END REF-->
+<!--REF #_command_.SET FIELD TITLES.Syntax-->**SET FIELD TITLES** ( *aTable* : Table ; *fieldTitles* : Text array ; *fieldNumbers* : Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.SET FIELD TITLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | フィールドタイトルを設定するテーブル |
-| fieldTitles | Text array | &#8594;  | ダイアログボックスに表示するフィールドの名前 |
-| fieldNumbers | Integer array | &#8594;  | 実際のフィールド番号 |
-| * | Operator |  &#8594;  | カスタマイズした名前をフォーミュラエディタで使用する |
+| aTable | Table | &#8594; | フィールドタイトルを設定するテーブル |
+| fieldTitles | Text array | &#8594; | ダイアログボックスに表示するフィールドの名前 |
+| fieldNumbers | Integer array | &#8594; | 実際のフィールド番号 |
+| * | Operator | &#8594; | カスタマイズした名前をフォーミュラエディタで使用する |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 602 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

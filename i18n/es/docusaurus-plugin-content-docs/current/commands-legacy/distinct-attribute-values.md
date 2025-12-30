@@ -5,13 +5,13 @@ slug: /commands/distinct-attribute-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *campoObjeto* ; *ruta* ; *arrayValores* )<!-- END REF-->
+<!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Syntax-->**DISTINCT ATTRIBUTE VALUES** ( *campoObjeto* : Field ; *ruta* : Text ; *arrayValores* : Array )<!-- END REF-->
 <!--REF #_command_.DISTINCT ATTRIBUTE VALUES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoObjeto | Field | &#8594;  | Campo de objeto del que desea obtener la lista de valores de atributos distintos |
-| ruta | Text | &#8594;  | Ruta de acceso del atributo cuyos valores distintos desea obtener |
-| arrayValores | Text array, Integer array, Boolean array, Date array, Time array | &#8592; | Valores distintos en la ruta de atributos |
+| campoObjeto | Field | &#8594; | Campo de objeto del que desea obtener la lista de valores de atributos distintos |
+| ruta | Text | &#8594; | Ruta de acceso del atributo cuyos valores distintos desea obtener |
+| arrayValores | Array | &#8592; | Valores distintos en la ruta de atributos |
 
 <!-- END REF-->
 
@@ -70,6 +70,6 @@ El array *aLAges* obtiene los siguientes 9 elementos:
 |  |  |
 | --- | --- |
 | Número de comando | 1397 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

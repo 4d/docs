@@ -71,6 +71,6 @@ The following example can be used to find out whether the method is called from 
 |  |  |
 | --- | --- |
 | Command number | 489 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

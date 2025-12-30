@@ -5,12 +5,12 @@ slug: /commands/qr-get-command-status
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *zone* ; *numCommande* {; *valeur*} ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get command status.Syntax-->**QR Get command status** ( *zone* : Integer ; *numCommande* : Integer {; *valeur* : Integer, Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get command status.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| numCommande | Integer | &#8594;  | Numéro de commande |
+| zone | Integer | &#8594; | Référence de la zone |
+| numCommande | Integer | &#8594; | Numéro de commande |
 | valeur | Integer, Text | &#8592; | Valeur du sous-élément sélectionné |
 | Résultat | Integer | &#8592; | Statut de la commande |
 
@@ -96,7 +96,7 @@ Si le paramètre *numCommande* est incorrect, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 792 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

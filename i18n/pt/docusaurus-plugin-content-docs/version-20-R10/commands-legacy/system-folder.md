@@ -55,6 +55,6 @@ Se omitido o parâmetro *tipo*, a função devolverá a rota à pasta sistema at
 |  |  |
 | --- | --- |
 | Número do comando | 487 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

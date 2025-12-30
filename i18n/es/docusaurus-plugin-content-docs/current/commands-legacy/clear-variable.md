@@ -5,11 +5,11 @@ slug: /commands/clear-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* )<!-- END REF-->
+<!--REF #_command_.CLEAR VARIABLE.Syntax-->**CLEAR VARIABLE** ( *variable* : Variable )<!-- END REF-->
 <!--REF #_command_.CLEAR VARIABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Variable a borrar |
+| variable | Variable | &#8594; | Variable a borrar |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ En un formulario, utilice una lista desplegable llamada *asMiListaDesplegable* c
 |  |  |
 | --- | --- |
 | Número de comando | 89 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

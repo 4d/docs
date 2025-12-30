@@ -5,7 +5,7 @@ title: Utiliser des process web préemptifs
 
 Le Web Server de 4D vous permet de tirer pleinement parti des ordinateurs multi-coeurs en utilisant des process Web préemptifs dans vos applications compilées. Vous pouvez configurer votre code lié au Web, y compris les balises 4D, les méthodes base Web ou les fonctions de classe REST de ORDA, afin qu'il s'exécute simultanément sur le plus grand nombre de coeurs possibles.
 
-For in-depth information on preemptive process in 4D, please refer to the [Preemptive Processes](../Develop/preemptive.md) section.
+Pour plus d'informations sur les process préemptifs dans 4D, veuillez consulter la section [Process préemptifs](../Develop/preemptive.md).
 
 ## Disponibilité du mode préemptif pour les process Web
 
@@ -26,11 +26,11 @@ Le tableau suivant indique si l'utilisation du mode préemptif pour les process 
 - Serveur REST : gère les [fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md)
 - Serveur Web : gère les [modèles Web](templates.md), [4DACTION et les méthodes base](httpRequests.md)
 - Serveur de services Web : gère les requêtes SOAP
-- ***web setting*** means that the preemptive mode depends on the [**scalable sessions**](sessions.md#enabling-web-sessions) status:
-  - if scalable sessions are enabled, the preemptive mode is automatically used for web and web service processes.
-  - if scalable sessions are not enabled:
-    - for web processes, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-    - for web service processes (server or client), preemptive mode is supported at method level.
+- ***paramètres web*** signifie que le mode préemptif dépend du statut [**sessions évolutives**](sessions.md#enabling-web-sessions) :
+  - si les sessions évolutives sont activées, le mode préemptif est automatiquement utilisé pour les process web et web service.
+  - si les sessions évolutives ne sont pas activées :
+    - pour les process web, l'option [**Utiliser des process préemptifs**](webServerConfig.md#use-preemptive-processes) est prise en compte.
+    - pour les process de web services (serveur ou client), le mode préemptif est pris en charge au niveau de la méthode.
 
 ## Ecrire du code serveur Web thread-safe
 
@@ -52,7 +52,7 @@ Tout le code 4D exécuté par le serveur Web doit être thread-safe si vous souh
 
 - [Fonctions de classe du modèle de données ORDA](../REST/ClassFunctions.md) appelées via REST
 
-For each of these methods and code parts, the compiler will check if the [thread-safety rules are respected](../Develop/preemptive.md#writing-a-thread-safe-method), and will return errors in case of issues.
+Pour chacune de ces parties de méthodes et de code, le compilateur vérifiera si les [règles du thread-safe sont respectées](../Develop/preemptive.md#writing-a-thread-safe-method), et renverra des erreurs en cas de problème.
 
 ## Code web 4D thread-safe
 

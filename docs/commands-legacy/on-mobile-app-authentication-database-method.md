@@ -5,7 +5,7 @@ slug: /commands/on-mobile-app-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Mobile App Authentication database method.Syntax-->**On Mobile App Authentication database method** ( *mobileInfo* ; *status* )<!-- END REF-->
+<!--REF #_command_.On Mobile App Authentication database method.Syntax-->**On Mobile App Authentication database method** ( *mobileInfo* : Object ; *status* : Object )<!-- END REF-->
 <!--REF #_command_.On Mobile App Authentication database method.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

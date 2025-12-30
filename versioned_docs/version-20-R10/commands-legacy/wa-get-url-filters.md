@@ -32,6 +32,6 @@ The filters are installed by the [WA SET URL FILTERS](wa-set-url-filters.md) com
 |  |  |
 | --- | --- |
 | Command number | 1031 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

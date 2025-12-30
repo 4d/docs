@@ -5,13 +5,13 @@ slug: /commands/ob-get-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *object* ; *property* ; *array* )<!-- END REF-->
+<!--REF #_command_.OB GET ARRAY.Syntax-->**OB GET ARRAY** ( *object* : Object ; *property* : Text ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.OB GET ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | 構造化されたオブジェクト |
-| property | Text | &#8594;  | 情報を取得したいプロパティ名 |
-| array | Text array, Real array, Boolean array, Object array, Pointer array, Integer array | &#8592; | プロパティの値の配列 |
+| object | Object | &#8594; | 構造化されたオブジェクト |
+| property | Text | &#8594; | 情報を取得したいプロパティ名 |
+| array | Array | &#8592; | プロパティの値の配列 |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1229 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

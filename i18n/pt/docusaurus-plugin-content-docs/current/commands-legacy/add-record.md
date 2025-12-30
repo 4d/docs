@@ -5,12 +5,12 @@ slug: /commands/add-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*tabela*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.ADD RECORD.Syntax-->**ADD RECORD** ( {*tabela* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.ADD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a utilizar para entrada de dados ou Tabela por padrão, se omitida |
-| * | Operator |  &#8594;  | Ocultar barras de deslocamento |
+| tabela | Table | &#8594; | Tabela a utilizar para entrada de dados ou Tabela por padrão, se omitida |
+| * | Operator | &#8594; | Ocultar barras de deslocamento |
 
 <!-- END REF-->
 
@@ -91,7 +91,7 @@ A variável sistema OK toma o valor 1 se aceitar o registro e 0 se o cancelar. A
 |  |  |
 | --- | --- |
 | Número do comando | 56 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

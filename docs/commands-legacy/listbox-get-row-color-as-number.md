@@ -5,7 +5,7 @@ slug: /commands/listbox-get-row-color-as-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( {* ;} *object* ; *row* {; *colorType*} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get row color as number.Syntax-->**LISTBOX Get row color as number** ( * ; *object* : Text ; *row* : Integer {; *colorType* : Integer} )  : Integer<br/>**LISTBOX Get row color as number** ( *object* : Field, Variable ; *row* : Integer {; *colorType* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get row color as number.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ Given the following list box:
 |  |  |
 | --- | --- |
 | Command number | 1271 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

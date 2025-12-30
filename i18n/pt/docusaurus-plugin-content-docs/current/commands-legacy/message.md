@@ -5,11 +5,11 @@ slug: /commands/message
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *mensagem* )<!-- END REF-->
+<!--REF #_command_.MESSAGE.Syntax-->**MESSAGE** ( *mensagem* : Text )<!-- END REF-->
 <!--REF #_command_.MESSAGE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mensagem | Text | &#8594;  | Mensagem a exibir |
+| mensagem | Text | &#8594; | Mensagem a exibir |
 
 <!-- END REF-->
 
@@ -118,6 +118,6 @@ O resultado é o seguinte (em Windows):
 |  |  |
 | --- | --- |
 | Número do comando | 88 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

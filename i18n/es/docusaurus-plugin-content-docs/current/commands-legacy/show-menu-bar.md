@@ -33,7 +33,7 @@ Ver el ejemplo del comando [HIDE MENU BAR](hide-menu-bar.md "HIDE MENU BAR").
 |  |  |
 | --- | --- |
 | Número de comando | 431 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

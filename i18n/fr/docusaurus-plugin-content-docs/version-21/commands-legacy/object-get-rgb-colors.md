@@ -41,6 +41,6 @@ Pour plus d’informations sur le format des paramètres *couleurAvantPlan*, *co
 |  |  |
 | --- | --- |
 | Numéro de commande | 1074 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

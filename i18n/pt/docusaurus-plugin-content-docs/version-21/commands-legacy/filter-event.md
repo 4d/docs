@@ -45,7 +45,7 @@ Ver o exemplo do comando [ON EVENT CALL](on-event-call.md "ON EVENT CALL").
 |  |  |
 | --- | --- |
 | Número do comando | 321 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

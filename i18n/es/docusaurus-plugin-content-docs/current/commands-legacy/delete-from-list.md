@@ -5,14 +5,14 @@ slug: /commands/delete-from-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( {* ;} *lista* ; refElem | * {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM LIST.Syntax-->**DELETE FROM LIST** ( * ; *list* : Text ; *itemRef* : Integer, Operator {; *} )<br/>**DELETE FROM LIST** ( *list* : Integer ; *itemRef* : Integer, Operator {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
-| lista | Integer, Text | &#8594;  | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
-| refElem &#124; * | Entero largo, Operador | &#8594;  | Número de referencia del elemento, o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionada |
-| * | Operator |  &#8594;  | Si se especifica, borra las sublistas (si la hay) de la memoria Si se omite, las sublistas (si las hay) no son borradas |
+| * | Operador | &#8594; | Si se especifica, lista es un nombre de objeto (cadena) Si se omite, lista es un número de referencia de lista |
+| lista | Integer, Text | &#8594; | Número de referencia de lista (si se omite *) o Nombre del objeto de tipo lista (si se pasa *) |
+| refElem &#124; * | Entero largo, Operador | &#8594; | Número de referencia del elemento, o 0 para el último elemento añadido a la lista o * para el elemento de la lista actualmente seleccionada |
+| * | Operator | &#8594; | Si se especifica, borra las sublistas (si la hay) de la memoria Si se omite, las sublistas (si las hay) no son borradas |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ El siguiente código borra el elemento seleccionado de la lista *hList*. Si el e
 |  |  |
 | --- | --- |
 | Número de comando | 624 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

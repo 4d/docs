@@ -5,11 +5,11 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle supprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de laquelle supprimer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ L'exemple suivant permet de supprimer l'enregistrement d'un employé. La méthod
 |  |  |
 | --- | --- |
 | Numéro de commande | 58 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

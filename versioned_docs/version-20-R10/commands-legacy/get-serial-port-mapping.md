@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| numArray | Array integer | &#8592; | Array of port numbers |
+| numArray | Integer array | &#8592; | Array of port numbers |
 | nameArray | Text array | &#8592; | Array of port names |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ This project method can be used to address the same serial port (without protoco
 |  |  |
 | --- | --- |
 | Command number | 909 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Table | Table | &#8594;  | Tabela para a qual os valores de prioridade escalares serão recuperados |
+| Table | Table | &#8594; | Tabela para a qual os valores de prioridade escalares serão recuperados |
 | Resultado | Integer | &#8592; | Valor atual de prioridades para campos escalares |
 
 <!-- END REF-->
@@ -33,6 +33,6 @@ Os tipos de campos de dados escalares incluem campos de tipo data/hora, numéric
 |  |  |
 | --- | --- |
 | Número do comando | 1426 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

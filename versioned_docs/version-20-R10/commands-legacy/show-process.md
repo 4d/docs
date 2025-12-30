@@ -38,6 +38,6 @@ The following example displays a process called Customers, if it has been previo
 |  |  |
 | --- | --- |
 | Command number | 325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

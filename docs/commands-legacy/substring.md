@@ -5,7 +5,7 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; *firstChar* {; *numChars*} ) : Text<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* : Text ; *firstChar* : Integer {; *numChars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,6 +69,6 @@ The following project method appends the paragraphs found in the text (passed as
 |  |  |
 | --- | --- |
 | Command number | 12 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

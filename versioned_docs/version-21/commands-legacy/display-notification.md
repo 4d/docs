@@ -46,6 +46,6 @@ Under Windows, the message window remains displayed as long as no activity has b
 |  |  |
 | --- | --- |
 | Command number | 910 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

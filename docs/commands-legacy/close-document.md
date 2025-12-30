@@ -5,7 +5,7 @@ slug: /commands/close-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* )<!-- END REF-->
+<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -43,6 +43,6 @@ The following example lets the user create a new document, writes the string “
 |  |  |
 | --- | --- |
 | Command number | 267 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

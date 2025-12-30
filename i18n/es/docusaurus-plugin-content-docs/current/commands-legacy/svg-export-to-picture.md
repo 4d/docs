@@ -5,13 +5,13 @@ slug: /commands/svg-export-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* ; *varImag* {; *tipoExport*} )<!-- END REF-->
+<!--REF #_command_.SVG EXPORT TO PICTURE.Syntax-->**SVG EXPORT TO PICTURE** ( *elementRef* : Text ; *varImag* : Picture {; *tipoExport* : Integer} )<!-- END REF-->
 <!--REF #_command_.SVG EXPORT TO PICTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML raíz |
-| varImag | Picture | &#8594;  | Variable imagen a recibir del árbol XML (imagen SVG) |
-| tipoExport | Integer | &#8594;  | 0 = No guardar la fuente de datos, 1 = Copiar la fuente de datos, 2 (por defecto) = Fuente de datos propia |
+| elementRef | Text | &#8594; | Referencia del elemento XML raíz |
+| varImag | Picture | &#8594; | Variable imagen a recibir del árbol XML (imagen SVG) |
+| tipoExport | Integer | &#8594; | 0 = No guardar la fuente de datos, 1 = Copiar la fuente de datos, 2 (por defecto) = Fuente de datos propia |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ El siguiente ejemplo puede utilizarse para mostrar “Hello World” en una imag
 |  |  |
 | --- | --- |
 | Número de comando | 1017 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

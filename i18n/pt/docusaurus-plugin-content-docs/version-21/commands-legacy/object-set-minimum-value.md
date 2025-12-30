@@ -35,6 +35,6 @@ Em *valorMinimo*, passe o novo valor mínimo a atribuir ao objeto para o process
 |  |  |
 | --- | --- |
 | Número do comando | 1242 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

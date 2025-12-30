@@ -6,12 +6,12 @@ displayed_sidebar: docs
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                          |
-| ----------- | --------------------------------------- |
-| 21          | Qodly cloud discontinued                |
-| 20 R6       | Support access to Qodly cloud instances |
-| 20 R4       | Nueva propiedad *passwordAlgorithm*     |
-| 18          | Añadidos                                |
+| Lanzamiento | Modificaciones                                  |
+| ----------- | ----------------------------------------------- |
+| 21          | Qodly cloud discontinued                        |
+| 20 R6       | Soporta el acceso a instancias en la nube Qodly |
+| 20 R4       | Nueva propiedad *passwordAlgorithm*             |
+| 18          | Añadidos                                        |
 
 </details>
 
@@ -33,9 +33,9 @@ El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conect
 
 Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
 
-- its Web Server must be launched with http and/or https enabled,
+- su servidor web debe ser lanzado con http y/o https activado,
 - its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
-- a client license must be available if required (see note).
+- una licencia de cliente debe estar disponible si es necesario (ver nota).
 
 :::note
 

@@ -45,6 +45,6 @@ Ver el ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard
 |  |  |
 | --- | --- |
 | Número de comando | 402 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

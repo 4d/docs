@@ -31,6 +31,6 @@ Sous Windows, la portée de cette commande est globale : le paramétrage est con
 |  |  |
 | --- | --- |
 | Numéro de commande | 1040 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

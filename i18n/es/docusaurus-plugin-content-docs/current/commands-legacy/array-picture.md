@@ -5,13 +5,13 @@ slug: /commands/array-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nombreArray* ; *tamaño* {; *tamaño2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nombreArray* : Array ; *tamaño* : Integer {; *tamaño2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY PICTURE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreArray | Array | &#8594;  | Nombre del array |
-| tamaño | Integer | &#8594;  | Número de elementos en el array o Número de filas si se especifica tamaño2 |
-| tamaño2 | Integer | &#8594;  | Número de columnas en un array bidimensional |
+| nombreArray | Array | &#8594; | Nombre del array |
+| tamaño | Integer | &#8594; | Número de elementos en el array o Número de filas si se especifica tamaño2 |
+| tamaño2 | Integer | &#8594; | Número de columnas en un array bidimensional |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Este ejemplo crea un array interpcoceso de elementos de tipo [Imagen](# "Can be 
 |  |  |
 | --- | --- |
 | Número de comando | 279 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

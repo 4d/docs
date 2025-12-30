@@ -50,6 +50,6 @@ Em um formulário, utilize uma lista suspensa (drop down) chamada *MinhaListaSus
 |  |  |
 | --- | --- |
 | Número do comando | 89 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

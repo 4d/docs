@@ -35,6 +35,6 @@ El comando devuelve el nombre del método 4D como una cadena de caracteres (expr
 |  |  |
 | --- | --- |
 | Número de comando | 981 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

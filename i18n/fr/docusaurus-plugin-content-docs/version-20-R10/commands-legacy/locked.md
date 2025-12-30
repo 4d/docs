@@ -40,6 +40,6 @@ Au cours d'une transaction, [LOAD RECORD](load-record.md) et **Locked** sont sou
 |  |  |
 | --- | --- |
 | Numéro de commande | 147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

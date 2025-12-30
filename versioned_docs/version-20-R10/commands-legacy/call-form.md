@@ -107,6 +107,6 @@ You can then add other messages by executing the **CALL FORM** command again:
 |  |  |
 | --- | --- |
 | Command number | 1391 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

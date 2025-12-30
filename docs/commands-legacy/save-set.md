@@ -5,7 +5,7 @@ slug: /commands/save-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* ; *document* )<!-- END REF-->
+<!--REF #_command_.SAVE SET.Syntax-->**SAVE SET** ( *set* : Text ; *document* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,7 +47,7 @@ If the user clicks Cancel in the Save File dialog box, or if there is an error d
 |  |  |
 | --- | --- |
 | Command number | 184 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

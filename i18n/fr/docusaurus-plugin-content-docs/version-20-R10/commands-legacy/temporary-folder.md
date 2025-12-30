@@ -30,6 +30,6 @@ Reportez-vous à l'exemple de la commande [APPEND DATA TO PASTEBOARD](append-dat
 |  |  |
 | --- | --- |
 | Numéro de commande | 486 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

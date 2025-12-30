@@ -40,6 +40,6 @@ En el parámetro *indicador*, pase el tipo de indicador a mostrar. Puede utiliza
 |  |  |
 | --- | --- |
 | Número de comando | 1246 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *ventana* )}<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ({ *ventana* : Integer })<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de ventana o Ventana del primer plano del proceso actual, si se omite |
+| ventana | Integer | &#8594; | Número de referencia de ventana o Ventana del primer plano del proceso actual, si se omite |
 
 <!-- END REF-->
 
@@ -33,6 +33,6 @@ No confunda ERASE WINDOW, que borra el contenido de una ventana, con [CLOSE WIND
 |  |  |
 | --- | --- |
 | Número de comando | 160 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

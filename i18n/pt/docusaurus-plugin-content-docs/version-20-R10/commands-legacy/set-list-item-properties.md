@@ -85,6 +85,6 @@ O exemplo a seguir modifica o texto do elemento atual de *lista* negrito e verme
 |  |  |
 | --- | --- |
 | Número do comando | 386 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

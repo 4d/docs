@@ -11,7 +11,7 @@ displayed_sidebar: docs
 | --- | --- | --- | --- |
 | * | Operator | &#8594;  | If specified, object is an object name (string)<br/>If omitted, object is a field or variable |
 | object | any | &#8594;  | Object name or "" to designate the form (if * is specified) orField or variable (if * is omitted) |
-| arrEvents | Array integer | &#8592; | Array of enabled events |
+| arrEvents | Integer array | &#8592; | Array of enabled events |
 
 <!-- END REF-->
 
@@ -52,6 +52,6 @@ You want to enable two events and get the list of events for an object:
 |  |  |
 | --- | --- |
 | Command number | 1238 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

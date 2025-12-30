@@ -5,14 +5,14 @@ slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*tabla* ;} *form* {; *formUsuario* {; *}} )<!-- END REF-->
+<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*tabla* : Table ;} *form* : Text, Object {; *formUsuario* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual definir el formulario de entrada o Tabla por defecto, si se omite |
-| form | Text, Object | &#8594;  | Nombre del formulario a definir como formulario de entrada |
-| formUsuario | Text | &#8594;  | Nombre del formulario usuario a utilizar |
-| * | Operator |  &#8594;  | Tamaño de ventana automático |
+| tabla | Table | &#8594; | Tabla para la cual definir el formulario de entrada o Tabla por defecto, si se omite |
+| form | Text, Object | &#8594; | Nombre del formulario a definir como formulario de entrada |
+| formUsuario | Text | &#8594; | Nombre del formulario usuario a utilizar |
+| * | Operator | &#8594; | Tamaño de ventana automático |
 
 <!-- END REF-->
 
@@ -112,6 +112,6 @@ que devuelve:
 |  |  |
 | --- | --- |
 | Número de comando | 55 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

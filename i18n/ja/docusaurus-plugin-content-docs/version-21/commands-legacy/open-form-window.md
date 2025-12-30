@@ -145,6 +145,6 @@ $myWin :=Open form window("/RESOURCES/OutputPersonnel.json";Plain form window)
 |  |  |
 | --- | --- |
 | コマンド番号 | 675 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

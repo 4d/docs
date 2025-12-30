@@ -121,6 +121,6 @@ Ces exemples illustrent plus particulièrement l'utilisation du paramètre *attr
 |  |  |
 | --- | --- |
 | Numéro de commande | 1329 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

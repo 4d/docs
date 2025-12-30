@@ -36,6 +36,6 @@ Provided a default table has been set, the following line of code sets the windo
 |  |  |
 | --- | --- |
 | Command number | 363 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

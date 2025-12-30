@@ -5,12 +5,12 @@ slug: /commands/get-4d-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *fichier* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *fichier* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D file.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fichier | Integer | &#8594;  | Type de fichier |
-| * | Opérateur | &#8594;  | Retourne le chemin d'accès du fichier de la base hôte |
+| fichier | Integer | &#8594; | Type de fichier |
+| * | Opérateur | &#8594; | Retourne le chemin d'accès du fichier de la base hôte |
 | Résultat | Text | &#8592; | Chemin d'accès du fichier 4D désigné |
 
 <!-- END REF-->
@@ -75,6 +75,6 @@ Vous voulez obtenir le chemin d'accès du fichier de sauvegarde le plus récent 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1418 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

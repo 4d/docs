@@ -5,11 +5,11 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) : Integer<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| listName | Text | &#8594;  | デザインモードのリストエディタで 作成されたリスト名 |
+| listName | Text | &#8594; | デザインモードのリストエディタで 作成されたリスト名 |
 | 戻り値 | Integer | &#8592; | 新しく作成されたリストのリスト参照番号 |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 383 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

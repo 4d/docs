@@ -5,15 +5,15 @@ slug: /commands/sql-export-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* ; *folderPath* {; *numFiles* {; *fileLimitSize* {; *fieldLimitSize*}}} )<!-- END REF-->
+<!--REF #_command_.SQL EXPORT SELECTION.Syntax-->**SQL EXPORT SELECTION** ( *aTable* : Table ; *folderPath* : Text {; *numFiles* : Integer {; *fileLimitSize* : Integer {; *fieldLimitSize* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.SQL EXPORT SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションを書き出すテーブル |
-| folderPath | Text | &#8594;  | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
-| numFiles | Integer | &#8594;  | フォルダーごとの最大ファイル数 |
-| fileLimitSize | Integer | &#8594;  | Export.sql ファイルの最大サイズ (KB) |
-| fieldLimitSize | Integer | &#8594;  | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
+| aTable | Table | &#8594; | セレクションを書き出すテーブル |
+| folderPath | Text | &#8594; | 書き出しフォルダーのパス名、または"" でフォルダー選択ダイアログボックスを表示 |
+| numFiles | Integer | &#8594; | フォルダーごとの最大ファイル数 |
+| fileLimitSize | Integer | &#8594; | Export.sql ファイルの最大サイズ (KB) |
+| fieldLimitSize | Integer | &#8594; | この引数のサイズ以下のテキスト、Blob、ピクチャーフィールドの内容はメインのファイルに統合する (バイト単位) |
 
 <!-- END REF-->
 
@@ -42,7 +42,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1064 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

@@ -30,6 +30,6 @@ Ver o exemplo do comando [Current machine](current-machine.md "Current machine")
 |  |  |
 | --- | --- |
 | Número do comando | 484 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

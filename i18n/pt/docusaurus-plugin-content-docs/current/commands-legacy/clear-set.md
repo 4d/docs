@@ -5,11 +5,11 @@ slug: /commands/clear-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *conjunto* )<!-- END REF-->
+<!--REF #_command_.CLEAR SET.Syntax-->**CLEAR SET** ( *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto | Text | &#8594;  | Nome do conjunto a limpar da memória |
+| conjunto | Text | &#8594; | Nome do conjunto a limpar da memória |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Ver o exemplo do comando [USE SET](use-set.md "USE SET").
 |  |  |
 | --- | --- |
 | Número do comando | 117 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

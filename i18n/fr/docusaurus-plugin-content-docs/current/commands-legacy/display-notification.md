@@ -5,13 +5,13 @@ slug: /commands/display-notification
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titre* ; *contenu* {; *durée*} )<!-- END REF-->
+<!--REF #_command_.DISPLAY NOTIFICATION.Syntax-->**DISPLAY NOTIFICATION** ( *titre* : Text ; *contenu* : Text {; *durée* : Integer} )<!-- END REF-->
 <!--REF #_command_.DISPLAY NOTIFICATION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| titre | Text | &#8594;  | Titre de la notification |
-| contenu | Text | &#8594;  | Texte de la notification |
-| durée | Integer | &#8594;  | Délai d’affichage en secondes |
+| titre | Text | &#8594; | Titre de la notification |
+| contenu | Text | &#8594; | Texte de la notification |
+| durée | Integer | &#8594; | Délai d’affichage en secondes |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Sous Windows, la fenêtre du message reste affichée tant qu'aucune activité n'
 |  |  |
 | --- | --- |
 | Numéro de commande | 910 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

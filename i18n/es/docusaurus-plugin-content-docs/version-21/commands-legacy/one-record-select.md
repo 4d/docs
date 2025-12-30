@@ -35,7 +35,7 @@ Este comando fue útil para “reponer” un registro que había sido apilado y 
 |  |  |
 | --- | --- |
 | Número de comando | 189 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

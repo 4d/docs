@@ -5,12 +5,12 @@ slug: /commands/get-string-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* {; *resFichier*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get string resource.Syntax-->**Get string resource** ( *resNum* : Integer {; *resFichier* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get string resource.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Numéro de ressource |
-| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
+| resNum | Integer | &#8594; | Numéro de ressource |
+| resFichier | Time | &#8594; | Numéro de référence de fichier de ressources ou tous les fichiers de ressources ouverts si ce paramètre est omis |
 | Résultat | Text | &#8592; | Contenu de la ressource STR |
 
 <!-- END REF-->
@@ -48,7 +48,7 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 |  |  |
 | --- | --- |
 | Numéro de commande | 506 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

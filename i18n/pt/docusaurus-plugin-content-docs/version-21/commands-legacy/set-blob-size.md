@@ -56,6 +56,6 @@ O exemplo a seguir cria um BLOB de 16K cheios de 0xFF:
 |  |  |
 | --- | --- |
 | Número do comando | 606 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

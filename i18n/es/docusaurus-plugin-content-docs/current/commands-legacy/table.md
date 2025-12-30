@@ -5,24 +5,24 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( *numTabla* ) : Pointer<br/>**Table** ( *ptrTabla* ) : Integer<br/>**Table** ( *ptrCampo* ) : Integer<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *numTabla* : Integer ) : Pointer<br/>**Table** ( *ptrTabla* : Pointer ) : Integer<br/>**Table** ( *ptrCampo* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla | Integer | &#8594;  | Número de tabla |
-| ptrTabla | Pointer | &#8594;  | Puntero de tabla |
-| ptrCampo | Pointer | &#8594;  | Puntero de campo |
-| Resultado | todos | &#8592; | Puntero de tabla, si se pasa un número de tabla<br/>Número de tabla, si se pasa un puntero de tabla Número de tabla o si se pasa un puntero de campo | 
+| numTabla | Integer | &#8594; | Número de tabla |
+| ptrTabla | Pointer | &#8594; | Puntero de tabla |
+| ptrCampo | Pointer | &#8594; | Puntero de campo |
+| Resultado | Pointer, Integer | &#8592; | Puntero de tabla, si se pasa un número de tabla<br/>Número de tabla, si se pasa un puntero de tabla Número de tabla o si se pasa un puntero de campo |
 
 <!-- END REF-->
 
 ## Descripción 
 
-<!--REF #_command_.Table.Summary-->El comando Table tiene tres sintaxis diferentes: 
+El comando **Table** tiene tres sintaxis diferentes: 
 
-* Si pasa un número de tabla en *numTabla*, Table devuelve un puntero para la tabla.<!-- END REF-->
+<!--REF #_command_.Table.Summary-->* Si pasa un número de tabla en *numTabla*, Table devuelve un puntero para la tabla.
 * Si pasa un puntero de tabla en *unPtr*, Table devuelve el número de la tabla.
-* Si pasa un puntero de campo en *unPtr*, Table devuelve el número de tabla del campo.
+* Si pasa un puntero de campo en *unPtr*, Table devuelve el número de tabla del campo.<!-- END REF-->
 
 ## Ejemplo 1 
 
@@ -67,6 +67,6 @@ Este ejemplo, la variable *numTabla* es igual al número de la tabla a la cual p
 |  |  |
 | --- | --- |
 | Número de comando | 252 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

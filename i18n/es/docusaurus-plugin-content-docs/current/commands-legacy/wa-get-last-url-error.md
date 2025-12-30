@@ -5,12 +5,12 @@ slug: /commands/wa-get-last-url-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( {* ;} *objeto* ; *url* ; *descripcion* ; *codigoError* )<!-- END REF-->
+<!--REF #_command_.WA GET LAST URL ERROR.Syntax-->**WA GET LAST URL ERROR** ( * ; *objeto* : Text ; *url* : Text ; *descripcion* : Text ; *codigoError* : Integer )<br/>**WA GET LAST URL ERROR** ( *objeto* : Field, Variable ; *url* : Text ; *descripcion* : Text ; *codigoError* : Integer )<!-- END REF-->
 <!--REF #_command_.WA GET LAST URL ERROR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
 | url | Text | &#8592; | URL al origen del error |
 | descripcion | Text | &#8592; | Descripción del error (macOS) |
 | codigoError | Integer | &#8592; | Código de error |
@@ -44,6 +44,6 @@ Es recomendable llamar este comando dentro del marco del evento de formulario On
 |  |  |
 | --- | --- |
 | Número de comando | 1034 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

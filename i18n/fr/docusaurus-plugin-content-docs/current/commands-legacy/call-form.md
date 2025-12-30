@@ -5,13 +5,13 @@ slug: /commands/call-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *fenêtre* ; *formule* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *fenêtre* : Integer ; *formule* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL FORM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre |
-| formule | Object, Text | &#8594;  | Objet Formula ou Nom de la méthode projet |
-| param | Expression | &#8594;  | Paramètre(s) passé(s) à la méthode |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre |
+| formule | Object, Text | &#8594; | Objet Formula ou Nom de la méthode projet |
+| param | Expression | &#8594; | Paramètre(s) passé(s) à la méthode |
 
 <!-- END REF-->
 
@@ -107,6 +107,6 @@ Vous pouvez alors ajouter d'autres messages en exécutant à nouveau la commande
 |  |  |
 | --- | --- |
 | Numéro de commande | 1391 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

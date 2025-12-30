@@ -5,11 +5,11 @@ slug: /commands/qr-count-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Count columns.Syntax-->**QR Count columns** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Count columns.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
+| area | Integer | &#8594; | エリア参照 |
 | 戻り値 | Integer | &#8592; | エリア中のカラム数 |
 
 <!-- END REF-->
@@ -39,7 +39,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 764 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

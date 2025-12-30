@@ -42,6 +42,6 @@ Si aucune liste du type défini n’est associée à l’*objet*, la commande re
 |  |  |
 | --- | --- |
 | Numéro de commande | 1072 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -59,6 +59,6 @@ En este ejemplo, queremos encontrar la declaración DTD del documento XML:
 |  |  |
 | --- | --- |
 | Número de comando | 1088 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/year-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* ) : Integer<!-- END REF-->
+<!--REF #_command_.Year of.Syntax-->**Year of** ( *date* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Year of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | 年を取り出す日付 |
+| date | Date | &#8594; | 年を取り出す日付 |
 | 戻り値 | Integer | &#8592; | 年を示す数値 |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 25 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

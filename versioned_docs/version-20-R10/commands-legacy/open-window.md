@@ -166,6 +166,6 @@ This example illustrates the “delay” mechanism for displaying sheet windows 
 |  |  |
 | --- | --- |
 | Command number | 153 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

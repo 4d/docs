@@ -70,6 +70,6 @@ Se o comando for executado desde um componente, retorna como padrão as rotas do
 |  |  |
 | --- | --- |
 | Número do comando | 1164 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

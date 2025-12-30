@@ -68,7 +68,7 @@ Se o usuário clicar no botão Deter no termômetro de progressão, a variável 
 |  |  |
 | --- | --- |
 | Número do comando | 70 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *methodsArray* )<!-- END REF-->
+<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ This example authorizes a set of specific methods to create a report:
 |  |  |
 | --- | --- |
 | Command number | 908 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

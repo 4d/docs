@@ -5,14 +5,14 @@ slug: /commands/set-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* ; *itemRef* ; *font* )<br/>**SET LIST ITEM FONT** ( * ; *list* ; * ; *font* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM FONT.Syntax-->**SET LIST ITEM FONT** ( {* ;} *list* : Integer, Text ; *itemRef* : 倍長整数, 演算子 ; *font* : Text, Integer )<br/>**SET LIST ITEM FONT** ( * ; *list* : Integer, Text ; * ; *font* : Text, Integer )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM FONT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 倍長整数, 演算子 | &#8594;  | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
-| font | Text, Integer | &#8594;  | フォント名または番号 |
+| * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 倍長整数, 演算子 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
+| font | Text, Integer | &#8594; | フォント名または番号 |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 953 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

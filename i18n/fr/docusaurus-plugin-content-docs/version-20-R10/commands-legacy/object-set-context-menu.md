@@ -34,6 +34,6 @@ Passez **Vrai** dans le paramètre *menuContext* pour activer le menu contextuel
 |  |  |
 | --- | --- |
 | Numéro de commande | 1251 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

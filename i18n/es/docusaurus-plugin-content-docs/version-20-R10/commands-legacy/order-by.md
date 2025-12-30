@@ -206,7 +206,7 @@ Cada botón llama al método de proyecto MULTINIVEL con un puntero al campo de l
 |  |  |
 | --- | --- |
 | Número de comando | 49 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 | Modifica el registro actual ||
 

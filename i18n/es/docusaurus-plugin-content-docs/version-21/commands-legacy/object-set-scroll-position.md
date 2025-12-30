@@ -95,6 +95,6 @@ Asegúrese de no omitir el segundo parámetro *\** en este caso, de lo contrario
 |  |  |
 | --- | --- |
 | Número de comando | 906 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/form-set-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*objeto* ;} *horizontal*  ; *vertical* {; *} )<!-- END REF-->
+<!--REF #_command_.FORM SET SIZE.Syntax-->**FORM SET SIZE** ( {*objeto* : Text ;} *horizontal* : Integer  ; *vertical* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.FORM SET SIZE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Text | &#8594;  | Nome do objeto que indica os limites do formulário |
-| horizontal | Integer | &#8594;  | Se passada *: margem horizontal (píxels) Se omitida *: largo (píxels) |
-| vertical | Integer | &#8594;  | Se passada *: margem vertical (píxels) Se omitida *: altura (píxels) |
-| * | Operador | &#8594;  | • Se passado: agregar as margens definidas pelos parâmetros horizontal e vertical (tamanho automático ou baseado em um objeto, se passado um objeto) • Se omitido: utilizar horizontal e vertical como largura e altura do formulário |
+| objeto | Text | &#8594; | Nome do objeto que indica os limites do formulário |
+| horizontal | Integer | &#8594; | Se passada *: margem horizontal (píxels) Se omitida *: largo (píxels) |
+| vertical | Integer | &#8594; | Se passada *: margem vertical (píxels) Se omitida *: altura (píxels) |
+| * | Operador | &#8594; | • Se passado: agregar as margens definidas pelos parâmetros horizontal e vertical (tamanho automático ou baseado em um objeto, se passado um objeto) • Se omitido: utilizar horizontal e vertical como largura e altura do formulário |
 
 <!-- END REF-->
 
@@ -127,6 +127,6 @@ O método de objeto associado com este botão é o seguinte:
 |  |  |
 | --- | --- |
 | Número do comando | 891 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

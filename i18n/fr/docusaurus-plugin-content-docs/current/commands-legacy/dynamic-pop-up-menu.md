@@ -5,14 +5,14 @@ slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *parDéfaut* {; *coordX* ; *coordY*}} )  : Text<!-- END REF-->
+<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* : Text {; *parDéfaut* : Text {; *coordX* : Integer ; *coordY* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Text | &#8594;  | Référence de menu |
-| parDéfaut | Text | &#8594;  | Paramètre de l'élément sélectionné par défaut |
-| coordX | Integer | &#8594;  | Coordonnée X du coin supérieur gauche |
-| coordY | Integer | &#8594;  | Coordonnée Y du coin supérieur gauche |
+| menu | Text | &#8594; | Référence de menu |
+| parDéfaut | Text | &#8594; | Paramètre de l'élément sélectionné par défaut |
+| coordX | Integer | &#8594; | Coordonnée X du coin supérieur gauche |
+| coordY | Integer | &#8594; | Coordonnée Y du coin supérieur gauche |
 | Résultat | Text | &#8592; | Paramètre de l'élément de menu sélectionné |
 
 <!-- END REF-->
@@ -96,6 +96,6 @@ paramRef:=Dynamic pop up menu($refMainContextMenu)
 |  |  |
 | --- | --- |
 | Numéro de commande | 1006 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

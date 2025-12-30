@@ -5,7 +5,7 @@ slug: /commands/dom-get-xml-attribute-by-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Syntax-->**DOM GET XML ATTRIBUTE BY INDEX** ( *elementRef* ; *attribIndex* ; *attribName* ; *attribValue* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Syntax-->**DOM GET XML ATTRIBUTE BY INDEX** ( *elementRef* : Text ; *attribIndex* : Integer ; *attribName* : Variable ; *attribValue* : Variable )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ATTRIBUTE BY INDEX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 729 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

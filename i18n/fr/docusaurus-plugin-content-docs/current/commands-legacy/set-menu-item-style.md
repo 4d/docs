@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* ; *ligneMenu* ; *styleLigne* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM STYLE.Syntax-->**SET MENU ITEM STYLE** ( *menu* : Integer, Text ; *ligneMenu* : Integer ; *styleLigne* : Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM STYLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
-| styleLigne | Integer | &#8594;  | Nouveau style de la ligne de menu |
-| process | Integer | &#8594;  | Numéro de référence du process |
+| menu | Integer, Text | &#8594; | Numéro de menu ou Référence de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée |
+| styleLigne | Integer | &#8594; | Nouveau style de la ligne de menu |
+| process | Integer | &#8594; | Numéro de référence du process |
 
 <!-- END REF-->
 
@@ -42,7 +42,7 @@ Vous pouvez définir le style de l'élément dans le paramètre *styleLigne*. Vo
 |  |  |
 | --- | --- |
 | Numéro de commande | 425 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

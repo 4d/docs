@@ -61,6 +61,6 @@ You want to save an encryption key in a .4DKeyChain file:
 |  |  |
 | --- | --- |
 | Command number | 1611 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/set-group-access
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** {( *grupos* )}<!-- END REF-->
+<!--REF #_command_.SET GROUP ACCESS.Syntax-->**SET GROUP ACCESS** ({ *grupos* : Collection })<!-- END REF-->
 <!--REF #_command_.SET GROUP ACCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| grupos | Collection | &#8594;  | Nome dos grupos ao qual a conta de usuário 4D deve pertencer durante a sessão |
+| grupos | Collection | &#8594; | Nome dos grupos ao qual a conta de usuário 4D deve pertencer durante a sessão |
 
 <!-- END REF-->
 
@@ -50,7 +50,7 @@ Se quiser promover o usuário atual aos grupos "admin" e "plugins" durante a ses
 |  |  |
 | --- | --- |
 | Número do comando | 1737 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Proibido no servidor ||
 
 

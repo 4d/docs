@@ -32,6 +32,6 @@ Utilize READ ONLY quando não necessite modificar os registros.
 |  |  |
 | --- | --- |
 | Número do comando | 145 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

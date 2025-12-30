@@ -5,13 +5,13 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *fonte* ; *aPartirDe* {; *numCars*} ) : Text<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *fonte* : Text ; *aPartirDe* : Integer {; *numCars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| fonte | Text | &#8594;  | Cadeia da qual se tira a substring |
-| aPartirDe | Integer | &#8594;  | Posição do primeiro caractere |
-| numCars | Integer | &#8594;  | Número de caracteres a pegar |
+| fonte | Text | &#8594; | Cadeia da qual se tira a substring |
+| aPartirDe | Integer | &#8594; | Posição do primeiro caractere |
+| numCars | Integer | &#8594; | Número de caracteres a pegar |
 | Resultado | Text | &#8592; | Substring de fonte |
 
 <!-- END REF-->
@@ -70,6 +70,6 @@ O seguinte método de projeto adiciona os parágrafos que são encontrados no te
 |  |  |
 | --- | --- |
 | Número do comando | 12 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

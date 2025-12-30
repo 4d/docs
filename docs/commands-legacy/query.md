@@ -5,7 +5,7 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* }{;}{ *queryArgument* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*aTable* : Table }{;}{ *queryArgument* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -315,7 +315,7 @@ The OK variable is set to 0 if:
 |  |  |
 | --- | --- |
 | Command number | 277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

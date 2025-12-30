@@ -98,6 +98,6 @@ El siguiente ejemplo exporta la librería de imágenes a un documento almacenado
 |  |  |
 | --- | --- |
 | Número de comando | 564 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

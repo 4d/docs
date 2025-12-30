@@ -5,11 +5,11 @@ slug: /commands/create-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.CREATE RECORD.Syntax-->**CREATE RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.CREATE RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual criar um novo registro, ou tabela Padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual criar um novo registro, ou tabela Padrão, se omitido |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ O seguinte exemplo arquiva os registros que tem mais de 30 dias. Esta operação
 |  |  |
 | --- | --- |
 | Número do comando | 68 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

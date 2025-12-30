@@ -5,14 +5,14 @@ slug: /commands/request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Request.Syntax-->**Request** ( *mensaje* {; *respuestaDefecto* {; *titulobotonOK* {; *titulobotoncancel*}}} )  : Text<!-- END REF-->
+<!--REF #_command_.Request.Syntax-->**Request** ( *mensaje* : Text {; *respuestaDefecto* : Text {; *titulobotonOK* : Text {; *titulobotoncancel* : Text}}} )  : Text<!-- END REF-->
 <!--REF #_command_.Request.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mensaje | Text | &#8594;  | Mensaje a mostrar en la caja de diálogo |
-| respuestaDefecto | Text | &#8594;  | Valor por defecto en el área de entrada de texto |
-| titulobotonOK | Text | &#8594;  | Título del botón Aceptar |
-| titulobotoncancel | Text | &#8594;  | Título del botón Cancelar |
+| mensaje | Text | &#8594; | Mensaje a mostrar en la caja de diálogo |
+| respuestaDefecto | Text | &#8594; | Valor por defecto en el área de entrada de texto |
+| titulobotonOK | Text | &#8594; | Título del botón Aceptar |
+| titulobotoncancel | Text | &#8594; | Título del botón Cancelar |
 | Resultado | Text | &#8592; | Valor introducido por el usuario |
 
 <!-- END REF-->
@@ -84,7 +84,7 @@ Mostrará la siguiente caja de diálogo (en Windows):
 |  |  |
 | --- | --- |
 | Número de comando | 163 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

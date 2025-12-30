@@ -5,14 +5,14 @@ slug: /commands/set-menu-item-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* ; *menuItem* ; *iconRef* {; *process*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM ICON.Syntax-->**SET MENU ITEM ICON** ( *menu* : Integer, Text ; *menuItem* : Integer ; *iconRef* : Text, Integer {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| iconRef | Text, Integer | &#8594;  | メニュー項目に関連付けられたピクチャーの番号または名称 |
-| process | Integer | &#8594;  | プロセス番号 |
+| menu | Integer, Text | &#8594; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| iconRef | Text, Integer | &#8594; | メニュー項目に関連付けられたピクチャーの番号または名称 |
+| process | Integer | &#8594; | プロセス番号 |
 
 <!-- END REF-->
 
@@ -52,6 +52,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 984 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

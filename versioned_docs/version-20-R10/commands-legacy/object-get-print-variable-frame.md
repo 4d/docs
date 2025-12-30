@@ -42,6 +42,6 @@ If the *object* is a subform and if variable frame printing is disabled (**False
 |  |  |
 | --- | --- |
 | Command number | 1241 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

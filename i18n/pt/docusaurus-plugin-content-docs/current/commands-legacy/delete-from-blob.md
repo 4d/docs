@@ -5,13 +5,13 @@ slug: /commands/delete-from-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *BLOB* ; *offset* ; *tamanho* )<!-- END REF-->
+<!--REF #_command_.DELETE FROM BLOB.Syntax-->**DELETE FROM BLOB** ( *BLOB* : Blob ; *offset* : Integer ; *tamanho* : Integer )<!-- END REF-->
 <!--REF #_command_.DELETE FROM BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB do qual deletar bytes |
-| offset | Integer | &#8594;  | Offset inicial onde os bytes serão deletados |
-| tamanho | Integer | &#8594;  | Número de bytes a serem excluídos |
+| Blob | Blob | &#8594; | BLOB do qual deletar bytes |
+| offset | Integer | &#8594; | Offset inicial onde os bytes serão deletados |
+| tamanho | Integer | &#8594; | Número de bytes a serem excluídos |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 560 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

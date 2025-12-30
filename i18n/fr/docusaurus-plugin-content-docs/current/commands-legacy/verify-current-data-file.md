@@ -5,15 +5,15 @@ slug: /commands/verify-current-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** {( *objets* ; *options* ; *méthode* {; *tabTables* {; *tabChamps*}} )}<!-- END REF-->
+<!--REF #_command_.VERIFY CURRENT DATA FILE.Syntax-->**VERIFY CURRENT DATA FILE** ({ *objets* : Integer ; *options* : Integer ; *méthode* : Text {; *tabTables* : Integer array {; *tabChamps* : Integer array}} })<!-- END REF-->
 <!--REF #_command_.VERIFY CURRENT DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objets | Integer | &#8594;  | Objets à vérifier |
-| options | Integer | &#8594;  | Options de vérification |
-| méthode | Text | &#8594;  | Nom de la méthode 4D de rétro-appel |
-| tabTables | Integer array | &#8594;  | Numéros des tables à vérifier |
-| tabChamps | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | Numéros des index à vérifier |
+| objets | Integer | &#8594; | Objets à vérifier |
+| options | Integer | &#8594; | Options de vérification |
+| méthode | Text | &#8594; | Nom de la méthode 4D de rétro-appel |
+| tabTables | Integer array | &#8594; | Numéros des tables à vérifier |
+| tabChamps | Integer array | &#8594; | 2D array, numbers of indexes to be checked |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ Si la méthode de rétro-appel passée n’existe pas, la vérification n’est 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1008 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

@@ -62,6 +62,6 @@ Exemple de son système sous macOS :
 |  |  |
 | --- | --- |
 | Numéro de commande | 290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

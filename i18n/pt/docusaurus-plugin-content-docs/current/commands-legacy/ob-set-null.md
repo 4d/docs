@@ -5,12 +5,12 @@ slug: /commands/ob-set-null
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *objeto* ; *propriedade* )<!-- END REF-->
+<!--REF #_command_.OB SET NULL.Syntax-->**OB SET NULL** ( *objeto* : Object, Campo Object ; *propriedade* : Text )<!-- END REF-->
 <!--REF #_command_.OB SET NULL.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object, Campo Object | &#8594;  | Objeto estruturado |
-| propriedade | Text | &#8594;  | Nome da propriedade onde o valor nulo será aplicado |
+| objeto | Object, Campo Object | &#8594; | Objeto estruturado |
+| propriedade | Text | &#8594; | Nome da propriedade onde o valor nulo será aplicado |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ Queremos colocar o valor nulo na propriedade "idade" para Lea:
 |  |  |
 | --- | --- |
 | Número do comando | 1233 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

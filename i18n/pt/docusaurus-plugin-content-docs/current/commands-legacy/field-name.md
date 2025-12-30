@@ -5,12 +5,12 @@ slug: /commands/field-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field name.Syntax-->**Field name** ( *pontCampo* ) : Text<br/>**Field name** ( *numTabela* ; *numCampo* ) : Text<!-- END REF-->
+<!--REF #_command_.Field name.Syntax-->**Field name** ( *pontCampo* : Ponteiro, Inteiro longo ) : Text<br/>**Field name** ( *numTabela* : Ponteiro, Inteiro longo ; *numCampo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Field name.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594;  | Ponteiro Campo ou número da tabela |
-| numCampo | Integer | &#8594;  | Número do campo se a o número da tabela foi passado no primeiro parâmetro |
+| pontCampo&#124;numTabela | Ponteiro, Inteiro longo | &#8594; | Ponteiro Campo ou número da tabela |
+| numCampo | Integer | &#8594; | Número do campo se a o número da tabela foi passado no primeiro parâmetro |
 | Resultado | Text | &#8592; | Nome do campo |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ Este exemplo mostra um alerta. Este método passa um ponteiro a um campo:
 |  |  |
 | --- | --- |
 | Número do comando | 257 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

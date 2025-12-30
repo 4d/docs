@@ -5,13 +5,13 @@ slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* {; *returnName* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *returnValue* : Variable {; *returnName* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | returnValue | Variable | &#8592; | Webサービスから返された値 |
-| returnName | Text | &#8594;  | 取得する引数の名前 |
-| * | Operator |  &#8594;  | メモリを解放 |
+| returnName | Text | &#8594; | 取得する引数の名前 |
+| * | Operator | &#8594; | メモリを解放 |
 
 <!-- END REF-->
 
@@ -54,6 +54,6 @@ Webサービスがある都市の時間を返すとします。Webサービス�
 |  |  |
 | --- | --- |
 | コマンド番号 | 779 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

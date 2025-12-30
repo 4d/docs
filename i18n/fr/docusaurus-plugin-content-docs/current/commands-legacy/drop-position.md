@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( *numColonne* )} : Integer<br/>**Drop position** {( *posYImage* )} : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** ( *numColonne* : Integer ) : Integer<br/>**Drop position** ( *posYImage* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -97,6 +97,6 @@ La méthode objet de la list box de gauche (destination) contient le code suivan
 |  |  |
 | --- | --- |
 | Numéro de commande | 608 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

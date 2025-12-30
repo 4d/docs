@@ -5,7 +5,7 @@ slug: /commands/open-color-picker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** {( *textOrBackground* )}<!-- END REF-->
+<!--REF #_command_.OPEN COLOR PICKER.Syntax-->**OPEN COLOR PICKER** ({ *textOrBackground* : Integer })<!-- END REF-->
 <!--REF #_command_.OPEN COLOR PICKER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ If the color was changed, the On After Edit form event is generated for the obje
 |  |  |
 | --- | --- |
 | Command number | 1304 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

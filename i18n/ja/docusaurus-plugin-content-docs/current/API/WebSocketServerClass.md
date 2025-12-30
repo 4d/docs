@@ -232,7 +232,7 @@ LogFile("!!! サーバーエラー: "+$event.errors.first().message)
 | ws    |      | [`4D.WebSocketConnection`](WebSocketConnectionClass.md) | <- | カレントの WebSocket 接続オブジェクト |
 | event |      | Object                                                  | <- | 引数                       |
 |       | type | Text                                                    |                             | "message"                |
-|       | data | Text / Blob / Object                                    |                             | クライアントから送信されたデータ         |
+|       | data | Text, Blob, Object                                      |                             | クライアントから送信されたデータ         |
 
 WebSocket データ用のコールバックです。 WebSocket がデータを受信するたびに呼び出されます。
 

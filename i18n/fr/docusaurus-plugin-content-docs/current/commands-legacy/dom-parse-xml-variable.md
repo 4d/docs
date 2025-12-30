@@ -5,13 +5,13 @@ slug: /commands/dom-parse-xml-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* {; *validation* {; *dtd* } ) : Text<br/>**DOM Parse XML variable** ( *variable* {; *validation* {; *schéma* }} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML variable.Syntax-->**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *dtd* : Chaîne } ) : Text<br/>**DOM Parse XML variable** ( *variable* : Blob, Text {; *validation* : Boolean {; *schéma* : Chaîne }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML variable.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| variable | Blob, Text | &#8594;  | Nom de la variable |
-| validation | Boolean | &#8594;  | Vrai = Validation, Faux = Pas de validation |
-| dtd &#124; schéma | Chaîne | &#8594;  | Emplacement de la DTD ou du schéma XML |
+| variable | Blob, Text | &#8594; | Nom de la variable |
+| validation | Boolean | &#8594; | Vrai = Validation, Faux = Pas de validation |
+| dtd &#124; schéma | Chaîne | &#8594; | Emplacement de la DTD ou du schéma XML |
 | Résultat | Text | &#8592; | Référence de l’élément XML |
 
 <!-- END REF-->
@@ -89,7 +89,7 @@ Si la commande a été correctement exécutée, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 720 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

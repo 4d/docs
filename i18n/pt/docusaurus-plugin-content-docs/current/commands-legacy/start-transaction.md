@@ -31,6 +31,6 @@ A partir da versão 11 de 4D, pode aninhar várias transações (subtransações
 |  |  |
 | --- | --- |
 | Número do comando | 239 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

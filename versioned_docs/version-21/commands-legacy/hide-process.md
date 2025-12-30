@@ -41,6 +41,6 @@ The following example hides all the windows belonging to the current process:
 |  |  |
 | --- | --- |
 | Command number | 324 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

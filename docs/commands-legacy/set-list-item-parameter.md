@@ -5,7 +5,7 @@ slug: /commands/set-list-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *list* ; *itemRef* ; *selector* ; *value* )<br/>**SET LIST ITEM PARAMETER** ( * ; *list* ; * ; *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM PARAMETER.Syntax-->**SET LIST ITEM PARAMETER** ( {* ;} *list* : Integer, Text ; *itemRef* : Operator, Integer ; *selector* : Text ; *value* : Text, Boolean, Real )<br/>**SET LIST ITEM PARAMETER** ( * ; *list* : Integer, Text ; * ; *selector* : Text ; *value* : Text, Boolean, Real )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -67,6 +67,6 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 |  |  |
 | --- | --- |
 | Command number | 986 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

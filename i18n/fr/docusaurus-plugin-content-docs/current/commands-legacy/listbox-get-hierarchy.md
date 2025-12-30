@@ -5,12 +5,12 @@ slug: /commands/listbox-get-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( {* ;} *objet* ; *hiérarchique* {; *hiérarchie*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET HIERARCHY.Syntax-->**LISTBOX GET HIERARCHY** ( * ; *objet* : Text ; *hiérarchique* : Boolean {; *hiérarchie* : Pointer array} )<br/>**LISTBOX GET HIERARCHY** ( *objet* : Field, Variable ; *hiérarchique* : Boolean {; *hiérarchie* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET HIERARCHY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | hiérarchique | Boolean | &#8592; | Vrai = list box hiérarchique, Faux = list box non hiérarchique |
 | hiérarchie | Pointer array | &#8592; | Tableau de pointeurs |
 
@@ -40,6 +40,6 @@ Si la list box est en mode hiérarchique, la commande remplit le tableau *hiéra
 |  |  |
 | --- | --- |
 | Numéro de commande | 1099 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

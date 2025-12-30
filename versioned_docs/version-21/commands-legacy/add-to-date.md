@@ -42,6 +42,6 @@ Although you can use the [Self](self.md) to add days to a date, **Add to date** 
 |  |  |
 | --- | --- |
 | Command number | 393 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

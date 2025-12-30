@@ -46,6 +46,6 @@ Você quer inverter a segunda e terceira coluna do list box:
 |  |  |
 | --- | --- |
 | Número do comando | 1274 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

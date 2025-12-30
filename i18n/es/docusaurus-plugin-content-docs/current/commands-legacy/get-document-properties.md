@@ -5,11 +5,11 @@ slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *doc* ; *bloqueado* ; *invisible* ; creado el ; creado a las ; modificado el ; modificado a las )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *doc* : Text ; *bloqueado* : Boolean ; *invisible* : Boolean ; creado el ; creado a las ; modificado el ; modificado a las )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &#8594;  | Nombre del documento |
+| doc | Text | &#8594; | Nombre del documento |
 | bloqueado | Boolean | &#8592; | Bloqueado (True) o no bloqueado (False) |
 | invisible | Boolean | &#8592; | Invisible (True) o visible (False) |
 | creado el | Fecha | &#8592; | Fecha de creación |
@@ -208,7 +208,7 @@ Una vez implementado en la base, tenemos todo lo que necesitamos para escribir e
 |  |  |
 | --- | --- |
 | Número de comando | 477 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

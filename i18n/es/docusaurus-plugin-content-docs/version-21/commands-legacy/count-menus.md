@@ -29,7 +29,7 @@ Si omite el parámetro *proceso*, Count menus se aplica a la barra de menús del
 |  |  |
 | --- | --- |
 | Número de comando | 404 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

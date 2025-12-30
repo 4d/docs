@@ -5,7 +5,7 @@ slug: /commands/get-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *gauche* ; *haut* ; *droite* ; *bas* {; *fenêtre*} )<!-- END REF-->
+<!--REF #_command_.GET WINDOW RECT.Syntax-->**GET WINDOW RECT** ( *gauche* : Integer ; *haut* : Integer ; *droite* : Integer ; *bas* : Integer {; *fenêtre* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET WINDOW RECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@ displayed_sidebar: docs
 | haut | Integer | &#8592; | Coordonnée supérieure de l'intérieur de la fenêtre |
 | droite | Integer | &#8592; | Coordonnée droite de l'intérieur de la fenêtre |
 | bas | Integer | &#8592; | Coordonnée inférieure de l'intérieur de la fenêtre |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si omis ou Fenêtre MDI si -1 (Windows) |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process si omis ou Fenêtre MDI si -1 (Windows) |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Reportez-vous à l'exemple de la commande [WINDOW LIST](window-list.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 443 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

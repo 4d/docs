@@ -5,12 +5,12 @@ slug: /commands/convert-from-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *texto4D* ; *conjuntoCaracteres* ; *blobConvertido* )<!-- END REF-->
+<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *texto4D* : Text ; *conjuntoCaracteres* : Text, Integer ; *blobConvertido* : Blob )<!-- END REF-->
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| texto4D | Text | &#8594;  | Texto expresso no conjunto de caracteres atual de 4D |
-| conjuntoCaracteres | Text, Integer | &#8594;  | Nome ou número do conjunto de caracteres |
+| texto4D | Text | &#8594; | Texto expresso no conjunto de caracteres atual de 4D |
+| conjuntoCaracteres | Text, Integer | &#8594; | Nome ou número do conjunto de caracteres |
 | blobConvertido | Blob | &#8592; | BLOB contendo o texto convertido |
 
 <!-- END REF-->
@@ -192,7 +192,7 @@ Se o comando tiver sido executado corretamente, a variável OK assume o valor 1\
 |  |  |
 | --- | --- |
 | Número do comando | 1011 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

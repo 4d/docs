@@ -462,6 +462,33 @@ Executing initialization or closing code is done by means of the `On Host Databa
 > For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it. To do this, you must check the [**Execute "On Host Database Event" method of the components** option](../settings/security.md#options) in the Security page of the Settings.
 
 
+## Custom icon
+
+You can use a **custom icon** for your dependency, so that it can be visually distinguished from other components in the [Project Dependencies panel](../Project/components.md#monitoring-project-dependencies). 
+
+When no custom icon is defined, components use a **default icon**:
+
+![](../assets/en/Develop/icon-comp-default.png)
+
+To declare a custom icon for your component:
+
+1. Create a picture file for the icon and name it `logo.svg` or `logo.png`. Note that the picture will be displayed with a square shape (and automatically resized if necessary). The **svg** format is recommended.
+
+2. Copy the icon file in the [**Resources folder**](../Project/architecture.md#resources) of the component.
+
+
+The logo file will be used in the Project Dependency window for the component, whether it is interpreted or [built](../Desktop/building.md#build-component). 
+
+
+![](../assets/en/Develop/icon-comp.png)
+
+:::note
+
+If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priority. 
+
+:::
+
+
 ## Info.plist
 
 Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components). 

@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *documento* ; *comentario* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML COMMENT.Syntax-->**SAX GET XML COMMENT** ( *documento* : Time ; *comentario* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML COMMENT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referência do documento aberto |
+| documento | Time | &#8594; | Referência do documento aberto |
 | comentario | Text | &#8592; | XML comment |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 874 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -5,24 +5,17 @@ slug: /commands/position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Position.Syntax-->**Position** ( àChercher ; *laChaîne* {; *début* {; *longTrouvée*}}{; *} ) -> Résultat <br/>
-**Position** ( àChercher ; *laChaîne* ; *début* ; *longTrouvée* ; *options* ) -> Résultat<!-- END REF-->
+<!--REF #_command_.Position.Syntax-->**Position** ( *àChercher* : Text ; *laChaîne* : Text {; *début* : Integer {; *longTrouvée* : Integer}}{; *} ) -> Integer<br/>**Position** ( *àChercher* : Text ; *laChaîne* : Text; *début* : Integer ; *longTrouvée* : Integer ; *options* : Integer ) -> Integer
+<!-- END REF-->
 <!--REF #_command_.Position.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| àChercher | Text | &#8594;  | Chaîne à rechercher |
-| laText | Text | &#8594;  | Chaîne dans laquelle effectuer la recherche |
-| début | Integer | &#8594;  | Position dans laChaîne où débuter la recherche |
+| àChercher | Text | &#8594; | Chaîne à rechercher |
+| laChaîne | Text | &#8594; | Chaîne dans laquelle effectuer la recherche |
+| début | Integer | &#8594; | Position dans laChaîne où débuter la recherche |
 | longTrouvée | Integer | &#8592; | Longueur de la chaîne trouvée |
-| * | Opérateur | &#8594;  | Si passé : évaluation basée sur les codes de caractères |
-| Résultat | Integer | &#8592; | Position de la première occurrence de àChercher |
-| Position ( àChercher ; laChaîne ; début ; longTrouvée ; options ) -> Résultat |
-| Paramètre | Type | Description |
-| àChercher | Text | &#8594;  | Chaîne à rechercher |
-| laText | Text | &#8594;  | Chaîne dans laquelle effectuer la recherche |
-| début | Integer | &#8594;  | Position dans laChaîne où débuter la recherche |
-| longTrouvée | Integer | &#8594;  | Longueur de la chaîne trouvée |
-| options | Integer | &#8594;  | Critère(s) de recherche |
+| * | Opérateur | &#8594; | Si passé : évaluation basée sur les codes de caractères |
+| options | Integer | &#8594; | Critère(s) de recherche |
 | Résultat | Integer | &#8592; | Position de la première occurrence de àChercher |
 
 <!-- END REF-->
@@ -124,6 +117,6 @@ Dans l'exemple suivant, vous souhaitez recherchez toutes les instances d'une cha
 |  |  |
 | --- | --- |
 | Numéro de commande | 15 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

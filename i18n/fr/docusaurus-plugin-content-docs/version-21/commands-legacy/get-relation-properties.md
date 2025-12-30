@@ -48,6 +48,6 @@ Après l’exécution de la commande :
 |  |  |
 | --- | --- |
 | Numéro de commande | 686 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

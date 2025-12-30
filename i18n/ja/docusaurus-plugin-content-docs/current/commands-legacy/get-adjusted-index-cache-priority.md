@@ -5,11 +5,11 @@ slug: /commands/get-adjusted-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted index cache priority.Syntax-->**Get adjusted index cache priority** ( *aField* : Field ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted index cache priority.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | インデックスの優先度を取得したいフィールド |
+| aField | Field | &#8594; | インデックスの優先度を取得したいフィールド |
 | 戻り値 | Integer | &#8592; | インデックスのカレントの優先度値 |
 
 <!-- END REF-->
@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1427 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

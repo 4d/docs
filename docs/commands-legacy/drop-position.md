@@ -5,7 +5,7 @@ slug: /commands/drop-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Drop position.Syntax-->**Drop position** {( *columnNumber* )} : Integer<br/>**Drop position** {( *pictPosY* )} : Integer<!-- END REF-->
+<!--REF #_command_.Drop position.Syntax-->**Drop position** ( *columnNumber* : Integer ) : Integer<br/>**Drop position** ( *pictPosY* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Drop position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -98,6 +98,6 @@ The left (destination) list box object method contains the following code:
 |  |  |
 | --- | --- |
 | Command number | 608 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

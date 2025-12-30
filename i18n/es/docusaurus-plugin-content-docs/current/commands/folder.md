@@ -13,7 +13,7 @@ displayed_sidebar: docs
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; \* } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; \* } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #_command_.Folder.Params -->
 
@@ -22,7 +22,7 @@ displayed_sidebar: docs
 | path           | Text                                               | &#8594; | Ruta de la carpeta                                                    |
 | folderConstant | Integer                                            | &#8594; | Constante de la carpeta 4D                                            |
 | pathType       | Integer                                            | &#8594; | `fk posix path` (por defecto) o `fk platform path` |
-| \*             | operator                                           | &#8594; | \* para devolver la carpeta de la base local                          |
+| \*             | Operador                                           | &#8594; | \* para devolver la carpeta de la base local                          |
 | Resultado      | [4D.Folder](../API/FolderClass.md) | &#8592; | Nuevo objeto de carpeta                                               |
 
 <!-- END REF -->
@@ -78,9 +78,9 @@ Si el comando se llama desde un componente, pase el parámetro opcional `*` para
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1567                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1567 |
+| Hilo seguro       | sí   |
 
 

@@ -133,6 +133,6 @@ Pour pouvoir mettre à jour la liste associée au pop up géré par tableau, il 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1266 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

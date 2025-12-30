@@ -5,7 +5,7 @@ slug: /commands/default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *aTable* )<!-- END REF-->
+<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *aTable* : Table )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -81,6 +81,6 @@ Specifying the default table results in this code:
 |  |  |
 | --- | --- |
 | Command number | 46 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

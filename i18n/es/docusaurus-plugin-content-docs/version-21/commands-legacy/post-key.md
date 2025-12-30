@@ -41,6 +41,6 @@ Ver el ejemplo del comando [Process number](process-number.md "Process number").
 |  |  |
 | --- | --- |
 | Número de comando | 465 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

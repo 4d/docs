@@ -107,7 +107,7 @@ Vous souhaitez afficher des commandes d’un menu contextuel en fonction du type
 |  |  |
 | --- | --- |
 | Numéro de commande | 1286 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

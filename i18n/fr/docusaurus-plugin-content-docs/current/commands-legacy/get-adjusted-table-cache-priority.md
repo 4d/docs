@@ -5,11 +5,11 @@ slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *laTable* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *laTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table pour laquelle connaître la valeur de priorité des données scalaires |
+| laTable | Table | &#8594; | Table pour laquelle connaître la valeur de priorité des données scalaires |
 | Résultat | Integer | &#8592; | Valeur de priorité courante pour les champs scalaires |
 
 <!-- END REF-->
@@ -33,6 +33,6 @@ Les types de données scalaires incluent les types date/heure, numériques et al
 |  |  |
 | --- | --- |
 | Numéro de commande | 1426 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

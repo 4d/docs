@@ -5,13 +5,13 @@ slug: /commands/edit-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( {* ;} *objeto* {; *item*} )<!-- END REF-->
+<!--REF #_command_.EDIT ITEM.Syntax-->**EDIT ITEM** ( * ; *objeto* : Text {; *item* : Integer} )<br/>**EDIT ITEM** ( *objeto* : Field, Variable {; *item* : Integer} )<!-- END REF-->
 <!--REF #_command_.EDIT ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Tabela ou Variável (se * é omitido) |
-| item | Integer | &#8594;  | Número do item |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Tabela ou Variável (se * é omitido) |
+| item | Integer | &#8594; | Número do item |
 
 <!-- END REF-->
 
@@ -79,6 +79,6 @@ Dadas duas colunas em una list box onde os nomes das variáveis são “Array1�
 |  |  |
 | --- | --- |
 | Número do comando | 870 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

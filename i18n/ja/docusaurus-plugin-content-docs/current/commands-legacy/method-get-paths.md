@@ -5,16 +5,15 @@ slug: /commands/method-get-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*folderName* ;} *methodType* ; *arrPaths* {; *stamp*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*folderName* : Text ;} *methodType* : Integer ; *arrPaths* : Text array {; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| folderName | Text | &#8594;  | ホームページのフォルダー名 |
-| methodType | Integer | &#8594;  | 取得するメソッドタイプセレクター |
+| folderName | Text | &#8594; | ホームページのフォルダー名 |
+| methodType | Integer | &#8594; | 取得するメソッドタイプセレクター |
 | arrPaths | Text array | &#8592; | メソッドパスおよび名前の配列 |
-| stamp | Real | &#8594;  | スタンプの最小値 |
-| &#8592; | 新しい現在値 |
-| * | 演算子 | &#8594;  | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
+| stamp | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
+| * | 演算子 | &#8594; | 指定時 = コンポーネントで実行されたとき、コマンドはホストデータベースに適用される (コンポーネントのコンテキスト以外ではこの引数は無視されます) |
 
 <!-- END REF-->
 
@@ -90,6 +89,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1163 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

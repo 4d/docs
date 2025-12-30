@@ -32,6 +32,6 @@ Le nom par défaut est utilisé comme nom de fichier en cas d’exportation de l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1172 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

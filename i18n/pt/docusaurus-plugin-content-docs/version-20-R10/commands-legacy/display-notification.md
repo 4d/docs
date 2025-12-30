@@ -46,6 +46,6 @@ Sob Windows, é mostrada a janela da mensagem se não se detecta atividade na m�
 |  |  |
 | --- | --- |
 | Número do comando | 910 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/mod
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Mod.Syntax-->**Mod** ( *número1* ; *número2* ) : Real<!-- END REF-->
+<!--REF #_command_.Mod.Syntax-->**Mod** ( *número1* : Integer ; *número2* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Mod.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| número1 | Integer | &#8594;  | Número a dividir |
-| número2 | Integer | &#8594;  | Número divisor |
+| número1 | Integer | &#8594; | Número a dividir |
+| número2 | Integer | &#8594; | Número divisor |
 | Resultado | Real | &#8592; | Devuelve el resto de la división |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ El siguiente ejemplo ilustra el funcionamiento de Mod con diferentes argumentos.
 |  |  |
 | --- | --- |
 | Número de comando | 98 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

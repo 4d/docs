@@ -5,15 +5,15 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}{; *})<br/>**SELECTION TO ARRAY** {( *laTable* ; *tableau* {; *leChamp* ; *tableau* {; *leChamp2* ; *tableau2* ; ... ; *leChampN* ; *tableauN*}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}{; *})<br/>**SELECTION TO ARRAY** ( *laTable* : Champ, Table ; *tableau* : Array {; *leChamp* : Champ, Table ; *tableau* : Array {; ...(*leChamp* : Champ, Table, *tableau* : Array)}}{; *}})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leChamp &#124; laTable | Champ, Table | &#8594;  | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
+| leChamp &#124; laTable | Champ, Table | &#8594; | Champ à récupérer dans le tableau ou Table dont les numéros d'enregistrements sont à récupérer dans le tableau |
 | tableau | Array | &#8592; | Tableau recevant les valeurs des champs ou les numéros d'enregistrements |
-| leField | Field | &#8594;  | Champ à récupérer dans le tableau |
+| leField | Field | &#8594; | Champ à récupérer dans le tableau |
 | tableau | Array | &#8592; | Tableau recevant les valeurs du champ |
-| * | Opérateur | &#8594;  | Attente d’exécution |
+| * | Opérateur | &#8594; | Attente d’exécution |
 
 <!-- END REF-->
 
@@ -83,6 +83,6 @@ Le même exemple peut être écrit :
 |  |  |
 | --- | --- |
 | Numéro de commande | 260 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

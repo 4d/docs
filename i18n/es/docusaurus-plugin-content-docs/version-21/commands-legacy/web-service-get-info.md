@@ -36,6 +36,6 @@ Se devuelve una cadena vacía cuando no hay información disponible, en particul
 |  |  |
 | --- | --- |
 | Número de comando | 780 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

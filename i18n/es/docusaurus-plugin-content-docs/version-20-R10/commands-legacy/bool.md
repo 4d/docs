@@ -53,6 +53,6 @@ Selecciona un valor dependiendo del contenido de un atributo de campo de objeto,
 |  |  |
 | --- | --- |
 | Número de comando | 1537 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

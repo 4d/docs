@@ -5,7 +5,7 @@ slug: /commands/blob-to-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* )<!-- END REF-->
+<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 850 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -59,6 +59,6 @@ Depois pode arrastar a janela clicando em qualquer das margens.
 |  |  |
 | --- | --- |
 | Número do comando | 452 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

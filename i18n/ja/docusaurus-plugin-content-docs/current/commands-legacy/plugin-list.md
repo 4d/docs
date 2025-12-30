@@ -5,7 +5,7 @@ slug: /commands/plugin-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *numbersArray* ; *namesArray* )<!-- END REF-->
+<!--REF #_command_.PLUGIN LIST.Syntax-->**PLUGIN LIST** ( *numbersArray* : Integer array ; *namesArray* : Text array )<!-- END REF-->
 <!--REF #_command_.PLUGIN LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ PLUGIN LISTは、4Dに統合されたプラグイン (例: 4D Chart) やサー�
 |  |  |
 | --- | --- |
 | コマンド番号 | 847 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

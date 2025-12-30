@@ -56,6 +56,6 @@ El siguiente ejemplo crea un BLOB de 16K lleno de 0xFF:
 |  |  |
 | --- | --- |
 | Número de comando | 606 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

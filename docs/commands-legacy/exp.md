@@ -5,7 +5,7 @@ slug: /commands/exp
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Exp.Syntax-->**Exp** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Exp.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ The following example assigns the exponential of 1 to *vrE* (the log of *vrE* is
 |  |  |
 | --- | --- |
 | Command number | 21 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

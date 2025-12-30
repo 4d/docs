@@ -5,12 +5,12 @@ slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get type** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
 | 戻り値 | Integer | &#8592; | オブジェクトのタイプ |
 
 <!-- END REF-->
@@ -100,6 +100,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1300 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

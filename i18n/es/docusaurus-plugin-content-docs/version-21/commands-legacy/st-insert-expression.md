@@ -92,7 +92,7 @@ Desea reemplazar el texto seleccionado con el resultado de un método proyecto:
 |  |  |
 | --- | --- |
 | Número de comando | 1281 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

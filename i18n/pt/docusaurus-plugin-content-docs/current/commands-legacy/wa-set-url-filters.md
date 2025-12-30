@@ -5,14 +5,14 @@ slug: /commands/wa-set-url-filters
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( {* ;} *objeto* ; *arrFiltro* ; *permitirArrRecusar* )<!-- END REF-->
+<!--REF #_command_.WA SET URL FILTERS.Syntax-->**WA SET URL FILTERS** ( * ; *objeto* : Text ; *arrFiltro* : Text array ; *permitirArrRecusar* : Boolean array )<br/>**WA SET URL FILTERS** ( *objeto* : Field, Variable ; *arrFiltro* : Text array ; *permitirArrRecusar* : Boolean array )<!-- END REF-->
 <!--REF #_command_.WA SET URL FILTERS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| arrFiltro | Text array | &#8594;  | Array filtros |
-| permitirArrRecusar | Boolean array | &#8594;  | Array autorizar- recusar |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| arrFiltro | Text array | &#8594; | Array filtros |
+| permitirArrRecusar | Boolean array | &#8594; | Array autorizar- recusar |
 
 <!-- END REF-->
 
@@ -145,6 +145,6 @@ Imagine que deseja negar o acesso a endereços IP específicos:
 |  |  |
 | --- | --- |
 | Número do comando | 1030 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/resource-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resTipo* ; *resNum* ; *resNomes* {; *resArquivo*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resTipo* : Text ; *resNum* : Integer array ; *resNomes* : Text array {; *resArquivo* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resTipo | Text | &#8594;  | Tipo de resource de 4 caracteres |
+| resTipo | Text | &#8594; | Tipo de resource de 4 caracteres |
 | resNum | Integer array | &#8592; | Nº de resources para recursos desse tipo |
 | resNomes | Text array | &#8592; | Nomes de resouces para recursos desse tipo |
-| resArquivo | Time | &#8594;  | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
+| resArquivo | Time | &#8594; | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
 
 <!-- END REF-->
 
@@ -75,6 +75,6 @@ O exemplo a seguir copia os recursos imagem presentes em todos os arquivos de re
 |  |  |
 | --- | --- |
 | Número do comando | 500 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/set-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* ; *menuItem* ; *itemText* {; *process*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer ; *itemText* : Text {; *process* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ If you omit the *process* parameter, SET MENU ITEM applies to the menu bar for t
 |  |  |
 | --- | --- |
 | Command number | 348 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

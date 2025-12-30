@@ -5,11 +5,11 @@ slug: /commands/sql-load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** {( *numReg* )}<!-- END REF-->
+<!--REF #_command_.SQL LOAD RECORD.Syntax-->**SQL LOAD RECORD** ({ *numReg* : Integer })<!-- END REF-->
 <!--REF #_command_.SQL LOAD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numReg | Integer | &#8594;  | Número de registros a carregar |
+| numReg | Integer | &#8594; | Número de registros a carregar |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ Se o comando tiver sido executado corretamente, a variável Sistema OK retorna 1
 |  |  |
 | --- | --- |
 | Número do comando | 822 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

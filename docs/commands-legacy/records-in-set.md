@@ -5,7 +5,7 @@ slug: /commands/records-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* ) : Integer<!-- END REF-->
+<!--REF #_command_.Records in set.Syntax-->**Records in set** ( *set* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in set.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ The following example displays an alert telling what percentage of the customers
 |  |  |
 | --- | --- |
 | Command number | 195 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

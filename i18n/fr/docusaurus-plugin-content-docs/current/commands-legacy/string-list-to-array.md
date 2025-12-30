@@ -5,13 +5,13 @@ slug: /commands/string-list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resNum* ; *tabChaînes* {; *resFichier*} )<!-- END REF-->
+<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resNum* : Integer ; *tabChaînes* : Text array {; *resFichier* : Time} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
+| resNum | Integer | &#8594; | Numéro de ressource ou Attribut 'id' de l'élément 'group' (XLIFF) |
 | tabChaînes | Text array | &#8592; | Chaînes de la ressource STR# ou Chaînes de l'élément 'group' (XLIFF) |
-| resFichier | Time | &#8594;  | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
+| resFichier | Time | &#8594; | Numéro de référence de fichier de ressources Si omis : tous les fichiers XLIFF ou les fichiers de ressources ouverts |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ La variable système OK prend la valeur 1 si la ressource est trouvée, sinon el
 |  |  |
 | --- | --- |
 | Numéro de commande | 511 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

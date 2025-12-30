@@ -47,7 +47,7 @@ Inserción de una aserción en la evaluación de una expresión:
 |  |  |
 | --- | --- |
 | Número de comando | 1132 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

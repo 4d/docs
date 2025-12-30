@@ -57,6 +57,6 @@ Mac OS
 |  |  |
 | --- | --- |
 | Número de comando | 454 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

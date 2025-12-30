@@ -5,13 +5,13 @@ slug: /commands/call-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *ventana* ; *metodo* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL FORM.Syntax-->**CALL FORM** ( *ventana* : Integer ; *metodo* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL FORM.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana |
-| metodo | Object, Text | &#8594;  | Nombre del método proyecto a llamar |
-| param | Expression | &#8594;  | Parámetros pasados al método |
+| ventana | Integer | &#8594; | Número de referencia de la ventana |
+| metodo | Object, Text | &#8594; | Nombre del método proyecto a llamar |
+| param | Expression | &#8594; | Parámetros pasados al método |
 
 <!-- END REF-->
 
@@ -107,6 +107,6 @@ Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevament
 |  |  |
 | --- | --- |
 | Número de comando | 1391 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

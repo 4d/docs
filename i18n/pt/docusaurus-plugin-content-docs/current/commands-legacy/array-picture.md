@@ -5,13 +5,13 @@ slug: /commands/array-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nomeArray* ; *tamanho* {; *tamanho2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY PICTURE.Syntax-->**ARRAY PICTURE** ( *nomeArray* : Array ; *tamanho* : Integer {; *tamanho2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArray | Array | &#8594;  | Nome do array |
-| tamanho | Integer | &#8594;  | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
-| tamanho2 | Integer | &#8594;  | Número de colunas no array de duas dimensões |
+| nomeArray | Array | &#8594; | Nome do array |
+| tamanho | Integer | &#8594; | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
+| tamanho2 | Integer | &#8594; | Número de colunas no array de duas dimensões |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Este exemplo cria um array de interprocesso de tipo [Imagem](# "Can be any Windo
 |  |  |
 | --- | --- |
 | Número do comando | 279 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

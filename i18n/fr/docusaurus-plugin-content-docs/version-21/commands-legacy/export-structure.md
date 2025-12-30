@@ -62,6 +62,6 @@ Vous voulez exporter la structure de la base courante au format html :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1311 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-collapse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( {* ;} *object* {; *recursive* {; *selector* {; *line* {; *column*}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *object* : Field, Variable {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ This example collapses the first level of the break rows of the selection in the
 |  |  |
 | --- | --- |
 | Command number | 1101 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

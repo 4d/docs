@@ -66,6 +66,6 @@ Usted quiere que se muestre el cursor ![](../assets/en/commands/pict2478692.en.p
 |  |  |
 | --- | --- |
 | Número de comando | 469 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

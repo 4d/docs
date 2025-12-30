@@ -37,6 +37,6 @@ Cet exemple permet d'afficher la valeur de Pi :
 |  |  |
 | --- | --- |
 | Numéro de commande | 20 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

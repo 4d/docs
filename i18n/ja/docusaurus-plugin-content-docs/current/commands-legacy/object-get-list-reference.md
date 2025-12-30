@@ -5,13 +5,13 @@ slug: /commands/object-get-list-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( {* ;} *object* {; *listType*} ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get list reference.Syntax-->**OBJECT Get list reference** ( * ; *object* : Text {; *listType* : Integer} ) : Integer<br/>**OBJECT Get list reference** ( *object* : Field, Variable {; *listType* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get list reference.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| listType | Integer | &#8594;  | リストの種類:選択リスト、指定リスト、除外リスト |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、 省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| listType | Integer | &#8594; | リストの種類:選択リスト、指定リスト、除外リスト |
 | 戻り値 | Integer | &#8592; | リストの参照番号 |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1267 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

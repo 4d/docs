@@ -40,6 +40,6 @@ Pass the code of the option to get in the *option* parameter. The command return
 |  |  |
 | --- | --- |
 | Command number | 1290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

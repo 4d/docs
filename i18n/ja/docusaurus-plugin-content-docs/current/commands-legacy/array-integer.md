@@ -5,13 +5,13 @@ slug: /commands/array-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY INTEGER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| arrayName | Array | &#8594;  | 配列名 |
-| size | Integer | &#8594;  | 配列の要素数、またはsize2を指定した場合は配列の行数 |
-| size2 | Integer | &#8594;  | 2次元配列の列数 |
+| arrayName | Array | &#8594; | 配列名 |
+| size | Integer | &#8594; | 配列の要素数、またはsize2を指定した場合は配列の行数 |
+| size2 | Integer | &#8594; | 2次元配列の列数 |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ ARRAY INTEGERを既存の配列に適用する場合、
 |  |  |
 | --- | --- |
 | コマンド番号 | 220 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

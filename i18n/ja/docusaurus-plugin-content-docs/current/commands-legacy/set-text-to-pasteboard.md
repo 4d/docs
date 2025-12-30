@@ -5,11 +5,11 @@ slug: /commands/set-text-to-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *text* )<!-- END REF-->
+<!--REF #_command_.SET TEXT TO PASTEBOARD.Syntax-->**SET TEXT TO PASTEBOARD** ( *text* : Text )<!-- END REF-->
 <!--REF #_command_.SET TEXT TO PASTEBOARD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | Text | &#8594;  | ペーストボードに置くテキスト |
+| text | Text | &#8594; | ペーストボードに置くテキスト |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 523 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

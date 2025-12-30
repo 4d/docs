@@ -5,13 +5,13 @@ slug: /commands/object-set-data-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( {* ;} *objet* ; *sourceDonnées* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET DATA SOURCE.Syntax-->**OBJECT SET DATA SOURCE** ( * ; *objet* : Text ; *sourceDonnées* : Pointer )<br/>**OBJECT SET DATA SOURCE** ( *objet* : Field, Variable ; *sourceDonnées* : Pointer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET DATA SOURCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| sourceDonnées | Pointer | &#8594;  | Pointeur vers la nouvelle source de données de l’objet |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| sourceDonnées | Pointer | &#8594; | Pointeur vers la nouvelle source de données de l’objet |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ Modification de la source de données d’une zone de saisie :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1264 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

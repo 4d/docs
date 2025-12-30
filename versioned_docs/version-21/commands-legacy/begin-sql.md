@@ -51,6 +51,6 @@ Note that the 4D *Debugger* will evaluate the SQL code line by line. In certain 
 |  |  |
 | --- | --- |
 | Command number | 948 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

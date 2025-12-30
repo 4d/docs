@@ -130,6 +130,6 @@ O documento resultante conterá:
 |  |  |
 | --- | --- |
 | Número do comando | 1190 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

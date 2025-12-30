@@ -5,13 +5,13 @@ slug: /commands/union
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNION.Syntax-->**UNION** ( *conjunto1* ; *conjunto2* ; *conjuntoResultado* )<!-- END REF-->
+<!--REF #_command_.UNION.Syntax-->**UNION** ( *conjunto1* : Text ; *conjunto2* : Text ; *conjuntoResultado* : Text )<!-- END REF-->
 <!--REF #_command_.UNION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| conjunto1 | Text | &#8594;  | Primeiro conjunto |
-| conjunto2 | Text | &#8594;  | Segundo conjunto |
-| conjuntoResultado | Text | &#8594;  | Conjunto Resultado |
+| conjunto1 | Text | &#8594; | Primeiro conjunto |
+| conjunto2 | Text | &#8594; | Segundo conjunto |
+| conjuntoResultado | Text | &#8594; | Conjunto Resultado |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ Este exemplo adiciona registros ao conjunto de melhores clientes. Os registros s
 |  |  |
 | --- | --- |
 | Número do comando | 120 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

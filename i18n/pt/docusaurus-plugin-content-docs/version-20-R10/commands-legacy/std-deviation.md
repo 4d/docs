@@ -64,6 +64,6 @@ Este exemplo obtém o desvio padrão de uma série de valores localizados num ar
 |  |  |
 | --- | --- |
 | Número do comando | 26 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

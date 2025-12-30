@@ -5,14 +5,14 @@ slug: /commands/st-set-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( {* ;} *objeto* ; *opcao* ; *valor* {; *opcao2* ; *valor2* ; ... ; *opcaoN* ; *valorN*} )<!-- END REF-->
+<!--REF #_command_.ST SET OPTIONS.Syntax-->**ST SET OPTIONS** ( * ; *objeto* : Text ; *opcao* : Integer ; *valor* : Integer {; ...(*opcao* : Integer, *valor* : Integer)} )<br/>**ST SET OPTIONS** ( *objeto* : Field, Variable ; *opcao* : Integer ; *valor* : Integer {; ...(*opcao* : Integer, *valor* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST SET OPTIONS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
-| opcao | Integer | &#8594;  | Opção a definir |
-| valor | Integer | &#8594;  | Novo valor da opção |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome do objeto (se * for especificado) ou Campo ou variável (se * for omitido) |
+| opcao | Integer | &#8594; | Opção a definir |
+| valor | Integer | &#8594; | Novo valor da opção |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ O seguinte código permite mudar o modo de visualização da área:
 |  |  |
 | --- | --- |
 | Número do comando | 1289 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

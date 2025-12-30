@@ -5,7 +5,7 @@ slug: /commands/object-get-indicator-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get indicator type.Syntax-->**OBJECT Get indicator type** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get indicator type** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get indicator type.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ You can compare the value returned by the command with the following constants, 
 |  |  |
 | --- | --- |
 | Command number | 1247 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

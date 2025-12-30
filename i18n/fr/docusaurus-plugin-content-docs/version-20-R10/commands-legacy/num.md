@@ -88,6 +88,6 @@ Cet exemple compare les résultats obtenus en fonction du séparateur “courant
 |  |  |
 | --- | --- |
 | Numéro de commande | 11 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

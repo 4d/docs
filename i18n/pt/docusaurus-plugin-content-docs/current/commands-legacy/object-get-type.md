@@ -5,12 +5,12 @@ slug: /commands/object-get-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get type.Syntax-->**OBJECT Get type** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get type** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
-| object | any | &#8594;  | Nome de objeto (se especificado *) ou Variável (se omitido *) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é uma variável |
+| object | any | &#8594; | Nome de objeto (se especificado *) ou Variável (se omitido *) |
 | Resultado | Integer | &#8592; | Tipo de objeto |
 
 <!-- END REF-->
@@ -101,6 +101,6 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 |  |  |
 | --- | --- |
 | Número do comando | 1300 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -41,6 +41,6 @@ Pase en el parámetro *altura* la altura a definir. Por defecto, si omite el par
 |  |  |
 | --- | --- |
 | Número de comando | 1145 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

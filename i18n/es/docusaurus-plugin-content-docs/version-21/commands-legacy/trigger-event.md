@@ -59,6 +59,6 @@ Utilice el comando **Trigger event** para estructurar sus triggers de esta maner
 |  |  |
 | --- | --- |
 | Número de comando | 369 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

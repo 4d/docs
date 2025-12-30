@@ -42,7 +42,7 @@ A janela do depurador é normalmente apresentada na máquina onde o código é e
 :::note Notas
 
 - Se o servidor estiver a funcionar sem interface, não pode ser apresentada qualquer janela do depurador no servidor, pelo ser necessário utilizar o depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
-- Você também pode [anexar o depurador do Qodly Studio a um aplicativo do Servidor 4D](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) se você precisar depurar páginas Qodly em um ambiente implantado.
+- Você também pode [anexar o depurador do Qodly Studio a um aplicativo do Servidor 4D](https://developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server) se você precisar depurar páginas Qodly em um ambiente implantado.
 
 :::
 

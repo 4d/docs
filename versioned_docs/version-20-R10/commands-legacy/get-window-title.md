@@ -33,6 +33,6 @@ See example for the [SET WINDOW TITLE](set-window-title.md) command.
 |  |  |
 | --- | --- |
 | Command number | 450 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

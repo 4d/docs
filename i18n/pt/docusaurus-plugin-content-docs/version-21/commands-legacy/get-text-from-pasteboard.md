@@ -38,7 +38,7 @@ Se o texto for extraído corretamente, OK toma o valor 1; do contrário OK toma 
 |  |  |
 | --- | --- |
 | Número do comando | 524 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

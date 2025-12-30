@@ -5,13 +5,13 @@ slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *ruta* ; *tipoAtributo* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *ruta* : Text ; *tipoAtributo* : Integer {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text | &#8594;  | Ruta de método proyecto |
-| tipoAtributo | Integer | &#8594;  | Tipo de atributo a obtener |
-| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| ruta | Text | &#8594; | Ruta de método proyecto |
+| tipoAtributo | Integer | &#8594; | Tipo de atributo a obtener |
+| * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 | Resultado | Boolean | &#8592; | True = atributo seleccionado; de lo contrario False |
 
 <!-- END REF-->
@@ -45,6 +45,6 @@ El comando devuelve **True** si se selecciona un atributo y **False** si se dese
 |  |  |
 | --- | --- |
 | Número de comando | 1169 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

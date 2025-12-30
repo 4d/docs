@@ -5,7 +5,7 @@ slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *lingID* ; *lingArquivos* ; *lingNoms* )<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *lingID* : Integer array ; *lingArquivos* : Text array ; *lingNoms* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -57,6 +57,6 @@ Você coloca "fr-classic+reform1990.aff" e "fr-classic+reform1990.dic" como tamb
 |  |  |
 | --- | --- |
 | Número do comando | 1204 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -136,6 +136,6 @@ Utilizando un array imagen:
 |  |  |
 | --- | --- |
 | Número de comando | 1227 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

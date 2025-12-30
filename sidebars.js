@@ -34,6 +34,7 @@ module.exports =
       items: [
         "GettingStarted/creating",
         "Project/architecture",
+        "Develop/explorer",
         {
           type: "category",
           label: "Dababase structure",
@@ -2491,6 +2492,11 @@ module.exports =
           type: "doc",
           label: "Client/Server",
           id: "Desktop/clientServer"
+        },
+       {
+          type: "doc",
+          label: "Sessions",
+          id: "Desktop/desktop-sessions"
         },
         {
           type: "category",

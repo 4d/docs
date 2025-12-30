@@ -5,11 +5,11 @@ slug: /commands/get-system-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *formato* ; *valor* )<!-- END REF-->
+<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *formato* : Integer ; *valor* : Text )<!-- END REF-->
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| formato | Integer | &#8594;  | Formato de sistema a recuperar |
+| formato | Integer | &#8594; | Formato de sistema a recuperar |
 | valor | Text | &#8592; | Formato de sistema a recuperar |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ No parâmetro *formato*, passe o tipo do parâmetro do qual queira conhecer o va
 |  |  |
 | --- | --- |
 | Número do comando | 994 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

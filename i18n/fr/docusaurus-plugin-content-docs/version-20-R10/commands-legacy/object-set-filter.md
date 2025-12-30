@@ -61,6 +61,6 @@ L'exemple suivant autorise uniquement la saisie des lettres “a”, “b”, �
 |  |  |
 | --- | --- |
 | Numéro de commande | 235 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

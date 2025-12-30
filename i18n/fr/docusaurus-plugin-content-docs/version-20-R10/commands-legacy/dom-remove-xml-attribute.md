@@ -50,7 +50,7 @@ Le code suivant permet de supprimer le premier attribut "N=1" :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1084 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

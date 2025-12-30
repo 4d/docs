@@ -5,12 +5,12 @@ slug: /commands/object-get-focus-rectangle-invisible
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get focus rectangle invisible.Syntax-->**OBJECT Get focus rectangle invisible** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get focus rectangle invisible** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get focus rectangle invisible.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (* 指定時)変数またはフィールド (* 省略時) |
 | 戻り値 | Boolean | &#8592; | True = フォーカスの四角を隠すFalse = フォーカスの四角を表示する |
 
 <!-- END REF-->
@@ -34,6 +34,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1178 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

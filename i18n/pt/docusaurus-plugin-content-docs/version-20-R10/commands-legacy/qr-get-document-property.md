@@ -52,6 +52,6 @@ Se passa um valor incorreto do parâmetro *propriedade*, se gera o erro -9852.
 |  |  |
 | --- | --- |
 | Número do comando | 773 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

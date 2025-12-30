@@ -73,6 +73,6 @@ Usted quiere insertar los títulos en dos líneas:
 |  |  |
 | --- | --- |
 | Número de comando | 194 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

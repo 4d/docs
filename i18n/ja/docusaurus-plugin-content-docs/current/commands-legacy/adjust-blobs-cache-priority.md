@@ -5,12 +5,12 @@ slug: /commands/adjust-blobs-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *aTable* ; *priority* )<!-- END REF-->
+<!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Syntax-->**ADJUST BLOBS CACHE PRIORITY** ( *aTable* : Table ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST BLOBS CACHE PRIORITY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | "blob"データの優先度値を調節するテーブル |
-| priority | Integer | &#8594;  | テーブル内のBLOBのキャッシュ優先度値 |
+| aTable | Table | &#8594; | "blob"データの優先度値を調節するテーブル |
+| priority | Integer | &#8594; | テーブル内のBLOBのキャッシュ優先度値 |
 
 <!-- END REF-->
 
@@ -58,6 +58,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1431 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -97,7 +97,7 @@ Usted quiere ejecutar un método 4D cuando se hace clic en un enlace de usuario:
 |  |  |
 | --- | --- |
 | Número de comando | 1287 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

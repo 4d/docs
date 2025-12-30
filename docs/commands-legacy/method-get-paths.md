@@ -5,15 +5,14 @@ slug: /commands/method-get-paths
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*folderName* ;} *methodType* ; *arrPaths* {; *stamp*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS.Syntax-->**METHOD GET PATHS** ( {*folderName* : Text ;} *methodType* : Integer ; *arrPaths* : Text array {; *stamp* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | folderName | Text | &#8594;  | Name of Home page folder |
 | methodType | Integer | &#8594;  | Selector of method type to get |
 | arrPaths | Text array | &#8592; | Array of method paths and names |
-| stamp | Real | &#8594;  | Minimum value of stamp |
-| &#8592; | New current value |
+| stamp | Real | &#8596;  | *in:* Minimum value of stamp<br/>*out:* New current value  |
 | * | Operator | &#8594;  | If passed = command applies to host database when executed from a component (parameter ignored outside of this context) |
 
 <!-- END REF-->
@@ -90,6 +89,6 @@ Refer to the example of the [METHOD SET CODE](method-set-code.md) command.
 |  |  |
 | --- | --- |
 | Command number | 1163 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

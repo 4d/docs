@@ -5,13 +5,13 @@ slug: /commands/select-list-items-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *liste* ; *réfElément* {; *tabRéfs*} )<!-- END REF-->
+<!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Syntax-->**SELECT LIST ITEMS BY REFERENCE** ( *liste* : Integer ; *réfElément* : Integer {; *tabRéfs* : Integer array} )<!-- END REF-->
 <!--REF #_command_.SELECT LIST ITEMS BY REFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &#8594;  | Numéro de référence de liste |
-| réfElément | Integer | &#8594;  | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste |
-| tabRéfs | Integer array | &#8594;  | Tableau de numéros de référence d’éléments |
+| liste | Integer | &#8594; | Numéro de référence de liste |
+| réfElément | Integer | &#8594; | Numéro de référence d'élément ou 0 pour le dernier élément ajouté à la liste |
+| tabRéfs | Integer array | &#8594; | Tableau de numéros de référence d’éléments |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ En supposant que *hList* est une liste dont les éléments ont des numéros de r
 |  |  |
 | --- | --- |
 | Numéro de commande | 630 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

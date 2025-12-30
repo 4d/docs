@@ -5,11 +5,11 @@ slug: /commands/end-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.End selection.Syntax-->**End selection** {( *tabla* )} : Boolean<!-- END REF-->
+<!--REF #_command_.End selection.Syntax-->**End selection** ( *tabla* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.End selection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla en la cual probar si el puntero del registro está más allá del último registro seleccionado, o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla en la cual probar si el puntero del registro está más allá del último registro seleccionado, o Tabla por defecto, si se omite |
 | Resultado | Boolean | &#8592; | Si (TRUE) o No (FALSE) |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ Este método de formulario se utiliza durante la impresión de un informe. Se de
 |  |  |
 | --- | --- |
 | Número de comando | 36 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

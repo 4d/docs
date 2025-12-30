@@ -5,13 +5,13 @@ slug: /commands/max
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Max.Syntax-->**Max** ( *séries* {; *cheminAttribut*} ) : any<!-- END REF-->
+<!--REF #_command_.Max.Syntax-->**Max** ( *séries* : Field, Array {; *cheminAttribut* : Text} ) : any<!-- END REF-->
 <!--REF #_command_.Max.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| séries | Field, Array | &#8594;  | Valeurs desquelles dont vous voulez obtenir la plus élevée |
-| cheminAttribut | Text | &#8594;  | Chemin d'attribut duquel calculer la valeur maximale |
-| Résultat | Date, Number | &#8592; | Valeur la plus élevée de séries |
+| séries | Field, Array | &#8594; | Valeurs desquelles dont vous voulez obtenir la plus élevée |
+| cheminAttribut | Text | &#8594; | Chemin d'attribut duquel calculer la valeur maximale |
+| Résultat | Date, Real | &#8592; | Valeur la plus élevée de séries |
 
 <!-- END REF-->
 
@@ -77,7 +77,7 @@ Pour un exemple de calcul utilisant un attribut de champ objet, veuillez vous re
 |  |  |
 | --- | --- |
 | Numéro de commande | 3 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

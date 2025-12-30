@@ -5,16 +5,16 @@ slug: /commands/svg-find-element-ids-by-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagen* ; *x* ; *y* ; *ancho* ; *alto* ; *arrIDs* ) : Boolean<!-- END REF-->
+<!--REF #_command_.SVG Find element IDs by rect.Syntax-->**SVG Find element IDs by rect** ( {* ;} *objetoImagen* ; *x* : Integer ; *y* : Integer ; *ancho* : Integer ; *alto* : Integer ; *arrIDs* : Text array ) : Boolean<!-- END REF-->
 <!--REF #_command_.SVG Find element IDs by rect.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es un campo o una variable. |
-| objetoPicture | Picture | &#8594;  | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) |
-| x | Integer | &#8594;  | Coordenada horizontal de la esquina superior izquierda del rectángulo de selección. |
-| y | Integer | &#8594;  | Coordinada vertical de la esquina superior izquierda del rectángulo de selección |
-| ancho | Integer | &#8594;  | Ancho del rectángulo de selección |
-| alto | Integer | &#8594;  | Altura del rectángulo de selección |
+| * | Operador | &#8594; | Si se especifica, objetoImagen es un nombre de objeto (cadena). Si se omite, objetoImagen es un campo o una variable. |
+| objetoPicture | Picture | &#8594; | Nombre del objeto (si se especifica *) o Campo o Variable (si se omite *) |
+| x | Integer | &#8594; | Coordenada horizontal de la esquina superior izquierda del rectángulo de selección. |
+| y | Integer | &#8594; | Coordinada vertical de la esquina superior izquierda del rectángulo de selección |
+| ancho | Integer | &#8594; | Ancho del rectángulo de selección |
+| alto | Integer | &#8594; | Altura del rectángulo de selección |
 | arrIDs | Text array | &#8592; | IDs de los elementos cuyo rectángulo circundante está en intersección con el rectángulo de selección |
 | Resultado | Boolean | &#8592; | True = se encontró al menos un elemento |
 
@@ -47,6 +47,6 @@ Todos los elementos cuyo rectángulo circundante está en intersección con el r
 |  |  |
 | --- | --- |
 | Número de comando | 1109 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

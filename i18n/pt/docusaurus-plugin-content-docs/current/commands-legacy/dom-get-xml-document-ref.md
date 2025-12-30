@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-document-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *arrayNomesAtrib* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML document ref.Syntax-->**DOM Get XML document ref** ( *arrayNomesAtrib* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML document ref.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayNomesAtrib | Text | &#8594;  | Referência dos elementos existentes em árvore DOM |
+| arrayNomesAtrib | Text | &#8594; | Referência dos elementos existentes em árvore DOM |
 | Resultado | Text | &#8592; | Referência do primeiro elemento de uma árvore DOM (modo documento) |
 
 <!-- END REF-->
@@ -58,6 +58,6 @@ Neste exemplo, queremos encontrar a declaração DTD do documento XML:
 |  |  |
 | --- | --- |
 | Número do comando | 1088 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

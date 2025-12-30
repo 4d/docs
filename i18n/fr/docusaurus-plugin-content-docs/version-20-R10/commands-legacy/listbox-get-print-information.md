@@ -73,6 +73,6 @@ Impression d’au moins 500 lignes de la list box, sachant que certaines lignes 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1110 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/qr-execute-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* ; *comando* )<!-- END REF-->
+<!--REF #_command_.QR EXECUTE COMMAND.Syntax-->**QR EXECUTE COMMAND** ( *area* : Integer ; *comando* : Integer )<!-- END REF-->
 <!--REF #_command_.QR EXECUTE COMMAND.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| comando | Integer | &#8594;  | Comando de menú a ejecutar |
+| area | Integer | &#8594; | Referencia del área |
+| comando | Integer | &#8594; | Comando de menú a ejecutar |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ Si pasa un número de *comando* incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 791 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

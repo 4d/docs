@@ -40,7 +40,7 @@ O exemplo a seguir mostra todos os registros da tabela \[Pessoas\]:
 |  |  |
 | --- | --- |
 | Número do comando | 47 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

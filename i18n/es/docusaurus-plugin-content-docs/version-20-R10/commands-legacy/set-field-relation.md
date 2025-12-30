@@ -60,7 +60,7 @@ El siguiente código permite definir sólo las relaciones útiles como automáti
 |  |  |
 | --- | --- |
 | Número de comando | 919 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

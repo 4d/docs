@@ -5,7 +5,7 @@ slug: /commands/object-get-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font style.Syntax-->**OBJECT Get font style** ( * ; *object* : any ) : Integer<br/>**OBJECT Get font style** ( *object* : any ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font style.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ You can compare the value returned with the value of one or more of the followin
 |  |  |
 | --- | --- |
 | Command number | 1071 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

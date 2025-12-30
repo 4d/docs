@@ -44,6 +44,6 @@ You want to associate the **Validate** standard action with a button:
 |  |  |
 | --- | --- |
 | Command number | 1259 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

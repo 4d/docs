@@ -5,7 +5,7 @@ slug: /commands/sum-squares
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Sum squares.Syntax-->**Sum squares** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Sum squares.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -64,6 +64,6 @@ This example gets the sum of the squares of the values placed in an array:
 |  |  |
 | --- | --- |
 | Command number | 28 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

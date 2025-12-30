@@ -47,6 +47,6 @@ Reportez-vous à l'exemple de la commande GRAPHE.
 |  |  |
 | --- | --- |
 | Numéro de commande | 298 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

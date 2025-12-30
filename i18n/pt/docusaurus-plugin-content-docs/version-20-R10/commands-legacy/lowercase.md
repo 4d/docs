@@ -53,6 +53,6 @@ Este exemplo compara os resultados obtidos de acordo com se é passado ou não o
 |  |  |
 | --- | --- |
 | Número do comando | 14 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

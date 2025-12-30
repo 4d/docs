@@ -142,7 +142,7 @@ Después de añadir estos métodos a su aplicación, puede escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 532 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

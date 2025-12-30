@@ -5,11 +5,11 @@ slug: /commands/cos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cos.Syntax-->**Cos** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Cos.Syntax-->**Cos** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | コサインを求めるラジアン値 |
+| number | Real | &#8594; | コサインを求めるラジアン値 |
 | 戻り値 | Real | &#8592; | コサイン値 |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 18 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

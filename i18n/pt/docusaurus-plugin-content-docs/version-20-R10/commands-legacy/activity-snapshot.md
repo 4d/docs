@@ -111,6 +111,6 @@ Obtém arrays do tipo:
 |  |  |
 | --- | --- |
 | Número do comando | 1277 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

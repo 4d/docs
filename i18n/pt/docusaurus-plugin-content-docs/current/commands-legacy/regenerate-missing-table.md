@@ -5,11 +5,11 @@ slug: /commands/regenerate-missing-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *nomeTabela* )<!-- END REF-->
+<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *nomeTabela* : Text )<!-- END REF-->
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeTabela | Text | &#8594;  | Nome de tabela não encontrada a regenerar |
+| nomeTabela | Text | &#8594; | Nome de tabela não encontrada a regenerar |
 
 <!-- END REF-->
 
@@ -65,6 +65,6 @@ Este método regenera todas as tabelas não encontradas eventualmente presentes 
 |  |  |
 | --- | --- |
 | Número do comando | 1126 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

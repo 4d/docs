@@ -5,11 +5,11 @@ slug: /commands/quit-4d
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** {( *time* )}<!-- END REF-->
+<!--REF #_command_.QUIT 4D.Syntax-->**QUIT 4D** ({ *time* : Integer })<!-- END REF-->
 <!--REF #_command_.QUIT 4D.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| time | Integer | &#8594;  | サーバ終了までの時間 (秒) |
+| time | Integer | &#8594; | サーバ終了までの時間 (秒) |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 291 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/current-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current date.Syntax-->**Current date** {( * )} : Date<!-- END REF-->
+<!--REF #_command_.Current date.Syntax-->**Current date** ( * ) : Date<!-- END REF-->
 <!--REF #_command_.Current date.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -103,6 +103,6 @@ The following project method allows you to do so:
 |  |  |
 | --- | --- |
 | Command number | 33 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unField | Field | &#8594;  | Campo Muchos |
+| unField | Field | &#8594; | Campo Muchos |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ SAVE RELATED ONE no guardará un registro bloqueado. Cuando utilice este comando
 |  |  |
 | --- | --- |
 | Número de comando | 43 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

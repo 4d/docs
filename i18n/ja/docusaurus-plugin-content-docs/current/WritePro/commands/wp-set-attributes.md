@@ -4,16 +4,16 @@ title: WP SET ATTRIBUTES
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* ; *...attribName* ; *...attribValue* )<br/>**WP SET ATTRIBUTES** ( *targetObj* ; *attribObj* )<!-- END REF-->
+<!--REF #_command_.WP SET ATTRIBUTES.Syntax-->**WP SET ATTRIBUTES** ( *targetObj* : Object ; *...attribName* : Text ; *...attribValue* : any )<br/>**WP SET ATTRIBUTES** ( *targetObj* : Object ; *attribObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WP SET ATTRIBUTES.Params-->
 
-| 引数          | 型                                               |                             | 説明                                  |
-| ----------- | ----------------------------------------------- | --------------------------- | ----------------------------------- |
-| targetObj   | Object                                          | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
-| attribName  | Text                                            | &#8594; | 設定する属性名                             |
-| attribValue | Text, Number, Object, Collection, Picture, Date | &#8594; | 新しい属性の値                             |
-| attribObj   | Object                                          | &#8594; | 設定したい属性の名前とそれに対応する設定したい値を格納したオブジェクト |
+| 引数          | 型      |                             | 説明                                  |
+| ----------- | ------ | --------------------------- | ----------------------------------- |
+| targetObj   | Object | &#8594; | レンジまたは要素または4D Write Pro ドキュメント      |
+| attribName  | Text   | &#8594; | 設定する属性名                             |
+| attribValue | any    | &#8594; | 新しい属性の値                             |
+| attribObj   | Object | &#8594; | 設定したい属性の名前とそれに対応する設定したい値を格納したオブジェクト |
 
 <!-- END REF-->
 

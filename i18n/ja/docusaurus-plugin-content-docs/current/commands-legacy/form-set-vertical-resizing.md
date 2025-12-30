@@ -5,13 +5,13 @@ slug: /commands/form-set-vertical-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *resize* {; *minHeight* {; *maxHeight*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET VERTICAL RESIZING.Syntax-->**FORM SET VERTICAL RESIZING** ( *resize* : Boolean {; *minHeight* : Integer {; *maxHeight* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET VERTICAL RESIZING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resize | Boolean | &#8594;  | True: フォームを縦方向にリサイズ可 False: フォームを縦方向にリサイズ不可 |
-| minHeight | Integer | &#8594;  | 最小高さ (ピクセル) |
-| maxHeight | Integer | &#8594;  | 最大高さ (ピクセル) |
+| resize | Boolean | &#8594; | True: フォームを縦方向にリサイズ可 False: フォームを縦方向にリサイズ不可 |
+| minHeight | Integer | &#8594; | 最小高さ (ピクセル) |
+| maxHeight | Integer | &#8594; | 最大高さ (ピクセル) |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 893 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

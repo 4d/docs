@@ -5,7 +5,7 @@ slug: /commands/listbox-get-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get footer calculation.Syntax-->**LISTBOX Get footer calculation** ( * ; *object* : Text ) : Integer<br/>**LISTBOX Get footer calculation** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get footer calculation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ You can compare the value returned with the constants of the *Listbox Footer Cal
 |  |  |
 | --- | --- |
 | Command number | 1150 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

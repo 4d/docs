@@ -5,14 +5,14 @@ slug: /commands/blob-to-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *blob* ; *ordreOctet* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *blob* : Blob ; *ordreOctet* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB duquel obtenir la valeur entière |
-| ordreOctet | Integer | &#8594;  | 0 Ordre d'octets mode natif 1 Ordre d'octets Macintosh 2 Ordre d'octets PC |
-| offset | Variable | &#8596;  | Offset (en octets) dans le BLOB |
-| || | Nouvel offset après la lecture |
+| Blob | Blob | &#8594; | BLOB duquel obtenir la valeur entière |
+| ordreOctet | Integer | &#8594; | 0 Ordre d'octets mode natif 1 Ordre d'octets Macintosh 2 Ordre d'octets PC |
+| offset | Variable | &#8596; | Offset (en octets) dans le BLOB |
+|  |  |  | Nouvel offset après la lecture |
 | Résultat | Integer | &#8592; | Valeur entière (2 octets) |
 
 <!-- END REF-->
@@ -84,6 +84,6 @@ L'exemple suivant lit 20 valeurs entières d'un BLOB à partir de l'offset 0x200
 |  |  |
 | --- | --- |
 | Numéro de commande | 549 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

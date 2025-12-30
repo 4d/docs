@@ -5,12 +5,12 @@ slug: /commands/resize-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *width* ; *height* )<!-- END REF-->
+<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *width* : Integer ; *height* : Integer )<!-- END REF-->
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| width | Integer | &#8594;  | 現在のフォームウィンドウ幅に追加あるいは取り除く ピクセル数 |
-| height | Integer | &#8594;  | 現在のフォームウィンドウ高に追加あるいは取り除く ピクセル数 |
+| width | Integer | &#8594; | 現在のフォームウィンドウ幅に追加あるいは取り除く ピクセル数 |
+| height | Integer | &#8594; | 現在のフォームウィンドウ高に追加あるいは取り除く ピクセル数 |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 890 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

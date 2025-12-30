@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-entity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ENTITY.Syntax-->**SAX GET XML ENTITY** ( *document* ; *nom* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ENTITY.Syntax-->**SAX GET XML ENTITY** ( *document* : Time ; *nom* : Text ; *valeur* : Text )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ENTITY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | Référence du document ouvert |
+| document | Time | &#8594; | Référence du document ouvert |
 | nom | Text | &#8592; | Nom de l’entité |
 | valeur | Text | &#8592; | Valeur de l’entité |
 
@@ -54,7 +54,7 @@ Si la commande a été exécutée correctement, la variable système OK prend la
 |  |  |
 | --- | --- |
 | Numéro de commande | 879 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

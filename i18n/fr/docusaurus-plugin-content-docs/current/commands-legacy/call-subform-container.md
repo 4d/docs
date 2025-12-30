@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| événement | Integer | &#8594;  | Evénement à transmettre |
+| événement | Integer | &#8594; | Evénement à transmettre |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Cette commande doit être placée dans la méthode formulaire du sous-formulaire ou dans la méthode objet d’un des objets du sous-formulaire. L’événement sera reçu uniquement dans la méthode objet du conteneur du sous-formulaire. 
 
-Vous pouvez passer dans *événement* tout événement formulaire prédéfini de 4D (vous pouvez utiliser les constantes du thème *Evénements formulaire*) ou toute valeur correspondant à un événement personnalisé. Dans le premier cas, l’événement doit être coché pour le sous-formulaire. Dans le cas d’un événement personnalisé, il est conseillé de passer une valeur négative dans *événement* afin de ne pas risquer d’interférer avec des numéros d’événements existants ou à venir de 4D.
+Vous pouvez passer dans *événement* un des [événements formulaire 4D pris en charge par les sous-formulaires](../FormObjects/subform_overview.md#call-subform-container-command) ou toute valeur correspondant à un événement personnalisé. Dans le premier cas, l’événement doit être coché pour le sous-formulaire. Dans le cas d’un événement personnalisé, il est conseillé de passer une valeur négative dans *événement* afin de ne pas risquer d’interférer avec des numéros d’événements existants ou à venir de 4D.
 
 *Principe d’exécution de la commande* **CALL SUBFORM CONTAINER** *:*
 
@@ -35,6 +35,6 @@ Vous pouvez passer dans *événement* tout événement formulaire prédéfini de
 |  |  |
 | --- | --- |
 | Numéro de commande | 1086 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

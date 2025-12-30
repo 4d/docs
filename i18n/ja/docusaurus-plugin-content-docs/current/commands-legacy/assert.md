@@ -5,12 +5,12 @@ slug: /commands/assert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* {; *messageText*} )<!-- END REF-->
+<!--REF #_command_.ASSERT.Syntax-->**ASSERT** ( *boolExpression* : Boolean {; *messageText* : Text} )<!-- END REF-->
 <!--REF #_command_.ASSERT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| boolExpression | Boolean | &#8594;  | ブール式 |
-| messageText | Text | &#8594;  | エラーメッセージテキスト |
+| boolExpression | Boolean | &#8594; | ブール式 |
+| messageText | Text | &#8594; | エラーメッセージテキスト |
 
 <!-- END REF-->
 
@@ -61,7 +61,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1129 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

@@ -5,12 +5,12 @@ slug: /commands/qr-set-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *area* ; *tabla* )<!-- END REF-->
+<!--REF #_command_.QR SET REPORT TABLE.Syntax-->**QR SET REPORT TABLE** ( *area* : Integer ; *tabla* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET REPORT TABLE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| tabla | Integer | &#8594;  | Número de tabla |
+| area | Integer | &#8594; | Referencia del área |
+| tabla | Integer | &#8594; | Número de tabla |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ Si el parámetro *tabla* es incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 757 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

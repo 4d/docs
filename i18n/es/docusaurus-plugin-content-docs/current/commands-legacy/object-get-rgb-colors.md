@@ -5,12 +5,12 @@ slug: /commands/object-get-rgb-colors
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET RGB COLORS.Syntax-->**OBJECT GET RGB COLORS** ( {* ;} *objeto* ; *colorPrimerPlano* {; *colorFondo* {; *colorFondoAlt*}} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET RGB COLORS.Syntax-->**OBJECT GET RGB COLORS** ( * ; *objeto* : Text ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer}} )<br/>**OBJECT GET RGB COLORS** ( *objeto* : Field, Variable ; *colorPrimerPlano* : Text, Integer {; *colorFondo* : Text, Integer {; *colorFondoAlt* : Text, Integer}} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET RGB COLORS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variable o campo (si se omite *) |
 | colorPrimerPlano | Text, Integer | &#8592; | Valor del color RGB del primer plano |
 | colorFondo | Text, Integer | &#8592; | Valor del color RGB del fondo |
 | colorFondoAlt | Text, Integer | &#8592; | Valor del color RGB del fondo alterno |
@@ -41,6 +41,6 @@ Para obtener más información acerca del formato de los parámetros *colorPrime
 |  |  |
 | --- | --- |
 | Número de comando | 1074 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

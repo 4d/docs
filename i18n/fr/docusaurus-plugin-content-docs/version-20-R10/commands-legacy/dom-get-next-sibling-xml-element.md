@@ -67,7 +67,7 @@ Si la commande a été correctement exécutée et si l’élément analysé n’
 |  |  |
 | --- | --- |
 | Numéro de commande | 724 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

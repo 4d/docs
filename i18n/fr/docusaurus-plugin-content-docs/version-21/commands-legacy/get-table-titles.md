@@ -32,6 +32,6 @@ Dans les deux cas, la commande ne retourne pas les tables déclarées invisibles
 |  |  |
 | --- | --- |
 | Numéro de commande | 803 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

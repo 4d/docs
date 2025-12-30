@@ -5,12 +5,12 @@ slug: /commands/set-database-localization
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *codigoIdioma* {; *} )<!-- END REF-->
+<!--REF #_command_.SET DATABASE LOCALIZATION.Syntax-->**SET DATABASE LOCALIZATION** ( *codigoIdioma* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SET DATABASE LOCALIZATION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| codigoIdioma | Text | &#8594;  | Seletor de idioma |
-| * | Operador | &#8594;  | Escopo do comando |
+| codigoIdioma | Text | &#8594; | Seletor de idioma |
+| * | Operador | &#8594; | Escopo do comando |
 
 <!-- END REF-->
 
@@ -75,7 +75,7 @@ A interface do seu aplicativo usa a string estática ":xliff:shopping". Os arqui
 |  |  |
 | --- | --- |
 | Número do comando | 1104 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

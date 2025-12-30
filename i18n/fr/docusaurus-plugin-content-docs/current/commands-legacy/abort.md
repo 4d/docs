@@ -39,6 +39,6 @@ Bien que la commande **ABORT** soit destinée à une utilisation au sein d'une m
 |  |  |
 | --- | --- |
 | Numéro de commande | 156 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

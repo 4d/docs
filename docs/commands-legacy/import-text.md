@@ -5,7 +5,7 @@ slug: /commands/import-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*aTable* ;} *document* )<!-- END REF-->
+<!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*aTable* : Table ;} *document* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT TEXT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ OK is set to 1 if the import is successfully completed; otherwise, it is set to 
 |  |  |
 | --- | --- |
 | Command number | 168 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

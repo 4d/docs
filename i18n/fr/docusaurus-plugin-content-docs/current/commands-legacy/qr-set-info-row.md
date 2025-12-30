@@ -5,13 +5,13 @@ slug: /commands/qr-set-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *zone* ; *ligne* ; *cachée* )<!-- END REF-->
+<!--REF #_command_.QR SET INFO ROW.Syntax-->**QR SET INFO ROW** ( *zone* : Integer ; *ligne* : Integer ; *cachée* : Integer )<!-- END REF-->
 <!--REF #_command_.QR SET INFO ROW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| ligne | Integer | &#8594;  | Ligne |
-| cachée | Integer | &#8594;  | 0 = Visible, 1 = Cachée |
+| zone | Integer | &#8594; | Référence de la zone |
+| ligne | Integer | &#8594; | Ligne |
+| cachée | Integer | &#8594; | 0 = Visible, 1 = Cachée |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ L'instruction suivante masque le contenu de la ligne Détail :
 |  |  |
 | --- | --- |
 | Numéro de commande | 763 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

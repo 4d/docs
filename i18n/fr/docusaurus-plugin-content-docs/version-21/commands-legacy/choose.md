@@ -85,6 +85,6 @@ Ce code est strictement équivalent à :
 |  |  |
 | --- | --- |
 | Numéro de commande | 955 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

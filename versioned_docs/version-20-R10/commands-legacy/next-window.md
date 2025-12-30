@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 448 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

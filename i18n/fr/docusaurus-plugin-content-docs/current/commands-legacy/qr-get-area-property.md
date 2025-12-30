@@ -5,12 +5,12 @@ slug: /commands/qr-get-area-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *zone* ; *propriété* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get area property.Syntax-->**QR Get area property** ( *zone* : Integer ; *propriété* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get area property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| propriété | Integer | &#8594;  | Elément d'interface |
+| zone | Integer | &#8594; | Référence de la zone |
+| propriété | Integer | &#8594; | Elément d'interface |
 | Résultat | Integer | &#8592; | 1 = affiché, 0 = caché |
 
 <!-- END REF-->
@@ -40,7 +40,7 @@ Si le paramètre *propriété* est incorrect, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 795 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

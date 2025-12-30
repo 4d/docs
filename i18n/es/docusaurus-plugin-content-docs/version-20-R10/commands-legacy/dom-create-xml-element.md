@@ -161,7 +161,7 @@ Se genera un error cuando:
 |  |  |
 | --- | --- |
 | Número de comando | 865 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

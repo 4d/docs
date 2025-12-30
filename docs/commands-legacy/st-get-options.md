@@ -5,7 +5,7 @@ slug: /commands/st-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( {* ;} *object* ; *option* ; *value* {; *option2* ; *value2* ; ... ; *optionN* ; *valueN*} )<!-- END REF-->
+<!--REF #_command_.ST GET OPTIONS.Syntax-->**ST GET OPTIONS** ( * ; *object* : Text ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<br/>**ST GET OPTIONS** ( *object* : Field, Variable ; *option* : Integer ; *value* : Integer {; ...(*option* : Integer, *value* : Integer)} )<!-- END REF-->
 <!--REF #_command_.ST GET OPTIONS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ Pass the code of the option to get in the *option* parameter. The command return
 |  |  |
 | --- | --- |
 | Command number | 1290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/confirm
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* {; OK button title {; cancel button title}} )<!-- END REF-->
+<!--REF #_command_.CONFIRM.Syntax-->**CONFIRM** ( *message* : Text {; OK button title {; cancel button title}} )<!-- END REF-->
 <!--REF #_command_.CONFIRM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| message | Text | &#8594;  | 確認ダイアログボックスに表示するメッセージ |
-| OK button title | 文字 | &#8594;  | OKボタンのタイトル |
-| cancel button title | 文字 | &#8594;  | キャンセルボタンのタイトル |
+| message | Text | &#8594; | 確認ダイアログボックスに表示するメッセージ |
+| OK button title | 文字 | &#8594; | OKボタンのタイトル |
+| cancel button title | 文字 | &#8594; | キャンセルボタンのタイトル |
 
 <!-- END REF-->
 
@@ -96,7 +96,7 @@ Windowsにおいて以下のような確認ダイアログボックスを表示�
 |  |  |
 | --- | --- |
 | コマンド番号 | 162 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

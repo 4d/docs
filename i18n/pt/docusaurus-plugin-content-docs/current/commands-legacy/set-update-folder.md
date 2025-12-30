@@ -5,12 +5,12 @@ slug: /commands/set-update-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *viaPasta* {; *errosDiscretos*} )<!-- END REF-->
+<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *viaPasta* : Text {; *errosDiscretos* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| viaPasta | Text | &#8594;  | Via de acesso da pasta (pacote sob macOS) que contém a aplicação atualizada |
-| errosDiscretos | Boolean | &#8594;  | False (por padrão) = mostrar mensagens de erro, True = não reportar eles |
+| viaPasta | Text | &#8594; | Via de acesso da pasta (pacote sob macOS) que contém a aplicação atualizada |
+| errosDiscretos | Boolean | &#8594; | False (por padrão) = mostrar mensagens de erro, True = não reportar eles |
 
 <!-- END REF-->
 
@@ -59,7 +59,7 @@ Você criou uma pasta "MyUpdates" em seu disco, na qual localizou uma nova vers�
 |  |  |
 | --- | --- |
 | Número do comando | 1291 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

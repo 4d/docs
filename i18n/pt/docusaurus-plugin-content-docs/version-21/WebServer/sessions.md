@@ -63,19 +63,13 @@ O nome do cookie pode ser obtido usando a propriedade [`.sessionCookieName`](API
 
 :::note
 
-La creación de una sesión web para una petición REST puede requerir que una licencia esté disponible, consulte [esta página](../REST/authUsers.md).
+Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
 
 :::
 
 The `Session` object of the current session can then be accessed through the [`Session`](commands/session.md) command in the code of any web processes.
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
-
-:::info
-
-Os processos Web geralmente não terminam, eles são reciclados em um pool para aumentar a eficiência. Quando um processo termina de executar uma solicitação, ele é colocado de novo no pool e disponibilizado para a próxima solicitação. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](../commands-legacy/clear-variable.md) for example). Esta limpeza é necessária para todas as informações relacionadas ao processo, como uma referência a um arquivo aberto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
-
-:::
 
 ## Armazenar e compartilhar informações de sessão
 

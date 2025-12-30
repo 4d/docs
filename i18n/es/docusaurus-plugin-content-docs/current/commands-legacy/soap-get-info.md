@@ -5,11 +5,11 @@ slug: /commands/soap-get-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP Get info.Syntax-->**SOAP get info** ( *numInfo* ) : Text<!-- END REF-->
+<!--REF #_command_.SOAP Get info.Syntax-->**SOAP get info** ( *numInfo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SOAP Get info.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numInfo | Integer | &#8594;  | Número de tipo de información SOAP a obtener |
+| numInfo | Integer | &#8594; | Número de tipo de información SOAP a obtener |
 | Resultado | Text | &#8592; | Información SOAP |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ Pase en el parámetro *numInfo* el número del tipo de información SOAP que qui
 |  |  |
 | --- | --- |
 | Número de comando | 784 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

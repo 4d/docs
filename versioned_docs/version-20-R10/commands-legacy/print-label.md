@@ -112,7 +112,7 @@ The following example lets the user query the \[People\] table, and then display
 |  |  |
 | --- | --- |
 | Command number | 39 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

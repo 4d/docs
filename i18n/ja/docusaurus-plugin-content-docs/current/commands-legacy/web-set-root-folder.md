@@ -5,11 +5,11 @@ slug: /commands/web-set-root-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *rootFolder* )<!-- END REF-->
+<!--REF #_command_.WEB SET ROOT FOLDER.Syntax-->**WEB SET ROOT FOLDER** ( *rootFolder* : Text )<!-- END REF-->
 <!--REF #_command_.WEB SET ROOT FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| rootFolder | Text | &#8594;  | Webサーバルートフォルダのパス名 |
+| rootFolder | Text | &#8594; | Webサーバルートフォルダのパス名 |
 
 <!-- END REF-->
 
@@ -43,7 +43,7 @@ HTMLシンタックス (URLタイプ) 、またはシステムシンタックス
 |  |  |
 | --- | --- |
 | コマンド番号 | 634 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/spell-get-dictionary-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* ; *langFiles* ; *langNames* )<!-- END REF-->
+<!--REF #_command_.SPELL GET DICTIONARY LIST.Syntax-->**SPELL GET DICTIONARY LIST** ( *langID* : Integer array ; *langFiles* : Text array ; *langNames* : Text array )<!-- END REF-->
 <!--REF #_command_.SPELL GET DICTIONARY LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| langID | Array integer | &#8592; | Unique ID of languages |
+| langID | Integer array | &#8592; | Unique ID of languages |
 | langFiles | Text array | &#8592; | Names of language files installed |
 | langNames | Text array | &#8592; | Local names of languages |
 
@@ -57,6 +57,6 @@ You put "fr-classic+reform1990.aff" and "fr-classic+reform1990.dic" as well as "
 |  |  |
 | --- | --- |
 | Command number | 1204 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

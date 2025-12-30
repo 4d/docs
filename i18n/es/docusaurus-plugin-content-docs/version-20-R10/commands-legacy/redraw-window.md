@@ -30,6 +30,6 @@ Si omite el parámetro *ventana*, REDRAW WINDOW aplica a la ventana del primer p
 |  |  |
 | --- | --- |
 | Número de comando | 456 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

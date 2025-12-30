@@ -5,7 +5,7 @@ slug: /commands/get-group-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *nomGrupos* ; *numGrupos* )<!-- END REF-->
+<!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *nomGrupos* : Text array ; *numGrupos* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET GROUP LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ Se não tiver privilégios de acesso para chamar ao comando GET GROUP LIST ou se
 |  |  |
 | --- | --- |
 | Número do comando | 610 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

@@ -68,6 +68,6 @@ Tenha em conta >= permite cobrir todos os casos. De fato, a função devolve um 
 |  |  |
 | --- | --- |
 | Número do comando | 653 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

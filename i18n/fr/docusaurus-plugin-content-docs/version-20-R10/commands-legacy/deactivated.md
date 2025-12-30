@@ -31,6 +31,6 @@ Si vous voulez que le cycle d'exécution **Deactivated** soit généré, vérifi
 |  |  |
 | --- | --- |
 | Numéro de commande | 347 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

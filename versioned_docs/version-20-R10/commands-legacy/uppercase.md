@@ -43,6 +43,6 @@ See the example for [Lowercase](lowercase.md).
 |  |  |
 | --- | --- |
 | Command number | 13 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -40,6 +40,6 @@ Passe o código da opção a ler no parâmetro *opcao*. O comando devolve em *va
 |  |  |
 | --- | --- |
 | Número do comando | 1290 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

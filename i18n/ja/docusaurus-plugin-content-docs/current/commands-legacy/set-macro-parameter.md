@@ -5,12 +5,12 @@ slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* ; *textParam* )<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* : Integer ; *textParam* : Text )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | 使用するセレクション |
-| textParam | Text | &#8594;  | 送られたテキスト |
+| selector | Integer | &#8594; | 使用するセレクション |
+| textParam | Text | &#8594; | 送られたテキスト |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 998 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

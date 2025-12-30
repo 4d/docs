@@ -5,13 +5,13 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* {; *fileType*}{; *mode*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *document* : Text {; *fileType* : Text}{; *mode* : Integer} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Text | &#8594;  | ドキュメント名、または ドキュメントへの完全なパス名、または 空の文字列の場合、標準のファイルダイアログボックス表示 |
-| fileType | Text | &#8594;  | 表示されるドキュメントタイプのリスト、または ドキュメントを表示しない"*" |
-| mode | Integer | &#8594;  | ドキュメントを開くモード |
+| document | Text | &#8594; | ドキュメント名、または ドキュメントへの完全なパス名、または 空の文字列の場合、標準のファイルダイアログボックス表示 |
+| fileType | Text | &#8594; | 表示されるドキュメントタイプのリスト、または ドキュメントを表示しない"*" |
+| mode | Integer | &#8594; | ドキュメントを開くモード |
 | 戻り値 | Time | &#8592; | ドキュメント参照番号 |
 
 <!-- END REF-->
@@ -92,7 +92,7 @@ Open documentを3のモードで呼ぶと、関数は?00:00:00? (ドキュメン
 |  |  |
 | --- | --- |
 | コマンド番号 | 264 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document、error |
 
 

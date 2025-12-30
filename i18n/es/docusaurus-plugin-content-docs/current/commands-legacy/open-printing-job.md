@@ -42,7 +42,7 @@ La variable sistema OK toma el valor 1 si el trabajo de impresión se ha abierto
 |  |  |
 | --- | --- |
 | Número de comando | 995 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

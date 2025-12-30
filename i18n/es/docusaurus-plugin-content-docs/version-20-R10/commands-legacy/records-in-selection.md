@@ -39,6 +39,6 @@ El siguiente ejemplo muestra una técnica de bucle actualmente utilizada para mo
 |  |  |
 | --- | --- |
 | Número de comando | 76 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

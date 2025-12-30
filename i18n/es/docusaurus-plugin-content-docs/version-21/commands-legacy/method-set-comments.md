@@ -67,6 +67,6 @@ Añadir una fecha de modificación a un comentario de trigger existente:
 |  |  |
 | --- | --- |
 | Número de comando | 1193 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -77,7 +77,7 @@ Creación de la subcarpeta "\\Febrero\\" en la carpeta existente "C:\\Archives\\
 |  |  |
 | --- | --- |
 | Número de comando | 475 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

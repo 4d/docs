@@ -5,7 +5,7 @@ slug: /commands/get-serial-port-mapping
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* ; *nameArray* )<!-- END REF-->
+<!--REF #_command_.GET SERIAL PORT MAPPING.Syntax-->**GET SERIAL PORT MAPPING** ( *numArray* : Integer array ; *nameArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET SERIAL PORT MAPPING.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ Mac OS Xでは、USBシリアルアダプターの使用時に、OSがポート�
 |  |  |
 | --- | --- |
 | コマンド番号 | 909 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

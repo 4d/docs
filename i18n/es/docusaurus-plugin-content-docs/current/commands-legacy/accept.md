@@ -41,7 +41,7 @@ El comando **ACCEPT** se permite en modo sin interfaz, en el contexto de las ár
 |  |  |
 | --- | --- |
 | Número de comando | 269 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

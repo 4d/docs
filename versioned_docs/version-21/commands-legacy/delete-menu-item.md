@@ -39,7 +39,7 @@ If you omit the *process* parameter, **DELETE MENU ITEM** applies to the menu ba
 |  |  |
 | --- | --- |
 | Command number | 413 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

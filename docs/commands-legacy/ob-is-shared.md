@@ -5,7 +5,7 @@ slug: /commands/ob-is-shared
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is shared.Syntax-->**OB Is shared** ( *toCheck* : Object, Collection ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is shared.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -26,6 +26,6 @@ This command returns **True** if you pass a shareable entity selection in *toChe
 |  |  |
 | --- | --- |
 | Command number | 1759 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

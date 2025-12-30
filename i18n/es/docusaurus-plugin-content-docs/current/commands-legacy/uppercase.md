@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Uppercase.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laText | Text | &#8594;  | Cadena a convertir en mayúsculas |
-| * | Operador | &#8594;  | Si se pasa: conservar los acentos |
+| laText | Text | &#8594; | Cadena a convertir en mayúsculas |
+| * | Operador | &#8594; | Si se pasa: conservar los acentos |
 | Resultado | Text | &#8592; | Cadena en mayúsculas |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ Ver el ejemplo para [Lowercase](lowercase.md "Lowercase").
 |  |  |
 | --- | --- |
 | Número de comando | 13 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

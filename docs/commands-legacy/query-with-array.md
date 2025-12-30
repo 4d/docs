@@ -5,7 +5,7 @@ slug: /commands/query-with-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY WITH ARRAY.Syntax-->**QUERY WITH ARRAY** ( *targetField* ; *array* )<!-- END REF-->
+<!--REF #_command_.QUERY WITH ARRAY.Syntax-->**QUERY WITH ARRAY** ( *targetField* : Field ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY WITH ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ The following example allows you to retrieve the records of both French and Amer
 |  |  |
 | --- | --- |
 | Command number | 644 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

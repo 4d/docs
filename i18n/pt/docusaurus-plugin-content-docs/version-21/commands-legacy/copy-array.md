@@ -41,6 +41,6 @@ O exemplo seguinte preenche o array chamado C. Ele então cria um novo array, ch
 |  |  |
 | --- | --- |
 | Número do comando | 226 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

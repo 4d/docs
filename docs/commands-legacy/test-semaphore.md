@@ -5,7 +5,7 @@ slug: /commands/test-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaphore* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Test semaphore.Syntax-->**Test semaphore** ( *semaphore* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Test semaphore.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ The following example allows you to know the state of a process (in our case, wh
 |  |  |
 | --- | --- |
 | Command number | 652 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -32,6 +32,6 @@ Ver ejemplo para **[START MONITORING ACTIVITY](start-monitoring-activity.md)**.
 |  |  |
 | --- | --- |
 | Número de comando | 1721 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

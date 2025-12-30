@@ -5,14 +5,14 @@ slug: /commands/web-service-authenticate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE AUTHENTICATE.Syntax-->**WEB SERVICE AUTHENTICATE** ( *name* ; *password* {; *authMethod*} {; *} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE AUTHENTICATE.Syntax-->**WEB SERVICE AUTHENTICATE** ( *name* : Text ; *password* : Text {; *authMethod* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE AUTHENTICATE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| name | Text | &#8594;  | ユーザの名前 |
-| password | Text | &#8594;  | ユーザのパスワード |
-| authMethod | Integer | &#8594;  | 認証メソッド 0または省略された場合 = 指定されない、1 = BASIC、2 = DIGEST |
-| * | 演算子 | &#8594;  | 渡された場合、プロキシによる認証 |
+| name | Text | &#8594; | ユーザの名前 |
+| password | Text | &#8594; | ユーザのパスワード |
+| authMethod | Integer | &#8594; | 認証メソッド 0または省略された場合 = 指定されない、1 = BASIC、2 = DIGEST |
+| * | 演算子 | &#8594; | 渡された場合、プロキシによる認証 |
 
 <!-- END REF-->
 
@@ -58,6 +58,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 786 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

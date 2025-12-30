@@ -5,7 +5,7 @@ slug: /commands/screen-width
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Screen width.Syntax-->**Screen width** {( * )} : Integer<!-- END REF-->
+<!--REF #_command_.Screen width.Syntax-->**Screen width** ( * ) : Integer<!-- END REF-->
 <!--REF #_command_.Screen width.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ On Macintosh, Screen width returns the width of the main screen, the screen wher
 |  |  |
 | --- | --- |
 | Command number | 187 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

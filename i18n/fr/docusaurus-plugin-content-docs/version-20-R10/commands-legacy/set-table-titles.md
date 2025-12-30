@@ -181,6 +181,6 @@ Vous voulez supprimer tous les noms de tables et de champs personnalisés défin
 |  |  |
 | --- | --- |
 | Numéro de commande | 601 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

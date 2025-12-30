@@ -5,12 +5,12 @@ slug: /commands/append-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *array* ; *valor* )<!-- END REF-->
+<!--REF #_command_.APPEND TO ARRAY.Syntax-->**APPEND TO ARRAY** ( *array* : Array ; *valor* : Expression )<!-- END REF-->
 <!--REF #_command_.APPEND TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array al cual añadir un elemento |
-| valor | Expression | &#8594;  | Valor a añadir |
+| array | Array | &#8594; | Array al cual añadir un elemento |
+| valor | Expression | &#8594; | Valor a añadir |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ El siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 911 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

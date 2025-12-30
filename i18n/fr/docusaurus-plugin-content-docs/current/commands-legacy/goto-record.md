@@ -5,12 +5,12 @@ slug: /commands/goto-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*laTable* ;} *enregistrement* )<!-- END REF-->
+<!--REF #_command_.GOTO RECORD.Syntax-->**GOTO RECORD** ( {*laTable* : Table ;} *enregistrement* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de l'enregistrement de destination ou Table par défaut si ce paramètre est omis |
-| enregistrement | Integer | &#8594;  | Numéro renvoyé par Numero enregistrement |
+| laTable | Table | &#8594; | Table de l'enregistrement de destination ou Table par défaut si ce paramètre est omis |
+| enregistrement | Integer | &#8594; | Numéro renvoyé par Numero enregistrement |
 
 <!-- END REF-->
 
@@ -34,7 +34,7 @@ Référez-vous à l'exemple de la commande [Record number](record-number.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 242 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 | Change la sélection courante ||
 

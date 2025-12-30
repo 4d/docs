@@ -34,6 +34,6 @@ El valor devuelto por este comando sólo tiene sentido si la opción "*Mapear va
 |  |  |
 | --- | --- |
 | Número de comando | 964 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -34,7 +34,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1108 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

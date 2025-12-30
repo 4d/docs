@@ -66,6 +66,6 @@ En el [Método base On 4D Mobile Authentication](metodo-base-on-4d-mobile-authen
 |  |  |
 | --- | --- |
 | Número de comando | 638 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -89,6 +89,6 @@ We want to get an array of all entries found for the "memberOf" attribute:
 |  |  |
 | --- | --- |
 | Command number | 1328 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

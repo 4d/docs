@@ -5,12 +5,12 @@ slug: /commands/set-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *image* ; *nomFichier* )<!-- END REF-->
+<!--REF #_command_.SET PICTURE FILE NAME.Syntax-->**SET PICTURE FILE NAME** ( *image* : Picture, Picture ; *nomFichier* : Text )<!-- END REF-->
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture, Picture | &#8594;  | Image dont vous souhaitez fixer le nom par défaut |
-| nomFichier | Text | &#8594;  | Nom par défaut de l’image |
+| image | Picture, Picture | &#8594; | Image dont vous souhaitez fixer le nom par défaut |
+| nomFichier | Text | &#8594; | Nom par défaut de l’image |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Le nom par défaut est utilisé comme nom de fichier en cas d’exportation de l
 |  |  |
 | --- | --- |
 | Numéro de commande | 1172 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

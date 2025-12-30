@@ -5,7 +5,7 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* {; *choiceField*} )<br/>**RELATE ONE** ( *field* {; *choiceField*} )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( *manyTable* : Table, Field {; *choiceField* : Field} )<br/>**RELATE ONE** ( *field* : Table, Field {; *choiceField* : Field} )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -94,7 +94,7 @@ If the command has been executed correctly and if the related records have been 
 |  |  |
 | --- | --- |
 | Command number | 42 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

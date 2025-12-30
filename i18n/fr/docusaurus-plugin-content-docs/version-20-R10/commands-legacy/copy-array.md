@@ -41,6 +41,6 @@ L'exemple suivant remplit un tableau C. Un nouveau tableau, "D", est ensuite crÃ
 |  |  |
 | --- | --- |
 | NumÃ©ro de commande | 226 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

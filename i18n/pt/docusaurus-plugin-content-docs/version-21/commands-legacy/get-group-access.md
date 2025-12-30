@@ -41,6 +41,6 @@ Se qusier verificar se o usuário atual pertence ao grupo "plugins":
 |  |  |
 | --- | --- |
 | Número do comando | 1738 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

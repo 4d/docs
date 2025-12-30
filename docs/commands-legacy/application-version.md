@@ -5,7 +5,7 @@ slug: /commands/application-version
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Application version.Syntax-->**Application version** {( *buildNum* {; *} )} : Text<!-- END REF-->
+<!--REF #_command_.Application version.Syntax-->**Application version** ( *buildNum* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Application version.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -125,6 +125,6 @@ You want to use the application's short version value returned by the command to
 |  |  |
 | --- | --- |
 | Command number | 493 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -59,6 +59,6 @@ Si la commande est exécutée depuis un composant, elle s’applique par défaut
 |  |  |
 | --- | --- |
 | Numéro de commande | 1189 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *ventana* )<!-- END REF-->
+<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *ventana* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia de la ventana |
+| ventana | Integer | &#8594; | Número de referencia de la ventana |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ El comando cambia el estado de la ventana:
 |  |  |
 | --- | --- |
 | Número de comando | 1829 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

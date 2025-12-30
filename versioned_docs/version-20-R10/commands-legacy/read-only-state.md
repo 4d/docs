@@ -42,6 +42,6 @@ The following example tests the state of an \[Invoice\] table. If the state of t
 |  |  |
 | --- | --- |
 | Command number | 362 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

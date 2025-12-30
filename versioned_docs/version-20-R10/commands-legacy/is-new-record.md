@@ -45,6 +45,6 @@ The following two statements are identical. The second one is strongly advised s
 |  |  |
 | --- | --- |
 | Command number | 668 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-subsection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get subsection.Syntax-->**WP Get subsection** ( *targetObj* ) | (*wpSection* ; *subSectionType* ) -> 戻り値<!-- END REF-->
+<!--REF #_command_.WP Get subsection.Syntax-->**WP Get subsection** ( *targetObj* : Object ) | (*wpSection* : Object ; *subSectionType* : Integer ) -> 戻り値<!-- END REF-->
 <!--REF #_command_.WP Get subsection.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |

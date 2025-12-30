@@ -5,11 +5,11 @@ slug: /commands/old-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *aField* )<!-- END REF-->
+<!--REF #_command_.OLD RELATED ONE.Syntax-->**OLD RELATED ONE** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.OLD RELATED ONE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | nフィールド |
+| aField | Field | &#8594; | nフィールド |
 
 <!-- END REF-->
 
@@ -37,7 +37,7 @@ OLD RELATED ONEは、更新前のカレントレコードの内容にリレー�
 |  |  |
 | --- | --- |
 | コマンド番号 | 44 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

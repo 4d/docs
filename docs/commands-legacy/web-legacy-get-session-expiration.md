@@ -5,7 +5,7 @@ slug: /commands/web-legacy-get-session-expiration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *sessionID* ; *expDate* ; *expTime* )<!-- END REF-->
+<!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Syntax-->**WEB LEGACY GET SESSION EXPIRATION** ( *sessionID* : Text ; *expDate* : Date ; *expTime* : Time )<!-- END REF-->
 <!--REF #_command_.WEB LEGACY GET SESSION EXPIRATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ The *expDate* parameter receives the expiration date and the *expTime* parameter
 |  |  |
 | --- | --- |
 | Command number | 1207 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

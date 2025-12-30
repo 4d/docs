@@ -5,13 +5,13 @@ slug: /commands/dom-append-xml-child-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElement* ; *tipoHijo* ; *valorHijo* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Append XML child node.Syntax-->**DOM Append XML child node** ( *refElement* : Text ; *tipoHijo* : Integer ; *valorHijo* : Text, Blob ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Append XML child node.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| refElement | Text | &#8594;  | Referencia del elemento XML |
-| tipoHijo | Integer | &#8594;  | Tipo de hijo a añadir |
-| valorHijo | Text, Blob | &#8594;  | Texto o variable (Texto o BLOB)cuyo valor debe insertarse como nodo hijo |
+| refElement | Text | &#8594; | Referencia del elemento XML |
+| tipoHijo | Integer | &#8594; | Tipo de hijo a añadir |
+| valorHijo | Text, Blob | &#8594; | Texto o variable (Texto o BLOB)cuyo valor debe insertarse como nodo hijo |
 | Resultado | Text | &#8592; | Referencia del elemento XML hijo |
 
 <!-- END REF-->
@@ -152,6 +152,6 @@ Si el contenido de *valorHijo* no es valido, se devuelve un error.
 |  |  |
 | --- | --- |
 | Número de comando | 1080 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

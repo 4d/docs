@@ -5,7 +5,7 @@ slug: /commands/cos
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cos.Syntax-->**Cos** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Cos.Syntax-->**Cos** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Cos.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 18 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -337,6 +337,6 @@ We want to request measures for cache bytes read within the last two minutes:
 |  |  |
 | --- | --- |
 | Command number | 1314 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

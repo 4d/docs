@@ -37,6 +37,6 @@ A linha a seguir mostra 1:
 |  |  |
 | --- | --- |
 | Número do comando | 22 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

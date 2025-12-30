@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* ; *value* )<!-- END REF-->
+<!--REF #_command_.SAX GET XML ELEMENT VALUE.Syntax-->**SAX GET XML ELEMENT VALUE** ( *document* : Time ; *value* : Text, Blob )<!-- END REF-->
 <!--REF #_command_.SAX GET XML ELEMENT VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
 | value | Text, Blob | &#8592; | 要素値 |
 
 <!-- END REF-->
@@ -50,7 +50,7 @@ TextまたはBLOB 型の変数を*value* 引数に渡します。BLOBを渡す�
 |  |  |
 | --- | --- |
 | コマンド番号 | 877 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

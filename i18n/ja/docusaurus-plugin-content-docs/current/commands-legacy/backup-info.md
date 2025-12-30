@@ -5,11 +5,11 @@ slug: /commands/backup-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* ; *info1* ; *info2* )<!-- END REF-->
+<!--REF #_command_.BACKUP INFO.Syntax-->**BACKUP INFO** ( *selector* : Integer ; *info1* : Integer, Date ; *info2* : Time, Text )<!-- END REF-->
 <!--REF #_command_.BACKUP INFO.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | 取得する情報のタイプ |
+| selector | Integer | &#8594; | 取得する情報のタイプ |
 | info1 | Integer, Date | &#8592; | セレクタの値1 |
 | info2 | Time, Text | &#8592; | セレクタの値2 |
 
@@ -35,6 +35,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 888 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

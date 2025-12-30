@@ -5,7 +5,7 @@ slug: /commands/qr-get-report-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get report table.Syntax-->**QR Get report table** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get report table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 758 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

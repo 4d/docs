@@ -5,7 +5,7 @@ slug: /commands/relate-one-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *manyTable* ; *oneTable* )<!-- END REF-->
+<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *manyTable* : Table ; *oneTable* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ The following technique uses **RELATE ONE SELECTION** to accomplish the same res
 |  |  |
 | --- | --- |
 | Command number | 349 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

@@ -5,13 +5,13 @@ slug: /commands/object-get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** {( *sélecteur* {; *nomObjet* {; *nomSousFormulaire*}})} : Pointer<!-- END REF-->
+<!--REF #_command_.OBJECT Get pointer.Syntax-->**OBJECT Get pointer** ( *sélecteur* : Integer {; *nomObjet* : Text {; *nomSousFormulaire* : Text}}) : Pointer<!-- END REF-->
 <!--REF #_command_.OBJECT Get pointer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| sélecteur | Integer | &#8594;  | Catégorie d’objet |
-| nomObjet | Text | &#8594;  | Nom d'objet |
-| nomSousFormulaire | Text | &#8594;  | Nom d'objet sous-formulaire |
+| sélecteur | Integer | &#8594; | Catégorie d’objet |
+| nomObjet | Text | &#8594; | Nom d'objet |
+| nomSousFormulaire | Text | &#8594; | Nom d'objet sous-formulaire |
 | Résultat | Pointer | &#8592; | Pointeur sur la variable de l’objet |
 
 <!-- END REF-->
@@ -59,6 +59,6 @@ Soit un formulaire "SF" utilisé deux fois comme sous-formulaire dans le même f
 |  |  |
 | --- | --- |
 | Numéro de commande | 1124 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

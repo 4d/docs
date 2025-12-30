@@ -37,6 +37,6 @@ Reportez-vous à l'exemple de la fonction [Semaphore](semaphore.md "Semaphore").
 |  |  |
 | --- | --- |
 | Numéro de commande | 144 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

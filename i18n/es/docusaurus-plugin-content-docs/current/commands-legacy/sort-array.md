@@ -5,12 +5,12 @@ slug: /commands/sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* {; *array2* ; ... ; *arrayN*}{; > o <} )<!-- END REF-->
+<!--REF #_command_.SORT ARRAY.Syntax-->**SORT ARRAY** ( *array* : Array {; *...array* : Array}{; > o <} )<!-- END REF-->
 <!--REF #_command_.SORT ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Arrays a ordenar |
-| > o < | Operador | &#8594;  | ">" ordenar en orden ascendente, u "<" ordenar en orden descendente, u orden ascendente si se omite |
+| array | Array | &#8594; | Arrays a ordenar |
+| > o < | Operador | &#8594; | ">" ordenar en orden ascendente, u "<" ordenar en orden descendente, u orden ascendente si se omite |
 
 <!-- END REF-->
 
@@ -86,6 +86,6 @@ Usted visualiza los nombres de una tabla *\[Personas\]* en una ventana flotante.
 |  |  |
 | --- | --- |
 | Número de comando | 229 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

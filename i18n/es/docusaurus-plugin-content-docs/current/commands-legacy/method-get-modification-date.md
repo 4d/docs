@@ -5,14 +5,14 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *ruta* ; *fechaMod* ; *horaMod* {; *operador*} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *ruta* : Text, Text array ; *fechaMod* : Date, Date array ; *horaMod* : Time, Integer array {; *operador* : *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &#8594;  | Texto o array texto que contiene una o más rutas de acceso |
+| ruta | Text, Text array | &#8594; | Texto o array texto que contiene una o más rutas de acceso |
 | fechaMod | Date, Date array | &#8592; | Fecha(s) de modificación de métodos(s) |
 | horaMod | Time, Integer array | &#8592; | Hora(s) de modificación de métodos(s) |
-| operador | * | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| operador | * | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 
@@ -74,6 +74,6 @@ Quiere obtener las fechas de modificación de los métodos de un módulo con el 
 |  |  |
 | --- | --- |
 | Número de comando | 1170 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

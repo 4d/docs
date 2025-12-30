@@ -36,7 +36,7 @@ On Macintosh, if you do not pass the optional *\** parameter, the size of the da
 |  |  |
 | --- | --- |
 | Command number | 479 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

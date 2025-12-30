@@ -5,7 +5,7 @@ slug: /commands/qr-get-header-and-footer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *area* ; *selector* ; *leftTitle* ; *centerTitle* ; *rightTitle* ; *height* {; *picture* {; *pictAlignment*}} )<!-- END REF-->
+<!--REF #_command_.QR GET HEADER AND FOOTER.Syntax-->**QR GET HEADER AND FOOTER** ( *area* : Integer ; *selector* : Integer ; *leftTitle* : Text ; *centerTitle* : Text ; *rightTitle* : Text ; *height* : Integer {; *picture* : Picture {; *pictAlignment* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR GET HEADER AND FOOTER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -72,7 +72,7 @@ The following code retrieves the values of the header titles as well as the head
 |  |  |
 | --- | --- |
 | Command number | 775 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

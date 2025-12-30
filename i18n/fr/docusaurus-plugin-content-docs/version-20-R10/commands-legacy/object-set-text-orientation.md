@@ -54,6 +54,6 @@ Vous souhaitez appliquer une orientation de 270° à une variable de votre formu
 |  |  |
 | --- | --- |
 | Numéro de commande | 1284 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

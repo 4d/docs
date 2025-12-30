@@ -48,7 +48,7 @@ Pode interceptar estes erros usando o método isntalado pelo comando [ON ERR CAL
 |  |  |
 | --- | --- |
 | Número do comando | 693 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

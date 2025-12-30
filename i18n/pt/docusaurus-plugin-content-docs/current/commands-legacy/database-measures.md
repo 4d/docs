@@ -5,11 +5,11 @@ slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *opcoes* )} : Object<!-- END REF-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** ( *opcoes* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Database measures.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| opcoes | Object | &#8594;  | Opções de retorno |
+| opcoes | Object | &#8594; | Opções de retorno |
 | Resultado | Object | &#8592; | Objeto que contém as medidas da base |
 
 <!-- END REF-->
@@ -335,6 +335,6 @@ Queremos obter as medidas de bytes de cachê nos últimos dois minutos:
 |  |  |
 | --- | --- |
 | Número do comando | 1314 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

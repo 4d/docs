@@ -5,7 +5,7 @@ slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ If a locked record is encountered during the execution of **DELETE SELECTION**, 
 |  |  |
 | --- | --- |
 | Command number | 66 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

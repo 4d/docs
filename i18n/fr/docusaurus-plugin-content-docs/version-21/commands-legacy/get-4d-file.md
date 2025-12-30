@@ -75,6 +75,6 @@ Vous voulez obtenir le chemin d'accès du fichier de sauvegarde le plus récent 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1418 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

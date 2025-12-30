@@ -68,6 +68,6 @@ Este exemplo, a variável *numTabela* é igual ao número da tabela a qual perte
 |  |  |
 | --- | --- |
 | Número do comando | 252 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

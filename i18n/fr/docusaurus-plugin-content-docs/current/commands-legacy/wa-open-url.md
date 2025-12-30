@@ -5,13 +5,13 @@ slug: /commands/wa-open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( {* ;} *objet* ; *url* )<!-- END REF-->
+<!--REF #_command_.WA OPEN URL.Syntax-->**WA OPEN URL** ( * ; *objet* : Text ; *url* : Text )<br/>**WA OPEN URL** ( *objet* : Field, Variable ; *url* : Text )<!-- END REF-->
 <!--REF #_command_.WA OPEN URL.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| url | Text | &#8594;  | URL à charger dans la zone Web |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| url | Text | &#8594; | URL à charger dans la zone Web |
 
 <!-- END REF-->
 
@@ -53,6 +53,6 @@ Cette commande a le même effet que la modification de la valeur de la variable 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1020 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

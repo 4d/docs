@@ -64,6 +64,6 @@ Exemplos de petições com autenticação:
 |  |  |
 | --- | --- |
 | Número do comando | 1161 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

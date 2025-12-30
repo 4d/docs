@@ -39,6 +39,6 @@ You want to determine if the current operating system is Windows:
 |  |  |
 | --- | --- |
 | Command number | 1573 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

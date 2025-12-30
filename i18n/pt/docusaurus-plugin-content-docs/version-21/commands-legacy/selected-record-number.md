@@ -41,6 +41,6 @@ O seguinte exemplo guarda o número do registro atual da seleção em uma variá
 |  |  |
 | --- | --- |
 | Número do comando | 246 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

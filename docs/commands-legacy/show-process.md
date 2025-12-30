@@ -5,7 +5,7 @@ slug: /commands/show-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.SHOW PROCESS.Syntax-->**SHOW PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.SHOW PROCESS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ The following example displays a process called Customers, if it has been previo
 |  |  |
 | --- | --- |
 | Command number | 325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

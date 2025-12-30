@@ -5,7 +5,7 @@ slug: /commands/variance
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Variance.Syntax-->**Variance** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Variance.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -72,6 +72,6 @@ This example gets the variance of the values placed in an array:
 |  |  |
 | --- | --- |
 | Command number | 27 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

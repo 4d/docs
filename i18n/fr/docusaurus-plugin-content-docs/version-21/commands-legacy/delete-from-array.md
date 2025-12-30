@@ -50,6 +50,6 @@ L'exemple suivant supprime le dernier élément d'un tableau, s'il existe :
 |  |  |
 | --- | --- |
 | Numéro de commande | 228 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/read-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* ; *picture* {; *} )<!-- END REF-->
+<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *fileName* : Text ; *picture* : Picture {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | 読み込むファイルのフルパス名, または空の文字列 |
+| fileName | Text | &#8594; | 読み込むファイルのフルパス名, または空の文字列 |
 | picture | Picture | &#8592; | ピクチャを受け取るフィールドまたは変数 |
-| * | 演算子 | &#8594;  | 指定時 = すべてのファイルタイプを受け入れる |
+| * | 演算子 | &#8594; | 指定時 = すべてのファイルタイプを受け入れる |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 678 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document |
 
 

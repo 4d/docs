@@ -5,7 +5,7 @@ slug: /commands/qr-get-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* ; *left* ; *top* {; *right* {; *bottom*}} )<!-- END REF-->
+<!--REF #_command_.QR GET SELECTION.Syntax-->**QR GET SELECTION** ( *area* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer {; *bottom* : Integer}} )<!-- END REF-->
 <!--REF #_command_.QR GET SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,7 +44,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 793 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

@@ -78,6 +78,6 @@ Exemple de document XML :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1091 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

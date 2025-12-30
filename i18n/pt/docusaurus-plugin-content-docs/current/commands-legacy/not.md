@@ -5,11 +5,11 @@ slug: /commands/not
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Not.Syntax-->**Not** ( *booleano*  ) : Boolean<!-- END REF-->
+<!--REF #_command_.Not.Syntax-->**Not** ( *booleano* : Boolean  ) : Boolean<!-- END REF-->
 <!--REF #_command_.Not.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| booleano | Boolean | &#8594;  | Valor booleano a ser negado |
+| booleano | Boolean | &#8594; | Valor booleano a ser negado |
 | Resultado | Boolean | &#8592; | Oposto do booleano |
 
 <!-- END REF-->
@@ -38,6 +38,6 @@ Este exemplo atribui primeiro Verdadeiro a uma variável, logo muda o valor da v
 |  |  |
 | --- | --- |
 | Número do comando | 34 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

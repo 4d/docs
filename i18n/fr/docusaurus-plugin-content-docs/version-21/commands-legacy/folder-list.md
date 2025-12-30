@@ -30,7 +30,7 @@ S'il n'y pas de dossier à cet endroit, la commande retourne un tableau vide. Si
 |  |  |
 | --- | --- |
 | Numéro de commande | 473 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

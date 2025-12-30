@@ -364,6 +364,6 @@ Pase un termómetro a modo "Barber shop"
 |  |  |
 | --- | --- |
 | Número de comando | 236 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

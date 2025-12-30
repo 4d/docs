@@ -74,7 +74,7 @@ If you pass an invalid *border* parameter, the error -9854 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 798 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

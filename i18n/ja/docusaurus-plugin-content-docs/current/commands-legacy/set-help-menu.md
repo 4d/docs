@@ -5,11 +5,11 @@ slug: /commands/set-help-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* )<!-- END REF-->
+<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* : Collection )<!-- END REF-->
 <!--REF #_command_.SET HELP MENU.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menuCol | Collection | &#8594;  | メニュー項目のコレクション |
+| menuCol | Collection | &#8594; | メニュー項目のコレクション |
 
 <!-- END REF-->
 
@@ -65,6 +65,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1801 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

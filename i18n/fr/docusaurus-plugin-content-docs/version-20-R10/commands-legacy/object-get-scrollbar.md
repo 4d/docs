@@ -51,6 +51,6 @@ Pour plus d'informations, reportez-vous à la description de la commande [OBJECT
 |  |  |
 | --- | --- |
 | Numéro de commande | 1076 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

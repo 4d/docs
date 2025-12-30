@@ -5,12 +5,12 @@ slug: /commands/create-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *rutaCarpeta* {; *Operador*} )<!-- END REF-->
+<!--REF #_command_.CREATE FOLDER.Syntax-->**CREATE FOLDER** ( *rutaCarpeta* : Text {; *Operador*} )<!-- END REF-->
 <!--REF #_command_.CREATE FOLDER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaCarpeta | Text | &#8594;  | Ruta de acceso a la nueva carpeta a crear |
-| * | * | &#8594;  | Crear carpeta jerárquica |
+| rutaCarpeta | Text | &#8594; | Ruta de acceso a la nueva carpeta a crear |
+| * | * | &#8594; | Crear carpeta jerárquica |
 
 <!-- END REF-->
 
@@ -77,7 +77,7 @@ Creación de la subcarpeta "\\Febrero\\" en la carpeta existente "C:\\Archives\\
 |  |  |
 | --- | --- |
 | Número de comando | 475 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

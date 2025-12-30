@@ -43,7 +43,7 @@ If a copy of the text is correctly placed in the pasteboard, the OK variable is 
 |  |  |
 | --- | --- |
 | Command number | 523 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

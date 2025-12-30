@@ -47,7 +47,7 @@ Inserir uma asserção na avaliação de uma expressão:
 |  |  |
 | --- | --- |
 | Número do comando | 1132 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

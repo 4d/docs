@@ -5,7 +5,7 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *tickCount* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,6 +51,6 @@ Let’s imagine that you want, when a form is displayed on screen, the computer 
 |  |  |
 | --- | --- |
 | Command number | 645 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -39,6 +39,6 @@ El parámetro actual puede estar definido:
 |  |  |
 | --- | --- |
 | Número de comando | 1052 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

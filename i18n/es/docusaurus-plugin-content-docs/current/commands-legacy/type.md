@@ -5,11 +5,11 @@ slug: /commands/type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Type.Syntax-->**Type** ( *campoVar* ) : Integer<!-- END REF-->
+<!--REF #_command_.Type.Syntax-->**Type** ( *campoVar* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoVar | Field, Variable | &#8594;  | Campo o variable a probar |
+| campoVar | Field, Variable | &#8594; | Campo o variable a probar |
 | Resultado | Integer | &#8592; | Número de tipo de datos |
 
 <!-- END REF-->
@@ -146,6 +146,6 @@ Ver ejemplo del comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md
 |  |  |
 | --- | --- |
 | Número de comando | 295 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

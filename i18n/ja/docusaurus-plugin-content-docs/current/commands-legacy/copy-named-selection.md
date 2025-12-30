@@ -5,12 +5,12 @@ slug: /commands/copy-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* ;} *name* )<!-- END REF-->
+<!--REF #_command_.COPY NAMED SELECTION.Syntax-->**COPY NAMED SELECTION** ( {*aTable* : Table ;} *name* : Text )<!-- END REF-->
 <!--REF #_command_.COPY NAMED SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションをコピーするテーブル, または 省略した場合デフォルトテーブル |
-| name | Text | &#8594;  | 作成する命名セレクションの名前 |
+| aTable | Table | &#8594; | セレクションをコピーするテーブル, または 省略した場合デフォルトテーブル |
+| name | Text | &#8594; | 作成する命名セレクションの名前 |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 331 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

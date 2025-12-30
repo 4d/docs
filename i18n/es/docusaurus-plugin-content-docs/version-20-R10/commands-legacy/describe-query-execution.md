@@ -73,6 +73,6 @@ $vResultPath :
 |  |  |
 | --- | --- |
 | Número de comando | 1044 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

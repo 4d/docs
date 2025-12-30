@@ -49,6 +49,6 @@ O seguinte código:
 |  |  |
 | --- | --- |
 | Número do comando | 911 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

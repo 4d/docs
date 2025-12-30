@@ -681,9 +681,9 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 このコマンドの結果は新規ウィンドウに表示されます。
 
-## Rename
+## 名称変更
 
-A global renaming feature can be used with **variables** and **project methods**, allowing you to rename them safely throughout the whole project. To do this, highlight the variable or project method name in the editor and select **Rename...** from the **Method** menu or the context menu. A dialog box is then displayed, allowing you to write the new name. For more information, refer to [Renaming project methods and variables](../Project/search-replace.md#renaming-project-methods-and-variables) section.
+グローバル名称変更機能は、**変数** と **プロジェクトメソッド** に対して使用でき、これによってプロジェクト全体において安全に名称を変更することができます。 これをするためには、エディター内において変数またはプロジェクトメソッド名をハイライトし、コンテキストメニューの**メソッド** メニューから**名称変更...** を選択します。 すると新しい名前を入力するためのダイアログボックスが表示されます。 より詳細な情報については、[プロジェクトメソッドと変数の名称変更](../Project/search-replace.md#プロジェクトメソッドと変数の名称変更) の章を参照してください。
 
 ## マクロ
 

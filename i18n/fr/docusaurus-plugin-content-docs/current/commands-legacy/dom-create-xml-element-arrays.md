@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElément* ; *xChemin* {; *tabNomsAttributs* ; *tabValeursAttributs*} {; *tabNomsAttributs2* ; *tabValeursAttributs2* ; ... ; *tabNomsAttributsN* ; *tabValeursAttributsN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *refElément* : Text ; *xChemin* : Text {; *tabNomsAttributs* : Text array ; *tabValeursAttributs* : Text array} {; ...(*tabNomsAttributs* : Text array, *tabValeursAttributs* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML racine |
-| xChemin | Text | &#8594;  | Chemin XPath de l’élément XML à créer |
-| tabNomsAttributs | Text array | &#8594;  | Tableau de noms d’attributs |
-| tabValeursAttributs | Text array | &#8594;  | Tableau de valeurs d’attributs |
+| refElément | Text | &#8594; | Référence d’élément XML racine |
+| xChemin | Text | &#8594; | Chemin XPath de l’élément XML à créer |
+| tabNomsAttributs | Text array | &#8594; | Tableau de noms d’attributs |
+| tabValeursAttributs | Text array | &#8594; | Tableau de valeurs d’attributs |
 | Résultat | Text | &#8592; | Référence de l'élément XML créé |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ Pour cela, il suffit d'écrire :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1097 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

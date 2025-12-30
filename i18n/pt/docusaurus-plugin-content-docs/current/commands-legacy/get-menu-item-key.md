@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* ; *menuItem* {; *processo*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Get menu item key.Syntax-->**Get menu item key** ( *menu* : Integer, Text ; *menuItem* : Integer {; *processo* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Get menu item key.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item de Menu item ou -1 para o último item adicionado |
-| processo | Integer | &#8594;  | Número de referência de processo |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item de Menu item ou -1 para o último item adicionado |
+| processo | Integer | &#8594; | Número de referência de processo |
 | Resultado | Integer | &#8592; | Código de caractere da tecla de atalho padrão associada com o item de menu |
 
 <!-- END REF-->
@@ -53,7 +53,7 @@ Para obter um atalho associado com um comando de menu, é útil implementar uma 
 |  |  |
 | --- | --- |
 | Número do comando | 424 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

@@ -33,6 +33,6 @@ No confunda ERASE WINDOW, que borra el contenido de una ventana, con [CLOSE WIND
 |  |  |
 | --- | --- |
 | Número de comando | 160 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

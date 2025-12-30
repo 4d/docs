@@ -5,12 +5,12 @@ slug: /commands/subtotal
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valores* {; *saltoPag*} ) : Real<!-- END REF-->
+<!--REF #_command_.Subtotal.Syntax-->**Subtotal** ( *valores* : Field {; *saltoPag* : Integer} ) : Real<!-- END REF-->
 <!--REF #_command_.Subtotal.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valores | Field | &#8594;  | Campo o variable numérica donde quiere devolver el subtotal |
-| saltoPag | Integer | &#8594;  | Nivel de ruptura para el cual efectuar un salto de página |
+| valores | Field | &#8594; | Campo o variable numérica donde quiere devolver el subtotal |
+| saltoPag | Integer | &#8594; | Nivel de ruptura para el cual efectuar un salto de página |
 | Resultado | Real | &#8592; | Subtotal de valores |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ La función Subtotal es necesaria para mostrar valores en un formulario.
 |  |  |
 | --- | --- |
 | Número de comando | 97 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

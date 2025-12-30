@@ -54,6 +54,6 @@ Si pasa el parámetro *proceso*, el evento se envía al proceso cuyo número se 
 |  |  |
 | --- | --- |
 | Número de comando | 467 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

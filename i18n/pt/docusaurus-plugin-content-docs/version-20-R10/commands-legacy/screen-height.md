@@ -30,6 +30,6 @@ Em Mac OS, Screen height devolve a altura da tela principal, ou seja a tela onde
 |  |  |
 | --- | --- |
 | Número do comando | 188 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

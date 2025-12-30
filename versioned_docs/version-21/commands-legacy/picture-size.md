@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 356 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

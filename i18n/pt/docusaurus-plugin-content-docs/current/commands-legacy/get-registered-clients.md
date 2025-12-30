@@ -5,7 +5,7 @@ slug: /commands/get-registered-clients
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listaClientes* ; *metodos* )<!-- END REF-->
+<!--REF #_command_.GET REGISTERED CLIENTS.Syntax-->**GET REGISTERED CLIENTS** ( *listaClientes* : Text array ; *metodos* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET REGISTERED CLIENTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ Consulte o exemplo do comando [REGISTER CLIENT](register-client.md).
 |  |  |
 | --- | --- |
 | Número do comando | 650 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

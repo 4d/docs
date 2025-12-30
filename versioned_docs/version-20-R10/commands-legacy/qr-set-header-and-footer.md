@@ -61,7 +61,7 @@ The following statement places the title “Center title” in the header for th
 |  |  |
 | --- | --- |
 | Command number | 774 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

@@ -5,12 +5,12 @@ slug: /commands/set-assert-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *assertions* {; *} )<!-- END REF-->
+<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *assertions* : Boolean {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| assertions | Boolean | &#8594;  | True = アサーションを有効にする<br/>False = アサーションを無効にする |
-| * | 演算子 | &#8594;  | 省略時 = すべてのプロセスにコマンドを適用 (既存および後で作成されるものを含む)<br/>指定時= カレントプロセスのみにコマンドを適用 |
+| assertions | Boolean | &#8594; | True = アサーションを有効にする<br/>False = アサーションを無効にする |
+| * | 演算子 | &#8594; | 省略時 = すべてのプロセスにコマンドを適用 (既存および後で作成されるものを含む)<br/>指定時= カレントプロセスのみにコマンドを適用 |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1131 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/ldap-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* ; *login* ; *password* {; *digest*} )<!-- END REF-->
+<!--REF #_command_.LDAP LOGIN.Syntax-->**LDAP LOGIN** ( *url* : Text ; *login* : Text ; *password* : Text {; *digest* : Integer} )<!-- END REF-->
 <!--REF #_command_.LDAP LOGIN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| url | Text | &#8594;  | 接続するLDAPサーバーのURL |
-| login | Text | &#8594;  | ログインエントリー |
-| password | Text | &#8594;  | ログインエントリーのパスワード |
-| digest | Integer | &#8594;  | 0 = パスワードをMD5ダイジェストで送るMD5(デフォルト)、<br/>1 = パスワードを暗号化なしで送る |
+| url | Text | &#8594; | 接続するLDAPサーバーのURL |
+| login | Text | &#8594; | ログインエントリー |
+| password | Text | &#8594; | ログインエントリーのパスワード |
+| digest | Integer | &#8594; | 0 = パスワードをMD5ダイジェストで送るMD5(デフォルト)、<br/>1 = パスワードを暗号化なしで送る |
 
 <!-- END REF-->
 
@@ -101,6 +101,6 @@ LDAPサーバーにログインして、検索をしたい場合を考えます:
 |  |  |
 | --- | --- |
 | コマンド番号 | 1326 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

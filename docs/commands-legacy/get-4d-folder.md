@@ -5,7 +5,7 @@ slug: /commands/get-4d-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** {( *folder* {; *options*} {; *})} : Text<!-- END REF-->
+<!--REF #_command_.Get 4D folder.Syntax-->**Get 4D folder** ( *folder* : Integer {; *options* : Object} {; *}) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -213,7 +213,7 @@ If the *folder* parameter is invalid or if the pathname returned is empty, the O
 |  |  |
 | --- | --- |
 | Command number | 485 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

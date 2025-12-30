@@ -5,12 +5,12 @@ slug: /commands/set-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *tabla* ; *prioridad* )<!-- END REF-->
+<!--REF #_command_.SET TABLE CACHE PRIORITY.Syntax-->**SET TABLE CACHE PRIORITY** ( *tabla* : Table ; *prioridad* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TABLE CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla cuyo valor de prioridad de datos escalares tiene que ser definido para la sesión |
-| prioridad | Integer | &#8594;  | Valor de prioridad de caché para valores escalares en la tabla |
+| tabla | Table | &#8594; | Tabla cuyo valor de prioridad de datos escalares tiene que ser definido para la sesión |
+| prioridad | Integer | &#8594; | Valor de prioridad de caché para valores escalares en la tabla |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ En el , usted desea definir una prioridad alta para el dato escalar \[Customer\]
 |  |  |
 | --- | --- |
 | Número de comando | 1400 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -28,6 +28,6 @@ Este estado ocurrirá muy raramente. Los procesos suelen detenerse antes de que 
 |  |  |
 | --- | --- |
 | Número de comando | 672 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

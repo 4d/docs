@@ -5,7 +5,7 @@ slug: /commands/get-printable-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *height* {; *width*} )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *height* : Integer {; *width* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 703 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

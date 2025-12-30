@@ -5,7 +5,7 @@ slug: /commands/qr-get-info-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* ; *row* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get info row.Syntax-->**QR Get info row** ( *area* : Integer ; *row* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get info row.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,7 +45,7 @@ If you pass an invalid *row* value, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 769 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

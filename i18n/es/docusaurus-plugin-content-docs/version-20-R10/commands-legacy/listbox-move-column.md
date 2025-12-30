@@ -46,6 +46,6 @@ Usted quiere invertir la segunda y tercera columna del list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1274 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

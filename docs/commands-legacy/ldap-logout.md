@@ -25,6 +25,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1327 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

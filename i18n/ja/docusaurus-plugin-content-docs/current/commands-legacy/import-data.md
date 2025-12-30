@@ -5,14 +5,13 @@ slug: /commands/import-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *fileName* {; *project* {; *}} )<!-- END REF-->
+<!--REF #_command_.IMPORT DATA.Syntax-->**IMPORT DATA** ( *fileName* : Text {; *project* : Text, Blob {; *}} )<!-- END REF-->
 <!--REF #_command_.IMPORT DATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fileName | Text | &#8594;  | インポートファイルのフルパス名 |
-| project | Text, Blob | &#8594;  | インポートプロジェクト |
-| &#8592; | インポートプロジェクトの新しい内容 (*引数指定時) |
-| * | 演算子 | &#8594;  | インポートダイアログを表示し プロジェクトの内容を更新 |
+| fileName | Text | &#8594; | インポートファイルのフルパス名 |
+| project | Text, Blob | &#8596; | *in:* Contents of the import project<br/> *out:* New contents of the import project (if the * parameter has been passed) |
+| * | 演算子 | &#8594; | インポートダイアログを表示し プロジェクトの内容を更新 |
 
 <!-- END REF-->
 
@@ -53,7 +52,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 665 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

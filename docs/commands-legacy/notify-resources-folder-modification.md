@@ -40,6 +40,6 @@ Current settings are set either:
 |  |  |
 | --- | --- |
 | Command number | 1052 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

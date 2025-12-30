@@ -30,6 +30,6 @@ Ver el ejemplo del comando [Current machine](current-machine.md "Current machine
 |  |  |
 | --- | --- |
 | Número de comando | 484 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

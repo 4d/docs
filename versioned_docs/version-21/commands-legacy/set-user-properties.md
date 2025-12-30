@@ -16,7 +16,7 @@ displayed_sidebar: docs
 | password | Text | &#8594;  | New (unencrypted) password, or * to leave the password unchanged |
 | nbLogin | Integer | &#8594;  | New number of logins to the database (Binary databases only) |
 | lastLogin | Date | &#8594;  | New date of last login to the database (Binary databases only) |
-| memberships | Array integer | &#8594;  | ID numbers of groups to which the user belongs |
+| memberships | Integer array | &#8594;  | ID numbers of groups to which the user belongs |
 | groupOwner | Integer | &#8594;  | Reference number of user group owner (Binary databases only) |
 | Function result | Integer | &#8592; | Unique ID number of new user |
 
@@ -68,6 +68,6 @@ If you do not have the proper access privileges for calling Set user properties 
 |  |  |
 | --- | --- |
 | Command number | 612 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

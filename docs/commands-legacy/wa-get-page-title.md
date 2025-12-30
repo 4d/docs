@@ -5,7 +5,7 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *object* : Text ) : Text<br/>**WA Get page title** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ This command returns an empty string if there is no title available for the curr
 |  |  |
 | --- | --- |
 | Command number | 1036 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

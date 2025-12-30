@@ -5,11 +5,11 @@ slug: /commands/one-record-select
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.ONE RECORD SELECT.Syntax-->**ONE RECORD SELECT** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.ONE RECORD SELECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle réduire la sélection à un enregistrement |
+| laTable | Table | &#8594; | Table de laquelle réduire la sélection à un enregistrement |
 
 <!-- END REF-->
 
@@ -35,7 +35,7 @@ A l'origine, cette commande était utile pour "replacer" dans la sélection cour
 |  |  |
 | --- | --- |
 | Numéro de commande | 189 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

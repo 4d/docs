@@ -5,11 +5,11 @@ slug: /commands/qr-get-drop-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get drop column.Syntax-->**QR Get drop column** ( *area* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get drop column.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
+| area | Integer | &#8594; | エリア参照 |
 | 戻り値 | Integer | &#8592; | ドロップされた値 |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 747 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

@@ -5,13 +5,13 @@ slug: /commands/qr-get-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* ; *numColumna* ; *numRuptura* ; *operador* ; *texto* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS DATA.Syntax-->**QR GET TOTALS DATA** ( *area* : Integer ; *numColumna* : Integer ; *numRuptura* : Integer ; *operador* : Integer ; *texto* : Text )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS DATA.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| numColumna | Integer | &#8594;  | Número de columna |
-| numRuptura | Integer | &#8594;  | Número de ruptura |
+| area | Integer | &#8594; | Referencia del área |
+| numColumna | Integer | &#8594; | Número de columna |
+| numRuptura | Integer | &#8594; | Número de ruptura |
 | operador | Integer | &#8592; | Operador de la celda |
 | texto | Text | &#8592; | Contenido de la celda |
 
@@ -77,7 +77,7 @@ Si el parámetro *numRuptura* es incorrecto, se genera el error -9853.
 |  |  |
 | --- | --- |
 | Número de comando | 768 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

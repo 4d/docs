@@ -5,11 +5,11 @@ slug: /commands/clear-semaphore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *semaforo* )<!-- END REF-->
+<!--REF #_command_.CLEAR SEMAPHORE.Syntax-->**CLEAR SEMAPHORE** ( *semaforo* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR SEMAPHORE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| semaforo | Text | &#8594;  | Semáforo a borrar |
+| semaforo | Text | &#8594; | Semáforo a borrar |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ Ver el ejemplo de [Semaphore](semaphore.md "Semaphore").
 |  |  |
 | --- | --- |
 | Número de comando | 144 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

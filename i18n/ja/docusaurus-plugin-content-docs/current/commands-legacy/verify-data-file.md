@@ -5,17 +5,17 @@ slug: /commands/verify-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* ; *dataPath* ; *objects* ; *options* ; *method* {; *tablesArray* {; *fieldsArray*}} )<!-- END REF-->
+<!--REF #_command_.VERIFY DATA FILE.Syntax-->**VERIFY DATA FILE** ( *structurePath* : Text ; *dataPath* : Text ; *objects* : Integer ; *options* : Integer ; *method* : Text {; *tablesArray* : Integer array {; *fieldsArray* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.VERIFY DATA FILE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| structurePath | Text | &#8594;  | 検証する4Dストラクチャファイルのパス名 |
-| dataPath | Text | &#8594;  | 検証する4Dデータファイルのパス名 |
-| objects | Integer | &#8594;  | 検証するオブジェクト |
-| options | Integer | &#8594;  | 検証オプション |
-| method | Text | &#8594;  | 4Dコールバックメソッド名 |
-| tablesArray | Integer array | &#8594;  | 検証するテーブル番号 |
-| fieldsArray | 2D Integer array, 2D Integer array, 2D Real array | &#8594;  | 検証するインデックス番号 |
+| structurePath | Text | &#8594; | 検証する4Dストラクチャファイルのパス名 |
+| dataPath | Text | &#8594; | 検証する4Dデータファイルのパス名 |
+| objects | Integer | &#8594; | 検証するオブジェクト |
+| options | Integer | &#8594; | 検証オプション |
+| method | Text | &#8594; | 4Dコールバックメソッド名 |
+| tablesArray | Integer array | &#8594; | 検証するテーブル番号 |
+| fieldsArray | Integer array | &#8594; | 検証するインデックス番号 |
 
 <!-- END REF-->
 
@@ -175,7 +175,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 939 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document、error |
 
 

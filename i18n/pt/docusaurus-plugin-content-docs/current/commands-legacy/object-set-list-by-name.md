@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( {* ;} *objeto* {; *tipoLista*}; *lista* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY NAME.Syntax-->**OBJECT SET LIST BY NAME** ( * ; *objeto* : Text {; *tipoLista* : Integer}; *lista* : Text )<br/>**OBJECT SET LIST BY NAME** ( *objeto* : Field, Variable {; *tipoLista* : Integer}; *lista* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY NAME.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
-| tipoLista | Integer | &#8594;  | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
-| lista | Text | &#8594;  | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Campo ou Variável (se * é omitido) |
+| tipoLista | Integer | &#8594; | Tipo de lista: lista de seleção, lista de obrigatórios ou lista de excluídos |
+| lista | Text | &#8594; | Nome da lista a ser usada como Lista de Escolha (definida no ambiente Desenho) |
 
 <!-- END REF-->
 
@@ -99,6 +99,6 @@ Você quer eliminar a lista de associações:
 |  |  |
 | --- | --- |
 | Número do comando | 237 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

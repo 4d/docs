@@ -31,6 +31,6 @@ La commande retourne Vrai si un URL existe et Faux sinon. Cette commande permet 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1026 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

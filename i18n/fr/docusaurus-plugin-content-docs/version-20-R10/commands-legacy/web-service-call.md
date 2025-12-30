@@ -154,7 +154,7 @@ Si la requête est correctement acheminée et que le Web Service l’a acceptée
 |  |  |
 | --- | --- |
 | Numéro de commande | 778 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

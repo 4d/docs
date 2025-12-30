@@ -63,6 +63,6 @@ En el siguiente ejemplo, la variable *campNum* es igual al número del campo de 
 |  |  |
 | --- | --- |
 | Número de comando | 253 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-cdata
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *document* ; *data* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML CDATA.Syntax-->**SAX ADD XML CDATA** ( *document* : Time ; *data* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML CDATA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開かれたドキュメントへの参照 |
-| data | Blob, Text | &#8594;  | ドキュメントのCDATAタグの間に挿入する テキストまたはBLOB |
+| document | Time | &#8594; | 開かれたドキュメントへの参照 |
+| data | Blob, Text | &#8594; | ドキュメントのCDATAタグの間に挿入する テキストまたはBLOB |
 
 <!-- END REF-->
 
@@ -80,7 +80,7 @@ else
 |  |  |
 | --- | --- |
 | コマンド番号 | 856 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

@@ -41,7 +41,7 @@ El siguiente ejemplo utiliza [LOAD SET](load-set.md "LOAD SET") para cargar un c
 |  |  |
 | --- | --- |
 | Número de comando | 118 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

@@ -5,13 +5,13 @@ slug: /commands/form-set-horizontal-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimensao* {; *larguraMin* {; *larguraMax*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimensao* : Boolean {; *larguraMin* : Integer {; *larguraMax* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| redimensao | Boolean | &#8594;  | True: o formulário pode ser redimensionado horizontalmente; False - o formulário não pode ser redimensionado horizontalmente |
-| larguraMin | Integer | &#8594;  | Melhor largura de formulário permitida (píxels) |
-| larguraMax | Integer | &#8594;  | Maior largura de formulário permitida (píxels) |
+| redimensao | Boolean | &#8594; | True: o formulário pode ser redimensionado horizontalmente; False - o formulário não pode ser redimensionado horizontalmente |
+| larguraMin | Integer | &#8594; | Melhor largura de formulário permitida (píxels) |
+| larguraMax | Integer | &#8594; | Maior largura de formulário permitida (píxels) |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ Consulte o exemplo do comando [FORM SET SIZE](form-set-size.md "FORM SET SIZE").
 |  |  |
 | --- | --- |
 | Número do comando | 892 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -45,6 +45,6 @@ Lorsque vous démarrez votre base sous Windows, vous souhaitez vérifier qu'une 
 |  |  |
 | --- | --- |
 | Numéro de commande | 491 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

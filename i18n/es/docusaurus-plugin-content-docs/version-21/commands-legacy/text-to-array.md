@@ -114,6 +114,6 @@ Debe imprimir en un área de 400 píxeles de largo un texto de un máximo de 80 
 |  |  |
 | --- | --- |
 | Número de comando | 1149 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

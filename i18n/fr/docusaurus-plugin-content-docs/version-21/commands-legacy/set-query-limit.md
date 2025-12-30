@@ -69,6 +69,6 @@ Référez-vous au deuxième exemple de la commande [SET QUERY DESTINATION](set-q
 |  |  |
 | --- | --- |
 | Numéro de commande | 395 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

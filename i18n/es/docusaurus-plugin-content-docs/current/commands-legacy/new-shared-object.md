@@ -5,12 +5,12 @@ slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New shared object.Syntax-->**New shared object** {( *propiedad* ; *valor* {; *propiedad2* ; *valor2* ; ... ; *propiedadN* ; *valorN*} )} : Object<!-- END REF-->
+<!--REF #_command_.New shared object.Syntax-->**New shared object** ( *propiedad* : Text ; *valor* : any {; ...(*propiedad* : Text, *valor* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| propiedad | Text | &#8594;  | Nombre de la propiedad a crear |
-| valor | Text, Date, Boolean, Pointer, Number, Object | &#8594;  | Valor de la propiedad |
+| propiedad | Text | &#8594; | Nombre de la propiedad a crear |
+| valor | any | &#8594; | Valor de la propiedad |
 | Resultado | Object | &#8592; | Nuevo objeto compartido |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ Usted desea crear y modificar un objeto compartido. La estructura debe llamarse 
 |  |  |
 | --- | --- |
 | Número de comando | 1526 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/print-option-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* ; *tabNoms* {; *tabInfo1* {; *tabInfo2*}} )<!-- END REF-->
+<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* : Integer ; *tabNoms* : Text array {; *tabInfo1* : Integer array {; *tabInfo2* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.PRINT OPTION VALUES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| option | Integer | &#8594;  | Numéro d’option |
+| option | Integer | &#8594; | Numéro d’option |
 | tabNoms | Text array | &#8592; | Noms des valeurs |
 | tabInfo1 | Integer array | &#8592; | Valeurs 1 de l’option |
 | tabInfo2 | Integer array | &#8592; | Valeurs 2 de l’option |
@@ -60,6 +60,6 @@ Toutes les informations retournées par ces commandes sont fournies par le syst�
 |  |  |
 | --- | --- |
 | Numéro de commande | 785 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

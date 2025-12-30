@@ -5,7 +5,7 @@ slug: /commands/get-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* ; *srcVar* ; *dstVar* {; *srcVar2* ; *dstVar2* ; ... ; *srcVarN* ; *dstVarN*} )<!-- END REF-->
+<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* : Integer ; *srcVar* : Variable ; *dstVar* : Variable {; ...(*srcVar* : Variable, *dstVar* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -122,6 +122,6 @@ See the example for the *\_o\_DRAG AND DROP PROPERTIES* command.
 |  |  |
 | --- | --- |
 | Command number | 371 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

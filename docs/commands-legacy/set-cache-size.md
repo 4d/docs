@@ -5,7 +5,7 @@ slug: /commands/set-cache-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *size* {; *minFreeSize*} )<!-- END REF-->
+<!--REF #_command_.SET CACHE SIZE.Syntax-->**SET CACHE SIZE** ( *size* : Real {; *minFreeSize* : Real} )<!-- END REF-->
 <!--REF #_command_.SET CACHE SIZE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ You want to add 100 MB to the current database cache size. You can write:
 |  |  |
 | --- | --- |
 | Command number | 1399 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

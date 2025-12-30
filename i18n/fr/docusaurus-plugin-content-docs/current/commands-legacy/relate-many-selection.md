@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ de la table N (d'où part le lien) |
+| leField | Field | &#8594; | Champ de la table N (d'où part le lien) |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Prenons l'exemple d'une base de données comportant une table *\[Factures\]* don
 |  |  |
 | --- | --- |
 | Numéro de commande | 340 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||
 

@@ -97,6 +97,6 @@ You can use the *template* syntax in order to export fields from different table
 |  |  |
 | --- | --- |
 | Command number | 1234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

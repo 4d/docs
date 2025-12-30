@@ -5,11 +5,11 @@ slug: /commands/hide-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE PROCESS.Syntax-->**HIDE PROCESS** ( *processo* )<!-- END REF-->
+<!--REF #_command_.HIDE PROCESS.Syntax-->**HIDE PROCESS** ( *processo* : Integer )<!-- END REF-->
 <!--REF #_command_.HIDE PROCESS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#8594;  | Número de processo ou processo a ocultar |
+| processo | Integer | &#8594; | Número de processo ou processo a ocultar |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ O exemplo a seguir oculta todas as janelas que pertencem ao processo atual:
 |  |  |
 | --- | --- |
 | Número do comando | 324 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

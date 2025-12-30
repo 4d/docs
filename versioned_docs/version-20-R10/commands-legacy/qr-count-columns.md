@@ -39,7 +39,7 @@ The following code retrieves the column count and inserts a column to the right 
 |  |  |
 | --- | --- |
 | Command number | 764 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

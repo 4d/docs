@@ -5,13 +5,13 @@ slug: /commands/set-print-marker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *numTaquet* ; *position* {; *} )<!-- END REF-->
+<!--REF #_command_.SET PRINT MARKER.Syntax-->**SET PRINT MARKER** ( *numTaquet* : Integer ; *position* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.SET PRINT MARKER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| numTaquet | Integer | &#8594;  | Numéro de taquet |
-| position | Integer | &#8594;  | Nouvelle position du taquet |
-| * | Opérateur | &#8594;  | Si passé = déplacer les marqueurs suivants Si omis = ne pas déplacer les marqueurs suivants |
+| numTaquet | Integer | &#8594; | Numéro de taquet |
+| position | Integer | &#8594; | Nouvelle position du taquet |
+| * | Opérateur | &#8594; | Si passé = déplacer les marqueurs suivants Si omis = ne pas déplacer les marqueurs suivants |
 
 <!-- END REF-->
 
@@ -186,6 +186,6 @@ La méthode du formulaire Print\_List3 est la suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 709 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

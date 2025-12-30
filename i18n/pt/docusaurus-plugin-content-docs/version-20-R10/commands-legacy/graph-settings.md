@@ -48,6 +48,6 @@ Ver o exemplo do comando [GRAPH](graph.md "GRAPH").
 |  |  |
 | --- | --- |
 | Número do comando | 298 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/print-option-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* ; *namesArray* {; *info1Array* {; *info2Array*}} )<!-- END REF-->
+<!--REF #_command_.PRINT OPTION VALUES.Syntax-->**PRINT OPTION VALUES** ( *option* : Integer ; *namesArray* : Text array {; *info1Array* : Integer array {; *info2Array* : Integer array}} )<!-- END REF-->
 <!--REF #_command_.PRINT OPTION VALUES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | option | Integer | &#8594;  | Option number |
 | namesArray | Text array | &#8592; | Names of values |
-| info1Array | Array integer | &#8592; | Values (1) of the option |
-| info2Array | Array integer | &#8592; | Values (2) of the option |
+| info1Array | Integer array | &#8592; | Values (1) of the option |
+| info2Array | Integer array | &#8592; | Values (2) of the option |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ All the information returned by these commands is supplied by the operating syst
 |  |  |
 | --- | --- |
 | Command number | 785 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

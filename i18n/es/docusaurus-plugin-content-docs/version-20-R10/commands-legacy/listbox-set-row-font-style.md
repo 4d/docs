@@ -84,6 +84,6 @@ Después de la segunda declaración, todas las celdas de la tercera fila cambian
 |  |  |
 | --- | --- |
 | Número de comando | 1268 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

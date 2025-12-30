@@ -5,14 +5,14 @@ slug: /commands/listbox-set-footers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Syntax-->**LISTBOX SET FOOTERS HEIGHT** ( {* ;} *object* ; *height* {; *unit*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Syntax-->**LISTBOX SET FOOTERS HEIGHT** ( * ; *object* : Text ; *height* : Integer {; *unit* : Integer} )<br/>**LISTBOX SET FOOTERS HEIGHT** ( *object* : Field, Variable ; *height* : Integer {; *unit* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTERS HEIGHT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| height | Integer | &#8594;  | 行の高さ |
-| unit | Integer | &#8594;  | 高さを指定する単位:0または省略時 = ピクセル、1 = 行 |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| height | Integer | &#8594; | 行の高さ |
+| unit | Integer | &#8594; | 高さを指定する単位:0または省略時 = ピクセル、1 = 行 |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1145 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

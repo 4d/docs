@@ -5,13 +5,13 @@ slug: /commands/array-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY BLOB.Syntax-->**ARRAY BLOB** ( *nomArray* ; *tam* {; *tam2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY BLOB.Syntax-->**ARRAY BLOB** ( *nomArray* : Array ; *tam* : Integer {; *tam2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArray | Array | &#8594;  | Nombre del array |
-| tam | Integer | &#8594;  | Número de elementos del array o número de arrays si se especifica tam2 |
-| tam2 | Integer | &#8594;  | Número de los elementos de los array 2D |
+| nomArray | Array | &#8594; | Nombre del array |
+| tam | Integer | &#8594; | Número de elementos del array o número de arrays si se especifica tam2 |
+| tam2 | Integer | &#8594; | Número de los elementos de los array 2D |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos
 |  |  |
 | --- | --- |
 | Número de comando | 1222 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -63,6 +63,6 @@ Si ejecuta el código:
 |  |  |
 | --- | --- |
 | Número de comando | 1570 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -29,7 +29,7 @@ Si la conexión se cierra correctamente, la variable sistema OK toma el valor 1;
 |  |  |
 | --- | --- |
 | Número de comando | 872 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK, error |
 
 

@@ -30,6 +30,6 @@ A janela do formulário atual pode ser gerada automaticamente por um comando tal
 |  |  |
 | --- | --- |
 | Número do comando | 827 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

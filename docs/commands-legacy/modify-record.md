@@ -5,7 +5,7 @@ slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*aTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,7 +54,7 @@ Accepting the record sets the OK system variable to 1; canceling it sets the OK 
 |  |  |
 | --- | --- |
 | Command number | 57 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Forbidden on the server ||
 

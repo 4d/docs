@@ -142,6 +142,6 @@ Este exemplo ilustra o mecanismo de “atraso” de mostrar janelas em macOS:
 |  |  |
 | --- | --- |
 | Número do comando | 153 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

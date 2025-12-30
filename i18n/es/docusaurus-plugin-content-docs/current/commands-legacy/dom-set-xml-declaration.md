@@ -5,14 +5,14 @@ slug: /commands/dom-set-xml-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *elementRef* ; *codificacion* {; *autonomo* {; *indentacion*}} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML DECLARATION.Syntax-->**DOM SET XML DECLARATION** ( *elementRef* : Text ; *codificacion* : Text {; *autonomo* : Boolean {; *indentacion* : Boolean}} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML DECLARATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | Referencia del elemento XML |
-| codificacion | Text | &#8594;  | Conjunto de caracteres del documento XML |
-| autonomo | Boolean | &#8594;  | True = el documento es autónomo False (por defecto) = el documento no es autónomo |
-| indentacion | Boolean | &#8594;  | ** Obsoleto no utilizar ** |
+| elementRef | Text | &#8594; | Referencia del elemento XML |
+| codificacion | Text | &#8594; | Conjunto de caracteres del documento XML |
+| autonomo | Boolean | &#8594; | True = el documento es autónomo False (por defecto) = el documento no es autónomo |
+| indentacion | Boolean | &#8594; | ** Obsoleto no utilizar ** |
 
 <!-- END REF-->
 
@@ -43,6 +43,6 @@ El siguiente ejemplo define la codificación a utilizar y la opción autónomo d
 |  |  |
 | --- | --- |
 | Número de comando | 859 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

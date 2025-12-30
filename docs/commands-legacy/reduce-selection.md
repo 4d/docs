@@ -5,7 +5,7 @@ slug: /commands/reduce-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* ;} *number* )<!-- END REF-->
+<!--REF #_command_.REDUCE SELECTION.Syntax-->**REDUCE SELECTION** ( {*aTable* : Table ;} *number* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ The following example first finds the correct statistics for a worldwide contest
 |  |  |
 | --- | --- |
 | Command number | 351 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

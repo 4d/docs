@@ -131,6 +131,6 @@ Demande d’ajout d’enregistrement en JSON dans une base distante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1158 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

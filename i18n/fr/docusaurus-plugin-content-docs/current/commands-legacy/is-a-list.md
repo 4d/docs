@@ -5,11 +5,11 @@ slug: /commands/is-a-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *liste* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is a list.Syntax-->**Is a list** ( *liste* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is a list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| liste | Integer | &#8594;  | Référence de la liste à tester |
+| liste | Integer | &#8594; | Référence de la liste à tester |
 | Résultat | Boolean | &#8592; | Vrai si liste est une liste hiérarchique Faux si liste n'est pas une liste hiérarchique |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ Reportez-vous aux exemples de la commande *\_o\_DRAG AND DROP PROPERTIES*.
 |  |  |
 | --- | --- |
 | Numéro de commande | 621 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

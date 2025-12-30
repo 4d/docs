@@ -105,7 +105,7 @@ Si l'intégration s'effectue correctement, la variable système OK prend la vale
 |  |  |
 | --- | --- |
 | Numéro de commande | 1312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

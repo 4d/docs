@@ -100,7 +100,7 @@
     "description": "The label for category Cache Management in sidebar docs"
   },
   "sidebar.docs.category.Collections": {
-    "message": "Collections",
+    "message": "Colecciones",
     "description": "The label for category Collections in sidebar docs"
   },
   "sidebar.docs.category.Communications": {

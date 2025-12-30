@@ -5,12 +5,12 @@ slug: /commands/object-set-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjeto* ; *valor* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VALUE.Syntax-->**OBJECT SET VALUE** ( *nomObjeto* : Text ; *valor* : any )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VALUE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomObjeto | Text | &#8594;  | Nome de objeto |
-| valor | any | &#8594;  | Novo valor para a fonte de dados do objeto formulário |
+| nomObjeto | Text | &#8594; | Nome de objeto |
+| valor | any | &#8594; | Novo valor para a fonte de dados do objeto formulário |
 
 <!-- END REF-->
 
@@ -45,6 +45,6 @@ Se quiser o valor da data source de um objeto formulário, obtenha seu nome e es
 |  |  |
 | --- | --- |
 | Número do comando | 1742 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

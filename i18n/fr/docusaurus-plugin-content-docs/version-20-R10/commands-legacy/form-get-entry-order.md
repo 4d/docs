@@ -56,6 +56,6 @@ Vous voulez exclure certains objets de l'ordre de saisie :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1469 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

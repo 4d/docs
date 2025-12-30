@@ -36,6 +36,6 @@ Siempre y cuando se haya definido una tabla por defecto, la siguiente línea de 
 |  |  |
 | --- | --- |
 | Número de comando | 363 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

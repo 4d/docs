@@ -29,7 +29,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 263 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

@@ -79,7 +79,7 @@ Para um exemplo de computar um atributo campo objeto, veja o exemplo 3 da descri
 |  |  |
 | --- | --- |
 | Número do comando | 1 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

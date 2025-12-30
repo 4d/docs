@@ -5,11 +5,11 @@ slug: /commands/picture-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *imagen* ) : Integer<!-- END REF-->
+<!--REF #_command_.Picture size.Syntax-->**Picture size** ( *imagen* : Picture ) : Integer<!-- END REF-->
 <!--REF #_command_.Picture size.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| imagen | Picture | &#8594;  | Imagen para la cual devolver el tamaño en bytes |
+| imagen | Picture | &#8594; | Imagen para la cual devolver el tamaño en bytes |
 | Resultado | Integer | &#8592; | Tamaño en bytes de la imagen |
 
 <!-- END REF-->
@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 356 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

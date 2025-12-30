@@ -67,6 +67,6 @@ Para esto, es suficiente escribir:
 |  |  |
 | --- | --- |
 | Número de comando | 1097 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

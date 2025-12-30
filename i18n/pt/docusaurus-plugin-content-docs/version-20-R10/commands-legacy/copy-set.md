@@ -45,6 +45,6 @@ O seguinte exemplo em Cliente/Servidor, copia o conjunto processo "*ConjuntoA*",
 |  |  |
 | --- | --- |
 | Número do comando | 600 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

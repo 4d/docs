@@ -5,7 +5,7 @@ slug: /commands/start-monitoring-activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duration* {; *source*} )<!-- END REF-->
+<!--REF #_command_.START MONITORING ACTIVITY.Syntax-->**START MONITORING ACTIVITY** ( *duration* : Real {; *source* : Integer} )<!-- END REF-->
 <!--REF #_command_.START MONITORING ACTIVITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -98,6 +98,6 @@ You want to start/stop monitoring and review 4D data and debug activities lastin
 |  |  |
 | --- | --- |
 | Command number | 1712 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

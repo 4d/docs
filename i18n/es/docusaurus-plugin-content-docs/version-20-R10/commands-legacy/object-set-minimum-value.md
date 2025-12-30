@@ -35,6 +35,6 @@ En *valorMinimo*, pase el nuevo valor mínimo a asignar al objeto para el proces
 |  |  |
 | --- | --- |
 | Número de comando | 1242 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

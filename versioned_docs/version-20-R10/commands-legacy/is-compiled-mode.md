@@ -47,6 +47,6 @@ In one of your routines, you include debugging code useful only when you are run
 |  |  |
 | --- | --- |
 | Command number | 492 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -43,6 +43,6 @@ Para uma completa descrição da aparência, ícones de knots, altura de linha m
 |  |  |
 | --- | --- |
 | Número do comando | 632 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

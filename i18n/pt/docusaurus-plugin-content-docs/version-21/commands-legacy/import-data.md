@@ -52,7 +52,7 @@ Se o usuário clicar em **Cancelar** na caixa de diálogo de salvar arquivos ou 
 |  |  |
 | --- | --- |
 | Número do comando | 665 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

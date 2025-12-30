@@ -5,7 +5,7 @@ slug: /commands/get-text-resource
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resID* {; *resFile*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get text resource.Syntax-->**Get text resource** ( *resID* : Integer {; *resFile* : Time} ) : Text<!-- END REF-->
 <!--REF #_command_.Get text resource.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ If the resource is found, OK is set to 1\. Otherwise, it is set to 0 (zero).
 |  |  |
 | --- | --- |
 | Command number | 504 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -145,6 +145,6 @@ Ver el ejemplo de **[START MONITORING ACTIVITY](start-monitoring-activity.md)**
 |  |  |
 | --- | --- |
 | Número de comando | 1713 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTabela* ; *objetoJson* )<!-- END REF-->
+<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTabela* ; *objetoJson* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Ponteiro a tabela 4D |
-| objetoJson | Text | &#8594;  | Cadeia em JSON |
+| aTable | Table | &#8594; | Ponteiro a tabela 4D |
+| objetoJson | Text | &#8594; | Cadeia em JSON |
 
 <!-- END REF-->
 
@@ -74,6 +74,6 @@ Uso do comando **JSON TO SELECTION** para adicionar os registros a tabela \[Comp
 |  |  |
 | --- | --- |
 | Número do comando | 1235 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

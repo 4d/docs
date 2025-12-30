@@ -5,13 +5,13 @@ slug: /commands/object-set-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( {* ;} *objeto* ; *titulo* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TITLE.Syntax-->**OBJECT SET TITLE** ( * ; *objeto* : Text ; *titulo* : Text )<br/>**OBJECT SET TITLE** ( *objeto* : Field, Variable ; *titulo* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TITLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
-| titulo | Text | &#8594;  | Novo título do objeto |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se* é especificado) ou Variável (se * é omitido) |
+| titulo | Text | &#8594; | Novo título do objeto |
 
 <!-- END REF-->
 
@@ -72,6 +72,6 @@ Você quer inserir os títulos em duas linhas:
 |  |  |
 | --- | --- |
 | Número do comando | 194 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

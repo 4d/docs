@@ -104,6 +104,6 @@ Usted desea insertar una columna de forma dinámica en un array de tipo list box
 |  |  |
 | --- | --- |
 | Número de comando | 829 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

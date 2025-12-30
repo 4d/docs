@@ -5,12 +5,12 @@ slug: /commands/wa-get-page-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get page title.Syntax-->**WA Get page title** ( * ; *objeto* : Text ) : Text<br/>**WA Get page title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get page title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
 | Resultado | Text | &#8592; | Título de la página actual |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Este comando devuelve una cadena vacía si no hay título disponible para el URL
 |  |  |
 | --- | --- |
 | Número de comando | 1036 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

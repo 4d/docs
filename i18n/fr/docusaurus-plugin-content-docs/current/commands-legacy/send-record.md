@@ -5,11 +5,11 @@ slug: /commands/send-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.SEND RECORD.Syntax-->**SEND RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.SEND RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle envoyer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de laquelle envoyer l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ Reportez-vous à l'exemple de la commande [RECEIVE RECORD](receive-record.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 78 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

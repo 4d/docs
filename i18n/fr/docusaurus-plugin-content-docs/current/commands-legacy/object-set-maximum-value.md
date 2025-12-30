@@ -5,13 +5,13 @@ slug: /commands/object-set-maximum-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( {* ;} *objet* ; *valeurMaxi* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET MAXIMUM VALUE.Syntax-->**OBJECT SET MAXIMUM VALUE** ( * ; *objet* : Text ; *valeurMaxi* : Date, Time, Real )<br/>**OBJECT SET MAXIMUM VALUE** ( *objet* : Field, Variable ; *valeurMaxi* : Date, Time, Real )<!-- END REF-->
 <!--REF #_command_.OBJECT SET MAXIMUM VALUE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| valeurMaxi | Date, Time, Number | &#8594;  | Valeur maximale pour l’objet |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| valeurMaxi | Date, Time, Real | &#8594; | Valeur maximale pour l’objet |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ Passez dans *valeurMaxi* la nouvelle valeur maximum à affecter à l’*objet* p
 |  |  |
 | --- | --- |
 | Numéro de commande | 1244 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

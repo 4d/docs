@@ -31,6 +31,6 @@ Se a imagem nao tiver um nome por defeito, o comando devolve uma cadeia vazia.
 |  |  |
 | --- | --- |
 | Número do comando | 1171 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

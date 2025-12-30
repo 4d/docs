@@ -73,6 +73,6 @@ Mostra a seguinte caixa de diálogo de alerta (em Windows):
 |  |  |
 | --- | --- |
 | Número do comando | 41 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

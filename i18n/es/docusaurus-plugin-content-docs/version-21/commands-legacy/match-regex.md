@@ -120,7 +120,7 @@ En caso de error, el comando genera un error que puede interceptar vía un méto
 |  |  |
 | --- | --- |
 | Número de comando | 1019 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/set-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *title* {; *window*} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW TITLE.Syntax-->**SET WINDOW TITLE** ( *title* : Text {; *window* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW TITLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ While performing data entry in a form, you click on a button that executes a len
 |  |  |
 | --- | --- |
 | Command number | 213 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

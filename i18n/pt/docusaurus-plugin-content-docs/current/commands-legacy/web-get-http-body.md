@@ -5,7 +5,7 @@ slug: /commands/web-get-http-body
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corpo* )<!-- END REF-->
+<!--REF #_command_.WEB GET HTTP BODY.Syntax-->**WEB GET HTTP BODY** ( *corpo* : Blob, Text )<!-- END REF-->
 <!--REF #_command_.WEB GET HTTP BODY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ Quando o formulário é enviado ao servidor web, a variável $textoPetição rec
 |  |  |
 | --- | --- |
 | Número do comando | 814 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

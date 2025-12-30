@@ -5,13 +5,13 @@ slug: /commands/form-set-horizontal-resizing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimension* {; *largeurMini* {; *largeurMaxi*}} )<!-- END REF-->
+<!--REF #_command_.FORM SET HORIZONTAL RESIZING.Syntax-->**FORM SET HORIZONTAL RESIZING** ( *redimension* : Boolean {; *largeurMini* : Integer {; *largeurMaxi* : Integer}} )<!-- END REF-->
 <!--REF #_command_.FORM SET HORIZONTAL RESIZING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| redimension | Boolean | &#8594;  | Vrai : le formulaire est redimensionnable horizontalement Faux : le formulaire n’est pas redimensionnable horizontalement |
-| largeurMini | Integer | &#8594;  | Largeur minimale du formulaire (pixels) |
-| largeurMaxi | Integer | &#8594;  | Largeur maximale du formulaire (pixels) |
+| redimension | Boolean | &#8594; | Vrai : le formulaire est redimensionnable horizontalement Faux : le formulaire n’est pas redimensionnable horizontalement |
+| largeurMini | Integer | &#8594; | Largeur minimale du formulaire (pixels) |
+| largeurMaxi | Integer | &#8594; | Largeur maximale du formulaire (pixels) |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ Reportez-vous à l'exemple de la commande [FORM SET SIZE](form-set-size.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 892 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

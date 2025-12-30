@@ -5,7 +5,7 @@ slug: /commands/dom-export-to-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* ; *filePath* )<!-- END REF-->
+<!--REF #_command_.DOM EXPORT TO FILE.Syntax-->**DOM EXPORT TO FILE** ( *elementRef* : Text ; *filePath* : Text )<!-- END REF-->
 <!--REF #_command_.DOM EXPORT TO FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ An error is generated when:
 |  |  |
 | --- | --- |
 | Command number | 862 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

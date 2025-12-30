@@ -5,12 +5,12 @@ slug: /commands/adjust-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *campo* ; *prioridad* )<!-- END REF-->
+<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *campo* : Field ; *prioridad* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo cuyo valor de prioridad de índice(s) debe ajustarse |
-| prioridad | Integer | &#8594;  | Valor de prioridad de la caché para los índices de campo |
+| campo | Field | &#8594; | Campo cuyo valor de prioridad de índice(s) debe ajustarse |
+| prioridad | Integer | &#8594; | Valor de prioridad de la caché para los índices de campo |
 
 <!-- END REF-->
 
@@ -58,6 +58,6 @@ Usted desea cambiar temporalmente la prioridad de la caché para el índice de c
 |  |  |
 | --- | --- |
 | Número de comando | 1430 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

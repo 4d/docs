@@ -5,12 +5,12 @@ slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* {; *queryFormula*} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* : Table {; *queryFormula* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードセレクションを求めるテーブル |
-| queryFormula | Boolean | &#8594;  | クエリフォーミュラ |
+| aTable | Table | &#8594; | レコードセレクションを求めるテーブル |
+| queryFormula | Boolean | &#8594; | クエリフォーミュラ |
 
 <!-- END REF-->
 
@@ -36,7 +36,7 @@ QUERY SELECTION BY FORMULAは[QUERY BY FORMULA](query-by-formula.md "QUERY BY FO
 |  |  |
 | --- | --- |
 | コマンド番号 | 207 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||
 

@@ -5,11 +5,11 @@ slug: /commands/on-mobile-app-authentication-database-method
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.On Mobile App Authentication database method.Syntax-->**Método base On Mobile App Authentication** ( *infoMovil* ; *estado* )<!-- END REF-->
+<!--REF #_command_.On Mobile App Authentication database method.Syntax-->**Método base On Mobile App Authentication** ( *infoMovil* : Object ; *estado* : Object )<!-- END REF-->
 <!--REF #_command_.On Mobile App Authentication database method.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| infoMovil | Object | &#8594;  | Información pasada por la aplicación móvil |
+| infoMovil | Object | &#8594; | Información pasada por la aplicación móvil |
 | estado | Object | &#8592; | Estado de la autenticación |
 
 <!-- END REF-->

@@ -5,14 +5,14 @@ slug: /commands/listbox-select-row
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW**  ( {* ;} *objeto* ; *posiçao* {; *açao*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROW.Syntax-->**LISTBOX SELECT ROW**  ( * ; *objeto* : Text ; *posiçao* : Integer {; *açao* : Integer} )<br/>**LISTBOX SELECT ROW**  ( *objeto* : Field, Variable ; *posiçao* : Integer {; *açao* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| posiçao | Integer | &#8594;  | Número da fila a selecionar |
-| açao | Integer | &#8594;  | Ação de seleção |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| posiçao | Integer | &#8594; | Número da fila a selecionar |
+| açao | Integer | &#8594; | Ação de seleção |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ Depois da execução do método, os arrays são sincronizados: se o array fonte 
 |  |  |
 | --- | --- |
 | Número do comando | 912 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

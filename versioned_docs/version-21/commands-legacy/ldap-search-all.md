@@ -121,6 +121,6 @@ These examples illustrate the use of the *attributesAsArray* parameter:
 |  |  |
 | --- | --- |
 | Command number | 1329 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

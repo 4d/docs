@@ -96,6 +96,6 @@ paramRef:=Dynamic pop up menu($refMainContextMenu)
 |  |  |
 | --- | --- |
 | Numéro de commande | 1006 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

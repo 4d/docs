@@ -192,6 +192,6 @@ El método de formulario List\_Imp3 es el siguiente:
 |  |  |
 | --- | --- |
 | Número do comando | 709 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

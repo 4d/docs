@@ -5,13 +5,13 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( {* ;} *objeto* ; *estiloBorde* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *objeto* : Text ; *estiloBorde* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *objeto* : Field, Variable ; *estiloBorde* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
-| estiloBorde | Integer | &#8594;  | Estilo de linha de borde |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (cadeia) Se omitido, objeto é um campo ou uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou<br/>Campo ou variável (se * for omitido) |
+| estiloBorde | Integer | &#8594; | Estilo de linha de borde |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ No parâmetro *estiloBorde*, passe o valor do estilo da linha fronteira que dese
 |  |  |
 | --- | --- |
 | Número do comando | 1262 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

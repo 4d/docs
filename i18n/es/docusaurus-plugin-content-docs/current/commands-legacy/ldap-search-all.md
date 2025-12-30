@@ -5,16 +5,16 @@ slug: /commands/ldap-search-all
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* ; *arrResult* ; *filtro* {; *alcance* {; *atributos* {; *atributosenArray*}}} )<!-- END REF-->
+<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *arrResult* : Object array ; *filtro* : Text {; *alcance* : Text {; *atributos* : Text array {; *atributosenArray* : Boolean array}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | Distinguished Name del elemento raíz donde iniciar la búsqueda |
+| dnRootEntry | Text | &#8594; | Distinguished Name del elemento raíz donde iniciar la búsqueda |
 | arrResult | Object array | &#8592; | Resultado de la búsqueda |
-| filtro | Text | &#8594;  | Filtro de búsqueda LDAP |
-| alcance | Text | &#8594;  | Alcance de la búsqueda: "base" (por defecto), "one", o "sub" |
-| atributos | Text array | &#8594;  | Atributos a recuperar |
-| atributosenArray | Boolean array | &#8594;  | True = forzar el retorno de los atributos como array; false = forzar el retorno de los atributos como variables simples |
+| filtro | Text | &#8594; | Filtro de búsqueda LDAP |
+| alcance | Text | &#8594; | Alcance de la búsqueda: "base" (por defecto), "one", o "sub" |
+| atributos | Text array | &#8594; | Atributos a recuperar |
+| atributosenArray | Boolean array | &#8594; | True = forzar el retorno de los atributos como array; false = forzar el retorno de los atributos como variables simples |
 
 <!-- END REF-->
 
@@ -121,6 +121,6 @@ Estos ejemplos ilustran el uso del parámetro *atributosEnArray*:
 |  |  |
 | --- | --- |
 | Número de comando | 1329 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

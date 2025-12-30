@@ -36,6 +36,6 @@ Em *corH* e *corV*, o comando devolve os valores das cores RGB. O formato de cor
 |  |  |
 | --- | --- |
 | Número do comando | 1200 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

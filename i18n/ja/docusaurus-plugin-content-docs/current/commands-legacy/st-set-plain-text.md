@@ -5,15 +5,15 @@ slug: /commands/st-set-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( {* ;} *object* ; *newText* {; *startSel* {; *endSel*}} )<!-- END REF-->
+<!--REF #_command_.ST SET PLAIN TEXT.Syntax-->**ST SET PLAIN TEXT** ( * ; *object* : Text ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST SET PLAIN TEXT** ( *object* : Field, Variable ; *newText* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST SET PLAIN TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時、objectはオブジェクト名 (文字列)。省略時、オブジェクトは変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名 (*指定時)、または変数/フィールド (*省略時) |
-| newText | Text | &#8594;  | 挿入するテキスト |
-| startSel | Integer | &#8594;  | 選択の開始位置 |
-| endSel | Integer | &#8594;  | 選択の終了位置 |
+| * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列)。省略時、オブジェクトは変数またはフィールド |
+| object | any | &#8594; | オブジェクト名 (*指定時)、または変数/フィールド (*省略時) |
+| newText | Text | &#8594; | 挿入するテキスト |
+| startSel | Integer | &#8594; | 選択の開始位置 |
+| endSel | Integer | &#8594; | 選択の終了位置 |
 
 <!-- END REF-->
 
@@ -98,7 +98,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1136 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

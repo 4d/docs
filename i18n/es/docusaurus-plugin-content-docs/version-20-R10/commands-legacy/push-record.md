@@ -39,6 +39,6 @@ El siguiente ejemplo apila el registro de un cliente:
 |  |  |
 | --- | --- |
 | Número de comando | 176 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

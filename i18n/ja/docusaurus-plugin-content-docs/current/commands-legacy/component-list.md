@@ -5,7 +5,7 @@ slug: /commands/component-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *componentsArray* )<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *componentsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1001 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

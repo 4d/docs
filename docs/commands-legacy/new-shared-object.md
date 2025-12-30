@@ -5,12 +5,12 @@ slug: /commands/new-shared-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.New shared object.Syntax-->**New shared object** {( *property* ; *value* {; *property2* ; *value2* ; ... ; *propertyN* ; *valueN*} )} : Object<!-- END REF-->
+<!--REF #_command_.New shared object.Syntax-->**New shared object** ( *property* : Text ; *value* : any {; ...(*property* : Text, *value* : any)} ) : Object<!-- END REF-->
 <!--REF #_command_.New shared object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | property | Text | &#8594;  | Name of property to create |
-| value | Text, Date, Boolean, Pointer, Number, Object | &#8594;  | Value of property |
+| value | any | &#8594;  | Value of property |
 | Function result | Object | &#8592; | New shared object |
 
 <!-- END REF-->
@@ -73,6 +73,6 @@ You want to create and modify a shared object. The structure must be called for 
 |  |  |
 | --- | --- |
 | Command number | 1526 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

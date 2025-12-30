@@ -5,12 +5,12 @@ slug: /commands/show-on-disk
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *cheminAccès* {; *} )<!-- END REF-->
+<!--REF #_command_.SHOW ON DISK.Syntax-->**SHOW ON DISK** ( *cheminAccès* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.SHOW ON DISK.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Chemin d’accès de l’élément à montrer |
-| * | Opérateur | &#8594;  | Si l’élément est un dossier, montrer son contenu |
+| cheminAccès | Text | &#8594; | Chemin d’accès de l’élément à montrer |
+| * | Opérateur | &#8594; | Si l’élément est un dossier, montrer son contenu |
 
 <!-- END REF-->
 
@@ -53,7 +53,7 @@ La variable système OK prend la valeur 1 si la commande est correctement exécu
 |  |  |
 | --- | --- |
 | Numéro de commande | 922 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

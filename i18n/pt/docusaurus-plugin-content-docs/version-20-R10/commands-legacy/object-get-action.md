@@ -49,6 +49,6 @@ Se quiser associar a ação "Cancelar" com todos os objetos no formulário que a
 |  |  |
 | --- | --- |
 | Número do comando | 1457 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

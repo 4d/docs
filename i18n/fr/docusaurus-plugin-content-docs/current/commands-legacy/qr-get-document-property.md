@@ -5,12 +5,12 @@ slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *zone* ; *propriété* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *zone* : Integer ; *propriété* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| propriété | Integer | &#8594;  | 1=Dialogue d'impression, 2=Unité du document |
+| zone | Integer | &#8594; | Référence de la zone |
+| propriété | Integer | &#8594; | 1=Dialogue d'impression, 2=Unité du document |
 | Résultat | Integer | &#8592; | Valeur de la propriété |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Si la valeur du paramètre *propriété* est incorrecte, l’erreur -9852 est g�
 |  |  |
 | --- | --- |
 | Numéro de commande | 773 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

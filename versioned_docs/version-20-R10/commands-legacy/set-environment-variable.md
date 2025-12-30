@@ -48,6 +48,6 @@ Refer to examples of the [LAUNCH EXTERNAL PROCESS](launch-external-process.md) c
 |  |  |
 | --- | --- |
 | Command number | 812 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

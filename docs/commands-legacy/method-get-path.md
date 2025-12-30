@@ -5,7 +5,7 @@ slug: /commands/method-get-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *methodType* {; *aTable*}{; *objectName*{; *formObjectName*}}{; *} ) : Text<!-- END REF-->
+<!--REF #_command_.METHOD Get path.Syntax-->**METHOD Get path** ( *methodType* : Integer {; *aTable* : Table}{; *objectName* : Text{; *formObjectName* : Text}}{; *} ) : Text<!-- END REF-->
 <!--REF #_command_.METHOD Get path.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -70,6 +70,6 @@ If the command is executed from a component, it returns by default the paths of 
 |  |  |
 | --- | --- |
 | Command number | 1164 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/get-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *tabTitresMenus* ; *tabRefsMenus* )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* : Integer, Text ; *tabTitresMenus* : Text array ; *tabRefsMenus* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
+| menu | Integer, Text | &#8594; | Référence de menu ou Numéro de menu |
 | tabTitresMenus | Text array | &#8592; | Tableau des libellés du menu |
 | tabRefsMenus | Text array | &#8592; | Tableau des références du menu |
 
@@ -40,6 +40,6 @@ Vous souhaitez connaître le contenu de la barre de menus du process courant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 977 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

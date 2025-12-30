@@ -5,7 +5,7 @@ slug: /commands/get-printable-area
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *altura* {; *largura*} )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE AREA.Syntax-->**GET PRINTABLE AREA** ( *altura* : Integer {; *largura* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE AREA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ Para saber o tamanho total da página, pode:
 |  |  |
 | --- | --- |
 | Número do comando | 703 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

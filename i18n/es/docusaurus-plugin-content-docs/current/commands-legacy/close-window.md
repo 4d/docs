@@ -5,11 +5,11 @@ slug: /commands/close-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** {( *ventana* )}<!-- END REF-->
+<!--REF #_command_.CLOSE WINDOW.Syntax-->**CLOSE WINDOW** ({ *ventana* : Integer })<!-- END REF-->
 <!--REF #_command_.CLOSE WINDOW.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ventana | Integer | &#8594;  | Número de referencia, o Ventana del primer plano del proceso, si este parámetro se omite |
+| ventana | Integer | &#8594; | Número de referencia, o Ventana del primer plano del proceso, si este parámetro se omite |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ El siguiente ejemplo abre una ventana formulario y crea nuevos registros con el 
 |  |  |
 | --- | --- |
 | Número de comando | 154 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

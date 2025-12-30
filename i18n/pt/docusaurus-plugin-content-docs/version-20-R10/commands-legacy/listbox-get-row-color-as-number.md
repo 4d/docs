@@ -64,6 +64,6 @@ Given the following list box:
 |  |  |
 | --- | --- |
 | Número do comando | 1271 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

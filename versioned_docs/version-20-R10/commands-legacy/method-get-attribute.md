@@ -45,6 +45,6 @@ The command returns **True** when an attribute is selected and **False** if it i
 |  |  |
 | --- | --- |
 | Command number | 1169 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/form-set-output
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*laTable* ;} *formulaire* {; *formUtilisateur*} )<!-- END REF-->
+<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*laTable* : Table ;} *formulaire* : Text, Object {; *formUtilisateur* : Text} )<!-- END REF-->
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table pour laquelle définir le formulaire sortie ou Table par défaut si ce paramètre est omis |
-| formulaire | Text, Object | &#8594;  | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
-| formUtilisateur | Text | &#8594;  | Nom du formulaire utilisateur à utiliser |
+| laTable | Table | &#8594; | Table pour laquelle définir le formulaire sortie ou Table par défaut si ce paramètre est omis |
+| formulaire | Text, Object | &#8594; | Nom du formulaire table (chaîne), ouChemin POSIX (chaîne) d'un fichier .json décrivant le formulaire, ouObjet décrivant le formulaire |
+| formUtilisateur | Text | &#8594; | Nom du formulaire utilisateur à utiliser |
 
 <!-- END REF-->
 
@@ -91,6 +91,6 @@ L'exemple suivant utilise un formulaire décrit dans un fichier .json :
 |  |  |
 | --- | --- |
 | Numéro de commande | 54 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

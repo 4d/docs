@@ -5,7 +5,7 @@ slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *pathname* ; *directories* )<!-- END REF-->
+<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *pathname* : Text ; *directories* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,7 +30,7 @@ If there are no folders at the specified location, the command returns an empty 
 |  |  |
 | --- | --- |
 | Command number | 473 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

@@ -30,6 +30,6 @@ Este comando permite detectar las eventuales eliminaciones de tablas, que crean 
 |  |  |
 | --- | --- |
 | Número de comando | 999 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

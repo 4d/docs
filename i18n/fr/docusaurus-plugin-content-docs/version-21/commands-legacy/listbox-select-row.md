@@ -58,6 +58,6 @@ A l’issue de l’exécution de la méthode, les tableaux sont synchronisés : 
 |  |  |
 | --- | --- |
 | Numéro de commande | 912 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

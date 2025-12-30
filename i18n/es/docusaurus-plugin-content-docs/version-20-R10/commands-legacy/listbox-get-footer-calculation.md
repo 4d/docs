@@ -36,6 +36,6 @@ Puede comparar el valor devuelto con las constantes del tema *List box cálculo 
 |  |  |
 | --- | --- |
 | Número de comando | 1150 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

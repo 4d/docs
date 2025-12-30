@@ -5,12 +5,12 @@ slug: /commands/sql-set-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *objeto* ; *tipoParam* )<!-- END REF-->
+<!--REF #_command_.SQL SET PARAMETER.Syntax-->**SQL SET PARAMETER** ( *objeto* : Object ; *tipoParam* : Integer )<!-- END REF-->
 <!--REF #_command_.SQL SET PARAMETER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| objeto | Object | &#8594;  | Objeto 4D a utilizar (variable, array o campo) |
-| tipoParam | Integer | &#8594;  | Tipo de parámetro |
+| objeto | Object | &#8594; | Objeto 4D a utilizar (variable, array o campo) |
+| tipoParam | Integer | &#8594; | Tipo de parámetro |
 
 <!-- END REF-->
 
@@ -82,7 +82,7 @@ Si el comando se ha ejecutado correctamente, la variable sistema OK devuelve 1\.
 |  |  |
 | --- | --- |
 | Número de comando | 823 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

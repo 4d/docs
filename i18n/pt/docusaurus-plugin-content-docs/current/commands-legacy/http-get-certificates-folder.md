@@ -44,6 +44,6 @@ Você quer mudar temporalmente a pasta de certificados:
 |  |  |
 | --- | --- |
 | Número do comando | 1307 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

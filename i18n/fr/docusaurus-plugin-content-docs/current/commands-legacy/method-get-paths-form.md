@@ -5,16 +5,15 @@ slug: /commands/method-get-paths-form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*laTable* ;} *tabChemins* {; *filtre*}{; *marqueur*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET PATHS FORM.Syntax-->**METHOD GET PATHS FORM** ( {*laTable* : Table ;} *tabChemins* : Text array {; *filtre* : Text}{; *marqueur* : Real}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET PATHS FORM.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Référence de table |
+| laTable | Table | &#8594; | Référence de table |
 | tabChemins | Text array | &#8592; | Tableau des chemins et noms des méthodes |
-| filtre | Text | &#8594;  | Filtrage des noms |
-| marqueur | Real | &#8594;  | Valeur minimum de marqueur |
-| &#8592; | Nouvelle valeur courante |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| filtre | Text | &#8594; | Filtrage des noms |
+| marqueur | Real | &#8596; | *in:* Minimum value of stamp<br/>*out:* New current value |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 
@@ -74,6 +73,6 @@ Liste de tous les objets des formulaires "input" de la table \[Emp\] à partir d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1168 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

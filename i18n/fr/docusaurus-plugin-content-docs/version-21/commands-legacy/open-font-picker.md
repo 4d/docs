@@ -48,6 +48,6 @@ Le code du bouton est le suivant :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1303 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

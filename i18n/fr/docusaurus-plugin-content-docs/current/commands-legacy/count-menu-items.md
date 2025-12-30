@@ -5,12 +5,12 @@ slug: /commands/count-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* {; *process*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Count menu items.Syntax-->**Count menu items** ( *menu* : Integer, Text {; *process* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menu items.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Numéro de menu ou Référence de menu |
-| process | Integer | &#8594;  | Numéro de référence de process |
+| menu | Integer, Text | &#8594; | Numéro de menu ou Référence de menu |
+| process | Integer | &#8594; | Numéro de référence de process |
 | Résultat | Integer | &#8592; | Nombre de lignes du menu |
 
 <!-- END REF-->
@@ -32,7 +32,7 @@ Si vous omettez le paramètre *process*, **Count menu items** s'applique à la b
 |  |  |
 | --- | --- |
 | Numéro de commande | 405 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

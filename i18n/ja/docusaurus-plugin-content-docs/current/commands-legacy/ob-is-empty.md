@@ -5,11 +5,11 @@ slug: /commands/ob-is-empty
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is empty.Syntax-->**OB Is empty** ( *object* : Object, Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is empty.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | 構造化されたオブジェクト |
+| object | Object, Object | &#8594; | 構造化されたオブジェクト |
 | 戻り値 | Boolean | &#8592; | object が空か未定義のときには True 、それ以外のときには False |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1297 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

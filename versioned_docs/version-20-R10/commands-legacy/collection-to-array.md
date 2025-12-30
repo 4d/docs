@@ -71,6 +71,6 @@ You want to copy different property values from a collection of objects in diffe
 |  |  |
 | --- | --- |
 | Command number | 1562 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

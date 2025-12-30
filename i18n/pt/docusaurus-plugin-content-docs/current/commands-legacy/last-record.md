@@ -5,11 +5,11 @@ slug: /commands/last-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual mover ao último registro selecionado, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual mover ao último registro selecionado, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ O exemplo a seguir designa o último registro da tabela \[Pessoas\] como registr
 |  |  |
 | --- | --- |
 | Número do comando | 200 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

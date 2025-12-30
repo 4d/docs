@@ -5,12 +5,12 @@ slug: /commands/longint-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *longint* ; *blob* ; *byteOrder* {; offset } )<br/>**LONGINT TO BLOB** ( *longint* ; *blob* ; *byteOrder* {; *} )<!-- END REF-->
+<!--REF #_command_.LONGINT TO BLOB.Syntax-->**LONGINT TO BLOB** ( *longint* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; offset } )<br/>**LONGINT TO BLOB** ( *longint* : Integer ; *blob* : Blob ; *byteOrder* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.LONGINT TO BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | longInt | Integer | &#8594;  | Long Integer value to write into the BLOB |
-| blob | Blob | &#8594;  | BLOB to receive the Long Integer value |
+| Blob | Blob | &#8594;  | BLOB to receive the Long Integer value |
 | byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset &#124; * | Variable, Operator | &#8596;  | Offset within the BLOB (expressed in bytes) or * to append the value |
 |||| New offset after writing if not * |
@@ -120,6 +120,6 @@ After executing this code:
 |  |  |
 | --- | --- |
 | Command number | 550 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

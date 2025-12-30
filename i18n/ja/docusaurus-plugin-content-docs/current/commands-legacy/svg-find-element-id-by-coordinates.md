@@ -5,14 +5,14 @@ slug: /commands/svg-find-element-id-by-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *pictureObject* ; *x* ; *y* ) : Text<!-- END REF-->
+<!--REF #_command_.SVG Find element ID by coordinates.Syntax-->**SVG Find element ID by coordinates** ( {* ;} *pictureObject* : Picture ; *x* : Integer ; *y* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.SVG Find element ID by coordinates.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時、pictureObjectはオブジェクト名 (文字列) 省略時、pictureObjectはフィールドまたは変数 |
-| pictureObject | Picture | &#8594;  | オブジェクト名 (* 指定時) または フィーウドまたは変数 (* 省略時) |
-| x | Integer | &#8594;  | X座標 (ピクセル) |
-| y | Integer | &#8594;  | Y座標 (ピクセル) |
+| * | 演算子 | &#8594; | 指定時、pictureObjectはオブジェクト名 (文字列) 省略時、pictureObjectはフィールドまたは変数 |
+| pictureObject | Picture | &#8594; | オブジェクト名 (* 指定時) または フィーウドまたは変数 (* 省略時) |
+| x | Integer | &#8594; | X座標 (ピクセル) |
+| y | Integer | &#8594; | Y座標 (ピクセル) |
 | 戻り値 | Text | &#8592; | X, Yの位置に見つかった要素のID |
 
 <!-- END REF-->
@@ -57,7 +57,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1054 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

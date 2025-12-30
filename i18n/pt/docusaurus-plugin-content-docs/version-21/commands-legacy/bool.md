@@ -53,6 +53,6 @@ Seleciona um valor dependendo do conteúdo de um atributo de campo de objeto, an
 |  |  |
 | --- | --- |
 | Número do comando | 1537 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

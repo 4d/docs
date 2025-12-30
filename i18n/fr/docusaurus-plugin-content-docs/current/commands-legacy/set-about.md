@@ -5,12 +5,12 @@ slug: /commands/set-about
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *libelléElément* ; *méthode* )<!-- END REF-->
+<!--REF #_command_.SET ABOUT.Syntax-->**SET ABOUT** ( *libelléElément* : Text ; *méthode* : Text )<!-- END REF-->
 <!--REF #_command_.SET ABOUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| libelléElément | Text | &#8594;  | Nouvelle ligne de menu A propos... |
-| méthode | Text | &#8594;  | Nom de la méthode à exécuter lorsque la ligne est choisie |
+| libelléElément | Text | &#8594; | Nouvelle ligne de menu A propos... |
+| méthode | Text | &#8594; | Nom de la méthode à exécuter lorsque la ligne est choisie |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ L'exemple suivant réinitialise la commande de menu d'A propos de 4D :
 |  |  |
 | --- | --- |
 | Numéro de commande | 316 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

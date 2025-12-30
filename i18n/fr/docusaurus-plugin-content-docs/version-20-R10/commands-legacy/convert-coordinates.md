@@ -92,6 +92,6 @@ Vous souhaitez créer une fenêtre pop up à l'emplacement du curseur de la sour
 |  |  |
 | --- | --- |
 | Numéro de commande | 1365 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -37,6 +37,6 @@ Ver exemplo do comando [Shift down](shift-down.md).
 |  |  |
 | --- | --- |
 | Número do comando | 562 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

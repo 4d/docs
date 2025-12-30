@@ -5,11 +5,11 @@ slug: /commands/cache-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Cache info.Syntax-->**Cache info** {( *dbFilter* )} : Object<!-- END REF-->
+<!--REF #_command_.Cache info.Syntax-->**Cache info** ( *dbFilter* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Cache info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dbFilter | Object | &#8594;  | 返す属性の一覧を定義(データベースごとにフィルター) |
+| dbFilter | Object | &#8594; | 返す属性の一覧を定義(データベースごとにフィルター) |
 | 戻り値 | Object | &#8592; | キャッシュについての情報 |
 
 <!-- END REF-->
@@ -59,6 +59,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1402 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

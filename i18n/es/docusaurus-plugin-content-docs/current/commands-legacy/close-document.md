@@ -5,11 +5,11 @@ slug: /commands/close-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* )<!-- END REF-->
+<!--REF #_command_.CLOSE DOCUMENT.Syntax-->**CLOSE DOCUMENT** ( *docRef* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE DOCUMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| docRef | Time | &#8594;  | Número de referencia del documento |
+| docRef | Time | &#8594; | Número de referencia del documento |
 
 <!-- END REF-->
 
@@ -43,6 +43,6 @@ El siguiente ejemplo permite al usuario crear un nuevo documento, escribe la cad
 |  |  |
 | --- | --- |
 | Número de comando | 267 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

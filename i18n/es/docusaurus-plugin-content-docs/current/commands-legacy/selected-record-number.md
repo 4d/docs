@@ -5,11 +5,11 @@ slug: /commands/selected-record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selected record number.Syntax-->**Selected record number** {( *tabla* )} : Integer<!-- END REF-->
+<!--REF #_command_.Selected record number.Syntax-->**Selected record number** ( *tabla* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Selected record number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual devolver el número de registros seleccionados, o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual devolver el número de registros seleccionados, o Tabla por defecto, si se omite |
 | Resultado | Integer | &#8592; | Número en la selección |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ El siguiente ejemplo guarda el número del registro actual de la selección en u
 |  |  |
 | --- | --- |
 | Número de comando | 246 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

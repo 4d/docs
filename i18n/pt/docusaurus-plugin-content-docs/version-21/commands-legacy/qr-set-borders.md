@@ -77,7 +77,7 @@ Se o parâmetro *largura* é incorreto, se gera o erro -9855.
 |  |  |
 | --- | --- |
 | Número do comando | 797 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

@@ -47,6 +47,6 @@ Au lieu d’utiliser les actions automatiques “Enregistrement suivant” ou �
 |  |  |
 | --- | --- |
 | Numéro de commande | 669 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

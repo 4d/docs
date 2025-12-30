@@ -5,13 +5,12 @@ slug: /commands/edit-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *aTable* ; *formula* )<!-- END REF-->
+<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *aTable* : Table ; *formula* : Text )<!-- END REF-->
 <!--REF #_command_.EDIT FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aTable | Table | &#8594;  | Table to display by default in the Formula editor |
-| formula | Text | &#8594;  | Variable containing the formula to display in the Formula editor or "" to display editor only |
-|| &#8592; | Formula validated by the user |
+| formula | Text | &#8596;  | *in:* Variable containing the formula to display in the Formula editor or "" to display editor only<br/>*out:* Formula validated by the user|
 
 <!-- END REF-->
 
@@ -60,7 +59,7 @@ If the user validates the dialog box, the system variable OK is set to 1\. If th
 |  |  |
 | --- | --- |
 | Command number | 806 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

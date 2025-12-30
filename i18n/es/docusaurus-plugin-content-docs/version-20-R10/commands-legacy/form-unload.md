@@ -27,6 +27,6 @@ Llamar este comando es necesario cuando se utiliza el comando [FORM LOAD](../com
 |  |  |
 | --- | --- |
 | Número de comando | 1299 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

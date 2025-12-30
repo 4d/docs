@@ -5,11 +5,11 @@ slug: /commands/save-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.SAVE RECORD.Syntax-->**SAVE RECORD** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.SAVE RECORD.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla del registro a guardar o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla del registro a guardar o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -54,6 +54,6 @@ El siguiente ejemplo es parte de un método que lee registros de un documento. E
 |  |  |
 | --- | --- |
 | Número de comando | 53 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

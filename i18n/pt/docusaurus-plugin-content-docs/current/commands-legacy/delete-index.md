@@ -5,12 +5,12 @@ slug: /commands/delete-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *pontCampo* {; *} )<br/>**DELETE INDEX** ( *nomeIndice* {; *} )<!-- END REF-->
+<!--REF #_command_.DELETE INDEX.Syntax-->**DELETE INDEX** ( *pontCampo* : Ponteiro, String {; *} )<br/>**DELETE INDEX** ( *nomeIndice* : Ponteiro, String {; *} )<!-- END REF-->
 <!--REF #_command_.DELETE INDEX.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| pontCampo&#124;nomeIndice | Ponteiro, String | &#8594;  | Ponteiro ao campo cujos índices serão apagados ou Nome do Índice que será apagado. |
-| * | Operador | &#8594;  | Se passado = operação assincrônica |
+| pontCampo&#124;nomeIndice | Ponteiro, String | &#8594; | Ponteiro ao campo cujos índices serão apagados ou Nome do Índice que será apagado. |
+| * | Operador | &#8594; | Se passado = operação assincrônica |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Este exemplo ilustra as duas sintaxes do comando:
 |  |  |
 | --- | --- |
 | Número do comando | 967 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

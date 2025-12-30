@@ -5,11 +5,11 @@ slug: /commands/get-application-color-scheme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** {( * )} : Text<!-- END REF-->
+<!--REF #_command_.Get Application color scheme.Syntax-->**Get Application color scheme** ( * ) : Text<!-- END REF-->
 <!--REF #_command_.Get Application color scheme.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Retorna o esquema de cores do banco de dados host/anfitrião |
+| * | Operador | &#8594; | Retorna o esquema de cores do banco de dados host/anfitrião |
 | Resultado | Text | &#8592; | Esquema de cores da aplicação atual |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ Veja a descrição do comando [SET APPLICATION COLOR SCHEME](set-application-col
 |  |  |
 | --- | --- |
 | Número do comando | 1763 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

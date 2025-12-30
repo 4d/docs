@@ -89,6 +89,6 @@ Example with a collection of objects:
 |  |  |
 | --- | --- |
 | Command number | 1715 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

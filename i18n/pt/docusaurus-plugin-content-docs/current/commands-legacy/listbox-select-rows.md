@@ -5,14 +5,14 @@ slug: /commands/listbox-select-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( {* ;} *objeto* ; *seleção* {; *ação*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SELECT ROWS.Syntax-->**LISTBOX SELECT ROWS** ( * ; *objeto* : Text ; *seleção* : Object, Collection {; *ação* : Integer} )<br/>**LISTBOX SELECT ROWS** ( *objeto* : Field, Variable ; *seleção* : Object, Collection {; *ação* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SELECT ROWS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome objeto (string) Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome de objeto (se * for especificado) ou Variável (se * for variável) |
-| seleção | Object, Collection | &#8594;  | objeto ou coleção descrevendo as linhas a selecionar |
-| ação | Integer | &#8594;  | lk replace selecion (padrão se omitido), lk add to selection, lk remove from selecion. |
+| * | Operador | &#8594; | Se especificado, objeto é um nome objeto (string) Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome de objeto (se * for especificado) ou Variável (se * for variável) |
+| seleção | Object, Collection | &#8594; | objeto ou coleção descrevendo as linhas a selecionar |
+| ação | Integer | &#8594; | lk replace selecion (padrão se omitido), lk add to selection, lk remove from selecion. |
 
 <!-- END REF-->
 
@@ -89,6 +89,6 @@ Exemplo com a coleção de objetos:
 |  |  |
 | --- | --- |
 | Número do comando | 1715 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

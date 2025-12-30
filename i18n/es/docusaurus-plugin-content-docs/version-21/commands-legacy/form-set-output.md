@@ -75,6 +75,6 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
 |  |  |
 | --- | --- |
 | Número de comando | 54 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

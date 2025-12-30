@@ -31,6 +31,6 @@ In order for the **In header** execution cycle to be generated, make sure that t
 |  |  |
 | --- | --- |
 | Command number | 112 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

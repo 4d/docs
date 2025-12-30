@@ -5,12 +5,12 @@ slug: /commands/listbox-get-locked-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get locked columns.Syntax-->**LISTBOX Get locked columns** ( * ; *objet* : Text ) : Integer<br/>**LISTBOX Get locked columns** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get locked columns.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
 | Résultat | Integer | &#8592; | Nombre de colonnes verrouillées |
 
 <!-- END REF-->
@@ -36,6 +36,6 @@ En revanche, la commande ne tient pas compte du statut visible/invisible des col
 |  |  |
 | --- | --- |
 | Numéro de commande | 1152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

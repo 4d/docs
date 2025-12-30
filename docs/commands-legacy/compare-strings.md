@@ -5,12 +5,12 @@ slug: /commands/compare-strings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* ; *bString* {; *options*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Compare strings.Syntax-->**Compare strings** ( *aString* : Text ; *bString* : Text {; *options* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Compare strings.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| aText | Text | &#8594;  | String to compare |
-| bText | Text | &#8594;  | String to compare |
+| aString | Text | &#8594;  | String to compare |
+| bString | Text | &#8594;  | String to compare |
 | options | Integer | &#8594;  | Comparison rule(s) |
 | Function result | Integer | &#8592; | Result of string comparison |
 
@@ -111,6 +111,6 @@ The following examples illustrate the specific impact of options in **Japanese d
 |  |  |
 | --- | --- |
 | Command number | 1756 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

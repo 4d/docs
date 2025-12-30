@@ -5,12 +5,12 @@ slug: /commands/object-get-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( {* ;} *object* ; *tablePtr* ; *detailSubform* {; *listSubform*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SUBFORM.Syntax-->**OBJECT GET SUBFORM** ( * ; *object* : Text ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<br/>**OBJECT GET SUBFORM** ( *object* : Field, Variable ; *tablePtr* : Table ; *detailSubform* : Text {; *listSubform* : Text} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SUBFORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
 | tablePtr | Table | &#8592; | フォームが属するテーブルへのポインター |
 | detailSubform | Text | &#8592; | サブフォームの詳細フォーム名 |
 | listSubform | Text | &#8592; | サブフォームのリストフォーム名 (テーブルフォーム) |
@@ -45,6 +45,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1139 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get action.Syntax-->**OBJECT Get action** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get action** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get action.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o variable |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es un campo o variable |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o <br/>Campo o variable (si se omite *) |
 | Resultado | Text | &#8592; | Nombre de la acción estándar asociada y (si la hay) cadena de parámetros |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ Usted desea asociar la acción "Cancelar" con todos los objetos en el formulario
 |  |  |
 | --- | --- |
 | Número de comando | 1457 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

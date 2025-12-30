@@ -52,6 +52,6 @@ We want to assign the same picture to two different items. The following code is
 |  |  |
 | --- | --- |
 | Command number | 950 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

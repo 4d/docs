@@ -5,16 +5,16 @@ slug: /commands/st-insert-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( {* ;} *object* ; *urlText* ; *urlAddress* {; *startSel* {; *endSel*}} )<!-- END REF-->
+<!--REF #_command_.ST INSERT URL.Syntax-->**ST INSERT URL** ( * ; *object* : Text ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<br/>**ST INSERT URL** ( *object* : Field, Variable ; *urlText* : Text ; *urlAddress* : Text {; *startSel* : Integer {; *endSel* : Integer}} )<!-- END REF-->
 <!--REF #_command_.ST INSERT URL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| urlText | Text | &#8594;  | リンクの表示テキスト |
-| urlAddress | Text | &#8594;  | URL アドレス |
-| startSel | Integer | &#8594;  | 選択範囲の開始地点 |
-| endSel | Integer | &#8594;  | 選択範囲の終了地点 |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| urlText | Text | &#8594; | リンクの表示テキスト |
+| urlAddress | Text | &#8594; | URL アドレス |
+| startSel | Integer | &#8594; | 選択範囲の開始地点 |
+| endSel | Integer | &#8594; | 選択範囲の終了地点 |
 
 <!-- END REF-->
 
@@ -69,7 +69,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1280 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

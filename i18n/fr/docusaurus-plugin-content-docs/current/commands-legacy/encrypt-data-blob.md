@@ -5,13 +5,13 @@ slug: /commands/encrypt-data-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* ; *keyObject* ; *salt* ; *encryptedBLOB* ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* ; *passPhrase* ; *salt* ; *encryptedBLOB* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Encrypt data BLOB.Syntax-->**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *keyObject* : Objet, Texte ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<br/>**Encrypt data BLOB** ( *blobToEncrypt* : Blob ; *passPhrase* : Objet, Texte ; *salt* : Integer ; *encryptedBLOB* : Blob ) : Boolean<!-- END REF-->
 <!--REF #_command_.Encrypt data BLOB.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blobToEncrypt | Blob | &#8594;  | BLOB à encrypter |
-| keyObject &#124; passPhrase | Objet, Texte | &#8594;  | Objet JSON contenant la clé de chiffrement ou le mot de passe pour une génération directe de clé de chiffrement (texte) |
-| salt | Integer | &#8594;  | Additional salt for algorithm |
+| blobToEncrypt | Blob | &#8594; | BLOB à encrypter |
+| keyObject &#124; passPhrase | Objet, Texte | &#8594; | Objet JSON contenant la clé de chiffrement ou le mot de passe pour une génération directe de clé de chiffrement (texte) |
+| salt | Integer | &#8594; | Additional salt for algorithm |
 | encryptedBlob | Blob | &#8592; | BLOB encrypté |
 | Résultat | Boolean | &#8592; | True si le chiffrement a été effectué correctement. Sinon False |
 
@@ -65,6 +65,6 @@ Cryptez un fichier texte situé dans le dossier RESSOURCES de la base de donnée
 |  |  |
 | --- | --- |
 | Numéro de commande | 1773 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

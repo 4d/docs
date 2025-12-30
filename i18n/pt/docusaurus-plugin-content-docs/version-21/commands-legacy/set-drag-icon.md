@@ -63,6 +63,6 @@ Note que pode modificar a posição do cursor com respeito a imagem:
 |  |  |
 | --- | --- |
 | Número do comando | 1272 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

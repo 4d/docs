@@ -5,11 +5,11 @@ slug: /commands/soap-reject-new-requests
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *rejectStatus* )<!-- END REF-->
+<!--REF #_command_.SOAP REJECT NEW REQUESTS.Syntax-->**SOAP REJECT NEW REQUESTS** ( *rejectStatus* : Boolean )<!-- END REF-->
 <!--REF #_command_.SOAP REJECT NEW REQUESTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| rejectStatus | Boolean | &#8594;  | 新規リクエストを拒否するにはTrue、それ以外の場合にはFalse |
+| rejectStatus | Boolean | &#8594; | 新規リクエストを拒否するにはTrue、それ以外の場合にはFalse |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ Web サービスのサーバーにおいて新規リクエストを全て拒否�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1636 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

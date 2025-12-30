@@ -40,7 +40,7 @@ The following example displays all the records from the \[People\] table:
 |  |  |
 | --- | --- |
 | Command number | 47 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

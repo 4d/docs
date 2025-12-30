@@ -47,6 +47,6 @@ Al iniciar su base de datos en Windows, necesita verificar si una librería DLL 
 |  |  |
 | --- | --- |
 | Número de comando | 491 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

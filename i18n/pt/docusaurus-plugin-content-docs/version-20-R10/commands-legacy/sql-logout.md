@@ -29,7 +29,7 @@ Se o logout é feito corretamente, a variável Sistema OK assume o valor 1; do c
 |  |  |
 | --- | --- |
 | Número do comando | 872 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

@@ -55,6 +55,6 @@ Dans la , vous souhaitez fixer une priorité très haute pour les données scala
 |  |  |
 | --- | --- |
 | Numéro de commande | 1400 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

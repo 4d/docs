@@ -5,12 +5,12 @@ slug: /commands/get-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* ; *srcVar* ; *dstVar* {; *srcVar2* ; *dstVar2* ; ... ; *srcVarN* ; *dstVarN*} )<!-- END REF-->
+<!--REF #_command_.GET PROCESS VARIABLE.Syntax-->**GET PROCESS VARIABLE** ( *process* : Integer ; *srcVar* : Variable ; *dstVar* : Variable {; ...(*srcVar* : Variable, *dstVar* : Variable)} )<!-- END REF-->
 <!--REF #_command_.GET PROCESS VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | ソースプロセス番号 |
-| srcVar | Variable | &#8594;  | ソース変数 |
+| process | Integer | &#8594; | ソースプロセス番号 |
+| srcVar | Variable | &#8594; | ソース変数 |
 | dstVar | Variable | &#8592; | 受け取る変数 |
 
 <!-- END REF-->
@@ -122,6 +122,6 @@ DRAG AND DROP PROPERTIESコマンドの例題参照
 |  |  |
 | --- | --- |
 | コマンド番号 | 371 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -41,6 +41,6 @@ The following example saves the current selected record number in a variable:
 |  |  |
 | --- | --- |
 | Command number | 246 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

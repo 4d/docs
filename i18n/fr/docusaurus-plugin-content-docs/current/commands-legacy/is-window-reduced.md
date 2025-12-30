@@ -5,11 +5,11 @@ slug: /commands/is-window-reduced
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window reduced.Syntax-->**Is window reduced** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window reduced.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | Numéro de référence de la fenêtre |
+| window | Integer | &#8594; | Numéro de référence de la fenêtre |
 | Résultat | Boolean | &#8592; | Vrai si la fenêtre est réduite dans la barre des tâches ou dans le dock, sinon Faux |
 
 <!-- END REF-->
@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 1831 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

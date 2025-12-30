@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1053 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

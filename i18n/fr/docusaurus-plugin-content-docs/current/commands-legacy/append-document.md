@@ -5,12 +5,12 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *nomFichier* {; *typeFichier*} ) : Time<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *nomFichier* : Text {; *typeFichier* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue standard d'ouverture de fichiers |
-| typeFichier | Text | &#8594;  | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
+| nomFichier | Text | &#8594; | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue standard d'ouverture de fichiers |
+| typeFichier | Text | &#8594; | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
 | Résultat | Time | &#8592; | Numéro de référence du document |
 
 <!-- END REF-->
@@ -44,7 +44,7 @@ L'exemple suivant ouvre un document existant qui s'appelle “Note”, ajoute à
 |  |  |
 | --- | --- |
 | Numéro de commande | 265 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

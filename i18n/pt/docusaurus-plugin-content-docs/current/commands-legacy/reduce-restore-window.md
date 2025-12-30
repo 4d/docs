@@ -5,11 +5,11 @@ slug: /commands/reduce-restore-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *janela* )<!-- END REF-->
+<!--REF #_command_.REDUCE RESTORE WINDOW.Syntax-->**REDUCE RESTORE WINDOW** ( *janela* : Integer )<!-- END REF-->
 <!--REF #_command_.REDUCE RESTORE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência de janela |
+| janela | Integer | &#8594; | Número de referência de janela |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ O comando muda o estado da janela:
 |  |  |
 | --- | --- |
 | Número do comando | 1829 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

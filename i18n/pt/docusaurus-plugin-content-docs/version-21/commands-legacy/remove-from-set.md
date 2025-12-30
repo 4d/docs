@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 561 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

@@ -111,6 +111,6 @@ Après l'exécution de ce code :
 |  |  |
 | --- | --- |
 | Numéro de commande | 554 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/qr-get-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* ; *aColumns* ; *aOrders* )<!-- END REF-->
+<!--REF #_command_.QR GET SORTS.Syntax-->**QR GET SORTS** ( *area* : Integer ; *aColumns* : Real array ; *aOrders* : Real array )<!-- END REF-->
 <!--REF #_command_.QR GET SORTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
+| area | Integer | &#8594; | エリア参照 |
 | aColumns | Real array | &#8592; | ソートされたカラム |
 | aOrders | Real array | &#8592; | ソート順 |
 
@@ -41,7 +41,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 753 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

@@ -51,6 +51,6 @@ Les images suivantes illustrent les différences entre la zone de l'écran et la
 |  |  |
 | --- | --- |
 | Numéro de commande | 438 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

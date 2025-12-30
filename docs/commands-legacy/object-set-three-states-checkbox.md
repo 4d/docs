@@ -5,7 +5,7 @@ slug: /commands/object-set-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( {* ;} *object* ; *threeStates* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Syntax-->**OBJECT SET THREE STATES CHECKBOX** ( * ; *object* : Text ; *threeStates* : Boolean )<br/>**OBJECT SET THREE STATES CHECKBOX** ( *object* : Field, Variable ; *threeStates* : Boolean )<!-- END REF-->
 <!--REF #_command_.OBJECT SET THREE STATES CHECKBOX.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,6 +36,6 @@ In the *threeStates* parameter, pass **True** to enable the "three states" mode,
 |  |  |
 | --- | --- |
 | Command number | 1249 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* ; *jsonArray* )<!-- END REF-->
+<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* : Table ; *jsonArray* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -74,6 +74,6 @@ Using the **JSON TO SELECTION** command to add records to the \[Company\] table:
 |  |  |
 | --- | --- |
 | Command number | 1235 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

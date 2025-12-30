@@ -43,6 +43,6 @@ O exemplo define a codificação a utilizar e a opção autônoma do elemento *e
 |  |  |
 | --- | --- |
 | Número do comando | 859 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

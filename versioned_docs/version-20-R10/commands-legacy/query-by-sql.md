@@ -162,7 +162,7 @@ If the format of the search condition is correct, the system variable OK is set 
 |  |  |
 | --- | --- |
 | Command number | 942 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 | Changes current record ||
 | Changes current selection ||

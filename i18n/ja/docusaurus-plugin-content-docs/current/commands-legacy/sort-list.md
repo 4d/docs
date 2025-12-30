@@ -5,12 +5,12 @@ slug: /commands/sort-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* {; > または <} )<!-- END REF-->
+<!--REF #_command_.SORT LIST.Syntax-->**SORT LIST** ( *list* : Integer {; > または <} )<!-- END REF-->
 <!--REF #_command_.SORT LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | リスト参照番号 |
-| > または < | 演算子 | &#8594;  | 並び順: > 昇順, または < 降順 |
+| list | Integer | &#8594; | リスト参照番号 |
+| > または < | 演算子 | &#8594; | 並び順: > 昇順, または < 降順 |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ SORT LIST コマンドは、カレントリスト項目またはリストやサ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 391 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

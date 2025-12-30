@@ -113,6 +113,6 @@ Vous devez imprimer dans une zone de 400 pixels de large un texte d’un maximum
 |  |  |
 | --- | --- |
 | Numéro de commande | 1149 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

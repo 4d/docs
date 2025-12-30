@@ -214,7 +214,7 @@ Si el parámetro *carpeta* no es válido o si la ruta de acceso devuelta está v
 |  |  |
 | --- | --- |
 | Número de comando | 485 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

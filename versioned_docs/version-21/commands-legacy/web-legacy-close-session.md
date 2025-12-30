@@ -41,6 +41,6 @@ After this command is executed, if a Web client sends a request using an invalid
 |  |  |
 | --- | --- |
 | Command number | 1208 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

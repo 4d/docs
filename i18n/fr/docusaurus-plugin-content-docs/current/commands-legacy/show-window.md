@@ -5,11 +5,11 @@ slug: /commands/show-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** {( *fenêtre* )}<!-- END REF-->
+<!--REF #_command_.SHOW WINDOW.Syntax-->**SHOW WINDOW** ({ *fenêtre* : Integer })<!-- END REF-->
 <!--REF #_command_.SHOW WINDOW.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
+| fenêtre | Integer | &#8594; | Numéro de référence de la fenêtre ou Fenêtre de premier plan du process courant si omis |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Voir l'exemple de la commande [HIDE WINDOW](hide-window.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 435 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

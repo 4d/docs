@@ -72,7 +72,7 @@ The following code retrieves the values of the header titles as well as the head
 |  |  |
 | --- | --- |
 | Command number | 775 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

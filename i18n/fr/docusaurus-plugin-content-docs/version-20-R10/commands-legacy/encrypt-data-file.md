@@ -142,6 +142,6 @@ $folder:=Encrypt data file(Structure file;"myData.4DD")
 |  |  |
 | --- | --- |
 | Numéro de commande | 1610 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

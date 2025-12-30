@@ -70,6 +70,6 @@ If the command is executed from a component, it returns by default the paths of 
 |  |  |
 | --- | --- |
 | Command number | 1164 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

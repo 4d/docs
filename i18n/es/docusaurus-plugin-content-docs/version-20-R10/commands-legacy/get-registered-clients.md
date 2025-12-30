@@ -52,7 +52,7 @@ Si la operación se realiza correctemente, la variable sistema OK toma el valor 
 |  |  |
 | --- | --- |
 | Número de comando | 650 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

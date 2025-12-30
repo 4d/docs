@@ -5,12 +5,12 @@ slug: /commands/xml-get-options
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *refElément* ; *sélecteur* ; *valeur* {; *sélecteur2* ; *valeur2* ; ... ; *sélecteurN* ; *valeurN*} )<br/>**XML GET OPTIONS** ( *document* ; *sélecteur* ; *valeur* {; *sélecteur2* ; *valeur2* ; ... ; *sélecteurN* ; *valeurN*} )<!-- END REF-->
+<!--REF #_command_.XML GET OPTIONS.Syntax-->**XML GET OPTIONS** ( *refElément* : Texte ; *sélecteur* : Integer ; *valeur* : Integer {; ...(*sélecteur* : Integer, *valeur* : Integer)} )<br/>**XML GET OPTIONS** ( *document* : Texte ; *sélecteur* : Integer ; *valeur* : Integer {; ...(*sélecteur* : Integer, *valeur* : Integer)} )<!-- END REF-->
 <!--REF #_command_.XML GET OPTIONS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément &#124; document | Texte | &#8594;  | Référence d’élément XML racine ou<br/>Référence de document ouvert |
-| sélecteur | Integer | &#8594;  | Option à lire |
+| refElément &#124; document | Texte | &#8594; | Référence d’élément XML racine ou<br/>Référence de document ouvert |
+| sélecteur | Integer | &#8594; | Option à lire |
 | valeur | Integer | &#8592; | Valeur courante de l’option |
 
 <!-- END REF-->
@@ -43,6 +43,6 @@ Passez dans *sélecteur* une des constantes du thème *XML* ci-dessous, indiquan
 |  |  |
 | --- | --- |
 | Numéro de commande | 1096 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

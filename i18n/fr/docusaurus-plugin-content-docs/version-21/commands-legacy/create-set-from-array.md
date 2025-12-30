@@ -44,7 +44,7 @@ Dans un tableau d'entier longs, si un numéro d'enregistrement est invalide (enr
 |  |  |
 | --- | --- |
 | Numéro de commande | 641 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

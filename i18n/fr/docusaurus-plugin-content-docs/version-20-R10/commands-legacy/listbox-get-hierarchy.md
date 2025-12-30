@@ -40,6 +40,6 @@ Si la list box est en mode hiérarchique, la commande remplit le tableau *hiéra
 |  |  |
 | --- | --- |
 | Numéro de commande | 1099 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

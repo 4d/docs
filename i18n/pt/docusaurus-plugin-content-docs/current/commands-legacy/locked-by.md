@@ -5,11 +5,11 @@ slug: /commands/locked-by
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*tabela* ;} *processo* ; *usuario4D* ; *usuarioSessao* ; *nomeProcesso* )<!-- END REF-->
+<!--REF #_command_.LOCKED BY.Syntax-->**LOCKED BY** ( {*tabela* : Table ;} *processo* : Integer ; *usuario4D* : Text ; *usuarioSessao* : Text ; *nomeProcesso* : Text )<!-- END REF-->
 <!--REF #_command_.LOCKED BY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para visualizar os registros bloqueados, ou Tabela Padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para visualizar os registros bloqueados, ou Tabela Padrão, se omitido |
 | processo | Integer | &#8592; | Nº de referência do processo |
 | usuario4D | Text | &#8592; | Nome do usuário 4D |
 | usuarioSessao | Text | &#8592; | Nome do usuário que abriu a sessão de trabalho |
@@ -45,6 +45,6 @@ nomeProcesso devolve o endereço IP do locker, p. ex. "127.0.0.1"
 |  |  |
 | --- | --- |
 | Número do comando | 353 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

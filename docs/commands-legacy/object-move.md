@@ -5,7 +5,7 @@ slug: /commands/object-move
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( {* ;} *object* ; *moveH* ; *moveV* {; *resizeH* {; *resizeV* {; *}}} )<!-- END REF-->
+<!--REF #_command_.OBJECT MOVE.Syntax-->**OBJECT MOVE** ( * ; *object* : Text ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<br/>**OBJECT MOVE** ( *object* : Field, Variable ; *moveH* : Integer ; *moveV* : Integer {; *resizeH* : Integer {; *resizeV* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.OBJECT MOVE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -73,6 +73,6 @@ The following statement moves “button\_1” to the following coordinates (10;2
 |  |  |
 | --- | --- |
 | Command number | 664 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

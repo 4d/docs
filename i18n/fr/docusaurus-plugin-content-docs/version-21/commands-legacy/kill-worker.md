@@ -59,6 +59,6 @@ Dans la méthode du process worker (*leWorker*), vous ajoutez du code pour gére
 |  |  |
 | --- | --- |
 | Numéro de commande | 1390 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,14 +5,14 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *cléPrivée* ; *demCertif* ; *tabCodes* ; *tabLibellés* )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *cléPrivée* : Blob ; *demCertif* : Blob ; *tabCodes* : Integer array ; *tabLibellés* : Text array )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cléPrivée | Blob | &#8594;  | BLOB contenant la clé privée |
+| cléPrivée | Blob | &#8594; | BLOB contenant la clé privée |
 | demCertif | Blob | &#8592; | BLOB devant recevoir la demande de certificat |
-| tabCodes | Integer array | &#8594;  | Liste des codes d’informations |
-| tabLibellés | Text array | &#8594;  | Liste des libellés d’informations |
+| tabCodes | Integer array | &#8594; | Liste des codes d’informations |
+| tabLibellés | Text array | &#8594; | Liste des libellés d’informations |
 
 <!-- END REF-->
 
@@ -88,6 +88,6 @@ Un formulaire “Demande de certificat” comporte les six champs nécessaires �
 |  |  |
 | --- | --- |
 | Numéro de commande | 691 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* ; *statement* )<!-- END REF-->
+<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *aTable* : Table ; *statement* : Expression )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | ステートメントを適用するテーブル |
-| statement | Expression | &#8594;  | 1行のコードで記述されたメソッド |
+| aTable | Table | &#8594; | ステートメントを適用するテーブル |
+| statement | Expression | &#8594; | 1行のコードで記述されたメソッド |
 
 <!-- END REF-->
 
@@ -68,7 +68,7 @@ APPLY TO SELECTION実行中にレコードを修正して、そのレコード�
 |  |  |
 | --- | --- |
 | コマンド番号 | 70 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

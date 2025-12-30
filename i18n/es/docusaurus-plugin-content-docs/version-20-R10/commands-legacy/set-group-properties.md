@@ -62,7 +62,7 @@ Si no tiene privilegios de acceso para llamar al comando Set group properties o 
 |  |  |
 | --- | --- |
 | Número de comando | 614 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

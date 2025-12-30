@@ -5,13 +5,13 @@ slug: /commands/get-list-item-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *list* ; *itemRef* ; *enterable* {; *styles* {; *icon* {; *color*}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *list* ; * ; *enterable* {; *styles* {; *icon* {; *color*}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST ITEM PROPERTIES.Syntax-->**GET LIST ITEM PROPERTIES** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<br/>**GET LIST ITEM PROPERTIES** ( * ; *list* : Integer, Text ; * ; *enterable* : Boolean {; *styles* : Integer {; *icon* : Text, Integer {; *color* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST ITEM PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 演算子, 倍長整数 | &#8594;  | 項目参照番号, または 0: リストに最後に追加された項目, または *: カレントのリスト項目 |
+| * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: カレントのリスト項目 |
 | enterable | Boolean | &#8592; | TRUE = 入力可, FALSE = 入力不可 |
 | styles | Integer | &#8592; | 項目のフォントスタイル |
 | icon | Text, Integer | &#8592; | ピクチャー名または番号 |
@@ -57,6 +57,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 631 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

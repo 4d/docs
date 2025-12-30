@@ -48,6 +48,6 @@ The following example searches for specific invoices. If the current user is in 
 |  |  |
 | --- | --- |
 | Command number | 338 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/get-pointer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomVar* ) : Pointer<!-- END REF-->
+<!--REF #_command_.Get pointer.Syntax-->**Get pointer** ( *nomVar* : Text ) : Pointer<!-- END REF-->
 <!--REF #_command_.Get pointer.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomVar | Text | &#8594;  | Nom d'une variable process ou interprocess |
+| nomVar | Text | &#8594; | Nom d'une variable process ou interprocess |
 | Résultat | Pointer | &#8592; | Pointeur vers une variable process ou interprocess |
 
 <!-- END REF-->
@@ -56,6 +56,6 @@ Utilisation de pointeurs vers des éléments de tableaux à deux dimensions :
 |  |  |
 | --- | --- |
 | Numéro de commande | 304 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

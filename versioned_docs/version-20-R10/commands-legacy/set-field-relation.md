@@ -60,7 +60,7 @@ The following code allows setting only useful relations as automatic in the Quic
 |  |  |
 | --- | --- |
 | Command number | 919 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

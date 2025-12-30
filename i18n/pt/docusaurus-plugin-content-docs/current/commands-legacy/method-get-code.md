@@ -5,14 +5,14 @@ slug: /commands/method-get-code
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *rota* ; *codigo* {; *option*} {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET CODE.Syntax-->**METHOD GET CODE** ( *rota* : Text, Text array ; *codigo* : Text, Text array {; *option* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET CODE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rota | Text, Text array | &#8594;  | Texto ou array de texto que contém uma ou vários caminhos de acesso |
+| rota | Text, Text array | &#8594; | Texto ou array de texto que contém uma ou vários caminhos de acesso |
 | codigo | Text, Text array | &#8592; | Código dos métodos designados |
-| option | Integer | &#8594;  | 0 ou omis = exportar simples (sem token), 1 = exportar com tokens |
-| * | Operador | &#8594;  | Se passado = o comando é aplicado à base de dados de host quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| option | Integer | &#8594; | 0 ou omis = exportar simples (sem token), 1 = exportar com tokens |
+| * | Operador | &#8594; | Se passado = o comando é aplicado à base de dados de host quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -130,6 +130,6 @@ O documento resultante conterá:
 |  |  |
 | --- | --- |
 | Número do comando | 1190 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

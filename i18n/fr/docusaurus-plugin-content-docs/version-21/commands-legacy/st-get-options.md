@@ -40,6 +40,6 @@ Passez dans *option* le code de l’option à lire. La commande retourne dans *v
 |  |  |
 | --- | --- |
 | Numéro de commande | 1290 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

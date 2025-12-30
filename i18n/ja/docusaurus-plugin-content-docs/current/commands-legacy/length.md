@@ -5,11 +5,11 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *string* ) : Integer<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *string* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| string | Text | &#8594;  | 長さを調べる文字列 |
+| string | Text | &#8594; | 長さを調べる文字列 |
 | 戻り値 | Integer | &#8592; | 文字列の長さ |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ Lengthの使用例を次に示します。結果を変数*vlResult*に代入し�
 |  |  |
 | --- | --- |
 | コマンド番号 | 16 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

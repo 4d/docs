@@ -5,11 +5,11 @@ slug: /commands/receive-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.RECEIVE RECORD.Syntax-->**RECEIVE RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.RECEIVE RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle recevoir l'enregistrement, ou Table par défaut si omis |
+| laTable | Table | &#8594; | Table dans laquelle recevoir l'enregistrement, ou Table par défaut si omis |
 
 <!-- END REF-->
 
@@ -158,7 +158,7 @@ La variable système OK prend la valeur 1 si l'enregistrement est correctement r
 |  |  |
 | --- | --- |
 | Numéro de commande | 79 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

@@ -5,14 +5,14 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *objet* ; *débutSél* ; *finSél* )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *objet* : Field, Variable, any ; *débutSél* : Integer ; *finSél* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
-| objet | Field, Variable, any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
-| débutSél | Integer | &#8594;  | Nouvelle position de début de sélection de texte |
-| finSél | Integer | &#8594;  | Nouvelle position de fin de sélection de texte |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
+| objet | Field, Variable, any | &#8594; | Nom d'objet (si * est spécifié) ou Champ ou variable saisissable (si * est omis) |
+| débutSél | Integer | &#8594; | Nouvelle position de début de sélection de texte |
+| finSél | Integer | &#8594; | Nouvelle position de fin de sélection de texte |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 210 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

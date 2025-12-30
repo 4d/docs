@@ -55,7 +55,7 @@ QR REPORT(\[Faturas\];Char(1))\[#/code4D\]
 |  |  |
 | --- | --- |
 | Número do comando | 919 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

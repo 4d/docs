@@ -5,13 +5,13 @@ slug: /commands/set-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *ligneMenu* ; *param* )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* : Integer, Text ; *ligneMenu* : Integer ; *param* : Text )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Référence de menu ou Numéro de menu |
-| ligneMenu | Integer | &#8594;  | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
-| param | Text | &#8594;  | Chaîne à associer en tant que paramètre |
+| menu | Integer, Text | &#8594; | Référence de menu ou Numéro de menu |
+| ligneMenu | Integer | &#8594; | Numéro de ligne de menu ou -1 pour la dernière ligne ajoutée au menu |
+| param | Text | &#8594; | Chaîne à associer en tant que paramètre |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ Ce code permet de proposer un menu comportant le libellé des fenêtres ouvertes
 |  |  |
 | --- | --- |
 | Numéro de commande | 1004 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

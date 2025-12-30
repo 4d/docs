@@ -5,7 +5,7 @@ slug: /commands/load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ In multi-user and multi-process environments, when you need to modify an existin
 |  |  |
 | --- | --- |
 | Command number | 52 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

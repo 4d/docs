@@ -42,7 +42,7 @@ La variable système OK est définie sur 1 si la tâche d'impression a été ouv
 |  |  |
 | --- | --- |
 | Numéro de commande | 995 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

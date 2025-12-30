@@ -41,7 +41,7 @@ The **ACCEPT** command is allowed in headless mode, in the context of offscreen 
 |  |  |
 | --- | --- |
 | Command number | 269 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

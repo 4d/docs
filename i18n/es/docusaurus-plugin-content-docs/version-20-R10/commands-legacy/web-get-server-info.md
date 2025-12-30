@@ -134,6 +134,6 @@ Después de ejecutar el siguiente código:
 |  |  |
 | --- | --- |
 | Número de comando | 1531 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

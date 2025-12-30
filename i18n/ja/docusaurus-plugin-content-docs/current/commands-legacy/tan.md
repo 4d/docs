@@ -5,11 +5,11 @@ slug: /commands/tan
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Tan.Syntax-->**Tan** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Tan.Syntax-->**Tan** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Tan.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| number | Real | &#8594;  | タンジェントを求めるラジアン値 |
+| number | Real | &#8594; | タンジェントを求めるラジアン値 |
 | 戻り値 | Real | &#8592; | タンジェント値 |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 19 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

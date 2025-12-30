@@ -93,7 +93,7 @@ If you call **Open document** with a mode of 3, the function returns ?00:00:00? 
 |  |  |
 | --- | --- |
 | Command number | 264 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document, error |
 
 

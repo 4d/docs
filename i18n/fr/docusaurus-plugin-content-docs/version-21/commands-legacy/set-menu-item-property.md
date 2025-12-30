@@ -63,6 +63,6 @@ Pour plus d’informations sur les propriétés standard des lignes de menus, re
 |  |  |
 | --- | --- |
 | Numéro de commande | 973 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

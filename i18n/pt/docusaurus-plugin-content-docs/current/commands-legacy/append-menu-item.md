@@ -5,15 +5,15 @@ slug: /commands/append-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* ; *itemTexto* {; *subMenu* {; *processo* {; *}}} )<!-- END REF-->
+<!--REF #_command_.APPEND MENU ITEM.Syntax-->**APPEND MENU ITEM** ( *menu* : Integer ; *itemTexto* {; *subMenu* : Text {; *processo* : Integer {; *}}} )<!-- END REF-->
 <!--REF #_command_.APPEND MENU ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer | &#8594;  | Número de menu ou menu de referência |
-| itemText | Text | &#8594;  | Texto para os novos itens de menu |
-| subMenu | Text | &#8594;  | Referência do submenu associado com o item |
-| processo | Integer | &#8594;  | Número de referência de processo |
-| * | Operador | &#8594;  | Se passado: considerar metacaracteres como caracteres comuns |
+| menu | Integer | &#8594; | Número de menu ou menu de referência |
+| itemText | Text | &#8594; | Texto para os novos itens de menu |
+| subMenu | Text | &#8594; | Referência do submenu associado com o item |
+| processo | Integer | &#8594; | Número de referência de processo |
+| * | Operador | &#8594; | Se passado: considerar metacaracteres como caracteres comuns |
 
 <!-- END REF-->
 
@@ -86,7 +86,7 @@ Então, em todo método de formulário ou de projeto, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 411 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

@@ -5,12 +5,12 @@ slug: /commands/object-get-corner-radius
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( {* ;} *objet* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get corner radius.Syntax-->**OBJECT Get corner radius** ( * ; *objet* : Text ) : Integer<br/>**OBJECT Get corner radius** ( *objet* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get corner radius.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Champ ou variable (si * est omis) |
 | Résultat | Integer | &#8592; | Rayon des angles arrondis (en pixels) |
 
 <!-- END REF-->
@@ -52,6 +52,6 @@ Le code suivant peut être associé à la méthode d'un bouton :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1324 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

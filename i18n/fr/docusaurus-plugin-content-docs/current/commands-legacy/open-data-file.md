@@ -5,11 +5,11 @@ slug: /commands/open-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *cheminAccès* )<!-- END REF-->
+<!--REF #_command_.OPEN DATA FILE.Syntax-->**OPEN DATA FILE** ( *cheminAccès* : Text )<!-- END REF-->
 <!--REF #_command_.OPEN DATA FILE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminAccès | Text | &#8594;  | Nom ou chemin d’accès complet du fichier de données à ouvrir |
+| cheminAccès | Text | &#8594; | Nom ou chemin d’accès complet du fichier de données à ouvrir |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ Dans le contexte du déploiement d'une application fusionnée, vous souhaitez ou
 |  |  |
 | --- | --- |
 | Numéro de commande | 312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

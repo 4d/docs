@@ -62,6 +62,6 @@ From your component, you want to know if the Web server of the host database is 
 |  |  |
 | --- | --- |
 | Command number | 1674 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

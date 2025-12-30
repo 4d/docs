@@ -5,14 +5,14 @@ slug: /commands/listbox-get-auto-row-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height**  ( {* ;} *objeto* ; *selector* {; *unidad*} )  : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get auto row height.Syntax-->**LISTBOX Get auto row height**  ( * ; *objeto* : Text ; *selector* : Integer {; *unidad* : Integer} )  : Integer<br/>**LISTBOX Get auto row height**  ( *objeto* : Field, Variable ; *selector* : Integer {; *unidad* : Integer} )  : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get auto row height.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable. |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
-| selector | Integer | &#8594;  | Valor altura a obtener: lk row min height o lk row max height |
-| unidad | Integer | &#8594;  | Unidad de valor de altura: 0 = píxeles, 1 = líneas |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable. |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o Variable (si se omite *) |
+| selector | Integer | &#8594; | Valor altura a obtener: lk row min height o lk row max height |
+| unidad | Integer | &#8594; | Unidad de valor de altura: 0 = píxeles, 1 = líneas |
 | Resultado | Integer | &#8592; | Valor de altura de línea seleccionado |
 
 <!-- END REF-->
@@ -61,6 +61,6 @@ Usted desea obtener el número máximo de líneas para una línea de list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1502 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

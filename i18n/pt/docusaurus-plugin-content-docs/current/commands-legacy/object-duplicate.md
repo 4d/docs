@@ -5,20 +5,20 @@ slug: /commands/object-duplicate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( {* ;} *objeto* {; *novoNome* {; *novaVar* {; *relacionadoA* {; *moverH* {; *moverV* {; *redimH* {; *redimV*}}}}}}} {; *} )<!-- END REF-->
+<!--REF #_command_.OBJECT DUPLICATE.Syntax-->**OBJECT DUPLICATE** ( * ; *objeto* : Text {; *novoNome* : Text {; *novaVar* : Pointer {; *relacionadoA* : Text {; *moverH* : Integer {; *moverV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<br/>**OBJECT DUPLICATE** ( *objeto* : Field, Variable {; *novoNome* : Text {; *novaVar* : Pointer {; *relacionadoA* : Text {; *moverH* : Integer {; *moverV* : Integer {; *redimH* : Integer {; *redimV* : Integer}}}}}}} {; *} )<!-- END REF-->
 <!--REF #_command_.OBJECT DUPLICATE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Variável ou Campo (se * for omitido) |
-| novoNome | Text | &#8594;  | Nome do novo objeto |
-| novaVar | Pointer | &#8594;  | Ponteiro para a variável do novo objeto |
-| relacionadoA | Text | &#8594;  | Nome do objeto editável anterior (ou do botão de opção) |
-| moverH | Integer | &#8594;  | Deslocamento horizontal do novo objeto (>0 = a direita, <0 para a esquerda) |
-| moverV | Integer | &#8594;  | Deslocamento vertical do novo objeto (>0 = para baixo, <0 = para cima) |
-| redimH | Integer | &#8594;  | Valor do redimensionamento horizontal do objeto |
-| redimV | Integer | &#8594;  | Valor do redimensionamento vrtical do objeto |
-| * | Operador | &#8594;  | se especificado = coordenadas absolutadas, se omitida = coordenadas relativas |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string), se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * for omitido) |
+| novoNome | Text | &#8594; | Nome do novo objeto |
+| novaVar | Pointer | &#8594; | Ponteiro para a variável do novo objeto |
+| relacionadoA | Text | &#8594; | Nome do objeto editável anterior (ou do botão de opção) |
+| moverH | Integer | &#8594; | Deslocamento horizontal do novo objeto (>0 = a direita, <0 para a esquerda) |
+| moverV | Integer | &#8594; | Deslocamento vertical do novo objeto (>0 = para baixo, <0 = para cima) |
+| redimH | Integer | &#8594; | Valor do redimensionamento horizontal do objeto |
+| redimV | Integer | &#8594; | Valor do redimensionamento vrtical do objeto |
+| * | Operador | &#8594; | se especificado = coordenadas absolutadas, se omitida = coordenadas relativas |
 
 <!-- END REF-->
 
@@ -106,7 +106,7 @@ Criação de um novo botão opção "bRadio6" baseado no botão opção existent
 |  |  |
 | --- | --- |
 | Número do comando | 1111 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

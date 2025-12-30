@@ -54,7 +54,7 @@ Se o arquivo a ser enviado existir e o timeout não tiver passado, OK é estabel
 |  |  |
 | --- | --- |
 | Número do comando | 619 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

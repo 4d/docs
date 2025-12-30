@@ -37,6 +37,6 @@ Este comando devuelve una cadena vacía en los siguiente casos:
 |  |  |
 | --- | --- |
 | Número de comando | 1133 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

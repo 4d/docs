@@ -40,6 +40,6 @@ Les deux derniers paramètres ne sont remplis que si l’erreur provient de la s
 |  |  |
 | --- | --- |
 | Numéro de commande | 825 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

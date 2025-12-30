@@ -5,11 +5,11 @@ slug: /commands/unload-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.UNLOAD RECORD.Syntax-->**UNLOAD RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.UNLOAD RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela na qual vai descarregar o registro, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela na qual vai descarregar o registro, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -35,6 +35,6 @@ Se um registro tiver uma quantidade importante de dados, de campos de imagem, ou
 |  |  |
 | --- | --- |
 | Número do comando | 212 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

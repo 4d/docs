@@ -5,13 +5,13 @@ slug: /commands/create-set-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *tabla* ; *arrayReg* {; *nomConjunto*} )<!-- END REF-->
+<!--REF #_command_.CREATE SET FROM ARRAY.Syntax-->**CREATE SET FROM ARRAY** ( *tabla* : Table ; *arrayReg* : Integer, Boolean array {; *nomConjunto* : Text} )<!-- END REF-->
 <!--REF #_command_.CREATE SET FROM ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla del conjunto |
-| arrayReg | Integer, Boolean array | &#8594;  | Array de número de registros o Array de booleanos (True = el registro está en el conjunto, False = el registro no está en el conjunto) |
-| nomConjunto | Text | &#8594;  | Nombre del conjunto a crear o Aplicar el comando a Userset si se omite |
+| tabla | Table | &#8594; | Tabla del conjunto |
+| arrayReg | Integer, Boolean array | &#8594; | Array de número de registros o Array de booleanos (True = el registro está en el conjunto, False = el registro no está en el conjunto) |
+| nomConjunto | Text | &#8594; | Nombre del conjunto a crear o Aplicar el comando a Userset si se omite |
 
 <!-- END REF-->
 
@@ -44,7 +44,7 @@ En un array de enteros largos, si un número de registro no es válido (registro
 |  |  |
 | --- | --- |
 | Número de comando | 641 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

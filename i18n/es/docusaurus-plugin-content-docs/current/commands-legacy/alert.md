@@ -5,12 +5,12 @@ slug: /commands/alert
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *mensaje* {; *titulobotonOK*} )<!-- END REF-->
+<!--REF #_command_.ALERT.Syntax-->**ALERT** ( *mensaje* : Text {; *titulobotonOK* : Text} )<!-- END REF-->
 <!--REF #_command_.ALERT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| mensaje | Text | &#8594;  | Mensaje a mostrar en la caja de diálogo de alerta |
-| titulobotonOK | Text | &#8594;  | Título del botón OK |
+| mensaje | Text | &#8594; | Mensaje a mostrar en la caja de diálogo de alerta |
+| titulobotonOK | Text | &#8594; | Título del botón OK |
 
 <!-- END REF-->
 
@@ -73,6 +73,6 @@ Muestra la siguiente caja de diálogo de alerta (en Windows):
 |  |  |
 | --- | --- |
 | Número de comando | 41 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -59,6 +59,6 @@ Se quiser armazenar a configuração de impressão atual no disco:
 |  |  |
 | --- | --- |
 | Número do comando | 1433 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

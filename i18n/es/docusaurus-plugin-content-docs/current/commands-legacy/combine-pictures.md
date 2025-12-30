@@ -5,16 +5,16 @@ slug: /commands/combine-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imagenResult* ; *imag1* ; *operador* ; *imag2* {; *despHor* ; *despVert*} )<!-- END REF-->
+<!--REF #_command_.COMBINE PICTURES.Syntax-->**COMBINE PICTURES** ( *imagenResult* : Picture ; *imag1* : Picture ; *operador* : Integer ; *imag2* : Picture {; *despHor* : Integer ; *despVert* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMBINE PICTURES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | imagenResult | Picture | &#8592; | Imagen resultante de la combinación |
-| imag1 | Picture | &#8594;  | Primera imagen a combinar |
-| operador | Integer | &#8594;  | Tipo de combinación a realizar |
-| imag2 | Picture | &#8594;  | Segunda imagen a combinar |
-| despHor | Integer | &#8594;  | Desplazamiento horizontal para la superposición |
-| despVert | Integer | &#8594;  | Desplazamiento vertical para la superposición |
+| imag1 | Picture | &#8594; | Primera imagen a combinar |
+| operador | Integer | &#8594; | Tipo de combinación a realizar |
+| imag2 | Picture | &#8594; | Segunda imagen a combinar |
+| despHor | Integer | &#8594; | Desplazamiento horizontal para la superposición |
+| despVert | Integer | &#8594; | Desplazamiento vertical para la superposición |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ Resultado:
 |  |  |
 | --- | --- |
 | Número de comando | 987 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

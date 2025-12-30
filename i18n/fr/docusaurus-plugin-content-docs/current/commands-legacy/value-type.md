@@ -5,11 +5,11 @@ slug: /commands/value-type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* ) : Integer<!-- END REF-->
+<!--REF #_command_.Value type.Syntax-->**Value type** ( *expression* : Expression ) : Integer<!-- END REF-->
 <!--REF #_command_.Value type.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| expression | Expression | &#8594;  | Expression dont la valeur résultante doit être testée |
+| expression | Expression | &#8594; | Expression dont la valeur résultante doit être testée |
 | Résultat | Integer | &#8592; | Numéro du type de données |
 
 <!-- END REF-->
@@ -119,6 +119,6 @@ Vous souhaitez obtenir la somme de toutes les valeurs numériques dans une colle
 |  |  |
 | --- | --- |
 | Numéro de commande | 1509 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

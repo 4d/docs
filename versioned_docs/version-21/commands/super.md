@@ -117,6 +117,6 @@ $message:=$square.description() //I have 4 sides which are all equal
 |  |  |
 | --- | --- |
 | Command number | 1706 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

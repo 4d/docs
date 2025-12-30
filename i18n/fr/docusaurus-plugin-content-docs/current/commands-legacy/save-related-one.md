@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ N |
+| leField | Field | &#8594; | Champ N |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 43 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,13 +5,13 @@ slug: /commands/method-get-comments
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *ruta* ; *comentarios* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET COMMENTS.Syntax-->**METHOD GET COMMENTS** ( *ruta* : Text, Text array ; *comentarios* : Text, Text array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET COMMENTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text, Text array | &#8594;  | Texto o array texto que contiene una o varias rutas de método |
+| ruta | Text, Text array | &#8594; | Texto o array texto que contiene una o varias rutas de método |
 | comentarios | Text, Text array | &#8592; | Comentarios de los métodos designados |
-| * | Operador | &#8594;  | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
+| * | Operador | &#8594; | Si se pasa = el comando se aplica a la base local cuando se ejecuta desde un componente (parámetro ignorado fuera de este contexto) |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ Si el comando se ejecuta desde un componente, se aplica por defecto a los métod
 |  |  |
 | --- | --- |
 | Número de comando | 1189 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

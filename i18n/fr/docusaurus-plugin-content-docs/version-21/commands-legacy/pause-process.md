@@ -37,6 +37,6 @@ Lorsqu'un process est suspendu, les fenêtres qui lui appartiennent ne sont pas 
 |  |  |
 | --- | --- |
 | Numéro de commande | 319 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

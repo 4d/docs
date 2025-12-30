@@ -66,6 +66,6 @@ Este ejemplo crea un array local de 100 filas, conteniendo cada una 50 elementos
 |  |  |
 | --- | --- |
 | Número de comando | 1222 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

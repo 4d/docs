@@ -5,7 +5,7 @@ slug: /commands/http-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.HTTP GET OPTION.Syntax-->**HTTP GET OPTION** ( *option* : Integer ; *value* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP GET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ In the *value* parameter, pass a variable to receive the current value of the *o
 |  |  |
 | --- | --- |
 | Command number | 1159 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

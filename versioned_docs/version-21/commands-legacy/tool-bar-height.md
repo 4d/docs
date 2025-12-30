@@ -30,6 +30,6 @@ If no tool bar is displayed, the command returns 0.
 |  |  |
 | --- | --- |
 | Command number | 1016 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -224,6 +224,9 @@ title: (
         <Link to="Desktop/clientServer" >
           <Translate>Client/Server</Translate>
         </Link>
+         <Link to="Desktop/desktop-sessions" >
+          <Translate>Sessions</Translate>
+        </Link>
         <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>
         </Link>
@@ -232,9 +235,6 @@ title: (
         </Link>
        <Link to="Desktop/labels" >
           <Translate>Labels</Translate>
-        </Link>
-        <Link to="Desktop/user-settings" >
-          <Translate>User Settings</Translate>
         </Link>
         <Link to="Users/overview">
           <Translate>Access Rights</Translate>

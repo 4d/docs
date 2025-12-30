@@ -5,12 +5,12 @@ slug: /commands/compress-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *BLOB* {; *compression*} )<!-- END REF-->
+<!--REF #_command_.COMPRESS BLOB.Syntax-->**COMPRESS BLOB** ( *BLOB* : Blob {; *compression* : Integer} )<!-- END REF-->
 <!--REF #_command_.COMPRESS BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | 圧縮するBLOB |
-| compression | Integer | &#8594;  | 省略されない場合: 1, 圧縮率優先で圧縮 2, 速度優先で圧縮 |
+| Blob | Blob | &#8594; | 圧縮するBLOB |
+| compression | Integer | &#8594; | 省略されない場合: 1, 圧縮率優先で圧縮 2, 速度優先で圧縮 |
 
 <!-- END REF-->
 
@@ -97,7 +97,7 @@ BLOBが正しく圧縮されると、システム変数OKは1に設定されま�
 |  |  |
 | --- | --- |
 | コマンド番号 | 534 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

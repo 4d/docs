@@ -40,7 +40,7 @@ Si el parámetro *propiedad* es incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 795 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

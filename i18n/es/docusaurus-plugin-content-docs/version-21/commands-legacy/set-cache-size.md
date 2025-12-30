@@ -45,6 +45,6 @@ Usted quiere añadir 100 MB al tamaño de la caché de su base actual. Puede esc
 |  |  |
 | --- | --- |
 | Número de comando | 1399 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

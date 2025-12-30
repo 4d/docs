@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Register data key.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594;  | Phrase secrète courante (texte) ou clé de chiffrement des données courante (objet) |
+| phraseSecrèteCour &#124; cléDonnéesCour | Texte, Objet | &#8594; | Phrase secrète courante (texte) ou clé de chiffrement des données courante (objet) |
 | Résultat | Boolean | &#8592; | Vrai si la clé de chiffrement des données a été ajoutée avec succès au trousseau 4D. Faux si elle était déjà dans le trousseau 4D. |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ Passez le paramètre *phraseSecrèteCour* ou *cléDonnéesCour*, qui définit la
 |  |  |
 | --- | --- |
 | Numéro de commande | 1638 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *round* ; *places* ) : Real<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *round* : Real ; *places* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -43,6 +43,6 @@ The following example illustrates how Round works with different arguments. Each
 |  |  |
 | --- | --- |
 | Command number | 94 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

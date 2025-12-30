@@ -5,11 +5,11 @@ slug: /commands/get-style-sheet-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *nomFeuilleStyle* ; *police* ; *taille* ; *styles* )<!-- END REF-->
+<!--REF #_command_.GET STYLE SHEET INFO.Syntax-->**GET STYLE SHEET INFO** ( *nomFeuilleStyle* : Text ; *police* : Text ; *taille* : Integer ; *styles* : Integer )<!-- END REF-->
 <!--REF #_command_.GET STYLE SHEET INFO.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFeuilleStyle | Text | &#8594;  | Nom de la feuille de style |
+| nomFeuilleStyle | Text | &#8594; | Nom de la feuille de style |
 | police | Text | &#8592; | Police de caractères |
 | taille | Integer | &#8592; | Taille de police |
 | styles | Integer | &#8592; | Valeur de style |
@@ -70,7 +70,7 @@ Vous souhaitez connaître la configuration actuelle de la feuille de style "Auto
 |  |  |
 | --- | --- |
 | Numéro de commande | 1256 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

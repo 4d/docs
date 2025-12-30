@@ -5,11 +5,11 @@ slug: /commands/folder-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *nombreRuta* ; *directorios* )<!-- END REF-->
+<!--REF #_command_.FOLDER LIST.Syntax-->**FOLDER LIST** ( *nombreRuta* : Text ; *directorios* : Text array )<!-- END REF-->
 <!--REF #_command_.FOLDER LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreRuta | Text | &#8594;  | Ruta de acceso del volumen, directorio o carpeta |
+| nombreRuta | Text | &#8594; | Ruta de acceso del volumen, directorio o carpeta |
 | directorios | Text array | &#8592; | Nombres de los directorios presentes en esta ubicación |
 
 <!-- END REF-->
@@ -30,7 +30,7 @@ Si no hay carpetas en la ubicación especificada, el comando devuelve un array v
 |  |  |
 | --- | --- |
 | Número de comando | 473 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

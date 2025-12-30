@@ -5,7 +5,7 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *aField* )}<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *aField* : Field })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ The following example is part of an object method for an *\[Employees\]Salary* f
 |  |  |
 | --- | --- |
 | Command number | 38 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

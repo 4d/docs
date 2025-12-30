@@ -5,7 +5,7 @@ slug: /commands/listbox-set-footer-calculation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( {* ;} *object* ; *calculation* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Syntax-->**LISTBOX SET FOOTER CALCULATION** ( * ; *object* : Text ; *calculation* : Integer )<br/>**LISTBOX SET FOOTER CALCULATION** ( *object* : Field, Variable ; *calculation* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET FOOTER CALCULATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ If the data type of a column or of even one column of the list box (when object 
 |  |  |
 | --- | --- |
 | Command number | 1140 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

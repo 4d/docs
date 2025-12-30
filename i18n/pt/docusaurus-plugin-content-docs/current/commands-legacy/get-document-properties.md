@@ -5,11 +5,11 @@ slug: /commands/get-document-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *documento* ; *bloqueado* ; *invisivel* ; *criadoEm* ; *criadoAs* ; *modificadoEm* ; *modificadoAs* )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT PROPERTIES.Syntax-->**GET DOCUMENT PROPERTIES** ( *documento* : Text ; *bloqueado* : Boolean ; *invisivel* : Boolean ; *criadoEm* : Date ; *criadoAs* : Time ; *modificadoEm* : Date ; *modificadoAs* : Time )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Nome do documento |
+| documento | Text | &#8594; | Nome do documento |
 | bloqueado | Boolean | &#8592; | Bloqueado (TRUE) ou desbloqueado(false) |
 | invisivel | Boolean | &#8592; | Invisível (True) ou visível (False) |
 | criadoEm | Date | &#8592; | Data da criação |
@@ -214,7 +214,7 @@ Quando esse método tiver sido implementado no banco de dados, nóste mos todo o
 |  |  |
 | --- | --- |
 | Número do comando | 477 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

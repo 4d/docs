@@ -65,7 +65,7 @@ La variable OK toma el valor 1 si la lista se crea correctamente, de lo contrari
 |  |  |
 | --- | --- |
 | Número de comando | 557 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaEstruct | Text | &#8594;  | Nombre de ruta del archivo de estructura 4D a verificar |
-| rutaDatos | Text | &#8594;  | Nombre de ruta del archivo de datos 4D a verificar |
+| rutaEstruct | Text | &#8594; | Nombre de ruta del archivo de estructura 4D a verificar |
+| rutaDatos | Text | &#8594; | Nombre de ruta del archivo de datos 4D a verificar |
 | Resultado | Object | &#8592; | Información sobre el cifrado del archivo de datos y de cada tabla |
 
 <!-- END REF-->
@@ -74,6 +74,6 @@ Desea conocer el estado de cifrado de un archivo de datos que corresponde al arc
 |  |  |
 | --- | --- |
 | Número de comando | 1609 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

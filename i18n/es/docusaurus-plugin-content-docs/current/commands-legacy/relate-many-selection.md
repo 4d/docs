@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.RELATE MANY SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unField | Field | &#8594;  | Campo de la tabla Muchos (donde inicia la relación) |
+| unField | Field | &#8594; | Campo de la tabla Muchos (donde inicia la relación) |
 
 <!-- END REF-->
 
@@ -39,7 +39,7 @@ Este ejemplo selecciona todas las facturas de clientes con crédito superior o i
 |  |  |
 | --- | --- |
 | Número de comando | 340 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

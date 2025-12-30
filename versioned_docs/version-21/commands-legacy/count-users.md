@@ -29,6 +29,6 @@ When executed on a 4D single-user application, **Count users** returns 1.
 |  |  |
 | --- | --- |
 | Command number | 342 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

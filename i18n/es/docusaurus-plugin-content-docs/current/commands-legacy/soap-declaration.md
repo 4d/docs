@@ -5,14 +5,14 @@ slug: /commands/soap-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* ; *tipo* ; entrada_salida {; *alias*} )<!-- END REF-->
+<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* : Variable ; *tipo* : Integer ; entrada_salida {; *alias* : Text} )<!-- END REF-->
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | Variable que referencia un argumento SOAP entrante o saliente |
-| tipo | Integer | &#8594;  | Tipo 4D al cual apunta el argumento |
-| entrada_salida | Integer | &#8594;  | 1 = Entrada SOAP, 2 = Salida SOAP |
-| alias | Text | &#8594;  | Nombre publicado para este argumento durante los intercambios SOAP |
+| variable | Variable | &#8594; | Variable que referencia un argumento SOAP entrante o saliente |
+| tipo | Integer | &#8594; | Tipo 4D al cual apunta el argumento |
+| entrada_salida | Integer | &#8594; | 1 = Entrada SOAP, 2 = Salida SOAP |
+| alias | Text | &#8594; | Nombre publicado para este argumento durante los intercambios SOAP |
 
 <!-- END REF-->
 
@@ -192,6 +192,6 @@ Este ejemplo illustra los resultados de los diferentes tipos de declaraciones:
 |  |  |
 | --- | --- |
 | Número de comando | 782 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

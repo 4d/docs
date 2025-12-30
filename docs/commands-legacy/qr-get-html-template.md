@@ -5,7 +5,7 @@ slug: /commands/qr-get-html-template
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* ) : Text<!-- END REF-->
+<!--REF #_command_.QR Get HTML template.Syntax-->**QR Get HTML template** ( *area* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.QR Get HTML template.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,7 +31,7 @@ If you pass an invalid area number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 751 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

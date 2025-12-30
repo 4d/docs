@@ -5,12 +5,12 @@ slug: /commands/font-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fuentes* {; *tipoLista*} )<!-- END REF-->
+<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *fuentes* : Text array {; *tipoLista* : Integer, *} )<!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | fuentes | Text array | &#8592; | Array de nombres de fuentes disponibles |
-| tipoLista | Integer, * | &#8594;  | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en macOS |
+| tipoLista | Integer, * | &#8594; | Tipo de lista de fuente a devolver o * para devolver los nombres de fuente en macOS |
 
 <!-- END REF-->
 
@@ -81,6 +81,6 @@ Usted quiere obtener una lista de fuentes recientes:
 |  |  |
 | --- | --- |
 | Número de comando | 460 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

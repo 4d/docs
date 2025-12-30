@@ -49,6 +49,6 @@ In the *value* parameter, pass a variable to receive the current value of the *o
 |  |  |
 | --- | --- |
 | Command number | 1159 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

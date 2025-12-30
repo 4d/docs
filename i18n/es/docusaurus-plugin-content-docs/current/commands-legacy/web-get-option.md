@@ -5,11 +5,11 @@ slug: /commands/web-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* ; *valor* )<!-- END REF-->
+<!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* : Integer ; *valor* : Integer, Text, Collection )<!-- END REF-->
 <!--REF #_command_.WEB GET OPTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Código de la opción a modificar |
+| selector | Integer | &#8594; | Código de la opción a modificar |
 | valor | Integer, Text, Collection | &#8592; | Valor de la opción |
 
 <!-- END REF-->
@@ -69,6 +69,6 @@ Cuando utiliza el *selector* Web debug log, puede recibir una de las siguientes 
 |  |  |
 | --- | --- |
 | Número de comando | 1209 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

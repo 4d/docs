@@ -5,13 +5,13 @@ slug: /commands/object-set-vertical-alignment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( {* ;} *objet* ; *alignement* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Syntax-->**OBJECT SET VERTICAL ALIGNMENT** ( * ; *objet* : Text ; *alignement* : Integer )<br/>**OBJECT SET VERTICAL ALIGNMENT** ( *objet* : Field, Variable ; *alignement* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET VERTICAL ALIGNMENT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| alignement | Integer | &#8594;  | Code d’alignement |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| alignement | Integer | &#8594; | Code d’alignement |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ Les objets de formulaire auxquels un alignement vertical peut être appliqué so
 |  |  |
 | --- | --- |
 | Numéro de commande | 1187 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

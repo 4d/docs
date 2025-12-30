@@ -78,6 +78,6 @@ Este es el método de objeto de una casilla de selección ubicada en el encabeza
 |  |  |
 | --- | --- |
 | Número de comando | 238 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

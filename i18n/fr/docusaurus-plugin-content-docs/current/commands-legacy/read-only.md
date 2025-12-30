@@ -5,11 +5,11 @@ slug: /commands/read-only
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** {( laTable )}<br/>**READ ONLY** {( * )}<!-- END REF-->
+<!--REF #_command_.READ ONLY.Syntax-->**READ ONLY** ({ laTable })<br/>**READ ONLY** ({ * })<!-- END REF-->
 <!--REF #_command_.READ ONLY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable &#124; * | Table, Opérateur | &#8594;  | Table à définir en mode lecture seulement ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
+| laTable &#124; * | Table, Opérateur | &#8594; | Table à définir en mode lecture seulement ou * pour toutes les tables ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -32,6 +32,6 @@ Vous pouvez utiliser **READ ONLY** lorsqu'il n'est pas utile de modifier les enr
 |  |  |
 | --- | --- |
 | Numéro de commande | 145 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

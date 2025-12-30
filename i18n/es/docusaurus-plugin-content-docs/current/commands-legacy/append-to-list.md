@@ -5,15 +5,15 @@ slug: /commands/append-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *lista* ; *textoElem* ; *refElem* {; *sublista* ; *desplegada*} )<!-- END REF-->
+<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *lista* : Integer ; *textoElem* : Text ; *refElem* : Integer {; *sublista* : Integer ; *desplegada* : Boolean} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referencia de lista |
-| textoElem | Text | &#8594;  | Texto del nuevo elemento de lista (max. 255 caracteres) |
-| refElem | Integer | &#8594;  | Número de referencia único del nuevo elemento |
-| sublista | Integer | &#8594;  | Sublista opcional para añadir al nuevo elemento |
-| desplegada | Boolean | &#8594;  | Indica si las sublistas opcionales serán desplegadas o contraídas |
+| lista | Integer | &#8594; | Número de referencia de lista |
+| textoElem | Text | &#8594; | Texto del nuevo elemento de lista (max. 255 caracteres) |
+| refElem | Integer | &#8594; | Número de referencia único del nuevo elemento |
+| sublista | Integer | &#8594; | Sublista opcional para añadir al nuevo elemento |
+| desplegada | Boolean | &#8594; | Indica si las sublistas opcionales serán desplegadas o contraídas |
 
 <!-- END REF-->
 
@@ -159,6 +159,6 @@ Cuando el formulario se ejecuta, la lista se verá de esta forma:
 |  |  |
 | --- | --- |
 | Número de comando | 376 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

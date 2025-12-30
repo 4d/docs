@@ -5,7 +5,7 @@ slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *picture* ) : Text<!-- END REF-->
+<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *picture* : Picture, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ If the picture does not have a default name, the command returns an empty string
 |  |  |
 | --- | --- |
 | Command number | 1171 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

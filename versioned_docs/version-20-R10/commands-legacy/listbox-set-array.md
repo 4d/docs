@@ -70,6 +70,6 @@ You want to set a row height array for a list box:
 |  |  |
 | --- | --- |
 | Command number | 1279 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

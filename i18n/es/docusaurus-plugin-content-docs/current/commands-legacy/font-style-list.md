@@ -5,11 +5,11 @@ slug: /commands/font-style-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *familiaFuiente* ; *listaEstilosFuente* ; *listaNomsFuente* )<!-- END REF-->
+<!--REF #_command_.FONT STYLE LIST.Syntax-->**FONT STYLE LIST** ( *familiaFuiente* : Text ; *listaEstilosFuente* : Text array ; *listaNomsFuente* : Text array )<!-- END REF-->
 <!--REF #_command_.FONT STYLE LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| familiaFuiente | Text | &#8594;  | Nombre de la familia de fuente |
+| familiaFuiente | Text | &#8594; | Nombre de la familia de fuente |
 | listaEstilosFuente | Text array | &#8592; | Lista de estilos fuente soportados por la familia de fuente |
 | listaNomsFuente | Text array | &#8592; | Lista de nombres completos soportados por la familia de fuente |
 
@@ -64,6 +64,6 @@ Usted desea seleccionar estilos de la familia de fuentes "Verdana" (si está dis
 |  |  |
 | --- | --- |
 | Número de comando | 1362 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

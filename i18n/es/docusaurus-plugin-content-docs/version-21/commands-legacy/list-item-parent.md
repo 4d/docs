@@ -77,6 +77,6 @@ Los números de referencia de los elementos son los siguientes:
 |  |  |
 | --- | --- |
 | Número de comando | 633 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

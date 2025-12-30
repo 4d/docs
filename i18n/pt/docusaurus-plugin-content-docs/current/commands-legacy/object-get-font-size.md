@@ -5,12 +5,12 @@ slug: /commands/object-get-font-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( {* ;} *objeto* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get font size.Syntax-->**OBJECT Get font size** ( * ; *objeto* : Text ) : Integer<br/>**OBJECT Get font size** ( *objeto* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get font size.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou Variável ou Campo (se * é omitido). |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável ou campo. |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou Variável ou Campo (se * é omitido). |
 | Resultado | Integer | &#8592; | Tamanho de fonte em pontos |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 |  |  |
 | --- | --- |
 | Número do comando | 1070 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/qr-report-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *area* ; *BLOB* )<!-- END REF-->
+<!--REF #_command_.QR REPORT TO BLOB.Syntax-->**QR REPORT TO BLOB** ( *area* : Integer ; *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.QR REPORT TO BLOB.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
+| area | Integer | &#8594; | Referencia del área |
 | Blob | Blob | &#8592; | Blob a recibir el informe rápido |
 
 <!-- END REF-->
@@ -37,7 +37,7 @@ La siguiente instrucción asigna el informe rápido almacenado en el área MiAre
 |  |  |
 | --- | --- |
 | Número de comando | 770 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

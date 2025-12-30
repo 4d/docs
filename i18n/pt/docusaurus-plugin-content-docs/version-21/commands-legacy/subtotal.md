@@ -67,6 +67,6 @@ A função Subtotal é necessária para mostrar valores em um formulário.
 |  |  |
 | --- | --- |
 | Número do comando | 97 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

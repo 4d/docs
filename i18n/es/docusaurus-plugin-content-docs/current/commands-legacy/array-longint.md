@@ -5,13 +5,13 @@ slug: /commands/array-longint
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *nombreArray* ; *tamaño* {; *tamaño2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY LONGINT.Syntax-->**ARRAY LONGINT** ( *nombreArray* : Array ; *tamaño* : Integer {; *tamaño2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY LONGINT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombreArray | Array | &#8594;  | Nombre del array |
-| tamaño | Integer | &#8594;  | Número de elementos en el array o Número de filas si se especifica tamaño2 |
-| tamaño2 | Integer | &#8594;  | Número de columnas en un array de dos dimensiones |
+| nombreArray | Array | &#8594; | Nombre del array |
+| tamaño | Integer | &#8594; | Número de elementos en el array o Número de filas si se especifica tamaño2 |
+| tamaño2 | Integer | &#8594; | Número de columnas en un array de dos dimensiones |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ Este ejemplo crea un array interproceso de 4 bytes de 50 elementos de tipo [Ente
 |  |  |
 | --- | --- |
 | Número de comando | 221 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

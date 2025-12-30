@@ -5,13 +5,13 @@ slug: /commands/get-text-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *texto* ; *arrPalabrasClaves* {; *} )<!-- END REF-->
+<!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *texto* : Text ; *arrPalabrasClaves* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| texto | Text | &#8594;  | Texto original |
+| texto | Text | &#8594; | Texto original |
 | arrPalabrasClaves | Text array | &#8592; | Array que contiene las palabras claves |
-| * | Operador | &#8594;  | Si se pasa = palabras únicas |
+| * | Operador | &#8594; | Si se pasa = palabras únicas |
 
 <!-- END REF-->
 
@@ -89,6 +89,6 @@ Para contar las palabras de un texto:
 |  |  |
 | --- | --- |
 | Número de comando | 1141 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

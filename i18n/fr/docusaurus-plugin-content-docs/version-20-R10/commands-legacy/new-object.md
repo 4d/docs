@@ -112,6 +112,6 @@ Avec cette commande, vous pouvez aisément gérer des objets en boucle :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1471 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

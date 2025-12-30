@@ -5,12 +5,12 @@ slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *target*} ) : Object<!-- END REF-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* : Text {; *target* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| action | Text | &#8594;  | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
-| target | Integer | &#8594;  | アクションの情報を取得するターゲットを定義します。メインフォームあるいはカレントフォーム |
+| action | Text | &#8594; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
+| target | Integer | &#8594; | アクションの情報を取得するターゲットを定義します。メインフォームあるいはカレントフォーム |
 | 戻り値 | Object | &#8592; | アクションのステータスを表したブール型のプロパティを格納するオブジェクト: isEnabled、isVisible、isChecked、isMixed、isUnknownState |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1442 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

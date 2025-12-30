@@ -31,7 +31,7 @@ Si el servidor web se inicia correctamente, OK toma el valor *1*; de lo contrari
 |  |  |
 | --- | --- |
 | Número de comando | 617 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

@@ -55,6 +55,6 @@ Cette méthode projet permet d'adresser le même port série (sans protocole), q
 |  |  |
 | --- | --- |
 | Numéro de commande | 909 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/select-rgb-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** {( *colorDefecto* {; *mensaje*} )} : Integer<!-- END REF-->
+<!--REF #_command_.Select RGB color.Syntax-->**Select RGB color** ( *colorDefecto* : Integer {; *mensaje* : Text} ) : Integer<!-- END REF-->
 <!--REF #_command_.Select RGB color.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| colorDefecto | Integer | &#8594;  | Color RGB preseleccionado |
-| mensaje | Text | &#8594;  | Título de la ventana de selección |
+| colorDefecto | Integer | &#8594; | Color RGB preseleccionado |
+| mensaje | Text | &#8594; | Título de la ventana de selección |
 | Resultado | Integer | &#8592; | Color RGB |
 
 <!-- END REF-->
@@ -45,7 +45,7 @@ El efecto de la validación de esta caja de diálogo difiere dependiendo de la p
 |  |  |
 | --- | --- |
 | Número de comando | 956 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 | Prohibido en el servidor ||
 

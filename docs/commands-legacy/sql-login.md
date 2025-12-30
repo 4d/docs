@@ -5,7 +5,7 @@ slug: /commands/sql-login
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** {( *dataEntry* ; *userName* ; *password* ; * )}<!-- END REF-->
+<!--REF #_command_.SQL LOGIN.Syntax-->**SQL LOGIN** ({ *dataEntry* : Text ; *userName* : Text ; *password* : Text ; * })<!-- END REF-->
 <!--REF #_command_.SQL LOGIN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -211,7 +211,7 @@ If the connection is successful, the system variable OK is set to 1; otherwise, 
 |  |  |
 | --- | --- |
 | Command number | 817 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

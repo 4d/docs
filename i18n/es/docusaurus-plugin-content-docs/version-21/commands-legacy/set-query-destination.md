@@ -257,6 +257,6 @@ Después de implementar este método de proyecto en su aplicación, puede escrib
 |  |  |
 | --- | --- |
 | Número de comando | 396 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

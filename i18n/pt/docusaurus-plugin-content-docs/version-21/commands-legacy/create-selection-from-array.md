@@ -54,7 +54,7 @@ Se um número de registro não é válido (registro não criado), é gerado o er
 |  |  |
 | --- | --- |
 | Número do comando | 640 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 | Modificar a seleção atual ||
 

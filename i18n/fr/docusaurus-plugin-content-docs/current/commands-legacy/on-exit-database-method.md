@@ -114,6 +114,6 @@ L'exemple suivant illustre un cas typique où vous lancez un ou plusieurs proces
 |  |  |
 | --- | --- |
 | Numéro de commande | 905252 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

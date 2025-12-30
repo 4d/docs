@@ -67,6 +67,6 @@ El siguiente ejemplo imprime el mismo registro actual en dos formularios diferen
 |  |  |
 | --- | --- |
 | Número de comando | 71 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

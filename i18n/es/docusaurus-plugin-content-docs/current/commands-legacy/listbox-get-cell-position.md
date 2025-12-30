@@ -5,14 +5,14 @@ slug: /commands/listbox-get-cell-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( {* ;} *objeto* {; *X* ; *Y* }; *columna* ; *linea* {; *varCol*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET CELL POSITION.Syntax-->**LISTBOX GET CELL POSITION** ( * ; *objeto* : Text {; *X* : Real ; *Y* : Real }; *columna* : Integer ; *linea* : Integer {; *varCol* : Pointer} )<br/>**LISTBOX GET CELL POSITION** ( *objeto* : Field, Variable {; *X* : Real ; *Y* : Real }; *columna* : Integer ; *linea* : Integer {; *varCol* : Pointer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET CELL POSITION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| X | Real | &#8594;  | Coordenada horizontal del ratón |
-| Y | Real | &#8594;  | Coordenada vertical del ratón |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| X | Real | &#8594; | Coordenada horizontal del ratón |
+| Y | Real | &#8594; | Coordenada vertical del ratón |
 | columna | Integer | &#8592; | Número de columna |
 | linea | Integer | &#8592; | Número de fila |
 | varCol | Pointer | &#8592; | Puntero a la variable de la columna |
@@ -59,6 +59,6 @@ Este comando tiene en cuenta las acciones de selección o deselección efectuada
 |  |  |
 | --- | --- |
 | Número de comando | 971 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/last-query-path
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* ) : Text<!-- END REF-->
+<!--REF #_command_.Last query path.Syntax-->**Last query path** ( *descFormat* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Last query path.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| descFormat | Integer | &#8594;  | 説明フォーマット (テキストまたはXML) |
+| descFormat | Integer | &#8594; | 説明フォーマット (テキストまたはXML) |
 | 戻り値 | Text | &#8592; | 最後に実行されたクエリパスの説明 |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1045 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

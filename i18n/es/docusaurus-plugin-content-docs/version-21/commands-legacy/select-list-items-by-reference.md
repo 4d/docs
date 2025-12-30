@@ -55,6 +55,6 @@ Si trabaja con los números de referencia de los elementos, asegúrese de constr
 |  |  |
 | --- | --- |
 | Número de comando | 630 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

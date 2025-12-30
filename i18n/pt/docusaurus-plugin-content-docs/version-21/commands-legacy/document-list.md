@@ -119,7 +119,7 @@ Lista de todos os documentos em modo recursivo Posix (relativo):
 |  |  |
 | --- | --- |
 | Número do comando | 474 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

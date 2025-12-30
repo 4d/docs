@@ -42,7 +42,7 @@ Si el parámetro *subtotal* es incorrecto, se genera el error -9852.
 |  |  |
 | --- | --- |
 | Número de comando | 762 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-find-next
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Find next.Syntax-->**WP Find next** ( *targetObj* ; *searchAfter* ; *searchValue* ; *searchCondition* {; *replaceValue*} ) : Object<!-- END REF-->
+<!--REF #_command_.WP Find next.Syntax-->**WP Find next** ( *targetObj* : Object ; *searchAfter* : Object ; *searchValue* : Text ; *searchCondition* : Integer {; *replaceValue* : Text} ) : Object<!-- END REF-->
 <!--REF #_command_.WP Find next.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |

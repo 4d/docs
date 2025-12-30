@@ -101,7 +101,7 @@ Si le paramètre *numRupture* est incorrect, l’erreur -9853 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 767 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/set-query-limit
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* )<!-- END REF-->
+<!--REF #_command_.SET QUERY LIMIT.Syntax-->**SET QUERY LIMIT** ( *limite* : Integer )<!-- END REF-->
 <!--REF #_command_.SET QUERY LIMIT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| limite | Integer | &#8594;  | Número límite de registros ó 0 para ilimitado |
+| limite | Integer | &#8594; | Número límite de registros ó 0 para ilimitado |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ Ver el segundo ejemplo del comando [SET QUERY DESTINATION](set-query-destination
 |  |  |
 | --- | --- |
 | Número de comando | 395 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

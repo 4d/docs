@@ -40,6 +40,6 @@ Consulte los ejemplos dados por el comando [ENCRYPT BLOB](encrypt-blob.md "ENCRY
 |  |  |
 | --- | --- |
 | Número de comando | 690 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

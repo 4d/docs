@@ -5,7 +5,7 @@ slug: /commands/object-set-shortcut
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( {* ;} *object* ; *key* {; *modifiers*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SHORTCUT.Syntax-->**OBJECT SET SHORTCUT** ( * ; *object* : Text ; *key* : Text {; *modifiers* : Integer} )<br/>**OBJECT SET SHORTCUT** ( *object* : Field, Variable ; *key* : Text {; *modifiers* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SHORTCUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -93,6 +93,6 @@ You want to associate a different shortcut depending on the current language of 
 |  |  |
 | --- | --- |
 | Command number | 1185 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

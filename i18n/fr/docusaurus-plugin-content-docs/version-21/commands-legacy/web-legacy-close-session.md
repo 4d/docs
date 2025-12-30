@@ -41,6 +41,6 @@ Après l’exécution de cette commande, si un client Web envoie une requête ut
 |  |  |
 | --- | --- |
 | Numéro de commande | 1208 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

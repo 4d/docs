@@ -41,6 +41,6 @@ Ver el ejemplo del comando [BREAK LEVEL](break-level.md "BREAK LEVEL").
 |  |  |
 | --- | --- |
 | Número de comando | 303 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *methodsArray* )<!-- END REF-->
+<!--REF #_command_.GET ALLOWED METHODS.Syntax-->**GET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET ALLOWED METHODS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ GET ALLOWED METHODSコマンドは、[SET ALLOWED METHODS](../commands/set-allow
 |  |  |
 | --- | --- |
 | コマンド番号 | 908 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

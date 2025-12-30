@@ -5,12 +5,12 @@ slug: /commands/get-4d-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *arquivo* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Get 4D file.Syntax-->**Get 4D file** ( *arquivo* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Get 4D file.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arquivo | Integer | &#8594;  | Tipo de arquivo |
-| * | Operador | &#8594;  | Retorna arquivo do banco de dados host |
+| arquivo | Integer | &#8594; | Tipo de arquivo |
+| * | Operador | &#8594; | Retorna arquivo do banco de dados host |
 | Resultado | Text | &#8592; | Nome da rota do arquivo 4D |
 
 <!-- END REF-->
@@ -75,6 +75,6 @@ Se quiser obter a rota do último arquivo de backup:
 |  |  |
 | --- | --- |
 | Número do comando | 1418 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

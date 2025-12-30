@@ -5,7 +5,7 @@ slug: /commands/print-label
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *aTable* {; *document* {; * }} )<br/>**PRINT LABEL** ( *aTable* {; *document* {; >}} )<!-- END REF-->
+<!--REF #_command_.PRINT LABEL.Syntax-->**PRINT LABEL** ( *aTable* : Table {; *document* : Text {; * }} )<br/>**PRINT LABEL** ( *aTable* : Table {; *document* : Text {; >}} )<!-- END REF-->
 <!--REF #_command_.PRINT LABEL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -112,7 +112,7 @@ The following example lets the user query the \[People\] table, and then display
 |  |  |
 | --- | --- |
 | Command number | 39 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

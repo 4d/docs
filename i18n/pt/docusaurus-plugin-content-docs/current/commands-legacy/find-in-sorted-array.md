@@ -5,13 +5,13 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* ; *valor* ; > or < {; *posPrim* {; *posUlt*}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *valor* : Expression ; > or < {; *posPrim* : Integer {; *posUlt* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array para pesquisar |
-| valor | Expression | &#8594;  | Valor do mesmo tipo para procurar no array |
-| > or < | Operador | &#8594;  | > se o array está classificado em ordem crescente, < se ele está em ordem decrescente |
+| array | Array | &#8594; | Array para pesquisar |
+| valor | Expression | &#8594; | Valor do mesmo tipo para procurar no array |
+| > or < | Operador | &#8594; | > se o array está classificado em ordem crescente, < se ele está em ordem decrescente |
 | posPrim | Integer | &#8592; | Posição da sua primeira ocorrência se o valor for encontrado; caso contrário, a posição em que o valor deve ser inserido |
 | posUlt | Integer | &#8592; | Posição de sua última ocorrência se o valor for encontrado; caso contrário, mesmo que posPrim |
 | Resultado | Boolean | &#8592; | True se pelo menos um elemento no array corresponde ao valor, False caso contrário |
@@ -79,6 +79,6 @@ Você quer encontrar o número de ocorrências das cadeias que começam por "tes
 |  |  |
 | --- | --- |
 | Número do comando | 1333 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/receive-buffer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *varRéception* )<!-- END REF-->
+<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *varRéception* : Text )<!-- END REF-->
 <!--REF #_command_.RECEIVE BUFFER.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -70,7 +70,7 @@ Notez que l'accès à la variable interprocess *◊vtBuffer* doit être protég�
 |  |  |
 | --- | --- |
 | Numéro de commande | 172 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | error |
 
 

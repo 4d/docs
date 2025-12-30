@@ -5,11 +5,11 @@ slug: /commands/clear-named-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *nombre* )<!-- END REF-->
+<!--REF #_command_.CLEAR NAMED SELECTION.Syntax-->**CLEAR NAMED SELECTION** ( *nombre* : Text )<!-- END REF-->
 <!--REF #_command_.CLEAR NAMED SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nombre | Text | &#8594;  | Nombre de la selección temporal a borrar |
+| nombre | Text | &#8594; | Nombre de la selección temporal a borrar |
 
 <!-- END REF-->
 
@@ -30,6 +30,6 @@ Si *temp* fue creado por el comando [CUT NAMED SELECTION](cut-named-selection.md
 |  |  |
 | --- | --- |
 | Número de comando | 333 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

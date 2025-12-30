@@ -5,14 +5,14 @@ slug: /commands/sql-execute-script
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *rutaScript* ; *accionError* {; *nomAtrib* ; *valAtrib*} {; *nomAtrib2* ; *valAtrib2* ; ... ; *nomAtribN* ; *valAtribN*} )<!-- END REF-->
+<!--REF #_command_.SQL EXECUTE SCRIPT.Syntax-->**SQL EXECUTE SCRIPT** ( *rutaScript* : Text ; *accionError* : Integer {; *nomAtrib* : Text ; *valAtrib* : Text} {; ...(*nomAtrib* : Text, *valAtrib* : Text)} )<!-- END REF-->
 <!--REF #_command_.SQL EXECUTE SCRIPT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| rutaScript | Text | &#8594;  | Ruta de acceso completa del archivo que contiene el script SQL a ejecutar |
-| accionError | Integer | &#8594;  | Acción a efectuar en caso de error durante la ejecución del script |
-| nomAtrib | Text | &#8594;  | Nombre del atributo a utilizar |
-| valAtrib | Text | &#8594;  | Valor del atributo |
+| rutaScript | Text | &#8594; | Ruta de acceso completa del archivo que contiene el script SQL a ejecutar |
+| accionError | Integer | &#8594; | Acción a efectuar en caso de error durante la ejecución del script |
+| nomAtrib | Text | &#8594; | Nombre del atributo a utilizar |
+| valAtrib | Text | &#8594; | Valor del atributo |
 
 <!-- END REF-->
 
@@ -64,7 +64,7 @@ Si el script se ejecuta correctamente (no se encuentra ningún error), la variab
 |  |  |
 | --- | --- |
 | Número de comando | 1089 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

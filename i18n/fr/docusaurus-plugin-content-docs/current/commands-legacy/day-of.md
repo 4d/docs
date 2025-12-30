@@ -5,11 +5,11 @@ slug: /commands/day-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* ) : Integer<!-- END REF-->
+<!--REF #_command_.Day of.Syntax-->**Day of** ( *date* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| date | Date | &#8594;  | Date dont vous voulez extraire le jour |
+| date | Date | &#8594; | Date dont vous voulez extraire le jour |
 | Résultat | Integer | &#8592; | Jour du mois de date |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ Reportez-vous à l'exemple de la fonction [Current date](current-date.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 23 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

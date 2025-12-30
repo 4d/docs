@@ -5,7 +5,7 @@ slug: /commands/bool
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Bool.Syntax-->**Bool** ( *expression* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Bool.Syntax-->**Bool** ( *expression* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Bool.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -53,6 +53,6 @@ You select a value depending on the contents of an object field attribute, antic
 |  |  |
 | --- | --- |
 | Command number | 1537 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/object-get-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( {* ;} *object* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( * ; *object* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT GET SCROLLBAR** ( *object* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,6 +51,6 @@ For more information, refer to the description of the [OBJECT SET SCROLLBAR](obj
 |  |  |
 | --- | --- |
 | Command number | 1076 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

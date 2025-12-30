@@ -5,7 +5,7 @@ slug: /commands/qr-set-text-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* ; *colNum* ; *rowNum* ; *property* ; *value* )<!-- END REF-->
+<!--REF #_command_.QR SET TEXT PROPERTY.Syntax-->**QR SET TEXT PROPERTY** ( *area* : Integer ; *colNum* : Integer ; *rowNum* : Integer ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
 <!--REF #_command_.QR SET TEXT PROPERTY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ This method defines several attributes of the first column’s title:
 |  |  |
 | --- | --- |
 | Command number | 759 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

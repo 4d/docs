@@ -64,6 +64,6 @@ Se quiser exportar a estrutura atual do banco de dados em formato html:
 |  |  |
 | --- | --- |
 | Número do comando | 1311 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

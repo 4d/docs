@@ -39,6 +39,6 @@ You can compare the value returned with the value of one or more of the followin
 |  |  |
 | --- | --- |
 | Command number | 1071 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

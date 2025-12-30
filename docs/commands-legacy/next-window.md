@@ -5,7 +5,7 @@ slug: /commands/next-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Next window.Syntax-->**Next window** ( *window* ) : Integer<!-- END REF-->
+<!--REF #_command_.Next window.Syntax-->**Next window** ( *window* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Next window.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -27,6 +27,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 448 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

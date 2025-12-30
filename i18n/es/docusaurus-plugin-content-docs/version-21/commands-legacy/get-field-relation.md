@@ -89,6 +89,6 @@ El siguiente código ilustra las diferentes posibilidades ofrecidas por los coma
 |  |  |
 | --- | --- |
 | Número de comando | 920 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -91,6 +91,6 @@ Note que las variables de encabezado y de pie de página siempre se crean con un
 |  |  |
 | --- | --- |
 | Número de comando | 1273 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

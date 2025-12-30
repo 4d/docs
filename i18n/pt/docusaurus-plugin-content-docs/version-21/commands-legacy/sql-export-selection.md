@@ -42,7 +42,7 @@ Se a exportação for realizada corretamente, a variável OK assume o valor 1\. 
 |  |  |
 | --- | --- |
 | Número do comando | 1064 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

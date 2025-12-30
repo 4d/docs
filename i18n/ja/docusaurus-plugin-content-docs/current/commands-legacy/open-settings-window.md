@@ -5,13 +5,13 @@ slug: /commands/open-settings-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *selector* {; *access* {; *settingsType*}} )<!-- END REF-->
+<!--REF #_command_.OPEN SETTINGS WINDOW.Syntax-->**OPEN SETTINGS WINDOW** ( *selector* : Text {; *access* : Boolean {; *settingsType* : Integer}} )<!-- END REF-->
 <!--REF #_command_.OPEN SETTINGS WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Text | &#8594;  | 環境設定やデータベース設定ダイアログボックス中のテーマやページ、またはパラメーターグループを指定するキー |
-| access | Boolean | &#8594;  | True=ダイアログボックスの他のページをロックする<br/>Falseまたは省略=ダイアログの他のページもアクティブにする |
-| settingsType | Integer | &#8594;  | 0または省略時 = ストラクチャー設定、1 = ユーザー設定 |
+| selector | Text | &#8594; | 環境設定やデータベース設定ダイアログボックス中のテーマやページ、またはパラメーターグループを指定するキー |
+| access | Boolean | &#8594; | True=ダイアログボックスの他のページをロックする<br/>Falseまたは省略=ダイアログの他のページもアクティブにする |
+| settingsType | Integer | &#8594; | 0または省略時 = ストラクチャー設定、1 = ユーザー設定 |
 
 <!-- END REF-->
 
@@ -144,7 +144,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 903 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

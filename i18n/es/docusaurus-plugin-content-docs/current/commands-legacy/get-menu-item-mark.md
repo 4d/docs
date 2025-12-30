@@ -5,13 +5,13 @@ slug: /commands/get-menu-item-mark
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* ; *lineamenu* {; *proceso*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu item mark.Syntax-->**Get menu item mark** ( *menu* : Integer, Text ; *lineamenu* : Integer {; *proceso* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu item mark.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menú o Referencia de menú |
-| lineamenu | Integer | &#8594;  | Número de línea de menú o -1 por el último elemento añadido |
-| proceso | Integer | &#8594;  | Número de referencia de proceso |
+| menu | Integer, Text | &#8594; | Número de menú o Referencia de menú |
+| lineamenu | Integer | &#8594; | Número de línea de menú o -1 por el último elemento añadido |
+| proceso | Integer | &#8594; | Número de referencia de proceso |
 | Resultado | Text | &#8592; | Marca de línea del menú actual |
 
 <!-- END REF-->
@@ -45,7 +45,7 @@ El siguiente ejemplo invierte la marca de una línea de menú:
 |  |  |
 | --- | --- |
 | Número de comando | 428 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

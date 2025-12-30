@@ -5,7 +5,7 @@ slug: /commands/screen-depth
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *depth* ; *color* {; *screen*} )<!-- END REF-->
+<!--REF #_command_.SCREEN DEPTH.Syntax-->**SCREEN DEPTH** ( *depth* : Integer ; *color* : Integer {; *screen* : Integer} )<!-- END REF-->
 <!--REF #_command_.SCREEN DEPTH.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -65,6 +65,6 @@ Your application displays many color graphics. Somewhere in your database, you c
 |  |  |
 | --- | --- |
 | Command number | 439 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

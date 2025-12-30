@@ -5,11 +5,11 @@ slug: /commands/blob-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *BLOB* ; *comprimido* {; *descompTam* {; *tamanhoAtual*}} )<!-- END REF-->
+<!--REF #_command_.BLOB PROPERTIES.Syntax-->**BLOB PROPERTIES** ( *BLOB* : Blob ; *comprimido* : Integer {; *descompTam* : Integer {; *tamanhoAtual* : Integer}} )<!-- END REF-->
 <!--REF #_command_.BLOB PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | BLOB do qual obter informação |
+| Blob | Blob | &#8594; | BLOB do qual obter informação |
 | comprimido | Integer | &#8592; | 0 = BLOB não está comprimido 1 = BLOB comprimido modo compacto 2 = BLOB comprimido modo rápido |
 | descompTam | Integer | &#8592; | Tamanho do BLOB (em bytes) quando não está comprimido |
 | tamanhoAtual | Integer | &#8592; | Tamanho atual do BLOB (em bytes) |
@@ -81,6 +81,6 @@ Depois que este método tenha sido adicionado à sua aplicação, você pode us�
 |  |  |
 | --- | --- |
 | Número do comando | 536 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

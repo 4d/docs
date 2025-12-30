@@ -5,7 +5,7 @@ slug: /commands/get-window-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get window title.Syntax-->**Get window title** {( *window* )} : Text<!-- END REF-->
+<!--REF #_command_.Get window title.Syntax-->**Get window title** ( *window* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get window title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ See example for the [SET WINDOW TITLE](set-window-title.md) command.
 |  |  |
 | --- | --- |
 | Command number | 450 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

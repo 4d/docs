@@ -50,6 +50,6 @@ Le tableau suivant indique les valeurs que vous pouvez passer dans les paramètr
 |  |  |
 | --- | --- |
 | Numéro de commande | 843 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -41,6 +41,6 @@ Se quiser recuperar os números dos registros da seleção atual:
 |  |  |
 | --- | --- |
 | Número do comando | 647 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/append-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Append document.Syntax-->**Append document** ( *doc* {; *tipo*} ) : Time<!-- END REF-->
+<!--REF #_command_.Append document.Syntax-->**Append document** ( *doc* : Text {; *tipo* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Append document.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| doc | Text | &#8594;  | Nombre del documento o Ruta de acceso completa al documento o Cadena vacía para mostrar la caja de diálogo estándar de apertura de archivos |
-| tipo | Text | &#8594;  | Lista de tipos de documentos a filtrar o "*" para no filtrar los documentos |
+| doc | Text | &#8594; | Nombre del documento o Ruta de acceso completa al documento o Cadena vacía para mostrar la caja de diálogo estándar de apertura de archivos |
+| tipo | Text | &#8594; | Lista de tipos de documentos a filtrar o "*" para no filtrar los documentos |
 | Resultado | Time | &#8592; | Número de referencia del documento |
 
 <!-- END REF-->
@@ -44,7 +44,7 @@ El siguiente ejemplo abre un documento existente llamado Nota, añade la cadena 
 |  |  |
 | --- | --- |
 | Número de comando | 265 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

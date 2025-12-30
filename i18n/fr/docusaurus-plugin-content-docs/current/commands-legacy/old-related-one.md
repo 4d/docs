@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.OLD RELATED ONE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ N |
+| leField | Field | &#8594; | Champ N |
 
 <!-- END REF-->
 
@@ -37,7 +37,7 @@ Si la commande a été correctement exécutée et si les enregistrements liés o
 |  |  |
 | --- | --- |
 | Numéro de commande | 44 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

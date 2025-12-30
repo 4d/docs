@@ -54,6 +54,6 @@ Se quiser saber os formatos de imagem armazenados em um campo para o registro at
 |  |  |
 | --- | --- |
 | Número do comando | 1406 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

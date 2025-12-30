@@ -5,12 +5,12 @@ slug: /commands/get-highlight
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {* ;} *objet* ; *débutSél* ; *finSél* )<!-- END REF-->
+<!--REF #_command_.GET HIGHLIGHT.Syntax-->**GET HIGHLIGHT** ( {* ;} *objet* : Field, Variable, any ; *débutSél* : Integer ; *finSél* : Integer )<!-- END REF-->
 <!--REF #_command_.GET HIGHLIGHT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
-| objet | Field, Variable, any | &#8594;  | Nom d’objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d’objet (chaîne) <br/>Si omis, objet est un champ ou une variable |
+| objet | Field, Variable, any | &#8594; | Nom d’objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | débutSél | Integer | &#8592; | Position du début de la sélection de texte |
 | finSél | Integer | &#8592; | Position de la fin de la sélection de texte |
 
@@ -68,6 +68,6 @@ Modification du style du texte sélectionné :
 |  |  |
 | --- | --- |
 | Numéro de commande | 209 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

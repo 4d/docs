@@ -5,17 +5,17 @@ slug: /commands/set-list-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* ; *itemRef* ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<br/>**SET LIST ITEM** ( * ; *list* ; * ; *newItemText* ; *newItemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.SET LIST ITEM.Syntax-->**SET LIST ITEM** ( {* ;} *list* : Integer, Text ; *itemRef* : 演算子, 倍長整数 ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<br/>**SET LIST ITEM** ( * ; *list* : Integer, Text ; * ; *newItemText* : Text ; *newItemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET LIST ITEM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
-| list | Integer, Text | &#8594;  | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
-| itemRef &#124; * | 演算子, 倍長整数 | &#8594;  | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
-| newItemText | Text | &#8594;  | 新しい項目テキスト |
-| newItemRef | Integer | &#8594;  | 新しい項目参照番号 |
-| sublist | Integer | &#8594;  | 項目に添付する新しいサブリスト, または 0: サブリストがない場合 (現在のサブリストを取り除く), または -1: 変更しない |
-| expanded | Boolean | &#8594;  | オプションのサブリストの展開/折りたたみ |
+| * | 演算子 | &#8594; | 指定時, listはオブジェクト名 (文字列) 省略時, listはリスト参照番号 |
+| list | Integer, Text | &#8594; | リスト参照番号 (* 省略時), または リストオブジェクト名 (* 指定時) |
+| itemRef &#124; * | 演算子, 倍長整数 | &#8594; | 項目参照番号, または 0: リストに最後に追加された項目, または *: リスト中のカレント項目 |
+| newItemText | Text | &#8594; | 新しい項目テキスト |
+| newItemRef | Integer | &#8594; | 新しい項目参照番号 |
+| sublist | Integer | &#8594; | 項目に添付する新しいサブリスト, または 0: サブリストがない場合 (現在のサブリストを取り除く), または -1: 変更しない |
+| expanded | Boolean | &#8594; | オプションのサブリストの展開/折りたたみ |
 
 <!-- END REF-->
 
@@ -82,6 +82,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 385 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

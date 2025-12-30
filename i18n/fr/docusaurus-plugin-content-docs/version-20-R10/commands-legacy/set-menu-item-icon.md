@@ -50,6 +50,6 @@ Utilisation d'une image se trouvant dans le dossier Resources de la base :
 |  |  |
 | --- | --- |
 | Numéro de commande | 984 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -35,6 +35,6 @@ The following example displays an alert that shows the number of records in a ta
 |  |  |
 | --- | --- |
 | Command number | 83 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

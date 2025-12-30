@@ -5,7 +5,7 @@ slug: /commands/array-time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TIME.Syntax-->**ARRAY TIME** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY TIME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,6 +69,6 @@ Since time arrays accept numeric values, the following code is valid:
 |  |  |
 | --- | --- |
 | Command number | 1223 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

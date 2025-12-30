@@ -34,6 +34,6 @@ Le paramètre *partieFenêtre* retourne 3 si une fenêtre est touchée, et 0 sin
 |  |  |
 | --- | --- |
 | Numéro de commande | 449 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

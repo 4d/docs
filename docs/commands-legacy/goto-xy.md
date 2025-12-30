@@ -5,7 +5,7 @@ slug: /commands/goto-xy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* ; *y* )<!-- END REF-->
+<!--REF #_command_.GOTO XY.Syntax-->**GOTO XY** ( *x* : Integer ; *y* : Integer )<!-- END REF-->
 <!--REF #_command_.GOTO XY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -64,6 +64,6 @@ displays the following window (on Macintosh) for 30 seconds:
 |  |  |
 | --- | --- |
 | Command number | 161 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

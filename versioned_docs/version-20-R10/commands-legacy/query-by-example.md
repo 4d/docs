@@ -46,7 +46,7 @@ If the user clicks the Accept button or presses the Enter key, the OK system var
 |  |  |
 | --- | --- |
 | Command number | 292 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 | Changes current record ||
 | Changes current selection ||

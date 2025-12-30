@@ -37,7 +37,7 @@ L'instruction suivante affecte l'état rapide stocké dans la zone MaZone à un 
 |  |  |
 | --- | --- |
 | Numéro de commande | 770 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

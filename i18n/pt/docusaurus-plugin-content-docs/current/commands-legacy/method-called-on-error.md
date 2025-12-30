@@ -5,11 +5,11 @@ slug: /commands/method-called-on-error
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Method called on error.Syntax-->**Method called on error** {( *scope* )} : Text<!-- END REF-->
+<!--REF #_command_.Method called on error.Syntax-->**Method called on error** ( *scope* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Method called on error.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| scope | Integer | &#8594;  | Escopo/alcance do método de erro |
+| scope | Integer | &#8594; | Escopo/alcance do método de erro |
 | Resultado | Text | &#8592; | Nome do método de chamada por erro |
 
 <!-- END REF-->
@@ -51,6 +51,6 @@ Este comando é particularmente útil no contexto de componentes porque lhe perm
 |  |  |
 | --- | --- |
 | Número do comando | 704 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

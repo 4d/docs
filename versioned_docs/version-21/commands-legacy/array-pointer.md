@@ -61,6 +61,6 @@ This example creates an interprocess array of [Pointer](# "A reference to anothe
 |  |  |
 | --- | --- |
 | Command number | 280 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

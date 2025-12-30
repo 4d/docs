@@ -5,12 +5,12 @@ slug: /commands/invoke-action
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* {; *target*} )<!-- END REF-->
+<!--REF #_command_.INVOKE ACTION.Syntax-->**INVOKE ACTION** ( *action* : Text {; *target* : Integer} )<!-- END REF-->
 <!--REF #_command_.INVOKE ACTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| action | Text | &#8594;  | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
-| target | Integer | &#8594;  | アクションを実行する場所を定義: カレントフォーム(デフォルト)あるいはメインフォーム |
+| action | Text | &#8594; | 標準アクション名、あるいは(必要であれば)引数を含めたパターン |
+| target | Integer | &#8594; | アクションを実行する場所を定義: カレントフォーム(デフォルト)あるいはメインフォーム |
 
 <!-- END REF-->
 
@@ -69,6 +69,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1439 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

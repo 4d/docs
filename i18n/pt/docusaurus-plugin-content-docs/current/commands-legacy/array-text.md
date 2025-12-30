@@ -5,13 +5,13 @@ slug: /commands/array-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TEXT.Syntax-->**ARRAY TEXT** ( *nomeArray* ; *tamanho* {; *tamanho2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TEXT.Syntax-->**ARRAY TEXT** ( *nomeArray* : Array ; *tamanho* : Integer {; *tamanho2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nomeArray | Array | &#8594;  | Nome do array |
-| tamanho | Integer | &#8594;  | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
-| tamanho2 | Integer | &#8594;  | Número de colunas no array de duas dimensões |
+| nomeArray | Array | &#8594; | Nome do array |
+| tamanho | Integer | &#8594; | Número de elementos no array ou Número de linhas se tamanho 2 for especificado |
+| tamanho2 | Integer | &#8594; | Número de colunas no array de duas dimensões |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ Este exemplo cria um array de interprocesso de elementos do tipo texto e atribui
 |  |  |
 | --- | --- |
 | Número do comando | 222 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

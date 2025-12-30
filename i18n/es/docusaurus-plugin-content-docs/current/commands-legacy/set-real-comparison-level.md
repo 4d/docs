@@ -5,11 +5,11 @@ slug: /commands/set-real-comparison-level
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* )<!-- END REF-->
+<!--REF #_command_.SET REAL COMPARISON LEVEL.Syntax-->**SET REAL COMPARISON LEVEL** ( *epsilon* : Real )<!-- END REF-->
 <!--REF #_command_.SET REAL COMPARISON LEVEL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| epsilon | Real | &#8594;  | Valor epsilon para las comparaciones de igualdad de los reales |
+| epsilon | Real | &#8594; | Valor epsilon para las comparaciones de igualdad de los reales |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ Utilizando **SET REAL COMPARISON LEVEL**, puede aumentar o reducir el valor epsi
 |  |  |
 | --- | --- |
 | Número de comando | 623 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

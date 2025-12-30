@@ -5,12 +5,12 @@ slug: /commands/object-get-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( {* ;} *objeto* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get title.Syntax-->**OBJECT Get title** ( * ; *objeto* : Text ) : Text<br/>**OBJECT Get title** ( *objeto* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get title.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o campo o variable texto (si se omite *) |
 | Resultado | Text | &#8592; | Título del botón |
 
 <!-- END REF-->
@@ -38,6 +38,6 @@ Si pasa el parámetro opcional *\**, indica que el parámetro *objeto* es un nom
 |  |  |
 | --- | --- |
 | Número de comando | 1068 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/get-missing-table-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabManquantes* )<!-- END REF-->
+<!--REF #_command_.GET MISSING TABLE NAMES.Syntax-->**GET MISSING TABLE NAMES** ( *tabManquantes* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MISSING TABLE NAMES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ Une fois que vous avez identifié les tables manquantes de la base, vous pouvez 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1125 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -57,6 +57,6 @@ Pode excluir certos objetos da ordem de entrada:
 |  |  |
 | --- | --- |
 | Número do comando | 1469 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

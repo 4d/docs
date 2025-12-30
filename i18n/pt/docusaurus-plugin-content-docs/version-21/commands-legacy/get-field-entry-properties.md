@@ -47,6 +47,6 @@ Se nenhuma lista estiver associada ao campo ou se o tipo do campo não permitir 
 |  |  |
 | --- | --- |
 | Número do comando | 685 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

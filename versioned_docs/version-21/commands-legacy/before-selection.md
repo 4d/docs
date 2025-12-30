@@ -68,6 +68,6 @@ This form method is used during the printing of a report. It sets a variable, *v
 |  |  |
 | --- | --- |
 | Command number | 198 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

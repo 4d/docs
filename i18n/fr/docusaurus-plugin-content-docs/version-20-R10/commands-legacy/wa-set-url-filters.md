@@ -136,6 +136,6 @@ Vous souhaitez interdire des adresses IP spécifiques :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1030 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

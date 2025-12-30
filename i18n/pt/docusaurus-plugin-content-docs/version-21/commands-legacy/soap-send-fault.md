@@ -50,6 +50,6 @@ Regresando ao exemplo do serviço Web “Raiz\_quadrada” da descrição do com
 |  |  |
 | --- | --- |
 | Número do comando | 781 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

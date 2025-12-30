@@ -5,13 +5,13 @@ slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* {; *horOffset* {; *vertOffset*}} )<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* : Picture {; *horOffset* : Integer {; *vertOffset* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| icon | Picture | &#8594;  | ドラッグ中に表示するアイコン |
-| horOffset | Integer | &#8594;  | カーソルから見てアイコンの左端との水平方向の距離を指定(>0 は左方向に、<0 は右方向に移動) |
-| vertOffset | Integer | &#8594;  | カーソルから見てアイコンの上端との垂直方向の距離を指定(>0 は上方向に、<0 は下方向に移動) |
+| icon | Picture | &#8594; | ドラッグ中に表示するアイコン |
+| horOffset | Integer | &#8594; | カーソルから見てアイコンの左端との水平方向の距離を指定(>0 は左方向に、<0 は右方向に移動) |
+| vertOffset | Integer | &#8594; | カーソルから見てアイコンの上端との垂直方向の距離を指定(>0 は上方向に、<0 は下方向に移動) |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1272 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

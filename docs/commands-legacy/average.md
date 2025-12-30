@@ -5,7 +5,7 @@ slug: /commands/average
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Average.Syntax-->**Average** ( *series* {; *attributePath*} ) : Real<!-- END REF-->
+<!--REF #_command_.Average.Syntax-->**Average** ( *series* : Field, Array {; *attributePath* : Text} ) : Real<!-- END REF-->
 <!--REF #_command_.Average.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -95,7 +95,7 @@ You can perform the following computations:
 |  |  |
 | --- | --- |
 | Command number | 2 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

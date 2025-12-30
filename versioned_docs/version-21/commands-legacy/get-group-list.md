@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | groupNames | Text array | &#8592; | Names of the groups as they appear in the Password editor window |
-| groupNumbers | Array integer | &#8592; | Corresponding unique group ID numbers |
+| groupNumbers | Integer array | &#8592; | Corresponding unique group ID numbers |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ If you do not have the proper access privileges for calling GET GROUP LIST or if
 |  |  |
 | --- | --- |
 | Command number | 610 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

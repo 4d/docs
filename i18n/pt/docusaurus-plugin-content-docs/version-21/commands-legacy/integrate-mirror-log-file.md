@@ -108,7 +108,7 @@ Se a integração é efetuada corretamente, a variável sistema OK recebe o valo
 |  |  |
 | --- | --- |
 | Número do comando | 1312 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

@@ -47,6 +47,6 @@ Voici les différents résultats de la commande ainsi que de la commande [OB Is 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

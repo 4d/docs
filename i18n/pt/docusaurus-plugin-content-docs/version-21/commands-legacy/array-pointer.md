@@ -61,6 +61,6 @@ Este exemplo cria um array de interprocesso de elementos do tipo [Ponteiro](# "A
 |  |  |
 | --- | --- |
 | Número do comando | 280 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

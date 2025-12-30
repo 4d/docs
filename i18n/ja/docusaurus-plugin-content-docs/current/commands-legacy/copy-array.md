@@ -5,11 +5,11 @@ slug: /commands/copy-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *source* ; *destination* )<!-- END REF-->
+<!--REF #_command_.COPY ARRAY.Syntax-->**COPY ARRAY** ( *source* : Array ; *destination* : Array )<!-- END REF-->
 <!--REF #_command_.COPY ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| source | Array | &#8594;  | コピー元の配列 |
+| source | Array | &#8594; | コピー元の配列 |
 | destination | Array | &#8592; | コピー先の配列 |
 
 <!-- END REF-->
@@ -41,6 +41,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 226 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

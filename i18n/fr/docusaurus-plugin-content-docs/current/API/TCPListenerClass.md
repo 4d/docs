@@ -73,7 +73,7 @@ Les objets TCPListener offrent les propriétés et fonctions suivantes :
 
 | Paramètres | Type                           |                             | Description                                                |
 | ---------- | ------------------------------ | --------------------------- | ---------------------------------------------------------- |
-| port       | Number                         | ->                          | Port TCP à écouter                                         |
+| port       | Real                           | ->                          | Port TCP à écouter                                         |
 | options    | Object                         | ->                          | [options](#options-parameter) de configuration du listener |
 | Résultat   | 4D.TCPListener | <- | Nouvel objet TCPListener                                   |
 

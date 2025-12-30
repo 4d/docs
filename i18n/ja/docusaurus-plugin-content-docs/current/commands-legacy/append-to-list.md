@@ -5,15 +5,15 @@ slug: /commands/append-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *list* ; *itemText* ; *itemRef* {; *sublist* ; *expanded*} )<!-- END REF-->
+<!--REF #_command_.APPEND TO LIST.Syntax-->**APPEND TO LIST** ( *list* : Integer ; *itemText* : Text ; *itemRef* : Integer {; *sublist* : Integer ; *expanded* : Boolean} )<!-- END REF-->
 <!--REF #_command_.APPEND TO LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | リスト参照番号 |
-| itemText | Text | &#8594;  | 新規リスト項目のテキスト |
-| itemRef | Integer | &#8594;  | 新規リスト項目の参照番号 |
-| sublist | Integer | &#8594;  | 新規リスト項目に付属するオプションのサブリスト |
-| expanded | Boolean | &#8594;  | オプションのサブリストの展開/折りたたみ |
+| list | Integer | &#8594; | リスト参照番号 |
+| itemText | Text | &#8594; | 新規リスト項目のテキスト |
+| itemRef | Integer | &#8594; | 新規リスト項目の参照番号 |
+| sublist | Integer | &#8594; | 新規リスト項目に付属するオプションのサブリスト |
+| expanded | Boolean | &#8594; | オプションのサブリストの展開/折りたたみ |
 
 <!-- END REF-->
 
@@ -166,6 +166,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 376 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

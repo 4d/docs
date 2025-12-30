@@ -5,7 +5,7 @@ slug: /commands/add-to-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* ;} *set* )<!-- END REF-->
+<!--REF #_command_.ADD TO SET.Syntax-->**ADD TO SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.ADD TO SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 119 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

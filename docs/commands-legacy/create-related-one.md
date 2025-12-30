@@ -5,7 +5,7 @@ slug: /commands/create-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *aField* )<!-- END REF-->
+<!--REF #_command_.CREATE RELATED ONE.Syntax-->**CREATE RELATED ONE** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.CREATE RELATED ONE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -30,6 +30,6 @@ If a related record exists, **CREATE RELATED ONE** acts just like [RELATE ONE](r
 |  |  |
 | --- | --- |
 | Command number | 65 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/font-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *polices* {; *typeListe* } )<br/>**FONT LIST** ( *polices* {; *} ) <!-- END REF-->
+<!--REF #_command_.FONT LIST.Syntax-->**FONT LIST** ( *polices* : Text array {; *typeListe* : Entier long, Opérateur } )<br/>**FONT LIST** ( *polices* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.FONT LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | polices | Text array | &#8592; | Tableau des noms des polices vectorielles disponibles |
-| typeListe &#124; * | Entier long, Opérateur | &#8594;  | Type de liste de police à retourner ou * pour retourner des noms de police sous macOS |
+| typeListe &#124; * | Entier long, Opérateur | &#8594; | Type de liste de police à retourner ou * pour retourner des noms de police sous macOS |
 
 <!-- END REF-->
 
@@ -78,6 +78,6 @@ Vous souhaitez obtenir la liste des polices récentes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 460 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

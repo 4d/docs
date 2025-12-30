@@ -5,14 +5,14 @@ slug: /commands/highlight-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *area* ; *inicioSel* ; *fimSel* )<!-- END REF-->
+<!--REF #_command_.HIGHLIGHT TEXT.Syntax-->**HIGHLIGHT TEXT** ( {* ;} *area* : Field, Variable, any ; *inicioSel* : Integer ; *fimSel* : Integer )<!-- END REF-->
 <!--REF #_command_.HIGHLIGHT TEXT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é um campo ou variável. |
-| area | Field, Variable, any | &#8594;  | Nome de objeto (se * for especificado), ou campo editável ou variável (se * for omitido) |
-| inicioSel | Integer | &#8594;  | Posição inicial da seleção de texto |
-| fimSel | Integer | &#8594;  | Posição final da seleção de texto |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é um campo ou variável. |
+| area | Field, Variable, any | &#8594; | Nome de objeto (se * for especificado), ou campo editável ou variável (se * for omitido) |
+| inicioSel | Integer | &#8594; | Posição inicial da seleção de texto |
+| fimSel | Integer | &#8594; | Posição final da seleção de texto |
 
 <!-- END REF-->
 
@@ -67,6 +67,6 @@ Ver o exemplo do comando [FILTER KEYSTROKE](filter-keystroke.md "FILTER KEYSTROK
 |  |  |
 | --- | --- |
 | Número do comando | 210 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

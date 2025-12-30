@@ -5,7 +5,7 @@ slug: /commands/is-window-maximized
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is window maximized.Syntax-->**Is window maximized** ( *window* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is window maximized.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ You want to switch between the maximized and previous states:
 |  |  |
 | --- | --- |
 | Command number | 1830 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

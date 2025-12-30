@@ -5,12 +5,12 @@ slug: /commands/resource-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* ; *resIDs* ; *resNames* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* : Text ; *resIDs* : Integer array ; *resNames* : Text array {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | resType | Text | &#8594;  | 4-character resource type |
-| resIDs | Array integer | &#8592; | Resource ID numbers for resources of this type |
+| resIDs | Integer array | &#8592; | Resource ID numbers for resources of this type |
 | resNames | Text array | &#8592; | Resource names for resources of this type |
 | resFile | Time | &#8594;  | Resource file reference number, or all open resource files, if omitted |
 
@@ -75,6 +75,6 @@ The following example copies the picture resources present in all currently open
 |  |  |
 | --- | --- |
 | Command number | 500 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -116,6 +116,6 @@ $arrPtr->:=Find in array($arrPtr->; $varPtr->)
 |  |  |
 | --- | --- |
 | コマンド番号 | 230 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

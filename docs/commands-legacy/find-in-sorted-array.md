@@ -5,7 +5,7 @@ slug: /commands/find-in-sorted-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* ; *value* ; > or < {; *posFirst* {; *posLast*}} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Find in sorted array.Syntax-->**Find in sorted array** ( *array* : Array ; *value* : Expression ; > or < {; *posFirst* : Integer {; *posLast* : Integer}} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Find in sorted array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -77,6 +77,6 @@ You want to find the number of occurrences of strings starting with "test" and c
 |  |  |
 | --- | --- |
 | Command number | 1333 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

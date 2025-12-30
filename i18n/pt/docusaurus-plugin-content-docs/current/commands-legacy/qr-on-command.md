@@ -5,12 +5,12 @@ slug: /commands/qr-on-command
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* ; *nomeMetodo* )<!-- END REF-->
+<!--REF #_command_.QR ON COMMAND.Syntax-->**QR ON COMMAND** ( *area* : Integer ; *nomeMetodo* : Text )<!-- END REF-->
 <!--REF #_command_.QR ON COMMAND.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| nomeMetodo | Text | &#8594;  | Nome do método a ser chamado |
+| area | Integer | &#8594; | Referência da área |
+| nomeMetodo | Text | &#8594; | Nome do método a ser chamado |
 
 <!-- END REF-->
 
@@ -47,7 +47,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 790 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

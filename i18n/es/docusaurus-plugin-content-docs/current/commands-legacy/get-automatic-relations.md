@@ -5,7 +5,7 @@ slug: /commands/get-automatic-relations
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *uno* ; *muchos* )<!-- END REF-->
+<!--REF #_command_.GET AUTOMATIC RELATIONS.Syntax-->**GET AUTOMATIC RELATIONS** ( *uno* : Boolean ; *muchos* : Boolean )<!-- END REF-->
 <!--REF #_command_.GET AUTOMATIC RELATIONS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ Consulte el ejemplo del comando [GET FIELD RELATION](get-field-relation.md "GET 
 |  |  |
 | --- | --- |
 | Número de comando | 899 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

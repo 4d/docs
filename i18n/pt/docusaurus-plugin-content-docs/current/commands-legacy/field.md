@@ -5,27 +5,24 @@ slug: /commands/field
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Field.Syntax-->**Field** ( *numTabela* ; *numCampo* ) -> pontCampo <br/>
-**Field** ( *pontCampo* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.Field.Syntax-->**Field** ( *numTabela* ; *numCampo* ) -> Pointer<br/>
+**Field** ( *pontCampo* ) -> Integer<!-- END REF-->
 <!--REF #_command_.Field.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| numTabela | Integer | &#8594;  | Número da tabela |
-| numCampo | Integer | &#8594;  | Nº do campo |
-| pontCampo | Pointer | &#8592; | Ponteiro do campo |
-| Field ( pontCampo ) -> Resultado |
-| Parâmetro | Tipo | Descrição |
-| pontCampo | Pointer | &#8594;  | Ponteiro do campo |
-| Resultado | Integer | &#8592; | Número do campo |
+| numTabela | Integer | &#8594; | Número da tabela |
+| numCampo | Integer | &#8594; | Nº do campo |
+| pontCampo | Pointer | &#8594; | Ponteiro do campo |
+| Resultado | Pointer, Integer | &#8592; | Ponteiro do campo ou Nº do campo |
 
 <!-- END REF-->
 
 ## Descrição 
 
-<!--REF #_command_.Field.Summary-->O comando Field tem duas sintaxe: 
+O comando Field tem duas sintaxe: 
 
-* Se passa um número de tabela en *numTabela* e um número de campo en *numCampo*, Field retorna um ponteiro ao campo.<!-- END REF-->
-* Se passa um ponteiro a um campo en *pontCamp*, Field retorna o número do campo.
+<!--REF #_command_.Field.Summary-->* Se passa um número de tabela en *numTabela* e um número de campo en *numCampo*, Field retorna um ponteiro ao campo.
+* Se passa um ponteiro a um campo en *pontCamp*, Field retorna o número do campo.<!-- END REF-->
 
 ## Exemplo 1 
 
@@ -67,6 +64,6 @@ No seguinte exemplo, a variável *numCampo* for igual ao número do campo de \[T
 |  |  |
 | --- | --- |
 | Número do comando | 253 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

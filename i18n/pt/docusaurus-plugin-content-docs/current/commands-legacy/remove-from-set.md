@@ -5,12 +5,12 @@ slug: /commands/remove-from-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*tabela* ;} *conjunto* )<!-- END REF-->
+<!--REF #_command_.REMOVE FROM SET.Syntax-->**REMOVE FROM SET** ( {*tabela* : Table ;} *conjunto* : Text )<!-- END REF-->
 <!--REF #_command_.REMOVE FROM SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Registro atual da tabela, ou tabela padrão, se omitido |
-| conjunto | Text | &#8594;  | Nome do conjunto ao qual para remover o registro atual |
+| tabela | Table | &#8594; | Registro atual da tabela, ou tabela padrão, se omitido |
+| conjunto | Text | &#8594; | Nome do conjunto ao qual para remover o registro atual |
 
 <!-- END REF-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 561 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | error |
 
 

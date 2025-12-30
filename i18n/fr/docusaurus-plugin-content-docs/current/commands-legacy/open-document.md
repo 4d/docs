@@ -5,13 +5,13 @@ slug: /commands/open-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Open document.Syntax-->**Open document** ( *nomFichier* {; *typeFichier*}{; *mode*} ) : Time<!-- END REF-->
+<!--REF #_command_.Open document.Syntax-->**Open document** ( *nomFichier* : Text {; *typeFichier* : Text}{; *mode* : Integer} ) : Time<!-- END REF-->
 <!--REF #_command_.Open document.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nomFichier | Text | &#8594;  | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue |
-| typeFichier | Text | &#8594;  | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
-| mode | Integer | &#8594;  | Mode d’ouverture du document |
+| nomFichier | Text | &#8594; | Nom du document ou Chemin d'accès complet au document ou Chaîne vide pour afficher la boîte de dialogue |
+| typeFichier | Text | &#8594; | Liste des types de documents à filtrer, ou "*" pour ne pas filtrer les documents |
+| mode | Integer | &#8594; | Mode d’ouverture du document |
 | Résultat | Time | &#8592; | Numéro de référence du document |
 
 <!-- END REF-->
@@ -92,7 +92,7 @@ Si vous passez la valeur 3 dans *mode*, la fonction retourne ?00:00:00? (pas de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 264 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, Document, error |
 
 

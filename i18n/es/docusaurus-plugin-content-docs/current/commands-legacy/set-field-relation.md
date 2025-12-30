@@ -5,13 +5,13 @@ slug: /commands/set-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( tablasN | CampoN ; *uno* ; *muchos* )<!-- END REF-->
+<!--REF #_command_.SET FIELD RELATION.Syntax-->**SET FIELD RELATION** ( tablasN | CampoN ; *uno* : Integer ; *muchos* : Integer )<!-- END REF-->
 <!--REF #_command_.SET FIELD RELATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tablasN &#124; CampoN | Tabla, Campo | &#8594;  | Tabla de inicio de las relaciones o Campo de inicio de la relación |
-| uno | Integer | &#8594;  | Estado de la relación Muchos a Uno a partir del campo o de las relaciones Muchos a Uno de la tabla |
-| muchos | Integer | &#8594;  | Estado de la relación Uno a Muchos a partir del campo o de las relaciones Uno a Muchos de la tabla |
+| tablasN &#124; CampoN | Tabla, Campo | &#8594; | Tabla de inicio de las relaciones o Campo de inicio de la relación |
+| uno | Integer | &#8594; | Estado de la relación Muchos a Uno a partir del campo o de las relaciones Muchos a Uno de la tabla |
+| muchos | Integer | &#8594; | Estado de la relación Uno a Muchos a partir del campo o de las relaciones Uno a Muchos de la tabla |
 
 <!-- END REF-->
 
@@ -60,7 +60,7 @@ El siguiente código permite definir sólo las relaciones útiles como automáti
 |  |  |
 | --- | --- |
 | Número de comando | 919 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK |
 
 

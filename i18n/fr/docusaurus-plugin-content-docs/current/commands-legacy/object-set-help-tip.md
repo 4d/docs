@@ -5,13 +5,13 @@ slug: /commands/object-set-help-tip
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( {* ;} *objet* ; *messageAide* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET HELP TIP.Syntax-->**OBJECT SET HELP TIP** ( * ; *objet* : Text ; *messageAide* : Text )<br/>**OBJECT SET HELP TIP** ( *objet* : Field, Variable ; *messageAide* : Text )<!-- END REF-->
 <!--REF #_command_.OBJECT SET HELP TIP.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
-| messageAide | Text | &#8594;  | Contenu du message d’aide |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est une variable ou un champ |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Variable (si * est omis) |
+| messageAide | Text | &#8594; | Contenu du message d’aide |
 
 <!-- END REF-->
 
@@ -129,6 +129,6 @@ Résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1181 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

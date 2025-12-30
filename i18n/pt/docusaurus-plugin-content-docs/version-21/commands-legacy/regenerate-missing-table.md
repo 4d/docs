@@ -65,6 +65,6 @@ Este método regenera todas as tabelas não encontradas eventualmente presentes 
 |  |  |
 | --- | --- |
 | Número do comando | 1126 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

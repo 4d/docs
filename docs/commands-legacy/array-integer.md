@@ -5,7 +5,7 @@ slug: /commands/array-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *arrayName* ; *size* {; *size2*} )<!-- END REF-->
+<!--REF #_command_.ARRAY INTEGER.Syntax-->**ARRAY INTEGER** ( *arrayName* : Array ; *size* : Integer {; *size2* : Integer} )<!-- END REF-->
 <!--REF #_command_.ARRAY INTEGER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,6 +63,6 @@ This example creates an interprocess array of 50 2-byte [Integer](# "Number betw
 |  |  |
 | --- | --- |
 | Command number | 220 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

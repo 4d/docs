@@ -65,7 +65,7 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 |  |  |
 | --- | --- |
 | Command number | 1116 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

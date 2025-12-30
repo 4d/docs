@@ -5,11 +5,11 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *leChamp* )}<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *leChamp* })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ dont la saisie doit être refusée |
+| leField | Field | &#8594; | Champ dont la saisie doit être refusée |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ L'exemple suivant est une partie de la méthode objet d'un champ *\[Employés\]S
 |  |  |
 | --- | --- |
 | Numéro de commande | 38 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

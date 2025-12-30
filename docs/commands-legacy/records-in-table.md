@@ -5,7 +5,7 @@ slug: /commands/records-in-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Records in table.Syntax-->**Records in table** {( *aTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Records in table.Syntax-->**Records in table** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Records in table.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -35,6 +35,6 @@ The following example displays an alert that shows the number of records in a ta
 |  |  |
 | --- | --- |
 | Command number | 83 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

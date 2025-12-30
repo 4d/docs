@@ -5,12 +5,12 @@ slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* ; *elementName* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* : Text ; *elementName* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
-| elementName | Text | &#8594;  | 数えるXML要素名 |
+| elementRef | Text | &#8594; | XML要素参照 |
+| elementName | Text | &#8594; | 数えるXML要素名 |
 | 戻り値 | Integer | &#8592; | 要素数 |
 
 <!-- END REF-->
@@ -33,7 +33,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 726 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

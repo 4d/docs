@@ -124,6 +124,6 @@ Le code suivant reconstitue le numéro de version de l'application et permet de 
 |  |  |
 | --- | --- |
 | Numéro de commande | 493 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

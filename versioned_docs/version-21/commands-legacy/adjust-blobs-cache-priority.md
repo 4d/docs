@@ -58,6 +58,6 @@ You want to temporarily change the cache priority for the \[Docs\] table text fi
 |  |  |
 | --- | --- |
 | Command number | 1431 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

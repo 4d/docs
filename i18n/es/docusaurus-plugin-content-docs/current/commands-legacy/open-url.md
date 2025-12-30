@@ -5,13 +5,13 @@ slug: /commands/open-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *ruta* {; *nomAp*}{; *} )<!-- END REF-->
+<!--REF #_command_.OPEN URL.Syntax-->**OPEN URL** ( *ruta* : Text {; *nomAp* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.OPEN URL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| ruta | Text | &#8594;  | Ruta del documento o URL a abrir |
-| nomAp | Text | &#8594;  | Nombre de la aplicación a utilizar |
-| * | Operador | &#8594;  | Si se especifica = la URL no está traducida, Si se omite = la URL está traducida |
+| ruta | Text | &#8594; | Ruta del documento o URL a abrir |
+| nomAp | Text | &#8594; | Nombre de la aplicación a utilizar |
+| * | Operador | &#8594; | Si se especifica = la URL no está traducida, Si se omite = la URL está traducida |
 
 <!-- END REF-->
 
@@ -87,6 +87,6 @@ Puede abrir un mismo archivo texto con diferentes aplicaciones utilizando el par
 |  |  |
 | --- | --- |
 | Número de comando | 673 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

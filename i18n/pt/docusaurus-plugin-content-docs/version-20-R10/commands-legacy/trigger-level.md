@@ -30,6 +30,6 @@ Para maior informação sobre níveis de execução, consulte o tema triggers em
 |  |  |
 | --- | --- |
 | Número do comando | 398 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

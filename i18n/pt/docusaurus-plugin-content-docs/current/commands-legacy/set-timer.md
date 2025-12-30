@@ -5,11 +5,11 @@ slug: /commands/set-timer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *ticCont* )<!-- END REF-->
+<!--REF #_command_.SET TIMER.Syntax-->**SET TIMER** ( *ticCont* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| ticCont | Integer | &#8594;  | Número de tics |
+| ticCont | Integer | &#8594; | Número de tics |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ Imaginemos que você queira, quando um formulário aparece em tela, que o comput
 |  |  |
 | --- | --- |
 | Número do comando | 645 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

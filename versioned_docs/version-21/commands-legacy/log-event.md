@@ -70,6 +70,6 @@ Each time the database is opened, this information will be written in Windows’
 |  |  |
 | --- | --- |
 | Command number | 667 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

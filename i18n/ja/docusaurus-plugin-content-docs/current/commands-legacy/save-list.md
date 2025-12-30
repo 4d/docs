@@ -5,12 +5,12 @@ slug: /commands/save-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *list* ; *listName* )<!-- END REF-->
+<!--REF #_command_.SAVE LIST.Syntax-->**SAVE LIST** ( *list* : Integer ; *listName* : Text )<!-- END REF-->
 <!--REF #_command_.SAVE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| list | Integer | &#8594;  | リスト参照番号 |
-| listName | Text | &#8594;  | デザインモードのリストエディタに 登録されるリスト名 |
+| list | Integer | &#8594; | リスト参照番号 |
+| listName | Text | &#8594; | デザインモードのリストエディタに 登録されるリスト名 |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 384 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

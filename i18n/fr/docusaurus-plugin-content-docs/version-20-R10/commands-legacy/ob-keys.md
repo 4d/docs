@@ -50,6 +50,6 @@ Vous souhaitez une collection avec tous les noms de propriétés de premier nive
 |  |  |
 | --- | --- |
 | Numéro de commande | 1719 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

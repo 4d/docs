@@ -5,14 +5,14 @@ slug: /commands/http-authenticate
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *nome* ; *senha* {; *metodoAut*} {; *} )<!-- END REF-->
+<!--REF #_command_.HTTP AUTHENTICATE.Syntax-->**HTTP AUTHENTICATE** ( *nome* : Text ; *senha* : Text {; *metodoAut* : Integer} {; *} )<!-- END REF-->
 <!--REF #_command_.HTTP AUTHENTICATE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| nome | Text | &#8594;  | Nome de usuário |
-| senha | Text | &#8594;  | Senha de usuário |
-| metodoAut | Integer | &#8594;  | Método de autenticação: 0 ou se omite = não definido, 1 = BASIC, 2 = DIGEST |
-| * | Operador | &#8594;  | Se passado: autenticação por proxy |
+| nome | Text | &#8594; | Nome de usuário |
+| senha | Text | &#8594; | Senha de usuário |
+| metodoAut | Integer | &#8594; | Método de autenticação: 0 ou se omite = não definido, 1 = BASIC, 2 = DIGEST |
+| * | Operador | &#8594; | Se passado: autenticação por proxy |
 
 <!-- END REF-->
 
@@ -64,6 +64,6 @@ Exemplos de petições com autenticação:
 |  |  |
 | --- | --- |
 | Número do comando | 1161 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

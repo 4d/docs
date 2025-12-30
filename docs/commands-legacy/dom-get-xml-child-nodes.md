@@ -5,12 +5,12 @@ slug: /commands/dom-get-xml-child-nodes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *elementRef* ; *childTypesArr* ; *nodeRefsArr* )<!-- END REF-->
+<!--REF #_command_.DOM GET XML CHILD NODES.Syntax-->**DOM GET XML CHILD NODES** ( *elementRef* : Text ; *childTypesArr* : Integer array ; *nodeRefsArr* : Text array )<!-- END REF-->
 <!--REF #_command_.DOM GET XML CHILD NODES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | elementRef | Text | &#8594;  | XML element reference |
-| childTypesArr | Array integer | &#8592; | Types of child nodes |
+| childTypesArr | Integer array | &#8592; | Types of child nodes |
 | nodeRefsArr | Text array | &#8592; | References or Values of child nodes |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ After executing these instructions:
 |  |  |
 | --- | --- |
 | Command number | 1081 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

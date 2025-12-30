@@ -53,6 +53,6 @@ Você deseja importar uma definição de estrutura guardada na base de dados atu
 |  |  |
 | --- | --- |
 | Número do comando | 1310 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

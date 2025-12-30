@@ -15,11 +15,11 @@ displayed_sidebar: docs
 </details>
 
 
-<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* )<!-- END REF-->
+<!--REF #_command_.REGISTER CLIENT.Syntax-->**REGISTER CLIENT** ( *clientName* : Text )<!-- END REF-->
 <!--REF #_command_.REGISTER CLIENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| clientName | Text | &#8594;  | 4Dクライアントセッション名 |
+| clientName | Text | &#8594; | 4Dクライアントセッション名 |
 
 <!-- END REF-->
 
@@ -138,7 +138,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 648 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

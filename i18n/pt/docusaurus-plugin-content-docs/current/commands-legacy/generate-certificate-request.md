@@ -5,14 +5,14 @@ slug: /commands/generate-certificate-request
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *chavPriv* ; *peticaoCertificado* ; *codigoArray* ; *arrayNome* )<!-- END REF-->
+<!--REF #_command_.GENERATE CERTIFICATE REQUEST.Syntax-->**GENERATE CERTIFICATE REQUEST** ( *chavPriv* : Blob ; *peticaoCertificado* : Blob ; *codigoArray* : Integer array ; *arrayNome* : Text array )<!-- END REF-->
 <!--REF #_command_.GENERATE CERTIFICATE REQUEST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| chavPriv | Blob | &#8594;  | BLOB que contém a chave privada |
+| chavPriv | Blob | &#8594; | BLOB que contém a chave privada |
 | peticaoCertificado | Blob | &#8592; | BLOB que recebe o pedido de certificação |
-| codigoArray | Integer array | &#8594;  | informação da lista de código |
-| arrayNome | Text array | &#8594;  | Lista de nomes |
+| codigoArray | Integer array | &#8594; | informação da lista de código |
+| arrayNome | Text array | &#8594; | Lista de nomes |
 
 <!-- END REF-->
 
@@ -92,6 +92,6 @@ Este es o método do botão **Gerar**
 |  |  |
 | --- | --- |
 | Número do comando | 691 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

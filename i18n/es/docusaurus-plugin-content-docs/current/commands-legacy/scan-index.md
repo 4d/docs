@@ -5,13 +5,13 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *unCampo* ; *Numero* {; > o <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *unCampo* ; *Numero* : Integer {; > o <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unField | Field | &#8594;  | Campo indexado con el cual escanear los registros |
-| Numero | Integer | &#8594;  | Número de registros a devolver |
-| > o < | Operador | &#8594;  | > a partir del inicio del índice < a partir del final del índice |
+| unField | Field | &#8594; | Campo indexado con el cual escanear los registros |
+| Numero | Integer | &#8594; | Número de registros a devolver |
+| > o < | Operador | &#8594; | > a partir del inicio del índice < a partir del final del índice |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ El siguiente ejemplo envía cartas a los 50 peores clientes y 50 a los mejores c
 |  |  |
 | --- | --- |
 | Número de comando | 350 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

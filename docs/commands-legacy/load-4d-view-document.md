@@ -5,7 +5,7 @@ slug: /commands/load-4d-view-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *4DViewDocument* ) : Object<!-- END REF-->
+<!--REF #_command_.Load 4D View document.Syntax-->**Load 4D View document** ( *4DViewDocument* : Blob ) : Object<!-- END REF-->
 <!--REF #_command_.Load 4D View document.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -201,6 +201,6 @@ You will get the following result (stringified object):
 |  |  |
 | --- | --- |
 | Command number | 1528 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

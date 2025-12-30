@@ -66,7 +66,7 @@ The following example selects all the records in the \[People\] table. It then u
 |  |  |
 | --- | --- |
 | Command number | 60 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

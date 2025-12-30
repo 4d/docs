@@ -5,11 +5,11 @@ slug: /commands/ob-entries
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objeto* ) : Collection<!-- END REF-->
+<!--REF #_command_.OB Entries.Syntax-->**OB Entries** ( *objeto* : Object ) : Collection<!-- END REF-->
 <!--REF #_command_.OB Entries.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| objeto | Object | &#8594;  | Objeto para retornar conteúdos |
+| objeto | Object | &#8594; | Objeto para retornar conteúdos |
 | Resultado | Collection | &#8592; | Coleção de objetos com propriedades key/value |
 
 <!-- END REF-->
@@ -60,6 +60,6 @@ Usando um objeto com um map hash (sistema key/value) oferece um acesso rápido e
 |  |  |
 | --- | --- |
 | Número do comando | 1720 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

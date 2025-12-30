@@ -5,12 +5,12 @@ slug: /commands/object-get-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get text orientation** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get text orientation.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especifica, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
-| object | any | &#8594;  | Nome de objeto (se for especificado *) ou Campo ou variável (se for omitido *) |
+| * | Operador | &#8594; | Se especifica, objeto é um nome de objeto (cadeia) Se omite, objeto é um campo ou uma variável |
+| object | any | &#8594; | Nome de objeto (se for especificado *) ou Campo ou variável (se for omitido *) |
 | Resultado | Integer | &#8592; | Ângulo de rotação de texto |
 
 <!-- END REF-->
@@ -61,6 +61,6 @@ Quando se executa o formulário, é chamada a seguinte declaração:
 |  |  |
 | --- | --- |
 | Número do comando | 1283 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

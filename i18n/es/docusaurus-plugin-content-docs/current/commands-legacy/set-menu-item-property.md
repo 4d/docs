@@ -5,15 +5,15 @@ slug: /commands/set-menu-item-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PROPERTY.Syntax-->**SET MENU ITEM PROPERTY** ( *menu* ; *lineaMenu* ; *propiedad* ; *valor* {; *proceso*} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PROPERTY.Syntax-->**SET MENU ITEM PROPERTY** ( *menu* : Integer, Text ; *lineaMenu* : Integer ; *propiedad* : Text ; *valor* : Text, Real, Boolean {; *proceso* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PROPERTY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Referencia del menú o número de menú |
-| lineaMenu | Integer | &#8594;  | Número de línea del menú o -1 para la última línea añadida al menú |
-| propiedad | Text | &#8594;  | Tipo de propiedad |
-| valor | Text, Number, Boolean | &#8594;  | Valor de la propiedad |
-| proceso | Integer | &#8594;  | Número del proceso |
+| menu | Integer, Text | &#8594; | Referencia del menú o número de menú |
+| lineaMenu | Integer | &#8594; | Número de línea del menú o -1 para la última línea añadida al menú |
+| propiedad | Text | &#8594; | Tipo de propiedad |
+| valor | Text, Real, Boolean | &#8594; | Valor de la propiedad |
+| proceso | Integer | &#8594; | Número del proceso |
 
 <!-- END REF-->
 
@@ -64,6 +64,6 @@ En el caso de la propiedad Associated standard action, puede pasar en el paráme
 |  |  |
 | --- | --- |
 | Número de comando | 973 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

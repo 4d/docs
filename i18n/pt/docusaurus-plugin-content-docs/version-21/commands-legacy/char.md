@@ -43,6 +43,6 @@ O seguinte exemplo utiliza Char para inserir um retorno de carro no texto de uma
 |  |  |
 | --- | --- |
 | Número do comando | 90 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

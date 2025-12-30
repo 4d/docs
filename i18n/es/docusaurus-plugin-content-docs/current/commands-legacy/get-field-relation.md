@@ -5,14 +5,14 @@ slug: /commands/get-field-relation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *campoN* ; *uno* ; *muchos* {; *} )<!-- END REF-->
+<!--REF #_command_.GET FIELD RELATION.Syntax-->**GET FIELD RELATION** ( *campoN* : Field ; *uno* : Integer ; *muchos* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.GET FIELD RELATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campoN | Field | &#8594;  | Campo de inicio de una relación |
+| campoN | Field | &#8594; | Campo de inicio de una relación |
 | uno | Integer | &#8592; | Estado de la relación Muchos a Uno |
 | muchos | Integer | &#8592; | Estado de la relación Uno a Muchos |
-| * | Operador | &#8594;  | • Si se pasa: uno y muchos devuelven el estado actual de la relación (valores 2 o 3 únicamente) • Si se omite (por defecto): uno y muchos puede devolver el valor 1 si la relación no ha sido modificada por programación |
+| * | Operador | &#8594; | • Si se pasa: uno y muchos devuelven el estado actual de la relación (valores 2 o 3 únicamente) • Si se omite (por defecto): uno y muchos puede devolver el valor 1 si la relación no ha sido modificada por programación |
 
 <!-- END REF-->
 
@@ -89,6 +89,6 @@ El siguiente código ilustra las diferentes posibilidades ofrecidas por los coma
 |  |  |
 | --- | --- |
 | Número de comando | 920 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

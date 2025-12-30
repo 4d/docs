@@ -29,6 +29,6 @@ If the SQL server was launched, all the SQL connections are interrupted and the 
 |  |  |
 | --- | --- |
 | Command number | 963 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

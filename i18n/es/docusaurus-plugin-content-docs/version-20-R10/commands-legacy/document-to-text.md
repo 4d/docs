@@ -83,6 +83,6 @@ Cuando ejecuta este código:
 |  |  |
 | --- | --- |
 | Número de comando | 1236 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -65,6 +65,6 @@ Vous souhaitez interdire le déploiement/contraction sur double-clic. Vous pouve
 |  |  |
 | --- | --- |
 | Numéro de commande | 387 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

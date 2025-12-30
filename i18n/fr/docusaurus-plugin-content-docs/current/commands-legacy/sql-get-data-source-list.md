@@ -5,11 +5,11 @@ slug: /commands/sql-get-data-source-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *typeSource* ; *tabNomsSources* ; *tabPilotes* )<!-- END REF-->
+<!--REF #_command_.SQL GET DATA SOURCE LIST.Syntax-->**SQL GET DATA SOURCE LIST** ( *typeSource* : Integer ; *tabNomsSources* : Text array ; *tabPilotes* : Text array )<!-- END REF-->
 <!--REF #_command_.SQL GET DATA SOURCE LIST.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| typeSource | Integer | &#8594;  | Type de source : utilisateur ou système |
+| typeSource | Integer | &#8594; | Type de source : utilisateur ou système |
 | tabNomsSources | Text array | &#8592; | Tableau des noms de sources de données |
 | tabPilotes | Text array | &#8592; | Tableau des pilotes des sources |
 
@@ -59,7 +59,7 @@ Si la commande est correctement exécutée, la variable système OK prend la val
 |  |  |
 | --- | --- |
 | Numéro de commande | 989 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

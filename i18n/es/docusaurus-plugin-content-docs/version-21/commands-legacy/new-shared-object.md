@@ -73,6 +73,6 @@ Usted desea crear y modificar un objeto compartido. La estructura debe llamarse 
 |  |  |
 | --- | --- |
 | Número de comando | 1526 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

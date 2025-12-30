@@ -86,6 +86,6 @@ SEND PACKETコマンドを使用する前に、 [SET CHANNEL](set-channel.md) �
 |  |  |
 | --- | --- |
 | コマンド番号 | 103 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

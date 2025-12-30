@@ -5,7 +5,7 @@ slug: /commands/set-window-rect
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *left* ; *top* ; *right* ; *bottom* {; *window*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET WINDOW RECT.Syntax-->**SET WINDOW RECT** ( *left* : Integer ; *top* : Integer ; *right* : Integer ; *bottom* : Integer {; *window* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET WINDOW RECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -66,6 +66,6 @@ The window appears as follows:
 |  |  |
 | --- | --- |
 | Command number | 444 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

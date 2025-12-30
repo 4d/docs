@@ -59,6 +59,6 @@ Os objetos de formulário aos quais pode aplicar este comando são os seguintes:
 |  |  |
 | --- | --- |
 | Número do comando | 706 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

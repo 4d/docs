@@ -5,14 +5,14 @@ slug: /commands/listbox-set-row-font-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( {* ;} *objet* ; *ligne* ; *style* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW FONT STYLE.Syntax-->**LISTBOX SET ROW FONT STYLE** ( * ; *objet* : Text ; *ligne* : Integer ; *style* : Integer )<br/>**LISTBOX SET ROW FONT STYLE** ( *objet* : Field, Variable ; *ligne* : Integer ; *style* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW FONT STYLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| ligne | Integer | &#8594;  | Numéro de ligne |
-| style | Integer | &#8594;  | Style de police |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| ligne | Integer | &#8594; | Numéro de ligne |
+| style | Integer | &#8594; | Style de police |
 
 <!-- END REF-->
 
@@ -83,6 +83,6 @@ Après la deuxième instruction, toutes les cellules de la troisième ligne pass
 |  |  |
 | --- | --- |
 | Numéro de commande | 1268 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

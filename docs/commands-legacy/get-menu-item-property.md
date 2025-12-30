@@ -5,7 +5,7 @@ slug: /commands/get-menu-item-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* ; *menuItem* ; *property* ; *value* {; *process*} )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEM PROPERTY.Syntax-->**GET MENU ITEM PROPERTY** ( *menu* : Integer ; *menuItem* : Integer ; *property* : Text ; *value* : any {; *process* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEM PROPERTY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ In the *property* parameter, pass the property for which you want to get the val
 |  |  |
 | --- | --- |
 | Command number | 972 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -34,7 +34,7 @@ See the example for [Record number](record-number.md).
 |  |  |
 | --- | --- |
 | Command number | 242 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 | Changes current selection ||
 

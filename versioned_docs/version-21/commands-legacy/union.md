@@ -56,6 +56,6 @@ This example adds records to a set of best customers. The records are displayed 
 |  |  |
 | --- | --- |
 | Command number | 120 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

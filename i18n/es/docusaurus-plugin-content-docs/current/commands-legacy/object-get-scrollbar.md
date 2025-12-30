@@ -5,12 +5,12 @@ slug: /commands/object-get-scrollbar
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( {* ;} *objeto* ; *horizontal* ; *vertical* )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLLBAR.Syntax-->**OBJECT GET SCROLLBAR** ( * ; *objeto* : Text ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<br/>**OBJECT GET SCROLLBAR** ( *objeto* : Field, Variable ; *horizontal* : Boolean, Integer ; *vertical* : Boolean, Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLLBAR.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
-| objeto | any | &#8594;  | Nombre del objeto (si se especifica *) o variable o campo (si se omite*) |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena) Si se omite, objeto es una variable o un campo |
+| objeto | any | &#8594; | Nombre del objeto (si se especifica *) o variable o campo (si se omite*) |
 | horizontal | Boolean, Integer | &#8592; | True = mostrado, False = oculto |
 | vertical | Boolean, Integer | &#8592; | True = mostrado, False = oculto |
 
@@ -50,6 +50,6 @@ Para obtener más información, consulte la descripción del comando [OBJECT SET
 |  |  |
 | --- | --- |
 | Número de comando | 1076 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

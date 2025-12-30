@@ -75,7 +75,7 @@ La interfaz de su aplicación utiliza la cadena estática ":xliff:shopping". Los
 |  |  |
 | --- | --- |
 | Número de comando | 1104 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

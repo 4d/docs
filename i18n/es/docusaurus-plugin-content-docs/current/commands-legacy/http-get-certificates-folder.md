@@ -44,6 +44,6 @@ Usted quiere cambiar temporalmente la carpeta de certificados:
 |  |  |
 | --- | --- |
 | Número de comando | 1307 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

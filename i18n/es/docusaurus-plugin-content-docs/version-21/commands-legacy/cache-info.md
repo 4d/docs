@@ -59,6 +59,6 @@ Usted quiere obtener información de la caché de la base de datos y todos los c
 |  |  |
 | --- | --- |
 | Número de comando | 1402 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

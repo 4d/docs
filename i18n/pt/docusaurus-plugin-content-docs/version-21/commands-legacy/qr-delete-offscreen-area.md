@@ -28,7 +28,7 @@ Se passa um número de *area* incorreto, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 754 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

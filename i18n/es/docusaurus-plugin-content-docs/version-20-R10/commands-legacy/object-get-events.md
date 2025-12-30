@@ -52,6 +52,6 @@ Usted quiere activar dos eventos y obtener la lista de eventos para un objeto:
 |  |  |
 | --- | --- |
 | Número de comando | 1238 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

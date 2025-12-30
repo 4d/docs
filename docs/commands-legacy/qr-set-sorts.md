@@ -5,7 +5,7 @@ slug: /commands/qr-set-sorts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* ; *aColumns* {; *aOrders*} )<!-- END REF-->
+<!--REF #_command_.QR SET SORTS.Syntax-->**QR SET SORTS** ( *area* : Integer ; *aColumns* : Real array {; *aOrders* : Real array} )<!-- END REF-->
 <!--REF #_command_.QR SET SORTS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,7 +51,7 @@ If you pass an invalid *area* number, the error -9850 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 752 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

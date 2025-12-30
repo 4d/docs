@@ -138,6 +138,6 @@ Después de la ejecución de este código:
 |  |  |
 | --- | --- |
 | Número de comando | 552 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

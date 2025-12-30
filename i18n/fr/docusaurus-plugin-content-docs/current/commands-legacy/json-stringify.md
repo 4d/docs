@@ -5,12 +5,12 @@ slug: /commands/json-stringify
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valeur* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.JSON Stringify.Syntax-->**JSON Stringify** ( *valeur* : Object, any {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.JSON Stringify.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| valeur | Object, any | &#8594;  | Données à convertir en chaîne JSON |
-| * | Opérateur | &#8594;  | Améliorer la présentation |
+| valeur | Object, any | &#8594; | Données à convertir en chaîne JSON |
+| * | Opérateur | &#8594; | Améliorer la présentation |
 | Résultat | Text | &#8592; | Chaîne contenant le texte JSON sérialisé |
 
 <!-- END REF-->
@@ -180,6 +180,6 @@ $myTxtCol="[33,"mike","2017-08-28",false]"
 |  |  |
 | --- | --- |
 | Numéro de commande | 1217 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

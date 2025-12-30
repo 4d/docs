@@ -5,13 +5,13 @@ slug: /commands/delete-from-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *array* ; *posição* {; *quantos*} )<!-- END REF-->
+<!--REF #_command_.DELETE FROM ARRAY.Syntax-->**DELETE FROM ARRAY** ( *array* : Array ; *posição* : Integer {; *quantos* : Integer} )<!-- END REF-->
 <!--REF #_command_.DELETE FROM ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array do qual apagar os elementos |
-| posição | Integer | &#8594;  | Elemento onde se inicia o processo |
-| quantos | Integer | &#8594;  | Número de elementos a apagar |
+| array | Array | &#8594; | Array do qual apagar os elementos |
+| posição | Integer | &#8594; | Elemento onde se inicia o processo |
+| quantos | Integer | &#8594; | Número de elementos a apagar |
 
 <!-- END REF-->
 
@@ -50,6 +50,6 @@ O exemplo a seguir deleta o última elemento de um array, se ele existir:
 |  |  |
 | --- | --- |
 | Número do comando | 228 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

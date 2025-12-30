@@ -46,7 +46,7 @@ Si el usuario hace clic en OK en ambas cajas de diálogo, la variable sistema OK
 |  |  |
 | --- | --- |
 | Número de comando | 106 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

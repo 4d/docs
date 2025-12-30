@@ -54,6 +54,6 @@ L'exemple suivant affiche une boîte de dialogue d'alerte. Nous passons à cette
 |  |  |
 | --- | --- |
 | Numéro de commande | 257 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

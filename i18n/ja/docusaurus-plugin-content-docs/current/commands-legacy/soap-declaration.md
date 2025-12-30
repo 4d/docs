@@ -5,14 +5,14 @@ slug: /commands/soap-declaration
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* ; *type* ; input_output {; *alias*} )<!-- END REF-->
+<!--REF #_command_.SOAP DECLARATION.Syntax-->**SOAP DECLARATION** ( *variable* : Variable ; *type* : Integer ; input_output {; *alias* : Text} )<!-- END REF-->
 <!--REF #_command_.SOAP DECLARATION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| variable | Variable | &#8594;  | 入出力SOAP引数を参照する変数 |
-| type | Integer | &#8594;  | 引数が指す4Dの型 |
-| input_output | Integer | &#8594;  | 1 = SOAP入力, 2 = SOAP出力 |
-| alias | Text | &#8594;  | SOAP交換の間 この引数用に公開される名前 |
+| variable | Variable | &#8594; | 入出力SOAP引数を参照する変数 |
+| type | Integer | &#8594; | 引数が指す4Dの型 |
+| input_output | Integer | &#8594; | 1 = SOAP入力, 2 = SOAP出力 |
+| alias | Text | &#8594; | SOAP交換の間 この引数用に公開される名前 |
 
 <!-- END REF-->
 
@@ -187,6 +187,6 @@ COMPILER\_WEBメソッドはWebサーバでも使用されます (参照)。
 |  |  |
 | --- | --- |
 | コマンド番号 | 782 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

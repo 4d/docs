@@ -5,7 +5,7 @@ slug: /commands/load-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* ) : Integer<!-- END REF-->
+<!--REF #_command_.Load list.Syntax-->**Load list** ( *listName* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Load list.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -56,6 +56,6 @@ You create a database for the international market and you need to switch to dif
 |  |  |
 | --- | --- |
 | Command number | 383 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

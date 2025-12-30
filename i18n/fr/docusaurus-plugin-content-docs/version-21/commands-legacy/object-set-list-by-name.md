@@ -95,6 +95,6 @@ Vous souhaitez supprimer des associations de listes :
 |  |  |
 | --- | --- |
 | Numéro de commande | 237 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

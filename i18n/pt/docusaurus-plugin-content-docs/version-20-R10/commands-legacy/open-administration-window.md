@@ -55,7 +55,7 @@ Se o comando foi executado corretamente, a variável de sistema OK é definida c
 |  |  |
 | --- | --- |
 | Número do comando | 1047 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK, error |
 
 

@@ -98,6 +98,6 @@ Usted quiere eliminar la lista de asociaciones:
 |  |  |
 | --- | --- |
 | Número de comando | 237 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

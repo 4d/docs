@@ -5,7 +5,7 @@ slug: /commands/get-printable-margin
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *esquerda* ; *superior* ; *direita* ; *inferior* )<!-- END REF-->
+<!--REF #_command_.GET PRINTABLE MARGIN.Syntax-->**GET PRINTABLE MARGIN** ( *esquerda* : Integer ; *superior* : Integer ; *direita* : Integer ; *inferior* : Integer )<!-- END REF-->
 <!--REF #_command_.GET PRINTABLE MARGIN.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
@@ -49,6 +49,6 @@ Por padrão, em 4D o cálculo das impressões é realizada baseada nas “margen
 |  |  |
 | --- | --- |
 | Número do comando | 711 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

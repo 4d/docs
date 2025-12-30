@@ -5,11 +5,11 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resNome* ) : Text<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resNome* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| resNome | Text | &#8594;  | Nome do atributo recurso |
+| resNome | Text | &#8594; | Nome do atributo recurso |
 | Resultado | Text | &#8592; | Valor da string determinar por RecNome na linguagem atual |
 
 <!-- END REF-->
@@ -60,7 +60,7 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Se *r
 |  |  |
 | --- | --- |
 | Número do comando | 991 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

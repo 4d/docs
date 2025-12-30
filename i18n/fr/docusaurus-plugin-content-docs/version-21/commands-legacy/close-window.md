@@ -44,6 +44,6 @@ L'exemple suivant ouvre une fenêtre formulaire et crée des enregistrements à 
 |  |  |
 | --- | --- |
 | Numéro de commande | 154 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

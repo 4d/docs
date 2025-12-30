@@ -5,12 +5,12 @@ slug: /commands/get-field-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* ; *fieldNum* ; *fieldType* {; *fieldLength* {; *indexed* {; *unique* {; *invisible*}}}} )<!-- END REF-->
+<!--REF #_command_.GET FIELD PROPERTIES.Syntax-->**GET FIELD PROPERTIES** ( *fieldPtr* : ポインター, 倍長整数 ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<br/>**GET FIELD PROPERTIES** ( *tableNum* : ポインター, 倍長整数 ; *fieldNum* : Integer ; *fieldType* : Integer {; *fieldLength* : Integer {; *indexed* : Boolean {; *unique* : Boolean {; *invisible* : Boolean}}}} )<!-- END REF-->
 <!--REF #_command_.GET FIELD PROPERTIES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#8594;  | テーブル番号、またはフィールドポインタ |
-| fieldNum | Integer | &#8594;  | テーブル番号を渡した場合は、フィールド番号 |
+| fieldPtr &#124; tableNum | ポインター, 倍長整数 | &#8594; | テーブル番号、またはフィールドポインタ |
+| fieldNum | Integer | &#8594; | テーブル番号を渡した場合は、フィールド番号 |
 | fieldType | Integer | &#8592; | フィールドのタイプ |
 | fieldLength | Integer | &#8592; | 文字フィールドの場合、長さ |
 | indexed | Boolean | &#8592; | True = インデックス付き、False = インデックスなし |
@@ -79,6 +79,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 258 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

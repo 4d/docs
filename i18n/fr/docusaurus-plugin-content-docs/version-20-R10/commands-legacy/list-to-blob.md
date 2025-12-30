@@ -51,7 +51,7 @@ Reportez-vous à l'exemple de la fonction [BLOB to list](blob-to-list.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 556 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

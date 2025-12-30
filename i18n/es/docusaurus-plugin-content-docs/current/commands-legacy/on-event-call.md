@@ -5,12 +5,12 @@ slug: /commands/on-event-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *metodoEvento* {; *nombreProceso*} )<!-- END REF-->
+<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *metodoEvento* : Text {; *nombreProceso* : Text} )<!-- END REF-->
 <!--REF #_command_.ON EVENT CALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| metodoEvento | Text | &#8594;  | Método de evento a llamar, o Cadena vacía para detener la interceptación de eventos |
-| nombreProceso | Text | &#8594;  | Nombre del proceso |
+| metodoEvento | Text | &#8594; | Método de evento a llamar, o Cadena vacía para detener la interceptación de eventos |
+| nombreProceso | Text | &#8594; | Nombre del proceso |
 
 <!-- END REF-->
 
@@ -120,7 +120,7 @@ Si imprime un informe utilizando [PRINT SELECTION](print-selection.md "PRINT SEL
 |  |  |
 | --- | --- |
 | Número de comando | 190 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

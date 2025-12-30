@@ -130,6 +130,6 @@ La méthode objet associée à ce bouton est la suivante :
 |  |  |
 | --- | --- |
 | Numéro de commande | 891 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

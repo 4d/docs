@@ -88,6 +88,6 @@ Résolution d’un chemin d’objet de méthode formulaire table :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1165 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

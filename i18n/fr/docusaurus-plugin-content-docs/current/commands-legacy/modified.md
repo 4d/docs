@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Modified.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| leField | Field | &#8594;  | Champ dont vous voulez tester la modification |
+| leField | Field | &#8594; | Champ dont vous voulez tester la modification |
 | Résultat | Boolean | &#8592; | Vrai si une nouvelle valeur a été assignée au champ, sinon Faux |
 
 <!-- END REF-->
@@ -71,6 +71,6 @@ Vous sélectionnez un enregistrement de la table *\[uneTable\]*, puis vous appel
 |  |  |
 | --- | --- |
 | Numéro de commande | 32 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

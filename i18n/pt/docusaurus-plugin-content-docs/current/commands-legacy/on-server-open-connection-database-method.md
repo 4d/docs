@@ -133,6 +133,6 @@ O seguinte exemplo evita uma nova conexão entre as 2 e 4 A.M.
 |  |  |
 | --- | --- |
 | Número do comando | 16001 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

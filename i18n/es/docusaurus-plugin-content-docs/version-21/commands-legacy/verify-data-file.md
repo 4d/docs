@@ -175,5 +175,5 @@ Si el método de retrollamada no existe, la verificación no se efectúa, se gen
 |  |  |
 | --- | --- |
 | Número de comando | 939 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |

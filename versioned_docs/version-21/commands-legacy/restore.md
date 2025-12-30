@@ -39,7 +39,7 @@ The RESTORE command modifies the value of the *OK* and *Document* variables: if 
 |  |  |
 | --- | --- |
 | Command number | 918 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document, error |
 
 

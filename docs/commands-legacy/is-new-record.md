@@ -5,7 +5,7 @@ slug: /commands/is-new-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is new record.Syntax-->**Is new record** {( *aTable* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is new record.Syntax-->**Is new record** ( *aTable* : Table ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is new record.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ The following two statements are identical. The second one is strongly advised s
 |  |  |
 | --- | --- |
 | Command number | 668 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

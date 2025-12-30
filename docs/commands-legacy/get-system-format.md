@@ -5,7 +5,7 @@ slug: /commands/get-system-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* ; *value* )<!-- END REF-->
+<!--REF #_command_.GET SYSTEM FORMAT.Syntax-->**GET SYSTEM FORMAT** ( *format* : Integer ; *value* : Text )<!-- END REF-->
 <!--REF #_command_.GET SYSTEM FORMAT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,6 +48,6 @@ In the *format* parameter, pass the type of parameter whose value you want to kn
 |  |  |
 | --- | --- |
 | Command number | 994 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

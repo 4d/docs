@@ -5,13 +5,13 @@ slug: /commands/set-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *menuItem* ; *param* )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* : Integer, Text ; *menuItem* : Integer ; *param* : Text )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | メニュー参照またはメニュー番号 |
-| menuItem | Integer | &#8594;  | メニュー項目番号 または -1: 最後に追加された項目 |
-| param | Text | &#8594;  | パラメタとして割り当てる文字列 |
+| menu | Integer, Text | &#8594; | メニュー参照またはメニュー番号 |
+| menuItem | Integer | &#8594; | メニュー項目番号 または -1: 最後に追加された項目 |
+| param | Text | &#8594; | パラメタとして割り当てる文字列 |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1004 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -94,6 +94,6 @@ Si le code est exécuté sur 4D Server et que le verrouillage est causé par un 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1316 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

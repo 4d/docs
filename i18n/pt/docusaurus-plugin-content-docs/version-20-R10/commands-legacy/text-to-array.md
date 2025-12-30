@@ -114,6 +114,6 @@ Deve imprimir em uma área de 400 pixeles de largo um texto de um máximo de 80 
 |  |  |
 | --- | --- |
 | Número do comando | 1149 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

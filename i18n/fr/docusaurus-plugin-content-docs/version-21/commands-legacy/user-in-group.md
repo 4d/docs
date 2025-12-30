@@ -48,6 +48,6 @@ L'exemple suivant recherche des factures. Si l'utilisateur courant est dans le g
 |  |  |
 | --- | --- |
 | Numéro de commande | 338 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

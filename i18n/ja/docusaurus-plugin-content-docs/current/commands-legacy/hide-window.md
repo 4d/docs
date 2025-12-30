@@ -5,11 +5,11 @@ slug: /commands/hide-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.HIDE WINDOW.Syntax-->**HIDE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.HIDE WINDOW.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| window | Integer | &#8594;  | ウィンドウ参照番号、または 省略時、カレントプロセスの最前面ウィンドウ |
+| window | Integer | &#8594; | ウィンドウ参照番号、または 省略時、カレントプロセスの最前面ウィンドウ |
 
 <!-- END REF-->
 
@@ -51,6 +51,6 @@ HIDE WINDOWコマンドで画したウィンドウを表示するには:
 |  |  |
 | --- | --- |
 | コマンド番号 | 436 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

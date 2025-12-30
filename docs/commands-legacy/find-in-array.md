@@ -5,7 +5,7 @@ slug: /commands/find-in-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* ; *value* {; *start*} ) : Integer<!-- END REF-->
+<!--REF #_command_.Find in array.Syntax-->**Find in array** ( *array* : Array ; *value* : Expression {; *start* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.Find in array.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -116,6 +116,6 @@ You want to find an object reference:
 |  |  |
 | --- | --- |
 | Command number | 230 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

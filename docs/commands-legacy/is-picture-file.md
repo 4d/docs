@@ -5,7 +5,7 @@ slug: /commands/is-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is picture file.Syntax-->**Is picture file** ( *filePath* : Text {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is picture file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ If you do not pass the *\** parameter, the command tests the file by looking for
 |  |  |
 | --- | --- |
 | Command number | 1113 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/round
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Round.Syntax-->**Round** ( *round* ; *places* ) : Real<!-- END REF-->
+<!--REF #_command_.Round.Syntax-->**Round** ( *round* : Real ; *places* : Integer ) : Real<!-- END REF-->
 <!--REF #_command_.Round.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| round | Real | &#8594;  | 丸める数値 |
-| places | Integer | &#8594;  | 丸める小数部の位置 |
+| round | Real | &#8594; | 丸める数値 |
+| places | Integer | &#8594; | 丸める小数部の位置 |
 | 戻り値 | Real | &#8592; | placesで指定された場所で 丸められた数値 |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 94 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -83,6 +83,6 @@ Voici le résultat lorsqu'une table par défaut est définie :
 |  |  |
 | --- | --- |
 | Numéro de commande | 46 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

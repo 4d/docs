@@ -113,6 +113,6 @@ Vous voulez trouver une référence d'objet :
 |  |  |
 | --- | --- |
 | Numéro de commande | 230 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

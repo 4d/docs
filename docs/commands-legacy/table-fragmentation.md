@@ -5,7 +5,7 @@ slug: /commands/table-fragmentation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* ) : Real<!-- END REF-->
+<!--REF #_command_.Table fragmentation.Syntax-->**Table fragmentation** ( *aTable* : Table ) : Real<!-- END REF-->
 <!--REF #_command_.Table fragmentation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ This maintenance method lets you request the compacting of the data file in the 
 |  |  |
 | --- | --- |
 | Command number | 1127 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

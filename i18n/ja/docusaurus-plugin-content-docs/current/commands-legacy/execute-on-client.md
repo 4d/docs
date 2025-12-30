@@ -5,13 +5,13 @@ slug: /commands/execute-on-client
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* ; *methodName* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.EXECUTE ON CLIENT.Syntax-->**EXECUTE ON CLIENT** ( *clientName* : Text ; *methodName* : Text {; *...param* : any} )<!-- END REF-->
 <!--REF #_command_.EXECUTE ON CLIENT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| clientName | Text | &#8594;  | 4D Clientの登録名 |
-| methodName | Text | &#8594;  | 実行するメソッドの名前 |
-| param | &#8594;  | メソッドの引数 |
+| clientName | Text | &#8594; | 4D Clientの登録名 |
+| methodName | Text | &#8594; | 実行するメソッドの名前 |
+| param | any | &#8594; | Method’s parameter(s) |
 
 <!-- END REF-->
 
@@ -67,7 +67,7 @@ OKシステム変数は、4D Serverがメソッドの実行要求を正しく受
 |  |  |
 | --- | --- |
 | コマンド番号 | 651 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

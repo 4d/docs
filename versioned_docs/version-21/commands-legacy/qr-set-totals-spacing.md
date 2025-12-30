@@ -43,7 +43,7 @@ If you pass an invalid *subtotal*, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 761 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

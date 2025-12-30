@@ -5,7 +5,7 @@ slug: /commands/activity-snapshot
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** (* tabActivités* {; *} )<br/>**ACTIVITY SNAPSHOT** ( *tabUUID* ; *tabDébut* ; *tabDurée* ; *tabInfo* {; *tabDétails*} )<!-- END REF-->
+<!--REF #_command_.ACTIVITY SNAPSHOT.Syntax-->**ACTIVITY SNAPSHOT** (*tabActivités* : Tableau objet, Tableau texte {; *} )<br/>**ACTIVITY SNAPSHOT** ( *tabUUID* : Tableau objet, Tableau texte ; *tabDébut* : Text array ; *tabDurée* : Integer array ; *tabInfo* : Text array {; *tabDétails* : Object array} )<!-- END REF-->
 <!--REF #_command_.ACTIVITY SNAPSHOT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
@@ -14,7 +14,7 @@ displayed_sidebar: docs
 | tabDurée | Integer array | &#8592; | Durées des opérations en millisecondes |
 | tabInfo | Text array | &#8592; | Description |
 | tabDétails | Object array | &#8592; | Détails du contexte et Sous-opérations (le cas échéant) |
-| * | Opérateur | &#8594;  | Si passé = Lire activité serveur |
+| * | Opérateur | &#8594; | Si passé = Lire activité serveur |
 
 <!-- END REF-->
 
@@ -110,6 +110,6 @@ Vous obtenez des tableaux du type :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

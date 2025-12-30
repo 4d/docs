@@ -44,6 +44,6 @@ Headers must respect the minimum height set by the system. This height is 24 pix
 |  |  |
 | --- | --- |
 | Command number | 1143 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

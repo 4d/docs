@@ -112,6 +112,6 @@ The optional *errorMessage* parameter will receive an error message if there is 
 |  |  |
 | --- | --- |
 | Command number | 1576 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

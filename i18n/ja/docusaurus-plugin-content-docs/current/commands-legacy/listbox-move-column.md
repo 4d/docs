@@ -5,13 +5,13 @@ slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( {* ;} *object* ; *colPosition* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *object* : Text ; *colPosition* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *object* : Field, Variable ; *colPosition* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: objectはオブジェクト名 (文字) 省略時: objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
-| colPosition | Integer | &#8594;  | 列の新しい位置 |
+| * | 演算子 | &#8594; | 指定時: objectはオブジェクト名 (文字) 省略時: objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または 変数 (* 省略時) |
+| colPosition | Integer | &#8594; | 列の新しい位置 |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1274 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

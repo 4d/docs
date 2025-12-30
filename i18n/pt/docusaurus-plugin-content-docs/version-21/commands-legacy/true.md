@@ -35,6 +35,6 @@ O exemplo a seguir atribui a variável *vbOpcoes* a Verdadeiro :
 |  |  |
 | --- | --- |
 | Número do comando | 214 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

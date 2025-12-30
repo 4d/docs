@@ -5,7 +5,7 @@ slug: /commands/st-get-plain-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( {* ;} *object* {; *refMode*} ) : Text<!-- END REF-->
+<!--REF #_command_.ST Get plain text.Syntax-->**ST Get plain text** ( * ; *object* : Text {; *refMode* : Integer} ) : Text<br/>**ST Get plain text** ( *object* : Field, Variable {; *refMode* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.ST Get plain text.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ In the case of an error, the variable is not changed. When an error occurs on a 
 |  |  |
 | --- | --- |
 | Command number | 1092 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

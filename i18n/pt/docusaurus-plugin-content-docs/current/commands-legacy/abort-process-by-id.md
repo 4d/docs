@@ -5,11 +5,11 @@ slug: /commands/abort-process-by-id
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *IDunico* )<!-- END REF-->
+<!--REF #_command_.ABORT PROCESS BY ID.Syntax-->**ABORT PROCESS BY ID** ( *IDunico* : Integer )<!-- END REF-->
 <!--REF #_command_.ABORT PROCESS BY ID.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| IDunico | Integer | &#8594;  | ID de processo única |
+| IDunico | Integer | &#8594; | ID de processo única |
 
 <!-- END REF-->
 
@@ -48,6 +48,6 @@ Se quiser deter o processo selecionado da coleção de processos que são mostra
 |  |  |
 | --- | --- |
 | Número do comando | 1634 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

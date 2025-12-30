@@ -5,7 +5,7 @@ slug: /commands/wa-back-url-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WA Back URL available.Syntax-->**WA Back URL available** ( * ; *object* : Text ) : Boolean<br/>**WA Back URL available** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.WA Back URL available.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ The command returns **True** if a URL exists and **False** otherwise. More parti
 |  |  |
 | --- | --- |
 | Command number | 1026 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

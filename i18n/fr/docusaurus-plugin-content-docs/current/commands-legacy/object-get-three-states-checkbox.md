@@ -5,12 +5,12 @@ slug: /commands/object-get-three-states-checkbox
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( {* ;} *objet* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get three states checkbox.Syntax-->**OBJECT Get three states checkbox** ( * ; *objet* : Text ) : Boolean<br/>**OBJECT Get three states checkbox** ( *objet* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get three states checkbox.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
 | Résultat | Boolean | &#8592; | Vrai = case à cocher à trois états, Faux = case à cocher standard |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ La propriété "Trois états" peut avoir été définie soit via la Liste des pr
 |  |  |
 | --- | --- |
 | Numéro de commande | 1250 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

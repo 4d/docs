@@ -5,12 +5,12 @@ slug: /commands/choose
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterio* ; *valor* {; *valor2* ; ... ; *valorN*} )  : any<!-- END REF-->
+<!--REF #_command_.Choose.Syntax-->**Choose** ( *criterio* : Boolean, Integer ; *valor* : Expression {; *...valor* : Expression} )  : any<!-- END REF-->
 <!--REF #_command_.Choose.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| criterio | Boolean, Integer | &#8594;  | Valor a probar |
-| valor | Expression | &#8594;  | Valores posibles |
+| criterio | Boolean, Integer | &#8594; | Valor a probar |
+| valor | Expression | &#8594; | Valores posibles |
 | Resultado | any | &#8592; | Valor de criterio |
 
 <!-- END REF-->
@@ -85,6 +85,6 @@ Este código es estrictamente equivalente a:
 |  |  |
 | --- | --- |
 | Número de comando | 955 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

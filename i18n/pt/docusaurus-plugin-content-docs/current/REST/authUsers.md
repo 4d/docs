@@ -29,7 +29,7 @@ A sequência de login do usuário é a seguinte:
 
 2. Você chama sua [`authentify()`](#function-authentify) (criado previamente), na qual você verifica as credenciais do usuário e chama [`Session.setPrivileges()`](../API/SessionClass.md#setprivileges) com privilégios apropriados. `authentify()` deve ser uma [função de datastore class](../ORDA/ordaClasses.md#datastore-class) exposta.
 
-3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a [Qodly page](../WebServer/qodly-studio.md) (called via the `/rest/$getWebForm` request).
+3. La petición `/rest/$catalog/authentify` se envía al servidor junto con las credenciales del usuario. This step only requires a basic login form that do not access data; it can be a [Qodly page](https://developer.4d.com/qodly/) (called via the `/rest/$getWebForm` request).
 
 4. If the user is successfully authentified, a 4D license is consumed on the server and all REST requests are accepted.
 

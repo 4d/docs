@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 1831 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

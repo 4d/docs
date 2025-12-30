@@ -89,6 +89,6 @@ To count words in a text:
 |  |  |
 | --- | --- |
 | Command number | 1141 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

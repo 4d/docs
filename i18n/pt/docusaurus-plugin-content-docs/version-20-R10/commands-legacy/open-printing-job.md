@@ -42,7 +42,7 @@ A variável sistema OK se estabelece em 1 se o trabalho de impressão foi aberto
 |  |  |
 | --- | --- |
 | Número do comando | 995 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

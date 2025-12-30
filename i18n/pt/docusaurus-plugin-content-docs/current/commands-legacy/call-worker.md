@@ -5,13 +5,13 @@ slug: /commands/call-worker
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *processo* ; *método* {; *param*}{; *param2* ; ... ; *paramN*} )<!-- END REF-->
+<!--REF #_command_.CALL WORKER.Syntax-->**CALL WORKER** ( *processo* : Text, Integer ; *método* : Object, Text {; *...param* : Expression} )<!-- END REF-->
 <!--REF #_command_.CALL WORKER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Text, Integer | &#8594;  | Nome ou número de processo do worker |
-| método | Object, Text | &#8594;  | Nome do método de projeto a chamar |
-| param | Expression | &#8594;  | Parâmetros passados ao método |
+| processo | Text, Integer | &#8594; | Nome ou número de processo do worker |
+| método | Object, Text | &#8594; | Nome do método de projeto a chamar |
+| param | Expression | &#8594; | Parâmetros passados ao método |
 
 <!-- END REF-->
 
@@ -89,6 +89,6 @@ O código de *workerMethod é*:
 |  |  |
 | --- | --- |
 | Número do comando | 1389 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/release-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* )<!-- END REF-->
+<!--REF #_command_.RELEASE MENU.Syntax-->**RELEASE MENU** ( *menu* : Text )<!-- END REF-->
 <!--REF #_command_.RELEASE MENU.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| menu | Text | &#8594;  | メニュー参照 |
+| menu | Text | &#8594; | メニュー参照 |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 978 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

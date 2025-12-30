@@ -40,6 +40,6 @@ Quiere cambiar entre el estado maximizado y el anterior:
 |  |  |
 | --- | --- |
 | Número de comando | 1830 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

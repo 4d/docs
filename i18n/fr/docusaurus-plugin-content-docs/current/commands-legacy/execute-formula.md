@@ -5,11 +5,11 @@ slug: /commands/execute-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruction* )<!-- END REF-->
+<!--REF #_command_.EXECUTE FORMULA.Syntax-->**EXECUTE FORMULA** ( *instruction* : Text )<!-- END REF-->
 <!--REF #_command_.EXECUTE FORMULA.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| instruction | Text | &#8594;  | Code à exécuter |
+| instruction | Text | &#8594; | Code à exécuter |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ Vous voulez exécuter une formule incluant des appels à des commandes et des ta
 |  |  |
 | --- | --- |
 | Numéro de commande | 63 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

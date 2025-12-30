@@ -5,11 +5,11 @@ slug: /commands/is-table-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTabla* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is table number valid.Syntax-->**Is table number valid** ( *numTabla* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is table number valid.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla | Integer | &#8594;  | Número de tabla |
+| numTabla | Integer | &#8594; | Número de tabla |
 | Resultado | Boolean | &#8592; | True = la tabla existe en la base, False = la tabla no existe en la base |
 
 <!-- END REF-->
@@ -30,6 +30,6 @@ Este comando permite detectar las eventuales eliminaciones de tablas, que crean 
 |  |  |
 | --- | --- |
 | Número de comando | 999 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -61,6 +61,6 @@ Usted desea obtener el número máximo de líneas para una línea de list box:
 |  |  |
 | --- | --- |
 | Número de comando | 1502 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

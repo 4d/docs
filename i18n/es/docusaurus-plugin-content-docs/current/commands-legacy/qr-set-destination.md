@@ -5,13 +5,13 @@ slug: /commands/qr-set-destination
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *area* ; *tipo* {; *especificos*} )<!-- END REF-->
+<!--REF #_command_.QR SET DESTINATION.Syntax-->**QR SET DESTINATION** ( *area* : Integer ; *tipo* : Integer {; *especificos* : Text, Variable} )<!-- END REF-->
 <!--REF #_command_.QR SET DESTINATION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referencia del área |
-| tipo | Integer | &#8594;  | Tipo de informe |
-| especificos | Text, Variable | &#8594;  | Específicos del tipo de salida |
+| area | Integer | &#8594; | Referencia del área |
+| tipo | Integer | &#8594; | Tipo de informe |
+| especificos | Text, Variable | &#8594; | Específicos del tipo de salida |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ El siguiente código define el archivo texto Midoc.txt como tipo de destino del 
 |  |  |
 | --- | --- |
 | Número de comando | 745 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

@@ -5,12 +5,12 @@ slug: /commands/web-validate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUsuario* ; *contraseña* ) : Boolean<!-- END REF-->
+<!--REF #_command_.WEB Validate digest.Syntax-->**WEB Validate digest** ( *nomUsuario* : Text ; *contraseña* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.WEB Validate digest.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomUsuario | Text | &#8594;  | Nombre del usuario |
-| contraseña | Text | &#8594;  | Contraseña del usuario |
+| nomUsuario | Text | &#8594; | Nombre del usuario |
+| contraseña | Text | &#8594; | Contraseña del usuario |
 | Resultado | Boolean | &#8592; | True=Autenticación correcta, False=Falla de la autenticación |
 
 <!-- END REF-->
@@ -63,6 +63,6 @@ Ejemplo de método de base On Web Authentication en modo Digest:
 |  |  |
 | --- | --- |
 | Número de comando | 946 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

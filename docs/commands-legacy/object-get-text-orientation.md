@@ -5,7 +5,7 @@ slug: /commands/object-get-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get text orientation.Syntax-->**OBJECT Get text orientation** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get text orientation** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get text orientation.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -61,6 +61,6 @@ When the form is executed, if you call the following statement:
 |  |  |
 | --- | --- |
 | Command number | 1283 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

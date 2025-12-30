@@ -5,14 +5,14 @@ slug: /commands/sax-open-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *documento* ; *etiqueta* {; *nomAtrib* ; *valorAtrib*} {; *nomAtrib2* ; *valorAtrib2* ; ... ; *nomAtribN* ; *valorAtribN*} )<!-- END REF-->
+<!--REF #_command_.SAX OPEN XML ELEMENT.Syntax-->**SAX OPEN XML ELEMENT** ( *documento* : Time ; *etiqueta* : Text {; *nomAtrib* : Text ; *valorAtrib* : Text} {; ...(*nomAtrib* : Text, *valorAtrib* : Text)} )<!-- END REF-->
 <!--REF #_command_.SAX OPEN XML ELEMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
-| etiqueta | Text | &#8594;  | Nombre del elemento a abrir |
-| nomAtrib | Text | &#8594;  | Nombre del atributo |
-| valorAtrib | Text | &#8594;  | Valor del atributo |
+| documento | Time | &#8594; | Referencia del documento abierto |
+| etiqueta | Text | &#8594; | Nombre del elemento a abrir |
+| nomAtrib | Text | &#8594; | Nombre del atributo |
+| valorAtrib | Text | &#8594; | Valor del atributo |
 
 <!-- END REF-->
 
@@ -58,7 +58,7 @@ Si se pasa en tag un carácter inválido, se genera un error.
 |  |  |
 | --- | --- |
 | Número de comando | 853 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | error |
 
 

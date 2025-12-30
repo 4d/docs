@@ -134,7 +134,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 |  |  |
 | --- | --- |
 | Command number | 1452 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

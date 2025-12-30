@@ -5,11 +5,11 @@ slug: /commands/system-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.System folder.Syntax-->**System folder** {( *tipo* )} : Text<!-- END REF-->
+<!--REF #_command_.System folder.Syntax-->**System folder** ( *tipo* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.System folder.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tipo | Integer | &#8594;  | Tipo de carpeta sistema |
+| tipo | Integer | &#8594; | Tipo de carpeta sistema |
 | Resultado | Text | &#8592; | Ruta de acceso de una carpeta del sistema activo |
 
 <!-- END REF-->
@@ -55,6 +55,6 @@ Si omite el parámetro *tipo*, la función devolverá la ruta a la carpeta siste
 |  |  |
 | --- | --- |
 | Número de comando | 487 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.REMOVE PICTURE FROM LIBRARY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refImag &#124; nomImag | Inteiro longo, String | &#8594;  | Número de referência ou nome da imagem da biblioteca de imagens |
+| refImag &#124; nomImag | Inteiro longo, String | &#8594; | Número de referência ou nome da imagem da biblioteca de imagens |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ O exemplo a seguir apaga da biblioteca de imagens toda imagem cujo nome comece p
 |  |  |
 | --- | --- |
 | Número do comando | 567 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

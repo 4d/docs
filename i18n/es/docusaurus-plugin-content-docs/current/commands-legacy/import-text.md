@@ -5,12 +5,12 @@ slug: /commands/import-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*tabla* ;} *doc* )<!-- END REF-->
+<!--REF #_command_.IMPORT TEXT.Syntax-->**IMPORT TEXT** ( {*tabla* : Table ;} *doc* : Text )<!-- END REF-->
 <!--REF #_command_.IMPORT TEXT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla en la cual importar datos, o Tabla por defecto, si se omite |
-| doc | Text | &#8594;  | Documento texto a importar datos |
+| tabla | Table | &#8594; | Tabla en la cual importar datos, o Tabla por defecto, si se omite |
+| doc | Text | &#8594; | Documento texto a importar datos |
 
 <!-- END REF-->
 
@@ -59,7 +59,7 @@ OK toma el valor 1 si la importación termina con éxito; de lo contrario, toma 
 |  |  |
 | --- | --- |
 | Número de comando | 168 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

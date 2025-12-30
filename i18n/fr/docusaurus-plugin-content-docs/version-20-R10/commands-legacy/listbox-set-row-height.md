@@ -88,6 +88,6 @@ En revanche, si le code suivant est exécuté :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1409 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

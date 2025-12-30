@@ -73,6 +73,6 @@ The *aTPaths* array receives the following elements:
 |  |  |
 | --- | --- |
 | Command number | 1395 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

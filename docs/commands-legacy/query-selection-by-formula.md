@@ -5,7 +5,7 @@ slug: /commands/query-selection-by-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* {; *queryFormula*} )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION BY FORMULA.Syntax-->**QUERY SELECTION BY FORMULA** ( *aTable* : Table {; *queryFormula* : Boolean} )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION BY FORMULA.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ For more information, see the description of the [QUERY BY FORMULA](query-by-for
 |  |  |
 | --- | --- |
 | Command number | 207 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 | Changes current selection ||
 

@@ -39,7 +39,7 @@ Si la valeur de *type* est incorrecte, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 738 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

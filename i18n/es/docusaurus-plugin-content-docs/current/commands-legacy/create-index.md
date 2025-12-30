@@ -5,15 +5,15 @@ slug: /commands/create-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *tabla* ; *arrayCampos* ; *tipoIndice* ; *nombreIndice* {; *} )<!-- END REF-->
+<!--REF #_command_.CREATE INDEX.Syntax-->**CREATE INDEX** ( *tabla* : Table ; *arrayCampos* : Pointer array ; *tipoIndice* : Integer ; *nombreIndice* : Text {; *} )<!-- END REF-->
 <!--REF #_command_.CREATE INDEX.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual crear un índice |
-| arrayCampos | Pointer array | &#8594;  | Puntero(s) a el/los campo(s) a indexar |
-| tipoIndice | Integer | &#8594;  | Tipo de índice a crear: -1 = Palabras claves, 0 = por defecto, 1 = B-Tree estándar, 3 = B-Tree cluster |
-| nombreIndice | Text | &#8594;  | Nombre del índice a crear |
-| * | Operador | &#8594;  | Si pasa = indexación asincrónica |
+| tabla | Table | &#8594; | Tabla para la cual crear un índice |
+| arrayCampos | Pointer array | &#8594; | Puntero(s) a el/los campo(s) a indexar |
+| tipoIndice | Integer | &#8594; | Tipo de índice a crear: -1 = Palabras claves, 0 = por defecto, 1 = B-Tree estándar, 3 = B-Tree cluster |
+| nombreIndice | Text | &#8594; | Nombre del índice a crear |
+| * | Operador | &#8594; | Si pasa = indexación asincrónica |
 
 <!-- END REF-->
 
@@ -93,6 +93,6 @@ Creación de un índice compuesto en los campos “Ciudad” y “CodigoPostal�
 |  |  |
 | --- | --- |
 | Número de comando | 966 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

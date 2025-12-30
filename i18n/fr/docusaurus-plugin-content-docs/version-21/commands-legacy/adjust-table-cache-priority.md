@@ -56,6 +56,6 @@ Vous souhaitez modifier temporairement la priorité des champs scalaires de la t
 |  |  |
 | --- | --- |
 | Numéro de commande | 1429 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

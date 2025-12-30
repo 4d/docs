@@ -5,12 +5,12 @@ slug: /commands/relate-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( tabelasN | campoN {; *discriminante* } )<!-- END REF-->
+<!--REF #_command_.RELATE ONE.Syntax-->**RELATE ONE** ( tabelasN | campoN {; *discriminante* : Field } )<!-- END REF-->
 <!--REF #_command_.RELATE ONE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabelasN &#124; campoN | Tabela, Campo | &#8594;  | Tabela para a qual estabelecer todas as relações automáticas, ou  Campo com as relações manuais para tabela Um |
-| discriminante | Field | &#8594;  | Campo discriminante da tabela 1 |
+| tabelasN &#124; campoN | Tabela, Campo | &#8594; | Tabela para a qual estabelecer todas as relações automáticas, ou  Campo com as relações manuais para tabela Um |
+| discriminante | Field | &#8594; | Campo discriminante da tabela 1 |
 
 <!-- END REF-->
 
@@ -95,7 +95,7 @@ Se o comando for executado corretamente e se os registros relacionados forem car
 |  |  |
 | --- | --- |
 | Número do comando | 42 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||

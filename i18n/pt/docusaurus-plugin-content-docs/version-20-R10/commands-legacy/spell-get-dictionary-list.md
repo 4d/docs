@@ -57,6 +57,6 @@ Você coloca "fr-classic+reform1990.aff" e "fr-classic+reform1990.dic" como tamb
 |  |  |
 | --- | --- |
 | Número do comando | 1204 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

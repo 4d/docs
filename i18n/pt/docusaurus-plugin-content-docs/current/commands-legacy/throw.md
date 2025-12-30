@@ -5,16 +5,13 @@ slug: /commands/throw
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* {; *descrição*} ) <br/>
-*throw* {( *erroObj* )}<!-- END REF-->
+<!--REF #_command_.throw.Syntax-->**throw** ( *errorCode* : Integer {; *description* : Text} )<br/>**throw** ( *errorObj* : Object )<!-- END REF-->
 <!--REF #_command_.throw.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| errorCode | Integer | &#8594;  | Um inteiro longo representando o código de erro |
-| descrição | Text | &#8594;  | Um texto fornecendo uma descrição do erro |
-| throw {( erroObj )} |
-| Parâmetro | Tipo | Descrição |
-| erroObj | Object | &#8594;  | Um objeto contendo propriedades para construir o erro |
+| errorCode | Integer | &#8594; | Um inteiro longo representando o código de erro |
+| descrição | Text | &#8594; | Um texto fornecendo uma descrição do erro |
+| erroObj | Object | &#8594; | Um objeto contendo propriedades para construir o erro |
 
 <!-- END REF-->
 
@@ -111,6 +108,6 @@ throw({componentSignature: "xbox"; errCode: 600; name: "myFileName"; path: "myFi
 |  |  |
 | --- | --- |
 | Número do comando | 1805 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/listbox-get-headers-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( {* ;} *object* {; *unit*} ) : Integer<!-- END REF-->
+<!--REF #_command_.LISTBOX Get headers height.Syntax-->**LISTBOX Get headers height** ( * ; *object* : Text {; *unit* : Integer} ) : Integer<br/>**LISTBOX Get headers height** ( *object* : Field, Variable {; *unit* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.LISTBOX Get headers height.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ By default, if you omit the *unit* parameter, the height of the row returned is 
 |  |  |
 | --- | --- |
 | Command number | 1144 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

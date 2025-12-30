@@ -119,6 +119,6 @@ Se quiser exportar apenas os métodos projeto e banco de dados, e um arquivo de 
 |  |  |
 | --- | --- |
 | Número do comando | 1565 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

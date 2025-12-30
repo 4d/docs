@@ -36,7 +36,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 204 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

@@ -5,7 +5,7 @@ slug: /commands/resize-form-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *width* ; *height* )<!-- END REF-->
+<!--REF #_command_.RESIZE FORM WINDOW.Syntax-->**RESIZE FORM WINDOW** ( *width* : Integer ; *height* : Integer )<!-- END REF-->
 <!--REF #_command_.RESIZE FORM WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -51,6 +51,6 @@ After execution of this line:
 |  |  |
 | --- | --- |
 | Command number | 890 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

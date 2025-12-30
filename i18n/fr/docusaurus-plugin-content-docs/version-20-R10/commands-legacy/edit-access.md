@@ -40,7 +40,7 @@ L'exemple suivant affiche la fenêtre de gestion des utilisateur et des groupes 
 |  |  |
 | --- | --- |
 | Numéro de commande | 281 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Interdite sur le serveur ||
 
 

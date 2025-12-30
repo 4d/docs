@@ -38,6 +38,6 @@ Dans l'exemple suivant, la valeur [True](true.md) est assignée à une variable.
 |  |  |
 | --- | --- |
 | Numéro de commande | 34 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

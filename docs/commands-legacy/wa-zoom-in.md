@@ -5,7 +5,7 @@ slug: /commands/wa-zoom-in
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.WA ZOOM IN.Syntax-->**WA ZOOM IN** ( * ; *object* : Text )<br/>**WA ZOOM IN** ( *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA ZOOM IN.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ Under Windows, the scope of this command is global: the configuration is retaine
 |  |  |
 | --- | --- |
 | Command number | 1039 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

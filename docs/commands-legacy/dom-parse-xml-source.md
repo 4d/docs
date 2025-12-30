@@ -5,7 +5,7 @@ slug: /commands/dom-parse-xml-source
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *document* {; *validation* {; *dtd* }} ) : Text<br/>**DOM Parse XML source** ( *document* {; *validation* {; *schema* }} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Parse XML source.Syntax-->**DOM Parse XML source** ( *document* : Text {; *validation* : Boolean {; *dtd* : Text }} ) : Text<br/>**DOM Parse XML source** ( *document* : Text {; *validation* : Boolean {; *schema* : Text }} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Parse XML source.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -101,7 +101,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 719 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

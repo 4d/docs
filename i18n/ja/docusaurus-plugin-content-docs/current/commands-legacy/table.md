@@ -5,22 +5,24 @@ slug: /commands/table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* ) : Pointer<br/>**Table** ( *tablePtr* ) : Integer<br/>**Table** ( *fieldPtr* ) : Integer<!-- END REF-->
+<!--REF #_command_.Table.Syntax-->**Table** ( *tableNum* : Integer ) : Pointer<br/>**Table** ( *tablePtr* : Pointer ) : Integer<br/>**Table** ( *fieldPtr* : Pointer ) : Integer<!-- END REF-->
 <!--REF #_command_.Table.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableNum &#124; aPtr | 倍長整数, ポインター | &#8594;  | テーブル番号、または テーブルポインタ、または フィールドポインタ |
-| 戻り値 | Pointer, Integer | &#8592; | テーブル番号を渡した場合テーブルポインタ テーブルポインタを渡した場合テーブル番号 フィールドポインタを渡した場合テーブル番号 |
+| tableNum | Integer | &#8594;  | テーブル番号 |
+| tablePtr | Pointer | &#8594;  | テーブルポインタ |
+| fieldPtr | Pointer | &#8594;  | フィールドポインタ |
+| 戻り値 | Pointer, Integer | &#8592; |  テーブル番号を渡した場合テーブルポインタ テーブルポインタを渡した場合テーブル番号 フィールドポインタを渡した場合テーブル番号 |
 
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.Table.Summary-->Tableコマンドには、3つの形式があります。<!-- END REF-->
+Tableコマンドには、3つの形式があります。
 
-* *tableNum*にテーブル番号を渡した場合は、テーブルポインタを返します。
+<!--REF #_command_.Table.Summary-->* *tableNum*にテーブル番号を渡した場合は、テーブルポインタを返します。
 * *aPtr*にテーブルポインタを渡した場合は、テーブル番号を返します。
-* *aPtr*にフィールドポインタを渡した場合は、テーブル番号を返します。
+* *aPtr*にフィールドポインタを渡した場合は、テーブル番号を返します。<!-- END REF-->
 
 ## 例題 1 
 
@@ -66,6 +68,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 252 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/set-menu-item-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* ; *menuItem* ; *param* )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM PARAMETER.Syntax-->**SET MENU ITEM PARAMETER** ( *menu* : Integer, Text ; *menuItem* : Integer ; *param* : Text )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -47,6 +47,6 @@ This code provides a menu including the names of the open windows and lets you g
 |  |  |
 | --- | --- |
 | Command number | 1004 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

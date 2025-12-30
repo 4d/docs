@@ -103,7 +103,7 @@ Si no se seleccionó ningún archivo (por ejemplo, si el usuario hace clic en el
 |  |  |
 | --- | --- |
 | Número de comando | 905 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document, error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/post-outside-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *proceso* )<!-- END REF-->
+<!--REF #_command_.POST OUTSIDE CALL.Syntax-->**POST OUTSIDE CALL** ( *proceso* : Integer )<!-- END REF-->
 <!--REF #_command_.POST OUTSIDE CALL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| proceso | Integer | &#8594;  | Número de proceso |
+| proceso | Integer | &#8594; | Número de proceso |
 
 <!-- END REF-->
 
@@ -50,7 +50,7 @@ Ver el ejemplo de la sección [Semáforo](semaphore.md).
 |  |  |
 | --- | --- |
 | Número de comando | 329 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

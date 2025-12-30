@@ -98,6 +98,6 @@ The left (destination) list box object method contains the following code:
 |  |  |
 | --- | --- |
 | Command number | 608 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

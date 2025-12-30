@@ -5,12 +5,12 @@ slug: /commands/resource-type-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTipos* {; *resArquivo*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTipos* : Text array {; *resArquivo* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | resTipos | Text array | &#8592; | Lista de tipos resources disponíveis |
-| resArquivo | Time | &#8594;  | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
+| resArquivo | Time | &#8594; | Número de referência do arquivo Resource, ou todos os arquivos de referência abertos, se omitido |
 
 <!-- END REF-->
 
@@ -84,6 +84,6 @@ Quando este método de projeto for implementado em um banco, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 499 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

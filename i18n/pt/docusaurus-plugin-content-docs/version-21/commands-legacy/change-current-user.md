@@ -73,6 +73,6 @@ O exemplo abaixo exibe a caixa de diálogo de conexão:
 |  |  |
 | --- | --- |
 | Número do comando | 289 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

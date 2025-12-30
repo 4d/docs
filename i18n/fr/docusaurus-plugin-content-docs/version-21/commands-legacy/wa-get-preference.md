@@ -42,6 +42,6 @@ Passez dans le paramètre *valeur* une variable devant recevoir la valeur couran
 |  |  |
 | --- | --- |
 | Numéro de commande | 1042 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

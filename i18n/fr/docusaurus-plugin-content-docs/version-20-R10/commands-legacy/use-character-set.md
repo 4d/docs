@@ -55,7 +55,7 @@ La variable système OK prend la valeur 1 si le filtre est correctement chargé,
 |  |  |
 | --- | --- |
 | Numéro de commande | 205 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

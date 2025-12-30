@@ -32,6 +32,6 @@ The command returns a string indicating the language code used, based on RFC3066
 |  |  |
 | --- | --- |
 | Command number | 1180 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

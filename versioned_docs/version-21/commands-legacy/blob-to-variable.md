@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.BLOB TO VARIABLE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB containing 4D variables |
+| Blob | Blob | &#8594;  | BLOB containing 4D variables |
 | variable | Variable | &#8592; | Variable to write with BLOB contents |
 | offset | Integer | &#8596;  | Position of variable within BLOB |
 | ||| Position of following variable within BLOB |
@@ -47,7 +47,7 @@ The OK variable is set to 1 if the variable has been successfully rewritten, oth
 |  |  |
 | --- | --- |
 | Command number | 533 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

@@ -39,6 +39,6 @@ The following example displays an alert telling what percentage of the customers
 |  |  |
 | --- | --- |
 | Command number | 195 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

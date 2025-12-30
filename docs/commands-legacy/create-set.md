@@ -5,7 +5,7 @@ slug: /commands/create-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CREATE SET.Syntax-->**CREATE SET** ( {*aTable* ;} *set* )<!-- END REF-->
+<!--REF #_command_.CREATE SET.Syntax-->**CREATE SET** ( {*aTable* : Table ;} *set* : Text )<!-- END REF-->
 <!--REF #_command_.CREATE SET.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,6 +38,6 @@ The following example creates a set after doing a search, in order to save the s
 |  |  |
 | --- | --- |
 | Command number | 116 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

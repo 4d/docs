@@ -5,7 +5,7 @@ slug: /commands/object-get-auto-spellcheck
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( {* ;} *object* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OBJECT Get auto spellcheck.Syntax-->**OBJECT Get auto spellcheck** ( * ; *object* : Text ) : Boolean<br/>**OBJECT Get auto spellcheck** ( *object* : Field, Variable ) : Boolean<!-- END REF-->
 <!--REF #_command_.OBJECT Get auto spellcheck.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ The command returns **True** when automatic spell-checking is enabled for the *o
 |  |  |
 | --- | --- |
 | Command number | 1174 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

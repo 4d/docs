@@ -28,6 +28,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 961 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

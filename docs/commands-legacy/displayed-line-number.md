@@ -50,6 +50,6 @@ This example lets you apply an alternating color to a list form displayed on scr
 |  |  |
 | --- | --- |
 | Command number | 897 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/component-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *arrayComponentes* )<!-- END REF-->
+<!--REF #_command_.COMPONENT LIST.Syntax-->**COMPONENT LIST** ( *arrayComponentes* : Text array )<!-- END REF-->
 <!--REF #_command_.COMPONENT LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ Para mayor información sobre componentes 4D, por favor consulte el *Manual de D
 |  |  |
 | --- | --- |
 | Número de comando | 1001 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

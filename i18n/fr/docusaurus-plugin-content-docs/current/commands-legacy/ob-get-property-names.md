@@ -5,11 +5,11 @@ slug: /commands/ob-get-property-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *objet* ; *tabPropriétés* {; *tabTypes*} )<!-- END REF-->
+<!--REF #_command_.OB GET PROPERTY NAMES.Syntax-->**OB GET PROPERTY NAMES** ( *objet* : Object ; *tabPropriétés* : Text array {; *tabTypes* : Integer array} )<!-- END REF-->
 <!--REF #_command_.OB GET PROPERTY NAMES.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| objet | Object | &#8594;  | Objet structuré |
+| objet | Object | &#8594; | Objet structuré |
 | tabPropriétés | Text array | &#8592; | Noms des propriétés |
 | tabTypes | Integer array | &#8592; | Types des propriétés |
 
@@ -102,6 +102,6 @@ Utilisation d’un élément de tableau d’objets :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1232 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

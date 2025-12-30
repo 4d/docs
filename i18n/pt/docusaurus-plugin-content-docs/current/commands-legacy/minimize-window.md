@@ -5,11 +5,11 @@ slug: /commands/minimize-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** {( *janela* )}<!-- END REF-->
+<!--REF #_command_.MINIMIZE WINDOW.Syntax-->**MINIMIZE WINDOW** ({ *janela* : Integer })<!-- END REF-->
 <!--REF #_command_.MINIMIZE WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência de janela ou se for omitido, todos os processos atuais e janelas de primeiro plano (Windows) ou processo atual de primeiro plano (macOS) |
+| janela | Integer | &#8594; | Número de referência de janela ou se for omitido, todos os processos atuais e janelas de primeiro plano (Windows) ou processo atual de primeiro plano (macOS) |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ Mac OS
 |  |  |
 | --- | --- |
 | Número do comando | 454 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

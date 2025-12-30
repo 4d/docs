@@ -5,14 +5,14 @@ slug: /commands/resource-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* ; *resIDs* ; *resNames* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE LIST.Syntax-->**RESOURCE LIST** ( *resType* : Text ; *resIDs* : Integer array ; *resNames* : Text array {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| resType | Text | &#8594;  | 4文字のリソースタイプ |
+| resType | Text | &#8594; | 4文字のリソースタイプ |
 | resIDs | Integer array | &#8592; | リソースID番号 |
 | resNames | Text array | &#8592; | リソース名 |
-| resFile | Time | &#8594;  | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
+| resFile | Time | &#8594; | リソースファイル参照番号、または 省略時、開かれている全てのリソースファイル |
 
 <!-- END REF-->
 
@@ -75,6 +75,6 @@ RESOURCE LISTを呼び出す前に配列を事前定義する場合は、*resIDs
 |  |  |
 | --- | --- |
 | コマンド番号 | 500 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

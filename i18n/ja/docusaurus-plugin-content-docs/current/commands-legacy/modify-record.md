@@ -5,12 +5,12 @@ slug: /commands/modify-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*aTable*}{;}{*} )<!-- END REF-->
+<!--REF #_command_.MODIFY RECORD.Syntax-->**MODIFY RECORD** ( {*aTable* : Table}{;}{*} )<!-- END REF-->
 <!--REF #_command_.MODIFY RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
-| * | Operator |  &#8594;  | スクロールバーを隠す |
+| aTable | Table | &#8594; | データ入力に使用するテーブル, または 省略した場合デフォルトテーブル |
+| * | Operator | &#8594; | スクロールバーを隠す |
 
 <!-- END REF-->
 
@@ -51,7 +51,7 @@ MODIFY RECORDを使用したが、ユーザがレコードのデータを変更�
 |  |  |
 | --- | --- |
 | コマンド番号 | 57 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 | サーバー上での使用は不可 ||
 

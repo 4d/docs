@@ -38,6 +38,6 @@ Se você está trabalhando, por exemplo, com o banco na pasta Documentos:MeusCDs
 |  |  |
 | --- | --- |
 | Número do comando | 490 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

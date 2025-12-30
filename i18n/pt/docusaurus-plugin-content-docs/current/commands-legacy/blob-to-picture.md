@@ -5,13 +5,13 @@ slug: /commands/blob-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO PICTURE.Syntax-->**BLOB TO PICTURE** ( *imagemBlob* ; *imagem* {; *codec*} )<!-- END REF-->
+<!--REF #_command_.BLOB TO PICTURE.Syntax-->**BLOB TO PICTURE** ( *imagemBlob* : Blob ; *imagem* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.BLOB TO PICTURE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagemBlob | Blob | &#8594;  | Blob que contém uma imagem |
+| imagemBlob | Blob | &#8594; | Blob que contém uma imagem |
 | imagem | Picture | &#8592; | Imagem do BLOB |
-| codec | Text | &#8594;  | Codec de identificação de Imagem |
+| codec | Text | &#8594; | Codec de identificação de Imagem |
 
 <!-- END REF-->
 
@@ -57,7 +57,7 @@ Se o comando se executa corretamente, a variável sistema OK toma o valor 1\. Se
 |  |  |
 | --- | --- |
 | Número do comando | 682 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -5,14 +5,14 @@ slug: /commands/select-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* ; *fileTypes* ; *title* ; *options* {; *selected*} ) : Text<!-- END REF-->
+<!--REF #_command_.Select document.Syntax-->**Select document** ( *directory* : Text, Integer ; *fileTypes* : Text ; *title* : Text ; *options* : Integer {; *selected* : Text array} ) : Text<!-- END REF-->
 <!--REF #_command_.Select document.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| directory | Text, Integer | &#8594;  | ドキュメント選択ダイアログボックスで ディレクトリのアクセスパスをデフォルトで表示する、または デフォルトユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、または メモリーされたアクセスパスの番号 |
-| fileTypes | Text | &#8594;  | フィルタするドキュメントタイプのリスト、または ドキュメントをフィルタしない"*" |
-| title | Text | &#8594;  | 選択ダイアログボックスのタイトル |
-| options | Integer | &#8594;  | 任意の選択 |
+| directory | Text, Integer | &#8594; | ドキュメント選択ダイアログボックスで ディレクトリのアクセスパスをデフォルトで表示する、または デフォルトユーザフォルダを表示する空の文字列 (Windowsでは"My documents"、 Mac OSでは"Documents")、または メモリーされたアクセスパスの番号 |
+| fileTypes | Text | &#8594; | フィルタするドキュメントタイプのリスト、または ドキュメントをフィルタしない"*" |
+| title | Text | &#8594; | 選択ダイアログボックスのタイトル |
+| options | Integer | &#8594; | 任意の選択 |
 | selected | Text array | &#8592; | アクセスパスのリストを含む配列 + 選択されたファイルの名前 |
 | 戻り値 | Text | &#8592; | 選択されたファイルの名前(複数の選択がある場合、 リストの最初のファイル) |
 
@@ -104,7 +104,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 905 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、Document、error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/localized-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* ) : Text<!-- END REF-->
+<!--REF #_command_.Localized string.Syntax-->**Localized string** ( *resName* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Localized string.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -60,7 +60,7 @@ If the command is executed correctly, the OK variable is set to 1\. If *resName*
 |  |  |
 | --- | --- |
 | Command number | 991 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

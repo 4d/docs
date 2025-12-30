@@ -43,7 +43,7 @@ En cas d’incident au cours de la sauvegarde, les informations relatives à l'i
 |  |  |
 | --- | --- |
 | Numéro de commande | 887 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

@@ -5,11 +5,11 @@ slug: /commands/sax-get-xml-node
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* ) : Integer<!-- END REF-->
+<!--REF #_command_.SAX Get XML node.Syntax-->**SAX Get XML node** ( *document* : Time ) : Integer<!-- END REF-->
 <!--REF #_command_.SAX Get XML node.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| document | Time | &#8594;  | 開いたドキュメントの参照 |
+| document | Time | &#8594; | 開いたドキュメントの参照 |
 | 戻り値 | Integer | &#8592; | 関数から返されたイベント |
 
 <!-- END REF-->
@@ -62,7 +62,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 860 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK、error |
 
 

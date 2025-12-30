@@ -5,7 +5,7 @@ slug: /commands/object-get-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( {* ;} *object* ) : Integer<!-- END REF-->
+<!--REF #_command_.OBJECT Get border style.Syntax-->**OBJECT Get border style** ( * ; *object* : Text ) : Integer<br/>**OBJECT Get border style** ( *object* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.OBJECT Get border style.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ The command returns a value corresponding to the border line style. You can comp
 |  |  |
 | --- | --- |
 | Command number | 1263 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

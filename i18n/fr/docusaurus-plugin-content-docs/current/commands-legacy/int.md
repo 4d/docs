@@ -5,11 +5,11 @@ slug: /commands/int
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Int.Syntax-->**Int** ( *nombre* ) : Real<!-- END REF-->
+<!--REF #_command_.Int.Syntax-->**Int** ( *nombre* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Int.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| nombre | Real | &#8594;  | Valeur dont vous voulez obtenir la partie entière |
+| nombre | Real | &#8594; | Valeur dont vous voulez obtenir la partie entière |
 | Résultat | Real | &#8592; | Partie entière de nombre |
 
 <!-- END REF-->
@@ -36,6 +36,6 @@ L'exemple suivant illustre le fonctionnement de **Int** pour les nombres positif
 |  |  |
 | --- | --- |
 | Numéro de commande | 8 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

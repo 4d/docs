@@ -45,6 +45,6 @@ Dado que os intercâmbios entre 4D e o intérprete PHP se realizam através de F
 |  |  |
 | --- | --- |
 | Número do comando | 1061 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -65,6 +65,6 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
 |  |  |
 | --- | --- |
 | Número de comando | 1302 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

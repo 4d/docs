@@ -42,6 +42,6 @@ The type and content of the *info1* and *info2* parameters depend on the value o
 |  |  |
 | --- | --- |
 | Command number | 889 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

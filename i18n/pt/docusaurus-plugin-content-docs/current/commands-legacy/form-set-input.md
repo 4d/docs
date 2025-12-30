@@ -5,14 +5,14 @@ slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*tabela* ;} *formulario* {; *formUsuario* {; *}} )<!-- END REF-->
+<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*tabela* : Table ;} *formulario* : Text, Object {; *formUsuario* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai estabecer o formulário input, ou tabela Padrão, se omitido |
-| formulario | Text, Object | &#8594;  | Nome do formulário para estabelecer um formulário input |
-| formUsuario | Text | &#8594;  | Nome do formulário usuário para utilizar |
-| * | Operator |  &#8594;  | Tamanho da janela automático |
+| tabela | Table | &#8594; | Tabela para a qual vai estabecer o formulário input, ou tabela Padrão, se omitido |
+| formulario | Text, Object | &#8594; | Nome do formulário para estabelecer um formulário input |
+| formUsuario | Text | &#8594; | Nome do formulário usuário para utilizar |
+| * | Operator | &#8594; | Tamanho da janela automático |
 
 <!-- END REF-->
 
@@ -110,6 +110,6 @@ o que retorna:
 |  |  |
 | --- | --- |
 | Número do comando | 55 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

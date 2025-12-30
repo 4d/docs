@@ -49,7 +49,7 @@ La variable système OK prend la valeur 1 si la commande a été exécutée corr
 |  |  |
 | --- | --- |
 | Numéro de commande | 789 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

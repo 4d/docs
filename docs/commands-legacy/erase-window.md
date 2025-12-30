@@ -5,7 +5,7 @@ slug: /commands/erase-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.ERASE WINDOW.Syntax-->**ERASE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.ERASE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,6 +33,6 @@ Do not confuse **ERASE WINDOW**, which clears the contents of a window, with [CL
 |  |  |
 | --- | --- |
 | Command number | 160 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

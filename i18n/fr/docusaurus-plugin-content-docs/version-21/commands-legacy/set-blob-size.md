@@ -56,6 +56,6 @@ L'exemple suivant crée un BLOB de 16 Ko et remplit chaque octet avec la valeur 
 |  |  |
 | --- | --- |
 | Numéro de commande | 606 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

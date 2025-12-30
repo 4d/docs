@@ -5,14 +5,14 @@ slug: /commands/wa-set-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( {* ;} *object* ; *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.WA SET PREFERENCE.Syntax-->**WA SET PREFERENCE** ( * ; *object* : Text ; *selector* : Integer ; *value* : Boolean )<br/>**WA SET PREFERENCE** ( *object* : Field, Variable ; *selector* : Integer ; *value* : Boolean )<!-- END REF-->
 <!--REF #_command_.WA SET PREFERENCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定した場合、オブジェクトがオブジェクトの名前 (文字列) 省略した場合、オブジェクトは変数 |
-| object | any | &#8594;  | オブジェクトの名前 ( * を指定した場合) または、変数 ( * を省略した場合) |
-| selector | Integer | &#8594;  | 修正される環境設定 |
-| value | Boolean | &#8594;  | 環境設定の値 (True = 許可,  False = 不許可) |
+| * | 演算子 | &#8594; | 指定した場合、オブジェクトがオブジェクトの名前 (文字列) 省略した場合、オブジェクトは変数 |
+| object | any | &#8594; | オブジェクトの名前 ( * を指定した場合) または、変数 ( * を省略した場合) |
+| selector | Integer | &#8594; | 修正される環境設定 |
+| value | Boolean | &#8594; | 環境設定の値 (True = 許可,  False = 不許可) |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1041 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -5,14 +5,14 @@ slug: /commands/listbox-set-hierarchy
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( {* ;} *objeto* ; *jerarquico* {; *jerarquia*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET HIERARCHY.Syntax-->**LISTBOX SET HIERARCHY** ( * ; *objeto* : Text ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<br/>**LISTBOX SET HIERARCHY** ( *objeto* : Field, Variable ; *jerarquico* : Boolean {; *jerarquia* : Pointer array} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET HIERARCHY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
-| objeto | any | &#8594;  | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
-| jerarquico | Boolean | &#8594;  | True = list box jerárquico False = list box no jerárquico |
-| jerarquia | Pointer array | &#8594;  | Array de punteros |
+| * | Operador | &#8594; | Si se especifica, objeto es un nombre de objeto (cadena). Si se omite, objeto es una variable |
+| objeto | any | &#8594; | Nombre de objeto (si se especifica *) o Variable (si se omite *) |
+| jerarquico | Boolean | &#8594; | True = list box jerárquico False = list box no jerárquico |
+| jerarquia | Pointer array | &#8594; | Array de punteros |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ Definición de los arrays aPais, aRegion y aCiudad como jerarquía de un list bo
 |  |  |
 | --- | --- |
 | Número de comando | 1098 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

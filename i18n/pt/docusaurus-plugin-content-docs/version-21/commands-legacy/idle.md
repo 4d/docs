@@ -57,6 +57,6 @@ com:
 |  |  |
 | --- | --- |
 | Número do comando | 311 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

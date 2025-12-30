@@ -5,11 +5,11 @@ slug: /commands/delete-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** {( *tabla* )}<!-- END REF-->
+<!--REF #_command_.DELETE SELECTION.Syntax-->**DELETE SELECTION** ({ *tabla* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE SELECTION.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla de la cual borrar la selección actual o Tabla por defecto, si se omite |
+| tabla | Table | &#8594; | Tabla de la cual borrar la selección actual o Tabla por defecto, si se omite |
 
 <!-- END REF-->
 
@@ -70,7 +70,7 @@ Si se encuentra un registro bloqueado durante la ejecución de DELETE SELECTION,
 |  |  |
 | --- | --- |
 | Número de comando | 66 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica la selección actual ||
 
 

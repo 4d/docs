@@ -5,7 +5,7 @@ slug: /commands/wa-get-current-url
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.WA Get current URL.Syntax-->**WA Get current URL** ( * ; *object* : Text ) : Text<br/>**WA Get current URL** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.WA Get current URL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -41,6 +41,6 @@ The page displayed is the URL "www.apple.com" and the "www.4d.com" page is in th
 |  |  |
 | --- | --- |
 | Command number | 1025 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

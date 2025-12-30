@@ -5,7 +5,7 @@ slug: /commands/qr-get-document-property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* ; *property* ) : Integer<!-- END REF-->
+<!--REF #_command_.QR Get document property.Syntax-->**QR Get document property** ( *area* : Integer ; *property* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.QR Get document property.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ If you pass an invalid *property* value, the error -9852 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 773 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

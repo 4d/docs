@@ -50,6 +50,6 @@ Cet exemple permet de prendre en compte tous les types d’impressions :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1198 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

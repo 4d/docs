@@ -69,6 +69,6 @@ Examples of typical use:
 |  |  |
 | --- | --- |
 | Command number | 1167 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/redraw-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** {( *janela* )}<!-- END REF-->
+<!--REF #_command_.REDRAW WINDOW.Syntax-->**REDRAW WINDOW** ({ *janela* : Integer })<!-- END REF-->
 <!--REF #_command_.REDRAW WINDOW.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| janela | Integer | &#8594;  | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
+| janela | Integer | &#8594; | Número de referência da Janela, ou a janela ativa do processo atual, se omitido |
 
 <!-- END REF-->
 
@@ -30,6 +30,6 @@ Se omitir o parâmetro *janela*, REDRAW WINDOW aplica à janela do primeiro plan
 |  |  |
 | --- | --- |
 | Número do comando | 456 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

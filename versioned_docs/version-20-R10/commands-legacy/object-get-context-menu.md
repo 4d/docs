@@ -34,6 +34,6 @@ The command returns **True** if the context menu is enabled for the object and *
 |  |  |
 | --- | --- |
 | Command number | 1252 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

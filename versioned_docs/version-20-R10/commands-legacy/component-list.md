@@ -39,6 +39,6 @@ For more information about 4D components, please refer to the Design Reference m
 |  |  |
 | --- | --- |
 | Command number | 1001 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

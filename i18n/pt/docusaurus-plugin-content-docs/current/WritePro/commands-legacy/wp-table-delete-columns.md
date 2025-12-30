@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-delete-columns
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP TABLE DELETE COLUMNS.Syntax-->**WP TABLE DELETE COLUMNS** ( *objTarget* ) | ( *refTabela* ; *numCol* {; *numColunas*} )<!-- END REF-->
+<!--REF #_command_.WP TABLE DELETE COLUMNS.Syntax-->**WP TABLE DELETE COLUMNS** ( *objTarget* : Object ) | ( *refTabela* : Object ; *numCol* : Integer {; *numColunas* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE COLUMNS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

@@ -5,7 +5,7 @@ slug: /commands/maximize-window
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MAXIMIZE WINDOW.Syntax-->**MAXIMIZE WINDOW** {( *window* )}<!-- END REF-->
+<!--REF #_command_.MAXIMIZE WINDOW.Syntax-->**MAXIMIZE WINDOW** ({ *window* : Integer })<!-- END REF-->
 <!--REF #_command_.MAXIMIZE WINDOW.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -88,6 +88,6 @@ In this context, when the user clicks on the button:
 |  |  |
 | --- | --- |
 | Command number | 453 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

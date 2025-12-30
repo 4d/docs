@@ -5,12 +5,12 @@ slug: /commands/on-event-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *eventMethod* {; *processName*} )<!-- END REF-->
+<!--REF #_command_.ON EVENT CALL.Syntax-->**ON EVENT CALL** ( *eventMethod* : Text {; *processName* : Text} )<!-- END REF-->
 <!--REF #_command_.ON EVENT CALL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| eventMethod | Text | &#8594;  | 発動されるイベントメソッド, または 空の文字の場合イベントの遮断を停止 |
-| processName | Text | &#8594;  | プロセス名 |
+| eventMethod | Text | &#8594; | 発動されるイベントメソッド, または 空の文字の場合イベントの遮断を停止 |
+| processName | Text | &#8594; | プロセス名 |
 
 <!-- END REF-->
 
@@ -120,7 +120,7 @@ Ctrl+ピリオドが押されると、イベント処理メソッド内で*<>vbW
 |  |  |
 | --- | --- |
 | コマンド番号 | 190 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | サーバー上での使用は不可 ||
 
 

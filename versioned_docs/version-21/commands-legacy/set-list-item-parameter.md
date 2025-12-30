@@ -67,6 +67,6 @@ You want to set as choice list of a hierarchical pop up menu a custom list of fo
 |  |  |
 | --- | --- |
 | Command number | 986 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

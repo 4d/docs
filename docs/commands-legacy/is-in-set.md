@@ -5,7 +5,7 @@ slug: /commands/is-in-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is in set.Syntax-->**Is in set** ( *set* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is in set.Syntax-->**Is in set** ( *set* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is in set.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ The following example is a button object method. It tests to see whether or not 
 |  |  |
 | --- | --- |
 | Command number | 273 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/compact-data-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* ; *dataPath* {; *archiveFolder* {; *option* {; *method*}}} ) : Text<!-- END REF-->
+<!--REF #_command_.Compact data file.Syntax-->**Compact data file** ( *structurePath* : Text ; *dataPath* : Text {; *archiveFolder* : Text {; *option* : Integer {; *method* : Text}}} ) : Text<!-- END REF-->
 <!--REF #_command_.Compact data file.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ If the compacting operation is carried out correctly, the OK system variable is 
 |  |  |
 | --- | --- |
 | Command number | 937 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, Document |
 
 

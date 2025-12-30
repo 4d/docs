@@ -5,13 +5,13 @@ slug: /commands/post-key
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* {; *modifiers* {; *process*}} )<!-- END REF-->
+<!--REF #_command_.POST KEY.Syntax-->**POST KEY** ( *code* : Integer {; *modifiers* : Integer {; *process* : Integer}} )<!-- END REF-->
 <!--REF #_command_.POST KEY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| code | Integer | &#8594;  | Code d'un caractère ou code de touche de fonction |
-| modifiers | Integer | &#8594;  | Etat des touches Modifier |
-| process | Integer | &#8594;  | Numéro de référence du process de destination ou File d'attente des événements de l'application si paramètre omis ou égal à 0 |
+| code | Integer | &#8594; | Code d'un caractère ou code de touche de fonction |
+| modifiers | Integer | &#8594; | Etat des touches Modifier |
+| process | Integer | &#8594; | Numéro de référence du process de destination ou File d'attente des événements de l'application si paramètre omis ou égal à 0 |
 
 <!-- END REF-->
 
@@ -66,6 +66,6 @@ Reportez-vous à l'exemple de la fonction [Process number](../commands/process-n
 |  |  |
 | --- | --- |
 | Numéro de commande | 465 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *object* ; *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *object* : Text ; *selector* : Integer ; *value* : Variable )<br/>**WA GET PREFERENCE** ( *object* : Field, Variable ; *selector* : Integer ; *value* : Variable )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,6 +39,6 @@ In the *value* parameter, pass a variable that will receive the current value of
 |  |  |
 | --- | --- |
 | Command number | 1042 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

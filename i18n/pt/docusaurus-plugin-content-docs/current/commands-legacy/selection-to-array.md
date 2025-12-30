@@ -5,15 +5,15 @@ slug: /commands/selection-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** {( umCampo | umaTabela ; *array* {; *campo* ; *array* {; *campo2* ; *array2* ; ... ; *campoN* ; *arrayN*}}{; *})}<!-- END REF-->
+<!--REF #_command_.SELECTION TO ARRAY.Syntax-->**SELECTION TO ARRAY** ({ umCampo | umaTabela ; *array* : Array {; *campo* : Field ; *array* : Array {; ...(*campo* : Field, *array* : Array)}}{; *}})<!-- END REF-->
 <!--REF #_command_.SELECTION TO ARRAY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| umCampo &#124; umaTabela | Campo, Tabela | &#8594;  | Campo usado para pedir dados ou Tabela usada para pedir números de registros |
+| umCampo &#124; umaTabela | Campo, Tabela | &#8594; | Campo usado para pedir dados ou Tabela usada para pedir números de registros |
 | array | Array | &#8592; | Array para receber dados do campo ou número de registros |
-| campo | Field | &#8594;  | Campo a ser requisitado no array |
+| campo | Field | &#8594; | Campo a ser requisitado no array |
 | array | Array | &#8592; | Array a receber os dados do campo |
-| * | Operador | &#8594;  | Aguarde execução |
+| * | Operador | &#8594; | Aguarde execução |
 
 <!-- END REF-->
 
@@ -85,6 +85,6 @@ O mesmo exemplo pode ser escrito:
 |  |  |
 | --- | --- |
 | Número do comando | 260 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

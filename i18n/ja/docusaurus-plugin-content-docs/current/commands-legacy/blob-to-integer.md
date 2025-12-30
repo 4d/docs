@@ -5,14 +5,14 @@ slug: /commands/blob-to-integer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* ; *byteOrder* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to integer.Syntax-->**BLOB to integer** ( *BLOB* : Blob ; *byteOrder* : Integer {; *offset* : Variable} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to integer.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | 整数値を取り出すBLOB |
-| byteOrder | Integer | &#8594;  | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
+| Blob | Blob | &#8594; | 整数値を取り出すBLOB |
+| byteOrder | Integer | &#8594; | 0 Native byte ordering 1 Macintosh byte ordering 2 PC byte ordering |
 | offset | Variable | &#8596; | BLOB中のオフセット (バイト単位) |
-| || | 読み込み後、新しいオフセット |
+|  |  |  | 読み込み後、新しいオフセット |
 | 戻り値 | Integer | &#8592; | 2バイト整数値 |
 
 <!-- END REF-->
@@ -68,6 +68,6 @@ MacintoshとPCプラットフォーム間でBLOBを交換する場合、この�
 |  |  |
 | --- | --- |
 | コマンド番号 | 549 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

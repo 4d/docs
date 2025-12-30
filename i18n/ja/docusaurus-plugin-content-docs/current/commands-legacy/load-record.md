@@ -5,11 +5,11 @@ slug: /commands/load-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.LOAD RECORD.Syntax-->**LOAD RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.LOAD RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | レコードをロードするテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | レコードをロードするテーブル, または 省略時、デフォルトテーブル |
 
 <!-- END REF-->
 
@@ -41,6 +41,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 52 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

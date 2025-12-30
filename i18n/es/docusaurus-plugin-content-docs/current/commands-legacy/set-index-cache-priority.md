@@ -5,12 +5,12 @@ slug: /commands/set-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *campo* ; *prioridad* )<!-- END REF-->
+<!--REF #_command_.SET INDEX CACHE PRIORITY.Syntax-->**SET INDEX CACHE PRIORITY** ( *campo* : Field ; *prioridad* : Integer )<!-- END REF-->
 <!--REF #_command_.SET INDEX CACHE PRIORITY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Campo cuyo valor de prioridad de índices debe ser configurado para la sesión |
-| prioridad | Integer | &#8594;  | Valor de prioridad de la caché para el(los) índice(s) de campo |
+| campo | Field | &#8594; | Campo cuyo valor de prioridad de índices debe ser configurado para la sesión |
+| prioridad | Integer | &#8594; | Valor de prioridad de la caché para el(los) índice(s) de campo |
 
 <!-- END REF-->
 
@@ -54,6 +54,6 @@ En el , usted desea definir una alta prioridad para los índices campo \[Cliente
 |  |  |
 | --- | --- |
 | Número de comando | 1401 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

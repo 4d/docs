@@ -5,11 +5,11 @@ slug: /commands/is-license-available
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is license available.Syntax-->**Is license available** {( *licença* )} : Boolean<!-- END REF-->
+<!--REF #_command_.Is license available.Syntax-->**Is license available** ( *licença* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is license available.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| licença | Integer | &#8594;  | Testar se o plug-in desejado está disponível |
+| licença | Integer | &#8594; | Testar se o plug-in desejado está disponível |
 | Resultado | Boolean | &#8592; | Verdadeiro se o plug-in estiver disponível, senão False |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ O comando Is license available pode ser utilizado de três maneiras diferentes:
 |  |  |
 | --- | --- |
 | Número do comando | 714 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

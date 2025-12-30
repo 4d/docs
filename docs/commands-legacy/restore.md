@@ -5,7 +5,7 @@ slug: /commands/restore
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESTORE.Syntax-->**RESTORE** {( *archivePath* {; *destFolderPath*} )}<!-- END REF-->
+<!--REF #_command_.RESTORE.Syntax-->**RESTORE** ({ *archivePath* : Text {; *destFolderPath* : Text} })<!-- END REF-->
 <!--REF #_command_.RESTORE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ The RESTORE command modifies the value of the *OK* and *Document* variables: if 
 |  |  |
 | --- | --- |
 | Command number | 918 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document, error |
 
 

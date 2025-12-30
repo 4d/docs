@@ -5,13 +5,13 @@ slug: /commands/listbox-move-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( {* ;} *objet* ; *positionCol* )<!-- END REF-->
+<!--REF #_command_.LISTBOX MOVE COLUMN.Syntax-->**LISTBOX MOVE COLUMN** ( * ; *objet* : Text ; *positionCol* : Integer )<br/>**LISTBOX MOVE COLUMN** ( *objet* : Field, Variable ; *positionCol* : Integer )<!-- END REF-->
 <!--REF #_command_.LISTBOX MOVE COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à déplacer |
-| positionCol | Integer | &#8594;  | Nouvel emplacement de la colonne |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) de la colonne à déplacer |
+| positionCol | Integer | &#8594; | Nouvel emplacement de la colonne |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Vous souhaitez intervertir les 2e et 3e colonnes de la list box :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1274 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

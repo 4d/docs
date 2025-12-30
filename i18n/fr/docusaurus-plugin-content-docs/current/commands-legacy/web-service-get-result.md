@@ -5,13 +5,13 @@ slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *valeurRetour* {; *nomRetour* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *valeurRetour* : Variable {; *nomRetour* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
 | valeurRetour | Variable | &#8592; | Valeur retournée par le Web Service |
-| nomRetour | Text | &#8594;  | Nom du paramètre à récupérer |
-| * | Operator |  &#8594;  | Libérer la mémoire |
+| nomRetour | Text | &#8594; | Nom du paramètre à récupérer |
+| * | Operator | &#8594; | Libérer la mémoire |
 
 <!-- END REF-->
 
@@ -55,6 +55,6 @@ Imaginons un Web Service retournant l’heure courante dans n’importe quelle v
 |  |  |
 | --- | --- |
 | Numéro de commande | 779 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

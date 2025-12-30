@@ -5,15 +5,15 @@ slug: /commands/set-menu-item
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* ; *menuItem* ; *textoElem* {; *processo*}{; *} )<!-- END REF-->
+<!--REF #_command_.SET MENU ITEM.Syntax-->**SET MENU ITEM** ( *menu* : Integer, Text ; *menuItem* : Integer ; *textoElem* : Text {; *processo* : Integer}{; *} )<!-- END REF-->
 <!--REF #_command_.SET MENU ITEM.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Integer, Text | &#8594;  | Número de menu ou menu de referência |
-| menuItem | Integer | &#8594;  | Número de item menu ou  -1 para o último item adicionado |
-| textoElem | Text | &#8594;  | Novo texto para o item de menu |
-| processo | Integer | &#8594;  | Número de referência do processo |
-| * | Operador | &#8594;  | Se passado: considerar metacaracteres como caracteres comuns |
+| menu | Integer, Text | &#8594; | Número de menu ou menu de referência |
+| menuItem | Integer | &#8594; | Número de item menu ou  -1 para o último item adicionado |
+| textoElem | Text | &#8594; | Novo texto para o item de menu |
+| processo | Integer | &#8594; | Número de referência do processo |
+| * | Operador | &#8594; | Se passado: considerar metacaracteres como caracteres comuns |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ Se omitir o parâmetro *processo*, SET MENU ITEM é aplicada à barra de menus d
 |  |  |
 | --- | --- |
 | Número do comando | 348 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

@@ -5,13 +5,13 @@ slug: /commands/distinct-values
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *aField* ; *array* {; *countArray*} )<!-- END REF-->
+<!--REF #_command_.DISTINCT VALUES.Syntax-->**DISTINCT VALUES** ( *aField* : Field ; *array* : Array {; *countArray* : Integer array} )<!-- END REF-->
 <!--REF #_command_.DISTINCT VALUES.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | aField | Field | &#8594;  | Indexable field to use for data |
 | array | Array | &#8592; | Array to receive field data |
-| countArray | Array integer, Real array | &#8592; | Array to receive count of each value |
+| countArray | Integer array | &#8592; | Array to receive count of each value |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ After the call, the size of the array is equal to the number of distinct values 
 
 **Note:** When **DISTINCT VALUES** is executed with a text or picture field associated with a keyword index, the command fills the array with the keywords of the index. Unlike other types of data, the values returned differ according to the existence of the index. In the case of a Text field, the keyword index is always taken into account, even when the field is also associated with a standard index. If the Text or Picture field is not associated with a keyword index, the array is returned empty. 
 
-The command accepts a *countArray* array as an optional parameter. When it is passed, this array returns, for each non-repeated value in *aField*, the number of occurrences detected in the current selection. The *countArray* array is automatically sized to the number of elements in *array*. For example, for a selection that contains three records with field values "A", "B", and "A", *array* will contain {A;B} and *countArray* will contain {2;1}. You can pass either a Longint array or a Real array in *countArray*. 
+The command accepts a *countArray* array as an optional parameter. When it is passed, this array returns, for each non-repeated value in *aField*, the number of occurrences detected in the current selection. The *countArray* array is automatically sized to the number of elements in *array*. For example, for a selection that contains three records with field values "A", "B", and "A", *array* will contain {A;B} and *countArray* will contain {2;1}. You can pass either an Integer array or a Real array in *countArray*. 
 
 **Note:** The *countArray* parameter is not supported for text or picture fields that are associated with keyword indexes (in this context, it is returned empty). 
 
@@ -88,6 +88,6 @@ To compute statistics, you want to sort the number of distinct values in a field
 |  |  |
 | --- | --- |
 | Command number | 339 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -45,6 +45,6 @@ The result is:
 |  |  |
 | --- | --- |
 | Command number | 1325 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/dom-insert-xml-element
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *targetElementRef* ; *sourceElementRef* ; *childIndex* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Insert XML element.Syntax-->**DOM Insert XML element** ( *targetElementRef* : Text ; *sourceElementRef* : Text ; *childIndex* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Insert XML element.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -80,6 +80,6 @@ To do this, simply execute the following code:
 |  |  |
 | --- | --- |
 | Command number | 1083 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

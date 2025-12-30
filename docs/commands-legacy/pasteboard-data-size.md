@@ -5,7 +5,7 @@ slug: /commands/pasteboard-data-size
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *dataType* ) : Integer<!-- END REF-->
+<!--REF #_command_.Pasteboard data size.Syntax-->**Pasteboard data size** ( *dataType* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Pasteboard data size.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ See the example for the [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md
 |  |  |
 | --- | --- |
 | Command number | 400 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

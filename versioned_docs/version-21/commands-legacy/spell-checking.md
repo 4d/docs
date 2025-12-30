@@ -39,6 +39,6 @@ Spell checking starts with the first word of the field or variable. If an unknow
 |  |  |
 | --- | --- |
 | Command number | 900 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

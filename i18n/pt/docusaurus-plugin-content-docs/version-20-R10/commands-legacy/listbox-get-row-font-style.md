@@ -55,6 +55,6 @@ Dado o seguinte list box:
 |  |  |
 | --- | --- |
 | Número do comando | 1269 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

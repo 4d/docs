@@ -47,6 +47,6 @@ A alienação vertical pode aplicar-se aos seguintes tipos de objetos de formul�
 |  |  |
 | --- | --- |
 | Número do comando | 1187 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

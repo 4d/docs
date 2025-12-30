@@ -69,6 +69,6 @@ Comme les tableaux d’heures acceptent des valeurs numériques, le code suivant
 |  |  |
 | --- | --- |
 | Numéro de commande | 1223 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

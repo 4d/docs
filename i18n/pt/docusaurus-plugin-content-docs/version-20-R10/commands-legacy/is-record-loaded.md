@@ -50,6 +50,6 @@ Ao invés de utilizar as ações automáticas “Seguinte registro” ou “Regi
 |  |  |
 | --- | --- |
 | Número do comando | 669 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

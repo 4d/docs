@@ -5,12 +5,12 @@ slug: /commands/listbox-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( {* ;} *objeto* ; *arrayNomObjeto* )<!-- END REF-->
+<!--REF #_command_.LISTBOX GET OBJECTS.Syntax-->**LISTBOX GET OBJECTS** ( * ; *objeto* : Text ; *arrayNomObjeto* : Text array )<br/>**LISTBOX GET OBJECTS** ( *objeto* : Field, Variable ; *arrayNomObjeto* : Text array )<!-- END REF-->
 <!--REF #_command_.LISTBOX GET OBJECTS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se for especificado, o objeto é um nome de objeto (cadeia)<br/>Se for omitido, o objeto é uma variável |
-| objeto | any | &#8594;  | Nome do objeto (se * for especificado) ou Variável (se * for omitido) |
+| * | Operador | &#8594; | Se for especificado, o objeto é um nome de objeto (cadeia)<br/>Se for omitido, o objeto é uma variável |
+| objeto | any | &#8594; | Nome do objeto (se * for especificado) ou Variável (se * for omitido) |
 | arrayNomObjeto | Text array | &#8592; | Nomes dos sub objetos do list box (cabeçalhos, colunas, pés) |
 
 <!-- END REF-->
@@ -65,6 +65,6 @@ Você quer carregar um formulário e obter a lista de todos os objetos dos list 
 |  |  |
 | --- | --- |
 | Número do comando | 1302 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

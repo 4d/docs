@@ -5,12 +5,12 @@ slug: /commands/window-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *ventanas* {; *} )<!-- END REF-->
+<!--REF #_command_.WINDOW LIST.Syntax-->**WINDOW LIST** ( *ventanas* : Array {; *} )<!-- END REF-->
 <!--REF #_command_.WINDOW LIST.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | ventanas | Array | &#8592; | Array de los números de referencia de las ventanas |
-| * | Operador | &#8594;  | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
+| * | Operador | &#8594; | Si se especifica, tiene en cuenta las ventanas flotantes Si se omite, ignora las ventanas flotantes |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ El siguiente método de proyecto coloca en mosaico todas las ventanas abiertas a
 |  |  |
 | --- | --- |
 | Número de comando | 442 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

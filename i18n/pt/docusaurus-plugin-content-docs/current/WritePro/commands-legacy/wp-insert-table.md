@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-insert-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *objFaixa* ; *modo* {; *atFaixa* {; *numCol* {; *numFilas*}}} ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Insert table.Syntax-->**WP Insert table** ( *objFaixa* : Object ; *modo* : Integer {; *atFaixa* : Integer {; *numCol* : Integer {; *numFilas* : Integer}}} ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Insert table.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

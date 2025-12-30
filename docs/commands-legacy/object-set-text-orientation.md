@@ -5,7 +5,7 @@ slug: /commands/object-set-text-orientation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( {* ;} *object* ; *orientation* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET TEXT ORIENTATION.Syntax-->**OBJECT SET TEXT ORIENTATION** ( * ; *object* : Text ; *orientation* : Integer )<br/>**OBJECT SET TEXT ORIENTATION** ( *object* : Field, Variable ; *orientation* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET TEXT ORIENTATION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -54,6 +54,6 @@ You want to apply an orientation of 270° to a variable in your form:
 |  |  |
 | --- | --- |
 | Command number | 1284 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,15 +5,15 @@ slug: /commands/listbox-set-row-color
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( {* ;} *object* ; *row* ; *color* {; *colorType*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROW COLOR.Syntax-->**LISTBOX SET ROW COLOR** ( * ; *object* : Text ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<br/>**LISTBOX SET ROW COLOR** ( *object* : Field, Variable ; *row* : Integer ; *color* : Text, Integer {; *colorType* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROW COLOR.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
-| object | any | &#8594;  | オブジェクト名(*指定時)、または変数(*省略時) |
-| row | Integer | &#8594;  | 列番号 |
-| color | Text, Integer | &#8594;  | RGBカラー |
-| colorType | Integer | &#8594;  | Listbox font color(デフォルトの値) またはListbox background color |
+| * | 演算子 | &#8594; | 指定時:objectはオブジェクト名(文字列)省略時:objectは変数 |
+| object | any | &#8594; | オブジェクト名(*指定時)、または変数(*省略時) |
+| row | Integer | &#8594; | 列番号 |
+| color | Text, Integer | &#8594; | RGBカラー |
+| colorType | Integer | &#8594; | Listbox font color(デフォルトの値) またはListbox background color |
 
 <!-- END REF-->
 
@@ -70,6 +70,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1270 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

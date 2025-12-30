@@ -41,6 +41,6 @@ Para obtener más información acerca del formato de los parámetros *colorPrime
 |  |  |
 | --- | --- |
 | Número de comando | 1074 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

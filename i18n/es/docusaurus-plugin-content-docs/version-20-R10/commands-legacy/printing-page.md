@@ -43,6 +43,6 @@ El siguiente ejemplo cambia la posición de los números de página en un inform
 |  |  |
 | --- | --- |
 | Número de comando | 275 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

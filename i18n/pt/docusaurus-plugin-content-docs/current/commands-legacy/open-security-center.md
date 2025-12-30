@@ -32,6 +32,6 @@ Dependendo dos privilegios de acesso do usuário atual, certas funções dispon�
 |  |  |
 | --- | --- |
 | Número do comando | 1018 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

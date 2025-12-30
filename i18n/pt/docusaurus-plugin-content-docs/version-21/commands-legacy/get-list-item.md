@@ -71,6 +71,6 @@ Consulte o exemplo do comando [APPEND TO LIST](append-to-list.md "APPEND TO LIST
 |  |  |
 | --- | --- |
 | Número do comando | 378 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

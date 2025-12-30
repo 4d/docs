@@ -62,7 +62,7 @@ Se você não tiver os acessos de privilégio para chamar Set group properties o
 |  |  |
 | --- | --- |
 | Número do comando | 614 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

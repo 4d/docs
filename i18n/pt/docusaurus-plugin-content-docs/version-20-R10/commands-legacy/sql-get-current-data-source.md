@@ -34,6 +34,6 @@ Este comando permite verificar a fonte de dados atual, geralmente antes de execu
 |  |  |
 | --- | --- |
 | Número do comando | 990 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

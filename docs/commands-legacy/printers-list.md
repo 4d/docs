@@ -5,7 +5,7 @@ slug: /commands/printers-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *namesArray* {; *altNamesArray* {; *modelsArray*}} )<!-- END REF-->
+<!--REF #_command_.PRINTERS LIST.Syntax-->**PRINTERS LIST** ( *namesArray* : Text array {; *altNamesArray* : Text array {; *modelsArray* : Text array}} )<!-- END REF-->
 <!--REF #_command_.PRINTERS LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ The system variable OK is set to 1 if the command has been executed correctly; o
 |  |  |
 | --- | --- |
 | Command number | 789 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

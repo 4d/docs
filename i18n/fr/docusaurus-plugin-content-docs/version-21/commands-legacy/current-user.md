@@ -44,6 +44,6 @@ Reportez-vous à l'exemple de la commande [User in group](user-in-group.md).
 |  |  |
 | --- | --- |
 | Numéro de commande | 182 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

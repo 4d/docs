@@ -66,6 +66,6 @@ Aqui temos uma lista chamada *hList* mostrada no ambiente Aplicação:
 |  |  |
 | --- | --- |
 | Número do comando | 380 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

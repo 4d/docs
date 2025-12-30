@@ -5,14 +5,14 @@ slug: /commands/object-set-list-by-reference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( {* ;} *object* {; *listType*}; *list* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET LIST BY REFERENCE.Syntax-->**OBJECT SET LIST BY REFERENCE** ( * ; *object* : Text {; *listType* : Integer}; *list* : Integer )<br/>**OBJECT SET LIST BY REFERENCE** ( *object* : Field, Variable {; *listType* : Integer}; *list* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET LIST BY REFERENCE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
-| object | any | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| listType | Integer | &#8594;  | リストの種類:選択リスト、指定リスト、除外リスト |
-| list | Integer | &#8594;  | リストの参照番号 |
+| * | 演算子 | &#8594; | 指定時: object はオブジェクト名(文字列)、省略時: object は変数またはフィールド |
+| object | any | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| listType | Integer | &#8594; | リストの種類:選択リスト、指定リスト、除外リスト |
+| list | Integer | &#8594; | リストの参照番号 |
 
 <!-- END REF-->
 
@@ -133,6 +133,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1266 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -30,6 +30,6 @@ Se passa o parâmetro opcional *\**, indica que o parâmetro objeto é um nome d
 |  |  |
 | --- | --- |
 | Número do comando | 1069 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -57,7 +57,7 @@ If the command fails, an error is generated that you can intercept using the [ON
 |  |  |
 | --- | --- |
 | Command number | 871 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, Document, error |
 | Forbidden on the server ||
 

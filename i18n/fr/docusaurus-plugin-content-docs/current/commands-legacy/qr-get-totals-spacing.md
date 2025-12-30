@@ -5,12 +5,12 @@ slug: /commands/qr-get-totals-spacing
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *zone* ; *sousTotal* ; *valeur* )<!-- END REF-->
+<!--REF #_command_.QR GET TOTALS SPACING.Syntax-->**QR GET TOTALS SPACING** ( *zone* : Integer ; *sousTotal* : Integer ; *valeur* : Integer )<!-- END REF-->
 <!--REF #_command_.QR GET TOTALS SPACING.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| zone | Integer | &#8594;  | Référence de la zone |
-| sousTotal | Integer | &#8594;  | Numéro de sous-total |
+| zone | Integer | &#8594; | Référence de la zone |
+| sousTotal | Integer | &#8594; | Numéro de sous-total |
 | valeur | Integer | &#8592; | 0=pas d'espace, 32000=insère une saut de page, >0=espace ajouté sous le niveau de rupture, <0=augmentation proportionnelle |
 
 <!-- END REF-->
@@ -41,7 +41,7 @@ Si le paramètre *sousTotal* est incorrect, l’erreur -9852 est générée.
 |  |  |
 | --- | --- |
 | Numéro de commande | 762 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/pop-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** {( *laTable* )}<!-- END REF-->
+<!--REF #_command_.POP RECORD.Syntax-->**POP RECORD** ({ *laTable* : Table })<!-- END REF-->
 <!--REF #_command_.POP RECORD.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table de laquelle dépiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
+| laTable | Table | &#8594; | Table de laquelle dépiler l'enregistrement courant ou Table par défaut si ce paramètre est omis |
 
 <!-- END REF-->
 
@@ -38,7 +38,7 @@ L'exemple suivant récupère l'enregistrement d'un client dans la pile :
 |  |  |
 | --- | --- |
 | Numéro de commande | 177 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Change l'enregistrement courant ||
 
 

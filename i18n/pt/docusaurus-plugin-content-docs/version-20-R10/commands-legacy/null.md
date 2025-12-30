@@ -136,6 +136,6 @@ Abaixo os diferentes resultados do comando [Undefined](undefined.md) assim como 
 |  |  |
 | --- | --- |
 | Número do comando | 1517 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

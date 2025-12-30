@@ -68,6 +68,6 @@ Modificação do estilo do texto ressaltado:
 |  |  |
 | --- | --- |
 | Número do comando | 209 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

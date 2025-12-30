@@ -5,7 +5,7 @@ slug: /commands/set-update-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *folderPath* {; *silentErrors*} )<!-- END REF-->
+<!--REF #_command_.SET UPDATE FOLDER.Syntax-->**SET UPDATE FOLDER** ( *folderPath* : Text {; *silentErrors* : Boolean} )<!-- END REF-->
 <!--REF #_command_.SET UPDATE FOLDER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,7 +63,7 @@ You created a "MyUpdates" folder on your disk, where you placed a new version of
 |  |  |
 | --- | --- |
 | Command number | 1291 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 
 

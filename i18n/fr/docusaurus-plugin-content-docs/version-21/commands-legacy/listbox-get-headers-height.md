@@ -40,6 +40,6 @@ Par défaut, si vous omettez le paramètre *unité*, la hauteur de ligne retourn
 |  |  |
 | --- | --- |
 | Numéro de commande | 1144 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

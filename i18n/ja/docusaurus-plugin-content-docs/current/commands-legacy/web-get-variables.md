@@ -5,7 +5,7 @@ slug: /commands/web-get-variables
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nameArray* ; *valueArray* )<!-- END REF-->
+<!--REF #_command_.WEB GET VARIABLES.Syntax-->**WEB GET VARIABLES** ( *nameArray* : Text array ; *valueArray* : Text array )<!-- END REF-->
 <!--REF #_command_.WEB GET VARIABLES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -70,6 +70,6 @@ WEBFORMメソッド以下のように記述します。
 |  |  |
 | --- | --- |
 | コマンド番号 | 683 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

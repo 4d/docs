@@ -37,6 +37,6 @@ Sin embargo, el comando no tiene en cuenta el estado visible/invisible de las co
 |  |  |
 | --- | --- |
 | Número de comando | 1154 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

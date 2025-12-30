@@ -5,14 +5,14 @@ slug: /commands/listbox-set-rows-height
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( {* ;} *objeto* ; *altura* {; unidade da altura} )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET ROWS HEIGHT.Syntax-->**LISTBOX SET ROWS HEIGHT** ( * ; *objeto* : Text ; *altura* : Integer {; unidade da altura} )<br/>**LISTBOX SET ROWS HEIGHT** ( *objeto* : Field, Variable ; *altura* : Integer {; unidade da altura} )<!-- END REF-->
 <!--REF #_command_.LISTBOX SET ROWS HEIGHT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| altura | Integer | &#8594;  | Altura da linha (em pixels) |
-| unidade da altura | Inteiro longo | &#8594;  | 0 ou se omitido = pixels, 1=linhas |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string). Se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| altura | Integer | &#8594; | Altura da linha (em pixels) |
+| unidade da altura | Inteiro longo | &#8594; | 0 ou se omitido = pixels, 1=linhas |
 
 <!-- END REF-->
 
@@ -42,6 +42,6 @@ Nota: para mais informação sobre o cálculo das alturas das linhas, consulte o
 |  |  |
 | --- | --- |
 | Número do comando | 835 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

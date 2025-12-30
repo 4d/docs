@@ -107,6 +107,6 @@ Luego puede añadir otros mensajes ejecutando el comando **CALL FORM** nuevament
 |  |  |
 | --- | --- |
 | Número de comando | 1391 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

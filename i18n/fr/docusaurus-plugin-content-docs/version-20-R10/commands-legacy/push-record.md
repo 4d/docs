@@ -39,6 +39,6 @@ L'exemple suivant empile l'enregistrement d'un client :
 |  |  |
 | --- | --- |
 | Numéro de commande | 176 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

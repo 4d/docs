@@ -105,7 +105,7 @@ If the integration is carried out correctly, the system variable OK is set to 1;
 |  |  |
 | --- | --- |
 | Command number | 1312 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

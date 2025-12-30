@@ -38,6 +38,6 @@ Vous voulez appeler un process worker et lui passer comme paramètre le nom du p
 |  |  |
 | --- | --- |
 | Numéro de commande | 1392 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,15 +5,15 @@ slug: /commands/object-set-subform
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( {* ;} *object* {; *aTable*}; *detailSubform* {; *listSubform*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET SUBFORM.Syntax-->**OBJECT SET SUBFORM** ( * ; *object* : Text {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<br/>**OBJECT SET SUBFORM** ( *object* : Field, Variable {; *aTable* : Table}; *detailSubform* : Text, Object {; *listSubform* : Text, Object} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET SUBFORM.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時)または変数 (* 省略時) |
-| aTable | Table | &#8594;  | フォームのテーブル (テーブルフォームの場合) |
-| detailSubform | Text, Object | &#8594;  | 詳細フォーム名(テキスト)あるいは詳細フォームを定義した.jsonファイルへのPOSIXパス(テキスト)、あるいはサブフォームの詳細フォームを定義したオブジェクト |
-| listSubform | Text, Object | &#8594;  | リストフォーム名(テキスト)、あるいはリストフォームを定義した.jsonファイルへのPOSIXパス(テキスト)、あるいはサブフォームのリストフォーム(テーブルフォーム)を定義したオブジェクト |
+| * | 演算子 | &#8594; | 指定時objectはオブジェクト名 (文字列)省略時objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時)または変数 (* 省略時) |
+| aTable | Table | &#8594; | フォームのテーブル (テーブルフォームの場合) |
+| detailSubform | Text, Object | &#8594; | 詳細フォーム名(テキスト)あるいは詳細フォームを定義した.jsonファイルへのPOSIXパス(テキスト)、あるいはサブフォームの詳細フォームを定義したオブジェクト |
+| listSubform | Text, Object | &#8594; | リストフォーム名(テキスト)、あるいはリストフォームを定義した.jsonファイルへのPOSIXパス(テキスト)、あるいはサブフォームのリストフォーム(テーブルフォーム)を定義したオブジェクト |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1138 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

@@ -84,7 +84,7 @@ Mostrará a seguinte caixa de diálogo (em Windows):
 |  |  |
 | --- | --- |
 | Número do comando | 163 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

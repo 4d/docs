@@ -39,7 +39,7 @@ L'exemple suivant permet d'ajouter une colonne supplémentaire à droite de la d
 |  |  |
 | --- | --- |
 | Numéro de commande | 764 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | error |
 
 

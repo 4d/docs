@@ -5,7 +5,7 @@ slug: /commands/get-menu-items
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* ; *menuTitlesArray* ; *menuRefsArray* )<!-- END REF-->
+<!--REF #_command_.GET MENU ITEMS.Syntax-->**GET MENU ITEMS** ( *menu* : Integer, Text ; *menuTitlesArray* : Text array ; *menuRefsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.GET MENU ITEMS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,6 +40,6 @@ You want to find out the contents of the menu bar of the current process:
 |  |  |
 | --- | --- |
 | Command number | 977 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

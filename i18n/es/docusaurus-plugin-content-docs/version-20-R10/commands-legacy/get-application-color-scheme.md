@@ -49,6 +49,6 @@ Consulte la descripción del comando [SET APPLICATION COLOR SCHEME](set-applicat
 |  |  |
 | --- | --- |
 | Número de comando | 1763 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

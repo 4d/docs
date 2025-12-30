@@ -49,6 +49,6 @@ Se quiser eliminar um usu\[ario remoto específico:
 |  |  |
 | --- | --- |
 | Número do comando | 1633 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -48,6 +48,6 @@ Estas constantes indican la siguiente información:
 |  |  |
 | --- | --- |
 | Número de comando | 721 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

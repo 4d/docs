@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET FIELD VALUE NULL.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unField | Field | &#8594;  | Campo al cual atribuir el valor NULL |
+| unField | Field | &#8594; | Campo al cual atribuir el valor NULL |
 
 <!-- END REF-->
 
@@ -34,6 +34,6 @@ El valor NULL es utilizado por el motor SQL de 4D. Para mayor información, cons
 |  |  |
 | --- | --- |
 | Número de comando | 965 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

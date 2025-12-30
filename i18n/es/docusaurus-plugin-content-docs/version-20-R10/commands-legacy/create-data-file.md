@@ -32,6 +32,6 @@ Antes de lanzar la operación, el comando verifica que la ruta de acceso no corr
 |  |  |
 | --- | --- |
 | Número de comando | 313 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

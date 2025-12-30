@@ -5,13 +5,13 @@ slug: /commands/get-text-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *text* ; *arrKeywords* {; *} )<!-- END REF-->
+<!--REF #_command_.GET TEXT KEYWORDS.Syntax-->**GET TEXT KEYWORDS** ( *text* : Text ; *arrKeywords* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET TEXT KEYWORDS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| text | Text | &#8594;  | 元のテキスト |
+| text | Text | &#8594; | 元のテキスト |
 | arrKeywords | Text array | &#8592; | キーワードを受け取る配列 |
-| * | 演算子 | &#8594;  | 指定した場合、ユニークキーワード |
+| * | 演算子 | &#8594; | 指定した場合、ユニークキーワード |
 
 <!-- END REF-->
 
@@ -89,6 +89,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1141 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

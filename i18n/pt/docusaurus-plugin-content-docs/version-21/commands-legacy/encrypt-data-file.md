@@ -137,6 +137,6 @@ Re-encriptar um arquivo de dados criptografado com a chave atual (por exemplo, q
 |  |  |
 | --- | --- |
 | Número do comando | 1610 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

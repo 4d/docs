@@ -36,6 +36,6 @@ En revanche, la commande ne tient pas compte du statut visible/invisible des col
 |  |  |
 | --- | --- |
 | Numéro de commande | 1152 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

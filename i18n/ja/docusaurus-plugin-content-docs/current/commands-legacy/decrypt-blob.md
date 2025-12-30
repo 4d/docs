@@ -5,14 +5,14 @@ slug: /commands/decrypt-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *toDecrypt* ; *sendPubKey* {; *recipPrivKey*} )<!-- END REF-->
+<!--REF #_command_.DECRYPT BLOB.Syntax-->**DECRYPT BLOB** ( *toDecrypt* : Blob ; *sendPubKey* : Blob {; *recipPrivKey* : Blob} )<!-- END REF-->
 <!--REF #_command_.DECRYPT BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
 | toDecrypt | Blob | &#8596; | 復号するデータ |
-||| | 複合されたデータ |
-| sendPubKey | Blob | &#8594;  | 送信者の公開鍵 |
-| recipPrivKey | Blob | &#8594;  | 受信者の秘密鍵 |
+|  |  |  | 複合されたデータ |
+| sendPubKey | Blob | &#8594; | 送信者の公開鍵 |
+| recipPrivKey | Blob | &#8594; | 受信者の秘密鍵 |
 
 <!-- END REF-->
 
@@ -40,6 +40,6 @@ DECRYPT BLOBコマンドは、（意図的かどうかに関わらず）BLOB内�
 |  |  |
 | --- | --- |
 | コマンド番号 | 690 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

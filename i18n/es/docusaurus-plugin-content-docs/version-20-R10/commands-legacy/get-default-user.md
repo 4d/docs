@@ -27,6 +27,6 @@ Si ningún usuario por defecto está definido, el comando devuelve 0.
 |  |  |
 | --- | --- |
 | Número de comando | 826 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

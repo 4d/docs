@@ -5,11 +5,11 @@ slug: /commands/get-list-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *lista* ; *aparencia* {; *icone* {; *alturaLinha* {; *duploClique* {; *multiSeleçao* {; *editavel*}}}}} )<!-- END REF-->
+<!--REF #_command_.GET LIST PROPERTIES.Syntax-->**GET LIST PROPERTIES** ( *lista* : Integer ; *aparencia* : Integer {; *icone* : Integer {; *alturaLinha* : Integer {; *duploClique* : Integer {; *multiSeleçao* : Integer {; *editavel* : Integer}}}}} )<!-- END REF-->
 <!--REF #_command_.GET LIST PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referência da lista |
+| lista | Integer | &#8594; | Número de referência da lista |
 | aparencia | Integer | &#8592; | Estilo gráfico da lista 1 = Lista hierárquica à Macintosh 2 = Lista hierárquica à Windows |
 | icone | Integer | &#8592; | Referência de recurso Mac OS ‘cicn’ |
 | alturaLinha | Integer | &#8592; | Altura mínima de la linha expressada em pixels |
@@ -43,6 +43,6 @@ Para uma completa descrição da aparência, ícones de knots, altura de linha m
 |  |  |
 | --- | --- |
 | Número do comando | 632 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

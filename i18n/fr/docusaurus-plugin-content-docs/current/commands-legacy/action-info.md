@@ -5,12 +5,12 @@ slug: /commands/action-info
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* {; *cible*} ) : Object<!-- END REF-->
+<!--REF #_command_.Action info.Syntax-->**Action info** ( *action* : Text {; *cible* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Action info.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| action | Text | &#8594;  | Nom de l'action standard ou syntaxe incluant un paramètre si celui-ci est requis |
-| cible | Integer | &#8594;  | Définit la cible de l'action où lire les informations : formulaire principal ou formulaire courant |
+| action | Text | &#8594; | Nom de l'action standard ou syntaxe incluant un paramètre si celui-ci est requis |
+| cible | Integer | &#8594; | Définit la cible de l'action où lire les informations : formulaire principal ou formulaire courant |
 | Résultat | Object | &#8592; | Objet contenant le statut de l'action sous forme de booléens : isEnabled, isVisible, isChecked, isMixed, isUnknownState |
 
 <!-- END REF-->
@@ -71,6 +71,6 @@ Vous voulez savoir si l'action standard **Copier** est disponible (c'est-à-dire
 |  |  |
 | --- | --- |
 | Numéro de commande | 1442 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

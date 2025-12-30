@@ -50,6 +50,6 @@ Vous voulez connaître le statut courant de transaction :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1387 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

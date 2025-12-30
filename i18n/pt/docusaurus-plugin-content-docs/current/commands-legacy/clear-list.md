@@ -5,12 +5,12 @@ slug: /commands/clear-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *lista* {; *} )<!-- END REF-->
+<!--REF #_command_.CLEAR LIST.Syntax-->**CLEAR LIST** ( *lista* : Integer {; *} )<!-- END REF-->
 <!--REF #_command_.CLEAR LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| lista | Integer | &#8594;  | Número de referência da lista |
-| * | Operator |  &#8594;  | Se especificada, se há sub-listas se deve apagar da memória, Se omitida, as sub-listas não são apagadas |
+| lista | Integer | &#8594; | Número de referência da lista |
+| * | Operator | &#8594; | Se especificada, se há sub-listas se deve apagar da memória, Se omitida, as sub-listas não são apagadas |
 
 <!-- END REF-->
 
@@ -59,6 +59,6 @@ Ver o exemplo do comando [BLOB to list](blob-to-list.md "BLOB to list").
 |  |  |
 | --- | --- |
 | Número do comando | 377 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

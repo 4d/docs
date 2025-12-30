@@ -47,6 +47,6 @@ Luego el menú contiene:
 |  |  |
 | --- | --- |
 | Número de comando | 1305 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

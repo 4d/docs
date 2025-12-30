@@ -5,13 +5,13 @@ slug: /commands/get-document-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *cheminDoc* ; *icône* {; *taille*} )<!-- END REF-->
+<!--REF #_command_.GET DOCUMENT ICON.Syntax-->**GET DOCUMENT ICON** ( *cheminDoc* : Text ; *icône* : Picture, Picture {; *taille* : Integer} )<!-- END REF-->
 <!--REF #_command_.GET DOCUMENT ICON.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| cheminDoc | Text | &#8594;  | Nom ou chemin d’accès du fichier duquel obtenir l’icône ou chaîne vide pour afficher la boîte de dialogue d’ouverture de fichiers |
+| cheminDoc | Text | &#8594; | Nom ou chemin d’accès du fichier duquel obtenir l’icône ou chaîne vide pour afficher la boîte de dialogue d’ouverture de fichiers |
 | icône | Picture, Picture | &#8592; | Icône du document |
-| taille | Integer | &#8594;  | Taille de l’icône (en pixels) |
+| taille | Integer | &#8594; | Taille de l’icône (en pixels) |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ Le paramètre optionnel *taille* vous permet d’indiquer les dimensions de l’
 |  |  |
 | --- | --- |
 | Numéro de commande | 700 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | Document, error |
 
 

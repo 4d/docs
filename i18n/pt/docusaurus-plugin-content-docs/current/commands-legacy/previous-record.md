@@ -5,11 +5,11 @@ slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *tabela* )}<!-- END REF-->
+<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ({ *tabela* : Table })<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para a qual vai mover o registro previamente selecionado, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para a qual vai mover o registro previamente selecionado, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ Se PREVIOUS RECORD move o ponteiro do registro atual antes da seleção atual, B
 |  |  |
 | --- | --- |
 | Número do comando | 110 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 
 

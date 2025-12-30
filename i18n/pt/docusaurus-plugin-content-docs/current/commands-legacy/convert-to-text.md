@@ -5,12 +5,12 @@ slug: /commands/convert-to-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *BLOB* ; *conjuntoCaracteres* ) : Text<!-- END REF-->
+<!--REF #_command_.Convert to text.Syntax-->**Convert to text** ( *BLOB* : Blob ; *conjuntoCaracteres* : Text, Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Convert to text.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | Blob que contém texto expresso num conjunto de caracteres específico |
-| conjuntoCaracteres | Text, Integer | &#8594;  | Nome ou número do conjunto de caracteres do BLOB |
+| Blob | Blob | &#8594; | Blob que contém texto expresso num conjunto de caracteres específico |
+| conjuntoCaracteres | Text, Integer | &#8594; | Nome ou número do conjunto de caracteres do BLOB |
 | Resultado | Text | &#8592; | Conteúdos do BLOB expressos em conjunto de caracteres 4D |
 
 <!-- END REF-->
@@ -37,7 +37,7 @@ Se o comando for executado corretamente, a variável OK assume o valor 1\. Do co
 |  |  |
 | --- | --- |
 | Número do comando | 1012 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

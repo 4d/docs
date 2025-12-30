@@ -5,7 +5,7 @@ slug: /commands/dom-create-xml-ref
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* {; *nameSpace*} {; *nameSpaceName* ; *nameSpaceValue*} {; *nameSpaceName2* ; *nameSpaceValue2* ; ... ; *nameSpaceNameN* ; *nameSpaceValueN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML Ref.Syntax-->**DOM Create XML Ref** ( *root* : Text {; *nameSpace* : Text} {; *nameSpaceName* : Text ; *nameSpaceValue* : Text} {; ...(*nameSpaceName* : Text, *nameSpaceValue* : Text)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML Ref.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -104,7 +104,7 @@ If the command was executed correctly, the system variable OK is set to 1\. Othe
 |  |  |
 | --- | --- |
 | Command number | 861 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

@@ -50,6 +50,6 @@ This example takes all types of printing into account:
 |  |  |
 | --- | --- |
 | Command number | 1198 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/blob-to-users
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* )<!-- END REF-->
+<!--REF #_command_.BLOB TO USERS.Syntax-->**BLOB TO USERS** ( *users* : Blob )<!-- END REF-->
 <!--REF #_command_.BLOB TO USERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| users | Blob | &#8594;  | データベース管理者によって作成・保存されたデータベースユーザーアカウントを格納している、暗号化された BLOB |
+| users | Blob | &#8594; | データベース管理者によって作成・保存されたデータベースユーザーアカウントを格納している、暗号化された BLOB |
 
 <!-- END REF-->
 
@@ -52,7 +52,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 850 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

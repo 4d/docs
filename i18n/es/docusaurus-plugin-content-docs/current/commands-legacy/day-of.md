@@ -5,11 +5,11 @@ slug: /commands/day-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day of.Syntax-->**Day of** ( *fecha* ) : Integer<!-- END REF-->
+<!--REF #_command_.Day of.Syntax-->**Day of** ( *fecha* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day of.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &#8594;  | Fecha para la cual devolver el día |
+| fecha | Date | &#8594; | Fecha para la cual devolver el día |
 | Resultado | Integer | &#8592; | Día del mes de la fecha |
 
 <!-- END REF-->
@@ -42,6 +42,6 @@ Ver el ejemplo para el comando [Current date](current-date.md "Current date").
 |  |  |
 | --- | --- |
 | Número de comando | 23 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

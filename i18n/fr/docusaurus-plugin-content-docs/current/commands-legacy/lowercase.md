@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Lowercase.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laText | Text | &#8594;  | Chaîne à convertir en minuscules |
-| * | Opérateur | &#8594;  | Si passé : conserver les accents Si omis : supprimer les accents |
+| laText | Text | &#8594; | Chaîne à convertir en minuscules |
+| * | Opérateur | &#8594; | Si passé : conserver les accents Si omis : supprimer les accents |
 | Résultat | Text | &#8592; | chaîne en minuscules |
 
 <!-- END REF-->
@@ -54,6 +54,6 @@ Cet exemple compare les résultats obtenus suivant que le paramètre *\** a ét�
 |  |  |
 | --- | --- |
 | Numéro de commande | 14 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/query-selection-with-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* ; *array* )<!-- END REF-->
+<!--REF #_command_.QUERY SELECTION WITH ARRAY.Syntax-->**QUERY SELECTION WITH ARRAY** ( *targetField* : Field ; *array* : Array )<!-- END REF-->
 <!--REF #_command_.QUERY SELECTION WITH ARRAY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,7 +34,7 @@ For more information, please refer to the description of the [QUERY WITH ARRAY](
 |  |  |
 | --- | --- |
 | Command number | 1050 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current selection ||
 
 

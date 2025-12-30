@@ -5,11 +5,11 @@ slug: /commands/record-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Record number.Syntax-->**Record number** {( *tabela* )} : Integer<!-- END REF-->
+<!--REF #_command_.Record number.Syntax-->**Record number** ( *tabela* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Record number.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela para qual devolver o número do registro atual, ou tabela padrão, se omitido |
+| tabela | Table | &#8594; | Tabela para qual devolver o número do registro atual, ou tabela padrão, se omitido |
 | Resultado de função | Integer | &#8592; | Nº de registro atual |
 
 <!-- END REF-->
@@ -49,6 +49,6 @@ O exemplo a seguir salva o número do registro atual e depois procura na tabela 
 |  |  |
 | --- | --- |
 | Número do comando | 243 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

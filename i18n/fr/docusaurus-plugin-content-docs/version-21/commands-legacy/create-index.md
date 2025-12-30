@@ -93,6 +93,6 @@ Création d’un index composite sur les champs “CodePostal” et “Ville” 
 |  |  |
 | --- | --- |
 | Numéro de commande | 966 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,12 +5,12 @@ slug: /commands/json-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* ; *jsonArray* )<!-- END REF-->
+<!--REF #_command_.JSON TO SELECTION.Syntax-->**JSON TO SELECTION** ( *aTable* : Table ; *jsonArray* : Text )<!-- END REF-->
 <!--REF #_command_.JSON TO SELECTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | 要素の複製先の4Dテーブル |
-| jsonArray | Text | &#8594;  | JSON形式の文字列 |
+| aTable | Table | &#8594; | 要素の複製先の4Dテーブル |
+| jsonArray | Text | &#8594; | JSON形式の文字列 |
 
 <!-- END REF-->
 
@@ -74,6 +74,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1235 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

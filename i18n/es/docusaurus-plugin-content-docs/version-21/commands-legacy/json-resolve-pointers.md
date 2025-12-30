@@ -236,6 +236,6 @@ Si ejecuta:
 |  |  |
 | --- | --- |
 | Número de comando | 1478 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

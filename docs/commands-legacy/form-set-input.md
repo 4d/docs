@@ -5,7 +5,7 @@ slug: /commands/form-set-input
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*aTable* ;} *form* {; *userForm* {; *}} )<!-- END REF-->
+<!--REF #_command_.FORM SET INPUT.Syntax-->**FORM SET INPUT** ( {*aTable* : Table ;} *form* : Text, Object {; *userForm* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.FORM SET INPUT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -112,6 +112,6 @@ which displays:
 |  |  |
 | --- | --- |
 | Command number | 55 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -5,23 +5,18 @@ slug: /commands/match-regex
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* ; *aString* ; *start* {; pos_found ; length_found}{; *} ) -> Function result <br/>
-**Match regex** ( *pattern* ; *aString* ) -> Function result<!-- END REF-->
+<!--REF #_command_.Match regex.Syntax-->**Match regex** ( *pattern* : Text ; *aString* : Text ; *start* : Integer {; pos_found ; length_found}{; *} ) -> Function result <br/>**Match regex** ( *pattern* : Text ; *aString* : Text ) -> Function result<!-- END REF-->
 <!--REF #_command_.Match regex.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| pattern | Text | &#8594;  | Regular expression |
+| pattern | Text | &#8594;  | Regular expression (complete equality with two-parameters syntax)|
 | aString | Text | &#8594;  | String in which search will be done |
 | start | Integer | &#8594;  | Position in aString where search will start |
-| pos_found | Array integer, Integer | &#8592; | Position of occurrence |
-| length_found | Array integer, Integer | &#8592; | Length of occurrence |
+| pos_found | Integer, Integer array | &#8592; | Position of occurrence |
+| length_found | Integer, Integer array | &#8592; | Length of occurrence |
 | * | Operator | &#8594;  | If passed: only searches at position indicated |
 | Function result | Boolean | &#8592; | True = search has found an occurrence; Otherwise, False. |
-| Match regex ( pattern ; aString ) -> Function result |
-| Parameter | Type | Description |
-| pattern | Text | &#8594;  | Regular expression (complete equality) |
-| aString | Text | &#8594;  | String in which search will be done |
-| Function result | Boolean | &#8592; | True = search has found an occurrence; Otherwise, False. |
+
 
 <!-- END REF-->
 
@@ -114,7 +109,7 @@ In the event of an error, the command generates an error that you can intercept 
 |  |  |
 | --- | --- |
 | Command number | 1019 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | error |
 
 

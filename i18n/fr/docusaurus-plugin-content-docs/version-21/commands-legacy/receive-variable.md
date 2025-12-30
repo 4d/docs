@@ -45,7 +45,7 @@ La variable système OK prend la valeur 1 si la variable est correctement reçue
 |  |  |
 | --- | --- |
 | Numéro de commande | 81 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

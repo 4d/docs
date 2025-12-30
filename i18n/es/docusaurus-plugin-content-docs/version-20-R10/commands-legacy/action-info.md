@@ -71,6 +71,6 @@ Desea saber si la acción copiar está disponible (es decir, si se han seleccion
 |  |  |
 | --- | --- |
 | Número de comando | 1442 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

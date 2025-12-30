@@ -5,11 +5,11 @@ slug: /commands/save-related-one
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *aField* )<!-- END REF-->
+<!--REF #_command_.SAVE RELATED ONE.Syntax-->**SAVE RELATED ONE** ( *aField* : Field )<!-- END REF-->
 <!--REF #_command_.SAVE RELATED ONE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | nフィールド |
+| aField | Field | &#8594; | nフィールド |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ SAVE RELATED ONEは、ロックされたレコードを保存しません。こ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 43 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

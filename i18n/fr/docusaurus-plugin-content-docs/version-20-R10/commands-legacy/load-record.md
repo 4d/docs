@@ -42,6 +42,6 @@ En environnements multi-utilisateurs et multi-process, lorsque vous devez modifi
 |  |  |
 | --- | --- |
 | Numéro de commande | 52 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

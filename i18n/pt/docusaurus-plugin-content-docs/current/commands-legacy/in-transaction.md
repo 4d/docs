@@ -36,6 +36,6 @@ Se realiza as operações (adição, modificação, ou eliminação de registros
 |  |  |
 | --- | --- |
 | Número do comando | 397 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

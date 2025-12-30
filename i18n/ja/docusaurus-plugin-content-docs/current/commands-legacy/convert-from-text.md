@@ -5,12 +5,12 @@ slug: /commands/convert-from-text
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *4Dtext* ; *charSet* ; *convertedBLOB* )<!-- END REF-->
+<!--REF #_command_.CONVERT FROM TEXT.Syntax-->**CONVERT FROM TEXT** ( *4Dtext* : Text ; *charSet* : Text, Integer ; *convertedBLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.CONVERT FROM TEXT.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| 4Dtext | Text | &#8594;  | 現在の4Dの文字セットで記述されているテキスト |
-| charSet | Text, Integer | &#8594;  | 文字セットの番号または名前 |
+| 4Dtext | Text | &#8594; | 現在の4Dの文字セットで記述されているテキスト |
+| charSet | Text, Integer | &#8594; | 文字セットの番号または名前 |
 | convertedBlob | Blob | &#8592; | 変換されたテキストを含むBLOB |
 
 <!-- END REF-->
@@ -196,7 +196,7 @@ CONVERT FROM TEXTと[Convert to text](convert-to-text.md "Convert to text")コ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1011 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

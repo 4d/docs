@@ -28,6 +28,6 @@ Dans le contexte des list box en mode sélection, l’instruction **REDRAW** app
 |  |  |
 | --- | --- |
 | Numéro de commande | 174 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

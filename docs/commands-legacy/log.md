@@ -5,7 +5,7 @@ slug: /commands/log
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Log.Syntax-->**Log** ( *number* ) : Real<!-- END REF-->
+<!--REF #_command_.Log.Syntax-->**Log** ( *number* : Real ) : Real<!-- END REF-->
 <!--REF #_command_.Log.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ The following line displays 1:
 |  |  |
 | --- | --- |
 | Command number | 22 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

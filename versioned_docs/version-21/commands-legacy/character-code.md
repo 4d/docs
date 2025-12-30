@@ -89,6 +89,6 @@ The second piece of code runs faster for two reasons: it does only one character
 |  |  |
 | --- | --- |
 | Command number | 91 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

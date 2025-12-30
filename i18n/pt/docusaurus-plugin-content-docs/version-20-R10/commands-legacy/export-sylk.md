@@ -55,7 +55,7 @@ OK toma el valor 1 se a exportação termina com sucesso; do contrário, toma o 
 |  |  |
 | --- | --- |
 | Número do comando | 85 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

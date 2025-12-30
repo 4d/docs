@@ -44,6 +44,6 @@ Après l’exécution de cette méthode objet, la variable *$nomBtn* contient la
 |  |  |
 | --- | --- |
 | Numéro de commande | 1087 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

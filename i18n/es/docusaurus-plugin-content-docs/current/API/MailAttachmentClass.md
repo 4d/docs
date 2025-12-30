@@ -38,7 +38,7 @@ Los objetos Attachment ofrecen las siguientes propiedades y funciones de sólo l
 | ----------- | --------------------------------- | :-------------------------: | -------------------------------------------------------------------------------------------------- |
 | file        | 4D.File           |              ->             | Archivo adjunto                                                                                    |
 | zIPFile     | 4D.ZipFile        |              ->             | Archivo zip adjunto                                                                                |
-| blob        | 4D.Blob           |              ->             | BLOB que contiene el adjunto                                                                       |
+| blob        | 4D.Blob           |              ->             | Blob containing the attachment                                                                     |
 | path        | Text                              |              ->             | Ruta del archivo adjunto                                                                           |
 | name        | Text                              |              ->             | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto            |
 | cid         | Text                              |              ->             | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |

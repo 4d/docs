@@ -38,7 +38,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 | ----------- | --------------------------------- | :-------------------------: | ---------------------------------------------------------------------------------------------------- |
 | file        | 4D.File           |              ->             | Fichier joint                                                                                        |
 | zipFile     | 4D.ZipFile        |              ->             | Fichier Zip joint                                                                                    |
-| blob        | 4D.Blob           |              ->             | Blob contenant la pièce jointe                                                                       |
+| blob        | 4D.Blob           |              ->             | Blob containing the attachment                                                                       |
 | path        | Text                              |              ->             | Chemin de la pièce jointe                                                                            |
 | name        | Text                              |              ->             | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe                   |
 | cid         | Text                              |              ->             | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis |

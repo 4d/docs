@@ -56,6 +56,6 @@ Résultat :
 |  |  |
 | --- | --- |
 | Numéro de commande | 987 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -64,6 +64,6 @@ La *frasePasar* y la *sal* utilizadas para el descifrado son idénticas a la *fr
 |  |  |
 | --- | --- |
 | Número de comando | 1774 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

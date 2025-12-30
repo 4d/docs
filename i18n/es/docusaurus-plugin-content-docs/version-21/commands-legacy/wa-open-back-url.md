@@ -30,6 +30,6 @@ Si no hay un URL precedente, el comando no hace nada. Puede probar la disponibil
 |  |  |
 | --- | --- |
 | Número de comando | 1021 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

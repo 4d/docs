@@ -5,7 +5,7 @@ slug: /commands/count-menus
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Count menus.Syntax-->**Count menus** {( *process* )} : Integer<!-- END REF-->
+<!--REF #_command_.Count menus.Syntax-->**Count menus** ( *process* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Count menus.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,7 +29,7 @@ If you omit the *process* parameter, **Count menus** applies to the menu bar for
 |  |  |
 | --- | --- |
 | Command number | 404 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

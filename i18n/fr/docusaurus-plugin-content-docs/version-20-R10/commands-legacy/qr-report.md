@@ -136,7 +136,7 @@ La méthode maCallbackMeth convertit l’état lorsqu’il est généré :
 |  |  |
 | --- | --- |
 | Numéro de commande | 197 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

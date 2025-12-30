@@ -29,6 +29,6 @@ Si cette commande est appelée hors du contexte d’une session Web, elle retour
 |  |  |
 | --- | --- |
 | Numéro de commande | 1162 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

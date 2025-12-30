@@ -46,6 +46,6 @@ SVG属性に関する詳細は、[SVG SET ATTRIBUTE](svg-set-attribute.md)コマ
 |  |  |
 | --- | --- |
 | コマンド番号 | 1056 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

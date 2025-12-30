@@ -5,11 +5,11 @@ slug: /commands/sequence-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Sequence number.Syntax-->**Sequence number** {( *aTable* )} : Integer<!-- END REF-->
+<!--REF #_command_.Sequence number.Syntax-->**Sequence number** ( *aTable* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Sequence number.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | シーケンス番号を求めるテーブル, または 省略時、デフォルトテーブル |
+| aTable | Table | &#8594; | シーケンス番号を求めるテーブル, または 省略時、デフォルトテーブル |
 | 戻り値 | Integer | &#8592; | シーケンス番号 |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 244 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

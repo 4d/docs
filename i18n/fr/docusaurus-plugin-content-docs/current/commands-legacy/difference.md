@@ -5,13 +5,13 @@ slug: /commands/difference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
+<!--REF #_command_.DIFFERENCE.Syntax-->**DIFFERENCE** ( *ensemble1* : Text ; *ensemble2* : Text ; *résultat* : Text )<!-- END REF-->
 <!--REF #_command_.DIFFERENCE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble1 | Text | &#8594;  | Ensemble initial |
-| ensemble2 | Text | &#8594;  | Ensemble à exclure |
-| résultat | Text | &#8594;  | Ensemble résultant |
+| ensemble1 | Text | &#8594; | Ensemble initial |
+| ensemble2 | Text | &#8594; | Ensemble à exclure |
+| résultat | Text | &#8594; | Ensemble résultant |
 
 <!-- END REF-->
 
@@ -61,6 +61,6 @@ Un bouton associé à une méthode objet est placé en bas de la liste. La méth
 |  |  |
 | --- | --- |
 | Numéro de commande | 122 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -34,7 +34,7 @@ Se omite o parâmetro *processo*, ENABLE MENU ITEM é aplicado a barra de menus 
 |  |  |
 | --- | --- |
 | Número do comando | 149 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

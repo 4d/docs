@@ -5,13 +5,13 @@ slug: /commands/scan-index
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* ; *number* {; >　または <} )<!-- END REF-->
+<!--REF #_command_.SCAN INDEX.Syntax-->**SCAN INDEX** ( *aField* : Field ; *number* : Integer {; >　または <} )<!-- END REF-->
 <!--REF #_command_.SCAN INDEX.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aField | Field | &#8594;  | インデックスをスキャンするインデックスフィールド |
-| number | Integer | &#8594;  | 返すレコード数 |
-| >　または < | 演算子 | &#8594;  | >: インデックスの始まりから <: インデックスの終わりから |
+| aField | Field | &#8594; | インデックスをスキャンするインデックスフィールド |
+| number | Integer | &#8594; | 返すレコード数 |
+| >　または < | 演算子 | &#8594; | >: インデックスの始まりから <: インデックスの終わりから |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ SCAN INDEXは、インデックスフィールドにのみ使用できます。�
 |  |  |
 | --- | --- |
 | コマンド番号 | 350 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||
 

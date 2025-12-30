@@ -103,7 +103,7 @@ Se passa o valor 3 em *modo*, a função retorna ?00:00:00? (sem referência de 
 |  |  |
 | --- | --- |
 | Número do comando | 264 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document, error |
 
 

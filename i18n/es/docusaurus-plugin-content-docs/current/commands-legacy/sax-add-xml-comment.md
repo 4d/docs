@@ -5,12 +5,12 @@ slug: /commands/sax-add-xml-comment
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *documento* ; *comentario* )<!-- END REF-->
+<!--REF #_command_.SAX ADD XML COMMENT.Syntax-->**SAX ADD XML COMMENT** ( *documento* : Time ; *comentario* : Text )<!-- END REF-->
 <!--REF #_command_.SAX ADD XML COMMENT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| documento | Time | &#8594;  | Referencia del documento abierto |
-| comentario | Text | &#8594;  | Comentario a añadir |
+| documento | Time | &#8594; | Referencia del documento abierto |
+| comentario | Text | &#8594; | Comentario a añadir |
 
 <!-- END REF-->
 
@@ -31,8 +31,8 @@ La siguiente instrucción:
 
 ... escribirá la siguiente línea en el documento: 
 
-```4d
- 
+```xml
+ <!--Creado por 4D-->
 ```
 
 ## Variables y conjuntos del sistema 
@@ -52,7 +52,7 @@ En caso de error, el comando devuelve un error que puede interceptarse utilizand
 |  |  |
 | --- | --- |
 | Número de comando | 852 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, error |
 
 

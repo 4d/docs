@@ -5,11 +5,11 @@ slug: /commands/day-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Day number.Syntax-->**Day number** ( *fecha* ) : Integer<!-- END REF-->
+<!--REF #_command_.Day number.Syntax-->**Day number** ( *fecha* : Date ) : Integer<!-- END REF-->
 <!--REF #_command_.Day number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| fecha | Date | &#8594;  | Fecha para la cual devolver el número del día |
+| fecha | Date | &#8594; | Fecha para la cual devolver el número del día |
 | Resultado | Integer | &#8592; | Número que representa el día de la semana que corresponde a la fecha |
 
 <!-- END REF-->
@@ -65,6 +65,6 @@ El siguiente ejemplo es una función que devuelve el día actual como una cadena
 |  |  |
 | --- | --- |
 | Número de comando | 114 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

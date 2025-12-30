@@ -46,6 +46,6 @@ Vous souhaitez intervertir les 2e et 3e colonnes de la list box :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1274 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

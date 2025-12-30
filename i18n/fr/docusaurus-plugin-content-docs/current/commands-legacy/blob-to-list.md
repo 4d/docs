@@ -5,13 +5,13 @@ slug: /commands/blob-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *blob* {; *offset*} ) : Integer<!-- END REF-->
+<!--REF #_command_.BLOB to list.Syntax-->**BLOB to list** ( *blob* : Blob {; *offset* : Integer} ) : Integer<!-- END REF-->
 <!--REF #_command_.BLOB to list.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB contenant la liste hiérarchique |
-| offset | Integer | &#8596;  | Offset (en octets) dans le BLOB |
-| ||| Nouvel offset après la lecture |
+| Blob | Blob | &#8594; | BLOB contenant la liste hiérarchique |
+| offset | Integer | &#8596; | Offset (en octets) dans le BLOB |
+|  |  |  | Nouvel offset après la lecture |
 | Résultat | Integer | &#8592; | Référence de la liste nouvellement créée |
 
 <!-- END REF-->
@@ -65,7 +65,7 @@ La variable OK prend la valeur 1 si la liste a été correctement créée, sinon
 |  |  |
 | --- | --- |
 | Numéro de commande | 557 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

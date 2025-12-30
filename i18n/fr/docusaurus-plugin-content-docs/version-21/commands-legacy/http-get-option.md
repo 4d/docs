@@ -49,6 +49,6 @@ Passez dans le paramètre *valeur* une variable qui recevra la valeur courante d
 |  |  |
 | --- | --- |
 | Numéro de commande | 1159 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

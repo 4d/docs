@@ -97,7 +97,7 @@ A variável OK é definida como 1 se o BLOB foi compactado com sucesso, caso con
 |  |  |
 | --- | --- |
 | Número do comando | 534 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, error |
 
 

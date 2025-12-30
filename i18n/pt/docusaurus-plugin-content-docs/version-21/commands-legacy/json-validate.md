@@ -110,6 +110,6 @@ Se quiser validar um objeto JSON com um esquema e obter a lista de erros de vali
 |  |  |
 | --- | --- |
 | Número do comando | 1456 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

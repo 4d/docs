@@ -5,11 +5,11 @@ slug: /commands/http-set-certificates-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *certificatesFolder* )<!-- END REF-->
+<!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Syntax-->**HTTP SET CERTIFICATES FOLDER** ( *certificatesFolder* : Text )<!-- END REF-->
 <!--REF #_command_.HTTP SET CERTIFICATES FOLDER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| certificatesFolder | Text | &#8594;  | クライアント証明書フォルダのパス名と名前 |
+| certificatesFolder | Text | &#8594; | クライアント証明書フォルダのパス名と名前 |
 
 <!-- END REF-->
 
@@ -64,6 +64,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1306 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

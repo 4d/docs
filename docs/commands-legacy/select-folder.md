@@ -5,7 +5,7 @@ slug: /commands/select-folder
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* }{;}{ *defaultPath* {; *options*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Select folder.Syntax-->**Select folder** ( {*message* : Text }{;}{ *defaultPath* : Text, Integer {; *options* : Integer}} ) : Text<!-- END REF-->
 <!--REF #_command_.Select folder.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ The following example allows you to select the folder in which the pictures in t
 |  |  |
 | --- | --- |
 | Command number | 670 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

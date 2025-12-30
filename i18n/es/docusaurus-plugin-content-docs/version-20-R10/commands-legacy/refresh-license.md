@@ -51,6 +51,6 @@ Desea actualizar su licencia y recibir un mensaje cuando se complete:
 |  |  |
 | --- | --- |
 | Número de comando | 1336 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

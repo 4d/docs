@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-subsection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get subsection.Syntax-->**WP Get subsection** ( *objRango* ) | (*wpSection* ; *subSectionType* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Get subsection.Syntax-->**WP Get subsection** ( *objRango* : Object ) | (*wpSection* : Object ; *subSectionType* : Integer ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get subsection.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

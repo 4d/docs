@@ -114,9 +114,9 @@ title: コンポーネントの開発
 - メソッドの実行
 - ゴミ箱からの復元、あるいはゴミ箱を空にする。
 
-### Search and replace
+### 検索と置換
 
-You can use the [**Search and replace** features](../Project/search-replace.md) of the host project to search elements within the code or the forms of your editable components. The **Search in project** menu allows you to select one or all components as search target:
+ホストプロジェクトの[**検索と置換** 機能](../Project/search-replace.md) を使用して、編集可能なコンポーネントのコードやフォーム内の要素を検索することができます。 **プロジェクト内を検索** メニューを使用することで、ひとつまたは全てのコンポーネントを検索ターゲットとして選択することができます:
 
 ![](../assets/en/Project/find-components.png)
 
@@ -251,16 +251,16 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 ## 変数の渡し方
 
-Variables are not shared between components and host projects. ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
+変数はコンポーネントとホストプロジェクト間では共有されません。 ホストプロジェクトからコンポーネントの変数を編集、またはその逆をおこなう唯一の方法はポインターを使用することです。
 
 配列を使用した例:
 
 ```4d
-//In the host project:
+//ホストプロジェクト内
      ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
 
-//In the component, the AMethod project method contains:
+//コンポーネント内、AMethod プロジェクトメソッドには以下の記述があります:
      #DECLARE($ptr : Pointer)
      APPEND TO ARRAY($ptr->;2)
 ```
@@ -280,11 +280,11 @@ $p:=component_method2(...)
 ポインターを使用しない場合でも、コンポーネント側からホストデータベースの (変数そのものではなく) 変数の値にアクセスすること自体は可能ですし、その逆も可能です:
 
 ```4d
-//In the host database
+//ホストデータベース内
 var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method gets "DoSomething" in parameter (but not the $input_t variable)
+// component_method は($input_t 変数ではなく) "DoSomething" を引数として受け取ります
 ```
 
 ホストプロジェクトとコンポーネント間でポインターを使用して通信をおこなうには、以下の点を考慮する必要があります:
@@ -298,7 +298,7 @@ component_method($input_t)
 
 - コンポーネントI が定義する変数 `myIvar` があるとき、コンポーネントC はポインター `->myIvar` を使用しても変数の値にアクセスすることはできません。 このシンタックスは実行エラーを起こします。
 
-- The comparison of pointers using the [`RESOLVE POINTER`](../commands/resolve-pointer) command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
+- [`RESOLVE POINTER`](../commands/resolve-pointer) コマンドを使用したポインターの比較はお勧めできません。変数の分離の原則により、ホストプロジェクトとコンポーネント (あるいは他のコンポーネント) で同じ名前の変数が存在することができますが、根本的にそれらは異なる内容を持ちます。 両コンテキストで、変数のタイプが違うことさえありえます。 ポインター `myptr1` と `myptr2` がそれぞれ変数を指すとき、以下の比較は正しくない結果となるかもしれません:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -331,7 +331,7 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 コンポーネント内の `methCreateRec` メソッドのコード:
 
 ```4d
-#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Pointer on a table in host project
+#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //ホストプロジェクト内のテーブルへのポインター
 
 CREATE RECORD($tablepointer->)
 
@@ -450,6 +450,30 @@ SAVE RECORD($tablepointer->)
 初期化やデータベースを閉じるコードの実行は、 `On Host Database Event` データベースメソッド を使用しておこなわれます。
 
 > セキュリティ上の理由から、`On Host Database Event` データベースメソッドを使用可能にするためには、その実行をホストデータベースで明示的に許可する必要があります。 このためには、ストラクチャー設定画面のセキュリティページ内の、[**コンポーネントの "On Host Database Event" メソッドを実行**](../settings/security.md#オプション) オプションにチェックを入れます:
+
+## カスタムアイコン
+
+You can use a **custom icon** for your dependency, so that it can be visually distinguished from other components in the [Project Dependencies panel](../Project/components.md#monitoring-project-dependencies).
+
+When no custom icon is defined, components use a **default icon**:
+
+![](../assets/en/Develop/icon-comp-default.png)
+
+To declare a custom icon for your component:
+
+1. Create a picture file for the icon and name it `logo.svg` or `logo.png`. Note that the picture will be displayed with a square shape (and automatically resized if necessary). The **svg** format is recommended.
+
+2. Copy the icon file in the [**Resources folder**](../Project/architecture.md#resources) of the component.
+
+The logo file will be used in the Project Dependency window for the component, whether it is interpreted or [built](../Desktop/building.md#build-component).
+
+![](../assets/en/Develop/icon-comp.png)
+
+:::note
+
+If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priority.
+
+:::
 
 ## Info.plist
 

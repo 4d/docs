@@ -128,6 +128,6 @@ http://[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
 |  |  |
 | --- | --- |
 | コマンド番号 | 1158 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

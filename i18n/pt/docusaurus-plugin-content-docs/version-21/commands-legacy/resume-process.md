@@ -31,7 +31,7 @@ Se *processo* foi atrasado anteriormente, consulte os comandos [PAUSE PROCESS](p
 |  |  |
 | --- | --- |
 | Número do comando | 320 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Proibido no servidor ||
 
 

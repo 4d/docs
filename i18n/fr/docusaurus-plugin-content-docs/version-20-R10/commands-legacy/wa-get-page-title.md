@@ -30,6 +30,6 @@ Cette commande retourne une chaîne vide s’il n’y a pas de titre disponible 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1036 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

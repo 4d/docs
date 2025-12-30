@@ -5,7 +5,7 @@ slug: /commands/change-current-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** {( *user* ; *password* )}<!-- END REF-->
+<!--REF #_command_.CHANGE CURRENT USER.Syntax-->**CHANGE CURRENT USER** ({ *user* : Text, Integer ; *password* : Text })<!-- END REF-->
 <!--REF #_command_.CHANGE CURRENT USER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -72,6 +72,6 @@ The following example simply displays the connection dialog box:
 |  |  |
 | --- | --- |
 | Command number | 289 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

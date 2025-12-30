@@ -5,16 +5,16 @@ slug: /commands/listbox-collapse
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( {* ;} *object* {; *recursive* {; *selector* {; *line* {; *column*}}}} )<!-- END REF-->
+<!--REF #_command_.LISTBOX COLLAPSE.Syntax-->**LISTBOX COLLAPSE** ( * ; *object* : Text {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<br/>**LISTBOX COLLAPSE** ( *object* : Field, Variable {; *recursive* : Boolean {; *selector* : Integer {; *line* : Integer {; *column* : Integer}}}} )<!-- END REF-->
 <!--REF #_command_.LISTBOX COLLAPSE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
-| object | any | &#8594;  | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
-| recursive | Boolean | &#8594;  | True = サブレベルを折りたたむ<br/>False = サブレベルを折りたたまない |
-| selector | Integer | &#8594;  | 折りたたむリストボックスのパーツ |
-| line | Integer | &#8594;  | 折り畳むブレーク行の番号、または折り畳むリストボックスレベルの番号 |
-| column | Integer | &#8594;  | 折り畳むブレーク列の番号 |
+| * | 演算子 | &#8594; | 指定時、objectはオブジェクト名 (文字列)<br/>省略時、objectは変数 |
+| object | any | &#8594; | オブジェクト名 (* 指定時) または <br/>変数 (* 省略時) |
+| recursive | Boolean | &#8594; | True = サブレベルを折りたたむ<br/>False = サブレベルを折りたたまない |
+| selector | Integer | &#8594; | 折りたたむリストボックスのパーツ |
+| line | Integer | &#8594; | 折り畳むブレーク行の番号、または折り畳むリストボックスレベルの番号 |
+| column | Integer | &#8594; | 折り畳むブレーク列の番号 |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1101 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

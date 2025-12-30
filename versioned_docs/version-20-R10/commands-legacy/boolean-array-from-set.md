@@ -38,6 +38,6 @@ If you don’t pass the *set* parameter, the command will use UserSet in the cur
 |  |  |
 | --- | --- |
 | Command number | 646 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

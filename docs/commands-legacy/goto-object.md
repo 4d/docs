@@ -5,7 +5,7 @@ slug: /commands/goto-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *object* )<!-- END REF-->
+<!--REF #_command_.GOTO OBJECT.Syntax-->**GOTO OBJECT** ( {* ;} *object* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.GOTO OBJECT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -55,6 +55,6 @@ See the example for the [REJECT](reject.md) command.
 |  |  |
 | --- | --- |
 | Command number | 206 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

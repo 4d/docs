@@ -5,12 +5,12 @@ slug: /commands/apply-to-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *laTable* ; *formule* )<!-- END REF-->
+<!--REF #_command_.APPLY TO SELECTION.Syntax-->**APPLY TO SELECTION** ( *laTable* : Table ; *formule* : Expression )<!-- END REF-->
 <!--REF #_command_.APPLY TO SELECTION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle appliquer la formule |
-| formule | Expression | &#8594;  | Ligne de code ou méthode |
+| laTable | Table | &#8594; | Table dans laquelle appliquer la formule |
+| formule | Expression | &#8594; | Ligne de code ou méthode |
 
 <!-- END REF-->
 
@@ -69,7 +69,7 @@ Si l'utilisateur clique sur le bouton Stop dans le thermomètre de progression, 
 |  |  |
 | --- | --- |
 | Numéro de commande | 70 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 
 

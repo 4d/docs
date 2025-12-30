@@ -5,14 +5,14 @@ slug: /commands/form-get-objects
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *arrObjetos* {; *arrVariables* {; *arrPags*}} {; *opcionPag*} )<!-- END REF-->
+<!--REF #_command_.FORM GET OBJECTS.Syntax-->**FORM GET OBJECTS** ( *arrObjetos* : Text array {; *arrVariables* : Pointer array {; *arrPags* : Integer array}} {; *opcionPag* : Integer, *} )<!-- END REF-->
 <!--REF #_command_.FORM GET OBJECTS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
 | arrObjetos | Text array | &#8592; | Nombre de los objetos del formulario |
 | arrVariables | Pointer array | &#8592; | Punteros a variables o campos asociados a los objetos |
-| arrPags | Array integer | &#8592; | Número de página de cada objeto |
-| opcionPag | Integer, * | &#8594;  | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas<br/>Si se pasa * (obsoleto) = página actual con objetos heredados |
+| arrPags | Integer array | &#8592; | Número de página de cada objeto |
+| opcionPag | Integer, * | &#8594; | 1=Página actual del formulario, 2=Todas las páginas, 4=Páginas heredadas<br/>Si se pasa * (obsoleto) = página actual con objetos heredados |
 
 <!-- END REF-->
 
@@ -130,6 +130,6 @@ Usted quiere cargar un formulario y obtener la lista de todos los objetos de los
 |  |  |
 | --- | --- |
 | Número de comando | 898 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

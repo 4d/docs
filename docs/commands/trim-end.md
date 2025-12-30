@@ -4,7 +4,7 @@ title: Trim end
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trim end.Syntax-->**Trim end** ( *aString* ) : Text<!-- END REF-->
+<!--REF #_command_.Trim end.Syntax-->**Trim end** ( *aString* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Trim end.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -59,6 +59,6 @@ $output:=Trim end($input) //"     Hello World!"
 |  |  |
 | --- | --- |
 | Command number | 1855 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

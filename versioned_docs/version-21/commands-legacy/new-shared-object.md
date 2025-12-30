@@ -73,6 +73,6 @@ You want to create and modify a shared object. The structure must be called for 
 |  |  |
 | --- | --- |
 | Command number | 1526 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,7 +5,7 @@ slug: /commands/method-get-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *path* ; *attribType* {; *} ) : Boolean<!-- END REF-->
+<!--REF #_command_.METHOD Get attribute.Syntax-->**METHOD Get attribute** ( *path* : Text ; *attribType* : Integer {; *} ) : Boolean<!-- END REF-->
 <!--REF #_command_.METHOD Get attribute.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -45,6 +45,6 @@ The command returns **True** when an attribute is selected and **False** if it i
 |  |  |
 | --- | --- |
 | Command number | 1169 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

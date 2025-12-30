@@ -40,6 +40,6 @@ In conformity with the principle of list box operation, the columns are synchron
 |  |  |
 | --- | --- |
 | Command number | 916 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

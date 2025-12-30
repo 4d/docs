@@ -5,7 +5,7 @@ slug: /commands/receive-buffer
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *receiveVar* )<!-- END REF-->
+<!--REF #_command_.RECEIVE BUFFER.Syntax-->**RECEIVE BUFFER** ( *receiveVar* : Text )<!-- END REF-->
 <!--REF #_command_.RECEIVE BUFFER.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ Mac OS Xのシリアルポート バッファーサイズは、理論的には�
 |  |  |
 | --- | --- |
 | コマンド番号 | 172 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | error |
 
 

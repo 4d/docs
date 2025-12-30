@@ -5,11 +5,11 @@ slug: /commands/set-help-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* )<!-- END REF-->
+<!--REF #_command_.SET HELP MENU.Syntax-->**SET HELP MENU** ( *menuCol* : Collection )<!-- END REF-->
 <!--REF #_command_.SET HELP MENU.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| menuCol | Collection | &#8594;  | Collection of menu objects |
+| menuCol | Collection | &#8594; | Collection of menu objects |
 
 <!-- END REF-->
 
@@ -65,6 +65,6 @@ Vous souhaitez personnaliser le menu **Aide** de votre application :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1801 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

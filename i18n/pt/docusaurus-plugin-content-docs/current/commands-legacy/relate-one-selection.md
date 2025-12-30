@@ -5,12 +5,12 @@ slug: /commands/relate-one-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tabelaN* ; *tabela1* )<!-- END REF-->
+<!--REF #_command_.RELATE ONE SELECTION.Syntax-->**RELATE ONE SELECTION** ( *tabelaN* : Table ; *tabela1* : Table )<!-- END REF-->
 <!--REF #_command_.RELATE ONE SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabelaN | Table | &#8594;  | Nome da tabela Muitos (onde inicia a relação) |
-| tabela1 | Table | &#8594;  | Nome da Tabela Um (onde termina a relação) |
+| tabelaN | Table | &#8594; | Nome da tabela Muitos (onde inicia a relação) |
+| tabela1 | Table | &#8594; | Nome da Tabela Um (onde termina a relação) |
 
 <!-- END REF-->
 
@@ -64,7 +64,7 @@ A seguinte técnica utiliza **RELATE ONE SELECTION** para obter o mesmo resultad
 |  |  |
 | --- | --- |
 | Número do comando | 349 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

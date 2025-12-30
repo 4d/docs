@@ -56,6 +56,6 @@ El siguiente método de proyecto coloca en mosaico todas las ventanas abiertas a
 |  |  |
 | --- | --- |
 | Número de comando | 442 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,12 +5,12 @@ slug: /commands/ob-instance-of
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* ; *class* ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Instance of.Syntax-->**OB Instance of** ( *object* : Object ; *class* : Object ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Instance of.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object | &#8594;  | クラスをテストするオブジェクト |
-| class | Object | &#8594;  | 属しているかをテストするクラス |
+| object | Object | &#8594; | クラスをテストするオブジェクト |
+| class | Object | &#8594; | 属しているかをテストするクラス |
 | 戻り値 | Boolean | &#8592; | オブジェクトが指定されたクラスまたはその子クラスに属する場合にはTrue、それ以外の場合にはfalse |
 
 <!-- END REF-->
@@ -56,6 +56,6 @@ Polygon というクラスを作成した場合を考えます:
 |  |  |
 | --- | --- |
 | コマンド番号 | 1731 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

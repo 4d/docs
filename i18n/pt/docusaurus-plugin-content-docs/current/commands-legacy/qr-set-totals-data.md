@@ -5,14 +5,14 @@ slug: /commands/qr-set-totals-data
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* ; *numColuna* ; *numQuebra* ; operador | valor )<!-- END REF-->
+<!--REF #_command_.QR SET TOTALS DATA.Syntax-->**QR SET TOTALS DATA** ( *area* : Integer ; *numColuna* : Integer ; *numQuebra* : Integer ; operador | valor )<!-- END REF-->
 <!--REF #_command_.QR SET TOTALS DATA.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| numColuna | Integer | &#8594;  | Nº da coluna |
-| numQuebra | Integer | &#8594;  | Número de quebra |
-| operador &#124; valor | Inteiro longo, String | &#8594;  | Operador para a célula ou conteúdo da célula |
+| area | Integer | &#8594; | Referência da área |
+| numColuna | Integer | &#8594; | Nº da coluna |
+| numQuebra | Integer | &#8594; | Número de quebra |
+| operador &#124; valor | Inteiro longo, String | &#8594; | Operador para a célula ou conteúdo da célula |
 
 <!-- END REF-->
 
@@ -104,7 +104,7 @@ Se o parâmetro *numQuebra* for incorreto, se gera o erro -9853.
 |  |  |
 | --- | --- |
 | Número do comando | 767 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

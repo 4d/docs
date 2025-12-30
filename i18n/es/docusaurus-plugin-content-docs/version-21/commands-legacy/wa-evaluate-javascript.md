@@ -108,6 +108,6 @@ Luego puede evaluar el código JavaScript desde 4D:
 |  |  |
 | --- | --- |
 | Número de comando | 1029 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

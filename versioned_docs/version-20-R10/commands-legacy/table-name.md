@@ -44,6 +44,6 @@ The following is an example of a generic method that displays the records of a t
 |  |  |
 | --- | --- |
 | Command number | 256 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

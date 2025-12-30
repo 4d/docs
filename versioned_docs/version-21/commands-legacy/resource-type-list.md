@@ -84,6 +84,6 @@ Once this project method is implemented in a database, you can write:
 |  |  |
 | --- | --- |
 | Command number | 499 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

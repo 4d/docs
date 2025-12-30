@@ -5,7 +5,7 @@ slug: /commands/dom-count-xml-elements
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* ; *elementName* ) : Integer<!-- END REF-->
+<!--REF #_command_.DOM Count XML elements.Syntax-->**DOM Count XML elements** ( *elementRef* : Text ; *elementName* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.DOM Count XML elements.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ If the command has been correctly executed, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 726 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

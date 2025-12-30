@@ -170,6 +170,6 @@ A l'aide des possibilités de communication interprocess de 4D, vous pouvez cons
 |  |  |
 | --- | --- |
 | Numéro de commande | 390 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

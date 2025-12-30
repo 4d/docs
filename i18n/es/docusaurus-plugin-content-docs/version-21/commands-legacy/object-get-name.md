@@ -44,6 +44,6 @@ Después de la ejecución de este método objeto, la variable *$btnName* contien
 |  |  |
 | --- | --- |
 | Número de comando | 1087 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

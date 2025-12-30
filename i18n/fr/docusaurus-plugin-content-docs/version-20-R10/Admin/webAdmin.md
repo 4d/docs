@@ -71,8 +71,8 @@ Quand cette option est cochée, il est possible de se connecter au serveur `WebA
 
 **Notes :**
 
-- Les connections HTTP autres que sur localhost ne sont jamais acceptées.
-- Même si cette option est activée, quand [HTTPS Accepté](#accept-https) est activé et que la configuration TLS est valide, les connections sur localhost se font via HTTPS.
+- Les connexions HTTP autres que sur localhost ne sont jamais acceptées.
+- Même si cette option est cochée, lorsque [HTTPS accepté](#accept-https) est coché et que la configuration TLS est valide, les connexions locahost utilisent HTTPS.
 
 #### Port HTTP
 
@@ -124,15 +124,15 @@ Cette option permet l'accès utilisateur à [Qodly Studio](../WebServer/qodly-st
 
 ## Configuration de WebAdmin sans interface
 
-Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
+Pour gérer le contenu du fichier, vous pouvez utiliser la [fenêtre de paramètres WebAdmin](#settings-dialog-box) de l'application 4D avec une interface, et la lancer sans interface ensuite. Il existe un fichier `WebAdmin.4DSettings` par défaut pour chaque application 4D et 4D Server, de sorte qu'il est possible de déployer plusieurs applications sur la même machine hôte.
 
 Dans le cas d'une application 4D ou 4D Server sans interface, vous pouvez configurer et utiliser le fichier `WebAdmin.4DSettings` par défaut, ou désigner un fichier `.4DSettings` personnalisé.
 
-Boîte de dialogue des Propriétés Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server. Par défaut, il existe un fichier `WebAdmin.4DSettings` par application 4D et 4D Server.
+Pour définir le contenu du fichier, vous pouvez utiliser la [boîte de dialogue des propriétés WebAdmin](#settings-dialog-box) de l'application 4D avec interface et l'exécuter ensuite sans interface. Le fichier par défaut `WebAdmin.4DSettings` est alors utilisé.
 
 Vous pouvez aussi définir un fichier `.4DSettings`. (format XML) et l'utiliser à la place du fichier par défaut. Plusieurs arguments dédiés sont disponibles dans [l'interface de ligne de commande](cli.md) pour prendre en charge cette fonctionnalité.
 
-> Cette clé d'accès n'est pas stockée de façon transparente dans le fichier `.4DSettings`.
+> La clé d'accès n'est pas stockée en clair dans le fichier `.4DSettings`.
 
 Voici un exemple :
 

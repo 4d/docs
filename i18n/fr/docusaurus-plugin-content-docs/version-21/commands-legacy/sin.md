@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Numéro de commande | 17 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -48,6 +48,6 @@ In a database containing a project form named “TheForm” and a table form wit
 |  |  |
 | --- | --- |
 | Command number | 993 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

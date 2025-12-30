@@ -58,6 +58,6 @@ Autenticación con un servicio web ubicado detrás de un proxy:
 |  |  |
 | --- | --- |
 | Número de comando | 786 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

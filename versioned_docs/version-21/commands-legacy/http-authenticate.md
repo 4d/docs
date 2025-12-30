@@ -63,6 +63,6 @@ Examples of requests with authentication:
 |  |  |
 | --- | --- |
 | Command number | 1161 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

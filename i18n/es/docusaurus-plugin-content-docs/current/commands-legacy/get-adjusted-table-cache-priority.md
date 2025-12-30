@@ -5,11 +5,11 @@ slug: /commands/get-adjusted-table-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *tabla* ) : Integer<!-- END REF-->
+<!--REF #_command_.Get adjusted table cache priority.Syntax-->**Get adjusted table cache priority** ( *tabla* : Table ) : Integer<!-- END REF-->
 <!--REF #_command_.Get adjusted table cache priority.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual se debe recuperar el valor de prioridad escalar |
+| tabla | Table | &#8594; | Tabla para la cual se debe recuperar el valor de prioridad escalar |
 | Resultado | Integer | &#8592; | Valor de prioridad actual para campos escalares |
 
 <!-- END REF-->
@@ -33,6 +33,6 @@ Los tipos de campos de datos escalares incluyen campos de tipo fecha/hora, numé
 |  |  |
 | --- | --- |
 | Número de comando | 1426 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

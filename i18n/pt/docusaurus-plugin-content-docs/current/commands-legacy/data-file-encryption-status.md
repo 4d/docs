@@ -9,8 +9,8 @@ displayed_sidebar: docs
 <!--REF #_command_.Data file encryption status.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| rotaEstrutura | Text | &#8594;  | Rota do arquivo de estrutura 4D a ser verificado |
-| rotaDados | Text | &#8594;  | Rota do arquivo de dados 4D a ser verificado |
+| rotaEstrutura | Text | &#8594; | Rota do arquivo de estrutura 4D a ser verificado |
+| rotaDados | Text | &#8594; | Rota do arquivo de dados 4D a ser verificado |
 | Resultado | Object | &#8592; | Informação sobre o estado de criptografia do arquivo de dados e de cada tabela |
 
 <!-- END REF-->
@@ -74,6 +74,6 @@ Se quiser conhecer o estado de criptografia de um arquivo de dados que correspon
 |  |  |
 | --- | --- |
 | Número do comando | 1609 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

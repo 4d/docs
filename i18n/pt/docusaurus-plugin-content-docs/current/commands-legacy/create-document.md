@@ -5,12 +5,12 @@ slug: /commands/create-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create document.Syntax-->**Create document** ( *documento* {; *tipoArquivo*} ) : Time<!-- END REF-->
+<!--REF #_command_.Create document.Syntax-->**Create document** ( *documento* : Text {; *tipoArquivo* : Text} ) : Time<!-- END REF-->
 <!--REF #_command_.Create document.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| documento | Text | &#8594;  | Nome de documento ou rota de acesso completa ou string vazia para caixa de diálogo de arquivo |
-| tipoArquivo | Text | &#8594;  | Lista de tipos de documentos a serem pesquisados, ou "*" para não pesquisar os documentos |
+| documento | Text | &#8594; | Nome de documento ou rota de acesso completa ou string vazia para caixa de diálogo de arquivo |
+| tipoArquivo | Text | &#8594; | Lista de tipos de documentos a serem pesquisados, ou "*" para não pesquisar os documentos |
 | Resultado | Time | &#8592; | Número de referência de documento |
 
 <!-- END REF-->
@@ -78,7 +78,7 @@ Se o documento for criado corretamente, a variável sistema OK assume o valor 1 
 |  |  |
 | --- | --- |
 | Número do comando | 266 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK, Document, error |
 
 

@@ -5,7 +5,7 @@ slug: /commands/close-resource-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFile* )<!-- END REF-->
+<!--REF #_command_.CLOSE RESOURCE FILE.Syntax-->**CLOSE RESOURCE FILE** ( *resFile* : Time )<!-- END REF-->
 <!--REF #_command_.CLOSE RESOURCE FILE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -34,6 +34,6 @@ Remember to eventually call **CLOSE RESOURCE FILE** for a resource file that you
 |  |  |
 | --- | --- |
 | Command number | 498 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

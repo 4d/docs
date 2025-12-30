@@ -5,12 +5,12 @@ slug: /commands/set-assert-enabled
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *aser* {; *} )<!-- END REF-->
+<!--REF #_command_.SET ASSERT ENABLED.Syntax-->**SET ASSERT ENABLED** ( *aser* : Boolean {; *} )<!-- END REF-->
 <!--REF #_command_.SET ASSERT ENABLED.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| aser | Boolean | &#8594;  | True = activar las aserciones, False = desactivar las aserciones |
-| * | Operador | &#8594;  | Si se omite = el comando se aplica al conjunto de los procesos, Si se pasa = el comando se aplica al proceso actual únicamente |
+| aser | Boolean | &#8594; | True = activar las aserciones, False = desactivar las aserciones |
+| * | Operador | &#8594; | Si se omite = el comando se aplica al conjunto de los procesos, Si se pasa = el comando se aplica al proceso actual únicamente |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ Desactivación de aserciones:
 |  |  |
 | --- | --- |
 | Número de comando | 1131 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

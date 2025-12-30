@@ -5,7 +5,7 @@ slug: /commands/get-menu-title
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* {; *process*} ) : Text<!-- END REF-->
+<!--REF #_command_.Get menu title.Syntax-->**Get menu title** ( *menu* : Integer, Text {; *process* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Get menu title.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -32,7 +32,7 @@ If you omit the *process* parameter, **Get menu title** applies to the menu bar 
 |  |  |
 | --- | --- |
 | Command number | 430 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Forbidden on the server ||
 
 

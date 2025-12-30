@@ -5,7 +5,7 @@ slug: /commands/blob-to-picture
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.BLOB TO PICTURE.Syntax-->**BLOB TO PICTURE** ( *pictureBlob* ; *picture* {; *codec*} )<!-- END REF-->
+<!--REF #_command_.BLOB TO PICTURE.Syntax-->**BLOB TO PICTURE** ( *pictureBlob* : Blob ; *picture* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.BLOB TO PICTURE.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,7 +57,7 @@ If the command has been executed correctly, the system variable OK is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 682 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK |
 
 

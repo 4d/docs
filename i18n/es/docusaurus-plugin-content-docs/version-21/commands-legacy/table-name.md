@@ -44,6 +44,6 @@ El siguiente es un ejemplo de un método genérico que muestra los registros de 
 |  |  |
 | --- | --- |
 | Número de comando | 256 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

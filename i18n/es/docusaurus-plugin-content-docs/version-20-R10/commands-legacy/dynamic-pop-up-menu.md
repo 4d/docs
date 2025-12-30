@@ -97,6 +97,6 @@ Este código permite crear un menú emergente dinámico jerárquico basado en ac
 |  |  |
 | --- | --- |
 | Número de comando | 1006 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,7 +5,7 @@ slug: /commands/set-default-century
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *century* {; *pivotYear*} )<!-- END REF-->
+<!--REF #_command_.SET DEFAULT CENTURY.Syntax-->**SET DEFAULT CENTURY** ( *century* : Integer {; *pivotYear* : Integer} )<!-- END REF-->
 <!--REF #_command_.SET DEFAULT CENTURY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -68,6 +68,6 @@ This command only affects data entry. It has no effect on date storage, computat
 |  |  |
 | --- | --- |
 | Command number | 392 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

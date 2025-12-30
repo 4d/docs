@@ -5,7 +5,7 @@ slug: /commands/last-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.LAST RECORD.Syntax-->**LAST RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.LAST RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ The following example makes the last record of the \[People\] table the current 
 |  |  |
 | --- | --- |
 | Command number | 200 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

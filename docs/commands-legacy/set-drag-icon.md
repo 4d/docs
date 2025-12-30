@@ -5,7 +5,7 @@ slug: /commands/set-drag-icon
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* {; *horOffset* {; *vertOffset*}} )<!-- END REF-->
+<!--REF #_command_.SET DRAG ICON.Syntax-->**SET DRAG ICON** ( *icon* : Picture {; *horOffset* : Integer {; *vertOffset* : Integer}} )<!-- END REF-->
 <!--REF #_command_.SET DRAG ICON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -63,6 +63,6 @@ Note that you can modify the position of the cursor with respect to the picture:
 |  |  |
 | --- | --- |
 | Command number | 1272 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

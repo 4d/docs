@@ -5,13 +5,13 @@ slug: /commands/array-to-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* ; *lista* {; *itemRefs*} )<!-- END REF-->
+<!--REF #_command_.ARRAY TO LIST.Syntax-->**ARRAY TO LIST** ( *array* : Array ; *lista* : Text, Integer {; *itemRefs* : Array} )<!-- END REF-->
 <!--REF #_command_.ARRAY TO LIST.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | Array do qual se copia os elementos de array |
-| lista | Text, Integer | &#8594;  | Lista na qual se copia os elementos de array |
-| itemRefs | Array | &#8594;  | Arrays numéricos do número de referência dos elementos |
+| array | Array | &#8594; | Array do qual se copia os elementos de array |
+| lista | Text, Integer | &#8594; | Lista na qual se copia os elementos de array |
+| itemRefs | Array | &#8594; | Arrays numéricos do número de referência dos elementos |
 
 <!-- END REF-->
 
@@ -66,7 +66,7 @@ O comando ARRAY TO LIST gera o erro *\-9957* quando é aplicado a uma lista que 
 |  |  |
 | --- | --- |
 | Número do comando | 287 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

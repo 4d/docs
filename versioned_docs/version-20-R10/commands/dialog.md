@@ -175,6 +175,6 @@ After a call to **DIALOG**, if the dialog is accepted, OK is set to 1; if it is 
 |  |  |
 | --- | --- |
 | Command number | 40 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK, error |
 

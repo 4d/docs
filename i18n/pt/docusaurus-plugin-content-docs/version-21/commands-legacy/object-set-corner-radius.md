@@ -70,6 +70,6 @@ Note that for text areas (as well as inputs), unlike for rectangles, the corner 
 |  |  |
 | --- | --- |
 | Número do comando | 1323 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

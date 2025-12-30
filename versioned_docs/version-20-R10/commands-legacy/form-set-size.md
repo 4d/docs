@@ -128,6 +128,6 @@ The object method associated with this button is as follows:
 |  |  |
 | --- | --- |
 | Command number | 891 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

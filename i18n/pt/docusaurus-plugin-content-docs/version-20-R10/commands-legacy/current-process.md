@@ -32,6 +32,6 @@ Ver os exemplos de [DELAY PROCESS](delay-process.md "DELAY PROCESS") e [PROCESS 
 |  |  |
 | --- | --- |
 | Número do comando | 322 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

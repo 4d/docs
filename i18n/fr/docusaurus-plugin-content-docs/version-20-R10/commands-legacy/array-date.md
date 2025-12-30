@@ -59,6 +59,6 @@ Cet exemple crée un tableau interprocess de 50 éléments de type Date et affec
 |  |  |
 | --- | --- |
 | Numéro de commande | 224 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -80,6 +80,6 @@ Usted quiere encontrar el número de ocurrencias de las cadenas que comienzan po
 |  |  |
 | --- | --- |
 | Número de comando | 1333 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

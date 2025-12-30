@@ -5,11 +5,11 @@ slug: /commands/create-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Create menu.Syntax-->**Create menu** {( *menu* )} : Text<!-- END REF-->
+<!--REF #_command_.Create menu.Syntax-->**Create menu** ( *menu* : Text, Integer, Text ) : Text<!-- END REF-->
 <!--REF #_command_.Create menu.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| menu | Text, Integer, Text | &#8594;  | Referência de menu ou Número ou Nome da barra de menu |
+| menu | Text, Integer, Text | &#8594; | Referência de menu ou Número ou Nome da barra de menu |
 | Resultado | Text | &#8592; | Referência de menu |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ Consulte o exemplo do comando [SET MENU BAR](set-menu-bar.md "SET MENU BAR").
 |  |  |
 | --- | --- |
 | Número do comando | 408 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

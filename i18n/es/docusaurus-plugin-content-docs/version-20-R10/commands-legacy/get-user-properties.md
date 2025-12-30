@@ -58,7 +58,7 @@ Si no tiene privilegios de acceso para llamar al comando GET USER PROPERTIES o s
 |  |  |
 | --- | --- |
 | Número de comando | 611 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

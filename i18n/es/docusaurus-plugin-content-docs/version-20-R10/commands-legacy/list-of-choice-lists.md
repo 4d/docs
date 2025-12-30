@@ -26,6 +26,6 @@ Los números de las listas corresponden a su orden de creación. En el editor de
 |  |  |
 | --- | --- |
 | Número de comando | 957 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

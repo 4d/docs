@@ -5,7 +5,7 @@ slug: /commands/get-group-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *groupNames* ; *groupNumbers* )<!-- END REF-->
+<!--REF #_command_.GET GROUP LIST.Syntax-->**GET GROUP LIST** ( *groupNames* : Text array ; *groupNumbers* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET GROUP LIST.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 610 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

@@ -5,11 +5,11 @@ slug: /commands/get-picture-file-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *picture* ) : Text<!-- END REF-->
+<!--REF #_command_.Get picture file name.Syntax-->**Get picture file name** ( *picture* : Picture, Picture ) : Text<!-- END REF-->
 <!--REF #_command_.Get picture file name.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture | Picture, Picture | &#8594;  | デフォルト名を取得するピクチャー |
+| picture | Picture, Picture | &#8594; | デフォルト名を取得するピクチャー |
 | 戻り値 | Text | &#8592; | ピクチャーファイルのデフォルト名 |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1171 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

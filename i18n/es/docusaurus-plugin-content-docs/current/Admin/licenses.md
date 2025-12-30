@@ -32,7 +32,7 @@ Las licencias de despliegue pueden ser anidadas en el paso de creación por el d
 
 Algunas licencias 4D tienen una fecha de caducidad, después de la cual deben ser renovadas. Cuando la suscripción a la licencia se renueva en 4D Store, sus licencias se actualizan automáticamente en sus aplicaciones 4D al iniciar el proceso [cuando se conecta](GettingStarted/Installation.md) en el Asistente de bienvenida.
 
-En algunos casos, la actualización de la licencia puede necesitar que haga clic en el botón [**Actualizar**](#refresh) de la caja de diálogo del Gestor de licencias.
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licenses Manager dialog box.
 
 ## Activación de licencias
 

@@ -5,12 +5,12 @@ slug: /commands/wa-zoom-out
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA ZOOM OUT.Syntax-->**WA ZOOM OUT** ( {* ;} *objeto* )<!-- END REF-->
+<!--REF #_command_.WA ZOOM OUT.Syntax-->**WA ZOOM OUT** ( * ; *objeto* : Text )<br/>**WA ZOOM OUT** ( *objeto* : Field, Variable )<!-- END REF-->
 <!--REF #_command_.WA ZOOM OUT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ Em Windows, o alcance deste comando é global: a configuração se conserva depo
 |  |  |
 | --- | --- |
 | Número do comando | 1040 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

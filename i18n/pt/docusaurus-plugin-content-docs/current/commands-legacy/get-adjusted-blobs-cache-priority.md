@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get adjusted blobs cache priority.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| Table | Table | &#8594;  | Tabela para a qual o valor de prioridade dos "blobs" vai ser recuperada |
+| Table | Table | &#8594; | Tabela para a qual o valor de prioridade dos "blobs" vai ser recuperada |
 | Resultado | Integer | &#8592; | Valor de prioridade atual para campos "blobs" |
 
 <!-- END REF-->
@@ -31,6 +31,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número do comando | 1428 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

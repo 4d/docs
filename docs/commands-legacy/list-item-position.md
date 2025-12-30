@@ -5,7 +5,7 @@ slug: /commands/list-item-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *list* ; *itemRef* ) : Integer<!-- END REF-->
+<!--REF #_command_.List item position.Syntax-->**List item position** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.List item position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -44,6 +44,6 @@ If the item does not exist, **List item position** returns 0.
 |  |  |
 | --- | --- |
 | Command number | 629 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

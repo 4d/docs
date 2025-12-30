@@ -5,13 +5,13 @@ slug: /commands/generate-digest
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* ; *algorithme* {; *} ) : Text<!-- END REF-->
+<!--REF #_command_.Generate digest.Syntax-->**Generate digest** ( *param* : Blob, Text ; *algorithme* : Integer {; *} ) : Text<!-- END REF-->
 <!--REF #_command_.Generate digest.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| param | Blob, Text | &#8594;  | Blob ou texte pour lequel obtenir une clé digest |
-| algorithme | Integer | &#8594;  | Algorithme utilisé pour retourner la clé : 0 = Digest MD5, 1 = Digest SHA1, 2 = Digest 4D, 3 = Digest SHA-256, 4 = Digest SHA-512 |
-| * | Opérateur | &#8594;  | Crypter digest en Base64URL |
+| param | Blob, Text | &#8594; | Blob ou texte pour lequel obtenir une clé digest |
+| algorithme | Integer | &#8594; | Algorithme utilisé pour retourner la clé : 0 = Digest MD5, 1 = Digest SHA1, 2 = Digest 4D, 3 = Digest SHA-256, 4 = Digest SHA-512 |
+| * | Opérateur | &#8594; | Crypter digest en Base64URL |
 | Résultat | Text | &#8592; | Valeur de la clé digest |
 
 <!-- END REF-->
@@ -88,6 +88,6 @@ Ces exemples illustrent comment récupérer la clé digest d’un texte :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1147 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

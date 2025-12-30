@@ -5,13 +5,12 @@ slug: /commands/edit-formula
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *aTable* ; *formula* )<!-- END REF-->
+<!--REF #_command_.EDIT FORMULA.Syntax-->**EDIT FORMULA** ( *aTable* : Table ; *formula* : Text )<!-- END REF-->
 <!--REF #_command_.EDIT FORMULA.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | フォーミュラエディタにデフォルトで表示するテーブル |
-| formula | Text | &#8594;  | フォーミュラエディタに表示するフォーミュラを含む変 またはエディタの実を表示するには "" |
-| &#8592; | ユーザが確定したフォーミュラ |
+| aTable | Table | &#8594; | フォーミュラエディタにデフォルトで表示するテーブル |
+| formula | Text | &#8596; | *in:* Variable containing the formula to display in the Formula editor or "" to display editor only<br/>*out:* Formula validated by the user |
 
 <!-- END REF-->
 
@@ -59,7 +58,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 806 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | OK |
 
 

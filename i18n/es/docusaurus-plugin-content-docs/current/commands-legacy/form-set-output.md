@@ -5,13 +5,13 @@ slug: /commands/form-set-output
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*tabla* ;} *form* {; *formUsuario*} )<!-- END REF-->
+<!--REF #_command_.FORM SET OUTPUT.Syntax-->**FORM SET OUTPUT** ( {*tabla* : Table ;} *form* : Text, Object {; *formUsuario* : Text} )<!-- END REF-->
 <!--REF #_command_.FORM SET OUTPUT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| tabla | Table | &#8594;  | Tabla para la cual definir el formulario de salida, o Tabla por defecto, si se omite |
-| form | Text, Object | &#8594;  | Nombre del formulario |
-| formUsuario | Text | &#8594;  | Nombre del formulario usuario a utilizar |
+| tabla | Table | &#8594; | Tabla para la cual definir el formulario de salida, o Tabla por defecto, si se omite |
+| form | Text, Object | &#8594; | Nombre del formulario |
+| formUsuario | Text | &#8594; | Nombre del formulario usuario a utilizar |
 
 <!-- END REF-->
 
@@ -75,6 +75,6 @@ Los siguientes ejemplos usan la ruta a un formulario .json para imprimir los reg
 |  |  |
 | --- | --- |
 | Número de comando | 54 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

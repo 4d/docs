@@ -5,11 +5,11 @@ slug: /commands/get-file-from-pasteboard
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* ) : Text<!-- END REF-->
+<!--REF #_command_.Get file from pasteboard.Syntax-->**Get file from pasteboard** ( *xIndex* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Get file from pasteboard.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| xIndex | Integer | &#8594;  | ドラッグアクションに含まれるx番目のファイル |
+| xIndex | Integer | &#8594; | ドラッグアクションに含まれるx番目のファイル |
 | 戻り値 | Text | &#8592; | ペーストボードから取り出した、ファイルのパス名 |
 
 <!-- END REF-->
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 976 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

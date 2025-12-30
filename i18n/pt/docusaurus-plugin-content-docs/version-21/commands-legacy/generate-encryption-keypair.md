@@ -58,6 +58,6 @@ Ver o exemplo do comando [ENCRYPT BLOB](encrypt-blob.md).
 |  |  |
 | --- | --- |
 | Número do comando | 688 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

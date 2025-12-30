@@ -46,6 +46,6 @@ Si l'enregistrement a été verrouillé par une *requête REST $lock*:
 |  |  |
 | --- | --- |
 | Numéro de commande | 353 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

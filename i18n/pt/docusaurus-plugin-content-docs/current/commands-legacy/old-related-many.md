@@ -5,11 +5,11 @@ slug: /commands/old-related-many
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *campo* )<!-- END REF-->
+<!--REF #_command_.OLD RELATED MANY.Syntax-->**OLD RELATED MANY** ( *campo* : Field )<!-- END REF-->
 <!--REF #_command_.OLD RELATED MANY.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campo | Field | &#8594;  | Um Campo |
+| campo | Field | &#8594; | Um Campo |
 
 <!-- END REF-->
 
@@ -31,7 +31,7 @@ OLD RELATED MANY muda a seleção da tabela relacionada e seleciona o primeiro r
 |  |  |
 | --- | --- |
 | Número do comando | 263 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar o registro atual ||
 | Modificar a seleção atual ||
 

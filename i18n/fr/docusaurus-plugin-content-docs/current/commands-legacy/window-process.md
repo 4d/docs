@@ -5,11 +5,11 @@ slug: /commands/window-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Window process.Syntax-->**Window process** {( *fenêtre* )} : Integer<!-- END REF-->
+<!--REF #_command_.Window process.Syntax-->**Window process** ( *fenêtre* : Integer ) : Integer<!-- END REF-->
 <!--REF #_command_.Window process.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| fenêtre | Integer | &#8594;  | Numéro de référence de fenêtre |
+| fenêtre | Integer | &#8594; | Numéro de référence de fenêtre |
 | Résultat | Integer | &#8592; | Numéro de référence de process |
 
 <!-- END REF-->
@@ -29,6 +29,6 @@ Si vous omettez le paramètre *fenêtre*, **Window process** retourne le numéro
 |  |  |
 | --- | --- |
 | Numéro de commande | 446 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

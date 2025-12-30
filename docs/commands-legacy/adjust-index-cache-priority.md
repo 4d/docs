@@ -5,7 +5,7 @@ slug: /commands/adjust-index-cache-priority
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *aField* ; *priority* )<!-- END REF-->
+<!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Syntax-->**ADJUST INDEX CACHE PRIORITY** ( *aField* : Field ; *priority* : Integer )<!-- END REF-->
 <!--REF #_command_.ADJUST INDEX CACHE PRIORITY.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -58,6 +58,6 @@ You want to temporarily change the cache priority for the \[Docs\]Comments field
 |  |  |
 | --- | --- |
 | Command number | 1430 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

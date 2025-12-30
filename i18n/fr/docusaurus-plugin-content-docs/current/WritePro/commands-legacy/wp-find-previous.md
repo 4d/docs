@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-find-previous
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Find previous.Syntax-->**WP Find previous** ( *objCible* ; *rechercherAprès* ; *rechercherValeur* ; *conditionRecherche* {; *remplacerValeur*} ) -> Résultat<!-- END REF-->
+<!--REF #_command_.WP Find previous.Syntax-->**WP Find previous** ( *objCible* : Object ; *rechercherAprès* : Object ; *rechercherValeur* : Text ; *conditionRecherche* : Integer {; *remplacerValeur* : Text} ) -> Résultat<!-- END REF-->
 <!--REF #_command_.WP Find previous.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

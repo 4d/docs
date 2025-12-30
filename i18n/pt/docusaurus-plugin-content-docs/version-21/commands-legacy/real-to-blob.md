@@ -138,6 +138,6 @@ Depois de executar este código:
 |  |  |
 | --- | --- |
 | Número do comando | 552 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

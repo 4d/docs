@@ -112,7 +112,7 @@ Se um relatório for impresso utilizando [PRINT SELECTION](print-selection.md "P
 |  |  |
 | --- | --- |
 | Número do comando | 190 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

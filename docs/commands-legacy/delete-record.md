@@ -5,7 +5,7 @@ slug: /commands/delete-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.DELETE RECORD.Syntax-->**DELETE RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.DELETE RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -48,7 +48,7 @@ The following example deletes an employee record. The code asks the user what em
 |  |  |
 | --- | --- |
 | Command number | 58 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

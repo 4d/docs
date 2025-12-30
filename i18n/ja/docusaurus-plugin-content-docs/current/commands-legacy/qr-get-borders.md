@@ -5,14 +5,14 @@ slug: /commands/qr-get-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *area* ; *column* ; *row* ; *border* ; *line* {; *color*} )<!-- END REF-->
+<!--REF #_command_.QR GET BORDERS.Syntax-->**QR GET BORDERS** ( *area* : Integer ; *column* : Integer ; *row* : Integer ; *border* : Integer ; *line* : Integer {; *color* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR GET BORDERS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | エリア参照 |
-| column | Integer | &#8594;  | カラム番号 |
-| row | Integer | &#8594;  | 行番号 |
-| border | Integer | &#8594;  | 罫線の値 |
+| area | Integer | &#8594; | エリア参照 |
+| column | Integer | &#8594; | カラム番号 |
+| row | Integer | &#8594; | 行番号 |
+| border | Integer | &#8594; | 罫線の値 |
 | line | Integer | &#8592; | 線の太さ |
 | color | Integer | &#8592; | 罫線のカラー |
 
@@ -73,7 +73,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 798 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 | システム変数を更新する | error |
 
 

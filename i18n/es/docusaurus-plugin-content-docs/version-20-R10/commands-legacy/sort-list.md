@@ -62,6 +62,6 @@ La lista se ve de esta forma:
 |  |  |
 | --- | --- |
 | Número de comando | 391 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

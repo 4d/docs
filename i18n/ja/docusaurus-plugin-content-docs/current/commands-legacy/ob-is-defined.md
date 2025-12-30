@@ -5,12 +5,12 @@ slug: /commands/ob-is-defined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* {; *property*} ) : Boolean<!-- END REF-->
+<!--REF #_command_.OB Is defined.Syntax-->**OB Is defined** ( *object* : Object, Object {; *property* : Text} ) : Boolean<!-- END REF-->
 <!--REF #_command_.OB Is defined.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| object | Object, Object | &#8594;  | 構造化されたオブジェクト |
-| property | Text | &#8594;  | 指定時にはプロパティをチェック、省略時にはオブジェクトをチェック |
+| object | Object, Object | &#8594; | 構造化されたオブジェクト |
+| property | Text | &#8594; | 指定時にはプロパティをチェック、省略時にはオブジェクトをチェック |
 | 戻り値 | Boolean | &#8592; | property 省略時:object が定義済みの場合はTrue を、それ以外は False を返す<br/>property 指定時:property が定義済みの場合はTrue を、それ以外は False を返す |
 
 <!-- END REF-->
@@ -66,6 +66,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1231 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -55,7 +55,7 @@ El siguiente ejemplo envía cartas a los 50 peores clientes y 50 a los mejores c
 |  |  |
 | --- | --- |
 | Número de comando | 350 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica el registro actual ||
 | Modifica la selección actual ||
 

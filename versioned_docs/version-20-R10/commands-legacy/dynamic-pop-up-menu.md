@@ -97,6 +97,6 @@ This code allows creating a hierarchical dynamic pop up menu built upon standard
 |  |  |
 | --- | --- |
 | Command number | 1006 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -83,6 +83,6 @@ El código de *workerMethod* es:
 |  |  |
 | --- | --- |
 | Número de comando | 1389 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

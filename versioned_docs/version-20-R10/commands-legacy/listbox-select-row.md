@@ -58,6 +58,6 @@ After execution of the method, the arrays are synchronized: if the source array 
 |  |  |
 | --- | --- |
 | Command number | 912 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

@@ -13,9 +13,9 @@ La clase `OpenAIFileDeletedResult` contiene el resultado de una operación de bo
 
 ## Propiedades calculadas
 
-| Propiedad | Tipo                                      | Descripción                                                                                                                                              |
-| --------- | ----------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Returns the file deletion result from the API response. Devuelve `Null` si la respuesta no contiene un resultado válido. |
+| Propiedad | Tipo                                      | Descripción                                                                                                                                                                              |
+| --------- | ----------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `deleted` | [OpenAIFileDeleted](OpenAIFileDeleted.md) | Devuelve el resultado de la eliminación del archivo a partir de la respuesta de la API. Devuelve `Null` si la respuesta no contiene un resultado válido. |
 
 ## Ejemplo de Uso
 

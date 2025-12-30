@@ -32,7 +32,7 @@ Si omite el parámetro *proceso*, Count menu items se aplica a la barra de menú
 |  |  |
 | --- | --- |
 | Número de comando | 405 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Prohibido en el servidor ||
 
 

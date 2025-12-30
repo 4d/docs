@@ -36,6 +36,6 @@ Utilisez **READ WRITE** lorsque vous devez modifier un enregistrement et sauvega
 |  |  |
 | --- | --- |
 | Numéro de commande | 146 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,18 +5,18 @@ slug: /commands/set-environment-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *varName* ; *varValue* )<!-- END REF-->
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Syntax-->**SET ENVIRONMENT VARIABLE** ( *varName* : Text ; *varValue* : Text )<!-- END REF-->
 <!--REF #_command_.SET ENVIRONMENT VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| varName | Text | &#8594;  | 設定する変数の名前 |
-| varValue | Text | &#8594;  | 変数の値、 またはデフォルト値をリセットする "" |
+| varName | Text | &#8594; | 設定する変数の名前 |
+| varValue | Text | &#8594; | 変数の値、 またはデフォルト値をリセットする "" |
 
 <!-- END REF-->
 
 ## 説明 
 
-<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->**SET ENVIRONMENT VARIABLE**コマンドを用いて、macOS とWindowsで環境変数値を設定できます。<!-- END REF-->このコマンドは[LAUNCH EXTERNAL PROCESS](launch-external-process.md)コマンドと共に使用します。また[PHP Execute](php-execute.md)コマンドとも動作します。
+<!--REF #_command_.SET ENVIRONMENT VARIABLE.Summary-->**SET ENVIRONMENT VARIABLE**コマンドを用いて、macOS とWindowsで環境変数値を設定できます。<!-- END REF-->このコマンドは[LAUNCH EXTERNAL PROCESS](launch-external-process.md)コマンドと共に使用します。
 
 変数の名前を*varName* に、その値を*varValue* に渡して定義します。
 
@@ -41,6 +41,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 812 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

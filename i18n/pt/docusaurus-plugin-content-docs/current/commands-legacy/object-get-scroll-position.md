@@ -5,12 +5,12 @@ slug: /commands/object-get-scroll-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( {* ;} *objeto* ; *vPosicao* {; *hPosicao*} )<!-- END REF-->
+<!--REF #_command_.OBJECT GET SCROLL POSITION.Syntax-->**OBJECT GET SCROLL POSITION** ( * ; *objeto* : Text ; *vPosicao* : Integer {; *hPosicao* : Integer} )<br/>**OBJECT GET SCROLL POSITION** ( *objeto* : Field, Variable ; *vPosicao* : Integer {; *hPosicao* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT GET SCROLL POSITION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificar, objeto é um nome de objeto (string) se omitir, objeto é uma variável, um campo ou uma tabela. |
-| objeto | any | &#8594;  | Nome de objeto (se * é especificado) ou variável ou campo ou tabela (se * é omitido) |
+| * | Operador | &#8594; | Se especificar, objeto é um nome de objeto (string) se omitir, objeto é uma variável, um campo ou uma tabela. |
+| objeto | any | &#8594; | Nome de objeto (se * é especificado) ou variável ou campo ou tabela (se * é omitido) |
 | vPosicao | Integer | &#8592; | Número da primeira linha exibido ou deslocamento vertical em pixels (imagens) |
 | hPosicao | Integer | &#8592; | Número da primeira coluna exibido ou rolagem horizontal em pixels (imagens) |
 
@@ -37,6 +37,6 @@ Se *objeto* designa uma imagem (variável ou campo), *vPosição* retorna o movi
 |  |  |
 | --- | --- |
 | Número do comando | 1114 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

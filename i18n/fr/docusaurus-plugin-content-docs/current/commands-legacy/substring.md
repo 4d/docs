@@ -5,13 +5,13 @@ slug: /commands/substring
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* ; àPartirDe {; *nbCars*} ) : Text<!-- END REF-->
+<!--REF #_command_.Substring.Syntax-->**Substring** ( *source* : Text ; àPartirDe {; *nbCars* : Integer} ) : Text<!-- END REF-->
 <!--REF #_command_.Substring.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | Chaîne de laquelle extraire une sous-chaîne |
-| àPartirDe | Integer | &#8594;  | Position du premier caractère |
-| nbCars | Integer | &#8594;  | Nombre de caractères à extraire |
+| source | Text | &#8594; | Chaîne de laquelle extraire une sous-chaîne |
+| àPartirDe | Integer | &#8594; | Position du premier caractère |
+| nbCars | Integer | &#8594; | Nombre de caractères à extraire |
 | Résultat | Text | &#8592; | Sous-chaîne de source |
 
 <!-- END REF-->
@@ -69,6 +69,6 @@ La méthode projet suivante ajoute au tableau de type texte ou alpha, dont le po
 |  |  |
 | --- | --- |
 | Numéro de commande | 12 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time.Syntax-->**Time** ( *valHora* ) : Time<!-- END REF-->
+<!--REF #_command_.Time.Syntax-->**Time** ( *valHora* : Text, Integer ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| valHora | Text, Integer | &#8594;  | Valor a devolver en forma de hora |
+| valHora | Text, Integer | &#8594; | Valor a devolver en forma de hora |
 | Resultado | Time | &#8592; | Hora especificada por horaCadena |
 
 <!-- END REF-->
@@ -57,6 +57,6 @@ Puede expresar todo valor numérico como una hora:
 |  |  |
 | --- | --- |
 | Número de comando | 179 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

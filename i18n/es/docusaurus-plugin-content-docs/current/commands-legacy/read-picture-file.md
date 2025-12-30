@@ -5,13 +5,13 @@ slug: /commands/read-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *nomArchivo* ; *imagen* {; *} )<!-- END REF-->
+<!--REF #_command_.READ PICTURE FILE.Syntax-->**READ PICTURE FILE** ( *nomArchivo* : Text ; *imagen* : Picture {; *} )<!-- END REF-->
 <!--REF #_command_.READ PICTURE FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Text | &#8594;  | Nombre o ruta de acceso completa del archivo a leer, o cadena vacía |
+| nomArchivo | Text | &#8594; | Nombre o ruta de acceso completa del archivo a leer, o cadena vacía |
 | imagen | Picture | &#8592; | Campo o variable que recibe la imagen |
-| * | Operador | &#8594;  | Si se pasa = acepta todo tipo de archivo |
+| * | Operador | &#8594; | Si se pasa = acepta todo tipo de archivo |
 
 <!-- END REF-->
 
@@ -47,7 +47,7 @@ Si la ejecución del comando es correcta, la variable sistema Document contiene 
 |  |  |
 | --- | --- |
 | Número de comando | 678 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

@@ -5,11 +5,11 @@ slug: /commands/picture-properties
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *imagem* ; *largura* ; *altura* {; *hDesp* {; *vDesp* {; *modo*}}} )<!-- END REF-->
+<!--REF #_command_.PICTURE PROPERTIES.Syntax-->**PICTURE PROPERTIES** ( *imagem* : Picture ; *largura* : Real ; *altura* : Real {; *hDesp* : Integer {; *vDesp* : Integer {; *modo* : Integer}}} )<!-- END REF-->
 <!--REF #_command_.PICTURE PROPERTIES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| imagem | Picture | &#8594;  | Imagem para a qual conseguir informação |
+| imagem | Picture | &#8594; | Imagem para a qual conseguir informação |
 | largura | Real | &#8592; | Largura da imagem expressa em pixels |
 | altura | Real | &#8592; | Altura da imagem expressa em pixels |
 | hDesp | Integer | &#8592; | Offset horizontal quando a imagem é exibida no segundo plano |
@@ -35,6 +35,6 @@ Os parâmetros *hDesp*, *vDesp*, e *modo* devolvem as posições horizontal e ve
 |  |  |
 | --- | --- |
 | Número do comando | 457 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -36,6 +36,6 @@ In normal cases, you should not call this command, as 4D saves data modification
 |  |  |
 | --- | --- |
 | Command number | 297 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

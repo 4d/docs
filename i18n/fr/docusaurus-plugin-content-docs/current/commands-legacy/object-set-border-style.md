@@ -5,13 +5,13 @@ slug: /commands/object-set-border-style
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( {* ;} *objet* ; *styleBordure* )<!-- END REF-->
+<!--REF #_command_.OBJECT SET BORDER STYLE.Syntax-->**OBJECT SET BORDER STYLE** ( * ; *objet* : Text ; *styleBordure* : Integer )<br/>**OBJECT SET BORDER STYLE** ( *objet* : Field, Variable ; *styleBordure* : Integer )<!-- END REF-->
 <!--REF #_command_.OBJECT SET BORDER STYLE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
-| styleBordure | Integer | &#8594;  | Style de la ligne de bordure |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne)<br/>Si omis, objet est un champ ou une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou <br/>Champ ou variable (si * est omis) |
+| styleBordure | Integer | &#8594; | Style de la ligne de bordure |
 
 <!-- END REF-->
 
@@ -44,6 +44,6 @@ Passez dans le paramètre *styleBordure* la valeur de style de ligne que vous so
 |  |  |
 | --- | --- |
 | Numéro de commande | 1262 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

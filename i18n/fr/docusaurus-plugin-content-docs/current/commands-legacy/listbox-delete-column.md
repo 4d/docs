@@ -5,14 +5,14 @@ slug: /commands/listbox-delete-column
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( {* ;} *objet* ; *positionCol* {; *nombre*} )<!-- END REF-->
+<!--REF #_command_.LISTBOX DELETE COLUMN.Syntax-->**LISTBOX DELETE COLUMN** ( * ; *objet* : Text ; *positionCol* : Integer {; *nombre* : Integer} )<br/>**LISTBOX DELETE COLUMN** ( *objet* : Field, Variable ; *positionCol* : Integer {; *nombre* : Integer} )<!-- END REF-->
 <!--REF #_command_.LISTBOX DELETE COLUMN.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| * | Opérateur | &#8594;  | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
-| objet | any | &#8594;  | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
-| positionCol | Integer | &#8594;  | Numéro courant de la colonne à supprimer |
-| nombre | Integer | &#8594;  | Nombre de colonnes à supprimer |
+| * | Opérateur | &#8594; | Si spécifié, objet est un nom d'objet (chaîne) Si omis, objet est une variable |
+| objet | any | &#8594; | Nom d'objet (si * est spécifié) ou Variable (si * est omis) |
+| positionCol | Integer | &#8594; | Numéro courant de la colonne à supprimer |
+| nombre | Integer | &#8594; | Nombre de colonnes à supprimer |
 
 <!-- END REF-->
 
@@ -39,6 +39,6 @@ Si le paramètre *positionCol* est supérieur au nombre de colonnes de la list b
 |  |  |
 | --- | --- |
 | Numéro de commande | 830 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

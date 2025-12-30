@@ -39,6 +39,6 @@ Pode comparar o valor retornado pelo comando com o valor de um ou mais das segui
 |  |  |
 | --- | --- |
 | Número do comando | 1071 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

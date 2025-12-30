@@ -106,7 +106,7 @@ Você deseja mostrar os comandos de um menu contextual baseado no tipo de conte�
 |  |  |
 | --- | --- |
 | Número do comando | 1286 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

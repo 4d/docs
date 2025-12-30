@@ -55,6 +55,6 @@ In the , you want to set a high priority for the \[Customer\] scalar data:
 |  |  |
 | --- | --- |
 | Command number | 1400 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

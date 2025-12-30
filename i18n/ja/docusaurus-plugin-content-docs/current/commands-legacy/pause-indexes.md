@@ -5,11 +5,11 @@ slug: /commands/pause-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTable* )<!-- END REF-->
+<!--REF #_command_.PAUSE INDEXES.Syntax-->**PAUSE INDEXES** ( *aTable* : Table )<!-- END REF-->
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | インデックスを停止するテーブル |
+| aTable | Table | &#8594; | インデックスを停止するテーブル |
 
 <!-- END REF-->
 
@@ -52,6 +52,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1293 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -46,7 +46,7 @@ Si l'image est correctement extraite, OK prend la valeur 1\. Sinon, OK prend la 
 |  |  |
 | --- | --- |
 | Numéro de commande | 522 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifie les variables | OK |
 
 

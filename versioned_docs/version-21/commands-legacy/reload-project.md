@@ -40,6 +40,6 @@ When the command is called from:
 |  |  |
 | --- | --- |
 | Command number | 1739 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

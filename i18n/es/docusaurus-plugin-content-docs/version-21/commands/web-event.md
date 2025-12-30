@@ -29,9 +29,9 @@ El objeto devuelto contiene las siguientes propiedades:
 | caller    |       | string | [Server-side reference](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview#data-access-category) of the component triggering the event                                                                                                  |
 | eventType |       | string | Type of event:<li>onblur</li><li>onfocus</li><li>onclick</li><li>onauxclick</li><li>onmouseenter</li><li>onmouseleave</li><li>onkeyup</li><li>onkeydown</li><li>onchange</li><li>unload</li><li>onload - triggered when the `Page` loads</li> |
 | data      |       | object | Información adicional en función del componente implicado                                                                                                                                                                                                     |
-|           | index | number | <li>Tabs component: index of the tab (indexing starts at 0)</li><li>Data Table component: column number</li>                                                                                                                                                  |
+|           | index | number | <li>Componente Pestañas: índice de la pestaña (la indexación comienza en 0)</li><li>Componente de la tabla de datos: número de columna</li>                                                                                                                   |
 |           | row   | number | Componente de la tabla de datos: número de línea                                                                                                                                                                                              |
-|           | name  | string | Data Table component: qodlysource name of the column (e.g. "firstname", "address.city")                                                                                    |
+|           | name  | string | Componente Data Table: nombre qodlysource de la columna (por ejemplo, "firstname", "address.city")                                                                                                         |
 
 #### Ejemplo
 

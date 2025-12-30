@@ -5,11 +5,11 @@ slug: /commands/resume-process
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *process* )<!-- END REF-->
+<!--REF #_command_.RESUME PROCESS.Syntax-->**RESUME PROCESS** ( *process* : Integer )<!-- END REF-->
 <!--REF #_command_.RESUME PROCESS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | プロセス番号 |
+| process | Integer | &#8594; | プロセス番号 |
 
 <!-- END REF-->
 
@@ -31,7 +31,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 320 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | サーバー上での使用は不可 ||
 
 

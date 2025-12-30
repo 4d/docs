@@ -5,7 +5,7 @@ slug: /commands/print-settings
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** {( *dialType* )}<!-- END REF-->
+<!--REF #_command_.PRINT SETTINGS.Syntax-->**PRINT SETTINGS** ({ *dialType* : Integer })<!-- END REF-->
 <!--REF #_command_.PRINT SETTINGS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -46,7 +46,7 @@ If the user clicks OK in both dialog boxes, the OK system variable is set to 1\.
 |  |  |
 | --- | --- |
 | Command number | 106 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

@@ -5,13 +5,13 @@ slug: /commands/change-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* ; *nouveau* ; *positionDépart* ) : Text<!-- END REF-->
+<!--REF #_command_.Change string.Syntax-->**Change string** ( *source* : Text ; *nouveau* : Text ; *positionDépart* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.Change string.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| source | Text | &#8594;  | Chaîne de départ |
-| nouveau | Text | &#8594;  | Nouveaux caractères |
-| positionDépart | Integer | &#8594;  | Position de départ du remplacement |
+| source | Text | &#8594; | Chaîne de départ |
+| nouveau | Text | &#8594; | Nouveaux caractères |
+| positionDépart | Integer | &#8594; | Position de départ du remplacement |
 | Résultat | Text | &#8592; | Chaîne résultante |
 
 <!-- END REF-->
@@ -44,6 +44,6 @@ L'exemple suivant illustre l'utilisation de **Change string**. Les résultats so
 |  |  |
 | --- | --- |
 | Numéro de commande | 234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

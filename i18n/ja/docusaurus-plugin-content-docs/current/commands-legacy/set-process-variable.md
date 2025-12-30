@@ -5,13 +5,13 @@ slug: /commands/set-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* ; *dstVar* ; *expr* {; *dstVar2* ; *expr2* ; ... ; *dstVarN* ; *exprN*} )<!-- END REF-->
+<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *process* : Integer ; *dstVar* : Variable ; *expr* : Variable {; ...(*dstVar* : Variable, *expr* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| process | Integer | &#8594;  | 送り先のプロセス番号 |
-| dstVar | Variable | &#8594;  | 送り先の変数 |
-| expr | Variable | &#8594;  | ソース式 (ソース変数) |
+| process | Integer | &#8594; | 送り先のプロセス番号 |
+| dstVar | Variable | &#8594; | 送り先の変数 |
+| expr | Variable | &#8594; | ソース式 (ソース変数) |
 
 <!-- END REF-->
 
@@ -103,6 +103,6 @@ SET PROCESS VARIABLEは、任意のタイプの送り先プロセスまたはイ
 |  |  |
 | --- | --- |
 | コマンド番号 | 370 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

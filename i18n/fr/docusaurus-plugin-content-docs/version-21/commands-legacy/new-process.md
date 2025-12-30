@@ -119,6 +119,6 @@ Dans l'éditeur de barres de menus, vous remplacez AJOUT CLIENTS par la méthode
 |  |  |
 | --- | --- |
 | Numéro de commande | 317 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

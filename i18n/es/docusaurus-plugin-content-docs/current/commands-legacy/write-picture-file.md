@@ -5,13 +5,13 @@ slug: /commands/write-picture-file
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomArchivo* ; *imagen* {; *codec*} )<!-- END REF-->
+<!--REF #_command_.WRITE PICTURE FILE.Syntax-->**WRITE PICTURE FILE** ( *nomArchivo* : Text ; *imagen* : Picture {; *codec* : Text} )<!-- END REF-->
 <!--REF #_command_.WRITE PICTURE FILE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| nomArchivo | Text | &#8594;  | Nombre o ruta de acceso completo del archivo a escribir, o cadena vacía |
-| imagen | Picture | &#8594;  | Campo o variable imagen a escribir |
-| codec | Text | &#8594;  | Identificación de codec de imagen |
+| nomArchivo | Text | &#8594; | Nombre o ruta de acceso completo del archivo a escribir, o cadena vacía |
+| imagen | Picture | &#8594; | Campo o variable imagen a escribir |
+| codec | Text | &#8594; | Identificación de codec de imagen |
 
 <!-- END REF-->
 
@@ -56,7 +56,7 @@ Si la ejecución del comando es correcta, la variable sistema Document contiene 
 |  |  |
 | --- | --- |
 | Número de comando | 680 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Modifica variables | OK, Document |
 
 

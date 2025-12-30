@@ -35,6 +35,6 @@ La commande retourne 0 :
 |  |  |
 | --- | --- |
 | Numéro de commande | 440 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

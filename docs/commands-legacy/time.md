@@ -5,7 +5,7 @@ slug: /commands/time
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Time.Syntax-->**Time** ( *timeValue* ) : Time<!-- END REF-->
+<!--REF #_command_.Time.Syntax-->**Time** ( *timeValue* : Text, Integer ) : Time<!-- END REF-->
 <!--REF #_command_.Time.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -57,6 +57,6 @@ You can express any numerical value as a time:
 |  |  |
 | --- | --- |
 | Command number | 179 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

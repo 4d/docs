@@ -39,7 +39,7 @@ Se omite o parâmetro *processo*, DELETE MENU ITEM é aplicado a barra de menus 
 |  |  |
 | --- | --- |
 | Número do comando | 413 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Proibido no servidor ||
 
 

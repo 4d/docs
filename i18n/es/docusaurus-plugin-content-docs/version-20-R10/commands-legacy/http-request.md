@@ -131,6 +131,6 @@ Petición para añadir un registro en JSON a una base remota:
 |  |  |
 | --- | --- |
 | Número de comando | 1158 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

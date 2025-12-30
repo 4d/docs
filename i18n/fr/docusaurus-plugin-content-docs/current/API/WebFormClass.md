@@ -60,9 +60,9 @@ Bien que `myForm` n'affiche pas les propriétés typiques de l'objet lorsqu'il e
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Paramètres | Type   |     | Description                                 |
-| ---------- | ------ | :-: | ------------------------------------------- |
-| state      | string |  -> | Nom de l'état à désactiver dans la page web |
+| Paramètres | Type |     | Description                                       |
+| ---------- | ---- | :-: | ------------------------------------------------- |
+| state      | Text |  -> | Nom de l'état à désactiver dans le formulaire web |
 
 <!-- END REF -->
 
@@ -85,9 +85,9 @@ Pour plus d'informations sur les états des pages web, veuillez vous référer �
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Paramètres | Type   |     | Description                               |
-| ---------- | ------ | :-: | ----------------------------------------- |
-| state      | string |  -> | Nom de l'état à activer sur les pages web |
+| Paramètres | Type |     | Description                                   |
+| ---------- | ---- | :-: | --------------------------------------------- |
+| state      | Text |  -> | Nom de l'état à activer sur le formulaire web |
 
 <!-- END REF -->
 
@@ -121,9 +121,9 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| Paramètres | Type   |     | Description                                  |
-| ---------- | ------ | :-: | -------------------------------------------- |
-| msg        | string |  -> | Message d'erreur à afficher dans la page web |
+| Paramètres | Type |     | Description                                 |
+| ---------- | ---- | :-: | ------------------------------------------- |
+| msg        | Text |  -> | Message d'erreur à afficher dans le webform |
 
 <!-- END REF -->
 
@@ -156,9 +156,9 @@ Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQo
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| Paramètres | Type   |     | Description                                       |
-| ---------- | ------ | :-: | ------------------------------------------------- |
-| msg        | string |  -> | Message d'information à afficher dans la page web |
+| Paramètres | Type |     | Description                                      |
+| ---------- | ---- | :-: | ------------------------------------------------ |
+| msg        | Text |  -> | Message d'information à afficher dans le webform |
 
 <!-- END REF -->
 
@@ -191,9 +191,9 @@ Si la fonctionnalité [**Provide feedback**](https://developer.4d.com/qodly/4DQo
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| Paramètres | Type   |     | Description                                         |
-| ---------- | ------ | :-: | --------------------------------------------------- |
-| msg        | string |  -> | Message d'avertissement à afficher dans la page web |
+| Paramètres | Type |     | Description                                        |
+| ---------- | ---- | :-: | -------------------------------------------------- |
+| msg        | Text |  -> | Message d'avertissement à afficher dans le webform |
 
 <!-- END REF -->
 

@@ -5,15 +5,15 @@ slug: /commands/qr-set-selection
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* ; *esquerda* ; *superior* {; *direita* {; *inferior* }} )<!-- END REF-->
+<!--REF #_command_.QR SET SELECTION.Syntax-->**QR SET SELECTION** ( *area* : Integer ; *esquerda* : Integer ; *superior* : Integer {; *direita* : Integer {; *inferior* : Integer }} )<!-- END REF-->
 <!--REF #_command_.QR SET SELECTION.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| area | Integer | &#8594;  | Referência da área |
-| esquerda | Integer | &#8594;  | Borda esquerda |
-| superior | Integer | &#8594;  | margem superiro |
-| direita | Integer | &#8594;  | limite direita |
-| inferior | Integer | &#8594;  | limite inferior |
+| area | Integer | &#8594; | Referência da área |
+| esquerda | Integer | &#8594; | Borda esquerda |
+| superior | Integer | &#8594; | margem superiro |
+| direita | Integer | &#8594; | limite direita |
+| inferior | Integer | &#8594; | limite inferior |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ Se passa um número de *area* inválido, se gera o erro -9850.
 |  |  |
 | --- | --- |
 | Número do comando | 794 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | error |
 
 

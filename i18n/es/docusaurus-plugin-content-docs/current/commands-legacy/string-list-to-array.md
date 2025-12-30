@@ -5,13 +5,13 @@ slug: /commands/string-list-to-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resNum* ; *cadenas* {; *resArchivo*} )<!-- END REF-->
+<!--REF #_command_.STRING LIST TO ARRAY.Syntax-->**STRING LIST TO ARRAY** ( *resNum* : Integer ; *cadenas* : Text array {; *resArchivo* : Time} )<!-- END REF-->
 <!--REF #_command_.STRING LIST TO ARRAY.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| resNum | Integer | &#8594;  | Número de referencia del recurso o Atributo "id" del elemento "group" (XLIFF) |
+| resNum | Integer | &#8594; | Número de referencia del recurso o Atributo "id" del elemento "group" (XLIFF) |
 | cadenas | Text array | &#8592; | Cadenas del elemento "group" (XLIFF) |
-| resArchivo | Time | &#8594;  | Número de referencia del archivo de recursos o Todos los archivos XLIFF o los archivos de recursos abiertos, si se omite |
+| resArchivo | Time | &#8594; | Número de referencia del archivo de recursos o Todos los archivos XLIFF o los archivos de recursos abiertos, si se omite |
 
 <!-- END REF-->
 
@@ -48,7 +48,7 @@ Si se encuentra el recurso, la variable sistema OK toma el valor 1, de lo contra
 |  |  |
 | --- | --- |
 | Número de comando | 511 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

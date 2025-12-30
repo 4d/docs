@@ -70,6 +70,6 @@ Cada vez que se abre la base, esta información se escribirá en el visor de eve
 |  |  |
 | --- | --- |
 | Número de comando | 667 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

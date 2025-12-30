@@ -5,11 +5,11 @@ slug: /commands/type
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Type.Syntax-->**Type** ( *campVar* ) : Integer<!-- END REF-->
+<!--REF #_command_.Type.Syntax-->**Type** ( *campVar* : Field, Variable ) : Integer<!-- END REF-->
 <!--REF #_command_.Type.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| campVar | Field, Variable | &#8594;  | Campo ou Variável a ser testada |
+| campVar | Field, Variable | &#8594; | Campo ou Variável a ser testada |
 | Resultado | Integer | &#8592; | Número de tipo de dados |
 
 <!-- END REF-->
@@ -147,6 +147,6 @@ Ver exemplo do comando [APPEND DATA TO PASTEBOARD](append-data-to-pasteboard.md 
 |  |  |
 | --- | --- |
 | Número do comando | 295 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

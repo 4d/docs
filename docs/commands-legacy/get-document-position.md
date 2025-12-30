@@ -5,7 +5,7 @@ slug: /commands/get-document-position
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get document position.Syntax-->**Get document position** ( *docRef* ) : Real<!-- END REF-->
+<!--REF #_command_.Get document position.Syntax-->**Get document position** ( *docRef* : Time ) : Real<!-- END REF-->
 <!--REF #_command_.Get document position.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -29,6 +29,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Command number | 481 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

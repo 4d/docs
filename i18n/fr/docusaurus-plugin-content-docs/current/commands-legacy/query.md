@@ -5,13 +5,13 @@ slug: /commands/query
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*laTable* }{;}{ *critère* {; *}} )<!-- END REF-->
+<!--REF #_command_.QUERY.Syntax-->**QUERY** ( {*laTable* : Table }{;}{ *critère* : Expression {; *}} )<!-- END REF-->
 <!--REF #_command_.QUERY.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
-| critère | Expression | &#8594;  | Critère de recherche |
-| * | Opérateur | &#8594;  | Attente d'exécution de la recherche |
+| laTable | Table | &#8594; | Table dans laquelle la sélection est créée ou Table par défaut si ce paramètre est omis |
+| critère | Expression | &#8594; | Critère de recherche |
+| * | Opérateur | &#8594; | Attente d'exécution de la recherche |
 
 <!-- END REF-->
 
@@ -314,7 +314,7 @@ La variable OK prend la valeur 0 si :
 |  |  |
 | --- | --- |
 | Numéro de commande | 277 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK |
 | Change l'enregistrement courant ||
 | Change la sélection courante ||

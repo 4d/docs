@@ -352,8 +352,8 @@ Items must be installed:
 
 To enable this feature, add the `DatabaseToEmbedInClientWinFolder` and/or `DatabaseToEmbedInClientMacFolder` keys in the *buildApp* settings file. When one of these keys is present, the client application building process generates a single-user application: the compiled structure, instead of the *EnginedServer.4Dlink* file, is placed in the "Database" folder.
 
-* If a default data folder exists in the single-user application, a licence is embedded.
-* If no default data folder exists in the single-user application, it will be executed without data file and without licence.
+* If a default data folder exists in the single-user application, a license is embedded.
+* If no default data folder exists in the single-user application, it will be executed without data file and without license.
 
 The basic scenario is:
 
@@ -427,7 +427,7 @@ If there is a conflict between two different versions of the same plug-in (one l
 
 ## Licenses & Certificate page
 
-The Licences & Certificate page can be used to:
+The Licenses & Certificate page can be used to:
 
 * designate the license number(s) that you want to integrate into your single-user stand-alone application
 * sign the application by means of a certificate in macOS.

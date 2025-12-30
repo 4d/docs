@@ -5,12 +5,12 @@ slug: /commands/use-character-set
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *mapa* {; *mapaEntradaSaida*} )<!-- END REF-->
+<!--REF #_command_.USE CHARACTER SET.Syntax-->**USE CHARACTER SET** ( *mapa* : Text, Operator {; *mapaEntradaSaida* : Integer} )<!-- END REF-->
 <!--REF #_command_.USE CHARACTER SET.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| mapa | Text, * | &#8594;  | Nome do conjunto de caracteres a ser usado (modo Unicode), ou nome do Documento do mapa ASCII a ser usado (ASCII mode) ou * para reiniciar para o conjunto de caracteres/mapa ASCII padrão |
-| mapaEntradaSaida | Integer | &#8594;  | 0 = Mapa de saída 1 = Mapa de entrada, se omitido, mapa de saída |
+| mapa | Text, Operator | &#8594; | Nome do conjunto de caracteres a ser usado (modo Unicode), ou nome do Documento do mapa ASCII a ser usado (ASCII mode) ou * para reiniciar para o conjunto de caracteres/mapa ASCII padrão |
+| mapaEntradaSaida | Integer | &#8594; | 0 = Mapa de saída 1 = Mapa de entrada, se omitido, mapa de saída |
 
 <!-- END REF-->
 
@@ -58,7 +58,7 @@ A variável de sistema OK é definida como 1 se o mapa é carregado corretamente
 |  |  |
 | --- | --- |
 | Número do comando | 205 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

@@ -56,6 +56,6 @@ Si el tipo de datos de la columna o de al menos una columna del list box (si obj
 |  |  |
 | --- | --- |
 | Número de comando | 1140 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

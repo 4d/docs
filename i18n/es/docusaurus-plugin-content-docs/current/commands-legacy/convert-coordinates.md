@@ -5,16 +5,14 @@ slug: /commands/convert-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* ; *coordY* ; *de* ; *a* )<!-- END REF-->
+<!--REF #_command_.CONVERT COORDINATES.Syntax-->**CONVERT COORDINATES** ( *coordX* : Integer ; *coordY* : Integer ; *de* : Integer ; *a* : Integer )<!-- END REF-->
 <!--REF #_command_.CONVERT COORDINATES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| coordX | Integer | &#8594;  | Coordenada horizontal de un punto (inicial) |
-| &#8592; | Coordenada horizontal de un punto (convertido) |
-| coordY | Integer | &#8594;  | Coordenada vertical de un punto(inicial) |
-| &#8592; | Coordenada vertical de un punto (convertido) |
-| de | Integer | &#8594;  | Sistema de coordenadas de origen |
-| a | Integer | &#8594;  | Sistema de coordenadas a convertir el punto |
+| coordX | Integer | &#8596; | *in:* Horizontal coordinate of a point (initial)<br/>*out:* Horizontal coordinate of a point (converted) |
+| coordY | Integer | &#8596; | *in:* Vertical coordinate of a point (initial)<br/>*out:* Vertical coordinate of a point (converted) |
+| de | Integer | &#8594; | Sistema de coordenadas de origen |
+| a | Integer | &#8594; | Sistema de coordenadas a convertir el punto |
 
 <!-- END REF-->
 
@@ -90,6 +88,6 @@ Usted quiere abrir una ventana emergente en la posición del cursor del ratón. 
 |  |  |
 | --- | --- |
 | Número de comando | 1365 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

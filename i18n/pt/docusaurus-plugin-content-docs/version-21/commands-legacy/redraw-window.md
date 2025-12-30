@@ -30,6 +30,6 @@ Se omitir o parâmetro *janela*, REDRAW WINDOW aplica à janela do primeiro plan
 |  |  |
 | --- | --- |
 | Número do comando | 456 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

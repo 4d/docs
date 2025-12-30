@@ -51,6 +51,6 @@ As imagens abaixo demostram as diferenças entre o tamanho da tela e a área de 
 |  |  |
 | --- | --- |
 | Número do comando | 438 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

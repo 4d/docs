@@ -5,12 +5,12 @@ slug: /commands/resume-indexes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* {; *} )<!-- END REF-->
+<!--REF #_command_.RESUME INDEXES.Syntax-->**RESUME INDEXES** ( *aTable* : Table {; *} )<!-- END REF-->
 <!--REF #_command_.RESUME INDEXES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | Table for which to resume indexes |
-| * | Operador | &#8594;  | If passed = asynchronous indexing |
+| aTable | Table | &#8594; | Table for which to resume indexes |
+| * | Operador | &#8594; | If passed = asynchronous indexing |
 
 <!-- END REF-->
 
@@ -33,6 +33,6 @@ The **RESUME INDEXES** command can only be called from 4D Server or a local 4D. 
 |  |  |
 | --- | --- |
 | Número do comando | 1294 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

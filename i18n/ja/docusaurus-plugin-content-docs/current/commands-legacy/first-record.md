@@ -5,11 +5,11 @@ slug: /commands/first-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションの先頭をカレントレコードにするテーブル または省略時デフォルトテーブル |
+| aTable | Table | &#8594; | セレクションの先頭をカレントレコードにするテーブル または省略時デフォルトテーブル |
 
 <!-- END REF-->
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 50 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 
 

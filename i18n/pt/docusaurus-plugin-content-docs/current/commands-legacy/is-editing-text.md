@@ -64,6 +64,6 @@ Se quiser permitir que o usuário selecione uma linha começando com a letra ou 
 |  |  |
 | --- | --- |
 | Número do comando | 1744 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

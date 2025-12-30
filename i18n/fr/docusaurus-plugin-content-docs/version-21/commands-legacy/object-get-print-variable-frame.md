@@ -42,6 +42,6 @@ Si l’*objet* est un sous-formulaire et si l’impression en taille variable es
 |  |  |
 | --- | --- |
 | Numéro de commande | 1241 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

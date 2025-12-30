@@ -5,11 +5,11 @@ slug: /commands/undefined
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Undefined.Syntax-->**Undefined** ( *expression* : Expression ) : Boolean<!-- END REF-->
 <!--REF #_command_.Undefined.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| expression | Expression | &#8594;  | テストしたい結果の値を返す式 |
+| expression | Expression | &#8594; | テストしたい結果の値を返す式 |
 | 戻り値 | Boolean | &#8592; | True = 変数は現在未定義である False = 変数は現在定義されている |
 
 <!-- END REF-->
@@ -65,6 +65,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 82 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

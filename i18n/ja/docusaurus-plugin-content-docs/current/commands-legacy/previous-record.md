@@ -5,11 +5,11 @@ slug: /commands/previous-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.PREVIOUS RECORD.Syntax-->**PREVIOUS RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.PREVIOUS RECORD.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| aTable | Table | &#8594;  | セレクションの前レコードをカレントレコードにする テーブル、省略時はデフォルトテーブル |
+| aTable | Table | &#8594; | セレクションの前レコードをカレントレコードにする テーブル、省略時はデフォルトテーブル |
 
 <!-- END REF-->
 
@@ -32,7 +32,7 @@ PREVIOUS RECORDで、カレントセレクションの前にカレントレコ�
 |  |  |
 | --- | --- |
 | コマンド番号 | 110 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 
 

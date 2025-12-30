@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.PAUSE INDEXES.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| laTable | Table | &#8594;  | Tabla para la cual detener los índices |
+| laTable | Table | &#8594; | Tabla para la cual detener los índices |
 
 <!-- END REF-->
 
@@ -52,6 +52,6 @@ Ejemplo de método de importación masivo de datos:
 |  |  |
 | --- | --- |
 | Número de comando | 1293 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

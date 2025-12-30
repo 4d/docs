@@ -44,6 +44,6 @@ Vous souhaitez associer l’action standard de validation à un bouton :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1259 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

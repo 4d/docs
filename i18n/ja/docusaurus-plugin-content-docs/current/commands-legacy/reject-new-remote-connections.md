@@ -5,11 +5,11 @@ slug: /commands/reject-new-remote-connections
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *rejectStatus* )<!-- END REF-->
+<!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Syntax-->**REJECT NEW REMOTE CONNECTIONS** ( *rejectStatus* : Boolean )<!-- END REF-->
 <!--REF #_command_.REJECT NEW REMOTE CONNECTIONS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| rejectStatus | Boolean | &#8594;  | 接続を拒否したい場合にはTrue、そうでない場合にはFalse |
+| rejectStatus | Boolean | &#8594; | 接続を拒否したい場合にはTrue、そうでない場合にはFalse |
 
 <!-- END REF-->
 
@@ -43,6 +43,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1635 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/std-deviation
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* ) : Real<!-- END REF-->
+<!--REF #_command_.Std deviation.Syntax-->**Std deviation** ( *series* : Field, Array ) : Real<!-- END REF-->
 <!--REF #_command_.Std deviation.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| series | Field, Array | &#8594;  | 標準偏差を求めるデータ |
+| series | Field, Array | &#8594; | 標準偏差を求めるデータ |
 | 戻り値 | Real | &#8592; | seriesの標準偏差 |
 
 <!-- END REF-->
@@ -64,6 +64,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 26 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

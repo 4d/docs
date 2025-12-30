@@ -35,6 +35,6 @@ L'exemple suivant met la variable *vbOptions* à Vrai :
 |  |  |
 | --- | --- |
 | Numéro de commande | 214 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -84,6 +84,6 @@ Esta tabla detalla el contenido del objeto de sesión para las sesiones REST:
 |  |  |
 | --- | --- |
 | Número de comando | 1782 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

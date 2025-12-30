@@ -5,11 +5,11 @@ slug: /commands/dom-get-xml-element-value
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *elementRef* ; *elementValue* {; *cDATA*} )<!-- END REF-->
+<!--REF #_command_.DOM GET XML ELEMENT VALUE.Syntax-->**DOM GET XML ELEMENT VALUE** ( *elementRef* : Text ; *elementValue* : Variable {; *cDATA* : Variable} )<!-- END REF-->
 <!--REF #_command_.DOM GET XML ELEMENT VALUE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| elementRef | Text | &#8594;  | XML要素参照 |
+| elementRef | Text | &#8594; | XML要素参照 |
 | elementValue | Variable | &#8592; | 要素値 |
 | cDATA | Variable | &#8592; | CDATAセクションの内容 |
 
@@ -49,7 +49,7 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 731 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

@@ -35,6 +35,6 @@ Une chaîne vide est retournée lorsqu’aucune information n’est disponible, 
 |  |  |
 | --- | --- |
 | Numéro de commande | 780 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

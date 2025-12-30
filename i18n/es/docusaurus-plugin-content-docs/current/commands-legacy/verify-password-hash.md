@@ -5,12 +5,12 @@ slug: /commands/verify-password-hash
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash**  ( *contrasena* ; *hash* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Verify password hash.Syntax-->**Verify password hash**  ( *contrasena* : Text ; *hash* : Text ) : Boolean<!-- END REF-->
 <!--REF #_command_.Verify password hash.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| contrasena | Text | &#8594;  | La contraseña de usuario. Sólo se utilizan los primeros 72 caracteres. |
-| hash | Text | &#8594;  | Un hash de contraseña. |
+| contrasena | Text | &#8594; | La contraseña de usuario. Sólo se utilizan los primeros 72 caracteres. |
+| hash | Text | &#8594; | Un hash de contraseña. |
 | Resultado | Boolean | &#8592; | Devuelve TRUE si la contraseña y hash coinciden, de lo contrario devuelve FALSE. |
 
 <!-- END REF-->
@@ -59,6 +59,6 @@ Este ejemplo verifica un hash de contraseña creado previamente por [Generate pa
 |  |  |
 | --- | --- |
 | Número de comando | 1534 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

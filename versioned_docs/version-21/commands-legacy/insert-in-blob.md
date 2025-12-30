@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.INSERT IN BLOB.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| blob | Blob | &#8594;  | BLOB into which bytes will be inserted |
+| Blob | Blob | &#8594;  | BLOB into which bytes will be inserted |
 | offset | Integer | &#8594;  | Starting position where bytes will be inserted |
 | len | Integer | &#8594;  | Number of bytes to be inserted |
 | filler | Integer | &#8594;  | Default byte value (0x00..0xFF) 0x00 if omitted |
@@ -37,6 +37,6 @@ Before the call, you pass in the *offset* parameter the position of the insertio
 |  |  |
 | --- | --- |
 | Command number | 559 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/web-get-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.WEB GET OPTION.Syntax-->**WEB GET OPTION** ( *selector* : Integer ; *value* : Integer, Text, Collection )<!-- END REF-->
 <!--REF #_command_.WEB GET OPTION.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | 取得するオプションのコード |
+| selector | Integer | &#8594; | 取得するオプションのコード |
 | value | Integer, Text, Collection | &#8592; | オプションの値 |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1209 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

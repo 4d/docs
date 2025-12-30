@@ -5,13 +5,13 @@ slug: /commands/set-process-variable
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *processo* ; *dstVar* ; *expr* {; *dstVar2* ; *expr2* ; ... ; *dstVarN* ; *exprN*} )<!-- END REF-->
+<!--REF #_command_.SET PROCESS VARIABLE.Syntax-->**SET PROCESS VARIABLE** ( *processo* : Integer ; *dstVar* : Variable ; *expr* : Variable {; ...(*dstVar* : Variable, *expr* : Variable)} )<!-- END REF-->
 <!--REF #_command_.SET PROCESS VARIABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| processo | Integer | &#8594;  | Número do processo de destino |
-| dstVar | Variable | &#8594;  | Variável de destino |
-| expr | Variable | &#8594;  | Fonte da expressão (ou variável fonte) |
+| processo | Integer | &#8594; | Número do processo de destino |
+| dstVar | Variable | &#8594; | Variável de destino |
+| expr | Variable | &#8594; | Fonte da expressão (ou variável fonte) |
 
 <!-- END REF-->
 
@@ -102,6 +102,6 @@ Este exemplo escreve a instância das variáveis *v1*, *v2* e *v3* utilizando a 
 |  |  |
 | --- | --- |
 | Número do comando | 370 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

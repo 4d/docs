@@ -59,7 +59,7 @@ Se os dados são extraídos corretamente, a variável OK toma o valor 1; do cont
 |  |  |
 | --- | --- |
 | Número do comando | 401 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

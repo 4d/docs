@@ -5,11 +5,11 @@ slug: /commands/set-recent-fonts
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *fontsArray* )<!-- END REF-->
+<!--REF #_command_.SET RECENT FONTS.Syntax-->**SET RECENT FONTS** ( *fontsArray* : Text array )<!-- END REF-->
 <!--REF #_command_.SET RECENT FONTS.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| fontsArray | Text array | &#8594;  | フォント名の配列 |
+| fontsArray | Text array | &#8594; | フォント名の配列 |
 
 <!-- END REF-->
 
@@ -47,6 +47,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1305 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

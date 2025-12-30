@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-get-links
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP Get links.Syntax-->**WP Get links** ( *objRango* ) -> Resultado<!-- END REF-->
+<!--REF #_command_.WP Get links.Syntax-->**WP Get links** ( *objRango* : Object ) -> Resultado<!-- END REF-->
 <!--REF #_command_.WP Get links.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |

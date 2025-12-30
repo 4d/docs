@@ -5,12 +5,12 @@ slug: /commands/dom-get-xml-information
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *refElément* ; *infoXML* ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Get XML information.Syntax-->**DOM Get XML information** ( *refElément* : Text ; *infoXML* : Integer ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Get XML information.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| refElément | Text | &#8594;  | Référence d’élément XML racine |
-| infoXML | Integer | &#8594;  | Type d’information à lire |
+| refElément | Text | &#8594; | Référence d’élément XML racine |
+| infoXML | Integer | &#8594; | Type d’information à lire |
 | Résultat | Text | &#8592; | Valeur de l’information XML |
 
 <!-- END REF-->
@@ -39,6 +39,6 @@ Passez dans *infoXML* un code indiquant le type d’information à récupérer. 
 |  |  |
 | --- | --- |
 | Numéro de commande | 721 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

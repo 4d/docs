@@ -37,6 +37,6 @@ Se não tiver uma impressora instalada, um erro é gerado
 |  |  |
 | --- | --- |
 | Número do comando | 788 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

@@ -5,11 +5,11 @@ slug: /commands/last-field-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Last field number.Syntax-->**Last field number** ( *numTabla* ) : Integer<br/>**Last field number** ( *ptrTabla* ) : Integer<!-- END REF-->
+<!--REF #_command_.Last field number.Syntax-->**Last field number** ( *numTabla* : Entero largo, Puntero ) : Integer<br/>**Last field number** ( *ptrTabla* : Entero largo, Puntero ) : Integer<!-- END REF-->
 <!--REF #_command_.Last field number.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594;  | Número de tabla o puntero a una tabla |
+| numTabla &#124; ptrTabla | Entero largo, Puntero | &#8594; | Número de tabla o puntero a una tabla |
 | Resultado | Integer | &#8592; | Número de campo más alto en la tabla |
 
 <!-- END REF-->
@@ -48,6 +48,6 @@ El siguiente método de proyecto crea el array *asCampos*, con los nombres de lo
 |  |  |
 | --- | --- |
 | Número de comando | 255 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

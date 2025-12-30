@@ -5,13 +5,13 @@ slug: /commands/web-service-get-result
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *valorRetornado* {; *nomeRetornado* {; *}} )<!-- END REF-->
+<!--REF #_command_.WEB SERVICE GET RESULT.Syntax-->**WEB SERVICE GET RESULT** ( *valorRetornado* : Variable {; *nomeRetornado* : Text {; *}} )<!-- END REF-->
 <!--REF #_command_.WEB SERVICE GET RESULT.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | valorRetornado | Variable | &#8592; | Valor retornado pelo Web Service |
-| nomeRetornado | Text | &#8594;  | Nome do parâmetro a ser retornado |
-| * | Operator |  &#8594;  | Liberar memória |
+| nomeRetornado | Text | &#8594; | Nome do parâmetro a ser retornado |
+| * | Operator | &#8594; | Liberar memória |
 
 <!-- END REF-->
 
@@ -57,6 +57,6 @@ Imagine um serviço web que devolve a hora atual em qualquer cidade do mundo. Os
 |  |  |
 | --- | --- |
 | Número do comando | 779 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

@@ -5,15 +5,14 @@ slug: /commands/multi-sort-array
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* {; *sort*}{; *array2* ; *sort2* ; ... ; *arrayN* ; *sortN*} ) <br/>
-**MULTI SORT ARRAY** ( *ptrArrayName* ; *sortArrayName* )<!-- END REF-->
+<!--REF #_command_.MULTI SORT ARRAY.Syntax-->**MULTI SORT ARRAY** ( *array* : Array {; *sort* : Operator}{; ...*array* : Array ; ...*sort* : Operator} )<br/>**MULTI SORT ARRAY** ( *ptrArrayName* : Pointer array ; *sortArrayName* : Integer array )<!-- END REF-->
 <!--REF #_command_.MULTI SORT ARRAY.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| array | Array | &#8594;  | ソートする配列 |
-| sort | * | &#8594;  | ">" : 昇順ソート, または "<" : 降順ソート, または 省略した場合、ソートしない |
-| ptrArrayName | Pointer array | &#8594;  | 配列ポインタの配列 |
-| sortArrayName | Integer array | &#8594;  | ソート順配列 (1 = 昇順にソート、-1 = 降順にソート、0 = 前のソートに同期) |
+| array | Array | &#8594; | ソートする配列 |
+| sort | Operator | &#8594; | `>` to sort by increasing order or  `<` to sort by decreasing order; if omitted no sort |
+| ptrArrayName | Pointer array | &#8594; | 配列ポインタの配列 |
+| sortArrayName | Integer array | &#8594; | ソート順配列 (1 = 昇順にソート、-1 = 降順にソート、0 = 前のソートに同期) |
 
 <!-- END REF-->
 
@@ -116,6 +115,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 718 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 
 

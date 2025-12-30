@@ -5,13 +5,13 @@ slug: /commands/union
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.UNION.Syntax-->**UNION** ( *ensemble1* ; *ensemble2* ; *résultat* )<!-- END REF-->
+<!--REF #_command_.UNION.Syntax-->**UNION** ( *ensemble1* : Text ; *ensemble2* : Text ; *résultat* : Text )<!-- END REF-->
 <!--REF #_command_.UNION.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| ensemble1 | Text | &#8594;  | Premier ensemble |
-| ensemble2 | Text | &#8594;  | Second ensemble |
-| résultat | Text | &#8594;  | Ensemble résultant |
+| ensemble1 | Text | &#8594; | Premier ensemble |
+| ensemble2 | Text | &#8594; | Second ensemble |
+| résultat | Text | &#8594; | Ensemble résultant |
 
 <!-- END REF-->
 
@@ -56,6 +56,6 @@ L'exemple suivant ajoute des enregistrements à l'ensemble des meilleurs clients
 |  |  |
 | --- | --- |
 | Numéro de commande | 120 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

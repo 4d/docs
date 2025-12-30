@@ -60,6 +60,6 @@ A seguinte declaração localiza oi objeto "button\_1" nas coordenadas (10,20) (
 |  |  |
 | --- | --- |
 | Número do comando | 1248 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

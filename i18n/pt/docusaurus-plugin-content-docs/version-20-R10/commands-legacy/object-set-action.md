@@ -95,6 +95,6 @@ Se quiser associar a ação padrão **Validate** com um botão:
 |  |  |
 | --- | --- |
 | Número do comando | 1259 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

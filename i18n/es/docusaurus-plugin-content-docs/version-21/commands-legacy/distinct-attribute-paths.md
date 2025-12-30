@@ -73,6 +73,6 @@ El array *aTPaths* obtiene los siguientes elementos:
 |  |  |
 | --- | --- |
 | Número de comando | 1395 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

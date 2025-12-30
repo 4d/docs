@@ -73,6 +73,6 @@ In a form, when you select a menu item from the menu bar or when the form receiv
 |  |  |
 | --- | --- |
 | Command number | 276 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

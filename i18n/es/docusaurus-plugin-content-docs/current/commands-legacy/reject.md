@@ -5,11 +5,11 @@ slug: /commands/reject
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REJECT.Syntax-->**REJECT** {( *unCampo* )}<!-- END REF-->
+<!--REF #_command_.REJECT.Syntax-->**REJECT** ({ *unCampo* })<!-- END REF-->
 <!--REF #_command_.REJECT.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| unField | Field | &#8594;  | Campo a rechazar |
+| unField | Field | &#8594; | Campo a rechazar |
 
 <!-- END REF-->
 
@@ -68,6 +68,6 @@ El siguiente ejemplo es parte de un método de objeto para un campo *\[Employees
 |  |  |
 | --- | --- |
 | Número de comando | 38 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

@@ -5,13 +5,13 @@ slug: /commands/dom-set-xml-attribute
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *refElemento* ; *nomeAtrib* ; *valorAtrib* {; *nomeAtrib2* ; *valorAtrib2* ; ... ; *nomeAtribN* ; *valorAtribN*} )<!-- END REF-->
+<!--REF #_command_.DOM SET XML ATTRIBUTE.Syntax-->**DOM SET XML ATTRIBUTE** ( *refElemento* : Text ; *nomeAtrib* : Text ; *valorAtrib* : Text, Boolean, Integer, Real, Time, Date {; ...(*nomeAtrib* : Text, *valorAtrib* : Text, Boolean, Integer, Real, Time, Date)} )<!-- END REF-->
 <!--REF #_command_.DOM SET XML ATTRIBUTE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| refElemento | Text | &#8594;  | Referência de elemento XML |
-| nomeAtrib | Text | &#8594;  | Atributo a estabelecer |
-| valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594;  | Novo valor de atributo |
+| refElemento | Text | &#8594; | Referência de elemento XML |
+| nomeAtrib | Text | &#8594; | Atributo a estabelecer |
+| valorAtrib | Text, Boolean, Integer, Real, Time, Date | &#8594; | Novo valor de atributo |
 
 <!-- END REF-->
 
@@ -73,7 +73,7 @@ Se o comando tiver sido executado corretamente, a variável sistema Ok assume o 
 |  |  |
 | --- | --- |
 | Número do comando | 866 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

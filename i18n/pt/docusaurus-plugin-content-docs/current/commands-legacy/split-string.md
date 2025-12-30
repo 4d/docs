@@ -5,13 +5,13 @@ slug: /commands/split-string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Split string.Syntax-->**Split string** ( *stringAseparar* ; *string* {; *opções*} ) : Collection<!-- END REF-->
+<!--REF #_command_.Split string.Syntax-->**Split string** ( *stringAseparar* : Text ; *string* : Text {; *opções* : Integer} ) : Collection<!-- END REF-->
 <!--REF #_command_.Split string.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| stringAseparar | Text | &#8594;  | Valor string |
-| string | Text | &#8594;  | String que stringAseparar separa. Se string vazia (""), cada caractere de stringAseparar é uma substring |
-| opções | Integer | &#8594;  | Opções referentes a strings vazias e espaços |
+| stringAseparar | Text | &#8594; | Valor string |
+| string | Text | &#8594; | String que stringAseparar separa. Se string vazia (""), cada caractere de stringAseparar é uma substring |
+| opções | Integer | &#8594; | Opções referentes a strings vazias e espaços |
 | Resultado | Collection | &#8592; | Coleção de substrings |
 
 <!-- END REF-->
@@ -63,6 +63,6 @@ O parâmetro *separador* pode ser uma string de múltiplos caracteres:
 |  |  |
 | --- | --- |
 | Número do comando | 1554 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

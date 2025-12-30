@@ -5,7 +5,7 @@ slug: /commands/get-list-item-font
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* ; *itemRef* ) : Text<br/>**Get list item font** ( * ; *list* ; * ) : Text<!-- END REF-->
+<!--REF #_command_.Get list item font.Syntax-->**Get list item font** ( {* ;} *list* : Integer, Text ; *itemRef* : Integer, Operator ) : Text<br/>**Get list item font** ( * ; *list* : Integer, Text ; * ) : Text<!-- END REF-->
 <!--REF #_command_.Get list item font.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -37,6 +37,6 @@ Lastly, you can pass \* in *itemRef*: in this case, the command will get the fon
 |  |  |
 | --- | --- |
 | Command number | 954 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

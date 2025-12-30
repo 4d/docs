@@ -5,11 +5,11 @@ slug: /commands/set-user-alias
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* )<!-- END REF-->
+<!--REF #_command_.SET USER ALIAS.Syntax-->**SET USER ALIAS** ( *alias* : Text )<!-- END REF-->
 <!--REF #_command_.SET USER ALIAS.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| alias | Text | &#8594;  | Nombre de usuario alternativo para la cuenta de usuario 4D o "" para reiniciar |
+| alias | Text | &#8594; | Nombre de usuario alternativo para la cuenta de usuario 4D o "" para reiniciar |
 
 <!-- END REF-->
 
@@ -46,7 +46,7 @@ Sus usuarios se administran a través de una tabla personalizada y utilizan la m
 |  |  |
 | --- | --- |
 | Número de comando | 1666 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 | Prohibido en el servidor ||
 
 

@@ -79,6 +79,6 @@ Este exemplo recupera nas variáveis *vTipo*, *vTamanho*, *vIndice*, *vUnico* e 
 |  |  |
 | --- | --- |
 | Número do comando | 258 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

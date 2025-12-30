@@ -63,6 +63,6 @@ Reportez-vous à l'exemple de la commande [SET TABLE TITLES](set-table-titles.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 602 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

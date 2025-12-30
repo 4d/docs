@@ -5,7 +5,7 @@ slug: /commands/resource-type-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* {; *resFile*} )<!-- END REF-->
+<!--REF #_command_.RESOURCE TYPE LIST.Syntax-->**RESOURCE TYPE LIST** ( *resTypes* : Text array {; *resFile* : Time} )<!-- END REF-->
 <!--REF #_command_.RESOURCE TYPE LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -84,6 +84,6 @@ Once this project method is implemented in a database, you can write:
 |  |  |
 | --- | --- |
 | Command number | 499 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

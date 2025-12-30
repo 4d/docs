@@ -112,6 +112,6 @@ Con este comando, puede fácilmente manejar objetos en bucles:
 |  |  |
 | --- | --- |
 | Número de comando | 1471 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

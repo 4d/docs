@@ -41,6 +41,6 @@ El siguiente ejemplo guarda el número del registro actual de la selección en u
 |  |  |
 | --- | --- |
 | Número de comando | 246 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

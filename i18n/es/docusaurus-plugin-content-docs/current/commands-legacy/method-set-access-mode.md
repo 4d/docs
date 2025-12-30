@@ -5,11 +5,11 @@ slug: /commands/method-set-access-mode
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *modo* )<!-- END REF-->
+<!--REF #_command_.METHOD SET ACCESS MODE.Syntax-->**METHOD SET ACCESS MODE** ( *modo* : Integer )<!-- END REF-->
 <!--REF #_command_.METHOD SET ACCESS MODE.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| modo | Integer | &#8594;  | Modo de acceso a los objetos bloqueados |
+| modo | Integer | &#8594; | Modo de acceso a los objetos bloqueados |
 
 <!-- END REF-->
 
@@ -31,6 +31,6 @@ En *modo*, pase una de las siguientes constantes del tema *Acceso objetos diseñ
 |  |  |
 | --- | --- |
 | Número de comando | 1191 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

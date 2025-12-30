@@ -5,7 +5,7 @@ slug: /commands/on-err-call
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *errorMethod* {; *scope*} )<!-- END REF-->
+<!--REF #_command_.ON ERR CALL.Syntax-->**ON ERR CALL** ( *errorMethod* : Text {; *scope* : Integer} )<!-- END REF-->
 <!--REF #_command_.ON ERR CALL.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -186,6 +186,6 @@ The following error-handling method ignores the user interruptions and displays 
 |  |  |
 | --- | --- |
 | Command number | 155 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

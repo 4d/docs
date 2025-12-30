@@ -25,6 +25,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | Número de comando | 1327 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

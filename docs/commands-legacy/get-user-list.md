@@ -5,12 +5,12 @@ slug: /commands/get-user-list
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *userNames* ; *userNumbers* )<!-- END REF-->
+<!--REF #_command_.GET USER LIST.Syntax-->**GET USER LIST** ( *userNames* : Text array ; *userNumbers* : Integer array )<!-- END REF-->
 <!--REF #_command_.GET USER LIST.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | userNames | Text array | &#8592; | User names as they appear in the Password editor window |
-| userNumbers | Array integer | &#8592; | Corresponding unique user ID numbers |
+| userNumbers | Integer array | &#8592; | Corresponding unique user ID numbers |
 
 <!-- END REF-->
 
@@ -41,7 +41,7 @@ If you do not have the proper access privileges for calling GET USER LIST or if 
 |  |  |
 | --- | --- |
 | Command number | 609 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

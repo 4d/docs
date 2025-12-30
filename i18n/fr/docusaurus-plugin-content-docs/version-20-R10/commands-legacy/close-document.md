@@ -43,6 +43,6 @@ L'exemple suivant permet à l'utilisateur de créer un nouveau document, écrit 
 |  |  |
 | --- | --- |
 | Numéro de commande | 267 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

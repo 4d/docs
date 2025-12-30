@@ -45,11 +45,11 @@ UDPSocket objects provide the following properties and functions:
 
 <!-- REF #4D.UDPSocket.new().params -->
 
-| Parâmetro  | Tipo      |                             | Descrição                                                                                      |
-| ---------- | --------- | --------------------------- | ---------------------------------------------------------------------------------------------- |
-| port       | Integer   | ->                          | Local port used for UDP socket (0 or omitted = find any unused port to use) |
-| options    | Object    | ->                          | Configuration [options](#options-parameter) for the socket                                     |
-| Resultados | UDPSocket | <- | New UDPSocket object                                                                           |
+| Parâmetro  | Tipo                         |                             | Descrição                                                                                      |
+| ---------- | ---------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------- |
+| port       | Integer                      | ->                          | Local port used for UDP socket (0 or omitted = find any unused port to use) |
+| options    | Object                       | ->                          | Configuration [options](#options-parameter) for the socket                                     |
+| Resultados | 4D.UDPSocket | <- | New UDPSocket object                                                                           |
 
 <!-- END REF -->
 

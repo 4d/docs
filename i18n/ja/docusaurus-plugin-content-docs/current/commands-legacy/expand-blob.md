@@ -5,11 +5,11 @@ slug: /commands/expand-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* )<!-- END REF-->
+<!--REF #_command_.EXPAND BLOB.Syntax-->**EXPAND BLOB** ( *BLOB* : Blob )<!-- END REF-->
 <!--REF #_command_.EXPAND BLOB.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| Blob | Blob | &#8594;  | 展開するBLOB |
+| Blob | Blob | &#8594; | 展開するBLOB |
 
 <!-- END REF-->
 
@@ -70,7 +70,7 @@ BLOBが正しく解凍されるとOK変数は1に、そうでなければ0に設
 |  |  |
 | --- | --- |
 | コマンド番号 | 535 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | システム変数を更新する | OK |
 
 

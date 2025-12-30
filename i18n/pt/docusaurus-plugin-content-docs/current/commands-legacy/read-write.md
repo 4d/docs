@@ -5,11 +5,11 @@ slug: /commands/read-write
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** {( tabela | * )}<!-- END REF-->
+<!--REF #_command_.READ WRITE.Syntax-->**READ WRITE** ({ tabela | * })<!-- END REF-->
 <!--REF #_command_.READ WRITE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela &#124; * | Tabela, Operador | &#8594;  | Tabela para a qual vai estabelecer o estado apenas leitura, ou * para todas as tabelas, ou tabela padrão, se omitido |
+| tabela &#124; * | Tabela, Operador | &#8594; | Tabela para a qual vai estabelecer o estado apenas leitura, ou * para todas as tabelas, ou tabela padrão, se omitido |
 
 <!-- END REF-->
 
@@ -36,6 +36,6 @@ Utilize READ WRITE quando tenha que modificar um registro e guardar as mudanças
 |  |  |
 | --- | --- |
 | Número do comando | 146 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

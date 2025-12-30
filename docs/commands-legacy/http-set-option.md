@@ -5,7 +5,7 @@ slug: /commands/http-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.HTTP SET OPTION.Syntax-->**HTTP SET OPTION** ( *option* ; *value* )<!-- END REF-->
+<!--REF #_command_.HTTP SET OPTION.Syntax-->**HTTP SET OPTION** ( *option* : Integer ; *value* : Integer )<!-- END REF-->
 <!--REF #_command_.HTTP SET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -50,6 +50,6 @@ You can call options in any order. If the same option is set more than once, onl
 |  |  |
 | --- | --- |
 | Command number | 1160 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

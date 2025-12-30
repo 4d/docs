@@ -5,7 +5,7 @@ slug: /commands/dynamic-pop-up-menu
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* {; *default* {; *xCoord* ; *yCoord*}} )  : Text<!-- END REF-->
+<!--REF #_command_.Dynamic pop up menu.Syntax-->**Dynamic pop up menu** ( *menu* : Text {; *default* : Text {; *xCoord* : Integer ; *yCoord* : Integer}} )  : Text<!-- END REF-->
 <!--REF #_command_.Dynamic pop up menu.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -97,6 +97,6 @@ This code allows creating a hierarchical dynamic pop up menu built upon standard
 |  |  |
 | --- | --- |
 | Command number | 1006 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

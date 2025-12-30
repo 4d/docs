@@ -40,6 +40,6 @@ Lorsque la commande est appelée depuis :
 |  |  |
 | --- | --- |
 | Numéro de commande | 1739 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

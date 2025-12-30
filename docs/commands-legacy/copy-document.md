@@ -5,7 +5,7 @@ slug: /commands/copy-document
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *sourceName* ; *destinationName* {; *newName*} {; *} )<!-- END REF-->
+<!--REF #_command_.COPY DOCUMENT.Syntax-->**COPY DOCUMENT** ( *sourceName* : Text ; *destinationName* : Text {; *newName* : Text} {; *} )<!-- END REF-->
 <!--REF #_command_.COPY DOCUMENT.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -126,7 +126,7 @@ The following examples create different files and folders in the database folder
 |  |  |
 | --- | --- |
 | Command number | 541 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifies variables | OK, error |
 
 

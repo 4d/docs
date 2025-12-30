@@ -5,7 +5,7 @@ slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* ; *textParam* )<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* : Integer ; *textParam* : Text )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -62,6 +62,6 @@ This macro builds a new text that will be returned to the calling method:
 |  |  |
 | --- | --- |
 | Command number | 998 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

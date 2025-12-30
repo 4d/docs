@@ -5,13 +5,13 @@ slug: /commands/wa-get-preference
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( {* ;} *objeto* ; *seletor* ; *valor* )<!-- END REF-->
+<!--REF #_command_.WA GET PREFERENCE.Syntax-->**WA GET PREFERENCE** ( * ; *objeto* : Text ; *seletor* : Integer ; *valor* : Variable )<br/>**WA GET PREFERENCE** ( *objeto* : Field, Variable ; *seletor* : Integer ; *valor* : Variable )<!-- END REF-->
 <!--REF #_command_.WA GET PREFERENCE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
-| objeto | any | &#8594;  | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
-| seletor | Integer | &#8594;  | Preferência a obter |
+| * | Operador | &#8594; | Se especificado, objeto é um nome de objeto (string); se omitido, objeto é uma variável |
+| objeto | any | &#8594; | Nome objeto (se * for especificado) ou Variável (se * é omitido) |
+| seletor | Integer | &#8594; | Preferência a obter |
 | valor | Variable | &#8592; | Valor atual da preferência |
 
 <!-- END REF-->
@@ -40,6 +40,6 @@ Passe no parâmetro *valor* uma variável que receberá o valor atual da prefer�
 |  |  |
 | --- | --- |
 | Número do comando | 1042 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

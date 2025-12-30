@@ -42,7 +42,7 @@ La ventana del depurador suele aparecer en la máquina donde se ejecuta el códi
 :::note Notas
 
 - Si el servidor se ejecuta en modo sin interfaz, no se puede mostrar ninguna ventana de depuración en el servidor, es necesario utilizar el depurador remoto. Ver [Depuración desde máquinas remotas](./debugging-remote.md).
-- También puede [adjuntar el depurador de Qodly Studio a una aplicación 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server) si necesita depurar páginas Qodly en un entorno desplegado.
+- También puede [adjuntar el depurador de Qodly Studio a una aplicación 4D Server](https://developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server) si necesita depurar páginas Qodly en un entorno desplegado.
 
 :::
 

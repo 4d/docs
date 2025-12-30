@@ -5,11 +5,11 @@ slug: /commands/set-timeout
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *secondes* )<!-- END REF-->
+<!--REF #_command_.SET TIMEOUT.Syntax-->**SET TIMEOUT** ( *secondes* : Integer )<!-- END REF-->
 <!--REF #_command_.SET TIMEOUT.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| secondes | Integer | &#8594;  | Nombre de secondes jusqu'au timeout |
+| secondes | Integer | &#8594; | Nombre de secondes jusqu'au timeout |
 
 <!-- END REF-->
 
@@ -55,7 +55,7 @@ L'exemple suivant fixe le port série devant recevoir des données et le timeout
 |  |  |
 | --- | --- |
 | Numéro de commande | 268 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Modifie les variables | OK, error |
 
 

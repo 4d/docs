@@ -68,6 +68,6 @@ Reportez-vous à l'exemple de la commande [FILTER KEYSTROKE](filter-keystroke.md
 |  |  |
 | --- | --- |
 | Numéro de commande | 210 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

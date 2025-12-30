@@ -66,6 +66,6 @@ Vous pouvez envoyer la page "stats.shtm" via un lien URL ou à l'aide de command
 |  |  |
 | --- | --- |
 | Numéro de commande | 658 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -5,11 +5,11 @@ slug: /commands/drop-remote-user
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *sessaoUsuario* )<!-- END REF-->
+<!--REF #_command_.DROP REMOTE USER.Syntax-->**DROP REMOTE USER** ( *sessaoUsuario* : Text )<!-- END REF-->
 <!--REF #_command_.DROP REMOTE USER.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| sessaoUsuario | Text | &#8594;  | ID de sessão do usuário |
+| sessaoUsuario | Text | &#8594; | ID de sessão do usuário |
 
 <!-- END REF-->
 
@@ -49,6 +49,6 @@ Se quiser eliminar um usu\[ario remoto específico:
 |  |  |
 | --- | --- |
 | Número do comando | 1633 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

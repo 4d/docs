@@ -106,7 +106,7 @@ Creación de un nuevo botón radio "bRadio6" basado en el botón radio existente
 |  |  |
 | --- | --- |
 | Número de comando | 1111 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | OK |
 
 

@@ -59,6 +59,6 @@ Este ejemplo define el estilo de fuente Plain para todos los objetos de formular
 |  |  |
 | --- | --- |
 | Número de comando | 166 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

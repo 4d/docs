@@ -289,6 +289,6 @@ En este ejemplo, personalizamos algunos parámetros:
 |  |  |
 | --- | --- |
 | Número de comando | 169 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

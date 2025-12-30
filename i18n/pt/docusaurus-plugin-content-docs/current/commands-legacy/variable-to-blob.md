@@ -5,14 +5,14 @@ slug: /commands/variable-to-blob
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variável* ; *BLOB* {; offset | *} )<!-- END REF-->
+<!--REF #_command_.VARIABLE TO BLOB.Syntax-->**VARIABLE TO BLOB** ( *variável* : Variable ; *BLOB* : Blob {; offset | *} )<!-- END REF-->
 <!--REF #_command_.VARIABLE TO BLOB.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| variável | Variable | &#8594;  | Variável a ser armazenada no BLOB |
-| Blob | Blob | &#8594;  | BLOB a receber a variável |
+| variável | Variable | &#8594; | Variável a ser armazenada no BLOB |
+| Blob | Blob | &#8594; | BLOB a receber a variável |
 | offset &#124; * | Variável, Operador | &#8596; | Offset da variável(expressado em bytes) no BLOB ou * para adicionar o valor |
-| ||| Novo offset depois de escrita se * for omitido |
+|  |  |  | Novo offset depois de escrita se * for omitido |
 
 <!-- END REF-->
 
@@ -139,7 +139,7 @@ Depois que esses métodos foram adicionados a sua aplicação, pode escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 532 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 | Modificar variáveis | OK |
 
 

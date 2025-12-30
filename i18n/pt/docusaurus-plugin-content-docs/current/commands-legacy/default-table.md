@@ -5,11 +5,11 @@ slug: /commands/default-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *tabela* )<!-- END REF-->
+<!--REF #_command_.DEFAULT TABLE.Syntax-->**DEFAULT TABLE** ( *tabela* : Table )<!-- END REF-->
 <!--REF #_command_.DEFAULT TABLE.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| tabela | Table | &#8594;  | Tabela a ser definida como padrão |
+| tabela | Table | &#8594; | Tabela a ser definida como padrão |
 
 <!-- END REF-->
 
@@ -83,6 +83,6 @@ Neste código o resultado da tabela padrão:
 |  |  |
 | --- | --- |
 | Número do comando | 46 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

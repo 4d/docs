@@ -5,7 +5,7 @@ slug: /commands/object-get-format
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( {* ;} *object* ) : Text<!-- END REF-->
+<!--REF #_command_.OBJECT Get format.Syntax-->**OBJECT Get format** ( * ; *object* : Text ) : Text<br/>**OBJECT Get format** ( *object* : Field, Variable ) : Text<!-- END REF-->
 <!--REF #_command_.OBJECT Get format.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -69,6 +69,6 @@ Customized formats are returned untouched:
 |  |  |
 | --- | --- |
 | Command number | 894 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

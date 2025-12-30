@@ -5,7 +5,7 @@ slug: /commands/first-record
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** {( *aTable* )}<!-- END REF-->
+<!--REF #_command_.FIRST RECORD.Syntax-->**FIRST RECORD** ({ *aTable* : Table })<!-- END REF-->
 <!--REF #_command_.FIRST RECORD.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -40,7 +40,7 @@ The following example makes the first record of the \[Customers\] table the firs
 |  |  |
 | --- | --- |
 | Command number | 50 |
-| Thread safe | &check; |
+| Thread safe | yes |
 | Changes current record ||
 
 

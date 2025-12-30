@@ -43,6 +43,6 @@ Si ninguna lista del tipo definido está asociada al *objeto*, el comando devuel
 |  |  |
 | --- | --- |
 | Número de comando | 1072 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

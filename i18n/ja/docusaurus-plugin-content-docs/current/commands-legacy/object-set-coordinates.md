@@ -5,16 +5,16 @@ slug: /commands/object-set-coordinates
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* ; *left* ; *top* {; *right* ; *bottom*} )<!-- END REF-->
+<!--REF #_command_.OBJECT SET COORDINATES.Syntax-->**OBJECT SET COORDINATES** ( {* ;} *object* : Integer ; *left* : Integer ; *top* : Integer {; *right* : Integer ; *bottom* : Integer} )<!-- END REF-->
 <!--REF #_command_.OBJECT SET COORDINATES.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| * | 演算子 | &#8594;  | 指定時:object はオブジェクト名(文字列)、省略時:object は変数またはフィールド |
-| object | Integer | &#8594;  | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
-| left | Integer | &#8594;  | オブジェクトの左端の絶対座標(ピクセル) |
-| top | Integer | &#8594;  | オブジェクトの上端の絶対座標(ピクセル) |
-| right | Integer | &#8594;  | オブジェクトの右端の絶対座標(ピクセル) |
-| bottom | Integer | &#8594;  | オブジェクトの下端の絶対座標(ピクセル) |
+| * | 演算子 | &#8594; | 指定時:object はオブジェクト名(文字列)、省略時:object は変数またはフィールド |
+| object | Integer | &#8594; | オブジェクト名( * 指定時)、または変数やフィールド( * 省略時) |
+| left | Integer | &#8594; | オブジェクトの左端の絶対座標(ピクセル) |
+| top | Integer | &#8594; | オブジェクトの上端の絶対座標(ピクセル) |
+| right | Integer | &#8594; | オブジェクトの右端の絶対座標(ピクセル) |
+| bottom | Integer | &#8594; | オブジェクトの下端の絶対座標(ピクセル) |
 
 <!-- END REF-->
 
@@ -60,6 +60,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1248 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

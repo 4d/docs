@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-delete-style-sheet
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP DELETE STYLE SHEET.Syntax-->**WP DELETE STYLE SHEET** ( *objFeuilleStyle* ) | (*docWP* ; *nomFeuilleStyle* )<!-- END REF-->
+<!--REF #_command_.WP DELETE STYLE SHEET.Syntax-->**WP DELETE STYLE SHEET** ( *objFeuilleStyle* : Object ) | (*docWP* : Object ; *nomFeuilleStyle* : Text )<!-- END REF-->
 <!--REF #_command_.WP DELETE STYLE SHEET.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |

@@ -34,6 +34,6 @@ Please refer to the examples of the *Sets* section.
 |  |  |
 | --- | --- |
 | Command number | 140 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

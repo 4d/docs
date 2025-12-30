@@ -34,6 +34,6 @@ Recuerde llamar finalmente **CLOSE RESOURCE FILE** para un archivo de recursos q
 |  |  |
 | --- | --- |
 | Número de comando | 498 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

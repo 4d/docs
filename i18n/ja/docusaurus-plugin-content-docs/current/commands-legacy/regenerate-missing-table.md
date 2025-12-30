@@ -5,11 +5,11 @@ slug: /commands/regenerate-missing-table
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *tableName* )<!-- END REF-->
+<!--REF #_command_.REGENERATE MISSING TABLE.Syntax-->**REGENERATE MISSING TABLE** ( *tableName* : Text )<!-- END REF-->
 <!--REF #_command_.REGENERATE MISSING TABLE.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| tableName | Text | &#8594;  | 再生成する、失われたテーブルの名称 |
+| tableName | Text | &#8594; | 再生成する、失われたテーブルの名称 |
 
 <!-- END REF-->
 
@@ -65,6 +65,6 @@ displayed_sidebar: docs
 |  |  |
 | --- | --- |
 | コマンド番号 | 1126 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

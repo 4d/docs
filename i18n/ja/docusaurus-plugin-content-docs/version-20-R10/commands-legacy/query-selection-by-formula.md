@@ -36,7 +36,7 @@ QUERY SELECTION BY FORMULAは[QUERY BY FORMULA](query-by-formula.md "QUERY BY FO
 |  |  |
 | --- | --- |
 | コマンド番号 | 207 |
-| スレッドセーフである | &check; |
+| スレッドセーフである | yes |
 | カレントレコードを変更する ||
 | カレントセレクションを変更する ||
 

@@ -5,7 +5,7 @@ slug: /commands/selection-to-json
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTable* {; *aField*}{; *aField2* ; ... ; *aFieldN*}{; *template*})  : Text<!-- END REF-->
+<!--REF #_command_.Selection to JSON.Syntax-->**Selection to JSON** ( *aTable* : Table {; *...aField* : Field}{; *template* : Object})  : Text<!-- END REF-->
 <!--REF #_command_.Selection to JSON.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -97,6 +97,6 @@ You can use the *template* syntax in order to export fields from different table
 |  |  |
 | --- | --- |
 | Command number | 1234 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

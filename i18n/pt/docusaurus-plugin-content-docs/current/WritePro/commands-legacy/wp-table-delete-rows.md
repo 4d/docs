@@ -5,7 +5,7 @@ slug: /WritePro/commands/wp-table-delete-rows
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WP TABLE DELETE ROWS.Syntax-->**WP TABLE DELETE ROWS** ( *objTarget* ) | ( *refTabela* ; *numLinha* {; *nbLinhas*} )<!-- END REF-->
+<!--REF #_command_.WP TABLE DELETE ROWS.Syntax-->**WP TABLE DELETE ROWS** ( *objTarget* : Object ) | ( *refTabela* : Object ; *numLinha* : Integer {; *nbLinhas* : Integer} )<!-- END REF-->
 <!--REF #_command_.WP TABLE DELETE ROWS.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |

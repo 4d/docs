@@ -75,7 +75,7 @@ The interface of your application uses the static string ":xliff:shopping". The 
 |  |  |
 | --- | --- |
 | Command number | 1104 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | OK |
 
 

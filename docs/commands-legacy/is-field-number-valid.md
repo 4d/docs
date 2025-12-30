@@ -5,7 +5,7 @@ slug: /commands/is-field-number-valid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *tablePtr* ; *fieldNum* ) : Boolean<br/>**Is field number valid** ( *tableNum* ; *fieldNum* ) : Boolean<!-- END REF-->
+<!--REF #_command_.Is field number valid.Syntax-->**Is field number valid** ( *tablePtr* : Integer, Pointer ; *fieldNum* : Integer ) : Boolean<br/>**Is field number valid** ( *tableNum* : Integer, Pointer ; *fieldNum* : Integer ) : Boolean<!-- END REF-->
 <!--REF #_command_.Is field number valid.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -31,6 +31,6 @@ This command can be used to detect any field deletions, which create gaps in the
 |  |  |
 | --- | --- |
 | Command number | 1000 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

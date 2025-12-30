@@ -45,6 +45,6 @@ Para evitar esto, en el evento formulario On Resize de la ventana estándar, es 
 |  |  |
 | --- | --- |
 | Número de comando | 434 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

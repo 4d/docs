@@ -5,7 +5,7 @@ slug: /commands/web-set-option
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *selector* ; *value* )<!-- END REF-->
+<!--REF #_command_.WEB SET OPTION.Syntax-->**WEB SET OPTION** ( *selector* : Integer ; *value* : Integer, Text, Collection )<!-- END REF-->
 <!--REF #_command_.WEB SET OPTION.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -86,6 +86,6 @@ A log entry looks like this:
 |  |  |
 | --- | --- |
 | Command number | 5 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

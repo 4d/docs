@@ -35,7 +35,7 @@ Si no tiene privilegios de acceso para llamar al comando Is user deleted o si ot
 |  |  |
 | --- | --- |
 | Número de comando | 616 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 | Modifica variables | error |
 
 

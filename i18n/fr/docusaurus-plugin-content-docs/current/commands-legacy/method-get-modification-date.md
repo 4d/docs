@@ -5,14 +5,14 @@ slug: /commands/method-get-modification-date
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *chemin* ; *dateMod* ; *heureMod* {; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET MODIFICATION DATE.Syntax-->**METHOD GET MODIFICATION DATE** ( *chemin* : Text, Text array ; *dateMod* : Date, Date array ; *heureMod* : Time, Integer array {; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET MODIFICATION DATE.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| chemin | Text, Text array | &#8594;  | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
+| chemin | Text, Text array | &#8594; | Texte ou Tableau texte contenant un ou plusieurs chemin(s) de méthode(s) |
 | dateMod | Date, Date array | &#8592; | Date(s) de modification de méthode(s) |
 | heureMod | Time, Integer array | &#8592; | Heure(s) de modification de méthode(s) |
-| * | Opérateur | &#8594;  | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
+| * | Opérateur | &#8594; | Si passé = la commande s’applique à la base hôte lorsqu’elle est exécutée depuis un composant (paramètre ignoré hors de ce contexte) |
 
 <!-- END REF-->
 
@@ -74,6 +74,6 @@ Vous souhaitez obtenir les dates de modification des méthodes d'un module, pré
 |  |  |
 | --- | --- |
 | Numéro de commande | 1170 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

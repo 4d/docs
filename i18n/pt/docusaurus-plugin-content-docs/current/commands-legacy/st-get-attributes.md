@@ -5,15 +5,15 @@ slug: /commands/st-get-attributes
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( {* ;} *objeto* ; *inicioSel* ; *fimSel* ; *nomeAtributo* ; *valorAtrib* {; *nomeAtributo2* ; *valorAtrib2* ; ... ; *nomeAtributoN* ; *valorAtribN*} )<!-- END REF-->
+<!--REF #_command_.ST GET ATTRIBUTES.Syntax-->**ST GET ATTRIBUTES** ( * ; *objeto* : Text ; *inicioSel* : Integer ; *fimSel* : Integer ; *nomeAtributo* : Integer ; *valorAtrib* : Variable {; ...(*nomeAtributo* : Integer, *valorAtrib* : Variable)} )<br/>**ST GET ATTRIBUTES** ( *objeto* : Field, Variable ; *inicioSel* : Integer ; *fimSel* : Integer ; *nomeAtributo* : Integer ; *valorAtrib* : Variable {; ...(*nomeAtributo* : Integer, *valorAtrib* : Variable)} )<!-- END REF-->
 <!--REF #_command_.ST GET ATTRIBUTES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| * | Operador | &#8594;  | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo |
-| objeto | any | &#8594;  | Nome de objeto (se * é específico) ou variável ou campo (se * é omitido) |
-| inicioSel | Integer | &#8594;  | início da seleção de texto |
-| fimSel | Integer | &#8594;  | Fim da seleção de texto |
-| nomeAtributo | Integer | &#8594;  | Atributo a ser lido |
+| * | Operador | &#8594; | se especificado, objeto é um nome de objeto (string) se omitido, objeto é uma variável ou campo |
+| objeto | any | &#8594; | Nome de objeto (se * é específico) ou variável ou campo (se * é omitido) |
+| inicioSel | Integer | &#8594; | início da seleção de texto |
+| fimSel | Integer | &#8594; | Fim da seleção de texto |
+| nomeAtributo | Integer | &#8594; | Atributo a ser lido |
 | valorAtrib | Variable | &#8592; | Valor atual do atributo |
 
 <!-- END REF-->
@@ -109,7 +109,7 @@ No caso de erro, não modifica a variável. Quando ocorre um erro em uma variáv
 |  |  |
 | --- | --- |
 | Número do comando | 1094 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 | Modificar variáveis | OK |
 
 

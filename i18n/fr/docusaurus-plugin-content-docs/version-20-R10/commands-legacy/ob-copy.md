@@ -170,6 +170,6 @@ Nous souhaitons copier *$sharedObj* dans *$sharedColl.* Etant donné qu'ils appa
 |  |  |
 | --- | --- |
 | Numéro de commande | 1225 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

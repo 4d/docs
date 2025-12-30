@@ -5,11 +5,11 @@ slug: /commands/database-measures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Database measures.Syntax-->**Database measures** {( *options* )} : Object<!-- END REF-->
+<!--REF #_command_.Database measures.Syntax-->**Database measures** ( *options* : Object ) : Object<!-- END REF-->
 <!--REF #_command_.Database measures.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| options | Object | &#8594;  | Options de retour |
+| options | Object | &#8594; | Options de retour |
 | Résultat | Object | &#8592; | Objet contenant des mesures sur la base |
 
 <!-- END REF-->
@@ -333,6 +333,6 @@ Vous souhaitez obtenir les mesures d'octets lus dans le cache au cours des deux 
 |  |  |
 | --- | --- |
 | Numéro de commande | 1314 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

@@ -102,6 +102,6 @@ Utilizando un elemento de array de objetos:
 |  |  |
 | --- | --- |
 | Número de comando | 1232 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

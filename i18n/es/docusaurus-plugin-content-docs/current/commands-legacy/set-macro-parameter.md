@@ -5,12 +5,12 @@ slug: /commands/set-macro-parameter
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* ; *paramText* )<!-- END REF-->
+<!--REF #_command_.SET MACRO PARAMETER.Syntax-->**SET MACRO PARAMETER** ( *selector* : Integer ; *paramText* : Text )<!-- END REF-->
 <!--REF #_command_.SET MACRO PARAMETER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| selector | Integer | &#8594;  | Selección a utilizar |
-| paramText | Text | &#8594;  | Texto enviado |
+| selector | Integer | &#8594; | Selección a utilizar |
+| paramText | Text | &#8594; | Texto enviado |
 
 <!-- END REF-->
 
@@ -63,6 +63,6 @@ Esta macro crea un nuevo texto que será devuelto al método llamante:
 |  |  |
 | --- | --- |
 | Número de comando | 998 |
-| Hilo seguro | &cross; |
+| Hilo seguro | no |
 
 

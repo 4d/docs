@@ -5,16 +5,16 @@ slug: /commands/ldap-search-all
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* ; *arrResult* ; *filter* {; *scope* {; *attributes* {; *attributesAsArray*}}} )<!-- END REF-->
+<!--REF #_command_.LDAP SEARCH ALL.Syntax-->**LDAP SEARCH ALL** ( *dnRootEntry* : Text ; *arrResult* : Object array ; *filter* : Text {; *scope* : Text {; *attributes* : Text array {; *attributesAsArray* : Boolean array}}} )<!-- END REF-->
 <!--REF #_command_.LDAP SEARCH ALL.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| dnRootEntry | Text | &#8594;  | 検索を開始するルートエントリーの識別名 |
+| dnRootEntry | Text | &#8594; | 検索を開始するルートエントリーの識別名 |
 | arrResult | Object array | &#8592; | 検索の結果 |
-| filter | Text | &#8594;  | LDAP検索フィルター |
-| scope | Text | &#8594;  | 検索のスコープ: "base" (デフォルト)、"one"、または"sub" |
-| attributes | Text array | &#8594;  | 取得する属性 |
-| attributesAsArray | Boolean array | &#8594;  | True = 属性を配列として返す; false = 属性を単純な変数として返す |
+| filter | Text | &#8594; | LDAP検索フィルター |
+| scope | Text | &#8594; | 検索のスコープ: "base" (デフォルト)、"one"、または"sub" |
+| attributes | Text array | &#8594; | 取得する属性 |
+| attributesAsArray | Boolean array | &#8594; | True = 属性を配列として返す; false = 属性を単純な変数として返す |
 
 <!-- END REF-->
 
@@ -121,6 +121,6 @@ LDAPサーバーには通常、検索のために受け付けられるエント�
 |  |  |
 | --- | --- |
 | コマンド番号 | 1329 |
-| スレッドセーフである | &cross; |
+| スレッドセーフである | no |
 
 

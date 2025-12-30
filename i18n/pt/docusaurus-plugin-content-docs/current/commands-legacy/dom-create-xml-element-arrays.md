@@ -5,14 +5,14 @@ slug: /commands/dom-create-xml-element-arrays
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *arrayNomesAtrib* ; *xRota* {; *atribNomesArray* ; *atribValoresArray*} {; *atribNomesArray2* ; *atribValoresArray2* ; ... ; *atribNomesArrayN* ; *atribValoresArrayN*} ) : Text<!-- END REF-->
+<!--REF #_command_.DOM Create XML element arrays.Syntax-->**DOM Create XML element arrays** ( *arrayNomesAtrib* : Text ; *xRota* : Text {; *atribNomesArray* : Text array ; *atribValoresArray* : Text array} {; ...(*atribNomesArray* : Text array, *atribValoresArray* : Text array)} ) : Text<!-- END REF-->
 <!--REF #_command_.DOM Create XML element arrays.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
-| arrayNomesAtrib | Text | &#8594;  | Array dos nomes de atributo |
-| xRota | Text | &#8594;  | Caminho xRota do elemento XML a ser criado |
-| atribNomesArray | Text array | &#8594;  | Array de nomes de atributo |
-| atribValoresArray | Text array | &#8594;  | Array dos valores de atributos |
+| arrayNomesAtrib | Text | &#8594; | Array dos nomes de atributo |
+| xRota | Text | &#8594; | Caminho xRota do elemento XML a ser criado |
+| atribNomesArray | Text array | &#8594; | Array de nomes de atributo |
+| atribValoresArray | Text array | &#8594; | Array dos valores de atributos |
 | Resultado | Text | &#8592; | Referência do elemento XML criado |
 
 <!-- END REF-->
@@ -67,6 +67,6 @@ Para isso, basta escrever:
 |  |  |
 | --- | --- |
 | Número do comando | 1097 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

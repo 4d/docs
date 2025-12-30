@@ -5,7 +5,7 @@ slug: /commands/qr-set-borders
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* ; *column* ; *row* ; *border* ; *line* {; *color*} )<!-- END REF-->
+<!--REF #_command_.QR SET BORDERS.Syntax-->**QR SET BORDERS** ( *area* : Integer ; *column* : Integer ; *row* : Integer ; *border* : Integer ; *line* : Integer {; *color* : Integer} )<!-- END REF-->
 <!--REF #_command_.QR SET BORDERS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -80,7 +80,7 @@ If you pass an invalid line parameter, the error -9855 will be generated.
 |  |  |
 | --- | --- |
 | Command number | 797 |
-| Thread safe | &cross; |
+| Thread safe | no |
 | Modifies variables | error |
 
 

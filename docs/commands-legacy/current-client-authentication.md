@@ -5,7 +5,7 @@ slug: /commands/current-client-authentication
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** {( *domain* ; *protocol* )} : Text<!-- END REF-->
+<!--REF #_command_.Current client authentication.Syntax-->**Current client authentication** ( *domain* : Text ; *protocol* : Text ) : Text<!-- END REF-->
 <!--REF #_command_.Current client authentication.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -79,6 +79,6 @@ With this setting, no password dialog will be displayed for a remote 4D that con
 |  |  |
 | --- | --- |
 | Command number | 1355 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 

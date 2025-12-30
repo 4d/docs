@@ -44,6 +44,6 @@ O seguinte exemplo abre uma janela formulario e cria novos registros com o coman
 |  |  |
 | --- | --- |
 | Número do comando | 154 |
-| Thread-seguro | &cross; |
+| Thread-seguro | no |
 
 

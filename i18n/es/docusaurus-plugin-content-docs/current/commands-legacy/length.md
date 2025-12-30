@@ -5,11 +5,11 @@ slug: /commands/length
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Length.Syntax-->**Length** ( *cadena* ) : Integer<!-- END REF-->
+<!--REF #_command_.Length.Syntax-->**Length** ( *cadena* : Text ) : Integer<!-- END REF-->
 <!--REF #_command_.Length.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| cadena | Text | &#8594;  | Cadena de  la cual devolver la longitud |
+| cadena | Text | &#8594; | Cadena de  la cual devolver la longitud |
 | Resultado | Integer | &#8592; | Longitud de la cadena |
 
 <!-- END REF-->
@@ -35,6 +35,6 @@ Este ejemplo ilustra el uso de Length. Los resultados, descritos en los comentar
 |  |  |
 | --- | --- |
 | Número de comando | 16 |
-| Hilo seguro | &check; |
+| Hilo seguro | yes |
 
 

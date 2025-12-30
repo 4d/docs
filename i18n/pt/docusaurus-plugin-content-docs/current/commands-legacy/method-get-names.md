@@ -5,13 +5,13 @@ slug: /commands/method-get-names
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrayNoms* {; *filtro*}{; *} )<!-- END REF-->
+<!--REF #_command_.METHOD GET NAMES.Syntax-->**METHOD GET NAMES** ( *arrayNoms* : Text array {; *filtro* : Text}{; *} )<!-- END REF-->
 <!--REF #_command_.METHOD GET NAMES.Params-->
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | arrayNoms | Text array | &#8592; | Arrays de nomes de métodos de projeto |
-| filtro | Text | &#8594;  | Filtros de nomes |
-| * | Operador | &#8594;  | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
+| filtro | Text | &#8594; | Filtros de nomes |
+| * | Operador | &#8594; | Se passado = o comando se aplica à base local quando se executa desde um componente (parâmetro ignorado fora deste contexto) |
 
 <!-- END REF-->
 
@@ -46,6 +46,6 @@ Exemplos de uso:
 |  |  |
 | --- | --- |
 | Número do comando | 1166 |
-| Thread-seguro | &check; |
+| Thread-seguro | yes |
 
 

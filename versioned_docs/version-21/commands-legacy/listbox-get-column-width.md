@@ -35,6 +35,6 @@ If no minimum and/or maximum value has been set for the column, the correspondin
 |  |  |
 | --- | --- |
 | Command number | 834 |
-| Thread safe | &cross; |
+| Thread safe | no |
 
 

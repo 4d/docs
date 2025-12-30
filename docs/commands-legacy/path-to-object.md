@@ -5,7 +5,7 @@ slug: /commands/path-to-object
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *path* {; *pathType*} ) : Object<!-- END REF-->
+<!--REF #_command_.Path to object.Syntax-->**Path to object** ( *path* : Text {; *pathType* : Integer} ) : Object<!-- END REF-->
 <!--REF #_command_.Path to object.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
@@ -180,6 +180,6 @@ You want to know the number of subfolders contained in a path:
 |  |  |
 | --- | --- |
 | Command number | 1547 |
-| Thread safe | &check; |
+| Thread safe | yes |
 
 
