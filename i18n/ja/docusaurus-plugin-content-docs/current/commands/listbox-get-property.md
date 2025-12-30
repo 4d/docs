@@ -4,7 +4,7 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Field, Variable ; *property* : Integer ) : any<!-- END REF-->
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
@@ -104,9 +104,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 917                         |
-| スレッドセーフ | &cross; |
+|         |     |
+| ------- | --- |
+| コマンド番号  | 917 |
+| スレッドセーフ | ×   |
 
 

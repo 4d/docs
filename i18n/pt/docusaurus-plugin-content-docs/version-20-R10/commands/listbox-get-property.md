@@ -104,9 +104,9 @@ Given a list box "MyListbox", if you execute the following statement:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 917                         |
-| Thread safe       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 917 |
+| Thread safe       | não |
 
 

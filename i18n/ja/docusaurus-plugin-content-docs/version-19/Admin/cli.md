@@ -43,9 +43,9 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 | `--webadmin-access-key`     | Text                                             | [WebAdmin Webサーバー](webAdmin.md) 用のアクセスキー                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `--webadmin-auto-start`     | Boolean                                          | [WebAdmin Webサーバー](webAdmin.md) 用の自動スタートアップ設定の状態                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | `--webadmin-store-settings` |                                                  | アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの [`WebAdmin.4DSettings`](webAdmin.md#webadmin-設定) ファイル、または `--webadmin-settings-path` パラメーターで指定されたカスタムファイル) に保存します。 必要に応じて `--webadmin-store-settings` 引数を使用して、これらの設定を保存します。                                                                                                                                                                                                                                                                 |
- (*) 一部のダイアログはデータベースを開く前に表示されるため、
+ (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the 
 
-[診断ログファイル](debugLogFiles.md#4ddiagnosticlogtxt) に記録することができません (ライセンス警告、変換ダイアログ、データベース選択、データファイル選択)。 このような場合、エラーストリーム (stderr) とシステムのイベントログにエラーが投げられ、アプリケーションが終了します。
+[Diagnostic log file](debugLogFiles.md#4ddiagnosticlogtxt) (license alert, conversion dialog, database selection, data file selection). このような場合、エラーストリーム (stderr) とシステムのイベントログにエラーが投げられ、アプリケーションが終了します。
 
 ### 例題
 

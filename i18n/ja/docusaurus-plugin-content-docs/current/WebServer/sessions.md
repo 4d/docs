@@ -68,7 +68,7 @@ Webセッションは次のものに使用されます:
 
 :::note
 
-RESTリクエストのための Webセッションを作成するには、利用可能なライセンスが必要な場合があります。詳細は [こちらのページ](../REST/authUsers.md) を参照ください。
+Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
 
 :::
 

@@ -88,9 +88,9 @@ You want to set a maximum width for the column whose name is "ProductNumber":
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1440                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1440 |
+| Thread safe       | não  |
 
 

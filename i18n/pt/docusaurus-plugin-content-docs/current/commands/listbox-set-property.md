@@ -4,7 +4,7 @@ title: LISTBOX SET PROPERTY
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( {* ;} *object* ; *property* ; *value* )<!-- END REF-->
+<!--REF #_command_.LISTBOX SET PROPERTY.Syntax-->**LISTBOX SET PROPERTY** ( * ; *object* : Text ; *property* : Integer ; *value* : Integer, Text )<br/>**LISTBOX SET PROPERTY** ( *object* : Field, Variable ; *property* : Integer ; *value* : Integer, Text )<!-- END REF-->
 
 <!--REF #_command_.LISTBOX SET PROPERTY.Params-->
 
@@ -88,9 +88,9 @@ You want to set a maximum width for the column whose name is "ProductNumber":
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1440                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1440 |
+| Thread safe       | não  |
 
 

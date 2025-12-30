@@ -47,9 +47,9 @@ Sintaxis:
           --webadmin-auto-start`     | Boolean                                                     | Estado del inicio automático del [servidor web WebAdmin](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | `
           --webadmin-store-settings` |                                                             | Almacena la llave de acceso y los parámetros de inicio automático en el archivo de parámetros actual (es decir, el archivo [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) por defecto o un archivo personalizado designado por el parámetro `--webadmin-settings-path`). Utilice el argumento `--webadmin-store-settings` para guardar estos parámetros si es necesario                                                                                                                                                                                                                                                                                                          |
+ (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the 
 
-
-[Diagnostic log file](debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). En este caso, se lanza un mensaje de error tanto en el flujo stderr como en el registro de eventos sistema, y luego la aplicación se cierra.
+[Diagnostic log file](debugLogFiles.md#4ddiagnosticlogtxt) (license alert, conversion dialog, database selection, data file selection). En este caso, se lanza un mensaje de error tanto en el flujo stderr como en el registro de eventos sistema, y luego la aplicación se cierra.
 
 ### Ejemplos
 

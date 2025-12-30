@@ -142,9 +142,9 @@ Vous souhaitez obtenir des informations sur votre licence 4D Server courante :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1489                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1489 |
+| Thread safe        | oui  |
 
 

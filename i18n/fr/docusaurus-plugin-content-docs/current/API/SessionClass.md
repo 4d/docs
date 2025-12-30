@@ -25,7 +25,7 @@ Les types de sessions suivants sont pris en charge par cette classe :
 
 :::warning A propos des privilèges de session
 
-All session types can handle privileges, but only the code executed in a **web context** is actually controlled by session's privileges.
+Tous les types de session peuvent gérer des privilèges, mais seul le code exécuté dans un **contexte web** est réellement contrôlé par les privilèges de la session.
 
 :::
 
@@ -90,7 +90,7 @@ Gardez à l'esprit que les privilèges ne s'appliquent qu'au code exécuté via 
 #### Exemple
 
 ```4d
-//Invalidate a web user session
+//Invalider la session d'un utilisateur web
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()

@@ -4,7 +4,7 @@ title: LISTBOX Get property
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( {* ;} *object* ; *property* ) : any<!-- END REF-->
+<!--REF #_command_.LISTBOX Get property.Syntax-->**LISTBOX Get property** ( * ; *object* : Text ; *property* : Integer ) : any<br/>**LISTBOX Get property** ( *object* : Field, Variable ; *property* : Integer ) : any<!-- END REF-->
 
 <!--REF #_command_.LISTBOX Get property.Params-->
 
@@ -104,9 +104,9 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 917                         |
-| Hilo seguro       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 917 |
+| Hilo seguro       | no  |
 
 

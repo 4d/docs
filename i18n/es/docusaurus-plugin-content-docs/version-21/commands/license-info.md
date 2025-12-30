@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Parámetros | Tipo   |                             | Descripción                          |
 | ---------- | ------ | --------------------------- | ------------------------------------ |
-| Resultado  | Object | &#8592; | Información sobre la licencia activa |
+| Resultado  | Object | &#8592; | Information about the active license |
 
 <!-- END REF-->
 
@@ -142,9 +142,9 @@ Desea obtener información sobre su licencia actual de 4D Server:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1489                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1489 |
+| Hilo seguro       | sí   |
 
 

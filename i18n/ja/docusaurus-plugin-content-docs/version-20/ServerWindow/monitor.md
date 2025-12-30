@@ -35,7 +35,7 @@ title: モニターページ
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-こういった場合には通常、[**ライセンスマネージャー**](Admin/licenses.md) をチェックする必要があります。
+Usually, you will need to check the [**Licenses Manager**](Admin/licenses.md).
 
 ## 詳細エリア
 

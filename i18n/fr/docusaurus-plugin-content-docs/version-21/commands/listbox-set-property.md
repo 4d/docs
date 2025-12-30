@@ -88,9 +88,9 @@ Vous souhaitez modifier la largeur maximale de la colonne nommée "ProductNumber
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1440                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1440 |
+| Thread safe        | non  |
 
 

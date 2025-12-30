@@ -187,11 +187,20 @@ La comunicación entre el formulario padre y las instancias del subformulario pu
 > El comando `GOTO OBJECT` busca el objeto de destino en el formulario padre aunque se ejecute desde un subformulario.
 
 
-#### Comando CALL SUBFORM CONTAINER
+#### Comando CALL SUBFORM CONTAINER {#call-subform-container-command}
 
 El comando `CALL SUBFORM CONTAINER` permite que una instancia de subformulario envíe un [evento](../Events/overview.md) al objeto contenedor del subformulario, que puede procesarlo en el contexto del formulario padre. El evento se recibe en el método del objeto contenedor. Puede estar en el origen de todo evento detectado por el subformulario (clic, arrastrar y soltar, etc.).
 
 El código del evento no tiene restricciones (por ejemplo, 20000 o -100). Puede utilizar un código que corresponda a un evento existente (por ejemplo, 3 para `On Validate`), o utilizar un código personalizado. En el primer caso, sólo puede utilizar los eventos que haya marcado en la lista de propiedades para los contenedores de subformulario. En el segundo caso, el código no debe corresponder a ningún evento de formulario existente. Se recomienda utilizar un valor negativo para asegurarse de que este código no será utilizado por 4D en futuras versiones.
+
+Supported events for subforms are:
+- [On Load](../Events/onLoad.md)
+- [On Validate](../Events/onValidate.md)
+- [On Getting Focus](../Events/onGettingFocus.md)
+- [On Losing Focus](../Events/onLosingFocus.md)
+- [On Data Change](../Events/onDataChange.md)
+- [On Unload](../Events/onUnload.md)
+
 
 Para más información, consulte la descripción del comando `CALL SUBFORM CONTAINER`.
 

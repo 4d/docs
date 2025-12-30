@@ -407,8 +407,8 @@ Des éléments doivent être installés :
 
 Pour activer cette fonctionnalité, ajoutez les clés `DatabaseToEmbedInClientWinFolder` et/ou `DatabaseToEmbedInClientMacFolder` dans le fichier de configuration *buildApp*. Lorsque l'une de ces clés est présente, le processus de génération de l'application cliente génère une application monoposte : la structure compilée, au lieu du fichier *EnginedServer.4Dlink*, est placée dans le dossier "Database".
 
-- Si un dossier "Data" par défaut existe dans l'application monoposte, une licence est intégrée.
-- Si un dossier "Data" par défaut n'existe pas dans l'application monoposte, elle sera exécutée sans le fichier de données et sans licence.
+- If a default data folder exists in the single-user application, a license is embedded.
+- If no default data folder exists in the single-user application, it will be executed without data file and without license.
 
 Le scénario standard est le suivant :
 
@@ -497,11 +497,11 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 - **SpellChecker**: Utilisé pour les fonctions intégrées de [vérification orthographique](../FormObjects/properties_Entry.md#auto-spellcheck) et les commandes disponibles pour les zones de saisie et les zones 4D Write Pro.
 - **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user
-- **4D Qodly Pro**: Includes [Qodly Studio and its web renderering features](https://developer.4d.com/qodly/).
+- **4D Qodly Pro and Data Explorer**: Includes [Qodly Studio and its web renderering features](https://developer.4d.com/qodly/) as well as the [Data Explorer](../Admin/dataExplorer.md).
 
 ## Page Licences & Certificat
 
-La page Licences & Certificat vous permet de :
+The Licenses & Certificate page can be used to:
 
 - configurer les [licences de déploiement](../Admin/licenses.md#deployment-licenses) que vous souhaitez intégrer dans votre application [autonome](#application-page) ou [client-serveur](#clientserver-page),
 - signer l'application à l'aide d'un certificat sous macOS.
@@ -536,7 +536,7 @@ Une connexion internet est requise sur la machine de l'utilisateur lors du premi
 
 - La commande [`License info`](../commands/license-info.md) vous permet de connaître le type de licence de l'application (collection *.attributes*) et sa date d'expiration (objet *.expirationDate*).
 - La clé xml BuildApplication [`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.en.html) permet de gérer les versions d'évaluation.
-- La commande [`CHANGE LICENCES`](../commands-legacy/change-licenses.md) ne fait rien lorsqu'elle est appelée depuis une version d'évaluation.
+- The [`CHANGE LICENSES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
 
 :::
 

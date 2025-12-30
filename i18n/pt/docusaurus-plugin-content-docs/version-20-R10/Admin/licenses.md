@@ -32,7 +32,7 @@ As licenças de implementação podem ser incorporadas na etapa de compilação 
 
 Algumas licenças 4D têm uma data de validade, após a qual devem ser renovadas. Quando a assinatura da licença for renovada na loja 4D, suas licenças serão atualizadas automaticamente nos seus aplicativos 4D na inicialização [quando você logar](GettingStarted/Installation.md) no assistente de boas-vindas.
 
-Em alguns casos, a atualização da licença pode exigir que você clique no botão [**Atualizar**](#refresh) da caixa de diálogo Gerenciador de Licenças.
+In some cases, the license update may require that you click on the [**Refresh** button](#refresh) of the Licenses Manager dialog box.
 
 ## Ativando licenças
 

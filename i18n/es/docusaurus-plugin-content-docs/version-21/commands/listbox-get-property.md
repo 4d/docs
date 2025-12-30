@@ -104,9 +104,9 @@ Dado un list box "MyListbox", si ejecuta la siguiente instrucción:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 917                         |
-| Hilo seguro       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 917 |
+| Hilo seguro       | no  |
 
 

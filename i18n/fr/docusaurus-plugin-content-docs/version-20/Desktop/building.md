@@ -408,8 +408,8 @@ Des éléments doivent être installés :
 
 Pour activer cette fonctionnalité, ajoutez les clés `DatabaseToEmbedInClientWinFolder` et/ou `DatabaseToEmbedInClientMacFolder` dans le fichier de configuration *buildApp*. Lorsque l'une de ces clés est présente, le processus de génération de l'application cliente génère une application monoposte : la structure compilée, au lieu du fichier *EnginedServer.4Dlink*, est placée dans le dossier "Database".
 
-* Si un dossier "Data" par défaut existe dans l'application monoposte, une licence est intégrée.
-* Si un dossier "Data" par défaut n'existe pas dans l'application monoposte, elle sera exécutée sans le fichier de données et sans licence.
+* If a default data folder exists in the single-user application, a license is embedded.
+* If no default data folder exists in the single-user application, it will be executed without data file and without license.
 
 Le scénario standard est le suivant :
 
@@ -501,7 +501,7 @@ Les modules optionnels suivants peuvent être désélectionnés :
 
 ## Page Licences & Certificat
 
-La page Licences & Certificat vous permet de :
+The Licenses & Certificate page can be used to:
 
 * désigner le(s) numéro(s) de licence que vous souhaitez intégrer dans votre [application autonome](#application-page) mono-utilisateur,
 * signer l'application à l'aide d'un certificat sous macOS.

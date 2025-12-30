@@ -69,7 +69,7 @@ El nombre de la cookie se puede obtener utilizando la propiedad [`.sessionCookie
 
 :::note
 
-La creación de una sesión web para una petición REST puede requerir que una licencia esté disponible, consulte [esta página](../REST/authUsers.md).
+Creating a web session for a REST request may require that a license is available, see [this page](../REST/authUsers.md).
 
 :::
 

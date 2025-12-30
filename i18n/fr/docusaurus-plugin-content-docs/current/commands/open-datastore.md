@@ -6,12 +6,12 @@ displayed_sidebar: docs
 
 <details><summary>Historique</summary>
 
-| Release | Modifications                           |
-| ------- | --------------------------------------- |
-| 21      | Qodly cloud discontinued                |
-| 20 R6   | Support access to Qodly cloud instances |
-| 20 R4   | Nouvelle propriété *passwordAlgorithm*  |
-| 18      | Ajout                                   |
+| Release | Modifications                                          |
+| ------- | ------------------------------------------------------ |
+| 21      | Cloud Qodly interrompu                                 |
+| 20 R6   | Prise en charge des accès aux instances du cloud Qodly |
+| 20 R4   | Nouvelle propriété *passwordAlgorithm*                 |
+| 18      | Ajout                                                  |
 
 </details>
 
@@ -31,11 +31,11 @@ displayed_sidebar: docs
 
 La commande `Open datastore` <!-- REF #_command_.Open datastore.Summary -->connecte l'application au datastore distant identifié par le paramètre *connectionInfo*<!-- END REF --> et renvoie un objet `4D.DataStoreImplementation` correspondant associé à l'alias local *localID*.
 
-Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
+Les échanges avec le datastore distant sont automatiquement gérés via des requêtes REST. Le datastore 4D *connectionInfo* doit être disponible en tant que datastore distant, c'est-à-dire :
 
-- its Web Server must be launched with http and/or https enabled,
-- its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),
-- a client license must be available if required (see note).
+- son serveur Web doit être lancé avec http et/ou https activés,
+- son datasore doit être exposé en REST (option [**Activer le service REST**](REST/configuration.md#starting-the-rest-server) cochée),
+- une licence cliente doit être disponible si nécessaire (voir note).
 
 :::note
 
