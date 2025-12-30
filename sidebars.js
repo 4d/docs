@@ -34,6 +34,7 @@ module.exports =
       items: [
         "GettingStarted/creating",
         "Project/architecture",
+        "Develop/explorer",
         {
           type: "category",
           label: "Dababase structure",

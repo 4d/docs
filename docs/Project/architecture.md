@@ -73,24 +73,18 @@ styleSheets_windows.css|Windows css style sheets (from converted binary database
 
 
 
-#### `DatabaseMethods`
-
-Contents|Description|Format
---------|-------|----
-*databaseMethodName*.4dm|Database methods defined in the project. One file per database method|text
-
-#### `Methods`
-
-Contents|Description|Format
---------|-------|----
-*methodName*.4dm|Project methods defined in the project. One file per method|text
-
 #### `Classes`
 
 Contents|Description|Format
 --------|-------|----
 *className*.4dm|User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name|text
 
+
+#### `DatabaseMethods`
+
+Contents|Description|Format
+--------|-------|----
+*databaseMethodName*.4dm|Database methods defined in the project. One file per database method|text
 
 #### `Forms`
 
@@ -100,6 +94,23 @@ Contents|Description|Format
 *formName*/method.4dm|Project form method|text
 *formName*/Images/*pictureName*|Project form static picture|picture
 *formName*/ObjectMethods/*objectName*.4dm|Object methods. One file per object method|text
+
+
+#### `Methods`
+
+Contents|Description|Format
+--------|-------|----
+*methodName*.4dm|Project methods defined in the project. One file per method|text
+
+
+#### `Shared`
+
+Contents|Description|Format
+--------|-------|----
+assets/|[Shared files](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#shared-folder) such as pictures used in Qodly pages|various
+CustomComponents/|[Custom components](https://developer.4d.com/qodly/Integrations/customComponent/overview) files used in Qodly pages|json
+*other_files*.json|shared elements such as css or datasources used in Qodly pages|json
+
 
 #### `TableForms`
 
@@ -122,6 +133,15 @@ table_*n*.4dm|Trigger methods defined in the project. One trigger file per table
 
 **Note:**
 The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
+
+
+#### `WebForms`
+
+Contents|Description|Format
+--------|-------|----
+*QodlyFormName*.WebForm|Json representations of Qodly pages|JSON
+crafted_components.json|Description of [components crafted](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/craftedComponents) on Qodly pages|JSON
+
 
 
 ### `Trash`
