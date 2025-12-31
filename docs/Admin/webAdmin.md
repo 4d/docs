@@ -139,7 +139,7 @@ This option only appears if the Qodly Studio license is activated.
 
 ::: 
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) at the 4D application level. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
+This option enables user access to [Qodly Studio](developer.4d.com/qodly/) at the 4D application level. Note that you also need to [enable the access at every project level](../settings/web.md#enable-access-to-qodly-studio).
 
 :::note
 
