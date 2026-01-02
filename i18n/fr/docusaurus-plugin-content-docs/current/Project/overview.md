@@ -22,6 +22,6 @@ Le développement multi-utilisateur est géré via des outils de **source contro
 
 ## Application finale
 
-Les fichiers du projet peuvent être [compilés](compiler.md) et facilement déployés. 4D allows you to create several types of application from your projects, including [web](WebServer/webServer.md) applications, [desktop](Desktop/building.md) applications (client/server or single-user), or mobile applications.
+Les fichiers du projet peuvent être [compilés](compiler.md) et facilement déployés. 4D vous permet de créer plusieurs types d'applications à partir de vos projets, y compris des applications [web](WebServer/webServer.md), des applications [desktop](Desktop/building.md) (client/serveur ou mono-utilisateur) ou des applications mobiles.
 
 Les applications back end peuvent être déployées à l'aide de 4D Server, 4D ou [fusionnées avec 4D Volume Desktop](../Desktop/building.md).

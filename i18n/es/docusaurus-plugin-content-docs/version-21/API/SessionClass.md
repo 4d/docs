@@ -17,7 +17,7 @@ Los objetos de sesión son devueltos por el comando [`Session`](../commands/sess
 
 Los siguientes tipos de sesiones están soportados por esta clase:
 
-- [**Sesiones usuario web**](WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](WebServer/sessions.md#enabling-web-sessions). Se utilizan para las conexiones Web (incluidos los accesos REST) y se controlan mediante los [privilegios](../ORDA/privileges.md) asignados.
+- [**Sesiones usuario web**](WebServer/sessions.md): las sesiones usuario web están disponibles cuando [las sesiones escalables están activas en su proyecto](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**Sesiones de escritorio**](../Desktop/sessions.md), que incluyen:
   - [Sesiones usuario remoto\*\*](../Desktop/sessions.md#remote-user-sessions): en las aplicaciones cliente/servidor, los usuarios remotos tienen sus propias sesiones gestionadas en el servidor.
   - [Sesiones procedimientos almacenados\*\*](../Desktop/sessions.md#stored-procedure-sessions): sesión usuario virtual para todos los procedimientos almacenados ejecutados en el servidor.
@@ -25,7 +25,7 @@ Los siguientes tipos de sesiones están soportados por esta clase:
 
 :::warning Acerca de los privilegios de sesión
 
-Todos los tipos de sesión pueden manejar los privilegios, pero solo el código ejecutado en las [sesiones usuario web](WebServer/sessions.md) está realmente controlado por los privilegios de sesión.
+All session types can handle privileges, but only the code executed in a **web context** is actually controlled by session's privileges.
 
 :::
 
@@ -85,13 +85,13 @@ Esta función no elimina los **privilegios promovidos** del proceso web, tanto s
 :::note
 
 Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
+
 :::
 
 #### Ejemplo
 
 ```4d
-//Invalidar la sesión de un usuario web
-var $isGuest : Boolean
+//Invalidate a web user session
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
@@ -105,10 +105,10 @@ $isOK:=Session.clearPrivileges()
 
 <details><summary>Historia</summary>
 
-| Lanzamiento | Modificaciones                          |
-| ----------- | --------------------------------------- |
-| 21          | Soporte de sesiones remotas y autónomas |
-| 20 R9       | Añadidos                                |
+| Lanzamiento | Modificaciones                            |
+| ----------- | ----------------------------------------- |
+| 21          | Support of remote and standalone sessions |
+| 20 R9       | Añadidos                                  |
 
 </details>
 
@@ -116,10 +116,10 @@ $isOK:=Session.clearPrivileges()
 
 <!-- REF #SessionClass.createOTP().Params -->
 
-| Parámetros | Tipo    |                             | Descripción                                                                     |
-| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------------- |
-| lifespan   | Integer |              ->             | Duración del token de sesión en segundos (solo sesiones web) |
-| Resultado  | Text    | <- | UUID del token                                                                  |
+| Parámetros | Tipo    |                             | Descripción                                                              |
+| ---------- | ------- | :-------------------------: | ------------------------------------------------------------------------ |
+| lifespan   | Integer |              ->             | Session token lifespan in seconds (web sessions only) |
+| Resultado  | Text    | <- | UUID del token                                                           |
 
 <!-- END REF -->
 
@@ -131,13 +131,13 @@ Para más información sobre los tokens OTP, por favor consulte [esta sección](
 
 Si se utiliza un token caducado para restaurar la sesión, se ignora.
 
-Para las sesiones web, puede definir un tiempo de espera personalizado pasando un valor en segundos en *lifespan*. Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión.
+For web sessions, you can set a custom timeout by passing a value in seconds in *lifespan*. Por defecto, si se omite el parámetro *lifespan*, el token se crea con el mismo tiempo de vida que el [`.idleTimeOut`](#idletimeout) de la sesión.
 
-Para las sesiones de escritorio, el token se crea con una vida útil de 10 segundos.
+For desktop sessions, the token is created with a 10 seconds lifespan.
 
-El token devuelto puede ser utilizado en intercambios con aplicaciones de terceros o sitios web para identificar la sesión de forma segura. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
+The returned token can be used in exchanges with third-party applications or websites to securely identify the session. Por ejemplo, el token OTP de sesión se puede utilizar con una aplicación de pago.
 
-El token devuelto puede ser utilizado por 4D Server o la aplicación monousuario 4D para identificar las peticiones procedentes de la web que [comparten la sesión](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
+The returned token can be used by 4D Server or 4D single-user application to identify requests coming from the web that [share the session](../Desktop/sessions.md#sharing-a-desktop-session-for-web-accesses).
 
 #### Ejemplo
 
@@ -177,6 +177,12 @@ La función `.demote()` <!-- REF #SessionClass.demote().Summary -->elimina del p
 Si ningún privilegio con *promoteId* fue promovido usando [`.promote()`](#promote) en el proceso web, la función no hace nada.
 
 Si se han añadido varios privilegios al proceso web, se debe llamar a la función `demote()` para cada uno de ellos con el *promoteId* apropiado. Los privilegios se apilan en el orden en que se han añadido al proceso, se recomienda desapilar los privilegios en un orden LIFO (*Last In, First Out*).
+
+:::note
+
+Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
+
+:::
 
 #### Ejemplo
 
@@ -490,6 +496,7 @@ La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión 
 
 - **Sesiones remotas** y **Sesiones de procedimientos almacenados**: el objeto `.info` es el mismo objeto que el devuelto en la propiedad "session" por el comando [`Process activity`](../commands/process-activity.md).
 - **Sesiones estándar**: el objeto `.info` es el mismo objeto que el devuelto por el comando [`Session info`](../commands/session-info.md).
+- **Web user sessions**: The `.info` object contains properties available for web user sessions.
 
 El objeto `.info` contiene las siguientes propiedades:
 
@@ -548,7 +555,7 @@ La función `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->devuelve Tr
 
 :::note Compatibilidad
 
-En una sesión REST cuando el modo [**Forzar inicio de sesión**](../REST/authUsers.md#force-login-mode) no está activado, `.isGuest()` devuelve True si la sesión no tiene privilegios.
+When the [*forcelogin* mode](../REST/authUsers.md#force-login-mode) is disabled, `.isGuest()` returns True if the session has no privileges.
 
 :::
 
@@ -679,6 +686,12 @@ La función devuelve `false` si:
 - la propia sesión original ha caducado.
 
 En este caso, la sesión actual de usuario web se deja sin tocar (no se restaura la sesión).
+
+:::note
+
+Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
+
+:::
 
 #### Ejemplo
 

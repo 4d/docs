@@ -17,7 +17,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
+- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**デスクトップセッション**](../Desktop/sessions.md)。これには以下のものが含まれます:
   - [**リモートユーザー セッション**](../Desktop/sessions.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
   - [**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション): サーバー上で実行される全てのストアドプロシージャーセッションの仮想ユーザーセッション。
@@ -25,7 +25,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 :::warning セッション権限について
 
-全てのセッションタイプは権限を管理できますが、[web ユーザーセッション](WebServer/sessions.md) 内で実行されたコードに関してだけは、実際にはセッションの権限によって管理されます。
+全てのセッションタイプは権限を管理できますが、**web コンテキスト** 内で実行されたコードに関してだけは、実際にはセッションの権限によって管理されます。
 
 :::
 
@@ -85,13 +85,13 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 :::note
 
 権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
+
 :::
 
 #### 例題
 
 ```4d
 // Web ユーザーセッションを無効化する
-var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
@@ -177,6 +177,12 @@ $token := Session.createOTP( 60 ) // トークンは1分間有効
 Web プロセス内において *promoteId* で指定した権限が [`.promote()`](#promote) を使用して昇格したものではなかった場合、この関数は何もしません。
 
 Web プロセスに複数の権限が追加されていた場合、 `demote()` 関数はそれぞれの権限に対して適切な *promoteId* を使用して呼び出す必要があります。 権限はプロセスに対して追加された順番でスタックされているため、スタックを解除する場合にはLIFO (*Last In, First Out*) 順で解除することが推奨されます。
+
+:::note
+
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
+
+:::
 
 #### 例題
 
@@ -490,6 +496,7 @@ End if
 
 - **リモートセッション** および **ストアドプロシージャーセッション**の場合: `.info` オブジェクトは[`Process activity`](../commands/process-activity.md) コマンドの "session" プロパティに返されるオブジェクトと同じです。
 - **スタンドアロンセッションの場合**: `.info` オブジェクトは、[`Session info`](../commands/session-info.md) コマンドで返されるものと同じオブジェクトです。
+- **Web user sessions**: The `.info` object contains properties available for web user sessions.
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
@@ -548,7 +555,7 @@ End if
 
 :::note 互換性
 
-In a REST session when the [**Force login mode**](../REST/authUsers.md#force-login-mode) is not enabled, `.isGuest()` returns True if the session has no privileges.
+When the [*forcelogin* mode](../REST/authUsers.md#force-login-mode) is disabled, `.isGuest()` returns True if the session has no privileges.
 
 :::
 
@@ -679,6 +686,12 @@ End if
 - オリジナルのセッション自身が失効してしまっている場合
 
 これらの場合には、カレントのWeb ユーザーセッションはそのまま残されます(セッションは復元されません)。
+
+:::note
+
+権限は、この関数が実行された[セッションの種類](#セッションの種類) に関わらず、Web アクセスを通して実行されたコードにのみ適用されるという点に注意してください。
+
+:::
 
 #### 例題
 

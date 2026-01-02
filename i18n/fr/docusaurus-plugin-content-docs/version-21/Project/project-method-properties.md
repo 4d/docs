@@ -1,6 +1,6 @@
 ---
 id: project-method-properties
-title: Project Method Properties
+title: Propriétés des méthodes projet
 ---
 
 Après avoir créé une méthode projet, vous pouvez la renommer et modifier ses propriétés. Les propriétés des méthodes projet définissent principalement leurs conditions d’accès et de sécurité (accès par les utilisateurs, les serveurs intégrés ou les services) ainsi que leur mode d'exécution.

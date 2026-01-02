@@ -86,10 +86,10 @@ Chaque formulaire est composé d'au moins deux pages :
 
 Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de champs ou de variables est supérieur au nombre maximal supporté sur un écran, vous pouvez créer des pages supplémentaires pour les afficher. Plusieurs pages vous permettent d'effectuer les opérations suivantes :
 
-- Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
-- Organisez chaque sujet sur sa propre page.
+- Placer les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
+- Organiser chaque sujet sur sa propre page.
 - Réduire ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
-- Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
+- Définir de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
 
