@@ -53,7 +53,7 @@ En plus du bouton [**Compiler**](#compiler), la fenêtre du compilateur fournit 
 
 ### Vérifier la syntaxe
 
-Le bouton **Vérifier la syntaxe** lance l'exécution de la phase de vérification de la syntaxe. À la fin du processus de vérification, les erreurs détectées sont listées dans la zone d'information. You can double–click on an error line in order to display the corresponding method or form object.
+Le bouton **Vérifier la syntaxe** lance l'exécution de la phase de vérification de la syntaxe. À la fin du processus de vérification, les erreurs détectées sont listées dans la zone d'information. Vous pouvez double-cliquer sur une ligne d'erreur afin d'afficher la méthode ou l'objet de formulaire correspondant(e).
 
 Le contrôle syntaxique peut également être lancé directement à l'aide de la commande **Check Syntax** associée au bouton de la barre d'outils **Compiler**. Cette option est la seule disponible si vous ne disposez pas d'une licence adéquate pour permettre la compilation d'applications.
 
@@ -61,7 +61,7 @@ Le contrôle syntaxique peut également être lancé directement à l'aide de la
 
 :::info Compatibilité
 
-This button is only displayed in converted projects if the **All variables are typed (Direct typing)** [compilation path option](#enabling-direct-typing) is not selected. For information about this button, please refer to the [documentation of previous 4D releases](../Project/compiler.md#generate-typing).
+Ce bouton n'est affiché dans les projets convertis que si l'[option du chemin de compilation](#enabling-direct-typing) **Toutes les variables sont typées (typage direct)** n'est pas sélectionnée. Pour plus d'informations sur ce bouton, veuillez vous référer à la [documentation des versions précédentes de 4D](../Project/compiler.md#generate-typing).
 
 :::
 
@@ -71,7 +71,7 @@ Le bouton **Effacer le code compilé** permet de supprimer le code compilé du p
 
 ### Afficher/masquer les warnings
 
-You can toggle the [warnings](#warnings) display in the Compiler window by clicking the **Show/Hide Warnings** button:
+Vous pouvez permuter l'affichage des [warnings](#warnings) dans la fenêtre du Compilateur en cliquant sur le bouton **Afficher/Masquer les warnings** :
 
 ![](../assets/en/Project/compilerWin4.png)
 
@@ -83,7 +83,7 @@ Un double-clic sur un warning ouvre la méthode correspondante.
 
 ## Paramètres du compilateur
 
-The "Compiler" tab of the Settings dialog box lets you set parameters related to project compilation. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window-features) en cliquant sur le bouton **Paramètres du compilateur** :
+L'onglet "Compilateur" de la boîte de dialogue des Propriétés permet de définir les paramètres relatifs à la compilation du projet. Vous pouvez ouvrir directement cette page à partir de la [fenêtre du compilateur](#compiler-window-features) en cliquant sur le bouton **Paramètres du compilateur** :
 
 ![](../assets/en/Project/compilerWin6.png)
 
@@ -123,83 +123,83 @@ Deux options de cible sont proposées. Le résultat dépend du processeur de la 
 
 > La cible de compilation Apple Silicon nécessite que l'application **Clang** soit installée sur votre machine. Clang est fournie avec la dernière version de Xcode. Voir les [pré-requis du compilateur Silicon](#requirements) pour plus d'informations.
 
-### Additional options (Compatibility)
+### Options supplémentaires (Compatibilité)
 
-In projects converted from 4D versions prior to 20 R7, additional compilation options are available:
+Dans les projets convertis à partir de versions de 4D antérieures à la 20 R7, des options de compilation supplémentaires sont disponibles :
 
 - **Chemin de compilation**
 - **Typage par défaut**
 - **Méthodes Compilateur pour...**
 
-These options are only maintained for compatibility with legacy code. For more information, please refer to the [documentation of previous 4D releases](../Project/compiler.md#compiler-settings).
+Ces options ne sont maintenues que pour des raisons de compatibilité avec le code existant. Pour plus d'informations, veuillez vous référer à la [documentation des versions précédentes de 4D](../Project/compiler.md#compiler-settings).
 
-In converted projects, it is recommended to [enable the direct typing mode](#enabling-direct-typing) and to write compliant declaration code, i.e.:
+Dans les projets convertis, il est recommandé [d'activer le mode de typage direct](#enabling-direct-typing) et d'écrire du code de déclaration conforme, c'est-à-dire :
 
-- declare explicitely all variables [using `var` keywords](../Concepts/variables.md#declaring-variables)
-- declare explicitely all parameters in function prototypes (i.e. using the `Function` or `Class Constructor` keywords) or with `#DECLARE` keywords in methods (see [Declaring parameters](../Concepts/parameters.md#declaring-parameters).
+- déclarer explicitement toutes les variables [en utilisant des mots-clés `var`](../Concepts/variables.md#declaring-variables)
+- déclarer explicitement tous les paramètres dans les prototypes de fonctions (c'est-à-dire en utilisant les mots-clés `Function` ou `Class constructor`) ou avec le mots-clé `#DECLARE` dans les méthodes (voir [Déclarer les paramètres](../Concepts/parameters.md#declaring-parameters).
 
-#### Enabling direct typing
+#### Activer le typage direct
 
 :::info
 
-The direct typing mode is optional in converted projects only. It is natively used in projects created with 4D 20 R7 and higher.
+Le mode de typage direct est optionnel uniquement dans les projets convertis. Il est utilisé nativement dans les projets créés avec 4D 20 R7 et suivants.
 
 :::
 
-Select **All variables are typed (Direct typing)** option in the **Compilation Path** menu to enable the direct typing mode. When this option is selected, other compatibility options become useless and are no longer displayed.
+Sélectionnez l'option **Toutes les variables sont typées (typage direct)** dans le menu **Chemin de compilation** pour activer le mode de typage direct. Lorsque cette option est sélectionnée, les autres options de compatibilité deviennent inutiles et ne sont plus affichées.
 
-Using this option is recommended since it provides flexibility and efficiency. The direct typing concept assumes that all elements are directly declared where they are defined in your code. You just have to make sure that all your variables are declared using the regular [`var` syntax](../Concepts/variables.md#declaring-variables) and that your method and function parameters are declared [in their prototypes](../Concepts/parameters.md) (the [Check Syntax](#check-syntax) feature can help you detecting missing or invalid declarations).
+L'utilisation de cette option est recommandée car elle offre flexibilité et efficacité. Le concept de typage direct suppose que tous les éléments sont déclarés directement à l'endroit où ils sont définis dans votre code. Vous devez simplement vous assurer que toutes vos variables sont déclarées en utilisant la syntaxe [`var`](../Concepts/variables.md#declaring-variables) et que les paramètres de vos méthodes et fonctions sont déclarés [dans leurs prototypes](../Concepts/parameters.md) (la fonctionnalité [Check Syntax](#check-syntax) peut vous aider à détecter les déclarations manquantes ou invalides).
 
 ## Warnings
 
 Les warnings sont des messages spécifiques générés par le compilateur lorsqu'il vérifie la syntaxe. Ces messages sont destinés à attirer votre attention sur les déclarations qui pourraient entraîner des erreurs d'exécution. Ils n'empêchent pas la compilation.
 
-Depending on circumstances and the programming style used, warnings may be more or less relevant. You can enable or disable warnings, in the compiler dialog, and in the code editors (4D code editor and VS Code), globally through the [warnings tab](#warnings-tab) or locally using [`//%W`](#disabling-and-enabling-warnings-locally).
+Selon les circonstances et le style de programmation utilisé, ces warnings peuvent être plus ou moins pertinents. Vous pouvez activer ou désactiver les warnings dans la boîte de dialogue du compilateur et dans les éditeurs de code (éditeur de code 4D et VS Code), globalement via l'[onglet warnings](#warnings-tab) ou localement en utilisant [`//%W`](#disabling-and-enabling-warnings-locally).
 
-### Warnings tab
+### Onglet Warnings
 
 ![](../assets/en/Project/warnings-tab.png)
 
-This tab allows you to define which warnings should be displayed globally. From the list of all possible warnings with their types, their code and their localized label, ordered by warning code.
+Cet onglet vous permet de définir globalement quels warnings doivent être affichés. A partir de la liste de tous les warnings possibles avec leur type, leur code et leur libellé localisé, classés par code.
 
-To reduce the list, you can search words by warning labels and codes using the **Search in codes and labels** textbox or the magnifying glass icon on the left.
+Pour réduire la liste, vous pouvez rechercher des mots par libellés et codes de warning en utilisant la zone de texte **Recherche dans les codes et libellés** ou l'icône de loupe à gauche.
 
-By default, all warning types are checked and enabled.
+Par défaut, tous les types de warnings sont cochés et activés.
 
-When you modify a warning display status, the information is stored in the "warnings.json" file, placed in the project Settings folder.
+Lorsque vous modifiez le statut d'affichage d'un warning, l'information est stockée dans le fichier "warnings.json", placé dans le dossier Settings du projet.
 
-The **Reset to factory settings** button sets all the warning display status checkboxes to default values and deletes the "warnings.json" file.
+Le bouton **Rétablir les paramètres d'usine** remet toutes les cases à cocher de statut d'affichage des warnings à leur valeur par défaut et supprime le fichier "warnings.json".
 
-### Disabling and enabling warnings locally
+### Désactiver et activer localement les warnings
 
-You can control warnings in specific parts of your code by using special comments to disable or enable them.
+Vous pouvez contrôler les warnings dans des parties spécifiques de votre code en utilisant des commentaires spéciaux pour les désactiver ou les activer.
 
-To disable warnings, insert the following comments before and after the code section where you want to disable warnings:
+Pour désactiver les warnings, insérez les commentaires suivants avant et après la section de code devant ignorer les warnings :
 
 ```4d
-// Before the selected code part use
+// Avant la partie de code sélectionnée, utilisez
   //%W-<warning number>
 
-// After the selected code part use
+// Après la partie de code sélectionnée, utilisez
   //%W+<warning number>
 ```
 
-To re-enable warnings in a code section, use the following comments:
+Pour réactiver les warnings dans une section de code, utilisez les commentaires suivants :
 
 ```4d
-// Before the selected code part use
+// Avant la partie de code sélectionnée, utilisez
   //%W+<warning number>
 
-// After the selected code part use
+// Après la partie de code sélectionnée, utilisez
   //%W-<warning number>
 ```
 
-Only warnings with numbers can be disabled or enabled. Warning numbers are specified at the end of each message in the list of compilation errors or in the list found in the warning tab.
+Seuls les warnings comportant un numéro peuvent être désactivés ou activés. Les numéros des warnings sont spécifiés à la fin de chaque message dans la liste des erreurs de compilation ou dans la liste figurant dans l'onglet des warnings.
 Par exemple, pour désactiver le warning suivant :
 
 *1: Redefinition of variable $a (550.10)*
 
-... you just need to write the following comments in your 4D method:
+... il vous suffit d'écrire les commentaires suivants dans votre méthode 4D :
 
 ```4d
   var $a : Text
@@ -213,7 +213,7 @@ Par exemple, pour désactiver le warning suivant :
 
 :::note
 
-The special warnings comments have priority over the warnings display settings set in the warning tab.
+Les commentaires des warnings spéciaux sont prioritaires sur les paramètres d'affichage des warnings définis dans l'onglet des warnings.
 
 :::
 
@@ -221,7 +221,7 @@ The special warnings comments have priority over the warnings display settings s
 
 ### Fichier de symboles
 
-If you check the [**Generate the symbol file**](#symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](../Project/architecture.md#logs) of the project during compilation. Il est divisé en plusieurs parties :
+Si vous cochez l'option [**Générer le fichier de symboles**](#symbol-file) dans les propriétés du compilateur, un fichier de symboles appelé `ProjectName_symbols.txt` est créé dans le [dossier Logs](../Project/architecture.md#logs) du projet lors de la compilation. Il est divisé en plusieurs parties :
 
 #### Liste des variables process et interprocess
 

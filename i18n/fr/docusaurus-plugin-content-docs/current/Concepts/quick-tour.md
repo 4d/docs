@@ -310,7 +310,7 @@ Vous vous référez à une expression via le type de données qu’elle retourne
 | Col[5]                                  | Élément de collection | Un élément de collection est une expression qui peut être de tout type                                                                                                                                                                                        |
 | $entitySel[0]                           | Entity                | Un élément d'une sélection d'entité ORDA est une expression de type entité. Ce type d'expression n'est **pas affectable**                                                                                                                     |
 
-### Assignable vs non-assignable expressions {#assignable-vs-non-assignable-expressions}
+### Expressions assignables ou non assignables {#assignable-vs-non-assignable-expressions}
 
 Une expression peut simplement être une constante littérale, telle que le chiffre 4 ou la chaîne "Hello", ou une variable telle que `$myButton`. Elle peut également utiliser des opérateurs. Par exemple, 4 + 2 est une expression qui utilise l'opérateur d'addition pour additionner deux nombres et renvoyer le résultat 6. Dans tous les cas, ces expressions sont **non-assignables**, ce qui signifie que vous ne pouvez pas leur affecter de valeur.
 Dans 4D, les expressions peuvent être **assignables**. Une expression est assignable quand elle peut être utilisée à gauche de l'opérateur d'assignation. Par exemple :
@@ -429,6 +429,6 @@ Dans l'exemple suivant, le caractère **retour chariot** (séquence d'échappeme
 Les conventions suivantes sont utilisées dans la documentation du langage 4D :
 
 - les caractères `{ }` (accolades) indiquent des paramètres facultatifs. Par exemple, `.delete( { option : Integer } )` signifie que le paramètre *option* peut être omis lors de l'appel de la fonction.
-- the `{; ...*param* : Type}` notation indicates an unlimited number of parameters of the same type. For example, `.concat( value : any { ;...valueN : Text } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- the `{; ...(*param* : Type ; *param2* : Type) }` notation indicates an unlimited number of groups of parameters. For example, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` means that an unlimited number of couple values or type array/text can be passed to the command.
+- la notation `{ ; ...*param* : Type}` indique un nombre illimité de paramètres du même type. Par exemple, `.concat( value : any { ;...valueN : any} ) : Collection` signifie qu'un nombre illimité de valeurs de n'importe quel type peut être transmis à la fonction.
+- la notation `{ ; ...(*param* : Type ; *param2* : Type) }` indique un nombre illimité de groupes de paramètres. Par exemple, `COLLECTION TO ARRAY ( collection : Collection ; array : Array { ; propertyName : Text}{ ; ...(array : Array ; propertyName : Text) } )` signifie qu'un nombre illimité de couples de valeurs de types tableau/texte peut être passé à la commande.
 - le mot-clé `any` est utilisé pour les paramètres qui peuvent être de n'importe quel type (nombre, texte, booléen, date, heure, objet, collection...).
