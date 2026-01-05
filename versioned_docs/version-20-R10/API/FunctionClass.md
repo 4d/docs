@@ -50,13 +50,13 @@ You can also execute a function using the [`apply()`](#apply) and [`call()`](#ca
 
 #### Passing parameters
 
-You can pass parameters to your formulas using a sequential parameter syntax based upon $1, $2...$n. For example, you can write:
+You can pass parameters to your formulas using a sequential parameter syntax based upon `$1, $2,...,$n`. The numbering of the $ parameters represents the order in which they will be passed to the formula. For example, you can write:
 
 ```4d
  var $f : Object
  $f:=New object
- $f.message:=Formula(ALERT("Hello "+$1))
- $f.message("John") //displays "Hello John"
+ $f.message:=Formula(ALERT("Hello "+$2+", "+$1))
+ $f.message("John";"Smith") //displays "Hello Smith, John"
 ```
 
 Or using the [.call()](#call) function:
@@ -65,7 +65,7 @@ Or using the [.call()](#call) function:
  var $f : Object
  $f:=Formula($1+" "+$2)
  $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2019" (for example)
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //returns "Welcome to 2026" (for example)
 ```
 
 #### Parameters to a single method
