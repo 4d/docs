@@ -3,65 +3,65 @@ id: explorer
 title: Explorador
 ---
 
-The Explorer is a window in the Design environment that gives you convenient access to tables, forms, methods, built-in 4D commands, constants and plug-ins. It also provides information about these items. You can display the Explorer at any time by choosing one of the pages in the **Design > Explorer** sub-menu or by clicking on the **Explorer** button in the toolbar.
+El Explorador es una ventana del entorno Diseño que le permite acceder cómodamente a tablas, formularios, métodos, comandos 4D integrados, constantes y plug-ins. También proporciona información sobre estos elementos. Puede visualizar el Explorador en cualquier momento eligiendo una de las páginas del submenú **Diseño > Explorador** o haciendo clic en el botón **Explorador** de la barra de herramientas.
 
 :::note
 
-For a comprehensive description of the Explorer, please refer to the [Explorer chapter on doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Explorer.200-7676561.en.html).
+Para una descripción completa del Explorador, consulte el [capítulo Explorador en doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Explorer.200-7676561.en.html).
 
 :::
 
-## Forms page
+## Página Formularios
 
-The Forms page contains three lists: **Project Forms**, **Table Forms**, and **Qodly Pages**.
+La página Formularios contiene tres listas: **Formularios proyecto**, **Formularios tabla** y **Páginas Qodly**.
 
-### Qodly Pages
+### Páginas Qodly
 
 ![](../assets/en/Develop/explorer-qodly.png)
 
-This section allows you to view the list of Qodly pages defined your project. You can also add or open pages.
+Esta sección le permite ver la lista de páginas Qodly definidas en su proyecto. También puede añadir o abrir páginas.
 
-The pages listed in the Qodly Pages section are stored in the [**WebForm** subfolder](../Project/architecture.md#webforms) of the project's Sources folder.
+Las páginas listadas en la sección Páginas Qodly se almacenan en la [**subcarpeta FormularioWeb**](../Project/architecture.md#webforms) de la carpeta Fuentes del proyecto.
 
 :::note
 
-Qodly pages are not visible in the **Home** page of the Explorer.
+Las páginas Qodly no son visibles en la página **Inicio** del Explorador.
 
 :::
 
 ### Requisitos
 
-Qodly pages are created and edited in [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface), a web-based development tool. Accessing Qodly Studio from 4D requires some [specific configurations](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#requirements), that you [can set in one click](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
+Las páginas Qodly se crean y editan en [Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/qodlyStudioInterface), una herramienta de desarrollo basada en web. El acceso a Qodly Studio desde 4D requiere algunas [configuraciones específicas](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#requirements), que usted [puede establecer en un clic](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
 
-### Adding or opening a Qodly page
+### Añadir o abrir una página Qodly
 
-You can add or open Qodly pages directly from the 4D Explorer. If [requirements](#requirements) are met, the page is opened in the [Page editor of Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
+Puede añadir o abrir páginas Qodly directamente desde el Explorador 4D. Si se cumplen los [requisitos](#requirements), la página se abre en el [editor de páginas de Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
 
-To add a page:
+Para añadir una página:
 
-- Select **New Qodly page...** in the contextual menu, <br/>
+- Seleccione **Nueva página Qodly...** en el menú contextual, <br/>
   ![](../assets/en/Develop/qodly-context.png)
 
-- or click the **+** icon or select **New Qodly page...** in the bottom area of the Explorer.<br/>
+- o haga clic en el icono **+** o seleccione **Nueva página de Qodly...** en la parte inferior del Explorador.<br/>
   ![](../assets/en/Develop/qodly-add.png)
 
-Enter the name of the page and click **OK** to open the page in Qodly Studio:
+Introduzca el nombre de la página y haga clic en **OK** para abrir la página en Qodly Studio:
 
 ![](../assets/en/Develop/qodly-create.png)
 
-To open a page:
+Para abrir una página:
 
-- double-click on a Qodly page name, or
-- right-click on a Qodly page name and select **Edit...** in the contextual menu.
+- haga doble clic en el nombre de una página Qodly, o
+- haga clic derecho en un nombre de página Qodly y seleccione **Editar...** en el menú contextual.
 
-### Renaming or deleting a Qodly page
+### Renombrar o eliminar una página Qodly
 
-Renaming or deleting a Qodly page can only be done in the [Page editor of Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
+Renombrar o borrar una página Qodly sólo puede hacerse en el [Editor de páginas de Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
 
-Click on the pen icon to rename the page:<br/>
+Haz clic en el ícono del lápiz para renombrar la página:<br/>
 ![](../assets/en/Develop/qodly-rename.png)
 
-Click on the options button and select **Delete** to delete a page:<br/>
+Haga clic en el botón de opciones y seleccione **Borrar** para borrar una página:<br/>
 ![](../assets/en/Develop/qodly-delete.png)
 
 Aparece una caja de diálogo de confirmación.
