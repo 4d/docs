@@ -1,6 +1,6 @@
 ---
 id: desktop-sessions
-title: Desktop Sessions
+title: Sesiones de escritorio
 ---
 
 A **desktop session** is a user-related execution context on 4D Server or 4D single-user that does not result from any web or REST access.
