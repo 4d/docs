@@ -5,11 +5,11 @@ slug: /commands/call-subform-container
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *evento* )<!-- END REF-->
+<!--REF #_command_.CALL SUBFORM CONTAINER.Syntax-->**CALL SUBFORM CONTAINER** ( *evento* : Integer )<!-- END REF-->
 <!--REF #_command_.CALL SUBFORM CONTAINER.Params-->
 | Parámetro | Tipo |  | Descripción |
 | --- | --- | --- | --- |
-| evento | Integer | &#8594;  | Evento a enviar |
+| evento | Integer | &#8594; | Evento a enviar |
 
 <!-- END REF-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 Este comando debe ubicarse en el método de formulario del subformulario o en el método de objeto de uno de los objetos de subformulario. El evento sólo se recibirá en el método de objeto del contenedor del subformulario. 
 
-En *evento*, puede pasar todo evento de formulario predefinido de 4D (puede utilizar las constantes del tema "*Eventos formulario*") o todo valor correspondiente a un evento personalizado. En el caso de un evento personalizado, se recomienda pasar un valor negativo en *evento* para evitar el riesgo de interferir con los números de eventos existentes o futuros de 4D.
+En *evento*, puede pasar uno de los [eventos de formulario 4D soportado por subformularios](../FormObjects/subform_overview.md#call-subform-container-command) o todo valor correspondiente a un evento personalizado. En el primer caso, el evento debe ser seleccionado para el subformulario. En el caso de un evento personalizado, se recomienda pasar un valor negativo en *evento* para evitar el riesgo de interferir con los números de eventos existentes o futuros de 4D.
 
 *Ejemplo de ejecución del comando* **CALL SUBFORM CONTAINER** *:*
 
@@ -36,5 +36,3 @@ En *evento*, puede pasar todo evento de formulario predefinido de 4D (puede util
 | --- | --- |
 | Número de comando | 1086 |
 | Hilo seguro | no |
-
-
