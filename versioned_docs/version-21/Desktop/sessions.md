@@ -41,7 +41,7 @@ On the server, in "user processes" (i.e. processes related to remote users), the
 
 :::note
 
-On a remote 4D, the `session` object always returns null.
+On a remote 4D, the [`Session`](../commands/session) command always returns null.
 
 :::
 
