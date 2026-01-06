@@ -3,9 +3,9 @@ id: data-collect
 title: Collecte des données
 ---
 
-Pour nous aider à améliorer sans cesse nos produits, nous collectons automatiquement des données concernant les statistiques d'utilisation des applications 4D Server. Les données collectées sont totalement anonymes et leur transfert n'a aucun impact sur l'expérience utilisateur.
+Pour nous aider à améliorer sans cesse nos produits, nous collectons automatiquement des données concernant les statistiques d'utilisation des applications 4D Server. Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please see [this document](https://us.4d.com/privacy-policy).
 
-Cette page explique :
+This section explains:
 
 - quelles sont les informations collectées,
 - où les informations sont stockées et quand elles sont envoyées à 4D,
@@ -32,6 +32,7 @@ Certaines données sont également collectées à intervalles réguliers.
 | cacheReadBytes                                              | Object                                   | Nombre d'octets lus à partir de la mémoire cache                                                                                     |
 | cacheReadCount                                              | Object                                   | Nombre de lectures dans le cache                                                                                                     |
 | cacheSize                                                   | Number                                   | Taille du cache en octets                                                                                                            |
+| classUsage                                                  | Object                                   | Number of instances of certain language classes                                                                                      |
 | compiled                                                    | Boolean                                  | True si l'application est compilée                                                                                                   |
 | connectionSystems                                           | Collection                               | Système d'exploitation du client sans le numéro de build (entre parenthèses) et nombre de clients qui l'utilisent |
 | CPU                                                         | Text                                     | Nom, type et vitesse du processeur                                                                                                   |

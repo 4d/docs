@@ -98,11 +98,11 @@ Este archivo de texto también puede contener llaves de configuración, en parti
 
 #### `Shared`
 
-| Contenido                                               | Descripción                                                                                                                                           | Formato |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| assets/                                                 | [Shared files](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#shared-folder) such as pictures used in Qodly pages | varios  |
-| CustomComponents/                                       | [Custom components](https://developer.4d.com/qodly/Integrations/customComponent/overview) files used in Qodly pages                                   | json    |
-| *other_files*.json | shared elements such as css or datasources used in Qodly pages                                                                                        | json    |
+| Contenido                                               | Descripción                                                                                                                                                                | Formato |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| assets/                                                 | [Archivos compartidos](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#shared-folder) como las imágenes utilizadas en las páginas Qodly | varios  |
+| CustomComponents/                                       | Archivos [Custom components](https://developer.4d.com/qodly/Integrations/customComponent/overview) utilizados en las páginas Qodly                                         | json    |
+| *other_files*.json | Elementos compartidos como css o datasources utilizados en páginas Qodly                                                                                                   | json    |
 
 #### `TableForms`
 
@@ -127,10 +127,10 @@ Este archivo de texto también puede contener llaves de configuración, en parti
 
 #### `WebForms`
 
-| Contenido                                                    | Descripción                                                                                                                 | Formato |
-| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *QodlyFormName*.WebForm                      | Json representations of Qodly pages                                                                                         | JSON    |
-| crafted_components.json | Description of [components crafted](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/craftedComponents) on Qodly pages | JSON    |
+| Contenido                                                    | Descripción                                                                                                                           | Formato |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *QodlyFormName*.WebForm                      | Representaciones Json de las páginas Qodly                                                                                            | JSON    |
+| crafted_components.json | Descripción de los [componentes crafted](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/craftedComponents) en páginas de Qodly | JSON    |
 
 ### `Trash`
 

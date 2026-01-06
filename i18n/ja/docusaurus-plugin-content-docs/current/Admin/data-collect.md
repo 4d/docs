@@ -3,9 +3,9 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されるデータは完全に匿名で、データ収集がユーザーエクスペリエンスに影響を与えることはありません。
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please see [this document](https://us.4d.com/privacy-policy).
 
-このページは以下を説明します:
+This section explains:
 
 - どのような情報が収集されるか
 - どこに情報が保存され、いつ 4Dに送信されるか
@@ -32,6 +32,7 @@ title: データ収集
 | cacheReadBytes                                              | Object                            | キャッシュから読み出したバイト数                                                                                            |
 | cacheReadCount                                              | Object                            | キャッシュの読み出し回数                                                                                                |
 | cacheSize                                                   | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
+| classUsage                                                  | Object                            | Number of instances of certain language classes                                                             |
 | compiled                                                    | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
 | connectionSystems                                           | Collection                        | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数                                                |
 | CPU                                                         | Text                              | プロセッサーの名前、種類、および速度                                                                                          |

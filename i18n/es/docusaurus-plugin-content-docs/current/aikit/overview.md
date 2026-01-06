@@ -121,7 +121,7 @@ Listar todos los archivos
 var $files:=$client.files.list().files
 ```
 
-Retrieve file information
+Recuperar información del archivo
 
 ```4d
 var $fileInfo:=$client.files.retrieve($fileId).file
