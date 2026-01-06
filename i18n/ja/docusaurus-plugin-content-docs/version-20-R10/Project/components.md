@@ -504,11 +504,11 @@ GitHub 依存関係は[**dependencies.json**](#dependenciesjson) ファイル内
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **自動更新する(latest)**: デフォルトで選択され、最新の(安定)バージョンとしてタグ付けされたリリースをダウンロードできるようにします。
+- **Follow 4D version** (default, recommended option): Download the latest component release that is compatible with the running 4D version. この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。 This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 - **メジャー更新の手前まで**: [セマンティックバージョニングの範囲](#タグとバージョン)を定義して、更新を次のメジャーバージョンの手前までに制限します。
 - **マイナー更新の手前まで**: 上と同様に、更新を次のマイナーバージョンの手前までに制限します。
 - **自動更新しない(タグ指定)**: 利用可能なリストから [特定のタグ](#セマンティックバージョン範囲]) を選択するか、手動で入力します。
-- **4Dのバージョンに追随する**: 実行中の4D バージョンと互換性のある最新のコンポーネントリリースをダウンロードします。 この依存関係ルールは、コンポーネントのリリースタグが適切な[命名規則](#4dバージョンタグの命名規則) に従っていた場合にのみ使用できます。
+- **Latest**: Allows to download the release that is tagged as the latest version. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
 
 現在のGitHub 依存関係バージョンは、依存関係の項目の右側に表示されます:
 

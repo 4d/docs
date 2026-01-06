@@ -8,7 +8,7 @@ displayed_sidebar: docs
 
 | Lanzamiento | Modificaciones                                  |
 | ----------- | ----------------------------------------------- |
-| 21          | Qodly cloud discontinued                        |
+| 21          | Cloud Qodly interrumpido                        |
 | 20 R6       | Soporta el acceso a instancias en la nube Qodly |
 | 20 R4       | Nueva propiedad *passwordAlgorithm*             |
 | 18          | Añadidos                                        |
