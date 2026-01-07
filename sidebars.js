@@ -185,7 +185,7 @@ module.exports =
               },
               "items": [
                 "commands-legacy/application-file",
-                "commands-legacy/application-info",
+                "commands/application-info",
                 "commands-legacy/application-type",
                 "commands-legacy/application-version",
                 "commands-legacy/build-application",
@@ -604,7 +604,8 @@ module.exports =
                 "commands-legacy/form-set-output",
                 "commands-legacy/form-set-size",
                 "commands-legacy/form-set-vertical-resizing",
-                "commands-legacy/form-unload"
+                "commands-legacy/form-unload",
+                "commands/form-theme"
               ]
             },
             {

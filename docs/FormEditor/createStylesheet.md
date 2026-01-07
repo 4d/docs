@@ -65,7 +65,7 @@ Specify the object type, then in curly braces, declare the style(s) to apply.
 
 In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
 
-```
+```css
 button {
     font-family: Helvetica Neue;
     font-size: 20px;
@@ -74,7 +74,7 @@ button {
 
 To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
 
-```
+```css
 text, input {
   text-align: left;
   stroke: grey;
@@ -97,7 +97,7 @@ The object name corresponds to the JSON [object name](../FormObjects/properties_
 In the following example, the text of the object with the name "okButton" will be displayed 
 in Helvetica Neue font, with a size of 20 pixels:
 
-```
+```css
 #okButton {
     font-family: Helvetica Neue;
     font-size: 20px;
@@ -112,7 +112,7 @@ You can specify the classes to use with a "." character followed by the name of 
 
 In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
 
-```
+```css
 .okButtons {
     font-family: Helvetica Neue;
     font-size: 20px;
@@ -122,7 +122,7 @@ In the following example, the text of all objects with the `okButtons` class wil
 
 To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply.
 
-```
+```css
 text.center {
   text-align: center;
   stroke: red;
@@ -131,7 +131,7 @@ text.center {
 
 In the 4D form description, you associate a class name to an object using the [CSS Class](../FormObjects/properties_Object.md#css-class) attribute. This attribute contains one or several class names, separated by a space character:
 
-```
+```css
 class: "okButtons important"       
 ```
 
@@ -143,7 +143,7 @@ Designate that a style should apply to all form objects with the "*" character, 
 
 In the following example, all objects will have a gray fill:
 
-```
+```css
 * {
   fill: gray;
 }
@@ -168,7 +168,7 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 All objects with the `borderStyle` attribute will have purple lines:
 
-```
+```css
 [borderStyle]
 {
      stroke: purple;
@@ -177,7 +177,7 @@ All objects with the `borderStyle` attribute will have purple lines:
 
 All objects of the text type with a text attribute whose value is "Hello" will have blue letters:
 
-```
+```css
 text[text=Hello]
 {
      stroke: blue;
@@ -186,7 +186,7 @@ text[text=Hello]
 
 All objects with a text attribute whose value contains "Hello" will have blue lines:
 
-```
+```css
 [text~=Hello]
 {
      stroke: blue;
@@ -196,7 +196,7 @@ All objects with a text attribute whose value contains "Hello" will have blue li
 
 All objects of the text type with a text attribute whose value starts with "Hello" will have yellow letters:
 
-```
+```css
 text[text|=Hello]
 {
      stroke: yellow;
@@ -209,26 +209,31 @@ text[text|=Hello]
 
 ### Media Queries
 
-Media queries are used to apply color schemes to an application.  
+Media queries allow you to apply styles based on specific conditions. 4D supports media queries for **color schemes** and **platform themes**.  
 
 A media query is composed of a media feature and a value (e.g., `<media feature>:<value>`).
 
-Available media features:
+Available media features and values:
 
-* `prefers-color-scheme`
+|Media features|Values|Description|
+|---|---|---|
+|`prefers-color-scheme`|<li>**light**</li><li>**dark**</li>|Color scheme to use|
+|`form-theme`|<li>**fluent-ui**</li><li>**win-classic**</li>|Platform theme to use (Windows). For more information on **fluent-ui** theme, refer to [this section](./forms.md#fluent-ui-rendering)|
 
-Available media feature expressions:
 
-* **light**<br/>For using a light scheme
-* **dark**<br/>For using a dark scheme
+:::note
 
-> Color schemes are only supported on macOS.
+Color schemes are not supported with **win-classic** platform theme.
 
-##### Example
+:::
+
+
+
+##### Example 1
 
 This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
 
-```
+```css
 @media (prefers-color-scheme: light) {
  .textScheme {
    fill: LightGrey;
@@ -243,6 +248,40 @@ This CSS defines a color combination for text and text background in the light s
   }
 }
 ```
+
+##### Example 2
+
+```css
+/* Default style (all themes and modes) */
+.textLabel {
+    fontFamily: "Segoe UI";
+}
+ 
+/* Fluent UI theme*/
+@media (form-theme: fluent-ui) {
+    .textLabel {
+        stroke: #2A2A2A;
+        fontSize: 14px;
+    }
+ 
+    /* dark mode */
+    @media (prefers-color-scheme: dark) {
+        .textLabel {
+            stroke: #E0E0E0;
+        }
+    }
+}
+ 
+/* Windows classic theme */
+@media (form-theme: win-classic) {
+    .textLabel {
+        stroke: #000000;
+        fontSize: 12px;
+    }
+}
+
+```
+
 
 ### Object Attributes
 
@@ -272,13 +311,17 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 |`textDecoration`|`text-decoration`|
 |`verticalAlign`|`vertical-align`|
 
->4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+:::note
+
+4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+
+:::
 
 #### Specific Attribute Values
 
 * For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
 
-```
+```css
 icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
 icon: url("edit.png"); /* relative path to the form file */
 ```
@@ -325,13 +368,13 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
  * a file for both platforms:
  
- ```
+ ```json
  "css": "<path>" 
  ```
 
  * or a list of files for both platforms:
 
- ```
+ ```json
  "css": [
       "<path1>",
       "<path2>" 
@@ -340,17 +383,21 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
 
  * or a list of files per platform:
 
- ```
+ ```json
   "css": [
          {"path": "<path>", "media": "mac"},
          {"path": "<path>", "media": "windows"},
      ],
  ```
 
-> Filepaths can be relative or absolute.
->
->* Relative paths are resolved relative to the JSON form description file.
->* For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+:::note
+
+Filepaths can be relative or absolute.
+
+* Relative paths are resolved relative to the JSON form description file.
+* For security reasons, only [filesystem paths](../Concepts/paths.md#filesystem-pathnames) are accepted for absolute paths (*e.g.*, "/RESOURCES", "/DATA").
+
+:::
 
 ## See also
 

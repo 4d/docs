@@ -64,7 +64,7 @@ While 4D automatically prioritizes the highest resolution,  there are, however, 
 
 *(\*) Typically,  macOS = 72dpi, Windows = 96dpi*
 
-## Dark mode pictures (macOS only)
+## Dark mode pictures
 
 You can define specific pictures and icons to be used instead of standard pictures when [forms use the dark scheme](properties_FormProperties.md#color-scheme).
 
@@ -76,6 +76,12 @@ A dark mode picture is defined in the following way:
 At runtime, 4D will automatically load the light or dark image according to the [current form color scheme](../FormEditor/properties_FormProperties.md#color-scheme).  
 
 ![](../assets/en/FormEditor/darkicon.png)
+
+:::note
+
+The dark mode is not available on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows).
+
+:::
 
 ## Mouse Coordinates in a Picture  
 

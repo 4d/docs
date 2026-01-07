@@ -98,7 +98,7 @@ There are no restrictions on the number of pages a form can have. The same field
 A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
 
 
-## Fluent UI rendering (Developer Preview)
+## Fluent UI rendering
 
 On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
 
@@ -109,12 +109,6 @@ Fluent UI rendering offers modern and attractive controls, support of dark/light
 |![](../assets/en/FormEditor/fluent.png)|![](../assets/en/FormEditor/fluent-dark.png)|
 
 
-
-:::caution Developer Preview
-
-Fluent UI support is currently in the Developer Preview phase. It should not be used in production. 
-
-:::
 
 :::info Availability
 
@@ -130,9 +124,9 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 ### Requirements
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine ([download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)). You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error. 
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
 ### Enabling the Fluent UI rendering
 
@@ -146,6 +140,12 @@ Check the **Use Fluent UI on Windows** option in the "Interface" page of the Set
 
 In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
 
+:::note
+
+If the current configuration is not compliant with the [Fluent UI requirements](#requirements), an error message is displayed next to the check box.
+
+:::
+
 #### Form setting
 
 Each form can define its own rendering via the **Widget appearance** property. The following options are available:
@@ -157,23 +157,21 @@ Each form can define its own rendering via the **Widget appearance** property. T
 
 The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
 
+#### CSS
+
+The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows you to configure several styles depending on the used theme.
+
 ### Specific behaviors
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 
-- The new `FORM Windows theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned. 
+- The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned. 
 - If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus. 
 - [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).  
 - [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
 - The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine. 
 - A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md). 
-
-:::info Limitations
-
-This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui). 
-
-:::
 
 
 
