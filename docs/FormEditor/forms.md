@@ -124,9 +124,9 @@ This feature can be used **in 4D projects on Windows**. It is not available on m
 
 ### Requirements
 
-The Fluent UI rendering requires that the ***Windows App SDK** be installed on your machine ([download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)). You need to make sure this SDK is installed on any Windows machine displaying your forms.
+The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine ([download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads)). You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error. 
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
 ### Enabling the Fluent UI rendering
 
@@ -139,6 +139,12 @@ Check the **Use Fluent UI on Windows** option in the "Interface" page of the Set
 ![](../assets/en/FormObjects/fluentui-setting.png)
 
 In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
+
+:::note
+
+If the current configuration is not compliant with the [Fluent UI requirements](#requirements), an error message is displayed next to the check box.
+
+:::
 
 #### Form setting
 

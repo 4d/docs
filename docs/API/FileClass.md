@@ -554,6 +554,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 |Release|Changes|
 |---|---|
+|21 R2|support of removeFluentUI|
 |20 R9|Read UUIDs in macOS executables|
 |20|Support of WinIcon|
 |19|Added|
@@ -600,14 +601,15 @@ Each valid property set in the *info* object parameter is written in the version
 
 |Property|Type|Comment|
 |---|---|---|
-|InternalName|Text||
-|ProductName|Text||
 |CompanyName|Text||
-|LegalCopyright|Text||
-|ProductVersion|Text||
 |FileDescription|Text||
 |FileVersion|Text||
+|InternalName|Text||
+|LegalCopyright|Text||
 |OriginalFilename|Text||
+|ProductName|Text||
+|ProductVersion|Text||
+|removeFluentUI|Boolean|True to remove the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) manifest from the build. Write-only property. Using False or omitting the property does nothing.|
 |WinIcon|Text|Posix path of .ico file. This property applies only to 4D generated executable files.|
 
 For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
