@@ -3,7 +3,7 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 Collected data is transferred with no impact on the user experience.
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。
 
 このページは以下を説明します:
 
