@@ -3,7 +3,7 @@ id: cli
 title: コマンドライン・インターフェース
 ---
 
-macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server、組み込みアプリケーション、[tool4d](#tool4d)) の起動ができます。 この機能により、以下のことが可能になります: この機能により、以下のことが可能になります: この機能により、以下のことが可能になります: この機能により、以下のことが可能になります: この機能により、以下のことが可能になります: この機能により、以下のことが可能になります:
+macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server、組み込みアプリケーション、[tool4d](#tool4d)) の起動ができます。 この機能により、以下のことが可能になります:
 
 - リモートからのデータベース起動。これは特に Webサーバーとして動作する 4D の管理に便利です。
 - アプリケーションの自動テストの実行
@@ -50,7 +50,7 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 | `--skip-onstartup`          |                                                                                          | `On Startup` および `On Exit` データベースメソッドを含む "自動" メソッドを一切実行せずにプロジェクトを起動します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--startup-method`          | プロジェクトメソッド名 (文字列)                                                     | (`--skip-onstartup` でスキップされていない場合) `On Startup` データベースメソッドの直後に実行するプロジェクトメソッドです。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
-(\*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the [Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (license alert, conversion dialog, database selection, data file selection). このような場合、エラーストリーム (stderr) とシステムのイベントログにエラーが投げられ、アプリケーションが終了します。
+(\*) 一部のダイアログはデータベースを開く前に表示されるため、[診断ログファイル](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) に記録することができません (ライセンス警告、変換ダイアログ、データベース選択、データファイル選択)。 このような場合、エラーストリーム (stderr) とシステムのイベントログにエラーが投げられ、アプリケーションが終了します。
 
 ### 例題
 

@@ -3,9 +3,9 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されたデータは、ユーザーエクスペリエンスに影響を与えない形で送信されます。 個人データは収集されません。 個人データ保護に関する4D ポリシーの詳細については、[こちらのページ](https://us.4d.com/privacy-policy)を参照してください。
 
-The section below explains:
+以下の章では次のようなことを説明しています:
 
 - どのような情報が収集されるか
 - どこに情報が保存され、いつ 4Dに送信されるか
@@ -32,7 +32,7 @@ The section below explains:
 | cacheReadBytes                                              | Object                            | キャッシュから読み出したバイト数                                                                                            |
 | cacheReadCount                                              | Object                            | キャッシュの読み出し回数                                                                                                |
 | cacheSize                                                   | Number                            | キャッシュのサイズ (バイト単位)                                                                        |
-| classUsage                                                  | Object                            | Number of instances of certain language classes                                                             |
+| classUsage                                                  | Object                            | 特定の言語クラスのインスタンス数                                                                                            |
 | compiled                                                    | Boolean                           | アプリケーションがコンパイル済みの場合は true                                                                                   |
 | connectionSystems                                           | Collection                        | ビルド番号 (括弧内) なしのクライアントOSと、それを使用しているクライアント数                                                |
 | CPU                                                         | Text                              | プロセッサーの名前、種類、および速度                                                                                          |

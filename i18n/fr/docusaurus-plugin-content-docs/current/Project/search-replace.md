@@ -106,64 +106,64 @@ Le menu de mode de recherche (c'est-à-dire "qui", "qui est" ou "dont le nom") s
   - **commence par / se termine par** : recherche la chaîne au début ou à la fin du mot (recherche de texte) ou au début ou à la fin de la ligne de commentaire (recherche de commentaire). En mode "Texte se termine par", la recherche de "var" trouvera "mavar".
 - Options de recherche pour élément du langage : le menu propose des options standard (est exactement, contient, commence par, se termine par). A noter que vous pouvez utiliser le joker de recherche (@) avec l’option "est exactement" (retourne tous les objets du type défini).
 
-### Search in components
+### Chercher dans les composants
 
-When your current project references [editable components](../Extensions/develop-components.md#editing-components), you can designate one or all your components as a target for the search. By default, a search is executed in the host only. To modify the target for a search, deploy the **in the project** menu:
+Lorsque votre projet courant fait référence à des [composants modifiables](../Extensions/develop-components.md#editing-components), vous pouvez désigner un ou tous vos composants comme cible(s) de la recherche. Par défaut, une recherche est exécutée dans l'hôte uniquement. Pour modifier la cible d'une recherche, déployez le menu **dans le projet** :
 
 ![](../assets/en/Project/find-components.png)
 
-You can select as target:
+Vous pouvez sélectionner comme cible :
 
-- the **host project** (default option, top of the list): the search will only be executed within the host project code and forms, excluding components.
-- the **host project and all its components**: the search will be executed in the host project and in all its loaded components.
-- a **specific component**, among the list of all searchable components: the search will be restricted to this component only, excluding the host and other components.
+- le **projet hôte** (option par défaut, en haut de la liste) : la recherche ne sera exécutée que dans le code et les formulaires du projet hôte, les composants sont exclus.
+- le **projet hôte et tous ses composants** : la recherche sera exécutée dans le projet hôte et dans tous ses composants chargés.
+- un **composant spécifique**, parmi la liste de tous les composants pouvant faire l'objet d'une recherche : la recherche sera limitée à ce composant uniquement, l'hôte et les autres composants sont exclus.
 
 :::note
 
-When no searchable component is found, no menu is available.
+Si aucun composant dans lequel la recherche est possible n'est trouvé, aucun menu n'est disponible.
 
 :::
 
-The **in the folder** menu (see below) is updated when you select a project since the availability of folders depends on the selected search target(s). The menu is hidden when you select the "host project and all its components" option.
+Le menu **dans le dossier** (voir ci-dessous) est mis à jour lorsque vous sélectionnez un projet, car la disponibilité des dossiers dépend de la ou des cible(s) de recherche sélectionnée(s). Le menu est caché lorsque vous sélectionnez l'option "projet hôte et tous ses composants".
 
 ### Folder
 
-The **in the folder** menu restricts the search to a specific folder of the project. By default ("Top Level" option), the search takes place in all the folders.
+Le menu **dans le dossier** limite la recherche à un dossier spécifique du projet. Par défaut (option "Niveau supérieur"), la recherche s'effectue dans tous les dossiers.
 
 :::note
 
-Folders are defined on the Home Page of the Explorer.
+Les dossiers sont définis dans la page Démarrage de l'Explorateur.
 
 :::
 
-### Modification date of the parent
+### Date de modification du parent
 
-This menu restricts the search with respect to the creation/modification date of its parent (for example, the method containing the string being searched for). In addition to standard date criteria (is, is before, is after, is not), this menu also contains several options to let you quickly specify a standard search period:
+Ce menu permet de restreindre la recherche en fonction de la date de création/de modification de l'élément parent (c'est-à-dire, par exemple, de la méthode contenant la chaîne recherchée). Ce menu contient des critères de date standard (est égale à, est antérieure à, est postérieure à, est différente de) ainsi que plusieurs options vous permettant de désigner en un clic une période de recherche prédéfinie :
 
-- **is today**: Period beginning at midnight (00:00 h) of the current day.
-- **is since yesterday**: Period including the current day and the previous one.
-- **is this week**: Period beginning on Monday of the current week.
-- **is this month**: Period beginning on the 1st day of the current month.
+- **est aujourd'hui** : Période commençant à minuit (00:00 h) du jour en cours.
+- **est depuis hier** : Période comprenant le jour en cours et le jour précédent.
+- **est cette semaine** : Période commençant le lundi de la semaine en cours.
+- **est ce mois-ci** : Période commençant le 1er jour du mois en cours.
 
-### Searching options
+### Options de recherche
 
-You can select options that can help speed up your searches:
+Vous pouvez sélectionner diverses options permettant d’accélérer vos recherches :
 
-- **Search in forms**: When this option is deselected, the search is done throughout the project, except in forms.
-- **Search in methods**: When this option is deselected, the search is done throughout the project, except in methods.
-- **Case Sensitive**: When this option is selected, the search uses the case of the characters as they have been entered in the Find area.
+- **Chercher dans les formulaires** : Lorsque cette option est désélectionnée, la recherche est effectuée dans l'ensemble du projet, sauf dans les formulaires.
+- **Chercher dans les méthodes** : Lorsque cette option est désélectionnée, la recherche est effectuée dans l'ensemble du projet, sauf dans les méthodes.
+- **Sensible à la casse** : Lorsque cette option est sélectionnée, la recherche tient compte de la casse des caractères tels qu'ils ont été saisis dans la zone de recherche.
 
-## Results window
+## Fenêtre de résultat
 
-The Results window lists all elements found that match the search criteria set using different types of searches:
+La fenêtre de résultat liste les objets répondant aux critères définis via différents types de recherches :
 
-- [standard search](#starting-a-search)
-- [search for unused elements](#find-unused-methods-and-global-variables)
-- [search for callers](../code-editor/write-class-method.md#search-callers)
-- search for dependencies
-- [renaming of project methods and variables](#renaming-project-methods-and-variables)
+- [recherche standard](#starting-a-search)
+- [recherche d'éléments inutilisés](#find-unused-methods-and-global-variables)
+- [recherche des appelants](../code-editor/write-class-method.md#search-callers)
+- recherche des dépendances
+- [renommage des méthodes projet et des variables](#renaming-project-methods-and-variables)
 
-It shows the results as a hierarchical list organized by type of elements found. You can expand or collapse all the hierarchical items in the list using the options menu (found at the bottom left of the window) or in the context menu.
+La fenêtre de résultat présente les éléments trouvés sous forme de liste hiérarchique, regroupés par type d’objet. Vous pouvez développer ou réduire tous les éléments hiérarchiques de la liste à l'aide du menu d'options (situé en bas à gauche de la fenêtre) ou du menu contextuel.
 
 ![](../assets/en/Project/result-window.png)
 
