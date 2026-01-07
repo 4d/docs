@@ -423,7 +423,7 @@ Si hay un conflicto entre dos versiones diferentes del mismo plug-in (una cargad
 
 ## Página licencias y certificados
 
-The Licenses & Certificate page can be used to:
+La página Licencias y certificado se puede utilizar para:
 
 * designe el número o los números de licencia que desea integrar en su aplicación ejecutable monopuesto
 * firmar la aplicación mediante un certificado en macOS.

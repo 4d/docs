@@ -3,16 +3,16 @@ id: search-replace
 title: Buscar y reemplazar
 ---
 
-4D provides several search and replace functions for elements in all of the Design environment.
+4D ofrece varias funciones de búsqueda y sustitución de elementos en todo el entorno de diseño.
 
-- You can search for a string or a type of object (variable, comment, expression, etc.) en parte o en todo el proyecto en función de criterios personalizados ("empieza por", "contiene", etc.). Por ejemplo, puede buscar todas las variables que contengan la cadena "MiVar", solo en los métodos cuyo nombre empiece por "HR_".
+- Puede buscar una cadena o un tipo de objeto (variable, comentario, expresión, etc.) en parte o en todo el proyecto en función de criterios personalizados ("empieza por", "contiene", etc.). Por ejemplo, puede buscar todas las variables que contengan la cadena "MiVar", solo en los métodos cuyo nombre empiece por "HR_".
 - Los resultados se muestran en una ventana de resultados, donde es posible realizar sustituciones en los contenidos. También puede exportar estos resultados en un archivo de texto que puede importarse a una hoja de cálculo.
 - Puede detectar variables y métodos que no se utilicen en su código y eliminarlos para liberar memoria.
 - Puede renombrar un método proyecto o una variable en todo el entorno de diseño en una sola operación.
 
 :::note
 
-There are also functions for searching among the methods of your project in the context menu of the Methods Page in the Explorer: **Search Callers** (aussi available in the [Code editor](../code-editor/write-class-method.md#search-callers) and **Search Dependencies**. Both functions display the items found in a [Results window](#results-window).
+También hay funciones para buscar entre los métodos de su proyecto en el menú contextual de la página Métodos del Explorador: **Buscar los invocadores** (también disponible en el [Editor de código](../code-editor/write-class-method.md#search-callers) y **Buscar las dependencias**. Ambas funciones muestran los elementos encontrados en una [ventana de resultados](#results-window).
 
 :::
 
@@ -20,13 +20,13 @@ There are also functions for searching among the methods of your project in the 
 
 Cuando se busca en el entorno Diseño, se buscan los siguientes elementos:
 
-- Names of project methods and classes
+- Nombres de los métodos proyecto y las clases
 - Contenido de todos los métodos y clases
 - Nombres de tablas, campos y formularios
 - Contenido de los formularios:
-  - object names and titles
-  - names of help tips, pictures, variables, style sheets,
-  - formatting strings
+  - nombres y títulos de los objetos
+  - nombres de mensajes de ayuda, imágenes, variables, hojas de estilo,
+  - cadenas de formato de caracteres
   - expresiones
 - Menús (nombres y elementos) y comandos asociados a los elementos de menú
 - Listas de selección (nombres y elementos)
@@ -41,18 +41,18 @@ Cuando se busca en el entorno Diseño, se buscan los siguientes elementos:
 Especifique sus criterios de búsqueda en la ventana "Buscar en el diseño":
 
 1. Haga clic en el botón Buscar (![](../assets/en/Project/search-icon.png)) de la barra de herramientas 4D.
-   OR
-   Select the **Find in Design...** command from the **Edit** menu.
+   O
+   Seleccione el comando **Buscar en Diseño...** del menú **Editar**.
 
-The "Find in design" window appears:
+Aparece la ventana "Buscar en diseño":
 
 ![](../assets/en/Project/find-in-design.png)
 
-The areas of the "Find in design" vary dynamically depending on the selections made in the menus. Puedes expandir esta ventana para que todas las opciones sean visibles:
+Las áreas de "Buscar en el diseño" varían dinámicamente en función de las selecciones realizadas en los menús. Puede expandir esta ventana para que todas las opciones sean visibles:
 
 ![](../assets/en/Project/find-in-design-expanded.png)
 
-2. Build your search using the different menus and entry areas of the dialog box and if necessary enter the character string to be searched for. Estos elementos se describen en las secciones siguientes.
+2. Construya su búsqueda utilizando los diferentes menús y áreas de entrada del diálogo y, si es necesario, introduzca la cadena de caracteres a buscar. Estos elementos se describen en las secciones siguientes.
 
 3. Define las [opciones de búsqueda](#search-options) (si es necesario).
 
@@ -61,7 +61,7 @@ The areas of the "Find in design" vary dynamically depending on the selections m
 
 :::note
 
-You can cancel an extensive search that is underway using the **x** button; this does not close the window or remove any results that were found.
+Puede cancelar una búsqueda extensa que está en marcha usando el botón **x**; esto no cierra la ventana ni elimina los resultados que se han encontrado.
 
 :::
 
@@ -69,10 +69,10 @@ Una vez ejecutada una búsqueda, el valor introducido en el área de búsqueda s
 
 ### Buscar
 
-You specify the type of element to look for using the **Find** menu. Las siguientes opciones están disponibles:
+Especifique el tipo de elemento a buscar utilizando el menú **Buscar**. Las siguientes opciones están disponibles:
 
-- **Text**: In this case, 4D looks for a character string throughout the Design environment. The search is done in plain text mode, without taking the context into account. For example, you can look for the text "ALERT("Error number:"+" or "button27". En este modo, no puede utilizar el caracter comodín porque "@" se considera un caracter estándar.
-- **Comment**: This search is basically the same as the previous one, but it is restricted to the contents of comments (lines beginning with //) in the code and in the Explorer window. For example, you can search for any comments containing the string "To be verified".
+- **Texto**: en este caso, 4D busca una cadena de caracteres en todo el entorno de diseño. La búsqueda se realiza en modo texto plano, sin tener en cuenta el contexto. Por ejemplo, puede buscar el texto "ALERT("Número de error: "+" o "botón27". En este modo, no puede utilizar el caracter comodín porque "@" se considera un caracter estándar.
+- **El comentario**: esta búsqueda es básicamente la misma que la anterior, pero se restringe al contenido de los comentarios en el código (líneas que empiezan por //) y en la ventana del Explorador. Por ejemplo, puede buscar cualquier comentario que contenga la cadena "Pendiente de verificación".
 
 :::note
 
@@ -80,35 +80,35 @@ El resultado final de ambos tipos de búsqueda depende del [modo de búsqueda](#
 
 :::
 
-- **Language expression**: Used to search for any valid 4D expression; the search is performed in the "contains" search mode. La validez es importante porque 4D debe ser capaz de evaluar una expresión para poder buscarla. For example, a search for "[clients" (invalid expression) will not return any result whereas "[clients]" is correct. Esta opción es especialmente adecuada para la búsqueda de asignaciones de valor y comparaciones. Por ejemplo:
+- **La expresión de lenguaje**: se utiliza para buscar cualquier expresión 4D válida; la búsqueda se realiza en el modo de búsqueda "contiene". La validez es importante porque 4D debe ser capaz de evaluar una expresión para poder buscarla. Por ejemplo, una búsqueda de la expresión "[clientes" (expresión no válida) no devolverá ningún resultado, mientras que "[clientes]" es correcta. Esta opción es especialmente adecuada para la búsqueda de asignaciones de valor y comparaciones. Por ejemplo:
   - Buscar "myvar:=" (asignación)
   - Buscar "myvar=" (comparación)
-- **Language element**: Used to search for a specific language element by its name. 4D puede distinguir entre los siguientes elementos:
+- **Un elemento del lenguaje**: permite buscar un elemento de lenguaje concreto por su nombre. 4D puede distinguir entre los siguientes elementos:
   - **Cualquier elemento del lenguaje**: todo elemento de la lista de abajo.
   - **Método proyecto o clase**: nombre de un método proyecto o clase, por ejemplo "M_Add" o "EmployeeEntity".
-  - **Form:** Form name, for example "Input". El comando busca entre formularios proyecto y formularios tabla.
-  - **Field or Table**: Name of a table or field, for example "Customers".
+  - **Formulario:** nombre del formulario, por ejemplo "Entrada". El comando busca entre formularios proyecto y formularios tabla.
+  - **Campo o Tabla**: nombre de una tabla o campo, por ejemplo "Clientes".
   - **Variable**: todo nombre de variable, como "$myvar".
-    **4D constant**: Any constant, such as "Is Picture".
-    **String in quotes**: Literal text constant; i.e. any value within quotes in the code editor or inserted into text areas of the Form editor (static text or group boxes). For example, a search for "Martin" will return results if your code contains the line: `ds.Customer.query("name = :1"; "Martin")`
-  - **4D command**: Any 4D command, for example "Alert".
-  - **Plug-in command**: Plug-in command installed in the application.
-  - **Properties**: An object property name (includes ORDA attribute names). For example "lastname" will find "$o.lastname" and "ds.Employee.lastname".
-- **Cualquier objeto**: esta opción busca entre todos los elementos del entorno Diseño. Sólo está disponible el filtro de fecha de modificación. Use this option, for example, to search for "anything modified today".
+    **constante 4D**: toda constante, como "Is Picture".
+    **Cadena entre comillas**: constante de texto literal; es decir, cualquier valor entre comillas en el editor de código o insertado en áreas de texto del editor de Formularios (texto estático o cajas de grupo). Por ejemplo, una búsqueda de "Martin" devolverá resultados si su código contiene la línea: `ds.Customer.query("name = :1"; "Martin")`
+  - **Comando 4D**: todo comando 4D, por ejemplo "Alert".
+  - **Comando de plug-in**: comando de plug-in instalado en la aplicación.
+  - **Propiedades**: un nombre de propiedad del objeto (incluye nombres de atributos ORDA). Por ejemplo, "lastname" encontrará "$o.lastname" y "ds.Employee.lastname".
+- **Cualquier objeto**: esta opción busca entre todos los elementos del entorno Diseño. Sólo está disponible el filtro de fecha de modificación. Utilice esta opción, por ejemplo, para buscar "cualquier cosa modificada hoy".
 
 ### Modo de búsqueda
 
-The search mode menu (i.e. "which", "that is" or "whose name") specifies how to search for the value that is entered. The contents of this menu vary according to the type of element to search for as selected in the **Find** dropdown list.
+El menú de modo de búsqueda (es decir, "que", "que es" o "cuyo nombre") especifica cómo buscar el valor introducido. El contenido de este menú varía según el tipo de elemento a buscar seleccionado en la lista desplegable **Encontrar**.
 
-- Opciones de búsqueda de Texto o Comentario:
-  - **contains**: Searches all text in the Design environment for the specified string. Search results for "var" can include "myvar", "variable1" or "aVariable".
-  - **contiene la palabra completa**: busca en todo el texto del entorno Diseño la cadena como palabra entera. Los resultados de la búsqueda de "var" sólo incluyen apariciones exactas. They will not include "myvar" but will include, for example, "var:=10" or "ID+var" because the symbols : or + are word separators.
-  - **begins with / ends with**: Searches for the string at the beginning or end of the word (text search) or at the beginning or end of the comment line (comment search). En modo "El texto termina en", si busca "var" encontrará "myvar".
-- Search options for Language element: The menu offers standard options (matches, contains, begins with, ends with). Note that you can use the search wildcard (@) with the matches option (returns all objects of the type specified).
+- Opciones de búsqueda para Texto o Comentario:
+  - **contiene**: busca la cadena especificada en todo el texto del entorno de diseño. Los resultados de la búsqueda de "var" pueden incluir "myvar", "variable1" o "aVariable".
+  - **contiene la palabra completa**: busca en todo el texto del entorno Diseño la cadena como palabra entera. Los resultados de la búsqueda de "var" sólo incluyen apariciones exactas. No incluirán "myvar" pero sí, por ejemplo, "var:=10" o "ID+var" porque los símbolos: o + son separadores de palabras.
+  - **Empieza por / termina por**: busca la cadena al principio o al final de la palabra (búsqueda de texto) o al principio o al final de la línea de comentario (búsqueda de comentario). En modo "El texto termina en", si busca "var" encontrará "myvar".
+- Opciones de búsqueda para el elemento del lenguaje: el menú ofrece opciones estándar (coincide, contiene, empieza por, termina por). Tenga en cuenta que puede utilizar el comodín de búsqueda (@) con la opción "es exactamente" (devuelve todos los objetos del tipo especificado).
 
-### Search in components
+### Buscar en componentes
 
-When your current project references [editable components](../Extensions/develop-components.md#editing-components), you can designate one or all your components as a target for the search. Por defecto, una búsqueda se ejecuta sólo en el host. To modify the target for a search, deploy the **in the project** menu:
+Cuando su proyecto actual hace referencia a [componentes editables](../Extensions/develop-components.md#editing-components), puede designar uno o todos sus componentes como objetivo de la búsqueda. Por defecto, una búsqueda se ejecuta sólo en el host. Para modificar el objetivo de una búsqueda, despliegue el menú **en el proyecto**:
 
 ![](../assets/en/Project/find-components.png)
 
@@ -280,4 +280,4 @@ This command looks for local variables that are declared but not used. Los resul
 Se considera que una variable local no se utiliza cuando:
 
 - it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
-- it is not used anywhere else within the same method.
+- no se utiliza en ningún otro lugar dentro del mismo método.

@@ -3,9 +3,9 @@ id: data-collect
 title: データ収集
 ---
 
-4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please see [this document](https://us.4d.com/privacy-policy).
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
 
-This section explains:
+The section below explains:
 
 - どのような情報が収集されるか
 - どこに情報が保存され、いつ 4Dに送信されるか

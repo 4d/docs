@@ -11,7 +11,7 @@ title: デスクトップセッション
 
 それでも、[デスクトップセッションをWeb セッションと**共有** すること](#webアクセス用にデスクトップセッションを共有する) ことができ、これによってデスクトップユーザーは、例えばQodly ページとWeb エリアを使用して、Web インターフェースを通して4D アプリケーションへとアクセスうすることができます。
 
-## セッションの種類
+## Session types {#session-types}
 
 デスクトップセッションには以下のような種類が含まれます:
 
@@ -29,13 +29,13 @@ title: デスクトップセッション
 
 ![](../assets/en/Desktop/sessions.png)
 
-## リモートユーザーセッション
+## Remote user sessions {#remote-user-sessions}
 
 サーバー上では、"ユーザープロセス"(つまりリモートユーザーに関連したプロセス)内では、[`Session`](../commands/session.md) コマンドはカレントのユーザーセッションを表す `session` オブジェクトを返します。  このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 :::note
 
-リモート4D では、 `session` オブジェクトは常に null を返します。
+On a remote 4D, the [`Session`](../commands/session) command always returns null.
 
 :::
 
@@ -62,13 +62,13 @@ title: デスクトップセッション
 - ORDA [データモデル関数](../ORDA/ordaClasses.md) (ただし、[`local`](../ORDA/ordaClasses.md#local-functions) キーワードで宣言されているものを除く)
 - [`On Server Open Connection`](../commands/on-server-open-connection-database-method) と [`On Server Close Connection`](../commands/on-server-close-connection-database-method)などのデータベースメソッド。
 
-## ストアドプロシージャーセッション
+## Stored procedure sessions {#stored-procedure-sessions}
 
 サーバー上では、全ての[ストアドプロシージャー](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.ja.html) は同じバーチャルユーザーセッションを共有します。
 
 ### 効果
 
-You can share data between all processes of a store procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
 
 ### 利用可能性
 
@@ -78,7 +78,7 @@ The `session` object of stored procedures is available from:
 - ORDA [data model functions](../ORDA/ordaClasses.md) called from a stored procedure,
 - Database methods such as [`On Server Startup`](../commands/on-server-startup-database-method) and [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
-## Standalone sessions
+## Standalone sessions {#standalone-sessions}
 
 A standalone session is the single-user session running when you work locally with 4D.
 
@@ -90,7 +90,7 @@ The standalone session can be used to develop and test your client/server applic
 
 The `session` object of a standalone is available from all methods and code executed on the 4D application.
 
-## Sharing a desktop session for web accesses
+## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
 
 Desktop sessions can be used to handle web accesses to the application by the same user and thus, manage their [privileges](../ORDA/privileges.md). This possibility is particularly useful for Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. この構成では、アプリケーションは現代的なCSS ベースのWeb インターフェースを持ちながらも、統合されたクライアント/サーバーのパワーと単純さの恩恵に預かることができます。 このようなアプリケーションでは、Qodly ページは標準の4D [Web エリア](../FormObjects/webArea_overview.md)内で実行されます。
 

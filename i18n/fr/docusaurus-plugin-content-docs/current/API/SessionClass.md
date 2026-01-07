@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Les objets session sont retournés par la commande [`Session`](../commands/session.md). These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Les objets session sont retournés par la commande [`Session`](../commands/session.md). Ces objets fournissent au développeur une interface permettant de gérer la session de l'utilisateur courant et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de session, le lancement de process préemptifs liés à la session ou (contexte web uniquement) la gestion des [privilèges](../ORDA/privileges.md).
 
 :::tip Articles de blog sur le sujet
 
@@ -17,7 +17,7 @@ Les objets session sont retournés par la commande [`Session`](../commands/sessi
 
 Les types de sessions suivants sont pris en charge par cette classe :
 
-- [**Sessions utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
+- [**Sessions utilisateur Web**](WebServer/sessions.md) : Les sessions utilisateur Web sont disponibles lorsque [les sessions évolutives (scalable sessions) sont activées dans votre projet](WebServer/sessions.md#enabling-web-sessions). Elles sont utilisées pour les connexions Web (y compris les accès REST) et sont contrôlées par les [privilèges](../ORDA/privileges.md) qui leur sont attribués.
 - [**Sessions desktop**](../Desktop/sessions.md), qui comprennent :
   - [**Sessions utilisateurs distants**](../Desktop/sessions.md#remote-user-sessions) : Dans les applications client/serveur, les utilisateurs distants ont leurs propres sessions gérées sur le serveur.
   - [**Sessions procédures stockées**](../Desktop/sessions.md#stored-procedure-sessions) : Session utilisateur virtuelle pour toutes les procédures stockées exécutées sur le serveur.
@@ -496,7 +496,7 @@ La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session
 
 - **Sessions distantes** et **Sessions de procédure stockée** : L'objet `.info` est le même que celui renvoyé dans la propriété "session" par la commande [`Process activity`](../commands/process-activity.md).
 - **Sessions autonomes** : L'objet `.info` est le même que celui retourné par la commande [`Session info`](../commands/session-info.md).
-- **Web user sessions**: The `.info` object contains properties available for web user sessions.
+- **Sessions utilisateur Web**: L'objet `.info` contient les propriétés disponibles pour les sessions utilisateur web.
 
 L'objet `.info` contient les propriétés suivantes:
 
@@ -555,7 +555,7 @@ La fonction `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retourne Tr
 
 :::note Compatibilité
 
-When the [*forcelogin* mode](../REST/authUsers.md#force-login-mode) is disabled, `.isGuest()` returns True if the session has no privileges.
+Lorsque le [mode *forcelogin*](../REST/authUsers.md#force-login-mode) est désactivé, `.isGuest()` renvoie True lorsque la session n'a pas de privilèges.
 
 :::
 

@@ -181,7 +181,7 @@ El comando `CALL SUBFORM CONTAINER` permite que una instancia de subformulario e
 
 El código del evento no tiene restricciones (por ejemplo, 20000 o -100). Puede utilizar un código que corresponda a un evento existente (por ejemplo, 3 para `On Validate`), o utilizar un código personalizado. En el primer caso, sólo puede utilizar los eventos que haya marcado en la lista de propiedades para los contenedores de subformulario. En el segundo caso, el código no debe corresponder a ningún evento de formulario existente. Se recomienda utilizar un valor negativo para asegurarse de que este código no será utilizado por 4D en futuras versiones.
 
-Supported events for subforms are:
+Los eventos soportados para los subformularios son:
 
 - [On Load](../Events/onLoad.md)
 - [On Validate](../Events/onValidate.md)

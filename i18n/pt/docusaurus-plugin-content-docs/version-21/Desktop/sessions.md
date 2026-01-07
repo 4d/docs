@@ -11,7 +11,7 @@ However, unlike the code executed in web user sessions, the code executed in des
 
 You can nevertheless [**share** a desktop session with a web session](#sharing-a-desktop-session-for-web-accesses) so that a desktop user can access your 4D application through a web interface, using for example Qodly pages and Web areas.
 
-## Tipos de sessão
+## Session types {#session-types}
 
 Desktop sessions include:
 
@@ -29,13 +29,13 @@ The following diagram shows the different session types and how they interact:
 
 ![](../assets/en/Desktop/sessions.png)
 
-## Sessões de usuário remoto
+## Remote user sessions {#remote-user-sessions}
 
 On the server, in "user processes" (i.e. processes related to remote users), the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Este objeto é tratado através das funções e propriedades da [classe `sessão`](../API/SessionClass.md).
 
 :::note
 
-On a remote 4D, the `session` object always returns null.
+On a remote 4D, the [`Session`](../commands/session) command always returns null.
 
 :::
 
@@ -62,13 +62,13 @@ O objeto `session` do usuário remoto está disponível em:
 - ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword),
 - Database methods such as [`On Server Open Connection`](../commands/on-server-open-connection-database-method) and [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
 
-## Stored procedure sessions
+## Stored procedure sessions {#stored-procedure-sessions}
 
 On the server, all [stored procedures](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) share the same virtual user session.
 
 ### Utilização
 
-You can share data between all processes of a store procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
 
 ### Disponibilidade
 
@@ -78,7 +78,7 @@ The `session` object of stored procedures is available from:
 - ORDA [data model functions](../ORDA/ordaClasses.md) called from a stored procedure,
 - Database methods such as [`On Server Startup`](../commands/on-server-startup-database-method) and [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
-## Standalone sessions
+## Standalone sessions {#standalone-sessions}
 
 A standalone session is the single-user session running when you work locally with 4D.
 
@@ -90,7 +90,7 @@ The standalone session can be used to develop and test your client/server applic
 
 The `session` object of a standalone is available from all methods and code executed on the 4D application.
 
-## Sharing a desktop session for web accesses
+## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
 
 Desktop sessions can be used to handle web accesses to the application by the same user and thus, manage their [privileges](../ORDA/privileges.md). This possibility is particularly useful for Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. In such applications, Qodly pages are executed within standard 4D [Web areas](../FormObjects/webArea_overview.md).
 

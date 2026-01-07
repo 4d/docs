@@ -3,9 +3,9 @@ id: data-collect
 title: Recolha de dados
 ---
 
-Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please see [this document](https://us.4d.com/privacy-policy).
+Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
 
-This section explains:
+The section below explains:
 
 - que informação é coletada,
 - onde a informação é armazenada e quando é enviada a 4D,
