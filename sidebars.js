@@ -3367,7 +3367,7 @@ module.exports =
                 "aikit/Classes/openaimoderationresult",
                 "aikit/Classes/openaimoderationsapi",
                 "aikit/Classes/openaiparameters",
-                "aikit/Classes/openairesult",                                "aikit/Classes/openairesult",
+                "aikit/Classes/openairesult",
                 "aikit/Classes/openaitool",
                 "aikit/Classes/openaivision",
                 "aikit/Classes/openaivisionhelper"
