@@ -157,8 +157,8 @@ Vérification d’index spécifiques (index du champ 1 de la table 4 et index de
 Vérification du fichier de données, création et affichage du fichier d'historique :
 
 ```4d
- VERIFY DATA FILE(Structure file;Data file;Tout vérifier;0;"")
- SHOW ON DISK(File(Fichier log vérification).platformPath)
+ VERIFY DATA FILE(Structure file;Data file;Verify all;0;"")
+ SHOW ON DISK(File(Verification log file).platformPath)
 ```
 
 ## Variables et ensembles système 
