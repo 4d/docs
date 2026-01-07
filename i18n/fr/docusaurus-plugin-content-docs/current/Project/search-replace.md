@@ -1,110 +1,110 @@
 ---
 id: search-replace
-title: Search and Replace
+title: Rechercher et Remplacer
 ---
 
-4D provides several search and replace functions for elements in all of the Design environment.
+4D propose plusieurs fonctions de recherche et de remplacement d'éléments dans l'ensemble de l'environnement de développement.
 
-- You can search for a string or a type of object (variable, comment, expression, etc.) in part of or in the entire project on the basis of custom criteria ("starts with", "contains", etc.). You can, for example, search for all the variables containing the string "MyVar", only in methods whose name begins with "HR_".
-- The results are displayed in a results window, where it is possible to perform replacements in the contents. You can also export these results in a text file that can be imported into a spreadsheet.
-- You can detect variables and methods that are not used in your code and then remove them to free up memory.
-- You can rename a project method or a variable throughout the Design environment in a single operation.
+- Vous pouvez rechercher une chaîne de caractères ou un type d'objet (variable, commentaire, expression, etc.) parmi une partie ou la totalité du développement sur la base de critères paramétrables ("commence par”, “contient”...). Par exemple, vous pouvez rechercher toutes les variables contenant la chaîne "MaVar", uniquement dans les méthodes dont le nom commence par "HR_".
+- Les résultats sont affichés dans une fenêtre de résultat, à partir de laquelle il est possible d'effectuer des remplacements dans le contenu. Vous pouvez aussi exporter ces résultats dans un fichier texte qui peut être importé dans une feuille de calcul.
+- Vous pouvez détecter les variables et les méthodes qui ne sont pas utilisées dans votre code et les supprimer pour libérer de la mémoire.
+- Vous pouvez renommer une méthode projet ou une variable dans tout l'environnement de développement en une seule opération.
 
 :::note
 
-There are also functions for searching among the methods of your project in the context menu of the Methods Page in the Explorer: **Search Callers** (aussi available in the [Code editor](../code-editor/write-class-method.md#search-callers) and **Search Dependencies**. Both functions display the items found in a [Results window](#results-window).
+Vous disposez également de fonctions de recherche parmi les méthodes de votre base, accessibles via le menu contextuel de la page Méthodes de l'Explorateur : **Chercher les appelants** (également disponible dans l'[Éditeur de code](../code-editor/write-class-method.md#search-callers) et **Chercher les dépendances**. Les deux fonctions affichent les éléments trouvés dans une [fenêtre de résultat](#results-window).
 
 :::
 
-## Search Location
+## Emplacements de recherche
 
-When you search the Design environment, the following elements are searched:
+Une recherche dans l'environnement de développement effectue par défaut une recherche parmi les objets suivants :
 
-- Names of project methods and classes
-- Contents of all methods and classes
-- Names of tables, fields and forms
-- Contents of forms:
-  - object names and titles
-  - names of help tips, pictures, variables, style sheets,
-  - formatting strings
+- Noms des méthodes projet et des classes
+- Contenu de toutes les méthodes et classes
+- Noms des tables, champs et formulaires
+- Contenu des formulaires :
+  - noms et titres des objets
+  - noms des infobulles, images, variables, feuilles de style,
+  - chaînes de formatage de caractères
   - expressions
-- Menus (names and items) and commands associated with menu items
-- Choice lists (names and items)
-- Help tips (names and content)
-- Formats / filters (names and content)
-- Comments in the Explorer and in the code
+- Menus (noms et éléments) et commandes associées aux éléments de menu
+- Enumérations (noms et éléments)
+- Infobulles (noms et contenu)
+- Formats / filtres (noms et contenu)
+- Commentaires dans l'Explorateur et dans le code
 
-## Find in Design
+## Chercher dans le développement
 
-### Starting a search
+### Lancer une recherche
 
-Specify your search criteria in the "Find in design" window:
+Vous définissez vos critères de recherche dans la fenêtre "Chercher dans le développement" :
 
-1. Click on the Search button (![](../assets/en/Project/search-icon.png)) in the 4D toolbar.
-   OR
-   Select the **Find in Design...** command from the **Edit** menu.
+1. Cliquez sur le bouton de recherche (![](../assets/en/Project/search-icon.png)) dans la barre d'outils 4D.
+   OU
+   Sélectionnez la commande **Chercher dans le développement...** dans le menu **Edition**.
 
-The "Find in design" window appears:
+La fenêtre de recherche dans le développement apparaît :
 
 ![](../assets/en/Project/find-in-design.png)
 
-The areas of the "Find in design" vary dynamically depending on the selections made in the menus. You can expand this window so that all options are visible:
+Les zones de la "Recherche dans le développement" varient dynamiquement en fonction des sélections effectuées dans les menus. Vous pouvez déployer cette fenêtre pour que toutes les options soient visibles :
 
 ![](../assets/en/Project/find-in-design-expanded.png)
 
-2. Build your search using the different menus and entry areas of the dialog box and if necessary enter the character string to be searched for. These items are described in the following sections.
+2. Construisez votre recherche en utilisant les différents menus et zones de saisie de la boîte de dialogue et, si nécessaire, saisissez la chaîne de caractères à rechercher. Ces éléments sont décrits dans les sections suivantes.
 
-3. Set the [search options](#search-options) (if necessary).
+3. Définissez les [options de recherche](#search-options) (si nécessaire).
 
-4. Click **OK** or press the **Enter** key.
-   When the search is finished, the [Results window](#results-window) appears, listing the elements found.
+4. Cliquez sur **OK** ou appuyez sur la touche **Entrée**.
+   Lorsque la recherche est terminée, la [fenêtre de résultat](#results-window) s'affiche, répertoriant les éléments trouvés.
 
 :::note
 
-You can cancel an extensive search that is underway using the **x** button; this does not close the window or remove any results that were found.
+Vous pouvez interrompre une recherche en cours en cliquant sur le bouton **x** (qui apparaît pour les recherches de longue durée uniquement) ; cela ne ferme pas la fenêtre et ne supprime pas les résultats trouvés.
 
 :::
 
-Once you have executed a search, the value entered in the search area is saved in memory. This value, as well as all the other values entered during the same session, can be selected from the combo box.
+Une fois la recherche effectuée, la valeur saisie dans la zone de recherche est sauvegardée en mémoire. Cette valeur, ainsi que toutes les autres valeurs saisies au cours de la même session, sont sélectionnables dans la liste déroulante.
 
 ### Chercher
 
-You specify the type of element to look for using the **Find** menu. The following choices are available:
+Vous spécifiez le type d'élément à rechercher à l'aide du menu **Chercher**. Les choix suivants sont possibles :
 
-- **Text**: In this case, 4D looks for a character string throughout the Design environment. The search is done in plain text mode, without taking the context into account. For example, you can look for the text "ALERT("Error number:"+" or "button27". In this mode, you cannot use the wildcard character because "@" is considered to be a standard character.
-- **Comment**: This search is basically the same as the previous one, but it is restricted to the contents of comments (lines beginning with //) in the code and in the Explorer window. For example, you can search for any comments containing the string "To be verified".
+- **Le texte** : Dans ce cas, 4D recherche une chaîne de caractères dans tout l'environnement de developpement. La recherche est effectuée en mode texte brut, sans tenir compte du contexte. Par exemple, vous pouvez rechercher le texte "ALERT("Erreur numéro :"+" ou "bouton27". Dans ce mode, il n’est pas possible d’utiliser de caractère joker. Le "@" est considéré comme un caractère standard.
+- **Le commentaire** : Une recherche de ce type équivaut à la précédente mais est restreinte au contenu des commentaires dans le code (lignes débutant par //) et dans la fenêtre de l'Explorateur. Par exemple, vous pouvez rechercher tous les commentaires contenant la chaîne "A vérifier".
 
 :::note
 
-The end result of both types of searches depends on the [search mode](#search-mode) selected.
+Le résultat final de ces deux types de recherches dépend étroitement du paramétrage du [menu de mode de recherche (qui)](#search-mode).
 
 :::
 
-- **Language expression**: Used to search for any valid 4D expression; the search is performed in the "contains" search mode. Validity is important because 4D must be able to evaluate an expression to be able to search for it. For example, a search for "[clients" (invalid expression) will not return any result whereas "[clients]" is correct. This option is particularly suitable for searches for value assignments and comparisons. Par exemple :
-  - Search for "myvar:=" (assignment)
-  - Search for "myvar=" (comparison)
-- **Language element**: Used to search for a specific language element by its name. 4D can distinguish between the following elements:
-  - **Any language element**: Any element from the list below.
-  - **Project method or Class**: Name of a project method or class, for example "M_Add" or "EmployeeEntity".
-  - **Form:** Form name, for example "Input". The command searches among project forms and table forms.
-  - **Field or Table**: Name of a table or field, for example "Customers".
-  - **Variable**: Any variable name, such as "$myvar".
-    **4D constant**: Any constant, such as "Is Picture".
-    **String in quotes**: Literal text constant; i.e. any value within quotes in the code editor or inserted into text areas of the Form editor (static text or group boxes). For example, a search for "Martin" will return results if your code contains the line: `ds.Customer.query("name = :1"; "Martin")`
-  - **4D command**: Any 4D command, for example "Alert".
-  - **Plug-in command**: Plug-in command installed in the application.
-  - **Properties**: An object property name (includes ORDA attribute names). For example "lastname" will find "$o.lastname" and "ds.Employee.lastname".
-- **Any object**: This option searches among all the elements in the Design environment. Only the modification date filter is available. Use this option, for example, to search for "anything modified today".
+- **L’expression de langage** : Permet de rechercher toute expression 4D valide ; la recherche est effectuée en mode "contient". La notion de validité est importante car 4D doit pouvoir évaluer l’expression pour la rechercher. Par exemple, une recherche sur l’expression "[clients" n’aboutira pas (expression invalide) alors que "[clients]" est correct. Cette option est particulièrement adaptée aux recherches des affectations et des comparaisons de valeurs. Par exemple :
+  - Recherche de "myvar:=" (affectation)
+  - Recherche de "myvar=" (comparaison)
+- **Un élément du langage** : Permet de rechercher précisément un élément de langage via son nom. 4D distingue les éléments suivants :
+  - **N'importe quel élément du langage** : Tout élément de la liste ci-dessous.
+  - **Méthode projet ou classe** : Nom d'une méthode ou d'une classe projet, par exemple "M_Add" ou "EmployeeEntity".
+  - **Formulaire :** Nom de formulaire, par exemple "Saisie". La commande effectue une recherche parmi les formulaires projet et les formulaires table.
+  - **Champ ou Table** : Nom d'une table ou d'un champ, par exemple "Clients".
+  - **Variable** : Tout nom de variable, par exemple "$myvar".
+    **constante 4D** : Toute constante, telle que "Is Picture".
+    **Chaîne entre guillemets** : Constante de texte littérale, c'est-à-dire toute valeur entre guillemets dans l'éditeur de code ou insérée dans les zones de texte de l'éditeur de formulaires (texte statique ou zones de groupe). Par exemple, la recherche de "Martin" donnera des résultats si votre code contient la ligne : `ds.Customer.query("name = :1" ; "Martin")`
+  - **Commande 4D** : Toute commande 4D, par exemple "Alert".
+  - **Commande de plug-in** : Commande de plug-in installée dans l'application.
+  - \*\*Propriété \*\* : Nom d'une propriété d'objet (y compris les noms d'attributs ORDA). Par exemple, "lastname" permet de trouver "$o.lastname" et "ds.Employee.lastname".
+- **N'importe quel objet** : Cette option permet d'effectuer une recherche parmi tous les éléments de l'environnement de développement. Dans ce cas, seul le menu de date de modification est disponible. Utilisez cette option, par exemple, pour rechercher "tout ce qui a été modifié aujourd'hui".
 
-### Search mode
+### Mode de recherche
 
-The search mode menu (i.e. "which", "that is" or "whose name") specifies how to search for the value that is entered. The contents of this menu vary according to the type of element to search for as selected in the **Find** dropdown list.
+Le menu de mode de recherche (c'est-à-dire "qui", "qui est" ou "dont le nom") spécifie comment rechercher la valeur saisie. Le contenu de ce menu varie en fonction du type d'élément à rechercher, tel que sélectionné dans la liste déroulante **Chercher**.
 
-- Search options for Text or Comment:
-  - **contains**: Searches all text in the Design environment for the specified string. Search results for "var" can include "myvar", "variable1" or "aVariable".
-  - **contains whole word**: Searches all text of the Design environment for the string as a whole word. Search results for "var" only include exact occurrences. They will not include "myvar" but will include, for example, "var:=10" or "ID+var" because the symbols : or + are word separators.
-  - **begins with / ends with**: Searches for the string at the beginning or end of the word (text search) or at the beginning or end of the comment line (comment search). In "Text ends with" mode, searching for "var" will find "myvar".
-- Search options for Language element: The menu offers standard options (matches, contains, begins with, ends with). Note that you can use the search wildcard (@) with the matches option (returns all objects of the type specified).
+- Options de recherche pour Texte ou Commentaire :
+  - **contient** : recherche la chaîne parmi les textes de l'environnement de développement. La recherche de "var" trouvera "mavar", "variable1" ou "avarie".
+  - **contient le mot** : recherche la chaîne en tant que mot parmi les textes de l'environnement de développement. La recherche de "var" ne trouvera que les occurrences exactes de "var". Elle ne trouvera pas "mavar", en revanche, elle trouvera "var:=10" ou "ID+var" car les symboles : ou + sont des séparateurs de mots.
+  - **commence par / se termine par** : recherche la chaîne au début ou à la fin du mot (recherche de texte) ou au début ou à la fin de la ligne de commentaire (recherche de commentaire). En mode "Texte se termine par", la recherche de "var" trouvera "mavar".
+- Options de recherche pour élément du langage : le menu propose des options standard (est exactement, contient, commence par, se termine par). A noter que vous pouvez utiliser le joker de recherche (@) avec l’option "est exactement" (retourne tous les objets du type défini).
 
 ### Search in components
 

@@ -162,7 +162,7 @@ If (Form event code=On Bound Variable Change)
 End if
 ```
 
-\*\*Ce principe est toujours pris en charge pour des raisons de compatibilité, mais il est désormais obsolète puisqu'il ne permet pas de lier des expressions à des sous-formulaires. Dans tous les cas, nous recommandons d'utiliser la commande [`Form`](#synchronizing-parent-form-and-subform-multiple-values) ou les commandes [`OBJECT Get subform container value` et `OBJECT SET SUBFORM CONTAINER VALUE`](#synchronizing-parent-form-and-subform-single-value) pour synchroniser les valeurs du formulaire et du sous-formulaire.
+**Ce principe est toujours pris en charge à des fins de compatibilité, mais il est désormais obsolète, car il ne permet pas de lier des expressions à des sous-formulaires.** Il ne doit plus être utilisé dans vos développements. Dans tous les cas, nous recommandons d'utiliser la commande [`Form`](#synchronizing-parent-form-and-subform-multiple-values) ou les commandes [`OBJECT Get subform container value` et `OBJECT SET SUBFORM CONTAINER VALUE`](#synchronizing-parent-form-and-subform-single-value) pour synchroniser les valeurs du formulaire et du sous-formulaire.
 
 ### Programmation inter-formulaires avancée
 
@@ -175,13 +175,13 @@ Pour répondre à ces besoins, 4D propose les mécanismes suivants :
 
 > La commande `GOTO OBJECT` peut rechercher l’objet de destination dans le formulaire parent même si elle exécutée depuis un sous-formulaire.
 
-#### CALL SUBFORM CONTAINER command {#call-subform-container-command}
+#### Commande CALL SUBFORM CONTAINER {#call-subform-container-command}
 
 La commande `CALL SUBFORM CONTAINER` permet à une instance de sous-formulaire d'envoyer un [événement](../Events/overview.md) à l'objet conteneur de sous-formulaire, qui peut alors le traiter dans le contexte du formulaire parent. L’événement est reçu dans la méthode de l’objet conteneur. Il peut s’agir à l’origine de tout événement détecté par le sous-formulaire (clic, glisser-déposer, etc.).
 
 Le code de l’événement est libre (par exemple, 20000 ou -100). Vous pouvez soit utiliser un code correspondant à un événement existant (par exemple, 3 pour `Sur validation`), soit utiliser un code personnalisé. Dans le premier cas, seuls les événements présents dans la liste des événements "cochables" des conteneurs de sous-formulaire peuvent être utilisés (cf. Liste des propriétés). Dans le second cas, le code ne doit correspondre à aucun événement formulaire existant. Il est conseillé d’utiliser une valeur négative pour avoir l’assurance que 4D n’utilisera pas ce code dans les versions futures.
 
-Supported events for subforms are:
+Les événements pris en charge pour les sous-formulaires sont les suivants :
 
 - [On Load](../Events/onLoad.md)
 - [On Validate](../Events/onValidate.md)

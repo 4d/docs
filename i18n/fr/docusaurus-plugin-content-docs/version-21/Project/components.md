@@ -501,11 +501,11 @@ Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour u
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Follow 4D version** (default, recommended option): Download the latest component release that is compatible with the running 4D version. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
+- **Suivre la version de 4D** (option par défaut, recommandée) : Télécharge la dernière version du composant compatible avec la version courante de 4D. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. Cette option est **recommandée**, en particulier pour les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Jusqu'à la version majeure suivante** : Définit une [plage sémantique de versions](#tags-and-versions) pour limiter les mises à jour à la version majeure suivante.
 - **Jusqu'à la prochaine version mineure** : De même, limite les mises à jour à la version mineure suivante.
 - **Version exacte (balise)** : Sélectionnez ou saisissez manuellement un [tag spécifique](#tags-and-versions) dans la liste disponible.
-- **Latest**: Allows to download the release that is tagged as the latest version. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
+- **La dernière** : Permet de télécharger la version la plus récente. **Attention :** Bien que l'utilisation de cette option soit pratique au début du développement, il est préférable de l'éviter dans les projets en production ou partagés car elle récupère automatiquement les nouvelles versions, y compris les versions bêta, ce qui peut conduire à des mises à jour non souhaitées ou à des ruptures de compatibilité.
 
 La version courante de la dépendance GitHub est affichée sur le côté droit de l'élément de la dépendance :
 
