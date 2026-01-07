@@ -605,7 +605,7 @@ module.exports =
                 "commands-legacy/form-set-size",
                 "commands-legacy/form-set-vertical-resizing",
                 "commands-legacy/form-unload",
-                "commands/form-windows-theme"
+                "commands/form-theme"
               ]
             },
             {
