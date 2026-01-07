@@ -1030,7 +1030,7 @@ Em [Método banco de dados On Startup](metodo-banco-de-dados-on-startup.md), pod
 ## Ver também 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](application-info.md)  
+[Application info](../commands/application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

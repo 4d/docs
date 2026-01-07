@@ -183,7 +183,7 @@ module.exports =
               },
               "items": [
                 "commands-legacy/application-file",
-                "commands-legacy/application-info",
+                "commands/application-info",
                 "commands-legacy/application-type",
                 "commands-legacy/application-version",
                 "commands-legacy/build-application",

@@ -37,7 +37,7 @@ You want to reject or accept new client connections:
 ## See also 
 
 [DROP REMOTE USER](drop-remote-user.md)  
-[Application info](application-info.md)  
+[Application info](../commands/application-info.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Properties

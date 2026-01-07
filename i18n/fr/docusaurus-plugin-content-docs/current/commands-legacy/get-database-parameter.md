@@ -980,7 +980,7 @@ Dans la [On Startup database method](on-startup-database-method.md), vous pouvez
 ## Voir aussi 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](application-info.md)  
+[Application info](../commands/application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

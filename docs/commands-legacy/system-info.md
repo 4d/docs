@@ -142,7 +142,7 @@ returns an object that contains, for example, the following information:
 
 ## See also 
 
-[Application info](application-info.md)  
+[Application info](../commands/application-info.md)  
 [Is macOS](is-macos.md)  
 [Is Windows](is-windows.md)  
 
