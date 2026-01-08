@@ -68,27 +68,27 @@ title: デスクトップセッション
 
 ### 効果
 
-You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+ストアドプロシージャーセッションのすべてのプロセス間でデータを共有するには、[`Session.storage`](../API/SessionClass.md#storage) 共有オブジェクトを使用できます。
 
 ### 利用可能性
 
-The `session` object of stored procedures is available from:
+ストアドプロシージャーの `session` オブジェクトは、次のいずれかから利用できます:
 
-- Project methods that are called by the [`Execute on Server`](../commands-legacy/execute-on-server.md) command,
-- ORDA [data model functions](../ORDA/ordaClasses.md) called from a stored procedure,
-- Database methods such as [`On Server Startup`](../commands/on-server-startup-database-method) and [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
+- [`Execute on Server`](../commands-legacy/execute-on-server.md) コマンドで呼び出されたプロジェクトメソッド
+- ストアドプロシージャーから呼び出されたORDA [データモデル関数](../ORDA/ordaClasses.md)
+- [`On Server Startup`](../commands/on-server-startup-database-method) と [`On Server Shutdown`](../commands/on-server-shutdown-database-method)などのデータベースメソッド。
 
-## Standalone sessions {#standalone-sessions}
+## スタンドアロンセッション {#standalone-sessions}
 
-A standalone session is the single-user session running when you work locally with 4D.
+スタンドアロンセッションとは、4D をローカルに使用している際に実行されるシングルユーザーセッションのことです。
 
 ### 効果
 
-The standalone session can be used to develop and test your client/server application and its interaction with web sessions and [OTP sharing](#sharing-a-desktop-session-for-web-accesses). You can use the `session` object in your code in standalone session just as the `session` object of the remote sessions.
+スタンドアロンセッションでも、Web セッションと [OTP 共有](#sharing-a-desktop-session-for-web-accesses)を使用することでクライアント/サーバーアプリケーションの開発とテストを行うことができます。 スタンドアロンセッション内のコードでも、リモートセッションにおける `session` オブジェクトと同じように `session` オブジェクトを使用することができます。
 
 ### 利用可能性
 
-The `session` object of a standalone is available from all methods and code executed on the 4D application.
+スタンドアロンの `session` オブジェクトは4D アプリケーション上で実行される全てのメソッドとコードから利用することが可能です。
 
 ## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
 
