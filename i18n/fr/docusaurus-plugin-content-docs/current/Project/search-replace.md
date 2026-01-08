@@ -167,44 +167,44 @@ La fenêtre de résultat présente les éléments trouvés sous forme de liste h
 
 ![](../assets/en/Project/result-window.png)
 
-You can double-click on a line in this window to view the element in its editor, such as the [code editor](../code-editor/write-class-method.md). If you do several searches, each search opens its own result window, leaving previous result windows open.
+Vous pouvez double-cliquer sur une ligne de cette fenêtre pour afficher l'élément dans son éditeur, tel que l'[éditeur de code](../code-editor/write-class-method.md). Si vous effectuez plusieurs recherches, chaque recherche ouvre sa propre fenêtre de résultats, laissant les fenêtres de résultats précédentes ouvertes.
 
-When more than one occurrence has been found, the list indicates their **count** next to the element name.
+Lorsque plusieurs occurrences ont été trouvées, la liste indique leur **nombre** à côté du nom de l'élément.
 
-Each line can display a tip that provides additional information, for example the element property that matches the criteria, or the number of the form page that contains the occurrence.
+Vous pouvez faire apparaître une infobulle pour chaque élément afin d'obtenir des informations supplémentaires, par exemple la propriété de l'élément correspondant à la recherche ou le numéro de page du formulaire contenant l'occurrence.
 
-When an element found belongs to a component, the **component name** is displayed in parenthesis at the right side of the element name:
+Lorsqu'un élément trouvé appartient à un composant, le **nom du composant** est affiché entre parenthèses à droite du nom de l'élément :
 
 ![](../assets/en/Project/find-components-results.png)
 
-Once a search is completed, you can use the ![](../assets/en/Project/result-window-re.png) button to perform the search again with the same criteria and options.
+Une fois la recherche terminée, vous pouvez utiliser le bouton ![](../assets/en/Project/result-window-re.png) pour effectuer une nouvelle recherche avec les mêmes critères et options.
 
-### Options menu
+### Menu d'options
 
-You can perform various actions using the options menu:
+Le menu d'options vous permet d'effectuer diverses actions :
 
 ![](../assets/en/Project/result-window-menu.png)
 
-- **Remove from list**: removes selected item(s) from the results window. More specifically, this lets you keep only items targeted by a replacement operation in the contents or used for drag and drop between applications.
-- **Remove all items from list except selection**: clears everything from the results window except for the selected item(s).
-- [**Replace in content**](#replace-in-contents): replaces a character string within the selected item(s).
-- **Select >**: selects one type of item (project methods, object names, and so on) from among all the items found in the Results window. The hierarchical sub-menu also provides commands to select (All) or deselect (None) all the items at once.
-- **Collapse all/Expand all**: expands or collapses all the hierarchical items in the list of results.
-- **Export Results**: exports information about the search criteria and elements listed in the Results window. This text file can then be imported into a spreadsheet such as Excel, for example. For each item, the following information is exported as tab-separated values in a text file:
-  - Host project or component name
-  - Type (method, Class, formObject, trigger...)
-  - Path
-  - Property (if accurate): provides the property of the object that matches the criteria. For example, a string could be found in a variable name (variable property) and an object name (name property) within in the same form. This field is empty when the matching element is the object itself.
-  - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
-  - Line number (for code) or page number (for form objects)
+- **Retirer de la liste** : supprime le(s) élément(s) sélectionné(s) de la fenêtre de résultats. Cette fonction permet notamment de ne conserver que les éléments cibles d'un remplacement dans le contenu ou utilisés pour un glisser-déposer inter-applications.
+- **Retirer tous les éléments de la liste sauf la sélection** : efface tout le contenu de la fenêtre de résultats sauf le(s) élément(s) sélectionné(s).
+- [**Remplacer dans le contenu**](#replace-in-contents) : remplace une chaîne de caractères dans le(s) élément(s) sélectionné(s).
+- **Sélectionner >** : sélectionne un type d'élément (méthodes projet, noms d'objets, etc.) parmi tous les éléments de la fenêtre de résultats. Le sous-menu hiérarchique fournit également des commandes pour sélectionner (Tout) ou désélectionner (Rien) tous les éléments d'un coup.
+- **Contracter tout/Déployer tout** : développe ou contracte tous les éléments hiérarchiques de la liste de résultats.
+- **Exporter les résultats** : exporte des informations sur les critères de recherche et les éléments listés dans la fenêtre de résultats. Ce fichier texte peut ensuite être importé dans un tableur tel qu'Excel, par exemple. Pour chaque élément, les informations suivantes sont exportées sous forme de valeurs séparées par des tabulations :
+  - Nom du projet hôte ou du composant
+  - Type (méthode, classe, formObject, trigger...)
+  - Chemin
+  - Propriété (si pertinent) : désigne la propriété de l'élément qui correspond à la recherche. Par exemple, une chaîne de caractères peut se trouver dans le nom d'une variable (propriété variable) et dans le nom d'un objet (propriété nom) dans le même formulaire. Ce champ est vide lorsque l'élément correspondant est l'objet lui-même.
+  - Contenu (si pertinent) : fournit la partie de l'élément qui correspond à la recherche ; par exemple, la ligne de code qui contient la chaîne de caractères recherchée.
+  - Numéro de ligne (pour le code) ou numéro de page (pour les objets de formulaire)
 
-## Replace in content
+## Remplacer dans le contenu
 
-The Replace in content function allows you to replace one character string with another within the listed objects in the Results window. It is available in the [options menu](#options-menu) of the window.
+La fonction de remplacement dans le contenu permet de remplacer une chaîne de caractères par une autre à l’intérieur des objets listés dans la Fenêtre de résultat. Elle est disponible dans le [menu d'options](#options-menu) de la fenêtre.
 
 :::note
 
-The **Replace in content** menu item is disabled if you work in a read-only database (e.g. in a .4dz file).
+Le menu **Remplacer dans le contenu** est désactivé si vous travaillez dans un projet en lecture seule (par exemple dans un fichier .4dz).
 
 :::
 

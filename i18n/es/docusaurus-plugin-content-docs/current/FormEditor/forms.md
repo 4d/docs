@@ -96,7 +96,7 @@ No hay restricciones en el número de páginas que puede tener un formulario. El
 
 Un formulario multipáginas tiene una página de fondo y varias páginas de visualización. Los objetos que se colocan en la página de fondo pueden ser visibles en todas las páginas de visualización, pero sólo se pueden seleccionar y editar en la página de fondo. En los formularios multipágina, debe colocar su paleta de botones en la página de fondo. También es necesario incluir uno o más objetos en la página de fondo que ofrezcan las herramientas de navegación para el usuario.
 
-## Renderizado Fluent UI (Developer Preview)
+## Fluent UI rendering
 
 En Windows, 4D soporta el renderizado de formularios **Fluent UI**, el moderno diseño gráfico de la interfaz de usuario de Microsoft, basado en la tecnología **WinUI 3**. **WinUI 3** es la base del Windows App SDK y representa las próximas interfaces gráficas de Windows.
 
@@ -105,12 +105,6 @@ La renderización Fluent UI ofrece controles modernos y atractivos, compatibilid
 | Tema claro                              | Tema oscuro                                  |
 | --------------------------------------- | -------------------------------------------- |
 | ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
-
-:::caution Vista previa para desarrolladores
-
-La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Preview. No debe utilizarse en producción.
-
-:::
 
 :::info Disponibilidad
 
@@ -126,9 +120,11 @@ This feature can be used **in 4D projects on Windows**. No está disponible en m
 
 ### Requisitos
 
-La renderización Fluent UI requiere que esté instalado [**Windows App SDK versión 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Debe instalar este SDK en cualquier máquina Windows que muestre sus formularios.
+The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-Si el Windows App SDK no está correctamente instalado, 4D renderizará todos sus formularios en modo clásico sin error.
+For convenience, the [4D installer](../GettingStarted/Installation.md#installation-on-disk) provides a link to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
+
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
 ### Activar el renderizado Fluent UI
 
@@ -142,6 +138,12 @@ Seleccione la opción **Utilizar Fluent UI en Windows** en la página "Interfaz"
 
 En este caso, el modo de renderizado Fluent UI se utilizará por defecto en Windows para todos los formularios.
 
+:::note
+
+If the current configuration is not compliant with the [Fluent UI requirements](#requirements), an error message is displayed next to the check box.
+
+:::
+
 #### Parámetros del formulario
 
 Cada formulario puede definir su propio renderizado a través de la propiedad **Apariencia de los Widgets**. Las siguientes opciones están disponibles:
@@ -153,23 +155,21 @@ Cada formulario puede definir su propio renderizado a través de la propiedad **
 
 La [propiedad de formulario JSON](./properties_JSONref.md) correspondiente es `fluentUI` con el valor undefined (es decir, heredado, valor por defecto), "true" o "false".
 
+#### CSS
+
+The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows you to configure several styles depending on the used theme.
+
 ### Comportamientos específicos
 
 Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
-- El nuevo comando `FORM Windows theme` devuelve el tema de visualización actual del formulario. Valores posibles: "Classic" o "FluentUI". Si no existe un formulario actual o el comando se ejecuta en macOS, se devuelve una cadena vacía.
+- The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. Valores posibles: "Classic" o "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
 - Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
 - El objeto de formulario [Stepper](../FormObjects/stepper.md) no admite el [evento doble clic](../Events/onDoubleClicked.md).
 - Los [botones circulares](../FormObjects/button_overview.md#circle) son soportados (como en macOS).
 - Los comandos [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) no son compatibles en áreas Web con motor de renderizado sistema.
 - Se puede añadir rectángulo de foco a las [entradas](../FormObjects/input_overview.md) imagen y texto.
-
-:::info Limitaciones
-
-Esta **Vista previa para desarrolladores** incluye algunas limitaciones, que se [enumeran en la entrada del blog relacionado](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
-
-:::
 
 ## Formularios heredados
 

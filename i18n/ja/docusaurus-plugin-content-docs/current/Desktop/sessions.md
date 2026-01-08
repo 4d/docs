@@ -11,7 +11,7 @@ title: デスクトップセッション
 
 それでも、[デスクトップセッションをWeb セッションと**共有** すること](#webアクセス用にデスクトップセッションを共有する) ことができ、これによってデスクトップユーザーは、例えばQodly ページとWeb エリアを使用して、Web インターフェースを通して4D アプリケーションへとアクセスうすることができます。
 
-## Session types {#session-types}
+## セッションの種類 {#session-types}
 
 デスクトップセッションには以下のような種類が含まれます:
 
@@ -29,13 +29,13 @@ title: デスクトップセッション
 
 ![](../assets/en/Desktop/sessions.png)
 
-## Remote user sessions {#remote-user-sessions}
+## リモートユーザーセッション {#remote-user-sessions}
 
 サーバー上では、"ユーザープロセス"(つまりリモートユーザーに関連したプロセス)内では、[`Session`](../commands/session.md) コマンドはカレントのユーザーセッションを表す `session` オブジェクトを返します。  このオブジェクトを扱うには、[`Session` クラス](../API/SessionClass.md) の関数とプロパティを使用します。
 
 :::note
 
-On a remote 4D, the [`Session`](../commands/session) command always returns null.
+リモート4D 上では、 [`Session`](../commands/session) コマンドは必ず null を返します。
 
 :::
 
@@ -62,7 +62,7 @@ On a remote 4D, the [`Session`](../commands/session) command always returns null
 - ORDA [データモデル関数](../ORDA/ordaClasses.md) (ただし、[`local`](../ORDA/ordaClasses.md#local-functions) キーワードで宣言されているものを除く)
 - [`On Server Open Connection`](../commands/on-server-open-connection-database-method) と [`On Server Close Connection`](../commands/on-server-close-connection-database-method)などのデータベースメソッド。
 
-## Stored procedure sessions {#stored-procedure-sessions}
+## ストアドプロシージャーセッション {#stored-procedure-sessions}
 
 サーバー上では、全ての[ストアドプロシージャー](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.ja.html) は同じバーチャルユーザーセッションを共有します。
 
