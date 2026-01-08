@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Session オブジェクトは [`Session`](../commands/session.md) コマンドによって返されます。  These objects provide the developer with an interface allowing to manage the current user session and execute actions such as store contextual data, share information between session processes, launch session-related preemptive processes, or (web context only) manage [privileges](../ORDA/privileges.md).
+Session オブジェクトは [`Session`](../commands/session.md) コマンドによって返されます。  このオブジェクトは、カレントユーザーセッションを管理するためのインターフェースをデベロッパーに対して提供し、コンテキストデータの保存、プロセス間の情報共有、セッションに関連したプリエンプティブプロセスの開始などのアクションの実行や、[アクセス権](../ORDA/privileges.md) の管理(web コンテキストのみ)を可能にします。
 
 :::tip 関連したblog 記事
 
@@ -17,7 +17,7 @@ Session オブジェクトは [`Session`](../commands/session.md) コマンド�
 
 このクラスは以下の種類のセッションをサポートしています:
 
-- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
+- [**Webユーザーセッション**](WebServer/sessions.md): [プロジェクトにおいてスケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合、Webユーザーセッションが利用可能です。 これらは(REST アクセスを含めた)Web 接続に使用され、割り当てられた[権限](../ORDA/privileges.md) によって管理されます。
 - [**デスクトップセッション**](../Desktop/sessions.md)。これには以下のものが含まれます:
   - [**リモートユーザー セッション**](../Desktop/sessions.md#リモートユーザーセッション): クライアント/サーバーアプリケーションでは、リモートユーザーは、サーバー上で管理される独自のセッションを持ちます。
   - [**ストアドプロシージャーセッション**](../Desktop/sessions.md#ストアドプロシージャーセッション): サーバー上で実行される全てのストアドプロシージャーセッションの仮想ユーザーセッション。
@@ -496,7 +496,7 @@ End if
 
 - **リモートセッション** および **ストアドプロシージャーセッション**の場合: `.info` オブジェクトは[`Process activity`](../commands/process-activity.md) コマンドの "session" プロパティに返されるオブジェクトと同じです。
 - **スタンドアロンセッションの場合**: `.info` オブジェクトは、[`Session info`](../commands/session-info.md) コマンドで返されるものと同じオブジェクトです。
-- **Web user sessions**: The `.info` object contains properties available for web user sessions.
+- **Web ユーザーセッション**: `.info` オブジェクトにはWeb ユーザーセッションにおいて利用可能なプロパティが格納されています。
 
 `.info` オブジェクトには、次のプロパティが格納されています:
 
@@ -555,7 +555,7 @@ End if
 
 :::note 互換性
 
-When the [*forcelogin* mode](../REST/authUsers.md#force-login-mode) is disabled, `.isGuest()` returns True if the session has no privileges.
+[*強制ログイン* モード](../REST/authUsers.md#強制ログインモード) が無効化されているとき、`.isGuest()` は、セッションに権限がない場合に True を返します。
 
 :::
 

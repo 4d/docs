@@ -31,7 +31,7 @@ displayed_sidebar: docs
 コマンドを呼び出したプロセスによって、カレントセッションは次のいずれかです:
 
 - Web セッション([スケーラブルセッションが有効化されている](WebServer/sessions.md#webセッションの有効化) 場合)
-- a remote user session (on the server),
+- (サーバー上の)リモートユーザーセッション
 - ストアドプロシージャーセッション
 - スタンドアロンセッション
 
@@ -40,7 +40,7 @@ displayed_sidebar: docs
 このコマンドは、以下の場合には **Null** を返します:
 
 - コマンドがWeb プロセス内で呼び出されているが、Web サーバーではスケーラブルセッションが無効化されている
-- it is called on a remote 4D client.
+- コマンドがリモート4D クライアントから呼び出されている。
 
 ### Webセッション
 
@@ -56,7 +56,7 @@ Web ユーザーセッションに関する詳細な情報については、[Web
 
 ### リモートユーザーセッション
 
-The `Session` object of remote user sessions is available from:
+リモートユーザーセッションの `Session` オブジェクトは、次のいずれかから利用できます:
 
 - [サーバー上で実行](../Project/code-overview.md#サーバー上で実行) 属性を持つプロジェクトメソッド (クライアントプロセスの "双子" プロセスで実行されます)
 - トリガー
