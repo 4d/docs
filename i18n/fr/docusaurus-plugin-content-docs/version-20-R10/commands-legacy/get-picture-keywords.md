@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture, Picture | &#8594;  | Image dont vous souhaitez lire les mots-clés associés |
+| image | Picture | &#8594;  | Image dont vous souhaitez lire les mots-clés associés |
 | tabMotsclés | Text array | &#8592; | Tableau contenant les mots-clés extraits |
 | * | Opérateur | &#8594;  | Si passé = utiliser les valeurs distinctes |
 

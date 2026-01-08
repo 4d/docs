@@ -5,13 +5,13 @@ slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* : Picture, Picture ; *picture2* : Picture, Picture ; *mask* : Picture, Picture ) : Boolean<!-- END REF-->
+<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* : Picture ; *picture2* : Picture ; *mask* : Picture ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
 | 引数 | 型 |  | 説明 |
 | --- | --- | --- | --- |
-| picture1 | Picture, Picture | &#8594; | 元のソースピクチャー |
-| picture2 | Picture, Picture | &#8594; | 比較するピクチャー |
-| mask | Picture, Picture | &#8592; | 結果のマスク |
+| picture1 | Picture | &#8594; | 元のソースピクチャー |
+| picture2 | Picture | &#8594; | 比較するピクチャー |
+| mask | Picture | &#8592; | 結果のマスク |
 | 戻り値 | Boolean | &#8592; | 2つのピクチャーが同じ場合True、そうでなければFalse |
 
 <!-- END REF-->

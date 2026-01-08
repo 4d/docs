@@ -5,13 +5,13 @@ slug: /commands/equal-pictures
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* : Picture, Picture ; *picture2* : Picture, Picture ; *mask* : Picture, Picture ) : Boolean<!-- END REF-->
+<!--REF #_command_.Equal pictures.Syntax-->**Equal pictures** ( *picture1* : Picture ; *picture2* : Picture ; *mask* : Picture ) : Boolean<!-- END REF-->
 <!--REF #_command_.Equal pictures.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture1 | Picture, Picture | &#8594;  | Original source picture |
-| picture2 | Picture, Picture | &#8594;  | Picture to compare |
-| mask | Picture, Picture | &#8592; | Resulting mask |
+| picture1 | Picture | &#8594;  | Original source picture |
+| picture2 | Picture | &#8594;  | Picture to compare |
+| mask | Picture | &#8592; | Resulting mask |
 | Function result | Boolean | &#8592; | True if both pictures are identical; otherwise, False |
 
 <!-- END REF-->
