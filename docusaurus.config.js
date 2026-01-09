@@ -138,7 +138,6 @@ module.exports = {
       apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
       appId: 'OJ04C0M3CU',
       indexName: '4d',
-      askAi: 'mps2LpmPNGuc',
       //contextualSearch: false
       //added for command search
       searchParameters: {
