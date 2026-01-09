@@ -23,11 +23,13 @@ Custom HTTP Request handlers are supported in the following context:
 - [scalable sessions](./sessions.md#enabling-web-sessions) or [no sessions](../settings/web.md#no-sessions) are enabled,
 - a web server run locally by 4D or 4D Server, including those [run by components](./webServerObject.md). 
 
-:::warning
 
-For security reasons, external access to the datastore can be disallowed in 4D. You need to configure the [ORDA privileges](../ORDA/privileges.md) to allow HTTP requests.  
+### Authentication and Privileges
 
-:::
+Since HTTP Request handler functions are called from standard web requests (they do contain `/rest/xxx` like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. They can be executed without prior authentication, i.e. without requiring a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session.
+
+However, HTTP Request handler functions need to have appropriate **permissions**, like all requests executed from web processes. It means that, when the handler function is called, the privileges of the web session must allow the code to run properly. For example, in [*Restricted mode by default*](../ORDA/privileges.md#restriction-modes), the *guest* privilege must be allowed to execute the handler function. Any other resources accessed within the code (data, other functions...) also need to be allowed by permissions. 
+
 
 ## How to set handlers 
 
@@ -247,6 +249,7 @@ Examples of URLs triggering the handlers:
 `IP:port//docs/invoices/` with a GET verb, calls *handleInvoices* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/` with a GET verb, calls *handleDetails* function (*InvoicesHandling* class)
 `IP:port//docs/invoices/details/theInvoice/xxxxxx` with a GET verb, calls *handleTheInvoice* function (*InvoiceslHandling* class)
+
 
 
 ## Request handler code
