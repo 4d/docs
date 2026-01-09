@@ -19,6 +19,12 @@ title: インストール
 
 2. 必要な製品バージョンのダウンロードリンクをクリックして、インストーラーをダウンロードします。インストールにあたっては、画面に表示される指示に従ってください。
 
+:::info
+
+The Windows Setup panel includes a link allowing you to download the **Windows App SDK** installer. You may need to install this SDK to be able to [use Fluent UI in your 4D application on Windows](../FormEditor/forms.md#fluent-ui-rendering) (if not already installed in your OS, see [this blog post](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)).
+
+:::
+
 ## ログイン
 
 インストールが完了すると、4D を起動し、ログインすることができます。 起動するには、4D 製品のアイコンをダブルクリックします。

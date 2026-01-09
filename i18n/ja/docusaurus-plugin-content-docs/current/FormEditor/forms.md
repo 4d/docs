@@ -98,6 +98,12 @@ title: Forms
 
 ## Fluent UI rendering
 
+:::caution デベロッパー・プレビュー
+
+Fluent UI のサポートは現在デベロッパープレビューのフェーズです。 本番環境で使用すべきではありません。
+
+:::
+
 Windows では、4D は **Fluent UI** フォームレンダリングをサポートしています。これは **WinUI 3** テクノロジーに基づいた、Microsoft のモダンなグラフィカルユーザーインターフェースデザインです。 **WinUI 3** はWindows App SDK の基礎であり、今後のWindows グラフィカルインターフェースを象徴するものです。
 
 Fluent UI レンダリングは現代的かつ魅力的なコントロールを提供するだけでなく、ダーク/ライトシステムテーマのサポート、高解像度ディスプレイのために最適化されたよりスムーズなレンダリング、そして最近のMicrosoft アプリケーションに沿った、一貫したユーザーエクスペリエンスを提供します。
@@ -114,7 +120,8 @@ Fluent UI レンダリングは現代的かつ魅力的なコントロールを�
 
 :::tip 関連したblog 記事
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
 
 :::
 
@@ -122,7 +129,7 @@ Fluent UI レンダリングは現代的かつ魅力的なコントロールを�
 
 The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-For convenience, the [4D installer](../GettingStarted/Installation.md#installation-on-disk) provides a link to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
+[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. For convenience, the 4D installer [provides a link](../GettingStarted/Installation.md#installation-on-disk) to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
 
 If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
@@ -164,6 +171,7 @@ The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows
 Fluent UI で4D フォームを使用する場合、以下の点に注意を払う必要があります:
 
 - The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. 取り得る値: "Classic" あるいは "FluentUI"。 If there is no current form or if the command is called on macOS, and empty string is returned.
+- The [`Application info`](../commands/application-info.md) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
 - [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) がフォームのコンテキストで呼び出された場合、返された情報はフォームのカレントのアピアランス(クラシックあるいはFluent UI)に関連したものです。 コマンドがフォームのコンテキスト外から呼ばれた場合、返された情報は[グローバルプロジェクト設定](#アプリケーション設定) に関連したものです。
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) の*itemStyle* 引数での `Underline` はポップアップメニューではサポートされていません(無視されます)。
 - [ステッパー](../FormObjects/stepper.md) フォームオブジェクトは[ダブルクリックイベント](../Events/onDoubleClicked.md) サポートしません。

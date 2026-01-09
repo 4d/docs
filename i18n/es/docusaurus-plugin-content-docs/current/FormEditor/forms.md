@@ -98,6 +98,12 @@ Un formulario multipáginas tiene una página de fondo y varias páginas de visu
 
 ## Fluent UI rendering
 
+:::caution Vista previa para desarrolladores
+
+La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Preview. No debe utilizarse en producción.
+
+:::
+
 En Windows, 4D soporta el renderizado de formularios **Fluent UI**, el moderno diseño gráfico de la interfaz de usuario de Microsoft, basado en la tecnología **WinUI 3**. **WinUI 3** es la base del Windows App SDK y representa las próximas interfaces gráficas de Windows.
 
 La renderización Fluent UI ofrece controles modernos y atractivos, compatibilidad con los temas sistema dark/light, renderización más fluida optimizada para pantallas de alta resolución y una experiencia de usuario coherente y alineada con las aplicaciones recientes de Microsoft.
@@ -112,9 +118,10 @@ This feature can be used **in 4D projects on Windows**. No está disponible en m
 
 :::
 
-:::tip Entrada de blog relacionada
+:::tip Entradas de blog relacionadas
 
-[Modernice sus interfaces 4D con Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
 
 :::
 
@@ -122,7 +129,7 @@ This feature can be used **in 4D projects on Windows**. No está disponible en m
 
 The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-For convenience, the [4D installer](../GettingStarted/Installation.md#installation-on-disk) provides a link to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
+[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. For convenience, the 4D installer [provides a link](../GettingStarted/Installation.md#installation-on-disk) to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
 
 If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
@@ -164,6 +171,7 @@ The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows
 Cuando utilice los formularios 4D con el renderizado Fluent UI, debe prestar atención a los siguientes puntos:
 
 - The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. Valores posibles: "Classic" o "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
+- The [`Application info`](../commands/application-info.md) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
 - Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) es llamado en el contexto de un formulario, la información devuelta se refiere a la apariencia actual del formulario (Classic o FluentUI). Si se llama al comando fuera del contexto de un formulario, la información devuelta se refiere a las [propiedades globales del proyecto](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) con el parámetro *itemStyle* `Underline` no es soportado (ignorado) para los menús emergentes.
 - El objeto de formulario [Stepper](../FormObjects/stepper.md) no admite el [evento doble clic](../Events/onDoubleClicked.md).
