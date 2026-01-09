@@ -208,76 +208,76 @@ Le menu **Remplacer dans le contenu** est désactivé si vous travaillez dans un
 
 :::
 
-When you select this command, a dialog box appears where you enter the character string that will replace all the occurrences found by the initial search:
+Lorsque vous sélectionnez cette commande, une boîte de dialogue vous permet de saisir la chaîne de caractères qui remplacera toutes les occurrences trouvées par la recherche initiale :
 
 ![](../assets/en/Project/replace-content.png)
 
-Replacing operations work as follows:
+Les principes du remplacement sont les suivants :
 
-- Replacing is always carried out among all items found in the list and not just for a selection. However, it is possible to narrow the replacing operation by first reducing the contents of the list using the **Remove from list** or **Remove all items from list except selection** commands in the [options menu](#options-menu) or the contextual menu.
-- If the Results window includes elements from components, the replacing will be done in the component(s) also.
-- Only the occurrences shown in the list will be replaced and only after checking the initial search criteria for cases where objects were modified between the initial search and the replacing operation.
-- Replacing is done in the code, properties of form objects, contents of help messages, entry filters, menu items (item text and method calls), choice lists, comments.
-- For each object modified, 4D checks whether it is already loaded by another machine or in another window. In the case of conflict, a standard dialog box appears indicating that the object is locked. You can close the object and then try again or cancel its replacement. The replacing operation will then continue with the other objects in the list.
-- If a method or form concerned by a "replace in content" operation is currently being edited by the same 4D application, it will be modified directly in the open editor (no warning appears). Forms and methods modified in this way are not saved automatically: you will need to use the **Save** or **Save All** command explicitly to validate the changes.
-- After a replacement is made in a list item, it will appear in italics. A count of replacements made in real time appears at the bottom of the window.
-- Elements are never renamed themselves by the **Replace in content** feature, except for form objects. Hence it is possible that certain items in the list may not be affected by the replacing operation. This can occur when only the item name corresponds to the initial search criteria. In this case, the list items do not necessarily all appear in italics and the final replacement count may be less than the number of occurrences found by the initial search.
+- Le remplacement est effectué parmi la totalité des éléments présents dans la liste et non sur une sélection. Cependant, il est possible de limiter l'opération de remplacement en réduisant d'abord le contenu de la liste à l'aide des commandes **Retirer de la liste** ou **Retirer tous les éléments de la liste sauf la sélection** dans le [menu options](#options-menu) ou le menu contextuel.
+- Si la fenêtre de résultat comprend des éléments de composants, le remplacement sera également effectué dans le(s) composant(s).
+- Seules les occurrences figurant dans la liste seront remplacées et seulement après avoir vérifié les critères de recherche initiaux pour les cas où les objets ont été modifiés entre la recherche initiale et l'opération de remplacement.
+- Le remplacement est effectué dans le code, les propriétés des objets du formulaire, le contenu des messages d'aide, les filtres de saisie, les éléments de menu (texte de l'élément et appels de méthode), les énumérations, les commentaires.
+- Pour chaque objet modifié, 4D vérifie s'il est déjà chargé par une autre machine ou dans une autre fenêtre. En cas de conflit, une boîte de dialogue standard apparaît, indiquant que l'objet est verrouillé. Vous pouvez fermer l'objet et réessayer ou annuler son remplacement. L'opération de remplacement se poursuivra ensuite avec les autres objets de la liste.
+- Si une méthode ou un formulaire concerné(e) par un "remplacer dans le contenu" est en cours d'édition par la même application 4D, il sera modifié directement dans l'éditeur ouvert (aucun avertissement n'apparaît). Les formulaires et les méthodes ainsi modifiés ne sont pas sauvegardés automatiquement : vous devez utiliser explicitement la commande **Sauvegarder** ou **Tout enregistrer** pour valider les changements.
+- Lorsqu'un remplacement a été effectué dans un élément de la liste, il apparaît en italique. Un décompte des remplacements effectués en temps réel apparaît en bas de la fenêtre.
+- Les éléments ne sont jamais eux-mêmes renommés par la fonction **Remplacer dans le contenu**, à l'exception des objets dans les formulaires. Par conséquent, il est possible que certaines occurrences de la liste ne soient pas concernées par le remplacement. Cela peut se produire lorsque seul le nom de l'élément correspond aux critères de recherche initiaux. Dans ce cas, tous les éléments de la liste ne sont pas forcément affichés en italique et le décompte des remplacements est inférieur au nombre d’occurrences trouvées par la recherche initiale.
 
-## Renaming project methods and variables
+## Renommer les méthodes projet et les variables
 
-4D provides a dedicated renaming function with distribution throughout the entire project for project methods and variables.
+4D propose une fonction de renommage dédiée des méthodes projet et des variables avec propagation dans tout le projet.
 
-The **Rename...** command is available from the [Code editor] (for project methods and variables) and the Explorer context menu (for project methods).
+La commande **Renommer...** est disponible à partir de l'[Éditeur de code](pour les méthodes projet et variables) et du menu contextuel de l'Explorateur (pour les méthodes projet).
 
 ![](../assets/en/Project/rename.png)
 
-When you select this command, a dialog box appears where you enter the new name for the object:
+Lorsque vous sélectionnez cette commande, une boîte de dialogue apparaît, vous permettant de saisir le nouveau nom de l’objet :
 
 ![](../assets/en/Project/rename-dial.png)
 
-The new name must comply with [naming rules](../Concepts/identifiers.md); otherwise a warning appears when you validate the dialog box. For example, you cannot rename a method with a command name such as "Alert".
+Le nouveau nom doit être conforme aux [règles de nommage](../Concepts/identifiers.md), sinon un avertissement apparaît lorsque vous validez la boîte de dialogue. Par exemple, vous ne pouvez pas renommer une méthode avec un nom de commande tel que "Alert".
 
-Depending on the type of object you are renaming (project method or variable), the renaming dialog box may also contain a distribution option:
+Suivant le type d’objet que vous renommez (méthode projet ou variable), la boîte de dialogue de renommage contiendra ou non une option de propagation :
 
-- Project method: The **Update callers in whole database** option renames the method in all the project code that references it. You can also uncheck this option in order, for example, to rename the method only in the Explorer itself.
-- Process variable: The **Rename variable in whole database** option renames the variable in all the project code that references it. If you uncheck this option, the variable is only renamed in the current method.
-- Local variable: No distribution option for this object; the variable is only renamed in the current method or class.
+- Méthode projet : L'option **Mise à jour des appelants dans toute la base de données** renomme la méthode dans tout le code du projet qui y fait référence. Vous pouvez également décocher cette option afin, par exemple, de ne renommer la méthode que dans l'Explorateur lui-même.
+- Variable process : L'option **Renommer la variable dans toute la base de données** permet de propager le renommage de la variable dans tous le code du projet qui la référence. Si vous désélectionnez cette option, la variable sera renommée uniquement dans la méthode courante.
+- Variable locale : Pas d'option de propagation pour cet objet ; la variable n'est renommée que dans la méthode ou la classe courante.
 
-## Searching for unused elements
+## Rechercher les éléments inutilisés
 
-Two specific search commands allow you to detect variables and methods that are not used in the code of your host project. You can then remove them to free up memory. These commands are found in the **Edit** menu of the Design environment.
+Deux commandes de recherche spécifiques vous permettent de détecter les variables et méthodes non utilisées dans le code de votre projet. Vous pourrez alors les supprimer afin, notamment, de libérer de l’espace mémoire. Ces commandes se trouvent dans le menu **Edition** de l'environnement de développement.
 
-### Find Unused Methods and Global Variables
+### Chercher les méthodes et les variables globales inutilisées
 
-This command looks for project methods as well as "global" variables (process and interprocess variables) that are declared but not used. The search results appear in a standard [Results window](#results-window).
+Cette commande recherche les méthodes projet ainsi que les variables "globales" (variables process et interprocess) qui sont déclarées mais non utilisées. Les résultats de la recherche apparaissent dans une [fenêtre de résultat](#results-window) standard.
 
-A project method is considered to be unused when:
+Une méthode projet est considérée comme inutilisée lorsque :
 
-- it is not in the Trash,
-- it is not called anywhere in the 4D code,
-- it is not called by a menu command,
-- it is not called as a string constant in the 4D code (4D detects a method name in a string even when it is followed by parameters in parentheses).
+- elle n’est pas dans la corbeille,
+- elle n’est appelée nulle part dans le code 4D,
+- elle n’est pas appelée par une commande de menu,
+- elle n’est pas appelée sous forme de constante chaîne dans le code 4D (4D détecte un nom de méthode dans une chaîne même s’il est suivi de paramètres entre parenthèses).
 
-A process or interprocess variable is considered to be unused when:
+Une variable process ou interprocess est considérée comme inutilisée lorsque :
 
-- it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
-- it is not used anywhere else in the 4D code,
-- it is not used in any form object.
+- elle est [déclarée](../Concepts/variables.md#declaring-variables) dans le code 4D,
+- elle n’est utilisée nulle part ailleurs dans le code 4D,
+- elle n’est utilisée dans aucun objet de formulaire.
 
-Note that certain uses cannot be detected by the function - i.e. an element considered unused may in fact be used. This is the case in the following code:
+A noter que certains cas d’utilisation ne peuvent pas être détectés par la fonction - un élément considéré comme inutilisé peut être en réalité utilisé. C’est le cas par exemple dans le code suivant :
 
 ```4d
 var v : Text :="method"
 EXECUTE FORMULA("my"+v+String(42))
 ```
 
-This code builds a method name. The *mymethod42* project method is considered unused when in fact it is called. Therefore, it is advisable to check that the elements declared as unused are in fact unnecessary before you remove them.
+Ce code construit un nom de méthode. La méthode projet *mymethod42* est considérée comme inutilisée alors qu'elle est appelée. Par conséquent, il est conseillé de vérifier l’inutilité des éléments déclarés inutilisés avant de les supprimer.
 
-### Find Unused Local Variables
+### Chercher les variables locales inutilisées
 
-This command looks for local variables that are declared but not used. The search results appear in a standard [Results window](#results-window).
+Cette commande recherche les variables locales déclarées mais non utilisées. Les résultats de la recherche apparaissent dans une [fenêtre de résultat](#results-window) standard.
 
-A local variable is considered to be unused when:
+Une variable locale est considérée comme inutilisée lorsque :
 
-- it is [declared](../Concepts/variables.md#declaring-variables) in the 4D code,
-- it is not used anywhere else within the same method.
+- elle est [déclarée](../Concepts/variables.md#declaring-variables) dans le code 4D,
+- elle n’est utilisée nulle part ailleurs au sein de la même méthode.

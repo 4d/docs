@@ -423,7 +423,7 @@ Cet exemple insère des pages différentes en fonction de l'utilisateur connect�
 
 Cette balise est principalement conçue pour inclure une page HTML (désignée par le paramètre *path* ) dans une autre page HTML. Par défaut, seul le body de la page HTML spécifiée, c'est-à-dire le contenu des balises `<body>` et `</body>`, est inclus (les balises elles-mêmes ne sont pas incluses). Cela permet d'éviter les conflits liés aux métabalises présentes dans les en-têtes.
 
-Toutefois, si la page HTML spécifiée ne contient pas de balises `<body>` et `</body>`, la page entière est incluse. Il vous appartient de vérifier la cohérence des balises méta.
+Toutefois, si la page HTML spécifiée ne contient pas de balises `<body>` et `</body>`, la page entière est incluse. Il vous appartient de vérifier la cohérence des métabalises.
 
 Le commentaire `<!--#4DINCLUDE -->` est très utile pour les tests (`<!--#4DIF-->`) ou les boucles (`<!--#4DLOOP-->`). Il est très pratique d'inclure des bannières en fonction d'un critère ou de manière aléatoire. Lors de l'inclusion, quelle que soit l'extension du nom de fichier, 4D analyse la page appelée et insère son contenu (modifié ou non) dans la page à l'origine de l'appel `4DINCLUDE`.
 

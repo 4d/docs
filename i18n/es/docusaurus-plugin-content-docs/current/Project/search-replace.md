@@ -114,9 +114,9 @@ Cuando su proyecto actual hace referencia a [componentes editables](../Extension
 
 Puede seleccionar como objetivo:
 
-- the **host project** (default option, top of the list): the search will only be executed within the host project code and forms, excluding components.
-- the **host project and all its components**: the search will be executed in the host project and in all its loaded components.
-- a **specific component**, among the list of all searchable components: the search will be restricted to this component only, excluding the host and other components.
+- el **proyecto local** (opción por defecto, la primera de la lista): la búsqueda sólo se ejecutará dentro del código y los formularios del proyecto local, excluyendo los componentes.
+- el **proyecto local y todos sus componentes**: la búsqueda se ejecutará en el proyecto local y en todos sus componentes cargados.
+- un **componente específico**, entre la lista de todos los componentes en los que se puede buscar: la búsqueda se limitará únicamente a este componente, excluyendo el host y los demás componentes.
 
 :::note
 
@@ -124,50 +124,50 @@ Si no se encuentra ningún componente de búsqueda, no hay menú disponible.
 
 :::
 
-The **in the folder** menu (see below) is updated when you select a project since the availability of folders depends on the selected search target(s). The menu is hidden when you select the "host project and all its components" option.
+El menú **en la carpeta** se actualiza cuando seleccionas un proyecto ya que la disponibilidad de carpetas depende de los objetivos de búsqueda seleccionados. El menú se oculta cuando se selecciona la opción "proyecto local y todos sus componentes".
 
 ### Folder
 
-The **in the folder** menu restricts the search to a specific folder of the project. By default ("Top Level" option), the search takes place in all the folders.
+El menú **en la carpeta** restringe la búsqueda a una carpeta específica del proyecto. Por defecto (opción "Nivel superior"), la búsqueda se realiza en todas las carpetas.
 
 :::note
 
-Folders are defined on the Home Page of the Explorer.
+Las carpetas se definen en la página Inicio del Explorador.
 
 :::
 
 ### Fecha de modificación del padre
 
-This menu restricts the search with respect to the creation/modification date of its parent (for example, the method containing the string being searched for). In addition to standard date criteria (is, is before, is after, is not), this menu also contains several options to let you quickly specify a standard search period:
+Este menú restringe la búsqueda con respecto a la fecha de creación/modificación de su padre (por ejemplo, el método que contiene la cadena buscada). Además de los criterios de fecha estándar (es, es antes, es después, no es), este menú también contiene varias opciones que le permiten especificar rápidamente un período de búsqueda estándar:
 
-- **is today**: Period beginning at midnight (00:00 h) of the current day.
-- **is since yesterday**: Period including the current day and the previous one.
-- **is this week**: Period beginning on Monday of the current week.
-- **is this month**: Period beginning on the 1st day of the current month.
+- **es hoy**: período que comienza a medianoche (00:00 h) del día en curso.
+- **es desde ayer**: periodo que incluye el día actual y el anterior.
+- **es esta semana**: período que comienza el lunes de la semana en curso.
+- **es este mes**: período que comienza el día 1 del mes en curso.
 
 ### Opciones de búsqueda
 
 Puede seleccionar opciones que le ayuden a agilizar sus búsquedas:
 
 - **Búsqueda en formularios**: cuando se deselecciona esta opción, la búsqueda se realiza en todo el proyecto, excepto en formularios.
-- **Search in methods**: When this option is deselected, the search is done throughout the project, except in methods.
-- **Case Sensitive**: When this option is selected, the search uses the case of the characters as they have been entered in the Find area.
+- **Buscar en los métodos**: cuando se deselecciona esta opción, la búsqueda se realiza en todo el proyecto, excepto en los métodos.
+- **Distingue entre mayúsculas y minúsculas**: cuando se selecciona esta opción, la búsqueda utiliza las mayúsculas y minúsculas de los caracteres tal y como se han introducido en el área Buscar.
 
 ## Ventana Resultados
 
 La ventana Resultados lista todos los elementos encontrados que coinciden con los criterios de búsqueda establecidos mediante distintos tipos de búsqueda:
 
 - [búsqueda estándar](#starting-a-search)
-- [search for unused elements](#find-unused-methods-and-global-variables)
-- [search for callers](../code-editor/write-class-method.md#search-callers)
-- search for dependencies
-- [renaming of project methods and variables](#renaming-project-methods-and-variables)
+- [buscar elementos no utilizados](#find-unused-methods-and-global-variables)
+- [buscar los llamantes](../code-editor/write-class-method.md#search-callers)
+- búsqueda de las dependencias
+- [renombrar los métodos y variables del proyecto](#renaming-project-methods-and-variables)
 
-It shows the results as a hierarchical list organized by type of elements found. You can expand or collapse all the hierarchical items in the list using the options menu (found at the bottom left of the window) or in the context menu.
+Muestra los resultados como una lista jerárquica organizada por tipo de elementos encontrados. Puede expandir o contraer todos los elementos jerárquicos de la lista mediante el menú de opciones (que se encuentra en la parte inferior izquierda de la ventana) o en el menú contextual.
 
 ![](../assets/en/Project/result-window.png)
 
-You can double-click on a line in this window to view the element in its editor, such as the [code editor](../code-editor/write-class-method.md). Si realiza varias búsquedas, cada búsqueda abre su propia ventana de resultados, dejando abiertas las ventanas de resultados anteriores.
+Puede hacer doble clic en una línea de esta ventana para ver el elemento en su editor, como el [editor de código](../code-editor/write-class-method.md). Si realiza varias búsquedas, cada búsqueda abre su propia ventana de resultados, dejando abiertas las ventanas de resultados anteriores.
 
 When more than one occurrence has been found, the list indicates their **count** next to the element name.
 

@@ -18,7 +18,16 @@ title: リリースノート
 - [**Find in Design**](../Project/search-replace.md#search-in-components) and [**Replace in contents**](../Project/search-replace.md#replace-in-contents) features can now support editable components.
 - [**修正リスト**](https://bugs.4d.fr/fixedbugslist?version=21_R2): 4D 21 R2 で修正されたバグのリストです ([日本語版はこちら](https://4d-jp.github.io/2023/178/release-note-version-20r2/))。
 
+#### デベロッパー・プレビュー
+
+- Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows:
+  - new [`FORM theme`](../commands/form-theme.md) command,
+  - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries),
+  - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
+
 #### 動作の変更
+
+- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not.
 
 ## ライブラリの一覧
 

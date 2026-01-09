@@ -90,21 +90,21 @@ title: デスクトップセッション
 
 スタンドアロンの `session` オブジェクトは4D アプリケーション上で実行される全てのメソッドとコードから利用することが可能です。
 
-## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
+## Webアクセスのためにデスクトップセッションを共有する {#sharing-a-desktop-session-for-web-accesses}
 
-Desktop sessions can be used to handle web accesses to the application by the same user and thus, manage their [privileges](../ORDA/privileges.md). This possibility is particularly useful for Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. この構成では、アプリケーションは現代的なCSS ベースのWeb インターフェースを持ちながらも、統合されたクライアント/サーバーのパワーと単純さの恩恵に預かることができます。 このようなアプリケーションでは、Qodly ページは標準の4D [Web エリア](../FormObjects/webArea_overview.md)内で実行されます。
+デスクトップセッションを使用して、同じユーザーによるアプリケーションへのWeb アクセスを管理し、それによって [権限](../ORDA/privileges.md) を管理することができます。 これは、リモートマシン上で実行中の、 [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) がインターフェースとして使用されているクライアント/サーバーアプリケーションにおいて特に有用です。 この構成では、アプリケーションは現代的なCSS ベースのWeb インターフェースを持ちながらも、統合されたクライアント/サーバーのパワーと単純さの恩恵に預かることができます。 このようなアプリケーションでは、Qodly ページは標準の4D [Web エリア](../FormObjects/webArea_overview.md)内で実行されます。
 
-To manage this configuration in production, you need to use remote user sessions. Actually, requests coming from both the remote 4D application and its Qodly pages loaded in Web areas need to work inside the same session. You just have to share the session between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, wherever the request comes from (web or remote 4D).
+このような構成を製品において管理するためには、リモートユーザーセッションが必要です。 実は、リモート4D アプリケーションとWeb エリアにロードされたQodly ページの両方からリクエストが来る場合には、これらは同じセッション内で動作する必要があります。 リクエストがどこから来ているか(Web またはリモート4Dか)に関わらず、リモートクライアントとWeb ページが同じ[セッション storage](../API/SessionClass.md#storage) とクライアントライセンスを持つように、リモートクライアントとWeb ページ間でセッションを共有するようにするだけです。
 
-Note that [privileges](../ORDA/privileges.md) should be set in the session before executing a web request, so that the user automatically gets their privileges for web access (see example). Keep in mind that privileges **only apply to requests coming from the web**.
+この場合、ユーザーがWeb アクセスに対して持っている権限を自動的に取得できるように、Web リクエストをWeb エリアから実行する前にセッション内に[権限](../ORDA/privileges.md) を設定するべきであるという点に注意してください(例題参照)。 ただし権限は**Web から来るリクエストに対してのみ適用される**という点に注意してください。
 
-You can develop this configuration in your 4D Developer application (single-user): you can use the [standalone session](#standalone-sessions) to code and test all features related to web access, whether your application is intended for single-user or client/server deployment.
+この設定は、4D Developer アプリケーション(シングルユーザー)で開発することができます: [standalone session](#standalone-sessions) を使用して、Web アクセスに関連した全ての機能のコードを書いてテストすることができます。アプリケーションの運用がシングルユーザー向けかクライアント/サーバー向けかは関係ありません。
 
-共有セッションは [OTPトークン](../WebServer/sessions.md#session-token-otp) を通して管理されます。 After you created an OTP token for the desktop session on the server or on the single-user 4D application, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server or the single-user application is identified and shared. Web サーバー側では、Web リクエストが $4DSID パラメーター内に *OTP id* を格納していた場合、そのOTP トークンに対応したセッションが使用されます。
+共有セッションは [OTPトークン](../WebServer/sessions.md#session-token-otp) を通して管理されます。 サーバー上またはシングルユーザー4D アプリケーション上のデスクトップセッション用の OTP トークンを作成した後、Qodly ページを格納しているWeb エリア(あるいは他のWeb ブラウザ)から送信されたWeb リクエストに(`$4DSID` 引数値を通して)トークンを追加します。これによってサーバー上またはシングルユーザーアプリケーション上のユーザーセッションを特定して共有することができます。 Web サーバー側では、Web リクエストが $4DSID パラメーター内に *OTP id* を格納していた場合、そのOTP トークンに対応したセッションが使用されます。
 
 :::note
 
-When creating an OTP token in client/server environment, you need to execute the [OTP creation code](../API/SessionClass.md#createotp) **on the server** (the `Session` object is Null on a remote 4D). You can use for example the [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) database method.
+クライアント/サーバー環境においてOTP トークンを作成する場合、[OTP 作成コード](../API/SessionClass.md#createotp) を**サーバー上で** 実行する必要があります(`Session` オブジェクトはリモート4D ではNull となります)。 たとえば [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) データベースメソッドなどを使用することができます。
 
 :::
 
@@ -116,7 +116,7 @@ When creating an OTP token in client/server environment, you need to execute the
 
 ### 例題
 
-In a form, get an OTP and open a Qodly page in a Web area:
+フォーム内において、OTP を取得し、Web エリア内にQodly ページを開きます:
 
 ```4d
 Form.otp:=getOTP
@@ -127,13 +127,13 @@ WA OPEN URL(*; "QodlyPage"; Form.url)
 
 ```
 
-The *getOTP* project method (with the [**Execute on server** property](../Project/project-method-properties.md#execute-on-server) in Client/Server):
+*getOTP* プロジェクトメソッド(クライアント/サーバーで[**サーバー上で実行**](../Project/project-method-properties.md#execute-on-server) 付き):
 
 ```4d
-// In Client Server:
+// クライアント サーバー:
 // ----------------
-// Method executed on the server because the session object is on the server
-// The Session object is Null on the client 
+// セッションオブジェクトはサーバー上にあるため、メソッドはサーバー上で実行する必要がある
+// セッションオブジェクトはクライアントでは常にNull
 //
 
 #DECLARE() : Text
@@ -142,15 +142,15 @@ return Session.createOTP()
 
 ```
 
-Here is the code used to put the "viewProducts" privilege in the session:
+"viewProducts" セッションに権限を付与するために使用されるコードは以下の通りになります:
 
 ```4d
-// In Client Server:
+// クライアント サーバー:
 // ----------------
-// This code must be executed on the server because the session object is on the server
-// The Session object is Null on the client 
+// セッションオブジェクトはサーバー上にあるため、メソッドはサーバー上で実行する必要がある
+// セッションオブジェクトはクライアントでは常に Null 
 
-Session.clearPrivileges() // Clean the session from its old privileges
+Session.clearPrivileges() // セッションから古い権限を消去する
 Session.setPrivileges("viewProducts")
 ```
 

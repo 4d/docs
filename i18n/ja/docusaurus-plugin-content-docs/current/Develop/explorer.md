@@ -3,29 +3,29 @@ id: explorer
 title: エクスプローラー
 ---
 
-The Explorer is a window in the Design environment that gives you convenient access to tables, forms, methods, built-in 4D commands, constants and plug-ins. It also provides information about these items. You can display the Explorer at any time by choosing one of the pages in the **Design > Explorer** sub-menu or by clicking on the **Explorer** button in the toolbar.
+エクスプローラーは、テーブル、フォーム、メソッド、ビルトイン4Dコマンド、定数やプラグインへの便利なアクセスを提供する、デザイン環境内のウィンドウです。 また以下の項目への情報も提供します。 **デザイン > エクスプローラー** 内のページを選択、あるいはツールバー内の **エクスプローラー** ボタンをクリックすることでいつでもエクスプローラーを表示することができます。
 
 :::note
 
-For a comprehensive description of the Explorer, please refer to the [Explorer chapter on doc.4d.com](https://doc.4d.com/4Dv21/4D/21/Explorer.200-7676561.en.html).
+エクスプローラーの包括的な詳細については、[doc.4d.com のエクスプローラーの章](https://doc.4d.com/4Dv21/4D/21/Explorer.200-7676561.ja.html)を参照してください。
 
 :::
 
-## Forms page
+## フォームページ
 
-The Forms page contains three lists: **Project Forms**, **Table Forms**, and **Qodly Pages**.
+フォームページには3つのリストが格納されています: **プロジェクトフォーム**、**テーブルフォーム**、と**Qodly ページ** です。
 
-### Qodly Pages
+### Qodlyページ
 
 ![](../assets/en/Develop/explorer-qodly.png)
 
-This section allows you to view the list of Qodly pages defined your project. You can also add or open pages.
+このセクションではプロジェクトで定義されているQodly ページの一覧を見ることができます。 またページを追加、または開くことができます。
 
-The pages listed in the Qodly Pages section are stored in the [**WebForm** subfolder](../Project/architecture.md#webforms) of the project's Sources folder.
+Qodly ページのセクションに表示されいてるページは、プロジェクトのSources フォルダ内の [**WebForm** サブフォルダ](../Project/architecture.md#webforms) に格納されています。
 
 :::note
 
-Qodly pages are not visible in the **Home** page of the Explorer.
+Qodly ページはエクスプローラーの **ホーム** ページからは見えません。
 
 :::
 
