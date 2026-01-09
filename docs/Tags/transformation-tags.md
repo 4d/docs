@@ -42,7 +42,7 @@ It is possible to mix several types of tags. For example, the following HTML str
 
 Parsing the contents of a *template* source is done in two contexts:
 
-- Using the `PROCESS 4D TAGS` command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
+- Using the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
 
 - Using 4D's integrated HTTP server: [template pages](WebServer/templates.md) sent by means of the `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` commands, or called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, <http://www.server.com/dir/page.shtm>).
 
@@ -160,10 +160,10 @@ End if
 
 Here are the 4DCODE tag features:
 
-- The `TRACE` command is supported and activates the 4D debugger, thus allowing you to debug your template code.
+- The [`TRACE`](../commands-legacy/trace.md) command is supported and activates the [4D debugger](../Debugging/debugger.md), thus allowing you to debug your template code.
 - Any error will display the standard error dialog that lets the user stop code execution or enter debugging mode.
 - The text in between `<!--#4DCODE` and `-->` is split into lines accepting any line-ending convention (cr, lf, or crlf).
-- The text is tokenized within the context of the database that called `PROCESS 4D TAGS`. This is important for recognition of project methods for example. The [Available through tags and 4D URLs (4DACTION ...)](WebServer/allowProject.md) method property is not taken into account.
+- The text is tokenized within the context of the database that called [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md). This is important for recognition of project methods for example. The [Available through tags and 4D URLs (4DACTION ...)](WebServer/allowProject.md) method property is not taken into account.
 - Even if the text always uses English-US, it is recommended to use the token syntax (:Cxxx) for command and constant names to protect against potential problems due to commands or constants being renamed from one version of 4D to another.
 
 > The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
@@ -259,7 +259,7 @@ The number of loops is based on the number of entities of the entity selection. 
     </table>
 ```
 
-#### Example with `PROCESS 4D TAGS`
+#### Example with [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
 
 ```4d
 var customers : cs.CustomersSelection
@@ -433,7 +433,7 @@ When including, regardless of the file name extension, 4D analyzes the called pa
 
 An included page with the `<!--#4DINCLUDE -->` comment is loaded in the Web server cache the same way as pages called via a URL or sent with the `WEB SEND FILE` command.
 
-In *path*, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the `PROCESS 4D TAGS` command, the default folder is the project folder.
+In *path*, put the path leading to the document to include. Warning: In the case of a `4DINCLUDE` call, the path is relative to the document being analyzed, that is, the "parent" document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the `4DINCLUDE` tag with the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command, the default folder is the project folder.
 
 > You can modify the default folder used by the `4DINCLUDE` tag in the current page, using the `<!--#4DBASE -->` tag (see below).
 
@@ -510,15 +510,13 @@ The following code example:
 
 This syntax makes a loop as long as the method returns `True`. The method takes a Long Integer parameter type. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns `True`.
 
-For security reasons, within a Web process, the `On Web Authentication` database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.
-
-`C_BOOLEAN($0)` and `C_LONGINT($1)` MUST be declared within the method for compilation purposes.
+For security reasons, within a Web process, the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method can be called once just before the initialization stage (method execution with 0 as parameter). If the authentication is OK, the initialization stage will proceed.
 
 The following code example:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/>
+<!--#4DTEXT myvar--> <br/>
 <!--#4DENDLOOP-->
 ```
 
@@ -539,17 +537,16 @@ The following code example:
 The `my_method` method can be as follows:
 
 ```4d
- C_LONGINT($1)
- C_BOOLEAN($0)
- If($1=0) `Initialisation
-    $0:=True
+ #DECLARE($param : Integer) -> $result : Boolean
+ If($param=0) //Init
+    $result:=True
  Else
-    If($1<50)
+    If($param<50)
        ...
-       var:=...
-       $0:=True
+       myvar:=...
+       $result:=True
     Else
-       $0:=False `Stops the loop
+       $result:=False //Stops the loop
     End if
  End if
 ```
@@ -582,7 +579,7 @@ For example, the following code:
 
 In this case, the `4DLOOP` tag works like it does with an array: it makes a loop for each element of the array referenced by the pointer. The current array element is increased each time the portion of code is repeated.
 
-This syntax is useful when you pass an array pointer as a parameter to the `PROCESS 4D TAGS` command.
+This syntax is useful when you pass an array pointer as a parameter to the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command.
 
 Example:
 
@@ -614,20 +611,20 @@ The following messages can be displayed:
 
 #### Syntax: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string in `$1`.
+The `4DSCRIPT` tag allows you to execute 4D methods when processing the template. The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string.
 
-> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the `On Web Authentication` database method (if it exists). If it returns True, 4D executes the method.
+> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method (if it exists). If it returns True, 4D executes the method.
 
-The method must return text in `$0`. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
+The method must return a text. If the string starts with the code character 1, it is considered as HTML (the same principle is true for the `4DHTML` tag).
 
-For example, let’s say that you insert the following comment `“Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->”` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string “/MYPARAM” as the parameter `$1`. The method returns text in $0 (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
+For example, let’s say that you insert the following comment `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string "/MYPARAM" as the parameter. The method returns some text (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
 The `MYMETH` method is as follows:
 
 ```4d
   //MYMETH
- C_TEXT($0;$1) //These parameters must always be declared
- $0:=String(Current date)
+#DECLARE($param : Text) : Text
+return String(Current date)
 ```
 
 > A method called by `4DSCRIPT` must not call interface elements (`DIALOG`, `ALERT`, etc.).
