@@ -37,7 +37,7 @@ Desea rechazar o aceptar las nuevas conexiones de clientes:
 ## Ver también 
 
 [DROP REMOTE USER](drop-remote-user.md)  
-[Application info](application-info.md)  
+[Application info](../commands/application-info.md)  
 [SOAP REJECT NEW REQUESTS](soap-reject-new-requests.md)  
 
 ## Propiedades

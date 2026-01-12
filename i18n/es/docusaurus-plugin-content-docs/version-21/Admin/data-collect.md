@@ -3,9 +3,9 @@ id: data-collect
 title: Recopilación de datos
 ---
 
-Para que nuestros productos sean siempre mejores, recogemos automáticamente los datos relativos a las estadísticas de uso de las aplicaciones 4D Server en funcionamiento. Los datos recogidos son completamente anónimos y se transfieren sin afectar la experiencia del usuario.
+Para que nuestros productos sean siempre mejores, recogemos automáticamente los datos relativos a las estadísticas de uso de las aplicaciones 4D Server en funcionamiento. Collected data is transferred with no impact on the user experience. No se recopila información personal. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
 
-Esta página explica:
+La sección siguiente lo explica:
 
 - qué información se recoge,
 - dónde se almacena la información y cuándo se envía a 4D,
@@ -32,6 +32,7 @@ También se recogen algunos datos a intervalos regulares.
 | cacheReadBytes                                              | Object                                     | Número de bytes leídos de la caché                                                                                                        |
 | cacheReadCount                                              | Object                                     | Número de lecturas en la caché                                                                                                            |
 | cacheSize                                                   | Number                                     | Tamaño de caché en bytes                                                                                                                  |
+| classUsage                                                  | Object                                     | Number of instances of certain language classes                                                                                           |
 | compiled                                                    | Boolean                                    | True si la aplicación está compilada                                                                                                      |
 | connectionSystems                                           | Collection                                 | Sistema operativo del cliente sin el número de compilación (entre paréntesis) y número de clientes que lo utilizan     |
 | CPU                                                         | Text                                       | Nombre, tipo y velocidad del procesador                                                                                                   |

@@ -24,13 +24,20 @@ El parámetro *selector* designa el parámetro a obtener. 4D ofrece las siguient
 
 ### 4D Remote mode timeout (14)
 
-**Alcance** (antigua capa de red únicamente): aplicación 4D si valor positivo
+**Alcance**:equipo 4D remoto
 
-**Se conserva entre dos sesiones**: sí si *valor* positivo
+ **Se conserva entre dos sesiones**: no
 
-**Descripción**: a utilizar en casos muy específicos. Valor del timeout otorgado por el equipo 4D remoto a la máquina 4D Server. Por defecto, este valor se define en la página "Cliente-Servidor/Configuración" de la caja de diálogo de Preferencias en el equipo remoto.
+ **Valores posibles**: 0 (sin sincronización), 1 (auto sincronización) ó 2 (preguntar).
 
-El selector Timeout 4D mode distant no se tiene en cuenta si utiliza la antigua capa de red. Con la capa 4D *ServerNet* activada, se ignora: esta configuración es administrada por el selector Timeout 4D Server (13).
+**Descripción**: modo de sincronización dinámico de la carpeta *Resources* del equipo cliente 4D que ejecuta el comando con el servidor. 
+
+Cuando el contenido de la carpeta *Resources* en el servidor se ha modificado o un usuario ha solicitado la sincronización (por ejemplo vía el explorador de recursos o siguiendo la ejecución del comando [NOTIFY RESOURCES FOLDER MODIFICATION](notify-resources-folder-modification.md "NOTIFY RESOURCES FOLDER MODIFICATION")), el servidor notifica a los equipos cliente conectados. 
+
+Tres modos de sincronización son posibles del lado del cliente. El selector Auto Synchro Resources Folder se utiliza para especificar el modo a utilizar por el equipo cliente para la sesión actual:
+
+0 (valor por defecto): sin sincronización dinámica (la petición de sincronización se ignora) 1: sincronización dinámica automática2: visualización de una caja de diálogo en los equipos clientes, con la posibilidad de efectuar o rechazar la sincronización.El modo de sincronización también puede definirse globalmente en las Preferencias de la aplicación.
+
 
 
 
@@ -47,8 +54,7 @@ El selector Timeout 4D mode distant no se tiene en cuenta si utiliza la antigua 
 
 **Descripción**: inicia o detiene la grabación de las peticiones estándar recibidas por 4D Server (excluyendo las peticiones web). Por defecto, el valor es 0 (no se graban las peticiones).
 
-4D Server le permite grabar cada petición recibida por el equipo servidor en un archivo de historial. Cuando este mecanismo está activo, el archivo de historial se crea junto al archivo de estructura de la base. Su nombre es "4DRequestsLog\_X," donde X es el número secuencial del historial. Una vez el archivo alcanza un tamaño de 10 MB, se cierra y se genera un nuevo archivo, con un número secuencial incrementado. Si existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio de la secuencia utilizando el parámetro *valor*.
-
+4D Server le permite grabar cada petición recibida por el equipo servidor en un archivo de historial. Cuando este mecanismo está activo, el archivo de historial se crea junto al archivo de estructura de la base. Su nombre es "4DRequestsLog\_X," donde X es el número secuencial del historial. Una vez el archivo alcanza un tamaño de 10 MB, se cierra y se genera un nuevo archivo, con un número secuencial incrementado. Si existe un archivo con el mismo nombre, se reemplaza directamente. Puede definir el número de inicio de la secuencia utilizando el parámetro *valor*. 
 Este archivo texto almacena en formato tabulado simple diferente información sobre cada petición: hora, número de proceso, usuario, tamaño de la petición, duración del proceso, etc. Esta información puede ser útil particularmente durante la fase de afinamiento de la aplicación o con fines estadísticos. Por ejemplo puede importarse, en un software de hoja de cálculo para procesarse.
 
 
@@ -183,7 +189,7 @@ Este selector funciona exactamente igual que el selector 39; sin embargo, aplica
 
 ### Client log recording (45)
 
-**Alcance**:equipo 4D remoto 
+**Alcance**: equipo 4D remoto 
 
  **Se conserva entre dos sesiones**: no
 
@@ -447,8 +453,6 @@ $mode:=Get database parameter(Direct2D get active status)
 **Descripción**: *constante obsoleta (se conserva por compatibilidad únicamente).* Se recomienda utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
 
 
-
-
 ### Idle connections timeout (54)
 
 **Alcance**: aplicación 4D a menos que valor sea negativo
@@ -482,6 +486,8 @@ Este parámetro puede definirse del lado del cliente. Por lo general, no necesit
 
 Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección *Descripción de archivos de historial*.
 
+
+### Current process debug log recording (111)
 
 
 
@@ -572,8 +578,17 @@ OR
 //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
 SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 ```
+OR
+```4d
+//Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+SET DATABASE PARAMETER(Log command list;"-1666;-323") 
+```
 
 
+
+ SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
+ 
+ 
 
 ### Max concurrent Web processes (18)
 
@@ -832,7 +847,7 @@ Para que sea tenido en cuenta, este parámetro debe ejecutarse en el equipo serv
 
 **Alcance**: 4D local, 4D Server*
 
-**Se conserva entre dos sesiones**: no
+ **Se conserva entre dos sesiones**: no
 
  **Valores posibles**: 0 o de 1 a X (0 = no grabar, 1 a X = número secuencial, agregado al nombre del archivo). De forma predeterminada, el valor es 0 (intercambios SMTP no registrados).
 
@@ -1089,7 +1104,7 @@ En el [Método base On Startup](metodo-base-on-startup.md), usted escribe:
 ## Ver también 
 
 [DISTINCT VALUES](distinct-values.md)  
-[Application info](application-info.md)  
+[Application info](../commands/application-info.md)  
 [QUERY SELECTION](query-selection.md)  
 [SET DATABASE PARAMETER](set-database-parameter.md)  
 

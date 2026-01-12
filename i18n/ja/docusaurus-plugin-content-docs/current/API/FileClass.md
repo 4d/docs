@@ -568,11 +568,12 @@ $fhandle:=$f.open("read")
 
 <details><summary>履歴</summary>
 
-| リリース  | 内容                     |
-| ----- | ---------------------- |
-| 20 R9 | macOS 実行ファイル内のUUID を読む |
-| 20    | WinIcon をサポート          |
-| 19    | 追加                     |
+| リリース  | 内容                        |
+| ----- | ------------------------- |
+| 21 R2 | support of removeFluentUI |
+| 20 R9 | macOS 実行ファイル内のUUID を読む    |
+| 20    | WinIcon をサポート             |
+| 19    | 追加                        |
 
 </details>
 
@@ -588,7 +589,7 @@ $fhandle:=$f.open("read")
 
 #### 説明
 
-`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。
+`.setAppInfo()` 関数は、<!-- REF #FileClass.setAppInfo().Summary --> *info* に渡したプロパティをアプリケーションファイルの情報として書き込みます<!-- END REF -->。 It is designed for developers who want to customize their 4D application building chain.
 
 この関数は存在している、以下のサポートされているファイル形式のファイルに対して使用されなければなりません: **.plist** (全プラットフォーム)、**.exe**/**.dll** (Windows)、あるいは **macOS 実行ファイル**。 他のファイルタイプを使用した場合、あるいはディスク上にまだ存在しない\*\*.exe\*\*/**.dll** ファイルに対して使用した場合、関数は何もしません(エラーも生成されません)。
 
@@ -616,17 +617,18 @@ $fhandle:=$f.open("read")
 
 *info* オブジェクト引数内に設定されているそれぞれの有効なプロパティは、.exe あるいは .dll ファイルのバージョンリソースに書き込まれます。 以下のプロパティが使用できます (それ以外のプロパティは無視されます):
 
-| プロパティ            | 型    | 説明                                                                   |
-| ---------------- | ---- | -------------------------------------------------------------------- |
-| InternalName     | Text |                                                                      |
-| ProductName      | Text |                                                                      |
-| CompanyName      | Text |                                                                      |
-| LegalCopyright   | Text |                                                                      |
-| ProductVersion   | Text |                                                                      |
-| FileDescription  | Text |                                                                      |
-| FileVersion      | Text |                                                                      |
-| OriginalFilename | Text |                                                                      |
-| WinIcon          | Text | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。 |
+| プロパティ            | 型       | 説明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ---------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CompanyName      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| FileDescription  | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| FileVersion      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| InternalName     | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| LegalCopyright   | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| OriginalFilename | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ProductName      | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| ProductVersion   | Text    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| removeFluentUI   | Boolean | Can only be used with a merged 4D application (.exe file). Pass True to replace the *manifest* referencing the embedded Windows App SDK (required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)) and the *.pri* file with versions allowing the use of a Windows App SDK installed in the OS. Using a local SDK allows to reduce the size of the generated application (you also need remove the default embedded files). Passing False or omitting the property does nothing. |
+| WinIcon          | Text    | .icoファイルの Posixパス。 このプロパティは、4D が生成した実行ファイルにのみ適用されます。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 
 `WinIcon` を除き全てのプロパティにおいて、値としてnull または空の文字列を渡した場合、プロパティには空の文字列が書き込まれます。 テキストでない型の値を渡した場合には、文字列に変換されます。
 

@@ -7,9 +7,10 @@ title: Form Properties
 
 ## Color Scheme
 
->Color scheme property is only applied on macOS.
+>Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+).
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/set-application-color-scheme.md)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](../commands-legacy/get-application-color-scheme.md)). This can be changed for the form to one of the following two options:
 
 *	dark - light text on a dark background 
 *	light - dark text on a light background
@@ -83,6 +84,33 @@ This property is the name of the form itself and is used to refer to the form by
 #### JSON Grammar
 
 The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture#sources) for more information.
+
+---
+
+## Form Theme on Windows  
+
+This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+
+Available values are:
+
+- **Inherited** (default): inherits from the project theme  
+- **Classic**: use the Windows classic interface theme
+- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+
+:::note
+
+This property is ignored on macOS.
+
+:::
+
+
+#### JSON Grammar
+
+|Name|Data Type|Possible Values|
+|---|---|---|
+|fluentUI |boolean |true, false|
+
+If the property is not defined, the "inherited" option is selected. 
 
 ---
 
@@ -231,5 +259,4 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 |Name|Data Type|Possible Values|
 |---|---|---|
 |windowTitle |string |The name of the window as plain text or as a reference|
-
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parâmetro | Tipo |  | Descrição |
 | --- | --- | --- | --- |
 | rotaDoc | Text | &#8594;  | Nome ou rota de acesso do documento para recuperar ícone, ou string vazia para caixa de diálogo Abrir Arquivo |
-| icone | Picture, Picture | &#8592; | Variavel imagem ou campo |
+| icone | Picture | &#8592; | Variavel imagem ou campo |
 | tamanho | Integer | &#8594;  | Tamanho da imagem retornada (em pixels) |
 
 <!-- END REF-->

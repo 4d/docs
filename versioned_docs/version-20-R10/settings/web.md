@@ -352,4 +352,4 @@ This option only appears if the Qodly Studio license is activated.
 
 :::
 
-This option enables user access to [Qodly Studio](../WebServer/qodly-studio.md) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).
+This option enables user access to [Qodly Studio](developer.4d.com/qodly/) for the current project. Note that global access must be allowed at the [application level](../Admin/webAdmin.md).

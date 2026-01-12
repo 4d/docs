@@ -25,7 +25,7 @@ When the exit from the database is initiated, 4D performs the following actions:
 
 The On Server Shutdown database method is the perfect place to:
 
-* Stop store procedures automatically started when the database was opened.
+* Stop stored procedures automatically started when the database was opened.
 * Save (locally, on disk) Preferences or Settings to be reused at the beginning of the next session in the *On Server Startup Database Method*.
 * Perform any other actions that you want to be done automatically each time a database is exited.
 

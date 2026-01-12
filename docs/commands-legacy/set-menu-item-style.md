@@ -33,7 +33,11 @@ You specify the font style of the item in the *itemStyle* parameter. You pass a 
 | Plain     | Integer | 0     |
 | Underline | Integer | 4     |
 
-  
+:::note
+
+The `Underline` style is not supported on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) theme enabled. If used in this rendering context, it is ignored. 
+
+:::
 
 ## See also 
 

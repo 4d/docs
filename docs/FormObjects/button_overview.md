@@ -299,11 +299,13 @@ The Help button style can be used to display a standard system help button. By d
 
 ### Circle
 
-The Circle button style appears as a round system button. This button style is designed for macOS. 
+The Circle button style appears as a round system button. 
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering). 
+
+On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
 
  
 #### JSON Example:    

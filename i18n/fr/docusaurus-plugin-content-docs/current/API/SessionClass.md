@@ -3,7 +3,7 @@ id: SessionClass
 title: Session
 ---
 
-Les objets session sont retournés par la commande [`Session`](../commands/session.md). Ces objets fournissent au développeur une interface permettant de gérer la session utilisateur courante et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de la session, le lancement de process préemptifs liés à la session ou (uniquement pour le web) la gestion des [privilèges](../ORDA/privileges.md).
+Les objets session sont retournés par la commande [`Session`](../commands/session.md). Ces objets fournissent au développeur une interface permettant de gérer la session de l'utilisateur courant et d'exécuter des actions telles que le stockage de données contextuelles, le partage d'informations entre les process de session, le lancement de process préemptifs liés à la session ou (contexte web uniquement) la gestion des [privilèges](../ORDA/privileges.md).
 
 :::tip Articles de blog sur le sujet
 
@@ -85,6 +85,7 @@ Cette fonction ne supprime pas les **privilèges promus** du process web, qu'ils
 :::note
 
 Gardez à l'esprit que les privilèges ne s'appliquent qu'au code exécuté via les accès web, quel que soit le [type de session](#session-types) sur lequel cette fonction est exécutée.
+
 :::
 
 #### Exemple
@@ -176,6 +177,12 @@ La fonction `.demote()` <!-- REF #SessionClass.demote().Summary -->supprime du p
 Si aucun privilège avec *promoteId* n'a été promu à l'aide de [`.promote()`](#promote) dans le process web, la fonction ne fait rien.
 
 Si plusieurs privilèges ont été ajoutés au process web, la fonction `demote()` doit être appelée pour chacun d'entre eux avec le *promoteId* approprié. Les privilèges sont empilés dans l'ordre dans lequel ils ont été ajoutés au process, il est recommandé de dépiler les privilèges dans l'ordre LIFO (*Last In, First Out*).
+
+:::note
+
+Gardez à l'esprit que les privilèges ne s'appliquent qu'au code exécuté via les accès web, quel que soit le [type de session](#session-types) sur lequel cette fonction est exécutée.
+
+:::
 
 #### Exemple
 
@@ -489,6 +496,7 @@ La propriété `.info` <!-- REF #SessionClass.info.Summary -->décrit la session
 
 - **Sessions distantes** et **Sessions de procédure stockée** : L'objet `.info` est le même que celui renvoyé dans la propriété "session" par la commande [`Process activity`](../commands/process-activity.md).
 - **Sessions autonomes** : L'objet `.info` est le même que celui retourné par la commande [`Session info`](../commands/session-info.md).
+- **Sessions utilisateur Web**: L'objet `.info` contient les propriétés disponibles pour les sessions utilisateur web.
 
 L'objet `.info` contient les propriétés suivantes:
 
@@ -547,7 +555,7 @@ La fonction `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retourne Tr
 
 :::note Compatibilité
 
-Avec les anciennes sessions, `.isGuest()` renvoie True si la session n'a pas de privilèges.
+Lorsque le [mode *forcelogin*](../REST/authUsers.md#force-login-mode) est désactivé, `.isGuest()` renvoie True lorsque la session n'a pas de privilèges.
 
 :::
 
@@ -678,6 +686,12 @@ La fonction renvoie `false` si :
 - la session d'origine elle-même a expiré.
 
 Dans ce cas, la session courante de l'utilisateur web est laissée intacte (aucune session n'est restaurée).
+
+:::note
+
+Gardez à l'esprit que les privilèges ne s'appliquent qu'au code exécuté via les accès web, quel que soit le [type de session](#session-types) sur lequel cette fonction est exécutée.
+
+:::
 
 #### Exemple
 

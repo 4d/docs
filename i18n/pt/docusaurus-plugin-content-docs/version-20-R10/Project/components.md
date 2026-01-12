@@ -504,11 +504,11 @@ Você pode definir a opção [tag ou versão](#tags-and-versions) para uma depen
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **Latest**: Selecionado por padrão e permite baixar a versão marcada como a mais recente (estável).
+- **Follow 4D version** (default, recommended option): Download the latest component release that is compatible with the running 4D version. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags). This option is **recommended**, especially for the [components developed by 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Até a próxima versão major**: defina um [intervalo de versão semântica](#tags-and-versions) para restringir as atualizações para a próxima versão principal.
 - **Até a próxima versão minor**: da mesma forma, restringe as atualizações para a próxima versão minor.
 - **Versão exata (etiqueta)**: selecione ou insira manualmente uma [etiqueta específica](#tags-and-versions) na lista disponível.
-- **Siga a versão 4D**: Faça o download da versão mais recente do componente que é compatível com a versão 4D em execução. Você pode usar essa regra de dependência somente se as tags de liberação do componente seguirem a [convenção de nomenclatura] apropriada (#naming-conventions-for-4d-version-tags).
+- **Latest**: Allows to download the release that is tagged as the latest version. **Warning:** While using this option can be convenient during early development, it is better to avoid it in production or shared projects since it automatically pulls in newer releases, including beta releases, which may lead to unexpected updates or breaking changes.
 
 A versão atual da dependência do GitHub é exibida no lado direito do item de dependência:
 

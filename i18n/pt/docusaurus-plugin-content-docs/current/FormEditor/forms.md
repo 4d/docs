@@ -96,7 +96,13 @@ Não há restrições quanto ao número de páginas que um formulário pode ter.
 
 Um formulário de múltiplas páginas possui tanto uma página de fundo quanto várias páginas de exibição. Objetos que são colocados na página de fundo podem ser visíveis em todas as páginas de exibição, mas só podem ser selecionados e editados na página de fundo. Em formulários de várias páginas, você deve colocar sua paleta de botões na página de fundo. Você também precisa incluir um ou mais objetos na página de fundo que forneçam ferramentas de navegação de página para o usuário.
 
-## Fluent UI rendering (Developer Preview)
+## Fluent UI rendering
+
+:::caution Prévia do desenvolvedor
+
+Fluent UI support is currently in the Developer Preview phase. Não deve ser usado na produção.
+
+:::
 
 On Windows, 4D supports **Fluent UI** form rendering, Microsoft's modern graphical user interface design, based upon **WinUI 3** technology. **WinUI 3** is the foundation of the Windows App SDK and represents the upcoming Windows graphical interfaces.
 
@@ -106,29 +112,26 @@ Fluent UI rendering offers modern and attractive controls, support of dark/light
 | --------------------------------------- | -------------------------------------------- |
 | ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
 
-:::caution Prévia do desenvolvedor
-
-Fluent UI support is currently in the Developer Preview phase. Não deve ser usado na produção.
-
-:::
-
 :::info Disponibilidade
 
 This feature can be used **in 4D projects on Windows**. It is not available on macOS or in binary 4D databases on Windows.
 
 :::
 
-:::tip Related blog post
+:::tip Related blog posts
 
-[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
+[Modernize your 4D interfaces with Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
+[Deploy Fluent UI effortlessly in your 4D applications](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
 
 :::
 
 ### Requisitos
 
-The Fluent UI rendering requires that the [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads) be installed. You need to install this SDK on any Windows machine displaying your forms.
+The Fluent UI rendering requires that the **Windows App SDK** be installed on your machine. You need to make sure this SDK is installed on any Windows machine displaying your forms.
 
-If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error.
+[If necessary](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), you can install the Windows App SDK. For convenience, the 4D installer [provides a link](../GettingStarted/Installation.md#installation-on-disk) to download the Windows App SDK installer. You can also visit the [Microsoft download page](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). We recommend using the version provided by the 4D installer, which offers optimal compatibility.
+
+If the Windows App SDK is not properly installed, 4D will render all your forms in classic mode with no error and the following warning will be recorded in the [diagnostic log](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt): "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
 ### Enabling the Fluent UI rendering
 
@@ -142,6 +145,12 @@ Check the **Use Fluent UI on Windows** option in the "Interface" page of the Set
 
 In this case, the Fluent UI rendering mode will be used by default on Windows for all forms.
 
+:::note
+
+If the current configuration is not compliant with the [Fluent UI requirements](#requirements), an error message is displayed next to the check box.
+
+:::
+
 #### Form setting
 
 Each form can define its own rendering via the **Widget appearance** property. As opções abaixo estão disponíveis:
@@ -153,23 +162,22 @@ Each form can define its own rendering via the **Widget appearance** property. A
 
 The corresponding [JSON form property](./properties_JSONref.md) is `fluentUI` with value undefined (i.e. inherited, default value), "true" or "false".
 
+#### CSS
+
+The [**form-theme** CSS media query](./createStylesheet.md#media-queries) allows you to configure several styles depending on the used theme.
+
 ### Specific behaviors
 
 When using 4D forms with Fluent UI rendering, you need to pay attention to the following points:
 
-- The new `FORM Windows theme` command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or the command is called on macOS, and empty string is returned.
+- The [`FORM theme`](../commands/form-theme.md) command returns the actual display theme of the current form. Possible values: "Classic" or "FluentUI". If there is no current form or if the command is called on macOS, and empty string is returned.
+- The [`Application info`](../commands/application-info.md) command allows you to know if Fluent UI can be used (`canUseFluentUI` property) or is being used (`useFluentUI` property).
 - If [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) is called in the context of a form, the information returned relates to the current appearance of the form (Classic or FluentUI). If the command is called outside the context of a form, the information returned relates to the [global project settings](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) with `Underline` *itemStyle* parameter is not supported (ignored) for pop up menus.
 - [Stepper](../FormObjects/stepper.md) form object does not support [double-click event](../Events/onDoubleClicked.md).
 - [Circle buttons](../FormObjects/button_overview.md#circle) are supported (similar as macOS).
 - The [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) commands are not supported in Web areas with system rendering engine.
 - A focus ring can be added to picture and text [inputs](../FormObjects/input_overview.md).
-
-:::info Limitations
-
-This **Developer preview** includes some limitations, which are [listed in the related blog post](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
-
-:::
 
 ## Formulários herdados
 

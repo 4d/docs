@@ -3,9 +3,9 @@ id: data-collect
 title: Recolha de dados
 ---
 
-Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário.
+Para ajudar a tornar os produtos melhores, automaticamente coletamos dados referentes a estatísticas de usuário nas aplicações 4D Server Dados completados são anônimos e dados são transferidos sem ter impacto na experiência de usuário. Collected data is transferred with no impact on the user experience. No personal data is collected. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
 
-Esta página explica:
+The section below explains:
 
 - que informação é coletada,
 - onde a informação é armazenada e quando é enviada a 4D,
@@ -32,6 +32,7 @@ Alguns dados são também recolhidos a intervalos regulares.
 | cacheReadBytes                                              | Object                                                   | Número de bytes lidos da cache                                                                                                           |
 | cacheReadCount                                              | Object                                                   | Número de leituras na cache                                                                                                              |
 | cacheSize                                                   | Number                                                   | Tamanho da cache em bytes                                                                                                                |
+| classUsage                                                  | Object                                                   | Number of instances of certain language classes                                                                                          |
 | compiled                                                    | Parâmetros                                               | Verdadeiro se a aplicação for compilada                                                                                                  |
 | connectionSystems                                           | Collection                                               | SO do cliente sem o número de compilação (entre parêntesis) e número de clientes que o utilizam                       |
 | CPU                                                         | Text                                                     | Nome, tipo, e velocidade do processador                                                                                                  |

@@ -129,7 +129,7 @@ La commande `CALL SUBFORM CONTAINER` permet à une instance de sous-formulaire d
 
 Le code de l’événement est libre (par exemple, 20000 ou -100). Vous pouvez soit utiliser un code correspondant à un événement existant (par exemple, 3 pour `Sur validation`), soit utiliser un code personnalisé. Dans le premier cas, seuls les événements présents dans la liste des événements "cochables" des conteneurs de sous-formulaire peuvent être utilisés (cf. Liste des propriétés). Dans le second cas, le code ne doit correspondre à aucun événement formulaire existant. Il est conseillé d’utiliser une valeur négative pour avoir l’assurance que 4D n’utilisera pas ce code dans les versions futures.
 
-Supported events for subforms are:
+Les événements pris en charge pour les sous-formulaires sont les suivants :
 - [On Load](../Events/onLoad.md)
 - [On Validate](../Events/onValidate.md)
 - [On Getting Focus](../Events/onGettingFocus.md)

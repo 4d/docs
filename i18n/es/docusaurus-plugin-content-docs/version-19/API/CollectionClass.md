@@ -4,7 +4,7 @@ title: Collection
 ---
 
 
-The Collection class manages [Collection](Concepts/dt_collection.md) type expressions.
+La clase Collection gestiona expresiones de tipo [Collection](Concepts/dt_collection.md).
 
 Una colección se inicializa con:
 
@@ -2521,12 +2521,12 @@ La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los eleme
 
 Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo. También puede pasar una de las siguientes constantes en el parámetro *ascOrDesc*:
 
-    |Constant|  Type|Value|Comment|
-    |---|---|---|---|
-    |ck ascending|Integer|0|Elements are ordered in ascending order (default)|
-    |ck descending|Integer|1|Elements are ordered in descending order|
+    |Constante| Tipo|Valor|Comentario|
+    |---|-|-|-|---|
+    |ck ascending|Integer|0|Los elementos se ordenan en orden ascendente (por defecto)|
+    |ck descending|Integer|1|Los elementos se ordenan en orden descendente|
     
-    This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
+    Esta sintaxis ordena sólo valores escalares en la colección (otros tipos de elementos como objetos o colecciones se devuelven desordenados).
 
  Si la colección contiene elementos de diferentes tipos, se agrupan primero por tipo y se ordenan después. Si *attributePath* lleva a una propiedad de objeto que contiene valores de diferentes tipos, primero se agrupan por tipo y se ordenan después.
 

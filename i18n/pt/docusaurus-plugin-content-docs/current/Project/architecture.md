@@ -69,23 +69,17 @@ Esse arquivo de texto também pode conter chaves de configuração, em particula
 | styleSheets_mac.css     | Folhas de estilo css para Mac (de um banco de dados binário convertido)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | CSS     |
 | styleSheets_windows.css | Folhas de estilo css em Windows (de um banco de dados binário convertido)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | CSS     |
 
-#### `DatabaseMethods`
-
-| Conteúdos                                | Descrição                                                                                      | Formato |
-| ---------------------------------------- | ---------------------------------------------------------------------------------------------- | ------- |
-| *databaseMethodName*.4dm | Métodos de projeto definidos na database. Um ficheiro por método base de dados | text    |
-
-#### `Página Métodos`
-
-| Conteúdos                        | Descrição                                                                            | Formato |
-| -------------------------------- | ------------------------------------------------------------------------------------ | ------- |
-| *methodName*.4dm | Métodos de banco definidos na database. One file per database method | text    |
-
 #### `Classes`
 
 | Conteúdos                       | Descrição                                                                                                                                                      | Formato |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *className*.4dm | Método de definição de classe usuário, que permite instanciar objetos específicos. Um arquivo por classe, o nome do arquivo é o nome da classe | text    |
+
+#### `DatabaseMethods`
+
+| Conteúdos                                | Descrição                                                                                      | Formato |
+| ---------------------------------------- | ---------------------------------------------------------------------------------------------- | ------- |
+| *databaseMethodName*.4dm | Métodos de projeto definidos na database. Um ficheiro por método base de dados | text    |
 
 #### `Formulários`
 
@@ -95,6 +89,20 @@ Esse arquivo de texto também pode conter chaves de configuração, em particula
 | *formName*/method.4dm                     | Método formulário projecto                                    | text    |
 | *formName*/Images/*pictureName*                           | Imagem estática do formulário projeto                         | picture |
 | *formName*/ObjectMethods/*objectName*.4dm | Métodos objecto. Um arquivo por método objeto | text    |
+
+#### `Página Métodos`
+
+| Conteúdos                        | Descrição                                                                            | Formato |
+| -------------------------------- | ------------------------------------------------------------------------------------ | ------- |
+| *methodName*.4dm | Métodos de banco definidos na database. One file per database method | text    |
+
+#### `Shared`
+
+| Conteúdos                                               | Descrição                                                                                                                                             | Formato |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| assets/                                                 | [Shared files](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/events/bindingActionToEvents#shared-folder) such as pictures used in Qodly pages | vários  |
+| CustomComponents/                                       | [Custom components](https://developer.4d.com/qodly/Integrations/customComponent/overview) files used in Qodly pages                                   | json    |
+| *other_files*.json | shared elements such as css or datasources used in Qodly pages                                                                                        | json    |
 
 #### `TableForms`
 
@@ -116,6 +124,13 @@ Esse arquivo de texto também pode conter chaves de configuração, em particula
 | table__n_.4dm | Métodos trigger definidos na database. Um arquivo de acionamento por tabela (n é o número da tabela) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. É compatível com as ferramentas de controlo da versão.
+
+#### `WebForms`
+
+| Conteúdos                                                    | Descrição                                                                                                                   | Formato |
+| ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *QodlyFormName*.WebForm                      | Json representations of Qodly pages                                                                                         | JSON    |
+| crafted_components.json | Description of [components crafted](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/craftedComponents) on Qodly pages | JSON    |
 
 ### `Trash`
 

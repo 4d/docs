@@ -384,6 +384,267 @@ Par exemple, si vous exécutez :
 
 
 
+
+### Character set (17)
+
+**Portée** : 4D local, 4D Server
+
+**Conservé entre deux sessions** : Oui
+
+**Description** : *Constante obsolète (conservée par compatibilité uniquement).* Il est désormais conseillé d'utiliser les commandes [WEB SET OPTION](web-set-option.md) et [WEB GET OPTION](web-get-option.md) pour le paramétrage du serveur HTTP.
+
+
+
+
+### Circular log limitation (90)
+
+**Thread-safe** : Yes
+
+**Portée** : 4D local, 4D Server.
+
+**Conservé entre deux sessions** : Non
+
+**Valeurs possibles** : Toute valeur entière, 0 = conserver tous les journaux
+
+**Description** : Nombre maximum de fichiers à conserver par roulement pour chaque type de journal. Par défaut, les 50 fichiers les plus récents sont conservés. Si vous passez une valeur N, seuls les N fichiers les plus récents seront conservés, le plus ancien étant automatiquement effacé à la création d'un nouveau. Ce paramétrage s'applique à tous les fichiers journaux, notamment le journal des requêtes (sélecteurs 28 et 45), le journal de débogage (sélecteur 34), le journal des événements (sélecteur 79), l'historique des requêtes Web (sélecteurs 29 et 84 de la commande [WEB SET OPTION](web-set-option.md)), etc.
+
+
+
+
+### Client character set (24)
+
+**Portée** : Tous postes 4D distants
+
+ **Conservé** **entre deux sessions** : Oui
+
+ **Valeurs possibles** : Voir sélecteur 17
+
+**Description** : Permet de spécifier ce paramètre pour les postes 4D distants utilisés en tant que serveurs Web. La valeur définie via ce sélecteur est appliquée à tous les postes distants utilisés comme serveurs Web. Si vous souhaitez définir cette valeur pour certains postes distants uniquement, utilisez la boîte de dialogue des Préférences de 4D en mode distant.
+
+
+
+
+### Client HTTPS port ID (40)
+
+**Portée** :Tous postes 4D distants
+
+ **Conservé** **entre deux sessions** : Oui
+
+ **Valeurs possibles** : 0 à 65535
+
+**Description** : Numéro du port TCP utilisé par les serveurs Web des postes clients pour les connexions sécurisées via SSL (protocole HTTPS). Par défaut, la valeur est 443 (valeur standard).
+
+Le fonctionnement de ce sélecteur est identique à celui du sélecteur 39 ; il s’applique toutefois à tous les postes 4D distants utilisés en tant que serveurs Web. Si vous souhaitez modifier la valeur de certains postes clients uniquement, utilisez la boîte de dialogue des Préférences de 4D distant.
+
+
+
+
+### Client log recording (45)
+
+**Portée** : Poste 4D distant 
+
+**Conservé** **entre deux sessions** : Non
+
+**Valeurs possibles** : 0 ou de 1 à N (0 = ne pas enregistrer, 1 à N = numéro séquentiel, accolé au nom du fichier). 
+
+**Description** : Démarrage ou arrêt de l'enregistrement des requêtes standard effectuées par le poste client 4D ayant exécuté la commande (hors requêtes Web). Par défaut, la valeur est 0 (pas d'enregistrement des requêtes). 
+
+4D vous permet d'enregistrer l’historique des requêtes effectuées par le poste client. Lorsque ce mécanisme est activé, deux fichiers sont créés sur le poste client, dans le sous-dossier Logs du dossier local de la base. Il sont nommés 4DRequestsLog\_N.txt et 4DRequestsLog\_ProcessInfo\_N.txt où N est le numéro séquentiel de l'historique. Une fois que le fichier 4DRequestsLog atteint une taille de 10 Mo, il est refermé et un nouveau fichier est généré, avec un numéro séquentiel incrémenté. Si un fichier du même nom existe déjà, il est directement remplacé. Vous pouvez définir le numéro de départ de la séquence à l'aide du paramètre valeur.
+
+Ces fichiers texte stockent dans un format tabulé simple diverses informations concernant chaque requête : heure, numéro de process, taille de la requête, durée de traitement, etc. Ces informations sont particulièrement utiles en phase de mise au point de l'application ou à des fins statistiques. Cf. *Description des fichiers d'historique*.
+
+
+
+
+### Client max concurrent Web proc (25)
+
+**Portée** : Tous postes 4D distants
+
+ **Conservé** **entre deux sessions** : Oui
+
+ **Valeurs possibles** : Voir sélecteur 18
+
+**Description** : Permet de spécifier ce paramètre pour les postes 4D distants utilisés en tant que serveurs Web. La valeur définie via ce sélecteur est appliquée à tous les postes distants utilisés comme serveurs Web. Si vous souhaitez définir cette valeur pour certains postes distants uniquement, utilisez la boîte de dialogue des Préférences de 4D en mode distant.
+
+
+
+
+### Client port ID (22)
+
+**Portée** : Tous postes 4D distants
+
+ **Conservé** **entre deux sessions** : Oui
+
+ **Valeurs possibles** : Voir sélecteur 15
+
+**Description** : Permet de spécifier ce paramètre pour les postes 4D distants utilisés en tant que serveurs Web. La valeur définie via ce sélecteur est appliquée à tous les postes distants utilisés comme serveurs Web. Si vous souhaitez définir cette valeur pour certains postes distants uniquement, utilisez la boîte de dialogue des Préférences de 4D en mode distant.
+
+
+
+
+### Client Server port ID (35)
+
+**Portée** :Base de données 
+
+ **Conservé** **entre deux sessions** : Oui
+
+ **Valeurs possibles** : 0 à 65535
+
+**Description** : Numéro de port TCP sur lequel 4D Server publie la base de données (à destination des postes 4D distants). Par défaut, la valeur est 19813\. 
+
+La personnalisation de cette valeur permet d’utiliser plusieurs applications 4D client-serveur sur la même machine avec le protocole TCP ; dans ce cas, vous devez spécifier un numéro de port différent pour chaque application. 
+
+La valeur est stockée dans le fichier de structure de la base. Elle peut être définie avec 4D en mode local mais n’est prise en compte qu’en configuration client-serveur. 
+
+Lorsque vous modifiez cette valeur, il est nécessaire de redémarrer le poste serveur afin que la nouvelle valeur soit prise en compte.
+
+
+
+
+### Client Web log recording (30)
+
+**Portée** :Tous postes 4D distants
+
+ **Conservé** **entre deux sessions** : Oui
+
+ **Valeurs possibles** : 0 = Ne pas enregistrer (défaut), 1 = Enregistrer au format CLF, 2 = Enregistrer au format DLF, 3 = Enregistrer au format ELF, 4 = Enregistrer au format WLF.
+
+**Description** : Démarrage ou arrêt de l’enregistrement des requêtes Web reçues par les serveurs Web de tous les postes clients. Par défaut, la valeur est 0 (pas d’enregistrement des requêtes). 
+
+Le fonctionnement de ce sélecteur est identique à celui du sélecteur 29 ; il s’applique toutefois à tous les postes 4D clients utilisés en tant que serveurs Web. Le fichier “logweb.txt” est dans ce cas automatiquement placé dans le sous-dossier Logs du dossier base 4D client (dossier de cache). Si vous souhaitez définir des valeurs pour certains postes clients uniquement, utilisez la boîte de dialogue des Préférences de 4D en mode distant.
+
+
+
+
+### Current process debug log recording (111)
+
+**Portée :** Application 4D
+
+**Conservé entre deux sessions :** Non
+
+**Description** : Démarrage ou arrêt de l'enregistrement séquentiel des événements de programmation **du process courant** dans un fichier d'historique séparé. Cet historique est semblable à Debug log recording (sélecteur 34) mais il ne porte que sur le process courant. Le nom du fichier d'historique inclut la lettre "p" et le numéro du process : 4DDebugLog\[\_p*N*_*n*].txt, où N est l'ID unique du process. Pour plus d'informations sur ce format et sur l'utilisation du fichier *4DDebugLog*, veuillez consulter la *Description des fichiers d'historique* dans le Mode Développement. 
+
+**Notes :** Ce sélecteur est fourni uniquement à des fins de débogage et doit être utilisé avec précaution. Plus particulièrement, il ne doit pas être utilisé en production, étant donné qu'il peut avoir une incidence sur les performances de l'application. Vous pouvez utiliser simultanément les sélecteurs Debug log recording et Current process debug log recording, auquel cas les actions liées au process courant ne seront pas enregistrées dans le fichier d'historique principal.
+
+
+
+
+### Dates inside objects (85)
+
+**Portée** : Process courant
+
+ **Conservé** **entre deux sessions** : Non
+
+ **Valeurs possibles** : String type without time zone (0), String type with time zone (1), Date type (2) (défaut)
+
+**Description** : Définit la manière dont les dates sont stockées dans les objets, ainsi que leur traitement en cas d'importation/exportation en JSON. 
+
+Lorsque ce sélecteur vaut Date type (valeur par défaut dans les bases créées à compter de 4D v17), les dates 4D sont stockées avec le type date dans les objets, en tenant compte des paramétrages de date locaux. Lorsqu'ils sont exportés au format JSON, les attributs date seront convertis en chaînes qui ne contiennent pas l'heure (**Note :** ce paramétrage peut être défini au niveau des paramètres de la base via l'option "Utiliser le type date au lieu du format date ISO dans les objets" dans la *Page Compatibilité*).
+
+Si vous passez String type with time zone dans ce sélecteur, les dates 4D seront converties en chaînes ISO en tenant compte du fuseau horaire local. Par exemple, la conversion de la date !23/08/2013! donne "2013-08-22T22:00:00Z" au format JSON lorsque l’opération est effectuée en France en été (GMT+2). Ce principe est conforme au fonctionnement standard de JavaScript. Ce fonctionnement peut être source d’erreurs si vous souhaitez envoyer des valeurs de date en JSON à une personne qui se trouve dans un autre fuseau horaire. C’est le cas par exemple pour l’exportation d’une table avec [Selection to JSON](selection-to-json.md) en France destiné à être réimporté aux USA avec [JSON TO SELECTION](json-to-selection.md). Par défaut, les dates étant réinterprétées dans chaque fuseau horaire, les valeurs stockées dans la base seront différentes. Dans ce cas, vous pouvez modifier le mode de conversion des dates afin qu’il ne tienne pas compte du fuseau horaire en passant String type without time zone dans ce sélecteur. La conversion de la date !23/08/2013! donnera alors "2013-08-23T00:00:00Z" dans tous les cas.
+
+
+
+
+### Debug log recording (34)
+
+**Thread-safe** : Yes
+
+**Portée** : Application 4D
+
+**Conservé** **entre deux sessions** : Non
+
+**Description** : Démarrage ou arrêt de l’enregistrement séquentiel des événements de programmation de 4D dans le fichier *4DDebugLogServer* *\[\_pN\_n\].txt* (où \_n est le numéro de segment du fichier).
+
+Deux modes sont possibles :
+
+- Le mode standard propose une vue basique des événements et le fichier est automatiquement placé dans le sous-dossier Logs de la base, à côté du fichier de structure. Les durées d'exécution sont exprimées en millisecondes avec la valeur "< ms" qui s'affiche lorsqu'une opération dure moins d'une milliseconde.
+
+- Le mode tabulé fournit des informations supplémentaires et utilise un format tabulé plus compact dans le fichier. Les durées d'exécution sont exprimées en millisecondes. **Valeurs possibles** : Entier long contenant un champ de bits (bit field) : valeur = bit1(1)+bit2(2)+bit3(4)+bit4(8)+…). 
+- Le bit 0 (valeur 1) permet de demander à activer le fichier (à noter que toute autre valeur non nulle l’activera également)
+- Le bit 1 (valeur 2) permet de demander les paramètres d’appel aux commandes et (mode interprété uniquement) aux méthodes.
+- Le bit 2 (valeur 4) permet d’activer le format tabulé.
+- Le bit 3 (valeur 8) permet de désactiver l’écriture immédiate de chaque opération sur disque (activée par défaut). L’écriture immédiate est moins rapide mais plus efficace par exemple pour rechercher les causes d’un plantage. Si vous désactivez ce mode, le fichier sera généré plus rapidement.
+- Le bit 4 (valeur 16) permet de désactiver l’enregistrement des appels de plug-ins (activé par défaut).
+- Le bit 5 (valeur 32) permet de désactiver l'enregistrement des fonctions membres.
+
+Exemples :
+
+```4d
+SET DATABASE PARAMETER(34;1) // active le mode standard sans les paramètres, avec les durées
+SET DATABASE PARAMETER(34;2) // active le mode standard avec les paramètres et les durées
+SET DATABASE PARAMETER(34;2+4) // active le mode tabulé avec les paramètres et les durées
+SET DATABASE PARAMETER(34;0) // désactive le fichier
+```
+
+Dans tout type d'application 4D (4D tous modes, 4D Server, 4D Volume Desktop), en interprété ou en compilé, vous pouvez éviter que le fichier n’enregistre une trop grande quantité d’informations :
+
+- en restreignant les commandes 4D examinées à l'aide de Log command list (sélecteur 80), ou
+- en le restreignant au process courant uniquement à l'aide de Current process debug log recording (sélecteur 111). Cela ajoutera la lettre "p" et le numéro de process au nom du fichier : *4DDebugLog* *\[\_pN\_n\].txt ou* *4DDebugLogServer\[\_pn\_n\].txt.* Pour plus d’informations sur le format et l’exploitation du fichier 4DDebugLog, veuillez consulter la *Description des fichiers d'historique* dans le Manuel Développement.
+
+**Note :** Ce sélecteur est proposé uniquement à des fins de débogage et doit être utilisé avec précaution car il peut entraîner une dégradation des performances de l'application.
+
+
+
+
+### Diagnostic log level (86)
+
+**Thread-safe** : Yes
+
+**Portée :** Application 4D 
+
+**Conservé entre deux sessions :** Non
+
+**Description :** Niveau(x) de messages à inclure dans le journal de diagnostic lorsqu'il est activé (voir le sélecteur Diagnostic log recording). Chaque niveau désigne une catégorie de messages de diagnostic et inclut automatiquement la ou les catégories plus importantes. Pour une description des catégories, consultez la section *Log niveau diagnostic* sur le site *developer.4d.com*.
+
+**Valeurs possibles** **:** L'une des constantes suivantes (Log info par défaut): 
+- Log trace: active ERROR, WARN, INFO, DEBUG, TRACE (niveau le plus détaillé)
+- Log debug: active ERROR, WARN, INFO, DEBUG 
+- Log info: active ERROR, WARN, INFO (par défaut) 
+- Log warn: active ERROR, WARN Log error: active ERROR (niveau le moins détaillé)
+
+
+
+
+### Diagnostic log recording (79)
+
+**Thread-safe** : Yes
+
+**Portée** : Application 4D
+
+**Conservé** **entre deux sessions** : Non
+
+**Valeurs possibles** : 0 ou 1 (0 = ne pas enregistrer, 1 = enregistrer)
+
+**Description** : Démarrage ou arrêt de l’enregistrement du fichier de diagnostic de 4D. Par défaut, la valeur est 0 (pas d’enregistrement).
+
+4D vous permet d’enregistrer de manière continue dans un fichier de diagnostic un ensemble d’événements relatifs au fonctionnement interne de l’application. Les informations contenues dans ce fichier sont destinées à la mise au point des applications 4D et pourront être analysées avec l’aide des services techniques de 4D (pour plus d'informations, reportez-vous à la section *Description des fichiers d'historique* sur *developer.4d.com*). Lorsque vous passez 1 dans ce sélecteur, un fichier de diagnostic est automatiquement créé (ou ouvert) dans le dossier **Logs** de la base. Le fichier est nommé *4DDiagnosticLog\_N*.txt (ou *4DDiagnosticLogServer\_N.*txt s'il est généré sur le serveur). Une fois que le fichier atteint une taille de 10 Mo, il est refermé et un nouveau fichier est généré, avec un numéro séquentiel N incrémenté.
+
+A noter qu’il est possible d’inclure des informations personnalisées dans ce fichier à l’aide de la commande [LOG EVENT](log-event.md).
+
+
+
+
+### Direct2D get active status (74)
+
+**Note :** Ce sélecteur peut être utilisé uniquement avec la commande [Get database parameter](get-database-parameter.md), sa valeur ne peut pas être fixée.
+
+**Description** : Retourne l’implémentation active de Direct2D sous Windows. 
+
+**Valeurs possibles** : 0, 1, 2, 3, 4 ou 5 (cf. valeurs du sélecteur 69). La valeur retournée dépend de la disponibilité de Direct2D, du matériel et de la qualité de la prise en charge de Direct2D par le système d’exploitation.
+
+Par exemple, si vous exécutez :
+```4d
+ SET DATABASE PARAMETER(;Direct2D Hardware)  $mode:=Get database parameter()
+```
+
+- sur Windows 7 et suivants, *$mode* vaudra 1 si le système détecte un matériel compatible Direct2D, sinon *$mode* vaudra 3 (contexte logiciel).
+- sur Windows Vista, *$mode* vaudra 1 si le système détecte un matériel compatible Direct2D, sinon *$mode* vaudra 0 (désactivation de Direct2D).
+- sur Windows XP, *$mode* vaudra toujours 0 (incompatibilité avec Direct2D).
+
+
+
+
 ### Direct2D status (69)
 
 **Portée**: Application 4D

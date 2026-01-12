@@ -1,41 +1,41 @@
 ---
 id: desktop-sessions
-title: Desktop Sessions
+title: Sesiones de escritorio
 ---
 
-A **desktop session** is a user-related execution context on 4D Server or 4D single-user that does not result from any web or REST access.
+Una **sesión de escritorio** es un contexto de ejecución relacionado con el usuario en 4D Server o 4D monopuesto que no resulta de ningún acceso web o REST.
 
-Just like in a [**web user session**](../WebServer/sessions.md), the code executed in a desktop session has access to a [`Session`](../API/SessionClass.md) object which provides functions and properties allowing you to store session values and to share them between user processes, for example using the [`session.storage`](../API/SessionClass.md#storage) object.
+Al igual que en una [**sesión de usuario web**](../WebServer/sessions.md), el código ejecutado en una sesión de escritorio tiene acceso a un objeto [`Session`](../API/SessionClass.md) que proporciona funciones y propiedades que permiten almacenar valores de sesión y compartirlos entre procesos de usuario, por ejemplo utilizando el objeto [`session.storage`](../API/SessionClass.md#storage).
 
-However, unlike the code executed in web user sessions, the code executed in desktop sessions is not controlled by [roles and privileges](../ORDA/privileges.md). It can access any parts of the 4D application, including ORDA and data model classes. On 4D Server, [users and groups feature](../Users/handling_users_groups.md) can manage user accesses.
+Sin embargo, a diferencia del código ejecutado en las sesiones de usuario web, el código ejecutado en las sesiones de escritorio no está controlado por [roles y privilegios](../ORDA/privileges.md). Puede acceder a cualquier parte de la aplicación 4D, incluyendo ORDA y las clases del modelo de datos. En 4D Server, la funcionalidad [usuarios y grupos](../Users/handling_users_groups.md) puede gestionar los accesos de los usuarios.
 
-You can nevertheless [**share** a desktop session with a web session](#sharing-a-desktop-session-for-web-accesses) so that a desktop user can access your 4D application through a web interface, using for example Qodly pages and Web areas.
+No obstante, puede [**compartir** una sesión de escritorio con una sesión web](#sharing-a-desktop-session-for-web-accesses) para que un usuario de escritorio pueda acceder a su aplicación 4D a través de una interfaz web, utilizando por ejemplo páginas Qodly y áreas web.
 
-## Tipos de sesiones
+## Session types {#session-types}
 
 Las sesiones de escritorio incluyen:
 
-- **Remote user sessions**: In client/server applications, the session that manages the user processes on the server.
-- **Stored procedures sessions**: In client/server applications, the unique virtual user session that manages all stored procedures executed on the server.
-- **Standalone sessions**: Local session object returned in single-user application (useful in development and test phases of client/server applications).
+- **Sesiones de usuario remotas**: en aplicaciones cliente/servidor, la sesión que gestiona los procesos de usuario en el servidor.
+- **Sesiones de procedimientos almacenados**: en aplicaciones cliente/servidor, la única sesión virtual de usuario que gestiona todos los procedimientos almacenados ejecutados en el servidor.
+- **Sesiones autónomas**: objeto de sesión local devuelto en una aplicación mono usuario (útil en las fases de desarrollo y de prueba de las aplicaciones cliente/servidor).
 
 :::note
 
-Keep in mind that [**Web sessions**](../WebServer/sessions.md) are used as soon as the 4D project is accessed through web or REST requests and [scalable sessions](../WebServer/sessions.md#enabling-web-sessions) are enabled.
+Tenga en cuenta que las [**sesiones web**](../WebServer/sessions.md) se utilizan en cuanto se accede al proyecto 4D a través de peticiones web o REST y se habilitan las [sesiones escalables](../WebServer/sessions.md#enabling-web-sessions).
 
 :::
 
-The following diagram shows the different session types and how they interact:
+El siguiente diagrama muestra los diferentes tipos de sesión y cómo interactúan:
 
 ![](../assets/en/Desktop/sessions.png)
 
-## Sesiones de usuarios remotos
+## Remote user sessions {#remote-user-sessions}
 
-On the server, in "user processes" (i.e. processes related to remote users), the [`Session`](../commands/session.md) command returns a `session` object describing the current user session. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
+En el servidor, en los "procesos de usuario" (es decir, procesos relacionados con usuarios remotos), el comando [`Session`](../commands/session.md) devuelve un objeto `session` que describe la sesión de usuario actual. Este objeto se maneja a través de las funciones y propiedades de la [clase `Session`](../API/SessionClass.md).
 
 :::note
 
-En un 4D remoto, el objeto `session` siempre devuelve null.
+On a remote 4D, the [`Session`](../commands/session) command always returns null.
 
 :::
 
@@ -51,72 +51,72 @@ El objeto `session` permite manejar la información y los privilegios de la sesi
 
 Puede compartir datos entre todos los procesos de la sesión del usuario utilizando el objeto compartido [`session.storage`](../API/SessionClass.md#storage). Por ejemplo, puede iniciar un procedimiento de autenticación y verificación de usuario cuando un cliente se conecta al servidor, que involucra ingresar un código enviado por correo electrónico o SMS en la aplicación. A continuación, añada la información de usuario al almacenamiento de sesión, permitiendo al servidor identificar al usuario. De este modo, el servidor 4D puede acceder a la información del usuario para todos los procesos del cliente, lo que permite escribir código personalizado según el rol del usuario.
 
-You can also assign privileges to a remote user session to control access when the session comes from Qodly pages running in web areas.
+También puede asignar privilegios a una sesión de usuario remoto para controlar el acceso cuando la sesión procede de páginas Qodly que se ejecutan en áreas web.
 
 ### Disponibilidad
 
 El objeto `session` del usuario remoto está disponible en:
 
-- Métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
+- métodos proyecto que tienen el atributo [Ejecutar en el Servidor](../Project/code-overview.md#execute-on-server) (se ejecutan en el proceso "twinned" del proceso cliente),
 - Triggers,
-- ORDA [data model functions](../ORDA/ordaClasses.md) (except those declared with the [`local`](../ORDA/ordaClasses.md#local-functions) keyword),
-- Database methods such as [`On Server Open Connection`](../commands/on-server-open-connection-database-method) and [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
+- las [funciones ORDA del modelo de datos](../ORDA/ordaClasses.md) (excepto las declaradas con la palabra clave [`local`](../ORDA/ordaClasses.md#local-functions)),
+- métodos base como [`On Server Open Connection`](../commands/on-server-open-connection-database-method) y [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
 
-## Sesiones de procedimientos almacenados
+## Stored procedure sessions {#stored-procedure-sessions}
 
-On the server, all [stored procedures](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) share the same virtual user session.
+En el servidor, todos los [procedimientos almacenados](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) comparten la misma sesión de usuario virtual.
 
 ### Utilización
 
-You can share data between all processes of a store procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
 
 ### Disponibilidad
 
 El objeto `session` de los procedimientos almacenados está disponible desde:
 
-- Métodos proyecto que son llamados por el comando [`Execute on Server`](../commands-legacy/execute-on-server.md),
-- ORDA [data model functions](../ORDA/ordaClasses.md) called from a stored procedure,
-- Database methods such as [`On Server Startup`](../commands/on-server-startup-database-method) and [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
+- métodos proyecto que son llamados por el comando [`Execute on Server`](../commands-legacy/execute-on-server.md),
+- las [funciones ORDA del modelo de datos](../ORDA/ordaClasses.md) llamadas desde un procedimiento almacenado,
+- los métodos base como [`On Server Startup`](../commands/on-server-startup-database-method) y [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
-## Standalone sessions
+## Standalone sessions {#standalone-sessions}
 
 Una sesión independiente es la sesión de un solo usuario que se ejecuta cuando trabaja localmente con 4D.
 
 ### Utilización
 
-The standalone session can be used to develop and test your client/server application and its interaction with web sessions and [OTP sharing](#sharing-a-desktop-session-for-web-accesses). You can use the `session` object in your code in standalone session just as the `session` object of the remote sessions.
+La sesión autónoma se puede utilizar para desarrollar y probar su aplicación cliente/servidor y su interacción con sesiones web y [compartir OTP](#sharing-a-desktop-session-for-web-accesses). Puede utilizar el objeto `session` en su código en sesión autónoma igual que el objeto `session` de las sesiones remotas.
 
 ### Disponibilidad
 
-The `session` object of a standalone is available from all methods and code executed on the 4D application.
+El objeto `session` de una aplicación autónoma está disponible desde todos los métodos y código ejecutado en la aplicación 4D.
 
-## Sharing a desktop session for web accesses
+## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
 
-Desktop sessions can be used to handle web accesses to the application by the same user and thus, manage their [privileges](../ORDA/privileges.md). This possibility is particularly useful for Client/Server applications where [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) are used for the interface, running on remote machines. With this configuration, your applications have modern CSS-based web interfaces but still benefit from the power and simplicity of integrated client/server development. En tales aplicaciones, las páginas Qodly se ejecutan dentro de las [áreas Web](../FormObjects/webArea_overview.md) 4D estándar.
+Las sesiones de escritorio pueden utilizarse para gestionar los accesos web a la aplicación por parte del mismo usuario y, de este modo, gestionar sus [privilegios](../ORDA/privileges.md). Esta posibilidad es especialmente útil para aplicaciones Cliente/Servidor en las que se utilizan [páginas Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) para la interfaz, que se ejecutan en máquinas remotas. Con esta configuración, sus aplicaciones disponen de modernas interfaces web basadas en CSS, pero siguen beneficiándose de la potencia y la sencillez del desarrollo cliente/servidor integrado. En tales aplicaciones, las páginas Qodly se ejecutan dentro de las [áreas Web](../FormObjects/webArea_overview.md) 4D estándar.
 
-To manage this configuration in production, you need to use remote user sessions. Actually, requests coming from both the remote 4D application and its Qodly pages loaded in Web areas need to work inside the same session. You just have to share the session between the remote client and its web pages so that you can have the same [session storage](../API/SessionClass.md#storage) and client license, wherever the request comes from (web or remote 4D).
+Para gestionar esta configuración en producción, es necesario utilizar sesiones de usuario remotas. En realidad, las peticiones procedentes tanto de la aplicación 4D remota como de sus páginas Qodly cargadas en áreas Web deben funcionar dentro de la misma sesión. Sólo tiene que compartir la sesión entre el cliente remoto y sus páginas web para que pueda tener la misma [sesión storage](../API/SessionClass.md#storage) y licencia cliente, venga de donde venga la petición (web o 4D remoto).
 
-Note that [privileges](../ORDA/privileges.md) should be set in the session before executing a web request, so that the user automatically gets their privileges for web access (see example). Keep in mind that privileges **only apply to requests coming from the web**.
+Tenga en cuenta que los [privilegios](../ORDA/privileges.md) deben definirse en la sesión antes de ejecutar una petición web, de modo que el usuario obtenga automáticamente sus privilegios para el acceso web (ver el ejemplo). Tenga en cuenta que los privilegios **sólo se aplican a las peticiones procedentes de la web**.
 
-You can develop this configuration in your 4D Developer application (single-user): you can use the [standalone session](#standalone-sessions) to code and test all features related to web access, whether your application is intended for single-user or client/server deployment.
+Puede desarrollar esta configuración en su aplicación 4D Developer (monousuario): puede utilizar la [sesión autónoma](#standalone-sessions) para codificar y probar todas las funcionalidades relacionadas con el acceso web, tanto si su aplicación está pensada para un despliegue monousuario o cliente/servidor.
 
-Las sesiones compartidas se gestionan a través de [tokens OTP](../WebServer/sessions.md#session-token-otp). After you created an OTP token for the desktop session on the server or on the single-user 4D application, you add the token (through the `$4DSID` parameter value) to web requests sent from Web areas containing Qodly pages (or from any web browser) so that the user session on the server or the single-user application is identified and shared. On the web server side, if a web request contains an *OTP id* in the $4DSID parameter, the session corresponding to this OTP token is used.
+Las sesiones compartidas se gestionan con [tokens OTP](../WebServer/sessions.md#session-token-otp). Después de crear un token OTP para la sesión de escritorio en el servidor o en la aplicación monousuario 4D, se añade el token (a través del valor del parámetro `$4DSID`) a las peticiones web enviadas desde las áreas web que contienen páginas Qodly (o desde cualquier navegador web) para que la sesión de usuario en el servidor o en la aplicación monousuario sea identificada y compartida. Del lado del servidor web, si una solicitud web contiene un *id OTP* en el parámetro $4DSID, se utiliza la sesión correspondiente a este token OTP.
 
 :::note
 
-When creating an OTP token in client/server environment, you need to execute the [OTP creation code](../API/SessionClass.md#createotp) **on the server** (the `Session` object is Null on a remote 4D). You can use for example the [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md) database method.
+Cuando se crea un token OTP en un entorno cliente/servidor, es necesario ejecutar el [código de creación de la OTP](../API/SessionClass.md#createotp) **en el servidor** (el objeto `Session` es Null en un 4D remoto). Puede utilizar, por ejemplo, el método base [`On Server Open Connection`](../commands-legacy/on-server-open-connection-database-method.md).
 
 :::
 
 :::tip Entrada de blog relacionada
 
-[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/embed-qodly-pages-in-a-4d-web-area-without-extra-cost)
+[Integre páginas Qodly en un área web 4D sin costo adicional](https://blog.4d.com/embed-qodly-pages-in-a-4d-web-area-without-extra-cost)
 
 :::
 
 ### Ejemplo
 
-In a form, get an OTP and open a Qodly page in a Web area:
+En un formulario, obtenga una OTP y abra una página Qodly en un área Web:
 
 ```4d
 Form.otp:=getOTP
@@ -127,13 +127,13 @@ WA OPEN URL(*; "QodlyPage"; Form.url)
 
 ```
 
-The *getOTP* project method (with the [**Execute on server** property](../Project/project-method-properties.md#execute-on-server) in Client/Server):
+El método de proyecto *getOTP* (con la propiedad [**Ejecutar en el servidor**](../Project/project-method-properties.md#execute-on-server) en Cliente/Servidor):
 
 ```4d
-// In Client Server:
+// En sliente servidor:
 // ----------------
-// Method executed on the server because the session object is on the server
-// The Session object is Null on the client 
+// Método ejecutado en el servidor porque el objeto Session está en el servidor
+// El objeto Session es Null en el cliente 
 //
 
 #DECLARE() : Text
@@ -142,15 +142,15 @@ return Session.createOTP()
 
 ```
 
-Here is the code used to put the "viewProducts" privilege in the session:
+Aquí está el código utilizado para poner el privilegio "viewProducts" en la sesión:
 
 ```4d
-// In Client Server:
+// En cliente/servidor:
 // ----------------
-// This code must be executed on the server because the session object is on the server
-// The Session object is Null on the client 
+// Este código debe ejecutarse en el servidor porque el objeto Session está en el servidor
+// El objeto Session es Null en el cliente 
 
-Session.clearPrivileges() // Clean the session from its old privileges
+Session.clearPrivileges() // Limpia la sesión de sus antiguos privilegios
 Session.setPrivileges("viewProducts")
 ```
 

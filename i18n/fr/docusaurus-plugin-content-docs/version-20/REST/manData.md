@@ -33,7 +33,7 @@ Ajoutez le [`$skip`]($skip.md) (pour définir avec quelle entité commencer) et 
 
 ## Créer et gérer un entity set
 
-An entity set is a collection of entities obtained through a REST request that is stored in 4D Server's cache. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
+Un entity set est une collection d'entités obtenue par une requête REST et stockée dans le cache de 4D Server. L'utilisation d'un entity set vous empêche de lancer continuellement des requêtes à votre application pour obtenir les mêmes résultats. L'accès à un entity set est beaucoup plus rapide et peut améliorer la vitesse de votre application.
 
 Pour créer un entity set, appelez [`$method=entityset`]($method.md#methodentityset) dans votre requête REST. Par mesure de sécurité, vous pouvez également utiliser [`$savedfilter`]($savedfilter.md) et/ou [`$savedorderby`]($savedorderby.md) lorsque vous appelez [`$filter`]($filter.md) et/ou [`$orderby`]($orderby.md) afin que l'entité définie puisse être rapidement récupérée avec le même ID que précédemment, dans le cas où elle expireait ou serait supprimée du serveur.
 

@@ -10,7 +10,7 @@ displayed_sidebar: docs
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
 | docPath | Text | &#8594;  | Name or path of document to get icon, or Empty string for standard Open File dialog box |
-| icon | Picture, Picture | &#8592; | Document icon |
+| icon | Picture | &#8592; | Document icon |
 | size | Integer | &#8594;  | Size of the returned picture (in pixels) |
 
 <!-- END REF-->

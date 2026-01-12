@@ -47,13 +47,13 @@ También puede ejecutar una función utilizando las funciones [`apply()`](#apply
 
 #### Paso de parámetros
 
-Puede pasar parámetros a sus fórmulas utilizando una sintaxis secuencial de parámetros basada en $1, $2...$n. Por ejemplo, puede escribir:
+You can pass parameters to your formulas using a sequential parameter syntax based upon `$1, $2,...,$n`. The numbering of the $ parameters represents the order in which they will be passed to the formula. Por ejemplo, puede escribir:
 
 ```4d
  var $f : Object
  $f:=New object
- $f.message:=Formula(ALERT("Hello "+$1))
- $f.message("John") //muestra "Hello John"
+ $f.message:=Formula(ALERT("Hello "+$2+", "+$1))
+ $f.message("John";"Smith") //displays "Hello Smith, John"
 ```
 
 O utilizando la función [.call()](#call):
@@ -62,7 +62,7 @@ O utilizando la función [.call()](#call):
  var $f : Object
  $f:=Formula($1+" "+$2)
  $text:=$f.call(Null;"Hello";"World") //devuelve "Hello World"
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //devuelve "Welcome to 2019" (por ejemplo)
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) //devuelve "Welcome to 2026" (por ejemplo)
 ```
 
 #### Parámetros de un solo método

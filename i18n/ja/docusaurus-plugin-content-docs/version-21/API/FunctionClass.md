@@ -47,13 +47,13 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 引数の受け渡し
 
-フォーミュラには、<a href="Concepts/parameters.md#順番引数">順番引数シンタックス $1, $2...$n を使用して引数を渡すことができます。 たとえば:
+フォーミュラには、順番引数シンタックス `$1, $2...$n` を使用して引数を渡すことができます。 $ 付きの引数の番号は、それらがフォーミュラに渡される順番を表します。 たとえば:
 
 ```4d
  var $f : Object
  $f:=New object
- $f.message:=Formula(ALERT("Hello "+$1))
- $f.message("John") // "Hello John" を表示します
+ $f.message:=Formula(ALERT("Hello "+$2+", "+$1))
+ $f.message("John";"Smith") //"Hello Smith, John" を表示する
 ```
 
 あるいは、[.call()](#call) 関数を使用して:
@@ -62,7 +62,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
  var $f : Object
  $f:=Formula($1+" "+$2)
  $text:=$f.call(Null;"Hello";"World") // "Hello World" を返します
- $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) // "Welcome to 2019" (例) を返します
+ $text:=$f.call(Null;"Welcome to";String(Year of(Current date))) // "Welcome to 2026" (例) を返します
 ```
 
 #### 単一メソッド用の引数

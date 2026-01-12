@@ -501,7 +501,7 @@ Los siguientes módulos opcionales pueden ser deseleccionados:
 
 ## Página licencias y certificados
 
-The Licenses & Certificate page can be used to:
+La página Licencias y certificado se puede utilizar para:
 
 * designe el número o los números de licencia que desea integrar en su [aplicación ejecutable monopuesto](#application-page),
 * firmar la aplicación mediante un certificado en macOS.

@@ -17,7 +17,7 @@ Os objetos de sessão são retornados pelo comando [`Session`](../commands/sessi
 
 Os seguintes tipos de sessões são suportados por essa classe:
 
-- [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including and REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
+- [**Sessões de usuário web**](WebServer/sessions.md): sessões de usuário web estão disponíveis quando [sessões escaláveis estão habilitadas em seu projeto](WebServer/sessions.md#enabling-web-sessions). They are used for Web connections (including REST access), and are controlled by assigned [privileges](../ORDA/privileges.md).
 - [**Desktop sessions**](../Desktop/sessions.md), which include:
   - [**Remote user sessions**](../Desktop/sessions.md#remote-user-sessions): In client/server applications, remote users have their own sessions managed on the server.
   - [**Stored procedures sessions**](../Desktop/sessions.md#stored-procedure-sessions): Virtual user session for all stored procedures executed on the server.
@@ -25,7 +25,7 @@ Os seguintes tipos de sessões são suportados por essa classe:
 
 :::warning About session privileges
 
-All session types can handle privileges, but only the code executed in [web user sessions](WebServer/sessions.md) is actually controlled by session's privileges.
+All session types can handle privileges, but only the code executed in a **web context** is actually controlled by session's privileges.
 
 :::
 
@@ -85,13 +85,13 @@ This function does not remove **promoted privileges** from the web process, whet
 :::note
 
 Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+
 :::
 
 #### Exemplo
 
 ```4d
 //Invalidate a web user session
-var $isGuest : Boolean
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
@@ -177,6 +177,12 @@ The `.demote()` function <!-- REF #SessionClass.demote().Summary -->removes the 
 If no privilege with *promoteId* was promoted using [`.promote()`](#promote) in the web process, the function does nothing.
 
 If several privileges have been added to the web process, the `demote()` function must be called for each one with the appropriate *promoteId*. Privileges are stacked in the order they have been added to the process, it is recommended to unstack privileges in a LIFO (*Last In, First Out*) order.
+
+:::note
+
+Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+
+:::
 
 #### Exemplo
 
@@ -490,6 +496,7 @@ The `.info` property <!-- REF #SessionClass.info.Summary -->describes the deskto
 
 - **Remote sessions** and **Stored procedure sessions**: The `.info` object is the same object as the one returned in the "session" property by the [`Process activity`](../commands/process-activity.md) command.
 - **Standalone sessions**: The `.info` object is the same object as the one returned by the [`Session info`](../commands/session-info.md) command.
+- **Web user sessions**: The `.info` object contains properties available for web user sessions.
 
 O objeto `.info` contém as seguintes propriedades:
 
@@ -548,7 +555,7 @@ The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns Tr
 
 :::note Compatibidade
 
-In a REST session when the [**Force login mode**](../REST/authUsers.md#force-login-mode) is not enabled, `.isGuest()` returns True if the session has no privileges.
+When the [*forcelogin* mode](../REST/authUsers.md#force-login-mode) is disabled, `.isGuest()` returns True if the session has no privileges.
 
 :::
 
@@ -679,6 +686,12 @@ A função retorna `false` se:
 - a própria sessão original expirou.
 
 Nesse caso, a sessão atual do usuário da Web não é alterada (nenhuma sessão é restaurada).
+
+:::note
+
+Keep in mind that privileges only apply to the code executed through web accesses, whatever the [session type](#session-types) on which this function is executed.
+
+:::
 
 #### Exemplo
 

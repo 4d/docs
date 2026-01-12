@@ -501,11 +501,11 @@ Vous pouvez définir l'option [règle de dépendance](#tags-and-versions) pour u
 
 ![dependency-git-tag](../assets/en/Project/dependency-git-tag.png)
 
-- **La dernière** : Sélectionné par défaut et permet de télécharger la version qui est étiquetée comme la dernière version (stable).
+- **Suivre la version de 4D** (option par défaut, recommandée) : Télécharge la dernière version du composant compatible avec la version courante de 4D. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. Cette option est **recommandée**, en particulier pour les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d).
 - **Jusqu'à la version majeure suivante** : Définit une [plage sémantique de versions](#tags-and-versions) pour limiter les mises à jour à la version majeure suivante.
 - **Jusqu'à la prochaine version mineure** : De même, limite les mises à jour à la version mineure suivante.
 - **Version exacte (balise)** : Sélectionnez ou saisissez manuellement un [tag spécifique](#tags-and-versions) dans la liste disponible.
-- **Suivre la version 4D** : Téléchargez la dernière version du composant compatible avec la version 4D courante. Vous ne pouvez utiliser cette règle de dépendance que si les tags de release des composants respectent la [convention de nommage](#naming-conventions-for-4d-version-tags) appropriée. Cette option est recommandée pour les [composants développés par 4D](../Extensions/overview.md#components-developed-by-4d).
+- **La dernière** : Permet de télécharger la version la plus récente. **Attention :** Bien que l'utilisation de cette option soit pratique au début du développement, il est préférable de l'éviter dans les projets en production ou partagés car elle récupère automatiquement les nouvelles versions, y compris les versions bêta, ce qui peut conduire à des mises à jour non souhaitées ou à des ruptures de compatibilité.
 
 La version courante de la dépendance GitHub est affichée sur le côté droit de l'élément de la dépendance :
 

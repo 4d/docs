@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.SET PICTURE FILE NAME.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture, Picture | &#8594;  | Picture for which to set the default name |
+| picture | Picture | &#8594;  | Picture for which to set the default name |
 | fileName | Text | &#8594;  | Default picture name |
 
 <!-- END REF-->

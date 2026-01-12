@@ -25,7 +25,7 @@ Los siguientes tipos de sesiones están soportados por esta clase:
 
 :::warning Acerca de los privilegios de sesión
 
-Todos los tipos de sesión pueden manejar los privilegios, pero solo el código ejecutado en las [sesiones usuario web](WebServer/sessions.md) está realmente controlado por los privilegios de sesión.
+Todos los tipos de sesión pueden manejar privilegios, pero sólo el código ejecutado en un **contexto web** está realmente controlado por los privilegios de sesión.
 
 :::
 
@@ -85,13 +85,13 @@ Esta función no elimina los **privilegios promovidos** del proceso web, tanto s
 :::note
 
 Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
+
 :::
 
 #### Ejemplo
 
 ```4d
-//Invalidar la sesión de un usuario web
-var $isGuest : Boolean
+//Invalidar una sesión de usuario web
 var $isOK : Boolean
 
 $isOK:=Session.clearPrivileges()
@@ -177,6 +177,12 @@ La función `.demote()` <!-- REF #SessionClass.demote().Summary -->elimina del p
 Si ningún privilegio con *promoteId* fue promovido usando [`.promote()`](#promote) en el proceso web, la función no hace nada.
 
 Si se han añadido varios privilegios al proceso web, se debe llamar a la función `demote()` para cada uno de ellos con el *promoteId* apropiado. Los privilegios se apilan en el orden en que se han añadido al proceso, se recomienda desapilar los privilegios en un orden LIFO (*Last In, First Out*).
+
+:::note
+
+Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
+
+:::
 
 #### Ejemplo
 
@@ -490,6 +496,7 @@ La propiedad `.info` <!-- REF #SessionClass.info.Summary -->describe la sesión 
 
 - **Sesiones remotas** y **Sesiones de procedimientos almacenados**: el objeto `.info` es el mismo objeto que el devuelto en la propiedad "session" por el comando [`Process activity`](../commands/process-activity.md).
 - **Sesiones estándar**: el objeto `.info` es el mismo objeto que el devuelto por el comando [`Session info`](../commands/session-info.md).
+- **Sesiones usuario web**: el objeto `.info` contiene las propiedades disponibles para las sesiones de usuario web.
 
 El objeto `.info` contiene las siguientes propiedades:
 
@@ -548,7 +555,7 @@ La función `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->devuelve Tr
 
 :::note Compatibilidad
 
-En una sesión REST cuando el modo [**Forzar inicio de sesión**](../REST/authUsers.md#force-login-mode) no está activado, `.isGuest()` devuelve True si la sesión no tiene privilegios.
+Cuando el [modo *forcelogin*](../REST/authUsers.md#force-login-mode) está desactivado, `.isGuest()` devuelve True si la sesión no tiene privilegios.
 
 :::
 
@@ -679,6 +686,12 @@ La función devuelve `false` si:
 - la propia sesión original ha caducado.
 
 En este caso, la sesión actual de usuario web se deja sin tocar (no se restaura la sesión).
+
+:::note
+
+Tenga en cuenta que los privilegios sólo se aplican al código ejecutado a través de accesos web, sea cual sea el [tipo de sesión](#session-types) sobre el que se ejecuta esta función.
+
+:::
 
 #### Ejemplo
 

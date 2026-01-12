@@ -316,4 +316,4 @@ See [Users and sessions](../REST/authUsers.md) to know the recommended way to co
 
 :::
 
-このオプションにより、ユーザーはカレントプロジェクトの [Qodly Studio](../WebServer/qodly-studio.md) にアクセスできるようになります。 [アプリケーションレベル](../Admin/webAdmin.md) でグローバルアクセスが許可されている必要があることに注意してください。
+このオプションにより、ユーザーはカレントプロジェクトの [Qodly Studio](developer.4d.com/qodly/) にアクセスできるようになります。 [アプリケーションレベル](../Admin/webAdmin.md) でグローバルアクセスが許可されている必要があることに注意してください。

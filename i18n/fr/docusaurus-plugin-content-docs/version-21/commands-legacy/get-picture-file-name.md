@@ -9,7 +9,7 @@ displayed_sidebar: docs
 <!--REF #_command_.Get picture file name.Params-->
 | Paramètre | Type |  | Description |
 | --- | --- | --- | --- |
-| image | Picture, Picture | &#8594;  | Image dont vous souhaitez obtenir le nom par défaut |
+| image | Picture | &#8594;  | Image dont vous souhaitez obtenir le nom par défaut |
 | Résultat | Text | &#8592; | Nom par défaut du fichier image |
 
 <!-- END REF-->

@@ -97,7 +97,7 @@ Lisez [**Les nouveautés de 4D 20 R7**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Prise en charge des [singletons de session](../Concepts/classes.md#singleton-classes) et nouvelle propriété de classe [`.isSessionSingleton`](../API/ClassClass.md#issessionsingleton).
 - Nouveau [mot-clé fonction `onHTTPGet`](../ORDA/ordaClasses.md#onhttpget-keyword) pour définir des fonctions singleton ou ORDA qui peuvent être appelées par des [requêtes HTTP REST GET](../REST/ClassFunctions.md#function-calls).
 - Nouvelle classe [`4D.OutgoingMessage`](../API/OutgoingMessageClass.md) pour que le serveur REST retourne n'importe quel contenu web.
-- Qodly Studio : Vous pouvez maintenant [attacher le débogueur Qodly à 4D Server](../WebServer/qodly-studio.md#using-qodly-debugger-on-4d-server).
+- Qodly Studio : Vous pouvez maintenant [attacher le débogueur Qodly à 4D Server](developer.4d.com/qodly/4DQodlyPro/debugging#using-qodly-debugger-on-4d-server).
 - Nouvelles clés Build Application pour que les applications 4D distantes valident les [signatures](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateAuthoritiesCertificates.300-7425900.fe.html) et/ou les [domaines](https://doc.4d.com/4Dv20R7/4D/20-R7/CertificateDomainName.300-7425906.fe.html) des autorités de certification des serveurs.
 - Possibilité de [construire des applications autonomes sans licences intégrées](../Desktop/building.md#licenses).
 - Langage 4D :
@@ -153,7 +153,7 @@ Lisez [**Les nouveautés de 4D 20 R5**](https://blog.4d.com/fe-whats-new-in-4d-2
 - Prise en charge des [restricted entity selections](../ORDA/entities.md#restricting-entity-selections).
 - Prise en charge des [classes partagées](../Concepts/classes.md#shared-classes) et des [classes singleton](../Concepts/classes.md#singleton-classes). Nouvelles propriétés de classe : [`isShared`](../API/ClassClass.md#isshared), [`isSingleton`](../API/ClassClass.md#issingleton), [`me`](../API/ClassClass.md#me).
 - Prise en charge de l'[initialisation d'une propriété de classe dans sa ligne de déclaration](../Concepts/classes.md#initializing-the-property-in-the-declaration-line).
-- Nouveau [mode de connexion force login pour les requêtes REST](../REST/authUsers.md#force-login-mode) avec une [prise en charge spécifique dans Qodly Studio for 4D](../WebServer/qodly-studio.md#force-login).
+- Nouveau [mode de connexion force login pour les requêtes REST](../REST/authUsers.md#force-login-mode) avec une [prise en charge spécifique dans Qodly Studio for 4D](\(developer.4d.com/qodly/4DQodlyPro/force-login\)).
 - Nouveau paramètre REST [$format](../REST/$format.md).
 - L'objet [`Session`](../commands/session.md) est maintenant disponible pour les sessions utilisateur à distance et les procédures stockées.
 - [**Liste des bugs corrigés**](https://bugs.4d.fr/fixedbugslist?version=20_R5) : liste de tous les bugs qui ont été corrigés dans 4D 20 R5.

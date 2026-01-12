@@ -5,11 +5,11 @@ slug: /commands/get-picture-keywords
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* : Picture, Picture ; *arrKeywords* : Text array {; *} )<!-- END REF-->
+<!--REF #_command_.GET PICTURE KEYWORDS.Syntax-->**GET PICTURE KEYWORDS** ( *picture* : Picture ; *arrKeywords* : Text array {; *} )<!-- END REF-->
 <!--REF #_command_.GET PICTURE KEYWORDS.Params-->
 | Parameter | Type |  | Description |
 | --- | --- | --- | --- |
-| picture | Picture, Picture | &#8594;  | Picture for which to get associated keywords |
+| picture | Picture | &#8594;  | Picture for which to get associated keywords |
 | arrKeywords | Text array | &#8592; | Array containing extracted keywords |
 | * | Operator | &#8594;  | If passed = use distinct values |
 

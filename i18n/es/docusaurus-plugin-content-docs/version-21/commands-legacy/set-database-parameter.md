@@ -221,6 +221,26 @@ Estos archivos texto almacenan en formato tabulado simple diferente información
 
 **Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
 
+**Alcance**: todos los equipos 4D remotos
+
+**Se conserva entre dos sesiones**: sí
+
+**Valores posibles**: ver selector 18
+
+**Descripción**: permite especificar esta parámetro para las máquinas 4D remotas utilizadas como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir este valor sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
+
+
+### Client port ID (22)
+
+**Alcance**: todos los equipos 4D remotos
+
+ **Se conserva entre dos sesiones**: sí
+
+ **Valores posibles**: ver selector 15
+
+**Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
 
 
 
@@ -245,9 +265,9 @@ Cuando modifica este valor, es necesario reiniciar el equipo servidor para que e
 
 ### Client Web log recording (30)
 
-**Alcance**: todos los equipos 4D remotos
+**Alcance**: aplicación 4D a menos que valor sea negativo
 
- **Se conserva entre dos sesiones**: sí
+**Se conserva entre dos sesiones:** no
 
  **Valores posibles**: 0 = No grabar (por defecto), 1 = Registrar en formato CLF, 2 = Registrar en formato DLF, 3 = Registrar en formato ELF, 4 = Registrar en formato WLF.
 
@@ -296,7 +316,7 @@ Si pasa String type with time zone en este selector, convertirá las fechas 4D e
 
 **Alcance**: aplicación 4D
 
-**Se conserva entre dos sesiones**: no
+ **Se conserva entre dos sesiones**: sí
 
 **Descripción**: inicia o detiene la grabación secuencial de los eventos a nivel de programación de 4D en el archivo 4DDebugLog, que se ubica automáticamente en la subcarpeta Logs de la base de datos, junto al archivo de estructura. Un nuevo formato texto tabulado, más compacto se utiliza en el archivo de registro de eventos "4DDebugLog \[\_n\].txt" a partir de 4D v14 (donde \_n es el número de segmento del archivo y *Server* se añade al nombre del archivo cuando se genera en el servidor). Hay dos modos disponibles:
 
@@ -575,6 +595,8 @@ O
 SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 ```
 
+ SET DATABASE PARAMETER(Log command list;"277;341") //Graba solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+ 
 
 
 ### Max concurrent Web processes (18)

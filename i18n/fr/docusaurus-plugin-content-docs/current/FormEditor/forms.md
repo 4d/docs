@@ -16,7 +16,7 @@ Les formulaires peuvent également contenir d'autres formulaires grâce aux fonc
 
 Vous pouvez ajouter ou modifier des formulaires 4D à l'aide des éléments suivants :
 
-- **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l' **Explorateur**.
+- **L'interface 4D Developer :** Créez de nouveaux formulaires à partir du menu **Fichier** ou de la fenêtre de l'**Explorateur**.
 - **L'éditeur de formulaires **: Modifiez vos formulaires à l'aide de l'**[éditeur de formulaires](FormEditor/formEditor.md)**.
 - **Le code JSON :** Créez et concevez vos formulaires à l'aide de JSON et enregistrez les fichiers de formulaire à [l'emplacement approprié](Project/architecture#sources). Voici un exemple :
 
@@ -85,10 +85,10 @@ Chaque formulaire est composé d'au moins deux pages :
 
 Vous pouvez créer plusieurs pages pour un formulaire d'entrée. Si le nombre de champs ou de variables est supérieur au nombre maximal supporté sur un écran, vous pouvez créer des pages supplémentaires pour les afficher. Plusieurs pages vous permettent d'effectuer les opérations suivantes :
 
-- Placez les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
-- Organisez chaque sujet sur sa propre page.
-- Réduir ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
-- Prévoyez de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
+- Placer les informations les plus importantes sur la première page et les informations les moins importantes sur les autres pages.
+- Organiser chaque sujet sur sa propre page.
+- Réduire ou éliminer le défilement pendant la saisie des données en définissant [l'ordre de saisie](formEditor.md#data-entry-order).
+- Définir de l'espace autour des éléments du formulaire pour un design d'écran attrayant.
 
 Les pages multiples sont utiles uniquement pour les formulaires d'entrée. Elles ne sont pas destinées à être imprimées. Lorsqu'un formulaire de plusieurs pages est imprimé, seule la première page est imprimée.
 
@@ -96,7 +96,13 @@ Il n'y a aucune restriction sur le nombre de pages qu'un formulaire peut conteni
 
 Un formulaire multi-pages contient à la fois une page d'arrière-plan et plusieurs pages d'affichage. Les objets placés sur la page d'arrière-plan peuvent être visibles sur toutes les pages d'affichage, mais il ne peuvent être sélectionnés et modifiés que sur la page d'arrière-plan. Dans les formulaires multi-pages, vous devez placer votre palette de boutons sur la page d'arrière-plan. Vous devez également inclure un ou plusieurs objets sur la page d'arrière-plan qui fournissent à l'utilisateur des outils de navigation de page.
 
-## Rendu Fluent UI (Developer Preview)
+## Rendu Fluent UI
+
+:::caution Developer Preview
+
+La prise en charge de Fluent UI est actuellement en phase d'aperçu pour les développeurs. Il ne doit pas être utilisé en production.
+
+:::
 
 Sous Windows, 4D prend en charge le rendu de formulaire **Fluent UI**, l'interface utilisateur graphique moderne de Microsoft, basée sur la technologie **WinUI 3**. **WinUI 3** est la base du Windows App SDK et représente les prochaines interfaces graphiques de Windows.
 
@@ -106,29 +112,26 @@ Le rendu Fluent UI offre des contrôles modernes et agréables, la prise en char
 | --------------------------------------- | -------------------------------------------- |
 | ![](../assets/en/FormEditor/fluent.png) | ![](../assets/en/FormEditor/fluent-dark.png) |
 
-:::caution Developer Preview
-
-La prise en charge de Fluent UI est actuellement en phase d'aperçu pour les développeurs. Il ne doit pas être utilisé en production.
-
-:::
-
 :::info Disponibilité
 
-This feature can be used **in 4D projects on Windows**. It is not available on macOS or in binary 4D databases on Windows.
+Cette fonction peut être utilisée **dans les projets 4D sous Windows**. Elle n'est pas disponible sur macOS ou dans les bases de données binaires 4D sous Windows.
 
 :::
 
-:::tip Article(s) de blog sur le sujet
+:::tip Articles de blog sur le sujet
 
-[Modernisez vos interfaces 4D avec Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)
+[Modernisez vos interfaces 4D avec Fluent UI](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui)<br/>
+[Déployez Fluent UI sans effort dans vos applications 4D](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)
 
 :::
 
 ### Conditions requises
 
-Le rendu Fluent UI nécessite l'installation du [**Windows App SDK version 1.7.3**](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Vous devez installer ce SDK sur toute machine Windows affichant vos formulaires.
+Le rendu Fluent UI nécessite que **Windows App SDK** soit installé sur votre machine. Vous devez vous assurer que ce SDK est installé sur toute machine Windows affichant vos formulaires.
 
-Si le Windows App SDK n'est pas correctement installé, 4D utilisera le rendu classique pour vos formulaires sans erreur.
+[Si nécessaire](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications), vous pouvez installer le Windows App SDK. Pour plus de commodité, le programme d'installation 4D [fournit un lien](../GettingStarted/Installation.md#installation-on-disk) pour télécharger le programme d'installation Windows App SDK. Vous pouvez également vous rendre sur la [page de téléchargement Microsoft](https://learn.microsoft.com/en-us/windows/apps/windows-app-sdk/downloads). Nous recommandons d'utiliser la version référencée par le programme d'installation de 4D, qui offre une compatibilité optimale.
+
+Si Windows App SDK n'est pas correctement installé, 4D rendra tous vos formulaires en mode classique sans erreur et le warning suivant sera enregistré dans le [journal de diagnostic](../Debugging/debugLogFiles.md#4ddiagnosticlogtxt) : "Fluent UI is required but not available. The application runs in the Classic Windows look."
 
 ### Activer le rendu Fluent UI
 
@@ -142,6 +145,12 @@ Cochez l'option **Utiliser Fluent UI sous Windows** dans la page "Interface" de 
 
 Dans ce cas, le mode de rendu Fluent UI sera utilisé par défaut sur Windows pour tous les formulaires.
 
+:::note
+
+Si la configuration courante n'est pas conforme aux [conditions requises pour Fluent UI](#requirements), un message d'erreur s'affiche à côté de la case à cocher.
+
+:::
+
 #### Paramètres du formulaire
 
 Chaque formulaire peut définir son propre rendu via la propriété **Apparence des contrôles**. Les options suivantes sont disponibles :
@@ -153,23 +162,22 @@ Chaque formulaire peut définir son propre rendu via la propriété **Apparence 
 
 La [propriété de formulaire JSON](./properties_JSONref.md) correspondante est `fluentUI` avec la valeur undefined (i.e. hérité, valeur par défaut), "true" ou "false".
 
+#### CSS
+
+Le [media query CSS **form-theme**](./createStylesheet.md#media-queries) vous permet de configurer plusieurs styles en fonction du thème utilisé.
+
 ### Comportements spécifiques
 
 Lorsque vous utilisez les formulaires 4D avec le rendu Fluent UI, vous devez prêter attention aux points suivants :
 
-- La nouvelle commande `FORM Windows theme` renvoie le thème d'affichage actuel du formulaire courant. Valeurs possibles : "Classic" ou "FluentUI". S'il n'y a pas de formulaire courant ou si la commande est appelée sous macOS, une chaîne vide est renvoyée.
+- La commande [`FORM theme`](../commands/form-theme.md) renvoie le thème d'affichage réel du formulaire courant. Valeurs possibles : "Classic" ou "FluentUI". S'il n'y a pas de formulaire courant ou si la commande est appelée sous macOS, une chaîne vide est renvoyée.
+- La commande [`Application info`](../commands/application-info.md) vous permet de savoir si Fluent UI peut être utilisé (propriété `canUseFluentUI`) ou est utilisé (propriété `useFluentUI`).
 - Si [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) est appelée dans le contexte d'un formulaire, les informations renvoyées concernent l'apparence courante du formulaire (Classic ou FluentUI). Si la commande est appelée en dehors du contexte d'un formulaire, les informations renvoyées concernent les [propriétés globales du projet](#application-setting).
 - [`SET MENU ITEM STYLE`](../commands-legacy/set-menu-item-style.md) avec le paramètre *itemStyle* `Underline` n'est pas pris en charge (ignoré) pour les menus pop up.
 - L'objet de formulaire [Stepper](../FormObjects/stepper.md) ne prend pas en charge l'événement [double-clic](../Events/onDoubleClicked.md).
 - Les [boutons circulaires](../FormObjects/button_overview.md#circle) sont pris en charge (comme sur macOS).
 - Les commandes [`WA ZOOM IN`](../commands-legacy/wa-zoom-in.md) / [`WA ZOOM OUT`](../commands-legacy/wa-zoom-out.md) ne sont pas prises en charge dans les zones Web avec moteur de rendu système.
 - Un rectangle de focus peut être ajouté aux [zones de saisie](../FormObjects/input_overview.md) image et texte.
-
-:::info Limitations
-
-Cette **Developer preview** comporte certaines limitations, [listées dans l'article de blog qui lui est consacré](https://blog.4d.com/modernize-your-4d-interfaces-with-fluent-ui).
-
-:::
 
 ## Formulaires hérités
 

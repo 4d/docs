@@ -1,6 +1,6 @@
 ---
 id: building
-title: Application Builder
+title: アプリケーションビルダー
 ---
 
 4D にはプロジェクトパッケージ (ファイナルビルド) を作成するためのアプリケーションビルダーが統合されています。 このビルダーを使用すれば、コンパイルされた 4D アプリケーションの展開を簡易化することができます。 OS ごとに異なる特定の処理を自動で処理し、クライアント/サーバーアプリケーションの展開が容易になります。
@@ -407,8 +407,8 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 この機能を有効化するためには、 *buildApp* 設定ファイルに `DatabaseToEmbedInClientWinFolder` または `DatabaseToEmbedInClientMacFolder` キーを追加します。 いずれかのキーが存在する場合、アプリケーションビルドプロセスの途中で組み込みシングルユーザーアプリケーションが生成され、コンパイルされたストラクチャーが(EnginedServer.4Dlink ファイルの代わりに) "Database" フォルダー内に置かれます。
 
-- If a default data folder exists in the single-user application, a license is embedded.
-- If no default data folder exists in the single-user application, it will be executed without data file and without license.
+- シングルユーザーアプリケーション内に "Default Data" フォルダーがあれば、アプリケーションにはライセンスが埋め込まれます。
+- シングルユーザーアプリケーション内に "Default Data" フォルダーがなければ、データファイルおよびライセンスなしでアプリケーションが実行されます。
 
 基本シナリオは以下の通りです:
 
@@ -501,7 +501,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ## ライセンス＆証明書ページ
 
-The Licenses & Certificate page can be used to:
+ライセンス&証明書のページでは、次のようなことができます:
 
 - [スタンドアロン](#アプリケーションページ)アプリケーションまたは[クライアントサーバー](#クライアントサーバーページ) アプリケーションに統合したい[運用ライセンス](../Admin/licenses.md#運用ライセンス) を設定します。
 - macOS 環境下では、証明書を使用してアプリケーションに署名をすることができます。
@@ -536,7 +536,7 @@ The Licenses & Certificate page can be used to:
 
 - [`License info`](../commands/license-info.md) コマンドを使用するとアプリケーションライセンスのタイプ (*.attributes* コレクション) およびそれらの有効期限 (*.expirationDate* オブジェクト) を知ることができます。
 - BuildApplication の[`EvaluationMode`](https://doc.4d.com/4Dv20R8/4D/20-R8/EvaluationMode.300-7542468.ja.html) xml キーを使用すると、評価版を管理することができます。
-- The [`CHANGE LICENSES`](../commands-legacy/change-licenses.md) command does nothing when called from an evaluation version.
+- [`CHANGE LICENSES`](../commands-legacy/change-licenses.md) コマンドは、評価版から呼び出された場合には何もしません。
 
 :::
 

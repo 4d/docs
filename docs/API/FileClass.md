@@ -554,6 +554,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 |Release|Changes|
 |---|---|
+|21 R2|support of removeFluentUI|
 |20 R9|Read UUIDs in macOS executables|
 |20|Support of WinIcon|
 |19|Added|
@@ -570,7 +571,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of an application file<!-- END REF -->. It is designed for developers who want to customize their 4D application building chain.  
 
 The function can only be used with the following file types: **.plist** (all platforms), existing **.exe**/**.dll** (Windows), or **macOS executable**. If used with another file type or with a **.exe**/**.dll** file that does not already exist on disk, the function does nothing (no error is generated). 
 
@@ -600,14 +601,15 @@ Each valid property set in the *info* object parameter is written in the version
 
 |Property|Type|Comment|
 |---|---|---|
-|InternalName|Text||
-|ProductName|Text||
 |CompanyName|Text||
-|LegalCopyright|Text||
-|ProductVersion|Text||
 |FileDescription|Text||
 |FileVersion|Text||
+|InternalName|Text||
+|LegalCopyright|Text||
 |OriginalFilename|Text||
+|ProductName|Text||
+|ProductVersion|Text||
+|removeFluentUI|Boolean|Can only be used with a merged 4D application (.exe file). Pass True to replace the *manifest* referencing the embedded Windows App SDK (required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering)) and the *.pri* file with versions allowing the use of a Windows App SDK installed in the OS. Using a local SDK allows to reduce the size of the generated application (you also need remove the default embedded files). Passing False or omitting the property does nothing.|
 |WinIcon|Text|Posix path of .ico file. This property applies only to 4D generated executable files.|
 
 For all properties except `WinIcon`, if you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.

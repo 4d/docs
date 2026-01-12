@@ -1,6 +1,6 @@
 ---
 id: project-method-properties
-title: Project Method Properties
+title: Propriétés des méthodes projet
 ---
 
 Après avoir créé une méthode projet, vous pouvez la renommer et modifier ses propriétés. Les propriétés des méthodes projet définissent principalement leurs conditions d’accès et de sécurité (accès par les utilisateurs, les serveurs intégrés ou les services) ainsi que leur mode d'exécution.
@@ -22,9 +22,9 @@ Le nouveau nom doit respecter les règles de nommage 4D (voir [Identifiants](../
 
 :::caution
 
-Changing the name of a method already used in the project can invalidate any methods or formulas that use the old method name and runs the risk of disrupting application functioning. It is strongly recommended to use the [renaming function for project methods](../Project/search-replace.md#renaming-project-methods-and-variables). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
+Renommer une méthode déjà utilisée dans le projet peut invalider les méthodes ou formules qui utilisent l'ancien nom de la méthode et risque de perturber le fonctionnement de l'application. Il est fortement recommandé d'utiliser la [fonction de renommage des méthodes projet](../Project/search-replace.md#renaming-project-methods-and-variables). Avec cette fonction, vous pouvez mettre à jour automatiquement le nom où la méthode partout où elle est appelée dans l'environnement de développement.
 
-Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. You may want to specify a method owner so that only certain users can change the method's name.
+Avec 4D Server, le nom de la méthode est changé sur le serveur lorsque vous avez fini de le modifier. Si plus d'un utilisateur modifie le nom de la méthode en même temps, le nom final de la méthode sera le nom spécifié par le dernier utilisateur ayant terminé de l'éditer. Vous pouvez spécifier un propriétaire de la méthode afin que seuls certains utilisateurs puissent changer le nom de la méthode.
 
 :::
 

@@ -53,10 +53,10 @@ L'ancienne syntaxe de déclaration, où les paramètres sont automatiquement cop
 
 ## Déclaration des paramètres
 
-Inside called methods or class functions, you declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+À l'intérieur des méthodes ou des fonctions de classe appelées, vous déclarez des paramètres en utilisant un **nom de paramètre** ainsi qu'un **type de paramètre**, séparés par deux points.
 
-- For class functions, parameters are declared along with the function prototype, i.e. when using the `Function` or `Class Constructor` keywords.
-- Pour les méthodes (méthodes projet, méthodes d'objets de formulaire, méthodes de base de données et triggers), les paramètres sont déclarés à l'aide du mot-clé **`#DECLARE`** au début du code de la méthode.
+- Pour les fonctions de classe, les paramètres sont déclarés avec le prototype de la fonction, c'est-à-dire lors de l'utilisation des mots-clés `Function` ou `Class constructor`.
+- Pour les méthodes (méthodes projet, méthodes objets de formulaire, méthodes base et triggers), les paramètres sont déclarés à l'aide du mot-clé **`#DECLARE`** au début du code de la méthode.
 
 :::info Compatibilité
 
@@ -112,7 +112,7 @@ $entitySelection:=ds.User.query("login=:1"; $user)
 
 :::note
 
-Do not confuse **parameter declarations** with [**variable declarations**](variables.md#declaring-variables). Using the `var` keyword with parameters will generate errors.
+Ne confondez pas les **déclarations de paramètres** avec les [**déclarations de variables**](variables.md#declaring-variables). L'utilisation du mot-clé `var` avec des paramètres génère des erreurs.
 
 :::
 
