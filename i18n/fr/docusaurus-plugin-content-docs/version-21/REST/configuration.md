@@ -3,7 +3,7 @@ id: configuration
 title: Configuration du serveur
 ---
 
-Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your application directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
+En utilisant des requêtes HTTP standard, le serveur 4D REST permet aux applications externes d'accéder directement aux données de votre application, c'est-à-dire de récupérer des informations sur les dataclass de votre projet, de manipuler des données, de se connecter à votre application web, et bien d'autres choses encore.
 
 Pour commencer à utiliser les fonctionnalités REST, vous devez démarrer et configurer le serveur 4D REST.
 
@@ -56,9 +56,9 @@ Pour supprimer l'exposition REST d'une table :
 
 1. Affichez l'Inspecteur de table dans l'Editeur de structure et sélectionnez la table à modifier.
 
-2. Uncheck the **Expose as REST resource** option:
+2. Décochez l'option **Exposer avec le service REST** :
    ![alt-text](../assets/en/REST/table.png)
-   Do this for each table whose exposure needs to be modified.
+   Procédez ainsi pour chaque table dont l'exposition doit être modifiée.
 
 ### Exposer des champs
 

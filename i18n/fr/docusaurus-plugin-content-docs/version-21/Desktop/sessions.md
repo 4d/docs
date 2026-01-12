@@ -11,7 +11,7 @@ Toutefois, à la différence du code exécuté dans les sessions utilisateurs We
 
 Vous pouvez néanmoins [**partager** une session desktop avec une session web](#sharing-a-desktop-session-for-web-accesses) afin qu'un utilisateur desktop puisse accéder à votre application 4D par le biais d'une interface web, en utilisant par exemple des pages Qodly et des zones web.
 
-## Session types {#session-types}
+## Types de sessions {#session-types}
 
 Les sessions desktop comprennent :
 
@@ -29,13 +29,13 @@ Le diagramme suivant montre les différents types de sessions et leur interactio
 
 ![](../assets/en/Desktop/sessions.png)
 
-## Remote user sessions {#remote-user-sessions}
+## Sessions utilisateurs distants {#remote-user-sessions}
 
 Sur le serveur, dans les "process utilisateur" (c'est-à-dire les process liés aux utilisateurs distants), la commande [`Session`](../commands/session.md) renvoie un objet `session` décrivant la session de l'utilisateur courant. Cet objet est géré via les fonctions et les propriétés de la classe [`Session`](../API/SessionClass.md).
 
 :::note
 
-On a remote 4D, the [`Session`](../commands/session) command always returns null.
+Sur un 4D distant, la commande [`Session`](../commands/session) renvoie toujours null.
 
 :::
 
@@ -62,13 +62,13 @@ L'objet `session` de l'utilisateur distant est disponible depuis :
 - Les [fonctions ORDA du modèle de données](../ORDA/ordaClasses.md) (sauf celles déclarées avec le mot-clé [`local`](../ORDA/ordaClasses.md#local-functions)),
 - Les méthodes base telles que [`On Server Open Connection`](../commands/on-server-open-connection-database-method) et [`On Server Close Connection`](../commands/on-server-close-connection-database-method).
 
-## Stored procedure sessions {#stored-procedure-sessions}
+## Sessions de procédures stockées {#stored-procedure-sessions}
 
-Sur le serveur, toutes les [procédures stockées] (https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) partagent la même session utilisateur virtuelle.
+Sur le serveur, toutes les [procédures stockées](https://doc.4d.com/4Dv20/4D/20/Stored-Procedures.300-6330553.en.html) partagent la même session utilisateur virtuelle.
 
 ### Utilisation
 
-You can share data between all processes of a stored procedure session using the [`session.storage`](../API/SessionClass.md#storage) shared object.
+Vous pouvez partager des données entre tous les process d'une session de procédure stockée à l'aide de l'objet partagé [`session.storage`](../API/SessionClass.md#storage).
 
 ### Disponibilité
 
@@ -78,7 +78,7 @@ L'objet `session` des procédures stockées est disponible depuis :
 - les [fonctions ORDA du modèle de données](../ORDA/ordaClasses.md) appelées à partir d'une procédure stockée,
 - les méthodes base telles que [`On Server Startup`](../commands/on-server-startup-database-method) et [`On Server Shutdown`](../commands/on-server-shutdown-database-method).
 
-## Standalone sessions {#standalone-sessions}
+## Sessions autonomes {#standalone-sessions}
 
 Une session autonome est une session mono-utilisateur qui s'exécute lorsque vous travaillez localement avec 4D.
 
@@ -90,7 +90,7 @@ La session autonome peut être utilisée pour développer et tester votre applic
 
 L'objet `session` d'une application autonome est disponible pour toutes les méthodes et le code exécutés sur l'application 4D.
 
-## Sharing a desktop session for web accesses {#sharing-a-desktop-session-for-web-accesses}
+## Partage d'une session desktop pour les accès web {#sharing-a-desktop-session-for-web-accesses}
 
 Les sessions desktop peuvent être utilisées pour gérer les accès web d'un même utilisateur à l'application et ainsi contrôler ses [privilèges](../ORDA/privileges.md). Cette possibilité est particulièrement utile pour les applications Client/serveur dans lesquelles des [pages Qodly](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) sont utilisées pour l'interface, sur des machines clientes distantes. Avec cette configuration, vos applications disposent d'interfaces web modernes basées sur les CSS, tout en bénéficiant de la puissance et de la simplicité du développement intégré client/serveur. Dans ces applications, les pages Qodly sont exécutées dans des [zones Web](../FormObjects/webArea_overview.md) 4D standard.
 

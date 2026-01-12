@@ -60,7 +60,7 @@ exposed Function authentify({params : type}) {-> result : type}
 
 La fonction `authentify()` doit être implémentée dans la [classe DataStore](../ORDA/ordaClasses.md#datastore-class) du projet et doit être appelée par une requête REST.
 
-This function is the only available entry point from REST guest sessions when the "force login" mode is enabled: any other function call or data access is rejected until the [`.setPrivileges()`](../API/SessionClass.md#setprivileges) function is called and the session acquires appropriate privileges.
+Cette fonction est le seul point d'entrée disponible pour les sessions guest REST lorsque le mode "force login" est activé : tout autre appel de fonction ou accès aux données est rejeté jusqu'à ce que la fonction [`.setPrivileges()`](../API/SessionClass.md#setprivileges) soit appelée et que la session acquière les privilèges appropriés.
 
 :::note
 

@@ -39,7 +39,7 @@ title: 変換タグ
 
 *テンプレート* ソースの解析は、2つのコンテキストでおこなわれます:
 
-- `PROCESS 4D TAGS` コマンド使用時: このコマンドは *テンプレート* に加えて任意の引数を受け入れ、処理の結果であるテキストを返します。
+- Using the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command; this command accepts a *template* as input, as well as optional parameters and returns a text resulting from the processing.
 
 - 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページを解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: <http://www.server.com/dir/page.shtm>)。
 
@@ -157,10 +157,10 @@ End if
 
 4DCODE タグの機能は以下の通りです:
 
-- `TRACE` コマンドがサポートされています。これは 4Dデバッガーを起動するので、テンプレートコードをデバッグすることができます。
+- The [`TRACE`](../commands-legacy/trace.md) command is supported and activates the [4D debugger](../Debugging/debugger.md), thus allowing you to debug your template code.
 - エラーは標準のエラーダイアログを表示します。 これを使って、ユーザーはコードの実行を中止したりデバッグモードに入ったりすることができます。
 - `<!--#4DCODE` と `-->` の間のテキストは改行され、どのような改行コードでも受け取ります (cr、lf、または crlf)。
-- テキストは `PROCESS 4D TAGS` を呼び出したデータベースのコンテキストにてトークナイズされます。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。
+- The text is tokenized within the context of the database that called [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md). これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。
 - テキストが常に English-US設定であったとしても、4Dのバージョン間においてコマンドや定数名が改名されることによる問題を避けるため、コマンド名や定数名はトークンシンタックスを使用することが推奨されいます。
 
 > 4DCODE タグがあらゆる 4Dランゲージコマンドおよびプロジェクトメソッドを呼び出せるという事実は、とくにデータベースが HTTP経由で使用可能な場合等に、セキュリティ上の問題になり得ます。 しかしながら、タグはサーバー側のコードをテンプレートファイルから実行するため、タグそのものはセキュリティ上の問題になりません。 このようなコンテキストにおいては、あらゆる Webサーバーと同様に、セキュリティは主にサーバーファイルへのリモートアクセスレベルにおいて管理されています。
@@ -256,7 +256,7 @@ End if
     </table>
 ```
 
-#### 例題: `PROCESS 4D TAGS`
+#### Example with [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
 
 ```4d
 var customers : cs.CustomersSelection
@@ -430,7 +430,7 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
 
 `<!--#4DINCLUDE -->` コメントで挿入されたページは、URLで呼ばれたページや `WEB SEND FILE` コマンドで送信されたページと同じように、Webサーバーキャッシュにロードされます。
 
-*path* には、挿入するドキュメントのパスを記述します。 警告: `4DINCLUDE` を呼び出す場合、パスは解析される親ドキュメントを起点とした相対パスです。 フォルダ区切り文字にはスラッシュ (/) を使用し、レベルをさかのぼるには 2つのドット (..)  を使用します (HTMLシンタックス)。 を使用します (HTMLシンタックス)。 を使用します (HTMLシンタックス)。 を使用します (HTMLシンタックス)。 を使用します (HTMLシンタックス)。 を使用します (HTMLシンタックス)。 を使用します (HTMLシンタックス)。 `PROCESS 4D TAGS` コマンドで `4DINCLUDE` タグを使用する場合のデフォルトフォルダーはプロジェクトフォルダーです。
+*path* には、挿入するドキュメントのパスを記述します。 警告: `4DINCLUDE` を呼び出す場合、パスは解析される親ドキュメントを起点とした相対パスです。 フォルダ区切り文字にはスラッシュ (/) を使用し、レベルをさかのぼるには 2つのドット (..)  を使用します (HTMLシンタックス)。 When you use the `4DINCLUDE` tag with the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command, the default folder is the project folder.
 
 > `4DINCLUDE` タグで使用されるデフォルトフォルダーは [`<!--#4DBASE -->`](#4dbase) タグを使って変更できます。
 
@@ -507,15 +507,13 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
 
 このシンタックスでは、メソッドが `true` を返す間ループがおこなわれます。 メソッドは、倍長整数タイプの引数を受け取ります。 まずメソッドは引数 0 を渡されます。これは (必要に応じて) 初期化ステージとして使用できます。その後、`true` が返されるまで 1, 2, 3 と渡される引数値がインクリメントされます。 メソッドは、倍長整数タイプの引数を受け取ります。 まずメソッドは引数 0 を渡されます。これは (必要に応じて) 初期化ステージとして使用できます。その後、`true` が返されるまで 1, 2, 3 と渡される引数値がインクリメントされます。
 
-セキュリティのため、Webプロセス内では、`On Web Authentication` データベースメソッドが初期化ステージ (引数に0が渡されて実行される) の前に一度呼び出されます。 認証に成功すると、初期化に進みます。 認証に成功すると、初期化に進みます。
-
-コンパイルのため、`C_BOOLEAN($0)` と `C_LONGINT($1)` が必ず宣言されていなければなりません。
+For security reasons, within a Web process, the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method can be called once just before the initialization stage (method execution with 0 as parameter). 認証に成功すると、初期化に進みます。
 
 以下のコードは:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/>
+<!--#4DTEXT myvar--> <br/>
 <!--#4DENDLOOP-->
 ```
 
@@ -536,17 +534,16 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
 `my_method` は以下のようになります:
 
 ```4d
- C_LONGINT($1)
- C_BOOLEAN($0)
- If($1=0) `初期化
-    $0:=True
+ #DECLARE($param : Integer) -> $result : Boolean
+ If($param=0) //Init
+    $result:=True
  Else
-    If($1<50)
+    If($param<50)
        ...
-       var:=...
-       $0:=True
+       myvar:=...
+       $result:=True
     Else
-       $0:=False `ループ停止
+       $result:=False //Stops the loop
     End if
  End if
 ```
@@ -579,7 +576,7 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
 
 この場合、`4DLOOP` タグは配列のときと同じように振るまいます: ポインターによって参照された配列の要素ごとにループを繰り返します。 カレントの配列要素は、コードが繰り返される度に増加していきます。 カレントの配列要素は、コードが繰り返される度に増加していきます。
 
-このシンタックスは `PROCESS 4D TAGS` コマンドに対して配列ポインターを渡した場合に有用です。
+This syntax is useful when you pass an array pointer as a parameter to the [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) command.
 
 例:
 
@@ -611,20 +608,20 @@ However, if the HTML page specified does not contain `<body>` and `</body>` tags
 
 #### シンタックス: `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-`4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。
+`4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 `4DSCRIPT` タグは、テンプレートを処理する際に 4Dメソッドを実行することを可能にします。 `<!--#4DSCRIPT/MyMethod/MyParam-->` タグが HTMLコメントとしてページに現れると、`MyMethod` メソッドが `$1` に `Param` を受け取って実行されます。 The presence of the `<!--#4DSCRIPT/MyMethod/MyParam-->` tag as an HTML comment launches the execution of the `MyMethod` method with the `Param` parameter as a string.
 
-> タグが Webプロセスのコンテキストにおいて呼び出された場合、Webページがロードされると、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。 このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。
+> If the tag is called in the context of a Web process, when the page is loaded, 4D calls the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method (if it exists). このメソッドが <code>true</code> を返すと、4Dはメソッドを実行します。
 
-メソッドは `$0` にテキストを返す必要があります。 文字列が文字コード 1 (つまり、`Char(1)` のこと) から始まっていると、それは HTMLソースとして扱われます (`4DHTML` と同じ原則)。 文字列が文字コード 1 (つまり、`Char(1)` のこと) から始まっていると、それは HTMLソースとして扱われます (`4DHTML` と同じ原則)。
+The method must return a text. 文字列が文字コード 1 (つまり、`Char(1)` のこと) から始まっていると、それは HTMLソースとして扱われます (`4DHTML` と同じ原則)。
 
-たとえば、次のコメントをテンプレートWebページに挿入したとしましょう: "今日の日付は`<!--#4DSCRIPT/MYMETH/MYPARAM-->`" 。 ページをロードする際、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出し、そして `MYMETH` メソッドの `$1` に文字列 “/MYPARAM” を引数として渡して呼び出します。 メソッドは $0 にテキストを返します (たとえば “21/12/31”)。 "`今日の日付は <!--#4DSCRIPT/MYMETH/MYPARAM-->`" というコメントの結果は "今日の日付は 21/12/31" となります。 ページをロードする際、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出し、そして `MYMETH` メソッドの `$1` に文字列 “/MYPARAM” を引数として渡して呼び出します。 メソッドは $0 にテキストを返します (たとえば “21/12/31”)。 "`今日の日付は <!--#4DSCRIPT/MYMETH/MYPARAM-->`" というコメントの結果は "今日の日付は 21/12/31" となります。
+For example, let’s say that you insert the following comment `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string "/MYPARAM" as the parameter. The method returns some text (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 
 `MYMETH` メソッドは以下のとおりです:
 
 ```4d
   //MYMETH
- C_TEXT($0;$1) // これらのパラメーターは常に宣言する必要があります
- $0:=String(Current date)
+#DECLARE($param : Text) : Text
+return String(Current date)
 ```
 
 > `4DSCRIPT` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。

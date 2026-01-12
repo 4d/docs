@@ -169,38 +169,38 @@ Muestra los resultados como una lista jerárquica organizada por tipo de element
 
 Puede hacer doble clic en una línea de esta ventana para ver el elemento en su editor, como el [editor de código](../code-editor/write-class-method.md). Si realiza varias búsquedas, cada búsqueda abre su propia ventana de resultados, dejando abiertas las ventanas de resultados anteriores.
 
-When more than one occurrence has been found, the list indicates their **count** next to the element name.
+Cuando se ha encontrado más de una ocurrencia, la lista indica su **conteo** junto al nombre del elemento.
 
-Each line can display a tip that provides additional information, for example the element property that matches the criteria, or the number of the form page that contains the occurrence.
+Cada línea puede mostrar un consejo que de información adicional, por ejemplo, la propiedad del elemento que coincide con los criterios, o el número de la página del formulario que contiene la ocurrencia.
 
-When an element found belongs to a component, the **component name** is displayed in parenthesis at the right side of the element name:
+Cuando un elemento encontrado pertenece a un componente, el **nombre del componente** aparece entre paréntesis a la derecha del nombre del elemento:
 
 ![](../assets/en/Project/find-components-results.png)
 
-Once a search is completed, you can use the ![](../assets/en/Project/result-window-re.png) button to perform the search again with the same criteria and options.
+Una vez finalizada la búsqueda, puede utilizar el botón ![](../assets/en/Project/result-window-re.png) para realizarla de nuevo con los mismos criterios y opciones.
 
-### Menú Opciones
+### Menú de opciones
 
 Puede realizar varias acciones utilizando el menú opciones:
 
 ![](../assets/en/Project/result-window-menu.png)
 
-- **Remove from list**: removes selected item(s) from the results window. More specifically, this lets you keep only items targeted by a replacement operation in the contents or used for drag and drop between applications.
-- **Remove all items from list except selection**: clears everything from the results window except for the selected item(s).
-- [**Reemplazar en contenido**](#replace-in-contents): reemplaza una cadena de caracteres dentro del elemento o elementos seleccionados.
-- **Select >**: selects one type of item (project methods, object names, and so on) from among all the items found in the Results window. The hierarchical sub-menu also provides commands to select (All) or deselect (None) all the items at once.
+- **Eliminar de la lista**: elimina los elementos seleccionados de la ventana de resultados. Más concretamente, esto le permite mantener en el contenido solo los elementos a los que se dirige una operación de sustitución o que se utilizan para arrastrar y soltar entre aplicaciones.
+- **Eliminar todos los elementos de la lista excepto la selección**: borra todo de la ventana de resultados excepto los elementos seleccionados.
+- [**Reemplazar en el contenido**](#replace-in-contents): reemplaza una cadena de caracteres en los elementos seleccionados.
+- **Seleccionar >**: selecciona un tipo de elemento (métodos proyecto, nombres de objetos, etc.) de entre todos los que se encuentran en la ventana Resultados. El submenú jerárquico también ofrece comandos para seleccionar (Todos) o deseleccionar (Ninguno) todos los elementos a la vez.
 - **Contraer todo/Expandir todo**: expande o contrae todos los elementos jerárquicos de la lista de resultados.
-- **Exportar resultados**: exporta información sobre los criterios de búsqueda y los elementos que aparecen en la ventana Resultados. Este archivo de texto puede importarse a una hoja de cálculo como Excel, por ejemplo. For each item, the following information is exported as tab-separated values in a text file:
+- **Exportar resultados**: exporta información sobre los criterios de búsqueda y los elementos que aparecen en la ventana Resultados. Este archivo de texto puede importarse a una hoja de cálculo como Excel, por ejemplo. Para cada elemento, la siguiente información se exporta como valores separados por tabuladores en un archivo de texto:
   - Proyecto anfitrión o nombre del componente
-  - Type (method, Class, formObject, trigger...)
-  - Path
-  - Propiedad (si es preciso): ofrece la propiedad del objeto que coincide con los criterios. For example, a string could be found in a variable name (variable property) and an object name (name property) within in the same form. This field is empty when the matching element is the object itself.
-  - Contents (if accurate): provides the contents that actually matches the criteria; for example, the code line that contains the requested string.
+  - Tipo (method, Class, formObject, trigger...)
+  - Ruta
+  - Propiedad (si es preciso): ofrece la propiedad del objeto que coincide con los criterios. Por ejemplo, una cadena de caracteres podría encontrarse en el nombre de una variable (propiedad variable) y en el nombre de un objeto (propiedad nombre) en el mismo formulario. Este campo está vacío cuando el elemento coincidente es el propio objeto.
+  - Contenido (si es preciso): ofrece el contenido que realmente coincide con los criterios; por ejemplo, la línea de código que contiene la cadena solicitada.
   - Número de línea (para código) o número de página (para objetos de formulario)
 
-## Replace in content
+## Reemplazar en el contenido
 
-The Replace in content function allows you to replace one character string with another within the listed objects in the Results window. It is available in the [options menu](#options-menu) of the window.
+La función Reemplazar en el contenido permite sustituir una cadena de caracteres por otra dentro de los objetos listados en la ventana Resultados. Está disponible en el [menú de opciones](#options-menu) de la ventana.
 
 :::note
 
@@ -208,34 +208,34 @@ La opción de menú **Reemplazar en contenido** está desactivada si trabaja en 
 
 :::
 
-When you select this command, a dialog box appears where you enter the character string that will replace all the occurrences found by the initial search:
+Cuando seleccione este comando, aparece un cuadro de diálogo donde se introduce la cadena de caracteres que reemplazará todas las ocurrencias encontradas por la búsqueda inicial:
 
 ![](../assets/en/Project/replace-content.png)
 
 Las operaciones de sustitución funcionan del siguiente modo:
 
-- Replacing is always carried out among all items found in the list and not just for a selection. However, it is possible to narrow the replacing operation by first reducing the contents of the list using the **Remove from list** or **Remove all items from list except selection** commands in the [options menu](#options-menu) or the contextual menu.
+- La sustitución se realiza siempre entre todos los elementos que se encuentran en la lista y no sólo para una selección. Sin embargo, es posible limitar la operación de sustitución reduciendo primero el contenido de la lista mediante los comandos **Eliminar de la lista** o **Eliminar todos los elementos de la lista excepto la selección** del [menú opciones](#options-menu) o del menú contextual.
 - Si la ventana Resultados incluye elementos de componentes, la sustitución se realizará también en el componente o componentes.
-- Only the occurrences shown in the list will be replaced and only after checking the initial search criteria for cases where objects were modified between the initial search and the replacing operation.
-- Replacing is done in the code, properties of form objects, contents of help messages, entry filters, menu items (item text and method calls), choice lists, comments.
-- Para cada objeto modificado, 4D comprueba si ya está cargado por otra máquina o en otra ventana. In the case of conflict, a standard dialog box appears indicating that the object is locked. You can close the object and then try again or cancel its replacement. The replacing operation will then continue with the other objects in the list.
-- If a method or form concerned by a "replace in content" operation is currently being edited by the same 4D application, it will be modified directly in the open editor (no warning appears). Forms and methods modified in this way are not saved automatically: you will need to use the **Save** or **Save All** command explicitly to validate the changes.
-- After a replacement is made in a list item, it will appear in italics. A count of replacements made in real time appears at the bottom of the window.
-- Los elementos nunca son renombrados por la función **Reemplazar en contenido**, excepto los objetos formulario. Por lo tanto, es posible que ciertos elementos de la lista no se vean afectados por la operación de reemplazo. Esto puede ocurrir cuando sólo el nombre del artículo corresponde a los criterios de búsqueda iniciales. In this case, the list items do not necessarily all appear in italics and the final replacement count may be less than the number of occurrences found by the initial search.
+- Sólo las ocurrencias mostradas en la lista serán reemplazadas y sólo después de comprobar los criterios de búsqueda inicial para los casos en los que los objetos fueron modificados entre la búsqueda inicial y la operación de reemplazo.
+- La sustitución se realiza en el código, las propiedades de los objetos de formulario, el contenido de los mensajes de ayuda, los filtros de entrada, los elementos de menú (texto del elemento y llamadas a métodos), las listas de opciones, los comentarios.
+- Para cada objeto modificado, 4D comprueba si ya está cargado por otra máquina o en otra ventana. En caso de conflicto, aparece un cuadro de diálogo estándar que indica que el objeto está bloqueado. Puede cerrar el objeto y luego volver a intentarlo o cancelar su reemplazo. La operación de reemplazo continuará con los otros objetos de la lista.
+- Si un método o formulario afectado por una operación "reemplazar en el contenido" está siendo editado actualmente por la misma aplicación 4D, se modificará directamente en el editor abierto (no aparece ninguna advertencia). Los formularios y los métodos modificados de este modo no se guardan automáticamente: tendrá que utilizar el comando **Guardar** o **Guardar todo** explícitamente para validar los cambios.
+- Después de que un reemplazo se haga en una lista de elementos, aparecerá en cursiva. En la parte inferior de la ventana aparece un recuento de las sustituciones realizadas en tiempo real.
+- Los elementos nunca son renombrados por la función **Reemplazar en contenido**, excepto los objetos formulario. Por lo tanto, es posible que ciertos elementos de la lista no se vean afectados por la operación de reemplazo. Esto puede ocurrir cuando sólo el nombre del artículo corresponde a los criterios de búsqueda iniciales. En este caso, los elementos de la lista no aparecen necesariamente todos en cursiva y el recuento final de sustituciones puede ser inferior al número de ocurrencias encontradas por la búsqueda inicial.
 
-## Renombrar métodos y variables del proyecto
+## Renombrar los métodos proyecto y las variables
 
-4D provides a dedicated renaming function with distribution throughout the entire project for project methods and variables.
+4D ofrece una función dedicada de renombrado con distribución en todo el proyecto para los métodos proyecto y variables en todo el proyecto.
 
-The **Rename...** command is available from the [Code editor] (for project methods and variables) and the Explorer context menu (for project methods).
+El comando **Renombrar...** está disponible en el [Editor de código] (para los métodos proyecto y variables) y en el menú contextual del Explorador (para los métodos proyecto).
 
 ![](../assets/en/Project/rename.png)
 
-When you select this command, a dialog box appears where you enter the new name for the object:
+Cuando selecciona este comando, aparece un cuadro de diálogo donde introduce el nuevo nombre para el objeto:
 
 ![](../assets/en/Project/rename-dial.png)
 
-The new name must comply with [naming rules](../Concepts/identifiers.md); otherwise a warning appears when you validate the dialog box. For example, you cannot rename a method with a command name such as "Alert".
+El nuevo nombre debe cumplir las [reglas de nomenclatura](../Concepts/identifiers.md); de lo contrario, aparecerá una advertencia al validar el cuadro de diálogo. Por ejemplo, no se puede renombrar un método con un nombre de comando como "Alert".
 
 Depending on the type of object you are renaming (project method or variable), the renaming dialog box may also contain a distribution option:
 

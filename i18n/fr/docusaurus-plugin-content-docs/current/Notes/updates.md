@@ -20,14 +20,14 @@ Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-v
 
 #### Developer Preview
 
-- Support of [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows:
-  - new [`FORM theme`](../commands/form-theme.md) command,
-  - new [`form-theme` css media query](../FormEditor/createStylesheet.md#media-queries),
-  - new [**Use Fluent UI on Windows**](../settings/interface.md#use-fluent-ui-on-windows) option in the Settings dialog box.
+- Prise en charge du [**rendu d'interface Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) sous Windows :
+  - nouvelle commande [`FORM theme`](../commands/form-theme.md),
+  - nouveau [media query css`form-theme`](../FormEditor/createStylesheet.md#media-queries),
+  - nouvelle option [**Utiliser Fluent UI sous Windows**](../settings/interface.md#use-fluent-ui-on-windows) dans la boîte de dialogue des Propriétés du projet.
 
 #### Changements de comportement
 
-- On Windows, if [**fluent UI** rendering](../FormEditor/forms.md#fluent-ui-rendering) is enabled, [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) command can return different information whether it is called from a form or not.
+- Sous Windows, si le [rendu **Fluent UI**](../FormEditor/forms.md#fluent-ui-rendering) est activé, la commande [`GET STYLE SHEET INFO`](../commands-legacy/get-style-sheet-info.md) peut renvoyer des informations différentes selon qu'elle est appelée depuis un formulaire ou non.
 
 ## Tableau des bibliothèques
 

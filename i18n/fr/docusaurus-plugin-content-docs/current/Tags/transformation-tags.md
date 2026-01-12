@@ -39,7 +39,7 @@ Il est possible de combiner plusieurs types de balises. Par exemple, la structur
 
 L'analyse ou le parsing du contenu d'une source de *template* se fait dans deux contextes :
 
-- En utilisant la commande `PROCESS 4D TAGS`; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et retourne un texte résultant du traitement.
+- En utilisant la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md) ; cette commande accepte un *template* en entrée, ainsi que des paramètres optionnels et renvoie un texte résultant du traitement.
 
 - En utilisant le serveur HTTP intégré de 4D : [pages de templates](WebServer/templates.md) envoyées au moyen des commandes `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB), `WEB SEND TEXT` , ou appelées en utilisant des URL. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées. Dans ce dernier cas, à des fins d'optimisation, les pages suffixées par ".htm" et ".html" ne sont PAS parsées.
 
@@ -157,10 +157,10 @@ End if
 
 Voici les caractéristiques de la balise 4DCODE :
 
-- La commande `TRACE` est prise en charge et active le débogueur 4D, vous permettant ainsi de déboguer votre code de template.
+- La commande [`TRACE`](../commands-legacy/trace.md) est prise en charge et active le [débogueur 4D](../Debugging/debugger.md), ce qui vous permet de déboguer le code de votre template.
 - Toute erreur affichera le dialogue d'erreur standard qui permet à l'utilisateur d'arrêter l'exécution du code ou d'entrer en mode débogage.
 - Le texte compris entre `<!--#4DCODE` and `-->` est divisé en lignes acceptant n'importe quelle convention de fin de ligne (cr, lf, ou crlf).
-- Le texte est tokenisé dans le contexte de la base de données qui a appelé `PROCESS 4D TAGS`. C'est important pour la reconnaissance des méthodes projet par exemple. La propriété de méthode [Disponible via les balises et les URL 4D (4DACTION...)](WebServer/allowProject.md) n'est pas prise en compte.
+- Le texte est "tokenisé" dans le contexte de la base de données qui a appelé [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md). C'est important pour la reconnaissance des méthodes projet par exemple. La propriété de méthode [Disponible via les balises et les URL 4D (4DACTION...)](WebServer/allowProject.md) n'est pas prise en compte.
 - Même si le texte utilise toujours l'anglais-US, il est recommandé d'utiliser la syntaxe token (:Cxxx) pour les noms de commandes et de constantes afin de se prémunir contre d'éventuels problèmes dus à des commandes ou des constantes renommées d'une version de 4D à une autre.
 
 > Le fait que les balises 4DCODE puissent appeler n'importe quelle commande du langage 4D ou méthode du projet pourrait être considéré comme un problème de sécurité, en particulier lorsque la base de données est disponible via HTTP. Toutefois, étant donné qu'elle exécute du code côté serveur appelé à partir de vos propres fichiers de modèle, la balise elle-même ne représente pas un problème de sécurité. Dans ce contexte, comme pour tout serveur Web, la sécurité est principalement gérée au niveau des accès distants aux fichiers du serveur.
@@ -256,7 +256,7 @@ Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity
     </table>
 ```
 
-#### Exemple avec `PROCESS 4D TAGS`
+#### Exemple avec [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
 
 ```4d
 var customers : cs.CustomersSelection
@@ -429,7 +429,7 @@ Lors de l'inclusion, quelle que soit l'extension du nom de fichier, 4D analyse l
 
 Une page incluse avec le commentaire `<!--#4DINCLUDE -->` est chargée dans le cache du serveur Web de la même manière que les pages appelées via un URL ou envoyées avec la commande `WEB SEND FILE`.
 
-Dans *path*, passez le chemin du document à inclure. Attention : Dans le cas d'un appel `4DINCLUDE`, le chemin est relatif au document analysé, c'est-à-dire le document "parent". Utilisez la barre oblique (/) comme séparateur de dossier et les deux points (..) pour remonter d'un niveau (syntaxe HTML). Lorsque vous utilisez la balise `4DINCLUDE` avec la commande `PROCESS 4D TAGS`, le dossier par défaut est le dossier du projet.
+Dans *path*, passez le chemin du document à inclure. Attention : Dans le cas d'un appel `4DINCLUDE`, le chemin est relatif au document analysé, c'est-à-dire le document "parent". Utilisez la barre oblique (/) comme séparateur de dossier et les deux points (..) pour remonter d'un niveau (syntaxe HTML). Lorsque vous utilisez la balise `4DINCLUDE` avec la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md), le dossier par défaut est le dossier du projet.
 
 > Vous pouvez modifier le dossier par défaut utilisé par la balise `4DINCLUDE` dans la page courante, en utilisant la balise `<!--#4DBASE -->` (voir ci-dessous).
 
@@ -506,15 +506,13 @@ L'exemple de code suivant :
 
 Cette syntaxe crée une boucle tant que la méthode renvoie `True`. La méthode prend un paramètre de type entier long. Elle est d'abord appelée avec la valeur 0 pour permettre une étape d'initialisation (si nécessaire) ; elle est ensuite appelée avec les valeurs 1, puis 2, puis 3 et ainsi de suite, tant qu'elle renvoie `True`.
 
-Pour des raisons de sécurité, dans un process Web, la méthode base `On Web Authentication` peut être appelée une fois juste avant l'étape d'initialisation (exécution de la méthode avec 0 comme paramètre). Si l'authentification est correcte, l'étape d'initialisation se poursuit.
-
-`C_BOOLEAN($0)` et `C_LONGINT($1)` DOIVENT être déclarés dans la méthode à des fins de compilation.
+Pour des raisons de sécurité, dans un process Web, la méthode base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) peut être appelée une fois juste avant l'étape d'initialisation (exécution de la méthode avec 0 comme paramètre). Si l'authentification est correcte, l'étape d'initialisation se poursuit.
 
 L'exemple de code suivant :
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/>
+<!--#4DTEXT myvar--> <br/>
 <!--#4DENDLOOP-->
 ```
 
@@ -535,17 +533,16 @@ L'exemple de code suivant :
 La méthode `my_method` peut être la suivante :
 
 ```4d
- C_LONGINT($1)
- C_BOOLEAN($0)
- If($1=0) `Initialisation
-    $0:=True
+ #DECLARE($param : Integer) -> $result : Boolean
+ If($param=0) //Init
+    $result:=True
  Else
-    If($1<50)
+    If($param<50)
        ...
-       var:=...
-       $0:=True
+       myvar:=...
+       $result:=True
     Else
-       $0:=False `Stops the loop
+       $result:=False //stoppe la boucle
     End if
  End if
 ```
@@ -578,7 +575,7 @@ Par exemple, le code suivant :
 
 Dans ce cas, la balise `4DLOOP` fonctionne comme avec un tableau : elle fait une boucle pour chaque élément du tableau référencé par le pointeur. L'indice de l'élément courant du tableau est augmenté à chaque fois que la portion de code est répétée.
 
-Cette syntaxe est utile lorsque vous passez un pointeur de tableau comme paramètre à la commande `PROCESS 4D TAGS`.
+Cette syntaxe est utile lorsque vous passez un pointeur de tableau en tant que paramètre à la commande [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md).
 
 Voici un exemple :
 
@@ -610,20 +607,20 @@ Les messages suivants peuvent être affichés :
 
 #### Syntaxe : `<!--#4DSCRIPT/MethodName/MyParam-->`
 
-La balise `4DSCRIPT` vous permet d'exécuter des méthodes 4D lors du traitement du template. La présence de la balise `<!--#4DSCRIPT/MyMethod/MyParam-->` en tant que commentaire HTML lance l'exécution de la méthode `MyMethod` avec le paramètre `Param` en tant que chaîne de caractères dans `$1`.
+La balise `4DSCRIPT` vous permet d'exécuter des méthodes 4D lors du traitement du template. La présence de la balise `<!--#4DSCRIPT/MyMethod/MyParam-->` en tant que commentaire HTML lance l'exécution de la méthode `MyMethod` avec le paramètre `Param` en tant que chaîne de caractères.
 
-> Si la balise est appelée dans le contexte d'un process Web, lorsque la page est chargée, 4D appelle la méthode base `On Web Authentication` (si elle existe). Si elle retourne True, 4D exécute la méthode.
+> Si la balise est appelée dans le contexte d'un process Web, lorsque la page est chargée, 4D appelle la méthode base [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) (si elle existe). Si elle retourne True, 4D exécute la méthode.
 
-La méthode doit retourner du texte dans `$0`. Si la chaîne commence par le caractère de code 1, elle est considérée comme du HTML (le même principe s'applique à la balise `4DHTML`).
+La méthode doit renvoyer un texte. Si la chaîne commence par le caractère de code 1, elle est considérée comme du HTML (le même principe s'applique à la balise `4DHTML`).
 
-Par exemple, supposons que vous insériez le commentaire suivant `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` dans un template de page Web. Lors du chargement de la page, 4D appelle la méthode base de données `On Web Authentication`, puis appelle la méthode `MYMETH` et transmet la chaîne "/MYPARAM" en tant que paramètre `$1`. La méthode renvoie le texte en $0 (par exemple "12/31/21") ; l'expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->`" devient donc "Today is 12/31/21".
+Par exemple, supposons que vous insériez le commentaire suivant `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` dans un template de page Web. Lors du chargement de la page, 4D appelle la méthode base `On Web Authentication`, puis la méthode `MYMETH` et transmet la chaîne "/MYPARAM" en tant que paramètre. La méthode renvoie un texte (par exemple "31/12/21") ; l'expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->`" devient donc "Today is 12/31/21".
 
 La méthode `MYMETH` est la suivante :
 
 ```4d
   //MYMETH
- C_TEXT($0;$1) //Ces paramètres doivent toujours être déclarés
- $0:=String(Current date)
+#DECLARE($param : Text) : Text
+return String(Current date)
 ```
 
 > Une méthode appelée par `4DSCRIPT` ne doit pas appeler des éléments d'interface (`DIALOG`, `ALERT`, etc.).
@@ -699,37 +696,37 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 <line x1="$4DEVAL($x)" y1="$4DEVAL($graphY1)"/>
 ```
 
-Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
+Notez que `$4dtag` et `<--#4dtag -->` ne sont pas strictement équivalents : contrairement à `<--#4dtag -->`, le traitement de `$4dtag` n'interprète pas les balises 4D [récursivement](#recursive-processing). Les balises `$` sont toujours évaluées une fois et le résultat est considéré comme du texte brut.
 
-Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. Cette différence consiste à empêcher l'injection de code malveillant.
+Cette différence permet d'empêcher l'injection de code malveillant. Comme [expliqué ici](../WebServer/templates.md#prevention-of-malicious-code-insertion), il est fortement recommandé d'utiliser les balises `4DTEXT` au lieu des balises `4DHTML` lors de la manipulation de texte utilisateur afin de se protéger contre une réinterprétation indésirable des balises : avec `4DTEXT`, les caractères spéciaux tels que "<" sont échappés, de sorte que toutes les balises 4D utilisant la syntaxe `<!--#4dtag expression -->` perdront leur signification particulière. Cependant, comme `4DTEXT` n'échappe pas le symbole `$`, nous avons décidé de rompre le support de la récursion afin d'empêcher les injections malveillantes utilisant la syntaxe `$4dtag (expression)`.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 
 ```4d
-  // example 1
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is: <!--#4DHTML myName-->"
+  // exemple 1
+ myName:="<!--#4DHTML QUIT 4D-->" //injection malveillante
+ input:="Mon nom est : <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
-  //4D will quit!
+  //4D va quitter !
 ```
 
 ```4d
-  // example 2
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is: <!--#4DTEXT myName-->"
+  // exemple 2
+ myName:="<!--#4DHTML QUIT 4D-->" //injection malveillante
+ input:="Mon nom est : <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is: <!--#4DHTML QUIT 4D-->"
+  //l'output est "Mon nom est : <!--#4DHTML QUIT 4D-->"
 ```
 
 ```4d
-  // example 3
- myName:="$4DEVAL(QUIT 4D)" //malicious injection
- input:="My name is: <!--#4DTEXT myName-->"
+  // exemple 3
+ myName:="$4DEVAL(QUIT 4D)" //injection malveillante
+ input:="Mon nom est : <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is: $4DEVAL(QUIT 4D)"
+  //output is "My name is : $4DEVAL(QUIT 4D)"
 ```
 
-Note that the `$4dtag` syntax supports matching pairs of enclosed quotes or parenthesis. Par exemple, supposons que vous ayez besoin d'évaluer la chaîne complexe (fictive) suivante :
+Notez que la syntaxe `$4dtag` permet de faire correspondre des paires de guillemets ou de parenthèses. Par exemple, supposons que vous ayez besoin d'évaluer la chaîne complexe (fictive) suivante :
 
 ```
 String(1) + "\"(hello)\""
@@ -739,6 +736,6 @@ Vous pouvez écrire :
 
 ```4d
  input:="$4DEVAL( String(1)+\"\\\"(hello)\\\"\")"
- PROCESS 4D TAGS(input;output)
- -->output is 1"(hello)"
+ PROCESSUS 4D TAGS(input;output)
+ -->output est 1"(hello)"
 ```
