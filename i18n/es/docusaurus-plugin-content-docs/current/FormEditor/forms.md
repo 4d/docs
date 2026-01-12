@@ -96,7 +96,7 @@ No hay restricciones en el número de páginas que puede tener un formulario. El
 
 Un formulario multipáginas tiene una página de fondo y varias páginas de visualización. Los objetos que se colocan en la página de fondo pueden ser visibles en todas las páginas de visualización, pero sólo se pueden seleccionar y editar en la página de fondo. En los formularios multipágina, debe colocar su paleta de botones en la página de fondo. También es necesario incluir uno o más objetos en la página de fondo que ofrezcan las herramientas de navegación para el usuario.
 
-## Fluent UI rendering
+## Renderización Fluent UI
 
 :::caution Vista previa para desarrolladores
 

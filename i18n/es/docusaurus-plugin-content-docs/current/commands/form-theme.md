@@ -4,7 +4,7 @@ title: FORM theme
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM theme.Syntax-->**FORM theme** : Text<!-- END REF-->
+<!--REF #_command_.FORM theme.Syntax-->**FORM theme**: Text<!-- END REF-->
 
 <!--REF #_command_.FORM theme.Params-->
 

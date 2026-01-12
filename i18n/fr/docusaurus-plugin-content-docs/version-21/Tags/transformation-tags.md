@@ -699,37 +699,37 @@ En utilisant la syntaxe $, le code suivant est validé par le parseur :
 <line x1="$4DEVAL($x)" y1="$4DEVAL($graphY1)"/>
 ```
 
-Note that `$4dtag` and `<--#4dtag -->` are not strictly equivalent: unlike `<--#4dtag -->`, `$4dtag` processing does not interpret 4D tags [recursively](#recursive-processing). `$` tags are always evaluated once and the result is considered as plain text.
+Notez que `$4dtag` et `<--#4dtag -->` ne sont pas strictement équivalents : contrairement à `<--#4dtag -->`, le traitement de `$4dtag` n'interprète pas les balises 4D [récursivement](#recursive-processing). Les balises `$` sont toujours évaluées une fois et le résultat est considéré comme du texte brut.
 
-Cette différence consiste à empêcher l'injection de code malveillant. As [explained below](../WebServer/templates.md#prevention-of-malicious-code-insertion), it is strongly recommended to use `4DTEXT` tags instead of `4DHTML` tags when handling user text to protect against unwanted reinterpretation of tags: with `4DTEXT`, special characters such as "<" are escaped, thus any 4D tags using the `<!--#4dtag expression -->` syntax will lose their particular meaning. Cette différence consiste à empêcher l'injection de code malveillant.
+Cette différence consiste à empêcher l'injection de code malveillant. Comme [expliqué ici](../WebServer/templates.md#prevention-of-malicious-code-insertion), il est fortement recommandé d'utiliser les balises `4DTEXT` au lieu des balises `4DHTML` lors de la manipulation de texte utilisateur afin de se protéger contre une réinterprétation indésirable des balises : avec `4DTEXT`, les caractères spéciaux tels que "<" sont échappés, de sorte que toutes les balises 4D utilisant la syntaxe `<!--#4dtag expression -->` perdront leur signification particulière. Cependant, comme `4DTEXT` n'échappe pas le symbole `$`, nous avons décidé de rompre le support de la récursion afin d'empêcher les injections malveillantes utilisant la syntaxe `$4dtag (expression)`.
 
 Les exemples suivants illustrent le résultat du traitement en fonction de la syntaxe et de la balise  utilisées :
 
 ```4d
-  // example 1
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is: <!--#4DHTML myName-->"
+  // exemple 1
+ myName:="<!--#4DHTML QUIT 4D-->" //injection malveillante
+ input:="Mon nom est : <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
-  //4D will quit!
+  //4D va quitter !
 ```
 
 ```4d
-  // example 2
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
- input:="My name is: <!--#4DTEXT myName-->"
+  // exemple 2
+ myName:="<!--#4DHTML QUIT 4D-->" //injection malveillante
+ input:="Mon nom est : <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is: <!--#4DHTML QUIT 4D-->"
+  //l'output est "Mon nom est : <!--#4DHTML QUIT 4D-->"
 ```
 
 ```4d
-  // example 3
- myName:="$4DEVAL(QUIT 4D)" //malicious injection
- input:="My name is: <!--#4DTEXT myName-->"
+  // exemple 3
+ myName:="$4DEVAL(QUIT 4D)" //injection malveillante
+ input:="Mon nom est : <!--#4DTEXT myName-->"
  PROCESS 4D TAGS(input;output)
-  //output is "My name is: $4DEVAL(QUIT 4D)"
+  //output is "My name is : $4DEVAL(QUIT 4D)"
 ```
 
-Note that the `$4dtag` syntax supports matching pairs of enclosed quotes or parenthesis. Par exemple, supposons que vous ayez besoin d'évaluer la chaîne complexe (fictive) suivante :
+Notez que la syntaxe `$4dtag` permet de faire correspondre des paires de guillemets ou de parenthèses. Par exemple, supposons que vous ayez besoin d'évaluer la chaîne complexe (fictive) suivante :
 
 ```
 String(1) + "\"(hello)\""
@@ -739,6 +739,6 @@ Vous pouvez écrire :
 
 ```4d
  input:="$4DEVAL( String(1)+\"\\\"(hello)\\\"\")"
- PROCESS 4D TAGS(input;output)
- -->output is 1"(hello)"
+ PROCESSUS 4D TAGS(input;output)
+ -->output est 1"(hello)"
 ```

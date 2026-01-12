@@ -49,7 +49,7 @@ L'exemple ci-dessous trie l'entité définie par l'attribut lastName dans l'ordr
 
 ## Exemple 2
 
-`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):
+L'instruction `$orderby` est prise en charge dans les [filtres de similarité vectorielle](./$filter.md#vector-similarity) :
 
 ```
 GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"

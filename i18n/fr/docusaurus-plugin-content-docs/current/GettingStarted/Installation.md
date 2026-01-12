@@ -21,7 +21,7 @@ Les produits 4D sont installés à partir du site web de 4D :
 
 :::info
 
-The Windows Setup panel includes a link allowing you to download the **Windows App SDK** installer. You may need to install this SDK to be able to [use Fluent UI in your 4D application on Windows](../FormEditor/forms.md#fluent-ui-rendering) (if not already installed in your OS, see [this blog post](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)).
+Le programme d'installation de 4D sous Windows comprend un lien vous permettant de télécharger le programme d'installation **Windows App SDK**. Vous devrez peut-être installer ce SDK pour pouvoir [utiliser Fluent UI dans votre application 4D sous Windows](../FormEditor/forms.md#fluent-ui-rendering) (s'il n'est pas déjà installé dans votre système d'exploitation, voir [ce blog post](https://blog.4d.com/deploy-fluent-ui-effortlessly-in-your-4d-applications)).
 
 :::
 

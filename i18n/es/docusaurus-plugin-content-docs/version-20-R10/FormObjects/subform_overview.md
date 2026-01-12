@@ -175,7 +175,7 @@ La comunicación entre el formulario padre y las instancias del subformulario pu
 
 > El comando `GOTO OBJECT` busca el objeto de destino en el formulario padre aunque se ejecute desde un subformulario.
 
-#### CALL SUBFORM CONTAINER command {#call-subform-container-command}
+#### Comando CALL SUBFORM CONTAINER {#call-subform-container-command}
 
 El comando `CALL SUBFORM CONTAINER` permite que una instancia de subformulario envíe un [evento](../Events/overview.md) al objeto contenedor del subformulario, que puede procesarlo en el contexto del formulario padre. El evento se recibe en el método del objeto contenedor. Puede estar en el origen de todo evento detectado por el subformulario (clic, arrastrar y soltar, etc.).
 
