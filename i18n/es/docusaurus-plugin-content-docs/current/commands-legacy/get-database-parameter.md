@@ -42,6 +42,7 @@ Tres modos de sincronización son posibles del lado del cliente. El selector Aut
 
 
 
+
 ### 4D Server log recording (28)
 
 **Hilo seguro**: sí
@@ -139,6 +140,8 @@ Por defecto, si este selector no se utiliza, 4D descarga mínimo 10% de la cach�
 
 **Descripción:** constante obsoleta (se conserva por compatibilidad únicamente). Ahora recomendamos utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
 
+
+**Descripción:** *constante obsoleta (se conserva por compatibilidad únicamente).* Ahora recomendamos utilizar los comandos [WEB SET OPTION](web-set-option.md) y [WEB GET OPTION](web-get-option.md) para la configuración del servidor HTTP.
 
 
 
@@ -490,6 +493,8 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 ### Current process debug log recording (111)
 
 
+### Current process debug log recording (111)
+
 
 ### Is current database a project (112)
 
@@ -583,7 +588,16 @@ OR
 //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
 SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 ```
+OR
+```4d
+//Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+SET DATABASE PARAMETER(Log command list;"-1666;-323") 
+```
 
+
+ SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
+ 
+ 
 
 
  SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded

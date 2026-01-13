@@ -241,6 +241,27 @@ Estos archivos texto almacenan en formato tabulado simple diferente información
 
 **Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
 
+**Alcance**: todos los equipos 4D remotos
+
+**Se conserva entre dos sesiones**: sí
+
+**Valores posibles**: ver selector 18
+
+**Descripción**: permite especificar esta parámetro para las máquinas 4D remotas utilizadas como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir este valor sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
+
+
+### Client port ID (22)
+
+**Alcance**: todos los equipos 4D remotos
+
+ **Se conserva entre dos sesiones**: sí
+
+ **Valores posibles**: ver selector 15
+
+**Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
+
 
 
 
@@ -363,7 +384,7 @@ Este selector se ofrece únicamente con fines de depuración y debe utilizarse c
 
 **Alcance**: aplicación 4D
 
-**Se conserva entre dos sesiones**: no
+ **Se conserva entre dos sesiones**: sí
 
 **Descripción**: nivel(es) de los mensajes que se incluirán en el registro de diagnóstico cuando esté habilitado (ver selector Diagnostic log recording). Cada nivel designa una categoría de mensajes de diagnóstico e incluye automáticamente las categorías más importantes. Para una descripción de las categorías, consulte la sección *Niveles de registro de diagnóstico* en *developer.4d.com*. 
 
@@ -594,10 +615,20 @@ O
 //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
 SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 ```
+O
+```4d
+//Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+SET DATABASE PARAMETER(Log command list;"-1666;-323") 
+```
 
  SET DATABASE PARAMETER(Log command list;"277;341") //Graba solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
  
 
+ SET DATABASE PARAMETER(Log command list;"277;341") //Graba solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+ 
+
+ SET DATABASE PARAMETER(Log command list;"277;341") //Graba solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+ 
 
 ### Max concurrent Web processes (18)
 

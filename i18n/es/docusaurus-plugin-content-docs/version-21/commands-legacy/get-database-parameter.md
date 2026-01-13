@@ -42,6 +42,7 @@ Tres modos de sincronización son posibles del lado del cliente. El selector Aut
 
 
 
+
 ### 4D Server log recording (28)
 
 **Hilo seguro**: sí
@@ -183,6 +184,10 @@ Este selector puede utilizarse para modificar por programación el puerto TCP ut
 Este selector funciona exactamente igual que el selector 39; sin embargo, aplica a todos los equipos 4D remotos utilizados como servidores web. Si quiere modificar el valor de ciertos equipos clientes únicamente, utilice la caja de diálogo de Preferencias de 4D remoto.
 
 
+ SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
+ 
+ 
+
 
 
 ### Client log recording (45)
@@ -226,6 +231,9 @@ Estos archivos texto almacenan en formato tabulado simple diferente información
 **Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
 
 **Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
+**Descripción**: permite especificar este parámetro para todos los equipos 4D remotos utilizados como servidores web. Los valores definidos utilizando estos selectores se aplican a todos los equipos remotos utilizados como servidores web. Si quiere definir valores sólo para ciertos equipos remotos, utilice la caja de diálogo de Preferencias de 4D en modo remoto.
+
 
 
 
@@ -492,6 +500,8 @@ Para más información sobre los archivos 4DIMAPLog\_X.txt, consulte la sección
 ### Current process debug log recording (111)
 
 
+### Current process debug log recording (111)
+
 
 ### Is current database a project (112)
 
@@ -585,7 +595,16 @@ O
 //Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
 SET DATABASE PARAMETER(Log command list;"-1666;-323") 
 ```
+O
+```4d
+//Excluye los comandos SET USER ALIAS y DELAY PROCESS de ser grabados
+SET DATABASE PARAMETER(Log command list;"-1666;-323") 
+```
 
+
+ SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
+ 
+ 
 
 
  SET DATABASE PARAMETER(Log command list;"277;341") //Grabar solo los comandos QUERY y QUERY SELECTION O SET DATABASE PARAMETER(Log command list;"-1666;-323") //Excluir SET USER ALIAS y DELAY PROCESS commands from being recorded
