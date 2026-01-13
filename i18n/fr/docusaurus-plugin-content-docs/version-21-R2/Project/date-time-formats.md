@@ -51,18 +51,18 @@ Le tableau suivant répertorie tous les motifs pris en charge pour les formats d
 | D       | jour de l'année                                                          | D             | 189                                                                                                   |
 | E       | jour de la semaine                                                       | E, EE, ou EEE | Tue                                                                                                   |
 |         |                                                                          | EEEE          | Tuesday                                                                                               |
-|         |                                                                          | EEEEE         | T                                                                                                     |
+|         |                                                                          | EEEEE         | M                                                                                                     |
 |         |                                                                          | EEEEEE        | ma                                                                                                    |
 | e       | jour local de la semaine                                                 | e             | 2                                                                                                     |
 |         |                                                                          | ee            | 02                                                                                                    |
-|         |                                                                          | eee           | Tue                                                                                                   |
-|         |                                                                          | eeee          | Tuesday                                                                                               |
+|         |                                                                          | eee           | mar.                                                                                  |
+|         |                                                                          | eeee          | Mardi                                                                                                 |
 |         |                                                                          | eeeee         | T                                                                                                     |
 |         |                                                                          | eeeeee        | ma                                                                                                    |
 | c       | jour local de la semaine seul                                            | c ou cc       | 2                                                                                                     |
-|         |                                                                          | ccc           | Tue                                                                                                   |
-|         |                                                                          | cccc          | Tuesday                                                                                               |
-|         |                                                                          | ccccc         | T                                                                                                     |
+|         |                                                                          | ccc           | mar.                                                                                  |
+|         |                                                                          | cccc          | mardi                                                                                                 |
+|         |                                                                          | ccccc         | M                                                                                                     |
 |         |                                                                          | cccccc        | ma                                                                                                    |
 | a       | AM ou PM                                                                 | a, aa, ou aaa | PM [abbrev]                                       |
 |         |                                                                          | aaaa          | PM [complet]                                      |
@@ -98,8 +98,8 @@ Le tableau suivant répertorie tous les motifs pris en charge pour les formats d
 | O       | Time Zone: short localized UTC                           | O             | UTC-8                                                                                                 |
 |         | Time Zone: long localized UTC (=ZZZZ) | OOOO          | UTC-08:00                                                                             |
 | z       | Time Zone: specific non-location                         | z, zz, ou zzz | UTC+1                                                                                                 |
-|         |                                                                          | zzzz          | UTC-08:00                                                                             |
-|         |                                                                          | zzzzz         | -08:00, -07:52:58, Z                                  |
+|         |                                                                          | zzzz          | heure normale d'Europe centrale                                                                       |
+|         |                                                                          | zzzzz         | heure normale d'Europe centrale                                                                       |
 |         |                                                                          |               |                                                                                                       |
 | '       | échappement pour le texte                                                | '             | '                                                                                                     |
 | ' '     | deux guillemets simples en produisent un                                 | ' '           | ' '                                                                                                   |

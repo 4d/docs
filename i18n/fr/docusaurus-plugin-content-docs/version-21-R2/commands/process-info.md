@@ -10,7 +10,7 @@ displayed_sidebar: docs
 
 | Paramètres    | Type    |                             | Description                 |
 | ------------- | ------- | :-------------------------: | --------------------------- |
-| processNumber | Integer | &#8594; | Process number              |
+| processNumber | Integer | &#8594; | Numéro du process           |
 | Résultat      | Object  | &#8592; | Informations sur le process |
 
 <!-- END REF -->

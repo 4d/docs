@@ -120,7 +120,7 @@ Par exemple, avec une fonction de la dataclass `getCities()` recevant des param�
 
 `/rest/City/getCities?$params='["Aguada","Paris"]'`
 
-### Paramètre d'entité
+### Paramètres des entités
 
 Les entités passées en paramètres sont référencées sur le serveur via leur clé (c'est-à-dire la propriété __KEY). Si le paramètre clé est omis dans une requête, une nouvelle entité est chargée en mémoire sur le serveur.
 Vous pouvez également transmettre des valeurs pour tous les attributs de l'entité. Ces valeurs seront automatiquement utilisées pour l'entité traitée sur le serveur.

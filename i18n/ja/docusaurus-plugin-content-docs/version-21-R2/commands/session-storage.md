@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-<!--REF #_command_.Session storage.Summary-->**Session storage** コマンドは、*id* 引数に渡された固有の識別子を持つセッションのストアレージオブジェクトを返します。<!-- END REF--> 
+<!--REF #_command_.Session storage.Summary-->The **Session storage** command returns the storage object of the session whose unique identifier you passed in the *id* parameter.<!-- END REF--> 
 
 *id* 引数には、Storage を取得したいセッションのUUID を渡します 。 これは4D (4D Server、またはスタンドアロンセッションに対してはシングルユーザー版4D )によって自動的に割り振られるもので、[session オブジェクト](../API/SessionClass.md) の[**.id**](../API/SessionClass.md#id) プロパティに保存されています。 セッションが存在しない場合、コマンド**Null** はを返します。
 

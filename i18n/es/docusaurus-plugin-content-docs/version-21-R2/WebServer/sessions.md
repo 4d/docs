@@ -225,6 +225,18 @@ Los tokens de sesión pueden ser compartidos con [sesiones de escritorio](../Des
 
 :::
 
+:::tip Entradas de blog relacionadas
+
+[Conecte sus aplicaciones web a sistemas de terceros](https://blog.4d.com/connect-your-web-apps-to-third-party-systems/)
+
+:::
+
+:::note
+
+Session tokens can be shared with [desktop sessions](../Desktop/sessions.md) to implement applications using hybrid sessions.
+
+:::
+
 ### Generalidades
 
 La secuencia básica de uso de un testigo de sesión OTP en una aplicación web 4D es la siguiente:

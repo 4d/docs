@@ -46,7 +46,7 @@ Una clase usuario en 4D está definida por un archivo [método ](methods.md) esp
 Al nombrar las clases, debe tener en cuenta las siguientes reglas:
 
 - Un [nombre de clase](identifiers.md#classes) debe cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
-- .
+- Los nombres de clases son sensibles a las mayúsculas y minúsculas.
 - No se recomienda dar el mismo nombre a una clase y a una tabla de la base, para evitar conflictos.
 
 Por ejemplo, si quiere definir una clase llamada "Polygon", tiene que crear el siguiente archivo:
@@ -92,7 +92,7 @@ En las diferentes ventanas 4D (editor de código, compilador, depurador, explora
   - una función de clase es un bloque de código
   - **Ir a la definición** en un objeto miembro busca las declaraciones de función de clase; por ejemplo, "$o.f()" encontrará "Function f".
   - **Buscar referencias** en la declaración de función de clase busca la función utilizada como miembro de objeto; por ejemplo, "Function f" encontrará "$o.f()".
-- En el explorador de tiempo de ejecución y en el depurador, las funciones de clase se muestran con el `<ClassName>` constructor o `<ClassName>.<FunctionName>` el formato.
+- En el explorador de Ejecución y Depurador, las funciones clase se muestran con el formato `<ClassName>` constructor o `<ClassName>.<FunctionName>`.
 
 ## Class stores
 
@@ -232,7 +232,7 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-Para una función de clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myFunction".
+Para una función clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myFunction".
 
 En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#parameters) si los hay. Se soportan las siguientes sintaxis:
 
@@ -774,7 +774,7 @@ Se declaran clases singleton añadiendo la(s) palabra(s) clave(s) apropiada(s) a
 
 :::
 
-El singleton de la clase se instanciará en la primera llamada de la propiedad [`cs.<class>[.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
+La clase singleton está instanciada en la primera llamada de la propiedad [`cs.<class>.me`](../API/ClassClass.md#me). El singleton instanciado de la clase se devuelve siempre cuando se utiliza la propiedad [`me`](../API/ClassClass.md#me).
 
 Si necesita instanciar un singleton con parámetros, también puede llamar la función [`new()`](../API/ClassClass.md#new). En este caso, se recomienda instanciar el singleton en algún código ejecutado al inicio de la aplicación.
 

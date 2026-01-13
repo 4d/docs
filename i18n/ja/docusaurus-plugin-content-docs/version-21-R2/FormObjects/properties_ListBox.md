@@ -60,7 +60,7 @@ title: リストボックス
 
 選択されているアクションに関わらず、`On Double Clicked` フォームイベントが生成されます。
 
-「レコード編集」「レコード表示」のアクションに関しては `On Open Detail` フォームイベントも生成されます。 リストボックスに関連付けられた詳細フォームに表示されたレコードが閉じられる際には `On Close Detail` フォームイベントが生成されます (レコードが編集されたかどうかは問いません)。
+For the last two actions, the `On Open Detail` form event is also generated. リストボックスに関連付けられた詳細フォームに表示されたレコードが閉じられる際には `On Close Detail` フォームイベントが生成されます (レコードが編集されたかどうかは問いません)。
 
 #### JSON 文法
 

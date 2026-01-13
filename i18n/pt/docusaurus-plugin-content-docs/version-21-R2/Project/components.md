@@ -349,7 +349,7 @@ Para exibir o painel Dependências:
 - Com 4D, selecione o item de menu **Design/Project Dependencies** (ambiente de desenvolvimento),<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- com 4D Server, selecione o item de menu **Janela/Dependências do projeto**.<br/>
+- com o servidor 4D, selecione o item de menu **dependência do Window/Projeto**.<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 O painel de Dependências é exibido em seguida. Dependências são classificadas por nome em ordem alfabética:
