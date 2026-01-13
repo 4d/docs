@@ -70,15 +70,15 @@ module.exports = {
           },
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
+              '21-R2': {
+              label: '21 R2 BETA',
+              banner: 'none',
+            },
               '21': {
               label: '21',
               banner: 'none',
             },
-              '20-R10': {
-              label: '20 R10',
-              banner: 'none',
-            },
-            '20': {
+              '20': {
               label: '20',
               banner: 'none',
             },
