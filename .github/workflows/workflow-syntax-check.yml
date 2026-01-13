@@ -22,12 +22,7 @@ jobs:
           COLORTERM: truecolor
         run: |
           diff_images -f --paths "docs/" "i18n/*/docusaurus-plugin-content-docs/*"
-      - name: Syntax check
-        env:
-          CLICOLOR_FORCE: 1
-          COLORTERM: truecolor
-        run: |
-          syntax_checker --paths "docs/**/*.md"
+          
       - name: Clone syntax-checker
         run: git clone https://github.com/doc4d/syntax-checker.git
               
