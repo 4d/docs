@@ -42,21 +42,21 @@ Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](h
 - コンテキストメニュー内の **New Qodly page...** を選択します<br/>
   ![](../assets/en/Develop/qodly-context.png)
 
-- or click the **+** icon or select **New Qodly page...** in the bottom area of the Explorer.<br/>
+- あるいは、エクスプローラー下部の **+** アイコンをクリックするか、**新規Qodly ページ...** を選択します。<br/>
   ![](../assets/en/Develop/qodly-add.png)
 
-Enter the name of the page and click **OK** to open the page in Qodly Studio:
+ページ名を入力し、**OK** をクリックするとページがQodly Studio 内で開かれます:
 
 ![](../assets/en/Develop/qodly-create.png)
 
-To open a page:
+ページを開くには:
 
-- double-click on a Qodly page name, or
-- right-click on a Qodly page name and select **Edit...** in the contextual menu.
+- Qodly ページ名をダブルクリックする
+- Qodly ページ名を右クリックし、コンテキストメニューから **編集...** を選択する。
 
-### Renaming or deleting a Qodly page
+### Qodlyページを名称変更するか削除する
 
-Renaming or deleting a Qodly page can only be done in the [Page editor of Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
+Qodly ページの名称変更または削除は、[Qodly Studio のページエディタ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) から行うことができます。
 
 Click on the pen icon to rename the page:<br/>
 ![](../assets/en/Develop/qodly-rename.png)
