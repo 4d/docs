@@ -18,7 +18,7 @@ title: WebForm
 
 |                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->   |
+| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE WebFormClass.componentName.Summary -->    |
 | [<!-- INCLUDE #WebFormClass.disableState().Syntax -->](#disablestate)<br/><!-- INCLUDE #WebFormClass.disableState().Summary --> |
 | [<!-- INCLUDE #WebFormClass.enableState().Syntax -->](#enablestate)<br/><!-- INCLUDE #WebFormClass.enableState().Summary -->    |
 | [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)<br/><!-- INCLUDE #WebFormClass.setError().Summary -->             |
@@ -27,11 +27,11 @@ title: WebForm
 
 ### *.componentName*
 
-<!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
+<!-- REF WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
 #### 説明
 
-Web ページのコンポーネント (構成要素) とは、これらの Web ページの<!-- REF #WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
+The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
 
 返されるオブジェクトは、[`4D.WebFormItem`](WebFormItemClass.md) クラスのものです。 これらのオブジェクトは、コンポーネントを動的に管理するために使用できる関数を持っています。
 
@@ -60,9 +60,9 @@ shared singleton Class constructor()
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| 引数    | 型      |     | 説明                      |
-| ----- | ------ | :-: | ----------------------- |
-| state | string |  -> | Web ページ上で無効化するstate の名前 |
+| 引数    | 型    |     | 説明                       |
+| ----- | ---- | :-: | ------------------------ |
+| state | Text |  -> | Webフォーム上で無効化する state の名称 |
 
 <!-- END REF -->
 
@@ -85,9 +85,9 @@ Web ページのステートについての詳細な情報については、[Qod
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| 引数    | 型      |     | 説明                       |
-| ----- | ------ | :-: | ------------------------ |
-| state | string |  -> | Web ページ上で有効化する state の名前 |
+| 引数    | 型    |     | 説明                       |
+| ----- | ---- | :-: | ------------------------ |
+| state | Text |  -> | Webフォーム上で有効化する state の名称 |
 
 <!-- END REF -->
 
@@ -121,9 +121,9 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| 引数  | 型      |     | 説明                   |
-| --- | ------ | :-: | -------------------- |
-| msg | string |  -> | Web ページに表示するエラーメッセージ |
+| 引数  | 型    |     | 説明                   |
+| --- | ---- | :-: | -------------------- |
+| msg | Text |  -> | Webフォームに表示するエラーメッセージ |
 
 <!-- END REF -->
 
@@ -156,9 +156,9 @@ myForm.setError("My error message")
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| 引数  | 型      |     | 説明                  |
-| --- | ------ | :-: | ------------------- |
-| msg | string |  -> | Web ページに表示する情報メッセージ |
+| 引数  | 型    |     | 説明                  |
+| --- | ---- | :-: | ------------------- |
+| msg | Text |  -> | Webフォームに表示する情報メッセージ |
 
 <!-- END REF -->
 
@@ -191,9 +191,9 @@ myForm.setMessage("My information message")
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| 引数  | 型      |     | 説明                  |
-| --- | ------ | :-: | ------------------- |
-| msg | string |  -> | Web ページに表示する警告メッセージ |
+| 引数  | 型    |     | 説明                  |
+| --- | ---- | :-: | ------------------- |
+| msg | Text |  -> | Webフォームに表示する警告メッセージ |
 
 <!-- END REF -->
 

@@ -35,6 +35,12 @@ Sous Windows, le concept de "choix recommandé" n'est pas pris en charge : seul 
 
 A l'exécution, un champ ou toute zone saisissable est délimité par un rectangle de sélection lorsqu'il a le focus (via la touche Tab ou un simple clic). Vous pouvez masquer ce rectangle en activant cette propriété. Masquer le rectangle de focus peut être utile dans le cas d'interfaces spécifiques.
 
+:::note
+
+The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI.
+
+:::
+
 #### Grammaire JSON
 
 | Nom           | Type de données | Valeurs possibles |

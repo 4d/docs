@@ -22,11 +22,14 @@ Los manejadores de peticiones HTTP personalizadas están soportados en el siguie
 - las [sesiones escalables](./sessions.md#enabling-web-sessions) o [sin sesiones](../settings/web.md#no-sessions) están activadas,
 - un servidor web ejecutado localmente por 4D o 4D Server, incluyendo aquellos [ejecutados por componentes](./webServerObject.md).
 
-:::warning
+### Authentication and Privileges
 
-Por razones de seguridad, el acceso externo al datastore puede ser desautorizado en 4D. Necesita configurar los [privilegios ORDA](../ORDA/privileges.md) para permitir peticiones HTTP.
+Since HTTP Request handler functions are called from standard web requests (they do not contain `/rest/xxx` pattern like REST requests), they are not subject to the [**Force login**](../REST/authUsers.md#force-login-mode) rules. It means that they can be executed without prior authentication, i.e. without a call to [`setPrivileges()`](../API/SessionClass.md#setprivileges) on the session, in which case they will be executed in a *guest* session.
 
-:::
+However, these functions need to have appropriate **permissions**, like all requests executed from web processes. When the handler function is called, the **privileges** of its web session must allow the code to run properly. Any other resources accessed within the code (data, other functions...) also need to be allowed by permissions. In [*restricted mode by default*](../ORDA/privileges.md#restriction-modes), you must configure the privileges:
+
+- If a HTTP Request handler can open a new, unauthenticated session (which is the case for example when your application provides **deep linking** feature), you need to make sure that the *guest* privilege is allowed to execute the handler function and access all subsequent resources.
+- If a HTTP Request handler function can be executed within an already authenticated session, you need to make sure the user session is allowed to execute the handler function and access all subsequent resources. Note that this can also happen with deep linking if you copy/paste the link into a browser where you are already authenticated for the application and the session is still active (provided that the 4D session cookie is *Lax*).
 
 ## Cómo definir los gestores
 

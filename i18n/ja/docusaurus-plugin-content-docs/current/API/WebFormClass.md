@@ -18,7 +18,7 @@ title: WebForm
 
 |                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->   |
+| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE WebFormClass.componentName.Summary -->    |
 | [<!-- INCLUDE #WebFormClass.disableState().Syntax -->](#disablestate)<br/><!-- INCLUDE #WebFormClass.disableState().Summary --> |
 | [<!-- INCLUDE #WebFormClass.enableState().Syntax -->](#enablestate)<br/><!-- INCLUDE #WebFormClass.enableState().Summary -->    |
 | [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)<br/><!-- INCLUDE #WebFormClass.setError().Summary -->             |
@@ -27,11 +27,11 @@ title: WebForm
 
 ### *.componentName*
 
-<!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
+<!-- REF WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
 #### 説明
 
-Web ページのコンポーネント (構成要素) とは、これらの Web ページの<!-- REF #WebFormClass.componentName.Summary -->プロパティとして直接利用可能なオブジェクトです<!-- END REF -->。
+The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
 
 返されるオブジェクトは、[`4D.WebFormItem`](WebFormItemClass.md) クラスのものです。 これらのオブジェクトは、コンポーネントを動的に管理するために使用できる関数を持っています。
 

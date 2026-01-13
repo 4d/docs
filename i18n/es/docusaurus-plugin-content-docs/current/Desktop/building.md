@@ -491,13 +491,10 @@ Un módulo es una librería de código integrada que 4D utiliza para controlar f
 Los siguientes módulos opcionales pueden ser deseleccionados:
 
 - **CEF**: Librería integrada Chromium. Es necesario ejecutar [áreas Web](../FormObjects/webArea_overview.md) que utilizan el motor de renderizado integrado y [áreas 4D View Pro](../FormObjects/viewProArea_overview.md). La llamada a estas áreas cuando el CEF está deseleccionado mostrará áreas en blanco y/o generará errores.
-- **MeCab**: librería utilizada para la indexación de textos en lengua japonesa (ver este [párrafo de propiedades](../settings/database.md#support-of-mecab-japanese-version)). Si se deselecciona este módulo, los índices de texto se reconstruirán en japonés.
-
-> Si deselecciona MeCab para una aplicación en lenguaje japonés utilizada en plataformas heterogéneas, asegúrese de deseleccionarlo tanto en la compilación cliente/servidor como en la [compilación de la aplicación cliente](#build-client-application) (para la plataforma concurrente), de lo contrario se producirán fallos importantes en la aplicación.
-
 - **SpellChecker**: se utiliza para las funciones integradas de [corrección ortográfica](../FormObjects/properties_Entry.md#auto-spellcheck) y los comandos disponibles para las áreas de entrada y las áreas 4D Write Pro.
 - **4D Updater**: controla la [actualización automática](#what-is-a-clientserver-application) de las partes del cliente y es utilizado por el comando `SET UPDATE FOLDER` para [actualizaciones automáticas del servidor](#automatic-updating-of-server-or-single-user-applications).
 - **4D Qodly Pro and Data Explorer**: Includes [Qodly Studio and its web renderering features](https://developer.4d.com/qodly/) as well as the [Data Explorer](../Admin/dataExplorer.md).
+- **Windows App Runtime**: Required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 
 ## Página licencias y certificados
 

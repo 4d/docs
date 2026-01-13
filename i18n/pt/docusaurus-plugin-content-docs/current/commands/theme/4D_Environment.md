@@ -8,7 +8,7 @@ slug: /commands/theme/4D-Environment
 |                                                                                                                                               |
 | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #_command_.Application file.Syntax -->](../../commands-legacy/application-file.md)<br/>                                         |
-| [<!-- INCLUDE #_command_.Application info.Syntax -->](../../commands-legacy/application-info.md)<br/>                                         |
+| [<!-- INCLUDE #_command_.Application info.Syntax -->](../../commands/application-info.md)<br/>                                                |
 | [<!-- INCLUDE #_command_.Application type.Syntax -->](../../commands-legacy/application-type.md)<br/>                                         |
 | [<!-- INCLUDE #_command_.Application version.Syntax -->](../../commands-legacy/application-version.md)<br/>                                   |
 | [<!-- INCLUDE #_command_.BUILD APPLICATION.Syntax -->](../../commands-legacy/build-application.md)<br/>                                       |

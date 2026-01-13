@@ -35,7 +35,7 @@ title: インターフェースページ
 
 - **印刷の進捗状況**: 印刷時の印刷進捗状況を表示するダイアログを有効または無効にします。
 
-- **WindowsでSDIモードを使用する**: このオプションが選択されていると、[対応している環境](../Menus/sdi.md#SDIモード利用条件) で組み込みアプリが実行された場合に、4D は自動で [SDIモード (Single-Document Interface)](../Menus/sdi.md) を有効にします。 このオプションを選択すると、Windows では、4D メニューバーの **実行** メニューからアプリケーションの実行モードが選択できます:
+- **Use SDI mode on Windows**: When this option is checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). このオプションを選択すると、Windows では、4D メニューバーの **実行** メニューからアプリケーションの実行モードが選択できます:
 
   ![](../assets/en/settings/sdi-mdi.png)
 
@@ -45,11 +45,11 @@ title: インターフェースページ
 
 :::
 
-### アピアランス
+### カラースキーム
 
 このメニューで、メインアプリケーションレベルにおいて使用するカラースキームを選択します。 カラースキームは、フォーム内で使用されるテキスト、背景、ウィンドウなどのインターフェースカラーのグローバルなセットを定義します。
 
-> このオプションは macOS でのみ使用できます。 Windows上では、"Light" テーマが常に使用されます。
+> This option is ignored on Windows with [Classic theme](#use-fluent-ui-on-windows). In this context, the "Light" scheme is always used.
 
 以下のスキームが利用可能です:
 
@@ -63,6 +63,16 @@ title: インターフェースページ
 
 - by the [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) command at the working session level;
 - 各フォームレベル (最優先レベル) では、[カラースキーム](../FormEditor/propertiesForm.html#カラースキーム) プロパティを使用できます。 **注記**: 印刷時には、フォームは常に "ライト" スキームを使用します。
+
+### Use Fluent UI on Windows
+
+When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows Classic UI rendering theme will be used by default.
+
+> This option is only used on Windows, it has no effect on macOS.
+
+This project setting can be overriden at form level by using the [Widget appearance](../FormEditor/propertiesForm.html#widget-appearance) form property (highest priority level).
+
+> Rendering themes can be handled using CSS. 詳細については、[メディアクエリ](../FormEditor/createStylesheet.md#メディアクエリ) を参照してください。
 
 ## ショートカット
 

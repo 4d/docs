@@ -491,13 +491,10 @@ Un module est une bibliothèque de code intégrée utilisée par 4D pour contrô
 Les modules optionnels suivants peuvent être désélectionnés :
 
 - **CEF**: Bibliothèque embarquée Chromium. Il est nécessaire pour exécuter les [zones Web](../FormObjects/webArea_overview.md) qui utilisent le moteur de rendu intégré et les [zones 4D View Pro](../FormObjects/viewProArea_overview.md). L'appel de ces zones lorsque le CEF est désélectionné affichera des zones vierges et/ou générera des erreurs.
-- **MeCab**: Bibliothèque utilisée pour l'indexation de textes en langue japonaise (voir [ce paragraphe](../settings/database.md#support-of-mecab-japanese-version)). Si vous désélectionnez ce module, les index de texte seront reconstruits en japonais.
-
-> Si vous désélectionnez MeCab pour une application en langue japonaise utilisée sur des plateformes hétérogènes, assurez-vous de le désélectionner à la fois sur le build client/serveur et sur le [build de l'application cliente](#build-client-application) (pour la plate-forme concurrente), sinon des dysfonctionnements majeurs se produiront dans l'application.
-
 - **SpellChecker**: Utilisé pour les fonctions intégrées de [vérification orthographique](../FormObjects/properties_Entry.md#auto-spellcheck) et les commandes disponibles pour les zones de saisie et les zones 4D Write Pro.
 - **4D Updater**: Contrôle la [mise à jour automatique](#what-is-a-clientserver-application) des parties clientes et est utilisé par la commande `SET UPDATE FOLDER` pour [les mises à jour automatiques du serveur](#automatic-updating-of-server-or-single-user
 - **4D Qodly Pro et Data Explorer** : Comprend [Qodly Studio et ses fonctions de rendu web](https://developer.4d.com/qodly/) ainsi que le [Data Explorer](../Admin/dataExplorer.md).
+- **Windows App Runtime**: Required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 
 ## Page Licences & Certificat
 

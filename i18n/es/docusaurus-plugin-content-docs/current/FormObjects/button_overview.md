@@ -277,11 +277,13 @@ El estilo del botón Ayuda puede utilizarse para mostrar un botón de ayuda est�
 
 ### Círculo
 
-El estilo de botón Círculo aparece como un botón sistema circular. Este estilo de botón está diseñado para macOS.
+El estilo de botón Círculo aparece como un botón sistema circular.
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-En Windows, es idéntico al estilo "Ninguno" (no se tiene en cuenta el círculo del fondo).
+This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+
+On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
 
 #### Ejemplo JSON:
 

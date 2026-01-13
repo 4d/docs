@@ -277,11 +277,13 @@ Office XPボタンの反転表示と背景のカラーはシステムカラー�
 
 ### サークル
 
-サークルスタイルのボタンは、円形のシステムボタンとして表示されます。 このボタンスタイルは macOS 用に用意されています。
+サークルスタイルのボタンは、円形のシステムボタンとして表示されます。
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-Windows の場合、サークルは表示されません。
+This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+
+On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
 
 #### JSON 例:
 

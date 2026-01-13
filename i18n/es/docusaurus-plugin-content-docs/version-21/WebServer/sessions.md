@@ -23,7 +23,7 @@ Las sesiones web permiten:
 Las sesiones web se utilizan para:
 
 - [Aplicaciones web](gettingStarted.md) enviando peticiones http (incluyendo peticiones [SOAP Web services](../commands/theme/Web_Services_Server.md) y [/4DACTION](../WebServer/httpRequests.md#4daction)),
-- llamadas a la [REST API](../REST/authUsers.md), que utilizan [datastores remotos](../ORDA/remoteDatastores.md) y [formularios Qodly](qodly-studio.md).
+- calls to the [REST API](../REST/authUsers.md), which are used by [remote datastores](../ORDA/remoteDatastores.md) and [Qodly pages](https://developer.4d.com/qodly/).
 
 ## Activando sesiones web {#enabling-web-sessions}
 

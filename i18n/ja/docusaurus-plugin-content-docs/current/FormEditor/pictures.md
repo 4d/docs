@@ -64,7 +64,7 @@ title: ピクチャー
 
 *(\*) 通常は  macOS = 72dpi, Windows = 96dpi*
 
-## ダークモード (macOS のみ)
+## Dark mode pictures
 
 [フォームがダークスキームを使用](properties_FormProperties.md#カラースキーム) している場合に、標準のピクチャーの代わりに使用する専用のピクチャーやアイコンを定義することができます。
 
@@ -76,6 +76,12 @@ title: ピクチャー
 ランタイム時に、4D は [現在のフォームのカラースキーム](../FormEditor/properties_FormProperties.md#カラースキーム) に応じて、ライト用またはダーク用のピクチャーを自動的にロードします。
 
 ![](../assets/en/FormEditor/darkicon.png)
+
+:::note
+
+The dark mode is not available on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows).
+
+:::
 
 ## ピクチャー上のマウス座標
 

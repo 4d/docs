@@ -429,6 +429,6 @@ Dans l'exemple suivant, le caractère **retour chariot** (séquence d'échappeme
 Les conventions suivantes sont utilisées dans la documentation du langage 4D :
 
 - les caractères `{ }` (accolades) indiquent des paramètres facultatifs. Par exemple, `.delete( { option : Integer } )` signifie que le paramètre *option* peut être omis lors de l'appel de la fonction.
-- la notation `{ ; ...*param* : Type}` indique un nombre illimité de paramètres du même type. Par exemple, `.concat( value : any { ;...valueN : any} ) : Collection` signifie qu'un nombre illimité de valeurs de n'importe quel type peut être transmis à la fonction.
-- la notation `{ ; ...(*param* : Type ; *param2* : Type) }` indique un nombre illimité de groupes de paramètres. Par exemple, `COLLECTION TO ARRAY ( collection : Collection ; array : Array { ; propertyName : Text}{ ; ...(array : Array ; propertyName : Text) } )` signifie qu'un nombre illimité de couples de valeurs de types tableau/texte peut être passé à la commande.
 - le mot-clé `any` est utilisé pour les paramètres qui peuvent être de n'importe quel type (nombre, texte, booléen, date, heure, objet, collection...).
+- la notation `{ ; ...*param* : Type}` indique un nombre illimité de paramètres du même type. For example, `.concat( value : any { ;...valueN : any } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
+- la notation `{ ; ...(*param* : Type ; *param2* : Type) }` indique un nombre illimité de groupes de paramètres. For example, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` means that an unlimited number of couple values of type array/text can be passed to the command.

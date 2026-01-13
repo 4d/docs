@@ -7,6 +7,12 @@ title: On Double Clicked
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
 | 13  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](FormObjects/writeProArea_overview.md) - [ボタン](FormObjects/button_overview.md) - [ボタングリッド](FormObjects/buttonGrid_overview.md) - [チェックボックス](FormObjects/checkbox_overview.md) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#list-box-columns) - [ピクチャーボタン](FormObjects/pictureButton_overview.md) - [プラグインエリア](FormObjects/pluginArea_overview.md) - [進捗インジケーター](FormObjects/progressIndicator.md) - [ラジオボタン](FormObjects/radio_overview.md) - [ルーラー](FormObjects/ruler.md) - [スピナー](FormObjects/spinner.md) - [スプリッター](FormObjects/splitters.md) - [ステッパー](FormObjects/stepper.md) | オブジェクト上でダブルクリックされた |
 
+:::note
+
+The `On Double Clicked` event is not supported with [**steppers**](FormObjects/stepper.md) on Windows when [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) rendering theme is enabled.
+
+:::
+
 ## 説明
 
 `On Double Clicked` イベントは、ユーザーがオブジェクトをダブルクリック したときに発生します。 ダブルクリック間隔の最大時間は、システム環境設定で定義されています。

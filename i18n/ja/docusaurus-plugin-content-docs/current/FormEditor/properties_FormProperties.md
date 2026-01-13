@@ -7,9 +7,10 @@ title: フォームプロパティ
 
 ## カラースキーム
 
-> 配色プロパティは、macOS でのみ適用されます。
+> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> ).
 
-このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/set-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](../commands-legacy/get-application-color-scheme.md) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 - dark - 暗い背景に明るいテキスト
 - light - 明るい背景に暗いテキスト
@@ -75,6 +76,32 @@ title: フォームプロパティ
 #### JSON 文法
 
 フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 詳しくは [プロジェクトのアーキテクチャー](Project/architecture.md#sources) を参照ください。
+
+---
+
+## Form Theme on Windows
+
+This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+
+使用可能な値:
+
+- **Inherited** (default): inherits from the project theme
+- **Classic**: use the Windows classic interface theme
+- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+
+:::note
+
+This property is ignored on macOS.
+
+:::
+
+#### JSON 文法
+
+| 名称       | データタイプ  | とりうる値       |
+| -------- | ------- | ----------- |
+| fluentUI | boolean | true, false |
+
+If the property is not defined, the "inherited" option is selected.
 
 ---
 
@@ -209,5 +236,4 @@ title: フォームプロパティ
 | 名称          | データタイプ | とりうる値               |
 | ----------- | ------ | ------------------- |
 | windowTitle | string | テキストまたは参照としてのウィンドウ名 |
-
 

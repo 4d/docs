@@ -277,11 +277,13 @@ Le style du bouton Aide peut être utilisé pour afficher un bouton d'aide syst�
 
 ### Rond
 
-Le style de bouton Rond apparaît comme un bouton système circulaire. Ce style de bouton est conçu pour macOS.
+Le style de bouton Rond apparaît comme un bouton système circulaire.
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-Sous Windows, il est identique au style «Aucun» (le cercle en arrière-plan n'est pas pris en compte).
+This button style is supported on macOS and [Windows Fluent UI theme](../FormEditor/forms.md#enabling-the-fluent-ui-rendering).
+
+On Windows Classic UI theme, it is identical to the “None” style (the circle in the background is not taken into account).
 
 #### Exemple JSON :
 

@@ -35,7 +35,7 @@ title: Comandos por nombre
 [`APPEND TO ARRAY`](../commands-legacy/append-to-array.md)<br/>
 [`APPEND TO LIST`](../commands-legacy/append-to-list.md)<br/>
 [`Application file`](../commands-legacy/application-file.md)<br/>
-[`Application info`](../commands-legacy/application-info.md)<br/>
+[`Application info`](application-info.md)<br/>
 [`Application type`](../commands-legacy/application-type.md)<br/>
 [`Application version`](../commands-legacy/application-version.md)<br/>
 [`APPLY TO SELECTION`](../commands-legacy/apply-to-selection.md)<br/>
@@ -337,6 +337,7 @@ title: Comandos por nombre
 [`FORM SET OUTPUT`](../commands-legacy/form-set-output.md)<br/>
 [`FORM SET SIZE`](../commands-legacy/form-set-size.md)<br/>
 [`FORM SET VERTICAL RESIZING`](../commands-legacy/form-set-vertical-resizing.md)<br/>
+[`FORM theme`](form-theme.md) **new 4D 21 R2**<br/>
 [`FORM UNLOAD`](../commands-legacy/form-unload.md)<br/>
 [`Formula`](formula.md)<br/>
 [`Formula from string`](formula-from-string.md)<br/>
