@@ -82,6 +82,8 @@ Lorsque cette option est cochée, vous pourrez vous connecter au serveur d'admin
 
 :::
 
+:::
+
 #### Port HTTP
 
 Numéro de port à utiliser pour les connexions HTTP au serveur d'administration Web lorsque l'option **Connexions HTTP sur localhost acceptées** est cochée. La valeur par défaut est 7080.
