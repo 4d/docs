@@ -35,6 +35,12 @@ En Windows, el concepto de "opción recomendada" no está soportado: sólo el bo
 
 Durante la ejecución, un campo o toda área introducible es delimitada por un rectángulo de selección cuando tiene el foco (a través de la tecla Tab o un simple clic). Puede ocultar este rectángulo activando esta propiedad. Ocultar el rectángulo de enfoque puede ser útil en el caso de interfaces específicas.
 
+:::note
+
+The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI.
+
+:::
+
 #### Gramática JSON
 
 | Nombre        | Tipos de datos | Valores posibles |

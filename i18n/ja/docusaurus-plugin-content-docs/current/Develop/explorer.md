@@ -35,11 +35,11 @@ Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](h
 
 ### Qodlyページを追加または開く
 
-You can add or open Qodly pages directly from the 4D Explorer. If [requirements](#requirements) are met, the page is opened in the [Page editor of Qodly Studio](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview).
+4D エクスプローラーからQodly ページを直接追加または開くことができます。 [要件](#要件) を満たしていた場合、ページは[Qodly Studio のページエディター](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) で開かれます。
 
-To add a page:
+ページを追加するには:
 
-- Select **New Qodly page...** in the contextual menu, <br/>
+- コンテキストメニュー内の **New Qodly page...** を選択します<br/>
   ![](../assets/en/Develop/qodly-context.png)
 
 - or click the **+** icon or select **New Qodly page...** in the bottom area of the Explorer.<br/>

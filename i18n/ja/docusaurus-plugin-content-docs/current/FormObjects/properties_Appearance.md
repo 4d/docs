@@ -35,6 +35,12 @@ Windows上では "推奨選択肢" の概念はサポートされていないた
 
 ランタイムにおいて、タブキーやシングルクリックによってフォーカスを得たフィールドや入力可能なエリアは、選択状態を示す四角で縁取りされます。 このプロパティを使用して、フォーカスの四角を非表示にできます。 特定のインターフェースにおいては、フォーカスの四角を非表示にすることが便利かもしれません。
 
+:::note
+
+The focus rectangle is only available on macOS and (for text and picture [inputs](input_overview.md)) on Windows with [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) enabled. It is not supported on Windows classic UI.
+
+:::
+
 #### JSON 文法
 
 | 名称            | データタイプ  | とりうる値       |

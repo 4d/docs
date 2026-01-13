@@ -7,9 +7,10 @@ title: Propriétés des formulaires
 
 ## Schéma de couleurs
 
-> La propriété de schéma de couleurs n'est appliquée que sur macOS.
+> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> ).
 
-Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands-legacy/set-application-color-scheme.md)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
+Cette propriété définit la palette de couleurs du formulaire. Par défaut, lorsque la propriété n'est pas définie, la valeur d'une palette de couleurs est **héritée** (le formulaire utilise la palette définie [au niveau de l'application](../commands-legacy/get-application-color-scheme.md)). Pour le formulaire, cette option peut être remplacée par l'une des deux options suivantes :
 
 - dark - texte clair sur fond foncé
 - light - texte foncé sur fond clair
@@ -75,6 +76,32 @@ Cette propriété est le nom du formulaire lui-même et est utilisée pour faire
 #### Grammaire JSON
 
 Le nom du formulaire est défini par le nom du dossier qui contient le fichier form.4Dform. Voir [architecture du projet](Project/architecture#sources) pour plus d'informations.
+
+---
+
+## Form Theme on Windows
+
+This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+
+Valeurs possibles :
+
+- **Inherited** (default): inherits from the project theme
+- **Classic**: use the Windows classic interface theme
+- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+
+:::note
+
+This property is ignored on macOS.
+
+:::
+
+#### Grammaire JSON
+
+| Nom      | Type de données | Valeurs possibles |
+| -------- | --------------- | ----------------- |
+| fluentUI | boolean         | true, false       |
+
+If the property is not defined, the "inherited" option is selected.
 
 ---
 
@@ -209,5 +236,4 @@ Vous pouvez utiliser des références dynamiques pour définir les noms de fenê
 | Nom         | Type de données | Valeurs possibles                                             |
 | ----------- | --------------- | ------------------------------------------------------------- |
 | windowTitle | string          | Le nom de la fenêtre sous forme de texte brut ou de référence |
-
 

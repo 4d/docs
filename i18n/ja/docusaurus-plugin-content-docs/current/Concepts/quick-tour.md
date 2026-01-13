@@ -429,6 +429,6 @@ End for
 4D ランゲージドキュメントでは、次の表記が使われています:
 
 - 中カッコ `{ }` は、任意のパラメーターを示します。 たとえば、`.delete( { option : Integer } )` という表記の場合、関数を呼び出す際に *option* パラメーターを省略することができます。
-- `{; ...*param* : Type}` という表記は、同じ型のパラメーターの数に制限がないことを示します。 たとえば、`.concat( value : any { ;...valueN : Text } ) : Collection` という表記の場合、テキスト型の引数を数に制限なく関数に渡すことができます。
-- `{; ...(*param* : Type ; *param2* : Type) }` という表記は、グループでのパラメーターの数に制限がないことを示します。 例えば、`COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` という表記は、値またはテキスト型配列のペアを無制限にコマンドに渡すことができるということを意味します。
 - `any` キーワードは、あらゆる型(数値、テキスト、ブール、日付、時間、オブジェクト、コレクション、など)が可能な引数に対して使用されます。
+- `{; ...*param* : Type}` という表記は、同じ型のパラメーターの数に制限がないことを示します。 For example, `.concat( value : any { ;...valueN : any } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
+- `{; ...(*param* : Type ; *param2* : Type) }` という表記は、グループでのパラメーターの数に制限がないことを示します。 For example, `COLLECTION TO ARRAY ( collection : Collection ; array : Array {; propertyName : Text}{; ...(array : Array ; propertyName : Text) } )` means that an unlimited number of couple values of type array/text can be passed to the command.

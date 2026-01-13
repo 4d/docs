@@ -18,7 +18,7 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 |                                                                                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE #WebFormClass.componentName.Summary -->   |
+| [<!-- INCLUDE WebFormClass.componentName.Syntax -->](#componentname)<br/><!-- INCLUDE WebFormClass.componentName.Summary -->    |
 | [<!-- INCLUDE #WebFormClass.disableState().Syntax -->](#disablestate)<br/><!-- INCLUDE #WebFormClass.disableState().Summary --> |
 | [<!-- INCLUDE #WebFormClass.enableState().Syntax -->](#enablestate)<br/><!-- INCLUDE #WebFormClass.enableState().Summary -->    |
 | [<!-- INCLUDE #WebFormClass.setError().Syntax -->](#seterror)<br/><!-- INCLUDE #WebFormClass.setError().Summary -->             |
@@ -27,11 +27,11 @@ The `WebForm` class contains functions and properties allowing to handle your Qo
 
 ### *.componentName*
 
-<!-- REF #WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
+<!-- REF WebFormClass.componentName.Syntax -->***.componentName*** : [4D.WebFormItem](WebFormItemClass.md)<!-- END REF -->
 
 #### Descrição
 
-The components of web pages are <!-- REF #WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
+The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
 
 The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. These objects have functions that you can use to manage your components dynamically.
 
@@ -60,9 +60,9 @@ While `myForm` may not display typical object properties when examined in the de
 
 <!-- REF #WebFormClass.disableState().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                  |
-| --------- | ------ | :-: | ------------------------------------------ |
-| state     | string |  -> | Name of state to disable from the web page |
+| Parâmetro | Tipo |     | Descrição                                         |
+| --------- | ---- | :-: | ------------------------------------------------- |
+| state     | Text |  -> | Nome do estado a ser desativado no formulário Web |
 
 <!-- END REF -->
 
@@ -85,9 +85,9 @@ For more information on web pages states, please refer to the [States section in
 
 <!-- REF #WebFormClass.enableState().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                |
-| --------- | ------ | :-: | ---------------------------------------- |
-| state     | string |  -> | Name of state to enable on the web pages |
+| Parâmetro | Tipo |     | Descrição                                      |
+| --------- | ---- | :-: | ---------------------------------------------- |
+| state     | Text |  -> | Nome do estado a ser ativado no formulário Web |
 
 <!-- END REF -->
 
@@ -121,9 +121,9 @@ Function authenticationError()
 
 <!-- REF #WebFormClass.setError().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                |
-| --------- | ------ | :-: | ---------------------------------------- |
-| msg       | string |  -> | Error message to display in the web page |
+| Parâmetro | Tipo |     | Descrição                                        |
+| --------- | ---- | :-: | ------------------------------------------------ |
+| msg       | Text |  -> | Mensagem de erro a ser exibida no formulário Web |
 
 <!-- END REF -->
 
@@ -156,9 +156,9 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setMessage().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                      |
-| --------- | ------ | :-: | ---------------------------------------------- |
-| msg       | string |  -> | Information message to display in the web page |
+| Parâmetro | Tipo |     | Descrição                                            |
+| --------- | ---- | :-: | ---------------------------------------------------- |
+| msg       | Text |  -> | Mensagem informativa a ser exibida no formulário Web |
 
 <!-- END REF -->
 
@@ -191,9 +191,9 @@ If the [**Provide feedback**](https://developer.4d.com/qodly/4DQodlyPro/pageLoad
 
 <!-- REF #WebFormClass.setWarning().Params -->
 
-| Parâmetro | Tipo   |     | Descrição                                  |
-| --------- | ------ | :-: | ------------------------------------------ |
-| msg       | string |  -> | Warning message to display in the web page |
+| Parâmetro | Tipo |     | Descrição                                         |
+| --------- | ---- | :-: | ------------------------------------------------- |
+| msg       | Text |  -> | Mensagem de aviso a ser exibida no formulário Web |
 
 <!-- END REF -->
 

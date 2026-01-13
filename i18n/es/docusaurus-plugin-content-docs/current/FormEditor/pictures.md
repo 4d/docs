@@ -64,7 +64,7 @@ Aunque 4D prioriza automáticamente la resolución más alta, existen, sin embar
 
 *(\*) Generalmente, macOS = 72 dpi, Windows = 96 dpi*
 
-## Imágenes en modo oscuro (sólo en macOS)
+## Dark mode pictures
 
 Puede definir imágenes e iconos específicos que se utilizarán en lugar de las imágenes estándar cuando [los formularios utilicen el esquema oscuro](properties_FormProperties.md#color-scheme).
 
@@ -76,6 +76,12 @@ Una imagen en modo oscuro se define de la siguiente manera:
 En tiempo de ejecución, 4D cargará automáticamente la imagen clara u oscura según el [modo de colores de formulario actual](../FormEditor/properties_FormProperties.md#color-scheme).
 
 ![](../assets/en/FormEditor/darkicon.png)
+
+:::note
+
+The dark mode is not available on Windows with [Classic theme](../settings/interface.md#use-fluent-ui-on-windows).
+
+:::
 
 ## Coordenadas del ratón en una imagen
 

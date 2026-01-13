@@ -7,9 +7,10 @@ title: Propriedades do formulário
 
 ## Esquema de cores
 
-> A propriedade Esquema de cores só é aplicada no macOS.
+> Color scheme property is only applied on macOS and [Windows with Fluent UI theme](../settings/interface.md#use-fluent-ui-on-windows).
+> ).
 
-Esta propriedade define o esquema de cores para o formulário. Esta propriedade define o esquema de cores para o formulário. Isto pode ser alterado para o formulário para uma das duas opções seguintes:
+Esta propriedade define o esquema de cores para o formulário. Por padrão, quando a propriedade não está definida, o valor de um esquema de cores é **herdado** (o formulário usa o esquema definido no [nível do aplicativo] (../commands-legacy/get-application-color-scheme.md)). Isto pode ser alterado para o formulário para uma das duas opções seguintes:
 
 - dark - texto claro sobre um fundo escuro
 - light - texto escuro sobre um fundo claro
@@ -75,6 +76,32 @@ Essa propriedade é o nome do próprio formulário sendo usada para fazer refer�
 #### Gramática JSON
 
 O nome do formulário é definido pelo nome da pasta que contém o arquivo form.4Dform. Consulte [arquitetura do projeto](Project/architecture#sources) para obter mais informações.
+
+---
+
+## Form Theme on Windows
+
+This property allows you to select explicitely the interface theme you wish to be used when the form is executed on Windows. By default, forms inherit from the [global project theme settings](../settings/interface.md) but you can override this setting for each form.
+
+Os valores disponíveis são:
+
+- **Inherited** (default): inherits from the project theme
+- **Classic**: use the Windows classic interface theme
+- **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
+
+:::note
+
+This property is ignored on macOS.
+
+:::
+
+#### Gramática JSON
+
+| Nome     | Tipo de dados | Valores possíveis |
+| -------- | ------------- | ----------------- |
+| fluentUI | boolean       | true, false       |
+
+If the property is not defined, the "inherited" option is selected.
 
 ---
 
@@ -209,5 +236,4 @@ Você pode usar referências dinâmicas para definir os títulos das janelas dos
 | Nome        | Tipo de dados | Valores possíveis                                      |
 | ----------- | ------------- | ------------------------------------------------------ |
 | windowTitle | string        | O nome da janela como texto simples ou como referência |
-
 

@@ -64,7 +64,7 @@ Especifique el tipo de objeto, luego entre llaves, declare el estilo o los estil
 
 En el siguiente ejemplo, todos los objetos del tipo *botón* mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
-```
+```css
 button {
     font-family: Helvetica Neue;
     font-size: 20px;
@@ -73,7 +73,7 @@ button {
 
 Para aplicar el mismo estilo a varios tipos de objetos, especifique los tipos de objetos separados por un "," y luego, entre llaves, declare el o los estilos a aplicar:
 
-```
+```css
 text, input {
   text-align: left;
   stroke: grey;
@@ -94,7 +94,7 @@ El nombre del objeto corresponde a la propiedad JSON [object name](../FormObject
 
 En el siguiente ejemplo, el texto del objeto con el nombre "okButton" se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
-```
+```css
 #okButton {
     font-family: Helvetica Neue;
     font-size: 20px;
@@ -109,7 +109,7 @@ Puede especificar las clases a utilizar con un caracter "." seguido del nombre d
 
 En el siguiente ejemplo, el texto de todos los objetos con el nombre de la clase `okButtons` se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles, alineado al centro:
 
-```
+```css
 .okButtons {
     font-family: Helvetica Neue;
     font-size: 20px;
@@ -119,7 +119,7 @@ En el siguiente ejemplo, el texto de todos los objetos con el nombre de la clase
 
 Para indicar que un estilo debe aplicarse sólo a los objetos de un tipo determinado, especifique el tipo seguido de "." y el nombre de la clase, y luego, entre llaves, declare el estilo o los estilos a aplicar.
 
-```
+```css
 text.center {
   text-align: center;
   stroke: red;
@@ -128,7 +128,7 @@ text.center {
 
 En la descripción del formulario 4D, se asocia un nombre de clase a un objeto mediante el atributo [CSS Class](../FormObjects/properties_Object.md#css-class). Este atributo contiene uno o varios nombres de clase, separados por un espacio:
 
-```
+```css
 class: "okButtons important"       
 ```
 
@@ -140,7 +140,7 @@ Indique que un estilo debe aplicarse a todos los objetos formulario con el cará
 
 En el siguiente ejemplo, todos los objetos tendrán un fondo gris:
 
-```
+```css
 * {
   fill: gray;
 }
@@ -165,7 +165,7 @@ Especifique el atributo entre corchetes y, a continuación, entre llaves, declar
 
 Todos los objetos con el atributo `borderStyle` tendrán líneas moradas:
 
-```
+```css
 [borderStyle]
 {
      stroke: purple;
@@ -174,7 +174,7 @@ Todos los objetos con el atributo `borderStyle` tendrán líneas moradas:
 
 Todos los objetos de tipo texto con un atributo texto cuyo valor sea "Hello" tendrán letras azules:
 
-```
+```css
 text[text=Hello]
 {
      stroke: blue;
@@ -183,7 +183,7 @@ text[text=Hello]
 
 Todos los objetos con un atributo texto cuyo valor sea "Hello" tendrán letras azules:
 
-```
+```css
 [text~=Hello]
 {
      stroke: blue;
@@ -193,7 +193,7 @@ Todos los objetos con un atributo texto cuyo valor sea "Hello" tendrán letras a
 
 Todos los objetos de tipo texto con un atributo texto cuyo valor comience por "Hello" tendrán letras azules:
 
-```
+```css
 text[text|=Hello]
 {
      stroke: yellow;
@@ -206,26 +206,28 @@ text[text|=Hello]
 
 ### Consultas de medios
 
-Las consultas de medios se utilizan para aplicar esquemas de color a las aplicaciones.
+Media queries allow you to apply styles based on specific conditions. 4D supports media queries for **color schemes** and **platform themes**.
 
 Una consulta de medios está formada por características y valores de medios (por ejemplo, `<media feature>:<value>`).
 
-Funciones de medios disponibles:
+Available media features and values:
 
-- `prefers-color-scheme`
+| Media features         | Valores                                        | Descripción                                                                                                                                                              |
+| ---------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `prefers-color-scheme` | <li>**light**</li><li>**dark**</li>            | Color scheme to use                                                                                                                                                      |
+| `form-theme`           | <li>**fluent-ui**</li><li>**win-classic**</li> | Platform theme to use (Windows). For more information on **fluent-ui** theme, refer to [this section](./forms.md#fluent-ui-rendering) |
 
-Expresiones de funcionalidades de medios disponibles:
+:::note
 
-- **light**<br/>Para utilizar un esquema de luz
-- **oscuro**<br/>Para utilizar un esquema oscuro
+Color schemes are not supported with **win-classic** platform theme.
 
-> Los esquemas de color sólo son soportados en macOS.
+:::
 
-##### Ejemplo
+##### Ejemplo 1
 
 Este CSS define una combinación de colores para el texto y el fondo del texto en el esquema claro (por defecto) y otra combinación cuando se selecciona el esquema oscuro:
 
-```
+```css
 @media (prefers-color-scheme: light) {
  .textScheme {
    fill: LightGrey;
@@ -239,6 +241,39 @@ Este CSS define una combinación de colores para el texto y el fondo del texto e
     stroke: LightGrey;
   }
 }
+```
+
+##### Ejemplo 2
+
+```css
+/* Default style (all themes and modes) */
+.textLabel {
+    fontFamily: "Segoe UI";
+}
+ 
+/* Fluent UI theme*/
+@media (form-theme: fluent-ui) {
+    .textLabel {
+        stroke: #2A2A2A;
+        fontSize: 14px;
+    }
+ 
+    /* dark mode */
+    @media (prefers-color-scheme: dark) {
+        .textLabel {
+            stroke: #E0E0E0;
+        }
+    }
+}
+ 
+/* Windows classic theme */
+@media (form-theme: win-classic) {
+    .textLabel {
+        stroke: #000000;
+        fontSize: 12px;
+    }
+}
+
 ```
 
 ### Atributos de objetos
@@ -270,13 +305,17 @@ Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre C
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
 
-> Los valores específicos 4D (*por ejemplo*, `hundido`) no se soportan cuando se utilizan nombres de atributos CSS.
+:::note
+
+Los valores específicos 4D (*por ejemplo*, `hundido`) no se soportan cuando se utilizan nombres de atributos CSS.
+
+:::
 
 #### Valores de atributos específicos
 
 - Para los atributos `icon`, `picture` y `customBackgroundPicture` que soportan una ruta a una imagen, la sintaxis es:
 
-```
+```css
 icon: url("/RESOURCES/Images/Buttons/edit.png"); /* ruta absoluta */
 icon: url("edit.png"); /* ruta relativa al archivo del formulario */
 ```
@@ -323,13 +362,13 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 - un archivo para ambas plataformas:
 
-```
+```json
 "css": "<path>" 
 ```
 
 - o una lista de archivos para ambas plataformas:
 
-```
+```json
 "css": [
      "<path1>",
      "<path2>" 
@@ -338,17 +377,21 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 - o una lista de archivos por plataforma:
 
-```
+```json
  "css": [
         {"path": "<path>", "media": "mac"},
         {"path": "<path>", "media": "windows"},
     ],
 ```
 
-> Las rutas de los archivos pueden ser relativas o absolutas.
->
-> - Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON.
-> - Por razones de seguridad, sólo se aceptan las rutas del sistema de archivos para las rutas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
+:::note
+
+Las rutas de los archivos pueden ser relativas o absolutas.
+
+- Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON.
+- For security reasons, only [filesystem paths](../Concepts/paths.md#filesystem-pathnames) are accepted for absolute paths (*e.g.*, "/RESOURCES", "/DATA").
+
+:::
 
 ## Ver también
 

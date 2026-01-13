@@ -73,7 +73,7 @@ Single Sign On (SSO) が有効になっている場合 (上述参照)、認証�
   **注**:
 
   - Selecting this option overrides the Use legacy network layer option in case it has been set using the [SET DATABASE PARAMETER](../commands-legacy/set-database-parameter.md) command.
-  - You can know if a 4D application is running with a QUIC network layer using the [Application info](../commands-legacy/application-info.md) command.
+  - You can know if a 4D application is running with a QUIC network layer using the [Application info](../commands/application-info.md) command.
   - QUIC は UDPプロトコルを使用するため、ネットワークのセキュリティ設定で UDP が許可されている必要があります。
   - アプリケーションサーバーと DB4Dサーバーの両方で、QUIC は自動的にポート19813 に接続します。
   - QUICレイヤーオプションを選択すると:

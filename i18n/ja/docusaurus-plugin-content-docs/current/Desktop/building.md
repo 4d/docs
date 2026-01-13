@@ -491,13 +491,10 @@ Windows用サーバーアプリケーションのビルドに使用される App
 以下の任意モジュールは、選択を解除することができます:
 
 - **CEF**: Chromium Embedded Framework ライブラリ。 埋め込みWebレンダリングエンジンを使用する [Webエリア](../FormObjects/webArea_overview.md) や、[4D View Pro エリア](../FormObjects/viewProArea_overview.md) を実行する際に必要です。 CEF が選択されていない状態でこれらのエリアを呼び出すと、空白が表示されたり、エラーが発生したりします。
-- **MeCab**: 日本語のテキストインデックスに使用されるライブラリです ([Mecab のサポート (日本語版)](../settings/database.md#mecab-のサポート-日本語版) 参照)。  このモジュールの選択を解除すると、テキストインデックスが日本語で再構築されます。
-
-> 異なるプラットフォームで使用する日本語のアプリケーションで MeCab の選択を解除する場合、必ず、クライアント/サーバーのビルドと [クライアントアプリケーションをビルド](#ライアントアプリケーションをビルド) (実行中のOS用) の両方で選択を解除しないと、アプリケーションに大きな不具合が生じます。
-
 - **SpellChecker**: 入力エリアと 4D Write Proエリアで利用可能なビルトインの [スペルチェック機能](../FormObjects/properties_Entry.md#自動スペルチェック) とコマンドに使用されます。
 - **4D Updater**: クライアントの [自動更新](#クライアントサーバーアプリケーションとは) をコントロールし、[サーバーの自動更新](#サーバーまたはシングルユーザーアプリケーションの自動更新) のための `SET UPDATE FOLDER` コマンドで使用されます。
 - **4D Qodly Pro とデータエクスプローラー**: [Qodly Studio とWeb レンダリング機能](https://developer.4d.com/qodly/) に加えて[データエクスプローラー](../Admin/dataExplorer.md) が含まれます。
+- **Windows App Runtime**: Required for [Fluent UI rendering](../FormEditor/forms.md#fluent-ui-rendering) on Windows.
 
 ## ライセンス＆証明書ページ
 

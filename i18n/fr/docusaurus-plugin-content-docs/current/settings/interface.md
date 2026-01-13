@@ -35,7 +35,7 @@ Vous pouvez définir la [fréquence d'écriture du cache](database.md#memory-pag
 
 - **Progression de l'impression** : permet, lors de l'impression, d'activer ou de désactiver l'affichage de la boîte de dialogue de progression de l'impression.
 
-- **Utiliser le mode SDI sous Windows** : Lorsque cette option est cochée, 4D active automatiquement le [mode SDI (Interface à document unique)](../Menus/sdi.md) dans votre application lorsqu'elle est exécutée dans un [contexte pris en charge](../Menus/sdi.md#disponibilité-du-mode-sdi). Lorsque vous sélectionnez cette option, sur Windows le menu **Exécuter** de la barre de menus 4D vous permet de sélectionner le mode dans lequel vous souhaitez tester l'application :
+- **Use SDI mode on Windows**: When this option is checked, 4D enables automatically the [SDI mode (Single-Document Interface)](../Menus/sdi.md) in your application when executed in a [supported context](../Menus/sdi.md#sdi-mode-availability). Lorsque vous sélectionnez cette option, sur Windows le menu **Exécuter** de la barre de menus 4D vous permet de sélectionner le mode dans lequel vous souhaitez tester l'application :
 
   ![](../assets/en/settings/sdi-mdi.png)
 
@@ -45,11 +45,11 @@ Cette option peut être sélectionnée sur macOS mais sera ignorée lorsque l'ap
 
 :::
 
-### Apparence
+### Schéma de couleurs
 
 Ce menu vous permet de sélectionner la palette de couleurs à utiliser au niveau de l'application principale. Une palette de couleurs définit un ensemble global de couleurs d'interface pour les textes, les arrière-plans, les fenêtres, etc., utilisés dans vos formulaires.
 
-> Cette option fonctionne uniquement sur macOS. Sous Windows, la palette "Light" est toujours utilisée.
+> This option is ignored on Windows with [Classic theme](#use-fluent-ui-on-windows). In this context, the "Light" scheme is always used.
 
 Les palettes suivants sont disponibles :
 
@@ -65,6 +65,16 @@ La palette d'application principale sera appliquée aux formulaires par défaut.
 
 - par la commande [SET APPLICATION COLOR SCHEME](../commands-legacy/set-application-color-scheme.md) au niveau de la session de travail ;
 - en utilisant la propriété de formulaire [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) à chaque niveau de formulaire (niveau de priorité le plus élevé). **Note** : à l'impression, les formulaires utilisent toujours la palette "Light".
+
+### Use Fluent UI on Windows
+
+When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows Classic UI rendering theme will be used by default.
+
+> This option is only used on Windows, it has no effect on macOS.
+
+This project setting can be overriden at form level by using the [Widget appearance](../FormEditor/propertiesForm.html#widget-appearance) form property (highest priority level).
+
+> Rendering themes can be handled using CSS. Pour plus d'informations, veuillez consulter la section [Media Queries](../FormEditor/createStylesheet.md#media-queries).
 
 ## Raccourcis
 
