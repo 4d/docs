@@ -123,7 +123,7 @@ This feature is designed for small-size development teams who are used to work o
 :::
 
 
-:::info Related blog post
+:::tip Related blog post
 
 [Developing Concurrently on 4D Server in Project Mode](https://blog.4d.com/developing-concurrently-on-4d-server-in-project-mode/)
 

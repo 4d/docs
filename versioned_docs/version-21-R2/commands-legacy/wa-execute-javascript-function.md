@@ -54,8 +54,43 @@ The "getCustomerInfo" JavaScript function receive a number ID as parameter and r
  WA EXECUTE JAVASCRIPT FUNCTION(*,"WA";"getCustomerInfo";$Result;$ID)
 ```
 
+## Example 3
+
+The `WA EXECUTE JAVASCRIPT FUNCTION` command can be used to update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from a [Qodly page embedded in a Web area](../FormObjects/webArea_overview.md#displaying-qodly-pages). 
+
+
+```4d
+    // Set local datasource in a specific page
+var $Source;$Value;$Page;$Result : Text
+$Value:="New Value"
+$Source:="title" // title is the name of string datasource
+$Main:="Main" // Main is name of the Qodly page
+// the namespace is sent as null, as the it's a local source
+WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value;Null;$Page)
+```
+
+```4d
+    //Set shared datasource
+var $Source;$Value;$Namespace;$Result : Text
+$Value:="New Value"
+$Source:="title" // `title` is the name of string datasource,
+$Namespace:="shared" // `shared` is the namespace of the qodly source
+// Since $NameSpace is defined no need to add the $Page arguments
+WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value;$Namespace)
+```
+
+```4d
+    //Set current page local datasource
+var $Source;$Value;$Result : Text
+$Value:="New Value"
+$Source:="title" // `title` is the name of string datasource,
+WA EXECUTE JAVASCRIPT FUNCTION(*;"WA";"Qodly.setSource";$Result;$Source;$Value)
+```
+
+
 ## See also 
 
+[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/) (blog post)<br/>
 [WA Evaluate JavaScript](wa-evaluate-javascript.md)  
 
 ## Properties
