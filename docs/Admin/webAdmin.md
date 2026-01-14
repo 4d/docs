@@ -147,7 +147,6 @@ This option is automatically checked if you used the [One-click configuration di
 
 :::
 
-:::note
 
 ## Headless Configuration
 
