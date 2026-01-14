@@ -137,6 +137,8 @@ This option is automatically checked if you used the [One-click configuration di
 
 :::
 
+:::note
+
 ## Headless Configuration
 
 All [Web Administration Server settings](#settings) are stored in the `WebAdmin.4DSettings` file. Ha un arquivo `WebAdmin.4DSettings` por padrão para cada aplicação 4D e 4D Server, pelo qual é possível lançar várias aplicações na mesma máquina local.

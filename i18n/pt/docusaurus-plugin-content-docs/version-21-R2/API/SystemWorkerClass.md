@@ -521,7 +521,7 @@ Essa propriedade é **somente leitura**.
 
 ## .timeout
 
-<!-- REF #SystemWorkerClass.timeout.Syntax -->**.timeout** : Integer<!-- END REF -->
+<!-- REF #SystemWorkerClass.timeout.Syntax -->**.timeout**: Integer<!-- END REF -->
 
 #### Descrição
 

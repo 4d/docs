@@ -136,6 +136,8 @@ Cette option est automatiquement cochée si vous avez utilisé la [Boîte de dia
 
 :::
 
+:::note
+
 ## Configuration sans interface
 
 Toutes les [propriétés du serveur d'administration Web](#settings) sont stockées dans le fichier `WebAdmin.4DSettings`. Il existe un fichier `WebAdmin.4DSettings` par défaut pour chaque application 4D et 4D Server, de sorte qu'il est possible de déployer plusieurs applications sur la même machine hôte.

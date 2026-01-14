@@ -72,7 +72,7 @@ Pour supprimer l'exposition REST d'un champ :
 
 2. Décochez l'option **Exposer avec le service REST** pour le champ.<br/>
    ![alt-text](../assets/en/REST/field.png)<br/>
-   Répétez cette opération pour chaque champ dont l'exposition doit être modifiée.
+   Repeat this for each field whose exposure needs to be modified.
 
 > Pour qu'un champ soit accessible via REST, la table parente doit l'être également. Si la table parente n'est pas exposée, aucun de ses champs ne le sera, quel que soit leur statut.
 

@@ -349,7 +349,7 @@ GitHubでリリースが作成されると、そこに**タグ**と**バージ�
 - 4D では、**デザイン/プロジェクト依存関係** メニューアイテムを選択します (開発環境)。<br/>
   ![dependency-menu](../assets/en/Project/dependency-menu.png)
 
-- 4D Server では、**ウインドウ/プロジェクト依存関係** メニューアイテムを選択します。<br/>
+- 4D Server では、**ウィンドウ/プロジェクト依存関係** メニュー項目を選択します。<br/>
   ![dependency-menu-server](../assets/en/Project/dependency-menu-server.png)
 
 依存関係パネルが表示されます。 依存関係は ABC順にソートされます。

@@ -26,7 +26,7 @@ Dans le paramètre *targetObj*, vous pouvez passer :
 
 - une plage, ou
 - un élément (tableau / ligne / cellule(s) / paragraphe / corps / en-tête / pied de page / section / / sous-section / image en ligne), ou
-- un document 4D Write Pro.
+- a 4D Write Pro document.
 
 Dans le paramètre *formule*, passez la formule 4D à évaluer. Vous pouvez passer :
 

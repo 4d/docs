@@ -565,7 +565,7 @@ Esse mecanismo automático baseia-se no conceito de "bloqueio otimista", sendo p
 
 O diagrama seguinte ilustra o bloqueio otimista:
 
-1. Dois processos carregam a mesma entidade.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
 2. O primeiro processo modifica a entidade e valida a alteração. Se llama al método `entity.save( )`. O mecanismo 4D compara automaticamente o valor do carimbo interno da entidade modificada com o da entidade armazenada nos dados. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
