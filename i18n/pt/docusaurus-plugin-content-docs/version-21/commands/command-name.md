@@ -135,10 +135,10 @@ Until(OK=0) //end of existing commands
 
 ## Propriedades
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Número de comando     | 538                         |
-| Thread safe           | &check; |
-| Modifica as variáveis | OK                          |
+|                       |     |
+| --------------------- | --- |
+| Número de comando     | 538 |
+| Thread safe           | sim |
+| Modifica as variáveis | OK  |
 
 

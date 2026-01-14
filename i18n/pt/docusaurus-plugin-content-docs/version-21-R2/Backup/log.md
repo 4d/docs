@@ -9,7 +9,7 @@ Além disso, 4D trabalha constantemente com dados cache em memória. Todas as mu
 
 Por último, 4D possui funções que analisam os conteúdos do arquivo de histórico, tornando possível reverter as operações realizadas sobre os dados do banco de dados. Essas funções estão disponíveis no MSC: consulte a página de [Análise de atividade](MSC/analysis.md) e a página de [Rollback](MSC/rollback.md).
 
-## Como funciona o arquivo de log
+## como o arquivo de histórico funciona
 
 O arquivo de histórico gerado por 4D contém uma descrição de todas as operações realizadas nos dados das tbelas registradas no diário do banco de dados, as quais são registradas de forma sequencial. Por padrão, todas as tabelas são registradas, ou seja, incluídas no arquivo de log, mas você pode desmarcar tabelas individuais usando a propriedade de tabela **Incluir no arquivo de log**.
 

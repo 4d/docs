@@ -90,8 +90,8 @@ exposed function hideOnLoad()
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1734                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1734 |
+| Thread safe       | não  |
 

@@ -142,9 +142,9 @@ Appeler une formule à l'aide de la notation objet :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1597                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1597 |
+| Thread safe        | oui  |
 
 

@@ -4,7 +4,7 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->El comando **FORM LOAD** se utiliza para cargar el *form* en memoria en el proceso actual junto con *formData* (opcional) para imprimir sus datos o analizar su contenido. Sólo puede haber un formulario actual por proceso.
+<!--REF #_command_.FORM LOAD.Summary-->El comando **FORM LOAD** se utiliza para cargar el *form* en memoria en el proceso actual junto con *formData* (opcional) para imprimir sus datos o analizar su contenido.<!-- END REF--> Sólo puede haber un formulario actual por proceso.
 
 En el parámetro *form*, puede pasar:
 
@@ -164,9 +164,9 @@ Desea imprimir un formulario que contiene un list box. Durante el evento *on loa
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1103                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1103 |
+| Hilo seguro       | no   |
 
 

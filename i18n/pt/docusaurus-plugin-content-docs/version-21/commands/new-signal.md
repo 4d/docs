@@ -72,9 +72,9 @@ O método ***doSomething*** poderia ser como:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1641                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1641 |
+| Thread safe       | sim  |
 
 

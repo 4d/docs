@@ -5,7 +5,7 @@ slug: /commands/process-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* {; *} ) : Integer<br/>**Process number** ( *id* {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* : Text {; *} ) : Integer<br/>**Process number** ( *id* : Text {; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Process number.Params-->
 
@@ -42,9 +42,9 @@ Si la commande est exécutée avec le paramètre \* à partir d'un process sur l
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 372                         |
-| Thread safe        | &check; |
+|                    |     |
+| ------------------ | --- |
+| Numéro de commande | 372 |
+| Thread safe        | oui |
 
 

@@ -5,7 +5,7 @@ slug: /commands/generate-uuid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br>**Generate UUID**( *version* ) : Text<!-- END REF-->
+<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br>**Generate UUID**( *version* : Integer ) : Text<!-- END REF-->
 
 <!--REF #_command_.Generate UUID.Params-->
 
@@ -54,9 +54,9 @@ Génération d'un UUID dans une variable :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1066                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1066 |
+| Thread safe        | oui  |
 
 

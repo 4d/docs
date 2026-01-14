@@ -92,9 +92,9 @@ If a form object method is executed, the call chain could contain (for example):
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1662                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1662 |
+| Thread safe       | sim  |
 
 

@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New shared collection.Params-->
 
-| Parámetros | Tipo                                                  |                             | Descripción                                              |
-| ---------- | ----------------------------------------------------- | --------------------------- | -------------------------------------------------------- |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection | &#8594; | Valor(es) de la collection compartida |
-| Resultado  | Collection                                            | &#8592; | New shared collection                                    |
+| Parámetros | Tipo       |                             | Descripción                                              |
+| ---------- | ---------- | --------------------------- | -------------------------------------------------------- |
+| value      | any        | &#8594; | Valor(es) de la collection compartida |
+| Resultado  | Collection | &#8592; | New shared collection                                    |
 
 <!-- END REF-->
 
@@ -71,9 +71,9 @@ Esta función modifica la colección original.
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1527                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1527 |
+| Hilo seguro       | sí   |
 
 

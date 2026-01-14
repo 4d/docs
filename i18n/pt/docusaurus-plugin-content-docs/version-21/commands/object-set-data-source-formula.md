@@ -59,9 +59,9 @@ OBJECT SET DATA SOURCE FORMULA(*;"DiscountedPriceInput"; $discountedFormula)
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1851                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1851 |
+| Thread safe       | não  |
 
 

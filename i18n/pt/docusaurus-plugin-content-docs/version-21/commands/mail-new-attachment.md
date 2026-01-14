@@ -149,9 +149,9 @@ $transporter.send($email)
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1644                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1644 |
+| Thread safe       | sim  |
 
 

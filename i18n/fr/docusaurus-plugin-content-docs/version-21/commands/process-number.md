@@ -42,9 +42,9 @@ Si la commande est exécutée avec le paramètre \* à partir d'un process sur l
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 372                         |
-| Thread safe        | &check; |
+|                    |     |
+| ------------------ | --- |
+| Numéro de commande | 372 |
+| Thread safe        | oui |
 
 

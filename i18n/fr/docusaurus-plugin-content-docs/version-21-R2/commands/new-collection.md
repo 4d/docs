@@ -8,16 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| Paramètres | Type                                                                    |                             | Description                                |
-| ---------- | ----------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valeur(s) de collection |
-| Résultat   | Collection                                                              | &#8592; | New collection                             |
+| Paramètres | Type       |                             | Description                                |
+| ---------- | ---------- | --------------------------- | ------------------------------------------ |
+| value      | any        | &#8594; | Valeur(s) de collection |
+| Résultat   | Collection | &#8592; | New collection                             |
 
 <!-- END REF-->
 
 ## Description
 
-La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être manipulées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
+La commande `New collection` <!--REF #_command_.New collection.Summary-->crée une nouvelle collection vide ou pré-remplie et retourne sa référence.<!-- END REF--> Les collections peuvent être gérées à l'aide des propriétés et des fonctions de la [classe Collection](../API/CollectionClass.md).
 
 Si vous ne passez aucun paramètre, `New collection` crée une collection vide et retourne sa référence.
 
@@ -83,9 +83,9 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1472                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1472 |
+| Thread safe        | oui  |
 
 

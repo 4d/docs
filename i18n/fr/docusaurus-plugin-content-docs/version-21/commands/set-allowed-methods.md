@@ -60,9 +60,9 @@ Cet exemple autorise la saisie de toutes les méthodes commençant par "formula"
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 805                         |
-| Thread safe        | &cross; |
+|                    |     |
+| ------------------ | --- |
+| Numéro de commande | 805 |
+| Thread safe        | non |
 
 

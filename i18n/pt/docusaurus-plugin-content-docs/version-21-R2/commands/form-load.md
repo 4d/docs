@@ -4,7 +4,7 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->O comando **FORM LOAD** é usado para carregar o *form* na memória no processo atual juntamente com *formData* (opcional) para imprimir seus dados ou analisar seu conteúdo. Só pode haver um formulário atual por processo.
+<!--REF #_command_.FORM LOAD.Summary-->O comando **FORM LOAD** é usado para carregar o *form* na memória no processo atual juntamente com *formData* (opcional) para imprimir seus dados ou analisar seu conteúdo.<!-- END REF--> Só pode haver um formulário atual por processo.
 
 No parâmetro *form*, você pode passar:
 
@@ -164,9 +164,9 @@ End case
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1103                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1103 |
+| Thread safe       | não  |
 
 

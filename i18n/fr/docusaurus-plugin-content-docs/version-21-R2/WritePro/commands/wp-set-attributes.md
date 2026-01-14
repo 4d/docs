@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description
 
-La commande **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->permet de définir la valeur de n'importe quel attribut d'une plage, d'un élément, d'un document.<!-- END REF--> Cette commande permet d'accéder à n'importe quel type d'attribut interne à 4D Write Pro : caractère, paragraphe, document, tableau ou image.
+La commande **WP SET ATTRIBUTES** <!--REF #_command_.WP SET ATTRIBUTES.Summary-->vous permet de définir la valeur d'un attribut de plage, élément ou document.<!-- END REF--> Cette commande vous donne accès à tout type d'attribut interne 4D Write Pro : caractère, paragraphe, document, tableau ou image.
 
 Dans *targetObj*, vous pouvez passer :
 

@@ -149,9 +149,9 @@ $transporter.send($email)
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1644                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1644 |
+| Hilo seguro       | sí   |
 
 

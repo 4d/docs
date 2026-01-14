@@ -5,7 +5,7 @@ slug: /commands/process-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* {; *} ) : Integer<br/>**Process number** ( *id* {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* : Text {; *} ) : Integer<br/>**Process number** ( *id* : Text {; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Process number.Params-->
 
@@ -28,7 +28,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Process number.Summary-->The `Process number` command returns the number of the process whose *name* or *id* you pass in the first parameter<!-- END REF-->The `Process number` command returns the number of the process whose *name* or *id* you pass in the first parameter. Se nenhum processo for encontrado, `Process number` retornará 0.
+<!--REF #_command_.Process number.Summary-->O comando `Process number` retorna o número do processo cujo *name* ou *id* você passou no primeiro parâmetro<!-- END REF-->. Se nenhum processo for encontrado, `Process number` retornará 0.
 
 O parâmetro opcional \* permite que você recupere, de um 4D remoto, o número de um processo executado no servidor. Nesse caso, o valor retornado é negativo. Essa opção é especialmente útil ao usar os comandos [GET PROCESS VARIABLE](../commands-legacy/get-process-variable.md), [SET PROCESS VARIABLE](../commands-legacy/set-process-variable.md) e [VARIABLE TO VARIABLE](../commands-legacy/variable-to-variable.md).
 
@@ -42,9 +42,9 @@ Se o comando for executado com o parâmetro \* de um processo no computador do s
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 372                         |
-| Thread safe       | &check; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 372 |
+| Thread safe       | sim |
 
 

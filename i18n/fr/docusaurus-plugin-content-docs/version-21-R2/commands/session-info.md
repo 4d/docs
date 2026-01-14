@@ -87,7 +87,7 @@ Voici un exemple d'objet retourné :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1844                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1844 |
+| Thread safe        | oui  |

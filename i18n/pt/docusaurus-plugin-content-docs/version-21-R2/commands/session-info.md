@@ -4,7 +4,7 @@ title: Session info
 displayed_sidebar: docs
 ---
 
-<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ) : Object<!-- END REF -->
+<!-- REF #_command_.Session info.Syntax -->**Session info** ( *sessionId* : Integer ): Object<!-- END REF -->
 
 <!-- REF #_command_.Session info.Params -->
 
@@ -87,7 +87,7 @@ Aqui está um exemplo de objeto de saída:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1844                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1844 |
+| Thread safe       | sim  |

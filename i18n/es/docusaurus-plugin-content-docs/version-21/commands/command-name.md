@@ -135,10 +135,10 @@ Until(OK=0) //end of existing commands
 
 ## Propiedades
 
-|                        |                             |
-| ---------------------- | --------------------------- |
-| Número de comando      | 538                         |
-| Hilo seguro            | &check; |
-| Modifica las variables | OK                          |
+|                        |     |
+| ---------------------- | --- |
+| Número de comando      | 538 |
+| Hilo seguro            | sí  |
+| Modifica las variables | OK  |
 
 

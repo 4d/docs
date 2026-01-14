@@ -82,7 +82,7 @@ var $parsedMessage : Object:=HTTP Parse message($message)
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1824                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1824 |
+| Thread safe       | não  |

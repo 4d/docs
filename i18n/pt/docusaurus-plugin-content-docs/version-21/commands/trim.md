@@ -54,9 +54,9 @@ $output:=Trim($input) //"Hello World!"
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1853                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1853 |
+| Thread safe       | sim  |
 
 

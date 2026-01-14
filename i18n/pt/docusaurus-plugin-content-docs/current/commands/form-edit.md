@@ -4,7 +4,7 @@ title: FORM EDIT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* ;} *form* )<br/>**FORM EDIT** ( {*aTable* ;} *form* ; *object* )<!-- END REF-->
+<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* : Table ;} *form* : Text )<br/>**FORM EDIT** ( {*aTable* : Table ;} *form* : Text ; *object* : Text )<!-- END REF-->
 
 <!--REF #_command_.FORM EDIT.Params-->
 
@@ -66,9 +66,9 @@ Para abrir o formulário de projeto *ContatoPage* com o objeto "nome-entrada" se
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1749                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1749 |
+| Thread safe       | não  |
 
 

@@ -139,7 +139,7 @@ Este evento se activa tan pronto como el motor de 4D Server / 4D detecta una mod
   - el usuario define un valor en un formulario 4D,
   - el código 4D realiza una asignación con el operador `:=`. El evento también se activa en caso de autoasignación (`$entity.attribute:=$entity.attribute`).
 - en **cliente/servidor sin la palabra clave `local`**: algún código 4D que hace una asignación con el operador `:=` es [ejecutado en el servidor](../commands-legacy/execute-on-server.md).
-- en **cliente/servidor sin la palabra clave `local`**, en una **[aplicación Qodly](https://developer.4d.com/qodly)** y **[datastore remoto](../commands/open-datastore.md)**: la entidad se recibe en el servidor 4D mientras se llama a una función ORDA (en la entidad o con la entidad como parámetro). Significa que puede que tenga que implementar una función *refresh* o *preview* en la aplicación remota que envía una petición ORDA al servidor y activa el evento.
+- in **client/server without the `local` keyword**, in **[Qodly application](https://developer.4d.com/qodly)** and **[remote datastore](../commands/open-datastore.md)**: the entity is received on 4D Server while calling an ORDA function (on the entity or with the entity as parameter). Significa que puede que tenga que implementar una función *refresh* o *preview* en la aplicación remota que envía una petición ORDA al servidor y activa el evento.
 - con el servidor REST: el valor es recibido en el servidor REST con una [petición REST](../REST/$method.md#methodupdate) (`$method=update`)
 
 La función recibe un [objeto *event*](#event-parameter) como parámetro.

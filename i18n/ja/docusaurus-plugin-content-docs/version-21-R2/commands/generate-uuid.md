@@ -5,7 +5,7 @@ slug: /commands/generate-uuid
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br>**Generate UUID**( *version* ) : Text<!-- END REF-->
+<!--REF #_command_.Generate UUID.Syntax-->**Generate UUID** : Text<br>**Generate UUID**( *version* : Integer ) : Text<!-- END REF-->
 
 <!--REF #_command_.Generate UUID.Params-->
 
@@ -54,9 +54,9 @@ UUID バージョン7の詳細な情報については、 [こちらのblog記�
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1066                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1066 |
+| スレッドセーフ | ◯    |
 
 

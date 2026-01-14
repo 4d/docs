@@ -194,9 +194,9 @@ var $result:=Compile project($options)
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1760                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1760 |
+| Hilo seguro       | no   |
 
 

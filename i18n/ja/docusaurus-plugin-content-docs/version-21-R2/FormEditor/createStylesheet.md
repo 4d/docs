@@ -362,27 +362,27 @@ icon: url("edit.png"); /* フォームファイルを基準とした相対パス
 
 - 両プラットフォーム用のファイル:
 
-```json
-"css": "<path>" 
-```
+ ```json
+ "css": "<path>" 
+ ```
 
 - または、両プラットフォーム用に複数のファイル:
 
-```json
-"css": [
-     "<path1>",
-     "<path2>" 
-      ],
-```
+ ```json
+ "css": [
+      "<path1>",
+      "<path2>" 
+       ],
+ ```
 
 - または、プラットフォームごとのファイルリスト:
 
-```json
- "css": [
-        {"path": "<path>", "media": "mac"},
-        {"path": "<path>", "media": "windows"},
-    ],
-```
+ ```json
+  "css": [
+         {"path": "<path>", "media": "mac"},
+         {"path": "<path>", "media": "windows"},
+     ],
+ ```
 
 :::note
 

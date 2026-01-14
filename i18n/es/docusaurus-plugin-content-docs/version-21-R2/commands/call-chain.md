@@ -92,9 +92,9 @@ Si un método objeto de formulario se ejecuta, la cadena de llamadas podría con
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1662                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1662 |
+| Hilo seguro       | sí   |
 
 

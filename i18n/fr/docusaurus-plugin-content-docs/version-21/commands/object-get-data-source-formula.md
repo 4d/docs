@@ -44,9 +44,9 @@ $formula:=OBJECT Get data source formula(*; "myInput")
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1852                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1852 |
+| Thread safe        | non  |
 
 

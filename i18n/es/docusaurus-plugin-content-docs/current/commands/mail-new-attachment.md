@@ -20,7 +20,7 @@ displayed_sidebar: docs
 | ----------- | --------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
 | file        | 4D.File           | &#8594; | Archivo adjunto                                                                                    |
 | zIPFile     | 4D.ZipFile        | &#8594; | Archivo zip adjunto                                                                                |
-| blob        | 4D.Blob           | &#8594; | BLOB que contiene el adjunto                                                                       |
+| blob        | 4D.Blob           | &#8594; | Blob que contiene el archivo adjunto                                                               |
 | path        | Text                              | &#8594; | Ruta del archivo adjunto                                                                           |
 | name        | Text                              | &#8594; | Nombre + extensión utilizados por el cliente de correo para designar el archivo adjunto            |
 | cid         | Text                              | &#8594; | ID del archivo adjunto (sólo en mensajes HTML), o " " si no se requiere cid     |
@@ -149,9 +149,9 @@ $transporter.send($email)
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1644                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1644 |
+| Hilo seguro       | sí   |
 
 

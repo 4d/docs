@@ -87,9 +87,9 @@ La función devuelve un [**objeto SMTP transporter**](../API/SMTPTransporterClas
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1608                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1608 |
+| Hilo seguro       | sí   |
 
 

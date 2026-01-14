@@ -65,9 +65,9 @@ Este método modifica el valor de una propiedad "settings" almacenada en el obje
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1839                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1839 |
+| Hilo seguro       | sí   |
 
 

@@ -5,7 +5,7 @@ slug: /commands/num
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Num.Syntax-->**Num** ( *expression* {; *separator*} ) : Real<br/>**Num** ( *expression* ; *base* ) : Real<!-- END REF-->
+<!--REF #_command_.Num.Syntax-->**Num** ( *expression* : Text, Boolean, Integer {; *separator* : Text} ) : Real<br/>**Num** ( *expression* : Text, Boolean, Integer ; *base* : Integer ) : Real<!-- END REF-->
 
 <!--REF #_command_.Num.Params-->
 
@@ -148,9 +148,9 @@ $result:=Num("123.20"; 10) // 123 (spécifier base 10 explicitement)
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 11                          |
-| Thread safe        | &check; |
+|                    |     |
+| ------------------ | --- |
+| Numéro de commande | 11  |
+| Thread safe        | oui |
 
 

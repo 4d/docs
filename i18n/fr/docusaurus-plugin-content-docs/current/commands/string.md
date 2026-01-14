@@ -5,7 +5,7 @@ slug: /commands/string
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.String.Syntax-->**String** ( *expression* {; *format* {; *addTime*}} ) : Text<br/>**String** ( *expression* ; *base* ) : Text<!-- END REF-->
+<!--REF #_command_.String.Syntax-->**String** ( *expression* : Expression {; *format* : Integer, Text {; *addTime* : Time}} ) : Text<br/>**String** ( *expression* : Expression ; *base* : Integer ) : Text<!-- END REF-->
 
 <!--REF #_command_.String.Params-->
 
@@ -263,9 +263,9 @@ Si *expression* est évaluée à **Null**, la commande renvoie la chaîne "null"
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 10                          |
-| Thread safe        | &check; |
+|                    |     |
+| ------------------ | --- |
+| Numéro de commande | 10  |
+| Thread safe        | oui |
 
 

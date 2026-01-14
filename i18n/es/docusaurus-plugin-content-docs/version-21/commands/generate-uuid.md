@@ -54,9 +54,9 @@ Generación de un UUID en una variable:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1066                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1066 |
+| Hilo seguro       | sí   |
 
 

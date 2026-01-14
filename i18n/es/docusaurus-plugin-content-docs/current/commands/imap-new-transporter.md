@@ -71,9 +71,9 @@ End if
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1723                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1723 |
+| Hilo seguro       | sí   |
 
 

@@ -223,7 +223,7 @@ Las operaciones de sustitución funcionan del siguiente modo:
 - Después de que un reemplazo se haga en una lista de elementos, aparecerá en cursiva. En la parte inferior de la ventana aparece un recuento de las sustituciones realizadas en tiempo real.
 - Los elementos nunca son renombrados por la función **Reemplazar en contenido**, excepto los objetos formulario. Por lo tanto, es posible que ciertos elementos de la lista no se vean afectados por la operación de reemplazo. Esto puede ocurrir cuando sólo el nombre del artículo corresponde a los criterios de búsqueda iniciales. En este caso, los elementos de la lista no aparecen necesariamente todos en cursiva y el recuento final de sustituciones puede ser inferior al número de ocurrencias encontradas por la búsqueda inicial.
 
-## Renombrar los métodos proyecto y las variables
+## Renaming project methods and variables {#renaming-project-methods-and-variables}
 
 4D ofrece una función dedicada de renombrado con distribución en todo el proyecto para los métodos proyecto y variables en todo el proyecto.
 

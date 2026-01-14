@@ -28,10 +28,10 @@ La clase Blob permite crear y manipular los [blob objects](../Concepts/dt_blob.m
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Parámetros | Tipo           |    | Descripción                                |
-| ---------- | -------------- |:--:| ------------------------------------------ |
-| blob       | Blob o 4D.Blob | -> | Blob a copiar                              |
-| Resultado  | 4D.Blob        | <- | Nuevo 4D.Blob  |<!-- END REF -->
+| Parámetros | Tipo    |    | Descripción                                |
+| ---------- | ------- |:--:| ------------------------------------------ |
+| blob       | Blob    | -> | Blob a copiar                              |
+| Resultado  | 4D.Blob | <- | Nuevo 4D.Blob  |<!-- END REF -->
 
 |
 

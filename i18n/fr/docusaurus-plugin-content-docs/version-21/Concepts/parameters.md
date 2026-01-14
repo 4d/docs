@@ -64,12 +64,6 @@ L'ancienne syntaxe de déclaration, où les paramètres sont automatiquement cop
 
 :::
 
-:::info Compatibilité
-
-L'ancienne syntaxe de déclaration, où les paramètres sont automatiquement copiés dans des variables locales numérotées séquentiellement $0, $1, etc. et déclarés en utilisant des directives du compilateur telles que `C_TEXT($1;$2)`, est **dépréciée** à partir de 4D 20 R7.
-
-:::
-
 Exemples :
 
 ```4d

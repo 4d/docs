@@ -113,9 +113,9 @@ Si se editan los valores y se presiona el botón OK, se actualiza el campo (desp
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1466                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1466 |
+| Hilo seguro       | no   |
 
 

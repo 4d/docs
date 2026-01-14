@@ -4,7 +4,7 @@ title: Process activity
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* ) : Object<br/>**Process activity** ( *sessionID* ) : Object<br/>**Process activity** ( *sessionID* ; *options* ) : Object<!-- END REF-->
+<!--REF #_command_.Process activity.Syntax-->**Process activity** () : Object<br/>**Process activity** ( *options* : Integer ) : Object<br/>**Process activity** ( *sessionID* : Text ) : Object<br/>**Process activity** ( *sessionID* : Text ; *options* : Integer ) : Object<!-- END REF-->
 
 <!--REF #_command_.Process activity.Params-->
 
@@ -27,7 +27,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.Process activity.Summary-->The **Process activity** command returns a snapshot of running processes and/or (4D Server only) connected user sessions at a given time.<!-- END REF-->El comando **Process activity** devuelve una instantánea de los procesos en ejecución y/o (sólo en 4D Server) de las sesiones de usuario conectadas en un momento dado. Este comando devuelve todos los procesos, incluidos los procesos internos a los que no se puede acceder mediante el comando [Process info](process-info.md). 
+<!--REF #_command_.Process activity.Summary-->El comando **Process activity** devuelve una instantánea de los procesos en ejecución y/o (sólo en 4D Server) de las sesiones de usuario conectadas en un momento dado.<!-- END REF--> Este comando devuelve todos los procesos, incluidos los procesos internos a los que no se puede acceder mediante el comando [Process info](process-info.md). 
 
 Por defecto, cuando se utiliza sin ningún parámetro, **Process activity** devuelve un objeto que contiene las siguientes propiedades:
 

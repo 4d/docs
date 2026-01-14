@@ -30,7 +30,7 @@ Lorsque cette propriété est cochée, un objet JavaScript spécial `$4d` est in
 
 La variable "Progression" est de type Entier long. Elle contient une valeur entre 0 et 100, représentant le pourcentage du chargement complet de la page affichée dans la zone Web. La variable est mise à jour automatiquement par 4D. Il n’est pas possible de la modifier manuellement.
 
-> Depuis 4D v19 R5, cette variable n'est mise à jour sous Windows que si la zone Web [utilise le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine).
+> As of 4D 19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 #### Grammaire JSON
 
@@ -87,7 +87,7 @@ Cette option vous permet de choisir entre deux moteurs de rendus pour la zone We
 
 > Sur Windows, si Microsoft Edge WebView2 n'est pas installé, 4D utilise le moteur intégré en tant que moteur de rendu système. Pour savoir s'il est installé sur votre système, recherchez "Microsoft Edge WebView2 Runtime" dans votre panneau d'applications.
 
-*   **coché** - `valeur JSON : embedded` : Dans ce cas, 4D utilise Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). Lorsque cette option est choisie, vous ne bénéficiez plus des mises à jour automatiques du moteur Web effectuées par le système d'exploitation ; cependant, de nouvelles versions des moteurs sont régulièrement fournies par l'intermédiaire de 4D.
+*   **coché** - `valeur JSON : embedded` : Dans ce cas, 4D utilise Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, [new versions of the engines are regularly provided through 4D](../Notes/updates.md#library-table).
 
 Le moteur CEF a les limitations suivantes :
 

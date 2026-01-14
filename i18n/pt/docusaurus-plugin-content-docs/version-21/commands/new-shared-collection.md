@@ -71,9 +71,9 @@ Diferente de coleções padrão (não partilhadas), coleções partilhadas não 
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1527                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1527 |
+| Thread safe       | sim  |
 
 

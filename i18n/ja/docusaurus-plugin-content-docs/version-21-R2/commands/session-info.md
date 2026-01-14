@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## 説明
 
-`Session info` コマンドは、<!-- REF #_command_.Session info.Summary -->*sessionID* 引数に渡した ID を持つセッションの詳細を記述したオブジェクトを返します<!-- END REF -->。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
+`Session info` コマンドは、<!-- REF #_command_.Session info.Summary -->*sessionID* 引数に渡した ID を持つセッションの詳細を記述したオブジェクトを返します。<!-- END REF -->。 *sessionID* 引数に無効なID を渡した場合、コマンドはnull オブジェクトを返します。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
@@ -87,7 +87,7 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1844                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1844 |
+| スレッドセーフ | ◯    |

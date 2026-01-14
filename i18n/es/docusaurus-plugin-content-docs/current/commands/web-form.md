@@ -36,10 +36,10 @@ The command returns `null` if it is called in a request that does not originate 
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1735                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1735 |
+| Hilo seguro       | no   |
 
 
 

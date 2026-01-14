@@ -83,9 +83,9 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1472                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1472 |
+| Hilo seguro       | sí   |
 
 

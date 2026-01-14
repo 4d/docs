@@ -5,7 +5,7 @@ slug: /commands/set-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* )<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.SET ALLOWED METHODS.Summary-->The **SET ALLOWED METHODS** command designates the project methods that can be entered via the application.<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Summary-->El comando **SET ALLOWED METHODS** designa los métodos proyecto que se pueden llamar a través de la aplicación.<!-- END REF-->
 
 4D incluye un mecanismo de seguridad que filtra los métodos proyecto que se pueden introducir desde los siguientes contextos:
 
@@ -60,9 +60,9 @@ Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al méto
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 805                         |
-| Hilo seguro       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 805 |
+| Hilo seguro       | no  |
 
 

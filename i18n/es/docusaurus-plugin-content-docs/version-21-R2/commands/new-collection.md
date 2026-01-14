@@ -8,16 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| Parámetros | Tipo                                                                    |                             | Descripción                                |
-| ---------- | ----------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
-| value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valor(es) de collection |
-| Resultado  | Collection                                                              | &#8592; | Nueva colección                            |
+| Parámetros | Tipo       |                             | Descripción                                |
+| ---------- | ---------- | --------------------------- | ------------------------------------------ |
+| value      | any        | &#8594; | Valor(es) de collection |
+| Resultado  | Collection | &#8592; | Nueva colección                            |
 
 <!-- END REF-->
 
 ## Descripción
 
-El comando `New collection` <!--REF #_command_.New collection.Summary-->crea una nueva colección vacía o prellenada y devuelve su referencia.<!-- END REF--> Las colecciones pueden manejarse utilizando propiedades y funciones de la [API de la clase Collection](../API/CollectionClass.md).
+El comando `New collection` <!--REF #_command_.New collection.Summary-->crea una nueva colección vacía o pre diligenciada y devuelve su referencia.<!-- END REF--> Las colecciones se pueden manejar usando propiedades y funciones de la [API Collection class](../API/CollectionClass.md).
 
 Si no se pasa ningún parámetro, `New collection` crea una colección vacía y devuelve su referencia.
 
@@ -83,9 +83,9 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1472                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1472 |
+| Hilo seguro       | sí   |
 
 

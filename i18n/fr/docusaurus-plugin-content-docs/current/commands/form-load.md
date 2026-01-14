@@ -4,7 +4,7 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
 
@@ -164,9 +164,9 @@ Vous voulez imprimer un formulaire contenant une list box. Lors de l'événement
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1103                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1103 |
+| Thread safe        | non  |
 
 

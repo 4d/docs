@@ -4,7 +4,7 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
@@ -38,9 +38,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|            |                             |
-| ---------- | --------------------------- |
-| コマンド番号     | 345                         |
-| スレッドセーフ    | &cross; |
-| 更新するシステム変数 | OK, error                   |
+|            |           |
+| ---------- | --------- |
+| コマンド番号     | 345       |
+| スレッドセーフ    | ×         |
+| 更新するシステム変数 | OK, error |
 

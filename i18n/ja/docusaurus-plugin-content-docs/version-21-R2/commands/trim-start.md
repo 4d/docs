@@ -4,7 +4,7 @@ title: Trim start
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Trim start.Syntax-->**Trim start** ( *aString* ) : Text<!-- END REF-->
+<!--REF #_command_.Trim start.Syntax-->**Trim start** ( *aString* : Text ) : Text<!-- END REF-->
 
 <!--REF #_command_.Trim start.Params-->
 
@@ -54,9 +54,9 @@ $output:=Trim start($input) //"Hello World!    "
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1854                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1854 |
+| スレッドセーフ | ◯    |
 
 

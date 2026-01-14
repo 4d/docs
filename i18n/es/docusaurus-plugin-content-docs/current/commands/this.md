@@ -180,9 +180,9 @@ Una vez ejecutado el formulario, el list box se llena automáticamente con la se
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1470                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1470 |
+| Hilo seguro       | sí   |
 
 

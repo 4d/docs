@@ -19,7 +19,7 @@ Webエリアには 2つの特別な変数が自動で割り当てられます:
 - [`URL`](properties_WebArea.md#url) -- Webエリアに表示されている URL の管理に使用します。
 - [`進捗状況変数`](properties_WebArea.md#進捗状況変数) -- Webエリアにロード中のページのパーセンテージを知るために使用します。
 
-> 4D v19 R5 以降、[Windows システムレンダリングエンジン](./webArea_overview.md#webレンダリングエンジン) を使用する Webエリアでは、進捗状況変数が更新されません。
+> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Webレンダリングエンジン
 

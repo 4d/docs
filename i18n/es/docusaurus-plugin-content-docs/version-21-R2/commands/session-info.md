@@ -87,7 +87,7 @@ He aquí un ejemplo de objeto de salida:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1844                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1844 |
+| Hilo seguro       | sí   |

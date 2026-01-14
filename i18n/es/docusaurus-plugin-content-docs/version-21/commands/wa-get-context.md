@@ -46,7 +46,7 @@ Verificación de la existencia de un contexto:
 
 ### Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1849                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1849 |
+| Hilo seguro       | no   |

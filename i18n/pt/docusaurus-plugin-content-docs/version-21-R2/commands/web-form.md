@@ -36,10 +36,10 @@ The command returns `null` if it is called in a request that does not originate 
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1735                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1735 |
+| Thread safe       | não  |
 
 
 

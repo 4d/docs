@@ -72,9 +72,9 @@ La méthode ***doSomething*** est par exemple :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1641                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1641 |
+| Thread safe        | oui  |
 
 

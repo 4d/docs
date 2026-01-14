@@ -90,8 +90,8 @@ exposed function hideOnLoad()
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1734                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1734 |
+| Hilo seguro       | no   |
 

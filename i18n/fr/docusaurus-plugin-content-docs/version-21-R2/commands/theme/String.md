@@ -1,6 +1,6 @@
 ---
 id: String_theme
-title: Chaînes de caractères
+title: String
 sidebar_label: String
 slug: /commands/theme/String
 ---

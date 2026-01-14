@@ -4,7 +4,7 @@ title: FORM EDIT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* ;} *form* )<br/>**FORM EDIT** ( {*aTable* ;} *form* ; *object* )<!-- END REF-->
+<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* : Table ;} *form* : Text )<br/>**FORM EDIT** ( {*aTable* : Table ;} *form* : Text ; *object* : Text )<!-- END REF-->
 
 <!--REF #_command_.FORM EDIT.Params-->
 
@@ -66,9 +66,9 @@ Para abrir el formulario de proyecto *ContactPage* con el objeto "name-input" se
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1749                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1749 |
+| Hilo seguro       | no   |
 
 

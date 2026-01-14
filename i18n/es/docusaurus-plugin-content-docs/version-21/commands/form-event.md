@@ -103,9 +103,9 @@ El list box resultante cuando se seleccionan líneas:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1606                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1606 |
+| Hilo seguro       | sí   |
 
 

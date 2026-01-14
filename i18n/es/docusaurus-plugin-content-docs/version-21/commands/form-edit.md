@@ -66,9 +66,9 @@ Para abrir el formulario de proyecto *ContactPage* con el objeto "name-input" se
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1749                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1749 |
+| Hilo seguro       | no   |
 
 

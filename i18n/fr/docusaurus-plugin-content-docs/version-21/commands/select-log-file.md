@@ -38,9 +38,9 @@ OK prend la valeur 1 si le fichier d'historique est correctement créé ou ferm�
 
 ## Propriétés
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Numéro de commande    | 345                         |
-| Thread safe           | &cross; |
-| Modifie les variables | OK, error                   |
+|                       |           |
+| --------------------- | --------- |
+| Numéro de commande    | 345       |
+| Thread safe           | non       |
+| Modifie les variables | OK, error |
 

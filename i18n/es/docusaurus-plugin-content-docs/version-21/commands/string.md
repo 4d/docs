@@ -101,8 +101,6 @@ Si pasa 0 en *base*, el comando determina la base dependiendo del valor de *expr
 | String(254;16)                         | "fe"          | cadena hexadecimal                               |
 | String(-16523461; 16)                  | "-fc20c5"     | cadena hexadecimal (negativa) |
 | String(Log(-1); 10) | "NaN"         | No es un número                                  |
-| String(1/0; 10)                        | "NaN"         | No es un número                                  |
-| String(-1/0; 10)                       | "NaN"         | No es un número                                  |
 
 :::note
 
@@ -265,9 +263,9 @@ Si *expression* se evalúa como Null, el comando devuelve la cadena "null". Esto
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 10                          |
-| Hilo seguro       | &check; |
+|                   |    |
+| ----------------- | -- |
+| Número de comando | 10 |
+| Hilo seguro       | sí |
 
 

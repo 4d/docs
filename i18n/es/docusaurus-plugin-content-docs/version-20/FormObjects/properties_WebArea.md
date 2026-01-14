@@ -30,7 +30,7 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 Nombre de una variable de tipo Longint. Esta variable recibirá un valor entre 0 y 100, que representa el porcentaje de finalización de la carga de la página en el área web. Actualizado automáticamente por 4D, no puede ser modificado manualmente.
 
-> A partir de 4D v19 R5, esta variable solo se actualiza en Windows si el área Web [utiliza el motor de renderizado Web integrado](properties_WebArea.md#use-embedded-web-rendering-engine).
+> As of 4D 19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 #### Gramática JSON
 
@@ -87,7 +87,7 @@ Esta opción permite elegir entre dos motores de renderizado para el área web, 
 
 > En Windows, si Microsoft Edge WebView2 no está instalado, 4D utiliza el motor integrado como motor de renderizado del sistema. Para saber si está instalado en su sistema, busque "Microsoft Edge WebView2 Runtime" en su panel de aplicaciones.
 
-*   **marcado** - `valor JSON: anidado`: en este caso, 4D utiliza Chromium Embedded Framework (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red).
+*   **marcado** - `valor JSON: anidado`: en este caso, 4D utiliza Chromium Embedded Framework (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, [new versions of the engines are regularly provided through 4D](../Notes/updates.md#library-table).
 
 El motor CEF tiene las siguientes limitaciones:
 

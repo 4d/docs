@@ -4,7 +4,7 @@ title: FORM EDIT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* ;} *form* )<br/>**FORM EDIT** ( {*aTable* ;} *form* ; *object* )<!-- END REF-->
+<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* : Table ;} *form* : Text )<br/>**FORM EDIT** ( {*aTable* : Table ;} *form* : Text ; *object* : Text )<!-- END REF-->
 
 <!--REF #_command_.FORM EDIT.Params-->
 
@@ -66,9 +66,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1749                        |
-| スレッドセーフ | &cross; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1749 |
+| スレッドセーフ | ×    |
 
 

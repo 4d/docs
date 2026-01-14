@@ -164,9 +164,9 @@ Desea imprimir un formulario que contiene un list box. Durante el evento *on loa
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1103                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1103 |
+| Hilo seguro       | no   |
 
 

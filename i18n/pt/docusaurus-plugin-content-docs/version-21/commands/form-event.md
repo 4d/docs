@@ -103,9 +103,9 @@ O list box resultante quando as linhas são selecionadas:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1606                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1606 |
+| Thread safe       | sim  |
 
 

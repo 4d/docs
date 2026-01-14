@@ -4,7 +4,7 @@ title: FORM EDIT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* ;} *form* )<br/>**FORM EDIT** ( {*aTable* ;} *form* ; *object* )<!-- END REF-->
+<!--REF #_command_.FORM EDIT.Syntax-->**FORM EDIT** ( {*aTable* : Table ;} *form* : Text )<br/>**FORM EDIT** ( {*aTable* : Table ;} *form* : Text ; *object* : Text )<!-- END REF-->
 
 <!--REF #_command_.FORM EDIT.Params-->
 
@@ -26,7 +26,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.<!-- END REF-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.La commande **FORM EDIT** ouvre le formulaire *form* associé à *aTable* dans l'éditeur de formulaires de 4D, avec optionnellement *object* sélectionné. Notez que vous devez avoir accès à l'environnement de Structure, sinon l'erreur -9804 ("Cannot open form") est générée.
+<!--REF #_command_.FORM EDIT.Summary-->The **FORM EDIT** command opens the *form* associated to *aTable* in the 4D Form editor, with optionnally *object* selected.La commande **FORM EDIT** ouvre le formulaire *form* associé à *aTable* dans l'éditeur de formulaires de 4D, avec optionnellement *object* sélectionné.<!-- END REF--> Notez que vous devez avoir accès à l'environnement de Structure, sinon l'erreur -9804 ("Cannot open form") est générée.
 
 La commande est asynchrone : elle retourne immédiatement à la méthode appelante et n'attend pas que le formulaire soit ouvert.
 
@@ -66,9 +66,9 @@ Pour ouvrir le formulaire projet *ContactPage* avec l'objet "name-input" sélect
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1749                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1749 |
+| Thread safe        | non  |
 
 

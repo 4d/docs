@@ -223,7 +223,7 @@ Les principes du remplacement sont les suivants :
 - Lorsqu'un remplacement a été effectué dans un élément de la liste, il apparaît en italique. Un décompte des remplacements effectués en temps réel apparaît en bas de la fenêtre.
 - Les éléments ne sont jamais eux-mêmes renommés par la fonction **Remplacer dans le contenu**, à l'exception des objets dans les formulaires. Par conséquent, il est possible que certaines occurrences de la liste ne soient pas concernées par le remplacement. Cela peut se produire lorsque seul le nom de l'élément correspond aux critères de recherche initiaux. Dans ce cas, tous les éléments de la liste ne sont pas forcément affichés en italique et le décompte des remplacements est inférieur au nombre d’occurrences trouvées par la recherche initiale.
 
-## Renommer les méthodes projet et les variables
+## Renaming project methods and variables {#renaming-project-methods-and-variables}
 
 4D propose une fonction de renommage dédiée des méthodes projet et des variables avec propagation dans tout le projet.
 

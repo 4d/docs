@@ -17,7 +17,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.FORM Event.Summary-->**FORM Event** returns an object containing information about the form event that has just occurred.<!-- END REF-->**FORM Event** devuelve un objeto que contiene información sobre el evento formulario que acaba de ocurrir. Por lo general, utilizará **FORM Event** en un método formulario u objeto.
+<!--REF #_command_.FORM Event.Summary-->**FORM Event** devuelve un objeto que contiene información sobre el evento formulario que acaba de ocurrir.<!-- END REF--> Por lo general, utilizará **FORM Event** en un método formulario u objeto.
 
 **Objeto devuelto**
 
@@ -103,9 +103,9 @@ El list box resultante cuando se seleccionan líneas:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1606                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1606 |
+| Hilo seguro       | sí   |
 
 

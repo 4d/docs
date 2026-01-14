@@ -58,9 +58,9 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1674                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1674 |
+| Thread safe       | não  |
 
 

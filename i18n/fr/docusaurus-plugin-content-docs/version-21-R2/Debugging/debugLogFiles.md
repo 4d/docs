@@ -73,7 +73,7 @@ Pour chaque requête, les champs suivants sont enregistrés :
 | server\_duration &#124; exec\_duration | Dépend de l'endroit où le journal est généré :<li>_server\*duration\* lorsqu'il est généré sur le client --Temps en microsecondes pris par le serveur pour traiter la requête et retourner une réponse. B à F dans l'image ci-dessous, OU</li><li>_exec\*duration\* lors de sa génération sur le serveur --Temps pris en microsecondes pour que le serveur traite la requête. B à E dans l'image ci-dessous.</li> |
 | write\_duration                                                                  | Temps pris en microsecondes pour l'envoi de la :<li>Requête (lorsqu'elle est exécutée sur le client). A à B dans l'image ci-dessous.</li><li>Réponse (lorsqu'elle est exécutée sur le serveur). E à F dans l'image ci-dessous.</li>                                                                                                                                                                   |
 | task_kind                                                                         | Préemptif ou coopératif (respectivement 'p' ou 'c')                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| rtt                                                                                                    | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. De A à D et de E à H dans l'image ci-dessous.<li>Seulement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lorsqu'il est utilisé avec l'ancienne couche réseau.</li><li>Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renverra 0.</li>                                           |
+| rtt                                                                                                    | Temps en microsecondes pris par le client pour envoyer la requête et pour qu'elle soit reçue par le serveur. A à D et E à H dans l'image ci-dessous.<li>Uniquement mesuré lors de l'utilisation de la couche réseau ServerNet, renvoie 0 lors de l'utilisation de la couche réseau legacy.</li><li>Pour les versions de Windows antérieures à Windows 10 ou Windows Server 2016, l'appel renvoie 0.</li>                                                    |
 | extra                                                                                                  | Informations supplémentaires relatives au contexte, par exemple le nom de la dataclass et/ou le nom de l'attribut dans le cas d'une requête ORDA                                                                                                                                                                                                                                                                                                                                                                            |
 
 Acheminement de la requête :
@@ -316,21 +316,21 @@ Ce chemin d'accès au journal est retourné par la commande `Get 4D file`.
 
 Pour démarrer ce journal :
 
-```4d
-$server:=New object
-...
-//SMTP
-$server.logFile:="MySMTPAuthLog.txt"
-$transporter:=SMTP New transporter($server)
-
-// POP3
-$server.logFile:="MyPOP3AuthLog.txt"
-$transporter:=POP3 New transporter($server)
-
-//IMAP
-$server.logFile:="MyIMAPAuthLog.txt"
-$transporter:=IMAP New transporter($server)
-```
+ ```4d
+ $server:=New object
+ ...
+ //SMTP
+ $server.logFile:="MySMTPAuthLog.txt"
+ $transporter:=SMTP New transporter($server)
+ 
+ // POP3
+ $server.logFile:="MyPOP3AuthLog.txt"
+ $transporter:=POP3 New transporter($server)
+ 
+ //IMAP
+ $server.logFile:="MyIMAPAuthLog.txt"
+ $transporter:=IMAP New transporter($server)
+ ```
 
 #### Contenu
 

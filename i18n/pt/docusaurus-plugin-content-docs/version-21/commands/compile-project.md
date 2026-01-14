@@ -194,9 +194,9 @@ var $result:=Compile project($options)
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1760                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1760 |
+| Thread safe       | não  |
 
 

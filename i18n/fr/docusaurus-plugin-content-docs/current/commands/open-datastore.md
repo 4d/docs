@@ -124,10 +124,10 @@ En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut 
 
 ## Propriétés
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Numéro de commande    | 1452                        |
-| Thread safe           | &check; |
-| Modifie les variables | error                       |
+|                       |       |
+| --------------------- | ----- |
+| Numéro de commande    | 1452  |
+| Thread safe           | oui   |
+| Modifie les variables | error |
 
 

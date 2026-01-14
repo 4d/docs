@@ -5,7 +5,7 @@ slug: /commands/process-number
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* {; *} ) : Integer<br/>**Process number** ( *id* {; *} ) : Integer<!-- END REF-->
+<!--REF #_command_.Process number.Syntax-->**Process number** ( *name* : Text {; *} ) : Integer<br/>**Process number** ( *id* : Text {; *} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Process number.Params-->
 
@@ -42,9 +42,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 372                         |
-| スレッドセーフ | &check; |
+|         |     |
+| ------- | --- |
+| コマンド番号  | 372 |
+| スレッドセーフ | ◯   |
 
 

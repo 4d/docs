@@ -4,7 +4,7 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.DIALOG.Params-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Descripción
 
-<!--REF #_command_.DIALOG.Summary-->The **DIALOG** command presents the *form* to the user, along with *formData* parameter(s) (optional).<!-- END REF--> 
+<!--REF #_command_.DIALOG.Summary-->El comando **DIALOG** presenta el *formulario* al usuario, junto con (el) los parámetro(s) *formData* (opcional).<!-- END REF--> 
 
 Este comando está diseñado para trabajar con interfaces de usuario personalizadas y avanzadas basadas en formularios. Puede utilizarlo para mostrar información procedente de la base de datos o de otras ubicaciones, o para proporcionar funciones de entrada de datos. A diferencia de [ADD RECORD](../commands-legacy/add-record.md) o [MODIFY RECORD](../commands-legacy/modify-record.md), **DIALOG** le ofrece un control total sobre el formulario, su contenido y los botones de navegación y validación.
 
@@ -174,9 +174,9 @@ Tras una llamada a **DIALOG**, si se acepta el diálogo, OK se pone en 1; si se 
 
 ## Propiedades
 
-|                        |                             |
-| ---------------------- | --------------------------- |
-| Número de comando      | 40                          |
-| Hilo seguro            | &cross; |
-| Modifica las variables | OK, error                   |
+|                        |           |
+| ---------------------- | --------- |
+| Número de comando      | 40        |
+| Hilo seguro            | no        |
+| Modifica las variables | OK, error |
 

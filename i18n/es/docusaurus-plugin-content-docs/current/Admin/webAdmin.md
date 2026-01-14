@@ -137,6 +137,8 @@ Esta opción se marca automáticamente si ha utilizado la [caja de diálogo de c
 
 :::
 
+:::note
+
 ## Configuración sin interfaz
 
 Todas las [propiedades del servidor de administración Web](#settings) se almacenan en el archivo `WebAdmin.4DSettings`. Hay un archivo `WebAdmin.4DSettings` por defecto por cada aplicación 4D y 4D Server, por lo que es posible desplegar varias aplicaciones en la misma máquina local.

@@ -166,9 +166,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1640                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1640 |
+| Thread safe        | oui  |
 
 

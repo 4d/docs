@@ -179,9 +179,9 @@ Depois de uma chamada para **DIALOG**, se a caixa de diálogo for aceita, OK est
 
 ## Propriedades
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Número de comando     | 40                          |
-| Thread safe           | &cross; |
-| Modifica as variáveis | OK, error                   |
+|                       |           |
+| --------------------- | --------- |
+| Número de comando     | 40        |
+| Thread safe           | não       |
+| Modifica as variáveis | OK, error |
 

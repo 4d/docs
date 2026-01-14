@@ -5,7 +5,7 @@ slug: /commands/set-allowed-methods
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* )<!-- END REF-->
+<!--REF #_command_.SET ALLOWED METHODS.Syntax-->**SET ALLOWED METHODS** ( *methodsArray* : Text array )<!-- END REF-->
 
 <!--REF #_command_.SET ALLOWED METHODS.Params-->
 
@@ -60,9 +60,9 @@ Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al méto
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 805                         |
-| Hilo seguro       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 805 |
+| Hilo seguro       | no  |
 
 

@@ -8,16 +8,16 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| 引数    | 型                                                                       |                             | 説明             |
-| ----- | ----------------------------------------------------------------------- | --------------------------- | -------------- |
-| value | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | コレクションの値       |
-| 戻り値   | Collection                                                              | &#8592; | New collection |
+| 引数    | 型          |                             | 説明             |
+| ----- | ---------- | --------------------------- | -------------- |
+| value | any        | &#8594; | コレクションの値       |
+| 戻り値   | Collection | &#8592; | New collection |
 
 <!-- END REF-->
 
 ## 説明
 
-`New collection` コマンドは、<!--REF #_command_.New collection.Summary-->新しい空の、または値が既に入れられたコレクションを作成し、その参照を返します。<!-- END REF-->コレクションは、[Collection クラス API](../API/CollectionClass.md)のプロパティや関数を使用して操作することができます。
+`New collection` コマンドは、<!--REF #_command_.New collection.Summary-->空の、あるいは値の入った新規コレクションを作成し、その参照を返します。<!-- END REF--> コレクションは、[Collection クラス API](../API/CollectionClass.md) のプロパティや関数を使用して操作することができます。
 
 引数を渡さなかった場合、`New collection` は空のコレクションを作成し、その参照を返します。
 
@@ -83,9 +83,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1472                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1472 |
+| スレッドセーフ | ◯    |
 
 

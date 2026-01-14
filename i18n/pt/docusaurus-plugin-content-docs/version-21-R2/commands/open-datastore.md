@@ -124,10 +124,10 @@ Em caso de erro, o comando retorna **Null**. Se não for possível acessar o arm
 
 ## Propriedades
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Número de comando     | 1452                        |
-| Thread safe           | &check; |
-| Modifica as variáveis | error                       |
+|                       |       |
+| --------------------- | ----- |
+| Número de comando     | 1452  |
+| Thread safe           | sim   |
+| Modifica as variáveis | error |
 
 

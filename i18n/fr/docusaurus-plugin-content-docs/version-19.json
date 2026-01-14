@@ -5,107 +5,107 @@
   },
   "sidebar.docs.category.Getting Started": {
     "message": "Prise en main",
-    "description": "The label for category Getting Started in sidebar docs"
+    "description": "The label for category 'Getting Started' in sidebar 'docs'"
   },
   "sidebar.docs.category.Project Management": {
     "message": "Gestion des projets",
-    "description": "The label for category Project Management in sidebar docs"
+    "description": "The label for category 'Project Management' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Language Concepts": {
     "message": "Concepts du langage 4D",
-    "description": "The label for category 4D Language Concepts in sidebar docs"
+    "description": "The label for category '4D Language Concepts' in sidebar 'docs'"
   },
   "sidebar.docs.category.Data Types": {
     "message": "Types de données",
-    "description": "The label for category Data Types in sidebar docs"
+    "description": "The label for category 'Data Types' in sidebar 'docs'"
   },
   "sidebar.docs.category.Control Flow": {
     "message": "Conditions et boucles",
-    "description": "The label for category Control Flow in sidebar docs"
+    "description": "The label for category 'Control Flow' in sidebar 'docs'"
   },
   "sidebar.docs.category.ORDA": {
     "message": "ORDA",
-    "description": "The label for category ORDA in sidebar docs"
+    "description": "The label for category 'ORDA' in sidebar 'docs'"
   },
   "sidebar.docs.category.Class API Reference": {
     "message": "Class API Reference",
-    "description": "The label for category Class API Reference in sidebar docs"
+    "description": "The label for category 'Class API Reference' in sidebar 'docs'"
   },
   "sidebar.docs.category.Preferences": {
     "message": "Préférences",
-    "description": "The label for category Preferences in sidebar docs"
+    "description": "The label for category 'Preferences' in sidebar 'docs'"
   },
   "sidebar.docs.category.Administration": {
     "message": "Administration",
-    "description": "The label for category Administration in sidebar docs"
+    "description": "The label for category 'Administration' in sidebar 'docs'"
   },
   "sidebar.docs.category.Access Rights": {
     "message": "Droits d'accès",
-    "description": "The label for category Access Rights in sidebar docs"
+    "description": "The label for category 'Access Rights' in sidebar 'docs'"
   },
   "sidebar.docs.category.MSC": {
     "message": "CSM",
-    "description": "The label for category MSC in sidebar docs"
+    "description": "The label for category 'MSC' in sidebar 'docs'"
   },
   "sidebar.docs.category.Backup and Restore": {
     "message": "Sauvegarde et restitution",
-    "description": "The label for category Backup and Restore in sidebar docs"
+    "description": "The label for category 'Backup and Restore' in sidebar 'docs'"
   },
   "sidebar.docs.category.Web Server": {
     "message": "Serveur Web",
-    "description": "The label for category Web Server in sidebar docs"
+    "description": "The label for category 'Web Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.Web Development": {
     "message": "Développement Web",
-    "description": "The label for category Web Development in sidebar docs"
+    "description": "The label for category 'Web Development' in sidebar 'docs'"
   },
   "sidebar.docs.category.REST Server": {
     "message": "Serveur REST",
-    "description": "The label for category REST Server in sidebar docs"
+    "description": "The label for category 'REST Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.Guides": {
     "message": "Guides",
-    "description": "The label for category Guides in sidebar docs"
+    "description": "The label for category 'Guides' in sidebar 'docs'"
   },
   "sidebar.docs.category.API (general)": {
     "message": "API (général)",
-    "description": "The label for category API (general) in sidebar docs"
+    "description": "The label for category 'API (general)' in sidebar 'docs'"
   },
   "sidebar.docs.category.API (dataClass)": {
     "message": "API (dataClass)",
-    "description": "The label for category API (dataClass) in sidebar docs"
+    "description": "The label for category 'API (dataClass)' in sidebar 'docs'"
   },
   "sidebar.docs.category.Client/Server": {
     "message": "Client/Serveur",
-    "description": "The label for category Client/Server in sidebar docs"
+    "description": "The label for category 'Client/Server' in sidebar 'docs'"
   },
   "sidebar.docs.category.Forms": {
     "message": "Formulaires",
-    "description": "The label for category Forms in sidebar docs"
+    "description": "The label for category 'Forms' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Properties": {
     "message": "Propriétés des formulaires",
-    "description": "The label for category Form Properties in sidebar docs"
+    "description": "The label for category 'Form Properties' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Objects": {
     "message": "Objets de formulaire",
-    "description": "The label for category Form Objects in sidebar docs"
+    "description": "The label for category 'Form Objects' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Object Properties": {
     "message": "Propriétés des objets de formulaire",
-    "description": "The label for category Form Object Properties in sidebar docs"
+    "description": "The label for category 'Form Object Properties' in sidebar 'docs'"
   },
   "sidebar.docs.category.Form Events": {
     "message": "Evénements formulaire",
-    "description": "The label for category Form Events in sidebar docs"
+    "description": "The label for category 'Form Events' in sidebar 'docs'"
   },
   "sidebar.docs.category.Menus": {
     "message": "Menus",
-    "description": "The label for category Menus in sidebar docs"
+    "description": "The label for category 'Menus' in sidebar 'docs'"
   },
   "sidebar.docs.category.Build application": {
     "message": "Générateur d'application",
-    "description": "The label for category Build application in sidebar docs"
+    "description": "The label for category 'Build application' in sidebar 'docs'"
   },
   "sidebar.docs.category.4D Language Reference": {
     "message": "Manuel Langage 4D",

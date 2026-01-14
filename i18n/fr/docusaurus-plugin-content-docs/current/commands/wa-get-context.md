@@ -4,7 +4,7 @@ title: WA Get context
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( {* ;} *object* ) -> *contextObj*<!-- END REF-->
+<!--REF #_command_.WA Get context.Syntax-->**WA Get context** ( * ; *object* : Text ) -> *contextObj* : Object<br/>**WA Get context** ( *object* : Field, Variable ) -> *contextObj* : Object<!-- END REF-->
 
 <!--REF #_command_.WA Get context.Params-->
 
@@ -46,7 +46,7 @@ Vérification de l'existence d'un contexte :
 
 ### Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1849                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1849 |
+| Thread safe        | non  |

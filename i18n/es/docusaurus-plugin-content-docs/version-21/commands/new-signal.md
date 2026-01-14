@@ -72,9 +72,9 @@ El método ***doSomething*** puede ser como:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1641                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1641 |
+| Hilo seguro       | sí   |
 
 

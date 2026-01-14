@@ -5,7 +5,7 @@ slug: /commands/command-name
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* {; *info* {; *theme*}} ) : Text<!-- END REF-->
+<!--REF #_command_.Command name.Syntax-->**Command name** ( *command* : Integer {; *info* : Integer {; *theme* : Text}} ) : Text<!-- END REF-->
 
 <!--REF #_command_.Command name.Params-->
 
@@ -135,10 +135,10 @@ Until(OK=0) //fin des commandes existantes
 
 ## Propriétés
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Numéro de commande    | 538                         |
-| Thread safe           | &check; |
-| Modifie les variables | OK                          |
+|                       |     |
+| --------------------- | --- |
+| Numéro de commande    | 538 |
+| Thread safe           | oui |
+| Modifie les variables | OK  |
 
 

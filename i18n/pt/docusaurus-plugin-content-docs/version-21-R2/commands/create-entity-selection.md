@@ -45,7 +45,7 @@ $employees:=Create entity selection([Employee])
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1512                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1512 |
+| Thread safe       | sim  |

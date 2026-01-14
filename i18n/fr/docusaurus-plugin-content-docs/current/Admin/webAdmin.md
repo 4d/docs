@@ -82,8 +82,6 @@ Lorsque cette option est cochée, vous pourrez vous connecter au serveur d'admin
 
 :::
 
-:::
-
 #### Port HTTP
 
 Numéro de port à utiliser pour les connexions HTTP au serveur d'administration Web lorsque l'option **Connexions HTTP sur localhost acceptées** est cochée. La valeur par défaut est 7080.
@@ -137,6 +135,8 @@ Cette option permet l'accès utilisateur à [Qodly Studio](developer.4d.com/qodl
 Cette option est automatiquement cochée si vous avez utilisé la [Boîte de dialogue de configuration en un clic](https://developer.4d.com/qodly/4DQodlyPro/gettingStarted#one-click-configuration).
 
 :::
+
+:::note
 
 ## Configuration sans interface
 

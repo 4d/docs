@@ -104,18 +104,6 @@ La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Previ
 
 :::
 
-:::caution Vista previa para desarrolladores
-
-La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Preview. No debe utilizarse en producción.
-
-:::
-
-:::caution Vista previa para desarrolladores
-
-La compatibilidad con Fluent UI se encuentra actualmente en fase Developer Preview. No debe utilizarse en producción.
-
-:::
-
 En Windows, 4D soporta el renderizado de formularios **Fluent UI**, el moderno diseño gráfico de la interfaz de usuario de Microsoft, basado en la tecnología **WinUI 3**. **WinUI 3** es la base del Windows App SDK y representa las próximas interfaces gráficas de Windows.
 
 La renderización Fluent UI ofrece controles modernos y atractivos, compatibilidad con los temas sistema dark/light, renderización más fluida optimizada para pantallas de alta resolución y una experiencia de usuario coherente y alineada con las aplicaciones recientes de Microsoft.

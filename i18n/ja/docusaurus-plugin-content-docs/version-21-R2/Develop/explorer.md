@@ -58,10 +58,10 @@ Qodly ページは、Web ベースの開発ツールである、[Qodly Studio](h
 
 Qodly ページの名称変更または削除は、[Qodly Studio のページエディタ](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) から行うことができます。
 
-Click on the pen icon to rename the page:<br/>
+ページを名称変更するためにはペンアイコンをクリックします:<br/>
 ![](../assets/en/Develop/qodly-rename.png)
 
-Click on the options button and select **Delete** to delete a page:<br/>
+ページを削除するには、オプションボタンをクリックして、 **削除** を選択します:<br/>
 ![](../assets/en/Develop/qodly-delete.png)
 
 確認用のダイアログボックスが表示されます。

@@ -113,9 +113,9 @@ Si des valeurs sont modifiées et que l'utilisateur clique sur le bouton OK, le 
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1466                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1466 |
+| Thread safe        | non  |
 
 

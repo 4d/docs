@@ -4,7 +4,7 @@ title: Print form
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* ;} *form* {; *formData*} {; *areaStart*{; *areaEnd*}} ) : Integer<!-- END REF-->
+<!--REF #_command_.Print form.Syntax-->**Print form** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object} {; *areaStart* : Integer{; *areaEnd* : Integer}} ) : Integer<!-- END REF-->
 
 <!--REF #_command_.Print form.Params-->
 
@@ -21,7 +21,7 @@ displayed_sidebar: docs
 
 ## Descrição
 
-<!--REF #_command_.Print form.Summary-->The **Print form** command simply prints *form* with the current values of fields and variables of *aTable*.<!-- END REF-->O comando **Print form** simplesmente imprime *form* com os valores atuais dos campos e variáveis de *aTable*. Normalmente é usado para imprimir relatórios muito complexos que exigem controle total sobre o processo de impressão. O **formulário de impressão** não faz nenhum processamento de registros, processamento de quebras ou quebras de página. Essas operações são de sua responsabilidade. **Print form** imprime campos e variáveis em um quadro de tamanho fixo apenas.
+<!--REF #_command_.Print form.Summary-->O comando **Print form** simplesmente imprime *form* com os valores atuais dos campos e variáveis de *aTable*.<!-- END REF--> Normalmente é usado para imprimir relatórios muito complexos que exigem controle total sobre o processo de impressão. O **formulário de impressão** não faz nenhum processamento de registros, processamento de quebras ou quebras de página. Essas operações são de sua responsabilidade. **Print form** imprime campos e variáveis em um quadro de tamanho fixo apenas.
 
 No parâmetro *form*, você pode passar:
 
@@ -185,9 +185,9 @@ O código que chama a caixa de diálogo imprime seu corpo:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 5                           |
-| Thread safe       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 5   |
+| Thread safe       | não |
 
 

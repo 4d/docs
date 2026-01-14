@@ -4,7 +4,7 @@ title: SELECT LOG FILE
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
+<!--REF #_command_.SELECT LOG FILE.Syntax-->**SELECT LOG FILE** ( *logFile* : Text )<br/>**SELECT LOG FILE** ( * )<!-- END REF-->
 
 <!--REF #_command_.SELECT LOG FILE.Params-->
 
@@ -38,9 +38,9 @@ OK toma el valor 1 si el archivo de historial está correctamente creado, o cerr
 
 ## Propiedades
 
-|                        |                             |
-| ---------------------- | --------------------------- |
-| Número de comando      | 345                         |
-| Hilo seguro            | &cross; |
-| Modifica las variables | OK, error                   |
+|                        |           |
+| ---------------------- | --------- |
+| Número de comando      | 345       |
+| Hilo seguro            | no        |
+| Modifica las variables | OK, error |
 

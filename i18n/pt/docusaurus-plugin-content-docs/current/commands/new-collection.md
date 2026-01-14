@@ -8,10 +8,10 @@ displayed_sidebar: docs
 
 <!--REF #_command_.New collection.Params-->
 
-| Parâmetro | Tipo                                                                    |                             | Descrição                                  |
-| --------- | ----------------------------------------------------------------------- | --------------------------- | ------------------------------------------ |
-| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | &#8594; | Valor(es) de collection |
-| Resultado | Collection                                                              | &#8592; | Nova coleção                               |
+| Parâmetro | Tipo       |                             | Descrição                                  |
+| --------- | ---------- | --------------------------- | ------------------------------------------ |
+| value     | any        | &#8594; | Valor(es) de collection |
+| Resultado | Collection | &#8592; | Nova coleção                               |
 
 <!-- END REF-->
 
@@ -83,9 +83,9 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1472                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1472 |
+| Thread safe       | sim  |
 
 

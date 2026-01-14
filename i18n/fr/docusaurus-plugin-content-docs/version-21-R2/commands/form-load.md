@@ -4,7 +4,7 @@ title: FORM LOAD
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.FORM LOAD.Syntax-->**FORM LOAD** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.FORM LOAD.Params-->
 
@@ -19,7 +19,7 @@ displayed_sidebar: docs
 
 ## Description
 
-<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.<!-- END REF-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu. Il ne peut y avoir qu'un seul formulaire courant par process.
+<!--REF #_command_.FORM LOAD.Summary-->The **FORM LOAD** command is used to load the *form* in memory in the current process along with *formData* (optional) in order to print its data or parse its contents.La commande **FORM LOAD** est utilisée pour charger le formulaire *form* en mémoire dans le process courant avec *formData* (facultatif) afin d'imprimer ses données ou d'analyser son contenu.<!-- END REF--> Il ne peut y avoir qu'un seul formulaire courant par process.
 
 Dans le paramètre *form*, vous pouvez passer soit :
 
@@ -164,9 +164,9 @@ Vous voulez imprimer un formulaire contenant une list box. Lors de l'événement
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1103                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1103 |
+| Thread safe        | non  |
 
 

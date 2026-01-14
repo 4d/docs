@@ -90,9 +90,9 @@ $status:=$transporter.send($email)
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1681                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1681 |
+| Thread safe        | oui  |
 
 

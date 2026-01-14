@@ -92,9 +92,9 @@ Si une méthode objet de formulaire est exécutée, la chaîne d'appels peut con
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1662                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1662 |
+| Thread safe        | oui  |
 
 

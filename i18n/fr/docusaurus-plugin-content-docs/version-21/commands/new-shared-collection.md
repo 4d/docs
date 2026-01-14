@@ -71,9 +71,9 @@ Contrairement aux collections standard (non partagées), les collections partag�
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1527                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1527 |
+| Thread safe        | oui  |
 
 

@@ -20,7 +20,7 @@ displayed_sidebar: docs
 | ----------- | ---------------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------- |
 | file        | 4D. File           | &#8594; | Parâmetros                                                                                        |
 | zipFile     | 4D. ZipFile        | &#8594; | Arquivo zip                                                                                       |
-| blob        | 4D. Blob           | &#8594; | Blob contendo o anexo                                                                             |
+| blob        | 4D. Blob           | &#8594; | Blob containing the attachment                                                                    |
 | path        | Text                               | &#8594; | Pode passar uma rota ou um Blob para definir o anexo.                             |
 | name        | Text                               | &#8594; | Nome + extensão usado pelo cliente email para designar o anexo                                    |
 | cid         | Text                               | &#8594; | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido          |
@@ -149,9 +149,9 @@ $transporter.send($email)
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1644                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1644 |
+| Thread safe       | sim  |
 
 
