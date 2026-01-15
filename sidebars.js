@@ -2356,6 +2356,12 @@ module.exports =
       },
       items: [
         {
+          type: "link",
+          label: "4D Qodly Pro",
+          key: "qodly-pro-link1",
+          href: "https://developer.4d.com/qodly/"
+        },        
+        {
           type: "category",
           label: "Web Server",
           key: "web-server",
@@ -2863,6 +2869,7 @@ module.exports =
         {
           type: "link",
           label: "4D Qodly Pro",
+          key: "qodly-pro-link2",
           href: "https://developer.4d.com/qodly/"
         },        
         {

@@ -148,9 +148,9 @@ $result:=Num("123.20"; 10) // 123 (explicitly specify base 10)
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 11                          |
-| Hilo seguro       | &check; |
+|                   |    |
+| ----------------- | -- |
+| Número de comando | 11 |
+| Hilo seguro       | sí |
 
 

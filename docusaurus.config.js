@@ -70,15 +70,15 @@ module.exports = {
           },
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
+              '21-R2': {
+              label: '21 R2 BETA',
+              banner: 'none',
+            },
               '21': {
               label: '21',
               banner: 'none',
             },
-              '20-R10': {
-              label: '20 R10',
-              banner: 'none',
-            },
-            '20': {
+              '20': {
               label: '20',
               banner: 'none',
             },
@@ -211,11 +211,11 @@ module.exports = {
           items: [
             {
               label: 'Documentation download',
-              href: 'https://github.com/4d/docs/releases/tag/latest',
+              to: 'https://github.com/4d/docs/releases/tag/latest',
             },
             {
-              label: '4D Doc Center (Where It All Began)',
-              to: 'https://doc.4d.com',
+              label: 'Learn 4D',
+              to: 'https://learn.4d.com',
             },
             {
               label: 'Knowledgebase',
@@ -223,7 +223,7 @@ module.exports = {
             },
             {
               label: 'Downloads',
-              to: 'https://us.4d.com/product-download/Feature-Release',
+              to: 'https://us.4d.com/product-download',
             },
             {
               label: 'Resources',
@@ -257,7 +257,7 @@ module.exports = {
           ],
         },
       ],
-      "copyright": "© 2025 4D SAS - All rights reserved",
+      "copyright": "© 2026 4D SAS - All rights reserved",
     },
   },
   markdown: {

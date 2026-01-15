@@ -60,9 +60,9 @@ Este ejemplo autoriza a todos los métodos que empiezan por "formula" y al méto
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 805                         |
-| Hilo seguro       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 805 |
+| Hilo seguro       | no  |
 
 

@@ -65,9 +65,9 @@ Cette méthode modifie la valeur d'une propriété "settings" stockée dans l'ob
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1839                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1839 |
+| Thread safe        | oui  |
 
 

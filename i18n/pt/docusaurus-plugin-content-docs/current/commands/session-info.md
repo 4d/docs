@@ -87,7 +87,7 @@ Aqui está um exemplo de objeto de saída:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1844                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1844 |
+| Thread safe       | sim  |

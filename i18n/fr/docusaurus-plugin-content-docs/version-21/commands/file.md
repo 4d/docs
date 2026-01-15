@@ -88,9 +88,9 @@ Si la commande est appelée à partir d'un composant, passez le paramètre optio
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1566                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1566 |
+| Thread safe        | oui  |
 
 

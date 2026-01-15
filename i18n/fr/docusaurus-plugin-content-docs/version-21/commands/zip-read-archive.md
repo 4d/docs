@@ -87,9 +87,9 @@ Pour extraire à partir du dossier root :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1637                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1637 |
+| Thread safe        | oui  |
 
 

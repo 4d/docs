@@ -38,9 +38,9 @@ OK toma el valor 1 si el archivo de historial está correctamente creado, o cerr
 
 ## Propiedades
 
-|                        |                             |
-| ---------------------- | --------------------------- |
-| Número de comando      | 345                         |
-| Hilo seguro            | &cross; |
-| Modifica las variables | OK, error                   |
+|                        |           |
+| ---------------------- | --------- |
+| Número de comando      | 345       |
+| Hilo seguro            | no        |
+| Modifica las variables | OK, error |
 

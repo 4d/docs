@@ -71,9 +71,9 @@ End if
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1723                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1723 |
+| Thread safe       | sim  |
 
 

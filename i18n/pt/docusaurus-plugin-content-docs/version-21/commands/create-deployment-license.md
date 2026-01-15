@@ -116,9 +116,9 @@ Designate a license to use:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1811                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1811 |
+| Thread safe       | não  |
 
 

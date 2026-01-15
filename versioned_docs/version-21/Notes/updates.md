@@ -34,7 +34,7 @@ Read [**What’s new in 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), th
 
 :::caution Index rebuild
 
-4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
+4D 21 includes an ICU library update ([see below](#library-table-4d-21-lts)) which will force an automatic rebuild of indexes of type alpha, text, and object. Depending on the size of the data file, this operation can take a while and may require to be planned.
 
 :::
 

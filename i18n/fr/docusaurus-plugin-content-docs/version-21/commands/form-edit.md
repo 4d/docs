@@ -66,9 +66,9 @@ Pour ouvrir le formulaire projet *ContactPage* avec l'objet "name-input" sélect
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1749                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1749 |
+| Thread safe        | non  |
 
 

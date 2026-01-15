@@ -116,9 +116,9 @@ Designar una licencia de uso:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1811                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1811 |
+| Hilo seguro       | no   |
 
 

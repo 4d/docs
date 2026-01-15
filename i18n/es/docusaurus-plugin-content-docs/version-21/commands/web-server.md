@@ -58,9 +58,9 @@ El objeto servidor web devuelto contiene los valores actuales de las propiedades
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1674                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1674 |
+| Hilo seguro       | no   |
 
 

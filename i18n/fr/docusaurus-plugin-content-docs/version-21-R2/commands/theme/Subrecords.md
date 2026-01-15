@@ -1,0 +1,10 @@
+---
+id: Subrecords_theme
+title: Sous-enregistrements
+sidebar_label: Sous-enregistrements
+slug: /commands/theme/Subrecords
+---
+
+|                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE #_command_.Get subrecord key.Syntax -->](../../commands-legacy/get-subrecord-key.md)<br/> |

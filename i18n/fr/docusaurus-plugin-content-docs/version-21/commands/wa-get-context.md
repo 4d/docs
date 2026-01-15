@@ -46,7 +46,7 @@ Vérification de l'existence d'un contexte :
 
 ### Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1849                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1849 |
+| Thread safe        | non  |

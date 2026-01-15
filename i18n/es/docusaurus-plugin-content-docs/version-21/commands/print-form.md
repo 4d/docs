@@ -185,9 +185,9 @@ El código que llama al diálogo imprime su cuerpo:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 5                           |
-| Hilo seguro       | &cross; |
+|                   |    |
+| ----------------- | -- |
+| Número de comando | 5  |
+| Hilo seguro       | no |
 
 

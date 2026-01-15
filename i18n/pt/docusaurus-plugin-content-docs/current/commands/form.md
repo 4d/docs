@@ -117,9 +117,9 @@ Se os valores forem editados e o botão OK for clicado, o campo será atualizado
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1466                        |
-| Thread safe       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1466 |
+| Thread safe       | não  |
 
 

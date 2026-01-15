@@ -116,9 +116,9 @@ Désignation d'une licence à utiliser:
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1811                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1811 |
+| Thread safe        | non  |
 
 

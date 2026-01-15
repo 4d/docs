@@ -50,7 +50,7 @@ If the published project is not displayed in the **Available** list, select **Cu
   - If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`.
   - By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
 
-> The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option).
+> The [**Activate development mode**](#development-mode) option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D.
 
 Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
 
@@ -62,7 +62,7 @@ Once a connection to the server has been established, the remote project will be
 
 - An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. The project is reloaded:
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
-  - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
+  - when the [`RELOAD PROJECT`](../commands-legacy/reload-project.md) command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
 ### Updating project files on remote machines
 
@@ -72,7 +72,7 @@ When an updated .4dz version of the project has been produced on 4D Server, conn
 
 When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. This feature allows you to develop a client/server application in the same context as the deployment context.
 
-> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Activate development mode](#opening-a-remote-project) option status.
+> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Development mode](#development-mode) status.
 
 Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
@@ -86,3 +86,45 @@ However, you need to pay attention to the following behavior differences compare
 
 > It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
 
+
+## Development mode
+
+The **Development mode** in 4D Server is a special project opening mode that allows read/write access for connected remote 4D applications. The project must be available in [**interpreted** mode](../Concepts/interpreted.md).
+
+This mode allows one or more developers to work simultaneously on the same project in Design environment. When a project is opened in **Development mode**:
+
+- Project files are available in read/write so that you can edit methods, forms, etc. 
+- Several remote 4D can concurrently open the same interpreted project files and edit them. An automatic locking system prevents from concurrent access to the same resource. 
+- Modifications are made available to all remote developers. Note however that there is no automatic push to remote developers, they need to refresh to get latest versions of files (a refresh is done each time the developer switches from design mode to application mode for example, or selects **Save all** from the **File** menu).
+
+To use this mode, select the **Activate development mode** option in the [connection dialog box](#opening-a-remote-project) from your remote 4D. You are prompted to **Select 4D project file**: you need to select the [.project file](../Project/architecture.md#applicationname4dproject-file) that 4D Server has opened. If you select a different file, an alert dialog box warns you that the development mode is not available. It means that the remote 4D must have access to the project folder over the network (the whole project folder must be shared, i.e. the root folder of the project). 
+
+:::caution
+
+For performance reasons with this configuration, it is strongly recommended that the project folder be stored on a dedicated file server (e.g. a NAS) on a local network. 
+
+:::
+
+:::note
+
+When both the server and the remote 4D are on the same machine, [additional rules applies](#using-4d-and-4d-server-on-the-same-machine).
+
+:::
+
+Here is an overview of the development mode architecture:
+
+![](../assets/en/Desktop/develop-mode.png)
+
+
+:::note Compatibility
+
+This feature is designed for small-size development teams who are used to work on binary databases and want to benefit from project features while maintaining their current organisation. However, for multi-user development on 4D projects, we recommend using a standard architecture where developers work on their machine and manage their work using source control repository tools (Git, SVN, etc.). This organisation provides a great flexibility by allowing developers to work on different branches, and compare, merge, or revert modifications.
+
+:::
+
+
+:::tip Related blog post
+
+[Developing Concurrently on 4D Server in Project Mode](https://blog.4d.com/developing-concurrently-on-4d-server-in-project-mode/)
+
+:::

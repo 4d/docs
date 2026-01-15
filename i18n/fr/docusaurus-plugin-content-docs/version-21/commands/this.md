@@ -180,9 +180,9 @@ Une fois le formulaire exécuté, la list box est automatiquement remplie avec l
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1470                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1470 |
+| Thread safe        | oui  |
 
 

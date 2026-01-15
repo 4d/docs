@@ -185,9 +185,9 @@ O código que chama a caixa de diálogo imprime seu corpo:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 5                           |
-| Thread safe       | &cross; |
+|                   |     |
+| ----------------- | --- |
+| Número de comando | 5   |
+| Thread safe       | não |
 
 

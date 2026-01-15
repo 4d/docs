@@ -4,7 +4,7 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.DIALOG.Params-->
 
@@ -175,9 +175,9 @@ Après un appel à **DIALOG**, si le dialogue est accepté, OK est mis à 1 ; s'
 
 ## Propriétés
 
-|                       |                             |
-| --------------------- | --------------------------- |
-| Numéro de commande    | 40                          |
-| Thread safe           | &cross; |
-| Modifie les variables | OK, error                   |
+|                       |           |
+| --------------------- | --------- |
+| Numéro de commande    | 40        |
+| Thread safe           | non       |
+| Modifie les variables | OK, error |
 

@@ -142,9 +142,9 @@ Chamar uma fórmula usando notação de objeto:
 
 ## Propriedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1597                        |
-| Thread safe       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1597 |
+| Thread safe       | sim  |
 
 

@@ -36,10 +36,10 @@ La commande renvoie `null` si elle est appelée dans une requête qui ne provien
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1735                        |
-| Thread safe        | &cross; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1735 |
+| Thread safe        | non  |
 
 
 

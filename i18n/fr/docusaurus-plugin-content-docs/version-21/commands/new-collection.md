@@ -83,9 +83,9 @@ Vous souhaitez créer une nouvelle collection puis ajouter un élément :
 
 ## Propriétés
 
-|                    |                             |
-| ------------------ | --------------------------- |
-| Numéro de commande | 1472                        |
-| Thread safe        | &check; |
+|                    |      |
+| ------------------ | ---- |
+| Numéro de commande | 1472 |
+| Thread safe        | oui  |
 
 

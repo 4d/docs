@@ -142,9 +142,9 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1597                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1597 |
+| Hilo seguro       | sí   |
 
 

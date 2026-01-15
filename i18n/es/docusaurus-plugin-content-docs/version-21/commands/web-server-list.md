@@ -57,9 +57,9 @@ Queremos saber cuántos servidores web en funcionamiento hay disponibles:
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1716                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1716 |
+| Hilo seguro       | sí   |
 
 

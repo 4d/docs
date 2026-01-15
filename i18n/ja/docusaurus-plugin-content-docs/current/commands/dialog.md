@@ -4,7 +4,7 @@ title: DIALOG
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* ;} *form* {; *formData*}{; *} )<!-- END REF-->
+<!--REF #_command_.DIALOG.Syntax-->**DIALOG** ( {*aTable* : Table ;} *form* : Text, Object {; *formData* : Object}{; *} )<!-- END REF-->
 
 <!--REF #_command_.DIALOG.Params-->
 
@@ -175,9 +175,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|            |                             |
-| ---------- | --------------------------- |
-| コマンド番号     | 40                          |
-| スレッドセーフ    | &cross; |
-| 更新するシステム変数 | OK, error                   |
+|            |           |
+| ---------- | --------- |
+| コマンド番号     | 40        |
+| スレッドセーフ    | ×         |
+| 更新するシステム変数 | OK, error |
 

@@ -4,7 +4,7 @@ title: Session storage
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* ) : Object<!-- END REF-->
+<!--REF #_command_.Session storage.Syntax-->**Session storage** ( *id* : Text ) : Object<!-- END REF-->
 
 <!--REF #_command_.Session storage.Params-->
 
@@ -65,9 +65,9 @@ displayed_sidebar: docs
 
 ## プロパティ
 
-|         |                             |
-| ------- | --------------------------- |
-| コマンド番号  | 1839                        |
-| スレッドセーフ | &check; |
+|         |      |
+| ------- | ---- |
+| コマンド番号  | 1839 |
+| スレッドセーフ | ◯    |
 
 

@@ -19,7 +19,7 @@ Duas variáveis específicas podem ser associadas a cada área web:
 - [`URL`](properties_WebArea.md#url) --para controlar a URL que mostra a área web
 - [`Progresión`](properties_WebArea.md#progression) -- para controlar a porcentagem de carga da página mostrada na área web.
 
-> A partir do 4D v19 R5, a variável Progression não é mais atualizada em Web Areas usando o [mecanismo de renderização do sistema Windows](./webArea_overview.md#web-rendering-engine).
+> As of 4D 19 R5, the Progression variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
 ### Motor de renderização Web
 

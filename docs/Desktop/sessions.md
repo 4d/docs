@@ -124,7 +124,7 @@ When creating an OTP token in client/server environment, you need to execute the
 
 :::tip Related blog post
 
-[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/embed-qodly-pages-in-a-4d-web-area-without-extra-cost)
+[Embed Qodly pages in a 4D web area without extra cost](https://blog.4d.com/share-your-4d-remote-client-session-with-web-accesses/)
 
 :::
 

@@ -4,7 +4,7 @@ title: WA SET CONTEXT
 displayed_sidebar: docs
 ---
 
-<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( {* ;} *object* ; *contextObj* )<!-- END REF-->
+<!--REF #_command_.WA SET CONTEXT.Syntax-->**WA SET CONTEXT** ( * ; *object* : Text ; *contextObj* : Object )<br/>**WA SET CONTEXT** ( *object* : Field, Variable ; *contextObj* : Object )<!-- END REF-->
 
 <!--REF #_command_.WA SET CONTEXT.Params-->
 
@@ -74,7 +74,7 @@ $4d._myPrivateFunction(); // No hará nada porque la función es privada
 
 ### Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1848                        |
-| Hilo seguro       | &cross; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1848 |
+| Hilo seguro       | no   |

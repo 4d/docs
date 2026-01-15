@@ -71,9 +71,9 @@ Esta función modifica la colección original.
 
 ## Propiedades
 
-|                   |                             |
-| ----------------- | --------------------------- |
-| Número de comando | 1527                        |
-| Hilo seguro       | &check; |
+|                   |      |
+| ----------------- | ---- |
+| Número de comando | 1527 |
+| Hilo seguro       | sí   |
 
 
