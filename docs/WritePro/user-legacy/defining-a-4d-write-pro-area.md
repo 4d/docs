@@ -52,7 +52,7 @@ Document view settings are handled through specific items in the **Appearance** 
 
 ## Context menu 
 
-If the **Context menu** property is [checked for a 4D Write Pro area](./defining-a-4d-write-pro-area.md#using-the-4d-write-pro-area-object), a comprehensive context menu is available to users when the form is executed at runtime:  
+If the **Context menu** property is [checked for a 4D Write Pro area](./presentation.md#using-the-4d-write-pro-area-object), a comprehensive context menu is available to users when the form is executed at runtime:  
   
 ![](../../assets/en/WritePro/pict3071271.en.png) 
 

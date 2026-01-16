@@ -1,6 +1,7 @@
 ---
 id: user-new
 title: user WP
+draft: true
 ---
 
 to import

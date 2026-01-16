@@ -56,7 +56,7 @@ The areas of the "Find in design" vary dynamically depending on the selections m
 
 2. Build your search using the different menus and entry areas of the dialog box and if necessary enter the character string to be searched for. These items are described in the following sections.
 
-3. Set the [search options](#search-options) (if necessary).
+3. Set the [searching options](#searching-options) (if necessary).
 
 4. Click **OK** or press the **Enter** key.
 When the search is finished, the [Results window](#results-window) appears, listing the elements found.  

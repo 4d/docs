@@ -45,7 +45,7 @@ Syntax:
 |`--webadmin-settings-file`|File path|Path of the custom WebAdmin `.4DSettings` file for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
 |`--webadmin-access-key`|Text|Access key for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
 |`--webadmin-auto-start`|Boolean|Status of the automatic startup for the [WebAdmin web server](webAdmin.md). Not available with [tool4d](#tool4d).|
-|`--webadmin-store-settings`||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary. Not available with [tool4d](#tool4d).|
+|`--webadmin-store-settings`||Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary. Not available with [tool4d](#tool4d).|
 |`--utility`||Only available with 4D Server. Launches [4D Server in utility mode](#4d-server-in-utility-mode).|
 |`--skip-onstartup`||Launches the project without executing any "automatic" methods, including the `On Startup` and `On Exit` database methods|
 |`--startup-method`|Project method name (string)|Project method to execute immediately after the `On Startup` database method (if not skipped with `--skip-onstartup`).|

@@ -18,7 +18,7 @@ Text boxes are added with an absolute position, in front of/behind text, as well
 Adding a text box to a 4D Write Pro document can be accomplished in the following ways:
 
 * using the [`WP New text box`](../commands-legacy/wp-new-text-box.md) command,
-* using the *insertTextBox* [standard action](./defining-a-4d-write-pro-area.md#standard-actions)
+* using the *insertTextBox* [standard action](./standard-actions.md)
 
 To select a text box, the user has to click on it (**Ctrl/Cmd+click** if the text box is on the background layer). Once selected, the text box can be moved or resized using the mouse or arrow keys. 
 
