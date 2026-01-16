@@ -164,7 +164,7 @@ Check marks are generally used for continuous action menu items and indicate tha
 
 ### Font styles
 
-4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, [`SET MENU ITEM STYLE`](../commands/set-menu-item-style).
+4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor or using the [`SET MENU ITEM STYLE`](../commands/set-menu-item-style) language command.
 
 As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.
 
