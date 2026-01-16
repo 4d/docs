@@ -33,7 +33,7 @@ La clase `WebForm` contiene funciones y propiedades que permiten manejar sus com
 
 The components of web pages are <!-- REF WebFormClass.componentName.Summary -->objects that are available directly as properties<!-- END REF --> of these web pages.
 
-The returned objects are of the [`4D.WebFormItem`](WebFormItemClass.md) class. Estos objetos tienen funciones que puede utilizar para gestionar sus componentes de forma dinámica.
+Los objetos devueltos son de la clase [`4D.WebFormItem`](WebFormItemClass.md). Estos objetos tienen funciones que puede utilizar para gestionar sus componentes de forma dinámica.
 
 #### Ejemplo
 
@@ -50,7 +50,7 @@ shared singleton Class constructor()
 
 :::info
 
-While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. You can interact with the underlying `webForm` object's properties and functions through `myForm`. For example, you can dynamically manipulate page components or transmit messages to web pages using specialized functions like `myForm.setMessage()`.
+While `myForm` may not display typical object properties when examined in the debugger, it behaves as if it were the actual `webForm` object. Puede interactuar con las propiedades y funciones del objeto `webForm` subyacente a través de `myForm`. For example, you can dynamically manipulate page components or transmit messages to web pages using specialized functions like `myForm.setMessage()`.
 
 :::
 
@@ -72,7 +72,7 @@ The `.disableState()` function <!-- REF #WebFormClass.disableState().Summary -->
 
 Esta función no hace nada si:
 
-- the *state* is currently not enabled in the web page,
+- el *state* no está habilitado actualmente en la página web,
 - el *estado* no existe para la página web.
 
 Si [activa](#enablestate) o desactiva varios estados en la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez finalizada la función.
@@ -97,7 +97,7 @@ The `.enableState()` function <!-- REF #WebFormClass.enableState().Summary -->en
 
 Esta función no hace nada si:
 
-- the *state* has already been enabled on the web page,
+- el *estado* ya ha sido activado en la página web,
 - el *estado* no existe para la página web.
 
 Si activa o [desactiva](#disablestate) varios estados dentro de la misma función usuario, todas las modificaciones se envían al mismo tiempo al cliente una vez que la función termina.

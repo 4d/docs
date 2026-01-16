@@ -5,7 +5,7 @@ title: Notas del lanzamiento
 
 ## 4D 21 LTS
 
-Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21.
+Lea [**Novedades en 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), la entrada del blog que muestra todas las nuevas funcionalidades y mejoras en 4D 21.
 
 #### Lo más destacado
 
@@ -33,7 +33,7 @@ Lea [**Novedades en 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), la ent
 
 :::caution Reconstrucción del índice
 
-4D 21 incluye una actualización de la librería ICU ([ver abajo](#library-table)) que forzará una reconstrucción automática de los índices de tipo alfa, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
+4D 21 incluye una actualización de la librería ICU ([ver abajo](#library-table-4d-21-lts)) que forzará una reconstrucción automática de los índices de tipo alfa, texto y objeto. Dependiendo del tamaño del archivo de datos, esta operación puede llevar un tiempo y puede ser necesario planificarla.
 
 :::
 

@@ -49,7 +49,7 @@ El ejemplo siguiente ordena el conjunto de entidades por el atributo lastName en
 
 ## Ejemplo 2
 
-`$orderby` statement is supported in [vector similarity filters](./$filter.md#vector-similarity):
+La instrucción `$orderby` se admite en los [filtros de similitud vectorial](./$filter.md#vector-similarity):
 
 ```
 GET /rest/Person?$filter="Vector>=:1"&$params=[{"vector":[1,2,3],"metric":"cosine","threshold":0.95}]&$orderby="Vector desc"

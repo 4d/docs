@@ -5,7 +5,7 @@ title: リリースノート
 
 ## 4D 21 LTS
 
-[**4D 21 での新機能**](https://blog.4d.com/en-whats-new-in-4d-21/): 4D 21 の新機能と拡張機能をすべてリストアップしたブログ記事です。
+[**4D 21 での新機能**](https://blog.4d.com/whats-new-in-4d-21lts/): 4D 21 の新機能と拡張機能をすべてリストアップしたブログ記事です。
 
 #### ハイライト
 
@@ -33,7 +33,7 @@ title: リリースノート
 
 :::caution インデックスの再構築
 
-4D 21 では、ICUライブラリのアップデート ([後述参照](#ライブラリの一覧)) により、文字列型、テキスト型、オブジェクト型のインデックスの再構築が強制されます。 データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
+4D 21 includes an ICU library update ([see below](#library-table-4d-21-lts)) which will force an automatic rebuild of indexes of type alpha, text, and object. データファイルのサイズに応じて、この処理には時間がかかることがあるため、計画的なアップグレードが推奨されます。
 
 :::
 

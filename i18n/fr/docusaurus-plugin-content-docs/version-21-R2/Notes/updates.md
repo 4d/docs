@@ -5,7 +5,7 @@ title: Release Notes
 
 ## 4D 21 R2
 
-Lisez [**Les nouveautés de 4D 21 R2**](https://blog.4d.com/fr-whats-new-in-4d-v21-R2/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 20 R2.
+Read [**What’s new in 4D 21 R2**](https://blog.4d.com/whats-new-in-4d-21-r2/), the blog post that lists all new features and enhancements in 4D 21 R2.
 
 #### Points forts
 

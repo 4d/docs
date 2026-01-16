@@ -3,7 +3,7 @@ id: data-collect
 title: Recopilación de datos
 ---
 
-Para que nuestros productos sean siempre mejores, recogemos automáticamente los datos relativos a las estadísticas de uso de las aplicaciones 4D Server en funcionamiento. Collected data is transferred with no impact on the user experience. No se recopila información personal. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
+Para que nuestros productos sean siempre mejores, recogemos automáticamente los datos relativos a las estadísticas de uso de las aplicaciones 4D Server en funcionamiento. Los datos recogidos se transfieren sin ningún impacto en la experiencia del usuario. No se recopila información personal. For more information on 4D policy regarding personal data protection, please got to [this page](https://us.4d.com/privacy-policy).
 
 La sección siguiente lo explica:
 

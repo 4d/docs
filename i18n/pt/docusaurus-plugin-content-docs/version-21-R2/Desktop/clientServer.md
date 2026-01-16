@@ -49,7 +49,7 @@ Se o projeto publicado não for exibido na lista **Disponível**, selecione **Pe
   - Se dois servidores forem executados simultaneamente na mesma máquina, o endereço IP deve ser seguido por dois pontos e o número da porta, por exemplo: `192.168.92.104:19814`.
   - Por padrão, a porta de publicação de um 4D Server é 19813. Este número pode ser modificado nas definições do Projecto.
 
-> A opção **Ativar modo de desenvolvimento** abre a conexão remota em um modo especial de leitura/escrita e requer acessar a pasta do projeto a partir do 4D remoto (opção de compatibilidade).
+> The [**Activate development mode**](#development-mode) option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D.
 
 Uma vez que esta página atribui um servidor, ao clicar no botão **OK**, você poderá se conectar ao servidor.
 
@@ -61,7 +61,7 @@ O 4D Server cria e envia automaticamente para as máquinas remotas uma versão [
 
 - Uma versão .4dz atualizada do projeto é automaticamente produzida quando necessário, *ou seja*, quando o projeto foi modificado e recarregado pelo 4D Server. O projeto foi recarregado:
   - automaticamente quando a janela de aplicação do Servidor 4D chega à frente do sistema operacional ou quando o aplicativo 4D na mesma máquina salva uma modificação (veja abaixo).
-  - quando o comando `RELOAD PROJECT` é executado. Chamar este comando é necessário, por exemplo, quando você puxou uma nova versão do projeto a partir da plataforma de controle de origem.
+  - when the [`RELOAD PROJECT`](../commands-legacy/reload-project.md) command is executed. Chamar este comando é necessário, por exemplo, quando você puxou uma nova versão do projeto a partir da plataforma de controle de origem.
 
 ### Atualizando arquivos do projeto em máquinas remotas
 
@@ -71,7 +71,7 @@ Quando uma atualização . versão dz do projeto foi produzida em 4D Server, má
 
 Quando o 4D se conectar a um Servidor 4D na mesma máquina, a aplicação se comporta como 4D em modo de usuário único e o ambiente de design permite que você edite os arquivos do projeto. Esse recurso permite que você desenvolva uma aplicação de cliente/servidor no mesmo contexto que o contexto de implantação.
 
-> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Activate development mode](#opening-a-remote-project) option status.
+> When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [Development mode](#development-mode) status.
 
 Cada vez que o 4D realiza uma ação **Salvar tudo** no ambiente de design (explicitamente no menu **Arquivo** ou implicitamente ao alternar para o modo de aplicativo, por exemplo), o 4D Server recarrega sincronizadamente os arquivos do projeto. O 4D espera o servidor 4D terminar de recarregar os arquivos do projeto antes de continuar.
 
@@ -85,3 +85,42 @@ No entanto, você precisa prestar atenção às seguintes diferenças de comport
 
 > Não é recomendado instalar plug-ins ou componentes no nível da aplicação 4D, ou 4D Server.
 
+## Development mode
+
+The **Development mode** in 4D Server is a special project opening mode that allows read/write access for connected remote 4D applications. The project must be available in [**interpreted** mode](../Concepts/interpreted.md).
+
+This mode allows one or more developers to work simultaneously on the same project in Design environment. When a project is opened in **Development mode**:
+
+- Project files are available in read/write so that you can edit methods, forms, etc.
+- Several remote 4D can concurrently open the same interpreted project files and edit them. An automatic locking system prevents from concurrent access to the same resource.
+- Modifications are made available to all remote developers. Note however that there is no automatic push to remote developers, they need to refresh to get latest versions of files (a refresh is done each time the developer switches from design mode to application mode for example, or selects **Save all** from the **File** menu).
+
+To use this mode, select the **Activate development mode** option in the [connection dialog box](#opening-a-remote-project) from your remote 4D. You are prompted to **Select 4D project file**: you need to select the [.project file](../Project/architecture.md#applicationname4dproject-file) that 4D Server has opened. If you select a different file, an alert dialog box warns you that the development mode is not available. It means that the remote 4D must have access to the project folder over the network (the whole project folder must be shared, i.e. the root folder of the project).
+
+:::caution
+
+For performance reasons with this configuration, it is strongly recommended that the project folder be stored on a dedicated file server (e.g. a NAS) on a local network.
+
+:::
+
+:::note
+
+When both the server and the remote 4D are on the same machine, [additional rules applies](#using-4d-and-4d-server-on-the-same-machine).
+
+:::
+
+Here is an overview of the development mode architecture:
+
+![](../assets/en/Desktop/develop-mode.png)
+
+:::note Compatibidade
+
+This feature is designed for small-size development teams who are used to work on binary databases and want to benefit from project features while maintaining their current organisation. However, for multi-user development on 4D projects, we recommend using a standard architecture where developers work on their machine and manage their work using source control repository tools (Git, SVN, etc.). This organisation provides a great flexibility by allowing developers to work on different branches, and compare, merge, or revert modifications.
+
+:::
+
+:::tip Related blog post
+
+[Developing Concurrently on 4D Server in Project Mode](https://blog.4d.com/developing-concurrently-on-4d-server-in-project-mode/)
+
+:::

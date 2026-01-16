@@ -5,7 +5,7 @@ title: Notas de lançamento
 
 ## 4D 21 LTS
 
-Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 21.
+Leia [**O que há de novo no 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), o post do blog que lista todos os novos recursos e aprimoramentos em 4D 21.
 
 #### Destaques
 
@@ -33,7 +33,7 @@ Leia [**O que há de novo no 4D 21**](https://blog.4d.com/en-whats-new-in-4d-21/
 
 :::caution Index rebuild
 
-4D 21 includes an ICU library update ([see below](#library-table)) which will force an automatic rebuild of indexes of type alpha, text, and object. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
+4D 21 includes an ICU library update ([see below](#library-table-4d-21-lts)) which will force an automatic rebuild of indexes of type alpha, text, and object. Dependendo do tamanho do ficheiro de dados, esta operação pode demorar algum tempo e pode necessitar de ser planeada.
 
 :::
 

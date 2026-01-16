@@ -9,9 +9,17 @@ As áreas da Web podem exibir vários conteúdo Web em seus formulários: págin
 
 Várias [ações padrão](#standard-actions) dedicadas, vários [comandos de linguagem](../category/web-area), bem como [eventos de formulário](#form-events) genéricos e específicos permitem que o desenvolvedor controle o funcionamento das áreas da Web. Variáveis específicas podem ser usadas para trocar informações entre a área e o ambiente 4D.
 
-:::info Displaying Qodly pages
+## Displaying Qodly pages
 
-In 4D client/server applications, Web areas can be used to display Qodly pages and [share the remote user session](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas). This feature allows you to design web-based interfaces for your client/server desktop applications.
+Web areas can be used to display [Qodly pages](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/pageLoaderOverview) and provide 4D desktop application users with modern, CSS-based web interface.
+
+You can embed a Qodly page inside a Web Area and then update [Qodly sources](https://developer.4d.com/qodly/4DQodlyPro/pageLoaders/qodlySources) from 4D by calling [`WA EXECUTE JAVASCRIPT FUNCTION`](../commands-legacy/wa-execute-javascript-function.md).
+
+In 4D client/server applications, Qodly pages inside Web areas can [share their session with the remote user](../Desktop/clientServer.md#sharing-the-session-with-qodly-pages-in-web-areas) for a high level of security.
+
+:::tip Related blog post
+
+[Enhance your Desktop Interface with Web widgets using 4D Qodly Pro](https://blog.4d.com/build-modern-hybrid-desktop-apps-with-4d-and-qodly-pro/)
 
 :::
 
@@ -235,7 +243,7 @@ Quando você fez as configurações conforme descrito acima, você tem novas op�
 
 ## Propriedades compatíveis
 
-[Estilo de linha de bordo](properties_BackgroundAndBorder.md#border-line-style) - [Inferior](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Menu de contexto](properties_Entry.md#context-menu) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Método](properties_Action.md#method) - [Nome do objeto](properties_Object.md#object-name) - [Progressão](properties_WebArea.md#progression) - [Dereita](properties_CoordinatesAndSizing.md#right) - [Topo](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Usar o mecanismo de renderização da Web](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variável ou Expressão](properties_Object.md#variable-or-expression) - [Tamanho Vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width)
+[Access 4D methods](properties_WebArea.md#access-4d-methods) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Use embedded Web rendering engine](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibilty](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ## 4DCEFParameters.json
 
@@ -338,7 +346,7 @@ O arquivo 4DCEFParameters.json padrão contém os seguintes botões:
 }
 ```
 
-:::info Related blog post
+:::tip Related blog post
 
 [Custom Parameters for Initializing Embedded Web Area](https://blog.4d.com/custom-parameters-for-initializing-embedded-web-area/)
 

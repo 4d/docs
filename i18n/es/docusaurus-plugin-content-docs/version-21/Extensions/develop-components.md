@@ -250,11 +250,11 @@ Las variables no se comparten entre los componentes y los proyectos locales. La 
 Ejemplo utilizando un array:
 
 ```4d
-//In the host project:
+//En el proyecto anfitrión:
      ARRAY INTEGER(MyArray;10)
      AMethod(->MyArray)
 
-//In the component, the AMethod project method contains:
+//En el componente, el método del proyecto AMethod contiene:
      #DECLARE($ptr : Pointer)
      APPEND TO ARRAY($ptr->;2)
 ```
@@ -274,11 +274,11 @@ $p:=component_method2(...)
 Sin un puntero, un componente puede seguir accediendo al valor de una variable de la base local (pero no a la propia variable) y viceversa:
 
 ```4d
-//In the host database
+//En la base local
 var $input_t : Text
 $input_t:="DoSomething"
 component_method($input_t)
-// component_method gets "DoSomething" in parameter (but not the $input_t variable)
+// component_method obtiene "DoSomething" en parámetro (pero no la variable $input_t)
 ```
 
 Cuando se utilizan punteros para que los componentes y el proyecto local se comuniquen, hay que tener en cuenta las siguientes particularidades:
@@ -292,7 +292,7 @@ Cuando se utilizan punteros para que los componentes y el proyecto local se comu
 
 - Si el componente C define la variable `myIvar`, el componente C no puede acceder a esta variable utilizando el puntero `->myIvar`. Esta sintaxis provoca un error de ejecución.
 
-- The comparison of pointers using the [`RESOLVE POINTER`](../commands/resolve-pointer) command is not recommended with components since the principle of partitioning variables allows the coexistence of variables having the same name but with radically different contents in a component and the host project (or another component). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
+- La comparación de punteros utilizando el comando [`RESOLVE POINTER`](../commands/resolve-pointer) no se recomienda con los componentes, ya que el principio de partición de variables permite la coexistencia de variables con el mismo nombre pero con contenidos radicalmente diferentes en un componente y en el proyecto local (u otro componente). El tipo de la variable puede incluso ser diferente en ambos contextos. Si los punteros `myptr1` y `myptr2` apuntan cada uno a una variable, la siguiente comparación producirá un resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -309,9 +309,9 @@ En este caso, es necesario utilizar la comparación de punteros:
 
 ## Gestión de errores
 
-An [error-handling method](Concepts/error-handling.md) installed by the [`ON ERR CALL`](../commands-legacy/on-err-call.md) command only applies to the running application. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
+Un [método de gestión de errores](Concepts/error-handling.md) instalado por el comando [`ON ERR CALL`](../commands-legacy/on-err-call.md) solo se aplica a la aplicación en ejecución. En el caso de un error generado por un componente, no se llama al método de gestión de errores `ON ERR CALL` del proyecto local, y viceversa.
 
-However, you can install a [component error handler in the host application](../Concepts/error-handling.md#scope-and-components) to manage uncaught errors from compponents.
+Sin embargo, puede instalar un [gestor de errores de componentes en la aplicación host](../Concepts/error-handling.md#scope-and-components) para gestionar los errores no detectados de los componentes.
 
 ## Acceso a las tablas del proyecto local
 
@@ -325,7 +325,7 @@ methCreateRec(->[PEOPLE];->[PEOPLE]Name;"Julie Andrews")
 Dentro del componente, el código del método `methCreateRec`:
 
 ```4d
-#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Pointer on a table in host project
+#DECLARE($tablepointer : Pointer; $fieldpointer : Pointer; $value : Text) //Puntero en una tabla del proyecto anfitrión
 
 CREATE RECORD($tablepointer->)
 

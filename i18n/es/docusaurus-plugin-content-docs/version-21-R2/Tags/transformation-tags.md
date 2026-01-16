@@ -256,7 +256,7 @@ El número de bucles se basa en el número de entidades presentes en la selecci�
     </table>
 ```
 
-#### Example with [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
+#### Ejemplo con [`PROCESS 4D TAGS`](../commands-legacy/process-4d-tags.md)
 
 ```4d
 var customers : cs.CustomersSelection
@@ -611,7 +611,7 @@ La etiqueta `4DSCRIPT` permite ejecutar métodos 4D al procesar la plantilla. Th
 
 > If the tag is called in the context of a Web process, when the page is loaded, 4D calls the [`On Web Authentication`](../commands-legacy/on-web-authentication-database-method.md) database method (if it exists). Si devuelve True, 4D ejecuta el método.
 
-The method must return a text. Si la cadena comienza con el caracter de código 1, se considera HTML (el mismo principio se aplica a la etiqueta `4DHTML`).
+El método debe devolver un texto. Si la cadena comienza con el caracter de código 1, se considera HTML (el mismo principio se aplica a la etiqueta `4DHTML`).
 
 For example, let’s say that you insert the following comment `"Today is <!--#4DSCRIPT/MYMETH/MYPARAM-->"` into a template Web page. When loading the page, 4D calls the `On Web Authentication` database method, then calls the `MYMETH` method and passes the string "/MYPARAM" as the parameter. The method returns some text (for example "12/31/21"); the expression "`Today is <!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
 

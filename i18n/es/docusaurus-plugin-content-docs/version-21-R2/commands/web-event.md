@@ -18,7 +18,7 @@ displayed_sidebar: docs
 
 `Web Event` <!-- REF #_command_.Web Event.Summary -->returns an object with information on a triggered event linked to a web page component<!-- END REF -->.
 
-The command must be called in the context of a web page handled by the 4D web server.
+El comando debe ser llamado en el contexto de una página web manejada por el servidor web de 4D.
 
 **Resultado**
 
@@ -35,7 +35,7 @@ El objeto devuelto contiene las siguientes propiedades:
 
 #### Ejemplo
 
-The objective is to display/hide a help text when the user hovers over the component:
+El objetivo es mostrar/ocultar un texto de ayuda cuando el usuario pasa el ratón sobre el componente:
 
 ![](../assets/en/commands/web-event1.png)
 
@@ -45,7 +45,7 @@ This is done by attaching `onmouseenter` and `onmouseleave` events to a **Text i
 
 En este escenario:
 
-- The Text input component has `orderNumber` as Server side reference.
+- El componente Text input tiene `orderNumber` como referencia servidor.
   ![](../assets/en/commands/web-event3.png)
 - El componente Texto tiene `helpOn_orderNumber` como referencia del lado Servidor.
   ![](../assets/en/commands/web-event4.png)

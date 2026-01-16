@@ -86,13 +86,13 @@ This property allows you to select explicitely the interface theme you wish to b
 
 Valores disponibles:
 
-- **Inherited** (default): inherits from the project theme
+- **heredado** (por defecto): hereda del tema del proyecto
 - **Classic**: use the Windows classic interface theme
 - **Fluent UI**: use the [Fluent UI](../FormEditor/forms.md#fluent-ui-rendering) interface theme ([when available](../FormEditor/forms.md#requirements)).
 
 :::note
 
-This property is ignored on macOS.
+Esta propiedad se ignora en macOS.
 
 :::
 
@@ -102,7 +102,7 @@ This property is ignored on macOS.
 | -------- | -------------- | ---------------- |
 | fluentUI | boolean        | true, false      |
 
-If the property is not defined, the "inherited" option is selected.
+Si la propiedad no está definida, se selecciona la opción "heredada".
 
 ---
 

@@ -5,7 +5,7 @@ title: Release Notes
 
 ## 4D 21 LTS
 
-Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/), l'article de blog qui liste toutes les nouvelles fonctionnalités et améliorations de 4D 21.
+Read [**What’s new in 4D 21**](https://blog.4d.com/whats-new-in-4d-21lts/), the blog post that lists all new features and enhancements in 4D 21.
 
 #### Points forts
 
@@ -33,7 +33,7 @@ Lisez [**Les nouveautés de 4D 21**](https://blog.4d.com/fe-whats-new-in-4d-v21/
 
 :::caution Reconstruction d'index
 
-4D 21 inclut une mise à jour de la bibliothèque ICU ([voir ci-dessous](#library-table)) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
+4D 21 inclut une mise à jour de la bibliothèque ICU ([voir ci-dessous](#library-table-4d-21-lts)) qui forcera une reconstruction automatique des index de type alpha, texte et objet. En fonction de la taille du fichier de données, cette opération peut prendre un certain temps et nécessiter une planification.
 
 :::
 

@@ -37,7 +37,7 @@ Cada vez que se accede a un recurso dentro de una sesión (sin importar la forma
 
 ## Permisos
 
-Un permiso es la capacidad de realizar una acción sobre un recurso. For example, *execute the ds.myTable.myFunction()* represents a **permission**. Los permisos se definen para el proyecto en el archivo [`roles.json`](#rolesjson-file). Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
+Un permiso es la capacidad de realizar una acción sobre un recurso. Por ejemplo, *ejecutar la función ds.miTabla.miFuncion()* representa un **permiso**. Los permisos se definen para el proyecto en el archivo [`roles.json`](#rolesjson-file). Cada permiso se puede dar a uno o más [privilegios](#privileges-and-roles).
 
 When **no specific permission** has been defined for a resource, access to the resource may be automatically **unrestricted** or **restricted** depending on the [default mode defined for the project](#restriction-modes).
 

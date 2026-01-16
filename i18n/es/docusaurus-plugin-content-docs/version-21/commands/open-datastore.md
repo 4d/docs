@@ -31,7 +31,7 @@ displayed_sidebar: docs
 
 El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación al datastore remoto identificado por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `4D.DataStoreImplementation` asociado con el alias local *localID*.
 
-Exchanges with the remote datastore are automatically managed via REST requests. The *connectionInfo* 4D datastore must be available as a remote datastore, i.e.:
+Los intercambios con el almacén de datos remoto se gestionan automáticamente mediante solicitudes REST. La datastore 4D *connectionInfo* debe estar disponible como 4D remoto, es decir:
 
 - su servidor web debe ser lanzado con http y/o https activado,
 - its datastore is exposed to REST ([**Expose as REST server**](REST/configuration.md#starting-the-rest-server) option checked),

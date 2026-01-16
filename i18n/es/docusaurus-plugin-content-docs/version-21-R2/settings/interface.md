@@ -68,13 +68,13 @@ El esquema de aplicación principal se aplicará a los formularios por defecto. 
 
 ### Use Fluent UI on Windows
 
-When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). When it is unchecked, the Windows Classic UI rendering theme will be used by default.
+When this option is checked, 4D will automatically use the [Fluent UI rendering theme](../FormEditor/forms.md#fluent-ui-rendering) for all your forms on Windows, [when available](../FormEditor/forms.md#requirements). Si no está marcada, se utilizará por defecto el tema de renderizado de Windows Classic UI.
 
 > This option is only used on Windows, it has no effect on macOS.
 
 This project setting can be overriden at form level by using the [Widget appearance](../FormEditor/propertiesForm.html#widget-appearance) form property (highest priority level).
 
-> Rendering themes can be handled using CSS. Para más información, consulte la sección [Media Queries](../FormEditor/createStylesheet.md#media-queries).
+> Los temas de renderizado pueden ser manejados usando CSS. Para más información, consulte la sección [Media Queries](../FormEditor/createStylesheet.md#media-queries).
 
 ## Atajos
 
