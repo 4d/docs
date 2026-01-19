@@ -14,14 +14,14 @@ slug: /WritePro/tables
 
 ## Creating a table 
 
-4D Write Pro tables are created by calling the [WP Insert table](../commands/wp-insert-table) command. You can then add rows by using the [WP Table append row](../commands/wp-table-append-row) command.
+4D Write Pro tables are created by calling the [WP Insert table](./commands/wp-insert-table) command. You can then add rows by using the [WP Table append row](./commands/wp-table-append-row) command.
 
 **Note:** A user can create a table by copying and pasting a range of cells:   
 ![](../../assets/en/WritePro/pict3307941.en.png)
 
 ## Editing tables 
 
-Cell contents can be added by programming using the [WP Table append row](../commands/wp-table-append-row) command.
+Cell contents can be added by programming using the [WP Table append row](./commands/wp-table-append-row) command.
 
 Once a table is created, cell contents can also be edited at runtime by users. They can click into cells and select, edit, copy/paste, or delete text or pictures just like in regular paragraphs. They can navigate through cells using the **Tab** key (**Shift+Tab** to navigate in opposite direction).
 
@@ -33,13 +33,13 @@ Note that cell width is fixed: when a user enters text or pastes a picture, the 
 
 Users can also select columns, rows, or cells and apply available attributes regarding text style, colors, alignment, etc. using the built-in pop up menu or any customized interface. 4D Write Pro provides several commands to select any parts of a table:
 
-* [WP Table get rows](../commands/wp-table-get-rows) to get a row range (or header row range)
-* [WP Table get columns](../commands/wp-table-get-columns) to get a column range(\*)
-* [WP Table get cells](../commands/wp-table-get-cells) to get a cell range
+* [WP Table get rows](./commands/wp-table-get-rows) to get a row range (or header row range)
+* [WP Table get columns](./commands/wp-table-get-columns) to get a column range(\*)
+* [WP Table get cells](./commands/wp-table-get-cells) to get a cell range
 
 (\*) Columns do not have equivalent in html. In 4D Write Pro, a column range is actually a range of cells, which means that columns have the same priority as cells.
 
-Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section).
+Once you have selected a range, you can apply any appropriate attribute using the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command. Within cells, attributes are applied to paragraphs, characters, or pictures, depending on their contents. For example, you can set the height, font size, border, padding, etc. of tables or table cells (for more information, please refer to the [4D Write Pro Attributes](../4d-write-pro-attributes) section).
 
 When different attributes are applied to concurrent elements of a table, a priority order is applied for the rendering:
 
@@ -67,7 +67,7 @@ If you press the **Shift** key while resizing a column, the size of the adjacent
 
 ### Merging and splitting cells 
 
-With 4D Write Pro, you can split and merge cells in a table. Merging cells is combining two or more adjacent table cells located in the same row or column into a single cell. Splitting cells is taking already merged cells and separating them into multiple adjacent cells in the same row or column. Cells can be merged using the command [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) or the standard action **cell/merge,** and splitted using the command [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) or the standard action **cell/split**.
+With 4D Write Pro, you can split and merge cells in a table. Merging cells is combining two or more adjacent table cells located in the same row or column into a single cell. Splitting cells is taking already merged cells and separating them into multiple adjacent cells in the same row or column. Cells can be merged using the command [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) or the standard action **cell/merge,** and splitted using the command [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) or the standard action **cell/split**.
 
 ![](../../assets/en/WritePro/pict6421031.en.png)
 
@@ -78,7 +78,7 @@ The table cells can be merged:
 **Example of cell merging using the language:**
 
 1. Designate a range of cells to merge in your table, the cells have to be either adjacent horizontally or vertically, or both.
-2. Call the command [WP TABLE MERGE CELLS](../commands/wp-table-merge-cells) on the selected range .
+2. Call the command [WP TABLE MERGE CELLS](./commands/wp-table-merge-cells) on the selected range .
 
 ```4d
  $cells:=WP Table get cells($table;1;1;3;1)
@@ -98,7 +98,7 @@ after
 **Example of cell splitting using the language:**
 
 1. Designate a range of cells to be splitted in your table, the selected range has to contain some already merged cells.
-2. Call the command [WP TABLE SPLIT CELLS](../commands/wp-table-split-cells) on the selected range.
+2. Call the command [WP TABLE SPLIT CELLS](./commands/wp-table-split-cells) on the selected range.
 
 ```4d
  $cells:=WP Table get cells($table;1;1;1;1)
@@ -122,7 +122,7 @@ after
 
 **Designating merged cells:** 
 
-A merged cell can be manipulated the same as a single cell (background color, border style, paragraph styles..) using the 4D Write Pro interface, the standard actions or the command [WP SET ATTRIBUTES](../commands/wp-set-attributes) .
+A merged cell can be manipulated the same as a single cell (background color, border style, paragraph styles..) using the 4D Write Pro interface, the standard actions or the command [WP SET ATTRIBUTES](./commands/wp-set-attributes) .
 
 All the existing table commands are applicable to ranges or elements containing merged cells. In a table that contains merged cells, the indexes of the cells remain as if no cell has been merged. 
 
@@ -172,11 +172,11 @@ Tables can split between rows, and rows can split too. The table pagination is d
 Table pagination can also be controlled by programming or by the user. Available actions include:
 
 * inserting a page break in a table:  
-   * [WP INSERT BREAK](../commands/wp-insert-break) command  
+   * [WP INSERT BREAK](./commands/wp-insert-break) command  
    * *insertPageBreak* standard action  
    * **Insert page break** option of the default contextual menu
 * inserting a column break in a table:  
-   * [WP INSERT BREAK](../commands/wp-insert-break) command  
+   * [WP INSERT BREAK](./commands/wp-insert-break) command  
    * *insertColumnBreak* standard action  
    * **Insert column break** option of the default contextual menu
 
@@ -199,15 +199,15 @@ When a page break or a column break is inserted through a standard action or the
 Table headers are the first row(s) of the table. To define header rows, you can:
 
 * use the *headerRowCount* standard action (see *Using 4D Write Pro standard actions*), or
-* use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) with wk header row count (on a table, see *Tables*), or wk header (on a row, see *Rows and columns*).
+* use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) with wk header row count (on a table, see *Tables*), or wk header (on a row, see *Rows and columns*).
 
 If you designate more than five rows as header (or if it results from an insertion of rows in an existing header), 4D Write Pro only uses the first five rows as header. If you remove row(s) defined in the header, the number of header rows is decreased. 
 
 ## Table datasource 
 
-You can assign a formula object as a datasource for a table and access the resulting value(s) from within the table using *Expressions with This* (see below). The datasource formula is processed by 4D Write Pro when formulas are computed (e.g. when the document is opened, when the [WP COMPUTE FORMULAS](../commands/wp-compute-formulas) command is called, etc.). This feature takes advantage of data contexts (see [WP SET DATA CONTEXT](../commands/wp-set-data-context)). 
+You can assign a formula object as a datasource for a table and access the resulting value(s) from within the table using *Expressions with This* (see below). The datasource formula is processed by 4D Write Pro when formulas are computed (e.g. when the document is opened, when the [WP COMPUTE FORMULAS](./commands/wp-compute-formulas) command is called, etc.). This feature takes advantage of data contexts (see [WP SET DATA CONTEXT](./commands/wp-set-data-context)). 
 
-To assign a datasource to a table, use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command with the wk datasource and a *4D formula* object as value. For example, to fill a table with a row for every person living in France:
+To assign a datasource to a table, use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk datasource and a *4D formula* object as value. For example, to fill a table with a row for every person living in France:
 
 ```4d
  $formula:=Formula(ds.people.query("country = :1";"France"))
@@ -218,7 +218,7 @@ To assign a datasource to a table, use the [WP SET ATTRIBUTES](../commands/wp-se
 * In the data row (and break row(s)), you can insert expressions that use special keywords such as *This.item.lastname*. Expressions are replaced during processing by data from the collection or entity selection. The data row will be duplicated so that the number of item rows is equal to the number of items in the collection or entity selection after formulas are computed.
 * If the datasource formula does not return a collection or a an entity selection, or if it returns an empty collection/entity selection, the table rows are not created automatically and all rows are treated as regular rows. You can define a placeholder row to be displayed in case of empty datasource.
 
-To remove a datasource from a table, use the [WP RESET ATTRIBUTES](../commands/wp-reset-attributes) command. It will set the datasource attribute value to *null*:
+To remove a datasource from a table, use the [WP RESET ATTRIBUTES](./commands/wp-reset-attributes) command. It will set the datasource attribute value to *null*:
 
 ```4d
  WP RESET ATTRIBUTES($table;wk datasource)
@@ -270,7 +270,7 @@ To create carry-over rows:
 1. In the table template, add a row just after the data row or the break row(s) and insert any necessary formulas inside, using for example **This.previousItems**.
 2. Enable the carry-over row feature for your document. You can:  
 \- use the *bottomCarryOverRow* standard action (see *Using 4D Write Pro standard actions*), or  
-\- use the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command with the wk bottom carry over row *Tables* attribute selector.
+\- use the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command with the wk bottom carry over row *Tables* attribute selector.
 
 **Note:** Page breaks inside rows are not allowed when the carry-over row feature is enabled (see *Table pagination*). Corresponding options, if set, are ignored.
 
@@ -319,7 +319,7 @@ When used in a formula within the table, the **This** keyword gives access to di
 
 In any other contexts, these expressions will return *undefined*.
 
-**Note:** For more information about formula insertion, see [WP INSERT FORMULA](../commands/wp-insert-formula).
+**Note:** For more information about formula insertion, see [WP INSERT FORMULA](./commands/wp-insert-formula).
 
 ### Working with a table datasource 
 

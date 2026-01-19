@@ -47,7 +47,6 @@ module.exports = {
   favicon: "img/favicon/4d.gif",
   trailingSlash: false,
   onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "warn",
   noIndex: isProduction ? false : true,
   presets: [
     [
@@ -270,6 +269,10 @@ module.exports = {
     },
     anchors: {
       maintainCase: false,
+    },
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+      //onBrokenMarkdownImages: 'throw',
     },
   },
   themes: ['@docusaurus/theme-mermaid'],  

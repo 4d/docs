@@ -24,7 +24,7 @@ To select a text box, the user has to click on it (**Ctrl/Cmd+click** if the tex
 
 To remove a selected text box, you can hit the **Delete** or **Backspace** key, use the **textBox/remove** standard action, or execute the [`WP DELETE TEXT BOX`](../commands-legacy/wp-delete-text-box.md) command. 
 
-Text box attributes are handled with the [WP SET ATTRIBUTES](../commands/wp-set-attributes) command or [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). The following attributes and actions are available:
+Text box attributes are handled with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). The following attributes and actions are available:
 
 | **Property (constant)** | **Standard action**       | **Comments**                                                                |
 | ----------------------- | ------------------------- | --------------------------------------------------------------------------- |
