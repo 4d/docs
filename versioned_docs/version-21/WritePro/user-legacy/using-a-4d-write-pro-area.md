@@ -46,7 +46,7 @@ You can control automatic breaks in paragraphs using the following features:
 * **Avoid page break inside**: When this option is set for a paragraph, 4D Write Pro prevents this paragraph from being broken into parts on two or more pages.
 * **Keep with next:** When this option is set for a paragraph, that paragraph cannot be separated from the one that follows it by an automatic break. See `wk keep with next` and the corresponding *keepWithNext* [standard action](./standard-actions.md).
 
-These options can be set using the context menu, or [attributes](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). 
+These options can be set using the context menu, or [attributes](../commands-legacy/4d-write-pro-attributes.md) (`wk avoid widows and orphans`, `wk page break inside paragraph`, or *widowAndOrphanControlEnabled* and *avoidPageBreakInside* [standard actions](./standard-actions.md). 
 
 ## Background 
 
@@ -59,7 +59,7 @@ The background of 4D Write Pro documents and document elements (tables, paragrap
 * painting area
 * repeat
 
-These [attributes](../commands-legacy/4d-write-pro-attributes.md) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or by [standard actions](./defining-a-4d-write-pro-area.md#standard-actions). 
+These [attributes](../commands-legacy/4d-write-pro-attributes.md) can be defined programmatically for either individual elements on a page and/or entire document backgrounds with the [WP SET ATTRIBUTES](./commands/wp-set-attributes) command or by [standard actions](./standard-actions.md). 
 
 Users can modify background attributes via the contextual menu as shown below:
 
@@ -279,7 +279,7 @@ Columns can be set using:
 
 * the **Columns** submenu of the 4D Write Pro area context menu,
 * 4D Write Pro [attributes](../commands-legacy/4d-write-pro-attributes.md),
-* 4D Write Pro [standard actions](./defining-a-4d-write-pro-area.md#standard-actions).
+* 4D Write Pro [standard actions](./standard-actions.md).
 
 You can set or get the following properties and actions for columns:
 

@@ -250,7 +250,7 @@ Supported properties depend on the list box type.
 |On Unload|||
 
 
-#### Additional Properties {additional-properties}
+#### Additional Properties {#additional-properties}
 
 Form events on list box or list box column objects may return the following additional properties:
 

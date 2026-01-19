@@ -491,7 +491,7 @@ If both a `logo.svg` and `logo.png` files are found, the `logo.svg` takes priori
 
 ## Info.plist
 
-Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#loading-components). 
+Components can have an `Info.plist` file at their [root folder](../Project/architecture.md) to provide extra information readable by the system (macOS only) and the [Dependency manager](../Project/components.md#monitoring-project-dependencies). 
 
 :::note
 
@@ -499,7 +499,7 @@ This file is not mandatory but is required to build [notarizeable and stapleable
 
 :::
 
-Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#loading-components) on all platforms.
+Keys supported in component `Info.plist` files are mostly [Apple bundle keys](https://developer.apple.com/documentation/bundleresources/information-property-list) which are ignored on Windows. However, they are used by the [Dependency manager](../Project/components.md#monitoring-project-dependencies) on all platforms.
 
 The following keys can be defined:
 

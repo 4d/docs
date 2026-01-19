@@ -370,7 +370,7 @@ This file logs information such as the state of dependencies, paths, urls, loadi
 
 
 
-## Monitoring Project Dependencies
+## Monitoring Project Dependencies {#monitoring-project-dependencies}
 
 In an opened project, you can add, remove, update, and get information about dependencies and their current loading status in the **Dependencies** panel.
 
